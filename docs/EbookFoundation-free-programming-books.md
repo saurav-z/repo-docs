@@ -1,4 +1,3 @@
-```markdown
 # Free Programming Books: Your Gateway to Accessible Learning
 
 Looking for free programming resources? This comprehensive repository offers a vast collection of free books, courses, and interactive tutorials in multiple languages, providing an invaluable resource for learners of all levels.  [Explore the original repository on GitHub](https://github.com/EbookFoundation/free-programming-books).
@@ -42,4 +41,3 @@ Easily share this valuable resource on Facebook, LinkedIn, Mastodon/Fediverse, T
 ## License
 
 This project is licensed under the [CC BY License](LICENSE).
-```
