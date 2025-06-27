@@ -2,29 +2,37 @@
   <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif" alt="HelloGitHub Logo"/>
 </p>
 
+## HelloGitHub: Discover Awesome Open Source Projects
+
+**HelloGitHub is your gateway to the world of open-source, showcasing interesting and beginner-friendly projects on GitHub.** Find the joy of open source with carefully curated projects updated monthly!
+
+[View the original repository on GitHub](https://github.com/521xueweihan/HelloGitHub)
+
 <p align="center">
-  <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
+  <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
+  <a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
+    <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
 </p>
-
-# HelloGitHub: Discover the Best Open-Source Projects on GitHub
-
-**HelloGitHub** is your gateway to the exciting world of open-source, showcasing interesting and beginner-friendly projects on GitHub. This repository curates a monthly selection of awesome projects to ignite your passion for open source. [Discover more at the original repository](https://github.com/521xueweihan/HelloGitHub).
 
 ## Key Features
 
-*   **Curated Content:** Each month, discover a hand-picked selection of engaging open-source projects.
-*   **Beginner-Friendly:** Focus on projects that are easy to understand and contribute to.
-*   **Diverse Topics:** Explore projects across various categories, including:
-    *   Interesting open-source projects
-    *   Open-source books
-    *   Practical projects
-    *   Enterprise-level projects
-*   **Regular Updates:** Monthly releases on the 28th, ensuring fresh content.
-*   **Community Driven:** Contribute by recommending or self-recommending projects.
+*   **Curated Content:** Hand-picked open-source projects, perfect for beginners and experienced developers.
+*   **Monthly Updates:** New projects are released on the 28th of each month.
+*   **Diverse Categories:** Explore a wide range of projects, including interesting open-source projects, practical projects, and enterprise-level applications.
+*   **Learn & Explore:** Designed to help you quickly discover the charm of open source and find projects that pique your interest.
 
-## Content Index
+## Content Highlights
 
-Browse past issues and explore a wealth of open-source projects. For an enhanced reading experience, visit the [official website](https://hellogithub.com/) or the [HelloGitHub WeChat Public Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
+*   **Interesting Open Source Projects:** Discover a variety of projects across different domains.
+*   **Open Source Books:** Explore valuable resources to enhance your knowledge.
+*   **Practical Projects:** Learn by doing with hands-on projects.
+*   **Enterprise-Level Projects:** Get insights into real-world applications.
+
+For a better reading experience, visit the [official website](https://hellogithub.com/) or follow the [HelloGitHub WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
+
+### Previous Issues
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -39,7 +47,7 @@ Browse past issues and explore a wealth of open-source projects. For an enhanced
 
 ## Contribute
 
-Recommend or self-recommend projects to become a contributor!  See the [contributors guide](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
+Recommend or self-recommend projects at [here](https://hellogithub.com/periodical) or become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
 
 ## Sponsors
 
@@ -47,8 +55,7 @@ Recommend or self-recommend projects to become a contributor!  See the [contribu
   <thead>
     <tr>
       <th align="center" style="width: 80px;">
-        <a href="https://www.compshare.cn/?utm_term=logo&utm_campaign=hellogithub&utm_source=otherdsp&utm_medium=display&ytag=logo_hellogithub_otherdsp_display">
-          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/ucloud.png" width="60px"><br>
+        <a href="https://www.compshare.cn/?utm_term=logo&utm_campaign=hellogithub&utm_source=otherdsp&utm_medium=display&ytag=logo_hellogithub_otherdsp_display">          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/ucloud.png" width="60px"><br>
           <sub>UCloud</sub><br>
           <sub>超值的GPU云服务</sub>
         </a>
@@ -80,4 +87,4 @@ Recommend or self-recommend projects to become a contributor!  See the [contribu
 
 ## License
 
-This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Contact <a href="mailto:595666367@qq.com">me</a>.
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Contact me at <a href="mailto:595666367@qq.com">595666367@qq.com</a>
