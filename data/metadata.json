@@ -1,0 +1,72 @@
+{
+  "521xueweihan/HelloGitHub": {
+    "description": ":octocat: \u5206\u4eab GitHub \u4e0a\u6709\u8da3\u3001\u5165\u95e8\u7ea7\u7684\u5f00\u6e90\u9879\u76ee\u3002Share interesting, entry-level open source projects on GitHub.",
+    "last_updated": "2025-06-27T04:53:31.521674",
+    "readme": "docs/521xueweihan-HelloGitHub.md",
+    "readme_generated": "2025-06-27T04:53:40.664635",
+    "stars": 119238
+  },
+  "AUTOMATIC1111/stable-diffusion-webui": {
+    "description": "Stable Diffusion web UI",
+    "last_updated": "2025-06-27T04:53:31.521663",
+    "readme": "docs/AUTOMATIC1111-stable-diffusion-webui.md",
+    "readme_generated": "2025-06-27T04:53:45.606127",
+    "stars": 153924
+  },
+  "EbookFoundation/free-programming-books": {
+    "description": ":books: Freely available programming books",
+    "last_updated": "2025-06-27T04:53:31.521639",
+    "readme": "docs/EbookFoundation-free-programming-books.md",
+    "readme_generated": "2025-06-27T04:53:58.649162",
+    "stars": 361114
+  },
+  "Significant-Gravitas/AutoGPT": {
+    "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+    "last_updated": "2025-06-27T04:53:31.521661",
+    "readme": "docs/Significant-Gravitas-AutoGPT.md",
+    "readme_generated": "2025-06-27T04:54:10.501071",
+    "stars": 176439
+  },
+  "TheAlgorithms/Python": {
+    "description": "All Algorithms implemented in Python",
+    "last_updated": "2025-06-27T04:53:31.521659",
+    "readme": "docs/TheAlgorithms-Python.md",
+    "readme_generated": "2025-06-27T04:54:16.725480",
+    "stars": 202069
+  },
+  "donnemartin/system-design-primer": {
+    "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+    "last_updated": "2025-06-27T04:53:31.521654",
+    "readme": "docs/donnemartin-system-design-primer.md",
+    "readme_generated": "2025-06-27T04:54:23.403537",
+    "stars": 308609
+  },
+  "huggingface/transformers": {
+    "description": "\ud83e\udd17 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+    "last_updated": "2025-06-27T04:53:31.521666",
+    "readme": "docs/huggingface-transformers.md",
+    "readme_generated": "2025-06-27T04:54:44.829572",
+    "stars": 146097
+  },
+  "public-apis/public-apis": {
+    "description": "A collective list of free APIs",
+    "last_updated": "2025-06-27T04:53:31.521651",
+    "readme": "docs/public-apis-public-apis.md",
+    "readme_generated": "2025-06-27T04:55:01.620204",
+    "stars": 353523
+  },
+  "vinta/awesome-python": {
+    "description": "An opinionated list of awesome Python frameworks, libraries, software and resources.",
+    "last_updated": "2025-06-27T04:53:31.521656",
+    "readme": "docs/vinta-awesome-python.md",
+    "readme_generated": "2025-06-27T04:55:40.132251",
+    "stars": 247958
+  },
+  "ytdl-org/youtube-dl": {
+    "description": "Command-line program to download videos from YouTube.com and other video sites",
+    "last_updated": "2025-06-27T04:53:31.521669",
+    "readme": "docs/ytdl-org-youtube-dl.md",
+    "readme_generated": "2025-06-27T04:55:53.885084",
+    "stars": 136229
+  }
+}
