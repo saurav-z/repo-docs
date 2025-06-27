@@ -1,32 +1,49 @@
-# Discover a World of Free Public APIs: Your Ultimate Resource 
-**Explore a vast and curated collection of free APIs to power your projects!** This repository, a community-driven effort, provides an extensive list of public APIs across diverse domains, from weather to finance, all available for your use.  
+# Explore Free Public APIs: The Ultimate API Resource
 
-[Visit the original repository here: https://github.com/public-apis/public-apis](https://github.com/public-apis/public-apis)
+Looking for a treasure trove of free APIs to fuel your next project? **This repository, curated by the community and powered by experts like APILayer, offers a comprehensive list of public APIs across various domains.** Discover a vast selection of APIs that you can integrate into your applications, websites, and projects - all for free!  [Explore the original repository](https://github.com/public-apis/public-apis) for a complete list.
 
-<br>
+**Key Features:**
 
-## Key Features
-*   **Comprehensive Collection:**  Access a vast and growing list of public APIs.
-*   **Community-Driven:**  Benefit from a curated list, with the community constantly updating and improving the resources.
-*   **Diverse Domains:**  Explore APIs in areas like weather, finance, sports, social media, and much more.
-*   **Easy to Use:**  Find APIs ready to integrate into your products.
+*   **Extensive Collection:** Access a vast library of public APIs covering a wide range of categories.
+*   **Community-Driven:**  The repository is maintained and improved by a community of developers.
+*   **Free to Use:** Leverage the power of public APIs without any cost.
+*   **Well-Organized:** Categorized and easy-to-navigate for effortless discovery.
 
-<br>
+**APIs to Get You Started:**
 
-## Learn More
-*   Contribute and add value to the project.
+*   [IPstack](https://ipstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers): Locate and identify website visitors by IP address.
+*   [Marketstack](https://marketstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers): Free, easy-to-use REST API interface delivering worldwide stock market data in JSON format.
+*   [Weatherstack](https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers): Retrieve instant, accurate weather information for any location in the world in lightweight JSON format.
+*   [Numverify](https://numverify.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers ): Global Phone Number Validation & Lookup JSON API.
+*   [Fixer](https://fixer.io/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers): Fixer is a simple and lightweight API for current and historical foreign exchange (forex) rates.
+*   [Aviationstack](https://avaitionstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers): Free, real-time flight status and global Aviation data API.
+
+**Ready to integrate APIs into your projects?  Here's a quick start:**
+
+*   **IPstack Postman:** [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/10131015-55145132-244c-448c-8e6f-8780866e4862?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D10131015-55145132-244c-448c-8e6f-8780866e4862%26entityType%3Dcollection%26workspaceId%3D2b7498b6-6d91-4fa8-817f-608441fe42a8)
+*   **Marketstack Postman:** [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/10131015-9cbac391-3611-4f50-9bfd-d24ae41c97c1?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D10131015-9cbac391-3611-4f50-9bfd-d24ae41c97c1%26entityType%3Dcollection%26workspaceId%3D2b7498b6-6d91-4fa8-817f-608441fe42a8)
+*   **Weatherstack Postman:** [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/10131015-276c4312-f682-425d-b6b1-0f82c0a7f2b3?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D10131015-276c4312-f682-425d-b6b1-0f82c0a7f2b3%26entityType%3Dcollection%26workspaceId%3D2b7498b6-6d91-4fa8-817f-608441fe42a8)
+*   **Numverify Postman:** [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/10131015-0760d25e-b802-412e-b0e4-26e5ca3b9ffa?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D10131015-0760d25e-b802-412e-b0e4-26e5ca3b9ffa%26entityType%3Dcollection%26workspaceId%3D2b7498b6-6d91-4fa8-817f-608441fe42a8)
+*   **Fixer Postman:** [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/10131015-0d9c66b3-5f1a-42ed-a5ca-379217bd629d?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D10131015-0d9c66b3-5f1a-42ed-a5ca-379217bd629d%26entityType%3Dcollection%26workspaceId%3D2b7498b6-6d91-4fa8-817f-608441fe42a8)
+*   **Aviationstack Postman:** [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/10131015-72ee0d35-018e-4370-a2b6-a66d3ebd5b5a?action=collection/fork)
+
+<br >
+
+## Learn more about Public APIs
+
+<strong>Get Involved</strong>
+
 *   [Contributing Guide](CONTRIBUTING.md)
-*   Access the API for the project to help maintain the list.
 *   [API for this project](https://github.com/davemachado/public-api)
-*   Share your suggestions, find help, or discuss the APIs.
 *   [Issues](https://github.com/public-apis/public-apis/issues)
 *   [Pull Requests](https://github.com/public-apis/public-apis/pulls)
-*   Check out the project's open source license.
-*   [LICENSE](LICENSE) 
+*   [LICENSE](LICENSE)
 
-<br>
+<br />
 
-## Index
+## API Categories
+
+Here's a list of APIs grouped into various categories:
 
 *   [Animals](#animals)
 *   [Anime](#anime)
@@ -79,11 +96,12 @@
 *   [Vehicle](#vehicle)
 *   [Video](#video)
 *   [Weather](#weather)
-<br >
+
 <br >
 
 ### Animals
-API | Description | Auth | HTTPS | CORS 
+
+API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [AdoptAPet](https://www.adoptapet.com/public/apis/pet_list.html) | Resource to help get pets adopted | `apiKey` | Yes | Yes |
 | [Axolotl](https://theaxolotlapi.netlify.app/) | Collection of axolotl pictures and facts | No | Yes | No |
@@ -118,6 +136,7 @@ API | Description | Auth | HTTPS | CORS
 <br >
 
 ### Anime
+
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [AniAPI](https://aniapi.com/docs/) | Anime discovery, streaming & syncing with trackers | `OAuth` | Yes | Yes |
@@ -145,6 +164,7 @@ API | Description | Auth | HTTPS | CORS |
 <br >
 
 ### Anti-Malware
+
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [AbuseIPDB](https://docs.abuseipdb.com/) | IP/domain/URL reputation | `apiKey` | Yes | Unknown |
@@ -161,12 +181,14 @@ API | Description | Auth | HTTPS | CORS |
 | [URLhaus](https://urlhaus-api.abuse.ch/) | Bulk queries and Download Malware Samples | No | Yes | Yes |
 | [URLScan.io](https://urlscan.io/about-api/) | Scan and Analyse URLs | `apiKey` | Yes | Unknown |
 | [VirusTotal](https://www.virustotal.com/en/documentation/public-api/) | VirusTotal File/URL Analysis | `apiKey` | Yes | Unknown |
-| [Web of Trust](https://support.mywot.com/hc/en-us/sections/360004477734-API-) | IP/domain/URL reputation | `apiKey` | Yes | Unknown | 
+| [Web of Trust](https://support.mywot.com/hc/en-us/sections/360004477734-API-) | IP/domain/URL reputation | `apiKey` | Yes | Unknown |
 
 **[⬆ Back to Index](#index)**
 <br >
 <br >
+
 ### Art & Design
+
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [Améthyste](https://api.amethyste.moe/) | Generate images for Discord users | `apiKey` | Yes | Unknown |
@@ -193,7 +215,9 @@ API | Description | Auth | HTTPS | CORS |
 **[⬆ Back to Index](#index)**
 <br >
 <br >
+
 ### Authentication & Authorization
+
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [Auth0](https://auth0.com) | Easy to implement, adaptable authentication and authorization platform | `apiKey` | Yes | Yes |
@@ -207,7 +231,9 @@ API | Description | Auth | HTTPS | CORS |
 **[⬆ Back to Index](#index)**
 <br >
 <br >
+
 ### Blockchain
+
 | API | Description | Auth | HTTPS | CORS |
 |---|:---|:---|:---|:---|
 | [Bitquery](https://graphql.bitquery.io/ide) | Onchain GraphQL APIs & DEX APIs | `apiKey` | Yes | Yes |
@@ -225,7 +251,9 @@ API | Description | Auth | HTTPS | CORS |
 **[⬆ Back to Index](#index)**
 <br >
 <br >
+
 ### Books
+
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [A Bíblia Digital](https://www.abibliadigital.com.br/en) | Do not worry about managing the multiple versions of the Bible | `apiKey` | Yes | No |
@@ -255,7 +283,9 @@ API | Description | Auth | HTTPS | CORS |
 **[⬆ Back to Index](#index)**
 <br >
 <br >
+
 ### Business
+
 API | Description | Auth | HTTPS | CORS |
 |---|:---|:---|:---|:---|
 | [Apache Superset](https://superset.apache.org/docs/api) | API to manage your BI dashboards and data sources on Superset | `apiKey` | Yes | Yes |
@@ -285,7 +315,9 @@ API | Description | Auth | HTTPS | CORS |
 **[⬆ Back to Index](#index)**
 <br >
 <br >
+
 ### Calendar
+
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [Public Holidays](https://www.abstractapi.com/holidays-api) | Data on national, regional, and religious holidays via API | `apiKey` | Yes | Yes |
@@ -293,65 +325,3 @@ API | Description | Auth | HTTPS | CORS |
 | [Checkiday - National Holiday API](https://apilayer.com/marketplace/checkiday-api) | Industry-leading Holiday API. Over 5,000 holidays and thousands of descriptions. Trusted by the World’s leading companies | `apiKey` | Yes | Unknown |
 | [Church Calendar](http://calapi.inadiutorium.cz/) | Catholic liturgical calendar | No | No | Unknown |
 | [Czech Namedays Calendar](https://svatky.adresa.info) | Lookup for a name and returns nameday date | No | No | Unknown |
-| [Festivo Public Holidays](https://docs.getfestivo.com/docs/products/public-holidays-api/intro) | Fastest and most advanced public holiday and observance service on the market | `apiKey` | Yes | Yes |
-| [Google Calendar](https://developers.google.com/google-apps/calendar/) | Display, create and modify Google calendar events | `OAuth` | Yes | Unknown |
-| [Hebrew Calendar](https://www.hebcal.com/home/developer-apis) | Convert between Gregorian and Hebrew, fetch Shabbat and Holiday times, etc | No | No | Unknown |
-| [Holidays](https://holidayapi.com/) | Historical data regarding holidays | `apiKey` | Yes | Unknown |
-| [LectServe](http://www.lectserve.com) | Protestant liturgical calendar | No | No | Unknown |
-| [Nager.Date](https://date.nager.at) | Public holidays for more than 90 countries | No | Yes | No |
-| [Namedays Calendar](https://nameday.abalin.net) | Provides namedays for multiple countries | No | Yes | Yes |
-| [Non-Working Days](https://github.com/gadael/icsdb) | Database of ICS files for non working days | No | Yes | Unknown |
-| [Non-Working Days](https://isdayoff.ru) | Simple REST API for checking working, non-working or short days for Russia, CIS, USA and other | No | Yes | Yes |
-| [Russian Calendar](https://github.com/egno/work-calendar) | Check if a date is a Russian holiday or not | No | Yes | No |
-| [UK Bank Holidays](https://www.gov.uk/bank-holidays.json) | Bank holidays in England and Wales, Scotland and Northern Ireland | No | Yes | Unknown |
-
-**[⬆ Back to Index](#index)**
-<br >
-<br >
-### Cloud Storage & File Sharing
-API | Description | Auth | HTTPS | CORS |
-|---|:---|:---|:---|:---|
-| [AnonFiles](https://anonfiles.com/docs/api) | Upload and share your files anonymously | No | Yes | Unknown | |
-| [BayFiles](https://bayfiles.com/docs/api) | Upload and share your files | No | Yes | Unknown | |
-| [Box](https://developer.box.com/) | File Sharing and Storage | `OAuth` | Yes | Unknown | |
-| [ddownload](https://ddownload.com/api) | File Sharing and Storage | `apiKey` | Yes | Unknown | |
-| [Dropbox](https://www.dropbox.com/developers) | File Sharing and Storage | `OAuth` | Yes | Unknown | |
-| [File.io](https://www.file.io) | Super simple file sharing, convenient, anonymous and secure | No | Yes | Unknown | |
-| [Filestack](https://www.filestack.com) | Filestack File Uploader & File Upload API | `apiKey` | Yes | Unknown |    |
-| [GoFile](https://gofile.io/api) | Unlimited size file uploads for free | `apiKey` | Yes | Unknown | |
-| [Google Drive](https://developers.google.com/drive/) | File Sharing and Storage | `OAuth` | Yes | Unknown | |
-| [Gyazo](https://gyazo.com/api/docs) | Save & Share screen captures instantly | `apiKey` | Yes | Unknown | |
-| [Imgbb](https://api.imgbb.com/) | Simple and quick private image sharing | `apiKey` | Yes | Unknown | |
-| [OneDrive](https://developer.microsoft.com/onedrive) | File Sharing and Storage | `OAuth` | Yes | Unknown | |
-| [Pantry](https://getpantry.cloud/) | Free JSON storage for small projects | No | Yes | Yes | |
-| [Pastebin](https://pastebin.com/doc_api) | Plain Text Storage | `apiKey` | Yes | Unknown | |
-| [Pinata](https://docs.pinata.cloud/) | IPFS Pinning Services API | `apiKey` | Yes | Unknown | |
-| [Quip](https://quip.com/dev/automation/documentation) | File Sharing and Storage for groups | `apiKey` | Yes | Yes | |
-| [Storj](https://docs.storj.io/dcs/) | Decentralized Open-Source Cloud Storage | `apiKey` | Yes | Unknown | |
-| [The Null Pointer](https://0x0.st) | No-bullshit file hosting and URL shortening service | No | Yes | Unknown | |
-| [Web3 Storage](https://web3.storage/) | File Sharing and Storage for Free with 1TB Space | `apiKey` | Yes | Yes | |
-
-**[⬆ Back to Index](#index)**
-<br >
-<br >
-### Continuous Integration
-API | Description | Auth | HTTPS | CORS |
-|:---|:---|:---|:---|:---|
-| [Azure DevOps Health](https://docs.microsoft.com/en-us/rest/api/resourcehealth) | Resource health helps you diagnose and get support when an Azure issue impacts your resources | `apiKey` | No | No |
-| [Bitrise](https://api-docs.bitrise.io/) | Build tool and processes integrations to create efficient development pipelines | `apiKey` | Yes | Unknown |
-| [Buddy](https://buddy.works/docs/api/getting-started/overview) | The fastest continuous integration and continuous delivery platform | `OAuth` | Yes | Unknown |
-| [CircleCI](https://circleci.com/docs/api/v1-reference/) | Automate the software development process using continuous integration and continuous delivery | `apiKey` | Yes | Unknown |
-| [Codeship](https://docs.cloudbees.com/docs/cloudbees-codeship/latest/api-overview/) | Codeship is a Continuous Integration Platform in the cloud | `apiKey` | Yes | Unknown |
-| [Travis CI](https://docs.travis-ci.com/api/) | Sync your GitHub projects with Travis CI to test your code in minutes | `apiKey` | Yes | Unknown |
-
-**[⬆ Back to Index](#index)**
-<br >
-<br >
-### Cryptocurrency
-API | Description | Auth | HTTPS | CORS |
-|:---|:---|:---|:---|:---|
-| [0x](https://0x.org/api) | API for querying token and pool stats across various liquidity pools | No | Yes | Yes |
-| [1inch](https://1inch.io/api/) | API for querying decentralize exchange | No | Yes | Unknown |
-| [Alchemy Ethereum](https://docs.alchemy.com/alchemy/) | Ethereum Node-as-a-Service Provider | `apiKey` | Yes | Yes |
-| [apilayer coinlayer](https://coinlayer.com) | Real-time Crypto Currency Exchange Rates | `apiKey` | Yes | Unknown |
-| [Binance](https://github.com/binance/binance-spot-api

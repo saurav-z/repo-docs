@@ -1,35 +1,31 @@
-<!-- SEO Meta Description: Find free programming books, courses, and resources in multiple languages to learn and improve your coding skills. Contribute and explore a vast collection of educational materials. -->
+# Free Programming Books: Your Gateway to Free Learning Resources
 
-# Free Programming Books and Resources - Your Gateway to Learning Code 🚀
+Unlock the world of programming with a vast, community-curated collection of free resources, including books, courses, and interactive tutorials, available in multiple languages!  Explore this expansive collection and kickstart your coding journey at the [Free Programming Books repository](https://github.com/EbookFoundation/free-programming-books).
 
-**Looking to learn programming without breaking the bank?** This comprehensive repository offers a vast collection of *free* programming books, courses, and interactive tutorials, catering to learners of all levels and in numerous languages, all available at [https://github.com/EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books).
+## Key Features
 
-<div align="center">
-  <form action="https://ebookfoundation.github.io/free-programming-books-search">
-    <input type="text" id="fpbSearch" name="search" required placeholder="Search Book or Author"/>
-    <label for="submit"> </label>
-    <input type="submit" id="submit" name="submit" value="Search" />
-  </form>
-</div>
+*   **Extensive Collection:** Access a comprehensive library of free programming books, courses, and interactive tutorials.
+*   **Multi-Language Support:** Learn in your preferred language with resources available in numerous languages.
+*   **Community-Driven:** Benefit from a constantly updated and curated list maintained by a passionate community.
+*   **Diverse Resources:** Find a wide range of resources, including books, courses, cheat sheets, and interactive tutorials.
+*   **Easy to Contribute:** Help expand the resource list by contributing new resources or translating existing content.
 
-## Key Features:
+## Search & Access
 
-*   📚 **Extensive Library:** Access a massive collection of free programming books covering a wide array of programming languages and subjects.
-*   🌐 **Multi-Language Support:** Learn in your preferred language with resources available in English and dozens of other languages.
-*   💻 **Diverse Resources:** Explore various learning formats, including books, online courses, cheat sheets, interactive tutorials, podcasts, and programming playgrounds.
-*   🧑‍🏫 **Community Driven:** Contribute to the project and help expand the library of resources.
-*   ✅ **Constantly Updated:** Stay up-to-date with the latest learning materials, regularly updated by the community.
-*   🔍 **Easy Search:** Search through the list at [https://ebookfoundation.github.io/free-programming-books-search/](https://ebookfoundation.github.io/free-programming-books-search/)
+*   **Search:** Quickly find resources using the [dynamic search site](https://ebookfoundation.github.io/free-programming-books-search/).
+*   **Browse:** Explore the resources through the [static site](https://ebookfoundation.github.io/free-programming-books/).
+    
+    <div align="center">
+      <form action="https://ebookfoundation.github.io/free-programming-books-search">
+        <input type="text" id="fpbSearch" name="search" required placeholder="Search Book or Author"/>
+        <label for="submit"> </label>
+        <input type="submit" id="submit" name="submit" value="Search" />
+      </form>
+    </div>
 
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)&#160;
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)&#160;
-[![Hacktoberfest 2023 stats](https://img.shields.io/github/hacktoberfest/2023/EbookFoundation/free-programming-books?label=Hacktoberfest+2023)](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Apr+is%3Amerged+created%3A2023-10-01..2023-10-31)
+## A Rich History
 
-This page is available as an easy-to-read website. Access it by clicking on [![https://ebookfoundation.github.io/free-programming-books/](https://img.shields.io/website?style=flat&logo=www&logoColor=whitesmoke&label=Static%20site&down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Febookfoundation.github.io%2Ffree-programming-books%2F)](https://ebookfoundation.github.io/free-programming-books/).
-
-## Background
-
-Originally a clone of the StackOverflow list of freely available programming books, this repository has grown to become one of the most popular on GitHub, supported by the [Free Ebook Foundation](https://ebookfoundation.org).
+Originally inspired by StackOverflow, this repository has become a popular resource for programmers worldwide.  Managed by the [Free Ebook Foundation](https://ebookfoundation.org), it continues to grow and provide free educational resources to the programming community.
 
 <div align="center" markdown="1">
 
@@ -42,11 +38,11 @@ Originally a clone of the StackOverflow list of freely available programming boo
 
 </div>
 
-## How to Contribute
+## Contribute and Collaborate
 
-Contribute to this invaluable resource by reading the [CONTRIBUTING](docs/CONTRIBUTING.md) guide and adhering to the [Code of Conduct](docs/CODE_OF_CONDUCT.md).
+We welcome contributions!  Please read our [CONTRIBUTING](docs/CONTRIBUTING.md) guidelines for instructions on how to contribute. If you're new to GitHub, check out our [HOWTO](docs/HOWTO.md). Adhere to our [Code of Conduct](docs/CODE_OF_CONDUCT.md) (translations available).
 
-Click on these badges to see how you might be able to help:
+See how you might be able to help:
 
 <div align="center" markdown="1">
 
@@ -59,7 +55,7 @@ Click on these badges to see how you might be able to help:
 
 </div>
 
-## Share This Resource
+## Share with Others
 
 <div align="left" markdown="1">
 <a href="https://www.facebook.com/share.php?u=https%3A%2F%2Fgithub.com%2FEbookFoundation%2Ffree-programming-books&p[images][0]=&p[title]=Free%20Programming%20Books&p[summary]=">Share on Facebook</a><br>
@@ -71,14 +67,12 @@ Click on these badges to see how you might be able to help:
 
 ## Resource Categories
 
-Explore the wide array of programming resources available.
-
 ### Books
 
 *   [English, By Programming Language](books/free-programming-books-langs.md)
 *   [English, By Subject](books/free-programming-books-subjects.md)
 
-#### Other Languages
+#### Other Languages (Alphabetical)
 
 *   [Arabic / al arabiya / العربية](books/free-programming-books-ar.md)
 *   [Armenian / Հայերեն](books/free-programming-books-hy.md)
@@ -212,11 +206,12 @@ Explore the wide array of programming resources available.
 
 ## Translations
 
+Contribute to translations in [CONTRIBUTING](docs/CONTRIBUTING.md)!
+
 *   English
     *   [Code of Conduct](docs/CODE_OF_CONDUCT.md)
     *   [Contributing](docs/CONTRIBUTING.md)
     *   [How-to](docs/HOWTO.md)
-*   ... *[More languages](docs/README.md#translations)* ...
 
 ## License
 
