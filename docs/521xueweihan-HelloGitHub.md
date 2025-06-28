@@ -1,12 +1,10 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif" alt="HelloGitHub Logo"/>
+  <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif"/>
 </p>
 
-## HelloGitHub: Discover Awesome Open Source Projects
+# HelloGitHub: Discover the Best Open-Source Projects on GitHub
 
-**HelloGitHub is your gateway to the world of open-source, showcasing interesting and beginner-friendly projects on GitHub.** Find the joy of open source with carefully curated projects updated monthly!
-
-[View the original repository on GitHub](https://github.com/521xueweihan/HelloGitHub)
+**HelloGitHub** is your go-to resource for discovering fun, beginner-friendly open-source projects on GitHub, updated monthly to fuel your passion for coding. Find the original repository [here](https://github.com/521xueweihan/HelloGitHub).
 
 <p align="center">
   <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
@@ -18,21 +16,14 @@
 
 ## Key Features
 
-*   **Curated Content:** Hand-picked open-source projects, perfect for beginners and experienced developers.
-*   **Monthly Updates:** New projects are released on the 28th of each month.
-*   **Diverse Categories:** Explore a wide range of projects, including interesting open-source projects, practical projects, and enterprise-level applications.
-*   **Learn & Explore:** Designed to help you quickly discover the charm of open source and find projects that pique your interest.
+*   **Curated Project Selection:** Discover hand-picked, interesting, and easy-to-start open-source projects.
+*   **Monthly Updates:** Get fresh project recommendations delivered monthly on the 28th.
+*   **Diverse Content:** Explore a variety of projects, including open-source books, practical projects, and enterprise-level applications.
+*   **Easy to Get Started:** Designed to help you quickly understand and appreciate the world of open-source.
 
-## Content Highlights
+## Contents
 
-*   **Interesting Open Source Projects:** Discover a variety of projects across different domains.
-*   **Open Source Books:** Explore valuable resources to enhance your knowledge.
-*   **Practical Projects:** Learn by doing with hands-on projects.
-*   **Enterprise-Level Projects:** Get insights into real-world applications.
-
-For a better reading experience, visit the [official website](https://hellogithub.com/) or follow the [HelloGitHub WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
-
-### Previous Issues
+Get a better reading experience on [the official website](https://hellogithub.com/) or [HelloGitHub Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -47,7 +38,7 @@ For a better reading experience, visit the [official website](https://hellogithu
 
 ## Contribute
 
-Recommend or self-recommend projects at [here](https://hellogithub.com/periodical) or become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
+[Recommend or self-recommend](https://hellogithub.com/periodical) projects to become a **HelloGitHub** [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
 
 ## Sponsors
 
@@ -87,4 +78,4 @@ Recommend or self-recommend projects at [here](https://hellogithub.com/periodica
 
 ## License
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Contact me at <a href="mailto:595666367@qq.com">595666367@qq.com</a>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  <a href="mailto:595666367@qq.com">Contact me</a>

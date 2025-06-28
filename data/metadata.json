@@ -4,7 +4,7 @@
     "description": ":octocat: \u5206\u4eab GitHub \u4e0a\u6709\u8da3\u3001\u5165\u95e8\u7ea7\u7684\u5f00\u6e90\u9879\u76ee\u3002Share interesting, entry-level open source projects on GitHub.",
     "last_updated": "2025-06-27T04:53:31.521674",
     "readme": "docs/521xueweihan-HelloGitHub.md",
-    "readme_generated": "2025-06-27T05:18:31.206083",
+    "readme_generated": "2025-06-28T04:20:47.523537",
     "readme_hash": "c439336c2c044dcc2368b50ffac6a353",
     "repo_updated_at": "",
     "stars": 119238
@@ -14,37 +14,67 @@
     "description": "Stable Diffusion web UI",
     "last_updated": "2025-06-27T04:53:31.521663",
     "readme": "docs/AUTOMATIC1111-stable-diffusion-webui.md",
-    "readme_generated": "2025-06-27T05:18:37.618412",
+    "readme_generated": "2025-06-28T04:20:54.702568",
     "readme_hash": "a4e5f6ede763a2457db61266079e08a4",
     "repo_updated_at": "",
     "stars": 153924
+  },
+  "All-Hands-AI/OpenHands": {
+    "added_date": "2025-06-28T04:20:36.756633",
+    "description": "\ud83d\ude4c OpenHands: Code Less, Make More",
+    "last_updated": "2025-06-28T04:20:36.756625",
+    "readme": "docs/All-Hands-AI-OpenHands.md",
+    "readme_generated": "2025-06-28T04:21:08.775658",
+    "readme_hash": "23623f668f8db77c6f3a892cf2ba4d66",
+    "repo_updated_at": "2025-06-28T04:11:47Z",
+    "stars": 59371
   },
   "Alvin9999/new-pac": {
     "added_date": "2025-06-27T05:18:19.314841",
     "description": "\u7ffb\u5899-\u79d1\u5b66\u4e0a\u7f51\u3001\u81ea\u7531\u4e0a\u7f51\u3001\u514d\u8d39\u79d1\u5b66\u4e0a\u7f51\u3001\u514d\u8d39\u7ffb\u5899\u3001fanqiang\u3001\u6cb9\u7ba1youtube/\u89c6\u9891\u4e0b\u8f7d\u3001\u8f6f\u4ef6\u3001VPN\u3001\u4e00\u952e\u7ffb\u5899\u6d4f\u89c8\u5668\uff0cvps\u4e00\u952e\u642d\u5efa\u7ffb\u5899\u670d\u52a1\u5668\u811a\u672c/\u6559\u7a0b\uff0c\u514d\u8d39shadowsocks/ss/ssr/v2ray/goflyway\u8d26\u53f7/\u8282\u70b9\uff0c\u7ffb\u5899\u68af\u5b50\uff0c\u7535\u8111\u3001\u624b\u673a\u3001iOS\u3001\u5b89\u5353\u3001windows\u3001Mac\u3001Linux\u3001\u8def\u7531\u5668\u7ffb\u5899\u3001\u79d1\u5b66\u4e0a\u7f51\u3001youtube\u89c6\u9891\u4e0b\u8f7d\u3001youtube\u6cb9\u7ba1\u955c\u50cf/\u514d\u7ffb\u5899\u7f51\u7ad9\u3001\u7f8e\u533aapple id\u5171\u4eab\u8d26\u53f7\u3001\u7ffb\u5899-\u79d1\u5b66\u4e0a\u7f51-\u68af\u5b50",
     "last_updated": "2025-06-27T05:18:19.314839",
     "readme": "docs/Alvin9999-new-pac.md",
-    "readme_generated": "2025-06-27T05:18:41.686002",
-    "readme_hash": "b025bf8ff4bcadec51a53cb21495d237",
+    "readme_generated": "2025-06-28T04:21:12.102552",
+    "readme_hash": "b9b7fe78feb50ed4b18601092fffabe9",
     "repo_updated_at": "2025-06-27T05:15:31Z",
     "stars": 64342
+  },
+  "BerriAI/litellm": {
+    "added_date": "2025-06-28T04:20:36.756654",
+    "description": "Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format - [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]",
+    "last_updated": "2025-06-28T04:20:36.756652",
+    "readme": "docs/BerriAI-litellm.md",
+    "readme_generated": "2025-06-28T04:21:39.748282",
+    "readme_hash": "7c3d12851272d41797c439bddfa918d5",
+    "repo_updated_at": "2025-06-28T04:13:11Z",
+    "stars": 24649
   },
   "EbookFoundation/free-programming-books": {
     "added_date": "2025-06-27T04:53:31.521639",
     "description": ":books: Freely available programming books",
     "last_updated": "2025-06-27T04:53:31.521639",
     "readme": "docs/EbookFoundation-free-programming-books.md",
-    "readme_generated": "2025-06-27T05:19:06.360932",
+    "readme_generated": "2025-06-28T04:21:51.716765",
     "readme_hash": "be1574ac0a52b35ddd119d6d9a49f1af",
     "repo_updated_at": "",
     "stars": 361114
+  },
+  "PostHog/posthog": {
+    "added_date": "2025-06-28T04:20:36.756648",
+    "description": "\ud83e\udd94 PostHog provides open-source web & product analytics, session recording, feature flagging and A/B testing that you can self-host. Get started - free.",
+    "last_updated": "2025-06-28T04:20:36.756646",
+    "readme": "docs/PostHog-posthog.md",
+    "readme_generated": "2025-06-28T04:22:29.439534",
+    "readme_hash": "a360a29f8d42eeb754990c0f62d9fd77",
+    "repo_updated_at": "2025-06-28T03:16:19Z",
+    "stars": 27443
   },
   "Significant-Gravitas/AutoGPT": {
     "added_date": "2025-06-27T04:53:31.521661",
     "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
     "last_updated": "2025-06-27T04:53:31.521661",
     "readme": "docs/Significant-Gravitas-AutoGPT.md",
-    "readme_generated": "2025-06-27T05:19:16.362678",
+    "readme_generated": "2025-06-28T04:22:36.815693",
     "readme_hash": "0ac527a1cd0806c4714a89160b324a5b",
     "repo_updated_at": "",
     "stars": 176439
@@ -54,7 +84,7 @@
     "description": "All Algorithms implemented in Python",
     "last_updated": "2025-06-27T04:53:31.521659",
     "readme": "docs/TheAlgorithms-Python.md",
-    "readme_generated": "2025-06-27T05:19:22.128457",
+    "readme_generated": "2025-06-28T04:22:42.201379",
     "readme_hash": "bea690c323320822fe8bb2090029bfa4",
     "repo_updated_at": "",
     "stars": 202069
@@ -64,8 +94,8 @@
     "description": "Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",
     "last_updated": "2025-06-27T05:18:19.314850",
     "readme": "docs/apache-airflow.md",
-    "readme_generated": "2025-06-27T05:20:00.720300",
-    "readme_hash": "a3496dfdc04b18b172cfcbe0ab52eee0",
+    "readme_generated": "2025-06-28T04:22:55.682029",
+    "readme_hash": "12a26dc4d226c5828a25d4c5cc9e342f",
     "repo_updated_at": "2025-06-27T05:12:52Z",
     "stars": 40738
   },
@@ -74,7 +104,7 @@
     "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
     "last_updated": "2025-06-27T04:53:31.521654",
     "readme": "docs/donnemartin-system-design-primer.md",
-    "readme_generated": "2025-06-27T05:20:15.951795",
+    "readme_generated": "2025-06-28T04:23:05.141022",
     "readme_hash": "708027c5f2794d7c6d8091854f8ecf09",
     "repo_updated_at": "",
     "stars": 308609
@@ -84,17 +114,27 @@
     "description": "\ud83e\udd17 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
     "last_updated": "2025-06-27T04:53:31.521666",
     "readme": "docs/huggingface-transformers.md",
-    "readme_generated": "2025-06-27T05:20:32.583791",
+    "readme_generated": "2025-06-28T04:23:17.198909",
     "readme_hash": "765fd664225563115692a3d1f22e3e69",
     "repo_updated_at": "",
     "stars": 146097
+  },
+  "jax-ml/jax": {
+    "added_date": "2025-06-28T04:20:36.756641",
+    "description": "Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more",
+    "last_updated": "2025-06-28T04:20:36.756639",
+    "readme": "docs/jax-ml-jax.md",
+    "readme_generated": "2025-06-28T04:23:25.005940",
+    "readme_hash": "a6acdae9e4d5bfeed5f73e7f30217a01",
+    "repo_updated_at": "2025-06-28T03:50:19Z",
+    "stars": 32632
   },
   "localstack/localstack": {
     "added_date": "2025-06-27T05:18:19.314844",
     "description": "\ud83d\udcbb A fully functional local AWS cloud stack. Develop and test your cloud & Serverless apps offline",
     "last_updated": "2025-06-27T05:18:19.314843",
     "readme": "docs/localstack-localstack.md",
-    "readme_generated": "2025-06-27T05:20:47.171083",
+    "readme_generated": "2025-06-28T04:23:34.969160",
     "readme_hash": "d7d8c650b2d3085ceeb0d737d7d4877f",
     "repo_updated_at": "2025-06-27T05:16:21Z",
     "stars": 59405
@@ -104,7 +144,7 @@
     "description": "A collective list of free APIs",
     "last_updated": "2025-06-27T04:53:31.521651",
     "readme": "docs/public-apis-public-apis.md",
-    "readme_generated": "2025-06-27T05:21:20.623265",
+    "readme_generated": "2025-06-28T04:24:00.030325",
     "readme_hash": "6e347e56025d597c5e5a06f590e0df9b",
     "repo_updated_at": "",
     "stars": 353523
@@ -114,17 +154,27 @@
     "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
     "last_updated": "2025-06-27T05:18:19.314826",
     "readme": "docs/pytorch-pytorch.md",
-    "readme_generated": "2025-06-27T05:21:32.425215",
+    "readme_generated": "2025-06-28T04:24:09.797405",
     "readme_hash": "3b0781de6feea95f1f0f0f1bf6d93163",
     "repo_updated_at": "2025-06-27T05:11:19Z",
     "stars": 91056
+  },
+  "sgl-project/sglang": {
+    "added_date": "2025-06-28T04:20:36.756660",
+    "description": "SGLang is a fast serving framework for large language models and vision language models.",
+    "last_updated": "2025-06-28T04:20:36.756658",
+    "readme": "docs/sgl-project-sglang.md",
+    "readme_generated": "2025-06-28T04:24:21.839212",
+    "readme_hash": "9e9c310bd83199ebfcaa7eba1cb3a54e",
+    "repo_updated_at": "2025-06-28T04:00:31Z",
+    "stars": 15522
   },
   "vinta/awesome-python": {
     "added_date": "2025-06-27T04:53:31.521656",
     "description": "An opinionated list of awesome Python frameworks, libraries, software and resources.",
     "last_updated": "2025-06-27T04:53:31.521656",
     "readme": "docs/vinta-awesome-python.md",
-    "readme_generated": "2025-06-27T05:21:41.710294",
+    "readme_generated": "2025-06-28T04:24:31.543317",
     "readme_hash": "40ab1ccbc289560ba1aea25f2fcda4a5",
     "repo_updated_at": "",
     "stars": 247958
@@ -134,7 +184,7 @@
     "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
     "last_updated": "2025-06-27T05:18:19.314847",
     "readme": "docs/vllm-project-vllm.md",
-    "readme_generated": "2025-06-27T05:21:49.673787",
+    "readme_generated": "2025-06-28T04:24:39.051767",
     "readme_hash": "c5d0e5dcd891f742f07a7dc13dbe7cd0",
     "repo_updated_at": "2025-06-27T05:17:34Z",
     "stars": 50842
@@ -144,7 +194,7 @@
     "description": "Command-line program to download videos from YouTube.com and other video sites",
     "last_updated": "2025-06-27T04:53:31.521669",
     "readme": "docs/ytdl-org-youtube-dl.md",
-    "readme_generated": "2025-06-27T05:22:00.339579",
+    "readme_generated": "2025-06-28T04:25:19.685806",
     "readme_hash": "d9c32bd571576d61256168389d010eb3",
     "repo_updated_at": "",
     "stars": 136229
