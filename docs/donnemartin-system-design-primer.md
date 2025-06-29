@@ -1,123 +1,54 @@
-# System Design Primer: Your Comprehensive Guide to Designing Scalable Systems
+# System Design Primer: Your Guide to Building Scalable Systems
 
-**Master system design and ace your technical interviews with this open-source guide.** Explore key system design concepts, prepare for the system design interview, and learn how to build scalable and efficient systems. [Get started with the original repo](https://github.com/donnemartin/system-design-primer).
-
----
-
-## Key Features
-
-*   **Comprehensive Coverage:** Dive into a wide range of system design topics, from fundamental principles to advanced architectural patterns.
-*   **Interview Preparation:** Prepare effectively for system design interviews with detailed solutions, common questions, and expert guidance.
-*   **Open-Source & Community Driven:** Benefit from a continuously updated, community-driven resource with contributions from experienced engineers.
-*   **Hands-on Practice:** Enhance your understanding with in-depth discussions, sample code, and visual diagrams for key system design questions.
-*   **Flashcards for Retention:** Use Anki flashcards to retain essential system design principles while on-the-go.
+**Tackle system design interviews and learn how to design large-scale systems with this comprehensive, open-source resource.**  [View the original repository](https://github.com/donnemartin/system-design-primer) for the latest updates and contributions.
 
 ---
 
-## Table of Contents
+## **Key Features**
 
-*   [System Design Primer: Your Comprehensive Guide to Designing Scalable Systems](#system-design-primer-your-comprehensive-guide-to-designing-scalable-systems)
-    *   [Key Features](#key-features)
-    *   [Table of Contents](#table-of-contents)
-*   [Core Concepts](#core-concepts)
-    *   [Performance vs. Scalability](#performance-vs-scalability)
-    *   [Latency vs. Throughput](#latency-vs-throughput)
-    *   [Availability vs. Consistency](#availability-vs-consistency)
-        *   [CAP Theorem](#cap-theorem)
-        *   [CP - Consistency and Partition Tolerance](#cp---consistency-and-partition-tolerance)
-        *   [AP - Availability and Partition Tolerance](#ap---availability-and-partition-tolerance)
-    *   [Consistency Patterns](#consistency-patterns)
-    *   [Availability Patterns](#availability-patterns)
-*   [Infrastructure Components](#infrastructure-components)
-    *   [Domain Name System](#domain-name-system)
-    *   [Content Delivery Network (CDN)](#content-delivery-network-cdn)
-    *   [Load Balancer](#load-balancer)
-    *   [Reverse Proxy (Web Server)](#reverse-proxy-web-server)
-*   [Application & Data Layers](#application-data-layers)
-    *   [Application Layer](#application-layer)
-    *   [Microservices](#microservices)
-    *   [Service Discovery](#service-discovery)
-    *   [Database](#database)
-        *   [Relational Database Management System (RDBMS)](#relational-database-management-system-rdbms)
-        *   [NoSQL](#nosql)
-        *   [SQL or NoSQL](#sql-or-nosql)
-    *   [Cache](#cache)
-    *   [Asynchronism](#asynchronism)
-    *   [Communication](#communication)
-*   [Additional Topics](#additional-topics)
-    *   [Security](#security)
-    *   [Appendix](#appendix)
-    *   [Study Guide](#study-guide)
-    *   [How to Approach a System Design Interview Question](#how-to-approach-a-system-design-interview-question)
-    *   [System Design Interview Questions with Solutions](#system-design-interview-questions-with-solutions)
-    *   [Object-Oriented Design Interview Questions with Solutions](#object-oriented-design-interview-questions-with-solutions)
-    *   [Additional System Design Interview Questions](#additional-system-design-interview-questions)
-    *   [Real-World Architectures](#real-world-architectures)
-    *   [Company Architectures](#company-architectures)
-    *   [Company Engineering Blogs](#company-engineering-blogs)
-    *   [Under Development](#under-development)
-*   [Credits](#credits)
-*   [Contact Info](#contact-info)
-*   [License](#license)
+*   **Comprehensive Coverage:** Explore a wide range of system design topics.
+*   **Interview Prep:** Practice with common system design interview questions, including discussions, code, and diagrams.
+*   **Open Source & Community Driven:** Learn from an actively updated, community-driven project. Contributions are welcome!
+*   **Anki Flashcards:** Enhance retention with provided Anki flashcard decks.
+*   **Coding Resource:**  Access sister repo [Interactive Coding Challenges](https://github.com/donnemartin/interactive-coding-challenges) to prep for coding interviews.
+*   **Extensive Resources:**  Links to in-depth articles, architectures, and engineering blogs.
 
 ---
 
-## Core Concepts
+## **System Design Interview Prep & Learning Resources**
 
-This section covers the fundamental principles of system design, offering insights into the trade-offs that shape architectural decisions.
+This guide offers a wealth of information to help you prepare for system design interviews and deepen your understanding of building scalable systems.
 
-*   **Performance vs. Scalability:** Learn the difference between these crucial concepts.
-*   **Latency vs. Throughput:** Understand the relationship between these two performance metrics.
-*   **Availability vs. Consistency:** Explore the CAP theorem and its implications on system design.
+### **Core Topics**
 
-    *   **CAP Theorem:** Understand the principles behind the CAP Theorem.
-    *   **CP - Consistency and Partition Tolerance:** Dive into the CP model.
-    *   **AP - Availability and Partition Tolerance:** Dive into the AP model.
-*   **Consistency Patterns:** Explore different strategies for maintaining data consistency.
-*   **Availability Patterns:** Discover techniques for ensuring system availability.
+*   [System design topics: start here](#system-design-topics-start-here)
+*   [Performance vs scalability](#performance-vs-scalability)
+*   [Latency vs throughput](#latency-vs-throughput)
+*   [Availability vs consistency](#availability-vs-consistency)
+*   [Consistency patterns](#consistency-patterns)
+*   [Availability patterns](#availability-patterns)
+*   [Domain name system](#domain-name-system)
+*   [Content delivery network](#content-delivery-network)
+*   [Load balancer](#load-balancer)
+*   [Reverse proxy (web server)](#reverse-proxy-web-server)
+*   [Application layer](#application-layer)
+*   [Database](#database)
+*   [Cache](#cache)
+*   [Asynchronism](#asynchronism)
+*   [Communication](#communication)
+*   [Security](#security)
+*   [Appendix](#appendix)
 
----
+### **Interview Preparation**
 
-## Infrastructure Components
-
-Learn the building blocks of distributed systems, focusing on the components that support efficient and reliable operation.
-
-*   **Domain Name System:**
-*   **Content Delivery Network (CDN):**
-*   **Load Balancer:**
-*   **Reverse Proxy (Web Server):**
-
----
-
-## Application & Data Layers
-
-This section covers key components of the application and data layers within a system architecture.
-
-*   **Application Layer:**
-*   **Microservices:**
-*   **Service Discovery:**
-*   **Database:**
-    *   **Relational Database Management System (RDBMS):**
-    *   **NoSQL:**
-    *   **SQL or NoSQL:**
-*   **Cache:**
-*   **Asynchronism:**
-*   **Communication:**
+*   [Study guide](#study-guide)
+*   [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
+*   [System design interview questions with solutions](#system-design-interview-questions-with-solutions)
+*   [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions)
+*   [Additional system design interview questions](#additional-system-design-interview-questions)
 
 ---
 
-## Additional Topics
+## **Contribute**
 
-*   **Security:**
-*   **Appendix:**
-*   **Study Guide:**
-*   **How to Approach a System Design Interview Question:**
-*   **System Design Interview Questions with Solutions:**
-*   **Object-Oriented Design Interview Questions with Solutions:**
-*   **Additional System Design Interview Questions:**
-*   **Real-World Architectures:**
-*   **Company Architectures:**
-*   **Company Engineering Blogs:**
-*   **Under Development:**
-
----
+Help improve this guide by submitting pull requests to fix errors, improve sections, or add new topics.  Contribute by [translating](https://github.com/donnemartin/system-design-primer/issues/28) the guide or adding new questions.
