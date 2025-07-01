@@ -1,78 +1,94 @@
-# Apache Airflow: Orchestrate Your Workflows with Ease
+# Apache Airflow: The Open-Source Workflow Orchestration Platform
 
-**Apache Airflow** is a powerful, open-source platform for programmatically authoring, scheduling, and monitoring complex workflows, making data pipelines manageable and scalable.  [Explore the official Apache Airflow repository](https://github.com/apache/airflow) for the latest updates and contributions.
+**Automate, schedule, and monitor your workflows with Apache Airflow – define your pipelines as code for maximum flexibility and control.**  [Explore the official Apache Airflow repository](https://github.com/apache/airflow).
 
-## Key Features:
+[![License](https://img.shields.io/:license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
+[![PyPI version](https://badge.fury.io/py/apache-airflow.svg)](https://badge.fury.io/py/apache-airflow)
+[![Docker Pulls](https://img.shields.io/docker/pulls/apache/airflow.svg)](https://hub.docker.com/r/apache/airflow)
+[![GitHub Contributors](https://img.shields.io/github/contributors/apache/airflow)](https://github.com/apache/airflow/graphs/contributors)
 
-*   **Dynamic Workflows:** Define pipelines as code for maintainability, version control, and collaboration.
-*   **Extensible Architecture:** Leverage a rich set of built-in operators and customize Airflow to meet your specific needs.
-*   **Flexible Scheduling:** Schedule tasks with dependencies, execution times, and customizable parameters.
-*   **Robust Monitoring:**  Visualize pipeline progress, monitor performance, and troubleshoot issues through the user-friendly web interface.
-*   **Idempotent Tasks:** Designed to support idempotent tasks to avoid creating duplicated data
-*   **Jinja Templating:**  Use Jinja templating for rich customizations
-*   **User Interface:** Rich Web UI to view DAGs, assets, graphs, home and many more.
+<picture width="500">
+  <img
+    src="https://github.com/apache/airflow/blob/19ebcac2395ef9a6b6ded3a2faa29dc960c1e635/docs/apache-airflow/img/logos/wordmark_1.png?raw=true"
+    alt="Apache Airflow logo"
+  />
+</picture>
 
-## Getting Started:
+## Key Features
 
-Dive into Airflow with these resources:
+*   **Workflow as Code:** Define your data pipelines using Python, making them versionable, testable, and collaborative.
+*   **Dynamic Pipelines:** Build pipelines dynamically with code, supporting parameterization and reusable components.
+*   **Rich UI:** Visualize, monitor, and troubleshoot your workflows through an intuitive web interface.
+*   **Extensible Architecture:** Customize Airflow to fit your needs with a wide range of built-in operators and the ability to create your own.
+*   **Scalable and Reliable:** Schedule tasks on an array of workers, ensuring robust workflow execution.
 
-*   [Installation Guide](https://airflow.apache.org/docs/apache-airflow/stable/installation/)
-*   [Getting Started Tutorial](https://airflow.apache.org/docs/apache-airflow/stable/start.html)
-*   [Comprehensive Documentation](https://airflow.apache.org/docs/apache-airflow/stable/)
+## Getting Started
 
-## Installation:
+*   Consult the [Installation Guide](https://airflow.apache.org/docs/apache-airflow/stable/installation/) to get started.
+*   Explore the [Getting Started](https://airflow.apache.org/docs/apache-airflow/stable/start.html) guide.
+*   Follow the [Tutorial](https://airflow.apache.org/docs/apache-airflow/stable/tutorial/) for a comprehensive introduction.
 
-For detailed installation instructions, refer to the [INSTALLING.md](INSTALLING.md) file in this repository.
+## Installing from PyPI
 
-### Installing from PyPI
-
-Install Airflow with the latest stable version using constraints:
+Install Airflow using pip, but keep in mind that dependency management requires specific constraint files for a repeatable installation. For the latest stable version:
 
 ```bash
 pip install 'apache-airflow==3.0.2' \
  --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.10.txt"
 ```
 
-Install with extras, for example, with postgres and google providers:
+or include extras:
 
 ```bash
 pip install 'apache-airflow[postgres,google]==3.0.2' \
  --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.10.txt"
 ```
 
+## Architecture
+
+*   **DAGs:** Overview of all DAGs in your environment.
+    ![DAGs](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/dags.png)
+
+*   **Assets:** Overview of Assets with dependencies.
+    ![Asset Dependencies](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/assets_graph.png)
+
+*   **Grid:** Grid representation of a DAG that spans across time.
+    ![Grid](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/grid.png)
+
+*   **Graph:** Visualization of a DAG's dependencies and their current status for a specific run.
+    ![Graph](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/graph.png)
+
+*   **Home:** Summary statistics of your Airflow environment.
+    ![Home](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/home.png)
+
+*   **Backfill:** Backfilling a DAG for a specific date range.
+    ![Backfill](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/backfill.png)
+
+*   **Code:** Quick way to view source code of a DAG.
+    ![Code](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/code.png)
+
+## Requirements
+
+|            | Main version (dev)     | Stable version (3.0.2) |
+|------------|------------------------|------------------------|
+| Python     | 3.10, 3.11, 3.12       | 3.9, 3.10, 3.11, 3.12  |
+| Platform   | AMD64/ARM64(\*)        | AMD64/ARM64(\*)        |
+| Kubernetes | 1.30, 1.31, 1.32, 1.33 | 1.30, 1.31, 1.32, 1.33 |
+| PostgreSQL | 13, 14, 15, 16, 17     | 13, 14, 15, 16, 17     |
+| MySQL      | 8.0, 8.4, Innovation   | 8.0, 8.4, Innovation   |
+| SQLite     | 3.15.0+                | 3.15.0+                |
+
+\* Experimental
+
 ## Official Source Code
 
-Apache Airflow is an [Apache Software Foundation](https://www.apache.org) (ASF) project, and our official source code releases are available at:
+Airflow is an [Apache Software Foundation](https://www.apache.org) (ASF) project. Get official source code releases from the [ASF Distribution Directory](https://downloads.apache.org/airflow).
 
-*   [ASF Distribution Directory](https://downloads.apache.org/airflow)
+## Contributing
 
-## Version Life Cycle
+Contribute to Apache Airflow by following the guidelines in our [contributors' guide](https://github.com/apache/airflow/blob/main/contributing-docs/README.rst).  For a quick start, consult the [contribution quickstart](https://github.com/apache/airflow/blob/main/contributing-docs/03_contributors_quick_start.rst).
 
-Stay informed about the support status of each Airflow version:
-
-<!-- This table is automatically updated by pre-commit scripts/ci/pre_commit/supported_versions.py -->
-<!-- Beginning of auto-generated table -->
-
-| Version   | Current Patch/Minor   | State     | First Release   | Limited Maintenance   | EOL/Terminated   |
-|-----------|-----------------------|-----------|-----------------|-----------------------|------------------|
-| 3         | 3.0.2                 | Supported | Apr 22, 2025    | TBD                   | TBD              |
-| 2         | 2.11.0                | Supported | Dec 17, 2020    | Oct 22, 2025          | Apr 22, 2026     |
-| 1.10      | 1.10.15               | EOL       | Aug 27, 2018    | Dec 17, 2020          | June 17, 2021    |
-| 1.9       | 1.9.0                 | EOL       | Jan 03, 2018    | Aug 27, 2018          | Aug 27, 2018     |
-| 1.8       | 1.8.2                 | EOL       | Mar 19, 2017    | Jan 03, 2018          | Jan 03, 2018     |
-| 1.7       | 1.7.1.2               | EOL       | Mar 28, 2016    | Mar 19, 2017          | Mar 19, 2017     |
-
-<!-- End of auto-generated table -->
-
-## Contributing:
-
-Contribute to Airflow!  Learn how in the [contributors' guide](https://github.com/apache/airflow/blob/main/contributing-docs/README.rst) and [contribution quickstart](https://github.com/apache/airflow/blob/main/contributing-docs/03_contributors_quick_start.rst).
-
-## Who Uses Apache Airflow?
-
-Join a community of over 500 organizations that use Apache Airflow ([INTHEWILD.md](https://github.com/apache/airflow/blob/main/INTHEWILD.md)).
-
-## Community and Support
+## Community
 
 *   [Documentation](https://airflow.apache.org/docs/apache-airflow/stable/)
 *   [Chat](https://s.apache.org/airflow-slack)
@@ -86,17 +102,3 @@ The CI infrastructure for Apache Airflow has been sponsored by:
 
 <a href="https://astronomer.io"><img src="https://assets2.astronomer.io/logos/logoForLIGHTbackground.png" alt="astronomer.io" width="250px"></a>
 <a href="https://aws.amazon.com/opensource/"><img src="https://github.com/apache/airflow/blob/main/providers/amazon/docs/integration-logos/AWS-Cloud-alt_light-bg@4x.png?raw=true" alt="AWS OpenSource" width="130px"></a>
-```
-Key improvements and SEO considerations:
-
-*   **Clear Title and Description:** The title uses the target keyword ("Apache Airflow") and includes a benefit ("Orchestrate Your Workflows with Ease").  The first sentence acts as a concise, SEO-friendly description.
-*   **Targeted Keywords:** The text naturally incorporates relevant keywords: "workflows," "data pipelines," "scheduling," "monitoring," "open-source."
-*   **Headings and Structure:** Uses clear headings (H2) to organize content, improving readability and SEO.
-*   **Bulleted Lists:** Key features are presented in a bulleted list, making them easy to scan and understand.
-*   **Strong Call to Action:** Links to "Explore the official Apache Airflow repository" and "Dive into Airflow..." encourage engagement.
-*   **Concise Language:** The language is direct and avoids unnecessary jargon.
-*   **Emphasis on Benefits:** The description focuses on what users *get* from Airflow (manageability, scalability).
-*   **Internal Linking:** Added internal linking to specific pages inside the same document.
-*   **Clear Focus:** Maintains the original's purpose, with improved organization and style.
-*   **Updated Version Life Cycle Table** Ensures up-to-date information about the available versions
-*   **Sponsors information:** The information about the sponsors have been re-added in the end, making them also visible from the `pypi` view.

@@ -9,29 +9,36 @@
 
 # tinygrad: A Deep Learning Framework for Everyone
 
-**tinygrad is a lightweight, fully-featured deep learning framework designed for simplicity and ease of use.** Dive into the world of deep learning without the complexity, and discover how easy it is to add new accelerators and run cutting-edge models.
+**tinygrad is a fully-featured deep learning framework that prioritizes simplicity and ease of use, making it ideal for both beginners and experienced developers.**  Explore the power of tinygrad on the [original GitHub repo](https://github.com/tinygrad/tinygrad).
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/tinygrad/tinygrad)](https://github.com/tinygrad/tinygrad/stargazers)
-[![Unit Tests](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml/badge.svg)](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml)
-[![Discord](https://img.shields.io/discord/1068976834382925865)](https://discord.gg/ZjZadyC7PK)
+## Key Features
 
-**Key Features:**
+*   **Lightweight and Easy to Understand:** tinygrad is designed with simplicity in mind, making it easier to learn and experiment with deep learning.
+*   **Accelerated Performance:** Supports various accelerators, enabling efficient training and inference.
+*   **Flexible and Extensible:** Add support for new accelerators with ease.
+*   **Runs LLaMA and Stable Diffusion:** Demonstrating the framework's capabilities for complex models.
+*   **Lazy Evaluation:** Experience optimized computations through automatic kernel fusion.
+*   **Neural Network Capabilities:** Build and train neural networks with built-in autograd and tensor functionalities.
 
-*   **Runs LLaMA and Stable Diffusion:** Experience state-of-the-art models with the power of tinygrad.
-*   **Lazy Evaluation:** Witness the magic of fused kernels with lazy evaluation, optimizing your computations.
-*   **Neural Network Support:** Build and train neural networks with an intuitive autograd/tensor library, optimizers, and data loaders.
-*   **Extensive Accelerator Support:** Utilize a wide array of accelerators, including GPU (OpenCL), CPU (C Code), LLVM, METAL, CUDA, AMD, NV, QCOM, and WEBGPU, with more being added all the time.
-*   **Easy to Extend:** Add support for your favorite accelerator with only ~25 low level ops.
+## Accelerators Supported
 
-**Get Started:**
+tinygrad supports a wide range of hardware, with more being added constantly:
 
-*   **[Homepage](https://github.com/tinygrad/tinygrad)**
-*   **[Documentation](https://docs.tinygrad.org/)**
-*   **[Discord](https://discord.gg/ZjZadyC7PK)**
+*   [x] GPU (OpenCL)
+*   [x] CPU (C Code)
+*   [x] LLVM
+*   [x] METAL
+*   [x] CUDA
+*   [x] AMD
+*   [x] NV
+*   [x] QCOM
+*   [x] WEBGPU
 
-**Installation:**
+## Installation
 
-Install tinygrad directly from source:
+Get started quickly with these installation options:
+
+### From Source (Recommended)
 
 ```bash
 git clone https://github.com/tinygrad/tinygrad.git
@@ -39,13 +46,17 @@ cd tinygrad
 python3 -m pip install -e .
 ```
 
-Or install the latest master:
+### Direct (Master)
 
 ```bash
 python3 -m pip install git+https://github.com/tinygrad/tinygrad.git
 ```
 
-**Quick Example:**
+## Documentation
+
+Comprehensive documentation and a quick start guide are available on the [docs website](https://docs.tinygrad.org/).
+
+### Quick Comparison with PyTorch
 
 ```python
 from tinygrad import Tensor
@@ -59,10 +70,20 @@ print(x.grad.tolist())  # dz/dx
 print(y.grad.tolist())  # dz/dy
 ```
 
-**[Find the original repository here](https://github.com/tinygrad/tinygrad)**
+**PyTorch Equivalent:**
 
----
+```python
+import torch
 
-**Contributing:**
+x = torch.eye(3, requires_grad=True)
+y = torch.tensor([[2.0,0,-2.0]], requires_grad=True)
+z = y.matmul(x).sum()
+z.backward()
 
-We welcome contributions! Please review the guidelines in the original README on the GitHub repository before submitting a pull request to ensure your contribution is aligned with the project's goals.
+print(x.grad.tolist())  # dz/dx
+print(y.grad.tolist())  # dz/dy
+```
+
+## Contributing
+
+We welcome contributions! See the [Contributing Guidelines](https://github.com/tinygrad/tinygrad#contributing) for details on bug fixes, feature additions, and best practices.

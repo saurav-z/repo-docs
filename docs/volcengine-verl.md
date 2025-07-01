@@ -1,8 +1,11 @@
-<!-- Improved README with SEO Optimization -->
+<div align="center">
+  <br>
+  👋 **verl: Revolutionizing Reinforcement Learning for LLMs**
+  <br>
+  <br>
+</div>
 
-# verl: Revolutionizing Reinforcement Learning for LLMs
-
-verl is a powerful, open-source reinforcement learning (RL) library designed for training large language models (LLMs), enabling flexible, efficient, and production-ready RL workflows. [Explore the verl repository](https://github.com/volcengine/verl) to supercharge your LLM training!
+<div align="center">
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/volcengine/verl?style=social)](https://github.com/volcengine/verl/stargazers)
 [![Twitter](https://img.shields.io/twitter/follow/verl_project?style=social)](https://twitter.com/verl_project)
@@ -11,24 +14,30 @@ verl is a powerful, open-source reinforcement learning (RL) library designed for
 [![Documentation](https://img.shields.io/badge/documentation-blue)](https://verl.readthedocs.io/en/latest/)
 <a href="https://raw.githubusercontent.com/eric-haibin-lin/verl-community/refs/heads/main/WeChat.JPG"><img src="https://img.shields.io/badge/微信-green?logo=wechat&amp"></a>
 
+</div>
+
 ![seed logo](https://github.com/user-attachments/assets/c42e675e-497c-4508-8bb9-093ad4d1f216)
 
-## Key Features
+# verl: The Open-Source RL Training Library for LLMs
 
-*   **Flexible RL Algorithms:** Easy extension of diverse RL algorithms, including PPO and GRPO, through a hybrid-controller programming model.
-*   **Seamless LLM Integration:**  Integrates effortlessly with existing LLM frameworks, such as FSDP, Megatron-LM, vLLM, and SGLang.
-*   **Efficient Device Mapping:**  Supports flexible placement of models across GPUs for optimized resource utilization and scalability.
-*   **Hugging Face Compatibility:** Ready integration with popular Hugging Face models.
-*   **State-of-the-Art Performance:** Achieves SOTA throughput for LLM training and inference, and efficient actor model resharding.
+verl, initiated by the ByteDance Seed team and maintained by the verl community, is a cutting-edge, flexible, and efficient Reinforcement Learning (RL) training library designed for Large Language Models (LLMs). It offers a powerful toolkit for researchers and developers seeking to fine-tune and optimize LLMs. **[Explore verl's capabilities on GitHub](https://github.com/volcengine/verl) and unlock the potential of RL in your LLM projects.**
 
-## What's New
+**Key Features:**
 
-*   **[June 2025]** verl with Megatron backend enables large MoE models such as [DeepSeek-671b and Qwen3-236b](https://verl.readthedocs.io/en/latest/perf/dpsk.html).
-*   **[June 2025]** verl team will provide latest project updates at [PyTorch Day China](https://www.lfasiallc.com/pytorch-day-china/) on June 7th. Meet our dev team in Beijing!
-*   **[May 2025]** Support for [PF-PPO](https://arxiv.org/abs/2409.06957), accepted to ICML 2025.
-*   **[April 2025]** [Seed-Thinking-v1.5](https://github.com/ByteDance-Seed/Seed-Thinking-v1.5/blob/main/seed-thinking-v1.5.pdf) tech report is released!
-*   **[April 2025]** [VAPO](https://arxiv.org/pdf/2504.05118) (value-based augmented PPO) paper covers our latest RL method for reasoning models.
-*   **[March 2025]** [DAPO](https://dapo-sia.github.io/) is the open-sourced SOTA RL algorithm fully powered by verl, reproduction code is available in `recipe/dapo`.
+*   **Flexible RL Algorithms:** Easily implement diverse RL algorithms like PPO and GRPO with the hybrid-controller programming model.
+*   **Seamless LLM Integration:** Works seamlessly with existing LLM frameworks such as FSDP, Megatron-LM, vLLM, and SGLang via modular APIs.
+*   **Efficient Resource Utilization:** Supports flexible device mapping for efficient resource utilization and scalability across various cluster sizes.
+*   **Hugging Face Compatibility:** Ready integration with popular HuggingFace models.
+*   **State-of-the-Art Throughput:** SOTA LLM training and inference engine integrations and SOTA RL throughput.
+*   **3D-HybridEngine for Reduced Overhead:** Utilizes 3D-HybridEngine to eliminate memory redundancy and significantly reduce communication overhead.
+
+## Key Updates & News
+*   **[2025/06]** verl with Megatron backend enables large MoE models such as [DeepSeek-671b and Qwen3-236b](https://verl.readthedocs.io/en/latest/perf/dpsk.html).
+*   **[2025/06]** verl team will provide latest project updates at [PyTorch Day China](https://www.lfasiallc.com/pytorch-day-china/) on June 7th. Meet our dev team in Beijing!
+*   **[2025/05]** [PF-PPO](https://arxiv.org/abs/2409.06957), accepted to ICML 2025, is now supported in verl! PF-PPO enhances policy learning efficiency and robustness by filtering potentially noisy reward signals and reusing high-quality experiences via a replay buffer.
+*   **[2025/04]** [Seed-Thinking-v1.5](https://github.com/ByteDance-Seed/Seed-Thinking-v1.5/blob/main/seed-thinking-v1.5.pdf) tech report is released! Trained with verl, Seed-Thinking-v1.5 achieves 86.7 on AIME 2024, 55.0 on Codeforces and 77.3 on GPQA, demonstrating excellent reasoning abilities in STEM and coding. Beyond reasoning tasks, the method demonstrates notable generalization across diverse domains.
+*   **[2025/04]** [VAPO](https://arxiv.org/pdf/2504.05118) (value-based augmented PPO) paper covers our latest RL method for reasoning models. Trained from Qwen-32B-base model, VAPO achieves 60.4 on AIME 2024, outperforming DAPO-32B.
+*   **[2025/03]** [DAPO](https://dapo-sia.github.io/) is the open-sourced SOTA RL algorithm that achieves 50 points on AIME 2024 based on the Qwen2.5-32B pre-trained model, surpassing the previous SOTA achieved by DeepSeek's GRPO (DeepSeek-R1-Zero-Qwen-32B). DAPO's training is fully powered by verl and the reproduction code is available in `recipe/dapo` now.
 
 <details><summary> more... </summary>
 <ul>
@@ -51,71 +60,51 @@ verl is a powerful, open-source reinforcement learning (RL) library designed for
 
 ## Getting Started
 
-*   **Documentation:** Access detailed [documentation](https://verl.readthedocs.io/en/latest/index.html) for installation, quickstarts, and in-depth guides.
+*   [Documentation](https://verl.readthedocs.io/en/latest/index.html)
+*   [Installation](https://verl.readthedocs.io/en/latest/start/install.html)
+*   [Quickstart](https://verl.readthedocs.io/en/latest/start/quickstart.html)
+*   [Programming Guide](https://verl.readthedocs.io/en/latest/hybrid_flow.html)
+*   [PPO in verl](https://verl.readthedocs.io/en/latest/algo/ppo.html)
+*   [GRPO in verl](https://verl.readthedocs.io/en/latest/algo/grpo.html)
 
-*   **Quickstart:**  Follow the [quickstart guide](https://verl.readthedocs.io/en/latest/start/quickstart.html) for a rapid introduction.
-*   **Programming Guide:**  Explore the [programming guide](https://verl.readthedocs.io/en/latest/hybrid_flow.html) and [Tech Talk](https://hcqnc.xetlk.com/sl/3vACOK) (in Chinese).
-*   **PPO/GRPO:** Learn how to implement PPO and GRPO in verl. ([PPO](https://verl.readthedocs.io/en/latest/algo/ppo.html), [GRPO](https://verl.readthedocs.io/en/latest/algo/grpo.html))
+## Reproducible Baselines
+*   [RL performance on coding, math](https://verl.readthedocs.io/en/latest/algo/baseline.html)
 
-## Performance Tuning Guide
+## Performance Tuning
+*   [Performance Tuning Guide](https://verl.readthedocs.io/en/latest/perf/perf_tuning.html)
 
-Optimize your RL workflows with our [performance tuning guide](https://verl.readthedocs.io/en/latest/perf/perf_tuning.html).
+## Community Resources
 
-## Contribution
+*   **Blogs:** A collection of blogs from the community.
+    *   [When Reasoning Models Break Tokenization: The Hidden Complexity of Multiturn Training](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial/blob/main/rlhf/verl/multi-turn/fast_tokenization/multiturn_tokenization_and_masking.md)
+    *   [verl deployment on AWS SageMaker](https://medium.com/@kaige.yang0110/run-verl-on-sagemaker-using-4x8-l40s-gpus-8e6d5c3c61d3)
+    *   [verl x SGLang Multi-turn Code Walkthrough](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial/blob/main/rlhf/verl/multi-turn/code-walk-through/readme_EN.md)
+    *   [Optimizing SGLang Memory Usage in verl](https://hebiao064.github.io/rl-memory-management)
+    *   [SGLang, verl, OpenBMB and Tsinghua University: Pioneering End-to-End Multi-Turn RLHF](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial/blob/main/rlhf/verl/multi-turn/verl-multiturn-rollout-Release.md)
+    *   [Reinforcement Learning from Human Feedback on AMD GPUs with verl and ROCm Integration](https://rocm.blogs.amd.com/artificial-intelligence/verl-large-scale/README.html)
+    *   [veMLP x verl ：玩转强化学习训练](https://mp.weixin.qq.com/s/7nbqxk4knMGd-hQE9ls2tA)
+    *   [使用 verl 进行 GRPO 分布式强化学习训练最佳实践](https://www.volcengine.com/docs/6459/1463942)
+    *   [HybridFlow verl 原文浅析](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial/blob/main/rlhf/verl/readme.md)
+    *   [最高提升 20 倍吞吐量！豆包大模型团队发布全新 RLHF 框架，现已开源！](https://team.doubao.com/en/blog/%E6%9C%80%E9%AB%98%E6%8F%90%E5%8D%8720%E5%80%8D%E5%90%9E%E5%90%90%E9%87%8F-%E8%B1%86%E5%8C%85%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9B%A2%E9%98%9F%E5%8F%91%E5%B8%83%E5%85%A8%E6%96%B0-rlhf-%E6%A1%86%E6%9E%B6-%E7%8E%B0%E5%B7%B2%E5%BC%80%E6%BA%90)
 
-We welcome contributions from the community! See our [project roadmap](https://github.com/volcengine/verl/issues/710) and [good first issues](https://github.com/volcengine/verl/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22).
+## Citation
 
-### Code Linting and Formatting
-We use pre-commit to help improve code quality. To initialize pre-commit, run:
+If you use verl in your research, please cite the following:
 
-```bash
-pip install pre-commit
-pre-commit install
+```bibtex
+@article{sheng2024hybridflow,
+  title   = {HybridFlow: A Flexible and Efficient RLHF Framework},
+  author  = {Guangming Sheng and Chi Zhang and Zilingfeng Ye and Xibin Wu and Wang Zhang and Ru Zhang and Yanghua Peng and Haibin Lin and Chuan Wu},
+  year    = {2024},
+  journal = {arXiv preprint arXiv: 2409.19256}
+}
 ```
 
-To resolve CI errors locally, you can manually run pre-commit by:
+## Acknowledgements
 
-```bash
-pre-commit run
-```
+verl is inspired by the design of Nemo-Aligner, Deepspeed-chat and OpenRLHF. The project is adopted and contributed by Bytedance, Anyscale, LMSys.org, [Alibaba Qwen team](https://github.com/QwenLM/), Shanghai AI Lab, Tsinghua University, UC Berkeley, UCLA, UIUC, University of Hong Kong, ke.com, [All Hands AI](https://www.all-hands.dev/), [ModelBest](http://modelbest.cn/), JD AI Lab, Microsoft Research, [StepFun](https://www.stepfun.com/), Amazon, LinkedIn, Meituan, [Camel-AI](https://www.camel-ai.org/), [OpenManus](https://github.com/OpenManus), Xiaomi, NVIDIA research, [Baichuan](https://www.baichuan-ai.com/home), [RedNote](https://www.xiaohongshu.com/), [SwissAI](https://www.swiss-ai.org/), [Moonshot AI (Kimi)](https://www.moonshot-ai.com/), Baidu, Snowflake, Skywork.ai, JetBrains, [IceSword Lab](https://www.iceswordlab.com), and many more.
 
-### Adding CI tests
+## Contribution & Hiring
 
-If possible, please add CI test(s) for your new feature:
-
-1. Find the most relevant workflow yml file, which usually corresponds to a `hydra` default config (e.g. `ppo_trainer`, `ppo_megatron_trainer`, `sft_trainer`, etc).
-2. Add related path patterns to the `paths` section if not already included.
-3. Minimize the workload of the test script(s) (see existing scripts for examples).
-
-##  About ByteDance Seed Team
-
-ByteDance Seed Team is dedicated to crafting the industry's most advanced AI foundation models.
-<div>
-  <a href="https://team.doubao.com/">
-    <img src="https://img.shields.io/badge/Website-%231e37ff?style=for-the-badge&logo=bytedance&logoColor=white"></a>
-  <a href="https://github.com/user-attachments/assets/469535a8-42f2-4797-acdf-4f7a1d4a0c3e">
-    <img src="https://img.shields.io/badge/WeChat-07C160?style=for-the-badge&logo=wechat&logoColor=white"></a>
- <a href="https://www.xiaohongshu.com/user/profile/668e7e15000000000303157d?xsec_token=ABl2-aqekpytY6A8TuxjrwnZskU-6BsMRE_ufQQaSAvjc%3D&xsec_source=pc_search">
-    <img src="https://img.shields.io/badge/Xiaohongshu-%23FF2442?style=for-the-badge&logo=xiaohongshu&logoColor=white"></a>
-  <a href="https://www.zhihu.com/org/dou-bao-da-mo-xing-tuan-dui/">
-    <img src="https://img.shields.io/badge/zhihu-%230084FF?style=for-the-badge&logo=zhihu&logoColor=white"></a>
-
-</div>
----
-
-We are HIRING! Send us an [email](mailto:haibin.lin@bytedance.com) if you are interested in internship/FTE opportunities in RL for agents.
-```
-
-Key improvements and SEO considerations:
-
-*   **Concise Hook:**  The opening sentence clearly states the library's purpose.
-*   **Keyword-Rich Headings:**  Uses relevant keywords like "Reinforcement Learning," "LLMs," and "RL library" in headings.
-*   **Bulleted Key Features:** Uses bullet points for readability and to highlight important features, making it easy for users to scan and understand.
-*   **Focus on Benefits:** Highlights the benefits (flexibility, efficiency, production-readiness).
-*   **Clear Call to Action:** The "Explore the verl repository" encourages users to visit the repo.
-*   **Updated Information:** Includes most recent updates from the original README.
-*   **Emphasis on LLM:**  The phrase "large language models" is used strategically.
-*   **Consistent Formatting:**  Uses consistent markdown for easy reading.
-*   **Direct Links:** Makes the links easily accessible to the reader.
-*   **SEO-Friendly Titles:** Makes it easy for search engines to understand the subject.
-*   **Concise and Focused:** Removes excessive promotional language, keeping the focus on key information.
+*   See the [Contribution Guide](CONTRIBUTING.md) to get involved.
+*   We are HIRING! Send us an [email](mailto:haibin.lin@bytedance.com) if you are interested in internship/FTE opportunities in RL for agents.
