@@ -1,214 +1,331 @@
-# Model Context Protocol (MCP) Servers: Unlock AI with Secure Tool Access
+# Model Context Protocol (MCP) Servers: Unlock AI's Access to Tools and Data
 
-**Empower your Large Language Models (LLMs) with secure and controlled access to tools and data sources using the Model Context Protocol (MCP), a powerful open-source standard.** Explore a rich ecosystem of reference implementations, community-built servers, and resources to seamlessly integrate AI into your workflows. 
-[Go to the original repository](https://github.com/modelcontextprotocol/servers)
+**Empower your Large Language Models (LLMs) by connecting them to secure, controlled access to tools and data sources using Model Context Protocol (MCP).** This repository houses a collection of reference implementations, community-built servers, and essential resources to help you leverage the power of MCP.  Find the original repo [here](https://github.com/modelcontextprotocol/servers).
 
-## 🔑 Key Features
+## Key Features of MCP Servers:
 
-*   **Reference Implementations:** Explore pre-built servers demonstrating various MCP features, built using official SDKs for different languages.
-*   **Extensible Ecosystem:** Discover a growing library of community-contributed servers that address diverse use cases.
-*   **SDK Support:** Leverage official SDKs in C#, Java, Kotlin, Python, and Typescript.
-*   **Secure Access:** Provide LLMs with controlled and secure access to tools and data.
-*   **Community Driven:** Benefit from a collaborative environment with active development and community support.
+*   **Secure Tool Access:** Grant LLMs safe and controlled access to external tools and data.
+*   **Versatile Implementations:** Explore reference servers for various functionalities like web scraping, file management, and more.
+*   **Language-Agnostic SDKs:** Utilize the MCP SDKs available in C#, Java, Kotlin, Python, and TypeScript for easy integration.
+*   **Community-Driven Ecosystem:** Benefit from a growing collection of third-party and community-built servers.
+*   **Open Source & Collaborative:** Join the open-source community to contribute and enhance the MCP ecosystem.
 
-## 🚀 Getting Started
+## Reference Servers: Explore Core MCP Functionality
 
-### **Using MCP Servers from this Repository**
+These servers demonstrate the core capabilities of MCP using the official SDKs:
 
-You can easily launch and integrate many of the MCP servers directly.
+*   [Everything](src/everything): Comprehensive test server with prompts, resources, and tools.
+*   [Fetch](src/fetch): Retrieve and convert web content for efficient LLM utilization.
+*   [Filesystem](src/filesystem): Secure file operations with configurable access controls.
+*   [Git](src/git): Read, search, and manipulate Git repositories.
+*   [Memory](src/memory): Persistent memory system using a knowledge graph.
+*   [Sequential Thinking](src/sequentialthinking): Dynamic problem-solving through thought sequences.
+*   [Time](src/time): Time and timezone conversion functionalities.
 
-**For Typescript Servers (using `npx`):**
-```bash
-npx -y @modelcontextprotocol/server-memory
-```
+## Archived Servers:
 
-**For Python Servers (using `uvx` or `pip`):**
+The following reference servers have been archived and can be found at [servers-archived](https://github.com/modelcontextprotocol/servers-archived).
 
-```bash
-# Using uvx (recommended for simplicity)
-uvx mcp-server-git
+*   [AWS KB Retrieval](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/aws-kb-retrieval-server)
+*   [Brave Search](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/brave-search)
+*   [EverArt](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/everart)
+*   [GitHub](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/github)
+*   [GitLab](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/gitlab)
+*   [Google Drive](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/gdrive)
+*   [Google Maps](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/google-maps)
+*   [PostgreSQL](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres)
+*   [Puppeteer](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer)
+*   [Redis](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/redis)
+*   [Sentry](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sentry)
+*   [Slack](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/slack)
+*   [Sqlite](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite)
 
-# Or using pip
-pip install mcp-server-git
-python -m mcp_server_git
-```
-#### **Client Configuration**
-Run the servers and connect them to an MCP client. For example, here's the Claude Desktop configuration:
+## 🤝 Official & Community-Built Third-Party Servers
 
-```json
-{
-  "mcpServers": {
-    "memory": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"]
-    }
-  }
-}
-```
-
-### **Using an MCP Client**
-
-Configure the MCP clients to use various MCP servers by setting up parameters in your configuration.
-
-```json
-{
-  "mcpServers": {
-    "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/files"]
-    },
-    "git": {
-      "command": "uvx",
-      "args": ["mcp-server-git", "--repository", "path/to/git/repo"]
-    },
-    "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
-      }
-    },
-    "postgres": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost/mydb"]
-    }
-  }
-}
-```
-
-## 🌟 Reference Servers
-
-These servers serve as examples for the usage of MCP features and the SDKs:
-
-*   **[Everything](src/everything)** - Reference / test server with prompts, resources, and tools
-*   **[Fetch](src/fetch)** - Web content fetching and conversion for efficient LLM usage
-*   **[Filesystem](src/filesystem)** - Secure file operations with configurable access controls
-*   **[Git](src/git)** - Tools to read, search, and manipulate Git repositories
-*   **[Memory](src/memory)** - Knowledge graph-based persistent memory system
-*   **[Sequential Thinking](src/sequentialthinking)** - Dynamic and reflective problem-solving through thought sequences
-*   **[Time](src/time)** - Time and timezone conversion capabilities
-
-### Archived Servers
-
-Older, archived servers can be found at [servers-archived](https://github.com/modelcontextprotocol/servers-archived), these include:
-
-*   AWS KB Retrieval
-*   Brave Search
-*   EverArt
-*   GitHub
-*   GitLab
-*   Google Drive
-*   Google Maps
-*   PostgreSQL
-*   Puppeteer
-*   Redis
-*   Sentry
-*   Slack
-*   Sqlite
-
-## 🤝 Third-Party Servers
-
-Discover official integrations and community-developed servers, further expanding the capabilities of MCP.
+Explore a wide range of integrations, including both official and community-contributed servers:
 
 ### 🎖️ Official Integrations
 
-Official integrations are maintained by companies building production ready MCP servers for their platforms.
+These official integrations are maintained by companies building production-ready MCP servers for their platforms. (Listed alphabetically)
 
-*   <img height="12" width="12" src="https://www.21st.dev/favicon.ico" alt="21st.dev Logo" /> **[21st.dev Magic](https://github.com/21st-dev/magic-mcp)**
-*   <img height="12" width="12" src="https://framerusercontent.com/images/LpSK1tSZweomrAHOMAj9Gea96lA.svg" alt="Paragon Logo" /> **[ActionKit by Paragon](https://github.com/useparagon/paragon-mcp)**
-*   <img height="12" width="12" src="https://invoxx-public-bucket.s3.eu-central-1.amazonaws.com/frontend-resources/adfin-logo-small.svg" alt="Adfin Logo" /> **[Adfin](https://github.com/Adfin-Engineering/mcp-server-adfin)**
-*   <img height="12" width="12" src="https://www.agentql.com/favicon/favicon.png" alt="AgentQL Logo" /> **[AgentQL](https://github.com/tinyfish-io/agentql-mcp)**
-*   <img height="12" width="12" src="https://agentrpc.com/favicon.ico" alt="AgentRPC Logo" /> **[AgentRPC](https://github.com/agentrpc/agentrpc)**
+*   **[21st.dev Magic](https://github.com/21st-dev/magic-mcp)**
+*   **[ActionKit by Paragon](https://github.com/useparagon/paragon-mcp)**
+*   **[Adfin](https://github.com/Adfin-Engineering/mcp-server-adfin)**
+*   **[AgentQL](https://github.com/tinyfish-io/agentql-mcp)**
+*   **[AgentRPC](https://github.com/agentrpc/agentrpc)**
 *   **[Agentset](https://github.com/agentset-ai/mcp-server)**
-*   <img height="12" width="12" src="https://aiven.io/favicon.ico" alt="Aiven Logo" /> **[Aiven](https://github.com/Aiven-Open/mcp-aiven)**
-*   <img height="12" width="12" src="https://www.alation.com/resource-center/download/7p3vnbbznfiw/34FMtBTex5ppvs2hNYa9Fc/c877c37e88e5339878658697c46d2d58/Alation-Logo-Bug-Primary.svg" alt="Alation Logo" /> **[Alation](https://github.com/Alation/alation-ai-agent-sdk)**
+*   **[Aiven](https://github.com/Aiven-Open/mcp-aiven)**
+*   **[Alation](https://github.com/Alation/alation-ai-agent-sdk)**
 *   **[Algolia](https://github.com/algolia/mcp)**
-*   <img height="12" width="12" src="https://img.alicdn.com/imgextra/i4/O1CN01epkXwH1WLAXkZfV6N_!!6000000002771-2-tps-200-200.png" alt="Alibaba Cloud AnalyticDB for MySQL Logo" /> **[Alibaba Cloud AnalyticDB for MySQL](https://github.com/aliyun/alibabacloud-adb-mysql-mcp-server)**
-*   <img height="12" width="12" src="https://github.com/aliyun/alibabacloud-adbpg-mcp-server/blob/master/images/AnalyticDB.png" alt="Alibaba Cloud AnalyticDB for PostgreSQL Logo" /> **[Alibaba Cloud AnalyticDB for PostgreSQL](https://github.com/aliyun/alibabacloud-adbpg-mcp-server)**
-*   <img height="12" width="12" src="https://img.alicdn.com/imgextra/i3/O1CN0101UWWF1UYn3rAe3HU_!!6000000002530-2-tps-32-32.png" alt="DataWorks Logo" /> **[Alibaba Cloud DataWorks](https://github.com/aliyun/alibabacloud-dataworks-mcp-server)**
-*   <img height="12" width="12" src="https://opensearch-shanghai.oss-cn-shanghai.aliyuncs.com/ouhuang/aliyun-icon.png" alt="Alibaba Cloud OpenSearch Logo" /> **[Alibaba Cloud OpenSearch](https://github.com/aliyun/alibabacloud-opensearch-mcp-server)**
-*   <img height="12" width="12" src="https://github.com/aliyun/alibaba-cloud-ops-mcp-server/blob/master/image/alibaba-cloud.png" alt="Alibaba Cloud OPS Logo" /> **[Alibaba Cloud OPS](https://github.com/aliyun/alibaba-cloud-ops-mcp-server)**
-*   <img height="12" width="12" src="https://github.com/aliyun/alibabacloud-rds-openapi-mcp-server/blob/main/assets/alibabacloudrds.png" alt="Alibaba Cloud RDS MySQL Logo" /> **[Alibaba Cloud RDS](https://github.com/aliyun/alibabacloud-rds-openapi-mcp-server)**
-*   <img height="12" width="12" src="https://cdn.allvoicelab.com/resources/workbench/dist/icon-dark.ico" alt="AllVoiceLab Logo" /> **[AllVoiceLab](https://www.allvoicelab.com/mcp)**
-*   <img height="12" width="12" src="https://files.alpaca.markets/webassets/favicon-32x32.png" alt="Alpaca Logo" /> **[Alpaca](https://github.com/alpacahq/alpaca-mcp-server)**
-*   <img height="12" width="12" src="https://www.alphavantage.co/logo.png/" alt="AlphaVantage Logo" /> **[AlphaVantage](https://github.com/calvernaz/alphavantage)**
-*   <img height="12" width="12" src="https://doris.apache.org/images/favicon.ico" alt="Apache Doris Logo" /> **[Apache Doris](https://github.com/apache/doris-mcp-server)**
-*   <img height="12" width="12" src="https://iotdb.apache.org/img/logo.svg" alt="Apache IoTDB Logo" /> **[Apache IoTDB](https://github.com/apache/iotdb-mcp-server)**
-*   <img height="12" width="12" src="https://apify.com/favicon.ico" alt="Apify Logo" /> **[Apify](https://github.com/apify/actors-mcp-server)**
-*   <img height="12" width="12" src="https://2052727.fs1.hubspotusercontent-na1.net/hubfs/2052727/cropped-cropped-apimaticio-favicon-1-32x32.png" alt="APIMatic Logo" /> **[APIMatic MCP](https://github.com/apimatic/apimatic-validator-mcp)**
-*   <img height="12" width="12" src="https://apollo-server-landing-page.cdn.apollographql.com/_latest/assets/favicon.png" alt="Apollo Graph Logo" /> **[Apollo MCP Server](https://github.com/apollographql/apollo-mcp-server/)**
-*   <img height="12" width="12" src="https://developer.aqara.com/favicon.ico" alt="Aqara Logo" /> **[Aqara MCP Server](https://github.com/aqara/aqara-mcp-server/)**
-*   <img height="12" width="12" src="https://media.licdn.com/dms/image/v2/C4D0BAQEeD7Dxbpadkw/company-logo_200_200/company-logo_200_200/0/1644692667545/archbee_logo?e=2147483647&v=beta&t=lTi9GRIoqzG6jN3kJC26uZWh0q3uiQelsH6mGoq_Wfw" alt="Archbee Logo" /> **[Archbee](https://www.npmjs.com/package/@archbee/mcp)**
-*   <img height="12" width="12" src="https://phoenix.arize.com/wp-content/uploads/2023/04/cropped-Favicon-32x32.png" alt="Arize-Phoenix Logo" /> **[Arize Phoenix](https://github.com/Arize-ai/phoenix/tree/main/js/packages/phoenix-mcp)**
-*   <img height="12" width="12" src="https://731523176-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FaVUBXRZbpAgtjYf5HsvO%2Fuploads%2FaRRrVVocXCTr6GkepfCx%2Flogo_color.svg?alt=media&token=3ba24089-0ab2-421f-a9d9-41f2f94f954a" alt="Armor Logo" /> **[Armor Crypto MCP](https://github.com/armorwallet/armor-crypto-mcp)**
-*   <img height="12" width="12" src="https://console.asgardeo.io/app/libs/themes/wso2is/assets/images/branding/favicon.ico" alt="Asgardeo Logo" /> **[Asgardeo](https://github.com/asgardeo/asgardeo-mcp-server)**
-*   <img height="12" width="12" src="https://www.datastax.com/favicon-32x32.png" alt="DataStax logo" /> **[Astra DB](https://github.com/datastax/astra-db-mcp)**
-*   <img height="12" width="12" src="https://cdn.prod.website-files.com/66598898fd13d51606c3215d/66ccbfef13bd8bc19d587578_favicon-32x32.png" alt="Atla Logo" /> **[Atla](https://github.com/atla-ai/atla-mcp-server)**
-*   <img height="12" width="12" src="https://assets.atlan.com/assets/atlan-a-logo-blue-background.png" alt="Atlan Logo" /> **[Atlan](https://github.com/atlanhq/agent-toolkit/tree/main/modelcontextprotocol)**
-*   <img height="12" width="12" src="https://res.oafimg.cn/-/737b3b3ffed9b19e/logo.png" alt="AtomGit Logo" /> **[AtomGit](https://atomgit.com/atomgit-open-source-ecosystem/atomgit-mcp-server)**
-*   <img height="12" width="12" src="https://resources.audiense.com/hubfs/favicon-1.png" alt="Audiense Logo" /> **[Audiense Insights](https://github.com/AudienseCo/mcp-audiense-insights)**
-*   <img height="12" width="12" src="https://cdn.auth0.com/website/website/favicons/auth0-favicon.svg" alt="Auth0 Logo" /> **[Auth0](https://github.com/auth0/auth0-mcp-server)**
-*   <img height="12" width="12" src="https://firstorder.ai/favicon_auth.ico" alt="Authenticator App Logo" /> **[Authenticator App · 2FA](https://github.com/firstorderai/authenticator_mcp)**
-*   <img height="12" width="12" src="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" alt="AWS Logo" /> **[AWS](https://github.com/awslabs/mcp)**
-*   <img height="12" width="12" src="https://axiom.co/favicon.ico" alt="Axiom Logo" /> **[Axiom](https://github.com/axiomhq/mcp-server-axiom)**
-*   <img height="12" width="12" src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/acom_social_icon_azure" alt="Microsoft Azure Logo" /> **[Azure](https://github.com/Azure/azure-mcp)**
-*   <img height="12" width="12" src="https://mapopen-website-wiki.cdn.bcebos.com/LOGO/lbsyunlogo_icon.ico" alt="Baidu Map Logo" /> **[Baidu Map](https://github.com/baidu-maps/mcp)**
-*   <img height="12" width="12" src="https://www.bankless.com/favicon.ico" alt="Bankless Logo" /> **[Bankless Onchain](https://github.com/bankless/onchain-mcp)**
-*   <img height="12" width="12" src="https://bicscan.io/favicon.png" alt="BICScan Logo" /> **[BICScan](https://github.com/ahnlabio/bicscan-mcp)**
-*   <img height="12" width="12" src="https://web-cdn.bitrise.io/favicon.ico" alt="Bitrise Logo" /> **[Bitrise](https://github.com/bitrise-io/bitrise-mcp)**
-*   <img height="12" width="12" src="https://boldsign.com/favicon.ico" alt="BoldSign Logo" /> **[BoldSign](https://github.com/boldsign/boldsign-mcp)**
-*   <img height="12" width="12" src="https://boost.space/favicon.ico" alt="Boost.space Logo" /> **[Boost.space](https://github.com/boostspace/boostspace-mcp-server)**
-*   <img height="12" width="12" src="https://www.box.com/favicon.ico" alt="Box Logo" /> **[Box](https://github.com/box-community/mcp-server-box)**
-*   <img height="12" width="12" src="https://www.brightdata.com/favicon.ico" alt="BrightData Logo" /> **[BrightData](https://github.com/luminati-io/brightdata-mcp)**
-*   <img height="12" width="12" src="https://browserbase.com/favicon.ico" alt="Browserbase Logo" /> **[Browserbase](https://github.com/browserbase/mcp-server-browserbase)**
-*   <img height="12" width="12" src="https://browserstack.wpenginepowered.com/wp-content/themes/browserstack/img/favicons/favicon.ico" alt="BrowserStack Logo" /> **[BrowserStack](https://github.com/browserstack/mcp-server)**
-*   <img height="12" width="12" src="https://cdn.prod.website-files.com/65c0b8763c04cd15daa89b20/671f9d1301ac85495013761d_Favicon-White.png" alt="Bucket" /> **[Bucket](https://github.com/bucketco/bucket-javascript-sdk/tree/main/packages/cli#model-context-protocol)**
-*   <img height="12" width="12" src="https://builtwith.com/favicon.ico" alt="BuiltWith Logo" /> **[BuiltWith](https://github.com/builtwith/mcp)**
-*   <img height="12" width="12" src="https://portswigger.net/favicon.ico" alt="PortSwigger Logo" /> **[Burp Suite](https://github.com/PortSwigger/mcp-server)**
-*   <img height="12" width="12" src="https://campertunity.com/assets/icon/favicon.ico" alt="Campertunity Logo" /> **[Campertunity](https://github.com/campertunity/mcp-server)**
-*   <img height="12" width="12" src="https://play.cartesia.ai/icon.png" alt="Cartesia logo" /> **[Cartesia](https://github.com/cartesia-ai/cartesia-mcp)**
-*   <img height="12" width="12" src="https://www.cashfree.com/favicon.ico" alt="Cashfree logo" /> **[Cashfree](https://github.com/cashfree/cashfree-mcp)**
+*   **[Alibaba Cloud AnalyticDB for MySQL](https://github.com/aliyun/alibabacloud-adb-mysql-mcp-server)**
+*   **[Alibaba Cloud AnalyticDB for PostgreSQL](https://github.com/aliyun/alibabacloud-adbpg-mcp-server)**
+*   **[Alibaba Cloud DataWorks](https://github.com/aliyun/alibabacloud-dataworks-mcp-server)**
+*   **[Alibaba Cloud OpenSearch](https://github.com/aliyun/alibabacloud-opensearch-mcp-server)**
+*   **[Alibaba Cloud OPS](https://github.com/aliyun/alibaba-cloud-ops-mcp-server)**
+*   **[Alibaba Cloud RDS](https://github.com/aliyun/alibabacloud-rds-openapi-mcp-server)**
+*   **[AllVoiceLab](https://www.allvoicelab.com/mcp)**
+*   **[Alpaca](https://github.com/alpacahq/alpaca-mcp-server)**
+*   **[AlphaVantage](https://github.com/calvernaz/alphavantage)**
+*   **[Apache Doris](https://github.com/apache/doris-mcp-server)**
+*   **[Apache IoTDB](https://github.com/apache/iotdb-mcp-server)**
+*   **[Apify](https://github.com/apify/actors-mcp-server)**
+*   **[APIMatic MCP](https://github.com/apimatic/apimatic-validator-mcp)**
+*   **[Apollo MCP Server](https://github.com/apollographql/apollo-mcp-server/)**
+*   **[Aqara MCP Server](https://github.com/aqara/aqara-mcp-server/)**
+*   **[Archbee](https://www.npmjs.com/package/@archbee/mcp)**
+*   **[Arize Phoenix](https://github.com/Arize-ai/phoenix/tree/main/js/packages/phoenix-mcp)**
+*   **[Armor Crypto MCP](https://github.com/armorwallet/armor-crypto-mcp)**
+*   **[Asgardeo](https://github.com/asgardeo/asgardeo-mcp-server)**
+*   **[Astra DB](https://github.com/datastax/astra-db-mcp)**
+*   **[Atla](https://github.com/atla-ai/atla-mcp-server)**
+*   **[Atlan](https://github.com/atlanhq/agent-toolkit/tree/main/modelcontextprotocol)**
+*   **[AtomGit](https://atomgit.com/atomgit-open-source-ecosystem/atomgit-mcp-server)**
+*   **[Audiense Insights](https://github.com/AudienseCo/mcp-audiense-insights)**
+*   **[Auth0](https://github.com/auth0/auth0-mcp-server)**
+*   **[Authenticator App · 2FA](https://github.com/firstorderai/authenticator_mcp)**
+*   **[AWS](https://github.com/awslabs/mcp)**
+*   **[Axiom](https://github.com/axiomhq/mcp-server-axiom)**
+*   **[Azure](https://github.com/Azure/azure-mcp)**
+*   **[Baidu Map](https://github.com/baidu-maps/mcp)**
+*   **[Bankless Onchain](https://github.com/bankless/onchain-mcp)**
+*   **[BICScan](https://github.com/ahnlabio/bicscan-mcp)**
+*   **[Bitrise](https://github.com/bitrise-io/bitrise-mcp)**
+*   **[BoldSign](https://github.com/boldsign/boldsign-mcp)**
+*   **[Boost.space](https://github.com/boostspace/boostspace-mcp-server)**
+*   **[Box](https://github.com/box-community/mcp-server-box)**
+*   **[BrightData](https://github.com/luminati-io/brightdata-mcp)**
+*   **[Browserbase](https://github.com/browserbase/mcp-server-browserbase)**
+*   **[BrowserStack](https://github.com/browserstack/mcp-server)**
+*   **[Bucket](https://github.com/bucketco/bucket-javascript-sdk/tree/main/packages/cli#model-context-protocol)**
+*   **[BuiltWith](https://github.com/builtwith/mcp)**
+*   **[Burp Suite](https://github.com/PortSwigger/mcp-server)**
+*   **[Campertunity](https://github.com/campertunity/mcp-server)**
+*   **[Cartesia](https://github.com/cartesia-ai/cartesia-mcp)**
+*   **[Cashfree](https://github.com/cashfree/cashfree-mcp)**
 *   **[CB Insights](https://github.com/cbinsights/cbi-mcp-server)**
-*   <img height="12" width="12" src="https://www.chargebee.com/static/resources/brand/favicon.png" alt="Chargebee Logo" /> **[Chargebee](https://github.com/chargebee/agentkit/tree/main/modelcontextprotocol)**
-*   <img height="12" width="12" src="https://cheqd.io/wp-content/uploads/2023/03/logo_cheqd_favicon.png" alt="Cheqd Logo" /> **[Cheqd](https://github.com/cheqd/mcp-toolkit)**
-*   <img height="12" width="12" src="https://cdn.chiki.studio/brand/logo.png" alt="Chiki StudIO Logo" /> **[Chiki StudIO](https://chiki.studio/galimybes/mcp/)**
-*   <img height="12" width="12" src="https://trychroma.com/_next/static/media/chroma-logo.ae2d6e4b.svg" alt="Chroma Logo" /> **[Chroma](https://github.com/chroma-core/chroma-mcp)**
-*   <img height="12" width="12" src="https://www.chronulus.com/favicon/chronulus-logo-blue-on-alpha-square-128x128.ico" alt="Chronulus AI Logo" /> **[Chronulus AI](https://github.com/ChronulusAI/chronulus-mcp)**
-*   <img height="12" width="12" src="https://circleci.com/favicon.ico" alt="CircleCI Logo" /> **[CircleCI](https://github.com/CircleCI-Public/mcp-server-circleci)**
-*   <img height="12" width="12" src="https://clickhouse.com/favicon.ico" alt="ClickHouse Logo" /> **[ClickHouse](https://github.com/ClickHouse/mcp-clickhouse)**
-*   <img src="http://www.google.com/s2/favicons?domain=www.cloudera.com" alt="Cloudera Iceberg" width="12" height="12"> **[Cloudera Iceberg](https://github.com/cloudera/iceberg-mcp-server)**
-*   <img height="12" width="12" src="https://cdn.simpleicons.org/cloudflare" /> **[Cloudflare](https://github.com/cloudflare/mcp-server-cloudflare)**
-*   <img height="12" width="12" src="https://app.codacy.com/static/images/favicon-16x16.png" alt="Codacy Logo" /> **[Codacy](https://github.com/codacy/codacy-mcp-server/)**
-*   <img height="12" width="12" src="https://codelogic.com/wp-content/themes/codelogic/assets/img/favicon.png" alt="CodeLogic Logo" /> **[CodeLogic](https://github.com/CodeLogicIncEngineering/codelogic-mcp-server)**
-*   <img height="12" width="12" src="https://static.coingecko.com/s/coingecko-logo-white-750bdea438e850281f784dffc8f4fd498415754f088d655a1140849745cb66ac.svg" alt="CoinGecko Logo" /> **[CoinGecko](https://github.com/coingecko/coingecko-typescript/tree/main/packages/mcp-server)**
-*   <img height="12" width="12" src="https://www.comet.com/favicon.ico" alt="Comet Logo" /> **[Comet Opik](https://github.com/comet-ml/opik-mcp)**
-*   <img height="12" width="12" src="https://cdn.prod.website-files.com/6572bd8c27ee5db3eb91f4b3/6572bd8d27ee5db3eb91f55e_favicon-dashflow-webflow-template.svg" alt="OSS Conductor Logo" /> <img height="12" width="12" src="https://orkes.io/icons/icon-48x48.png" alt="Orkes Conductor Logo" />**[Conductor](https://github.com/conductor-oss/conductor-mcp)**
-*   <img height="12" width="12" src="https://www.confluent.io/favicon.ico" alt="Confluent Logo" /> **[Confluent](https://github.com/confluentinc/mcp-confluent)**
-*   <img src="https://contrastsecurity.com/favicon.ico" alt="Contrast Security" width="12" height="12"> **[Contrast Security](https://github.com/Contrast-Security-OSS/mcp-contrast)**
-*   <img height="12" width="12" src="https://www.convex.dev/favicon.ico" alt="Convex Logo" /> **[Convex](https://stack.convex.dev/convex-mcp-server)**
-*   <img height="12" width="12" src="https://avatars.githubusercontent.com/u/605755?s=200&v=4" alt="Couchbase Logo" /> **[Couchbase](https://github.com/Couchbase-Ecosystem/mcp-server-couchbase)**
-*   <img height="12" width="12" src="https://github.com/user-attachments/assets/b256f9fa-2020-4b37-9644-c77229ef182b" alt="CRIC 克而瑞 LOGO"> **[CRIC Wuye AI](https://github.com/wuye-ai/mcp-server-wuye-ai)**
-*   <img height="12" width="12" src="https://app.cycode.com/img/favicon.ico" alt="Cycode Logo" /> **[Cycode](https://github.com/cycodehq/cycode-cli#mcp-command-experiment)**
-*   <img height="12" width="12" src="http://app.itsdart.com/static/img/favicon.png" alt="Dart Logo" /> **[Dart](https://github.com/its-dart/dart-mcp-server)**
-*   <img height="12" width="12" src="https://datahub.com/wp-content/uploads/2025/04/cropped-Artboard-1-32x32.png" alt="DataHub Logo" /> **[DataHub](https://github.com/acryldata/mcp-server-datahub)**
-*   <img height="12" width="12" src="https://www.daytona.io/brand/social-daytona-icon.png" alt="Daytona Logo" /> **[Daytona](https://github.com/daytonaio/daytona/tree/main/apps/cli/mcp)**
-*   <img height="12" width="12" src="https://debugg.ai/favicon.svg" alt="Debugg AI Logo" /> **[Debugg.AI](https://github.com/debugg-ai/debugg-ai-mcp)**
-*   <img height="12" width="12" src="https://www.deepl.com/img/logo/deepl-logo-blue.svg" alt="DeepL Logo" /> **[DeepL](https://github.com/DeepLcom/deepl-mcp-server)**
-*   <img height="12" width="12" src="https://defang.io/_next/static/media/defang-icon-dark-colour.25f95b77.svg" alt="Defang Logo" /> **[Defang](https://github.com/DefangLabs/defang/blob/main/src/pkg/mcp/README.md)**
-*   <img height="12" width="12" src="https://www.devhub.com/img/upload/favicon-196x196-dh.png" alt="DevHub Logo" /> **[DevHub](https://github.com/devhub/devhub-cms-mcp)**
-*   <img height="12" width="12" src="https://devrev.ai/favicon.ico" alt="DevRev Logo" /> **[DevRev](https://github.com/devrev/mcp-server)**
-*   <img height="12" width="12" src="https://dexpaprika.com/favicon.ico" alt="DexPaprika Logo" /> **[DexPaprika (CoinPaprika)](https://github.com/coinpaprika/dexpaprika-mcp)**
-*   <img height="12" width="12" src="https://avatars.githubusercontent.com/u/204530939?s=200&v=4" alt="Dumpling AI Logo" /> **[Dumpling AI](https://github.com/Dumpling-AI/mcp-server-dumplingai)**
-*   <img height="12" width="12" src="https://avatars.githubusercontent.com/u/58178984" alt="Dynatrace Logo" /> **[Dynatrace](https://github.com/dynatrace-oss/dynatrace-mcp)**
-*   <img height="12" width="12" src="https://e2b.dev/favicon.ico" alt="E2B Logo" /> **[E2B](https://github.com/e2b-dev/mcp-server)**
-*   <img height="12" width="12" src="https://www.edgee.cloud/favicon.ico" alt="Edgee Logo" /> **[Edgee](https://github.com/edgee-cloud/mcp-server-edgee)**
-*   <img height="12" width="12" src="https://static.edubase.net/media/brand/favicon/favicon-32x32.png" alt="EduBase Logo" /> **[EduBase](https://github.com/EduBase/MCP)**
-*   <img height="12" width="12" src="https://www.elastic.co/favicon.ico" alt="Elasticsearch Logo" /> **[Elasticsearch](https://github.com/elastic/mcp-server-elasticsearch)**
-*   <img height="12" width="12" src="https://cdn.prod.website-files.com/656eaf5c6da3527caf362363/656ecc07555afac40df4c40e_Facicon.png" alt="Endor Labs Logo" /> **[Endor Labs](https://docs.endorlabs.com/deployment/ide/mcp/)**
-*   <img height="12" width="12" src="https://esignatures.com/favicon.ico" alt="eSignatures Logo" /> **[eSignatures](https://github.com/esignaturescom/mcp-server-esignatures)**
-*   <img height="12" width="12" src="https://exa.ai/images/favicon-32x32.png" alt="Exa Logo" /> **[Exa](https://github.com/exa-labs/exa-mcp-server)**
+*   **[Chargebee](https://github.com/chargebee/agentkit/tree/main/modelcontextprotocol)**
+*   **[Cheqd](https://github.com/cheqd/mcp-toolkit)**
+*   **[Chiki StudIO](https://chiki.studio/galimybes/mcp/)**
+*   **[Chroma](https://github.com/chroma-core/chroma-mcp)**
+*   **[Chronulus AI](https://github.com/ChronulusAI/chronulus-mcp)**
+*   **[CircleCI](https://github.com/CircleCI-Public/mcp-server-circleci)**
+*   **[ClickHouse](https://github.com/ClickHouse/mcp-clickhouse)**
+*   **[Cloudera Iceberg](https://github.com/cloudera/iceberg-mcp-server)**
+*   **[Cloudflare](https://github.com/cloudflare/mcp-server-cloudflare)**
+*   **[Codacy](https://github.com/codacy/codacy-mcp-server/)**
+*   **[CodeLogic](https://github.com/CodeLogicIncEngineering/codelogic-mcp-server)**
+*   **[CoinGecko](https://github.com/coingecko/coingecko-typescript/tree/main/packages/mcp-server)**
+*   **[Comet Opik](https://github.com/comet-ml/opik-mcp)**
+*   **[Conductor](https://github.com/conductor-oss/conductor-mcp)**
+*   **[Confluent](https://github.com/confluentinc/mcp-confluent)**
+*   **[Contrast Security](https://github.com/Contrast-Security-OSS/mcp-contrast)**
+*   **[Convex](https://stack.convex.dev/convex-mcp-server)**
+*   **[Couchbase](https://github.com/Couchbase-Ecosystem/mcp-server-couchbase)**
+*   **[CRIC Wuye AI](https://github.com/wuye-ai/mcp-server-wuye-ai)**
+*   **[Cycode](https://github.com/cycodehq/cycode-cli#mcp-command-experiment)**
+*   **[Dart](https://github.com/its-dart/dart-mcp-server)**
+*   **[DataHub](https://github.com/acryldata/mcp-server-datahub)**
+*   **[Daytona](https://github.com/daytonaio/daytona/tree/main/apps/cli/mcp)**
+*   **[Debugg.AI](https://github.com/debugg-ai/debugg-ai-mcp)**
+*   **[DeepL](https://github.com/DeepLcom/deepl-mcp-server)**
+*   **[Defang](https://github.com/DefangLabs/defang/blob/main/src/pkg/mcp/README.md)**
+*   **[DevHub](https://github.com/devhub/devhub-cms-mcp)**
+*   **[DevRev](https://github.com/devrev/mcp-server)**
+*   **[DexPaprika (CoinPaprika)](https://github.com/coinpaprika/dexpaprika-mcp)**
+*   **[Dumpling AI](https://github.com/Dumpling-AI/mcp-server-dumplingai)**
+*   **[Dynatrace](https://github.com/dynatrace-oss/dynatrace-mcp)**
+*   **[E2B](https://github.com/e2b-dev/mcp-server)**
+*   **[Edgee](https://github.com/edgee-cloud/mcp-server-edgee)**
+*   **[EduBase](https://github.com/EduBase/MCP)**
+*   **[Elasticsearch](https://github.com/elastic/mcp-server-elasticsearch)**
+*   **[Endor Labs](https://docs.endorlabs.com/deployment/ide/mcp/)**
+*   **[eSignatures](https://github.com/esignaturescom/mcp-server-esignatures)**
+*   **[Exa](https://github.com/exa-labs/exa-mcp-server)**
 *   **[FalkorDB](https://github.com/FalkorDB/FalkorDB-MCPServer)**
-*   <img height="12" width="12" src="https://fewsats.com/favicon.svg" alt="Fewsats Logo" /> **[Fewsats](https://github.com/Fewsats/fewsats-mcp)**
-*   <img height="12" width="12" src="https://fibery.io/favicon.svg" alt="Fibery Logo" /> **[Fibery](https://github.com/Fibery-inc/fibery-mcp-server)**
-*   <img height="12" width="12" src="https://financialdatasets.ai/favicon.ico" alt="Financial Datasets Logo" /> **[Financial Datasets](https://github.com/financial-datasets/mcp-server)**
-*   <img height="12" width="12" src="https://www.gstatic.com/devrel-devsite/prod/v7aeef7f1393bb1d75a4489145c511cdd5aeaa8e13ad0a83ec1b5b03612e66330/firebase/images/favicon.png" alt="Firebase Logo" /> **[Firebase](https://github.com/firebase/firebase-tools/blob/
+*   **[Fewsats](https://github.com/Fewsats/fewsats-mcp)**
+*   **[Fibery](https://github.com/Fibery-inc/fibery-mcp-server)**
+*   **[Financial Datasets](https://github.com/financial-datasets/mcp-server)**
+*   **[Firebase](https://github.com/firebase/firebase-tools/blob/master/src/mcp)**
+*   **[Firecrawl](https://github.com/mendableai/firecrawl-mcp-server)**
+*   **[Firefly](https://github.com/gofireflyio/firefly-mcp)**
+*   **[Fireproof](https://github.com/fireproof-storage/mcp-database-server)**
+*   **[Fluid Attacks](https://github.com/fluidattacks/mcp)**
+*   **[ForeverVM](https://github.com/jamsocket/forevervm/tree/main/javascript/mcp-server)**
+*   **[GibsonAI](https://github.com/GibsonAI/mcp)**
+*   **[Gitea](https://gitea.com/gitea/gitea-mcp)**
+*   **[Gitee](https://github.com/oschina/mcp-gitee)**
+*   **[Github](https://github.com/github/github-mcp-server)**
+*   **[Glean](https://github.com/gleanwork/mcp-server)**
+*   **[Globalping](https://github.com/jsdelivr/globalping-mcp-server)**
+*   **[gNucleus Text-To-CAD](https://github.com/gNucleus/text-to-cad-mcp)**
+*   **[Google Cloud Run](https://github.com/GoogleCloudPlatform/cloud-run-mcp)**
+*   **[gotoHuman](https://github.com/gotohuman/gotohuman-mcp-server)**
+*   **[Grafana](https://github.com/grafana/mcp-grafana)**
+*   **[Grafbase](https://github.com/grafbase/grafbase/tree/main/crates/mcp)**
+*   **[Graphlit](https://github.com/graphlit/graphlit-mcp-server)**
+*   **[GreptimeDB](https://github.com/GreptimeTeam/greptimedb-mcp-server)**
+*   **[Gyazo](https://github.com/nota/gyazo-mcp-server)**
+*   **[Harper](https://github.com/HarperDB/mcp-server)**
+*   **[Heroku](https://github.com/heroku/heroku-mcp-server)**
+*   **[Hologres](https://github.com/aliyun/alibabacloud-hologres-mcp-server)**
+*   **[Honeycomb](https://github.com/honeycombio/honeycomb-mcp)**
+*   **[HubSpot](https://developer.hubspot.com/mcp)**
+*   **[Hugging Face](https://huggingface.co/settings/mcp)**
+*   **[Hunter](https://github.com/hunter-io/hunter-mcp)**
+*   **[Hyperbolic](https://github.com/HyperbolicLabs/hyperbolic-mcp)**
+*   **[Hyperbrowser](https://github.com/hyperbrowserai/mcp)**
+*   **[IBM wxflows](https://github.com/IBM/wxflows/tree/main/examples/mcp/javascript)**
+*   **[Inbox Zero](https://github.com/elie222/inbox-zero/tree/main/apps/mcp-server)**
+*   **[Inflectra Spira](https://github.com/Inflectra/mcp-server-spira)**
+*   **[Inkeep](https://github.com/inkeep/mcp-server-python)**
+*   **[Integration App](https://github.com/integration-app/mcp-server)**
+*   **[JetBrains](https://github.com/JetBrains/mcp-jetbrains)**
+*   **[JFrog](https://github.com/jfrog/mcp-jfrog)**
+*   **[Kagi Search](https://github.com/kagisearch/kagimcp)**
+*   **[Keboola](https://github.com/keboola/keboola-mcp-server)**
+*   **[KeywordsPeopleUse.com](https://github.com/data-skunks/kpu-mcp)**
+*   **[Klavis ReportGen](https://github.com/Klavis-AI/klavis/tree/main/mcp_servers/report_generation)**
+*   **[Knit MCP Server](https://developers.getknit.dev/docs/knit-mcp-server-getting-started)**
+*   **[Knock MCP Server](https://github.com/knocklabs/agent-toolkit#model-context-protocol-mcp)**
+*   **[KurrentDB](https://github.com/kurrent-io/mcp-server)**
+*   **[Kuzu](https://github.com/kuzudb/kuzu-mcp-server)**
+*   **[KWDB](https://github.com/KWDB/kwdb-mcp-server)**
+*   **[Label Studio](https://github.com/HumanSignal/label-studio-mcp-server)**
+*   **[Lambda Capture](https://github.com/lambda-capture/mcp-server)**
+*   **[Langfuse Prompt Management](https://github.com/langfuse/mcp-server-langfuse)**
+*   **[Lara Translate](https://github.com/translated/lara-mcp)**
+*   **[Last9](https://github.com/last9/last9-mcp-server)**
+*   **[LaunchDarkly](https://github.com/launchdarkly/mcp-server)**
+*   **[LINE](https://github.com/line/line-bot-mcp-server)**
+*   **[Linear](https://linear.app/docs/mcp)**
+*   **[Lingo.dev](https://github.com/lingodotdev/lingo.dev/blob/main/mcp.md)**
+*   **[LinkedIn MCP Runner](https://github.com/ertiqah/linkedin-mcp-runner)**
+*   **[Lisply](https://github.com/gornskew/lisply-mcp)**
+*   **[Litmus.io](https://github.com/litmusautomation/litmus-mcp-server)**
+*   **[Liveblocks](https://github.com/liveblocks/liveblocks-mcp-server)**
+*   **[Logfire](https://github.com/pydantic/logfire-mcp)**
+*   **[Magic Meal Kits](https://github.com/pureugong/mmk-mcp)**
+*   **[Mailgun](https://github.com/mailgun/mailgun-mcp-server)**
+*   **[Make](https://github.com/integromat/make-mcp-server)**
+*   **[Mapbox](https://github.com/mapbox/mcp-server)**
+*   **[mcp-discovery logo](https://github.com/rust-mcp-stack/mcp-discovery)**
+*   **[MCP Toolbox for Databases](https://github.com/googleapis/genai-toolbox)**
+*   **[Meilisearch](https://github.com/meilisearch/meilisearch-mcp)**
+*   **[Memgraph](https://github.com/memgraph/mcp-memgraph)**
+*   **[Memgraph](https://github.com/memgraph/ai-toolkit/tree/main/integrations/mcp-memgraph)**
+*   **[Mercado Pago](https://mcp.mercadopago.com/)**
+*   **[Metoro](https://github.com/metoro-io/metoro-mcp-server)**
+*   **[Microsoft Clarity](https://github.com/microsoft/clarity-mcp-server)**
+*   **[Microsoft Dataverse](https://go.microsoft.com/fwlink/?linkid=2320176)**
+*   **[Microsoft Docs](https://github.com/microsoftdocs/mcp)**
+*   **[Milvus](https://github.com/zilliztech/mcp-server-milvus)**
+*   **[Momento](https://github.com/momentohq/mcp-momento)**
+*   **[MongoDB](https://github.com/mongodb-js/mongodb-mcp-server)**
+*   **[MotherDuck](https://github.com/motherduckdb/mcp-server-motherduck)**
+*   **[NanoVMs](https://github.com/nanovms/ops-mcp)**
+*   **[Needle](https://github.com/needle-ai/needle-mcp)**
+*   **[Neo4j](https://github.com/neo4j-contrib/mcp-neo4j/)**
+*   **[Neon](https://github.com/neondatabase/mcp-server-neon)**
+*   **[Nerve](https://github.com/nerve-hq/nerve-mcp-server)**
+*   **[Netdata](https://github.com/netdata/netdata/blob/master/src/web/mcp/README.md)**
+*   **[Netlify](https://docs.netlify.com/welcome/build-with-ai/netlify-mcp-server/)**
+*   **[Nile](https://github.com/niledatabase/nile-mcp-server)**
+*   **[Nodit](https://github.com/noditlabs/nodit-mcp-server)**
+*   **[Norman Finance](https://github.com/norman-finance/norman-mcp-server)**
+*   **[Notion](https://github.com/makenotion/notion-mcp-server#readme)**
+*   **[Nutrient](https://github.com/PSPDFKit/nutrient-dws-mcp-server)**
+*   **[Nx](https://github.com/nrwl/nx-console/blob/master/apps/nx-mcp)**
+*   **[OceanBase](https://github.com/oceanbase/mcp-oceanbase)**
+*   **[Octagon](https://github.com/OctagonAI/octagon-mcp-server)**
+*   **[OctoEverywhere](https://github.com/OctoEverywhere/mcp)**
+*   **[Offorte](https://github.com/offorte/offorte-mcp-server#readme)**
+*   **[OlaMaps](https://pypi.org/project/ola-maps-mcp-server)**
+*   **[ONLYOFFICE DocSpace](https://github.com/ONLYOFFICE/docspace-mcp)**
+*   **[OP.GG](https://github.com/opgginc/opgg-mcp)**
+*   **[OpenSearch](https://github.com/opensearch-project/opensearch-mcp-server-py)**
+*   **[OpsLevel](https://github.com/opslevel/opslevel-mcp)**
+*   **[Optuna](https://github.com/optuna/optuna-mcp)**
+*   **[Oxylabs](https://github.com/oxylabs/oxylabs-mcp)**
+*   **[Paddle](https://github.com/PaddleHQ/paddle-mcp-server)**
+*   **[Pagos](https://github.com/pagos-ai/pagos-mcp)**
+*   **[PAIML MCP Agent Toolkit](https://github.com/paiml/paiml-mcp-agent-toolkit)**
+*   **[Paper](https://github.com/paperinvest/mcp-server)**
+*   **[Patronus AI](https://github.com/patronus-ai/patronus-mcp-server)**
+*   **[PayPal](https://mcp.paypal.com)**
+*   **[Pearl](https://github.com/Pearl-com/pearl_mcp_server)**
+*   **[Perplexity](https://github.com/ppl-ai/modelcontextprotocol)**
+*   **[Pinecone](https://github.com/pinecone-io/pinecone-mcp)**
+*   **[Pinecone Assistant](https://github.com/pinecone-io/assistant-mcp)**
+*   **[Pipedream](https://github.com/PipedreamHQ/pipedream/tree/master/modelcontextprotocol)**
+*   **[PlayCanvas](https://github.com/playcanvas/editor-mcp-server)**
+*   **[Plugged.in](https://github.com/VeriTeknik/pluggedin-mcp)**
+*   **[Port IO](https://github.com/port-labs/port-mcp-server)**
+*   **[PostHog](https://github.com/posthog/mcp)**
+*   **[Powerdrill](https://github.com/powerdrillai/powerdrill-mcp)**
+*   **[Prisma](https://www.prisma.io/docs/postgres/mcp-server)**
+*   **[proxymock](https://docs.speedscale.com/proxymock/reference/mcp/)**
+*   **[PubNub](https://github.com/pubnub/pubnub-mcp-server)**
+*   **[Pulumi](https://github.com/pulumi/mcp-server)**
+*   **[Pure.md](https://github.com/puremd/puremd-mcp)**
+*   **[Put.io](https://github.com/putdotio/putio-mcp-server)**
+*   **[Qdrant](https://github.com/qdrant/mcp-server-qdrant/)**
+*   **[Quickchat AI](https://github.com/incentivai/quickchat-ai-mcp)**
+*   **[Ragie](https://github.com/ragieai/ragie-mcp-server/)**
+*   **[Ramp](https://github.com/ramp-public/ramp-mcp)**
+*   **[Raygun](https://github.com/MindscapeHQ/mcp-server-raygun)**
+*   **[Razorpay](https://github.com/razorpay/razorpay-mcp-server)**
+*   **[Recraft](https://github.com/recraft-ai/mcp-recraft-server)**
+*   **[Redis](https://github.com/redis/mcp-redis/)**
+*   **[Redis Cloud API](https://github.com/redis/mcp-redis-cloud/)**
+*   **[Reexpress](https://github.com/ReexpressAI/reexpress_mcp_server)**
+*   **[Rember](https://github.com/rember/rember-mcp)**
+*   **[Revit](https://github.com/NonicaTeam/AI-Connector-for-Revit)**
+*   **[Rill Data](https://docs.rilldata.com/explore/mcp)**
+*   **[Riza](https://github.com/riza-io/riza-mcp)**
+*   **[Roblox Studio](https://github.com/Roblox/studio-rust-mcp-server)**
+*   **[Rodin](https://github.com/DeemosTech/rodin-api-mcp)**
+*   **[Root Signals](https://github.com/root-signals/root-signals-mcp)**
+*   **[Routine](https://github.com/routineco/mcp-server)**
+*   **[SafeDep](https://github.com/safedep/vet/blob/main/docs/mcp.md)**
+*   **[SafeLine](https://github.com/chaitin/SafeLine/tree/main/mcp_server)**
+*   **[ScrAPI](https://github.com/DevEnterpriseSoftware/scrapi-mcp)**
+*   **[ScreenshotOne](https://github.com/screenshotone/mcp/)**
+*   **[Search1API](https://github.com/fatwang2/search1api-mcp)**
+*   **[Semgrep](https://github.com/semgrep/mcp)**
+*   **[Shortcut](https://github.com/useshortcut/mcp-server-shortcut)**
+*   **[SingleStore](https://github.com/singlestore-labs/mcp-server-singlestore)**
+*   **[Snyk](https://github.com/snyk/snyk-ls/blob/main/mcp_extension/README.md)**
+*   **[Sophtron](https://github.com/sophtron/Sophtron-Integration/tree/main/modelcontextprotocol)**
+*   **[StarRocks](https://github.com/StarRocks/mcp-server-starrocks)**
+*   **[Steadybit](https://github.com/steadybit/mcp)**
+*   **[Stripe](https://github.com/stripe/agent-toolkit)**
+*   **[Tako](https://github.com/TakoData/tako-mcp)**
+*   **[Tavily](https://github.com/tavily-ai/tavily-mcp)**
+*   **[Terraform](https://github.com/hashicorp/terraform-mcp-server)**
+*   **[TextIn](https://github.com/intsig-textin/textin-mcp)**
+*   **[Thena](https://mcp.thena.ai)**
+*   **[Thirdweb](https://github.com/thirdweb-dev/ai/tree/main/python/thirdweb-mcp)**
+*   **[ThoughtSpot](https://github.com/thoughtspot/mcp-server)**
+*   **[Tianji](https://github.com/msgbyte/tianji/tree/master/apps/mcp-server)**
+*   **[TiDB](https://github.com/pingcap/pytidb)**
+*   **[Tinybird](https://github.com/tinybirdco/mcp-tinybird)**
+*   **[Tldv](https://gitlab.com/tldv/tldv-mcp-server)**
+*   **[Trade Agent](https://github.com/Trade-Agent/trade-agent-mcp)**
+*   **[Twilio](https://github.com/twilio-labs/mcp)**
+*   **[UnifAI](https://github.com/unifai-network/unifai-mcp-server)**
+*   **[Unstructured](https://github.com/Unstructured-IO/UNS-MCP)**
+*   **[Upstash](https://github.com/upstash/mcp-server)**
+*   **[Vantage](https://github.com/vantage-sh/vantage-mcp-server)**
+*   **[VariFlight](https://github.com/variflight/variflight-mcp)**
+*   **[VCAgents](https://github.com/OctagonAI/octagon-vc-agents)**
+*   **[Vectorize](https://github.com/vectorize-io/vectorize-mcp-server/)**
+*   **[Verbwire](https://github.com/verbwire/verbwire-mcp-server)**
+*   **[Verodat](https://github.com/Verodat/verodat-mcp-server)**
+*   **[VeyraX](https://github.com/VeyraX/veyrax-mcp)**
+*   **[VictoriaMetrics](https://github.com/VictoriaMetrics-Community/mcp-victoriametrics)**
+*   **[VideoDB Director](https://github.com/video-db/agent-toolkit/tree/main/modelcontextprotocol)**
+*   **[Vizro](https://github.com/mckinsey/vizro/tree/main/vizro-mcp)**
+*   **[WaveSpeed](https://github.com/WaveSpeedAI/mcp-server)**
+*   **[WayStation](https://github.com/waystation-ai/mcp)**
+*   **[Webflow](https://github.com/webflow/mcp-server)**
+*   **[WebScraping.AI](https://github.com/webscraping-ai/
