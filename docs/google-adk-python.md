@@ -1,6 +1,6 @@
-# Agent Development Kit (ADK): Build Powerful AI Agents with Python
+# Agent Development Kit (ADK): Build Powerful AI Agents with Ease
 
-**[Explore the ADK on GitHub](https://github.com/google/adk-python) and unlock the power of agent-based AI with Google's open-source toolkit.**
+**ADK empowers developers to create, evaluate, and deploy sophisticated AI agents with a flexible, code-first approach.** ([Original Repository](https://github.com/google/adk-python))
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python Unit Tests](https://github.com/google/adk-python/actions/workflows/python-unit-tests.yml/badge.svg)](https://github.com/google/adk-python/actions/workflows/python-unit-tests.yml)
@@ -8,54 +8,52 @@
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/google/adk-python)
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/google/adk-python/main/assets/agent-development-kit.png" width="256" alt="Agent Development Kit Logo">
+  <img src="https://raw.githubusercontent.com/google/adk-python/main/assets/agent-development-kit.png" width="256" alt="Agent Development Kit Logo"/>
 </div>
 
-The Agent Development Kit (ADK) is a comprehensive Python toolkit that empowers developers to build, evaluate, and deploy sophisticated AI agents with unparalleled flexibility and control. Designed for rapid development and seamless integration with the Google ecosystem, ADK enables the creation of both simple and complex agentic architectures.
+ADK is an open-source, Python-based toolkit designed for building, evaluating, and deploying AI agents. While optimized for Google's ecosystem and Gemini models, ADK is model-agnostic and deployment-agnostic. It allows developers to create agentic architectures ranging from simple tasks to complex workflows with ease.
 
-## Key Features of the Agent Development Kit (ADK)
+## Key Features
 
-*   **Code-First Agent Development:** Define agent logic, tools, and orchestration directly in Python for enhanced control, testability, and versioning.
-*   **Rich Tool Integration:** Utilize pre-built tools, integrate custom functions, leverage OpenAPI specifications, or connect with existing tools, providing diverse capabilities for your agents.
-*   **Modular Multi-Agent Systems:** Design scalable applications by composing multiple specialized agents into flexible hierarchies, enabling complex workflows and efficient task management.
-*   **Flexible Deployment Options:** Easily containerize and deploy agents on Cloud Run or scale seamlessly with Vertex AI Agent Engine.
-*   **Model-Agnostic Design:** Build agents that are compatible with various LLM models, allowing for flexibility and future-proofing of your agent applications.
-
-## 🤖 Agent2Agent (A2A) Protocol Integration
-
-ADK seamlessly integrates with the [A2A protocol](https://github.com/google-a2a/A2A/) for remote agent-to-agent communication, enabling advanced distributed agent architectures. Explore the [A2A Example](https://github.com/google-a2a/a2a-samples/tree/main/samples/python/agents/google_adk) for how to work with ADK and A2A.
+*   **Code-First Development:** Define agent logic, tools, and orchestration directly in Python for maximum flexibility, testability, and version control.
+*   **Rich Tool Ecosystem:** Integrate pre-built tools, custom functions, and OpenAPI specifications to equip agents with diverse capabilities, with tight integration with the Google ecosystem.
+*   **Modular Multi-Agent Systems:** Design scalable applications by composing multiple specialized agents into flexible hierarchies.
+*   **Flexible Deployment:** Containerize and deploy agents on Cloud Run or scale seamlessly with Vertex AI Agent Engine.
+*   **Agent-to-Agent Communication:** Seamlessly integrates with the [A2A protocol](https://github.com/google-a2a/A2A/) for advanced agent interaction.
+*   **Built-in Development UI:** Test, evaluate, debug, and showcase your agents with the built-in development UI.
+*   **Evaluation Capabilities:** Evaluate agent performance.
 
 ## 🚀 Installation
 
 ### Stable Release (Recommended)
 
-Install the latest stable release of ADK using `pip`:
+Install the latest stable version using pip:
 
 ```bash
 pip install google-adk
 ```
 
-*   Weekly release cadence.
+This release cadence is weekly.
 
 ### Development Version
 
-Install the latest development version from the main branch for bug fixes and new features (use with caution):
+Install directly from the main branch for the latest bug fixes and features:
 
 ```bash
 pip install git+https://github.com/google/adk-python.git@main
 ```
 
-*   The development version may include experimental features or bugs.
+**Note:** The development version may contain experimental changes or bugs.
 
 ## 📚 Documentation
 
-Access detailed guides and tutorials on building, evaluating, and deploying agents:
+Explore the full documentation for detailed guides:
 
-*   **[ADK Documentation](https://google.github.io/adk-docs/)**
+*   **[Documentation](https://google.github.io/adk-docs)**
 
-## 🏁 Quickstart Examples
+## 🏁 Feature Highlight
 
-### Define a Single Agent
+### Define a single agent:
 
 ```python
 from google.adk.agents import Agent
@@ -70,7 +68,9 @@ root_agent = Agent(
 )
 ```
 
-### Define a Multi-Agent System
+### Define a multi-agent system:
+
+Define a multi-agent system with coordinator agent, greeter agent, and task execution agent. Then ADK engine and the model will guide the agents works together to accomplish the task.
 
 ```python
 from google.adk.agents import LlmAgent, BaseAgent
@@ -93,11 +93,11 @@ coordinator = LlmAgent(
 
 ### Development UI
 
-ADK includes a development UI for testing, evaluation, debugging, and showcasing your agents:
+A built-in development UI to help you test, evaluate, debug, and showcase your agent(s).
 
-<img src="https://raw.githubusercontent.com/google/adk-python/main/assets/adk-web-dev-ui-function-call.png"/>
+<img src="https://raw.githubusercontent.com/google/adk-python/main/assets/adk-web-dev-ui-function-call.png" alt="ADK Development UI"/>
 
-### Evaluate Agents
+###  Evaluate Agents
 
 ```bash
 adk eval \
@@ -107,10 +107,11 @@ adk eval \
 
 ## 🤝 Contributing
 
-We welcome contributions! Learn how to contribute by reading the:
+We welcome contributions! Please see our:
+
 *   [General contribution guideline and flow](https://google.github.io/adk-docs/contributing-guide/).
 *   [Code Contributing Guidelines](./CONTRIBUTING.md)
 
 ## 📄 License
 
-This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
