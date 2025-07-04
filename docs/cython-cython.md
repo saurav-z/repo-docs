@@ -1,63 +1,47 @@
 # Cython: Write C Extensions for Python with Ease
 
-**Cython empowers you to write C extensions for Python as easily as you write Python itself, unlocking significant performance gains.**  [Learn more about Cython](https://github.com/cython/cython).
+**Cython empowers developers to write C extensions for Python as easily as writing Python itself, significantly boosting performance.**  ([View the original repository on GitHub](https://github.com/cython/cython))
 
-## Key Features of Cython
+## Key Features
 
-*   **Python to C/C++ Compilation:** Translates Python code into highly optimized C/C++ code.
-*   **C/C++ Integration:** Seamlessly calls C functions and declares C types for efficient code generation.
-*   **Ideal for:** Wrapping external C libraries and accelerating the execution of Python code.
-*   **Performance:** Can generate efficient C code for faster execution of Python code.
-*   **Compatibility:** Full runtime compatibility with all still-in-use and future versions of CPython.
-*   **Optimization:** Broad support for manual optimization and tuning down to the C level.
-*   **Large Community:** A large user base with thousands of libraries, packages, and tools.
+*   **Python-like Syntax:** Write C extensions using a syntax that closely resembles Python, making it easy to learn and use.
+*   **C/C++ Code Generation:** Cython translates Python code to highly efficient C/C++ code, enabling significant performance gains.
+*   **C Function and Type Integration:** Seamlessly call C functions and declare C types within your Python code for optimized performance.
+*   **Ideal for Wrapping C Libraries:** Easily integrate external C libraries into your Python projects.
+*   **Accelerate Python Code:** Speed up the execution of your Python code by creating fast C modules.
+*   **Full CPython Compatibility:** Works seamlessly with all CPython versions.
+*   **Large Community & Adoption:** Used in thousands of libraries, packages, and tools, with over 60 million monthly downloads on PyPI.
+*   **Mature and Stable:** Benefiting from almost two decades of bug fixing and optimization.
+*   **Apache License:** Cython is distributed under the permissive Apache License.
 
 ## Installation
 
-To install Cython, if you have a C compiler, simply run:
+If you have a C compiler installed, install Cython using:
 
 ```bash
 pip install Cython
 ```
 
-Otherwise, see the [installation page](https://docs.cython.org/en/latest/src/quickstart/install.html) for more detailed instructions.
-
-## License
-
-Cython is licensed under the permissive **Apache License**.
-
-See [LICENSE.txt](https://github.com/cython/cython/blob/master/LICENSE.txt) for details.
-
-## Contributing
-
-Interested in contributing to the Cython project?  Find resources to get started at [CONTRIBUTING.rst](https://github.com/cython/cython/blob/master/docs/CONTRIBUTING.rst).
-
-## Differences Compared to Other Python Compilers
-
-Cython distinguishes itself from other Python compilers like PyPy, Numba, Pythran, mypyc, and Nuitka by offering:
-
-*   Fast, efficient, and highly compliant support for almost all Python language features, including dynamic features and introspection
-*   "Generate once, compile everywhere" C code generation that allows for reproducible performance results and testing
-*   C compile-time adaptation to the target platform and Python version
-*   Support for other C-API implementations, including PyPy and Pyston
-*   Seamless integration with C/C++ code
-
-## Resources
-
-*   **Official Website:** [https://cython.org/](https://cython.org/)
-*   **Documentation:** [https://docs.cython.org/](https://docs.cython.org/)
-*   **GitHub Repository:** [https://github.com/cython/cython](https://github.com/cython/cython)
-*   **Wiki:** [https://github.com/cython/cython/wiki](https://github.com/cython/cython/wiki)
+For detailed installation instructions, see the [installation page](https://docs.cython.org/en/latest/src/quickstart/install.html).
 
 ## Support the Project
 
-*   **GitHub Sponsors:** [https://github.com/users/scoder/sponsorship](https://github.com/users/scoder/sponsorship)
-*   **Tidelift:** [https://tidelift.com/subscription/pkg/pypi-cython](https://tidelift.com/subscription/pkg/pypi-cython)
+Support the Cython project through:
 
-## Get the Full Source History
+*   [GitHub Sponsors](https://github.com/users/scoder/sponsorship)
+*   [Tidelift](https://tidelift.com/subscription/pkg/pypi-cython)
 
-To obtain the complete source history from a downloaded source archive, ensure you have `git` installed, navigate to the Cython source distribution's base directory, and execute:
+## Contributing
 
-```bash
-make repo
-```
+Interested in contributing to the Cython project?  Get started with the [contributing guidelines](https://github.com/cython/cython/blob/master/docs/CONTRIBUTING.rst).
+
+## License
+
+Cython is licensed under the permissive **Apache License**. See [LICENSE.txt](https://github.com/cython/cython/blob/master/LICENSE.txt) for details.
+
+## Additional Resources
+
+*   [Official Website](https://cython.org/)
+*   [Documentation](https://docs.cython.org/)
+*   [GitHub Repository](https://github.com/cython/cython)
+*   [Wiki](https://github.com/cython/cython/wiki)
