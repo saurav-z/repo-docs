@@ -1,50 +1,61 @@
-# openpilot: The Open Source Driver Assistance System
+# openpilot: Open Source Driver Assistance for Your Car
 
-**Openpilot is a cutting-edge open-source software project that upgrades the driver assistance systems in over 300 supported car models.** Explore a new dimension of driving with advanced features and continuous improvement, all thanks to the power of open-source technology! Learn more about openpilot on the original repository: [https://github.com/commaai/openpilot](https://github.com/commaai/openpilot)
+**Upgrade your driving experience with openpilot, the open-source driving agent currently enhancing driver assistance systems in 300+ supported vehicles.**  Explore how you can enhance your car's capabilities with openpilot!  [Visit the original repository on GitHub](https://github.com/commaai/openpilot).
 
 ## Key Features
 
-*   **Automated Driver Assistance:** Enjoy features like adaptive cruise control, lane keeping assist, and automatic lane changes.
-*   **Broad Vehicle Support:**  Enhance your drive with compatibility for 300+ car models (check the [CARS.md](docs/CARS.md) file).
-*   **Community-Driven Development:** Benefit from continuous improvements and a thriving community of developers and enthusiasts.
-*   **Open Source:**  Contribute, customize, and learn from the freely available source code under the MIT license.
-*   **Data-Driven Improvement:**  Driving data is uploaded to improve openpilot performance (with the option to disable data collection).
-*   **Easy Installation:** Start with a [comma 3/3X](https://comma.ai/shop/comma-3x) and install openpilot with a single command: `bash <(curl -fsSL openpilot.comma.ai)`
-*   **Multiple Release Branches:** Choose the right openpilot experience with `release3` for stable builds, `release3-staging` for early access, `nightly` for the cutting edge, and `nightly-dev` for experimental features.
+*   **Enhanced Driver Assistance:** Upgrade your car's existing driver-assistance system with features like adaptive cruise control, lane keeping, and automatic lane changes.
+*   **Wide Vehicle Compatibility:** Supports over 300+ car makes and models, with continuous expansion.
+*   **Open Source & Community-Driven:** Benefit from a vibrant community, open to contributions and improvements.
+*   **Regular Updates:** Continuously evolving with new features, bug fixes, and vehicle support.
 
 ## Getting Started
 
-To use openpilot, you'll need:
+### What You'll Need
 
-1.  **Supported Device:** A comma 3/3X, available at [comma.ai/shop](https://comma.ai/shop/comma-3x).
-2.  **Software:** Install the release version by using the URL `openpilot.comma.ai`.
-3.  **Supported Car:**  One of the [275+ supported cars](docs/CARS.md).
-4.  **Car Harness:**  A [car harness](https://comma.ai/shop/car-harness) to connect your comma 3/3X to your car.
+1.  **Supported Device:** A comma 3/3X is required. Purchase one at [comma.ai/shop](https://comma.ai/shop/comma-3x).
+2.  **Software:** Install the release version using the URL `openpilot.comma.ai` during the comma 3/3X setup.
+3.  **Supported Car:** Ensure your vehicle is [supported](docs/CARS.md).
+4.  **Car Harness:** A [car harness](https://comma.ai/shop/car-harness) is needed to connect your comma 3/3X to your car.
 
-For detailed setup instructions, visit [comma.ai/setup](https://comma.ai/setup).
+### Installation
 
-## Development
+Follow the detailed instructions for [how to install the harness and device in a car](https://comma.ai/setup).
 
-*   **Join the Community:** [Discord](https://discord.comma.ai)
-*   **Contribute:** Learn how to contribute at [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)
-*   **Explore the Code:** Check out the [openpilot tools](tools/)
-*   **Documentation:** Find comprehensive documentation at [https://docs.comma.ai](https://docs.comma.ai)
-*   **Community Wiki:** Information about running openpilot lives on the [community wiki](https://github.com/commaai/openpilot/wiki)
-*   **Job Opportunities & Bounties:** Consider working for comma and earning bounties - [comma.ai/jobs#open-positions](https://comma.ai/jobs#open-positions) & [comma.ai/bounties](https://comma.ai/bounties)
+## Branches
+
+Choose the branch that best fits your needs:
+
+*   `release3`: `openpilot.comma.ai` (Release branch)
+*   `release3-staging`: `openpilot-test.comma.ai` (Staging branch for early access)
+*   `nightly`: `openpilot-nightly.comma.ai` (Bleeding edge development branch, may be unstable)
+*   `nightly-dev`: `installer.comma.ai/commaai/nightly-dev` (Nightly with experimental features for some cars)
+*   `secretgoodopenpilot`: `installer.comma.ai/commaai/secretgoodopenpilot` (Preview branch from the autonomy team)
+
+## Contribute
+
+openpilot thrives on community contributions.  Get involved by:
+
+*   Joining the [community Discord](https://discord.comma.ai).
+*   Reviewing the [contributing docs](docs/CONTRIBUTING.md).
+*   Exploring the [openpilot tools](tools/).
+*   Accessing code documentation at https://docs.comma.ai.
+*   Consulting the [community wiki](https://github.com/commaai/openpilot/wiki) for helpful information.
 
 ## Safety and Testing
 
-*   Follows [ISO26262](https://en.wikipedia.org/wiki/ISO_26262) guidelines ([SAFETY.md](docs/SAFETY.md) for more details).
-*   Includes software-in-the-loop tests ([.github/workflows/selfdrive_tests.yaml](.github/workflows/selfdrive_tests.yaml))
-*   Safety model code in panda (C) with code rigor details: [code rigor](https://github.com/commaai/panda#code-rigor)
-*   panda has software-in-the-loop safety tests: [safety tests](https://github.com/commaai/panda/tree/master/tests/safety)
-*   Internal hardware-in-the-loop Jenkins test suite.
-*   panda has additional hardware-in-the-loop tests: [panda tests](https://github.com/commaai/panda/blob/master/Jenkinsfile).
-*   Continuous testing with comma devices replaying routes in a testing closet.
+openpilot prioritizes safety through:
 
-## License and Data Usage
+*   Adherence to [ISO26262](https://en.wikipedia.org/wiki/ISO_26262) guidelines.  See [SAFETY.md](docs/SAFETY.md) for details.
+*   Automated software-in-the-loop [tests](.github/workflows/selfdrive_tests.yaml) on every commit.
+*   C-based code for safety-critical components (panda).
+*   Extensive testing, including hardware-in-the-loop and continuous replay testing.
 
-*   **License:** MIT ([LICENSE](LICENSE)).
-*   **Data:**  openpilot uploads driving data to improve performance. You can access your data through [comma connect](https://connect.comma.ai/).  Data collection can be disabled. By using openpilot, you agree to the [Privacy Policy](https://comma.ai/privacy).
+## Licensing and Data
 
-**Disclaimer:** This is alpha-quality software for research purposes only.  You are responsible for complying with local laws and regulations.  NO WARRANTY EXPRESSED OR IMPLIED.
+*   openpilot is licensed under the MIT license.
+*   Data is collected by default and used to improve the system.  Users can disable data collection.  See [our Privacy Policy](https://comma.ai/privacy).
+
+---
+
+**Disclaimer:** *This is alpha-quality software for research purposes only. It is not a product. You are responsible for complying with all local laws and regulations.  No warranty is expressed or implied.*
