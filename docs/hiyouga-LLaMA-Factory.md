@@ -1,4 +1,6 @@
-![LLaMA Factory Logo](assets/logo.png)
+# LLaMA Factory: Fine-Tune Any Large Language Model with Ease
+
+Fine-tune 100+ large language models, including Llama 3, Mistral, and Qwen, using zero-code CLI and Web UI.  [Check out the original repo](https://github.com/hiyouga/LLaMA-Factory)!
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=social)](https://github.com/hiyouga/LLaMA-Factory/stargazers)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hiyouga/LLaMA-Factory)](https://github.com/hiyouga/LLaMA-Factory/commits/main)
@@ -13,7 +15,7 @@
 [![GitCode](https://gitcode.com/zhengyaowei/LLaMA-Factory/star/badge.svg)](https://gitcode.com/zhengyaowei/LLaMA-Factory)
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing)
-[![Open in DSW](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory)
+[![Open in DSW](https://gallery.pai-ml.com/assets/open-in-dsw.svg)](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory)
 [![Open in Alaya](assets/alaya_new.svg)](https://docs.alayanew.com/docs/documents/newActivities/llamafactory/?utm_source=LLaMA-Factory)
 [![Open in Spaces](https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/hiyouga/LLaMA-Board)
 [![Open in Studios](https://img.shields.io/badge/ModelScope-Open%20in%20Studios-blue)](https://modelscope.cn/studios/hiyouga/LLaMA-Board)
@@ -63,47 +65,47 @@ Choose your path:
 
 ## Table of Contents
 
-- [Overview](#overview)
 - [Key Features](#key-features)
+- [Supported Models](#supported-models)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Quickstart](#quickstart)
-  - [Fine-Tuning with LLaMA Board GUI](#fine-tuning-with-llama-board-gui-powered-by-gradio)
-  - [Deployment](#deployment)
-- [Supported Models & Training Approaches](#supported-models--training-approaches)
-- [Advanced Features](#advanced-features)
-- [Community & Support](#community--support)
+  - [Web UI](#fine-tuning-with-llama-board-gui-powered-by-gradio)
+  - [Deployment](#deploy-with-openai-style-api-and-vllm)
+  - [And More!](#getting-started)
+- [Detailed Documentation](#detailed-documentation)
+- [Projects using LLaMA Factory](#projects-using-llama-factory)
 - [Citation](#citation)
 - [License](#license)
 
-## Overview
-
-**LLaMA Factory is your all-in-one solution for efficient and versatile fine-tuning of 100+ large language models.** [Explore the original repo](https://github.com/hiyouga/LLaMA-Factory) for details. This powerful toolkit simplifies the process of training and deploying LLMs with a range of cutting-edge features and support for various model architectures and training techniques.
-
 ## Key Features
 
-*   **Broad Model Support:** Fine-tune a vast array of LLMs, including LLaMA, Mistral, Qwen, and more (see [Supported Models](#supported-models--training-approaches)).
-*   **Comprehensive Training Approaches:** Utilize various techniques like (Continuous) pre-training, (multimodal) supervised fine-tuning, reward modeling, PPO, DPO, and QLoRA (see [Supported Training Approaches](#supported-models--training-approaches)).
-*   **Optimized for Efficiency:** Leverage advanced algorithms like GaLore, BAdam, and FlashAttention-2, along with quantization techniques (QLoRA, AWQ, etc.) to optimize training on various hardware.
-*   **Flexible Deployment:** Easily deploy your fine-tuned models with an OpenAI-style API and vLLM.
-*   **User-Friendly Interface:** Utilize the command-line interface or the Gradio-powered Web UI (LLaMA Board) for effortless training and experimentation.
-*   **Experiment Tracking:** Seamlessly integrate with experiment monitors such as TensorBoard, Wandb, and SwanLab.
+*   **Extensive Model Support:**  Fine-tune a wide array of LLMs, including Llama, Mistral, Qwen, Gemma, and many more.
+*   **Versatile Training Methods:** Support for (Continuous) pre-training, (multimodal) supervised fine-tuning, reward modeling, PPO, DPO, and more.
+*   **Efficient Training Techniques:**  Utilize LoRA, QLoRA, FlashAttention-2, Unsloth, and other optimizations for faster and more memory-efficient training.
+*   **Comprehensive Monitoring:**  Leverage experiment monitors like LlamaBoard, TensorBoard, Wandb, and SwanLab to track your progress.
+*   **Easy Deployment:** Deploy fine-tuned models with an OpenAI-style API and vLLM for fast inference.
+*   **Day-N Support:** Stay up-to-date with the latest models.
+
+## Supported Models
+
+A comprehensive list of supported models including Baichuan, ChatGLM, DeepSeek, Llama 2 & 3, Mistral, Qwen, and many more, with specific template recommendations and model sizes.  See the detailed [Supported Models](#supported-models) section for the full list.
 
 ## Getting Started
 
 ### Installation
 
-```bash
-git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
-cd LLaMA-Factory
-pip install -e ".[torch,metrics]" --no-build-isolation
-```
+Choose from several installation methods to get started:
 
-Refer to the [installation section](#installation) for detailed instructions.
+*   **Install from Source:**  Clone the repository and install the required packages using `pip install -e ".[torch,metrics]"`.
+*   **Install from Docker Image:** Use the pre-built Docker image for a ready-to-use environment.
+*   **Virtual Environment with uv:** Create an isolated Python environment.
+*   **Windows Users:** Specific instructions for installing PyTorch, bitsandbytes and Flash Attention-2.
+*   **Ascend NPU Users:** Installation instructions and configuration details for Ascend NPU devices.
 
 ### Quickstart
 
-Fine-tune, run inference, and merge a Llama3-8B-Instruct model with these commands:
+Get up and running with LoRA fine-tuning, inference, and model merging using three simple commands:
 
 ```bash
 llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
@@ -111,7 +113,9 @@ llamafactory-cli chat examples/inference/llama3_lora_sft.yaml
 llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
 ```
 
-### Fine-Tuning with LLaMA Board GUI (powered by [Gradio](https://github.com/gradio-app/gradio))
+### Web UI
+
+Launch the user-friendly Gradio-powered web interface with:
 
 ```bash
 llamafactory-cli webui
@@ -119,32 +123,45 @@ llamafactory-cli webui
 
 ### Deployment
 
-Deploy your models with the OpenAI-style API using vLLM:
+Deploy your fine-tuned models using an OpenAI-style API and vLLM:
 
 ```bash
 API_PORT=8000 llamafactory-cli api examples/inference/llama3.yaml infer_backend=vllm vllm_enforce_eager=true
 ```
 
-## Supported Models & Training Approaches
+### And More!
 
-*   **Supported Models:** A comprehensive list of supported models, including LLaMA, Mistral, Qwen, and many more, can be found [here](#supported-models).
-*   **Supported Training Approaches:** LLaMA Factory offers a variety of training approaches, including full-tuning, LoRA, QLoRA, and others (see [Supported Training Approaches](#supported-training-approaches)).
+Explore additional features, including:
 
-## Advanced Features
+*   Data Preparation
+*   Docker Builds
+*   Downloading from ModelScope and Modelers Hub
+*   Weights & Biases (W&B) Integration
+*   SwanLab Integration
 
-*   **Experiment Tracking:** Utilize Weights & Biases (Wandb) or SwanLab for experiment logging and visualization.
-*   **Model Integration:** Download models and datasets from Hugging Face, ModelScope Hub, and Modelers Hub.
-*   **Advanced Optimizers:** Integrate advanced optimizers such as GaLore, BAdam, Muon, and more (see [Changelog](#changelog)).
+## Detailed Documentation
 
-## Community & Support
+For in-depth information, including:
 
-*   Join our [Discord](https://dcbadge.vercel.app/api/server/rKfvV9r9FK?compact=true&style=flat) for community discussions.
-*   Follow us on [Twitter](https://twitter.com/llamafactory_ai).
-*   Join our [WeChat group](assets/wechat.jpg), [NPU user group](assets/wechat_npu.jpg) or [Alaya NeW user group](assets/wechat_alaya.png).
+*   Provided Datasets
+*   Changelog
+*   Supported Training Approaches
+*   Requirement
+*   Hardware Requirements
+*   Building Docker Images
+
+See the expanded documentation within the original README.
+
+## Projects using LLaMA Factory
+
+Explore projects using LLaMA Factory to fine-tune language models for various applications:
+
+*   A list of projects using the library (click to show)
+*   Includes projects for text classification, code generation, and more.
 
 ## Citation
 
-If you find this project helpful, please cite:
+If you find this work helpful, please cite our paper:
 
 ```bibtex
 @inproceedings{zheng2024llamafactory,
@@ -160,4 +177,4 @@ If you find this project helpful, please cite:
 
 ## License
 
-This project is licensed under the [Apache-2.0 License](LICENSE).
+This repository is licensed under the [Apache-2.0 License](LICENSE).

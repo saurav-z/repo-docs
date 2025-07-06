@@ -7,34 +7,58 @@
 
 </div>
 
-# tinygrad: A Deep Learning Framework for RISC Architectures
+# tinygrad: A Deep Learning Framework for Everyone
 
-**tinygrad** is a minimalist deep learning framework, offering a PyTorch-like experience with a focus on simplicity and efficient hardware utilization.  Explore the [tinygrad repository](https://github.com/tinygrad/tinygrad) for more details.
+**tinygrad is a lightweight, fully-featured deep learning framework designed for simplicity and ease of adding new accelerators.** Explore the power of deep learning without the complexity!  [Check out the original repo](https://github.com/tinygrad/tinygrad).
+
+**Key Features:**
+
+*   **Simplicity:** Easy to understand and modify, making it ideal for both beginners and experts.
+*   **Accelerator Support:** Supports a wide range of accelerators, including CPU, GPU (OpenCL, METAL, CUDA, AMD, NV, QCOM, WEBGPU), and LLVM, with more easily added.
+*   **LLaMA and Stable Diffusion Ready:** Run cutting-edge models like LLaMA and Stable Diffusion with ease.
+*   **Lazy Evaluation:** Optimized performance through lazy evaluation, fusing operations into efficient kernels.
+*   **Neural Network Capabilities:** Build and train neural networks with essential components like autograd, tensor libraries, and optimizers.
+
+**Example: Build a Simple Neural Network**
+
+```python
+from tinygrad import Tensor, nn
+
+class LinearNet:
+  def __init__(self):
+    self.l1 = Tensor.kaiming_uniform(784, 128)
+    self.l2 = Tensor.kaiming_uniform(128, 10)
+  def __call__(self, x:Tensor) -> Tensor:
+    return x.flatten(1).dot(self.l1).relu().dot(self.l2)
+
+model = LinearNet()
+optim = nn.optim.Adam([model.l1, model.l2], lr=0.001)
+
+x, y = Tensor.rand(4, 1, 28, 28), Tensor([2,4,3,7])  # replace with real mnist dataloader
+
+with Tensor.train():
+  for i in range(10):
+    optim.zero_grad()
+    loss = model(x).sparse_categorical_crossentropy(y).backward()
+    optim.step()
+    print(i, loss.item())
+```
+
+**Ready to get started?**
+
+*   **Homepage:** [https://github.com/tinygrad/tinygrad](https://github.com/tinygrad/tinygrad)
+*   **Documentation:** [https://docs.tinygrad.org/](https://docs.tinygrad.org/)
+*   **Discord:** [https://discord.gg/ZjZadyC7PK](https://discord.gg/ZjZadyC7PK)
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/tinygrad/tinygrad)](https://github.com/tinygrad/tinygrad/stargazers)
+[![Unit Tests](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml/badge.svg)](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml)
+[![Discord](https://img.shields.io/discord/1068976834382925865)](https://discord.gg/ZjZadyC7PK)
 
 ---
 
-## Key Features
+## Installation
 
-*   **Runs LLaMA and Stable Diffusion:** Utilize cutting-edge models with this lightweight framework.
-*   **Lazy Evaluation:** Experience optimized performance through intelligent kernel fusion.
-*   **Simple Neural Network Creation:** Build and train models with a streamlined autograd/tensor library.
-*   **Wide Accelerator Support:**  Deploy on various hardware platforms with ease.
-    *   GPU (OpenCL)
-    *   CPU (C Code)
-    *   LLVM
-    *   METAL
-    *   CUDA
-    *   AMD
-    *   NV
-    *   QCOM
-    *   WEBGPU
-*   **Easy to Extend:** Quickly add support for your preferred accelerator with only a few low-level operations.
-
-## Getting Started
-
-### Installation
-
-Install tinygrad from source:
+### From Source
 
 ```bash
 git clone https://github.com/tinygrad/tinygrad.git
@@ -42,32 +66,12 @@ cd tinygrad
 python3 -m pip install -e .
 ```
 
-or directly from the master branch:
+### Direct (master)
 
 ```bash
 python3 -m pip install git+https://github.com/tinygrad/tinygrad.git
 ```
 
-## Documentation
-
-Comprehensive documentation is available at the [docs website](https://docs.tinygrad.org/), including a quick start guide.
-
-### Quick Example: Comparing to PyTorch
-
-See how tinygrad mirrors PyTorch's functionality:
-
-```python
-from tinygrad import Tensor
-
-x = Tensor.eye(3, requires_grad=True)
-y = Tensor([[2.0,0,-2.0]], requires_grad=True)
-z = y.matmul(x).sum()
-z.backward()
-
-print(x.grad.tolist())  # dz/dx
-print(y.grad.tolist())  # dz/dy
-```
-
 ## Contributing
 
-We welcome contributions! Please review our [contributing guidelines](https://github.com/tinygrad/tinygrad/blob/master/README.md#contributing) to ensure your PR is aligned with project goals.
+We welcome contributions!  Please review the [Contributing Guidelines](https://github.com/tinygrad/tinygrad/blob/master/README.md#contributing) before submitting a pull request.

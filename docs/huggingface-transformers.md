@@ -38,91 +38,73 @@
     </p>
 </h4>
 
-# Hugging Face Transformers: State-of-the-Art Models for NLP, Vision, and More
+# Hugging Face Transformers: State-of-the-Art NLP, Computer Vision, Audio, and Multimodal Models
 
-**Harness the power of cutting-edge AI with Hugging Face Transformers, a library providing pre-trained models for text, vision, audio, and multimodal tasks, simplifying the development and deployment of advanced AI applications.**  Get started with the official [Hugging Face Transformers repository](https://github.com/huggingface/transformers).
+**Hugging Face Transformers empowers you with cutting-edge, pre-trained models for various AI tasks, simplifying both inference and training.** ([View on GitHub](https://github.com/huggingface/transformers))
 
 <h3 align="center">
     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/transformers_as_a_model_definition.png"/>
 </h3>
 
-## Key Features
+## Key Features:
 
-*   **Extensive Model Support:** Access a vast collection of pre-trained models for a wide range of tasks across text, computer vision, audio, video, and multimodal domains.
-*   **Unified API:**  A consistent and easy-to-use API for utilizing all available pre-trained models.
-*   **Simplified Usage:** High-level `Pipeline` API for streamlined inference and task execution.
-*   **Framework Flexibility:** Train and deploy models across PyTorch, TensorFlow, and Flax.
-*   **Community and Hub Integration:** Leverage the Hugging Face Hub to discover, share, and utilize a massive library of model checkpoints (over 1M+).
-*   **Easy Customization:** Adapt models to your specific needs, with exposed internals for customization and experimentation.
-*   **Reduced Costs:** Minimize training costs and carbon footprint by leveraging pre-trained models and fine-tuning them.
+*   **Extensive Model Support:** Access a vast library of over 1 million+ pre-trained models for text, images, audio, video, and multimodal tasks, all available on the [Hugging Face Hub](https://huggingface.co/models).
+*   **Simplified Usage:**  Utilize a unified API for easy implementation of state-of-the-art models.
+*   **Efficiency and Cost Savings:** Leverage pre-trained models to reduce compute costs and accelerate development.
+*   **Framework Flexibility:** Seamlessly switch between PyTorch, TensorFlow, and Flax for training and inference.
+*   **Customization & Community:**  Easily adapt models to your needs with provided examples and a thriving community.
 
 ## Installation
 
-The Transformers library is compatible with Python 3.9+ and supports PyTorch 2.1+, TensorFlow 2.6+, and Flax 0.4.1+.
-
-**Install with `pip` (Recommended):**
+Transformers supports Python 3.9+ with PyTorch, TensorFlow, and Flax.
 
 ```bash
-pip install "transformers[torch]"  # Or [tensorflow] or [flax] for other frameworks
-```
-
-**Install from Source (For the latest changes):**
-
-```bash
-git clone https://github.com/huggingface/transformers.git
-cd transformers
-pip install .[torch]  # Or [tensorflow] or [flax]
+# Recommended: Create a virtual environment with venv or uv (a fast Rust-based Python package manager).
+# Install Transformers with pip or uv:
+pip install "transformers[torch]"
+# or
+uv pip install "transformers[torch]"
 ```
 
 ## Quickstart
 
-Get up and running quickly with the `Pipeline` API:
+Get started with Transformers using the `Pipeline` API.
 
 ```python
 from transformers import pipeline
 
-# Text Generation Example
+# Example: Text Generation
 pipeline = pipeline(task="text-generation", model="Qwen/Qwen2.5-1.5B")
 pipeline("the secret to baking a really good cake is ")
 ```
 
-Explore the documentation for more details on using the `Pipeline` API for various modalities and tasks:
-*   Automatic Speech Recognition
-*   Image Classification
-*   Visual Question Answering
-
 ## Why Use Transformers?
 
-*   **State-of-the-Art Performance:** Achieve high accuracy on a wide range of AI tasks.
-*   **Accessibility:** Lower the barrier to entry for researchers, engineers, and developers.
-*   **Cost-Effectiveness:** Reduce compute costs and carbon footprint.
-*   **Flexibility:** Choose the right framework for training, evaluation, and deployment.
-*   **Customization:** Easily adapt models to your specific use cases.
-*   **Community:** Leverage a large community and readily available models.
+*   **User-Friendly:** Intuitive and easy to learn.
+*   **Resource Efficient:** Save time and compute by using pre-trained models.
+*   **Framework Agnostic:** Choose your preferred framework for training and deployment.
+*   **Highly Customizable:** Easily modify models and integrate them into your projects.
 
-## When Not to Use Transformers
+## Why Not Use Transformers?
 
-*   Not a modular toolbox for building neural networks.
-*   Training API is optimized for PyTorch models.
-*   Example scripts may require adaptation for specific needs.
+*   This library is not a modular toolbox of building blocks for neural nets.
+*   The training API is optimized to work with PyTorch models provided by Transformers.
+*   Example scripts are only *examples* and may need to be adapted.
 
-## Projects Built with Transformers
+## Explore the Community
 
-Join the community! Check out the [awesome-transformers](./awesome-transformers.md) page for a list of incredible projects utilizing the Transformers library.
+Explore the [awesome-transformers](./awesome-transformers.md) list to discover incredible projects built with Transformers.
 
 ## Example Models
 
-Explore a selection of pre-trained models across different modalities:
-
-*   **Audio:** Audio classification, speech recognition, text-to-speech, etc.
-*   **Computer Vision:** Image classification, object detection, segmentation, and more.
-*   **Multimodal:** Image captioning, visual question answering, and other multimodal applications.
-*   **NLP:** Text generation, text classification, summarization, translation, and question answering.
+*   **Audio:**  Whisper, Moonshine, Wav2Vec2, Moshi, MusicGen, Bark
+*   **Computer Vision:** SAM, DepthPro, DINO v2, SuperGlue, RT-DETRv2, VitPose, OneFormer, VideoMAE
+*   **Multimodal:** Qwen2-Audio, LayoutLMv3, Qwen-VL, BLIP-2, GOT-OCR2, TAPAS, Emu3, Llava-OneVision, Llava, Kosmos-2
+*   **NLP:** ModernBERT, Gemma, Mixtral, BART, T5, Llama, Qwen
 
 ## Citation
 
-If you use the Transformers library, please cite the following paper:
-
+If you use this library, please cite the following paper:
 ```bibtex
 @inproceedings{wolf-etal-2020-transformers,
     title = "Transformers: State-of-the-Art Natural Language Processing",
@@ -135,3 +117,4 @@ If you use the Transformers library, please cite the following paper:
     url = "https://www.aclweb.org/anthology/2020.emnlp-demos.6",
     pages = "38--45"
 }
+```

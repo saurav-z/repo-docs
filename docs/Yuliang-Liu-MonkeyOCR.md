@@ -1,6 +1,6 @@
-# MonkeyOCR: Unlock Document Insights with Advanced Structure Recognition
+# MonkeyOCR: Effortless Document Parsing with AI
 
-**MonkeyOCR is a cutting-edge document parsing model leveraging a Structure-Recognition-Relation (SRR) triplet paradigm for superior document understanding. Get started today!** ([Original Repo](https://github.com/Yuliang-Liu/MonkeyOCR))
+**Unlock the power of AI to accurately parse and understand documents with MonkeyOCR, leveraging a Structure-Recognition-Relation (SRR) triplet paradigm for superior performance.** Check out the original repo [here](https://github.com/Yuliang-Liu/MonkeyOCR)!
 
 [![arXiv](https://img.shields.io/badge/Arxiv-MonkeyOCR-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2506.05218)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace%20Weights-black.svg?logo=HuggingFace)](https://huggingface.co/echo840/MonkeyOCR)
@@ -11,129 +11,128 @@
 
 **Key Features:**
 
-*   **Superior Accuracy:** MonkeyOCR achieves significant performance gains over traditional pipeline-based methods across a diverse range of document types.
-*   **Enhanced Speed:**  Experience faster document processing, outperforming other models in multi-page document parsing.
-*   **State-of-the-Art Performance:** Outperforms large multimodal models in English document parsing with our 3B parameter model.
-*   **Flexible Outputs:** Get markdown files, layout results, and detailed intermediate block results.
-*   **Easy Deployment:**  Deploy quickly with local installation, Docker, and FastAPI support.
+*   **Superior Accuracy:** Achieves significant performance gains on both Chinese and English documents compared to pipeline-based and end-to-end models.
+*   **Structure-Recognition-Relation (SRR) Paradigm:** Simplifies document parsing by identifying structures, recognizing content, and understanding relationships within documents.
+*   **Fast Processing:** Offers high processing speeds, especially for multi-page documents, ensuring efficient document handling.
+*   **Multi-Document Support:** MonkeyOCR effectively parses a variety of document types, including books, slides, financial reports, and more.
+*   **Easy to Use:** Provides straightforward installation and clear instructions for local setup, model downloads, and inference.
+*   **Flexible Output:** Outputs parsed documents in Markdown format, along with layout results and detailed block information for comprehensive analysis.
+*   **Demo Available:**  Experience the model firsthand with a user-friendly Gradio demo.
 
-## Main Contributions
-MonkeyOCR employs the Structure-Recognition-Relation (SRR) triplet paradigm, which simplifies the multi-tool pipeline of modular approaches while avoiding the inefficiency of using large multimodal models for full-page document processing.
-*   Compared with the pipeline-based method MinerU, our approach achieves an average improvement of 5.1% across nine types of Chinese and English documents, including a 15.0% gain on formulas and an 8.6% gain on tables.
-*   Compared to end-to-end models, our 3B-parameter model achieves the best average performance on English documents, outperforming models such as Gemini 2.5 Pro and Qwen2.5 VL-72B.
-*   For multi-page document parsing, our method reaches a processing speed of 0.84 pages per second, surpassing MinerU (0.65) and Qwen2.5 VL-7B (0.12).
+## Highlights:
 
-## Quick Start
+*   MonkeyOCR has been trending on [Hugging Face](https://huggingface.co/models?sort=trending).
+*   Released an English and Chinese documents parsing model.
 
-### 1. Install
-See the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda.md#install-with-cuda-support) for instructions on setting up your environment.
+## Quick Start:
 
-### 2. Download Model Weights
+Follow these steps to get started:
 
-*   **From Hugging Face:**
+1.  **Installation:** Install necessary dependencies. See the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda.md#install-with-cuda-support) to set up your environment.
+2.  **Download Model Weights:** Download the model weights from Hugging Face or ModelScope.
+3.  **Inference:** Run the parsing script using the following commands:
+
+```bash
+# Replace input_path with the path to a PDF or image or directory
+
+# End-to-end parsing
+python parse.py input_path
+
+# Parse files in a dir with specific group page num
+python parse.py input_path -g 20
+
+# Single-task recognition (outputs markdown only)
+python parse.py input_path -t text/formula/table
+
+# Parse PDFs in input_path and split results by pages
+python parse.py input_path -s
+
+# Specify output directory and model config file
+python parse.py input_path -o ./output -c config.yaml
+```
+
+<details>
+<summary><b>More usage examples</b></summary>
+
+```bash
+# Single file processing
+python parse.py input.pdf                           # Parse single PDF file
+python parse.py input.pdf -o ./output               # Parse with custom output dir
+python parse.py input.pdf -s                        # Parse PDF with page splitting
+python parse.py image.jpg                           # Parse single image file
+
+# Single task recognition
+python parse.py image.jpg -t text                   # Text recognition from image
+python parse.py image.jpg -t formula                # Formula recognition from image
+python parse.py image.jpg -t table                  # Table recognition from image
+python parse.py document.pdf -t text                # Text recognition from all PDF pages
+
+# Folder processing (all files individually)
+python parse.py /path/to/folder                     # Parse all files in folder
+python parse.py /path/to/folder -s                  # Parse with page splitting
+python parse.py /path/to/folder -t text             # Single task recognition for all files
+
+# Multi-file grouping (batch processing by page count)
+python parse.py /path/to/folder -g 5                # Group files with max 5 total pages
+python parse.py /path/to/folder -g 10 -s            # Group files with page splitting
+python parse.py /path/to/folder -g 8 -t text        # Group files for single task recognition
+
+# Advanced configurations
+python parse.py input.pdf -c model_configs.yaml     # Custom model configuration
+python parse.py /path/to/folder -g 15 -s -o ./out   # Group files, split pages, custom output
+```
+
+</details>
+
+> [!TIP]
+>
+> For Chinese scenarios, or cases where text, tables, etc. are mistakenly recognized as images, you can try using the following structure detection model: [layout\_zh.pt](https://huggingface.co/echo840/MonkeyOCR/blob/main/Structure/layout_zh.pt).
+> (If the model is not found in `model_weight/Structure/`, you can download it manually.)
+>
+> To use this model, update the configuration file [`model_configs.yaml`](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/model_configs.yaml#L3) as follows:
+>
+> ```yaml
+> doclayout_yolo: Structure/layout_zh.pt
+> ```
+>
+> We have added support for the [PP-DocLayout_plus-L](https://huggingface.co/PaddlePaddle/PP-DocLayout-L), which offers improved performance over doclayout_yolo.  Please refer to the [Usage Guide](docs/install_paddlex.md).
+>
+> To use this model, please update the configuration file [`model_configs.yaml`](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/model_configs.yaml#L7) as follows:
+>
+> ```yaml
+> model: PP-DocLayout_plus-L
+> ```
+
+4.  **Output:** View your parsed documents. MonkeyOCR provides the following outputs:
+
+    *   Processed Markdown File (`your.md`)
+    *   Layout Results (`your_layout.pdf`)
+    *   Intermediate Block Results (`your_middle.json`)
+
+5.  **Gradio Demo:** Interact with the model through the Gradio demo.
     ```bash
-    pip install huggingface_hub
-    python tools/download_model.py
-    ```
-*   **From ModelScope:**
-    ```bash
-    pip install modelscope
-    python tools/download_model.py -t modelscope
-    ```
-
-### 3. Inference
-
-*   **Basic Usage:**
-    ```bash
-    python parse.py <input_path>
-    ```
-    Replace `<input_path>` with the path to your PDF or image file/directory.
-
-*   **Advanced Options:**
-    *   `python parse.py <input_path> -g <group_size>`: Group pages for batch processing.
-    *   `python parse.py <input_path> -t <task_type>`: Specify a single task (text, formula, or table).
-    *   `python parse.py <input_path> -s`: Split results by pages.
-    *   `python parse.py <input_path> -o <output_dir> -c <config_file>`: Specify output directory and custom model config.
-    *   Refer to the [Quick Start](#Quick-Start) section for detailed usage examples.
-
-### 4. Gradio Demo
-
-*   Launch the interactive demo:
-    ```bash
+    # Start demo
     python demo/demo_gradio.py
     ```
 
-### 5. Fast API
-You can start the MonkeyOCR FastAPI service with the following command:
-```bash
-uvicorn api.main:app --port 8000
-```
-Once the API service is running, you can access the API documentation at http://localhost:8000/docs to explore available endpoints.
-> [!TIP]
-> To improve API concurrency performance, consider configuring the inference backend as `lmdeploy_queue` or `vllm_queue`.
-
-## Docker Deployment
-
-1.  Navigate to the `docker` directory:
-
+6.  **FastAPI:**  Deploy MonkeyOCR using a FastAPI service.
     ```bash
-    cd docker
+    uvicorn api.main:app --port 8000
     ```
 
-2.  **Prerequisite:** Ensure NVIDIA GPU support is available in Docker (via `nvidia-docker2`).
-    If GPU support is not enabled, run the following to set up the environment:
+## Docker Deployment:
 
-    ```bash
-    bash env.sh
-    ```
+Easily deploy MonkeyOCR using Docker.  See Docker commands and Windows support details in the README.
 
-3.  Build the Docker image:
+## Quantization:
 
-    ```bash
-    docker compose build monkeyocr
-    ```
+Quantize the model for enhanced performance using AWQ. Instructions are available in the [Quantization guide](docs/Quantization.md).
 
-    > [!IMPORTANT]
-    >
-    > If your GPU is from the 30/40-series, V100, or similar, please build the patched Docker image for LMDeploy compatibility:
-    >
-    > ```bash
-    > docker compose build monkeyocr-fix
-    > ```
-    >
-    > Otherwise, you may encounter the following error: `triton.runtime.errors.OutOfResources: out of resource: shared memory`
+## Benchmark Results:
 
-4.  Run the container with the Gradio demo (accessible on port 7860):
-
-    ```bash
-    docker compose up monkeyocr-demo
-    ```
-
-    Alternatively, start an interactive development environment:
-
-    ```bash
-    docker compose run --rm monkeyocr-dev
-    ```
-
-5.  Run the FastAPI service (accessible on port 7861):
-    ```bash
-    docker compose up monkeyocr-api
-    ```
-    Once the API service is running, you can access the API documentation at http://localhost:7861/docs to explore available endpoints.
-
-
-## Windows Support
-For deployment on Windows, please use WSL and Docker Desktop. See the [Windows Support](docs/windows_support.md) Guide for details.
-
-## Quantization
-
-This model can be quantized using AWQ. Follow the instructions in the [Quantization guide](docs/Quantization.md).
-
-## Benchmark Results
+The table below showcases MonkeyOCR's performance on the OmniDocBench dataset.
 
 ### 1. The end-to-end evaluation results of different tasks.
-<details>
-<summary>Click to expand</summary>
 
 <table style="width:100%; border-collapse:collapse; text-align:center;" border="0">
   <thead>
@@ -462,12 +461,7 @@ This model can be quantized using AWQ. Follow the instructions in the [Quantizat
   </tbody>
 </table>
 
-</details>
-
 ### 2. The end-to-end text recognition performance across 9 PDF page types.
-<details>
-<summary>Click to expand</summary>
-
 <table style="width: 100%; border-collapse: collapse; text-align: center;">
   <thead>
     <tr style="border-bottom: 2px solid #000;">
@@ -622,45 +616,25 @@ This model can be quantized using AWQ. Follow the instructions in the [Quantizat
     </tr>
   </tbody>
 </table>
-</details>
 
 ### 3. Comparing MonkeyOCR with closed-source and extra large open-source VLMs.
-
-<details>
-<summary>Click to expand</summary>
-
 <img src="https://v1.ax1x.com/2025/06/05/7jQlj4.png" alt="7jQlj4.png" border="0" />
-</details>
 
-## Visualization Demo
+## Visualization Demo:
 
-Get a Quick Hands-On Experience with Our Demo: http://vlrlabmonkey.xyz:7685
+Explore the capabilities of MonkeyOCR with our interactive demo.
 
-> Our demo is simple and easy to use:
->
-> 1.  Upload a PDF or image.
-> 2.  Click “Parse (解析)” to let the model perform structure detection, content recognition, and relationship prediction on the input document. The final output will be a markdown-formatted version of the document.
-> 3.  Select a prompt and click “Test by prompt” to let the model perform content recognition on the image based on the selected prompt.
+*   **Demo Link:**  http://vlrlabmonkey.xyz:7685
+*   **Functionality:** Upload a PDF or image, and let the model perform structure detection, content recognition, and relation prediction.  The output will be a Markdown formatted document.
 
-### Support diverse Chinese and English PDF types
-<p align="center">
-  <img src="asserts/Visualization.GIF?raw=true" width="600"/>
-</p>
+### Examples:
 
-### Example for formula document
-<img src="https://v1.ax1x.com/2025/06/10/7jVLgB.jpg" alt="7jVLgB.jpg" border="0" />
+*   Diverse Chinese and English PDF types are supported.
+*   Formula, table, newspaper, and financial report examples are included.
 
-### Example for table document
-<img src="https://v1.ax1x.com/2025/06/11/7jcOaa.png" alt="7jcOaa.png" border="0" />
+## Citing MonkeyOCR:
 
-### Example for newspaper
-<img src="https://v1.ax1x.com/2025/06/11/7jcP5V.png" alt="7jcP5V.png" border="0" />
-
-### Example for financial report
-<img src="https://v1.ax1x.com/2025/06/11/7jc10I.png" alt="7jc10I.png" border="0" />
-<img src="https://v1.ax1x.com/2025/06/11/7jcRCL.png" alt="7jcRCL.png" border="0" />
-
-## Citing MonkeyOCR
+If you use MonkeyOCR in your research, please cite it using the provided BibTeX entry:
 
 ```BibTeX
 @misc{li2025monkeyocrdocumentparsingstructurerecognitionrelation,
@@ -674,17 +648,17 @@ Get a Quick Hands-On Experience with Our Demo: http://vlrlabmonkey.xyz:7685
 }
 ```
 
-## Acknowledgments
+## Acknowledgments:
 
-We thank the following resources for their contributions: [MinerU](https://github.com/opendatalab/MinerU), [DocLayout-YOLO](https://github.com/opendatalab/DocLayout-YOLO), [PyMuPDF](https://github.com/pymupdf/PyMuPDF), [layoutreader](https://github.com/ppaanngggg/layoutreader), [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL), [LMDeploy](https://github.com/InternLM/lmdeploy), [InternVL3](https://github.com/OpenGVLab/InternVL), [M6Doc](https://github.com/HCIILAB/M6Doc), [DocLayNet](https://github.com/DS4SD/DocLayNet), [CDLA](https://github.com/buptlihang/CDLA), [D4LA](https://github.com/AlibabaResearch/AdvancedLiterateMachinery), [DocGenome](https://github.com/Alpha-Innovator/DocGenome), [PubTabNet](https://github.com/ibm-aur-nlp/PubTabNet), and [UniMER-1M](https://github.com/opendatalab/UniMERNet). We are also grateful to all contributors to this open-source project.
+We extend our gratitude to the following for their contributions: [MinerU](https://github.com/opendatalab/MinerU), [DocLayout-YOLO](https://github.com/opendatalab/DocLayout-YOLO), [PyMuPDF](https://github.com/pymupdf/PyMuPDF), [layoutreader](https://github.com/ppaanngggg/layoutreader), [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL), [LMDeploy](https://github.com/InternLM/lmdeploy), [InternVL3](https://github.com/OpenGVLab/InternVL), [M6Doc](https://github.com/HCIILAB/M6Doc), [DocLayNet](https://github.com/DS4SD/DocLayNet), [CDLA](https://github.com/buptlihang/CDLA), [D4LA](https://github.com/AlibabaResearch/AdvancedLiterateMachinery), [DocGenome](https://github.com/Alpha-Innovator/DocGenome), [PubTabNet](https://github.com/ibm-aur-nlp/PubTabNet), [UniMER-1M](https://github.com/opendatalab/UniMERNet), and all contributors to this open-source endeavor.
 
-## Alternative Models to Explore
+## Alternative Models:
 
-If you have any additional needs, check out these models:
+If MonkeyOCR doesn't fully meet your needs, consider exploring these models:
 
 *   [PP-StructureV3](https://github.com/PaddlePaddle/PaddleOCR)
 *   [MinerU 2.0](https://github.com/opendatalab/mineru)
 
-## Copyright
+## License and Contact:
 
-MonkeyOCR is intended for non-commercial use. Contact xbai@hust.edu.cn or ylliu@hust.edu.cn for inquiries regarding larger models or commercial applications.
+This model is for non-commercial use only. For larger model access or feedback, contact us at xbai@hust.edu.cn or ylliu@hust.edu.cn.

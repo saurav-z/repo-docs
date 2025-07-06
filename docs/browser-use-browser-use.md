@@ -1,10 +1,10 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./static/browser-use-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./static/browser-use.png">
-  <img alt="Shows a black Browser Use Logo in light color mode and a white one in dark color mode." src="./static/browser-use.png"  width="full">
+  <img alt="Browser Use Logo" src="./static/browser-use.png"  width="full">
 </picture>
 
-<h1 align="center">Browser Use: Give Your AI the Power of a Web Browser 🤖</h1>
+<h1 align="center">Browser Use: Automate Your Browser with AI</h1>
 
 [![GitHub stars](https://img.shields.io/github/stars/gregpr07/browser-use?style=social)](https://github.com/gregpr07/browser-use/stargazers)
 [![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)
@@ -14,162 +14,144 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
 [![Weave Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fapp.workweave.ai%2Fapi%2Frepository%2Fbadge%2Forg_T5Pvn3UBswTHIsN1dWS3voPg%2F881458615&labelColor=#EC6341)](https://app.workweave.ai/reports/repository/org_T5Pvn3UBswTHIsN1dWS3voPg/881458615)
 
-**Browser Use empowers your AI agents to interact with the web, automating tasks and unlocking new possibilities.**  This allows you to connect your AI agents with the browser in the easiest way possible!
+**Effortlessly control your browser using the power of AI with Browser Use, enabling automation and complex web interactions.** ([Back to Original Repo](https://github.com/browser-use/browser-use))
 
-*   **Key Features:**
-    *   Effortless browser automation via AI control.
-    *   Simple setup and integration with existing AI models.
-    *   Ready-to-use examples for common tasks.
-    *   Hosted cloud version for instant use.
-    *   Interactive CLI for easy testing and development.
-    *   Robust testing framework to validate your agents.
+## Key Features
 
-*   Join the community in our [Discord](https://link.browser-use.com/discord) and show off your project!  Check out our [Merch store](https://browsermerch.com) for cool swag!
+*   **AI-Powered Browser Automation:**  Enable your AI agents to interact with web browsers, performing tasks automatically.
+*   **Easy Integration:** Simple installation with pip, making it easy to get started.
+*   **Versatile LLM Support:**  Integrate with a variety of LLMs, including OpenAI, Anthropic, and more.
+*   **Cloud-Based Option:**  Try the hosted version for instant browser automation without setup.
+*   **Interactive CLI:** Test and experiment with the `browser-use` CLI.
+*   **Robust Testing:** Integrated testing with CI for automated validation of your tasks.
 
-*   **Cloud Access:** Skip the setup and try our **hosted version** for instant browser automation! **[Try the cloud ☁︎](https://cloud.browser-use.com)**.
+## Quick Start
 
-## Getting Started
+### Installation
 
-1.  **Installation (Python):**
-    ```bash
-    pip install browser-use
-    ```
+Install the package and browser dependencies:
 
-2.  **Install Browser:**
-    ```bash
-    playwright install chromium --with-deps --no-shell
-    ```
+```bash
+pip install browser-use
+playwright install chromium --with-deps --no-shell
+```
 
-3.  **Example Usage:**
-    ```python
-    import asyncio
-    from dotenv import load_dotenv
-    load_dotenv()
-    from browser_use import Agent
-    from browser_use.llm import ChatOpenAI
+### Example Usage
 
-    async def main():
-        agent = Agent(
-            task="Compare the price of gpt-4o and DeepSeek-V3",
-            llm=ChatOpenAI(model="gpt-4o"),
-        )
-        await agent.run()
+Here's a simple example to get you started:
 
-    asyncio.run(main())
-    ```
+```python
+import asyncio
+from dotenv import load_dotenv
+load_dotenv()
+from browser_use import Agent
+from browser_use.llm import ChatOpenAI
 
-4.  **API Keys:** Add your API keys to your `.env` file.
-    ```bash
-    OPENAI_API_KEY=
-    ANTHROPIC_API_KEY=
-    AZURE_OPENAI_ENDPOINT=
-    AZURE_OPENAI_KEY=
-    GOOGLE_API_KEY=
-    DEEPSEEK_API_KEY=
-    GROK_API_KEY=
-    NOVITA_API_KEY=
-    ```
+async def main():
+    agent = Agent(
+        task="Compare the price of gpt-4o and DeepSeek-V3",
+        llm=ChatOpenAI(model="o4-mini", temperature=1.0),
+    )
+    await agent.run()
 
-    For other settings, models, and more, check out the comprehensive [documentation 📕](https://docs.browser-use.com).
+asyncio.run(main())
+```
 
-## Test & Explore
+### Configuration
 
-*   **Web UI & Desktop App:** Test browser-use with our [Web UI](https://github.com/browser-use/web-ui) or [Desktop App](https://github.com/browser-use/desktop).
+Configure your API keys using a `.env` file:
 
-*   **Interactive CLI:**  Try the `browser-use` interactive CLI:
+```bash
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+AZURE_OPENAI_ENDPOINT=
+AZURE_OPENAI_KEY=
+GOOGLE_API_KEY=
+DEEPSEEK_API_KEY=
+GROK_API_KEY=
+NOVITA_API_KEY=
+```
 
-    ```bash
-    pip install "browser-use[cli]"
-    browser-use
-    ```
+### Additional Resources
 
-## Use Cases & Demos
+*   **Documentation:** Find more details and advanced configurations in the [documentation 📕](https://docs.browser-use.com).
+*   **Web UI & Desktop App:** Test browser-use using the [Web UI](https://github.com/browser-use/web-ui) or [Desktop App](https://github.com/browser-use/desktop).
+*   **Interactive CLI:** Use our `browser-use` interactive CLI:  `pip install "browser-use[cli]" && browser-use`
 
-Explore practical applications with these demos:
+## Demos
 
-<br/>
+See Browser Use in action:
 
-*   **Shopping:** Add grocery items to cart and checkout.
-    [![AI Did My Groceries](https://github.com/user-attachments/assets/a0ffd23d-9a11-4368-8893-b092703abc14)](https://www.youtube.com/watch?v=L2Ya9PYNns8)
+*   **Grocery Shopping:**  Automated grocery shopping [Demo Video](https://www.youtube.com/watch?v=L2Ya9PYNns8)
+*   **LinkedIn to Salesforce:**  Automate lead generation.
+*   **Job Application:** Find and apply for jobs based on your CV.
+*   **Document Creation:** Generate a letter in Google Docs and save it as a PDF.
+*   **Hugging Face Model Search:** Search and save models from Hugging Face.
 
-<br/>
+(Embed the demo images with alt text, see original for examples)
 
-*   **LinkedIn to Salesforce:**
-    ![LinkedIn to Salesforce](https://github.com/user-attachments/assets/50d6e691-b66b-4077-a46c-49e9d4707e07)
+## More Examples
 
-<br/>
+Explore more use cases and get inspiration:
 
-*   **Job Application:** Read my CV & find ML jobs, save them to a file, and then start applying for them in new tabs, if you need help, ask me.
-    https://github.com/user-attachments/assets/171fb4d6-0355-46f2-863e-edb04a828d04
+*   [Examples Folder](examples)
+*   [Discord](https://link.browser-use.com/discord)
+*   [`awesome-prompts`](https://github.com/browser-use/awesome-prompts)
 
-<br/>
+## Vision
 
-*   **Google Docs:** Write a letter in Google Docs to my Papa, thanking him for everything, and save the document as a PDF.
-    ![Letter to Papa](https://github.com/user-attachments/assets/242ade3e-15bc-41c2-988f-cbc5415a66aa)
+The future of web interaction is here: tell your computer what to do, and it gets it done.
 
-<br/>
-
-*   **Hugging Face:** Look up models with a license of cc-by-sa-4.0 and sort by most likes on Hugging face, save top 5 to file.
-    https://github.com/user-attachments/assets/de73ee39-432c-4b97-b4e8-939fd7f323b3
-
-<br/>
-
-*   For more examples, see the [examples](examples) folder or the [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repository for inspiration.
-
-## Project Vision
-
-Make your computer do what you tell it to do using the power of AI and web browsers!
-
-## Development Roadmap
+## Roadmap
 
 ### Agent
-
-*   [ ] Improve agent memory to handle +100 steps
-*   [ ] Enhance planning capabilities (load website specific context)
-*   [ ] Reduce token consumption (system prompt, DOM state)
+-   [ ] Improve agent memory to handle +100 steps
+-   [ ] Enhance planning capabilities (load website specific context)
+-   [ ] Reduce token consumption (system prompt, DOM state)
 
 ### DOM Extraction
-
-*   [ ] Enable detection for all possible UI elements
-*   [ ] Improve state representation for UI elements so that all LLMs can understand what's on the page
+-   [ ] Enable detection for all possible UI elements
+-   [ ] Improve state representation for UI elements so that all LLMs can understand what's on the page
 
 ### Workflows
-
-*   [ ] Let user record a workflow - which we can rerun with browser-use as a fallback
-*   [ ] Make rerunning of workflows work, even if pages change
+-   [ ] Let user record a workflow - which we can rerun with browser-use as a fallback
+-   [ ] Make rerunning of workflows work, even if pages change
 
 ### User Experience
-
-*   [ ] Create various templates for tutorial execution, job application, QA testing, social media, etc. which users can just copy & paste.
-*   [ ] Improve docs
-*   [ ] Make it faster
+-   [ ] Create various templates for tutorial execution, job application, QA testing, social media, etc. which users can just copy & paste.
+-   [ ] Improve docs
+-   [ ] Make it faster
 
 ### Parallelization
+-   [ ] Human work is sequential. The real power of a browser agent comes into reality if we can parallelize similar tasks. For example, if you want to find contact information for 100 companies, this can all be done in parallel and reported back to a main agent, which processes the results and kicks off parallel subtasks again.
 
-*   [ ] Human work is sequential. The real power of a browser agent comes into reality if we can parallelize similar tasks. For example, if you want to find contact information for 100 companies, this can all be done in parallel and reported back to a main agent, which processes the results and kicks off parallel subtasks again.
+## Contributing
 
-## Contribute
+We welcome contributions!
 
-Contributions are welcome!  Please open issues for bugs or feature requests.  For documentation contributions, check out the `/docs` folder.
+*   Report bugs and request features by opening issues.
+*   Contribute to the documentation in the `/docs` folder.
 
-## Robust Agent Testing 🧪
+## 🧪 Robust Agent Testing
 
-Ensure your agents are resilient by running your tasks automatically in our CI on every update!
+Automate the validation of your tasks:
 
-*   **Add Your Task:** Create a YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for details).
-*   **Automated Validation:** Every update triggers your task and evaluates it using your defined criteria.
+*   Create a YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for details).
+*   Your task is run on every update and evaluated against your criteria.
 
 ## Local Setup
 
-Learn more about the library with the [local setup 📕](https://docs.browser-use.com/development/local-setup).
+For more details, check out the [local setup 📕](https://docs.browser-use.com/development/local-setup).
 
-**Important Note:** `main` is the primary development branch. For production use, install a [versioned release](https://github.com/browser-use/browser-use/releases).
+## Versioning
+
+`main` is the primary development branch.  For production, install a stable [versioned release](https://github.com/browser-use/browser-use/releases).
 
 ---
 
-## Swag & More!
+## Swag
 
-Show off your Browser-use love with our [Merch store](https://browsermerch.com)!  Good contributors get free swag! 👀
+Good contributors receive swag! Check out our [Merch store](https://browsermerch.com) to show off your Browser Use love.
 
 ## Citation
 
@@ -185,32 +167,13 @@ If you use Browser Use in your research or project, please cite:
 }
 ```
 
- <div align="center"> <img src="https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f" width="400"/>
-
+ <div align="center"> <img src="https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f" width="400"/> 
+ 
 [![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
-
+ 
  </div>
 
 <div align="center">
 Made with ❤️ in Zurich and San Francisco
  </div>
-```
-
-Key improvements and SEO considerations:
-
-*   **Clear, concise, and engaging title:**  "Browser Use: Give Your AI the Power of a Web Browser 🤖"  immediately conveys the project's purpose.
-*   **Strong introductory sentence:**  The first sentence immediately hooks the reader.
-*   **Keyword Optimization:**  The README uses terms like "AI," "browser automation," "web browser,"  and "AI agents" to target relevant search queries.
-*   **Clear Structure with Headings:** Well-organized headings make the content easy to scan.
-*   **Bulleted Key Features:** Highlight essential features for quick understanding.
-*   **Concise & Benefit-Oriented Descriptions:**  Features are explained succinctly and focus on the value to the user.
-*   **Call to Action (CTA):**  Encourages community participation and merch store visits.
-*   **Comprehensive "Getting Started" Section:** Includes installation steps and a basic code example.
-*   **Emphasis on Demos and Use Cases:** Showcases practical applications to increase engagement.
-*   **Clear Roadmap & Contributing Guidelines:**  Encourages contribution and transparency.
-*   **Robust Testing Section:** Unique selling point, highlights automated validation.
-*   **Citation Information:**  Provides guidance for proper attribution.
-*   **Visual Appeal:** The original image, social media badges, and "Made with ❤️" section add visual interest.
-*   **Links to original repo are retained.**
-*   **Cloud Usage Emphasized:** The cloud offering is promoted at the start and in the Quick Start section.

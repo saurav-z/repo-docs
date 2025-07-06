@@ -24,25 +24,21 @@
 
 </p>
 
-<h1 align="center">SkyPilot: Run AI Workloads on Any Cloud, Unified and Cost-Effective</h1>
+<h1 align="center">SkyPilot: Run AI Workloads Anywhere, Faster, and Cheaper</h1>
 
-[<img src="https://img.shields.io/github/stars/skypilot-org/skypilot?style=social" alt="Stars">](https://github.com/skypilot-org/skypilot)
-
-SkyPilot is an open-source framework that simplifies and optimizes running AI and batch workloads across various cloud providers and infrastructure.
-
-**[Explore the SkyPilot Repository on GitHub](https://github.com/skypilot-org/skypilot)**
+SkyPilot is an open-source framework that simplifies running AI and batch workloads on any infrastructure, whether it's the cloud, on-premise, or Kubernetes. [Explore the SkyPilot GitHub repository](https://github.com/skypilot-org/skypilot).
 
 ## Key Features
 
-*   **Unified Cloud Interface:** Manage your AI workloads across multiple clouds (AWS, GCP, Azure, and more) with a single, intuitive interface.
-*   **Cost Optimization:** Automates intelligent scheduling to run workloads on the most cost-effective infrastructure, including spot instances, saving you money.
-*   **Simplified Deployment:**  Define your AI tasks and environments as code, ensuring portability and reproducibility.
-*   **Automated Resource Management:** Handle compute provisioning, auto-retry, and environment setup automatically, freeing up your time.
-*   **Accelerated AI:** Run your existing GPU, TPU, and CPU workloads with little to no code change.
+*   **Unified Infrastructure:** Run your AI jobs on 16+ clouds, Kubernetes, or on-premise, with a single interface.
+*   **Cost Optimization:** Reduce cloud costs by up to 6x with spot instance support, autostop, and intelligent scheduling.
+*   **Simplified Deployment:** Define your environment and jobs as code for portability and easy management.
+*   **Automated Resource Management:** SkyPilot handles provisioning, auto-retry, and cluster management, saving you time and effort.
+*   **Team Collaboration:** Streamline resource sharing and deployment with team deployment features.
 
-## What's New
+## What's New?
 
-*   **[Apr 2025]** Spin up **Qwen3** on your cluster/cloud: [**example**](./llm/qwen/)
+*   **[May 2025]** Spin up **Qwen3** on your cluster/cloud: [**example**](./llm/qwen/)
 *   **[Mar 2025]** Run and serve **Google Gemma 3** using SkyPilot [**example**](./llm/gemma3/)
 *   **[Feb 2025]** Prepare and serve **Retrieval Augmented Generation (RAG) with DeepSeek-R1**: [**blog post**](https://blog.skypilot.co/deepseek-rag), [**example**](./llm/rag/)
 *   **[Feb 2025]** Run and serve **DeepSeek-R1 671B** using SkyPilot and SGLang with high throughput: [**example**](./llm/deepseek-r1/)
@@ -51,40 +47,32 @@ SkyPilot is an open-source framework that simplifies and optimizes running AI an
 *   **[Oct 2024]** :tada: **SkyPilot crossed 1M+ downloads** :tada:: Thank you to our community! [**Twitter/X**](https://x.com/skypilot_org/status/1844770841718067638)
 *   **[Sep 2024]** Point, launch and serve **Llama 3.2** on Kubernetes or any cloud: [**example**](./llm/llama-3_2/)
 
-**LLM Finetuning Cookbooks:** Finetuning Llama 2 / Llama 3.1 in your own cloud environment, privately: Llama 2 [**example**](./llm/vicuna-llama-2/) and [**blog**](https://blog.skypilot.co/finetuning-llama2-operational-guide/); Llama 3.1 [**example**](./llm/llama-3_1-finetuning/) and [**blog**](https://blog.skypilot.co/finetune-llama-3_1-on-your-infra/)
+**LLM Finetuning Cookbooks**: Finetuning Llama 2 / Llama 3.1 in your own cloud environment, privately: Llama 2 [**example**](./llm/vicuna-llama-2/) and [**blog**](https://blog.skypilot.co/finetuning-llama2-operational-guide/); Llama 3.1 [**example**](./llm/llama-3_1-finetuning/) and [**blog**](https://blog.skypilot.co/finetune-llama-3_1-on-your-infra/)
+
+## Supported Infrastructure
+
+SkyPilot supports a wide range of infrastructure providers:
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/skypilot-org/skypilot/master/docs/source/images/cloud-logos-dark.png">
+    <img alt="SkyPilot" src="https://raw.githubusercontent.com/skypilot-org/skypilot/master/docs/source/images/cloud-logos-light.png" width=85%>
+  </picture>
+</p>
 
 ## Getting Started
 
-Install SkyPilot:
+SkyPilot is easy to integrate into your existing workflows. The documentation can be found [here](https://docs.skypilot.co/).
 
-```bash
-pip install -U "skypilot[kubernetes,aws,gcp,azure,oci,lambda,runpod,fluidstack,paperspace,cudo,ibm,scp,nebius]"
-```
-Or install nightly:
-```bash
-pip install "skypilot-nightly[kubernetes,aws,gcp,azure,oci,lambda,runpod,fluidstack,paperspace,cudo,ibm,scp,nebius]"
-```
-
-For detailed installation instructions and the latest features, refer to the [installation guide](https://docs.skypilot.co/en/latest/getting-started/installation.html).
-
-<p align="center">
-  <img src="docs/source/_static/intro.gif" alt="SkyPilot">
-</p>
-
-## Key Use Cases:
-
-*   **AI Model Training:** Simplify and accelerate the training of your machine learning models across various cloud providers.
-*   **Model Serving:** Deploy your trained models with ease, leveraging SkyPilot's unified interface and cost-effective infrastructure.
-*   **Batch Processing:** Run your batch jobs seamlessly, optimizing for cost and availability.
-*   **Experimentation:** Easily spin up and manage environments for your AI experiments.
+*   [Installation](https://docs.skypilot.co/en/latest/getting-started/installation.html)
+*   [Quickstart](https://docs.skypilot.co/en/latest/getting-started/quickstart.html)
+*   [CLI reference](https://docs.skypilot.co/en/latest/reference/cli.html)
 
 ## SkyPilot in 1 Minute
 
-A SkyPilot task specifies: resource requirements, data to be synced, setup commands, and the task commands.
+Define your AI tasks using a simple YAML or Python API.  SkyPilot handles the rest, from provisioning resources to running your code.
 
-Once written in this [**unified interface**](https://docs.skypilot.co/en/latest/reference/yaml-spec.html) (YAML or Python API), the task can be launched on any available cloud.  This avoids vendor lock-in, and allows easily moving jobs to a different provider.
-
-Paste the following into a file `my_task.yaml`:
+**Example `my_task.yaml`:**
 
 ```yaml
 resources:
@@ -113,55 +101,23 @@ Prepare the workdir by cloning:
 git clone https://github.com/pytorch/examples.git ~/torch_examples
 ```
 
-Launch with `sky launch` (note: [access to GPU instances](https://docs.skypilot.co/en/latest/cloud-setup/quota.html) is needed for this example):
+**Launch your task:**
+
 ```bash
 sky launch my_task.yaml
 ```
 
-SkyPilot then performs the heavy-lifting for you, including:
-1. Find the lowest priced VM instance type across different clouds
-2. Provision the VM, with auto-failover if the cloud returned capacity errors
-3. Sync the local `workdir` to the VM
-4. Run the task's `setup` commands to prepare the VM for running the task
-5. Run the task's `run` commands
+**SkyPilot will:**
 
+1.  Find the most cost-effective instance across supported clouds.
+2.  Provision the virtual machine with automatic failover.
+3.  Sync your working directory.
+4.  Execute setup commands.
+5.  Run your task.
 
-See [Quickstart](https://docs.skypilot.co/en/latest/getting-started/quickstart.html) to get started with SkyPilot.
+## Runnable Examples
 
-## Supported Infrastructure
-
-SkyPilot supports a wide range of infrastructure providers, including:
-
-*   Kubernetes
-*   AWS
-*   GCP
-*   Azure
-*   OCI
-*   Lambda Cloud
-*   Fluidstack
-*   RunPod
-*   Cudo
-*   Digital Ocean
-*   Paperspace
-*   Cloudflare
-*   Samsung
-*   IBM
-*   Vast.ai
-*   VMware vSphere
-*   Nebius
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/skypilot-org/skypilot/master/docs/source/images/cloud-logos-dark.png">
-    <img alt="SkyPilot" src="https://raw.githubusercontent.com/skypilot-org/skypilot/master/docs/source/images/cloud-logos-light.png" width=85%>
-  </picture>
-</p>
-
-## Examples and Tutorials
-
-Explore the [SkyPilot examples](https://docs.skypilot.co/en/docs-examples/examples/index.html) to get started with training, serving and AI apps.
-
-Latest featured examples:
+Explore a range of pre-built examples to get you started quickly:
 
 | Task | Examples |
 |----------|----------|
@@ -171,16 +127,22 @@ Latest featured examples:
 | AI apps | [RAG](https://docs.skypilot.co/en/latest/examples/applications/rag.html), [vector databases](https://docs.skypilot.co/en/latest/examples/applications/vector_database.html) (ChromaDB, CLIP) |
 | Common frameworks | [Airflow](https://docs.skypilot.co/en/latest/examples/frameworks/airflow.html), [Jupyter](https://docs.skypilot.co/en/latest/examples/frameworks/jupyter.html) |
 
-Source files and more examples can be found in [`llm/`](https://github.com/skypilot-org/skypilot/tree/master/llm) and [`examples/`](https://github.com/skypilot-org/skypilot/tree/master/examples).
+Find more examples in the [`llm/`](https://github.com/skypilot-org/skypilot/tree/master/llm) and [`examples/`](https://github.com/skypilot-org/skypilot/tree/master/examples) directories.
 
 ## Learn More
 
-*   [SkyPilot Documentation](https://docs.skypilot.co/en/latest/)
 *   [SkyPilot Overview](https://docs.skypilot.co/en/latest/overview.html)
+*   [SkyPilot Documentation](https://docs.skypilot.co/en/latest/)
 *   [SkyPilot Blog](https://blog.skypilot.co/)
-*   [Community Spotlights](https://blog.skypilot.co/community/)
 
-## Research and Publications
+**Community & Support**
+
+*   [Slack](http://slack.skypilot.co)
+*   [X / Twitter](https://twitter.com/skypilot_org)
+*   [LinkedIn](https://www.linkedin.com/company/skypilot-oss/)
+*   [SkyPilot Blog](https://blog.skypilot.co/) ([Introductory blog post](https://blog.skypilot.co/introducing-skypilot/))
+
+**Research**
 
 *   [SkyPilot paper](https://www.usenix.org/system/files/nsdi23-yang-zongheng.pdf) and [talk](https://www.usenix.org/conference/nsdi23/presentation/yang-zongheng) (NSDI 2023)
 *   [Sky Computing whitepaper](https://arxiv.org/abs/2205.07147)
@@ -188,14 +150,12 @@ Source files and more examples can be found in [`llm/`](https://github.com/skypi
 *   [SkyServe: AI serving across regions and clouds](https://arxiv.org/pdf/2411.01438) (EuroSys 2025)
 *   [Managed jobs spot instance policy](https://www.usenix.org/conference/nsdi24/presentation/wu-zhanghao)  (NSDI 2024)
 
-## Join the Community
-
-*   [SkyPilot Slack](http://slack.skypilot.co)
-*   [GitHub Discussions](https://github.com/skypilot-org/skypilot/discussions)
-*   [X / Twitter](https://twitter.com/skypilot_org)
-*   [LinkedIn](https://www.linkedin.com/company/skypilot-oss/)
-*   [SkyPilot Blog](https://blog.skypilot.co/) ([Introductory blog post](https://blog.skypilot.co/introducing-skypilot/))
-
 ## Contributing
 
-We welcome contributions!  Please see our [CONTRIBUTING](CONTRIBUTING.md) guidelines for details.
+We welcome contributions!  See [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## Get Involved
+
+*   [Open a GitHub issue](https://github.com/skypilot-org/skypilot/issues/new) for issues and feature requests.
+*   Use [GitHub Discussions](https://github.com/skypilot-org/skypilot/discussions) for questions.
+*   Join the [SkyPilot Slack](http://slack.skypilot.co) for general discussions.
