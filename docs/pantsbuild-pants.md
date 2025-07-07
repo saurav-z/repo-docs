@@ -1,25 +1,29 @@
-# Pants: The Scalable Build System for Monorepos
+# Pants: Build Fast, Build Smart for Monorepos
 
-**Build and manage your large, multi-language codebase efficiently with Pants, the open-source build system designed for modern monorepos.** ([Original Repository](https://github.com/pantsbuild/pants))
+**Pants is a powerful and scalable build system designed to accelerate development in monorepos.**
 
-## Key Features of Pants
+Explore these key features:
 
-Pants offers a robust set of features to streamline your build processes:
+*   **Explicit Dependency Modeling:** Clearly define project dependencies for efficient builds.
+*   **Fine-Grained Invalidation:** Only rebuild what's necessary, saving you time.
+*   **Shared Result Caching:** Speed up builds by reusing previously computed results.
+*   **Concurrent Execution:** Maximize hardware utilization for faster builds.
+*   **Remote Execution:** Distribute builds across a network for enhanced speed and scalability.
+*   **Unified Interface:** Manage multiple tools and languages from a single, intuitive interface.
+*   **Extensibility:** Customize and extend Pants with a flexible plugin API.
 
-*   **Explicit Dependency Modeling:** Clearly define and manage dependencies for accurate builds.
-*   **Fine-Grained Invalidation:** Only rebuild what's necessary, saving time and resources.
-*   **Shared Result Caching:**  Reuse build artifacts across teams and machines.
-*   **Concurrent Execution:**  Speed up builds by leveraging parallel processing.
-*   **Remote Execution:** Distribute builds across a network for even faster results.
-*   **Unified Interface:**  Simplify your workflow with a consistent interface across multiple tools and languages.
-*   **Extensible Plugin API:** Customize and extend Pants to fit your specific needs.
+## Getting Started
 
-## Getting Started with Pants
+Ready to start building? Consult the [getting started](https://www.pantsbuild.org/docs/getting-started) documentation for comprehensive setup instructions.
 
-Ready to get started? Check out the [getting started](https://www.pantsbuild.org/docs/getting-started) documentation.
+## Learn More & Get Involved
+
+Discover more about Pants and its capabilities at the official documentation: [www.pantsbuild.org](https://www.pantsbuild.org/).
 
 ## Credits
 
-Pants development is supported by the community. Special thanks to [MacStadium](https://www.macstadium.com/) for providing macOS CI resources.
+macOS CI resources provided by [MacStadium](https://www.macstadium.com/).
 
 <img width="150" height="61" src="https://uploads-ssl.webflow.com/5ac3c046c82724970fc60918/5c019d917bba312af7553b49_MacStadium-developerlogo.png">
+
+**[View the Original Repository on GitHub](https://github.com/pantsbuild/pants)**

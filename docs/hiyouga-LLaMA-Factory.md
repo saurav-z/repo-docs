@@ -1,6 +1,6 @@
-# LLaMA Factory: Fine-Tune Any Large Language Model with Ease
+# LLaMA Factory: Fine-tune Any LLM with Ease
 
-Fine-tune 100+ large language models, including Llama 3, Mistral, and Qwen, using zero-code CLI and Web UI.  [Check out the original repo](https://github.com/hiyouga/LLaMA-Factory)!
+**Unlock the power of large language models (LLMs) with LLaMA Factory, a versatile and user-friendly framework for fine-tuning over 100+ models, including LLaMA, Mistral, and Qwen.**  Dive deeper into the capabilities of LLaMA Factory [here](https://github.com/hiyouga/LLaMA-Factory).
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=social)](https://github.com/hiyouga/LLaMA-Factory/stargazers)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hiyouga/LLaMA-Factory)](https://github.com/hiyouga/LLaMA-Factory/commits/main)
@@ -67,45 +67,61 @@ Choose your path:
 
 - [Key Features](#key-features)
 - [Supported Models](#supported-models)
+- [Supported Training Approaches](#supported-training-approaches)
+- [Blogs & Community](#blogs-and-community)
 - [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Quickstart](#quickstart)
-  - [Web UI](#fine-tuning-with-llama-board-gui-powered-by-gradio)
-  - [Deployment](#deploy-with-openai-style-api-and-vllm)
-  - [And More!](#getting-started)
-- [Detailed Documentation](#detailed-documentation)
-- [Projects using LLaMA Factory](#projects-using-llama-factory)
-- [Citation](#citation)
+    - [Installation](#installation)
+    - [Quickstart](#quickstart)
+    - [Web UI](#fine-tuning-with-llama-board-gui-powered-by-gradio)
+    - [API Deployment](#deploy-with-openai-style-api-and-vllm)
 - [License](#license)
+- [Citation](#citation)
+- [Acknowledgement](#acknowledgement)
 
 ## Key Features
 
-*   **Extensive Model Support:**  Fine-tune a wide array of LLMs, including Llama, Mistral, Qwen, Gemma, and many more.
-*   **Versatile Training Methods:** Support for (Continuous) pre-training, (multimodal) supervised fine-tuning, reward modeling, PPO, DPO, and more.
-*   **Efficient Training Techniques:**  Utilize LoRA, QLoRA, FlashAttention-2, Unsloth, and other optimizations for faster and more memory-efficient training.
-*   **Comprehensive Monitoring:**  Leverage experiment monitors like LlamaBoard, TensorBoard, Wandb, and SwanLab to track your progress.
-*   **Easy Deployment:** Deploy fine-tuned models with an OpenAI-style API and vLLM for fast inference.
-*   **Day-N Support:** Stay up-to-date with the latest models.
+*   **Wide Model Support:** Fine-tune over 100+ LLMs, including LLaMA, Mistral, Qwen, and more.
+*   **Diverse Training Methods:** Supports pre-training, supervised fine-tuning, reward modeling, PPO, DPO, and more.
+*   **Efficient Training:** Utilize 16-bit full-tuning, freeze-tuning, LoRA, and QLoRA (2/3/4/5/6/8-bit) for scalability.
+*   **Advanced Algorithms:** Implements cutting-edge techniques like GaLore, BAdam, APOLLO, Muon, and DoRA.
+*   **Practical Optimizations:** Includes FlashAttention-2, Unsloth, Liger Kernel, and RoPE scaling for improved performance.
+*   **Comprehensive Tasks:** Enables fine-tuning for multi-turn dialogue, tool use, image understanding, and more.
+*   **Experiment Tracking:** Integrates with LlamaBoard, TensorBoard, Wandb, MLflow, and SwanLab for monitoring.
+*   **Faster Inference:** Supports OpenAI-style API, Gradio UI, and CLI with vLLM or SGLang backends.
 
 ## Supported Models
 
-A comprehensive list of supported models including Baichuan, ChatGLM, DeepSeek, Llama 2 & 3, Mistral, Qwen, and many more, with specific template recommendations and model sizes.  See the detailed [Supported Models](#supported-models) section for the full list.
+*   Baichuan 2, BLOOM/BLOOMZ, ChatGLM3, Command R, DeepSeek, Falcon, Gemma, GLM-4, GPT-2, Granite, Hunyuan, InternLM 2-3, Llama, Llama 2, Llama 3, LLaVA, MiMo, MiniCPM, Mistral, Qwen, Yi, and many more.
+
+    *   See the full list in [Supported Models](#supported-models).
+
+## Supported Training Approaches
+
+*   Full-tuning, Freeze-tuning, LoRA, and QLoRA.
+*   Pre-Training, Supervised Fine-Tuning, Reward Modeling, PPO, DPO, KTO, ORPO, and SimPO.
+
+## Blogs and Community
+
+*   [Blogs](#blogs)
+*   Join our [WeChat group](assets/wechat.jpg), [NPU user group](assets/wechat_npu.jpg) or [Alaya NeW user group](assets/wechat_alaya.png) for the latest updates and support.
 
 ## Getting Started
 
 ### Installation
 
-Choose from several installation methods to get started:
+Install LLaMA Factory easily:
 
-*   **Install from Source:**  Clone the repository and install the required packages using `pip install -e ".[torch,metrics]"`.
-*   **Install from Docker Image:** Use the pre-built Docker image for a ready-to-use environment.
-*   **Virtual Environment with uv:** Create an isolated Python environment.
-*   **Windows Users:** Specific instructions for installing PyTorch, bitsandbytes and Flash Attention-2.
-*   **Ascend NPU Users:** Installation instructions and configuration details for Ascend NPU devices.
+```bash
+git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
+cd LLaMA-Factory
+pip install -e ".[torch,metrics]" --no-build-isolation
+```
+
+*   Comprehensive installation instructions and Docker setup are available in the [Installation](#installation) section.
 
 ### Quickstart
 
-Get up and running with LoRA fine-tuning, inference, and model merging using three simple commands:
+Fine-tune, infer, and merge with these simple commands:
 
 ```bash
 llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
@@ -113,68 +129,32 @@ llamafactory-cli chat examples/inference/llama3_lora_sft.yaml
 llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
 ```
 
-### Web UI
+### Fine-tuning with LLaMA Board GUI
 
-Launch the user-friendly Gradio-powered web interface with:
+Launch the web UI:
 
 ```bash
 llamafactory-cli webui
 ```
 
-### Deployment
+### API Deployment
 
-Deploy your fine-tuned models using an OpenAI-style API and vLLM:
+Deploy with an OpenAI-style API and vLLM:
 
 ```bash
 API_PORT=8000 llamafactory-cli api examples/inference/llama3.yaml infer_backend=vllm vllm_enforce_eager=true
 ```
 
-### And More!
-
-Explore additional features, including:
-
-*   Data Preparation
-*   Docker Builds
-*   Downloading from ModelScope and Modelers Hub
-*   Weights & Biases (W&B) Integration
-*   SwanLab Integration
-
-## Detailed Documentation
-
-For in-depth information, including:
-
-*   Provided Datasets
-*   Changelog
-*   Supported Training Approaches
-*   Requirement
-*   Hardware Requirements
-*   Building Docker Images
-
-See the expanded documentation within the original README.
-
-## Projects using LLaMA Factory
-
-Explore projects using LLaMA Factory to fine-tune language models for various applications:
-
-*   A list of projects using the library (click to show)
-*   Includes projects for text classification, code generation, and more.
-
-## Citation
-
-If you find this work helpful, please cite our paper:
-
-```bibtex
-@inproceedings{zheng2024llamafactory,
-  title={LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models},
-  author={Yaowei Zheng and Richong Zhang and Junhao Zhang and Yanhan Ye and Zheyan Luo and Zhangchi Feng and Yongqiang Ma},
-  booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)},
-  address={Bangkok, Thailand},
-  publisher={Association for Computational Linguistics},
-  year={2024},
-  url={http://arxiv.org/abs/2403.13372}
-}
-```
+*   Explore the [Getting Started](#getting-started) section for detailed instructions and advanced usage.
 
 ## License
 
-This repository is licensed under the [Apache-2.0 License](LICENSE).
+This project is licensed under the [Apache-2.0 License](LICENSE).
+
+## Citation
+
+If you find this work helpful, please cite it using the provided BibTeX entry in the [Citation](#citation) section.
+
+## Acknowledgement
+
+This project is built upon the shoulders of giants, including PEFT, TRL, QLoRA, and FastChat.  See the [Acknowledgement](#acknowledgement) section for details.

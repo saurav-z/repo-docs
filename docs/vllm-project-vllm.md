@@ -5,66 +5,99 @@
   </picture>
 </p>
 
-## vLLM: Accelerate Your LLM Inference with Speed and Efficiency
+<h2 align="center">vLLM: Serve LLMs Easily, Quickly, and Affordably</h2>
 
-[vLLM](https://github.com/vllm-project/vllm) is a powerful and easy-to-use library designed to make Large Language Model (LLM) serving faster, more efficient, and more accessible to everyone.
+<p align="center">
+| <a href="https://docs.vllm.ai"><b>Documentation</b></a> | <a href="https://blog.vllm.ai/"><b>Blog</b></a> | <a href="https://arxiv.org/abs/2309.06180"><b>Paper</b></a> | <a href="https://x.com/vllm_project"><b>Twitter/X</b></a> | <a href="https://discuss.vllm.ai"><b>User Forum</b></a> | <a href="https://slack.vllm.ai"><b>Developer Slack</b></a> |
+</p>
 
-**Key Features:**
-
-*   ⚡ **Blazing Fast Performance:**
-    *   State-of-the-art serving throughput
-    *   **PagedAttention** for efficient memory management
-    *   Continuous batching of incoming requests
-    *   CUDA/HIP graph for fast model execution
-    *   Optimized CUDA kernels and integration with FlashAttention and FlashInfer
-    *   Speculative decoding
-    *   Chunked prefill
-*   ⚙️ **Flexible and Easy to Use:**
-    *   Seamless integration with Hugging Face models
-    *   High-throughput serving with parallel sampling, beam search, and more
-    *   Tensor and pipeline parallelism support
-    *   Streaming outputs
-    *   OpenAI-compatible API server
-    *   Support for NVIDIA, AMD, Intel, and more
-    *   Prefix caching and Multi-LoRA support
-*   ✅ **Wide Model Compatibility:**
-    *   Supports popular open-source models: Llama, Mixtral, Deepseek-V2 and V3, E5-Mistral, LLaVA, and many more (See the full list [here](https://docs.vllm.ai/en/latest/models/supported_models.html)).
-*   💡 **Quantization Support:**
-    *   GPTQ, AWQ, AutoRound, INT4, INT8, and FP8
 ---
-## About
 
-vLLM, originally from UC Berkeley's Sky Computing Lab, is a community-driven project offering a cutting-edge solution for LLM inference and serving.  Experience significant performance improvements and cost savings when deploying your LLMs.
+vLLM empowers you to serve large language models (LLMs) with unparalleled speed and efficiency, making LLM inference accessible to everyone.  [Learn more at the original repo](https://github.com/vllm-project/vllm).
+
+## Key Features of vLLM
+
+*   **Blazing-Fast Performance:**
+    *   State-of-the-art serving throughput.
+    *   PagedAttention for efficient memory management.
+    *   Continuous batching for handling requests.
+    *   Optimized CUDA/HIP graph execution.
+    *   Integration with FlashAttention and FlashInfer.
+    *   Speculative decoding support.
+    *   Chunked prefill.
+*   **Flexible and Easy to Use:**
+    *   Seamless integration with Hugging Face models.
+    *   Supports popular decoding algorithms (parallel sampling, beam search, etc.).
+    *   Tensor and pipeline parallelism for distributed inference.
+    *   Streaming outputs.
+    *   OpenAI-compatible API server.
+    *   NVIDIA, AMD, Intel, PowerPC, TPU, and AWS Neuron support.
+    *   Prefix caching support.
+    *   Multi-LoRA support.
+*   **Broad Model Compatibility:**
+    *   Supports various model types, including Transformer-like LLMs (Llama), Mixture-of-Experts (Mixtral), Embedding Models (E5-Mistral), and Multi-modal LLMs (LLaVA).
+    *   See the [Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html) list for details.
+*   **Extensive Quantization Support:**
+    *   GPTQ, AWQ, AutoRound, INT4, INT8, and FP8 quantization.
 
 ## Getting Started
 
-Get up and running quickly with vLLM:
+Install vLLM with `pip`:
 
-1.  **Install:**
-    ```bash
-    pip install vllm
-    ```
-2.  **Explore the Documentation:**
+```bash
+pip install vllm
+```
 
-    *   [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)
-    *   [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)
-    *   [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)
+or [from source](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/index.html#build-wheel-from-source).
+
+Refer to the official [documentation](https://docs.vllm.ai/en/latest/) for more information, including:
+*   [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)
+*   [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)
+*   [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)
+
+## Performance Benchmarks
+
+For a detailed performance comparison of vLLM against other LLM serving engines, please consult our [blog post](https://blog.vllm.ai/2024/09/05/perf-update.html).  Reproduce the benchmark yourself using our one-click script; details available [here](https://github.com/vllm-project/vllm/issues/8176).
 
 ## Contributing
 
-Your contributions are welcome! Learn how to get involved in the vLLM project in the [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html) section.
+Contributions and collaborations are welcome!  See the [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html) documentation for guidelines.
 
 ## Sponsors
 
-vLLM is a community project supported by the following organizations:
+vLLM is a community project supported by:
+<!-- Note: Please sort them in alphabetical order. -->
+<!-- Note: Please keep these consistent with docs/community/sponsors.md -->
+**Cash Donations:**
+- a16z
+- Dropbox
+- Sequoia Capital
+- Skywork AI
+- ZhenFund
 
-**Cash Donations:** a16z, Dropbox, Sequoia Capital, Skywork AI, ZhenFund
+**Compute Resources:**
+- AMD
+- Anyscale
+- AWS
+- Crusoe Cloud
+- Databricks
+- DeepInfra
+- Google Cloud
+- Intel
+- Lambda Lab
+- Nebius
+- Novita AI
+- NVIDIA
+- Replicate
+- Roblox
+- RunPod
+- Trainy
+- UC Berkeley
+- UC San Diego
 
-**Compute Resources:** AMD, Anyscale, AWS, Crusoe Cloud, Databricks, DeepInfra, Google Cloud, Intel, Lambda Lab, Nebius, Novita AI, NVIDIA, Replicate, Roblox, RunPod, Trainy, UC Berkeley, UC San Diego
+Slack Sponsor: Anyscale
 
-**Slack Sponsor:** Anyscale
-
-Consider supporting vLLM's development via [OpenCollective](https://opencollective.com/vllm).
+We also have an official fundraising venue through [OpenCollective](https://opencollective.com/vllm). We plan to use the fund to support the development, maintenance, and adoption of vLLM.
 
 ## Citation
 
@@ -81,12 +114,12 @@ If you use vLLM in your research, please cite our paper:
 
 ## Contact Us
 
--   For technical questions and feature requests, please use GitHub [Issues](https://github.com/vllm-project/vllm/issues) or [Discussions](https://github.com/vllm-project/vllm/discussions)
--   For discussing with fellow users, please use the [vLLM Forum](https://discuss.vllm.ai)
--   For coordinating contributions and development, please use [Slack](https://slack.vllm.ai)
--   For security disclosures, please use GitHub's [Security Advisories](https://github.com/vllm-project/vllm/security/advisories) feature
--   For collaborations and partnerships, please contact us at [vllm-questions@lists.berkeley.edu](mailto:vllm-questions@lists.berkeley.edu)
+*   For technical questions and feature requests, use GitHub [Issues](https://github.com/vllm-project/vllm/issues) or [Discussions](https://github.com/vllm-project/vllm/discussions)
+*   Discuss with fellow users: [vLLM Forum](https://discuss.vllm.ai)
+*   Coordinate contributions and development: [Slack](https://slack.vllm.ai)
+*   Security disclosures: GitHub [Security Advisories](https://github.com/vllm-project/vllm/security/advisories)
+*   Collaborations and partnerships: [vllm-questions@lists.berkeley.edu](mailto:vllm-questions@lists.berkeley.edu)
 
 ## Media Kit
 
-Find vLLM's logo and other media assets in our [media kit repo](https://github.com/vllm-project/media-kit).
+Use vLLM's logo with the [media kit repo](https://github.com/vllm-project/media-kit).

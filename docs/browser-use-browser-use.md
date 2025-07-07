@@ -1,10 +1,10 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./static/browser-use-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./static/browser-use.png">
-  <img alt="Browser Use Logo" src="./static/browser-use.png"  width="full">
+  <img alt="Shows a black Browser Use Logo in light color mode and a white one in dark color mode." src="./static/browser-use.png"  width="full">
 </picture>
 
-<h1 align="center">Browser Use: Automate Your Browser with AI</h1>
+<h1 align="center">Browser Use: Unleash the Power of AI in Your Browser 🤖</h1>
 
 [![GitHub stars](https://img.shields.io/github/stars/gregpr07/browser-use?style=social)](https://github.com/gregpr07/browser-use/stargazers)
 [![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)
@@ -14,31 +14,38 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
 [![Weave Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fapp.workweave.ai%2Fapi%2Frepository%2Fbadge%2Forg_T5Pvn3UBswTHIsN1dWS3voPg%2F881458615&labelColor=#EC6341)](https://app.workweave.ai/reports/repository/org_T5Pvn3UBswTHIsN1dWS3voPg/881458615)
 
-**Effortlessly control your browser using the power of AI with Browser Use, enabling automation and complex web interactions.** ([Back to Original Repo](https://github.com/browser-use/browser-use))
+**Browser Use empowers you to control your browser with natural language, bridging the gap between AI and the web.**
+
+🔗 [Back to the Repository](https://github.com/browser-use/browser-use)
 
 ## Key Features
 
-*   **AI-Powered Browser Automation:**  Enable your AI agents to interact with web browsers, performing tasks automatically.
-*   **Easy Integration:** Simple installation with pip, making it easy to get started.
-*   **Versatile LLM Support:**  Integrate with a variety of LLMs, including OpenAI, Anthropic, and more.
-*   **Cloud-Based Option:**  Try the hosted version for instant browser automation without setup.
-*   **Interactive CLI:** Test and experiment with the `browser-use` CLI.
-*   **Robust Testing:** Integrated testing with CI for automated validation of your tasks.
+*   **AI-Powered Browser Automation:** Automate tasks in your browser using the power of AI.
+*   **Easy Integration:** Simple setup with Python and direct integration with popular LLMs.
+*   **Cloud Deployment:**  Get started instantly with our hosted cloud version. [Try the cloud ☁︎](https://cloud.browser-use.com).
+*   **Interactive CLI:** Test and experiment with an interactive command-line interface.
+*   **Extensive Documentation:** Comprehensive documentation with code examples, API reference, and tutorials.
+*   **Community Support:** Join our active [Discord](https://link.browser-use.com/discord) to share your projects and get support.
 
 ## Quick Start
 
 ### Installation
 
-Install the package and browser dependencies:
+With pip (Python>=3.11):
 
 ```bash
 pip install browser-use
+```
+
+Install the browser:
+
+```bash
 playwright install chromium --with-deps --no-shell
 ```
 
-### Example Usage
+### Basic Usage
 
-Here's a simple example to get you started:
+Spin up your agent:
 
 ```python
 import asyncio
@@ -57,9 +64,7 @@ async def main():
 asyncio.run(main())
 ```
 
-### Configuration
-
-Configure your API keys using a `.env` file:
+Add your API keys for the provider you want to use to your `.env` file.
 
 ```bash
 OPENAI_API_KEY=
@@ -72,86 +77,115 @@ GROK_API_KEY=
 NOVITA_API_KEY=
 ```
 
-### Additional Resources
+For other settings, models, and more, check out the [documentation 📕](https://docs.browser-use.com).
 
-*   **Documentation:** Find more details and advanced configurations in the [documentation 📕](https://docs.browser-use.com).
-*   **Web UI & Desktop App:** Test browser-use using the [Web UI](https://github.com/browser-use/web-ui) or [Desktop App](https://github.com/browser-use/desktop).
-*   **Interactive CLI:** Use our `browser-use` interactive CLI:  `pip install "browser-use[cli]" && browser-use`
+### Testing
+
+#### Web UI and Desktop App
+
+Test browser-use using its [Web UI](https://github.com/browser-use/web-ui) or [Desktop App](https://github.com/browser-use/desktop).
+
+#### Interactive CLI
+
+You can also use our `browser-use` interactive CLI (similar to `claude` code):
+
+```bash
+pip install "browser-use[cli]"
+browser-use
+```
 
 ## Demos
 
-See Browser Use in action:
+<br/><br/>
 
-*   **Grocery Shopping:**  Automated grocery shopping [Demo Video](https://www.youtube.com/watch?v=L2Ya9PYNns8)
-*   **LinkedIn to Salesforce:**  Automate lead generation.
-*   **Job Application:** Find and apply for jobs based on your CV.
-*   **Document Creation:** Generate a letter in Google Docs and save it as a PDF.
-*   **Hugging Face Model Search:** Search and save models from Hugging Face.
+[Task](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/shopping.py): Add grocery items to cart, and checkout.
 
-(Embed the demo images with alt text, see original for examples)
+[![AI Did My Groceries](https://github.com/user-attachments/assets/a0ffd23d-9a11-4368-8893-b092703abc14)](https://www.youtube.com/watch?v=L2Ya9PYNns8)
+
+<br/><br/>
+
+Prompt: Add my latest LinkedIn follower to my leads in Salesforce.
+
+![LinkedIn to Salesforce](https://github.com/user-attachments/assets/50d6e691-b66b-4077-a46c-49e9d4707e07)
+
+<br/><br/>
+
+[Prompt](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/find_and_apply_to_jobs.py): Read my CV & find ML jobs, save them to a file, and then start applying for them in new tabs, if you need help, ask me.'
+
+https://github.com/user-attachments/assets/171fb4d6-0355-46f2-863e-edb04a828d04
+
+<br/><br/>
+
+[Prompt](https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py): Write a letter in Google Docs to my Papa, thanking him for everything, and save the document as a PDF.
+
+![Letter to Papa](https://github.com/user-attachments/assets/242ade3e-15bc-41c2-988f-cbc5415a66aa)
+
+<br/><br/>
+
+[Prompt](https://github.com/browser-use/browser-use/blob/main/examples/custom-functions/save_to_file_hugging_face.py): Look up models with a license of cc-by-sa-4.0 and sort by most likes on Hugging face, save top 5 to file.
+
+https://github.com/user-attachments/assets/de73ee39-432c-4b97-b4e8-939fd7f323b3
+
+<br/><br/>
 
 ## More Examples
 
-Explore more use cases and get inspiration:
-
-*   [Examples Folder](examples)
-*   [Discord](https://link.browser-use.com/discord)
-*   [`awesome-prompts`](https://github.com/browser-use/awesome-prompts)
+Explore more examples in the [examples](examples) folder, or get inspiration in our [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repo.
 
 ## Vision
 
-The future of web interaction is here: tell your computer what to do, and it gets it done.
+Tell your computer what to do, and it gets it done.
 
 ## Roadmap
 
 ### Agent
--   [ ] Improve agent memory to handle +100 steps
--   [ ] Enhance planning capabilities (load website specific context)
--   [ ] Reduce token consumption (system prompt, DOM state)
+
+*   \[ ] Improve agent memory to handle +100 steps
+*   \[ ] Enhance planning capabilities (load website specific context)
+*   \[ ] Reduce token consumption (system prompt, DOM state)
 
 ### DOM Extraction
--   [ ] Enable detection for all possible UI elements
--   [ ] Improve state representation for UI elements so that all LLMs can understand what's on the page
+
+*   \[ ] Enable detection for all possible UI elements
+*   \[ ] Improve state representation for UI elements so that all LLMs can understand what's on the page
 
 ### Workflows
--   [ ] Let user record a workflow - which we can rerun with browser-use as a fallback
--   [ ] Make rerunning of workflows work, even if pages change
+
+*   \[ ] Let user record a workflow - which we can rerun with browser-use as a fallback
+*   \[ ] Make rerunning of workflows work, even if pages change
 
 ### User Experience
--   [ ] Create various templates for tutorial execution, job application, QA testing, social media, etc. which users can just copy & paste.
--   [ ] Improve docs
--   [ ] Make it faster
+
+*   \[ ] Create various templates for tutorial execution, job application, QA testing, social media, etc. which users can just copy & paste.
+*   \[ ] Improve docs
+*   \[ ] Make it faster
 
 ### Parallelization
--   [ ] Human work is sequential. The real power of a browser agent comes into reality if we can parallelize similar tasks. For example, if you want to find contact information for 100 companies, this can all be done in parallel and reported back to a main agent, which processes the results and kicks off parallel subtasks again.
+
+*   \[ ] Human work is sequential. The real power of a browser agent comes into reality if we can parallelize similar tasks. For example, if you want to find contact information for 100 companies, this can all be done in parallel and reported back to a main agent, which processes the results and kicks off parallel subtasks again.
 
 ## Contributing
 
-We welcome contributions!
-
-*   Report bugs and request features by opening issues.
-*   Contribute to the documentation in the `/docs` folder.
+We welcome contributions! Please submit issues for bugs or feature requests. For documentation contributions, check out the `/docs` folder.
 
 ## 🧪 Robust Agent Testing
 
-Automate the validation of your tasks:
+Automate your tasks with CI integration!
 
-*   Create a YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for details).
-*   Your task is run on every update and evaluated against your criteria.
+*   **Add your task:** Add a YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for details).
+*   **Automatic validation:** Your task will be run and evaluated on every update.
 
 ## Local Setup
 
-For more details, check out the [local setup 📕](https://docs.browser-use.com/development/local-setup).
+Learn more about local setup in the [local setup 📕](https://docs.browser-use.com/development/local-setup).
 
-## Versioning
-
-`main` is the primary development branch.  For production, install a stable [versioned release](https://github.com/browser-use/browser-use/releases).
+For production use, install a stable [versioned release](https://github.com/browser-use/browser-use/releases) instead of the `main` development branch.
 
 ---
 
 ## Swag
 
-Good contributors receive swag! Check out our [Merch store](https://browsermerch.com) to show off your Browser Use love.
+Check out our [Merch store](https://browsermerch.com) for Browser-use swag! Good contributors receive free swag 👀.
 
 ## Citation
 
