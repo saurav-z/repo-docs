@@ -14,17 +14,18 @@
 
 # AutoGen: Build Powerful Multi-Agent AI Applications
 
-**AutoGen** is a versatile framework that empowers you to create sophisticated multi-agent AI applications that can operate autonomously or collaboratively with humans.  [View the original repo](https://github.com/microsoft/autogen).
+AutoGen is a versatile framework developed by Microsoft, empowering developers to easily create and deploy sophisticated multi-agent AI systems.
 
-## Key Features of AutoGen:
+[**Explore the AutoGen repository on GitHub**](https://github.com/microsoft/autogen)
 
-*   **Multi-Agent Workflows:** Design and implement complex AI agent interactions.
-*   **Flexible Framework:** Built with layered and extensible design for various levels of abstraction.
-*   **Core API:** Foundation for message passing, event-driven agents, and flexible runtime options.
-*   **AgentChat API:** Rapid prototyping with a simplified API for common multi-agent patterns.
-*   **Extensible Ecosystem:** Supports first- and third-party extensions to expand capabilities.
-*   **AutoGen Studio:** No-code GUI for building multi-agent applications, streamlining development.
-*   **AutoGen Bench:** A comprehensive benchmarking suite for evaluating agent performance.
+## Key Features of AutoGen
+
+*   **Multi-Agent Workflows:** Design and implement complex AI workflows with multiple agents that can collaborate and interact.
+*   **Flexible Architecture:** Built with a modular and extensible design, allowing you to customize and scale your applications easily.
+*   **Rapid Prototyping:** Utilize the AgentChat API for quick development and experimentation with multi-agent patterns.
+*   **Extensible with Extensions:** Leverage a wide range of pre-built extensions or create your own to integrate various LLM clients, code execution capabilities, and more.
+*   **No-Code Development with AutoGen Studio:** Prototype and run multi-agent workflows without writing code, using the intuitive graphical user interface.
+*   **.NET Support:** AutoGen offers cross-language support for .NET and Python.
 
 ## Installation
 
@@ -42,11 +43,11 @@ The current stable version is v0.4. If you are upgrading from AutoGen v0.2, plea
 pip install -U "autogenstudio"
 ```
 
-## Quickstart Examples
+## Quickstart
 
 ### Hello World
 
-Create an assistant agent using OpenAI's GPT-4o model:
+Create an assistant agent using OpenAI's GPT-4o model. See [other supported models](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/models.html).
 
 ```python
 import asyncio
@@ -101,34 +102,41 @@ asyncio.run(main())
 
 ### AutoGen Studio
 
-Quickly build and iterate on multi-agent workflows using a no-code GUI:
+Use AutoGen Studio to prototype and run multi-agent workflows without writing code.
 
 ```bash
 # Run AutoGen Studio on http://localhost:8080
 autogenstudio ui --port 8080 --appdir ./my-app
 ```
 
-## Why Choose AutoGen?
+## Why Use AutoGen?
 
 <div align="center">
   <img src="autogen-landing.jpg" alt="AutoGen Landing" width="500">
 </div>
 
-AutoGen provides a comprehensive ecosystem for building, testing, and deploying multi-agent AI systems, offering a streamlined approach to complex AI application development.  It includes:
+The AutoGen ecosystem provides everything you need to create AI agents, especially multi-agent workflows -- framework, developer tools, and applications.
 
-*   **Framework:** A layered and extensible design allows for flexibility in development, from high-level APIs to low-level components.
-    *   [Core API](./python/packages/autogen-core/) for flexible message passing, event-driven agents, and runtime options.  Supports cross-language support for .NET and Python.
-    *   [AgentChat API](./python/packages/autogen-agentchat/) for rapid prototyping.
-    *   [Extensions API](./python/packages/autogen-ext/) for expanding functionality.
-*   **Developer Tools:**
-    *   [AutoGen Studio](./python/packages/autogen-studio/):  A no-code GUI for building multi-agent applications.
-    *   [AutoGen Bench](./python/packages/agbench/): A benchmarking suite for evaluating agent performance.
+The _framework_ uses a layered and extensible design. Layers have clearly divided responsibilities and build on top of layers below. This design enables you to use the framework at different levels of abstraction, from high-level APIs to low-level components.
 
-Create applications tailored to your needs. For example, [Magentic-One](./python/packages/magentic-one-cli/) is a state-of-the-art multi-agent team built using AgentChat API and Extensions API that can handle a variety of tasks that require web browsing, code execution, and file handling.
+- [Core API](./python/packages/autogen-core/) implements message passing, event-driven agents, and local and distributed runtime for flexibility and power. It also support cross-language support for .NET and Python.
+- [AgentChat API](./python/packages/autogen-agentchat/) implements a simpler but opinionated API for rapid prototyping. This API is built on top of the Core API and is closest to what users of v0.2 are familiar with and supports common multi-agent patterns such as two-agent chat or group chats.
+- [Extensions API](./python/packages/autogen-ext/) enables first- and third-party extensions continuously expanding framework capabilities. It support specific implementation of LLM clients (e.g., OpenAI, AzureOpenAI), and capabilities such as code execution.
 
-Join a vibrant community through weekly office hours and discussions, and a [Discord server](https://aka.ms/autogen-discord) for real-time chat, GitHub Discussions for Q&A, and a blog for tutorials and updates.
+The ecosystem also supports two essential _developer tools_:
 
-## Getting Started
+<div align="center">
+  <img src="https://media.githubusercontent.com/media/microsoft/autogen/refs/heads/main/python/packages/autogen-studio/docs/ags_screen.png" alt="AutoGen Studio Screenshot" width="500">
+</div>
+
+- [AutoGen Studio](./python/packages/autogen-studio/) provides a no-code GUI for building multi-agent applications.
+- [AutoGen Bench](./python/packages/agbench/) provides a benchmarking suite for evaluating agent performance.
+
+You can use the AutoGen framework and developer tools to create applications for your domain. For example, [Magentic-One](./python/packages/magentic-one-cli/) is a state-of-the-art multi-agent team built using AgentChat API and Extensions API that can handle a variety of tasks that require web browsing, code execution, and file handling.
+
+With AutoGen you get to join and contribute to a thriving ecosystem. We host weekly office hours and talks with maintainers and community. We also have a [Discord server](https://aka.ms/autogen-discord) for real-time chat, GitHub Discussions for Q&A, and a blog for tutorials and updates.
+
+## Where to go next?
 
 <div align="center">
 
@@ -142,35 +150,29 @@ Join a vibrant community through weekly office hours and discussions, and a [Dis
 
 </div>
 
-## Contributing
+Interested in contributing? See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started. We welcome contributions of all kinds, including bug fixes, new features, and documentation improvements. Join our community and help us make AutoGen better!
 
-Contribute to AutoGen!  See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
-
-## Get Support
-
-*   **FAQ:** [FAQ](./FAQ.md)
-*   **Discussions:** [GitHub Discussions](https://github.com/microsoft/autogen/discussions)
-*   **Discord:** [Discord server](https://aka.ms/autogen-discord)
-*   **Blog:** [Blog](https://devblogs.microsoft.com/autogen/)
+Have questions? Check out our [Frequently Asked Questions (FAQ)](./FAQ.md) for answers to common queries. If you don't find what you're looking for, feel free to ask in our [GitHub Discussions](https://github.com/microsoft/autogen/discussions) or join our [Discord server](https://aka.ms/autogen-discord) for real-time support. You can also read our [blog](https://devblogs.microsoft.com/autogen/) for updates.
 
 ## Legal Notices
 
-(Legal notices are included as provided.)
+Microsoft and any contributors grant you a license to the Microsoft documentation and other content
+in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
+see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
+[LICENSE-CODE](LICENSE-CODE) file.
+
+Microsoft, Windows, Microsoft Azure, and/or other Microsoft products and services referenced in the documentation
+may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
+The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
+Microsoft's general trademark guidelines can be found at <http://go.microsoft.com/fwlink/?LinkID=254653>.
+
+Privacy information can be found at <https://go.microsoft.com/fwlink/?LinkId=521839>
+
+Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
+or trademarks, whether by implication, estoppel, or otherwise.
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
   <a href="#readme-top" style="text-decoration: none; color: blue; font-weight: bold;">
     ↑ Back to Top ↑
   </a>
 </p>
-```
-Key improvements and SEO optimizations:
-
-*   **Clear, Concise Title:**  "AutoGen: Build Powerful Multi-Agent AI Applications" uses the primary keyword and a strong value proposition.
-*   **One-Sentence Hook:**  A compelling opening sentence to grab attention.
-*   **Keyword Integration:**  The primary keyword "AutoGen" is used strategically throughout the README.
-*   **Structured Headings:** Uses appropriate H2 and H3 headings to improve readability and SEO.
-*   **Bulleted Key Features:** Easily scannable and highlights the core value of AutoGen.
-*   **Concise Descriptions:** Descriptions are kept short and to the point.
-*   **Internal Linking:** Links within the document (e.g., to `CONTRIBUTING.md`, `FAQ.md`) improve internal SEO.
-*   **Direct Calls to Action:**  Encourages users to contribute and seek support.
-*   **Link back to original repo**: Added to provide the source of the information

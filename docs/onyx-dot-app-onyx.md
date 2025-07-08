@@ -1,62 +1,74 @@
 <!-- ONYX_METADATA={"link": "https://github.com/onyx-dot-app/onyx/blob/main/README.md"} -->
 
-<a name="readme-top"></a>
-
-<h2 align="center">
-<a href="https://www.onyx.app/"> <img width="50%" src="https://github.com/onyx-dot-app/onyx/blob/logo/OnyxLogoCropped.jpg?raw=true" alt="Onyx Logo"/></a>
-</h2>
+<h1 align="center">
+  <img src="https://github.com/onyx-dot-app/onyx/blob/logo/OnyxLogoCropped.jpg?raw=true" alt="Onyx Logo" width="50%">
+</h1>
 
 <p align="center">
-  <b>Unlock your team's knowledge with Onyx, the open-source AI platform for enterprise search and Gen-AI.</b>
+  <strong>Unlock your team's knowledge with Onyx, the open-source AI platform for enterprise search and Gen-AI.</strong>
 </p>
 
 <p align="center">
-<a href="https://docs.onyx.app/" target="_blank">
+  <a href="https://docs.onyx.app/" target="_blank">
     <img src="https://img.shields.io/badge/docs-view-blue" alt="Documentation">
-</a>
-<a href="https://join.slack.com/t/onyx-dot-app/shared_invite/zt-34lu4m7xg-TsKGO6h8PDvR5W27zTdyhA" target="_blank">
+  </a>
+  <a href="https://join.slack.com/t/onyx-dot-app/shared_invite/zt-34lu4m7xg-TsKGO6h8PDvR5W27zTdyhA" target="_blank">
     <img src="https://img.shields.io/badge/slack-join-blue.svg?logo=slack" alt="Slack">
-</a>
-<a href="https://discord.gg/TDJ59cGV2X" target="_blank">
+  </a>
+  <a href="https://discord.gg/TDJ59cGV2X" target="_blank">
     <img src="https://img.shields.io/badge/discord-join-blue.svg?logo=discord&logoColor=white" alt="Discord">
-</a>
-<a href="https://github.com/onyx-dot-app/onyx/blob/main/README.md" target="_blank">
-    <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=blue" alt="License">
-</a>
+  </a>
+  <a href="https://github.com/onyx-dot-app/onyx/blob/main/README.md" target="_blank">
+    <img src="https://img.shields.io/badge/license-MIT-blue" alt="License">
+  </a>
 </p>
 
-**[Onyx](https://www.onyx.app/)** (formerly Danswer) is a powerful AI platform that connects to your company's documents, applications, and people, providing a feature-rich chat interface and seamless integration with your preferred Large Language Model (LLM).  Keep your knowledge and access controls synchronized across 40+ connectors, create custom AI agents, and deploy securely, anywhere.
+## What is Onyx?
+
+**Onyx** (formerly Danswer) is an open-source AI platform designed to connect your company's data, apps, and people.  It provides a powerful chat interface and integrates with your choice of Large Language Models (LLMs), empowering your team to find information quickly and efficiently. Keep knowledge and access controls synchronized across 40+ connectors like Google Drive, Slack, Confluence, and Salesforce. Build custom AI agents with unique prompts, knowledge bases, and actions. Deploy Onyx securely on your laptop, on-premise, or in the cloud.
+
+[Visit the original repository on GitHub](https://github.com/onyx-dot-app/onyx) to learn more.
 
 ## Key Features
 
-*   **Deep Research & AI Chat:** Get insights by searching and chatting across all your connected data sources.
-    *   [Onyx Chat Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxChatSilentDemo.gif)
-*   **Connector Integration:**  Integrate with 40+ connectors, including Google Drive, Slack, Confluence, and Salesforce.
-    *   [Onyx Connector Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxConnectorSilentDemo.gif)
-*   **Custom AI Agents:** Build agents tailored to your specific needs with custom prompts, knowledge bases, and actions.
-*   **Flexible Deployment:** Deploy on a laptop, on-premise, or in the cloud with support for Kubernetes.
-    *   [Onyx Bot Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxBot.png)
-*   **Enterprise-Grade Security & Scalability:**  Benefit from features like SSO (OIDC/SAML/OAuth2), RBAC, encryption, and scalable deployment options.
-*   **Knowledge Curation Tools:** Utilize document sets, query history, and usage analytics.
-*   **Custom Deep Learning Models:** Benefit from custom models for indexing and inference, constantly learning from user feedback.
+*   **Deep Knowledge Search:** Quickly find answers and insights within your team's knowledge base.
+    [Demo Video](https://private-user-images.githubusercontent.com/32520769/414509312-48392e83-95d0-4fb5-8650-a396e05e0a32.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzk5Mjg2MzYsIm5iZiI6MTczOTkyODMzNiwicGF0aCI6Ii8zMjUyMDc2OS80MTQ1MDkzMTItNDgzOTJlODMtOTVkMC00ZmI1LTg2NTAtYTM5NmUwNWUwYTMyLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjE5VDAxMjUzNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFhMzk5Njg2Y2Y5YjFmNDNiYTQ2YzM5ZTg5YWJiYTU2NWMyY2YwNmUyODE2NWUxMDRiMWQxZWJmODI4YTA0MTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.a9D8A0sgKE9AoaoE-mfFbJ6_OKYeqaf7TZ4Han2JfW8)
+*   **AI Chat with LLMs:** Engage in secure AI chat with any LLM you choose.
+    <br>
+    <img src="https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxChatSilentDemo.gif" alt="Onyx Chat Demo">
+*   **Seamless Connector Integrations:** Easily connect to your existing applications and data sources.
+    <br>
+    <img src="https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxConnectorSilentDemo.gif" alt="Onyx Connector Demo">
+*   **Multi-Platform Access:** Access Onyx where your team already works, including Slack and other platforms.
+    <br>
+    <img src="https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxBot.png" alt="Onyx Bot Demo">
 
-## Getting Started
+## Deployment
 
-**Try Onyx Cloud for free!** Get started in seconds at [Onyx Cloud](https://cloud.onyx.app/signup).
+Get started with Onyx quickly and easily!
 
-Alternatively, deploy Onyx locally with a single `docker compose` command.  Refer to our [docs](https://docs.onyx.app/quickstart) for detailed instructions.  Deployment guides are also available for high-availability/scalable deployment on Kubernetes [here](https://github.com/onyx-dot-app/onyx/tree/main/deployment).
+*   **Onyx Cloud:** Try Onyx for free and get started in seconds with [Onyx Cloud](https://cloud.onyx.app/signup).
+
+*   **Self-Hosting:** Run Onyx locally (even on a laptop) or deploy it on a virtual machine with a single `docker compose` command.  See the [documentation](https://docs.onyx.app/quickstart) for details. We also support scalable deployments on Kubernetes. References [here](https://github.com/onyx-dot-app/onyx/tree/main/deployment).
+
+## Additional Benefits
+
+*   Custom deep learning models for improved indexing and inference.
+*   Flexible security features (SSO, RBAC, encryption).
+*   Knowledge curation tools (document sets, query history, analytics).
+*   Scalable deployment options tested for large user bases and massive datasets.
 
 ## Roadmap
 
-*   New information retrieval methods (StructRAG, LightGraphRAG, etc.)
+*   New information retrieval methods (StructRAG, LightGraphRAG).
 *   Personalized Search
-*   Organizational understanding & expert recommendation
+*   Organizational understanding and expert suggestions.
 *   Code Search
-*   SQL & Structured Query Language Integration
+*   SQL and Structured Query Language support.
 
 ## Connectors
 
-Onyx seamlessly integrates with a wide array of applications to keep your team's knowledge synchronized:
+Integrate with 40+ connectors to synchronize knowledge and access controls:
 
 *   Google Drive
 *   Confluence
@@ -72,24 +84,22 @@ Onyx seamlessly integrates with a wide array of applications to keep your team's
 *   Dropbox
 *   Local Files
 *   Websites
-*   And many more...
+*   And more ...
 
-See the full list of connectors [here](https://docs.onyx.app/connectors).
+See the full list [here](https://docs.onyx.app/connectors).
 
 ## Licensing
 
-Onyx offers two editions:
+Onyx is available in two editions:
 
-*   **Onyx Community Edition (CE):** Available freely under the MIT Expat license.
-*   **Onyx Enterprise Edition (EE):** Includes additional features tailored for larger organizations. Check out our [website](https://www.onyx.app/pricing) for details.
+*   **Onyx Community Edition (CE):** Free under the MIT Expat license.
+*   **Onyx Enterprise Edition (EE):** Includes advanced features for larger organizations. Check out [our website](https://www.onyx.app/pricing) for details.
 
-To try Onyx Enterprise Edition:
+To try the Enterprise Edition:
 
 1.  Sign up for [Onyx Cloud](https://cloud.onyx.app/signup).
-2.  For self-hosting the Enterprise Edition, contact us at [founders@onyx.app](mailto:founders@onyx.app) or schedule a call via our [Cal](https://cal.com/team/onyx/founders).
+2.  For self-hosting the Enterprise Edition, contact us at [founders@onyx.app](mailto:founders@onyx.app) or book a call on [Cal](https://cal.com/team/onyx/founders).
 
 ## Contributing
 
-Contribute to Onyx!  See the [Contribution Guide](CONTRIBUTING.md) for details.
-
-[Back to Top](#readme-top)
+We welcome contributions!  Please review the [Contribution Guide](CONTRIBUTING.md) for details.

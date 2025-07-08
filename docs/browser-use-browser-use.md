@@ -1,37 +1,37 @@
+<!-- Improved README for Browser Use -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./static/browser-use-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./static/browser-use.png">
   <img alt="Shows a black Browser Use Logo in light color mode and a white one in dark color mode." src="./static/browser-use.png"  width="full">
 </picture>
 
-<h1 align="center">Browser Use: Unleash the Power of AI in Your Browser 🤖</h1>
+<h1 align="center">Browser Use: Unleash AI to Control Your Browser 🤖</h1>
 
-[![GitHub stars](https://img.shields.io/github/stars/gregpr07/browser-use?style=social)](https://github.com/gregpr07/browser-use/stargazers)
-[![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)
-[![Cloud](https://img.shields.io/badge/Cloud-☁️-blue)](https://cloud.browser-use.com)
-[![Documentation](https://img.shields.io/badge/Documentation-📕-blue)](https://docs.browser-use.com)
-[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)
-[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
-[![Weave Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fapp.workweave.ai%2Fapi%2Frepository%2Fbadge%2Forg_T5Pvn3UBswTHIsN1dWS3voPg%2F881458615&labelColor=#EC6341)](https://app.workweave.ai/reports/repository/org_T5Pvn3UBswTHIsN1dWS3voPg/881458615)
+[<img src="https://img.shields.io/github/stars/gregpr07/browser-use?style=social" alt="GitHub stars">](https://github.com/gregpr07/browser-use/stargazers)
+[<img src="https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white" alt="Discord">](https://link.browser-use.com/discord)
+[<img src="https://img.shields.io/badge/Cloud-☁️-blue" alt="Cloud">](https://cloud.browser-use.com)
+[<img src="https://img.shields.io/badge/Documentation-📕-blue" alt="Documentation">](https://docs.browser-use.com)
+[<img src="https://img.shields.io/twitter/follow/Gregor?style=social" alt="Twitter Follow (Gregor)">](https://x.com/intent/user?screen_name=gregpr07)
+[<img src="https://img.shields.io/twitter/follow/Magnus?style=social" alt="Twitter Follow (Magnus)">](https://x.com/intent/user?screen_name=mamagnus00)
+[<img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fapp.workweave.ai%2Fapi%2Frepository%2Fbadge%2Forg_T5Pvn3UBswTHIsN1dWS3voPg%2F881458615&labelColor=%23EC6341" alt="Weave Badge">](https://app.workweave.ai/reports/repository/org_T5Pvn3UBswTHIsN1dWS3voPg/881458615)
 
-**Browser Use empowers you to control your browser with natural language, bridging the gap between AI and the web.**
+**Browser Use empowers you to automate your web interactions with AI, allowing your AI agents to control your browser effortlessly.**
 
-🔗 [Back to the Repository](https://github.com/browser-use/browser-use)
+Key Features:
 
-## Key Features
-
-*   **AI-Powered Browser Automation:** Automate tasks in your browser using the power of AI.
-*   **Easy Integration:** Simple setup with Python and direct integration with popular LLMs.
-*   **Cloud Deployment:**  Get started instantly with our hosted cloud version. [Try the cloud ☁︎](https://cloud.browser-use.com).
-*   **Interactive CLI:** Test and experiment with an interactive command-line interface.
-*   **Extensive Documentation:** Comprehensive documentation with code examples, API reference, and tutorials.
-*   **Community Support:** Join our active [Discord](https://link.browser-use.com/discord) to share your projects and get support.
+*   **Effortless AI-Browser Integration:** Seamlessly connect your AI agents to the browser for automated web interactions.
+*   **Easy Setup:** Get started quickly with a straightforward installation process.
+*   **Cloud-Based Option:** Try our hosted version for instant browser automation. [Try the cloud ☁︎](https://cloud.browser-use.com).
+*   **Model Context Protocol (MCP) Support:** Integrate with Claude Desktop and other MCP-compatible clients.
+*   **Interactive CLI:** Test and experiment with the browser-use CLI for quick interactions.
+*   **Extensive Documentation:** Access comprehensive documentation for settings, models, and more. [Documentation 📕](https://docs.browser-use.com).
+*   **Robust Testing:** Automated testing using your tasks through CI.
+*   **Example Use Cases:** Groceries, LinkedIn automation, Job application, Google Docs and more.
+*   **Community Support:** Join the [Discord](https://link.browser-use.com/discord) to see what other are doing with the library, share project, and get help.
 
 ## Quick Start
 
-### Installation
-
-With pip (Python>=3.11):
+Install with pip (Python>=3.11):
 
 ```bash
 pip install browser-use
@@ -42,8 +42,6 @@ Install the browser:
 ```bash
 playwright install chromium --with-deps --no-shell
 ```
-
-### Basic Usage
 
 Spin up your agent:
 
@@ -79,13 +77,11 @@ NOVITA_API_KEY=
 
 For other settings, models, and more, check out the [documentation 📕](https://docs.browser-use.com).
 
-### Testing
+### Test with UI
 
-#### Web UI and Desktop App
+You can test browser-use using its [Web UI](https://github.com/browser-use/web-ui) or [Desktop App](https://github.com/browser-use/desktop).
 
-Test browser-use using its [Web UI](https://github.com/browser-use/web-ui) or [Desktop App](https://github.com/browser-use/desktop).
-
-#### Interactive CLI
+### Test with an interactive CLI
 
 You can also use our `browser-use` interactive CLI (similar to `claude` code):
 
@@ -93,6 +89,84 @@ You can also use our `browser-use` interactive CLI (similar to `claude` code):
 pip install "browser-use[cli]"
 browser-use
 ```
+
+## Model Context Protocol (MCP) Integration
+
+Browser-use supports the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), enabling integration with Claude Desktop and other MCP-compatible clients.
+
+### Use as MCP Server with Claude Desktop
+
+Add browser-use to your Claude Desktop configuration:
+
+```json
+{
+  "mcpServers": {
+    "browser-use": {
+      "command": "uvx",
+      "args": ["browser-use", "--mcp"],
+      "env": {
+        "OPENAI_API_KEY": "sk-..."
+      }
+    }
+  }
+}
+```
+
+This gives Claude Desktop access to browser automation tools for web scraping, form filling, and more.
+
+### Connect External MCP Servers to Browser-Use Agent
+
+Browser-use agents can connect to multiple external MCP servers to extend their capabilities:
+
+```python
+import asyncio
+from browser_use import Agent, Controller
+from browser_use.mcp.client import MCPClient
+from browser_use.llm import ChatOpenAI
+
+async def main():
+    # Initialize controller
+    controller = Controller()
+    
+    # Connect to multiple MCP servers
+    filesystem_client = MCPClient(
+        server_name="filesystem",
+        command="npx",
+        args=["-y", "@modelcontextprotocol/server-filesystem", "/Users/me/documents"]
+    )
+    
+    github_client = MCPClient(
+        server_name="github", 
+        command="npx",
+        args=["-y", "@modelcontextprotocol/server-github"],
+        env={"GITHUB_TOKEN": "your-github-token"}
+    )
+    
+    # Connect and register tools from both servers
+    await filesystem_client.connect()
+    await filesystem_client.register_to_controller(controller)
+    
+    await github_client.connect()
+    await github_client.register_to_controller(controller)
+    
+    # Create agent with MCP-enabled controller
+    agent = Agent(
+        task="Find the latest report.pdf in my documents and create a GitHub issue about it",
+        llm=ChatOpenAI(model="gpt-4o"),
+        controller=controller  # Controller has tools from both MCP servers
+    )
+    
+    # Run the agent
+    await agent.run()
+    
+    # Cleanup
+    await filesystem_client.disconnect()
+    await github_client.disconnect()
+
+asyncio.run(main())
+```
+
+See the [MCP documentation](https://docs.browser-use.com/customize/mcp-server) for more details.
 
 ## Demos
 
@@ -130,62 +204,62 @@ https://github.com/user-attachments/assets/de73ee39-432c-4b97-b4e8-939fd7f323b3
 
 ## More Examples
 
-Explore more examples in the [examples](examples) folder, or get inspiration in our [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repo.
+Explore more examples in the [examples](examples) folder or join the [Discord](https://link.browser-use.com/discord) to showcase your projects. Get prompting inspiration from our [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repo.
 
 ## Vision
 
-Tell your computer what to do, and it gets it done.
+Transform your instructions into automated actions with Browser Use.
 
 ## Roadmap
 
 ### Agent
 
-*   \[ ] Improve agent memory to handle +100 steps
-*   \[ ] Enhance planning capabilities (load website specific context)
-*   \[ ] Reduce token consumption (system prompt, DOM state)
+-   [ ] Improve agent memory to handle +100 steps
+-   [ ] Enhance planning capabilities (load website specific context)
+-   [ ] Reduce token consumption (system prompt, DOM state)
 
 ### DOM Extraction
 
-*   \[ ] Enable detection for all possible UI elements
-*   \[ ] Improve state representation for UI elements so that all LLMs can understand what's on the page
+-   [ ] Enable detection for all possible UI elements
+-   [ ] Improve state representation for UI elements so that all LLMs can understand what's on the page
 
 ### Workflows
 
-*   \[ ] Let user record a workflow - which we can rerun with browser-use as a fallback
-*   \[ ] Make rerunning of workflows work, even if pages change
+-   [ ] Let user record a workflow - which we can rerun with browser-use as a fallback
+-   [ ] Make rerunning of workflows work, even if pages change
 
 ### User Experience
 
-*   \[ ] Create various templates for tutorial execution, job application, QA testing, social media, etc. which users can just copy & paste.
-*   \[ ] Improve docs
-*   \[ ] Make it faster
+-   [ ] Create various templates for tutorial execution, job application, QA testing, social media, etc. which users can just copy & paste.
+-   [ ] Improve docs
+-   [ ] Make it faster
 
 ### Parallelization
 
-*   \[ ] Human work is sequential. The real power of a browser agent comes into reality if we can parallelize similar tasks. For example, if you want to find contact information for 100 companies, this can all be done in parallel and reported back to a main agent, which processes the results and kicks off parallel subtasks again.
+-   [ ] Human work is sequential. The real power of a browser agent comes into reality if we can parallelize similar tasks. For example, if you want to find contact information for 100 companies, this can all be done in parallel and reported back to a main agent, which processes the results and kicks off parallel subtasks again.
 
 ## Contributing
 
-We welcome contributions! Please submit issues for bugs or feature requests. For documentation contributions, check out the `/docs` folder.
+We welcome contributions!  Please open issues for bugs or feature requests.  To contribute to the docs, check out the `/docs` folder.
 
-## 🧪 Robust Agent Testing
+## 🧪 How to make your agents robust?
 
-Automate your tasks with CI integration!
+We offer to run your tasks in our CI—automatically, on every update!
 
-*   **Add your task:** Add a YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for details).
-*   **Automatic validation:** Your task will be run and evaluated on every update.
+-   **Add your task:** Add a YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for details).
+-   **Automatic validation:** Every time we push updates, your task will be run by the agent and evaluated using your criteria.
 
 ## Local Setup
 
 Learn more about local setup in the [local setup 📕](https://docs.browser-use.com/development/local-setup).
 
-For production use, install a stable [versioned release](https://github.com/browser-use/browser-use/releases) instead of the `main` development branch.
+`main` is the primary development branch with frequent changes. For production use, install a stable [versioned release](https://github.com/browser-use/browser-use/releases) instead.
 
 ---
 
 ## Swag
 
-Check out our [Merch store](https://browsermerch.com) for Browser-use swag! Good contributors receive free swag 👀.
+Show off your Browser-use swag! Check out our [Merch store](https://browsermerch.com). Good contributors will receive swag for free 👀.
 
 ## Citation
 
@@ -203,11 +277,13 @@ If you use Browser Use in your research or project, please cite:
 
  <div align="center"> <img src="https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f" width="400"/> 
  
-[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)
-[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
+[<img src="https://img.shields.io/twitter/follow/Gregor?style=social" alt="Twitter Follow (Gregor)">](https://x.com/intent/user?screen_name=gregpr07)
+[<img src="https://img.shields.io/twitter/follow/Magnus?style=social" alt="Twitter Follow (Magnus)">](https://x.com/intent/user?screen_name=mamagnus00)
  
  </div>
 
 <div align="center">
 Made with ❤️ in Zurich and San Francisco
  </div>
+
+[Back to Top](#browser-use-unleash-ai-to-control-your-browser-)
