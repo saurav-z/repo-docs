@@ -1,14 +1,17 @@
-# Free Programming Books & Resources: Your Gateway to Learning
+# Free Programming Books: Your Gateway to Learning Code
 
-**Discover a vast collection of free programming books, courses, and interactive resources in multiple languages, empowering anyone to learn to code.**
+This comprehensive repository offers a vast collection of free learning resources, empowering you to learn programming in numerous languages.  [Explore the original repository on GitHub](https://github.com/EbookFoundation/free-programming-books).
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Hacktoberfest 2023 stats](https://img.shields.io/github/hacktoberfest/2023/EbookFoundation/free-programming-books?label=Hacktoberfest+2023)](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Apr+is%3Amerged+created%3A2023-10-01..2023-10-31)
 
-**Explore the resources with a dynamic search:** [Searchable Resource List](https://ebookfoundation.github.io/free-programming-books-search/)
+Access and search this extensive list of free learning resources using these links:
 
-**Access the resources on the website:** [Static Website](https://ebookfoundation.github.io/free-programming-books/)
+*   **Dynamic Search Site:** [https://ebookfoundation.github.io/free-programming-books-search/](https://ebookfoundation.github.io/free-programming-books-search/)
+    [![Dynamic Search Site](https://img.shields.io/website?style=flat&logo=www&logoColor=whitesmoke&label=Dynamic%20search%20site&down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Febookfoundation.github.io%2Ffree-programming-books-search%2F)](https://ebookfoundation.github.io/free-programming-books-search/)
+*   **Static Site:** [https://ebookfoundation.github.io/free-programming-books/](https://ebookfoundation.github.io/free-programming-books/)
+    [![Static Site](https://img.shields.io/website?style=flat&logo=www&logoColor=whitesmoke&label=Static%20site&down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Febookfoundation.github.io%2Ffree-programming-books%2F)](https://ebookfoundation.github.io/free-programming-books/)
 
 <div align="center">
   <form action="https://ebookfoundation.github.io/free-programming-books-search">
@@ -20,22 +23,25 @@
 
 ## Key Features
 
-*   **Extensive Library:** Access thousands of free ebooks, courses, and interactive tutorials.
-*   **Multi-Language Support:** Resources available in numerous languages to cater to a global audience.
-*   **Organized by Category:** Browse resources by programming language, subject, and resource type.
-*   **Community Driven:**  This is a collaborative project and always looking for contributions.
-*   **Easy to Search:**  Use the search interface to find the resources you want quickly.
+*   **Massive Collection:** Access a curated list of free programming books, courses, cheat sheets, and interactive tutorials.
+*   **Multi-Language Support:**  Resources are available in a wide variety of languages, ensuring accessibility for a global audience.
+*   **Community-Driven:**  This project is actively maintained and improved through community contributions.
+*   **Organized Structure:** Resources are categorized by language and subject, making it easy to find what you need.
+*   **Searchable:** Easily find resources using the dynamic search site.
+*   **Multiple Formats:** Includes books, courses, cheat sheets, interactive tutorials, podcasts and playgrounds.
+*   **Comprehensive Coverage:** Covers a wide range of programming languages, including:
+    *   Python
+    *   Java
+    *   JavaScript
+    *   C++
+    *   C#
+    *   And many more...
 
-## About
+## Contributing
 
-Originally inspired by a StackOverflow list, this repository is a comprehensive collection of free learning resources for programmers of all levels. Maintained by the [Free Ebook Foundation](https://ebookfoundation.org), a non-profit dedicated to promoting free educational content, this project has become one of the most popular repositories on GitHub. [Contribute to the project](docs/CONTRIBUTING.md)!
+We welcome contributions!  Please review the [CONTRIBUTING](docs/CONTRIBUTING.md) guidelines. New to GitHub? See [HOWTO](docs/HOWTO.md). We follow the [Code of Conduct](docs/CODE_OF_CONDUCT.md).
 
-## Contribute
-
-Help us improve and expand this valuable resource! We welcome contributions of all kinds. Please read the [CONTRIBUTING](docs/CONTRIBUTING.md) guide before you start. If you're new to GitHub, check out [welcome](docs/HOWTO.md)!
-Remember to abide by our [Code of Conduct](docs/CODE_OF_CONDUCT.md) ([translations](#translations) also available).
-
-Click on these badges to see how you might be able to help:
+Here's how you can help:
 
 <div align="center" markdown="1">
 
@@ -48,9 +54,7 @@ Click on these badges to see how you might be able to help:
 
 </div>
 
-## Share
-
-Spread the word about this project!
+## How To Share
 
 <div align="left" markdown="1">
 <a href="https://www.facebook.com/share.php?u=https%3A%2F%2Fgithub.com%2FEbookFoundation%2Ffree-programming-books&p[images][0]=&p[title]=Free%20Programming%20Books&p[summary]=">Share on Facebook</a><br>
@@ -59,6 +63,7 @@ Spread the word about this project!
 <a href="https://t.me/share/url?url=https://github.com/EbookFoundation/free-programming-books">Share on Telegram</a><br>
 <a href="https://twitter.com/intent/tweet?text=https://github.com/EbookFoundation/free-programming-books%0AFree%20Programming%20Books">Share on 𝕏 (Twitter)</a><br>
 </div>
+
 
 ## Resources
 
@@ -69,7 +74,8 @@ Spread the word about this project!
 
 #### Other Languages
 
-*   (List of languages)
+*   [Arabic / al arabiya / العربية](books/free-programming-books-ar.md)
+    ... *(and many more languages)* ...
 
 ### Cheat Sheets
 
@@ -77,11 +83,16 @@ Spread the word about this project!
 
 ### Free Online Courses
 
-*   (List of languages)
+*   [Arabic / al arabiya / العربية](courses/free-courses-ar.md)
+    ... *(and many more languages)* ...
 
 ### Interactive Programming Resources
 
-*   (List of languages)
+*   [Chinese / 中文](more/free-programming-interactive-tutorials-zh.md)
+*   [English](more/free-programming-interactive-tutorials-en.md)
+*   [German / Deutsch](more/free-programming-interactive-tutorials-de.md)
+*   [Japanese / 日本語](more/free-programming-interactive-tutorials-ja.md)
+*   [Russian / Русский язык](more/free-programming-interactive-tutorials-ru.md)
 
 ### Problem Sets and Competitive Programming
 
@@ -89,13 +100,18 @@ Spread the word about this project!
 
 ### Podcast - Screencast
 
-*   (List of languages)
+*   [Arabic / al Arabiya / العربية](casts/free-podcasts-screencasts-ar.md)
+    ... *(and many more languages)* ...
 
 ### Programming Playgrounds
 
-*   (List of languages)
+*   [Chinese / 中文](more/free-programming-playgrounds-zh.md)
+*   [English](more/free-programming-playgrounds.md)
+*   [German / Deutsch](more/free-programming-playgrounds-de.md)
 
 ## Translations
+
+We provide translations of key documents. Contribute a translation by following the instructions in [CONTRIBUTING](docs/CONTRIBUTING.md).
 
 *   English
     *   [Code of Conduct](docs/CODE_OF_CONDUCT.md)
@@ -103,23 +119,6 @@ Spread the word about this project!
     *   [How-to](docs/HOWTO.md)
 *   ... *[More languages](docs/README.md#translations)* ...
 
-Missing translations?  You can [contribute a translation](docs/CONTRIBUTING.md#help-out-by-contributing-a-translation)
-
 ## License
 
 This project is licensed under the [CC BY License](LICENSE).
-
-**[Back to Top](#) - Return to the original repository: [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books)**
-```
-Key improvements and SEO considerations:
-
-*   **Clear Title and Hook:**  A concise title and a one-sentence hook to grab attention and convey the core value.
-*   **SEO-Friendly Headings:**  Uses appropriate H1, H2, and H3 headings for structure and readability.
-*   **Keywords:**  Includes relevant keywords like "free programming books," "programming courses," "learn to code," and language names, which helps with search engine optimization.
-*   **Bulleted Key Features:**  Highlights the most important aspects of the project in an easy-to-scan format.
-*   **Concise Language:**  Streamlines the descriptions to make them more accessible.
-*   **Call to Action:** Encourages users to explore the resources and contribute.
-*   **Clear Sectioning:** The content is logically organized.
-*   **Link Back:**  Adds a clear link back to the original repository at the end for attribution.
-*   **Simplified Search:** Makes the search functionality very clear at the top.
-*   **Contributor focus:** Clear badges for contribution and how to get started.

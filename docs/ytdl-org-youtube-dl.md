@@ -1,137 +1,174 @@
 [![Build Status](https://github.com/ytdl-org/youtube-dl/workflows/CI/badge.svg)](https://github.com/ytdl-org/youtube-dl/actions?query=workflow%3ACI)
 
-# youtube-dl: Download Videos from YouTube and Beyond
+# YouTube-DL: The Ultimate Command-Line Video Downloader
 
-Tired of buffering?  **Download videos from YouTube and hundreds of other sites with ease using youtube-dl!** [Visit the official GitHub repository for more information](https://github.com/ytdl-org/youtube-dl).
+**Download videos from YouTube and hundreds of other sites with ease using the versatile and open-source `youtube-dl`!**
 
-**Key Features:**
+*   **[Installation](#installation)**: Get started quickly with simple installation instructions for various operating systems.
+*   **[Key Features](#key-features)**: Discover the power of `youtube-dl` with its advanced features.
+*   **[Options](#options)**: Customize your downloads with a wide array of command-line options.
+*   **[Configuration](#configuration)**: Configure `youtube-dl` with a configuration file.
+*   **[Output Template](#output-template)**: Control output filenames with flexible templates.
+*   **[Format Selection](#format-selection)**: Select the best video and audio formats for your needs.
+*   **[Video Selection](#video-selection)**: Filter videos based on various criteria like date, title, and views.
+*   **[FAQ](#faq)**: Find answers to common questions and troubleshooting tips.
+*   **[Developer Instructions](#developer-instructions)**: Contribute to the project with instructions for developers.
+*   **[Embedding youtube-dl](#embedding-youtube-dl)**: Integrate `youtube-dl` into your Python projects.
+*   **[Bugs](#bugs)**: Learn how to report bugs and get help.
 
-*   **Broad Site Support:** Download videos from a vast array of video platforms, including YouTube, Vimeo, and many more.
-*   **Format Selection:** Choose your preferred video and audio formats, or let youtube-dl select the best available.
-*   **Playlist and Channel Downloads:** Easily download entire playlists or all videos from a channel.
-*   **Customization:** Tailor downloads with options for output filenames, video quality, subtitles, and more.
-*   **Cross-Platform Compatibility:** Works seamlessly on Linux, macOS, and Windows.
-*   **Open Source & Free:** Benefit from a community-driven project released into the public domain.
+## Key Features
 
----
+*   **Broad Site Support**: Download videos from YouTube, Vimeo, and many other popular video platforms.
+*   **Format Selection**: Choose your preferred video and audio quality and format.
+*   **Playlist and Channel Downloads**: Download entire playlists or all videos from a channel.
+*   **Metadata Preservation**: Automatically include video metadata like title, description, and more.
+*   **Download Customization**: Control output file names, and skip already downloaded files.
+*   **Cross-Platform Compatibility**: Runs on Windows, macOS, Linux, and other Unix-like systems.
+*   **Open Source and Customizable**: Modify, redistribute, and use the software as you wish.
+*   **Extensible**: Developers can add support for new sites through extraction plugins.
+
 ## Installation
 
-### For Unix-like Systems (Linux, macOS, etc.)
+### Unix (Linux, macOS, etc.)
 
-To install directly:
+Install `youtube-dl` directly using `curl`:
 
-```bash
-sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl
-```
+    sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+    sudo chmod a+rx /usr/local/bin/youtube-dl
 
 If you don't have `curl`, use `wget`:
 
-```bash
-sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl
+    sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+    sudo chmod a+rx /usr/local/bin/youtube-dl
+
+### Windows
+
+Download the executable: [youtube-dl.exe](https://yt-dl.org/latest/youtube-dl.exe) and place it in a directory on your [PATH](https://en.wikipedia.org/wiki/PATH_%28variable%29), except `C:\Windows\System32`.
+
+### Python Package Manager
+
+Install or update using pip:
+
+    sudo -H pip install --upgrade youtube-dl
+
+### macOS (Homebrew)
+
+Install with Homebrew:
+
+    brew install youtube-dl
+
+### macOS (MacPorts)
+
+Install with MacPorts:
+
+    sudo port install youtube-dl
+
+For alternative options, see the [youtube-dl Download Page](https://ytdl-org.github.io/youtube-dl/download.html), or refer to the [developer instructions](#developer-instructions) to work with the git repository.
+
+## Options
+
+Use `youtube-dl [OPTIONS] URL [URL...]` to download videos.  Below are some of the available options, though many more exist.
+
+*   `-U, --update`: Update youtube-dl to the latest version.
+*   `-i, --ignore-errors`: Continue downloading even if errors occur.
+*   `--proxy URL`: Use a proxy for downloads.
+*   `-o, --output TEMPLATE`: Set the output filename template.
+*   `-f, --format FORMAT`: Select the video format (see [Format Selection](#format-selection)).
+*   `--write-sub`, `--write-auto-sub`: Download subtitles.
+*   `-x, --extract-audio`: Extract audio from video.
+*   `-u, --username USERNAME -p, --password PASSWORD`: Provide login credentials.
+
+See [OPTIONS](#options) in the original README for a complete list.
+
+## Configuration
+
+Configure `youtube-dl` by creating a configuration file:
+
+*   **Linux/macOS**: `/etc/youtube-dl.conf` (system-wide) or `~/.config/youtube-dl/config` (user-specific).
+*   **Windows**: `%APPDATA%\youtube-dl\config.txt` or `C:\Users\<user name>\youtube-dl.conf`.
+
+Use the same command-line options within the configuration file, one per line.  Example:
+
+```
+# Always extract audio
+-x
+
+# Do not copy the mtime
+--no-mtime
+
+# Use this proxy
+--proxy 127.0.0.1:3128
+
+# Save all videos under Movies directory in your home directory
+-o ~/Movies/%(title)s.%(ext)s
 ```
 
-### For Windows
+Use `--ignore-config` to disable or `--config-location` to specify a custom configuration file.  See the original [configuration section](https://github.com/ytdl-org/youtube-dl#configuration) for more details.
 
-1.  Download the latest `.exe` file:  [youtube-dl.exe](https://yt-dl.org/latest/youtube-dl.exe)
-2.  Place the `.exe` in a directory included in your [PATH](https://en.wikipedia.org/wiki/PATH_%28variable%29) (e.g., `C:\Users\<YourUsername>\AppData\Local\Programs\Python\Python311`). **Avoid** placing it in `%SYSTEMROOT%\System32`.
-
-### Using pip (Python Package Manager)
-
-```bash
-sudo -H pip install --upgrade youtube-dl
-```
-
-### For macOS (using package managers)
-
-*   **Homebrew:**  `brew install youtube-dl`
-*   **MacPorts:**  `sudo port install youtube-dl`
-
----
-## Core Functionality
-
-**youtube-dl** is a command-line tool to download videos. It's designed to be flexible and powerful. To download a video, simply use the basic command:
-
-```bash
-youtube-dl [OPTIONS] URL [URL...]
-```
-
-Replace `[OPTIONS]` with any of the many available options and `URL` with the video's address.
-
-**Example:**
-
-```bash
-youtube-dl https://www.youtube.com/watch?v=dQw4w9WgXcQ
-```
-
----
-## Key Options
-
-*   **`-U, --update`**: Update youtube-dl to the latest version.
-*   **`-o, --output TEMPLATE`**: Specify the output filename template (see [Output Template](#output-template) section).
-*   **`-f, --format FORMAT`**: Choose a specific video format (see [Format Selection](#format-selection) section).
-*   **`--list-formats`**:  List all available formats for a video.
-*   **`--write-sub`, `--write-auto-sub`**: Download subtitles.
-*   **`-x, --extract-audio`**: Extract audio from video files (requires ffmpeg/avconv).
-*   **`-i, --ignore-errors`**:  Continue downloading even if errors occur.
-
----
 ## Output Template
 
-The `-o` option lets you customize output filenames using special sequences.
+Customize the output filename with the `-o` option and template sequences. The basic usage is not to set any template arguments when downloading a single file, like in `youtube-dl -o funny_video.flv "https://some/video"`. These sequences are supported (see [Output Template](https://github.com/ytdl-org/youtube-dl#output-template) for a comprehensive list):
 
-**Example:**
+*   `id`: Video ID
+*   `title`: Video title
+*   `ext`: File extension
+*   `playlist`: Playlist name
+*   `playlist_index`: Index in playlist (padded)
 
-```bash
-youtube-dl -o '%(title)s-%(id)s.%(ext)s' https://www.youtube.com/watch?v=dQw4w9WgXcQ
-```
-Would save the file in the current directory as `youtube-dl test video-BaW_jenozKcj.mp4`.
-For more template options, see the [Output Template](#output-template) Section.
+Example: `-o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'`
 
----
 ## Format Selection
 
-Use the `-f` or `--format` option to select the video format.
-youtube-dl automatically selects the best format by default.
+Use `-f` or `--format` to select video formats.  Get a list with `-F` or `--list-formats`.
 
-**Examples:**
+*   **Specific Format**:  `-f 22` (format code 22).
+*   **File Extension**: `-f mp4` (best mp4).
+*   **Predefined Choices**:  `best`, `worst`, `bestvideo`, `bestaudio`.
+*   **Preferences**: `-f 22/17/18` (choose in order).
+*   **Multiple Formats**: `-f 22,17,18` (download all).
+*   **Filtering**: `-f "best[height=720]"` (videos with height 720 or videos with no height information) or  `-f "[filesize>10M]"`.
+*   **Merging (Requires ffmpeg/avconv)**: `-f bestvideo+bestaudio`.
 
-*   `-f 22`: Download the format with code 22.
-*   `-f best`:  Download the best available format (video and audio).
-*   `-f webm`: Download the best WebM format.
-*   `-f bestvideo+bestaudio`: Download the best video and audio and merge them.
+See [Format Selection](https://github.com/ytdl-org/youtube-dl#format-selection) in the original README for more.
 
-For advanced filtering, use format selectors like `-f "best[height=720]"`.
-Read more in the [Format Selection](#format-selection) Section.
-
----
 ## Video Selection
 
-Use these options to filter which videos you download.
-*   `--playlist-start NUMBER` : Start at a specific position in a playlist.
-*   `--playlist-end NUMBER` : End at a specific position in a playlist.
-*   `--match-title REGEX` : Only downloads videos with matching titles (REGEX or caseless sub-string).
-*   `--date DATE` : Download only videos uploaded on this date.
-*   `--datebefore DATE` : Download only videos uploaded before this date.
-*   `--dateafter DATE` : Download only videos uploaded after this date.
-*   `--min-views COUNT` : Do not download any videos with less than COUNT views.
-*   `--max-views COUNT` : Do not download any videos with more than COUNT views.
-*   `--download-archive FILE` : Download only videos not listed in the archive file.
+Use options to filter videos by various criteria:
 
----
-## Frequently Asked Questions (FAQ)
+*   `--date YYYYMMDD`: Download videos uploaded on a specific date.
+*   `--datebefore DATE`: Download videos uploaded on or before a date.
+*   `--dateafter DATE`: Download videos uploaded on or after a date.
+*   `--match-title REGEX`: Download videos with matching titles.
+*   `--reject-title REGEX`: Skip videos with matching titles.
+*   `--min-views COUNT`, `--max-views COUNT`: Filter by video view count.
 
-*   **How do I update youtube-dl?** Run `youtube-dl -U`.  If that doesn't work, follow the [installation instructions](#installation) again.
-*   **Why is youtube-dl slow to start on Windows?** Add an exclusion for `youtube-dl.exe` in Windows Defender settings.
-*   **How can I stream directly to media player?** Use `-o -` with your command, and pipe to your media player.
-*   For answers to these, and other frequently asked questions, please see the [FAQ](#faq) section
+See [Video Selection](https://github.com/ytdl-org/youtube-dl#video-selection) in the original README for details.
 
----
-For more detailed information and advanced options, refer to the [original README](https://github.com/ytdl-org/youtube-dl) and the extensive documentation within.
+## FAQ
 
----
+See the [FAQ](#faq) section for answers to common questions like updating youtube-dl, common error messages, and more.
 
-**Copyright:** youtube-dl is released into the public domain.
+## Developer Instructions
 
-**Contribute:** For bugs, suggestions, or help, visit the [issue tracker](https://github.com/ytdl-org/youtube-dl/issues).
+See the [Developer Instructions](#developer-instructions) section for information on contributing to `youtube-dl`.
+
+## Embedding youtube-dl
+
+Integrate `youtube-dl` into your Python projects.
+
+```python
+from __future__ import unicode_literals
+import youtube_dl
+
+ydl_opts = {}
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    ydl.download(['https://www.youtube.com/watch?v=BaW_jenozKc'])
+```
+
+See [Embedding youtube-dl](#embedding-youtube-dl) for more examples and the available options.
+
+## Bugs
+
+Report bugs and suggestions through the [issue tracker](https://github.com/ytdl-org/youtube-dl/issues).  Be sure to include the full output with `-v` (verbose mode).
+
+**[Visit the YouTube-DL repository for more details and to get involved!](https://github.com/ytdl-org/youtube-dl)**
