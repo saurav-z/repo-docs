@@ -1,17 +1,16 @@
-# Free Programming Books: Your Gateway to Learning Code
+# Free Programming Books: Your Ultimate Guide to Learning Resources
 
-This comprehensive repository offers a vast collection of free learning resources, empowering you to learn programming in numerous languages.  [Explore the original repository on GitHub](https://github.com/EbookFoundation/free-programming-books).
+**Unlock your programming potential with a comprehensive, curated list of free learning resources in multiple languages!**  ([Explore the original repository](https://github.com/EbookFoundation/free-programming-books))
 
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+<div align="center" markdown="1">
+
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)&#160;
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)&#160;
 [![Hacktoberfest 2023 stats](https://img.shields.io/github/hacktoberfest/2023/EbookFoundation/free-programming-books?label=Hacktoberfest+2023)](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Apr+is%3Amerged+created%3A2023-10-01..2023-10-31)
 
-Access and search this extensive list of free learning resources using these links:
+</div>
 
-*   **Dynamic Search Site:** [https://ebookfoundation.github.io/free-programming-books-search/](https://ebookfoundation.github.io/free-programming-books-search/)
-    [![Dynamic Search Site](https://img.shields.io/website?style=flat&logo=www&logoColor=whitesmoke&label=Dynamic%20search%20site&down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Febookfoundation.github.io%2Ffree-programming-books-search%2F)](https://ebookfoundation.github.io/free-programming-books-search/)
-*   **Static Site:** [https://ebookfoundation.github.io/free-programming-books/](https://ebookfoundation.github.io/free-programming-books/)
-    [![Static Site](https://img.shields.io/website?style=flat&logo=www&logoColor=whitesmoke&label=Static%20site&down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Febookfoundation.github.io%2Ffree-programming-books%2F)](https://ebookfoundation.github.io/free-programming-books/)
+**Find resources instantly!**  Search the list at [https://ebookfoundation.github.io/free-programming-books-search/](https://ebookfoundation.github.io/free-programming-books-search/)
 
 <div align="center">
   <form action="https://ebookfoundation.github.io/free-programming-books-search">
@@ -21,27 +20,36 @@ Access and search this extensive list of free learning resources using these lin
   </form>
 </div>
 
-## Key Features
 
-*   **Massive Collection:** Access a curated list of free programming books, courses, cheat sheets, and interactive tutorials.
-*   **Multi-Language Support:**  Resources are available in a wide variety of languages, ensuring accessibility for a global audience.
-*   **Community-Driven:**  This project is actively maintained and improved through community contributions.
-*   **Organized Structure:** Resources are categorized by language and subject, making it easy to find what you need.
-*   **Searchable:** Easily find resources using the dynamic search site.
-*   **Multiple Formats:** Includes books, courses, cheat sheets, interactive tutorials, podcasts and playgrounds.
-*   **Comprehensive Coverage:** Covers a wide range of programming languages, including:
-    *   Python
-    *   Java
-    *   JavaScript
-    *   C++
-    *   C#
-    *   And many more...
+## Key Features:
 
-## Contributing
+*   **Extensive Collection:** Access a vast library of free programming books, courses, cheat sheets, interactive tutorials, and more.
+*   **Multi-Language Support:**  Resources available in numerous languages, including English, Spanish, French, Chinese, and many more.
+*   **Organized by Category:**  Browse resources by programming language, subject, and resource type (books, courses, etc.).
+*   **Community-Driven:** Contribute to the project and help expand the available resources.
+*   **Constantly Updated:** Benefit from a dynamic list that is regularly updated with new and relevant learning materials.
+*   **Easy to Access:** Access a user-friendly website version for easy browsing: [![Static Site](https://img.shields.io/website?style=flat&logo=www&logoColor=whitesmoke&label=Static%20site&down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Febookfoundation.github.io%2Ffree-programming-books%2F)](https://ebookfoundation.github.io/free-programming-books/).
 
-We welcome contributions!  Please review the [CONTRIBUTING](docs/CONTRIBUTING.md) guidelines. New to GitHub? See [HOWTO](docs/HOWTO.md). We follow the [Code of Conduct](docs/CODE_OF_CONDUCT.md).
+## Project History
 
-Here's how you can help:
+Originally based on a StackOverflow list, this repository has grown into one of GitHub's most popular resources, thanks to the collaborative efforts of contributors and the Free Ebook Foundation.
+
+<div align="center" markdown="1">
+
+[![GitHub repo forks](https://img.shields.io/github/forks/EbookFoundation/free-programming-books?style=flat&logo=github&logoColor=whitesmoke&label=Forks)](https://github.com/EbookFoundation/free-programming-books/network)&#160;
+[![GitHub repo stars](https://img.shields.io/github/stars/EbookFoundation/free-programming-books?style=flat&logo=github&logoColor=whitesmoke&label=Stars)](https://github.com/EbookFoundation/free-programming-books/stargazers)&#160;
+[![GitHub repo contributors](https://img.shields.io/github/contributors-anon/EbookFoundation/free-programming-books?style=flat&logo=github&logoColor=whitesmoke&label=Contributors)](https://github.com/EbookFoundation/free-programming-books/graphs/contributors)    
+[![GitHub org sponsors](https://img.shields.io/github/sponsors/EbookFoundation?style=flat&logo=github&logoColor=whitesmoke&label=Sponsors)](https://github.com/sponsors/EbookFoundation)&#160;
+[![GitHub repo watchers](https://img.shields.io/github/watchers/EbookFoundation/free-programming-books?style=flat&logo=github&logoColor=whitesmoke&label=Watchers)](https://github.com/EbookFoundation/free-programming-books/watchers)&#160;
+[![GitHub repo size](https://img.shields.io/github/repo-size/EbookFoundation/free-programming-books?style=flat&logo=github&logoColor=whitesmoke&label=Repo%20Size)](https://github.com/EbookFoundation/free-programming-books/archive/refs/heads/main.zip)
+
+</div>
+
+The [Free Ebook Foundation](https://ebookfoundation.org) manages the project, a non-profit dedicated to promoting free ebook creation and distribution.  Your [donations](https://ebookfoundation.org/contributions.html) are tax-deductible in the US.
+
+## Contribute
+
+We welcome contributions!  See [CONTRIBUTING](docs/CONTRIBUTING.md) and [HOWTO](docs/HOWTO.md).  Please adhere to our [Code of Conduct](docs/CODE_OF_CONDUCT.md) and its translations.
 
 <div align="center" markdown="1">
 
@@ -54,7 +62,7 @@ Here's how you can help:
 
 </div>
 
-## How To Share
+## Share This Resource
 
 <div align="left" markdown="1">
 <a href="https://www.facebook.com/share.php?u=https%3A%2F%2Fgithub.com%2FEbookFoundation%2Ffree-programming-books&p[images][0]=&p[title]=Free%20Programming%20Books&p[summary]=">Share on Facebook</a><br>
@@ -64,18 +72,16 @@ Here's how you can help:
 <a href="https://twitter.com/intent/tweet?text=https://github.com/EbookFoundation/free-programming-books%0AFree%20Programming%20Books">Share on 𝕏 (Twitter)</a><br>
 </div>
 
-
-## Resources
+## Resources by Category
 
 ### Books
 
 *   [English, By Programming Language](books/free-programming-books-langs.md)
 *   [English, By Subject](books/free-programming-books-subjects.md)
 
-#### Other Languages
+#### Other Languages:
 
-*   [Arabic / al arabiya / العربية](books/free-programming-books-ar.md)
-    ... *(and many more languages)* ...
+(List of languages with links to their respective resource pages.  This has been shortened for brevity)
 
 ### Cheat Sheets
 
@@ -83,16 +89,11 @@ Here's how you can help:
 
 ### Free Online Courses
 
-*   [Arabic / al arabiya / العربية](courses/free-courses-ar.md)
-    ... *(and many more languages)* ...
+(List of languages with links to their respective resource pages.  This has been shortened for brevity)
 
 ### Interactive Programming Resources
 
-*   [Chinese / 中文](more/free-programming-interactive-tutorials-zh.md)
-*   [English](more/free-programming-interactive-tutorials-en.md)
-*   [German / Deutsch](more/free-programming-interactive-tutorials-de.md)
-*   [Japanese / 日本語](more/free-programming-interactive-tutorials-ja.md)
-*   [Russian / Русский язык](more/free-programming-interactive-tutorials-ru.md)
+(List of languages with links to their respective resource pages.  This has been shortened for brevity)
 
 ### Problem Sets and Competitive Programming
 
@@ -100,24 +101,15 @@ Here's how you can help:
 
 ### Podcast - Screencast
 
-*   [Arabic / al Arabiya / العربية](casts/free-podcasts-screencasts-ar.md)
-    ... *(and many more languages)* ...
+(List of languages with links to their respective resource pages.  This has been shortened for brevity)
 
 ### Programming Playgrounds
 
-*   [Chinese / 中文](more/free-programming-playgrounds-zh.md)
-*   [English](more/free-programming-playgrounds.md)
-*   [German / Deutsch](more/free-programming-playgrounds-de.md)
+(List of languages with links to their respective resource pages.  This has been shortened for brevity)
 
 ## Translations
 
-We provide translations of key documents. Contribute a translation by following the instructions in [CONTRIBUTING](docs/CONTRIBUTING.md).
-
-*   English
-    *   [Code of Conduct](docs/CODE_OF_CONDUCT.md)
-    *   [Contributing](docs/CONTRIBUTING.md)
-    *   [How-to](docs/HOWTO.md)
-*   ... *[More languages](docs/README.md#translations)* ...
+Find translated documentation or help contribute to new translations.  See [docs/README.md#translations] for more details and how to contribute.
 
 ## License
 

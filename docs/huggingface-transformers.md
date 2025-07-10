@@ -18,119 +18,107 @@
     <a href="https://zenodo.org/badge/latestdoi/155220641"><img src="https://zenodo.org/badge/155220641.svg" alt="DOI"></a>
 </p>
 
-<h4 align="center">
-    <p>
-        <b>English</b> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_zh-hans.md">简体中文</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_zh-hant.md">繁體中文</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ko.md">한국어</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_es.md">Español</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ja.md">日本語</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_hd.md">हिन्दी</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ru.md">Русский</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_pt-br.md">Рortuguês</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_te.md">తెలుగు</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_fr.md">Français</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_de.md">Deutsch</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_vi.md">Tiếng Việt</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ar.md">العربية</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ur.md">اردو</a> |
-    </p>
-</h4>
 
-# Hugging Face Transformers: State-of-the-Art Models for NLP, Computer Vision, and More
+<h1 align="center">Hugging Face Transformers: State-of-the-Art Models for AI</h1>
 
-**Harness the power of cutting-edge AI with Hugging Face Transformers, a library providing pre-trained models for a wide range of tasks and modalities, from text to video!** Access the [original repo here](https://github.com/huggingface/transformers).
+<p align="center">
+  <b>Unlock the power of cutting-edge AI with the Hugging Face Transformers library, providing access to thousands of pre-trained models for various tasks.</b>
+</p>
 
 <h3 align="center">
     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/transformers_as_a_model_definition.png"/>
 </h3>
 
-## Key Features
+**[Hugging Face Transformers](https://github.com/huggingface/transformers) is your gateway to the world of advanced AI models, offering easy-to-use tools for both inference and training.** Centralizing model definitions across the ecosystem, this library ensures compatibility across various frameworks and is essential for any project.  
+  
+**Key Features:**
 
-*   **Extensive Model Library:** Access over 1 million pre-trained [model checkpoints](https://huggingface.co/models?library=transformers&sort=trending) on the Hugging Face Hub, covering text, images, audio, video, and multimodal tasks.
-*   **Unified API:** Simplify your workflow with a consistent API for using all pre-trained models.
-*   **Ease of Use:** Get started quickly with the `Pipeline` API, designed for text generation, audio processing, image classification, and more.
-*   **Framework Flexibility:** Train and deploy models with PyTorch, TensorFlow, and Flax.
-*   **Customization:** Easily adapt models and examples to fit your specific needs.
-*   **Cost-Effective:** Leverage pre-trained models to reduce compute costs and accelerate development.
-*   **Community-Driven:** Benefit from a vibrant community and numerous projects built on Transformers.
+*   **Vast Model Library:** Access over 1 million pre-trained transformer models on the [Hugging Face Hub](https://huggingface.co/models).
+*   **Multi-Framework Compatibility:** Seamlessly integrate with PyTorch, TensorFlow, Flax, and more.
+*   **Unified API:**  Easy-to-use API for a wide range of tasks, including text, vision, audio, video, and multimodal models.
+*   **Simplified Training:**  Train state-of-the-art models with just a few lines of code, reducing complexity and time.
+*   **Customization:** Easily adapt models or examples to fit your unique needs, supporting both researchers and developers.
+*   **Cost-Effective:** Leverage pre-trained models to reduce computational costs, lower your carbon footprint and accelerate your projects.
 
 ## Installation
 
-Transformers requires Python 3.9+ and supports PyTorch 2.1+, TensorFlow 2.6+, and Flax 0.4.1+.
+Get started quickly with `transformers` by installing it with your preferred package manager. 
 
-Choose your preferred installation method:
+```bash
+# pip (using venv)
+python -m venv .my-env
+source .my-env/bin/activate
+pip install "transformers[torch]"
 
-*   **Using `venv`:**
-    ```bash
-    python -m venv .my-env
-    source .my-env/bin/activate
-    pip install "transformers[torch]"
-    ```
+# uv (using uv)
+uv venv .my-env
+source .my-env/bin/activate
+uv pip install "transformers[torch]"
+```
+***
 
-*   **Using `uv`:**
-    ```bash
-    uv venv .my-env
-    source .my-env/bin/activate
-    uv pip install "transformers[torch]"
-    ```
-*   **From Source (for latest changes):**
-    ```bash
-    git clone https://github.com/huggingface/transformers.git
-    cd transformers
-    pip install .[torch]
-    ```
+```bash
+# Install from source (for the latest changes)
+git clone https://github.com/huggingface/transformers.git
+cd transformers
 
-## Quickstart with the Pipeline API
+# pip
+pip install .[torch]
 
-Get started with Transformers effortlessly using the [Pipeline](https://huggingface.co/docs/transformers/pipeline_tutorial) API:
+# uv
+uv pip install .[torch]
+```
+
+## Quickstart: Get Started with the Pipeline API
+
+The `pipeline` API is a user-friendly, high-level interface for quickly implementing various AI tasks, from text generation to image classification.
 
 ```python
 from transformers import pipeline
 
-# Example: Text generation
-pipeline = pipeline(task="text-generation", model="Qwen/Qwen2.5-1.5B")
-pipeline("the secret to baking a really good cake is ")
+# Text Generation Example
+generator = pipeline(task="text-generation", model="Qwen/Qwen2.5-1.5B")
+result = generator("the secret to baking a really good cake is ")
+print(result[0]['generated_text'])
 ```
 
-```python
-import torch
-from transformers import pipeline
+## Model Examples by Modality
 
-# Example: Chat with a model
-chat = [
-    {"role": "system", "content": "You are a sassy, wise-cracking robot as imagined by Hollywood circa 1986."},
-    {"role": "user", "content": "Hey, can you tell me any fun things to do in New York?"}
-]
+*   **Audio:** Speech recognition, audio classification, and text-to-speech tasks.
+*   **Computer Vision:** Image classification, object detection, and image segmentation.
+*   **Multimodal:** Document understanding and image captioning.
+*   **NLP:** Text classification, question answering, and text summarization.
 
-pipeline = pipeline(task="text-generation", model="meta-llama/Meta-Llama-3-8B-Instruct", torch_dtype=torch.bfloat16, device_map="auto")
-response = pipeline(chat, max_new_tokens=512)
-print(response[0]["generated_text"][-1]["content"])
-```
+For detailed examples and specific model usages, expand the sections in the original documentation.
 
 ## Why Use Transformers?
 
-*   **State-of-the-Art Models:** Achieve high performance across various AI tasks.
-*   **Democratization:** Make advanced models accessible to everyone.
-*   **Cost Savings:** Reduce training time and infrastructure costs.
-*   **Flexibility:** Train, evaluate, and deploy models with your preferred framework.
-*   **Customization:** Easily tailor models to your specific needs.
+*   **Accessibility:** Easy to use for both beginners and experts.
+*   **Efficiency:** Saves time and resources by using pre-trained models.
+*   **Flexibility:** Train, evaluate, and deploy models using your preferred framework.
 
-## Limitations
+## Why Not Use Transformers?
 
-*   This library is not a modular toolbox for building neural nets.
-*   The training API is optimized for Transformers models.
-*   Example scripts are templates; adapt them for your use case.
+*   This library may not be suitable for modular building blocks, and the training API is optimized for PyTorch models.
+*   The example scripts may need to be adapted for your specific use case.
 
-## Explore and Contribute
+## Join the Community!
 
-Explore the [Hugging Face Hub](https://huggingface.co/models) to find models. Contribute to the community by [opening an issue](https://github.com/huggingface/transformers/issues) or adding to the [awesome-transformers](./awesome-transformers.md) list of projects!
-
-## Example Models (by Modality)
-
-*(See original README for details)*
+Explore the growing ecosystem of projects powered by Transformers: [awesome-transformers](./awesome-transformers.md)
 
 ## Citation
 
-*(See original README for citation information)*
+If you use the 🤗 Transformers library in your research, please cite our paper:
+```bibtex
+@inproceedings{wolf-etal-2020-transformers,
+    title = "Transformers: State-of-the-Art Natural Language Processing",
+    author = "Thomas Wolf and Lysandre Debut and Victor Sanh and Julien Chaumond and Clement Delangue and Anthony Moi and Pierric Cistac and Tim Rault and Rémi Louf and Morgan Funtowicz and Joe Davison and Sam Shleifer and Patrick von Platen and Clara Ma and Yacine Jernite and Julien Plu and Canwen Xu and Teven Le Scao and Sylvain Gugger and Mariama Drame and Quentin Lhoest and Alexander M. Rush",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
+    month = oct,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-demos.6",
+    pages = "38--45"
+}
+```

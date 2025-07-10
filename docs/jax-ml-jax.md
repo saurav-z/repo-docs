@@ -1,11 +1,11 @@
 html
 <div align="center">
-<img src="https://raw.githubusercontent.com/jax-ml/jax/main/images/jax_logo_250px.png" alt="logo"></img>
+<img src="https://raw.githubusercontent.com/jax-ml/jax/main/images/jax_logo_250px.png" alt="logo">
 </div>
 
-# JAX: High-Performance Numerical Computing with Python
+# JAX: High-Performance Numerical Computing and Machine Learning in Python
 
-**JAX is a powerful Python library that enables accelerated array computation and program transformation for high-performance numerical computing and machine learning.**
+**JAX is a powerful Python library for accelerated array computation and program transformation, making it ideal for cutting-edge research and large-scale machine learning.** Learn more at the [JAX GitHub Repository](https://github.com/jax-ml/jax).
 
 [![Continuous integration](https://github.com/jax-ml/jax/actions/workflows/ci-build.yaml/badge.svg)](https://github.com/jax-ml/jax/actions/workflows/ci-build.yaml)
 [![PyPI version](https://img.shields.io/pypi/v/jax)](https://pypi.org/project/jax/)
@@ -16,103 +16,184 @@ html
 | [**Change Logs**](https://docs.jax.dev/en/latest/changelog.html)
 | [**Reference Docs**](https://docs.jax.dev/en/latest/)
 
-## Key Features of JAX
+## Key Features:
 
-*   **Automatic Differentiation:** Effortlessly compute gradients of native Python and NumPy functions.
-*   **Just-In-Time Compilation (JIT):** Compile pure functions using XLA for optimized performance on accelerators like GPUs and TPUs.
-*   **Auto-Vectorization (vmap):** Efficiently vectorize functions for parallel computation across array axes.
-*   **Composable Transformations:** Combine `grad`, `jit`, and `vmap` for powerful and flexible program transformations.
-*   **Scalable Computing:**  Leverage automatic parallelization, explicit sharding, and manual per-device programming to scale computations across thousands of devices.
+*   **Automatic Differentiation:** Effortlessly compute gradients of native Python and NumPy functions using `jax.grad`.
+*   **Just-In-Time (JIT) Compilation:** Accelerate your code with XLA using `jax.jit` for significant performance gains.
+*   **Vectorization:** Simplify your code and optimize performance with `jax.vmap` for automatic vectorization.
+*   **Hardware Acceleration:** Leverage GPUs, TPUs, and other accelerators to scale your computations.
+*   **Composable Transformations:** Combine `jax.grad`, `jax.jit`, and `jax.vmap` for powerful and flexible transformations.
+*   **Support for Advanced Operations:** Differentiate through loops, branches, recursion, and closures.
+*   **High-Performance Numerical Computing:** Designed for demanding numerical tasks and large-scale machine learning.
 
-## Core Concepts
+## Transformations
 
-JAX excels at transforming numerical functions, with key transformations including:
+JAX excels at transforming numerical functions. Explore these key transformations:
 
-*   **`jax.grad` (Automatic Differentiation):** Calculates derivatives of any order through Python control flow and complex functions.
-    ```python
-    import jax
-    import jax.numpy as jnp
+### Automatic differentiation with `grad`
 
-    def tanh(x):
-      y = jnp.exp(-2.0 * x)
-      return (1.0 - y) / (1.0 + y)
+Compute reverse-mode gradients:
 
-    grad_tanh = jax.grad(tanh)
-    print(grad_tanh(1.0))  # Output: 0.4199743
-    ```
+```python
+import jax
+import jax.numpy as jnp
 
-*   **`jax.jit` (Compilation):** Compiles functions for significant speedups, especially for element-wise operations.
-    ```python
-    import jax
-    import jax.numpy as jnp
+def tanh(x):
+  y = jnp.exp(-2.0 * x)
+  return (1.0 - y) / (1.0 + y)
 
-    def slow_f(x):
-      return x * x + x * 2.0
+grad_tanh = jax.grad(tanh)
+print(grad_tanh(1.0))
+# prints 0.4199743
+```
 
-    x = jnp.ones((5000, 5000))
-    fast_f = jax.jit(slow_f)
-    # Example: %timeit -n10 -r3 fast_f(x) will run the compiled function
-    # Example: %timeit -n10 -r3 slow_f(x) to compare
-    ```
+You can differentiate to any order with `grad`:
 
-*   **`jax.vmap` (Auto-Vectorization):** Automatically vectorizes functions for efficient parallel execution.
-    ```python
-    import jax
-    import jax.numpy as jnp
+```python
+print(jax.grad(jax.grad(jax.grad(tanh)))(1.0))
+# prints 0.62162673
+```
 
-    def l1_distance(x, y):
-      assert x.ndim == y.ndim == 1
-      return jnp.sum(jnp.abs(x - y))
+Differentiate with Python control flow:
 
-    def pairwise_distances(dist1D, xs):
-      return jax.vmap(jax.vmap(dist1D, (0, None)), (None, 0))(xs, xs)
+```python
+def abs_val(x):
+  if x > 0:
+    return x
+  else:
+    return -x
 
-    xs = jax.random.normal(jax.random.key(0), (100, 3))
-    dists = pairwise_distances(l1_distance, xs)
-    print(dists.shape)  # Output: (100, 100)
-    ```
+abs_val_grad = jax.grad(abs_val)
+print(abs_val_grad(1.0))   # prints 1.0
+print(abs_val_grad(-1.0))  # prints -1.0 (abs_val is re-evaluated)
+```
 
-## Scaling Your Computations
+See the [JAX Autodiff
+Cookbook](https://docs.jax.dev/en/latest/notebooks/autodiff_cookbook.html)
+and the [reference docs on automatic
+differentiation](https://docs.jax.dev/en/latest/jax.html#automatic-differentiation)
+for more.
 
-JAX provides multiple approaches for scaling:
+### Compilation with `jit`
 
-*   **Compiler-based automatic parallelization:** Lets the compiler handle data sharding and computation partitioning.
-*   **Explicit sharding:**  Uses explicit JAX types to define data shardings for better control.
-*   **Manual per-device programming:** Provides per-device data and computation views for highly customized parallelization.
+Compile your functions end-to-end with
+[`jit`](https://docs.jax.dev/en/latest/jax.html#just-in-time-compilation-jit),
+used either as an `@jit` decorator or as a higher-order function.
 
-## Gotchas and Sharp Edges
+```python
+import jax
+import jax.numpy as jnp
 
-Be aware of [common gotchas](https://docs.jax.dev/en/latest/notebooks/Common_Gotchas_in_JAX.html) as you develop with JAX.
+def slow_f(x):
+  # Element-wise ops see a large benefit from fusion
+  return x * x + x * 2.0
+
+x = jnp.ones((5000, 5000))
+fast_f = jax.jit(slow_f)
+%timeit -n10 -r3 fast_f(x)
+%timeit -n10 -r3 slow_f(x)
+```
+
+Using `jax.jit` constrains the kind of Python control flow
+the function can use; see
+the tutorial on [Control Flow and Logical Operators with JIT](https://docs.jax.dev/en/latest/control-flow.html)
+for more.
+
+### Auto-vectorization with `vmap`
+
+[`vmap`](https://docs.jax.dev/en/latest/jax.html#vectorization-vmap) maps
+a function along array axes.
+But instead of just looping over function applications, it pushes the loop down
+onto the function’s primitive operations, e.g. turning matrix-vector multiplies into
+matrix-matrix multiplies for better performance.
+
+Using `vmap` can save you from having to carry around batch dimensions in your
+code:
+
+```python
+import jax
+import jax.numpy as jnp
+
+def l1_distance(x, y):
+  assert x.ndim == y.ndim == 1  # only works on 1D inputs
+  return jnp.sum(jnp.abs(x - y))
+
+def pairwise_distances(dist1D, xs):
+  return jax.vmap(jax.vmap(dist1D, (0, None)), (None, 0))(xs, xs)
+
+xs = jax.random.normal(jax.random.key(0), (100, 3))
+dists = pairwise_distances(l1_distance, xs)
+dists.shape  # (100, 100)
+```
+
+By composing `jax.vmap` with `jax.grad` and `jax.jit`, we can get efficient
+Jacobian matrices, or per-example gradients:
+
+```python
+per_example_grads = jax.jit(jax.vmap(jax.grad(loss), in_axes=(None, 0, 0)))
+```
+
+## Scaling
+
+JAX offers multiple approaches to scale your computations across devices:
+
+*   **Compiler-based automatic parallelization:** Program as if using a single machine; the compiler handles data sharding and computation partitioning.
+*   **Explicit sharding and automatic partitioning:** Define shardings using JAX types.
+*   **Manual per-device programming:** Control data and computation on each device with explicit collectives.
+
+| Mode | View? | Explicit sharding? | Explicit Collectives? |
+|---|---|---|---|
+| Auto | Global | ❌ | ❌ |
+| Explicit | Global | ✅ | ❌ |
+| Manual | Per-device | ✅ | ✅ |
+
+```python
+from jax.sharding import set_mesh, AxisType, PartitionSpec as P
+mesh = jax.make_mesh((8,), ('data',), axis_types=(AxisType.Explicit,))
+set_mesh(mesh)
+
+# parameters are sharded for FSDP:
+for W, b in params:
+  print(f'{jax.typeof(W)}')  # f32[512@data,512]
+  print(f'{jax.typeof(b)}')  # f32[512]
+
+# shard data for batch parallelism:
+inputs, targets = jax.device_put((inputs, targets), P('data'))
+
+# evaluate gradients, automatically parallelized!
+gradfun = jax.jit(jax.grad(loss))
+param_grads = gradfun(params, (inputs, targets))
+```
+
+See the [tutorial](https://docs.jax.dev/en/latest/sharded-computation.html) and
+[advanced guides](https://docs.jax.dev/en/latest/advanced_guide.html) for more.
 
 ## Installation
 
-JAX supports various platforms:
-
 ### Supported Platforms
 
-|            | Linux x86_64 | Linux aarch64 | Mac aarch64  | Windows x86_64 | Windows WSL2 x86_64 |
-|------------|--------------|---------------|--------------|----------------|---------------------|
-| CPU        | yes          | yes           | yes          | yes            | yes                 |
-| NVIDIA GPU | yes          | yes           | n/a          | no             | experimental        |
-| Google TPU | yes          | n/a           | n/a          | n/a            | n/a                 |
-| AMD GPU    | yes          | no            | n/a          | no             | no                  |
-| Apple GPU  | n/a          | no            | experimental | n/a            | n/a                 |
-| Intel GPU  | experimental | n/a           | n/a          | no             | no                  |
+| Platform        | Instructions                                                                                                    |
+|-----------------|-----------------------------------------------------------------------------------------------------------------|
+| CPU             | `pip install -U jax`                                                                                            |
+| NVIDIA GPU      | `pip install -U "jax[cuda12]"`                                                                                  |
+| Google TPU      | `pip install -U "jax[tpu]"`                                                                                     |
+| AMD GPU (Linux) | Follow [AMD's instructions](https://github.com/jax-ml/jax/blob/main/build/rocm/README.md).                      |
+| Mac GPU         | Follow [Apple's instructions](https://developer.apple.com/metal/jax/).                                          |
+| Intel GPU       | Follow [Intel's instructions](https://github.com/intel/intel-extension-for-openxla/blob/main/docs/acc_jax.md).  |
 
 ### Installation Instructions
 
-*   **CPU:** `pip install -U jax`
-*   **NVIDIA GPU:** `pip install -U "jax[cuda12]"`
-*   **Google TPU:** `pip install -U "jax[tpu]"`
-*   **AMD GPU (Linux):**  Follow [AMD's instructions](https://github.com/jax-ml/jax/blob/main/build/rocm/README.md).
-*   **Mac GPU:** Follow [Apple's instructions](https://developer.apple.com/metal/jax/).
-*   **Intel GPU:** Follow [Intel's instructions](https://github.com/intel/intel-extension-for-openxla/blob/main/docs/acc_jax.md).
+See the table above for platform-specific installation commands.
+Consult [the documentation](https://docs.jax.dev/en/latest/installation.html)
+for alternative installation strategies like compiling from source or using Docker.
 
-For detailed information, refer to the [installation documentation](https://docs.jax.dev/en/latest/installation.html).
+## Gotchas and Sharp Bits
+
+Be aware of [Common Gotchas](https://docs.jax.dev/en/latest/notebooks/Common_Gotchas_in_JAX.html).
 
 ## Citing JAX
 
-If you use JAX in your research, please cite the project:
+To cite this repository, use the following BibTeX entry:
 
 ```
 @software{jax2018github,
@@ -124,9 +205,8 @@ If you use JAX in your research, please cite the project:
 }
 ```
 
-## Further Resources
+## Reference Documentation
 
-*   [Reference Documentation](https://docs.jax.dev/): Detailed API reference.
-*   [Developer Documentation](https://docs.jax.dev/en/latest/developer.html): Guide for JAX developers.
+Find detailed API information in the [reference documentation](https://docs.jax.dev/).
 
-**Explore the power of JAX and contribute to its development at the [original repository](https://github.com/jax-ml/jax)!**
+Explore the [developer documentation](https://docs.jax.dev/en/latest/developer.html) to get started contributing to JAX.
