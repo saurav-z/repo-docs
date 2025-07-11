@@ -1,90 +1,91 @@
 <div align="center">
+
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="/docs/logo_tiny_light.svg">
   <img alt="tiny corp logo" src="/docs/logo_tiny_dark.svg" width="50%" height="50%">
 </picture>
+
 </div>
 
-# tinygrad: A Minimal Deep Learning Framework for Maximum Flexibility
+# tinygrad: A Deep Learning Framework for Everyone
 
-**Tinygrad is a surprisingly capable deep learning framework, offering a lightweight and flexible alternative to larger frameworks.**  [Explore the code on GitHub](https://github.com/tinygrad/tinygrad)!
+**Tinygrad is a surprisingly complete deep learning framework that's small, fast, and easy to understand.** Inspired by PyTorch and micrograd, it's designed for simplicity and extensibility. Check out the [GitHub repository](https://github.com/tinygrad/tinygrad) for the latest updates!
 
-### [Homepage](https://github.com/tinygrad/tinygrad) | [Documentation](https://docs.tinygrad.org/) | [Discord](https://discord.gg/ZjZadyC7PK)
+### Key Features
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/tinygrad/tinygrad)](https://github.com/tinygrad/tinygrad/stargazers)
-[![Unit Tests](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml/badge.svg)](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml)
-[![Discord](https://img.shields.io/discord/1068976834382925865)](https://discord.gg/ZjZadyC7PK)
+*   **Lightweight and Efficient:** tinygrad is designed for minimal overhead, making it ideal for experimentation and resource-constrained environments.
+*   **Easy Accelerator Support:** Quickly add support for new hardware accelerators with a few low-level operations.
+*   **Full-Featured:** Includes automatic differentiation, a tensor library, and support for common neural network operations.
+*   **Runs LLaMA and Stable Diffusion:** Supports complex models like LLaMA and Stable Diffusion.
+*   **Lazy Evaluation:** Optimizes computations by fusing operations into efficient kernels, as seen in the matmul example below.
+*   **Broad Hardware Support:** Supports a wide range of hardware platforms, including:
+    *   GPU (OpenCL)
+    *   CPU (C Code)
+    *   LLVM
+    *   METAL
+    *   CUDA
+    *   AMD
+    *   NV
+    *   QCOM
+    *   WEBGPU
 
----
+### Quick Start - Neural Network Example
 
-## Key Features of tinygrad
+Build and train neural networks with tinygrad's intuitive API:
 
-*   **Lightweight and Efficient:** Tinygrad's simplicity makes it easy to understand and extend, while still offering impressive performance.
-*   **Easy Accelerator Support:** Quickly add support for new hardware by implementing approximately 25 low-level operations.
-*   **LLaMA and Stable Diffusion Support:** Run complex models with minimal code.
-*   **Lazy Evaluation:** Experience performance gains through the power of lazy evaluation.
-*   **Neural Network Capabilities:** Build and train neural networks with autograd, tensor libraries, optimizers, and data loaders.
-*   **Extensive Hardware Support:** Ready-to-go support for a wide range of accelerators.
-    *   [x] GPU (OpenCL)
-    *   [x] CPU (C Code)
-    *   [x] LLVM
-    *   [x] METAL
-    *   [x] CUDA
-    *   [x] AMD
-    *   [x] NV
-    *   [x] QCOM
-    *   [x] WEBGPU
+```python
+from tinygrad import Tensor, nn
 
-## Installation
+class LinearNet:
+  def __init__(self):
+    self.l1 = Tensor.kaiming_uniform(784, 128)
+    self.l2 = Tensor.kaiming_uniform(128, 10)
+  def __call__(self, x:Tensor) -> Tensor:
+    return x.flatten(1).dot(self.l1).relu().dot(self.l2)
 
-The recommended method to install tinygrad is from source:
+model = LinearNet()
+optim = nn.optim.Adam([model.l1, model.l2], lr=0.001)
 
-### From Source
+x, y = Tensor.rand(4, 1, 28, 28), Tensor([2,4,3,7])  # replace with real mnist dataloader
 
-```bash
+with Tensor.train():
+  for i in range(10):
+    optim.zero_grad()
+    loss = model(x).sparse_categorical_crossentropy(y).backward()
+    optim.step()
+    print(i, loss.item())
+```
+
+See [examples/beautiful_mnist.py](examples/beautiful_mnist.py) for a complete MNIST example.
+
+### Installation
+
+Install tinygrad from source using the following commands:
+
+```sh
 git clone https://github.com/tinygrad/tinygrad.git
 cd tinygrad
 python3 -m pip install -e .
 ```
 
-### Direct (Master)
+Alternatively, install the master branch directly:
 
-```bash
+```sh
 python3 -m pip install git+https://github.com/tinygrad/tinygrad.git
 ```
 
-## Documentation
+### Documentation and Community
 
-Comprehensive documentation, including a quick start guide, is available on the [docs website](https://docs.tinygrad.org/).
+*   [Homepage](https://github.com/tinygrad/tinygrad)
+*   [Documentation](https://docs.tinygrad.org/)
+*   [Discord](https://discord.gg/ZjZadyC7PK)
 
-### Quick Example: Tinygrad vs. PyTorch
+### Contributing
 
-```python
-# Example comparing the syntax with PyTorch
-from tinygrad import Tensor
+Contributions are welcome!  Please review the contribution guidelines in the original README.md, linked at the top, to ensure your pull requests are accepted quickly.
 
-x = Tensor.eye(3, requires_grad=True)
-y = Tensor([[2.0,0,-2.0]], requires_grad=True)
-z = y.matmul(x).sum()
-z.backward()
+---
 
-print(x.grad.tolist())  # dz/dx
-print(y.grad.tolist())  # dz/dy
-```
-
-```python
-# The equivalent code with PyTorch:
-import torch
-
-x = torch.eye(3, requires_grad=True)
-y = torch.tensor([[2.0,0,-2.0]], requires_grad=True)
-z = y.matmul(x).sum()
-z.backward()
-
-print(x.grad.tolist())  # dz/dx
-print(y.grad.tolist())  # dz/dy
-```
-
-## Contributing
-
-We welcome contributions! Please review the [Contributing Guidelines](https://github.com/tinygrad/tinygrad#contributing) for details on how to contribute effectively.
+[![GitHub Repo stars](https://img.shields.io/github/stars/tinygrad/tinygrad)](https://github.com/tinygrad/tinygrad/stargazers)
+[![Unit Tests](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml/badge.svg)](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml)
+[![Discord](https://img.shields.io/discord/1068976834382925865)](https://discord.gg/ZjZadyC7PK)
