@@ -1,14 +1,19 @@
-<h1 align="center">
-  <img src="images/agent_s.png" alt="Agent S Logo" style="vertical-align:middle" width="60"> Agent S: Empowering Autonomous Computer Interaction
-</h1>
+# Agent S: The Next Generation of AI for Computer Use Agents
+
+Agent S is an open-source framework designed to empower AI agents to autonomously interact with computers, offering state-of-the-art performance and compositional capabilities. [Explore the Agent S repository](https://github.com/simular-ai/Agent-S).
+
+**Key Features:**
+
+*   **Advanced Computer Use Agents:** Enables AI agents to perform complex tasks on your computer.
+*   **Compositional Generalist-Specialist Framework:**  Leverages a modular architecture for flexibility and efficiency.
+*   **State-of-the-Art Performance:** Achieves new benchmarks in OSWorld, WindowsAgentArena, and AndroidWorld.
+*   **Open-Source and Accessible:**  Provides a platform for researchers and developers to contribute to the field of intelligent agents.
+*   **Supports multiple platforms:** Currently supporting Linux, macOS, and Windows.
+*   **Web-knowledge retrieval:** Enhanced capabilities via Perplexica integration
+
+**Agent S is the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!**
 
 <p align="center">
-  <b>Agent S is an open-source framework enabling autonomous interaction with computers, allowing agents to learn and perform complex tasks.</b>
-  <br>
-  <a href="https://github.com/simular-ai/Agent-S"><b>Go to the GitHub Repository</b></a>
-</p>
-
-<p align="center">&nbsp;
   🌐 <a href="https://www.simular.ai/articles/agent-s2-technical-review">[S2 blog]</a>&nbsp;
   📄 <a href="https://arxiv.org/abs/2504.00906">[S2 Paper (COLM 2025)]</a>&nbsp;
   🎥 <a href="https://www.youtube.com/watch?v=wUGVQl7c0eg">[S2 Video]</a>
@@ -46,44 +51,36 @@
   <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=zh">中文</a>
 </div>
 
-## Key Features
+## Updates
 
-*   **Autonomous Computer Interaction:** Agent S enables intelligent GUI agents to interact with your computer, automating tasks.
-*   **Generalist-Specialist Framework:** Agent S utilizes a compositional approach, employing both general and specialized agents.
-*   **Open Source:** Access and modify the code, fostering innovation in agent-based systems.
-*   **Learning and Adaptation:** Agents learn from past interactions, continually improving their performance.
-*   **High-Performance Results:** Achieve state-of-the-art performance in tasks, outperforming existing CUA.
-
-## What's New
-
-*   **[2025/07/07]:** The [Agent S2 paper](https://arxiv.org/abs/2504.00906) is accepted to COLM 2025!
-*   **[2025/04/01]:** Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
-*   **[2025/03/12]:** Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
-*   **[2025/01/22]:** The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
-*   **[2025/01/21]:** Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
-*   **[2024/12/05]:** Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
-*   **[2024/10/10]:** Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase!
+*   **2025/07/07**: The [Agent S2 paper](https://arxiv.org/abs/2504.00906) is accepted to COLM 2025! See you in Montreal!
+*   **2025/04/01**: Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
+*   **2025/03/12**: Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
+*   **2025/01/22**: The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
+*   **2025/01/21**: Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
+*   **2024/12/05**: Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
+*   **2024/10/10**: Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase!
 
 ## Table of Contents
 
-1.  [💡 Introduction](#-introduction)
-2.  [🎯 Current Results](#-current-results)
-3.  [🛠️ Installation & Setup](#%EF%B8%8F-installation--setup)
-4.  [🚀 Usage](#-usage)
-5.  [🤝 Acknowledgements](#-acknowledgements)
-6.  [💬 Citation](#-citation)
+1.  [Introduction](#-introduction)
+2.  [Current Results](#-current-results)
+3.  [Installation & Setup](#-installation--setup)
+4.  [Usage](#-usage)
+5.  [Acknowledgements](#-acknowledgements)
+6.  [Citation](#-citation)
 
-## 💡 Introduction
+## Introduction
 
 <p align="center">
     <img src="./images/agent_s2_teaser.png" width="800">
 </p>
 
-Welcome to **Agent S**, an open-source framework designed to enable autonomous interaction with computers through Agent-Computer Interface. Our mission is to build intelligent GUI agents that can learn from past experiences and perform complex tasks autonomously on your computer.
+Agent S is an open-source framework designed to enable autonomous interaction with computers through Agent-Computer Interface.  Our mission is to build intelligent GUI agents that can learn from past experiences and perform complex tasks autonomously on your computer.
 
-Whether you're interested in AI, automation, or contributing to cutting-edge agent-based systems, we're excited to have you here!
+We are actively working to advance AI, automation, and cutting-edge agent-based systems. Join us!
 
-## 🎯 Current Results
+## Current Results
 
 <p align="center">
     <img src="./images/agent_s2_osworld_result.png" width="600">
@@ -126,7 +123,7 @@ Whether you're interested in AI, automation, or contributing to cutting-edge age
   </table>
 </div>
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 > **Note**: Our agent returns `pyautogui` code and is intended for a single monitor screen.
 
@@ -136,13 +133,13 @@ Whether you're interested in AI, automation, or contributing to cutting-edge age
 
 Install the package:
 
-```
+```bash
 pip install gui-agents
 ```
 
 Set your LLM API Keys and other environment variables. You can do this by adding the following line to your .bashrc (Linux), or .zshrc (MacOS) file.
 
-```
+```bash
 export OPENAI_API_KEY=<YOUR_API_KEY>
 export ANTHROPIC_API_KEY=<YOUR_ANTHROPIC_API_KEY>
 export HF_TOKEN=<YOUR_HF_TOKEN>
@@ -150,7 +147,7 @@ export HF_TOKEN=<YOUR_HF_TOKEN>
 
 Alternatively, you can set the environment variable in your Python script:
 
-```
+```python
 import os
 os.environ["OPENAI_API_KEY"] = "<YOUR_API_KEY>"
 ```
@@ -166,8 +163,8 @@ Agent S works best with web-knowledge retrieval. To enable this feature, you nee
 2.  Navigate to the directory containing the project files.
 
     ```bash
-     cd Perplexica
-     git submodule update --init
+    cd Perplexica
+    git submodule update --init
     ```
 
 3.  Rename the `sample.config.toml` file to `config.toml`. For Docker setups, you need only fill in the following fields:
@@ -193,13 +190,11 @@ Agent S works best with web-knowledge retrieval. To enable this feature, you nee
     export PERPLEXICA_URL=http://localhost:{port}/api/search
     ```
 
-6.  Our implementation of Agent S incorporates the Perplexica API to integrate a search engine capability, which allows for a more convenient and responsive user experience. If you want to tailor the API to your settings and specific requirements, you may modify the URL and the message of request parameters in `agent_s/query_perplexica.py`. For a comprehensive guide on configuring the Perplexica API, please refer to [Perplexica Search API Documentation](https://github.com/ItzCrazyKns/Perplexica/blob/master/docs/API/SEARCH.md).
+6.  Our implementation of Agent S incorporates the Perplexica API to integrate a search engine capability, which allows for a more convenient and responsive user experience. If you want to tailor the API to your settings and specific requirements, you may modify the URL and the message of request parameters in `agent_s/query_perplexica.py`. For a comprehensive guide on configuring the Perplexica API, please refer to [Perplexica Search API Documentation](https://github.com/ItzCrazyKns/Perplexica/blob/master/docs/API/SEARCH.md). For a more detailed setup and usage guide, please refer to the [Perplexica Repository](https://github.com/ItzCrazyKns/Perplexica.git).
 
-    For a more detailed setup and usage guide, please refer to the [Perplexica Repository](https://github.com/ItzCrazyKns/Perplexica.git).
+> ❗**Warning**❗: The agent will directly run python code to control your computer. Please use with care.
 
-    > ❗**Warning**❗: The agent will directly run python code to control your computer. Please use with care.
-
-## 🚀 Usage
+## Usage
 
 > **Note**: Our best configuration uses Claude 3.7 with extended thinking and UI-TARS-72B-DPO. If you are unable to run UI-TARS-72B-DPO due to resource constraints, UI-TARS-7B-DPO can be used as a lighter alternative with minimal performance degradation.
 
@@ -207,7 +202,7 @@ Agent S works best with web-knowledge retrieval. To enable this feature, you nee
 
 Run Agent S2 with a specific model (default is `gpt-4o`):
 
-```sh
+```bash
 agent_s2 \
   --provider "anthropic" \
   --model "claude-3-7-sonnet-20250219" \
@@ -248,7 +243,7 @@ You can use either Configuration 1 or Configuration 2:
     *   Supports: all model providers in [models.md](models.md)
     *   Default: `--grounding_model_provider "anthropic" --grounding_model "claude-3-7-sonnet-20250219"`
 *   ❗**Important**❗ **`--grounding_model_resize_width`**
-    *   Purpose: Some API providers automatically rescale images. Therefore, the generated (x, y) will be relative to the rescaled image dimensions, instead of the original image dimensions.
+    *   Purpose:  Some API providers automatically rescale images. Therefore, the generated (x, y) will be relative to the rescaled image dimensions, instead of the original image dimensions.
     *   Supports: [Anthropic rescaling](https://docs.anthropic.com/en/docs/build-with-claude/vision#)
     *   Tips: If your grounding is inaccurate even for very simple queries, double check your rescaling width is correct for your machine's resolution.
     *   Default: `--grounding_model_resize_width 1366` (Anthropic)
@@ -387,7 +382,11 @@ This will download Agent S2's knowledge base for Linux from release tag `v0.2.2`
 
 To deploy Agent S2 in OSWorld, follow the [OSWorld Deployment instructions](OSWorld.md).
 
-## 💬 Citations
+### WindowsAgentArena
+
+To deploy Agent S2 in WindowsAgentArena, follow the [WindowsAgentArena Deployment Instructions](WAA_setup.md).
+
+## Citations
 
 If you find this codebase useful, please cite
 

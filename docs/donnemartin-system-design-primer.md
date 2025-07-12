@@ -1,48 +1,154 @@
-# System Design Primer: A Comprehensive Guide to Building Scalable Systems
+# System Design Primer: Your Guide to Building Scalable Systems
 
-**Master system design concepts and ace your technical interviews with this open-source resource.**
+**Learn how to design large-scale systems and ace your system design interview with this comprehensive, open-source guide.  Explore resources, practice questions, and solutions at the [original repo](https://github.com/donnemartin/system-design-primer).**
 
-[View the original repository](https://github.com/donnemartin/system-design-primer)
+## Key Features
 
-## Key Features:
+*   **Extensive Resources:** Organized collection of resources on system design principles.
+*   **Interview Prep:** Guide to system design interview, with sample questions and solutions.
+*   **Community-Driven:** An open-source project that thrives on contributions from the community.
+*   **Anki Flashcards:** Spaced repetition decks for retaining key system design concepts.
+*   **Coding Challenges:** Resources to help you prep for the coding interview.
 
-*   **Extensive Coverage:** Explore a wide range of system design topics, from fundamental principles to advanced architectures.
-*   **Interview Preparation:** Learn how to approach system design interview questions and practice with example solutions.
-*   **Open Source & Community Driven:** Benefit from a constantly updated, community-contributed resource.
-*   **Anki Flashcards:** Use provided flashcard decks for effective spaced repetition and knowledge retention.
-*   **Real-World Architectures:** Study the designs of popular systems like Netflix, Twitter, and Amazon.
+## Topics Covered
 
-## What You'll Learn:
+*   **Scalability Principles:** Learn about performance vs. scalability, latency vs. throughput, and availability vs. consistency.
+*   **System Design Topics:** Explore DNS, CDNs, load balancers, reverse proxies, application layers (microservices), databases (SQL/NoSQL), caching, asynchronism, and communication protocols (TCP/UDP, RPC, REST).
+*   **Interview Preparation:** Study guides, how to approach system design questions, object-oriented design interview questions, and back-of-the-envelope calculations.
+*   **Practical Solutions:** Detailed solutions to common system design interview questions (Pastebin, Twitter timeline, web crawler, and more).
+*   **Real-World Architectures:** Dive into the design of systems like Google, Amazon, Facebook, and Netflix.
+*   **Security:** Get an overview of key security considerations.
 
-This primer provides a comprehensive overview of system design principles and best practices. You'll gain knowledge in:
+## Index of System Design Topics
 
-*   **Scalability and Performance:** Understand the core concepts of performance vs. scalability, latency vs. throughput, and the CAP theorem.
-*   **Fundamental Concepts:**  Dive into caching, databases (SQL, NoSQL), load balancing, CDNs, and message queues.
-*   **System Architecture:** Explore different system architectures, including microservices, and how to implement them.
-*   **Interview Preparation:** Practice with common system design interview questions and study techniques.
+### System Design Topics: Start Here
+* Step 1: Review the scalability video lecture
+* Step 2: Review the scalability article
+* Next Steps
 
-## Sections:
+### Performance vs. Scalability
 
-*   [Index of System Design Topics](index-of-system-design-topics)
-*   [Study Guide](study-guide)
-*   [How to Approach a System Design Interview Question](how-to-approach-a-system-design-interview-question)
-*   [System Design Interview Questions with Solutions](system-design-interview-questions-with-solutions)
-*   [Object-oriented Design Interview Questions with Solutions](object-oriented-design-interview-questions-with-solutions)
-*   [Additional System Design Interview Questions](additional-system-design-interview-questions)
-*   [Real World Architectures](real-world-architectures)
-*   [Company Architectures](company-architectures)
+### Latency vs. Throughput
 
-## Contributing:
+### Availability vs. Consistency
 
-Help improve this resource by contributing!  You can:
+*   CAP Theorem
+*   CP - Consistency and Partition Tolerance
+*   AP - Availability and Partition Tolerance
 
-*   Fix errors
-*   Improve existing sections
-*   Add new sections
-*   [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
+### Consistency Patterns
+*   Weak consistency
+*   Eventual consistency
+*   Strong consistency
 
-Review the [Contributing Guidelines](CONTRIBUTING.md).
+### Availability Patterns
+*   Fail-over
+    *   Active-passive
+    *   Active-active
+*   Replication
+    *   Master-slave
+    *   Master-master
+*   Availability in Numbers
 
-***
+### Domain Name System
 
-**(See the original repository for detailed content on the topics above.)**
+### Content Delivery Network
+*   Push CDNs
+*   Pull CDNs
+
+### Load Balancer
+*   Active-passive
+*   Active-active
+*   Layer 4 load balancing
+*   Layer 7 load balancing
+*   Horizontal Scaling
+
+### Reverse Proxy (web server)
+
+### Application Layer
+*   Microservices
+*   Service Discovery
+
+### Database
+*   Relational Database Management System (RDBMS)
+    *   Master-slave replication
+    *   Master-master replication
+    *   Federation
+    *   Sharding
+    *   Denormalization
+    *   SQL Tuning
+*   NoSQL
+    *   Key-value store
+    *   Document store
+    *   Wide column store
+    *   Graph Database
+*   SQL or NoSQL
+
+### Cache
+*   Client caching
+*   CDN caching
+*   Web server caching
+*   Database caching
+*   Application caching
+*   Caching at the database query level
+*   Caching at the object level
+*   When to update the cache
+    *   Cache-aside
+    *   Write-through
+    *   Write-behind (write-back)
+    *   Refresh-ahead
+
+### Asynchronism
+*   Message queues
+*   Task queues
+*   Back pressure
+
+### Communication
+*   Transmission Control Protocol (TCP)
+*   User Datagram Protocol (UDP)
+*   Remote Procedure Call (RPC)
+*   Representational State Transfer (REST)
+
+### Security
+
+### Appendix
+*   Powers of Two Table
+*   Latency Numbers Every Programmer Should Know
+*   Additional System Design Interview Questions
+*   Real-World Architectures
+*   Company Architectures
+*   Company Engineering Blogs
+
+### Study Guide
+
+*   **Short Timeline**: Aim for Breadth
+*   **Medium Timeline**: Aim for Breadth and Some Depth
+*   **Long Timeline**: Aim for Breadth and More Depth
+
+### How to Approach a System Design Interview Question
+*   Step 1: Outline use cases, constraints, and assumptions
+*   Step 2: Create a high-level design
+*   Step 3: Design core components
+*   Step 4: Scale the design
+*   Back-of-the-Envelope Calculations
+
+### System Design Interview Questions with Solutions
+*   Design Pastebin.com (or Bit.ly)
+*   Design the Twitter timeline and search (or Facebook feed and search)
+*   Design a web crawler
+*   Design Mint.com
+*   Design the data structures for a social network
+*   Design a key-value store for a search engine
+*   Design Amazon's sales ranking by category feature
+*   Design a system that scales to millions of users on AWS
+
+### Object-oriented Design Interview Questions with Solutions
+
+### Under Development
+*   Distributed computing with MapReduce
+*   Consistent Hashing
+*   Scatter Gather
+
+### Credits
+### Contact Info
+### License

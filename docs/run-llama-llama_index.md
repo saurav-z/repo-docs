@@ -1,6 +1,6 @@
-# 🗂️ LlamaIndex: Your Gateway to Powerful LLM Applications
+# LlamaIndex: The Data Framework for LLM Applications 🦙
 
-LlamaIndex empowers you to build cutting-edge LLM applications by providing a robust data framework for ingestion, structuring, and querying your data.  Learn more and contribute at the [original repo](https://github.com/run-llama/llama_index).
+**Unlock the power of your data with LlamaIndex, an open-source framework designed to connect your data sources to LLMs.** ([Original Repository](https://github.com/run-llama/llama_index))
 
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/llama-index)](https://pypi.org/project/llama-index/)
 [![Build](https://github.com/run-llama/llama_index/actions/workflows/build_package.yml/badge.svg)](https://github.com/run-llama/llama_index/actions/workflows/build_package.yml)
@@ -12,81 +12,77 @@ LlamaIndex empowers you to build cutting-edge LLM applications by providing a ro
 
 ## Key Features:
 
-*   **Data Connectors:** Ingest data from various sources (APIs, PDFs, SQL databases, etc.).
-*   **Data Structuring:** Organize your data with indices and graphs for efficient LLM use.
-*   **Advanced Retrieval/Query Interface:** Retrieve context-aware and knowledge-augmented outputs.
-*   **Seamless Integrations:** Connect with popular frameworks like LangChain, Flask, and more.
-*   **Flexible APIs:** Supports both beginner-friendly and advanced customization options.
+*   **Data Connectors:** Ingest data from diverse sources like APIs, PDFs, documents, and SQL databases.
+*   **Data Structuring:**  Organize your data with indices and graphs for efficient LLM interaction.
+*   **Advanced Retrieval/Query Interface:** Retrieve context and generate knowledge-augmented outputs based on any LLM input prompt.
+*   **Seamless Integration:** Integrate with popular frameworks like LangChain, Flask, Docker, and ChatGPT.
+*   **User-Friendly API:**  Easy-to-use high-level API for beginners and customizable lower-level APIs for advanced users.
+*   **Extensible and Modular:**  Customize and extend any module (data connectors, indices, retrievers, query engines, reranking modules).
+*   **LlamaHub:** Access a community library of data loaders.
+*   **LlamaLab:** Experiment with cutting-edge AGI projects using LlamaIndex.
 
-## 🚀 Overview
+## Getting Started
 
-LlamaIndex is a comprehensive framework designed to augment Large Language Models (LLMs) with your private data, enabling them to generate knowledge and reason more effectively.
+LlamaIndex offers two primary packages for building your LLM applications:
 
-### Core Components:
+1.  **Starter (`llama-index`):**  A Python package including core LlamaIndex and various integrations.
+2.  **Customized (`llama-index-core`):** Install the core package and add specific integrations from [LlamaHub](https://llamahub.ai/) to suit your application's needs.
 
-*   **Data Ingestion:** Connect to various data sources and formats.
-*   **Data Structuring:** Build indices and graphs to optimize data for LLMs.
-*   **Retrieval & Querying:** Retrieve context and generate knowledge-augmented responses.
-*   **Integration:** Connects to popular LLM frameworks and other applications.
+### Installation
 
-## 💡 Contributing
+```bash
+# Install the starter package
+pip install llama-index
 
-Contribute to LlamaIndex by adding to the core framework or creating new integrations. See our [Contribution Guide](CONTRIBUTING.md) for details.
+# Or, install core and specific integrations:
+pip install llama-index-core
+# and then, for example:
+pip install llama-index-llms-openai
+pip install llama-index-llms-replicate
+pip install llama-index-embeddings-huggingface
+```
 
-## 📄 Documentation
-
-Detailed documentation, tutorials, and examples are available [here](https://docs.llamaindex.ai/en/stable/).
-
-## 💻 Example Usage
+## Example Usage
 
 ```python
 import os
-
-os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
-
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 
+# Set your OpenAI API key (replace with your actual key)
+os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
+
+# Load documents from a directory
 documents = SimpleDirectoryReader("YOUR_DATA_DIRECTORY").load_data()
+
+# Create a vector store index
 index = VectorStoreIndex.from_documents(documents)
-```
 
-```python
-from llama_index.core import Settings, VectorStoreIndex, SimpleDirectoryReader
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.llms.replicate import Replicate
-from transformers import AutoTokenizer
-
-llama2_7b_chat = "meta/llama-2-7b-chat:8e6975e5ed6174911a6ff3d60540dfd4844201974602551e10e9e87ab143d81e"
-Settings.llm = Replicate(
-    model=llama2_7b_chat,
-    temperature=0.01,
-    additional_kwargs={"top_p": 1, "max_new_tokens": 300},
-)
-
-Settings.tokenizer = AutoTokenizer.from_pretrained(
-    "NousResearch/Llama-2-7b-chat-hf"
-)
-
-Settings.embed_model = HuggingFaceEmbedding(
-    model_name="BAAI/bge-small-en-v1.5"
-)
-
-documents = SimpleDirectoryReader("YOUR_DATA_DIRECTORY").load_data()
-index = VectorStoreIndex.from_documents(
-    documents,
-)
-```
-
-```python
+# Create a query engine
 query_engine = index.as_query_engine()
-query_engine.query("YOUR_QUESTION")
+
+# Query the index
+response = query_engine.query("YOUR_QUESTION")
+
+# Print the response
+print(response)
 ```
 
-## 🔧 Dependencies
+## Important Links
 
-Use `poetry install --with dev` after navigating to the package folder.
+*   **Documentation:** [https://docs.llamaindex.ai/en/stable/](https://docs.llamaindex.ai/en/stable/)
+*   **LlamaIndex.TS (Typescript/Javascript):** [https://github.com/run-llama/LlamaIndexTS](https://github.com/run-llama/LlamaIndexTS)
+*   **X (formerly Twitter):** [https://x.com/llama_index](https://x.com/llama_index)
+*   **LinkedIn:** [https://www.linkedin.com/company/llamaindex/](https://www.linkedin.com/company/llamaindex/)
+*   **Reddit:** [https://www.reddit.com/r/LlamaIndex/](https://www.reddit.com/r/LlamaIndex/)
+*   **Discord:** [https://discord.gg/dGcwcsnxhU](https://discord.gg/dGcwcsnxhU)
+*   **LlamaHub:** [https://llamahub.ai](https://llamahub.ai)
+*   **LlamaLab:** [https://github.com/run-llama/llama-lab](https://github.com/run-llama/llama-lab)
 
-## 📖 Citation
+## Contributing
+
+Contributions are welcome!  See the [Contribution Guide](CONTRIBUTING.md) for details.
+
+## Citation
 
 ```
 @software{Liu_LlamaIndex_2022,

@@ -18,38 +18,25 @@
     <a href="https://zenodo.org/badge/latestdoi/155220641"><img src="https://zenodo.org/badge/155220641.svg" alt="DOI"></a>
 </p>
 
-<h4 align="center">
-    <p>
-        <b>English</b> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_zh-hans.md">简体中文</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_zh-hant.md">繁體中文</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ko.md">한국어</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_es.md">Español</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ja.md">日本語</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_hd.md">हिन्दी</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ru.md">Русский</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_pt-br.md">Рortuguês</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_te.md">తెలుగు</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_fr.md">Français</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_de.md">Deutsch</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_vi.md">Tiếng Việt</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ar.md">العربية</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ur.md">اردو</a> |
-    </p>
-</h4>
+<h1 align="center">Hugging Face Transformers: State-of-the-Art Models for Natural Language Processing and Beyond</h1>
 
-# Hugging Face Transformers: State-of-the-Art Models for NLP, Computer Vision, and More
+<p align="center">
+  Unleash the power of cutting-edge machine learning models with the Hugging Face Transformers library.
+</p>
 
-**Hugging Face Transformers provides cutting-edge, pre-trained models for a variety of tasks, making advanced AI accessible to everyone.** Find the original repository [here](https://github.com/huggingface/transformers).
+<h3 align="center">
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/transformers_as_a_model_definition.png"/>
+</h3>
 
 ## Key Features
 
-*   **Wide Range of Tasks:** Supports text, computer vision, audio, video, and multimodal tasks.
-*   **Easy to Use:** Simplified API for both inference and training.
-*   **Pre-trained Models:** Access to a vast library of pre-trained models, reducing training costs and time.
-*   **Framework Flexibility:** Compatible with PyTorch, TensorFlow, and Flax.
-*   **Customization:**  Easily fine-tune models for specific applications.
-*   **Community & Hub:** Access over 1M+ [model checkpoints](https://huggingface.co/models?library=transformers&sort=trending) on the [Hugging Face Hub](https://huggingface.com/models).
+*   **Wide Range of Models:** Access over 1 million pre-trained transformer models for tasks like text generation, image classification, audio processing, video analysis, and multimodal applications, all available on the [Hugging Face Hub](https://huggingface.com/models).
+*   **Unified API:**  Utilize a consistent and easy-to-use API for all pre-trained models, simplifying the process of integrating state-of-the-art AI into your projects.
+*   **Framework Compatibility:** Seamlessly integrate with various machine learning frameworks, including PyTorch, TensorFlow, and Flax, for flexible training and deployment.
+*   **Customization & Efficiency:** Customize models to fit your needs, and leverage pre-trained models to reduce compute costs and minimize your carbon footprint.
+*   **Extensive Community:** Join a vibrant community with a wealth of resources, including examples and tutorials to help you get started.
+
+[View the original repository here:](https://github.com/huggingface/transformers)
 
 ## Installation
 
@@ -184,26 +171,32 @@ pipeline(
 
 </details>
 
-## Why Use Transformers?
+## Why use Transformers?
 
-*   **Easy Access to State-of-the-Art:** Leverage high-performing models across various modalities.
-*   **Efficiency:** Reduce compute costs and carbon footprint through pre-trained models.
-*   **Framework Agnostic:**  Choose the right framework for your needs (PyTorch, JAX, TF2.0).
-*   **Customization:** Easily adapt models to fit your unique requirements.
+*   **Ease of Use:** Leverage state-of-the-art models with an intuitive and accessible API.
+*   **Efficiency & Cost Savings:**  Reduce compute costs and carbon footprint by using pre-trained models.
+*   **Framework Flexibility:** Train and deploy models across multiple frameworks.
+*   **Customization:** Adapt models to your specific needs.
 
-## Limitations
+## Why might you *not* use Transformers?
 
-*   Not a modular toolbox for building neural networks.
-*   The training API is optimized for PyTorch models provided by Transformers.
-*   Example scripts may need adaptation for specific use cases.
+*   **Not a Modular Toolbox:**  The library prioritizes direct model access, and isn't designed as a library of neural network building blocks.
+*   **Training API Focus:** While simple, the training API is optimized for PyTorch models provided by Transformers and may not be a fit for all ML loops.
+*   **Example Scripts:** The examples are good starting points, but may require modification.
 
-## Community Projects
+<a target="_blank" href="https://huggingface.co/enterprise">
+    <img alt="Hugging Face Enterprise Hub" src="https://github.com/user-attachments/assets/247fb16d-d251-4583-96c4-d3d76dda4925">
+</a><br>
 
-Explore the [awesome-transformers](./awesome-transformers.md) page which lists incredible projects built with Transformers.
+## Projects using Transformers
+
+Explore the [awesome-transformers](./awesome-transformers.md) page, which lists 100 incredible projects built with Transformers.
+
+If you own or use a project that you believe should be part of the list, please open a PR to add it!
 
 ## Example Models
 
-Explore a diverse selection of models, organized by modality.
+Explore a selection of pre-trained models.
 
 <details>
 <summary>Audio</summary>

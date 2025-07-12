@@ -1,62 +1,40 @@
-# Stable Diffusion Web UI: Your Gateway to AI-Powered Image Generation
+# Stable Diffusion Web UI: Unleash Your Creativity with AI-Powered Image Generation
 
-Unleash your creativity and generate stunning images from text prompts with the **Stable Diffusion web UI**, a user-friendly interface for Stable Diffusion, built with Gradio. [Explore the original repository](https://github.com/AUTOMATIC1111/stable-diffusion-webui) for more details.
+**[Explore the power of AI image generation with the Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui), a user-friendly web interface for creating stunning visuals from text prompts.**
 
-## Key Features
+## Key Features:
 
-*   **Versatile Image Generation:**
-    *   Text-to-Image (txt2img) and Image-to-Image (img2img) modes
-    *   Outpainting and Inpainting for creative image manipulation
-    *   Color Sketch for generating images from sketches
-    *   Prompt Matrix for exploring variations
-    *   High-res Fix for detailed images
-*   **Advanced Prompting & Control:**
-    *   Attention mechanism for emphasizing specific text elements
-    *   Negative Prompt for specifying unwanted elements
-    *   Styles for saving and applying prompt snippets
-    *   CLIP Interrogator for reverse image prompt generation
-    *   Prompt editing mid-generation
-    *   Composable-Diffusion
-*   **Enhanced Image Enhancement:**
-    *   GFPGAN and CodeFormer for face restoration
-    *   RealESRGAN, ESRGAN, SwinIR, Swin2SR, and LDSR for image upscaling
-*   **Flexible Workflow & Customization:**
-    *   Checkpoint Merger
-    *   Seed resizing and variations
-    *   Batch processing
-    *   Tiling support
-    *   Custom scripts and extensions for expanded functionality
-    *   Reloading checkpoints on the fly
-    *   Loading different VAE models
-*   **User-Friendly Interface:**
-    *   One-click install and run (requires Python and Git)
-    *   Live image generation preview and progress bar
-    *   Generation parameters saved with images (PNG chunks/EXIF)
-    *   Settings page for customization
-    *   API for integration with other applications
-    *   Mouseover hints for UI elements
-    *   Reorder elements in the UI from settings screen
-*   **Optimized Performance:**
-    *   xformers for major speed increases on select GPUs
-    *   4GB video card support and even 2GB reported working
-    *   Estimated completion time in progress bar
-*   **Additional Features:**
-    *   DeepDanbooru integration for anime prompts
-    *   Support for Stable Diffusion 2.0 and Alt-Diffusion
-    *   Hypernetworks, LoRAs, and embeddings
-    *   Support for Segmind Stable Diffusion
-    *   Supports dedicated inpainting model by RunwayML
-    *   Aesthetic Gradients
-    *   Easier resolution setting
+*   **Versatile Generation Modes:** Generate images from text prompts (`txt2img`), and refine existing images (`img2img`), with options for outpainting, inpainting, and color sketching.
+*   **Advanced Prompting:** Utilize attention mechanisms, negative prompts, styles, and variations to fine-tune your image generation.
+*   **Powerful Upscaling and Enhancement:** Enhance image quality with integrated tools like GFPGAN, CodeFormer, RealESRGAN, ESRGAN, SwinIR, Swin2SR, and LDSR.
+*   **AI-Assisted Image Editing:** Modify images mid-generation, and even let the UI guess the prompt from an image with the CLIP interrogator.
+*   **Customization and Extensibility:**  Install and utilize custom scripts and extensions to expand the web UI's functionality.
+*   **Training and Integration:** Train your own embeddings, hypernetworks, and LoRAs, and integrate with other AI models.
+*   **Batch Processing:** Process multiple images at once using img2img.
+*   **Wide Hardware Support:** Supports 4GB+ video cards, with reports of 2GB working.
+*   **User-Friendly Interface:** Features include a progress bar, live image generation preview, and mouseover hints.
+*   **Seed and Parameter Management:**  Save generation parameters with images (PNG chunks/EXIF) and easily reload them.
+*   **Additional Tools:** Includes support for Composable-Diffusion, DeepDanbooru integration, Xformers for faster processing, and many other useful features via extensions.
 
 ## Installation
 
-Detailed installation instructions for various operating systems and hardware configurations are available in the [installation instructions](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon).
+Comprehensive installation instructions are available in the project's wiki:
+
+*   [NVidia GPUs](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-NVidia-GPUs) (Recommended)
+*   [AMD GPUs](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs)
+*   [Intel CPUs, Intel GPUs (both integrated and discrete)](https://github.com/openvinotoolkit/stable-diffusion-webui/wiki/Installation-on-Intel-Silicon)
+*   [Ascend NPUs](https://github.com/wangshuai09/stable-diffusion-webui/wiki/Install-and-run-on-Ascend-NPUs)
+*   [Apple Silicon](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon)
+*   [Online Services](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Online-Services)
 
 ## Contributing
 
-Contribute to the project by following the guidelines in the [Contributing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing) section.
+Learn how to contribute to the project [here](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing).
 
 ## Documentation
 
-Find the complete documentation on the project's [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki).
+The project's [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki) provides detailed documentation.
+
+## Credits
+
+A list of credits for borrowed code can be found in `Settings -> Licenses` and in `html/licenses.html`.

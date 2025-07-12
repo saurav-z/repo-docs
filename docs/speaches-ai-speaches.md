@@ -1,44 +1,47 @@
-# Speaches: Your Open-Source AI Toolkit for Speech & Audio
+# Speaches: Your Open-Source AI Speech Toolkit (STT/TTS)
 
-**Speaches empowers you with powerful, open-source AI capabilities for speech-to-text, text-to-speech, and real-time audio applications, all through an OpenAI-compatible API.**  ([View the original repo on GitHub](https://github.com/speaches-ai/speaches))
+**Tired of relying on proprietary AI services for speech?** Speaches is an open-source, OpenAI API-compatible server that empowers you to easily transcribe, translate, and generate speech using powerful, customizable models.  [Explore the Speaches project on GitHub](https://github.com/speaches-ai/speaches) to get started!
 
-Note: This project was previously known as `faster-whisper-server`. It has evolved to support a broader range of features beyond just ASR.
+_Note: This project was previously named `faster-whisper-server`._
 
 ## Key Features:
 
-*   **OpenAI API Compatibility:** Seamlessly integrate with existing OpenAI tools, SDKs, and applications.
-*   **Audio Generation:**
-    *   Generate spoken audio summaries from text.
+*   **OpenAI API Compatibility:** Seamlessly integrate with existing OpenAI tools and SDKs.
+*   **Versatile Speech Generation:**
+    *   Generate audio summaries from text.
     *   Perform sentiment analysis on audio recordings.
-    *   Enable asynchronous speech-to-speech interactions.
-*   **Streaming Support:** Receive real-time transcription via Server-Sent Events (SSE) as audio is processed.
-*   **Dynamic Model Management:** Automatically load and unload models based on request, optimizing resource usage.
-*   **Text-to-Speech:** Utilize `kokoro` (ranked #1 in the [TTS Arena](https://huggingface.co/spaces/Pendrokar/TTS-Spaces-Arena)) and `piper` models for high-quality audio generation.
-*   **Speech-to-Text:** Powered by [faster-whisper](https://github.com/SYSTRAN/faster-whisper) for accurate and efficient transcription.
-*   **GPU and CPU Support:** Leverage the power of your hardware for optimal performance.
-*   **Easy Deployment:** Deployable using Docker Compose and Docker.
-*   **Realtime API:** Access a dedicated realtime API for interactive audio applications.
-*   **Highly Configurable:** Customize settings to meet your specific needs.
+    *   Enable async speech-to-speech interactions.
+*   **Streaming Transcription:** Receive real-time transcriptions via Server-Sent Events (SSE) without waiting for the entire audio to process.
+*   **Dynamic Model Management:** Automatically load and unload models based on demand, optimizing resource usage.
+*   **High-Quality Text-to-Speech (TTS):** Utilizes the top-rated Kokoro model and Piper for natural-sounding voice generation.
+*   **GPU and CPU Support:** Leverage your hardware for optimal performance.
+*   **Easy Deployment:** Deploy with Docker Compose or Docker.
+*   **Realtime API for interactive audio applications**
+*   **Highly Configurable:** Tailor the system to your specific needs.
 
-## Demos
+## Technologies Used:
+
+*   **Speech-to-Text (STT):** Powered by [faster-whisper](https://github.com/SYSTRAN/faster-whisper) for accurate and efficient transcription.
+*   **Text-to-Speech (TTS):** Utilizes [piper](https://github.com/rhasspy/piper) and the leading [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M) model.
+
+## Getting Started:
+
+Refer to the official documentation for installation and usage instructions: [speaches.ai](https://speaches.ai/)
+
+## Demos:
 
 ### Realtime API
 
-![Realtime API Demo](https://github.com/user-attachments/assets/457a736d-4c29-4b43-984b-05cc4d9995bc)
+(Insert video)
 
 ### Streaming Transcription
 
-(Coming Soon)
+(TODO)
 
 ### Speech Generation
 
-![Speech Generation Demo](https://github.com/user-attachments/assets/0021acd9-f480-4bc3-904d-831f54c4d45b)
+(Insert video)
 
-## Resources
+## Contribute:
 
-*   **Installation and Usage:** [speaches.ai](https://speaches.ai/)
-*   **Configuration:** [speaches.ai/configuration/](https://speaches.ai/configuration/)
-
-## Get Involved
-
-Please report bugs, ask questions, or suggest new features by [creating an issue](https://github.com/speaches-ai/speaches/issues).
+We welcome your contributions!  Please submit issues for bug reports, questions, or feature suggestions.

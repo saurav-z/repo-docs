@@ -1,36 +1,24 @@
-# IntentKit: Build Powerful AI Agents for Web3 and Beyond
+# IntentKit: Build Autonomous AI Agents with Ease
 
 <div align="center">
   <img src="docs/images/intentkit_banner.png" alt="IntentKit by Crestal" width="100%" />
 </div>
 <br>
 
-IntentKit is an open-source framework empowering developers to create and manage sophisticated AI agents, seamlessly integrating with blockchain, social media, and custom functionalities. Explore the original repository on GitHub: [https://github.com/crestalnetwork/intentkit](https://github.com/crestalnetwork/intentkit)
+**IntentKit** is an open-source framework empowering developers to create and manage powerful AI agents capable of interacting with blockchain, social media, and custom skills.  
+
+[View the original repository on GitHub](https://github.com/crestalnetwork/intentkit)
 
 ## Key Features
 
-*   **Multi-Agent Support:** Manage and orchestrate multiple AI agents simultaneously.
-*   **Autonomous Agent Management:** Enable agents to operate and make decisions independently.
-*   **Blockchain Integration:** Interact with EVM-compatible blockchains for on-chain actions.
-*   **Social Media Integration:** Connect with platforms like Twitter and Telegram to manage social presence.
-*   **Extensible Skill System:** Easily integrate custom skills and expand agent capabilities.
-*   **MCP (WIP):**  (Master Control Program - Work in Progress)
+*   **Multiple Agent Support:** Manage and orchestrate multiple AI agents simultaneously.
+*   **Autonomous Agent Management:** Design agents with self-governing capabilities.
+*   **Blockchain Integration:** Interact with EVM-compatible blockchains.
+*   **Social Media Integration:** Connect to platforms like Twitter and Telegram.
+*   **Extensible Skill System:** Easily add new skills and functionalities to your agents.
+*   **MCP (WIP):** (Mention of future functionality)
 
-## Architecture Overview
-
-IntentKit's architecture provides a flexible foundation for building AI agents. The core components include:
-
-*   **Entrypoints:**  Handles interactions with external sources like social media platforms (Twitter, Telegram).
-*   **Agent Core:** Powered by LangGraph, manages agent configuration, memory, and interactions.
-*   **Skills:**  Provide specific functionalities, including:
-    *   Chain Integration (Blockchain interaction)
-    *   Wallet Management
-    *   On-Chain Actions
-    *   Internet Search
-    *   Image Processing
-*   **Storage:** Stores Agent Config, Credentials, Personality, Memory, and Skill State.
-
-For a more detailed architectural view, see the [Architecture](docs/architecture.md) section.
+## Architecture
 
 ```
                                                                                     
@@ -48,8 +36,8 @@ For a more detailed architectural view, see the [Architecture](docs/architecture
   Personality   │     │                                │     │  On-Chain Actions    
                 │     │                                │     │                      
   Memory        │     │      Powered by LangGraph      │     │  Internet Search     
-                │     │                                │     │  Image Processing    
-  Skill State   │     └────────────────────────────────┘     │                      
+                │     │                                │     │                      
+  Skill State   │     └────────────────────────────────┘     │  Image Processing    
             ────┘                                            └────                  
                                                                                     
                                                                 More and More...    
@@ -61,50 +49,60 @@ For a more detailed architectural view, see the [Architecture](docs/architecture
                                                                                     
 ```
 
+For a more in-depth look at the architecture, please refer to the [Architecture](docs/architecture.md) section.
+
+## Getting Started
+
+### Package Manager Migration Warning
+
+If you're updating from a previous version, you'll need to migrate to the new package manager:
+
+1.  Delete the existing virtual environment: `rm -rf .venv`
+2.  Run: `uv sync` to create a new virtual environment.
+
 ## Development
 
-Get started with IntentKit by reading the [Development Guide](DEVELOPMENT.md).
+To begin developing with IntentKit, consult the [Development Guide](DEVELOPMENT.md).
 
 ## Documentation
 
-Comprehensive documentation is available in the [Documentation](docs/) directory.
+Explore the comprehensive documentation for detailed information and usage examples in the [Documentation](docs/) directory.
 
 ## Project Structure
 
-*   **[abstracts/](intentkit/abstracts/)**: Abstract classes and interfaces
-*   **[app/](app/)**: Core application code
-    *   **[core/](intentkit/core/)**: Core modules
-    *   **[services/](app/services/)**: Services
-    *   **[entrypoints/](app/entrypoints/)**: Entrypoints means the way to interact with the agent
-    *   **[admin/](app/admin/)**: Admin logic
-    *   **[config/](intentkit/config/)**: Configurations
-    *   **[api.py](app/api.py)**: REST API server
-    *   **[autonomous.py](app/autonomous.py)**: Autonomous agent scheduler
-    *   **[singleton.py](app/singleton.py)**: Singleton agent scheduler
-    *   **[scheduler.py](app/scheduler.py)**: Scheduler for periodic tasks
-    *   **[readonly.py](app/readonly.py)**: Readonly entrypoint
-    *   **[telegram.py](app/telegram.py)**: Telegram listener
-*   **[clients/](intentkit/clients/)**: Clients for external services
-*   **[docs/](docs/)**: Documentation
-*   **[models/](intentkit/models/)**: Database models
-*   **[scripts/](scripts/)**: Scripts for agent management
-*   **[skills/](intentkit/skills/)**: Skill implementations
-*   **[utils/](intentkit/utils/)**: Utility functions
+*   [abstracts/](intentkit/abstracts/): Abstract classes and interfaces
+*   [app/](app/): Core application code
+    *   [core/](intentkit/core/): Core modules
+    *   [services/](app/services/): Services
+    *   [entrypoints/](app/entrypoints/): Entrypoints means the way to interact with the agent
+    *   [admin/](app/admin/): Admin logic
+    *   [config/](intentkit/config/): Configurations
+    *   [api.py](app/api.py): REST API server
+    *   [autonomous.py](app/autonomous.py): Autonomous agent scheduler
+    *   [singleton.py](app/singleton.py): Singleton agent scheduler
+    *   [scheduler.py](app/scheduler.py): Scheduler for periodic tasks
+    *   [readonly.py](app/readonly.py): Readonly entrypoint
+    *   [telegram.py](app/telegram.py): Telegram listener
+*   [clients/](intentkit/clients/): Clients for external services
+*   [docs/](docs/): Documentation
+*   [models/](intentkit/models/): Database models
+*   [scripts/](scripts/): Scripts for agent management
+*   [skills/](intentkit/skills/): Skill implementations
+*   [utils/](intentkit/utils/): Utility functions
 
 ## Contributing
 
-Contributions are welcome! Please review the [Contributing Guidelines](CONTRIBUTING.md) before submitting pull requests.
+Contributions are highly encouraged!  Please review the [Contributing Guidelines](CONTRIBUTING.md) before submitting a pull request.
 
 ### Contribute Skills
 
-Check the [Wishlist](docs/contributing/wishlist.md) for active skill requests.
+1.  Check the [Wishlist](docs/contributing/wishlist.md) for active requests.
+2.  See the [Skill Development Guide](docs/contributing/skills.md) for detailed instructions.
 
-Refer to the [Skill Development Guide](docs/contributing/skills.md) for detailed instructions.
+### Developer Community
 
-### Developer Chat
-
-Join the IntentKit community on [Discord](https://discord.com/invite/crestal) and request an IntentKit developer role.  There is a dedicated discussion channel for developers.
+Join the IntentKit developer community on [Discord](https://discord.com/invite/crestal).  Apply for an IntentKit dev role by opening a support ticket there. We have a discussion channel for you to connect with the rest of the developers.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.  See the [LICENSE](LICENSE) file for more details.

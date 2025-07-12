@@ -1,6 +1,10 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif"/>
+  <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif" alt="HelloGitHub Logo"/>
 </p>
+
+# HelloGitHub: Discover Awesome Open Source Projects
+
+**HelloGitHub is your go-to resource for discovering interesting and beginner-friendly open-source projects on GitHub.**  Get a head start exploring the world of open source with curated content that inspires and educates.  Find the original repository [here](https://github.com/521xueweihan/HelloGitHub).
 
 <p align="center">
   <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
@@ -10,22 +14,21 @@
     <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
 </p>
 
-
-## HelloGitHub: Discover the Best Open Source Projects on GitHub
-
-**HelloGitHub** is your monthly guide to the most interesting and accessible open-source projects on GitHub, making it easy for anyone to explore and enjoy the world of open source.  [Check out the original repo](https://github.com/521xueweihan/HelloGitHub) for more details.
-
 ## Key Features
 
-*   **Curated Selection:** Hand-picked, beginner-friendly open-source projects.
-*   **Monthly Updates:** Fresh content released on the 28th of each month.
-*   **Diverse Content:** Includes interesting projects, open-source books, practical projects, and enterprise-level projects.
-*   **Easy to Get Started:** Quickly learn about open source and discover its charm.
-*   **Multiple Languages:** Available in Chinese, English, and Japanese.
+*   **Curated Content:** Discover hand-picked open-source projects, perfect for beginners and experienced developers alike.
+*   **Monthly Updates:** Stay up-to-date with the latest and greatest projects, released monthly on the 28th.
+*   **Diverse Categories:** Explore projects covering a wide range of topics, including:
+    *   Interesting projects
+    *   Beginner-friendly projects
+    *   Open-source books
+    *   Practical projects
+    *   Enterprise-level projects
+*   **Easy Access:** Access the content through the [official website](https://hellogithub.com/) or [HelloGitHub WeChat Public Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
 
-## Content
+## Content Highlights
 
-Discover the latest projects on the [official website](https://hellogithub.com/) or the [HelloGitHub WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
+Access past issues and explore featured projects:
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -40,15 +43,18 @@ Discover the latest projects on the [official website](https://hellogithub.com/)
 
 ## Contribute
 
-[Recommend or self-recommend](https://hellogithub.com/periodical) projects or become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
+Recommend or self-recommend your project to become a HelloGitHub contributor: [How to Contribute](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
 
 ## Sponsors
+
+Thank you to our sponsors!
 
 <table>
   <thead>
     <tr>
       <th align="center" style="width: 80px;">
-        <a href="https://www.compshare.cn/?utm_term=logo&utm_campaign=hellogithub&utm_source=otherdsp&utm_medium=display&ytag=logo_hellogithub_otherdsp_display">          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/ucloud.png" width="60px"><br>
+        <a href="https://www.compshare.cn/?utm_term=logo&utm_campaign=hellogithub&utm_source=otherdsp&utm_medium=display&ytag=logo_hellogithub_otherdsp_display">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/ucloud.png" width="60px"><br>
           <sub>UCloud</sub><br>
           <sub>超值的GPU云服务</sub>
         </a>
@@ -80,4 +86,4 @@ Discover the latest projects on the [official website](https://hellogithub.com/)
 
 ## License
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  [Contact Me](mailto:595666367@qq.com)
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact [595666367@qq.com](mailto:595666367@qq.com)

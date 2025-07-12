@@ -1,32 +1,35 @@
-# Zulip: Open-Source Team Collaboration for Productive Remote Work
+# Zulip: Open-Source Team Collaboration for Productive & Delightful Remote Work
 
-**Zulip is an open-source team collaboration tool that combines the best of email and chat with topic-based threading, making remote work productive and delightful.** 
+**Zulip is a powerful, open-source team collaboration tool that combines the best of chat and email, designed for both live and asynchronous communication.** Discover how Zulip can boost your team's productivity.
 
-[View the original repository on GitHub](https://github.com/zulip/zulip)
+**[View the Zulip repository on GitHub](https://github.com/zulip/zulip)**
 
-## Key Features of Zulip
+## Key Features of Zulip:
 
-*   **Topic-based threading:** Organize conversations with ease, unlike standard chat applications.
-*   **Designed for both live and asynchronous conversations:** A modern approach to team communication.
-*   **Open-source and community-driven:** Built and maintained by a global community.
-*   **Used by leading organizations:** Trusted by Fortune 500 companies and prominent open-source projects.
-*   **Easy to get started:** Offers comprehensive documentation and various deployment options including self-hosting, Docker, and cloud services.
-*   **Actively developed:** With over 1,000 contributors merging over 500 commits a month, Zulip is the largest and fastest growing open-source team chat project.
+*   **Topic-based threading:** Organize conversations for clarity and easy navigation.
+*   **Designed for live and asynchronous conversations:** Supports both real-time chat and thoughtful discussion.
+*   **Open-source and community-driven:** Benefit from a thriving community and transparent development.
+*   **Highly scalable:** Used by Fortune 500 companies and thousands of organizations.
+*   **Self-hostable:** Deploy Zulip on your own server or use cloud hosting options.
 
-## Getting Started with Zulip
+## Get Started with Zulip:
 
-*   **Contribute Code:** Review the [guide for new contributors](https://zulip.readthedocs.io/en/latest/contributing/contributing.html) to get started.
-*   **Non-Code Contributions:** Report issues, translate Zulip, or provide feedback.
-*   **Experience Zulip:** Visit the [Zulip community server](https://zulip.com/development-community/) to see Zulip in action.
-*   **Self-Host Zulip:** Deploy on Ubuntu/Debian Linux, with Docker, or on platforms like Digital Ocean and Render. Learn more about [self-hosting Zulip](https://zulip.com/self-hosting/).
-*   **Zulip Cloud:** Explore [Zulip Cloud](https://zulip.com/plans/) hosting options.
-*   **Outreach Programs:** Participate in programs like [Google Summer of Code](https://developers.google.com/open-source/gsoc/) and [Outreachy](https://www.outreachy.org/).
-*   **Support Zulip:** Advocate for Zulip, become a [sponsor](https://github.com/sponsors/zulip), or help others discover Zulip.
+*   **Contribute:** Help improve Zulip by contributing code, reporting issues, translating, or providing feedback.
+*   **Explore:** Join the [Zulip community server](https://zulip.com/development-community/) to experience Zulip firsthand.
+*   **Run a server:** Self-host on Ubuntu or Debian Linux, in Docker, or with prebuilt images for Digital Ocean and Render. Learn more about [self-hosting Zulip](https://zulip.com/self-hosting/).
+*   **Use Zulip Cloud:** Explore [Zulip Cloud](https://zulip.com/plans/) hosting options.
+*   **Support Zulip:** Become a [sponsor](https://github.com/sponsors/zulip), advocate for Zulip in your organization, and help others find Zulip.
 
-## Stay Connected
+## Resources:
 
-*   [Blog](https://blog.zulip.org/)
-*   [Twitter](https://twitter.com/zulip)
-*   [LinkedIn](https://www.linkedin.com/company/zulip-project/)
+*   [Why Zulip?](https://zulip.com/why-zulip/)
+*   [Zulip Case Studies](https://zulip.com/case-studies/)
+*   [Zulip Features](https://zulip.com/features/)
+*   [Zulip Community Server](https://zulip.com/development-community/)
+*   [Zulip Blog](https://blog.zulip.org/)
+*   [Zulip on Twitter](https://twitter.com/zulip)
+*   [Zulip on LinkedIn](https://www.linkedin.com/company/zulip-project/)
 
-Zulip is licensed under the [Apache 2.0](https://github.com/zulip/zulip/blob/main/LICENSE) license.
+## License
+
+Zulip is distributed under the [Apache 2.0](https://github.com/zulip/zulip/blob/main/LICENSE) license.
