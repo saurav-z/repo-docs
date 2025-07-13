@@ -1,30 +1,41 @@
-# Isaac Lab: Accelerate Robotics Research with GPU-Powered Simulation
+![Isaac Lab](docs/source/_static/isaaclab.jpg)
 
-**Isaac Lab is an open-source, GPU-accelerated framework built on NVIDIA Isaac Sim, revolutionizing robotics research by providing a unified platform for reinforcement learning, imitation learning, and motion planning.**  Check out the [original repository](https://github.com/isaac-sim/IsaacLab) for the full details.
+# Isaac Lab: Accelerate Your Robotics Research with GPU-Powered Simulation
 
-[![Isaac Lab](docs/source/_static/isaaclab.jpg)](https://github.com/isaac-sim/IsaacLab)
+**Isaac Lab** is an open-source, GPU-accelerated framework built on NVIDIA Isaac Sim, designed to revolutionize robotics research workflows by simplifying and unifying reinforcement learning, imitation learning, and motion planning.  [Explore the original repository](https://github.com/isaac-sim/IsaacLab)
 
-Isaac Lab leverages the power of NVIDIA Isaac Sim to provide fast and accurate physics and sensor simulation, making it an ideal solution for sim-to-real transfer in robotics applications.  The framework's GPU acceleration allows for rapid iteration in reinforcement learning and other data-intensive tasks.
+[![IsaacSim](https://img.shields.io/badge/IsaacSim-4.5.0-silver.svg)](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)
+[![Python](https://img.shields.io/badge/python-3.10-blue.svg)](https://docs.python.org/3/whatsnew/3.10.html)
+[![Linux platform](https://img.shields.io/badge/platform-linux--64-orange.svg)](https://releases.ubuntu.com/20.04/)
+[![Windows platform](https://img.shields.io/badge/platform-windows--64-orange.svg)](https://www.microsoft.com/en-us/)
+[![pre-commit](https://img.shields.io/github/actions/workflow/status/isaac-sim/IsaacLab/pre-commit.yaml?logo=pre-commit&logoColor=white&label=pre-commit&color=brightgreen)](https://github.com/isaac-sim/IsaacLab/actions/workflows/pre-commit.yaml)
+[![docs status](https://img.shields.io/github/actions/workflow/status/isaac-sim/IsaacLab/docs.yaml?label=docs&color=brightgreen)](https://github.com/isaac-sim/IsaacLab/actions/workflows/docs.yaml)
+[![License](https://img.shields.io/badge/license-BSD--3-yellow.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![License](https://img.shields.io/badge/license-Apache--2.0-yellow.svg)](https://opensource.org/license/apache-2-0)
 
-## Key Features
+## Key Features of Isaac Lab
 
-*   **Extensive Robot Library:**  Includes 16 commonly available robot models, from manipulators to humanoids, providing a wide range of options for your projects.
-*   **Pre-built Environments:**  Offers over 30 ready-to-train environments compatible with popular reinforcement learning frameworks like RSL RL, SKRL, and Stable Baselines, with support for multi-agent reinforcement learning.
-*   **Advanced Physics Simulation:**  Supports rigid bodies, articulated systems, and deformable objects for realistic environment interactions.
-*   **Comprehensive Sensor Suite:**  Features RTX-based cameras, LIDAR, and contact sensors for accurate and detailed data capture, emulating real-world sensor behavior.
+Isaac Lab empowers robotics researchers with a comprehensive suite of tools, including:
+
+*   **Extensive Robot Library:** Includes 16 pre-built robot models, from manipulators to humanoids, ready for simulation.
+*   **Rich Environment Support:** Offers over 30 ready-to-train environments compatible with popular reinforcement learning frameworks. Supports single and multi-agent reinforcement learning.
+*   **Advanced Physics Simulation:** Provides realistic simulation of rigid bodies, articulated systems, and deformable objects.
+*   **High-Fidelity Sensor Simulation:** Offers accurate sensor simulation with RTX-based cameras, LIDAR, IMU, and contact sensors.
+*   **GPU Acceleration:** Enables faster simulation and computation, ideal for iterative processes like reinforcement learning.
+*   **Flexible Deployment:**  Runs locally or in the cloud, facilitating large-scale deployments.
 
 ## Getting Started
 
-The [documentation](https://isaac-sim.github.io/IsaacLab) provides everything you need to get started with Isaac Lab.
+Get up and running with Isaac Lab quickly using our detailed documentation:
 
 *   [Installation Guide](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html#local-installation)
 *   [Reinforcement Learning Overview](https://isaac-sim.github.io/IsaacLab/main/source/overview/reinforcement-learning/rl_existing_scripts.html)
 *   [Tutorials](https://isaac-sim.github.io/IsaacLab/main/source/tutorials/index.html)
 *   [Available Environments](https://isaac-sim.github.io/IsaacLab/main/source/overview/environments.html)
 
-## Isaac Sim Version Dependency
+## Isaac Sim Version Compatibility
 
-Isaac Lab requires specific versions of Isaac Sim:
+Isaac Lab is designed to work with specific versions of NVIDIA Isaac Sim.  Here's a compatibility overview:
 
 | Isaac Lab Version             | Isaac Sim Version |
 | ----------------------------- | ----------------- |
@@ -35,32 +46,34 @@ Isaac Lab requires specific versions of Isaac Sim:
 | `v2.0.0`                      | Isaac Sim 4.5     |
 | `feature/isaacsim_5_0` branch | Isaac Sim 5.0     |
 
+**Important:**  The `feature/isaacsim_5_0` branch is under active development and requires [Isaac Sim 5.0](https://github.com/isaac-sim/IsaacSim) built from source.  See the branch's README for details.
+
 ## Contribute
 
-Contributions are welcome.  See the [contribution guidelines](https://isaac-sim.github.io/IsaacLab/main/source/refs/contributing.html) for details.
+We encourage community contributions!  Review our [contribution guidelines](https://isaac-sim.github.io/IsaacLab/main/source/refs/contributing.html) to learn how to contribute code, report bugs, or suggest features.
 
-## Show & Tell
+## Showcase Your Work
 
-Share your projects and tutorials in the [Show & Tell](https://github.com/isaac-sim/IsaacLab/discussions/categories/show-and-tell) section of the Discussions.
+Share your projects, tutorials, and learning content in the [Show & Tell](https://github.com/isaac-sim/IsaacLab/discussions/categories/show-and-tell) section. Inspire others and contribute to the community!
 
-## Troubleshooting
+## Troubleshooting and Support
 
-Check the [troubleshooting](https://isaac-sim.github.io/IsaacLab/main/source/refs/troubleshooting.html) section or [submit an issue](https://github.com/isaac-sim/IsaacLab/issues).
-
-## Support
-
-*   Use GitHub [Discussions](https://github.com/isaac-sim/IsaacLab/discussions) for discussions and questions.
-*   Use Github [Issues](https://github.com/isaac-sim/IsaacLab/issues) for executable pieces of work.
+*   Check the [troubleshooting](https://isaac-sim.github.io/IsaacLab/main/source/refs/troubleshooting.html) section for common issues.
+*   Submit issues via [GitHub Issues](https://github.com/isaac-sim/IsaacLab/issues).
+*   Discuss ideas and ask questions in [GitHub Discussions](https://github.com/isaac-sim/IsaacLab/discussions).
+*   For Isaac Sim-related issues, consult its [documentation](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html) or [forums](https://forums.developer.nvidia.com/c/agx-autonomous-machines/isaac/67).
 
 ## Connect with the NVIDIA Omniverse Community
 
-Share your projects with the community at OmniverseCommunity@nvidia.com.
+Share your work and collaborate with other developers on the [Omniverse Discord](https://discord.com/invite/nvidiaomniverse). Reach out to the NVIDIA Omniverse Community team at OmniverseCommunity@nvidia.com to explore opportunities to spotlight your work.
 
 ## License
 
-Isaac Lab is released under the [BSD-3 License](LICENSE). The `isaaclab_mimic` extension and scripts are released under [Apache 2.0](LICENSE-mimic).
+Isaac Lab is licensed under the [BSD-3 License](LICENSE). The `isaaclab_mimic` extension is released under [Apache 2.0](LICENSE-mimic). Dependencies' and assets' licenses are in the [`docs/licenses`](docs/licenses) directory.
 
 ## Acknowledgement
+
+This project is built upon the [Orbit](https://isaac-orbit.github.io/) framework.  Please cite it in academic publications:
 
 ```
 @article{mittal2023orbit,
@@ -73,3 +86,4 @@ Isaac Lab is released under the [BSD-3 License](LICENSE). The `isaaclab_mimic` e
    pages={3740-3747},
    doi={10.1109/LRA.2023.3270034}
 }
+```

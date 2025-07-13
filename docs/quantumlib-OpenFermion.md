@@ -1,51 +1,45 @@
-<!-- OpenFermion Logo -->
-<p align="center">
+<div align="center">
   <img src="https://raw.githubusercontent.com/quantumlib/OpenFermion/refs/heads/master/docs/images/logo_horizontal.svg" alt="OpenFermion Logo" width="75%">
-</p>
+</div>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10+-fcbc2c.svg?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+" />
-  <img src="https://img.shields.io/badge/License-Apache%202.0-3c60b1.svg?logo=opensourceinitiative&logoColor=white&style=flat-square" alt="License: Apache 2.0" />
-  <img src="https://img.shields.io/pypi/v/OpenFermion.svg?logo=semantic-release&logoColor=white&label=Release&style=flat-square&color=fcbc2c" alt="PyPI" />
-  <img src="https://img.shields.io/pypi/dm/openfermion?logo=PyPI&color=d56420&logoColor=white&style=flat-square&label=Downloads" alt="Downloads" />
-</p>
+<div align="center">
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/Python-3.10+-fcbc2c.svg?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+">
+  </a>
+  <a href="https://github.com/quantumlib/OpenFermion/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-Apache%202.0-3c60b1.svg?logo=opensourceinitiative&logoColor=white&style=flat-square" alt="License: Apache 2.0">
+  </a>
+  <a href="https://pypi.org/project/OpenFermion">
+    <img src="https://img.shields.io/pypi/v/OpenFermion.svg?logo=semantic-release&logoColor=white&label=Release&style=flat-square&color=fcbc2c" alt="PyPI Version">
+  </a>
+  <a href="https://img.shields.io/pypi/dm/openfermion?logo=PyPI&color=d56420&logoColor=white&style=flat-square&label=Downloads" >
+    <img src="https://img.shields.io/pypi/dm/openfermion?logo=PyPI&color=d56420&logoColor=white&style=flat-square&label=Downloads" alt="PyPI Downloads">
+  </a>
+</div>
 
-# OpenFermion: Quantum Computing for Fermionic Systems
+# OpenFermion: Simulate and Analyze Fermionic Systems for Quantum Computing
 
-OpenFermion is an open-source library enabling researchers to explore and simulate fermionic systems, including quantum chemistry, with tools for building, manipulating, and analyzing qubit and fermionic Hamiltonians.  [Explore the OpenFermion repository](https://github.com/quantumlib/OpenFermion).
+OpenFermion is an open-source library designed to help researchers compile and analyze quantum algorithms for simulating fermionic systems, including quantum chemistry, providing tools and data structures for working with fermionic and qubit Hamiltonians. Explore the original repository [here](https://github.com/quantumlib/OpenFermion).
 
 ## Key Features
 
-*   **Fermionic Hamiltonian Construction:** Build and represent fermionic Hamiltonians efficiently.
-*   **Qubitization:** Convert fermionic Hamiltonians into qubit representations suitable for quantum computers.
-*   **Circuit Compilation:** Compile and optimize quantum circuits for simulating fermionic systems.
-*   **Electronic Structure Plugins:** Integrate with popular electronic structure packages for classical calculations and data.
-*   **High-Performance Simulators:** Utilize advanced simulation tools for fermionic quantum evolution.
-*   **Modular Design:**  Easily extendable with plugins for various quantum computing frameworks.
+*   **Fermionic Hamiltonian Manipulation:** Create, manipulate, and analyze representations of fermionic Hamiltonians.
+*   **Qubitization:** Convert fermionic Hamiltonians to qubit representations suitable for quantum computers.
+*   **Electronic Structure Plugins:** Integrate with popular electronic structure packages (Psi4, PySCF, Q-Chem, etc.) for calculations.
+*   **Circuit Compilation Plugins:** Support integration with quantum circuit compilation tools like Forest and Strawberry Fields.
+*   **High-Performance Simulators:** Utilize plugins like OpenFermion-FQE for efficient simulation of fermionic quantum evolutions.
 
 ## Installation and Documentation
 
-Get started with OpenFermion by following these installation steps.  Comprehensive documentation is available to guide you through the library's functionalities.
-
 ### Installation
 
-Install the latest stable version of OpenFermion using pip:
+Install the latest stable release using pip:
 
 ```bash
 python -m pip install --user openfermion
 ```
 
-### Documentation
-
-Find detailed documentation and tutorials at:
-
-*   [Installation Guide](https://quantumai.google/openfermion/install)
-*   [API Documentation](https://quantumai.google/reference/python/openfermion/all_symbols)
-*   [Tutorials](https://quantumai.google/openfermion/tutorials/intro_to_openfermion)
-
-### Developer Installation
-
-For the latest development version:
+For developers, install the latest version from source:
 
 ```bash
 git clone https://github.com/quantumlib/OpenFermion
@@ -53,54 +47,74 @@ cd OpenFermion
 python -m pip install -e .
 ```
 
+### Documentation
+
+Comprehensive documentation is available at:
+
+*   [Official Documentation](https://quantumai.google/openfermion)
+*   [Installation Guide](https://quantumai.google/openfermion/install)
+*   [API Reference](https://quantumai.google/reference/python/openfermion/all_symbols)
+*   [Tutorials](https://quantumai.google/openfermion/tutorials/intro_to_openfermion)
+
+### Docker
+
+For those encountering installation difficulties, a Docker image is available with OpenFermion and select plugins pre-installed:
+
+*   [Docker Instructions](https://github.com/quantumlib/OpenFermion/tree/master/docker)
+
 ## Plugins
 
-OpenFermion leverages plugins for expanded functionality.
+OpenFermion's modular architecture relies on plugins to extend functionality.
 
 ### High-Performance Simulators
 
-*   **OpenFermion-FQE:** High-performance fermionic quantum evolution emulator.
+*   **OpenFermion-FQE:** High-performance emulator of fermionic quantum evolutions: [OpenFermion-FQE](https://github.com/quantumlib/OpenFermion-FQE)
 
 ### Circuit Compilation Plugins
 
-*   **Forest-OpenFermion:** Integration with Forest quantum computing platform.
-*   **SFOpenBoson:** Integration with Strawberry Fields, a quantum computing platform.
+*   **Forest-OpenFermion:** Support for Rigetti's Forest: [Forest-OpenFermion](https://github.com/rigetticomputing/forestopenfermion)
+*   **SFOpenBoson:** Support for Xanadu's Strawberry Fields: [SFOpenBoson](https://github.com/XanaduAI/SFOpenBoson)
 
 ### Electronic Structure Package Plugins
 
-*   **OpenFermion-Psi4:**  Integration with Psi4 for electronic structure calculations.
-*   **OpenFermion-PySCF:** Integration with PySCF for electronic structure calculations.
-*   **OpenFermion-Dirac:** Integration with DIRAC.
-*   **OpenFermion-QChem:** Integration with Q-Chem.
+*   **OpenFermion-Psi4:** Integration with Psi4: [OpenFermion-Psi4](http://github.com/quantumlib/OpenFermion-Psi4)
+*   **OpenFermion-PySCF:** Integration with PySCF: [OpenFermion-PySCF](http://github.com/quantumlib/OpenFermion-PySCF)
+*   **OpenFermion-Dirac:** Integration with DIRAC: [OpenFermion-Dirac](https://github.com/bsenjean/Openfermion-Dirac)
+*   **OpenFermion-QChem:** Integration with Q-Chem: [OpenFermion-QChem](https://github.com/qchemsoftware/OpenFermion-QChem)
 
-## Contributing
+## How to Contribute
 
-Contributions to OpenFermion are welcome!  Please review the [Contribution Guidelines](https://github.com/quantumlib/OpenFermion/blob/master/CONTRIBUTING.md) for details on how to contribute, including the Contributor License Agreement (CLA) requirements and the code style.
+Contributions are welcome!  Please review the [contributing guidelines](https://github.com/quantumlib/OpenFermion/blob/main/CONTRIBUTING.md) and adhere to the following:
 
-### Resources:
-*   [GitHub Issues](https://github.com/quantumlib/OpenFermion/issues)
-*   [Quantum Computing Stack Exchange](https://quantumcomputing.stackexchange.com/) (tag: openfermion)
+*   **Contributor License Agreement (CLA):**  All contributions require a CLA.
+*   **Pull Requests:**  Submit contributions via GitHub pull requests.
+*   **Testing:**  Ensure your code includes comprehensive tests.
+*   **Style Guide:** Follow PEP 8 guidelines.
+*   **Documentation:**  Include thorough documentation for your code.
+*   **Issue Tracker:** Use [GitHub issues](https://github.com/quantumlib/OpenFermion/issues) for bugs and feature requests.
+*   **Stack Exchange:** Ask questions on the [Quantum Computing Stack Exchange](https://quantumcomputing.stackexchange.com/) with the 'openfermion' tag.
 
 ## Authors
 
-OpenFermion is developed by a team of researchers from Google, universities, and research institutions.  [See full list of authors in the original README](https://github.com/quantumlib/OpenFermion).
+(A list of authors is included in the original README)
 
-## Citation
+## How to Cite
 
-If you use OpenFermion in your research, please cite:
+When citing OpenFermion, please use the following:
 
-```
-Jarrod R McClean, Nicholas C Rubin, Kevin J Sung, Ian D Kivlichan, Xavier Bonet-Monroig,
-Yudong Cao, Chengyu Dai, E Schuyler Fried, Craig Gidney, Brendan Gimby, Pranav Gokhale,
-Thomas Häner, Tarini Hardikar, Vojtěch Havlíček, Oscar Higgott, Cupjin Huang, Josh Izaac,
-Zhang Jiang, Xinle Liu, Sam McArdle, Matthew Neeley, Thomas O'Brien, Bryan O'Gorman,
-Isil Ozfidan, Maxwell D Radin, Jhonathan Romero, Nicolas P D Sawaya, Bruno Senjean,
-Kanav Setia, Sukin Sim, Damian S Steiger, Mark Steudtner, Qiming Sun, Wei Sun, Daochen Wang,
-Fang Zhang, and Ryan Babbush
-*OpenFermion: The Electronic Structure Package for Quantum Computers*.
-`Quantum Science and Technology 5.3 (2020): 034014 <https://iopscience.iop.org/article/10.1088/2058-9565/ab8ebc/meta>`__.
+```bibtex
+@article{mcclean2020openfermion,
+  title={OpenFermion: The Electronic Structure Package for Quantum Computers},
+  author={McClean, Jarrod R and Rubin, Nicholas C and Sung, Kevin J and Kivlichan, Ian D and Bonet-Monroig, Xavier and Cao, Yudong and Dai, Chengyu and Fried, E Schuyler and Gidney, Craig and Gimby, Brendan and others},
+  journal={Quantum Science and Technology},
+  volume={5},
+  number={3},
+  pages={034014},
+  year={2020},
+  publisher={IOP Publishing}
+}
 ```
 
 ## Disclaimer
 
-This is not an official Google product.
+Copyright 2017 The OpenFermion Developers. This is not an official Google product.
