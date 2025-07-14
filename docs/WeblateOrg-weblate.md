@@ -1,52 +1,27 @@
 [![Weblate Logo](https://s.weblate.org/cdn/Logo-Darktext-borders.png)](https://weblate.org/)
 
-# Weblate: Your Continuous Localization Solution
+# Weblate: Empowering Continuous Localization for Your Projects
 
-**Weblate is a powerful, web-based continuous localization system helping over 2500 libre projects and companies worldwide streamline their translation workflow.**  Get started by installing it yourself or using the hosted Weblate service.
+**Weblate is a powerful, web-based, open-source platform that simplifies and automates the localization process for software projects.**  Used by thousands of projects and companies globally, Weblate makes it easy to translate and manage your project's multilingual content.
 
-[Visit the Weblate GitHub Repository](https://github.com/WeblateOrg/weblate)
+[View the original repository on GitHub](https://github.com/WeblateOrg/weblate)
 
-## Key Features of Weblate
+**Key Features:**
 
-*   **Web-Based Interface:**  Access and manage your translations from anywhere with a web browser.
-*   **Continuous Localization:**  Integrates seamlessly into your development workflow for real-time translation updates.
-*   **Used by Thousands:** Trusted by over 2500 projects and companies globally.
-*   **Open Source:**  Weblate is free and open-source software.
-*   **Supports 165+ Countries:** Facilitating localization for a global audience.
-*   **Flexible Deployment Options:**  Install it on your own servers or utilize the hosted service at [weblate.org](https://weblate.org/).
+*   **Web-Based Interface:**  Provides an intuitive web interface for translators and project maintainers.
+*   **Continuous Localization:** Streamlines the translation workflow, allowing for rapid updates and efficient collaboration.
+*   **Widely Adopted:** Used by over 2500 projects and companies in more than 165 countries.
+*   **Open Source:**  Freely available under the GNU General Public License, fostering community collaboration and customization.
+*   **Hosted Service:** Offers a convenient hosted service at [weblate.org](https://weblate.org/) for easy setup and management.
 
-## Support
+**Get Started:**
 
-Weblate offers both free and paid options:
+*   **Installation:**  Follow the detailed installation instructions [here](https://docs.weblate.org/en/latest/admin/install.html).
+*   **Documentation:** Explore the comprehensive documentation available in the `docs` directory of the source code or online at [https://docs.weblate.org/](https://docs.weblate.org/).
+*   **Support:**  Weblate offers optional professional support and cloud hosting. Learn more at [https://weblate.org/hosting/](https://weblate.org/hosting/).
+*   **Report Issues:**  Submit bug reports and feature requests on [GitHub Issues](https://github.com/WeblateOrg/weblate/issues).
+*   **Live Chat:**  Join the Weblate community for real-time discussions on the Libera.Chat IRC network in the `#weblate` channel (e.g., via [https://web.libera.chat/#weblate](https://web.libera.chat/#weblate)).
 
-*   **Community Support:** Leverage the open-source community.
-*   **Professional Support & Cloud Hosting:** Explore premium offerings at [weblate.org/hosting/](https://weblate.org/hosting/).
+**License:**
 
-## Documentation
-
-Comprehensive documentation is available:
-
-*   **Online:**  [https://docs.weblate.org/](https://docs.weblate.org/)
-*   **Source Code:**  Refer to the `docs` directory within the repository.
-
-## Installation
-
-Detailed installation instructions can be found at:
-
-*   [https://docs.weblate.org/en/latest/admin/install.html](https://docs.weblate.org/en/latest/admin/install.html)
-
-## Report Issues
-
-Report any bugs or suggest new features:
-
-*   [https://github.com/WeblateOrg/weblate/issues](https://github.com/WeblateOrg/weblate/issues)
-
-## Live Chat
-
-Connect with the Weblate community:
-
-*   **IRC Channel:**  \#weblate on Libera.Chat ([https://web.libera.chat/#weblate](https://web.libera.chat/#weblate))
-
-## License
-
-Weblate is licensed under the GNU General Public License, Version 3.  See the `GNU General Public License <https://www.gnu.org/licenses/gpl-3.0.html>`_ for more details.
+Weblate is licensed under the GNU General Public License, version 3 or later.  See the full license details at [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html) and within the [project's GitHub repository](https://github.com/WeblateOrg/weblate/blob/main/COPYING).

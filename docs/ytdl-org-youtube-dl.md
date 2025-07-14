@@ -1,22 +1,21 @@
 [![Build Status](https://github.com/ytdl-org/youtube-dl/workflows/CI/badge.svg)](https://github.com/ytdl-org/youtube-dl/actions?query=workflow%3ACI)
 
-# youtube-dl: Download Videos from YouTube and Beyond
+# youtube-dl: Download Videos from YouTube and More!
 
-**youtube-dl is a powerful command-line tool that allows you to download videos from YouTube and thousands of other video and music streaming platforms, offering extensive customization and control.**  ([Visit the original repository](https://github.com/ytdl-org/youtube-dl))
+Easily download videos from YouTube and hundreds of other sites with the powerful and versatile command-line tool, youtube-dl.  [View the original repo on GitHub](https://github.com/ytdl-org/youtube-dl).
 
-## Key Features
+**Key Features:**
 
-*   **Broad Platform Support:** Download videos from YouTube, plus 1000s of other sites.
-*   **Format Selection:** Choose the video and audio quality that suits your needs.
-*   **Playlist & Channel Downloads:** Download entire playlists, channels, or specific videos.
-*   **Customizable Output:**  Control file names, formats, and directory structures.
-*   **Metadata Extraction:**  Retrieve video titles, descriptions, and other metadata.
-*   **Subtitle Support:** Download and convert subtitles in various formats.
-*   **Post-Processing:** Convert and process downloaded videos with ffmpeg/avconv.
-*   **Cross-Platform:** Works on Linux, macOS, Windows, and other operating systems.
-*   **Easy to Update:** Keeps itself up-to-date with a simple command.
+*   **Wide Site Support:** Download from YouTube, Vimeo, Dailymotion, and many more platforms. ([See supported sites](https://ytdl-org.github.io/youtube-dl/supportedsites.html)).
+*   **Format Selection:** Choose the video and audio quality you want.
+*   **Playlist & Channel Downloads:** Download entire playlists and channels with ease.
+*   **Metadata Extraction:** Automatically retrieve video titles, descriptions, and more.
+*   **Customizable Output:** Control filenames and output formats with flexible templates.
+*   **Subtitle Support:** Download and convert subtitles.
+*   **Cross-Platform:** Works on Windows, macOS, and Linux.
+*   **Open Source & Public Domain:** Modify, redistribute, and use as you wish.
 
-## Table of Contents
+**Sections:**
 
 *   [Installation](#installation)
 *   [Description](#description)
@@ -35,441 +34,639 @@
     *   [Adobe Pass Options](#adobe-pass-options)
     *   [Post-processing Options](#post-processing-options)
 *   [Configuration](#configuration)
-    *   [.netrc Authentication](#authentication-with-netrc-file)
+    *   [Authentication with .netrc file](#authentication-with-.netrc-file)
 *   [Output Template](#output-template)
-    *   [Output Template Examples](#output-template-examples)
+    *   [Output template examples](#output-template-examples)
+    *   [Output template and Windows batch files](#output-template-and-windows-batch-files)
 *   [Format Selection](#format-selection)
-    *   [Format Selection Examples](#format-selection-examples)
+    *   [Format selection examples](#format-selection-examples)
 *   [Video Selection](#video-selection)
 *   [FAQ](#faq)
 *   [Developer Instructions](#developer-instructions)
-    *   [Adding Support for a New Site](#adding-support-for-a-new-site)
+    *   [Adding support for a new site](#adding-support-for-a-new-site)
     *   [youtube-dl coding conventions](#youtube-dl-coding-conventions)
 *   [Embedding youtube-dl](#embedding-youtube-dl)
 *   [Bugs](#bugs)
+    *   [Opening a bug report or suggestion](#opening-a-bug-report-or-suggestion)
 *   [Copyright](#copyright)
 
 ## Installation
 
-youtube-dl is easy to install on any operating system.
+Install youtube-dl on your operating system:
 
 **UNIX (Linux, macOS, etc.):**
+```bash
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+```
 
-1.  **Using `curl`:**
-
-    ```bash
-    sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-    sudo chmod a+rx /usr/local/bin/youtube-dl
-    ```
-
-2.  **Using `wget` (if you don't have `curl`):**
-
-    ```bash
-    sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
-    sudo chmod a+rx /usr/local/bin/youtube-dl
-    ```
+or, if you don't have `curl`:
+```bash
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+```
 
 **Windows:**
+1.  [Download the .exe file](https://yt-dl.org/latest/youtube-dl.exe).
+2.  Place it in a directory on your [PATH](https://en.wikipedia.org/wiki/PATH_%28variable%29), *except* `%SYSTEMROOT%\System32`.
 
-1.  [Download the `.exe` file](https://yt-dl.org/latest/youtube-dl.exe).
-2.  Place it in any directory included in your [PATH](https://en.wikipedia.org/wiki/PATH_%28variable%29), *except* for `%SYSTEMROOT%\System32`.
+**Pip:**
+```bash
+sudo -H pip install --upgrade youtube-dl
+```
+*Consider using a virtual environment when possible.*
 
-**Using `pip`:**
+**macOS (Homebrew):**
+```bash
+brew install youtube-dl
+```
 
-    ```bash
-    sudo -H pip install --upgrade youtube-dl
-    ```
+**macOS (MacPorts):**
+```bash
+sudo port install youtube-dl
+```
 
-**macOS (using Homebrew):**
-
-    ```bash
-    brew install youtube-dl
-    ```
-
-**macOS (using MacPorts):**
-
-    ```bash
-    sudo port install youtube-dl
-    ```
-
-**Alternative Installation:** Refer to the [youtube-dl Download Page](https://ytdl-org.github.io/youtube-dl/download.html) for further options, including PGP signatures or refer to the [developer instructions](#developer-instructions).
+For further installation options, including PGP signatures, see the [youtube-dl Download Page](https://ytdl-org.github.io/youtube-dl/download.html).
 
 ## Description
 
-youtube-dl is a versatile command-line tool designed to download videos from YouTube and a multitude of other websites. It's written in Python and works across various platforms, including Unix-like systems, Windows, and macOS.  It's free to use and modify under the public domain.
+youtube-dl is a versatile command-line program to download videos from a wide variety of websites, including YouTube. It's written in Python and works across multiple platforms. The program is released to the public domain, which means you can modify it, redistribute it or use it however you like.
+
+```bash
+youtube-dl [OPTIONS] URL [URL...]
+```
 
 ## Options
 
-youtube-dl offers a comprehensive set of options to customize your downloads. Here are some of the key categories:
+Run `youtube-dl -h` to see a full list of options. Here's a summary of the main options:
 
-*   `-h`, `--help`: Print help text and exit.
-*   `--version`: Print program version and exit.
-*   `-U`, `--update`: Update this program to latest version. Make sure that you have sufficient permissions (run with sudo if needed)
-*   `-i`, `--ignore-errors`: Continue on download errors, for example to skip unavailable videos in a playlist
-*   `--abort-on-error`: Abort downloading of further videos (in the playlist or the command line) if an error occurs
-*   `--dump-user-agent`: Display the current browser identification
-*   `--list-extractors`: List all supported extractors
-*   `--extractor-descriptions`: Output descriptions of all supported extractors
-*   `--force-generic-extractor`: Force extraction to use the generic extractor
-*   `--default-search PREFIX`: Use this prefix for unqualified URLs. For example "gvsearch2:" downloads two videos from google videos for youtube-dl "large apple". Use the value "auto" to let youtube-dl guess ("auto_warning" to emit a warning when guessing). "error" just throws an error. The default value "fixup_error" repairs broken URLs, but emits an error if this is not possible instead of searching.
-*   `--ignore-config`: Do not read configuration files. When given in the global configuration file /etc/youtube-dl.conf: Do not read the user configuration in ~/.config/youtube-dl/config (%APPDATA%/youtube-dl/config.txt on Windows)
-*   `--config-location PATH`: Location of the configuration file; either the path to the config or its containing directory.
-*   `--flat-playlist`: Do not extract the videos of a playlist, only list them.
-*   `--mark-watched`: Mark videos watched (YouTube only)
-*   `--no-mark-watched`: Do not mark videos watched (YouTube only)
-*   `--no-color`: Do not emit color codes in output
+```text
+-h, --help                           Print this help text and exit
+--version                            Print program version and exit
+-U, --update                         Update this program to latest version.
+                                         Make sure that you have sufficient
+                                         permissions (run with sudo if needed)
+-i, --ignore-errors                  Continue on download errors, for
+                                         example to skip unavailable videos in a
+                                         playlist
+--abort-on-error                     Abort downloading of further videos (in
+                                         the playlist or the command line) if an
+                                         error occurs
+--dump-user-agent                    Display the current browser
+                                         identification
+--list-extractors                    List all supported extractors
+--extractor-descriptions             Output descriptions of all supported
+                                         extractors
+--force-generic-extractor            Force extraction to use the generic
+                                         extractor
+--default-search PREFIX              Use this prefix for unqualified URLs.
+                                         For example "gvsearch2:" downloads two
+                                         videos from google videos for youtube-
+                                         dl "large apple". Use the value "auto"
+                                         to let youtube-dl guess ("auto_warning"
+                                         to emit a warning when guessing).
+                                         "error" just throws an error. The
+                                         default value "fixup_error" repairs
+                                         broken URLs, but emits an error if this
+                                         is not possible instead of searching.
+--ignore-config                      Do not read configuration files. When
+                                         given in the global configuration file
+                                         /etc/youtube-dl.conf: Do not read the
+                                         user configuration in
+                                         ~/.config/youtube-dl/config
+                                         (%APPDATA%/youtube-dl/config.txt on
+                                         Windows)
+--config-location PATH               Location of the configuration file;
+                                         either the path to the config or its
+                                         containing directory.
+--flat-playlist                      Do not extract the videos of a
+                                         playlist, only list them.
+--mark-watched                       Mark videos watched (YouTube only)
+--no-mark-watched                    Do not mark videos watched (YouTube
+                                         only)
+--no-color                           Do not emit color codes in output
+
+## Network Options:
+--proxy URL                          Use the specified HTTP/HTTPS/SOCKS
+                                         proxy. To enable SOCKS proxy, specify a
+                                         proper scheme. For example
+                                         socks5://127.0.0.1:1080/. Pass in an
+                                         empty string (--proxy "") for direct
+                                         connection
+--socket-timeout SECONDS             Time to wait before giving up, in
+                                         seconds
+--source-address IP                  Client-side IP address to bind to
+-4, --force-ipv4                     Make all connections via IPv4
+-6, --force-ipv6                     Make all connections via IPv6
+
+## Geo Restriction:
+--geo-verification-proxy URL         Use this proxy to verify the IP address
+                                         for some geo-restricted sites. The
+                                         default proxy specified by --proxy (or
+                                         none, if the option is not present) is
+                                         used for the actual downloading.
+--geo-bypass                         Bypass geographic restriction via
+                                         faking X-Forwarded-For HTTP header
+--no-geo-bypass                      Do not bypass geographic restriction
+                                         via faking X-Forwarded-For HTTP header
+--geo-bypass-country CODE            Force bypass geographic restriction
+                                         with explicitly provided two-letter ISO
+                                         3166-2 country code
+--geo-bypass-ip-block IP_BLOCK       Force bypass geographic restriction
+                                         with explicitly provided IP block in
+                                         CIDR notation
+
+## Video Selection:
+--playlist-start NUMBER              Playlist video to start at (default is
+                                         1)
+--playlist-end NUMBER                Playlist video to end at (default is
+                                         last)
+--playlist-items ITEM_SPEC           Playlist video items to download.
+                                         Specify indices of the videos in the
+                                         playlist separated by commas like: "--
+                                         playlist-items 1,2,5,8" if you want to
+                                         download videos indexed 1, 2, 5, 8 in
+                                         the playlist. You can specify range: "
+                                         --playlist-items 1-3,7,10-13", it will
+                                         download the videos at index 1, 2, 3,
+                                         7, 10, 11, 12 and 13.
+--match-title REGEX                  Download only matching titles (regex or
+                                         caseless sub-string)
+--reject-title REGEX                 Skip download for matching titles
+                                         (regex or caseless sub-string)
+--max-downloads NUMBER               Abort after downloading NUMBER files
+--min-filesize SIZE                  Do not download any videos smaller than
+                                         SIZE (e.g. 50k or 44.6m)
+--max-filesize SIZE                  Do not download any videos larger than
+                                         SIZE (e.g. 50k or 44.6m)
+--date DATE                          Download only videos uploaded in this
+                                         date
+--datebefore DATE                    Download only videos uploaded on or
+                                         before this date (i.e. inclusive)
+--dateafter DATE                     Download only videos uploaded on or
+                                         after this date (i.e. inclusive)
+--min-views COUNT                    Do not download any videos with less
+                                         than COUNT views
+--max-views COUNT                    Do not download any videos with more
+                                         than COUNT views
+--match-filter FILTER                Generic video filter. Specify any key
+                                         (see the "OUTPUT TEMPLATE" for a list
+                                         of available keys) to match if the key
+                                         is present, !key to check if the key is
+                                         not present, key > NUMBER (like
+                                         "comment_count > 12", also works with
+                                         >=, <, <=, !=, =) to compare against a
+                                         number, key = 'LITERAL' (like "uploader
+                                         = 'Mike Smith'", also works with !=) to
+                                         match against a string literal and & to
+                                         require multiple matches. Values which
+                                         are not known are excluded unless you
+                                         put a question mark (?) after the
+                                         operator. For example, to only match
+                                         videos that have been liked more than
+                                         100 times and disliked less than 50
+                                         times (or the dislike functionality is
+                                         not available at the given service),
+                                         but who also have a description, use
+                                         --match-filter "like_count > 100 &
+                                         dislike_count <? 50 & description" .
+--no-playlist                        Download only the video, if the URL
+                                         refers to a video and a playlist.
+--yes-playlist                       Download the playlist, if the URL
+                                         refers to a video and a playlist.
+--age-limit YEARS                    Download only videos suitable for the
+                                         given age
+--download-archive FILE              Download only videos not listed in the
+                                         archive file. Record the IDs of all
+                                         downloaded videos in it.
+--include-ads                        Download advertisements as well
+                                         (experimental)
+
+## Download Options:
+-r, --limit-rate RATE                Maximum download rate in bytes per
+                                         second (e.g. 50K or 4.2M)
+-R, --retries RETRIES                Number of retries (default is 10), or
+                                         "infinite".
+--fragment-retries RETRIES           Number of retries for a fragment
+                                         (default is 10), or "infinite" (DASH,
+                                         hlsnative and ISM)
+--skip-unavailable-fragments         Skip unavailable fragments (DASH,
+                                         hlsnative and ISM)
+--abort-on-unavailable-fragment      Abort downloading when some fragment is
+                                         not available
+--keep-fragments                     Keep downloaded fragments on disk after
+                                         downloading is finished; fragments are
+                                         erased by default
+--buffer-size SIZE                   Size of download buffer (e.g. 1024 or
+                                         16K) (default is 1024)
+--no-resize-buffer                   Do not automatically adjust the buffer
+                                         size. By default, the buffer size is
+                                         automatically resized from an initial
+                                         value of SIZE.
+--http-chunk-size SIZE               Size of a chunk for chunk-based HTTP
+                                         downloading (e.g. 10485760 or 10M)
+                                         (default is disabled). May be useful
+                                         for bypassing bandwidth throttling
+                                         imposed by a webserver (experimental)
+--playlist-reverse                   Download playlist videos in reverse
+                                         order
+--playlist-random                    Download playlist videos in random
+                                         order
+--xattr-set-filesize                 Set file xattribute ytdl.filesize with
+                                         expected file size
+--hls-prefer-native                  Use the native HLS downloader instead
+                                         of ffmpeg
+--hls-prefer-ffmpeg                  Use ffmpeg instead of the native HLS
+                                         downloader
+--hls-use-mpegts                     Use the mpegts container for HLS
+                                         videos, allowing to play the video
+                                         while downloading (some players may not
+                                         be able to play it)
+--external-downloader COMMAND        Use the specified external downloader.
+                                         Currently supports aria2c,avconv,axel,c
+                                         url,ffmpeg,httpie,wget
+--external-downloader-args ARGS      Give these arguments to the external
+                                         downloader
+
+## Filesystem Options:
+-a, --batch-file FILE                File containing URLs to download ('-'
+                                         for stdin), one URL per line. Lines
+                                         starting with '#', ';' or ']' are
+                                         considered as comments and ignored.
+--id                                 Use only video ID in file name
+-o, --output TEMPLATE                Output filename template, see the
+                                         "OUTPUT TEMPLATE" for all the info
+--output-na-placeholder PLACEHOLDER  Placeholder value for unavailable meta
+                                         fields in output filename template
+                                         (default is "NA")
+--autonumber-start NUMBER            Specify the start value for
+                                         %(autonumber)s (default is 1)
+--restrict-filenames                 Restrict filenames to only ASCII
+                                         characters, and avoid "&" and spaces in
+                                         filenames
+-w, --no-overwrites                  Do not overwrite files
+-c, --continue                       Force resume of partially downloaded
+                                         files. By default, youtube-dl will
+                                         resume downloads if possible.
+--no-continue                        Do not resume partially downloaded
+                                         files (restart from beginning)
+--no-part                            Do not use .part files - write directly
+                                         into output file
+--no-mtime                           Do not use the Last-modified header to
+                                         set the file modification time
+--write-description                  Write video description to a
+                                         .description file
+--write-info-json                    Write video metadata to a .info.json
+                                         file
+--write-annotations                  Write video annotations to a
+                                         .annotations.xml file
+--load-info-json FILE                JSON file containing the video
+                                         information (created with the "--write-
+                                         info-json" option)
+--cookies FILE                       File to read cookies from and dump
+                                         cookie jar in
+--cache-dir DIR                      Location in the filesystem where
+                                         youtube-dl can store some downloaded
+                                         information permanently. By default
+                                         $XDG_CACHE_HOME/youtube-dl or
+                                         ~/.cache/youtube-dl . At the moment,
+                                         only YouTube player files (for videos
+                                         with obfuscated signatures) are cached,
+                                         but that may change.
+--no-cache-dir                       Disable filesystem caching
+--rm-cache-dir                       Delete all filesystem cache files
+
+## Thumbnail Options:
+--write-thumbnail                    Write thumbnail image to disk
+--write-all-thumbnails               Write all thumbnail image formats to
+                                         disk
+--list-thumbnails                    Simulate and list all available
+                                         thumbnail formats
+
+## Verbosity / Simulation Options:
+-q, --quiet                          Activate quiet mode
+--no-warnings                        Ignore warnings
+-s, --simulate                       Do not download the video and do not
+                                         write anything to disk
+--skip-download                      Do not download the video
+-g, --get-url                        Simulate, quiet but print URL
+-e, --get-title                      Simulate, quiet but print title
+--get-id                             Simulate, quiet but print id
+--get-thumbnail                      Simulate, quiet but print thumbnail URL
+--get-description                    Simulate, quiet but print video
+                                         description
+--get-duration                       Simulate, quiet but print video length
+--get-filename                       Simulate, quiet but print output
+                                         filename
+--get-format                         Simulate, quiet but print output format
+-j, --dump-json                      Simulate, quiet but print JSON
+                                         information. See the "OUTPUT TEMPLATE"
+                                         for a description of available keys.
+-J, --dump-single-json               Simulate, quiet but print JSON
+                                         information for each command-line
+                                         argument. If the URL refers to a
+                                         playlist, dump the whole playlist
+                                         information in a single line.
+--print-json                         Be quiet and print the video
+                                         information as JSON (video is still
+                                         being downloaded).
+--newline                            Output progress bar as new lines
+--no-progress                        Do not print progress bar
+--console-title                      Display progress in console titlebar
+-v, --verbose                        Print various debugging information
+--dump-pages                         Print downloaded pages encoded using
+                                         base64 to debug problems (very verbose)
+--write-pages                        Write downloaded intermediary pages to
+                                         files in the current directory to debug
+                                         problems
+--print-traffic                      Display sent and read HTTP traffic
+-C, --call-home                      Contact the youtube-dl server for
+                                         debugging
+--no-call-home                       Do NOT contact the youtube-dl server
+                                         for debugging
+
+## Workarounds:
+--encoding ENCODING                  Force the specified encoding
+                                         (experimental)
+--no-check-certificate               Suppress HTTPS certificate validation
+--prefer-insecure                    Use an unencrypted connection to
+                                         retrieve information about the video.
+                                         (Currently supported only for YouTube)
+--user-agent UA                      Specify a custom user agent
+--referer URL                        Specify a custom referer, use if the
+                                         video access is restricted to one
+                                         domain
+--add-header FIELD:VALUE             Specify a custom HTTP header and its
+                                         value, separated by a colon ':'. You
+                                         can use this option multiple times
+--bidi-workaround                    Work around terminals that lack
+                                         bidirectional text support. Requires
+                                         bidiv or fribidi executable in PATH
+--sleep-interval SECONDS             Number of seconds to sleep before each
+                                         download when used alone or a lower
+                                         bound of a range for randomized sleep
+                                         before each download (minimum possible
+                                         number of seconds to sleep) when used
+                                         along with --max-sleep-interval.
+--max-sleep-interval SECONDS         Upper bound of a range for randomized
+                                         sleep before each download (maximum
+                                         possible number of seconds to sleep).
+                                         Must only be used along with --min-
+                                         sleep-interval.
+
+## Video Format Options:
+-f, --format FORMAT                  Video format code, see the "FORMAT
+                                         SELECTION" for all the info
+--all-formats                        Download all available video formats
+--prefer-free-formats                Prefer free video formats unless a
+                                         specific one is requested
+-F, --list-formats                   List all available formats of requested
+                                         videos
+--youtube-skip-dash-manifest         Do not download the DASH manifests and
+                                         related data on YouTube videos
+--merge-output-format FORMAT         If a merge is required (e.g.
+                                         bestvideo+bestaudio), output to given
+                                         container format. One of mkv, mp4, ogg,
+                                         webm, flv. Ignored if no merge is
+                                         required
+
+## Subtitle Options:
+--write-sub                          Write subtitle file
+--write-auto-sub                     Write automatically generated subtitle
+                                         file (YouTube only)
+--all-subs                           Download all the available subtitles of
+                                         the video
+--list-subs                          List all available subtitles for the
+                                         video
+--sub-format FORMAT                  Subtitle format, accepts formats
+                                         preference, for example: "srt" or
+                                         "ass/srt/best"
+--sub-lang LANGS                     Languages of the subtitles to download
+                                         (optional) separated by commas, use
+                                         --list-subs for available language tags
+
+## Authentication Options:
+-u, --username USERNAME              Login with this account ID
+-p, --password PASSWORD              Account password. If this option is
+                                         left out, youtube-dl will ask
+                                         interactively.
+-2, --twofactor TWOFACTOR            Two-factor authentication code
+-n, --netrc                          Use .netrc authentication data
+--video-password PASSWORD            Video password (vimeo, youku)
+
+## Adobe Pass Options:
+--ap-mso MSO                         Adobe Pass multiple-system operator (TV
+                                         provider) identifier, use --ap-list-mso
+                                         for a list of available MSOs
+--ap-username USERNAME               Multiple-system operator account login
+--ap-password PASSWORD               Multiple-system operator account
+                                         password. If this option is left out,
+                                         youtube-dl will ask interactively.
+--ap-list-mso                        List all supported multiple-system
+                                         operators
+
+## Post-processing Options:
+-x, --extract-audio                  Convert video files to audio-only files
+                                         (requires ffmpeg/avconv and
+                                         ffprobe/avprobe)
+--audio-format FORMAT                Specify audio format: "best", "aac",
+                                         "flac", "mp3", "m4a", "opus", "vorbis",
+                                         or "wav"; "best" by default; No effect
+                                         without -x
+--audio-quality QUALITY              Specify ffmpeg/avconv audio quality,
+                                         insert a value between 0 (better) and 9
+                                         (worse) for VBR or a specific bitrate
+                                         like 128K (default 5)
+--recode-video FORMAT                Encode the video to another format if
+                                         necessary (currently supported:
+                                         mp4|flv|ogg|webm|mkv|avi)
+--postprocessor-args ARGS            Give these arguments to the
+                                         postprocessor
+-k, --keep-video                     Keep the video file on disk after the
+                                         post-processing; the video is erased by
+                                         default
+--no-post-overwrites                 Do not overwrite post-processed files;
+                                         the post-processed files are
+                                         overwritten by default
+--embed-subs                         Embed subtitles in the video (only for
+                                         mp4, webm and mkv videos)
+--embed-thumbnail                    Embed thumbnail in the audio as cover
+                                         art
+--add-metadata                       Write metadata to the video file
+--metadata-from-title FORMAT         Parse additional metadata like song
+                                         title / artist from the video title.
+                                         The format syntax is the same as
+                                         --output. Regular expression with named
+                                         capture groups may also be used. The
+                                         parsed parameters replace existing
+                                         values. Example: --metadata-from-title
+                                         "%(artist)s - %(title)s" matches a
+                                         title like "Coldplay - Paradise".
+                                         Example (regex): --metadata-from-title
+                                         "(?P<artist>.+?) - (?P<title>.+)"
+--xattrs                             Write metadata to the video file's
+                                         xattrs (using dublin core and xdg
+                                         standards)
+--fixup POLICY                       Automatically correct known faults of
+                                         the file. One of never (do nothing),
+                                         warn (only emit a warning),
+                                         detect_or_warn (the default; fix file
+                                         if we can, warn otherwise)
+--prefer-avconv                      Prefer avconv over ffmpeg for running
+                                         the postprocessors
+--prefer-ffmpeg                      Prefer ffmpeg over avconv for running
+                                         the postprocessors (default)
+--ffmpeg-location PATH               Location of the ffmpeg/avconv binary;
+                                         either the path to the binary or its
+                                         containing directory.
+--exec CMD                           Execute a command on the file after
+                                         downloading and post-processing,
+                                         similar to find's -exec syntax.
+                                         Example: --exec 'adb push {}
+                                         /sdcard/Music/ && rm {}'
+--convert-subs FORMAT                Convert the subtitles to other format
+                                         (currently supported: srt|ass|vtt|lrc)
+```
 
 ### Network Options
-
-*   `--proxy URL`: Use the specified HTTP/HTTPS/SOCKS proxy.
-*   `--socket-timeout SECONDS`: Time to wait before giving up, in seconds.
-*   `--source-address IP`: Client-side IP address to bind to.
-*   `-4`, `--force-ipv4`: Make all connections via IPv4.
-*   `-6`, `--force-ipv6`: Make all connections via IPv6.
+*   **--proxy URL**: Use a proxy server for downloads.
+*   **--socket-timeout SECONDS**: Set a timeout for network operations.
+*   **--source-address IP**: Bind to a specific client-side IP address.
+*   **-4, --force-ipv4**: Force IPv4 connections.
+*   **-6, --force-ipv6**: Force IPv6 connections.
 
 ### Geo Restriction
-
-*   `--geo-verification-proxy URL`: Use this proxy to verify the IP address for some geo-restricted sites.
-*   `--geo-bypass`: Bypass geographic restriction via faking X-Forwarded-For HTTP header.
-*   `--no-geo-bypass`: Do not bypass geographic restriction via faking X-Forwarded-For HTTP header.
-*   `--geo-bypass-country CODE`: Force bypass geographic restriction with explicitly provided two-letter ISO 3166-2 country code.
-*   `--geo-bypass-ip-block IP_BLOCK`: Force bypass geographic restriction with explicitly provided IP block in CIDR notation.
+*   **--geo-verification-proxy URL**: Use a proxy to verify the IP address for geo-restricted sites.
+*   **--geo-bypass**: Bypass geographic restrictions.
+*   **--geo-bypass-country CODE**: Force a specific two-letter country code.
+*   **--geo-bypass-ip-block IP_BLOCK**: Force bypass with an IP block in CIDR notation.
 
 ### Video Selection
-
-*   `--playlist-start NUMBER`: Playlist video to start at (default is 1).
-*   `--playlist-end NUMBER`: Playlist video to end at (default is last).
-*   `--playlist-items ITEM_SPEC`: Playlist video items to download.
-*   `--match-title REGEX`: Download only matching titles (regex or caseless sub-string).
-*   `--reject-title REGEX`: Skip download for matching titles (regex or caseless sub-string).
-*   `--max-downloads NUMBER`: Abort after downloading NUMBER files.
-*   `--min-filesize SIZE`: Do not download any videos smaller than SIZE (e.g. 50k or 44.6m).
-*   `--max-filesize SIZE`: Do not download any videos larger than SIZE (e.g. 50k or 44.6m).
-*   `--date DATE`: Download only videos uploaded in this date.
-*   `--datebefore DATE`: Download only videos uploaded on or before this date (i.e. inclusive).
-*   `--dateafter DATE`: Download only videos uploaded on or after this date (i.e. inclusive).
-*   `--min-views COUNT`: Do not download any videos with less than COUNT views.
-*   `--max-views COUNT`: Do not download any videos with more than COUNT views.
-*   `--match-filter FILTER`: Generic video filter.
-*   `--no-playlist`: Download only the video, if the URL refers to a video and a playlist.
-*   `--yes-playlist`: Download the playlist, if the URL refers to a video and a playlist.
-*   `--age-limit YEARS`: Download only videos suitable for the given age.
-*   `--download-archive FILE`: Download only videos not listed in the archive file. Record the IDs of all downloaded videos in it.
-*   `--include-ads`: Download advertisements as well (experimental).
+*   **--playlist-start NUMBER**: Start playlist download at this index.
+*   **--playlist-end NUMBER**: End playlist download at this index.
+*   **--playlist-items ITEM_SPEC**: Download specific playlist items (e.g., "1,3,5-7").
+*   **--match-title REGEX**: Download only videos with titles matching the regex.
+*   **--reject-title REGEX**: Skip videos with titles matching the regex.
+*   **--max-downloads NUMBER**: Limit the number of downloads.
+*   **--min-filesize SIZE**: Don't download videos smaller than a certain size.
+*   **--max-filesize SIZE**: Don't download videos larger than a certain size.
+*   **--date DATE**: Download videos uploaded on a specific date.
+*   **--datebefore DATE**: Download videos uploaded on or before a date.
+*   **--dateafter DATE**: Download videos uploaded on or after a date.
+*   **--min-views COUNT**: Download videos with at least this many views.
+*   **--max-views COUNT**: Download videos with no more than this many views.
+*   **--match-filter FILTER**: Download using a generic video filter.
+*   **--no-playlist**: Download only the video, if the URL refers to a video and a playlist.
+*   **--yes-playlist**: Download the playlist, if the URL refers to a video and a playlist.
+*   **--age-limit YEARS**:  Download videos suitable for the given age.
+*   **--download-archive FILE**: Download only videos not listed in the archive file.
+*   **--include-ads**: Download advertisements as well (experimental).
 
 ### Download Options
-
-*   `-r`, `--limit-rate RATE`: Maximum download rate in bytes per second (e.g. 50K or 4.2M).
-*   `-R`, `--retries RETRIES`: Number of retries (default is 10), or "infinite".
-*   `--fragment-retries RETRIES`: Number of retries for a fragment (default is 10), or "infinite" (DASH, hlsnative and ISM).
-*   `--skip-unavailable-fragments`: Skip unavailable fragments (DASH, hlsnative and ISM).
-*   `--abort-on-unavailable-fragment`: Abort downloading when some fragment is not available.
-*   `--keep-fragments`: Keep downloaded fragments on disk after downloading is finished; fragments are erased by default.
-*   `--buffer-size SIZE`: Size of download buffer (e.g. 1024 or 16K) (default is 1024).
-*   `--no-resize-buffer`: Do not automatically adjust the buffer size. By default, the buffer size is automatically resized from an initial value of SIZE.
-*   `--http-chunk-size SIZE`: Size of a chunk for chunk-based HTTP downloading (e.g. 10485760 or 10M) (default is disabled).
-*   `--playlist-reverse`: Download playlist videos in reverse order.
-*   `--playlist-random`: Download playlist videos in random order.
-*   `--xattr-set-filesize`: Set file xattribute ytdl.filesize with expected file size.
-*   `--hls-prefer-native`: Use the native HLS downloader instead of ffmpeg.
-*   `--hls-prefer-ffmpeg`: Use ffmpeg instead of the native HLS downloader.
-*   `--hls-use-mpegts`: Use the mpegts container for HLS videos, allowing to play the video while downloading (some players may not be able to play it).
-*   `--external-downloader COMMAND`: Use the specified external downloader.
-*   `--external-downloader-args ARGS`: Give these arguments to the external downloader.
+*   **-r, --limit-rate RATE**: Limit download speed (e.g., "50k" or "2M").
+*   **-R, --retries RETRIES**: Number of download retries.
+*   **--fragment-retries RETRIES**: Number of retries for a fragment (DASH, hlsnative and ISM)
+*   **--skip-unavailable-fragments**: Skip unavailable fragments (DASH, hlsnative and ISM)
+*   **--abort-on-unavailable-fragment**: Abort downloading when some fragment is not available
+*   **--keep-fragments**: Keep downloaded fragments on disk.
+*   **--buffer-size SIZE**: Set download buffer size.
+*   **--no-resize-buffer**: Do not automatically adjust the buffer size.
+*   **--http-chunk-size SIZE**: Set chunk size for HTTP downloading.
+*   **--playlist-reverse**: Download playlist videos in reverse order.
+*   **--playlist-random**: Download playlist videos in random order.
+*   **--xattr-set-filesize**: Set file xattribute ytdl.filesize with expected file size.
+*   **--hls-prefer-native**: Use the native HLS downloader instead of ffmpeg.
+*   **--hls-prefer-ffmpeg**: Use ffmpeg instead of the native HLS downloader.
+*   **--hls-use-mpegts**: Use the mpegts container for HLS videos.
+*   **--external-downloader COMMAND**: Use an external downloader (aria2c, avconv, axel, curl, ffmpeg, httpie, wget).
+*   **--external-downloader-args ARGS**: Arguments for the external downloader.
 
 ### Filesystem Options
-
-*   `-a`, `--batch-file FILE`: File containing URLs to download ('-' for stdin), one URL per line.
-*   `--id`: Use only video ID in file name.
-*   `-o`, `--output TEMPLATE`: Output filename template, see the "OUTPUT TEMPLATE" for all the info.
-*   `--output-na-placeholder PLACEHOLDER`: Placeholder value for unavailable meta fields in output filename template (default is "NA").
-*   `--autonumber-start NUMBER`: Specify the start value for %(autonumber)s (default is 1).
-*   `--restrict-filenames`: Restrict filenames to only ASCII characters, and avoid "&" and spaces in filenames.
-*   `-w`, `--no-overwrites`: Do not overwrite files.
-*   `-c`, `--continue`: Force resume of partially downloaded files.
-*   `--no-continue`: Do not resume partially downloaded files (restart from beginning).
-*   `--no-part`: Do not use .part files - write directly into output file.
-*   `--no-mtime`: Do not use the Last-modified header to set the file modification time.
-*   `--write-description`: Write video description to a .description file.
-*   `--write-info-json`: Write video metadata to a .info.json file.
-*   `--write-annotations`: Write video annotations to a .annotations.xml file.
-*   `--load-info-json FILE`: JSON file containing the video information (created with the "--write-info-json" option).
-*   `--cookies FILE`: File to read cookies from and dump cookie jar in.
-*   `--cache-dir DIR`: Location in the filesystem where youtube-dl can store some downloaded information permanently.
-*   `--no-cache-dir`: Disable filesystem caching.
-*   `--rm-cache-dir`: Delete all filesystem cache files.
+*   **-a, --batch-file FILE**: Download from a file containing URLs.
+*   **--id**: Use only the video ID for the filename.
+*   **-o, --output TEMPLATE**: Set the output filename template.
+*   **--output-na-placeholder PLACEHOLDER**: Placeholder value for unavailable meta fields in output filename template
+*   **--autonumber-start NUMBER**: Specify the start value for %(autonumber)s.
+*   **--restrict-filenames**: Restrict filenames to ASCII characters and avoid spaces/special chars.
+*   **-w, --no-overwrites**: Don't overwrite existing files.
+*   **-c, --continue**: Resume partially downloaded files.
+*   **--no-continue**: Restart downloads from the beginning.
+*   **--no-part**: Write directly to the output file (no .part files).
+*   **--no-mtime**: Don't set the file modification time.
+*   **--write-description**: Write video description to a .description file.
+*   **--write-info-json**: Write video metadata to a .info.json file.
+*   **--write-annotations**: Write video annotations to a .annotations.xml file.
+*   **--load-info-json FILE**: Load video information from a .info.json file.
+*   **--cookies FILE**: Read cookies from a file.
+*   **--cache-dir DIR**: Set the cache directory.
+*   **--no-cache-dir**: Disable caching.
+*   **--rm-cache-dir**: Delete the cache.
 
 ### Thumbnail Options
-
-*   `--write-thumbnail`: Write thumbnail image to disk.
-*   `--write-all-thumbnails`: Write all thumbnail image formats to disk.
-*   `--list-thumbnails`: Simulate and list all available thumbnail formats.
+*   **--write-thumbnail**: Write the thumbnail image to disk.
+*   **--write-all-thumbnails**: Write all available thumbnail formats.
+*   **--list-thumbnails**: List available thumbnail formats.
 
 ### Verbosity / Simulation Options
-
-*   `-q`, `--quiet`: Activate quiet mode.
-*   `--no-warnings`: Ignore warnings.
-*   `-s`, `--simulate`: Do not download the video and do not write anything to disk.
-*   `--skip-download`: Do not download the video.
-*   `-g`, `--get-url`: Simulate, quiet but print URL.
-*   `-e`, `--get-title`: Simulate, quiet but print title.
-*   `--get-id`: Simulate, quiet but print id.
-*   `--get-thumbnail`: Simulate, quiet but print thumbnail URL.
-*   `--get-description`: Simulate, quiet but print video description.
-*   `--get-duration`: Simulate, quiet but print video length.
-*   `--get-filename`: Simulate, quiet but print output filename.
-*   `--get-format`: Simulate, quiet but print output format.
-*   `-j`, `--dump-json`: Simulate, quiet but print JSON information.
-*   `-J`, `--dump-single-json`: Simulate, quiet but print JSON information for each command-line argument.
-*   `--print-json`: Be quiet and print the video information as JSON (video is still being downloaded).
-*   `--newline`: Output progress bar as new lines.
-*   `--no-progress`: Do not print progress bar.
-*   `--console-title`: Display progress in console titlebar.
-*   `-v`, `--verbose`: Print various debugging information.
-*   `--dump-pages`: Print downloaded pages encoded using base64 to debug problems (very verbose).
-*   `--write-pages`: Write downloaded intermediary pages to files in the current directory to debug problems.
-*   `--print-traffic`: Display sent and read HTTP traffic.
-*   `-C`, `--call-home`: Contact the youtube-dl server for debugging.
-*   `--no-call-home`: Do NOT contact the youtube-dl server for debugging.
+*   **-q, --quiet**: Quiet mode.
+*   **--no-warnings**: Suppress warnings.
+*   **-s, --simulate**: Simulate download (don't write to disk).
+*   **--skip-download**: Don't download the video.
+*   **-g, --get-url**: Simulate, print the URL.
+*   **-e, --get-title**: Simulate, print the title.
+*   **--get-id**: Simulate, print the ID.
+*   **--get-thumbnail**: Simulate, print the thumbnail URL.
+*   **--get-description**: Simulate, print the video description.
+*   **--get-duration**: Simulate, print the video length.
+*   **--get-filename**: Simulate, print the output filename.
+*   **--get-format**: Simulate, print the output format.
+*   **-j, --dump-json**: Simulate, print JSON information.
+*   **-J, --dump-single-json**: Simulate, print JSON information for each argument.
+*   **--print-json**: Print video info as JSON (while downloading).
+*   **--newline**: Output progress bar on new lines.
+*   **--no-progress**: Don't show the progress bar.
+*   **--console-title**: Display progress in the console title.
+*   **-v, --verbose**: Verbose mode (print debugging info).
+*   **--dump-pages**: Print downloaded pages (encoded in base64).
+*   **--write-pages**: Write downloaded intermediary pages to files.
+*   **--print-traffic**: Display HTTP traffic.
+*   **-C, --call-home**: Contact the youtube-dl server for debugging.
+*   **--no-call-home**: Do not contact the youtube-dl server for debugging.
 
 ### Workarounds
-
-*   `--encoding ENCODING`: Force the specified encoding (experimental).
-*   `--no-check-certificate`: Suppress HTTPS certificate validation.
-*   `--prefer-insecure`: Use an unencrypted connection to retrieve information about the video.
-*   `--user-agent UA`: Specify a custom user agent.
-*   `--referer URL`: Specify a custom referer, use if the video access is restricted to one domain.
-*   `--add-header FIELD:VALUE`: Specify a custom HTTP header and its value, separated by a colon ':'.
-*   `--bidi-workaround`: Work around terminals that lack bidirectional text support.
-*   `--sleep-interval SECONDS`: Number of seconds to sleep before each download.
-*   `--max-sleep-interval SECONDS`: Upper bound of a range for randomized sleep before each download.
+*   **--encoding ENCODING**: Force the specified encoding.
+*   **--no-check-certificate**: Suppress HTTPS certificate validation.
+*   **--prefer-insecure**: Use an unencrypted connection for YouTube.
+*   **--user-agent UA**: Specify a custom user agent.
+*   **--referer URL**: Specify a custom referer.
+*   **--add-header FIELD:VALUE**: Add a custom HTTP header.
+*   **--bidi-workaround**: Work around terminals lacking bidirectional text support.
+*   **--sleep-interval SECONDS**:  Sleep between downloads.
+*   **--max-sleep-interval SECONDS**: Maximum sleep interval.
 
 ### Video Format Options
-
-*   `-f`, `--format FORMAT`: Video format code, see the "FORMAT SELECTION" for all the info.
-*   `--all-formats`: Download all available video formats.
-*   `--prefer-free-formats`: Prefer free video formats unless a specific one is requested.
-*   `-F`, `--list-formats`: List all available formats of requested videos.
-*   `--youtube-skip-dash-manifest`: Do not download the DASH manifests and related data on YouTube videos.
-*   `--merge-output-format FORMAT`: If a merge is required (e.g. bestvideo+bestaudio), output to given container format.
+*   **-f, --format FORMAT**: Select video format (see "FORMAT SELECTION" below).
+*   **--all-formats**: Download all available formats.
+*   **--prefer-free-formats**: Prefer free video formats.
+*   **-F, --list-formats**: List available formats.
+*   **--youtube-skip-dash-manifest**: Don't download DASH manifests for YouTube.
+*   **--merge-output-format FORMAT**: Merge video and audio to a specific format (mkv, mp4, ogg, webm, flv).
 
 ### Subtitle Options
-
-*   `--write-sub`: Write subtitle file.
-*   `--write-auto-sub`: Write automatically generated subtitle file (YouTube only).
-*   `--all-subs`: Download all the available subtitles of the video.
-*   `--list-subs`: List all available subtitles for the video.
-*   `--sub-format FORMAT`: Subtitle format.
-*   `--sub-lang LANGS`: Languages of the subtitles to download.
+*   **--write-sub**: Write subtitle file.
+*   **--write-auto-sub**: Write automatically generated subtitles (YouTube only).
+*   **--all-subs**: Download all available subtitles.
+*   **--list-subs**: List available subtitles.
+*   **--sub-format FORMAT**: Subtitle format (srt, ass, vtt, lrc).
+*   **--sub-lang LANGS**: Subtitle languages (comma-separated).
 
 ### Authentication Options
-
-*   `-u`, `--username USERNAME`: Login with this account ID.
-*   `-p`, `--password PASSWORD`: Account password.
-*   `-2`, `--twofactor TWOFACTOR`: Two-factor authentication code.
-*   `-n`, `--netrc`: Use .netrc authentication data.
-*   `--video-password PASSWORD`: Video password (vimeo, youku).
+*   **-u, --username USERNAME**: Login username.
+*   **-p, --password PASSWORD**: Login password.
+*   **-2, --twofactor TWOFACTOR**: Two-factor authentication code.
+*   **-n, --netrc**: Use .netrc authentication data.
+*   **--video-password PASSWORD**: Video password (Vimeo, Youku).
 
 ### Adobe Pass Options
-
-*   `--ap-mso MSO`: Adobe Pass multiple-system operator (TV provider) identifier.
-*   `--ap-username USERNAME`: Multiple-system operator account login.
-*   `--ap-password PASSWORD`: Multiple-system operator account password.
-*   `--ap-list-mso`: List all supported multiple-system operators.
-
-### Post-processing Options
-
-*   `-x`, `--extract-audio`: Convert video files to audio-only files (requires ffmpeg/avconv and ffprobe/avprobe).
-*   `--audio-format FORMAT`: Specify audio format.
-*   `--audio-quality QUALITY`: Specify ffmpeg/avconv audio quality.
-*   `--recode-video FORMAT`: Encode the video to another format if necessary.
-*   `--postprocessor-args ARGS`: Give these arguments to the postprocessor.
-*   `-k`, `--keep-video`: Keep the video file on disk after the post-processing; the video is erased by default.
-*   `--no-post-overwrites`: Do not overwrite post-processed files; the post-processed files are overwritten by default.
-*   `--embed-subs`: Embed subtitles in the video (only for mp4, webm and mkv videos).
-*   `--embed-thumbnail`: Embed thumbnail in the audio as cover art.
-*   `--add-metadata`: Write metadata to the video file.
-*   `--metadata-from-title FORMAT`: Parse additional metadata like song title / artist from the video title.
-*   `--xattrs`: Write metadata to the video file's xattrs (using dublin core and xdg standards).
-*   `--fixup POLICY`: Automatically correct known faults of the file.
-*   `--prefer-avconv`: Prefer avconv over ffmpeg for running the postprocessors.
-*   `--prefer-ffmpeg`: Prefer ffmpeg over avconv for running the postprocessors (default).
-*   `--ffmpeg-location PATH`: Location of the ffmpeg/avconv binary.
-*   `--exec CMD`: Execute a command on the file after downloading and post-processing.
-*   `--convert-subs FORMAT`: Convert the subtitles to other format (currently supported: srt|ass|vtt|lrc).
-
-## Configuration
-
-youtube-dl can be configured through a configuration file.
-
-**Linux/macOS:**
-
-*   System-wide: `/etc/youtube-dl.conf`
-*   User-specific: `~/.config/youtube-dl/config`
-
-**Windows:**
-
-*   User-specific: `%APPDATA%\youtube-dl\config.txt` or `C:\Users\<user name>\youtube-dl.conf`
-
-To disable the configuration file for a particular run use `--ignore-config`.
-To use a custom configuration file for a particular run use `--config-location`.
-
-### .netrc Authentication
-
-youtube-dl supports automatic credential storage using a `.netrc` file for extractors that support authentication.  You should pass `--netrc` to youtube-dl or place it in the [configuration file](#configuration).
-
-1.  Create a `.netrc` file (e.g., `touch $HOME/.netrc`) and restrict permissions (e.g., `chmod a-rwx,u+rw $HOME/.netrc`).
-2.  Add credentials for each extractor:
-
-    ```
-    machine <extractor> login <login> password <password>
-    ```
-
-    Example:
-
-    ```
-    machine youtube login myaccount@gmail.com password my_youtube_password
-    machine twitch login my_twitch_account_name password my_twitch_password
-    ```
-
-    On Windows, you may also need to setup the `%HOME%` environment variable manually.
-
-    ```
-    set HOME=%USERPROFILE%
-    ```
-
-## Output Template
-
-The `-o` option allows you to customize output filenames.
-
-*   **`%(id)s`**:  Video identifier.
-*   **`%(title)s`**: Video title.
-*   **`%(url)s`**: Video URL.
-*   **`%(ext)s`**: Video filename extension.
-*   **`%(playlist)s`**: Playlist name.
-*   **`%(playlist_index)s`**: Video index in the playlist.
-*   ...and many more metadata fields.
-
-Use `%` followed by a name within parentheses, such as `%(title)s` or `%(id)s`. Numeric sequences can be formatted (e.g., `%(view_count)05d` to pad with leading zeros). Use `%%` for a literal percent sign.
-
-**Default Template:** `%(title)s-%(id)s.%(ext)s`
-
-### Output Template Examples
-
-```bash
-# Simple example
-youtube-dl -o '%(title)s.%(ext)s' "https://www.youtube.com/watch?v=BaW_jenozKc"
-
-# Download YouTube playlist videos in a separate directory, indexed by video order
-youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' https://www.youtube.com/playlist?list=PLwiyx1dc3P2JR9N8gQaQN_BCvlSlap7re
-
-# Stream video to stdout (for use with a player)
-youtube-dl -o - "https://www.youtube.com/watch?v=BaW_jenozKc" | vlc -
-```
-
-## Format Selection
-
-The `-f` or `--format` option allows you to select the video and audio quality.
-
-*   **`best`**: Best available quality (single file).
-*   **`worst`**: Worst available quality (single file).
-*   **`bestvideo`**: Best video-only format.
-*   **`bestaudio`**: Best audio-only format.
-*   **`<format_code>`**:  Specific format code (use `-F` to list available codes).
-*   **`<extension>`**: Best quality format of the given extension served as a single file (e.g., `-f mp4`).
-*   **`<format_code1>/<format_code2>`**: Preferred format selection.
-*   **`<format_code1>,<format_code2>`**: Download multiple formats.
-*   **`bestvideo+bestaudio`**: Merge best video and audio formats.
-*   **Filtering**: `-f "best[height=720]"` (or `-f "[filesize>10M]"`).
-
-**Default:**  `bestvideo+bestaudio/best` (when ffmpeg/avconv is present). Otherwise `best`.
-
-### Format Selection Examples
-
-```bash
-# Download best mp4 format or fallback to best if no mp4 is available
-youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
-
-# Download best format up to 480p
-youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'
-
-# Download best video-only format, no larger than 50 MB
-youtube-dl -f 'best[filesize<50M]'
-
-# Download best video format and the best audio format without merging them
-youtube-dl -f 'bestvideo,bestaudio' -o '%(title)s.f%(format_id)s.%(ext)s'
-```
-
-## Video Selection
-
-You can filter videos based on:
-
-*   `--date DATE`: Download videos uploaded on a specific date (YYYYMMDD).
-*   `--datebefore DATE`: Download videos uploaded on or before a date.
-*   `--dateafter DATE`: Download videos uploaded on or after a date.
-
-## FAQ
-
-*   **How do I update youtube-dl?**  Run `youtube-dl -U` (or `sudo youtube-dl -U` on Linux).
-*   **youtube-dl is slow on Windows:** Add a file exclusion for `youtube-dl.exe` in Windows Defender.
-*   **Errors with `Unable to extract OpenGraph title` on YouTube playlists:** Update youtube-dl.
-*   **Output template errors:** Ensure you aren't using `-o` with `-t`, `--title`, `--id`, `-A`, or `--auto-number`.
-*   **Do I always need `-citw`?**  No, `-i` is often the most useful.
-*   **`-b` option is gone:** `youtube-dl` defaults to the highest available quality. Use `-f` if needed.
-*   **HTTP error 402:**  Solve the CAPTCHA in your browser, and then use `--cookies`.
-*   **Need other programs?**  ffmpeg/avconv for conversion, rtmpdump for RTMP, mplayer/mpv for MMS/RTSP.
-*   **Playing downloaded videos:** Use any video player (e.g. mpv, vlc, mplayer).
-*   **Video URL errors:** Use `--cookies`, a common user agent, or IPv6.
-*   **Older errors like `fmt_url_map`:** Update youtube-dl.
-*   **Errors like `ERROR: unable to download video`:** Update youtube-dl.
-*   **Ampersand in URL errors:** Enclose the URL in quotes or escape the ampersands.
-*   **ExtractorError: Could not find JS function u'OF'**: Update youtube-dl.
-*   **HTTP Error 429/402**: May be due to overuse. Try using a proxy ( `--proxy`) or passing cookies.
-
-## Developer Instructions
-
-Developers can build and test youtube-dl.
-
-*   **To run:** `python -m youtube_dl`
-*   **To run tests:** `python -m unittest discover` or `python test/test_download.py`
-*   **Dependencies:** Python, make (GNU make), pandoc, zip, nosetests
-
-### Adding Support for a New Site
-
-1.  [Fork the repository](https://github.com/ytdl-org/youtube-dl/fork).
-2.  Clone your fork.
-3.  Create a branch (e.g., `git checkout -b yourextractor`).
-4.  Create a new extractor file in `youtube_dl/extractor/yourextractor.py`.
-5.  Import the new extractor in [`youtube_dl/extractor/extractors.py`](https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/extractors.py).
-6.  Run tests with a command like, `python test/test_download.py TestDownload.test_YourExtractor`.
-7.  Make sure your code follows [youtube-dl coding conventions](#youtube-dl-coding-conventions). Use flake8 for code style.
-8.  When the tests pass, commit, push, and [create a pull request](https://help.github.com/articles/creating-a-pull-request).
-
-### youtube-dl coding conventions
-
-Follow the guide provided to create reliable, future-proof extractors.
-*   Ensure to use `int_or_none`, `float_or_none`, `url_or_none`, `traverse_obj`, and other utility functions.
-*   Use methods to get information from multiple sources.
-*   Do not extract data that might not be available.
-*   Write relaxed and flexible regular expressions.
-
-## Embedding youtube-dl
-
-You can embed youtube-dl into your Python programs:
-
-```python
-from __future__ import unicode_literals
-import youtube_dl
-
-ydl_opts = {}
-with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-    ydl.download(['https://www.youtube.com/watch?v=BaW_jenozKc'])
-```
-
-## Bugs
-
-Report bugs and suggestions in the [issue tracker](https://github.com/ytdl-org/youtube-dl/issues). Include full output of `youtube-dl -v YOUR_URL_HERE`.  For discussions, join [#youtube-dl](irc://chat.freenode.net/#youtube-dl) on freenode.
-
-## Copyright
-
-youtube-dl is in the public domain.  This README file is also released into the public domain.
+*   **--ap-mso MSO**: Adobe Pass multiple-system operator (TV provider) identifier.
+*   **--ap

@@ -7,46 +7,23 @@
 
 </div>
 
-# tinygrad: A Deep Learning Framework for Everyone
+# tinygrad: A Deep Learning Framework Designed for Simplicity and Efficiency
 
-**tinygrad is a simple yet powerful deep learning framework designed to be a lightweight alternative to frameworks like PyTorch.** [Explore the code on GitHub](https://github.com/tinygrad/tinygrad)!
+**tinygrad is a minimalist deep learning framework, offering a powerful alternative to PyTorch and micrograd, built for easy accelerator integration and efficient performance.** Explore the power of tinygrad and its ability to run LLaMA and Stable Diffusion, all while understanding how it works under the hood.
 
-## Key Features
+**[Explore the tinygrad Repository](https://github.com/tinygrad/tinygrad)**
 
-*   **Lightweight and Simple:** Experience the power of deep learning with a framework that's easy to understand and extend.
-*   **Supports LLaMA and Stable Diffusion:** Run cutting-edge models with tinygrad.
-*   **Lazy Evaluation:** Witness the magic of kernel fusion through lazy evaluation for optimized performance.
-*   **Neural Network Capabilities:** Build and train neural networks with ease, complete with autograd, optimizers, and more.
-*   **Multi-Accelerator Support:** Run your models on a variety of hardware, from CPUs to GPUs, with support for:
-    *   GPU (OpenCL)
-    *   CPU (C Code)
-    *   LLVM
-    *   METAL
-    *   CUDA
-    *   AMD
-    *   NV
-    *   QCOM
-    *   WEBGPU
-*   **Easy to Extend:** Add support for new accelerators with only ~25 low-level operations to implement.
+### Key Features
 
-## Getting Started
+*   **Runs LLaMA and Stable Diffusion:** Experience cutting-edge AI models with tinygrad.
+*   **Laziness:** Optimize performance through fused kernels.
+*   **Neural Network Support:** Build and train neural networks with a clean and concise API.
+*   **Extensive Accelerator Support:** Seamlessly runs on various hardware including GPU (OpenCL, METAL, CUDA, AMD, NV, QCOM, WEBGPU), CPU (C Code, LLVM).
+*   **Easy to Extend:** Add support for new accelerators with just ~25 low-level ops.
 
-### Installation
+### Ready to get started?
 
-1.  **From Source (Recommended):**
-    ```bash
-    git clone https://github.com/tinygrad/tinygrad.git
-    cd tinygrad
-    python3 -m pip install -e .
-    ```
-
-2.  **Direct (Master):**
-    ```bash
-    python3 -m pip install git+https://github.com/tinygrad/tinygrad.git
-    ```
-
-### Example: Tinygrad vs. PyTorch
-
+Here's a quick example:
 ```python
 from tinygrad import Tensor
 
@@ -59,20 +36,18 @@ print(x.grad.tolist())  # dz/dx
 print(y.grad.tolist())  # dz/dy
 ```
 
-Compare this to the PyTorch equivalent for a quick taste of the simplicity!
+### Installation
 
-## Documentation
+Install tinygrad from source:
 
-Find detailed documentation and a quick start guide on the [docs website](https://docs.tinygrad.org/).
+```bash
+git clone https://github.com/tinygrad/tinygrad.git
+cd tinygrad
+python3 -m pip install -e .
+```
+### Explore the Documentation
+For in-depth information, consult the [docs website](https://docs.tinygrad.org/).
 
-## Contributing
+### Contributing
 
-We welcome contributions! Please review the [Contribution Guidelines](https://github.com/tinygrad/tinygrad#contributing) before submitting a pull request.
-
-## Further Resources
-
-*   [Homepage](https://github.com/tinygrad/tinygrad)
-*   [Documentation](https://docs.tinygrad.org/)
-*   [Discord](https://discord.gg/ZjZadyC7PK)
-*   [GitHub Stars](https://github.com/tinygrad/tinygrad/stargazers)
-*   [Unit Tests](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml)
+We welcome contributions! Please review the [contributing guidelines](https://github.com/tinygrad/tinygrad#contributing) to help your PR get accepted!

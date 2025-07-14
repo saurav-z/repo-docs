@@ -1,38 +1,43 @@
-# Model Context Protocol Servers: Empowering AI with Secure Tool Access
+# Model Context Protocol (MCP) Servers: Extend LLMs with Secure and Powerful Tools
 
-**Unlock the potential of Large Language Models (LLMs) by giving them secure and controlled access to tools and data sources using the Model Context Protocol (MCP).** Explore a robust ecosystem of reference implementations, community-built servers, and resources to enhance your AI-powered applications. [Visit the original repository](https://github.com/modelcontextprotocol/servers).
+Unlock the potential of Large Language Models (LLMs) by providing them with secure, controlled access to tools and data. **This repository provides reference implementations and community-built servers for the Model Context Protocol (MCP)**, a standard for enabling LLMs to interact safely and effectively with the outside world. [Explore the original repository](https://github.com/modelcontextprotocol/servers) for the latest updates and contributions.
 
-## Key Features:
+**Key Features of MCP Servers:**
 
-*   **Secure Tool Access:** Grant LLMs safe and controlled interaction with various tools and data sources.
-*   **Extensible Architecture:** Leverage the versatility of MCP to integrate with diverse systems and services.
-*   **Reference Implementations:** Explore a collection of example servers demonstrating MCP features and SDK usage.
-*   **Community-Driven Ecosystem:** Benefit from a growing community of developers building and sharing MCP servers.
-*   **Cross-Platform SDKs:** Access SDKs for C#, Java, Kotlin, Python, and TypeScript for flexible development.
+*   **Reference Implementations:** Explore working examples to understand MCP concepts.
+*   **Extensibility:** Build servers for diverse tools and data sources, from file systems to cloud services.
+*   **Security:** Grant controlled access to LLMs, preventing unauthorized actions.
+*   **Community-Driven:** Leverage a growing ecosystem of community-built servers.
+*   **SDK Support:** Leverage pre-built SDKs available in multiple languages including C#, Java, Kotlin, Python, and Typescript.
 
-## 🌟 Reference Servers
+**Key Benefits of using MCP Servers:**
+*   Enhance LLM capabilities
+*   Improve Reliability of LLM models
+*   Increase Trustworthiness of LLM Models
 
-These servers showcase key MCP features and demonstrate usage with the official SDKs. Each server is a standalone example, ready to be integrated into your projects.
+**Explore the Servers:**
 
-*   **[Everything](src/everything):** A comprehensive reference server with prompts, resources, and tools.
-*   **[Fetch](src/fetch):** Efficient web content fetching and conversion for optimized LLM interactions.
-*   **[Filesystem](src/filesystem):** Secure file operations with customizable access controls.
-*   **[Git](src/git):** Tools to read, search, and manipulate Git repositories.
-*   **[Memory](src/memory):** Persistent memory system built upon knowledge graphs.
-*   **[Sequential Thinking](src/sequentialthinking):** Enable dynamic, reflective problem-solving through sequences of thought.
-*   **[Time](src/time):** Time and timezone conversion capabilities.
+### 🌟 Reference Servers
 
-### Archived Servers
+These servers showcase MCP features and the official SDKs.
+*   **Everything:** General-purpose test server with prompts, resources, and tools.
+*   **Fetch:** Fetches and converts web content for efficient LLM usage.
+*   **Filesystem:** Enables secure file operations with access controls.
+*   **Git:** Provides tools to read, search, and manipulate Git repositories.
+*   **Memory:** Offers a knowledge graph-based persistent memory system.
+*   **Sequential Thinking:** Supports dynamic problem-solving through thought sequences.
+*   **Time:** Provides time and timezone conversion capabilities.
 
-For archived reference servers, see [servers-archived](https://github.com/modelcontextprotocol/servers-archived). These include implementations for AWS Knowledge Base, Brave Search, and more.
+### 📜 Archived Servers
 
-## 🤝 Third-Party Servers
+These servers are archived and can be found in the [servers-archived repository](https://github.com/modelcontextprotocol/servers-archived).
+*   AWS KB Retrieval, Brave Search, EverArt, GitHub, GitLab, Google Drive, Google Maps, PostgreSQL, Puppeteer, Redis, Sentry, Slack, SQLite
 
-Explore a dynamic collection of community and commercial integrations for a variety of platforms and services, extending the reach of the Model Context Protocol:
+### 🤝 Third-Party Servers
 
-### 🎖️ Official Integrations
+Explore a growing collection of community-built MCP servers, extending functionality across various domains.
 
-Official integrations are maintained by companies building production ready MCP servers for their platforms.
+#### 🎖️ Official Integrations
 
 *   **21st.dev Magic:** Create crafted UI components inspired by the best 21st.dev design engineers.
 *   **ActionKit by Paragon:** Connect to 130+ SaaS integrations (e.g. Slack, Salesforce, Gmail) with Paragon’s [ActionKit](https://www.useparagon.com/actionkit) API.
@@ -44,20 +49,20 @@ Official integrations are maintained by companies building production ready MCP 
 *   **Alation:** Unlock the power of the enterprise Data Catalog by harnessing tools provided by the Alation MCP server.
 *   **Algolia:** Use AI agents to provision, configure, and query your [Algolia](https://algolia.com) search indices.
 *   **Alibaba Cloud AnalyticDB for MySQL:** Connect to a [AnalyticDB for MySQL](https://www.alibabacloud.com/en/product/analyticdb-for-mysql) cluster for getting database or table metadata, querying and analyzing data.
-*   **Alibaba Cloud AnalyticDB for PostgreSQL:** Connect to [AnalyticDB for PostgreSQL](https://github.com/aliyun/alibabacloud-adbpg-mcp-server) instances, query and analyze data.
-*   **Alibaba Cloud DataWorks:** Enables AI agents to interact with the [DataWorks](https://www.alibabacloud.com/help/en/dataworks/) Open API through a standardized interface.
+*   **Alibaba Cloud AnalyticDB for PostgreSQL:** An MCP server to connect to [AnalyticDB for PostgreSQL](https://github.com/aliyun/alibabacloud-adbpg-mcp-server) instances, query and analyze data.
+*   **Alibaba Cloud DataWorks:** A Model Context Protocol (MCP) server that provides tools for AI, allowing it to interact with the [DataWorks](https://www.alibabacloud.com/help/en/dataworks/) Open API through a standardized interface.
 *   **Alibaba Cloud OpenSearch:** This MCP server equips AI Agents with tools to interact with [OpenSearch](https://help.aliyun.com/zh/open-search/?spm=5176.7946605.J_5253785160.6.28098651AaYZXC) through a standardized and extensible interface.
 *   **Alibaba Cloud OPS:** Manage the lifecycle of your Alibaba Cloud resources with [CloudOps Orchestration Service](https://www.alibabacloud.com/en/product/oos) and Alibaba Cloud OpenAPI.
 *   **Alibaba Cloud RDS:** An MCP server designed to interact with the Alibaba Cloud RDS OpenAPI, enabling programmatic management of RDS resources via an LLM.
 *   **AllVoiceLab:** An AI voice toolkit with TTS, voice cloning, and video translation, now available as an MCP server for smarter agent integration.
-*   **Alpaca:** Alpaca's MCP server lets you trade stocks and options, analyze market data, and build strategies through [Alpaca's Trading API](https://alpaca.markets/)
+*   **Alpaca:**  Alpaca's MCP server lets you trade stocks and options, analyze market data, and build strategies through [Alpaca's Trading API](https://alpaca.markets/)
 *   **AlphaVantage:** Connect to 100+ APIs for financial market data, including stock prices, fundamentals, and more from [AlphaVantage](https://www.alphavantage.co)
 *   **Apache Doris:** MCP Server For [Apache Doris](https://doris.apache.org/), an MPP-based real-time data warehouse.
 *   **Apache IoTDB:** MCP Server for [Apache IoTDB](https://github.com/apache/iotdb) database and its tools
-*   **Apify:** Use 3,000+ pre-built cloud tools to extract data from websites, e-commerce, social media, search engines, maps, and more
+*   **Apify:**  Use 3,000+ pre-built cloud tools to extract data from websites, e-commerce, social media, search engines, maps, and more
 *   **APIMatic MCP:** APIMatic MCP Server is used to validate OpenAPI specifications using [APIMatic](https://www.apimatic.io/).
-*   **Apollo Graph:** Connect your GraphQL APIs to AI agents
-*   **Aqara:** Control  [Aqara](https://www.aqara.com/) smart home devices, query status, execute scenes, and much more using natural language.
+*   **Apollo MCP Server:** Connect your GraphQL APIs to AI agents
+*   **Aqara MCP Server:** Control  [Aqara](https://www.aqara.com/) smart home devices, query status, execute scenes, and much more using natural language.
 *   **Archbee:** Write and publish documentation that becomes the trusted source for instant answers with AI. Stop cobbling tools and use [Archbee](https://www.archbee.com/) — the first complete documentation platform.
 *   **Arize Phoenix:** Inspect traces, manage prompts, curate datasets, and run experiments using [Arize Phoenix](https://github.com/Arize-ai/phoenix), an open-source AI and LLM observability tool.
 *   **Armor Crypto MCP:** MCP to interface with multiple blockchains, staking, DeFi, swap, bridging, wallet management, DCA, Limit Orders, Coin Lookup, Tracking and more.
@@ -70,7 +75,7 @@ Official integrations are maintained by companies building production ready MCP 
 *   **Audiense Insights:** Marketing insights and audience analysis from [Audiense](https://www.audiense.com/products/audiense-insights) reports, covering demographic, cultural, influencer, and content engagement analysis.
 *   **Auth0:** MCP server for interacting with your Auth0 tenant, supporting creating and modifying actions, applications, forms, logs, resource servers, and more.
 *   **Authenticator App · 2FA:** A secure MCP (Model Context Protocol) server that enables AI agents to interact with the Authenticator App.
-*   **AWS:** Specialized MCP servers that bring AWS best practices directly to your development workflow.
+*   **AWS:**  Specialized MCP servers that bring AWS best practices directly to your development workflow.
 *   **Axiom:** Query and analyze your Axiom logs, traces, and all other event data in natural language
 *   **Azure:** The Azure MCP Server gives MCP Clients access to key Azure services and tools like Azure Storage, Cosmos DB, the Azure CLI, and more.
 *   **Baidu Map:** [Baidu Map MCP Server](https://lbsyun.baidu.com/faq/api?title=mcpserver/base) provides tools for AI agents to interact with Baidu Maps APIs, enabling location-based services and geospatial data analysis.
@@ -87,7 +92,7 @@ Official integrations are maintained by companies building production ready MCP 
 *   **BuiltWith:** Identify the technology stack behind any website.
 *   **Burp Suite:** MCP Server extension allowing AI clients to connect to [Burp Suite](https://portswigger.net)
 *   **Campertunity:** Search campgrounds around the world on campertunity, check availability, and provide booking links.
-*   **Cartesia:** Connect to the [Cartesia](https://cartesia.ai/) voice platform to perform text-to-speech, voice cloning etc.
+*   **Cartesia:** Connect to the [Cartesia](https://cartesia.ai/) voice platform to perform text-to-speech, voice cloning etc. 
 *   **Cashfree:** [Cashfree Payments](https://www.cashfree.com/) official MCP server.
 *   **CB Insights:** Use the [CB Insights](https://www.cbinsights.com) MCP Server to connect to [ChatCBI](https://www.cbinsights.com/chatcbi/)
 *   **Chargebee:** MCP Server that connects AI agents to [Chargebee platform](https://www.chargebee.com).
@@ -166,7 +171,7 @@ Official integrations are maintained by companies building production ready MCP 
 *   **Hugging Face:** Connect to the Hugging Face Hub APIs programmatically: semantic search for spaces and papers, exploration of datasets and models, and access to all compatible MCP Gradio tool spaces!
 *   **Hunter:** Interact with the [Hunter API](https://hunter.io) to get B2B data using natural language.
 *   **Hyperbolic:** Interact with Hyperbolic's GPU cloud, enabling agents and LLMs to view and rent available GPUs, SSH into them, and run GPU-powered workloads for you.
-*   **Hyperbrowser:** [Hyperbrowser](https://www.hyperbrowser.ai/) is the next-generation platform empowering AI agents and enabling effortless, scalable browser automation.
+*   **Hyperbrowser:**  [Hyperbrowser](https://www.hyperbrowser.ai/) is the next-generation platform empowering AI agents and enabling effortless, scalable browser automation.
 *   **IBM wxflows:** Tool platform by IBM to build, test and deploy tools for any data source
 *   **Inbox Zero:** AI personal assistant for email [Inbox Zero](https://www.getinboxzero.com)
 *   **Inflectra Spira:** Connect to your instance of the SpiraTest, SpiraTeam or SpiraPlan application lifecycle management platform by [Inflectra](https://www.inflectra.com)
@@ -205,16 +210,15 @@ Official integrations are maintained by companies building production ready MCP 
 *   **Make:** Turn your [Make](https://www.make.com/) scenarios into callable tools for AI assistants.
 *   **Mapbox:** Unlock geospatial intelligence through Mapbox APIs like geocoding, POI search, directions, isochrones and more.
 *   **MariaDB:** A standard interface for managing and querying MariaDB databases, supporting both standard SQL operations and advanced vector/embedding-based search.
-*   **MCP Discovery:** A lightweight CLI tool built in Rust for discovering MCP server capabilities.
-*   **MCP Toolbox for Databases:** Open source MCP server specializing in easy, fast, and secure tools for Databases. Supports  AlloyDB, BigQuery, Bigtable, Cloud SQL, Dgraph, MySQL, Neo4j, Postgres, Spanner, and more.
+*   **mcp-discovery logo:** A lightweight CLI tool built in Rust for discovering MCP server capabilities.
+*   **MCP Toolbox for Databases:** Open source MCP server specializing in easy, fast, and secure tools for Databases.
 *   **Meilisearch:** Interact & query with Meilisearch (Full-text & semantic search API)
-*   **Memgraph:** Query your data in [Memgraph](https://memgraph.com/) graph database.
 *   **Memgraph:** Query your data in [Memgraph](https://memgraph.com/) graph database.
 *   **Mercado Pago:** Mercado Pago's official MCP server.
 *   **Metoro:** Query and interact with kubernetes environments monitored by Metoro
 *   **Microsoft Clarity:** Official MCP Server to get your behavioral analytics data and insights from [Clarity](https://clarity.microsoft.com)
 *   **Microsoft Dataverse:** Chat over your business data using NL - Discover tables, run queries, retrieve data, insert or update records, and execute custom prompts grounded in business knowledge and context.
-*   **Microsoft Learn Docs:** An MCP server that provides structured access to Microsoft’s official documentation. Retrieves accurate, authoritative, and context-aware technical content for code generation, question answering, and workflow grounding.
+*   **Microsoft Learn Docs:** An MCP server that provides structured access to Microsoft’s official documentation.
 *   **Milvus:** Search, Query and interact with data in your Milvus Vector Database.
 *   **Mobb:** The [Mobb Vibe Shield](https://vibe.mobb.ai/) MCP server identifies and remediates vulnerabilities in both human and AI-written code, ensuring your applications remain secure without slowing development.
 *   **Momento:** Momento Cache lets you quickly improve your performance, reduce costs, and handle load at any scale.
@@ -253,7 +257,7 @@ Official integrations are maintained by companies building production ready MCP 
 *   **PayPal:** PayPal's official MCP server.
 *   **Pearl:** Official MCP Server to interact with Pearl API. Connect your AI Agents with 12,000+ certified experts instantly.
 *   **Perplexity:** An MCP server that connects to Perplexity's Sonar API, enabling real-time web-wide research in conversational AI.
-*   **Pinecone:** [Pinecone](https://docs.pinecone.io/guides/operations/mcp-server)'s developer MCP Server assist developers in searching documentation and managing data within their development environment.
+*   **Pinecone:**  [Pinecone](https://docs.pinecone.io/guides/operations/mcp-server)'s developer MCP Server assist developers in searching documentation and managing data within their development environment.
 *   **Pinecone Assistant:** Retrieves context from your [Pinecone Assistant](https://docs.pinecone.io/guides/assistant/mcp-server) knowledge base.
 *   **Pipedream:** Connect with 2,500 APIs with 8,000+ prebuilt tools.
 *   **PlayCanvas:** Create interactive 3D web apps with the PlayCanvas Editor.
@@ -278,4 +282,6 @@ Official integrations are maintained by companies building production ready MCP 
 *   **Redis:** The Redis official MCP Server offers an interface to manage and search data in Redis.
 *   **Redis Cloud API:** The Redis Cloud API MCP Server allows you to manage your Redis Cloud resources using natural language.
 *   **Reexpress:** Enable Similarity-Distance-Magnitude statistical verification for your search, software, and data science workflows
-*   **Rember:** Create spaced repetition flashcards in [R
+*   **Rember:** Create spaced repetition flashcards in [Rember](https://rember.com) to remember anything you learn in your chats
+*   **Revit:** Connect and interact with your Revit models live.
+*   **Rill Data:** Interact with Rill Data to query and analyze your data.

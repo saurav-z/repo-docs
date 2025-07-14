@@ -1,48 +1,51 @@
-# iCloud Photos Downloader: Easily Download Your iCloud Photos
+# Download Your iCloud Photos Easily with iCloud Photos Downloader
 
-**Tired of being locked into Apple's ecosystem?** iCloud Photos Downloader is a powerful command-line tool that lets you download your entire iCloud photo library to your computer, giving you control and backup options.
+Tired of your iCloud photos being locked away? **iCloud Photos Downloader is a versatile command-line tool that empowers you to effortlessly download and back up all your photos and videos from iCloud.**
 
-[![Quality Checks](https://github.com/icloud-photos-downloader/icloud_photos_downloader/workflows/Quality%20Checks/badge.svg)](https://github.com/icloud-photos-downloader/icloud_photos_downloader/actions/workflows/quality-checks.yml)
-[![Build and Package](https://github.com/icloud-photos-downloader/icloud_photos_downloader/workflows/Produce%20Artifacts/badge.svg)](https://github.com/icloud-photos-downloader/icloud_photos_downloader/actions/workflows/produce-artifacts.yml)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[Go to the original repository](https://github.com/icloud-photos-downloader/icloud_photos_downloader)
 
 ## Key Features
 
-*   **Cross-Platform Compatibility:** Works seamlessly on Linux, Windows, and macOS.
-*   **Multiple Installation Options:** Download directly as an executable or via package managers like Docker, PyPI, AUR, and npm.
-*   **Flexible Download Modes:** Choose from Copy, Sync (with auto-delete), and Move (download and remove from iCloud) options.
-*   **Advanced Media Support:** Downloads Live Photos (image and video), and RAW images (including RAW+JPEG).
-*   **Intelligent Handling:** Automatic de-duplication of photos with the same names.
-*   **Continuous Monitoring:** Option to monitor for iCloud changes automatically.
-*   **Metadata Preservation:** Option to update photo metadata (EXIF).
+*   **Cross-Platform Compatibility:** Works seamlessly on Linux, Windows, and macOS, accommodating laptops, desktops, and NAS devices.
+*   **Flexible Installation:** Available as an executable for direct downloading and through package managers like Docker, PyPI, AUR, and npm for easy setup and updates.
+*   **Multiple Modes of Operation:**
+    *   **Copy:** Downloads new photos from iCloud (default).
+    *   **Sync:** Downloads new photos and deletes local files removed from iCloud.
+    *   **Move:** Downloads new photos and deletes them from iCloud.
+*   **Comprehensive Support:** Handles Live Photos, RAW images (including RAW+JPEG), and photo metadata (EXIF) updates.
+*   **Smart Features:** Automatic de-duplication, options for continuous monitoring, incremental downloads, and more.
 
-## Installation and Usage
+## Getting Started
 
-You can install and run `icloudpd` using several methods:
+### iCloud Prerequisites
 
-*   **Download Executable:** Get the pre-built executable for your platform from the [GitHub Releases](https://github.com/icloud-photos-downloader/icloud_photos_downloader/releases/tag/v1.28.2).
-*   **Package Managers:** Install via Docker, PyPI, AUR, or npm. See the [Installation Documentation](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html) for detailed instructions.
-*   **Build from Source:** Compile and run the tool directly from the source code.
+Before you begin, ensure your iCloud account is configured as follows to avoid "ACCESS\_DENIED" errors:
 
-### Example Usage:
+*   **Enable Access iCloud Data on the Web:** In your iPhone/iPad settings: `Settings > Apple ID > iCloud > Access iCloud Data on the Web`
+*   **Disable Advanced Data Protection:** In your iPhone/iPad settings: `Settings > Apple ID > iCloud > Advanced Data Protection`
 
-To keep your iCloud photo collection synchronized to a local directory:
+### Installation and Usage
+
+Choose your preferred method to install and run:
+
+1.  **Download Executable:** Download the executable for your platform from the GitHub [Releases](https://github.com/icloud-photos-downloader/icloud_photos_downloader/releases/tag/v1.28.2).
+2.  **Package Manager:** Install and update through package managers like Docker, PyPI, AUR, or npm. Detailed instructions can be found in the [Documentation](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html).
+3.  **Build from Source:** Build and run the tool from the source code.
+
+**Example Usage:**
+
+To synchronize your iCloud photo collection to a local directory:
 
 ```bash
-icloudpd --directory /path/to/your/photos --username your@email.com --watch-with-interval 3600
+icloudpd --directory /data --username my@email.address --watch-with-interval 3600
 ```
 
-## Important iCloud Prerequisites
+> **Important:** Remember to use the `icloudpd` executable, not `icloud`.
 
-To ensure smooth operation, make sure your iCloud account is configured as follows:
+## Experimental Mode
 
-*   **Enable "Access iCloud Data on the Web"** in your iCloud settings on your iPhone/iPad.
-*   **Disable "Advanced Data Protection"** in your iCloud settings on your iPhone/iPad.
+Explore experimental features before they become part of the main package. More details are available in [EXPERIMENTAL.md](EXPERIMENTAL.md).
 
-## Contributing
+## Contribute
 
-We welcome contributions! Please see the [contributing guidelines](CONTRIBUTING.md) for details on how to get involved and help improve iCloud Photos Downloader.
-
-For more detailed information, please refer to the [Documentation](https://icloud-photos-downloader.github.io/icloud_photos_downloader/) and check out the [Issues](https://github.com/icloud-photos-downloader/icloud_photos_downloader/issues) page.
-
-**[Visit the original repository on GitHub](https://github.com/icloud-photos-downloader/icloud_photos_downloader)**
+We welcome contributions! Check out the [contributing guidelines](CONTRIBUTING.md) to get involved.

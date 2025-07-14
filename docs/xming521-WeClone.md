@@ -1,45 +1,65 @@
 # WeClone: Create Your Digital Avatar from Chat History
 
-**Transform your chat history into a personalized digital avatar!** [Explore WeClone on GitHub](https://github.com/xming521/WeClone).
+**Turn your chat history into a personalized digital avatar with WeClone!**  This project empowers you to create a digital representation of yourself, leveraging the power of Large Language Models (LLMs) and your own conversation data.
+
+[<img src="https://github.com/xming521/WeClone/blob/master/README.md/assets/download.png?raw=true" alt="Demo Image" width="200">](https://github.com/xming521/WeClone) 
+<br>
+[See the original repository on GitHub](https://github.com/xming521/WeClone)
+
+---
 
 ## Key Features
 
-*   💬 **Chat History to Avatar:** A complete end-to-end solution, from chat data export to model deployment.
-*   💫 **Fine-tuned LLMs:**  Fine-tune Large Language Models (LLMs) using your chat data, infusing your avatar with your unique "flavor" (image modal support).
-*   🔗 **Multi-Platform Support:** Integrate with Telegram, WeChat, and WhatsApp (coming soon) to create your digital avatar.
-*   🛡️ **Privacy Focused:** Offers privacy information filtering with localized fine-tuning and deployment for secure and controllable data.
+*   **End-to-End Solution:** From data extraction and preprocessing to model training and deployment, WeClone offers a complete workflow.
+*   **Personalized LLM Fine-tuning:**  Fine-tune LLMs using your chat history (including images), injecting your unique communication style.
+*   **Multi-Platform Integration:**  Integrate with Telegram, and more platforms coming soon.
+*   **Privacy-Focused:**  Includes privacy information filtering and localized fine-tuning for data security and control.
 
-## Core Capabilities & Highlights
-*   **Data Source Platforms:** Supports WeChat and Telegram.
-    | Platform | Text | Images | Forward | Animated Emojis/Stickers |
-    |----------|------|--------|---------|--------------------------|
-    | WeChat | ✅ | ✅ | ❌ | ❌ |
-    | Telegram | ✅ | ✅ | ✅ | ⚠️ Convert to Emoji |
+---
 
-## Get Started
+## Supported Platforms
+
+| Platform  | Text | Images |  Forward |  Animated Emojis/Stickers |  Location |  Files |
+|-----------|------|--------|-------|-----------------|----------|----------|
+| **WeChat** | ✅   | ✅     |❌| ❌  | ❌ | ❌ |
+| **Telegram**| ✅   | ✅     |✅ | ⚠️Convert to Emoji | ✅ | ❌ |
+
+---
+
+## Getting Started
+
+### Hardware Requirements
+*   **Model Dependent:**  Uses Qwen2.5-VL-7B-Instruct by default, but supports others via LLaMA Factory.
+
+*   **Estimated VRAM Requirements:**  (These are estimates, see the original README for more details). Consider using a more efficient method like QLoRA to save resources.
+    | Method                          | Precision |   7B  |  14B  |  30B  |   70B  |   `x`B  |
+    | ------------------------------- | --------- | ----- | ----- | ----- | ------ | ------- |
+    | QLoRA (4-bit)                   |     4     |   6GB |  12GB |  24GB |   48GB | `x/2`GB |
 
 ### Environment Setup
 
-1.  **CUDA Installation:** Install CUDA (version 12.6 or above), if not already present.
-2.  **Python Environment:** Use [uv](https://docs.astral.sh/uv/) for efficient dependency management:
+1.  **CUDA Installation:**  (If not already installed, requires version 12.6 or above).
+2.  **Dependency Management (Recommended):** Use [uv](https://docs.astral.sh/uv/) to create and activate a Python environment:
     ```bash
     git clone https://github.com/xming521/WeClone.git && cd WeClone
     uv venv .venv --python=3.10
     source .venv/bin/activate # windows .venv\Scripts\activate
     uv pip install --group main -e .
     ```
-3.  **Configuration:** Copy the configuration template and rename it to `settings.jsonc`:
+3.  **Configuration:** Copy and rename the template to `settings.jsonc` and customize.
     ```bash
     cp examples/tg.template.jsonc settings.jsonc
     ```
-4.  **CUDA Verification:** (Optional for Mac) Test CUDA configuration:
+4.  **CUDA Verification (Optional):**  Test CUDA configuration.
     ```bash
     python -c "import torch; print('CUDA Available:', torch.cuda.is_available());"
     ```
-5.  **(Optional) FlashAttention:** Install for accelerated training and inference: `uv pip install flash-attn --no-build-isolation`.
+5.  **FlashAttention (Optional):** Install for accelerated training/inference: `uv pip install flash-attn --no-build-isolation`.
 
 ### Model Download
-Download models through Hugging Face, or by running:
+
+Download your chosen model from Hugging Face or use the following command:
+
 ```bash
 git lfs install
 git clone https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct models/Qwen2.5-VL-7B-Instruct
@@ -47,56 +67,79 @@ git clone https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct models/Qwen2.5-VL-7
 
 ### Data Preparation
 
-1.  **Export Chat Records:** Export chat history from Telegram Desktop as photos and JSON.
-2.  **Organize Data:** Place exported `ChatExport_*` folders into the `./dataset/telegram` directory.
+*   **Export Chat Records:**  Use [Telegram Desktop](https://desktop.telegram.org/) to export your chat history (Photos, JSON format).
+*   **Directory Structure:**  Place the exported `ChatExport_*` folders into the `./dataset/telegram` directory.
 
 ### Data Preprocessing
 
-1.  **Configure:** Modify the `language`, `platform`, and `include_type` within the `settings.jsonc` file to suit your needs.
-2.  **Telegram ID:** If using Telegram, update `telegram_args.my_id` in `settings.jsonc` with your Telegram user ID.
-3.  **Privacy Protection:**  Utilizes Microsoft Presidio to automatically remove potentially sensitive data. You can customize the `blocked_words` in `settings.jsonc` to manually filter specific words or phrases.
-4.  **Process Data:** Execute the following command to process your data:
+*   **Configuration:**  Modify `language`, `platform`, `include_type`, and `telegram_args.my_id` (if using Telegram) in `settings.jsonc`.
+*   **Privacy Filtering:**  Uses Microsoft Presidio for default PII removal.  Add custom filters in `blocked_words` in `settings.jsonc`.
+*   **Run the Preprocessing:**
     ```bash
     weclone-cli make-dataset
     ```
+    *   See the documentation for detailed parameter options.
 
 ### Fine-tuning and Inference
 
-*   Modify `model_name_or_path`, `template`, `lora_target` in `settings.jsonc` to select the model to be fine-tuned.
-*   Adjust `per_device_train_batch_size` and `gradient_accumulation_steps` for VRAM usage.
-*   Fine-tune the model with the command `weclone-cli train-sft` (single GPU) or using `deepspeed` (multi-GPU):
+*   **Configuration:**  Adjust `model_name_or_path`, `template`, `lora_target`, `per_device_train_batch_size`, `gradient_accumulation_steps`, and training parameters (e.g., `num_train_epochs`, `lora_rank`) in `settings.jsonc`.
+
+*   **Single GPU Training:**
+    ```bash
+    weclone-cli train-sft
+    ```
+
+*   **Multi-GPU Training:** (Requires `deepspeed` and uncommenting the line in `settings.jsonc`)
     ```bash
     uv pip install deepspeed
     deepspeed --num_gpus=number_of_gpus weclone/train/train_sft.py
     ```
-*   Test model using `weclone-cli webchat-demo`.
-*   Use API with the command `weclone-cli server`.
-*   Test with questions via the command `weclone-cli test-model`.
+*   **Simple Inference (Browser Demo):**
+    ```bash
+    weclone-cli webchat-demo
+    ```
 
-## Results Showcase
+*   **API Inference:**
+    ```bash
+    weclone-cli server
+    ```
 
-See the Qwen2.5VL 32B model results with screenshots.
+*   **Testing:**
+    ```bash
+    weclone-cli server
+    weclone-cli test-model
+    ```
 
-## Deployment Options
+---
+
+## 🖼️ Results Showcase
+
+*   See the original README for example output screenshots.
+
+---
+
+## 🤖 Deploy to Chat Bots
 
 ### AstrBot
-An easy-to-use multi-platform LLM chatbot and development framework ✨ Supports Discord, Telegram, Slack, QQ, WeChat, Enterprise WeChat, Feishu and other platforms.
-1.  Deploy AstrBot
-2.  Deploy messaging platforms like Discord, Telegram, Slack in AstrBot
-3.  Execute `weclone-cli server` to start the API service
-4.  Add a new service provider in AstrBot, select OpenAI type, fill in the API Base URL according to AstrBot's deployment method (e.g., for docker deployment it might be http://172.17.0.1:8005/v1), fill in the model as gpt-3.5-turbo, and enter any API Key
-5.  Tool calling is not supported after fine-tuning, please turn off the default tools first by sending the command: `/tool off_all` on the messaging platform, otherwise the fine-tuned effect won't be visible.
-6.  Set the system prompt in AstrBot according to the default_system used during fine-tuning.
+
+1.  Deploy AstrBot.
+2.  Deploy messaging platforms (Discord, Telegram, etc.) in AstrBot.
+3.  Run `weclone-cli server`.
+4.  Add a service provider in AstrBot (OpenAI type), use the WeClone API address, and set "gpt-3.5-turbo" as the model.
+5.  Disable default tools in AstrBot.
+6.  Set the system prompt.
 
 ### LangBot
-A platform that enables users to quickly set up an IM bot
-1. [Deploy LangBot](https://github.com/RockChinQ/LangBot/blob/master/README_EN.md#-getting-started)
-2. Add a bot (Discord, Telegram, Slack, Lark e.g.) in LangBot
-3. Execute `weclone-cli server` to start the WeClone API service
-4. Add a new model in the model page, name it `gpt-3.5-turbo`, select OpenAI as the provider, fill in the request URL as WeClone's address. For detailed connection methods, refer to the [documentation](https://docs.langbot.app/en/workshop/network-details.html), and enter any API Key.
-5. Select the model you just added in the pipeline configuration, or modify the prompt configuration
 
-## Roadmap
+1.  Deploy LangBot.
+2.  Add a bot (Discord, Telegram, etc.) in LangBot.
+3.  Run `weclone-cli server`.
+4.  Add a model in LangBot (OpenAI provider),  and enter the WeClone API address.
+5.  Choose the model in your pipeline.
+
+---
+
+## 📌 Roadmap
 
 *   [ ] Support more data sources
 *   [ ] Richer context: including contextual conversations, chat participant information, time, etc.
@@ -106,21 +149,32 @@ A platform that enables users to quickly set up an IM bot
 *   [ ] GUI support
 *   [ ] COT (Chain of Thought) thinking support
 
+---
+
 ## Troubleshooting
+*   Check the [Official Documentation FAQ](https://docs.weclone.love/docs/introduce/FAQ.html).
+*   Utilize [DeepWiki](https://deepwiki.com/xming521/WeClone) for problem-solving.
 
-See the [Official Documentation FAQ](https://docs.weclone.love/docs/introduce/FAQ.html) or use [DeepWiki](https://deepwiki.com/xming521/WeClone).
+---
 
-## Contributing
+## ❤️ Contributing
 
-Contributions are welcome!  See the [CONTRIBUTING](https://github.com/xming521/WeClone/blob/main/CONTRIBUTING.md) guide.
+Contributions (Issues/Pull Requests) are welcome!  Follow the guidelines in the original README for development environment setup (testing, type checking, and code formatting).
 
-## Acknowledgments
+---
 
-Thanks to contributors and the open-source projects: [PyWxDump](https://github.com/xaoyaoo/PyWxDump), [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), [AstrBot](https://github.com/AstrBotDevs/AstrBot), [LangBot](https://github.com/RockChinQ/LangBot).
+## 🙏 Acknowledgments
 
-## ⭐ Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=xming521/WeClone&type=Date)](https://www.star-history.com/#xming521/WeClone&Date)
+*   See the original README for the list of contributors.
+
+---
 
 ## ⚠️ Disclaimer
 
-**This project is for research and experimental purposes only. Use at your own risk.  See the full disclaimer in the original [README](https://github.com/xming521/WeClone) for details regarding potential risks and responsibilities.**
+**This project is for learning, research, and experimental purposes only.**  The original README provides a comprehensive disclaimer, including warnings about potential risks and legal considerations. Please review the full disclaimer carefully before using this project. The disclaimer covers: use at your own risk, production environment risks, model output unreliability, data security and privacy, legal compliance, and technical support limitations.
+
+---
+
+## ⭐ Star History
+
+Show your support by starring the project!  (See the embedded Star History Chart in the original README for a visual).

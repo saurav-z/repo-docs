@@ -1,70 +1,72 @@
-# SimpleTuner: Fine-Tune Your Diffusion Models with Ease
+# SimpleTuner: Simplify and Optimize Your AI Model Training 🚀
 
-**Unlock the power of custom diffusion models with SimpleTuner, but remember to back up your training data!**
+**SimpleTuner empowers you to train cutting-edge AI models with simplicity and efficiency, focusing on ease of use and powerful features.**  This repository offers streamlined scripts for fine-tuning a variety of models, including Stable Diffusion, HiDream, Flux, and more. **[Explore the original repository](https://github.com/bghira/SimpleTuner)**.
 
-SimpleTuner simplifies the process of fine-tuning diffusion models, focusing on ease of use and accessibility for researchers and enthusiasts.  This repository is a community effort, and contributions are welcome.  Find us and ask questions on [Discord](https://discord.com/invite/eq3cAMZtCC) via Terminus Research Group.
+> ⚠️ **Important:**  Always back up your training data before using these scripts, as there's a potential for data modification during training.
 
-🔗  [View the original repository on GitHub](https://github.com/bghira/SimpleTuner)
+**Key Features:**
 
-## Key Features
+*   ✅ **Simplified Training:** Designed for ease of use with sensible default settings, minimizing the need for complex configuration.
+*   🖼️ **Versatile Compatibility:** Supports a wide range of image quantities and aspect ratios, from small datasets to massive collections.
+*   ✨ **Cutting-Edge Technology:** Incorporates proven features like LoRA, ControlNet, and DeepSpeed for optimal performance.
+*   🚄 **Efficient Training:**  Utilizes caching and aspect bucketing for faster training and reduced memory consumption.
+*   🌐 **Hugging Face Integration:** Seamless model upload and automatic model card generation with the Hugging Face Hub.
+*   📦 **Mixture of Experts (MoE) & Masked Loss:** Supports advanced techniques for improved model quality and convergence.
+*   ☁️ **S3-Compatible Storage:** Train directly from S3-compatible storage providers like Cloudflare R2 and Wasabi S3.
 
-*   **Simplified Fine-Tuning:** Designed for easy understanding and use, with sensible default settings.
-*   **Versatile:** Handles a wide range of datasets, from small to extremely large.
-*   **Cutting-Edge Technology:** Integrates proven features for optimal results.
-*   **Multi-GPU Training:** Accelerate training with multiple GPUs.
-*   **Memory Optimization:** Image, video, and caption caching reduces VRAM consumption and speeds up training.
-*   **Aspect Bucketing:** Supports diverse image/video sizes and aspect ratios.
-*   **LoRA/Full U-Net Training:** Supports LoRA or full U-Net training for SDXL.
-*   **DeepSpeed Integration:** Allows for training large models even with limited VRAM.
-*   **Quantization Support:** Train with lower precision (NF4/INT8/FP8) to reduce VRAM usage.
-*   **S3 Training:** Train directly from cloud storage (e.g., Cloudflare R2, Wasabi S3).
-*   **ControlNet Training:** Train ControlNet models for SDXL, SD 1.x/2.x, and Flux.
-*   **Mixture of Experts (MoE) Training:** Experiment with MoE models for lightweight diffusion models.
-*   **Masked Loss Training:** Enhance convergence and reduce overfitting.
-*   **Hugging Face Hub Integration:** Easily upload and share your models.
-*   **Comprehensive Support:** Support for HiDream, Flux.1, Wan Video, LTX Video, PixArt Sigma, NVLabs Sana, Stable Diffusion 3, Kwai Kolors, and legacy Stable Diffusion models.
+## Core Capabilities
 
-## Table of Contents
+*   **Multi-GPU Training:** Leverage multiple GPUs for accelerated training.
+*   **Aspect Bucketing:** Support for diverse image/video sizes and aspect ratios, enabling widescreen and portrait training.
+*   **LoRA/LyCORIS & Full U-Net Training:** Efficient training for SDXL, PixArt, SD3, SD 2.x, and more, even on GPUs with limited VRAM.
+*   **DeepSpeed Integration:** Allows training of large models like SDXL's full u-net on GPUs with as little as 12GB VRAM.
+*   **Quantization:** Use low-precision base models to reduce VRAM usage with NF4/INT8/FP8 LoRA training.
+*   **EMA (Exponential Moving Average):**  Improve training stability and reduce overfitting with optional EMA weight networks.
+*   **S3-Compatible Training:** Train directly from an S3-compatible storage provider.
+*   **ControlNet Training:** Full or LoRA based ControlNet model training.
+*   **Mixture of Experts (MoE):** Training for lightweight, high-quality diffusion models.
+*   **Masked Loss Training:** Training for superior convergence and reduced overfitting on any model
+*   **Prior Regularisation:** Strong prior regularisation training support for LyCORIS models.
+*   **Webhooks & Hugging Face Hub:** Webhook support for updating progress, and integration with the Hugging Face Hub for model upload.
+*   **Datasets Library:** Load compatible datasets directly from the Hugging Face hub.
 
-- [Design Philosophy](#design-philosophy)
-- [Tutorial](#tutorial)
-- [Features](#features)
-    - [HiDream](#hidream)
-    - [Flux.1](#flux1)
-    - [Wan Video](#wan-video)
-    - [LTX Video](#ltx-video)
-    - [PixArt Sigma](#pixart-sigma)
-    - [NVLabs Sana](#nvlabs-sana)
-    - [Stable Diffusion 3](#stable-diffusion-3)
-    - [Kwai Kolors](#kwai-kolors)
-    - [Legacy Stable Diffusion models](#legacy-stable-diffusion-models)
-- [Hardware Requirements](#hardware-requirements)
-- [Toolkit](#toolkit)
-- [Setup](#setup)
-- [Troubleshooting](#troubleshooting)
+## Supported Models & Quickstarts
 
-## Design Philosophy
+Explore training specifics and quickstart guides for each model:
 
-*   **Simplicity:** Prioritizing easy-to-use settings for common tasks.
-*   **Versatility:** Adaptability to diverse dataset sizes and image/video formats.
-*   **Innovation:** Only incorporating tested and effective features.
-
-## Tutorial
-
-Get started by exploring this README and then diving into the [tutorial](/TUTORIAL.md).  For a quick start, use the [Quick Start](/documentation/QUICKSTART.md) guide.  For memory-constrained systems, explore [DeepSpeed documentation](/documentation/DEEPSPEED.md). For multi-node training, see [this guide](/documentation/DISTRIBUTED.md).
+*   **HiDream:** Full support, including custom ControlNet, memory-efficient training. See the [HiDream Quickstart](/documentation/quickstart/HIDREAM.md).
+*   **Flux.1:** Optimized for speed with Flash Attention 3, including ControlNet and instruct fine-tuning. See the [Flux Quickstart](/documentation/quickstart/FLUX.md).
+*   **Wan Video:** Text-to-Video training support. See the [Wan Video Quickstart](/documentation/quickstart/WAN.md).
+*   **LTX Video:** Efficient training on less than 16G. See the [LTX Video Quickstart](/documentation/quickstart/LTXVIDEO.md).
+*   **PixArt Sigma:** Extensive integration with 600M & 900M models, including ControlNet and two-stage training. See the [PixArt Quickstart](/documentation/quickstart/SIGMA.md).
+*   **NVLabs Sana:**  Lightweight and fast model training. See the [NVLabs Sana Quickstart](/documentation/quickstart/SANA.md).
+*   **Stable Diffusion 3:** LoRA and full finetuning are supported, as well as ControlNet training via full-rank, PEFT LoRA, or Lycoris. See the [Stable Diffusion 3 Quickstart](/documentation/quickstart/SD3.md).
+*   **Kwai Kolors:** SDXL-based model with ChatGLM text encoder.
+*   **Legacy Stable Diffusion:** Training support for SD 1.5 and SD 2.x models.
 
 ## Hardware Requirements
 
-Consult the [Hardware Requirements](#hardware-requirements) section for detailed information.
+General hardware guidelines:
 
-## Toolkit
+*   **NVIDIA:** 3080 and up recommended for general usage.
+*   **AMD:** LoRA and full-rank tuning verified on 7900 XTX 24GB and MI300X.
+*   **Apple:** M3 Max with 128GB or greater.
+*   **Specific Models:** See the original README for model-specific hardware details.
 
-Learn more about the included toolkit [here](/toolkit/README.md).
+## Resources
 
-## Setup
-
-Follow the detailed setup instructions in the [installation documentation](/INSTALL.md).
+*   **[Installation Guide](/INSTALL.md):**  Detailed setup instructions.
+*   **[Quick Start Guide](/documentation/QUICKSTART.md):**  Get started quickly.
+*   **[DeepSpeed Guide](/documentation/DEEPSPEED.md):** For memory-constrained systems.
+*   **[Distributed Training Guide](/documentation/DISTRIBUTED.md):**  For multi-node training.
+*   **[Toolkit Documentation](/toolkit/README.md):** Learn more about the associated toolkit.
+*   **[Options Documentation](/OPTIONS.md):**  Comprehensive list of configuration options.
+*   **[Tutorial](/TUTORIAL.md):**  Comprehensive tutorial.
+*   **[ControlNet Training](/documentation/CONTROLNET.md):** Learn about ControlNet Training.
+*   **[Mixture of Experts (MoE)](/documentation/MIXTURE_OF_EXPERTS.md):** Learn about MoE Training.
+*   **[Datasets Library](/documentation/data_presets/preset_subjects200k.md):** Learn about the datasets library.
 
 ## Troubleshooting
 
-Enable debug logging for detailed information by setting `export SIMPLETUNER_LOG_LEVEL=DEBUG`.  For performance analysis, use `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`. Consult [this documentation](/OPTIONS.md) for a full list of options.
+*   Enable debug logs for detailed insights by adding `export SIMPLETUNER_LOG_LEVEL=DEBUG` to your environment (`config/config.env`) file.
+*   For performance analysis, set `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`.
