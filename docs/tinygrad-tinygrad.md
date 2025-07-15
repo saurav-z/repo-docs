@@ -7,23 +7,45 @@
 
 </div>
 
-# tinygrad: A Deep Learning Framework Designed for Simplicity and Efficiency
+# tinygrad: A Deep Learning Framework for Everyone
 
-**tinygrad is a minimalist deep learning framework, offering a powerful alternative to PyTorch and micrograd, built for easy accelerator integration and efficient performance.** Explore the power of tinygrad and its ability to run LLaMA and Stable Diffusion, all while understanding how it works under the hood.
+**tinygrad is a minimalist deep learning framework designed for simplicity and easy accelerator integration, offering a fresh perspective on the landscape of AI.**
 
-**[Explore the tinygrad Repository](https://github.com/tinygrad/tinygrad)**
+[View the original repository on GitHub](https://github.com/tinygrad/tinygrad)
 
-### Key Features
+### Key Features:
 
-*   **Runs LLaMA and Stable Diffusion:** Experience cutting-edge AI models with tinygrad.
-*   **Laziness:** Optimize performance through fused kernels.
-*   **Neural Network Support:** Build and train neural networks with a clean and concise API.
-*   **Extensive Accelerator Support:** Seamlessly runs on various hardware including GPU (OpenCL, METAL, CUDA, AMD, NV, QCOM, WEBGPU), CPU (C Code, LLVM).
-*   **Easy to Extend:** Add support for new accelerators with just ~25 low-level ops.
+*   **Lightweight and Efficient:** Built for simplicity, tinygrad provides a fast and streamlined deep learning experience.
+*   **Broad Accelerator Support:** Supports multiple accelerators including CPU, GPU (OpenCL, CUDA, Metal), LLVM, and more, making it easy to run models on various hardware.
+*   **LLaMA and Stable Diffusion:** Run complex models with this lightweight framework.
+*   **Lazy Evaluation:** Benefit from optimized kernel fusion through laziness, increasing performance and reducing overhead.
+*   **Neural Network Ready:** Includes everything you need for building and training neural networks, including autograd, tensor operations, optimizers, and data loading capabilities.
+*   **Easy to Extend:** Simple architecture makes it straightforward to add support for new accelerators.
+*   **Easy to Install:** Can be installed from source or directly via pip.
+    *   **From Source:** `git clone https://github.com/tinygrad/tinygrad.git` -> `cd tinygrad` -> `python3 -m pip install -e .`
+    *   **Direct (master):** `python3 -m pip install git+https://github.com/tinygrad/tinygrad.git`
 
-### Ready to get started?
+### Showcase
 
-Here's a quick example:
+#### LLaMA and Stable Diffusion
+Tinygrad can run [LLaMA](/docs/showcase.md#llama) and [Stable Diffusion](/docs/showcase.md#stable-diffusion)!
+
+### Accelerators
+
+tinygrad already supports numerous accelerators, including:
+
+*   [x] [GPU (OpenCL)](tinygrad/runtime/ops_gpu.py)
+*   [x] [CPU (C Code)](tinygrad/runtime/ops_cpu.py)
+*   [x] [LLVM](tinygrad/runtime/ops_llvm.py)
+*   [x] [METAL](tinygrad/runtime/ops_metal.py)
+*   [x] [CUDA](tinygrad/runtime/ops_cuda.py)
+*   [x] [AMD](tinygrad/runtime/ops_amd.py)
+*   [x] [NV](tinygrad/runtime/ops_nv.py)
+*   [x] [QCOM](tinygrad/runtime/ops_qcom.py)
+*   [x] [WEBGPU](tinygrad/runtime/ops_webgpu.py)
+
+### Quick Example:
+
 ```python
 from tinygrad import Tensor
 
@@ -35,19 +57,31 @@ z.backward()
 print(x.grad.tolist())  # dz/dx
 print(y.grad.tolist())  # dz/dy
 ```
+The same thing but in PyTorch:
+```python
+import torch
 
-### Installation
+x = torch.eye(3, requires_grad=True)
+y = torch.tensor([[2.0,0,-2.0]], requires_grad=True)
+z = y.matmul(x).sum()
+z.backward()
 
-Install tinygrad from source:
-
-```bash
-git clone https://github.com/tinygrad/tinygrad.git
-cd tinygrad
-python3 -m pip install -e .
+print(x.grad.tolist())  # dz/dx
+print(y.grad.tolist())  # dz/dy
 ```
-### Explore the Documentation
-For in-depth information, consult the [docs website](https://docs.tinygrad.org/).
+
+### Documentation
+
+Comprehensive documentation and quick start guides are available on the [docs website](https://docs.tinygrad.org/).
 
 ### Contributing
 
-We welcome contributions! Please review the [contributing guidelines](https://github.com/tinygrad/tinygrad#contributing) to help your PR get accepted!
+We welcome contributions! Here's what we look for:
+
+*   **Bug fixes:** Submit bug fixes with regression tests.
+*   **Solving bounties:** Contribute to the project and earn rewards by solving open bounties.
+*   **New features:** Implement new features, ensuring they align with the project's simplicity goals, and include thorough tests.
+*   **Refactors:** Refactor code for improved readability and efficiency, particularly focusing on clear wins.
+*   **Tests and Fuzzers:** Add non-brittle tests and improve existing fuzzers to enhance the library's robustness.
+
+**Please note:** Contributions should adhere to the guidelines outlined in the original README, which includes avoiding code golf, ensuring proper documentation, benchmarking performance improvements, and focusing on core library changes.

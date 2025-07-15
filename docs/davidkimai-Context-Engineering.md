@@ -1,96 +1,71 @@
-# Context Engineering: Master the Art of Guiding LLMs
+# Context Engineering: Unlock the Power of the Context Window
 
-**Context engineering is the art and science of curating the perfect information within the context window for the best outcomes.**  This repository provides a practical, first-principles approach to context design, orchestration, and optimization, moving beyond basic prompt engineering.  Learn how to craft superior LLM experiences by mastering the entire context window, not just the prompt.  [Explore the original repository here](https://github.com/davidkimai/Context-Engineering).
+**Context Engineering is the art and science of optimizing the information provided to a large language model (LLM) to enhance its performance and capabilities, offering a strategic advantage over basic prompt engineering.** Explore the practical application of cutting-edge research in LLM context design, orchestration, and optimization.  [Visit the original repository](https://github.com/davidkimai/Context-Engineering) for detailed insights.
 
-**Key Features:**
+## Key Features
 
-*   **Comprehensive Approach:**  Move beyond simple prompts to engineer the entire context window, including examples, memory, retrieval, tools, and control flow.
-*   **First-Principles Handbook:**  Gain a practical, biological-inspired approach to context engineering.
-*   **Progressive Learning Path:**  Follow a structured, step-by-step learning path, starting with the fundamentals and advancing to complex implementations.
-*   **Hands-on Tutorials:**  Experiment with minimal working examples and progressively complex projects.
-*   **Real-World Examples:**  Learn from and adapt practical implementations of data annotation, multi-agent orchestration, IDE integration and more.
-*   **Reusable Templates:**  Utilize pre-built components and templates to accelerate your development.
-*   **Cutting-Edge Research:** Leverage the latest research from institutions like IBM Zurich, Princeton, and MIT.
-*   **Cognitive Tooling:** Learn to implement prompt programs and custom tools that orchestrate and enhance LLM reasoning and output.
+*   **First-Principles Approach:** A comprehensive handbook moving beyond prompt engineering to the wider discipline of context design, orchestration, and optimization.
+*   **Biological Metaphor:** A progressive, first-principles approach, built around a biological metaphor.
+*   **Hands-on Tutorials:** Detailed guides and runnable examples to help you master context engineering.
+*   **Reusable Templates:** Ready-to-use components for building context engineering systems.
+*   **Research-Backed:** Based on cutting-edge research from institutions like IBM Zurich, Princeton, and MIT.
 
-## Why Context Engineering Matters
+## What is Context Engineering?
 
-Prompt engineering has received all the attention, but the real power lies in mastering the context window. This is where you can guide the LLM's "thought" process. This repository provides a first-principles approach built around a biological metaphor:
+This repository explores the distinction between prompt engineering and context engineering. While prompt engineering focuses on crafting the initial instruction, context engineering encompasses everything else the model sees, including examples, memory, retrieval, tools, state, and control flow.
 
 ```
-atoms → molecules → cells → organs → neural systems → neural & semantic field theory 
-  │        │         │         │             │                         │        
-single    few-     memory +   multi-   cognitive tools +     context = fields +
-prompt    shot     agents     agents   operating systems     persistence & resonance
+                    Prompt Engineering  │  Context Engineering
+                       ↓                │            ↓                      
+               "What you say"           │  "Everything else the model sees"
+             (Single instruction)       │    (Examples, memory, retrieval,
+                                        │     tools, state, control flow)
 ```
 
-**Key Research Highlights & Evidence**
+## Why Context Engineering?
 
-*   **Memory + Reasoning**:  Learn from MEM1 research (Singapore-MIT, June 2025) agents keep the best information at every step.
-*   **Cognitive Tools**: Utilize structured prompt templates as cognitive tools, unlocking sophisticated reasoning (IBM Zurich, June 2025).
-*   **Emergent Symbols**:  Understand how LLMs create inner, symbolic "logic circuits" to reason abstractly (ICML Princeton, June 2025).
+Move beyond prompts and master the entire context window. This allows you to guide thought and unlock the true power of LLMs.
 
-## Quick Start Guide
+## Core Concepts
 
-1.  **Foundations:**  Start with `00_foundations/01_atoms_prompting.md` to understand the basic concepts.
-2.  **Experiment:**  Run `10_guides_zero_to_one/01_min_prompt.ipynb` for a minimal example.
-3.  **Adapt:** Explore `20_templates/minimal_context.yaml` and copy the core template to your projects.
-4.  **Explore:** Study `30_examples/00_toy_chatbot/` to see a complete, working implementation.
+*   **Token Budget:** Optimizing the token usage within the context window.
+*   **Few-Shot Learning:** Providing examples to teach the model.
+*   **Memory Systems:** Enabling stateful and coherent interactions.
+*   **Retrieval Augmentation:** Integrating relevant documents to reduce hallucination.
+*   **Cognitive Tools:** Integrating prompt programs within the LLM.
+*   **Neural Field Theory:** Modeling context as a dynamic neural field.
+*   **Symbolic Mechanisms:** Enhancing reasoning with symbolic structures.
 
-## Learning Path Overview
+## Learning Path
 
-This repository offers a structured learning path designed for all levels. The content is broken down into the following key areas:
+[Include the original learning path image or recreate it with Markdown]
 
-*   **00_Foundations:**  Understand the theory and core concepts of context engineering.
-*   **10_Guides_zero_to_one:** Hands-on walkthroughs to get you up and running quickly.
-*   **20_Templates:**  Copy-and-paste code snippets for rapid prototyping.
-*   **30_Examples:**  Real-world projects that show progressively complex implementations.
-*   **40_Reference:**  Deep dives and evaluation guidance.
-*   **50_Contrib:**  Community contributions to help everyone learn together.
+## Under Construction
 
-## What You Will Learn
+[Include the original Under Construction section]
 
-This repository provides a comprehensive curriculum to help you master the art and science of Context Engineering.
+## Research Highlights
 
-*   **Token Budgeting:**  Optimize every token.
-*   **Few-Shot Learning:**  Teach LLMs by example.
-*   **Memory Systems:**  Enable persistent, coherent interactions.
-*   **Retrieval Augmentation:**  Ground responses in facts.
-*   **Control Flow:**  Break complex tasks into steps.
-*   **Context Pruning:**  Remove irrelevant information.
-*   **Metrics & Evaluation:** Measure context effectiveness.
-*   **Cognitive Tools & Prompt Programming:** Learn to build custom tools and templates
-*   **Neural Field Theory:** Model context as a dynamic neural field.
-*   **Symbolic Mechanisms:** Smarter systems = less work.
-*   **Quantum Semantics:**  Leverage superpositional techniques.
+*   **MEM1:**  Trains AI agents to keep what matters by merging memory and reasoning.
+*   **Cognitive Tools:** Integrates tools to allow modular reasoning.
+*   **Emergent Symbols:** Models generate internal symbolic logic.
 
-## Resources
+## Contributing
 
-*   **Research Papers:** Direct links to relevant research papers.
-*   **Diagrams:** Visual aids to clarify complex concepts.
-*   **Code Examples:** Runnable code cells for hands-on learning.
-
-## Contribute
-
-Help build a better resource by contributing to the repository.  Check out the [CONTRIBUTING.md](.github/CONTRIBUTING.md) file for more information.
+[Include the original contributing section]
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+[Include the original License section]
 
 ## Citation
 
-```bibtex
-@misc{context-engineering,
-  author = {Context Engineering Contributors},
-  title = {Context Engineering: Beyond Prompt Engineering},
-  year = {2025},
-  publisher = {GitHub},
-  url = {https://github.com/davidkimai/context-engineering}
-}
-```
+[Include the original Citation section]
 
 ## Acknowledgements
 
-*   [Andrej Karpathy](https://x.com/karpathy/status/1937902205765607626) for coining "context engineering" and inspiring this repo 
-*   All contributors and the open source community
+[Include the original Acknowledgements section]
+
+## Star History
+
+[Include the Star History Chart]

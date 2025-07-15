@@ -3,48 +3,73 @@
   <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
 </p>
 
-## Discover Exciting Open-Source Projects with HelloGitHub!
+# HelloGitHub: Discover Exciting and Beginner-Friendly Open Source Projects
 
-HelloGitHub is your go-to resource for discovering interesting and beginner-friendly open-source projects on GitHub.  Find new projects to learn, contribute to, and grow your skills!
+**HelloGitHub** is your gateway to the fascinating world of open-source, providing curated lists of engaging and accessible projects perfect for beginners. Dive into the world of open-source with our expertly curated selections.
 
 [View the original repository on GitHub](https://github.com/521xueweihan/HelloGitHub)
 
-### Key Features:
+## Key Features
 
-*   **Curated Open-Source Projects:** Discover a selection of intriguing open-source projects hand-picked from GitHub.
-*   **Beginner-Friendly Focus:**  Find projects that are accessible to newcomers, making it easier to get involved in the open-source community.
-*   **Monthly Updates:** Stay up-to-date with the latest projects, books, practical projects, and enterprise-level projects through monthly releases.
-*   **Diverse Content:** Explore a variety of project types, including interesting applications, practical projects, and more.
-*   **Community Engagement:**  Become a contributor and recommend or self-recommend projects to be featured.
+*   **Curated Project Selection:**  Discover interesting, beginner-friendly open-source projects.
+*   **Monthly Updates:** New projects and resources are published monthly, on the 28th of each month.
+*   **Diverse Content:** Explore a variety of project types, including interesting and beginner-friendly open source projects, open source books, practical projects, and enterprise-level projects.
+*   **Multi-Language Support:** Available in Chinese, English, and Japanese.
+*   **Easy Access:** Get the best reading experience on the [official website](https://hellogithub.com/) or the [HelloGitHub WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
 
-### What You'll Find:
+## Content
 
-*   **Interesting Open Source Projects:** A curated list of projects across various domains.
-*   **Open Source Books:** Recommendations for valuable learning resources.
-*   **Practical Projects:** Hands-on projects to build your skills.
-*   **Enterprise-Level Projects:** Insights into real-world applications.
-
-### Latest Issues:
-
-| :card_index: | 
-| ------- | 
+| :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
+| ------- | ----- | ------------ | ------ | --------- |
 | [第 111 期](/content/HelloGitHub111.md) |
+| [第 110 期](/content/HelloGitHub110.md) | [第 109 期](/content/HelloGitHub109.md) | [第 108 期](/content/HelloGitHub108.md) | [第 107 期](/content/HelloGitHub107.md) | [第 106 期](/content/HelloGitHub106.md) |
+| [第 105 期](/content/HelloGitHub105.md) | [第 104 期](/content/HelloGitHub104.md) | [第 103 期](/content/HelloGitHub103.md) | [第 102 期](/content/HelloGitHub102.md) | [第 101 期](/content/HelloGitHub101.md) |
+| [第 100 期](/content/HelloGitHub100.md) | [第 99 期](/content/HelloGitHub99.md) | [第 98 期](/content/HelloGitHub98.md) | [第 97 期](/content/HelloGitHub97.md) | [第 96 期](/content/HelloGitHub96.md) |
+| [第 95 期](/content/HelloGitHub95.md) | [第 94 期](/content/HelloGitHub94.md) | [第 93 期](/content/HelloGitHub93.md) | [第 92 期](/content/HelloGitHub92.md) | [第 91 期](/content/HelloGitHub91.md) |
+| [第 90 期](/content/HelloGitHub90.md) | [第 89 期](/content/HelloGitHub89.md) | [第 88 期](/content/HelloGitHub88.md) | [第 87 期](/content/HelloGitHub87.md) | [第 86 期](/content/HelloGitHub86.md) |
+| [第 85 期](/content/HelloGitHub85.md) | [第 84 期](/content/HelloGitHub84.md) | [第 83 期](/content/HelloGitHub83.md) | [第 82 期](/content/HelloGitHub82.md) | [第 81 期](/content/HelloGitHub81.md) |
+| [第 80 期](/content/HelloGitHub80.md) | [第 79 期](/content/HelloGitHub79.md) | [第 78 期](/content/HelloGitHub78.md) | [第 77 期](/content/HelloGitHub77.md) | [第 76 期](/content/HelloGitHub76.md) |
 
-*See full list of past issues in the original README.*
+## Contribute
 
-### Stay Connected:
+We welcome project recommendations and self-nominations!  Become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) by suggesting projects.
 
-*   **Website:** [hellogithub.com](https://hellogithub.com/)
-*   **WeChat Official Account:** <img src="https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png" alt="WeChat">
-*   **Talk:** <img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin">
-*   **Weibo:** <img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo">
-*   **GitHub Stars:** <img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars">
-*   **GitHub Issues:** <img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues">
+## Sponsors
 
-### Sponsors
+<table>
+  <thead>
+    <tr>
+      <th align="center" style="width: 80px;">
+        <a href="https://www.compshare.cn/?utm_term=logo&utm_campaign=hellogithub&utm_source=otherdsp&utm_medium=display&ytag=logo_hellogithub_otherdsp_display">          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/ucloud.png" width="60px"><br>
+          <sub>UCloud</sub><br>
+          <sub>超值的GPU云服务</sub>
+        </a>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://www.upyun.com/?from=hellogithub">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/upyun.png" width="60px"><br>
+          <sub>CDN</sub><br>
+          <sub>开启全网加速</sub>
+        </a>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://github.com/OpenIMSDK/Open-IM-Server">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/im.png" width="60px"><br>
+          <sub>OpenIM</sub><br>
+          <sub>开源IM力争No.1</sub>
+        </a>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://www.qiniu.com/products/ai-token-api?utm_source=hello">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/qiniu.jpg" width="60px"><br>
+          <sub>七牛云</sub><br>
+          <sub>百万 Token 免费体验</sub>
+        </a>
+      </th>
+    </tr>
+  </thead>
+</table>
 
-*UCloud, UpYun, OpenIM, Qiniu*
+## License
 
-### License
-
-This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact <a href="mailto:595666367@qq.com">595666367@qq.com</a>.
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. <a href="mailto:595666367@qq.com">Contact me</a>
