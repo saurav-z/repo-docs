@@ -22,40 +22,38 @@
 
 # Biomni: Revolutionizing Biomedical Research with AI
 
-**Biomni is a cutting-edge, general-purpose biomedical AI agent designed to accelerate scientific discovery across various biomedical fields.**
+**Biomni is a cutting-edge, general-purpose biomedical AI agent designed to accelerate scientific discovery by automating complex research tasks.**
+
+[View the Biomni GitHub Repository](https://github.com/snap-stanford/Biomni)
 
 ## Key Features
 
-*   **Autonomous Task Execution:** Biomni intelligently executes complex research tasks with minimal human intervention.
-*   **LLM-Powered Reasoning:** Leverages advanced large language models for sophisticated reasoning and planning.
-*   **Retrieval-Augmented Planning:** Integrates retrieval-augmented generation (RAG) for enhanced accuracy and context-awareness.
-*   **Code-Based Execution:** Executes tasks through code generation and execution, providing flexibility and reproducibility.
-*   **Wide Range of Applications:** Suitable for diverse biomedical subfields, from genomics to drug discovery.
-*   **Web Interface:** Try it out directly via the [Biomni Web UI](https://biomni.stanford.edu).
+*   **Automated Task Execution:** Execute a wide array of biomedical research tasks autonomously.
+*   **LLM-Powered Reasoning:** Leverages Large Language Models (LLMs) for advanced reasoning capabilities.
+*   **Retrieval-Augmented Planning:** Integrates retrieval-augmented planning for enhanced task execution.
+*   **Code-Based Execution:** Utilizes code-based execution for accurate and reproducible results.
+*   **Web Interface:** Accessible via a user-friendly web interface for easy experimentation and collaboration.
+*   **Open Source and Community Driven**: Biomni is open-source and welcomes community contributions, fostering innovation and collaboration.
 
-## Getting Started
+## Quick Start Guide
 
 ### Installation
 
-Follow the detailed instructions in the [biomni_env/README.md](biomni_env/README.md) file to set up the environment.
+Setting up the Biomni environment involves a few key steps.  First, ensure you have set up the environment using the provided `setup.sh` script located in the [biomni\_env/README.md](biomni_env/README.md) file.
 
-1.  **Activate the environment:**
-
+1.  **Activate Environment:**
     ```bash
     conda activate biomni_e1
     ```
-2.  **Install the Biomni Python package:**
-
+2.  **Install Biomni Package:**
     ```bash
     pip install biomni --upgrade
     ```
-    or, for the latest updates:
-
+    Alternatively, for the latest updates from the GitHub source:
     ```bash
     pip install git+https://github.com/snap-stanford/Biomni.git@main
     ```
-3.  **Configure API Keys:** Set your API keys in your `.bashrc` file:
-
+3.  **Configure API Keys:**  Set your API keys in your bash profile (`~/.bashrc`):
     ```bash
     export ANTHROPIC_API_KEY="YOUR_API_KEY"
     export OPENAI_API_KEY="YOUR_API_KEY" # optional if you just use Claude
@@ -63,12 +61,12 @@ Follow the detailed instructions in the [biomni_env/README.md](biomni_env/README
 
 ### Basic Usage
 
-Once set up, you can begin using Biomni:
+Once your environment is set up, you can start using Biomni with the following example:
 
 ```python
 from biomni.agent import A1
 
-# Initialize the agent with a data path, data lake will be automatically downloaded on first run (~11GB)
+# Initialize the agent with data path, Data lake will be automatically downloaded on first run (~11GB)
 agent = A1(path='./data', llm='claude-sonnet-4-20250514')
 
 # Execute biomedical tasks using natural language
@@ -77,39 +75,41 @@ agent.go("Perform scRNA-seq annotation at [PATH] and generate meaningful hypothe
 agent.go("Predict ADMET properties for this compound: CC(C)CC1=CC=C(C=C1)C(C)C(=O)O")
 ```
 
-## Contributing to Biomni
+## Contribute to Biomni
 
-We welcome contributions to expand the capabilities of Biomni. Contribute to Biomni by:
+Biomni is an open-science initiative that welcomes community contributions of all kinds! Help us improve Biomni by contributing:
 
-*   **New Tools**: Develop new specialized analysis functions and algorithms.
-*   **Datasets**: Curate and integrate biomedical data and knowledge bases.
-*   **Software**: Integrate existing biomedical software packages.
-*   **Benchmarks**: Create evaluation datasets and performance metrics.
-*   **Tutorials & Examples**: Develop tutorials, examples, and use cases.
-*   **Update existing tools**: Fix and enhance current tools.
+*   🔧 **New Tools:** Specialized analysis functions and algorithms
+*   📊 **Datasets:** Curated biomedical data and knowledge bases
+*   💻 **Software:** Integration of existing biomedical software packages
+*   📋 **Benchmarks:** Evaluation datasets and performance metrics
+*   📚 **Tutorials and Examples:** Help others learn how to use Biomni
+*   🔧 **Improve Existing Tools:** Fix and optimize existing tools.
 
-Learn more about contributing in our [Contributing Guide](CONTRIBUTION.md).
+Check out our **[Contributing Guide](CONTRIBUTION.md)** for detailed instructions.
 
-You can also suggest new tool/database/software additions using [this form](https://forms.gle/nu2n1unzAYodTLVj6).
+Have a specific tool, database, or software in mind?  Submit your ideas using [this form](https://forms.gle/nu2n1unzAYodTLVj6).
 
 ## Join the Biomni-E2 Initiative
 
-Help us build **Biomni-E2**, the next-generation environment, designed **with and for the community**!
+Be a part of Biomni-E2, the next-generation environment developed with and for the community!
 
-*   **Significant Contributors** will be invited as co-authors on our upcoming publications.
-*   **All Contributors** will be acknowledged.
+*   **Significant Contributors** (10+ impactful tool contributions) will be invited as co-authors on upcoming publications.
+*   **All Contributors** will be acknowledged in publications.
+*   More contributor perks are available - join us!
 
 ## Tutorials and Examples
 
-**[Biomni 101](./tutorials/biomni_101.ipynb)** - A basic introduction to Biomni.
+*   **[Biomni 101](./tutorials/biomni_101.ipynb)** - Basic concepts and first steps
+*   More tutorials are planned, so stay tuned!
 
-## Web Interface
+## 🌐 Web Interface
 
-Access Biomni through our user-friendly web interface: **[biomni.stanford.edu](https://biomni.stanford.edu)**.
+Try Biomni now through our no-code web interface: **[biomni.stanford.edu](https://biomni.stanford.edu)**.
 
 [![Watch the video](https://img.youtube.com/vi/E0BRvl23hLs/maxresdefault.jpg)](https://youtu.be/E0BRvl23hLs)
 
-## Release Schedule
+## Release Schedule and Future Updates
 
 *   [ ] 8 Real-world research task benchmark/leaderboard release
 *   [ ] A tutorial on how to contribute to Biomni
@@ -118,8 +118,8 @@ Access Biomni through our user-friendly web interface: **[biomni.stanford.edu](h
 
 ## Important Notes
 
-*   This release was frozen as of April 15, 2025, and may differ from the current web platform.
-*   Biomni is licensed under Apache 2.0. However, some integrated tools, databases, or software may have more restrictive licenses. Review each component carefully before any commercial use.
+*   This release reflects the version as of April 15, 2025, and may differ from the current web platform.
+*   Biomni is licensed under Apache 2.0, but integrated tools and databases may have more restrictive commercial licenses. Always review the licenses of individual components before commercial use.
 
 ## Cite Us
 
@@ -133,5 +133,3 @@ Access Biomni through our user-friendly web interface: **[biomni.stanford.edu](h
   publisher={Cold Spring Harbor Laboratory}
 }
 ```
-
-For more information, please visit the original repository: [https://github.com/snap-stanford/Biomni](https://github.com/snap-stanford/Biomni)

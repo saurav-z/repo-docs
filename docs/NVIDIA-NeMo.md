@@ -7,48 +7,55 @@
 [![PyPi total downloads](https://static.pepy.tech/personalized-badge/nemo-toolkit?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/nemo-toolkit)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-# NVIDIA NeMo: Your Toolkit for Cutting-Edge Generative AI
+# NVIDIA NeMo: The AI Framework for LLMs, Multimodal AI, and Speech Applications
 
-NVIDIA NeMo is a cloud-native framework, providing researchers and developers with the tools to efficiently build, customize, and deploy state-of-the-art generative AI models for LLMs, multimodal applications, speech recognition, text-to-speech, and computer vision.  For more details, visit the original [NVIDIA NeMo repository](https://github.com/NVIDIA/NeMo).
+**NVIDIA NeMo is a powerful, cloud-native framework designed to accelerate the development, customization, and deployment of cutting-edge generative AI models, with support for Large Language Models (LLMs), Multimodal Models (MMs), and speech applications.**
 
-**Key Features:**
+For the full details, visit the original [NVIDIA NeMo repository](https://github.com/NVIDIA/NeMo).
 
-*   **Comprehensive Domain Support:**  Develop models for Large Language Models (LLMs), Multimodal Models (MMs), Automatic Speech Recognition (ASR), Text-to-Speech (TTS), and Computer Vision (CV).
-*   **Scalable Training:** Train models efficiently across thousands of GPUs using advanced parallelism techniques.
-*   **Modular and Flexible:** Benefit from a Python-based configuration system and modular abstractions for easier customization.
-*   **Pre-trained Models:** Access a wide variety of pre-trained models on [Hugging Face Hub](https://huggingface.co/models?library=nemo&sort=downloads&search=nvidia) and [NVIDIA NGC](https://catalog.ngc.nvidia.com/models?query=nemo&orderBy=weightPopularDESC) to accelerate your projects.
-*   **Deployment and Optimization:** Deploy and optimize LLMs and MMs with [NVIDIA NeMo Microservices](https://developer.nvidia.com/nemo-microservices-early-access) and utilize NVIDIA Riva for speech AI.
-*   **Extensive Documentation & Support:** Access detailed documentation and tutorials to help you get started quickly.
+## Key Features
+
+*   **Large Language Models (LLMs):** Build, train, and fine-tune powerful LLMs with optimized performance and scalability.
+*   **Multimodal Models (MMs):** Develop models that combine multiple data types like text, images, and audio.
+*   **Automatic Speech Recognition (ASR):** Create and deploy state-of-the-art ASR models for accurate speech-to-text transcription.
+*   **Text-to-Speech (TTS):** Generate high-quality synthetic speech from text.
+*   **Computer Vision (CV):** Implement and train computer vision models.
+*   **Scalable Training:** Leverage distributed training techniques to scale experiments across thousands of GPUs.
+*   **Pre-trained Models:** Utilize a wide range of pre-trained models available on Hugging Face Hub and NVIDIA NGC.
+*   **Optimized for NVIDIA Hardware:** Benefit from optimized performance on NVIDIA GPUs and the NVIDIA ecosystem.
+*   **Cloud-Native:** Designed for easy deployment in cloud environments.
+*   **Modular and Flexible:** Offers a modular architecture with Python-based configuration for customization.
 
 ## What's New
 
-*   **[Pretrain and finetune :hugs:Hugging Face models via AutoModel](https://developer.nvidia.com/blog/run-hugging-face-models-instantly-with-day-0-support-from-nvidia-nemo-framework)**: Nemo Framework's latest feature AutoModel enables broad support for :hugs:Hugging Face models.
-*   **Training on Blackwell using Nemo:**  NeMo Framework has added Blackwell support with performance benchmarks on GB200 & B200.
-*   **Training Performance on GPU Tuning Guide**: NeMo Framework has published [a comprehensive guide for performance tuning to achieve optimal throughput](https://docs.nvidia.com/nemo-framework/user-guide/latest/performance/performance-guide.html)!
-*   **New Models Support**: NeMo Framework has added support for latest community models - [Llama 4](https://docs.nvidia.com/nemo-framework/user-guide/latest/vlms/llama4.html), [Flux](https://docs.nvidia.com/nemo-framework/user-guide/latest/vision/diffusionmodels/flux.html), [Llama Nemotron](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/llama_nemotron.html), [Hyena & Evo2](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/hyena.html#), [Qwen2-VL](https://docs.nvidia.com/nemo-framework/user-guide/latest/vlms/qwen2vl.html), [Qwen2.5](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/qwen2.html), Gemma3, Qwen3-30B&32B.
-
-*   **NVIDIA NeMo 2.0:** Upgrades include a Python-based configuration, modular abstractions, and improved scalability. Check out the [NeMo 2.0 Quickstart](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemo-2.0/quickstart.html) and [Feature Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemo-2.0/features/index.html#feature-guide).
-
-*   **Cosmos Integration:** Training and customization support for [NVIDIA Cosmos](https://github.com/NVIDIA/Cosmos) world foundation models for physical AI.  See [NeMo Curator](https://developer.nvidia.com/nemo-curator) for video processing.
+*   **Hugging Face Model Integration:** Supports pretraining and finetuning Hugging Face models with AutoModel, starting with AutoModelForCausalLM and AutoModelForImageTextToText. ([Blog](https://developer.nvidia.com/blog/run-hugging-face-models-instantly-with-day-0-support-from-nvidia-nemo-framework))
+*   **Blackwell Support:** Performance benchmarks on GB200 & B200.
+*   **Performance Tuning Guide:** A comprehensive guide for performance tuning is available. ([Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/performance/performance-guide.html))
+*   **New Model Support:** Support for Llama 4, Flux, Llama Nemotron, Hyena & Evo2, Qwen2-VL, Qwen2.5, Gemma3, Qwen3-30B&32B.
+*   **NeMo 2.0:** Focuses on modularity and ease-of-use.
+*   **Cosmos World Foundation Model Support:**  Training and customization of the NVIDIA Cosmos collection of world foundation models.
 
 ## Getting Started
 
-*   **Install:** Choose from various installation methods, including Conda/Pip and NGC containers.
-*   **Tutorials & Examples:** Utilize extensive tutorials, example scripts, and [playbooks](https://docs.nvidia.com/nemo-framework/user-guide/latest/playbooks/index.html) to quickly begin training and deploying models.
+### Installation
 
-## Requirements
+Choose your preferred installation method:
 
-*   Python 3.10 or above
-*   PyTorch 2.5 or above
-*   NVIDIA GPU (for model training)
+*   **Conda / Pip:**  Install using `pip install "nemo_toolkit[all]"` within a Conda environment.
+*   **NGC PyTorch Container:**  Install from source within a base NVIDIA PyTorch container (nvcr.io/nvidia/pytorch:25.01-py3).
+*   **NGC NeMo Container:** Use a pre-built, optimized NeMo container (nvcr.io/nvidia/nemo:25.02).
 
-## Resources
+### Resources
 
-*   **Developer Documentation:** Find the latest documentation at  [NeMo Framework User Guide](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/).
-*   **Discussions Board:** Get your questions answered and join the community on the [NeMo Discussions board](https://github.com/NVIDIA/NeMo/discussions).
-*   **Contribute:** Help improve NeMo by reviewing the [CONTRIBUTING.md](https://github.com/NVIDIA/NeMo/blob/stable/CONTRIBUTING.md) for the contribution process.
-*   **Publications:** Explore [publications](https://nvidia.github.io/NeMo/publications/) that utilize the NeMo Framework.
+*   **User Guide:** Access comprehensive documentation for the NeMo Framework. ([NeMo Framework User Guide](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/))
+*   **Tutorials:** Follow tutorials on Google Colab or using the NGC NeMo Framework Container.
+*   **Example Scripts:** Explore example scripts for advanced training and fine-tuning.
+*   **Discussions Board:** Find answers to your questions or start discussions. ([NeMo Discussions board](https://github.com/NVIDIA/NeMo/discussions))
 
-## License
+## Contribute
 
-Licensed under the [Apache License 2.0](https://github.com/NVIDIA/NeMo?tab=Apache-2.0-1-ov-file).
+We welcome community contributions!  See [CONTRIBUTING.md](https://github.com/NVIDIA/NeMo/blob/stable/CONTRIBUTING.md) for details.
+
+## Licenses
+
+NeMo is licensed under the [Apache License 2.0](https://github.com/NVIDIA/NeMo?tab=Apache-2.0-1-ov-file).

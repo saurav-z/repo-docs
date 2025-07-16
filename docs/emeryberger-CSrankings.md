@@ -1,66 +1,52 @@
-# CSrankings: Ranking Top Computer Science Schools
+# CS Rankings: Metrics-Based Ranking of Computer Science Schools
 
-**CSrankings.org provides a data-driven ranking of computer science institutions and faculty based on publication records.** This approach offers a more objective view than traditional survey-based methods.  You can explore the project further on [GitHub](https://github.com/emeryberger/CSrankings).
+Tired of rankings based on surveys? **CS Rankings offers a data-driven approach to assess the research performance of computer science institutions and faculty, based on publications at top conferences.** Find the original repository [here](https://github.com/emeryberger/CSrankings).
 
-## Key Features:
+## Key Features
 
-*   **Metrics-Based Ranking:**  Ranks institutions and faculty based on publications in top-tier computer science conferences, avoiding subjective survey-based approaches.
-*   **Difficult to Game:** Relies on publications in highly selective conferences, making the ranking more resistant to manipulation.
-*   **Data-Driven:** Leverages publicly available data to provide a transparent and objective assessment.
-*   **Community-Driven:**  The project welcomes contributions to maintain and update the rankings.
+*   **Metrics-Driven:** Based on the number of publications at the most selective computer science conferences, providing an objective assessment.
+*   **Difficult to Game:** Employs a methodology designed to be resistant to manipulation, unlike citation-based metrics.
+*   **Comprehensive Data:** Leverages data from DBLP.org to provide a broad overview of research activity.
+*   **Community Driven:**  Contributions are welcome. Instructions for adding or modifying affiliations are available.
+*   **Open Source:**  The code and data are publicly available for review and contribution.
 
-## Contributing
+## Contributing to CS Rankings
 
-### Adding or modifying affiliations
+### Adding or Modifying Affiliations
 
-**_NOTE: Updates are now processed on a quarterly basis. You may submit pull requests at any time, but they may not be processed until the next quarter (after three months have elapsed)._**
+**Note:** Updates are processed quarterly. Submit pull requests at any time, but they may not be processed until the next quarter.
 
-You can now edit files directly in GitHub to create pull requests. All data is
-in the files `csrankings-[a-z].csv`, with authors listed in
-alphabetical order by their first name, organized by the initial letter. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for full details on how to contribute.
+*   Edit files directly in GitHub to create pull requests.
+*   Data is in `csrankings-[a-z].csv` files, with authors alphabetized by first name.
+*   Refer to `CONTRIBUTING.md` for detailed contribution instructions.
 
-### Quick contribution via a shallow clone
+### Setting Up Locally
 
-To contribute a change without creating a full local clone of the
-CSrankings repo, you can do a shallow clone. To do so, follow these
-steps:
+1.  **Download DBLP data:**  Run `make update-dblp`. (Requires ~19GiB memory).
+2.  **Build the databases:**  Run `make`.
+3.  **Test Locally:** Run a local web server (e.g., `python3 -m http.server`) and access it via `http://0.0.0.0:8000`.
+4.  **Install Dependencies:**
 
-1. Fork the CSrankings repo. If you have an existing fork, but it is
-not up to date with the main repository, this technique may not
-work. If necessary, delete and re-create your fork to get it up to
-date. (Do not delete your existing fork if it has unmerged changes you
-want to preserve!)
-2. Do a shallow clone of your fork: `git clone --depth 1
-https://github.com/yourusername/CSrankings`. This will only download
-the most recent commit, not the full git history.
-3. Make your changes on a branch, push them to your clone, and create
-a pull request on GitHub as usual.
+    ```bash
+    apt-get install libxml2-utils npm python-lxml basex; npm install -g typescript google-closure-compiler
+    ```
 
-If you want to make another contribution and some time has passed,
-perform steps 1-3 again, creating a fresh fork and shallow clone.
+    Also, install [pypy](https://doc.pypy.org/en/latest/install.html).
 
-## Running Locally
+### Quick Contribution via Shallow Clone
 
-To run the site locally, follow these steps:
+To contribute without a full clone:
 
-1.  Download the DBLP data: `make update-dblp` (requires ~19GB memory).
-2.  Rebuild databases: `make`.
-3.  Run a local web server: `python3 -m http.server`.
-4.  Access the site in your browser: [http://0.0.0.0:8000](http://0.0.0.0:8000).
-
-### Dependencies
-
-You will need to install the following dependencies:
-
-```bash
-apt-get install libxml2-utils npm python-lxml basex; npm install -g typescript google-closure-compiler
-```
-You will also need: [pypy](https://doc.pypy.org/en/latest/install.html)
+1.  Fork the CSrankings repository.
+2.  Do a shallow clone of your fork: `git clone --depth 1 https://github.com/yourusername/CSrankings`
+3.  Make changes on a branch, push, and create a pull request.
 
 ## Acknowledgements
 
-This site was developed by and is maintained by [Emery Berger](https://emeryberger.com). It builds upon code and data collected by [Swarat Chaudhuri](https://www.cs.utexas.edu/~swarat/) and the original faculty affiliation dataset constructed by [Papoutsaki et al.](http://cs.brown.edu/people/alexpap/faculty_dataset.html). It also uses information from [DBLP.org](http://dblp.org).
+Developed primarily by [Emery Berger](https://emeryberger.com), incorporating feedback from numerous contributors.  Based on initial code and data collected by Swarat Chaudhuri and the faculty affiliation dataset constructed by Papoutsaki et al.
+
+Data from [DBLP.org](http://dblp.org) is used, licensed under the ODC Attribution License.
 
 ## License
 
-CSRankings is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+CSrankings is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).

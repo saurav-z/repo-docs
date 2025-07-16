@@ -1,19 +1,40 @@
-# Explore a World of Public APIs: Your Gateway to Free Data and Functionality!
+# **Discover & Use Free Public APIs: A Comprehensive Resource**
 
-**Unleash the power of data by exploring this curated collection of over 2000 free and open-source APIs, meticulously maintained by the community.** Access a wealth of resources for your projects, from weather data and social media integration to finance tools and even fun APIs for entertainment!  Discover a diverse range of APIs across various categories and easily integrate them into your applications.
+**Unlock a treasure trove of free public APIs for your next project!** Curated by community members and powered by [APILayer](https://apilayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo), this repository offers an extensive, well-maintained list of APIs across various domains, perfect for developers of all levels.
+Check out the [original repo](https://github.com/public-apis/public-apis)
 
-**[Explore the Original Repository](https://github.com/public-apis/public-apis)** for the complete, updated list and to contribute your own discoveries.
+<p>
+    <a href="https://apilayer.com">
+        <div>
+            <img src=".github/cs1586-APILayerLogoUpdate2022-LJ_v2-HighRes.png" width="100%" alt="APILayer Logo" />
+        </div>
+    </a>
+  </p>
 
-## Key Features:
+## **Key Features:**
 
-*   **Extensive Directory:** Access a comprehensive and ever-growing list of public APIs, categorized for easy navigation.
-*   **Free & Open-Source:** All APIs listed are free to use, offering unparalleled value for developers.
-*   **Community Curated:** Maintained by a dedicated community, ensuring quality and relevance.
-*   **Diverse Categories:** Explore APIs across a wide range of categories, from entertainment and finance to health and transportation.
-*   **Easy Integration:** Quickly find the APIs you need and integrate them into your projects with ease.
+*   **Extensive List:** A vast collection of public APIs across numerous categories.
+*   **Community-Driven:** Continuously updated and maintained by a dedicated community.
+*   **Diverse Categories:** APIs covering a wide range of topics, from entertainment to finance.
+*   **Easy Integration:** Ready-to-use APIs for seamless integration into your projects.
+*   **Free Access:** All APIs are freely accessible for use.
 
-## Category Index:
-The below are the categories that are included in the repo.
+## **Featured APILayer APIs:**
+
+Quickly integrate with the most popular APIs to enhance your project.
+
+| API                                                                                       | Description                                                                                |
+| :---------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
+| [IPstack](https://ipstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Locate and Identify Website Visitors by IP Address                                           |
+| [Marketstack](https://marketstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Delivers worldwide stock market data in JSON format                                           |
+| [Weatherstack](https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Retrieve instant, accurate weather information for any location in the world in lightweight JSON format |
+| [Numverify](https://numverify.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers)  | Global Phone Number Validation & Lookup JSON API                                          |
+| [Fixer](https://fixer.io/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Simple and lightweight API for current and historical foreign exchange (forex) rates. |
+| [Aviationstack](https://avaitionstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Free, real-time flight status and global Aviation data API                                 |
+
+## **Explore the APIs:**
+
+Explore a huge list of APIs that are organized by categories:
 
 *   [Animals](#animals)
 *   [Anime](#anime)
@@ -67,19 +88,14 @@ The below are the categories that are included in the repo.
 *   [Video](#video)
 *   [Weather](#weather)
 
-## API Listing (Example)
+***
 
-(Example of the first few APIs in the `Animals` section, with minor formatting changes and re-ordering for readability).
+## **Get Involved**
 
-### Animals
-
-| API                    | Description                        | Auth     | HTTPS | CORS |
-| :--------------------- | :--------------------------------- | :------- | :---- | :--- |
-| [AdoptAPet](https://www.adoptapet.com/public/apis/pet_list.html) | Resource to help get pets adopted | `apiKey` | Yes   | Yes  |
-| [Axolotl](https://theaxolotlapi.netlify.app/)          | Collection of axolotl pictures and facts | No       | Yes   | No   |
-| [Cat Facts](https://alexwohlbruck.github.io/cat-facts/)  | Daily cat facts                      | No       | Yes   | No   |
-| [Cataas](https://cataas.com/)       | Cat as a service (cats pictures and gifs)   | No       | Yes   | No   |
-
-**[⬆ Back to Index](#index)**
-<br >
-<br >
+*   [Contributing Guide](CONTRIBUTING.md)
+*   [API for this project](https://github.com/davemachado/public-api)
+*   [Issues](https://github.com/public-apis/public-apis/issues)
+*   [Pull Requests](https://github.com/public-apis/public-apis/pulls)
+***
+## **License**
+[MIT](LICENSE) (c) 2022 public-apis
