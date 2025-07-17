@@ -1,34 +1,75 @@
-# Agent S: Revolutionizing Computer Use Agents (CUA)
+<h1 align="center">
+  <img src="images/agent_s.png" alt="Logo" style="vertical-align:middle" width="60"> Agent S2:
+  <small>A Compositional Generalist-Specialist Framework for Computer Use Agents</small>
+</h1>
 
-Agent S is an open-source framework that empowers autonomous computer interaction, enabling intelligent GUI agents to perform complex tasks.  **[Explore Agent S on GitHub](https://github.com/simular-ai/Agent-S)**.
+<p align="center">&nbsp;
+  🌐 <a href="https://www.simular.ai/articles/agent-s2-technical-review">[S2 blog]</a>&nbsp;
+  📄 <a href="https://arxiv.org/abs/2504.00906">[S2 Paper (COLM 2025)]</a>&nbsp;
+  🎥 <a href="https://www.youtube.com/watch?v=wUGVQl7c0eg">[S2 Video]</a>
+</p>
 
-## Key Features:
+<p align="center">&nbsp;
+  🌐 <a href="https://www.simular.ai/agent-s">[S1 blog]</a>&nbsp;
+  📄 <a href="https://arxiv.org/abs/2410.08164">[S1 Paper (ICLR 2025)]</a>&nbsp;
+  🎥 <a href="https://www.youtube.com/watch?v=OBDE3Knte0g">[S1 Video]</a>
+</p>
 
-*   **Autonomous Operation:**  Agent S allows intelligent GUI agents to independently perform complex tasks.
-*   **Open Source:**  Contribute to cutting-edge agent-based systems.
-*   **Compositional Generalist-Specialist Architecture:** Enhances flexibility and efficiency in task execution.
-*   **State-of-the-Art Performance:** Outperforms leading CUA models.
-*   **Cross-Platform Support:**  Works on macOS, Linux, and Windows.
-*   **API and SDK:** Ready to use SDK to create your own computer use agents.
-*   **Integration with Perplexica:**  Web knowledge retrieval using the Perplexica API.
+<p align="center">&nbsp;
+<a href="https://trendshift.io/repositories/13151" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13151" alt="simular-ai%2FAgent-S | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</p>
 
-## What is Agent S?
+<p align="center">
+  <a href="https://discord.gg/E2XfsK9fPV">
+    <img src="https://dcbadge.limes.pink/api/server/https://discord.gg/E2XfsK9fPV?style=flat" alt="Discord">
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://pepy.tech/projects/gui-agents">
+    <img src="https://static.pepy.tech/badge/gui-agents" alt="PyPI Downloads">
+  </a>
+</p>
 
-Agent S is designed to interact with computers using a user-friendly interface, just like a human.  The framework allows agents to understand and execute tasks, learning from past interactions to enhance their performance over time.
+<div align="center">
+  <!-- Keep these links. Translations will automatically update with the README. -->
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=de">Deutsch</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=es">Español</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=fr">français</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ja">日本語</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ko">한국어</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=pt">Português</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ru">Русский</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=zh">中文</a>
+</div>
 
-##  Updates:
+## 🥳 Updates
+- [x] **2025/07/07**: The [Agent S2 paper](https://arxiv.org/abs/2504.00906) is accepted to COLM 2025! See you in Montreal!
+- [x] **2025/04/01**: Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
+- [x] **2025/03/12**: Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
+- [x] **2025/01/22**: The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
+- [x] **2025/01/21**: Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
+- [x] **2024/12/05**: Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
+- [x] **2024/10/10**: Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase!
 
-*   **July 7, 2025:** The [Agent S2 paper](https://arxiv.org/abs/2504.00906) is accepted to COLM 2025!
-*   **April 1, 2025:** Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
-*   **March 12, 2025:** Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
-*   **January 22, 2025:** The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
-*   **January 21, 2025:** Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
-*   **December 5, 2024:** Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
-*   **October 10, 2024:** Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase!
+## Table of Contents
 
-##  Current Results:
+1. [💡 Introduction](#-introduction)
+2. [🎯 Current Results](#-current-results)
+3. [🛠️ Installation & Setup](#%EF%B8%8F-installation--setup) 
+4. [🚀 Usage](#-usage)
+5. [🤝 Acknowledgements](#-acknowledgements)
+6. [💬 Citation](#-citation)
 
-Agent S2 shows state of the art performance in Computer Use Agents.
+## 💡 Introduction
+
+<p align="center">
+    <img src="./images/agent_s2_teaser.png" width="800">
+</p>
+
+Welcome to **Agent S**, an open-source framework designed to enable autonomous interaction with computers through Agent-Computer Interface. Our mission is to build intelligent GUI agents that can learn from past experiences and perform complex tasks autonomously on your computer. 
+
+Whether you're interested in AI, automation, or contributing to cutting-edge agent-based systems, we're excited to have you here!
+
+## 🎯 Current Results
 
 <p align="center">
     <img src="./images/agent_s2_osworld_result.png" width="600">
@@ -71,23 +112,22 @@ Agent S2 shows state of the art performance in Computer Use Agents.
   </table>
 </div>
 
-## 🛠️ Installation & Setup
 
-> **Note**: Our agent returns `pyautogui` code and is intended for a single monitor screen.
+## 🛠️ Installation & Setup
+> **Note**: Our agent returns `pyautogui` code and is intended for a single monitor screen. 
 
 > ❗**Warning**❗: If you are on a Linux machine, creating a `conda` environment will interfere with `pyatspi`. As of now, there's no clean solution for this issue. Proceed through the installation without using `conda` or any virtual environment.
 
 > ⚠️**Disclaimer**⚠️: To leverage the full potential of Agent S2, we utilize [UI-TARS](https://github.com/bytedance/UI-TARS) as a grounding model (7B-DPO or 72B-DPO for better performance). They can be hosted locally, or on Hugging Face Inference Endpoints. Our code supports Hugging Face Inference Endpoints. Check out [Hugging Face Inference Endpoints](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints) for more information on how to set up and query this endpoint. However, running Agent S2 does not require this model, and you can use alternative API based models for visual grounding, such as Claude.
 
 Install the package:
-
-```bash
+```
 pip install gui-agents
 ```
 
 Set your LLM API Keys and other environment variables. You can do this by adding the following line to your .bashrc (Linux), or .zshrc (MacOS) file. 
 
-```bash
+```
 export OPENAI_API_KEY=<YOUR_API_KEY>
 export ANTHROPIC_API_KEY=<YOUR_ANTHROPIC_API_KEY>
 export HF_TOKEN=<YOUR_HF_TOKEN>
@@ -95,7 +135,7 @@ export HF_TOKEN=<YOUR_HF_TOKEN>
 
 Alternatively, you can set the environment variable in your Python script:
 
-```python
+```
 import os
 os.environ["OPENAI_API_KEY"] = "<YOUR_API_KEY>"
 ```
@@ -103,7 +143,6 @@ os.environ["OPENAI_API_KEY"] = "<YOUR_API_KEY>"
 We also support Azure OpenAI, Anthropic, Gemini, Open Router, and vLLM inference. For more information refer to [models.md](models.md).
 
 ### Setup Retrieval from Web using Perplexica
-
 Agent S works best with web-knowledge retrieval. To enable this feature, you need to setup Perplexica: 
 
 1. Ensure Docker Desktop is installed and running on your system.
@@ -143,13 +182,14 @@ For a more detailed setup and usage guide, please refer to the [Perplexica Repos
 
 ## 🚀 Usage
 
+
 > **Note**: Our best configuration uses Claude 3.7 with extended thinking and UI-TARS-72B-DPO. If you are unable to run UI-TARS-72B-DPO due to resource constraints, UI-TARS-7B-DPO can be used as a lighter alternative with minimal performance degradation.
 
 ### CLI
 
 Run Agent S2 with a specific model (default is `gpt-4o`):
 
-```bash
+```sh
 agent_s2 \
   --provider "anthropic" \
   --model "claude-3-7-sonnet-20250219" \
@@ -168,48 +208,45 @@ agent_s2 \
 ```
 
 #### Main Model Settings
-
-*   **`--provider`**, **`--model`**
-    *   Purpose: Specifies the main generation model
-    *   Supports: all model providers in [models.md](models.md)
-    *   Default: `--provider "anthropic" --model "claude-3-7-sonnet-20250219"`
-*   **`--model_url`**, **`--model_api_key`**
-    *   Purpose: Specifies the custom endpoint for the main generation model and your API key
-    *   Note: These are optional. If not specified, `gui-agents` will default to your environment variables for the URL and API key.
-    *   Supports: all model providers in [models.md](models.md)
-    *   Default: None
+- **`--provider`**, **`--model`** 
+  - Purpose: Specifies the main generation model
+  - Supports: all model providers in [models.md](models.md)
+  - Default: `--provider "anthropic" --model "claude-3-7-sonnet-20250219"`
+- **`--model_url`**, **`--model_api_key`**
+   - Purpose: Specifies the custom endpoint for the main generation model and your API key
+   - Note: These are optional. If not specified, `gui-agents` will default to your environment variables for the URL and API key.
+   - Supports: all model providers in [models.md](models.md)
+   - Default: None
 
 #### Grounding Configuration Options
 
 You can use either Configuration 1 or Configuration 2:
 
 ##### **(Default) Configuration 1: API-Based Models**
-
-*   **`--grounding_model_provider`**, **`--grounding_model`**
-    *   Purpose: Specifies the model for visual grounding (coordinate prediction)
-    *   Supports: all model providers in [models.md](models.md)
-    *   Default: `--grounding_model_provider "anthropic" --grounding_model "claude-3-7-sonnet-20250219"`
-*   ❗**Important**❗ **`--grounding_model_resize_width`**
-    *   Purpose: Some API providers automatically rescale images. Therefore, the generated (x, y) will be relative to the rescaled image dimensions, instead of the original image dimensions.
-    *   Supports: [Anthropic rescaling](https://docs.anthropic.com/en/docs/build-with-claude/vision#)
-    *   Tips: If your grounding is inaccurate even for very simple queries, double check your rescaling width is correct for your machine's resolution.
-    *   Default: `--grounding_model_resize_width 1366` (Anthropic)
+- **`--grounding_model_provider`**, **`--grounding_model`**
+  - Purpose: Specifies the model for visual grounding (coordinate prediction)
+  - Supports: all model providers in [models.md](models.md)
+  - Default: `--grounding_model_provider "anthropic" --grounding_model "claude-3-7-sonnet-20250219"`
+- ❗**Important**❗ **`--grounding_model_resize_width`**
+  - Purpose:  Some API providers automatically rescale images. Therefore, the generated (x, y) will be relative to the rescaled image dimensions, instead of the original image dimensions.
+  - Supports: [Anthropic rescaling](https://docs.anthropic.com/en/docs/build-with-claude/vision#)
+  - Tips: If your grounding is inaccurate even for very simple queries, double check your rescaling width is correct for your machine's resolution.
+  - Default: `--grounding_model_resize_width 1366` (Anthropic)
 
 ##### **Configuration 2: Custom Endpoint**
+- **`--endpoint_provider`**
+  - Purpose: Specifies the endpoint provider
+  - Supports: HuggingFace TGI, vLLM, Open Router
+  - Default: None
 
-*   **`--endpoint_provider`**
-    *   Purpose: Specifies the endpoint provider
-    *   Supports: HuggingFace TGI, vLLM, Open Router
-    *   Default: None
+- **`--endpoint_url`**
+  - Purpose: The URL for your custom endpoint
+  - Default: None
 
-*   **`--endpoint_url`**
-    *   Purpose: The URL for your custom endpoint
-    *   Default: None
-
-*   **`--endpoint_api_key`**
-    *   Purpose: Your API key for your custom endpoint
-    *   Note: This is optional. If not specified, `gui-agents` will default to your environment variables for the API key.
-    *   Default: None
+- **`--endpoint_api_key`**
+   - Purpose: Your API key for your custom endpoint
+   - Note: This is optional. If not specified, `gui-agents` will default to your environment variables for the API key.
+   - Default: None
 
 > **Note**: Configuration 2 takes precedence over Configuration 1.
 
@@ -218,7 +255,6 @@ This will show a user query prompt where you can enter your query and interact w
 ### `gui_agents` SDK
 
 First, we import the necessary modules. `AgentS2` is the main agent class for Agent S2. `OSWorldACI` is our grounding agent that translates agent actions into executable python code.
-
 ```python
 import pyautogui
 import io
@@ -335,7 +371,7 @@ To deploy Agent S2 in WindowsAgentArena, follow the [WindowsAgentArena Deploymen
 
 ## 💬 Citations
 
-If you find this codebase useful, please cite
+If you find this codebase useful, please cite 
 
 ```
 @misc{Agent-S2,

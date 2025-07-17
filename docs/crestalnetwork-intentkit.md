@@ -1,101 +1,81 @@
-# IntentKit: Build Autonomous AI Agents with Ease
+# IntentKit: Build and Manage Powerful AI Agents
 
-**Unlock the power of AI agents with IntentKit, a flexible framework for creating and managing autonomous agents that can interact with blockchain, social media, and custom integrations.** [View the original repository on GitHub](https://github.com/crestalnetwork/intentkit)
+**IntentKit empowers you to create and deploy autonomous AI agents capable of complex tasks, making it easy to interact with blockchains, social media, and more.** ([View the original repository](https://github.com/crestalnetwork/intentkit))
 
 <div align="center">
   <img src="docs/images/intentkit_banner.png" alt="IntentKit by Crestal" width="100%" />
 </div>
 <br>
 
-IntentKit empowers developers to build sophisticated AI agents with a wide range of capabilities. Leverage its modular design to create agents tailored to your specific needs.
+## Key Features of IntentKit
 
-## Key Features
-
-*   🤖 **Multiple Agent Support:** Manage and deploy numerous AI agents.
-*   🔄 **Autonomous Agent Management:**  Simplify the lifecycle of your AI agents.
-*   🔗 **Blockchain Integration:** Interact with EVM-compatible blockchains.
-*   🐦 **Social Media Integration:** Seamlessly connect with platforms like Twitter and Telegram.
-*   🛠️ **Extensible Skill System:** Add custom functionality through a flexible skill architecture.
-*   🔌 **MCP (WIP):** [Placeholder for feature being developed]
+*   **Multi-Agent Support:** Manage and orchestrate multiple AI agents simultaneously.
+*   **Autonomous Agent Management:**  Control and oversee the lifecycle of your intelligent agents.
+*   **Blockchain Integration:** Seamlessly interact with EVM-compatible blockchains for on-chain actions.
+*   **Social Media Integration:** Connect with platforms like Twitter and Telegram to manage your online presence.
+*   **Extensible Skill System:** Easily expand agent capabilities with custom skills built upon LangChain tools.
+*   **Under Development:** MCP (Work in progress)
 
 ## Architecture Overview
 
-IntentKit's architecture is designed for modularity and extensibility. The core agent system, powered by LangGraph, integrates with various entrypoints (Twitter, Telegram, etc.), storage, and skills.  For a more detailed understanding, explore the [Architecture](docs/architecture.md) documentation.
+IntentKit's architecture facilitates diverse agent functionalities by allowing for interaction with various entrypoints, including social media platforms. This enables the agents to perform on-chain actions, manage digital assets and connect with the world through custom skills.
 
-```
-                                                                                    
-                                 Entrypoints                                        
-                       │                             │                              
-                       │   Twitter/Telegram & more   │                              
-                       └──────────────┬──────────────┘                              
-                                      │                                             
-  Storage:  ────┐                     │                      ┌──── Skills:          
-                │                     │                      │                      
-  Agent Config  │     ┌───────────────▼────────────────┐     │  Chain Integration   
-                │     │                                │     │                      
-  Credentials   │     │                                │     │  Wallet Management   
-                │     │           The Agent            │     │                      
-  Personality   │     │                                │     │  On-Chain Actions    
-                │     │                                │     │                      
-  Memory        │     │      Powered by LangGraph      │     │  Internet Search     
-                │     │                                │     │                      
-  Skill State   │     └────────────────────────────────┘     │  Image Processing    
-            ────┘                                            └────                  
-                                                                                    
-                                                                More and More...    
-                         ┌──────────────────────────┐                               
-                         │                          │                               
-                         │  Agent Config & Memory   │                               
-                         │                          │                               
-                         └──────────────────────────┘                               
-                                                                                    
-```
+*   **Entrypoints**: Twitter, Telegram, and more
+*   **Core Functionality**: The Agent, built with LangGraph.
+*   **Skills**: Chain integration, wallet management, on-chain actions, internet search, image processing, and more.
+*   **Supporting components:** Agent Config & Memory, Credentials, Personality, and Skill State.
 
-## Development and Documentation
+For a more detailed understanding, refer to the [Architecture](docs/architecture.md) section.
 
-*   **Getting Started:** Follow the [Development Guide](DEVELOPMENT.md) for setup instructions.
-*   **Comprehensive Documentation:** Dive deeper into IntentKit with the official [Documentation](docs/).
+## Development
+
+To begin developing with IntentKit, consult the [Development Guide](DEVELOPMENT.md).
+
+## Documentation
+
+Comprehensive documentation is available to guide your implementation. Explore the [Documentation](docs/) to get started.
 
 ## Project Structure
 
-The project is structured into core components, enabling a clear and organized approach to development:
+The project is organized into core and application components:
 
-*   **[intentkit/](intentkit/)**: The IntentKit package (pip package)
-    *   [abstracts/](intentkit/abstracts/): Abstract classes and interfaces
-    *   [clients/](intentkit/clients/): Clients for external services
-    *   [config/](intentkit/config/): System level configurations
-    *   [core/](intentkit/core/): Core agent system, driven by LangGraph
-    *   [models/](intentkit/models/): Entity models using Pydantic and SQLAlchemy
-    *   [skills/](intentkit/skills/): Extensible skills system, based on LangChain tools
-    *   [utils/](intentkit/utils/): Utility functions
-*   **[app/](app/)**: The IntentKit app (API server, autonomous runner, and background scheduler)
-    *   [admin/](app/admin/): Admin APIs, agent generators, and related functionality
-    *   [entrypoints/](app/entrypoints/): Entrypoints for interacting with agents
-    *   [services/](app/services/): Service implementations for Telegram, Twitter, etc.
-    *   [api.py](app/api.py): REST API server
-    *   [autonomous.py](app/autonomous.py): Autonomous agent runner
-    *   [checker.py](app/checker.py): Health and credit checking logic
-    *   [readonly.py](app/readonly.py): Readonly entrypoint
-    *   [scheduler.py](app/scheduler.py): Background task scheduler
-    *   [singleton.py](app/singleton.py): Singleton agent manager
-    *   [telegram.py](app/telegram.py): Telegram integration
-    *   [twitter.py](app/twitter.py): Twitter integration
-*   [docs/](docs/): Documentation
-*   [scripts/](scripts/): Operation and temporary scripts
+*   **`intentkit/`**: The IntentKit package, includes:
+    *   `abstracts/`: Abstract classes and interfaces
+    *   `clients/`: Clients for external services
+    *   `config/`: System level configurations
+    *   `core/`: Core agent system
+    *   `models/`: Entity models
+    *   `skills/`: Extensible skills system
+    *   `utils/`: Utility functions
+*   **`app/`**: The IntentKit application:
+    *   `admin/`: Admin APIs and agent generators
+    *   `entrypoints/`: Agent interaction entrypoints
+    *   `services/`: Service implementations
+    *   `api.py`: REST API server
+    *   `autonomous.py`: Autonomous agent runner
+    *   `checker.py`: Health and credit checking logic
+    *   `readonly.py`: Readonly entrypoint
+    *   `scheduler.py`: Background task scheduler
+    *   `singleton.py`: Singleton agent manager
+    *   `telegram.py`: Telegram integration
+    *   `twitter.py`: Twitter integration
+*   `docs/`: Documentation
+*   `scripts/`: Operation and temporary scripts
 
 ## Agent API
 
-**Effortlessly control and interact with your agents using the comprehensive REST API.** Build applications, integrate with existing systems, or create custom interfaces with ease.  Explore the [Agent API Documentation](docs/agent_api.md) to get started.
+IntentKit offers a REST API for programmatic agent interaction. Learn how to leverage the API by accessing the [Agent API Documentation](docs/agent_api.md).
 
 ## Contributing
 
-We welcome contributions!
+Contributions are welcome! Please review the [Contributing Guidelines](CONTRIBUTING.md) before submitting your pull requests.
 
-*   **Guidelines:** Review our [Contributing Guidelines](CONTRIBUTING.md).
-*   **Skill Development:** Learn how to contribute new skills via the [Skill Development Guide](docs/contributing/skills.md).
-*   **Feature Requests:** Check the [Wishlist](docs/contributing/wishlist.md) for active feature requests.
-*   **Community Chat:** Join the discussion on [Discord](https://discord.com/invite/crestal) (apply for an intentkit dev role).
+### Contribute Skills
 
-## License
+Check the [Wishlist](docs/contributing/wishlist.md) for active requests.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+See the [Skill Development Guide](docs/contributing/skills.md) for developing new skills.
+
+### Developer Chat
+
+Join our [Discord](https://discord.com/invite/crestal) and request a developer role for support.

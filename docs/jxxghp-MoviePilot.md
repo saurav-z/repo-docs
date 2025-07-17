@@ -1,94 +1,69 @@
-# MoviePilot: Your Automated Movie Management Solution
+# MoviePilot: Your Automated Movie & Media Management Solution
 
-MoviePilot is a streamlined and user-friendly application designed to automate your movie management tasks, built for ease of use and extensibility.  [View the original repository](https://github.com/jxxghp/MoviePilot).
+MoviePilot simplifies your media management workflow, offering an intuitive interface and powerful automation capabilities.  Explore the project on [GitHub](https://github.com/jxxghp/MoviePilot).
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot/network/members)
-[![GitHub contributors](https://img.shields.io/github/contributors/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot/graphs/contributors)
+[![GitHub Repo stars](https://img.shields.io/github/stars/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
+[![GitHub forks](https://img.shields.io/github/forks/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
+[![GitHub contributors](https://img.shields.io/github/contributors/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 [![GitHub repo size](https://img.shields.io/github/repo-size/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
-[![GitHub issues](https://img.shields.io/github/issues/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot/issues)
+[![GitHub issues](https://img.shields.io/github/issues/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 [![Docker Pulls](https://img.shields.io/docker/pulls/jxxghp/moviepilot?style=for-the-badge)](https://hub.docker.com/r/jxxghp/moviepilot)
 [![Docker Pulls V2](https://img.shields.io/docker/pulls/jxxghp/moviepilot-v2?style=for-the-badge)](https://hub.docker.com/r/jxxghp/moviepilot-v2)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20Synology-blue?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 
-**Note:** This project is for learning and discussion purposes only. Please do not promote this project on any domestic platforms.
-
-Join the discussion on our Telegram channel: [https://t.me/moviepilot_channel](https://t.me/moviepilot_channel)
-
 ## Key Features
 
-*   **Modern Architecture:** Built with a clean, separated frontend (Vue3) and backend (FastAPI) for improved maintainability and scalability.
-*   **Simplified Design:** Focused on core automation needs, streamlining features and configurations for ease of use.  Many settings use default values.
-*   **Intuitive User Interface:** A redesigned interface for a more enjoyable and user-friendly experience.
-*   **Extensible:** Designed to be easily extended with custom plugins.
+*   **Modern Architecture:** Built with a frontend (Vue3) and backend (FastAPI) for a responsive and user-friendly experience.
+*   **Simplified Configuration:** Focuses on core automation needs, reducing complexity and offering sensible defaults.
+*   **Enhanced User Interface:** Features a redesigned, intuitive, and aesthetically pleasing user interface.
+*   **API Documentation:**  Access the API documentation at `http://localhost:3001/docs`.
 
 ## Installation and Usage
 
-For detailed instructions and setup guides, please visit the official Wiki: [https://wiki.movie-pilot.org](https://wiki.movie-pilot.org)
+For detailed instructions, consult the official Wiki: [https://wiki.movie-pilot.org](https://wiki.movie-pilot.org)
 
-## Development
+## Development Setup
 
 ### Prerequisites
 
 *   Python 3.12
 *   Node.js v20.12.1
 
-### Getting Started
+### Steps
 
-1.  **Clone the main repository:**
-
-    ```shell
+1.  **Clone the Main Project:**
+    ```bash
     git clone https://github.com/jxxghp/MoviePilot
     ```
 
-2.  **Clone the resources repository:**
-
-    ```shell
+2.  **Clone the Resources Project:**
+    ```bash
     git clone https://github.com/jxxghp/MoviePilot-Resources
     ```
-    Copy the necessary `.so`/`.pyd`/`.bin` files from the `MoviePilot-Resources/resources` directory to the `app/helper` directory of the main project, corresponding to your platform and version.
+    Copy the necessary `.so`, `.pyd`, or `.bin` files from the `MoviePilot-Resources/resources` directory to the `MoviePilot/app/helper` directory, based on your platform.
 
-3.  **Install backend dependencies and run the backend:**
+3.  **Install Backend Dependencies and Run:**
 
-    ```shell
+    ```bash
     cd MoviePilot
     pip install -r requirements.txt
     python3 main.py
     ```
+    The backend will run on port 3001 by default.
 
-    The backend will run on port `3001` by default.  API documentation is available at `http://localhost:3001/docs`.
-
-4.  **Clone and run the frontend:**
-
-    ```shell
-    cd MoviePilot
+4.  **Clone and Run the Frontend Project:**
+    ```bash
     git clone https://github.com/jxxghp/MoviePilot-Frontend
     cd MoviePilot-Frontend
     yarn
     yarn dev
     ```
+    Access the frontend at `http://localhost:5173`.
 
-    The frontend will be accessible at `http://localhost:5173`.
-
-5.  **Plugin Development:**  Refer to the [Plugin Development Guide](https://wiki.movie-pilot.org/zh/plugindev) to create custom plugins within the `app/plugins` directory.
+5.  **Plugin Development:** Develop custom plugins in the `app/plugins` directory, following the guidance provided in the [Plugin Development Guide](https://wiki.movie-pilot.org/zh/plugindev).
 
 ## Contributors
-
-Thanks to all the amazing contributors!
 
 <a href="https://github.com/jxxghp/MoviePilot/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=jxxghp/MoviePilot" />
 </a>
-```
-Key improvements and explanations:
-
-*   **SEO Optimization:** Added keywords like "movie management," "automation," and "NAS" to improve search visibility.  Used clear, concise headings.
-*   **Hook:**  Created a strong one-sentence opening to grab the reader's attention.
-*   **Clear Structure:**  Organized the information with clear headings and subheadings, enhancing readability.
-*   **Bulleted Lists:**  Employed bulleted lists for key features, making them easy to scan.
-*   **Conciseness:** Streamlined the text to convey the most important information effectively.
-*   **Call to Action:** Included links to the Wiki for more detailed information and instructions.
-*   **Complete Instructions:** Kept the original installation instructions, but added the crucial step of copying platform-specific binaries from the resources repo.  Added `cd MoviePilot` to the frontend and backend instructions to be sure they are run from the correct directory.
-*   **Links:**  Provided links to important resources, including the original repository, the frontend project, API documentation, and the plugin development guide.
-*   **Removed Irrelevant/Redundant Information:** Removed the unnecessary mention of the base project.
-*   **Consistent Formatting:** Ensured consistent formatting for better readability.

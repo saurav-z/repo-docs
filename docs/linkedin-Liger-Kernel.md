@@ -1,31 +1,20 @@
-# Liger Kernel: Supercharge Your LLM Training with Optimized Triton Kernels
+# Liger Kernel: Accelerate LLM Training with Optimized Triton Kernels
 
-<p align="center">
-  <a href="https://github.com/linkedin/Liger-Kernel">
-    <img src="https://raw.githubusercontent.com/linkedin/Liger-Kernel/main/docs/images/logo-banner.png" alt="Liger Kernel Logo" width="700px">
-  </a>
-</p>
+**Liger Kernel provides highly efficient Triton kernels, supercharging LLM training by boosting throughput and reducing memory usage.** [Check out the original repo for more details.](https://github.com/linkedin/Liger-Kernel)
 
-[Liger Kernel](https://github.com/linkedin/Liger-Kernel) provides a collection of highly optimized Triton kernels that **boost LLM training performance by up to 20% and reduce memory usage by 60%**. Designed for efficiency and ease of use, Liger Kernel seamlessly integrates with popular LLM training frameworks.
-
-[![Downloads (Stable)](https://static.pepy.tech/badge/liger-kernel)](https://pepy.tech/project/liger-kernel)
-[![PyPI Version](https://img.shields.io/pypi/v/liger-kernel?color=green)](https://pypi.org/project/liger-kernel)
-[![Downloads (Nightly)](https://static.pepy.tech/badge/liger-kernel-nightly)](https://pepy.tech/project/liger-kernel-nightly)
-[![PyPI Version (Nightly)](https://img.shields.io/pypi/v/liger-kernel-nightly?color=green)](https://pypi.org/project/liger-kernel-nightly)
+[![PyPI Stable Version](https://img.shields.io/pypi/v/liger-kernel?color=green)](https://pypi.org/project/liger-kernel)
+[![PyPI Nightly Version](https://img.shields.io/pypi/v/liger-kernel-nightly?color=green)](https://pypi.org/project/liger-kernel-nightly)
 [![Discord](https://dcbadge.vercel.app/api/server/gpumode?style=flat)](https://discord.gg/gpumode)
+[![Downloads (Stable)](https://static.pepy.tech/badge/liger-kernel)](https://pepy.tech/project/liger-kernel)
+[![Downloads (Nightly)](https://static.pepy.tech/badge/liger-kernel-nightly)](https://pepy.tech/project/liger-kernel-nightly)
 
-**Key Features:**
+---
 
-*   **Significant Performance Gains:** Achieve up to 20% faster multi-GPU training throughput.
-*   **Reduced Memory Footprint:** Decrease memory usage by as much as 60%, enabling larger models, longer context lengths, and bigger batch sizes.
-*   **Hugging Face Compatibility:** Easily integrate Liger Kernel with Hugging Face models using a single line of code.
-*   **Optimized Post-Training Kernels:** Benefit from up to 80% memory savings for alignment and distillation tasks (DPO, ORPO, etc.).
-*   **Exact Computations:** Ensure accuracy with exact computations and rigorous testing.
-*   **Lightweight & Minimal Dependencies:** Requires only PyTorch and Triton, minimizing dependency issues.
-*   **Multi-GPU Support:** Compatible with PyTorch FSDP, DeepSpeed, DDP, and other multi-GPU setups.
-*   **Framework Integration:** Compatible with frameworks like [Axolotl](https://github.com/axolotl-ai-cloud/axolotl), [LLaMa-Factory](https://github.com/hiyouga/LLaMA-Factory), [SFTTrainer](https://github.com/huggingface/trl/releases/tag/v0.10.1), [Hugging Face Trainer](https://github.com/huggingface/transformers/pull/32860), [SWIFT](https://github.com/modelscope/ms-swift), and [oumi](https://github.com/oumi-ai/oumi/tree/main)
+![Liger Kernel Banner](https://raw.githubusercontent.com/linkedin/Liger-Kernel/main/docs/images/logo-banner.png)
 
-**Jump to:** [Installation](#installation) | [Getting Started](#getting-started) | [Examples](#examples) | [High-level APIs](#high-level-apis) | [Low-level APIs](#low-level-apis) | [Contributing](#contributing) | [Cite Us](#cite-this-work)
+[Installation](#installation) | [Getting Started](#getting-started) | [Examples](#examples) | [High-level APIs](#high-level-apis) | [Low-level APIs](#low-level-apis) | [Cite This Work](#cite-this-work)
+
+---
 
 <details>
   <summary>Latest News 🔥</summary>
@@ -41,11 +30,27 @@
 
 </details>
 
-## Supercharge Your Model with Liger Kernel
+---
 
-Liger Kernel allows you to train larger models faster and with less memory.
+## Key Features
 
-![Banner](https://raw.githubusercontent.com/linkedin/Liger-Kernel/main/docs/images/banner.GIF)
+*   **Blazing-Fast Performance:** Liger Kernel boosts multi-GPU training throughput by **up to 20%**.
+*   **Reduced Memory Footprint:** Significantly decreases memory usage by **up to 60%**, enabling larger models and longer context lengths.
+*   **Hugging Face Compatible:** Ready to use with your favorite Hugging Face models.
+*   **Post-Training Optimization:** Provides optimized kernels for alignment and distillation tasks, delivering **up to 80% memory savings**.
+*   **Exact Calculations:** Ensures accuracy with rigorous unit tests and convergence testing.
+*   **Minimal Dependencies:** Built on Torch and Triton, minimizing dependency issues.
+*   **Multi-GPU Ready:** Seamlessly integrates with multi-GPU setups like PyTorch FSDP and DeepSpeed.
+*   **Easy Integration:** Patch your models with a single line of code.
+*   **Wide Framework Support:** Compatible with Axolotl, LLaMa-Factory, SFTTrainer, Hugging Face Trainer, SWIFT, and oumi.
+
+---
+
+## Supercharge Your LLMs with Liger Kernel
+
+![Performance Comparison](https://raw.githubusercontent.com/linkedin/Liger-Kernel/main/docs/images/banner.GIF)
+
+Liger Kernel uses kernel fusion, in-place replacement, and chunking techniques to boost performance.
 
 | Speed Up                 | Memory Reduction        |
 |--------------------------|-------------------------|
@@ -55,13 +60,15 @@ Liger Kernel allows you to train larger models faster and with less memory.
 > - Benchmark conditions: LLaMA 3-8B, Batch Size = 8, Data Type = `bf16`, Optimizer = AdamW, Gradient Checkpointing = True, Distributed Strategy = FSDP1 on 8 A100s.
 > - Hugging Face models start to OOM at a 4K context length, whereas Hugging Face + Liger Kernel scales up to 16K.
 
-## Optimize Post Training with Liger Kernel
+---
 
-Reduce memory usage by up to 80% for alignment and distillation tasks with optimized post training kernels.
+## Optimize Post-Training with Liger Kernel
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/linkedin/Liger-Kernel/main/docs/images/post-training.png" width="50%" alt="Post Training">
 </p>
+
+Liger Kernel also provides optimized post-training kernels like DPO, ORPO, SimPO, and more. You can easily use them as Python modules.
 
 ```python
 from liger_kernel.chunked_loss import LigerFusedLinearORPOLoss
@@ -69,9 +76,9 @@ orpo_loss = LigerFusedLinearORPOLoss()
 y = orpo_loss(lm_head.weight, x, target)
 ```
 
-## Examples
+---
 
-Explore the capabilities of Liger Kernel with these examples:
+## Examples
 
 | **Use Case**                                    | **Description**                                                                                   |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -80,6 +87,8 @@ Explore the capabilities of Liger Kernel with these examples:
 | [**Medusa Multi-head LLM (Retraining Phase)**](https://github.com/linkedin/Liger-Kernel/tree/main/examples/medusa)        | Reduce memory usage by 80% with 5 LM heads and improve throughput by 40% using 8 A100s with FSDP |
 | [**Vision-Language Model SFT**](https://github.com/linkedin/Liger-Kernel/tree/main/examples/huggingface/run_qwen2_vl.sh)      | Finetune Qwen2-VL on image-text data using 4 A100s with FSDP |
 | [**Liger ORPO Trainer**](https://github.com/linkedin/Liger-Kernel/blob/main/examples/alignment/run_orpo.py)      | Align Llama 3.2 using Liger ORPO Trainer with FSDP with 50% memory reduction |
+
+---
 
 ## Installation
 
@@ -92,68 +101,77 @@ Explore the capabilities of Liger Kernel with these examples:
 
 #### ROCm
 
-*   `torch >= 2.5.0` (Install according to the instructions in the PyTorch official webpage.)
+*   `torch >= 2.5.0` (Install according to the instruction on the Pytorch official webpage.)
 *   `triton >= 3.0.0` (Install from PyPI, e.g., `pip install triton==3.0.0`)
 
 ```bash
-# Install ROCm specific
+# Need to pass the url when installing
 pip install -e .[dev] --extra-index-url https://download.pytorch.org/whl/nightly/rocm6.2
 ```
 
 ### Optional Dependencies
 
-*   `transformers >= 4.x`: Required if you plan to use the transformers models patching APIs.  The specific model you are working with will dictate the minimum version of transformers.
+*   `transformers >= 4.x`: Required if you plan to use the transformers models patching APIs. The specific model you are working will dictate the minimum version of transformers.
 
-> **Note:**  Our kernels leverage the full hardware compatibility offered by [Triton](https://github.com/triton-lang/triton).
+> **Note:**
+> Our kernels inherit the full spectrum of hardware compatibility offered by [Triton](https://github.com/triton-lang/triton).
 
-**Installation Options:**
+To install the stable version:
 
-*   **Stable Version:**
+```bash
+$ pip install liger-kernel
+```
 
-    ```bash
-    pip install liger-kernel
-    ```
+To install the nightly version:
 
-*   **Nightly Version:**
+```bash
+$ pip install liger-kernel-nightly
+```
 
-    ```bash
-    pip install liger-kernel-nightly
-    ```
+To install from source:
 
-*   **From Source:**
+```bash
+git clone https://github.com/linkedin/Liger-Kernel.git
+cd Liger-Kernel
 
-    ```bash
-    git clone https://github.com/linkedin/Liger-Kernel.git
-    cd Liger-Kernel
-    pip install -e .       # Installs default dependencies
-    pip install -e ".[dev]" # Installs development dependencies
-    ```
+# Install Default Dependencies
+# Setup.py will detect whether you are using AMD or NVIDIA
+pip install -e .
+
+# Setup Development Dependencies
+pip install -e ".[dev]"
+```
+
+---
 
 ## Getting Started
 
-Choose the method that best suits your needs to apply Liger kernels:
+Apply Liger kernels in a few different ways, depending on the level of customization required:
 
 ### 1. Use `AutoLigerKernelForCausalLM`
 
-This is the easiest way, automatically patching supported models.
+This is the simplest method, as you don't need to import a model-specific patching API. If the model is supported, the code will be automatically patched using the default settings.
 
 ```python
 from liger_kernel.transformers import AutoLigerKernelForCausalLM
 
+# This AutoModel wrapper class automatically monkey-patches the
+# model with the optimized Liger kernels if the model is supported.
 model = AutoLigerKernelForCausalLM.from_pretrained("path/to/some/model")
 ```
 
 ### 2. Apply Model-Specific Patching APIs
 
-Use patching APIs for more control.
+Using the [patching APIs](#patching), you can swap Hugging Face models with optimized Liger Kernels.
 
 ```python
 import transformers
 from liger_kernel.transformers import apply_liger_kernel_to_llama
 
-apply_liger_kernel_to_llama()  # Apply all available kernels
+# 1a. Adding this line automatically monkey-patches the model with the optimized Liger kernels
+apply_liger_kernel_to_llama()
 
-# Or, specify which kernels:
+# 1b. You could alternatively specify exactly which kernels are applied
 apply_liger_kernel_to_llama(
   rope=True,
   swiglu=True,
@@ -162,12 +180,13 @@ apply_liger_kernel_to_llama(
   rms_norm=False
 )
 
+# 2. Instantiate patched model
 model = transformers.AutoModelForCausalLM("path/to/llama/model")
 ```
 
 ### 3. Compose Your Own Model
 
-Use individual kernels for maximum flexibility.
+Use individual [kernels](https://github.com/linkedin/Liger-Kernel?tab=readme-ov-file#model-kernels) to build your custom models.
 
 ```python
 from liger_kernel.transformers import LigerFusedLinearCrossEntropyLoss
@@ -175,32 +194,38 @@ import torch.nn as nn
 import torch
 
 model = nn.Linear(128, 256).cuda()
+
+# fuses linear + cross entropy layers together and performs chunk-by-chunk computation to reduce memory
 loss_fn = LigerFusedLinearCrossEntropyLoss()
+
 input = torch.randn(4, 128, requires_grad=True, device="cuda")
 target = torch.randint(256, (4, ), device="cuda")
+
 loss = loss_fn(model.weight, input, target)
 loss.backward()
 ```
+
+---
 
 ## High-level APIs
 
 ### AutoModel
 
-| **AutoModel Variant**        | **API**                                     |
-|------------------------------|---------------------------------------------|
-| `AutoModelForCausalLM`       | `liger_kernel.transformers.AutoLigerKernelForCausalLM` |
+| **AutoModel Variant**     | **API**                                                      |
+| ------------------------- | ------------------------------------------------------------ |
+| AutoModelForCausalLM      | `liger_kernel.transformers.AutoLigerKernelForCausalLM`      |
 
 ### Patching
 
-| **Model**   | **API**                                                      | **Supported Operations**                                                |
-|-------------|--------------------------------------------------------------|-------------------------------------------------------------------------|
-| Llama4 (Text) & (Multimodal)      | `liger_kernel.transformers.apply_liger_kernel_to_llama4`   | RMSNorm, LayerNorm, GeGLU, CrossEntropyLoss, FusedLinearCrossEntropy         |
-| LLaMA 2 & 3 | `liger_kernel.transformers.apply_liger_kernel_to_llama`   | RoPE, RMSNorm, SwiGLU, CrossEntropyLoss, FusedLinearCrossEntropy        |
-| LLaMA 3.2-Vision | `liger_kernel.transformers.apply_liger_kernel_to_mllama`   | RoPE, RMSNorm, SwiGLU, CrossEntropyLoss, FusedLinearCrossEntropy        |
-| Mistral     | `liger_kernel.transformers.apply_liger_kernel_to_mistral`  | RoPE, RMSNorm, SwiGLU, CrossEntropyLoss, FusedLinearCrossEntropy        |
-| Mixtral     | `liger_kernel.transformers.apply_liger_kernel_to_mixtral`  | RoPE, RMSNorm, SwiGLU, CrossEntropyLoss, FusedLinearCrossEntropy        |
-| Gemma1      | `liger_kernel.transformers.apply_liger_kernel_to_gemma`    | RoPE, RMSNorm, GeGLU, CrossEntropyLoss, FusedLinearCrossEntropy         |
-| Gemma2      | `liger_kernel.transformers.apply_liger_kernel_to_gemma2`   | RoPE, RMSNorm, GeGLU, CrossEntropyLoss, FusedLinearCrossEntropy         |
+| **Model**                      | **API**                                                               | **Supported Operations**                                                |
+| ------------------------------ | --------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Llama4 (Text) & (Multimodal)   | `liger_kernel.transformers.apply_liger_kernel_to_llama4`              | RMSNorm, LayerNorm, GeGLU, CrossEntropyLoss, FusedLinearCrossEntropy         |
+| LLaMA 2 & 3                   | `liger_kernel.transformers.apply_liger_kernel_to_llama`               | RoPE, RMSNorm, SwiGLU, CrossEntropyLoss, FusedLinearCrossEntropy        |
+| LLaMA 3.2-Vision              | `liger_kernel.transformers.apply_liger_kernel_to_mllama`               | RoPE, RMSNorm, SwiGLU, CrossEntropyLoss, FusedLinearCrossEntropy        |
+| Mistral                      | `liger_kernel.transformers.apply_liger_kernel_to_mistral`              | RoPE, RMSNorm, SwiGLU, CrossEntropyLoss, FusedLinearCrossEntropy        |
+| Mixtral                      | `liger_kernel.transformers.apply_liger_kernel_to_mixtral`              | RoPE, RMSNorm, SwiGLU, CrossEntropyLoss, FusedLinearCrossEntropy        |
+| Gemma1                      | `liger_kernel.transformers.apply_liger_kernel_to_gemma`                | RoPE, RMSNorm, GeGLU, CrossEntropyLoss, FusedLinearCrossEntropy         |
+| Gemma2                      | `liger_kernel.transformers.apply_liger_kernel_to_gemma2`               | RoPE, RMSNorm, GeGLU, CrossEntropyLoss, FusedLinearCrossEntropy         |
 | Gemma3 (Text)      | `liger_kernel.transformers.apply_liger_kernel_to_gemma3_text`   | RoPE, RMSNorm, GeGLU, CrossEntropyLoss, FusedLinearCrossEntropy         |
 | Gemma3 (Multimodal)      | `liger_kernel.transformers.apply_liger_kernel_to_gemma3`   | LayerNorm, RoPE, RMSNorm, GeGLU, CrossEntropyLoss, FusedLinearCrossEntropy         |
 | Paligemma, Paligemma2, & Paligemma2 Mix      | `liger_kernel.transformers.apply_liger_kernel_to_paligemma`   | LayerNorm, RoPE, RMSNorm, GeGLU, CrossEntropyLoss, FusedLinearCrossEntropy         |
@@ -214,17 +239,17 @@ loss.backward()
 | OLMo2   | `liger_kernel.transformers.apply_liger_kernel_to_olmo2`     | RoPE, RMSNorm, SwiGLU, CrossEntropyLoss, FusedLinearCrossEntropy |
 | GLM-4   | `liger_kernel.transformers.apply_liger_kernel_to_glm4`     | RoPE, RMSNorm, SwiGLU, CrossEntropyLoss, FusedLinearCrossEntropy |
 
+---
+
 ## Low-level APIs
 
-Liger Kernel provides a rich set of low-level APIs for fine-grained control over your LLM training.
-
-*   **Fused Linear Kernels:** Combine linear layers with loss functions, reducing memory usage (up to 80%) for memory-constrained workloads.
-*   **Other Kernels:** Leverage fusion and in-place techniques for memory and performance optimization.
+*   Fused Linear kernels combine linear layers with losses, optimizing memory usage (ideal for HBM-constrained workloads).
+*   Other kernels use fusion and in-place techniques for memory and performance optimization.
 
 ### Model Kernels
 
 | **Kernel**                      | **API**                                                     |
-|---------------------------------|-------------------------------------------------------------|
+| ------------------------------- | ------------------------------------------------------------- |
 | RMSNorm                         | `liger_kernel.transformers.LigerRMSNorm`                    |
 | LayerNorm                       | `liger_kernel.transformers.LigerLayerNorm`                  |
 | RoPE                            | `liger_kernel.transformers.liger_rotary_pos_emb`            |
@@ -239,7 +264,7 @@ Liger Kernel provides a rich set of low-level APIs for fine-grained control over
 ### Alignment Kernels
 
 | **Kernel**                      | **API**                                                     |
-|---------------------------------|-------------------------------------------------------------|
+| ------------------------------- | ------------------------------------------------------------- |
 | Fused Linear CPO Loss           | `liger_kernel.chunked_loss.LigerFusedLinearCPOLoss`       |
 | Fused Linear DPO Loss           | `liger_kernel.chunked_loss.LigerFusedLinearDPOLoss`       |
 | Fused Linear ORPO Loss          | `liger_kernel.chunked_loss.LigerFusedLinearORPOLoss`      |
@@ -249,7 +274,7 @@ Liger Kernel provides a rich set of low-level APIs for fine-grained control over
 ### Distillation Kernels
 
 | **Kernel**                      | **API**                                                     |
-|---------------------------------|-------------------------------------------------------------|
+| ------------------------------- | ------------------------------------------------------------- |
 | KLDivergence                    | `liger_kernel.transformers.LigerKLDIVLoss`                  |
 | JSD                             | `liger_kernel.transformers.LigerJSD`                        |
 | Fused Linear JSD                  | `liger_kernel.transformers.LigerFusedLinearJSD`             |
@@ -258,9 +283,11 @@ Liger Kernel provides a rich set of low-level APIs for fine-grained control over
 ### Experimental Kernels
 
 | **Kernel**                      | **API**                                                     |
-|---------------------------------|-------------------------------------------------------------|
+| ------------------------------- | ------------------------------------------------------------- |
 | Embedding                       | `liger_kernel.transformers.experimental.LigerEmbedding`     |
 | Matmul int2xint8                | `liger_kernel.transformers.experimental.matmul` |
+
+---
 
 ## Contributing, Acknowledgements, and License
 
@@ -268,9 +295,9 @@ Liger Kernel provides a rich set of low-level APIs for fine-grained control over
 *   [Acknowledgements](https://github.com/linkedin/Liger-Kernel/blob/main/docs/acknowledgement.md)
 *   [License Information](https://github.com/linkedin/Liger-Kernel/blob/main/docs/license.md)
 
-## Sponsorship and Collaboration
+---
 
-Liger Kernel is supported by a diverse set of collaborators and sponsors:
+## Sponsorship and Collaboration
 
 *   [Glows.ai](https://platform.glows.ai/): Sponsoring NVIDIA GPUs for our open source developers.
 *   [AMD](https://www.amd.com/en.html): Providing AMD GPUs for our AMD CI.
@@ -282,32 +309,63 @@ Liger Kernel is supported by a diverse set of collaborators and sponsors:
 *   [Axolotl](https://axolotl.ai/): Integrating Liger Kernel into Axolotl.
 *   [Llama-Factory](https://github.com/hiyouga/LLaMA-Factory): Integrating Liger Kernel into Llama-Factory.
 
-## CI Status
+---
 
-| Build  |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  [![Build](https://github.com/linkedin/Liger-Kernel/actions/workflows/nvi-ci.yml/badge.svg?event=schedule)](https://github.com/linkedin/Liger-Kernel/actions/workflows/nvi-ci.yml)  <br>  [![Build](https://github.com/linkedin/Liger-Kernel/actions/workflows/amd-ci.yml/badge.svg?event=schedule)](https://github.com/linkedin/Liger-Kernel/actions/workflows/amd-ci.yml) <br> [![Build](https://github.com/linkedin/Liger-Kernel/actions/workflows/intel-ci.yml/badge.svg?event=schedule)](https://github.com/linkedin/Liger-Kernel/actions/workflows/intel-ci.yml) |
+## CI status
+
+<table style="width: 100%; text-align: center; border-collapse: collapse;">
+    <tr>
+        <th style="padding: 10px;">Build</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">
+            <div style="display: block;">
+                <a href="https://github.com/linkedin/Liger-Kernel/actions/workflows/nvi-ci.yml">
+                    <img src="https://github.com/linkedin/Liger-Kernel/actions/workflows/nvi-ci.yml/badge.svg?event=schedule" alt="Build">
+                </a>
+            </div>
+            <div style="display: block;">
+                <a href="https://github.com/linkedin/Liger-Kernel/actions/workflows/amd-ci.yml">
+                    <img src="https://github.com/linkedin/Liger-Kernel/actions/workflows/amd-ci.yml/badge.svg?event=schedule" alt="Build">
+                </a>
+            </div>
+            <div style="display: block;">
+                <a href="https://github.com/linkedin/Liger-Kernel/actions/workflows/amd-ci.yml">
+                    <img src="https://github.com/linkedin/Liger-Kernel/actions/workflows/intel-ci.yml/badge.svg?event=schedule" alt="Build">
+                </a>
+            </div>
+        </td>
+    </tr>
+</table>
+
+---
 
 ## Contact
 
-*   For issues, open a GitHub ticket in this repository.
-*   For open discussion, join [our Discord channel on GPUMode](https://discord.com/channels/1189498204333543425/1275130785933951039).
-*   For formal collaboration, contact yannchen@linkedin.com and zhipwang@linkedin.com.
+*   For issues, create a Github ticket in this repository
+*   For open discussion, join [our discord channel on GPUMode](https://discord.com/channels/1189498204333543425/1275130785933951039)
+*   For formal collaboration, send an email to Yanning Chen(yannchen@linkedin.com) and Zhipeng Wang(zhipwang@linkedin.com)
+
+---
 
 ## Cite this work
+
+Biblatex entry:
 
 ```bib
 @article{hsu2024ligerkernelefficienttriton,
       title={Liger Kernel: Efficient Triton Kernels for LLM Training},
       author={Pin-Lun Hsu and Yun Dai and Vignesh Kothapalli and Qingquan Song and Shao Tang and Siyu Zhu and Steven Shimizu and Shivam Sahni and Haowen Ning and Yanning Chen and Zhipeng Wang},
-      year={2024},
+      year={2025},
       eprint={2410.10989},
       archivePrefix={arXiv},
       primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2410.10989},
+      url={https://openreview.net/forum?id=36SjAIT42G},
       journal={Proceedings of the ICML 2025 Workshop on Championing Opensource Development in Machine Learning (CODEML ’25)},
 }
 ```
+
+---
 
 ## Star History
 

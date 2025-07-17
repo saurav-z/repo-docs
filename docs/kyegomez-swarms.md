@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-  <em>**Swarms: Build and Deploy Enterprise-Grade Multi-Agent AI Systems with Ease.**</em>
+  <em>**Swarms: Build Enterprise-Grade AI Applications with Multi-Agent Orchestration.**</em>
 </p>
 
 <p align="center">
@@ -97,63 +97,40 @@
     </a>
 </p>
 
-## Table of Contents
+## What is Swarms?
 
-*   [About Swarms](#about-swarms)
-*   [Key Features](#key-features)
-*   [Installation](#installation)
-*   [Environment Configuration](#environment-configuration)
-*   [Your First Agent](#your-first-agent)
-*   [Your First Swarm: Multi-Agent Collaboration](#your-first-swarm-multi-agent-collaboration)
-*   [Multi-Agent Architectures for Production Deployments](#multi-agent-architectures-for-production-deployments)
-*   [SequentialWorkflow](#sequentialworkflow)
-*   [ConcurrentWorkflow (with SpreadSheetSwarm)](#concurrentworkflow-with-spreadsheetswarm)
-*   [AgentRearrange](#agentrearrange)
-*   [SwarmRouter: The Universal Swarm Orchestrator](#swarmrouter-the-universal-swarm-orchestrator)
-*   [MixtureOfAgents (MoA)](#mixtureofagents-moa)
-*   [GroupChat](#groupchat)
-*   [HierarchicalSwarm](#hierarchicalswarm)
-*   [Documentation](#documentation)
-*   [Examples](#examples)
-*   [Contribute to Swarms](#contribute-to-swarms)
-*   [Connect With Us](#connect-with-us)
-*   [Citation](#citation)
-*   [License](#license)
-
-## About Swarms
-
-Swarms is an open-source, enterprise-grade framework for building and deploying multi-agent AI systems.  It provides the infrastructure, tools, and architectures you need to build production-ready, scalable, and reliable AI applications, visit the [original repo](https://github.com/kyegomez/swarms).
+Swarms is an **enterprise-grade, production-ready multi-agent orchestration framework** designed to empower developers and organizations to build and deploy sophisticated AI applications at scale. [Explore the Swarms repository on GitHub](https://github.com/kyegomez/swarms).
 
 ## Key Features
 
-*   **Enterprise Architecture:** Designed for production with high availability, modular microservices, and comprehensive observability.
+*   **Enterprise Architecture:**
     *   Production-Ready Infrastructure
     *   High Availability Systems
     *   Modular Microservices Design
     *   Comprehensive Observability
     *   Backwards Compatibility
-*   **Multi-Agent Orchestration:**  Powerful tools for creating complex workflows and agent interactions.
+*   **Multi-Agent Orchestration:**
     *   Hierarchical Agent Swarms
     *   Parallel Processing Pipelines
     *   Sequential Workflow Orchestration
     *   Graph-Based Agent Networks
     *   Dynamic Agent Composition
     *   Agent Registry Management
-*   **Enterprise Integration:** Seamlessly integrate with existing systems and various LLM providers.
+*   **Enterprise Integration:**
     *   Multi-Model Provider Support
     *   Custom Agent Development Framework
     *   Extensive Enterprise Tool Library
     *   Multiple Memory Systems
     *   Backwards Compatibility with LangChain, AutoGen, CrewAI
     *   Standardized API Interfaces
-*   **Enterprise Scalability:**  Designed for high-throughput and cost-effective resource utilization.
+*   **Enterprise Scalability:**
     *   Concurrent Multi-Agent Processing
     *   Intelligent Resource Management
     *   Load Balancing & Auto-Scaling
     *   Horizontal Scaling Capabilities
     *   Performance Optimization
     *   Capacity Planning Tools
-*   **Developer Experience:**  Focus on ease of use with intuitive APIs, comprehensive documentation, and community support.
+*   **Developer Experience:**
     *   Intuitive Enterprise API
     *   Comprehensive Documentation
     *   Active Enterprise Community
@@ -202,6 +179,8 @@ $ cd swarms
 $ pip install -e .
 ```
 
+---
+
 ## Environment Configuration
 
 [Learn more about the environment configuration here](https://docs.swarms.world/en/latest/swarms/install/env/)
@@ -213,7 +192,9 @@ ANTHROPIC_API_KEY=""
 GROQ_API_KEY=""
 ```
 
-## Your First Agent
+## Core Concepts & Quickstart
+
+### 🤖 Your First Agent
 
 An **Agent** is the fundamental building block of a swarm—an autonomous entity powered by an LLM + Tools + Memory. [Learn more Here](https://docs.swarms.world/en/latest/swarms/structs/agent/)
 
@@ -231,7 +212,7 @@ agent = Agent(
 agent.run("What are the key benefits of using a multi-agent system?")
 ```
 
-## Your First Swarm: Multi-Agent Collaboration
+### 🤝 Your First Swarm: Multi-Agent Collaboration
 
 A **Swarm** consists of multiple agents working together. This simple example creates a two-agent workflow for researching and writing a blog post. [Learn More About SequentialWorkflow](https://docs.swarms.world/en/latest/swarms/structs/sequential_workflow/)
 
@@ -258,26 +239,31 @@ workflow = SequentialWorkflow(agents=[researcher, writer])
 # Run the workflow on a task
 final_post = workflow.run("The history and future of artificial intelligence")
 print(final_post)
+
 ```
 
-## Multi-Agent Architectures For Production Deployments
+-----
+
+## 🏗️ Multi-Agent Architectures For Production Deployments
 
 `swarms` provides a variety of powerful, pre-built multi-agent architectures enabling you to orchestrate agents in various ways. Choose the right structure for your specific problem to build efficient and reliable production systems.
 
-| Architecture                                                                              | Description                                                                                                 | Best For                                                                                                          |
-| :---------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [SequentialWorkflow](https://docs.swarms.world/en/latest/swarms/structs/sequential_workflow/)  | Agents execute tasks in a linear chain; one agent's output is the next one's input.                         | Step-by-step processes like data transformation pipelines, report generation.                                       |
-| [ConcurrentWorkflow](https://docs.swarms.world/en/latest/swarms/structs/concurrent_workflow/) | Agents run tasks simultaneously for maximum efficiency.                                                      | High-throughput tasks like batch processing, parallel data analysis.                                                |
-| [AgentRearrange](https://docs.swarms.world/en/latest/swarms/structs/agent_rearrange/)      | Dynamically maps complex relationships (e.g., `a -> b, c`) between agents.                                 | Flexible and adaptive workflows, task distribution, dynamic routing.                                                 |
-| [GraphWorkflow](https://docs.swarms.world/en/latest/swarms/structs/graph_workflow/)        | Orchestrates agents as nodes in a Directed Acyclic Graph (DAG).                                              | Complex projects with intricate dependencies, like software builds.                                                  |
-| [MixtureOfAgents (MoA)](https://docs.swarms.world/en/latest/swarms/structs/moa/)            | Utilizes multiple expert agents in parallel and synthesizes their outputs.                                    | Complex problem-solving, achieving state-of-the-art performance through collaboration.                                |
-| [GroupChat](https://docs.swarms.world/en/latest/swarms/structs/group_chat/)                  | Agents collaborate and make decisions through a conversational interface.                                     | Real-time collaborative decision-making, negotiations, brainstorming.                                              |
-| [ForestSwarm](https://docs.swarms.world/en/latest/swarms/structs/forest_swarm/)             | Dynamically selects the most suitable agent or tree of agents for a given task.                              | Task routing, optimizing for expertise, complex decision-making trees.                                             |
-| [SpreadSheetSwarm](https://docs.swarms.world/en/latest/swarms/structs/spreadsheet_swarm/)   | Manages thousands of agents concurrently, tracking tasks and outputs in a structured format.                  | Massive-scale parallel operations, large-scale data generation and analysis.                                      |
-| [HierarchicalSwarm](https://docs.swarms.world/en/latest/swarms/structs/hiearchical_swarm/)   | Orchestrates agents with a director that creates plans and distributes tasks to specialized worker agents. | Complex project management, team coordination, hierarchical decision-making with feedback loops.                    |
-| [SwarmRouter](https://docs.swarms.world/en/latest/swarms/structs/swarm_router/)             | Universal orchestrator that provides a single interface to run any type of swarm with dynamic selection.       | Simplifying complex workflows, switching between swarm strategies, unified multi-agent management.                 |
+| **Architecture** | **Description** | **Best For** |
+|---|---|---|
+| **[SequentialWorkflow](https://docs.swarms.world/en/latest/swarms/structs/sequential_workflow/)** | Agents execute tasks in a linear chain; one agent's output is the next one's input. | Step-by-step processes like data transformation pipelines, report generation. |
+| **[ConcurrentWorkflow](https://docs.swarms.world/en/latest/swarms/structs/concurrent_workflow/)** | Agents run tasks simultaneously for maximum efficiency. | High-throughput tasks like batch processing, parallel data analysis. |
+| **[AgentRearrange](https://docs.swarms.world/en/latest/swarms/structs/agent_rearrange/)** | Dynamically maps complex relationships (e.g., `a -> b, c`) between agents. | Flexible and adaptive workflows, task distribution, dynamic routing. |
+| **[GraphWorkflow](https://docs.swarms.world/en/latest/swarms/structs/graph_workflow/)** | Orchestrates agents as nodes in a Directed Acyclic Graph (DAG). | Complex projects with intricate dependencies, like software builds. |
+| **[MixtureOfAgents (MoA)](https://docs.swarms.world/en/latest/swarms/structs/moa/)** | Utilizes multiple expert agents in parallel and synthesizes their outputs. | Complex problem-solving, achieving state-of-the-art performance through collaboration. |
+| **[GroupChat](https://docs.swarms.world/en/latest/swarms/structs/group_chat/)** | Agents collaborate and make decisions through a conversational interface. | Real-time collaborative decision-making, negotiations, brainstorming. |
+| **[ForestSwarm](https://docs.swarms.world/en/latest/swarms/structs/forest_swarm/)** | Dynamically selects the most suitable agent or tree of agents for a given task. | Task routing, optimizing for expertise, complex decision-making trees. |
+| **[SpreadSheetSwarm](https://docs.swarms.world/en/latest/swarms/structs/spreadsheet_swarm/)** | Manages thousands of agents concurrently, tracking tasks and outputs in a structured format. | Massive-scale parallel operations, large-scale data generation and analysis. |
+| **[HierarchicalSwarm](https://docs.swarms.world/en/latest/swarms/structs/hiearchical_swarm/)** | Orchestrates agents with a director that creates plans and distributes tasks to specialized worker agents. | Complex project management, team coordination, hierarchical decision-making with feedback loops. |
+| **[SwarmRouter](https://docs.swarms.world/en/latest/swarms/structs/swarm_router/)** | Universal orchestrator that provides a single interface to run any type of swarm with dynamic selection. | Simplifying complex workflows, switching between swarm strategies, unified multi-agent management. |
 
-## SequentialWorkflow
+-----
+
+### SequentialWorkflow
 
 A `SequentialWorkflow` executes tasks in a strict order, forming a pipeline where each agent builds upon the work of the previous one. `SequentialWorkflow` is Ideal for processes that have clear, ordered steps. This ensures that tasks with dependencies are handled correctly.
 
@@ -300,7 +286,10 @@ elevator_pitch = workflow.run()
 print(elevator_pitch)
 ```
 
-## ConcurrentWorkflow (with `SpreadSheetSwarm`)
+-----
+
+
+### ConcurrentWorkflow (with `SpreadSheetSwarm`)
 
 A concurrent workflow runs multiple agents simultaneously. `SpreadSheetSwarm` is a powerful implementation that can manage thousands of concurrent agents and log their outputs to a CSV file. Use this architecture for high-throughput tasks that can be performed in parallel, drastically reducing execution time.
 
@@ -333,7 +322,9 @@ swarm.run(task=f"Generate a post about: {property_description}")
 # Check marketing_posts.csv for the results!
 ```
 
-## AgentRearrange
+---
+
+### AgentRearrange
 
 Inspired by `einsum`, `AgentRearrange` lets you define complex, non-linear relationships between agents using a simple string-based syntax. [Learn more](https://docs.swarms.world/en/latest/swarms/structs/agent_rearrange/). This architecture is Perfect for orchestrating dynamic workflows where agents might work in parallel, sequence, or a combination of both.
 
@@ -362,7 +353,9 @@ outputs = rearrange_system.run("Analyze the impact of AI on modern cinema.")
 print(outputs)
 ```
 
-## SwarmRouter: The Universal Swarm Orchestrator
+----
+
+### SwarmRouter: The Universal Swarm Orchestrator
 
 The `SwarmRouter` simplifies building complex workflows by providing a single interface to run any type of swarm. Instead of importing and managing different swarm classes, you can dynamically select the one you need just by changing the `swarm_type` parameter. [Read the full documentation](https://docs.swarms.world/en/latest/swarms/structs/swarm_router/)
 
@@ -414,7 +407,12 @@ aggregated_output = moa_router.run(task)
 print(f"Final Aggregated Output:\n{aggregated_output}\n")
 ```
 
-## MixtureOfAgents (MoA)
+
+The `SwarmRouter` is a powerful tool for simplifying multi-agent orchestration. It provides a consistent and flexible way to deploy different collaborative strategies, allowing you to build more sophisticated applications with less code.
+
+-------
+
+### MixtureOfAgents (MoA)
 
 The `MixtureOfAgents` architecture processes tasks by feeding them to multiple "expert" agents in parallel. Their diverse outputs are then synthesized by an aggregator agent to produce a final, high-quality result. [Learn more here](https://docs.swarms.world/en/latest/swarms/examples/moa_example/)
 
@@ -444,7 +442,9 @@ recommendation = moa_swarm.run("Should we invest in NVIDIA stock right now?")
 print(recommendation)
 ```
 
-## GroupChat
+----
+
+### GroupChat
 
 `GroupChat` creates a conversational environment where multiple agents can interact, discuss, and collaboratively solve a problem. You can define the speaking order or let it be determined dynamically. This architecture is ideal for tasks that benefit from debate and multi-perspective reasoning, such as contract negotiation, brainstorming, or complex decision-making.
 
@@ -471,7 +471,9 @@ for message in conversation_history:
     print(f"[{message['agent_name']}]: {message['content']}")
 ```
 
-## HierarchicalSwarm
+----
+
+### HierarchicalSwarm
 
 `HierarchicalSwarm` implements a director-worker pattern where a central director agent creates comprehensive plans and distributes specific tasks to specialized worker agents. The director evaluates results and can issue new orders in feedback loops, making it ideal for complex project management and team coordination scenarios.
 
@@ -523,6 +525,14 @@ result = marketing_swarm.run(
 print(result)
 ```
 
+The `HierarchicalSwarm` excels at:
+- **Complex Project Management**: Breaking down large tasks into specialized subtasks
+- **Team Coordination**: Ensuring all agents work toward unified goals
+- **Quality Control**: Director provides feedback and refinement loops
+- **Scalable Workflows**: Easy to add new specialized agents as needed
+
+---
+
 ## Documentation
 
 Documentation is located here at: [docs.swarms.world](https://docs.swarms.world)
@@ -533,44 +543,64 @@ Explore comprehensive examples and tutorials to learn how to use Swarms effectiv
 
 ### Basic Examples
 
-| Example                       | Description                      | Link                                                                                                                       |
-| :---------------------------- | :------------------------------- | :------------------------------------------------------------------------------------------------------------------------- |
-| Basic Agent                   | Simple agent setup and usage      | [Basic Agent](https://docs.swarms.world/en/latest/swarms/examples/basic_agent/)                                            |
-| Agent with Tools              | Using agents with various tools | [Agent with Tools](https://docs.swarms.world/en/latest/swarms/examples/agent_with_tools/)                                   |
-| Agent with Structured Outputs | Working with structured data outputs | [Structured Outputs](https://docs.swarms.world/en/latest/swarms/examples/agent_structured_outputs/)                           |
-| Agent with MCP Integration    | Model Context Protocol integration | [MCP Integration](https://docs.swarms.world/en/latest/swarms/examples/agent_with_mcp/)                                      |
-| Vision Processing             | Agents with image processing capabilities | [Vision Processing](https://docs.swarms.world/en/latest/swarms/examples/vision_processing/)                           |
-| Multiple Images               | Working with multiple images     | [Multiple Images](https://docs.swarms.world/en/latest/swarms/examples/multiple_images/)                                     |
-| Vision and Tools              | Combining vision with tool usage | [Vision and Tools](https://docs.swarms.world/en/latest/swarms/examples/vision_tools/)                                      |
-| Agent Streaming               | Real-time agent output streaming  | [Agent Streaming](https://docs.swarms.world/en/latest/examples/agent_stream/)                                             |
-| Agent Output Types            | Different output formats and types | [Output Types](https://docs.swarms.world/en/latest/swarms/examples/agent_output_types/)                                    |
-| Gradio Chat Interface         | Building interactive chat interfaces | [Gradio UI](https://docs.swarms.world/en/latest/swarms/ui/main/)                                                         |
+| Example | Description | Link |
+|---------|-------------|------|
+| Basic Agent | Simple agent setup and usage | [Basic Agent](https://docs.swarms.world/en/latest/swarms/examples/basic_agent/) |
+| Agent with Tools | Using agents with various tools | [Agent with Tools](https://docs.swarms.world/en/latest/swarms/examples/agent_with_tools/) |
+| Agent with Structured Outputs | Working with structured data outputs | [Structured Outputs](https://docs.swarms.world/en/latest/swarms/examples/agent_structured_outputs/) |
+| Agent with MCP Integration | Model Context Protocol integration | [MCP Integration](https://docs.swarms.world/en/latest/swarms/examples/agent_with_mcp/) |
+| Vision Processing | Agents with image processing capabilities | [Vision Processing](https://docs.swarms.world/en/latest/swarms/examples/vision_processing/) |
+| Multiple Images | Working with multiple images | [Multiple Images](https://docs.swarms.world/en/latest/swarms/examples/multiple_images/) |
+| Vision and Tools | Combining vision with tool usage | [Vision and Tools](https://docs.swarms.world/en/latest/swarms/examples/vision_tools/) |
+| Agent Streaming | Real-time agent output streaming | [Agent Streaming](https://docs.swarms.world/en/latest/examples/agent_stream/) |
+| Agent Output Types | Different output formats and types | [Output Types](https://docs.swarms.world/en/latest/swarms/examples/agent_output_types/) |
+| Gradio Chat Interface | Building interactive chat interfaces | [Gradio UI](https://docs.swarms.world/en/latest/swarms/ui/main/) |
 
 ### Model Provider Examples
 
-| Provider    | Description                          | Link                                                                                                                     |
-| :---------- | :----------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
-| Model Providers Overview | Complete guide to supported models | [Model Providers](https://docs.swarms.world/en/latest/swarms/examples/model_providers/)                                  |
-| OpenAI      | OpenAI model integration              | [OpenAI Examples](https://docs.swarms.world/en/latest/swarms/examples/openai_example/)                                     |
-| Anthropic   | Claude model integration             | [Anthropic Examples](https://docs.swarms.world/en/latest/swarms/examples/claude/)                                         |
-| Groq        | Groq model integration                 | [Groq Examples](https://docs.swarms.world/en/latest/swarms/examples/groq/)                                               |
-| Cohere      | Cohere model integration             | [Cohere Examples](https://docs.swarms.world/en/latest/swarms/examples/cohere/)                                             |
-| DeepSeek    | DeepSeek model integration           | [DeepSeek Examples](https://docs.swarms.world/en/latest/swarms/examples/deepseek/)                                         |
-| Ollama      | Local Ollama model integration         | [Ollama Examples](https://docs.swarms.world/en/latest/swarms/examples/ollama/)                                             |
-| OpenRouter  | OpenRouter model integration         | [OpenRouter Examples](https://docs.swarms.world/en/latest/swarms/examples/openrouter/)                                     |
-| XAI         | XAI model integration                | [XAI Examples](https://docs.swarms.world/en/latest/swarms/examples/xai/)                                                   |
-| VLLM        | VLLM integration                    | [VLLM Examples](https://docs.swarms.world/en/latest/swarms/examples/vllm_integration/)                                      |
-| Llama4      | Llama4 model integration             | [Llama4 Examples](https://docs.swarms.world/en/latest/swarms/examples/llama4/)                                             |
+| Provider | Description | Link |
+|----------|-------------|------|
+| Model Providers Overview | Complete guide to supported models | [Model Providers](https://docs.swarms.world/en/latest/swarms/examples/model_providers/) |
+| OpenAI | OpenAI model integration | [OpenAI Examples](https://docs.swarms.world/en/latest/swarms/examples/openai_example/) |
+| Anthropic | Claude model integration | [Anthropic Examples](https://docs.swarms.world/en/latest/swarms/examples/claude/) |
+| Groq | Groq model integration | [Groq Examples](https://docs.swarms.world/en/latest/swarms/examples/groq/) |
+| Cohere | Cohere model integration | [Cohere Examples](https://docs.swarms.world/en/latest/swarms/examples/cohere/) |
+| DeepSeek | DeepSeek model integration | [DeepSeek Examples](https://docs.swarms.world/en/latest/swarms/examples/deepseek/) |
+| Ollama | Local Ollama model integration | [Ollama Examples](https://docs.swarms.world/en/latest/swarms/examples/ollama/) |
+| OpenRouter | OpenRouter model integration | [OpenRouter Examples](https://docs.swarms.world/en/latest/swarms/examples/openrouter/) |
+| XAI | XAI model integration | [XAI Examples](https://docs.swarms.world/en/latest/swarms/examples/xai/) |
+| VLLM | VLLM integration | [VLLM Examples](https://docs.swarms.world/en/latest/swarms/examples/vllm_integration/) |
+| Llama4 | Llama4 model integration | [Llama4 Examples](https://docs.swarms.world/en/latest/swarms/examples/llama4/) |
 
 ### Multi-Agent Architecture Examples
 
-| Architecture       | Description                       | Link                                                                                                                          |
-| :----------------- | :-------------------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| HierarchicalSwarm  | Hierarchical agent orchestration  | [HierarchicalSwarm Examples](https://docs.swarms.world/en/latest/swarms/examples/hierarchical_swarm_example/)                  |
-| Hybrid Hierarchical-Cluster Swarm | Advanced hierarchical patterns  | [HHCS Examples](https://docs.swarms.world/en/latest/swarms/examples/hhcs_examples/)                  |
-| GroupChat          | Multi-agent conversations        | [GroupChat Examples](https://docs.swarms.world/en/latest/swarms/examples/groupchat_example/)                                  |
-| Sequential Workflow| Step-by-step agent workflows       | [Sequential Examples](https://docs.swarms.world/en/latest/swarms/examples/sequential_example/)                             |
-| SwarmRouter        | Universal swarm orchestration     | [SwarmRouter Examples](https://docs.swarms.world/en/latest/swarms/examples/swarm_router/)                                    |
-| MultiAgentRouter | Minimal router example      | [MultiAgentRouter Examples](https://docs.swarms.world/en/latest/swarms/examples/multi_agent_router_minimal/)                                    |
-| ConcurrentWorkflow | Parallel agent execution       | [Concurrent Examples](https://docs.swarms.world/en/latest/swarms/examples/concurrent_workflow/)                                |
-| Mixture of Agents  | Expert agent collaboration       | [MoA Examples](https://docs.swarms.world/en/latest/swarms/examples/moa_example/)
+| Architecture | Description | Link |
+|--------------|-------------|------|
+| HierarchicalSwarm | Hierarchical agent orchestration | [HierarchicalSwarm Examples](https://docs.swarms.world/en/latest/swarms/examples/hierarchical_swarm_example/) |
+| Hybrid Hierarchical-Cluster Swarm | Advanced hierarchical patterns | [HHCS Examples](https://docs.swarms.world/en/latest/swarms/examples/hhcs_examples/) |
+| GroupChat | Multi-agent conversations | [GroupChat Examples](https://docs.swarms.world/en/latest/swarms/examples/groupchat_example/) |
+| Sequential Workflow | Step-by-step agent workflows | [Sequential Examples](https://docs.swarms.world/en/latest/swarms/examples/sequential_example/) |
+| SwarmRouter | Universal swarm orchestration | [SwarmRouter Examples](https://docs.swarms.world/en/latest/swarms/examples/swarm_router/) |
+| MultiAgentRouter | Minimal router example | [MultiAgentRouter Examples](https://docs.swarms.world/en/latest/swarms/examples/multi_agent_router_minimal/) |
+| ConcurrentWorkflow | Parallel agent execution | [Concurrent Examples](https://docs.swarms.world/en/latest/swarms/examples/concurrent_workflow/) |
+| Mixture of Agents | Expert agent collaboration | [MoA Examples](https://docs.swarms.world/en/latest/swarms/examples/moa_example/) |
+| Unique Swarms | Specialized swarm patterns | [Unique Swarms](https://docs.swarms.world/en/latest/swarms/examples/unique_swarms/) |
+| Agents as Tools | Using agents as tools in workflows | [Agents as Tools](https://docs.swarms.world/en/latest/swarms/examples/agents_as_tools/) |
+| Aggregate Responses | Combining multiple agent outputs | [Aggregate Examples](https://docs.swarms.world/en/latest/swarms/examples/aggregate/) |
+| Interactive GroupChat | Real-time agent interactions | [Interactive GroupChat](https://docs.swarms.world/en/latest/swarms/examples/igc_example/) |
+
+### Application Examples
+
+| Application | Description | Link |
+|-------------|-------------|------|
+| Swarms DAO | Decentralized autonomous organization | [Swarms DAO](https://docs.swarms.world/en/latest/swarms/examples/swarms_dao/) |
+| Browser Agents | Web automation with agents | [Browser Agents](https://docs.swarms.world/en/latest/swarms/examples/swarms_of_browser_agents/) |
+| VLLM Agents | High-performance model serving | [VLLM Agents](https://docs.swarms.world/en/latest/swarms/examples/vllm/) |
+| Medical Analysis | Healthcare applications | [Medical Examples](https://docs.swarms.world/en/latest/swarms/examples/swarms_api_medical/) |
+| Finance Analysis | Financial applications | [Finance Examples](https://docs.swarms.world/en/latest/swarms/examples/swarms_api_finance/) |
+
+### Cookbook and Templates
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| Examples Overview | Complete examples directory | [Examples Index](https://docs.swarms.world/en/latest/examples/)

@@ -6,11 +6,11 @@
   </div>
 
   <h1>
-    Strands Agents: Build Powerful AI Agents with Python
+    Strands Agents
   </h1>
 
   <h2>
-    Quickly build and deploy AI agents using a model-driven approach with the Strands Agents Python SDK.
+    A model-driven approach to building AI agents in just a few lines of code.
   </h2>
 
   <div align="center">
@@ -21,26 +21,25 @@
     <a href="https://pypi.org/project/strands-agents/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/strands-agents"/></a>
     <a href="https://python.org"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/strands-agents"/></a>
   </div>
-
+  
   <p>
     <a href="https://strandsagents.com/">Documentation</a>
     ◆ <a href="https://github.com/strands-agents/samples">Samples</a>
-    ◆ <a href="https://github.com/strands-agents/sdk-python">Python SDK (Original Repo)</a>
+    ◆ <a href="https://github.com/strands-agents/sdk-python">Python SDK</a>
     ◆ <a href="https://github.com/strands-agents/tools">Tools</a>
     ◆ <a href="https://github.com/strands-agents/agent-builder">Agent Builder</a>
     ◆ <a href="https://github.com/strands-agents/mcp-server">MCP Server</a>
   </p>
 </div>
 
-Strands Agents is a powerful Python SDK designed for building and deploying AI agents quickly and efficiently.  Leveraging a model-driven approach, Strands Agents provides the tools you need to create everything from simple chatbots to complex, autonomous systems.  It's designed to scale with your needs, seamlessly transitioning from local development to production environments.  **Get started building your own AI agents today!**
+Strands Agents is a simple yet powerful SDK that takes a model-driven approach to building and running AI agents. From simple conversational assistants to complex autonomous workflows, from local development to production deployment, Strands Agents scales with your needs.
 
-## Key Features
+## Feature Overview
 
-*   **Model Agnostic:** Supports leading model providers, including Amazon Bedrock, Anthropic, LiteLLM, Llama, Ollama, and OpenAI, with the ability to integrate custom providers.
-*   **Lightweight & Flexible:** Provides a simple and customizable agent loop for easy integration into your projects.
-*   **Advanced Capabilities:** Enables the creation of multi-agent systems, autonomous agents, and supports streaming responses.
-*   **Built-in MCP Support:** Native integration with Model Context Protocol (MCP) servers, providing access to a wide range of pre-built tools.
-*   **Python-Based Tools:** Easily create custom tools using Python decorators for a seamless development experience.
+- **Lightweight & Flexible**: Simple agent loop that just works and is fully customizable
+- **Model Agnostic**: Support for Amazon Bedrock, Anthropic, LiteLLM, Llama, Ollama, OpenAI, and custom providers
+- **Advanced Capabilities**: Multi-agent systems, autonomous agents, and streaming support
+- **Built-in MCP**: Native support for Model Context Protocol (MCP) servers, enabling access to thousands of pre-built tools
 
 ## Quick Start
 
@@ -60,7 +59,7 @@ agent("What is the square root of 1764")
 
 ## Installation
 
-To install Strands Agents, ensure you have Python 3.10+ installed and run the following commands:
+Ensure you have Python 3.10+ installed, then:
 
 ```bash
 # Create and activate virtual environment
@@ -71,11 +70,11 @@ source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 pip install strands-agents strands-agents-tools
 ```
 
-## Deep Dive into Features
+## Features at a Glance
 
 ### Python-Based Tools
 
-Simplify tool creation with Python decorators:
+Easily build tools using Python decorators:
 
 ```python
 from strands import Agent, tool
@@ -94,7 +93,7 @@ response = agent("How many words are in this sentence?")
 
 ### MCP Support
 
-Integrate seamlessly with Model Context Protocol (MCP) servers:
+Seamlessly integrate Model Context Protocol (MCP) servers:
 
 ```python
 from strands import Agent
@@ -112,7 +111,7 @@ with aws_docs_client:
 
 ### Multiple Model Providers
 
-Choose from a range of model providers, with options for customization:
+Support for various model providers:
 
 ```python
 from strands import Agent
@@ -145,19 +144,19 @@ agent = Agent(model=llama_model)
 response = agent("Tell me about Agentic AI")
 ```
 
-**Built-in Providers:**
-*   [Amazon Bedrock](https://strandsagents.com/latest/user-guide/concepts/model-providers/amazon-bedrock/)
-*   [Anthropic](https://strandsagents.com/latest/user-guide/concepts/model-providers/anthropic/)
-*   [LiteLLM](https://strandsagents.com/latest/user-guide/concepts/model-providers/litellm/)
-*   [LlamaAPI](https://strandsagents.com/latest/user-guide/concepts/model-providers/llamaapi/)
-*   [Ollama](https://strandsagents.com/latest/user-guide/concepts/model-providers/ollama/)
-*   [OpenAI](https://strandsagents.com/latest/user-guide/concepts/model-providers/openai/)
+Built-in providers:
+ - [Amazon Bedrock](https://strandsagents.com/latest/user-guide/concepts/model-providers/amazon-bedrock/)
+ - [Anthropic](https://strandsagents.com/latest/user-guide/concepts/model-providers/anthropic/)
+ - [LiteLLM](https://strandsagents.com/latest/user-guide/concepts/model-providers/litellm/)
+ - [LlamaAPI](https://strandsagents.com/latest/user-guide/concepts/model-providers/llamaapi/)
+ - [Ollama](https://strandsagents.com/latest/user-guide/concepts/model-providers/ollama/)
+ - [OpenAI](https://strandsagents.com/latest/user-guide/concepts/model-providers/openai/)
 
-Implement custom providers using [Custom Providers](https://strandsagents.com/latest/user-guide/concepts/model-providers/custom_model_provider/)
+Custom providers can be implemented using [Custom Providers](https://strandsagents.com/latest/user-guide/concepts/model-providers/custom_model_provider/)
 
-### Example Tools
+### Example tools
 
-Strands includes an optional `strands-agents-tools` package with pre-built tools:
+Strands offers an optional strands-agents-tools package with pre-built tools for quick experimentation:
 
 ```python
 from strands import Agent
@@ -166,28 +165,27 @@ agent = Agent(tools=[calculator])
 agent("What is the square root of 1764")
 ```
 
-Explore more tools on GitHub: [strands-agents/tools](https://github.com/strands-agents/tools).
+It's also available on GitHub via [strands-agents/tools](https://github.com/strands-agents/tools).
 
 ## Documentation
 
-Access comprehensive documentation for in-depth guidance and examples:
+For detailed guidance & examples, explore our documentation:
 
-*   [User Guide](https://strandsagents.com/)
-*   [Quick Start Guide](https://strandsagents.com/latest/user-guide/quickstart/)
-*   [Agent Loop](https://strandsagents.com/latest/user-guide/concepts/agents/agent-loop/)
-*   [Examples](https://strandsagents.com/latest/examples/)
-*   [API Reference](https://strandsagents.com/latest/api-reference/agent/)
-*   [Production & Deployment Guide](https://strandsagents.com/latest/user-guide/deploy/operating-agents-in-production/)
+- [User Guide](https://strandsagents.com/)
+- [Quick Start Guide](https://strandsagents.com/latest/user-guide/quickstart/)
+- [Agent Loop](https://strandsagents.com/latest/user-guide/concepts/agents/agent-loop/)
+- [Examples](https://strandsagents.com/latest/examples/)
+- [API Reference](https://strandsagents.com/latest/api-reference/agent/)
+- [Production & Deployment Guide](https://strandsagents.com/latest/user-guide/deploy/operating-agents-in-production/)
 
 ## Contributing ❤️
 
-Contributions are welcome! Refer to our [Contributing Guide](CONTRIBUTING.md) for details, including:
-
-*   Reporting bugs and features
-*   Development setup
-*   Contributing via Pull Requests
-*   Code of Conduct
-*   Security issue reporting
+We welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) for details on:
+- Reporting bugs & features
+- Development setup
+- Contributing via Pull Requests
+- Code of Conduct
+- Reporting of security issues
 
 ## License
 
@@ -195,4 +193,5 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Security
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for security information.
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+

@@ -1,40 +1,58 @@
-# **Discover & Use Free Public APIs: A Comprehensive Resource**
+# Explore Public APIs - A Comprehensive Directory (Link back to original repo: [https://github.com/public-apis/public-apis](https://github.com/public-apis/public-apis))
 
-**Unlock a treasure trove of free public APIs for your next project!** Curated by community members and powered by [APILayer](https://apilayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo), this repository offers an extensive, well-maintained list of APIs across various domains, perfect for developers of all levels.
-Check out the [original repo](https://github.com/public-apis/public-apis)
+**Unlock a treasure trove of free and open APIs with the Public APIs repository, a community-driven resource curated to empower developers.**  This extensive list of public APIs spans various domains, offering a wealth of options for your projects. This repository is maintained by community members and the team at [APILayer](https://apilayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo).
 
+<br>
+
+**Key Features:**
+
+*   **Vast Collection:** Access a comprehensive directory of public APIs across various categories.
+*   **Community-Driven:**  Benefit from a constantly updated and well-managed resource, thanks to the community.
+*   **Free Access:** Utilize APIs without cost, perfect for personal projects or testing.
+*   **Diverse Domains:** Explore APIs for everything from weather and entertainment to finance and development.
+
+<br>
 <p>
     <a href="https://apilayer.com">
         <div>
             <img src=".github/cs1586-APILayerLogoUpdate2022-LJ_v2-HighRes.png" width="100%" alt="APILayer Logo" />
         </div>
     </a>
-  </p>
+</p>
 
-## **Key Features:**
+Discover the fastest way to integrate APIs into any product. Explore [APILayer APIs](https://apilayer.com/products/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) for your next project.
 
-*   **Extensive List:** A vast collection of public APIs across numerous categories.
-*   **Community-Driven:** Continuously updated and maintained by a dedicated community.
-*   **Diverse Categories:** APIs covering a wide range of topics, from entertainment to finance.
-*   **Easy Integration:** Ready-to-use APIs for seamless integration into your projects.
-*   **Free Access:** All APIs are freely accessible for use.
+<br/>
 
-## **Featured APILayer APIs:**
+Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) to get updates, ask questions, get answers, random community calls, and more.
 
-Quickly integrate with the most popular APIs to enhance your project.
+<br/>
 
-| API                                                                                       | Description                                                                                |
-| :---------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
-| [IPstack](https://ipstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Locate and Identify Website Visitors by IP Address                                           |
-| [Marketstack](https://marketstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Delivers worldwide stock market data in JSON format                                           |
-| [Weatherstack](https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Retrieve instant, accurate weather information for any location in the world in lightweight JSON format |
-| [Numverify](https://numverify.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers)  | Global Phone Number Validation & Lookup JSON API                                          |
-| [Fixer](https://fixer.io/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Simple and lightweight API for current and historical foreign exchange (forex) rates. |
-| [Aviationstack](https://avaitionstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Free, real-time flight status and global Aviation data API                                 |
+## Sample APILayer APIs
 
-## **Explore the APIs:**
+| API                                                                                                                      | Description                                                                                                          |
+| :----------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |
+| [IPstack](https://ipstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers)       | Locate and Identify Website Visitors by IP Address                                                                |
+| [Marketstack](https://marketstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Free, easy-to-use REST API interface delivering worldwide stock market data in JSON format                             |
+| [Weatherstack](https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Retrieve instant, accurate weather information for any location in the world in lightweight JSON format                       |
+| [Numverify](https://numverify.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers )   | Global Phone Number Validation & Lookup JSON API                                                                  |
+| [Fixer](https://fixer.io/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers)             | Fixer is a simple and lightweight API for current and historical foreign exchange (forex) rates.                           |
+| [Aviationstack](https://avaitionstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Free, real-time flight status and global Aviation data API                                                             |
 
-Explore a huge list of APIs that are organized by categories:
+<br>
+
+## Learn More & Contribute
+*   [Contributing Guide](CONTRIBUTING.md)
+*   [API for this project](https://github.com/davemachado/public-api)
+*   [Issues](https://github.com/public-apis/public-apis/issues)
+*   [Pull Requests](https://github.com/public-apis/public-apis/pulls)
+*   [LICENSE](LICENSE)
+
+<br/>
+
+## API Categories
+
+Here's a categorized index of the available APIs. Click on a category to explore its contents.
 
 *   [Animals](#animals)
 *   [Anime](#anime)
@@ -88,14 +106,23 @@ Explore a huge list of APIs that are organized by categories:
 *   [Video](#video)
 *   [Weather](#weather)
 
+<br/>
+
 ***
 
-## **Get Involved**
+**(Category Contents - Example: Animals)**
 
-*   [Contributing Guide](CONTRIBUTING.md)
-*   [API for this project](https://github.com/davemachado/public-api)
-*   [Issues](https://github.com/public-apis/public-apis/issues)
-*   [Pull Requests](https://github.com/public-apis/public-apis/pulls)
+<br/>
+
+### Animals
+
+| API                                                                      | Description                                      | Auth   | HTTPS | CORS |
+| :----------------------------------------------------------------------- | :----------------------------------------------- | :----- | :---- | :--- |
+| [AdoptAPet](https://www.adoptapet.com/public/apis/pet_list.html)        | Resource to help get pets adopted             | `apiKey` | Yes   | Yes  |
+| [Axolotl](https://theaxolotlapi.netlify.app/)                            | Collection of axolotl pictures and facts       | No     | Yes   | No   |
+| [Cat Facts](https://alexwohlbruck.github.io/cat-facts/)                   | Daily cat facts                                  | No     | Yes   | No   |
+| ... and more ...
+
+<br/>
+
 ***
-## **License**
-[MIT](LICENSE) (c) 2022 public-apis

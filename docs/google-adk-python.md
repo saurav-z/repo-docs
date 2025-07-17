@@ -1,67 +1,41 @@
-# Agent Development Kit (ADK): Build, Evaluate, and Deploy AI Agents with Ease
+# Agent Development Kit (ADK) - Build, Evaluate, and Deploy Powerful AI Agents
 
-**Empower your AI development with the Agent Development Kit (ADK), a code-first Python toolkit for creating sophisticated, flexible, and scalable AI agents.** ([Original Repo](https://github.com/google/adk-python))
+**Quickly build and deploy sophisticated AI agents with the Google Agent Development Kit (ADK), offering flexibility, control, and seamless integration with the Google ecosystem.  [Learn more at the original repository](https://github.com/google/adk-python).**
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-[![Python Unit Tests](https://github.com/google/adk-python/actions/workflows/python-unit-tests.yml/badge.svg)](https://github.com/google/adk-python/actions/workflows/python-unit-tests.yml)
-[![r/agentdevelopmentkit](https://img.shields.io/badge/Reddit-r%2Fagentdevelopmentkit-FF4500?style=flat&logo=reddit&logoColor=white)](https://www.reddit.com/r/agentdevelopmentkit/)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/google/adk-python)
+ADK is an open-source, code-first Python toolkit designed to empower developers to build, evaluate, and deploy advanced AI agents.  This framework provides a modular and flexible approach to agent development, optimized for Gemini and the Google ecosystem but built to be model-agnostic and deployment-agnostic for compatibility across platforms.
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/google/adk-python/main/assets/agent-development-kit.png" width="256" alt="Agent Development Kit Logo">
-</div>
+## Key Features
 
-<div align="center">
-  <a href="https://google.github.io/adk-docs/">Docs</a> |
-  <a href="https://github.com/google/adk-samples">Samples</a> |
-  <a href="https://github.com/google/adk-java">Java ADK</a> |
-  <a href="https://github.com/google/adk-web">ADK Web</a>
-</div>
-
-ADK is a flexible and modular framework designed to streamline the development and deployment of AI agents.  It’s optimized for the Google ecosystem, yet is model-agnostic and deployment-agnostic, providing compatibility with other frameworks.  Designed to make agent development feel more like software development, ADK empowers developers to build, deploy, and orchestrate agentic architectures, from simple tasks to complex workflows.
-
-## Key Features:
-
-*   **Rich Tool Ecosystem:** Utilize pre-built tools, custom functions, OpenAPI specs, and integrate existing tools to equip agents with diverse capabilities, with tight integration with the Google ecosystem.
-*   **Code-First Development:** Define agent logic, tools, and orchestration directly in Python for maximum flexibility, testability, and version control.
+*   **Rich Tool Ecosystem:** Leverage pre-built tools, custom functions, and OpenAPI specs for diverse agent capabilities, with tight Google ecosystem integration.
+*   **Code-First Development:** Define agent logic, tools, and orchestration directly in Python for enhanced flexibility, testability, and version control.
 *   **Modular Multi-Agent Systems:** Design scalable applications by composing multiple specialized agents into flexible hierarchies.
 *   **Deploy Anywhere:** Easily containerize and deploy agents on Cloud Run or scale seamlessly with Vertex AI Agent Engine.
-*   **Built-in Development UI:** Test, evaluate, debug, and showcase your agent(s) with a built-in development UI.
-*   **Agent Evaluation:** Evaluate the performance of your agents.
 
-## 🤖 Agent2Agent (A2A) Protocol Integration
+## Getting Started
 
-ADK seamlessly integrates with the [A2A protocol](https://github.com/google-a2a/A2A/) for remote agent-to-agent communication.  See the [example](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents) to see how it works.
+### Installation
 
-## 🚀 Installation
+#### Stable Release (Recommended)
 
-### Stable Release (Recommended)
-
-Install the latest stable version using pip:
+Install the latest stable release via pip:
 
 ```bash
 pip install google-adk
 ```
 
-This is the recommended version for most users, offering the latest official release.  The release cadence is weekly.
+This is the recommended option for most users.
 
-### Development Version
+#### Development Version
 
-Install directly from the `main` branch to access the latest bug fixes and features:
+Access the latest bug fixes and features by installing directly from the `main` branch:
 
 ```bash
 pip install git+https://github.com/google/adk-python.git@main
 ```
 
-*Note: The development version may include experimental changes or bugs.*
+Use the development version for testing upcoming features or accessing critical fixes.
 
-## 📚 Documentation
-
-Explore the full documentation for detailed guides:
-
-*   [Documentation](https://google.github.io/adk-docs)
-
-## 🏁 Feature Highlight
+## Code Examples
 
 ### Define a single agent:
 
@@ -99,6 +73,12 @@ coordinator = LlmAgent(
 )
 ```
 
+### Development UI
+
+A built-in development UI to help you test, evaluate, debug, and showcase your agent(s).
+
+<img src="https://raw.githubusercontent.com/google/adk-python/main/assets/adk-web-dev-ui-function-call.png"/>
+
 ### Evaluate Agents
 
 ```bash
@@ -107,17 +87,21 @@ adk eval \
     samples_for_testing/hello_world/hello_world_eval_set_001.evalset.json
 ```
 
-## 🤝 Contributing
+## Agent2Agent (A2A) Protocol Integration
 
-We welcome community contributions!
+ADK integrates with the [A2A protocol](https://github.com/google-a2a/A2A/) for remote agent-to-agent communication.  See this [example](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents) to see how they work together.
 
-*   [General contribution guideline and flow](https://google.github.io/adk-docs/contributing-guide/)
-*   [Code Contributing Guidelines](./CONTRIBUTING.md)
+## Documentation and Resources
 
-## 📄 License
+*   [Documentation](https://google.github.io/adk-docs)
+*   [Samples](https://github.com/google/adk-samples)
+*   [Java ADK](https://github.com/google/adk-java)
+*   [ADK Web](https://github.com/google/adk-web)
 
-This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
+## Contributing
 
----
+We welcome community contributions!  Please review the [General contribution guideline and flow](https://google.github.io/adk-docs/contributing-guide/) and the [Code Contributing Guidelines](./CONTRIBUTING.md) to get started.
 
-*Happy Agent Building!*
+## License
+
+This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for details.
