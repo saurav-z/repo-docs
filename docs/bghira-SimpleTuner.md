@@ -1,66 +1,78 @@
-# SimpleTuner: Simplify and Optimize Your Generative AI Model Training 🚀
+# SimpleTuner: Your Simplified AI Model Training Toolkit
 
-**SimpleTuner** provides a streamlined and accessible platform for training and fine-tuning a variety of generative AI models, focusing on ease of use and understanding. [Learn more on GitHub](https://github.com/bghira/SimpleTuner).
+**SimpleTuner streamlines AI model training, prioritizing ease of use and understanding.** ([See the original repository](https://github.com/bghira/SimpleTuner))
+
+SimpleTuner is designed for simplicity, making it easy to understand and adapt. This open-source project welcomes contributions and focuses on providing accessible tools for a variety of AI training tasks.  Note that no data is sent to any third parties except through opt-in flags such as `report_to`, `push_to_hub`, or webhooks which must be manually configured.
+
+Join our community and ask any questions on [Discord](https://discord.com/invite/eq3cAMZtCC) via Terminus Research Group.
 
 ## Key Features
 
-*   **Versatile Model Support:** Train and fine-tune a wide range of models, including HiDream, Flux.1, Wan Video, LTX Video, PixArt Sigma, NVLabs Sana, Stable Diffusion 3, Kwai Kolors, Lumina2, and Cosmos2 Predict.
-*   **Hardware Optimization:** Supports multi-GPU training, memory-efficient techniques like DeepSpeed integration and quantization (FP8/INT8/NF4), and supports Nvidia, AMD, and Apple hardware.
-*   **Data Management:** Features image, video, and caption caching, aspect bucketing, and direct training from S3-compatible storage providers.
-*   **Advanced Training Options:** Offers LoRA/LyCORIS training, EMA, ControlNet integration, Mixture of Experts, masked loss training, prior regularization, and webhook support for monitoring.
-*   **Seamless Integration:** Integrates with the Hugging Face Hub for model uploading and dataset loading.
-*   **Simplified Setup & Debugging:** Includes detailed installation guides and debugging tools for easy setup and troubleshooting.
+*   **Versatile Model Support:** Train a wide range of diffusion models, including:
+    *   Flux.1
+    *   Wan 2.1 Video
+    *   LTX Video
+    *   PixArt Sigma
+    *   NVLabs Sana
+    *   Stable Diffusion 2.0/2.1
+    *   Stable Diffusion 3.0
+    *   Kwai Kolors
+    *   Lumina2
+    *   Cosmos2 Predict (Image)
+    *   And more...
+*   **Multi-GPU Training:**  Maximize training speed and efficiency.
+*   **Hardware Optimization:**  Train on GPUs with as little as 16GB of VRAM.
+*   **Data Handling:**  Caches image/video data for faster, more memory-efficient training.
+*   **Aspect Ratio Support:** Utilize aspect bucketing for flexible image and video sizes.
+*   **LoRA & ControlNet Training:**  Fine-tune models with LoRA, LyCORIS, or full U-Net training for SDXL and other models, including ControlNet training.
+*   **Advanced Techniques:** Integrate DeepSpeed, quantization, EMA, and S3-compatible storage for enhanced performance.
+*   **Community Integration:**  Seamlessly upload models to the Hugging Face Hub.
+*   **Webhook Support:**  Keep informed of your training progress via webhooks (e.g., Discord).
 
-## Contents
+## Table of Contents
 
-*   [Features](#features)
-*   [Model Support](#model-support)
-    *   [HiDream](#hidream)
-    *   [Flux.1](#flux1)
-    *   [Wan Video](#wan-video)
-    *   [LTX Video](#ltx-video)
-    *   [PixArt Sigma](#pixart-sigma)
-    *   [NVLabs Sana](#nvlabs-sana)
-    *   [Stable Diffusion 3](#stable-diffusion-3)
-    *   [Kwai Kolors](#kwai-kolors)
-    *   [Lumina2](#lumina2)
-    *   [Cosmos2 Predict (Image)](#cosmos2-predict-image)
-    *   [Legacy Stable Diffusion Models](#legacy-stable-diffusion-models)
-*   [Hardware Requirements](#hardware-requirements)
-*   [Setup](#setup)
-*   [Toolkit](#toolkit)
-*   [Troubleshooting](#troubleshooting)
+- [Tutorials & Guides](#tutorials--guides)
+- [Design Philosophy](#design-philosophy)
+- [Features](#features)
+- [Hardware Requirements](#hardware-requirements)
+- [Toolkit](#toolkit)
+- [Setup](#setup)
+- [Troubleshooting](#troubleshooting)
 
-## Model Support
+## Tutorials & Guides
 
-SimpleTuner supports a variety of cutting-edge models. Here's a quick overview:
+*   **Tutorial:**  Start your training with our detailed [tutorial](/TUTORIAL.md).
+*   **Quick Start:** Jump right in with our [Quick Start](/documentation/QUICKSTART.md) guide.
+*   **DeepSpeed:** Optimize for memory-constrained systems with [DeepSpeed](/documentation/DEEPSPEED.md).
+*   **Multi-Node Training:** Configure multi-node training using the guide [here](/documentation/DISTRIBUTED.md).
 
-*   **HiDream:** Memory-efficient training for NVIDIA GPUs with custom ControlNet implementation, optional MoEGate loss augmentation, and more.  See [hardware requirements](#hidream) or the [quickstart guide](/documentation/quickstart/HIDREAM.md).
-*   **Flux.1:** Faster training with new `--fuse_qkv_projections` option, ControlNet support, and Instruct fine-tuning. See [hardware requirements](#flux1-dev-schnell) or the [quickstart guide](/documentation/quickstart/FLUX.md).
-*   **Wan Video:** Preliminary text-to-video training integration. See the [Wan Video Quickstart](/documentation/quickstart/WAN.md) guide to start training.
-*   **LTX Video:** Efficient training with LyCORIS and full tuning. See the [LTX Video Quickstart](/documentation/quickstart/LTXVIDEO.md) guide to start training.
-*   **PixArt Sigma:** Extensive training integration with both 600M & 900M models, including ControlNet support. See the [PixArt Quickstart](/documentation/quickstart/SIGMA.md) guide.
-*   **NVLabs Sana:** Lightweight and fast model training. See the [NVLabs Sana Quickstart](/documentation/quickstart/SANA.md) guide.
-*   **Stable Diffusion 3:** Supports LoRA, full finetuning and ControlNet training. See the [Stable Diffusion 3 Quickstart](/documentation/quickstart/SD3.md).
-*   **Kwai Kolors:** An SDXL-based model with ChatGLM (General Language Model) 6B as its text encoder, almost as deep as SDXL support.
-*   **Lumina2:** LoRA, Lycoris, and full finetuning support. A [Lumina2 Quickstart](/documentation/quickstart/LUMINA2.md) is available.
-*   **Cosmos2 Predict (Image):** Text-to-image support with Lycoris or full-rank tuning. A [Cosmos2 Predict Quickstart](/documentation/quickstart/COSMOS2IMAGE.md) is available.
-*   **Legacy Stable Diffusion Models:** Supports training with SD 1.5 and SD 2.x.
+## Design Philosophy
+
+*   **Simplicity:** Easy-to-use with sensible defaults.
+*   **Versatility:** Handles datasets of varying sizes.
+*   **Cutting-Edge:** Incorporates proven effective features.
 
 ## Hardware Requirements
 
-SimpleTuner is designed to be flexible and efficient.  See the original README for specific hardware recommendations.
+Recommendations vary by model and task. Generally, NVIDIA GPUs (3080+) are well-supported. AMD, and Apple Silicon are also supported.
+
+*   **HiDream:** A100-80G (Full tune with DeepSpeed), A100-40G (LoRA, LoKr), 3090 24G (LoRA, LoKr)
+*   **Flux.1:** A100-80G (Full tune with DeepSpeed), A100-40G (LoRA, LoKr), 3090 24G (LoRA, LoKr), 4060 Ti 16G, 4070 Ti 16G, 3080 16G (int8, LoRA, LoKr), 4070 Super 12G, 3080 10G, 3060 12GB (nf4, LoRA, LoKr)
+*   **SDXL:** A100-80G (EMA, large batches, LoRA @ insane batch sizes), A6000-48G (EMA@768px, no EMA@1024px, LoRA @ high batch sizes), A100-40G (EMA@1024px, EMA@768px, EMA@512px, LoRA @ high batch sizes), 4090-24G (EMA@1024px, batch size 1-4, LoRA @ medium-high batch sizes), 4080-12G (LoRA @ low-medium batch sizes)
+*   **Stable Diffusion 2.x:** 16GB or better.
+
+*(Consult the original README for more detailed hardware recommendations.)*
 
 ## Toolkit
 
-For information about the SimpleTuner toolkit, refer to [the toolkit documentation](/toolkit/README.md).
+SimpleTuner includes a useful toolkit for managing your training workflows. Refer to the [toolkit documentation](/toolkit/README.md) for details.
 
 ## Setup
 
-Detailed setup instructions are available in the [installation documentation](/INSTALL.md).
+Find detailed setup instructions in the [installation documentation](/INSTALL.md).
 
 ## Troubleshooting
 
-Enable debug logs by adding `export SIMPLETUNER_LOG_LEVEL=DEBUG` to your environment.
-For performance analysis, use `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`.
-Consult [this documentation](/OPTIONS.md) for a comprehensive list of options.
+*   **Debugging:** Enable debug logs with `export SIMPLETUNER_LOG_LEVEL=DEBUG`.
+*   **Performance Analysis:** Time training loops with `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`.
+*   **Options:** View all available options in [this documentation](/OPTIONS.md).

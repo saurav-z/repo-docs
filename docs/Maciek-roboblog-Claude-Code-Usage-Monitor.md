@@ -1,134 +1,101 @@
-# 🚀 Claude Code Usage Monitor: Stay Ahead of Your Token Limits 
+# 🚀 Claude Code Usage Monitor: Real-time Token Tracking & AI-Powered Predictions
 
-**Tired of unexpected Claude AI session cutoffs?**  This real-time terminal monitor gives you complete control over your token usage with advanced analytics, intelligent predictions, and a beautiful Rich UI.  Check out the original repo for details: [Maciek-roboblog/Claude-Code-Usage-Monitor](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor).
-
-[![PyPI Version](https://img.shields.io/pypi/v/claude-monitor.svg)](https://pypi.org/project/claude-monitor/)
-[![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)](https://python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![codecov](https://codecov.io/gh/Maciek-roboblog/Claude-Code-Usage-Monitor/branch/main/graph/badge.svg)](https://codecov.io/gh/Maciek-roboblog/Claude-Code-Usage-Monitor)
-
-![Claude Token Monitor Screenshot](https://raw.githubusercontent.com/Maciek-roboblog/Claude-Code-Usage-Monitor/main/doc/scnew.png)
+Tired of exceeding your Claude AI token limits? **Claude Code Usage Monitor** is your ultimate terminal companion, providing real-time tracking, advanced analytics, and intelligent session limit predictions to optimize your Claude AI usage. Check out the original repo [here](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor).
 
 ---
 
-## Key Features
+## Key Features:
 
-*   **Real-time Monitoring:** Track token consumption, burn rate, and session limits in real-time with configurable refresh rates.
-*   **ML-Powered Predictions:** Get intelligent session limit predictions based on machine learning, including P90 percentile calculations and smart detection.
-*   **Advanced Rich UI:** Enjoy a beautiful, color-coded terminal interface with progress bars, tables, and WCAG-compliant contrast.
-*   **Automated Plan Management:** Smart auto-detection of plans and limits for optimal efficiency, automatically switching to a 'custom' plan.
-*   **Detailed Cost Analytics:** Understand your spending with model-specific pricing and cache token calculations.
-*   **Configuration & Logging:** Type-safe Pydantic-validated configuration, comprehensive logging options, and optional Sentry integration.
+*   **Real-time Monitoring:** Track token consumption, burn rate, and session duration in real-time.
+*   **AI-Powered Predictions:** Leverage machine learning to forecast session limits and provide timely warnings.
+*   **Advanced Analytics:** Gain insights into token usage, cost analysis, and overall efficiency.
+*   **Rich Terminal UI:** Experience a beautiful, color-coded interface designed for optimal readability.
+*   **Smart Auto-Detection:** Automatic plan switching with custom limit discovery.
 
----
+## 🚀 Installation
 
-## Installation
+### 1. Modern Installation (Recommended):
 
-### ⚡ Modern Installation with uv (Recommended)
-
-**Why uv is the best choice:**
-- ✅ Creates isolated environments automatically (no system conflicts)
-- ✅ No Python version issues
-- ✅ No "externally-managed-environment" errors
-- ✅ Easy updates and uninstallation
-- ✅ Works on all platforms
+Use `uv` for effortless and isolated environment management.
 
 ```bash
-# Install directly from PyPI with uv (easiest)
+# Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Install the monitor
 uv tool install claude-monitor
 
-# Run from anywhere
-claude-monitor  # or cmonitor, ccmonitor for short
+# Run the monitor
+claude-monitor  # or cmonitor, ccmonitor, ccm for short
 ```
 
-### 📦 Installation with pip
+### 2. Alternative Installations:
+
+*   **pip:** `pip install claude-monitor`
+*   **pipx:** `pipx install claude-monitor`
+*   **conda/mamba:** `pip install claude-monitor`
+
+### 3.  Check Command
 
 ```bash
-pip install claude-monitor
-claude-monitor  # or cmonitor, ccmonitor for short
+# Show help information
+claude-monitor --help
 ```
 
-### 🛠️ Other Package Managers (pipx, conda/mamba)
-
-Refer to the original README for detailed instructions.
-
----
-
-## Usage
-
-### Basic Commands
-
-*   `claude-monitor`: Runs the monitor with default settings (Custom plan).
-*   `claude-monitor --help`:  Shows a comprehensive list of command-line options.
-
-### Configuration Options
-
-*   **Plan Selection**:  Choose from `pro`, `max5`, `max20`, or `custom`.
-*   **Custom Limits:** Set custom token limits for the `custom` plan.
-*   **Timezone/Time Format:** Configure your preferred timezone and time display format.
-*   **Theme Selection:** Customize the UI theme (light, dark, classic, or auto-detect).
-*   **Refresh Rates:** Adjust the data refresh rate and display refresh rate for optimal performance.
-*   **Logging**: Enable logging to a file for debugging.
-
-### Available Plans
-
-| Plan        | Token Limit     | Description                                    |
-| ----------- | --------------- | ---------------------------------------------- |
-| **custom**  | P90 auto-detect | Intelligent limit detection (default)          |
-| **pro**     | ~19,000         | Claude Pro subscription                        |
-| **max5**    | ~88,000         | Claude Max5 subscription                       |
-| **max20**   | ~220,000        | Claude Max20 subscription                      |
-
----
-
-## What's New in v3.0.0
-
-*   **Complete Architecture Rewrite:** Modular design for maintainability, Pydantic validation, and comprehensive testing.
-*   **Enhanced Functionality:** P90-based limit detection, model-specific cost analytics, and Rich UI improvements.
-*   **New CLI Options:** Control over display refresh rate, time format, logging, and saved configurations.
-*   **Breaking Changes:** Changed package name, default plan, and minimum Python version.
-
----
-
-## Understanding How It Works
-
-The Claude Code Usage Monitor is built with a modular design which is split up into three layers:
-
-*   **🖥️ User Interface Layer**: Handles CLI, Settings, Errors, and Rich Terminal UI
-*   **🎛️ Monitoring Orchestrator**: Manages central control, data flow, and analytics
-*   **🏗️ Foundation Layer**: Contains Core Models, Analysis Engine, and Terminal Themes
-
-**Data Flow:** Claude Config Files → Data Layer → Analysis Engine → UI Components → Terminal Display
+## 📖 Usage
 
 ### Key Features:
 
-- Configurable update intervals with high-precision display refresh
-- Multi-threaded orchestration with callback system
-- Progress Bars and Data Tables
-- Intelligent auto-detection terminal themes
+*   **Plan Selection**: Customize your monitoring to your Claude plan. (pro, max5, max20, custom)
+*   **Customization**: Configure refresh rates, timezone, themes, and more.
+*   **Saved Configuration**:  Save preferences like theme, timezone, and refresh rates for convenience.
+*   **Aliases**: Use `cmonitor`, `ccmonitor`, or `ccm` for quick access.
 
----
+### Command-Line Parameters:
 
-## Development
+| Parameter             | Type    | Default | Description                                   |
+| :-------------------- | :------ | :------ | :-------------------------------------------- |
+| `--plan`              | string  | custom  | Plan type: pro, max5, max20, or custom          |
+| `--custom-limit-tokens` | int     | None    | Token limit for custom plan (must be > 0)     |
+| `--timezone`          | string  | auto    | Timezone (auto-detected)                      |
+| `--time-format`       | string  | auto    | Time format: 12h, 24h, or auto              |
+| `--theme`             | string  | auto    | Display theme: light, dark, classic, or auto |
+| `--refresh-rate`      | int     | 10      | Data refresh rate in seconds (1-60)           |
+| `--refresh-per-second` | float   | 0.75    | Display refresh rate in Hz (0.1-20.0)        |
+| `--reset-hour`        | int     | None    | Daily reset hour (0-23)                       |
+| `--log-level`         | string  | INFO    | Logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL          |
+| `--log-file`          | path  | None  | Log file path          |
+| `--debug`          | flag  | False   | Enable debug logging   |
+| `--version, -v`       | flag  | False   | Show version information |
+| `--clear`          | flag  | False   | Clear saved configuration |
 
-See [Development Installation](#-development-installation) for setting up a development environment.  This includes testing with a test suite of **100+ test cases**.
+## 🛡️ Troubleshooting
 
----
+*   **Installation Issues:** Check the "externally-managed-environment" error solutions.  Use `uv` or a virtual environment.
+*   **Command Not Found:** Ensure your `PATH` is correctly configured.
+*   **Runtime Issues:** Check your Python version and ensure the session is active.
 
-## Contributing
+## 📞 Contact
 
-Contributions are welcome! See the [Contributing Guide](CONTRIBUTING.md) for details.
+For questions, suggestions, or collaboration, contact [maciek@roboblog.eu](mailto:maciek@roboblog.eu).
 
----
+## 📚 Additional Documentation
 
-## Contact
+*   [Development Roadmap](DEVELOPMENT.md)
+*   [Contributing Guide](CONTRIBUTING.md)
+*   [Troubleshooting](TROUBLESHOOTING.md)
 
-**📧 Email**: [maciek@roboblog.eu](mailto:maciek@roboblog.eu)
+## 📝 License
 
----
+[MIT License](LICENSE) - use and modify freely.
 
-## Acknowledgments
+## 🤝 Contributors
+
+*   [@adawalli](https://github.com/adawalli)
+*   [@taylorwilsdon](https://github.com/taylorwilsdon)
+*   [@moneroexamples](https://github.com/moneroexamples)
+
+## 🙏 Acknowledgments
 
 ### Sponsors
 
@@ -136,8 +103,6 @@ A special thanks to our supporters who help keep this project going:
 
 **Ed** - *Buy Me Coffee Supporter*
 > "I appreciate sharing your work with the world. It helps keep me on track with my day. Quality readme, and really good stuff all around!"
-
----
 
 ## Star History
 

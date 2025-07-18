@@ -1,34 +1,33 @@
-# python-gitlab: Interact with GitLab APIs in Python
+# python-gitlab: Interact with the GitLab API in Python
 
-**python-gitlab** is a powerful Python package that simplifies interacting with GitLab APIs, enabling you to automate tasks, manage resources, and build custom integrations.  [Explore the original repository](https://github.com/python-gitlab/python-gitlab).
+**python-gitlab** is a powerful Python package that makes it easy to interact with the GitLab API, offering comprehensive features for managing your GitLab resources. ([View on GitHub](https://github.com/python-gitlab/python-gitlab))
 
 [![Test](https://github.com/python-gitlab/python-gitlab/workflows/Test/badge.svg)](https://github.com/python-gitlab/python-gitlab/actions)
 [![PyPI version](https://badge.fury.io/py/python-gitlab.svg)](https://badge.fury.io/py/python-gitlab)
 [![Documentation Status](https://readthedocs.org/projects/python-gitlab/badge/?version=latest)](https://python-gitlab.readthedocs.org/en/latest/?badge=latest)
-[![Code Coverage](https://codecov.io/github/python-gitlab/python-gitlab/coverage.svg?branch=main)](https://codecov.io/github/python-gitlab/python-gitlab?branch=main)
+[![Coverage Status](https://codecov.io/github/python-gitlab/python-gitlab/coverage.svg?branch=main)](https://codecov.io/github/python-gitlab/python-gitlab?branch=main)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-gitlab.svg)](https://pypi.python.org/pypi/python-gitlab)
 [![Gitter](https://img.shields.io/gitter/room/python-gitlab/Lobby.svg)](https://gitter.im/python-gitlab/Lobby)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
-[![GitHub license](https://img.shields.io/github/license/python-gitlab/python-gitlab)](https://github.com/python-gitlab/python-gitlab/blob/main/COPYING)
+[![License](https://img.shields.io/github/license/python-gitlab/python-gitlab)](https://github.com/python-gitlab/python-gitlab/blob/main/COPYING)
 
 ## Key Features
 
-*   **Comprehensive API Access:** Access GitLab's v4 REST API and both synchronous and asynchronous GraphQL APIs.
-*   **Pythonic Code:** Write clean, readable Python code to manage GitLab resources.
-*   **Flexible Parameter Handling:** Pass any valid parameters directly to the GitLab API, according to the official GitLab documentation.
-*   **GraphQL Support:** Utilize both synchronous and asynchronous clients for GraphQL API interactions.
-*   **Lower-Level API Access:** Access new GitLab API endpoints as soon as they are available using lower-level API methods.
-*   **Persistent Sessions:** Leverage persistent request sessions for secure authentication, proxy settings, and certificate handling.
-*   **Robust Error Handling:** Benefit from smart retry mechanisms for network and server errors, including rate-limit handling.
-*   **Paginated Response Handling:** Easily navigate paginated responses with flexible handling, including lazy iterators.
-*   **Automatic Encoding:** Paths and parameters are automatically URL-encoded as needed.
-*   **Data Conversion:** Complex data structures are automatically converted to API attribute types.
-*   **Configuration Flexibility:** Merge configuration from config files, environment variables, and command-line arguments.
-*   **CLI tool**: Manage your GitLab via command line.
+*   **Pythonic Interface:** Write clean, readable Python code to manage your GitLab resources.
+*   **Flexible API Access:** Pass any parameters to the GitLab API, following GitLab's documentation.
+*   **GraphQL Support:** Use synchronous or asynchronous clients for the GraphQL API.
+*   **Low-Level API Access:** Access new API endpoints quickly using lower-level methods.
+*   **Persistent Sessions:** Utilize persistent request sessions for authentication and proxy handling.
+*   **Robust Error Handling:** Benefit from smart retries on network and server errors, including rate-limit handling.
+*   **Pagination Handling:** Easily handle paginated responses with lazy iterators.
+*   **Automatic Encoding:** URL-encode paths and parameters automatically.
+*   **Data Conversion:** Automatically convert complex data structures to API attribute types.
+*   **Configuration Management:** Merge configuration from config files, environment variables, and arguments.
+*   **CLI Tool:** Includes a command-line interface (``gitlab``) for interacting with the REST API.
 
 ## Installation
 
-**Prerequisites:** Python 3.9 or higher is required.
+**Prerequisites:**  Python 3.9+
 
 Install the latest stable version using `pip`:
 
@@ -36,34 +35,48 @@ Install the latest stable version using `pip`:
 pip install --upgrade python-gitlab
 ```
 
-You can also install directly from the GitHub or GitLab repositories:
+Install the development version directly from GitHub:
 
 ```bash
 pip install git+https://github.com/python-gitlab/python-gitlab.git
 ```
 
-or:
-
-```bash
-pip install git+https://gitlab.com/python-gitlab/python-gitlab.git
-```
-
 ## Docker Images
 
-**python-gitlab** provides Docker images based on Alpine and Debian slim Python base images for convenient use.
+`python-gitlab` provides Docker images based on Alpine and Debian slim Python base images.
 
-*   **Alpine (default):** `registry.gitlab.com/python-gitlab/python-gitlab:latest`
-*   **Debian Slim:** `registry.gitlab.com/python-gitlab/python-gitlab:slim-bullseye` (for more complete environment or running into issues)
+*   **Alpine (default):** Smaller image.
+*   **Debian Slim:** (e.g., `-slim-bullseye`)  For environments needing a more complete setup, e.g., bash shell in CI jobs.
 
-Run a container:
+**Available Images:**
+
+*   `registry.gitlab.com/python-gitlab/python-gitlab:latest` (Alpine, alias)
+*   `registry.gitlab.com/python-gitlab/python-gitlab:alpine` (Alpine)
+*   `registry.gitlab.com/python-gitlab/python-gitlab:slim-bullseye` (Debian Slim)
+*   `registry.gitlab.com/python-gitlab/python-gitlab:v3.2.0` (Alpine, alias)
+*   `registry.gitlab.com/python-gitlab/python-gitlab:v3.2.0-alpine`
+*   `registry.gitlab.com/python-gitlab/python-gitlab:v3.2.0-slim-bullseye`
+
+**Running the Docker Image:**
 
 ```bash
 docker run -it --rm registry.gitlab.com/python-gitlab/python-gitlab:latest <command> ...
 ```
 
-## Usage in GitLab CI
+**Example (without authentication):**
 
-To use the Docker image in GitLab CI, override the `entrypoint`:
+```bash
+docker run -it --rm registry.gitlab.com/python-gitlab/python-gitlab:latest project get --id gitlab-org/gitlab
+```
+
+**Mounting a Config File:**
+
+```bash
+docker run -it --rm -v /path/to/python-gitlab.cfg:/etc/python-gitlab.cfg registry.gitlab.com/python-gitlab/python-gitlab:latest <command> ...
+```
+
+**Usage in GitLab CI:**
+Override the `entrypoint` in your GitLab CI job definition, as per the official documentation:
 
 ```yaml
 Job Name:
@@ -71,36 +84,29 @@ Job Name:
       name: registry.gitlab.com/python-gitlab/python-gitlab:latest
       entrypoint: [""]
    before_script:
-      - gitlab --version
+      gitlab --version
    script:
-      - gitlab <command>
+      gitlab <command>
 ```
-
-## Building Docker Images
-
-Build your own image:
+**Building Your Own Image:**
 
 ```bash
 docker build -t python-gitlab:latest .
-```
-
-Build a Debian slim-based image:
-
-```bash
+docker run -it --rm python-gitlab:latest <command> ...
 docker build -t python-gitlab:latest --build-arg PYTHON_FLAVOR=slim-bullseye .
 ```
 
-## Reporting Issues
+## Bug Reports
 
-Report bugs and feature requests on [GitHub](https://github.com/python-gitlab/python-gitlab/issues).
+Report bugs and feature requests on [GitHub Issues](https://github.com/python-gitlab/python-gitlab/issues).
 
-## Community Chat
+## Community
 
-Join the [Gitter community](https://gitter.im/python-gitlab/Lobby) for discussions and support.
+Join the [Gitter Community Chat](https://gitter.im/python-gitlab/Lobby) for discussions and support.
 
 ## Documentation
 
-Full documentation is available on [Read the Docs](http://python-gitlab.readthedocs.org/en/stable/).
+Comprehensive documentation is available on [Read the Docs](http://python-gitlab.readthedocs.org/en/stable/).
 
 ## Contributing
 

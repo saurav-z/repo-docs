@@ -1,104 +1,99 @@
 # MonkeyOCR: Revolutionizing Document Parsing with SRR Triplet Paradigm
 
-**Tired of cumbersome multi-tool pipelines for document processing?** MonkeyOCR offers a streamlined solution, leveraging a Structure-Recognition-Relation (SRR) triplet paradigm to efficiently parse documents with impressive accuracy and speed. [Explore the original repository](https://github.com/Yuliang-Liu/MonkeyOCR)!
+**Unlock unparalleled document understanding with MonkeyOCR, a cutting-edge solution built on a Structure-Recognition-Relation (SRR) triplet paradigm.** [Explore the original repository](https://github.com/Yuliang-Liu/MonkeyOCR) for more details.
 
-*   **SRR Paradigm:** Simplifies document parsing by combining structure recognition, content recognition, and relationship prediction.
-*   **Superior Performance:** Outperforms leading closed-source and open-source VLMs on various benchmarks, including OmniDocBench and olmOCR-Bench.
-*   **Multiple Model Options:** Offers both MonkeyOCR-pro-3B and a faster, more efficient MonkeyOCR-pro-1.2B.
-*   **Flexible Deployment:** Supports local installation, Hugging Face integration, ModelScope, Gradio demo, and Docker deployment for easy integration.
-*   **Comprehensive Outputs:** Generates Markdown, layout results, and intermediate JSON files for detailed analysis and customization.
+*   **State-of-the-Art Performance:** MonkeyOCR-pro-1.2B excels, surpassing the 3B version on Chinese documents by 7.4%.
+*   **Blazing-Fast Speed:** Enjoy a 36% speed boost with MonkeyOCR-pro-1.2B compared to the 3B model, with a minimal performance trade-off (1.6% drop).
+*   **Superior Accuracy:** MonkeyOCR-pro-1.2B outperforms Nanonets-OCR-3B by 7.3% on olmOCR-Bench, and MonkeyOCR-pro-3B excels on OmniDocBench.
+*   **Versatile Compatibility:** Works seamlessly with English and Chinese documents.
+*   **Easy to Use:** Comes with a simple API and Gradio demo.
 
 ## Key Features
 
-*   **Advanced Document Parsing:**  Effectively processes complex documents, including those with formulas, tables, and diverse layouts.
-*   **Benchmark Dominance:** Achieves state-of-the-art results on standard document understanding benchmarks.
-*   **Speed & Efficiency:** Offers faster processing speeds compared to existing solutions, optimizing for efficient performance on various GPUs.
-*   **User-Friendly Interface:**  Includes a Gradio demo and a fast API for easy experimentation and integration.
-*   **Extensive Customization:**  Provides options for single-task recognition, page splitting, and output directory specification.
+*   **SRR Triplet Paradigm:** Simplifies the document processing pipeline, avoiding the complexities of large multimodal models.
+*   **High-Speed Inference:** Optimized for efficient processing, with benchmark results showcasing impressive pages-per-second performance on various GPUs.
+*   **Comprehensive Output:** Delivers parsed documents in markdown format, with layout results and intermediate block results for detailed analysis.
+*   **Model Weights & Demos Available:** Quickly get started with pre-trained models available on Hugging Face, ModelScope, and a user-friendly demo.
+*   **Flexible Deployment:** Supports local installation, Docker deployment (including NVIDIA GPU support) and a FastAPI service.
+
+## Performance Highlights
+
+**MonkeyOCR Demonstrates Superior Performance, outperforming closed-source and large open-source VLM models across multiple benchmarks:**
+
+![MonkeyOCR vs Competitors](https://v1.ax1x.com/2025/07/15/EKhkhY.png)
 
 ## Quick Start
 
-### 1. Install MonkeyOCR
-
-*   Follow the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda_pp.md#install-with-cuda-support) for setting up your environment with CUDA support.
+### 1. Installation
+See the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda_pp.md#install-with-cuda-support) to setup your environment.
 
 ### 2. Download Model Weights
+Download the model from Hugging Face or ModelScope:
 
-*   **From Hugging Face:**
-    ```bash
-    pip install huggingface_hub
-    python tools/download_model.py -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
-    ```
-*   **From ModelScope:**
-    ```bash
-    pip install modelscope
-    python tools/download_model.py -t modelscope -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
-    ```
+```bash
+# Hugging Face
+pip install huggingface_hub
+python tools/download_model.py -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
 
-### 3. Inference
-
-*   **Basic Usage:**
-    ```bash
-    python parse.py input_path
-    ```
-    Replace `input_path` with the path to your PDF, image, or directory.
-
-*   **Additional Options:**  See detailed usage examples in the original README.
-
-### 4. Gradio Demo
-
-*   Run the interactive demo:
-    ```bash
-    python demo/demo_gradio.py
-    ```
-    Access the demo at http://localhost:7860.
-
-### 5. Fast API
-
-*   Start the API service:
-    ```bash
-    uvicorn api.main:app --port 8000
-    ```
-    Access the API documentation at http://localhost:8000/docs.
-
-## Deployment Options
-
-*   **Docker:** Detailed instructions are provided in the original README and the `docker` directory.  Supports NVIDIA GPU.
-*   **Windows Support:**  Find guidance in the `docs/windows_support.md`.
-*   **Quantization:**  Explore model quantization using AWQ in the `docs/Quantization.md`.
-
-## Benchmark Results
-
-*   Comprehensive evaluation results are provided in the original README, demonstrating MonkeyOCR's performance on various benchmarks. Key results include those achieved on OmniDocBench and olmOCR-bench.
-
-## Visualization Demo
-
-*   Experience the power of MonkeyOCR via the easy-to-use demo: http://vlrlabmonkey.xyz:7685
-
-## How to Cite
-
-If you use MonkeyOCR, please cite the following:
-
-```bibtex
-@misc{li2025monkeyocrdocumentparsingstructurerecognitionrelation,
-      title={MonkeyOCR: Document Parsing with a Structure-Recognition-Relation Triplet Paradigm}, 
-      author={Zhang Li and Yuliang Liu and Qiang Liu and Zhiyin Ma and Ziyang Zhang and Shuo Zhang and Zidun Guo and Jiarui Zhang and Xinyu Wang and Xiang Bai},
-      year={2025},
-      eprint={2506.05218},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2506.05218}, 
-}
+# ModelScope
+pip install modelscope
+python tools/download_model.py -t modelscope -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
 ```
 
-## Acknowledgments
+### 3. Inference
+Run the following commands to parse PDFs, images, or directories containing PDFs or images:
 
-*   (as in original README)
+```bash
+# Replace input_path with the path to a PDF or image or directory
 
-## Limitations
+# End-to-end parsing
+python parse.py input_path
 
-*   (as in original README)
+# Parse files in a dir with specific group page num
+python parse.py input_path -g 20
 
-## Copyright
+# Single-task recognition (outputs markdown only)
+python parse.py input_path -t text/formula/table
 
-*   (as in original README)
+# Parse PDFs in input_path and split results by pages
+python parse.py input_path -s
+
+# Specify output directory and model config file
+python parse.py input_path -o ./output -c config.yaml
+```
+
+### 4. Gradio Demo
+```bash
+python demo/demo_gradio.py
+```
+### 5. Fast API
+```bash
+uvicorn api.main:app --port 8000
+```
+
+## Benchmarks
+
+### Performance on OmniDocBench
+
+| Model                  | Overall (EN) | Overall (ZH) |
+| ---------------------- | ------------ | ------------ |
+| MonkeyOCR-pro-3B       | **0.138**    | **0.206**    |
+| MonkeyOCR-pro-1.2B     | 0.153        | 0.223        |
+
+### Performance on olmOCR-bench
+
+| Model                        | Overall |
+| ---------------------------- | ------- |
+| MonkeyOCR-pro-3B            | **75.8 ± 1.0** |
+| MonkeyOCR-pro-1.2B          | 71.8 ± 1.1       |
+
+##  Try the Demo
+Experience MonkeyOCR's capabilities firsthand at  http://vlrlabmonkey.xyz:7685
+
+## Learn More
+
+*   [GitHub Repository](https://github.com/Yuliang-Liu/MonkeyOCR)
+*   [ArXiv Paper](https://arxiv.org/abs/2506.05218)
+*   [Hugging Face Model](https://huggingface.co/echo840/MonkeyOCR)
+*   [ModelScope](https://modelscope.cn/models/l1731396519/MonkeyOCR)
+*   [Demo](http://vlrlabmonkey.xyz:7685/)

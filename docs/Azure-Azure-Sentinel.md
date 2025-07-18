@@ -1,14 +1,14 @@
-# Azure Sentinel & Microsoft 365 Defender: Security Resources and Community Contributions
+# Azure Sentinel and Microsoft 365 Defender: Your Unified Security Powerhouse
 
-Safeguard your environment and proactively hunt for threats with the comprehensive resources available in the Azure Sentinel and Microsoft 365 Defender repository.  [Explore the Repository](https://github.com/Azure/Azure-Sentinel).
+Secure your environment and proactively hunt for threats with the **Azure Sentinel and Microsoft 365 Defender** repository, a comprehensive resource for security content and threat detection.  [Visit the repository](https://github.com/Azure/Azure-Sentinel) for cutting-edge security insights.
 
 ## Key Features
 
-*   **Out-of-the-Box Detections:** Implement pre-built detections to identify potential security threats.
-*   **Exploration & Hunting Queries:** Utilize ready-made queries for in-depth analysis and threat hunting.
-*   **Workbooks & Playbooks:** Leverage pre-configured workbooks for data visualization and playbooks for automated incident response.
-*   **Microsoft 365 Defender Integration:**  Includes hunting queries specifically for advanced hunting in both Microsoft 365 Defender and Microsoft Sentinel.
-*   **Community Driven:**  Contribute and access community-contributed security content.
+*   **Out-of-the-Box Detections:** Pre-built detections to immediately identify and respond to threats.
+*   **Exploration & Hunting Queries:**  Leverage powerful KQL queries for in-depth investigation and threat hunting.
+*   **Microsoft 365 Defender Integration:** Includes hunting queries for advanced threat hunting scenarios across both platforms.
+*   **Workbooks & Playbooks:**  Utilize pre-built workbooks and playbooks to streamline security operations and automate responses.
+*   **Community Driven:**  Benefit from community contributions and collaboration to enhance your security posture.
 
 ## Resources
 
@@ -17,45 +17,49 @@ Safeguard your environment and proactively hunt for threats with the comprehensi
 *   [Security Community Webinars](https://aka.ms/securitywebinars)
 *   [Getting Started with GitHub](https://help.github.com/en#dotcom)
 
-## Feedback and Community
+## Get Involved & Contribute
 
-We value your input! Here's how to get involved:
+We value your feedback and contributions!  Here's how you can get involved:
 
-1.  **SIEM/SOAR Q&A:** Join the [Microsoft Sentinel Tech Community](https://techcommunity.microsoft.com/t5/microsoft-sentinel/bd-p/MicrosoftSentinel).
-2.  **XDR Q&A:** Participate in the [Microsoft 365 Defender Tech Community](https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection).
-3.  **Feature Requests:** Submit and upvote feature requests on the [Microsoft Sentinel feedback forums](https://feedback.azure.com/d365community/forum/37638d17-0625-ec11-b6e6-000d3a4f07b8).
-4.  **Report Bugs:** File a GitHub Issue using the [Bug template](https://github.com/Azure/Azure-Sentinel/issues/new?assignees=&labels=&template=bug_report.md&title=).
-5.  **General Feedback:** Submit a GitHub Issue using the [Feature Request template](https://github.com/Azure/Azure-Sentinel/issues/new?assignees=&labels=&template=feature_request.md&title=).
+*   **Community Q&A:**
+    *   Microsoft Sentinel Tech Community: [Microsoft Sentinel Tech Community conversations](https://techcommunity.microsoft.com/t5/microsoft-sentinel/bd-p/MicrosoftSentinel)
+    *   Microsoft 365 Defender Tech Community: [Microsoft 365 Defender Tech Community conversations](https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection)
+*   **Feature Requests:** Submit or upvote feature requests on the [Microsoft Sentinel feedback forums](https://feedback.azure.com/d365community/forum/37638d17-0625-ec11-b6e6-000d3a4f07b8).
+*   **Report Bugs:** File a GitHub Issue using the [Bug template](https://github.com/Azure/Azure-Sentinel/issues/new?assignees=&labels=&template=bug_report.md&title=).
+*   **General Feedback:**  File a GitHub Issue using the [Feature Request template](https://github.com/Azure/Azure-Sentinel/issues/new?assignees=&labels=&template=feature_request.md&title=).
+*   **Contribution Guidelines:** Refer to the repository's [wiki](https://aka.ms/threathunters) and follow the [Contribution guidelines](https://github.com/Azure/Azure-Sentinel/blob/master/README.md#contribution-guidelines) for detailed instructions on how to contribute, including information on the Contribution License Agreement (CLA).
 
-## Contribution Guidelines
+### Contribution Process Summary
 
-This project welcomes contributions! Before contributing, review the following:
+1.  **Fork** the repository.
+2.  **Clone** the repository to your local machine.
+3.  **Create a Branch:** Create a new branch for your changes.
+4.  **Make Changes:** Add or update content using your preferred tools (GitHub Desktop, VS Code, etc.).
+5.  **Merge Changes:** Merge master back to your branch before you push.
+6.  **Push Changes:** Push your changes to your forked repository.
+7.  **Submit a Pull Request:** Submit a pull request to the main repository, providing detailed information about your proposed changes.
 
-*   **Contribution License Agreement (CLA):**  All contributions require agreement to a CLA. Visit [https://cla.microsoft.com](https://cla.microsoft.com) for details.
-*   **Getting Started:** For first-time contributors, review the [General GitHub Fork the repo guidance](https://docs.github.com/github/getting-started-with-github/fork-a-repo) before cloning or [Specific steps for the Sentinel repo](https://github.com/Azure/Azure-Sentinel/blob/master/GettingStarted.md).
-*   **Contribution Methods:**
-    *   Submit directly on the GitHub website by uploading files and creating a pull request.
-    *   Use GitHub Desktop, Visual Studio, or VSCode to fork, clone, branch, make changes, merge, and push your contributions.
-*   **Pull Request (PR) Process:**
-    *   Submit a pull request after pushing changes.
-    *   Provide detailed descriptions of changes.
-    *   Address comments and resolve issues.
-    *   Ensure PRs pass the PR checks, including structure and KQL validation.
+#### Pull Request Checks
 
-### Pull Request Validation Checks
+*   **Detection Template Structure Validation:** Ensures all required components of the YAML structure are present.
+*   **KQL Validation:** Verifies the syntax of KQL queries.
+*   **Detection Schema Validation:** Validates the schema of detections.
 
-*   **Detection Template Structure Validation:** Ensures all required parts of the YAML structure are included.
-*   **KQL Validation:** Validates the syntax of KQL queries.
+**Note:** When submitting a pull request, a CLA-bot will determine if you need to provide a CLA.
 
-    *   If custom logs table is used, the schema must be defined in JSON file in the folder *Azure-Sentinel\\.script\tests\KqlvalidationsTests\CustomTables*
-*   **Detection Schema Validation:** Validates the schema of a detection, including its frequency and period, trigger type and threshold, and the validity of connectors.
-### Run Validation Locally
+For information on what you can contribute and further details, refer to the ["get started"](https://github.com/Azure/Azure-Sentinel/wiki#get-started) section on the project's [wiki](https://aka.ms/threathunters).
 
-*   **KQL Validation:** Run `dotnet test` from `Azure-Sentinel\\.script\tests\KqlvalidationsTests\` after installing the [.Net Core 3.1 SDK](https://dotnet.microsoft.com/download)
-*   **Detection Schema Validation:** Run `dotnet test` from `Azure-Sentinel\\.script\tests\DetectionTemplateSchemaValidation\` after installing the [.Net Core 3.1 SDK](https://dotnet.microsoft.com/download)
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).  For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+```
+Key improvements and SEO considerations:
 
-### Code of Conduct
-
-This project follows the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). Contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any questions.
-
-For more details on contributing, refer to the ["get started"](https://github.com/Azure/Azure-Sentinel/wiki#get-started) section on the project's [wiki](https://aka.ms/threathunters).
+*   **Clear, Concise Title & Hook:**  The title is optimized with keywords and the one-sentence hook immediately grabs attention.
+*   **Keyword Optimization:**  Uses relevant keywords throughout ("Azure Sentinel," "Microsoft 365 Defender," "security content," "threat detection," "KQL," etc.) to improve searchability.
+*   **Structured Headings:**  Uses clear headings and subheadings for readability and SEO.
+*   **Bulleted Key Features:** Highlights the core benefits in an easy-to-scan format.
+*   **Call to Action:**  Encourages users to explore the repository and get involved.
+*   **Internal Linking:** Includes a link back to the original repo as requested.
+*   **Community Focus:**  Emphasizes community involvement and contribution opportunities.
+*   **Improved Formatting:**  Uses bolding and other formatting to improve readability.
+*   **More Detailed Contribution Guide Summary:**  Provides a more concise and useful summary of the contribution process.
+*   **PR checks details:** Included information and steps for Pull Request checks to help contributors.

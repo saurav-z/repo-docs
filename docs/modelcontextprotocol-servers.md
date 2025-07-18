@@ -1,31 +1,30 @@
-# Unlock LLM Power with Model Context Protocol Servers
+# Model Context Protocol Servers: Unlock AI's Potential with Secure Tool Access
 
-**Empower your Large Language Models (LLMs) with secure and controlled access to tools and data using Model Context Protocol (MCP) servers.** This repository provides reference implementations and a growing ecosystem of community-built servers, enabling advanced functionality and integration. **[Explore the Original Repo](https://github.com/modelcontextprotocol/servers)**
+**Empower your Large Language Models (LLMs) with secure and controlled access to tools and data using the Model Context Protocol (MCP).**  [Explore the original repository](https://github.com/modelcontextprotocol/servers) to get started!
 
-## Key Features:
+## Key Features
 
-*   **Reference Implementations:** Explore working examples to understand MCP server architecture.
-*   **Extensible Ecosystem:** Leverage a wide range of community-built servers for diverse applications.
-*   **Secure Access:** Control LLM access to tools and data sources, ensuring data integrity.
-*   **SDK Support:** Utilize MCP SDKs in multiple languages: C#, Go, Java, Kotlin, Python, and TypeScript.
-*   **Rapid Integration:** Easily configure and integrate MCP servers with popular LLM clients.
-*   **Open Source and Community-Driven:** Contribute to and benefit from a vibrant open-source community.
+*   **Reference Implementations:**  Discover a curated collection of reference servers demonstrating MCP functionality.
+*   **Extensible SDKs:** Leverage SDKs for various programming languages, including C#, Go, Java, Kotlin, Python, and TypeScript, to build your own servers.
+*   **Secure Access:**  Grant LLMs controlled access to tools and data sources, enhancing their capabilities while maintaining security.
+*   **Community-Driven:** Benefit from a thriving community, including third-party integrations and a wealth of resources.
+*   **Modular Design:**  Easily integrate custom tools and data sources into your LLM workflows.
 
-## Reference Servers:
+## Reference Servers
 
-These servers demonstrate core MCP features and best practices.
+Explore a set of pre-built servers showcasing various MCP capabilities and best practices using the official SDKs:
 
-*   **Everything:** Reference/test server with various prompts, resources, and tools.
-*   **Fetch:** Web content fetching and conversion for efficient LLM integration.
-*   **Filesystem:** Secure file operations with configurable access controls.
-*   **Git:** Tools to read, search, and manipulate Git repositories.
-*   **Memory:** Knowledge graph-based persistent memory system.
-*   **Sequential Thinking:** Dynamic and reflective problem-solving through thought sequences.
-*   **Time:** Time and timezone conversion capabilities.
+*   **Everything (src/everything):** Reference / test server with prompts, resources, and tools
+*   **Fetch (src/fetch):** Web content fetching and conversion.
+*   **Filesystem (src/filesystem):** Secure file operations with configurable access controls.
+*   **Git (src/git):** Interact with and manage Git repositories.
+*   **Memory (src/memory):** Knowledge graph-based persistent memory.
+*   **Sequential Thinking (src/sequentialthinking):** Dynamic and reflective problem-solving.
+*   **Time (src/time):** Time and timezone conversion capabilities.
 
-## Archived Servers:
+### Archived Servers
 
-These servers have been archived and can be found in the [servers-archived](https://github.com/modelcontextprotocol/servers-archived) repository.
+The following reference servers are now archived and can be found at [servers-archived](https://github.com/modelcontextprotocol/servers-archived).
 
 *   AWS KB Retrieval
 *   Brave Search
@@ -41,358 +40,83 @@ These servers have been archived and can be found in the [servers-archived](http
 *   Slack
 *   SQLite
 
-## Third-Party Servers:
-
-Explore a thriving ecosystem of integrations built by companies and the community.
+## 🤝 Third-Party Integrations
 
 ### 🎖️ Official Integrations
 
-*   **21st.dev Magic:** Create crafted UI components.
-*   **ActionKit by Paragon:** Connect to 130+ SaaS integrations.
-*   **Adfin:** The only platform you need to get paid - all payments in one place, invoicing and accounting reconciliations.
-*   **AgentQL:** Enable AI agents to get structured data from unstructured web.
-*   **AgentRPC:** Connect to any function, any language, across network boundaries.
-*   **Agentset:** RAG for your knowledge base.
-*   **Aiven:** Navigate and interact with your Aiven projects and services.
-*   **Alation:** Unlock the power of the enterprise Data Catalog.
-*   **Algolia:** Use AI agents to provision, configure, and query your Algolia search indices.
-*   **Alibaba Cloud AnalyticDB for MySQL:** Connect to a cluster for getting database or table metadata, querying and analyzing data.
-*   **Alibaba Cloud AnalyticDB for PostgreSQL:** Connect to instances, query and analyze data.
-*   **Alibaba Cloud DataWorks:** Interact with the DataWorks Open API.
-*   **Alibaba Cloud OpenSearch:** Equip AI Agents with tools to interact with OpenSearch.
-*   **Alibaba Cloud OPS:** Manage the lifecycle of your Alibaba Cloud resources.
-*   **Alibaba Cloud RDS:** Manage RDS resources via an LLM.
-*   **AllVoiceLab:** An AI voice toolkit with TTS, voice cloning, and video translation,
-*   **Alpaca:** Trade stocks and options, analyze market data.
-*   **AlphaVantage:** Connect to 100+ APIs for financial market data.
-*   **Apache Doris:** Query your real-time data warehouse.
-*   **Apache IoTDB:** Connect to the database and its tools.
-*   **Apify:** Use 3,000+ pre-built cloud tools to extract data.
-*   **APIMatic MCP:** Validate OpenAPI specifications.
-*   **Apollo MCP Server:** Connect your GraphQL APIs to AI agents.
-*   **Aqara MCP Server:** Control smart home devices.
-*   **Archbee:** Write and publish documentation that becomes the trusted source for instant answers with AI.
-*   **Arize Phoenix:** Inspect traces, manage prompts, curate datasets, and run experiments.
-*   **Armor Crypto MCP:** Interface with multiple blockchains.
-*   **Asgardeo:** Interact with your Asgardeo organization.
-*   **Astra DB:** Tools for managing collections and documents in a DataStax Astra DB.
-*   **Atla:** Interact with the Atla API.
-*   **Atlan:** Interact with the Atlan services.
-*   **Atlassian:** Interact with Jira work items and Confluence pages.
-*   **AtomGit:** Integrate with repository management, PRs, issues, branches, labels, and more.
-*   **Audiense Insights:** Marketing insights and audience analysis.
-*   **Auth0:** Interact with your Auth0 tenant.
-*   **Authenticator App · 2FA:** A secure MCP server that enables AI agents to interact with the Authenticator App.
-*   **AWS:** Specialized MCP servers with AWS best practices.
-*   **Axiom:** Query and analyze your Axiom logs.
-*   **Azure:** Access key Azure services and tools.
-*   **Baidu Map:** Interact with Baidu Maps APIs.
-*   **Bankless Onchain:** Query Onchain data.
-*   **BICScan:** Risk score / asset holdings of EVM blockchain address.
-*   **Bitrise:** Chat with your builds, CI, and more.
-*   **BoldSign:** Search, request, and manage e-signature contracts.
-*   **Boost.space:** Centralized, automated business data from 2000+ sources.
-*   **Box:** Interact with the Intelligent Content Management platform.
-*   **BrightData:** Discover, extract, and interact with the web.
-*   **Browserbase:** Automate browser interactions in the cloud.
-*   **BrowserStack:** Access BrowserStack's Test Platform.
-*   **Bucket:** Flag features, manage company data, and control feature access.
-*   **BuiltWith:** Identify the technology stack behind any website.
-*   **Burp Suite:** MCP Server extension allowing AI clients to connect to Burp Suite.
-*   **Campertunity:** Search campgrounds around the world, check availability.
-*   **Cartesia:** Perform text-to-speech, voice cloning etc.
-*   **Cashfree:** Interact with the Cashfree Payments.
-*   **CB Insights:** Connect to [ChatCBI].
-*   **Chargebee:** Connects AI agents to Chargebee platform.
-*   **Cheqd:** Enable AI Agents to be trusted, verified, prevent fraud, protect your reputation.
-*   **Chiki StudIO:** Create your own configurable MCP servers purely via configuration (no code).
-*   **Chroma:** Embeddings, vector search, document storage, and full-text search.
-*   **Chronulus AI:** Predict anything.
-*   **CircleCI:** Enable AI Agents to fix build failures.
-*   **ClickHouse:** Query your ClickHouse database server.
-*   **Cloudera Iceberg:** enabling AI on the Open Data Lakehouse.
-*   **Cloudflare:** Deploy, configure & interrogate your resources.
-*   **Cloudinary:** Exposes Cloudinary's media upload, transformation, AI analysis, management, optimization and delivery as tools usable by AI agents
-*   **Codacy:** Query code quality issues, vulnerabilities, and coverage insights.
-*   **CodeLogic:** Interact with CodeLogic.
-*   **CoinGecko:** Cryptocurrency Price & Market Data.
-*   **Comet Opik:** Query and analyze your Opik logs, traces, prompts and all other telemetry data.
-*   **Conductor:** Interact with Conductor REST APIs.
-*   **Confluent:** Interact with Confluent Kafka and Confluent Cloud REST APIs.
-*   **Contrast Security:** Bring Contrast's vulnerability and SCA data into your coding agent to quickly remediate vulnerabilities.
-*   **Convex:** Introspect and query your apps deployed to Convex.
-*   **Couchbase:** Interact with the data stored in Couchbase clusters.
-*   **CRIC Wuye AI:** Interact with capabilities of the CRIC Wuye AI platform.
-*   **Cycode:** Boost security in your dev lifecycle.
-*   **Dart:** Interact with task, doc, and project data in Dart.
-*   **DataHub:** Search your data assets, traverse data lineage, write SQL queries, and more.
-*   **Daytona:** Fast and secure execution of your AI generated code with sandboxes.
-*   **Debugg.AI:** Zero-Config, Fully AI-Managed End-to-End Testing.
-*   **DeepL:** Translate or rewrite text.
-*   **Defang:** Deploy your project to the cloud seamlessly with the Defang platform.
-*   **DevHub:** Manage and utilize website content.
-*   **DevRev:** Integrate with DevRev APIs.
-*   **DexPaprika (CoinPaprika):** Access real-time DEX data.
-*   **Drata:** Real-time compliance intelligence into your AI workflows.
-*   **Dumpling AI:** Access data, web scraping, and document conversion APIs.
-*   **Dynatrace:** Manage and interact with the Dynatrace Platform.
-*   **E2B:** Run code in secure sandboxes.
-*   **Edgee:** Deploy and manage Edgee components and projects.
-*   **EduBase:** Interact with EduBase.
-*   **Elasticsearch:** Query your data in Elasticsearch.
-*   **Endor Labs:** Find and fix security risks in you code.
-*   **eSignatures:** Contract and template management.
-*   **Exa:** Search Engine made for AIs by Exa.
-*   **FalkorDB:** FalkorDB graph database server get schema and read/write-cypher.
-*   **fetchSERP:** All-in-One SEO & Web Intelligence Toolkit API.
-*   **Fewsats:** Enable AI Agents to purchase anything.
-*   **Fibery:** Perform queries and entity operations in your Fibery workspace.
-*   **Financial Datasets:** Stock market API.
-*   **Firebase:** Firebase's experimental MCP Server to power your AI Tools.
-*   **Firecrawl:** Extract web data.
-*   **Firefly:** Integrates, discovers, manages, and codifies cloud resources.
-*   **Fireproof:** Immutable ledger database with live synchronization.
-*   **Fluid Attacks:** Interact with the Fluid Attacks API.
-*   **ForeverVM:** Run Python in a code sandbox.
-*   **GibsonAI:** AI-Powered Cloud databases.
-*   **Gitea:** Interact with Gitea instances.
-*   **Gitee:** Gitee API integration.
-*   **GitHub:** GitHub's official MCP Server.
-*   **Glean:** Enterprise search and chat using Glean's API.
-*   **Globalping:** Run network commands.
-*   **gNucleus Text-To-CAD:** Generate CAD parts from text.
-*   **Google Cloud Run:** Deploy code to Google Cloud Run.
-*   **gotoHuman:** Human-in-the-loop platform.
-*   **Grafana:** Search dashboards, investigate incidents and query datasources.
-*   **Grafbase:** Turn your GraphQL API into an efficient MCP server.
-*   **Grain:** Access your Grain meetings notes & transcripts.
-*   **Graphlit:** Ingest anything into a searchable project.
-*   **GreptimeDB:** Explore and analyze data in GreptimeDB.
-*   **GROWI:** Interact with GROWI APIs.
-*   **Gyazo:** Search, fetch, upload, and interact with Gyazo images.
-*   **Harper:** Provide an interface for MCP clients to access data within Harper.
-*   **Heroku:** Interact with the Heroku Platform.
-*   **Hiveflow:** Create, manage, and execute agentic AI workflows.
-*   **Hologres:** Connect to a Hologres instance, get table metadata, query and analyze data.
-*   **Honeycomb:** Query and analyze data, alerts, dashboards, and more.
-*   **HubSpot:** Connect, manage, and interact with HubSpot CRM data.
-*   **Hugging Face:** Connect to the Hugging Face Hub APIs programmatically.
-*   **Hunter:** Interact with the Hunter API to get B2B data.
-*   **Hyperbolic:** Interact with Hyperbolic's GPU cloud.
-*   **Hyperbrowser:** Browser automation.
-*   **IBM wxflows:** Tool platform by IBM to build, test and deploy tools for any data source.
-*   **Inbox Zero:** AI personal assistant for email.
-*   **Inflectra Spira:** Connect to your instance of the SpiraTest, SpiraTeam or SpiraPlan application lifecycle management platform.
-*   **Inkeep:** RAG Search over your content.
-*   **Integration App:** Interact with any other SaaS applications on behalf of your customers.
-*   **IP2Location.io:** Retrieve the geolocation information for an IP address.
-*   **JetBrains:** Work on your code with JetBrains IDEs.
-*   **JFrog:** Model Context Protocol (MCP) Server for the JFrog Platform API.
-*   **Kagi Search:** Search the web using Kagi's search API.
-*   **Keboola:** Build robust data workflows, integrations, and analytics.
-*   **KeywordsPeopleUse.com:** Find questions people ask online.
-*   **Klavis ReportGen:** Create professional reports.
-*   **Klaviyo:** Interact with your Klaviyo marketing data.
-*   **kluster.ai:** AI services directly into your development workflow.
-*   **Knit MCP Server:** Connect with 10000+ tools across CRM, HRIS, Payroll, Accounting, ERP, Calendar, Expense Management, and Chat categories.
-*   **Knock MCP Server:** Send product and customer messaging.
-*   **KurrentDB:** Explore data and prototype projections faster.
-*   **Kuzu:** Inspect database schemas and execute queries on the provided Kuzu graph database.
-*   **KWDB:** Reading, writing, querying, modifying data, and performing DDL operations with data in your KWDB Database.
-*   **Label Studio:** Open Source data labeling platform.
-*   **Lambda Capture:** Macroeconomic Forecasts & Semantic Context.
-*   **Langfuse Prompt Management:** Open-source tool for collaborative editing, versioning, evaluating, and releasing prompts.
-*   **Lara Translate:** Powerful translation capabilities.
-*   **Last9:** Bring real-time production context into your local environment to auto-fix code faster.
-*   **LaunchDarkly:** Continuous delivery platform that provides feature flags as a service.
-*   **LINE:** Integrates the LINE Messaging API.
-*   **Linear:** Search, create, and update Linear issues, projects, and comments.
-*   **Lingo.dev:** Make your AI agent speak every language on the planet.
-*   **LinkedIn MCP Runner:** Write, edit, and schedule LinkedIn posts.
-*   **Lisply:** Flexible frontend for compliant Lisp-speaking backends.
-*   **Litmus.io:** Official MCP server for configuring Litmus Edge for Industrial Data Collection, Edge Analytics & Industrial AI.
-*   **Liveblocks:** Ready‑made features for AI & human collaboration.
-*   **Logfire:** Provides access to OpenTelemetry traces and metrics.
-*   **Magic Meal Kits:** Unleash Make's Full Potential.
-*   **Mailgun:** Interact with Mailgun API.
-*   **Make:** Turn your Make scenarios into callable tools for AI assistants.
-*   **Mapbox:** Unlock geospatial intelligence through Mapbox APIs.
-*   **MariaDB:** Manage and query MariaDB databases.
-*   **MCP Discovery:** Discover MCP server capabilities.
-*   **MCP Toolbox for Databases:** Secure tools for Databases.
-*   **Meilisearch:** Interact & query with Meilisearch.
-*   **Memgraph:** Query your data in Memgraph graph database.
-*   **Mercado Pago:** Mercado Pago's official MCP server.
-*   **Metoro:** Query and interact with kubernetes environments monitored by Metoro.
-*   **Microsoft Clarity:** Get your behavioral analytics data and insights from Clarity.
-*   **Microsoft Dataverse:** Chat over your business data.
-*   **Microsoft Learn Docs:** Retrieve accurate, authoritative, and context-aware technical content.
-*   **Milvus:** Search, Query and interact with data in your Milvus Vector Database.
-*   **Mobb:** The Mobb Vibe Shield MCP server.
-*   **Momento:** Quickly improve your performance, reduce costs, and handle load at any scale.
-*   **MongoDB:** Both MongoDB Community Server and MongoDB Atlas are supported.
-*   **MotherDuck:** Query and analyze data with MotherDuck and local DuckDB.
-*   **Mulesoft:** Build, deploy, and manage MuleSoft applications with natural language.
-*   **NanoVMs:** Easily Build and Deploy unikernels to any cloud.
-*   **Needle:** Production-ready RAG.
-*   **Neo4j:** Neo4j graph database server.
-*   **Neon:** Interact with the Neon serverless Postgres platform.
-*   **Nerve:** Search and Act on all your company data.
-*   **Netdata:** Discovery, exploration, reporting and root cause analysis.
-*   **Netlify:** Create, build, deploy, and manage your websites.
-*   **Nile:** Manage and query databases, tenants, users, auth.
-*   **Nodit:** Multi-chain RPC Nodes and Data APIs for blockchain data.
-*   **Norman Finance:** Manage accounting and taxes.
-*   **Notion:** This project implements an MCP server for the Notion API.
-*   **Nutrient:** Create, Edit, Sign, Extract Documents.
-*   **Nx:** Makes Nx's understanding of your codebase accessible to LLMs.
-*   **OceanBase:** MCP Server for OceanBase database and its tools.
-*   **Octagon:** Deliver real-time investment research.
-*   **OctoEverywhere:** 3D Printing MCP server.
-*   **Offorte:** Offorte Proposal Software official MCP server.
-*   **OlaMaps:** Official Ola Maps MCP Server.
-*   **ONLYOFFICE DocSpace:** Interact with DocSpace API.
-*   **OP.GG:** Access real-time gaming data.
-*   **OpenSearch:** Perform search and analytics use cases on data.
-*   **OpsLevel:** Official MCP Server for OpsLevel.
-*   **Optuna:** Enables seamless orchestration of hyperparameter search.
-*   **Oxylabs:** Scrape websites.
-*   **Paddle:** Interact with the Paddle API.
-*   **Pagos:** Query Credit Card BIN Data.
-*   **PAIML MCP Agent Toolkit:** Professional project scaffolding toolkit.
-*   **Paper:** Realistic paper trading platform.
-*   **Patronus AI:** Test, evaluate, and optimize AI agents and RAG apps.
-*   **PayPal:** PayPal's official MCP server.
-*   **Pearl:** Connect your AI Agents with 12,000+ certified experts instantly.
-*   **Perplexity:** Connects to Perplexity's Sonar API.
-*   **Pinecone:** Developers in searching documentation and managing data.
-*   **Pinecone Assistant:** Retrieves context from your Pinecone Assistant knowledge base.
-*   **Pipedream:** Connect with 2,500 APIs with 8,000+ prebuilt tools.
-*   **PlayCanvas:** Create interactive 3D web apps.
-*   **Plugged.in:** A comprehensive proxy that combines multiple MCP servers into a single MCP.
-*   **Port IO:** Access and manage your software catalog.
-*   **PostHog:** Interact with PostHog analytics.
-*   **Postman API:** Manage your Postman resources.
-*   **Powerdrill:** Interact with Powerdrill datasets.
-*   **Prisma:** Create and manage Prisma Postgres databases.
-*   **proxymock:** Automatically generates tests and mocks by recording a live app.
-*   **PubNub:** Retrieves context for developing with PubNub SDKs and calling APIs.
-*   **Pulumi:** Deploy and manage cloud infrastructure.
-*   **Pure.md:** Reliably access web content in markdown format.
-*   **Put.io:** Interact with your Put.io account.
-*   **Qdrant:** Implement semantic memory layer.
-*   **Quickchat AI:** Launch your conversational Quickchat AI agent as an MCP.
-*   **Ragie:** Retrieve context from your Ragie knowledge base.
-*   **Ramp:** Interact with Ramp's Developer API.
-*   **Raygun:** Interact with your crash reporting and real using monitoring data.
-*   **Razorpay:** Razorpay's official MCP server.
-*   **Recraft:** Generate raster and vector images.
-*   **Redis:** The Redis official MCP Server offers an interface to manage and search data in Redis.
-*   **Redis Cloud API:** The Redis Cloud API MCP Server allows you to manage your Redis Cloud resources.
-*   **Reexpress:** Enable Similarity-Distance-Magnitude statistical verification.
-*   **Rember:** Create spaced repetition flashcards.
-*   **Revit:** Connect and interact with your Revit models live.
-*   **Rill Data:** Interact with Rill Data to query and analyze your data.
-*   **Riza:** Arbitrary code execution and tool-use platform.
-*   **Roblox Studio:** Create and manipulate scenes, scripts in Roblox Studio.
-*   **Rodin:** Generate 3D Models.
-*   **Root Signals:** Improve and quality control your outputs.
-*   **Routine:** MCP server to interact with Routine.
-*   **SafeDep:** SafeDep `vet-mcp` helps in vetting open source packages for security risks.
-*   **SafeLine:** SafeLine is a self-hosted WAF to protect your web apps from attacks and exploits.
-*   **ScrAPI:** Web scraping.
-*   **ScreenshotOne:** Render website screenshots.
-*   **Search1API:** One API for Search, Crawling, and Sitemaps.
-*   **Semgrep:** Enable AI agents to secure code.
-*   **Shortcut:** Access and implement all of your projects and tasks.
-*   **SingleStore:** Interact with the SingleStore database platform.
-*   **Smooth Operator:** Tools to automate Windows.
-*   **Snyk:** Enhance security posture.
-*   **SonarQube:** Enables seamless integration with SonarQube.
-*   **Sophtron:** Connect to your bank, credit card, utilities accounts.
-*   **StarRocks:** Interact with StarRocks.
-*   **Steadybit:** Interact with Steadybit.
-*   **Stripe:** Interact with Stripe API.
-*   **Supabase:** Interact with Supabase.
-*   **Tako:** Use natural language to search.
-*   **Tavily:** Search engine for AI agents.
-*   **Teradata:** This MCP Server support tools and prompts for multi task data analytics on a Teradata platform.
-*   **Terraform:** Seamlessly integrate with Terraform ecosystem.
-*   **TextIn:** Text extraction and OCR on documents.
-*   **Thena:** Enables users and AI agents to interact with Thena's services.
-*   **Thirdweb:** Read/write to over 2k blockchains.
-*   **ThoughtSpot:** AI is the new BI.
-*   **Tianji:** Interact with Tianji platform.
-*   **TiDB:** Interact with TiDB database platform.
-*   **Tinybird:** Interact with Tinybird serverless ClickHouse platform.
-*   **Tldv:** Connect your AI agents to Google-Meet, Zoom & Microsoft Teams through tl;dv
-*   **Token Metrics:** Cryptocurrency market data.
-*   **Trade Agent:** Execute stock and crypto trades.
-*   **Twilio:** Interact with Twilio APIs.
-*   **UnifAI:** Dynamically search and call tools.
-*   **Unstructured:** Set up and interact with your unstructured data processing workflows.
-*   **Upstash:** Manage Redis databases and run Redis commands.
-*   **Vantage:** Interact with your organization's cloud cost spend.
-*   **VariFlight:** Query flight information.
-*   **VCAgents:** Interact with investor agents.
-*   **Vectorize:** Advanced retrieval, Private Deep Research, Anything-to-Markdown file extraction and text chunking.
-*   **Verbwire:** Deploy smart contracts, mint NFTs, manage IPFS storage, and more.
-*   **Verodat:** Interact with Verodat AI Ready Data platform.
-*   **VeyraX:** Single tool to control all 100+ API integrations, and UI components.
-*   **VictoriaMetrics:** Comprehensive integration with VictoriaMetrics APIs.
-*   **VideoDB Director:** Create AI-powered video workflows.
-*   **VisionAgent MCP:** A simple MCP server that enables your LLM to better reason over images, video and documents.
-*   **Vizro:** Create validated and maintainable data charts and dashboards.
-*   **WaveSpeed:** WaveSpeed MCP server providing AI agents with image and video generation capabilities.
-*   **WayStation:** Universal MCP server.
-*   **Webflow:** Interact with Webflow sites, pages, and collections.
-*   **WebScraping.AI:** Interact with WebScraping.AI.
-*   **Xero:** Interact with the accounting data in your business.
-*   **YDB:** Query YDB databases.
-*   **YepCode:** Run code in a secure, scalable sandbox environment.
-*   **YugabyteDB:** Interact with your YugabyteDB database.
-*   **Yunxin:** Connects to Yunxin's IM/RTC/DATA Open-API.
-*   **Zapier:** Connect your AI Agents to 8,000 apps instantly.
-*   **ZenML:** Interact with your MLOps and LLMOps pipelines.
-*   **ZIZAI Recruitment:** Interact with the next-generation intelligent recruitment platform.
+Extend the capabilities of your AI with these official integrations from leading platforms:
 
-### 🌎 Community Servers
-
-*   A growing list of community-developed servers is also available. *Note: Use these at your own risk; they are not officially endorsed.*
-
-## 🚀 Getting Started
-
-### Using MCP Servers from this Repository
-
-*   Use `npx` to start Typescript-based servers: `npx -y @modelcontextprotocol/server-memory`
-*   Use `uvx` or `pip` for Python-based servers:  `uvx mcp-server-git` or `pip install mcp-server-git; python -m mcp_server_git`
-
-### Using an MCP Client
-
-Configure your LLM client (e.g., Claude Desktop) to utilize these servers. Example Configuration:
-
-```json
-{
-  "mcpServers": {
-    "memory": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"]
-    }
-  }
-}
-```
-
-## 🛠️ Contributing and Documentation
-
-*   Create your own MCP servers by visiting [modelcontextprotocol.io](https://modelcontextprotocol.io/introduction).
-*   Contribute to this repository by following the guidelines in [CONTRIBUTING.md](CONTRIBUTING.md).
-*   Report security vulnerabilities in [SECURITY.md](SECURITY.md).
-
-## Community and Support
-
-*   [GitHub Discussions](https://github.com/orgs/modelcontextprotocol/discussions)
-*   Star the repository to show your support!
-
----
-
-*This project is managed by Anthropic in collaboration with the community.  The Model Context Protocol is open source.  We welcome your contributions!*
+*   <img height="12" width="12" src="https://www.21st.dev/favicon.ico" alt="21st.dev Logo" /> **[21st.dev Magic](https://github.com/21st-dev/magic-mcp)** - Create crafted UI components inspired by the best 21st.dev design engineers.
+*   <img height="12" width="12" src="https://framerusercontent.com/images/LpSK1tSZweomrAHOMAj9Gea96lA.svg" alt="Paragon Logo" /> **[ActionKit by Paragon](https://github.com/useparagon/paragon-mcp)** - Connect to 130+ SaaS integrations (e.g. Slack, Salesforce, Gmail) with Paragon’s [ActionKit](https://www.useparagon.com/actionkit) API.
+*   <img height="12" width="12" src="https://invoxx-public-bucket.s3.eu-central-1.amazonaws.com/frontend-resources/adfin-logo-small.svg" alt="Adfin Logo" /> **[Adfin](https://github.com/Adfin-Engineering/mcp-server-adfin)** - The only platform you need to get paid - all payments in one place, invoicing and accounting reconciliations with [Adfin](https://www.adfin.com/).
+*   <img height="12" width="12" src="https://www.agentql.com/favicon/favicon.png" alt="AgentQL Logo" /> **[AgentQL](https://github.com/tinyfish-io/agentql-mcp)** - Enable AI agents to get structured data from unstructured web with [AgentQL](https://www.agentql.com/).
+*   <img height="12" width="12" src="https://agentrpc.com/favicon.ico" alt="AgentRPC Logo" /> **[AgentRPC](https://github.com/agentrpc/agentrpc)** - Connect to any function, any language, across network boundaries using [AgentRPC](https://www.agentrpc.com/).
+*   **[Agentset](https://github.com/agentset-ai/mcp-server)** - RAG for your knowledge base connected to [Agentset](https://agentset.ai).
+*   <img height="12" width="12" src="https://aiven.io/favicon.ico" alt="Aiven Logo" /> **[Aiven](https://github.com/Aiven-Open/mcp-aiven)** - Navigate your [Aiven projects](https://go.aiven.io/mcp-server) and interact with the PostgreSQL®, Apache Kafka®, ClickHouse® and OpenSearch® services
+*   <img height="12" width="12" src="https://www.alation.com/resource-center/download/7p3vnbbznfiw/34FMtBTex5ppvs2hNYa9Fc/c877c37e88e5339878658697c46d2d58/Alation-Logo-Bug-Primary.svg" alt="Alation Logo" /> **[Alation](https://github.com/Alation/alation-ai-agent-sdk)** - Unlock the power of the enterprise Data Catalog by harnessing tools provided by the Alation MCP server.
+*   <img height="12" width="12" src="https://i.postimg.cc/5NYw9qjS/alby-icon-head-yellow-500x500.png" alt="Alby Logo" /> **[Alby Bitcoin Payments](https://github.com/getAlby/mcp)** - Connect any bitcoin lightning wallet to your agent to send and receive instant payments globally with your agent.
+*   **[Algolia](https://github.com/algolia/mcp)** - Use AI agents to provision, configure, and query your [Algolia](https://algolia.com) search indices.
+*   <img height="12" width="12" src="https://img.alicdn.com/imgextra/i4/O1CN01epkXwH1WLAXkZfV6N_!!6000000002771-2-tps-200-200.png" alt="Alibaba Cloud AnalyticDB for MySQL Logo" /> **[Alibaba Cloud AnalyticDB for MySQL](https://github.com/aliyun/alibabacloud-adb-mysql-mcp-server)** - Connect to a [AnalyticDB for MySQL](https://www.alibabacloud.com/en/product/analyticdb-for-mysql) cluster for getting database or table metadata, querying and analyzing data.It will be supported to add the openapi for cluster operation in the future.
+*   <img height="12" width="12" src="https://github.com/aliyun/alibabacloud-adbpg-mcp-server/blob/master/images/AnalyticDB.png" alt="Alibaba Cloud AnalyticDB for PostgreSQL Logo" /> **[Alibaba Cloud AnalyticDB for PostgreSQL](https://github.com/aliyun/alibabacloud-adbpg-mcp-server)** - An MCP server to connect to [AnalyticDB for PostgreSQL](https://github.com/aliyun/alibabacloud-adbpg-mcp-server) instances, query and analyze data.
+*   <img height="12" width="12" src="https://img.alicdn.com/imgextra/i3/O1CN0101UWWF1UYn3rAe3HU_!!6000000002530-2-tps-32-32.png" alt="DataWorks Logo" /> **[Alibaba Cloud DataWorks](https://github.com/aliyun/alibabacloud-dataworks-mcp-server)** - A Model Context Protocol (MCP) server that provides tools for AI, allowing it to interact with the [DataWorks](https://www.alibabacloud.com/help/en/dataworks/) Open API through a standardized interface. This implementation is based on the Alibaba Cloud Open API and enables AI agents to perform cloud resources operations seamlessly.
+*   <img height="12" width="12" src="https://opensearch-shanghai.oss-cn-shanghai.aliyuncs.com/ouhuang/aliyun-icon.png" alt="Alibaba Cloud OpenSearch Logo" /> **[Alibaba Cloud OpenSearch](https://github.com/aliyun/alibabacloud-opensearch-mcp-server)** - This MCP server equips AI Agents with tools to interact with [OpenSearch](https://help.aliyun.com/zh/open-search/?spm=5176.7946605.J_5253785160.6.28098651AaYZXC) through a standardized and extensible interface.
+*   <img height="12" width="12" src="https://github.com/aliyun/alibaba-cloud-ops-mcp-server/blob/master/image/alibaba-cloud.png" alt="Alibaba Cloud OPS Logo" /> **[Alibaba Cloud OPS](https://github.com/aliyun/alibaba-cloud-ops-mcp-server)** - Manage the lifecycle of your Alibaba Cloud resources with [CloudOps Orchestration Service](https://www.alibabacloud.com/en/product/oos) and Alibaba Cloud OpenAPI.
+*   <img height="12" width="12" src="https://github.com/aliyun/alibabacloud-rds-openapi-mcp-server/blob/main/assets/alibabacloudrds.png" alt="Alibaba Cloud RDS MySQL Logo" /> **[Alibaba Cloud RDS](https://github.com/aliyun/alibabacloud-rds-openapi-mcp-server)** - An MCP server designed to interact with the Alibaba Cloud RDS OpenAPI, enabling programmatic management of RDS resources via an LLM.
+*   <img height="12" width="12" src="https://cdn.allvoicelab.com/resources/workbench/dist/icon-dark.ico" alt="AllVoiceLab Logo" /> **[AllVoiceLab](https://www.allvoicelab.com/mcp)** - An AI voice toolkit with TTS, voice cloning, and video translation, now available as an MCP server for smarter agent integration.
+*   <img height="12" width="12" src="https://files.alpaca.markets/webassets/favicon-32x32.png" alt="Alpaca Logo" /> **[Alpaca](https://github.com/alpacahq/alpaca-mcp-server)** – Alpaca's MCP server lets you trade stocks and options, analyze market data, and build strategies through [Alpaca's Trading API](https://alpaca.markets/)
+*   <img height="12" width="12" src="https://www.alphavantage.co/logo.png/" alt="AlphaVantage Logo" /> **[AlphaVantage](https://github.com/calvernaz/alphavantage)** - Connect to 100+ APIs for financial market data, including stock prices, fundamentals, and more from [AlphaVantage](https://www.alphavantage.co)
+*   <img height="12" width="12" src="https://doris.apache.org/images/favicon.ico" alt="Apache Doris Logo" /> **[Apache Doris](https://github.com/apache/doris-mcp-server)** - MCP Server For [Apache Doris](https://doris.apache.org/), an MPP-based real-time data warehouse.
+*   <img height="12" width="12" src="https://iotdb.apache.org/img/logo.svg" alt="Apache IoTDB Logo" /> **[Apache IoTDB](https://github.com/apache/iotdb-mcp-server)** - MCP Server for [Apache IoTDB](https://github.com/apache/iotdb) database and its tools
+*   <img height="12" width="12" src="https://apify.com/favicon.ico" alt="Apify Logo" /> **[Apify](https://github.com/apify/actors-mcp-server)** - [Actors MCP Server](https://apify.com/apify/actors-mcp-server): Use 3,000+ pre-built cloud tools to extract data from websites, e-commerce, social media, search engines, maps, and more
+*   <img height="12" width="12" src="https://2052727.fs1.hubspotusercontent-na1.net/hubfs/2052727/cropped-cropped-apimaticio-favicon-1-32x32.png" alt="APIMatic Logo" /> **[APIMatic MCP](https://github.com/apimatic/apimatic-validator-mcp)** - APIMatic MCP Server is used to validate OpenAPI specifications using [APIMatic](https://www.apimatic.io/). The server processes OpenAPI files and returns validation summaries by leveraging APIMatic's API.
+*   <img height="12" width="12" src="https://apollo-server-landing-page.cdn.apollographql.com/_latest/assets/favicon.png" alt="Apollo Graph Logo" /> **[Apollo MCP Server](https://github.com/apollographql/apollo-mcp-server/)** - Connect your GraphQL APIs to AI agents
+*   <img height="12" width="12" src="https://developer.aqara.com/favicon.ico" alt="Aqara Logo" /> **[Aqara MCP Server](https://github.com/aqara/aqara-mcp-server/)** - Control  [Aqara](https://www.aqara.com/) smart home devices, query status, execute scenes, and much more using natural language.
+*   <img height="12" width="12" src="https://media.licdn.com/dms/image/v2/C4D0BAQEeD7Dxbpadkw/company-logo_200_200/company-logo_200_200/0/1644692667545/archbee_logo?e=2147483647&v=beta&t=lTi9GRIoqzG6jN3kJC26uZWh0q3uiQelsH6mGoq_Wfw" alt="Archbee Logo" /> **[Archbee](https://www.npmjs.com/package/@archbee/mcp)** - Write and publish documentation that becomes the trusted source for instant answers with AI. Stop cobbling tools and use [Archbee](https://www.archbee.com/) — the first complete documentation platform.
+*   <img height="12" width="12" src="https://phoenix.arize.com/wp-content/uploads/2023/04/cropped-Favicon-32x32.png" alt="Arize-Phoenix Logo" /> **[Arize Phoenix](https://github.com/Arize-ai/phoenix/tree/main/js/packages/phoenix-mcp)** - Inspect traces, manage prompts, curate datasets, and run experiments using [Arize Phoenix](https://github.com/Arize-ai/phoenix), an open-source AI and LLM observability tool.
+*   <img height="12" width="12" src="https://731523176-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FaVUBXRZbpAgtjYf5HsvO%2Fuploads%2FaRRrVVocXCTr6GkepfCx%2Flogo_color.svg?alt=media&token=3ba24089-0ab2-421f-a9d9-41f2f94f954a" alt="Armor Logo" /> **[Armor Crypto MCP](https://github.com/armorwallet/armor-crypto-mcp)** - MCP to interface with multiple blockchains, staking, DeFi, swap, bridging, wallet management, DCA, Limit Orders, Coin Lookup, Tracking and more.
+*   <img height="12" width="12" src="https://console.asgardeo.io/app/libs/themes/wso2is/assets/images/branding/favicon.ico" alt="Asgardeo Logo" /> **[Asgardeo](https://github.com/asgardeo/asgardeo-mcp-server)** - MCP server to interact with your [Asgardeo](https://wso2.com/asgardeo) organization through LLM tools.
+*   <img height="12" width="12" src="https://www.datastax.com/favicon-32x32.png" alt="DataStax logo" /> **[Astra DB](https://github.com/datastax/astra-db-mcp)** - Comprehensive tools for managing collections and documents in a [DataStax Astra DB](https://www.datastax.com/products/datastax-astra) NoSQL database with a full range of operations such as create, update, delete, find, and associated bulk actions.
+*   <img height="12" width="12" src="https://cdn.prod.website-files.com/66598898fd13d51606c3215d/66ccbfef13bd8bc19d587578_favicon-32x32.png" alt="Atla Logo" /> **[Atla](https://github.com/atla-ai/atla-mcp-server)** - Enable AI agents to interact with the [Atla API](https://docs.atla-ai.com/) for state-of-the-art LLMJ evaluation.
+*   <img height="12" width="12" src="https://assets.atlan.com/assets/atlan-a-logo-blue-background.png" alt="Atlan Logo" /> **[Atlan](https://github.com/atlanhq/agent-toolkit/tree/main/modelcontextprotocol)** - The Atlan Model Context Protocol server allows you to interact with the [Atlan](https://www.atlan.com/) services through multiple tools.
+*   <img height="12" width="12" src="https://www.atlassian.com/favicon.ico" alt="Atlassian Logo" /> **[Atlassian](https://www.atlassian.com/platform/remote-mcp-server)** - Securely interact with Jira work items and Confluence pages, and search across both.
+*   <img height="12" width="12" src="https://res.oafimg.cn/-/737b3b3ffed9b19e/logo.png" alt="AtomGit Logo" /> **[AtomGit](https://atomgit.com/atomgit-open-source-ecosystem/atomgit-mcp-server)** - Official AtomGit server for integration with repository management, PRs, issues, branches, labels, and more.
+*   <img height="12" width="12" src="https://resources.audiense.com/hubfs/favicon-1.png" alt="Audiense Logo" /> **[Audiense Insights](https://github.com/AudienseCo/mcp-audiense-insights)** - Marketing insights and audience analysis from [Audiense](https://www.audiense.com/products/audiense-insights) reports, covering demographic, cultural, influencer, and content engagement analysis.
+*   <img height="12" width="12" src="https://cdn.auth0.com/website/website/favicons/auth0-favicon.svg" alt="Auth0 Logo" /> **[Auth0](https://github.com/auth0/auth0-mcp-server)** - MCP server for interacting with your Auth0 tenant, supporting creating and modifying actions, applications, forms, logs, resource servers, and more.
+*   <img height="12" width="12" src="https://firstorder.ai/favicon_auth.ico" alt="Authenticator App Logo" /> **[Authenticator App · 2FA](https://github.com/firstorderai/authenticator_mcp)** - A secure MCP (Model Context Protocol) server that enables AI agents to interact with the Authenticator App.
+*   <img height="12" width="12" src="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" alt="AWS Logo" /> **[AWS](https://github.com/awslabs/mcp)** -  Specialized MCP servers that bring AWS best practices directly to your development workflow.
+*   <img height="12" width="12" src="https://axiom.co/favicon.ico" alt="Axiom Logo" /> **[Axiom](https://github.com/axiomhq/mcp-server-axiom)** - Query and analyze your Axiom logs, traces, and all other event data in natural language
+*   <img height="12" width="12" src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/acom_social_icon_azure" alt="Microsoft Azure Logo" /> **[Azure](https://github.com/Azure/azure-mcp)** - The Azure MCP Server gives MCP Clients access to key Azure services and tools like Azure Storage, Cosmos DB, the Azure CLI, and more.
+*   <img height="12" width="12" src="https://mapopen-website-wiki.cdn.bcebos.com/LOGO/lbsyunlogo_icon.ico" alt="Baidu Map Logo" /> **[Baidu Map](https://github.com/baidu-maps/mcp)** - [Baidu Map MCP Server](https://lbsyun.baidu.com/faq/api?title=mcpserver/base) provides tools for AI agents to interact with Baidu Maps APIs, enabling location-based services and geospatial data analysis.
+*   <img height="12" width="12" src="https://www.bankless.com/favicon.ico" alt="Bankless Logo" /> **[Bankless Onchain](https://github.com/bankless/onchain-mcp)** - Query Onchain data, like ERC20 tokens, transaction history, smart contract state.
+*   <img height="12" width="12" src="https://bicscan.io/favicon.png" alt="BICScan Logo" /> **[BICScan](https://github.com/ahnlabio/bicscan-mcp)** - Risk score / asset holdings of EVM blockchain address (EOA, CA, ENS) and even domain names.
+*   <img height="12" width="12" src="https://web-cdn.bitrise.io/favicon.ico" alt="Bitrise Logo" /> **[Bitrise](https://github.com/bitrise-io/bitrise-mcp)** - Chat with your builds, CI, and [more](https://bitrise.io/blog/post/chat-with-your-builds-ci-and-more-introducing-the-bitrise-mcp-server).
+*   <img height="12" width="12" src="https://boldsign.com/favicon.ico" alt="BoldSign Logo" /> **[BoldSign](https://github.com/boldsign/boldsign-mcp)** - Search, request, and manage e-signature contracts effortlessly with [BoldSign](https://boldsign.com/).
+*   <img height="12" width="12" src="https://boost.space/favicon.ico" alt="Boost.space Logo" /> **[Boost.space](https://github.com/boostspace/boostspace-mcp-server)** - An MCP server integrating with [Boost.space](https://boost.space) for centralized, automated business data from 2000+ sources.
+*   <img height="12" width="12" src="https://www.box.com/favicon.ico" alt="Box Logo" /> **[Box](https://github.com/box-community/mcp-server-box)** - Interact with the Intelligent Content Management platform through Box AI.
+*   <img height="12" width="12" src="https://www.brightdata.com/favicon.ico" alt="BrightData Logo" /> **[BrightData](https://github.com/luminati-io/brightdata-mcp)** - Discover, extract, and interact with the web - one interface powering automated access across the public internet.
+*   <img height="12" width="12" src="https://browserbase.com/favicon.ico" alt="Browserbase Logo" /> **[Browserbase](https://github.com/browserbase/mcp-server-browserbase)** - Automate browser interactions in the cloud (e.g. web navigation, data extraction, form filling, and more)
+*   <img height="12" width="12" src="https://browserstack.wpenginepowered.com/wp-content/themes/browserstack/img/favicons/favicon.ico" alt="BrowserStack Logo" /> **[BrowserStack](https://github.com/browserstack/mcp-server)** - Access BrowserStack's [Test Platform](https://www.browserstack.com/test-platform) to debug, write and fix tests, do accessibility testing and more.
+*   <img height="12" width="12" src="https://cdn.prod.website-files.com/65c0b8763c04cd15daa89b20/671f9d1301ac85495013761d_Favicon-White.png" alt="Bucket" /> **[Bucket](https://github.com/bucketco/bucket-javascript-sdk/tree/main/packages/cli#model-context-protocol)** - Flag features, manage company data, and control feature access using [Bucket](https://bucket.co)
+*   <img height="12" width="12" src="https://builtwith.com/favicon.ico" alt="BuiltWith Logo" /> **[BuiltWith](https://github.com/builtwith/mcp)** - Identify the technology stack behind any website.
+*   <img height="12" width="12" src="https://portswigger.net/favicon.ico" alt="PortSwigger Logo" /> **[Burp Suite](https://github.com/PortSwigger/mcp-server)** - MCP Server extension allowing AI clients to connect to [Burp Suite](https://portswigger.net)
+*   <img height="12" width="12" src="https://campertunity.com/assets/icon/favicon.ico" alt="Campertunity Logo" /> **[Campertunity](https://github.com/campertunity/mcp-server)** - Search campgrounds around the world on campertunity, check availability, and provide booking links.
+*   <img height="12" width="12" src="https://play.cartesia.ai/icon.png" alt="Cartesia logo" /> **[Cartesia](https://github.com/cartesia-ai/cartesia-mcp)** - Connect to the [Cartesia](https://cartesia.ai/) voice platform to perform text-to-speech, voice cloning etc.
+*   <img height="12" width="12" src="https://www.cashfree.com/favicon.ico" alt="Cashfree logo" /> **[Cashfree](https://github.com/cashfree/cashfree-mcp)** - [Cashfree Payments](https://www.cashfree.com/) official MCP server.
+*   **[CB Insights](https://github.com/cbinsights/cbi-mcp-server)** - Use the [CB Insights](https://www.cbinsights.com) MCP Server to connect to [ChatCBI](https://www.cbinsights.com/chatcbi/)
+*   <img height="12" width="12" src="https://www.chargebee.com/static/resources/brand/favicon.png" alt="Chargebee Logo" /> **[Chargebee](https://github.com/chargebee/agentkit/tree/main/modelcontextprotocol)** - MCP Server that connects AI agents to [Chargebee platform](https://www.chargebee.com).
+*   <img height="12" width="12" src="https://cheqd.io/wp-content/uploads/2023/03/logo_cheqd_favicon.png" alt="Cheqd Logo" /> **[Cheqd](https://github.com/cheqd/mcp-toolkit)** - Enable AI Agents to be trusted, verified, prevent fraud, protect your reputation, and more through [cheqd's](https://cheqd.io) Trust Registries and Credentials.
+*   <img height="12" width="12" src="https://cdn.chiki.studio/brand/logo.png" alt="Chiki StudIO Logo" /> **[Chiki StudIO](https://chiki.studio/galimybes/mcp/)** - Create your own configurable MCP servers purely via configuration (no code), with instructions, prompts, and tools support.
+*   <img height="12" width="12" src="https://trychroma.com/_next/static/media/chroma-logo.ae2d6e4b.svg" alt="Chroma Logo" /> **[Chroma](https://github.com/chroma-core/chroma-mcp)** - Embeddings, vector search, document storage, and full-text search with the open-source AI application database
+*   <img height="12" width="12" src="https://www.chronulus.com/favicon/chronulus-logo-blue-on-alpha-square-128x128.ico" alt="Chronulus AI Logo" /> **[Chronulus AI](https://github.com/ChronulusAI/chronulus-mcp)** - Predict anything with Chronulus AI forecasting and prediction agents.
+*   <img height="12" width="12" src="https://circleci.com/favicon.ico" alt="CircleCI Logo" /> **[CircleCI](https://github.com/CircleCI-Public/mcp-server-circleci)** - Enable AI Agents to fix build failures from CircleCI.
+*   <img height="12" width="12" src="https://clickhouse.com/favicon.ico" alt="ClickHouse Logo" /> **[ClickHouse](https://github.com/ClickHouse/mcp-clickhouse)** - Query your [ClickHouse](https://clickhouse.com/) database server.
+*   <img src="http://www.google.com/s2/favicons?domain=www.cloudera.com" alt="Cloudera Iceberg" width="12" height="12"> **[Cloudera Iceberg](https://github.com/cloudera/iceberg-mcp-server)** - enabling AI on the [Open Data Lakehouse](https://www.cloudera.com/products/open-data-lakehouse.html).
+*   <img height="12" width="12" src="https://cdn.simpleicons.org/cloudflare" /> **[Cloudflare](https://github.com/cloudflare/mcp-server-cloudflare)** - Deploy, configure & interrogate your resources on the Cloudflare developer platform (e.g. Workers/KV/R2/D1)
+*   <img src="https://cdn.prod.website-files.com/64d41aab8183c7c3324ddb29/67c0f1e272e51cf3c511c17c_Gyph.svg" alt="Cloudinary" width="12" height="12"> **[Cloudinary](https://github.com/cloudinary/mcp-servers)** - Exposes Cloudinary's media upload, transformation, AI analysis, management, optimization and delivery as tools usable by AI agents
+*   <img height="12" width="12" src="https://app.codacy.com/static/images/favicon-16x16.png" alt="Codacy Logo" /> **[Codacy](https://github.com/codacy/codacy-mcp-server/)** - Interact with [Codacy](https://www.codacy.com) API to query code quality issues, vulnerabilities, and coverage insights about your code.
+*   <img height="12" width="12" src="https://codelogic.com/wp-content/themes/codelogic/assets/img/favicon.png" alt="CodeLogic Logo" /> **[CodeLogic](https://github.com/CodeLogicIncEngineering/codelogic-mcp-server)** - Interact with [CodeLogic](https://codelogic.com), a Software Intelligence platform that graphs complex code and data architecture dependencies, to boost AI accuracy and insight.
+*   <img height="12" width="12" src="https://www.coingecko.com/favicon.ico" alt="CoinGecko Logo" /> **[CoinGecko](https://github.com/coingecko/coingecko-typescript/tree/main/packages/mcp-server)** - Official [CoinGecko API](https://www.coingecko.com/en/api) MCP Server for Crypto Price & Market Data, across 200+ Blockchain Networks and 8M+ Tokens.
+*   <img height="12" width="12" src="https://www.comet.com/favicon.ico" alt="Comet Logo" /> **[Comet Opik](https://github.com/comet-ml/opik-mcp)** - Query and analyze your [Opik](https://github.com/comet-ml/opik) logs, traces, prompts and all other telemetry data from your LLMs in natural language.
+*   <img height="12" width="12" src="https://cdn.prod.website-files.com/6572bd8c27ee5db3eb91f4b3/6572bd8d27ee5db3eb91f55e_favicon-dashflow-webflow-template.svg" alt="OSS Conductor Logo" /> <img height="12" width="12" src="https://orkes.io/icons/icon-48x48.png" alt="Orkes Conductor Logo" />**[Conductor](https://github.com/conductor-oss/conductor-mcp)** - Interact with Conductor (OSS and Orkes) REST APIs.
+*   <img height="12" width="12" src="https://www.confluent.io/favicon.ico" alt="Confluent Logo" /> **[Confluent](https://github.com/confluentinc/mcp-confluent)** - Interact with Confluent Kafka and Confluent Cloud REST APIs.
+*   <img src="https://contrastsecurity.com/favicon.ico" alt="Contrast Security

@@ -1,309 +1,181 @@
-![PyTorch Logo](https://github.com/pytorch/pytorch/raw/main/docs/source/_static/img/pytorch-logo-dark.png)
+[![PyTorch Logo](https://github.com/pytorch/pytorch/raw/main/docs/source/_static/img/pytorch-logo-dark.png)](https://github.com/pytorch/pytorch)
 
-# PyTorch: Open Source Deep Learning Framework
+# PyTorch: The Flexible and Fast Deep Learning Framework
 
-**PyTorch is a powerful Python-based deep learning framework that provides flexibility, speed, and ease of use for researchers and developers.** Find the original repository [here](https://github.com/pytorch/pytorch).
+**PyTorch is a powerful, open-source deep learning framework built for research and production, offering flexibility, speed, and a Python-first approach.**
+
+---
 
 **Key Features:**
 
-*   **Tensor Computation with GPU Acceleration:** Leverage the power of GPUs for fast numerical computation, similar to NumPy.
-*   **Dynamic Neural Networks:** Build and modify neural networks on the fly with a tape-based autograd system.
-*   **Python-First Design:** Seamlessly integrates with Python, using familiar libraries like NumPy and SciPy.
-*   **Imperative Programming Style:** Intuitive and easy-to-debug code execution with clear stack traces.
-*   **Fast and Lean:** Optimized for speed and memory efficiency, utilizing libraries like Intel MKL, cuDNN, and NCCL.
-*   **Extensible:** Easy to write custom neural network modules and integrate with existing Python and C/C++ code.
+*   **Tensor Computation with GPU Acceleration:**  Offers powerful tensor operations, similar to NumPy, with seamless GPU integration for significantly faster computation.
+*   **Dynamic Neural Networks with Autograd:**  Builds and trains deep neural networks using a tape-based autograd system, enabling unparalleled flexibility and dynamic behavior.
+*   **Python-First Design:** Deeply integrated with Python, allowing you to leverage your existing Python knowledge, libraries like NumPy, SciPy, and Cython, and the full power of the Python ecosystem.
+*   **Imperative Programming Style:**  Designed to be intuitive and easy to use with an imperative programming style, simplifying debugging and code understanding.
+*   **Fast and Lean:** Highly optimized with minimal framework overhead, integrating with acceleration libraries like Intel MKL, cuDNN, and NCCL for maximum speed and efficiency.
+*   **Effortless Extensions:** Provides a straightforward API for writing new neural network modules and extending PyTorch with custom operations in both Python and C/C++.
 
-## Table of Contents
+---
 
-*   [More About PyTorch](#more-about-pytorch)
-    *   [A GPU-Ready Tensor Library](#a-gpu-ready-tensor-library)
-    *   [Dynamic Neural Networks: Tape-Based Autograd](#dynamic-neural-networks-tape-based-autograd)
-    *   [Python First](#python-first)
-    *   [Imperative Experiences](#imperative-experiences)
-    *   [Fast and Lean](#fast-and-lean)
-    *   [Extensions Without Pain](#extensions-without-pain)
-*   [Installation](#installation)
-    *   [Binaries](#binaries)
-        *   [NVIDIA Jetson Platforms](#nvidia-jetson-platforms)
-    *   [From Source](#from-source)
-        *   [Prerequisites](#prerequisites)
-            *   [NVIDIA CUDA Support](#nvidia-cuda-support)
-            *   [AMD ROCm Support](#amd-rocm-support)
-            *   [Intel GPU Support](#intel-gpu-support)
-        *   [Get the PyTorch Source](#get-the-pytorch-source)
-        *   [Install Dependencies](#install-dependencies)
-        *   [Install PyTorch](#install-pytorch)
-            *   [Adjust Build Options (Optional)](#adjust-build-options-optional)
-    *   [Docker Image](#docker-image)
-        *   [Using pre-built images](#using-pre-built-images)
-        *   [Building the image yourself](#building-the-image-yourself)
-    *   [Building the Documentation](#building-the-documentation)
-        *   [Building a PDF](#building-a-pdf)
-    *   [Previous Versions](#previous-versions)
-*   [Getting Started](#getting-started)
-*   [Resources](#resources)
-*   [Communication](#communication)
-*   [Releases and Contributing](#releases-and-contributing)
-*   [The Team](#the-team)
-*   [License](#license)
+## Core Components
 
-## More About PyTorch
+PyTorch's functionality is built upon several core components:
 
-[Learn the basics of PyTorch](https://pytorch.org/tutorials/beginner/basics/intro.html)
+| Component              | Description                                                                                                |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **torch**              | Tensor library with GPU support, similar to NumPy.                                                        |
+| **torch.autograd**     | Automatic differentiation library for computing gradients of all differentiable Tensor operations in `torch`. |
+| **torch.jit**          | Compilation stack (TorchScript) for creating serializable and optimizable models from PyTorch code.       |
+| **torch.nn**           | Neural networks library deeply integrated with autograd for maximum flexibility.                          |
+| **torch.multiprocessing** | Multiprocessing support with efficient memory sharing for tensors, useful for data loading and training.      |
+| **torch.utils**        | Data loading and other utility functions for ease of use.                                                  |
 
-PyTorch offers a modular structure with the following key components:
+## [More About PyTorch](https://pytorch.org/tutorials/beginner/basics/intro.html)
 
-| Component                  | Description                                                                                              |
-| -------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [**torch**](https://pytorch.org/docs/stable/torch.html)           | Tensor library with NumPy-like functionality and GPU support.                     |
-| [**torch.autograd**](https://pytorch.org/docs/stable/autograd.html)   | Automatic differentiation library for all differentiable Tensor operations in torch. |
-| [**torch.jit**](https://pytorch.org/docs/stable/jit.html)        | Compilation stack (TorchScript) to create serializable and optimizable models.      |
-| [**torch.nn**](https://pytorch.org/docs/stable/nn.html)             | Neural network library integrated with autograd for flexibility.                      |
-| [**torch.multiprocessing**](https://pytorch.org/docs/stable/multiprocessing.html) | Python multiprocessing with magical memory sharing of torch Tensors across processes |
-| [**torch.utils**](https://pytorch.org/docs/stable/data.html)          | DataLoader and other utility functions for convenience.                        |
-
-PyTorch is commonly used for:
-
-*   Replacing NumPy to harness the power of GPUs.
-*   Building a research platform offering maximum flexibility and speed in deep learning.
+PyTorch is a versatile tool that can be used in many different areas:
 
 ### A GPU-Ready Tensor Library
 
-PyTorch provides tensors (similar to NumPy's ndarrays) that can reside on CPUs or GPUs, significantly accelerating computations.  It provides a rich set of tensor operations for all your scientific computing needs, including slicing, indexing, and linear algebra, with a focus on speed.
+PyTorch provides Tensors that can live either on the CPU or the GPU and accelerates the
+computation by a huge amount.
 
-![Tensor illustration](./docs/source/_static/img/tensor_illustration.png)
+We provide a wide variety of tensor routines to accelerate and fit your scientific computation needs
+such as slicing, indexing, mathematical operations, linear algebra, reductions.
+And they are fast!
 
 ### Dynamic Neural Networks: Tape-Based Autograd
 
-PyTorch uses a tape recorder to build neural networks, enabling dynamic behavior. Unlike static graph frameworks, PyTorch's reverse-mode auto-differentiation allows for flexible network design and modifications without performance overhead.
+PyTorch has a unique way of building neural networks: using and replaying a tape recorder.
+
+Most frameworks such as TensorFlow, Theano, Caffe, and CNTK have a static view of the world.
+One has to build a neural network and reuse the same structure again and again.
+Changing the way the network behaves means that one has to start from scratch.
+
+With PyTorch, we use a technique called reverse-mode auto-differentiation, which allows you to
+change the way your network behaves arbitrarily with zero lag or overhead. Our inspiration comes
+from several research papers on this topic, as well as current and past work such as
+[torch-autograd](https://github.com/twitter/torch-autograd),
+[autograd](https://github.com/HIPS/autograd),
+[Chainer](https://chainer.org), etc.
+
+While this technique is not unique to PyTorch, it's one of the fastest implementations of it to date.
+You get the best of speed and flexibility for your crazy research.
 
 ![Dynamic graph](https://github.com/pytorch/pytorch/raw/main/docs/source/_static/img/dynamic_graph.gif)
 
 ### Python First
 
-PyTorch is deeply integrated with Python, allowing you to leverage familiar tools like NumPy, SciPy, and scikit-learn. It's designed to feel natural for Python users.
+PyTorch is not a Python binding into a monolithic C++ framework.
+It is built to be deeply integrated into Python.
+You can use it naturally like you would use [NumPy](https://www.numpy.org/) / [SciPy](https://www.scipy.org/) / [scikit-learn](https://scikit-learn.org) etc.
+You can write your new neural network layers in Python itself, using your favorite libraries
+and use packages such as [Cython](https://cython.org/) and [Numba](http://numba.pydata.org/).
+Our goal is to not reinvent the wheel where appropriate.
 
 ### Imperative Experiences
 
-PyTorch offers an intuitive, imperative programming style, where code executes line by line. This makes debugging straightforward, with clear error messages and stack traces.
+PyTorch is designed to be intuitive, linear in thought, and easy to use.
+When you execute a line of code, it gets executed. There isn't an asynchronous view of the world.
+When you drop into a debugger or receive error messages and stack traces, understanding them is straightforward.
+The stack trace points to exactly where your code was defined.
+We hope you never spend hours debugging your code because of bad stack traces or asynchronous and opaque execution engines.
 
 ### Fast and Lean
 
-PyTorch minimizes framework overhead and integrates acceleration libraries like Intel MKL, cuDNN, and NCCL.  Its mature CPU and GPU backends provide high performance for both small and large networks, and it uses custom GPU memory allocators for maximum efficiency.
+PyTorch has minimal framework overhead. We integrate acceleration libraries
+such as [Intel MKL](https://software.intel.com/mkl) and NVIDIA ([cuDNN](https://developer.nvidia.com/cudnn), [NCCL](https://developer.nvidia.com/nccl)) to maximize speed.
+At the core, its CPU and GPU Tensor and neural network backends
+are mature and have been tested for years.
+
+Hence, PyTorch is quite fast — whether you run small or large neural networks.
+
+The memory usage in PyTorch is extremely efficient compared to Torch or some of the alternatives.
+We've written custom memory allocators for the GPU to make sure that
+your deep learning models are maximally memory efficient.
+This enables you to train bigger deep learning models than before.
 
 ### Extensions Without Pain
 
-PyTorch allows easy creation of new neural network modules and interaction with its Tensor API.  You can create new layers using the `torch` API or NumPy-based libraries or utilize an extension API for C/C++ layers with minimal boilerplate.
+Writing new neural network modules, or interfacing with PyTorch's Tensor API was designed to be straightforward
+and with minimal abstractions.
+
+You can write new neural network layers in Python using the torch API
+[or your favorite NumPy-based libraries such as SciPy](https://pytorch.org/tutorials/advanced/numpy_extensions_tutorial.html).
+
+If you want to write your layers in C/C++, we provide a convenient extension API that is efficient and with minimal boilerplate.
+No wrapper code needs to be written. You can see [a tutorial here](https://pytorch.org/tutorials/advanced/cpp_extension.html) and [an example here](https://github.com/pytorch/extension-cpp).
 
 ## Installation
 
+Detailed installation instructions are available on the official PyTorch website:  [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
+
 ### Binaries
 
-Install binaries easily via Conda or pip wheels: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
+Install pre-built binaries via Conda or pip wheels.
 
 #### NVIDIA Jetson Platforms
 
-Pre-built wheels are available for NVIDIA Jetson Nano, TX1/TX2, Xavier NX/AGX, and AGX Orin platforms: [here](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048) and the L4T container is published [here](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/l4t-pytorch). Requires JetPack 4.2+.
+Pre-built wheels are available for NVIDIA Jetson platforms.
 
 ### From Source
 
 #### Prerequisites
 
 *   Python 3.9 or later
-*   C++17 compatible compiler (gcc 9.4.0+ on Linux)
+*   C++17 compiler (e.g., clang, gcc 9.4.0+)
 *   Visual Studio or Visual Studio Build Tool (Windows)
 
-\* PyTorch CI uses Visual C++ BuildTools. You can install the build tools from
-https://visualstudio.microsoft.com/visual-cpp-build-tools/.
+*   **CUDA Support:**  Install NVIDIA CUDA, cuDNN (v8.5+), and a compatible compiler.  See the [CUDA support matrix](https://pytorch.org/get-started/locally/) for supported versions.
+*   **ROCm Support:** Install AMD ROCm (4.0+) for AMD GPU support on Linux.
+*   **Intel GPU Support:**  Follow the [Intel GPU prerequisites](https://www.intel.com/content/www/us/en/developer/articles/tool/pytorch-prerequisites-for-intel-gpus.html).
 
-**Example Environment Setup:**
+#### Steps
 
-*   **Linux:**
+1.  **Get the PyTorch Source:**
 
-```bash
-$ source <CONDA_INSTALL_DIR>/bin/activate
-$ conda create -y -n <CONDA_NAME>
-$ conda activate <CONDA_NAME>
-```
+    ```bash
+    git clone https://github.com/pytorch/pytorch
+    cd pytorch
+    git submodule sync
+    git submodule update --init --recursive
+    ```
 
-*   **Windows:**
+2.  **Install Dependencies:**
 
-```bash
-$ source <CONDA_INSTALL_DIR>\Scripts\activate.bat
-$ conda create -y -n <CONDA_NAME>
-$ conda activate <CONDA_NAME>
-$ call "C:\Program Files\Microsoft Visual Studio\<VERSION>\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
-```
+    ```bash
+    conda install cmake ninja  # Or pip install for other environments
+    pip install -r requirements.txt
+    ```
 
-A conda environment is not required. You can also do a PyTorch build in a standard virtual environment.
+    *   **Linux:**  `pip install mkl-static mkl-include`;  CUDA-specific:  install magma.  Intel GPU-specific:  `make triton`
+    *   **macOS:** `pip install mkl-static mkl-include`;  for distributed: `conda install pkg-config libuv`
+    *   **Windows:** `pip install mkl-static mkl-include`; for distributed: `conda install -c conda-forge libuv=1.39`
 
-##### NVIDIA CUDA Support
-
-1.  Select a supported CUDA version from our support matrix: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/).
-2.  Install:
-    *   [NVIDIA CUDA](https://developer.nvidia.com/cuda-downloads)
-    *   [NVIDIA cuDNN](https://developer.nvidia.com/cudnn) v8.5 or above
-    *   [Compiler](https://gist.github.com/ax3l/9489132) compatible with CUDA
-
-Note: Refer to the [cuDNN Support Matrix](https://docs.nvidia.com/deeplearning/cudnn/backend/latest/reference/support-matrix.html) for compatibility details.
-
-To disable CUDA, set `USE_CUDA=0`.
-
-##### AMD ROCm Support
-
-1.  Install:
-    *   [AMD ROCm](https://rocm.docs.amd.com/en/latest/deploy/linux/quick_start.html) 4.0 and above
-    *   ROCm is supported only for Linux systems.
-
-By default, the build system expects ROCm to be installed in `/opt/rocm`. Set `ROCM_PATH` if installed elsewhere. Set `PYTORCH_ROCM_ARCH` to specify the AMD GPU architecture.
-
-To disable ROCm, set `USE_ROCM=0`.
-
-##### Intel GPU Support
-
-1.  Follow [PyTorch Prerequisites for Intel GPUs](https://www.intel.com/content/www/us/en/developer/articles/tool/pytorch-prerequisites-for-intel-gpus.html) instructions.
-2.  Intel GPU is supported for Linux and Windows.
-
-To disable Intel GPU, set `USE_XPU=0`.
-
-#### Get the PyTorch Source
-
-```bash
-git clone https://github.com/pytorch/pytorch
-cd pytorch
-git submodule sync
-git submodule update --init --recursive
-```
-
-#### Install Dependencies
-
-**Common**
-
-```bash
-conda install cmake ninja
-pip install -r requirements.txt
-```
-
-**On Linux**
-
-```bash
-pip install mkl-static mkl-include
-# CUDA only: Add LAPACK support for the GPU if needed
-# magma installation: run with active conda environment. specify CUDA version to install
-.ci/docker/common/install_magma_conda.sh 12.4
-
-# (optional) If using torch.compile with inductor/triton, install the matching version of triton
-# Run from the pytorch directory after cloning
-# For Intel GPU support, please explicitly `export USE_XPU=1` before running command.
-make triton
-```
-
-**On MacOS**
-
-```bash
-# Add this package on intel x86 processor machines only
-pip install mkl-static mkl-include
-# Add these packages if torch.distributed is needed
-conda install pkg-config libuv
-```
-
-**On Windows**
-
-```bash
-pip install mkl-static mkl-include
-# Add these packages if torch.distributed is needed.
-# Distributed package support on Windows is a prototype feature and is subject to changes.
-conda install -c conda-forge libuv=1.39
-```
-
-#### Install PyTorch
-
-**On Linux**
-
-If compiling for AMD ROCm, run:
-
-```bash
-python tools/amd_build/build_amd.py
-```
-
-Install PyTorch:
-
-```bash
-export CMAKE_PREFIX_PATH="${CONDA_PREFIX:-'$(dirname $(which conda))/../'}:${CMAKE_PREFIX_PATH}"
-python -m pip install -r requirements-build.txt
-python -m pip install --no-build-isolation -v -e .
-```
-
-**On macOS**
-
-```bash
-python -m pip install -r requirements-build.txt
-python -m pip install --no-build-isolation -v -e .
-```
-
-**On Windows**
-
-If building legacy python code, refer to [Building on legacy code and CUDA](https://github.com/pytorch/pytorch/blob/main/CONTRIBUTING.md#building-on-legacy-code-and-cuda)
-
-**CPU-only builds**
-
-```cmd
-python -m pip install --no-build-isolation -v -e .
-```
-
-Note on OpenMP: iomp is the desired OpenMP implementation. To link against iomp, you need to manually download the library and set up the building environment by tweaking `CMAKE_INCLUDE_PATH` and `LIB`. Without these configurations for CMake, Microsoft Visual C OpenMP runtime (vcomp) will be used.
-
-**CUDA based build**
-
-[NVTX](https://docs.nvidia.com/gameworks/content/gameworkslibrary/nvtx/nvidia_tools_extension_library_nvtx.htm) is needed to build Pytorch with CUDA.  NVTX is a part of CUDA distributive, where it is called "Nsight Compute".
-Make sure that CUDA with Nsight Compute is installed after Visual Studio.
-
-Additional libraries such as [Magma](https://developer.nvidia.com/magma), [oneDNN, a.k.a. MKLDNN or DNNL](https://github.com/oneapi-src/oneDNN), and [Sccache](https://github.com/mozilla/sccache) are often needed. Refer to the [installation-helper](https://github.com/pytorch/pytorch/tree/main/.ci/pytorch/win-test-helpers/installation-helpers) to install them.
-
-```cmd
-cmd
-:: Set the environment variables after you have downloaded and unzipped the mkl package,
-:: else CMake would throw an error as `Could NOT find OpenMP`.
-set CMAKE_INCLUDE_PATH={Your directory}\mkl\include
-set LIB={Your directory}\mkl\lib;%LIB%
-
-:: Read the content in the previous section carefully before you proceed.
-:: [Optional] If you want to override the underlying toolset used by Ninja and Visual Studio with CUDA, please run the following script block.
-:: "Visual Studio 2019 Developer Command Prompt" will be run automatically.
-:: Make sure you have CMake >= 3.12 before you do this when you use the Visual Studio generator.
-set CMAKE_GENERATOR_TOOLSET_VERSION=14.27
-set DISTUTILS_USE_SDK=1
-for /f "usebackq tokens=*" %i in (`"%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe" -version [15^,17^) -products * -latest -property installationPath`) do call "%i\VC\Auxiliary\Build\vcvarsall.bat" x64 -vcvars_ver=%CMAKE_GENERATOR_TOOLSET_VERSION%
-
-:: [Optional] If you want to override the CUDA host compiler
-set CUDAHOSTCXX=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\cl.exe
-
-python -m pip install --no-build-isolation -v -e .
-```
-
-**Intel GPU builds**
-
-Make sure [the common prerequisites](#prerequisites) and [the prerequisites for Intel GPU](#intel-gpu-support) are installed and the environment variables are configured. For build tool support, `Visual Studio 2022` is required.
-
-```cmd
-:: CMD Commands:
-:: Set the CMAKE_PREFIX_PATH to help find corresponding packages
-:: %CONDA_PREFIX% only works after `conda activate custom_env`
-
-if defined CMAKE_PREFIX_PATH (
-    set "CMAKE_PREFIX_PATH=%CONDA_PREFIX%\Library;%CMAKE_PREFIX_PATH%"
-) else (
-    set "CMAKE_PREFIX_PATH=%CONDA_PREFIX%\Library"
-)
-
-python -m pip install --no-build-isolation -v -e .
-```
+3.  **Install PyTorch:**
+    *   **Linux with ROCm:**  Run  `python tools/amd_build/build_amd.py` before installing.
+    ```bash
+    export CMAKE_PREFIX_PATH="${CONDA_PREFIX:-'$(dirname $(which conda))/../'}:${CMAKE_PREFIX_PATH}"
+    python -m pip install -r requirements-build.txt
+    python -m pip install --no-build-isolation -v -e .
+    ```
+    *   **macOS:**
+    ```bash
+    export CMAKE_PREFIX_PATH="${CONDA_PREFIX:-'$(dirname $(which conda))/../'}:${CMAKE_PREFIX_PATH}"
+    python -m pip install -r requirements-build.txt
+    python -m pip install --no-build-isolation -v -e .
+    ```
+    *   **Windows (CPU-only):**
+    ```cmd
+    python -m pip install --no-build-isolation -v -e .
+    ```
+    *   **Windows (CUDA-based):**
+        *   Configure environment variables for MKL, CUDA, and Ninja (if used).
+        *   Run  `python -m pip install --no-build-isolation -v -e .`
+    *   **Windows (Intel GPU):**
+        *   Set up the necessary environment variables (CMAKE_PREFIX_PATH, etc.).
+        *   Run  `python -m pip install --no-build-isolation -v -e .`
 
 ##### Adjust Build Options (Optional)
-
-Adjust CMake variables with these steps:
-
-**On Linux**
 
 ```bash
 export CMAKE_PREFIX_PATH="${CONDA_PREFIX:-'$(dirname $(which conda))/../'}:${CMAKE_PREFIX_PATH}"
@@ -311,88 +183,46 @@ CMAKE_ONLY=1 python setup.py build
 ccmake build  # or cmake-gui build
 ```
 
-**On macOS**
-
-```bash
-export CMAKE_PREFIX_PATH="${CONDA_PREFIX:-'$(dirname $(which conda))/../'}:${CMAKE_PREFIX_PATH}"
-MACOSX_DEPLOYMENT_TARGET=10.9 CC=clang CXX=clang++ CMAKE_ONLY=1 python setup.py build
-ccmake build  # or cmake-gui build
-```
-
 ### Docker Image
 
 #### Using pre-built images
-
-Pull pre-built images from Docker Hub:
 
 ```bash
 docker run --gpus all --rm -ti --ipc=host pytorch/pytorch:latest
 ```
 
-Increase shared memory with `--ipc=host` or `--shm-size` for multiprocessing.
-
 #### Building the image yourself
-
-**NOTE:** Must be built with a docker version > 18.06
 
 ```bash
 make -f docker.Makefile
-# images are tagged as docker.io/${your_docker_username}/pytorch
 ```
-
-Use `CMAKE_VARS="..."` to pass additional CMake variables. See [setup.py](./setup.py).
 
 ### Building the Documentation
 
-Install dependencies and build HTML documentation:
-
-```bash
-cd docs/
-pip install -r requirements.txt
-make html
-make serve
-```
-
-Run `make` for available output formats.
-
-If you get a katex error run `npm install katex`.  If it persists, try
-`npm install -g katex`
-
-> [!NOTE]
-> If you installed `nodejs` with a different package manager (e.g.,
-> `conda`) then `npm` will probably install a version of `katex` that is not
-> compatible with your version of `nodejs` and doc builds will fail.
-> A combination of versions that is known to work is `node@6.13.1` and
-> `katex@0.13.18`. To install the latter with `npm` you can run
-> ```npm install -g katex@0.13.18```
-
-> [!NOTE]
-> If you see a numpy incompatibility error, run:
-> ```
-> pip install 'numpy<2'
-> ```
-
-When you make changes to the dependencies run by CI, edit the
-`.ci/docker/requirements-docs.txt` file.
+*   Install Sphinx and the pytorch_sphinx_theme2.
+*   Install torch in your environment.
+*   Navigate to the `docs/` directory and run:
+    ```bash
+    pip install -r requirements.txt
+    make html
+    make serve
+    ```
 
 #### Building a PDF
 
-Install `texlive` and LaTeX.
-
-1.  Run: `make latexpdf` (generates files in `build/latex`).
-2.  Navigate to `build/latex` and execute: `make LATEXOPTS="-interaction=nonstopmode"`
-
-This produces `pytorch.pdf`. Run this command again for the correct table of contents and index.
-
-> [!NOTE]
-> To view the Table of Contents, switch to the **Table of Contents**
-> view in your PDF viewer.
+1.  Run `make latexpdf`.
+2.  Navigate to `build/latex` and run `make LATEXOPTS="-interaction=nonstopmode"`.
+3.  Run the command one more time so that it generates the correct table
+    of contents and index.
 
 ### Previous Versions
 
-Find installation instructions and binaries for previous PyTorch versions [here](https://pytorch.org/get-started/previous-versions).
+Installation instructions and binaries for previous PyTorch versions may be found
+on [our website](https://pytorch.org/get-started/previous-versions).
 
 ## Getting Started
+
+Explore the following resources:
 
 *   [Tutorials](https://pytorch.org/tutorials/)
 *   [Examples](https://github.com/pytorch/examples)
@@ -414,25 +244,22 @@ Find installation instructions and binaries for previous PyTorch versions [here]
 
 ## Communication
 
-*   Forums: https://discuss.pytorch.org
-*   GitHub Issues
-*   Slack: [PyTorch Slack](https://pytorch.slack.com/) (request invite: https://goo.gl/forms/PP1AGvNHpSaJP8to1)
-*   Newsletter: https://eepurl.com/cbG0rv
-*   Facebook Page: https://www.facebook.com/pytorch
-*   Brand guidelines: [pytorch.org](https://pytorch.org/)
+*   **Forums:**  [https://discuss.pytorch.org](https://discuss.pytorch.org)
+*   **GitHub Issues:**  [https://github.com/pytorch/pytorch/issues](https://github.com/pytorch/pytorch/issues)
+*   **Slack:** [PyTorch Slack](https://pytorch.slack.com/).  Get an invite via [this form](https://goo.gl/forms/PP1AGvNHpSaJP8to1)
+*   **Newsletter:**  [https://eepurl.com/cbG0rv](https://eepurl.com/cbG0rv)
+*   **Facebook:** [https://www.facebook.com/pytorch](https://www.facebook.com/pytorch)
 
 ## Releases and Contributing
 
-Typically, PyTorch has three minor releases a year. Report bugs via [filing an issue](https://github.com/pytorch/pytorch/issues).
+PyTorch typically releases three minor versions per year.  Report bugs via [GitHub Issues](https://github.com/pytorch/pytorch/issues).
 
-Contributions are welcome!  Discuss new features by opening an issue first. See [Contribution page](CONTRIBUTING.md) and [Release page](RELEASE.md) for details.
+We welcome contributions!  Discuss new features/extensions via issue before sending a PR.  See the [Contribution page](CONTRIBUTING.md) and [Release page](RELEASE.md).
 
 ## The Team
 
-PyTorch is a community-driven project.
-
-Maintained by [Soumith Chintala](http://soumith.ch), [Gregory Chanan](https://github.com/gchanan), [Dmytro Dzhulgakov](https://github.com/dzhulgakov), [Edward Yang](https://github.com/ezyang), and [Nikita Shulga](https://github.com/malfet), with significant contributions from many others.
+PyTorch is a community-driven project maintained by a dedicated team and supported by many talented contributors.  Major contributors include [Soumith Chintala](http://soumith.ch), [Gregory Chanan](https://github.com/gchanan), [Dmytro Dzhulgakov](https://github.com/dzhulgakov), [Edward Yang](https://github.com/ezyang), and [Nikita Shulga](https://github.com/malfet).
 
 ## License
 
-PyTorch is licensed under a BSD-style license, as found in the [LICENSE](LICENSE) file.
+PyTorch is licensed under a BSD-style license, found in the [LICENSE](LICENSE) file.

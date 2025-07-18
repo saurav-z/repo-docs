@@ -1,6 +1,6 @@
 # LocalStack: Develop and Test AWS Applications Locally
 
-**LocalStack empowers developers to build, test, and run AWS applications entirely on their local machines, speeding up development and simplifying workflows.** [Check out the original repo](https://github.com/localstack/localstack) for more information.
+**LocalStack empowers developers to build, test, and debug AWS applications offline by providing a fully functional local cloud environment.**  [Go to the original repository](https://github.com/localstack/localstack).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/localstack/localstack/main/docs/localstack-readme-banner.svg" alt="LocalStack - A fully functional local cloud stack">
@@ -11,8 +11,8 @@
 [![PyPI Version](https://img.shields.io/pypi/v/localstack?color=blue)](https://pypi.org/project/localstack/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/localstack/localstack)](https://hub.docker.com/r/localstack/localstack)
 [![PyPi downloads](https://static.pepy.tech/badge/localstack)](https://pypi.org/project/localstack)
-[![Backers on Open Collective](https://opencollective.com/localstack/backers/badge.svg)](#backers)
-[![Sponsors on Open Collective](https://opencollective.com/localstack/sponsors/badge.svg)](#sponsors)
+[![Backers on Open Collective](https://opencollective.com/localstack/backers/badge.svg)](https://opencollective.com/localstack)
+[![Sponsors on Open Collective](https://opencollective.com/localstack/sponsors/badge.svg)](https://opencollective.com/localstack)
 [![PyPI License](https://img.shields.io/pypi/l/localstack.svg)](https://img.shields.io/pypi/l/localstack.svg)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
@@ -22,77 +22,107 @@
 
 ## Key Features
 
-*   **Local AWS Environment:** Run and test AWS services locally without the need for an internet connection.
-*   **Comprehensive Service Support:**  Supports a wide array of AWS services, including Lambda, S3, DynamoDB, and many more.
-*   **Accelerated Development:** Speeds up your development and testing cycles by eliminating the need to deploy to the cloud for every change.
-*   **Integration with Existing Tools:**  Works seamlessly with your existing AWS CLI, SDKs, and other tools.
-*   **CI/CD Ready:** Easily integrate LocalStack into your CI/CD pipelines for automated testing.
-*   **Pro Version:** Unlock additional APIs and advanced features with [LocalStack Pro](https://localstack.cloud/pricing).
+*   **Local AWS Cloud:** Emulates a wide range of AWS services locally.
+*   **Offline Development:** Develop and test applications without an internet connection.
+*   **Faster Development Cycles:** Speed up testing and debugging by eliminating cloud deployment delays.
+*   **Supports Popular Services:** Includes AWS Lambda, S3, DynamoDB, Kinesis, SQS, SNS, and more.
+*   **Integration Friendly:** Works with popular tools like the AWS CLI, Terraform, and CDK.
+*   **Pro Version Available:** Offers additional APIs and advanced features in the [Pro version](https://localstack.cloud/pricing).
 
-## Getting Started
+## Table of Contents
 
-### Install
+*   [Overview](#overview)
+*   [Install](#install)
+    *   [Brew (macOS or Linux with Homebrew)](#brew-macos-or-linux-with-homebrew)
+    *   [Binary download (macOS, Linux, Windows)](#binary-download-macos-linux-windows)
+    *   [PyPI (macOS, Linux, Windows)](#pypi-macos-linux-windows)
+*   [Quickstart](#quickstart)
+*   [Running](#running)
+*   [Usage](#usage)
+*   [Releases](#releases)
+*   [Contributing](#contributing)
+*   [Get in touch](#get-in-touch)
+    *   [Contributors](#contributors)
+    *   [Backers](#backers)
+    *   [Sponsors](#sponsors)
+*   [License](#license)
 
-Choose your preferred installation method:
+---
 
-#### LocalStack CLI (Recommended)
+## Overview
 
-##### Brew (macOS or Linux with Homebrew)
+LocalStack simplifies cloud development and testing by providing a local AWS cloud emulator. Develop and test your applications and Lambdas without connecting to a remote cloud provider. This speeds up and simplifies testing complex CDK applications or Terraform configurations.
+
+LocalStack supports many AWS services, with the [Pro version](https://localstack.cloud/pricing) providing more APIs and advanced features. A comprehensive list of supported APIs can be found on the [Feature Coverage](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) page.
+
+Explore LocalStack's [User Guides](https://docs.localstack.cloud/user-guide/) for more details.
+
+## Install
+
+The quickest way to get started with LocalStack is by using the LocalStack CLI. Ensure you have Docker installed on your machine.
+
+### Brew (macOS or Linux with Homebrew)
+
+Install the LocalStack CLI using the official LocalStack Brew Tap:
 
 ```bash
 brew install localstack/tap/localstack-cli
 ```
 
-##### Binary Download (macOS, Linux, Windows)
+### Binary download (macOS, Linux, Windows)
 
-1.  Visit [localstack/localstack-cli](https://github.com/localstack/localstack-cli/releases/latest) and download the latest release for your platform.
-2.  Extract the downloaded archive to a directory included in your `PATH` variable (e.g., `/usr/local/bin`).
+If you don't have Brew:
 
-##### PyPI (macOS, Linux, Windows)
+1.  Download the latest release from [localstack/localstack-cli](https://github.com/localstack/localstack-cli/releases/latest).
+2.  Extract the archive to a directory in your `PATH`.
+    -   macOS/Linux example: `sudo tar xvzf ~/Downloads/localstack-cli-*-darwin-*-onefile.tar.gz -C /usr/local/bin`
+
+### PyPI (macOS, Linux, Windows)
+
+Install the LocalStack CLI using `pip`:
 
 ```bash
 python3 -m pip install localstack
 ```
 
-#### Using the `awslocal` CLI
-After installing the LocalStack CLI, to interact with the local AWS services, you need to install the `awslocal` CLI separately. For installation guidelines, refer to the [`awslocal` documentation](https://docs.localstack.cloud/user-guide/integrations/aws-cli/#localstack-aws-cli-awslocal).
+Install `awslocal` separately for interacting with the local AWS services; see the [`awslocal` documentation](https://docs.localstack.cloud/user-guide/integrations/aws-cli/#localstack-aws-cli-awslocal).
 
-> **Important**: Do not use `sudo` or run as `root` user. LocalStack must be installed and started entirely under a local non-root user. If you have problems with permissions in macOS High Sierra, install with `pip install --user localstack`
+> **Important:** Do not run as `root`.  Install and start LocalStack under a local non-root user.  If you have permission issues on macOS High Sierra, install with `pip install --user localstack`.
 
-### Quickstart
+## Quickstart
 
-1.  **Start LocalStack:**
+Start LocalStack:
 
-    ```bash
-    localstack start -d
-    ```
+```bash
+% localstack start -d
+```
 
-2.  **Check Service Status:**
+Check service status:
 
-    ```bash
-    localstack status services
-    ```
+```bash
+% localstack status services
+```
 
-3.  **Use an AWS Service (SQS Example):**
+Use SQS:
 
-    ```shell
-    awslocal sqs create-queue --queue-name sample-queue
-    ```
+```shell
+% awslocal sqs create-queue --queue-name sample-queue
+```
 
-    Learn more about [LocalStack AWS services](https://docs.localstack.cloud/references/coverage/) and using them with LocalStack's `awslocal` CLI.
+Learn more about [LocalStack AWS services](https://docs.localstack.cloud/references/coverage/) and using them with LocalStack's `awslocal` CLI.
 
-##  Run
+## Running
 
-You can run LocalStack through the following options:
+Run LocalStack using:
 
-* [LocalStack CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
-* [Docker](https://docs.localstack.cloud/getting-started/installation/#docker)
-* [Docker Compose](https://docs.localstack.cloud/getting-started/installation/#docker-compose)
-* [Helm](https://docs.localstack.cloud/getting-started/installation/#helm)
+*   [LocalStack CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
+*   [Docker](https://docs.localstack.cloud/getting-started/installation/#docker)
+*   [Docker Compose](https://docs.localstack.cloud/getting-started/installation/#docker-compose)
+*   [Helm](https://docs.localstack.cloud/getting-started/installation/#helm)
 
 ## Usage
 
-Explore the extensive [documentation](https://docs.localstack.cloud) for detailed usage guides and tutorials:
+Get started with our [documentation](https://docs.localstack.cloud).
 
 *   [LocalStack Configuration](https://docs.localstack.cloud/references/configuration/)
 *   [LocalStack in CI](https://docs.localstack.cloud/user-guide/ci/)
@@ -101,9 +131,7 @@ Explore the extensive [documentation](https://docs.localstack.cloud) for detaile
 *   [Understanding LocalStack](https://docs.localstack.cloud/references/)
 *   [Frequently Asked Questions](https://docs.localstack.cloud/getting-started/faq/)
 
-### UI Clients
-
-Utilize these UI clients for a graphical interface:
+Use the following UI clients:
 
 *   [LocalStack Web Application](https://app.localstack.cloud)
 *   [LocalStack Desktop](https://docs.localstack.cloud/user-guide/tools/localstack-desktop/)
@@ -111,43 +139,36 @@ Utilize these UI clients for a graphical interface:
 
 ## Releases
 
-Review the [GitHub releases](https://github.com/localstack/localstack/releases) for a complete changelog and detailed release notes in the [changelog](https://docs.localstack.cloud/references/changelog/).
+See the complete list of changes at [GitHub releases](https://github.com/localstack/localstack/releases). Extended release notes are in the [changelog](https://docs.localstack.cloud/references/changelog/).
 
 ## Contributing
 
-Contribute to LocalStack by:
+Contribute to LocalStack:
 
-*   Reading the [contributing guide](docs/CONTRIBUTING.md).
-*   Setting up your [development environment](docs/development-environment-setup/README.md).
-*   Exploring the [open issues](https://github.com/localstack/localstack/issues).
+*   Read the [contributing guide](docs/CONTRIBUTING.md).
+*   Set up your [development environment](docs/development-environment-setup/README.md).
+*   Browse the codebase and [open issues](https://github.com/localstack/localstack/issues).
 
-## Get in Touch
+Your contributions and feedback are highly valued.
 
-Contact the LocalStack Team for:
+## Get in touch
 
-*   Reporting [issues](https://github.com/localstack/localstack/issues/new/choose)
-*   Upvoting [feature requests](https://github.com/localstack/localstack/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+)
-*   Asking [support questions](https://docs.localstack.cloud/getting-started/help-and-support/)
-*   Discussing local cloud development
-
-*   [LocalStack Slack Community](https://localstack.cloud/contact/)
-*   [LocalStack GitHub Issue tracker](https://github.com/localstack/localstack/issues)
+*   Report issues: [issue tracker](https://github.com/localstack/localstack/issues/new/choose)
+*   Upvote feature requests: [feature requests](https://github.com/localstack/localstack/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+)
+*   Ask for support: [support questions](https://docs.localstack.cloud/getting-started/help-and-support/)
+*   Discuss local cloud development:
+    *   [LocalStack Slack Community](https://localstack.cloud/contact/)
+    *   [LocalStack GitHub Issue tracker](https://github.com/localstack/localstack/issues)
 
 ### Contributors
-
-Thank you to all contributors!
 
 <a href="https://github.com/localstack/localstack/graphs/contributors"><img src="https://opencollective.com/localstack/contributors.svg?width=890" /></a>
 
 ### Backers
 
-Support the project by becoming a backer on [Open Collective](https://opencollective.com/localstack#backer).
-
 <a href="https://opencollective.com/localstack#backers" target="_blank"><img src="https://opencollective.com/localstack/backers.svg?width=890"></a>
 
 ### Sponsors
-
-Become a sponsor on [Open Collective](https://opencollective.com/localstack#sponsor).
 
 <a href="https://opencollective.com/localstack/sponsor/0/website" target="_blank"><img src="https://opencollective.com/localstack/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/localstack/sponsor/1/website" target="_blank"><img src="https://opencollective.com/localstack/sponsor/1/avatar.svg"></a>
@@ -163,20 +184,6 @@ Become a sponsor on [Open Collective](https://opencollective.com/localstack#spon
 ## License
 
 Copyright (c) 2017-2025 LocalStack maintainers and contributors.
-
 Copyright (c) 2016 Atlassian and others.
 
-Released under the Apache License, Version 2.0 (see [LICENSE](LICENSE.txt)).  By downloading and using this software you agree to the [End-User License Agreement (EULA)](docs/end_user_license_agreement).
-```
-Key improvements and SEO optimizations:
-
-*   **Clear Title and Hook:**  The title is optimized with a focus keyword ("LocalStack") and a benefit-driven one-sentence description.
-*   **Keyword Optimization:**  Uses relevant keywords throughout the text, such as "AWS," "local development," "testing," and specific AWS service names.
-*   **Structured Headings:**  Uses clear headings and subheadings for readability and SEO ranking.
-*   **Bulleted Lists:**  Employs bulleted lists for key features, benefits, and usage information to improve readability and keyword targeting.
-*   **Concise Language:**  Avoids overly verbose language, focusing on clear and direct explanations.
-*   **Internal Linking:**  Includes links to the documentation, contributing guidelines, and other important pages within the project.
-*   **External Linking:** Links to LocalStack Pro and Open Collective for sponsorship and backing.
-*   **Alt Text:**  Uses descriptive alt text for all images.
-*   **Mobile-Friendly:**  The use of headings, bullet points, and short paragraphs makes the content easy to read on mobile devices.
-*   **Comprehensive:** Covers all the important sections from the original README, including installation, usage, and contribution guidelines.
+Released under the Apache License, Version 2.0 (see [LICENSE](LICENSE.txt)). By using this software, you agree to the [End-User License Agreement (EULA)](docs/end_user_license_agreement).

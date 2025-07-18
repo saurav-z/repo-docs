@@ -1,17 +1,19 @@
 <div align="center">
     <a href="https://frappe.io/erpnext">
-	<img src="./erpnext/public/images/v16/erpnext.svg" alt="ERPNext Logo" height="80px" width="80xp"/>
+	<img src="./erpnext/public/images/v16/erpnext.svg" alt="ERPNext Logo" height="80px" width="80px"/>
     </a>
-    <h2>ERPNext: Open-Source ERP for Business Success</h2>
-    <p align="center">
-        **Transform your business with ERPNext, the powerful, intuitive, and 100% open-source ERP solution.**
-    </p>
+</div>
+
+# ERPNext: Open-Source ERP Software for Growing Businesses
+
+**ERPNext is a powerful and intuitive open-source Enterprise Resource Planning (ERP) system designed to streamline your business operations.**
+
+[View the original repository on GitHub](https://github.com/frappe/erpnext)
 
 [![Learn on Frappe School](https://img.shields.io/badge/Frappe%20School-Learn%20ERPNext-blue?style=flat-square)](https://frappe.school)<br><br>
 [![CI](https://github.com/frappe/erpnext/actions/workflows/server-tests-mariadb.yml/badge.svg?event=schedule)](https://github.com/frappe/erpnext/actions/workflows/server-tests-mariadb.yml)
 [![docker pulls](https://img.shields.io/docker/pulls/frappe/erpnext-worker.svg)](https://hub.docker.com/r/frappe/erpnext-worker)
 
-</div>
 
 <div align="center">
 	<img src="./erpnext/public/images/v16/hero_image.png"/>
@@ -23,46 +25,40 @@
 	<a href="https://frappe.io/erpnext">Website</a>
 	-
 	<a href="https://docs.frappe.io/erpnext/">Documentation</a>
-	-
-	<a href="https://github.com/frappe/erpnext">View on GitHub</a>
 </div>
 
-## About ERPNext
+## Key Features of ERPNext
 
-ERPNext is a comprehensive, open-source Enterprise Resource Planning (ERP) system designed to streamline and integrate all aspects of your business operations.  Manage everything from accounting and inventory to manufacturing and customer relationships, all in one powerful platform.
+ERPNext provides a comprehensive suite of features to manage various aspects of your business:
 
-### Key Features
-
-*   **Accounting:** Manage your finances efficiently with tools for transaction recording, financial reporting, and cash flow analysis.
-*   **Order Management:** Track inventory, manage sales and purchase orders, handle shipments, and optimize order fulfillment.
-*   **Manufacturing:** Simplify your production cycle with features for production planning, material consumption tracking, capacity planning, and subcontracting.
-*   **Asset Management:** Track assets throughout their lifecycle, from purchase to disposal, for comprehensive management.
-*   **Projects:** Manage projects effectively, track tasks, and monitor time and costs for both internal and external projects.
+*   **Accounting:** Manage your finances with tools for transaction recording, financial reporting, and cash flow analysis.
+*   **Order Management:** Track inventory, manage sales orders, and oversee customer and supplier interactions.
+*   **Manufacturing:** Streamline your production cycle, including material consumption tracking and capacity planning.
+*   **Asset Management:** Track assets from purchase to disposal.
+*   **Projects:** Manage projects, track tasks, timesheets, and profitability.
 
 <details open>
-<summary>More</summary>
+<summary>More Features</summary>
 	<img src="https://erpnext.com/files/v16_bom.png"/>
 	<img src="https://erpnext.com/files/v16_stock_summary.png"/>
 	<img src="https://erpnext.com/files/v16_job_card.png"/>
 	<img src="https://erpnext.com/files/v16_tasks.png"/>
 </details>
 
-### Under the Hood
+## Technology Stack
 
-ERPNext is built on a robust technology stack:
+ERPNext is built upon robust open-source technologies:
 
-*   [**Frappe Framework**](https://github.com/frappe/frappe): A full-stack web application framework written in Python and JavaScript, providing a solid foundation for building web applications with database abstraction, user authentication, and a REST API.
-*   [**Frappe UI**](https://github.com/frappe/frappe-ui): A Vue-based UI library, providing a modern and responsive user interface for a seamless user experience.
+*   **Frappe Framework:** A full-stack web application framework (Python and Javascript) providing the foundation for ERPNext, including database abstraction, user authentication, and a REST API. ([Frappe Framework GitHub](https://github.com/frappe/frappe))
+*   **Frappe UI:** A Vue.js-based UI library for a modern and user-friendly interface. ([Frappe UI GitHub](https://github.com/frappe/frappe-ui))
 
-## Getting Started
+## Production Setup
 
-### Production Setup
+Choose the best setup method for your needs:
 
-Choose the best way to deploy ERPNext for your needs.
+### Managed Hosting
 
-#### Managed Hosting (Recommended)
-
-For ease of use and peace of mind, consider [Frappe Cloud](https://frappecloud.com), a simple and sophisticated platform for hosting your Frappe applications. It handles installation, upgrades, monitoring, and maintenance, allowing you to focus on your business.
+**Frappe Cloud** offers a hassle-free managed hosting solution for Frappe applications, handling installation, updates, and maintenance.
 
 <div>
 	<a href="https://erpnext-demo.frappe.cloud/app/home" target="_blank">
@@ -73,75 +69,78 @@ For ease of use and peace of mind, consider [Frappe Cloud](https://frappecloud.c
 	</a>
 </div>
 
-#### Self-Hosted
-
-Follow the steps below to set up a self-hosted instance.
+### Self-Hosted
 
 #### Docker
 
-*Prerequisites: docker, docker-compose, git. Refer to the [Docker Documentation](https://docs.docker.com) for more details on Docker setup.*
+**Prerequisites:** docker, docker-compose, git. Refer [Docker Documentation](https://docs.docker.com) for more details on Docker setup.
 
 1.  Clone the repository:
-    ```bash
-    git clone https://github.com/frappe/frappe_docker
-    cd frappe_docker
-    ```
-2.  Run the Docker Compose configuration:
-    ```bash
-    docker compose -f pwd.yml up -d
-    ```
 
-Your ERPNext site should be accessible on your localhost port 8080 after a few minutes.
-*   **Username:** Administrator
-*   **Password:** admin
+```bash
+git clone https://github.com/frappe/frappe_docker
+cd frappe_docker
+```
 
-See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM-based docker setup.
+2.  Run using Docker Compose:
+
+```bash
+docker compose -f pwd.yml up -d
+```
+
+Access your site on `localhost:8080` with the following credentials:
+
+*   Username: `Administrator`
+*   Password: `admin`
+
+See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM based docker setup.
 
 ## Development Setup
 
 ### Manual Install
 
-Install ERPNext with the following steps:
+Install using the bench installer, which sets up dependencies:  See https://github.com/frappe/bench for more details.
 
-1.  **Install Bench:** Follow the [Installation Steps](https://frappeframework.com/docs/user/en/installation) and start the server.
-    ```bash
-    bench start
-    ```
+Passwords will be generated for the ERPNext "Administrator" user, MariaDB root user, and frappe user.
 
-2.  **Create a Site:**
-    ```bash
-    bench new-site erpnext.localhost
-    ```
+### Local
 
-3.  **Get and Install ERPNext:**
-    ```bash
-    bench get-app https://github.com/frappe/erpnext
-    bench --site erpnext.localhost install-app erpnext
-    ```
+1.  Set up bench by following the [Installation Steps](https://frappeframework.com/docs/user/en/installation) and start the server:
 
-4.  Open the URL `http://erpnext.localhost:8000/app` in your browser to access the running application.
+```bash
+bench start
+```
+
+2.  In a separate terminal:
+
+```bash
+# Create a new site
+bench new-site erpnext.localhost
+# Get the ERPNext app
+bench get-app https://github.com/frappe/erpnext
+# Install the app
+bench --site erpnext.localhost install-app erpnext
+```
+
+3.  Open `http://erpnext.localhost:8000/app` in your browser.
 
 ## Learning and Community
 
-Expand your knowledge and connect with the ERPNext community through these resources:
-
-1.  [Frappe School](https://school.frappe.io) - Learn ERPNext through courses by the maintainers and community.
-2.  [Official Documentation](https://docs.erpnext.com/) - Access comprehensive documentation for ERPNext.
-3.  [Discussion Forum](https://discuss.erpnext.com/) - Engage with the ERPNext user and service provider community.
-4.  [Telegram Group](https://erpnext_public.t.me) - Get instant help from a large community of users.
+*   [Frappe School](https://school.frappe.io) - Learn from courses on Frappe Framework and ERPNext.
+*   [Official documentation](https://docs.erpnext.com/) - Comprehensive ERPNext documentation.
+*   [Discussion Forum](https://discuss.erpnext.com/) - Engage with the ERPNext community.
+*   [Telegram Group](https://erpnext_public.t.me) - Get instant help from the user community.
 
 ## Contributing
 
-Contribute to the ERPNext project and help improve it:
-
-1.  [Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)
-2.  [Report Security Vulnerabilities](https://erpnext.com/security)
-3.  [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
-4.  [Translations](https://crowdin.com/project/frappe)
+*   [Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)
+*   [Report Security Vulnerabilities](https://erpnext.com/security)
+*   [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
+*   [Translations](https://crowdin.com/project/frappe)
 
 ## Logo and Trademark Policy
 
-Please review our [Logo and Trademark Policy](TRADEMARK_POLICY.md) for information about using the ERPNext logo and trademarks.
+Please review our [Logo and Trademark Policy](TRADEMARK_POLICY.md).
 
 <br />
 <br />
