@@ -1,26 +1,17 @@
-# MLflow: The Open-Source Platform for the Machine Learning Lifecycle
+# MLflow: Simplify the Machine Learning Lifecycle
 
-**Simplify and streamline your machine learning projects with MLflow, an open-source platform designed for the entire ML lifecycle!** ([See the original repository](https://github.com/mlflow/mlflow))
-
-[![Latest Docs](https://img.shields.io/badge/docs-latest-success.svg?style=for-the-badge)](https://mlflow.org/docs/latest/index.html)
-[![Apache 2 License](https://img.shields.io/badge/license-Apache%202-brightgreen.svg?style=for-the-badge&logo=apache)](https://github.com/mlflow/mlflow/blob/master/LICENSE.txt)
-[![Total Downloads](https://img.shields.io/pypi/dw/mlflow?style=for-the-badge&logo=pypi&logoColor=white)](https://pepy.tech/project/mlflow)
-[![Slack](https://img.shields.io/badge/slack-@mlflow--users-CF0E5B.svg?logo=slack&logoColor=white&labelColor=3F0E40&style=for-the-badge)](https://mlflow.org/community/#slack)
-[![Twitter](https://img.shields.io/twitter/follow/MLflow?style=for-the-badge&labelColor=00ACEE&logo=twitter&logoColor=white)](https://twitter.com/MLflow)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/mlflow/mlflow)
+MLflow is an open-source platform that streamlines the entire machine learning lifecycle, making model development, deployment, and management easier. Learn more and contribute on the [MLflow GitHub Repository](https://github.com/mlflow/mlflow)!
 
 ---
 
-## Key Features of MLflow:
+## Key Features of MLflow
 
-*   **Experiment Tracking:** Log and compare ML experiments, track parameters, metrics, and models with an interactive UI. 📝
-*   **Model Packaging:** Package models with metadata for reliable deployment and strong reproducibility. 📦
-*   **Model Registry:** Centralized model store for collaborative lifecycle management. 💾
-*   **Serving:** Deploy models easily with tools for batch and real-time scoring on platforms like Docker, Kubernetes, Azure ML, and AWS SageMaker. 🚀
-*   **Evaluation:** Automate model evaluation and visually compare results. 📊
-*   **Observability:** Integrate tracing with GenAI libraries and Python SDK for easier debugging and online monitoring. 🔍
-
-<img src="https://mlflow.org/img/hero.png" alt="MLflow Hero" width=100%>
+*   **Experiment Tracking**: Log and compare machine learning experiments with ease, tracking parameters, metrics, and models in an interactive UI.
+*   **Model Packaging**: Package your models with a standard format that includes dependencies for reliable deployment and reproducibility.
+*   **Model Registry**: Centralize model management with a registry that facilitates collaboration, versioning, and lifecycle management.
+*   **Model Serving**: Deploy models seamlessly to various platforms, including Docker, Kubernetes, Azure ML, and AWS SageMaker, for batch and real-time scoring.
+*   **Evaluation**: Utilize automated model evaluation tools to assess model performance and compare results visually.
+*   **Observability**: Integrate with GenAI libraries and provide a Python SDK for tracing, enabling easier debugging and online monitoring.
 
 ## Installation
 
@@ -30,26 +21,21 @@ Install MLflow using pip:
 pip install mlflow
 ```
 
-You can also install MLflow from other package hosting platforms:
+MLflow is also available on PyPI, Conda-Forge, CRAN, and Maven Central.  See the original README for installation details.
 
-|               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PyPI          | [![PyPI - mlflow](https://img.shields.io/pypi/v/mlflow.svg?style=for-the-badge&logo=pypi&logoColor=white&label=mlflow)](https://pypi.org/project/mlflow/) [![PyPI - mlflow-skinny](https://img.shields.io/pypi/v/mlflow-skinny.svg?style=for-the-badge&logo=pypi&logoColor=white&label=mlflow-skinny)](https://pypi.org/project/mlflow-skinny/)                                                                                                                                                                                                                                                                                                                                          |
-| conda-forge   | [![Conda - mlflow](https://img.shields.io/conda/vn/conda-forge/mlflow.svg?style=for-the-badge&logo=anaconda&label=mlflow)](https://anaconda.org/conda-forge/mlflow) [![Conda - mlflow-skinny](https://img.shields.io/conda/vn/conda-forge/mlflow.svg?style=for-the-badge&logo=anaconda&label=mlflow-skinny)](https://anaconda.org/conda-forge/mlflow-skinny)                                                                                                                                                                                                                                                                                                                             |
-| CRAN          | [![CRAN - mlflow](https://img.shields.io/cran/v/mlflow.svg?style=for-the-badge&logo=r&label=mlflow)](https://cran.r-project.org/package=mlflow)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Maven Central | [![Maven Central - mlflow-client](https://img.shields.io/maven-central/v/org.mlflow/mlflow-client.svg?style=for-the-badge&logo=apache-maven&label=mlflow-client)](https://mvnrepository.com/artifact/org.mlflow/mlflow-client) [![Maven Central - mlflow-parent](https://img.shields.io/maven-central/v/org.mlflow/mlflow-parent.svg?style=for-the-badge&logo=apache-maven&label=mlflow-parent)](https://mvnrepository.com/artifact/org.mlflow/mlflow-parent) [![Maven Central - mlflow-spark](https://img.shields.io/maven-central/v/org.mlflow/mlflow-spark.svg?style=for-the-badge&logo=apache-maven&label=mlflow-spark)](https://mvnrepository.com/artifact/org.mlflow/mlflow-spark) |
+## Documentation
 
-## Documentation 📘
+Comprehensive documentation is available to help you get started: [MLflow Documentation](https://mlflow.org/docs/latest/index.html).
 
-Find the official documentation [here](https://mlflow.org/docs/latest/index.html).
+## Running Anywhere
 
-## Running Anywhere 🌐
+MLflow supports various environments, including local development, Amazon SageMaker, AzureML, and Databricks.  Refer to the [Running Anywhere](https://mlflow.org/docs/latest/index.html#running-mlflow-anywhere) documentation for setup instructions.
 
-MLflow can be run in various environments, including local development, Amazon SageMaker, AzureML, and Databricks.  See the [running anywhere guidance](https://mlflow.org/docs/latest/index.html#running-mlflow-anywhere) for setup instructions.
-
-## Usage Examples
+## Getting Started with MLflow
 
 ### Experiment Tracking
+
+Track your machine learning experiments using MLflow's autologging or manual logging capabilities.
 
 ```python
 import mlflow
@@ -57,23 +43,27 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_diabetes
 from sklearn.ensemble import RandomForestRegressor
 
+# Enable MLflow's automatic experiment tracking for scikit-learn
 mlflow.sklearn.autolog()
 
+# Load the training dataset
 db = load_diabetes()
 X_train, X_test, y_train, y_test = train_test_split(db.data, db.target)
 
 rf = RandomForestRegressor(n_estimators=100, max_depth=6, max_features=3)
+# MLflow triggers logging automatically upon model fitting
 rf.fit(X_train, y_train)
 ```
 
-Run the following command in a separate terminal:
+View your experiments in the MLflow UI:
 
 ```bash
 mlflow ui
 ```
-Access the MLflow UI to track the training dataset, hyper parameters, metrics, and the model.
 
 ### Serving Models
+
+Deploy your trained models quickly using the MLflow CLI:
 
 ```bash
 mlflow models serve --model-uri runs:/<run-id>/model
@@ -81,10 +71,13 @@ mlflow models serve --model-uri runs:/<run-id>/model
 
 ### Evaluating Models
 
+Evaluate your models with automatic evaluation capabilities and metrics:
+
 ```python
 import mlflow
 import pandas as pd
 
+# Evaluation set contains (1) input question (2) model outputs (3) ground truth
 df = pd.DataFrame(
     {
         "inputs": ["What is MLflow?", "What is Spark?"],
@@ -104,7 +97,9 @@ eval_dataset = mlflow.data.from_pandas(
     df, predictions="outputs", targets="ground_truth"
 )
 
+# Start an MLflow Run to record the evaluation results to
 with mlflow.start_run(run_name="evaluate_qa"):
+    # Run automatic evaluation with a set of built-in metrics for question-answering models
     results = mlflow.evaluate(
         data=eval_dataset,
         model_type="question-answering",
@@ -115,12 +110,16 @@ print(results.tables["eval_results_table"])
 
 ### Observability
 
+Use MLflow Tracing to monitor your LLM applications.
+
 ```python
 import mlflow
 from openai import OpenAI
 
+# Enable tracing for OpenAI
 mlflow.openai.autolog()
 
+# Query OpenAI LLM normally
 response = OpenAI().chat.completions.create(
     model="gpt-4o-mini",
     messages=[{"role": "user", "content": "Hi!"}],
@@ -128,25 +127,27 @@ response = OpenAI().chat.completions.create(
 )
 ```
 
-Navigate to the "Traces" tab in the MLflow UI.
+## Community and Contributing
 
-## Community
+*   **Documentation & Support:** [MLflow Documentation](https://mlflow.org/docs/latest/index.html) and [Stack Overflow](https://stackoverflow.com/questions/tagged/mlflow).
+*   **Ask AI:** Use the "Ask AI" button at the right bottom of the doc website to chat with an AI-powered bot.
+*   **Report Issues:** [GitHub Issues](https://github.com/mlflow/mlflow/issues/new/choose).
+*   **Discussions:** [Mailing List](mlflow-users@googlegroups.com) and [Slack](https://mlflow.org/slack).
 
-*   **Docs**: [Documentation](https://mlflow.org/docs/latest/index.html).
-*   **Stack Overflow:** [Stack Overflow](https://stackoverflow.com/questions/tagged/mlflow).
-*   **AI-powered chat bot**: Click the "Ask AI" button on the doc website.
-*   **Report bugs:** [GitHub issue](https://github.com/mlflow/mlflow/issues/new/choose).
-*   **Mailing list:** mlflow-users@googlegroups.com
-*   **Slack:** [Slack](https://mlflow.org/slack).
-
-## Contributing
-
-Contribute to MLflow!  See the [contribution guide](CONTRIBUTING.md).
+We welcome contributions! See the [contribution guide](CONTRIBUTING.md) for more information.
 
 ## Citation
 
-If you use MLflow in your research, cite it using the "Cite this repository" button on the [GitHub repository page](https://github.com/mlflow/mlflow).
+Cite MLflow in your research using the "Cite this repository" button on the [GitHub repository page](https://github.com/mlflow/mlflow).
 
 ## Core Members
 
-[Core Members](https://github.com/mlflow/mlflow)
+*   [Ben Wilson](https://github.com/BenWilson2)
+*   [Corey Zumar](https://github.com/dbczumar)
+*   [Daniel Lok](https://github.com/daniellok-db)
+*   [Gabriel Fu](https://github.com/gabrielfu)
+*   [Harutaka Kawamura](https://github.com/harupy)
+*   [Serena Ruan](https://github.com/serena-ruan)
+*   [Weichen Xu](https://github.com/WeichenXu123)
+*   [Yuki Watanabe](https://github.com/B-Step62)
+*   [Tomu Hirata](https://github.com/TomeHirata)

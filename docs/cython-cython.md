@@ -1,41 +1,33 @@
 # Cython: Write C Extensions for Python with Ease
 
-**Cython empowers you to write C extensions for Python as effortlessly as writing Python itself, enabling significant performance gains and seamless integration with C/C++ code.**  Learn more and contribute at the [Cython GitHub repository](https://github.com/cython/cython).
+**Cython empowers you to write C extensions for Python as easily as Python itself, unlocking significant performance gains.**  [Visit the original repository on GitHub](https://github.com/cython/cython).
 
 ## Key Features
 
-*   **Python-like Syntax for C Extensions:** Write C extensions using a familiar Python syntax, making the transition easy.
-*   **C/C++ Integration:** Seamlessly call C functions and declare C types within your Python code.
-*   **Performance Optimization:** Cython translates Python code to highly efficient C/C++ code, resulting in substantial speed improvements.
-*   **Wrapping External Libraries:** Ideal for wrapping existing C libraries, allowing you to leverage their functionality within Python.
-*   **Fast C Modules:** Create high-performance C modules to accelerate the execution of your Python code.
-*   **Full CPython Compatibility:**  Works with all current and future versions of CPython.
-*   **Large User Base:** Supported by a robust community with thousands of libraries, packages, and tools.
-*   **Mature Project:** Benefit from almost two decades of bug fixing and static code optimization.
+*   **Python to C/C++ Compilation:**  Translates Python code into highly efficient C/C++ code.
+*   **C/C++ Integration:** Seamlessly calls C functions and declares C types for optimized performance.
+*   **Ideal for Performance:** Perfect for wrapping external C libraries and accelerating Python code execution.
+*   **Large User Base:**  Trusted by thousands of libraries, packages, and tools.
+*   **Mature & Stable:**  Benefiting from almost two decades of bug fixing and optimizations.
+*   **Full CPython Compatibility:** Offers full runtime compatibility with all existing and future versions of CPython.
+*   **Cross-Platform C Code Generation:**  Generates C code optimized for the target platform and Python version.
+*   **Apache License:**  Freely available under the permissive Apache License.
 
 ## Installation
 
-To install Cython, simply run:
+If you have a C compiler installed, install Cython with:
 
 ```bash
 pip install Cython
 ```
 
-For detailed installation instructions, consult the [installation page](https://docs.cython.org/en/latest/src/quickstart/install.html).
-
-## Usage
-
-Cython allows you to create high-performance modules that are compatible with Python. You can write code in Cython's specialized syntax, which then gets translated into efficient C/C++ code.
-
-## License
-
-Cython is licensed under the permissive **Apache License**.
+For detailed installation instructions, please refer to the [installation page](https://docs.cython.org/en/latest/src/quickstart/install.html) in the documentation.
 
 ## Contributing
 
-We welcome contributions to the Cython project!  Get started with the [contributing guide](https://github.com/cython/cython/blob/master/docs/CONTRIBUTING.rst).
+We welcome contributions!  Get started by exploring the [contributing guidelines](https://github.com/cython/cython/blob/master/docs/CONTRIBUTING.rst).
 
-## Resources
+## Documentation and Resources
 
 *   **Official Website:** [https://cython.org/](https://cython.org/)
 *   **Documentation:** [https://docs.cython.org/](https://docs.cython.org/)
@@ -44,6 +36,11 @@ We welcome contributions to the Cython project!  Get started with the [contribut
 
 ## Support the Project
 
-Support the Cython project via:
+Support the Cython project through:
+
 *   [GitHub Sponsors](https://github.com/users/scoder/sponsorship)
 *   [Tidelift](https://tidelift.com/subscription/pkg/pypi-cython)
+
+## License
+
+Cython is licensed under the permissive **Apache License**.  See the [LICENSE.txt](https://github.com/cython/cython/blob/master/LICENSE.txt) file for details.

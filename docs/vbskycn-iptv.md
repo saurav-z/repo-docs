@@ -1,93 +1,88 @@
-# Free IPTV Live Streaming Sources - Updated Daily (GitHub)
+# Free IPTV Live TV Sources - Stay Updated!
 
-**Access a vast collection of free, open-source IPTV live streaming sources with daily updates, featuring channels from around the globe!** [View the original repository](https://github.com/vbskycn/iptv)
+Access a vast collection of free, open-source IPTV live TV sources, automatically updated, and ready to stream on your devices.  [View the original repository on GitHub](https://github.com/vbskycn/iptv).
 
 ## Key Features:
 
-*   **Comprehensive Channel Selection:** Enjoy thousands of high-definition live channels, including domestic and international options.
-*   **Daily Updates:**  Reliable and fresh streaming sources with automatic updates every 6 hours.
-*   **IPv4/IPv6 Support:** Compatible with both IPv4 and IPv6 networks for wider accessibility.
-*   **Multiple Formats:**  Available in M3U and TXT formats for easy integration with various devices.
-*   **No Ads, Completely Free:**  Enjoy uninterrupted streaming without any advertisements.
-*   **EPG and Logos:**  M3U files include Electronic Program Guide (EPG) data and channel logos for a better viewing experience.
-*   **Wide Compatibility:** Supports a variety of devices, including TV boxes, smartphones, and computers.
+*   **Extensive Channel List:**  Includes thousands of domestic and international channels.
+*   **Automatic Updates:**  Live sources are updated frequently to ensure you get the most current content.
+*   **Free and Open Source:**  Completely free to use, with no ads.
+*   **Multi-Platform Compatibility:** Compatible with Android, Windows, and more.
+*   **M3U/TXT Formats:**  Provides streaming links in standard M3U and TXT formats for easy integration.
+*   **IPv4/IPv6 Support:** Works with both IPv4 and IPv6 networks.
+*   **EPG and Logos:** Supports Electronic Program Guides (EPG) and channel logos for an enhanced viewing experience.
 
-## Available IPTV Sources:
+##  Accessing the Live TV Streams
 
-###  IPTV4 (IPv4)
+### IPTV4 (IPv4-Compatible Streams)
 
-*   **Updated:** <!-- UPDATE_TIME_IPTV4 -->2025-07-18 07:01:38<!-- END_UPDATE_TIME_IPTV4 -->
+The following links provide access to the main IPTV streams compatible with IPv4 networks.  These sources are automatically updated.
 
-*   **TXT Format:** [https://live.zbds.org/tv/iptv4.txt](https://live.zbds.org/tv/iptv4.txt)
-*   **M3U Format (with logos and EPG):** [https://live.zbds.org/tv/iptv4.m3u](https://live.zbds.org/tv/iptv4.m3u)
+*   **TXT Format:**  [https://live.zbds.org/tv/iptv4.txt](https://live.zbds.org/tv/iptv4.txt)
+*   **M3U Format (with logos & EPG):**  [https://live.zbds.org/tv/iptv4.m3u](https://live.zbds.org/tv/iptv4.m3u)
 
-    *If you can't access the GitHub domain, use the following proxy:*
-    ```
-    https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.txt
-    ```
-    ```
-    https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u
-    ```
+If the main links are unavailable, try these alternative sources:
 
-### IPTV6 (IPv6)
+*   `https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.txt`
+*   `https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u`
 
-*   **Updated:** <!-- UPDATE_TIME_IPTV6 -->2025-07-18 07:01:38<!-- END_UPDATE_TIME_IPTV6 -->
+### IPTV6 (IPv6-Compatible Streams)
 
-*   **TXT Format:** [https://live.zbds.org/tv/iptv6.txt](https://live.zbds.org/tv/iptv6.txt)
-*   **M3U Format (with logos and EPG):** [https://live.zbds.org/tv/iptv6.m3u](https://live.zbds.org/tv/iptv6.m3u)
+For users with IPv6 connectivity, these sources offer potentially faster and more stable streaming.
 
-    *If you can't access the GitHub domain, use the following proxy:*
-    ```
-    https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.txt
-    ```
-    ```
-    https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u
-    ```
+*   **TXT Format:**  [https://live.zbds.org/tv/iptv6.txt](https://live.zbds.org/tv/iptv6.txt)
+*   **M3U Format (with logos & EPG):**  [https://live.zbds.org/tv/iptv6.m3u](https://live.zbds.org/tv/iptv6.m3u)
 
-## Demo
+If the main links are unavailable, try these alternative sources:
+
+*   `https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.txt`
+*   `https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u`
+
+##  DEMO
 
 ![IPTV直播源演示截图 - 展示直播源列表和播放界面](assets/demo.png "IPTV直播源演示")
 
-## Tools
+##  Tools
 
-*   **Frontend IPTV Source Converter:**  [https://izbds.com/tools/index.html](https://izbds.com/tools/index.html)
+### Format Converter
 
-## Alternative:  Ready-Made IPTV App
+*   [https://izbds.com/tools/index.html](https://izbds.com/tools/index.html)
 
-For a hassle-free experience, try the **Live TV** app (includes Hong Kong, Macau, and Taiwan channels)
+##  Alternative:  Pre-built Live TV App
 
-*   Download: [https://izbds.com/aztv/](https://izbds.com/aztv/)
+For an easier experience, consider using the "直播电视" app.  It's also free, contains many channels and updates frequently.
 
-## Updates
+*   **Download:** [https://izbds.com](https://izbds.com/aztv/)
 
-*   2025.5.20 No longer providing EPG service
-*   2025.1.11 Optimized page
-*   2024.12.13 Continued optimization
-*   2024.10.18 Optimized source code testing
-*   2024.9.9  Added Deibian server with three daily updates due to rapid source failure
-*   2024.6.22 Added IPTV4/IPTV6 automatic update sources
+##  Recent Updates
 
-## Contact
+*   2025.5.20: EPG Service discontinued.
+*   2025.1.11: Page optimization
+*   2024.12.13: Continue optimization
+*   2024.10.18: Test and optimize source code.
+*   2024.9.9: Added a new server for daily updates.
+*   2024.6.22: Added IPTV4/IPTV6 auto-update sources.
+
+##  Contact
 
 *   Telegram: [@starkluistn98](https://t.me/starkluistn98)
 
-## Disclaimer
+##  Disclaimer
 
-*   This project is for technical research, learning, and sharing purposes only.
-*   All content is collected from public internet links; commercial use is strictly prohibited.
-*   The project does not store any media content.  The maintainers are not responsible for the content, availability, stability, or legality of the provided sources.
-*   Users are solely responsible for their use of the sources.
-*   This project is open source. If you fork this project, be sure to cite the source in accordance with the open-source license.
-*   We do not guarantee the validity of live channels. Their availability may be subject to the providers.
-*   The project is community-maintained and hosted on GitHub.  Contributions and feedback are welcome through Stars or [Issues](https://github.com/vbskycn/iptv/issues/new/choose).
+*   This project is for technical research, learning, and communication purposes only.
+*   All content is sourced from the internet and should not be used for commercial purposes.
+*   The project does not store any media content.  All streams are provided by third parties.
+*   The project is not responsible for the content's legality, availability, or stability.  Users are solely responsible for their use.
+*   This project is open-source and available under an open-source license; please respect it.
+*   The project is maintained by the community.
 *   The maintainers reserve the right to modify or terminate the project.
-*   By using this project, you agree to this disclaimer.
+*   By using this project, you agree to the terms of this disclaimer.
 
-## Support the Project
+##  Support the Project
 
-![微信赞赏码 - 支持项目维护者](assets/wxds.png "微信赞赏码")
+[![微信赞赏码 - 支持项目维护者](assets/wxds.png "微信赞赏码")]()
 
-## Star History
+##  Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=vbskycn/iptv&type=Date)](https://star-history.com/#vbskycn/iptv&Date)
 

@@ -10,16 +10,31 @@
 
 </div>
 
-# SGLang: High-Performance Serving Framework for LLMs and Vision Language Models
+---
 
-SGLang empowers lightning-fast and controllable interactions with large language models and vision language models, unlocking unprecedented efficiency and performance.  [Explore the original repository](https://github.com/sgl-project/sglang).
+# SGLang: High-Performance Serving for Large Language Models
 
-## Key Features of SGLang
+SGLang is a blazing-fast serving framework, streamlining interactions with large language models and vision language models.  [Learn more on GitHub](https://github.com/sgl-project/sglang).
 
-*   **Blazing-Fast Backend Runtime**: Experience unparalleled efficiency with features like RadixAttention, zero-overhead CPU scheduling, prefill-decode disaggregation, speculative decoding, continuous batching, paged attention, tensor/pipeline/expert parallelism, structured outputs, chunked prefill, and quantization (FP8/INT4/AWQ/GPTQ), and multi-lora batching.
-*   **Intuitive Frontend Language**: Simplify LLM application development with a flexible interface that includes chained generation calls, advanced prompting, control flow, multi-modal inputs, parallelism, and external interactions.
-*   **Extensive Model Support**: Seamlessly integrate with a wide range of generative models (Llama, Gemma, Mistral, Qwen, DeepSeek, LLaVA, etc.), embedding models (e5-mistral, gte, mcdse) and reward models (Skywork), ensuring broad compatibility and ease of expansion.
-*   **Active Community and Industry Adoption**: Benefit from a thriving open-source community and its proven track record, with SGLang deployed at leading enterprises and institutions, processing trillions of tokens daily and running on over 1,000,000 GPUs worldwide.
+## Key Features
+
+*   **Blazing-Fast Backend Runtime:**
+    *   Efficient serving with RadixAttention for prefix caching.
+    *   Zero-overhead CPU scheduler.
+    *   Prefill-decode disaggregation and speculative decoding.
+    *   Continuous batching and paged attention.
+    *   Tensor, pipeline, and expert parallelism.
+    *   Structured outputs and chunked prefill.
+    *   Quantization support (FP8/INT4/AWQ/GPTQ) and multi-LoRA batching.
+*   **Intuitive Frontend Language:**
+    *   Chained generation calls and advanced prompting.
+    *   Control flow and multi-modal input support.
+    *   Parallelism and external interactions.
+*   **Extensive Model Support:**
+    *   Supports various generative models (Llama, Gemma, Mistral, Qwen, DeepSeek, LLaVA, etc.).
+    *   Supports embedding models (e5-mistral, gte, mcdse) and reward models (Skywork).
+    *   Easy extensibility for integrating new models.
+*   **Active Community and Industry Adoption:**  Open-source with significant industry adoption.
 
 ## Getting Started
 
@@ -29,42 +44,28 @@ SGLang empowers lightning-fast and controllable interactions with large language
 *   [Frontend Tutorial](https://docs.sglang.ai/frontend/frontend.html)
 *   [Contribution Guide](https://docs.sglang.ai/references/contribution_guide.html)
 
-## Performance Benchmarks
+## Performance and Benchmarks
 
-For detailed performance insights, refer to the release blogs: [v0.2 blog](https://lmsys.org/blog/2024-07-25-sglang-llama3/), [v0.3 blog](https://lmsys.org/blog/2024-09-04-sglang-v0-3/), [v0.4 blog](https://lmsys.org/blog/2024-12-04-sglang-v0-4/).
+SGLang offers significant performance improvements.  Explore the following blog posts for details:
+
+*   [v0.2 blog](https://lmsys.org/blog/2024-07-25-sglang-llama3/)
+*   [v0.3 blog](https://lmsys.org/blog/2024-09-04-sglang-v0-3/)
+*   [v0.4 blog](https://lmsys.org/blog/2024-12-04-sglang-v0-4/)
 
 ## Roadmap
 
-[Development Roadmap (2025 H1)](https://github.com/sgl-project/sglang/issues/4042)
+*   [Development Roadmap (2025 H1)](https://github.com/sgl-project/sglang/issues/4042)
 
 ## Adoption and Sponsorship
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/sgl-project/sgl-learning-materials/refs/heads/main/slides/adoption.png" alt="logo" width="800" margin="10px">
-</p>
+SGLang is deployed at scale by leading organizations, processing trillions of tokens daily, and is the de facto industry standard LLM inference engine with deployments on over 1,000,000 GPUs worldwide.
 
-SGLang is a trusted solution adopted by leading organizations including xAI, AMD, NVIDIA, Intel, LinkedIn, Cursor, Oracle Cloud, Google Cloud, Microsoft Azure, AWS, Atlas Cloud, Voltage Park, Nebius, DataCrunch, Novita, InnoMatrix, MIT, UCLA, the University of Washington, Stanford, UC Berkeley, Tsinghua University, Jam & Tea Studios, Baseten, and other major technology organizations.
+<img src="https://raw.githubusercontent.com/sgl-project/sgl-learning-materials/refs/heads/main/slides/adoption.png" alt="logo" width="800" margin="10px"></img>
 
 ## Contact Us
 
-For partnerships, technical consulting, or sponsorship opportunities, please contact us at contact@sglang.ai.
+For enterprise adoption, technical consulting, sponsorships, or partnership inquiries, please contact us at contact@sglang.ai.
 
 ## Acknowledgment
 
-We learned the design and reused code from the following projects: [Guidance](https://github.com/guidance-ai/guidance), [vLLM](https://github.com/vllm-project/vllm), [LightLLM](https://github.com/ModelTC/lightllm), [FlashInfer](https://github.com/flashinfer-ai/flashinfer), [Outlines](https://github.com/outlines-dev/outlines), and [LMQL](https://github.com/eth-sri/lmql).
-```
-
-Key improvements and SEO optimizations:
-
-*   **Concise and Engaging Hook:**  A one-sentence summary that highlights the core value proposition.
-*   **Clear Headings:**  Organized content for readability and SEO benefits.
-*   **Keyword Optimization:**  Uses relevant keywords like "large language models," "vision language models," "high-performance," "serving framework," and model names like "Llama," "Mistral," and "DeepSeek."
-*   **Bulleted Key Features:**  Easy-to-scan list of benefits.
-*   **Clear "Getting Started" Section:**  Provides easy access to installation and tutorials.
-*   **Emphasis on Performance:**  Highlights performance benchmarks and provides links to relevant blog posts.
-*   **Adoption & Sponsorship Section:** Showcases trust and opportunities.
-*   **Contact Information:** Makes it easy to get in touch.
-*   **Alt Text for Images**: Added alt text to the logo image.
-*   **Links**: The links are kept for navigation purposes.
-*   **Simplified News Section:** Removed the news section to reduce verbosity and complexity.
-*   **Removed "More" Section:** Simplified the content for a cleaner presentation.
+SGLang builds upon and acknowledges the contributions of the following projects: [Guidance](https://github.com/guidance-ai/guidance), [vLLM](https://github.com/vllm-project/vllm), [LightLLM](https://github.com/ModelTC/lightllm), [FlashInfer](https://github.com/flashinfer-ai/flashinfer), [Outlines](https://github.com/outlines-dev/outlines), and [LMQL](https://github.com/eth-sri/lmql).

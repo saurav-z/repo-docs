@@ -1,19 +1,19 @@
-# NUR: Community-Driven Nix Package Repository
+# NUR: The Nix User Repository
 
-**Expand your Nix ecosystem with the Nix User Repository (NUR), a decentralized platform for sharing and discovering community-contributed packages.**  [Explore the original repository](https://github.com/nix-community/NUR).
+**Discover and install community-contributed Nix packages quickly and easily with NUR!** ([Back to the original repo](https://github.com/nix-community/NUR))
 
-**Key Features:**
+NUR (Nix User Repository) is a community-driven meta-repository that provides access to user-contributed Nix packages, modules, and overlays, offering a faster and more decentralized way to share and install packages compared to Nixpkgs.
 
-*   **Community-Driven:** Access a vast library of packages from users like you.
-*   **Decentralized:** Faster access to new packages and updates, bypassing the Nixpkgs review process.
-*   **Automated Evaluation:** NUR automatically checks repositories for errors before integrating updates.
-*   **Easy Installation:** Seamless integration with flakes, `packageOverrides`, NixOS, and Home Manager.
-*   **Flexible Package Discovery:** Find packages via a web search, or the `nur-combined` repository.
-*   **Modular Support:** Host NixOS modules, overlays, and library functions within your repositories.
+## Key Features:
+
+*   **Community-Driven:** Access a wide range of packages created and maintained by the Nix community.
+*   **Fast Updates:** Get access to new packages and updates more quickly than through Nixpkgs.
+*   **Decentralized:** Easily share your own packages and contribute to the community.
+*   **Flexible Installation:** Integrate NUR with flakes, `packageOverrides`, and NixOS configurations.
+*   **Automatic Evaluation Checks:** NUR automatically validates repositories to ensure they are buildable.
+*   **NixOS Module, Overlay, and Library Function Support:** Easily integrate NUR content into your NixOS configurations.
 
 ## Installation
-
-NUR offers multiple installation methods:
 
 ### Using Flakes
 
@@ -31,7 +31,7 @@ Add NUR to your `flake.nix`:
 };
 ```
 
-Use the overlay (`overlays.default`) or `legacyPackages.<system>`.
+Then, use either the overlay (`overlays.default`) or `legacyPackages.<system>`.
 
 ### Using `packageOverrides`
 
@@ -47,7 +47,7 @@ Add the following to `~/.config/nixpkgs/config.nix`:
 }
 ```
 
-For NixOS, add this to your `/etc/nixos/configuration.nix`:
+For NixOS, add the following to your `/etc/nixos/configuration.nix`:
 
 ```nix
 {
@@ -61,7 +61,7 @@ For NixOS, add this to your `/etc/nixos/configuration.nix`:
 
 ### Pinning
 
-Pin the version to avoid caching issues and improve build reliability:
+Pin the version to avoid frequent downloads:
 
 ```nix
 builtins.fetchTarball {
@@ -72,29 +72,24 @@ builtins.fetchTarball {
 
 ## How to Use
 
-Once installed, use packages from the NUR namespace:
+Install packages from the NUR namespace:
 
-```bash
+```console
 $ nix-shell -p nur.repos.mic92.hello-nur
-nix-shell> hello
-Hello, NUR!
 ```
 
-Or:
-
-```bash
+```console
 $ nix-env -f '<nixpkgs>' -iA nur.repos.mic92.hello-nur
 ```
 
-Or in `configuration.nix`:
-
 ```nix
+# configuration.nix
 environment.systemPackages = with pkgs; [
   nur.repos.mic92.hello-nur
 ];
 ```
 
-**Important: Packages in NUR are not reviewed by Nixpkgs members; check expressions before installing.**
+**Important Security Note:** *Always review the expressions before installing packages from NUR, as they are not reviewed by Nixpkgs members.*
 
 ### Using a single package in a devshell
 
@@ -126,7 +121,7 @@ environment.systemPackages = with pkgs; [
 }
 ```
 
-### Using NUR with NixOS
+### Using NUR in NixOS
 
 ```nix
 {
@@ -141,17 +136,9 @@ environment.systemPackages = with pkgs; [
 
   outputs = { self, nixpkgs, nur }: {
     nixosConfigurations.myConfig = nixpkgs.lib.nixosSystem {
-      # ...
       modules = [
-        # Adds the NUR overlay
         nur.modules.nixos.default
-        # NUR modules to import
         nur.legacyPackages."${system}".repos.iopq.modules.xraya
-        # This adds the NUR nixpkgs overlay.
-        # Example:
-        # ({ pkgs, ... }: {
-        #   environment.systemPackages = [ pkgs.nur.repos.mic92.hello-nur ];
-        # })
       ];
     };
   };
@@ -182,127 +169,61 @@ in
 
 ## Finding Packages
 
-*   **Packages search for NUR:** [https://nur.nix-community.org/](https://nur.nix-community.org/)
-*   **nur-combined:** [https://github.com/nix-community/nur-combined/search](https://github.com/nix-community/nur-combined/search)
+*   [Packages search for NUR](https://nur.nix-community.org/)
+*   [nur-combined](https://github.com/nix-community/nur-combined/search)
 
 ## Adding Your Own Repository
 
-1.  **Create a Repository:**  Create a Git repository with a `default.nix` file in its root, or use the [repository template](https://github.com/nix-community/nur-packages-template).
-2.  **Nix Expression:**  Ensure each repository returns a set of Nix derivations:
-
-    ```nix
-    { pkgs }:
-    {
-      hello-nur = pkgs.callPackage ./hello-nur {};
-    }
-    ```
-
-3.  **Example `default.nix` for a package:**
-
-    ```nix
-    { stdenv, fetchurl, lib }:
-    stdenv.mkDerivation rec {
-      pname = "hello";
-      version = "2.10";
-      src = fetchurl {
-        url = "mirror://gnu/hello/${pname}-${version}.tar.gz";
-        sha256 = "0ssi1wpaf7plaswqqjwigppsg5fyh99vdlb9kzl7c9lng89ndq1i";
-      };
-      postPatch = ''
-        sed -i -e 's/Hello, world!/Hello, NUR!/' src/hello.c
-      '';
-      doCheck = false;
-      meta = with lib; {
-        description = "A program that produces a familiar, friendly greeting";
-        longDescription = ''...;
-        homepage = https://www.gnu.org/software/hello/manual/;
-        changelog = "https://git.savannah.gnu.org/cgit/hello.git/plain/NEWS?h=v${version}";
-        license = licenses.gpl3Plus;
-        maintainers = [ maintainers.eelco ];
-        platforms = platforms.all;
-      };
-    }
-    ```
-
-4.  **Build and Test:** Use `nix-shell` or `nix-build` to test:
-
-    ```bash
-    $ nix-shell --arg pkgs 'import <nixpkgs> {}' -A hello-nur
-    nix-shell> hello
-    Hello, NUR!
-    ```
-
-5.  **Set `pkgs` argument:**  For development convenience, set a default value for the `pkgs` argument:
-
-    ```nix
-    { pkgs ? import <nixpkgs> {} }:
-    {
-      hello-nur = pkgs.callPackage ./hello-nur {};
-    }
-    ```
-6.  **Add Your Repository to NUR:**
-    *   Clone the NUR repository:
-
-        ```bash
-        $ git clone --depth 1 https://github.com/nix-community/NUR
-        $ cd NUR
-        ```
-    *   Edit `repos.json`:
-
-        ```json
-        {
-            "repos": {
-                "mic92": {
-                    "url": "https://github.com/Mic92/nur-packages"
-                },
-                "<fill-your-repo-name>": {
-                    "url": "https://github.com/<your-user>/<your-repo>"
-                }
-            }
-        }
-        ```
-    *   Run `./bin/nur format-manifest` to sort.
-    *   Add and commit the changes to `repos.json` (but NOT `repos.json.lock`).
-    *   Open a pull request to [https://github.com/nix-community/NUR](https://github.com/nix-community/NUR).
-
-    *   **Important:** URLs must point to a Git repository.
-7.  **Using `file` for your root nix file:**
-    *   Set the `file` option to a path relative to the repository root:
-
-    ```json
-    {
-        "repos": {
-            "mic92": {
-                "url": "https://github.com/Mic92/nur-packages",
-                "file": "subdirectory/default.nix"
-            }
-        }
-    }
-    ```
-
-### Updating NUR's lock file after updating your repository
-
-To update NUR faster, use our service at https://nur-update.nix-community.org/
-after you have pushed an update to your repository, e.g.:
+1.  Create a repository with a `default.nix` file (use the [repository template](https://github.com/nix-community/nur-packages-template) as a starting point).
+2.  Packages should be defined as Nix derivations using `pkgs` argument from Nixpkgs.
+3.  Add your repository to `repos.json`:
 
 ```console
-curl -XPOST https://nur-update.nix-community.org/update?repo=mic92
+$ git clone --depth 1 https://github.com/nix-community/NUR
+$ cd NUR
 ```
 
-Check out the [github page](https://github.com/nix-community/nur-update#nur-update-endpoint) for further details
+Edit `repos.json`:
+
+```json
+{
+    "repos": {
+        "mic92": {
+            "url": "https://github.com/Mic92/nur-packages"
+        },
+        "<fill-your-repo-name>": {
+            "url": "https://github.com/<your-user>/<your-repo>"
+        }
+    }
+}
+```
+
+4.  Run `./bin/nur format-manifest`, `git add repos.json`, `git commit`, `git push`, and open a pull request.
+
+### Using a different nix file as root expression
+
+Set the `file` option:
+
+```json
+{
+    "repos": {
+        "mic92": {
+            "url": "https://github.com/Mic92/nur-packages",
+            "file": "subdirectory/default.nix"
+        }
+    }
+}
+```
+
+### Updating NUR's lock file
+
+Use the service at https://nur-update.nix-community.org/update?repo=mic92
 
 ### Why are my NUR packages not updating?
 
-Repository evaluation errors will prevent updates. Common issues:
-
-*   Incorrect license attributes in metadata.
-*   Using built-in fetchers during evaluation (use `pkgs.fetch*` instead).
-
-Check the [latest build job](https://github.com/nix-community/NUR/actions) to see if your repository builds correctly.
+Check the [latest build job](https://github.com/nix-community/NUR/actions) for evaluation errors. Common errors include incorrect metadata and using built-in fetchers instead of `pkgs.fetch*`.
 
 #### Local evaluation check
-
-In your `nur-packages/` folder, run the [check evaluation](https://github.com/nix-community/nur-packages-template/blob/main/.github/workflows/build.yml) task
 
 ```sh
 nix-env -f . -qa \* --meta \
@@ -315,11 +236,9 @@ nix-env -f . -qa \* --meta \
   --json | jq -r 'values | .[].name'
 ```
 
-On success, this shows a list of your packages
-
 ### Git submodules
 
-To fetch git submodules in repositories set `submodules`:
+Set `submodules`:
 
 ```json
 {
@@ -332,9 +251,9 @@ To fetch git submodules in repositories set `submodules`:
 }
 ```
 
-### NixOS modules, overlays and library function support
+### NixOS Modules, Overlays, and Library Functions
 
-Place NixOS modules in the `modules` attribute:
+Place modules in the `modules` attribute:
 
 ```nix
 { pkgs }: {
@@ -342,11 +261,14 @@ Place NixOS modules in the `modules` attribute:
 }
 ```
 
-Modules should be defined as paths, not functions, to avoid conflicts if imported from multiple locations.
-A module with no [_class](https://nixos.org/manual/nixpkgs/stable/index.html#module-system-lib-evalModules-param-class) will be assumed to be both a NixOS and Home Manager module.
-If a module is NixOS or Home Manager specific, the `_class` attribute should be set to `"nixos"` or [`"home-manager"`](https://github.com/nix-community/home-manager/commit/26e72d85e6fbda36bf2266f1447215501ec376fd).
+```nix
+# modules/default.nix
+{
+  example-module = ./example-module.nix;
+}
+```
 
-For overlays, use the `overlays` attribute:
+Use `overlays` for overlays:
 
 ```nix
 # default.nix
@@ -357,7 +279,7 @@ For overlays, use the `overlays` attribute:
 }
 ```
 
-Put reusable nix functions that are intend for public use in the `lib` attribute:
+Use `lib` for library functions:
 
 ```nix
 { pkgs }:
@@ -374,7 +296,7 @@ with pkgs.lib;
 
 ## Overriding Repositories
 
-Override repositories using the `repoOverrides` argument:
+Override repositories using the `repoOverrides` argument.
 
 ```nix
 {
@@ -391,15 +313,8 @@ Override repositories using the `repoOverrides` argument:
 }
 ```
 
-The repo must be a valid package repo, i.e. its root contains a `default.nix` file.
-
 ### Overriding repositories with Flake
 
-**Experimental** Note that flake support is still experimental and might change in future in a backwards incompatible way.
-
-You can override repositories in two ways:
-
-- With packageOverrides
 ```nix
 {
   inputs.nur.url = "github:nix-community/NUR";
@@ -425,7 +340,9 @@ You can override repositories in two ways:
   ...
 }
 ```
-- With overlay
+
+or
+
 ```nix
 {
   modules = [
@@ -449,20 +366,21 @@ The repo must contain a `flake.nix` file in addition to a `default.nix`:  [flake
 
 ## Contribution Guidelines
 
-*   **Build and Meta:** Ensure packages build and set `meta.broken = true` if not. Include [Nixpkgs manual](https://nixos.org/nixpkgs/manual/#sec-standard-meta-attributes) meta attributes.
-*   **Keep it Slim:** Minimize repository size and download times.
-*   **Reuse:**  Leverage Nixpkgs packages where possible.
+*   Ensure packages build and set `meta.broken = true` if not.
+*   Use standard Nixpkgs meta attributes.
+*   Keep repositories lean.
+*   Reuse Nixpkgs packages when possible.
 
-**Ideal Use Cases:**
+## Examples of NUR Packages
 
-*   Packages for small audiences.
-*   Pre-releases.
-*   Older versions of packages.
-*   Automated package sets.
-*   Software with opinionated patches.
-*   Experiments.
+*   Packages for a small audience
+*   Pre-releases
+*   Older package versions
+*   Automatically generated package sets
+*   Software with custom patches
+*   Experiments
 
 ## Contact
 
 *   Matrix: [#nur:nixos.org](https://matrix.to/#/#nur:nixos.org)
-*   Discourse: [https://discourse.nixos.org/](https://discourse.nixos.org/)
+*   Discourse: [https://discourse.nixos.org](https://discourse.nixos.org/)

@@ -1,78 +1,50 @@
-# SimpleTuner: Your Simplified AI Model Training Toolkit
+# SimpleTuner: Train Cutting-Edge Diffusion Models with Ease
 
-**SimpleTuner streamlines AI model training, prioritizing ease of use and understanding.** ([See the original repository](https://github.com/bghira/SimpleTuner))
+SimpleTuner is designed for simplicity and ease of use, empowering you to fine-tune a variety of diffusion models with a focus on clarity and understanding. [Explore the original repository](https://github.com/bghira/SimpleTuner) for further details and contribute to the community.
 
-SimpleTuner is designed for simplicity, making it easy to understand and adapt. This open-source project welcomes contributions and focuses on providing accessible tools for a variety of AI training tasks.  Note that no data is sent to any third parties except through opt-in flags such as `report_to`, `push_to_hub`, or webhooks which must be manually configured.
+**Key Features:**
 
-Join our community and ask any questions on [Discord](https://discord.com/invite/eq3cAMZtCC) via Terminus Research Group.
+*   ✅ **Simplified Training:** Streamlined setup with good default settings for most use cases.
+*   🖼️ **Versatile Support:** Trains on a wide range of image/video datasets, from small to large collections.
+*   🚀 **Cutting-Edge Models:** Supports training for popular models like SDXL, Stable Diffusion 3, Flux.1, HiDream, PixArt Sigma, and more.
+*   🧠 **Memory Optimization:** Features like aspect bucketing and caching reduce memory consumption.
+*   ⚙️ **Advanced Techniques:** Integrates DeepSpeed for large models, quantization for VRAM savings, EMA, and more.
+*   🌐 **Integration:** Seamlessly integrates with Hugging Face Hub and supports S3 storage.
+*   🛠️ **ControlNet Support:** Train ControlNet models (full or LoRA) for SDXL, SD 1.x/2.x, and Flux.
+*   📊 **Training Toolkit:** Provides useful tools for fine-tuning your models.
+*   📦 **Easy to Set up:** See the installation documentation for the specifics.
+*   🛡️ **Privacy Focused:** No data sent to third parties except via opt-in flags or manual webhook configuration.
 
-## Key Features
+**Ready to get started?**
 
-*   **Versatile Model Support:** Train a wide range of diffusion models, including:
-    *   Flux.1
-    *   Wan 2.1 Video
-    *   LTX Video
-    *   PixArt Sigma
-    *   NVLabs Sana
-    *   Stable Diffusion 2.0/2.1
-    *   Stable Diffusion 3.0
-    *   Kwai Kolors
-    *   Lumina2
-    *   Cosmos2 Predict (Image)
-    *   And more...
-*   **Multi-GPU Training:**  Maximize training speed and efficiency.
-*   **Hardware Optimization:**  Train on GPUs with as little as 16GB of VRAM.
-*   **Data Handling:**  Caches image/video data for faster, more memory-efficient training.
-*   **Aspect Ratio Support:** Utilize aspect bucketing for flexible image and video sizes.
-*   **LoRA & ControlNet Training:**  Fine-tune models with LoRA, LyCORIS, or full U-Net training for SDXL and other models, including ControlNet training.
-*   **Advanced Techniques:** Integrate DeepSpeed, quantization, EMA, and S3-compatible storage for enhanced performance.
-*   **Community Integration:**  Seamlessly upload models to the Hugging Face Hub.
-*   **Webhook Support:**  Keep informed of your training progress via webhooks (e.g., Discord).
+*   Refer to the [tutorial](/TUTORIAL.md) for comprehensive information.
+*   Use the [Quick Start](/documentation/QUICKSTART.md) for a faster introduction.
+*   Learn how to use [DeepSpeed](/documentation/DEEPSPEED.md) for memory-constrained systems.
+*   See [this guide](/documentation/DISTRIBUTED.md) to set up multi-node training.
 
-## Table of Contents
+**Model Support Highlights:**
 
-- [Tutorials & Guides](#tutorials--guides)
-- [Design Philosophy](#design-philosophy)
-- [Features](#features)
-- [Hardware Requirements](#hardware-requirements)
-- [Toolkit](#toolkit)
-- [Setup](#setup)
-- [Troubleshooting](#troubleshooting)
+*   **HiDream:** Custom ControlNet, memory-efficient training for NVIDIA GPUs.
+*   **Flux.1:** Training support for both Dev and Full.
+*   **Wan Video:** Text-to-video training (14B and 1.3B).
+*   **LTX Video:** Efficient training on less than 16G VRAM.
+*   **PixArt Sigma:** Extensive integration with the 600M & 900M models.
+*   **NVLabs Sana:** A lightweight, fast model for accessible training.
+*   **Stable Diffusion 3:** LoRA, full finetuning, and ControlNet training are supported.
+*   **Kwai Kolors:** SDXL-based model with ChatGLM 6B text encoder
+*   **Lumina2:** LoRA, Lycoris, and full finetuning are supported
+*   **Cosmos2 Predict (Image)** Lycoris or full-rank tuning are supported
 
-## Tutorials & Guides
+**Hardware Requirements:**
 
-*   **Tutorial:**  Start your training with our detailed [tutorial](/TUTORIAL.md).
-*   **Quick Start:** Jump right in with our [Quick Start](/documentation/QUICKSTART.md) guide.
-*   **DeepSpeed:** Optimize for memory-constrained systems with [DeepSpeed](/documentation/DEEPSPEED.md).
-*   **Multi-Node Training:** Configure multi-node training using the guide [here](/documentation/DISTRIBUTED.md).
+*   **NVIDIA:** 3080 and up recommended.
+*   **AMD:** LoRA and full-rank tuning verified on 7900 XTX 24GB and MI300X.
+*   **Apple:** M3 Max (128GB) is recommended
+*   Specific requirements for models like HiDream, Flux.1, SDXL, and others are detailed in the original README.
 
-## Design Philosophy
+**Further Information:**
 
-*   **Simplicity:** Easy-to-use with sensible defaults.
-*   **Versatility:** Handles datasets of varying sizes.
-*   **Cutting-Edge:** Incorporates proven effective features.
-
-## Hardware Requirements
-
-Recommendations vary by model and task. Generally, NVIDIA GPUs (3080+) are well-supported. AMD, and Apple Silicon are also supported.
-
-*   **HiDream:** A100-80G (Full tune with DeepSpeed), A100-40G (LoRA, LoKr), 3090 24G (LoRA, LoKr)
-*   **Flux.1:** A100-80G (Full tune with DeepSpeed), A100-40G (LoRA, LoKr), 3090 24G (LoRA, LoKr), 4060 Ti 16G, 4070 Ti 16G, 3080 16G (int8, LoRA, LoKr), 4070 Super 12G, 3080 10G, 3060 12GB (nf4, LoRA, LoKr)
-*   **SDXL:** A100-80G (EMA, large batches, LoRA @ insane batch sizes), A6000-48G (EMA@768px, no EMA@1024px, LoRA @ high batch sizes), A100-40G (EMA@1024px, EMA@768px, EMA@512px, LoRA @ high batch sizes), 4090-24G (EMA@1024px, batch size 1-4, LoRA @ medium-high batch sizes), 4080-12G (LoRA @ low-medium batch sizes)
-*   **Stable Diffusion 2.x:** 16GB or better.
-
-*(Consult the original README for more detailed hardware recommendations.)*
-
-## Toolkit
-
-SimpleTuner includes a useful toolkit for managing your training workflows. Refer to the [toolkit documentation](/toolkit/README.md) for details.
-
-## Setup
-
-Find detailed setup instructions in the [installation documentation](/INSTALL.md).
-
-## Troubleshooting
-
-*   **Debugging:** Enable debug logs with `export SIMPLETUNER_LOG_LEVEL=DEBUG`.
-*   **Performance Analysis:** Time training loops with `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`.
-*   **Options:** View all available options in [this documentation](/OPTIONS.md).
+*   Explore the [toolkit documentation](/toolkit/README.md) for tools.
+*   Read the [installation documentation](/INSTALL.md) for setup instructions.
+*   For troubleshooting, use the environment variables (see original README)
+*   See the [options documentation](/OPTIONS.md) for a comprehensive list of options.

@@ -1,52 +1,100 @@
-# Stable Diffusion Web UI: Unleash Your Creativity with AI Art Generation
+# Stable Diffusion Web UI: Unleash Your Creativity with AI-Powered Image Generation
 
-**Create stunning AI-generated images with ease using the Stable Diffusion web UI, a powerful and user-friendly interface built with Gradio.** ([Original Repository](https://github.com/AUTOMATIC1111/stable-diffusion-webui))
+**Create stunning images from text prompts with the Stable Diffusion web UI, a user-friendly interface built with Gradio.** ([Original Repository](https://github.com/AUTOMATIC1111/stable-diffusion-webui))
 
-## Key Features:
+## Key Features
 
-*   **Versatile Generation Modes:** Utilize txt2img and img2img modes for diverse image creation workflows.
-*   **One-Click Installation:** Get up and running quickly with an easy-to-use installation script (Python and Git required).
-*   **Advanced Editing Tools:** Explore features like Outpainting, Inpainting, Color Sketch, and Prompt Matrix for fine-grained control.
-*   **Attention and Prompting:** Refine image generation by using attention mechanisms to focus on specific prompt elements, including negative prompts for unwanted features.
-*   **Upscaling and Enhancement:** Enhance image quality with built-in tools like GFPGAN, CodeFormer, RealESRGAN, and other upscalers.
-*   **Interactive Features:** Enjoy live previews, progress bars, and the ability to interrupt processing at any time.
-*   **Extensive Customization:** Tailor your experience with settings for sampling methods, aspect ratios, and generation parameters (saved with your images!).
-*   **Advanced Techniques:** Experiment with Textual Inversion, X/Y/Z plots, Loopback, and Composable Diffusion for advanced artistic control.
-*   **Community Integration:** Benefit from community-developed extensions, including History Tab and Aesthetic Gradients.
-*   **Model Support:** Utilize Stable Diffusion 2.0 and Alt-Diffusion models, along with support for Loras, Hypernetworks, and custom checkpoints.
-*   **API and More:** Leverage an API for integration, support for dedicated inpainting models, and additional features for an optimized AI art workflow.
+*   **Versatile Image Generation Modes:**
+    *   txt2img and img2img for text-to-image and image-to-image transformations.
+    *   Outpainting and Inpainting for extending and modifying images.
+    *   Color Sketch to generate images from sketches.
+    *   Prompt Matrix to explore multiple prompt combinations.
+*   **Advanced Image Manipulation:**
+    *   Stable Diffusion Upscale for enhancing image resolution.
+    *   Attention mechanism to fine-tune specific text elements within prompts.
+    *   Loopback for iterative img2img processing.
+    *   X/Y/Z plot for visualizing image generation parameters.
+*   **Enhanced Prompting & Control:**
+    *   Negative prompt for specifying unwanted image elements.
+    *   Styles for saving and applying prompt elements easily.
+    *   Variations for generating slight image alterations.
+    *   Seed resizing for generating images at different resolutions.
+    *   CLIP interrogator for generating prompts from images.
+    *   Prompt editing to modify prompts mid-generation.
+    *   Composable Diffusion for combining multiple prompts.
+    *   No token limit for prompts.
+*   **Customization & Extensibility:**
+    *   Extensive settings page.
+    *   Support for custom scripts via community extensions.
+    *   Training tab for hypernetworks and embeddings.
+    *   Hypernetworks, Loras, and Embeddings for style and content customization.
+    *   Integration of DeepDanbooru for anime prompts.
+    *   Xformers for performance gains on select GPUs.
+    *   Checkpoint merging
+    *   Automatic loading of generation parameters from images.
+*   **Image Enhancement Tools:**
+    *   GFPGAN and CodeFormer for face restoration.
+    *   RealESRGAN and ESRGAN for image upscaling.
+    *   SwinIR, Swin2SR and LDSR for upscaling.
+*   **Performance and Convenience:**
+    *   Progress bar with live image preview.
+    *   Support for 4GB and 2GB video cards.
+    *   Correct seeds for batches.
+    *   Live prompt token length validation.
+    *   Checkpoint reloading on the fly.
+    *   Estimated completion time in progress bar.
+*   **Advanced Features:**
+    *   Batch Processing
+    *   Highres Fix
+    *   API
+    *   Support for Stable Diffusion 2.0 and Alt-Diffusion.
+    *   Support for dedicated inpainting models.
 
 ## Installation and Running
 
-**Ensure you meet the [dependencies](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Dependencies) before you begin.**
+Refer to the [installation instructions](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki) for detailed guidance on setting up the web UI on various platforms, including:
 
-### Windows Installation
+*   NVidia GPUs (Recommended)
+*   AMD GPUs
+*   Intel CPUs and GPUs
+*   Ascend NPUs
+*   Apple Silicon
 
-1.  Download `sd.webui.zip` from the [releases](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases).
+You can also leverage online services such as Google Colab, using the [list of online services](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Online-Services).
+
+### Quick Installation (Windows)
+
+1.  Download `sd.webui.zip` from [v1.0.0-pre](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases/tag/v1.0.0-pre) and extract.
 2.  Run `update.bat`.
 3.  Run `run.bat`.
-> For more details see [Install-and-Run-on-NVidia-GPUs](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-NVidia-GPUs)
 
-### Automatic Installation (Windows/Linux)
+### Automatic Installation (Windows)
 
-1.  Install Python 3.10.6 (recommended) and Git.
-2.  Clone the repository using `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git`.
-3.  Run `webui-user.bat` (Windows) or `webui.sh` (Linux).
+1.  Install Python 3.10.6, checking "Add Python to PATH".
+2.  Install Git.
+3.  Clone the repository: `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git`.
+4.  Run `webui-user.bat`.
 
-### Other Installation Options
+### Automatic Installation (Linux)
 
-*   **Apple Silicon:** Follow the instructions [here](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon).
-*   **Online Services:** Explore online services, listed [here](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Online-Services).
+1.  Install dependencies: (Debian-based: `sudo apt install wget git python3 python3-venv libgl1 libglib2.0-0`; Red Hat-based: `sudo dnf install wget git python3 gperftools-libs libglvnd-glx`; openSUSE-based: `sudo zypper install wget git python3 libtcmalloc4 libglvnd`; Arch-based: `sudo pacman -S wget git python3`).  Consider Python 3.10 or 3.11 if on a newer system.
+2.  Navigate to your desired installation directory.
+3.  Run: `wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh` or `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui`.
+4.  Run `webui.sh`.
+5.  See `webui-user.sh` for configuration options.
+
+### Installation on Apple Silicon
+
+Find instructions [here](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon).
 
 ## Contributing
 
-Contribute to the project: [Contributing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing)
+See [Contributing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing) for information on how to contribute to the project.
 
 ## Documentation
 
-Comprehensive documentation is available on the project's [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki).
-For SEO purposes, here is the [crawlable wiki](https://github-wiki-see.page/m/AUTOMATIC1111/stable-diffusion-webui/wiki).
+Extensive documentation is available on the project's [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki), including a [crawlable wiki](https://github-wiki-see.page/m/AUTOMATIC1111/stable-diffusion-webui/wiki) for search engine optimization.
 
 ## Credits
 
-See `Settings -> Licenses` or `html/licenses.html` for licenses and credits.
+A comprehensive list of credits and licenses for borrowed code can be found in the `Settings -> Licenses` screen and the `html/licenses.html` file.

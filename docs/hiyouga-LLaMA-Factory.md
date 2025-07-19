@@ -1,6 +1,6 @@
-# LLaMA Factory: Fine-Tune Any LLM with Ease
+# LLaMA Factory: Fine-tune Any LLM with Ease
 
-Fine-tune 100+ large language models effortlessly using a zero-code CLI and Web UI.  [Access the original repo](https://github.com/hiyouga/LLaMA-Factory) for more details.
+**Unlock the power of large language models (LLMs) with LLaMA Factory, the ultimate open-source toolkit for fine-tuning over 100+ models like Llama, Mistral, and Qwen!** ([Original Repository](https://github.com/hiyouga/LLaMA-Factory))
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=social)](https://github.com/hiyouga/LLaMA-Factory/stargazers)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hiyouga/LLaMA-Factory)](https://github.com/hiyouga/LLaMA-Factory/commits/main)
@@ -71,139 +71,105 @@ Choose your path:
 - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Quickstart](#quickstart)
-  - [Fine-Tuning with LLaMA Board GUI](#fine-tuning-with-llama-board-gui-powered-by-gradio)
-  - [Deployment](#deployment)
+  - [Web UI](#fine-tuning-with-llama-board-gui-powered-by-gradio)
+  - [API Deployment](#deploy-with-openai-style-api-and-vllm)
+- [Resources](#resources)
 - [Projects using LLaMA Factory](#projects-using-llama-factory)
-- [Citation](#citation)
 - [License](#license)
+- [Citation](#citation)
 - [Acknowledgement](#acknowledgement)
-- [Star History](#star-history)
 
 ## Key Features
 
-*   **Broad Model Support**: Fine-tune LLaMA, Mistral, Mixtral, Qwen, Gemma, Phi, and more.
-*   **Versatile Training Methods**: Includes (Continuous) pre-training, (multimodal) supervised fine-tuning, reward modeling, PPO, DPO, KTO, ORPO, and SimPO.
-*   **Efficient Resource Utilization**: Supports 16-bit full-tuning, freeze-tuning, LoRA, and 2/3/4/5/6/8-bit QLoRA.
-*   **Advanced Optimization Algorithms**: Implements GaLore, BAdam, APOLLO, Adam-mini, Muon, DoRA, LongLoRA, and others.
-*   **Practical Performance Enhancements**: Integrates FlashAttention-2, Unsloth, Liger Kernel, and RoPE scaling.
-*   **Wide Application Range**: Suitable for multi-turn dialogue, tool use, image understanding, and more.
-*   **Comprehensive Monitoring**: Offers support for LlamaBoard, TensorBoard, Wandb, MLflow, and SwanLab.
-*   **Fast Inference Options**: Includes OpenAI-style API, Gradio UI, and CLI with vLLM or SGLang backend.
+*   **Wide Model Support:** Fine-tune 100+ LLMs including LLaMA, Mistral, Qwen, and more.
+*   **Flexible Training:** Supports various methods: pre-training, SFT, reward modeling, PPO, DPO, and efficient techniques like LoRA and QLoRA.
+*   **Advanced Algorithms:**  Integrates cutting-edge optimizers and tricks to enhance training efficiency and performance.
+*   **Experiment Tracking:** Monitor your experiments with tools like LlamaBoard, TensorBoard, Wandb, and SwanLab.
+*   **Fast Inference:** Deploy your fine-tuned models with an OpenAI-style API and vLLM for high-speed performance.
 
 ## Supported Models
 
-*   [Baichuan 2](https://huggingface.co/baichuan-inc)
-*   [BLOOM/BLOOMZ](https://huggingface.co/bigscience)
-*   [ChatGLM3](https://huggingface.co/THUDM)
-*   [Command R](https://huggingface.co/CohereForAI)
-*   [DeepSeek (Code/MoE)](https://huggingface.co/deepseek-ai)
-*   [DeepSeek 2.5/3](https://huggingface.co/deepseek-ai)
-*   [DeepSeek R1 (Distill)](https://huggingface.co/deepseek-ai)
-*   [Falcon](https://huggingface.co/tiiuae)
-*   [Falcon-H1](https://huggingface.co/tiiuae)
-*   [Gemma/Gemma 2/CodeGemma](https://huggingface.co/google)
-*   [Gemma 3/Gemma 3n](https://huggingface.co/google)
-*   [GLM-4/GLM-4-0414/GLM-Z1](https://huggingface.co/THUDM)
-*   [GLM-4.1V](https://huggingface.co/THUDM)
-*   [GPT-2](https://huggingface.co/openai-community)
-*   [Granite 3.0-3.3](https://huggingface.co/ibm-granite)
-*   [Hunyuan](https://huggingface.co/tencent/)
-*   [Index](https://huggingface.co/IndexTeam)
-*   [InternLM 2-3](https://huggingface.co/internlm)
-*   [InternVL 2.5-3](https://huggingface.co/OpenGVLab)
-*   [Kimi-VL](https://huggingface.co/moonshotai)
-*   [Llama](https://github.com/facebookresearch/llama)
-*   [Llama 2](https://huggingface.co/meta-llama)
-*   [Llama 3-3.3](https://huggingface.co/meta-llama)
-*   [Llama 4](https://huggingface.co/meta-llama)
-*   [Llama 3.2 Vision](https://huggingface.co/meta-llama)
-*   [LLaVA-1.5](https://huggingface.co/llava-hf)
-*   [LLaVA-NeXT](https://huggingface.co/llava-hf)
-*   [LLaVA-NeXT-Video](https://huggingface.co/llava-hf)
-*   [MiMo](https://huggingface.co/XiaomiMiMo)
-*   [MiniCPM](https://huggingface.co/openbmb)
-*   [MiniCPM-o-2.6/MiniCPM-V-2.6](https://huggingface.co/openbmb)
-*   [Ministral/Mistral-Nemo](https://huggingface.co/mistralai)
-*   [Mistral/Mixtral](https://huggingface.co/mistralai)
-*   [Mistral Small](https://huggingface.co/mistralai)
-*   [OLMo](https://huggingface.co/allenai)
-*   [PaliGemma/PaliGemma2](https://huggingface.co/google)
-*   [Phi-1.5/Phi-2](https://huggingface.co/microsoft)
-*   [Phi-3/Phi-3.5](https://huggingface.co/microsoft)
-*   [Phi-3-small](https://huggingface.co/microsoft)
-*   [Phi-4](https://huggingface.co/microsoft)
-*   [Pixtral](https://huggingface.co/mistralai)
-*   [Qwen (1-2.5) (Code/Math/MoE/QwQ)](https://huggingface.co/Qwen)
-*   [Qwen3 (MoE)](https://huggingface.co/Qwen)
-*   [Qwen2-Audio](https://huggingface.co/Qwen)
-*   [Qwen2.5-Omni](https://huggingface.co/Qwen)
-*   [Qwen2-VL/Qwen2.5-VL/QVQ](https://huggingface.co/Qwen)
-*   [Seed Coder](https://huggingface.co/ByteDance-Seed)
-*   [Skywork o1](https://huggingface.co/Skywork)
-*   [StarCoder 2](https://huggingface.co/bigcode)
-*   [TeleChat2](https://huggingface.co/Tele-AI)
-*   [XVERSE](https://huggingface.co/xverse)
-*   [Yi/Yi-1.5 (Code)](https://huggingface.co/01-ai)
-*   [Yi-VL](https://huggingface.co/01-ai)
-*   [Yuan 2](https://huggingface.co/IEITYuan)
-
-    For a full list of supported models, see [constants.py](src/llamafactory/extras/constants.py).
+*   **Wide Range of Models**:  Baichuan, BLOOM, ChatGLM3, DeepSeek, Gemma, Llama, Mistral, Qwen, and more. (See the full list [here](#supported-models))
+*   **Model Size and Template Compatibility**: The table provides a comprehensive overview of supported models with their sizes and template requirements.
 
 ## Supported Training Approaches
 
-*   Pre-Training
-*   Supervised Fine-Tuning
-*   Reward Modeling
-*   PPO Training
-*   DPO Training
-*   KTO Training
-*   ORPO Training
-*   SimPO Training
+*   **Full flexibility**: Fine-tuning, Freeze-tuning, LoRA, QLoRA methods.
+*   **Diverse Training Methods**: Pre-training, Supervised Fine-Tuning, Reward Modeling, PPO Training, DPO Training, KTO Training, ORPO Training, and SimPO Training. (Refer to the [list](#supported-training-approaches) for details.)
 
 ## Getting Started
 
 ### Installation
 
-Install LLaMA Factory from source using:
+Follow these steps to get started with LLaMA Factory:
 
-```bash
-git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
-cd LLaMA-Factory
-pip install -e ".[torch,metrics]" --no-build-isolation
-```
+1.  **Install from Source**:
+
+    ```bash
+    git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
+    cd LLaMA-Factory
+    pip install -e ".[torch,metrics]" --no-build-isolation
+    ```
+
+    *   Extra dependencies available: torch, torch-npu, metrics, deepspeed, liger-kernel, bitsandbytes, hqq, eetq, gptq, aqlm, vllm, sglang, galore, apollo, badam, adam-mini, qwen, minicpm\_v, openmind, swanlab, dev
+2.  **Docker Installation:**
+    Run pre-built docker image or build your own. Instructions available in the [docs](#build-docker).
+3.  **Virtual Environment:**
+    Optionally, create a virtual environment for isolated package management using uv.
+
+    ```bash
+    uv sync --extra torch --extra metrics --prerelease=allow
+    ```
 
 ### Quickstart
 
-Fine-tune, infer, and merge the Llama3-8B-Instruct model with these commands:
+Quickly fine-tune, infer and merge.
 
-```bash
-llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
-llamafactory-cli chat examples/inference/llama3_lora_sft.yaml
-llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
-```
+1.  **Fine-tuning**:
 
-See [examples/README.md](examples/README.md) for more usage examples.
+    ```bash
+    llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
+    ```
 
-### Fine-Tuning with LLaMA Board GUI
+2.  **Inference**:
 
-Launch the web UI with:
+    ```bash
+    llamafactory-cli chat examples/inference/llama3_lora_sft.yaml
+    ```
+
+3.  **Merging**:
+
+    ```bash
+    llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
+    ```
+
+    *   See [examples/README.md](examples/README.md) for advanced usage (including distributed training).
+
+### Fine-Tuning with LLaMA Board GUI (powered by [Gradio](https://github.com/gradio-app/gradio))
 
 ```bash
 llamafactory-cli webui
 ```
 
-### Deployment
-
-*   **OpenAI-style API with vLLM**: Run a fast inference server with:
+### Deploy with OpenAI-style API and vLLM
 
 ```bash
 API_PORT=8000 llamafactory-cli api examples/inference/llama3.yaml infer_backend=vllm vllm_enforce_eager=true
 ```
 
+## Resources
+
+*   **Documentation:**  Check the [documentation](https://llamafactory.readthedocs.io/en/latest/) for a deeper dive.
+*   **Colab Notebook:** Try the free [Colab notebook](https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing) for a quick start.
+*   **Examples:** Explore the detailed [examples](examples/README.md) to get your hands dirty.
+
 ## Projects using LLaMA Factory
 
-*   Wang et al. ESRL: Efficient Sampling-based Reinforcement Learning for Sequence Generation. 2023. [[arxiv]](https://arxiv.org/abs/2308.02223)
-*   And many more (see full list in original README)
+LLaMA Factory is being used in a variety of research and commercial applications.  Explore the projects [here](#projects-using-llama-factory).
+
+## License
+
+This project is licensed under the [Apache-2.0 License](LICENSE).
 
 ## Citation
 
@@ -219,14 +185,6 @@ API_PORT=8000 llamafactory-cli api examples/inference/llama3.yaml infer_backend=
 }
 ```
 
-## License
-
-This project is licensed under the [Apache-2.0 License](LICENSE).
-
 ## Acknowledgement
 
-This project is built upon the works of PEFT, TRL, QLoRA, and FastChat.
-
-## Star History
-
-![Star History Chart](https://api.star-history.com/svg?repos=hiyouga/LLaMA-Factory&type=Date)
+This project is based on the works of [PEFT](https://github.com/huggingface/peft), [TRL](https://github.com/huggingface/trl), [QLoRA](https://github.com/artidoro/qlora) and [FastChat](https://github.com/lm-sys/FastChat).

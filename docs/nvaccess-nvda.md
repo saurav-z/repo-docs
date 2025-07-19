@@ -1,52 +1,44 @@
 # NVDA: Free & Open Source Screen Reader for Windows
 
-**NVDA (NonVisual Desktop Access) is a powerful, free, and open-source screen reader that empowers blind and vision-impaired users to access and interact with Microsoft Windows.**
+**Empowering users with visual impairments, NVDA (NonVisual Desktop Access) is a powerful, free, and open-source screen reader for Microsoft Windows.** Learn more and download your copy from the original repository: [https://github.com/nvaccess/nvda](https://github.com/nvaccess/nvda).
 
-[Visit the original NVDA repository on GitHub](https://github.com/nvaccess/nvda)
+## Key Features of NVDA:
 
-## Key Features
+*   **Free and Open Source:** NVDA is completely free to use and distribute, with its source code available for modification and enhancement.
+*   **Screen Reader Functionality:** Reads aloud text on the screen, describes elements, and provides access to applications and the operating system.
+*   **Supports Multiple Applications:** Works with popular applications such as web browsers, email clients, word processors, and more.
+*   **Customizable:** Offers extensive customization options for speech, Braille, and input methods.
+*   **Global Community Support:** Developed by NV Access and supported by a worldwide community of contributors.
 
-*   **Completely Free:**  NVDA is free to download, use, and share, making it accessible to everyone.
-*   **Open Source:**  Developed collaboratively by NV Access and a global community, fostering transparency and continuous improvement.
-*   **Comprehensive Accessibility:** Allows users to navigate applications, browse the web, read documents, and more.
-*   **Regular Updates:** Benefit from ongoing development and enhancements to support the latest Windows features and applications.
-*   **Add-on Support:** Expand functionality with a wide range of user-created add-ons.
-*   **Multilingual Support:** Available in multiple languages to serve a global user base.
+## Getting Started
 
-## How NVDA Works
+*   Visit the main [NV Access](http://www.nvaccess.org/) website for downloads and further information.
 
-NVDA works by interpreting the visual content on your screen and providing it to the user through synthesized speech or braille. This allows users to "see" what is on their screen, even if they cannot see the screen visually.
+## Community and Support
 
-## Community & Support
+*   [Support and information for NVDA users](https://www.nvaccess.org/get-help/)
+*   [Report an issue or feature request](./projectDocs/issues/readme.md)
+*   [Getting add-ons](https://download.nvaccess.org/documentation/userGuide.html#AddonsManager)
+*   [Contact list](./projectDocs/community/expertsList.md) for NV Access and community experts.
+*   [More important links and community information](./projectDocs/community/readme.md)
 
-The NVDA project thrives on community involvement.  Here's how to connect and contribute:
+## Contributing
 
-*   **Get Support:**  Find help and information for NVDA users on the [NV Access website](https://www.nvaccess.org/get-help/).
-*   **Report Issues & Feature Requests:**  Share your feedback and suggest improvements via [our issues page](./projectDocs/issues/readme.md).
-*   **Download Add-ons:** Extend NVDA's functionality with add-ons from the [User Guide](https://download.nvaccess.org/documentation/userGuide.html#AddonsManager).
-*   **Contact Experts:** Reach out to NV Access and community experts through the [contact list](./projectDocs/community/expertsList.md).
-*   **Learn More:** Explore important links and community information at [our community page](./projectDocs/community/readme.md).
+*   For information on contributing to NVDA, see our [contributing guide](./.github/CONTRIBUTING.md). This includes information on reporting issues, triaging issues, testing, translating, contributing code/documentation and creating add-ons.
 
-## Contribute to NVDA
+## Project Governance
 
-We welcome contributions from the community! Learn how to get involved in our [contributing guide](./.github/CONTRIBUTING.md). This includes how to:
+*   NVDA operates under a [Citizen and Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+*   The project is guided by a [product vision statement and set of principles](./projectDocs/product_vision.md).
+*   See the [development roadmap](https://www.nvaccess.org/post/nvda-roadmap/) for planned features.
 
-*   Report and triage issues
-*   Test NVDA
-*   Translate NVDA
-*   Contribute code and documentation
-*   Create add-ons
+## Licensing
 
-## Project Resources
-
-*   **Code of Conduct:**  [CODE_OF_CONDUCT.md]
-*   **Product Vision & Principles:**  [./projectDocs/product_vision.md]
-*   **Development Roadmap:** [NV Access Roadmap](https://www.nvaccess.org/post/nvda-roadmap/)
-*   **License:** [./copying.txt] (modified GNU General Public License version 2)
+NVDA is available under a modified GNU General Public License version 2. Please refer to [our license](./copying.txt) for more information.
 
 ## Acknowledgements
 
-We extend our gratitude to [SignPath](https://www.signpath.io/) for providing code signing services.
+We extend our gratitude to [SignPath](https://www.signpath.io/) for their support in providing code signing services.
 
 ## Status Checks
 

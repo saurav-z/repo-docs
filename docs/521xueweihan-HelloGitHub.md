@@ -1,29 +1,30 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif"/>
-  <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
 </p>
 
-## HelloGitHub: Discover Awesome Open Source Projects 🚀
+<p align="center">
+  <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
+  <a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
+    <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
+</p>
 
-HelloGitHub is your gateway to the exciting world of open-source projects on GitHub. This repository curates and shares interesting, beginner-friendly open-source projects, making it easy to find your next project or learn something new!
+# HelloGitHub: Discover Awesome Open Source Projects
 
-**[View the original repository on GitHub](https://github.com/521xueweihan/HelloGitHub)**
+**HelloGitHub is your gateway to the exciting world of open-source projects on GitHub, helping you discover interesting and beginner-friendly projects.**  Find the original repository [here](https://github.com/521xueweihan/HelloGitHub).
 
-### Key Features:
+## Key Features
 
-*   **Curated Content:** Discover hand-picked open-source projects.
-*   **Beginner-Friendly:** Focus on projects suitable for newcomers.
-*   **Monthly Updates:** New projects released on the 28th of each month.
-*   **Diverse Topics:** Covers a wide range of projects, including interesting, practical, and enterprise-level projects.
-*   **Additional Resources:** Includes open-source books and practical project examples.
-*   **Multiple Languages:** Available in Chinese, English, and Japanese.
+*   **Curated Content:** Discover hand-picked, interesting, and easy-to-understand open-source projects.
+*   **Monthly Updates:** Stay up-to-date with the latest trends and projects, with monthly releases on the 28th of each month.
+*   **Diverse Topics:** Explore projects related to exciting fields, including open-source books, practical projects, and enterprise-level applications.
+*   **Ease of Learning:** Quickly grasp the essence of open-source projects and get inspired.
+*   **Community Driven:** Contribute by recommending or self-recommending projects.
 
-### Content
+## Contents
 
-Find the latest issues and resources:
-
-*   **[Official Website](https://hellogithub.com/)**
-*   **[HelloGitHub WeChat Public Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png)**
+Access the best reading experience via the [Official Website](https://hellogithub.com/) or the [HelloGitHub Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -36,14 +37,44 @@ Find the latest issues and resources:
 | [Issue 85](/content/HelloGitHub85.md) | [Issue 84](/content/HelloGitHub84.md) | [Issue 83](/content/HelloGitHub83.md) | [Issue 82](/content/HelloGitHub82.md) | [Issue 81](/content/HelloGitHub81.md) |
 | [Issue 80](/content/HelloGitHub80.md) | [Issue 79](/content/HelloGitHub79.md) | [Issue 78](/content/HelloGitHub78.md) | [Issue 77](/content/HelloGitHub77.md) | [Issue 76](/content/HelloGitHub76.md) |
 
-### Contribute
+Contribute by [recommending or self-recommending](https://hellogithub.com/periodical) projects and become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
 
-We welcome contributions!  You can [recommend or self-recommend](https://hellogithub.com/periodical) projects or become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
+## Sponsorship
 
-### Sponsorship
+<table>
+  <thead>
+    <tr>
+      <th align="center" style="width: 80px;">
+        <a href="https://www.compshare.cn/?utm_term=logo&utm_campaign=hellogithub&utm_source=otherdsp&utm_medium=display&ytag=logo_hellogithub_otherdsp_display">          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/ucloud.png" width="60px"><br>
+          <sub>UCloud</sub><br>
+          <sub>超值的GPU云服务</sub>
+        </a>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://www.upyun.com/?from=hellogithub">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/upyun.png" width="60px"><br>
+          <sub>CDN</sub><br>
+          <sub>开启全网加速</sub>
+        </a>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://github.com/OpenIMSDK/Open-IM-Server">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/im.png" width="60px"><br>
+          <sub>OpenIM</sub><br>
+          <sub>开源IM力争No.1</sub>
+        </a>
+      </th>
+      <th align="center" style="width: 80px;">
+        <a href="https://www.qiniu.com/products/ai-token-api?utm_source=hello">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/qiniu.jpg" width="60px"><br>
+          <sub>七牛云</sub><br>
+          <sub>百万 Token 免费体验</sub>
+        </a>
+      </th>
+    </tr>
+  </thead>
+</table>
 
-[Sponsorship logos remain unchanged]
+## License
 
-### License
-
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  <a href="mailto:595666367@qq.com">Contact Me</a>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact  <a href="mailto:595666367@qq.com">595666367@qq.com</a>
