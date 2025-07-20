@@ -1,16 +1,25 @@
-# Agent S: Revolutionizing Computer Use with Intelligent GUI Agents
+# Agent S: Revolutionizing Computer Interaction with Intelligent GUI Agents
 
-> **Empowering AI with autonomous computer interaction, Agent S is a compositional generalist-specialist framework that allows intelligent GUI agents to perform complex tasks autonomously.** <br/> <br/>
-> [**View the original repository**](https://github.com/simular-ai/Agent-S)
-
-Agent S is an open-source framework designed to enable autonomous interaction with computers through an Agent-Computer Interface. Built with cutting-edge AI and automation, Agent S excels at learning from past experiences and executing complex tasks autonomously on your computer. Explore its capabilities and contribute to the future of agent-based systems!
-
-*   [Agent S2 Blog](https://www.simular.ai/articles/agent-s2-technical-review) | [Agent S2 Paper (COLM 2025)](https://arxiv.org/abs/2504.00906) | [Agent S2 Video](https://www.youtube.com/watch?v=wUGVQl7c0eg)
-*   [Agent S1 Blog](https://www.simular.ai/agent-s) | [Agent S1 Paper (ICLR 2025)](https://arxiv.org/abs/2410.08164) | [Agent S1 Video](https://www.youtube.com/watch?v=OBDE3Knte0g)
+**Agent S** is an innovative, open-source framework designed to empower AI agents to interact with computers autonomously.  Build intelligent GUI agents that can learn from experiences and perform complex tasks on your computer.  [Explore the original repository](https://github.com/simular-ai/Agent-S) for deeper insights and contributions.
 
 <p align="center">
-<a href="https://trendshift.io/repositories/13151" target="_blank">
-<img src="https://trendshift.io/api/badge/repositories/13151" alt="simular-ai%2FAgent-S | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+    <img src="./images/agent_s2_teaser.png" width="800">
+</p>
+
+**Key Features:**
+
+*   **Autonomous Computer Interaction:** Enables agents to perform tasks independently on your computer.
+*   **Open-Source Framework:** Built for AI researchers, automation enthusiasts, and anyone interested in cutting-edge agent-based systems.
+*   **Compositional Generalist-Specialist Architecture:** Leverages a novel approach for efficient task execution.
+*   **State-of-the-Art Results:** Achieves new SOTA performance on OSWorld, WindowsAgentArena, and AndroidWorld.
+*   **GUI Agent Library:** Simple to use library for building and testing agents.
+
+**[Agent S2 Blog](https://www.simular.ai/articles/agent-s2-technical-review) | [Agent S2 Paper (COLM 2025)](https://arxiv.org/abs/2504.00906) | [Agent S2 Video](https://www.youtube.com/watch?v=wUGVQl7c0eg)**
+
+**[Agent S1 Blog](https://www.simular.ai/agent-s) | [Agent S1 Paper (ICLR 2025)](https://arxiv.org/abs/2410.08164) | [Agent S1 Video](https://www.youtube.com/watch?v=OBDE3Knte0g)**
+
+<p align="center">
+  <a href="https://trendshift.io/repositories/13151" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13151" alt="simular-ai%2FAgent-S | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
 <p align="center">
@@ -25,33 +34,25 @@ Agent S is an open-source framework designed to enable autonomous interaction wi
 
 <div align="center">
   <!-- Keep these links. Translations will automatically update with the README. -->
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=de">Deutsch</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=es">Español</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=fr">français</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ja">日本語</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ko">한국어</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=pt">Português</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ru">Русский</a> |
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=de">Deutsch</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=es">Español</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=fr">français</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ja">日本語</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ko">한국어</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=pt">Português</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ru">Русский</a> | 
   <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=zh">中文</a>
 </div>
 
-## Key Features
+## 🥳 Recent Updates
 
-*   **Autonomous Computer Interaction:** Enables AI agents to interact with computer GUIs.
-*   **Compositional Generalist-Specialist Framework:** Leverages a modular design for flexible task handling.
-*   **Open-Source:** Community-driven development for collaborative innovation.
-*   **State-of-the-art Results:** Achieves SOTA performance in various benchmarks, outperforming competitors.
-*   **Easy to Use:**  The framework is designed for easy setup and integration with existing tools and environments.
-
-## Updates
-
-*   **2025/07/07**: Agent S2 paper accepted to COLM 2025!
-*   **2025/04/01**: Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
-*   **2025/03/12**: Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
-*   **2025/01/22**: The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
-*   **2025/01/21**: Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
-*   **2024/12/05**: Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
-*   **2024/10/10**: Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase!
+*   **2025/07/07:** [Agent S2 paper](https://arxiv.org/abs/2504.00906) accepted to COLM 2025!
+*   **2025/04/01:** Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results.
+*   **2025/03/12:** Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), achieving SOTA for computer use agents.
+*   **2025/01/22:** [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
+*   **2025/01/21:** Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) with support for Linux and Windows!
+*   **2024/12/05:** Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, supporting Mac, OSWorld, and WindowsAgentArena.
+*   **2024/10/10:** Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase.
 
 ## Table of Contents
 
@@ -107,11 +108,11 @@ Agent S is an open-source framework designed to enable autonomous interaction wi
 
 ## 🛠️ Installation & Setup
 
-> **Note**: Our agent returns `pyautogui` code and is intended for a single monitor screen.
-
-> ❗**Warning**❗: If you are on a Linux machine, creating a `conda` environment will interfere with `pyatspi`. As of now, there's no clean solution for this issue. Proceed through the installation without using `conda` or any virtual environment.
-
-> ⚠️**Disclaimer**⚠️: To leverage the full potential of Agent S2, we utilize [UI-TARS](https://github.com/bytedance/UI-TARS) as a grounding model (7B-DPO or 72B-DPO for better performance). They can be hosted locally, or on Hugging Face Inference Endpoints. Our code supports Hugging Face Inference Endpoints. Check out [Hugging Face Inference Endpoints](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints) for more information on how to set up and query this endpoint. However, running Agent S2 does not require this model, and you can use alternative API based models for visual grounding, such as Claude.
+>   **Note**: Our agent returns `pyautogui` code and is intended for a single monitor screen.
+>
+>   ❗**Warning**❗: If you are on a Linux machine, creating a `conda` environment will interfere with `pyatspi`. As of now, there's no clean solution for this issue. Proceed through the installation without using `conda` or any virtual environment.
+>
+>   ⚠️**Disclaimer**⚠️: To leverage the full potential of Agent S2, we utilize [UI-TARS](https://github.com/bytedance/UI-TARS) as a grounding model (7B-DPO or 72B-DPO for better performance). They can be hosted locally, or on Hugging Face Inference Endpoints. Our code supports Hugging Face Inference Endpoints. Check out [Hugging Face Inference Endpoints](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints) for more information on how to set up and query this endpoint. However, running Agent S2 does not require this model, and you can use alternative API based models for visual grounding, such as Claude.
 
 Install the package:
 
@@ -173,14 +174,13 @@ Agent S works best with web-knowledge retrieval. To enable this feature, you nee
     ```
 
 6.  Our implementation of Agent S incorporates the Perplexica API to integrate a search engine capability, which allows for a more convenient and responsive user experience. If you want to tailor the API to your settings and specific requirements, you may modify the URL and the message of request parameters in  `agent_s/query_perplexica.py`. For a comprehensive guide on configuring the Perplexica API, please refer to [Perplexica Search API Documentation](https://github.com/ItzCrazyKns/Perplexica/blob/master/docs/API/SEARCH.md).
-
     For a more detailed setup and usage guide, please refer to the [Perplexica Repository](https://github.com/ItzCrazyKns/Perplexica.git).
 
-> ❗**Warning**❗: The agent will directly run python code to control your computer. Please use with care.
+>   ❗**Warning**❗: The agent will directly run python code to control your computer. Please use with care.
 
 ## 🚀 Usage
 
-> **Note**: Our best configuration uses Claude 3.7 with extended thinking and UI-TARS-72B-DPO. If you are unable to run UI-TARS-72B-DPO due to resource constraints, UI-TARS-7B-DPO can be used as a lighter alternative with minimal performance degradation.
+>   **Note**: Our best configuration uses Claude 3.7 with extended thinking and UI-TARS-72B-DPO. If you are unable to run UI-TARS-72B-DPO due to resource constraints, UI-TARS-7B-DPO can be used as a lighter alternative with minimal performance degradation.
 
 ### CLI
 
@@ -248,7 +248,7 @@ You can use either Configuration 1 or Configuration 2:
     *   Note: This is optional. If not specified, `gui-agents` will default to your environment variables for the API key.
     *   Default: None
 
-> **Note**: Configuration 2 takes precedence over Configuration 1.
+>   **Note**: Configuration 2 takes precedence over Configuration 1.
 
 This will show a user query prompt where you can enter your query and interact with Agent S2. You can use any model from the list of supported models in [models.md](models.md).
 

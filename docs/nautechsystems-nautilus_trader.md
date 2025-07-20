@@ -1,7 +1,5 @@
 # NautilusTrader: High-Performance Algorithmic Trading Platform
 
-**NautilusTrader is an open-source, AI-first algorithmic trading platform designed for high-performance backtesting and live deployment of trading strategies.** Explore the original repository [here](https://github.com/nautechsystems/nautilus_trader).
-
 [![codecov](https://codecov.io/gh/nautechsystems/nautilus_trader/branch/master/graph/badge.svg?token=DXO9QQI40H)](https://codecov.io/gh/nautechsystems/nautilus_trader)
 [![codspeed](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://codspeed.io/nautechsystems/nautilus_trader)
 ![pythons](https://img.shields.io/pypi/pyversions/nautilus_trader)
@@ -9,6 +7,8 @@
 ![pypi-format](https://img.shields.io/pypi/format/nautilus_trader?color=blue)
 [![Downloads](https://pepy.tech/badge/nautilus-trader)](https://pepy.tech/project/nautilus-trader)
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?logo=discord&logoColor=white)](https://discord.gg/NautilusTrader)
+
+**NautilusTrader is an open-source, AI-first algorithmic trading platform designed for speed, reliability, and flexibility, empowering quantitative traders to build and deploy high-performance trading strategies.** Explore the power of [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) and elevate your trading strategies.
 
 | Branch    | Version                                                                                                                                                                                                                     | Status                                                                                                                                                                                            |
 | :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -25,46 +25,47 @@
 
 \* Windows builds are currently pinned to CPython 3.13.2, see [installation guide](https://github.com/nautechsystems/nautilus_trader/blob/develop/docs/getting_started/installation.md).
 
-- **Docs**: <https://nautilustrader.io/docs/>
-- **Website**: <https://nautilustrader.io>
-- **Support**: [support@nautilustrader.io](mailto:support@nautilustrader.io)
+- **Docs:** <https://nautilustrader.io/docs/>
+- **Website:** <https://nautilustrader.io>
+- **Support:** [support@nautilustrader.io](mailto:support@nautilustrader.io)
 
 ## Key Features
 
-*   **High Performance:** Core components written in Rust for speed and efficiency, with asynchronous networking using [tokio](https://crates.io/crates/tokio).
-*   **Reliable and Safe:** Leveraging Rust's type and thread safety, optional Redis-backed state persistence.
-*   **Cross-Platform:** Compatible with Linux, macOS, and Windows. Deploy using Docker.
-*   **Modular Design:** Integrates with any REST API or WebSocket feed via modular adapters.
-*   **Advanced Order Types:** Includes `IOC`, `FOK`, `GTC`, `GTD`, `DAY`, `AT_THE_OPEN`, `AT_THE_CLOSE`, conditional triggers, execution instructions (`post-only`, `reduce-only`, icebergs), and contingency orders (`OCO`, `OUO`, `OTO`).
-*   **Extensible and Customizable:** Create custom components or assemble entire systems from scratch using the [cache](https://nautilustrader.io/docs/latest/concepts/cache) and [message bus](https://nautilustrader.io/docs/latest/concepts/message_bus).
-*   **Backtesting Capabilities:** Run backtests with multiple venues, instruments, and strategies concurrently using historical data with nanosecond resolution.
-*   **Production Ready:** Use identical strategy implementations for both backtesting and live deployments, minimizing code changes.
-*   **Multi-Venue Support:** Enables market-making and statistical arbitrage strategies across multiple venues.
-*   **AI Training:** The backtest engine is optimized for training AI trading agents (RL/ES).
+*   **High Performance:** Core written in Rust for speed and efficiency.
+*   **Reliable & Safe:** Rust-powered type and thread safety, optional Redis persistence.
+*   **Cross-Platform:** Runs on Linux, macOS, and Windows; deploy with Docker.
+*   **Modular & Adaptable:** Integrate with any REST API or WebSocket feed.
+*   **Advanced Order Types:** Supports IOC, FOK, GTC, GTD, and more.
+*   **Customizable:** Add custom components and build systems from scratch.
+*   **Backtesting & Live Deployment:** Use the same strategy code for both.
+*   **Multi-Venue Support:** Facilitates market-making and arbitrage strategies.
+*   **AI-Ready:** Backtesting engine fast enough to train AI trading agents.
 
 ![nautilus-trader](https://github.com/nautechsystems/nautilus_trader/raw/develop/assets/nautilus-trader.png "nautilus-trader")
 
-## Why Choose NautilusTrader?
+## Why NautilusTrader?
 
-NautilusTrader streamlines the development, testing, and deployment of algorithmic trading strategies, bridging the gap between Python-based research and production environments.
+*   **Performance:** Fast, event-driven Python with native binary components.
+*   **Consistency:** Identical strategy code for backtesting and live trading.
+*   **Risk Management:** Enhanced risk management, logical accuracy, and type safety.
+*   **Extensibility:** Leverage message bus, custom components, and adapters.
 
-*   **Optimized for Python:** Leverage high-performance event-driven Python environment using native binary core components.
-*   **Backtesting to Live Parity:** Use the exact same strategy code for both backtesting and live trading.
-*   **Reduced Risk:** Benefit from enhanced risk management features, logical accuracy, and type safety.
-*   **Highly Extensible:** Expand functionality with the message bus, custom components and actors, custom data, and custom adapters.
+## Why Python?
 
-## Why Use Python and Rust?
+Python, the *lingua franca* of data science and AI, offers a clean and straightforward syntax. NautilusTrader leverages Python's vast ecosystem while addressing its performance limitations through core components written in Rust and Cython.
 
-NautilusTrader combines the strengths of both Python and Rust:
+## Why Rust?
 
-*   **Python:** Python's clear syntax and extensive libraries, particularly in data science, machine learning, and AI, make it ideal for strategy research and development.
-*   **Rust:** Rust provides the performance and safety needed for low-latency, mission-critical trading systems, ensuring reliability and efficiency through its memory-safe design and speed.
+Rust delivers performance, safety, and memory efficiency. Its rich type system guarantees memory-safety and thread-safety, eliminating bugs at compile-time, making it ideal for mission-critical trading systems.
+
+> [!NOTE]
+>
+> **MSRV:** NautilusTrader relies heavily on improvements in the Rust language and compiler.
+> As a result, the Minimum Supported Rust Version (MSRV) is generally equal to the latest stable release of Rust.
 
 ## Integrations
 
-NautilusTrader offers a modular design that allows it to seamlessly integrate with trading venues and data providers through *adapters*, translating their raw APIs into a unified interface and a normalized domain model.
-
-The following integrations are currently supported (see [docs/integrations/](https://nautilustrader.io/docs/latest/integrations/) for details):
+NautilusTrader uses modular *adapters* to integrate with various trading venues and data providers.
 
 | Name                                                                         | ID                    | Type                    | Status                                                  | Docs                                        |
 | :--------------------------------------------------------------------------- | :-------------------- | :---------------------- | :------------------------------------------------------ | :------------------------------------------ |
@@ -82,26 +83,23 @@ The following integrations are currently supported (see [docs/integrations/](htt
 | [Polymarket](https://polymarket.com)                                         | `POLYMARKET`          | Prediction Market (DEX) | ![status](https://img.shields.io/badge/stable-green)    | [Guide](docs/integrations/polymarket.md)    |
 | [Tardis](https://tardis.dev)                                                 | `TARDIS`              | Crypto Data Provider    | ![status](https://img.shields.io/badge/stable-green)    | [Guide](docs/integrations/tardis.md)        |
 
--   **ID**: The default client ID for the integrations adapter clients.
--   **Type**: The type of integration (often the venue type).
-
 ### Status
 
--   `building`: Under construction and likely not in a usable state.
--   `beta`: Completed to a minimally working state and in a beta testing phase.
--   `stable`: Stabilized feature set and API, the integration has been tested by both developers and users to a reasonable level (some bugs may still remain).
+- `building`: Under construction and likely not in a usable state.
+- `beta`: Completed to a minimally working state and in a beta testing phase.
+- `stable`: Stabilized feature set and API, the integration has been tested by both developers and users to a reasonable level (some bugs may still remain).
 
 See the [Integrations](https://nautilustrader.io/docs/latest/integrations/index.html) documentation for further details.
 
 ## Versioning and Releases
 
-**NautilusTrader is under active development.** Breaking changes are possible between releases, and we aim to document these in the release notes.
+NautilusTrader is under active development with a bi-weekly release schedule.
 
-*   **Release Schedule:** Aiming for bi-weekly releases, though delays can occur.
-*   **Branches:**
-    *   `master`: Reflects the source code for the latest released version; recommended for production use.
-    *   `nightly`: Daily snapshots of the `develop` branch for early testing.
-    *   `develop`: Active development branch.
+### Branches
+
+*   `master`: Latest released version; recommended for production.
+*   `nightly`: Daily snapshots of the `develop` branch.
+*   `develop`: Active development branch.
 
 > [!NOTE]
 >
@@ -109,15 +107,9 @@ See the [Integrations](https://nautilustrader.io/docs/latest/integrations/index.
 
 ## Precision Mode
 
-NautilusTrader supports two precision modes for its core value types (`Price`, `Quantity`, `Money`).
+NautilusTrader supports high-precision (128-bit) and standard-precision (64-bit) modes for core value types.  The default is high-precision on Linux and macOS, and standard-precision on Windows.
 
-*   **High-precision**: 128-bit integers with up to 16 decimals of precision.
-*   **Standard-precision**: 64-bit integers with up to 9 decimals of precision.
-
-> [!NOTE]
->
-> By default, the official Python wheels **ship** in high-precision (128-bit) mode on Linux and macOS.
-> On Windows, only standard-precision (64-bit) is available.
+See the [Installation Guide](https://nautilustrader.io/docs/latest/getting_started/installation) for further details.
 
 **Rust feature flag**: To enable high-precision mode in Rust, add the `high-precision` feature to your Cargo.toml:
 
@@ -128,68 +120,66 @@ nautilus_model = { version = "*", features = ["high-precision"] }
 
 ## Installation
 
-Follow these steps to install NautilusTrader:
+Install using pip or build from source.  Using [uv](https://docs.astral.sh/uv) is highly recommended.
 
-1.  **Python Environment:**  Use a virtual environment (recommended) to isolate dependencies.
-2.  **Installation Options:**
-    *   **From PyPI:**  `pip install -U nautilus_trader`
-    *   **From Nautech Systems Package Index:**
-        *   Stable:  `pip install -U nautilus_trader --index-url=https://packages.nautechsystems.io/simple`
-        *   Pre-release:  `pip install -U nautilus_trader --pre --index-url=https://packages.nautechsystems.io/simple`
-        *   Specific Version:  `pip install nautilus_trader==<version> --index-url=https://packages.nautechsystems.io/simple`
-    *   **From Source:**
-        *   Install [rustup](https://rustup.rs/) and [clang](https://clang.llvm.org/).
-        *   Clone the repository.
-        *   Install build dependencies using `uv sync --all-extras`.
-        *   Install with `uv` (see installation guide).
+### From PyPI
+
+```bash
+pip install -U nautilus_trader
+```
+
+### From the Nautech Systems Package Index
+
+```bash
+pip install -U nautilus_trader --index-url=https://packages.nautechsystems.io/simple
+pip install -U nautilus_trader --pre --index-url=https://packages.nautechsystems.io/simple  # For pre-releases
+pip install nautilus_trader==1.208.0a20241212 --index-url=https://packages.nautechsystems.io/simple # Specific version
+```
+
+### From Source
+
+1.  Install rustup and other build tools as described in the original documentation.
+2.  Clone the repository:
+    ```bash
+    git clone --branch develop --depth 1 https://github.com/nautechsystems/nautilus_trader
+    cd nautilus_trader
+    uv sync --all-extras
+    ```
+3.  Set environment variables (Linux/macOS):
+
+    ```bash
+    export LD_LIBRARY_PATH="$HOME/.local/share/uv/python/cpython-3.13.4-linux-x86_64-gnu/lib:$LD_LIBRARY_PATH"  # Adjust Python version
+    export PYO3_PYTHON=$(pwd)/.venv/bin/python
+    ```
+4.  Install from source.
 
 See the [Installation Guide](https://nautilustrader.io/docs/latest/getting_started/installation) for other options and further details.
 
 ## Redis
 
-Redis is **optional** and required only if you're using it as the backend for the [cache](https://nautilustrader.io/docs/latest/concepts/cache) or [message bus](https://nautilustrader.io/docs/latest/concepts/message_bus). Refer to the **Redis** section of the [Installation Guide](https://nautilustrader.io/docs/latest/getting_started/installation#redis) for instructions.
+Using Redis is optional, and used as a backend for cache or message bus functionality.
 
 ## Makefile
 
-A `Makefile` simplifies common development tasks, including:
+The `Makefile` simplifies common tasks:
 
-*   `make install`:  Installs with all dependencies in `release` mode.
-*   `make install-debug`:  Installs with all dependencies in `debug` mode.
-*   `make build`:  Runs the build script in `release` mode.
-*   `make cargo-test`:  Runs Rust crate tests.
-*   `make clean`:  Deletes build results.
-*   `make docs`:  Builds documentation.
-*   And more.
-
-> [!TIP]
->
-> Run `make help` for a complete list of `Makefile` targets.
+-   `make install`: Installs in `release` build mode.
+-   `make build`: Runs the build script in `release` build mode (default).
+-   `make test-performance`: Runs performance tests with [codspeed](https://codspeed.io).
+-   `make help`: Shows all available make targets.
 
 ## Examples
 
-Explore Python and Cython examples to understand indicator and strategy development (see the linked files for examples).
+Find examples in Python and Cython for indicators, strategies, and backtesting.
 
 ## Docker
 
-NautilusTrader provides Docker containers to ease deployment:
-
-*   `nautilus_trader:latest`: Latest release.
-*   `nautilus_trader:nightly`: Head of the `nightly` branch.
-*   `jupyterlab:latest`: JupyterLab with the latest release.
-*   `jupyterlab:nightly`: JupyterLab with the head of the `nightly` branch.
-
-Pull the images and run them (e.g., JupyterLab example):
+Use Docker containers for easy deployment, with `latest`, `nightly`, `jupyterlab:latest`, and `jupyterlab:nightly` tags.
 
 ```bash
 docker pull ghcr.io/nautechsystems/jupyterlab:nightly --platform linux/amd64
 docker run -p 8888:8888 ghcr.io/nautechsystems/jupyterlab:nightly
 ```
-
-Open your browser at `http://127.0.0.1:8888/lab`.
-
-> [!WARNING]
->
-> NautilusTrader currently exceeds the rate limit for Jupyter notebook logging. The `log_level` is set to `ERROR` to avoid causing the notebook to hang.
 
 ## Development
 
@@ -197,36 +187,40 @@ See the [Developer Guide](https://nautilustrader.io/docs/latest/developer_guide/
 
 > [!TIP]
 >
->  `make build-debug` will recompile after any changes to Rust or Cython code.
+> Run `make build-debug` to compile after changes to Rust or Cython code for the most efficient development workflow.
 
 ### Testing with Rust
 
-NautilusTrader uses [cargo-nextest](https://nexte.st) for Rust testing:
+NautilusTrader uses [cargo-nextest](https://nexte.st) for reliable Rust testing.
 
-*   Install with `cargo install cargo-nextest`.
-*   Run Rust tests with `make cargo-test`.
+```bash
+cargo install cargo-nextest
+make cargo-test # Runs Rust tests
+```
 
 ## Contributing
 
-Contributions are welcome! Follow the [CONTRIBUTING.md](https://github.com/nautechsystems/nautilus_trader/blob/develop/CONTRIBUTING.md) guidelines and open an [issue](https://github.com/nautechsystems/nautilus_trader/issues) to discuss your ideas.  Target contributions to the `develop` branch.
+Contribute to NautilusTrader by opening an [issue](https://github.com/nautechsystems/nautilus_trader/issues) and following the [CONTRIBUTING.md](https://github.com/nautechsystems/nautilus_trader/blob/develop/CONTRIBUTING.md) guidelines.
+
+> [!NOTE]
+>
+> Pull requests should target the `develop` branch.
 
 ## Community
 
-Join our [Discord](https://discord.gg/NautilusTrader) community for discussions and updates.
+Join the [Discord](https://discord.gg/NautilusTrader) community.
 
 > [!WARNING]
 >
-> NautilusTrader does not issue or endorse any cryptocurrency tokens. All official communications are through our website, Discord, or X (Twitter) account.
+> NautilusTrader does not promote cryptocurrency tokens. Report suspicious activity at <info@nautechsystems.io>.
 
 ## License
 
-Licensed under the [GNU Lesser General Public License v3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html). Contributors must sign a [Contributor License Agreement (CLA)](https://github.com/nautechsystems/nautilus_trader/blob/develop/CLA.md).
+NautilusTrader is licensed under the [GNU Lesser General Public License v3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html).
 
 ---
 
-NautilusTrader™ is developed and maintained by Nautech Systems, a technology
-company specializing in the development of high-performance trading systems.
-For more information, visit <https://nautilustrader.io>.
+NautilusTrader™ is developed and maintained by Nautech Systems. For more information, visit <https://nautilustrader.io>.
 
 © 2015-2025 Nautech Systems Pty Ltd. All rights reserved.
 

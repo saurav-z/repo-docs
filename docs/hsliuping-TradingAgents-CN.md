@@ -1,35 +1,37 @@
 # 🚀 TradingAgents-CN: 中文金融交易决策框架
 
-**利用多智能体大语言模型，为中国市场量身定制，提供A股/港股/美股分析，助您掌握投资先机！**
+**使用多智能体大语言模型，为中文用户提供强大的A股、港股、美股分析能力，助您做出更明智的投资决策！**
 
-[![](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![](https://img.shields.io/badge/Version-cn--0.1.10-green.svg)](./VERSION)
-[![](https://img.shields.io/badge/Docs-中文文档-green.svg)](./docs/)
-[![](https://img.shields.io/badge/基于-TauricResearch/TradingAgents-orange.svg)](https://github.com/TauricResearch/TradingAgents)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Version](https://img.shields.io/badge/Version-cn--0.1.10-green.svg)](./VERSION)
+[![Documentation](https://img.shields.io/badge/docs-中文文档-green.svg)](./docs/)
+[![Original](https://img.shields.io/badge/基于-TauricResearch/TradingAgents-orange.svg)](https://github.com/TauricResearch/TradingAgents)
 
-**基于 [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) 项目，专为中国用户优化的金融交易决策框架，支持A股、港股、美股市场，并集成中文大模型。**
+## ✨ 核心亮点
 
-## ✨ 主要特性
+*   **🇨🇳 中文优化**:  全面支持A股/港股数据、中文界面、国产LLM模型。
+*   **🚀 实时进度**: v0.1.10新增异步进度跟踪，告别黑盒等待。
+*   **💾 智能会话**:  状态持久化，页面刷新不丢失分析结果。
+*   **🐳 容器化部署**:  Docker一键部署，环境隔离，快速扩展。
+*   **📄 专业报告**:  多格式导出，自动生成投资建议。
 
-*   ✅ **A股、港股、美股全覆盖**: 深入分析中国及全球股票市场。
-*   ✅ **中文本地化**: 全中文界面，更贴合中国用户的使用习惯。
-*   ✅ **多智能体协作架构**: 四大分析师团队，协同分析，提供深度见解。
-*   ✅ **Web 界面**: 现代化 Streamlit 界面，实时交互，数据可视化。
-*   ✅ **Docker 一键部署**: 轻松部署，快速上手。
-*   ✅ **专业报告导出**: 支持 Word/PDF/Markdown 格式，快速生成投资报告。
-*   ✅ **国产 LLM 集成**: 支持阿里百炼、DeepSeek 等中文大模型。
-*   ✅ **实时进度显示**: 异步进度跟踪，告别黑盒等待。
-*   ✅ **智能会话管理**: 状态持久化，页面刷新不丢失分析结果。
+## 🎯 主要特点
 
-## 🌟 最新版本 v0.1.10 更新
+*   **多智能体架构**:  由基本面、技术面、新闻、情绪分析师、看涨/看跌研究员、交易员、风险管理员协作完成分析。
+*   **支持市场**:  A股、港股、美股实时行情和数据支持。
+*   **LLM 模型**:  支持DeepSeek V3、阿里百炼、Google AI、OpenAI等。
+*   **Web界面**: Streamlit界面，配置管理。
+*   **CLI体验**:  界面与日志分离、智能进度显示、Rich彩色输出。
 
-*   🚀 **实时进度显示**: 异步进度跟踪，智能步骤识别，准确时间计算。
-*   💾 **智能会话管理**: 状态持久化，自动降级，跨页面恢复。
-*   🎯 **一键查看报告**: 分析完成后一键查看，智能结果恢复。
-*   🎨 **界面优化**: 移除重复按钮，响应式设计，视觉层次优化。
+## 🆕 v0.1.10 最新更新
 
-## 🚀 快速开始
+*   **🚀 实时进度显示**: 异步进度跟踪，智能步骤识别，准确时间计算。
+*   **💾 智能会话管理**: 状态持久化，页面刷新不丢失分析结果。
+*   **🎯 一键查看报告**: 分析完成后一键查看报告。
+*   **🎨 界面优化**: 移除重复按钮，响应式设计，视觉层次优化。
+
+## 快速开始
 
 ### 🐳 Docker 部署 (推荐)
 
@@ -40,7 +42,7 @@ cd TradingAgents-CN
 
 # 2. 配置环境变量
 cp .env.example .env
-# 编辑 .env 文件，填入 API 密钥
+# 编辑 .env 文件，填入API密钥
 
 # 3. 启动服务
 docker-compose up -d --build
@@ -61,31 +63,23 @@ python start_web.py
 # 3. 访问 http://localhost:8501
 ```
 
-## 🎯 核心功能
+### 📊 开始分析
 
-*   **多智能体协作**: 基本面、技术面、新闻面、社交媒体分析师团队协同工作。
-*   **深度分析**: 看涨/看跌研究员进行深度分析，交易员基于所有输入给出投资建议。
-*   **风险管理**: 多层次风险评估和管理机制。
-*   **数据源**: 支持 A 股 (Tushare, AkShare)，港股 (AkShare, Yahoo Finance)，美股 (FinnHub, Yahoo Finance) 和新闻数据。
-*   **LLM 模型**: 支持阿里百炼, DeepSeek, Google AI, OpenAI 等模型。
+1.  **选择模型**: DeepSeek V3 / 通义千问 / Gemini
+2.  **输入股票**: `000001` (A股) / `AAPL` (美股) / `0700.HK` (港股)
+3.  **开始分析**: 点击"🚀 开始分析"按钮
+4.  **实时跟踪**: 观察实时进度和分析步骤
+5.  **查看报告**: 点击"📊 查看分析报告"按钮
+6.  **导出报告**: 支持Word/PDF/Markdown格式
 
-## 📚 完整文档
+## 📚 深入了解
 
-*   **完整中文文档**：[docs/](docs/)，包含安装指南、使用教程、API 文档。
-*   **快速部署指南**: [QUICKSTART.md](./QUICKSTART.md)
+*   **📖 完整文档**: [docs/](./docs/)  - 详细的安装、使用教程、API文档，**50,000+字中文文档**，从入门到精通!
+*   **🚨 故障排除**: [troubleshooting/](./docs/troubleshooting/) - 常见问题解决方案。
 
-## 🤝 贡献指南
+## 🚀 项目基于
 
-欢迎贡献代码、文档、翻译等。 详见 [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## 📄 许可证
-
-本项目基于 Apache 2.0 许可证开源。 详见 [LICENSE](LICENSE) 文件。
-
-## 📞 联系
-
-*   GitHub Issues: [提交问题和建议](https://github.com/hsliuping/TradingAgents-CN/issues)
-*   邮箱: hsliup@163.com
+感谢 [Tauric Research](https://github.com/TauricResearch) 团队开发的 [TradingAgents](https://github.com/TauricResearch/TradingAgents) 项目！
 
 ---
 
@@ -96,20 +90,3 @@ python start_web.py
 [⭐ Star this repo](https://github.com/hsliuping/TradingAgents-CN) | [🍴 Fork this repo](https://github.com/hsliuping/TradingAgents-CN/fork) | [📖 Read the docs](./docs/)
 
 </div>
-```
-Key improvements and summaries:
-
-*   **SEO Optimization:**  Included keywords like "中文", "金融", "交易", "A股", "港股", "美股", "AI", "决策", "框架" throughout the text, targeting relevant search terms.  Added a clear, concise one-sentence hook at the beginning.
-*   **Clear Headings and Structure:** Improved the existing headings and subheadings for better readability and organization.
-*   **Concise and Informative Bullets:**  Replaced lengthy paragraphs with concise bulleted lists to highlight key features and benefits.
-*   **Emphasis on Value Proposition:**  Strongly emphasized the benefits to the target audience (Chinese users).
-*   **Simplified "Quick Start" and "Core Features" Sections**: Made them more direct and easier to understand.
-*   **Removed Redundant Information:** Removed unnecessary phrases.
-*   **"Contact" Section:** Added a clear "Contact" section.
-*   **Stronger Call to Action:**  Included a prominent "Star this repo" and "Fork this repo" call to action.
-*   **Complete & Concise**: The README is well-organized, providing all necessary information without being overly verbose.
-*   **Improved Language and Tone:** The writing is clear, concise, and enthusiastic, reflecting the project's value.
-*   **Corrected minor markdown issues**
-*   **Added Version and Documentation Shields**
-*   **Focus on User Benefit**: Emphasized the advantages of using the project.
-*   **Integrated key information from the original README:**  Ensured that all of the original information was included, but re-organized and improved.

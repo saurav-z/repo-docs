@@ -1,6 +1,7 @@
+<!-- MANPAGE: BEGIN EXCLUDED SECTION -->
 <div align="center">
 
-[![YT-DLP](https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg)](#)
+[![YT-DLP](https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg)](#yt-dlp-audio-video-downloader)
 
 [![Release version](https://img.shields.io/github/v/release/yt-dlp/yt-dlp?color=brightgreen&label=Download&style=for-the-badge)](#installation "Installation")
 [![PyPI](https://img.shields.io/badge/-PyPI-blue.svg?logo=pypi&labelColor=555555&style=for-the-badge)](https://pypi.org/project/yt-dlp "PyPI")
@@ -13,27 +14,34 @@
 [![Last Commit](https://img.shields.io/github/last-commit/yt-dlp/yt-dlp/master?label=&style=for-the-badge&display_timestamp=committer)](https://github.com/yt-dlp/yt-dlp/pulse/monthly "Last activity")
 
 </div>
+<!-- MANPAGE: END EXCLUDED SECTION -->
 
-# yt-dlp: The Powerful Command-Line Video and Audio Downloader
+# yt-dlp: The Ultimate Audio/Video Downloader for Thousands of Sites
 
-yt-dlp is a feature-rich command-line utility for downloading audio and video from thousands of websites.  Forked from youtube-dl and built upon yt-dlc, it provides enhanced functionality and supports a vast range of online platforms.  For more details on how to contribute, check out the [original repository](https://github.com/yt-dlp/yt-dlp).
+yt-dlp is a powerful and versatile command-line tool for downloading audio and video from a vast number of websites.  It's a maintained fork of [youtube-dl](https://github.com/ytdl-org/youtube-dl), built upon the foundation of the now-inactive [youtube-dlc](https://github.com/blackjack4494/yt-dlc).
 
 **Key Features:**
 
-*   **Extensive Site Support:** Download from [thousands of sites](supportedsites.md).
-*   **Format Selection:** Fine-grained control over video and audio formats with advanced filtering and sorting.
-*   **Playlist Support:** Download entire playlists or select specific items.
-*   **Subtitle Download:** Download and embed subtitles in various formats.
-*   **Metadata Handling:** Embed metadata, including titles, descriptions, and cover art.
-*   **Post-Processing:** Convert videos to audio, remux, and apply other processing steps.
-*   **SponsorBlock Integration:** Remove or mark sponsor segments in YouTube videos.
+*   **Wide Site Support:** Downloads from [thousands of sites](supportedsites.md).
+*   **Format Selection:**  Advanced format selection options for optimal quality.
+*   **Playlist and Channel Downloads:**  Effortlessly download entire playlists and channels.
+*   **Metadata Handling:**  Write and modify video metadata, including titles, descriptions, and more.
+*   **Subtitle Support:**  Download and embed subtitles in various formats.
+*   **Post-Processing:**  Convert videos to audio, merge audio/video, and embed thumbnails.
+*   **SponsorBlock Integration:** Automatically remove sponsor segments from YouTube videos.
+*   **Browser Cookie Import:** Easily load cookies from your web browser.
 *   **Plugin Support:** Extend functionality with custom extractors and postprocessors.
-*   **Cross-Platform:** Works on Windows, Linux, and macOS.
-*   **Self-Updating:** Easily update to the latest version with a single command.
+*   **Active Development:** Benefit from frequent updates and improvements.
+
+**[Get Started with Installation](#installation)** | **[Explore the Wiki](https://github.com/yt-dlp/yt-dlp/wiki)**
+
+---
 
 ## Table of Contents
 
 *   [Installation](#installation)
+*   [Release Files](#release-files)
+*   [Update](#update)
 *   [Usage and Options](#usage-and-options)
 *   [Configuration](#configuration)
 *   [Output Template](#output-template)
@@ -42,15 +50,27 @@ yt-dlp is a feature-rich command-line utility for downloading audio and video fr
 *   [Extractor Arguments](#extractor-arguments)
 *   [Plugins](#plugins)
 *   [Embedding yt-dlp](#embedding-yt-dlp)
-*   [Changes from youtube-dl](#changes-from-youtube-dl)
-*   [Contributing](#contributing)
-*   [Wiki](#wiki)
+*   [Changes From youtube-dl](#changes-from-youtube-dl)
+*   [Contributing](CONTRIBUTING.md#contributing-to-yt-dlp)
+*   [Wiki](https://github.com/yt-dlp/yt-dlp/wiki)
 
-## Installation
+---
+
+# INSTALLATION
 
 You can install yt-dlp using [the binaries](#release-files), [pip](https://pypi.org/project/yt-dlp) or one using a third-party package manager. See [the wiki](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for detailed instructions
 
-### Release Files
+<!-- MANPAGE: BEGIN EXCLUDED SECTION -->
+[![Windows](https://img.shields.io/badge/-Windows_x64-blue.svg?style=for-the-badge&logo=windows)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)
+[![Unix](https://img.shields.io/badge/-Linux/BSD-red.svg?style=for-the-badge&logo=linux)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp)
+[![MacOS](https://img.shields.io/badge/-MacOS-lightblue.svg?style=for-the-badge&logo=apple)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos)
+[![PyPI](https://img.shields.io/badge/-PyPI-blue.svg?logo=pypi&labelColor=555555&style=for-the-badge)](https://pypi.org/project/yt-dlp)
+[![Source Tarball](https://img.shields.io/badge/-Source_tar-green.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz)
+[![Other variants](https://img.shields.io/badge/-Other-grey.svg?style=for-the-badge)](#release-files)
+[![All versions](https://img.shields.io/badge/-All_Versions-lightgrey.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/releases)
+<!-- MANPAGE: END EXCLUDED SECTION -->
+
+## RELEASE FILES
 
 #### Recommended
 
@@ -131,6 +151,7 @@ python3 -m pip install -U --pre "yt-dlp[default]"
 ```
 
 ## DEPENDENCIES
+
 Python versions 3.9+ (CPython) and 3.10+ (PyPy) are supported. Other versions and implementations may or may not work correctly.
 
 <!-- Python 3.5+ uses VC++14 and it is already embedded in the binary created
@@ -142,46 +163,46 @@ While all the other dependencies are optional, `ffmpeg` and `ffprobe` are highly
 
 ### Strongly recommended
 
-* [**ffmpeg** and **ffprobe**](https://www.ffmpeg.org) - Required for [merging separate video and audio files](#format-selection), as well as for various [post-processing](#post-processing-options) tasks. License [depends on the build](https://www.ffmpeg.org/legal.html)
+*   [**ffmpeg** and **ffprobe**](https://www.ffmpeg.org) - Required for [merging separate video and audio files](#format-selection), as well as for various [post-processing](#post-processing-options) tasks. License [depends on the build](https://www.ffmpeg.org/legal.html)
 
     There are bugs in ffmpeg that cause various issues when used alongside yt-dlp. Since ffmpeg is such an important dependency, we provide [custom builds](https://github.com/yt-dlp/FFmpeg-Builds#ffmpeg-static-auto-builds) with patches for some of these issues at [yt-dlp/FFmpeg-Builds](https://github.com/yt-dlp/FFmpeg-Builds). See [the readme](https://github.com/yt-dlp/FFmpeg-Builds#patches-applied) for details on the specific issues solved by these builds
 
     **Important**: What you need is ffmpeg *binary*, **NOT** [the Python package of the same name](https://pypi.org/project/ffmpeg)
 
 ### Networking
-* [**certifi**](https://github.com/certifi/python-certifi)\* - Provides Mozilla's root certificate bundle. Licensed under [MPLv2](https://github.com/certifi/python-certifi/blob/master/LICENSE)
-* [**brotli**](https://github.com/google/brotli)\* or [**brotlicffi**](https://github.com/python-hyper/brotlicffi) - [Brotli](https://en.wikipedia.org/wiki/Brotli) content encoding support. Both licensed under MIT <sup>[1](https://github.com/google/brotli/blob/master/LICENSE) [2](https://github.com/python-hyper/brotlicffi/blob/master/LICENSE) </sup>
-* [**websockets**](https://github.com/aaugustin/websockets)\* - For downloading over websocket. Licensed under [BSD-3-Clause](https://github.com/aaugustin/websockets/blob/main/LICENSE)
-* [**requests**](https://github.com/psf/requests)\* - HTTP library. For HTTPS proxy and persistent connections support. Licensed under [Apache-2.0](https://github.com/psf/requests/blob/main/LICENSE)
+
+*   [**certifi**](https://github.com/certifi/python-certifi)\* - Provides Mozilla's root certificate bundle. Licensed under [MPLv2](https://github.com/certifi/python-certifi/blob/master/LICENSE)
+*   [**brotli**](https://github.com/google/brotli)\* or [**brotlicffi**](https://github.com/python-hyper/brotlicffi) - [Brotli](https://en.wikipedia.org/wiki/Brotli) content encoding support. Both licensed under MIT <sup>[1](https://github.com/google/brotli/blob/master/LICENSE) [2](https://github.com/python-hyper/brotlicffi/blob/master/LICENSE) </sup>
+*   [**websockets**](https://github.com/aaugustin/websockets)\* - For downloading over websocket. Licensed under [BSD-3-Clause](https://github.com/aaugustin/websockets/blob/main/LICENSE)
+*   [**requests**](https://github.com/psf/requests)\* - HTTP library. For HTTPS proxy and persistent connections support. Licensed under [Apache-2.0](https://github.com/psf/requests/blob/main/LICENSE)
 
 #### Impersonation
 
 The following provide support for impersonating browser requests. This may be required for some sites that employ TLS fingerprinting.
 
-* [**curl_cffi**](https://github.com/lexiforest/curl_cffi) (recommended) - Python binding for [curl-impersonate](https://github.com/lexiforest/curl-impersonate). Provides impersonation targets for Chrome, Edge and Safari. Licensed under [MIT](https://github.com/lexiforest/curl_cffi/blob/main/LICENSE)
-  * Can be installed with the `curl-cffi` group, e.g. `pip install "yt-dlp[default,curl-cffi]"`
-  * Currently included in `yt-dlp.exe`, `yt-dlp_linux` and `yt-dlp_macos` builds
-
+*   [**curl_cffi**](https://github.com/lexiforest/curl_cffi) (recommended) - Python binding for [curl-impersonate](https://github.com/lexiforest/curl-impersonate). Provides impersonation targets for Chrome, Edge and Safari. Licensed under [MIT](https://github.com/lexiforest/curl_cffi/blob/main/LICENSE)
+    *   Can be installed with the `curl-cffi` group, e.g. `pip install "yt-dlp[default,curl-cffi]"`
+    *   Currently included in `yt-dlp.exe`, `yt-dlp_linux` and `yt-dlp_macos` builds
 
 ### Metadata
 
-* [**mutagen**](https://github.com/quodlibet/mutagen)\* - For `--embed-thumbnail` in certain formats. Licensed under [GPLv2+](https://github.com/quodlibet/mutagen/blob/master/COPYING)
-* [**AtomicParsley**](https://github.com/wez/atomicparsley) - For `--embed-thumbnail` in `mp4`/`m4a` files when `mutagen`/`ffmpeg` cannot. Licensed under [GPLv2+](https://github.com/wez/atomicparsley/blob/master/COPYING)
-* [**xattr**](https://github.com/xattr/xattr), [**pyxattr**](https://github.com/iustin/pyxattr) or [**setfattr**](http://savannah.nongnu.org/projects/attr) - For writing xattr metadata (`--xattr`) on **Mac** and **BSD**. Licensed under [MIT](https://github.com/xattr/xattr/blob/master/LICENSE.txt), [LGPL2.1](https://github.com/iustin/pyxattr/blob/master/COPYING) and [GPLv2+](http://git.savannah.nongnu.org/cgit/attr.git/tree/doc/COPYING) respectively
+*   [**mutagen**](https://github.com/quodlibet/mutagen)\* - For `--embed-thumbnail` in certain formats. Licensed under [GPLv2+](https://github.com/quodlibet/mutagen/blob/master/COPYING)
+*   [**AtomicParsley**](https://github.com/wez/atomicparsley) - For `--embed-thumbnail` in `mp4`/`m4a` files when `mutagen`/`ffmpeg` cannot. Licensed under [GPLv2+](https://github.com/wez/atomicparsley/blob/master/COPYING)
+*   [**xattr**](https://github.com/xattr/xattr), [**pyxattr**](https://github.com/iustin/pyxattr) or [**setfattr**](http://savannah.nongnu.org/projects/attr) - For writing xattr metadata (`--xattr`) on **Mac** and **BSD**. Licensed under [MIT](https://github.com/xattr/xattr/blob/master/LICENSE.txt), [LGPL2.1](https://github.com/iustin/pyxattr/blob/master/COPYING) and [GPLv2+](http://git.savannah.nongnu.org/cgit/attr.git/tree/doc/COPYING) respectively
 
 ### Misc
 
-* [**pycryptodomex**](https://github.com/Legrandin/pycryptodome)\* - For decrypting AES-128 HLS streams and various other data. Licensed under [BSD-2-Clause](https://github.com/Legrandin/pycryptodome/blob/master/LICENSE.rst)
-* [**phantomjs**](https://github.com/ariya/phantomjs) - Used in extractors where javascript needs to be run. Licensed under [BSD-3-Clause](https://github.com/ariya/phantomjs/blob/master/LICENSE.BSD)
-* [**secretstorage**](https://github.com/mitya57/secretstorage)\* - For `--cookies-from-browser` to access the **Gnome** keyring while decrypting cookies of **Chromium**-based browsers on **Linux**. Licensed under [BSD-3-Clause](https://github.com/mitya57/secretstorage/blob/master/LICENSE)
-* Any external downloader that you want to use with `--downloader`
+*   [**pycryptodomex**](https://github.com/Legrandin/pycryptodome)\* - For decrypting AES-128 HLS streams and various other data. Licensed under [BSD-2-Clause](https://github.com/Legrandin/pycryptodome/blob/master/LICENSE.rst)
+*   [**phantomjs**](https://github.com/ariya/phantomjs) - Used in extractors where javascript needs to be run. Licensed under [BSD-3-Clause](https://github.com/ariya/phantomjs/blob/master/LICENSE.BSD)
+*   [**secretstorage**](https://github.com/mitya57/secretstorage)\* - For `--cookies-from-browser` to access the **Gnome** keyring while decrypting cookies of **Chromium**-based browsers on **Linux**. Licensed under [BSD-3-Clause](https://github.com/mitya57/secretstorage/blob/master/LICENSE)
+*   Any external downloader that you want to use with `--downloader`
 
 ### Deprecated
 
-* [**avconv** and **avprobe**](https://www.libav.org) - Now **deprecated** alternative to ffmpeg. License [depends on the build](https://libav.org/legal)
-* [**sponskrub**](https://github.com/faissaloo/SponSkrub) - For using the now **deprecated** [sponskrub options](#sponskrub-options). Licensed under [GPLv3+](https://github.com/faissaloo/SponSkrub/blob/master/LICENCE.md)
-* [**rtmpdump**](http://rtmpdump.mplayerhq.hu) - For downloading `rtmp` streams. ffmpeg can be used instead with `--downloader ffmpeg`. Licensed under [GPLv2+](http://rtmpdump.mplayerhq.hu)
-* [**mplayer**](http://mplayerhq.hu/design7/info.html) or [**mpv**](https://mpv.io) - For downloading `rstp`/`mms` streams. ffmpeg can be used instead with `--downloader ffmpeg`. Licensed under [GPLv2+](https://github.com/mpv-player/mpv/blob/master/Copyright)
+*   [**avconv** and **avprobe**](https://www.libav.org) - Now **deprecated** alternative to ffmpeg. License [depends on the build](https://libav.org/legal)
+*   [**sponskrub**](https://github.com/faissaloo/SponSkrub) - For using the now **deprecated** [sponskrub options](#sponskrub-options). Licensed under [GPLv3+](https://github.com/faissaloo/SponSkrub/blob/master/LICENCE.md)
+*   [**rtmpdump**](http://rtmpdump.mplayerhq.hu) - For downloading `rtmp` streams. ffmpeg can be used instead with `--downloader ffmpeg`. Licensed under [GPLv2+](http://rtmpdump.mplayerhq.hu)
+*   [**mplayer**](http://mplayerhq.hu/design7/info.html) or [**mpv**](https://mpv.io) - For downloading `rstp`/`mms` streams. ffmpeg can be used instead with `--downloader ffmpeg`. Licensed under [GPLv2+](https://github.com/mpv-player/mpv/blob/master/Copyright)
 
 To use or redistribute the dependencies, you must agree to their respective licensing terms.
 
@@ -190,96 +211,219 @@ The standalone release binaries are built with the Python interpreter and the pa
 If you do not have the necessary dependencies for a task you are attempting, yt-dlp will warn you. All the currently available dependencies are visible at the top of the `--verbose` output
 
 ## USAGE AND OPTIONS
+For a full list of available options, run `yt-dlp --help`.
 
-```
-yt-dlp [OPTIONS] [--] URL [URL...]
-```
+---
+<!-- Auto generated -->
+## General Options:
+    -h, --help                      Print this help text and exit
+    --version                       Print program version and exit
+    -U, --update                    Update this program to the latest version
+    --no-update                     Do not check for updates (default)
+    --update-to [CHANNEL]@[TAG]     Upgrade/downgrade to a specific version.
+                                    CHANNEL can be a repository as well. CHANNEL
+                                    and TAG default to "stable" and "latest"
+                                    respectively if omitted; See "UPDATE" for
+                                    details. Supported channels: stable,
+                                    nightly, master
+    -i, --ignore-errors             Ignore download and postprocessing errors.
+                                    The download will be considered successful
+                                    even if the postprocessing fails
+    --no-abort-on-error             Continue with next video on download errors;
+                                    e.g. to skip unavailable videos in a
+                                    playlist (default)
+    --abort-on-error                Abort downloading of further videos if an
+                                    error occurs (Alias: --no-ignore-errors)
+    --dump-user-agent               Display the current user-agent and exit
+    --list-extractors               List all supported extractors and exit
+    --extractor-descriptions        Output descriptions of all supported
+                                    extractors and exit
+    --use-extractors NAMES          Extractor names to use separated by commas.
+                                    You can also use regexes, "all", "default"
+                                    and "end" (end URL matching); e.g. --ies
+                                    "holodex.*,end,youtube". Prefix the name
+                                    with a "-" to exclude it, e.g. --ies
+                                    default,-generic. Use --list-extractors for
+                                    a list of extractor names. (Alias: --ies)
+    --default-search PREFIX         Use this prefix for unqualified URLs. E.g.
+                                    "gvsearch2:python" downloads two videos from
+                                    google videos for the search term "python".
+                                    Use the value "auto" to let yt-dlp guess
+                                    ("auto_warning" to emit a warning when
+                                    guessing). "error" just throws an error. The
+                                    default value "fixup_error" repairs broken
+                                    URLs, but emits an error if this is not
+                                    possible instead of searching
+    --ignore-config                 Don't load any more configuration files
+                                    except those given to --config-locations.
+                                    For backward compatibility, if this option
+                                    is found inside the system configuration
+                                    file, the user configuration is not loaded.
+                                    (Alias: --no-config)
+    --no-config-locations           Do not load any custom configuration files
+                                    (default). When given inside a configuration
+                                    file, ignore all previous --config-locations
+                                    defined in the current file
+    --config-locations PATH         Location of the main configuration file;
+                                    either the path to the config or its
+                                    containing directory ("-" for stdin). Can be
+                                    used multiple times and inside other
+                                    configuration files
+    --plugin-dirs PATH              Path to an additional directory to search
+                                    for plugins. This option can be used
+                                    multiple times to add multiple directories.
+                                    Use "default" to search the default plugin
+                                    directories (default)
+    --no-plugin-dirs                Clear plugin directories to search,
+                                    including defaults and those provided by
+                                    previous --plugin-dirs
+    --flat-playlist                 Do not extract a playlist's URL result
+                                    entries; some entry metadata may be missing
+                                    and downloading may be bypassed
+    --no-flat-playlist              Fully extract the videos of a playlist
+                                    (default)
+    --live-from-start               Download livestreams from the start.
+                                    Currently experimental and only supported
+                                    for YouTube and Twitch
+    --no-live-from-start            Download livestreams from the current time
+                                    (default)
+    --wait-for-video MIN[-MAX]      Wait for scheduled streams to become
+                                    available. Pass the minimum number of
+                                    seconds (or range) to wait between retries
+    --no-wait-for-video             Do not wait for scheduled streams (default)
+    --mark-watched                  Mark videos watched (even with --simulate)
+    --no-mark-watched               Do not mark videos watched (default)
+    --color [STREAM:]POLICY         Whether to emit color codes in output,
+                                    optionally prefixed by the STREAM (stdout or
+                                    stderr) to apply the setting to. Can be one
+                                    of "always", "auto" (default), "never", or
+                                    "no_color" (use non color terminal
+                                    sequences). Use "auto-tty" or "no_color-tty"
+                                    to decide based on terminal support only.
+                                    Can be used multiple times
+    --compat-options OPTS           Options that can help keep compatibility
+                                    with youtube-dl or youtube-dlc
+                                    configurations by reverting some of the
+                                    changes made in yt-dlp. See "Differences in
+                                    default behavior" for details
+    --alias ALIASES OPTIONS         Create aliases for an option string. Unless
+                                    an alias starts with a dash "-", it is
+                                    prefixed with "--". Arguments are parsed
+                                    according to the Python string formatting
+                                    mini-language. E.g. --alias get-audio,-X "-S
+                                    aext:{0},abr -x --audio-format {0}" creates
+                                    options "--get-audio" and "-X" that takes an
+                                    argument (ARG0) and expands to "-S
+                                    aext:ARG0,abr -x --audio-format ARG0". All
+                                    defined aliases are listed in the --help
+                                    output. Alias options can trigger more
+                                    aliases; so be careful to avoid defining
+                                    recursive options. As a safety measure, each
+                                    alias may be triggered a maximum of 100
+                                    times. This option can be used multiple times
+    -t, --preset-alias PRESET       Applies a predefined set of options. e.g.
+                                    --preset-alias mp3. The following presets
+                                    are available: mp3, aac, mp4, mkv, sleep.
+                                    See the "Preset Aliases" section at the end
+                                    for more info. This option can be used
+                                    multiple times
 
-For a full list of options, run `yt-dlp --help`.
+## Network Options:
+    --proxy URL                     Use the specified HTTP/HTTPS/SOCKS proxy. To
+                                    enable SOCKS proxy, specify a proper scheme,
+                                    e.g. socks5://user:pass@127.0.0.1:1080/.
+                                    Pass in an empty string (--proxy "") for
+                                    direct connection
+    --socket-timeout SECONDS        Time to wait before giving up, in seconds
+    --source-address IP             Client-side IP address to bind to
+    --impersonate CLIENT[:OS]       Client to impersonate for requests. E.g.
+                                    chrome, chrome-110, chrome:windows-10. Pass
+                                    --impersonate="" to impersonate any client.
+                                    Note that forcing impersonation for all
+                                    requests may have a detrimental impact on
+                                    download speed and stability
+    --list-impersonate-targets      List available clients to impersonate.
+    -4, --force-ipv4                Make all connections via IPv4
+    -6, --force-ipv6                Make all connections via IPv6
+    --enable-file-urls              Enable file:// URLs. This is disabled by
+                                    default for security reasons.
 
-## Configuration
+## Geo-restriction:
+    --geo-verification-proxy URL    Use this proxy to verify the IP address for
+                                    some geo-restricted sites. The default proxy
+                                    specified by --proxy (or none, if the option
+                                    is not present) is used for the actual
+                                    downloading
+    --xff VALUE                     How to fake X-Forwarded-For HTTP header to
+                                    try bypassing geographic restriction. One of
+                                    "default" (only when known to be useful),
+                                    "never", an IP block in CIDR notation, or a
+                                    two-letter ISO 3166-2 country code
 
-yt-dlp supports configuration files for customizing your downloads. You can specify options in a configuration file, loaded from:
-
-1.  **Main Configuration**: Specified by `--config-location`
-2.  **Portable Configuration**: `yt-dlp.conf` in the same directory as the binary.
-3.  **Home Configuration**: `yt-dlp.conf` in your home directory.
-4.  **User Configuration**: `${XDG_CONFIG_HOME}/yt-dlp.conf`,  `${XDG_CONFIG_HOME}/yt-dlp/config` (recommended on Linux/macOS), `${XDG_CONFIG_HOME}/yt-dlp/config.txt`, `${APPDATA}/yt-dlp.conf`, `${APPDATA}/yt-dlp/config` (recommended on Windows), `${APPDATA}/yt-dlp/config.txt`, `~/yt-dlp.conf`, `~/yt-dlp.conf.txt`, `~/.yt-dlp/config`, `~/.yt-dlp/config.txt`
-5.  **System Configuration**: `/etc/yt-dlp.conf`, `/etc/yt-dlp/config`, `/etc/yt-dlp/config.txt`
-
-## OUTPUT TEMPLATE
-
-Use the `-o` option to define the output filename template. The output template allows you to control the naming and organization of your downloaded files.
-
-**Output Template Field Examples:**
-
-*   `%(title)s`: Video title
-*   `%(id)s`: Video ID
-*   `%(ext)s`: File extension
-*   `%(upload_date>%Y-%m-%d)s`:  Upload date formatted as YYYY-MM-DD
-*   `%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s`: Playlist downloads in a directory structure
-
-## FORMAT SELECTION
-
-Use the `-f` option to select the desired video format.
-
-**Format Selection Options:**
-
-*   `-f best`: Download the best available quality (video and audio).
-*   `-f bestvideo`: Download the best video-only format.
-*   `-f bestaudio`: Download the best audio-only format.
-*   `-f <format_code>`:  Specify a format code (use `-F` to list available codes).
-*   `-f <format1>+<format2>`: Merge video and audio formats (requires ffmpeg).
-*   `-S <sort_criteria>`: Sort formats based on specified criteria (e.g., `-S "res,fps"`).
-
-## MODIFYING METADATA
-
-Use the `--parse-metadata` and `--replace-in-metadata` to modify the metadata.
-
-*   `--parse-metadata "<field_to_parse>:<extraction_pattern>"`: Extract information from a field and transform or set it as a different field.
-*   `--replace-in-metadata "<fields> <regex> <replacement>"`:  Search and replace text in metadata fields.
-
-## EXTRACTOR ARGUMENTS
-
-Some extractors support additional arguments that can be passed using `--extractor-args KEY:ARGS`.
-
-## PLUGINS
-
-yt-dlp supports plugins to extend functionality. Place plugin files in the correct locations, as described in [Installing Plugins](#installing-plugins).  Then you can use `--use-postprocessor NAME` to use postprocessor plugins.
-
-## EMBEDDING YT-DLP
-
-yt-dlp can be easily embedded in your Python programs:
-
-```python
-from yt_dlp import YoutubeDL
-
-ydl_opts = {
-    'outtmpl': '%(title)s-%(id)s.%(ext)s',
-}
-with YoutubeDL(ydl_opts) as ydl:
-    ydl.download(['VIDEO_URL'])
-```
-
-## CHANGES FROM YOUTUBE-DL
-
-yt-dlp is actively maintained fork of youtube-dl, incorporating improvements and features not available in the original.
-Key changes from youtube-dl include:
-
-*   Improved Support and Maintenance
-*   SponsorBlock Integration
-*   Enhanced Format Sorting
-*   New and Updated Extractors
-*   Cookie from Browser
-*   Download Time Range
-*   Many other new features and improvements
-
-See the [Changes from youtube-dl](#changes-from-youtube-dl) section for a more detailed overview.
-
-## CONTRIBUTING
-
-Contribute to the project by reporting issues, suggesting features, or submitting code.  See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
-
-## WIKI
-
-Access the [Wiki](https://github.com/yt-dlp/yt-dlp/wiki) for additional information and resources.
+## Video Selection:
+    -I, --playlist-items ITEM_SPEC  Comma separated playlist_index of the items
+                                    to download. You can specify a range using
+                                    "[START]:[STOP][:STEP]". For backward
+                                    compatibility, START-STOP is also supported.
+                                    Use negative indices to count from the right
+                                    and negative STEP to download in reverse
+                                    order. E.g. "-I 1:3,7,-5::2" used on a
+                                    playlist of size 15 will download the items
+                                    at index 1,2,3,7,11,13,15
+    --min-filesize SIZE             Abort download if filesize is smaller than
+                                    SIZE, e.g. 50k or 44.6M
+    --max-filesize SIZE             Abort download if filesize is larger than
+                                    SIZE, e.g. 50k or 44.6M
+    --date DATE                     Download only videos uploaded on this date.
+                                    The date can be "YYYYMMDD" or in the format 
+                                    [now|today|yesterday][-N[day|week|month|year]].
+                                    E.g. "--date today-2weeks" downloads only
+                                    videos uploaded on the same day two weeks ago
+    --datebefore DATE               Download only videos uploaded on or before
+                                    this date. The date formats accepted are the
+                                    same as --date
+    --dateafter DATE                Download only videos uploaded on or after
+                                    this date. The date formats accepted are the
+                                    same as --date
+    --match-filters FILTER          Generic video filter. Any "OUTPUT TEMPLATE"
+                                    field can be compared with a number or a
+                                    string using the operators defined in
+                                    "Filtering Formats". You can also simply
+                                    specify a field to match if the field is
+                                    present, use "!field" to check if the field
+                                    is not present, and "&" to check multiple
+                                    conditions. Use a "\" to escape "&" or
+                                    quotes if needed. If used multiple times,
+                                    the filter matches if at least one of the
+                                    conditions is met. E.g. --match-filters
+                                    !is_live --match-filters "like_count>?100 &
+                                    description~='(?i)\bcats \& dogs\b'" matches
+                                    only videos that are not live OR those that
+                                    have a like count more than 100 (or the like
+                                    field is not available) and also has a
+                                    description that contains the phrase "cats &
+                                    dogs" (caseless). Use "--match-filters -" to
+                                    interactively ask whether to download each
+                                    video
+    --no-match-filters              Do not use any --match-filters (default)
+    --break-match-filters FILTER    Same as "--match-filters" but stops the
+                                    download process when a video is rejected
+    --no-break-match-filters        Do not use any --break-match-filters (default)
+    --no-playlist                   Download only the video, if the URL refers
+                                    to a video and a playlist
+    --yes-playlist                  Download the playlist, if the URL refers to
+                                    a video and a playlist
+    --age-limit YEARS               Download only videos suitable for the given
+                                    age
+    --download-archive FILE         Download only videos not listed in the
+                                    archive file. Record the IDs of all
+                                    downloaded videos in it
+    --no-download-archive           Do not use archive file (default)
+    --max-downloads NUMBER          Abort after downloading NUMBER files
+    --break-on-existing             Stop the download process when encountering
+                                    a file that is in the archive supplied with
+                                    the --download-archive option
+    --no-break-on-existing          Do not stop the download process when
+                                    encountering a file that is in the archive
+                                    (default)
+    --break-per-

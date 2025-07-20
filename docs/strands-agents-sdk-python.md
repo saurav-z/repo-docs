@@ -6,11 +6,12 @@
   </div>
 
   <h1>
-    Strands Agents: Build AI Agents Quickly with Python
+    Strands Agents: Build AI Agents with Ease
   </h1>
-  <p>
-    <b>Effortlessly build and deploy AI agents with Strands Agents, a model-driven Python SDK.</b>
-  </p>
+
+  <h2>
+    Quickly develop and deploy AI agents using a model-driven approach with Strands Agents.
+  </h2>
 
   <div align="center">
     <a href="https://github.com/strands-agents/sdk-python/graphs/commit-activity"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/strands-agents/sdk-python"/></a>
@@ -24,22 +25,22 @@
   <p>
     <a href="https://strandsagents.com/">Documentation</a>
     ◆ <a href="https://github.com/strands-agents/samples">Samples</a>
-    ◆ <a href="https://github.com/strands-agents/sdk-python">Python SDK (GitHub)</a>
+    ◆ <a href="https://github.com/strands-agents/sdk-python">Python SDK</a>
     ◆ <a href="https://github.com/strands-agents/tools">Tools</a>
     ◆ <a href="https://github.com/strands-agents/agent-builder">Agent Builder</a>
     ◆ <a href="https://github.com/strands-agents/mcp-server">MCP Server</a>
   </p>
 </div>
 
-Strands Agents is a powerful Python SDK that empowers you to rapidly build and deploy AI agents using a model-driven approach.  From simple chatbots to complex, autonomous workflows, Strands Agents scales seamlessly from local development to production environments.
+Strands Agents is a powerful Python SDK designed to simplify the creation and deployment of AI agents. Built with a model-driven approach, it allows developers of all levels to rapidly build and scale AI applications, from simple chatbots to complex automated workflows.  Explore the [Strands Agents SDK](https://github.com/strands-agents/sdk-python) to get started.
 
 ## Key Features
 
-*   **Simplified Agent Development:** Create AI agents with just a few lines of code.
-*   **Model Agnostic Design:** Supports a wide range of LLM providers including: Amazon Bedrock, Anthropic, LiteLLM, Llama, Ollama, OpenAI, Writer, and custom providers.
-*   **Advanced Capabilities:** Build multi-agent systems, autonomous agents, and leverage streaming functionality.
-*   **Built-in MCP Support:** Native integration with Model Context Protocol (MCP) servers for easy access to a vast library of pre-built tools.
-*   **Python-Based Tooling:** Create tools using Python decorators.
+*   **Easy-to-Use:** Build AI agents in just a few lines of code.
+*   **Model Agnostic:** Supports multiple model providers, including Amazon Bedrock, OpenAI, Anthropic, and more.
+*   **Built-in MCP Support:** Native integration with Model Context Protocol (MCP) servers.
+*   **Extensible:** Built-in support for multi-agent systems, autonomous agents, and streaming.
+*   **Customizable:** Lightweight and flexible agent loop that is fully customizable.
 
 ## Quick Start
 
@@ -59,26 +60,22 @@ agent("What is the square root of 1764")
 
 ## Installation
 
-1.  **Prerequisites:** Ensure you have Python 3.10+ installed.
+Follow these steps to install Strands Agents:
 
-2.  **Create and Activate a Virtual Environment (recommended):**
+```bash
+# Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 
-    ```bash
-    python -m venv .venv
-    source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
-    ```
-
-3.  **Install the SDK and Tools:**
-
-    ```bash
-    pip install strands-agents strands-agents-tools
-    ```
+# Install Strands and tools
+pip install strands-agents strands-agents-tools
+```
 
 ## Core Functionality
 
 ### Python-Based Tools
 
-Easily build custom tools using Python decorators, enabling your agents to interact with the world.
+Easily build custom tools using Python decorators:
 
 ```python
 from strands import Agent, tool
@@ -97,7 +94,7 @@ response = agent("How many words are in this sentence?")
 
 ### MCP Support
 
-Seamlessly integrate with Model Context Protocol (MCP) servers to utilize external tools and services.
+Seamlessly integrate with Model Context Protocol (MCP) servers:
 
 ```python
 from strands import Agent
@@ -115,7 +112,7 @@ with aws_docs_client:
 
 ### Multiple Model Providers
 
-Choose from a variety of model providers to power your AI agents, with the flexibility to integrate custom providers.
+Strands Agents supports several model providers, allowing you to choose the best option for your needs:
 
 ```python
 from strands import Agent
@@ -148,21 +145,20 @@ agent = Agent(model=llama_model)
 response = agent("Tell me about Agentic AI")
 ```
 
-**Built-in Providers:**
+Built-in providers:
+ - [Amazon Bedrock](https://strandsagents.com/latest/user-guide/concepts/model-providers/amazon-bedrock/)
+ - [Anthropic](https://strandsagents.com/latest/user-guide/concepts/model-providers/anthropic/)
+ - [LiteLLM](https://strandsagents.com/latest/user-guide/concepts/model-providers/litellm/)
+ - [LlamaAPI](https://strandsagents.com/latest/user-guide/concepts/model-providers/llamaapi/)
+ - [Ollama](https://strandsagents.com/latest/user-guide/concepts/model-providers/ollama/)
+ - [OpenAI](https://strandsagents.com/latest/user-guide/concepts/model-providers/openai/)
+ - [Writer](https://strandsagents.com/latest/documentation/docs/user-guide/concepts/model-providers/writer/)
 
-*   [Amazon Bedrock](https://strandsagents.com/latest/user-guide/concepts/model-providers/amazon-bedrock/)
-*   [Anthropic](https://strandsagents.com/latest/user-guide/concepts/model-providers/anthropic/)
-*   [LiteLLM](https://strandsagents.com/latest/user-guide/concepts/model-providers/litellm/)
-*   [LlamaAPI](https://strandsagents.com/latest/user-guide/concepts/model-providers/llamaapi/)
-*   [Ollama](https://strandsagents.com/latest/user-guide/concepts/model-providers/ollama/)
-*   [OpenAI](https://strandsagents.com/latest/user-guide/concepts/model-providers/openai/)
-*   [Writer](https://strandsagents.com/latest/documentation/docs/user-guide/concepts/model-providers/writer/)
-
-**Custom Providers:** Implement your own model providers using [Custom Providers](https://strandsagents.com/latest/user-guide/concepts/model-providers/custom_model_provider/)
+Custom providers can be implemented using [Custom Providers](https://strandsagents.com/latest/user-guide/concepts/model-providers/custom_model_provider/)
 
 ### Example Tools
 
-Leverage the optional `strands-agents-tools` package for a collection of pre-built tools to accelerate your agent development.
+The `strands-agents-tools` package provides pre-built tools for quick experimentation:
 
 ```python
 from strands import Agent
@@ -171,11 +167,9 @@ agent = Agent(tools=[calculator])
 agent("What is the square root of 1764")
 ```
 
-The `strands-agents-tools` package is available on GitHub: [strands-agents/tools](https://github.com/strands-agents/tools).
+It's also available on GitHub via [strands-agents/tools](https://github.com/strands-agents/tools).
 
 ## Documentation
-
-Explore our comprehensive documentation for detailed guidance and examples:
 
 *   [User Guide](https://strandsagents.com/)
 *   [Quick Start Guide](https://strandsagents.com/latest/user-guide/quickstart/)
@@ -186,22 +180,17 @@ Explore our comprehensive documentation for detailed guidance and examples:
 
 ## Contributing ❤️
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
-
-*   Reporting bugs and suggesting features
-*   Setting up your development environment
-*   Contributing through Pull Requests
-*   Code of Conduct
-*   Reporting security issues
+Contribute to the project by following our [Contributing Guide](CONTRIBUTING.md) for details on:
+- Reporting bugs & features
+- Development setup
+- Contributing via Pull Requests
+- Code of Conduct
+- Reporting of security issues
 
 ## License
 
-This project is licensed under the Apache License 2.0.  See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
 ## Security
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for information about security.
-
-##  Get Started with Strands Agents
-
-Explore the power of AI agent development – [Check out the Strands Agents SDK on GitHub!](https://github.com/strands-agents/sdk-python)
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.

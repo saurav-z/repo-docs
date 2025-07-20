@@ -1,104 +1,984 @@
-# MonkeyOCR: Extract Insights from Documents with State-of-the-Art Accuracy 🚀
+# MonkeyOCR: Effortlessly Parse Documents with Cutting-Edge Accuracy (Document OCR)
 
-[Original Repo](https://github.com/Yuliang-Liu/MonkeyOCR)
-
-MonkeyOCR is a cutting-edge document parsing system utilizing a Structure-Recognition-Relation (SRR) triplet paradigm, delivering superior performance and efficiency for comprehensive document analysis.
+MonkeyOCR revolutionizes document parsing using a Structure-Recognition-Relation (SRR) triplet paradigm.  Dive into our [GitHub repository](https://github.com/Yuliang-Liu/MonkeyOCR) to explore the source code, examples, and more.
 
 **Key Features:**
 
-*   **Advanced Document Understanding:** Analyzes diverse document types including financial reports, academic papers, and more.
-*   **Superior Performance:** Outperforms leading models like Gemini 2.5-Pro and GPT-4o on the OmniDocBench benchmark.
-*   **High Speed:** Offers significant speed improvements compared to previous versions, with up to 2.4x faster processing.
-*   **Versatile Outputs:** Generates Markdown files, layout results (PDF), and detailed intermediate results (JSON).
-*   **Easy Deployment:** Supports local installation, Hugging Face weights, and Docker deployment.
+*   **Superior Performance:** MonkeyOCR-pro-1.2B surpasses the original 3B model in accuracy and speed.
+*   **Blazing Fast:**  Experience significant speed improvements compared to other models.
+*   **State-of-the-Art Results:** Achieves top performance on the OmniDocBench benchmark.
+*   **Comprehensive Parsing:** Accurately extracts text, formulas, tables, and document structure.
+*   **User-Friendly:** Includes a Gradio demo and FastAPI service for easy integration.
+*   **Supports Diverse Document Types:** Compatible with various PDF and image formats.
+*   **Simplified Pipeline:** Streamlines the document processing workflow.
 
-**Model Highlights:**
+**Key Improvements and Achievements:**
 
-*   **MonkeyOCR-pro-1.2B:** A leaner and faster model that surpasses the 3B version in accuracy, speed, and efficiency.
-*   **State-of-the-Art Results:** Achieves the best overall performance on both English and Chinese documents on the OmniDocBench.
+*   MonkeyOCR-pro-1.2B excels on Chinese documents.
+*   MonkeyOCR-pro-1.2B offers ~36% speed boost with minimal performance loss.
+*   MonkeyOCR-pro-1.2B outperforms Nanonets-OCR-3B on olmOCR-Bench.
+*   MonkeyOCR-pro-3B achieves the best overall performance, surpassing closed-source and large open-source models.
 
-**Key Improvements and Results:**
+### Comparing MonkeyOCR with closed-source and extra large open-source VLMs.
+<a href="https://zimgs.com/i/EKhkhY"><img src="https://v1.ax1x.com/2025/07/15/EKhkhY.png" alt="EKhkhY.png" border="0" /></a>
 
-*   MonkeyOCR-pro-1.2B surpasses MonkeyOCR-3B by 7.4% on Chinese documents.
-*   MonkeyOCR-pro-1.2B delivers approximately a 36% speed improvement over MonkeyOCR-pro-3B, with approximately 1.6% drop in performance.
-*   On olmOCR-Bench, MonkeyOCR-pro-1.2B outperforms Nanonets-OCR-3B by 7.3%.
-*   On OmniDocBench, MonkeyOCR-pro-3B achieves the best overall performance on both English and Chinese documents, outperforming even closed-source and extra-large open-source VLMs such as Gemini 2.0-Flash, Gemini 2.5-Pro, Qwen2.5-VL-72B, GPT-4o, and InternVL3-78B.
+## Inference Speed (Pages/s) on Different GPUs and [PDF](https://drive.google.com/drive/folders/1geumlJmVY7UUKdr8324sYZ0FHSAElh7m?usp=sharing) Page Counts
 
-**Model Weights and Resources:**
+<table>
+    <thead>
+		<tr align='center'>
+    		<th>Model</th>
+        	<th>GPU</th>
+        	<th>50 Pages</th>
+        	<th>100 Pages</th>
+        	<th>300 Pages</th>
+        	<th>500 Pages</th>
+        	<th>1000 Pages</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr align='center'>
+    		<td rowspan='4'>MonkeyOCR-pro-3B</td>
+        	<td>3090</td>
+        	<td>0.492</td>
+        	<td>0.484</td>
+        	<td>0.497</td>
+        	<td>0.492</td>
+        	<td>0.496</td>
+    	</tr>
+    	<tr align='center'>
+        	<td>A6000</td>
+        	<td>0.585</td>
+        	<td>0.587</td>
+        	<td>0.609</td>
+        	<td>0.598</td>
+        	<td>0.608</td>
+    	</tr>
+    	<tr align='center'>
+        	<td>H800</td>
+        	<td>0.923</td>
+        	<td>0.768</td>
+        	<td>0.897</td>
+        	<td>0.930</td>
+        	<td>0.891</td>
+    	</tr>
+    	<tr align='center'>
+        	<td>4090</td>
+        	<td>0.972</td>
+        	<td>0.969</td>
+        	<td>1.006</td>
+        	<td>0.986</td>
+        	<td>1.006</td>
+    	</tr>
+    	<tr align='center'>
+    		<td rowspan='4'>MonkeyOCR-pro-1.2B</td>
+        	<td>3090</td>
+        	<td>0.615</td>
+        	<td>0.660</td>
+        	<td>0.677</td>
+        	<td>0.687</td>
+        	<td>0.683</td>
+    	</tr>
+    	<tr align='center'>
+        	<td>A6000</td>
+        	<td>0.709</td>
+        	<td>0.786</td>
+        	<td>0.825</td>
+        	<td>0.829</td>
+        	<td>0.825</td>
+   		</tr>
+    	<tr align='center'>
+        	<td>H800</td>
+        	<td>0.965</td>
+        	<td>1.082</td>
+        	<td>1.101</td>
+        	<td>1.145</td>
+        	<td>1.015</td>
+    	</tr>
+    	<tr align='center'>
+        	<td>4090</td>
+        	<td>1.194</td>
+        	<td>1.314</td>
+        	<td>1.436</td>
+        	<td>1.442</td>
+        	<td>1.434</td>
+    	</tr>
+    </tbody>
+</table>
 
-*   **MonkeyOCR-pro-1.2B Weights:** [Hugging Face](https://huggingface.co/echo840/MonkeyOCR-pro-1.2B)
-*   **MonkeyOCR-pro-3B Demo:** [Demo](http://vlrlabmonkey.xyz:7685/)
-*   **Weights:** [Hugging Face](https://huggingface.co/echo840/MonkeyOCR/blob/main/Structure/layout_zh.pt)
-*   **Weights:** [Hugging Face](https://huggingface.co/echo840/MonkeyOCR/blob/main/Structure/doclayout_yolo_docstructbench_imgsz1280_2501.pt)
+## VLM OCR Speed (Pages/s) on Different GPUs and [PDF](https://drive.google.com/drive/folders/1geumlJmVY7UUKdr8324sYZ0FHSAElh7m?usp=sharing) Page Counts
 
-**Performance Charts (Example):**
+<table>
+    <thead>
+		<tr align='center'>
+    		<th>Model</th>
+        	<th>GPU</th>
+        	<th>50 Pages</th>
+        	<th>100 Pages</th>
+        	<th>300 Pages</th>
+        	<th>500 Pages</th>
+        	<th>1000 Pages</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr align='center'>
+    		<td rowspan='4'>MonkeyOCR-pro-3B</td>
+        	<td>3090</td>
+        	<td>0.705</td>
+        	<td>0.680</td>
+        	<td>0.711</td>
+        	<td>0.700</td>
+        	<td>0.724</td>
+    	</tr>
+    	<tr align='center'>
+        	<td>A6000</td>
+        	<td>0.885</td>
+        	<td>0.860</td>
+        	<td>0.915</td>
+        	<td>0.892</td>
+        	<td>0.934</td>
+    	</tr>
+    	<tr align='center'>
+        	<td>H800</td>
+        	<td>1.371</td>
+        	<td>1.135</td>
+        	<td>1.339</td>
+        	<td>1.433</td>
+        	<td>1.509</td>
+    	</tr>
+    	<tr align='center'>
+        	<td>4090</td>
+        	<td>1.321</td>
+        	<td>1.300</td>
+        	<td>1.384</td>
+        	<td>1.343</td>
+        	<td>1.410</td>
+    	</tr>
+    	<tr align='center'>
+    		<td rowspan='4'>MonkeyOCR-pro-1.2B</td>
+        	<td>3090</td>
+        	<td>0.919</td>
+        	<td>1.086</td>
+        	<td>1.166</td>
+        	<td>1.182</td>
+        	<td>1.199</td>
+    	</tr>
+    	<tr align='center'>
+        	<td>A6000</td>
+        	<td>1.177</td>
+        	<td>1.361</td>
+        	<td>1.506</td>
+        	<td>1.525</td>
+        	<td>1.569</td>
+   		</tr>
+    	<tr align='center'>
+        	<td>H800</td>
+        	<td>1.466</td>
+        	<td>1.719</td>
+        	<td>1.763</td>
+        	<td>1.875</td>
+        	<td>1.650</td>
+    	</tr>
+    	<tr align='center'>
+        	<td>4090</td>
+        	<td>1.759</td>
+        	<td>1.987</td>
+        	<td>2.260</td>
+        	<td>2.345</td>
+        	<td>2.415</td>
+    	</tr>
+    </tbody>
+</table>
 
-*   **Inference Speed (Pages/s):**
-    <details>
-    <summary>Expand Table</summary>
+## News 
+* ```2025.07.10 ``` 🚀 We release [MonkeyOCR-pro-1.2B](https://huggingface.co/echo840/MonkeyOCR-pro-1.2B), — a leaner and faster version model that outperforms our previous 3B version in accuracy, speed, and efficiency.
+*   ```2025.06.12 ``` 🚀 The model’s trending on [Hugging Face](https://huggingface.co/models?sort=trending). Thanks for the love!
+*   ```2025.06.05 ``` 🚀 We release [MonkeyOCR](https://huggingface.co/echo840/MonkeyOCR), an English and Chinese documents parsing model.
 
-    | Model             | GPU   | 50 Pages | 100 Pages | 300 Pages | 500 Pages | 1000 Pages |
-    | :---------------- | :---- | :------- | :-------- | :-------- | :-------- | :--------- |
-    | MonkeyOCR-pro-3B  | 3090  | 0.705    | 0.680     | 0.711     | 0.700     | 0.724      |
-    | MonkeyOCR-pro-3B  | A6000 | 0.885    | 0.860     | 0.915     | 0.892     | 0.934      |
-    | MonkeyOCR-pro-3B  | H800  | 1.371    | 1.135     | 1.339     | 1.433     | 1.509      |
-    | MonkeyOCR-pro-3B  | 4090  | 1.321    | 1.300     | 1.384     | 1.343     | 1.410      |
-    | MonkeyOCR-pro-1.2B | 3090  | 0.919    | 1.086     | 1.166     | 1.182     | 1.199      |
-    | MonkeyOCR-pro-1.2B | A6000 | 1.177    | 1.361     | 1.506     | 1.525     | 1.569      |
-    | MonkeyOCR-pro-1.2B | H800  | 1.466    | 1.719     | 1.763     | 1.875     | 1.650      |
-    | MonkeyOCR-pro-1.2B | 4090  | 1.759    | 1.987     | 2.260     | 2.345     | 2.415      |
+## Quick Start: Get Up and Running
 
-    </details>
-*   **End-to-End Evaluation Results:**
-    <details>
-    <summary>Expand Table</summary>
+### 1. Local Installation
+Install MonkeyOCR with these steps:
+See the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda_pp.md#install-with-cuda-support) to set up your environment.
 
-    | **Model Type**              | **Methods**               | **Overall**<br/>*EN* | **Overall**<br/>*ZH* |
-    | :-------------------------- | :------------------------ | :------------------- | :------------------- |
-    | **Pipeline Tools**          | MonkeyOCR-3B*             | 0.154               | 0.277               |
-    | **Mix**                     | MonkeyOCR-pro-3B [Demo]  | **0.138**           | **0.206**           |
-    | **Mix**                     | MonkeyOCR-pro-1.2B      | 0.153               | 0.223               |
+### 2. Download Model Weights
+Download our model from Huggingface.
+```python
+pip install huggingface_hub
 
-    </details>
+python tools/download_model.py -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
+```
+You can also download our model from ModelScope.
 
-*   **Benchmark Results (olmOCR-bench):**
-    <details>
-    <summary>Expand Table</summary>
+```python
+pip install modelscope
 
-    | Model                   | Overall  |
-    | :---------------------- | :------- |
-    | MonkeyOCR-pro-3B [Demo] | **75.8** |
-    | MonkeyOCR-pro-1.2B      | 71.8     |
-    </details>
+python tools/download_model.py -t modelscope -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
+```
 
-**Quick Start:**
+### 3. Inference
 
-1.  **Install:** Follow the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda_pp.md#install-with-cuda-support).
-2.  **Download Model Weights:**  Use the provided `download_model.py` script or download from Hugging Face.
-3.  **Inference:** Run the `parse.py` script with your input PDF or image.
-4.  **Gradio Demo:** Launch the interactive demo with `python demo/demo_gradio.py`.
-5.  **FastAPI:** Start the API service with `uvicorn api.main:app --port 8000`.
-6.  **Docker Deployment:** Use the provided Docker compose files for easy deployment.
-7.  **Quantization:** Quantize the model using AWQ (see [quantization guide](docs/Quantization.md)).
+```bash
+# Replace input_path with the path to a PDF or image or directory
 
-**Example Outputs:**
+# End-to-end parsing
+python parse.py input_path
 
-*   Processed Markdown File (`your.md`)
-*   Layout Results (`your_layout.pdf`)
-*   Intermediate Block Results (`your_middle.json`)
+# Parse files in a dir with specific group page num
+python parse.py input_path -g 20
 
-**See more information about usage example, docker deployment and Windows support. Refer to [Quick Start](https://github.com/Yuliang-Liu/MonkeyOCR#quick-start)**
+# Single-task recognition (outputs markdown only)
+python parse.py input_path -t text/formula/table
 
-**Visualization Demo:**
+# Parse PDFs in input_path and split results by pages
+python parse.py input_path -s
 
-Experience MonkeyOCR firsthand through our intuitive demo. Visit [demo](http://vlrlabmonkey.xyz:7685/) and upload a PDF or image to see it in action.
+# Specify output directory and model config file
+python parse.py input_path -o ./output -c config.yaml
+```
 
-<img src="asserts/Visualization.GIF?raw=true" width="600"/>
+<details>
+<summary><b>More usage examples</b></summary>
 
-**Citing MonkeyOCR:**  Please use the provided BibTeX entry if you utilize MonkeyOCR in your research.
+```bash
+# Single file processing
+python parse.py input.pdf                           # Parse single PDF file
+python parse.py input.pdf -o ./output               # Parse with custom output dir
+python parse.py input.pdf -s                        # Parse PDF with page splitting
+python parse.py image.jpg                           # Parse single image file
 
-**Acknowledgments:**  Special thanks to the individuals and organizations listed in the acknowledgments section for their contributions.
+# Single task recognition
+python parse.py image.jpg -t text                   # Text recognition from image
+python parse.py image.jpg -t formula                # Formula recognition from image
+python parse.py image.jpg -t table                  # Table recognition from image
+python parse.py document.pdf -t text                # Text recognition from all PDF pages
 
-**Limitations:**  MonkeyOCR has certain limitations regarding specific document types and language support, which are planned for future improvements.
+# Folder processing (all files individually)
+python parse.py /path/to/folder                     # Parse all files in folder
+python parse.py /path/to/folder -s                  # Parse with page splitting
+python parse.py /path/to/folder -t text             # Single task recognition for all files
 
-**Copyright:**  The model is intended for academic research and non-commercial use only.
+# Multi-file grouping (batch processing by page count)
+python parse.py /path/to/folder -g 5                # Group files with max 5 total pages
+python parse.py /path/to/folder -g 10 -s            # Group files with page splitting
+python parse.py /path/to/folder -g 8 -t text        # Group files for single task recognition
+
+# Advanced configurations
+python parse.py input.pdf -c model_configs.yaml     # Custom model configuration
+python parse.py /path/to/folder -g 15 -s -o ./out   # Group files, split pages, custom output
+python parse.py input.pdf --pred-abandon            # Enable predicting abandon elements
+```
+
+</details>
+
+<details>
+<summary><b>Output Results</b></summary>
+
+MonkeyOCR mainly generates three types of output files:
+
+1.  **Processed Markdown File** (`your.md`): The final parsed document content in markdown format, containing text, formulas, tables, and other structured elements.
+2.  **Layout Results** (`your_layout.pdf`): The layout results drawed on origin PDF.
+3.  **Intermediate Block Results** (`your_middle.json`): A JSON file containing detailed information about all detected blocks, including:
+    *   Block coordinates and positions
+    *   Block content and type information
+    *   Relationship information between blocks
+
+These files provide both the final formatted output and detailed intermediate results for further analysis or processing.
+
+</details>
+
+### 4. Gradio Demo
+
+```bash
+python demo/demo_gradio.py
+```
+
+Access the demo at http://localhost:7860 after running this command.
+
+### 5. Fast API
+
+```bash
+uvicorn api.main:app --port 8000
+```
+
+Access API documentation at http://localhost:8000/docs.
+
+> [!TIP]
+> To improve API concurrency performance, consider configuring the inference backend as `lmdeploy_queue` or `vllm_queue`.
+
+## Docker Deployment
+
+1.  `cd docker`
+2.  Run `bash env.sh` if NVIDIA GPU support is not set up.
+3.  `docker compose build monkeyocr`
+    *   Use `docker compose build monkeyocr-fix` if using 20/30/40-series or V100 GPUs for LMDeploy compatibility.
+4.  `docker compose up monkeyocr-demo` to start the Gradio demo (port 7860).
+    *   Use `docker compose run --rm monkeyocr-dev` for interactive development.
+5.  `docker compose up monkeyocr-api` for the FastAPI service (port 7861).
+
+## Windows Support
+
+Refer to [windows support guide](docs/windows_support.md).
+
+## Quantization
+
+Quantize the model using AWQ by following instructions in the [quantization guide](docs/Quantization.md).
+
+## Benchmark Results
+
+### 1. The end-to-end evaluation results of different tasks.
+
+<table>
+<thead>
+<tr>
+<th rowspan="2"><strong>Model<br>Type</strong></th>
+<th rowspan="2"><strong>Methods</strong></th>
+<th colspan="2"><strong>Overall<sup>Edit</sup>↓</strong></th>
+<th colspan="2"><strong>Text<sup>Edit</sup>↓</strong></th>
+<th colspan="2"><strong>Formula<sup>Edit</sup>↓</strong></th>
+<th colspan="2"><strong>Table<sup>TEDS</sup>↑</strong></th>
+<th colspan="2"><strong>Table<sup>Edit</sup>↓</strong></th>
+<th colspan="2"><strong>Read Order<sup>Edit</sup>↓</strong></th>
+</tr>
+<tr>
+<th><em>EN</em></th>
+<th><em>ZH</em></th>
+<th><em>EN</em></th>
+<th><em>ZH</em></th>
+<th><em>EN</em></th>
+<th><em>ZH</em></th>
+<th><em>EN</em></th>
+<th><em>ZH</em></th>
+<th><em>EN</em></th>
+<th><em>ZH</em></th>
+<th><em>EN</em></th>
+<th><em>ZH</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="8"><strong>Pipeline<br>Tools</strong></td>
+<td>MinerU</td>
+<td>0.150</td>
+<td>0.357</td>
+<td>0.061</td>
+<td>0.215</td>
+<td>0.278</td>
+<td>0.577</td>
+<td>78.6</td>
+<td>62.1</td>
+<td>0.180</td>
+<td>0.344</td>
+<td>0.079</td>
+<td>0.292</td>
+</tr>
+<tr>
+<td>Marker</td>
+<td>0.336</td>
+<td>0.556</td>
+<td>0.080</td>
+<td>0.315</td>
+<td>0.530</td>
+<td>0.883</td>
+<td>67.6</td>
+<td>49.2</td>
+<td>0.619</td>
+<td>0.685</td>
+<td>0.114</td>
+<td>0.340</td>
+</tr>
+<tr>
+<td>Mathpix</td>
+<td>0.191</td>
+<td>0.365</td>
+<td>0.105</td>
+<td>0.384</td>
+<td>0.306</td>
+<td><strong>0.454</strong></td>
+<td>77.0</td>
+<td>67.1</td>
+<td>0.243</td>
+<td>0.320</td>
+<td>0.108</td>
+<td>0.304</td>
+</tr>
+<tr>
+<td>Docling</td>
+<td>0.589</td>
+<td>0.909</td>
+<td>0.416</td>
+<td>0.987</td>
+<td>0.999</td>
+<td>1</td>
+<td>61.3</td>
+<td>25.0</td>
+<td>0.627</td>
+<td>0.810</td>
+<td>0.313</td>
+<td>0.837</td>
+</tr>
+<tr>
+<td>Pix2Text</td>
+<td>0.320</td>
+<td>0.528</td>
+<td>0.138</td>
+<td>0.356</td>
+<td>0.276</td>
+<td>0.611</td>
+<td>73.6</td>
+<td>66.2</td>
+<td>0.584</td>
+<td>0.645</td>
+<td>0.281</td>
+<td>0.499</td>
+</tr>
+<tr>
+<td>Unstructured</td>
+<td>0.586</td>
+<td>0.716</td>
+<td>0.198</td>
+<td>0.481</td>
+<td>0.999</td>
+<td>1</td>
+<td>0</td>
+<td>0.06</td>
+<td>1</td>
+<td>0.998</td>
+<td>0.145</td>
+<td>0.387</td>
+</tr>
+<tr>
+<td>OpenParse</td>
+<td>0.646</td>
+<td>0.814</td>
+<td>0.681</td>
+<td>0.974</td>
+<td>0.996</td>
+<td>1</td>
+<td>64.8</td>
+<td>27.5</td>
+<td>0.284</td>
+<td>0.639</td>
+<td>0.595</td>
+<td>0.641</td>
+</tr>
+<tr>
+<td>PPStruct-V3</td>
+<td>0.145</td>
+<td><strong>0.206</strong></td>
+<td>0.058</td>
+<td><strong>0.088</strong></td>
+<td>0.295</td>
+<td>0.535</td>
+<td>-</td>
+<td>-</td>
+<td>0.159</td>
+<td><strong>0.109</strong></td>
+<td><strong>0.069</strong></td>
+<td><strong>0.091</strong></td>
+</tr>
+<tr>
+<td rowspan="8"><strong>Expert<br>VLMs</strong></td>
+<td>GOT-OCR</td>
+<td>0.287</td>
+<td>0.411</td>
+<td>0.189</td>
+<td>0.315</td>
+<td>0.360</td>
+<td>0.528</td>
+<td>53.2</td>
+<td>47.2</td>
+<td>0.459</td>
+<td>0.520</td>
+<td>0.141</td>
+<td>0.280</td>
+</tr>
+<tr>
+<td>Nougat</td>
+<td>0.452</td>
+<td>0.973</td>
+<td>0.365</td>
+<td>0.998</td>
+<td>0.488</td>
+<td>0.941</td>
+<td>39.9</td>
+<td>0</td>
+<td>0.572</td>
+<td>1.000</td>
+<td>0.382</td>
+<td>0.954</td>
+</tr>
+<tr>
+<td>Mistral OCR</td>
+<td>0.268</td>
+<td>0.439</td>
+<td>0.072</td>
+<td>0.325</td>
+<td>0.318</td>
+<td>0.495</td>
+<td>75.8</td>
+<td>63.6</td>
+<td>0.600</td>
+<td>0.650</td>
+<td>0.083</td>
+<td>0.284</td>
+</tr>
+<tr>
+<td>OLMOCR-sglang</td>
+<td>0.326</td>
+<td>0.469</td>
+<td>0.097</td>
+<td>0.293</td>
+<td>0.455</td>
+<td>0.655</td>
+<td>68.1</td>
+<td>61.3</td>
+<td>0.608</td><td>0.652</td>
+<td>0.145</td>
+<td>0.277</td>
+</tr>
+<tr>
+<td>SmolDocling-256M</td>
+<td>0.493</td>
+<td>0.816</td>
+<td>0.262</td>
+<td>0.838</td>
+<td>0.753</td>
+<td>0.997</td>
+<td>44.9</td>
+<td>16.5</td>
+<td>0.729</td>
+<td>0.907</td>
+<td>0.227</td>
+<td>0.522</td>
+</tr>
+<tr>
+<td>Dolphin</td>
+<td>0.206</td>
+<td>0.306</td>
+<td>0.107</td>
+<td>0.197</td>
+<td>0.447</td>
+<td>0.580</td>
+<td>77.3</td>
+<td>67.2</td>
+<td>0.180</td>
+<td>0.285</td>
+<td>0.091</td>
+<td>0.162</td>
+</tr>
+<tr>
+<td>MinerU 2</td>
+<td>0.139</td>
+<td>0.240</td>
+<td><strong>0.047</strong></td>
+<td>0.109</td>
+<td>0.297</td>
+<td>0.536</td>
+<td><strong>82.5</strong></td>
+<td>79.0</td>
+<td>0.141</td>
+<td>0.195</td>
+<td><strong>0.069</strong></td>
+<td>0.118</td>
+</tr>
+<tr>
+<td>OCRFlux</td>
+	
+<td>0.195</td>
+<td>0.281</td>
+<td>0.064</td>
+<td>0.183</td>
+<td>0.379</td>
+<td>0.613</td>
+<td>71.6</td>
+<td>81.3</td>
+<td>0.253</td>
+<td>0.139</td>
+<td>0.086</td>
+<td>0.187</td>
+
+
+</tr>
+<tr>
+<td rowspan="3"><strong>General<br>VLMs</strong></td>
+<td>GPT4o</td>
+<td>0.233</td>
+<td>0.399</td>
+<td>0.144</td>
+<td>0.409</td>
+<td>0.425</td>
+<td>0.606</td>
+<td>72.0</td>
+<td>62.9</td>
+<td>0.234</td>
+<td>0.329</td>
+<td>0.128</td>
+<td>0.251</td>
+</tr>
+<tr>
+<td>Qwen2.5-VL-7B</td>
+<td>0.312</td>
+<td>0.406</td>
+<td>0.157</td>
+<td>0.228</td>
+<td>0.351</td>
+<td>0.574</td>
+<td>76.4</td>
+<td>72.2</td>
+<td>0.588</td>
+<td>0.619</td>
+<td>0.149</td>
+<td>0.203</td>
+</tr>
+<tr>
+<td>InternVL3-8B</td>
+<td>0.314</td>
+<td>0.383</td>
+<td>0.134</td>
+<td>0.218</td>
+<td>0.417</td>
+<td>0.563</td>
+<td>66.1</td>
+<td>73.1</td>
+<td>0.586</td>
+<td>0.564</td>
+<td>0.118</td>
+<td>0.186</td>
+</tr>
+<tr>
+<td rowspan="4"><strong>Mix</strong></td>
+<td><strong>MonkeyOCR-3B <a href="https://huggingface.co/echo840/MonkeyOCR/blob/main/Structure/doclayout_yolo_docstructbench_imgsz1280_2501.pt">[Weight]</a></strong></td>
+<td>0.140</td>
+<td>0.297</td>
+<td>0.058</td>
+<td>0.185</td>
+<td>0.238</td>
+<td>0.506</td>
+<td>80.2</td>
+<td>77.7</td>
+<td>0.170</td>
+<td>0.253</td>
+<td>0.093</td>
+<td>0.244</td>
+</tr>
+<tr>
+<td><strong>MonkeyOCR-3B* <a href="https://huggingface.co/echo840/MonkeyOCR/blob/main/Structure/layout_zh.pt">[Weight]</a></strong></td>
+<td>0.154</td>
+<td>0.277</td>
+<td>0.073</td>
+<td>0.134</td>
+<td>0.255</td>
+<td>0.529</td>
+<td>78.2</td>
+<td>76.2</td>
+<td>0.182</td>
+<td>0.262</td>
+<td>0.105</td>
+<td>0.183</td>
+</tr>
+<tr>
+<td><strong>MonkeyOCR-pro-3B <a href="http://vlrlabmonkey.xyz:7685/">[Demo]</a></strong></td>
+<td><strong>0.138</strong></td>
+<td><strong>0.206</strong></td>
+<td>0.067</td>
+<td>0.107</td>
+<td><strong>0.246</strong></td>
+<td><strong>0.421</strong></td>
+<td>81.5</td>
+<td><strong>87.5</strong></td>
+<td><strong>0.139</strong></td>
+<td>0.111</td>
+<td>0.100</td>
+<td>0.185</td>
+</tr>
+<tr>
+<td><strong>MonkeyOCR-pro-1.2B <a href="https://huggingface.co/echo840/MonkeyOCR-pro-1.2B">[Weight]</a></strong></td>
+<td>0.153</td>
+<td>0.223</td>
+<td>0.066</td>
+<td>0.123</td>
+<td>0.272</td>
+<td>0.449</td>
+<td>76.5</td>
+<td>83.7</td>
+<td>0.176</td>
+<td>0.131</td>
+<td>0.097</td>
+<td>0.187</td>
+</tr>
+</tbody>
+</table>
+
+### 2. The end-to-end text recognition performance across 9 PDF page types.
+
+<table>
+<thead>
+<tr>
+<th><strong>Model<br>Type</strong></th>
+<th><strong>Models</strong></th>
+<th><strong>Book</strong></th>
+<th><strong>Slides</strong></th>
+<th><strong>Financial<br>Report</strong></th>
+<th><strong>Textbook</strong></th>
+<th><strong>Exam<br>Paper</strong></th>
+<th><strong>Magazine</strong></th>
+<th><strong>Academic<br>Papers</strong></th>
+<th><strong>Notes</strong></th>
+<th><strong>Newspaper</strong></th>
+<th><strong>Overall</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3"><strong>Pipeline<br>Tools</strong></td>
+<td>MinerU</td>
+<td>0.055</td>
+<td>0.124</td>
+<td><u>0.033</u></td>
+<td>0.102</td>
+<td>0.159</td>
+<td><strong>0.072</strong></td>
+<td><u>0.025</u></td>
+<td>0.984</td>
+<td>0.171</td>
+<td>0.206</td>
+</tr>
+<tr>
+<td>Marker</td>
+<td>0.074</td>
+<td>0.340</td>
+<td>0.089</td>
+<td>0.319</td>
+<td>0.452</td>
+<td>0.153</td>
+<td>0.059</td>
+<td>0.651</td>
+<td>0.192</td>
+<td>0.274</td>
+</tr>
+<tr>
+<td>Mathpix</td>
+<td>0.131</td>
+<td>0.220</td>
+<td>0.202</td>
+<td>0.216</td>
+<td>0.278</td>
+<td>0.147</td>
+<td>0.091</td>
+<td>0.634</td>
+<td>0.690</td>
+<td>0.300</td>
+</tr>
+<tr>
+<td rowspan="4"><strong>Expert<br>VLMs</strong></td>
+<td>GOT-OCR</td>
+<td>0.111</td>
+<td>0.222</td>
+<td>0.067</td>
+<td>0.132</td>
+<td>0.204</td>
+<td>0.198</td>
+<td>0.179</td>
+<td>0.388</td>
+<td>0.771</td>
+<td>0.267</td>
+</tr>
+<tr>
+<td>Nougat</td>
+<td>0.734</td>
+<td>0.958</td>
+<td>1.000</td>
+<td>0.820</td>
+<td>0.930</td>
+<td>0.830</td>
+<td>0.214</td>
+<td>0.991</td>
+<td>0.871</td>
+<td>0.806</td>
+</tr>
+<tr>
+<td>Dolphin</td>
+<td>0.091</td>
+<td>0.131</td>
+<td>0.057</td>
+<td>0.146</td>
+<td>0.231</td>
+<td>0.121</td>
+<td>0.074</td>
+<td>0.363</td>
+<td>0.307</td>
+<td>0.177</td>
+</tr>
+<tr>
+<td>OCRFlux</td>
+<td>0.068</td>
+<td>0.125</td>
+<td>0.092</td>
+<td>0.102</td>
+<td>0.119</td>
+<td>0.083</td>
+<td>0.047</td>
+<td>0.223</td>
+<td>0.536</td>
+<td>0.149</td>
+</tr>
+<tr>
+<td rowspan="3"><strong>General<br>VLMs</strong></td>
+<td>GPT4o</td>
+<td>0.157</td>
+<td>0.163</td>
+<td>0.348</td>
+<td>0.187</td>
+<td>0.281</td>
+<td>0.173</td>
+<td>0.146</td>
+<td>0.607</td>
+<td>0.751</td>
+<td>0.316</td>
+</tr>
+<tr>
+<td>Qwen2.5-VL-7B</td>
+<td>0.148</td>
+<td><strong>0.053</strong></td>
+<td>0.111</td>
+<td>0.137</td>
+<td>0.189</td>
+<td>0.117</td>
+<td>0.134</td>
+<td>0.204</td>
+<td>0.706</td>
+<td>0.205</td>
+</tr>
+<tr>
+<td>InternVL3-8B</td>
+<td>0.163</td>
+<td><u>0.056</u></td>
+<td>0.107</td>
+<td>0.109</td>
+<td>0.129</td>
+<td>0.100</td>
+<td>0.159</td>
+<td><strong>0.150</strong></td>
+<td>0.681</td>
+<td>0.188</td>
+</tr>
+<tr>
+<td rowspan="4"><strong>Mix</strong></td>
+<td><strong>MonkeyOCR-3B <a href="https://huggingface.co/echo840/MonkeyOCR/blob/main/Structure/doclayout_yolo_docstructbench_imgsz1280_2501.pt">[Weight]</a></strong></td>
+<td><strong>0.046</strong></td>
+<td>0.120</td>
+<td><strong>0.024</strong></td>
+<td>0.100</td>
+<td>0.129</td>
+<td>0.086</td>
+<td><strong>0.024</strong></td>
+<td>0.643</td>
+<td><u>0.131</u></td>
+<td>0.155</td>
+</tr>
+<tr>
+<td><strong>MonkeyOCR-3B* <a href="https://huggingface.co/echo840/MonkeyOCR/blob/main/Structure/layout_zh.pt">[Weight]</a></strong></td>
+<td><u>0.054</u></td>
+<td>0.203</td>
+<td>0.038</td>
+<td>0.112</td>
+<td>0.138</td>
+<td>0.111</td>
+<td>0.032</td>
+<td>0.194</td>
+<td>0.136</td>
+<td>0.120</td>
+</tr>
+<tr>
+<td><strong>MonkeyOCR-pro-3B <a href="http://vlrlabmonkey.xyz:7685/">[Demo]</a></strong></td>
+<td>0.084</td>
+<td>0.129</td>
+<td>0.060</td>
+<td><strong>0.090</strong></td>
+<td><strong>0.107</strong></td>
+<td><u>0.073</u></td>
+<td>0.050</td>
+<td><u>0.171</u></td>
+<td><strong>0.107</strong></td>
+<td><strong>0.100</strong></td>
+</tr>
+<tr>
+<td><strong>MonkeyOCR-pro-1.2B <a href="https://huggingface.co/echo840/MonkeyOCR-pro-1.2B">[Weight]</a></strong></td>
+<td>0.087</td>
+<td>0.142</td>
+<td>0.059</td>
+<td><u>0.093</u></td>
+<td><u>0.115</u></td>
+<td>0.085</td>
+<td>0.045</td>
+<td>0.226</td>
+<td>0.122</td>
+<td><u>0.112</u></td>
+</tr>
+</tbody>
+</table>
+
+### 3. The evaluation results of olmOCR-bench.
+
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>ArXiv</th>
+<th>Old Scans<br>Math</th>
+<th>Tables</th>
+<th>Old Scans</th>
+<th>Headers and<br>Footers</th>
+<th>Multi<br>column</th>
+<th>Long Tiny<br>Text</th>
+<th>Base</th>
+<th>Overall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GOT OCR</td>
+<td>52.7</td>
+<td>52.0</td>
+<td>0.2</td>
+<td>22.1</td>
+<td>93.6</td>
+<td>42.0</td>
+<td>29.9</td>
+<td>94.0</td>
+<td>48.3 ± 1.1</td>
+</tr>
+<tr>
+<td>Marker</td>
+<td>76.0</td>
+<td>57.9</td>
+<td>57.6</td>
+<td>27.8</td>
+<td>84.9</td>
+<td>72.9</td>
+<td>84.6</td>
+<td><strong>99.1</strong></td>
+<td>70.1 ± 1.1</td>
+</tr>
+<tr>
+<td>MinerU</td>
+<td>75.4</td>
+<td>47.4</td>
+<td>60.9</td>
+<td>17.3</td>
+<td><strong>96.6</strong></td>
+<td>59.0</td>
+<td>39.1</td>
+<td>96.6</td>
+<td>61.5 ± 1.1</td>
+</tr>
+<tr>
+<td>Mistral OCR</td>
+<td>77.2</td>
+<td>67.5</td>
+<td>60.6</td>
+<td>29.3</td>
+<td>93.6</td>
+<td>71.3</td>
+<td>77

@@ -22,29 +22,28 @@
     <img src="https://github.com/axolotl-ai-cloud/axolotl/actions/workflows/multi-gpu-e2e.yml/badge.svg" alt="multigpu-semi-weekly tests">
 </p>
 
-## Axolotl: Supercharge Your AI Model Training with Ease
+## Axolotl: The Ultimate Post-Training Toolkit for AI Models
 
-Axolotl is a powerful and versatile tool designed to simplify and accelerate the fine-tuning and training of large language models and other AI models. For more details, visit the [original repository](https://github.com/axolotl-ai-cloud/axolotl).
+Axolotl is a powerful and versatile toolkit designed to streamline the fine-tuning and optimization of your AI models, built for performance and ease of use.  For more details, see the original repo: [https://github.com/axolotl-ai-cloud/axolotl](https://github.com/axolotl-ai-cloud/axolotl)
 
 **Key Features:**
 
-*   **Extensive Model Support:** Train a wide variety of models, including LLaMA, Mistral, Mixtral, Pythia, and other Hugging Face Transformers causal language models.
-*   **Diverse Training Methods:** Choose from full fine-tuning, LoRA, QLoRA, GPTQ, QAT, Preference Tuning (DPO, IPO, KTO, ORPO), RL (GRPO), Multimodal, and Reward Modelling (RM) / Process Reward Modelling (PRM).
-*   **Simplified Configuration:** Streamline your workflow with a single YAML file for dataset preprocessing, training, evaluation, quantization, and inference.
-*   **Performance-Driven Optimizations:** Benefit from features like Multipacking, Flash Attention, Xformers, Flex Attention, Liger Kernel, Cut Cross Entropy, Sequence Parallelism (SP), LoRA optimizations, and multi-GPU training (FSDP1, FSDP2, DeepSpeed), among others.
-*   **Flexible Data Handling:** Load datasets from local storage, Hugging Face Hub, and cloud platforms (S3, Azure, GCP, OCI).
-*   **Cloud-Ready Deployment:** Deploy with ease using provided Docker images and PyPI packages for cloud environments and local hardware.
-
-## Latest Updates
-
-- 2025/06: Magistral with mistral-common tokenizer support has been added to Axolotl. See [examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/magistral) to start training your own Magistral models with Axolotl!
-- 2025/05: Quantization Aware Training (QAT) support has been added to Axolotl. Explore the [docs](https://docs.axolotl.ai/docs/qat.html) to learn more!
-- 2025/04: Llama 4 support has been added in Axolotl. See [examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/llama-4) to start training your own Llama 4 models with Axolotl's linearized version!
-- 2025/03: Axolotl has implemented Sequence Parallelism (SP) support. Read the [blog](https://huggingface.co/blog/axolotl-ai-co/long-context-with-sequence-parallelism-in-axolotl) and [docs](https://docs.axolotl.ai/docs/sequence_parallelism.html) to learn how to scale your context length when fine-tuning.
-- 2025/03: (Beta) Fine-tuning Multimodal models is now supported in Axolotl. Check out the [docs](https://docs.axolotl.ai/docs/multimodal.html) to fine-tune your own!
-- 2025/02: Axolotl has added LoRA optimizations to reduce memory usage and improve training speed for LoRA and QLoRA in single GPU and multi-GPU training (DDP and DeepSpeed). Jump into the [docs](https://docs.axolotl.ai/docs/lora_optims.html) to give it a try.
-- 2025/02: Axolotl has added GRPO support. Dive into our [blog](https://huggingface.co/blog/axolotl-ai-co/training-llms-w-interpreter-feedback-wasm) and [GRPO example](https://github.com/axolotl-ai-cloud/grpo_code) and have some fun!
-- 2025/01: Axolotl has added Reward Modelling / Process Reward Modelling fine-tuning support. See [docs](https://docs.axolotl.ai/docs/reward_modelling.html).
+*   **Broad Model Support:** Fine-tune a wide range of models, including LLaMA, Mistral, Mixtral, Pythia, and other Hugging Face transformers causal language models.
+*   **Versatile Training Methods:**  Supports Full fine-tuning, LoRA, QLoRA, GPTQ, QAT, Preference Tuning (DPO, IPO, KTO, ORPO), RL (GRPO), Multimodal, and Reward Modelling (RM) / Process Reward Modelling (PRM).
+*   **Simplified Configuration:**  Manage your entire workflow – dataset preprocessing, training, evaluation, quantization, and inference – with a single, unified YAML configuration file.
+*   **Performance Optimization:**  Leverage cutting-edge techniques for speed and efficiency:
+    *   Multipacking
+    *   Flash Attention
+    *   Xformers
+    *   Flex Attention
+    *   Liger Kernel
+    *   Cut Cross Entropy
+    *   Sequence Parallelism (SP)
+    *   LoRA optimizations
+    *   Multi-GPU training (FSDP1, FSDP2, DeepSpeed)
+    *   Multi-node training (Torchrun, Ray)
+*   **Flexible Data Handling:** Load datasets from local storage, Hugging Face Hub, and cloud services (S3, Azure, GCP, OCI).
+*   **Cloud-Ready Deployment:**  Utilize pre-built [Docker images](https://hub.docker.com/u/axolotlai) and [PyPI packages](https://pypi.org/project/axolotl/) for seamless deployment on cloud platforms and local hardware.
 
 ## 🚀 Quick Start
 

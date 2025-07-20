@@ -1,4 +1,3 @@
-html
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="/docs/logo_tiny_light.svg">
@@ -6,13 +5,23 @@ html
   </picture>
 </div>
 
-<h1>tinygrad: A Deep Learning Framework That's Surprisingly Powerful</h1>
+# tinygrad: A Deep Learning Framework for Everyone
 
-<p>tinygrad is a lightweight deep learning framework designed for simplicity and flexibility, offering a compelling alternative to larger frameworks.</p>
+**tinygrad is a remarkably small deep learning framework, offering a unique balance of simplicity and power, making it ideal for both beginners and experienced practitioners.** Explore the cutting edge of machine learning with tinygrad! ([Original Repo](https://github.com/tinygrad/tinygrad))
 
-<h3>
-  <a href="https://github.com/tinygrad/tinygrad">Homepage</a> | <a href="https://docs.tinygrad.org/">Documentation</a> | <a href="https://discord.gg/ZjZadyC7PK">Discord</a>
-</h3>
+### Key Features:
+
+*   **Lightweight and Efficient:** Tinygrad is designed to be minimal, making it easy to understand, modify, and deploy.
+*   **Broad Accelerator Support:** Supports a wide range of hardware, including CPU, GPU (OpenCL, METAL, CUDA, AMD, NV, WebGPU), and more, allowing for flexible deployment.
+*   **Easy to Extend:** The framework's simplicity makes it straightforward to add support for new accelerators, paving the way for innovation.
+*   **Fully Functional:** Despite its small size, tinygrad can run complex models like LLaMA and Stable Diffusion.
+*   **Lazy Evaluation:** Smart lazy evaluation optimizes computations, fusing operations for maximum performance.
+
+### Dive Deeper
+
+*   **[Homepage](https://github.com/tinygrad/tinygrad)**
+*   **[Documentation](https://docs.tinygrad.org/)**
+*   **[Discord](https://discord.gg/ZjZadyC7PK)**
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/tinygrad/tinygrad)](https://github.com/tinygrad/tinygrad/stargazers)
 [![Unit Tests](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml/badge.svg)](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml)
@@ -20,30 +29,25 @@ html
 
 ---
 
-<h2>Key Features</h2>
+## What You Can Do with tinygrad
 
-<ul>
-  <li><b>Lightweight & Simple:</b> Built for ease of use and understanding, perfect for exploring deep learning concepts.</li>
-  <li><b>Supports LLaMA and Stable Diffusion:</b> Run cutting-edge models with tinygrad.</li>
-  <li><b>Lazy Evaluation:</b> Experience the power of kernel fusion for optimized performance.</li>
-  <li><b>Neural Network Capabilities:</b> Build and train neural networks with a clean and efficient autograd/tensor library, optimizer, and data loader.</li>
-  <li><b>Extensive Accelerator Support:</b> Supports a wide range of accelerators including GPU (OpenCL), CPU, LLVM, METAL, CUDA, AMD, NV, QCOM, and WEBGPU, with easy extensibility.</li>
-</ul>
+### Run Complex Models
 
-<h2>Examples</h2>
+Tinygrad shines by running impressive models. For example, it can run:
 
-<h3>Lazy Evaluation Example</h3>
+*   **LLaMA**
+*   **Stable Diffusion**
 
-See how matmul is fused into one kernel:
+### Explore Lazy Evaluation
 
-```bash
+```sh
 DEBUG=3 python3 -c "from tinygrad import Tensor; N = 1024; a, b = Tensor.empty(N, N), Tensor.empty(N, N); (a @ b).realize()"
 ```
-And change `DEBUG` to `4` to see the generated code.
 
-<h3>Neural Network Example</h3>
+### Build Neural Networks
 
-Build a basic linear neural network:
+Create and train neural networks with ease, leveraging the framework's tensor library, autograd, and optimizers.
+
 ```python
 from tinygrad import Tensor, nn
 
@@ -66,44 +70,44 @@ with Tensor.train():
     optim.step()
     print(i, loss.item())
 ```
+
 See [examples/beautiful_mnist.py](examples/beautiful_mnist.py) for the full version that gets 98% in ~5 seconds
 
-<h2>Accelerators</h2>
+## Accelerators
 
-tinygrad supports:
-- [x] GPU (OpenCL)
-- [x] CPU (C Code)
-- [x] LLVM
-- [x] METAL
-- [x] CUDA
-- [x] AMD
-- [x] NV
-- [x] QCOM
-- [x] WEBGPU
+tinygrad supports several accelerators:
 
-Check default accelerator: `python3 -c "from tinygrad import Device; print(Device.DEFAULT)"`
+*   [x] [GPU (OpenCL)](tinygrad/runtime/ops_gpu.py)
+*   [x] [CPU (C Code)](tinygrad/runtime/ops_cpu.py)
+*   [x] [LLVM](tinygrad/runtime/ops_llvm.py)
+*   [x] [METAL](tinygrad/runtime/ops_metal.py)
+*   [x] [CUDA](tinygrad/runtime/ops_cuda.py)
+*   [x] [AMD](tinygrad/runtime/ops_amd.py)
+*   [x] [NV](tinygrad/runtime/ops_nv.py)
+*   [x] [QCOM](tinygrad/runtime/ops_qcom.py)
+*   [x] [WEBGPU](tinygrad/runtime/ops_webgpu.py)
 
-<h2>Installation</h2>
+To check default accelerator run: `python3 -c "from tinygrad import Device; print(Device.DEFAULT)"`
 
-Install from source:
+## Installation
 
-```bash
+### From Source
+```sh
 git clone https://github.com/tinygrad/tinygrad.git
 cd tinygrad
 python3 -m pip install -e .
 ```
 
-Or install the master branch directly:
-
-```bash
+### Direct (master)
+```sh
 python3 -m pip install git+https://github.com/tinygrad/tinygrad.git
 ```
 
-<h2>Documentation</h2>
+## Documentation and Quick Start
 
-Detailed documentation and a quick start guide are available on the <a href="https://docs.tinygrad.org/">docs website</a>.
+Detailed documentation and a quick start guide are available on the [docs website](https://docs.tinygrad.org/).
 
-<h3>Quick Comparison to PyTorch</h3>
+### Quick Comparison with PyTorch
 
 ```python
 from tinygrad import Tensor
@@ -117,7 +121,6 @@ print(x.grad.tolist())  # dz/dx
 print(y.grad.tolist())  # dz/dy
 ```
 
-The same thing but in PyTorch:
 ```python
 import torch
 
@@ -130,10 +133,6 @@ print(x.grad.tolist())  # dz/dx
 print(y.grad.tolist())  # dz/dy
 ```
 
-<h2>Contributing</h2>
+## Contributing
 
-Refer to the [contribution guidelines](https://github.com/tinygrad/tinygrad#contributing) to help ensure your PRs are accepted.
-
-<h2>Further Reading</h2>
-
-*   [Original Repository](https://github.com/tinygrad/tinygrad)
+We welcome contributions!  Please review the [contribution guidelines](https://github.com/tinygrad/tinygrad#contributing) before submitting a PR.

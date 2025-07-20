@@ -14,15 +14,16 @@
 
 # AutoGen: Build Powerful Multi-Agent AI Applications
 
-AutoGen is a cutting-edge framework, empowering you to create sophisticated multi-agent AI applications that can autonomously solve complex problems or collaborate with humans.  [Learn more on the original repo](https://github.com/microsoft/autogen).
+**AutoGen** is a versatile framework that empowers developers to create cutting-edge multi-agent AI applications, enabling autonomous task execution and seamless human-AI collaboration. ([Visit the original repo](https://github.com/microsoft/autogen))
 
 ## Key Features
 
-*   **Multi-Agent Workflows:** Design and implement intricate workflows using multiple AI agents for enhanced problem-solving capabilities.
-*   **Autonomous or Collaborative:** Create agents that can operate independently or seamlessly integrate with human input and guidance.
-*   **Extensible Architecture:** Leverage a flexible and modular design with core APIs, agentchat APIs, and extension APIs to adapt and extend the functionality.
-*   **AutoGen Studio:** Utilize a no-code GUI for rapid prototyping and experimentation with multi-agent systems.
-*   **Open Ecosystem:** Join a thriving community with regular office hours, active Discord, GitHub Discussions, and a dedicated blog.
+*   **Multi-Agent Workflows:** Design and implement complex AI workflows with multiple agents working together.
+*   **Flexible Architecture:** Leverages a layered and extensible design that supports both high-level APIs for rapid prototyping and low-level components for fine-grained control.
+*   **Extensible by Design:** Extensible API allows for custom implementations of LLM clients and third-party integrations.
+*   **AutoGen Studio:** No-code GUI for building and experimenting with multi-agent applications.
+*   **Benchmarking Suite:** Evaluate and optimize agent performance with the AutoGen Bench suite.
+*   **.NET and Python Support:** Cross-language support for building agents.
 
 ## Installation
 
@@ -33,7 +34,7 @@ AutoGen requires **Python 3.10 or later**.
 pip install -U "autogen-agentchat" "autogen-ext[openai]"
 ```
 
-The current stable version is v0.4. If you are upgrading from AutoGen v0.2, please refer to the [Migration Guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/migration-guide.html) for detailed instructions on how to update your code and configurations.
+If upgrading from AutoGen v0.2, please refer to the [Migration Guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/migration-guide.html).
 
 ```bash
 # Install AutoGen Studio for no-code GUI
@@ -112,13 +113,13 @@ autogenstudio ui --port 8080 --appdir ./my-app
   <img src="autogen-landing.jpg" alt="AutoGen Landing" width="500">
 </div>
 
-The AutoGen ecosystem provides everything you need to create AI agents, especially multi-agent workflows -- framework, developer tools, and applications.
+AutoGen provides a comprehensive ecosystem for developing AI agents, including a flexible framework, developer tools, and readily available applications.
 
-The _framework_ uses a layered and extensible design. Layers have clearly divided responsibilities and build on top of layers below. This design enables you to use the framework at different levels of abstraction, from high-level APIs to low-level components.
+The framework's layered design provides flexibility.
 
-- [Core API](./python/packages/autogen-core/) implements message passing, event-driven agents, and local and distributed runtime for flexibility and power. It also support cross-language support for .NET and Python.
-- [AgentChat API](./python/packages/autogen-agentchat/) implements a simpler but opinionated API for rapid prototyping. This API is built on top of the Core API and is closest to what users of v0.2 are familiar with and supports common multi-agent patterns such as two-agent chat or group chats.
-- [Extensions API](./python/packages/autogen-ext/) enables first- and third-party extensions continuously expanding framework capabilities. It support specific implementation of LLM clients (e.g., OpenAI, AzureOpenAI), and capabilities such as code execution.
+-   **Core API:** Implements message passing, event-driven agents, and local/distributed runtime. It also support cross-language support for .NET and Python.
+-   **AgentChat API:** Implements a simpler API for rapid prototyping.
+-   **Extensions API:** Enables first- and third-party extensions, expanding framework capabilities.
 
 The ecosystem also supports two essential _developer tools_:
 
@@ -126,8 +127,8 @@ The ecosystem also supports two essential _developer tools_:
   <img src="https://media.githubusercontent.com/media/microsoft/autogen/refs/heads/main/python/packages/autogen-studio/docs/ags_screen.png" alt="AutoGen Studio Screenshot" width="500">
 </div>
 
-- [AutoGen Studio](./python/packages/autogen-studio/) provides a no-code GUI for building multi-agent applications.
-- [AutoGen Bench](./python/packages/agbench/) provides a benchmarking suite for evaluating agent performance.
+-   [AutoGen Studio](./python/packages/autogen-studio/) provides a no-code GUI for building multi-agent applications.
+-   [AutoGen Bench](./python/packages/agbench/) provides a benchmarking suite for evaluating agent performance.
 
 You can use the AutoGen framework and developer tools to create applications for your domain. For example, [Magentic-One](./python/packages/magentic-one-cli/) is a state-of-the-art multi-agent team built using AgentChat API and Extensions API that can handle a variety of tasks that require web browsing, code execution, and file handling.
 
