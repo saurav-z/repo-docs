@@ -1,84 +1,65 @@
-# ZSim: The Ultimate Zenless Zone Zero Damage Calculator
+# ZSim: The Ultimate Damage Calculator for Zenless Zone Zero
 
-**Maximize your team's DPS with ZSim, a powerful and automated damage calculator for Zenless Zone Zero.**
+Unleash the power of your team and optimize your damage output with ZSim, a user-friendly damage calculator for Zenless Zone Zero, now available on [GitHub](https://github.com/ZZZSimulator/ZSim).
 
-![ZSim Logo](./docs/img/zsim成图.svg)
+![ZSim Logo](docs/img/横板logo成图.png)
 
-![ZSim Project Team Logo](./docs/img/横板logo成图.png)
+## Key Features
 
-## Key Features:
-
-*   **Automated Damage Calculation:**  Simulates team actions based on Action Priority Lists (APLs) without manual skill sequence input, providing accurate total damage output.
-*   **Team Composition Analysis:**  Calculates total damage based on your team's composition, taking into account character equipment and weapons.
-*   **Visual Reporting:** Generates easy-to-understand visual charts and tables to analyze damage output and character performance.
-*   **Detailed Damage Breakdown:** Provides in-depth damage information for each character in your team.
-*   **Equipment & APL Editing:** Allows you to customize character equipment and APLs for precise simulations.
+*   **Automatic Damage Simulation:**  ZSim automatically simulates battles based on your chosen Action Priority List (APL), eliminating the need for manual skill sequence input.
+*   **Team Composition Analysis:** Calculate total damage output for your entire team composition, taking into account character, weapon, and equipment stats.
+*   **Visual Reports:** Generate insightful charts and tables to visualize your team's damage performance.
+*   **Detailed Damage Breakdown:**  View comprehensive damage information for each character in your team.
+*   **Customizable Builds:** Easily edit your agents' equipment and tailor them to your playstyle.
+*   **APL Customization:**  Modify the APL code to fine-tune your simulations.
 
 ## Installation
 
-### Prerequisites:
+### Prerequisites
 
-Before installing ZSim, ensure you have `uv` installed.  Follow the appropriate instructions for your operating system:
+*   **UV (Universal Virtual Environment):**  A fast and modern Python package and virtual environment manager. Install it using one of the following methods:
 
-**Install UV:**
+    *   **macOS or Linux:**
+        ```bash
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        ```
+    *   **Windows 11 24H2 or later:**
+        ```bash
+        winget install --id=astral-sh.uv  -e
+        ```
+    *   **Older Windows Versions:**
+        ```powershell
+        powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+        ```
+    *   **Pip (Alternative):**
+        ```bash
+        pip install uv
+        ```
+    *   For a complete guide, consult the official [UV Installation Guide](https://docs.astral.sh/uv/getting-started/installation/).
 
-```bash
-# macOS or Linux:
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+### ZSim Installation
 
-```bash
-# Windows 11 24H2 or later:
-winget install --id=astral-sh.uv  -e
-```
-
-```bash
-# Lower versions of Windows:
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
-
-```bash
-# Using pip:
-pip install uv
-```
-
-For more detailed `uv` installation instructions, see the official documentation: [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)
-
-### Installing ZSim:
-
-1.  **Navigate to Project Directory:** Open your terminal and navigate to the directory where you downloaded the ZSim project.
-2.  **Create a Virtual Environment:**
-
+1.  **Clone or Download:** Obtain the ZSim source code by either cloning the repository or downloading the latest release from the [releases page](https://github.com/ZZZSimulator/ZSim/releases).
+2.  **Navigate:** Open your terminal in the project directory.
+3.  **Create and Activate Virtual Environment & Install Dependencies:**
     ```bash
     uv venv
-    ```
-3.  **Install ZSim:**
-
-    ```bash
-    uv pip install .  # The '.' refers to the current directory
+    uv pip install .  # Install the ZSim package from the current directory
     ```
 
 ## Running ZSim
 
-Once installed, run the damage calculator from your terminal:
+1.  **Run from Anywhere (Recommended):**
+    ```bash
+    zsim run
+    ```
+2.  **Run Directly (Alternative - If ZSim not installed):**
+    ```bash
+    uv run ./zsim/run.py run
+    # or
+    uv run zsim run
+    ```
 
-```bash
-zsim run
-```
+##  Contributing
 
-Alternatively, you can run it directly using `uv`:
-
-```bash
-uv run ./zsim/run.py run
-```
-
-```bash
-# or also:
-uv run zsim run
-```
-
-## Contribute & Learn More
-
-For detailed development information and contribution guidelines, see the [Development Guide](https://github.com/ZZZSimulator/ZSim/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97-Develop-Guide).
-
-**Visit the GitHub Repository:**  [https://github.com/ZZZSimulator/ZSim](https://github.com/ZZZSimulator/ZSim)
+For information about contributing to the project, please refer to the [Development Guide](https://github.com/ZZZSimulator/ZSim/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97-Develop-Guide).

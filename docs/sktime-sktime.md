@@ -1,107 +1,113 @@
-# sktime: The Unified Toolkit for Time Series Analysis
+<!-- Improved README for sktime -->
 
-[![sktime Logo](https://github.com/sktime/sktime/blob/main/docs/source/images/sktime-logo.svg?raw=true)](https://github.com/sktime/sktime)
+# sktime: The Python Library for Time Series Analysis
 
-**sktime empowers you to easily build, evaluate, and deploy time series models for forecasting, classification, and more.** ([Original Repository](https://github.com/sktime/sktime))
+<p align="center">
+    <a href="https://www.sktime.net"><img src="https://github.com/sktime/sktime/blob/main/docs/source/images/sktime-logo.svg" width="175" alt="sktime logo" /></a>
+</p>
 
-*   🚀 **Version 0.38.4 is now available!** [See the Release Notes](https://www.sktime.net/en/latest/changelog.html).
+**Analyze time series data with ease using sktime, a unified and versatile Python library.**  Version 0.38.4 is now available! ([Release Notes](https://www.sktime.net/en/latest/changelog.html))  Explore a comprehensive toolkit for time series analysis, including forecasting, classification, clustering, anomaly detection, and more.
 
-sktime is a comprehensive Python library designed for all things time series analysis. It offers a unified interface for a wide array of time series learning tasks, including forecasting, classification, clustering, anomaly/changepoint detection, and more. Built with compatibility with [scikit-learn](https://scikit-learn.org/stable/), sktime provides a robust framework for building, tuning, and validating time series models with both pre-built [time series algorithms](https://www.sktime.net/en/stable/estimator_overview.html) and custom tools.
+**Key Features:**
 
-## Key Features
+*   **Unified Interface:** Consistent API for various time series tasks.
+*   **Diverse Algorithms:** Includes dedicated time series algorithms and scikit-learn compatible tools.
+*   **Model Building:**  Tools for building, tuning, and validating time series models.
+*   **Interoperability:** Interfaces with popular libraries such as scikit-learn, statsmodels, and others.
+*   **Extensibility:**  Easy-to-use extension templates for adding custom algorithms.
 
-*   **Unified Interface:** Simplify your time series analysis workflow with a consistent API for diverse tasks.
-*   **Comprehensive Task Support:** Tackle forecasting, classification, regression, clustering, anomaly detection, and more.
-*   **Extensive Algorithm Library:** Access a wide range of pre-built time series algorithms, including those compatible with scikit-learn.
-*   **Model Building Tools:** Utilize powerful tools for model composition, ensembling, hyperparameter tuning, and feature engineering.
-*   **Integration with Popular Libraries:** Seamlessly integrate with scikit-learn, statsmodels, tsfresh, and other essential tools.
-*   **Easy Extensibility:** Extend sktime's functionality by adding custom algorithms using provided templates.
+[**View the sktime repository on GitHub**](https://github.com/sktime/sktime)
 
-## Documentation & Resources
+| Resources | Links |
+|---|---|
+| **Documentation** | [Documentation](https://www.sktime.net/en/stable/users.html) |
+| **Tutorials** | [Tutorials](https://www.sktime.net/en/stable/examples.html) |
+| **Release Notes** | [Release Notes](https://www.sktime.net/en/stable/changelog.html) |
+| **Open Source** | [![BSD 3-clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/sktime/sktime/blob/main/LICENSE) [![GC.OS Sponsored](https://img.shields.io/badge/GC.OS-Sponsored%20Project-orange.svg?style=flat&colorA=0eac92&colorB=2077b4)](https://gc-os-ai.github.io/) |
+| **Community Tutorials** | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sktime/sktime/main?filepath=examples) [![!youtube](https://img.shields.io/static/v1?logo=youtube&label=YouTube&message=tutorials&color=red)](https://www.youtube.com/playlist?list=PLKs3UgGjlWHqNzu0LEOeLKvnjvvest2d0) |
+| **Community** | [![!discord](https://img.shields.io/static/v1?logo=discord&label=discord&message=chat&color=lightgreen)](https://discord.com/invite/54ACzaFsn7) [![!slack](https://img.shields.io/static/v1?logo=linkedin&label=LinkedIn&message=news&color=lightblue)](https://www.linkedin.com/company/scikit-time/)  |
+| **CI/CD** | [![github-actions](https://img.shields.io/github/actions/workflow/status/sktime/sktime/wheels.yml?logo=github)](https://github.com/sktime/sktime/actions/workflows/wheels.yml) [![readthedocs](https://img.shields.io/readthedocs/sktime?logo=readthedocs)](https://www.sktime.net/en/latest/?badge=latest) [![platform](https://img.shields.io/conda/pn/conda-forge/sktime)](https://github.com/sktime/sktime) |
+| **Code** |  [![!pypi](https://img.shields.io/pypi/v/sktime?color=orange)](https://pypi.org/project/sktime/) [![!conda](https://img.shields.io/conda/vn/conda-forge/sktime)](https://anaconda.org/conda-forge/sktime) [![!python-versions](https://img.shields.io/pypi/pyversions/sktime)](https://www.python.org/) [![!black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)  |
+| **Downloads** | ![PyPI - Downloads](https://img.shields.io/pypi/dw/sktime) ![PyPI - Downloads](https://img.shields.io/pypi/dm/sktime) [![Downloads](https://static.pepy.tech/personalized-badge/sktime?period=total&units=international_system&left_color=grey&right_color=blue&left_text=cumulative%20(pypi))](https://pepy.tech/project/sktime) |
+| **Citation** | [![!zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.3749000.svg)](https://doi.org/10.5281/zenodo.3749000) |
 
-Explore the comprehensive resources available to get you started with sktime:
+## Explore the Documentation
 
-*   :star: **[Tutorials](https://www.sktime.net/en/latest/tutorials.html)**: New to sktime? Here's everything you need to know!
-*   :clipboard: **[Binder Notebooks](https://mybinder.org/v2/gh/sktime/sktime/main?filepath=examples)**: Example notebooks to play with in your browser.
-*   :woman_technologist: **[Examples](https://www.sktime.net/en/latest/examples.html)**: How to use sktime and its features.
-*   :scissors: **[Extension Templates](https://github.com/sktime/sktime/blob/main/extension_templates)**: How to build your own estimator using sktime's API.
-*   :control_knobs: **[API Reference](https://www.sktime.net/en/latest/api_reference.html)**: The detailed reference for sktime's API.
-*   :tv: **[Video Tutorial](https://github.com/sktime/sktime-tutorial-pydata-global-2021)**: Our video tutorial from 2021 PyData Global.
-*   :hammer_and_wrench: **[Changelog](https://www.sktime.net/en/latest/changelog.html)**: Changes and version history.
-*   :deciduous_tree: **[Roadmap](https://www.sktime.net/en/latest/roadmap.html)**: sktime's software and community development plan.
-*   :pencil: **[Related Software](https://www.sktime.net/en/latest/related_software.html)**: A list of related software.
+*   **[Tutorials](https://www.sktime.net/en/latest/tutorials.html):** Get started with sktime.
+*   **[Binder Notebooks](https://mybinder.org/v2/gh/sktime/sktime/main?filepath=examples):** Interactive examples in your browser.
+*   **[Examples](https://www.sktime.net/en/latest/examples.html):** Practical use cases and feature demonstrations.
+*   **[API Reference](https://www.sktime.net/en/latest/api_reference.html):** Detailed API documentation.
+*   **[Changelog](https://www.sktime.net/en/latest/changelog.html):** Track changes and version history.
 
-## Get Involved
+## Get Involved & Ask Questions
 
-Join the thriving sktime community and contribute to the project:
+Your contributions and questions are highly encouraged! Find help and participate in discussions via:
 
-*   :gift_heart: **[Contribute](https://www.sktime.net/en/latest/get_involved/contributing.html)**: How to contribute to sktime.
-*   :school_satchel: **[Mentoring](https://github.com/sktime/mentoring)**: New to open source? Apply to our mentoring program!
-*   :date: **[Meetings](https://calendar.google.com/calendar/u/0/embed?src=sktime.toolbox@gmail.com&ctz=UTC)**: Join our discussions, tutorials, workshops, and sprints!
-*   :woman_mechanic: **[Developer Guides](https://www.sktime.net/en/latest/developer_guide.html)**: How to further develop sktime's code base.
-*   :construction: **[Enhancement Proposals](https://github.com/sktime/enhancement-proposals)**: Design a new feature for sktime.
-*   :medal_sports: **[Contributors](https://github.com/sktime/sktime/blob/main/CONTRIBUTORS.md)**: A list of all contributors.
-*   :raising_hand: **[Roles](https://www.sktime.net/en/latest/about/team.html)**: An overview of our core community roles.
-*   :money_with_wings: **[Donate](https://opencollective.com/sktime)**: Fund sktime maintenance and development.
-*   :classical_building: **[Governance](https://www.sktime.net/en/latest/get_involved/governance.html)**: How and by whom decisions are made in sktime's community.
+*   **Bug Reports & Feature Requests:** [GitHub Issue Tracker](https://github.com/sktime/sktime/issues)
+*   **Usage Questions & General Discussion:** [GitHub Discussions](https://github.com/sktime/sktime/discussions) & [Stack Overflow](https://stackoverflow.com/questions/tagged/sktime)
+*   **Contribution & Development:** `dev-chat` channel & [Discord](https://discord.com/invite/54ACzaFsn7)
 
-## Where to Get Help
+## sktime Features
 
-Get your questions answered and connect with the community on the following platforms:
+sktime offers a unified interface for various time series learning tasks, including:
 
-*   :bug: **Bug Reports:** [GitHub Issue Tracker](https://github.com/sktime/sktime/issues)
-*   :sparkles: **Feature Requests & Ideas:** [GitHub Issue Tracker](https://github.com/sktime/sktime/issues)
-*   :woman_technologist: **Usage Questions:** [GitHub Discussions](https://github.com/sktime/sktime/discussions) · [Stack Overflow](https://stackoverflow.com/questions/tagged/sktime)
-*   :speech_balloon: **General Discussion:** [GitHub Discussions](https://github.com/sktime/sktime/discussions)
-*   :factory: **Contribution & Development:** `dev-chat` channel · [Discord](https://discord.com/invite/54ACzaFsn7)
-*   :globe_with_meridians: **Meet-ups and collaboration sessions:** [Discord](https://discord.com/invite/54ACzaFsn7) - Fridays 13 UTC, dev/meet-ups channel
+*   **Forecasting:**  Predict future values.
+*   **Time Series Classification:** Categorize time series data.
+*   **Time Series Regression:** Predict continuous values from time series.
+*   **Transformations:** Preprocessing and feature engineering.
+*   **Detection Tasks:**  Identify anomalies and change points.
+*   **Time Series Clustering:** Group similar time series.
 
-## Code & Package Details
+**Key Modules:**
 
-*   **PyPI:** [![PyPI version](https://img.shields.io/pypi/v/sktime?color=orange)](https://pypi.org/project/sktime/)
-*   **Conda-forge:** [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sktime)](https://anaconda.org/conda-forge/sktime)
-*   **Python Versions:** [![Python Versions](https://img.shields.io/pypi/pyversions/sktime)](https://www.python.org/)
-*   **Code Style:** [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-*   **Downloads:**
-    [![PyPI Downloads](https://img.shields.io/pypi/dw/sktime)](https://pypi.org/project/sktime/)
-    [![PyPI Downloads](https://img.shields.io/pypi/dm/sktime)](https://pypi.org/project/sktime/)
-    [![Cumulative Downloads](https://static.pepy.tech/personalized-badge/sktime?period=total&units=international_system&left_color=grey&right_color=blue&left_text=cumulative%20(pypi))](https://pepy.tech/project/sktime)
-*   **Citation:** [![Zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3749000.svg)](https://doi.org/10.5281/zenodo.3749000)
+| Module                         | Status   | Links                                                                                                       |
+| ------------------------------ | -------- | ----------------------------------------------------------------------------------------------------------- |
+| **Forecasting**                | Stable   | [Tutorial](https://www.sktime.net/en/latest/examples/01_forecasting.html) · [API Reference](https://www.sktime.net/en/latest/api_reference/forecasting.html)  |
+| **Time Series Classification** | Stable   | [Tutorial](https://github.com/sktime/sktime/blob/main/examples/02_classification.ipynb) · [API Reference](https://www.sktime.net/en/latest/api_reference/classification.html)  |
+| **Time Series Regression**     | Stable   | [API Reference](https://www.sktime.net/en/latest/api_reference/regression.html)                      |
+| **Transformations**            | Stable   | [Tutorial](https://github.com/sktime/sktime/blob/main/examples/03_transformers.ipynb) · [API Reference](https://www.sktime.net/en/latest/api_reference/transformations.html)   |
+| **Detection Tasks**            | Maturing | [Extension Template](https://github.com/sktime/sktime/blob/main/extension_templates/detection.py)           |
+| **Parameter Fitting**           | Maturing | [API Reference](https://www.sktime.net/en/latest/api_reference/param_est.html)                            |
+| **Time Series Clustering**     | Maturing | [API Reference](https://www.sktime.net/en/latest/api_reference/clustering.html)                           |
+| **Time Series Distances/Kernels** | Maturing | [Tutorial](https://github.com/sktime/sktime/blob/main/examples/03_transformers.ipynb) · [API Reference](https://www.sktime.net/en/latest/api_reference/dists_kernels.html)   |
+| **Time Series Alignment**      | Experimental | [API Reference](https://www.sktime.net/en/latest/api_reference/alignment.html)                               |
+| **Time Series Splitters**      | Maturing |  |
+| **Distributions and simulation** | Experimental |  |
 
-## Installation
+## Install sktime
 
-*   **Operating Systems:** macOS X · Linux · Windows 8.1 or higher
-*   **Python:** 3.8, 3.9, 3.10, 3.11, and 3.12 (only 64-bit)
-*   **Package Managers:** [pip](https://pip.pypa.io/en/stable/) · [conda](https://docs.conda.io/en/latest/) (via `conda-forge`)
+Ensure you have the prerequisites and choose your preferred method:
 
-### pip
+*   **Operating System:** macOS X, Linux, Windows 8.1 or higher
+*   **Python:** 3.8, 3.9, 3.10, 3.11, and 3.12 (64-bit only)
+
+**Package Managers:**  [pip](https://pip.pypa.io/en/stable/) or [conda](https://docs.conda.io/en/latest/) (via `conda-forge`)
+
+### Installing with pip:
 
 ```bash
 pip install sktime
 ```
 
-Install with all extra dependencies:
+For all extras:
 
 ```bash
 pip install sktime[all_extras]
 ```
 
-or for curated sets of soft dependencies for specific learning tasks:
-
+For curated sets of soft dependencies for specific learning tasks:
 ```bash
 pip install sktime[forecasting]  # for selected forecasting dependencies
 pip install sktime[forecasting,transformations]  # forecasters and transformers
 ```
 
-Valid sets are: `forecasting`, `transformations`, `classification`, `regression`, `clustering`, `param_est`, `networks`, `detection`, `alignment`.
-
-### conda
+### Installing with conda:
 
 ```bash
 conda install -c conda-forge sktime
 ```
 
-Install with all extra dependencies:
+For all extras:
 
 ```bash
 conda install -c conda-forge sktime-all-extras
@@ -145,36 +151,32 @@ accuracy_score(y_test, y_pred)
 >>> 0.8679245283018868
 ```
 
-## Modules & Functionality
+## Join the sktime Community
 
-| Module                           | Status     | Links                                                                                                |
-| :------------------------------- | :--------- | :--------------------------------------------------------------------------------------------------- |
-| **[Forecasting](https://github.com/sktime/sktime/tree/main/sktime/forecasting)**           | stable     | [Tutorial](https://www.sktime.net/en/latest/examples/01_forecasting.html) · [API Reference](https://www.sktime.net/en/latest/api_reference/forecasting.html) · [Extension Template](https://github.com/sktime/sktime/blob/main/extension_templates/forecasting.py)  |
-| **[Time Series Classification](https://github.com/sktime/sktime/tree/main/sktime/classification)** | stable     | [Tutorial](https://github.com/sktime/sktime/blob/main/examples/02_classification.ipynb) · [API Reference](https://www.sktime.net/en/latest/api_reference/classification.html) · [Extension Template](https://github.com/sktime/sktime/blob/main/extension_templates/classification.py) |
-| **[Time Series Regression](https://github.com/sktime/sktime/tree/main/sktime/regression)**  | stable     | [API Reference](https://www.sktime.net/en/latest/api_reference/regression.html)                                                             |
-| **[Transformations](https://github.com/sktime/sktime/tree/main/sktime/transformations)**   | stable     | [Tutorial](https://github.com/sktime/sktime/blob/main/examples/03_transformers.ipynb) · [API Reference](https://www.sktime.net/en/latest/api_reference/transformations.html) · [Extension Template](https://github.com/sktime/sktime/blob/main/extension_templates/transformer.py)  |
-| **[Detection Tasks](https://github.com/sktime/sktime/tree/main/sktime/detection)**           | maturing   | [Extension Template](https://github.com/sktime/sktime/blob/main/extension_templates/detection.py)                                           |
-| **[Parameter Fitting](https://github.com/sktime/sktime/tree/main/sktime/param_est)**     | maturing   | [API Reference](https://www.sktime.net/en/latest/api_reference/param_est.html) · [Extension Template](https://github.com/sktime/sktime/blob/main/extension_templates/transformer.py)  |
-| **[Time Series Clustering](https://github.com/sktime/sktime/tree/main/sktime/clustering)**  | maturing   | [API Reference](https://www.sktime.net/en/latest/api_reference/clustering.html) ·  [Extension Template](https://github.com/sktime/sktime/blob/main/extension_templates/clustering.py) |
-| **[Time Series Distances/Kernels](https://github.com/sktime/sktime/tree/main/sktime/dists_kernels)** | maturing   | [Tutorial](https://github.com/sktime/sktime/blob/main/examples/03_transformers.ipynb) · [API Reference](https://www.sktime.net/en/latest/api_reference/dists_kernels.html) · [Extension Template](https://github.com/sktime/sktime/blob/main/extension_templates/dist_kern_panel.py) |
-| **[Time Series Alignment](https://github.com/sktime/sktime/tree/main/sktime/alignment)**    | experimental | [API Reference](https://www.sktime.net/en/latest/api_reference/alignment.html) · [Extension Template](https://github.com/sktime/sktime/blob/main/extension_templates/alignment.py) |
-| **[Time Series Splitters](https://github.com/sktime/sktime/tree/main/sktime/split)**       | maturing   | [Extension Template](https://github.com/sktime/sktime/blob/main/extension_templates/split.py)                                               |
-| **[Distributions and simulation](https://github.com/sktime/sktime/tree/main/sktime/proba)** | experimental |                                                                                                                                 |
+Contribute, mentor others, attend meetups, and collaborate:
 
-## Contributors
+*   **[Contribute](https://www.sktime.net/en/latest/get_involved/contributing.html):** Contribute to the project.
+*   **[Mentoring](https://github.com/sktime/mentoring):** Apply for the mentoring program.
+*   **[Meetings](https://calendar.google.com/calendar/u/0/embed?src=sktime.toolbox@gmail.com&ctz=UTC):** Participate in discussions and workshops.
+*   **[Developer Guides](https://www.sktime.net/en/latest/developer_guide.html):** Learn how to contribute to the code.
+*   **[Contributors](https://github.com/sktime/sktime/blob/main/CONTRIBUTORS.md):** View all contributors.
+*   **[Governance](https://www.sktime.net/en/latest/get_involved/governance.html):**  Understand how decisions are made.
+*   **[Donate](https://opencollective.com/sktime):** Support the project.
 
-A huge thank you to all of our contributors!
+## Hall of Fame
+
+Special thanks to our community for their valuable contributions:
 
 <a href="https://github.com/sktime/sktime/graphs/contributors">
-<img src="https://opencollective.com/sktime/contributors.svg?width=600&button=false" />
+<img src="https://opencollective.com/sktime/contributors.svg?width=600&button=false" alt="Contributors"/>
 </a>
 
 ## Project Vision
 
-*   **Community-Driven:** Developed by a welcoming and collaborative community.
-*   **Task-Specific Tools:** Guides users to choose the right tools for their specific time series tasks.
-*   **Interoperable:** Integrates seamlessly with scikit-learn, statsmodels, tsfresh, and other key libraries.
-*   **Rich Composition:** Provides comprehensive model composition and reduction capabilities.
-*   **Clean Syntax:** Employs a modern, object-oriented design for easy use.
-*   **Fair Evaluation:** Provides robust tools for fair model assessment and benchmarking.
-*   **Extensible:** Offers easy extension templates to add custom algorithms.
+*   **Community-Driven:** Developed by a collaborative community.
+*   **Problem-Focused:** Helps users find the right tools for their time series tasks.
+*   **Interoperable:** Integrates with popular libraries like scikit-learn.
+*   **Model Composition & Reduction:** Build pipelines, tune models, and extract features.
+*   **Clean Syntax:** Uses modern object-oriented design principles.
+*   **Fair Assessment:** Supports robust model evaluation and benchmarking.
+*   **Extensible:** Easy to add custom algorithms.

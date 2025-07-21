@@ -1,6 +1,6 @@
-# PyWxDump: Your Comprehensive Tool for WeChat Data Extraction and Analysis
+# PyWxDump: The Ultimate WeChat Data Extraction and Analysis Tool
 
-**Effortlessly extract, decrypt, and analyze your WeChat data with PyWxDump, a powerful Python-based tool.**  [View the original repository on GitHub](https://github.com/xaoyaoo/PyWxDump).
+**Unlock insights into your WeChat data with PyWxDump, a powerful Python tool for extracting, decrypting, and analyzing WeChat information. ([Original Repo](https://github.com/xaoyaoo/PyWxDump))**
 
 [![Python](https://img.shields.io/badge/Python-3-blue.svg)](https://www.python.org/)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/xaoyaoo/pywxdump)](https://github.com/xaoyaoo/pywxdump)
@@ -8,97 +8,133 @@
 [![GitHub stars](https://img.shields.io/github/stars/xaoyaoo/PyWxDump.svg)](https://github.com/xaoyaoo/PyWxDump)
 [![GitHub forks](https://img.shields.io/github/forks/xaoyaoo/PyWxDump.svg)](https://github.com/xaoyaoo/PyWxDump/fork)
 [![GitHub issues](https://img.shields.io/github/issues/xaoyaoo/PyWxDump)](https://github.com/xaoyaoo/PyWxDump/issues)
-
 [![PyPI](https://img.shields.io/pypi/v/pywxdump)](https://pypi.org/project/pywxdump/)
 [![Wheel](https://img.shields.io/pypi/wheel/pywxdump)](https://pypi.org/project/pywxdump/)
 [![PyPI-Downloads](https://img.shields.io/pypi/dm/pywxdump)](https://pypistats.org/packages/pywxdump)
 [![GitHub license](https://img.shields.io/pypi/l/pywxdump)](https://github.com/xaoyaoo/PyWxDump/blob/master/LICENSE)
 
-## Key Features
+## Key Features:
 
-*   **Data Extraction:** Retrieve WeChat account information, including nicknames, accounts, phone numbers, emails, and database keys.
-*   **Database Decryption:** Decrypt WeChat databases for data access.
-*   **Chat History Viewing:** View your WeChat chat history through a web interface.
-*   **Data Export:** Export chat logs as HTML and CSV for backups and analysis.
-*   **Remote Access:**  Access your WeChat chat history remotely.
-*   **Minimalist Version:** Provides a simplified version (pywxdumpmini) for key and database location retrieval.
+*   **Account Information Extraction:** Retrieve WeChat nickname, account, phone number, email, database keys, and more.
+*   **Database Decryption:** Decrypt WeChat databases for comprehensive data access.
+*   **Chat History Viewing:** View your chat history through a web interface.
+*   **Data Export:** Export chat logs as HTML and CSV files for backup and analysis.
+*   **Remote Viewing:** Access your WeChat history remotely (requires network configuration).
+*   **Minimalist Version:**  Utilize `pywxdumpmini` for key and database location retrieval.
 *   **Multi-Account Support:**  Handles multiple WeChat instances.
 
-## Project Introduction
+## I. Project Overview
 
-PyWxDump is a powerful tool for extracting and analyzing data from WeChat.
+### 1.1 Introduction
 
-### Core Capabilities:
+PyWxDump is a powerful tool built in Python designed to extract and analyze WeChat data.  It allows you to gain insights into your WeChat usage for various purposes, including backup, analysis, and more.
 
-*   Retrieve key WeChat account details.
-*   Obtain the base address offset of essential data.
-*   Decrypt WeChat databases for detailed access.
-*   Consolidate data from multiple database types.
+**Star the project if you find it useful!** [![Star](https://img.shields.io/github/stars/xaoyaoo/PyWxDump.svg?style=social&label=Star)](https://github.com/xaoyaoo/PyWxDump/)
 
-### Extended Functionality:
+### 1.2 Core Functionality
 
-*   Web-based chat history viewer.
-*   Export chat logs in HTML and CSV formats.
-*   Remote viewing of chat history (network access required).
+*   Get the base address offsets of WeChat account details.
+*   Retrieve account information for the currently logged-in WeChat user.
+*   Decrypt WeChat databases using encryption keys.
+*   View data from multiple databases in a unified interface.
 
-### Additional Resources:
+### 1.3 Extended Features
 
-*   Detailed database field descriptions are available.
-*   Method for obtaining the base address offset using CE (Cheat Engine) is provided.
-*   Decryption method for MAC databases.
+*   Web-based chat history viewing.
+*   Export chat logs in HTML, CSV, for backup and analysis.
+*   Remote viewing of chat history (requires network configuration).
 
-### Other Features:
+### 1.4 Supporting Resources
 
-*   Minimalist version `pywxdumpmini`.
-*   Supports multiple WeChat instances.
+*   Documentation on database field descriptions.
+*   Methods for obtaining base address offsets.
+*   Decryption methods for MAC databases.
 
-## Update Plans
+### 1.5 Additional Features
 
-*   Analyze chat logs and generate word clouds.
-*   Generate line charts for daily/monthly/annual chat volume analysis.
-*   Create annual visualization reports.
-*   Increase support for enterprise WeChat.
-*   Support viewing and backing up of Moments.
-*   Clean up WeChat storage space by clearing media files selectively.
-*   Automatically send messages to specified people.
+*   **pywxdumpmini:** A simplified version providing database key and location retrieval.
+*   **Multi-Instance Support:** Handle multiple WeChat instances simultaneously.
 
-## Important Notes
+**Potential Use Cases:**
 
-*   **Disclaimer:** This project is for learning and communication purposes only. Please review the full disclaimer below before use.
-*   **Use Cases:** Backup and archiving, remote chat history viewing, and more.
+1.  Network security analysis.
+2.  Daily backup and archiving.
+3.  Remote chat history viewing.
+4.  Data analysis and visualization.
 
-## Instructions
+### 1.6 Future Plans
 
-*   Detailed instructions are available in [UserGuide.md](https://github.com/xaoyaoo/PyWxDump/tree/master/doc/UserGuide.md).
-*   Minimalist version: [pywxdumpmini](https://github.com/xaoyaoo/pywxdumpmini)
-*   For UI modifications, clone [wx_dump_web](https://github.com/xaoyaoo/wxdump_web).
-*   Refer to [CE obtaining base address.md](https://github.com/xaoyaoo/PyWxDump/tree/master/doc/CE获取基址.md) and [wx database brief.md](https://github.com/xaoyaoo/PyWxDump/tree/master/doc/wx数据库简述.md)
+*   Analyze chat logs to generate word clouds.
+*   Generate daily and monthly chat volume charts.
+*   Generate visualization reports.
+*   Enhance support for enterprise WeChat.
+*   Add support for viewing and backing up Moments (WeChat's social network).
+*   Add features for cleaning up WeChat storage space.
+*   Implement UI control for automated message sending.
 
-## Disclaimer (READ CAREFULLY!)
+### 1.7 Project Origins
 
-This project is for educational and informational purposes only. Please adhere to all legal and ethical guidelines when using this software. Misuse of this tool can lead to severe consequences.
+PyWxDump is a refactored Python version of [SharpWxDump](https://github.com/AdminTest0/SharpWxDump).
 
-1.  **Purpose:** Only for learning and communication. Do not use for illegal activities.
-2.  **Usage Time:** Delete the code and compiled program within 24 hours of use.
-3.  **Operation:** Backup and view authorized databases only.  Unauthorized activities are strictly prohibited.
-4.  **Privacy:** Do not use this tool to steal others' privacy.
-5.  **No Secondary Development:** No secondary development is permitted.
-6.  **Acceptance:**  By downloading/using this tool, you agree to this disclaimer.
-7.  **Prohibited Activities:**  Do not use this tool for illegal testing or penetration.
-8.  **Consequences:**  The developers are not responsible for the consequences of misuse.
-9.  **Disclaimer Modifications:** This disclaimer can change.  Review regularly.
-10. **Compliance:** Users must adhere to laws and ethical norms when using this project.
+## II. Usage Instructions
 
-## Acknowledgments
+Detailed instructions are available in:
+*   [UserGuide.md](https://github.com/xaoyaoo/PyWxDump/tree/master/doc/UserGuide.md)
+*   For the minimalist version: [pywxdumpmini](https://github.com/xaoyaoo/pywxdumpmini)
 
-Thank you to the contributors:
+To modify the UI, clone the [wx_dump_web](https://github.com/xaoyaoo/wxdump_web).
+
+**Important Notes:**
+
+*   Refer to [CE obtaining base address.md](https://github.com/xaoyaoo/PyWxDump/tree/master/doc/CE获取基址.md) for information on obtaining the base address using Cheat Engine.  (This method is mainly for learning principles)
+*   For database parsing details, see [wx database brief.md](https://github.com/xaoyaoo/PyWxDump/tree/master/doc/wx数据库简述.md)
+
+## III. Disclaimer (READ CAREFULLY!)
+
+**(VERY IMPORTANT:  Please read and understand this section before using PyWxDump.)**
+
+### 3.1 Intended Use
+
+*   This project is for educational and communication purposes only.  **DO NOT use it for illegal activities.**
+*   Users are responsible for their actions and any legal consequences arising from them.
+
+### 3.2 Usage Duration
+
+*   Delete the source code and compiled program within 24 hours of downloading and using it. Continued use beyond this period is not associated with the project or its developers.
+
+### 3.3 Operation Regulations
+
+*   Only use this project for authorized database backup and viewing.  Strictly prohibited for illegal purposes.
+*   It is strictly prohibited to use this tool to steal others' privacy.
+*   Secondary development is strictly prohibited.
+
+### 3.4 Acceptance of Disclaimer
+
+*   By downloading, saving, browsing the source code, or using this program, you agree to these terms.
+
+### 3.5 Prohibitions
+
+*   Do not use this project for illegal testing or penetration.
+*   Users are responsible for any adverse consequences, including data leaks and privacy violations.
+
+### 3.6 Disclaimer Modification
+
+*   This disclaimer may be updated.  Check regularly for the latest version.
+
+### 3.7 Other Considerations
+
+*   Users must comply with all applicable laws and regulations.
+
+## IV. Acknowledgements
+
+Thanks to all contributors:
 
 [![PyWxDump CONTRIBUTORS](https://contrib.rocks/image?repo=xaoyaoo/PyWxDump)](https://github.com/xaoyaoo/PyWxDump/graphs/contributors)
 
-UI CONTRIBUTORS:
+UI Contributors:
 
 [![UI CONTRIBUTORS](https://contrib.rocks/image?repo=xaoyaoo/wxdump_web)](https://github.com/xaoyaoo/wxdump_web/graphs/contributors)
 
-otherContributors:
+Additional Contributors:
 
-[643104191](https://github.com/643104191) (add [ctypes_utils](https://github.com/xaoyaoo/PyWxDump/blob/9e3e4cb5aec2b9b445c8283d61c58863f4129c6e/pywxdump/wx_info/ctypes_utils.py), Accelerated the acquisition of wxinfo; [9e3e4cb](https://github.com/xaoyaoo/PyWxDump/commit/9e3e4cb5aec2b9b445c8283d61c58863f4129c6e))
+[643104191](https://github.com/643104191)

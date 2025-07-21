@@ -1,121 +1,136 @@
-# curl_cffi: Mimic Browser Fingerprints with Python & libcurl
+# curl_cffi: Mimic Browser Fingerprints with Python & libcurl-impersonate
 
-**Bypass website restrictions and scrape data effectively with curl_cffi, a powerful Python library that mimics browser fingerprints to avoid detection.**  [See the original repo](https://github.com/lexiforest/curl_cffi)
+**Bypass website restrictions and scrape with ease using `curl_cffi`, the powerful Python library that impersonates browser fingerprints to access web content like a real user.** ([Original Repo](https://github.com/lexiforest/curl_cffi))
 
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/curl-cffi)](https://pypi.org/project/curl-cffi/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/curl_cffi)](https://pypi.org/project/curl-cffi/)
-[![PyPI version](https://badge.fury.io/py/curl-cffi.svg)](https://pypi.org/project/curl-cffi/)
-[![Generic badge](https://img.shields.io/badge/Telegram%20Group-join-blue?logo=telegram)](https://t.me/+lL9n33eZp480MGM1)
-[![Generic badge](https://img.shields.io/badge/Discord-join-purple?logo=blue)](https://discord.gg/kJqMHHgdn2)
+[![PyPI version](https://badge.fury.io/py/curl-cffi.svg)](https://badge.fury.io/py/curl-cffi)
+[![Telegram Group](https://img.shields.io/badge/Telegram%20Group-join-blue?logo=telegram)](https://t.me/+lL9n33eZp480MGM1)
+[![Discord](https://img.shields.io/badge/Discord-join-purple?logo=blue)](https://discord.gg/kJqMHHgdn2)
 
 [Documentation](https://curl-cffi.readthedocs.io)
 
-`curl_cffi` is a Python binding for the [curl-impersonate fork](https://github.com/lexiforest/curl-impersonate) via [cffi](https://cffi.readthedocs.io/en/latest/), designed to bypass bot detection and web scraping restrictions. It offers browser fingerprinting capabilities, making it a robust alternative to traditional HTTP clients like `requests` and `httpx`. For commercial support, visit [impersonate.pro](https://impersonate.pro).
+`curl_cffi` is a Python binding for the `curl-impersonate` fork, providing a fast and flexible way to make HTTP requests. It excels at bypassing bot detection and accessing websites that block standard Python HTTP clients.  Commercial support is available at [impersonate.pro](https://impersonate.pro).
 
-## Key Features
+## Key Features:
 
-*   **Browser Impersonation:** Emulates various browser fingerprints (TLS/JA3 and HTTP/2) including Chrome, Safari, Firefox, and more, for advanced scraping.
-*   **High Performance:** Significantly faster than `requests` and `httpx`, comparable to `aiohttp` and `pycurl`, as shown in [benchmarks](https://github.com/lexiforest/curl_cffi/tree/main/benchmark).
-*   **Familiar API:**  Offers a user-friendly API similar to the `requests` library, minimizing the learning curve.
-*   **Asynchronous Support:** Includes full support for `asyncio`, and proxy rotation for asynchronous requests.
-*   **HTTP/2 & HTTP/3 Support:** Offers native support for both HTTP/2 and HTTP/3 protocols.
-*   **Websocket Support:** Provides websocket functionality.
-*   **Cross-Platform:** Pre-compiled wheels available for Linux, macOS, and Windows.
+*   **Browser Impersonation:**  Mimics TLS/JA3 and HTTP/2 fingerprints of popular browsers (Chrome, Safari, Firefox, Edge, etc.) and supports custom fingerprints.
+*   **High Performance:**  Significantly faster than `requests` and `httpx`, comparable to `aiohttp` and `pycurl`. See [benchmarks](https://github.com/lexiforest/curl_cffi/tree/main/benchmark).
+*   **Familiar API:** Uses a `requests`-like API for easy integration.
+*   **Asynchronous Support:** Built-in `asyncio` support with proxy rotation.
+*   **Modern Protocol Support:** Includes support for HTTP/2 and HTTP/3.
+*   **Websocket Support:** Supports both synchronous and asynchronous WebSockets.
+*   **Pre-compiled Binaries:**  No need to compile on your machine (usually).
 
-## Installation
+##  Installation
 
 ```bash
 pip install curl_cffi --upgrade
 ```
 
-## Usage
+For beta releases:
 
-`curl_cffi` has both a low-level `curl` API and a high-level, `requests`-like API.
+```bash
+pip install curl_cffi --upgrade --pre
+```
 
-### Requests-like Example
+For unstable GitHub versions:
+
+```bash
+git clone https://github.com/lexiforest/curl_cffi/
+cd curl_cffi
+make preprocess
+pip install .
+```
+
+On macOS, you might need:
+
+```bash
+brew install zstd nghttp2
+```
+
+##  Usage
+
+`curl_cffi` offers both a low-level `curl` API and a high-level, `requests`-like API.
+
+### Requests-like API (v0.10+)
 
 ```python
 import curl_cffi
 
+# Basic GET request impersonating Chrome
 r = curl_cffi.get("https://tls.browserleaks.com/json", impersonate="chrome")
 print(r.json())
+
+# Pin specific browser versions
+r = curl_cffi.get("https://tls.browserleaks.com/json", impersonate="chrome124")
+
+# Use proxies
+proxies = {"https": "http://localhost:3128"}
+r = curl_cffi.get("https://tls.browserleaks.com/json", impersonate="chrome", proxies=proxies)
 ```
 
-### Sessions Example
+### Sessions
 
 ```python
 s = curl_cffi.Session()
 s.get("https://httpbin.org/cookies/set/foo/bar")
-r = s.get("https://httpbin.org/cookies")
-print(r.json())
+print(s.cookies)
 ```
 
-### Asyncio Example
+See the original [README](https://github.com/lexiforest/curl_cffi) for more example.
+
+### Supported Impersonation Profiles
+
+`curl_cffi` supports a wide range of browser profiles.
+
+| Browser           | Open Source                                                                                                        | Pro Version                                                               |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| Chrome            | chrome99, chrome100, chrome101, chrome104, chrome107, chrome110, chrome116, chrome119, chrome120, chrome123, chrome124, chrome131, chrome133a, chrome136| chrome132, chrome134, chrome135                                         |
+| Chrome Android    | chrome99_android, chrome131_android                                                                              | chrome132_android, chrome133_android, chrome134_android, chrome135_android |
+| Chrome iOS        | N/A                                                                                                                | coming soon                                                               |
+| Safari            | safari153, safari155, safari170, safari180, safari184, safari260                                                  | coming soon                                                               |
+| Safari iOS        | safari172_ios, safari180_ios, safari184_ios, safari260_ios                                                       | coming soon                                                               |
+| Firefox           | firefox133, firefox135                                                                                             | coming soon                                                               |
+| Firefox Android   | N/A                                                                                                                | firefox135_android                                                        |
+| Tor               | tor145                                                                                                             | coming soon                                                               |
+| Edge              | edge99, edge101                                                                                                    | edge133, edge135                                                          |
+| Opera             | N/A                                                                                                                | coming soon                                                               |
+| Brave             | N/A                                                                                                                | coming soon                                                               |
+
+For details, see the original [README](https://github.com/lexiforest/curl_cffi).
+
+### Asyncio
 
 ```python
-import asyncio
 from curl_cffi import AsyncSession
 
 async with AsyncSession() as s:
     r = await s.get("https://example.com")
 ```
 
-## Supported Impersonated Browsers
+### Websockets
 
-`curl_cffi` supports the browser versions available in the linked [curl-impersonate fork](https://github.com/lexiforest/curl-impersonate)
-The following table lists some open source options. Refer to the original documentation for the most up-to-date and complete list, and details on `ja3` and `akamai` options for custom fingerprints.
+```python
+from curl_cffi import WebSocket
 
-| Browser          | Open Source Versions                                                                                                                                                                                                                             | Pro Versions                                 |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| Chrome           | chrome99, chrome100, chrome101, chrome104, chrome107, chrome110, chrome116, chrome119, chrome120, chrome123, chrome124, chrome131, chrome133a, chrome136           | chrome132, chrome134, chrome135                 |
-| Chrome Android   | chrome99_android, chrome131_android                                                                                                                                                                                                                   | chrome132_android, chrome133_android, chrome134_android, chrome135_android  |
-| Safari           | safari153, safari155, safari170, safari180, safari184, safari260                                                                                                                                                                                         | coming soon                                 |
-| Safari iOS       | safari172_ios, safari180_ios, safari184_ios, safari260_ios                                                                                                                                                                                           | coming soon                                 |
-| Firefox          | firefox133, firefox135                                                                                                                                                                                                                                | coming soon                                 |
-| Firefox Android  | N/A                                                                                                                                                                                                                                                   | firefox135_android                           |
-| Tor              | tor145                                                                                                                                                                                                                                                  | coming soon                                 |
-| Edge             | edge99, edge101                                                                                                                                                                                                                                        | edge133, edge135                           |
-| Opera            | N/A                                                                                                                                                                                                                                                   | coming soon                                 |
-| Brave            | N/A                                                                                                                                                                                                                                                   | coming soon                                 |
+def on_message(ws: WebSocket, message: str | bytes):
+    print(message)
 
-## Ecosystem Integrations
+ws = WebSocket(on_message=on_message)
+ws.run_forever("wss://api.gemini.com/v1/marketdata/BTCUSD")
+```
 
-`curl_cffi` integrates with several popular tools and services:
+## Ecosystem
 
-*   **Scrapy:**  [divtiply/scrapy-curl-cffi](https://github.com/divtiply/scrapy-curl-cffi), [jxlil/scrapy-impersonate](https://github.com/jxlil/scrapy-impersonate), and [tieyongjie/scrapy-fingerprint](https://github.com/tieyongjie/scrapy-fingerprint)
-*   **Adapters:** [el1s7/curl-adapter](https://github.com/el1s7/curl-adapter) for `requests`, and [vgavro/httpx-curl-cffi](https://github.com/vgavro/httpx-curl-cffi) for `httpx`.
-*   **Captcha Resolvers:** [CapSolver](https://docs.capsolver.com/en/api/) and [YesCaptcha](https://yescaptcha.atlassian.net/wiki/spaces/YESCAPTCHA/overview)
-
-## Sponsors & Support
-
-Maintenance of this project is made possible by all the [contributors](https://github.com/lexiforest/curl_cffi/graphs/contributors) and [sponsors](https://github.com/sponsors/lexiforest). If you'd like to sponsor this project and have your avatar or company logo appear below [click here](https://github.com/sponsors/lexiforest). 💖
-
-### Recommended Services for Bypass & Automation
-
-Leverage the power of `curl_cffi` in conjunction with these services to simplify your scraping tasks:
-
-1.  **SerpAPI:**
-
-    [<img src="https://raw.githubusercontent.com/lexiforest/curl_cffi/main/assets/serpapi.png" alt="SerpAPI" height="67" width="63">](https://serpapi.com/)
-
-    Scrape Google and other search engines with SerpApi's fast, reliable API.
-
-2.  **Yescaptcha:**
-
-    [<img src="https://raw.githubusercontent.com/lexiforest/curl_cffi/main/assets/yescaptcha.png" alt="Yes Captcha!" height="47" width="149">](https://yescaptcha.com/i/stfnIO)
-
-    Bypass Cloudflare using Yescaptcha to obtain verified cookies.
-
-3.  **CapSolver:**
-
-    [<img src="https://raw.githubusercontent.com/lexiforest/curl_cffi/main/assets/capsolver.jpg" alt="CapSolver" height="50" width="178">](https://dashboard.capsolver.com/passport/register?inviteCode=0FLEay4iroNC)
-
-    Easily bypass Captchas with CapSolver, an AI-powered tool. Use code "CURL" for a 6% balance bonus!
+*   **Scrapy Integration:** [divtiply/scrapy-curl-cffi](https://github.com/divtiply/scrapy-curl-cffi), [jxlil/scrapy-impersonate](https://github.com/jxlil/scrapy-impersonate) and [tieyongjie/scrapy-fingerprint](https://github.com/tieyongjie/scrapy-fingerprint).
+*   **Adapters for Existing Libraries:**  [el1s7/curl-adapter](https://github.com/el1s7/curl-adapter) (requests adapter), [vgavro/httpx-curl-cffi](https://github.com/vgavro/httpx-curl-cffi) (httpx adapter).
+*   **Captcha Resolvers:**  [CapSolver](https://docs.capsolver.com/en/api/), [YesCaptcha](https://yescaptcha.atlassian.net/wiki/spaces/YESCAPTCHA/overview).
 
 ## Acknowledgements
 
-*   Originally forked from [multippt/python_curl_cffi](https://github.com/multippt/python_curl_cffi), MIT licensed.
-*   Headers/Cookies files are copied from [httpx](https://github.com/encode/httpx/blob/master/httpx/_models.py), BSD licensed.
+*   Forked from [multippt/python_curl_cffi](https://github.com/multippt/python_curl_cffi).
+*   Headers/Cookies files are copied from [httpx](https://github.com/encode/httpx/blob/master/httpx/_models.py).
 *   Asyncio support is inspired by Tornado's curl http client.
 *   The synchronous WebSocket API is inspired by [websocket_client](https://github.com/websocket-client/websocket-client).
 *   The asynchronous WebSocket API is inspired by [aiohttp](https://github.com/aio-libs/aiohttp).

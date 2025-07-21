@@ -2,8 +2,6 @@
   <img src="docs/source/_static/RoboVerse86.22.svg" width="50%" alt="RoboVerse">
 </p>
 
-![RoboVerse](docs/source/metasim/images/tea.jpg)
-
 <p align="center">
   <a href="https://roboverseorg.github.io"><img src="https://img.shields.io/badge/project-page-brightgreen" alt="Project Page"></a>
   <a href="https://arxiv.org/abs/2504.18904"><img src="https://img.shields.io/badge/paper-preprint-red" alt="Paper"></a>
@@ -14,79 +12,76 @@
   <a href="docs/source/_static/wechat.jpg"><img src="https://img.shields.io/badge/wechat-QR_code-green" alt="WeChat"></a>
 </p>
 
-
 # RoboVerse: A Unified Platform for Scalable and Generalizable Robot Learning
 
-RoboVerse provides a comprehensive platform, dataset, and benchmark designed to advance the field of robot learning.  [Explore the RoboVerse repository on GitHub](https://github.com/RoboVerseOrg/RoboVerse).
+RoboVerse provides a comprehensive platform, dataset, and benchmark for advancing robot learning, empowering researchers to develop more adaptable and intelligent robotic systems. [Explore the RoboVerse repository](https://github.com/RoboVerseOrg/RoboVerse).
 
 ## Key Features
 
-*   **Unified Platform:** Integrated environment for robot simulation and learning.
-*   **Extensive Dataset:** Includes diverse environments, tasks, and data for training and evaluation.
-*   **Benchmark:** Provides standardized evaluation protocols to measure progress in robot learning.
-*   **Modular Design:** Supports various simulators and renderers for flexibility.
-*   **Open Source:** Encourages community contributions and collaboration.
+*   **Unified Platform:** RoboVerse integrates various simulation frameworks, renderers, and libraries, providing a versatile environment for robot learning research.
+*   **Extensive Dataset:** The platform leverages and integrates data from numerous existing projects and datasets, offering a rich resource for training and evaluating robot learning models.
+*   **Active Development:** The codebase is continuously evolving with active contributions from the open-source community.
+*   **Detailed Tutorials:** Comprehensive documentation and tutorials are available to help users get started quickly.
+*   **Open-Source and Collaborative:** RoboVerse is licensed under the Apache License 2.0, and welcomes contributions and feedback from the community.
 
-## What's New
+## News
 
-*   **RSS 2025 Acceptance:** RoboVerse has been accepted by RSS 2025!
-*   **Code Release:** The codebase is actively evolving with ongoing improvements.  Contributions are welcome.
+*   **[2025-04-10]** RoboVerse gets accepted by RSS 2025!
+*   **[2025-04-03]** Code released!
 
 ## Getting Started
 
-Detailed instructions and tutorials are available in the [documentation](https://roboverse.wiki/metasim/#).
+Refer to the official [documentation](https://roboverse.wiki/metasim/#) for detailed information. Quick start [tutorials](https://roboverse.wiki/metasim/get_started/quick_start/0_static_scene) are also available.
 
-*   [Quick Start Tutorials](https://roboverse.wiki/metasim/get_started/quick_start/0_static_scene)
+## Contributing
 
-## Contribute
-
-We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+We encourage contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute.
 
 ## Wish List
 
-Suggest new features and upvote existing requests in the [GitHub Discussions](https://github.com/RoboVerseOrg/RoboVerse/discussions/categories/wish-list).
+Share your feature requests (new simulators, tasks, workflows, etc.) in the Wish List section of our [GitHub Discussions](https://github.com/RoboVerseOrg/RoboVerse/discussions/categories/wish-list). Upvote the most important requests to help prioritize updates.
 
 ## License and Acknowledgments
 
-RoboVerse is licensed under the Apache License 2.0.
+RoboVerse is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
-This project leverages the following simulation frameworks, renderers, and libraries:
+RoboVerse uses the following simulation frameworks, renderers, and libraries:
+- [Isaac Lab](https://github.com/isaac-sim/IsaacLab), which is built on top of [Isaac Sim](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)
+- [Isaac Gym](https://developer.nvidia.com/isaac-gym)
+- [MuJoCo](https://github.com/google-deepmind/mujoco)
+- [SAPIEN](https://github.com/haosulab/SAPIEN)
+- [PyBullet](https://github.com/bulletphysics/bullet3)
+- [Genesis](https://github.com/Genesis-Embodied-AI/Genesis)
+- [cuRobo](https://github.com/NVlabs/curobo)
+- [PyRep](https://github.com/stepjam/PyRep), which is built on top of [CoppeliaSim](https://www.coppeliarobotics.com/)
+- [Blender](https://www.blender.org/)
 
-*   Isaac Lab ([Isaac Lab](https://github.com/isaac-sim/IsaacLab))
-*   Isaac Sim ([Isaac Sim](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html))
-*   Isaac Gym ([Isaac Gym](https://developer.nvidia.com/isaac-gym))
-*   MuJoCo ([MuJoCo](https://github.com/google-deepmind/mujoco))
-*   SAPIEN ([SAPIEN](https://github.com/haosulab/SAPIEN))
-*   PyBullet ([PyBullet](https://github.com/bulletphysics/bullet3))
-*   Genesis ([Genesis](https://github.com/Genesis-Embodied-AI/Genesis))
-*   cuRobo ([cuRobo](https://github.com/NVlabs/curobo))
-*   PyRep ([PyRep](https://github.com/stepjam/PyRep))
-*   CoppeliaSim ([CoppeliaSim](https://www.coppeliarobotics.com/))
-*   Blender ([Blender](https://www.blender.org/))
+RoboVerse integrates data from the following projects:
+- [RLBench](https://github.com/stepjam/RLBench)
+- [Maniskill](https://github.com/haosulab/ManiSkill)
+- [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)
+- [Meta-World](https://github.com/Farama-Foundation/Metaworld)
+- [robosuite](https://github.com/ARISE-Initiative/robosuite)
+- [GraspNet](https://graspnet.net/)
+- [ARNOLD](https://arnold-benchmark.github.io/)
+- [GAPartNet](https://github.com/PKU-EPIC/GAPartNet)
+- [GAPartManip](https://arxiv.org/abs/2411.18276)
+- [UniDoorManip](https://github.com/sectionZ6/UniDoorManip)
+- [SimplerEnv](https://github.com/simpler-env/SimplerEnv)
+- [RLAfford](https://github.com/hyperplane-lab/RLAfford)
+- [Open6DOR](https://github.com/Selina2023/Open6DOR)
+- [CALVIN](https://github.com/mees/calvin)
+- [GarmentLab](https://github.com/GarmentLab/GarmentLab)
+- [Matterport3D](https://github.com/niessner/Matterport)
+- [VLN-CE](https://github.com/jacobkrantz/VLN-CE)
+- [vMaterials](https://developer.nvidia.com/vmaterials)
+- [HumanoidBench](https://github.com/carlosferrazza/humanoid-bench)
 
-RoboVerse also integrates data from the following projects:
-
-*   RLBench ([RLBench](https://github.com/stepjam/RLBench))
-*   Maniskill ([Maniskill](https://github.com/haosulab/ManiSkill))
-*   LIBERO ([LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO))
-*   Meta-World ([Meta-World](https://github.com/Farama-Foundation/Metaworld))
-*   robosuite ([robosuite](https://github.com/ARISE-Initiative/robosuite))
-*   GraspNet ([GraspNet](https://graspnet.net/))
-*   ARNOLD ([ARNOLD](https://arnold-benchmark.github.io/))
-*   GAPartNet ([GAPartNet](https://github.com/PKU-EPIC/GAPartNet))
-*   GAPartManip ([GAPartManip](https://arxiv.org/abs/2411.18276))
-*   UniDoorManip ([UniDoorManip](https://github.com/sectionZ6/UniDoorManip))
-*   SimplerEnv ([SimplerEnv](https://github.com/simpler-env/SimplerEnv))
-*   RLAfford ([RLAfford](https://github.com/hyperplane-lab/RLAfford))
-*   Open6DOR ([Open6DOR](https://github.com/Selina2023/Open6DOR))
-*   CALVIN ([CALVIN](https://github.com/mees/calvin))
-*   GarmentLab ([GarmentLab](https://github.com/GarmentLab/GarmentLab))
-*   Matterport3D ([Matterport3D](https://github.com/niessner/Matterport))
-*   VLN-CE ([VLN-CE](https://github.com/jacobkrantz/VLN-CE))
-*   vMaterials ([vMaterials](https://developer.nvidia.com/vmaterials))
-*   HumanoidBench ([HumanoidBench](https://github.com/carlosferrazza/humanoid-bench))
+The licenses for the assets used in RoboVerse will be added soon. Please contact us if you have any issues.
 
 ## Citation
+
+If you use RoboVerse in your research, please cite it using the following BibTeX entry:
 
 ```bibtex
 @misc{geng2025roboverse,

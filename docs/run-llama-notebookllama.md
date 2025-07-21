@@ -1,6 +1,6 @@
-# NotebookLlaMa: Your Open-Source AI-Powered Notebook Companion
+# NotebookLlaMa: Your Open-Source AI Notebook Assistant 🦙
 
-NotebookLlaMa is a free and open-source alternative to NotebookLM, offering AI-powered assistance for your documents and research.  [View the original repository on GitHub](https://github.com/run-llama/notebookllama).
+**Unlock the power of AI in your notes with NotebookLlaMa, a fully open-source alternative to NotebookLM, built with the flexibility of [LlamaIndex](https://github.com/run-llama/notebookllama).**
 
 [![License](https://img.shields.io/github/license/run-llama/notebookllama?color=blue)](https://github.com/run-llama/notebookllama/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/run-llama/notebookllama?color=yellow)](https://github.com/run-llama/notebookllama/stargazers)
@@ -9,28 +9,30 @@ NotebookLlaMa is a free and open-source alternative to NotebookLM, offering AI-p
 
 ## Key Features
 
-*   **Open Source:** Built with a commitment to transparency and community collaboration.
-*   **AI-Powered Assistance:** Leverage the power of AI to enhance your note-taking and research workflows.
-*   **LlamaCloud Integration:**  Powered by LlamaCloud for robust backend infrastructure.
-*   **Easy Setup:** Simple installation process using `uv` and clear configuration steps.
+*   **Open-Source:** Enjoy the freedom of a fully open-source project.
+*   **Alternative to NotebookLM:** Provides similar functionality and aims to be a powerful alternative.
+*   **Powered by LlamaIndex and LlamaCloud:** Leverages robust AI frameworks for advanced capabilities.
+*   **Customizable:** Adapt the AI model to your use case through custom embedding models.
 
 ## Prerequisites
 
-Before you begin, ensure you have `uv` installed.
+This project uses `uv` to manage dependencies. Make sure you have `uv` installed.
 
-**macOS and Linux:**
+**Install `uv`:**
 
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+*   **macOS and Linux:**
 
-**Windows:**
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
 
-```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
+*   **Windows:**
 
-For more installation options, see the `uv` [official documentation](https://docs.astral.sh/uv/getting-started/installation/).
+    ```powershell
+    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
+
+For more install options, see `uv`'s [official documentation](https://docs.astral.sh/uv/getting-started/installation/).
 
 ## Getting Started
 
@@ -51,55 +53,49 @@ uv sync
 
 **3. Configure API Keys**
 
-Create a `.env` file from the example:
+*   Create a `.env` file:
 
-```bash
-mv .env.example .env
-```
+    ```bash
+    mv .env.example .env
+    ```
 
-Add your API keys to the `.env` file:
-
-*   `OPENAI_API_KEY`: Get it from [OpenAI Platform](https://platform.openai.com/api-keys)
-*   `ELEVENLABS_API_KEY`: Get it from [ElevenLabs Settings](https://elevenlabs.io/app/settings/api-keys)
-*   `LLAMACLOUD_API_KEY`: Get it from [LlamaCloud Dashboard](https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM)
+*   Add your API keys to the `.env` file:
+    *   `OPENAI_API_KEY`: Obtain from [OpenAI Platform](https://platform.openai.com/api-keys)
+    *   `ELEVENLABS_API_KEY`: Obtain from [ElevenLabs Settings](https://elevenlabs.io/app/settings/api-keys)
+    *   `LLAMACLOUD_API_KEY`: Obtain from [LlamaCloud Dashboard](https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM)
 
 **4. Activate the Virtual Environment**
 
-**(mac/unix)**
+*   **mac/unix:**
 
-```bash
-source .venv/bin/activate
-```
+    ```bash
+    source .venv/bin/activate
+    ```
 
-**(Windows)**
+*   **Windows:**
 
-```bash
-.\.venv\Scripts\activate
-```
+    ```bash
+    .\.venv\Scripts\activate
+    ```
 
 **5. Create LlamaCloud Agent & Pipeline**
 
-Create the data extraction agent:
+*   Create the data extraction agent:
 
-```bash
-uv run tools/create_llama_extract_agent.py
-```
+    ```bash
+    uv run tools/create_llama_extract_agent.py
+    ```
 
-Run the interactive setup wizard to configure your index pipeline.
+*   Run the interactive setup wizard to configure your index pipeline:
 
-> **⚡ Quick Start (Default OpenAI):** Select **"With Default Settings"** for a fast setup with OpenAI's `text-embedding-3-small`.
+    ```bash
+    uv run tools/create_llama_cloud_index.py
+    ```
 
-> **🧠 Advanced (Custom Embedding Models):** Select **"With Custom Settings"** for advanced customization.
-
-Run the wizard:
-
-```bash
-uv run tools/create_llama_cloud_index.py
-```
+    *   **Quick Start (Default OpenAI):** Select **"With Default Settings"** for a quick setup using OpenAI's `text-embedding-3-small`.
+    *   **Advanced (Custom Embedding Models):** Select **"With Custom Settings"** to use different embedding models.
 
 **6. Launch Backend Services**
-
-Start Postgres and Jaeger containers:
 
 ```bash
 docker compose up -d
@@ -107,27 +103,27 @@ docker compose up -d
 
 **7. Run the Application**
 
-First, run the **MCP** server:
+*   Run the **MCP** server:
 
-```bash
-uv run src/notebookllama/server.py
-```
+    ```bash
+    uv run src/notebookllama/server.py
+    ```
 
-Then, in a **new terminal window**, launch the Streamlit app:
+*   In a **new terminal window**, launch the Streamlit app:
 
-```bash
-streamlit run src/notebookllama/Home.py
-```
+    ```bash
+    streamlit run src/notebookllama/Home.py
+    ```
 
-> [!IMPORTANT]
-> You may need to install `ffmpeg` if you don't have it.
-
-Access the app at `http://localhost:8501/`.
+    *   You may need to install `ffmpeg` if you don't have it installed already.
+    *   Access the app at `http://localhost:8501/`.
 
 ## Contributing
 
-Contribute to the project by following the [guidelines](./CONTRIBUTING.md).
+Contributions are welcome! Please refer to the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
 
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
+
+**[Back to the project repository](https://github.com/run-llama/notebookllama)**

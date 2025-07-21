@@ -1,58 +1,49 @@
 # QuTiP: Quantum Toolbox in Python
 
-**QuTiP is a powerful, open-source software designed for simulating the dynamics of closed and open quantum systems.**
+**Simulate the dynamics of closed and open quantum systems with ease using the powerful and versatile QuTiP library.** ([Original Repository](https://github.com/qutip/qutip))
 
-[Go to Original Repository](https://github.com/qutip/qutip)
+[![Build Status](https://github.com/qutip/qutip/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/qutip/qutip/actions/workflows/tests.yml)
+[![Coverage Status](https://img.shields.io/coveralls/qutip/qutip.svg?logo=Coveralls)](https://coveralls.io/r/qutip/qutip)
+[![Maintainability](https://api.codeclimate.com/v1/badges/df502674f1dfa1f1b67a/maintainability)](https://codeclimate.com/github/qutip/qutip/maintainability)
+[![license](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![PyPi Downloads](https://img.shields.io/pypi/dm/qutip?label=downloads%20%7C%20pip&logo=PyPI)](https://pypi.org/project/qutip)
+[![Conda-Forge Downloads](https://img.shields.io/conda/dn/conda-forge/qutip?label=downloads%20%7C%20conda&logo=Conda-Forge)](https://anaconda.org/conda-forge/qutip)
 
-QuTiP provides a user-friendly and efficient numerical environment for simulating a wide array of quantum mechanical problems. Built upon the robust foundations of NumPy, SciPy, and Cython, with graphical output powered by Matplotlib, QuTiP empowers researchers and educators alike to explore the intricacies of quantum mechanics.
+## Key Features
 
-## Key Features:
-
-*   **Simulations of Quantum Systems:** Simulate the dynamics of both closed and open quantum systems.
-*   **Time-Dependent Hamiltonians and Collapse Operators:** Handle Hamiltonians and collapse operators with arbitrary time-dependence.
-*   **User-Friendly Interface:** Designed for ease of use, making it accessible for both research and educational purposes.
-*   **Cross-Platform Compatibility:** Runs seamlessly on Unix-based platforms and Windows.
-*   **Open Source & Free:** Available under a permissive license, ideal for both research and classroom use.
-*   **Integration with Existing Libraries:** Leverages the power of NumPy, SciPy, Cython, and Matplotlib.
-
-## Support and Affiliations
-
-QuTiP is proud to be supported by the [Unitary Fund](https://unitary.fund) and [NumFOCUS](https://numfocus.org). We are grateful to various organizations for their ongoing support and contributions.
+*   **Open-Source:** Freely available for research and educational use, eliminating licensing fees.
+*   **Comprehensive Simulations:** Models a wide array of quantum mechanical problems, including time-dependent Hamiltonians and collapse operators.
+*   **Efficient Numerical Backends:** Leverages NumPy, SciPy, and Cython for high-performance computations.
+*   **User-Friendly:** Designed for ease of use, making quantum simulations accessible to researchers and students.
+*   **Platform Compatibility:** Works seamlessly on Unix-based platforms and Windows.
+*   **Graphical Output:** Integrates with Matplotlib for clear visualization of results.
+*   **Active Community:**  Benefit from community support, discussions, and collaborative development through the QuTiP discussion group.
 
 ## Installation
 
-QuTiP is readily available through `pip` and `conda` (via the `conda-forge` channel).
+QuTiP is readily available via `pip` and `conda` (using the `conda-forge` channel).
+
+**Using pip:**
 
 ```bash
 pip install qutip
 ```
 
-For a full installation with all optional dependencies:
+Install with optional dependencies:
 
 ```bash
 pip install qutip[full]
 ```
 
-Detailed installation instructions and build-from-source options are available in the [official documentation](https://qutip.readthedocs.io/en/stable/installation.html).
+See the [detailed installation guide in the documentation](https://qutip.readthedocs.io/en/stable/installation.html) for more options, including building from source.
 
 ## Documentation
 
-Comprehensive documentation is available for both the [stable release](https://qutip.readthedocs.io/en/latest/) and the [master branch](https://qutip.readthedocs.io/en/master/).
-
-Explore the documentation at [QuTiP Website](https://qutip.org/documentation.html).
-
-Interactive demonstrations and tutorials can be found in the [qutip/qutip-tutorials repository](https://github.com/qutip/qutip-tutorials).
+Explore detailed documentation for the [latest stable release](https://qutip.readthedocs.io/en/latest/) and the [master branch](https://qutip.readthedocs.io/en/master/) on Read The Docs.  Find additional resources and tutorials on the [QuTiP website](https://qutip.org/documentation.html).
 
 ## Contribute
 
-Contributions to QuTiP are highly encouraged! You can contribute by:
-
-*   Forking the repository and submitting pull requests.
-*   Reporting bugs on the [issues page](https://github.com/qutip/qutip/issues).
-*   Assisting users with their questions.
-*   Discussing proposed changes in the [QuTiP discussion group](https://groups.google.com/g/qutip).
-
-For more information, see the ["contributing to QuTiP development" section of the documentation](https://qutip.readthedocs.io/en/stable/development/contributing.html).
+Contribute to QuTiP's development by forking the repository, submitting pull requests, or reporting issues on the [issues page](https://github.com/qutip/qutip/issues). Engage with the community and provide assistance to users in the [QuTiP discussion group](https://groups.google.com/g/qutip).
 
 ## Citing QuTiP
 

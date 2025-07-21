@@ -1,64 +1,93 @@
-<!-- MANPAGE: BEGIN EXCLUDED SECTION -->
 <div align="center">
 
 [![YT-DLP](https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg)](#yt-dlp-audio-video-downloader)
 
-[![Release version](https://img.shields.io/github/v/release/yt-dlp/yt-dlp?color=brightgreen&label=Download&style=for-the-badge)](#installation "Installation")
-[![PyPI](https://img.shields.io/badge/-PyPI-blue.svg?logo=pypi&labelColor=555555&style=for-the-badge)](https://pypi.org/project/yt-dlp "PyPI")
-[![Donate](https://img.shields.io/badge/_-Donate-red.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge)](Collaborators.md#collaborators "Donate")
-[![Discord](https://img.shields.io/discord/807245652072857610?color=blue&labelColor=555555&label=&logo=discord&style=for-the-badge)](https://discord.gg/H5MNcFW63r "Discord")
-[![Supported Sites](https://img.shields.io/badge/-Supported_Sites-brightgreen.svg?style=for-the-badge)](supportedsites.md "Supported Sites")
-[![License: Unlicense](https://img.shields.io/badge/-Unlicense-blue.svg?style=for-the-badge)](LICENSE "License")
-[![CI Status](https://img.shields.io/github/actions/workflow/status/yt-dlp/yt-dlp/core.yml?branch=master&label=Tests&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/actions "CI Status")
-[![Commits](https://img.shields.io/github/commit-activity/m/yt-dlp/yt-dlp?label=commits&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/commits "Commit History")
-[![Last Commit](https://img.shields.io/github/last-commit/yt-dlp/yt-dlp/master?label=&style=for-the-badge&display_timestamp=committer)](https://github.com/yt-dlp/yt-dlp/pulse/monthly "Last activity")
+[![Release version](https://img.shields.io/github/v/release/yt-dlp/yt-dlp?color=brightgreen&label=Download&style=for-the-badge)](#installation)
+[![PyPI](https://img.shields.io/badge/-PyPI-blue.svg?logo=pypi&labelColor=555555&style=for-the-badge)](https://pypi.org/project/yt-dlp)
+[![Donate](https://img.shields.io/badge/_-Donate-red.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge)](Collaborators.md#collaborators)
+[![Discord](https://img.shields.io/discord/807245652072857610?color=blue&labelColor=555555&label=&logo=discord&style=for-the-badge)](https://discord.gg/H5MNcFW63r)
+[![Supported Sites](https://img.shields.io/badge/-Supported_Sites-brightgreen.svg?style=for-the-badge)](supportedsites.md)
+[![License: Unlicense](https://img.shields.io/badge/-Unlicense-blue.svg?style=for-the-badge)](LICENSE)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/yt-dlp/yt-dlp/core.yml?branch=master&label=Tests&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/actions)
+[![Commits](https://img.shields.io/github/commit-activity/m/yt-dlp/yt-dlp?label=commits&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/commits)
+[![Last Commit](https://img.shields.io/github/last-commit/yt-dlp/yt-dlp/master?label=&style=for-the-badge&display_timestamp=committer)](https://github.com/yt-dlp/yt-dlp/pulse/monthly)
 
 </div>
-<!-- MANPAGE: END EXCLUDED SECTION -->
 
-# yt-dlp: The Ultimate Audio/Video Downloader for Thousands of Sites
+## yt-dlp: Your Go-To Command-Line Audio/Video Downloader
 
-yt-dlp is a powerful and versatile command-line tool for downloading audio and video from a vast number of websites.  It's a maintained fork of [youtube-dl](https://github.com/ytdl-org/youtube-dl), built upon the foundation of the now-inactive [youtube-dlc](https://github.com/blackjack4494/yt-dlc).
+yt-dlp is a powerful command-line tool for downloading audio and video from [thousands of websites](supportedsites.md), offering unparalleled flexibility and features.  Find the original repo [here](https://github.com/yt-dlp/yt-dlp).
 
 **Key Features:**
 
-*   **Wide Site Support:** Downloads from [thousands of sites](supportedsites.md).
-*   **Format Selection:**  Advanced format selection options for optimal quality.
-*   **Playlist and Channel Downloads:**  Effortlessly download entire playlists and channels.
-*   **Metadata Handling:**  Write and modify video metadata, including titles, descriptions, and more.
-*   **Subtitle Support:**  Download and embed subtitles in various formats.
-*   **Post-Processing:**  Convert videos to audio, merge audio/video, and embed thumbnails.
-*   **SponsorBlock Integration:** Automatically remove sponsor segments from YouTube videos.
-*   **Browser Cookie Import:** Easily load cookies from your web browser.
-*   **Plugin Support:** Extend functionality with custom extractors and postprocessors.
-*   **Active Development:** Benefit from frequent updates and improvements.
+*   **Extensive Site Support:**  Download from thousands of video and audio sites.
+*   **Format Selection:** Fine-tune your downloads with advanced format options and sorting.
+*   **Playlist Support:** Download entire playlists with ease, and customize playlist items.
+*   **Subtitle & Thumbnail Handling:** Download and embed subtitles, and extract thumbnails.
+*   **Post-Processing:** Convert, remux, and embed metadata with robust post-processing options.
+*   **Metadata Manipulation:**  Modify video metadata before or after download for customization.
+*   **SponsorBlock Integration:**  Automatically remove sponsor segments from YouTube videos, utilizing [SponsorBlock](https://sponsor.ajay.app).
+*   **Browser Cookie Support:** Download by using the existing cookies from all major web browsers.
+*   **Plugins:** Extend functionality with custom extractors and post-processors.
+*   **Self-Updating:**  Keep up-to-date with easy built-in update functionality.
 
-**[Get Started with Installation](#installation)** | **[Explore the Wiki](https://github.com/yt-dlp/yt-dlp/wiki)**
-
----
-
-## Table of Contents
+**Table of Contents:**
 
 *   [Installation](#installation)
-*   [Release Files](#release-files)
-*   [Update](#update)
-*   [Usage and Options](#usage-and-options)
-*   [Configuration](#configuration)
-*   [Output Template](#output-template)
-*   [Format Selection](#format-selection)
-*   [Modifying Metadata](#modifying-metadata)
-*   [Extractor Arguments](#extractor-arguments)
-*   [Plugins](#plugins)
-*   [Embedding yt-dlp](#embedding-yt-dlp)
-*   [Changes From youtube-dl](#changes-from-youtube-dl)
-*   [Contributing](CONTRIBUTING.md#contributing-to-yt-dlp)
-*   [Wiki](https://github.com/yt-dlp/yt-dlp/wiki)
+    *   [Detailed instructions](https://github.com/yt-dlp/yt-dlp/wiki/Installation)
+    *   [Release Files](#release-files)
+    *   [Update](#update)
+    *   [Dependencies](#dependencies)
+    *   [Compile](#compile)
+*   [USAGE AND OPTIONS](#usage-and-options)
+    *   [General Options](#general-options)
+    *   [Network Options](#network-options)
+    *   [Geo-restriction](#geo-restriction)
+    *   [Video Selection](#video-selection)
+    *   [Download Options](#download-options)
+    *   [Filesystem Options](#filesystem-options)
+    *   [Thumbnail Options](#thumbnail-options)
+    *   [Internet Shortcut Options](#internet-shortcut-options)
+    *   [Verbosity and Simulation Options](#verbosity-and-simulation-options)
+    *   [Workarounds](#workarounds)
+    *   [Video Format Options](#video-format-options)
+    *   [Subtitle Options](#subtitle-options)
+    *   [Authentication Options](#authentication-options)
+    *   [Post-processing Options](#post-processing-options)
+    *   [SponsorBlock Options](#sponsorblock-options)
+    *   [Extractor Options](#extractor-options)
+    *   [Preset Aliases](#preset-aliases)
+*   [CONFIGURATION](#configuration)
+    *   [Configuration file encoding](#configuration-file-encoding)
+    *   [Authentication with netrc](#authentication-with-netrc)
+    *   [Notes about environment variables](#notes-about-environment-variables)
+*   [OUTPUT TEMPLATE](#output-template)
+    *   [Output template examples](#output-template-examples)
+*   [FORMAT SELECTION](#format-selection)
+    *   [Filtering Formats](#filtering-formats)
+    *   [Sorting Formats](#sorting-formats)
+    *   [Format Selection examples](#format-selection-examples)
+*   [MODIFYING METADATA](#modifying-metadata)
+    *   [Modifying metadata examples](#modifying-metadata-examples)
+*   [EXTRACTOR ARGUMENTS](#extractor-arguments)
+*   [PLUGINS](#plugins)
+    *   [Installing Plugins](#installing-plugins)
+    *   [Developing Plugins](#developing-plugins)
+*   [EMBEDDING YT-DLP](#embedding-yt-dlp)
+    *   [Embedding examples](#embedding-examples)
+*   [CHANGES FROM YOUTUBE-DL](#changes-from-youtube-dl)
+    *   [New features](#new-features)
+    *   [Differences in default behavior](#differences-in-default-behavior)
+    *   [Deprecated options](#deprecated-options)
+*   [CONTRIBUTING](CONTRIBUTING.md#contributing-to-yt-dlp)
+    *   [Opening an Issue](CONTRIBUTING.md#opening-an-issue)
+    *   [Developer Instructions](CONTRIBUTING.md#developer-instructions)
+*   [WIKI](https://github.com/yt-dlp/yt-dlp/wiki)
+    *   [FAQ](https://github.com/yt-dlp/yt-dlp/wiki/FAQ)
 
----
+## Installation
 
-# INSTALLATION
-
-You can install yt-dlp using [the binaries](#release-files), [pip](https://pypi.org/project/yt-dlp) or one using a third-party package manager. See [the wiki](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for detailed instructions
+Choose your preferred installation method for yt-dlp:
 
 <!-- MANPAGE: BEGIN EXCLUDED SECTION -->
 [![Windows](https://img.shields.io/badge/-Windows_x64-blue.svg?style=for-the-badge&logo=windows)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)
@@ -70,7 +99,9 @@ You can install yt-dlp using [the binaries](#release-files), [pip](https://pypi.
 [![All versions](https://img.shields.io/badge/-All_Versions-lightgrey.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/releases)
 <!-- MANPAGE: END EXCLUDED SECTION -->
 
-## RELEASE FILES
+You can install yt-dlp using [the binaries](#release-files), [pip](https://pypi.org/project/yt-dlp) or one using a third-party package manager. See [the wiki](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for detailed instructions
+
+### Release Files
 
 #### Recommended
 
@@ -114,7 +145,6 @@ gpg --verify SHA2-512SUMS.sig SHA2-512SUMS
 **Note**: The manpages, shell completion (autocomplete) files etc. are available inside the [source tarball](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz)
 
 ## UPDATE
-
 You can use `yt-dlp -U` to update if you are using the [release binaries](#release-files)
 
 If you [installed with pip](https://github.com/yt-dlp/yt-dlp/wiki/Installation#with-pip), simply re-run the same command that was used to install the program
@@ -151,7 +181,6 @@ python3 -m pip install -U --pre "yt-dlp[default]"
 ```
 
 ## DEPENDENCIES
-
 Python versions 3.9+ (CPython) and 3.10+ (PyPy) are supported. Other versions and implementations may or may not work correctly.
 
 <!-- Python 3.5+ uses VC++14 and it is already embedded in the binary created
@@ -180,7 +209,7 @@ While all the other dependencies are optional, `ffmpeg` and `ffprobe` are highly
 
 The following provide support for impersonating browser requests. This may be required for some sites that employ TLS fingerprinting.
 
-*   [**curl_cffi**](https://github.com/lexiforest/curl_cffi) (recommended) - Python binding for [curl-impersonate](https://github.com/lexiforest/curl-impersonate). Provides impersonation targets for Chrome, Edge and Safari. Licensed under [MIT](https://github.com/lexiforest/curl_cffi/blob/main/LICENSE)
+*   [**curl_cffi**](https://github.com/lexiforest/curl_cffi) (recommended) - Python binding for [curl-impersonate](https://github.com/lexiforest/curl_cffi). Provides impersonation targets for Chrome, Edge and Safari. Licensed under [MIT](https://github.com/lexiforest/curl_cffi/blob/main/LICENSE)
     *   Can be installed with the `curl-cffi` group, e.g. `pip install "yt-dlp[default,curl-cffi]"`
     *   Currently included in `yt-dlp.exe`, `yt-dlp_linux` and `yt-dlp_macos` builds
 
@@ -210,12 +239,58 @@ The standalone release binaries are built with the Python interpreter and the pa
 
 If you do not have the necessary dependencies for a task you are attempting, yt-dlp will warn you. All the currently available dependencies are visible at the top of the `--verbose` output
 
-## USAGE AND OPTIONS
-For a full list of available options, run `yt-dlp --help`.
+## COMPILE
 
----
+### Standalone PyInstaller Builds
+To build the standalone executable, you must have Python and `pyinstaller` (plus any of yt-dlp's [optional dependencies](#dependencies) if needed). The executable will be built for the same CPU architecture as the Python used.
+
+You can run the following commands:
+
+```
+python3 devscripts/install_deps.py --include pyinstaller
+python3 devscripts/make_lazy_extractors.py
+python3 -m bundle.pyinstaller
+```
+
+On some systems, you may need to use `py` or `python` instead of `python3`.
+
+`python -m bundle.pyinstaller` accepts any arguments that can be passed to `pyinstaller`, such as `--onefile/-F` or `--onedir/-D`, which is further [documented here](https://pyinstaller.org/en/stable/usage.html#what-to-generate).
+
+**Note**: Pyinstaller versions below 4.4 [do not support](https://github.com/pyinstaller/pyinstaller#requirements-and-tested-platforms) Python installed from the Windows store without using a virtual environment.
+
+**Important**: Running `pyinstaller` directly **instead of** using `python -m bundle.pyinstaller` is **not** officially supported. This may or may not work correctly.
+
+### Platform-independent Binary (UNIX)
+You will need the build tools `python` (3.9+), `zip`, `make` (GNU), `pandoc`\* and `pytest`\*.
+
+After installing these, simply run `make`.
+
+You can also run `make yt-dlp` instead to compile only the binary without updating any of the additional files. (The build tools marked with **\*** are not needed for this)
+
+### Related scripts
+
+*   **`devscripts/install_deps.py`** - Install dependencies for yt-dlp.
+*   **`devscripts/update-version.py`** - Update the version number based on the current date.
+*   **`devscripts/set-variant.py`** - Set the build variant of the executable.
+*   **`devscripts/make_changelog.py`** - Create a markdown changelog using short commit messages and update `CONTRIBUTORS` file.
+*   **`devscripts/make_lazy_extractors.py`** - Create lazy extractors. Running this before building the binaries (any variant) will improve their startup performance. Set the environment variable `YTDLP_NO_LAZY_EXTRACTORS` to something nonempty to forcefully disable lazy extractor loading.
+
+Note: See their `--help` for more info.
+
+### Forking the project
+If you fork the project on GitHub, you can run your fork's [build workflow](.github/workflows/build.yml) to automatically build the selected version(s) as artifacts. Alternatively, you can run the [release workflow](.github/workflows/release.yml) or enable the [nightly workflow](.github/workflows/release-nightly.yml) to create full (pre-)releases.
+
+<!-- MANPAGE: MOVE "USAGE AND OPTIONS" SECTION HERE -->
+
+## USAGE AND OPTIONS
+
+    yt-dlp [OPTIONS] [--] URL [URL...]
+
+`Ctrl+F` is your friend :D
+
 <!-- Auto generated -->
-## General Options:
+### General Options:
+
     -h, --help                      Print this help text and exit
     --version                       Print program version and exit
     -U, --update                    Update this program to the latest version
@@ -328,7 +403,8 @@ For a full list of available options, run `yt-dlp --help`.
                                     for more info. This option can be used
                                     multiple times
 
-## Network Options:
+### Network Options:
+
     --proxy URL                     Use the specified HTTP/HTTPS/SOCKS proxy. To
                                     enable SOCKS proxy, specify a proper scheme,
                                     e.g. socks5://user:pass@127.0.0.1:1080/.
@@ -337,93 +413,4 @@ For a full list of available options, run `yt-dlp --help`.
     --socket-timeout SECONDS        Time to wait before giving up, in seconds
     --source-address IP             Client-side IP address to bind to
     --impersonate CLIENT[:OS]       Client to impersonate for requests. E.g.
-                                    chrome, chrome-110, chrome:windows-10. Pass
-                                    --impersonate="" to impersonate any client.
-                                    Note that forcing impersonation for all
-                                    requests may have a detrimental impact on
-                                    download speed and stability
-    --list-impersonate-targets      List available clients to impersonate.
-    -4, --force-ipv4                Make all connections via IPv4
-    -6, --force-ipv6                Make all connections via IPv6
-    --enable-file-urls              Enable file:// URLs. This is disabled by
-                                    default for security reasons.
-
-## Geo-restriction:
-    --geo-verification-proxy URL    Use this proxy to verify the IP address for
-                                    some geo-restricted sites. The default proxy
-                                    specified by --proxy (or none, if the option
-                                    is not present) is used for the actual
-                                    downloading
-    --xff VALUE                     How to fake X-Forwarded-For HTTP header to
-                                    try bypassing geographic restriction. One of
-                                    "default" (only when known to be useful),
-                                    "never", an IP block in CIDR notation, or a
-                                    two-letter ISO 3166-2 country code
-
-## Video Selection:
-    -I, --playlist-items ITEM_SPEC  Comma separated playlist_index of the items
-                                    to download. You can specify a range using
-                                    "[START]:[STOP][:STEP]". For backward
-                                    compatibility, START-STOP is also supported.
-                                    Use negative indices to count from the right
-                                    and negative STEP to download in reverse
-                                    order. E.g. "-I 1:3,7,-5::2" used on a
-                                    playlist of size 15 will download the items
-                                    at index 1,2,3,7,11,13,15
-    --min-filesize SIZE             Abort download if filesize is smaller than
-                                    SIZE, e.g. 50k or 44.6M
-    --max-filesize SIZE             Abort download if filesize is larger than
-                                    SIZE, e.g. 50k or 44.6M
-    --date DATE                     Download only videos uploaded on this date.
-                                    The date can be "YYYYMMDD" or in the format 
-                                    [now|today|yesterday][-N[day|week|month|year]].
-                                    E.g. "--date today-2weeks" downloads only
-                                    videos uploaded on the same day two weeks ago
-    --datebefore DATE               Download only videos uploaded on or before
-                                    this date. The date formats accepted are the
-                                    same as --date
-    --dateafter DATE                Download only videos uploaded on or after
-                                    this date. The date formats accepted are the
-                                    same as --date
-    --match-filters FILTER          Generic video filter. Any "OUTPUT TEMPLATE"
-                                    field can be compared with a number or a
-                                    string using the operators defined in
-                                    "Filtering Formats". You can also simply
-                                    specify a field to match if the field is
-                                    present, use "!field" to check if the field
-                                    is not present, and "&" to check multiple
-                                    conditions. Use a "\" to escape "&" or
-                                    quotes if needed. If used multiple times,
-                                    the filter matches if at least one of the
-                                    conditions is met. E.g. --match-filters
-                                    !is_live --match-filters "like_count>?100 &
-                                    description~='(?i)\bcats \& dogs\b'" matches
-                                    only videos that are not live OR those that
-                                    have a like count more than 100 (or the like
-                                    field is not available) and also has a
-                                    description that contains the phrase "cats &
-                                    dogs" (caseless). Use "--match-filters -" to
-                                    interactively ask whether to download each
-                                    video
-    --no-match-filters              Do not use any --match-filters (default)
-    --break-match-filters FILTER    Same as "--match-filters" but stops the
-                                    download process when a video is rejected
-    --no-break-match-filters        Do not use any --break-match-filters (default)
-    --no-playlist                   Download only the video, if the URL refers
-                                    to a video and a playlist
-    --yes-playlist                  Download the playlist, if the URL refers to
-                                    a video and a playlist
-    --age-limit YEARS               Download only videos suitable for the given
-                                    age
-    --download-archive FILE         Download only videos not listed in the
-                                    archive file. Record the IDs of all
-                                    downloaded videos in it
-    --no-download-archive           Do not use archive file (default)
-    --max-downloads NUMBER          Abort after downloading NUMBER files
-    --break-on-existing             Stop the download process when encountering
-                                    a file that is in the archive supplied with
-                                    the --download-archive option
-    --no-break-on-existing          Do not stop the download process when
-                                    encountering a file that is in the archive
-                                    (default)
-    --break-per-
+                                    chrome, chrome-1

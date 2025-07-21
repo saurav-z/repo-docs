@@ -1,64 +1,30 @@
 <div align="center">
-<!-- Title: -->
   <a href="https://github.com/TheAlgorithms/">
-    <img src="https://raw.githubusercontent.com/TheAlgorithms/website/1cd824df116b27029f17c2d1b42d81731f28a920/public/logo.svg" height="100" alt="The Algorithms Logo">
+    <img src="https://raw.githubusercontent.com/TheAlgorithms/website/1cd824df116b27029f17c2d1b42d81731f28a920/public/logo.svg" height="100" alt="The Algorithms Python Logo">
   </a>
   <h1><a href="https://github.com/TheAlgorithms/">The Algorithms - Python</a></h1>
-<!-- Labels: -->
-  <!-- First row: -->
-  <a href="https://gitpod.io/#https://github.com/TheAlgorithms/Python">
-    <img src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod&style=flat-square" height="20" alt="Gitpod Ready-to-Code">
-  </a>
-  <a href="https://github.com/TheAlgorithms/Python/blob/master/CONTRIBUTING.md">
-    <img src="https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square" height="20" alt="Contributions Welcome">
-  </a>
-  <img src="https://img.shields.io/github/repo-size/TheAlgorithms/Python.svg?label=Repo%20size&style=flat-square" height="20" alt="Repository Size">
-  <a href="https://the-algorithms.com/discord">
-    <img src="https://img.shields.io/discord/808045925556682782.svg?logo=discord&colorB=7289DA&style=flat-square" height="20" alt="Discord chat">
-  </a>
-  <a href="https://gitter.im/TheAlgorithms/community">
-    <img src="https://img.shields.io/badge/Chat-Gitter-ff69b4.svg?label=Chat&logo=gitter&style=flat-square" height="20" alt="Gitter chat">
-  </a>
-  <!-- Second row: -->
-  <br>
-  <a href="https://github.com/TheAlgorithms/Python/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/TheAlgorithms/Python/build.yml?branch=master&label=CI&logo=github&style=flat-square" height="20" alt="GitHub Workflow Status">
-  </a>
-  <a href="https://github.com/pre-commit/pre-commit">
-    <img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square" height="20" alt="pre-commit">
-  </a>
-  <a href="https://github.com/psf/black">
-    <img src="https://img.shields.io/static/v1?label=code%20style&message=black&color=black&style=flat-square" height="20" alt="code style: black">
-  </a>
 </div>
 
-## Learn Algorithms with Python: A Comprehensive Resource
+**Explore the world of algorithms with practical Python implementations perfect for learning and understanding!**  ([View the original repository](https://github.com/TheAlgorithms/Python))
 
-**Explore a vast collection of algorithms implemented in Python for educational purposes at [The Algorithms - Python](https://github.com/TheAlgorithms/Python)!** This repository offers a wealth of Python code examples, perfect for understanding and experimenting with fundamental computer science concepts.
+## Key Features
 
-### Key Features:
+*   **Comprehensive Algorithm Coverage:**  Explore a wide array of algorithms implemented in Python.
+*   **Educational Resource:** Ideal for learning and understanding algorithm concepts.
+*   **Open Source & Collaborative:**  Contribute to the project and learn from others.
+*   **Community Support:** Connect with the community on [Discord](https://the-algorithms.com/discord) and [Gitter](https://gitter.im/TheAlgorithms/community) for support and discussions.
+*   **Code Style & Quality:**  Uses [Black](https://github.com/psf/black) for consistent code formatting and is pre-commit enabled.
+*   **Continuous Integration:**  Automated testing via GitHub Actions to ensure code quality.
+*   **Ready-to-Code:** Ready to use with Gitpod.
 
-*   **Extensive Algorithm Library:** Access a diverse range of algorithms implemented in Python, covering various areas of computer science.
-*   **Educational Focus:**  Code is written with a focus on clarity and understanding, making it ideal for learning.
-*   **Community Driven:** Benefit from a vibrant community and contribute to the project.
-*   **Easy to Use:** Jumpstart your learning with the ready-to-code environment provided by Gitpod.
-*   **Well-Maintained:**  The project is regularly tested with CI and uses pre-commit hooks for code style.
+## Getting Started
 
-### Important Note:
+Before contributing, please read our [Contribution Guidelines](CONTRIBUTING.md).
 
-Implementations are for learning purposes only. They may be less efficient than the implementations in the Python standard library. Use them at your discretion.
+## Community Channels
 
-### Getting Started
+Join us on [Discord](https://the-algorithms.com/discord) and [Gitter](https://gitter.im/TheAlgorithms/community) to ask questions, get help, and connect with other contributors.
 
-Before contributing, please review our [Contribution Guidelines](CONTRIBUTING.md).
+## Algorithm Directory
 
-### Community Channels
-
-Connect with other users and get help through our community channels:
-
-*   [Discord](https://the-algorithms.com/discord)
-*   [Gitter](https://gitter.im/TheAlgorithms/community)
-
-### Algorithm Directory
-
-Browse the [directory](DIRECTORY.md) for easier navigation and a better overview of the project.
+For a better overview and easier navigation, browse our [directory](DIRECTORY.md).

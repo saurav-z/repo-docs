@@ -1,49 +1,48 @@
-# verl: Reinforcement Learning for LLMs - Train Your LLM to Excel
+# verl: Unleash the Power of Reinforcement Learning for LLMs
 
-verl is a powerful, flexible, and efficient open-source library for Reinforcement Learning (RL) training of Large Language Models (LLMs), enabling you to fine-tune your models and unlock their full potential.
-
-[<img src="https://img.shields.io/github/stars/volcengine/verl?style=social" alt="GitHub stars" />](https://github.com/volcengine/verl)
-[![Twitter](https://img.shields.io/twitter/follow/verl_project)](https://twitter.com/verl_project)
-[![Documentation](https://img.shields.io/badge/documentation-blue)](https://verl.readthedocs.io/en/latest/)
-
-verl, initiated by the ByteDance Seed team, offers a comprehensive solution for RL training, built upon the foundation of the [HybridFlow: A Flexible and Efficient RLHF Framework](https://arxiv.org/abs/2409.19256v2) paper.
+verl is an open-source RL training library, initiated by ByteDance Seed and the verl community, designed for efficient and flexible Reinforcement Learning for Large Language Models (LLMs). Learn more on the [original repo](https://github.com/volcengine/verl).
 
 **Key Features:**
 
-*   **Flexible RL Algorithms:** Easily implement and customize various RL algorithms like PPO, GRPO, and more.
-*   **Seamless Integration:** Works with existing LLM infrastructure, including FSDP, Megatron-LM, vLLM, and SGLang.
-*   **Efficient Resource Utilization:** Supports flexible device mapping for optimal performance and scalability.
-*   **Hugging Face Compatibility:** Ready to use with popular Hugging Face models.
-*   **State-of-the-Art Performance:** Achieve high throughput for LLM training and inference.
-*   **Model support:** Qwen-3, Qwen-2.5, Llama3.1, Gemma2, DeepSeek-LLM, etc
+*   **Flexible RL Algorithms:** Easily extend and customize RL algorithms like PPO and GRPO with the hybrid-controller programming model.
+*   **Seamless LLM Integration:** Integrate with existing LLM frameworks (FSDP, Megatron-LM, vLLM, SGLang, HuggingFace) using modular APIs.
+*   **Efficient Resource Utilization:** Supports flexible device mapping for optimal GPU resource utilization and scalability.
+*   **State-of-the-Art Performance:** Achieves SOTA LLM training and inference throughput.
+*   **Extensive Model Support:** Ready integration with Hugging Face models and compatible with Qwen-3, Qwen-2.5, Llama3.1, Gemma2, and more.
+*   **Comprehensive RL Support:** Includes support for various RL algorithms like PPO, GRPO, ReMax, and others, including model-based and function-based rewards.
+*   **Multi-Modal and Multi-Turn Capabilities:** Supports vision-language models and multi-turn interactions with tools using SGLang.
 
-**What's New:**
+## Key Highlights
 
-*   **[verl meetup at ICML Vancouver on July 16th!](https://lu.ma/0ek2nyao) (onsite only)**
-*   **verl keynote at [AWS AI Hours Singapore](https://pages.awscloud.com/aws-ai-hours-sg.html#agenda) on 7/8**
-*   **verl with Megatron backend enables large MoE models such as [DeepSeek-671b and Qwen3-236b](https://verl.readthedocs.io/en/latest/perf/dpsk.html).**
+*   **HybridFlow Paper:** verl is the open-source version of [HybridFlow: A Flexible and Efficient RLHF Framework](https://arxiv.org/abs/2409.19256v2)
+*   **Latest News & Updates:** Stay informed with recent announcements, including conference presentations, new feature releases, and community contributions. (See "News" section in original README)
+*   **Thriving Community:** Join the growing community of researchers and developers using verl for cutting-edge LLM research and applications.
+*   **Performance Tuning Guide:** Offers a detailed guide for optimizing the performance of your RL models.
+*   **Extensive Tooling:** Supports expert parallelism, multi-GPU LoRA RL, and experiment tracking with various tools.
 
-**Getting Started:**
+## Getting Started
 
-*   [Documentation](https://verl.readthedocs.io/en/latest/index.html)
-*   [Installation Guide](https://verl.readthedocs.io/en/latest/start/install.html)
-*   [Quickstart Guide](https://verl.readthedocs.io/en/latest/start/quickstart.html)
-*   [PPO Example](https://verl.readthedocs.io/en/latest/examples/ppo_trainer/)
-*   [GRPO Example](https://verl.readthedocs.io/en/latest/examples/grpo_trainer/)
+*   **Documentation:** Access comprehensive documentation to guide you through installation, quickstarts, and advanced usage.
+*   **Examples:** Explore practical examples, including how to run PPO step-by-step, and learn from reproducible algorithm baselines.
+*   **Community Contributions:** Discover the work of many awesome projects built on verl including SkyThought, TinyZero, MemAgent and many more (See "Awesome work using verl" section in original README).
 
-**Community Blogs and Resources:**
+## Contributing
 
-*   [When Reasoning Models Break Tokenization: The Hidden Complexity of Multiturn Training](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial/blob/main/rlhf/verl/multi-turn/fast_tokenization/multiturn_tokenization_and_masking.md)
-*   [verl deployment on AWS SageMaker](https://medium.com/@kaige.yang0110/run-verl-on-sagemaker-using-4x8-l40s-gpus-8e6d5c3c61d3)
-*   [verl x SGLang Multi-turn Code Walkthrough](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial/blob/main/rlhf/verl/multi-turn/code-walk-through/readme_EN.md)
-*   [Optimizing SGLang Memory Usage in verl](https://hebiao064.github.io/rl-memory-management)
+Contribute to verl and help improve the library by following the [contribution guide](CONTRIBUTING.md).
 
-**Performance Tuning Guide:**
-*   [performance tuning guide](https://verl.readthedocs.io/en/latest/perf/perf_tuning.html)
+## Support
 
-**Citation:**
+For support or to learn more about the project, visit the following resources:
 
-If you use verl in your research, please cite:
+*   Documentation:  [https://verl.readthedocs.io/en/latest/index.html](https://verl.readthedocs.io/en/latest/index.html)
+*   Twitter:  [@verl\_project](https://twitter.com/verl_project)
+*   Slack:  [verlgroup](https://join.slack.com/t/verlgroup/shared_invite/zt-2w5p9o4c3-yy0x2Q56s_VlGLsJ93A6vA)
+
+## Citation
+
+If you use verl in your research, please cite the following:
+
+*   [HybridFlow: A Flexible and Efficient RLHF Framework](https://arxiv.org/abs/2409.19256v2)
 
 ```bibtex
 @article{sheng2024hybridflow,
@@ -52,19 +51,3 @@ If you use verl in your research, please cite:
   year    = {2024},
   journal = {arXiv preprint arXiv: 2409.19256}
 }
-```
-
-**[Contribute to verl](CONTRIBUTING.md)**
-
-**About ByteDance Seed Team**
-
-The ByteDance Seed Team is dedicated to advancing AI foundation models.
-
-*   [Website](https://team.doubao.com/)
-*   [WeChat](https://github.com/user-attachments/assets/469535a8-42f2-4797-acdf-4f7a1d4a0c3e)
-*   [Xiaohongshu](https://www.xiaohongshu.com/user/profile/668e7e15000000000303157d?xsec_token=ABl2-aqekpytY6A8TuxjrwnZskU-6BsMRE_ufQQaSAvjc%3D&xsec_source=pc_search)
-*   [Zhihu](https://www.zhihu.com/org/dou-bao-da-mo-xing-tuan-dui/)
-
----
-
-**[Learn More and Contribute to verl on GitHub](https://github.com/volcengine/verl)**

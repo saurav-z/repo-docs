@@ -4,9 +4,9 @@
   <img src="./assets/logo.png" width="120" height="120" alt="LightRAG Logo" style="border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);">
 </div>
 
-# 🚀 LightRAG: Revolutionizing Retrieval-Augmented Generation with Speed and Simplicity
+# 🚀 LightRAG: Simple and Fast Retrieval-Augmented Generation
 
-LightRAG is a cutting-edge Retrieval-Augmented Generation (RAG) framework designed for speed, simplicity, and ease of use. ([View the original repository](https://github.com/HKUDS/LightRAG))
+**LightRAG empowers you to build efficient and intelligent Retrieval-Augmented Generation (RAG) systems with ease.**  ([See the original repository](https://github.com/HKUDS/LightRAG))
 
 <div align="center">
     <a href="https://trendshift.io/repositories/13043" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13043" alt="HKUDS%2FLightRAG | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
@@ -49,22 +49,20 @@ LightRAG is a cutting-edge Retrieval-Augmented Generation (RAG) framework design
 </div>
 
 ---
-## Key Features of LightRAG
+## Key Features
 
-*   **Fast and Efficient**: Designed for optimal performance in RAG applications.
-*   **Simple Implementation**: Easy to integrate into your existing projects.
-*   **Flexible Storage Options**: Supports various storage backends including JsonKVStorage, PGKVStorage, RedisKVStorage, MongoKVStorage, NanoVectorDBStorage, PGVectorStorage, MilvusVectorDBStorage, ChromaVectorDBStorage, FaissVectorDBStorage, MongoVectorDBStorage, QdrantVectorDBStorage, NetworkXStorage, Neo4JStorage, PGGraphStorage, AGEStorage.
-*   **Multimodal Document Processing**: Seamless integration with [RAG-Anything](https://github.com/HKUDS/RAG-Anything) for handling diverse document types.
-*   **Advanced Knowledge Graph Management**: Create, edit, and delete entities and relationships directly within LightRAG.
-*   **Conversation History Support**: Maintain context in multi-turn dialogues.
-*   **Token Usage Tracking**: Monitor and manage token consumption.
-*   **Data Export**: Export data in various formats (CSV, Excel, Markdown, Text).
-*   **Extensive API Support**: Integration with a lightrag server for Web UI and API support.
-*   **Easy Initialization**: Requires explicit initialization before use.
+*   **Fast and Efficient:** Designed for speed and performance in RAG applications.
+*   **Flexible Storage Options:** Supports multiple storage backends for documents, vectors, and graphs (JsonKVStorage, PGKVStorage, RedisKVStorage, NanoVectorDBStorage, PGVectorStorage, MilvusVectorDBStorage, ChromaVectorDBStorage, FaissVectorDBStorage, QdrantVectorDBStorage, NetworkXStorage, Neo4JStorage, PGGraphStorage, AGEStorage).
+*   **Comprehensive Data Handling:** Includes functions for inserting, querying, and deleting documents.
+*   **Knowledge Graph Integration:**  Offers graph visualization and the ability to create, edit, and delete entities and relations.
+*   **Multimodal Document Processing:**  Seamlessly integrates with [RAG-Anything](https://github.com/HKUDS/RAG-Anything) for processing text, images, tables, and formulas in diverse formats.
+*   **Token Usage Tracking:** Monitor and manage token consumption for cost control and optimization.
+*   **Data Export:** Export knowledge graph data in various formats (CSV, Excel, Markdown, Text)
+*   **Cache Management:** Provides clear cache capabilities
+*   **Integration with LLMs:** Compatible with OpenAI, Hugging Face, Ollama, and LlamaIndex.
 
 ---
-
-## 🎉 What's New
+## 🎉 News
 - [X] [2025.06.16]🎯📢Our team has released [RAG-Anything](https://github.com/HKUDS/RAG-Anything) an All-in-One Multimodal RAG System for seamless text, image, table, and equation processing.
 - [X] [2025.06.05]🎯📢LightRAG now supports comprehensive multimodal data handling through [RAG-Anything](https://github.com/HKUDS/RAG-Anything) integration, enabling seamless document parsing and RAG capabilities across diverse formats including PDFs, images, Office documents, tables, and formulas. Please refer to the new [multimodal section](https://github.com/HKUDS/LightRAG/?tab=readme-ov-file#multimodal-document-processing-rag-anything-integration) for details.
 - [X] [2025.03.18]🎯📢LightRAG now supports citation functionality, enabling proper source attribution.
@@ -559,3 +557,4 @@ from lightrag.kg.shared_storage import initialize_pipeline_status
 from lightrag.utils import setup_logger
 
 # Setup log handler for LightRAG
+setup_logger("lightrag", level
