@@ -2,37 +2,33 @@
 
 # Weblate: The Leading Web-Based Continuous Localization System
 
-**Weblate is a powerful, open-source platform that simplifies and automates software localization for projects of all sizes.**  Used by over 2500 projects and companies worldwide, Weblate streamlines the translation process, making it easier to reach global audiences. You can [install it yourself](https://docs.weblate.org/en/latest/admin/install.html) or utilize the convenient [hosted Weblate service](https://weblate.org/).
+Weblate empowers over 2,500 libre projects and companies in 165+ countries to effortlessly translate their software. You can install it yourself or use the hosted Weblate service at [weblate.org](https://weblate.org/).
 
 ## Key Features
 
-*   **Web-Based Interface:** Access and manage translations from any device with a web browser.
-*   **Continuous Localization:** Integrate seamlessly with your development workflow for real-time translation updates.
-*   **Open Source:** Benefit from the freedom of open-source software, customizable to your specific needs.
-*   **Widely Adopted:** Trusted by over 2500 projects and companies globally.
-*   **Comprehensive Documentation:** Detailed documentation available at [https://docs.weblate.org/](https://docs.weblate.org/)
-*   **Active Community:** Engage with other users and developers via [Libera.Chat IRC channel #weblate](https://web.libera.chat/#weblate).
+*   **Web-Based Interface:** Easy-to-use web interface for translators.
+*   **Continuous Localization:** Streamlines the translation process.
+*   **Supports Libre Projects:** Used by over 2,500 free and open-source projects.
+*   **Global Reach:** Supports localization in over 165 countries.
+*   **Professional Support:** Optional professional support and cloud hosting available.
 
-## Get Started
+## Resources
 
-*   **Installation:** Detailed setup instructions are available in the [Weblate Documentation](https://docs.weblate.org/en/latest/admin/install.html).
-*   **Hosted Service:** Explore the features and benefits of the [hosted Weblate service](https://weblate.org/).
+*   **Website:** [weblate.org](https://weblate.org/)
+*   **Translation Status:** [![Translation status](https://hosted.weblate.org/widget/weblate/svg-badge.svg)](https://hosted.weblate.org/engage/weblate/)
+*   **Documentation:** [https://docs.weblate.org/](https://docs.weblate.org/)
+*   **Installation:** [https://docs.weblate.org/en/latest/admin/install.html](https://docs.weblate.org/en/latest/admin/install.html)
+*   **Issues/Feature Requests:** [https://github.com/WeblateOrg/weblate/issues](https://github.com/WeblateOrg/weblate/issues)
+*   **Source Code:** [GitHub Repository](https://github.com/WeblateOrg/weblate)
 
 ## Support
 
-Weblate offers both community and professional support options:
+Weblate offers optional professional support and cloud hosting.  Find out more at [weblate.org/hosting/](https://weblate.org/hosting/).
 
-*   **Community Support:**  Report bugs and suggest features on [GitHub Issues](https://github.com/WeblateOrg/weblate/issues).
-*   **Professional Support & Hosting:**  Learn more about our professional support and cloud hosting offerings at [https://weblate.org/hosting/](https://weblate.org/hosting/).
+## Community
 
-## Additional Resources
+*   **IRC:** Join the live chat on Libera.Chat IRC network, channel `#weblate`.
 
-*   **Website:** [https://weblate.org/](https://weblate.org/)
-*   **Translation Status:** [![Translation status](https://hosted.weblate.org/widget/weblate/svg-badge.svg)](https://hosted.weblate.org/engage/weblate/)
-*   **Documentation:** [https://docs.weblate.org/](https://docs.weblate.org/)
-*   **Source Code:** [https://github.com/WeblateOrg/weblate](https://github.com/WeblateOrg/weblate)
-*   **License:** [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.html)
+## License
 
----
-
-Copyright © Michal Čihař michal@weblate.org
+Weblate is licensed under the GNU General Public License v3.  See the `GNU General Public License <https://www.gnu.org/licenses/gpl-3.0.html>`_ for more details.

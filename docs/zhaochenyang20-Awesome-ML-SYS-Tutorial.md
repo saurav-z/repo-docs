@@ -1,43 +1,30 @@
-# Awesome-ML-SYS-Tutorial: Your Guide to the Cutting Edge of Machine Learning Systems
+# Awesome ML System Tutorial: Your Guide to Cutting-Edge ML Systems
 
-This repository offers comprehensive learning notes, code, and insights into the exciting intersection of Machine Learning and Systems (ML-SYS).  [Explore the original repository on GitHub](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial).
+**Dive into the exciting world of Machine Learning Systems (ML SYS) with this comprehensive repository of learning notes, code, and insights.**  [Explore the original repository on GitHub](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial).
 
-**Key Features:**
+This repository serves as a curated collection of notes, code, and reflections on the rapidly evolving field of ML SYS, focusing on practical applications and system-level optimizations.
 
-*   **In-Depth RLHF System Development Notes:**
-    *   Analysis of verl multi-turn training time consumption.
-    *   Understanding FSDP training backends.
-    *   Deep dives into weight update mechanisms.
-    *   Code walkthroughs of verl, including rollout and initialization.
-    *   Exploration of multi-turn tokenization challenges.
-    *   Integration of the Search-R1 framework and support for multi-turn interaction and tool usage.
-    *   Analysis of Kimi K1.5's Long Context RL implementation.
-    *   Rollout server based on veRL
-    *   Post-training systems and the calculation flow of RLHF.
-    *   Latency optimization for weight updates.
-    *   Analysis of Alignment algorithms and NeMo-Aligner framework.
-*   **SGLang Learning Notes:**
-    *   Understanding of Constraint Decoding.
-    *   Comprehensive SGLang code walkthrough.
-    *   Worker
-    *   Scheduler
-    *   Latency Accelerate For Weight Updates
-    *   Reward / Embed Model Sever Engine
-    *   Analysis of SGLang backend
-    *   Using vllm serve and SGLang to serve Embedding Models
-*   **Scheduling and Routing:**
-    *   Analysis of Mooncake and prefill vs. decode.
-    *   Model Server based on SGLang
-*   **ML System Fundamentals:**
-    *   CUDA Graph and CUDA Graph implementation.
-    *   NCCL and NVIDIA TOPO.
-    *   PyTorch Distributed communication practices.
-    *   Model quantization (BF16, AWQ).
-    *   Details of DDP and all_reduce.
-*   **Development Guides:**
-    *   Docker usage for development environment management.
-    *   Configuration of a clean development environment.
-    *   Understanding special tokens and chat templates in transformers.
-    *   CI compilation of Jupyter notebooks for documentation.
+## Key Features:
 
-**Explore the cutting edge of ML-SYS!**
+*   **RLHF System Development:** Detailed exploration of Reinforcement Learning from Human Feedback (RLHF) systems, including code walkthroughs, system design considerations, and performance analysis.
+    *   Deep dives into frameworks like Verl, SGLang, and OpenRLHF.
+    *   Analysis of multi-turn training, tool usage, and weight update mechanisms.
+    *   Practical examples of applying RLHF techniques to real-world applications.
+*   **SGLang Deep Dive:** Extensive notes on the SGLang framework, covering code structure, scheduling, and optimization strategies.
+    *   In-depth analysis of the SGLang engine and its components.
+    *   Insights into constraint decoding and latency optimization.
+    *   Practical guidance on utilizing SGLang for various ML tasks.
+*   **Scheduling and Routing:** Comprehensive investigation into scheduling and routing techniques for efficient model serving.
+    *   Exploration of methods for managing prefill and decode operations.
+    *   Analysis of model server architectures and front-end distribution systems.
+*   **ML System Fundamentals:** A strong foundation in essential ML system concepts and technologies.
+    *   CUDA Graph and PyTorch Distributed.
+    *   Deep dive into quantization methods and optimization techniques.
+*   **Development Guides:** Practical guides and tips for setting up a streamlined ML development environment.
+    *   Docker usage for environment management.
+    *   Configuration of development environment with UV.
+    *   Special tokens and chat template.
+
+## Get Started
+
+The notes are categorized to reflect a natural learning progression.  Review the sections in order of appearance for a structured approach to understanding.  We encourage contributions and feedback to improve this resource!

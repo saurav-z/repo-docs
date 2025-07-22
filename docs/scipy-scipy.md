@@ -1,10 +1,10 @@
-<a href="https://scipy.org">
-  <img src="https://raw.githubusercontent.com/scipy/scipy/main/doc/source/_static/logo.svg" alt="SciPy Logo" width="110" height="110" align="left"/>
-</a>
+[![SciPy Logo](https://raw.githubusercontent.com/scipy/scipy/main/doc/source/_static/logo.svg)](https://scipy.org)
 
-# SciPy: Your Go-To Library for Scientific Computing in Python
+# SciPy: Open Source Software for Scientific Computing in Python
 
-SciPy (pronounced "Sigh Pie") is a powerful open-source library for scientific computing in Python, offering a wide array of tools for mathematics, science, and engineering.
+SciPy is a powerful, open-source library for scientific computing in Python, offering a wide range of tools for mathematics, science, and engineering.
+
+**[View the original repository on GitHub](https://github.com/scipy/scipy)**
 
 [![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/scipy.svg?label=Pypi%20downloads)](https://pypi.org/project/scipy/)
@@ -14,49 +14,46 @@ SciPy (pronounced "Sigh Pie") is a powerful open-source library for scientific c
 
 ## Key Features
 
-SciPy seamlessly integrates with NumPy and provides a comprehensive suite of tools, including:
+SciPy provides a comprehensive set of tools for scientific computing, including:
 
-*   **Statistics:** Statistical functions and distributions.
-*   **Optimization:** Algorithms for finding optimal solutions.
-*   **Integration:** Numerical integration techniques.
-*   **Linear Algebra:** Linear algebra routines.
-*   **Fourier Transforms:** Tools for signal processing.
-*   **Signal and Image Processing:**  Functions for manipulating signals and images.
-*   **ODE Solvers:** Ordinary differential equation solvers.
-*   **And Much More:** A vast collection of scientific computing tools.
+*   **Numerical Integration and Optimization:** Efficient routines for solving complex mathematical problems.
+*   **Linear Algebra:** Support for matrix operations and linear algebra tasks.
+*   **Statistics:** Modules for statistical analysis and probability distributions.
+*   **Signal and Image Processing:** Tools for manipulating and analyzing signals and images.
+*   **Fourier Transforms:** Efficient implementation of Fourier transforms.
+*   **ODE Solvers:** Solvers for ordinary differential equations.
+*   **Integration with NumPy:** Seamless integration with NumPy arrays for efficient numerical computation.
+*   **Cross-Platform Compatibility:** Runs on all popular operating systems.
+*   **Free and Open Source:**  Available free of charge under a permissive license.
 
-## Why Use SciPy?
-
-SciPy is designed to be user-friendly, efficient, and powerful, making it the ideal choice for scientists and engineers needing to manipulate numbers and analyze data. It runs on all major operating systems and is free to use.
-
-## Getting Started
+## Get Started
 
 *   **Website:** [https://scipy.org](https://scipy.org)
 *   **Documentation:** [https://docs.scipy.org/doc/scipy/](https://docs.scipy.org/doc/scipy/)
 *   **Installation Guide:** [https://scipy.org/install/](https://scipy.org/install/)
+*   **Development Documentation:** [https://scipy.github.io/devdocs](https://scipy.github.io/devdocs)
+*   **SciPy Development Forum:** [https://discuss.scientific-python.org/c/contributor/scipy](https://discuss.scientific-python.org/c/contributor/scipy)
+*   **Stack Overflow:** [https://stackoverflow.com/questions/tagged/scipy](https://stackoverflow.com/questions/tagged/scipy)
 *   **Source Code:** [https://github.com/scipy/scipy](https://github.com/scipy/scipy)
+*   **Citing SciPy:** [https://www.scipy.org/citing-scipy/](https://www.scipy.org/citing-scipy/)
 
 ## Contributing
 
-We welcome contributions! There are many ways to get involved:
+We warmly welcome contributions from the community! Whether you're a seasoned developer or just starting, there are many ways to get involved:
 
-*   **Code Contributions:** Improve existing code or add new features.
-*   **Review Pull Requests:** Help maintain code quality.
-*   **Triage Issues:** Assist in organizing and prioritizing issues.
-*   **Documentation and Tutorials:** Create helpful resources for users.
-*   **Website and Branding:** Improve our online presence.
-*   **Outreach and Fundraising:** Support our community.
-
-See our [Contributing Guide](https://scipy.github.io/devdocs/dev/index.html) for more details and the [SciPy development forum](https://discuss.scientific-python.org/c/contributor/scipy) if you need help.
-
-## Resources
-
-*   **Development Documentation:** [https://scipy.github.io/devdocs](https://scipy.github.io/devdocs)
-*   **Forum:** [https://discuss.scientific-python.org/c/contributor/scipy](https://discuss.scientific-python.org/c/contributor/scipy)
-*   **Stack Overflow:** [https://stackoverflow.com/questions/tagged/scipy](https://stackoverflow.com/questions/tagged/scipy)
+*   **Contributing Guide:** [https://scipy.github.io/devdocs/dev/index.html](https://scipy.github.io/devdocs/dev/index.html)
 *   **Bug Reports:** [https://github.com/scipy/scipy/issues](https://github.com/scipy/scipy/issues)
 *   **Code of Conduct:** [https://docs.scipy.org/doc/scipy/dev/conduct/code_of_conduct.html](https://docs.scipy.org/doc/scipy/dev/conduct/code_of_conduct.html)
-*   **Report a Security Vulnerability:** [https://tidelift.com/docs/security](https://tidelift.com/docs/security)
-*   **Citing SciPy:** [https://www.scipy.org/citing-scipy/](https://www.scipy.org/citing-scipy/)
+*   **Report a security vulnerability:** [https://tidelift.com/docs/security](https://tidelift.com/docs/security)
 
-For more information, visit the [SciPy GitHub repository](https://github.com/scipy/scipy).
+You can contribute by:
+
+*   Reviewing pull requests
+*   Triaging issues
+*   Developing tutorials and educational materials
+*   Maintaining and improving the website ([https://github.com/scipy/scipy.org](https://github.com/scipy/scipy.org))
+*   Developing graphic design for brand assets
+*   Helping with outreach and onboarding new contributors
+*   Writing grant proposals
+
+Don't hesitate to reach out on the forum or GitHub if you have questions!

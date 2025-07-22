@@ -4,9 +4,9 @@
   <img alt="Shows a black Browser Use Logo in light color mode and a white one in dark color mode." src="./static/browser-use.png"  width="full">
 </picture>
 
-<h1 align="center">Browser Use: Automate Your Browser with AI 🤖</h1>
+# Browser Use: Automate Your Browser with AI 🤖
 
-**Effortlessly control your web browser using the power of AI with Browser Use.**
+**Effortlessly connect your AI agents to the web and automate tasks like never before.**  [Explore the original repository](https://github.com/browser-use/browser-use) for more details.
 
 [![GitHub stars](https://img.shields.io/github/stars/gregpr07/browser-use?style=social)](https://github.com/gregpr07/browser-use/stargazers)
 [![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)
@@ -16,191 +16,182 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
 [![Weave Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fapp.workweave.ai%2Fapi%2Frepository%2Fbadge%2Forg_T5Pvn3UBswTHIsN1dWS3voPg%2F881458615&labelColor=#EC6341)](https://app.workweave.ai/reports/repository/org_T5Pvn3UBswTHIsN1dWS3voPg/881458615)
 
-🔗 **[Visit the Browser Use GitHub Repository](https://github.com/browser-use/browser-use)**
-
 ## Key Features
 
-*   **AI-Powered Automation:** Control your browser with natural language prompts, enabling complex web tasks.
-*   **Easy Integration:** Simple installation and setup using pip.
-*   **Cloud-Based Option:** Quickly get started with a hosted version.  **[Try the cloud ☁︎](https://cloud.browser-use.com)**.
-*   **Model Context Protocol (MCP) Support:** Integrate with Claude Desktop and other MCP-compatible clients for extended capabilities.
-*   **Interactive CLI:** Test and experiment with browser-use using the interactive CLI.
-*   **Extensive Documentation:** Comprehensive documentation available for detailed usage and customization.
-*   **Robust Testing:**  Integrate your tasks into our CI and benefit from automated validation.
-*   **Active Community:** Join the Discord community to share projects and get support.
+*   **AI-Powered Automation:**  Control your browser using the power of AI.
+*   **Easy Integration:**  Simple Python setup for connecting agents to the browser.
+*   **Model Context Protocol (MCP) Support:** Integrate with Claude Desktop and other MCP-compatible clients.
+*   **Hosted Version:** Try our [cloud version](https://cloud.browser-use.com) for instant browser automation.
+*   **Extensive Documentation:**  Comprehensive documentation available at [docs.browser-use.com](https://docs.browser-use.com).
+*   **Interactive CLI:** Use the browser-use interactive CLI for easy testing.
+*   **Robust CI Testing:** Contribute and get automatic validation through CI.
 
-## Getting Started
+## Quick Start
 
-### Installation
+1.  **Install:**
 
-Install the library using pip:
+    ```bash
+    pip install browser-use
+    ```
+2.  **Install Browser:**
 
-```bash
-pip install browser-use
-```
+    ```bash
+    playwright install chromium --with-deps --no-shell
+    ```
+3.  **Spin up your agent:**
 
-Install browser dependencies (Playwright):
+    ```python
+    import asyncio
+    from dotenv import load_dotenv
+    load_dotenv()
+    from browser_use import Agent
+    from browser_use.llm import ChatOpenAI
 
-```bash
-playwright install chromium --with-deps --no-shell
-```
+    async def main():
+        agent = Agent(
+            task="Compare the price of gpt-4o and DeepSeek-V3",
+            llm=ChatOpenAI(model="o4-mini", temperature=1.0),
+        )
+        await agent.run()
 
-### Example Usage
+    asyncio.run(main())
+    ```
+4.  **Configure API Keys:** Add your API keys to a `.env` file.
 
-Here's a simple example of how to use Browser Use:
+    ```bash
+    OPENAI_API_KEY=
+    ANTHROPIC_API_KEY=
+    AZURE_OPENAI_ENDPOINT=
+    AZURE_OPENAI_KEY=
+    GOOGLE_API_KEY=
+    DEEPSEEK_API_KEY=
+    GROK_API_KEY=
+    NOVITA_API_KEY=
+    ```
 
-```python
-import asyncio
-from dotenv import load_dotenv
-load_dotenv()
-from browser_use import Agent
-from browser_use.llm import ChatOpenAI
+## Examples
 
-async def main():
-    agent = Agent(
-        task="Compare the price of gpt-4o and DeepSeek-V3",
-        llm=ChatOpenAI(model="o4-mini", temperature=1.0),
-    )
-    await agent.run()
+Browser Use makes it easy to automate a wide variety of tasks:
 
-asyncio.run(main())
-```
+*   **Shopping:**  Add grocery items to cart and checkout.
+    [![AI Did My Groceries](https://github.com/user-attachments/assets/a0ffd23d-9a11-4368-8893-b092703abc14)](https://www.youtube.com/watch?v=L2Ya9PYNns8)
 
-Remember to add your API keys to a `.env` file.
+*   **Lead Generation:**  Add your latest LinkedIn follower to your leads in Salesforce.
+    ![LinkedIn to Salesforce](https://github.com/user-attachments/assets/50d6e691-b66b-4077-a46c-49e9d4707e07)
 
-### Interactive CLI
+*   **Job Application:**  Read your CV & find ML jobs, save them to a file, and then start applying.
+    https://github.com/user-attachments/assets/171fb4d6-0355-46f2-863e-edb04a828d04
 
-Use the interactive CLI for testing:
+*   **Document Generation:**  Write a letter in Google Docs and save it as a PDF.
+    ![Letter to Papa](https://github.com/user-attachments/assets/242ade3e-15bc-41c2-988f-cbc5415a66aa)
 
-```bash
-pip install "browser-use[cli]"
-browser-use
-```
+*   **Data Extraction & Processing:**  Look up models on Hugging Face, sort by likes, and save the top 5 to a file.
+    https://github.com/user-attachments/assets/de73ee39-432c-4b97-b4e8-939fd7f323b3
+
+    Find more examples in the [examples](examples) folder or in our [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repo.
 
 ## MCP Integration
 
-Browser-use supports the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), enabling integration with Claude Desktop and other MCP-compatible clients.
+Integrate with MCP-compatible tools like Claude Desktop for extended functionality:
 
-### Use as MCP Server with Claude Desktop
+*   **Use as MCP Server:** Configure Browser Use within Claude Desktop:
 
-Add browser-use to your Claude Desktop configuration:
-
-```json
-{
-  "mcpServers": {
-    "browser-use": {
-      "command": "uvx",
-      "args": ["browser-use", "--mcp"],
-      "env": {
-        "OPENAI_API_KEY": "sk-..."
+    ```json
+    {
+      "mcpServers": {
+        "browser-use": {
+          "command": "uvx",
+          "args": ["browser-use", "--mcp"],
+          "env": {
+            "OPENAI_API_KEY": "sk-..."
+          }
+        }
       }
     }
-  }
-}
-```
+    ```
 
-### Connect External MCP Servers to Browser-Use Agent
+*   **Connect External MCP Servers:**  Extend agent capabilities with multiple servers:
 
-Browser-use agents can connect to multiple external MCP servers to extend their capabilities:
+    ```python
+    import asyncio
+    from browser_use import Agent, Controller
+    from browser_use.mcp.client import MCPClient
+    from browser_use.llm import ChatOpenAI
 
-```python
-import asyncio
-from browser_use import Agent, Controller
-from browser_use.mcp.client import MCPClient
-from browser_use.llm import ChatOpenAI
+    async def main():
+        # Initialize controller
+        controller = Controller()
+        
+        # Connect to multiple MCP servers
+        filesystem_client = MCPClient(
+            server_name="filesystem",
+            command="npx",
+            args=["-y", "@modelcontextprotocol/server-filesystem", "/Users/me/documents"]
+        )
+        
+        github_client = MCPClient(
+            server_name="github", 
+            command="npx",
+            args=["-y", "@modelcontextprotocol/server-github"],
+            env={"GITHUB_TOKEN": "your-github-token"}
+        )
+        
+        # Connect and register tools from both servers
+        await filesystem_client.connect()
+        await filesystem_client.register_to_controller(controller)
+        
+        await github_client.connect()
+        await github_client.register_to_controller(controller)
+        
+        # Create agent with MCP-enabled controller
+        agent = Agent(
+            task="Find the latest report.pdf in my documents and create a GitHub issue about it",
+            llm=ChatOpenAI(model="gpt-4o"),
+            controller=controller  # Controller has tools from both MCP servers
+        )
+        
+        # Run the agent
+        await agent.run()
+        
+        # Cleanup
+        await filesystem_client.disconnect()
+        await github_client.disconnect()
 
-async def main():
-    # Initialize controller
-    controller = Controller()
-    
-    # Connect to multiple MCP servers
-    filesystem_client = MCPClient(
-        server_name="filesystem",
-        command="npx",
-        args=["-y", "@modelcontextprotocol/server-filesystem", "/Users/me/documents"]
-    )
-    
-    github_client = MCPClient(
-        server_name="github", 
-        command="npx",
-        args=["-y", "@modelcontextprotocol/server-github"],
-        env={"GITHUB_TOKEN": "your-github-token"}
-    )
-    
-    # Connect and register tools from both servers
-    await filesystem_client.connect()
-    await filesystem_client.register_to_controller(controller)
-    
-    await github_client.connect()
-    await github_client.register_to_controller(controller)
-    
-    # Create agent with MCP-enabled controller
-    agent = Agent(
-        task="Find the latest report.pdf in my documents and create a GitHub issue about it",
-        llm=ChatOpenAI(model="gpt-4o"),
-        controller=controller  # Controller has tools from both MCP servers
-    )
-    
-    # Run the agent
-    await agent.run()
-    
-    # Cleanup
-    await filesystem_client.disconnect()
-    await github_client.disconnect()
+    asyncio.run(main())
+    ```
 
-asyncio.run(main())
-```
+    See the [MCP documentation](https://docs.browser-use.com/customize/mcp-server) for details.
 
-See the [MCP documentation](https://docs.browser-use.com/customize/mcp-server) for more details.
+## Roadmap
 
-## Demos
-
-Explore real-world examples of Browser Use in action:
-
-*   **AI Did My Groceries:**  [![AI Did My Groceries](https://github.com/user-attachments/assets/a0ffd23d-9a11-4368-8893-b092703abc14)](https://www.youtube.com/watch?v=L2Ya9PYNns8)
-*   **LinkedIn to Salesforce Integration:**  ![LinkedIn to Salesforce](https://github.com/user-attachments/assets/50d6e691-b66b-4077-a46c-49e9d4707e07)
-*   **Find and Apply to Jobs:**  ![Find and Apply to Jobs](https://github.com/user-attachments/assets/171fb4d6-0355-46f2-863e-edb04a828d04)
-*   **Write a Letter in Google Docs:**  ![Letter to Papa](https://github.com/user-attachments/assets/242ade3e-15bc-41c2-988f-cbc5415a66aa)
-*   **Find Models on Hugging Face:**  ![Find Models on Hugging Face](https://github.com/user-attachments/assets/de73ee39-432c-4b97-b4e8-939fd7f323b3)
-
-## Explore More Examples
-
-Find more examples and inspiration in the [examples](examples) folder and our [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repo. Join the [Discord](https://link.browser-use.com/discord) to share your projects.
-
-## Vision & Roadmap
-
-Our vision is to enable you to tell your computer what to do and have it get it done!
-
-### Roadmap
-
-*   **Agent:** Improve memory and planning capabilities, and reduce token consumption.
-*   **DOM Extraction:** Enhance UI element detection and representation.
-*   **Workflows:** Implement workflow recording and rerunning.
-*   **User Experience:** Create templates, improve documentation, and boost speed.
-*   **Parallelization:** Introduce parallel task execution.
+*   **Agent Enhancements:**  Improve memory and planning capabilities, and reduce token consumption.
+*   **DOM Extraction:**  Enhance UI element detection and representation.
+*   **Workflows:**  Implement workflow recording and rerunning.
+*   **User Experience:**  Develop templates and improve documentation.
+*   **Parallelization:** Enable parallel task execution for increased efficiency.
 
 ## Contributing
 
-We welcome contributions!  Please submit issues for bugs or feature requests.  Contribute to the docs in the `/docs` folder.
+We welcome contributions!  Report bugs and request features by opening issues. Contribute to the docs in the `/docs` folder.
 
 ## 🧪 Robust Agent Testing
 
-Enhance your agents by running them in our CI:
+Ensure the reliability of your agents:
 
-*   Add your task as a YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for details).
-*   Tasks will automatically be validated during updates.
+*   **Add your task:**  Create a YAML file in `tests/agent_tasks/` (see the [`README`](tests/agent_tasks/README.md) for details).
+*   **Automated Validation:**  Your task is automatically run and evaluated on every update via CI.
 
 ## Local Setup
 
-For more information, see the [local setup 📕](https://docs.browser-use.com/development/local-setup).
+To learn more about the library, check out the [local setup 📕](https://docs.browser-use.com/development/local-setup).
 
-Use a stable [versioned release](https://github.com/browser-use/browser-use/releases) for production use.
+**Note:** The `main` branch is for active development. For production use, use a [versioned release](https://github.com/browser-use/browser-use/releases).
 
 ---
 
 ## Swag
 
-Show off your Browser Use swag! Check out our [Merch store](https://browsermerch.com).  Good contributors get free swag 👀.
+Want to show off your Browser-use swag? Check out our [Merch store](https://browsermerch.com). Good contributors will receive swag for free 👀.
 
 ## Citation
 
@@ -226,20 +217,3 @@ If you use Browser Use in your research or project, please cite:
 <div align="center">
 Made with ❤️ in Zurich and San Francisco
  </div>
-```
-Key improvements:
-
-*   **SEO Optimization:** Includes relevant keywords throughout the document.
-*   **Clear Headings:**  Uses proper heading hierarchy for readability and search engine parsing.
-*   **Concise Summarization:**  Condenses the information while keeping key details.
-*   **One-Sentence Hook:**  Provides a strong initial statement to grab attention.
-*   **Bulleted Key Features:** Highlights the key benefits of the library.
-*   **Emphasis on Benefits:**  Focuses on *what* the user gains, not just *what* the library does.
-*   **Links & Calls to Action:**  Includes clear calls to action, direct links and better context for those links.
-*   **Structured for Scanning:**  Uses lists and short paragraphs for easy scanning.
-*   **Improved Language:**  More active and engaging language.
-*   **Consolidated Information:**  Repeated content (like MCP instructions) is organized more efficiently.
-*   **Stronger Roadmap:**  Clearer and more focused on the value proposition.
-*   **Complete and Detailed:** Includes everything from the original and adds more organization.
-*   **Markdown Formatting:** Properly formatted markdown for GitHub.
-*   **Added "Vision" Section:** Added to address the "Vision" section that was missed.

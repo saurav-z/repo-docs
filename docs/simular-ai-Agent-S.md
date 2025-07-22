@@ -1,30 +1,32 @@
-# Agent S: Revolutionizing Computer Use with AI Agents
+# Agent S: The Next Generation of Computer Use Agents
 
-Agent S empowers AI to interact with computers autonomously, offering a groundbreaking approach to automate complex tasks.  [Explore the Agent S repository](https://github.com/simular-ai/Agent-S) to begin your journey into the future of human-computer interaction.
+Agent S is a cutting-edge, open-source framework designed to empower AI agents to interact with computers like humans, offering unparalleled capabilities in automation and complex task execution. [Explore the original repository on GitHub](https://github.com/simular-ai/Agent-S).
 
-## Key Features:
+## Key Features
 
-*   **Compositional Generalist-Specialist Framework:**  Agent S utilizes a modular design for enhanced flexibility and performance.
-*   **Autonomous Computer Interaction:**  Agent S can perform complex tasks on your computer without human intervention.
-*   **Open Source and Accessible:**  Join a community of developers and researchers shaping the future of AI agents.
-*   **Advanced Grounding Models:**  Leverages cutting-edge visual grounding techniques.
-*   **High-Performance Results:** State-of-the-art results in OSWorld, WindowsAgentArena, and AndroidWorld.
+*   **Compositional Architecture:** Leverages a generalist-specialist framework for robust and adaptable computer use.
+*   **GUI Interaction:** Enables autonomous interaction with computer interfaces through Agent-Computer Interface.
+*   **Open Source:** Built for collaboration and community contributions.
+*   **State-of-the-Art Performance:** Outperforms leading Computer Use Agents (CUAs) like OpenAI's Operator and Anthropic's Claude 3.7 Sonnet.
+*   **Advanced Visual Grounding:** Integrated with UI-TARS for superior performance.
+*   **Flexible Integration:** Compatible with various LLM providers and platforms.
+*   **Web Knowledge Retrieval:** Supports Perplexica for enhanced search and information access.
 
-## Updates
+## Key Improvements & Updates
 
-*   [x] **2025/07/07**: The [Agent S2 paper](https://arxiv.org/abs/2504.00906) is accepted to COLM 2025! See you in Montreal!
-*   [x] **2025/04/01**: Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
-*   [x] **2025/03/12**: Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
-*   [x] **2025/01/22**: The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
-*   [x] **2025/01/21**: Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
-*   [x] **2024/12/05**: Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
-*   [x] **2024/10/10**: Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase!
+*   **2025/07/07**: The [Agent S2 paper](https://arxiv.org/abs/2504.00906) is accepted to COLM 2025! See you in Montreal!
+*   **2025/04/01**: Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
+*   **2025/03/12**: Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
+*   **2025/01/22**: The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
+*   **2025/01/21**: Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
+*   **2024/12/05**: Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
+*   **2024/10/10**: Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase!
 
 ## Table of Contents
 
 1.  [💡 Introduction](#-introduction)
 2.  [🎯 Current Results](#-current-results)
-3.  [🛠️ Installation & Setup](#-installation--setup)
+3.  [🛠️ Installation & Setup](#%EF%B8%8F-installation--setup)
 4.  [🚀 Usage](#-usage)
 5.  [🤝 Acknowledgements](#-acknowledgements)
 6.  [💬 Citation](#-citation)
@@ -35,7 +37,9 @@ Agent S empowers AI to interact with computers autonomously, offering a groundbr
     <img src="./images/agent_s2_teaser.png" width="800">
 </p>
 
-Agent S is an open-source framework designed to enable autonomous interaction with computers through Agent-Computer Interface, offering intelligent GUI agents that learn from past experiences and perform complex tasks.  Whether you're interested in AI, automation, or contributing to cutting-edge agent-based systems, we're excited to have you here!
+Agent S is an open-source framework designed to enable autonomous interaction with computers through Agent-Computer Interface. Our mission is to build intelligent GUI agents that can learn from past experiences and perform complex tasks autonomously on your computer.
+
+Whether you're interested in AI, automation, or contributing to cutting-edge agent-based systems, we're excited to have you here!
 
 ## 🎯 Current Results
 
@@ -82,11 +86,11 @@ Agent S is an open-source framework designed to enable autonomous interaction wi
 
 ## 🛠️ Installation & Setup
 
->   **Note**: Our agent returns `pyautogui` code and is intended for a single monitor screen.
->
->   ❗**Warning**❗: If you are on a Linux machine, creating a `conda` environment will interfere with `pyatspi`. As of now, there's no clean solution for this issue. Proceed through the installation without using `conda` or any virtual environment.
->
->   ⚠️**Disclaimer**⚠️: To leverage the full potential of Agent S2, we utilize [UI-TARS](https://github.com/bytedance/UI-TARS) as a grounding model (7B-DPO or 72B-DPO for better performance). They can be hosted locally, or on Hugging Face Inference Endpoints. Our code supports Hugging Face Inference Endpoints. Check out [Hugging Face Inference Endpoints](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints) for more information on how to set up and query this endpoint. However, running Agent S2 does not require this model, and you can use alternative API based models for visual grounding, such as Claude.
+> **Note**: Our agent returns `pyautogui` code and is intended for a single monitor screen.
+
+> ❗**Warning**❗: If you are on a Linux machine, creating a `conda` environment will interfere with `pyatspi`. As of now, there's no clean solution for this issue. Proceed through the installation without using `conda` or any virtual environment.
+
+> ⚠️**Disclaimer**⚠️: To leverage the full potential of Agent S2, we utilize [UI-TARS](https://github.com/bytedance/UI-TARS) as a grounding model (7B-DPO or 72B-DPO for better performance). They can be hosted locally, or on Hugging Face Inference Endpoints. Our code supports Hugging Face Inference Endpoints. Check out [Hugging Face Inference Endpoints](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints) for more information on how to set up and query this endpoint. However, running Agent S2 does not require this model, and you can use alternative API based models for visual grounding, such as Claude.
 
 Install the package:
 
@@ -94,7 +98,7 @@ Install the package:
 pip install gui-agents
 ```
 
-Set your LLM API Keys and other environment variables. You can do this by adding the following line to your `.bashrc` (Linux), or `.zshrc` (MacOS) file.
+Set your LLM API Keys and other environment variables. You can do this by adding the following line to your .bashrc (Linux), or .zshrc (MacOS) file.
 
 ```bash
 export OPENAI_API_KEY=<YOUR_API_KEY>
@@ -120,20 +124,20 @@ Agent S works best with web-knowledge retrieval. To enable this feature, you nee
 2.  Navigate to the directory containing the project files.
 
     ```bash
-    cd Perplexica
-    git submodule update --init
+     cd Perplexica
+     git submodule update --init
     ```
 
 3.  Rename the `sample.config.toml` file to `config.toml`. For Docker setups, you need only fill in the following fields:
 
-    *   `OPENAI`: Your OpenAI API key. **You only need to fill this if you wish to use OpenAI's models**.
-    *   `OLLAMA`: Your Ollama API URL. You should enter it as `http://host.docker.internal:PORT_NUMBER`. If you installed Ollama on port 11434, use `http://host.docker.internal:11434`. For other ports, adjust accordingly. **You need to fill this if you wish to use Ollama's models instead of OpenAI's**.
-    *   `GROQ`: Your Groq API key. **You only need to fill this if you wish to use Groq's hosted models**.
-    *   `ANTHROPIC`: Your Anthropic API key. **You only need to fill this if you wish to use Anthropic models**.
+    -   `OPENAI`: Your OpenAI API key. **You only need to fill this if you wish to use OpenAI's models**.
+    -   `OLLAMA`: Your Ollama API URL. You should enter it as `http://host.docker.internal:PORT_NUMBER`. If you installed Ollama on port 11434, use `http://host.docker.internal:11434`. For other ports, adjust accordingly. **You need to fill this if you wish to use Ollama's models instead of OpenAI's**.
+    -   `GROQ`: Your Groq API key. **You only need to fill this if you wish to use Groq's hosted models**.
+    -   `ANTHROPIC`: Your Anthropic API key. **You only need to fill this if you wish to use Anthropic models**.
 
         **Note**: You can change these after starting Perplexica from the settings dialog.
 
-    *   `SIMILARITY_MEASURE`: The similarity measure to use (This is filled by default; you can leave it as is if you are unsure about it.)
+    -   `SIMILARITY_MEASURE`: The similarity measure to use (This is filled by default; you can leave it as is if you are unsure about it.)
 
 4.  Ensure you are in the directory containing the `docker-compose.yaml` file and execute:
 
@@ -147,13 +151,14 @@ Agent S works best with web-knowledge retrieval. To enable this feature, you nee
     export PERPLEXICA_URL=http://localhost:{port}/api/search
     ```
 
-6.  Our implementation of Agent S incorporates the Perplexica API to integrate a search engine capability, which allows for a more convenient and responsive user experience. If you want to tailor the API to your settings and specific requirements, you may modify the URL and the message of request parameters in  `agent_s/query_perplexica.py`. For a comprehensive guide on configuring the Perplexica API, please refer to [Perplexica Search API Documentation](https://github.com/ItzCrazyKns/Perplexica/blob/master/docs/API/SEARCH.md). For a more detailed setup and usage guide, please refer to the [Perplexica Repository](https://github.com/ItzCrazyKns/Perplexica.git).
+6.  Our implementation of Agent S incorporates the Perplexica API to integrate a search engine capability, which allows for a more convenient and responsive user experience. If you want to tailor the API to your settings and specific requirements, you may modify the URL and the message of request parameters in  `agent_s/query_perplexica.py`. For a comprehensive guide on configuring the Perplexica API, please refer to [Perplexica Search API Documentation](https://github.com/ItzCrazyKns/Perplexica/blob/master/docs/API/SEARCH.md).
+    For a more detailed setup and usage guide, please refer to the [Perplexica Repository](https://github.com/ItzCrazyKns/Perplexica.git).
 
->   ❗**Warning**❗: The agent will directly run python code to control your computer. Please use with care.
+> ❗**Warning**❗: The agent will directly run python code to control your computer. Please use with care.
 
 ## 🚀 Usage
 
->   **Note**: Our best configuration uses Claude 3.7 with extended thinking and UI-TARS-72B-DPO. If you are unable to run UI-TARS-72B-DPO due to resource constraints, UI-TARS-7B-DPO can be used as a lighter alternative with minimal performance degradation.
+> **Note**: Our best configuration uses Claude 3.7 with extended thinking and UI-TARS-72B-DPO. If you are unable to run UI-TARS-72B-DPO due to resource constraints, UI-TARS-7B-DPO can be used as a lighter alternative with minimal performance degradation.
 
 ### CLI
 
@@ -200,7 +205,7 @@ You can use either Configuration 1 or Configuration 2:
     *   Supports: all model providers in [models.md](models.md)
     *   Default: `--grounding_model_provider "anthropic" --grounding_model "claude-3-7-sonnet-20250219"`
 *   ❗**Important**❗ **`--grounding_model_resize_width`**
-    *   Purpose: Some API providers automatically rescale images. Therefore, the generated (x, y) will be relative to the rescaled image dimensions, instead of the original image dimensions.
+    *   Purpose:  Some API providers automatically rescale images. Therefore, the generated (x, y) will be relative to the rescaled image dimensions, instead of the original image dimensions.
     *   Supports: [Anthropic rescaling](https://docs.anthropic.com/en/docs/build-with-claude/vision#)
     *   Tips: If your grounding is inaccurate even for very simple queries, double check your rescaling width is correct for your machine's resolution.
     *   Default: `--grounding_model_resize_width 1366` (Anthropic)
@@ -221,7 +226,7 @@ You can use either Configuration 1 or Configuration 2:
     *   Note: This is optional. If not specified, `gui-agents` will default to your environment variables for the API key.
     *   Default: None
 
->   **Note**: Configuration 2 takes precedence over Configuration 1.
+> **Note**: Configuration 2 takes precedence over Configuration 1.
 
 This will show a user query prompt where you can enter your query and interact with Agent S2. You can use any model from the list of supported models in [models.md](models.md).
 

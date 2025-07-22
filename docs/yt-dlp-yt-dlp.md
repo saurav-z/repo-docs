@@ -3,91 +3,37 @@
 [![YT-DLP](https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg)](#yt-dlp-audio-video-downloader)
 
 [![Release version](https://img.shields.io/github/v/release/yt-dlp/yt-dlp?color=brightgreen&label=Download&style=for-the-badge)](#installation)
-[![PyPI](https://img.shields.io/badge/-PyPI-blue.svg?logo=pypi&labelColor=555555&style=for-the-badge)](https://pypi.org/project/yt-dlp)
-[![Donate](https://img.shields.io/badge/_-Donate-red.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge)](Collaborators.md#collaborators)
-[![Discord](https://img.shields.io/discord/807245652072857610?color=blue&labelColor=555555&label=&logo=discord&style=for-the-badge)](https://discord.gg/H5MNcFW63r)
-[![Supported Sites](https://img.shields.io/badge/-Supported_Sites-brightgreen.svg?style=for-the-badge)](supportedsites.md)
-[![License: Unlicense](https://img.shields.io/badge/-Unlicense-blue.svg?style=for-the-badge)](LICENSE)
-[![CI Status](https://img.shields.io/github/actions/workflow/status/yt-dlp/yt-dlp/core.yml?branch=master&label=Tests&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/actions)
-[![Commits](https://img.shields.io/github/commit-activity/m/yt-dlp/yt-dlp?label=commits&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/commits)
-[![Last Commit](https://img.shields.io/github/last-commit/yt-dlp/yt-dlp/master?label=&style=for-the-badge&display_timestamp=committer)](https://github.com/yt-dlp/yt-dlp/pulse/monthly)
+[![PyPI](https://img.shields.io/badge/-PyPI-blue.svg?logo=pypi&labelColor=555555&style=for-the-badge)](https://pypi.org/project/yt-dlp "PyPI")
+[![Donate](https://img.shields.io/badge/_-Donate-red.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge)](Collaborators.md#collaborators "Donate")
+[![Discord](https://img.shields.io/discord/807245652072857610?color=blue&labelColor=555555&label=&logo=discord&style=for-the-badge)](https://discord.gg/H5MNcFW63r "Discord")
+[![Supported Sites](https://img.shields.io/badge/-Supported_Sites-brightgreen.svg?style=for-the-badge)](supportedsites.md "Supported Sites")
+[![License: Unlicense](https://img.shields.io/badge/-Unlicense-blue.svg?style=for-the-badge)](LICENSE "License")
+[![CI Status](https://img.shields.io/github/actions/workflow/status/yt-dlp/yt-dlp/core.yml?branch=master&label=Tests&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/actions "CI Status")
+[![Commits](https://img.shields.io/github/commit-activity/m/yt-dlp/yt-dlp?label=commits&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/commits "Commit History")
+[![Last Commit](https://img.shields.io/github/last-commit/yt-dlp/yt-dlp/master?label=&style=for-the-badge&display_timestamp=committer)](https://github.com/yt-dlp/yt-dlp/pulse/monthly "Last activity")
 
 </div>
 
-## yt-dlp: Your Go-To Command-Line Audio/Video Downloader
+# yt-dlp: The Ultimate Audio/Video Downloader
 
-yt-dlp is a powerful command-line tool for downloading audio and video from [thousands of websites](supportedsites.md), offering unparalleled flexibility and features.  Find the original repo [here](https://github.com/yt-dlp/yt-dlp).
+yt-dlp is a powerful, feature-rich command-line program for downloading audio and video from a vast array of websites.  [Check out the original repo for more info](https://github.com/yt-dlp/yt-dlp).
 
 **Key Features:**
 
-*   **Extensive Site Support:**  Download from thousands of video and audio sites.
-*   **Format Selection:** Fine-tune your downloads with advanced format options and sorting.
-*   **Playlist Support:** Download entire playlists with ease, and customize playlist items.
-*   **Subtitle & Thumbnail Handling:** Download and embed subtitles, and extract thumbnails.
-*   **Post-Processing:** Convert, remux, and embed metadata with robust post-processing options.
-*   **Metadata Manipulation:**  Modify video metadata before or after download for customization.
-*   **SponsorBlock Integration:**  Automatically remove sponsor segments from YouTube videos, utilizing [SponsorBlock](https://sponsor.ajay.app).
-*   **Browser Cookie Support:** Download by using the existing cookies from all major web browsers.
-*   **Plugins:** Extend functionality with custom extractors and post-processors.
-*   **Self-Updating:**  Keep up-to-date with easy built-in update functionality.
-
-**Table of Contents:**
-
-*   [Installation](#installation)
-    *   [Detailed instructions](https://github.com/yt-dlp/yt-dlp/wiki/Installation)
-    *   [Release Files](#release-files)
-    *   [Update](#update)
-    *   [Dependencies](#dependencies)
-    *   [Compile](#compile)
-*   [USAGE AND OPTIONS](#usage-and-options)
-    *   [General Options](#general-options)
-    *   [Network Options](#network-options)
-    *   [Geo-restriction](#geo-restriction)
-    *   [Video Selection](#video-selection)
-    *   [Download Options](#download-options)
-    *   [Filesystem Options](#filesystem-options)
-    *   [Thumbnail Options](#thumbnail-options)
-    *   [Internet Shortcut Options](#internet-shortcut-options)
-    *   [Verbosity and Simulation Options](#verbosity-and-simulation-options)
-    *   [Workarounds](#workarounds)
-    *   [Video Format Options](#video-format-options)
-    *   [Subtitle Options](#subtitle-options)
-    *   [Authentication Options](#authentication-options)
-    *   [Post-processing Options](#post-processing-options)
-    *   [SponsorBlock Options](#sponsorblock-options)
-    *   [Extractor Options](#extractor-options)
-    *   [Preset Aliases](#preset-aliases)
-*   [CONFIGURATION](#configuration)
-    *   [Configuration file encoding](#configuration-file-encoding)
-    *   [Authentication with netrc](#authentication-with-netrc)
-    *   [Notes about environment variables](#notes-about-environment-variables)
-*   [OUTPUT TEMPLATE](#output-template)
-    *   [Output template examples](#output-template-examples)
-*   [FORMAT SELECTION](#format-selection)
-    *   [Filtering Formats](#filtering-formats)
-    *   [Sorting Formats](#sorting-formats)
-    *   [Format Selection examples](#format-selection-examples)
-*   [MODIFYING METADATA](#modifying-metadata)
-    *   [Modifying metadata examples](#modifying-metadata-examples)
-*   [EXTRACTOR ARGUMENTS](#extractor-arguments)
-*   [PLUGINS](#plugins)
-    *   [Installing Plugins](#installing-plugins)
-    *   [Developing Plugins](#developing-plugins)
-*   [EMBEDDING YT-DLP](#embedding-yt-dlp)
-    *   [Embedding examples](#embedding-examples)
-*   [CHANGES FROM YOUTUBE-DL](#changes-from-youtube-dl)
-    *   [New features](#new-features)
-    *   [Differences in default behavior](#differences-in-default-behavior)
-    *   [Deprecated options](#deprecated-options)
-*   [CONTRIBUTING](CONTRIBUTING.md#contributing-to-yt-dlp)
-    *   [Opening an Issue](CONTRIBUTING.md#opening-an-issue)
-    *   [Developer Instructions](CONTRIBUTING.md#developer-instructions)
-*   [WIKI](https://github.com/yt-dlp/yt-dlp/wiki)
-    *   [FAQ](https://github.com/yt-dlp/yt-dlp/wiki/FAQ)
+*   **Supports Thousands of Sites:** Download from a huge number of video and audio platforms.
+*   **Format Selection:**  Choose your preferred video and audio formats with advanced filtering and sorting options.
+*   **Playlist Downloading:** Easily download entire playlists.
+*   **Metadata Handling:**  Modify and embed metadata to organize your downloads.
+*   **Post-Processing:** Convert, remux, embed subtitles, and embed thumbnails.
+*   **SponsorBlock Integration:** Automatically remove sponsored segments from YouTube videos.
+*   **Browser Cookie Integration:** Import cookies directly from your web browser.
+*   **Plugins:** Extend functionality with custom plugins.
+*   **Cross-Platform Compatibility:** Works on Windows, macOS, and Linux.
+*   **Automatic Updates:** Stay up-to-date with the latest features and bug fixes.
 
 ## Installation
 
-Choose your preferred installation method for yt-dlp:
+You can install yt-dlp using [the binaries](#release-files), [pip](https://pypi.org/project/yt-dlp) or one using a third-party package manager. See [the wiki](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for detailed instructions
 
 <!-- MANPAGE: BEGIN EXCLUDED SECTION -->
 [![Windows](https://img.shields.io/badge/-Windows_x64-blue.svg?style=for-the-badge&logo=windows)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)
@@ -99,9 +45,7 @@ Choose your preferred installation method for yt-dlp:
 [![All versions](https://img.shields.io/badge/-All_Versions-lightgrey.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/releases)
 <!-- MANPAGE: END EXCLUDED SECTION -->
 
-You can install yt-dlp using [the binaries](#release-files), [pip](https://pypi.org/project/yt-dlp) or one using a third-party package manager. See [the wiki](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for detailed instructions
-
-### Release Files
+## RELEASE FILES
 
 #### Recommended
 
@@ -144,7 +88,8 @@ gpg --verify SHA2-512SUMS.sig SHA2-512SUMS
 
 **Note**: The manpages, shell completion (autocomplete) files etc. are available inside the [source tarball](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz)
 
-## UPDATE
+## Update
+
 You can use `yt-dlp -U` to update if you are using the [release binaries](#release-files)
 
 If you [installed with pip](https://github.com/yt-dlp/yt-dlp/wiki/Installation#with-pip), simply re-run the same command that was used to install the program
@@ -180,7 +125,8 @@ yt-dlp --update-to nightly
 python3 -m pip install -U --pre "yt-dlp[default]"
 ```
 
-## DEPENDENCIES
+## Dependencies
+
 Python versions 3.9+ (CPython) and 3.10+ (PyPy) are supported. Other versions and implementations may or may not work correctly.
 
 <!-- Python 3.5+ uses VC++14 and it is already embedded in the binary created
@@ -199,7 +145,6 @@ While all the other dependencies are optional, `ffmpeg` and `ffprobe` are highly
     **Important**: What you need is ffmpeg *binary*, **NOT** [the Python package of the same name](https://pypi.org/project/ffmpeg)
 
 ### Networking
-
 *   [**certifi**](https://github.com/certifi/python-certifi)\* - Provides Mozilla's root certificate bundle. Licensed under [MPLv2](https://github.com/certifi/python-certifi/blob/master/LICENSE)
 *   [**brotli**](https://github.com/google/brotli)\* or [**brotlicffi**](https://github.com/python-hyper/brotlicffi) - [Brotli](https://en.wikipedia.org/wiki/Brotli) content encoding support. Both licensed under MIT <sup>[1](https://github.com/google/brotli/blob/master/LICENSE) [2](https://github.com/python-hyper/brotlicffi/blob/master/LICENSE) </sup>
 *   [**websockets**](https://github.com/aaugustin/websockets)\* - For downloading over websocket. Licensed under [BSD-3-Clause](https://github.com/aaugustin/websockets/blob/main/LICENSE)
@@ -209,7 +154,7 @@ While all the other dependencies are optional, `ffmpeg` and `ffprobe` are highly
 
 The following provide support for impersonating browser requests. This may be required for some sites that employ TLS fingerprinting.
 
-*   [**curl_cffi**](https://github.com/lexiforest/curl_cffi) (recommended) - Python binding for [curl-impersonate](https://github.com/lexiforest/curl_cffi). Provides impersonation targets for Chrome, Edge and Safari. Licensed under [MIT](https://github.com/lexiforest/curl_cffi/blob/main/LICENSE)
+*   [**curl_cffi**](https://github.com/lexiforest/curl_cffi) (recommended) - Python binding for [curl-impersonate](https://github.com/lexiforest/curl-impersonate). Provides impersonation targets for Chrome, Edge and Safari. Licensed under [MIT](https://github.com/lexiforest/curl_cffi/blob/main/LICENSE)
     *   Can be installed with the `curl-cffi` group, e.g. `pip install "yt-dlp[default,curl-cffi]"`
     *   Currently included in `yt-dlp.exe`, `yt-dlp_linux` and `yt-dlp_macos` builds
 
@@ -239,178 +184,6 @@ The standalone release binaries are built with the Python interpreter and the pa
 
 If you do not have the necessary dependencies for a task you are attempting, yt-dlp will warn you. All the currently available dependencies are visible at the top of the `--verbose` output
 
-## COMPILE
+## Usage and Options
 
-### Standalone PyInstaller Builds
-To build the standalone executable, you must have Python and `pyinstaller` (plus any of yt-dlp's [optional dependencies](#dependencies) if needed). The executable will be built for the same CPU architecture as the Python used.
-
-You can run the following commands:
-
-```
-python3 devscripts/install_deps.py --include pyinstaller
-python3 devscripts/make_lazy_extractors.py
-python3 -m bundle.pyinstaller
-```
-
-On some systems, you may need to use `py` or `python` instead of `python3`.
-
-`python -m bundle.pyinstaller` accepts any arguments that can be passed to `pyinstaller`, such as `--onefile/-F` or `--onedir/-D`, which is further [documented here](https://pyinstaller.org/en/stable/usage.html#what-to-generate).
-
-**Note**: Pyinstaller versions below 4.4 [do not support](https://github.com/pyinstaller/pyinstaller#requirements-and-tested-platforms) Python installed from the Windows store without using a virtual environment.
-
-**Important**: Running `pyinstaller` directly **instead of** using `python -m bundle.pyinstaller` is **not** officially supported. This may or may not work correctly.
-
-### Platform-independent Binary (UNIX)
-You will need the build tools `python` (3.9+), `zip`, `make` (GNU), `pandoc`\* and `pytest`\*.
-
-After installing these, simply run `make`.
-
-You can also run `make yt-dlp` instead to compile only the binary without updating any of the additional files. (The build tools marked with **\*** are not needed for this)
-
-### Related scripts
-
-*   **`devscripts/install_deps.py`** - Install dependencies for yt-dlp.
-*   **`devscripts/update-version.py`** - Update the version number based on the current date.
-*   **`devscripts/set-variant.py`** - Set the build variant of the executable.
-*   **`devscripts/make_changelog.py`** - Create a markdown changelog using short commit messages and update `CONTRIBUTORS` file.
-*   **`devscripts/make_lazy_extractors.py`** - Create lazy extractors. Running this before building the binaries (any variant) will improve their startup performance. Set the environment variable `YTDLP_NO_LAZY_EXTRACTORS` to something nonempty to forcefully disable lazy extractor loading.
-
-Note: See their `--help` for more info.
-
-### Forking the project
-If you fork the project on GitHub, you can run your fork's [build workflow](.github/workflows/build.yml) to automatically build the selected version(s) as artifacts. Alternatively, you can run the [release workflow](.github/workflows/release.yml) or enable the [nightly workflow](.github/workflows/release-nightly.yml) to create full (pre-)releases.
-
-<!-- MANPAGE: MOVE "USAGE AND OPTIONS" SECTION HERE -->
-
-## USAGE AND OPTIONS
-
-    yt-dlp [OPTIONS] [--] URL [URL...]
-
-`Ctrl+F` is your friend :D
-
-<!-- Auto generated -->
-### General Options:
-
-    -h, --help                      Print this help text and exit
-    --version                       Print program version and exit
-    -U, --update                    Update this program to the latest version
-    --no-update                     Do not check for updates (default)
-    --update-to [CHANNEL]@[TAG]     Upgrade/downgrade to a specific version.
-                                    CHANNEL can be a repository as well. CHANNEL
-                                    and TAG default to "stable" and "latest"
-                                    respectively if omitted; See "UPDATE" for
-                                    details. Supported channels: stable,
-                                    nightly, master
-    -i, --ignore-errors             Ignore download and postprocessing errors.
-                                    The download will be considered successful
-                                    even if the postprocessing fails
-    --no-abort-on-error             Continue with next video on download errors;
-                                    e.g. to skip unavailable videos in a
-                                    playlist (default)
-    --abort-on-error                Abort downloading of further videos if an
-                                    error occurs (Alias: --no-ignore-errors)
-    --dump-user-agent               Display the current user-agent and exit
-    --list-extractors               List all supported extractors and exit
-    --extractor-descriptions        Output descriptions of all supported
-                                    extractors and exit
-    --use-extractors NAMES          Extractor names to use separated by commas.
-                                    You can also use regexes, "all", "default"
-                                    and "end" (end URL matching); e.g. --ies
-                                    "holodex.*,end,youtube". Prefix the name
-                                    with a "-" to exclude it, e.g. --ies
-                                    default,-generic. Use --list-extractors for
-                                    a list of extractor names. (Alias: --ies)
-    --default-search PREFIX         Use this prefix for unqualified URLs. E.g.
-                                    "gvsearch2:python" downloads two videos from
-                                    google videos for the search term "python".
-                                    Use the value "auto" to let yt-dlp guess
-                                    ("auto_warning" to emit a warning when
-                                    guessing). "error" just throws an error. The
-                                    default value "fixup_error" repairs broken
-                                    URLs, but emits an error if this is not
-                                    possible instead of searching
-    --ignore-config                 Don't load any more configuration files
-                                    except those given to --config-locations.
-                                    For backward compatibility, if this option
-                                    is found inside the system configuration
-                                    file, the user configuration is not loaded.
-                                    (Alias: --no-config)
-    --no-config-locations           Do not load any custom configuration files
-                                    (default). When given inside a configuration
-                                    file, ignore all previous --config-locations
-                                    defined in the current file
-    --config-locations PATH         Location of the main configuration file;
-                                    either the path to the config or its
-                                    containing directory ("-" for stdin). Can be
-                                    used multiple times and inside other
-                                    configuration files
-    --plugin-dirs PATH              Path to an additional directory to search
-                                    for plugins. This option can be used
-                                    multiple times to add multiple directories.
-                                    Use "default" to search the default plugin
-                                    directories (default)
-    --no-plugin-dirs                Clear plugin directories to search,
-                                    including defaults and those provided by
-                                    previous --plugin-dirs
-    --flat-playlist                 Do not extract a playlist's URL result
-                                    entries; some entry metadata may be missing
-                                    and downloading may be bypassed
-    --no-flat-playlist              Fully extract the videos of a playlist
-                                    (default)
-    --live-from-start               Download livestreams from the start.
-                                    Currently experimental and only supported
-                                    for YouTube and Twitch
-    --no-live-from-start            Download livestreams from the current time
-                                    (default)
-    --wait-for-video MIN[-MAX]      Wait for scheduled streams to become
-                                    available. Pass the minimum number of
-                                    seconds (or range) to wait between retries
-    --no-wait-for-video             Do not wait for scheduled streams (default)
-    --mark-watched                  Mark videos watched (even with --simulate)
-    --no-mark-watched               Do not mark videos watched (default)
-    --color [STREAM:]POLICY         Whether to emit color codes in output,
-                                    optionally prefixed by the STREAM (stdout or
-                                    stderr) to apply the setting to. Can be one
-                                    of "always", "auto" (default), "never", or
-                                    "no_color" (use non color terminal
-                                    sequences). Use "auto-tty" or "no_color-tty"
-                                    to decide based on terminal support only.
-                                    Can be used multiple times
-    --compat-options OPTS           Options that can help keep compatibility
-                                    with youtube-dl or youtube-dlc
-                                    configurations by reverting some of the
-                                    changes made in yt-dlp. See "Differences in
-                                    default behavior" for details
-    --alias ALIASES OPTIONS         Create aliases for an option string. Unless
-                                    an alias starts with a dash "-", it is
-                                    prefixed with "--". Arguments are parsed
-                                    according to the Python string formatting
-                                    mini-language. E.g. --alias get-audio,-X "-S
-                                    aext:{0},abr -x --audio-format {0}" creates
-                                    options "--get-audio" and "-X" that takes an
-                                    argument (ARG0) and expands to "-S
-                                    aext:ARG0,abr -x --audio-format ARG0". All
-                                    defined aliases are listed in the --help
-                                    output. Alias options can trigger more
-                                    aliases; so be careful to avoid defining
-                                    recursive options. As a safety measure, each
-                                    alias may be triggered a maximum of 100
-                                    times. This option can be used multiple times
-    -t, --preset-alias PRESET       Applies a predefined set of options. e.g.
-                                    --preset-alias mp3. The following presets
-                                    are available: mp3, aac, mp4, mkv, sleep.
-                                    See the "Preset Aliases" section at the end
-                                    for more info. This option can be used
-                                    multiple times
-
-### Network Options:
-
-    --proxy URL                     Use the specified HTTP/HTTPS/SOCKS proxy. To
-                                    enable SOCKS proxy, specify a proper scheme,
-                                    e.g. socks5://user:pass@127.0.0.1:1080/.
-                                    Pass in an empty string (--proxy "") for
-                                    direct connection
-    --socket-timeout SECONDS        Time to wait before giving up, in seconds
-    --source-address IP             Client-side IP address to bind to
-    --impersonate CLIENT[:OS]       Client to impersonate for requests. E.g.
-                                    chrome, chrome-1
+See the full documentation for the extensive list of options and features.
