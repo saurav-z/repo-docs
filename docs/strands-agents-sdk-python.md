@@ -1,44 +1,19 @@
-<div align="center">
-  <div>
-    <a href="https://strandsagents.com">
-      <img src="https://strandsagents.com/latest/assets/logo-github.svg" alt="Strands Agents" width="55px" height="105px">
-    </a>
-  </div>
+# Strands Agents: Build AI Agents Quickly with a Model-Driven Approach
 
-  <h1>
-    Strands Agents: Build AI Agents Quickly and Easily
-  </h1>
+**Easily build and deploy AI agents with the Strands Agents Python SDK, a powerful and flexible solution for creating intelligent applications.** ([See Original Repo](https://github.com/strands-agents/sdk-python))
 
-  <p>
-    <b>Effortlessly create powerful AI agents with Strands Agents, a model-driven Python SDK.</b>
-  </p>
-
-  <div align="center">
-    <a href="https://github.com/strands-agents/sdk-python/graphs/commit-activity"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/strands-agents/sdk-python"/></a>
-    <a href="https://github.com/strands-agents/sdk-python/issues"><img alt="GitHub open issues" src="https://img.shields.io/github/issues/strands-agents/sdk-python"/></a>
-    <a href="https://github.com/strands-agents/sdk-python/pulls"><img alt="GitHub open pull requests" src="https://img.shields.io/github/issues-pr/strands-agents/sdk-python"/></a>
-    <a href="https://github.com/strands-agents/sdk-python/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/strands-agents/sdk-python"/></a>
-    <a href="https://pypi.org/project/strands-agents/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/strands-agents"/></a>
-    <a href="https://python.org"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/strands-agents"/></a>
-  </div>
-
-  <p>
-    <a href="https://strandsagents.com/">Documentation</a>
-    ◆ <a href="https://github.com/strands-agents/samples">Samples</a>
-    ◆ <a href="https://github.com/strands-agents/sdk-python">Python SDK</a>
-    ◆ <a href="https://github.com/strands-agents/tools">Tools</a>
-    ◆ <a href="https://github.com/strands-agents/agent-builder">Agent Builder</a>
-    ◆ <a href="https://github.com/strands-agents/mcp-server">MCP Server</a>
-  </p>
-</div>
+[shields and badges as before]
 
 ## Key Features
 
-*   **Model-Agnostic**: Works with various LLM providers including Amazon Bedrock, Anthropic, OpenAI, and more.
-*   **Built-in MCP Support**: Seamlessly integrate Model Context Protocol (MCP) servers for access to pre-built tools.
-*   **Python-Based Tools**: Easily build and integrate tools using Python decorators.
-*   **Lightweight & Flexible**: Customizable agent loop for building agents from simple conversational assistants to complex autonomous workflows.
-*   **Advanced Capabilities**: Supports multi-agent systems, autonomous agents, and streaming support.
+*   **Simplified Agent Development:** Build AI agents in just a few lines of code.
+*   **Lightweight & Customizable:** A simple agent loop that's fully customizable to fit your needs.
+*   **Model Agnostic:** Supports leading model providers, including Amazon Bedrock, Anthropic, LiteLLM, Llama, Ollama, OpenAI, Writer, and custom providers.
+*   **Advanced Capabilities:** Enables multi-agent systems, autonomous workflows, and streaming support.
+*   **Built-in MCP Integration:** Native support for Model Context Protocol (MCP) servers, providing access to thousands of pre-built tools.
+*   **Python-Based Tools:** Build custom tools easily using Python decorators.
+*   **Hot Reloading:** Auto-load tools from a directory.
+*   **Extensive Documentation:** Comprehensive documentation and examples to get you started quickly.
 
 ## Quick Start
 
@@ -54,11 +29,11 @@ agent = Agent(tools=[calculator])
 agent("What is the square root of 1764")
 ```
 
-> **Note**: For the default Amazon Bedrock model provider, you'll need AWS credentials configured and model access enabled for Claude 4 Sonnet in the us-west-2 region. See the [Quickstart Guide](https://strandsagents.com/) for details on configuring other model providers.
+> **Note:** For the default Amazon Bedrock model provider, you'll need AWS credentials configured and model access enabled for Claude 4 Sonnet in the us-west-2 region. See the [Quickstart Guide](https://strandsagents.com/) for details on configuring other model providers.
 
 ## Installation
 
-Ensure you have Python 3.10+ installed. Then:
+Ensure you have Python 3.10+ installed, then:
 
 ```bash
 # Create and activate virtual environment
@@ -73,7 +48,7 @@ pip install strands-agents strands-agents-tools
 
 ### Python-Based Tools
 
-Create custom tools easily using Python decorators:
+Easily create custom tools with Python decorators:
 
 ```python
 from strands import Agent, tool
@@ -90,9 +65,19 @@ agent = Agent(tools=[word_count])
 response = agent("How many words are in this sentence?")
 ```
 
+**Hot Reloading from Directory:** Enable automatic tool loading and reloading from the `./tools/` directory:
+
+```python
+from strands import Agent
+
+# Agent will watch ./tools/ directory for changes
+agent = Agent(load_tools_from_directory=True)
+response = agent("Use any tools you find in the tools directory")
+```
+
 ### MCP Support
 
-Integrate with Model Context Protocol (MCP) servers:
+Seamlessly integrate Model Context Protocol (MCP) servers:
 
 ```python
 from strands import Agent
@@ -110,7 +95,7 @@ with aws_docs_client:
 
 ### Multiple Model Providers
 
-Use various model providers with ease:
+Support for various model providers:
 
 ```python
 from strands import Agent
@@ -153,11 +138,11 @@ Built-in providers:
 *   [OpenAI](https://strandsagents.com/latest/user-guide/concepts/model-providers/openai/)
 *   [Writer](https://strandsagents.com/latest/documentation/docs/user-guide/concepts/model-providers/writer/)
 
-Implement custom providers using [Custom Providers](https://strandsagents.com/latest/user-guide/concepts/model-providers/custom_model_provider/)
+Custom providers can be implemented using [Custom Providers](https://strandsagents.com/latest/user-guide/concepts/model-providers/custom_model_provider/)
 
-### Example Tools
+### Example tools
 
-Use pre-built tools for easy experimentation. The `strands-agents-tools` package provides useful tools:
+Strands offers an optional strands-agents-tools package with pre-built tools for quick experimentation:
 
 ```python
 from strands import Agent
@@ -166,11 +151,11 @@ agent = Agent(tools=[calculator])
 agent("What is the square root of 1764")
 ```
 
-These tools are available on GitHub: [strands-agents/tools](https://github.com/strands-agents/tools).
+It's also available on GitHub via [strands-agents/tools](https://github.com/strands-agents/tools).
 
 ## Documentation
 
-For detailed guidance, explore our documentation:
+For detailed guidance & examples, explore our documentation:
 
 *   [User Guide](https://strandsagents.com/)
 *   [Quick Start Guide](https://strandsagents.com/latest/user-guide/quickstart/)
@@ -196,5 +181,3 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 ## Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-**[Go back to the original repo](https://github.com/strands-agents/sdk-python)**

@@ -6,51 +6,44 @@
 
 # Alexa Media Player for Home Assistant: Control Your Amazon Echo Devices
 
-**Seamlessly integrate and control your Amazon Echo devices within Home Assistant with the Alexa Media Player custom component.** ([View on GitHub](https://github.com/alandtse/alexa_media_player))
+**Transform your Home Assistant setup by seamlessly integrating and controlling your Amazon Echo devices with the Alexa Media Player custom component.** ([View the original repository](https://github.com/alandtse/alexa_media_player))
+
+## Overview
+
+This custom component empowers you to manage your Amazon Alexa devices directly within Home Assistant using the unofficial Alexa API.  Inspired by the work of [Keaton Taylor](https://github.com/keatontaylor), this integration allows you to control your Echo devices as media players within your smart home.  *Please be aware that this utilizes an unofficial API and may be subject to change by Amazon.*
 
 ## Key Features
 
-This custom component transforms your Amazon Echo devices into fully functional media players within Home Assistant, offering comprehensive control and information:
+Unlock the full potential of your Amazon Echo devices within Home Assistant with these key features:
 
-*   **Playback Control:**
-    *   Play/Pause/Stop music playback.
-    *   Skip to the Next/Previous track.
-*   **Volume Control:** Adjust the volume of your Echo devices directly from Home Assistant.
-*   **Media Information Display:** Retrieve and display detailed media information within Home Assistant, including:
-    *   Song Title
-    *   Artist Name
-    *   Album Name
-    *   Album Image
+*   **Media Control:**
+    *   Play, Pause, and Stop audio playback.
+    *   Control Next and Previous track functions.
+    *   Adjust the volume.
+*   **Media Information Display:**
+    *   Display the current Song Title.
+    *   Show the Artist's Name.
+    *   Display the Album Name.
+    *   Display the Album Image.
 
 ## Installation and Configuration
 
-For detailed instructions on installing and configuring the Alexa Media Player component, please refer to the comprehensive [wiki](https://github.com/alandtse/alexa_media_player/wiki/Configuration).
+For detailed instructions on how to install and configure Alexa Media Player, please refer to the [wiki](https://github.com/alandtse/alexa_media_player/wiki/Configuration).
 
-## Further Documentation
+## Further Documentation & Resources
 
-Explore additional information, examples, and advanced usage scenarios in the [wiki](https://github.com/alandtse/alexa_media_player/wiki).
-
-## Changelog
-
-Stay updated on the latest features, bug fixes, and improvements by reviewing the [release history](https://github.com/alandtse/alexa_media_player/releases).
+*   Comprehensive documentation is available in the [wiki](https://github.com/alandtse/alexa_media_player/wiki).
+*   Stay up-to-date with changes in the [release history](https://github.com/alandtse/alexa_media_player/releases).
 
 ## How to Contribute
 
-Your contributions are welcome! You can help improve the Alexa Media Player in several ways:
+Your contributions are valuable!  Here's how you can help:
 
-*   **Report Issues and Suggest Features:** [File bugs/feature requests](https://github.com/alandtse/alexa_media_player/issues) to help improve the component.
-*   **Support the Community:** Assist other users by answering questions on the Home Assistant [forums](https://community.home-assistant.io/t/echo-devices-alexa-as-media-player-testers-needed/58639).
-*   **Translations:** Contribute to the project by helping with [translations](https://app.lokalise.com/project/465185555eee18dd537ca6.39714580/).
-*   **Documentation:** Help update the [wiki](https://github.com/alandtse/alexa_media_player/wiki) with new information and examples.
-
-## Translations
-
-We are using [Lokalise](https://app.lokalise.com/project/465185555eee18dd537ca6.39714580/) for translations.  See the [Translations page](https://github.com/alandtse/alexa_media_player/wiki/Translations) for more details.
-
-## Documentation
-
-The [wiki](https://github.com/alandtse/alexa_media_player/wiki) is a group effort to document how to use the component and other useful [automations](https://github.com/alandtse/alexa_media_player/wiki/Examples%3A-Automation).
+*   **Report Issues and Suggest Features:**  File bugs or feature requests on the [GitHub issues page](https://github.com/alandtse/alexa_media_player/issues).
+*   **Provide Support:**  Help answer questions on the Home Assistant [forums](https://community.home-assistant.io/t/echo-devices-alexa-as-media-player-testers-needed/58639).
+*   **Translations:**  Contribute to translations via [Lokalise](https://app.lokalise.com/project/465185555eee18dd537ca6.39714580/) and the [Translations page](https://github.com/alandtse/alexa_media_player/wiki/Translations).
+*   **Documentation:**  Help improve the [wiki](https://github.com/alandtse/alexa_media_player/wiki) by adding or editing information.
 
 ## License
 
-This project is licensed under the [Apache-2.0](LICENSE) license.
+This project is licensed under the [Apache-2.0](LICENSE) license.  By contributing, you agree that your contributions are licensed under the same license.

@@ -1,6 +1,6 @@
-# PyWxDump: Your Open-Source WeChat Data Extraction and Backup Tool
+# PyWxDump: Your Tool for WeChat Data Exploration and Backup
 
-**PyWxDump is a powerful Python-based tool for extracting and backing up your WeChat data, allowing you to view and export your chat history.**  This project empowers users to analyze and archive their WeChat conversations for various purposes.  Check out the original repo:  [PyWxDump](https://github.com/xaoyaoo/PyWxDump)
+**PyWxDump empowers you to extract and analyze your WeChat data, offering insights and the ability to create backups.** ([Original Repo](https://github.com/xaoyaoo/PyWxDump))
 
 [![Python](https://img.shields.io/badge/Python-3-blue.svg)](https://www.python.org/)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/xaoyaoo/pywxdump)](https://github.com/xaoyaoo/pywxdump)
@@ -8,6 +8,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/xaoyaoo/PyWxDump.svg)](https://github.com/xaoyaoo/PyWxDump)
 [![GitHub forks](https://img.shields.io/github/forks/xaoyaoo/PyWxDump.svg)](https://github.com/xaoyaoo/PyWxDump/fork)
 [![GitHub issues](https://img.shields.io/github/issues/xaoyaoo/PyWxDump)](https://github.com/xaoyaoo/PyWxDump/issues)
+
 [![PyPI](https://img.shields.io/pypi/v/pywxdump)](https://pypi.org/project/pywxdump/)
 [![Wheel](https://img.shields.io/pypi/wheel/pywxdump)](https://pypi.org/project/pywxdump/)
 [![PyPI-Downloads](https://img.shields.io/pypi/dm/pywxdump)](https://pypistats.org/packages/pywxdump)
@@ -15,63 +16,77 @@
 
 ## Key Features
 
-*   **Data Extraction:**  Retrieve your WeChat account information including nickname, account, phone number, email, and database keys.
-*   **Database Decryption:** Decrypt WeChat databases for data access.
-*   **Chat History Viewing:**  View your chat history through a web interface.
-*   **Data Export:** Export chat logs in HTML and CSV formats for backups.
-*   **Remote Viewing:** (Limited) Access chat history remotely (requires network access).
-*   **Simplified Version:** Includes `pywxdumpmini` for obtaining database keys and locations.
+*   **Account Information Extraction:** Retrieve WeChat nicknames, accounts, phone numbers, emails, database keys, and original IDs (wxid).
+*   **Database Decryption:** Decrypt your WeChat databases using extracted keys.
+*   **Chat History Viewing & Export:** View chat history via a web interface and export chat logs as HTML or CSV.
+*   **Backup Capabilities:** Create backups of your WeChat chat logs.
+*   **Multi-Account Support:** Handle information from multiple WeChat accounts.
+*   **Minimalist Version:** Utilize the streamlined [pywxdumpmini](https://github.com/xaoyaoo/pywxdumpmini) for core functionality.
+*   **Extensive Documentation:** Offers descriptions of database fields and methods for base address offset and MAC database decryption.
 
-## Use Cases
+## I. Project Introduction
 
-*   Network security analysis.
-*   Personal data archiving and backup.
-*   Remote chat history access.
+### 1. Core Functionality
 
-## Project Introduction
+*   Obtain key information such as base address offsets for essential WeChat data.
+*   Retrieve detailed user information for currently logged-in WeChat accounts.
+*   Decrypt WeChat databases, enabling data access.
+*   Integrate various database types for a unified viewing experience.
 
-[PyWxDump](https://github.com/xaoyaoo/PyWxDump) is a powerful tool to help you back up and view your WeChat data.
+### 2. Extended Features
 
-**If you like this project, please give it a ⭐ on GitHub: [![Star](https://img.shields.io/github/stars/xaoyaoo/PyWxDump.svg?style=social&label=Star)](https://github.com/xaoyaoo/PyWxDump/)**
+*   **Web-Based Chat Viewing:** Access your chat history through a user-friendly web interface.
+*   **Export and Backup Options:** Export chat logs as HTML or CSV files for backup and analysis.
+*   **Remote Chat History Access:** View chat history remotely (requires network access).
 
-**Explore Further:**
+### 3. Additional Features
 
-*   **FAQ:** [FAQ](https://github.com/xaoyaoo/PyWxDump/tree/master/doc/FAQ.md)
+*   **Minimalist Version:** [pywxdumpmini](https://github.com/xaoyaoo/pywxdumpmini) provides core functionalities.
+*   **Multiple WeChat Instances:**  Supports handling information from multiple active WeChat instances.
+
+### 4. Update Plan
+
+*   Generate word clouds from chat logs.
+*   Analyze per-person chat volume over time and visualize with line charts.
+*   Develop annual visualization reports.
+*   Improve Enterprise WeChat support.
+*   Enable backup and viewing of Moments.
+*   Optimize storage space.
+*   Implement UI-controlled message sending.
+
+## Ⅱ. Usage Instructions
+
+For detailed instructions on using PyWxDump, please refer to:
+
 *   **User Guide:** [UserGuide.md](https://github.com/xaoyaoo/PyWxDump/tree/master/doc/UserGuide.md)
 *   **Minimalist Version:** [pywxdumpmini](https://github.com/xaoyaoo/pywxdumpmini)
-*   **Web UI (VUE+ElementUI):** [wxdump_web](https://github.com/xaoyaoo/wxdump_web)
+*   **UI Customization:** Clone and modify the [wx_dump_web](https://github.com/xaoyaoo/wxdump_web) repository.
 
-## Important Disclaimers (PLEASE READ CAREFULLY!)
+**Important Notes:**
 
-**This project is for educational and personal use only.**  Users are solely responsible for their actions and the consequences of using this tool.
-**Strictly adhere to legal and ethical guidelines.**  Do not use PyWxDump for illegal activities.
-*   This project is only for learning and communication purposes, **please do not use it for illegal purposes**, **please do not use it for illegal purposes**, **please do not use it for illegal purposes**, otherwise the consequences will be borne by yourself.
-*   Users understand and agree that any violation of laws and regulations, infringement of the legitimate rights and interests of others, is unrelated to this project and its developers, and the consequences are borne by the user themselves.
-*   You should delete the source code and (compiled) program of this project within 24 hours of downloading, saving, compiling, and using it; any use beyond this period is not related to this project or its developer.
-*   This project only allows backup and viewing of the database under authorization. It is strictly prohibited for illegal purposes, otherwise all related responsibilities will be borne by the user. Any legal liability incurred by the user due to violation of this regulation will be borne by the user, and is unrelated to this project and its developer.
-*   It is strictly prohibited to use it to steal others' privacy. Otherwise, all relevant responsibilities shall be borne by yourself.
-*   It is strictly prohibited to conduct secondary development, otherwise all related responsibilities shall be borne by yourself.
-*   Downloading, saving, further browsing the source code, or downloading, installing, compiling, and using this program indicates that you agree with this warning and promise to abide by it;
-*   It is prohibited to use the relevant technologies of this project to engage in illegal testing or penetration, and it is prohibited to use the relevant codes or related technologies of this project to engage in any illegal work. Any adverse consequences arising therefrom are not related to this project and its developers.
-*   Any resulting adverse consequences, including but not limited to data leakage, system failure, and privacy infringement, are not related to this project or its developers and are the responsibility of the user.
-*   This disclaimer may be modified and adjusted based on the project's operating conditions and changes in laws and regulations. Users should regularly check this page for the latest version of the disclaimer, and should comply with the latest version of the disclaimer when using this project.
-*   In addition to the provisions of this disclaimer, users should comply with relevant laws, regulations, and ethical norms during the use of this project. The project and its developers will not be held responsible for any disputes or losses caused by users' violation of relevant regulations.
-*   Users are requested to carefully read and understand all contents of this disclaimer, and ensure that they strictly comply with relevant regulations when using this project.
+*   Obtain the base address using Cheat Engine following instructions in [CE obtaining base address.md](https://github.com/xaoyaoo/PyWxDump/tree/master/doc/CE获取基址.md). (This method is for learning purposes and can be replaced by the `wxdump bias` command)
+*   Understand database parsing with [wx database brief.md](https://github.com/xaoyaoo/PyWxDump/tree/master/doc/wx数据库简述.md)
 
-## Acknowledgements
+## Ⅲ. Disclaimer (READ CAREFULLY!)
 
-*   **Contributors:**  [PyWxDump CONTRIBUTORS](https://contrib.rocks/image?repo=xaoyaoo/PyWxDump)
-*   **UI Contributors:** [UI CONTRIBUTORS](https://contrib.rocks/image?repo=xaoyaoo/wxdump_web)
-*   **Other Contributors:**  See original README.
-```
-Key improvements and optimizations:
+**This project is for educational and personal use only. Misuse is strictly prohibited.**
 
-*   **SEO Optimization:** Included relevant keywords ("WeChat," "data extraction," "backup," "chat history") in headings and text.
-*   **Concise Hook:** Provided a clear, one-sentence description to grab attention.
-*   **Clear Headings:** Used H2 headings to structure the README for readability.
-*   **Bullet Points:**  Clearly listed key features.
-*   **Actionable Language:** Uses strong verbs ("Extract," "Decrypt," "View," "Export")
-*   **Emphasis on Benefits:** Highlighted what users *gain* from using the tool.
-*   **Concise and Focused:**  Removed redundant information and streamlined the text.
-*   **Call to action:** Added 'star' for GitHub
-*   **Simplified Disclaimer:** Organized the disclaimer in a clear and actionable manner.
+*   **Legal Use Only:** Use this project for legal, authorized purposes only.  The developers are not responsible for any illegal activities.
+*   **Deletion Requirement:** Delete the source code and any compiled programs within 24 hours of use.
+*   **Compliance:** Comply with all laws and regulations.
+*   **Privacy:** This project should not be used to access, share, or distribute information illegally or without consent.
+*   **No Secondary Development:** Secondary development is prohibited.
+*   **No Illegal Testing or Penetration:** Avoid illegal testing or penetration with this project.
+*   **Disclaimer Updates:** Regularly check this page for updates to the disclaimer.
+
+## Ⅳ. Acknowledgements
+
+A big thank you to all contributors!
+
+[![PyWxDump CONTRIBUTORS](https://contrib.rocks/image?repo=xaoyaoo/PyWxDump)](https://github.com/xaoyaoo/PyWxDump/graphs/contributors)
+
+UI Contributors:
+[![UI CONTRIBUTORS](https://contrib.rocks/image?repo=xaoyaoo/wxdump_web)](https://github.com/xaoyaoo/wxdump_web/graphs/contributors)
+
+Other Contributors:
+[643104191](https://github.com/643104191) (add [ctypes_utils](https://github.com/xaoyaoo/PyWxDump/blob/9e3e4cb5aec2b9b445c8283d61c58863f4129c6e/pywxdump/wx_info/ctypes_utils.py), Accelerated the acquisition of wxinfo; [9e3e4cb](https://github.com/xaoyaoo/PyWxDump/commit/9e3e4cb5aec2b9b445c8283d61c58863f4129c6e))

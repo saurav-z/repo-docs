@@ -1,65 +1,52 @@
-# Oils: A New Shell for a Better Unix Experience
+# Oils: A New Unix Shell and Runtime for Modern Development
 
-Oils is a modern shell aiming to be a seamless upgrade path from bash, offering improved features and a more robust runtime.  [Explore the Oils project on GitHub](https://github.com/oils-for-unix/oils).
+Oils is a project focused on upgrading the Unix shell experience with a more robust language and faster runtime. ([Original Repository](https://github.com/oils-for-unix/oils))
 
-## Key Features
+**Key Features:**
 
-*   **OSH (Oil Shell):** Runs your existing bash scripts with improved compatibility and features.
-*   **YSH (YAML Shell):** A new shell language for users familiar with Python and JavaScript, designed to be more user-friendly and powerful.
-*   **Fast and Efficient:** Written in Python for easy development but translated to C++ for performance and a small footprint.
-*   **Easy to Contribute:** The project welcomes contributions, even small ones, with a focus on compatibility testing and language design.
+*   **OSH:** Runs your existing Bash scripts, offering improved compatibility and features.
+*   **YSH:** Designed for Python and JavaScript developers seeking a more modern shell experience.
+*   **Fast Performance:** Built with a Python frontend that translates to efficient C++ for speed and minimal dependencies.
+*   **Easy to Contribute:** The project welcomes contributions of all sizes, and is great for prototyping!
 
-## Getting Started
+## Get Started
 
-### Using Oils
+If you want to use Oils, don't clone this repository directly. Instead, visit the [latest release page](https://oils.pub/release/latest/).
 
-If you want to use Oils, don't clone this repository. Instead, visit the [latest release page](https://oils.pub/release/latest/) for stable builds.
+### Quick Start on Linux (Development Build)
 
-### Contributing
+After following the instructions on the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page, you'll have a Python program that you can quickly run and change!
 
-Want to contribute to the Oils project?  Here's how:
-
-1.  **Build the Development Version:** Follow the instructions on the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page to build the development version. This should only take a few minutes on a Linux machine.
-2.  **Report Issues:** If you encounter any problems, let us know! You can post on the `#oil-dev` channel of [oilshell.zulipchat.com](https://oilshell.zulipchat.com/) or file an issue on GitHub.
-3.  **Start with Good First Issues:** Check out the [good first issues on GitHub](https://github.com/oils-for-unix/oils/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to get started.  It helps to discuss your plans beforehand.
-
-### Quick Start on Linux (Dev Build)
-
-After following the instructions on the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page:
-
-1.  Run the interactive shell:
-    ```bash
     bash$ bin/osh
+
     osh$ name=world
     osh$ echo "hello $name"
     hello world
-    ```
-2.  Try running a shell script: `bin/osh myscript.sh`
-3.  Experiment with YSH: `bin/ysh`
 
-### Dev Build vs. Release Build
+-   Run a shell script with `bin/osh myscript.sh`.
+-   Try [YSH](https://oils.pub/cross-ref.html#YSH) with `bin/ysh`.
 
-The development build is different from the release tarballs.  See [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) for details. Release tarballs are linked from the [home page](https://oils.pub/).
+## Contributing
 
-## Contributing - Accepted Contributions
+Oils is actively seeking contributions!
 
-Oils embraces various contributions, including those that:
+*   **Dev Build:** Build and test Oils using the instructions on the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page.
+*   **Issue Resolution:** Contribute to the project by addressing open issues, including "good first issue" tasks.
+*   **Code & Design Influence:** Your contributions can impact the development of OSH and YSH.
 
-*   Fix failing [spec tests](https://oils.pub/cross-ref.html#spec-test) related to compatibility.
-*   Incorporate code changes that work in Python.  The semi-automated translation to C++ is handled separately.
-*   Influence the design of [YSH](https://oils.pub/cross-ref.html#YSH).
+## Important Notes:
 
-### Response Time
-
-Expect a response within 24 hours. Feel free to ping `andychu` on Zulip or GitHub.
+*   **Development vs. Release Builds:**  Understand the difference between the developer build and the release tarballs (linked from the [home page](https://oils.pub/)).
+*   **Small Contributions Welcome:** Even small contributions, such as fixing failing spec tests or influencing YSH design, are highly valuable.
+*   **Rapid Response:** You can expect a response on Zulip or GitHub within 24 hours, or sooner.
 
 ## Documentation
 
-*   [Wiki](https://github.com/oils-for-unix/oils/wiki) for developer documentation (feel free to edit!).
-*   **End-user documentation** is linked from each [release page](https://oils.pub/releases.html).
+*   [Wiki](https://github.com/oils-for-unix/oils/wiki): Comprehensive developer documentation.
+*   [End-User Docs]: Linked from each [release page](https://oils.pub/releases.html).
 
-## Links
+## Useful Links
 
-*   [Oils Home Page](https://oils.pub/) - All important links
-*   [Oils Repo Overview](doc/repo-overview.md) - Repository structure
-*   [The Oils Repo Is Different From the Tarball Releases](https://github.com/oils-for-unix/oils/wiki/The-Oils-Repo-Is-Different-From-the-Tarball-Releases) - FAQ
+*   [Oils Home Page](https://oils.pub/): Central hub for all things Oils.
+*   [Oils Repo Overview](doc/repo-overview.md): Repository structure.
+*   [Oils Repo Is Different From the Tarball](https://github.com/oils-for-unix/oils/wiki/The-Oils-Repo-Is-Different-From-the-Tarball-Releases)

@@ -1,11 +1,11 @@
 # Game Cheats Manager: Your Ultimate Trainer Management Solution
 
-**Tired of juggling multiple trainer applications?** Game Cheats Manager simplifies your gaming experience by providing a centralized hub to browse, download, and manage your game trainers.  [Visit the original repository](https://github.com/dyang886/Game-Cheats-Manager) for more details.
+**Tired of juggling multiple trainers and struggling to find the right cheat for your favorite games?** Game Cheats Manager simplifies your gaming experience by providing a centralized hub to browse, download, and launch trainers with ease. You can find the original repo [here](https://github.com/dyang886/Game-Cheats-Manager).
 
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/dyang886/Game-Cheats-Manager/total)
-![GitHub Repo stars](https://img.shields.io/github/stars/dyang886/Game-Cheats-Manager?style=flat&color=ffc000)
-![GitHub Release](https://img.shields.io/github/v/release/dyang886/Game-Cheats-Manager?link=https%3A%2F%2Fgithub.com%2Fdyang886%2FGame-Cheats-Manager%2Freleases%2Flatest)
-![GitHub License](https://img.shields.io/github/license/dyang886/Game-Cheats-Manager)
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/dyang886/Game-Cheats-Manager/total)](https://github.com/dyang886/Game-Cheats-Manager/releases/latest)
+[![GitHub Repo stars](https://img.shields.io/github/stars/dyang886/Game-Cheats-Manager?style=flat&color=ffc000)](https://github.com/dyang886/Game-Cheats-Manager)
+[![GitHub Release](https://img.shields.io/github/v/release/dyang886/Game-Cheats-Manager?link=https%3A%2F%2Fgithub.com%2Fdyang886%2FGame-Cheats-Manager%2Freleases%2Flatest)](https://github.com/dyang886/Game-Cheats-Manager/releases/latest)
+[![GitHub License](https://img.shields.io/github/license/dyang886/Game-Cheats-Manager)](https://github.com/dyang886/Game-Cheats-Manager/blob/main/LICENSE)
 <a href="https://hellogithub.com/repository/3ca6e8e23401477282ba72d2d8932311" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=3ca6e8e23401477282ba72d2d8932311&claim_uid=UrZOap0AkvuRw7D&theme=small" alt="Featured｜HelloGitHub" /></a>
 <a href="https://discord.gg/d627qVyHEF" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Join_Discord-f0f0f0?logo=discord"></a>
 <a href="https://pd.qq.com/s/h06qbdey6" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Join_QQ-f0f0f0?logo=qq"></a>
@@ -14,39 +14,39 @@
     <img src="src/assets/logo.png" alt="Game Cheats Manager logo" width="250" />
 </div>
 
-## Key Features
+## Key Features:
 
-*   **Effortless Trainer Browsing & Downloading:** Quickly search for and download trainers directly within the application.
-*   **Centralized Trainer Management:**  Launch, delete, and manage all your trainers from a single, organized interface.
-*   **Customizable Settings:** Adjust themes, languages, and trainer download paths to personalize your experience.
-*   **Trainer Management Panel:** Configure auto-updates and trainer search data within the app.
-*   **Import and Whitelist:** Easily import existing trainers and add download paths to your Windows Defender whitelist for seamless usage.
+*   **Effortless Trainer Management:** Easily browse, launch, and delete your game trainers all in one place.
+*   **Integrated Trainer Browser:** Search and download trainers directly within the application.
+*   **Customizable Settings:** Manage trainer sources, update settings, and customize your experience.
+*   **Convenient Options Menu:** Access settings, import trainers, open download paths, whitelist paths, and view project information.
+*   **User-Friendly Interface:** A clean and intuitive design makes managing your trainers a breeze.
 
-## How to Use
+## How to Use Game Cheats Manager:
 
-1.  **Browse Trainers:** Use the search bar or browse the left-hand column to find downloaded trainers.  Double-click or click "Launch" to start, or "Delete" to remove.
-2.  **Download Trainers:** In the right-hand column, search for trainers using keywords and press Enter. Double-click a result to download. Change the download path by clicking the "..." button.
-3.  **Trainer Management:** Access advanced settings for trainer sources like automatic updates, search data updates and server selection
+1.  **Browse Trainers:** Use the search bar or browse the list on the left to find your downloaded trainers. Double-click or click `Launch` to start a trainer, or `Delete` to remove it.
+2.  **Download Trainers:** Search in the right column and press `Enter` to find trainers. Double-click a match to download. Change the download path using the `...` button.
+3.  **Trainer Management:** Customize your trainer sources, updates, and server settings in the `Trainer Management` panel.
 4.  **Options Menu:**
-    *   **Settings:** Customize themes and languages.
-    *   **Import Trainers:** Add trainers from your local files.
-    *   **Open Trainer Download Path:** Quickly access your trainer download folder.
-    *   **Add Paths to Whitelist:** Whitelist the trainer download path in Windows Defender.
-    *   **About:** View application version and project links.
+    *   **Settings:** Adjust themes and languages.
+    *   **Import Trainers:** Add trainers from your files. (Imported trainers will not auto-update).
+    *   **Open Trainer Download Path:** Access your trainer download folder.
+    *   **Add Paths to Whitelist:** Add download path to Windows Defender (or your antivirus).
+    *   **About:** View the app version and project links.
 
-## Installation
+## Installation:
 
-1.  **Download:** Get the latest Windows (64-bit) installer from the [latest release page](https://github.com/dyang886/Game-Cheats-Manager/releases).
+1.  **Download:** Get the latest installer from the [releases page](https://github.com/dyang886/Game-Cheats-Manager/releases). Choose the Windows (64-bit) installer.
 2.  **Run the Installer:** Execute the downloaded file and follow the on-screen instructions.
-3.  **Launch:** Open Game Cheats Manager from your applications folder or start menu.
+3.  **Launch:** Start Game Cheats Manager from your applications folder or the start menu.
 
-## Support & Contribution
+## Support and Contribution:
 
-Encounter issues, have feature requests, or want to contribute?  Visit the [GitHub repository](https://github.com/dyang886/Game-Cheats-Manager).
+For any issues, feature requests, or to contribute to the project, please visit the [GitHub repository](https://github.com/dyang886/Game-Cheats-Manager).
 
-## Funding
+## Support the Project
 
-Support the development of Game Cheats Manager:
+Consider supporting the project through the following options:
 
 |                            WeChat                            |                          Alipay                          |                          QQ                          |
 | :----------------------------------------------------------: | :------------------------------------------------------: | :--------------------------------------------------: |

@@ -1,119 +1,101 @@
-<!-- Badges -->
-[![Latest Release][latest-release-shield]][latest-release-url]
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![AGPL License][license-shield]][license-url]
-[![Docker Pulls][docker-pull]][docker-url]
-[![GHCR Pulls][ghcr-pulls]][ghcr-url]
-
-<!-- PROJECT LOGO -->
-<p align="center">
+<div align="center">
   <a href="https://github.com/mealie-recipes/mealie">
-    <svg style="width:100px;height:100px" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.36,10.22L13.16,10C12.38,9.23 12.38,7.97 13.16,7.19L17.5,2.82L18.43,3.74L15.19,7L16.15,7.94L19.39,4.69L20.31,5.61L17.06,8.85L18,9.81L21.26,6.56L22.18,7.5L17.81,11.84C17.03,12.62 15.77,12.62 15,11.84L14.78,11.64L13.41,13Z" />
-    </svg>
+    <img src="https://raw.githubusercontent.com/mealie-recipes/mealie/mealie-next/docs/docs/assets/img/logo.svg" alt="Mealie Logo" width="100" height="100">
   </a>
-  <h3 align="center">Mealie: Your All-in-One Recipe Manager</h3>
-</p>
 
-<p align="center">
-    Tired of scattered recipes? Mealie is a self-hosted recipe manager, meal planner, and shopping list, making cooking and meal planning a breeze.
+  <h1>Mealie: Your Self-Hosted Recipe Manager</h1>
+
+  <p>
+    Tired of scattered recipes? Mealie is the open-source recipe manager, meal planner, and shopping list app you need to organize your culinary life, available now on <a href="https://github.com/mealie-recipes/mealie">GitHub</a>.
     <br />
-    <a href="https://docs.mealie.io/"><strong>Explore the Docs</strong></a>
-    <a href="https://github.com/mealie-recipes/mealie">
+    <a href="https://docs.mealie.io/"><strong>Explore the documentation »</strong></a>
     <br />
     <a href="https://demo.mealie.io/">View Demo</a>
     ·
     <a href="https://github.com/mealie-recipes/mealie/issues">Report Bug</a>
     ·
     <a href="https://github.com/mealie-recipes/mealie/pkgs/container/mealie">GitHub Container Registry</a>
-</p>
+  </p>
+</div>
 
-[![Product Name Screen Shot][product-screenshot]](https://docs.mealie.io)
+[![Latest Release](https://img.shields.io/github/v/release/mealie-recipes/mealie?style=flat-square&label=latest%20release)](https://github.com/mealie-recipes/mealie/releases)
+[![Contributors](https://img.shields.io/github/contributors/mealie-recipes/mealie.svg?style=flat-square)](https://github.com/mealie-recipes/mealie/graphs/contributors)
+[![Stargazers](https://img.shields.io/github/stars/mealie-recipes/mealie.svg?style=flat-square)](https://github.com/mealie-recipes/mealie/stargazers)
+[![Issues](https://img.shields.io/github/issues/mealie-recipes/mealie.svg?style=flat-square)](https://github.com/mealie-recipes/mealie/issues)
+[![AGPL License](https://img.shields.io/github/license/mealie-recipes/mealie.svg?style=flat-square)](https://github.com/mealie-recipes/mealie/blob/mealie-next/LICENSE)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hkotel/mealie?style=flat-square)](https://hub.docker.com/r/hkotel/mealie)
+[![GHCR Pulls](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fipitio.github.io%2Fbackage%2Fmealie-recipes%2Fmealie%2Fmealie.json&query=%24.downloads&style=flat-square&label=ghcr%20pulls)](https://github.com/mealie-recipes/mealie/pkgs/container/mealie)
+
+![Mealie Screenshot](docs/docs/assets/img/home_screenshot.png)
 
 ## About Mealie
 
-Mealie is a user-friendly, self-hosted recipe management solution built with a REST API backend and a reactive Vue.js frontend. It simplifies recipe organization, meal planning, and shopping list creation for the whole family.  Easily import recipes from URLs or manually add your family favorites.  Mealie also provides an API for integration with other applications.
-
-*   [Join the Discord](https://discord.gg/QuStdQGSGK) for community support and discussions!
-*   [Read the Documentation](https://docs.mealie.io/)
+Mealie is a self-hosted, open-source recipe manager, meal planner, and shopping list application. It offers a RestAPI backend and a responsive frontend built with Vue.js, providing a user-friendly experience for the whole family. Import recipes effortlessly by URL, or add your own family favorites with the intuitive UI editor. Mealie also provides an API for integration with third-party applications.
 
 ## Key Features
 
-*   **Recipe Import:**  Quickly add recipes by importing them directly from a URL or entering data manually.
-*   **Meal Planner:**  Plan your meals for the week with an intuitive meal planner.
-*   **Shopping List:** Generate and organize shopping lists, categorized by supermarket sections.
-*   **Cookbook Organization:** Group your recipes into custom cookbooks for easy access.
-*   **Docker Support:**  Deploy Mealie easily with Docker for streamlined setup and management.
-*   **Multilingual Support:**  Available in 35+ languages for a localized experience.
+*   **Recipe Import:** Easily create recipes by importing from a URL or entering data manually.
+*   **Meal Planning:** Plan your weekly meals with the integrated Meal Planner feature.
+*   **Shopping List:** Generate organized shopping lists, sectioned by supermarket aisles.
+*   **Cookbooks:** Organize your recipes into custom cookbooks for easy access.
+*   **Docker Support:** Simple and straightforward Docker deployment.
+*   **Localization:** Available in 35+ languages.
 
 ## Getting Started
 
-See the [installation instructions](https://docs.mealie.io/) to get started with Mealie.
+*   **Installation:**  Find instructions on how to get started on the [Mealie Documentation](https://docs.mealie.io/).
+*   **Join the Community:** Connect with other users and get help on the [Discord Server](https://discord.gg/QuStdQGSGK).
 
 ## Contributing
 
-We welcome contributions! Your contributions help make Mealie better for everyone.
+Contribute to the Mealie project and help make it even better!  Your contributions are greatly appreciated.
+*   See the [Contributors Guide](https://nightly.mealie.io/contributors/developers-guide/code-contributions/) for help getting started.
+*   We use [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) to make it easy for contributors to get started!
+*   You can also contribute financially. Financial contributions help me prioritize working on this project over others and helps me know that there is a real demand for project development.
 
-*   Refer to the [Contributors Guide](https://nightly.mealie.io/contributors/developers-guide/code-contributions/) to get started with contributing.
-*   Utilize [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) for a streamlined development setup.
-
-If you'd like to support the project financially, you can do so here:
-
-<a href="https://www.buymeacoffee.com/haykot" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 30px !important;width: 107px !important;" ></a>
+    <a href="https://www.buymeacoffee.com/haykot" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 30px !important;width: 107px !important;" ></a>
 
 ### Translations
 
-Help make Mealie accessible to even more people! Non-coders can contribute by helping with translations via [Crowdin](https://crowdin.com/project/mealie). You can vote on existing translations or translate Mealie into a new language.
+Help translate Mealie! We use [Crowdin](https://crowdin.com/project/mealie) to allow several contributors to work on translating Mealie. You can simply help by voting for your preferred translations, or even by completely translating Mealie into a new language.
 
-For translation information, check out the translation page on the [contributor's guide](https://nightly.mealie.io/contributors/translating/).
+For more information, check out the translation page on the [contributor's guide](https://nightly.mealie.io/contributors/translating/).
 
 ## License
 
-Mealie is licensed under the AGPL License.  See the `LICENSE` file for details.
+Distributed under the AGPL License. See `LICENSE` for more information.
 
 ## Sponsors
 
-A huge thank you to our sponsors on [GitHub Sponsors](https://github.com/sponsors/hay-kot) and Buy Me a Coffee for their generous support. Your contributions are vital to the project's development.
+A big thank you to all of the sponsors of this project on [GitHub Sponsors](https://github.com/sponsors/hay-kot) and Buy Me a Coffee.
 
-Special thanks to Depot for providing build instances for Docker image builds.
+Special thanks to Depot for providing build instances for our Docker image builds.
 
 [![Built with Depot](https://depot.dev/badges/built-with-depot.svg)](https://depot.dev?utm_source=Mealie)
 
-## Resources
+## Get Involved
 
-*   [GitHub Repository](https://github.com/mealie-recipes/mealie)
+*   **Report Bugs:**  Help improve Mealie by reporting any bugs you find on [GitHub Issues](https://github.com/mealie-recipes/mealie/issues).
+*   **Contribute Code:**  See the Contributing section above for ways to contribute code.
+*   **Suggest Features:**  Share your ideas for new features or improvements.
+*   **Share Your Feedback:**  We value your feedback - let us know what you think!
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/mealie-recipes/mealie.svg?style=flat-square
-[docker-pull]: https://img.shields.io/docker/pulls/hkotel/mealie?style=flat-square
-[docker-url]: https://hub.docker.com/r/hkotel/mealie
-[ghcr-pulls]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fipitio.github.io%2Fbackage%2Fmealie-recipes%2Fmealie%2Fmealie.json&query=%24.downloads&style=flat-square&label=ghcr%20pulls
-[ghcr-url]: https://github.com/mealie-recipes/mealie/pkgs/container/mealie
-[contributors-url]: https://github.com/mealie-recipes/mealie/graphs/contributors
-[stars-shield]: https://img.shields.io/github/stars/mealie-recipes/mealie.svg?style=flat-square
-[stars-url]: https://github.com/mealie-recipes/mealie/stargazers
-[issues-shield]: https://img.shields.io/github/issues/mealie-recipes/mealie.svg?style=flat-square
-[issues-url]: https://github.com/mealie-recipes/mealie/issues
-[latest-release-shield]: https://img.shields.io/github/v/release/mealie-recipes/mealie?style=flat-square&label=latest%20release
-[latest-release-url]: https://github.com/mealie-recipes/mealie/releases
-[license-shield]: https://img.shields.io/github/license/mealie-recipes/mealie.svg?style=flat-square
-[license-url]: https://github.com/mealie-recipes/mealie/blob/mealie-next/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/hay-kot
-[product-screenshot]: docs/docs/assets/img/home_screenshot.png
+[Back to Top](#top)
+
 ```
-Key improvements and explanations:
+Key improvements and SEO optimization:
 
-*   **SEO-Optimized Title and Description:** The title now includes "Your All-in-One Recipe Manager" to be more descriptive and attract potential users.  The description is rewritten to be more inviting and directly states the value proposition.
-*   **Clear Value Proposition:** The one-sentence hook immediately highlights the primary benefit of using Mealie.
-*   **Bulleted Key Features:**  Uses bullet points for easy readability and better organization.  Keywords like "Recipe Import", "Meal Planner", "Shopping List", "Docker" are emphasized.
-*   **Concise Language:** The descriptions are trimmed to be more direct and efficient.
-*   **Improved Sectioning:** Uses clear headings for each section (About, Key Features, Contributing, etc.) for better navigation.
-*   **Call to Action:** Encourages users to explore the docs and view the demo.
-*   **"Getting Started" Section:** Added a dedicated "Getting Started" section with a call to action to get started.
-*   **"Resources" Section:**  Added a dedicated "Resources" section to direct users back to the original repo.
-*   **Maintain Original Content:** Preserves all the original important information and links.
-*   **Markdown Formatting:** Ensures consistent markdown formatting for readability.
+*   **Clear, Concise Hook:** The one-sentence description immediately grabs attention and highlights the main value proposition.
+*   **Keyword Optimization:** Included relevant keywords like "recipe manager", "meal planner", "shopping list", and "self-hosted" throughout the text and headings to improve search visibility.
+*   **Structured Headings:**  Uses clear headings and subheadings (About The Project, Key Features, Contributing, etc.) to make the README easy to scan and understand.
+*   **Bulleted Key Features:**  Uses bullet points to highlight key features, making them easy to read and digest.
+*   **Concise Language:**  Rephrased sentences for clarity and conciseness.
+*   **Call to Action:** Added calls to action (Explore the docs, view demo, report bugs, get involved) to encourage engagement.
+*   **SEO-Friendly Title:** Revised the title to include a keyword ("Mealie: Your Self-Hosted Recipe Manager").
+*   **Markdown Formatting:** Ensures proper Markdown formatting for readability and consistency.
+*   **Project Logo and Descriptive Alt Text:** Includes the logo with descriptive alt text for accessibility and visual appeal.
+*   **Community Links:** Clearly provides links to the Discord server and documentation.
+*   **GitHub Link:**  Explicitly includes the link back to the main GitHub repository.
+*   **"Get Involved" Section:** Added a section with further engagement options.
+*   **Back to Top Link:** Added a "Back to Top" link for easier navigation.
+*   **Visual Appeal:** Uses consistent formatting and visual elements (shields, logo, screenshot) for a more appealing look.

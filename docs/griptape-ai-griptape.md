@@ -8,146 +8,165 @@
 [![codecov](https://codecov.io/github/griptape-ai/griptape/graph/badge.svg?token=HUBqUpl3NB)](https://codecov.io/github/griptape-ai/griptape)
 [![Griptape Discord](https://dcbadge.vercel.app/api/server/gnWRz88eym?compact=true&style=flat)](https://discord.gg/griptape)
 
-## Griptape: Build Powerful Generative AI Applications with Ease
+## Griptape: Build Robust GenAI Applications with Ease
 
-Griptape is a Python framework designed to streamline the development of sophisticated generative AI applications, offering flexible abstractions for LLMs, Retrieval-Augmented Generation (RAG), and much more.
-
-**[Explore the Griptape Repository](https://github.com/griptape-ai/griptape)**
+Griptape is a powerful Python framework simplifying the development of generative AI applications, providing flexible abstractions for LLMs, RAG, and more. [Explore the Griptape Repository](https://github.com/griptape-ai/griptape)
 
 ### Key Features
 
-*   **Modular Architecture**: Build AI applications with core components like Agents, Pipelines, and Workflows for structured execution.
-*   **Flexible Task Management**: Utilize Tasks as fundamental building blocks for interacting with Engines, Tools, and other Griptape components.
-*   **Advanced Memory Capabilities**: Employ Conversation Memory, Task Memory, and Meta Memory to enhance context and improve LLM performance.
-*   **Extensive Driver Support**: Integrate with diverse external resources and services using drivers for LLMs, Retrieval, Storage, Multimodal, Web, and Observability.
-*   **Versatile Tool Ecosystem**: Leverage built-in tools and easily create custom tools to empower LLMs with data and service interactions.
-*   **Specialized Engines**: Utilize RAG Engine, Extraction Engine, Summary Engine, and Eval Engine to meet specific use-case needs.
-*   **Additional Components**: Utilize Rulesets, Loaders, Artifacts, and Chunkers to fine-tune LLM behavior and data handling.
+*   **Structures:** Organize tasks with Agents, Pipelines, and Workflows for structured execution.
+*   **Tasks:** Core building blocks for interacting with Engines, Tools, and other Griptape components.
+*   **Memory:**
+    *   **Conversation Memory:** Retain and retrieve information across interactions.
+    *   **Task Memory:** Manage large or sensitive Task outputs.
+    *   **Meta Memory:** Enhance context and relevance with metadata.
+*   **Drivers:** Facilitate interactions with external resources and services:
+    *   **LLM & Orchestration Drivers:** Prompt, Assistant, Ruleset, Conversation Memory, Event Listener, and Structure Run Drivers.
+    *   **Retrieval & Storage Drivers:** Embedding, Rerank, Vector Store, File Manager, and SQL Drivers.
+    *   **Multimodal Drivers:** Image Generation, Text to Speech, and Audio Transcription Drivers.
+    *   **Web Drivers:** Web Search and Web Scraper Drivers.
+    *   **Observability Drivers:** Send trace and event data to observability platforms.
+*   **Tools:** Enable LLMs to interact with data and services; including a variety of [built-in Tools](https://docs.griptape.ai/stable/griptape-framework/tools/official-tools/) and easy [custom Tool](https://docs.griptape.ai/stable/griptape-framework/tools/custom-tools/) creation.
+*   **Engines:** Provide use-case-specific functionality: RAG, Extraction, Summary, and Eval Engines.
+*   **Additional Components:** Rulesets, Loaders, Artifacts, Chunkers, and Tokenizers for enhanced control and flexibility.
 
-### Core Components
+### Getting Started
 
-Griptape's architecture comprises several key components:
+Refer to the [docs](https://docs.griptape.ai/) for installation and usage.  Also, check out [Griptape Trade School](https://learn.griptape.ai/) for free online courses.
 
-*   **Structures**:
-    *   **Agents**: Single-task configurations for agent-specific behavior.
-    *   **Pipelines**: Sequential task execution.
-    *   **Workflows**: Parallel task execution.
-*   **Tasks**: Core units for interacting with Engines, Tools, and components.
-*   **Memory**:
-    *   **Conversation Memory**: Retain context across interactions.
-    *   **Task Memory**: Manage large or sensitive task outputs.
-    *   **Meta Memory**: Pass metadata for context enhancement.
-*   **Drivers**:
-    *   **LLM & Orchestration**: Prompt, Assistant, Ruleset, Conversation Memory, Event Listener, and Structure Run Drivers.
-    *   **Retrieval & Storage**: Embedding, Rerank, Vector Store, File Manager, and SQL Drivers.
-    *   **Multimodal**: Image Generation, Text to Speech, and Audio Transcription Drivers.
-    *   **Web**: Web Search and Web Scraper Drivers.
-    *   **Observability**: Observability Drivers.
-*   **Tools**: Provide capabilities for LLMs to interact with data and services.
-*   **Engines**:
-    *   RAG Engine
-    *   Extraction Engine
-    *   Summary Engine
-    *   Eval Engine
-*   **Additional Components**: Rulesets, Loaders, Artifacts, Chunkers, and Tokenizers.
+### Example
 
-### Documentation
+Here's a simple "Hello World" example:
 
-Comprehensive documentation is available at [https://docs.griptape.ai/](https://docs.griptape.ai/).
-Check out [Griptape Trade School](https://learn.griptape.ai/) for free online courses.
+```python
+from griptape.drivers.prompt.openai import OpenAiChatPromptDriver
+from griptape.rules import Rule
+from griptape.tasks import PromptTask
 
-### Examples
+task = PromptTask(
+    prompt_driver=OpenAiChatPromptDriver(model="gpt-4.1"),
+    rules=[Rule("Keep your answer to a few sentences.")],
+)
 
-*   **Hello World:**
+result = task.run("How do I do a kickflip?")
 
-    ```python
-    from griptape.drivers.prompt.openai import OpenAiChatPromptDriver
-    from griptape.rules import Rule
-    from griptape.tasks import PromptTask
+print(result.value)
+```
 
-    task = PromptTask(
-        prompt_driver=OpenAiChatPromptDriver(model="gpt-4.1"),
-        rules=[Rule("Keep your answer to a few sentences.")],
-    )
+```text
+To do a kickflip, start by positioning your front foot slightly angled near the middle of the board and your back foot on the tail.
+Pop the tail down with your back foot while flicking the edge of the board with your front foot to make it spin.
+Jump and keep your body centered over the board, then catch it with your feet and land smoothly. Practice and patience are key!
+```
 
-    result = task.run("How do I do a kickflip?")
+### Advanced Example
 
-    print(result.value)
-    ```
-*   **Task and Workflow Example:**
+Here is a concise example using griptape to research open source projects:
 
-    ```python
-    from griptape.drivers.prompt.openai_chat_prompt_driver import OpenAiChatPromptDriver
-    from griptape.drivers.web_search.duck_duck_go import DuckDuckGoWebSearchDriver
-    from griptape.rules import Rule, Ruleset
-    from griptape.structures import Workflow
-    from griptape.tasks import PromptTask, TextSummaryTask
-    from griptape.tools import WebScraperTool, WebSearchTool
-    from griptape.utils import StructureVisualizer
-    from pydantic import BaseModel
+```python
+from griptape.drivers.prompt.openai_chat_prompt_driver import OpenAiChatPromptDriver
+from griptape.drivers.web_search.duck_duck_go import DuckDuckGoWebSearchDriver
+from griptape.rules import Rule, Ruleset
+from griptape.structures import Workflow
+from griptape.tasks import PromptTask, TextSummaryTask
+from griptape.tools import WebScraperTool, WebSearchTool
+from griptape.utils import StructureVisualizer
+from pydantic import BaseModel
 
-    class Feature(BaseModel):
-        name: str
-        description: str
-        emoji: str
 
-    class Output(BaseModel):
-        answer: str
-        key_features: list[Feature]
+class Feature(BaseModel):
+    name: str
+    description: str
+    emoji: str
 
-    projects = ["griptape", "langchain", "crew-ai", "pydantic-ai"]
 
-    prompt_driver = OpenAiChatPromptDriver(model="gpt-4.1")
-    workflow = Workflow(
-        tasks=[
-            [
-                PromptTask(
-                    id=f"project-{project}",
-                    input="Tell me about the open source project: {{ project }}.",
-                    prompt_driver=prompt_driver,
-                    context={"project": projects},
-                    output_schema=Output,
-                    tools=[
-                        WebSearchTool(
-                            web_search_driver=DuckDuckGoWebSearchDriver(),
-                        ),
-                        WebScraperTool(),
-                    ],
-                    child_ids=["summary"],
-                )
-                for project in projects
-            ],
-            TextSummaryTask(
-                input="{{ parents_output_text }}",
-                id="summary",
-                rulesets=[
-                    Ruleset(
-                        name="Format", rules=[Rule("Be detailed."), Rule("Include emojis.")]
-                    )
+class Output(BaseModel):
+    answer: str
+    key_features: list[Feature]
+
+
+projects = ["griptape", "langchain", "crew-ai", "pydantic-ai"]
+
+prompt_driver = OpenAiChatPromptDriver(model="gpt-4.1")
+workflow = Workflow(
+    tasks=[
+        [
+            PromptTask(
+                id=f"project-{project}",
+                input="Tell me about the open source project: {{ project }}.",
+                prompt_driver=prompt_driver,
+                context={"project": projects},
+                output_schema=Output,
+                tools=[
+                    WebSearchTool(
+                        web_search_driver=DuckDuckGoWebSearchDriver(),
+                    ),
+                    WebScraperTool(),
                 ],
-            ),
-        ]
-    )
+                child_ids=["summary"],
+            )
+            for project in projects
+        ],
+        TextSummaryTask(
+            input="{{ parents_output_text }}",
+            id="summary",
+            rulesets=[
+                Ruleset(
+                    name="Format", rules=[Rule("Be detailed."), Rule("Include emojis.")]
+                )
+            ],
+        ),
+    ]
+)
 
-    workflow.run()
+workflow.run()
 
-    print(StructureVisualizer(workflow).to_url())
-    ```
-    ```mermaid
-        graph TD;
-        griptape-->summary;
-        langchain-->summary;
-        pydantic-ai-->summary;
-        crew-ai-->summary;
-    ```
+print(StructureVisualizer(workflow).to_url())
+```
+
+```text
+ Output: Here's a detailed summary of the open-source projects mentioned:
+
+ 1. **Griptape** 🛠️:                                                                                                            
+    - Griptape is a modular Python framework designed for creating AI-powered applications. It focuses on securely connecting to
+ enterprise data and APIs. The framework provides structured components like Agents, Pipelines, and Workflows, allowing for both
+ parallel and sequential operations. It includes built-in tools and supports custom tool creation for data and service
+ interaction.
+
+ 2. **LangChain** 🔗:
+    - LangChain is a framework for building applications powered by Large Language Models (LLMs). It offers a standard interface
+ for models, embeddings, and vector stores, facilitating real-time data augmentation and model interoperability. LangChain
+ integrates with various data sources and external systems, making it adaptable to evolving technologies.
+
+ 3. **CrewAI** 🤖:
+    - CrewAI is a standalone Python framework for orchestrating multi-agent AI systems. It allows developers to create and
+ manage AI agents that collaborate on complex tasks. CrewAI emphasizes ease of use and scalability, providing tools and
+ documentation to help developers build AI-powered solutions.
+
+ 4. **Pydantic-AI** 🧩:
+    - Pydantic-AI is a Python agent framework that simplifies the development of production-grade applications with Generative
+ AI. Built on Pydantic, it supports various AI models and provides features like type-safe design, structured response
+ validation, and dependency injection. Pydantic-AI aims to bring the ease of FastAPI development to AI applications.
+
+ These projects offer diverse tools and frameworks for developing AI applications, each with unique features and capabilities
+ tailored to different aspects of AI development.
+```
+
+```mermaid
+    graph TD;
+    griptape-->summary;
+    langchain-->summary;
+    pydantic-ai-->summary;
+    crew-ai-->summary;
+```
 
 ### Versioning
 
-Griptape follows [Semantic Versioning](https://semver.org/).
+Griptape uses [Semantic Versioning](https://semver.org/).
 
 ### Contributing
 
-Contributions are welcome! Please review the [Contributing Guidelines](https://github.com/griptape-ai/griptape/blob/main/CONTRIBUTING.md) before contributing.
+Please review the [Contributing Guidelines](https://github.com/griptape-ai/griptape/blob/main/CONTRIBUTING.md) before contributing.
 
 ### License
 

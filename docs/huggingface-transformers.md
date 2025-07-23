@@ -1,3 +1,8 @@
+---
+# Hugging Face Transformers: State-of-the-Art Models for NLP, Computer Vision, and More
+
+**Harness the power of pre-trained models for text, vision, audio, and multimodal tasks with the Hugging Face Transformers library.** [(Original Repository)](https://github.com/huggingface/transformers)
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-dark.svg">
@@ -38,38 +43,20 @@
     </p>
 </h4>
 
-## Hugging Face Transformers: State-of-the-Art Models for NLP, Computer Vision, and More
+## Key Features:
 
-**Harness the power of cutting-edge machine learning with the Hugging Face Transformers library, providing easy-to-use, pre-trained models for a wide range of AI tasks.**  Learn more and contribute at the [original repo](https://github.com/huggingface/transformers).
+*   **Wide Range of Models:** Access over 1 million pre-trained model checkpoints for various tasks across text, computer vision, audio, video, and multimodal applications on the [Hugging Face Hub](https://huggingface.com/models).
+*   **Ease of Use:** Simplify your workflow with a unified API and high-level `pipeline` for quick experimentation and deployment.
+*   **Framework Flexibility:** Train, evaluate, and deploy models using PyTorch, TensorFlow, and Flax.
+*   **Customization:**  Easily adapt models to your specific needs with provided examples and exposed model internals.
+*   **Community Driven:** Leverage the extensive community ecosystem and the `awesome-transformers` page to explore 100+ incredible projects.
+*   **Cost-Effective:** Reduce training time, lower compute costs, and promote sustainability by leveraging pre-trained models.
 
-### Key Features
+## Installation
 
-*   **Comprehensive Model Support:** Access over 1 million pre-trained models for text, computer vision, audio, video, and multimodal tasks, all available on the [Hugging Face Hub](https://huggingface.co/models).
-*   **Unified API:** Use a single, intuitive API to interact with diverse model architectures and tasks.
-*   **Simplified Usage:** Get started quickly with the `Pipeline` API for easy inference and task completion.
-*   **Framework Agnostic:** Seamlessly integrate models with PyTorch, TensorFlow, and Flax.
-*   **Customization & Training:** Easily fine-tune and adapt models to your specific needs.
-*   **Community-Driven:** Benefit from a large and active community, with numerous projects built around Transformers.
-*   **Cost-Effective:** Leverage pre-trained models to significantly reduce compute costs and training time.
+Get started quickly by installing `transformers` with pip or uv.
 
-### Installation
-
-Transformers works with Python 3.9+ [PyTorch](https://pytorch.org/get-started/locally/) 2.1+, [TensorFlow](https://www.tensorflow.org/install/pip) 2.6+, and [Flax](https://flax.readthedocs.io/en/latest/) 0.4.1+.
-
-Create and activate a virtual environment with [venv](https://docs.python.org/3/library/venv.html) or [uv](https://docs.astral.sh/uv/), a fast Rust-based Python package and project manager.
-
-```py
-# venv
-python -m venv .my-env
-source .my-env/bin/activate
-# uv
-uv venv .my-env
-source .my-env/bin/activate
-```
-
-Install Transformers in your virtual environment.
-
-```py
+```bash
 # pip
 pip install "transformers[torch]"
 
@@ -77,134 +64,32 @@ pip install "transformers[torch]"
 uv pip install "transformers[torch]"
 ```
 
-Install Transformers from source if you want the latest changes in the library or are interested in contributing. However, the *latest* version may not be stable. Feel free to open an [issue](https://github.com/huggingface/transformers/issues) if you encounter an error.
+## Quickstart
 
-```shell
-git clone https://github.com/huggingface/transformers.git
-cd transformers
+Use the `pipeline` API for a simplified way to get started with tasks like text generation, speech recognition, image classification, and visual question answering.
 
-# pip
-pip install .[torch]
-
-# uv
-uv pip install .[torch]
-```
-
-### Quickstart
-
-Get started with Transformers right away with the [Pipeline](https://huggingface.co/docs/transformers/pipeline_tutorial) API. The `Pipeline` is a high-level inference class that supports text, audio, vision, and multimodal tasks. It handles preprocessing the input and returns the appropriate output.
-
-Instantiate a pipeline and specify model to use for text generation. The model is downloaded and cached so you can easily reuse it again. Finally, pass some text to prompt the model.
-
-```py
+```python
 from transformers import pipeline
 
-pipeline = pipeline(task="text-generation", model="Qwen/Qwen2.5-1.5B")
-pipeline("the secret to baking a really good cake is ")
-[{'generated_text': 'the secret to baking a really good cake is 1) to use the right ingredients and 2) to follow the recipe exactly. the recipe for the cake is as follows: 1 cup of sugar, 1 cup of flour, 1 cup of milk, 1 cup of butter, 1 cup of eggs, 1 cup of chocolate chips. if you want to make 2 cakes, how much sugar do you need? To make 2 cakes, you will need 2 cups of sugar.'}]
+# Text Generation Example
+generator = pipeline("text-generation", model="Qwen/Qwen2.5-1.5B")
+print(generator("the secret to baking a really good cake is ")[0]["generated_text"])
 ```
 
-To chat with a model, the usage pattern is the same. The only difference is you need to construct a chat history (the input to `Pipeline`) between you and the system.
+## Why Choose Transformers?
 
-> [!TIP]
-> You can also chat with a model directly from the command line.
-> ```shell
-> transformers chat Qwen/Qwen2.5-0.5B-Instruct
-> ```
+*   **State-of-the-Art Performance:** Achieve high accuracy on diverse tasks with cutting-edge models.
+*   **Reduced Costs:** Save on compute and carbon footprint by using pre-trained models.
+*   **Framework Agnostic:** Easily switch between PyTorch, JAX, and TensorFlow.
+*   **Customization:**  Tailor models to your unique requirements.
 
-```py
-import torch
-from transformers import pipeline
+## Why *Not* Use Transformers?
 
-chat = [
-    {"role": "system", "content": "You are a sassy, wise-cracking robot as imagined by Hollywood circa 1986."},
-    {"role": "user", "content": "Hey, can you tell me any fun things to do in New York?"}
-]
+*   Not a modular toolbox: The library is optimized for rapid iteration on specific models, not general neural net building blocks.
+*   Training API:  The training API is designed for Transformers' PyTorch models and is not a generic machine learning loop.
+*   Example Scripts:  Adapt example scripts to your specific use case.
 
-pipeline = pipeline(task="text-generation", model="meta-llama/Meta-Llama-3-8B-Instruct", torch_dtype=torch.bfloat16, device_map="auto")
-response = pipeline(chat, max_new_tokens=512)
-print(response[0]["generated_text"][-1]["content"])
-```
-
-Expand the examples below to see how `Pipeline` works for different modalities and tasks.
-
-<details>
-<summary>Automatic speech recognition</summary>
-
-```py
-from transformers import pipeline
-
-pipeline = pipeline(task="automatic-speech-recognition", model="openai/whisper-large-v3")
-pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
-{'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.'}
-```
-
-</details>
-
-<details>
-<summary>Image classification</summary>
-
-<h3 align="center">
-    <a><img src="https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png"></a>
-</h3>
-
-```py
-from transformers import pipeline
-
-pipeline = pipeline(task="image-classification", model="facebook/dinov2-small-imagenet1k-1-layer")
-pipeline("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png")
-[{'label': 'macaw', 'score': 0.997848391532898},
- {'label': 'sulphur-crested cockatoo, Kakatoe galerita, Cacatua galerita',
-  'score': 0.0016551691805943847},
- {'label': 'lorikeet', 'score': 0.00018523589824326336},
- {'label': 'African grey, African gray, Psittacus erithacus',
-  'score': 7.85409429227002e-05},
- {'label': 'quail', 'score': 5.502637941390276e-05}]
-```
-
-</details>
-
-<details>
-<summary>Visual question answering</summary>
-
-
-<h3 align="center">
-    <a><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg"></a>
-</h3>
-
-```py
-from transformers import pipeline
-
-pipeline = pipeline(task="visual-question-answering", model="Salesforce/blip-vqa-base")
-pipeline(
-    image="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg",
-    question="What is in the image?",
-)
-[{'answer': 'statue of liberty'}]
-```
-
-</details>
-
-### Why Use Transformers?
-
-*   **State-of-the-Art Models:** Access the latest advancements in AI across various modalities.
-*   **Efficiency:** Reduce compute costs and training time by leveraging pre-trained models.
-*   **Flexibility:** Choose the right framework for training, evaluation, and production.
-*   **Customization:** Easily adapt models to your specific needs with available examples.
-
-### Why *Not* to Use Transformers
-
-*   This library is designed for ease of use and rapid prototyping; it's not a modular toolbox for building neural networks from scratch.
-*   The training API is primarily optimized for PyTorch models provided by Transformers.
-*   Example scripts are starting points; you may need to adapt them for your specific use case.
-
-### Projects Using Transformers
-
-Explore the [awesome-transformers](./awesome-transformers.md) page for 100+ projects built on top of Transformers.  Contribute by adding your project!
-
-### Example Models
-
-Explore various model types for different use cases:
+## Example Models by Modality
 
 <details>
 <summary>Audio</summary>
@@ -262,7 +147,7 @@ Explore various model types for different use cases:
 
 </details>
 
-### Citation
+## Citation
 
 ```bibtex
 @inproceedings{wolf-etal-2020-transformers,
@@ -277,3 +162,4 @@ Explore various model types for different use cases:
     pages = "38--45"
 }
 ```
+---
