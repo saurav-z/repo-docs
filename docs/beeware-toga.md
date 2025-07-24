@@ -1,51 +1,59 @@
-# Toga: Build Native GUI Applications in Python
+# Toga: Build Native GUI Applications with Python
 
-| |pyversions| |license| |version| |maturity| |ci| |social|
+Toga is a powerful, Python-native, OS-native GUI toolkit that lets you build beautiful applications for a variety of platforms using a single codebase.  (See the [original repo on GitHub](https://github.com/beeware/toga) for more details.)
 
-Toga is a powerful Python native GUI toolkit that empowers developers to create stunning, OS-native applications with a single codebase.
-
-[View the original repository on GitHub](https://github.com/beeware/toga)
+[![Python Versions](https://img.shields.io/pypi/pyversions/toga.svg)](https://pypi.python.org/pypi/toga)
+[![License](https://img.shields.io/pypi/l/toga.svg)](https://github.com/beeware/toga/blob/main/LICENSE)
+[![Version](https://img.shields.io/pypi/v/toga.svg)](https://pypi.python.org/pypi/toga)
+[![Project Status](https://img.shields.io/pypi/status/toga.svg)](https://pypi.python.org/pypi/toga)
+[![Build Status](https://github.com/beeware/toga/workflows/CI/badge.svg?branch=main)](https://github.com/beeware/toga/actions)
+[![Discord Chat](https://img.shields.io/discord/836455665257021440?label=Discord%20Chat&logo=discord&style=plastic)](https://beeware.org/bee/chat/)
+<br/>
+<img src="https://beeware.org/project/toga/toga.png" width="72"/>
 
 ## Key Features
 
-*   **Write Once, Run Anywhere:** Develop applications that run seamlessly across various operating systems, including macOS, Windows, Linux, Android, and iOS.
-*   **Native Look and Feel:** Toga utilizes the native GUI widgets of each platform, ensuring your application looks and feels right at home on every device.
-*   **Pythonic API:** Toga provides a clean and intuitive Python API, making it easy to build complex user interfaces with Python.
-*   **Cross-Platform Compatibility:** Build applications that work across multiple platforms.
-*   **Community Support:** Benefit from a vibrant and supportive community through Discord, Mastodon, and GitHub Discussions.
+*   **Native Look and Feel:** Toga applications use the native widgets of each platform, ensuring a familiar user experience.
+*   **Cross-Platform Development:** Write your GUI code once and run it on multiple operating systems (Windows, macOS, Linux, iOS, Android, and WebAssembly).
+*   **Python-Centric:** Toga is built from the ground up for Python developers, making it easy to integrate with your existing Python projects.
+*   **Modern Toolkit:** Toga provides a modern and well-designed API for building user interfaces.
 
 ## Quickstart
 
-Get started with Toga by running a demonstration of its capabilities:
+Get started with Toga quickly by installing the demo:
 
 ```bash
 pip install toga-demo
 toga-demo
 ```
 
-This will launch a GUI window showcasing sample widgets.
+This will launch a GUI window showcasing Toga's widgets.
 
 ## Documentation
 
-Comprehensive documentation is available on [Read the Docs](https://toga.readthedocs.io).
+Comprehensive documentation for Toga is available on [Read The Docs](https://toga.readthedocs.io).
 
 ## Financial Support
 
-The BeeWare project, which includes Toga, is supported by generous financial members, including Anaconda Inc. You can also support the project by becoming a financial member.
+The BeeWare project, including Toga, is supported by generous contributors.  Consider becoming a financial member to support the project.
+
+*   [Anaconda Inc.](https://anaconda.com/)
+
+And individual contributions from users like you: [BeeWare Community Members](https://beeware.org/community/members/)
 
 ## Community
 
-Connect with the Toga community through:
+Join the Toga and BeeWare community:
 
 *   Mastodon: [@beeware@fosstodon.org](https://fosstodon.org/@beeware)
-*   Discord: [BeeWare Discord Chat](https://beeware.org/bee/chat/)
-*   GitHub Discussions: [Toga GitHub Discussions Forum](https://github.com/beeware/toga/discussions)
+*   Discord: [BeeWare Discord](https://beeware.org/bee/chat/)
+*   GitHub Discussions: [Toga GitHub Discussions](https://github.com/beeware/toga/discussions)
 
-We are dedicated to fostering a welcoming and respectful community, as outlined in our [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/).
+We are committed to fostering a welcoming and respectful community as described in our [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/).
 
 ## Contributing
 
-Report issues and contribute to Toga's development:
+We welcome contributions!
 
-*   **Report Issues:** [GitHub Issues](https://github.com/beeware/toga/issues)
-*   **Contribution Guide:** [Contribution Guide](https://toga.readthedocs.io/en/latest/how-to/contribute/index.html)
+*   Report issues on [GitHub Issues](https://github.com/beeware/toga/issues).
+*   Learn how to contribute with our [Contribution Guide](https://toga.readthedocs.io/en/latest/how-to/contribute/index.html).

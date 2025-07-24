@@ -1,7 +1,7 @@
 <div align="center" markdown="1">
     <img src=".github/framework-logo-new.svg" width="80" height="80"/>
     <h1>Frappe Framework</h1>
-    **Build powerful, real-world web applications quickly and efficiently with the low-code Frappe Framework, powered by Python and JavaScript.**
+    **Build powerful, semantic web applications quickly with this low-code Python and JavaScript framework.**
 </div>
 
 <div align="center">
@@ -17,21 +17,22 @@
     <a href="https://docs.frappe.io/framework">Documentation</a>
 </div>
 
-## What is Frappe Framework?
+## Frappe Framework: Build Real-World Web Apps Faster
 
-Frappe Framework is a full-stack, low-code web application framework built using Python and JavaScript, alongside MariaDB.  It offers a streamlined approach to building complex web applications with a focus on metadata and semantics.  It's the backbone of the popular ERPNext system and designed for developers seeking a powerful, extensible framework.
+Frappe Framework is a full-stack, low-code web application framework built with Python and JavaScript, designed for rapidly building complex and scalable web applications. Originally created for ERPNext, Frappe offers a unique, semantic approach to web development.
 
-**[Explore the Frappe Framework on GitHub](https://github.com/frappe/frappe)**
+[View the original repository](https://github.com/frappe/frappe).
 
 ### Key Features
 
-*   **Full-Stack Development:** Develop both the front-end and back-end of your applications using a unified framework, simplifying development and maintenance.
-*   **Low-Code Capabilities:** Reduce development time with built-in features, including a customizable admin interface and automatically generated REST APIs.
-*   **Admin Interface:** Benefit from a pre-built and customizable admin dashboard, enabling easy data management.
-*   **Role-Based Permissions:** Implement robust security with a comprehensive user and role management system to control access and permissions.
-*   **REST API Generation:** Automatically generate RESTful APIs for all your models, facilitating seamless integration with other systems.
-*   **Customization:** Leverage flexible form and view customization using server-side scripting and client-side JavaScript.
-*   **Report Builder:** Empower users with a powerful reporting tool to create custom reports without coding.
+*   **Full-Stack Development:** Develop both front-end and back-end within a single framework, streamlining the entire development process.
+*   **Low-Code Approach:** Reduces development time by offering built-in features and a user-friendly interface.
+*   **Admin Interface:** Provides a built-in and customizable admin dashboard, simplifying data management and reducing development effort.
+*   **Role-Based Permissions:** Implement robust user and role management for granular control over application access and permissions.
+*   **REST API Generation:** Automatically generates a RESTful API for all models, enabling seamless integration with other systems and services.
+*   **Customizable Forms and Views:** Utilize server-side scripting and client-side JavaScript for flexible form and view customization.
+*   **Report Builder:** Empower users to create custom reports without writing code, providing valuable insights.
+*   **Semantic-Driven:** Create applications based on the meaning of the data, leading to more consistent and extensible applications.
 
 <details>
 <summary>Screenshots</summary>
@@ -41,76 +42,87 @@ Frappe Framework is a full-stack, low-code web application framework built using
 ![Role Permission Manager](.github/fw-rpm.png)
 </details>
 
-## Getting Started
+## Production Setup
 
-### Production Setup
+### Managed Hosting: Frappe Cloud
 
-Choose a hosting option for your Frappe applications:
+For a hassle-free experience, consider [Frappe Cloud](https://frappecloud.com), a developer-friendly platform for hosting Frappe applications. It handles installation, upgrades, monitoring, and support, allowing you to focus on building your application.
 
-*   **Frappe Cloud:**  A user-friendly, managed hosting platform for Frappe applications. Frappe Cloud takes care of installation, upgrades, monitoring, and support, so you can focus on your app.  [Visit Frappe Cloud](https://frappecloud.com/)
+<div>
+    <a href="https://frappecloud.com/" target="_blank">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/try-on-fc-white.png">
+            <img src="https://frappe.io/files/try-on-fc-black.png" alt="Try on Frappe Cloud" height="28" />
+        </picture>
+    </a>
+</div>
 
-### Development Setup
-
-Here's how to set up a local development environment:
+### Self Hosting
 
 #### Docker
 
-1.  **Prerequisites:**  Ensure you have Docker, Docker Compose, and Git installed. See the [Docker Documentation](https://docs.docker.com/) for details.
-2.  **Clone the Repository:**
+**Prerequisites:** Docker, Docker Compose, and Git. Refer to [Docker Documentation](https://docs.docker.com) for setup details.
+
+**Steps:**
+
+1.  Clone the repository:
+
     ```bash
     git clone https://github.com/frappe/frappe_docker
     cd frappe_docker
     ```
-3.  **Run Docker Compose:**
+
+2.  Run the Docker Compose command:
+
     ```bash
     docker compose -f pwd.yml up -d
     ```
-4.  Access your site on `http://localhost:8080`.  Use the default credentials:
-    *   Username: `Administrator`
-    *   Password: `admin`
 
-*   **ARM Architecture:** See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM-based Docker setup.
+After a few minutes, your site will be accessible on `localhost:8080`. Use the following default credentials to log in:
 
-#### Manual Install
+*   **Username:** Administrator
+*   **Password:** admin
 
-Install dependencies using the bench install script:
+See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM-based Docker setup.
 
-```bash
-# Install bench (see https://github.com/frappe/bench for details)
-# This installs MariaDB and other dependencies
-bench init frappe-bench
-cd frappe-bench
-bench new-site frappe.localhost
-bench start
-```
-The script will generate passwords for the Frappe "Administrator" user, MariaDB root, and the frappe user, which are saved to `~/frappe_passwords.txt`.
+## Development Setup
 
-1.  Setup bench by following the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) and start the server
-   ```
-   bench start
-   ```
+### Manual Installation
 
-2.  In a separate terminal window, run the following commands:
-   ```
-   # Create a new site
-   bench new-site frappe.localhost
-   ```
+Use the install script for bench, which handles all dependencies like MariaDB; more info at:  https://github.com/frappe/bench.
 
-3.  Open the URL `http://frappe.localhost:8000/app` in your browser, you should see the app running
+The script will create new passwords for the "Administrator" user, MariaDB root, and the frappe user, saving them to `~/frappe_passwords.txt`.
 
-## Learning and Community
+### Local Setup
 
-*   **Frappe School:**  Learn the framework and ERPNext through courses by the maintainers and community.  [Visit Frappe School](https://frappe.school)
-*   **Official Documentation:** Comprehensive documentation to guide you. [Visit the Documentation](https://docs.frappe.io/framework)
-*   **Discussion Forum:** Engage with other Frappe developers and get support. [Visit the Forum](https://discuss.frappe.io/)
-*   **Build with Hussain:** Watch Frappe in action to build real-world apps.  [Visit Build with Hussain](https://buildwithhussain.com)
+1.  Set up bench by following the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) and start the server:
+
+    ```bash
+    bench start
+    ```
+
+2.  In a separate terminal window, run:
+
+    ```bash
+    # Create a new site
+    bench new-site frappe.localhost
+    ```
+
+3.  Open `http://frappe.localhost:8000/app` in your browser to see your running app.
+
+## Learning and Community Resources
+
+1.  [Frappe School](https://frappe.school) - Learn Frappe Framework and ERPNext through courses.
+2.  [Official documentation](https://docs.frappe.io/framework) - Comprehensive documentation for Frappe Framework.
+3.  [Discussion Forum](https://discuss.frappe.io/) - Engage with the Frappe Framework community.
+4.  [buildwithhussain.com](https://buildwithhussain.com) - See Frappe Framework in action, building real-world web apps.
 
 ## Contributing
 
-*   **Issue Guidelines:**  Understand the issue submission process. [See Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)
-*   **Report Security Vulnerabilities:**  Report any security concerns. [Report Security Vulnerabilities](https://frappe.io/security)
-*   **Contribution Guidelines:** Learn about making pull requests. [See Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
-*   **Translations:**  Help translate Frappe into other languages. [Contribute Translations](https://crowdin.com/project/frappe)
+1.  [Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)
+2.  [Report Security Vulnerabilities](https://frappe.io/security)
+3.  [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
+4.  [Translations](https://crowdin.com/project/frappe)
 
 <br>
 <br>

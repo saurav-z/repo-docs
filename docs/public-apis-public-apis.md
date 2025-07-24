@@ -1,38 +1,44 @@
-# Discover Free Public APIs: Your Gateway to Open Data & Development
+# Discover a World of Free Public APIs
 
-**Unleash the power of the web with a comprehensive, community-curated collection of free public APIs, perfect for developers of all levels!**
+**Unlock a vast library of free and open APIs to integrate into your projects!** This repository, curated by community members, provides an extensive list of public APIs across numerous domains, perfect for developers, researchers, and enthusiasts alike. Access a treasure trove of APIs maintained and updated by the community, ready to enhance your applications.
+
+[Visit the original repository here](https://github.com/public-apis/public-apis)
 
 <p align="center">
     <a href="https://apilayer.com">
-        <img src=".github/cs1586-APILayerLogoUpdate2022-LJ_v2-HighRes.png" width="300px" alt="APILayer Logo" />
+        <img src=".github/cs1586-APILayerLogoUpdate2022-LJ_v2-HighRes.png" width="300" alt="APILayer Logo" />
     </a>
 </p>
+<p>
+    <strong>APILayer:</strong> The fastest way to integrate APIs into any product. Explore <a href="https://apilayer.com/products/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo">APILayer APIs</a> for your next project.
+</p>
+<p>
+    Join our <a href="https://discord.com/invite/hgjA78638n/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo">Discord server</a> for updates, Q&A, community calls, and more!
+</p>
 
-This repository, meticulously curated by the community and supported by [APILayer](https://apilayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo), is a treasure trove of APIs spanning diverse domains. Explore these resources to enrich your projects, learn new skills, and build innovative solutions.
+<br>
 
-**Key Features:**
+## Key Features:
 
-*   **Vast Collection:** Explore APIs across dozens of categories, from Animals to Weather.
+*   **Extensive Directory:** Access a comprehensive list of public APIs covering a wide range of categories.
 *   **Community-Driven:** Benefit from a constantly updated and well-maintained resource.
-*   **Free to Use:** Access and integrate public APIs without hidden costs.
-*   **Diverse Applications:** Leverage APIs for web development, mobile apps, data analysis, and more.
-
-[Explore the original repository for more details and contributions.](https://github.com/public-apis/public-apis)
-
-Looking for powerful APIs to integrate into your next project?  Explore [APILayer APIs](https://apilayer.com/products/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo).
-
-Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) for the latest updates, support, and community collaboration.
+*   **Easy Integration:** Find APIs suitable for various projects, from web development to data analysis.
+*   **Diverse Categories:** Explore APIs for everything from art and design to weather and transportation.
 
 <br>
 
 ## Featured APIs from APILayer
 
-*   **[IPstack](https://ipstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers):** Locate and Identify Website Visitors by IP Address.
-*   **[Marketstack](https://marketstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers):** Free, easy-to-use REST API delivering worldwide stock market data.
-*   **[Weatherstack](https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers):** Retrieve accurate weather information for any location.
-*   **[Numverify](https://numverify.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers):** Global Phone Number Validation & Lookup API.
-*   **[Fixer](https://fixer.io/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers):** Foreign Exchange (forex) rates.
-*   **[Aviationstack](https://avaitionstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers):** Free, real-time flight status and global Aviation data API.
+Here are a few best-selling APIs:
+
+| API                                                                      | Description                                                                                        |
+| :----------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
+| [IPstack](https://ipstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Locate and Identify Website Visitors by IP Address                                             |
+| [Marketstack](https://marketstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Free, easy-to-use REST API interface delivering worldwide stock market data in JSON format      |
+| [Weatherstack](https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Retrieve instant, accurate weather information for any location in the world in lightweight JSON format |
+| [Numverify](https://numverify.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers ) | Global Phone Number Validation & Lookup JSON API                                            |
+| [Fixer](https://fixer.io/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Fixer is a simple and lightweight API for current and historical foreign exchange (forex) rates. |
+| [Aviationstack](https://avaitionstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Free, real-time flight status and global Aviation data API                                    |
 
 <br>
 
@@ -46,7 +52,8 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 
 <br>
 
-## API Index by Category
+## API Index
+**(Click to jump to a specific category)**
 
 *   [Animals](#animals)
 *   [Anime](#anime)
@@ -104,7 +111,7 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 
 ### Animals
 
-| API | Description | Auth | HTTPS | CORS |
+API | Description | Auth | HTTPS | CORS 
 |:---|:---|:---|:---|:---|
 | [AdoptAPet](https://www.adoptapet.com/public/apis/pet_list.html) | Resource to help get pets adopted | `apiKey` | Yes | Yes |
 | [Axolotl](https://theaxolotlapi.netlify.app/) | Collection of axolotl pictures and facts | No | Yes | No |
@@ -140,7 +147,7 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 
 ### Anime
 
-| API | Description | Auth | HTTPS | CORS |
+API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [AniAPI](https://aniapi.com/docs/) | Anime discovery, streaming & syncing with trackers | `OAuth` | Yes | Yes |
 | [AniDB](https://wiki.anidb.net/HTTP_API_Definition) | Anime Database | `apiKey` | No | Unknown |
@@ -168,7 +175,7 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 
 ### Anti-Malware
 
-| API | Description | Auth | HTTPS | CORS |
+API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [AbuseIPDB](https://docs.abuseipdb.com/) | IP/domain/URL reputation | `apiKey` | Yes | Unknown |
 | [AlienVault Open Threat Exchange (OTX)](https://otx.alienvault.com/api) | IP/domain/URL reputation | `apiKey` | Yes | Unknown |
@@ -184,15 +191,14 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 | [URLhaus](https://urlhaus-api.abuse.ch/) | Bulk queries and Download Malware Samples | No | Yes | Yes |
 | [URLScan.io](https://urlscan.io/about-api/) | Scan and Analyse URLs | `apiKey` | Yes | Unknown |
 | [VirusTotal](https://www.virustotal.com/en/documentation/public-api/) | VirusTotal File/URL Analysis | `apiKey` | Yes | Unknown |
-| [Web of Trust](https://support.mywot.com/hc/en-us/sections/360004477734-API-) | IP/domain/URL reputation | `apiKey` | Yes | Unknown |
+| [Web of Trust](https://support.mywot.com/hc/en-us/sections/360004477734-API-) | IP/domain/URL reputation | `apiKey` | Yes | Unknown | 
 
 **[⬆ Back to Index](#index)**
 <br >
 <br >
-
 ### Art & Design
 
-| API | Description | Auth | HTTPS | CORS |
+API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [Améthyste](https://api.amethyste.moe/) | Generate images for Discord users | `apiKey` | Yes | Unknown |
 | [Art Institute of Chicago](https://api.artic.edu/docs/) | Art | No | Yes | Yes |
@@ -218,10 +224,9 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 **[⬆ Back to Index](#index)**
 <br >
 <br >
-
 ### Authentication & Authorization
 
-| API | Description | Auth | HTTPS | CORS |
+API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [Auth0](https://auth0.com) | Easy to implement, adaptable authentication and authorization platform | `apiKey` | Yes | Yes |
 | [GetOTP](https://otp.dev/en/docs/) | Implement OTP flow quickly | `apiKey` | Yes | No |
@@ -234,7 +239,6 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 **[⬆ Back to Index](#index)**
 <br >
 <br >
-
 ### Blockchain
 
 | API | Description | Auth | HTTPS | CORS |
@@ -254,10 +258,9 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 **[⬆ Back to Index](#index)**
 <br >
 <br >
-
 ### Books
 
-| API | Description | Auth | HTTPS | CORS |
+API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [A Bíblia Digital](https://www.abibliadigital.com.br/en) | Do not worry about managing the multiple versions of the Bible | `apiKey` | Yes | No |
 | [Bhagavad Gita](https://docs.bhagavadgitaapi.in) | Open Source Shrimad Bhagavad Gita API including 21+ authors translation in Sanskrit/English/Hindi | `apiKey` | Yes | Yes |
@@ -286,13 +289,12 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 **[⬆ Back to Index](#index)**
 <br >
 <br >
-
 ### Business
 
-| API | Description | Auth | HTTPS | CORS |
+API | Description | Auth | HTTPS | CORS |
 |---|:---|:---|:---|:---|
 | [Apache Superset](https://superset.apache.org/docs/api) | API to manage your BI dashboards and data sources on Superset | `apiKey` | Yes | Yes |
-| [Charity Search](http://charityapi.orghunter.com/) | Non-profit charity data | `apiKey` | No | Unknown |
+| [Charity Search](http://charityapi.orghunter.com/) | Non-profit charity data | `apiKey` | No | Unknown 
 | [Clearbit Logo](https://clearbit.com/docs#logo-api) | Search for company logos and embed them in your projects | `apiKey` | Yes | Unknown |
 | [Domainsdb.info](https://domainsdb.info/) | Registered Domain Names Search | No | Yes | No |
 | [Freelancer](https://developers.freelancer.com) | Hire freelancers to get work done | `OAuth` | Yes | Unknown |
@@ -318,10 +320,9 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 **[⬆ Back to Index](#index)**
 <br >
 <br >
-
 ### Calendar
 
-| API | Description | Auth | HTTPS | CORS |
+API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [Public Holidays](https://www.abstractapi.com/holidays-api) | Data on national, regional, and religious holidays via API | `apiKey` | Yes | Yes |
 | [Calendarific](https://calendarific.com/) | Worldwide Holidays | `apiKey` | Yes | Unknown |
@@ -343,10 +344,9 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 **[⬆ Back to Index](#index)**
 <br >
 <br >
-
 ### Cloud Storage & File Sharing
 
-| API | Description | Auth | HTTPS | CORS |
+API | Description | Auth | HTTPS | CORS |
 |---|:---|:---|:---|:---|
 | [AnonFiles](https://anonfiles.com/docs/api) | Upload and share your files anonymously | No | Yes | Unknown | |
 | [BayFiles](https://bayfiles.com/docs/api) | Upload and share your files | No | Yes | Unknown | |
@@ -365,5 +365,4 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 | [Pinata](https://docs.pinata.cloud/) | IPFS Pinning Services API | `apiKey` | Yes | Unknown | |
 | [Quip](https://quip.com/dev/automation/documentation) | File Sharing and Storage for groups | `apiKey` | Yes | Yes | |
 | [Storj](https://docs.storj.io/dcs/) | Decentralized Open-Source Cloud Storage | `apiKey` | Yes | Unknown | |
-| [The Null Pointer](https://0x0.st) | No-bullshit file hosting and URL shortening service | No | Yes | Unknown | |
-| [Web3 Storage](https://web3.storage/) | File Sharing and Storage for Free with 1
+| [The

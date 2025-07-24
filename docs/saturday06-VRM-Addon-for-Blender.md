@@ -1,29 +1,26 @@
 # VRM Add-on for Blender: Create and Customize VRM Models Directly in Blender
 
-Easily import, export, and modify VRM models within Blender with the VRM Add-on!  [View the source code](https://github.com/saturday06/VRM-Addon-for-Blender)
+Enhance your Blender workflow with the VRM Add-on, empowering you to import, export, and create VRM models seamlessly.  ([Back to the GitHub Repository](https://github.com/saturday06/VRM-Addon-for-Blender))
 
-<!--
-## Badges (Already included in original README)
-[![CI status](https://github.com/saturday06/VRM-Addon-for-Blender/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/saturday06/VRM-Addon-for-Blender/actions) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
--->
+## Key Features:
 
-## Key Features
-
-*   **VRM Import and Export:** Seamlessly bring VRM models into Blender and export your creations in the VRM format.
-*   **Humanoid Rigging:**  Easily set up and work with VRM Humanoid rigs within Blender.
-*   **MToon Shader Support:**  Apply the popular MToon shader for anime-style rendering.
-*   **PBR Material Support:** Use Physics Based Rendering for realistic materials.
-*   **Animation Support:** Animate your VRM models.
+*   **Import & Export VRM:** Easily load and save VRM models within Blender.
+*   **VRM Humanoid Support:**  Simplify character rigging with built-in VRM humanoid functionality.
+*   **MToon Shader Integration:**  Apply the popular MToon shader for anime-style rendering directly within Blender.
+*   **PBR Material Support:** Create physically based rendering materials.
+*   **Animation Support:** Create VRM animations.
 *   **Scripting API:** Automate tasks and extend functionality with Python scripts.
 
-## Download and Installation
+## Getting Started
 
-*   **For Blender 4.2 and later:** Install directly from the [🛠️ Blender Extensions Platform](https://extensions.blender.org/add-ons/vrm).
-*   **For Blender 2.93 to 4.1:** Download and install from the [🌐 Official Site](https://vrm-addon-for-blender.info).
+### Download
+
+*   **Blender 4.2 or later:**  Download the add-on from the [🛠️Blender Extensions Platform](https://extensions.blender.org/add-ons/vrm).
+*   **Blender 2.93 to 4.1:** Download from the [🌐Official Site](https://vrm-addon-for-blender.info).
 
 ## Tutorials
 
-Learn how to use the VRM Add-on with these tutorials:
+[Here are some handy tutorials to get you started.]
 
 |                                         [Installation](https://vrm-addon-for-blender.info/en/installation?locale_redirection)                                          |                                    [Create Simple VRM](https://vrm-addon-for-blender.info/en/create-simple-vrm-from-scratch?locale_redirection)                                    |                                    [Create Humanoid VRM](https://vrm-addon-for-blender.info/en/create-humanoid-vrm-from-scratch?locale_redirection)                                    |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -35,8 +32,7 @@ Learn how to use the VRM Add-on with these tutorials:
 
 ## Development
 
-The source code is located in the `main` branch, with the core add-on in the `src/io_scene_vrm` folder. For efficient development, link this folder to your Blender addons directory.  Advanced development using `uv` is supported.
-Follow the instructions in the  [Development Tutorial](https://vrm-addon-for-blender.info/en/development?locale_redirection).
+The source code is located in the `main` branch. Detailed development setup instructions are in the [Development How-To](https://vrm-addon-for-blender.info/en/development?locale_redirection)
 
 ```text
 git checkout main

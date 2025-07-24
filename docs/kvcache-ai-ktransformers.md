@@ -2,44 +2,39 @@
   <picture>
     <img alt="KTransformers Logo" src="https://github.com/user-attachments/assets/d5a2492f-a415-4456-af99-4ab102f13f8b" width=50%>
   </picture>
+  <br>
   <h1>KTransformers: Supercharge Your LLM Inference</h1>
-  <p><strong>Experience cutting-edge LLM inference optimizations with KTransformers, a flexible framework designed for speed and efficiency.</strong></p>
+  <p><em>Experience blazing-fast LLM inference with optimized kernels and flexible framework.</em></p>
   <p>
-    <a href="#features">✨ Key Features</a> |
-    <a href="#showcases">🌟 Show Cases</a> |
+    <a href="#show-cases">🌟 Show Cases</a> |
     <a href="#quick-start">🚀 Quick Start</a> |
     <a href="#tutorial">📃 Tutorial</a> |
-    <a href="https://github.com/kvcache-ai/ktransformers/discussions">💬 Discussion </a> |
-    <a href="#faq">🙋 FAQ</a> |
-    <a href="https://github.com/kvcache-ai/ktransformers"> 🔗 View on GitHub</a>
+    <a href="https://github.com/kvcache-ai/ktransformers/discussions">💬 Discussion</a> |
+    <a href="#FAQ">🙋 FAQ</a> |
+    <a href="https://github.com/kvcache-ai/ktransformers">🔗 View on GitHub</a>
   </p>
 </div>
 
-## ✨ Key Features
+## Key Features
 
-*   **Flexible Framework:** Designed for easy experimentation and integration of advanced kernel optimizations.
-*   **Transformers Compatibility:** Seamlessly integrates with the Hugging Face Transformers library.
-*   **OpenAI/Ollama API Compliance:** Supports RESTful APIs for easy integration with existing tools and services.
-*   **Simplified Web UI:** Provides a user-friendly interface, including a ChatGPT-like web UI, for easy interaction.
-*   **Kernel Injection:** Easily inject optimized modules with a single line of code for significant performance gains.
-*   **Heterogeneous Computing Support:** Optimized for GPU/CPU offloading and quantized models.
-*   **Long Context Support:** Optimized for longer context lengths.
-*   **Multiple GPU Support:** Distribute workloads across multiple GPUs to increase speed.
-*   **Wide Model Support:** DeepSeek-V2/R1, Qwen3MoE, and more.
-*   **Multiple Vendor Support:** Intel, AMD, and more.
+*   **Optimized Kernel Injection:** Easily integrate advanced kernels with a single line of code to accelerate inference.
+*   **Hugging Face Transformers Compatibility:** Seamlessly works with the familiar 🤗 Transformers interface.
+*   **OpenAI/Ollama API Compliance:** Supports RESTful APIs compatible with OpenAI and Ollama for easy integration.
+*   **Flexible Framework:** Designed with extensibility in mind, allowing for experimentation with cutting-edge optimizations.
+*   **Hardware Acceleration:** Supports various hardware backends: Metax, Sanechips (ZhuFeng V1.0), Intel, Ascend, Kunpeng, and AMD.
 
-## 🔥 Updates
+## What's New
 
 *   **July 11, 2025**: Support Kimi-K2. ([Tutorial](./doc/en/Kimi-K2.md))
 *   **June 30, 2025**: Support 3-layer (GPU-CPU-Disk) [prefix cache](./doc/en/prefix_cache.md) reuse.
 *   **May 14, 2025**: Support Intel Arc GPU ([Tutorial](./doc/en/xpu.md)).
-*   **Apr 29, 2025**: Support AMX-Int8、 AMX-BF16 and Qwen3MoE ([Tutorial](./doc/en/AMX.md))
+*   **Apr 29, 2025**: Support AMX-Int8, AMX-BF16 and Qwen3MoE ([Tutorial](./doc/en/AMX.md))
 *   **Apr 9, 2025**: Experimental support for LLaMA 4 models ([Tutorial](./doc/en/llama4.md)).
 *   **Apr 2, 2025**: Support Multi-concurrency. ([Tutorial](./doc/en/balance-serve.md)).
 *   **Mar 15, 2025**: Support ROCm on AMD GPU ([Tutorial](./doc/en/ROCm.md)).
 *   **Mar 5, 2025**: Support unsloth 1.58/2.51 bits weights and [IQ1_S/FP8 hybrid](./doc/en/fp8_kernel.md) weights. Support 139K [Longer Context](./doc/en/DeepseekR1_V3_tutorial.md#v022--v023-longer-context--fp8-kernel) for DeepSeek-V3 and R1 in 24GB VRAM.
 *   **Feb 25, 2025**: Support [FP8 GPU kernel](./doc/en/fp8_kernel.md) for DeepSeek-V3 and R1; [Longer Context](./doc/en/DeepseekR1_V3_tutorial.md#v022-longer-context).
-*   **Feb 15, 2025**: Longer Context (from 4K to 8K for 24GB VRAM) & Slightly Faster Speed （+15%, up to 16 Tokens/s), update [docs](./doc/en/DeepseekR1_V3_tutorial.md) and [online books](https://kvcache-ai.github.io/ktransformers/).
+*   **Feb 15, 2025**: Longer Context (from 4K to 8K for 24GB VRAM) & Slightly Faster Speed (+15%, up to 16 Tokens/s), update [docs](./doc/en/DeepseekR1_V3_tutorial.md) and [online books](https://kvcache-ai.github.io/ktransformers/).
 *   **Feb 10, 2025**: Support Deepseek-R1 and V3 on single (24GB VRAM)/multi gpu and 382G DRAM, up to 3~28x speedup. For detailed show case and reproduction tutorial, see [here](./doc/en/DeepseekR1_V3_tutorial.md).
 *   **Aug 28, 2024**: Decrease DeepseekV2's required VRAM from 21G to 11G.
 *   **Aug 15, 2024**: Update detailed [tutorial](doc/en/injection_tutorial.md) for injection and multi-GPU.
@@ -47,72 +42,64 @@
 *   **Aug 12, 2024**: Support multiple GPU; Support new model: mixtral 8\*7B  and 8\*22B; Support q2k, q3k, q5k dequant on gpu.
 *   **Aug 9, 2024**: Support windows native.
 
-## 🌟 Show Cases
-
-KTransformers delivers impressive performance improvements, enabling powerful LLM experiences on resource-constrained hardware.
+## Show Cases
 
 ### GPT-4/o1-level Local VSCode Copilot on a Desktop with only 24GB VRAM
 
 <p align="center">
-  <img alt="VSCode Copilot" src="https://github.com/user-attachments/assets/ebd70bfa-b2c1-4abb-ae3b-296ed38aa285" width=60%>
+  <picture>
+    <img alt="VSCode Copilot Demo" src="https://github.com/user-attachments/assets/ebd70bfa-b2c1-4abb-ae3b-296ed38aa285" width=80%>
+  </picture>
 </p>
 
-*   **[NEW!!!] Local 671B DeepSeek-Coder-V3/R1:** Running its Q4_K_M version using only 14GB VRAM and 382GB DRAM([Tutorial](./doc/en/DeepseekR1_V3_tutorial.md)).
-    *   **Prefill Speed (tokens/s):**
+*   **[NEW!!!] Local 671B DeepSeek-Coder-V3/R1:**  Running its Q4_K_M version using only 14GB VRAM and 382GB DRAM([Tutorial](./doc/en/DeepseekR1_V3_tutorial.md)).
+
+    *   Prefill Speed (tokens/s):
         *   KTransformers: 54.21 (32 cores) → 74.362 (dual-socket, 2×32 cores) → 255.26 (optimized AMX-based MoE kernel, V0.3 only) → 286.55 (selectively using 6 experts, V0.3 only)
         *   Compared to 10.31 tokens/s in llama.cpp with 2×32 cores, achieving up to **27.79× speedup**.
-    *   **Decode Speed (tokens/s):**
+    *   Decode Speed (tokens/s):
         *   KTransformers: 8.73 (32 cores) → 11.26 (dual-socket, 2×32 cores) → 13.69 (selectively using 6 experts, V0.3 only)
         *   Compared to 4.51 tokens/s in llama.cpp with 2×32 cores, achieving up to **3.03× speedup**.
-    *   **Upcoming Open Source Release:**
+    *   Upcoming Open Source Release:
         *   AMX optimizations and selective expert activation will be open-sourced in V0.3.
         *   Currently available only in preview binary distribution, which can be downloaded [here](./doc/en/DeepseekR1_V3_tutorial.md).
 
-*   **Local 236B DeepSeek-Coder-V2:** Running its Q4\_K\_M version using only 21GB VRAM and 136GB DRAM, attainable on a local desktop machine, which scores even better than GPT4-0613 in [BigCodeBench](https://huggingface.co/blog/leaderboard-bigcodebench).
+*   **Local 236B DeepSeek-Coder-V2:** Running its Q4\_K\_M version using only 21GB VRAM and 136GB DRAM, performing better than GPT4-0613 in [BigCodeBench](https://huggingface.co/blog/leaderboard-bigcodebench).
+
+    <p align="center">
+      <picture>
+        <img alt="DeepSeek-Coder-V2 Score" src="https://github.com/user-attachments/assets/d052924e-8631-44de-aad2-97c54b965693" width=100%>
+      </picture>
+    </p>
+
+    *   **Faster Speed:** Achieving 126 tokens/s for 2K prompt prefill and 13.6 tokens/s for generation through MoE offloading and injecting advanced kernels from [Llamafile](https://github.com/Mozilla-Ocho/llamafile/tree/main) and [Marlin](https://github.com/IST-DASLab/marlin).
+    *   **VSCode Integration:** Wrapped into an OpenAI and Ollama compatible API for seamless integration as a backend for [Tabby](https://github.com/TabbyML/tabby) and various other frontends.
+
+    <p align="center">
+      <img src="https://github.com/user-attachments/assets/4c6a8a38-05aa-497d-8eb1-3a5b3918429c" width=80%>
+    </p>
+
+**More advanced features are coming soon!**
+
+## Quick Start
+
+KTransformers is easy to set up. Follow the instructions in our [Installation Guide](https://kvcache-ai.github.io/ktransformers/en/install.html).
+
+## Brief Injection Tutorial
+
+KTransformers offers a user-friendly, template-based injection framework for seamlessly integrating optimized modules into your Transformers models. This approach allows researchers to easily swap out modules with optimized variants and combine optimizations.
 
 <p align="center">
-  <img alt="DeepSeek-Coder-V2 Score" src="https://github.com/user-attachments/assets/d052924e-8631-44de-aad2-97c54b965693" width=100%>
+  <picture>
+    <img alt="Injection Framework" src="https://github.com/user-attachments/assets/6b4c1e54-9f6d-45c5-a3fc-8fa45e7d257e" width=65%>
+  </picture>
 </p>
 
-*   **Faster Speed:** Achieving 126 tokens/s for 2K prompt prefill and 13.6 tokens/s for generation through MoE offloading and injecting advanced kernels from [Llamafile](https://github.com/Mozilla-Ocho/llamafile/tree/main) and [Marlin](https://github.com/IST-DASLab/marlin).
-*   **VSCode Integration:** Wrapped into an OpenAI and Ollama compatible API for seamless integration as a backend for [Tabby](https://github.com/TabbyML/tabby) and various other frontends.
-
-<p align="center">
-<img src="https://github.com/user-attachments/assets/4c6a8a38-05aa-497d-8eb1-3a5b3918429c" width=60%>
-</p>
-
-**More advanced features are coming soon, so stay tuned!**
-
-## 🚀 Quick Start
-
-Get started with KTransformers quickly and easily.
-
-**Supported Vendors:**
-
-*   Metax
-*   Sanechips (ZhuFeng V1.0)
-*   Intel
-*   Ascend
-*   Kunpeng
-*   AMD
-
-### 📥 Installation
-
-Follow the official [Installation Guide](https://kvcache-ai.github.io/ktransformers/en/install.html) to install KTransformers.
-
-## 📃 Tutorial
-
-KTransformers uses a template-based injection framework for easy optimization. This allows researchers to easily replace original torch modules with optimized variants and explore the synergistic effects of multiple optimizations.
-
-<p align="center">
-  <img alt="Injection Framework" src="https://github.com/user-attachments/assets/6b4c1e54-9f6d-45c5-a3fc-8fa45e7d257e" width=65%>
-</p>
-
-Given that vLLM already serves as a great framework for large-scale deployment optimizations, KTransformers is particularly focused on local deployments that are constrained by limited resources. We pay special attention to heterogeneous computing opportunities, such as GPU/CPU offloading of quantized models. For example, we support the efficient <a herf="https://github.com/Mozilla-Ocho/llamafile/tree/main">Llamafile</a> and <a herf="https://github.com/IST-DASLab/marlin">Marlin</a> kernels for CPU and GPU, respectively. More details can be found <a herf="doc/en/operators/llamafile.md">here</a>.
+Focusing on local deployments, KTransformers supports heterogeneous computing, including GPU/CPU offloading of quantized models, e.g. efficient Llamafile and Marlin kernels.
 
 ### Example Usage
 
-Create a YAML-based injection template and add the call to `optimize_and_load_gguf` before using the Transformers model.
+Use the `optimize_and_load_gguf` function before using the Transformers model.
 
 ```python
 with torch.device("meta"):
@@ -122,19 +109,15 @@ optimize_and_load_gguf(model, optimize_config_path, gguf_path, config)
 generated = prefill_and_generate(model, tokenizer, input_tensor.cuda(), max_new_tokens=1000)
 ```
 
-The `optimize_and_load_gguf` function iterates through all sub-modules of the model, matches rules specified in your YAML file, and replaces them with advanced modules as specified.
+The `optimize_and_load_gguf` function iterates through the model's sub-modules, applies rules from your YAML file, and replaces modules with optimized versions. A compatible `prefill_and_generate` method enables further optimizations, like CUDAGraph, to improve generation speed.
 
-After injection, the original `generate` interface is available, but we also provide a compatible `prefill_and_generate` method, which enables further optimizations like CUDAGraph to improve generation speed.
+### Customizing Your Model
 
-### How to Customize Your Model
-
-A detailed tutorial of the injection and multi-GPU using DeepSeek-V2 as an example is given [here](doc/en/injection_tutorial.md).
-
-YAML template for replacing original Linear modules with Marlin:
+Create a YAML template to replace modules.  For example, this template replaces `torch.nn.Linear` modules with optimized `KTransformerLinear` modules:
 
 ```yaml
 - match:
-    name: "^model\\.layers\\..*$"  # regular expression 
+    name: "^model\\.layers\\..*$"  # regular expression
     class: torch.nn.Linear  # only match modules matching name and class simultaneously
   replace:
     class: ktransformers.operators.linear.KTransformerLinear  # optimized Kernel on quantized data types
@@ -144,24 +127,18 @@ YAML template for replacing original Linear modules with Marlin:
       generate_linear_type: "QuantizedLinearMarlin"
 ```
 
-The `match` part specifies which module should be replaced, and the `replace` part specifies the module to be injected along with initialization keywords.
+Find example templates in the [ktransformers/optimize/optimize_rules](ktransformers/optimize/optimize_rules) directory.  See the [design document](doc/en/deepseek-v2-injection.md) for more details on the injection framework.
 
-Find example rule templates in the [ktransformers/optimize/optimize_rules](ktransformers/optimize/optimize_rules) directory. These templates are used to power the `local_chat.py` demo.
+## Acknowledgements and Contributors
 
-Refer to the [design document](doc/en/deepseek-v2-injection.md) for more information on the injection framework.
+KTransformers builds on the foundation of Transformers and benefits from advanced kernels such as GGUF/GGML, Llamafile, Marlin, sglang, and flashinfer.  We are planning to contribute back to the community.
 
-## 🤝 Acknowledgment and Contributors
+KTransformers is actively maintained by contributors from the [MADSys group](https://madsys.cs.tsinghua.edu.cn/) at Tsinghua University and members from [Approaching.AI](http://approaching.ai/).
 
-KTransformers is built upon the foundation of the Transformers library. We also utilize and appreciate the contributions of the GGUF/GGML, Llamafile, Marlin, sglang and flashinfer projects. We plan to contribute back to the community by upstreaming our modifications.
+## Discussion
 
-KTransformers is actively maintained and developed by contributors from the [MADSys group](https://madsys.cs.tsinghua.edu.cn/) at Tsinghua University and members from [Approaching.AI](http://approaching.ai/). We welcome new contributors to join us.
+Have questions?  Open an issue or join our [WeChat group](WeChatGroup.png).
 
-## 💬 Discussion
-
-Have questions? Open an issue or join our WeChat group for discussion.
-
-<img src="WeChatGroup.png" width=15%>
-
-## 🙋 FAQ
+## FAQ
 
 Find answers to common questions in the [FAQ](doc/en/FAQ.md).

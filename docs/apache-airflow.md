@@ -1,96 +1,56 @@
-# Apache Airflow: Orchestrate Your Workflows as Code
+# Apache Airflow: Orchestrate Your Workflows with Code
 
-**Automate, schedule, and monitor your workflows with Apache Airflow, a platform that empowers you to define pipelines as code, making them more manageable, versionable, and collaborative.**  Visit the [original repo](https://github.com/apache/airflow) for more details.
+**Apache Airflow** is a powerful platform for programmatically authoring, scheduling, and monitoring workflows, allowing you to define, manage, and track complex data pipelines with ease. Visit the [original repo](https://github.com/apache/airflow) for more information.
+
+Key Features:
+
+*   **Dynamic Workflows as Code:** Define your pipelines using Python code for maintainability, version control, and testability.
+*   **Extensible Architecture:** Leverage a rich set of built-in operators and customize Airflow to fit your unique needs.
+*   **Flexible Scheduling:** Schedule tasks with precision and monitor their execution through a comprehensive UI.
+*   **Scalable and Reliable:** Designed to handle complex workflows and scale to meet your growing data processing demands.
+
+*   **Rich User Interface**: Visualize pipelines running in production, monitor progress, and troubleshoot issues when needed.
+
+## Why Choose Apache Airflow?
+
+Apache Airflow empowers you to build robust and scalable data pipelines. Defining workflows as code makes them versionable and testable, and makes collaboration easier.
+
+## Core Principles
+
+-   **Dynamic**: Pipelines are defined in code, enabling dynamic dag generation and parameterization.
+-   **Extensible**: The Airflow framework includes a wide range of built-in operators and can be extended to fit your needs.
+-   **Flexible**: Airflow leverages the [**Jinja**](https://jinja.palletsprojects.com) templating engine, allowing rich customizations.
 
 ## Key Features
 
-*   **Dynamic Workflows:** Define pipelines with code, enabling dynamic DAG generation and parameterization.
-*   **Extensible Architecture:** Utilize a wide range of built-in operators and extend Airflow to fit your specific needs.
-*   **Flexible Templating:** Leverage the power of Jinja templating for rich customizations.
-*   **Intuitive User Interface:** Visualize pipeline progress, monitor tasks, and troubleshoot issues easily.
-*   **Scalable Scheduling:** Execute tasks on a distributed array of workers with a robust scheduler.
-*   **Integration Ecosystem:** Extensive integration with numerous services and tools.
+*   **Workflow Authoring:** Create workflows (DAGs) that orchestrate tasks.
+*   **Scheduling and Execution:**  The Airflow scheduler executes tasks on a worker pool, adhering to defined dependencies.
+*   **Monitoring and Management:**  Use the rich user interface to visualize pipelines, monitor progress, and troubleshoot issues.
+*   **Idempotent Tasks:** Encourage idempotent tasks for data integrity.
+*   **XCom Feature:** Tasks can pass metadata using Airflow's [XCom feature](https://airflow.apache.org/docs/apache-airflow/stable/concepts/xcoms.html).
 
-## Project Overview
+## Installation and Setup
 
-Apache Airflow is a leading platform for orchestrating complex workflows.  It allows you to define workflows (DAGs) as code, making them easier to maintain, version, and collaborate on.  Airflow’s scheduler executes your tasks on a fleet of workers, respecting the dependencies you specify. A rich user interface provides powerful monitoring and troubleshooting capabilities.
-
-## Requirements
-
-Apache Airflow is tested with:
-
-|            | Main version (dev)     | Stable version (3.0.3) |
-|------------|------------------------|------------------------|
-| Python     | 3.10, 3.11, 3.12, 3.13 | 3.9, 3.10, 3.11, 3.12  |
-| Platform   | AMD64/ARM64(\*)        | AMD64/ARM64(\*)        |
-| Kubernetes | 1.30, 1.31, 1.32, 1.33 | 1.30, 1.31, 1.32, 1.33 |
-| PostgreSQL | 13, 14, 15, 16, 17     | 13, 14, 15, 16, 17     |
-| MySQL      | 8.0, 8.4, Innovation   | 8.0, 8.4, Innovation   |
-| SQLite     | 3.15.0+                | 3.15.0+                |
-
-\* Experimental
-
-**Note**: MariaDB is not tested/recommended.
-
-**Note**: SQLite is used in Airflow tests. Do not use it in production. We recommend
-using the latest stable version of SQLite for local development.
-
-**Note**: Airflow currently can be run on POSIX-compliant Operating Systems. For development, it is regularly
-tested on fairly modern Linux Distros and recent versions of macOS.
-On Windows you can run it via WSL2 (Windows Subsystem for Linux 2) or via Linux Containers.
-The work to add Windows support is tracked via [#10388](https://github.com/apache/airflow/issues/10388), but
-it is not a high priority. You should only use Linux-based distros as "Production" execution environment
-as this is the only environment that is supported. The only distro that is used in our CI tests and that
-is used in the [Community managed DockerHub image](https://hub.docker.com/p/apache/airflow) is
-`Debian Bookworm`.
-
-## Getting Started
-
-Explore the official Apache Airflow documentation for detailed installation instructions, quick start guides, and comprehensive tutorials to get you up and running quickly.
-
-## Installation
-
-For setup instructions, please refer to the [INSTALLING.md](INSTALLING.md) file.
+For comprehensive instructions on setting up your local development environment and installing Apache Airflow, please refer to the [INSTALLING.md](INSTALLING.md) file.
 
 ## Installing from PyPI
 
-Install Airflow from PyPI using `pip`. Install with constraints to ensure a working install:
-
-```bash
-pip install 'apache-airflow==3.0.3' \
- --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.3/constraints-3.10.txt"
-```
-
-Install with extras, such as `postgres` and `google`:
+Install Apache Airflow using pip, including optional extras such as providers, such as `postgres` and `google`.
 
 ```bash
 pip install 'apache-airflow[postgres,google]==3.0.3' \
  --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.3/constraints-3.10.txt"
 ```
 
-## User Interface
-
-Airflow's intuitive UI provides a clear view of your workflows:
-
-*   **DAGs:** Overview of all DAGs.
-*   **Assets**: Overview of Assets with dependencies.
-*   **Grid:** Time-based representation of DAGs.
-*   **Graph:** Visual representation of dependencies and status.
-*   **Home:** Summary statistics.
-*   **Backfill:** Backfilling a DAG for a specific date range.
-*   **Code:** View DAG source code.
-
-## Contributing
-
-Contribute to Apache Airflow by following the [contributors' guide](https://github.com/apache/airflow/blob/main/contributing-docs/README.rst) and [quickstart](https://github.com/apache/airflow/blob/main/contributing-docs/03_contributors_quick_start.rst).
-
-## Links
+## Community and Resources
 
 *   [Documentation](https://airflow.apache.org/docs/apache-airflow/stable/)
 *   [Chat](https://s.apache.org/airflow-slack)
-*   [Community Information](https://airflow.apache.org/community/)
+*   [Contributing Guide](https://github.com/apache/airflow/blob/main/contributing-docs/README.rst)
 
 ## Sponsors
+
+The CI infrastructure for Apache Airflow has been sponsored by:
 
 <!-- Ordered by most recently "funded" -->
 

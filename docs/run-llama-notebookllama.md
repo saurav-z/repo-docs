@@ -1,13 +1,13 @@
-# NotebookLlama: Your Open-Source AI-Powered Note-Taking Companion
+# NotebookLlaMa: Your Open-Source AI-Powered Notebook Companion
 
-**NotebookLlama** offers a free and open-source alternative to NotebookLM, empowering you to create, analyze, and organize your notes with the power of AI. ([View on GitHub](https://github.com/run-llama/notebookllama))
+**NotebookLlaMa** is a powerful, open-source alternative to NotebookLM, offering a secure and customizable way to explore and interact with your documents. ([Original Repository](https://github.com/run-llama/notebookllama))
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7e9cca45-8a4c-4dfa-98d2-2cef147422f2" alt="NotebookLlama Screenshot">
+  <img src="https://github.com/user-attachments/assets/7e9cca45-8a4c-4dfa-98d2-2cef147422f2" alt="NotebookLlaMa Logo" width="200"/>
 </p>
 
 <p align="center">
-  A fully open-source alternative to NotebookLM, backed by <a href="https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM"><strong>LlamaCloud</strong></a>.
+  Built with the support of <a href="https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM"><strong>LlamaCloud</strong></a>.
 </p>
 
 <p align="center">
@@ -18,20 +18,21 @@
     <a href="https://mseep.ai/app/run-llama-notebookllama"><img alt="MseeP.ai Security Assessment Badge" src="https://mseep.net/pr/run-llama-notebookllama-badge.png"></a>
 </p>
 
-## Key Features:
+## Key Features
 
-*   **Open-Source:** Benefit from community contributions and transparency.
-*   **AI-Powered:** Leverage the capabilities of LlamaCloud for intelligent note analysis and organization.
-*   **Note Management:**  Organize and access your notes with ease.
-*   **Customizable:** Configure with custom embedding models.
+*   **Open-Source:** Fully open-source and community-driven.
+*   **Document Interaction:** Designed to help you interact with your documents.
+*   **Customization:** Built with LlamaCloud, allowing for advanced customization options.
 
 ## Getting Started
 
 ### Prerequisites
 
-This project utilizes `uv` for dependency management. Ensure you have `uv` installed before proceeding.
+This project uses `uv` for dependency management. Ensure you have `uv` installed before proceeding.
 
-*   **macOS and Linux:**
+**Install `uv`:**
+
+*   **macOS/Linux:**
 
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -43,11 +44,11 @@ This project utilizes `uv` for dependency management. Ensure you have `uv` insta
     powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
     ```
 
-    For comprehensive installation options, consult the official `uv` documentation: [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)
+For more installation options, please refer to `uv`'s [official documentation](https://docs.astral.sh/uv/getting-started/installation/).
 
-### Setup
+### Installation and Setup
 
-Follow these steps to get NotebookLlama up and running:
+Follow these steps to get NotebookLlaMa up and running:
 
 **1. Clone the Repository**
 
@@ -64,7 +65,7 @@ uv sync
 
 **3. Configure API Keys**
 
-Create a `.env` file by copying the example:
+Create a `.env` file from the example file:
 
 ```bash
 mv .env.example .env
@@ -72,19 +73,19 @@ mv .env.example .env
 
 Add your API keys to the `.env` file:
 
-*   `OPENAI_API_KEY`:  Obtain it from the [OpenAI Platform](https://platform.openai.com/api-keys)
-*   `ELEVENLABS_API_KEY`: Found in [ElevenLabs Settings](https://elevenlabs.io/app/settings/api-keys)
-*   `LLAMACLOUD_API_KEY`: Access it via the [LlamaCloud Dashboard](https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM)
+*   `OPENAI_API_KEY`: [OpenAI Platform](https://platform.openai.com/api-keys)
+*   `ELEVENLABS_API_KEY`: [ElevenLabs Settings](https://elevenlabs.io/app/settings/api-keys)
+*   `LLAMACLOUD_API_KEY`: [LlamaCloud Dashboard](https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM)
 
 **4. Activate the Virtual Environment**
 
-*   **(macOS/Unix):**
+*   **macOS/Linux:**
 
     ```bash
     source .venv/bin/activate
     ```
 
-*   **(Windows):**
+*   **Windows:**
 
     ```bash
     .\.venv\Scripts\activate
@@ -92,19 +93,19 @@ Add your API keys to the `.env` file:
 
 **5. Create LlamaCloud Agent & Pipeline**
 
-Execute these scripts to set up your backend agents and pipelines.
-
-Create the data extraction agent:
+First, create the data extraction agent:
 
 ```bash
 uv run tools/create_llama_extract_agent.py
 ```
 
-Run the interactive setup for your index pipeline.
+Next, configure your index pipeline using the interactive setup wizard:
 
-> **⚡ Quick Start (Default OpenAI):**  Select **"With Default Settings"** for the fastest setup, which uses OpenAI's `text-embedding-3-small` embedding model.
+>   **⚡ Quick Start (Default OpenAI):** For rapid setup, select "**With Default Settings**". This will configure a pipeline using OpenAI's `text-embedding-3-small` embedding model.
 
-> **🧠 Advanced (Custom Embedding Models):** Choose **"With Custom Settings"** to use a different embedding model and follow the on-screen instructions.
+>   **🧠 Advanced (Custom Embedding Models):** Choose "**With Custom Settings**" to use a different embedding model and follow the on-screen instructions.
+
+Run the wizard:
 
 ```bash
 uv run tools/create_llama_cloud_index.py
@@ -132,18 +133,18 @@ Then, in a **new terminal window**, launch the Streamlit app:
 streamlit run src/notebookllama/Home.py
 ```
 
-> [!IMPORTANT]
+>   [!IMPORTANT]
 >
-> _You might need to install `ffmpeg` if you do not have it installed already_
+>   _You might need to install `ffmpeg` if you do not have it installed already_
 
 Access the app at `http://localhost:8501/`.
 
 ---
 
-## Contributing
+### Contributing
 
-Contribute to NotebookLlama by following the [guidelines](./CONTRIBUTING.md).
+Contribute to this project following the [guidelines](./CONTRIBUTING.md).
 
-## License
+### License
 
-NotebookLlama is released under the [MIT License](./LICENSE).
+This project is provided under an [MIT License](./LICENSE).

@@ -1,3 +1,4 @@
+html
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="/docs/logo_tiny_light.svg">
@@ -5,23 +6,18 @@
   </picture>
 </div>
 
-# tinygrad: A Deep Learning Framework for RISC-V Style Acceleration
+# tinygrad: A Deep Learning Framework That's Surprisingly Powerful
 
-**tinygrad** is a fully-featured deep learning framework designed for simplicity and ease of adding new hardware accelerators, offering a streamlined alternative to frameworks like PyTorch. Check out the [original repo](https://github.com/tinygrad/tinygrad) for more details!
+[tinygrad](https://github.com/tinygrad/tinygrad) is a minimalist deep learning framework designed for simplicity and flexibility, offering a compelling alternative to PyTorch and micrograd. Developed by [tiny corp](https://tinygrad.org/).
 
-## Key Features
+### Key Features
 
-*   **Runs LLaMA and Stable Diffusion:** Supports complex models with ease.
-*   **Lazy Evaluation:** Optimizes operations by fusing them into efficient kernels.
-*   **Neural Network Support:** Provides essential components like autograd, tensor library, optimizers, and data loaders.
-*   **Broad Accelerator Support:** Includes GPU (OpenCL), CPU (C Code), LLVM, METAL, CUDA, AMD, NV, QCOM, and WEBGPU. Easily extendable to new hardware.
-*   **Simple to Use**: Built with a core set of ~25 low-level ops which makes it easy to add new accelerators
-
-## Get Started
+*   **Runs LLaMA and Stable Diffusion:** Build and deploy state-of-the-art models with ease.
+*   **Lazy Evaluation:** Experience efficient computation with intelligent kernel fusion, optimizing performance.
+*   **Neural Network Capabilities:** Build and train neural networks with autograd, tensor operations, and built-in optimizers.
+*   **Multi-Accelerator Support:** Supports a wide range of accelerators including GPU (OpenCL), CPU (C Code), LLVM, METAL, CUDA, AMD, NV, QCOM, and WEBGPU, with easy extensibility.
 
 ### Installation
-
-Install from source:
 
 ```bash
 git clone https://github.com/tinygrad/tinygrad.git
@@ -29,35 +25,14 @@ cd tinygrad
 python3 -m pip install -e .
 ```
 
-Or install directly from master:
+### Documentation
 
-```bash
-python3 -m pip install git+https://github.com/tinygrad/tinygrad.git
-```
+Dive deeper into tinygrad's capabilities with comprehensive documentation available on the [docs website](https://docs.tinygrad.org/).
 
-### Example: Tensor Operations
+### Contributing
 
-```python
-from tinygrad import Tensor
+Help us improve tinygrad!  Refer to the original repo for [Contributing Guidelines](https://github.com/tinygrad/tinygrad#contributing) and [Bounties](https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?usp=sharing).
 
-x = Tensor.eye(3, requires_grad=True)
-y = Tensor([[2.0,0,-2.0]], requires_grad=True)
-z = y.matmul(x).sum()
-z.backward()
-
-print(x.grad.tolist())  # dz/dx
-print(y.grad.tolist())  # dz/dy
-```
-
-## Contributing
-
-Contributions are welcome!  Please review the [contributing guidelines](https://github.com/tinygrad/tinygrad#contributing) to ensure your pull requests are accepted quickly.
-
-*   Bug fixes (with regression tests)
-*   Solving bounties
-*   Features
-*   Refactors
-*   Tests/fuzzers
-*   Dead code removal from the core `tinygrad/` folder
-
-```
+[![GitHub Repo stars](https://img.shields.io/github/stars/tinygrad/tinygrad)](https://github.com/tinygrad/tinygrad/stargazers)
+[![Unit Tests](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml/badge.svg)](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml)
+[![Discord](https://img.shields.io/discord/1068976834382925865)](https://discord.gg/ZjZadyC7PK)

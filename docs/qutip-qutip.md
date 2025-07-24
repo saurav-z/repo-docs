@@ -1,20 +1,21 @@
 # QuTiP: Quantum Toolbox in Python
 
-**QuTiP is an open-source software for simulating the dynamics of closed and open quantum systems, providing a powerful and user-friendly platform for quantum mechanics research and education.** ([Original Repo](https://github.com/qutip/qutip))
+**QuTiP is a powerful, open-source Python library designed for simulating the dynamics of closed and open quantum systems, perfect for researchers and students alike.**
 
-## Key Features
+[Visit the original repository on GitHub](https://github.com/qutip/qutip)
 
-*   **Simulate Quantum Systems:** Model and simulate the behavior of both closed and open quantum systems.
-*   **Time-Dependent Simulations:** Handle Hamiltonians and collapse operators with arbitrary time dependencies.
-*   **Efficient Numerical Backends:** Leverages the power of NumPy, SciPy, and Cython for numerical calculations.
-*   **Versatile Visualization:** Provides graphical output using Matplotlib for clear and insightful results.
-*   **Free and Open Source:** Available for use and modification under a New BSD license, making it ideal for both research and educational purposes.
-*   **Cross-Platform Compatibility:** Works seamlessly on Unix-based platforms and Windows.
-*   **Community Support:** Actively supported by the Unitary Fund and NumFOCUS.
+## Key Features:
+
+*   **Numerical Simulation:** Efficiently simulate a wide range of quantum mechanical problems.
+*   **Time-Dependent Hamiltonians:** Handle Hamiltonians and collapse operators with arbitrary time-dependence.
+*   **Open & Closed Quantum Systems:** Model the dynamics of both closed and open quantum systems.
+*   **Python-Based:** Utilizes the power of Python, with Numpy, Scipy, and Cython backends.
+*   **Visualization:** Provides graphical output via Matplotlib.
+*   **Open Source:** Free to use, modify, and distribute under a New BSD license.
 
 ## Installation
 
-QuTiP is easily installable via `pip` or `conda`:
+QuTiP is readily available for installation via both `pip` and `conda`.
 
 ```bash
 pip install qutip
@@ -26,26 +27,32 @@ or
 conda install -c conda-forge qutip
 ```
 
-For detailed installation instructions, including options for installing optional dependencies and building from source, refer to the [official documentation](https://qutip.readthedocs.io/en/stable/installation.html).
+For detailed installation instructions, including optional dependencies and building from source, please consult the [official documentation](https://qutip.readthedocs.io/en/stable/installation.html).
 
 ## Documentation
 
-Comprehensive documentation is available to guide you through QuTiP's features and functionality:
+Comprehensive documentation is available for both the latest stable release and the development branch. You can find it here:
 
 *   [Stable Release Documentation](https://qutip.readthedocs.io/en/latest/)
-*   [Development Documentation](https://qutip.readthedocs.io/en/master/)
-*   [Tutorials and Example Notebooks](https://qutip.org/tutorials.html)
+*   [Development Documentation (Master Branch)](https://qutip.readthedocs.io/en/master/)
 
-## Contributing
+## Contribute
 
-The QuTiP project welcomes contributions from the community! You can contribute by:
+We welcome contributions to QuTiP! You can contribute by:
 
 *   Forking the repository and submitting pull requests.
-*   Reporting bugs and issues on the [issues page](https://github.com/qutip/qutip/issues).
-*   Participating in the [QuTiP discussion group](https://groups.google.com/g/qutip).
+*   Reporting bugs on the [issues page](https://github.com/qutip/qutip/issues).
+*   Assisting with user questions in the [QuTiP discussion group](https://groups.google.com/g/qutip).
 
-For more information on contributing to QuTiP development, see the ["contributing to QuTiP development" section of the documentation](https://qutip.readthedocs.io/en/stable/development/contributing.html).
+## Support & Acknowledgements
+
+QuTiP is supported by:
+
+*   [Unitary Fund](https://unitary.fund)
+*   [NumFOCUS](https://numfocus.org)
+
+We are grateful for the support from [Nori's lab](https://dml.riken.jp/), [Blais' lab](https://www.physique.usherbrooke.ca/blais/), Google, and other organizations.
 
 ## Citing QuTiP
 
-If you use QuTiP in your research, please cite the original QuTiP papers which can be found [here](https://dml.riken.jp/?s=QuTiP).
+If you use QuTiP in your research, please cite the original QuTiP papers, available [here](https://dml.riken.jp/?s=QuTiP).

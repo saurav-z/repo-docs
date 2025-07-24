@@ -1,70 +1,114 @@
-# Supercharge Your Claude Code Experience with SuperClaude v3!
+# SuperClaude: Supercharge Your Claude Code Experience!
 
-SuperClaude v3 enhances Claude Code with specialized commands, intelligent personas, and MCP server integration, helping you streamline your development workflow. Explore the original repository at [https://github.com/SuperClaude-Org/SuperClaude_Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework).
+Supercharge your development workflow with **SuperClaude**, a framework that extends Claude Code with specialized commands, smart personas, and powerful integrations.  [Check out the original repo](https://github.com/SuperClaude-Org/SuperClaude_Framework) to learn more!
 
 ## Key Features
 
 *   **16 Specialized Commands:** Streamline common development tasks with commands like `/sc:implement`, `/sc:build`, and `/sc:test`.
-*   **Smart Personas:** Leverage AI specialists (architect, frontend, backend, etc.) to automatically choose the right expert for different tasks.
-*   **MCP Server Integration:** Connects with external tools such as Context7, Sequential, Magic, and Playwright, for enhanced functionality.
-*   **Task Management:** Attempts to keep track of the developer's progress.
-*   **Token Optimization:** Helps with long conversations by optimizing tokens.
+*   **Smart Personas:** Leverage AI specialists (architect, frontend, backend, etc.) to guide Claude's responses for different domains.
+*   **MCP Server Integration:** Connect to external tools like Context7, Sequential, Magic, and Playwright for enhanced capabilities.
+*   **Task Management:** Keep track of progress with integrated task management.
+*   **Token Optimization:**  Helps manage long conversations.
 
-## Installation
+## Getting Started
 
-1.  **Install the Package:**
-    *   **Recommended (PyPI):** `uv add SuperClaude`
-    *   **From Source:**
-        ```bash
-        git clone https://github.com/NomenAK/SuperClaude.git
-        cd SuperClaude
-        uv sync
-        ```
+SuperClaude is designed to make Claude Code more helpful for development work, but it's still under active development.
 
-2.  **Run the Installer:**
-    *   **Quick Setup:** `python3 -m SuperClaude install` or `SuperClaude install`
-    *   **Interactive Setup:** `python3 -m SuperClaude install --interactive` or `SuperClaude install --interactive`
-    *   **Minimal Setup:** `python3 -m SuperClaude install --minimal` or `SuperClaude install --minimal`
-    *   **Developer Setup:** `python3 -m SuperClaude install --profile developer` or `SuperClaude install --profile developer`
-    *   **See all available options:** `python3 -m SuperClaude install --help` or `SuperClaude install --help`
+### Installation
 
-## Upgrading from v2 (Important)
+Follow these steps to install SuperClaude:
 
-If you're upgrading from SuperClaude v2, you must uninstall it and manually remove the following files/directories before installing v3:
+**Step 1: Install the Package**
 
-*   `SuperClaude/`
-*   `~/.claude/shared/`
-*   `~/.claude/commands/`
-*   `~/.claude/CLAUDE.md`
+**Option A: From PyPI (Recommended)**
 
-**Key Change:** The `/build` command has changed.  In v3:
+```bash
+uv add SuperClaude
+```
 
-*   `/sc:build` = compilation/packaging only
-*   `/sc:implement` = feature implementation (NEW!)
+**Option B: From Source**
 
-**Migration:** Replace `v2 /build myFeature` with `v3 /sc:implement myFeature`.
+```bash
+git clone https://github.com/NomenAK/SuperClaude.git
+cd SuperClaude
+uv sync
+```
 
-## Current Status
+### 🔧 UV / UVX Setup Guide
 
-*   **Working Well:** Installation suite, core framework, slash commands, MCP server integration.
-*   **Known Issues:** Initial release, documentation improvements needed, hooks system removed (re-design coming).
+SuperClaude v3 also supports installation via [`uv`](https://github.com/astral-sh/uv) (a faster, modern Python package manager) or `uvx` for cross-platform usage.
 
-## Key Features in Detail
+### 🌀 Install with `uv`
 
-### Commands
+Make sure `uv` is installed:
 
-*   **Development:** `/sc:implement`, `/sc:build`, `/sc:design`
-*   **Analysis:** `/sc:analyze`, `/sc:troubleshoot`, `/sc:explain`
-*   **Quality:** `/sc:improve`, `/sc:test`, `/sc:cleanup`
-*   **Others:** `/sc:document`, `/sc:git`, `/sc:estimate`, `/sc:task`, `/sc:index`, `/sc:load`, `/sc:spawn`
+```bash
+curl -Ls https://astral.sh/uv/install.sh | sh
+```
 
-### Smart Personas
+> Or follow instructions from: [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv)
 
-*   Architect, Frontend, Backend, Analyzer, Security, Scribe, and more.
+Once `uv` is available, you can install SuperClaude like this:
 
-### MCP Integration
+```bash
+uv venv
+source .venv/bin/activate
+uv pip install SuperClaude
+```
 
-*   Context7, Sequential, Magic, Playwright.
+### ⚡ Install with `uvx` (Cross-platform CLI)
+
+If you’re using `uvx`, just run:
+
+```bash
+uvx pip install SuperClaude
+```
+
+**Step 2: Run the Installer**
+
+```bash
+# Quick setup (recommended for most users)
+SuperClaude install
+
+# Interactive selection (choose components)
+SuperClaude install --interactive
+
+# Minimal install (just core framework)
+SuperClaude install --minimal
+
+# Developer setup (everything included)
+SuperClaude install --profile developer
+
+# See all available options
+SuperClaude install --help
+```
+
+## Key Commands
+
+*   `/sc:implement`: Feature implementation
+*   `/sc:build`: Compilation/packaging
+*   `/sc:design`: Design tasks
+*   `/sc:analyze`: Code analysis
+*   `/sc:troubleshoot`: Troubleshoot code
+*   `/sc:explain`: Code explanation
+*   `/sc:improve`: Code improvement
+*   `/sc:test`: Testing and QA
+*   `/sc:cleanup`: Code cleanup
+*   `/sc:document`: Generate documentation
+*   `/sc:git`: Git integration
+*   `/sc:estimate`: Project estimation
+*   `/sc:task`: Task management
+*   `/sc:index`: Indexing
+*   `/sc:load`: Load functionality
+*   `/sc:spawn`: Create new instances
+
+## Important Information for v2 Users
+
+If upgrading from v2, follow these steps to avoid conflicts:
+
+1.  Uninstall v2.
+2.  Manually delete: `SuperClaude/`, `~/.claude/shared/`, `~/.claude/commands/`, `~/.claude/CLAUDE.md`.
+3.  Use `/sc:implement` instead of `/build` for feature implementation.
 
 ## Documentation
 
@@ -76,21 +120,13 @@ If you're upgrading from SuperClaude v2, you must uninstall it and manually remo
 
 ## Contributing
 
-We welcome contributions!  See the "Contributing" section of the original README for details.
+We welcome contributions! Get involved by:
 
-## Project Structure
-
-```
-SuperClaude/
-├── setup.py               # pypi setup file
-├── SuperClaude/           # Framework files
-│   ├── Core/              # Behavior documentation (COMMANDS.md, FLAGS.md, etc.)
-│   ├── Commands/          # 16 slash command definitions
-│   └── Settings/          # Configuration files
-├── setup/                 # Installation system
-└── profiles/              # Installation profiles (quick, minimal, developer)
-```
+*   Reporting bugs
+*   Improving documentation
+*   Adding tests
+*   Suggesting new features
 
 ## License
 
-MIT - [See LICENSE file for details](https://opensource.org/licenses/MIT)
+MIT - See the [LICENSE](https://opensource.org/licenses/MIT) file.

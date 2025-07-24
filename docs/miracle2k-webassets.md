@@ -1,77 +1,60 @@
-Here's an improved and SEO-optimized README for `webassets`, along with a link back to the original repository:
+# Webassets: Streamline Your Web Project's Assets
 
-```markdown
-# Webassets: Streamline Your Python Web Project's Assets
-
-**Webassets simplifies asset management for your Python web projects, letting you easily merge and compress your JavaScript and CSS files for faster loading and improved performance.**
+**Webassets is a powerful Python library designed to simplify the management, merging, and compression of your JavaScript and CSS files, leading to faster loading times and a better user experience.**
 
 [View the original repository on GitHub](https://github.com/miracle2k/webassets)
 
-## Key Features:
+## Key Features
 
-*   **Asset Bundling:** Efficiently combine multiple JavaScript and CSS files into single bundles.
-*   **Compression:** Minimize file sizes using built-in compressors like YUI Compressor and Google Closure Compiler (requires Java).
-*   **Flexible Configuration:**  Easily define your asset bundles and processing pipelines.
-*   **Integration:** Seamlessly integrates with popular Python web frameworks like Flask and Django.
-*   **Optimized Performance:** Reduces HTTP requests and improves website loading times, leading to a better user experience.
-
-## Documentation
-
-For comprehensive documentation, please visit:
-
-*   [Webassets Documentation](https://webassets.readthedocs.io/)
+*   **Asset Management:** Efficiently organize and manage your static assets.
+*   **Merging:** Combine multiple JavaScript and CSS files into single files to reduce HTTP requests.
+*   **Compression:** Minify and compress your assets to reduce file sizes and improve loading speed.
+*   **Filter Support:**  Supports filters for further processing, including Google Closure Compiler.
+*   **Flexible Integration:** Designed for seamless integration with Python web development projects.
 
 ## Installation
 
-While releases may not be on a strict schedule, the project is actively maintained and well-tested.  You can install the latest development version using pip:
+You can install the latest development version using pip:
 
 ```bash
 pip install webassets==dev
 ```
 
-## Development
+*(Note: Releases may not occur on a regular schedule, but the code is well-tested. Ensure the build status badge on GitHub is green for stability.)*
 
-To contribute or develop `webassets`:
+## Documentation
+
+Comprehensive documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
+
+## Development
 
 ### Prerequisites
 
-*   Java 7 or higher (required for certain filters like Google Closure).
-*   Python 3.7+
+*   Python 3.x
+*   Java 7 (or later) is required to run the Google Closure filter.
 
 ### Setup
 
-1.  **Create a virtual environment and install Python requirements (using uv):**
+1.  Create a virtual environment using `uv`:
 
     ```bash
     uv venv
+    ```
+
+2.  Install Python requirements:
+
+    ```bash
     uv pip install -r uv.lock
     ```
 
-2.  **Install other requirements:**
+3.  Install other development requirements:
 
     ```bash
     ./requirements-dev.sh
     ```
 
-3.  **Run Tests:**
+4.  Run tests:
 
     ```bash
     ./run_tests.sh
     ```
-
-## Build Status
-
-[![Build Status](https://github.com/miracle2k/webassets/actions/workflows/ci.yml/badge.svg)](https://github.com/miracle2k/webassets/actions/workflows/ci.yml)
-```
-
-Key improvements and explanations:
-
-*   **SEO Optimization:**  The title and description include relevant keywords like "Python," "web assets," "asset management," "CSS," and "JavaScript."
-*   **Clear Heading Structure:** Uses clear headings (H1, H2) for better readability and organization.
-*   **Bulleted Key Features:** Highlights the main benefits of using webassets.
-*   **Concise and Actionable Instructions:** Simplifies the installation and development sections.
-*   **Direct Links:** Includes a clear link back to the original GitHub repository.
-*   **Emphasis on "Why Use Webassets":**  The one-sentence hook at the beginning immediately explains the purpose and benefit.
-*   **Removed Unnecessary Detail:**  The original README had some extra detail about tarballs, this has been simplified for ease of use.
-*   **`uv` included:**  Installation steps now use `uv` for clarity.
-*   **Code Formatting:**  Improved code block formatting for readability.

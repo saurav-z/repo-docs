@@ -1,19 +1,47 @@
-# Strands Agents: Build AI Agents Quickly with a Model-Driven Approach
+<div align="center">
+  <div>
+    <a href="https://strandsagents.com">
+      <img src="https://strandsagents.com/latest/assets/logo-github.svg" alt="Strands Agents" width="55px" height="105px">
+    </a>
+  </div>
 
-**Easily build and deploy AI agents with the Strands Agents Python SDK, a powerful and flexible solution for creating intelligent applications.** ([See Original Repo](https://github.com/strands-agents/sdk-python))
+  <h1>
+    Strands Agents: Build Powerful AI Agents with Ease
+  </h1>
 
-[shields and badges as before]
+  <h2>
+    Quickly build and deploy AI agents with a model-driven approach using the Strands Agents Python SDK.
+  </h2>
+
+  <div align="center">
+    <a href="https://github.com/strands-agents/sdk-python/graphs/commit-activity"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/strands-agents/sdk-python"/></a>
+    <a href="https://github.com/strands-agents/sdk-python/issues"><img alt="GitHub open issues" src="https://img.shields.io/github/issues/strands-agents/sdk-python"/></a>
+    <a href="https://github.com/strands-agents/sdk-python/pulls"><img alt="GitHub open pull requests" src="https://img.shields.io/github/issues-pr/strands-agents/sdk-python"/></a>
+    <a href="https://github.com/strands-agents/sdk-python/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/strands-agents/sdk-python"/></a>
+    <a href="https://pypi.org/project/strands-agents/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/strands-agents"/></a>
+    <a href="https://python.org"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/strands-agents"/></a>
+  </div>
+
+  <p>
+    <a href="https://strandsagents.com/">Documentation</a>
+    ◆ <a href="https://github.com/strands-agents/samples">Samples</a>
+    ◆ <a href="https://github.com/strands-agents/sdk-python">Python SDK</a>
+    ◆ <a href="https://github.com/strands-agents/tools">Tools</a>
+    ◆ <a href="https://github.com/strands-agents/agent-builder">Agent Builder</a>
+    ◆ <a href="https://github.com/strands-agents/mcp-server">MCP Server</a>
+  </p>
+</div>
+
+Strands Agents is a Python SDK designed to simplify the creation and deployment of AI agents. This model-driven approach allows you to build everything from simple chatbots to complex autonomous systems, all while scaling seamlessly from local development to production environments.  **Unlock the power of AI agents with the Strands Agents Python SDK, offering a flexible and efficient way to build intelligent applications.**
 
 ## Key Features
 
-*   **Simplified Agent Development:** Build AI agents in just a few lines of code.
-*   **Lightweight & Customizable:** A simple agent loop that's fully customizable to fit your needs.
-*   **Model Agnostic:** Supports leading model providers, including Amazon Bedrock, Anthropic, LiteLLM, Llama, Ollama, OpenAI, Writer, and custom providers.
-*   **Advanced Capabilities:** Enables multi-agent systems, autonomous workflows, and streaming support.
-*   **Built-in MCP Integration:** Native support for Model Context Protocol (MCP) servers, providing access to thousands of pre-built tools.
-*   **Python-Based Tools:** Build custom tools easily using Python decorators.
-*   **Hot Reloading:** Auto-load tools from a directory.
-*   **Extensive Documentation:** Comprehensive documentation and examples to get you started quickly.
+*   **Simplified Agent Development:** Build AI agents with just a few lines of code.
+*   **Model Agnostic:** Supports a wide range of model providers, including Amazon Bedrock, Anthropic, LiteLLM, Llama, Ollama, OpenAI, and Writer, as well as custom providers.
+*   **Advanced Agent Capabilities:**  Create multi-agent systems, autonomous agents, and take advantage of streaming support.
+*   **Built-in MCP Support:** Integrates seamlessly with Model Context Protocol (MCP) servers for access to numerous pre-built tools.
+*   **Python-Based Tooling:** Easily create custom tools using Python decorators.
+*   **Hot Reloading:** Enables automatic tool loading and reloading from a specified directory.
 
 ## Quick Start
 
@@ -44,11 +72,11 @@ source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 pip install strands-agents strands-agents-tools
 ```
 
-## Features in Detail
+## Core Concepts
 
 ### Python-Based Tools
 
-Easily create custom tools with Python decorators:
+Build tools with ease using Python decorators.  This allows you to define the functionality of your agent's tools using familiar Python syntax:
 
 ```python
 from strands import Agent, tool
@@ -65,7 +93,8 @@ agent = Agent(tools=[word_count])
 response = agent("How many words are in this sentence?")
 ```
 
-**Hot Reloading from Directory:** Enable automatic tool loading and reloading from the `./tools/` directory:
+**Hot Reloading from Directory:**
+Enable automatic tool loading and reloading from the `./tools/` directory:
 
 ```python
 from strands import Agent
@@ -77,7 +106,7 @@ response = agent("Use any tools you find in the tools directory")
 
 ### MCP Support
 
-Seamlessly integrate Model Context Protocol (MCP) servers:
+Integrate seamlessly with Model Context Protocol (MCP) servers to utilize a vast library of pre-built tools and enhance your agent's capabilities.
 
 ```python
 from strands import Agent
@@ -95,7 +124,7 @@ with aws_docs_client:
 
 ### Multiple Model Providers
 
-Support for various model providers:
+Utilize a variety of model providers to power your AI agents:
 
 ```python
 from strands import Agent
@@ -129,20 +158,19 @@ response = agent("Tell me about Agentic AI")
 ```
 
 Built-in providers:
-
-*   [Amazon Bedrock](https://strandsagents.com/latest/user-guide/concepts/model-providers/amazon-bedrock/)
-*   [Anthropic](https://strandsagents.com/latest/user-guide/concepts/model-providers/anthropic/)
-*   [LiteLLM](https://strandsagents.com/latest/user-guide/concepts/model-providers/litellm/)
-*   [LlamaAPI](https://strandsagents.com/latest/user-guide/concepts/model-providers/llamaapi/)
-*   [Ollama](https://strandsagents.com/latest/user-guide/concepts/model-providers/ollama/)
-*   [OpenAI](https://strandsagents.com/latest/user-guide/concepts/model-providers/openai/)
-*   [Writer](https://strandsagents.com/latest/documentation/docs/user-guide/concepts/model-providers/writer/)
+ - [Amazon Bedrock](https://strandsagents.com/latest/user-guide/concepts/model-providers/amazon-bedrock/)
+ - [Anthropic](https://strandsagents.com/latest/user-guide/concepts/model-providers/anthropic/)
+ - [LiteLLM](https://strandsagents.com/latest/user-guide/concepts/model-providers/litellm/)
+ - [LlamaAPI](https://strandsagents.com/latest/user-guide/concepts/model-providers/llamaapi/)
+ - [Ollama](https://strandsagents.com/latest/user-guide/concepts/model-providers/ollama/)
+ - [OpenAI](https://strandsagents.com/latest/user-guide/concepts/model-providers/openai/)
+ - [Writer](https://strandsagents.com/latest/documentation/docs/user-guide/concepts/model-providers/writer/)
 
 Custom providers can be implemented using [Custom Providers](https://strandsagents.com/latest/user-guide/concepts/model-providers/custom_model_provider/)
 
-### Example tools
+### Example Tools
 
-Strands offers an optional strands-agents-tools package with pre-built tools for quick experimentation:
+The `strands-agents-tools` package provides pre-built tools for quick experimentation and rapid prototyping:
 
 ```python
 from strands import Agent
@@ -151,13 +179,11 @@ agent = Agent(tools=[calculator])
 agent("What is the square root of 1764")
 ```
 
-It's also available on GitHub via [strands-agents/tools](https://github.com/strands-agents/tools).
+The tools package is available on GitHub: [strands-agents/tools](https://github.com/strands-agents/tools).
 
-## Documentation
+## Resources
 
-For detailed guidance & examples, explore our documentation:
-
-*   [User Guide](https://strandsagents.com/)
+*   **[Documentation](https://strandsagents.com/)**: Comprehensive documentation with guides, examples, and an API reference.
 *   [Quick Start Guide](https://strandsagents.com/latest/user-guide/quickstart/)
 *   [Agent Loop](https://strandsagents.com/latest/user-guide/concepts/agents/agent-loop/)
 *   [Examples](https://strandsagents.com/latest/examples/)
@@ -166,13 +192,7 @@ For detailed guidance & examples, explore our documentation:
 
 ## Contributing ❤️
 
-We welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) for details on:
-
-*   Reporting bugs & features
-*   Development setup
-*   Contributing via Pull Requests
-*   Code of Conduct
-*   Reporting of security issues
+We welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) for details on how to contribute.
 
 ## License
 
@@ -180,4 +200,20 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Security
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for information on security issues.
+
+## Further Information
+Explore the [Strands Agents Python SDK](https://github.com/strands-agents/sdk-python) for more details.
+```
+Key improvements and SEO considerations:
+
+*   **Clear Headline:** "Strands Agents: Build Powerful AI Agents with Ease" is more keyword-rich.
+*   **Concise Hook:** The one-sentence hook immediately describes the SDK's purpose.
+*   **Keyword Optimization:**  Uses relevant keywords like "AI agents," "Python SDK," "model-driven," and "build and deploy."
+*   **Bulleted Key Features:**  Easily scannable for users.
+*   **More Descriptive Headings:** Improved headings for clarity and SEO.
+*   **Simplified Language:** More straightforward and user-friendly language.
+*   **Calls to Action:** Implicit calls to action (e.g., "Unlock the power of AI agents").
+*   **Internal Links:** Use of descriptive anchor text for internal links (e.g., "Quick Start Guide").
+*   **Improved Formatting:** Use of Markdown headings and bullet points to improve readability.
+*   **`Further Information` section**: Added a section to emphasize linking to original repo.

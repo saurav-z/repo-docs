@@ -7,7 +7,7 @@
 </h2>
 
 <p align="center">
-  **Supercharge your team's knowledge with Onyx, the open-source AI platform for enterprise search and Gen-AI.**
+**Onyx: Your Open Source AI Platform for Enterprise Search and Knowledge Management.**
 </p>
 
 <p align="center">
@@ -25,38 +25,40 @@
 </a>
 </p>
 
-**[Onyx](https://www.onyx.app/)** (formerly Danswer) is the AI platform connecting to your company's documents, applications, and people, enabling powerful search and knowledge management. Deploy Onyx securely on your laptop, on-premise, or in the cloud and connect to a wide array of data sources.
+**[Onyx](https://www.onyx.app/)** (formerly Danswer) is the open-source AI platform designed to connect to your company's documents, apps, and people, offering powerful search and knowledge management capabilities.  Empower your team with deep insights and streamline information access.
 
 ## Key Features
 
-*   **AI-Powered Chat Interface:** Interact with your data using a feature-rich chat interface, integrating with your choice of LLMs.
-*   **Extensive Connector Support:** Seamlessly sync knowledge and access controls across 40+ connectors, including:
-    *   Google Drive
-    *   Slack
-    *   Confluence
-    *   Salesforce
-    *   And more... (See the full list [here](https://docs.onyx.app/connectors).)
-*   **Custom AI Agents:** Create intelligent agents with unique prompts, knowledge, and actions to automate tasks.
-*   **Deep Research Capabilities:** Quickly find relevant information and insights within your team's knowledge base.
-*   **Flexible Deployment:** Deploy Onyx anywhere, from a local machine to the cloud, with easy setup via `docker compose` or Kubernetes support.
-*   **Secure and Scalable:** Benefit from robust security features like SSO (OIDC/SAML/OAuth2), RBAC, credential encryption, and scalable deployment options tested for tens of thousands of users and millions of documents.
-*   **Knowledge Curation Tools:** Utilize document-sets, query history, and usage analytics to refine and improve your knowledge base.
-*   **Custom Deep Learning Models:** Benefit from custom deep learning models for indexing and inference time.
+*   **AI-Powered Chat Interface:** Interact with a feature-rich chat interface and connect it with any LLM of your choice.
+*   **Extensive Connector Ecosystem:** Seamlessly integrate with over 40+ connectors, including Google Drive, Slack, Confluence, Salesforce, and more to keep your knowledge base up-to-date.
+*   **Custom AI Agents:** Create and deploy AI agents with tailored prompts, knowledge bases, and actions for specific tasks.
+*   **Flexible Deployment:** Deploy Onyx securely on your laptop, on-premise servers, or in the cloud, scaling to meet your needs.
+*   **Advanced Search & Research:** Conduct deep research across your team's collective knowledge using custom deep learning models.
+*   **Secure & Scalable:** Benefit from flexible security features (SSO, RBAC, encryption) and scalable deployment options, tested for tens of thousands of users and millions of documents.
+
+## Benefits
+
+*   **Enhanced Knowledge Discovery:** Surface relevant information quickly and efficiently.
+*   **Improved Collaboration:** Facilitate seamless information sharing across your organization.
+*   **Increased Productivity:** Empower your team with instant access to the knowledge they need.
+*   **Cost-Effective Solution:** Leverage open-source technology to reduce your knowledge management costs.
 
 ## Deployment
 
 **Get started in seconds with [Onyx Cloud](https://cloud.onyx.app/signup) for a free trial!**
 
-For self-hosting, deploy Onyx locally or on a virtual machine using a simple `docker compose` command.  Refer to our [docs](https://docs.onyx.app/quickstart) for detailed instructions.  High-availability and scalable deployments on Kubernetes are also supported, find references [here](https://github.com/onyx-dot-app/onyx/tree/main/deployment).
+Onyx is also easily deployed locally or on a virtual machine using a single `docker compose` command.  Explore the [docs](https://docs.onyx.app/quickstart) to learn more.
 
-## Other Notable Benefits
+For high-availability/scalable deployments, Kubernetes is supported. Reference the [deployment](https://github.com/onyx-dot-app/onyx/tree/main/deployment) documentation.
 
-*   Custom deep learning models for indexing and inference
-*   Flexible security features
-*   Knowledge curation features
-*   Scalable deployment options
+## 🔍 Other Notable Benefits of Onyx
 
-## Roadmap
+*   Custom deep learning models for indexing and inference time, only through Onyx + learning from user feedback.
+*   Flexible security features like SSO (OIDC/SAML/OAuth2), RBAC, encryption of credentials, etc.
+*   Knowledge curation features like document-sets, query history, usage analytics, etc.
+*   Scalable deployment options tested up to many tens of thousands users and hundreds of millions of documents.
+
+## 🚧 Roadmap
 
 *   New methods in information retrieval (StructRAG, LightGraphRAG, etc.)
 *   Personalized Search
@@ -64,19 +66,43 @@ For self-hosting, deploy Onyx locally or on a virtual machine using a simple `do
 *   Code Search
 *   SQL and Structured Query Language
 
-## Licensing
+## 🔌 Connectors
+
+Keep knowledge and access in sync across 40+ connectors:
+
+*   Google Drive
+*   Confluence
+*   Slack
+*   Gmail
+*   Salesforce
+*   Microsoft Sharepoint
+*   Github
+*   Jira
+*   Zendesk
+*   Gong
+*   Microsoft Teams
+*   Dropbox
+*   Local Files
+*   Websites
+*   And more ...
+
+See the full list [here](https://docs.onyx.app/connectors).
+
+## 📚 Licensing
 
 Onyx offers two editions:
 
-*   **Onyx Community Edition (CE):**  Available under the MIT Expat license.
-*   **Onyx Enterprise Edition (EE):** Includes additional features for larger organizations.  See [our website](https://www.onyx.app/pricing) for feature details.
+*   **Onyx Community Edition (CE):**  Freely available under the MIT Expat license.  Follow the Deployment guide above.
+*   **Onyx Enterprise Edition (EE):**  Includes extra features for larger organizations. Check out [our website](https://www.onyx.app/pricing) for details.
 
-To try the Onyx Enterprise Edition:
-1.  Sign up for [Onyx Cloud](https://cloud.onyx.app/signup).
+To try Onyx Enterprise Edition:
+1.  Check out [Onyx Cloud](https://cloud.onyx.app/signup).
 2.  For self-hosting the Enterprise Edition, contact us at [founders@onyx.app](mailto:founders@onyx.app) or book a call with us on our [Cal](https://cal.com/team/onyx/founders).
 
-## Contributing
+## 💡 Contributing
 
-We welcome contributions!  Please review the [Contribution Guide](CONTRIBUTING.md) for details.
+Want to contribute? Please review the [Contribution Guide](CONTRIBUTING.md) for more information.
 
-**[Back to top](#readme-top)**
+---
+[Back to top](#readme-top)
+---

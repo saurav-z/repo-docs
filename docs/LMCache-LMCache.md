@@ -2,7 +2,7 @@
   <p align="center">
     <img src="https://raw.githubusercontent.com/LMCache/LMCache/dev/asset/logo.png" width="720" alt="lmcache logo">
   </p>
-  
+
   [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://docs.lmcache.ai/)
   [![PyPI](https://img.shields.io/pypi/v/lmcache)](https://pypi.org/project/lmcache/)
   [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/lmcache)](https://pypi.org/project/lmcache/)
@@ -21,62 +21,64 @@
 
 </div>
 
-## LMCache: Accelerate LLM Performance with Intelligent Caching
+## LMCache: Accelerate LLM Performance with Intelligent KV Cache Reuse
 
-LMCache revolutionizes LLM serving by intelligently caching reusable text segments, significantly reducing latency and increasing throughput.  [See the original repo](https://github.com/LMCache/LMCache).
+LMCache is a powerful extension for LLM serving engines, dramatically reducing Time-to-First-Token (TTFT) and boosting throughput, especially in long-context scenarios.  [Learn more on GitHub](https://github.com/LMCache/LMCache).
 
-**Key Features:**
+### Key Features:
 
-*   **Integration with vLLM:** High-performance CPU KVCache offloading, disaggregated prefill, and P2P KVCache sharing, improving performance.
-*   **Production Ready:** Supports vLLM production stack, llm-d, and KServe, ensuring seamless integration into existing workflows.
-*   **Flexible KVCache Storage:** Stable support for non-prefix KV caches, offering storage options on CPU, Disk, and NIXL.
-*   **Easy Installation:** Install via pip for quick setup and use.
-*   **Significant Performance Gains:** Achieve 3-10x delay savings and GPU cycle reduction in various LLM use cases.
+*   **Accelerated Performance:** Reduces TTFT and increases throughput by caching and reusing KV caches for repeated text.
+*   **Seamless Integration:** Integrates with vLLM v1 for optimized performance, including CPU KVCache offloading, disaggregated prefill, and P2P KVCache sharing.
+*   **Broad Compatibility:** Supported in the vLLM production stack, llm-d, and KServe.
+*   **Flexible Storage:** Supports caching to CPU, disk, and NIXL.
+*   **Non-Prefix Cache Support:** Stable support for non-prefix KV caches, enhancing flexibility.
+*   **Easy Installation:** Simple pip installation.
 
-### **Installation**
+### Installation
+
+Install LMCache using pip:
 
 ```bash
 pip install lmcache
 ```
 
-For detailed instructions, refer to the [installation guide](https://docs.lmcache.ai/getting_started/installation) in our documentation.
+Detailed installation instructions are available in the [documentation](https://docs.lmcache.ai/getting_started/installation).
 
-### **Getting Started**
+### Getting Started
 
-Explore our [Quickstart Examples](https://docs.lmcache.ai/getting_started/quickstart/) to dive into practical implementations.
+Explore the [Quickstart Examples](https://docs.lmcache.ai/getting_started/quickstart/) in the documentation to quickly understand how to use LMCache.
 
-### **Documentation**
+### Documentation
 
-Access comprehensive information and tutorials at our online [documentation](https://docs.lmcache.ai/).
-Stay up-to-date with the latest insights on the [LMCache blog](https://blog.lmcache.ai/).
+Comprehensive documentation is available [here](https://docs.lmcache.ai/). Stay updated with the latest developments on the [LMCache blog](https://blog.lmcache.ai/).
 
-### **Examples**
+### Examples
 
-Get hands-on with our [examples](https://github.com/LMCache/LMCache/tree/dev/examples) to learn how to use LMCache for various use cases.
+Get hands-on experience with LMCache through practical [examples](https://github.com/LMCache/LMCache/tree/dev/examples) that demonstrate various use cases.
 
-### **Interested in Connecting?**
+### Interested in Connecting?
 
-Join our community and stay informed:
-
-*   [Interest Form](https://forms.gle/mQfQDUXbKfp2St1z7)
+*   [Interest Form](https://forms.gle/MHwLiYDU6kcW3dLj7)
 *   [Newsletter](https://mailchi.mp/tensormesh/lmcache-sign-up-newsletter)
 *   [Slack](https://join.slack.com/t/lmcacheworkspace/shared_invite/zt-2viziwhue-5Amprc9k5hcIdXT7XevTaQ)
 *   [Website](https://lmcache.ai/)
 *   [Email](contact@lmcache.ai)
 
-### **Community Meeting**
+### Community Meeting
 
-Join our bi-weekly community meeting on Tuesdays at 9:00 AM PT – [Add to Calendar](https://drive.usercontent.google.com/u/0/uc?id=1f5EXbooGcwNwzIpTgn5u4PHqXgfypMtu&export=download).
+Join the bi-weekly LMCache community meeting to stay connected with the latest updates:
 
-Meeting notes and summaries are available at this [document](https://docs.google.com/document/d/1_Fl3vLtERFa3vTH00cezri78NihNBtSClK-_1tSrcow), and recordings are on the [YouTube LMCache channel](https://www.youtube.com/channel/UC58zMz55n70rtf1Ak2PULJA).
+*   **Schedule:** Tuesdays at 9:00 AM PT - [Add to Calendar](https://drive.usercontent.google.com/u/0/uc?id=1f5EXbooGcwNwzIpTgn5u4PHqXgfypMtu&export=download)
+*   **Meeting Notes:** [Google Docs](https://docs.google.com/document/d/1_Fl3vLtERFa3vTH00cezri78NihNBtSClK-_1tSrcow)
+*   **Recordings:** [YouTube Channel](https://www.youtube.com/channel/UC58zMz55n70rtf1Ak2PULJA)
 
-### **Contributing**
+### Contributing
 
-We encourage contributions! See the [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions!  Please refer to the [Contributing Guide](CONTRIBUTING.md) to learn how to get involved.
 
-### **Citation**
+### Citation
 
-If you use LMCache for your research, please cite our papers:
+If you use LMCache in your research, please cite the following papers:
 
 ```
 @inproceedings{liu2024cachegen,
@@ -105,12 +107,12 @@ If you use LMCache for your research, please cite our papers:
 }
 ```
 
-### **Socials**
+### Socials
 
 *   [LinkedIn](https://www.linkedin.com/company/lmcache-lab/?viewAsMember=true)
 *   [Twitter](https://x.com/lmcache)
 *   [YouTube](https://www.youtube.com/@LMCacheTeam)
 
-### **License**
+### License
 
-LMCache is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
+LMCache is licensed under the Apache License 2.0.  See the [LICENSE](LICENSE) file for details.

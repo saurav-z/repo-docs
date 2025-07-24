@@ -1,17 +1,18 @@
-# Awesome Python: A Curated List of Python Frameworks, Libraries, and Resources
+# Awesome Python: A Curated List of Python Libraries and Resources
 
-**Discover the best Python resources for any project!** This is a comprehensive, opinionated list of awesome Python frameworks, libraries, software, and resources, perfect for developers of all skill levels. Explore a vast ecosystem of tools to accelerate your projects, from web development and data science to automation and more.
+**Kickstart your Python journey with this extensive, hand-picked collection of the best Python frameworks, libraries, software, and resources.**
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/vinta/awesome-python)
 
+This comprehensive resource, inspired by [awesome-php](https://github.com/ziadoz/awesome-php), is your one-stop shop for discovering powerful Python tools and expanding your development capabilities.
+
 **Key Features:**
 
-*   **Extensive Coverage:** A wide array of categories covering everything from web frameworks and data analysis to machine learning and system administration.
-*   **Curated & Opinionated:**  A hand-picked selection of the most valuable and widely-used Python tools.
-*   **Easy Navigation:**  Well-organized with clear headings and concise descriptions.
-*   **Constantly Updated:**  Regularly maintained to reflect the latest trends and advancements in the Python world.
+*   **Comprehensive Coverage:** Explore a vast array of categories, from web frameworks and data science tools to machine learning libraries and system administration utilities.
+*   **Curated & Opinionated:** Discover only the best and most useful resources, carefully selected to save you time and effort.
+*   **Up-to-Date:** Stay current with the latest Python libraries and trends, ensuring you have access to the most relevant tools.
 
-**Categories:**
+**Explore these categories to find exactly what you need:**
 
 *   [Admin Panels](#admin-panels)
 *   [Algorithms and Design Patterns](#algorithms-and-design-patterns)
@@ -51,7 +52,6 @@
 *   [Game Development](#game-development)
 *   [Geolocation](#geolocation)
 *   [GUI Development](#gui-development)
-*   [GraphQL](#graphql)
 *   [Hardware](#hardware)
 *   [HTML Manipulation](#html-manipulation)
 *   [HTTP Clients](#http-clients)
@@ -62,7 +62,6 @@
 *   [Job Scheduler](#job-scheduler)
 *   [Logging](#logging)
 *   [Machine Learning](#machine-learning)
-*   [Microsoft Windows](#microsoft-windows)
 *   [Miscellaneous](#miscellaneous)
 *   [Natural Language Processing](#natural-language-processing)
 *   [Network Virtualization](#network-virtualization)
@@ -70,7 +69,7 @@
 *   [ORM](#orm)
 *   [Package Management](#package-management)
 *   [Package Repositories](#package-repositories)
-*   [Penetration Testing](#penetration-testing)
+*   [Penetration testing](#penetration-testing)
 *   [Permissions](#permissions)
 *   [Processes](#processes)
 *   [Recommender Systems](#recommender-systems)
@@ -99,6 +98,10 @@
 *   [Web Frameworks](#web-frameworks)
 *   [WebSocket](#websocket)
 *   [WSGI Servers](#wsgi-servers)
+*   [Resources](#resources)
+
+    *   [Newsletters](#newsletters)
+    *   [Podcasts](#podcasts)
 
 ---
 
@@ -118,12 +121,12 @@
 
 *Python implementation of data structures, algorithms and design patterns. Also see [awesome-algorithms](https://github.com/tayllan/awesome-algorithms).*
 
-*   **Algorithms**
+*   Algorithms
     *   [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms.
     *   [python-ds](https://github.com/prabhupant/python-ds) - A collection of data structure and algorithms for coding interviews.
     *   [sortedcontainers](https://github.com/grantjenks/python-sortedcontainers) - Fast and pure-Python implementation of sorted collections.
     *   [thealgorithms](https://github.com/TheAlgorithms/Python) - All Algorithms implemented in Python.
-*   **Design Patterns**
+*   Design Patterns
     *   [pypattyrn](https://github.com/tylerlaberge/PyPattyrn) - A simple yet effective library for implementing common design patterns.
     *   [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
     *   [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
@@ -154,7 +157,7 @@
 
 *Libraries for manipulating audio and its metadata.*
 
-*   **Audio**
+*   Audio
     *   [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
     *   [audioFlux](https://github.com/libAudioFlux/audioFlux) - A library for audio and music analysis, feature extraction.
     *   [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
@@ -165,7 +168,7 @@
     *   [pyaudioanalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
     *   [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
     *   [timeside](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
-*   **Metadata**
+*   Metadata
     *   [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
     *   [eyed3](https://github.com/nicfit/eyeD3) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
     *   [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
@@ -175,12 +178,12 @@
 
 *Libraries for implementing authentications schemes.*
 
-*   **OAuth**
+*   OAuth
     *   [authlib](https://github.com/lepture/authlib) - JavaScript Object Signing and Encryption draft implementation.
     *   [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
     *   [django-oauth-toolkit](https://github.com/jazzband/django-oauth-toolkit) - OAuth 2 goodies for Django.
     *   [oauthlib](https://github.com/oauthlib/oauthlib) - A generic and thorough implementation of the OAuth request-signing logic.
-*   **JWT**
+*   JWT
     *   [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
     *   [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
 
@@ -234,24 +237,24 @@
 
 *Tools of static analysis, linters and code quality checkers. Also see [awesome-static-analysis](https://github.com/mre/awesome-static-analysis).*
 
-*   **Code Analysis**
+*   Code Analysis
     *   [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
     *   [prospector](https://github.com/PyCQA/prospector) - A tool to analyse Python code.
     *   [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analysing dead Python code.
-*   **Code Linters**
+*   Code Linters
     *   [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
         *   [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
     *   [pylint](https://github.com/pylint-dev/pylint) - A fully customizable source code analyzer.
     *   [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter.
-*   **Code Formatters**
+*   Code Formatters
     *   [black](https://github.com/psf/black) - The uncompromising Python code formatter.
     *   [isort](https://github.com/timothycrosley/isort) - A Python utility / library to sort imports.
     *   [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
-*   **Static Type Checkers**, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
+*   Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
     *   [mypy](https://github.com/python/mypy) - Check variable types during compile time.
     *   [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
     *   [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
-*   **Static Type Annotations Generators**
+*   Static Type Annotations Generators
     *   [monkeytype](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
     *   [pytype](https://github.com/google/pytype) - Pytype checks and infers types for Python code - without requiring type annotations.
 
@@ -259,13 +262,13 @@
 
 *Libraries for building command-line applications.*
 
-*   **Command-line Application Development**
+*   Command-line Application Development
     *   [cement](https://github.com/datafolklabs/cement) - CLI Application Framework for Python.
     *   [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
     *   [cliff](https://github.com/openstack/cliff) - A framework for creating command-line programs with multi-level commands.
     *   [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
     *   [python-prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
-*   **Terminal Rendering**
+*   Terminal Rendering
     *   [alive-progress](https://github.com/rsalmei/alive-progress) - A new kind of Progress Bar, with real-time throughput, eta and very cool animations.
     *   [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
     *   [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
@@ -277,7 +280,7 @@
 
 *Useful CLI-based tools for productivity.*
 
-*   **Productivity Tools**
+*   Productivity Tools
     *   [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering projects templates.
     *   [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
     *   [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
@@ -287,7 +290,7 @@
     *   [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     *   [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
     *   [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
-*   **CLI Enhancements**
+*   CLI Enhancements
     *   [httpie](https://github.com/httpie/cli) - A command line HTTP client, a user-friendly cURL replacement.
     *   [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
     *   [litecli](https://github.com/dbcli/litecli) - SQLite CLI with autocompletion and syntax highlighting.
@@ -369,18 +372,18 @@
 
 *Libraries for connecting and operating databases.*
 
-*   **MySQL** - [awesome-mysql](http://shlomi-noach.github.io/awesome-mysql/)
+*   MySQL - [awesome-mysql](http://shlomi-noach.github.io/awesome-mysql/)
     *   [mysqlclient](https://github.com/PyMySQL/mysqlclient) - MySQL connector with Python 3 support ([mysql-python](https://sourceforge.net/projects/mysql-python/) fork).
     *   [pymysql](https://github.com/PyMySQL/PyMySQL) - A pure Python MySQL driver compatible to mysql-python.
-*   **PostgreSQL** - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
+*   PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
     *   [psycopg](https://github.com/psycopg/psycopg) - The most popular PostgreSQL adapter for Python.
-*   **SQlite** - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
+*   SQlite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
     *   [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQlite interface compliant with DB-API 2.0.
     *   [sqlite-utils](https://github.com/simonw/sqlite-utils) - Python CLI utility and library for manipulating SQLite databases.
-*   **Other Relational Databases**
+*   Other Relational Databases
     *   [pymssql](https://github.com/pymssql/pymssql) - A simple database interface to Microsoft SQL Server.
     *   [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver) - Python driver with native interface for ClickHouse.
-*   **NoSQL Databases**
+*   NoSQL Databases
     *   [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
     *   [happybase](https://github.com/python-happybase/happybase) - A developer-friendly library for Apache HBase.
     *   [kafka-python](https://github.com/dpkp/kafka-python) - The Python client for Apache Kafka.
@@ -401,16 +404,16 @@
 
 *Libraries for debugging code.*
 
-*   **pdb-like Debugger**
+*   pdb-like Debugger
     *   [ipdb](https://github.com/gotcha/ipdb) - IPython-enabled [pdb](https://docs.python.org/3/library/pdb.html).
     *   [pudb](https://github.com/inducer/pudb) - A full-screen, console-based Python debugger.
-*   **Tracing**
+*   Tracing
     *   [manhole](https://github.com/ionelmc/python-manhole) - Debugging UNIX socket connections and present the stacktraces for all threads and an interactive prompt.
     *   [python-hunter](https://github.com/ionelmc/python-hunter) - A flexible code tracing toolkit.
-*   **Profiler**
+*   Profiler
     *   [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
     *   [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
-*   **Others**
+*   Others
     *   [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) - Display various debug information for Django.
     *   [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
     *   [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
@@ -431,14 +434,16 @@
 
 *Software and libraries for DevOps.*
 
-*   **Configuration Management**
+*   Configuration Management
     *   [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
     *   [cloudinit](https://github.com/canonical/cloud-init) - A multi-distribution package that handles early initialization of a cloud instance.
     *   [openstack](https://www.openstack.org/) - Open source software for building private and public clouds.
     *   [pyinfra](https://github.com/pyinfra-dev/pyinfra) - A versatile CLI tools and python libraries to automate infrastructure.
     *   [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
-*   **SSH-style Deployment**
+*   SSH-style Deployment
     *   [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
     *   [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
-*   **Process Management**
-    *   [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for
+*   Process Management
+    *   [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+*   Monitoring
+    *   [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
