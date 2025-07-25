@@ -4,9 +4,9 @@
   <img src="./assets/logo.png" width="120" height="120" alt="LightRAG Logo" style="border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);">
 </div>
 
-# 💡 LightRAG: Supercharge Your LLMs with Simple and Fast Retrieval-Augmented Generation
+# LightRAG: Supercharge Your LLMs with Simple, Fast Retrieval-Augmented Generation
 
-LightRAG is a cutting-edge framework that simplifies and accelerates the implementation of Retrieval-Augmented Generation (RAG) systems, allowing you to build powerful, context-aware applications.  **[Explore the LightRAG repository here.](https://github.com/HKUDS/LightRAG)**
+LightRAG empowers you to build advanced, efficient Retrieval-Augmented Generation (RAG) systems, providing a seamless way to integrate external knowledge with your Large Language Models (LLMs).  Check out the original repository for more details: [https://github.com/HKUDS/LightRAG](https://github.com/HKUDS/LightRAG)
 
 <div align="center">
     <a href="https://trendshift.io/repositories/13043" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13043" alt="HKUDS%2FLightRAG | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
@@ -50,41 +50,36 @@ LightRAG is a cutting-edge framework that simplifies and accelerates the impleme
 
 ---
 
-## Key Features
+## Key Features of LightRAG
 
-*   **Easy Integration:** Seamlessly integrate LightRAG into your existing projects with a clean and intuitive API.
-*   **Fast Performance:** Optimized for speed, enabling quick retrieval and generation.
-*   **Flexible Storage Options:** Supports multiple storage backends including Json, PostgreSQL, Neo4j, and Faiss.
-*   **Multimodal Document Processing:** Built-in integration with RAG-Anything for handling text, images, tables, and formulas.
-*   **Knowledge Graph Support:** Powerful capabilities for creating, editing, and deleting entities and relationships, with support for custom knowledge graphs.
-*   **Conversation History:** Support for multi-turn dialogues through conversation history.
-*   **Token Usage Tracking:** Monitor and manage token consumption for cost control and performance optimization.
-*   **Comprehensive Data Export:** Export your knowledge graph data in various formats for analysis, sharing, and backup.
-*   **Robust Delete Functions:** Allows for deleting documents, entities, and relations with data consistency across the knowledge graph and vector databases.
-*   **Entity Merging:** Merge multiple entities into a single entity while handling the corresponding relationships.
+*   **Easy to Use:** Simple setup and integration with LLMs.
+*   **Fast Performance:** Optimized for speed and efficiency in RAG pipelines.
+*   **Multimodal Support:** Seamlessly integrates with [RAG-Anything](https://github.com/HKUDS/RAG-Anything) for processing diverse document formats, including text, images, tables, and equations.
+*   **Knowledge Graph Integration:** Powerful knowledge graph features for enhanced context and relationship discovery.
+*   **Flexible Storage Options:** Supports various storage backends, including Neo4j and PostgreSQL.
+*   **Advanced Features:** Includes citation functionality, entity merging, and token usage tracking.
+*   **Extensive Documentation:** Comprehensive guides and examples to help you get started quickly.
 
 ---
-
-## What's New
-
-*   [2025.06.16] 🎯📢 Our team has released [RAG-Anything](https://github.com/HKUDS/RAG-Anything) an All-in-One Multimodal RAG System for seamless text, image, table, and equation processing.
-*   [2025.06.05] 🎯📢 LightRAG now supports comprehensive multimodal data handling through [RAG-Anything](https://github.com/HKUDS/RAG-Anything) integration, enabling seamless document parsing and RAG capabilities across diverse formats including PDFs, images, Office documents, tables, and formulas. Please refer to the new [multimodal section](https://github.com/HKUDS/LightRAG/?tab=readme-ov-file#multimodal-document-processing-rag-anything-integration) for details.
-*   [2025.03.18] 🎯📢 LightRAG now supports citation functionality, enabling proper source attribution.
-*   [2025.02.05] 🎯📢 Our team has released [VideoRAG](https://github.com/HKUDS/VideoRAG) understanding extremely long-context videos.
-*   [2025.01.13] 🎯📢 Our team has released [MiniRAG](https://github.com/HKUDS/MiniRAG) making RAG simpler with small models.
-*   [2025.01.06] 🎯📢 You can now [use PostgreSQL for Storage](#using-postgresql-for-storage).
-*   [2024.12.31] 🎯📢 LightRAG now supports [deletion by document ID](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
-*   [2024.11.25] 🎯📢 LightRAG now supports seamless integration of [custom knowledge graphs](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#insert-custom-kg), empowering users to enhance the system with their own domain expertise.
-*   [2024.11.19] 🎯📢 A comprehensive guide to LightRAG is now available on [LearnOpenCV](https://learnopencv.com/lightrag). Many thanks to the blog author.
-*   [2024.11.11] 🎯📢 LightRAG now supports [deleting entities by their names](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
-*   [2024.11.09] 🎯📢 Introducing the [LightRAG Gui](https://lightrag-gui.streamlit.app), which allows you to insert, query, visualize, and download LightRAG knowledge.
-*   [2024.11.04] 🎯📢 You can now [use Neo4J for Storage](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#using-neo4j-for-storage).
-*   [2024.10.29] 🎯📢 LightRAG now supports multiple file types, including PDF, DOC, PPT, and CSV via `textract`.
-*   [2024.10.20] 🎯📢 We've added a new feature to LightRAG: Graph Visualization.
-*   [2024.10.18] 🎯📢 We've added a link to a [LightRAG Introduction Video](https://youtu.be/oageL-1I0GE). Thanks to the author!
-*   [2024.10.17] 🎯📢 We have created a [Discord channel](https://discord.gg/yF2MmDJyGJ)! Welcome to join for sharing and discussions! 🎉🎉
-*   [2024.10.16] 🎯📢 LightRAG now supports [Ollama models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
-*   [2024.10.15] 🎯📢 LightRAG now supports [Hugging Face models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
+## 🎉 News
+- [X] [2025.06.16]🎯📢Our team has released [RAG-Anything](https://github.com/HKUDS/RAG-Anything) an All-in-One Multimodal RAG System for seamless text, image, table, and equation processing.
+- [X] [2025.06.05]🎯📢LightRAG now supports comprehensive multimodal data handling through [RAG-Anything](https://github.com/HKUDS/RAG-Anything) integration, enabling seamless document parsing and RAG capabilities across diverse formats including PDFs, images, Office documents, tables, and formulas. Please refer to the new [multimodal section](https://github.com/HKUDS/LightRAG/?tab=readme-ov-file#multimodal-document-processing-rag-anything-integration) for details.
+- [X] [2025.03.18]🎯📢LightRAG now supports citation functionality, enabling proper source attribution.
+- [X] [2025.02.05]🎯📢Our team has released [VideoRAG](https://github.com/HKUDS/VideoRAG) understanding extremely long-context videos.
+- [X] [2025.01.13]🎯📢Our team has released [MiniRAG](https://github.com/HKUDS/MiniRAG) making RAG simpler with small models.
+- [X] [2025.01.06]🎯📢You can now [use PostgreSQL for Storage](#using-postgresql-for-storage).
+- [X] [2024.12.31]🎯📢LightRAG now supports [deletion by document ID](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
+- [X] [2024.11.25]🎯📢LightRAG now supports seamless integration of [custom knowledge graphs](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#insert-custom-kg), empowering users to enhance the system with their own domain expertise.
+- [X] [2024.11.19]🎯📢A comprehensive guide to LightRAG is now available on [LearnOpenCV](https://learnopencv.com/lightrag). Many thanks to the blog author.
+- [X] [2024.11.11]🎯📢LightRAG now supports [deleting entities by their names](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
+- [X] [2024.11.09]🎯📢Introducing the [LightRAG Gui](https://lightrag-gui.streamlit.app), which allows you to insert, query, visualize, and download LightRAG knowledge.
+- [X] [2024.11.04]🎯📢You can now [use Neo4J for Storage](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#using-neo4j-for-storage).
+- [X] [2024.10.29]🎯📢LightRAG now supports multiple file types, including PDF, DOC, PPT, and CSV via `textract`.
+- [X] [2024.10.20]🎯📢We've added a new feature to LightRAG: Graph Visualization.
+- [X] [2024.10.18]🎯📢We've added a link to a [LightRAG Introduction Video](https://youtu.be/oageL-1I0GE). Thanks to the author!
+- [X] [2024.10.17]🎯📢We have created a [Discord channel](https://discord.gg/yF2MmDJyGJ)! Welcome to join for sharing and discussions! 🎉🎉
+- [X] [2024.10.16]🎯📢LightRAG now supports [Ollama models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
+- [X] [2024.10.15]🎯📢LightRAG now supports [Hugging Face models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
 
 <details>
   <summary style="font-size: 1.4em; font-weight: bold; cursor: pointer; display: list-item;">
@@ -194,7 +189,7 @@ For a streaming response implementation example, please see `examples/lightrag_o
 
 **Note 2**: Only `lightrag_openai_demo.py` and `lightrag_openai_compatible_demo.py` are officially supported sample codes. Other sample files are community contributions that haven't undergone full testing and optimization.
 
-## Programming with LightRAG Core
+## Programing with LightRAG Core
 
 > If you would like to integrate LightRAG into your project, we recommend utilizing the REST API provided by the LightRAG Server. LightRAG Core is typically intended for embedded applications or for researchers who wish to conduct studies and evaluations.
 
@@ -565,4 +560,6 @@ setup_logger("lightrag", level="INFO")
 
 async def initialize_rag():
     rag = LightRAG(
-        working_dir="your/path
+        working_dir="your/path",
+        llm_model_func=llama_index_complete_if_cache,  # LlamaIndex-compatible completion function
+        embedding_func=EmbeddingFunc(    # Llama

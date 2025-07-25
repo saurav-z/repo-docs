@@ -1,5 +1,6 @@
-<!-- MANPAGE: BEGIN EXCLUDED SECTION -->
-<div align="center">
+# yt-dlp: The Ultimate Command-Line Video and Audio Downloader
+
+Easily download your favorite videos and music from thousands of sites with yt-dlp, the powerful command-line tool that's a fork of youtube-dl.  [Explore the original repository](https://github.com/yt-dlp/yt-dlp).
 
 [![YT-DLP](https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg)](#readme)
 
@@ -13,90 +14,56 @@
 [![Commits](https://img.shields.io/github/commit-activity/m/yt-dlp/yt-dlp?label=commits&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/commits "Commit History")
 [![Last Commit](https://img.shields.io/github/last-commit/yt-dlp/yt-dlp/master?label=&style=for-the-badge&display_timestamp=committer)](https://github.com/yt-dlp/yt-dlp/pulse/monthly "Last activity")
 
-</div>
-<!-- MANPAGE: END EXCLUDED SECTION -->
-
-# yt-dlp: Your Go-To Command-Line Video Downloader
-
-yt-dlp is a powerful, feature-rich command-line program for downloading audio and video from thousands of websites. It's a maintained fork of youtube-dl, offering enhanced features and improved performance. 
 
 **Key Features:**
 
-*   **Wide Site Support:**  Download from [thousands of sites](supportedsites.md), including YouTube, Vimeo, and many more.
-*   **Format Selection:**  Choose your preferred video and audio formats with flexible filtering and sorting options.
-*   **Playlist and Channel Downloads:** Easily download entire playlists or channels.
+*   **Wide Site Support:** Download from thousands of video and audio streaming sites ([See Supported Sites](supportedsites.md)).
+*   **Format Selection:** Easily choose your preferred video and audio formats, including best quality.
+*   **Playlist and Channel Downloads:** Download entire playlists and channels with ease.
 *   **Subtitle Support:** Download and embed subtitles in various formats.
-*   **Metadata Handling:**  Add or modify video metadata, including titles, descriptions, and thumbnails.
-*   **Post-Processing:** Convert videos to audio, embed subtitles and thumbnails, and more.
-*   **SponsorBlock Integration:**  Automatically remove or mark sponsor segments in YouTube videos using the SponsorBlock API.
-*   **Browser Cookie Support:** Easily import cookies from your web browsers for authenticated downloads.
-*   **Plugins**: Extend the functionality via extractor and post-processor plugins.
-*   **Cross-Platform:** Works on Windows, macOS, and Linux.
-*   **Self-Updating**: Keep yt-dlp up-to-date with a built-in update function.
-
-[Click here to visit the original repository](https://github.com/yt-dlp/yt-dlp)
-
-## Table of Contents
-
-*   [Installation](#installation)
-*   [Usage and Options](#usage-and-options)
-*   [Configuration](#configuration)
-*   [Output Template](#output-template)
-*   [Format Selection](#format-selection)
-*   [Modifying Metadata](#modifying-metadata)
-*   [Extractor Arguments](#extractor-arguments)
-*   [Plugins](#plugins)
-*   [Embedding yt-dlp](#embedding-yt-dlp)
-*   [Changes from youtube-dl](#changes-from-youtube-dl)
-*   [Contributing](#contributing)
-*   [Wiki](#wiki)
+*   **Metadata Handling:** Add and modify video metadata for better organization.
+*   **Post-Processing:** Convert videos to audio, embed thumbnails, and more using FFmpeg.
+*   **SponsorBlock Integration:** Automatically skip sponsored segments in YouTube videos.
+*   **Browser Cookie Import:**  Import cookies from your browser for authenticated downloads.
+*   **Customizable Output:**  Flexible output templates allow for customized file naming and organization.
+*   **Regular Updates:** Stay up-to-date with frequent updates and new feature additions.
 
 ## Installation
 
-You can install yt-dlp using [the binaries](#release-files), [pip](https://pypi.org/project/yt-dlp) or one using a third-party package manager. See [the wiki](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for detailed instructions
+yt-dlp can be installed via binaries, pip, or a third-party package manager. See the [wiki](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for detailed instructions.
 
-<!-- MANPAGE: BEGIN EXCLUDED SECTION -->
-[![Windows](https://img.shields.io/badge/-Windows_x64-blue.svg?style=for-the-badge&logo=windows)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)
-[![Unix](https://img.shields.io/badge/-Linux/BSD-red.svg?style=for-the-badge&logo=linux)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp)
-[![MacOS](https://img.shields.io/badge/-MacOS-lightblue.svg?style=for-the-badge&logo=apple)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos)
-[![PyPI](https://img.shields.io/badge/-PyPI-blue.svg?logo=pypi&labelColor=555555&style=for-the-badge)](https://pypi.org/project/yt-dlp)
-[![Source Tarball](https://img.shields.io/badge/-Source_tar-green.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz)
-[![Other variants](https://img.shields.io/badge/-Other-grey.svg?style=for-the-badge)](#release-files)
-[![All versions](https://img.shields.io/badge/-All_Versions-lightgrey.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/releases)
-<!-- MANPAGE: END EXCLUDED SECTION -->
+### Installation Options:
 
+*   **Binaries**: Download platform-specific executables directly for Windows, macOS, and Linux.
+*   **PyPI**: Install using `pip install yt-dlp`.
+*   **Package Managers**: Install via various third-party package managers.
 
-## RELEASE FILES
+### Release Files:
 
 #### Recommended
-
-File|Description
-:---|:---
-[yt-dlp](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp)|Platform-independent [zipimport](https://docs.python.org/3/library/zipimport.html) binary. Needs Python (recommended for **Linux/BSD**)
-[yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)|Windows (Win8+) standalone x64 binary (recommended for **Windows**)
-[yt-dlp_macos](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos)|Universal MacOS (10.15+) standalone executable (recommended for **MacOS**)
-
+| File | Description |
+|---|---|
+| [yt-dlp](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp) | Platform-independent zipimport binary. Needs Python (recommended for **Linux/BSD**) |
+| [yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe) | Windows (Win8+) standalone x64 binary (recommended for **Windows**) |
+| [yt-dlp_macos](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos) | Universal MacOS (10.15+) standalone executable (recommended for **MacOS**) |
 #### Alternatives
-
-File|Description
-:---|:---
-[yt-dlp_x86.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_x86.exe)|Windows (Win8+) standalone x86 (32-bit) binary
-[yt-dlp_linux](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux)|Linux standalone x64 binary
-[yt-dlp_linux_armv7l](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_armv7l)|Linux standalone armv7l (32-bit) binary
-[yt-dlp_linux_aarch64](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_aarch64)|Linux standalone aarch64 (64-bit) binary
-[yt-dlp_win.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_win.zip)|Unpackaged Windows executable (no auto-update)
-[yt-dlp_macos.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos.zip)|Unpackaged MacOS (10.15+) executable (no auto-update)
-[yt-dlp_macos_legacy](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos_legacy)|MacOS (10.9+) standalone x64 executable
-
+| File | Description |
+|---|---|
+| [yt-dlp_x86.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_x86.exe) | Windows (Win8+) standalone x86 (32-bit) binary |
+| [yt-dlp_linux](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux) | Linux standalone x64 binary |
+| [yt-dlp_linux_armv7l](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_armv7l) | Linux standalone armv7l (32-bit) binary |
+| [yt-dlp_linux_aarch64](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_aarch64) | Linux standalone aarch64 (64-bit) binary |
+| [yt-dlp_win.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_win.zip) | Unpackaged Windows executable (no auto-update) |
+| [yt-dlp_macos.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos.zip) | Unpackaged MacOS (10.15+) executable (no auto-update) |
+| [yt-dlp_macos_legacy](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos_legacy) | MacOS (10.9+) standalone x64 executable |
 #### Misc
-
-File|Description
-:---|:---
-[yt-dlp.tar.gz](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz)|Source tarball
-[SHA2-512SUMS](https://github.com/yt-dlp/yt-dlp/releases/latest/download/SHA2-512SUMS)|GNU-style SHA512 sums
-[SHA2-512SUMS.sig](https://github.com/yt-dlp/yt-dlp/releases/latest/download/SHA2-512SUMS.sig)|GPG signature file for SHA512 sums
-[SHA2-256SUMS](https://github.com/yt-dlp/yt-dlp/releases/latest/download/SHA2-256SUMS)|GNU-style SHA256 sums
-[SHA2-256SUMS.sig](https://github.com/yt-dlp/yt-dlp/releases/latest/download/SHA2-256SUMS.sig)|GPG signature file for SHA256 sums
+| File | Description |
+|---|---|
+| [yt-dlp.tar.gz](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz) | Source tarball |
+| [SHA2-512SUMS](https://github.com/yt-dlp/yt-dlp/releases/latest/download/SHA2-512SUMS) | GNU-style SHA512 sums |
+| [SHA2-512SUMS.sig](https://github.com/yt-dlp/yt-dlp/releases/latest/download/SHA2-512SUMS.sig) | GPG signature file for SHA512 sums |
+| [SHA2-256SUMS](https://github.com/yt-dlp/yt-dlp/releases/latest/download/SHA2-256SUMS) | GNU-style SHA256 sums |
+| [SHA2-256SUMS.sig](https://github.com/yt-dlp/yt-dlp/releases/latest/download/SHA2-256SUMS.sig) | GPG signature file for SHA256 sums |
 
 The public key that can be used to verify the GPG signatures is [available here](https://github.com/yt-dlp/yt-dlp/blob/master/public.key)
 Example usage:
@@ -105,145 +72,13 @@ curl -L https://github.com/yt-dlp/yt-dlp/raw/master/public.key | gpg --import
 gpg --verify SHA2-256SUMS.sig SHA2-256SUMS
 gpg --verify SHA2-512SUMS.sig SHA2-512SUMS
 ```
-<!-- MANPAGE: END EXCLUDED SECTION -->
 
 **Note**: The manpages, shell completion (autocomplete) files etc. are available inside the [source tarball](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz)
 
-## UPDATE
-You can use `yt-dlp -U` to update if you are using the [release binaries](#release-files)
 
-If you [installed with pip](https://github.com/yt-dlp/yt-dlp/wiki/Installation#with-pip), simply re-run the same command that was used to install the program
-
-For other third-party package managers, see [the wiki](https://github.com/yt-dlp/yt-dlp/wiki/Installation#third-party-package-managers) or refer to their documentation
-
-<a id="update-channels"></a>
-
-There are currently three release channels for binaries: `stable`, `nightly` and `master`.
-
-* `stable` is the default channel, and many of its changes have been tested by users of the `nightly` and `master` channels.
-* The `nightly` channel has releases scheduled to build every day around midnight UTC, for a snapshot of the project's new patches and changes. This is the **recommended channel for regular users** of yt-dlp. The `nightly` releases are available from [yt-dlp/yt-dlp-nightly-builds](https://github.com/yt-dlp/yt-dlp-nightly-builds/releases) or as development releases of the `yt-dlp` PyPI package (which can be installed with pip's `--pre` flag).
-* The `master` channel features releases that are built after each push to the master branch, and these will have the very latest fixes and additions, but may also be more prone to regressions. They are available from [yt-dlp/yt-dlp-master-builds](https://github.com/yt-dlp/yt-dlp-master-builds/releases).
-
-When using `--update`/`-U`, a release binary will only update to its current channel.
-`--update-to CHANNEL` can be used to switch to a different channel when a newer version is available. `--update-to [CHANNEL@]TAG` can also be used to upgrade or downgrade to specific tags from a channel.
-
-You may also use `--update-to <repository>` (`<owner>/<repository>`) to update to a channel on a completely different repository. Be careful with what repository you are updating to though, there is no verification done for binaries from different repositories.
-
-Example usage:
-
-* `yt-dlp --update-to master` switch to the `master` channel and update to its latest release
-* `yt-dlp --update-to stable@2023.07.06` upgrade/downgrade to release to `stable` channel tag `2023.07.06`
-* `yt-dlp --update-to 2023.10.07` upgrade/downgrade to tag `2023.10.07` if it exists on the current channel
-* `yt-dlp --update-to example/yt-dlp@2023.09.24` upgrade/downgrade to the release from the `example/yt-dlp` repository, tag `2023.09.24`
-
-**Important**: Any user experiencing an issue with the `stable` release should install or update to the `nightly` release before submitting a bug report:
-```
-# To update to nightly from stable executable/binary:
-yt-dlp --update-to nightly
-
-# To install nightly with pip:
-python3 -m pip install -U --pre "yt-dlp[default]"
-```
-
-## DEPENDENCIES
-Python versions 3.9+ (CPython) and 3.10+ (PyPy) are supported. Other versions and implementations may or may not work correctly.
-
-<!-- Python 3.5+ uses VC++14 and it is already embedded in the binary created
-<!x-- https://www.microsoft.com/en-us/download/details.aspx?id=26999 --x>
-On Windows, [Microsoft Visual C++ 2010 SP1 Redistributable Package (x86)](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe) is also necessary to run yt-dlp. You probably already have this, but if the executable throws an error due to missing `MSVCR100.dll` you need to install it manually.
--->
-
-While all the other dependencies are optional, `ffmpeg` and `ffprobe` are highly recommended
-
-### Strongly recommended
-
-* [**ffmpeg** and **ffprobe**](https://www.ffmpeg.org) - Required for [merging separate video and audio files](#format-selection), as well as for various [post-processing](#post-processing-options) tasks. License [depends on the build](https://www.ffmpeg.org/legal.html)
-
-    There are bugs in ffmpeg that cause various issues when used alongside yt-dlp. Since ffmpeg is such an important dependency, we provide [custom builds](https://github.com/yt-dlp/FFmpeg-Builds#ffmpeg-static-auto-builds) with patches for some of these issues at [yt-dlp/FFmpeg-Builds](https://github.com/yt-dlp/FFmpeg-Builds). See [the readme](https://github.com/yt-dlp/FFmpeg-Builds#patches-applied) for details on the specific issues solved by these builds
-
-    **Important**: What you need is ffmpeg *binary*, **NOT** [the Python package of the same name](https://pypi.org/project/ffmpeg)
-
-### Networking
-* [**certifi**](https://github.com/certifi/python-certifi)\* - Provides Mozilla's root certificate bundle. Licensed under [MPLv2](https://github.com/certifi/python-certifi/blob/master/LICENSE)
-* [**brotli**](https://github.com/google/brotli)\* or [**brotlicffi**](https://github.com/python-hyper/brotlicffi) - [Brotli](https://en.wikipedia.org/wiki/Brotli) content encoding support. Both licensed under MIT <sup>[1](https://github.com/google/brotli/blob/master/LICENSE) [2](https://github.com/python-hyper/brotlicffi/blob/master/LICENSE) </sup>
-* [**websockets**](https://github.com/aaugustin/websockets)\* - For downloading over websocket. Licensed under [BSD-3-Clause](https://github.com/aaugustin/websockets/blob/main/LICENSE)
-* [**requests**](https://github.com/psf/requests)\* - HTTP library. For HTTPS proxy and persistent connections support. Licensed under [Apache-2.0](https://github.com/psf/requests/blob/main/LICENSE)
-
-#### Impersonation
-
-The following provide support for impersonating browser requests. This may be required for some sites that employ TLS fingerprinting.
-
-* [**curl_cffi**](https://github.com/lexiforest/curl_cffi) (recommended) - Python binding for [curl-impersonate](https://github.com/lexiforest/curl-impersonate). Provides impersonation targets for Chrome, Edge and Safari. Licensed under [MIT](https://github.com/lexiforest/curl_cffi/blob/main/LICENSE)
-  * Can be installed with the `curl-cffi` group, e.g. `pip install "yt-dlp[default,curl-cffi]"`
-  * Currently included in `yt-dlp.exe`, `yt-dlp_linux` and `yt-dlp_macos` builds
-
-
-### Metadata
-
-* [**mutagen**](https://github.com/quodlibet/mutagen)\* - For `--embed-thumbnail` in certain formats. Licensed under [GPLv2+](https://github.com/quodlibet/mutagen/blob/master/COPYING)
-* [**AtomicParsley**](https://github.com/wez/atomicparsley) - For `--embed-thumbnail` in `mp4`/`m4a` files when `mutagen`/`ffmpeg` cannot. Licensed under [GPLv2+](https://github.com/wez/atomicparsley/blob/master/COPYING)
-* [**xattr**](https://github.com/xattr/xattr), [**pyxattr**](https://github.com/iustin/pyxattr) or [**setfattr**](http://savannah.nongnu.org/projects/attr) - For writing xattr metadata (`--xattr`) on **Mac** and **BSD**. Licensed under [MIT](https://github.com/xattr/xattr/blob/master/LICENSE.txt), [LGPL2.1](https://github.com/iustin/pyxattr/blob/master/COPYING) and [GPLv2+](http://git.savannah.nongnu.org/cgit/attr.git/tree/doc/COPYING) respectively
-
-### Misc
-
-* [**pycryptodomex**](https://github.com/Legrandin/pycryptodome)\* - For decrypting AES-128 HLS streams and various other data. Licensed under [BSD-2-Clause](https://github.com/Legrandin/pycryptodomex/blob/master/LICENSE.rst)
-* [**phantomjs**](https://github.com/ariya/phantomjs) - Used in extractors where javascript needs to be run. Licensed under [BSD-3-Clause](https://github.com/ariya/phantomjs/blob/master/LICENSE.BSD)
-* [**secretstorage**](https://github.com/mitya57/secretstorage)\* - For `--cookies-from-browser` to access the **Gnome** keyring while decrypting cookies of **Chromium**-based browsers on **Linux**. Licensed under [BSD-3-Clause](https://github.com/mitya57/secretstorage/blob/master/LICENSE)
-* Any external downloader that you want to use with `--downloader`
-
-### Deprecated
-
-* [**avconv** and **avprobe**](https://www.libav.org) - Now **deprecated** alternative to ffmpeg. License [depends on the build](https://libav.org/legal)
-* [**sponskrub**](https://github.com/faissaloo/SponSkrub) - For using the now **deprecated** [sponskrub options](#sponskrub-options). Licensed under [GPLv3+](https://github.com/faissaloo/SponSkrub/blob/master/LICENCE.md)
-* [**rtmpdump**](http://rtmpdump.mplayerhq.hu) - For downloading `rtmp` streams. ffmpeg can be used instead with `--downloader ffmpeg`. Licensed under [GPLv2+](http://rtmpdump.mplayerhq.hu)
-* [**mplayer**](http://mplayerhq.hu/design7/info.html) or [**mpv**](https://mpv.io) - For downloading `rstp`/`mms` streams. ffmpeg can be used instead with `--downloader ffmpeg`. Licensed under [GPLv2+](https://github.com/mpv-player/mpv/blob/master/Copyright)
-
-To use or redistribute the dependencies, you must agree to their respective licensing terms.
-
-The standalone release binaries are built with the Python interpreter and the packages marked with **\*** included.
-
-If you do not have the necessary dependencies for a task you are attempting, yt-dlp will warn you. All the currently available dependencies are visible at the top of the `--verbose` output
+## Updating yt-dlp
+Keep yt-dlp up-to-date with the latest features and fixes!  Use `yt-dlp -U` to update if you're using the release binaries. If you installed with `pip`, simply re-run the same command used to install.
 
 ## Usage and Options
 
-Run `yt-dlp [OPTIONS] [URL...]` to download videos.  Use `yt-dlp -h` for a full list of options.
-
-## Configuration
-
-yt-dlp can be configured through configuration files.  See the [CONFIGURATION](#configuration) section for details.
-
-## Output Template
-
-Customize your output filenames with the `-o` (or `--output`) option and output templates.  See the [OUTPUT TEMPLATE](#output-template) section for details.
-
-## Format Selection
-
-Specify the video format with the `-f` (or `--format`) option. Use `--list-formats` (-F) to see available formats.  See the [FORMAT SELECTION](#format-selection) section for details.
-
-## Modifying Metadata
-
-Modify video metadata using `--parse-metadata` and `--replace-in-metadata`. See the [MODIFYING METADATA](#modifying-metadata) section for details.
-
-## Extractor Arguments
-
-Pass arguments to specific extractors using `--extractor-args`. See the [EXTRACTOR ARGUMENTS](#extractor-arguments) section for details.
-
-## Plugins
-
-Extend yt-dlp's functionality with plugins. See the [PLUGINS](#plugins) section for details.
-
-## Embedding yt-dlp
-
-Integrate yt-dlp into your Python programs. See the [EMBEDDING YT-DLP](#embedding-yt-dlp) section for details.
-
-## Changes from youtube-dl
-
-yt-dlp offers significant improvements and new features compared to youtube-dl.  See the [CHANGES FROM YOUTUBE-DL](#changes-from-youtube-dl) section for details.
-
-## Contributing
-
-Contribute to the project by reporting issues or submitting code. See [CONTRIBUTING.md](CONTRIBUTING.md#contributing-to-yt-dlp) for guidelines.
-
-## WIKI
-
-Find more detailed information and FAQs in the [Wiki](https://github.com/yt-dlp/yt-dlp/wiki).
+Explore a comprehensive list of [yt-dlp's command-line options in the documentation](https://github.com/yt-dlp/yt-dlp#usage-and-options).

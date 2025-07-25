@@ -22,23 +22,42 @@
     <img src="https://github.com/axolotl-ai-cloud/axolotl/actions/workflows/multi-gpu-e2e.yml/badge.svg" alt="multigpu-semi-weekly tests">
 </p>
 
-## Axolotl: Fine-tune and Optimize AI Models with Ease
+## Axolotl: The Ultimate Toolkit for AI Model Post-Training
 
-Axolotl simplifies the process of post-training your AI models, offering comprehensive support for various architectures and training methods.  Learn more on the [original repository](https://github.com/axolotl-ai-cloud/axolotl).
+Axolotl is your all-in-one solution for streamlining the fine-tuning, optimization, and deployment of large language models and other AI models, offering a comprehensive and efficient post-training experience.  [Get started with Axolotl](https://github.com/axolotl-ai-cloud/axolotl)!
 
-**Key Features:**
+## Key Features
 
-*   **Broad Model Support**: Train models like LLaMA, Mistral, Mixtral, Pythia, and others with ease, all compatible with Hugging Face transformers.
-*   **Diverse Training Methods**:  Choose from a wide range of techniques including full fine-tuning, LoRA, QLoRA, GPTQ, QAT, Preference Tuning (DPO, IPO, KTO, ORPO), RL (GRPO), Multimodal, and Reward Modelling (RM) / Process Reward Modelling (PRM).
-*   **Simplified Configuration**:  Use a single YAML file for seamless configuration across dataset preprocessing, training, evaluation, quantization, and inference.
-*   **Performance Optimization**: Benefit from cutting-edge optimizations such as Multipacking, Flash Attention, Xformers, Flex Attention, Liger Kernel, Cut Cross Entropy, Sequence Parallelism (SP), LoRA optimizations, and Multi-GPU training (FSDP1, FSDP2, DeepSpeed), and Multi-node training (Torchrun, Ray).
-*   **Flexible Data Handling**: Load datasets from local files, Hugging Face Hub, and cloud storage (S3, Azure, GCP, OCI).
-*   **Cloud-Ready**:  Leverage pre-built Docker images and PyPI packages for easy deployment on cloud platforms and local hardware.
+*   **Model Support**: Train a wide range of models including LLaMA, Mistral, Mixtral, Pythia, and more; compatible with HuggingFace transformers causal language models.
+*   **Training Methods**: Supports Full fine-tuning, LoRA, QLoRA, GPTQ, QAT, Preference Tuning (DPO, IPO, KTO, ORPO), RL (GRPO), Multimodal, and Reward Modelling (RM) / Process Reward Modelling (PRM).
+*   **Simplified Configuration**:  Use a single YAML file for dataset preprocessing, training, evaluation, quantization, and inference.
+*   **Performance Optimizations**:
+    *   Multipacking
+    *   Flash Attention
+    *   Xformers
+    *   Flex Attention
+    *   Liger Kernel
+    *   Cut Cross Entropy
+    *   Sequence Parallelism (SP)
+    *   LoRA optimizations
+    *   Multi-GPU training (FSDP1, FSDP2, DeepSpeed)
+    *   Multi-node training (Torchrun, Ray)
+*   **Flexible Data Handling**: Load datasets from local storage, Hugging Face Hub, and cloud providers (S3, Azure, GCP, OCI).
+*   **Cloud-Ready**: Ready to deploy with Docker images and PyPI packages.
 
-## 🚀 Quick Start
+## Latest Updates
+*   2025/06: Magistral with mistral-common tokenizer support
+*   2025/05: Quantization Aware Training (QAT) support
+*   2025/04: Llama 4 support
+*   2025/03: Sequence Parallelism (SP) support
+*   2025/03: Fine-tuning Multimodal models (Beta)
+*   2025/02: LoRA optimizations for memory and speed improvements.
+*   2025/02: GRPO support
+*   2025/01: Reward Modelling / Process Reward Modelling fine-tuning support
 
-**Requirements**:
+## Quick Start
 
+### Requirements
 *   NVIDIA GPU (Ampere or newer for `bf16` and Flash Attention) or AMD GPU
 *   Python 3.11
 *   PyTorch ≥2.6.0
@@ -58,12 +77,9 @@ axolotl fetch deepspeed_configs  # OPTIONAL
 
 #### Using Docker
 
-Installing with Docker can be less error prone than installing in your own environment.
 ```bash
 docker run --gpus '"all"' --rm -it axolotlai/axolotl:main-latest
 ```
-
-Other installation approaches are described [here](https://docs.axolotl.ai/docs/installation.html).
 
 ### Your First Fine-tune
 
@@ -78,41 +94,37 @@ axolotl fetch examples --dest path/to/folder
 axolotl train examples/llama-3/lora-1b.yml
 ```
 
-That's it! Check out our [Getting Started Guide](https://docs.axolotl.ai/docs/getting-started.html) for a more detailed walkthrough.
+## Documentation
 
-## 📚 Documentation
-
-*   [Installation Options](https://docs.axolotl.ai/docs/installation.html) - Detailed setup instructions for different environments
-*   [Configuration Guide](https://docs.axolotl.ai/docs/config-reference.html) - Full configuration options and examples
+*   [Installation Options](https://docs.axolotl.ai/docs/installation.html) - Detailed setup instructions
+*   [Configuration Guide](https://docs.axolotl.ai/docs/config-reference.html) - Configuration options and examples
 *   [Dataset Loading](https://docs.axolotl.ai/docs/dataset_loading.html) - Loading datasets from various sources
 *   [Dataset Guide](https://docs.axolotl.ai/docs/dataset-formats/) - Supported formats and how to use them
 *   [Multi-GPU Training](https://docs.axolotl.ai/docs/multi-gpu.html)
 *   [Multi-Node Training](https://docs.axolotl.ai/docs/multi-node.html)
 *   [Multipacking](https://docs.axolotl.ai/docs/multipack.html)
 *   [API Reference](https://docs.axolotl.ai/docs/api/) - Auto-generated code documentation
-*   [FAQ](https://docs.axolotl.ai/docs/faq.html) - Frequently asked questions
+*   [FAQ](https://docs.axolotl.ai/docs/faq.html)
 
-## 🤝 Getting Help
+## Getting Help
 
-*   Join our [Discord community](https://discord.gg/HhrNrHJPRb) for support
-*   Check out our [Examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/) directory
-*   Read our [Debugging Guide](https://docs.axolotl.ai/docs/debugging.html)
-*   Need dedicated support? Please contact [✉️wing@axolotl.ai](mailto:wing@axolotl.ai) for options
+*   [Discord community](https://discord.gg/HhrNrHJPRb)
+*   [Examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/) directory
+*   [Debugging Guide](https://docs.axolotl.ai/docs/debugging.html)
+*   Contact [✉️wing@axolotl.ai](mailto:wing@axolotl.ai) for dedicated support
 
-## 🌟 Contributing
+## Contributing
 
-Contributions are welcome! Please see our [Contributing Guide](https://github.com/axolotl-ai-cloud/axolotl/blob/main/.github/CONTRIBUTING.md) for details.
+See our [Contributing Guide](https://github.com/axolotl-ai-cloud/axolotl/blob/main/.github/CONTRIBUTING.md).
 
-## ❤️ Sponsors
+## Sponsors
 
-Thank you to our sponsors who help make Axolotl possible:
+Thank you to our sponsors:
 
-*   [Modal](https://www.modal.com?utm_source=github&utm_medium=github&utm_campaign=axolotl) - Modal lets you run
-    jobs in the cloud, by just writing a few lines of Python. Customers use Modal to deploy Gen AI models at large scale,
-    fine-tune large language models, run protein folding simulations, and much more.
+*   [Modal](https://www.modal.com?utm_source=github&utm_medium=github&utm_campaign=axolotl) - Run jobs in the cloud using Python.
 
-Interested in sponsoring? Contact us at [wing@axolotl.ai](mailto:wing@axolotl.ai)
+Interested in sponsoring? Contact [wing@axolotl.ai](mailto:wing@axolotl.ai)
 
-## 📜 License
+## License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.

@@ -1,25 +1,26 @@
-# ZSim: Calculate Your Zenless Zone Zero Team Damage!
+# ZSim: Calculate Zenless Zone Zero Damage with Ease
 
-Tired of guessing team damage in Zenless Zone Zero? ZSim is a powerful, **automatic damage calculator** that analyzes your team's performance. Check out the [original ZSim repository](https://github.com/ZZZSimulator/ZSim) for more details.
+Tired of manual calculations? **ZSim is your all-in-one damage calculator for Zenless Zone Zero, providing automated and insightful team damage analysis.**
+
+[View the original repository on GitHub](https://github.com/ZZZSimulator/ZSim)
 
 ![ZSim Logo](docs/img/zsim成图.svg)
+
 ![ZSim Project Group Logo](docs/img/横板logo成图.png)
 
-## Key Features
+## Key Features:
 
-*   **Automated Damage Calculation:**  No manual skill sequence input is required (APL based).
-*   **Team Composition Analysis:** Calculate total damage output based on your team's characters and equipment.
-*   **Visual Reports:** Generate charts and tables for easy understanding of damage distribution.
-*   **Detailed Character Information:**  View individual damage breakdowns for each agent.
-*   **Equipment & APL Customization:**  Easily edit character equipment and APL (Action Priority List) code.
+*   **Automated Damage Calculation:** Automatically simulates team actions based on your chosen APL (Action Priority List), eliminating the need for manual skill sequence input.
+*   **Team Composition Analysis:** Calculates total damage output for your selected team composition.
+*   **Visual Reports:** Generates interactive charts and tables to visualize damage data, providing detailed insights for each character.
+*   **Agent Customization:** Easily edit and configure your agents' equipment for accurate simulations.
+*   **APL Editing:** Customize or use predefined Action Priority Lists to fine-tune your simulations.
 
 ## Installation
 
-### Prerequisites: Install UV (if you haven't already)
+### Prerequisites: Install UV (Universal Virtual Environment)
 
-`UV` is used to create virtual env, you can use it to run `zsim`.
-
-Choose your installation method based on your operating system:
+UV is a fast and efficient virtual environment and package manager.  Choose your operating system below:
 
 **macOS or Linux:**
 
@@ -33,50 +34,51 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 winget install --id=astral-sh.uv  -e
 ```
 
-**Older Windows versions:**
+**Older Windows Versions:**
 
 ```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-**Using pip:**
+**Alternative (using pip):**
 
 ```bash
 pip install uv
 ```
 
-For more detailed instructions, consult the official UV installation guide: [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)
+For more detailed installation instructions for UV, visit: [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)
 
 ### Install ZSim
 
-1.  Open a terminal in the project's directory.
-2.  Create a virtual environment and install the ZSim package:
+1.  Open your terminal and navigate to the project directory.
+2.  Create a virtual environment and install ZSim:
 
     ```bash
     uv venv
-    uv pip install .
+    uv pip install .  # Install from the current directory ('.')
     ```
 
-## Running ZSim
+## Run ZSim
 
-1.  Open a terminal from any location.
-2.  Run the damage calculator using the command:
+After installation, you can run ZSim from any directory:
 
-    ```bash
-    zsim run
-    ```
+```bash
+zsim run
+```
 
-    or if you didn't install the package:
+**Alternative Run (without installation):**
 
-    ```bash
-    uv run ./zsim/run.py run
-    ```
-    or
+You can also run ZSim directly using `uv`:
 
-    ```bash
-    uv run zsim run
-    ```
+```bash
+uv run ./zsim/run.py run
+```
 
-## Development
+```bash
+# or also:
+uv run zsim run
+```
 
-See the [Develop Guide](https://github.com/ZZZSimulator/ZSim/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97-Develop-Guide) for details on contributing.
+## Further Development
+
+For information on contributing and future development, please refer to the [development guide](https://github.com/ZZZSimulator/ZSim/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97-Develop-Guide).

@@ -1,6 +1,6 @@
 <div align="center">
   <img src="docs/source/_static/img/et-logo.png" alt="ExecuTorch Logo" width="200">
-  <h1 align="center">ExecuTorch: On-Device AI for the Next Generation</h1>
+  <h1>ExecuTorch: The Premier On-Device AI Framework</h1>
 </div>
 
 <div align="center">
@@ -11,40 +11,44 @@
   <hr>
 </div>
 
-ExecuTorch is a powerful, open-source framework enabling seamless on-device AI experiences across a wide range of platforms and applications.  **[View the source on GitHub](https://github.com/pytorch/executorch)**
+ExecuTorch, developed by PyTorch, is a powerful, open-source framework designed to bring high-performance AI to your devices.  **(Visit the original repository on [GitHub](https://github.com/pytorch/executorch)).**
 
-**Key Features of ExecuTorch:**
+## Key Features of ExecuTorch
 
-*   **Cross-Platform Support:** Runs on iOS, macOS (ARM64), Android, Linux, and Microcontrollers, offering unparalleled portability.
-*   **Broad Hardware Acceleration:**  Leverages the power of Apple, Arm, Cadence, MediaTek, NXP, OpenVINO, Qualcomm, Vulkan, and XNNPACK hardware for optimized performance.
-*   **End-to-End Solution:**  From model authoring with PyTorch to on-device deployment, ExecuTorch simplifies the entire AI pipeline.
-*   **Model Compatibility:** Supports diverse model types, including LLMs (Large Language Models), CV (Computer Vision), ASR (Automatic Speech Recognition), and TTS (Text to Speech).
-*   **High Performance:** Delivers a fast and efficient user experience by utilizing hardware acceleration and a lightweight runtime.
-*   **Developer Productivity:** Offers a consistent toolchain for model conversion, debugging, and deployment, accelerating development cycles.
+*   **Wide Model Support:**  ExecuTorch supports a comprehensive range of models, including Large Language Models (LLMs), Computer Vision (CV), Automatic Speech Recognition (ASR), and Text-to-Speech (TTS) models.
+*   **Cross-Platform Compatibility:** Develop and deploy your AI models on diverse platforms:
+    *   **Operating Systems:** iOS, MacOS (ARM64), Android, Linux, and Microcontrollers.
+    *   **Hardware Acceleration:** Leverage leading hardware accelerators like Apple, Arm, Cadence, MediaTek, NXP, OpenVINO, Qualcomm, Vulkan, and XNNPACK.
+*   **Simplified Development:** Utilize the same toolchains and developer tools from PyTorch model authoring to deployment across various platforms.
+*   **Optimized Performance:** Experience a lightweight runtime optimized to utilize the full capabilities of CPUs, NPUs, and DSPs, ensuring a seamless and high-performance user experience.
+*   **Portability:** Deploy your models across a vast spectrum of devices, from high-end mobile phones to resource-constrained embedded systems and microcontrollers.
 
-**Why Choose ExecuTorch?**
+## Getting Started with ExecuTorch
 
-ExecuTorch empowers developers to build and deploy cutting-edge AI applications directly on devices, unlocking new possibilities for user experiences.  It is the engine behind many of Meta's on-device AI experiences, including applications on Facebook, Instagram, Meta Quest, Ray-Ban Meta Smart Glasses, and WhatsApp.
+Get up and running with ExecuTorch quickly using these resources:
 
-**Getting Started with ExecuTorch:**
+*   **Step-by-Step Tutorial:** Follow the [Getting Started Guide](https://pytorch.org/executorch/stable/getting-started.html) to set up ExecuTorch locally and deploy a model to a device.
+*   **Interactive Colab Notebook:** Experiment with ExecuTorch directly in your browser using this [Colab Notebook](https://colab.research.google.com/drive/1qpxrXC3YdJQzly3mRg-4ayYiOjC6rue3?usp=sharing).
+*   **LLM Examples:** Explore specific instructions for popular open-source LLMs such as [Llama](examples/models/llama/README.md), [Qwen 3](examples/models/qwen3/README.md), [Phi-4-mini](examples/models/phi_4_mini/README.md), and [Llava](examples/models/llava/README.md).
 
-*   **Step-by-Step Tutorial:** Follow the [getting started guide](https://pytorch.org/executorch/stable/getting-started.html) for local setup and device deployment.
-*   **Interactive Colab Notebook:**  Experiment with ExecuTorch using the [Colab Notebook](https://colab.research.google.com/drive/1qpxrXC3YdJQzly3mRg-4ayYiOjC6rue3?usp=sharing).
-*   **LLM Examples:** Explore pre-built examples for popular open-source LLMs such as [Llama](examples/models/llama/README.md), [Qwen 3](examples/models/qwen3/README.md), [Phi-4-mini](examples/models/phi_4_mini/README.md), and [Llava](examples/models/llava/README.md).
+## Feedback and Community
 
-**Engage with the Community:**
+We value your input!  Connect with the ExecuTorch community:
 
-*   **Discussion Board:** Share your feedback and ask questions on the [Discussion Board](https://github.com/pytorch/executorch/discussions).
-*   **Discord:** Join the community in real-time on [Discord](https://discord.gg/Dh43CKSAdc).
+*   **Discussion Board:** Share your ideas and report issues on the [Discussion Board](https://github.com/pytorch/executorch/discussions).
+*   **Discord:** Join our community and chat with us in real-time on [Discord](https://discord.gg/Dh43CKSAdc).
 
-**Contribute to ExecuTorch:**
+## Contributing to ExecuTorch
 
-*   Review the [contribution guidelines](CONTRIBUTING.md) to get started.
-*   Connect with the community on [Discord](https://discord.gg/Dh43CKSAdc).
+We encourage contributions! To get started:
 
-**Codebase Structure:**
-For details about the directory structure, refer to the [Codebase structure](CONTRIBUTING.md#codebase-structure) section of the [Contributing Guidelines](CONTRIBUTING.md).
+*   Review the [Contributing Guidelines](CONTRIBUTING.md)
+*   Chat with the team on [Discord](https://discord.gg/Dh43CKSAdc)
 
-**License:**
+## Directory Structure
 
-ExecuTorch is licensed under the BSD license.  See the [LICENSE](LICENSE) file for details.
+For details on the project's structure, refer to the [Codebase structure](CONTRIBUTING.md#codebase-structure) section of the [Contributing Guidelines](CONTRIBUTING.md).
+
+## License
+
+ExecuTorch is licensed under the BSD license. See the [LICENSE](LICENSE) file for details.

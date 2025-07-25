@@ -1,21 +1,28 @@
-# Agent S: Unleash AI-Powered Computer Automation
+# Agent S: Revolutionizing Computer Interaction with Autonomous AI Agents
 
-> **Agent S** is a cutting-edge framework for creating AI agents that can autonomously interact with computers, revolutionizing how we automate tasks and interact with digital environments. [Explore the Agent S Repository](https://github.com/simular-ai/Agent-S).
+Agent S is an open-source framework built to enable autonomous interaction with computers through Agent-Computer Interface, designed to learn from past experiences and perform complex tasks on your computer.
 
-## Key Features:
+[Original Repo](https://github.com/simular-ai/Agent-S)
 
-*   🤖 **Autonomous Computer Interaction:** Agent S enables AI agents to perform complex tasks on your computer without human intervention.
-*   🧠 **Compositional Generalist-Specialist Framework:** Leveraging a novel architecture, Agent S excels in a variety of tasks through modular design and expert systems.
-*   🖥️ **GUI-Based Automation:** Directly interacts with graphical user interfaces, allowing for broad application across different software and operating systems.
-*   🚀 **State-of-the-Art Performance:** Agent S2 achieves new state-of-the-art results on OSWorld, WindowsAgentArena, and AndroidWorld, outperforming existing solutions.
-*   🌍 **Cross-Platform Support:** Works on macOS, Windows, and Linux.
-*   🛠️ **Open Source & Accessible:** Available for free use and modification, making it a valuable tool for researchers and developers alike.
+*   **Compositional Design:** Agent S employs a generalist-specialist architecture for robust and adaptable computer use.
+*   **Open-Source and Accessible:** Built for developers and researchers, fostering innovation in AI agent technology.
+*   **State-of-the-Art Performance:** Outperforming existing Computer Use Agents (CUAs) like OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet.
+*   **GUI Interaction:**  Designed to directly interact with graphical user interfaces (GUIs).
+*   **Flexible Model Support:** Offers flexibility in selecting models from a variety of providers, including OpenAI, Anthropic, and others.
+
+## Key Features
+
+*   **Autonomous Computer Interaction:** Automates complex tasks on your computer.
+*   **Advanced Performance:** Achieves state-of-the-art results in benchmarks like OSWorld, WindowsAgentArena, and AndroidWorld.
+*   **Easy Setup:** Offers a straightforward installation process with support for different platforms.
+*   **Flexible LLM Integration:** Supports multiple LLM providers for diverse use cases.
+*   **Knowledge Base Integration:** Utilizes and continuously updates a knowledge base, enhancing performance.
 
 ## Updates
 
-*   **2025/07/07**: Agent S2 paper accepted to COLM 2025!
+*   **2025/07/07**: The [Agent S2 paper](https://arxiv.org/abs/2504.00906) is accepted to COLM 2025! See you in Montreal!
 *   **2025/04/01**: Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
-*   **2025/03/12**: Released Agent S2 and v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), achieving state-of-the-art performance in computer use agents (CUA).
+*   **2025/03/12**: Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
 *   **2025/01/22**: The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
 *   **2025/01/21**: Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
 *   **2024/12/05**: Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
@@ -32,6 +39,8 @@
 
 ## 💡 Introduction
 
+Agent S offers an innovative approach to computer interaction, allowing AI agents to autonomously learn and perform complex tasks.
+
 <p align="center">
     <img src="./images/agent_s2_teaser.png" width="800">
 </p>
@@ -41,6 +50,8 @@ Welcome to **Agent S**, an open-source framework designed to enable autonomous i
 Whether you're interested in AI, automation, or contributing to cutting-edge agent-based systems, we're excited to have you here!
 
 ## 🎯 Current Results
+
+Agent S2 sets a new standard in GUI interaction, achieving state-of-the-art results.
 
 <p align="center">
     <img src="./images/agent_s2_osworld_result.png" width="600">
@@ -129,14 +140,14 @@ Agent S works best with web-knowledge retrieval. To enable this feature, you nee
 
 3.  Rename the `sample.config.toml` file to `config.toml`. For Docker setups, you need only fill in the following fields:
 
-    -   `OPENAI`: Your OpenAI API key. **You only need to fill this if you wish to use OpenAI's models**.
-    -   `OLLAMA`: Your Ollama API URL. You should enter it as `http://host.docker.internal:PORT_NUMBER`. If you installed Ollama on port 11434, use `http://host.docker.internal:11434`. For other ports, adjust accordingly. **You need to fill this if you wish to use Ollama's models instead of OpenAI's**.
-    -   `GROQ`: Your Groq API key. **You only need to fill this if you wish to use Groq's hosted models**.
-    -   `ANTHROPIC`: Your Anthropic API key. **You only need to fill this if you wish to use Anthropic models**.
+    *   `OPENAI`: Your OpenAI API key. **You only need to fill this if you wish to use OpenAI's models**.
+    *   `OLLAMA`: Your Ollama API URL. You should enter it as `http://host.docker.internal:PORT_NUMBER`. If you installed Ollama on port 11434, use `http://host.docker.internal:11434`. For other ports, adjust accordingly. **You need to fill this if you wish to use Ollama's models instead of OpenAI's**.
+    *   `GROQ`: Your Groq API key. **You only need to fill this if you wish to use Groq's hosted models**.
+    *   `ANTHROPIC`: Your Anthropic API key. **You only need to fill this if you wish to use Anthropic models**.
 
         **Note**: You can change these after starting Perplexica from the settings dialog.
 
-    -   `SIMILARITY_MEASURE`: The similarity measure to use (This is filled by default; you can leave it as is if you are unsure about it.)
+    *   `SIMILARITY_MEASURE`: The similarity measure to use (This is filled by default; you can leave it as is if you are unsure about it.)
 
 4.  Ensure you are in the directory containing the `docker-compose.yaml` file and execute:
 
@@ -156,6 +167,8 @@ Agent S works best with web-knowledge retrieval. To enable this feature, you nee
 > ❗**Warning**❗: The agent will directly run python code to control your computer. Please use with care.
 
 ## 🚀 Usage
+
+Agent S is easily configurable and can be used through the CLI or directly through the Python SDK.
 
 > **Note**: Our best configuration uses Claude 3.7 with extended thinking and UI-TARS-72B-DPO. If you are unable to run UI-TARS-72B-DPO due to resource constraints, UI-TARS-7B-DPO can be used as a lighter alternative with minimal performance degradation.
 

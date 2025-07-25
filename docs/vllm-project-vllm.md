@@ -5,28 +5,33 @@
   </picture>
 </p>
 
-# vLLM: Fast and Easy LLM Serving for Everyone
+# vLLM: Fast and Easy LLM Serving
 
-vLLM is a powerful library for serving Large Language Models (LLMs) that provides exceptional speed, ease of use, and cost efficiency.  Check out the original repository [here](https://github.com/vllm-project/vllm).
+**vLLM empowers everyone with easy, fast, and cost-effective Large Language Model (LLM) inference and serving.**  Dive into the future of LLMs with this powerful and efficient open-source library, and explore the original repo [here](https://github.com/vllm-project/vllm).
 
-**Key Features:**
+## Key Features
 
-*   **Blazing-Fast Inference:** Achieves state-of-the-art serving throughput with optimized CUDA kernels and efficient memory management.
-*   **PagedAttention:** Revolutionizes memory management for LLMs, significantly improving performance.
-*   **Continuous Batching:** Dynamically batches incoming requests to maximize GPU utilization.
-*   **Quantization Support:** Supports GPTQ, AWQ, AutoRound, and INT4/INT8/FP8 quantization for reduced memory footprint and faster inference.
-*   **Flexible and Easy to Use:** Integrates seamlessly with popular Hugging Face models and offers a user-friendly OpenAI-compatible API server.
-*   **Distributed Inference:** Supports tensor, pipeline, data, and expert parallelism for scaling to larger models.
-*   **Wide Hardware Support:** Runs on NVIDIA GPUs, AMD CPUs/GPUs, Intel CPUs/GPUs, PowerPC CPUs, TPU, and AWS Neuron.
-*   **Model Compatibility:** Supports a wide range of open-source models, including Transformer-like LLMs (e.g., Llama), Mixture-of-Expert LLMs (e.g., Mixtral), Embedding Models (e.g., E5-Mistral), and Multi-modal LLMs (e.g., LLaVA).
+*   **Blazing Fast Inference:**
+    *   State-of-the-art serving throughput for optimized performance.
+    *   **PagedAttention** for efficient memory management.
+    *   Continuous batching of incoming requests.
+    *   Fast model execution using CUDA/HIP graphs.
+    *   Optimized CUDA kernels with integration with FlashAttention and FlashInfer.
+    *   Speculative decoding & chunked prefill.
+*   **Comprehensive Quantization Support:**
+    *   Supports various quantization methods including GPTQ, AWQ, AutoRound, INT4, INT8, and FP8.
+*   **Flexible and User-Friendly:**
+    *   Seamless integration with popular Hugging Face models.
+    *   High-throughput serving with various decoding algorithms (parallel sampling, beam search, and more).
+    *   Distributed inference with tensor, pipeline, data, and expert parallelism.
+    *   Streaming output for real-time results.
+    *   OpenAI-compatible API server.
+    *   Supports NVIDIA GPUs, AMD CPUs and GPUs, Intel CPUs and GPUs, PowerPC CPUs, TPU, and AWS Neuron.
+    *   Prefix caching and Multi-LoRA support.
+*   **Extensive Model Compatibility:**
+    *   Supports a wide range of models, including Transformer-like LLMs (e.g., Llama), Mixture-of-Experts LLMs (e.g., Mixtral), Embedding Models (e.g., E5-Mistral), and Multi-modal LLMs (e.g., LLaVA).
 
-**Highlighted Advantages:**
-
-*   **Speed:** Optimized for high-throughput LLM serving.
-*   **Cost-Effective:** Reduced memory footprint and efficient resource utilization.
-*   **User-Friendly:** Easy to integrate and deploy with an OpenAI-compatible API.
-
-**Getting Started:**
+## Getting Started
 
 Install vLLM using pip:
 
@@ -34,21 +39,51 @@ Install vLLM using pip:
 pip install vllm
 ```
 
-Explore the [documentation](https://docs.vllm.ai) for detailed information, including:
-
+Explore the documentation to start using vLLM:
 *   [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)
 *   [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)
 *   [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)
 
-**Contribute:**
+## Contributing
 
-The vLLM project thrives on community contributions. Learn how to get involved by visiting [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html).
+Contribute to vLLM's ongoing development by reviewing the [Contributing Guide](https://docs.vllm.ai/en/latest/contributing/index.html).
 
-**Sponsors:**
+## Sponsors
 
-vLLM is supported by a vibrant community of sponsors.  (List of sponsors here)
+vLLM thrives as a community project, supported by numerous organizations providing essential resources for development and testing.
 
-**Citation:**
+**Cash Donations:**
+*   a16z
+*   Dropbox
+*   Sequoia Capital
+*   Skywork AI
+*   ZhenFund
+
+**Compute Resources:**
+*   AMD
+*   Anyscale
+*   AWS
+*   Crusoe Cloud
+*   Databricks
+*   DeepInfra
+*   Google Cloud
+*   Intel
+*   Lambda Lab
+*   Nebius
+*   Novita AI
+*   NVIDIA
+*   Replicate
+*   Roblox
+*   RunPod
+*   Trainy
+*   UC Berkeley
+*   UC San Diego
+
+**Slack Sponsor:** Anyscale
+
+Support vLLM's continued growth through our [OpenCollective](https://opencollective.com/vllm).
+
+## Citation
 
 If you use vLLM in your research, please cite our paper:
 
@@ -61,14 +96,14 @@ If you use vLLM in your research, please cite our paper:
 }
 ```
 
-**Contact Us:**
+## Contact Us
 
-*   **Issues & Feature Requests:** GitHub [Issues](https://github.com/vllm-project/vllm/issues) or [Discussions](https://github.com/vllm-project/vllm/discussions)
-*   **Community Forum:** [vLLM Forum](https://discuss.vllm.ai)
-*   **Development Coordination:** [Slack](https://slack.vllm.ai)
-*   **Security Disclosures:** GitHub [Security Advisories](https://github.com/vllm-project/vllm/security/advisories)
-*   **Collaborations & Partnerships:** [vllm-questions@lists.berkeley.edu](mailto:vllm-questions@lists.berkeley.edu)
+*   **Technical Questions and Feature Requests:** GitHub [Issues](https://github.com/vllm-project/vllm/issues) or [Discussions](https://github.com/vllm-project/vllm/discussions)
+*   **Discussions with Fellow Users:** [vLLM Forum](https://discuss.vllm.ai)
+*   **Coordinating Contributions:** [Slack](https://slack.vllm.ai)
+*   **Security Disclosures:** GitHub's [Security Advisories](https://github.com/vllm-project/vllm/security/advisories)
+*   **Collaborations and Partnerships:** [vllm-questions@lists.berkeley.edu](mailto:vllm-questions@lists.berkeley.edu)
 
-**Media Kit:**
+## Media Kit
 
-For vLLM logo usage, see the [media kit repo](https://github.com/vllm-project/media-kit).
+For the official vLLM logo, find the media kit at [vLLM Media Kit](https://github.com/vllm-project/media-kit).

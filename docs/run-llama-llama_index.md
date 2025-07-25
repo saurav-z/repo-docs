@@ -1,6 +1,6 @@
 # LlamaIndex: Your Data Framework for LLM Applications
 
-**Supercharge your Large Language Models with LlamaIndex, the open-source data framework for building context-aware AI applications.**  [Check out the original repository here](https://github.com/run-llama/llama_index).
+**LlamaIndex empowers you to build powerful LLM applications by connecting your data and your Large Language Models.** ([Original Repository](https://github.com/run-llama/llama_index))
 
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/llama-index)](https://pypi.org/project/llama-index/)
 [![Build](https://github.com/run-llama/llama_index/actions/workflows/build_package.yml/badge.svg)](https://github.com/run-llama/llama_index/actions/workflows/build_package.yml)
@@ -12,57 +12,64 @@
 
 ## Key Features
 
-*   **Data Connectors:** Ingest data from diverse sources (APIs, PDFs, docs, SQL databases, and more).
-*   **Data Structuring:** Organize your data with indices and graphs for efficient LLM interaction.
-*   **Advanced Retrieval & Querying:** Leverage a sophisticated retrieval/query interface for context-aware outputs.
-*   **Easy Integration:** Seamlessly connect with popular frameworks like LangChain, Flask, Docker, and ChatGPT.
-*   **Beginner-Friendly & Customizable:** Offers both high-level APIs for quick starts and lower-level options for advanced customization.
-*   **LlamaHub Ecosystem:** Access a community library of data loaders at [LlamaHub](https://llamahub.ai)
-*   **LlamaLab:** Check out cutting edge AGI projects built with LlamaIndex at [LlamaLab](https://github.com/run-llama/llama-lab)
-
-## How LlamaIndex Works
-
-LlamaIndex provides a complete toolkit for augmenting LLMs with your private data. It helps you:
-
-1.  **Connect:** Integrate your data from various sources.
-2.  **Structure:** Create data structures optimized for LLMs.
-3.  **Retrieve:** Enable advanced retrieval and querying.
-4.  **Integrate:** Seamlessly incorporate with your application framework.
-
-## Important Links
-
-*   LlamaIndex.TS [(Typescript/Javascript)](https://github.com/run-llama/LlamaIndexTS)
-*   [Documentation](https://docs.llamaindex.ai/en/stable/)
-*   [X (formerly Twitter)](https://x.com/llama_index)
-*   [LinkedIn](https://www.linkedin.com/company/llamaindex/)
-*   [Reddit](https://www.reddit.com/r/LlamaIndex/)
-*   [Discord](https://discord.gg/dGcwcsnxhU)
+*   **Data Connectors:** Seamlessly ingest data from diverse sources like APIs, PDFs, documents, SQL databases, and more.
+*   **Data Structuring:** Organize your data with indices and graphs, optimizing it for LLM interaction.
+*   **Advanced Retrieval/Query Interface:** Get precise, context-aware responses by feeding in prompts and retrieving relevant context and knowledge-augmented output.
+*   **Flexible Integration:** Easily integrate with popular frameworks like LangChain, Flask, Docker, and more.
+*   **Beginner & Advanced APIs**: Offers a high-level API for quick setup and a lower-level API for advanced customization.
+*   **LlamaHub**: Extensive library of data loaders
+*   **LlamaLab**: Cutting-edge AGI projects using LlamaIndex
 
 ## Getting Started
 
-### Installation
+LlamaIndex offers two primary installation methods:
+
+1.  **Starter Package:** `llama-index` - A convenient package including core components and popular integrations.
+2.  **Customized Installation:**  `llama-index-core` - Install the core package and then add specific integrations from [LlamaHub](https://llamahub.ai/) to match your project needs.
+
+### Example
+
+Install LlamaIndex Core and OpenAI integration:
 
 ```bash
-# custom selection of integrations to work with core
 pip install llama-index-core
 pip install llama-index-llms-openai
-pip install llama-index-llms-replicate
-pip install llama-index-embeddings-huggingface
 ```
 
-### Example Usage
+## Core Concepts
+
+LlamaIndex leverages core modules for building LLM applications. The main structure and pattern of import is as follows:
 
 ```python
-import os
-
-os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
-
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
-
-documents = SimpleDirectoryReader("YOUR_DATA_DIRECTORY").load_data()
-index = VectorStoreIndex.from_documents(documents)
+from llama_index.core.xxx import ClassABC  # core submodule xxx
+from llama_index.xxx.yyy import (
+    SubclassABC,
+)  # integration yyy for submodule xxx
 ```
+
+## Important Links
+
+*   **Documentation:** [https://docs.llamaindex.ai/en/stable/](https://docs.llamaindex.ai/en/stable/)
+*   **LlamaIndex.TS (Typescript/Javascript):** [https://github.com/run-llama/LlamaIndexTS](https://github.com/run-llama/LlamaIndexTS)
+*   **X (formerly Twitter):** [https://x.com/llama_index](https://x.com/llama_index)
+*   **LinkedIn:** [https://www.linkedin.com/company/llamaindex/](https://www.linkedin.com/company/llamaindex/)
+*   **Reddit:** [https://www.reddit.com/r/LlamaIndex/](https://www.reddit.com/r/LlamaIndex/)
+*   **Discord:** [https://discord.gg/dGcwcsnxhU](https://discord.gg/dGcwcsnxhU)
 
 ## Contributing
 
-We welcome contributions! Please review our [Contribution Guide](CONTRIBUTING.md) for details.
+Contributions are welcomed!  See the [Contribution Guide](CONTRIBUTING.md) for details.
+
+## Citation
+
+If you use LlamaIndex in your research, please cite the project using the following BibTeX entry:
+
+```bibtex
+@software{Liu_LlamaIndex_2022,
+author = {Liu, Jerry},
+doi = {10.5281/zenodo.1234},
+month = {11},
+title = {{LlamaIndex}},
+url = {https://github.com/jerryjliu/llama_index},
+year = {2022}
+}

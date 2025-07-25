@@ -1,235 +1,244 @@
-# AI 闲鱼智能监控机器人: 实时监控与智能分析
+# AI-Powered Xianyu (Goofish) Monitor: Intelligent Product Tracking with Web UI
 
-Tired of manually searching for deals on Xianyu (闲鱼)? This project offers an AI-powered solution to monitor Xianyu listings in real-time, filter results based on your criteria, and notify you instantly.  **[Check out the original repo](https://github.com/dingyufei615/ai-goofish-monitor)**.
+Tired of missing out on the best deals? This AI-powered tool utilizes Playwright and AI to intelligently monitor Xianyu (Goofish), providing real-time tracking and smart analysis, all accessible via a user-friendly web interface.  [View the original repository](https://github.com/dingyufei615/ai-goofish-monitor).
 
-## Key Features
+**Key Features:**
 
-*   **Intuitive Web UI:** Manage tasks, edit AI standards, view logs, and filter results via a user-friendly web interface.
-*   **AI-Driven Task Creation:** Describe your desired item in natural language, and the system creates a comprehensive monitoring task.
-*   **Concurrent Multi-Tasking:** Monitor multiple keywords simultaneously without interference, thanks to the `config.json` configuration.
-*   **Real-time Streaming:** Analyze new listings immediately, eliminating the delays of batch processing.
-*   **Deep AI Analysis:** Integrate multimodal Large Language Models (LLMs) like GPT-4o to analyze listing text, images, and seller profiles for accurate filtering.
-*   **Highly Customizable:** Configure each task with unique keywords, price ranges, filters, and AI analysis prompts.
-*   **Instant Notifications:** Receive timely alerts via [ntfy.sh](https://ntfy.sh/) on your phone or desktop for items that meet your criteria.
-*   **Robust Anti-Scraping:** Employ human-like actions and various delays to improve stability and avoid detection.
-
-## Key Benefits:
-*   **Saves Time:** Automates the process of finding deals on Xianyu.
-*   **Improves Efficiency:** Monitors multiple items concurrently.
-*   **Enhances Accuracy:** Leverages AI to filter and identify relevant listings.
-*   **Provides Real-time Alerts:** Notifies users of new listings as soon as they become available.
+*   ✅ **AI-Driven Task Creation:** Describe your ideal product in natural language, and the system generates complex monitoring tasks.
+*   ✅ **Visual Web Interface:** Manage tasks, view real-time logs, and filter results without command-line interaction.
+*   ✅ **Multi-Task Concurrency:** Monitor multiple keywords simultaneously, with each task running independently.
+*   ✅ **Real-time Processing:** Analyze new listings immediately, eliminating delayed notifications.
+*   ✅ **Deep AI Analysis:** Integrates multimodal large language models (e.g., GPT-4o) for in-depth analysis of product descriptions, images, and seller profiles.
+*   ✅ **Highly Customizable:** Configure each task with specific keywords, price ranges, filtering criteria, and AI analysis prompts.
+*   ✅ **Instant Notifications:** Receive alerts via [ntfy.sh](https://ntfy.sh/) for items that match your AI recommendations.
+*   ✅ **Robust Anti-Scraping:** Employs human-like interactions and random delays to enhance stability.
 
 ## Getting Started
 
-Follow these steps to begin using the AI Xianyu monitor:
+Follow these steps to get your Xianyu monitor up and running:
 
-### 1. Prerequisites
-
-*   **Install Docker** (Optional, but highly recommended for easy deployment - see Docker instructions below)
-*   **Python 3.7+**
-
-### 2. Cloning & Installation
-
-1.  **Clone the repository:**
+1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/dingyufei615/ai-goofish-monitor
     cd ai-goofish-monitor
     ```
 
-2.  **Install dependencies:**
+2.  **Install Dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-### 3. Configuration
+3.  **Configure Environment Variables:**
+    *   Create a `.env` file in the project root and populate it with the following:
+        ```env
+        # --- AI Model Configuration ---
+        OPENAI_API_KEY="sk-..."           # Your OpenAI/API Key
+        OPENAI_BASE_URL="https://generativelanguage.googleapis.com/v1beta/openai/"  # API endpoint (check your provider)
+        OPENAI_MODEL_NAME="gemini-2.5-pro"  # Model name (must support image upload)
 
-1.  **Create a `.env` file** in the project's root directory with the following settings:
+        # ntfy Notification Service (Optional)
+        NTFY_TOPIC_URL="https://ntfy.sh/your-topic-name" # Replace with your ntfy topic URL
 
-    ```env
-    # --- AI Model Configuration ---
-    OPENAI_API_KEY="sk-..." # Your API key for the chosen AI model
-    OPENAI_BASE_URL="https://generativelanguage.googleapis.com/v1beta/openai/" # API endpoint (check your provider's API doc)
-    OPENAI_MODEL_NAME="gemini-2.5-pro" # Model name (must support image analysis)
+        # Enterprise WeChat Bot Notification (Optional)
+        WX_BOT_URL="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxxxx"
 
-    # Notification Settings
-    NTFY_TOPIC_URL="https://ntfy.sh/your-topic-name" # Your ntfy topic URL
+        # Browser Configuration
+        LOGIN_IS_EDGE=false                # Use Chrome browser if false
+        PCURL_TO_MOBILE=true               # Convert PC URLs to mobile versions
 
-    # Optional: Enterprise WeChat Bot
-    WX_BOT_URL="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxxxx"
+        # Run Mode
+        RUN_HEADLESS=true                   # Run browser in headless mode (true/false)
+        SERVER_PORT=8000                    # Custom server port (default: 8000)
+        ```
 
-    # Browser settings
-    LOGIN_IS_EDGE=false # Set to true to use Edge browser
-    PCURL_TO_MOBILE=true # Convert PC URLs to mobile URLs
-
-    # Headless Mode
-    RUN_HEADLESS=true # Set to false for manual login on local
-
-    # Web Server Port
-    SERVER_PORT=8000 # Set to your desired port or leave it to default (8000)
-    ```
-
-2.  **Get Login Status (Important!):** Run the `login.py` script once to generate the `xianyu_state.json` file (required for logged-in access to Xianyu).  Follow the prompts to scan the QR code with your Xianyu app.
+4.  **Acquire Login Status (Critical):**  Run the `login.py` script to generate the `xianyu_state.json` file. You'll need to scan a QR code with your Xianyu app to log in.
     ```bash
     python login.py
     ```
 
-### 4. Run the Web UI
-
-1.  **Start the web server:**
+5.  **Start the Web Server:**
     ```bash
     python web_server.py
     ```
 
-2.  **Access the Web UI:** Open your web browser and go to `http://127.0.0.1:8000`.
+6.  **Access the Web UI:** Open your browser and navigate to `http://127.0.0.1:8000`.
 
-3.  **Create a Monitoring Task:**
-    *   Go to **“Task Management”**.
-    *   Click **“Create New Task”**.
-    *   Describe your requirements in natural language (e.g., "I want to buy a used Sony A7M4 camera, 95% new or better, budget under 13000 yuan, shutter count below 5000").
-    *   The AI will generate the analysis criteria.
-    *   Click Create and start using it!
+7.  **Begin Monitoring:**
+    1.  Go to **"Task Management"** and click **"Create New Task"**.
+    2.  Describe your product requirements in natural language.
+    3.  The AI will generate an analysis standard automatically.
+    4.  Click **"🚀 Start All"** to begin monitoring.
 
-### Docker Deployment (Recommended)
+## 🐳 Docker Deployment (Recommended)
 
-Docker simplifies deployment and management.
+Deploying with Docker simplifies setup and ensures consistency.
 
-#### Steps
+1.  **Docker Setup:** Ensure Docker Engine is installed.
 
-1.  **Prepare Environment:**  (Same as Local Deployment but run Login step on host machine, not within the container.)
-    *   Ensure Docker is installed on your system.
-    *   Clone the project.
-    *   Create and configure your `.env` file.
-    *   **Run `login.py` on the host machine** to generate `xianyu_state.json`.
+2.  **Clone and Configure:**
+    ```bash
+    git clone https://github.com/dingyufei615/ai-goofish-monitor
+    cd ai-goofish-monitor
+    ```
+    Create and fill the `.env` file as described above.
 
-2.  **Run the Container:**
+3.  **Get Login Status:** **On your host machine**, run `login.py` to create `xianyu_state.json`.
+    ```bash
+    pip install -r requirements.txt
+    python login.py
+    ```
+
+4.  **Run Docker Compose:**
     ```bash
     docker-compose up -d
     ```
+    This starts the service in the background.
 
-3.  **Manage the Container:**
-    *   **Access Web UI:** `http://127.0.0.1:8000`
-    *   **View Logs:** `docker-compose logs -f`
+5.  **Access and Manage:**
+
+    *   **Web UI:** `http://127.0.0.1:8000`
+    *   **Real-time Logs:** `docker-compose logs -f`
     *   **Stop Container:** `docker-compose stop`
     *   **Start Container:** `docker-compose start`
     *   **Remove Container:** `docker-compose down`
 
-## Web UI Functionality
+## 📸 Web UI Features
 
-*   **Task Management:**  AI-powered task creation, in-browser task modification, and control.
-*   **Results Viewing:**  Clear card-based display of matched items, smart filters.
-*   **Run Logs:** Real-time logs in the browser.
-*   **System Settings:** Checks for key configurations and supports prompt editing.
+*   **Task Management:**
+    *   AI-powered task creation using natural language.
+    *   Task parameter editing within a table.
+    *   Start/stop individual tasks or all tasks with a single click.
+*   **Result Viewing:**
+    *   Product display in a card view.
+    *   Filtering to view only AI-recommended items.
+    *   Full details and AI analysis results for each item.
+*   **Running Logs:**
+    *   Real-time log stream to track progress and troubleshoot issues.
+*   **System Configuration:**
+    *   Check `.env` configurations, login status, and other key dependencies.
+    *   Edit and save AI analysis prompts directly within the web interface.
 
-## Advanced Command-Line Usage
+## ⚙️ Command-Line Usage
 
-For more technical users, there are command-line options:
+For command-line enthusiasts:
 
-### Start Monitoring
-```bash
-python spider_v2.py
-```
+*   **Start Monitoring:**  Run the main script.
+    ```bash
+    python spider_v2.py
+    ```
+    **Debug Mode:**
+    ```bash
+    python spider_v2.py --debug-limit 2
+    ```
 
-### Create New Tasks
+*   **Create New Tasks via Script:**
+    ```bash
+    python prompt_generator.py \
+      --description "I want to buy a Sony A7M4 camera, 95% new or better, budget under 13000, shutter count under 5000. Must be China version, with complete accessories. Preferred personal sellers, no resellers." \
+      --output prompts/sony_a7m4_criteria.txt \
+      --task-name "Sony A7M4" \
+      --keyword "a7m4" \
+      --min-price "10000" \
+      --max-price "13000"
+    ```
 
-```bash
-python prompt_generator.py \
-  --description "Your description" \
-  --output prompts/your_criteria.txt \
-  --task-name "Your Task Name" \
-  --keyword "Your Keyword" \
-  --min-price "Your Minimum Price" \
-  --max-price "Your Maximum Price"
-```
-
-## Workflow
+## 🚀 Workflow Diagram
 
 ```mermaid
 graph TD
     A[Start Main Program] --> B{Read config.json};
     B --> C{Launch Multiple Monitoring Tasks};
-    C --> D[Task: Search Items];
-    D --> E{New Item Found?};
-    E -- Yes --> F[Get Item Details & Seller Info];
-    F --> G[Download Item Images];
+    C --> D[Task: Search Products];
+    D --> E{New Product Found?};
+    E -- Yes --> F[Capture Details & Seller Info];
+    F --> G[Download Product Images];
     G --> H[Call AI for Analysis];
     H --> I{AI Recommends?};
     I -- Yes --> J[Send ntfy Notification];
-    J --> K[Save Record to JSONL];
+    J --> K[Save to JSONL];
     I -- No --> K;
-    E -- No --> L[Page Flip/Wait];
+    E -- No --> L[Page/Wait];
     L --> D;
     K --> E;
 ```
 
-## Technology Stack
+## 🛠️ Tech Stack
 
-*   **Core:** Playwright (asynchronous) + asyncio
-*   **Web Server:** FastAPI
-*   **AI Model:** OpenAI API (supports GPT-4o, etc.)
-*   **Notifications:** ntfy
+*   **Core Framework:** Playwright (asynchronous) + asyncio
+*   **Web Service:** FastAPI
+*   **AI Model:** OpenAI API (supports GPT-4o and other multi-modal models)
+*   **Notification Service:** ntfy
 *   **Configuration:** JSON
-*   **Dependencies:** pip
+*   **Dependency Management:** pip
 
-## File Structure
+## 📂 Project Structure
 
 ```
 .
-├── .env                # Environment variables (API keys)
-├── .gitignore
-├── config.json         # Configuration file for tasks
-├── login.py            # Login script (generates cookie)
-├── spider_v2.py        # Core spider program
-├── prompt_generator.py # AI prompt generation script
-├── web_server.py       # Web server main program
+├── .env                # Environment variables
+├── .gitignore          # Git ignore configurations
+├── config.json         # Core configuration for all tasks
+├── login.py            # For initial login and cookie persistence
+├── spider_v2.py        # Main spider program
+├── prompt_generator.py # Script to create tasks
+├── web_server.py       # Web server program
 ├── requirements.txt    # Python dependencies
 ├── README.md           # This file
-├── prompts/            # AI prompts
+├── prompts/            # AI prompt files
 │   ├── base_prompt.txt
 │   └── ..._criteria.txt
-├── static/             # Web UI static files
+├── static/             # Web frontend static files
 │   ├── css/style.css
 │   └── js/main.js
-├── templates/          # Web UI templates
+├── templates/          # Web frontend templates
 │   └── index.html
-├── images/             # Downloaded item images (auto-created)
+├── images/             # Downloaded product images (auto-created)
 ├── logs/               # Running logs (auto-created)
-└── jsonl/              # Task results (auto-created)
+└── jsonl/              # Results storage (auto-created)
 ```
 
-## FAQ (Frequently Asked Questions)
+## Frequently Asked Questions (FAQ)
 
-*   **Q: Encoding Errors (gbk codec):**
-    *   **A:** Primarily a Windows issue.
-    *   **Solution:**  Set `PYTHONUTF8=1` environment variable or use `chcp 65001` before running the scripts.
+1.  **Q:  Encountering `'gbk' codec can't encode character` errors when running scripts?**
+    *   **A:** This is a common Windows encoding issue. The project uses UTF-8 encoding.
+    *   **Solution:** Set the `PYTHONUTF8` environment variable or use `chcp 65001` before running the script.
 
-*   **Q:  `playwright install` error:**
-    *   **A:** Missing browser files.  Ensure all dependencies are installed.  If the problem persists, manually install Chromium:  `playwright install chromium`
+2.  **Q:  `playwright install` required when running `login.py`?**
+    *   **A:** Playwright's browser components are missing.
+    *   **Solution:** Ensure dependencies are installed via `pip install -r requirements.txt`.  If the problem persists, try `playwright install chromium`.
 
-*   **Q:  "Request timed out" or "Connection error":**
-    *   **A:** Network issue. Check network connectivity, proxy configuration (if needed).  Confirm your `OPENAI_BASE_URL` is correct and accessible.
+3.  **Q:  "Request timed out" or "Connection error" during task creation or execution?**
+    *   **A:**  Network-related. Verify your server's network connectivity and the correctness of the `OPENAI_BASE_URL` setting. If accessing foreign AI services from mainland China, consider using a network proxy.
 
-*   **Q: Model Doesn't Support Images:**
-    *   **A:** Use a multimodal (Vision/Multi-modal) AI model.  Update `OPENAI_MODEL_NAME` in `.env` (e.g., `gpt-4o`, `gemini-1.5-pro`).
+4.  **Q:  My AI model doesn't support image analysis?**
+    *   **A:** This project relies on image analysis.  Ensure your chosen AI model in `.env` ( `OPENAI_MODEL_NAME`) supports image input (Vision / Multi-modal), such as `gpt-4o`, `gemini-1.5-pro`, `deepseek-v2`, or `qwen-vl-plus`.
 
-*   **Q: Deployment on Synology NAS:**
-    *   **A:** Standard Docker deployment: Run `login.py` on a local machine. Upload the project folder (including `.env` and `xianyu_state.json`) to your NAS. Use `docker-compose up -d`.
+5.  **Q:  Can I deploy on Synology NAS using Docker?**
+    *   **A:** Yes.  Complete `login.py` **on your computer**. Then, upload the project folder (including `.env` and `xianyu_state.json`) to your Synology. Use `docker-compose up -d` in Container Manager, ensuring correct volume mapping to your project folder.
 
-*   **Q: Using Gemini/Qwen/Grok (non-OpenAI models):**
-    *   **A:**  Configure `.env`:  `OPENAI_API_KEY`, `OPENAI_BASE_URL` (check the API docs), `OPENAI_MODEL_NAME` (must support image recognition).
+6.  **Q:  How to configure Gemini / Qwen / Grok, or other non-OpenAI LLMs?**
+    *   **A:** The project supports OpenAI-compatible APIs. Configure your `.env` file:
+        *   `OPENAI_API_KEY`: Your provider's API key.
+        *   `OPENAI_BASE_URL`: The API-Compatible Endpoint (e.g., `https://api.your-provider.com/v1`).  **Consult your model provider's documentation.**
+        *   `OPENAI_MODEL_NAME`: Your specific model name (must support image recognition), e.g., `gemini-2.5-flash`.
+    *   **Example:** If your provider's completion endpoint is `https://xx.xx.com/v1/chat/completions`, set `OPENAI_BASE_URL` to `https://xx.xx.com/v1`.
 
-*   **Q: Being Detected/Captcha:**
-    *   **A:** Prevent detection:  Set `RUN_HEADLESS=false` in `.env`, reduce monitoring frequency, use a clean network.
+7.  **Q:  Getting detected by Xianyu ("abnormal traffic" / captcha)?**
+    *   **A:**  Xianyu's anti-scraping measures are triggered.
+        *   Set `RUN_HEADLESS=false` to run the browser with a GUI; you can then manually solve captchas.
+        *   Reduce the number of monitoring tasks running simultaneously.
+        *   Use a clean network environment.
 
 ## Acknowledgements
 
-Thanks to the following projects for inspiration:
+Special thanks to the following projects for inspiration and contribution:
 - [superboyyy/xianyu_spider](https://github.com/superboyyy/xianyu_spider)
 
-Thanks to the LinuxDo community,  Aider and Gemini
+And thank you to LinuxDo community members and Aider & Gemini for assistance during development!
 
-## Important Notes
+## ⚠️ Important Notes
 
-*   Adhere to Xianyu's terms of service and robots.txt. Avoid excessive requests.
-*   This project is for educational and research purposes only. Avoid illegal activities.
+*   Adhere to Xianyu's user agreement and robots.txt rules to avoid overloading servers or account restrictions.
+*   This project is for educational purposes and technical research only.  Do not use it for illegal activities.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=dingyufei615/ai-goofish-monitor&type=Date)](https://star-history.com/#dingyufei615/ai-goofish-monitor&Date)
