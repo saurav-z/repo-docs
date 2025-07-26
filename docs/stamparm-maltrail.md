@@ -2,56 +2,45 @@
 
 [![Python 2.6|2.7|3.x](https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://github.com/stamparm/maltrail#license) [![Malware families](https://img.shields.io/badge/malware_families-1494-orange.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Malware sinkholes](https://img.shields.io/badge/malware_sinkholes-1354-green.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Twitter](https://img.shields.io/badge/twitter-@maltrail-blue.svg)](https://twitter.com/maltrail)
 
-## Maltrail: Detect Malicious Traffic in Real-Time
+## Maltrail: A Powerful Open-Source Network Traffic Detection System
 
-Maltrail is a powerful open-source network traffic detection system, designed to identify and alert on malicious activity by leveraging threat intelligence feeds, static and dynamic trails, and advanced heuristic analysis.  [Check out the original repo](https://github.com/stamparm/maltrail) for more information.
+Maltrail is a comprehensive network traffic detection system that proactively identifies and alerts on malicious activities, leveraging a vast database of threat intelligence and heuristic analysis to protect your network.  [Visit the original repository](https://github.com/stamparm/maltrail) for the source code and more.
 
 **Key Features:**
 
-*   **Real-time Threat Detection:** Identifies malicious traffic using a combination of blacklists, static trails, and heuristic analysis.
-*   **Comprehensive Threat Intelligence:** Integrates with numerous public and private threat intelligence feeds, including feeds from 360bigviktor, AbuseIPDB, AlienVault, Emerging Threats, and more.
-*   **Heuristic Analysis:** Employs advanced mechanisms to detect unknown threats, reducing the reliance on signature-based detection.
-*   **Flexible Architecture:**  Operates with a modular architecture, consisting of Sensors, a Server, and a Client reporting interface, and is able to be run on a single machine.
-*   **User-Friendly Reporting:** Provides a web-based reporting interface for easy analysis and visualization of detected threats.
-*   **Customizable:** Allows users to define custom trails and integrate with third-party security tools.
+*   🛡️ **Real-time Threat Detection:** Monitors network traffic for malicious indicators, including domains, URLs, IPs, and User-Agent strings.
+*   💡 **Extensive Threat Intelligence:** Utilizes a wide range of public and user-defined blacklists and static trails, updated regularly.
+*   🔍 **Heuristic Analysis:** Employs advanced techniques to identify unknown threats and suspicious patterns.
+*   ⚙️ **Flexible Architecture:**  Operates on a Sensor-Server-Client architecture, with options for standalone sensor deployment.
+*   📊 **Reporting Interface:** Provides a user-friendly web interface for visualizing and analyzing detected threats.
+*   🐳 **Docker Support**: Easily deploy with Docker for streamlined setup and management.
+*   🔄 **Third-Party Integrations:** Compatible with leading security tools like Wazuh, Splunk and more.
 
-**Table of Contents**
+**Table of Contents:**
 
 *   [Introduction](#introduction)
 *   [Architecture](#architecture)
-*   [Demo Pages](#demo-pages)
+*   [Demo pages](#demo-pages)
 *   [Quick Start](#quick-start)
-*   [Administrator's Guide](#administrators-guide)
+*   [Administrator's guide](#administrators-guide)
     *   [Sensor](#sensor)
     *   [Server](#server)
-*   [User's Guide](#users-guide)
-    *   [Reporting Interface](#reporting-interface)
-*   [Real-Life Cases](#real-life-cases)
-    *   [Mass Scans](#mass-scans)
-    *   [Anonymous Attackers](#anonymous-attackers)
-    *   [Service Attackers](#service-attackers)
-    *   [Malware](#malware)
-    *   [Suspicious Domain Lookups](#suspicious-domain-lookups)
-    *   [Suspicious ipinfo Requests](#suspicious-ipinfo-requests)
-    *   [Suspicious Direct File Downloads](#suspicious-direct-file-downloads)
-    *   [Suspicious HTTP Requests](#suspicious-http-requests)
-    *   [Port Scanning](#port-scanning)
-    *   [DNS Resource Exhaustion](#dns-resource-exhaustion)
-    *   [Data Leakage](#data-leakage)
-    *   [False Positives](#false-positives)
-*   [Best Practices](#best-practices)
+*   [User's guide](#users-guide)
+    *   [Reporting interface](#reporting-interface)
+*   [Real-life cases](#real-life-cases)
+*   [Best practice(s)](#best-practices)
 *   [License](#license)
 *   [Sponsors](#sponsors)
 *   [Developers](#developers)
 *   [Presentations](#presentations)
 *   [Publications](#publications)
 *   [Blacklist](#blacklist)
-*   [Thank You](#thank-you)
-*   [Third-Party Integrations](#third-party-integrations)
+*   [Thank you](#thank-you)
+*   [Third-party integrations](#third-party-integrations)
 
 ## Introduction
 
-**Maltrail** is a malicious traffic detection system, utilizing publicly available (black)lists containing malicious and/or generally suspicious trails, along with static trails compiled from various AV reports and custom user defined lists, where trail can be anything from domain name (e.g. `zvpprsensinaix.com` for [Banjori](http://www.johannesbader.ch/2015/02/the-dga-of-banjori/) malware), URL (e.g. `hXXp://109.162.38.120/harsh02.exe` for known malicious [executable](https://www.virustotal.com/en/file/61f56f71b0b04b36d3ef0c14bbbc0df431290d93592d5dd6e3fffcc583ec1e12/analysis/)), IP address (e.g. `185.130.5.231` for known attacker) or HTTP User-Agent header value (e.g. `sqlmap` for automatic SQL injection and database takeover tool). Also, it uses (optional) advanced heuristic mechanisms that can help in discovery of unknown threats (e.g. new malware).
+Maltrail is a malicious traffic detection system that utilizes publicly available (black)lists containing malicious and/or generally suspicious trails, along with static trails compiled from various AV reports and custom user defined lists, where trail can be anything from domain name (e.g. `zvpprsensinaix.com` for [Banjori](http://www.johannesbader.ch/2015/02/the-dga-of-banjori/) malware), URL (e.g. `hXXp://109.162.38.120/harsh02.exe` for known malicious [executable](https://www.virustotal.com/en/file/61f56f71b0b04b36d3ef0c14bbbc0df431290d93592d5dd6e3fffcc583ec1e12/analysis/)), IP address (e.g. `185.130.5.231` for known attacker) or HTTP User-Agent header value (e.g. `sqlmap` for automatic SQL injection and database takeover tool). Also, it uses (optional) advanced heuristic mechanisms that can help in discovery of unknown threats (e.g. new malware).
 
 ![Reporting tool](https://i.imgur.com/Sd9eqoa.png)
 
@@ -170,7 +159,7 @@ cd maltrail
 sudo python3 sensor.py
 ```
 
-Don't forget to put interfaces in promiscuous mode as needed: 
+Don't forget to put interfaces in promiscuous mode as needed:
 
 ```sh
 for dev in $(ifconfig | grep mtu | grep -Eo '^\w+'); do ifconfig $dev promisc; done
@@ -201,7 +190,7 @@ sudo wget -P /etc https://raw.githubusercontent.com/stamparm/maltrail/master/mal
 sudo $EDITOR /etc/maltrail.conf
 ```
 
-Start the container(s) with `docker run`: 
+Start the container(s) with `docker run`:
 
 ```sh
 # Build image
@@ -230,7 +219,7 @@ docker compose build
 docker compose up -d
 ```
 
-Don't edit the `docker-compose.yml` file directly, as this will be overwritten by `git pull`.  Instead, copy it to `docker-compose.override.yml` and edit that file; it is included in this repo's `.gitignore`.  
+Don't edit the `docker-compose.yml` file directly, as this will be overwritten by `git pull`.  Instead, copy it to `docker-compose.override.yml` and edit that file; it is included in this repo's `.gitignore`.
 
 To test that everything is up and running execute the following:
 
@@ -299,7 +288,7 @@ Server's configuration can be found inside the `maltrail.conf` section `[Server]
 
 ![Server's configuration](https://i.imgur.com/TiUpLX8.png)
 
-Option `HTTP_ADDRESS` contains the web server's listening address (Note: use `0.0.0.0` to listen on all interfaces). Option `HTTP_PORT` contains the web server's listening port. Default listening port is set to `8338`. If option `USE_SSL` is set to `true` then `SSL/TLS` will be used for accessing the web server (e.g. `https://192.168.6.10:8338/`). In that case, option `SSL_PEM` should be pointing to the server's private/cert PEM file. 
+Option `HTTP_ADDRESS` contains the web server's listening address (Note: use `0.0.0.0` to listen on all interfaces). Option `HTTP_PORT` contains the web server's listening port. Default listening port is set to `8338`. If option `USE_SSL` is set to `true` then `SSL/TLS` will be used for accessing the web server (e.g. `https://192.168.6.10:8338/`). In that case, option `SSL_PEM` should be pointing to the server's private/cert PEM file.
 
 Subsection `USERS` contains user's configuration settings. Each user entry consists of the `username:sha256(password):UID:filter_netmask(s)`. Value `UID` represents the unique user identifier, where it is recommended to use values lower than 1000 for administrative accounts, while higher value for non-administrative accounts. The part `filter_netmask(s)` represents the comma-delimited hard filter(s) that can be used to filter the shown events depending on the user account(s). Default entry is as follows:
 
@@ -369,4 +358,10 @@ Bottom part holds a condensed representation of logged events in form of a pagin
 
 ![Single threat](https://i.imgur.com/IxPwKKZ.png)
 
-Column `threat` holds threat's unique ID (e.g. `85fdb08d`) and color (Note: extruded from the threat's ID), `sensor` holds sensor name(s) where the event has been triggered (e.g. `blitvenica`), `events` holds total number of events for a current threat, `severity` holds evaluated severity of threat (Note: calculated based on values in `info` and `reference` columns, prioritizing malware generated traffic), `first_seen` holds time of first event in a selected (24h) period (e.g. `06th 08:21:54`), `last_seen` holds time of last event in a selected (24h) period (e.g. `06th 15:21:23`), `sparkline` holds a small sparkline graph representing threat's activity in selected period, `src_ip` holds source IP(s) of a threat (e.g. `99.102.41.102`), `src_port` holds source port(s) (e.g. `44556, 44589, 44601`), `dst_ip` holds destination IP(s) (e.g. `213.202.100.28`), `dst_port` holds destination port(s) (e.g. `80 (HTTP)`), `proto` holds protocol(s), (e.g. `TCP`), `trail` holds a blacklisted (or heuristic) entry that triggered the event(s), `info` holds more information about the threat/trail (e.g. `known attacker` for known attacker's IP addresses or `ipinfo` for known IP information service commonly used by malware during a startup), `
+Column `threat` holds threat's unique ID (e.g. `85fdb08d`) and color (Note: extruded from the threat's ID), `sensor` holds sensor name(s) where the event has been triggered (e.g. `blitvenica`), `events` holds total number of events for a current threat, `severity` holds evaluated severity of threat (Note: calculated based on values in `info` and `reference` columns, prioritizing malware generated traffic), `first_seen` holds time of first event in a selected (24h) period (e.g. `06th 08:21:54`), `last_seen` holds time of last event in a selected (24h) period (e.g. `06th 15:21:23`), `sparkline` holds a small sparkline graph representing threat's activity in selected period, `src_ip` holds source IP(s) of a threat (e.g. `99.102.41.102`), `src_port` holds source port(s) (e.g. `44556, 44589, 44601`), `dst_ip` holds destination IP(s) (e.g. `213.202.100.28`), `dst_port` holds destination port(s) (e.g. `80 (HTTP)`), `proto` holds protocol(s), (e.g. `TCP`), `trail` holds a blacklisted (or heuristic) entry that triggered the event(s), `info` holds more information about the threat/trail (e.g. `known attacker` for known attacker's IP addresses or `ipinfo` for known IP information service commonly used by malware during a startup), `reference` holds a source of the blacklisted entry (e.g. `(static)` for static trails or `myip.ms` for a dynamic feed retrieved from that same source) and `tags` holds user defined tags for a given trail (e.g. `APT28`).
+
+When moving mouse over `src_ip` and `dst_ip` table entries, information tooltip is being displayed with detailed reverse DNS and WHOIS information (Note: [RIPE](http://www.ripe.net/) is the information provider):
+
+![On mouse over IP](https://i.imgur.com/BgKchAX.png)
+
+Event details (e.g. `src_port`, `dst_port`, `proto`, etc.) that differ inside same threat entry are condensed in form of a bubble icon (i.e. ![Ellipsis](https://raw.githubusercontent.com/stamparm/maltrail/

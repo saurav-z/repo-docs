@@ -1,53 +1,47 @@
-# OpenCLIP: Open Source Implementation of CLIP for Image-Text Understanding
+# OpenCLIP: Open Source CLIP Implementation for Image-Text Understanding
 
-**OpenCLIP is an open-source implementation of OpenAI's CLIP, enabling powerful image-text understanding through contrastive learning.** [[Paper](https://arxiv.org/abs/2212.07143)] [[Citations](#citing)] [[Clip Colab](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb)] [[Coca Colab](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb)]
+OpenCLIP offers an open-source implementation of OpenAI's [CLIP](https://arxiv.org/abs/2103.00020), enabling you to train and utilize powerful image-text models.
 
-[![PyPI version](https://img.shields.io/pypi/v/open_clip_torch.svg)](https://pypi.python.org/pypi/open_clip_torch)
+*   **Pre-trained Models:** Access a wide variety of pre-trained models, including those trained on datasets like LAION-400M, LAION-2B, and DataComp-1B. ([More Details](docs/PRETRAINED.md))
+*   **Reproducible Research:**  This repository supports the research in [Reproducible scaling laws for contrastive language-image learning](https://arxiv.org/abs/2212.07143), as well as a wide range of other recent research.
+*   **Flexible Training:**  Train your own CLIP models with support for multi-GPU training, SLURM clusters, and various data formats, including webdataset.
+*   **Zero-Shot Capabilities:** Leverage the zero-shot image classification performance of our models, evaluated on 38 datasets. ([Results](docs/openclip_results.csv))
+*   **Fine-tuning Support:** Utilize the trained zero-shot model on a downstream classification task.  For fine-tuning, see our other repository: [WiSE-FT](https://github.com/mlfoundations/wise-ft).
+*   **CoCa Model Training Support:** Train CoCa models to perform image captioning and other multimodal tasks.
+*   **Int8 Support:**  Experimental support for int8 training and inference.
+*   **Model Distillation:** You can distill from a pre-trained by specifying `--distill-model` and `--distill-pretrained` to specify the model you'd like to distill from.
+*   **Hugging Face Hub Integration:** Easily push models and configurations to the Hugging Face Hub using `open_clip.push_to_hf_hub`.
 
-This repository provides a flexible and scalable framework for training and utilizing CLIP models, including those trained on massive datasets like LAION-2B and DataComp-1B. We offer a wide range of pre-trained models and comprehensive tools for various applications, including image retrieval, zero-shot classification, and fine-tuning.
+**Get started with OpenCLIP today to explore the potential of image-text understanding!**
 
-**Key Features:**
+[Visit the Original Repository on GitHub](https://github.com/mlfoundations/open_clip)
 
-*   **Pre-trained Models:** Access a diverse collection of pre-trained models trained on various datasets and compute budgets, including state-of-the-art models and those trained using the [LAION-400M](https://arxiv.org/abs/2111.02114), [LAION-2B](https://arxiv.org/abs/2210.08402), and [DataComp-1B](https://arxiv.org/abs/2304.14108) datasets.
+## Key Features
 
-*   **Training Framework:**  Easily train your own CLIP models with our comprehensive training scripts supporting distributed training, SLURM integration, gradient accumulation, and more.
+*   **Model Variety:** Offers a wide selection of pre-trained models with diverse architectures, including ConvNext, ViT, and SigLIP models.
+*   **Data Compatibility:** Supports various datasets and formats, including CSV, webdataset, and integration with img2dataset for data download.
+*   **Training Flexibility:** Provides comprehensive training scripts, including multi-GPU support, gradient accumulation, and integration with logging tools like TensorBoard and WandB.
+*   **CoCa Training:** Support for training CoCa models.
+*   **Efficient Training:** Includes features like patch dropout and model distillation to optimize training.
+*   **Easy to use inference**: Provides simple example usage to load the models and tokenize inputs.
 
-*   **Flexible Usage:** Utilize the provided code to quickly encode images and text, calculate image/text similarities, and leverage pre-trained models.
-
-*   **Fine-tuning Support:**  Use the provided models as a starting point for further fine-tuning tasks.
-
-*   **CoCa Model Support:** Train and use CoCa (Contrastive Captioners) models.
-
-*   **Extensive Documentation:** Explore our detailed documentation, including Colab notebooks, training guides, and model details.
-
-**Model Performance Highlights:**
-
-| Model              | Training Data | Resolution | ImageNet Zero-Shot Accuracy |
-| ------------------ | ------------- | ---------- | --------------------------- |
-| ConvNext-Base      | LAION-2B      | 256px      | 71.5%                       |
-| ConvNext-Large     | LAION-2B      | 320px      | 76.9%                       |
-| ViT-B-32-256       | DataComp-1B   | 256px      | 72.8%                       |
-| ViT-L-14           | LAION-2B      | 224px      | 75.3%                       |
-| ViT-H-14           | LAION-2B      | 224px      | 78.0%                       |
-| ViT-bigG-14        | LAION-2B      | 224px      | 80.1%                       |
-
-For more information, see our full collection of pretrained models [here](docs/PRETRAINED.md).
-
-**Get Started:**
+## Quick Start
 
 1.  **Installation:**
+
     ```bash
     pip install open_clip_torch
     ```
 
-2.  **Quickstart Example:**
+2.  **Inference Example:**
+
     ```python
     import torch
     from PIL import Image
     import open_clip
 
     model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32', pretrained='laion2b_s34b_b79k')
-    model.eval()
+    model.eval()  # model in train mode by default, impacts some models with BatchNorm or stochastic depth active
     tokenizer = open_clip.get_tokenizer('ViT-B-32')
 
     image = preprocess(Image.open("docs/CLIP.png")).unsqueeze(0)
@@ -61,28 +55,48 @@ For more information, see our full collection of pretrained models [here](docs/P
 
         text_probs = (100.0 * image_features @ text_features.T).softmax(dim=-1)
 
-    print("Label probs:", text_probs)
+    print("Label probs:", text_probs)  # prints: [[1., 0., 0.]]
     ```
 
-3.  **Explore Pretrained Models:**
-    ```python
-    import open_clip
-    open_clip.list_pretrained()
+## Pretrained Models
+
+A comprehensive list of pre-trained models is available, with details on their performance and training data. [More Details](docs/PRETRAINED.md).
+
+## Training
+
+Detailed instructions and scripts are provided for training CLIP models, including multi-GPU and SLURM configurations.
+
+*   **Single-Process Example:**
+
+    ```bash
+    python -m open_clip_train.main \
+        --train-data="/path/to/train_data.csv"  \
+        --val-data="/path/to/validation_data.csv"  \
+        --csv-img-key filepath \
+        --csv-caption-key title \
+        --imagenet-val=/path/to/imagenet/root/val/ \
+        --warmup 10000 \
+        --batch-size=128 \
+        --lr=1e-3 \
+        --wd=0.1 \
+        --epochs=30 \
+        --workers=8 \
+        --model RN50
     ```
 
-**Further Resources:**
+## Evaluation
 
-*   [[Clip Colab]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb)
-*   [[Coca Colab]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb)
-*   [Model cards](https://huggingface.co/models?library=open_clip) on the Hugging Face Hub.
-*   Find out about the models we support (e.g. number of parameters, FLOPs) in [this table](docs/model_profile.csv).
+Evaluation scripts and guidance are provided for assessing model performance on various benchmarks.
 
-**Contributing:**  We welcome contributions!  Please submit issues or email us with your requests or suggestions.
+*   **Evaluating a Local Checkpoint:**
 
-**Original repository**: [https://github.com/mlfoundations/open_clip](https://github.com/mlfoundations/open_clip)
+    ```bash
+    python -m open_clip_train.main \
+        --val-data="/path/to/validation_data.csv"  \
+        --model RN101 \
+        --pretrained /path/to/checkpoints/epoch_K.pt
+    ```
 
-**Acknowledgments:** [See original README for full acknowledgements.]
+## Acknowledgments
 
-**Citations:**
-```bibtex
-[See original README for citations.]
+The OpenCLIP project is supported by the Gauss Centre for Supercomputing e.V. (GCS) and the John von Neumann Institute for Computing (NIC).  We thank the team members and contributors listed in the original README for their valuable contributions to this project.

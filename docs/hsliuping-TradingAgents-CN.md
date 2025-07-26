@@ -1,117 +1,117 @@
-# 🚀 TradingAgents-CN: AI驱动的中文金融交易框架 | A股/港股/美股分析
+# 🚀 TradingAgents-CN: 中文金融AI交易决策框架
 
-利用多智能体大语言模型，赋能中文金融交易决策，提供 A股、港股、美股全市场分析，深度优化中文用户体验。 [访问原项目: TauricResearch/TradingAgents](https://github.com/hsliuping/TradingAgents-CN)
+**Unlock the power of AI for Chinese financial markets with TradingAgents-CN, a cutting-edge framework built for in-depth stock analysis and informed trading decisions.  Based on the revolutionary [TradingAgents](https://github.com/TauricResearch/TradingAgents) and optimized for the Chinese market!**
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Version](https://img.shields.io/badge/Version-cn--0.1.10-green.svg)](./VERSION)
-[![Documentation](https://img.shields.io/badge/docs-中文文档-green.svg)](./docs/)
-[![Original](https://img.shields.io/badge/基于-TauricResearch/TradingAgents-orange.svg)](https://github.com/TauricResearch/TradingAgents)
+## 🔑 Key Features
 
-**核心特点:**
+*   **🇨🇳 Chinese-Optimized:** Full A-share (A股), Hong Kong Stock (港股) support, and optimized for Chinese users.
+*   **🤖 Multi-Agent Architecture:** Leverage specialized AI agents for fundamental, technical, news, and sentiment analysis.
+*   **🚀 Real-time Progress Display:** v0.1.10 introduces asynchronous progress tracking for a seamless experience.
+*   **💾 Intelligent Session Management:**  Preserve analysis state and reports across sessions.
+*   **📊 Professional Report Export:** Generate insightful reports in Word, PDF, and Markdown formats.
+*   **🐳 Docker Deployment:**  Easy one-command setup for rapid deployment and scalability.
+*   **🧠 LLM Integration:** Supports leading LLMs including DeepSeek, Ali Tongyi Qianwen, Google AI, and OpenAI.
 
-*   🇨🇳 **中文优化**: 全面支持A股、港股市场，中文界面和分析结果。
-*   🚀 **v0.1.10 新增**: 实时分析进度、智能会话管理，Web界面全面升级。
-*   🐳 **一键部署**: Docker容器化部署，快速启动和环境隔离。
-*   📄 **专业报告**: 支持多种格式导出，生成投资建议。
-*   🧠 **LLM 支持**: 集成 DeepSeek V3、阿里百炼、OpenAI 等模型。
+**[Visit the original repository](https://github.com/hsliuping/TradingAgents-CN) to get started!**
 
-## 🌟 主要特性
+## ✨ What's New in v0.1.10?
 
-*   **实时分析进度**：异步进度跟踪，告别黑盒等待。
-*   **智能会话管理**：页面刷新不丢失分析结果。
-*   **A股/港股支持**：提供完整的A股和港股数据支持。
-*   **国产LLM**: 优化中文分析效果。
-*   **专业报告导出**：Word、PDF、Markdown多种格式导出。
+*   **🚀 Real-time Progress Display:**
+    *   Asynchronous progress tracking for transparent analysis.
+    *   Accurate time calculation for better insight.
+    *   Multiple display modes (Streamlit, static, unified).
+*   **📊 Intelligent Session Management:**
+    *   Persist analysis state and reports on page refresh.
+    *   Automatic fallback to file storage if Redis is unavailable.
+    *   "View Analysis Report" button after analysis completion.
+*   **🎨 Enhanced User Experience:**
+    *   Simplified interface, removing redundant buttons for clarity.
+    *   Responsive design for mobile and various screen sizes.
+    *   Improved error handling and user-friendly error messages.
 
-## 🆕 v0.1.10 更新亮点
+## 🎯 Core Features
 
-*   **🚀 实时进度显示系统**: 异步进度跟踪、智能时间计算、多种显示模式。
-*   **📊 智能会话管理**: 状态持久化、自动降级机制、一键查看报告。
-*   **🎨 用户体验优化**: 界面简化、响应式设计、错误处理增强。
+### 🤖 Multi-Agent Collaboration
 
-## 🎯 核心功能
+*   **Specialized Analysts:**  Fundamental, Technical, News, and Sentiment analysts.
+*   **Structured Debate:** Bullish and bearish researchers provide in-depth analysis.
+*   **Intelligent Decision-Making:** Trader agent formulates investment recommendations based on all inputs.
+*   **Risk Management:** Multi-layered risk assessment and management mechanisms.
 
-### 🤖 多智能体协作架构
+## 🚀 Get Started Quickly
 
-*   **专业分工**：基本面、技术面、新闻面、情绪面四大分析师。
-*   **结构化辩论**：看涨/看跌研究员进行深度分析。
-*   **智能决策**：交易员基于所有输入做出最终投资建议。
-*   **风险管理**：多层次风险评估和管理机制。
-
-## 🚀 快速开始
-
-### 🐳 Docker 部署 (推荐)
+### 🐳 Docker Deployment (Recommended)
 
 ```bash
-# 1. 克隆项目
+# 1. Clone the repository
 git clone https://github.com/hsliuping/TradingAgents-CN.git
 cd TradingAgents-CN
 
-# 2. 配置环境变量
+# 2. Configure environment variables
 cp .env.example .env
-# 编辑 .env 文件，填入API密钥
+# Edit .env to include your API keys.
 
-# 3. 启动服务
+# 3. Start the service
 docker-compose up -d --build
 
-# 4. 访问应用
-# Web界面: http://localhost:8501
+# 4. Access the application
+# Web Interface: http://localhost:8501
 ```
 
-### 💻 本地部署
+### 💻 Local Deployment
 
 ```bash
-# 1. 安装依赖
+# 1. Install dependencies
 pip install -r requirements.txt
 
-# 2. 启动应用
+# 2. Start the application
 python start_web.py
 
-# 3. 访问 http://localhost:8501
+# 3. Access the application at http://localhost:8501
 ```
 
-### 📊 开始分析
+### 📊 Analysis Steps
 
-1.  **选择模型**: DeepSeek V3 / 通义千问 / Gemini
-2.  **输入股票**: `000001` (A股) / `AAPL` (美股) / `0700.HK` (港股)
-3.  **开始分析**: 点击"🚀 开始分析"按钮
-4.  **实时跟踪**: 观察实时进度和分析步骤
-5.  **查看报告**: 点击"📊 查看分析报告"按钮
-6.  **导出报告**: 支持Word/PDF/Markdown格式
+1.  **Select Model:** DeepSeek V3 / Ali Tongyi Qianwen / Gemini
+2.  **Input Stock Symbol:** `000001` (A-Share) / `AAPL` (US Stock) / `0700.HK` (HK Stock)
+3.  **Start Analysis:** Click the "🚀 Start Analysis" button
+4.  **Real-time Tracking:** Monitor the progress and steps.
+5.  **View Report:** Click the "📊 View Analysis Report" button
+6.  **Export Report:** Supports Word/PDF/Markdown formats
 
-## 🎯 核心优势
+## 🎯 Key Advantages
 
-*   **实时进度**：异步分析，告别等待。
-*   **智能会话**：分析结果持久化。
-*   **🇨🇳 中国优化**：A股/港股数据、国产LLM、中文界面。
-*   **🐳 容器化**：Docker一键部署。
-*   **📄 专业报告**：多格式导出。
-*   **🛡️ 稳定可靠**：多层数据源，错误恢复。
+*   **🆕 Real-time Progress:** v0.1.10 adds asynchronous progress tracking.
+*   **💾 Intelligent Sessions:** Session persistence ensures analysis results aren't lost.
+*   **🇨🇳 China-Optimized:** A-Share/HK Stock data, Chinese UI, and local LLMs.
+*   **🐳 Containerization:** Docker for one-click deployment, easy scalability.
+*   **📄 Professional Reports:** Export to multiple formats, auto-generated investment advice.
+*   **🛡️ Robustness:** Multi-layer data sources, intelligent fallback, and error recovery.
 
-## 🧠 LLM 模型支持
+## ⚙️ Technical Architecture
 
-*   🇨🇳 阿里百炼: `qwen-turbo/plus/max`
-*   🇨🇳 DeepSeek: `deepseek-chat`
-*   🌍 Google AI: `gemini-2.0-flash/1.5-pro`
-*   🤖 OpenAI: `GPT-4o/4o-mini/3.5-turbo`
+**Core Technologies:** Python 3.10+ | LangChain | Streamlit | MongoDB | Redis
+**AI Models:** DeepSeek V3 | Ali Tongyi Qianwen | Google AI | OpenAI
+**Data Sources:** Tushare | AkShare | FinnHub | Yahoo Finance
+**Deployment:** Docker | Docker Compose | Local Deployment
 
-## 📊 数据源与市场
+## 📚 Documentation & Support
 
-| 市场类型 | 数据源        | 覆盖范围                          |
-| ---------- | ------------- | --------------------------------- |
-| 🇨🇳 A股      | Tushare, AkShare | 沪深两市，实时行情，财报数据       |
-| 🇭🇰 港股      | AkShare, Yahoo Finance | 港交所，实时行情，基本面         |
-| 🇺🇸 美股      | FinnHub, Yahoo Finance | NYSE, NASDAQ，实时数据           |
-| 📰 新闻      | Google News   | 实时新闻，多语言支持              |
+*   **📖 Complete Documentation:** [docs/](./docs/) - Installation, usage tutorials, and API documentation.
+*   **🚨 Troubleshooting:** [troubleshooting/](./docs/troubleshooting/) - Solutions to common issues.
+*   **🔄 Changelog:** [CHANGELOG.md](./docs/releases/CHANGELOG.md) - Detailed version history.
+*   **🚀 Quick Start:** [QUICKSTART.md](./QUICKSTART.md) - 5-minute deployment guide.
 
-## 📚 文档和支持
+## 📄 License
 
-*   📖 **完整文档**: [docs/](./docs/) - 安装指南、使用教程、API文档
-*   🚨 **故障排除**: [troubleshooting/](./docs/troubleshooting/) - 常见问题解决方案
-*   🔄 **更新日志**: [CHANGELOG.md](./docs/releases/CHANGELOG.md) - 详细版本历史
-*   🚀 **快速开始**: [QUICKSTART.md](./QUICKSTART.md) - 5分钟快速部署指南
+This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file.
 
 ---
 
-**💡 立即体验：[访问原项目](https://github.com/hsliuping/TradingAgents-CN)**
+<div align="center">
+
+**🌟 If you find this project helpful, please give us a Star!**
+
+[⭐ Star this repo](https://github.com/hsliuping/TradingAgents-CN) | [🍴 Fork this repo](https://github.com/hsliuping/TradingAgents-CN/fork) | [📖 Read the docs](./docs/)
+
+</div>

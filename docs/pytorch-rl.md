@@ -11,96 +11,122 @@
 [![Downloads](https://static.pepy.tech/personalized-badge/torchrl-nightly?period=total&units=international_system&left_color=blue&right_color=orange&left_text=Downloads%20(nightly))](https://pepy.tech/project/torchrl-nightly)
 [![Discord Shield](https://dcbadge.vercel.app/api/server/cZs26Qq3Dd)](https://discord.gg/cZs26Qq3Dd)
 
-# TorchRL: Unleash the Power of Reinforcement Learning with PyTorch
+# TorchRL: The Open-Source Reinforcement Learning Library for PyTorch
 
-[**TorchRL**](https://github.com/pytorch/rl) is an open-source PyTorch library designed for researchers and practitioners to develop and deploy reinforcement learning (RL) algorithms efficiently and flexibly.
+**Supercharge your RL research with TorchRL, a powerful and flexible library built for PyTorch.**  [Explore the original repo.](https://github.com/pytorch/rl)
 
 ## Key Features
 
-*   **Python-first Design:**  Embraces Python for ease of use, flexibility, and a familiar coding experience.
-*   **Optimized for Performance:** Designed for efficient execution to support demanding RL research applications.
-*   **Modular and Extensible:** Allows for easy swapping, transforming, and creating of new components.
-*   **Comprehensive Documentation:** Provides thorough documentation for quick understanding and library utilization.
-*   **Rigorously Tested:** Includes robust testing to ensure reliability and stability.
-*   **Reusable Functionals:** Offers a rich set of reusable functions for cost functions, returns, and data processing.
-*   **LLM API:** Complete framework for language model fine-tuning with unified wrappers for Hugging Face and vLLM backends, conversation management with automatic chat template detection, tool integration (Python execution, function calling), specialized objectives (GRPO, SFT), and high-performance async collectors. Perfect for RLHF, supervised fine-tuning, and tool-augmented training scenarios.
+*   **🚀 LLM API**: Complete framework for language model fine-tuning, including:
+    *   Unified wrappers for Hugging Face and vLLM backends.
+    *   Advanced conversation management.
+    *   Built-in tool integration (Python execution, function calling, and custom tool transforms).
+    *   Specialized objectives (GRPO, SFT).
+    *   High-performance async collectors.
+*   🐍 **Python-first:** Designed for ease of use and flexibility with Python as the primary language.
+*   ⏱️ **Efficient:** Optimized for performance to handle demanding RL research applications.
+*   🧮 **Modular, Customizable, Extensible:** Highly modular architecture for easy swapping, modification, and creation of new components.
+*   📚 **Well-Documented:** Comprehensive documentation to facilitate quick understanding and usage.
+*   ✅ **Rigorously Tested:** Ensures reliability and stability.
+*   ⚙️ **Reusable Functionals:** Provides a set of reusable functions for cost functions, returns, and data processing.
 
-## Core Principles
+## Core Strengths
 
-*   **PyTorch Ecosystem Alignment:** Follows the structure and conventions of popular PyTorch libraries (e.g., datasets, transforms, models, data utilities).
-*   **Minimal Dependencies:** Only requires Python standard library, NumPy, and PyTorch; with optional dependencies for common environment libraries and datasets.
+*   **Aligned with PyTorch Ecosystem:** Follows the structure and conventions of popular PyTorch libraries for seamless integration.
+*   **Minimal Dependencies:** Only requires Python standard library, NumPy, and PyTorch, with optional dependencies for common environment libraries.
+*   **TensorDict Integration:** Leverage the flexibility of [TensorDict](https://pytorch.github.io/tensordict/) for simplified and portable RL codebase.
 
-## What's New: LLM API
+## LLM API - Get Started with Large Language Model Fine-tuning
 
-TorchRL now features a comprehensive LLM API:
+TorchRL's LLM API provides a comprehensive suite of tools for post-training and fine-tuning language models, making it easy to build RLHF, supervised fine-tuning, and tool-augmented training applications.
 
-*   **Unified LLM Wrappers:** Seamless integration with Hugging Face models and vLLM inference engines.
-*   **Conversation Management:** Advanced `History` class for multi-turn dialogue.
-*   **Tool Integration:** Built-in support for Python code execution and function calling.
-*   **Specialized Objectives:** GRPO and SFT loss functions for language models.
-*   **High-Performance Collectors:** Async data collection with distributed training support.
-*   **Flexible Environments:** Transform-based architecture for reward computation, data loading, and conversation augmentation.
+Check out the [complete documentation](https://pytorch.org/rl/main/reference/llms.html) and [GRPO implementation example](https://github.com/pytorch/rl/tree/main/sota-implementations/grpo) to get started!
 
-## Getting Started
+```python
+from torchrl.envs.llm import ChatEnv
+from torchrl.modules.llm import TransformersWrapper
+from torchrl.objectives.llm import GRPOLoss
+from torchrl.collectors.llm import LLMCollector
 
-Quickly get up and running with TorchRL using our [Getting Started tutorials](https://pytorch.org/rl/stable/index.html#getting-started).
+# Create environment with Python tool execution
+env = ChatEnv(
+    tokenizer=tokenizer,
+    system_prompt="You are an assistant that can execute Python code.",
+    batch_size=[1]
+).append_transform(PythonInterpreter())
 
-## Key Components
+# Wrap your language model
+llm = TransformersWrapper(
+    model=model,
+    tokenizer=tokenizer,
+    input_mode="history"
+)
 
-*   **Environments:**  Common interface supporting libraries like OpenAI Gym.
-*   **Data Collectors:**  Multiprocess and distributed data collection.
-*   **Replay Buffers:**  Efficient and generic replay buffers.
-*   **Environment Transforms:** On-device, vectorized data processing.
-*   **Models and Architectures:**  Variety of models and architectures.
-*   **Loss Modules:** Efficient loss modules.
-*   **Trainers:** Generic trainer class for streamlined training.
+# Set up GRPO training
+loss_fn = GRPOLoss(llm, critic, gamma=0.99)
+collector = LLMCollector(env, llm, frames_per_batch=100)
 
-## Featured Publications
+# Training loop
+for data in collector:
+    loss = loss_fn(data)
+    loss.backward()
+    optimizer.step()
+```
 
-TorchRL has been used in various research areas:
+## Get Started
 
-*   ACEGEN: Reinforcement Learning of Generative Chemical Agents for Drug Discovery
-*   BenchMARL: Benchmarking Multi-Agent Reinforcement Learning
-*   BricksRL: A Platform for Democratizing Robotics and Reinforcement Learning
-*   OmniDrones: An Efficient and Flexible Platform for Reinforcement Learning in Drone Control
-*   RL4CO: an Extensive Reinforcement Learning for Combinatorial Optimization Benchmark
-*   Robohive: A unified framework for robot learning
+Explore our [Getting Started tutorials](https://pytorch.org/rl/stable/index.html#getting-started) to quickly learn the library's features!
 
-## Simplify RL Code with TensorDict
+## Documentation & Knowledge Base
 
-TorchRL utilizes [`TensorDict`](https://github.com/pytorch/tensordict/) to simplify RL codebases.  This enables you to write a complete PPO training script in under 100 lines of code.
+Comprehensive documentation is available [here](https://pytorch.org/rl) with tutorials and an API reference.  Also, check out the RL knowledge base [here](https://pytorch.org/rl/stable/reference/knowledge_base.html) to troubleshoot your code and learn RL basics.
 
-## Documentation and Knowledge Base
+## Spotlight Publications
 
-Find in-depth information and tutorials in the [TorchRL documentation](https://pytorch.org/rl).  Also, explore our RL knowledge base for debugging tips and basic RL concepts [here](https://pytorch.org/rl/stable/reference/knowledge_base.html).
+TorchRL has been used in a variety of fields:
+
+*   [ACEGEN](https://pubs.acs.org/doi/10.1021/acs.jcim.4c00895): Reinforcement Learning of Generative Chemical Agents
+*   [BenchMARL](https://www.jmlr.org/papers/v25/23-1612.html): Benchmarking Multi-Agent Reinforcement Learning
+*   [BricksRL](https://arxiv.org/abs/2406.17490): A Platform for Democratizing Robotics and Reinforcement Learning
+*   [OmniDrones](https://ieeexplore.ieee.org/abstract/document/10409589): An Efficient and Flexible Platform for Reinforcement Learning in Drone Control
+*   [RL4CO](https://arxiv.org/abs/2306.17100): an Extensive Reinforcement Learning for Combinatorial Optimization Benchmark
+*   [Robohive](https://proceedings.neurips.cc/paper_files/paper/2023/file/8a84a4341c375b8441b36836bb343d4e-Paper-Datasets_and_Benchmarks.pdf): A unified framework for robot learning
+
+## Writing Simplified and Portable RL Codebase with `TensorDict`
+
+TorchRL leverages [TensorDict](https://github.com/pytorch/tensordict/), a data structure for efficient RL codebase.  This facilitates code reuse across different settings (e.g., online to offline) and allows for a complete PPO training script with a few lines of code!
+
+Learn more about `TensorDict` with [TensorDict tutorials](https://pytorch.github.io/tensordict/).
 
 ## Examples, Tutorials, and Demos
 
-Explore [State-of-the-Art implementations](https://github.com/pytorch/rl/blob/main/sota-implementations/) and [Code examples](examples/) for various algorithms and tasks, including LLM API, RLHF, and memory-mapped replay buffers.
+Find [State-of-the-Art implementations](https://github.com/pytorch/rl/blob/main/sota-implementations/), code examples, training scripts, and demos, including:
 
-## Citation
+*   [LLM API & GRPO](sota-implementations/grpo)
+*   [RLHF](examples/rlhf)
+*   [Memory-mapped replay buffers](examples/torchrl_features)
 
-```
-@misc{bou2023torchrl,
-      title={TorchRL: A data-driven decision-making library for PyTorch}, 
-      author={Albert Bou and Matteo Bettini and Sebastian Dittert and Vikash Kumar and Shagun Sodhani and Xiaomeng Yang and Gianni De Fabritiis and Vincent Moens},
-      year={2023},
-      eprint={2306.00577},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
-```
+Consult the [examples](https://github.com/pytorch/rl/blob/main/sota-implementations/) directory for configuration settings.
 
 ## Installation
 
-*   Create a virtual environment (recommended) or use Conda.
-*   Install PyTorch (refer to [PyTorch installation instructions](https://pytorch.org/get-started/locally/)).
-*   Install TorchRL via `pip3 install torchrl` (or build from source, see original README for options).
+Detailed installation instructions are provided to ensure you can quickly set up your environment.
 
+### Create a New Virtual Environment:
+```bash
+python -m venv torchrl
+source torchrl/bin/activate  # On Windows use: venv\Scripts\activate
+```
+### Or Create a Conda Environment
+```
+conda create --name torchrl python=3.9
+conda activate torchrl
+```
+
+### Install Dependencies:
+```bash
+pip3 install torchrl
+```
 ## Contributing
 
-We welcome contributions! Review our [contribution guide](https://github.com/pytorch/rl/blob/main/CONTRIBUTING.md) and [open contributions](https://github.com/pytorch/rl/issues/509).
-
-## License
-
-TorchRL is licensed under the MIT License.  See [LICENSE](https://github.com/pytorch/rl/blob/main/LICENSE) for details.
+Contributions are welcome! See the [contribution guide](https://github.com/pytorch/rl/blob/main/CONTRIBUTING.md) for details. Open contributions can be found [here](https://github.com/pytorch/rl/issues/509).

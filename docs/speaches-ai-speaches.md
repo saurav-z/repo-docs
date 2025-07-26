@@ -1,42 +1,40 @@
-# Speaches: Your Open-Source AI Voice and Speech Solution 
+# Speaches: Your Open-Source, OpenAI API-Compatible Audio Solution
 
-**Transform text to speech, transcribe audio, and translate in real-time with Speaches, a powerful and versatile OpenAI API-compatible server.**  ([View the original project on GitHub](https://github.com/speaches-ai/speaches))
+**Transform audio and text with ease!**  Speaches is a powerful, open-source server that provides an OpenAI API-compatible interface for streaming transcription, translation, and speech generation, giving you access to cutting-edge AI models like faster-whisper, Piper, and Kokoro.
 
-> **Note:** This project was formerly known as `faster-whisper-server` and has evolved to support a wider range of features.
-
-Speaches provides a flexible and efficient way to interact with cutting-edge AI models for speech-related tasks.  Leveraging the power of [faster-whisper](https://github.com/SYSTRAN/faster-whisper) for Speech-to-Text, and [piper](https://github.com/rhasspy/piper) and [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M) for Text-to-Speech, Speaches offers a comprehensive solution for audio processing.  Think of it as Ollama, but tailored for TTS/STT models.
-
-[Explore the complete documentation for detailed installation and usage instructions at speaches.ai](https://speaches.ai/)
+[View the original project on GitHub](https://github.com/speaches-ai/speaches)
 
 ## Key Features:
 
 *   **OpenAI API Compatibility:** Seamlessly integrate with existing OpenAI tools and SDKs.
-*   **Audio Generation (Text-to-Speech):**  Convert text to spoken audio using the chat completions endpoint.  Examples:
-    *   Create audio summaries of text.
-    *   Perform sentiment analysis on audio recordings.
-    *   Enable asynchronous speech-to-speech interactions.
-*   **Streaming Support:** Receive transcription results in real-time via Server-Sent Events (SSE) as the audio is processed, eliminating the need to wait for the entire file.
-*   **Dynamic Model Loading/Offloading:**  Automatically load and unload models based on your request, optimizing resource usage. Just specify which model you want to use in the request and it will be loaded automatically. It will then be unloaded after a period of inactivity.
-*   **Text-to-Speech (TTS) with High-Quality Models:** Utilize `kokoro` (ranked #1 in the [TTS Arena](https://huggingface.co/spaces/Pendrokar/TTS-Spaces-Arena)) and `piper` for natural-sounding speech generation.
-*   **GPU and CPU Support:** Leverage your hardware's capabilities for optimal performance.
-*   **Docker and Docker Compose Deployment:** Easily deploy Speaches using Docker Compose or Docker for containerized environments ([Deployment Instructions](https://speaches.ai/installation/)).
-*   **Realtime API:** Experience real-time audio processing capabilities ([Realtime API Documentation](https://speaches.ai/usage/realtime-api)).
-*   **Highly Configurable:** Customize Speaches to meet your specific needs ([Configuration Options](https://speaches.ai/configuration/)).
+*   **Audio Generation:**
+    *   Convert text to spoken audio (text-in, audio-out).
+    *   Analyze the sentiment of audio recordings (audio-in, text-out).
+    *   Enable asynchronous speech-to-speech interactions with AI models (audio-in, audio-out).
+*   **Streaming Support:** Receive transcriptions in real-time via Server-Sent Events (SSE).
+*   **Dynamic Model Management:** Automatically load and unload models based on demand, optimizing resource usage.
+*   **Text-to-Speech (TTS):** Utilize high-quality `kokoro` (ranked #1 in the TTS Arena) and `piper` models.
+*   **GPU and CPU Support:** Optimized for both GPU and CPU environments.
+*   **Easy Deployment:** Deploy using Docker Compose or Docker.
+*   **Realtime API:**  Access the [Realtime API](https://speaches.ai/usage/realtime-api)
+*   **Highly Configurable:** Tailor the server to your specific needs. Check out the [Configuration](https://speaches.ai/configuration/) options.
 
 ## Demos
 
 ### Realtime API
 
-[Demo video showcasing the Realtime API](https://github.com/user-attachments/assets/457a736d-4c29-4b43-984b-05cc4d9995bc)
+[Link to Realtime API Demo - embed or link the video here]
 
 ### Streaming Transcription
 
-TODO
+[TODO: Add Streaming Transcription Demo Here]
 
 ### Speech Generation
 
-[Demo video showcasing Speech Generation capabilities](https://github.com/user-attachments/assets/0021acd9-f480-4bc3-904d-831f54c4d45b)
+[Link to Speech Generation Demo - embed or link the video here]
 
----
+## Get Started
 
-We encourage you to report any bugs, ask questions, or suggest new features by [creating an issue](https://github.com/speaches-ai/speaches/issues).
+Visit the [speaches.ai](https://speaches.ai/) documentation for detailed installation instructions and usage guides.
+
+**Encounter a bug or have a feature suggestion?**  Please create an issue on the [GitHub repository](https://github.com/speaches-ai/speaches)!

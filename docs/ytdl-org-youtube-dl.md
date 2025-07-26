@@ -1,425 +1,183 @@
 [![Build Status](https://github.com/ytdl-org/youtube-dl/workflows/CI/badge.svg)](https://github.com/ytdl-org/youtube-dl/actions?query=workflow%3ACI)
 
-# YouTube-DL: Download Videos from YouTube and Beyond
+# youtube-dl: Download Videos from YouTube and Beyond
 
-Tired of streaming? **YouTube-DL is your go-to command-line tool for downloading videos from YouTube.com and thousands of other sites.** 
+Tired of buffering? **youtube-dl is your go-to command-line tool for downloading videos from YouTube and thousands of other sites.**
 
-[Visit the original repository for more information](https://github.com/ytdl-org/youtube-dl).
+[Visit the official repository](https://github.com/ytdl-org/youtube-dl) for the latest updates.
 
 ## Key Features
 
-*   **Broad Site Support:** Works with YouTube and a vast array of other video platforms.
-*   **Format Selection:** Download videos in your preferred quality and format.
-*   **Playlist and Channel Downloads:** Easily download entire playlists or all videos from a channel.
-*   **Metadata Extraction:** Get video titles, descriptions, and more.
-*   **Customization:** Tailor downloads with a wide range of options, including file naming, download speed limits, and more.
-*   **Cross-Platform:** Runs on Windows, macOS, and Linux.
-*   **Active Community & Regular Updates:** Benefit from constant improvements and updates.
+*   **Wide Site Support:** Download videos from YouTube, Vimeo, Dailymotion, and a vast array of other video platforms.
+*   **Format Selection:** Choose your preferred video and audio formats, quality, and resolution.
+*   **Playlist & Channel Downloads:** Easily download entire playlists or all videos from a channel.
+*   **Customizable Output:** Control filenames, output directories, and metadata.
+*   **Subtitle Support:** Download subtitles in various formats and languages.
+*   **Authentication:** Supports login for sites requiring it.
+*   **Cross-Platform Compatibility:** Works on Windows, macOS, and Linux.
+*   **Actively Maintained:** Benefit from frequent updates to support new sites and features.
 
-## Getting Started
+## Installation
 
-### Installation
+Choose your preferred method for installing youtube-dl:
 
-Choose your platform to install YouTube-DL:
-
-*   **UNIX (Linux, macOS, etc.):**
+*   **Unix (Linux, macOS, etc.):**
 
     ```bash
     sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
     sudo chmod a+rx /usr/local/bin/youtube-dl
     ```
-
-    If you don't have `curl`, use `wget`:
-
+    If `curl` is unavailable, use `wget` instead:
     ```bash
     sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
     sudo chmod a+rx /usr/local/bin/youtube-dl
     ```
+
 *   **Windows:**
-    *   [Download the .exe file](https://yt-dl.org/latest/youtube-dl.exe) and place it in a directory included in your [PATH](https://en.wikipedia.org/wiki/PATH_%28variable%29) (e.g., *not* `C:\Windows\System32`).
+    *   Download the executable: [Download .exe File](https://yt-dl.org/latest/youtube-dl.exe)
+    *   Place the `youtube-dl.exe` file in a directory included in your [PATH](https://en.wikipedia.org/wiki/PATH_%28variable%29) environment variable (but not in `%SYSTEMROOT%\System32`).
+
 *   **Pip:**
+
     ```bash
     sudo -H pip install --upgrade youtube-dl
     ```
-    This command will update youtube-dl if you have already installed it. See the [pypi page](https://pypi.python.org/pypi/youtube_dl) for more information.
+
 *   **Homebrew (macOS):**
+
     ```bash
     brew install youtube-dl
     ```
+
 *   **MacPorts (macOS):**
+
     ```bash
     sudo port install youtube-dl
     ```
-*   **Developer Installation** refer to the [developer instructions](#developer-instructions) for how to check out and work with the git repository.
 
-For other options, including PGP signatures, see the [youtube-dl Download Page](https://ytdl-org.github.io/youtube-dl/download.html).
+*   For advanced installation options, including PGP signatures, refer to the [youtube-dl Download Page](https://ytdl-org.github.io/youtube-dl/download.html).
 
-### Usage
+## Usage
 
-To download a video, simply run the command:
-
-```bash
-youtube-dl [OPTIONS] [URL]
-```
-
-Replace `[URL]` with the video's web address. For example:
+Download a video:
 
 ```bash
-youtube-dl https://www.youtube.com/watch?v=dQw4w9WgXcQ
+youtube-dl "VIDEO_URL"
 ```
 
-## Core Concepts & Common Commands
+Download a playlist:
 
-*   **Options:** Modify download behavior (e.g., format, output file).
-*   **Formats:** Select video and audio qualities using the `-f` or `--format` flag. Use `-F` or `--list-formats` to view available formats.
-*   **Output Template:** Customize filenames with the `-o` or `--output` flag (e.g., `-o '%(title)s-%(id)s.%(ext)s'`).
-*   **Playlists and Channels:** Download entire playlists or channels by providing their URLs.
+```bash
+youtube-dl "PLAYLIST_URL"
+```
 
-## Advanced Options
+To view available options, run `youtube-dl --help`.
 
-Explore the comprehensive list of options below to fine-tune your downloads.
+## Common Options
 
-### General Options
-
-*   `-h`, `--help`: Print help.
-*   `--version`: Show version.
-*   `-U`, `--update`: Update youtube-dl.
-*   `-i`, `--ignore-errors`: Skip errors and continue.
-*   `--abort-on-error`: Stop on errors.
-*   `--dump-user-agent`: Show browser identifier.
-*   `--list-extractors`: List supported extractors.
-*   `--extractor-descriptions`: Display descriptions of extractors.
-*   `--force-generic-extractor`: Force the generic extractor.
-*   `--default-search PREFIX`: Add a prefix to unqualified URLs.
-*   `--ignore-config`: Ignore config files.
-*   `--config-location PATH`: Location of the config file.
-*   `--flat-playlist`: List videos only.
-*   `--mark-watched`: Mark videos as watched (YouTube only).
-*   `--no-mark-watched`: Don't mark videos as watched.
-*   `--no-color`: Disable colored output.
-
-### Network Options
-
+*   `-U, --update`: Update youtube-dl to the latest version.
+*   `-f, --format FORMAT`: Specify video format (e.g., `-f mp4`, `-f "bestvideo+bestaudio"`).  See [Format Selection](#format-selection) for details.
+*   `-o, --output TEMPLATE`: Set output filename and directory. See [Output Template](#output-template) for details.
+*   `--list-formats`: List available formats for a video.
+*   `--write-sub`: Download subtitles.
+*   `--sub-lang LANGS`: Specify subtitle languages.
 *   `--proxy URL`: Use a proxy.
-*   `--socket-timeout SECONDS`: Set socket timeout.
-*   `--source-address IP`: Bind to a specific IP.
-*   `-4`, `--force-ipv4`: Force IPv4.
-*   `-6`, `--force-ipv6`: Force IPv6.
+*   `--username USERNAME` and `--password PASSWORD`: Login to sites.
 
-### Geo Restriction Options
+## Format Selection
 
-*   `--geo-verification-proxy URL`: Proxy for geo-restricted sites.
-*   `--geo-bypass`: Bypass geo-restrictions.
-*   `--no-geo-bypass`: Disable geo-bypass.
-*   `--geo-bypass-country CODE`: Bypass geo-restrictions with a country code.
-*   `--geo-bypass-ip-block IP_BLOCK`: Bypass with an IP block.
+Use the `--format` (or `-f`) option to control the downloaded video format.
 
-### Video Selection Options
+*   `best`:  Download the best available quality.
+*   `worst`: Download the lowest quality.
+*   `22`: Download format code 22 (e.g., 720p MP4).
+*   `webm`: Download the best WebM format.
+*   `bestvideo+bestaudio`:  Merge best video and audio streams.
+*   `bestvideo[height<=720]+bestaudio/best`: Prioritize 720p or lower resolution with the best audio quality.
 
-*   `--playlist-start NUMBER`: Start at playlist video.
-*   `--playlist-end NUMBER`: End at playlist video.
-*   `--playlist-items ITEM_SPEC`: Download specific items (e.g., `--playlist-items 1,2,5-8`).
-*   `--match-title REGEX`: Download titles that match (regex).
-*   `--reject-title REGEX`: Skip titles that match (regex).
-*   `--max-downloads NUMBER`: Limit downloads.
-*   `--min-filesize SIZE`: Minimum file size.
-*   `--max-filesize SIZE`: Maximum file size.
-*   `--date DATE`: Download videos uploaded on a date.
-*   `--datebefore DATE`: Download before a date.
-*   `--dateafter DATE`: Download after a date.
-*   `--min-views COUNT`: Minimum views.
-*   `--max-views COUNT`: Maximum views.
-*   `--match-filter FILTER`: Filter based on video properties.
-*   `--no-playlist`: Download the video only, if the URL is a video and playlist.
-*   `--yes-playlist`: Download the playlist, if the URL is a video and playlist.
-*   `--age-limit YEARS`: Limit age for videos.
-*   `--download-archive FILE`: Archive downloaded videos.
-*   `--include-ads`: Download ads (experimental).
+See the full documentation for more [Format Selection Examples](#format-selection-examples).
 
-### Download Options
+## Output Template
 
-*   `-r`, `--limit-rate RATE`: Limit download rate (e.g., `50K` or `4.2M`).
-*   `-R`, `--retries RETRIES`: Retries on failure.
-*   `--fragment-retries RETRIES`: Retries for fragments.
-*   `--skip-unavailable-fragments`: Skip unavailable fragments.
-*   `--abort-on-unavailable-fragment`: Abort on unavailable fragment.
-*   `--keep-fragments`: Keep fragments on disk.
-*   `--buffer-size SIZE`: Download buffer size.
-*   `--no-resize-buffer`: Disable automatic buffer resizing.
-*   `--http-chunk-size SIZE`: HTTP chunk size.
-*   `--playlist-reverse`: Reverse playlist download.
-*   `--playlist-random`: Random playlist download.
-*   `--xattr-set-filesize`: Set file size xattribute.
-*   `--hls-prefer-native`: Use native HLS downloader.
-*   `--hls-prefer-ffmpeg`: Use ffmpeg for HLS.
-*   `--hls-use-mpegts`: Use mpegts container for HLS.
-*   `--external-downloader COMMAND`: Use an external downloader. (aria2c, avconv, axel, curl, ffmpeg, httpie, wget)
-*   `--external-downloader-args ARGS`: Arguments for the external downloader.
+Use the `-o` option to customize the output filename.
 
-### Filesystem Options
+Examples:
+```bash
+# Basic
+youtube-dl -o "my_video.mp4" "VIDEO_URL"
 
-*   `-a`, `--batch-file FILE`: Download URLs from a file.
-*   `--id`: Use only video ID for filenames.
-*   `-o`, `--output TEMPLATE`: Output filename template (see examples in [output template section](#output-template)).
-*   `--output-na-placeholder PLACEHOLDER`: Placeholder for missing metadata.
-*   `--autonumber-start NUMBER`: Autonumber start value.
-*   `--restrict-filenames`: Restrict filenames to ASCII.
-*   `-w`, `--no-overwrites`: Don't overwrite files.
-*   `-c`, `--continue`: Resume downloads.
-*   `--no-continue`: Don't resume downloads.
-*   `--no-part`: Don't use .part files.
-*   `--no-mtime`: Don't set file modification time.
-*   `--write-description`: Write description to a file.
-*   `--write-info-json`: Write metadata to a .info.json file.
-*   `--write-annotations`: Write annotations to a .annotations.xml file.
-*   `--load-info-json FILE`: Load metadata from a .info.json file.
-*   `--cookies FILE`: Read cookies from a file.
-*   `--cache-dir DIR`: Cache directory.
-*   `--no-cache-dir`: Disable caching.
-*   `--rm-cache-dir`: Delete cache.
+# Title and ID
+youtube-dl -o '%(title)s-%(id)s.%(ext)s' "VIDEO_URL"
 
-### Thumbnail Options
+# Playlists
+youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "PLAYLIST_URL"
+```
 
-*   `--write-thumbnail`: Write thumbnail to disk.
-*   `--write-all-thumbnails`: Write all thumbnails.
-*   `--list-thumbnails`: List available thumbnails.
-
-### Verbosity / Simulation Options
-
-*   `-q`, `--quiet`: Quiet mode.
-*   `--no-warnings`: Ignore warnings.
-*   `-s`, `--simulate`: Simulate download.
-*   `--skip-download`: Skip download.
-*   `-g`, `--get-url`: Get URL only.
-*   `-e`, `--get-title`: Get title only.
-*   `--get-id`: Get ID only.
-*   `--get-thumbnail`: Get thumbnail URL.
-*   `--get-description`: Get description.
-*   `--get-duration`: Get duration.
-*   `--get-filename`: Get filename.
-*   `--get-format`: Get format.
-*   `-j`, `--dump-json`: Dump JSON information.
-*   `-J`, `--dump-single-json`: Dump JSON for a single argument.
-*   `--print-json`: Print video information as JSON.
-*   `--newline`: Output progress bar as new lines.
-*   `--no-progress`: Disable progress bar.
-*   `--console-title`: Display progress in console title.
-*   `-v`, `--verbose`: Verbose mode.
-*   `--dump-pages`: Dump downloaded pages.
-*   `--write-pages`: Write downloaded pages.
-*   `--print-traffic`: Display HTTP traffic.
-*   `-C`, `--call-home`: Contact youtube-dl server for debugging.
-*   `--no-call-home`: Do NOT contact youtube-dl server.
-
-### Workarounds
-
-*   `--encoding ENCODING`: Force an encoding.
-*   `--no-check-certificate`: Suppress certificate validation.
-*   `--prefer-insecure`: Use an unencrypted connection.
-*   `--user-agent UA`: Specify a custom user agent.
-*   `--referer URL`: Specify a custom referer.
-*   `--add-header FIELD:VALUE`: Add a custom HTTP header.
-*   `--bidi-workaround`: Work around bidirectional text issues.
-*   `--sleep-interval SECONDS`: Sleep before each download.
-*   `--max-sleep-interval SECONDS`: Sleep range upper bound.
-
-### Video Format Options
-
-*   `-f`, `--format FORMAT`: Video format code. See [format selection examples](#format-selection-examples).
-*   `--all-formats`: Download all formats.
-*   `--prefer-free-formats`: Prefer free formats.
-*   `-F`, `--list-formats`: List available formats.
-*   `--youtube-skip-dash-manifest`: Don't download DASH manifests.
-*   `--merge-output-format FORMAT`: Container format for merge (mkv, mp4, ogg, webm, flv).
-
-### Subtitle Options
-
-*   `--write-sub`: Write subtitles.
-*   `--write-auto-sub`: Write auto-generated subtitles.
-*   `--all-subs`: Download all subtitles.
-*   `--list-subs`: List subtitles.
-*   `--sub-format FORMAT`: Subtitle format.
-*   `--sub-lang LANGS`: Subtitle languages.
-
-### Authentication Options
-
-*   `-u`, `--username USERNAME`: Username.
-*   `-p`, `--password PASSWORD`: Password.
-*   `-2`, `--twofactor TWOFACTOR`: Two-factor authentication code.
-*   `-n`, `--netrc`: Use .netrc authentication data.
-*   `--video-password PASSWORD`: Video password.
-
-### Adobe Pass Options
-
-*   `--ap-mso MSO`: Adobe Pass MSO.
-*   `--ap-username USERNAME`: Adobe Pass username.
-*   `--ap-password PASSWORD`: Adobe Pass password.
-*   `--ap-list-mso`: List available MSOS.
-
-### Post-processing Options
-
-*   `-x`, `--extract-audio`: Extract audio.
-*   `--audio-format FORMAT`: Audio format. (best, aac, flac, mp3, m4a, opus, vorbis, wav)
-*   `--audio-quality QUALITY`: Audio quality.
-*   `--recode-video FORMAT`: Recode video.
-*   `--postprocessor-args ARGS`: Post-processor arguments.
-*   `-k`, `--keep-video`: Keep video after processing.
-*   `--no-post-overwrites`: Don't overwrite processed files.
-*   `--embed-subs`: Embed subtitles.
-*   `--embed-thumbnail`: Embed thumbnail.
-*   `--add-metadata`: Add metadata.
-*   `--metadata-from-title FORMAT`: Parse metadata from title.
-*   `--xattrs`: Write metadata to xattrs.
-*   `--fixup POLICY`: Fix file issues. (never, warn, detect_or_warn)
-*   `--prefer-avconv`: Prefer avconv.
-*   `--prefer-ffmpeg`: Prefer ffmpeg (default).
-*   `--ffmpeg-location PATH`: FFmpeg location.
-*   `--exec CMD`: Execute a command after processing.
-*   `--convert-subs FORMAT`: Convert subtitles.
+Refer to the full documentation for the [Output Template examples](#output-template-examples) and a list of available variables.
 
 ## Configuration
 
-Customize youtube-dl behavior using a configuration file:
+Configure youtube-dl using a configuration file:
 
-*   **System-wide:** `/etc/youtube-dl.conf` (Linux/macOS).
-*   **User-specific:** `~/.config/youtube-dl/config` (Linux/macOS), `%APPDATA%\youtube-dl\config.txt` or `C:\Users\<user name>\youtube-dl.conf` (Windows).
+*   **Linux/macOS:** `/etc/youtube-dl.conf` (system-wide) or `~/.config/youtube-dl/config` (user-specific).
+*   **Windows:** `%APPDATA%\youtube-dl\config.txt` or `C:\Users\<user name>\youtube-dl.conf`.
 
-Example Config file:
+## Advanced Features
 
-```ini
-# Comments start with #
--x  # Always extract audio
---no-mtime  # Don't set modification time
---proxy 127.0.0.1:3128  # Use this proxy
--o ~/Movies/%(title)s.%(ext)s  # Save to Movies directory
-```
-*  `--ignore-config` and `--config-location` can also be used to disable or specify custom config files.
+*   [Network Options](#network-options) for proxy and IP configuration.
+*   [Geo Restriction](#geo-restriction) bypass options.
+*   [Video Selection](#video-selection) for filtering videos within playlists.
+*   [Download Options](#download-options) for controlling download behavior.
+*   [Filesystem Options](#filesystem-options) for file management.
+*   [Thumbnail Options](#thumbnail-options)
+*   [Verbosity / Simulation Options](#verbosity--simulation-options) for debugging.
+*   [Workarounds](#workarounds) for common issues.
+*   [Subtitle Options](#subtitle-options)
+*   [Authentication Options](#authentication-options) for login.
+*   [Adobe Pass Options](#adobe-pass-options)
+*   [Post-processing Options](#post-processing-options)
 
-### Authentication with `.netrc` file
-Configure automatic credentials storage for extractors that support authentication using a [`.netrc` file](https://stackoverflow.com/tags/.netrc/info):
-1.  Create a `.netrc` file in your `$HOME` and restrict permissions:
-    ```bash
-    touch $HOME/.netrc
-    chmod a-rwx,u+rw $HOME/.netrc
-    ```
-2.  Add credentials for an extractor in the following format, where *extractor* is the name of the extractor in lowercase:
-    ```
-    machine <extractor> login <login> password <password>
-    ```
-    For example:
-    ```
-    machine youtube login myaccount@gmail.com password my_youtube_password
-    machine twitch login my_twitch_account_name password my_twitch_password
-    ```
-3.  Activate authentication with the `.netrc` file by passing `--netrc` to youtube-dl or placing it in the configuration file.
-*   On Windows, setup the `%HOME%` environment variable manually (e.g. `set HOME=%USERPROFILE%`).
+## Frequently Asked Questions (FAQ)
 
-## Output Template Examples
-Specify output file names using the `-o` flag and [formatting codes](#output-template).
-```bash
-# Basic filename
-youtube-dl --get-filename -o '%(title)s.%(ext)s' "video_url"
+Get answers to common questions:
 
-# Download to separate directory
-youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "playlist_url"
+*   [How do I update youtube-dl?](#how-do-i-update-youtube-dl)
+*   [youtube-dl is extremely slow to start on Windows?](#youtube-dl-is-extremely-slow-to-start-on-windows)
+*   [I'm getting an error `Unable to extract OpenGraph title` on YouTube playlists?](#im-getting-an-error-unable-to-extract-opengraph-title-on-youtube-playlists)
+*   [I'm getting an error when trying to use output template?](#im-getting-an-error-when-trying-to-use-output-template-error-using-output-template-conflicts-with-using-title-video-id-or-auto-number)
+*   [Do I always have to pass `-citw`?](#do-i-always-have-to-pass--citw)
+*   [Can you please put the `-b` option back?](#can-you-please-put-the--b-option-back)
+*   [I get HTTP error 402 when trying to download a video. What's this?](#i-get-http-error-402-when-trying-to-download-a-video-whats-this)
+*   [Do I need any other programs?](#do-i-need-any-other-programs)
+*   [I have downloaded a video but how can I play it?](#i-have-downloaded-a-video-but-how-can-i-play-it)
+*   [I extracted a video URL with `-g`, but it does not play on another machine / in my web browser.](#i-extracted-a-video-url-with--g-but-it-does-not-play-on-another-machine--in-my-web-browser)
+*   [ERROR: no fmt_url_map or conn information found in video info](#error-no-fmt_url_map-or-conn-information-found-in-video-info)
+*   [ERROR: unable to download video](#error-unable-to-download-video)
+*   [Video URL contains an ampersand and I'm getting some strange output `[1] 2839` or `'v' is not recognized as an internal or external command`](#video-url-contains-an-ampersand-and-im-getting-some-strange-output--1-2839-or-v-is-not-recognized-as-an-internal-or-external-command)
+*   [ExtractorError: Could not find JS function u'OF'](#extractorerror-could-not-find-js-function-uof)
+*   [HTTP Error 429: Too Many Requests or 402: Payment Required](#http-error-429-too-many-requests-or-402-payment-required)
+*   [SyntaxError: Non-ASCII character](#syntaxerror-non-ascii-character)
+*   [What is this binary file? Where has the code gone?](#what-is-this-binary-file-where-has-the-code-gone)
+*   [The exe throws an error due to missing `MSVCR100.dll`](#the-exe-throws-an-error-due-to-missing-msvcr100dll)
+*   [On Windows, how should I set up ffmpeg and youtube-dl? Where should I put the exe files?](#on-windows-how-should-i-set-up-ffmpeg-and-youtube-dl-where-should-i-put-the-exe-files)
+*   [How do I put downloads into a specific folder?](#how-do-i-put-downloads-into-a-specific-folder)
+*   [How do I download a video starting with a `-`?](#how-do-i-download-a-video-starting-with-a--)
+*   [How do I pass cookies to youtube-dl?](#how-do-i-pass-cookies-to-youtube-dl)
+*   [How do I stream directly to media player?](#how-do-i-stream-directly-to-media-player)
+*   [How do I download only new videos from a playlist?](#how-do-i-download-only-new-videos-from-a-playlist)
+*   [Should I add `--hls-prefer-native` into my config?](#should-i-add--hls-prefer-native-into-my-config)
+*   [Can you add support for this anime video site, or site which shows current movies for free?](#can-you-add-support-for-this-anime-video-site-or-site-which-shows-current-movies-for-free)
+*   [How can I speed up work on my issue?](#how-can-i-speed-up-work-on-my-issue)
+*   [How can I detect whether a given URL is supported by youtube-dl?](#how-can-i-detect-whether-a-given-url-is-supported-by-youtube-dl)
+## Bugs
 
-# Restrict filenames
-youtube-dl --get-filename -o '%(title)s.%(ext)s' "video_url" --restrict-filenames
-```
-
-## Format Selection Examples
-Choose specific formats with the `-f` flag.
-```bash
-# Best mp4 format or any other best if no mp4 available
-youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' "video_url"
-
-# Best format, no larger than 480p
-youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]' "video_url"
-
-# Best video no bigger than 50 MB
-youtube-dl -f 'best[filesize<50M]' "video_url"
-
-# Best format over http/https
-youtube-dl -f '(bestvideo+bestaudio/best)[protocol^=http]' "video_url"
-
-# Best video and best audio separately, without merging them
-youtube-dl -f 'bestvideo,bestaudio' -o '%(title)s.f%(format_id)s.%(ext)s' "video_url"
-```
-
-## Video Selection Examples
-Filter videos with date constraints.
-
-```bash
-# Videos uploaded in the last 6 months
-youtube-dl --dateafter now-6months "playlist_url"
-
-# Videos uploaded on January 1, 1970
-youtube-dl --date 19700101 "playlist_url"
-
-# Videos uploaded in the 200x decade
-youtube-dl --dateafter 20000101 --datebefore 20091231 "playlist_url"
-```
-## FAQ (Frequently Asked Questions)
-
-*   **How do I update youtube-dl?**
-    Run `youtube-dl -U` (or `sudo youtube-dl -U` on Linux).  If using pip, `sudo pip install -U youtube-dl`. If using a package manager, use the system update tools.
-*   **Slow start on Windows?**
-    Add an exclusion for `youtube-dl.exe` in Windows Defender settings.
-*   **Unable to extract OpenGraph title?**
-    Update youtube-dl.  Ensure you have at least version 2014.07.25 for YouTube playlist errors.
-*   **Conflicting output template and other options?**
-    Don't use `-o` with `-t`, `--title`, `--id`, `-A` or `--auto-number`.
-*   **Do I always need `-citw`?**
-    No, the default settings are designed to be the best options in most cases.
-*   **Why was the `-b` option removed?**
-    youtube-dl defaults to the best quality, and `-f` is used to select alternatives if the highest quality is not desired.
-*   **HTTP error 402?**
-    YouTube CAPTCHA is triggered by excessive downloading. Solve the CAPTCHA in a browser, then restart youtube-dl, also consider using a `--proxy` or `--source-address` option.
-*   **Do I need other programs?**
-    You may need `avconv` or `ffmpeg` for conversion, `rtmpdump` for RTMP, and `mplayer` or `mpv` for MMS and RTSP.
-*   **How do I play downloaded videos?**
-    Use a video player like `mpv`, `vlc`, or `mplayer`.
-*   **Video URL does not play?**
-    Use the `--cookies` option, make sure your downloader supports the URL protocol, and consider using IPv6.
-*   **Error: no fmt\_url\_map or conn information found in video info/ERROR: unable to download video?**
-    Update youtube-dl.
-*   **Amperands and URL problems?**
-    Wrap the URL in single quotes or escape the ampersands (e.g., `youtube-dl 'url?v=1&q=2'`).
-*   **ExtractorError: Could not find JS function u'OF'?**
-    Update youtube-dl.
-*   **HTTP Error 429: Too Many Requests or 402: Payment Required?**
-    The service is blocking your IP address due to overuse, possibly because of CAPTCHA. Open a browser and solve a CAPTCHA, then [pass cookies](#how-do-i-pass-cookies-to-youtube-dl) to youtube-dl.
-*   **SyntaxError: Non-ASCII character?**
-    Use Python 2.6 or 2.7.
-*   **What is this binary file? Where has the code gone?**
-    Since June 2012 youtube-dl is packed as an executable zipfile, simply unzip it (might need renaming to `youtube-dl.zip` first on some systems) or clone the git repository.
-*   **The exe throws an error due to missing `MSVCR100.dll`?**
-    Install the [Microsoft Visual C++ 2010 Service Pack 1 Redistributable Package (x86)](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe).
-*   **How do I set up ffmpeg and youtube-dl on Windows? Where should I put the exe files?**
-    Put youtube-dl and ffmpeg in the same directory or add their directories to your PATH environment variable.
-*   **How do I put downloads into a specific folder?**
-    Use the `-o` option with an [output template](#output-template).
-*   **How do I download a video starting with a `-`?**
-    Prepend `https://www.youtube.com/watch?v=` or use `--` to separate options and the ID (e.g., `youtube-dl -- -wNyEUrxzFU`).
-*   **How do I pass cookies to youtube-dl?**
-    Use the `--cookies` option. The cookies file must be in Mozilla/Netscape format.
-*   **How do I stream directly to media player?**
-    Use `-o -` to output to stdout, and pipe that to your media player (e.g., `youtube-dl -o - "url" | vlc -`).
-*   **How do I download only new videos from a playlist?**
-    Use the download-archive feature with `--download-archive /path/to/download/archive/file.txt`.
-*   **Should I add `--hls-prefer-native` into my config?**
-    File an issue or a pull request if a different HLS downloader should be preferred for your use case.
-*   **Can you add support for this anime video site, or site which shows current movies for free?**
-    youtube-dl does not include support for services that specialize in infringing copyright.
-*   **How can I speed up work on my issue?**
-    Provide full output from `youtube-dl -v YOUR_URL_HERE`.
-*   **How can I detect whether a given URL is supported by youtube-dl?**
-    Call youtube-dl with the URL; if it doesn't work, it's either unsupported or invalid.
+Report bugs and suggestions in the [issue tracker](https://github.com/ytdl-org/youtube-dl/issues).  Please include the full output of `youtube-dl -v YOUR_URL_HERE` in your report.  See the [Bug reporting instructions](#bugs) for more information.
 
 ## Developer Instructions
+*   [Developer Instructions](#developer-instructions)
+*   [Adding support for a new site](#adding-support-for-a-new-site)
+*   [youtube-dl coding conventions](#youtube-dl-coding-conventions)
 
-See the [developer instructions](#developer-instructions) if you want to contribute to this project.
-
-## Copyright
+## Legal
 
 youtube-dl is released into the public domain.

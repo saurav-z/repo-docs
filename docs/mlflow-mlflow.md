@@ -1,6 +1,6 @@
-# MLflow: The Open Source Machine Learning Lifecycle Platform
+# MLflow: Streamline Your Machine Learning Lifecycle
 
-**Simplify your ML workflow and accelerate model development with MLflow, an open-source platform for the complete machine learning lifecycle.** [Explore the original repository](https://github.com/mlflow/mlflow).
+**Simplify and accelerate your machine learning projects with MLflow, an open-source platform for managing the entire ML lifecycle.** ([Original Repository](https://github.com/mlflow/mlflow))
 
 [![Latest Docs](https://img.shields.io/badge/docs-latest-success.svg?style=for-the-badge)](https://mlflow.org/docs/latest/index.html)
 [![Apache 2 License](https://img.shields.io/badge/license-Apache%202-brightgreen.svg?style=for-the-badge&logo=apache)](https://github.com/mlflow/mlflow/blob/master/LICENSE.txt)
@@ -9,18 +9,16 @@
 [![Twitter](https://img.shields.io/twitter/follow/MLflow?style=for-the-badge&labelColor=00ACEE&logo=twitter&logoColor=white)](https://twitter.com/MLflow)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/mlflow/mlflow)
 
-MLflow empowers machine learning practitioners and teams to manage the complexities of the ML lifecycle, ensuring that each phase is manageable, traceable, and reproducible.
+MLflow is a comprehensive, open-source platform designed to address the complexities of managing the machine learning lifecycle.  It helps data scientists and ML engineers track, organize, and deploy machine learning models efficiently.
 
-## Key Features
+## Key Features:
 
-*   **Experiment Tracking**: Log and compare models, parameters, and results using an interactive UI.
-*   **Model Packaging**: Standardize model format with metadata for reliable deployment and reproducibility.
-*   **Model Registry**: Centralized model store with APIs and UI for collaborative lifecycle management.
-*   **Serving**: Tools for seamless model deployment to batch and real-time scoring on various platforms.
-*   **Evaluation**: Automated model evaluation tools integrated with experiment tracking for performance comparison.
-*   **Observability**: Tracing integrations with GenAI libraries and a Python SDK for debugging and monitoring.
-
-<img src="https://mlflow.org/img/hero.png" alt="MLflow Hero" width=100%>
+*   **Experiment Tracking:**  Effortlessly log experiments, track parameters, metrics, and artifacts, and compare results using an interactive UI.
+*   **Model Packaging:** Standardize model packaging and metadata, ensuring reproducibility and simplified deployment.
+*   **Model Registry:**  Collaboratively manage the full lifecycle of your MLflow models with a centralized model store, API, and UI.
+*   **Model Serving:**  Deploy models seamlessly to various platforms, including Docker, Kubernetes, Azure ML, and AWS SageMaker, for both batch and real-time scoring.
+*   **Model Evaluation:**  Automate model evaluation, track performance metrics, and visually compare results across multiple models.
+*   **Observability:** Integrate tracing with various GenAI libraries and use the Python SDK for manual instrumentation, improving debugging and monitoring.
 
 ## Installation
 
@@ -30,7 +28,7 @@ Install the MLflow Python package using pip:
 pip install mlflow
 ```
 
-Alternatively, install from PyPI, Conda-Forge, CRAN or Maven Central:
+Or install from other package hosting platforms:
 
 |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -41,42 +39,42 @@ Alternatively, install from PyPI, Conda-Forge, CRAN or Maven Central:
 
 ## Documentation
 
-Find comprehensive documentation at: [MLflow Documentation](https://mlflow.org/docs/latest/index.html).
+Find detailed documentation [here](https://mlflow.org/docs/latest/index.html).
 
-## Run Anywhere
+## Running Anywhere
 
-MLflow supports various environments including local development, Amazon SageMaker, AzureML, and Databricks.  Refer to the [Running Anywhere Guide](https://mlflow.org/docs/latest/index.html#running-mlflow-anywhere) for setup instructions.
+MLflow can be run in various environments, including local development, Amazon SageMaker, AzureML, and Databricks.  See [this guide](https://mlflow.org/docs/latest/index.html#running-mlflow-anywhere) for setup instructions.
 
 ## Usage Examples
 
 ### Experiment Tracking
 
-Track your experiments using autologging:
+Track model training with autologging.
 
 ```python
 import mlflow
+
 from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_diabetes
 from sklearn.ensemble import RandomForestRegressor
 
+# Enable MLflow's automatic experiment tracking for scikit-learn
 mlflow.sklearn.autolog()
 
+# Load the training dataset
 db = load_diabetes()
 X_train, X_test, y_train, y_test = train_test_split(db.data, db.target)
 
 rf = RandomForestRegressor(n_estimators=100, max_depth=6, max_features=3)
+# MLflow triggers logging automatically upon model fitting
 rf.fit(X_train, y_train)
 ```
 
-Run the UI to visualize:
-
-```bash
-mlflow ui
-```
+Run `mlflow ui` to access the MLflow UI.
 
 ### Serving Models
 
-Deploy your models with a single command:
+Serve the logged model with a simple command.
 
 ```bash
 mlflow models serve --model-uri runs:/<run-id>/model
@@ -84,49 +82,87 @@ mlflow models serve --model-uri runs:/<run-id>/model
 
 ### Evaluating Models
 
-Automate model evaluation:
+Run automatic evaluation for question-answering tasks.
 
 ```python
 import mlflow
 import pandas as pd
 
-df = pd.DataFrame(...)
-eval_dataset = mlflow.data.from_pandas(df, predictions="outputs", targets="ground_truth")
+# Evaluation set contains (1) input question (2) model outputs (3) ground truth
+df = pd.DataFrame(
+    {
+        "inputs": ["What is MLflow?", "What is Spark?"],
+        "outputs": [
+            "MLflow is an innovative fully self-driving airship powered by AI.",
+            "Sparks is an American pop and rock duo formed in Los Angeles.",
+        ],
+        "ground_truth": [
+            "MLflow is an open-source platform for managing the end-to-end machine learning (ML) "
+            "lifecycle.",
+            "Apache Spark is an open-source, distributed computing system designed for big data "
+            "processing and analytics.",
+        ],
+    }
+)
+eval_dataset = mlflow.data.from_pandas(
+    df, predictions="outputs", targets="ground_truth"
+)
 
+# Start an MLflow Run to record the evaluation results to
 with mlflow.start_run(run_name="evaluate_qa"):
-    results = mlflow.evaluate(data=eval_dataset, model_type="question-answering")
+    # Run automatic evaluation with a set of built-in metrics for question-answering models
+    results = mlflow.evaluate(
+        data=eval_dataset,
+        model_type="question-answering",
+    )
 
 print(results.tables["eval_results_table"])
 ```
 
 ### Observability
 
-Enable tracing for GenAI libraries:
+Enable tracing for OpenAI.
 
 ```python
 import mlflow
 from openai import OpenAI
 
+# Enable tracing for OpenAI
 mlflow.openai.autolog()
 
-response = OpenAI().chat.completions.create(...)
+# Query OpenAI LLM normally
+response = OpenAI().chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[{"role": "user", "content": "Hi!"}],
+    temperature=0.1,
+)
 ```
+
+Navigate to the "Traces" tab in the MLflow UI.
 
 ## Community
 
-*   **Documentation and Support:** Explore the [documentation](https://mlflow.org/docs/latest/index.html) or visit [Stack Overflow](https://stackoverflow.com/questions/tagged/mlflow)
-*   **AI Chatbot:** Click the "Ask AI" button on the doc website.
-*   **Report Bugs/Feature Requests:** Open a [GitHub issue](https://github.com/mlflow/mlflow/issues/new/choose).
-*   **Stay Updated:** Subscribe to our mailing list (mlflow-users@googlegroups.com) or join us on [Slack](https://mlflow.org/slack).
+*   Refer to the [documentation](https://mlflow.org/docs/latest/index.html) or [Stack Overflow](https://stackoverflow.com/questions/tagged/mlflow) for help.
+*   Ask questions using the **"Ask AI"** button on the doc website.
+*   Report issues or suggest features via [GitHub issues](https://github.com/mlflow/mlflow/issues/new/choose).
+*   Join our [Slack](https://mlflow.org/slack) or subscribe to our [mailing list](mlflow-users@googlegroups.com).
 
 ## Contributing
 
-Contributions to MLflow are welcome! See the [contribution guide](CONTRIBUTING.md) and the [MLflow Roadmap](https://github.com/mlflow/mlflow/milestone/3) for details.
+Contributions are welcome! See the [contribution guide](CONTRIBUTING.md).  Consider contributing to the [MLflow Roadmap](https://github.com/mlflow/mlflow/milestone/3).
 
 ## Citation
 
-If you use MLflow in your research, please cite it using the "Cite this repository" button at the top of the [GitHub repository page](https://github.com/mlflow/mlflow).
+Cite MLflow using the "Cite this repository" button on the [GitHub repository page](https://github.com/mlflow/mlflow).
 
 ## Core Members
 
-MLflow is maintained by a team of core members and benefits from significant community contributions.  See the original README for the full list of core members.
+*   Ben Wilson
+*   Corey Zumar
+*   Daniel Lok
+*   Gabriel Fu
+*   Harutaka Kawamura
+*   Serena Ruan
+*   Weichen Xu
+*   Yuki Watanabe
+*   Tomu Hirata

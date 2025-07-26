@@ -1,4 +1,3 @@
-<!-- prettier-ignore -->
 <div align="center">
 <p align="center">
 
@@ -9,11 +8,9 @@
 </p>
 </div>
 
-# FiftyOne: The Open-Source Tool for Computer Vision and Data Curation
+# FiftyOne: The Open-Source Toolkit for Modern Computer Vision
 
-**Supercharge your computer vision projects with FiftyOne, the open-source tool that helps you build high-quality datasets and improve your models!**  ([Back to Top](#top))
-
-[FiftyOne](https://github.com/voxel51/fiftyone) is an open-source tool designed to accelerate the development of computer vision models by providing a powerful platform for data exploration, model analysis, and dataset management.  It allows you to visualize, analyze, and improve your datasets and models with ease.
+**FiftyOne** empowers you to build high-quality datasets and computer vision models with an intuitive and powerful interface.  [Explore the FiftyOne GitHub Repo](https://github.com/voxel51/fiftyone).
 
 ---
 
@@ -38,16 +35,32 @@
 
 ## Key Features
 
-*   **Visualize and Explore:** Easily visualize and explore images, videos, and their associated labels using an interactive interface.
-*   **Interactive Embeddings Panel:** Explore data through embeddings to select points of interest and view corresponding samples/labels.
-*   **Model Evaluation & Analysis:** Evaluate model performance, identify failure modes, and fine-tune models for improved accuracy.
-*   **Advanced Data Curation:** Quickly find and fix data issues, annotation errors, and edge cases to enhance data quality.
-*   **Rich Integrations:** Seamlessly integrate with popular deep learning libraries, including PyTorch, Hugging Face, and Ultralytics.
-*   **Open and Extensible:** Customize and extend FiftyOne with plugins to fit your specific needs and workflows.
+*   **Visualize Datasets:** Explore images, videos, and labels with an intuitive interface.
+*   **Explore Embeddings:** Easily visualize and interact with embeddings to understand your data.
+*   **Analyze and Improve Models:** Evaluate model performance, pinpoint failures, and refine your models.
+*   **Advanced Data Curation:** Quickly find and resolve data issues and annotation errors.
+*   **Rich Integrations:** Seamlessly integrates with popular deep learning libraries.
+*   **Open and Extensible:** Customize and extend FiftyOne to fit your unique needs.
+
+<div id='additional-resources'>
+
+## Additional Resources
+
+| [FiftyOne Enterprise](https://voxel51.com/enterprise) | [VoxelGPT](https://github.com/voxel51/voxelgpt) | [Plugins](https://voxel51.com/plugins) | [Vector Search](https://voxel51.com/blog/the-computer-vision-interface-for-vector-search) | [Dataset Zoo](https://docs.voxel51.com/dataset_zoo/index.html) | [Model Zoo](https://docs.voxel51.com/model_zoo/index.html) | [FiftyOne Brain](https://docs.voxel51.com/brain.html) |
+
+</div>
+
+## Installation
+
+```shell
+pip install fiftyone
+```
+
+For detailed installation instructions and system-specific setup information, please see the detailed instructions within the original README.
 
 ## Quickstart
 
-Get started with FiftyOne in seconds:
+Get started quickly with FiftyOne:
 
 ```python
 import fiftyone as fo
@@ -56,44 +69,25 @@ import fiftyone.zoo as foz
 dataset = foz.load_zoo_dataset("quickstart")
 session = fo.launch_app(dataset)
 ```
-
-For a deeper dive, explore the [Quickstart Colab Notebook](https://colab.research.google.com/github/voxel51/fiftyone-examples/blob/master/examples/quickstart.ipynb).
-
-## Installation
-
-Install FiftyOne using pip:
-
-```bash
-pip install fiftyone
-```
-
-For detailed installation instructions, including source installations and prerequisites, see the full [README](https://github.com/voxel51/fiftyone#installation).
-
-## Additional Resources
-
-Explore these resources to enhance your FiftyOne experience:
-
-| [FiftyOne Enterprise](https://voxel51.com/enterprise) | [VoxelGPT](https://github.com/voxel51/voxelgpt) | [Plugins](https://voxel51.com/plugins) | [Vector Search](https://voxel51.com/blog/the-computer-vision-interface-for-vector-search) | [Dataset Zoo](https://docs.voxel51.com/dataset_zoo/index.html) | [Model Zoo](https://docs.voxel51.com/model_zoo/index.html) | [FiftyOne Brain](https://docs.voxel51.com/brain.html) |
+Check out the [Colab notebook](https://colab.research.google.com/github/voxel51/fiftyone-examples/blob/master/examples/quickstart.ipynb) to learn more.
 
 ## Documentation
 
-Access comprehensive documentation for FiftyOne:
+Comprehensive documentation is available at [fiftyone.ai](https://fiftyone.ai).
 
 | [Tutorials](https://voxel51.com/docs/fiftyone/tutorials/index.html) | [Recipes](https://voxel51.com/docs/fiftyone/recipes/index.html) | [Examples](https://github.com/voxel51/fiftyone-examples) | [User Guide](https://voxel51.com/docs/fiftyone/user_guide/index.html) | [CLI Documentation](https://voxel51.com/docs/fiftyone/cli/index.html) | [API Reference](https://voxel51.com/docs/fiftyone/api/fiftyone.html) |
 
 ## FiftyOne Enterprise
 
-For production-grade, collaborative, cloud-native workloads, check out [FiftyOne Enterprise](https://voxel51.com/enterprise).
+Scale your visual AI projects with [FiftyOne Enterprise](https://voxel51.com/enterprise), for secure collaboration and cloud-native workflows.
 
 ## FAQ & Troubleshooting
 
-Refer to our [common issues](https://docs.voxel51.com/getting_started/troubleshooting.html) page to troubleshoot installation issues. Consult our [frequently asked questions](https://docs.voxel51.com/faq/index.html) for answers to common queries.
+Find answers to common questions and troubleshooting tips at the [troubleshooting page](https://docs.voxel51.com/getting_started/troubleshooting.html) and the [FAQ page](https://docs.voxel51.com/faq/index.html).  For further assistance, open an issue on GitHub or contact us on [Discord](https://discord.gg/fiftyone-community).
 
-If you encounter an issue, please [open an issue on GitHub](https://github.com/voxel51/fiftyone/issues) or contact us on [Discord](https://discord.gg/fiftyone-community).
+## Join Our Community
 
-## Community
-
-Join the FiftyOne community:
+Connect with the FiftyOne community:
 
 [![Discord](https://img.shields.io/badge/Discord-7289DA?logo=discord&logoColor=white)](https://discord.gg/fiftyone-community)
 [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/voxel51)
@@ -101,11 +95,11 @@ Join the FiftyOne community:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/company/voxel51)
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/voxel51)
 
-**Share your projects and tag us on social media with @Voxel51 and #FiftyOne!**
+**Share your FiftyOne experiences using @Voxel51 and #FiftyOne on social media!**
 
 ## Contributors
 
-FiftyOne is open source and welcomes community contributions! See the [contribution guide](https://github.com/voxel51/fiftyone/blob/develop/CONTRIBUTING.md) to get involved.
+FiftyOne is an open-source project.  Contributions are welcome! See the [contribution guide](https://github.com/voxel51/fiftyone/blob/develop/CONTRIBUTING.md).
 
 <a href="https://github.com/voxel51/fiftyone/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=voxel51/fiftyone" />
@@ -122,3 +116,4 @@ If you use FiftyOne in your research, please cite the project:
   journal={GitHub. Note: https://github.com/voxel51/fiftyone},
   year={2020}
 }
+```

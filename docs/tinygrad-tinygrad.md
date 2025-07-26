@@ -1,94 +1,38 @@
-html
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="/docs/logo_tiny_light.svg">
-    <img alt="tiny corp logo" src="/docs/logo_tiny_dark.svg" width="50%" height="50%">
-  </picture>
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="/docs/logo_tiny_light.svg">
+  <img alt="tiny corp logo" src="/docs/logo_tiny_dark.svg" width="50%" height="50%">
+</picture>
+
 </div>
 
-<h1 align="center">tinygrad: A Deep Learning Framework Designed for Simplicity and Efficiency</h1>
+# tinygrad: A Tiny Deep Learning Framework for Maximum Flexibility
 
-<div align="center">
-  <a href="https://github.com/tinygrad/tinygrad">
-    <img src="https://img.shields.io/github/stars/tinygrad/tinygrad?style=social" alt="GitHub stars">
-  </a>
-  <a href="https://discord.gg/ZjZadyC7PK">
-    <img src="https://img.shields.io/discord/1068976834382925865?label=Discord&logo=discord" alt="Discord">
-  </a>
-</div>
+**tinygrad** is a minimalist deep learning framework designed for simplicity and ease of adding new hardware support. It's the perfect choice for researchers and developers looking for a lean, customizable, and highly efficient deep learning solution.
 
-**Tinygrad is a deep learning framework that aims for simplicity, making it easy to add new hardware backends and experiment with novel architectures.  <a href="https://github.com/tinygrad/tinygrad">Explore the tinygrad repository!</a>**
+[**Explore tinygrad on GitHub**](https://github.com/tinygrad/tinygrad) | [Documentation](https://docs.tinygrad.org/) | [Discord](https://discord.gg/ZjZadyC7PK)
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/tinygrad/tinygrad)](https://github.com/tinygrad/tinygrad/stargazers)
+[![Unit Tests](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml/badge.svg)](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml)
+[![Discord](https://img.shields.io/discord/1068976834382925865)](https://discord.gg/ZjZadyC7PK)
 
 ---
 
-## Key Features
+## Key Features of tinygrad:
 
-*   **Simple and Extensible:**  Built for ease of use, making it straightforward to add support for new accelerators.
-*   **Accelerated Performance:** Supports a wide range of hardware, including GPU (OpenCL), CPU (C Code), LLVM, METAL, CUDA, AMD, NV, QCOM, and WEBGPU, and is easy to add more.
-*   **Runs Cutting-Edge Models:** Can run complex models like LLaMA and Stable Diffusion.
-*   **Lazy Evaluation:** Optimizes operations through lazy evaluation, resulting in efficient kernel fusion.
-*   **Neural Network Support:** Provides the essential components for building and training neural networks, including autograd, tensor library, optimizers, and data loaders.
-*   **Minimal Dependencies:** Tinygrad is designed to be lightweight, reducing the overhead of installation and dependencies.
+*   **Ultra-lightweight Design:** Built for simplicity, tinygrad is easy to understand and extend.
+*   **Accelerated Performance:** Supports multiple accelerators, including GPU (OpenCL, Metal, CUDA, AMD, NV, QCOM, WEBGPU), CPU (C Code, LLVM).
+*   **Lazy Evaluation:** Experience efficient computation through lazy evaluation, fusing operations into optimized kernels.
+*   **Neural Network Support:**  Easily build and train neural networks with autograd, a tensor library, and an optimizer.
+*   **LLaMA and Stable Diffusion Support:** Run cutting-edge models with a streamlined approach.
+*   **Simple to Extend:** Easily add support for new hardware by implementing ~25 low-level operations.
 
-## Examples
+## Get Started with tinygrad
 
-### LLaMA and Stable Diffusion
+### Installation
 
-tinygrad can run LLaMA and Stable Diffusion, showing its capabilities in handling complex models.
-
-### Lazy Evaluation Example
-
-Demonstrates how matmul operations are fused into a single kernel for performance gains:
-
-```bash
-DEBUG=3 python3 -c "from tinygrad import Tensor;
-N = 1024; a, b = Tensor.empty(N, N), Tensor.empty(N, N);
-(a.reshape(N, 1, N) * b.T.reshape(1, N, N)).sum(axis=2).realize()"
-```
-
-### Neural Network Example
-
-A basic linear neural network implemented with tinygrad:
-
-```python
-from tinygrad import Tensor, nn
-
-class LinearNet:
-  def __init__(self):
-    self.l1 = Tensor.kaiming_uniform(784, 128)
-    self.l2 = Tensor.kaiming_uniform(128, 10)
-  def __call__(self, x:Tensor) -> Tensor:
-    return x.flatten(1).dot(self.l1).relu().dot(self.l2)
-
-model = LinearNet()
-optim = nn.optim.Adam([model.l1, model.l2], lr=0.001)
-
-x, y = Tensor.rand(4, 1, 28, 28), Tensor([2,4,3,7])  # replace with real mnist dataloader
-
-with Tensor.train():
-  for i in range(10):
-    optim.zero_grad()
-    loss = model(x).sparse_categorical_crossentropy(y).backward()
-    optim.step()
-    print(i, loss.item())
-```
-## Accelerators
-
-tinygrad supports a variety of hardware accelerators:
-
--   [x] GPU (OpenCL)
--   [x] CPU (C Code)
--   [x] LLVM
--   [x] METAL
--   [x] CUDA
--   [x] AMD
--   [x] NV
--   [x] QCOM
--   [x] WEBGPU
-
-## Installation
-
-### From Source
+Install tinygrad from source with the following commands:
 
 ```bash
 git clone https://github.com/tinygrad/tinygrad.git
@@ -96,19 +40,15 @@ cd tinygrad
 python3 -m pip install -e .
 ```
 
-### Direct (master)
+Or install directly from master:
 
 ```bash
 python3 -m pip install git+https://github.com/tinygrad/tinygrad.git
 ```
 
-## Documentation
+## Example:  A Quick Comparison with PyTorch
 
-Comprehensive documentation and a quick start guide are available on the [docs website](https://docs.tinygrad.org/).
-
-### Quick Comparison to PyTorch
-
-Demonstrates the similarity in syntax between tinygrad and PyTorch:
+See the difference in a simple matrix operation:
 
 ```python
 from tinygrad import Tensor
@@ -121,6 +61,8 @@ z.backward()
 print(x.grad.tolist())  # dz/dx
 print(y.grad.tolist())  # dz/dy
 ```
+
+Compared to PyTorch:
 
 ```python
 import torch
@@ -136,4 +78,10 @@ print(y.grad.tolist())  # dz/dy
 
 ## Contributing
 
-We welcome contributions! Please review the [Contributing Guidelines](https://github.com/tinygrad/tinygrad/blob/master/CONTRIBUTING.md) before submitting a pull request.
+We welcome contributions!  Please review the [contributing guidelines](https://github.com/tinygrad/tinygrad/blob/master/README.md#contributing) before submitting a pull request.
+
+##  More Resources
+
+*   [Documentation](https://docs.tinygrad.org/)
+*   [Discord](https://discord.gg/ZjZadyC7PK)
+*   [tinygrad on GitHub](https://github.com/tinygrad/tinygrad)

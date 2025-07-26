@@ -1,123 +1,92 @@
-# Free IPTV Channels: Enjoy Thousands of Live TV Streams (Updated Daily)
+# IPTV: Your Free, Open-Source IPTV Streaming Source (Updated Daily!)
 
-Access a massive library of free IPTV channels, automatically updated every 6 hours, including domestic and international broadcasts, all without ads!  [**View the original repository on GitHub**](https://github.com/vbskycn/iptv)
-
-<div class="badges-container">
-    <img src="https://img.shields.io/github/stars/vbskycn/iptv?style=flat-square" alt="GitHub stars" />
-    <img src="https://img.shields.io/github/forks/vbskycn/iptv?style=flat-square" alt="GitHub forks" />
-    <img src="https://img.shields.io/github/issues/vbskycn/iptv?style=flat-square" alt="GitHub issues" />
-    <img src="https://img.shields.io/github/watchers/vbskycn/iptv?style=flat-square" alt="GitHub watchers" />
-    <img src="https://img.shields.io/github/contributors/vbskycn/iptv?style=flat-square" alt="GitHub contributors" />
-    <img src="https://img.shields.io/github/license/vbskycn/iptv?style=flat-square" alt="GitHub license" />
-    <img src="https://views.whatilearened.today/views/github/vbskycn/iptv.svg" alt="访问统计" />
-</div>
+Easily access thousands of free, high-quality IPTV channels with this constantly updated, open-source project – [check it out on GitHub](https://github.com/vbskycn/iptv)!
 
 ---
 
-## Key Features:
+## Key Features
 
-*   **Free & Open Source:**  Completely free to use and modify under an open-source license.
-*   **Automatic Updates:**  Live streams are updated every 6 hours to ensure a fresh selection of channels.
-*   **Extensive Channel Selection:** Access thousands of channels from around the world, including CCTV, local and international channels.
-*   **Multiple Formats:** Available in M3U and TXT formats, compatible with various IPTV players.
-*   **IPv4 & IPv6 Support:** Supports both IPv4 and IPv6 networks for broader accessibility.
-*   **EPG & Logos:** Includes EPG (Electronic Program Guide) and channel logos where available.
-*   **No Ads:** Enjoy uninterrupted viewing without intrusive advertisements.
-*   **Cross-Platform Compatibility:** Works on Android TV boxes, smartphones, and computers.
+*   🔄 **Free & Open Source:**  Completely free to use, with no ads.
+*   📡 **Daily Updates:** Live sources are automatically scanned and updated every 6 hours.
+*   📺 **Wide Channel Selection:** Includes thousands of channels from China, Hong Kong, Macau, Taiwan, and international sources.
+*   🌍 **IPv4/IPv6 Support:** Works seamlessly with both IPv4 and IPv6 networks.
+*   🖼️ **M3U/TXT Formats:** Provides channels in both M3U (with EPG and channel logos) and TXT formats for easy integration with various IPTV players.
+*   📱 **Cross-Platform Compatibility:** Compatible with Android (4.0+), set-top boxes, phones, and computers.
+*   🚫 **No Ads:** Enjoy a clean and ad-free streaming experience.
 
----
+##  How to Use
 
-## How to Use:
+### IPTV4 (IPv4 Compatible)
 
-1.  **Choose Your Format:** Select either the TXT or M3U format based on your IPTV player's requirements.
-2.  **Copy the URL:**  Click the "快速复制" button next to the format you want to use.
-3.  **Paste into Your Player:** Paste the copied URL into your IPTV player's playlist settings.
+*   **TXT Format:**
+    *   URL: `https://live.zbds.org/tv/iptv4.txt`
+    *   *(If the primary domain is blocked, use the proxy links below)*
 
-## Available Live Stream Lists:
+*   **M3U Format (Recommended - Includes EPG & Logos):**
+    *   URL: `https://live.zbds.org/tv/iptv4.m3u`
+    *   *(If the primary domain is blocked, use the proxy links below)*
 
-### IPTV4 (IPv4 Addresses)
+*   **Proxy URLs (If direct links are blocked):**
+    *   TXT:  `https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.txt`
+    *   M3U: `https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u`
 
-Updated: <!-- UPDATE_TIME_IPTV4 -->2025-07-25 12:30:35<!-- END_UPDATE_TIME_IPTV4 -->
+### IPTV6 (IPv6 Recommended)
 
-| Name               | URL                                                                 | Quick Copy   |
-| ------------------ | ------------------------------------------------------------------- | ----------- |
-| TXT Format        | <a href="https://live.zbds.org/tv/iptv4.txt">https://live.zbds.org/tv/iptv4.txt</a> | <button class="button" onclick="copyToClipboard('https://live.zbds.org/tv/iptv4.txt')">Copy</button> |
-| M3U Format (w/EPG) | <a href="https://live.zbds.org/tv/iptv4.m3u">https://live.zbds.org/tv/iptv4.m3u</a> | <button class="button" onclick="copyToClipboard('https://live.zbds.org/tv/iptv4.m3u')">Copy</button> |
+*   **TXT Format:**
+    *   URL: `https://live.zbds.org/tv/iptv6.txt`
+    *   *(If the primary domain is blocked, use the proxy links below)*
 
-*If the direct links don't work, try using the proxy links below:*
+*   **M3U Format (Recommended - Includes EPG & Logos):**
+    *   URL: `https://live.zbds.org/tv/iptv6.m3u`
+    *   *(If the primary domain is blocked, use the proxy links below)*
 
-```
-https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.txt
-```
+*   **Proxy URLs (If direct links are blocked):**
+    *   TXT:  `https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.txt`
+    *   M3U: `https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u`
 
-```
-https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u
-```
+### Quick Copy
 
-### IPTV6 (IPv6 Addresses)
+Use the buttons in the original repository to copy the links easily.
 
-*Recommended for IPv6 users for faster and more stable streams.*
-
-**Note:** Availability of IPv6 streams may be affected. The repository will update when new sources are found.
-
-Updated: <!-- UPDATE_TIME_IPTV6 -->2025-07-25 12:30:35<!-- END_UPDATE_TIME_IPTV6 -->
-
-| Name               | URL                                                                 | Quick Copy   |
-| ------------------ | ------------------------------------------------------------------- | ----------- |
-| TXT Format        | <a href="https://live.zbds.org/tv/iptv6.txt">https://live.zbds.org/tv/iptv6.txt</a> | <button class="button" onclick="copyToClipboard('https://live.zbds.org/tv/iptv6.txt')">Copy</button> |
-| M3U Format (w/EPG) | <a href="https://live.zbds.org/tv/iptv6.m3u">https://live.zbds.org/tv/iptv6.m3u</a> | <button class="button" onclick="copyToClipboard('https://live.zbds.org/tv/iptv6.m3u')">Copy</button> |
-
-*If the direct links don't work, try using the proxy links below:*
-
-```
-https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.txt
-```
-
-```
-https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u
-```
-
-## Demo
+##  Demo
 
 ![IPTV直播源演示截图 - 展示直播源列表和播放界面](assets/demo.png "IPTV直播源演示")
 
 ## Tools
 
-*   **Live Stream Format Converter** (Open-Source, located in the `tools` directory)
-    *   [https://izbds.com/tools/index.html](https://izbds.com/tools/index.html)
+*   **Pure Frontend Live Source Format Converter:** ([https://izbds.com/tools/index.html](https://izbds.com/tools/index.html)) - Tools directory in this repository
 
-## Alternative: Live TV App
+##  Ready-to-Use IPTV Apps
 
-For a pre-configured solution, try the "Live TV" app.
+*   For a hassle-free experience, consider using a pre-configured IPTV app like "直播电视" ([https://izbds.com/aztv/](https://izbds.com/aztv/)) which includes channels from Hong Kong, Macau and Taiwan (recommended by the project owner)
 
-*   Download: [https://izbds.com/aztv/](https://izbds.com/aztv/) (includes Hong Kong, Macau, and Taiwan channels)
+##  Updates
 
-## Recent Updates:
-
-*   2025.05.20: EPG service discontinued.
-*   2025.01.11: Page optimization.
-*   2024.12.13: Ongoing optimization.
-*   2024.10.18: Optimized valid source code.
-*   2024.09.09: Added a new server for daily updates due to rapid stream failures.
-*   2024.06.22: Added automatic updates for IPTV4/IPTV6 sources.
+*   **2025.05.20**: Removed EPG service.
+*   **2025.01.11**: Optimized the page layout.
+*   **2024.12.13**: Continued Optimization
+*   **2024.10.18**: Optimized valid source code.
+*   **2024.09.09**: Added Deibian server and updated three times a day to address broken links.
+*   **2024.06.22**: Added automated updating for IPTV4 and IPTV6 sources.
 
 ## Contact
 
-<div class="contact-info">
-    <a href="https://t.me/starkluistn98" target="_blank">
-        <img src="https://img.shields.io/badge/Telegram-@starkluistn98-blue?style=flat-square&logo=telegram" alt="Telegram" />
-    </a>
-</div>
+*   Telegram: [@starkluistn98](https://t.me/starkluistn98)
 
 ## Disclaimer
 
-*   This project is for research and educational purposes only.  All content is sourced from publicly available internet links.  Commercial use, including but not limited to commercial streaming or promotion, is strictly prohibited.
-*   This project does not store any media content.  All live streams are provided by third parties.  The project is not responsible for the content, availability, or legality of the streams.  Users are solely responsible for their usage and any resulting consequences.
-*   This project is released under an open-source license.  You may fork the project, but if referencing content in other repositories, the open-source license must be followed and the source must be clearly cited.
-*   The project does not guarantee the validity of live channels.  Live content may be affected by the streaming service providers.
-*   This project is community-maintained.  All files are hosted on the [GitHub repository](https://github.com/vbskycn/iptv) and built automatically.  The project is maintained by the project creator for public benefit.  Feel free to star the project or report issues via [Issues](https://github.com/vbskycn/iptv/issues/new/choose).
-*   The project maintainer reserves the right to modify or terminate the project at any time, with the final interpretation rights belonging to the project maintainer.
-*   By using this project, you acknowledge that you have read and agree to this disclaimer.  If you disagree, please immediately stop using the project. The project reserves the right to update the disclaimer at any time.
+*   This project is for technical research and educational purposes only.
+*   All content is gathered from publicly available internet sources.
+*   Do not use for commercial purposes (e.g., commercial streaming, advertising, etc.).
+*   This project does not store any media content; the streaming sources are provided by third parties.
+*   The project maintainer is not responsible for the content, availability, stability, or legality of the streams.
+*   All legal responsibility and consequences rest with the user.
+*   This project is released under an open-source license.  When forking, please abide by the open-source license and cite the source.
+*   The validity of the live channels is not guaranteed, and channel availability may be affected by the service providers.
+*   The project is community-maintained and hosted on GitHub.
+*   The maintainer reserves the right to modify or discontinue the project, with the final interpretation of the project belonging to the maintainer.
+*   By using this project, you agree to this disclaimer. If you disagree, please cease use immediately.
+*   The project reserves the right to update this disclaimer at any time.
 
 ## Support the Project
 
@@ -138,21 +107,3 @@ For a pre-configured solution, try the "Live TV" app.
   />
 </a>
 <!-- edgeone_end -->
-```
-Key improvements and SEO optimizations:
-
-*   **Concise Headline:**  The initial sentence clearly states the project's core function and benefit.
-*   **Keyword Rich:**  Includes relevant keywords throughout the content, especially in headings and the initial description.
-*   **Clear Sections:**  Uses headings to structure the information logically, making it easy to scan.
-*   **Bulleted Lists:**  Highlights key features and benefits in an easily digestible format.
-*   **Call to Action:** Guides users on how to get started with the service.
-*   **Updated Information:** Includes  "Updated" timestamps to convey the frequency of the content refreshes.
-*   **Clear Disclaimer:** A well-structured disclaimer to mitigate potential liability.
-*   **Alt tags for Images:** Added alt tags for all images.
-*   **Enhanced Readability:** Improved writing style for clarity and flow.
-*   **Direct Links with Text:** All links are paired with descriptive text.
-*   **Emphasis on Free/Open Source:**  The key value propositions (free, open source) are highlighted throughout.
-*   **Removed Redundancy:** Removed repetitive wording.
-*   **Contact Information:** Clearly displayed contact information.
-*   **SEO Optimization:** Optimized the original description with relevant keywords for better search engine visibility.
-*   **Added a DEMO section to make it visually appealing.**

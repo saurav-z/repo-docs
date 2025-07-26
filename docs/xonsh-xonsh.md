@@ -1,40 +1,40 @@
-# Xonsh: A Python-Powered Shell for a Modern Command Line Experience
+# Xonsh: A Python-Powered Shell
 
-**Xonsh is a cross-platform, Python-powered shell that merges the power of Python with the flexibility of a command-line interface.** Find the original repository [here](https://github.com/xonsh/xonsh).
+**Xonsh is a powerful, cross-platform shell that combines the flexibility of Python with the familiarity of your favorite shell commands.**
+
+[View the original repository on GitHub](https://github.com/xonsh/xonsh)
 
 ## Key Features
 
-*   **Python-Based:** Write shell commands and Python code seamlessly, using Python 3.6+ as the language.
-*   **Cross-Platform:** Works on Linux, macOS, and Windows, providing a consistent experience across different operating systems.
-*   **Shell Primitives:** Includes shell-specific commands like `cd`, `ls`, and more, alongside Python's extensive capabilities.
-*   **Extensible with Xontribs:** Customize and extend Xonsh functionality with a plugin system called "xontribs."
-*   **Integration with Existing Tools:** Compatible with popular tools like conda, mamba, Starship, zoxide, and more.
+*   **Python Integration:** Xonsh is a superset of Python 3.6+, allowing you to use Python syntax directly within the shell.
+*   **Shell Commands:** Seamlessly execute shell commands like `cd`, `ls`, `grep`, and more.
+*   **Cross-Platform:** Xonsh runs on various operating systems, including Windows, macOS, and Linux.
+*   **Extensible with xontribs:** Extend xonsh with plugins, and customize your experience.
+*   **Python and Shell Interoperability:** Easily mix and match Python code and shell commands in one place.
 
-## Getting Started
+## Get Started
 
-1.  **Installation:**
-
+1.  **Install:**
     ```bash
     python -m pip install 'xonsh[full]'
     ```
-
-2.  **Learn More:** Visit [xon.sh](https://xon.sh) for detailed information, including:
+2.  **Explore:** Visit [https://xon.sh](https://xon.sh) for detailed information, including:
 
     *   Installation guide
-    *   Step-by-step tutorial
+    *   Tutorials
 
-## Extend Xonsh with Xontribs
+## Extensions (xontribs)
 
-Xonsh's functionality can be extended through a plugin/extension system called "xontribs."
+Xonsh's functionality can be extended using plugins called "xontribs."
 
-*   [Xontribs on Github](https://github.com/topics/xontrib)
+*   [Xontribs on GitHub](https://github.com/topics/xontrib)
 *   [Awesome xontribs](https://github.com/xonsh/awesome-xontribs)
 *   [Core xontribs](https://xon.sh/api/_autosummary/xontribs/xontrib.html)
 *   [Create a xontrib step by step from template](https://github.com/xonsh/xontrib-template)
 
 ## Projects Using Xonsh
 
-Xonsh is used by a growing number of projects to enhance command-line interactions:
+Xonsh integrates well with many popular tools:
 
 *   conda and mamba
 *   Starship
@@ -47,17 +47,30 @@ Xonsh is used by a growing number of projects to enhance command-line interactio
 *   x-cmd
 *   rever
 *   Regro autotick bot
-*   Jupyter and JupyterLab (via xontrib-jupyter)
-*   euporie (via xontrib-jupyter)
-*   Jupytext (via xontrib-jupyter)
 
-## Join the Xonsh Community
+## Jupyter Integration
 
-Contribute to the Xonsh project and help build a better shell experience:
+Xonsh integrates with Jupyter-based interactive notebooks via `xontrib-jupyter <https://github.com/xonsh/xontrib-jupyter>`_:
 
-*   Contribute by solving issues and new xontribs.
-*   Become a xonsh core developer.
-*   Implement and maintain xonsh support in third party tools.
-*   Become a sponsor to xonsh.
+*   Jupyter and JupyterLab
+*   euporie
+*   Jupytext
+
+## Join the Community
+
+Help improve Xonsh!
+
+*   Contribute to [popular issues](https://github.com/xonsh/xonsh/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc) or [high priority issues](https://github.com/xonsh/xonsh/issues?q=is%3Aopen+is%3Aissue+label%3Apriority-high+sort%3Areactions-%2B1-desc).
+*   Create a new xontrib.
+*   Contribute to the API.
+*   Implement and maintain xonsh support in third-party tools.
+*   Design logos and images, or improve the website.
+*   Become a sponsor.
 *   Spread the word about xonsh!
-*   Give a star to xonsh repository and to xontribs you like.
+*   Star the repository.
+
+We welcome all contributions!
+
+## Credits
+
+*   Thanks to [Zulip](https://zulip.com/) for supporting the [xonsh community](https://xonsh.zulipchat.com/)!

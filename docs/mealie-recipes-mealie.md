@@ -8,48 +8,48 @@
 
 <p align="center">
   <a href="https://github.com/mealie-recipes/mealie">
-<svg style="width:100px;height:100px" viewBox="0 0 24 24">
-    <path fill="currentColor" d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.36,10.22L13.16,10C12.38,9.23 12.38,7.97 13.16,7.19L17.5,2.82L18.43,3.74L15.19,7L16.15,7.94L19.39,4.69L20.31,5.61L17.06,8.85L18,9.81L21.26,6.56L22.18,7.5L17.81,11.84C17.03,12.62 15.77,12.62 15,11.84L14.78,11.64L13.41,13Z" />
-</svg>
+    <img src="docs/docs/assets/img/home_screenshot.png" alt="Mealie Logo" width="200">
   </a>
-
-  <h3 align="center">Mealie: Your Self-Hosted Recipe Manager</h3>
 </p>
 
-Mealie is the ultimate self-hosted recipe manager that simplifies meal planning and grocery shopping for the whole family.  [Explore Mealie on GitHub!](https://github.com/mealie-recipes/mealie)
+<h1 align="center">Mealie: Your Self-Hosted Recipe Manager</h1>
 
-[![Product Name Screen Shot][product-screenshot]](https://docs.mealie.io)
+Mealie is a feature-rich, self-hosted recipe manager that makes it easy to store, organize, and plan your meals.  [Explore the Mealie project on GitHub](https://github.com/mealie-recipes/mealie).
+
+<p align="center">
+    <a href="https://docs.mealie.io/"><strong>Explore the Docs</strong></a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://demo.mealie.io/"><strong>View Demo</strong></a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://github.com/mealie-recipes/mealie/issues"><strong>Report Bug</strong></a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://github.com/mealie-recipes/mealie/pkgs/container/mealie"><strong>GitHub Container Registry</strong></a>
+</p>
+
+## About Mealie
+
+Mealie is a self-hosted recipe manager, meal planner, and shopping list application designed to simplify your cooking experience.  It offers a user-friendly interface and a powerful backend, allowing you to easily manage your recipes and meal planning.
 
 ## Key Features
 
-*   **Recipe Import:** Easily create recipes by importing them from URLs or adding them manually with the built-in editor.
-*   **Meal Planning:** Plan your weekly meals with the intuitive meal planner.
-*   **Shopping List:** Generate organized shopping lists, categorized for easy supermarket navigation.
-*   **Cookbook Organization:** Organize your recipes into custom cookbooks.
-*   **Docker Deployment:** Deploy Mealie effortlessly with Docker.
-*   **Multilingual Support:**  Available in 35+ languages!
-
-## Why Choose Mealie?
-
-Mealie offers a user-friendly experience with a reactive frontend, allowing for easy management of your recipes and meals. Mealie also has a robust REST API for integrations.
-
-*   [Explore the Documentation](https://docs.mealie.io/)
-*   [View the Demo](https://demo.mealie.io/)
-*   [Report an Issue](https://github.com/mealie-recipes/mealie/issues)
-*   [GitHub Container Registry](https://github.com/mealie-recipes/mealie/pkgs/container/mealie)
+*   **Recipe Imports:** Quickly add recipes by importing them from a URL or manually entering the details.
+*   **Meal Planning:** Plan your meals for the week with the intuitive Meal Planner.
+*   **Shopping List:** Automatically generate shopping lists, organized by supermarket sections.
+*   **Cookbooks:** Categorize your recipes into custom cookbooks for easy organization.
+*   **Docker Deployment:** Deploy Mealie easily with Docker.
+*   **Multi-Language Support:** Available in over 35 languages for a global user base.
+*   **API:** Provides an API for integration with 3rd party applications.
 
 ## Contributing
 
-Contributions are welcome! Whether you're a coder or not, there are many ways to help.
+We welcome contributions from the community! Whether you're a coder or not, there are many ways to get involved:
 
-*   **Developer Contributions:** Consult the [Contributors Guide](https://nightly.mealie.io/contributors/developers-guide/code-contributions/) for code contributions. We recommend using [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) to get started.
-*   **Financial Support:** Support development by using the [Buy Me a Coffee](https://www.buymeacoffee.com/haykot) link.
+*   **Developers:** Check out the [Contributors Guide](https://nightly.mealie.io/contributors/developers-guide/code-contributions/) and use [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) for a streamlined development experience.
+*   **Financial Support:** Consider sponsoring the project on [Github Sponsors](https://github.com/sponsors/hay-kot) or through "Buy Me a Coffee" ([https://www.buymeacoffee.com/haykot](https://www.buymeacoffee.com/haykot)).
 
-<a href="https://www.buymeacoffee.com/haykot" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 30px !important;width: 107px !important;" ></a>
+### Translations
 
-### Translation Contributions
-
-Help make Mealie accessible to more people by translating it into your language! Contribute to translations on [Crowdin](https://crowdin.com/project/mealie).  Learn more in the [translation page of the contributor's guide](https://nightly.mealie.io/contributors/translating/).
+Help translate Mealie!  Contribute by voting for preferred translations or by translating Mealie into a new language.  Use [Crowdin](https://crowdin.com/project/mealie) to assist with this process.  More information can be found in the [contributor's guide](https://nightly.mealie.io/contributors/translating/).
 
 ## License
 
@@ -57,10 +57,9 @@ Distributed under the AGPL License. See `LICENSE` for more information.
 
 ## Sponsors
 
-Thank you to the sponsors on [Github Sponsors](https://github.com/sponsors/hay-kot) and Buy Me a Coffee.
+Thank you to all the sponsors on [Github Sponsors](https://github.com/sponsors/hay-kot) and "Buy Me a Coffee".
 
 Thanks to Depot for providing build instances for our Docker image builds.
-
 [![Built with Depot](https://depot.dev/badges/built-with-depot.svg)](https://depot.dev?utm_source=Mealie)
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -82,14 +81,3 @@ Thanks to Depot for providing build instances for our Docker image builds.
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/hay-kot
 [product-screenshot]: docs/docs/assets/img/home_screenshot.png
-```
-Key improvements and SEO considerations:
-
-*   **Clear Title and Hook:** The title and one-sentence hook immediately convey what the project is and its core benefit.  The title includes key search terms.
-*   **Keywords:**  The description uses important keywords throughout (recipe manager, meal planner, shopping list, self-hosted, etc.).
-*   **Structured Content:** Uses headings (H3 and H2) and bulleted lists for easy readability and scanning by both users and search engines.
-*   **Call to Action:** Encourages users to "Explore Mealie on GitHub!"
-*   **Emphasis:** Key features are bolded.
-*   **Complete Information:** Includes all original information, but organized better and with more context.
-*   **SEO Friendly:**  The use of headings, keywords, and concise descriptions is designed for better search engine indexing.
-*   **Concise and Clear:**  The text is trimmed down to be more direct and easier to understand.

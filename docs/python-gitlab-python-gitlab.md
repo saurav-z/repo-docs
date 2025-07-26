@@ -1,23 +1,34 @@
-# python-gitlab: The Comprehensive Python Library for Interacting with GitLab APIs
+# Python-GitLab: Interact with GitLab APIs with Ease
 
-**Effortlessly manage your GitLab resources with python-gitlab, a powerful Python package offering a robust client for the GitLab v4 REST API, synchronous and asynchronous GraphQL API clients, and a versatile CLI tool.**  You can find the original repository at [https://github.com/python-gitlab/python-gitlab](https://github.com/python-gitlab/python-gitlab).
+**Python-GitLab** is a powerful Python library that simplifies interacting with GitLab APIs, providing both synchronous and asynchronous options. ([See the original repository](https://github.com/python-gitlab/python-gitlab))
+
+[![Test](https://github.com/python-gitlab/python-gitlab/workflows/Test/badge.svg)](https://github.com/python-gitlab/python-gitlab/actions)
+[![PyPI version](https://badge.fury.io/py/python-gitlab.svg)](https://badge.fury.io/py/python-gitlab)
+[![Documentation Status](https://readthedocs.org/projects/python-gitlab/badge/?version=latest)](https://python-gitlab.readthedocs.org/en/latest/?badge=latest)
+[![Codecov](https://codecov.io/github/python-gitlab/python-gitlab/coverage.svg?branch=main)](https://codecov.io/github/python-gitlab/python-gitlab?branch=main)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-gitlab.svg)](https://pypi.python.org/pypi/python-gitlab)
+[![Gitter](https://img.shields.io/gitter/room/python-gitlab/Lobby.svg)](https://gitter.im/python-gitlab/Lobby)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
+[![License](https://img.shields.io/github/license/python-gitlab/python-gitlab)](https://github.com/python-gitlab/python-gitlab/blob/main/COPYING)
 
 ## Key Features
 
-*   **Pythonic Interface:** Write clean, readable Python code to interact with GitLab.
-*   **Flexible API Access:** Pass any parameter supported by the GitLab API, with easy access to new endpoints as they are released.
-*   **GraphQL Support:** Utilize both synchronous and asynchronous clients for GitLab's GraphQL API.
-*   **Low-Level API Access:** Access arbitrary endpoints using lower-level API methods for maximum flexibility.
-*   **Persistent Sessions:** Benefit from persistent request sessions for authentication, proxy, and certificate handling.
-*   **Robust Error Handling:** Enjoy smart retries on network and server errors, including rate-limit handling.
-*   **Pagination Handling:** Seamlessly handle paginated responses with lazy iterators.
-*   **Automated Encoding:** Automatically URL-encode paths and parameters.
-*   **Data Conversion:** Automatically converts complex data structures to API attribute types.
-*   **Configuration Management:**  Merge configurations from config files, environment variables, and command-line arguments.
+Python-GitLab offers a range of features to make working with GitLab APIs straightforward:
+
+*   **Pythonic Interface:** Write clean, readable Python code to manage your GitLab resources.
+*   **Flexible API Access:** Pass arbitrary parameters to the GitLab API, as documented by GitLab.
+*   **GraphQL Support:** Utilize both synchronous and asynchronous clients for the GraphQL API.
+*   **Low-Level API Access:** Access new GitLab API endpoints quickly through lower-level methods.
+*   **Persistent Sessions:** Use persistent request sessions for authentication, proxy, and certificate handling.
+*   **Robust Error Handling:** Benefit from smart retries on network and server errors, along with rate-limit handling.
+*   **Paginated Response Handling:** Easily manage paginated responses, including lazy iterators.
+*   **Automatic Encoding:** Paths and parameters are automatically URL-encoded.
+*   **Data Type Conversion:** Automatically converts complex data structures to API attribute types.
+*   **Configuration Management:** Merge configuration from config files, environment variables, and arguments.
 
 ## Installation
 
-python-gitlab requires Python 3.9 or later.
+Python-GitLab requires Python 3.9 or later.
 
 Install the latest stable version using `pip`:
 
@@ -25,23 +36,15 @@ Install the latest stable version using `pip`:
 pip install --upgrade python-gitlab
 ```
 
-Or install the development version directly from GitHub or GitLab:
+Alternatively, install the latest development version directly from GitHub:
 
 ```bash
 pip install git+https://github.com/python-gitlab/python-gitlab.git
 ```
-```bash
-pip install git+https://gitlab.com/python-gitlab/python-gitlab.git
-```
 
-## Using Docker Images
+## Docker Images
 
-python-gitlab offers Docker images based on Alpine and Debian slim Python base images.
-
-*   **Alpine (default):** Smaller image.
-*   **Debian Slim:** Provides a more complete environment and is better for CI jobs.
-
-Images are published on the GitLab registry:
+Python-GitLab provides Docker images based on Alpine and Debian slim Python base images.  This allows for quick and easy access to the tools.
 
 *   `registry.gitlab.com/python-gitlab/python-gitlab:latest` (latest, alpine alias)
 *   `registry.gitlab.com/python-gitlab/python-gitlab:alpine` (latest alpine)
@@ -50,27 +53,15 @@ Images are published on the GitLab registry:
 *   `registry.gitlab.com/python-gitlab/python-gitlab:v3.2.0-alpine`
 *   `registry.gitlab.com/python-gitlab/python-gitlab:v3.2.0-slim-bullseye`
 
-**Run the Docker Image:**
+Run the Docker image:
 
 ```bash
 docker run -it --rm registry.gitlab.com/python-gitlab/python-gitlab:latest <command> ...
 ```
 
-**Example (without authentication):**
+## Usage inside GitLab CI
 
-```bash
-docker run -it --rm registry.gitlab.com/python-gitlab/python-gitlab:latest project get --id gitlab-org/gitlab
-```
-
-**Mount a config file:**
-
-```bash
-docker run -it --rm -v /path/to/python-gitlab.cfg:/etc/python-gitlab.cfg registry.gitlab.com/python-gitlab/python-gitlab:latest <command> ...
-```
-
-### Usage inside GitLab CI
-
-To use the Docker image inside GitLab CI, you will need to override the `entrypoint`:
+To use the Docker image in GitLab CI, override the `entrypoint`:
 
 ```yaml
 Job Name:
@@ -83,45 +74,18 @@ Job Name:
       gitlab <command>
 ```
 
-### Building the image
-
-**Build your own image:**
-
-```bash
-docker build -t python-gitlab:latest .
-```
-
-**Run your image:**
-
-```bash
-docker run -it --rm python-gitlab:latest <command> ...
-```
-
-**Build a Debian slim-based image:**
-
-```bash
-docker build -t python-gitlab:latest --build-arg PYTHON_FLAVOR=slim-bullseye .
-```
-
 ## Bug Reports
 
-Report bugs and feature requests at [https://github.com/python-gitlab/python-gitlab/issues](https://github.com/python-gitlab/python-gitlab/issues).
+Report bugs and feature requests on [GitHub Issues](https://github.com/python-gitlab/python-gitlab/issues).
 
-## Community Chat
+## Community
 
-Join the Gitter community chat for support and discussions: [https://gitter.im/python-gitlab/Lobby](https://gitter.im/python-gitlab/Lobby).
+Join the [Gitter community](https://gitter.im/python-gitlab/Lobby) for help and discussions.
 
 ## Documentation
 
-Comprehensive documentation for both the CLI and API is available on [readthedocs](http://python-gitlab.readthedocs.org/en/stable/).
-
-### Build the Docs
-
-```bash
-pip install tox
-tox -e docs
-```
+Comprehensive documentation is available on [Read the Docs](http://python-gitlab.readthedocs.org/en/stable/).
 
 ## Contributing
 
-Refer to `CONTRIBUTING.rst <https://github.com/python-gitlab/python-gitlab/blob/main/CONTRIBUTING.rst>` for contribution guidelines.
+Refer to [CONTRIBUTING.rst](https://github.com/python-gitlab/python-gitlab/blob/main/CONTRIBUTING.rst) for contributing guidelines.

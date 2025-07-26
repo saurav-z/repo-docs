@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  <em>The ultimate observability and developer tool platform for AI Agents, helping you build, evaluate, and monitor your agents with ease.</em>
+  <em>**Supercharge Your AI Agents: Observability, Debugging, and Optimization**</em>
 </div>
 
 <br />
@@ -53,45 +53,45 @@
 
 <br/>
 
-## AgentOps: AI Agent Observability & DevTools
-
-AgentOps empowers developers to build, evaluate, and monitor AI agents from prototype to production. Get started with AgentOps - the go-to platform for debugging, cost management, and more.  [Learn More](https://github.com/AgentOps-AI/agentops)
+**AgentOps is the ultimate observability and devtool platform for AI agents, enabling you to build, evaluate, and monitor your agents from prototype to production.**  Track agent performance, identify issues, and optimize costs with ease.
 
 ## Key Features
 
-*   **Replay Analytics and Debugging**: Step-by-step agent execution graphs for in-depth analysis.
-*   **LLM Cost Management**: Track and manage your spend with LLM foundation model providers.
-*   **Agent Benchmarking**: Test your agents against 1,000+ evals.
-*   **Compliance and Security**: Detect common prompt injection and data exfiltration exploits.
-*   **Framework Integrations**: Seamless integrations with CrewAI, AG2 (AutoGen), Camel AI, and LangChain.
+*   **Replay Analytics and Debugging:** Step-by-step agent execution graphs for in-depth analysis.
+*   **LLM Cost Management:** Track and manage your spend with leading LLM providers.
+*   **Agent Benchmarking:** Test your agents against 1,000+ evaluations.
+*   **Compliance and Security:** Detect prompt injection and data exfiltration attempts.
+*   **Framework Integrations:** Native integrations with popular frameworks like CrewAI, AG2 (AutoGen), Camel AI, and Langchain.
 
 ## Quick Start
 
-Get up and running with AgentOps in minutes:
+Install the AgentOps Python package:
 
 ```bash
 pip install agentops
 ```
 
-### Session Replays in 2 Lines of Code
+### Get Started in 2 Lines of Code
 
-Initialize the AgentOps client and automatically get analytics on all your LLM calls.
+Initialize the AgentOps client to automatically gain powerful analytics on all your LLM calls.
 
-[Get an API key](https://app.agentops.ai/settings/projects)
+1.  **Get an API Key:** Obtain your API key from the [AgentOps dashboard](https://app.agentops.ai/settings/projects).
 
-```python
-import agentops
+2.  **Integrate with your Code:**
 
-# Beginning of your program (i.e. main.py, __init__.py)
-agentops.init( < INSERT YOUR API KEY HERE >)
+    ```python
+    import agentops
 
-...
+    # Beginning of your program (e.g., main.py, __init__.py)
+    agentops.init(<INSERT YOUR API KEY HERE>)
 
-# End of program
-agentops.end_session('Success')
-```
+    ...
 
-View all your sessions on the [AgentOps dashboard](https://app.agentops.ai?ref=gh).
+    # End of program
+    agentops.end_session('Success')
+    ```
+
+All your sessions are easily viewed on the [AgentOps dashboard](https://app.agentops.ai?ref=gh).
 
 <details>
   <summary>Agent Debugging</summary>
@@ -123,11 +123,11 @@ View all your sessions on the [AgentOps dashboard](https://app.agentops.ai?ref=g
   </a>
 </details>
 
-### First-Class Developer Experience
+### First Class Developer Experience
 
-Add powerful observability to your agents, tools, and functions with as little code as possible: one line at a time.
+Add robust observability to your agents, tools, and functions with minimal code: one line at a time.
 
-Refer to our [documentation](http://docs.agentops.ai) for detailed examples and usage.
+Refer to the [AgentOps documentation](http://docs.agentops.ai) for detailed examples.
 
 ```python
 # Create a session span (root for all other spans)
@@ -193,17 +193,18 @@ def my_session():
 ```
 
 All decorators support:
-- Input/Output Recording
-- Exception Handling
-- Async/await functions
-- Generator functions
-- Custom attributes and names
 
-## Integrations 🦾
+*   Input/Output Recording
+*   Exception Handling
+*   Async/await functions
+*   Generator functions
+*   Custom attributes and names
+
+## Integrations
 
 ### OpenAI Agents SDK 🖇️
 
-AgentOps seamlessly integrates with the OpenAI Agents SDKs, for both Python and TypeScript, enabling powerful multi-agent system monitoring.
+AgentOps seamlessly integrates with the OpenAI Agents SDKs for both Python and TypeScript, enabling you to build and monitor multi-agent systems with tools, handoffs, and guardrails.
 
 #### Python
 
@@ -225,7 +226,7 @@ npm install agentops @openai/agents
 
 ### CrewAI 🛶
 
-Add observability to CrewAI agents in just two lines of code! Automatic monitoring on the AgentOps dashboard is enabled simply by setting an `AGENTOPS_API_KEY` in your environment.
+Integrate AgentOps with CrewAI agents in just a couple of lines of code. Simply set the `AGENTOPS_API_KEY` environment variable to start monitoring your crews on the AgentOps dashboard.
 
 ```bash
 pip install 'crewai[agentops]'
@@ -236,21 +237,21 @@ pip install 'crewai[agentops]'
 
 ### AG2 (AutoGen) 🤖
 
-Get full observability and monitoring for AG2 (formerly AutoGen) agents with just two lines of code. Set an `AGENTOPS_API_KEY` in your environment and call `agentops.init()`.
+Add comprehensive observability and monitoring to AG2 (formerly AutoGen) agents with two lines of code.  Set the `AGENTOPS_API_KEY` environment variable and call `agentops.init()`.
 
 *   [AG2 Observability Example](https://docs.ag2.ai/notebooks/agentchat_agentops)
 *   [AG2 - AgentOps Documentation](https://docs.ag2.ai/docs/ecosystem/agentops)
 
 ### Camel AI 🐪
 
-Track and analyze CAMEL agents with comprehensive observability. Set an `AGENTOPS_API_KEY` and initialize AgentOps to start.
+Track and analyze CAMEL agents with full observability. Set an `AGENTOPS_API_KEY` in your environment and initialize AgentOps.
 
 *   [Camel AI](https://www.camel-ai.org/) - Advanced agent communication framework
 *   [AgentOps integration example](https://docs.agentops.ai/v1/integrations/camel)
 *   [Official Camel AI documentation](https://docs.camel-ai.org/cookbooks/agents_tracking.html)
 
 <details>
-  <summary>Installation</summary>
+  <summary>Installation and Usage</summary>
 
 ```bash
 pip install "camel-ai[all]==0.2.11"
@@ -297,21 +298,19 @@ print(response)
 agentops.end_session("Success")
 ```
 
-Check out our [Camel integration guide](https://docs.agentops.ai/v1/integrations/camel) for more examples including multi-agent scenarios.
+Check out our [Camel integration guide](https://docs.agentops.ai/v1/integrations/camel) for more examples, including multi-agent scenarios.
 </details>
 
 ### Langchain 🦜🔗
 
-AgentOps seamlessly integrates with applications built using Langchain. To use the handler, install Langchain as an optional dependency:
+AgentOps supports Langchain applications. Install Langchain as an optional dependency and use the provided handler.
 
 <details>
-  <summary>Installation</summary>
-  
+  <summary>Installation and Usage</summary>
+
 ```shell
 pip install agentops[langchain]
 ```
-
-To use the handler, import and set
 
 ```python
 import os
@@ -334,25 +333,24 @@ agent = initialize_agent(tools,
                          handle_parsing_errors=True)
 ```
 
-Check out the [Langchain Examples Notebook](./examples/langchain/langchain_examples.ipynb) for more details including Async handlers.
-
+Check out the [Langchain Examples Notebook](./examples/langchain/langchain_examples.ipynb) for more details, including Async handlers.
 </details>
 
 ### Cohere ⌨️
 
-First class support for Cohere(>=5.4.0). This is a living integration, should you need any added functionality please message us on Discord!
+Full support for Cohere (>=5.4.0) allows for quick and effective integration.
 
 *   [AgentOps integration example](https://docs.agentops.ai/v1/integrations/cohere)
 *   [Official Cohere documentation](https://docs.cohere.com/reference/about)
 
 <details>
-  <summary>Installation</summary>
-  
+  <summary>Installation and Usage</summary>
+
 ```bash
 pip install cohere
 ```
 
-```python python
+```python
 import cohere
 import agentops
 
@@ -369,7 +367,7 @@ print(chat)
 agentops.end_session('Success')
 ```
 
-```python python
+```python
 import cohere
 import agentops
 
@@ -392,19 +390,19 @@ agentops.end_session('Success')
 
 ### Anthropic ﹨
 
-Track agents built with the Anthropic Python SDK (>=0.32.0).
+Integrate AgentOps with agents built with the Anthropic Python SDK (>=0.32.0).
 
 *   [AgentOps integration guide](https://docs.agentops.ai/v1/integrations/anthropic)
 *   [Official Anthropic documentation](https://docs.anthropic.com/en/docs/welcome)
 
 <details>
-  <summary>Installation</summary>
-  
+  <summary>Installation and Usage</summary>
+
 ```bash
 pip install anthropic
 ```
 
-```python python
+```python
 import anthropic
 import agentops
 
@@ -432,7 +430,7 @@ agentops.end_session('Success')
 ```
 
 Streaming
-```python python
+```python
 import anthropic
 import agentops
 
@@ -468,7 +466,7 @@ for event in stream:
 
 Async
 
-```python python
+```python
 import asyncio
 from anthropic import AsyncAnthropic
 
@@ -504,15 +502,15 @@ Track agents built with the Mistral Python SDK (>=0.32.0).
 *   [Official Mistral documentation](https://docs.mistral.ai)
 
 <details>
-  <summary>Installation</summary>
-  
+  <summary>Installation and Usage</summary>
+
 ```bash
 pip install mistralai
 ```
 
 Sync
 
-```python python
+```python
 from mistralai import Mistral
 import agentops
 
@@ -540,7 +538,7 @@ agentops.end_session('Success')
 
 Streaming
 
-```python python
+```python
 from mistralai import Mistral
 import agentops
 
@@ -576,7 +574,7 @@ agentops.end_session('Success')
 
 Async
 
-```python python
+```python
 import asyncio
 from mistralai import Mistral
 
@@ -604,7 +602,7 @@ await main()
 
 Async Streaming
 
-```python python
+```python
 import asyncio
 from mistralai import Mistral
 
@@ -647,14 +645,14 @@ Track agents built with the CamelAI Python SDK (>=0.32.0).
 *   [Official CamelAI documentation](https://docs.camel-ai.org/index.html)
 
 <details>
-  <summary>Installation</summary>
-  
+  <summary>Installation and Usage</summary>
+
 ```bash
 pip install camel-ai[all]
 pip install agentops
 ```
 
-```python python
+```python
 #Import Dependencies
 import agentops
 import os
@@ -678,13 +676,13 @@ AgentOps provides support for LiteLLM(>=1.3.1), allowing you to call 100+ LLMs u
 *   [Official LiteLLM documentation](https://docs.litellm.ai/docs/providers)
 
 <details>
-  <summary>Installation</summary>
-  
+  <summary>Installation and Usage</summary>
+
 ```bash
 pip install litellm
 ```
 
-```python python
+```python
 # Do not use LiteLLM like this
 # from litellm import completion
 # ...
@@ -701,16 +699,14 @@ response = await litellm.acompletion(model="claude-3", messages=messages)
 
 ### LlamaIndex 🦙
 
-AgentOps works seamlessly with applications built using LlamaIndex, a framework for building context-augmented generative AI applications with LLMs.
+Integrate AgentOps with applications built using LlamaIndex.
 
 <details>
-  <summary>Installation</summary>
-  
+  <summary>Installation and Usage</summary>
+
 ```shell
 pip install llama-index-instrumentation-agentops
 ```
-
-To use the handler, import and set
 
 ```python
 from llama_index.core import set_global_handler
@@ -723,7 +719,6 @@ set_global_handler("agentops")
 ```
 
 Check out the [LlamaIndex docs](https://docs.llamaindex.ai/en/stable/module_guides/observability/?h=agentops#agentops) for more details.
-
 </details>
 
 ### Llama Stack 🦙🥞
@@ -736,7 +731,7 @@ AgentOps provides support for Llama Stack Python Client(>=0.0.53), allowing you 
 
 ### SwarmZero AI 🐝
 
-Track and analyze SwarmZero agents with full observability. Set an `AGENTOPS_API_KEY` in your environment and initialize AgentOps to get started.
+Monitor and analyze SwarmZero agents with full observability.
 
 *   [SwarmZero](https://swarmzero.ai) - Advanced multi-agent framework
 *   [AgentOps integration example](https://docs.agentops.ai/v1/integrations/swarmzero)
@@ -745,7 +740,7 @@ Track and analyze SwarmZero agents with full observability. Set an `AGENTOPS_API
 *   [Official SwarmZero Python SDK](https://github.com/swarmzero/swarmzero)
 
 <details>
-  <summary>Installation</summary>
+  <summary>Installation and Usage</summary>
 
 ```bash
 pip install swarmzero
@@ -764,7 +759,7 @@ from swarmzero import Agent, Swarm
 ```
 </details>
 
-## Evaluations Roadmap 🧭
+## Evaluations Roadmap
 
 | Platform                                                                     | Dashboard                                  | Evals                                  |
 | ---------------------------------------------------------------------------- | ------------------------------------------ | -------------------------------------- |
@@ -772,7 +767,7 @@ from swarmzero import Agent, Swarm
 | 🚧 Evaluation builder API                                                    | ✅ Custom event tag tracking              | 🔜 Agent scorecards                    |
 | 🚧 [Javascript/Typescript SDK (Alpha)](https://github.com/AgentOps-AI/agentops-node) | ✅ Session replays                         | 🔜 Evaluation playground + leaderboard |
 
-## Debugging Roadmap 🧭
+## Debugging Roadmap
 
 | Performance testing                       | Environments                                                                        | LLM Testing                                 | Reasoning and execution testing                   |
 | ----------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------- |
@@ -783,26 +778,27 @@ from swarmzero import Agent, Swarm
 | 🔜 Information context constraint testing | 🔜 Anti-agent roadblocks (i.e. Captchas)                                            | 🔜 CI/CD integration checks                 |                                                   |
 | 🔜 Regression testing                     | ✅ Multi-agent framework visualization                                              |                                             |                                                   |
 
-### Why AgentOps? 🤔
+### Why AgentOps?
 
-AgentOps is your all-in-one solution for building, testing, and monitoring AI agents, enabling you to go from prototype to production.
+AI agents are often slow, costly, and unreliable without the right tools.  AgentOps provides a comprehensive solution for taking your agent from prototype to production.
 
--   **Comprehensive Observability**: Track your AI agents' performance, user interactions, and API usage.
--   **Real-Time Monitoring**: Get instant insights with session replays, metrics, and live monitoring tools.
--   **Cost Control**: Monitor and manage your spend on LLM and API calls.
--   **Failure Detection**: Quickly identify and respond to agent failures and multi-agent interaction issues.
--   **Tool Usage Statistics**: Understand how your agents utilize external tools with detailed analytics.
--   **Session-Wide Metrics**: Gain a holistic view of your agents' sessions with comprehensive statistics.
+*   **Comprehensive Observability:** Track agent performance, user interactions, and API usage.
+*   **Real-Time Monitoring:** Get instant insights via session replays, metrics, and monitoring tools.
+*   **Cost Control:** Monitor and manage LLM and API call spending.
+*   **Failure Detection:** Identify and respond to agent and multi-agent issues quickly.
+*   **Tool Usage Statistics:** Understand tool utilization with detailed analytics.
+*   **Session-Wide Metrics:** Get a holistic view of agent sessions with comprehensive statistics.
+
+AgentOps simplifies agent observability, testing, and monitoring.
 
 ## Star History
 
-Check out our growth in the community:
+See how the community is growing with AgentOps:
 
-<img src="https://api.star-history.com/svg?repos=AgentOps-AI/agentops&type=Date" style="max-width: 500px" width="50%" alt="Logo">
+<img src="https://api.star-history.com/svg?repos=AgentOps-AI/agentops&type=Date" style="max-width: 500px" width="50%" alt="Star History">
 
-## Popular projects using AgentOps
+## Projects Using AgentOps
 
-```
 | Repository | Stars  |
 | :--------  | -----: |
 |<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/2707039?s=40&v=4" width="20" height="20" alt="">  &nbsp; [geekan](https://github.com/geekan) / [MetaGPT](https://github.com/geekan/MetaGPT) | 42787 |
@@ -817,4 +813,5 @@ Check out our growth in the community:
 |<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/173542722?s=48&v=4" width="20" height="20" alt="">  &nbsp; [swarmzero](https://github.com/swarmzero) / [swarmzero](https://github.com/swarmzero/swarmzero) | 195 |
 |<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/3074263?s=40&v=4" width="20" height="20" alt="">  &nbsp; [strnad](https://github.com/strnad) / [CrewAI-Studio](https://github.com/strnad/CrewAI-Studio) | 134 |
 |<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/18406448?s=40&v=4" width="20" height="20" alt="">  &nbsp; [alejandro-ao](https://github.com/alejandro-ao) / [exa-crewai](https://github.com/alejandro-ao/exa-crewai) | 55 |
-|<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/64493665?s=40&v=4" width="20" height="20" alt="">  &nbsp; [ton
+|<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/64493665?s=40&v=4" width="20" height="20" alt="">  &nbsp; [tonykipkemboi](https://github.com/tonykipkemboi) / [youtube_yapper_trapper](https://github.com/tonykipkemboi/youtube_yapper_trapper) | 47 |
+|<img class="avatar mr-2" src="

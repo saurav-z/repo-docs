@@ -12,44 +12,39 @@
   <a href="docs/source/_static/wechat.jpg"><img src="https://img.shields.io/badge/wechat-QR_code-green" alt="WeChat"></a>
 </p>
 
-# RoboVerse: A Unified Platform for Scalable Robot Learning
+# RoboVerse: A Unified Platform for Scalable and Generalizable Robot Learning
 
-RoboVerse is a comprehensive platform, dataset, and benchmark designed to accelerate research in scalable and generalizable robot learning.  [Explore the RoboVerse repository on GitHub](https://github.com/RoboVerseOrg/RoboVerse).
+RoboVerse is a comprehensive platform, dataset, and benchmark designed to accelerate research in robot learning, offering a rich environment for developing and evaluating robotic agents. [Explore the RoboVerse project on GitHub](https://github.com/RoboVerseOrg/RoboVerse).
 
-## Key Features
+**Key Features:**
 
-*   **Unified Platform:** Provides a standardized framework for training and evaluating robot learning algorithms across various simulators.
-*   **Extensive Dataset:** Includes a rich dataset for training and testing robotic agents in diverse environments and tasks.
-*   **Comprehensive Benchmark:**  Offers a benchmark to measure the performance of robot learning algorithms, facilitating comparison and progress.
-*   **Multi-Simulator Support:** Supports popular simulation frameworks.
-*   **Open Source:** Actively evolving, welcoming community contributions.
+*   **Unified Platform:** Provides a consistent framework for developing and evaluating robotic agents across various simulators and environments.
+*   **Rich Dataset:** Includes a diverse set of tasks and datasets, facilitating the training and evaluation of generalizable robotic skills.
+*   **Benchmark:** Offers a standardized benchmark for comparing different robot learning algorithms.
+*   **Integration with Multiple Simulators:** Supports popular simulators such as Isaac Lab, Isaac Gym, MuJoCo, SAPIEN, PyBullet, Genesis, cuRobo, PyRep, and Blender.
+*   **Open Source & Community Driven:** Encourages contributions from the open-source community.
 
-## What's New
+## 🚀 Getting Started
 
-*   **RSS 2025 Acceptance:** RoboVerse was accepted by RSS 2025!
-*   **Code Release:** The codebase has been released and is continuously updated.
+Get started with RoboVerse by referring to the comprehensive [documentation](https://roboverse.wiki/metasim/#) and following the detailed [tutorials](https://roboverse.wiki/metasim/get_started/quick_start/0_static_scene).
 
-## Getting Started
+## 🥰 Contributing
 
-Refer to the [documentation](https://roboverse.wiki/metasim/#) and [tutorials](https://roboverse.wiki/metasim/get_started/quick_start/0_static_scene) for detailed instructions on getting started.
+We welcome contributions!  Check out our [CONTRIBUTING.md](./CONTRIBUTING.md) file for detailed instructions on how to contribute.
 
-## Contribute to RoboVerse
+## 🎅 Wish List
 
-We encourage contributions from the open-source community!  Please refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+Have a feature request?  Share your ideas on the Wish List section of our [GitHub Discussions](https://github.com/RoboVerseOrg/RoboVerse/discussions/categories/wish-list). Upvote requests to help prioritize development!
 
-## Feature Requests & Wish List
-
-Have ideas for new features or want to suggest improvements?  Add them to the Wish List section of our [GitHub Discussions](https://github.com/RoboVerseOrg/RoboVerse/discussions/categories/wish-list). Upvote the requests you find most relevant!
-
-## License and Acknowledgments
+## 📖 License and Acknowledgments
 
 RoboVerse is licensed under the Apache License 2.0.
 
-RoboVerse integrates and utilizes resources from the following simulation frameworks, renderers, libraries, and projects: (Full list provided in the original README)
+**RoboVerse integrates with and utilizes resources from the following projects:** (list of integrations from original README)
 
-## Citation
+## 📚 Citation
 
-If you find RoboVerse helpful, please cite our work:
+If you find RoboVerse useful in your research, please cite it using the following BibTeX entry:
 
 ```bibtex
 @misc{geng2025roboverse,
