@@ -1,33 +1,46 @@
-![Maltrail](https://i.imgur.com/3xjInOD.png)
+[![Maltrail](https://i.imgur.com/3xjInOD.png)](https://github.com/stamparm/maltrail)
 
 [![Python 2.6|2.7|3.x](https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://github.com/stamparm/maltrail#license) [![Malware families](https://img.shields.io/badge/malware_families-1494-orange.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Malware sinkholes](https://img.shields.io/badge/malware_sinkholes-1354-green.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Twitter](https://img.shields.io/badge/twitter-@maltrail-blue.svg)](https://twitter.com/maltrail)
 
-## Maltrail: A Powerful Open-Source Network Traffic Detection System
+## Maltrail: Detect and Block Malicious Traffic with Ease
 
-Maltrail is a comprehensive network traffic detection system that proactively identifies and alerts on malicious activities, leveraging a vast database of threat intelligence and heuristic analysis to protect your network.  [Visit the original repository](https://github.com/stamparm/maltrail) for the source code and more.
+Maltrail is a powerful, open-source malicious traffic detection system that identifies and blocks threats using a combination of blacklists, static trails, and heuristic analysis. [**Visit the original repo for more details.**](https://github.com/stamparm/maltrail)
 
 **Key Features:**
 
-*   🛡️ **Real-time Threat Detection:** Monitors network traffic for malicious indicators, including domains, URLs, IPs, and User-Agent strings.
-*   💡 **Extensive Threat Intelligence:** Utilizes a wide range of public and user-defined blacklists and static trails, updated regularly.
-*   🔍 **Heuristic Analysis:** Employs advanced techniques to identify unknown threats and suspicious patterns.
-*   ⚙️ **Flexible Architecture:**  Operates on a Sensor-Server-Client architecture, with options for standalone sensor deployment.
-*   📊 **Reporting Interface:** Provides a user-friendly web interface for visualizing and analyzing detected threats.
-*   🐳 **Docker Support**: Easily deploy with Docker for streamlined setup and management.
-*   🔄 **Third-Party Integrations:** Compatible with leading security tools like Wazuh, Splunk and more.
+*   **Real-Time Threat Detection:** Monitors network traffic for malicious activity using diverse data sources.
+*   **Comprehensive Data Sources:** Leverages public blacklists, static trails from AV reports, and custom user-defined lists.
+*   **Heuristic Analysis:** Employs advanced techniques to identify unknown threats.
+*   **Flexible Architecture:** Uses a sensor-server-client architecture, allowing for standalone or centralized deployment.
+*   **User-Friendly Reporting Interface:** Provides an intuitive web interface for threat analysis and reporting.
+*   **Easy Integration:** Integrates with various third-party tools and services.
+*   **Customizable:** Easily configure options for trails, servers, and users.
 
-**Table of Contents:**
+**Sections:**
 
 *   [Introduction](#introduction)
 *   [Architecture](#architecture)
 *   [Demo pages](#demo-pages)
-*   [Quick Start](#quick-start)
+*   [Requirements](#requirements)
+*   [Quick start](#quick-start)
 *   [Administrator's guide](#administrators-guide)
     *   [Sensor](#sensor)
     *   [Server](#server)
 *   [User's guide](#users-guide)
     *   [Reporting interface](#reporting-interface)
 *   [Real-life cases](#real-life-cases)
+    *   [Mass scans](#mass-scans)
+    *   [Anonymous attackers](#anonymous-attackers)
+    *   [Service attackers](#service-attackers)
+    *   [Malware](#malware)
+    *   [Suspicious domain lookups](#suspicious-domain-lookups)
+    *   [Suspicious ipinfo requests](#suspicious-ipinfo-requests)
+    *   [Suspicious direct file downloads](#suspicious-direct-file-downloads)
+    *   [Suspicious HTTP requests](#suspicious-http-requests)
+    *   [Port scanning](#port-scanning)
+    *   [DNS resource exhaustion](#dns-resource-exhaustion)
+    *   [Data leakage](#data-leakage)
+    *   [False positives](#false-positives)
 *   [Best practice(s)](#best-practices)
 *   [License](#license)
 *   [Sponsors](#sponsors)
@@ -40,7 +53,7 @@ Maltrail is a comprehensive network traffic detection system that proactively id
 
 ## Introduction
 
-Maltrail is a malicious traffic detection system that utilizes publicly available (black)lists containing malicious and/or generally suspicious trails, along with static trails compiled from various AV reports and custom user defined lists, where trail can be anything from domain name (e.g. `zvpprsensinaix.com` for [Banjori](http://www.johannesbader.ch/2015/02/the-dga-of-banjori/) malware), URL (e.g. `hXXp://109.162.38.120/harsh02.exe` for known malicious [executable](https://www.virustotal.com/en/file/61f56f71b0b04b36d3ef0c14bbbc0df431290d93592d5dd6e3fffcc583ec1e12/analysis/)), IP address (e.g. `185.130.5.231` for known attacker) or HTTP User-Agent header value (e.g. `sqlmap` for automatic SQL injection and database takeover tool). Also, it uses (optional) advanced heuristic mechanisms that can help in discovery of unknown threats (e.g. new malware).
+**Maltrail** is a malicious traffic detection system, utilizing publicly available (black)lists containing malicious and/or generally suspicious trails, along with static trails compiled from various AV reports and custom user defined lists, where trail can be anything from domain name (e.g. `zvpprsensinaix.com` for [Banjori](http://www.johannesbader.ch/2015/02/the-dga-of-banjori/) malware), URL (e.g. `hXXp://109.162.38.120/harsh02.exe` for known malicious [executable](https://www.virustotal.com/en/file/61f56f71b0b04b36d3ef0c14bbbc0df431290d93592d5dd6e3fffcc583ec1e12/analysis/)), IP address (e.g. `185.130.5.231` for known attacker) or HTTP User-Agent header value (e.g. `sqlmap` for automatic SQL injection and database takeover tool). Also, it uses (optional) advanced heuristic mechanisms that can help in discovery of unknown threats (e.g. new malware).
 
 ![Reporting tool](https://i.imgur.com/Sd9eqoa.png)
 
@@ -113,7 +126,7 @@ apt_aridviper, apt_babar, apt_bahamut, etc.
 
 ## Architecture
 
-Maltrail is based on the **Traffic** -> **Sensor** <-> **Server** <-> **Client** architecture. **Sensor**(s) is a standalone component running on the monitoring node (e.g. Linux platform connected passively to the SPAN/mirroring port or transparently inline on a Linux bridge) or at the standalone machine (e.g. Honeypot) where it "monitors" the passing **Traffic** for blacklisted items/trails (i.e. domain names, URLs and/or IPs). In case of a positive match, it sends the event details to the (central) **Server** where they are being stored inside the appropriate logging directory (i.e. `LOG_DIR` described in the *Configuration* section). If **Sensor** is being run on the same machine as **Server** (default configuration), logs are stored directly into the local logging directory. Otherwise, they are being sent via UDP messages to the remote server (i.e. `LOG_SERVER` described in the *Configuration* section).
+Maltrail is based on the **Traffic** -&gt; **Sensor** &lt;-&gt; **Server** &lt;-&gt; **Client** architecture. **Sensor**(s) is a standalone component running on the monitoring node (e.g. Linux platform connected passively to the SPAN/mirroring port or transparently inline on a Linux bridge) or at the standalone machine (e.g. Honeypot) where it "monitors" the passing **Traffic** for blacklisted items/trails (i.e. domain names, URLs and/or IPs). In case of a positive match, it sends the event details to the (central) **Server** where they are being stored inside the appropriate logging directory (i.e. `LOG_DIR` described in the *Configuration* section). If **Sensor** is being run on the same machine as **Server** (default configuration), logs are stored directly into the local logging directory. Otherwise, they are being sent via UDP messages to the remote server (i.e. `LOG_SERVER` described in the *Configuration* section).
 
 ![Architecture diagram](https://i.imgur.com/2IP9Mh2.png)
 
@@ -131,33 +144,33 @@ To run Maltrail properly, [Python](http://www.python.org/download/) **2.6**, **2
 
 **NOTE:** Use of ```pcapy``` lib instead of ```pcapy-ng``` can lead to incorrect work of Maltrail, especially on **Python 3.x** environments. [Examples](https://github.com/stamparm/maltrail/issues?q=label%3Apcapy-ng-related+is%3Aclosed).
 
--   **Sensor** component requires at least 1GB of RAM to run in single-process mode or more if run in multiprocessing mode, depending on the value used for option `CAPTURE_BUFFER`. Additionally, **Sensor** component (in the general case) requires administrative/root privileges.
+*   **Sensor** component requires at least 1GB of RAM to run in single-process mode or more if run in multiprocessing mode, depending on the value used for option `CAPTURE_BUFFER`. Additionally, **Sensor** component (in the general case) requires administrative/root privileges.
 
--   **Server** component does not have any special requirements.
+*   **Server** component does not have any special requirements.
 
 ## Quick start
 
 The following set of commands should get your Maltrail **Sensor** up and running (out of the box with default settings and monitoring interface "any"):
 
--   For **Ubuntu/Debian**
+*   For **Ubuntu/Debian**
 
-```sh
-sudo apt-get install git python3 python3-dev python3-pip python-is-python3 libpcap-dev build-essential procps schedtool
-sudo pip3 install pcapy-ng
-git clone --depth 1 https://github.com/stamparm/maltrail.git
-cd maltrail
-sudo python3 sensor.py
-```
+    ```sh
+    sudo apt-get install git python3 python3-dev python3-pip python-is-python3 libpcap-dev build-essential procps schedtool
+    sudo pip3 install pcapy-ng
+    git clone --depth 1 https://github.com/stamparm/maltrail.git
+    cd maltrail
+    sudo python3 sensor.py
+    ```
 
--   For **SUSE/openSUSE**
+*   For **SUSE/openSUSE**
 
-```sh
-sudo zypper install gcc gcc-c++ git libpcap-devel python3-devel python3-pip procps schedtool
-sudo pip3 install pcapy-ng
-git clone --depth 1 https://github.com/stamparm/maltrail.git
-cd maltrail
-sudo python3 sensor.py
-```
+    ```sh
+    sudo zypper install gcc gcc-c++ git libpcap-devel python3-devel python3-pip procps schedtool
+    sudo pip3 install pcapy-ng
+    git clone --depth 1 https://github.com/stamparm/maltrail.git
+    cd maltrail
+    sudo python3 sensor.py
+    ```
 
 Don't forget to put interfaces in promiscuous mode as needed:
 
@@ -177,7 +190,7 @@ python server.py
 
 ![Server](https://i.imgur.com/loGW6GA.png)
 
--   For **Docker**
+*   For **Docker**
 
 Download maltrail:
 
@@ -195,10 +208,8 @@ Start the container(s) with `docker run`:
 ```sh
 # Build image
 docker build -t maltrail .
-# Start the sensor
-docker run -d --name maltrail-sensor --restart=unless-stopped --net=host --privileged -v /var/log/maltrail:/var/log/maltrail -v /etc/maltrail.conf:/opt/maltrail/maltrail.conf:ro maltrail sensor.py
 # Start the server
-docker run -d --name maltrail-server --restart=unless-stopped --port 8338:8338/tcp --port 8337:8337/udp -v /var/log/maltrail:/var/log/maltrail -v /etc/maltrail.conf:/opt/maltrail/maltrail.conf:ro maltrail server.py
+docker run -d --name maltrail-server --restart=unless-stopped --port 8338:8338/tcp --port 8337:8337/udp -v /etc/maltrail.conf:/opt/maltrail/maltrail.conf:ro maltrail
 # Update the image regularly
 sudo git pull
 docker build -t maltrail .
@@ -266,11 +277,11 @@ Options `SYSLOG_SERVER` and/or `LOGSTASH_SERVER` can be used to send sensor even
 
 Example of event data being sent over UDP is as follows:
 
--   For option `SYSLOG_SERVER` (Note: `LogSeverity` values are 0 (for low), 1 (for medium) and 2 (for high)):
+*   For option `SYSLOG_SERVER` (Note: `LogSeverity` values are 0 (for low), 1 (for medium) and 2 (for high)):
 
 ```Dec 24 15:05:55 beast CEF:0|Maltrail|sensor|0.27.68|2020-12-24|andromeda (malware)|2|src=192.168.5.137 spt=60453 dst=8.8.8.8 dpt=53 trail=morphed.ru ref=(static)```
 
--   For option `LOGSTASH_SERVER`:
+*   For option `LOGSTASH_SERVER`:
 
 ```{"timestamp": 1608818692, "sensor": "beast", "severity": "high", "src_ip": "192.168.5.137", "src_port": 48949, "dst_ip": "8.8.8.8", "dst_port": 53, "proto": "UDP", "type": "DNS", "trail": "morphed.ru", "info": "andromeda (malware)", "reference": "(static)"}```
 
@@ -360,8 +371,4 @@ Bottom part holds a condensed representation of logged events in form of a pagin
 
 Column `threat` holds threat's unique ID (e.g. `85fdb08d`) and color (Note: extruded from the threat's ID), `sensor` holds sensor name(s) where the event has been triggered (e.g. `blitvenica`), `events` holds total number of events for a current threat, `severity` holds evaluated severity of threat (Note: calculated based on values in `info` and `reference` columns, prioritizing malware generated traffic), `first_seen` holds time of first event in a selected (24h) period (e.g. `06th 08:21:54`), `last_seen` holds time of last event in a selected (24h) period (e.g. `06th 15:21:23`), `sparkline` holds a small sparkline graph representing threat's activity in selected period, `src_ip` holds source IP(s) of a threat (e.g. `99.102.41.102`), `src_port` holds source port(s) (e.g. `44556, 44589, 44601`), `dst_ip` holds destination IP(s) (e.g. `213.202.100.28`), `dst_port` holds destination port(s) (e.g. `80 (HTTP)`), `proto` holds protocol(s), (e.g. `TCP`), `trail` holds a blacklisted (or heuristic) entry that triggered the event(s), `info` holds more information about the threat/trail (e.g. `known attacker` for known attacker's IP addresses or `ipinfo` for known IP information service commonly used by malware during a startup), `reference` holds a source of the blacklisted entry (e.g. `(static)` for static trails or `myip.ms` for a dynamic feed retrieved from that same source) and `tags` holds user defined tags for a given trail (e.g. `APT28`).
 
-When moving mouse over `src_ip` and `dst_ip` table entries, information tooltip is being displayed with detailed reverse DNS and WHOIS information (Note: [RIPE](http://www.ripe.net/) is the information provider):
-
-![On mouse over IP](https://i.imgur.com/BgKchAX.png)
-
-Event details (e.g. `src_port`, `dst_port`, `proto`, etc.) that differ inside same threat entry are condensed in form of a bubble icon (i.e. ![Ellipsis](https://raw.githubusercontent.com/stamparm/maltrail/
+When moving mouse over `src_ip` and `dst_ip` table entries, information tooltip is being displayed with detailed reverse DNS and WHOIS information (Note: [R

@@ -1,60 +1,102 @@
-# XLeRobot: Affordable Embodied AI for Everyone
+<!-- Improved README.md -->
+<a href="https://xlerobot.readthedocs.io/en/latest/index.html">
+  <img src="media/XLeRobot.png" alt="XLeRobot Logo" width="600" />
+</a>
 
-**XLeRobot offers a groundbreaking approach to embodied AI, providing a dual-arm mobile robot for under $700, empowering anyone to explore the future of robotics.**  [View the original repository on GitHub](https://github.com/Vector-Wangel/XLeRobot).
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
+[![中文](https://img.shields.io/badge/lang-中文-brown.svg)](README_CN.md)
 
-[![XLeRobot](https://github.com/user-attachments/assets/c99fbd5f-af4a-48ba-a8fd-d667beec22c9)](https://xlerobot.readthedocs.io/en/latest/index.html)
+# XLeRobot: Affordable & Accessible Embodied AI for Everyone
+
+XLeRobot empowers you to build your own dual-arm mobile robot for household tasks, all at a price cheaper than a smartphone and with a quick assembly time! For more information, check out the [XLeRobot GitHub Repository](https://github.com/Vector-Wangel/XLeRobot).
 
 [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
 [![Docs status](https://img.shields.io/badge/docs-passing-brightgreen.svg)](https://xlerobot.readthedocs.io/en/latest/)
 [![Discord](https://img.shields.io/badge/Discord-XLeRobot-7289da?style=flat&logo=discord&logoColor=white)](https://discord.gg/bjZveEUh6F)
 
-## Key Features of XLeRobot:
+---
 
-*   **Cost-Effective:** Starting at just $660, making embodied AI accessible.
-*   **Quick Assembly:** Complete the build in under 4 hours.
-*   **Dual-Arm Mobile Robot:** Designed for general manipulation and household tasks.
-*   **Open-Source & Community-Driven:** Built upon open-source projects like LeRobot, SO-100/SO-101, Lekiwi, and Bambot, encouraging collaboration and contributions.
-*   **Comprehensive Documentation:** Detailed documentation and tutorials available to guide users through assembly, software setup, and operation.
-*   **VR Integration:** Control your robot using VR!
-*   **Simulation available:** Start working with the robot in a simulator before you build it!
+## Key Features
 
-## Pricing Options:
+*   **Cost-Effective:** Build your robot for as low as $660 USD.
+*   **Fast Assembly:** Assemble your robot in under 4 hours.
+*   **Dual-Arm Manipulation:** Designed for household tasks and general manipulation.
+*   **Modular Design:** Easily customizable with various hardware and software options.
+*   **Comprehensive Documentation:** Get started quickly with detailed tutorials and resources.
+*   **Active Community:** Join the Discord community for support and collaboration.
+*   **VR Integration:** XLeVR offers VR Quest 3 whole-body control.
+*   **Simulation Support:** Official simulation with updated URDFs and control scripts.
 
-*   **Basic:** ~$660 (USD) / ~€680 (EUR) / ~¥3999 (CNY) - Includes the core components, ready to integrate with your laptop.
-*   **Standard:** ~$750 (USD) / ~€770 (EUR) / ~¥4399 (CNY) - Basic + RasPi.
-*   **Pro:** ~$960 (USD) / ~€980 (EUR) / ~¥5999 (CNY) - Standard + RealSense depth head cam.
+---
+<a href="https://xlerobot.readthedocs.io/en/latest/index.html">
+  <img width="890" alt="XLeRobot in Action" src="https://github.com/user-attachments/assets/c99fbd5f-af4a-48ba-a8fd-d667beec22c9" />
+</a>
+---
 
-## 📰 News & Updates
+## Pricing & Configurations
 
-*   **2025-07-14:** XLeVR, VR Quest 3 whole-body control system, all data captured, web-based, minimal dependencies, modular, 20min setup.
+> [!NOTE]
+> Cost excludes 3D printing, tools, shipping, and taxes.
+
+| Configuration | US  | EU   | CN   | Description                                    |
+| ------------- | --- | ---- | ---- | ---------------------------------------------- |
+| **Basic**     | ~$660 | ~€680 | ~¥3999 | Includes essential components.              |
+| **Standard**  | ~$750 | ~€770 | ~¥4399 | Basic + Raspberry Pi.                        |
+| **Pro**       | ~$960 | ~€980 | ~¥5999 | Standard + RealSense depth camera.           |
+
+---
+
+## What's New
+
+Stay updated with the latest developments:
+
+*   **2025-07-14:** XLeVR, VR Quest 3 whole-body control system, minimal dependencies, modular, 20min setup.
     ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
+*   **2025-07-08:** Official Simulation released with updated URDFs, control scripts, and support for new hardware and cameras.
+*   **2025-07-01:** Documentation website ([https://xlerobot.readthedocs.io/en/latest/index.html](https://xlerobot.readthedocs.io/en/latest/index.html)) launched with organized tutorials, demos, and resources.
+*   **2025-06-13:** XLeRobot 0.2.0 released, featuring full capability for autonomous household tasks, starting from $660.
 
-*   **2025-07-08:** **Official Simulation** with updated urdfs, control scripts, support for new hardware and cameras. Get started in 10 min.
+---
+<img src="https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5" alt="XLeRobot" width="800" />
 
-*   **2025-07-01:** [**Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) out for more organized tutorials, demos, and resources.
+---
 
-*   **2025-06-13:** [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io) hardware setup, the 1st version fully capable for autonomous household tasks, starts from 660$.
+## Getting Started
 
-## 🚀 Get Started
+> [!NOTE]
+> This guide is beginner-friendly!
 
-Follow these steps to build your own XLeRobot:
+> [!NOTE]
+> If you're new to programming, familiarize yourself with Python, Ubuntu, and Git.
 
-1.  💵 **Buy your parts:** [Bill of Materials](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/material.html)
-2.  🖨️ **Print your stuff:** [3D printing](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/3d.html)
-3.  🔨 **Assemble:** [Assemble!](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble.html)
-4.  💻 **Software:** [Get your robot moving!](https://xlerobot.readthedocs.io/en/latest/software/index.html)
+1.  💵 **Buy Parts:** Consult the [Bill of Materials](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/material.html).
+2.  🖨️ **3D Print:** Follow the [3D printing guide](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/3d.html).
+3.  🔨 **Assemble:** See the [Assembly instructions](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble.html).
+4.  💻 **Software:** Set up the [software](https://xlerobot.readthedocs.io/en/latest/software/index.html) to get your robot moving!
 
-## Main Contributors
+---
+
+## Acknowledgements
+
+XLeRobot builds upon the work of these amazing projects: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot).  Thanks to all the contributors!
+
+## Contributors
 
 *   [Gaotian/Vector Wang](https://vector-wangel.github.io/)
 *   Zhuoyi Lu: RL sim2real deploy, VR control on real robot
 *   Nicole Yue: Documentation website setup
 *   Yuesong Wang: Mujoco simulation
 
+---
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Vector-Wangel/XLeRobot&type=Timeline)](https://star-history.com/#Vector-Wangel/XLeRobot&Timeline)
+
+---
+
 ## Citation
 
-If you want, you can cite this work with:
+If you use XLeRobot, please cite it using the following BibTeX entry:
 
 ```bibtex
 @misc{wang2025xlerobot,
@@ -65,7 +107,9 @@ If you want, you can cite this work with:
 }
 ```
 
-## 🪧 Disclaimer 🪧
+---
+
+## Disclaimer
 
 > [!NOTE]
-> If you build, buy, or develop a XLeRobot based on this repo, you will be fully responsible for all the physical and mental damages it does to you or others.
+> You are solely responsible for any damages, physical or mental, that may arise from building, buying, or using an XLeRobot based on this repository.

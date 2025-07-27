@@ -1,112 +1,64 @@
 # System Design Primer: Your Guide to Building Scalable Systems
 
-**Master the art of designing large-scale systems and ace your system design interviews with this comprehensive and community-driven resource. [Explore the original repo](https://github.com/donnemartin/system-design-primer) for a deeper dive.**
+**Ace your system design interviews and learn how to build large-scale systems with this comprehensive, open-source resource.** Explore the [original repository](https://github.com/donnemartin/system-design-primer) for more in-depth information and community contributions.
 
-This README provides a structured overview of system design concepts, along with resources to help you prepare for system design interviews and build robust, scalable systems.
+## Key Features:
 
-## Key Features
+*   **Comprehensive Coverage:** Master essential system design topics, from fundamental concepts to advanced architectures.
+*   **Interview Prep:** Prepare for system design interviews with sample questions, solutions, and a structured approach.
+*   **Community-Driven:** Benefit from a continually updated, open-source project with contributions from a vibrant community.
+*   **Anki Flashcards:** Utilize provided Anki flashcard decks for spaced repetition and enhanced retention of key concepts.
+*   **Interactive Challenges:** Access a sister repo, "[**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges)," which contains an additional Anki deck:
+    *   [Coding deck](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)
 
-*   **Comprehensive Coverage**: From fundamental principles to advanced architectures, this primer covers a wide range of system design topics.
-*   **Community-Driven**: Benefit from a continually updated, open-source project with contributions from a global community of engineers.
-*   **Interview Preparation**: Prepare for technical interviews with detailed solutions to common system design questions.
-*   **Anki Flashcards**: Solidify your knowledge with ready-to-use Anki flashcard decks for on-the-go learning.
-*   **Interactive Coding Challenges**: Prepare for coding interviews with resources from sister repo [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges) with associated Anki decks.
+## Dive into the World of System Design
 
-## Core Concepts
+System design is a vast and essential topic. This primer offers an organized collection of resources to help you learn how to build systems at scale, whether you are looking to improve your engineering skills, or prepare for a system design interview.
 
-*   **System Design Topics**: Explore a broad spectrum of topics, beginning with:
-    *   Performance vs. Scalability
-    *   Latency vs. Throughput
-    *   Availability vs. Consistency (CAP Theorem)
-*   **Consistency Patterns**: Understand different approaches to data consistency, including:
-    *   Weak Consistency
-    *   Eventual Consistency
-    *   Strong Consistency
-*   **Availability Patterns**: Explore strategies for ensuring system availability:
-    *   Fail-over (Active-Passive, Active-Active)
-    *   Replication
-*   **Infrastructure Components**: Delve into crucial system components:
-    *   Domain Name System (DNS)
-    *   Content Delivery Networks (CDNs)
-    *   Load Balancers
-    *   Reverse Proxies
-    *   Application Layer (Microservices, Service Discovery)
-*   **Data Management**: Learn about various database technologies:
-    *   Relational Database Management Systems (RDBMS)
-    *   NoSQL Databases (Key-Value, Document, Wide Column, Graph)
-*   **Caching Strategies**: Master the art of caching for performance optimization.
-    *   Client Caching
-    *   CDN Caching
-    *   Web Server Caching
-    *   Database Caching
-    *   Application Caching
-*   **Asynchronous Processing**: Leverage asynchronous techniques for improved performance:
-    *   Message Queues
-    *   Task Queues
-    *   Back Pressure
-*   **Communication Protocols**: Understand the essentials of communication:
-    *   HTTP, TCP, UDP, RPC, REST
-*   **Security Basics**: Understand basic security best practices.
-    *   Encryption, Input Sanitization, Principle of Least Privilege
+### Core Topics Covered:
 
-## Study Guide
+*   **Key Principles:** Performance, Scalability, Latency, Throughput, Availability, Consistency, and CAP Theorem.
+*   **Data Handling:** Consistency Patterns, Availability Patterns, Databases (SQL, NoSQL), Caching Strategies, Asynchronism.
+*   **Infrastructure:** DNS, CDNs, Load Balancers, Reverse Proxies.
+*   **Application Layer:** Microservices, Service Discovery.
+*   **Communication:** TCP, UDP, RPC, REST.
+*   **Security:** Basic security principles.
+*   **Back-of-the-Envelope Calculations**
 
-This primer offers a flexible study guide to help you structure your learning based on your interview timeline.
+### Study Guide
 
-*   **Short Timeline**: Focus on breadth, reviewing key system design topics, architectural articles, and a few interview questions.
-*   **Medium Timeline**: Aim for both breadth and depth, practicing with a wider range of interview questions.
-*   **Long Timeline**: Achieve deeper knowledge, and complete more practice questions.
+Follow a study guide to prepare for the system design interview.
 
-## How to Approach a System Design Interview Question
+| | Short | Medium | Long |
+|---|---|---|---|
+| Get a broad understanding of systems | :+1: | :+1: | :+1: |
+| Read articles in the [Company engineering blogs](#company-engineering-blogs) | :+1: | :+1: | :+1: |
+| Review a few [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |
+| Review [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
+| Work through [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | Some | Many | Most |
+| Work through [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | Some | Many | Most |
+| Review [Additional system design interview questions](#additional-system-design-interview-questions) | Some | Many | Most |
 
-Master a systematic approach to system design questions.
+### System Design Interview Question Structure:
 
-1.  **Outline Use Cases, Constraints, and Assumptions**: Define the problem scope.
-2.  **Create a High-Level Design**: Sketch the main components and their connections.
-3.  **Design Core Components**: Dive into details for each core component.
-4.  **Scale the Design**: Identify and address bottlenecks.
+1.  **Outline Use Cases, Constraints, and Assumptions:** Gather requirements and scope the problem.
+2.  **Create a High-Level Design:** Outline the key components and connections.
+3.  **Design Core Components:** Dive into the details of each core component.
+4.  **Scale the Design:** Address potential bottlenecks and improve scalability.
 
-## System Design Interview Questions with Solutions
+## Contribute
 
-Practice and learn from example solutions. Solutions are in the `solutions/` folder.
+Help improve this guide by submitting pull requests to:
 
-*   Design Pastebin.com (or Bit.ly)
-*   Design the Twitter timeline and search (or Facebook feed and search)
-*   Design a web crawler
-*   Design Mint.com
-*   Design the data structures for a social network
-*   Design a key-value store for a search engine
-*   Design Amazon's sales ranking by category feature
-*   Design a system that scales to millions of users on AWS
+*   Fix errors
+*   Improve sections
+*   Add new sections
+*   [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
 
-## Object-Oriented Design Interview Questions with Solutions
+Review the [Contributing Guidelines](CONTRIBUTING.md).
 
-Explore common object-oriented design questions.
+---
 
-*   Design a hash map
-*   Design a least recently used cache
-*   Design a call center
-*   Design a deck of cards
-*   Design a parking lot
-*   Design a chat server
-
-## Appendix: Essential References
-
-*   **Powers of Two Table**: Quickly estimate storage and memory requirements.
-*   **Latency Numbers Every Programmer Should Know**: Understand performance trade-offs.
-*   **Additional System Design Interview Questions**: Expand your practice with additional challenges.
-*   **Real-World Architectures**: Study successful system designs.
-*   **Company Engineering Blogs**: Discover how companies approach their designs.
-
-## Contributing
-
-Help improve this resource by:
-
-*   Fixing errors.
-*   Improving sections.
-*   Adding new sections.
-*   Translating the guide (TRANSLATIONS.md).
-
-## Contact & License
-
-Reach out with any questions. The code and resources are available under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+*   **Credits:** Acknowledgements and links to sources.
+*   **Contact:** How to connect.
+*   **License:**  Creative Commons Attribution 4.0 International License (CC BY 4.0)

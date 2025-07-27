@@ -1,6 +1,6 @@
-# FastStream: Build Modern, Data-Driven Microservices with Ease
+# FastStream: Effortlessly Integrate Event Streams for Your Services
 
-FastStream simplifies event stream integration, making building microservices a breeze.  [Explore the project on GitHub](https://github.com/ag2ai/faststream).
+**FastStream** is your go-to Python framework for building modern, data-centric microservices with ease and efficiency. Find the original repository at [https://github.com/ag2ai/faststream](https://github.com/ag2ai/faststream).
 
 ---
 
@@ -71,22 +71,32 @@ FastStream simplifies event stream integration, making building microservices a 
 
 ## Key Features
 
-FastStream simplifies event-driven architecture, allowing you to build robust and scalable microservices quickly.
-
-*   **Multiple Broker Support:**  Seamlessly integrate with Kafka, RabbitMQ, NATS, and Redis.
-*   **Pydantic Validation:**  Ensure data integrity with Pydantic for message parsing and validation.
-*   **Automatic Documentation:** Generate AsyncAPI documentation effortlessly for easy service discovery.
-*   **Developer-Friendly:**  Enjoy full-typed editor support, catching errors early in development.
-*   **Dependency Injection:**  Manage service dependencies efficiently with a built-in DI system.
-*   **Testability:**  Leverage in-memory tests for faster and more reliable CI/CD pipelines.
-*   **Extensibility:** Use extensions for lifespans, custom serialization and middleware.
-*   **Framework Compatibility:**  Integrate seamlessly with any HTTP framework, especially FastAPI.
+*   **Multi-Broker Support:** Integrate with various message brokers like Kafka, RabbitMQ, NATS, and Redis through a unified API.
+*   **Pydantic Validation:**  Utilize Pydantic for seamless data validation and serialization of incoming messages, ensuring data integrity.
+*   **Automatic AsyncAPI Documentation:**  Generate up-to-date documentation for your services, streamlining collaboration and understanding.
+*   **Intuitive Development Experience:**  Enjoy full-typed editor support that minimizes errors and enhances development speed.
+*   **Powerful Dependency Injection:**  Manage service dependencies efficiently with FastStream's integrated dependency injection system.
+*   **Simplified Testing:** Test your applications with in-memory brokers, providing faster and more reliable CI/CD pipelines.
+*   **Extensibility:** Extend functionality using lifespans, custom serialization, and middleware.
+*   **Framework Integrations:** Works seamlessly with various HTTP frameworks, including a dedicated plugin for FastAPI.
 
 ---
 
-##  Installation
+**Documentation:**  [https://faststream.ag2.ai/latest/](https://faststream.ag2.ai/latest/)
 
-FastStream supports Linux, macOS, Windows, and most Unix-style operating systems. Install using pip:
+---
+
+## Getting Started
+
+### History
+
+FastStream evolved from FastKafka and Propan, combining the best features of both to create a unified solution for processing streamed data. If you're starting a new service, FastStream is the recommended approach.
+
+---
+
+### Installation
+
+FastStream supports **Linux**, **macOS**, **Windows**, and most **Unix**-style operating systems.  Install with pip:
 
 ```bash
 pip install 'faststream[kafka]'
@@ -98,13 +108,15 @@ pip install 'faststream[nats]'
 pip install 'faststream[redis]'
 ```
 
+By default **FastStream** uses **PydanticV2** written in **Rust**, but you can downgrade it manually, if your platform has no **Rust** support - **FastStream** will work correctly with **PydanticV1** as well.
+
 ---
 
-## Usage
+### Writing App Code
 
-FastStream offers function decorators (`@broker.subscriber` and `@broker.publisher`) for streamlined event processing.
+Use `@broker.subscriber` and `@broker.publisher` decorators to simplify consuming and producing data, handling decoding/encoding automatically.
 
-**Example:**
+Leverage [**Pydantic**](https://docs.pydantic.dev/) for data validation. Example:
 
 ```python
 from faststream import FastStream
@@ -119,7 +131,7 @@ async def handle_msg(user: str, user_id: int) -> str:
     return f"User: {user_id} - {user} registered"
 ```
 
-You can define messages using Pydantic's `BaseModel`:
+You can also use Pydantic's `BaseModel`:
 
 ```python
 from pydantic import BaseModel, Field, PositiveInt
@@ -141,11 +153,9 @@ async def handle_msg(data: User) -> str:
 
 ---
 
-## Testing
+### Testing Your Service
 
-Utilize `TestBroker` for efficient in-memory testing.
-
-**Example (pytest):**
+Use `TestBroker` context managers for in-memory testing. Example with pytest:
 
 ```python
 import pytest
@@ -169,29 +179,34 @@ async def test_invalid():
 
 ---
 
-## Running the Application
+### Running the Application
 
-**Install FastStream CLI:**
+Install the CLI:
 
 ```bash
 pip install "faststream[cli]"
 ```
 
-**Run your app:**
+Run your service:
 
 ```bash
 faststream run basic:app
 ```
 
-**CLI Features:**
-* Hot Reloading:  `faststream run basic:app --reload`
-* Multiprocessing Scaling: `faststream run basic:app --workers 3`
+Use `--reload` for hot-reloading and `--workers` for multiprocessing:
+
+```bash
+faststream run basic:app --reload
+faststream run basic:app --workers 3
+```
+
+Learn more about CLI features [here](https://faststream.ag2.ai/latest/getting-started/cli/)
 
 ---
 
 ## Project Documentation
 
-FastStream generates [AsyncAPI](https://www.asyncapi.com/) documentation automatically for your project, streamlining service integration and visibility.
+FastStream generates [AsyncAPI](https://www.asyncapi.com/) documentation automatically.
 
 ![HTML-page](https://github.com/ag2ai/faststream/blob/main/docs/docs/assets/img/AsyncAPI-basic-html-short.png?raw=true)
 
@@ -199,7 +214,7 @@ FastStream generates [AsyncAPI](https://www.asyncapi.com/) documentation automat
 
 ## Dependencies
 
-FastStream uses `FastDepends` for dependency management, similar to `pytest fixtures` and `FastAPI Depends`.
+Leverage `FastDepends` for dependency management, similar to `pytest fixtures` and `FastAPI Depends`.
 
 ```python
 from faststream import Depends, Logger
@@ -217,11 +232,11 @@ async def base_handler(user: str,
 
 ---
 
-## Framework Integrations
+## HTTP Framework Integrations
 
 ### Any Framework
 
-Integrate `MQBrokers` directly into any application using startup/shutdown lifecycles:
+Use `MQBrokers` without a `FastStream` application.  *Start* and *stop* them according to your application's lifecycle.
 
 ```python
 from aiohttp import web
@@ -253,7 +268,7 @@ if __name__ == "__main__":
 
 ### FastAPI Plugin
 
-Integrate seamlessly with FastAPI using `KafkaRouter`:
+Integrate with FastAPI using `StreamRouter`:
 
 ```python
 from fastapi import FastAPI
@@ -274,21 +289,23 @@ app = FastAPI()
 app.include_router(router)
 ```
 
+More integration features can be found [here](https://faststream.ag2.ai/latest/getting-started/integrations/fastapi/)
+
 ---
 
 ## Stay Connected
 
-Show your support and stay updated:
+*   Star our [GitHub repository](https://github.com/ag2ai/faststream/).
+*   Join our [EN Discord server](https://discord.gg/qFm6aSqq59).
+*   Join our [RU Telegram group](https://t.me/python_faststream).
 
-*   [GitHub Repository](https://github.com/ag2ai/faststream/)
-*   [EN Discord Server](https://discord.gg/qFm6aSqq59)
-*   [RU Telegram Group](https://t.me/python_faststream)
+Your support helps us improve the framework. Thank you!
 
 ---
 
 ## Contributors
 
-Thanks to these amazing contributors!
+Thanks to all contributors!
 
 <a href="https://github.com/ag2ai/faststream/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ag2ai/faststream"/>

@@ -1,63 +1,36 @@
-# Model Context Protocol Servers
+# Securely Integrate LLMs with Tools and Data Using Model Context Protocol (MCP)
 
-**Empower your Large Language Models (LLMs) with secure and controlled access to tools and data using Model Context Protocol (MCP).**  [Explore the original repository here](https://github.com/modelcontextprotocol/servers).
+**Unlock the potential of Large Language Models (LLMs) by giving them controlled access to tools and data sources with Model Context Protocol (MCP).** This repository provides reference implementations, community-built servers, and resources to help you get started.  Explore the [original repo](https://github.com/modelcontextprotocol/servers) for more details.
 
-This repository serves as a hub for reference implementations of the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), showcasing its versatility and extensibility in granting LLMs secure access to tools and data sources.  It also features community-built servers and a wealth of additional resources.
+**Key Features:**
 
-## Key Features
-
-*   **Reference Implementations:** Explore example servers built using the official MCP SDKs, demonstrating various functionalities.
-*   **Community-Built Servers:** Discover a growing ecosystem of community-developed servers, expanding MCP's capabilities across diverse domains.
-*   **Official and Third-Party Integrations:** Browse a rich collection of servers maintained by a range of platforms including well known brands and open source projects.
-*   **Comprehensive SDK Support:** Utilize a variety of official MCP SDKs in multiple languages.
-*   **Extensive Resources:** Access documentation, community forums, and more to facilitate building your own servers and understanding the protocol.
-
-## SDKs
-
-The core building blocks, available in a variety of languages to help you get started, are:
-
-*   [C# MCP SDK](https://github.com/modelcontextprotocol/csharp-sdk)
-*   [Go MCP SDK](https://github.com/modelcontextprotocol/go-sdk)
-*   [Java MCP SDK](https://github.com/modelcontextprotocol/java-sdk)
-*   [Kotlin MCP SDK](https://github.com/modelcontextprotocol/kotlin-sdk)
-*   [Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk)
-*   [Typescript MCP SDK](https://github.com/modelcontextprotocol/typescript-sdk)
+*   **Reference Implementations:** Explore example MCP servers to understand the protocol's capabilities.
+*   **SDK Support:** Leverage readily available SDKs in C#, Go, Java, Kotlin, Python, and TypeScript for rapid development.
+*   **Extensible Design:** Build custom servers to connect LLMs to specific tools and data.
+*   **Secure Access:** Implement configurable access controls for secure and controlled data interactions.
+*   **Community-Driven:** Benefit from a growing ecosystem of third-party and community-built servers.
 
 ## 🌟 Reference Servers
 
-These servers demonstrate core MCP features and use of official SDKs.
+These servers demonstrate core MCP features using the official SDKs.
 
-*   **[Everything](src/everything)** - Comprehensive testing server with prompts, resources, and tools.
-*   **[Fetch](src/fetch)** - Efficient web content retrieval and conversion for LLM use.
-*   **[Filesystem](src/filesystem)** - Secure file operations with configurable access controls.
-*   **[Git](src/git)** - Tools for reading, searching, and manipulating Git repositories.
-*   **[Memory](src/memory)** - Persistent memory system based on a knowledge graph.
-*   **[Sequential Thinking](src/sequentialthinking)** - Dynamic and reflective problem-solving through thought sequences.
-*   **[Time](src/time)** - Time and timezone conversion capabilities.
+*   **Everything:** A comprehensive test server with a variety of prompts, resources, and tools.
+*   **Fetch:** Efficient web content retrieval and conversion.
+*   **Filesystem:** Secure file operations with configurable access controls.
+*   **Git:**  Tools for reading, searching, and manipulating Git repositories.
+*   **Memory:** A persistent, knowledge graph-based memory system.
+*   **Sequential Thinking:** Dynamic and reflective problem-solving through thought sequences.
+*   **Time:** Time and timezone conversion capabilities.
 
-### Archived Servers
+### Archived
 
-These reference servers are archived and can be found in the [servers-archived](https://github.com/modelcontextprotocol/servers-archived) repository.
-
-*   AWS KB Retrieval
-*   Brave Search
-*   EverArt
-*   GitHub
-*   GitLab
-*   Google Drive
-*   Google Maps
-*   PostgreSQL
-*   Puppeteer
-*   Redis
-*   Sentry
-*   Slack (maintained by [Zencoder](https://github.com/zencoderai/slack-mcp-server))
-*   SQLite
+These reference servers are now archived and can be found at [servers-archived](https://github.com/modelcontextprotocol/servers-archived).
 
 ## 🤝 Third-Party Servers
 
 ### 🎖️ Official Integrations
 
-Official integrations, maintained by companies and teams, include the following:
+Official integrations, maintained by companies, provide production-ready MCP servers for their platforms.
 
 *   [21st.dev Magic](https://github.com/21st-dev/magic-mcp)
 *   [ActionKit by Paragon](https://github.com/useparagon/paragon-mcp)
@@ -114,7 +87,7 @@ Official integrations, maintained by companies and teams, include the following:
 *   [BrowserStack](https://github.com/browserstack/mcp-server)
 *   [Bucket](https://github.com/bucketco/bucket-javascript-sdk/tree/main/packages/cli#model-context-protocol)
 *   [Buildkite](https://github.com/buildkite/buildkite-mcp-server)
-*   [Buildable](https://github.com/chunkydotdev/bldbl-mcp)
+*   [Buildable](https://github.com/chunkydotdev/bldbl-mcp) (Typescript)
 *   [BuiltWith](https://github.com/builtwith/mcp)
 *   [Burp Suite](https://github.com/PortSwigger/mcp-server)
 *   [Campertunity](https://github.com/campertunity/mcp-server)
@@ -145,6 +118,7 @@ Official integrations, maintained by companies and teams, include the following:
 *   [Couchbase](https://github.com/Couchbase-Ecosystem/mcp-server-couchbase)
 *   [CRIC Wuye AI](https://github.com/wuye-ai/mcp-server-wuye-ai)
 *   [Cycode](https://github.com/cycodehq/cycode-cli#mcp-command-experiment)
+*   [Dart](https://github.com/its-dart/dart-mcp-server)
 *   [CTERA Portal](https://github.com/ctera/mcp-ctera-core)
 *   [CTERA Edge Filer](https://github.com/ctera/mcp-ctera-edge)
 *   [DataHub](https://github.com/acryldata/mcp-server-datahub)
@@ -356,4 +330,17 @@ Official integrations, maintained by companies and teams, include the following:
 *   [Stripe](https://github.com/stripe/agent-toolkit)
 *   [Sunra AI](https://github.com/sunra-ai/sunra-clients/tree/main/mcp-server)
 *   [Supabase](https://github.com/supabase-community/supabase-mcp)
-*   [Supadata](https://github.com/supadata-ai
+*   [Supadata](https://github.com/supadata-ai/mcp)
+*   [Tako](https://github.com/TakoData/tako-mcp)
+*   [Tavily](https://github.com/tavily-ai/tavily-mcp)
+*   [Teradata](https://github.com/Teradata/teradata-mcp-server)
+*   [Terraform](https://github.com/hashicorp/terraform-mcp-server)
+*   [TextIn](https://github.com/intsig-textin/textin-mcp)
+*   [Thena](https://mcp.thena.ai)
+*   [ThinQ Connect](https://github.com/thinq-connect/thinqconnect-mcp)
+*   [Thirdweb](https://github.com/thirdweb-dev/ai/tree/main/python/thirdweb-mcp)
+*   [ThoughtSpot](https://github.com/thoughtspot/mcp-server)
+*   [Tianji](https://github.com/msgbyte/tianji/tree/master/apps/mcp-server)
+*   [TiDB](https://github.com/pingcap/pytidb)
+*   [Tinybird](https://github.com/tinybirdco/mcp-tinybird)
+*   [Tld

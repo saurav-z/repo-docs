@@ -1,34 +1,48 @@
-# CSrankings: Your Definitive Guide to Top Computer Science Schools
+# CS Rankings: A Metrics-Driven Ranking of Top Computer Science Schools
 
-**Looking to discover the leading computer science programs globally?** CSrankings provides a data-driven, metrics-based ranking of computer science departments and faculty, focusing on research productivity. [Explore the original repository here](https://github.com/emeryberger/CSrankings).
+This project provides a comprehensive, metrics-based ranking of computer science schools, offering a data-driven approach to evaluating research excellence. **Explore the cutting edge of computer science research with CS Rankings!**
 
-## Key Features
+**[View the original repository on GitHub](https://github.com/emeryberger/CSrankings)**
 
-*   **Metrics-Driven Ranking:**  Unlike survey-based rankings, CSrankings relies on objective metrics, specifically publications at top computer science conferences, to assess research performance.
-*   **Difficult-to-Game Methodology:** The ranking system prioritizes publications in highly selective conferences, making it harder to manipulate compared to citation-based approaches.
-*   **Comprehensive Data:** The rankings are built upon extensive data and are regularly updated.
-*   **Open Source:** Contribute and help improve the rankings.
+## Key Features:
 
-## How CSrankings Works
+*   **Metrics-Based Approach:** Unlike rankings based on surveys, this ranking uses a data-driven, metrics-based approach, measuring the number of publications by faculty at top computer science conferences.
+*   **Focus on Research Excellence:** The ranking highlights institutions and faculty actively engaged in research across various areas of computer science.
+*   **Difficult to Game:** The methodology focuses on publications in highly selective conferences, making it more difficult to manipulate compared to citation-based metrics.
+*   **Open Data and Contribution:** The project utilizes open data and welcomes community contributions to improve and maintain the ranking.
+*   **Quarterly Updates:** Data is updated quarterly, ensuring the ranking reflects the latest research activities.
 
-This ranking system uses a metrics-based approach to identify institutions and faculty actively engaged in research across various computer science fields. It measures the number of publications by faculty appearing at the most selective conferences in each area of computer science. For more detailed information, please refer to the [FAQ](https://csrankings.org/faq.html).
+## Contributing:
 
-## Contribute to CSrankings
+You can contribute to the CS Rankings project by submitting pull requests to update faculty affiliations and other data. Please read the `CONTRIBUTING.md` file for detailed instructions on how to contribute. **Note that updates are processed on a quarterly basis.**
 
-You can contribute to the project by adding or modifying affiliations.  Please review the [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed instructions. Updates are processed quarterly. You can now edit files directly in GitHub to create pull requests. Data is stored in `csrankings-[a-z].csv` files, with authors listed alphabetically by their first name.
+### Getting Started:
 
-### Trying It Out Locally
+1.  **Data Files:** The core data is stored in `csrankings-[a-z].csv` files.
+2.  **Shallow Clone for Contributions:** To contribute without a full clone, use a shallow clone of your fork.
 
-To run this site locally, you'll need to download the DBLP data and install the necessary dependencies. Instructions are provided in the original README.
+### Setting up the Environment
 
-### Quick Contribution via a Shallow Clone
+To run the site locally, you will need to download the DBLP data, rebuild the databases, and run a local web server. You will also need to install the following dependencies:
 
-To contribute a change without creating a full local clone, use the shallow clone method outlined in the original README.
+*   `libxml2-utils` (or the package containing `xmllint`)
+*   `npm`
+*   `typescript`
+*   `google-closure-compiler`
+*   `python-lxml`
+*   `pypy`
+*   `basex`
+
+Install dependencies using this command:
+
+```bash
+apt-get install libxml2-utils npm python-lxml basex; npm install -g typescript google-closure-compiler
+```
 
 ## Acknowledgements
 
-This project was primarily developed and is maintained by [Emery Berger](https://emeryberger.com). It builds on the work of Swarat Chaudhuri (UT-Austin), Papoutsaki et al., and utilizes data from DBLP.
+This project was primarily developed and is maintained by [Emery Berger](https://emeryberger.com). It builds upon the work of Swarat Chaudhuri, Papoutsaki et al., and utilizes data from DBLP.org, which is made available under the ODC Attribution License.
 
 ## License
 
-CSrankings is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+CS Rankings is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).

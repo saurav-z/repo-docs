@@ -13,38 +13,36 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 [![About](https://img.shields.io/badge/About-oumi-blue.svg)](https://oumi.ai)
 
-## Oumi: Build and Deploy Cutting-Edge Foundation Models with Ease
+## Oumi: Build State-of-the-Art Foundation Models End-to-End
 
-Oumi is a comprehensive, open-source platform designed to streamline the entire lifecycle of foundation models, offering everything you need from data preparation to deployment.  [Explore the Oumi Repository](https://github.com/oumi-ai/oumi).
+Oumi provides a comprehensive, open-source platform to streamline the entire lifecycle of foundation models, from data preparation and training to evaluation and deployment.  **[Explore the Oumi repository](https://github.com/oumi-ai/oumi) to build, train, and deploy cutting-edge AI models.**
 
-**Key Features:**
+### Key Features:
 
-*   **Effortless Training & Fine-tuning:** Train and fine-tune models from 10M to 405B parameters using state-of-the-art techniques like SFT, LoRA, and QLoRA.
-*   **Broad Model Support:** Work with a wide variety of text and multimodal models, including Llama, DeepSeek, Qwen, and Phi.
-*   **Data Curation & Synthesis:** Synthesize and curate training data efficiently using LLM judges.
-*   **Efficient Deployment:** Deploy models with popular inference engines like vLLM and SGLang.
-*   **Comprehensive Evaluation:** Evaluate models thoroughly across standard benchmarks.
-*   **Flexible Deployment Options:** Run Oumi on laptops, clusters, and various cloud platforms (AWS, Azure, GCP, Lambda, and more).
-*   **Seamless Integration:** Integrate with both open models and commercial APIs (OpenAI, Anthropic, Vertex AI, etc.).
-*   **Consistent API:** Enjoy a consistent API and production-grade reliability.
-*   **Community-Driven:** Benefit from an active open-source community and avoid vendor lock-in.
+*   **Model Training and Fine-tuning:** Train and fine-tune models from 10M to 405B parameters using state-of-the-art techniques (SFT, LoRA, QLoRA, DPO, and more).
+*   **Broad Model Support:** Work with both text and multimodal models (Llama, DeepSeek, Qwen, Phi, and others).
+*   **Data Curation:** Synthesize and curate training data with LLM judges.
+*   **Efficient Deployment:** Deploy models efficiently with popular inference engines (vLLM, SGLang).
+*   **Comprehensive Evaluation:** Evaluate models comprehensively across standard benchmarks.
+*   **Flexible Deployment:** Run anywhere - from laptops to clusters to clouds (AWS, Azure, GCP, Lambda, and more).
+*   **Integration:** Integrate with both open models and commercial APIs (OpenAI, Anthropic, Vertex AI, Together, Parasail, ...).
 
-## What's New
+### What's New
+*   [2025/07] Recipe for [Qwen3 235B](https://github.com/oumi-ai/oumi/blob/main/configs/recipes/qwen3/inference/235b_a22b_together_infer.yaml)
+*   [2025/07] July 24 webinar: ["Training a State-of-the-art Agent LLM with Oumi + Lambda"](https://youtu.be/f3SU_heBP54)
+*   [2025/06] [Oumi v0.2.0 released](https://github.com/oumi-ai/oumi/releases/tag/v0.2.0) with support for GRPO fine-tuning, a plethora of new model support, and much more
+*   [2025/06] Announcement of [Data Curation for Vision Language Models (DCVLR) competition](https://oumi.ai/blog/posts/announcing-dcvlr) at NeurIPS2025
+*   [2025/06] Recipes for training, inference, and eval with the newly released [Falcon-H1](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/falcon_h1) and [Falcon-E](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/falcon_e) models
+*   [2025/05] Support and recipes for [InternVL3 1B](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/vision/internvl3)
+*   [2025/04] Added support for training and inference with Llama 4 models: Scout (17B activated, 109B total) and Maverick (17B activated, 400B total) variants, including full fine-tuning, LoRA, and QLoRA configurations
+*   [2025/04] Recipes for [Qwen3 model family](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/qwen3)
+*   [2025/04] Introducing HallOumi: a State-of-the-Art Claim-Verification Model [(technical overview)](https://oumi.ai/blog/posts/introducing-halloumi)
+*   [2025/04] Oumi now supports two new Vision-Language models: [Phi4](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/vision/phi4) and [Qwen 2.5](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/vision/qwen2_5_vl_3b)
 
-*   **[2025/07]** Recipe for [Qwen3 235B](https://github.com/oumi-ai/oumi/blob/main/configs/recipes/qwen3/inference/235b_a22b_together_infer.yaml)
-*   **[2025/07]** July 24 webinar: ["Training a State-of-the-art Agent LLM with Oumi + Lambda"](https://youtu.be/f3SU_heBP54)
-*   **[2025/06]** [Oumi v0.2.0 released](https://github.com/oumi-ai/oumi/releases/tag/v0.2.0) with support for GRPO fine-tuning, a plethora of new model support, and much more
-*   **[2025/06]** Announcement of [Data Curation for Vision Language Models (DCVLR) competition](https://oumi.ai/blog/posts/announcing-dcvlr) at NeurIPS2025
-*   **[2025/06]** Recipes for training, inference, and eval with the newly released [Falcon-H1](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/falcon_h1) and [Falcon-E](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/falcon_e) models
-*   **[2025/05]** Support and recipes for [InternVL3 1B](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/vision/internvl3)
-*   **[2025/04]** Added support for training and inference with Llama 4 models: Scout (17B activated, 109B total) and Maverick (17B activated, 400B total) variants, including full fine-tuning, LoRA, and QLoRA configurations
-*   **[2025/04]** Recipes for [Qwen3 model family](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/qwen3)
-*   **[2025/04]** Introducing HallOumi: a State-of-the-Art Claim-Verification Model [(technical overview)](https://oumi.ai/blog/posts/introducing-halloumi)
-*   **[2025/04]** Oumi now supports two new Vision-Language models: [Phi4](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/vision/phi4) and [Qwen 2.5](https://github.com/oumi-ai/oumi/tree/main/configs/recipes/vision/qwen2_5_vl_3b)
 
-## Getting Started
+### Getting Started
 
-Get up and running quickly with these interactive Colab notebooks:
+Jump right in with these interactive Colab notebooks:
 
 | **Notebook** | **Try in Colab** | **Goal** |
 |----------|--------------|-------------|
@@ -55,9 +53,9 @@ Get up and running quickly with these interactive Colab notebooks:
 | **☁️ Remote Training** | <a target="_blank" href="https://colab.research.google.com/github/oumi-ai/oumi/blob/main/notebooks/Oumi - Running Jobs Remotely.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> | Launch and monitor training jobs on cloud (AWS, Azure, GCP, Lambda, etc.) platforms |
 | **📈 LLM-as-a-Judge** | <a target="_blank" href="https://colab.research.google.com/github/oumi-ai/oumi/blob/main/notebooks/Oumi - Simple Judge.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> | Filter and curate training data with built-in judges |
 
-## Installation
+### Installation
 
-Install Oumi and get started quickly:
+Get started with Oumi by installing the package:
 
 ```bash
 # Install the package (CPU & NPU only)
@@ -70,11 +68,11 @@ pip install oumi[gpu]  # For GPU training
 pip install git+https://github.com/oumi-ai/oumi.git
 ```
 
-For advanced installation options, refer to the [installation guide](https://oumi.ai/docs/en/latest/get_started/installation.html).
+For detailed installation instructions, please refer to the [installation guide](https://oumi.ai/docs/en/latest/get_started/installation.html).
 
-## Oumi CLI
+### Usage
 
-Use the `oumi` command for streamlined model training, evaluation, and inference:
+Utilize the `oumi` command-line interface (CLI) for efficient training, evaluation, and inference using pre-configured [recipes](/configs/recipes):
 
 ```bash
 # Training
@@ -87,11 +85,11 @@ oumi evaluate -c configs/recipes/smollm/evaluation/135m/quickstart_eval.yaml
 oumi infer -c configs/recipes/smollm/inference/135m_infer.yaml --interactive
 ```
 
-Explore the [training](https://oumi.ai/docs/en/latest/user_guides/train/train.html), [evaluation](https://oumi.ai/docs/en/latest/user_guides/evaluate/evaluate.html), [inference](https://oumi.ai/docs/en/latest/user_guides/infer/infer.html), and [llm-as-a-judge](https://oumi.ai/docs/en/latest/user_guides/judge/judge.html) guides for advanced options.
+For advanced options, see the [training](https://oumi.ai/docs/en/latest/user_guides/train/train.html), [evaluation](https://oumi.ai/docs/en/latest/user_guides/evaluate/evaluate.html), [inference](https://oumi.ai/docs/en/latest/user_guides/infer/infer.html), and [llm-as-a-judge](https://oumi.ai/docs/en/latest/user_guides/judge/judge.html) guides.
 
-## Remote Job Execution
+#### Running Jobs Remotely
 
-Run jobs remotely on cloud platforms (AWS, Azure, GCP, Lambda, etc.) using `oumi launch`:
+Leverage the `oumi launch` command to execute jobs remotely on cloud platforms (AWS, Azure, GCP, Lambda, etc.):
 
 ```bash
 # GCP
@@ -107,13 +105,26 @@ oumi launch up -c configs/recipes/smollm/sft/135m/quickstart_gcp_job.yaml --reso
 oumi launch up -c configs/recipes/smollm/sft/135m/quickstart_gcp_job.yaml --resources.cloud lambda
 ```
 
-**Note:**  Oumi is in beta, with core features stable but advanced features subject to change.
+**Note:** Oumi is in <ins>beta</ins> and under active development. The core features are stable, but some advanced features might change as the platform improves.
 
-## Examples & Recipes
+### Why Use Oumi?
 
-Access a growing collection of ready-to-use configurations for state-of-the-art models and training workflows.  Find a comprehensive list of supported [models](https://oumi.ai/docs/en/latest/resources/models/supported_models.html) and datasets ([supervised fine-tuning](https://oumi.ai/docs/en/latest/resources/datasets/sft_datasets.html), [pre-training](https://oumi.ai/docs/en/latest/resources/datasets/pretraining_datasets.html), [preference tuning](https://oumi.ai/docs/en/latest/resources/datasets/preference_datasets.html), and [vision-language finetuning](https://oumi.ai/docs/en/latest/resources/datasets/vl_sft_datasets.html)) in the documentation.
+Oumi offers a compelling solution for building and deploying foundation models, providing several key advantages:
 
-### Qwen Family
+*   **Zero Boilerplate:** Start quickly with pre-built recipes for common model and workflow needs, saving you time and effort.
+*   **Enterprise-Grade:** Built and validated by teams training models at scale, ensuring robustness and reliability.
+*   **Research-Ready:** Ideal for ML research, providing easy reproducibility, flexibility, and customization.
+*   **Wide Model Support:** Compatible with diverse model architectures, from small to large, and text-only to multimodal models.
+*   **State-of-the-Art Performance:** Supports distributed training and optimized inference engines (vLLM, SGLang).
+*   **Community-Driven:** Fully open-source with a vibrant community, fostering collaboration and innovation.
+
+### Examples & Recipes
+
+Explore a growing selection of ready-to-use configurations for state-of-the-art models and workflows:
+
+**Note:** These configurations are not an exhaustive list of what's supported, simply examples to get you started. You can find a more exhaustive list of supported [models](https://oumi.ai/docs/en/latest/resources/models/supported_models.html), and datasets ([supervised fine-tuning](https://oumi.ai/docs/en/latest/resources/datasets/sft_datasets.html), [pre-training](https://oumi.ai/docs/en/latest/resources/datasets/pretraining_datasets.html), [preference tuning](https://oumi.ai/docs/en/latest/resources/datasets/preference_datasets.html), and [vision-language finetuning](https://oumi.ai/docs/en/latest/resources/datasets/vl_sft_datasets.html)) in the oumi documentation.
+
+#### Qwen Family
 
 | Model | Example Configurations |
 |-------|------------------------|
@@ -123,7 +134,7 @@ Access a growing collection of ready-to-use configurations for state-of-the-art 
 | Qwen2.5-VL 3B | [SFT](/configs/recipes/vision/qwen2_5_vl_3b/sft/full/train.yaml) • [LoRA](/configs/recipes/vision/qwen2_5_vl_3b/sft/lora/train.yaml)• [Inference (vLLM)](configs/recipes/vision/qwen2_5_vl_3b/inference/vllm_infer.yaml) • [Inference](configs/recipes/vision/qwen2_5_vl_3b/inference/infer.yaml) |
 | Qwen2-VL 2B | [SFT](/configs/recipes/vision/qwen2_vl_2b/sft/full/train.yaml) • [LoRA](/configs/recipes/vision/qwen2_vl_2b/sft/lora/train.yaml) • [Inference (vLLM)](configs/recipes/vision/qwen2_vl_2b/inference/vllm_infer.yaml) • [Inference (SGLang)](configs/recipes/vision/qwen2_vl_2b/inference/sglang_infer.yaml) • [Inference](configs/recipes/vision/qwen2_vl_2b/inference/infer.yaml) • [Evaluation](configs/recipes/vision/qwen2_vl_2b/evaluation/eval.yaml) |
 
-### 🐋 DeepSeek R1 Family
+#### 🐋 DeepSeek R1 Family
 
 | Model | Example Configurations |
 |-------|------------------------|
@@ -133,7 +144,7 @@ Access a growing collection of ready-to-use configurations for state-of-the-art 
 | Distilled Qwen 1.5B | [FFT](/configs/recipes/deepseek_r1/sft/distill_qwen_1_5b/full_train.yaml) • [LoRA](/configs/recipes/deepseek_r1/sft/distill_qwen_1_5b/lora_train.yaml) • [Inference](configs/recipes/deepseek_r1/inference/distill_qwen_1_5b_infer.yaml) • [Evaluation](/configs/recipes/deepseek_r1/evaluation/distill_qwen_1_5b/eval.yaml) |
 | Distilled Qwen 32B | [LoRA](/configs/recipes/deepseek_r1/sft/distill_qwen_32b/lora_train.yaml) • [Inference](configs/recipes/deepseek_r1/inference/distill_qwen_32b_infer.yaml) • [Evaluation](/configs/recipes/deepseek_r1/evaluation/distill_qwen_32b/eval.yaml) |
 
-### 🦙 Llama Family
+#### 🦙 Llama Family
 
 | Model | Example Configurations |
 |-------|------------------------|
@@ -147,14 +158,14 @@ Access a growing collection of ready-to-use configurations for state-of-the-art 
 | Llama 3.3 70B | [FFT](/configs/recipes/llama3_3/sft/70b_full/train.yaml) • [LoRA](/configs/recipes/llama3_3/sft/70b_lora/train.yaml) • [QLoRA](/configs/recipes/llama3_3/sft/70b_qlora/train.yaml) • [Inference (vLLM)](/configs/recipes/llama3_3/inference/70b_vllm_infer.yaml) • [Inference](/configs/recipes/llama3_3/inference/70b_infer.yaml) • [Evaluation](/configs/recipes/llama3_3/evaluation/70b_eval.yaml) |
 | Llama 3.2 Vision 11B | [SFT](/configs/recipes/vision/llama3_2_vision/sft/11b_full/train.yaml) • [Inference (vLLM)](/configs/recipes/vision/llama3_2_vision/inference/11b_rvllm_infer.yaml) • [Inference (SGLang)](/configs/recipes/vision/llama3_2_vision/inference/11b_sglang_infer.yaml) • [Evaluation](/configs/recipes/vision/llama3_2_vision/evaluation/11b_eval.yaml) |
 
-### 🦅 Falcon family
+#### 🦅 Falcon family
 
 | Model | Example Configurations |
 |-------|------------------------|
 | [Falcon-H1](https://huggingface.co/collections/tiiuae/falcon-h1-6819f2795bc406da60fab8df) | [FFT](/configs/recipes/falcon_h1/sft/) • [Inference](/configs/recipes/falcon_h1/inference/) • [Evaluation](/configs/recipes/falcon_h1/evaluation/) |
 | [Falcon-E (BitNet)](https://huggingface.co/collections/tiiuae/falcon-edge-series-6804fd13344d6d8a8fa71130) | [FFT](/configs/recipes/falcon_e/sft/) • [DPO](/configs/recipes/falcon_e/dpo/) • [Evaluation](/configs/recipes/falcon_e/evaluation/) |
 
-### 🎨 Vision Models
+#### 🎨 Vision Models
 
 | Model | Example Configurations |
 |-------|------------------------|
@@ -166,9 +177,11 @@ Access a growing collection of ready-to-use configurations for state-of-the-art 
 | Qwen2.5-VL 3B | [SFT](/configs/recipes/vision/qwen2_5_vl_3b/sft/full/train.yaml) • [LoRA](/configs/recipes/vision/qwen2_5_vl_3b/sft/lora/train.yaml)• [Inference (vLLM)](configs/recipes/vision/qwen2_5_vl_3b/inference/vllm_infer.yaml) • [Inference](configs/recipes/vision/qwen2_5_vl_3b/inference/infer.yaml) |
 | SmolVLM-Instruct 2B | [SFT](/configs/recipes/vision/smolvlm/sft/full/train.yaml) • [LoRA](/configs/recipes/vision/smolvlm/sft/lora/train.yaml) |
 
-### 🔍 Even more options
+### 🔍 More Supported Models
 
-Explore the rich support for various language models through integration with the [🤗 Transformers](https://github.com/huggingface/transformers) library.
+Thanks to its integration with the Hugging Face Transformers library, Oumi supports a wide range of models.
+
+**Note**:  Models prefixed with a checkmark (✅) have been thoroughly tested and validated by the Oumi community, with ready-to-use recipes available.  Find detailed information in the [Oumi Documentation](https://oumi.ai/docs).
 
 <details>
 <summary>📋 Click to see more supported models</summary>
@@ -189,7 +202,4 @@ Explore the rich support for various language models through integration with th
 | Command R | 35B/104B | [Blog](https://cohere.com/blog/command-r7b) | [Hub](https://huggingface.co/CohereForAI/c4ai-command-r-plus) | [License](https://cohere.com/c4ai-cc-by-nc-license) | ❌ | |
 | Granite-3.1-Instruct | 2B/8B | [Paper](https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf) | [Hub](https://huggingface.co/ibm-granite/granite-3.1-8b-instruct) | Apache 2.0 | ❌ | |
 | Gemma 2 Instruct | 2B/9B | [Blog](https://ai.google.dev/gemma) | [Hub](https://huggingface.co/google/gemma-2-2b-it) | [License](https://ai.google.dev/gemma/terms) | ❌ | |
-| DBRX-Instruct | 130B MoE | [Blog](https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm) | [Hub](https://huggingface.co/databricks/dbrx-instruct) | Apache 2.0 | ❌ | |
-| Falcon-Instruct | 7B/40B | [Paper](https://arxiv.org/abs/2306.01116) | [Hub](https://huggingface.co/tiiuae/falcon-7b-instruct) | Apache 2.0 | ❌  | |
-| ✅ Llama 4 Scout Instruct | 17B (Activated) 109B (Total) | [Paper](https://arxiv.org/abs/2407.21783) | [Hub](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct) | [License](https://llama.meta.com/llama4/license/) | ❌  | |
-| ✅ Llama 4 Maverick Instruct | 17B (Activated) 400B (Total) | [Paper](https://arxiv.org
+| DBRX-Instruct | 130B MoE | [Blog](https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm)

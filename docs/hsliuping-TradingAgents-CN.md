@@ -1,117 +1,77 @@
-# 🚀 TradingAgents-CN: 中文金融AI交易决策框架
+# 🚀 TradingAgents-CN: 中文金融交易决策框架
 
-**Unlock the power of AI for Chinese financial markets with TradingAgents-CN, a cutting-edge framework built for in-depth stock analysis and informed trading decisions.  Based on the revolutionary [TradingAgents](https://github.com/TauricResearch/TradingAgents) and optimized for the Chinese market!**
+**Unlock the power of AI in financial trading with TradingAgents-CN, an enhanced,中文-optimized framework built upon the groundbreaking work of [Tauric Research](https://github.com/TauricResearch/TradingAgents).** This project provides a complete AI-driven solution for analyzing the A-share, Hong Kong, and US stock markets, empowering you with intelligent trading insights and automated reports.
 
-## 🔑 Key Features
+[<img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License">](https://opensource.org/licenses/Apache-2.0)
+[<img src="https://img.shields.io/badge/Python-3.10%2B-blue.svg" alt="Python">](https://www.python.org/)
+[<img src="https://img.shields.io/badge/Version-cn--0.1.10-green.svg" alt="Version">](./VERSION)
+[<img src="https://img.shields.io/badge/Docs-中文文档-green.svg" alt="Documentation">](./docs/)
+[<img src="https://img.shields.io/badge/Based%20on-TauricResearch%2FTradingAgents-orange.svg" alt="Based on">](https://github.com/TauricResearch/TradingAgents)
 
-*   **🇨🇳 Chinese-Optimized:** Full A-share (A股), Hong Kong Stock (港股) support, and optimized for Chinese users.
-*   **🤖 Multi-Agent Architecture:** Leverage specialized AI agents for fundamental, technical, news, and sentiment analysis.
-*   **🚀 Real-time Progress Display:** v0.1.10 introduces asynchronous progress tracking for a seamless experience.
-*   **💾 Intelligent Session Management:**  Preserve analysis state and reports across sessions.
-*   **📊 Professional Report Export:** Generate insightful reports in Word, PDF, and Markdown formats.
-*   **🐳 Docker Deployment:**  Easy one-command setup for rapid deployment and scalability.
-*   **🧠 LLM Integration:** Supports leading LLMs including DeepSeek, Ali Tongyi Qianwen, Google AI, and OpenAI.
+## ✨ Key Features
 
-**[Visit the original repository](https://github.com/hsliuping/TradingAgents-CN) to get started!**
+*   **🇨🇳 Enhanced for Chinese Users**: Optimized for A-share, Hong Kong, and US stock market analysis with a fully localized experience.
+*   **🤖 Multi-Agent Architecture**:  Four analysts (Fundamental, Technical, News, Sentiment) collaborate with Bull/Bear researchers and a Trader for comprehensive analysis.
+*   **📈 Real-time Progress Display**:  New in v0.1.10: Track analysis steps and progress with AsyncProgressTracker.
+*   **💾 Intelligent Session Management**: New in v0.1.10: Session persistence and automated fallback.
+*   **🚀 Seamless Web Interface**: v0.1.10 upgrade: Streamlined UI, responsive design, and improved error handling.
+*   **🐳 Docker Deployment**: Simplify setup and ensure consistent environments.
+*   **📄 Professional Report Generation**:  Generate insightful reports in Word, PDF, and Markdown formats.
+*   **🧠 Native LLM Support**:  Integrates with DeepSeek V3, Alibaba's Qwen, Google AI, and OpenAI models.
 
-## ✨ What's New in v0.1.10?
+## 🆕 What's New in v0.1.10?
 
-*   **🚀 Real-time Progress Display:**
-    *   Asynchronous progress tracking for transparent analysis.
-    *   Accurate time calculation for better insight.
-    *   Multiple display modes (Streamlit, static, unified).
-*   **📊 Intelligent Session Management:**
-    *   Persist analysis state and reports on page refresh.
-    *   Automatic fallback to file storage if Redis is unavailable.
-    *   "View Analysis Report" button after analysis completion.
-*   **🎨 Enhanced User Experience:**
-    *   Simplified interface, removing redundant buttons for clarity.
-    *   Responsive design for mobile and various screen sizes.
-    *   Improved error handling and user-friendly error messages.
+*   **🚀 Real-time progress display**: Async progress tracking and smart time calculations.
+*   **💾 Intelligent Session Management**: State persistence and automatic fallback mechanisms.
+*   **🎨 Optimized User Experience**: Simplified UI and error handling improvements.
 
-## 🎯 Core Features
+## 🎯 Core Capabilities
 
-### 🤖 Multi-Agent Collaboration
+*   **Multi-Agent Collaboration:**  Analysts specialize in Fundamental, Technical, News, and Sentiment analysis.
+*   **Structured Debate:**  Bull and Bear researchers provide in-depth analysis.
+*   **Intelligent Decision-Making:**  A Trader makes final investment recommendations based on all inputs.
+*   **Risk Management:**  Multi-layered risk assessment and management mechanisms.
 
-*   **Specialized Analysts:**  Fundamental, Technical, News, and Sentiment analysts.
-*   **Structured Debate:** Bullish and bearish researchers provide in-depth analysis.
-*   **Intelligent Decision-Making:** Trader agent formulates investment recommendations based on all inputs.
-*   **Risk Management:** Multi-layered risk assessment and management mechanisms.
+## 💻 Get Started
 
-## 🚀 Get Started Quickly
+### 🐳 Docker (Recommended)
 
-### 🐳 Docker Deployment (Recommended)
+1.  **Clone the repository:**
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/hsliuping/TradingAgents-CN.git
-cd TradingAgents-CN
+    ```bash
+    git clone https://github.com/hsliuping/TradingAgents-CN.git
+    cd TradingAgents-CN
+    ```
 
-# 2. Configure environment variables
-cp .env.example .env
-# Edit .env to include your API keys.
+2.  **Configure environment variables:**
 
-# 3. Start the service
-docker-compose up -d --build
+    ```bash
+    cp .env.example .env
+    # Edit .env with your API keys.
+    ```
 
-# 4. Access the application
-# Web Interface: http://localhost:8501
-```
+3.  **Build and run:**
+
+    ```bash
+    docker-compose up -d --build
+    ```
+
+4.  **Access the web interface:**  `http://localhost:8501`
 
 ### 💻 Local Deployment
 
-```bash
-# 1. Install dependencies
-pip install -r requirements.txt
+1.  **Install dependencies:**
 
-# 2. Start the application
-python start_web.py
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-# 3. Access the application at http://localhost:8501
-```
+2.  **Run the application:**
 
-### 📊 Analysis Steps
+    ```bash
+    python start_web.py
+    ```
 
-1.  **Select Model:** DeepSeek V3 / Ali Tongyi Qianwen / Gemini
-2.  **Input Stock Symbol:** `000001` (A-Share) / `AAPL` (US Stock) / `0700.HK` (HK Stock)
-3.  **Start Analysis:** Click the "🚀 Start Analysis" button
-4.  **Real-time Tracking:** Monitor the progress and steps.
-5.  **View Report:** Click the "📊 View Analysis Report" button
-6.  **Export Report:** Supports Word/PDF/Markdown formats
+3.  **Access the web interface:**  `http://localhost:8501`
 
-## 🎯 Key Advantages
-
-*   **🆕 Real-time Progress:** v0.1.10 adds asynchronous progress tracking.
-*   **💾 Intelligent Sessions:** Session persistence ensures analysis results aren't lost.
-*   **🇨🇳 China-Optimized:** A-Share/HK Stock data, Chinese UI, and local LLMs.
-*   **🐳 Containerization:** Docker for one-click deployment, easy scalability.
-*   **📄 Professional Reports:** Export to multiple formats, auto-generated investment advice.
-*   **🛡️ Robustness:** Multi-layer data sources, intelligent fallback, and error recovery.
-
-## ⚙️ Technical Architecture
-
-**Core Technologies:** Python 3.10+ | LangChain | Streamlit | MongoDB | Redis
-**AI Models:** DeepSeek V3 | Ali Tongyi Qianwen | Google AI | OpenAI
-**Data Sources:** Tushare | AkShare | FinnHub | Yahoo Finance
-**Deployment:** Docker | Docker Compose | Local Deployment
-
-## 📚 Documentation & Support
-
-*   **📖 Complete Documentation:** [docs/](./docs/) - Installation, usage tutorials, and API documentation.
-*   **🚨 Troubleshooting:** [troubleshooting/](./docs/troubleshooting/) - Solutions to common issues.
-*   **🔄 Changelog:** [CHANGELOG.md](./docs/releases/CHANGELOG.md) - Detailed version history.
-*   **🚀 Quick Start:** [QUICKSTART.md](./QUICKSTART.md) - 5-minute deployment guide.
-
-## 📄 License
-
-This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file.
-
----
-
-<div align="center">
-
-**🌟 If you find this project helpful, please give us a Star!**
-
-[⭐ Star this repo](https://github.com/hsliuping/TradingAgents-CN) | [🍴 Fork this repo](https://github.com/hsliuping/TradingAgents-CN/fork) | [📖 Read the docs](./docs/)
-
-</div>
+**[Visit the original repository](https://github.com/hsliuping/TradingAgents-CN) for detailed instructions and further information.**

@@ -1,53 +1,41 @@
-<!-- MANPAGE: BEGIN EXCLUDED SECTION -->
+<!-- Banner and Badges -->
 <div align="center">
 
-[![YT-DLP](https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg)](#readme)
+[![YT-DLP](https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg)](#yt-dlp)
 
-[![Release version](https://img.shields.io/github/v/release/yt-dlp/yt-dlp?color=brightgreen&label=Download&style=for-the-badge)](#installation "Installation")
-[![PyPI](https://img.shields.io/badge/-PyPI-blue.svg?logo=pypi&labelColor=555555&style=for-the-badge)](https://pypi.org/project/yt-dlp "PyPI")
-[![Donate](https://img.shields.io/badge/_-Donate-red.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge)](Collaborators.md#collaborators "Donate")
-[![Discord](https://img.shields.io/discord/807245652072857610?color=blue&labelColor=555555&label=&logo=discord&style=for-the-badge)](https://discord.gg/H5MNcFW63r "Discord")
-[![Supported Sites](https://img.shields.io/badge/-Supported_Sites-brightgreen.svg?style=for-the-badge)](supportedsites.md "Supported Sites")
-[![License: Unlicense](https://img.shields.io/badge/-Unlicense-blue.svg?style=for-the-badge)](LICENSE "License")
-[![CI Status](https://img.shields.io/github/actions/workflow/status/yt-dlp/yt-dlp/core.yml?branch=master&label=Tests&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/actions "CI Status")
-[![Commits](https://img.shields.io/github/commit-activity/m/yt-dlp/yt-dlp?label=commits&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/commits "Commit History")
-[![Last Commit](https://img.shields.io/github/last-commit/yt-dlp/yt-dlp/master?label=&style=for-the-badge&display_timestamp=committer)](https://github.com/yt-dlp/yt-dlp/pulse/monthly "Last activity")
+[![Download](https://img.shields.io/github/v/release/yt-dlp/yt-dlp?color=brightgreen&label=Download&style=for-the-badge)](#installation)
+[![PyPI](https://img.shields.io/badge/-PyPI-blue.svg?logo=pypi&labelColor=555555&style=for-the-badge)](https://pypi.org/project/yt-dlp)
+[![Donate](https://img.shields.io/badge/_-Donate-red.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge)](Collaborators.md#collaborators)
+[![Discord](https://img.shields.io/discord/807245652072857610?color=blue&labelColor=555555&label=&logo=discord&style=for-the-badge)](https://discord.gg/H5MNcFW63r)
+[![Supported Sites](https://img.shields.io/badge/-Supported_Sites-brightgreen.svg?style=for-the-badge)](supportedsites.md)
+[![License: Unlicense](https://img.shields.io/badge/-Unlicense-blue.svg?style=for-the-badge)](LICENSE)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/yt-dlp/yt-dlp/core.yml?branch=master&label=Tests&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/actions)
+[![Commits](https://img.shields.io/github/commit-activity/m/yt-dlp/yt-dlp?label=commits&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/commits)
+[![Last Commit](https://img.shields.io/github/last-commit/yt-dlp/yt-dlp/master?label=&style=for-the-badge&display_timestamp=committer)](https://github.com/yt-dlp/yt-dlp/pulse/monthly)
 
 </div>
-<!-- MANPAGE: END EXCLUDED SECTION -->
 
-# yt-dlp: The Ultimate Command-Line Video Downloader for Thousands of Sites
+# yt-dlp: Your Feature-Rich Video and Audio Downloader
 
-yt-dlp is a powerful and versatile command-line tool for downloading audio and video from a vast array of websites.  This project is a fork of [yt-dlp's original repo](https://github.com/yt-dlp/yt-dlp), expanding upon the functionality of youtube-dl, offering enhanced features and wider site support.
+yt-dlp is a powerful, cross-platform command-line tool for downloading audio and video from thousands of websites. Based on the now inactive youtube-dlc, this project is continually updated with new features and fixes.  [Visit the original repository](https://github.com/yt-dlp/yt-dlp) for more information.
 
 **Key Features:**
 
-*   **Broad Site Support:** Downloads from [thousands of sites](supportedsites.md).
-*   **Format Selection:** Flexible options to choose your preferred video and audio formats.
-*   **Playlist Downloads:** Download entire playlists with ease, offering control over item selection.
-*   **Subtitle Support:** Download and embed subtitles in various formats.
-*   **Metadata Handling:**  Add metadata and embed thumbnail and chapter information into downloaded files.
-*   **Post-Processing:** Convert videos to audio, remux, and more with integrated tools.
-*   **SponsorBlock Integration:** Automatically skip sponsor segments in YouTube videos using the SponsorBlock API.
-*   **Browser Cookie Support:** Directly import cookies from your web browser for authenticated downloads.
-*   **Plugins:** Extensible architecture for custom extractors and post-processors.
-*   **Easy Updates:** Stay up-to-date with the latest features and fixes through in-app updates.
+*   **Wide Site Support:** Downloads from thousands of video and audio websites.
+*   **Format Selection:** Flexible options to select the best or preferred formats.
+*   **Playlist Download:** Download entire playlists or specific items.
+*   **Advanced Options:**  Customize downloads with options for quality, subtitles, and more.
+*   **Post-Processing:** Convert, merge, and embed metadata into your downloads.
+*   **SponsorBlock Integration:** Automatically remove or mark sponsor segments in YouTube videos.
+*   **Browser Cookie Support:** Easily load cookies from your web browser.
+*   **Plugin Support:** Extends functionality with custom extractors and post-processors.
+*   **Automatic Updates:** Keep your downloader up-to-date with a built-in update feature.
 
-## **Installation**
+## Installation
 
-You can install yt-dlp using [the binaries](#release-files), [pip](https://pypi.org/project/yt-dlp) or one using a third-party package manager. See [the wiki](https://github.com/yt-dlp/yt-dlp/wiki/Installation) for detailed instructions
+You can install yt-dlp using the [release binaries](#release-files), [pip](https://pypi.org/project/yt-dlp), or a third-party package manager. Detailed instructions are available on [the wiki](https://github.com/yt-dlp/yt-dlp/wiki/Installation).
 
-<!-- MANPAGE: BEGIN EXCLUDED SECTION -->
-[![Windows](https://img.shields.io/badge/-Windows_x64-blue.svg?style=for-the-badge&logo=windows)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)
-[![Unix](https://img.shields.io/badge/-Linux/BSD-red.svg?style=for-the-badge&logo=linux)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp)
-[![MacOS](https://img.shields.io/badge/-MacOS-lightblue.svg?style=for-the-badge&logo=apple)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos)
-[![PyPI](https://img.shields.io/badge/-PyPI-blue.svg?logo=pypi&labelColor=555555&style=for-the-badge)](https://pypi.org/project/yt-dlp)
-[![Source Tarball](https://img.shields.io/badge/-Source_tar-green.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz)
-[![Other variants](https://img.shields.io/badge/-Other-grey.svg?style=for-the-badge)](#release-files)
-[![All versions](https://img.shields.io/badge/-All_Versions-lightgrey.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/releases)
-<!-- MANPAGE: END EXCLUDED SECTION -->
-
-## RELEASE FILES
+### Release Files
 
 #### Recommended
 
@@ -86,13 +74,12 @@ curl -L https://github.com/yt-dlp/yt-dlp/raw/master/public.key | gpg --import
 gpg --verify SHA2-256SUMS.sig SHA2-256SUMS
 gpg --verify SHA2-512SUMS.sig SHA2-512SUMS
 ```
-<!-- MANPAGE: END EXCLUDED SECTION -->
 
 **Note**: The manpages, shell completion (autocomplete) files etc. are available inside the [source tarball](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz)
 
-## **Update**
+## Update
 
-You can use `yt-dlp -U` to update if you are using the [release binaries](#release-files)
+You can update yt-dlp using the built-in update feature. Run `yt-dlp -U` to update if you are using the [release binaries](#release-files).
 
 If you [installed with pip](https://github.com/yt-dlp/yt-dlp/wiki/Installation#with-pip), simply re-run the same command that was used to install the program
 
@@ -127,9 +114,9 @@ yt-dlp --update-to nightly
 python3 -m pip install -U --pre "yt-dlp[default]"
 ```
 
-## **Dependencies**
+## Dependencies
 
-* Python versions 3.9+ (CPython) and 3.10+ (PyPy) are supported. Other versions and implementations may or may not work correctly.
+yt-dlp requires Python 3.9 or later. Additional dependencies are listed in the [Dependencies](#dependencies) section of the original README.
 
 ### Strongly recommended
 
@@ -149,7 +136,7 @@ python3 -m pip install -U --pre "yt-dlp[default]"
 
 The following provide support for impersonating browser requests. This may be required for some sites that employ TLS fingerprinting.
 
-* [**curl_cffi**](https://github.com/lexiforest/curl_cffi) (recommended) - Python binding for [curl-impersonate](https://github.com/lexiforest/curl_cffi). Provides impersonation targets for Chrome, Edge and Safari. Licensed under [MIT](https://github.com/lexiforest/curl_cffi/blob/main/LICENSE)
+* [**curl_cffi**](https://github.com/lexiforest/curl_cffi) (recommended) - Python binding for [curl-impersonate](https://github.com/lexiforest/curl-impersonate). Provides impersonation targets for Chrome, Edge and Safari. Licensed under [MIT](https://github.com/lexiforest/curl_cffi/blob/main/LICENSE)
   * Can be installed with the `curl-cffi` group, e.g. `pip install "yt-dlp[default,curl-cffi]"`
   * Currently included in `yt-dlp.exe`, `yt-dlp_linux` and `yt-dlp_macos` builds
 
@@ -180,20 +167,38 @@ The standalone release binaries are built with the Python interpreter and the pa
 
 If you do not have the necessary dependencies for a task you are attempting, yt-dlp will warn you. All the currently available dependencies are visible at the top of the `--verbose` output
 
-## **Key Features**
+## Usage and Options
 
-*   [**Broad Site Support:**](#key-features) yt-dlp supports a huge variety of sites for audio and video downloads.
-*   [**Format Selection:**](#format-selection) You can download the preferred video format using the powerful format selection options.
-*   [**Playlist Downloads:**](#video-selection) Download entire playlists with ease, offering control over item selection.
-*   [**Subtitle Support:**](#subtitle-options) Download and embed subtitles in various formats.
-*   [**Metadata Handling:**](#modifying-metadata) You can add metadata and embed thumbnail and chapter information into downloaded files.
-*   [**Post-Processing:**](#post-processing-options) Convert videos to audio, remux, and more with integrated tools.
-*   [**SponsorBlock Integration:**](#sponsorblock-options) Automatically skip sponsor segments in YouTube videos using the SponsorBlock API.
-*   [**Browser Cookie Support:**](#cookies-from-browser) Directly import cookies from your web browser for authenticated downloads.
-*   [**Plugins:**](#plugins) Extensible architecture for custom extractors and post-processors.
-*   [**Easy Updates:**](#update) Stay up-to-date with the latest features and fixes through in-app updates.
+For detailed information, see the [Usage and Options](#usage-and-options) section of the original README, or use `yt-dlp -h` in the command line.
 
-**Learn More:**
+## Configuration
 
-*   [GitHub Repository](https://github.com/yt-dlp/yt-dlp)
-*   [Installation Wiki](https://github.com/yt-dlp/yt-dlp/wiki/Installation)
+yt-dlp supports configuration files for persistent settings. Place options in a configuration file in one of the supported locations.  See the [CONFIGURATION](#configuration) section of the original README for details on configuration locations and file format.
+
+## Output Template
+
+Customize output filenames using the output template options. See the [OUTPUT TEMPLATE](#output-template) section of the original README for details.
+
+## Format Selection
+
+Select your desired video or audio formats using the format selection options.  See the [FORMAT SELECTION](#format-selection) and [FORMAT SELECTION EXAMPLES](#format-selection-examples) sections of the original README for detailed information and examples.
+
+## Modifying Metadata
+
+Customize video metadata using the `--parse-metadata` and `--replace-in-metadata` options. See the [MODIFYING METADATA](#modifying-metadata) section of the original README for information and examples.
+
+## Plugins
+
+Extend yt-dlp's functionality with plugins.  See the [PLUGINS](#plugins) section of the original README for installation and development information.
+
+## Embedding yt-dlp
+
+Integrate yt-dlp into your Python scripts for automated downloads and more.  See the [EMBEDDING YT-DLP](#embedding-yt-dlp) section of the original README for examples and information.
+
+## Contributing
+
+Contributions are welcome! See the [CONTRIBUTING](#contributing) section of the original README.
+
+## Wiki
+
+Find more in-depth information, FAQs, and plugin documentation in the [WIKI](https://github.com/yt-dlp/yt-dlp/wiki).

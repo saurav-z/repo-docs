@@ -1,8 +1,10 @@
 <div align="center">
   <a href="https://www.camel-ai.org/">
-    <img src="docs/images/banner.png" alt="CAMEL Banner">
+    <img src="docs/images/banner.png" alt="Banner">
   </a>
 </div>
+
+</br>
 
 <div align="center">
 
@@ -22,113 +24,81 @@
 
 <hr>
 
-## 🐫 CAMEL: Unleash the Power of Multi-Agent Systems for Cutting-Edge AI Research
+## CAMEL: Build and Study Multi-Agent Systems for Breakthrough AI Research
 
-[CAMEL](https://github.com/camel-ai/camel) is an open-source framework designed to explore the scaling laws of AI agents, providing tools and resources for researchers to build, study, and deploy complex multi-agent systems. Join our community ([Discord](https://discord.camel-ai.org/) or [WeChat](https://ghli.org/camel/wechat.png)) and help push the boundaries of agent-based AI!
-
-<div align="center">
-    <img src="docs/images/star.gif" alt="Star" width="186" height="60">
-</div>
+**CAMEL empowers you to build, explore, and understand the scaling laws of AI agents, providing a comprehensive framework for multi-agent system research.**  Visit the [original repository](https://github.com/camel-ai/camel) for more details.
 
 <br>
 
-## Key Features of CAMEL
+### Key Features
 
-*   ✅ **Large-Scale Agent System:** Simulate up to 1 million agents to study emergent behaviors and scaling laws.
-*   ✅ **Dynamic Communication:** Enable real-time interactions among agents, fostering collaboration.
-*   ✅ **Stateful Memory:** Equip agents with historical context for improved decision-making.
-*   ✅ **Support for Multiple Benchmarks:** Rigorously evaluate agent performance with standardized benchmarks.
-*   ✅ **Diverse Agent Types:** Work with various agent roles, tasks, models, and environments.
-*   ✅ **Data Generation and Tool Integration:** Automate large-scale dataset creation and streamline research workflows.
-
-## CAMEL Framework Design Principles
-
-*   **🧬 Evolvability:** Enable continuous agent evolution through data generation and environment interaction, using reinforcement or supervised learning.
-*   **📈 Scalability:** Designed to support systems with millions of agents, ensuring efficient coordination and resource management.
-*   **💾 Statefulness:** Allow agents to maintain stateful memory for multi-step interactions and complex task handling.
-*   **📖 Code-as-Prompt:** Use clear, readable code and comments as prompts, making the code understandable for both humans and agents.
-
-## What You Can Build with CAMEL
-
-CAMEL empowers you to build diverse AI applications, including:
-
-### 1. Data Generation
-
-<div align="center">
-  <a href="https://github.com/camel-ai/camel/blob/master/camel/datagen/cot_datagen.py">
-    <img src="docs/images/cot.png" alt="CoT Data Generation">
-  </a>
-</div>
-
-<div align="center">
-  <a href="https://github.com/camel-ai/camel/tree/master/camel/datagen/self_instruct">
-    <img src="docs/images/self_instruct.png" alt="Self-Instruct Data Generation">
-  </a>
-</div>
-
-<div align="center">
-  <a href="https://github.com/camel-ai/camel/tree/master/camel/datagen/source2synth">
-    <img src="docs/images/source2synth.png" alt="Source2Synth Data Generation">
-  </a>
-</div>
-
-<div align="center">
-  <a href="https://github.com/camel-ai/camel/blob/master/camel/datagen/self_improving_cot.py">
-    <img src="docs/images/self_improving.png" alt="Self-Improving Data Generation">
-  </a>
-</div>
-
-### 2. Task Automation
-
-<div align="center">
-  <a href="https://github.com/camel-ai/camel/blob/master/camel/societies/role_playing.py">
-    <img src="docs/images/role_playing.png" alt="Role Playing">
-  </a>
-</div>
-
-<div align="center">
-  <a href="https://github.com/camel-ai/camel/tree/master/camel/societies/workforce">
-    <img src="docs/images/workforce.png" alt="Workforce">
-  </a>
-</div>
-
-<div align="center">
-  <a href="https://docs.camel-ai.org/cookbooks/advanced_features/agents_with_rag.html">
-    <img src="docs/images/rag_pipeline.png" alt="RAG Pipeline">
-  </a>
-</div>
-
-### 3. World Simulation
-
-<div align="center">
-  <a href="https://github.com/camel-ai/oasis">
-    <img src="docs/images/oasis_case.png" alt="Oasis Case">
-  </a>
-</div>
+*   🚀 **Large-Scale Agent Systems:** Simulate up to 1 million agents to explore emergent behaviors.
+*   💬 **Dynamic Communication:** Enable real-time interactions and collaboration among agents.
+*   🧠 **Stateful Memory:** Equip agents with memory for multi-step interactions and sophisticated tasks.
+*   💡 **Code-as-Prompt:** Leverage clear, readable code for both human and agent understanding.
+*   🛠️ **Extensive Tool Integration:** Seamlessly integrate with various tools for data generation and research workflows.
+*   🌐 **Community-Driven:**  Join a community of 100+ researchers.
 
 <br>
 
-## Quick Start
+### Why Choose CAMEL?
 
-Get started with CAMEL in a few simple steps using `pip`:
+CAMEL is your ideal platform for multi-agent system research.
+
+*   **Large-Scale Agent System:** Study emergent behaviors and scaling laws with up to 1M agents.
+*   **Dynamic Communication:** Enable real-time interactions for complex task solving.
+*   **Stateful Memory:** Facilitate improved decision-making through historical context.
+*   **Comprehensive Benchmarks:** Evaluate agent performance with standardized benchmarks.
+*   **Versatile Agent Types:** Experiment with diverse roles, tasks, models, and environments.
+*   **Data Generation & Tool Integration:** Streamline workflows with automated data creation and tool support.
+
+<br>
+
+### What Can You Build with CAMEL?
+
+CAMEL enables a wide range of applications across Data Generation, Task Automation, and World Simulation.
+
+#### 1. Data Generation
+
+*   <img src="docs/images/cot.png" alt="CoT Data Generation" width="150">
+*   <img src="docs/images/self_instruct.png" alt="Self-Instruct Data Generation" width="150">
+*   <img src="docs/images/source2synth.png" alt="Source2Synth Data Generation" width="150">
+*   <img src="docs/images/self_improving.png" alt="Self-Improving Data Generation" width="150">
+
+#### 2. Task Automation
+
+*   <img src="docs/images/role_playing.png" alt="Role Playing" width="150">
+*   <img src="docs/images/workforce.png" alt="Workforce" width="150">
+*   <img src="docs/images/rag_pipeline.png" alt="RAG Pipeline" width="150">
+
+#### 3. World Simulation
+
+*   <img src="docs/images/oasis_case.png" alt="Oasis Case" width="150">
+
+<br>
+
+### Quick Start
+
+Easily install CAMEL using pip:
 
 ```bash
 pip install camel-ai
 ```
 
-### Example: Using a ChatAgent
+#### Example: Creating a ChatAgent
 
 1.  **Install web tools:**
 
     ```bash
     pip install 'camel-ai[web_tools]'
     ```
-2.  **Set your OpenAI API key:**
+2.  **Set OpenAI API key:**
 
     ```bash
     export OPENAI_API_KEY='your_openai_api_key'
     ```
-3.  **Run the following Python code:**
+
+3.  **Run the Python code:**
 
     ```python
     from camel.models import ModelFactory
@@ -158,18 +128,25 @@ pip install camel-ai
     # [https://github.com/camel-ai/camel](https://github.com/camel-ai/camel).
     ```
 
-Explore our [documentation](https://docs.camel-ai.org) for detailed instructions and configuration options.
+Explore the [installation section](https://github.com/camel-ai/camel/blob/master/docs/get_started/installation.md) and the [CAMEL Tech Stack and Cookbooks](https://docs.camel-ai.org) for further details.
 
-Check out the [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1AzP33O8rnMW__7ocWJhVBXjKziJXPtim?usp=sharing) demo to see two ChatGPT agents collaborating.
+<br>
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)][colab-url] Demo showcasing conversation between two ChatGPT agents.
 
-Learn more about agents, their roles, and applications:
+Explore different types of agents, their roles, and their applications.
 
-*   [Creating Your First Agent](https://docs.camel-ai.org/cookbooks/basic_concepts/create_your_first_agent.html)
-*   [Creating Your First Agent Society](https://docs.camel-ai.org/cookbooks/basic_concepts/create_your_first_agents_society.html)
-*   [Embodied Agents](https://docs.camel-ai.org/cookbooks/advanced_features/embodied_agents.html)
-*   [Critic Agents](https://docs.camel-ai.org/cookbooks/advanced_features/critic_agents_and_tree_search.html)
+-   **[Creating Your First Agent](https://docs.camel-ai.org/cookbooks/basic_concepts/create_your_first_agent.html)**
+-   **[Creating Your First Agent Society](https://docs.camel-ai.org/cookbooks/basic_concepts/create_your_first_agents_society.html)**
+-   **[Embodied Agents](https://docs.camel-ai.org/cookbooks/advanced_features/embodied_agents.html)**
+-   **[Critic Agents](https://docs.camel-ai.org/cookbooks/advanced_features/critic_agents_and_tree_search.html)**
 
-## Tech Stack
+### Seeking Help
+
+Join us on [CAMEL discord](https://discord.camel-ai.org/) for assistance.
+
+<br>
+
+### Tech Stack
 
 <div align="center">
   <a href="https://docs.camel-ai.org">
@@ -177,71 +154,62 @@ Learn more about agents, their roles, and applications:
   </a>
 </div>
 
-### Key Modules
-Core components and utilities to build, operate, and enhance CAMEL-AI agents and societies.
+#### Key Modules
 
-| Module | Description |
-|:---|:---|
-| **[Agents](https://docs.camel-ai.org/key_modules/agents.html)** | Core agent architectures and behaviors for autonomous operation. |
-| **[Agent Societies](https://docs.camel-ai.org/key_modules/society.html)** | Components for building and managing multi-agent systems and collaboration. |
-| **[Data Generation](https://docs.camel-ai.org/key_modules/datagen.html)** | Tools and methods for synthetic data creation and augmentation. |
-| **[Models](https://docs.camel-ai.org/key_modules/models.html)** | Model architectures and customization options for agent intelligence. |
-| **[Tools](https://docs.camel-ai.org/key_modules/tools.html)** | Tools integration for specialized agent tasks. |
-| **[Memory](https://docs.camel-ai.org/key_modules/memory.html)** | Memory storage and retrieval mechanisms for agent state management. |
-| **[Storage](https://docs.camel-ai.org/key_modules/storages.html)** | Persistent storage solutions for agent data and states. |
-| **[Benchmarks](https://github.com/camel-ai/camel/tree/master/camel/benchmarks)** | Performance evaluation and testing frameworks. |
-| **[Interpreters](https://docs.camel-ai.org/key_modules/interpreters.html)** | Code and command interpretation capabilities. |
-| **[Data Loaders](https://docs.camel-ai.org/key_modules/loaders.html)** | Data ingestion and preprocessing tools. |
-| **[Retrievers](https://docs.camel-ai.org/key_modules/retrievers.html)** | Knowledge retrieval and RAG components. |
-| **[Runtime](https://github.com/camel-ai/camel/tree/master/camel/runtime)** | Execution environment and process management. |
-| **[Human-in-the-Loop](https://docs.camel-ai.org/cookbooks/advanced_features/agents_with_human_in_loop_and_tool_approval.html)** | Interactive components for human oversight and intervention. |
+| Module                                                                      | Description                                                   |
+| :-------------------------------------------------------------------------- | :------------------------------------------------------------ |
+| **[Agents](https://docs.camel-ai.org/key_modules/agents.html)**             | Core agent architectures and behaviors                         |
+| **[Agent Societies](https://docs.camel-ai.org/key_modules/society.html)**   | Multi-agent system components                                   |
+| **[Data Generation](https://docs.camel-ai.org/key_modules/datagen.html)**   | Synthetic data creation tools                                   |
+| **[Models](https://docs.camel-ai.org/key_modules/models.html)**             | Model architectures and customization                           |
+| **[Tools](https://docs.camel-ai.org/key_modules/tools.html)**               | Integration of tools for specialized tasks                    |
+| **[Memory](https://docs.camel-ai.org/key_modules/memory.html)**             | Agent state management mechanisms                               |
+| **[Storage](https://docs.camel-ai.org/key_modules/storages.html)**           | Persistent storage solutions                                    |
+| **[Benchmarks](https://github.com/camel-ai/camel/tree/master/camel/benchmarks)**  | Performance evaluation and testing frameworks                |
+| **[Interpreters](https://docs.camel-ai.org/key_modules/interpreters.html)**  | Code and command interpretation capabilities                   |
+| **[Data Loaders](https://docs.camel-ai.org/key_modules/loaders.html)**       | Data ingestion and preprocessing                              |
+| **[Retrievers](https://docs.camel-ai.org/key_modules/retrievers.html)**     | Knowledge retrieval and RAG components                        |
+| **[Runtime](https://github.com/camel-ai/camel/tree/master/camel/runtime)** | Execution environment and process management                 |
+| **[Human-in-the-Loop](https://docs.camel-ai.org/cookbooks/advanced_features/agents_with_human_in_loop_and_tool_approval.html)** | Interactive components for human oversight and intervention |
+
 ---
 
-## Research
+### Research
 
-CAMEL is built by a community-driven research collective dedicated to advancing frontier research in Multi-Agent Systems.
+We believe that studying these agents on a large scale offers valuable insights into their behaviors, capabilities, and potential risks.
 
 **Explore our research projects:**
 
 <div align="center">
   <a href="https://crab.camel-ai.org/">
-    <img src="docs/images/crab.png" alt="CRAB">
+    <img src="docs/images/crab.png" alt="CRAB" width="150">
   </a>
-</div>
-
-<div align="center">
   <a href="https://agent-trust.camel-ai.org/">
-    <img src="docs/images/agent_trust.png" alt="Agent Trust">
+    <img src="docs/images/agent_trust.png" alt="Agent Trust" width="150">
   </a>
-</div>
-
-<div align="center">
   <a href="https://oasis.camel-ai.org/">
-    <img src="docs/images/oasis.png" alt="OASIS">
+    <img src="docs/images/oasis.png" alt="OASIS" width="150">
   </a>
-</div>
-
-<div align="center">
   <a href="https://emos-project.github.io/">
-    <img src="docs/images/emos.png" alt="Emos">
+    <img src="docs/images/emos.png" alt="Emos" width="150">
   </a>
 </div>
 
->### Research with US
+> ### Research with US
 >
->We warmly invite you to use CAMEL for your impactful research.
+> We warmly invite you to use CAMEL for your impactful research.
 >
->Rigorous research takes time and resources. We are a community-driven research collective with 100+ researchers exploring the frontier research of Multi-agent Systems. Join our ongoing projects or test new ideas with us, [reach out via email](mailto:camel-ai@eigent.ai) for more information.
+> Rigorous research takes time and resources. We are a community-driven research collective with 100+ researchers exploring the frontier research of Multi-agent Systems. Join our ongoing projects or test new ideas with us, [reach out via email](mailto:camel-ai@eigent.ai) for more information.
 >
-><div align="center">
->    <img src="docs/images/partners.png" alt="Partners">
-></div>
+> <div align="center">
+>     <img src="docs/images/partners.png" alt="Partners">
+> </div>
 
 <br>
 
-## Synthetic Datasets
+### Synthetic Datasets
 
-### 1. Utilize Various LLMs as Backends
+#### 1. Utilize Various LLMs as Backends
 
 For more details, please see our [`Models Documentation`](https://docs.camel-ai.org/key_modules/models.html#).
 
@@ -256,7 +224,7 @@ For more details, please see our [`Models Documentation`](https://docs.camel-ai.
 | **Chemistry**  | [Chat format](https://huggingface.co/datasets/camel-ai/chemistry)                                   | x                                                                                                                | x                                                                                          |
 | **Biology**    | [Chat format](https://huggingface.co/datasets/camel-ai/biology)                                     | x                                                                                                                | x                                                                                          |
 
-### 2. Visualizations of Instructions and Tasks
+#### 2. Visualizations of Instructions and Tasks
 
 | Dataset          | Instructions                                                                                                         | Tasks                                                                                                         |
 |------------------|----------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
@@ -266,130 +234,129 @@ For more details, please see our [`Models Documentation`](https://docs.camel-ai.
 
 <br>
 
-## Cookbooks (Usecases)
+### Cookbooks (Usecases)
 
 Practical guides and tutorials for implementing specific functionalities in CAMEL-AI agents and societies.
 
-### 1. Basic Concepts
+#### 1. Basic Concepts
 
-| Cookbook | Description |
-|:---|:---|
-| **[Creating Your First Agent](https://docs.camel-ai.org/cookbooks/basic_concepts/create_your_first_agent.html)** | A step-by-step guide to building your first agent. |
-| **[Creating Your First Agent Society](https://docs.camel-ai.org/cookbooks/basic_concepts/create_your_first_agents_society.html)** | Learn to build a collaborative society of agents. |
-| **[Message Cookbook](https://docs.camel-ai.org/cookbooks/basic_concepts/agents_message.html)** | Best practices for message handling in agents. |
+| Cookbook                                                                                           | Description                                                                           |
+| :------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |
+| **[Creating Your First Agent](https://docs.camel-ai.org/cookbooks/basic_concepts/create_your_first_agent.html)** | A step-by-step guide to building your first agent.                                  |
+| **[Creating Your First Agent Society](https://docs.camel-ai.org/cookbooks/basic_concepts/create_your_first_agents_society.html)** | Learn to build a collaborative society of agents.                                   |
+| **[Message Cookbook](https://docs.camel-ai.org/cookbooks/basic_concepts/agents_message.html)**       | Best practices for message handling in agents.                                        |
 
-### 2. Advanced Features
+#### 2. Advanced Features
 
-| Cookbook | Description |
-|:---|:---|
-| **[Tools Cookbook](https://docs.camel-ai.org/cookbooks/advanced_features/agents_with_tools.html)** | Integrating tools for enhanced functionality. |
-| **[Memory Cookbook](https://docs.camel-ai.org/cookbooks/advanced_features/agents_with_memory.html)** | Implementing memory systems in agents. |
-| **[RAG Cookbook](https://docs.camel-ai.org/cookbooks/advanced_features/agents_with_rag.html)** | Recipes for Retrieval-Augmented Generation. |
-| **[Graph RAG Cookbook](https://docs.camel-ai.org/cookbooks/advanced_features/agents_with_graph_rag.html)** | Leveraging knowledge graphs with RAG. |
-| **[Track CAMEL Agents with AgentOps](https://docs.camel-ai.org/cookbooks/advanced_features/agents_tracking.html)** | Tools for tracking and managing agents in operations. |
+| Cookbook                                                                                         | Description                                                                         |
+| :----------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| **[Tools Cookbook](https://docs.camel-ai.org/cookbooks/advanced_features/agents_with_tools.html)**     | Integrating tools for enhanced functionality.                                         |
+| **[Memory Cookbook](https://docs.camel-ai.org/cookbooks/advanced_features/agents_with_memory.html)**   | Implementing memory systems in agents.                                              |
+| **[RAG Cookbook](https://docs.camel-ai.org/cookbooks/advanced_features/agents_with_rag.html)**         | Recipes for Retrieval-Augmented Generation.                                          |
+| **[Graph RAG Cookbook](https://docs.camel-ai.org/cookbooks/advanced_features/agents_with_graph_rag.html)** | Leveraging knowledge graphs with RAG.                                               |
+| **[Track CAMEL Agents with AgentOps](https://docs.camel-ai.org/cookbooks/advanced_features/agents_tracking.html)** | Tools for tracking and managing agents in operations.                             |
 
-### 3. Model Training & Data Generation
+#### 3. Model Training & Data Generation
 
-| Cookbook | Description |
-|:---|:---|
-| **[Data Generation with CAMEL and Finetuning with Unsloth](https://docs.camel-ai.org/cookbooks/data_generation/sft_data_generation_and_unsloth_finetuning_Qwen2_5_7B.html)** | Learn how to generate data with CAMEL and fine-tune models effectively with Unsloth. |
-| **[Data Gen with Real Function Calls and Hermes Format](https://docs.camel-ai.org/cookbooks/data_generation/data_gen_with_real_function_calls_and_hermes_format.html)** | Explore how to generate data with real function calls and the Hermes format. |
-| **[CoT Data Generation and Upload Data to Huggingface](https://docs.camel-ai.org/cookbooks/data_generation/distill_math_reasoning_data_from_deepseek_r1.html)** | Uncover how to generate CoT data with CAMEL and seamlessly upload it to Huggingface. |
-| **[CoT Data Generation and SFT Qwen with Unsolth](https://docs.camel-ai.org/cookbooks/data_generation/cot_data_gen_sft_qwen_unsolth_upload_huggingface.html)** | Discover how to generate CoT data using CAMEL and SFT Qwen with Unsolth, and seamlessly upload your data and model to Huggingface. |
+| Cookbook                                                                                                                            | Description                                                                            |
+| :---------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |
+| **[Data Generation with CAMEL and Finetuning with Unsloth](https://docs.camel-ai.org/cookbooks/data_generation/sft_data_generation_and_unsloth_finetuning_Qwen2_5_7B.html)**  | Learn how to generate data with CAMEL and fine-tune models effectively with Unsloth.  |
+| **[Data Gen with Real Function Calls and Hermes Format](https://docs.camel-ai.org/cookbooks/data_generation/data_gen_with_real_function_calls_and_hermes_format.html)**        | Explore how to generate data with real function calls and the Hermes format.           |
+| **[CoT Data Generation and Upload Data to Huggingface](https://docs.camel-ai.org/cookbooks/data_generation/distill_math_reasoning_data_from_deepseek_r1.html)**               | Uncover how to generate CoT data with CAMEL and seamlessly upload it to Huggingface.  |
+| **[CoT Data Generation and SFT Qwen with Unsolth](https://docs.camel-ai.org/cookbooks/data_generation/cot_data_gen_sft_qwen_unsolth_upload_huggingface.html)**                | Discover how to generate CoT data using CAMEL and SFT Qwen with Unsolth, and seamlessly upload your data and model to Huggingface. |
 
-### 4. Multi-Agent Systems & Applications
+#### 4. Multi-Agent Systems & Applications
 
-| Cookbook | Description |
-|:---|:---|
-| **[Role-Playing Scraper for Report & Knowledge Graph Generation](https://docs.camel-ai.org/cookbooks/applications/roleplaying_scraper.html)** | Create role-playing agents for data scraping and reporting. |
-| **[Create A Hackathon Judge Committee with Workforce](https://docs.camel-ai.org/cookbooks/multi_agent_society/workforce_judge_committee.html)** | Building a team of agents for collaborative judging. |
-| **[Dynamic Knowledge Graph Role-Playing: Multi-Agent System with dynamic, temporally-aware knowledge graphs](https://docs.camel-ai.org/cookbooks/applications/dyamic_knowledge_graph.html)** |  Builds dynamic, temporally-aware knowledge graphs for financial applications using a multi-agent system. It processes financial reports, news articles, and research papers to help traders analyze data, identify relationships, and uncover market insights. The system also utilizes diverse and optional element node deduplication techniques to ensure data integrity and optimize graph structure for financial decision-making. |
-| **[Customer Service Discord Bot with Agentic RAG](https://docs.camel-ai.org/cookbooks/applications/customer_service_Discord_bot_using_SambaNova_with_agentic_RAG.html)** | Learn how to build a robust customer service bot for Discord using Agentic RAG. |
-| **[Customer Service Discord Bot with Local Model](https://docs.camel-ai.org/cookbooks/applications/customer_service_Discord_bot_using_local_model_with_agentic_RAG.html)** | Learn how to build a robust customer service bot for Discord using Agentic RAG which supports local deployment. |
+| Cookbook                                                                                                                                | Description                                                                            |
+| :--------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |
+| **[Role-Playing Scraper for Report & Knowledge Graph Generation](https://docs.camel-ai.org/cookbooks/applications/roleplaying_scraper.html)**    | Create role-playing agents for data scraping and reporting.                          |
+| **[Create A Hackathon Judge Committee with Workforce](https://docs.camel-ai.org/cookbooks/multi_agent_society/workforce_judge_committee.html)** | Building a team of agents for collaborative judging.                                 |
+| **[Dynamic Knowledge Graph Role-Playing: Multi-Agent System with dynamic, temporally-aware knowledge graphs](https://docs.camel-ai.org/cookbooks/applications/dyamic_knowledge_graph.html)** | Builds dynamic, temporally-aware knowledge graphs for financial applications using a multi-agent system. It processes financial reports, news articles, and research papers to help traders analyze data, identify relationships, and uncover market insights. The system also utilizes diverse and optional element node deduplication techniques to ensure data integrity and optimize graph structure for financial decision-making. |
+| **[Customer Service Discord Bot with Agentic RAG](https://docs.camel-ai.org/cookbooks/applications/customer_service_Discord_bot_using_SambaNova_with_agentic_RAG.html)**                                            | Learn how to build a robust customer service bot for Discord using Agentic RAG. |
+| **[Customer Service Discord Bot with Local Model](https://docs.camel-ai.org/cookbooks/applications/customer_service_Discord_bot_using_local_model_with_agentic_RAG.html)**                                            | Learn how to build a robust customer service bot for Discord using Agentic RAG which supports local deployment. |
 
-### 5. Data Processing
+#### 5. Data Processing
 
-| Cookbook | Description |
-|:---|:---|
-| **[Video Analysis](https://docs.camel-ai.org/cookbooks/data_processing/video_analysis.html)** | Techniques for agents in video data analysis. |
+| Cookbook                                                                                                    | Description                                                        |
+| :---------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------- |
+| **[Video Analysis](https://docs.camel-ai.org/cookbooks/data_processing/video_analysis.html)**                | Techniques for agents in video data analysis.                      |
 | **[3 Ways to Ingest Data from Websites with Firecrawl](https://docs.camel-ai.org/cookbooks/data_processing/ingest_data_from_websites_with_Firecrawl.html)** | Explore three methods for extracting and processing data from websites using Firecrawl. |
-| **[Create AI Agents that work with your PDFs](https://docs.camel-ai.org/cookbooks/data_processing/agent_with_chunkr_for_pdf_parsing.html)** | Learn how to create AI agents that work with your PDFs using Chunkr and Mistral AI. |
+| **[Create AI Agents that work with your PDFs](https://docs.camel-ai.org/cookbooks/data_processing/agent_with_chunkr_for_pdf_parsing.html)**      | Learn how to create AI agents that work with your PDFs using Chunkr and Mistral AI. |
 
 <br>
 
-## Real-World Use Cases
+### Real-World Usecases
 
-Discover how CAMEL's multi-agent framework drives real business value:
+CAMEL’s multi-agent framework offers real business value across various domains:
 
-### 1 Infrastructure Automation
-
-| Usecase                                                      | Description                                                  |
-| :----------------------------------------------------------- | :----------------------------------------------------------- |
-| **[ACI MCP](https://github.com/camel-ai/camel/tree/master/examples/usecases/aci_mcp)** | Real-world usecases demonstrating how CAMEL’s multi-agent framework enables real business value across infrastructure automation, productivity workflows, retrieval-augmented conversations, intelligent document/video analysis, and collaborative research. |
-| **[Cloudflare MCP CAMEL](https://github.com/camel-ai/camel/tree/master/examples/usecases/cloudfare_mcp_camel)** | Intelligent agents manage Cloudflare resources dynamically, enabling scalable and efficient cloud security and performance tuning. |
-
-### 2 Productivity & Business Workflows
+#### 1 Infrastructure Automation
 
 | Usecase                                                      | Description                                                  |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| **[Airbnb MCP](https://github.com/camel-ai/camel/tree/master/examples/usecases/airbnb_mcp)** | Coordinate agents to optimize and manage Airbnb listings and host operations. |
-| **[PPTX Toolkit Usecase](https://github.com/camel-ai/camel/tree/master/examples/usecases/pptx_toolkit_usecase)** | Analyze PowerPoint documents and extract structured insights through multi-agent collaboration. |
+| **[ACI MCP](https://github.com/camel-ai/camel/tree/master/examples/usecases/aci_mcp)** | Manage ACI resources with intelligent agents.              |
+| **[Cloudflare MCP CAMEL](https://github.com/camel-ai/camel/tree/master/examples/usecases/cloudfare_mcp_camel)** | Optimize Cloudflare security and performance.               |
 
-### 3 Retrieval-Augmented Multi-Agent Chat
-
-| Usecase                                                      | Description                                                  |
-| :----------------------------------------------------------- | :----------------------------------------------------------- |
-| **[Chat with GitHub](https://github.com/camel-ai/camel/tree/master/examples/usecases/chat_with_github)** | Query and understand GitHub codebases through CAMEL agents leveraging RAG-style workflows, accelerating developer onboarding and codebase navigation. |
-| **[Chat with YouTube](https://github.com/camel-ai/camel/tree/master/examples/usecases/chat_with_youtube)** | Conversational agents extract and summarize video transcripts, enabling faster content understanding and repurposing. |
-
-### 4 Video & Document Intelligence
+#### 2 Productivity & Business Workflows
 
 | Usecase                                                      | Description                                                  |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| **[YouTube OCR](https://github.com/camel-ai/camel/tree/master/examples/usecases/youtube_ocr)** | Agents perform OCR on video screenshots to summarize visual content, supporting media monitoring and compliance. |
-| **[Mistral OCR](https://github.com/camel-ai/camel/tree/master/examples/usecases/mistral_OCR)** | CAMEL agents use OCR with Mistral to analyze documents, reducing manual effort in document understanding workflows. |
+| **[Airbnb MCP](https://github.com/camel-ai/camel/tree/master/examples/usecases/airbnb_mcp)** | Optimize Airbnb listings and host operations.                |
+| **[PPTX Toolkit Usecase](https://github.com/camel-ai/camel/tree/master/examples/usecases/pptx_toolkit_usecase)** | Analyze PowerPoint documents using multi-agent collaboration. |
 
-### 5 Research & Collaboration
+#### 3 Retrieval-Augmented Multi-Agent Chat
 
 | Usecase                                                      | Description                                                  |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| **[Multi-Agent Research Assistant](https://github.com/camel-ai/camel/tree/master/examples/usecases/multi_agent_research_assistant)** | Simulates a team of research agents collaborating on literature review, improving efficiency in exploratory analysis and reporting. |
+| **[Chat with GitHub](https://github.com/camel-ai/camel/tree/master/examples/usecases/chat_with_github)** | Understand GitHub codebases via RAG workflows.             |
+| **[Chat with YouTube](https://github.com/camel-ai/camel/tree/master/examples/usecases/chat_with_youtube)** | Extract and summarize video transcripts.                    |
+
+#### 4 Video & Document Intelligence
+
+| Usecase                                                      | Description                                                  |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| **[YouTube OCR](https://github.com/camel-ai/camel/tree/master/examples/usecases/youtube_ocr)** | Summarize video content using OCR.                             |
+| **[Mistral OCR](https://github.com/camel-ai/camel/tree/master/examples/usecases/mistral_OCR)** | Analyze documents using Mistral OCR.                           |
+
+#### 5 Research & Collaboration
+
+| Usecase                                                      | Description                                                  |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| **[Multi-Agent Research Assistant](https://github.com/camel-ai/camel/tree/master/examples/usecases/multi_agent_research_assistant)** | Simulate a team of research agents for literature review.     |
 
 <br>
 
-## 🗓️ Events
+### 🗓️ Events
 
-Stay connected with the CAMEL community:
+*   🎙️ **Community Meetings**: Weekly virtual syncs with the CAMEL team
+*   🏆 **Competitions**: Hackathons, Bounty Tasks, and coding challenges
+*   🤝 **Volunteer Activities**: Contributions, documentation drives, and mentorship
+*   🌍 **Ambassador Programs**: Represent CAMEL in your university or local tech groups
 
-*   🎙️ **Community Meetings:** Weekly virtual syncs with the CAMEL team
-*   🏆 **Competitions:** Hackathons, Bounty Tasks, and coding challenges hosted by CAMEL
-*   🤝 **Volunteer Activities:** Contributions, documentation drives, and mentorship
-*   🌍 **Ambassador Programs:** Represent CAMEL in your university or local tech groups
-
-> Want to host or participate in a CAMEL event? Join our [Discord](https://discord.com/invite/CNcNpquyDc) or learn more about our [Ambassador Program](https://www.camel-ai.org/ambassador).
-
-## Contributing to CAMEL
-
-We welcome your contributions! Please review our [contributing guidelines](https://github.com/camel-ai/camel/blob/master/CONTRIBUTING.md) to help us build an even better platform.
+> Join our [Discord](https://discord.com/invite/CNcNpquyDc) or [Ambassador Program](https://www.camel-ai.org/ambassador) to participate!
 
 <br>
 
-## Community & Contact
+### Contributing to CAMEL
 
-*   **GitHub Issues:** Report bugs, request features, and track development. [Submit an issue](https://github.com/camel-ai/camel/issues)
-*   **Discord:** Get real-time support, chat with the community, and stay updated. [Join us](https://discord.camel-ai.org/)
-*   **X (Twitter):** Follow for updates, AI insights, and key announcements. [Follow us](https://x.com/CamelAIOrg)
-*   **Ambassador Project:** Advocate for CAMEL-AI, host events, and contribute content. [Learn more](https://www.camel-ai.org/community)
-*   **WeChat Community:** Scan the QR code below to join our WeChat community.
+>  Review the [contributing guidelines](https://github.com/camel-ai/camel/blob/master/CONTRIBUTING.md) to contribute code.  Share CAMEL on social media and at events to support our open-source initiative! 🚀
+
+<br>
+
+### Community & Contact
+
+*   **GitHub Issues:**  [Submit an issue](https://github.com/camel-ai/camel/issues) to report bugs or request features.
+*   **Discord:**  [Join us](https://discord.camel-ai.org/) for real-time support and community interaction.
+*   **X (Twitter):** [Follow us](https://x.com/CamelAIOrg) for updates and announcements.
+*   **Ambassador Project:**  [Learn more](https://www.camel-ai.org/community) to become an ambassador.
+*   **WeChat Community:** Scan the QR code below.
 
   <div align="center">
     <img src="misc/wechat.jpeg" alt="WeChat QR Code" width="200">
   </div>
-Contact us at camel-ai@eigent.ai for any questions.
 
 <br>
 
-## Citation
+### Citation
 
 ```
 @inproceedings{li2023camel,
@@ -400,15 +367,20 @@ Contact us at camel-ai@eigent.ai for any questions.
 }
 ```
 
-## Acknowledgment
+### Acknowledgment
 
-Special thanks to [Nomic AI](https://home.nomic.ai/) for extended access to their data set exploration tool (Atlas). We appreciate Haya Hammoud's initial logo design. We also thank the authors of research that have inspired our code, and kindly request that you cite their work when using the corresponding modules.
+Special thanks to [Nomic AI](https://home.nomic.ai/) for providing access to their data set exploration tool (Atlas).
 
--   `TaskCreationAgent`, `TaskPrioritizationAgent` and `BabyAGI` from *Nakajima et al.*: [Task-Driven Autonomous Agent](https://yoheinakajima.com/task-driven-autonomous-agent-utilizing-gpt-4-pinecone-and-langchain-for-diverse-applications/). [[Example](https://github.com/camel-ai/camel/blob/master/examples/ai_society/babyagi_playing.py)]
--   `PersonaHub` from *Tao Ge et al.*: [Scaling Synthetic Data Creation with 1,000,000,000 Personas](https://arxiv.org/pdf/2406.20094). [[Example](https://github.com/camel-ai/camel/blob/master/examples/personas/personas_generation.py)]
--   `Self-Instruct` from *Yizhong Wang et al.*: [SELF-INSTRUCT: Aligning Language Models with Self-Generated Instructions](https://arxiv.org/pdf/2212.10560). [[Example](https://github.com/camel-ai/camel/blob/master/examples/datagen/self_instruct/self_instruct.py)]
+We would also like to thank Haya Hammoud for designing the initial logo of our project.
 
-## License
+If you use any of the modules we implement, please cite the original works:
+- `TaskCreationAgent`, `TaskPrioritizationAgent` and `BabyAGI` from *Nakajima et al.*: [Task-Driven Autonomous Agent](https://yoheinakajima.com/task-driven-autonomous-agent-utilizing-gpt-4-pinecone-and-langchain-for-diverse-applications/). [[Example](https://github.com/camel-ai/camel/blob/master/examples/ai_society/babyagi_playing.py)]
+
+- `PersonaHub` from *Tao Ge et al.*: [Scaling Synthetic Data Creation with 1,000,000,000 Personas](https://arxiv.org/pdf/2406.20094). [[Example](https://github.com/camel-ai/camel/blob/master/examples/personas/personas_generation.py)]
+
+- `Self-Instruct` from *Yizhong Wang et al.*: [SELF-INSTRUCT: Aligning Language Models with Self-Generated Instructions](https://arxiv.org/pdf/2212.10560). [[Example](https://github.com/camel-ai/camel/blob/master/examples/datagen/self_instruct/self_instruct.py)]
+
+### License
 
 The source code is licensed under Apache 2.0.
 
@@ -437,20 +409,3 @@ The source code is licensed under Apache 2.0.
 [reddit-image]: https://img.shields.io/reddit/subreddit-subscribers/CamelAI?style=plastic&logo=reddit&label=r%2FCAMEL&labelColor=white
 [ambassador-url]: https://www.camel-ai.org/community
 [package-download-url]: https://pypi.org/project/camel-ai
-```
-Key changes and improvements:
-
-*   **SEO Optimization:** Added keywords like "Multi-Agent Systems," "AI Agents," "Open Source," and "Large Language Models" throughout the text.
-*   **Clear Headings:** Organized the content with clear, descriptive headings.
-*   **Concise Summary and Hook:** Added a compelling one-sentence hook to immediately engage the reader.
-*   **Bulleted Key Features:** Presented the core features in an easily digestible bulleted list.
-*   **Call to Action:** Incorporated clear calls to action, such as "Join our community" and "Explore our research projects."
-*   **Improved Structure and Readability:** Enhanced the overall formatting for better readability.
-*   **Comprehensive Overview:** Covered all sections of the original README, including code examples, research projects, and community resources.
-*   **Emphasis on Benefits:** Highlighted the advantages of using CAMEL for research.
-*   **Updated Links:** Ensured all links are accurate and functional.
-*   **Concise Section Headings:** Improved section headings to be more informative.
-*   **Removed unnecessary `<div>` tags** Reduced unnecessary clutter in the markdown.
-*   **Consistent Formatting:** Standardized the formatting throughout the document.
-*   **More Informative Descriptions:** Expanded on use case descriptions and modules.
-*   **Direct Link to Original Repo:** included the link back to the GitHub repo.

@@ -2,6 +2,8 @@
   <img src="docs/source/_static/RoboVerse86.22.svg" width="50%" alt="RoboVerse">
 </p>
 
+![RoboVerse](docs/source/metasim/images/tea.jpg)
+
 <p align="center">
   <a href="https://roboverseorg.github.io"><img src="https://img.shields.io/badge/project-page-brightgreen" alt="Project Page"></a>
   <a href="https://arxiv.org/abs/2504.18904"><img src="https://img.shields.io/badge/paper-preprint-red" alt="Paper"></a>
@@ -12,47 +14,86 @@
   <a href="docs/source/_static/wechat.jpg"><img src="https://img.shields.io/badge/wechat-QR_code-green" alt="WeChat"></a>
 </p>
 
-# RoboVerse: A Unified Platform for Scalable and Generalizable Robot Learning
+## RoboVerse: A Unified Platform for Scalable and Generalizable Robot Learning
 
-RoboVerse is a comprehensive platform, dataset, and benchmark designed to accelerate research in robot learning, offering a rich environment for developing and evaluating robotic agents. [Explore the RoboVerse project on GitHub](https://github.com/RoboVerseOrg/RoboVerse).
+RoboVerse provides a comprehensive platform, dataset, and benchmark designed to advance the field of robot learning.  [Explore the original repository](https://github.com/RoboVerseOrg/RoboVerse).
 
 **Key Features:**
 
-*   **Unified Platform:** Provides a consistent framework for developing and evaluating robotic agents across various simulators and environments.
-*   **Rich Dataset:** Includes a diverse set of tasks and datasets, facilitating the training and evaluation of generalizable robotic skills.
-*   **Benchmark:** Offers a standardized benchmark for comparing different robot learning algorithms.
-*   **Integration with Multiple Simulators:** Supports popular simulators such as Isaac Lab, Isaac Gym, MuJoCo, SAPIEN, PyBullet, Genesis, cuRobo, PyRep, and Blender.
-*   **Open Source & Community Driven:** Encourages contributions from the open-source community.
+*   **Unified Platform:** Integrated framework for various simulation environments.
+*   **Rich Dataset:** Contains diverse datasets for robot learning tasks.
+*   **Robust Benchmark:** Offers a standardized benchmark for evaluating robot learning algorithms.
+*   **Open Source & Community Driven:** Contributions and feedback are highly encouraged.
+
+## 💡 News
+
+*   **[2025-04-10]** RoboVerse gets accepted by RSS 2025!
+*   **[2025-04-03]** Code released!
 
 ## 🚀 Getting Started
 
-Get started with RoboVerse by referring to the comprehensive [documentation](https://roboverse.wiki/metasim/#) and following the detailed [tutorials](https://roboverse.wiki/metasim/get_started/quick_start/0_static_scene).
+Refer to the [documentation](https://roboverse.wiki/metasim/#) and [tutorials](https://roboverse.wiki/metasim/get_started/quick_start/0_static_scene) for detailed instructions.
 
 ## 🥰 Contributing
 
-We welcome contributions!  Check out our [CONTRIBUTING.md](./CONTRIBUTING.md) file for detailed instructions on how to contribute.
+We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
 
 ## 🎅 Wish List
 
-Have a feature request?  Share your ideas on the Wish List section of our [GitHub Discussions](https://github.com/RoboVerseOrg/RoboVerse/discussions/categories/wish-list). Upvote requests to help prioritize development!
+Suggest and upvote feature requests in the [GitHub Discussions](https://github.com/RoboVerseOrg/RoboVerse/discussions/categories/wish-list).
 
 ## 📖 License and Acknowledgments
 
 RoboVerse is licensed under the Apache License 2.0.
 
-**RoboVerse integrates with and utilizes resources from the following projects:** (list of integrations from original README)
+**Simulation Frameworks, Renderers, and Libraries Used:**
 
-## 📚 Citation
+*   [Isaac Lab](https://github.com/isaac-sim/IsaacLab) (built on Isaac Sim)
+*   [Isaac Gym](https://developer.nvidia.com/isaac-gym)
+*   [MuJoCo](https://github.com/google-deepmind/mujoco)
+*   [SAPIEN](https://github.com/haosulab/SAPIEN)
+*   [PyBullet](https://github.com/bulletphysics/bullet3)
+*   [Genesis](https://github.com/Genesis-Embodied-AI/Genesis)
+*   [cuRobo](https://github.com/NVlabs/curobo)
+*   [PyRep](https://github.com/stepjam/PyRep) (built on CoppeliaSim)
+*   [Blender](https://www.blender.org/)
 
-If you find RoboVerse useful in your research, please cite it using the following BibTeX entry:
+**Integrated Datasets and Projects:**
+
+*   [RLBench](https://github.com/stepjam/RLBench)
+*   [Maniskill](https://github.com/haosulab/ManiSkill)
+*   [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)
+*   [Meta-World](https://github.com/Farama-Foundation/Metaworld)
+*   [robosuite](https://github.com/ARISE-Initiative/robosuite)
+*   [GraspNet](https://graspnet.net/)
+*   [ARNOLD](https://arnold-benchmark.github.io/)
+*   [GAPartNet](https://github.com/PKU-EPIC/GAPartNet)
+*   [GAPartManip](https://arxiv.org/abs/2411.18276)
+*   [UniDoorManip](https://github.com/sectionZ6/UniDoorManip)
+*   [SimplerEnv](https://github.com/simpler-env/SimplerEnv)
+*   [RLAfford](https://github.com/hyperplane-lab/RLAfford)
+*   [Open6DOR](https://github.com/Selina2023/Open6DOR)
+*   [CALVIN](https://github.com/mees/calvin)
+*   [GarmentLab](https://github.com/GarmentLab/GarmentLab)
+*   [Matterport3D](https://github.com/niessner/Matterport)
+*   [VLN-CE](https://github.com/jacobkrantz/VLN-CE)
+*   [vMaterials](https://developer.nvidia.com/vmaterials)
+*   [HumanoidBench](https://github.com/carlosferrazza/humanoid-bench)
+
+The licenses for assets will be added soon. Contact us with any issues.
+
+## Citation
+
+If you use RoboVerse, please cite it:
 
 ```bibtex
 @misc{geng2025roboverse,
-      title={RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning}, 
+      title={RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning},
       author={Haoran Geng and Feishi Wang and Songlin Wei and Yuyang Li and Bangjun Wang and Boshi An and Charlie Tianyue Cheng and Haozhe Lou and Peihao Li and Yen-Jen Wang and Yutong Liang and Dylan Goetting and Chaoyi Xu and Haozhe Chen and Yuxi Qian and Yiran Geng and Jiageng Mao and Weikang Wan and Mingtong Zhang and Jiangran Lyu and Siheng Zhao and Jiazhao Zhang and Jialiang Zhang and Chengyang Zhao and Haoran Lu and Yufei Ding and Ran Gong and Yuran Wang and Yuxuan Kuang and Ruihai Wu and Baoxiong Jia and Carlo Sferrazza and Hao Dong and Siyuan Huang and Yue Wang and Jitendra Malik and Pieter Abbeel},
       year={2025},
       eprint={2504.18904},
       archivePrefix={arXiv},
       primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2504.18904}, 
+      url={https://arxiv.org/abs/2504.18904},
 }
+```
