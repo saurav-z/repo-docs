@@ -6,8 +6,12 @@
   </div>
 
   <h1>
-    Strands Agents: Build AI Agents Quickly with a Model-Driven Approach
+    Strands Agents: Build Powerful AI Agents with Ease
   </h1>
+
+  <h2>
+    A model-driven approach to building AI agents in just a few lines of code.
+  </h2>
 
   <div align="center">
     <a href="https://github.com/strands-agents/sdk-python/graphs/commit-activity"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/strands-agents/sdk-python"/></a>
@@ -17,41 +21,46 @@
     <a href="https://pypi.org/project/strands-agents/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/strands-agents"/></a>
     <a href="https://python.org"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/strands-agents"/></a>
   </div>
+  
+  <p>
+    <a href="https://strandsagents.com/">Documentation</a>
+    ◆ <a href="https://github.com/strands-agents/samples">Samples</a>
+    ◆ <a href="https://github.com/strands-agents/sdk-python">Python SDK</a>
+    ◆ <a href="https://github.com/strands-agents/tools">Tools</a>
+    ◆ <a href="https://github.com/strands-agents/agent-builder">Agent Builder</a>
+    ◆ <a href="https://github.com/strands-agents/mcp-server">MCP Server</a>
+  </p>
 </div>
 
-Strands Agents empowers developers to build and deploy AI agents quickly and efficiently, making complex agent creation simple.  [**Check out the original repository here!**](https://github.com/strands-agents/sdk-python)
+**Strands Agents empowers developers to build sophisticated AI agents quickly and efficiently using a model-driven approach.** This Python SDK provides a flexible and powerful framework for creating everything from simple conversational assistants to complex, autonomous workflows.  [Learn more on GitHub](https://github.com/strands-agents/sdk-python).
 
 ## Key Features
 
-*   **Simplified Agent Creation:** Build AI agents in just a few lines of code with a model-driven approach.
-*   **Model Agnostic:** Supports Amazon Bedrock, Anthropic, LiteLLM, Llama, Ollama, OpenAI, Writer, and custom providers.
-*   **Advanced Capabilities:** Enables multi-agent systems, autonomous agents, and streaming support.
-*   **Built-in MCP Support:** Native integration with Model Context Protocol (MCP) servers for access to a vast library of pre-built tools.
-*   **Python-Based Tools:** Easily create and integrate custom tools using Python decorators.
-*   **Hot Reloading:** Automatically load and reload tools from a directory for rapid development.
+*   **Easy Agent Creation:** Build and run AI agents with minimal code.
+*   **Model Agnostic:** Compatible with various LLM providers, including Amazon Bedrock, Anthropic, LiteLLM, Llama, Ollama, OpenAI, and Writer, plus custom providers.
+*   **Advanced Capabilities:** Supports multi-agent systems, autonomous agents, and streaming responses.
+*   **Integrated MCP Support:** Native integration with Model Context Protocol (MCP) servers for access to numerous pre-built tools.
+*   **Python-Based Tooling:** Easily create and integrate Python-based tools using decorators, with hot-reloading available.
 
 ## Quick Start
 
-Get started building your first AI agent with Strands Agents:
-
 ```bash
-# Install Strands Agents and tools
+# Install Strands Agents
 pip install strands-agents strands-agents-tools
 ```
 
 ```python
 from strands import Agent
 from strands_tools import calculator
-
 agent = Agent(tools=[calculator])
-response = agent("What is the square root of 1764?")
+agent("What is the square root of 1764")
 ```
 
-> **Note:** For the default Amazon Bedrock model provider, you'll need AWS credentials configured and model access enabled for Claude 4 Sonnet in the us-west-2 region. See the [Quickstart Guide](https://strandsagents.com/) for details on configuring other model providers.
+> **Note**: For the default Amazon Bedrock model provider, you'll need AWS credentials configured and model access enabled for Claude 4 Sonnet in the us-west-2 region. See the [Quickstart Guide](https://strandsagents.com/) for details on configuring other model providers.
 
 ## Installation
 
-Ensure you have Python 3.10+ installed. Then:
+Before you begin, ensure you have Python 3.10+ installed.
 
 ```bash
 # Create and activate virtual environment
@@ -66,7 +75,7 @@ pip install strands-agents strands-agents-tools
 
 ### Python-Based Tools
 
-Create custom tools with ease using Python decorators:
+Define tools using Python decorators for seamless integration:
 
 ```python
 from strands import Agent, tool
@@ -83,7 +92,7 @@ agent = Agent(tools=[word_count])
 response = agent("How many words are in this sentence?")
 ```
 
-**Hot Reloading from Directory:** Enable automatic tool loading and reloading from the `./tools/` directory:
+**Hot Reloading:** Enable tool loading and reloading from the `./tools/` directory:
 
 ```python
 from strands import Agent
@@ -95,7 +104,7 @@ response = agent("Use any tools you find in the tools directory")
 
 ### MCP Support
 
-Seamlessly integrate with Model Context Protocol (MCP) servers:
+Integrate with Model Context Protocol (MCP) servers:
 
 ```python
 from strands import Agent
@@ -113,7 +122,7 @@ with aws_docs_client:
 
 ### Multiple Model Providers
 
-Strands Agents provides support for a variety of model providers, including:
+Leverage various model providers:
 
 ```python
 from strands import Agent
@@ -157,9 +166,9 @@ Built-in providers:
 
 Custom providers can be implemented using [Custom Providers](https://strandsagents.com/latest/user-guide/concepts/model-providers/custom_model_provider/)
 
-### Example Tools
+### Example tools
 
-Strands offers a supplementary package (`strands-agents-tools`) with pre-built tools to quickly get you up and running:
+Use the optional `strands-agents-tools` package for pre-built tools:
 
 ```python
 from strands import Agent
@@ -168,11 +177,9 @@ agent = Agent(tools=[calculator])
 agent("What is the square root of 1764")
 ```
 
-These are also available on GitHub via [strands-agents/tools](https://github.com/strands-agents/tools).
+These tools are also available on GitHub via [strands-agents/tools](https://github.com/strands-agents/tools).
 
 ## Documentation
-
-Explore the comprehensive documentation for in-depth guidance and examples:
 
 *   [User Guide](https://strandsagents.com/)
 *   [Quick Start Guide](https://strandsagents.com/latest/user-guide/quickstart/)
@@ -183,13 +190,13 @@ Explore the comprehensive documentation for in-depth guidance and examples:
 
 ## Contributing ❤️
 
-We welcome contributions! Refer to our [Contributing Guide](CONTRIBUTING.md) for details on:
+We welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) for details:
 
-*   Reporting bugs and feature requests
+*   Reporting bugs & features
 *   Development setup
-*   Contributing through Pull Requests
+*   Contributing via Pull Requests
 *   Code of Conduct
-*   Reporting security issues
+*   Reporting of security issues
 
 ## License
 
@@ -197,19 +204,4 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Security
 
-Refer to [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for information on security.
-```
-Key improvements and optimizations:
-
-*   **SEO-Friendly Title:**  Includes a strong keyword ("AI Agents") and relevant phrases ("Build AI Agents", "Model-Driven Approach") for searchability.
-*   **Concise Hook:** Starts with a clear, impactful sentence.
-*   **Key Features Section:** Uses bullet points for easy readability and highlights the most important selling points.
-*   **Clear Headings:**  Uses semantic headings for structure and clarity, improving SEO.
-*   **Detailed Sections:**  Provides more thorough explanations and examples within each section, enhancing user understanding and engagement.
-*   **Emphasis on Benefits:** Focuses on the benefits of using Strands Agents (e.g., speed, flexibility, power).
-*   **Call to Action:** Encourages users to explore the documentation.
-*   **Contribution Guidelines:** Includes links to contribution documentation, encouraging community involvement.
-*   **Clean Formatting:**  Maintains consistent markdown formatting for readability.
-*   **Link to Original Repo:**  Includes a prominent link back to the original GitHub repository.
-*   **Keyword Optimization:** Strategically uses keywords throughout the README to improve search engine visibility.
-*   **Removed redundant links:** Simplified the links.
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for security information.

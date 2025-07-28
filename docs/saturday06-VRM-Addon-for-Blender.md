@@ -1,43 +1,48 @@
 # VRM Add-on for Blender: Create, Import, and Export VRM Models
 
-**Enhance your Blender workflow with the VRM Add-on, enabling seamless import, export, and customization of VRM models for virtual avatars and 3D projects.** [View on GitHub](https://github.com/saturday06/VRM-Addon-for-Blender)
+**[Enhance your Blender workflow with the VRM Add-on, enabling seamless VRM model creation, import, and export directly within Blender!](https://github.com/saturday06/VRM-Addon-for-Blender)**
 
-[![CI status](https://github.com/saturday06/VRM-Addon-for-Blender/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/saturday06/VRM-Addon-for-Blender/actions) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://docs.astral.sh/uv/)
+[![CI status](https://github.com/saturday06/VRM-Addon-for-Blender/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/saturday06/VRM-Addon-for-Blender/actions)
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://docs.astral.sh/uv)
+
+This add-on brings comprehensive VRM (Virtual Reality Model) functionality to Blender, streamlining the creation, import, export, and manipulation of VRM models.
 
 ## Key Features
 
-*   **Import VRM Models:** Easily bring VRM models into Blender for editing and animation.
-*   **Export VRM Models:** Export your Blender creations in the VRM format, ready for use in compatible applications.
-*   **Humanoid Rig Support:** Add and configure VRM humanoid rigs for easy animation.
-*   **MToon Shader:** Apply the popular MToon shader for anime-style rendering.
-*   **Physics-Based Rendering:** Apply and edit PBR materials.
-*   **Scripting API:** Automate tasks and extend functionality using Python scripts.
+*   **VRM Import & Export:** Seamlessly import and export VRM models within Blender.
+*   **Humanoid Rigging:**  Add and configure VRM Humanoid rigs for easy animation.
+*   **MToon Shader Support:**  Implement MToon shaders, ideal for anime-style rendering.
+*   **PBR Material Creation:**  Create realistic PBR (Physically Based Rendering) materials.
+*   **Animation Support:**  Work with and create VRM animations within Blender.
+*   **Scripting API:** Automate tasks with Python scripts.
 
-## Download
+## Download & Installation
 
-*   **Blender 4.2 or later:** [🛠️**Blender Extensions Platform**](https://extensions.blender.org/add-ons/vrm)
-*   **Blender 2.93 to 4.1:** [🌐**Official Site**](https://vrm-addon-for-blender.info)
+*   **Blender 4.2 and later:**  Install directly from the [Blender Extensions Platform](https://extensions.blender.org/add-ons/vrm).
+*   **Blender 2.93 - 4.1:** Download from the [official website](https://vrm-addon-for-blender.info).
 
 ## Tutorials
 
-| Installation                                                                                                           | Create Simple VRM                                                                                                    | Create Humanoid VRM                                                                                                   |
-| :---------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
+Explore our detailed tutorials to get started with VRM in Blender:
+
+| Installation | Create Simple VRM | Create Humanoid VRM |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | <a href="https://vrm-addon-for-blender.info/en/installation?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/installation.gif"></a> | <a href="https://vrm-addon-for-blender.info/en/create-simple-vrm-from-scratch?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/simple.gif"></a> | <a href="https://vrm-addon-for-blender.info/en/create-humanoid-vrm-from-scratch?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/humanoid.gif"></a> |
-| Create Physics Based Material                                                                                              | Create Anime Style Material                                                                                               | Automation with Python Scripts                                                                                               |
-| <a href="https://vrm-addon-for-blender.info/en/material-pbr?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/material_pbr.gif"></a> | <a href="https://vrm-addon-for-blender.info/en/material-mtoon?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/material_mtoon.gif"></a> | <a href="https://vrm-addon-for-blender.info/en/scripting-api?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/scripting_api.gif"></a> |
-| VRM Animation                                                                                                                | Development How-To                                                                                                   |                                                                                                                          |
-| <a href="https://vrm-addon-for-blender.info/en/animation?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/animation.gif"></a>     | <a href="https://vrm-addon-for-blender.info/en/development?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/animation.gif"></a>      |                                                                                                                          |
+| **Create Physics Based Material** | **Create Anime Style Material** | **Automation with Python Scripts** |
+| <a href="https://vrm-addon-for-blender.info/en/material-pbr?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/material_pbr.gif"></a> |     <a href="https://vrm-addon-for-blender.info/en/material-mtoon?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/material_mtoon.gif"></a>     |        <a href="https://vrm-addon-for-blender.info/en/scripting-api?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/scripting_api.gif"></a>        |
+| **VRM Animation** | **Development How-To** | |
+|    <a href="https://vrm-addon-for-blender.info/en/animation?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/animation.gif"></a>    |         <a href="https://vrm-addon-for-blender.info/en/development?locale_redirection"><img width="200" src="https://vrm-addon-for-blender.info/images/animation.gif"></a>         |                                                                                                                                                                                        |
 
 ## Development
 
-The source code is available in the `main` branch:
-[`src/io_scene_vrm`](https://github.com/saturday06/VRM-Addon-for-Blender/tree/main/src/io_scene_vrm).
+Contribute to the project and build your own VRM tools.
 
-For efficient development, link the `src/io_scene_vrm` folder to the Blender `addons` directory.
+*   **Source Code:** The main source code is located in the [`main`](https://github.com/saturday06/VRM-Addon-for-Blender/tree/main) branch, specifically within the [`src/io_scene_vrm`](https://github.com/saturday06/VRM-Addon-for-Blender/tree/main/src/io_scene_vrm) folder.
+*   **Efficient Development:** For easier development, create a symbolic link to the `src/io_scene_vrm` folder in your Blender addons directory.
 
-For advanced development, use [astral.sh/uv](https://docs.astral.sh/uv/) – see the [tutorial](https://vrm-addon-for-blender.info/en/development?locale_redirection) for details.
+For advanced development and testing, utilize [astral.sh/uv](https://docs.astral.sh/uv/).  Refer to the [Development Tutorial](https://vrm-addon-for-blender.info/en/development?locale_redirection) for further instructions.
 
-```text
+```bash
 git checkout main
 
 # Blender 4.2 or later

@@ -1,43 +1,56 @@
-<a href="https://scipy.org"><img src="https://raw.githubusercontent.com/scipy/scipy/main/doc/source/_static/logo.svg" alt="SciPy Logo" width="110" height="110" align="left"></a>
+<div align="left">
+  <a href="https://scipy.org">
+    <img src="https://raw.githubusercontent.com/scipy/scipy/main/doc/source/_static/logo.svg" alt="SciPy Logo" width="110" height="110" align="left">
+  </a>
+</div>
 
-# SciPy: Your Go-To Library for Scientific Computing in Python
+# SciPy: The Powerhouse for Scientific Computing in Python
 
-SciPy ("Sigh Pie") is a powerful, open-source Python library offering a wide array of tools for scientific computing, empowering researchers, engineers, and scientists to tackle complex numerical problems.  ([Original Repository](https://github.com/scipy/scipy))
-
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
-[![PyPI Downloads](https://img.shields.io/pypi/dm/scipy.svg?label=Pypi%20downloads)](https://pypi.org/project/scipy/)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scipy.svg?label=Conda%20downloads)](https://anaconda.org/conda-forge/scipy)
-[![Stack Overflow](https://img.shields.io/badge/stackoverflow-Ask%20questions-blue.svg)](https://stackoverflow.com/questions/tagged/scipy)
-[![DOI](https://img.shields.io/badge/DOI-10.1038%2Fs41592--019--0686--2-blue.svg)](https://www.nature.com/articles/s41592-019-0686-2)
-
+**SciPy** is a leading open-source software library for scientific computing in Python, offering a wide array of tools for mathematics, science, and engineering. ([View on GitHub](https://github.com/scipy/scipy))
 
 ## Key Features of SciPy:
 
-*   **Comprehensive Scientific Computing:** Provides modules for a broad range of scientific and engineering tasks.
-*   **Numerical Integration and Optimization:** Includes routines for numerical integration, optimization, and root-finding.
-*   **Linear Algebra:** Offers robust linear algebra tools.
-*   **Signal and Image Processing:** Contains modules for signal and image processing.
-*   **Statistics:** Provides statistical functions and distributions.
-*   **ODE Solvers:** Features solvers for ordinary differential equations (ODEs).
-*   **Fourier Transforms:** Includes efficient Fourier transform implementations.
-*   **Built on NumPy:** Designed to work seamlessly with NumPy arrays for efficient numerical operations.
-*   **Cross-Platform Compatibility:** Runs on all major operating systems.
-*   **Free and Open Source:**  Available under a permissive license, free of charge for both commercial and non-commercial use.
+*   **Comprehensive Modules:** Provides modules for a variety of scientific and technical computing tasks.
+*   **Statistics:** Includes statistical functions and distributions.
+*   **Optimization:** Offers tools for optimization and root-finding.
+*   **Integration:** Supports numerical integration methods.
+*   **Linear Algebra:** Contains robust linear algebra routines.
+*   **Fourier Transforms:** Implements fast Fourier transforms.
+*   **Signal and Image Processing:** Features tools for signal and image manipulation.
+*   **ODE Solvers:** Provides solvers for ordinary differential equations.
+*   **User-Friendly & Efficient:** Designed to be easy to use while offering efficient numerical routines.
+*   **Works with NumPy:** Built to seamlessly integrate with NumPy arrays.
+*   **Cross-Platform:** Runs on all popular operating systems.
+*   **Free & Open Source:** Available free of charge under an open-source license.
 
-## Getting Started
+## Get Started:
 
-For installation instructions, please refer to the [SciPy install guide](https://scipy.org/install/).
+*   **Website:** [https://scipy.org](https://scipy.org)
+*   **Documentation:** [https://docs.scipy.org/doc/scipy/](https://docs.scipy.org/doc/scipy/)
+*   **Installation:** [https://scipy.org/install/](https://scipy.org/install/)
+*   **Development Documentation:** [https://scipy.github.io/devdocs/dev/index.html](https://scipy.github.io/devdocs/dev/index.html)
+*   **Development Forum:** [https://discuss.scientific-python.org/c/contributor/scipy](https://discuss.scientific-python.org/c/contributor/scipy)
+*   **Stack Overflow:** [https://stackoverflow.com/questions/tagged/scipy](https://stackoverflow.com/questions/tagged/scipy)
+*   **Citing SciPy:** [https://www.scipy.org/citing-scipy/](https://www.scipy.org/citing-scipy/)
 
-## Contributing to SciPy
+## Contribute to SciPy:
 
-We welcome contributions from the community! There are many ways to contribute, including:
+SciPy thrives on community contributions.  We welcome your help!
 
-*   **Code Contributions:**  Fix bugs, implement new features, and improve existing code. Look for "good first issue" labels to get started.
-*   **Reviewing Pull Requests:** Help ensure the quality of the code by reviewing submitted changes.
-*   **Triaging Issues:** Assist in organizing and prioritizing bug reports and feature requests.
-*   **Documentation and Tutorials:** Create tutorials, presentations, and other educational materials.
-*   **Website and Branding:** Maintain and improve the SciPy website and contribute to branding efforts.
-*   **Outreach and Community Building:** Help onboard new contributors and promote SciPy.
-*   **Fundraising:** Assist with grant proposals and other fundraising activities.
+*   **Contributing Guide:** [https://scipy.github.io/devdocs/dev/index.html](https://scipy.github.io/devdocs/dev/index.html)
+*   **Bug Reports:** [https://github.com/scipy/scipy/issues](https://github.com/scipy/scipy/issues)
+*   **Code of Conduct:** [https://docs.scipy.org/doc/scipy/dev/conduct/code_of_conduct.html](https://docs.scipy.org/doc/scipy/dev/conduct/code_of_conduct.html)
+*   **Report a Security Vulnerability:** [https://tidelift.com/docs/security](https://tidelift.com/docs/security)
 
-To learn more about contributing, see our [contributing guide](https://scipy.github.io/devdocs/dev/index.html). You can also ask questions on the [SciPy development forum](https://discuss.scientific-python.org/c/contributor/scipy) or on GitHub by commenting on relevant issues.
+**Ways to Contribute:**
+
+*   Writing code
+*   Reviewing pull requests
+*   Triaging issues
+*   Developing tutorials and educational materials
+*   Website maintenance and improvement
+*   Graphic design for brand assets
+*   Outreach and onboarding new contributors
+*   Grant proposals and fundraising
+
+If you're new to contributing, consult this [guide](https://opensource.guide/how-to-contribute/).

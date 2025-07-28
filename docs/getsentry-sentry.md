@@ -4,25 +4,41 @@
   </a>
 </p>
 
-# Sentry: Debugging Platform to Detect, Trace, and Fix Issues Faster
+# Sentry: Debugging Platform to Detect, Trace, and Fix Application Issues
 
-Sentry helps developers quickly identify, understand, and resolve application errors, improving code quality and user experience.  Learn more at the [Sentry GitHub Repository](https://github.com/getsentry/sentry).
+Sentry empowers developers to detect, diagnose, and resolve errors in their applications, ensuring smoother performance and a better user experience.
 
-## Key Features of Sentry
+## What is Sentry?
 
-*   **Error Tracking:** Real-time monitoring of application errors and exceptions.
-*   **Performance Monitoring:**  Identify and address performance bottlenecks with transaction tracing and performance insights.
-*   **Code-Level Insights:**  Detailed context including stack traces, user data, and environment information for efficient debugging.
-*   **User-Centric Error Analysis:** Understand the impact of errors on your users with user-specific context.
-*   **Replays:** See the user's exact session to understand the bug.
-*   **Integration:** Seamless integration with a wide range of languages, frameworks, and platforms.
-*   **Alerting & Notifications:** Receive instant alerts for critical issues, enabling rapid response.
-*   **Logs Management:** Collect, search, and analyze application logs to gain deeper insights into your application's behavior.
-*   **Uptime Monitoring:** Stay informed about the availability of your services and quickly address any downtime.
+Sentry is a comprehensive debugging platform designed to help developers identify and fix issues in their software quickly and efficiently.  It goes beyond simple error logging by providing detailed context and insights into the root cause of problems.
+
+**Key Features of Sentry:**
+
+*   **Error Tracking:** Automatically captures and aggregates errors from your applications.
+*   **Detailed Context:** Provides rich contextual information, including user details, environment data, and stack traces.
+*   **Performance Monitoring:**  Track application performance and identify bottlenecks.
+*   **Distributed Tracing:**  Visualize the flow of requests across microservices and identify performance issues.
+*   **Session Replay:** Record user sessions to understand how users interact with your application and reproduce issues.
+*   **Alerting & Notifications:**  Receive real-time alerts when errors occur.
+*   **Integration:** Integrates with a wide range of languages and frameworks.
+*   **Logs:** Aggregate and correlate your logs for deeper insights.
+*   **Uptime Monitoring:** Monitor the availability of your applications.
+
+<p align="center">
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/issue-details.png" width="270" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/seer.png" width="270" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/insights.png" width="270" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/traces.png" width="270" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/trace-explorer.png" width="270" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/replays.png" width="270" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/insights.png" width="270" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/logs.png" width="270" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/uptime.png" width="270" />
+</p>
 
 ## Official Sentry SDKs
 
-Sentry offers SDKs for a wide range of languages and platforms, enabling you to easily integrate error tracking and performance monitoring into your projects:
+Sentry offers SDKs for a wide variety of languages and frameworks to make it easy to integrate error tracking into your projects:
 
 *   [JavaScript](https://github.com/getsentry/sentry-javascript)
 *   [Electron](https://github.com/getsentry/sentry-electron/)
@@ -54,4 +70,6 @@ Sentry offers SDKs for a wide range of languages and platforms, enabling you to 
 *   [Contributing](https://docs.sentry.io/internal/contributing/)
 *   [Bug Tracker](https://github.com/getsentry/sentry/issues)
 *   [Code](https://github.com/getsentry/sentry)
-*   [Transifex](https://www.transifex.com/getsentry/sentry/) (Translate Sentry!)
+*   [Transifex](https://www.transifex.com/getsentry/sentry/) (Translate Sentry\!)
+
+**[Back to the Original Repository](https://github.com/getsentry/sentry)**

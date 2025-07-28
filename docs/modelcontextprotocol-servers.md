@@ -1,36 +1,34 @@
-# Securely Integrate LLMs with Tools and Data Using Model Context Protocol (MCP)
+# Model Context Protocol (MCP) Servers: Securely Connecting LLMs to Tools and Data
 
-**Unlock the potential of Large Language Models (LLMs) by giving them controlled access to tools and data sources with Model Context Protocol (MCP).** This repository provides reference implementations, community-built servers, and resources to help you get started.  Explore the [original repo](https://github.com/modelcontextprotocol/servers) for more details.
+**Unlock the power of Large Language Models by giving them secure access to tools and data with the Model Context Protocol (MCP), and explore a wide range of reference and community-built servers that showcase its versatility.** Explore the original repository: [Model Context Protocol Servers](https://github.com/modelcontextprotocol/servers).
 
-**Key Features:**
+## Key Features
 
-*   **Reference Implementations:** Explore example MCP servers to understand the protocol's capabilities.
-*   **SDK Support:** Leverage readily available SDKs in C#, Go, Java, Kotlin, Python, and TypeScript for rapid development.
-*   **Extensible Design:** Build custom servers to connect LLMs to specific tools and data.
-*   **Secure Access:** Implement configurable access controls for secure and controlled data interactions.
-*   **Community-Driven:** Benefit from a growing ecosystem of third-party and community-built servers.
+*   **Reference Implementations:** Explore example servers demonstrating key MCP features, built with official SDKs.
+*   **Community-Built Servers:** Access a growing collection of community-developed servers for diverse applications.
+*   **Official Integrations:** Discover production-ready servers maintained by industry-leading platforms.
+*   **Open-Source & Community-Driven:** Benefit from a collaborative ecosystem for building and expanding MCP capabilities.
+*   **Secure & Controlled Access:** Enable LLMs to interact safely with tools and data.
 
-## 🌟 Reference Servers
+## Reference Servers
 
-These servers demonstrate core MCP features using the official SDKs.
+These servers demonstrate core MCP functionalities using the official SDKs:
 
-*   **Everything:** A comprehensive test server with a variety of prompts, resources, and tools.
-*   **Fetch:** Efficient web content retrieval and conversion.
-*   **Filesystem:** Secure file operations with configurable access controls.
-*   **Git:**  Tools for reading, searching, and manipulating Git repositories.
-*   **Memory:** A persistent, knowledge graph-based memory system.
-*   **Sequential Thinking:** Dynamic and reflective problem-solving through thought sequences.
-*   **Time:** Time and timezone conversion capabilities.
+*   **Everything:** Reference / test server with prompts, resources, and tools
+*   **Fetch:** Web content fetching and conversion for efficient LLM usage
+*   **Filesystem:** Secure file operations with configurable access controls
+*   **Git:** Tools to read, search, and manipulate Git repositories
+*   **Memory:** Knowledge graph-based persistent memory system
+*   **Sequential Thinking:** Dynamic and reflective problem-solving through thought sequences
+*   **Time:** Time and timezone conversion capabilities
 
 ### Archived
 
-These reference servers are now archived and can be found at [servers-archived](https://github.com/modelcontextprotocol/servers-archived).
+Explore the archived reference servers: [servers-archived](https://github.com/modelcontextprotocol/servers-archived).
 
-## 🤝 Third-Party Servers
+## Official Integrations
 
-### 🎖️ Official Integrations
-
-Official integrations, maintained by companies, provide production-ready MCP servers for their platforms.
+Discover production-ready MCP servers maintained by leading platforms:
 
 *   [21st.dev Magic](https://github.com/21st-dev/magic-mcp)
 *   [ActionKit by Paragon](https://github.com/useparagon/paragon-mcp)
@@ -87,7 +85,7 @@ Official integrations, maintained by companies, provide production-ready MCP ser
 *   [BrowserStack](https://github.com/browserstack/mcp-server)
 *   [Bucket](https://github.com/bucketco/bucket-javascript-sdk/tree/main/packages/cli#model-context-protocol)
 *   [Buildkite](https://github.com/buildkite/buildkite-mcp-server)
-*   [Buildable](https://github.com/chunkydotdev/bldbl-mcp) (Typescript)
+*   [Buildable](https://github.com/chunkydotdev/bldbl-mcp)
 *   [BuiltWith](https://github.com/builtwith/mcp)
 *   [Burp Suite](https://github.com/PortSwigger/mcp-server)
 *   [Campertunity](https://github.com/campertunity/mcp-server)
@@ -220,10 +218,9 @@ Official integrations, maintained by companies, provide production-ready MCP ser
 *   [Make](https://github.com/integromat/make-mcp-server)
 *   [Mapbox](https://github.com/mapbox/mcp-server)
 *   [MariaDB](https://github.com/mariadb/mcp)
-*   [mcp-discovery](https://github.com/rust-mcp-stack/mcp-discovery)
+*   [mcp-discovery logo](https://raw.githubusercontent.com/rust-mcp-stack/mcp-discovery/refs/heads/main/docs/_media/mcp-discovery-logo.png)
 *   [MCP Toolbox for Databases](https://github.com/googleapis/genai-toolbox)
 *   [Meilisearch](https://github.com/meilisearch/meilisearch-mcp)
-*   [Memgraph](https://github.com/memgraph/mcp-memgraph)
 *   [Memgraph](https://github.com/memgraph/ai-toolkit/tree/main/integrations/mcp-memgraph)
 *   [Mercado Libre](https://mcp.mercadolibre.com/)
 *   [Mercado Pago](https://mcp.mercadopago.com/)
@@ -343,4 +340,6 @@ Official integrations, maintained by companies, provide production-ready MCP ser
 *   [Tianji](https://github.com/msgbyte/tianji/tree/master/apps/mcp-server)
 *   [TiDB](https://github.com/pingcap/pytidb)
 *   [Tinybird](https://github.com/tinybirdco/mcp-tinybird)
-*   [Tld
+*   [Tldv](https://gitlab.com/tldv/tldv-mcp-server)
+*   [Token Metrics](https://github.com/token-metrics/mcp)
+*   [Tom

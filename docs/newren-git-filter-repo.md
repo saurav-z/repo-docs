@@ -1,64 +1,91 @@
-# git-filter-repo: The Ultimate Git History Rewriting Tool
+# git-filter-repo: The Powerful Git History Rewriting Tool
 
-**git-filter-repo is the recommended tool for rewriting Git history, providing unparalleled performance and capabilities compared to alternatives.** ([Original Repo](https://github.com/newren/git-filter-repo))
+Tired of slow and error-prone history rewriting? **git-filter-repo** is a modern, high-performance alternative to `git filter-branch`, recommended by the Git project itself, offering a vast array of capabilities for rewriting Git history with ease and accuracy. [Learn more at the official repository](https://github.com/newren/git-filter-repo).
 
-## Key Features
+**Key Features:**
 
-*   **Superior Performance:** Significantly faster than `git filter-branch` for complex rewriting tasks.
-*   **Extensive Functionality:** Offers advanced features for path filtering, renaming, and more.
-*   **Safer Rewrites:** Designed to avoid common pitfalls and data corruption issues found in `git filter-branch`.
-*   **User-Friendly:** Simple command-line interface for common use cases, with comprehensive documentation and examples.
+*   **Fast and Efficient:** Significantly faster than `git filter-branch` for complex rewriting tasks.
+*   **Comprehensive:** Offers a wide range of options for path filtering, renaming, tag manipulation, and more.
+*   **Safe and Reliable:** Designed to avoid the common pitfalls and data corruption issues found in `git filter-branch`.
 *   **Extensible:**  Provides a library for creating custom history rewriting tools.
-*   **Automatic Cleanup:** Automatically removes old objects and repacks the repository after filtering.
-*   **Commit Message Rewriting:** Automatically updates commit messages to reflect new commit IDs.
-*   **Comprehensive Support:** Includes cheat sheets for converting commands from `git filter-branch` and BFG Repo Cleaner.
+*   **User-Friendly:** Simplifies complex operations with intuitive command-line arguments and clear documentation.
+*   **Rewrites Commit Messages:** Automatically updates commit messages to reflect changes.
+*   **Handles Empty Commits:** Correctly prunes commits that become empty due to filtering without losing intended versions.
+*   **Upstream Improvements:** Continuously drives improvements in core Git through the development process.
 
-## Installation
+## Table of Contents
 
-To install `git-filter-repo`, simply place the `git-filter-repo` Python script into your `$PATH`.  Refer to [INSTALL.md](INSTALL.md) for detailed installation instructions, especially for advanced usage.
+*   [Prerequisites](#prerequisites)
+*   [How do I install it?](#how-do-i-install-it)
+*   [How do I use it?](#how-do-i-use-it)
+*   [Why filter-repo instead of other alternatives?](#why-filter-repo-instead-of-other-alternatives)
+    *   [filter-branch](#filter-branch)
+    *   [BFG Repo Cleaner](#bfg-repo-cleaner)
+*   [Simple Example, with comparisons](#simple-example-with-comparisons)
+*   [Design rationale behind filter-repo](#design-rationale-behind-filter-repo)
+*   [How do I contribute?](#how-do-i-contribute)
+*   [Is there a Code of Conduct?](#is-there-a-code-of-conduct)
+*   [Upstream Improvements](#upstream-improvements)
 
-## How to Use
+## Prerequisites
 
-For detailed usage instructions:
+*   git >= 2.36.0
+*   python3 >= 3.6
 
-*   Consult the [user manual](https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html).
-*   Explore the [cheat sheets](Documentation/converting-from-filter-branch.md#cheat-sheet-conversion-of-examples-from-the-filter-branch-manpage) for example command conversions.
-*   Review the extensive [examples](https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html#EXAMPLES) in the user manual.
-*   Check the [Frequently Answered Questions](Documentation/FAQ.md) for common problems.
+## How do I install it?
 
-## Why Choose `git-filter-repo`?
+Installation is simple:
+1.  Place the `git-filter-repo` Python script into your `$PATH`.
 
-`git-filter-repo` excels as the preferred tool over `git filter-branch` and BFG Repo Cleaner. Here's why:
+See [INSTALL.md](INSTALL.md) for more advanced instructions.
 
-### `git filter-branch`
+## How do I use it?
 
-*   **Slow and Inefficient:** Significantly slower, especially for large or complex repositories.
-*   **Safety Concerns:** Prone to silent data corruption and difficult to recover from.
-*   **Difficult Usage:**  Command syntax is complex and error-prone for anything beyond simple tasks.
+*   **User Manual:** Refer to the detailed [user manual](https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html).
+*   **Cheat Sheets:**  Utilize [cheat sheets](Documentation/converting-from-filter-branch.md#cheat-sheet-conversion-of-examples-from-the-filter-branch-manpage) to convert `filter-branch` commands. Also see [cheat sheets](Documentation/converting-from-bfg-repo-cleaner.md#cheat-sheet-conversion-of-examples-from-bfg)
+*   **Examples:** Explore various examples in the [user manual examples section](https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html#EXAMPLES) and [examples based on user-filed issues](Documentation/examples-from-user-filed-issues.md).
+*   **FAQ:** Consult the [Frequently Answered Questions](Documentation/FAQ.md).
+
+## Why filter-repo instead of other alternatives?
+
+See details in the [Git Rev News article](https://git.github.io/rev_news/2019/08/21/edition-54/#an-introduction-to-git-filter-repo--written-by-elijah-newren)
+
+### filter-branch
+
+*   **Slow Performance:** Significantly slower than `git filter-repo`, especially for non-trivial repositories.
+*   **Safety Issues:** Prone to silently corrupting your rewrite efforts.
+*   **Difficult to Use:** Complicated to use for anything beyond simple rewrites.
 
 ### BFG Repo Cleaner
 
-*   **Limited Functionality:** Restricts to a limited number of rewriting scenarios.
-*   **Architectural Limitations:**  Not designed to handle a wide array of rewrite operations.
+*   **Limited Functionality:** Only handles a limited set of rewrite types.
+*   **Architecture Limitations:** Not designed for more complex rewriting scenarios.
 
-## Simple Example: Extracting a Directory
+## Simple example, with comparisons
 
-Let's say you want to extract a directory named `src/` and rename it to `my-module/` while also renaming tags:
+*   **Goal:** Extract a specific directory (`src/`) into a new module with a new prefix (`my-module-`)
+*   **git-filter-repo:**
+    ```shell
+    git filter-repo --path src/ --to-subdirectory-filter my-module --tag-rename '':'my-module-'
+    ```
 
-### Using `git-filter-repo`
+## Design rationale behind filter-repo
 
-```shell
-git filter-repo --path src/ --to-subdirectory-filter my-module --tag-rename '':'my-module-'
-```
+*   **Comprehensive Features:** Offers advanced features to address the deficiencies of existing tools.
+*   **Safer Workflow:** Encourages using a fresh clone to prevent any issues.
+*   **Extensibility:** Designed to allow users to extend its capabilities.
+*   **Commit Message Consistency:** Correctly updates commit messages after a rewrite.
+*   **Optimize Commit handling:** Correctly handle empty commits and merge commits.
+*   **Optimize for speed** High performance
 
-## Contribution
+## How do I contribute?
 
 See the [contributing guidelines](Documentation/Contributing.md).
 
-## Code of Conduct
+## Is there a Code of Conduct?
 
-The project follows the [git Code of Conduct](https://git.kernel.org/pub/scm/git/git.git/tree/CODE_OF_CONDUCT.md).
+The project adheres to the [git Code of Conduct](https://git.kernel.org/pub/scm/git/git.git/tree/CODE_OF_CONDUCT.md).
 
 ## Upstream Improvements
 
-Work on `git-filter-repo` has driven numerous improvements to fast-export and fast-import in core Git, improving performance and expanding the capabilities of core Git commands.  (See original README for a detailed list of commits.)
+filter-repo has driven numerous improvements to core Git.

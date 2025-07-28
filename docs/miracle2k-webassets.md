@@ -1,43 +1,43 @@
-# Webassets: Streamline Your Python Web Project's Assets
+# Webassets: Simplify Your Python Web Development with Powerful Asset Management
 
-**Webassets simplifies asset management in your Python web projects, making it easy to merge and compress your JavaScript and CSS files for improved performance and a better user experience.**
+**Webassets is your go-to solution for streamlining asset management in Python web projects, making it easy to merge and compress your JavaScript and CSS files for optimized performance.**
 
-[View the original repository on GitHub](https://github.com/miracle2k/webassets)
+[View the project on GitHub](https://github.com/miracle2k/webassets)
 
-## Key Features:
+## Key Features
 
-*   **Asset Merging:** Combine multiple JavaScript and CSS files into single files.
-*   **Compression:** Minify and compress your assets to reduce file sizes.
-*   **Easy Integration:** Designed for straightforward integration into your Python web development workflow.
+*   **Asset Bundling:** Efficiently merge multiple JavaScript and CSS files into single bundles.
+*   **Compression:** Minify and compress your assets (e.g., JavaScript, CSS) to reduce file sizes and improve page load times.
+*   **Flexible Integration:** Seamlessly integrates with various Python web frameworks.
 
 ## Installation
 
-To install Webassets, use pip:
+Install the development version using pip:
 
 ```bash
 pip install webassets==dev
 ```
 
+or download a tarball: [download a tarball](http://github.com/miracle2k/webassets/tarball/master#egg=webassets-dev)
+
 ## Development
 
-For development, you'll need Python requirements and potentially Java 7 (for certain filters like Google Closure).
+For development, you'll need Python and optionally Java 7 (required for certain filters like Google Closure).
 
-**Steps:**
-
-1.  **Create a virtual environment and install Python requirements:**
+1.  **Set up a virtual environment using `uv`:**
 
     ```bash
     uv venv
     uv pip install -r uv.lock
     ```
 
-2.  **Install other development requirements:**
+2.  **Install additional development requirements:**
 
     ```bash
     ./requirements-dev.sh
     ```
 
-3.  **Run the tests:**
+3.  **Run Tests:**
 
     ```bash
     ./run_tests.sh
@@ -47,4 +47,8 @@ For development, you'll need Python requirements and potentially Java 7 (for cer
 
 Comprehensive documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
 
-**Note:**  While releases are not on a strict schedule, the project is well-tested.  Check the build status icon (above) for a reassuring green to ensure stability when using the latest code.
+**Note:** Since releases are not on a fixed schedule, consider using the latest code from the repository. The build status is a good indicator of stability.
+
+## Continuous Integration
+
+[![Build Status](https://github.com/miracle2k/webassets/actions/workflows/ci.yml/badge.svg)](https://github.com/miracle2k/webassets/actions/workflows/ci.yml)

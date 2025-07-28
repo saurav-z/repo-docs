@@ -1,50 +1,40 @@
-# BookWyrm: The Social Network for Readers 📚
+# BookWyrm: A Social Network for Book Lovers
 
-BookWyrm is a decentralized social network that lets you track your reading, connect with other book lovers, and discuss your favorite stories, all while maintaining control over your data. Check out the original repository [here](https://github.com/bookwyrm-social/bookwyrm).
+BookWyrm is a decentralized social network, built for readers by readers, that lets you track your reading, connect with friends, and discover new books. Check out the original repository on GitHub: [bookwyrm-social/bookwyrm](https://github.com/bookwyrm-social/bookwyrm).
 
-[![GitHub Release](https://img.shields.io/github/release/bookwyrm-social/bookwyrm.svg?colorB=58839b)](https://github.com/bookwyrm-social/bookwyrm/releases)
+[![GitHub release (latest by date)](https://img.shields.io/github/release/bookwyrm-social/bookwyrm.svg?colorB=58839b)](https://github.com/bookwyrm-social/bookwyrm/releases)
 [![Run Python Tests](https://github.com/bookwyrm-social/bookwyrm/actions/workflows/django-tests.yml/badge.svg)](https://github.com/bookwyrm-social/bookwyrm/actions/workflows/django-tests.yml)
 [![Pylint](https://github.com/bookwyrm-social/bookwyrm/actions/workflows/pylint.yml/badge.svg)](https://github.com/bookwyrm-social/bookwyrm/actions/workflows/pylint.yml)
 
 ## Key Features
 
-*   **Social Reading:** Share reviews, discuss books, post quotes, and engage in conversations with other readers.
-*   **Reading Tracker:** Keep a record of books you've read, are currently reading, and want to read.
-*   **ActivityPub Federation:** Interact with users on other BookWyrm instances and compatible services like Mastodon, fostering a decentralized network.
-*   **Privacy and Moderation:** Control who sees your posts and manage your instance's federation with other communities.
+*   **Social Reading:** Post reviews, discuss books, and share your thoughts with other readers.
+*   **Reading Tracker:** Keep a record of what you're reading, have read, and want to read.
+*   **Federation with ActivityPub:** Interact with users on other BookWyrm instances and other ActivityPub-compliant platforms like Mastodon and Pleroma.
+*   **Decentralized Communities:** Join or create your own instance with like-minded readers, fostering a sense of community and control.
+*   **Privacy and Moderation:** Control your post visibility and choose which instances you want to federate with.
+*   **Discover New Books:** Browse a collaborative and decentralized book database.
 
 ## About BookWyrm
 
-BookWyrm is a social platform designed for readers. It allows users to track their reading progress, review books, follow friends, and discover new titles. Built on ActivityPub, BookWyrm enables federation, connecting you with diverse communities and services across the web.
+BookWyrm is designed as a social reading platform, allowing users to connect and share their love of books.  It's built on the ActivityPub protocol, enabling federation with other instances and platforms.  This approach fosters independent communities and gives users control over their social experience.
 
-## Federation: Connect with the Fediverse
+## Federation
 
-BookWyrm is built on ActivityPub, which enables:
+BookWyrm utilizes the ActivityPub protocol to enable interoperability. This allows instances to connect and share information, including book metadata, leading to a collectively built, decentralized book database.  BookWyrm users can interact with users on different BookWyrm instances and other ActivityPub services such as Mastodon.
 
-*   **Interoperability:** Communicate with users on other BookWyrm instances and ActivityPub-compatible platforms like Mastodon and Pleroma.
-*   **Community-Driven:** Join small, trusted communities, focused on specific interests or groups, fostering a sense of autonomy.
-*   **Decentralized Network:** Build a collaborative database of books and authors through shared metadata.
+For developers, more details on BookWyrm's ActivityPub implementation can be found in [`FEDERATION.md`](https://github.com/bookwyrm-social/bookwyrm/blob/main/FEDERATION.md).
 
-Developers can find more details about BookWyrm's federation implementation in [`FEDERATION.md`](https://github.com/bookwyrm-social/bookwyrm/blob/main/FEDERATION.md).
+## Tech Stack
 
-## Technology Stack
-
-*   **Web Backend:** Django, PostgreSQL, ActivityPub, Celery, Redis (for task queue and activity stream)
+*   **Web Backend:** Django, PostgreSQL, ActivityPub, Celery, Redis (task queue & activity stream)
 *   **Frontend:** Django templates, Bulma.io CSS framework, Vanilla JavaScript
-*   **Deployment:** Docker, docker-compose, Gunicorn, Flower, Nginx
+*   **Deployment:** Docker and docker-compose, Gunicorn, Flower, Nginx
 
-## Get Started with BookWyrm
+## Get Started
 
-Comprehensive setup instructions are available on the [documentation website](https://docs.joinbookwyrm.com/), including guides for [developer environments](https://docs.joinbookwyrm.com/install-dev.html) and [production setups](https://docs.joinbookwyrm.com/install-prod.html).
+Visit the [documentation website](https://docs.joinbookwyrm.com/) for instructions on setting up BookWyrm in both a [developer environment](https://docs.joinbookwyrm.com/install-dev.html) and [production](https://docs.joinbookwyrm.com/install-prod.html).
 
-## Contribute to BookWyrm
+## Contributing
 
-There are many ways to help improve and support the BookWyrm project! Learn more about how you can get involved in [CONTRIBUTING.md](https://github.com/bookwyrm-social/bookwyrm/blob/main/CONTRIBUTING.md).
-
-## Stay Connected
-
-[![Mastodon Follow](https://img.shields.io/mastodon/follow/000146121?domain=https%3A%2F%2Ftech.lgbt&style=social)](https://tech.lgbt/@bookwyrm)
-
-*   [Project Homepage](https://joinbookwyrm.com/)
-*   [Support](https://patreon.com/bookwyrm)
-*   [Documentation](https://docs.joinbookwyrm.com/)
+The BookWyrm project welcomes contributions!  Learn how you can get involved by checking out [CONTRIBUTING.md](https://github.com/bookwyrm-social/bookwyrm/blob/main/CONTRIBUTING.md).

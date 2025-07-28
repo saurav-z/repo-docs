@@ -1,4 +1,3 @@
-html
 <div align="center">
 
 <picture>
@@ -10,15 +9,34 @@ html
 
 # tinygrad: A Deep Learning Framework for Everyone
 
-tinygrad is a lightweight deep learning framework, designed to be a simpler alternative to PyTorch, perfect for those seeking a deeper understanding of neural networks. Explore the [tinygrad repository](https://github.com/tinygrad/tinygrad) for more details.
+**tinygrad is a fully-featured deep learning framework designed for simplicity, offering a streamlined approach to building and deploying neural networks.**  
 
-**Key Features:**
+[View the original repository on GitHub](https://github.com/tinygrad/tinygrad)
 
-*   **Runs LLaMA and Stable Diffusion:** Build and run complex models.
-*   **Lazy Evaluation:** Experience efficient computation through kernel fusion.
-*   **Neural Network Building:** Build, train, and optimize neural networks with ease.
-*   **Accelerated Performance:** Supports a wide range of accelerators.
-*   **Easy to Extend:** Add support for new accelerators with ~25 low-level ops.
+### Key Features:
+
+*   **Lightweight and Efficient:** Tinygrad's design prioritizes simplicity, making it easy to understand, modify, and extend.
+*   **Accelerated Performance:**  Supports a growing list of accelerators for both inference and training, including:
+    *   GPU (OpenCL)
+    *   CPU (C Code)
+    *   LLVM
+    *   METAL
+    *   CUDA
+    *   AMD
+    *   NV
+    *   QCOM
+    *   WEBGPU
+*   **Easy to Extend:**  Adding support for new accelerators is straightforward, requiring only ~25 low-level operations.
+*   **Runs Cutting-Edge Models:** Execute complex models like [LLaMA](/docs/showcase.md#llama) and [Stable Diffusion](/docs/showcase.md#stable-diffusion) with ease.
+*   **Lazy Evaluation:**  Benefit from kernel fusion through lazy evaluation for optimized performance.
+*   **Neural Network Capabilities:**  Offers the essential components for building and training neural networks, including autograd, tensor operations, optimizers, and data loaders.
+*   **Simple API:**  Provides a clean and intuitive API for defining and executing tensor computations.
+
+### Key Links:
+
+*   [Homepage](https://github.com/tinygrad/tinygrad)
+*   [Documentation](https://docs.tinygrad.org/)
+*   [Discord](https://discord.gg/ZjZadyC7PK)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/tinygrad/tinygrad)](https://github.com/tinygrad/tinygrad/stargazers)
 [![Unit Tests](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml/badge.svg)](https://github.com/tinygrad/tinygrad/actions/workflows/test.yml)
@@ -26,21 +44,9 @@ tinygrad is a lightweight deep learning framework, designed to be a simpler alte
 
 ---
 
-## What is tinygrad?
-
-tinygrad is a fully-featured deep learning framework built for simplicity and ease of use. Whether you are just starting out or are an experienced deep learning engineer, tinygrad has a lot to offer. It's designed to be the easiest framework to add new accelerators to, with support for both inference and training.
-
-## Key Advantages
-
-*   **Simplicity:** Tinygrad is built on the principle of simplicity, making it easier to understand and modify.
-*   **Flexibility:** Easily experiment with new architectures and training techniques.
-*   **Accelerated Performance:** Supports a wide range of accelerators, including GPU, CPU, LLVM, METAL, CUDA, AMD, NV, QCOM, and WEBGPU.
-
-## Getting Started
-
 ### Installation
 
-Install tinygrad from source using these commands:
+**Recommended:** Install from source:
 
 ```bash
 git clone https://github.com/tinygrad/tinygrad.git
@@ -48,15 +54,13 @@ cd tinygrad
 python3 -m pip install -e .
 ```
 
-Or, install directly from master:
+**Alternative:** Install directly from the master branch:
 
 ```bash
 python3 -m pip install git+https://github.com/tinygrad/tinygrad.git
 ```
 
-### Quick Example
-
-Here's a quick comparison to PyTorch to illustrate the framework's simplicity:
+### Example: Tensor Operations
 
 ```python
 from tinygrad import Tensor
@@ -70,12 +74,6 @@ print(x.grad.tolist())  # dz/dx
 print(y.grad.tolist())  # dz/dy
 ```
 
-## Contribute
+### Contributing
 
-Join the community and help shape the future of tinygrad! See the [Contributing](#contributing) section in the original README.
-
-## Further Resources
-
-*   [Homepage](https://github.com/tinygrad/tinygrad)
-*   [Documentation](https://docs.tinygrad.org/)
-*   [Discord](https://discord.gg/ZjZadyC7PK)
+Contributions are welcome!  Please review the [Contribution Guidelines](https://github.com/tinygrad/tinygrad#contributing) before submitting a pull request.

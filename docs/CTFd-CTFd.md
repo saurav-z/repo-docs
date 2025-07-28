@@ -1,86 +1,96 @@
 # CTFd: The Open-Source Capture The Flag Framework
 
-[![CTFd MySQL CI](https://github.com/CTFd/CTFd/workflows/CTFd%20MySQL%20CI/badge.svg?branch=master)](https://github.com/CTFd/CTFd/actions/workflows/mysql.yml)
-[![Linting](https://github.com/CTFd/CTFd/workflows/Linting/badge.svg?branch=master)](https://github.com/CTFd/CTFd/actions/workflows/linting.yml)
+**CTFd is the ultimate open-source platform for hosting Capture The Flag (CTF) competitions, designed for ease of use and customization.**
+
+[![CTFd MySQL CI](https://github.com/CTFd/CTFd/workflows/CTFd%20MySQL%20CI/badge.svg?branch=master)](https://github.com/CTFd/CTFd/workflows/CTFd%20MySQL%20CI)
+[![Linting](https://github.com/CTFd/CTFd/workflows/Linting/badge.svg?branch=master)](https://github.com/CTFd/CTFd/workflows/Linting)
 [![MajorLeagueCyber Discourse](https://img.shields.io/discourse/status?server=https%3A%2F%2Fcommunity.majorleaguecyber.org%2F)](https://community.majorleaguecyber.org/)
 [![Documentation Status](https://api.netlify.com/api/v1/badges/6d10883a-77bb-45c1-a003-22ce1284190e/deploy-status)](https://docs.ctfd.io)
 
-**CTFd is a powerful, user-friendly, and highly customizable open-source framework designed to host and manage your own Capture The Flag (CTF) competitions.**
-
-[<img src="https://github.com/CTFd/CTFd/blob/master/CTFd/themes/core/static/img/logo.png?raw=true" alt="CTFd Logo" width="150"/>](https://github.com/CTFd/CTFd)
-
 ## Key Features
 
-CTFd offers a comprehensive suite of features to create and run engaging CTF events:
+CTFd offers a robust set of features to create and manage engaging CTF events:
 
 *   **Challenge Management:**
-    *   Create challenges, categories, hints, and flags through an intuitive admin interface.
-    *   Supports dynamic scoring, unlockable challenges, and custom challenge types via a plugin architecture.
-    *   Includes static and regex-based flags, along with custom flag plugins.
-    *   Offers unlockable hints, file uploads (server or S3-compatible), and challenge attempt limits with hiding options.
+    *   Create custom challenges, categories, hints, and flags through the admin interface.
+    *   Supports dynamic scoring challenges.
+    *   Includes unlockable challenge support.
+    *   Uses a challenge plugin architecture for custom challenges.
+    *   Offers static and regex-based flags.
+    *   Supports custom flag plugins.
+    *   Provides unlockable hints.
+    *   Allows file uploads to the server or an Amazon S3-compatible backend.
+    *   Includes features to limit challenge attempts and hide challenges.
+    *   Provides automatic brute-force protection.
 *   **Competition Modes:**
     *   Supports both individual and team-based competitions.
-    *   Team management capabilities (hiding and banning).
-*   **Scoring & Leaderboards:**
-    *   Automatic tie resolution.
-    *   Ability to hide scores and freeze them at a specific time.
-    *   Scoregraphs and team progress graphs.
-*   **Content & Communication:**
-    *   Markdown content management system for creating rich challenge descriptions and announcements.
-    *   SMTP and Mailgun email support with email confirmation and password reset functionality.
+    *   Allows users to play solo or form teams.
+*   **Scoreboard & Scoring:**
+    *   Features a scoreboard with automatic tie resolution.
+    *   Allows hiding scores from the public.
+    *   Offers options to freeze scores at a specific time.
+    *   Provides scoregraphs comparing the top 10 teams and team progress graphs.
+*   **Content Management:**
+    *   Includes a Markdown content management system.
+*   **Communication & Notifications:**
+    *   Supports SMTP and Mailgun email integration.
+    *   Includes email confirmation and password reset functionality.
 *   **Competition Control:**
-    *   Automatic competition start and end times.
-*   **Customization:**
-    *   Highly customizable using the plugin and theme interfaces.
+    *   Provides automated competition start and end times.
+    *   Offers team management features (hiding and banning).
+*   **Customization & Extensibility:**
+    *   Extensive customization through [plugin](https://docs.ctfd.io/docs/plugins/overview) and [theme](https://docs.ctfd.io/docs/themes/overview) interfaces.
 *   **Data Management:**
-    *   Import and export CTF data for archiving and reuse.
-*   **And Much More:** Explore the comprehensive feature set to create compelling CTF events.
+    *   Supports importing and exporting CTF data for archiving.
 
 ## Installation
 
 1.  **Install Dependencies:** `pip install -r requirements.txt`
-2.  **Configure:** Modify `CTFd/config.ini` to customize your CTF.
-3.  **Run:** Start the server using `python serve.py` or `flask run` (debug mode).
+    *   Alternatively, use the `prepare.sh` script (requires apt) to install system dependencies.
+2.  **Configure:** Modify `CTFd/config.ini` to match your needs.
+3.  **Run:** Use `python serve.py` or `flask run` in a terminal for debug mode.
 
 **Docker:**
 
-*   **Run with Docker (Quick Start):** `docker run -p 8000:8000 -it ctfd/ctfd`
-*   **Run with Docker Compose:** `docker compose up` (from the source repository)
+*   Run the auto-generated Docker image: `docker run -p 8000:8000 -it ctfd/ctfd`
+*   Or use Docker Compose: `docker compose up` (from the source repository).
 
-For detailed deployment options and a getting started guide, consult the [CTFd documentation](https://docs.ctfd.io/).
+Refer to the [CTFd documentation](https://docs.ctfd.io/) for [deployment options](https://docs.ctfd.io/docs/deployment/installation) and the [Getting Started](https://docs.ctfd.io/tutorials/getting-started/) guide.
 
 ## Live Demo
 
-Experience CTFd firsthand: [https://demo.ctfd.io/](https://demo.ctfd.io/)
+Explore a live demo of CTFd: [https://demo.ctfd.io/](https://demo.ctfd.io/)
 
-## Support & Community
+## Support
 
-*   **Community Support:** Join the [MajorLeagueCyber Community](https://community.majorleaguecyber.org/) for basic support.
-*   **Commercial Support:** Contact us for commercial support and custom project inquiries via [CTFd website](https://ctfd.io/contact/).
-*   **Managed Hosting:** Discover managed CTFd deployments on the [CTFd website](https://ctfd.io/).
+Get help and connect with the community:
 
-## Integration with MajorLeagueCyber
+*   **Community Forum:** [MajorLeagueCyber Community](https://community.majorleaguecyber.org/)
+*   **Commercial Support:** Contact us for specialized projects: [Contact](https://ctfd.io/contact/)
 
-CTFd seamlessly integrates with [MajorLeagueCyber (MLC)](https://majorleaguecyber.org/) for enhanced event management. MLC provides:
+## Managed Hosting
 
-*   Event Scheduling
-*   Team Tracking
-*   Single Sign-On (SSO)
+Simplify your CTF setup with managed CTFd deployments: [CTFd Website](https://ctfd.io/)
 
-**Integration Steps:**
+## MajorLeagueCyber Integration
 
-1.  Register an account and create an event on MajorLeagueCyber.
-2.  Install the client ID and secret in `CTFd/config.py` or the admin panel.
+CTFd seamlessly integrates with [MajorLeagueCyber](https://majorleaguecyber.org/), a CTF stats tracker providing event scheduling, team tracking, and single sign-on.
 
-```python
-OAUTH_CLIENT_ID = None
-OAUTH_CLIENT_SECRET = None
-```
+To integrate:
+
+1.  Register an account on MajorLeagueCyber.
+2.  Create an event.
+3.  Add the client ID and client secret in `CTFd/config.py` or the admin panel:
+
+    ```python
+    OAUTH_CLIENT_ID = None
+    OAUTH_CLIENT_SECRET = None
+    ```
 
 ## Credits
 
-*   Logo by [Laura Barbera](http://www.laurabb.com/)
-*   Theme by [Christopher Thompson](https://github.com/breadchris)
-*   Notification Sound by [Terrence Martin](https://soundcloud.com/tj-martin-composer)
+*   **Logo:** [Laura Barbera](http://www.laurabb.com/)
+*   **Theme:** [Christopher Thompson](https://github.com/breadchris)
+*   **Notification Sound:** [Terrence Martin](https://soundcloud.com/tj-martin-composer)
 
-**[Visit the CTFd GitHub Repository](https://github.com/CTFd/CTFd) to get started today!**
+**[Back to the original repository](https://github.com/CTFd/CTFd)**

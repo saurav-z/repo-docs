@@ -1,36 +1,29 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif"/>
+  <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
 </p>
 
-# HelloGitHub: Discover Awesome Open Source Projects
+## Discover Awesome Open Source Projects with HelloGitHub!
 
-**HelloGitHub is your monthly guide to the most interesting and beginner-friendly open-source projects on GitHub, helping you discover the joy of open source.**
+HelloGitHub is your monthly guide to exciting and beginner-friendly open-source projects on GitHub, designed to spark your interest and help you learn the joys of open source.  Check out the original repo: [https://github.com/521xueweihan/HelloGitHub](https://github.com/521xueweihan/HelloGitHub)
 
-[![Featured｜HelloGitHub](https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt)](https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70)
-[![WeiXin](https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square)](https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png)
-[![GitHub stars](https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square)](https://github.com/521xueweihan/HelloGitHub/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square)](https://github.com/521xueweihan/HelloGitHub/issues)
-[![Sina Weibo](https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square)](https://weibo.com/hellogithub)
+### Key Features
 
-## What is HelloGitHub?
+*   **Monthly Updates:**  Stay up-to-date with the latest, most interesting open-source projects.  New issues are released around the 28th of each month.
+*   **Curated Content:**  Discover a hand-picked selection of:
+    *   Interesting and beginner-friendly open-source projects.
+    *   Useful open-source books.
+    *   Practical projects for hands-on learning.
+    *   Enterprise-level project examples.
+*   **Easy to Get Started:**  Quickly experience the appeal of open source and begin contributing.
 
-HelloGitHub is a curated collection of **interesting and beginner-friendly open-source projects** available on GitHub. Updated monthly (on the 28th), it's designed to help you quickly discover the charm of open source and fall in love with it!
+### Explore the Latest Issues
 
-## Key Features:
-
-*   **Curated Content:** Find hand-picked open-source projects across various categories.
-*   **Beginner-Friendly:** Projects are selected to be easy to understand and get started with.
-*   **Monthly Updates:**  New projects are released every month, keeping you informed of the latest trends.
-*   **Diverse Content:** Includes interesting projects, open-source books, practical projects, and enterprise-level projects.
-*   **Community Driven:** Contribute by recommending or self-recommending your own project!
-
-## Content Overview
-
-For a better reading experience, visit the [official website](https://hellogithub.com/) or the [HelloGitHub WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
+Get a better reading experience on the [official website](https://hellogithub.com/) or the [HelloGitHub WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
-| [Issue 111](/content/HelloGitHub111.md) |
+| [Issue 112](/content/HelloGitHub112.md) | [Issue 111](/content/HelloGitHub111.md) |
 | [Issue 110](/content/HelloGitHub110.md) | [Issue 109](/content/HelloGitHub109.md) | [Issue 108](/content/HelloGitHub108.md) | [Issue 107](/content/HelloGitHub107.md) | [Issue 106](/content/HelloGitHub106.md) |
 | [Issue 105](/content/HelloGitHub105.md) | [Issue 104](/content/HelloGitHub104.md) | [Issue 103](/content/HelloGitHub103.md) | [Issue 102](/content/HelloGitHub102.md) | [Issue 101](/content/HelloGitHub101.md) |
 | [Issue 100](/content/HelloGitHub100.md) | [Issue 99](/content/HelloGitHub99.md) | [Issue 98](/content/HelloGitHub98.md) | [Issue 97](/content/HelloGitHub97.md) | [Issue 96](/content/HelloGitHub96.md) |
@@ -39,18 +32,18 @@ For a better reading experience, visit the [official website](https://hellogithu
 | [Issue 85](/content/HelloGitHub85.md) | [Issue 84](/content/HelloGitHub84.md) | [Issue 83](/content/HelloGitHub83.md) | [Issue 82](/content/HelloGitHub82.md) | [Issue 81](/content/HelloGitHub81.md) |
 | [Issue 80](/content/HelloGitHub80.md) | [Issue 79](/content/HelloGitHub79.md) | [Issue 78](/content/HelloGitHub78.md) | [Issue 77](/content/HelloGitHub77.md) | [Issue 76](/content/HelloGitHub76.md) |
 
-## How to Contribute
+### Contribute
 
-We welcome contributions!  [Recommend or self-recommend](https://hellogithub.com/periodical) projects to be featured in **HelloGitHub**.  Learn how to become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
+Welcome to [recommend or self-recommend](https://hellogithub.com/periodical) projects to be featured in **HelloGitHub** by becoming a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md)!
 
-## Sponsors
+### Sponsors
 
-<!-- Sponsorship table -->
 <table>
   <thead>
     <tr>
       <th align="center" style="width: 80px;">
-        <a href="https://www.compshare.cn/?utm_term=logo&utm_campaign=hellogithub&utm_source=otherdsp&utm_medium=display&ytag=logo_hellogithub_otherdsp_display">          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/ucloud.png" width="60px"><br>
+        <a href="https://www.compshare.cn/?utm_term=logo&utm_campaign=hellogithub&utm_source=otherdsp&utm_medium=display&ytag=logo_hellogithub_otherdsp_display">
+          <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/ucloud.png" width="60px"><br>
           <sub>UCloud</sub><br>
           <sub>超值的GPU云服务</sub>
         </a>
@@ -80,22 +73,20 @@ We welcome contributions!  [Recommend or self-recommend](https://hellogithub.com
   </thead>
 </table>
 
-## License
+### Licensing
 
-[![License](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)  This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh).  Contact me at <a href="mailto:595666367@qq.com">595666367@qq.com</a>
-
-[Go to the original repository](https://github.com/521xueweihan/HelloGitHub)
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact [595666367@qq.com](mailto:595666367@qq.com).
 ```
-Key improvements and SEO optimizations:
+Key improvements and SEO considerations:
 
-*   **Clear, Concise Headline:**  "HelloGitHub: Discover Awesome Open Source Projects" provides a clear and keyword-rich title.
-*   **One-Sentence Hook:** The opening sentence immediately explains the project's value.
-*   **Keyword Optimization:** Uses terms like "open source projects," "beginner-friendly," and "GitHub" to improve search visibility.
-*   **Bulleted Key Features:**  Easy to scan and highlights the main benefits.
-*   **Clear Section Headings:**  Uses headings to organize information.
-*   **Call to Action:** Encourages contribution.
-*   **Includes Links:** Provides links to the original repository and other relevant resources.
-*   **Formatted Text:**  Uses markdown for readability, and the table for past issues.
-*   **Updated Badges:** The badges provided are included.
-*   **License included:** The licensing information is included.
-*   **Sponsors table included:** The original information is included.
+*   **Concise Hook:**  The opening sentence immediately grabs the reader's attention and clearly states the project's purpose.
+*   **Clear Headings:**  Uses descriptive headings (Key Features, Explore the Latest Issues, Contribute, Sponsors, Licensing) to improve readability and SEO structure.
+*   **Bulleted Key Features:** Makes the core benefits of HelloGitHub easily scannable and highlights keywords.
+*   **Keyword Optimization:**  Includes relevant keywords like "open source," "GitHub," "projects," "beginner-friendly," and "monthly."
+*   **Internal Linking:** Includes the original repository link.
+*   **External Link Optimization:** Uses descriptive link text.
+*   **Concise Language:** The text is streamlined and avoids unnecessary words.
+*   **Mobile-Friendly:**  The markdown formatting is inherently mobile-friendly.
+*   **Alt Text:** Adds alt text to images for accessibility.
+*   **Simplified Structure:** Makes it easier for search engines to crawl and index the content.
+*   **Focus on Value:** The content focuses on what the project offers to users.

@@ -1,33 +1,29 @@
-# Newton: Accelerate Your Robotics Simulations with GPU-Powered Physics
+# Newton: GPU-Accelerated Physics Simulation for Robotics
 
-Harness the power of GPU acceleration and differentiability to revolutionize your robotics research with Newton, a cutting-edge physics simulation engine. [Visit the original repository](https://github.com/newton-physics/newton) for more details.
+**Accelerate your robotics research with Newton, a cutting-edge, GPU-powered physics simulation engine.**  ([View the original repository](https://github.com/newton-physics/newton))
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/newton-physics/newton/main)
 [![codecov](https://codecov.io/gh/newton-physics/newton/graph/badge.svg?token=V6ZXNPAWVG)](https://codecov.io/gh/newton-physics/newton)
 [![Push Events - AWS GPU Tests](https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml/badge.svg)](https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml)
 
-**⚠️ Important: Pre-release Software ⚠️**
-
-Newton is currently in active alpha development. Expect frequent changes and potential breaking updates.
+**⚠️ Important Note: This is prerelease software in active alpha development. The API is subject to change.**
 
 ## Key Features
 
-*   **GPU-Accelerated Physics:** Leverage the power of NVIDIA GPUs for significantly faster simulation speeds.
-*   **Differentiable Simulation:** Enables gradient-based optimization and control for advanced robotics applications.
-*   **Extensible Design:** Built for customizability and easy integration with user-defined components.
-*   **MuJoCo Integration:** Uses [MuJoCo Warp](https://github.com/google-deepmind/mujoco_warp) as a primary backend.
-*   **Robotics-Focused:** Specifically designed for roboticists and simulation researchers.
-*   **Built on NVIDIA Warp:** Leverages the robust foundation of [NVIDIA Warp](https://github.com/NVIDIA/warp).
-*   **Maintained by Leading Experts:** Developed and maintained by Disney Research, Google DeepMind, and NVIDIA.
+Newton empowers robotics researchers with:
 
-## Use Cases
+*   **GPU Acceleration:** Leverages the power of NVIDIA GPUs for significantly faster simulations.
+*   **Differentiability:** Supports gradient calculations, enabling optimization and learning tasks.
+*   **Extensibility:** Designed for user-defined customizations and integrations.
+*   **Built on NVIDIA Warp:** Extends and enhances the capabilities of NVIDIA Warp's simulation module.
+*   **MuJoCo Warp Integration:** Integrates MuJoCo Warp as a primary backend for realistic physics.
+*   **Scalable Simulation:** Facilitates rapid iteration and handles large-scale robotics simulations efficiently.
 
-*   Robotics Simulation and Control
-*   Reinforcement Learning for Robotics
-*   Rapid Prototyping of Robotic Systems
-*   Research in Physics-Based Simulation
+##  What is Newton?
+
+Newton is a physics simulation engine built on [NVIDIA Warp](https://github.com/NVIDIA/warp), specifically targeting roboticists and simulation researchers. It is developed by [Disney Research](https://www.disneyresearch.com/), [Google DeepMind](https://deepmind.google/), and [NVIDIA](https://www.nvidia.com/). Newton is focused on GPU-based computation, differentiability, and user-defined extensibility, facilitating rapid iteration and scalable robotics simulation.
 
 ## Development
 
-Get started with Newton by following the [development guide](https://newton-physics.github.io/newton/development-guide.html) for setup instructions and contributions.
+For instructions on how to get started, please see the [development guide](https://newton-physics.github.io/newton/development-guide.html).

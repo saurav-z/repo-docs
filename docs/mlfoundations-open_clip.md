@@ -1,38 +1,63 @@
-# OpenCLIP: Open Source Implementation of CLIP for Image-Text Understanding
+# OpenCLIP: Open Source Implementation of CLIP
 
-**OpenCLIP is a powerful, open-source framework for training and utilizing Contrastive Language-Image Pre-training (CLIP) models, enabling a wide range of image-text applications.**  [Explore the original repository on GitHub](https://github.com/mlfoundations/open_clip).
+**Unlock the power of visual understanding with OpenCLIP, an open-source implementation of OpenAI's CLIP, enabling groundbreaking image-text learning.**
 
-*   **Key Features:**
-    *   **Reproducible Scaling Laws:** Provides models and research on the scaling properties of CLIP models.
-    *   **Pre-trained Models:** Access to a diverse collection of pre-trained models trained on various datasets, including LAION-400M, LAION-2B, and DataComp-1B.
-    *   **Model Flexibility:** Support for various model architectures and configurations, including ConvNext, ViT, and more.
-    *   **Zero-Shot Capabilities:** Enables zero-shot image classification and other tasks.
-    *   **Easy to Use:** Simple model interface for instantiating and utilizing pre-trained models.
-    *   **Fine-tuning Support:**  Provides guidance and resources for fine-tuning models on downstream tasks.
-    *   **Training Framework:** Comprehensive training scripts for CLIP models, with support for multi-GPU training, distributed training, and various data sources.
-    *   **CoCa Support:** Enables training and generation for CoCa models
-    *   **Int8 Support:** Offers int8 training and inference for certain architectures.
+[[Paper]](https://arxiv.org/abs/2212.07143) [[Citations]](#citing) [[Clip Colab]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb) [[Coca Colab]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb)
+[![pypi](https://img.shields.io/pypi/v/open_clip_torch.svg)](https://pypi.python.org/pypi/open_clip_torch)
 
-*   **Pretrained Model Highlights:**
+OpenCLIP provides a robust and accessible framework for contrastive language-image pre-training (CLIP).  This repository offers:
 
-    | Model          | Training Data | Resolution | ImageNet Zero-Shot Accuracy |
-    | -------------- | ------------- | ---------- | ---------------------------- |
-    | ConvNext-Base  | LAION-2B      | 256px      | 71.5%                       |
-    | ConvNext-Large | LAION-2B      | 320px      | 76.9%                       |
-    | ViT-B-32       | DataComp-1B   | 256px      | 72.8%                       |
-    | ViT-L-14       | LAION-2B      | 224px      | 75.3%                       |
-    | ViT-H-14       | LAION-2B      | 224px      | 78.0%                       |
-    | ViT-bigG-14    | LAION-2B      | 224px      | 80.1%                       |
-    | PE-Core-bigG-14-448 | MetaCLIP-5.4B | 448px      | 85.4%                       |
-   ... many other top performing models available.
+*   **Pre-trained Models:** Access a diverse collection of models trained on various datasets, including LAION-400M, LAION-2B, and DataComp-1B.
+*   **Reproducible Research:**  Leverage models and scaling properties studied in detail in the paper "Reproducible scaling laws for contrastive language-image learning" ([https://arxiv.org/abs/2212.07143](https://arxiv.org/abs/2212.07143)).
+*   **Easy-to-Use API:**  A simple interface for creating and utilizing both pre-trained and untrained models.
+*   **Fine-tuning Support:**  Utilize the code for fine-tuning trained zero-shot models on downstream classification tasks.
+*   **Multi-GPU Training:**  Efficient distributed training solutions with native support for SLURM clusters.
+*   **Model Distillation:**  Distill knowledge from pre-trained models to improve performance and efficiency.
 
-*   **Installation:**
+Here's a glimpse of some top-performing models:
+
+| Model             | Training Data | Resolution | # of Samples Seen | ImageNet Zero-shot Acc. |
+|-------------------|---------------|------------|--------------------|-------------------------|
+| ConvNext-Base     | LAION-2B      | 256px      | 13B                | 71.5%                   |
+| ConvNext-Large    | LAION-2B      | 320px      | 29B                | 76.9%                   |
+| ConvNext-XXLarge  | LAION-2B      | 256px      | 34B                | 79.5%                   |
+| ViT-B-32-256      | DataComp-1B   | 256px      | 34B                | 72.8%                   |
+| ViT-B-16          | DataComp-1B   | 224px      | 13B                | 73.5%                   |
+| ViT-L-14          | LAION-2B      | 224px      | 32B                | 75.3%                   |
+| ViT-H-14          | LAION-2B      | 224px      | 32B                | 78.0%                   |
+| ViT-L-14          | DataComp-1B   | 224px      | 13B                | 79.2%                   |
+| ViT-bigG-14       | LAION-2B      | 224px      | 34B                | 80.1%                   |
+| ViT-L-14-quickgelu (Original CLIP) | WIT | 224px | 13B | 75.5% |
+| ViT-SO400M-14-SigLIP [(SigLIP)](https://arxiv.org/abs/2303.15343) | WebLI | 224px | 45B | 82.0% |
+| ViT-L-14 [(DFN)](https://arxiv.org/abs/2309.17425) | DFN-2B | 224px | 39B | 82.2% |
+| ViT-L-16-256 [(SigLIP2)](https://arxiv.org/abs/2502.14786) |  WebLI (multi-lang) | 256px | 40B | 82.5% |
+| ViT-SO400M-14-SigLIP-384 [(SigLIP)](https://arxiv.org/abs/2303.15343) |  WebLI | 384px | 45B | 83.1% |
+| ViT-H-14-quickgelu [(DFN)](https://arxiv.org/abs/2309.17425) | DFN-5B | 224px | 39B | 83.4% |
+| PE-Core-L-14-336 [(PE)](https://arxiv.org/abs/2504.13181) | MetaCLIP-5.4B | 336px | 58B | 83.5% |
+| ViT-SO400M-16-SigLIP2-384 [(SigLIP2)](https://arxiv.org/abs/2502.14786) |  WebLI (multi-lang) | 384px | 40B | 84.1% |
+| ViT-H-14-378-quickgelu [(DFN)](https://arxiv.org/abs/2309.17425) | DFN-5B | 378px | 44B | 84.4% |
+| ViT-gopt-16-SigLIP2-384 [(SigLIP2)](https://arxiv.org/abs/2502.14786) | WebLI (multi-lang) | 384px | 40B | 85.0% |
+| PE-Core-bigG-14-448 [(PE)](https://arxiv.org/abs/2504.13181) | MetaCLIP-5.4B | 448px | 86B | 85.4% |
+
+Find more details about available models on the [Hugging Face Hub](https://huggingface.co/models?library=open_clip).
+
+**Get started today and explore the potential of OpenCLIP!**
+
+## Key Features
+
+*   **Pre-trained Models:** Access a variety of pre-trained CLIP models.
+*   **Model Training:** Train your own CLIP models.
+*   **Ease of Use:** Simple API for loading and using models.
+*   **Multi-GPU and Distributed Training:** Scalable training for large models.
+*   **Fine-tuning:** Fine-tune CLIP models on downstream tasks.
+*   **CoCa Support:**  Training and inference support for CoCa models.
+*   **Int8 Support:** Experimental support for int8 training and inference.
+
+## Quick Start
 
 ```bash
 pip install open_clip_torch
 ```
-
-*   **Quick Usage Example:**
 
 ```python
 import torch
@@ -40,7 +65,7 @@ from PIL import Image
 import open_clip
 
 model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32', pretrained='laion2b_s34b_b79k')
-model.eval()
+model.eval()  # model in train mode by default, impacts some models with BatchNorm or stochastic depth active
 tokenizer = open_clip.get_tokenizer('ViT-B-32')
 
 image = preprocess(Image.open("docs/CLIP.png")).unsqueeze(0)
@@ -54,18 +79,53 @@ with torch.no_grad(), torch.autocast("cuda"):
 
     text_probs = (100.0 * image_features @ text_features.T).softmax(dim=-1)
 
-print("Label probs:", text_probs)
+print("Label probs:", text_probs)  # prints: [[1., 0., 0.]]
 ```
 
-*   **Model Cards:** Model cards with details are found on the Hugging Face Hub under the OpenCLIP library tag: [https://huggingface.co/models?library=open_clip](https://huggingface.co/models?library=open_clip)
+For more in-depth instructions, see the [[Clip Colab]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb).
 
-*   **Training:**  Detailed instructions for training CLIP models are available, including multi-GPU and SLURM setups.
+## Usage
 
-*   **Fine-tuning:** To fine-tune on classification tasks, refer to the [WiSE-FT repository](https://github.com/mlfoundations/wise-ft).
+*   **Pretrained models:**  Use `open_clip.list_pretrained()` to see available models.  More details on pretrained models [here](docs/PRETRAINED.md).
+*   **Loading models:** Use `open_clip.create_model_and_transforms`. The `pretrained` argument also accepts local paths and checkpoints from Hugging Face (e.g., `/path/to/open_clip_pytorch_model.bin`).
+*   **Fine-tuning:**  Refer to [WiSE-FT](https://github.com/mlfoundations/wise-ft) for fine-tuning on classification tasks.
+*   **CoCa:** Training and inference examples are provided.  See the [[Coca Colab]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb).
+*   **Training:**  Detailed training instructions are available, including single-process, multi-GPU, SLURM, and checkpoint resuming.
 
-*   **Citing:**
-    Please consider citing the following papers if you use OpenCLIP:
+## Data
 
+*   **Data Preparation:** Recommended use of [img2dataset](https://github.com/rom1504/img2dataset) for dataset creation.
+*   **WebDataset Support:** Recommended for large-scale datasets with webdataset.
+*   **YFCC:** Information provided for the YFCC dataset.
+
+## Training CLIP
+
+*   **Installation:** Instructions for creating a virtual environment and installing dependencies.
+*   **Sample single-process running code:** Example code provided.
+*   **Multi-GPU and Beyond:**  Guidance on distributed training, including the use of SLURM.
+*   **Training Parameters:**  Details on epochs, patch dropout, multiple data sources, single-node, and multi-node.
+*   **Resuming from a checkpoint:** Command provided.
+*   **Model distillation:** Option to distill from a pre-trained model.
+*   **Gradient accumulation:** Instructions on simulating larger batches.
+*   **Int8 Support:**  Information about int8 training and inference.
+*   **Remote loading/training:** Instructions for loading and training from remote locations.
+*   **Pushing Models to Hugging Face Hub:** Instructions for pushing models to the HF Hub.
+
+## Evaluation / Zero-Shot
+
+Evaluation recommendations and examples. We recommend using [CLIP_benchmark](https://github.com/LAION-AI/CLIP_benchmark#how-to-use) for systematic evaluation on 40 datasets.
+
+## Acknowledgments
+
+Detailed acknowledgments for funding and contributions to the project.
+
+## The Team
+
+A list of the core contributors to the project.
+
+## Citing
+
+If you found this repository useful, please consider citing the project.
 ```bibtex
 @software{ilharco_gabriel_2021_5143773,
   author       = {Ilharco, Gabriel and
@@ -91,6 +151,7 @@ print("Label probs:", text_probs)
   url          = {https://doi.org/10.5281/zenodo.5143773}
 }
 ```
+and
 ```bibtex
 @inproceedings{cherti2023reproducible,
   title={Reproducible scaling laws for contrastive language-image learning},
@@ -100,6 +161,7 @@ print("Label probs:", text_probs)
   year={2023}
 }
 ```
+and
 ```bibtex
 @inproceedings{Radford2021LearningTV,
   title={Learning Transferable Visual Models From Natural Language Supervision},
@@ -108,6 +170,30 @@ print("Label probs:", text_probs)
   year={2021}
 }
 ```
+and
+```bibtex
+@inproceedings{schuhmann2022laionb,
+  title={{LAION}-5B: An open large-scale dataset for training next generation image-text models},
+  author={Christoph Schuhmann and
+          Romain Beaumont and
+          Richard Vencu and
+          Cade W Gordon and
+          Ross Wightman and
+          Mehdi Cherti and
+          Theo Coombes and
+          Aarush Katta and
+          Clayton Mullis and
+          Mitchell Wortsman and
+          Patrick Schramowski and
+          Srivatsa R Kundurthy and
+          Katherine Crowson and
+          Ludwig Schmidt and
+          Robert Kaczmarczyk and
+          Jenia Jitsev},
+  booktitle={Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  year={2022},
+  url={https://openreview.net/forum?id=M3Y74vmsMcY}
+}
+```
 
-*   **Acknowledgments:**
-    This project acknowledges funding from the Gauss Centre for Supercomputing e.V. (www.gauss-centre.eu) through the John von Neumann Institute for Computing (NIC) and the contributions of the team.
+[![DOI](https://zenodo.org/badge/390536799.svg)](https://zenodo.org/badge/latestdoi/390536799)
