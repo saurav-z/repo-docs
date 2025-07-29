@@ -1,18 +1,18 @@
-# Oppia: Interactive Learning Platform
+# Oppia: Interactive Learning Platform for All
 
-**Oppia is an open-source platform empowering anyone to create and share engaging, interactive learning experiences, like having a personal tutor.** Learn more at the [Oppia GitHub repository](https://github.com/oppia/oppia).
+**Oppia is an open-source online learning tool empowering anyone to create and share interactive educational activities, simulating a personalized tutoring experience.** ([View the original repository](https://github.com/oppia/oppia))
 
 [![Full-stack tests](https://github.com/oppia/oppia/actions/workflows/full_stack_tests.yml/badge.svg)](https://github.com/oppia/oppia/actions/workflows/full_stack_tests.yml)
 
-Oppia transforms education by providing a user-friendly tool for building and sharing interactive learning activities, known as "explorations." These explorations simulate one-on-one tutoring, allowing learners to actively participate and receive immediate feedback.
+Oppia enables educators and learners to create and access engaging, interactive learning experiences (called "explorations"). These explorations facilitate learning through active participation and immediate feedback, mirroring a one-on-one tutoring session. Oppia offers free and effective lessons in basic mathematics, with plans to expand to basic science and financial literacy, aiming to provide accessible education to those in need.
 
 **Key Features:**
 
-*   **Interactive Learning:** Creates engaging explorations that simulate a tutor's guidance.
-*   **Open-Source:** Benefit from a community-driven platform that's free and accessible.
-*   **Accessibility:** Provides educational resources, including lessons on mathematics, for learners with limited access to resources.
-*   **Versatile:**  Suitable for educators, content creators, and anyone wanting to share knowledge.
-*   **Expanding Content:** Actively developing lessons in mathematics, science, and financial literacy.
+*   **Interactive Learning:**  Explorations provide an engaging learning experience through active participation.
+*   **Personalized Feedback:** Students receive immediate feedback, mimicking a tutor's interaction.
+*   **Open-Source Platform:**  Built by the community, for the community.
+*   **Expanding Educational Content:** Offers lessons in mathematics, with expansion plans for science and financial literacy.
+*   **Accessible Education:**  Aimed at providing educational resources to those with limited access.
 
 <p align="center">
   <a href="http://www.youtube.com/watch?v=Ntcw0H0hwPU" target="_blank" rel="noopener">
@@ -22,25 +22,26 @@ Oppia transforms education by providing a user-friendly tool for building and sh
 
 ## Installation
 
-Detailed installation instructions are available on the [Installing Oppia page](https://github.com/oppia/oppia/wiki/Installing-Oppia).
+Detailed installation instructions can be found on the [Installing Oppia page](https://github.com/oppia/oppia/wiki/Installing-Oppia).
 
 ## Contributing
 
-The Oppia project thrives on community contributions.  We encourage everyone to participate!
+Join the Oppia community and contribute to its development! We welcome contributions in various areas.
 
-*   **Developers:**  Refer to [this wiki page](https://github.com/oppia/oppia/wiki/Contributing-code-to-Oppia#setting-things-up) for setup and contribution guidelines.
-*   **All Contributors:**  Consult our [general contributor guidelines](https://github.com/oppia/oppia/wiki) for more details.
-*   **Donations:**  Support our work by donating [here](https://www.oppia.org/donate).
+*   **Developers:** See the [wiki page](https://github.com/oppia/oppia/wiki/Contributing-code-to-Oppia#setting-things-up) for setting up and committing changes.
+*   **All Contributors:** Refer to our [general contributor guidelines](https://github.com/oppia/oppia/wiki).
+
+Support the Oppia project by donating [here](https://www.oppia.org/donate).
 
 ## Support
 
-Report feature requests and bug reports on our [issue tracker](https://github.com/oppia/oppia/issues/new/choose).  For security issues, please contact admin@oppia.org directly.
+Report feature requests or bug reports using our [issue tracker](https://github.com/oppia/oppia/issues/new/choose). For security issues, please contact admin@oppia.org.
 
 ## License
 
-The Oppia code is released under the [Apache v2 license](https://github.com/oppia/oppia/blob/develop/LICENSE).
+Oppia is released under the [Apache v2 license](https://github.com/oppia/oppia/blob/develop/LICENSE).
 
-## Stay Connected
+## Staying Connected
 
 *   [Discussion forum](https://github.com/oppia/oppia/discussions)
 *   [Announcements mailing list](http://groups.google.com/group/oppia-announce)

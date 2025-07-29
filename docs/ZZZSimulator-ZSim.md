@@ -1,85 +1,80 @@
-# ZSim: Ultimate Damage Calculator for Zenless Zone Zero
+# ZSim: Damage Calculator for Zenless Zone Zero - Optimize Your Team's Performance
 
-Calculate and visualize team damage in Zenless Zone Zero effortlessly with ZSim, a powerful and automatic damage calculator.  [View the project on GitHub](https://github.com/ZZZSimulator/ZSim).
+**Tired of guesswork? ZSim automatically calculates and visualizes your team's damage output in Zenless Zone Zero, giving you the edge you need to dominate the battlefield.**
 
-![ZSim Screenshot](docs/img/zsim成图.svg)
-![ZSim Logo](docs/img/横板logo成图.png)
+[View the original repository on GitHub](https://github.com/ZZZSimulator/ZSim)
 
 ## Key Features
 
-*   **Automatic Damage Calculation:**  Automatically simulates team actions based on Action Priority Lists (APL) for accurate damage output prediction.
-*   **User-Friendly Interface:** Easily configure agent equipment and select appropriate APLs.
-*   **Visualized Results:** Generates informative charts and tables to analyze team damage, including detailed breakdowns per character.
-*   **Equipment Customization:** Allows you to edit and optimize agents' equipment for maximum performance.
-*   **APL Customization:**  Edit APL code to tailor team strategies.
+*   **Automated Damage Calculation:**  Simulates combat scenarios and calculates total damage output based on your team's composition and equipment.
+*   **Visualized Results:** Generates clear charts and tables to present detailed damage information for each character, making analysis easy.
+*   **Equipment Customization:**  Easily edit your agents' equipment to fine-tune your team's build.
+*   **Action Priority List (APL) Editing:** Customize the APL to simulate various gameplay strategies.
+*   **User-Friendly Interface:** Intuitive interface simplifies the process of calculating and analyzing damage.
 
 ## Installation
 
-### Prerequisites: Install UV (if you haven't already)
+ZSim utilizes `uv` for package management.  Follow these steps to get started:
 
-ZSim relies on the `uv` package manager.  Choose your operating system below:
+### Install UV (if you haven't already)
 
-**macOS or Linux:**
+Choose the appropriate installation method for your operating system:
 
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+*   **macOS or Linux:**
 
-**Windows 11 (24H2 or later):**
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
 
-```bash
-winget install --id=astral-sh.uv  -e
-```
+*   **Windows 11 (24H2 or later):**
 
-**Older Windows Versions:**
+    ```bash
+    winget install --id=astral-sh.uv  -e
+    ```
 
-```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
+*   **Older Windows versions:**
 
-**Using pip:**
+    ```powershell
+    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
 
-```bash
-pip install uv
-```
+*   **Alternative: Using pip**
 
-For detailed `uv` installation instructions, refer to the official documentation: [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)
+    ```bash
+    pip install uv
+    ```
 
-### Install ZSim
+    Or check the official installation guide: [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)
 
-1.  **Navigate to the Project Directory:** Open a terminal and change directory to the location where you cloned or downloaded the ZSim project.
-2.  **Create and Activate a Virtual Environment:**
+### Install ZZZ-Simulator
+
+1.  Navigate to the project directory in your terminal.
+2.  Create a virtual environment and install the package:
 
     ```bash
     uv venv
-    ```
-
-3.  **Install ZSim:**
-
-    ```bash
-    uv pip install .  # The '.' refers to the current directory
+    uv pip install .  # The '.' refers to the relative path
     ```
 
 ## Running ZSim
 
-**After installation:**
+After installation, you can run ZSim from any terminal:
 
 ```bash
 zsim run
 ```
 
-**Without Installation (Run Directly):**
+Alternatively, you can run it directly without installation:
 
 ```bash
 uv run ./zsim/run.py run
 ```
 
-**Alternative (Run Directly):**
-
 ```bash
+# or also:
 uv run zsim run
 ```
 
-## Contributing
+## Future Development
 
-For more information on contributing, see the [develop guide](https://github.com/ZZZSimulator/ZSim/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97-Develop-Guide).
+For more details on planned features and how you can contribute, see the [Develop Guide](https://github.com/ZZZSimulator/ZSim/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97-Develop-Guide).

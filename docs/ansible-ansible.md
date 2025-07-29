@@ -9,67 +9,61 @@
 
 # Ansible: Radically Simple IT Automation
 
-Ansible is a powerful open-source automation engine that simplifies IT tasks.  From configuration management to application deployment and cloud provisioning, Ansible streamlines your infrastructure management.
+Ansible is a powerful, open-source IT automation engine that simplifies configuration management, application deployment, cloud provisioning, and more.  Learn more and contribute to the project at the [Ansible GitHub repository](https://github.com/ansible/ansible).
 
-**[Explore the original Ansible repository on GitHub](https://github.com/ansible/ansible)**
+## Key Features & Benefits
 
-## Key Features
+*   **Agentless:** Leverages SSH for communication, eliminating the need for agents and reducing complexity.
+*   **Simple Setup:**  Easy to install and learn, with a minimal learning curve for rapid adoption.
+*   **Parallel Execution:** Manages machines quickly and efficiently in parallel, saving time.
+*   **Human-Readable:** Describes infrastructure using a simple, human-friendly language (YAML).
+*   **Security Focused:** Emphasizes security and provides easy auditability and content review.
+*   **Idempotent:**  Ensures that operations are performed only when necessary, avoiding unintended changes.
+*   **Extensible:** Allows module development in any dynamic language, expanding its capabilities.
+*   **Multi-Node Orchestration:** Simplifies complex changes such as zero-downtime rolling updates.
+*   **Cloud Provisioning:** Automates infrastructure setup across various cloud providers.
 
-*   **Agentless Architecture:** Operates over SSH, eliminating the need for agents on managed nodes.
-*   **Configuration Management:** Automates the configuration of systems and applications.
-*   **Application Deployment:** Simplifies the deployment of applications across multiple environments.
-*   **Cloud Provisioning:** Provisions cloud resources in an automated and efficient manner.
-*   **Orchestration:** Manages multi-tier application deployments and complex workflows.
-*   **Human-Readable Automation:** Uses YAML to describe automation tasks, making them easy to understand and maintain.
-*   **Parallel Execution:** Executes tasks in parallel across multiple machines for speed.
-*   **Extensible:** Supports module development in any dynamic language.
-*   **Security Focused:** Designed with security best practices in mind, emphasizing auditability and control.
+## Getting Started with Ansible
 
-## Getting Started
+### Installation
 
-You can install Ansible using `pip` or your system's package manager.  Refer to the [installation guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) for detailed instructions.
+Install a released version of Ansible using `pip` or your system's package manager.
 
-Power users and developers can run the `devel` branch, which has the latest features and fixes.  Be aware that the `devel` branch may have breaking changes.
+*   Refer to the [Ansible installation guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) for detailed instructions.
 
-## Community and Support
+### Community & Support
 
-Join the Ansible community to ask questions, get help, and connect with other users.
+*   **Community Forum:**  Ask questions, get help, and interact with the community on the [Ansible forum](https://forum.ansible.com/c/help/6).
+    *   Filter and subscribe to posts using tags like: `ansible`, `ansible-core`, and `playbook`.
+*   **Social Spaces:** Connect with other Ansible enthusiasts in the [Social Spaces](https://forum.ansible.com/c/chat/4).
+*   **News & Announcements:** Stay up-to-date with project-wide announcements in the [News & Announcements](https://forum.ansible.com/c/news/5) section.
+*   **Newsletter:** Get release announcements and important updates by subscribing to the [Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn).
 
-*   **Forums:** Ask questions and find answers on the [Ansible Forum](https://forum.ansible.com/c/help/6).
-*   **Social Spaces:** Interact with fellow enthusiasts in [Social Spaces](https://forum.ansible.com/c/chat/4).
-*   **News & Announcements:** Stay up-to-date with the latest news on the [News & Announcements](https://forum.ansible.com/c/news/5).
-*   **Bullhorn Newsletter:** Get release announcements and important changes via the [Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn).
-*   **Communication:** Find more ways to get in touch with the Ansible community via [Communicating with the Ansible community](https://docs.ansible.com/ansible/devel/community/communication.html).
+### Contributing
 
-## Contributing
+Contribute to Ansible and help improve the project!
 
-Contribute to Ansible and help improve the project.
+*   Review the [Contributor's Guide](./.github/CONTRIBUTING.md).
+*   Explore [Community Information](https://docs.ansible.com/ansible/devel/community) for various contribution opportunities, including submitting bug reports and code.
+*   Submit proposed code updates through a pull request to the `devel` branch.
+*   Discuss significant changes beforehand to prevent duplicate efforts.
 
-*   **Contributor's Guide:** Review the [Contributor's Guide](./.github/CONTRIBUTING.md).
-*   **Community Information:** Explore ways to contribute and interact with the project via [Community Information](https://docs.ansible.com/ansible/devel/community).
-*   **Submit Code:** Submit code updates via pull requests to the `devel` branch.
-*   **Discussions:** Discuss large changes beforehand to avoid duplicate effort.
+### Development
 
-## Development Guidelines
+*   Review the [Developer Guide](https://docs.ansible.com/ansible/devel/dev_guide/) for coding guidelines.
+    *   Specifically, see [Contributing your module to Ansible](https://docs.ansible.com/ansible/devel/dev_guide/developing_modules_checklist.html)
+    *   See [Conventions, tips, and pitfalls](https://docs.ansible.com/ansible/devel/dev_guide/developing_modules_best_practices.html)
+*   Create a branch based on `devel` and set up a [dev environment](https://docs.ansible.com/ansible/devel/dev_guide/developing_modules_general.html#common-environment-setup) to open a PR.
 
-*   **Developer Guide:** Review the [Developer Guide](https://docs.ansible.com/ansible/devel/dev_guide/).
-*   **Module Development:** Reference [Contributing your module to Ansible](https://docs.ansible.com/ansible/devel/dev_guide/developing_modules_checklist.html).
-*   **Best Practices:** Consult [Conventions, tips, and pitfalls](https://docs.ansible.com/ansible/devel/dev_guide/developing_modules_best_practices.html).
+## Branch and Release Information
 
-## Branch Information
-
-*   `devel`: Development branch for the latest features.
-*   `stable-2.X`: Stable release branches.
-*   [Ansible release and maintenance](https://docs.ansible.com/ansible/devel/reference_appendices/release_and_maintenance.html) for information about active branches.
-
-## Roadmap
-
-The [Ansible Roadmap page](https://docs.ansible.com/ansible/devel/roadmap/) details the project's plans and how to influence the roadmap.
+*   The `devel` branch represents the actively developed release.
+*   `stable-2.X` branches correspond to stable releases.
+*   Consult the [Ansible release and maintenance](https://docs.ansible.com/ansible/devel/reference_appendices/release_and_maintenance.html) page for details on active branches.
+*   See the [Ansible Roadmap page](https://docs.ansible.com/ansible/devel/roadmap/) for planned features.
 
 ## Authors and License
 
-Ansible was created by [Michael DeHaan](https://github.com/mpdehaan).
-
-[Ansible](https://www.ansible.com) is sponsored by [Red Hat, Inc.](https://www.redhat.com)
-
-Licensed under the GNU General Public License v3.0 or later.  See [COPYING](COPYING) for details.
+*   **Created by:** [Michael DeHaan](https://github.com/mpdehaan).
+*   **Sponsored by:** [Red Hat, Inc.](https://www.redhat.com)
+*   **License:** GNU General Public License v3.0 or later (see [COPYING](COPYING)).

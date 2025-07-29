@@ -1,57 +1,85 @@
-# Enhanced FaaS Access Speed & Stability in China
+# Enhanced FaaS in China: Supercharge Your Website Speed and Stability 🚀
 
-**Supercharge your Cloudflare, Vercel, and Netlify websites in China with faster access speeds and improved stability by simply changing your CNAME records.** ([Original Repository](https://github.com/xingpingcn/enhanced-FaaS-in-China))
+**Optimize your Cloudflare, Vercel, and Netlify websites for lightning-fast access in China by simply changing your CNAME record.**  [Visit the original repository for more details](https://github.com/xingpingcn/enhanced-FaaS-in-China).
 
-![Stars](https://img.shields.io/github/stars/xingpingcn/enhanced-FaaS-in-China?style=flat)
-![Last Commit](https://img.shields.io/github/last-commit/xingpingcn/enhanced-FaaS-in-China?display_timestamp=author&style=flat)
+[![Stars](https://img.shields.io/github/stars/xingpingcn/enhanced-FaaS-in-China?style=flat)](https://github.com/xingpingcn/enhanced-FaaS-in-China)
+[![Last Commit](https://img.shields.io/github/last-commit/xingpingcn/enhanced-FaaS-in-China?display_timestamp=author&style=flat)](https://github.com/xingpingcn/enhanced-FaaS-in-China/commits/main)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fxingpingcn%2Fenhanced-FaaS-in-China&count_bg=%236167ED&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits-since-2024-7-8&edge_flat=false)](https://hits.seeyoufarm.com)
 
-## Key Features:
+## Key Features
 
-*   **Improved Access Speed:** Experience faster website loading times for users in China.
-*   **Enhanced Stability:** Benefit from more reliable access, reducing the likelihood of outages.
-*   **Simplified Setup:** Easy implementation by simply changing your DNS CNAME records.
-*   **Optimized for Cloudflare, Vercel, and Netlify:** Specifically tailored for popular FaaS platforms.
-*   **Dynamic IP Selection:**  The service automatically selects and uses the best-performing IPs.
+*   **Improved Access Speed:** Significantly faster loading times for your websites in China.
+*   **Enhanced Stability:** Reduce the likelihood of website access failures.
+*   **Simple Setup:** Easy implementation through CNAME record changes.
+*   **Platform Support:** Optimized for Cloudflare, Vercel, and Netlify.
+*   **Automatic IP Selection:** Continuously monitors and selects the best-performing IPs for optimal performance.
 
-## Getting Started
+## Usage
 
-This guide provides instructions on how to change your CNAME records to enhance website performance in China.
-
-**How to Use:**  Update the CNAME record of your domain (e.g., `app.domain.com`) with the appropriate value based on your hosting platform:
-
-*   **Vercel:** `vercel-cname.xingpingcn.top`
-*   **Netlify:** `netlify-cname.xingpingcn.top`
-*   **Vercel & Netlify (Combined):** `verlify-cname.xingpingcn.top`
-*   **Cloudflare:** `cf-cname.xingpingcn.top`
-
-    *   **Important for Cloudflare users:** If your domain is hosted on Cloudflare, using `cf-cname.xingpingcn.top` might result in 403 errors.  Consider transferring your domain to a different DNS provider and then removing the site from Cloudflare before using this service, or using Cloudflare's SaaS functionality.
+This project provides optimized CNAME records to improve access speed and stability for your websites hosted on Cloudflare, Vercel, and Netlify in China. Instead of using the default CNAME records provided by your hosting provider, you can use the following:
 
 > [!NOTE]
 >
-> Before changing the CNAME records, it's recommended that you first create an SSL/TLS certificate from the host.
+> Changing the CNAME record means modifying the CNAME record of the domain you wish to access (e.g., app.domain.com) in your authoritative DNS server and replacing it with the optimized CNAME record provided below.
 
-## Troubleshooting & FAQs
-
-**Q: Why is the speed not as good as the benchmark results?**
-
-*   **Testing Platform Issues:** Test with multiple speed test sites to ensure consistent results.
-*   **Domain Issues:** Free or cheap domains (e.g., `.xyz`, `.top`) might be blocked. Consider using a different domain.
-*   **Origin Server Issues:** The test results are for static web pages deployed on edge servers.
-*   **DNS Resolution Issues:** If using Cloudflare's DNS, the DNS resolution speed might be slow in China. Also, if you're using NS1.COM, you might not be able to add CNAME records to top-level domains. See [this issue](https://github.com/xingpingcn/enhanced-FaaS-in-China/issues/9#issuecomment-2379335329) for more information.
-
-**Q: Why is my website not accessible after changing the CNAME records?**
-
-*   If you are using `verlify-cname.xingpingcn.top`, make sure that you've created an SSL/TLS certificate first.
-*   If you are using `cf-cname.xingpingcn.top` and your domain is hosted on Cloudflare, you may encounter 403 errors. Consider using a different DNS provider.
-
-## Performance Comparisons
+*   **Vercel:** Change your CNAME record to `vercel-cname.xingpingcn.top`
+*   **Netlify:** Change your CNAME record to `netlify-cname.xingpingcn.top`
+*   **Vercel & Netlify (Combined):** Change your CNAME record to `verlify-cname.xingpingcn.top`
 
 > [!IMPORTANT]
-> The speed test results may not be up to date
+>
+> _Recommended DNS Resolution Procedure_:  First, set the CNAME record to the official CNAME provided by your hosting provider.  Once the SSL/TLS certificate is generated, change the CNAME record to the appropriate one above.
+
+*   **Cloudflare:** Change your CNAME record to `cf-cname.xingpingcn.top`
+
+> [!IMPORTANT]
+>
+> _DNS Resolution Recommendations for Cloudflare_:
+>
+> 1.  If your domain is hosted on Cloudflare, using this CNAME might result in 403 errors.  Consider hosting your domain on a non-Cloudflare platform, then deleting your site from Cloudflare before using this service.
+> 2.  For services like Cloudflare Workers or those that protect your VPS IP with the orange cloud, you must host your domain on Cloudflare and consider using Cloudflare's SaaS feature.  See the documentation on [how to use SaaS Functionality](docs/how2use-SaaS-for-CF/how2use-SaaS-for-CF.md).
+
+## Speed Testing
+
+> [!WARNING]
+>
+> 1.  Always use a protocol (e.g., `https://`) when testing, and test with multiple speed test websites.
+> 2.  Do not test the provided domains, as excessive testing may trigger platform rate limits.
+
+1.  Test after changing the CNAME record.
+2.  Use speed test tools.  See the included image for an example.
+
+    ![how2test](img/how2test.png)
+
+## Potential Issues
+
+1.  ~~Access from some ISPs in Zhejiang, Fujian, and Henan may fail~~ Currently, only Quanzhou seems to be blocked (similar to official CNAMEs, possibly due to ISP restrictions).  This is highly dependent on your domain.
+2.  ITdog.cn may provide inaccurate results. Consider using boce.com, cesu.net, or Alibaba's speed tests.
+
+## Why Use This?
+
+1.  **Faster Routes:**  Official anycast often routes traffic to Southeast Asia, creating network congestion, while this service utilizes less congested routes to the US or Europe.
+2.  **Improved Stability:**  While official CNAMEs can be fast, they may lack stability. This service prioritizes consistent accessibility across provinces.
+3.  **Reduced Risk of Outages:** Using optimized CNAMEs helps mitigate the risk of complete website unavailability in China.
+
+> [!NOTE]
+>
+> **Optimized speed performance**
+>
+> _Note: Currently, only Quanzhou may be blocked; Speed test results may be outdated; Speed improvements are not significant._
+>
+> ![vercel-23点晚高峰](img/vercel-2024-9-29-23utc8.png)
+> vercel-23 点晚高峰
+> ![cf-23点晚高峰](img/cf-2024-9-29-23utc8.png)
+> cf-23 点晚高峰
+
+## Speed Test Comparison
+
+> [!IMPORTANT]
+> _Note: Currently, only Quanzhou may be blocked; Speed test results may be outdated; Speed improvements are not significant._
 
 <details>
-<summary><b>Click to view speed test results</b></summary>
+<summary>Click to view results</summary>
 
 ![cf-23点晚高峰](img/cf-2024-9-29-23utc8.png)
 cf-23 点晚高峰
@@ -60,7 +88,7 @@ cf-22 点晚高峰
 ![cf-23点晚高峰-官方](img/cf-23utc8-auth.png)
 cf-23 点晚高峰-官方
 ![cf-22点晚高峰-官方](img/cf-22utc8-auth.png)
-cf-22 点晚高峰-官方
+cf-22点晚高峰-官方
 ![vercel-23点晚高峰](img/vercel-2024-9-29-23utc8.png)
 vercel-23 点晚高峰
 ![vercel-23点晚高峰-官方](img/vercel-23utc8-auth.png)
@@ -82,55 +110,91 @@ netlify 中午-官方
 
 ## How It Works
 
-This service periodically tests the speeds of IPs for Cloudflare, Vercel, and Netlify, and automatically updates the A records with the fastest and most stable IPs. Updates are performed approximately every 40 minutes.
+This project selects the best-performing IPs from Cloudflare, Vercel, and Netlify, then adds the stable and fast IPs to the A record for your domain.  It optimizes traffic for China's three major network providers and utilizes official A records for international traffic.
 
-### IP Sources
+The IP addresses are updated approximately every 40 minutes.
+
+### IP Source Details
 
 <details>
-<summary><b>Click to view</b></summary><br>
+<summary>Click to view</summary><br>
 
 *   **Vercel:**
-    *   [vercel ip](https://gist.github.com/ChenYFan/fc2bd4ec1795766f2613b52ba123c0f8)
+    *   [Vercel IP List](https://gist.github.com/ChenYFan/fc2bd4ec1795766f2613b52ba123c0f8)
     *   Official `cname.vercel-dns.com.` A records
 *   **Netlify:**
     *   Official A records
 *   **Cloudflare:**
-    *   Optimized IPs for Cloudflare paying users
+    *   Various Cloudflare paid user optimized IPs.
 *   **Default Overseas IPs:**
-    ```json
-    {
-      "VERCEL": "76.76.21.21",
-      "NETLIFY": "75.2.60.5",
-      "CF": "japan.com."
-    }
-    ```
+
+```json
+{
+  "VERCEL": "76.76.21.21",
+  "NETLIFY": "75.2.60.5",
+  "CF": "japan.com."
+}
+```
 
 </details>
 
-##  Further Information
+## Q&A
 
-*   **Q: How does this service differ from the official CNAME records?**
+**Q: Why am I not seeing the performance improvements shown in the [Speed Test Comparison](#speed-test-comparison)?**
 
-    *   The official CNAMEs may offer fast average speeds but can be unstable, with accessibility issues in certain provinces. This service prioritizes consistent performance and aims to keep response times under 1 second (with a maximum of 2 seconds), with minimal failures.
+A:
 
-*   **Q: Why isn't route-based DNS resolution accurate?**
+*   **Testing Platform Issues:**  Compare results across multiple speed test platforms.
+*   **Domain Issues:** Free subdomains (e.g., eu.org, us.kg), or inexpensive domains (e.g., .xyz, .top) may be blocked by ISPs. Changing your domain may resolve this.
+*   **Origin Server Issues:** The speed tests measure the performance of static web pages hosted on the edge servers.
+*   **DNS Resolution Issues:**
 
-    *   The route-based DNS resolution might be inaccurate. For precise route-based resolution, consider using a DNS provider like dnspod.
+    1.  Cloudflare's DNS services may be slower in mainland China.  Using a domestic DNS server may help.
+    2.  If your domain is hosted on Cloudflare or NS1.COM (which do not support CNAME records for top-level domains), see this [issue](https://github.com/xingpingcn/enhanced-FaaS-in-China/issues/9#issuecomment-2379335329).
+    3.  You can manually update A records with the IPs in the JSON files (updated every 40 minutes).
+    4.  **A major problem may be the use of Huawei Cloud DNS, which identifies domestic users as international users and may return default routes (e.g., japan.com).**
 
-*   **Q: Why are some routes (e.g., Telecom) resolving to the default IPs?**
+**Q: Why is my website inaccessible after setting up your CNAME record?**
 
-    *   Routes with poor IP quality are temporarily using the default IPs.
+A:
 
-*   **Q: Why are some routes empty in the JSON files?**
-    *   As above.
+*   This is likely related to using `verlify-cname.xingpingcn.top`.  First, set your CNAME record to the official one provided by your hosting provider and wait for the SSL certificate to generate.  Then, try setting it to `verlify-cname.xingpingcn.top` again.  This is because the provided CNAME contains IPs from multiple platforms, which can cause the platform to believe that your domain is not yours.
+*   Netlify [supports custom certificates](/netlify_cert/readme.md). If the problem persists, obtain a certificate that auto-renews.
+
+*   If your website is deployed on `cf` and using `cf-cname.xingpingcn.top` and your domain is hosted on Cloudflare, you may encounter 403 errors.  Consider hosting your domain on a non-Cloudflare platform, then deleting your site from Cloudflare before using this service.
+*   If you're only experiencing issues in speed tests, see the section on [how to test](#speed-testing).
+
+<details>
+<summary><b>Q: What's the difference between your CNAME and the official CNAME?</b></summary>
+<br>
+A:
+
+*   The official CNAME may be fast on average, but it may also be unstable, with many provinces unable to access the website or with very long response times.
+*   This CNAME may not always be the fastest, but it attempts to keep average response times under 1 second, with the longest response times ideally under 2 seconds and with no more than two provinces returning non-200 status codes.
+</details>
+<details>
+<summary><b>Q: Why is route-based resolution inaccurate?</b></summary><br>
+
+A: This project uses the built-in route resolution provided by the authoritative DNS server, which may lead to incorrect results.  For more precise route-based resolution, consider using a different DNS server (e.g., dnspod) and adding the IPs from [Netlify.json](https://raw.githubusercontent.com/xingpingcn/enhanced-FaaS-in-China/main/Netlify.json) or [Vercel.json](https://raw.githubusercontent.com/xingpingcn/enhanced-FaaS-in-China/main/Vercel.json) to your A records. Alternatively, use `NS1.COM` as your authoritative DNS server and configure route-based resolution based on `ASN`. You can also refer to my [ASN list](https://github.com/xingpingcn/china-mainland-asn).
+
+</details>
+
+<details>
+<summary><b>Q: Why does the DNS A record for some routes (e.g., Telecom) resolve to the official default IP?</b></summary><br>
+
+A: This is due to poor IP quality on those routes. The service temporarily stops resolving those routes and uses the official default IP. You can increase fault tolerance by deploying the website on both `vercel` and `netlify` and setting the CNAME to `verlify-cname.xingpingcn.top`.  The probability of failure for both platforms on the same line at the same time is very low.
+
+</details>
+<details>
+<summary><b>Q: Why are some routes in the JSON file an empty list?</b></summary><br>
+
+A: See the previous answer.
+
+</details>
 
 ## Customization
 
-If you want to add support for additional platforms like `render` or `railway`, you will need to:
-
-1.  Create a speed testing setup.
-2.  Write a `.py` file in the `platforms_to_test` directory, mimicking the structure of other files.
-3.  Modify the `config.py` file.
+If you want to add a third platform (e.g., `render`, `railway`), you'll need to prepare your own speed testing tool and a domain, rewrite `crawler.py`, create a new `.py` file in the `platforms_to_test` directory, and rewrite the `run_sub()` method as other files. Finally, modify the relevant configurations in the `config.py` file.
 
 ## Star History
 

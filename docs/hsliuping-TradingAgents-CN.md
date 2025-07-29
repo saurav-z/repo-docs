@@ -1,153 +1,105 @@
-# TradingAgents-CN: 中文金融交易决策框架 (Enhanced)
+# TradingAgents-CN: 中文金融交易决策框架
 
-> **Unlock the power of AI for Chinese financial markets!** TradingAgents-CN is a framework built upon multi-agent LLMs, optimized for Chinese users, and offering comprehensive A-share, H-share, and US stock analysis capabilities.  Explore the original project: [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents).
+基于多智能体大语言模型的中文金融交易决策框架，专为中文用户优化，提供全面的A股/港股/美股分析能力，助力您在金融市场中做出更明智的决策。
 
-## Key Features
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Version](https://img.shields.io/badge/Version-cn--0.1.12-green.svg)](./VERSION)
+[![Documentation](https://img.shields.io/badge/docs-中文文档-green.svg)](./docs/)
+[![Original](https://img.shields.io/badge/基于-TauricResearch/TradingAgents-orange.svg)](https://github.com/TauricResearch/TradingAgents)
 
-*   **🤖 Multi-LLM Provider Support:** Integrated with leading LLM providers including DashScope (Aliyun), DeepSeek V3, Google AI, and OpenRouter, offering a wide selection of over 60 AI models.
-*   **💾 Persistent Model Selection:** Stores and restores LLM configurations via URL parameters, ensuring that your model choices are saved across sessions.
-*   **🚀 Enhanced Web Interface:** Improved UI with a 320px sidebar, quick-select buttons, responsive design, and optimized memory management.
-*   **📊 Detailed Analysis & Reporting:** Generates professional reports in Markdown, Word, and PDF formats.
-*   **🇨🇳 A-Share, H-Share, US Stock Support:** Comprehensive data integration for A-shares, H-shares, and US stocks.
-*   **🐳 Docker Deployment:** Easy one-click deployment with Docker for a streamlined setup.
+**[原项目地址：TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents)**
 
-## What's New in v0.1.11
+## 🚀 核心特性
 
-*   **🤖 Expanded LLM Support:** Integration with four major LLM providers and a selection of 60+ AI models, including the latest from Claude 4 Opus, GPT-4o, Llama 4, and Gemini 2.5.
-*   **💾 Configuration Persistence:** Model selections are now saved via URL parameters and automatically restored, with detailed logging for debugging.
-*   **🎨 Improved Web Interface:** Enhancements include a 320px sidebar for better space utilization, quick-select buttons for easy model switching, and improved responsiveness.
+*   **🤖 多智能体协作**: 专业的分析师团队，协同分析市场、基本面、新闻和情绪。
+*   **📰 智能新闻分析**:  AI驱动的新闻过滤、质量评估和相关性分析。
+*   **🇨🇳 中文优化**:  全面支持A股、港股市场，以及中文LLM模型。
+*   **🌐 多LLM支持**: 集成多家LLM提供商，包括阿里云百炼、DeepSeek，OpenRouter等,  提供60+模型选择。
+*   **💾 模型选择持久化**:  通过URL参数实现模型配置持久化，方便分享。
+*   **🐳 Docker 部署**: 一键部署，环境隔离，快速启动。
+*   **📊 专业报告导出**: 支持Word/PDF/Markdown格式，生成专业的投资建议报告。
 
-## Core Features
+## ✨ 主要更新 (v0.1.12)
 
-*   **🤖 Multi-Agent Collaboration:** A team of analysts (Fundamental, Technical, News, Sentiment) and researchers (Bullish/Bearish) work together to provide expert financial analysis.
-*   **🎯 Structured Debate:** Bullish and bearish researchers conduct in-depth analysis, leading to better-informed decision-making.
-*   **💰 Intelligent Decision-Making:** Traders make final investment recommendations based on the combined analysis.
-*   **🛡️ Risk Management:** Multi-layered risk assessment and management mechanisms are in place.
+*   **🧠 智能新闻分析模块**: 全面升级，包括：
+    *   智能新闻过滤器
+    *   多层次过滤机制
+    *   新闻质量评估
+    *   统一新闻工具
 
-## Core Functionality Highlights
+## 🎯 主要功能
 
-### Web Interface
-| Feature                | Status          | Details                                                                                                   |
-| ----------------------- | --------------- | --------------------------------------------------------------------------------------------------------- |
-| **🤖 Multi-LLM Providers** | 🆕 v0.1.11       | Supports 4 providers, 60+ models, and intelligent categorization.                                       |
-| **💾 Model Persistence**  | 🆕 v0.1.11       | Stores selections in URL parameters for persistence across refreshes and easy configuration sharing.  |
-| **🎯 Quick Select Buttons**| 🆕 v0.1.11       | Easily switch between popular models.                                                                       |
-| **📐 320px Sidebar**     | 🆕 v0.1.11       | Optimized for better space utilization and improved responsiveness.                                          |
-| **📊 Real-time Progress**  | ✅ v0.1.10       | Asynchronous progress tracking, intelligent step identification, and accurate time calculation.            |
-| **💾 Session Management**  | ✅ v0.1.10       | Persistent sessions, automatic downgrading, and cross-page restoration.                                    |
-| **🎯 Report Generation**    | ✅ v0.1.10       | Generate and review analysis reports with a single click, with intelligent result recovery.                |
-| **🖥️ Streamlit Interface**| ✅ Complete Support| Modern, responsive interface with real-time interaction and data visualization.                           |
-| **⚙️ Configuration Management**| ✅ Complete Support| Web-based API key management, model selection, and parameter configuration.                             |
+*   **🤖 多智能体协作**: 市场分析、基本面分析、新闻分析、情绪分析，看涨/看跌辩论，交易决策和风险管理。
+*   **🧠 智能新闻分析**: AI驱动的新闻过滤，质量评估，相关性分析，多层次过滤机制，统一新闻工具。
+*   **📊 Web界面体验**:  现代化、响应式界面，实时交互和数据可视化。
+*   **🎨 CLI 用户体验**:  界面与日志分离、智能进度显示、时间预估功能、Rich彩色输出。
+*   **🇨🇳 中文支持**:  A股、港股、美股数据，中文界面，中文LLM模型。
+*   **🐳 Docker 部署**:  一键部署，环境隔离，快速扩展。
+*   **💾 模型选择持久化**:  基于URL参数的存储，刷新配置保持。
+*   **🚀 快速切换**:  一键切换不同AI模型。
+*   **📄 专业报告**:  多格式导出，自动生成投资建议。
+*   **🛡️ 稳定可靠**:  多层数据源，智能降级，错误恢复。
 
-### CLI Experience
-| Feature               | Status          | Details                                                                  |
-| ---------------------- | --------------- | ------------------------------------------------------------------------ |
-| **🖥️ Interface/Logs Separation** | ✅ Complete Support | Clean and beautiful user interface, with separate technical logs.            |
-| **🔄 Intelligent Progress**    | ✅ Complete Support | Multi-stage progress tracking, preventing repeated prompts.                |
-| **⏱️ Time Estimation** | ✅ Complete Support | Intelligent analysis stage, showing estimated time for completion.       |
-| **🌈 Rich Output**     | ✅ Complete Support | Color-coded progress indicators, status icons, and enhanced visual effects. |
+## 🚀 快速开始
 
-### LLM Model Support
-| Provider        | Supported Models                                              | Features                      | New Feature |
-| --------------- | ----------------------------------------------------------- | ----------------------------- | ----------- |
-| **🇨🇳 Aliyun**   | qwen-turbo/plus/max                                        | Chinese optimized, cost-effective | ✅ Integrated|
-| **🇨🇳 DeepSeek**  | deepseek-chat                                               | Tool calling, excellent value       | ✅ Integrated|
-| **🌍 Google AI**  | gemini-2.0-flash/1.5-pro                                   | Multimodal support, strong inference  | ✅ Integrated|
-| **🌐 OpenRouter** | **60+ Model Aggregation Platform**                         | One API access to all mainstream models| 🆕 Added     |
-| ├─**OpenAI**    | o4-mini-high, o3-pro, GPT-4o                                  | Latest 'o' series, Professional inference | 🆕 Added     |
-| ├─**Anthropic** | Claude 4 Opus/Sonnet/Haiku                                  | Top performance, balanced versions   | 🆕 Added     |
-| ├─**Meta**      | Llama 4 Maverick/Scout                                      | Latest Llama 4 series            | 🆕 Added     |
-| ├─**Google**    | Gemini 2.5 Pro/Flash                                       | Multimodal Professional        | 🆕 Added     |
-| └─**Custom**    | Any OpenRouter Model ID                                    | Unlimited expansion, personalized selection  | 🆕 Added     |
-
-**🎯 Quick Selection**: 5 quick buttons for popular models | **💾 Persistence**: URL parameter storage, refresh retention | **🔄 Smart Switching**: Switch providers with a single click
-
-### Data Sources & Markets
-
-| Market Type     | Data Source                   | Coverage                                |
-| --------------- | ----------------------------- | --------------------------------------- |
-| **🇨🇳 A-Shares**  | Tushare, AkShare, TongDaXin | Shanghai and Shenzhen Stock Exchanges, real-time market data, financial reports  |
-| **🇭🇰 H-Shares** | AkShare, Yahoo Finance        | Hong Kong Stock Exchange, real-time data, fundamentals    |
-| **🇺🇸 US Stocks** | FinnHub, Yahoo Finance        | NYSE, NASDAQ, real-time data             |
-| **📰 News**      | Google News                  | Real-time news, multi-language support    |
-
-### Agent Team
-
-**Analyst Team**: 📈 Market Analysis | 💰 Fundamental Analysis | 📰 News Analysis | 💬 Sentiment Analysis
-**Research Team**: 🐂 Bullish Researchers | 🐻 Bearish Researchers | 🎯 Trading Decision Maker
-**Management**: 🛡️ Risk Manager | 👔 Research Director
-
-## Quick Start
-
-### 🐳 Docker Deployment (Recommended)
+### 🐳 Docker 部署 (推荐)
 
 ```bash
-# 1. Clone the project
+# 1. 克隆项目
 git clone https://github.com/hsliuping/TradingAgents-CN.git
 cd TradingAgents-CN
 
-# 2. Configure environment variables
+# 2. 配置环境变量
 cp .env.example .env
-# Edit .env and enter your API keys
+# 编辑 .env 文件，填入API密钥
 
-# 3. Start the service
+# 3. 启动服务
 docker-compose up -d --build
 
-# 4. Access the application
-# Web interface: http://localhost:8501
+# 4. 访问应用
+# Web界面: http://localhost:8501
 ```
 
-### 💻 Local Deployment
+### 💻 本地部署
 
 ```bash
-# 1. Install dependencies
+# 1. 安装依赖
 pip install -r requirements.txt
 
-# 2. Start the application
+# 2. 启动应用
 python start_web.py
 
-# 3. Access http://localhost:8501
+# 3. 访问 http://localhost:8501
 ```
 
-### 📊 Start Analyzing
+## 📚 文档
 
-1.  **Select Model**: DeepSeek V3 / Tongyi Qianwen / Gemini
-2.  **Enter Stock Ticker**: `000001` (A-Shares) / `AAPL` (US Stocks) / `0700.HK` (H-Shares)
-3.  **Start Analysis**: Click the "🚀 Start Analysis" button
-4.  **Monitor Real-time Progress**: Observe the real-time progress and analysis steps.
-5.  **View Report**: Click the "📊 View Analysis Report" button
-6.  **Export Report**: Supports Word/PDF/Markdown formats.
+全面的中文文档，提供详细的安装指南、使用教程、API文档和常见问题解答：
 
-## 🎯 Key Advantages
+*   **[完整文档目录](docs/)**
 
-*   **🆕 Multi-LLM Integration**: v0.1.11 includes 4 providers and 60+ models for a one-stop AI experience.
-*   **💾 Configuration Persistence**: Your model selection is truly persistent, with URL-based storage.
-*   **🎯 Fast Switching**: 5 quick select buttons let you instantly switch between different AIs.
-*   **📐 Interface Optimization**: Features a 320px sidebar, responsive design, and more efficient space use.
-*   **🆕 Real-time Progress**: v0.1.10 asynchronous progress tracking, so you're never left waiting in the dark.
-*   **💾 Intelligent Session Management**: Persistent sessions, so you won't lose your analysis results after a refresh.
-*   **🇨🇳 Chinese-Optimized**: A-share/H-share data, Chinese LLMs, and a Chinese-language interface.
-*   **🐳 Containerized**: One-click Docker deployment for easy environment isolation and scalability.
-*   **📄 Professional Reports**: Multi-format export with automated investment recommendations.
-*   **🛡️ Reliable**: Multi-layer data sources, intelligent downgrading, and error recovery.
+## 🤝 贡献
 
-## 📚 Documentation and Support
+欢迎通过以下方式为项目做贡献：
 
-*   **📖 Full Documentation**: [docs/](./docs/) - Installation guides, usage tutorials, and API documentation.
-*   **🚨 Troubleshooting**: [troubleshooting/](./docs/troubleshooting/) - Solutions to common problems.
-*   **🔄 Changelog**: [CHANGELOG.md](./docs/releases/CHANGELOG.md) - Detailed version history.
-*   **🚀 Quick Start**: [QUICKSTART.md](./QUICKSTART.md) - A 5-minute quick deployment guide.
+*   提交Bug修复
+*   添加新功能
+*   完善文档
+*   提供代码优化
 
-## 🆚 Chinese-Enhanced Features
+详细的贡献流程请参考 CONTRIBUTING.md。
 
-**New features compared to the original**: Multi-LLM provider integration | Persistent model selection | Quick select buttons | 320px sidebar | Real-time progress display | Intelligent session management | Chinese interface | A-share data | Chinese LLMs | Docker deployment | Professional report export | Unified log management | Web configuration interface | Cost optimization
+## 📄 许可证
 
-**Docker Deployment Includes:**
+本项目基于 Apache 2.0 许可证开源。
 
-*   🌐 **Web Application**: TradingAgents-CN main program
-*   🗄️ **MongoDB**: Data persistence storage
-*   ⚡ **Redis**: High-speed cache
-*   📊 **MongoDB Express**: Database management interface
-*   🎛️ **Redis Commander**: Cache management interface
+## 🙏 致谢
+
+感谢 [Tauric Research](https://github.com/TauricResearch) 团队创建的 [TradingAgents](https://github.com/TauricResearch/TradingAgents) 项目!
+
+**[查看原项目](https://github.com/TauricResearch/TradingAgents)**
 
 ---
+
+**[在GitHub上给个Star吧!](https://github.com/hsliuping/TradingAgents-CN)**
