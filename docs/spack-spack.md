@@ -1,130 +1,141 @@
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/spack/spack/refs/heads/develop/share/spack/logo/spack-logo-white-text.svg" width="250">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/spack/spack/refs/heads/develop/share/spack/logo/spack-logo-text.svg" width="250">
-    <img alt="Spack" src="https://raw.githubusercontent.com/spack/spack/refs/heads/develop/share/spack/logo/spack-logo-text.svg" width="250">
-  </picture>
-  <br>
-  <br clear="all">
+<div align="left">
+
+<h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/spack/spack/refs/heads/develop/share/spack/logo/spack-logo-white-text.svg" width="250">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/spack/spack/refs/heads/develop/share/spack/logo/spack-logo-text.svg" width="250">
+  <img alt="Spack" src="https://raw.githubusercontent.com/spack/spack/refs/heads/develop/share/spack/logo/spack-logo-text.svg" width="250">
+</picture>
+
+</h2>
+
+<a href="https://github.com/spack/spack/actions/workflows/ci.yml"><img src="https://github.com/spack/spack/workflows/ci/badge.svg" alt="CI Status"></a>
+<a href="https://github.com/spack/spack/actions/workflows/bootstrapping.yml"><img src="https://github.com/spack/spack/actions/workflows/bootstrap.yml/badge.svg" alt="Bootstrap Status"></a>
+<a href="https://github.com/spack/spack/actions/workflows/build-containers.yml"><img src="https://github.com/spack/spack/actions/workflows/build-containers.yml/badge.svg" alt="Containers Status"></a>
+<a href="https://spack.readthedocs.io"><img src="https://readthedocs.org/projects/spack/badge/?version=latest" alt="Documentation Status"></a>
+<a href="https://codecov.io/gh/spack/spack"><img src="https://codecov.io/gh/spack/spack/branch/develop/graph/badge.svg" alt="Code coverage"/></a>
+<a href="https://slack.spack.io"><img src="https://slack.spack.io/badge.svg" alt="Slack"/></a>
+<a href="https://matrix.to/#/#spack-space:matrix.org"><img src="https://img.shields.io/matrix/spack-space%3Amatrix.org?label=matrix" alt="Matrix"/></a>
+
 </div>
 
-[![CI Status](https://github.com/spack/spack/workflows/ci/badge.svg)](https://github.com/spack/spack/actions/workflows/ci.yml)
-[![Bootstrap Status](https://github.com/spack/spack/workflows/bootstrap.yml/badge.svg)](https://github.com/spack/spack/actions/workflows/bootstrapping.yml)
-[![Containers Status](https://github.com/spack/spack/workflows/build-containers.yml/badge.svg)](https://github.com/spack/spack/actions/workflows/build-containers.yml)
-[![Documentation Status](https://readthedocs.org/projects/spack/badge/?version=latest)](https://spack.readthedocs.io)
-[![Code coverage](https://codecov.io/gh/spack/spack/branch/develop/graph/badge.svg)](https://codecov.io/gh/spack/spack)
-[![Slack](https://slack.spack.io/badge.svg)](https://slack.spack.io)
-[![Matrix](https://img.shields.io/matrix/spack-space%3Amatrix.org?label=matrix)](https://matrix.to/#/#spack-space:matrix.org)
+# Spack: A Powerful Package Manager for High-Performance Computing
 
-<br>
+Spack is a versatile package manager designed to simplify the building and installation of software across various platforms, including Linux, macOS, Windows, and supercomputers.  [**Learn more on GitHub**](https://github.com/spack/spack).
 
-[**Spack's GitHub Repository**](https://github.com/spack/spack) | [Getting Started](https://spack.readthedocs.io/en/latest/getting_started.html) | [Config](https://spack.readthedocs.io/en/latest/configuration.html) | [Community](#community) | [Contributing](https://spack.readthedocs.io/en/latest/contribution_guide.html) | [Packaging Guide](https://spack.readthedocs.io/en/latest/packaging_guide_creation.html) | [Packages](https://github.com/spack/spack-packages)
+## Key Features
 
-## Spack: The Flexible and Powerful Package Manager for HPC and Beyond
-
-Spack is a versatile package manager designed to build and install multiple versions and configurations of software on various platforms.
-
-**Key Features:**
-
-*   **Multi-Platform Support:** Works seamlessly on Linux, macOS, Windows, and supercomputers.
-*   **Non-Destructive Installations:** Install new package versions without breaking existing ones, allowing for flexible configurations.
-*   **Spec-Driven Builds:** Utilize a simple "spec" syntax to define versions and configuration options.
-*   **Python-Based Package Files:** Package files are written in Python, enabling a single script for multiple builds.
-*   **Version and Configuration Control:** Build your software exactly the way you need it.
-
-[See the Feature Overview](https://spack.readthedocs.io/en/latest/features.html) for examples and highlights.
+*   **Multi-Platform Support:** Install software on Linux, macOS, Windows, and HPC systems.
+*   **Version and Configuration Management:** Easily manage multiple versions and configurations of your software.
+*   **Non-Destructive Installation:** Install new package versions without breaking existing ones.
+*   **Flexible Specification:** Define software versions and configurations using a simple "spec" syntax.
+*   **Python-Based Package Files:** Leverage Python for creating package files, enabling single scripts for diverse builds.
 
 ## Installation
 
-Before installing Spack, ensure you have Python and Git.  Then, follow these steps:
+Get started with Spack by following these steps:
 
-```bash
-git clone --depth=2 https://github.com/spack/spack.git
-```
+1.  **Prerequisites:** Ensure you have Python and Git installed.
+2.  **Clone the Repository:**
 
-```bash
-# For bash/zsh/sh
-. spack/share/spack/setup-env.sh
+    ```bash
+    git clone --depth=2 https://github.com/spack/spack.git
+    ```
+3.  **Set up your environment:**
 
-# For tcsh/csh
-source spack/share/spack/setup-env.csh
+    ```bash
+    # For bash/zsh/sh
+    . spack/share/spack/setup-env.sh
 
-# For fish
-. spack/share/spack/setup-env.fish
-```
+    # For tcsh/csh
+    source spack/share/spack/setup-env.csh
 
-```bash
-# Install a package!
-spack install zlib-ng
-```
+    # For fish
+    . spack/share/spack/setup-env.fish
+    ```
+4.  **Install a Package:**
 
-## Documentation
+    ```bash
+    spack install zlib-ng
+    ```
 
-Comprehensive documentation is available [here](https://spack.readthedocs.io/), or run `spack help` or `spack help --all`.  For a quick syntax reference, use `spack help --spec`.
+## Documentation and Resources
 
-## Tutorial
-
-A hands-on tutorial is available [here](https://spack-tutorial.readthedocs.io/).  It covers everything from basic usage to advanced features, packaging, and large HPC deployments. Exercises can be completed on your laptop using a Docker container.
+*   [**Full Documentation**](https://spack.readthedocs.io/)
+*   `spack help` and `spack help --all` for command-line assistance.
+*   `spack help --spec` for a cheat sheet on Spack syntax.
+*   [**Hands-on Tutorial**](https://spack-tutorial.readthedocs.io/) - Covers basic to advanced usage, packaging, developer features, and large HPC deployments.
 
 ## Community
 
-Spack thrives on community contributions.  Join us!
+Join the Spack community for support, discussions, and contributions:
 
-**Resources:**
-
-*   **Slack workspace**: [spackpm.slack.com](https://spackpm.slack.com) (get an invitation: [slack.spack.io](https://slack.spack.io)).
-*   **Matrix space**: [#spack-space:matrix.org](https://matrix.to/#/#spack-space:matrix.org) (bridged to Slack).
-*   **Github Discussions**: [https://github.com/spack/spack/discussions](https://github.com/spack/spack/discussions) for Q&A and discussions.
-*   **X**: [@spackpm](https://twitter.com/spackpm).
-*   **Mailing list**: [groups.google.com/d/forum/spack](https://groups.google.com/d/forum/spack) (announcements only).
+*   **Slack Workspace:** [spackpm.slack.com](https://spackpm.slack.com) ([Get an invitation](https://slack.spack.io))
+*   **Matrix Space:** [#spack-space:matrix.org](https://matrix.to/#/#spack-space:matrix.org) (bridged to Slack)
+*   **GitHub Discussions:** [Q&A and discussions](https://github.com/spack/spack/discussions)
+*   **X:** [@spackpm](https://twitter.com/spackpm)
+*   **Mailing List:** [groups.google.com/d/forum/spack](https://groups.google.com/d/forum/spack) (for announcements)
 
 ## Contributing
 
-Contributions are welcome! Submit pull requests to the [spack repository](https://github.com/spack/spack).
+Contributions are welcome!  To contribute, submit a [pull request](https://help.github.com/articles/using-pull-requests/) and adhere to the following guidelines:
 
-To contribute to Spack itself, follow these steps:
+*   Target the ``develop`` branch.
+*   Pass Spack's tests (unit tests, documentation tests, and package build tests).
+*   Be [PEP 8](https://www.python.org/dev/peps/pep-0008/) compliant.
+*   Sign off all commits with `git commit --signoff`.
 
-1.  Target the `develop` branch.
-2.  Ensure your code passes Spack's unit tests, documentation tests, and package build tests.
-3.  Adhere to [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guidelines.
-4.  Sign off commits with `git commit --signoff`.
-
-See the [Contribution Guide](https://spack.readthedocs.io/en/latest/contribution_guide.html) for help with local testing.
-
-To contribute to community package recipes, visit the [spack-packages repository](https://github.com/spack/spack-packages).
+For further details, consult our [Contribution Guide](https://spack.readthedocs.io/en/latest/contribution_guide.html).
 
 ## Releases
 
-For stable deployments, use Spack's [releases](https://github.com/spack/spack/releases).  Each release series has a corresponding branch, e.g., `releases/v0.14`.  Backports of important bug fixes are included in these branches. The latest release is tagged `releases/latest`.
+For stable software installations, explore Spack's [stable releases](https://github.com/spack/spack/releases).
 
-[Read more on releases](https://spack.readthedocs.io/en/latest/developer_guide.html#releases).
+*   Each release has a corresponding branch (e.g., `releases/v0.14`).
+*   Backported bug fixes are provided on these branches.
+*   The latest release is available with the `releases/latest` tag.
+*   See the [docs on releases](https://spack.readthedocs.io/en/latest/developer_guide.html#releases) for more details.
 
 ## Code of Conduct
 
-Please adhere to the [**Code of Conduct**](.github/CODE_OF_CONDUCT.md).
+Please abide by the Spack [**Code of Conduct**](.github/CODE_OF_CONDUCT.md).
 
-## Authors
+## Authors & Citation
 
-Many thanks to [Spack's contributors](https://github.com/spack/spack/graphs/contributors).
+Spack was created by Todd Gamblin, tgamblin@llnl.gov, and is maintained by a team of contributors.
 
-Spack was created by Todd Gamblin, tgamblin@llnl.gov.
+If you use Spack in your publications, cite the following paper:
 
-### Citing Spack
-
-If you're referencing Spack in your publications, cite the following paper:
-
-*   Todd Gamblin, Matthew P. LeGendre, Michael R. Collette, Gregory L. Lee, Adam Moody, Bronis R. de Supinski, and W. Scott Futral.
-    [**The Spack Package Manager: Bringing Order to HPC Software Chaos**](https://www.computer.org/csdl/proceedings/sc/2015/3723/00/2807623.pdf).
-    In *Supercomputing 2015 (SC’15)*, Austin, Texas, November 15-20 2015. LLNL-CONF-669890.
-
-Get the BibTeX citation in the GitHub repo by clicking the "Cite this repository" button. Or see the comments in `CITATION.cff`.
+ * Todd Gamblin, Matthew P. LeGendre, Michael R. Collette, Gregory L. Lee,
+   Adam Moody, Bronis R. de Supinski, and W. Scott Futral.
+   [**The Spack Package Manager: Bringing Order to HPC Software Chaos**](https://www.computer.org/csdl/proceedings/sc/2015/3723/00/2807623.pdf).
+   In *Supercomputing 2015 (SC’15)*, Austin, Texas, November 15-20 2015. LLNL-CONF-669890.
 
 ## License
 
-Spack is available under the MIT and Apache License (Version 2.0). New contributions must be licensed under both.
+Spack is licensed under the terms of both the MIT license and the Apache License (Version 2.0). Users may choose either license.
 
-See [LICENSE-MIT](https://github.com/spack/spack/blob/develop/LICENSE-MIT), [LICENSE-APACHE](https://github.com/spack/spack/blob/develop/LICENSE-APACHE), [COPYRIGHT](https://github.com/spack/spack/blob/develop/COPYRIGHT), and [NOTICE](https://github.com/spack/spack/blob/develop/NOTICE) for details.
+*   [LICENSE-MIT](https://github.com/spack/spack/blob/develop/LICENSE-MIT)
+*   [LICENSE-APACHE](https://github.com/spack/spack/blob/develop/LICENSE-APACHE)
+*   [COPYRIGHT](https://github.com/spack/spack/blob/develop/COPYRIGHT)
+*   [NOTICE](https://github.com/spack/spack/blob/develop/NOTICE)
 
 SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 LLNL-CODE-811652
+```
+Key improvements and SEO considerations:
+
+*   **Clear and Concise Hook:**  The one-sentence hook is at the beginning, making the purpose of Spack immediately clear.
+*   **Keyword-Rich Headings:** Headings use relevant keywords (e.g., "Package Manager," "Multi-Platform," "Installation").
+*   **Bulleted Key Features:** Easy-to-scan format for quick understanding of Spack's capabilities.
+*   **Clear Call to Action:**  The "Learn more on GitHub" link at the beginning, plus links throughout the content.
+*   **Comprehensive Documentation Links:**  Easy access to crucial documentation is clearly shown.
+*   **Community Section:** Highlights avenues for support and contribution.
+*   **Contributing Guidelines:**  Addresses how to contribute.
+*   **Release Information:** Clearly explains stable releases.
+*   **Code of Conduct Notice:** Important for community participation.
+*   **Citation Information:** Includes a clear citation to help with referencing Spack.
+*   **License Information:** Includes license.
+*   **Improved Formatting:**  Uses bolding and clear spacing to enhance readability.
+*   **Direct Linking:** Links the original repo.

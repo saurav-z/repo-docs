@@ -1,45 +1,41 @@
-# CS Rankings: Your Definitive Guide to Top Computer Science Schools
+# CSrankings: A Metrics-Based Ranking of Top Computer Science Schools
 
-**Looking to identify the leading computer science institutions and faculty?** CS Rankings provides a data-driven, metric-based ranking system focused on publications at top-tier computer science conferences.  This approach offers a transparent, reliable, and difficult-to-manipulate evaluation of research excellence.
+**CSrankings.org** provides a data-driven, objective ranking of computer science departments worldwide, based on faculty publications at top-tier conferences.  Explore the original repository on [GitHub](https://github.com/emeryberger/CSrankings) for more details.
 
-[Visit the original repository on GitHub](https://github.com/emeryberger/CSrankings)
+## Key Features:
 
-## Key Features
-
-*   **Metric-Based Ranking:** Rankings are based on the number of publications by faculty at the most selective computer science conferences.
-*   **Transparent Methodology:**  Uses a clear and transparent methodology, unlike rankings based on surveys.
-*   **Difficult to Game:**  Focuses on publications in top conferences, making it difficult to manipulate the rankings.
-*   **Regular Updates:** The dataset is updated quarterly.
-*   **Community-Driven:** Contributions are welcome for adding and modifying affiliations (see the CONTRIBUTING.md file).
+*   **Metrics-Based Ranking:** Unlike rankings based on surveys, CSrankings relies entirely on publication data from highly selective computer science conferences.
+*   **Difficult-to-Game Approach:** This methodology aims to create a ranking that is less susceptible to manipulation compared to citation-based metrics.
+*   **Focus on Active Research:** Identifies institutions and faculty actively engaged in research across various computer science fields.
+*   **Regular Updates:** The rankings are updated on a quarterly basis to ensure accuracy and relevance.
 
 ## Contributing
 
 ### Adding or Modifying Affiliations
-Contributions are processed quarterly. You can submit pull requests at any time.
-Data is found in the `csrankings-[a-z].csv` files, with authors alphabetized by first name initial.  See the `CONTRIBUTING.md` file for more details.
 
-### Using the Site Locally
+*   **Quarterly Updates:**  Changes are processed quarterly. Submit pull requests anytime; they will be integrated during the next update cycle.
+*   **Direct Editing:** Utilize GitHub's interface to edit the `csrankings-[a-z].csv` files.
+*   **Contribution Guidelines:**  Refer to the `CONTRIBUTING.md` file for detailed instructions on how to contribute.
 
-1.  Download DBLP data: `make update-dblp` (requires ~19GB of memory).
-2.  Rebuild databases: `make`
-3.  Run a local web server (e.g., `python3 -m http.server`) and access it at `http://0.0.0.0:8000`.
+### Running CSrankings Locally
 
-**Required dependencies:**  `libxml2-utils`, `npm`, `typescript`, `closure-compiler`, `python-lxml`, [pypy](https://doc.pypy.org/en/latest/install.html), and `basex`.
+1.  **Data Download:**  Download the DBLP data:  `make update-dblp` (requires ~19GB of memory).
+2.  **Build Databases:** Run `make` to rebuild the databases.
+3.  **Local Server:** Start a local web server (e.g., `python3 -m http.server`) and access the site at [http://0.0.0.0:8000](http://0.0.0.0:8000).
+4.  **Required Dependencies:** Ensure you have the necessary tools and libraries installed: `libxml2-utils`, `npm`, `typescript`, `google-closure-compiler`, `python-lxml`, `pypy`, and `basex`.  Use the command: `apt-get install libxml2-utils npm python-lxml basex; npm install -g typescript google-closure-compiler`
 
-## Quick Contribution via Shallow Clone
+### Quick Contribution via a Shallow Clone
 
-For quick contributions, use a shallow clone to avoid downloading the full repository history:
+For smaller contributions, avoid a full clone with these steps:
 
-1.  Fork the CSrankings repo.
-2.  Shallow clone your fork: `git clone --depth 1 https://github.com/yourusername/CSrankings`
-3.  Make changes on a branch, push them, and create a pull request.
+1.  **Fork:**  Fork the CSrankings repository on GitHub.
+2.  **Shallow Clone:**  Clone your fork with: `git clone --depth 1 https://github.com/yourusername/CSrankings`
+3.  **Create Pull Request:**  Make changes, push to your clone, and create a pull request.
 
 ## Acknowledgements
 
-*   **Developed by:** [Emery Berger](https://emeryberger.com).
-*   **Based on original work by:** [Swarat Chaudhuri](https://www.cs.utexas.edu/~swarat/) and the faculty affiliation dataset constructed by [Papoutsaki et al.](http://cs.brown.edu/people/alexpap/faculty_dataset.html).
-*   **Data Source:** Uses information from [DBLP.org](http://dblp.org) under the ODC Attribution License.
+CSrankings was primarily developed and is maintained by [Emery Berger](https://emeryberger.com).  It builds upon initial work by [Swarat Chaudhuri](https://www.cs.utexas.edu/~swarat/) and utilizes data from DBLP.org (under the ODC Attribution License).  The original faculty affiliation dataset was constructed by [Papoutsaki et al.](http://cs.brown.edu/people/alexpap/faculty_dataset.html).
 
 ## License
 
-CS Rankings is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+CSRankings is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).

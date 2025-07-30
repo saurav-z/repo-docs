@@ -1,54 +1,213 @@
-# WilmerAI: Expertly Routing Language Models for Enhanced AI Experiences
+# WilmerAI: Expertly Routing Language Models for Powerful AI Workflows
 
-**Unleash the power of multiple LLMs by routing and orchestrating prompts to create sophisticated AI assistants.** [View the original repo](https://github.com/SomeOddCodeGuy/WilmerAI)
+**Unlock the potential of multiple language models working together with WilmerAI, a versatile middleware designed to orchestrate and enhance your AI interactions.** ([Back to Original Repo](https://github.com/SomeOddCodeGuy/WilmerAI))
 
-WilmerAI is a versatile middleware designed to connect your favorite applications and frontends, like Open WebUI and SillyTavern, with your LLM APIs, enabling you to create complex workflows and tap into the power of distributed AI.
+WilmerAI sits between your LLM APIs and applications like Open WebUI or SillyTavern, enabling you to harness the power of diverse models for a single, comprehensive response.
 
 ## Key Features:
 
-*   **Prompt Routing:** Direct prompts to specific categories (coding, math, etc.) or personas for tailored responses.
-*   **Custom Workflows:** Design workflows that cater to specific requirements.
-*   **Multi-LLM Integration:** Leverage multiple LLMs within a single prompt, utilizing their strengths in tandem.
-*   **RAG Support:** Integrate RAG setups with the Offline Wikipedia API and other retrieval methods.
-*   **Continuous Memory:** Maintain consistent conversations with continually updated chat summaries, simulating a long-term memory.
-*   **Hotswap Models:** Optimize VRAM usage and run diverse model setups leveraging Ollama's hotswapping.
-*   **Customizable Presets:** Tailor configurations to your specific LLM API requirements via readily customizable JSON files.
-*   **Vision Multi-Modal Support:** Enhance your workflows with image processing when using Ollama as the front-end API.
-*   **Mid-Workflow Control:** Dynamic workflow execution based on conditions using the Conditional Custom Workflow Node.
-*   **MCP Tool Calling Integration:** Experimental tool calling capabilities using MCPO.
+*   **Prompt Routing:** Direct prompts to various categories (coding, math, personas) with custom presets.
+*   **Custom Workflows:** Design and control the flow of prompts through multiple LLMs.
+*   **Multi-LLM Responses:** Leverage multiple models simultaneously for a single response.
+*   **RAG Support:** Seamless integration with the Offline Wikipedia API ([OfflineWikipediaTextApi](https://github.com/SomeOddCodeGuy/OfflineWikipediaTextApi)) to enhance factual accuracy.
+*   **Persistent Chat Summaries:**  Generate "memories" by chunking, summarizing, and constantly updating conversation summaries for enhanced context.
+*   **Model Hotswapping:** Utilize Ollama's hotswapping feature to maximize VRAM usage and run complex workflows on limited hardware.
+*   **Customizable Presets:** Easily configure LLM parameters using customizable JSON files.
+*   **Vision Multi-Modal Support (Ollama):** Experimental image processing when using Ollama, to query LLMs about multiple images.
+*   **Mid-Workflow Logic:**  Implement conditional workflows based on LLM responses for dynamic processing.
+*   **MCP Server Tool Integration (MCPO):** Experimental support for MCP server tool calling with MCPO, allowing tool use mid-workflow.
 
-## What Makes WilmerAI Powerful?
+## What Can You Do with WilmerAI?
 
-*   **Workflows for RAG:** Enhance your LLM responses by connecting it to sources like the Offline Wikipedia API and other retrieval methods.
-*   **Iterative LLM Calls:** Fine-tune performance with workflows that incorporate iterative LLM calls.
-*   **Distributed LLMs:** Combine the power of multiple LLMs, either through APIs or your own hardware, for complex tasks.
+WilmerAI empowers you to create sophisticated AI workflows:
 
-## Quick Start:
+*   **RAG-Enhanced Responses:** Easily integrate Retrieval-Augmented Generation (RAG) to ground responses with information.
 
-1.  **Install:**  Follow the installation instructions in the original README.
-2.  **Configure Endpoints:** Set up the endpoints to connect to your chosen LLM APIs.
-3.  **Define Users:** Create or modify user configurations with your desired routing and workflow settings.
-4.  **Set Routing:** Define the appropriate routing logic to categorize your prompts.
-5.  **Build Workflows:** Design, edit, and customize powerful, multi-step workflows for various tasks.
-6.  **Connect & Use:** Connect to Wilmer via the supported API endpoints, and start crafting complex AI experiences.
+*   **Iterative LLM Refinement:** Build workflows that utilize follow-up questions to greatly improve performance.
 
-## Advanced Features:
+*   **Distributed LLM Processing:** Utilize multiple LLMs across various machines for powerful AI assistance.
 
-*   **Workflows:**  Define and customize a variety of workflows.
-*   **Image Processor:**  Process images with LLMs.
-*   **Custom Workflow Node:** Execute other workflows within a workflow.
-*   **Conditional Custom Workflow Node:** Selectively execute sub-workflows based on runtime conditions.
-*   **Workflow Lock:** Lock workflows for better performance
-*   **Memory:** Enhance the LLM by summarizing the entire conversation up to the current point.
-*   **Parallel Processing:** Distribute the workload across multiple LLMs.
+## Getting Started
 
-## Important Notes & Disclaimer:
+### Installation
 
-This is a personal project under active development. The software is provided "as-is" without warranty. The project and its content reflect contributions made in free time and do not represent the maintainer's employers. **Token usage is not tracked by WilmerAI; please monitor your LLM API usage for cost management.**
+1.  **Prerequisites:** Ensure you have Python installed (3.10 or 3.12 recommended).
+2.  **Choose an Installation Method:**
+    *   **Provided Scripts (Recommended):**  Use the `.bat` (Windows) or `.sh` (macOS) file to create a virtual environment and install dependencies.
+    *   **Manual Installation:**  
+        ```bash
+        pip install -r requirements.txt
+        python server.py
+        ```
+3.  **Configuration:** All configurations are managed through JSON files in the `Public` folder.
 
-## Reach Out
+### Step-by-Step Setup
 
-Have questions, feedback, or just want to say hello?  Contact me at:
+1.  **Endpoints:** Configure your LLM API endpoints in `Public/Configs/Endpoints`.  See the "Endpoints" section below for detailed instructions.
+2.  **Users:** Create a user configuration file in `Public/Configs/Users` (copy an existing one and rename it, it's the easiest method).
+3.  **Current User:** Set the `_current-user.json` file in `Public/Configs/Users` to your user's name.
+4.  **Routing:** Define prompt routing rules in `Public/Configs/Routing`.
+5.  **Workflows:** Create a new folder matching your username within `Public/Workflows` and create your workflow .json files.  Adjust settings to your specifications.
+
+## Important Considerations
+
+*   **Token Tracking:** WilmerAI does not currently track token usage.  Monitor your LLM API dashboards for accurate token consumption.
+*   **Model Quality:** The quality of your LLMs, presets, and prompt templates directly impacts WilmerAI's output.
+*   **Streaming Control:** Ensure streaming settings match between WilmerAI and your front end.
+
+## Key Concepts
+
+### Endpoints
+
+Configure the connection details for your LLM APIs in the `Endpoints` directory (JSON files).
+
+- `endpoint`: LLM API address.
+- `apiTypeConfigFileName`: API type from the ApiTypes folder.
+- `maxContextTokenSize`: Maximum context size.
+- `modelNameToSendToAPI`: The Model name to send to API.
+- `promptTemplate`: Prompt template file name.
+- `removeThinking`: Removes "thinking" tags, which is helpful with reasoning models.
+
+### Prompt Templates
+
+Define prompt formats in the `PromptTemplates` directory.
+
+### ApiTypes
+
+Configure different API types to support the various different endpoints.
+
+### Users
+
+Set up various types of users with settings that control how the prompts are routed and processed in the `Users` directory.
+
+### Workflows
+
+Design multi-step processes in the `Workflows` directory, composed of node-based processing using JSON files.
+
+### Understanding Workflow Nodes
+
+-   **`title`:**  Internal name for debugging.
+-   **`agentName`:**  Node name (for tracking output).
+-   **`systemPrompt`:** The System prompt for the LLM API.
+-   **`prompt`:** The actual user prompt.
+-   **`lastMessagesToSendInsteadOfPrompt`:** Number of messages to send.
+-   **`endpointName`:**  The connected endpoint.
+-   **`preset`:** Preset file for LLM settings.
+-   **`maxResponseSizeInTokens`:** Token limit for the response.
+-   **`addUserTurnTemplate`:** Template usage boolean.
+-   **`returnToUser`**: Forces the node to return its output. Useful for locks.
+
+### Variables in Prompts
+
+*   `{chat_user_prompt_last_one}`: Last message in the conversation
+*   `{templated_user_prompt_last_one}`: Last message in conversation, templated.
+*   `{chat_system_prompt}`: System Prompt
+*   `{templated_system_prompt}`: System prompt with template applied.
+*   `{agent#Output}`: Output from a previous agent.
+*   `{category_colon_descriptions}`: The list of Categories and their Descriptions.
+*   `{category_colon_descriptions_newline_bulletpoint}`: The list of Categories and their Descriptions, bulleted list.
+*   `{categoriesSeparatedByOr}`: Category names, separated by "OR".
+*   `{categoryNameBulletpoints}`: Bulleted list of category names.
+*   `[TextChunk]`: Special variable unique to the parallel processor.
+
+### Nodes:
+
+**Get Custom File**
+*   `filepath`: The file path to load.
+*   `delimiter`: The delimiter to separate items in the file.
+*   `customReturnDelimiter`: The delimiter to replace in the output.
+
+**Recent Memory Summarizer Tool**
+*   `maxTurnsToPull`
+*   `maxSummaryChunksFromFile`
+*   `lookbackStart`
+*   `customDelimiter`
+
+**Recent/Quality Memory Node**
+*   `type: "QualityMemory"`
+
+**Full Chat Summary Node**
+*   `loopIfMemoriesExceed`
+*   `minMemoriesPerSummary`
+
+**Get Current Chat Summary From File**
+*   `type: "GetCurrentSummaryFromFile"`
+
+**Parallel Processing Node**
+*   `multiModelList`
+*   `preset`
+*   `prompt`
+*   `systemPrompt`
+*   `ragTarget`
+*   `ragType`
+
+**Python Module Caller Node**
+*   `module_path`
+*   `args`
+*   `kwargs`
+*   `type: "PythonModule"`
+
+**Full Text Wikipedia Offline API Caller Node**
+*   `promptToSearch`
+*   `type: "OfflineWikiApiFullArticle"`
+
+**First Paragraph Text Wikipedia Offline API Caller Node**
+*   `promptToSearch`
+*   `type: "OfflineWikiApiPartialArticle"`
+
+**Workflow Lock**
+*   `type: "WorkflowLock"`
+*   `workflowLockId`
+
+**Image Processor**
+*   `addAsUserMessage`: Add the image caption as a new user message.
+*   `message`: The message to add.  Includes `[IMAGE_BLOCK]` for the caption.
+
+**Custom Workflow Node**
+*   `workflowName`
+*   `is_responder`
+*   `firstNodeSystemPromptOverride`
+*   `firstNodePromptOverride`
+
+**Conditional Custom Workflow Node**
+*   `conditionalKey`: key for conditions (e.g., agent output).
+*   `conditionalWorkflows`: Map `conditionalKey` to workflows.
+    *   `Default`: Fallback workflow.
+*   `is_responder`:  Flag to finish workflow.
+*   `routeOverrides`: Overrides system or user prompts per route.
+
+---
+
+## Quick Troubleshooting Tips
+
+*   **No Memories/Summary:** Ensure the file exists, the nodes are in your workflow, and the memory folder is specified correctly.
+*   **No Response:** Verify streaming settings match between WilmerAI and the front end.
+*   **Preset Errors:** Ensure your preset is compatible with your LLM API.
+*   **OOM Errors:** WilmerAI has no token limits, but you might want to include them.
+*   **"NoneType" Errors:** Check logs and verify API responses.
+*   **Stalled Prompts:** Confirm the endpoint's address, port, and user settings.
+
+---
+
+## Contact
+
+For support, suggestions, or just to say hello, please reach out to:
+
 WilmerAI.Project@gmail.com
 
-[See Original Repo](https://github.com/SomeOddCodeGuy/WilmerAI)
+---
+
+## Third-Party Libraries
+
+WilmerAI uses the following libraries:
+
+*   Flask: [https://github.com/pallets/flask/](https://github.com/pallets/flask/)
+*   requests: [https://github.com/psf/requests/](https://github.com/psf/requests/)
+*   scikit-learn: [https://github.com/scikit-learn/scikit-learn/](https://github.com/scikit-learn/scikit-learn/)
+*   urllib3: [https://github.com/urllib3/urllib3/](https://github.com/urllib3/urllib3/)
+*   jinja2: [https://github.com/pallets/jinja](https://github.com/pallets/jinja)
+
+For details on licensing, please refer to the ThirdParty-Licenses folder.
+
+## License
+WilmerAI is licensed under the GNU General Public License v3.0. See the LICENSE file for details.

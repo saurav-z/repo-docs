@@ -1,96 +1,116 @@
-# Claude Code Usage Monitor: Real-Time Token Tracking for Claude AI
+# 🤖 Claude Code Usage Monitor: Real-time AI Token Tracking and Prediction
 
-**Effortlessly monitor your Claude AI token usage with this powerful terminal tool, gaining insights into your usage, cost, and AI session limits. Check out the original repo at [https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor)!**
+**Tired of unexpected AI usage limits?** Monitor your Claude AI token consumption with the **Claude Code Usage Monitor**, a powerful terminal tool that provides real-time tracking, advanced analytics, and intelligent predictions, available on [GitHub](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor)!
 
----
+## 🌟 Key Features
 
-## Key Features
+*   **Real-Time Monitoring:** Track token usage, cost, and messages in real-time with configurable refresh rates.
+*   **ML-Powered Predictions:** Intelligent session limit detection and P90 percentile calculations for accurate forecasting.
+*   **Rich Terminal UI:** Beautiful, color-coded progress bars, tables, and layouts with WCAG-compliant contrast for optimal readability.
+*   **Automated Plan Switching:** Automatically adjusts your plan based on usage, with custom limit discovery.
+*   **Comprehensive Plan Support:** Supports Pro, Max5, Max20 and Custom plans with updated limits.
+*   **Detailed Cost Analytics:** Model-specific pricing and cache token calculations.
+*   **Customizable Views:** Real-time, daily, and monthly usage views.
+*   **Advanced Warning System:** Multi-level alerts with cost and time predictions.
+*   **Configuration Saving:** Preferences are automatically saved to avoid re-specifying them on each run.
+*   **Robust Testing:**  Extensive testing with 100+ test cases and full coverage.
 
-*   **Real-time Monitoring:** Track token consumption, burn rate, and cost with configurable refresh rates.
-*   **Advanced Rich UI:** Beautiful, color-coded progress bars and tables with WCAG-compliant contrast.
-*   **ML-Based Predictions:** Intelligent session limit detection and forecasting based on machine learning.
-*   **Smart Auto-Detection:** Automatic plan switching and custom limit discovery.
-*   **Cost Analytics:** Model-specific pricing and cache token calculations.
-*   **Custom Plan Support:** Specifically designed for 5-hour Claude Code sessions, providing personalized limits based on your usage.
+## 🚀 Installation
 
-## Installation
+Choose your preferred installation method:
 
-### ⚡ Modern Installation with uv (Recommended)
+### ⚡ Modern Installation with `uv` (Recommended)
 
-uv streamlines installation and eliminates version conflicts.
+`uv` is the fastest and most reliable way to install and manage the monitor.
 
 ```bash
-# Install with uv
+# Install uv (if you don't have it) - Linux/macOS
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Install uv (if you don't have it) - Windows (PowerShell)
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# Install from PyPI using uv
 uv tool install claude-monitor
 
 # Run
-claude-monitor
+claude-monitor  # or cmonitor, ccmonitor, ccm
 ```
 
-See the original [README](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor) for detailed installation instructions.
-
-### 📦 Installation with pip
+### 📦 Installation with `pip`
 
 ```bash
+# Install from PyPI
 pip install claude-monitor
-claude-monitor # or cmonitor, ccmonitor for short
+
+# If command not found, add to PATH
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+
+# Run
+claude-monitor  # or cmonitor, ccmonitor, ccm
 ```
 
 ### 🛠️ Other Package Managers
 
-*   **pipx:** `pipx install claude-monitor`
-*   **conda/mamba:** `pip install claude-monitor` within a conda environment
+*   **pipx (Isolated Environments):** `pipx install claude-monitor`
+*   **conda/mamba:** `pip install claude-monitor` within your conda environment
 
-## Usage
+## 📖 Usage
 
-### Basic Usage
+Get started by typing `claude-monitor` in your terminal.
 
-```bash
-claude-monitor  # or cmonitor, ccmonitor
-```
+### Key Command-Line Options
 
-Press `Ctrl+C` to exit the monitor gracefully.
+| Parameter            | Type   | Default   | Description                                                                                                                                                                                          |
+| :------------------- | :----- | :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--plan`             | string | `custom`  | Plan type: `pro`, `max5`, `max20`, or `custom`.                                                                                                                                                       |
+| `--custom-limit-tokens` | int    | `None`    | Token limit for `custom` plan.                                                                                                                                                                       |
+| `--view`             | string | `realtime`| View type: `realtime`, `daily`, or `monthly`.                                                                                                                                                          |
+| `--timezone`         | string | `auto`    | Timezone (e.g., `UTC`, `America/New_York`).                                                                                                                                                           |
+| `--time-format`      | string | `auto`    | Time format: `12h`, `24h`, or `auto`.                                                                                                                                                                |
+| `--theme`            | string | `auto`    | Display theme: `light`, `dark`, `classic`, or `auto`.                                                                                                                                                  |
+| `--refresh-rate`     | int    | `10`      | Data refresh rate in seconds (1-60).                                                                                                                                                                   |
+| `--refresh-per-second` | float  | `0.75`    | Display refresh rate in Hz (0.1-20.0).                                                                                                                                                                  |
+| `--reset-hour`       | int    | `None`    | Daily reset hour (0-23).                                                                                                                                                                              |
+| `--log-level`        | string | `INFO`    | Logging level: `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`.                                                                                                                                         |
+| `--log-file`         | path   | `None`    | Log file path.                                                                                                                                                                                         |
+| `--debug`            | flag   | `False`   | Enable debug logging.                                                                                                                                                                                  |
+| `--version`, `-v`    | flag   | `False`   | Show version information.                                                                                                                                                                               |
+| `--clear`            | flag   | `False`   | Clear saved configuration.                                                                                                                                                                               |
 
-### Configuration Options
+### Basic Examples:
 
-*   `--plan`: Select plan (e.g., `pro`, `max5`, `max20`, or `custom`).  `custom` is the default, utilizing machine learning to determine the best limits for your usage.
-*   `--custom-limit-tokens`: Specify token limit for custom plan.
-*   `--view`:  Choose view type (`realtime`, `daily`, `monthly`).
-*   `--timezone`:  Set your timezone (auto-detects by default).
-*   `--time-format`:  Choose time format (`12h`, `24h`, or `auto`).
-*   `--theme`: Select a display theme (`light`, `dark`, `classic`, or `auto`).
-*   `--refresh-rate`: Refresh rate in seconds.
-*   `--refresh-per-second`: Display refresh rate in Hz.
-*   `--reset-hour`: Set the daily reset hour.
-*   `--log-level`: Set the logging level.
-*   `--log-file`: Specify a log file path.
-*   `--debug`: Enable debug logging.
-*   `--clear`: Clear saved configuration.
+*   **Run with default settings (Custom plan):** `claude-monitor`
+*   **Pro Plan:** `claude-monitor --plan pro`
+*   **Daily View:** `claude-monitor --view daily`
+*   **Set Timezone:** `claude-monitor --timezone America/Los_Angeles`
 
-### Available Plans
+## ✨ Features & How It Works
 
-*   **custom:** P90 auto-detect (default) - intelligent limit detection
-*   **pro:** ~19,000 tokens - Claude Pro subscription
-*   **max5:** ~88,000 tokens - Claude Max5 subscription
-*   **max20:** ~220,000 tokens - Claude Max20 subscription
+This project provides a real-time terminal monitor for tracking your Claude AI token usage.  It leverages machine learning to predict limits and burn rates, and offers a range of customizable features:
 
-## v3.0.0: Major Updates
+*   **[Full feature list here](#-key-features)**
+*   **[Understand how Claude Sessions Work](#understanding-claude-sessions)**
+*   **[Token Limits by Plan](#token-limits-by-plan)**
+*   **[Smart Detection Features](#smart-detection-features)**
 
-*   **Complete Architecture Rewrite:** Modular design with SRP compliance and a comprehensive test suite.
-*   **Enhanced Functionality:** Machine learning-based limit detection, updated plan limits, and advanced cost analytics.
-*   **New CLI Options:**  More granular control over refresh rates, time format, and logging.
+## 🔧 Development Installation
 
-See the original [README](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor) for a detailed architecture overview, data flow, and technical requirements.
+See [Development Installation](#-development-installation) for contributing and testing.
 
-## Contributors
+## 🤝 Contributors
 
-*   [@adawalli](https://github.com/adawalli)
-*   [@taylorwilsdon](https://github.com/taylorwilsdon)
-*   [@moneroexamples](https://github.com/moneroexamples)
+See [Contributors](#-contributors) for the full list.
 
-## 🙏 Acknowledgments
+## 📚 Additional Resources
 
-Special thanks to our supporters, including **Ed**.
+*   [Development Roadmap](DEVELOPMENT.md)
+*   [Contributing Guide](CONTRIBUTING.md)
+*   [Troubleshooting](TROUBLESHOOTING.md)
+
+## 📝 License
+
+MIT License - see the [License](LICENSE) file for details.
 
 ---
 

@@ -1,24 +1,23 @@
-# NotebookLlama: Open-Source NotebookLM Alternative
+# NotebookLlaMa: An Open-Source Alternative to NotebookLM
 
-**Unleash the power of your documents with NotebookLlama, a fully open-source alternative to NotebookLM!** 🦙 Explore the world of smart document analysis and interaction, powered by LlamaIndex and the innovative LlamaCloud platform.  [Check out the original repository on GitHub](https://github.com/run-llama/notebookllama).
+Unlock the power of your documents with **NotebookLlaMa**, a fully open-source and customizable alternative to NotebookLM, built with the backing of [LlamaCloud](https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM).  [View the project on GitHub](https://github.com/run-llama/notebookllama).
 
 [![License](https://img.shields.io/github/license/run-llama/notebookllama?color=blue)](https://github.com/run-llama/notebookllama/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/run-llama/notebookllama?color=yellow)](https://github.com/run-llama/notebookllama/stargazers)
 [![Issues](https://img.shields.io/github/issues/run-llama/notebookllama?color=orange)](https://github.com/run-llama/notebookllama/issues)
+<br>
 [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/run-llama-notebookllama-badge.png)](https://mseep.ai/app/run-llama-notebookllama)
 
 ## Key Features
 
-*   **Open-Source & Free:** Leverage a powerful, open-source alternative to NotebookLM without any licensing costs.
-*   **LlamaCloud Integration:** Seamlessly integrates with LlamaCloud for enhanced performance and capabilities.
-*   **Easy Setup:** Simple installation and configuration using `uv` for dependency management.
-*   **Customizable:** Configure your own API keys for OpenAI, ElevenLabs, and LlamaCloud.
-*   **Flexible Indexing:** Create and customize indexing pipelines to fit your specific needs using the tools provided.
-*   **Local Development:** Run the application locally with Docker Compose for a fully functional development environment.
+*   **Open Source:** Benefit from a community-driven project with transparent code.
+*   **Powered by LlamaCloud:**  Leverage the robust infrastructure of LlamaCloud for enhanced performance.
+*   **Customizable:** Tailor the application to your specific needs with flexible configuration options.
+*   **Easy Setup:** Get started quickly with straightforward installation and configuration steps.
 
 ## Prerequisites
 
-Before you get started, ensure you have `uv` installed for dependency management.
+This project uses `uv` for dependency management. Install `uv` using the instructions below:
 
 **macOS and Linux:**
 
@@ -32,104 +31,107 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-For more installation options, please see `uv`'s [official documentation](https://docs.astral.sh/uv/getting-started/installation/).
+For more installation options, see `uv`'s [official documentation](https://docs.astral.sh/uv/getting-started/installation/).
 
 ## Getting Started
 
-Follow these steps to get NotebookLlama up and running:
+Follow these steps to set up and run NotebookLlaMa:
 
-**1. Clone the Repository:**
+**1. Clone the Repository**
 
 ```bash
 git clone https://github.com/run-llama/notebookllama
 cd notebookllama/
 ```
 
-**2. Install Dependencies:**
+**2. Install Dependencies**
 
 ```bash
 uv sync
 ```
 
-**3. Configure API Keys:**
+**3. Configure API Keys**
 
-*   Create a `.env` file by renaming the example:
+Create a `.env` file and add your API keys:
 
-    ```bash
-    mv .env.example .env
-    ```
+```bash
+mv .env.example .env
+```
 
-*   Add your API keys to the `.env` file:
+Edit `.env` with the following keys:
 
-    *   `OPENAI_API_KEY`: Find it [on OpenAI Platform](https://platform.openai.com/api-keys)
-    *   `ELEVENLABS_API_KEY`: Find it [on ElevenLabs Settings](https://elevenlabs.io/app/settings/api-keys)
-    *   `LLAMACLOUD_API_KEY`: Find it [on LlamaCloud Dashboard](https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM)
+*   `OPENAI_API_KEY`:  [Get from OpenAI Platform](https://platform.openai.com/api-keys)
+*   `ELEVENLABS_API_KEY`: [Get from ElevenLabs Settings](https://elevenlabs.io/app/settings/api-keys)
+*   `LLAMACLOUD_API_KEY`: [Get from LlamaCloud Dashboard](https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM)
 
-**4. Activate the Virtual Environment:**
+**4. Activate the Virtual Environment**
 
-*   **macOS/Linux:**
+**(mac/unix)**
 
-    ```bash
-    source .venv/bin/activate
-    ```
+```bash
+source .venv/bin/activate
+```
 
-*   **Windows:**
+**(Windows)**
 
-    ```bash
-    .\.venv\Scripts\activate
-    ```
+```bash
+.\.venv\Scripts\activate
+```
 
-**5. Create LlamaCloud Agent & Pipeline:**
+**5. Create LlamaCloud Agent & Pipeline**
 
-*   Create the data extraction agent:
+First, create the data extraction agent:
 
-    ```bash
-    uv run tools/create_llama_extract_agent.py
-    ```
+```bash
+uv run tools/create_llama_extract_agent.py
+```
 
-*   Run the interactive setup wizard to configure your index pipeline:
+Next, run the interactive setup wizard to configure your index pipeline.
 
-    *   **Quick Start (Default OpenAI):** Select "With Default Settings" for the quickest setup.
-    *   **Advanced (Custom Embedding Models):** Select "With Custom Settings" for model customization.
+> **⚡ Quick Start (Default OpenAI):**
+> For the fastest setup, select **"With Default Settings"** when prompted. This will automatically create a pipeline using OpenAI's `text-embedding-3-small` embedding model.
 
-    Run the wizard:
+> **🧠 Advanced (Custom Embedding Models):**
+> To use a different embedding model, select **"With Custom Settings"** and follow the on-screen instructions.
 
-    ```bash
-    uv run tools/create_llama_cloud_index.py
-    ```
+Run the wizard with the following command:
 
-**6. Launch Backend Services:**
+```bash
+uv run tools/create_llama_cloud_index.py
+```
 
-This command will start the required Postgres and Jaeger containers.
+**6. Launch Backend Services**
+
+Start Postgres and Jaeger containers:
 
 ```bash
 docker compose up -d
 ```
 
-**7. Run the Application:**
+**7. Run the Application**
 
-*   Run the MCP server:
+First, run the **MCP** server:
 
-    ```bash
-    uv run src/notebookllama/server.py
-    ```
+```bash
+uv run src/notebookllama/server.py
+```
 
-*   In a new terminal, launch the Streamlit app:
+Then, in a **new terminal window**, launch the Streamlit app:
 
-    ```bash
-    streamlit run src/notebookllama/Home.py
-    ```
+```bash
+streamlit run src/notebookllama/Home.py
+```
 
-    > [!IMPORTANT]
-    >
-    > _You might need to install `ffmpeg` if you do not have it installed already_
+> [!IMPORTANT]
+>
+> _You might need to install `ffmpeg` if you do not have it installed already_
 
-*   Access the app at `http://localhost:8501/`.
+Access the app at `http://localhost:8501/`.
 
 ## Contributing
 
-Contribute to the project by following the [guidelines](./CONTRIBUTING.md).
+Contribute to this project following the [guidelines](./CONTRIBUTING.md).
 
 ## License
 
-This project is provided under an [MIT License](./LICENSE).
+NotebookLlaMa is provided under the [MIT License](./LICENSE).

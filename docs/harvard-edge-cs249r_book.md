@@ -1,6 +1,6 @@
-# Machine Learning Systems: The Open-Source Textbook for Building Real-World AI Systems
+# Machine Learning Systems: Build Real-World AI Systems
 
-This comprehensive open-source textbook teaches you the principles and practices of building and deploying cutting-edge machine learning systems. ([Original Repo](https://github.com/harvard-edge/cs249r_book))
+**Master the art of building production-ready AI systems with this comprehensive, open-source textbook developed at Harvard University.** Explore the original repository: [Harvard-Edge/cs249r_book](https://github.com/harvard-edge/cs249r_book)
 
 <div align="center">
 
@@ -20,25 +20,29 @@ This comprehensive open-source textbook teaches you the principles and practices
 
 ## Key Features
 
-*   **Comprehensive Coverage:** Learn to build complete ML systems, from edge devices to cloud deployment.
-*   **Open-Source & Accessible:**  Expand access to AI systems education worldwide.
-*   **Hands-on Learning:**  Go beyond training models and master real-world ML system engineering.
-*   **Community-Driven:** Contribute to a global learning community and help shape the future of AI education.
-*   **Practical Focus:** Build scalable, efficient, and sustainable AI systems.
-
-## What You'll Learn
-
-Master the full stack of real-world ML systems with this open-source textbook.
-
-*   **System Design:** Design scalable and maintainable ML architectures.
-*   **Data Engineering:** Build robust pipelines for data collection, labeling, and processing.
-*   **Model Deployment:** Deploy production-ready systems from prototypes.
-*   **MLOps & Monitoring:**  Create reliable and continuously operating systems.
-*   **Edge AI:** Deploy resource-efficient ML models on mobile, embedded, and IoT devices.
+*   **Comprehensive Coverage:** Learn the full stack of ML systems, from edge devices to cloud deployment.
+*   **Hands-on Labs:**  Build real-world AI systems through practical exercises and projects.
+*   **Open Source & Accessible:**  Benefit from a freely available textbook and a vibrant community.
+*   **Expertly Crafted:**  Developed from Harvard University's CS249r course, ensuring high-quality content.
+*   **Community Driven:**  Join a global community and contribute to the evolution of AI education.
 
 ---
 
-## Support This Work
+## What You'll Learn
+
+This book goes beyond model training, equipping you with the knowledge to build complete, production-ready AI systems.
+
+*   **System Design:** Architect scalable and maintainable ML systems.
+*   **Data Engineering:** Create robust pipelines for data collection, labeling, and processing.
+*   **Model Deployment:** Deploy models into production environments.
+*   **MLOps & Monitoring:** Implement reliable, continuously operating systems.
+*   **Edge AI:** Develop resource-efficient deployments for mobile, embedded, and IoT devices.
+
+---
+
+## Support and Contribute
+
+Help us expand access to AI systems education worldwide!
 
 <div align="center">
 
@@ -62,16 +66,22 @@ We've graduated this project from Harvard to enable global access and expand AI 
 
 ---
 
-## 🌐 Community & Resources
+## Community & Resources
 
-*   [📚 **Main Site**](https://mlsysbook.org): Complete learning platform.
-*   [🔥 **TinyTorch**](https://mlsysbook.org/tinytorch): Educational ML framework.
-*   [💬 **Discussions**](https://github.com/harvard-edge/cs249r_book/discussions): Ask questions, share insights.
-*   [👥 **Community**](https://mlsysbook.org/community): Join our global learning community.
+Explore our comprehensive learning platform and connect with a global community:
+
+| Resource                  | Description                                      |
+| :------------------------ | :----------------------------------------------- |
+| [📚 **Main Site**](https://mlsysbook.org)         | Complete learning platform                 |
+| [🔥 **TinyTorch**](https://mlsysbook.org/tinytorch) | Educational ML framework                   |
+| [💬 **Discussions**](https://github.com/harvard-edge/cs249r_book/discussions) | Ask questions, share insights            |
+| [👥 **Community**](https://mlsysbook.org/community) | Join our global learning community         |
 
 ---
 
-## 🎯 For Different Audiences
+## For Different Audiences
+
+Find the resources best suited for your needs:
 
 ### 🎓 Students
 
@@ -93,7 +103,9 @@ We've graduated this project from Harvard to enable global access and expand AI 
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
+
+Get started quickly with these simple commands:
 
 ### For Readers
 
@@ -123,36 +135,36 @@ make preview        # Start development server
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from the global community!
 
 ### Ways to Contribute
 
-*   📝 **Content:** Suggest edits, improvements, or new examples.
-*   🛠️ **Tools:** Enhance development scripts and automation.
-*   🎨 **Design:** Improve figures, diagrams, and visual elements.
-*   🌍 **Localization:** Translate content for global accessibility.
-*   🔧 **Infrastructure:** Help with build systems and deployment.
+*   **📝 Content** — Suggest edits, improvements, or new examples
+*   **🛠️ Tools** — Enhance development scripts and automation
+*   **🎨 Design** — Improve figures, diagrams, and visual elements
+*   **🌍 Localization** — Translate content for global accessibility
+*   **🔧 Infrastructure** — Help with build systems and deployment
 
 ### Quality Standards
 
-All contributions benefit from automated quality assurance:
+All contributions are subject to automated quality assurance.
 
-*   ✅ **Pre-commit validation** — Automatic cleanup and checks.
-*   📋 **Content review** — Formatting and style validation.
-*   🧪 **Testing** — Build and link verification.
-*   👥 **Peer review** — Community feedback.
+*   ✅ **Pre-commit validation** — Automatic cleanup and checks
+*   📋 **Content review** — Formatting and style validation
+*   🧪 **Testing** — Build and link verification
+*   👥 **Peer review** — Community feedback
 
 [**Start Contributing →**](docs/contribute.md)
 
 ---
 
-## 🛠️ Development
+## Development
 
 ### Book Binder CLI (Recommended)
 
-The **Book Binder** is our lightning-fast development CLI for streamlined building and iteration:
+The **Book Binder** offers a fast development CLI for streamlined building and iteration:
 
 ```bash
 # Fast chapter development
@@ -189,7 +201,7 @@ make help           # Show all commands
 
 ### Project Structure
 
-```
+```text
 MLSysBook/
 ├── binder                   # ⚡ Fast development CLI (recommended)
 ├── book/                    # Main book content (Quarto)
@@ -197,9 +209,13 @@ MLSysBook/
 │   │   ├── core/            # Core chapters
 │   │   ├── labs/            # Hands-on labs
 │   │   ├── frontmatter/     # Preface, acknowledgments
+│   │   ├── backmatter/      # References and resources
 │   │   └── parts/           # Book parts and sections
+│   ├── _extensions/         # Quarto extensions
+│   ├── data/                # Cross-reference and metadata files
 │   ├── _quarto-html.yml     # Website build configuration
 │   ├── _quarto-pdf.yml      # PDF build configuration
+│   ├── _quarto-epub.yml     # EPUB build configuration
 │   ├── _quarto.yml          # Active config (symlink)
 │   ├── index.qmd            # Main entry point
 │   └── assets/              # Images, styles, media
@@ -207,6 +223,13 @@ MLSysBook/
 │   ├── html/                # HTML website output
 │   ├── pdf/                 # PDF book output
 │   └── dist/                # Distribution files
+├── scripts/                 # Root-level development scripts
+│   ├── content/             # Content management tools
+│   ├── cross_refs/          # Cross-reference management
+│   ├── genai/               # AI-assisted content tools
+│   ├── maintenance/         # Maintenance scripts
+│   ├── testing/             # Test scripts
+│   └── utilities/           # General utilities
 ├── tools/                   # Development automation
 │   ├── scripts/             # Organized development scripts
 │   │   ├── build/           # Build and development tools
@@ -218,9 +241,12 @@ MLSysBook/
 │   ├── dependencies/        # Package requirements
 │   └── setup/               # Setup and configuration
 ├── config/                  # Build configuration
-│   ├── _extensions/         # Quarto extensions
+│   ├── dev/                 # Development configurations
+│   ├── linting/             # Code quality configurations
+│   ├── quarto/              # Quarto publishing settings
 │   ├── lua/                 # Lua filters and scripts
 │   └── tex/                 # LaTeX templates
+├── locals/                  # Local development files
 ├── assets/                  # Global assets (covers, icons)
 ├── docs/                    # Documentation
 │   ├── BINDER.md            # Binder CLI guide
@@ -228,20 +254,22 @@ MLSysBook/
 │   ├── MAINTENANCE_GUIDE.md # Daily workflow guide
 │   ├── BUILD.md             # Build instructions
 │   └── contribute.md        # Contribution guidelines
+├── CHANGELOG.md             # Project changelog
+├── CITATION.bib             # Citation information
 └── Makefile                 # Traditional development commands
 ```
 
 ### Documentation
 
-*   [⚡ Binder CLI Guide](docs/BINDER.md): Fast development with the Book Binder.
-*   [📋 Development Guide](docs/DEVELOPMENT.md): Comprehensive setup and workflow.
-*   [🛠️ Maintenance Guide](docs/MAINTENANCE_GUIDE.md): Daily tasks and troubleshooting.
-*   [🔨 Build Instructions](docs/BUILD.md): Detailed build process.
-*   [🤝 Contribution Guidelines](docs/contribute.md): How to contribute effectively.
+*   [⚡ Binder CLI Guide](docs/BINDER.md) — Fast development with the Book Binder
+*   [📋 Development Guide](docs/DEVELOPMENT.md) — Comprehensive setup and workflow
+*   [🛠️ Maintenance Guide](docs/MAINTENANCE_GUIDE.md) — Daily tasks and troubleshooting
+*   [🔨 Build Instructions](docs/BUILD.md) — Detailed build process
+*   [🤝 Contribution Guidelines](docs/contribute.md) — How to contribute effectively
 
 ---
 
-## 📋 Citation & License
+## Citation & License
 
 ### Citation
 
@@ -259,14 +287,4 @@ MLSysBook/
 
 ### License
 
-This work is licensed under **Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International** (CC BY-NC-SA 4.0). You may share and adapt the material for non-commercial purposes with appropriate credit.
-
----
-
-<div align="center">
-
-**Made for the global AI education community with ❤️**
-
-*Empowering the next generation of AI systems engineers*
-
-</div>
+This work is licensed under **Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International** (CC BY-NC-SA 4.0).

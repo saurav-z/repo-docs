@@ -1,62 +1,87 @@
 # System Design Primer: Your Guide to Designing Scalable Systems
 
-**Tackle system design interviews and build robust, scalable systems with this comprehensive resource.**  [Explore the original repo](https://github.com/donnemartin/system-design-primer) for in-depth explanations, sample solutions, and more.
+Tired of confusing system design concepts? This comprehensive guide provides an organized collection of resources to help you master system design principles, prepare for technical interviews, and build robust, scalable systems. **[Explore the original repository on GitHub](https://github.com/donnemartin/system-design-primer) for a deeper dive.**
 
-## Key Features
+## Key Features:
 
-*   **Comprehensive Coverage:** Dive into a wide range of system design topics, from fundamental concepts to advanced architectures.
-*   **Interview Prep:** Ace your system design interviews with detailed explanations, sample questions, and practical solutions.
-*   **Open Source & Community Driven:** Benefit from a continually updated, community-driven resource with contributions welcome.
-*   **Anki Flashcards:** Utilize pre-built Anki flashcard decks to reinforce key concepts and improve retention.
-*   **Real-World Examples:** Learn from architectural designs used by leading tech companies, including Amazon, Netflix, and Twitter.
+*   **Comprehensive Resource Collection:** Access a curated list of articles, videos, and architectural diagrams covering a wide range of system design topics.
+*   **Interview Preparation:** Ace system design interviews with practice questions, sample solutions, and helpful guidance on how to approach these complex questions.
+*   **Community-Driven:** Contribute to a continually updated, open-source project by suggesting improvements, fixing errors, and adding new content.
+*   **Anki Flashcards:** Enhance knowledge retention with the provided Anki flashcard decks for system design, exercises, and object-oriented design (check out the [interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges) for coding interview prep).
 
-## System Design Topics
+## Table of Contents
 
-*   **Scalability Fundamentals:** Performance vs. Scalability, Latency vs. Throughput, CAP Theorem (Consistency, Availability, Partition Tolerance).
-*   **Data Consistency and Availability:** Understanding and implementing consistency patterns (Weak, Eventual, Strong) and availability patterns (Fail-over, Replication).
-*   **Networking & Infrastructure:** DNS, CDNs (Push & Pull), Load Balancers (Layer 4 & 7).
-*   **Application Layer:** Microservices, Service Discovery, and application architectures.
-*   **Database Design:**  RDBMS (Replication, Sharding, Denormalization), NoSQL databases (Key-Value, Document, Wide Column, Graph).
-*   **Caching Strategies:** Understanding and implementing caching at different layers and choosing the right update strategies.
-*   **Asynchronism & Messaging:** Message Queues, Task Queues, Back Pressure.
-*   **Communication Protocols:** TCP, UDP, RPC, REST.
-*   **Security Basics:** Encryption, Input Sanitization, Principle of Least Privilege.
-*   **Appendix:** Powers of Two, Latency Numbers, Additional Interview Questions, and Real-World Architectures.
+### System Design Fundamentals
 
-## Study Guide
+*   [Performance vs. Scalability](#performance-vs-scalability)
+*   [Latency vs. Throughput](#latency-vs-throughput)
+*   [Availability vs. Consistency](#availability-vs-consistency)
+    *   [CAP Theorem](#cap-theorem)
+*   [Consistency Patterns](#consistency-patterns)
+*   [Availability Patterns](#availability-patterns)
 
-Structured guidance for your interview preparation based on your timeline (Short, Medium, Long).
+### Infrastructure Components
 
-## Approach to System Design Interviews
+*   [Domain Name System (DNS)](#domain-name-system)
+*   [Content Delivery Network (CDN)](#content-delivery-network)
+*   [Load Balancer](#load-balancer)
+*   [Reverse Proxy (Web Server)](#reverse-proxy-web-server)
 
-Follow a structured process to tackle system design questions:
+### Application Architecture
 
-1.  **Requirements & Scope:** Outline use cases, constraints, and assumptions.
-2.  **High-Level Design:** Sketch the main components and connections.
-3.  **Component Design:** Dive into the details of core components.
-4.  **Scalability:** Identify and address bottlenecks.
+*   [Application Layer](#application-layer)
+    *   [Microservices](#microservices)
+    *   [Service Discovery](#service-discovery)
+*   [Asynchronism](#asynchronism)
+    *   [Message Queues](#message-queues)
 
-## Sample Solutions
+### Databases and Caching
 
-*   Pastebin Design
-*   Twitter Feed Design
-*   Web Crawler Design
-*   Mint.com Design
-*   Social Network Data Structures
-*   Key-Value Store for Search Engines
-*   Amazon Sales Ranking
-*   System for Millions of Users (AWS)
+*   [Database](#database)
+    *   [Relational Database Management System (RDBMS)](#relational-database-management-system-rdbms)
+    *   [NoSQL](#nosql)
+    *   [SQL or NoSQL](#sql-or-nosql)
+*   [Cache](#cache)
 
-## Object-Oriented Design Interview Questions
+### Communication and Security
 
-**Note: This section is under development**
+*   [Communication](#communication)
+    *   [HTTP](#hypertext-transfer-protocol-http)
+    *   [TCP](#transmission-control-protocol-tcp)
+    *   [UDP](#user-datagram-protocol-udp)
+    *   [RPC](#remote-procedure-call-rpc)
+    *   [REST](#representational-state-transfer-rest)
+*   [Security](#security)
 
-*   Design a Hash Map
-*   Design a Least Recently Used Cache (LRU)
-*   Design a Call Center
-*   Design a Deck of Cards
-*   Design a Parking Lot
-*   Design an Online Chat
-*   Design a Circular Array
+### Additional Resources
 
-**Contribute to improve this project!**
+*   [Study Guide](#study-guide)
+*   [How to Approach a System Design Interview Question](#how-to-approach-a-system-design-interview-question)
+*   [System Design Interview Questions with Solutions](#system-design-interview-questions-with-solutions)
+*   [Object-Oriented Design Interview Questions with Solutions](#object-oriented-design-interview-questions-with-solutions)
+*   [Appendix](#appendix)
+*   [Additional System Design Interview Questions](#additional-system-design-interview-questions)
+*   [Real World Architectures](#real-world-architectures)
+*   [Company Architectures](#company-architectures)
+
+### Getting Started:
+
+*   **Review the Scalability Lecture:** Begin with the [Scalability Lecture at Harvard](https://www.youtube.com/watch?v=-W9F__D3oY4).
+*   **Explore the Scalability Article:** Read [Scalability](https://web.archive.org/web/20221030091841/http://www.lecloud.net/tagged/scalability/chrono) for more in-depth knowledge.
+
+### Contributing:
+
+Help us improve this guide! Contribute by:
+
+*   Fixing errors
+*   Improving existing sections
+*   Adding new sections
+*   [Translating](https://github.com/donnemartin/system-design-primer/issues/28) the guide
+
+### License
+
+    Copyright 2017 Donne Martin
+
+    Creative Commons Attribution 4.0 International License (CC BY 4.0)
+
+    http://creativecommons.org/licenses/by/4.0/

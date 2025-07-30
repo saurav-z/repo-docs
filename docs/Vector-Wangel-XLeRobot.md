@@ -1,48 +1,41 @@
-# XLeRobot: Affordable Embodied AI for Everyone
+# XLeRobot: Affordable, Open-Source, and DIY Embodied AI for Everyone
 
-**Create your own dual-arm mobile robot for household tasks, bringing the power of Embodied AI to your home at a fraction of the cost of an iPhone!**  Learn more and build your own by visiting the [original repository](https://github.com/Vector-Wangel/XLeRobot).
+**Build your own dual-arm mobile robot for as little as $660 and start exploring the world of embodied AI!**  Learn more and contribute to the project on [GitHub](https://github.com/Vector-Wangel/XLeRobot).
 
-[![XLeRobot](https://github.com/user-attachments/assets/c99fbd5f-af4a-48ba-a8fd-d667beec22c9)](#)
+![XLeRobot](https://github.com/user-attachments/assets/c99fbd5f-af4a-48ba-a8fd-d667beec22c9)
 
-*   **Cost-Effective:** Starting at just $660 USD, making Embodied AI accessible.
-*   **Fast Assembly:** Build your robot in under 4 hours.
-*   **Open-Source:** Built upon the shoulders of giants, leveraging open-source projects like LeRobot, SO-100/SO-101, Lekiwi, and Bambot.
-*   **Complete Documentation:** Comprehensive guides, tutorials, and resources available on the [XLeRobot documentation website](https://xlerobot.readthedocs.io/en/latest/).
-*   **Community Driven:** Join the Discord community and collaborate with others!
-
-## Key Features
-
-*   **Dual-Arm Mobile Robot Design:** Enable complex manipulation tasks.
-*   **Modular and Customizable:** Adapt the robot to your specific needs and experiments.
-*   **VR Integration:** Utilize VR for whole-body control and data capture.
-*   **Simulation Environment:** Official simulation with updated URDFs, control scripts, and camera support, get started in 10 mins.
-*   **Autonomous Household Task Capabilities:** XLeRobot 0.2.0 is equipped to perform autonomous household tasks.
+*   **Cost-Effective:** Starting at just $660, XLeRobot offers a budget-friendly entry point into robotics.
+*   **DIY-Friendly:**  Assemble your robot in under 4 hours with readily available parts.
+*   **Open-Source:** Built upon the foundation of existing open-source projects ([LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)), allowing for customization and community contribution.
+*   **Dual-Arm Design:** Equipped with two arms for advanced manipulation capabilities.
+*   **Expanding Functionality:**  Regular updates and new features, including VR control, are constantly being added.
+*   **Comprehensive Documentation:**  Detailed guides and tutorials are available to help you get started, including a [documentation website](https://xlerobot.readthedocs.io/en/latest/index.html)
 
 ## Cost Breakdown
 
-| Price        | US       | EU       | CN       |
-|--------------|----------|----------|----------|
-| **Basic**    | **~$660** | **~€680** | **~¥3999** |
-| **Standard** | **~$750** | **~€770** | **~¥4399** |
-| **Pro**      | **~$870** | **~€890** | **~¥5599** |
+XLeRobot offers different configurations to suit your needs and budget. Costs exclude 3D printing, tools, shipping, and taxes.
 
-*Note: Costs exclude 3D printing, tools, shipping, and taxes.*
+| Price          | US      | EU      | CN       |
+|----------------|---------|---------|----------|
+| **Basic**      | ~$660   | ~€680   | ~¥3999   |
+| **Standard**   | ~$750   | ~€770   | ~¥4399   |
+| **Pro**        | ~$870   | ~€890   | ~¥5599   |
 
-## News
+## What's New
 
-*   **2025-07-14:** XLeVR, VR Quest 3 whole-body control system.
-*   **2025-07-08:** Official simulation available.
-*   **2025-07-01:** Documentation website released.
-*   **2025-06-13:** XLeRobot 0.2.0 launch.
+*   **XLeVR**: A VR Quest 3 whole-body control system for the robot is available.
+
+    ![XLeVR Demo](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
+*   **Official Simulation**: Updated URDFs, control scripts, and support for new hardware and cameras enable you to get started in under 10 minutes.
+*   **Documentation Website**:  A comprehensive documentation website is available for organized tutorials, demos, and resources.
+*   **XLeRobot 0.2.0**:  The first version fully capable of autonomous household tasks is available.
 
 ## Get Started
 
-Follow these steps to build your own XLeRobot:
-
-1.  **Buy Parts:** See the [Bill of Materials](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/material.html).
-2.  **3D Print:** Get your parts printed using the [3D printing guide](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/3d.html).
-3.  **Assemble:** Follow the [assembly instructions](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble.html).
-4.  **Software:** Set up the software and start moving your robot via the [software guide](https://xlerobot.readthedocs.io/en/latest/software/index.html).
+1.  **Buy Parts:**  Refer to the [Bill of Materials](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/material.html).
+2.  **3D Print:**  Follow the [3D printing guide](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/3d.html).
+3.  **Assemble:**  Assemble your robot using the [assembly instructions](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble.html).
+4.  **Software:**  Get your robot moving with the [software guide](https://xlerobot.readthedocs.io/en/latest/software/index.html).
 
 ## Main Contributors
 
@@ -64,5 +57,4 @@ Follow these steps to build your own XLeRobot:
 
 ## Disclaimer
 
-> [!NOTE]
-> If you build, buy, or develop a XLeRobot based on this repo, you will be fully responsible for all the physical and mental damages it does to you or others.
+>   If you build, buy, or develop an XLeRobot based on this repository, you are fully responsible for any damages that may occur.

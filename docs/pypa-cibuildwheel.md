@@ -1,37 +1,42 @@
-# cibuildwheel: Automate Building Python Wheels for Cross-Platform Compatibility
+# cibuildwheel: Automate Building and Testing Python Wheels Across Platforms
 
-**Effortlessly build and test Python wheels across macOS, Linux, Windows, and various Python versions using cibuildwheel, a powerful CI tool!**
+**Easily build and test your Python wheels on Mac, Linux, and Windows with `cibuildwheel`.** ([View on GitHub](https://github.com/pypa/cibuildwheel))
 
-[View the cibuildwheel repository on GitHub](https://github.com/pypa/cibuildwheel)
+[![PyPI](https://img.shields.io/pypi/v/cibuildwheel.svg)](https://pypi.python.org/pypi/cibuildwheel)
+[![Documentation Status](https://readthedocs.org/projects/cibuildwheel/badge/?version=stable)](https://cibuildwheel.pypa.io/en/stable/?badge=stable)
+[![Actions Status](https://github.com/pypa/cibuildwheel/workflows/Test/badge.svg)](https://github.com/pypa/cibuildwheel/actions)
+[![Travis Status](https://img.shields.io/travis/com/pypa/cibuildwheel/main?logo=travis)](https://travis-ci.com/github/pypa/cibuildwheel)
+[![CircleCI Status](https://img.shields.io/circleci/build/gh/pypa/cibuildwheel/main?logo=circleci)](https://circleci.com/gh/pypa/cibuildwheel)
+[![Azure Status](https://dev.azure.com/joerick0429/cibuildwheel/_apis/build/status/pypa.cibuildwheel?branchName=main)](https://dev.azure.com/joerick0429/cibuildwheel/_build/latest?definitionId=4&branchName=main)
 
 ## Key Features
 
-*   **Cross-Platform Support:** Builds wheels for macOS, Linux, Windows, and even Android & iOS, ensuring broad compatibility.
-*   **Multiple Python Versions:**  Supports a wide range of Python versions, including CPython, PyPy, and GraalPy.
-*   **CI Integration:** Works seamlessly with GitHub Actions, Azure Pipelines, Travis CI, CircleCI, GitLab CI, and Cirrus CI.
-*   **Dependency Handling:** Bundles shared library dependencies on Linux and macOS using auditwheel and delocate.
-*   **Automated Testing:** Runs your library's tests against the wheel-installed version, verifying functionality across platforms.
+*   **Cross-Platform Builds:** Automates wheel building for macOS (Intel & Apple Silicon), Linux (manylinux, musllinux), and Windows (32 & 64 bit, and ARM64).
+*   **Multiple Python Versions:** Supports building wheels for various CPython, PyPy, and GraalPy versions.
+*   **CI Integration:**  Seamlessly integrates with GitHub Actions, Azure Pipelines, Travis CI, CircleCI, GitLab CI, and Cirrus CI.
+*   **Dependency Management:** Bundles shared library dependencies on Linux and macOS.
+*   **Automated Testing:** Runs your library's tests against the installed wheel for comprehensive testing.
+*   **Supports Android & iOS:** Build wheels for Android and iOS.
+*   **Pyodide Support:** Build wheels for Pyodide.
 
-## What cibuildwheel Does
+## Supported Platforms
 
-`cibuildwheel` simplifies the complex process of building Python wheels for different operating systems and Python versions.  It leverages your CI server to automate the build and test process, saving you time and effort.
+`cibuildwheel` can target the following platforms to build wheels:
 
-**Supported Platforms and Python Versions**
-
-| Platform        | macOS Intel | macOS Apple Silicon | Windows 64bit | Windows 32bit | Windows Arm64 | manylinux/musllinux x86\_64 | manylinux/musllinux i686 | manylinux/musllinux aarch64 | manylinux/musllinux ppc64le | manylinux/musllinux s390x | manylinux/musllinux armv7l | Android | iOS | Pyodide |
-|-----------------|-------------|---------------------|---------------|---------------|---------------|---------------------------|-------------------------|---------------------------|----------------------------|----------------------------|--------------------------|---------|-----|---------|
-| CPython 3.8     | ✅          | ✅                   | ✅            | ✅            | N/A           | ✅                        | ✅                      | ✅                        | ✅                         | ✅                         | ✅⁵                      | N/A     | N/A | N/A     |
-| CPython 3.9     | ✅          | ✅                   | ✅            | ✅            | ✅²           | ✅                        | ✅                      | ✅                        | ✅                         | ✅                         | ✅⁵                      | N/A     | N/A | N/A     |
-| CPython 3.10    | ✅          | ✅                   | ✅            | ✅            | ✅²           | ✅                        | ✅                      | ✅                        | ✅                         | ✅                         | ✅⁵                      | N/A     | N/A | N/A     |
-| CPython 3.11    | ✅          | ✅                   | ✅            | ✅            | ✅²           | ✅                        | ✅                      | ✅                        | ✅                         | ✅                         | ✅⁵                      | N/A     | N/A | N/A     |
-| CPython 3.12    | ✅          | ✅                   | ✅            | ✅            | ✅²           | ✅                        | ✅                      | ✅                        | ✅                         | ✅                         | ✅⁵                       | N/A     | N/A | ✅⁴     |
-| CPython 3.13³   | ✅          | ✅                   | ✅            | ✅            | ✅²           | ✅                        | ✅                      | ✅                        | ✅                         | ✅                         | ✅⁵                       | ✅      | ✅  | N/A     |
-| CPython 3.14    | ✅          | ✅                   | ✅            | ✅            | ✅²           | ✅                        | ✅                      | ✅                        | ✅                         | ✅                         | ✅⁵                       | N/A     | N/A | N/A     |
-| PyPy 3.8 v7.3   | ✅          | ✅                   | ✅            | N/A           | N/A           | ✅¹                       | ✅¹                    | ✅¹                       | N/A                        | N/A                        | N/A                      | N/A     | N/A | N/A     |
-| PyPy 3.9 v7.3   | ✅          | ✅                   | ✅            | N/A           | N/A           | ✅¹                       | ✅¹                    | ✅¹                       | N/A                        | N/A                        | N/A                      | N/A     | N/A | N/A     |
-| PyPy 3.10 v7.3  | ✅          | ✅                   | ✅            | N/A           | N/A           | ✅¹                       | ✅¹                    | ✅¹                       | N/A                        | N/A                        | N/A                      | N/A     | N/A | N/A     |
-| PyPy 3.11 v7.3  | ✅          | ✅                   | ✅            | N/A           | N/A           | ✅¹                       | ✅¹                    | ✅¹                       | N/A                        | N/A                        | N/A                      | N/A     | N/A | N/A     |
-| GraalPy 3.11 v24.2  | ✅  | ✅  | ✅  | N/A | N/A | ✅¹ | N/A  | ✅¹ | N/A | N/A | N/A | N/A | N/A | N/A |
+| Platform                  | macOS Intel | macOS Apple Silicon | Windows 64bit | Windows 32bit | Windows Arm64 | manylinux/musllinux x86_64 | manylinux/musllinux i686 | manylinux/musllinux aarch64 | manylinux/musllinux ppc64le | manylinux/musllinux s390x | manylinux/musllinux armv7l | Android | iOS | Pyodide |
+|---------------------------|-------------|---------------------|---------------|---------------|---------------|----------------------------|--------------------------|-----------------------------|-----------------------------|-----------------------------|--------------------------|---------|-----|---------|
+| CPython 3.8               | ✅          | ✅                  | ✅            | ✅            | N/A           | ✅                         | ✅                       | ✅                          | ✅                          | ✅                          | ✅⁵       | N/A     | N/A | N/A     |
+| CPython 3.9               | ✅          | ✅                  | ✅            | ✅            | ✅²           | ✅                         | ✅                       | ✅                          | ✅                          | ✅                          | ✅⁵       | N/A     | N/A | N/A     |
+| CPython 3.10              | ✅          | ✅                  | ✅            | ✅            | ✅²           | ✅                         | ✅                       | ✅                          | ✅                          | ✅                          | ✅⁵       | N/A     | N/A | N/A     |
+| CPython 3.11              | ✅          | ✅                  | ✅            | ✅            | ✅²           | ✅                         | ✅                       | ✅                          | ✅                          | ✅                          | ✅⁵       | N/A     | N/A | N/A     |
+| CPython 3.12              | ✅          | ✅                  | ✅            | ✅            | ✅²           | ✅                         | ✅                       | ✅                          | ✅                          | ✅                          | ✅⁵       | N/A     | N/A | ✅⁴      |
+| CPython 3.13              | ✅          | ✅                  | ✅            | ✅            | ✅²           | ✅                         | ✅                       | ✅                          | ✅                          | ✅                          | ✅⁵      | ✅      | ✅  | N/A     |
+| CPython 3.14              | ✅          | ✅                  | ✅            | ✅            | ✅²           | ✅                         | ✅                       | ✅                          | ✅                          | ✅                          | ✅⁵       | N/A     | N/A | N/A     |
+| PyPy 3.8 v7.3             | ✅          | ✅                  | ✅            | N/A           | N/A           | ✅¹                        | ✅¹                     | ✅¹                         | N/A                         | N/A                         | N/A      | N/A     | N/A | N/A     |
+| PyPy 3.9 v7.3             | ✅          | ✅                  | ✅            | N/A           | N/A           | ✅¹                        | ✅¹                     | ✅¹                         | N/A                         | N/A                         | N/A      | N/A     | N/A | N/A     |
+| PyPy 3.10 v7.3            | ✅          | ✅                  | ✅            | N/A           | N/A           | ✅¹                        | ✅¹                     | ✅¹                         | N/A                         | N/A                         | N/A      | N/A     | N/A | N/A     |
+| PyPy 3.11 v7.3            | ✅          | ✅                  | ✅            | N/A           | N/A           | ✅¹                        | ✅¹                     | ✅¹                         | N/A                         | N/A                         | N/A      | N/A     | N/A | N/A     |
+| GraalPy 3.11 v24.2        | ✅          | ✅                  | ✅            | N/A           | N/A           | ✅¹                        | N/A                     | ✅¹                         | N/A                         | N/A                         | N/A      | N/A     | N/A | N/A     |
 
 <sup>¹ PyPy & GraalPy are only supported for manylinux wheels.</sup><br>
 <sup>² Windows arm64 support is experimental.</sup><br>
@@ -41,9 +46,7 @@
 
 ## Usage
 
-`cibuildwheel` is designed to run within a CI service. Refer to the [documentation](https://cibuildwheel.pypa.io) for detailed setup instructions for your specific CI provider.
-
-**Supported CI Platforms**
+`cibuildwheel` runs inside a CI service. Supported platforms depend on which service you're using:
 
 |                 | Linux | macOS | Windows | Linux ARM | macOS ARM | Windows ARM | Android | iOS |
 |-----------------|-------|-------|---------|-----------|-----------|-------------|---------|-----|
@@ -57,11 +60,11 @@
 <sup>¹ [Requires emulation](https://cibuildwheel.pypa.io/en/stable/faq/#emulation), distributed separately. Other services may also support Linux ARM through emulation or third-party build hosts, but these are not tested in our CI.</sup><br>
 <sup>² [Uses cross-compilation](https://cibuildwheel.pypa.io/en/stable/faq/#windows-arm64). It is not possible to test `arm64` on this CI platform.</sup><br>
 <sup>³ Requires a macOS runner; runs tests on the simulator for the runner's architecture.</sup><br>
-<sup>⁴ Building for Android requires the runner to be Linux x86\_64, macOS ARM64 or macOS x86\_64. Testing has [additional requirements](https://cibuildwheel.pypa.io/en/stable/platforms/#android).</sup><br>
+<sup>⁴ Building for Android requires the runner to be Linux x86_64, macOS ARM64 or macOS x86_64. Testing has [additional requirements](https://cibuildwheel.pypa.io/en/stable/platforms/#android).</sup><br>
 
-## Example Setup (GitHub Actions)
+### Example Setup (GitHub Actions)
 
-Here's an example `.github/workflows/wheels.yml` file to build manylinux, musllinux, macOS, and Windows wheels using GitHub Actions:
+Here's a sample `.github/workflows/wheels.yml` file to build wheels on GitHub Actions:
 
 ```yaml
 name: Build
@@ -83,7 +86,7 @@ jobs:
       - uses: actions/setup-python@v5
 
       - name: Install cibuildwheel
-        run: python -m pip install cibuildwheel==3.1.1
+        run: python -m pip install cibuildwheel==3.1.2
 
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse
@@ -98,16 +101,30 @@ jobs:
           path: ./wheelhouse/*.whl
 ```
 
-For comprehensive information, including PyPI deployment, alternative CI services, and the dedicated GitHub Action, explore the full [documentation](https://cibuildwheel.pypa.io) and review the [examples](https://github.com/pypa/cibuildwheel/tree/main/examples).
+For comprehensive guidance, including PyPI deployment and detailed CI service instructions, consult the [documentation](https://cibuildwheel.pypa.io) and explore the [examples](https://github.com/pypa/cibuildwheel/tree/main/examples).
 
-## How It Works
+## How it Works
 
-```
-![](docs/data/how-it-works.png)
+```mermaid
+graph LR
+    A[Start] --> B{Determine Build Targets};
+    B --> C{Install Build Dependencies};
+    C --> D{Create Build Environment};
+    D --> E{Build Wheel for Target};
+    E --> F{Test Wheel};
+    F --> G{Package Wheel};
+    G --> H[Repeat for all targets];
+    H --> I[End];
 ```
 <sup>Explore an interactive version of this diagram [in the docs](https://cibuildwheel.pypa.io/en/stable/#how-it-works).</sup>
 
-## Configuration Options
+## Options
+
+Explore a detailed table of configuration options in the [documentation](https://cibuildwheel.pypa.io/en/stable/configuration/).  These can be specified in `pyproject.toml` or as environment variables.
+
+<!--[[[cog from readme_options_table import get_table; print(get_table()) ]]]-->
+
+<!-- This table is auto-generated from docs/options.md by bin/readme_options_table.py -->
 
 |   | Option | Description |
 |---|---|---|
@@ -141,11 +158,12 @@ For comprehensive information, including PyPI deployment, alternative CI service
 |  | [`debug-traceback`](https://cibuildwheel.pypa.io/en/stable/options/#debug-traceback) | Print full traceback when errors occur. |
 |  | [`build-verbosity`](https://cibuildwheel.pypa.io/en/stable/options/#build-verbosity) | Increase/decrease the output of the build |
 
-These options can be configured in a `pyproject.toml` file or using environment variables. See the [configuration docs](https://cibuildwheel.pypa.io/en/latest/configuration/) for details.
+
+<!--[[[end]]] (sum: FxE3nIgFiY) -->
 
 ## Working Examples
 
-Explore how `cibuildwheel` is used in popular projects:
+Find real-world examples of `cibuildwheel` in action:
 
 <!-- START bin/projects.py -->
 
@@ -187,100 +205,19 @@ Explore how `cibuildwheel` is used in popular projects:
 
 <!-- END bin/projects.py -->
 
-> ℹ️ Find more examples at the [Working Examples](https://cibuildwheel.pypa.io/en/stable/working-examples) page.
+>  Browse more examples on the [Working Examples](https://cibuildwheel.pypa.io/en/stable/working-examples) page.
 
 ## Legal Note
 
-`cibuildwheel` employs `delocate` or `auditwheel` to repair wheels, potentially bundling dynamically linked libraries from the build environment.
-
-This process ensures that your library functions correctly without external dependencies beyond the pip toolchain, similar to static linking.  Therefore, ensure you review the licenses of any included code to confirm compliance.
+`cibuildwheel` uses `delocate` or `auditwheel` to repair wheels, which might bundle dynamically linked libraries.  Ensure that any licenses for code you pull in are compatible with your project.
 
 ## Changelog
 
-### v3.1.1
-
-_24 July 2025_
-
-- 🐛 Fix a bug showing an incorrect wheel count at the end of execution, and misrepresenting test-only runs in the GitHub Action summary (#2512)
-- 📚 Docs fix (#2510)
-
-### v3.1.0
-
-_23 July 2025_
-
-
-- 🌟 CPython 3.14 wheels are now built by default - without the `"cpython-prerelease"` `enable` set. It's time to build and upload these wheels to PyPI! This release includes CPython 3.14.0rc1, which is guaranteed to be ABI compatible with the final release. (#2507) Free-threading is no longer experimental in 3.14, so you have to skip it explicitly with `'cp31?t-*'` if you don't support it yet. (#2503)
-- 🌟 Adds the ability to [build wheels for Android](https://cibuildwheel.pypa.io/en/stable/platforms/#android)! Set the [`platform` option](https://cibuildwheel.pypa.io/en/stable/options/#platform) to `android` on Linux or macOS to try it out! (#2349)
-- 🌟 Adds Pyodide 0.28, which builds 3.13 wheels (#2487)
-- ✨ Support for 32-bit `manylinux_2_28` (now a consistent default) and `manylinux_2_34` added (#2500)
-- 🛠 Improved summary, will also use markdown summary output on GHA (#2469)
-- 🛠 The riscv64 images now have a working default (as they are now part of pypy/manylinux), but are still experimental (and behind an `enable`) since you can't push them to PyPI yet (#2506)
-- 🛠 Fixed a typo in the 3.9 MUSL riscv64 identifier (`cp39-musllinux_ricv64` -> `cp39-musllinux_riscv64`) (#2490)
-- 🛠 Mistyping `--only` now shows the correct possibilities, and even suggests near matches on Python 3.14+ (#2499)
-- 🛠 Only support one output from the repair step on linux like other platforms; auditwheel fixed this over four years ago! (#2478)
-- 🛠 We now use pattern matching extensively (#2434)
-- 📚 We now have platform maintainers for our special platforms and interpreters! (#2481)
-
-
-
-### v3.0.1
-
-_5 July 2025_
-
-- 🛠 Updates CPython 3.14 prerelease to 3.14.0b3 (#2471)
-- ✨ Adds a CPython 3.14 prerelease iOS build (only when prerelease builds are [enabled](https://cibuildwheel.pypa.io/en/stable/options/#enable)) (#2475)
-
-### v3.0.0
-
-_11 June 2025_
-
-See @henryiii's [release post](https://iscinumpy.dev/post/cibuildwheel-3-0-0/) for more info on new features!
-
-- 🌟 Adds the ability to [build wheels for iOS](https://cibuildwheel.pypa.io/en/stable/platforms/#ios)! Set the [`platform` option](https://cibuildwheel.pypa.io/en/stable/options/#platform) to `ios` on a Mac with the iOS toolchain to try it out! (#2286, #2363, #2432)
-- 🌟 Adds support for the GraalPy interpreter! Enable for your project using the [`enable` option](https://cibuildwheel.pypa.io/en/stable/options/#enable). (#1538, #2411, #2414)
-- ✨ Adds CPython 3.14 support, under the [`enable` option](https://cibuildwheel.pypa.io/en/stable/options/#enable) `cpython-prerelease`. This version of cibuildwheel uses 3.14.0b2. (#2390)
-
-    _While CPython is in beta, the ABI can change, so your wheels might not be compatible with the final release. For this reason, we don't recommend distributing wheels until RC1, at which point 3.14 will be available in cibuildwheel without the flag._ (#2390)
-
-- ✨ Adds the [test-sources option](https://cibuildwheel.pypa.io/en/stable/options/#test-sources), which copies files and folders into the temporary working directory we run tests from. (#2062, #2284, #2420, #2437)
-
-    This is particularly important for iOS builds, which do not support placeholders in the `test-command`, but can also be useful for other platforms.
-
-- ✨ Adds [`dependency-versions`](https://cibuildwheel.pypa.io/en/stable/options/#dependency-versions) inline syntax (#2122)
-- ✨ Improves support for Pyodide builds and adds the experimental [`pyodide-version`](https://cibuildwheel.pypa.io/en/stable/options/#pyodide-version) option, which allows you to specify the version of Pyodide to use for builds. (#2002)
-- ✨ Add `pyodide-prerelease` [enable](https://cibuildwheel.pypa.io/en/stable/options/#enable) option, with an early build of 0.28 (Python 3.13). (#2431)
-- ✨ Adds the [`test-environment`](https://cibuildwheel.pypa.io/en/stable/options/#test-environment) option, which allows you to set environment variables for the test command. (#2388)
-- ✨ Adds the [`xbuild-tools`](https://cibuildwheel.pypa.io/en/stable/options/#xbuild-tools) option, which allows you to specify tools safe for cross-compilation. Currently only used on iOS; will be useful for Android in the future. (#2317)
-- 🛠 The default [manylinux image](https://cibuildwheel.pypa.io/en/stable/options/#linux-image) has changed from `manylinux2014` to `manylinux_2_28`. (#2330)
-- 🛠 EOL images `manylinux1`, `manylinux2010`, `manylinux_2_24` and `musllinux_1_1` can no longer be specified by their shortname. The full OCI name can still be used for these images, if you wish. (#2316)
-- 🛠 Invokes `build` rather than `pip wheel` to build wheels by default. You can control this via the [`build-frontend`](https://cibuildwheel.pypa.io/en/stable/options/#build-frontend) option. You might notice that you can see your build log output now! (#2321)
-- 🛠 Build verbosity settings have been reworked to have consistent meanings between build backends when non-zero. (#2339)
-- 🛠 Removed the `CIBW_PRERELEASE_PYTHONS` and `CIBW_FREE_THREADED_SUPPORT` options - these have been folded into the [`enable`](https://cibuildwheel.pypa.io/en/stable/options/#enable) option instead. (#2095)
-- 🛠 Build environments no longer have setuptools and wheel preinstalled. (#2329)
-- 🛠 Use the standard Schema line for the integrated JSONSchema. (#2433)
-- ⚠️ Dropped support for building Python 3.6 and 3.7 wheels. If you need to build wheels for these versions, use cibuildwheel v2.23.3 or earlier. (#2282)
-- ⚠️ The minimum Python version required to run cibuildwheel is now Python 3.11. You can still build wheels for Python 3.8 and newer. (#1912)
-- ⚠️ 32-bit Linux wheels no longer built by default - the [arch](https://cibuildwheel.pypa.io/en/stable/options/#archs) was removed from `"auto"`. It now requires explicit `"auto32"`. Note that modern manylinux images (like the new default, `manylinux_2_28`) do not have 32-bit versions. (#2458)
-- ⚠️ PyPy wheels no longer built by default, due to a change to our options system. To continue building PyPy wheels, you'll now need to set the [`enable` option](https://cibuildwheel.pypa.io/en/stable/options/#enable) to `pypy` or `pypy-eol`. (#2095)
-- ⚠️ Dropped official support for Appveyor. If it was working for you before, it will probably continue to do so, but we can't be sure, because our CI doesn't run there anymore. (#2386)
-- 📚 A reorganisation of the docs, and numerous updates. (#2280)
-- 📚 Use Python 3.14 color output in docs CLI output. (#2407)
-- 📚 Docs now primarily use the pyproject.toml name of options, rather than the environment variable name. (#2389)
-- 📚 README table now matches docs and auto-updates. (#2427, #2428)
-
-### v2.23.3
-
-_26 April 2025_
-
-- 🛠 Dependency updates, including Python 3.13.3 (#2371)
-
->  For a complete history, consult the [Changelog](https://cibuildwheel.pypa.io/en/stable/changelog/) in the documentation.
+*   See the [Changelog](https://cibuildwheel.pypa.io/en/stable/changelog/) for version updates and feature releases.
 
 ## Contributing
 
-Contributions to `cibuildwheel` are welcome!  See the [documentation](https://cibuildwheel.pypa.io/en/latest/contributing/) for contribution guidelines.
-
-We adhere to the [PSF Code of Conduct](https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md) for all interactions.
+Contribute to the project; see the [contributing guidelines](https://cibuildwheel.pypa.io/en/latest/contributing/).
 
 ## Maintainers
 
@@ -291,6 +228,7 @@ We adhere to the [PSF Code of Conduct](https://github.com/pypa/.github/blob/main
 *   Grzegorz Bokota [@Czaki](https://github.com/Czaki)
 
 ## Platform Maintainers
+
 *   Russell Keith-Magee [@freakboy3742](https://github.com/freakboy3742) (iOS)
 *   Agriya Khetarpal [@agriyakhetarpal](https://github.com/agriyakhetarpal) (Pyodide)
 *   Hood Chatham [@hoodmane](https://github.com/hoodmane) (Pyodide)
@@ -298,23 +236,14 @@ We adhere to the [PSF Code of Conduct](https://github.com/pypa/.github/blob/main
 *   Tim Felgentreff [@timfel](https://github.com/timfel) (GraalPy)
 *   Malcolm Smith [@mhsmith](https://github.com/mhsmith) (Android)
 
-
 ## Credits
 
-`cibuildwheel` is built upon the work of many contributors:
-
-*   ⭐️ @matthew-brett for [multibuild](https://github.com/multi-build/multibuild) and [matthew-brett/delocate](http://github.com/matthew-brett/delocate)
+*   @matthew-brett for [multibuild](https://github.com/multi-build/multibuild) and [delocate](http://github.com/matthew-brett/delocate)
 *   @PyPA for the manylinux Docker images [pypa/manylinux](https://github.com/pypa/manylinux)
 *   @ogrisel for [wheelhouse-uploader](https://github.com/ogrisel/wheelhouse-uploader) and `run_with_env.cmd`
 
-And special thanks to:
-
-*   @zfrenchee for [help debugging many issues](https://github.com/pypa/cibuildwheel/issues/2)
-*   @lelit for some great bug reports and [contributions](https://github.com/pypa/cibuildwheel/pull/73)
-*   @mayeut for a [phenomenal PR](https://github.com/pypa/cibuildwheel/pull/71) patching Python itself for better compatibility!
-*   @czaki for being a super-contributor over many PRs and helping out with countless issues!
-*   @mattip for his help with adding PyPy support to cibuildwheel
+And many thanks to the other contributors listed in the original README!
 
 ## See Also
 
-Consider [matthew-brett/multibuild](http://github.com/matthew-brett/multibuild) for a shell script toolbox for building wheels.  For building Rust wheels, see [maturin-action](https://github.com/PyO3/maturin-action).
+Consider [matthew-brett/multibuild](http://github.com/matthew-brett/multibuild) and [maturin-action](https://github.com/PyO3/maturin-action).

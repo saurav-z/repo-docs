@@ -2,9 +2,9 @@
   <img width="300px" alt="Cirq logo" src="https://raw.githubusercontent.com/quantumlib/Cirq/refs/heads/main/docs/images/Cirq_logo_color.svg">
 </div>
 
-## Cirq: Build and Simulate Quantum Circuits with Python
+# Cirq: Build and Simulate Quantum Circuits with Python
 
-**Cirq is a Python library that empowers you to design, manipulate, and execute quantum circuits on quantum computers and simulators.** 
+Cirq is a powerful Python library for building, manipulating, and simulating quantum circuits, empowering researchers and developers to explore the potential of quantum computing. ([View the original repository](https://github.com/quantumlib/Cirq))
 
 [![Licensed under the Apache 2.0 license](https://img.shields.io/badge/License-Apache%202.0-3c60b1.svg?logo=opensourceinitiative&logoColor=white&style=flat-square)](https://github.com/quantumlib/Cirq/blob/main/LICENSE)
 [![Compatible with Python versions 3.11 and higher](https://img.shields.io/badge/Python-3.11+-fcbc2c.svg?style=flat-square&logo=python&logoColor=white)](https://www.python.org/downloads/)
@@ -12,29 +12,27 @@
 [![Cirq project on PyPI](https://img.shields.io/pypi/v/cirq.svg?logo=python&logoColor=white&label=PyPI&style=flat-square&color=fcbc2c)](https://pypi.org/project/cirq)
 [![Archived in Zenodo](https://img.shields.io/badge/10.5281%2Fzenodo.4062499-gray.svg?label=DOI&logo=doi&logoColor=white&style=flat-square&colorA=gray&colorB=3c60b1)](https://doi.org/10.5281/zenodo.4062499)
 
-**Jump to:** [Features](#features) | [Installation](#installation) | [Quick Start](#quick-start--hello-qubit-example) | [Documentation](#cirq-documentation) | [Integrations](#integrations) | [Community](#community) | [Citing Cirq](#citing-cirq)
+**Key Features:**
 
-## Features
+*   **Flexible Gate Definitions:** Define custom quantum gates to match your specific needs.
+*   **Parameterized Circuits:** Build circuits with symbolic variables for enhanced flexibility.
+*   **Circuit Optimization & Compilation:** Transform, optimize and compile quantum circuits for efficient execution.
+*   **Hardware Device Modeling:** Accurately model the characteristics of real quantum hardware.
+*   **Noise Modeling:** Simulate the effects of noise in quantum systems.
+*   **Multiple Simulators:** Utilize built-in simulators for various quantum circuit simulations.
+*   **Integration with qsim:** Leverage qsim for high-performance simulation.
+*   **NumPy & SciPy Interoperability:** Seamlessly integrate with these essential Python libraries.
+*   **Cross-Platform Compatibility:** Compatible with Linux, macOS, Windows, and Google Colab.
 
-Cirq provides powerful tools for working with [noisy intermediate-scale quantum](https://arxiv.org/abs/1801.00862) (NISQ) computers, including:
+## Getting Started
 
-*   **Flexible Gate Definitions:** Create and customize quantum gates.
-*   **Parameterized Circuits:** Use symbolic variables for circuit design.
-*   **Circuit Transformation & Optimization:** Compile and optimize circuits for specific hardware.
-*   **Hardware Device Modeling:** Simulate and model quantum hardware devices.
-*   **Noise Modeling:**  Simulate the effects of noise in quantum systems.
-*   **Multiple Simulators:** Built-in simulators for efficient circuit execution.
-*   **qsim Integration:** Leverage high-performance simulation with [qsim](https://github.com/quantumlib/qsim).
-*   **NumPy and SciPy Interoperability:** Seamlessly integrate with popular scientific computing libraries.
-*   **Cross-Platform Compatibility:** Runs on Linux, macOS, Windows, and Google Colab.
+### Installation
 
-## Installation
+Cirq supports Python 3.11 and later.  Installation is straightforward; detailed instructions can be found in the [Installation section](https://quantumai.google/cirq/start/install) of the online documentation.
 
-Cirq requires Python 3.11 or later.  Detailed installation instructions can be found in the [Cirq documentation](https://quantumai.google/cirq/start/install).
+### Quickstart: "Hello Qubit" Example
 
-## Quick Start – “Hello Qubit” Example
-
-Get started with Cirq quickly:
+Here's a basic example to get you started with Cirq:
 
 ```python
 import cirq
@@ -57,102 +55,61 @@ print("Results:")
 print(result)
 ```
 
-Expected Output:
+## Documentation & Resources
 
-```text
-Circuit:
-(0, 0): ───X^0.5───M('m')───
-Results:
-m=11000111111011001000
-```
-
-Explore more with the [Cirq tutorials](#cirq-documentation) to deepen your understanding.
-
-## Cirq Documentation
-
-Comprehensive documentation is available on the [Cirq home page on the Quantum AI website](https://quantumai.google/cirq).
-
-### Tutorials
-
-*   [Video tutorials](https://www.youtube.com/playlist?list=PLpO2pyKisOjLVt_tDJ2K6ZTapZtHXPLB4): Learn Cirq through engaging video content.
-*   [Jupyter notebook-based tutorials](https://colab.research.google.com/github/quantumlib/Cirq): Interactive tutorials that run in your browser.
-*   [Text-based tutorials](https://quantumai.google/cirq): In-depth tutorials for local installations.
-
-### Reference Documentation
-
-*   [Current stable release](https://quantumai.google/reference/python/cirq/all_symbols): Documentation for the latest stable release.
-*   [Pre-release](https://quantumai.google/reference/python/cirq/all_symbols?version=nightly): Documentation for the pre-release versions.
-
-### Examples
-
-*   [Examples Subdirectory](./examples/):  Discover how to apply Cirq to various quantum algorithms.
-*   [Experiments Page](https://quantumai.google/cirq/experiments/): Explore a range of examples, from basic to advanced.
-
-### Change Log
-
-*   [Cirq releases](https://github.com/quantumlib/cirq/releases): Track the changes in each Cirq release.
+*   **Main Documentation:** [Cirq Home Page](https://quantumai.google/cirq) on the Quantum AI website
+*   **Tutorials:**
+    *   [Video Tutorials](https://www.youtube.com/playlist?list=PLpO2pyKisOjLVt_tDJ2K6ZTapZtHXPLB4)
+    *   [Jupyter Notebook Tutorials](https://colab.research.google.com/github/quantumlib/Cirq)
+    *   [Text-Based Tutorials](https://quantumai.google/cirq)
+*   **Reference Documentation:**
+    *   [Current Stable Release](https://quantumai.google/reference/python/cirq/all_symbols)
+    *   [Pre-release](https://quantumai.google/reference/python/cirq/all_symbols?version=nightly)
+*   **Examples:**
+    *   [Cirq Examples Directory](./examples/)
+    *   [Experiments Page](https://quantumai.google/cirq/experiments/)
+*   **Change Log:** [Cirq Releases](https://github.com/quantumlib/cirq/releases)
 
 ## Integrations
 
-Enhance your Cirq experience with these Google Quantum AI open-source software integrations:
+Enhance your Cirq experience with these Google Quantum AI open-source tools:
 
 <div align="center">
 
 | Your interests                                  | Software to explore  |
 |-------------------------------------------------|----------------------|
-| Quantum algorithms?<br>Fault-tolerant quantum computing (FTQC)? | [Qualtran] |
-| Large circuits and/or a lot of simulations?     | [qsim] |
-| Circuits with thousands of qubits and millions of Clifford operations? | [Stim] |
-| Quantum error correction (QEC)?                 | [Stim] |
-| Chemistry and/or material science?              | [OpenFermion]<br>[OpenFermion-FQE]<br>[OpenFermion-PySCF]<br>[OpenFermion-Psi4] |
-| Quantum machine learning (QML)?                 | [TensorFlow Quantum] |
-| Real experiments using Cirq?                    | [ReCirq] |
+| Quantum algorithms?<br>Fault-tolerant quantum computing (FTQC)? | [Qualtran](https://github.com/quantumlib/qualtran) |
+| Large circuits and/or a lot of simulations?     | [qsim](https://github.com/quantumlib/qsim) |
+| Circuits with thousands of qubits and millions of Clifford operations? | [Stim](https://github.com/quantumlib/stim) |
+| Quantum error correction (QEC)?                 | [Stim](https://github.com/quantumlib/stim) |
+| Chemistry and/or material science?              | [OpenFermion](https://github.com/quantumlib/openfermion)<br>[OpenFermion-FQE](https://github.com/quantumlib/OpenFermion-FQE)<br>[OpenFermion-PySCF](https://github.com/quantumlib/OpenFermion-PySCF)<br>[OpenFermion-Psi4](https://github.com/quantumlib/OpenFermion-Psi4) |
+| Quantum machine learning (QML)?                 | [TensorFlow Quantum](https://github.com/tensorflow/quantum) |
+| Real experiments using Cirq?                    | [ReCirq](https://github.com/quantumlib/ReCirq) |
 
 </div>
 
-[Qualtran]: https://github.com/quantumlib/qualtran
-[qsim]: https://github.com/quantumlib/qsim
-[Stim]: https://github.com/quantumlib/stim
-[OpenFermion]: https://github.com/quantumlib/openfermion
-[OpenFermion-FQE]: https://github.com/quantumlib/OpenFermion-FQE
-[OpenFermion-PySCF]: https://github.com/quantumlib/OpenFermion-PySCF
-[OpenFermion-Psi4]: https://github.com/quantumlib/OpenFermion-Psi4
-[TensorFlow Quantum]: https://github.com/tensorflow/quantum
-[ReCirq]: https://github.com/quantumlib/ReCirq
-
 ## Community
 
-Cirq fosters a vibrant community of contributors.
+Join the Cirq community and contribute to the future of quantum computing!
 
-<a href="https://github.com/quantumlib/Cirq/graphs/contributors"><img width="150em" alt="Total number of contributors to Cirq" src="https://img.shields.io/github/contributors/quantumlib/cirq?label=Contributors&logo=github&color=ccc&style=flat-square"/></a>
-
-*   [Contributions](https://github.com/quantumlib/Cirq/graphs/contributors) from over 200 contributors.
-*   [Code of conduct](https://github.com/quantumlib/cirq/blob/main/CODE_OF_CONDUCT.md) promoting an inclusive environment.
-
-### Stay Updated
-
-*   [`cirq-announce`](https://groups.google.com/forum/#!forum/cirq-announce):  Sign up for the low-volume mailing list for releases and announcements.
-*   GitHub Notifications: Configure [repository notifications] for Cirq.
-*   Atom/RSS: Subscribe to the GitHub [Cirq releases Atom feed].
-*   PyPI: Subscribe to the [PyPI releases RSS feed] for Cirq.
-
-Cirq releases are typically made every quarter.
-
-### Get Involved
-
-*   [Quantum Computing Stack Exchange](https://quantumcomputing.stackexchange.com): Ask questions and use the [`cirq`] tag.
-*   _Cirq Cynq_: Join the biweekly virtual meeting of contributors - sign up to [_cirq-dev_]!
-
-### Contribute
-
-*   [Open an issue on GitHub]: Report feature requests or bugs.
-*   [List of good first issues]: Find issues to contribute to.
-*   [Contribution guidelines](https://github.com/quantumlib/cirq/blob/main/CONTRIBUTING.md): Learn how to contribute to the project.
-*   [Pull requests]: Submit your code contributions.
+*   **Contributors:** [See all contributors](https://github.com/quantumlib/Cirq/graphs/contributors)
+*   **Code of Conduct:** [View the Code of Conduct](https://github.com/quantumlib/cirq/blob/main/CODE_OF_CONDUCT.md)
+*   **Announcements:**
+    *   [`cirq-announce` Mailing List](https://groups.google.com/forum/#!forum/cirq-announce)
+    *   [GitHub Releases Atom Feed](https://github.com/quantumlib/Cirq/releases.atom)
+    *   [PyPI Releases RSS Feed](https://pypi.org/rss/project/cirq/releases.xml)
+*   **Discussions:**
+    *   [Quantum Computing Stack Exchange](https://quantumcomputing.stackexchange.com) (tag: `cirq`)
+    *   Join _Cirq Cynq_, our biweekly virtual meeting of contributors. Sign up to [_cirq-dev_] to get an automatic meeting invitation!
+*   **Contributions:**
+    *   [Open an issue on GitHub](https://github.com/quantumlib/Cirq/issues/new/choose)
+    *   [List of good first issues](https://github.com/quantumlib/Cirq/contribute)
+    *   [Contribution Guidelines](https://github.com/quantumlib/cirq/blob/main/CONTRIBUTING.md)
+    *   [Pull Requests](https://help.github.com/articles/about-pull-requests)
 
 ## Citing Cirq
 
-When referencing Cirq in your publications, please cite the specific version you use using the DOI from [Zenodo](https://doi.org/10.5281/zenodo.4062499).
+Please cite the Cirq version you use in your publications.
 
 <div align="center">
 
@@ -161,32 +118,34 @@ When referencing Cirq in your publications, please cite the specific version you
 
 </div>
 
-Find more citation options on the [Cirq page on Zenodo](https://doi.org/10.5281/zenodo.4062499).
+For more citation options, visit the [Cirq page on Zenodo](https://doi.org/10.5281/zenodo.4062499).
 
 ## Contact
 
-For any inquiries, please email quantum-oss-maintainers@google.com.
+For inquiries, contact: quantum-oss-maintainers@google.com.
 
 ## Disclaimer
 
-This is not an officially supported Google product. This project is not eligible for the [Google Open Source Software Vulnerability Rewards Program](https://bughunters.google.com/open-source-security).
+This is not an officially supported Google product.  This project is not eligible for the [Google Open Source Software Vulnerability Rewards Program](https://bughunters.google.com/open-source-security).
 
 Copyright 2019 The Cirq Developers.
 
 <div align="center">
   <a href="https://quantumai.google">
-    <img width="15%" alt="Google Quantum AI" src="https://raw.githubusercontent.com/quantumlib/Cirq/refs/heads/main/docs/images/quantum-ai-vertical.svg">
+    <img width="15%" alt="Google Quantum AI"
+         src="https://raw.githubusercontent.com/quantumlib/Cirq/refs/heads/main/docs/images/quantum-ai-vertical.svg">
   </a>
 </div>
 ```
-Key improvements:
+Key improvements and SEO considerations:
 
-*   **SEO Optimization:**  Uses relevant keywords (quantum circuits, quantum simulation, Python library).
-*   **Concise Hook:**  The one-sentence summary is clear and action-oriented.
-*   **Clear Headings:**  Uses H2 headings for better organization and readability.
-*   **Bulleted Key Features:**  Easy to scan and understand the core functionalities.
-*   **Improved Formatting:** Consistent use of bolding and links.
-*   **Call to action:**  Encourages readers to explore further with clear "Jump to" links.
-*   **Zenodo Citation:** Provides a clear way to cite the project.
-*   **Includes original content:** All the original content is retained and enhanced.
-*   **Link to original repo:**  Included a link back to the original repository.
+*   **Clear Title and Introduction:**  The title and one-sentence hook immediately tell the user what Cirq is and its purpose.
+*   **Keyword Optimization:**  Uses relevant keywords like "quantum circuits," "quantum computing," "simulation," and "Python library" throughout the description.
+*   **Organized Structure:** Uses clear headings and subheadings for readability and SEO.
+*   **Bulleted Key Features:**  Highlights the key features in a concise, easily scannable format.
+*   **Contextual Links:**  Links to relevant resources and documentation sections, improving user experience and SEO.
+*   **Emphasis on Community:**  Highlights community engagement and contributions.
+*   **Citation Information:**  Clearly explains how to cite Cirq, which helps with discoverability.
+*   **Contact Information:** Provides contact information.
+*   **Disclaimer:** Includes a standard disclaimer.
+*   **Clean Formatting:** Improved markdown for better readability.

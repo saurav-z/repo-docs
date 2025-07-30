@@ -8,7 +8,7 @@
 
 <p align="center">
 <a href="https://github.com/airbytehq/airbyte/stargazers/" target="_blank">
-    <img src="https://img.shields.io/github/stars/airbytehq/airbyte?style=social&label=Star&maxAge=2592000" alt="GitHub stars">
+    <img src="https://img.shields.io/github/stars/airbytehq/airbyte?style=social&label=Star&maxAge=2592000" alt="Star on GitHub">
 </a>
 <a href="https://github.com/airbytehq/airbyte/releases" target="_blank">
     <img src="https://img.shields.io/github/v/release/airbytehq/airbyte?color=white" alt="Release">
@@ -30,56 +30,54 @@
 </a>
 </p>
 
-## Airbyte: Open-Source Data Integration for Modern Data Teams
+## Airbyte: The Open-Source Data Integration Platform
 
-Airbyte is a powerful open-source data integration platform, empowering data engineers to build and manage ELT pipelines from diverse sources to various destinations.  **[Check out the original repository](https://github.com/airbytehq/airbyte)**.
+Airbyte is the leading open-source data integration platform, empowering you to move data from any source to any destination.  [**Check out the original repo here**](https://github.com/airbytehq/airbyte).
 
-### Key Features
+**Key Features:**
 
-*   **Extensive Connector Catalog:** Access a vast library of 300+ pre-built connectors for APIs, databases, data warehouses, and data lakes.
-*   **Open-Source and Customizable:**  Leverage an open-source solution for data movement, enabling customization of existing connectors.
-*   **Simplified Data Pipelines:** Easily build, manage, and monitor ELT (Extract, Load, Transform) data pipelines.
-*   **No-Code Connector Builder:** Quickly create new connectors with our user-friendly no-code connector builder.
-*   **Flexible Deployment Options:** Deploy Airbyte Open Source or use Airbyte Cloud for seamless data integration.
-*   **Integration with Popular Tools:** Orchestrate syncs with tools like Airflow, Prefect, Dagster, and Kestra.
-*   **Active Community:** Engage with the Airbyte community on Slack and the Airbyte Forum, and contribute to the project on GitHub.
+*   **Extensive Connector Catalog:**  Access a vast library of 300+ pre-built connectors for APIs, databases, data warehouses, and data lakes, with new connectors added regularly.
+*   **Open-Source Flexibility:** Customize existing connectors and build your own to perfectly fit your data integration needs.
+*   **No-Code/Low-Code Connector Development:** Easily create new connectors with our intuitive no-code Connector Builder or low-code CDK.
+*   **ELT Pipelines:**  Build Extract, Load, and Transform (ELT) pipelines for efficient data movement.
+*   **Orchestration Support:** Integrate with popular orchestration tools like Airflow, Prefect, Dagster, and Kestra.
+*   **Community Driven:**  Benefit from a vibrant and supportive community, with active discussions, forums, and regular office hours.
 
 ![Airbyte Connections UI](https://github.com/airbytehq/airbyte/assets/38087517/35b01d0b-00bf-407b-87e6-a5cd5cd720b5)
 _Screenshot taken from [Airbyte Cloud](https://cloud.airbyte.com/signup)_.
 
-### Getting Started
+## Getting Started
 
-*   **Deploy:**  [Deploy Airbyte Open Source](https://docs.airbyte.com/quickstart/deploy-airbyte) or set up [Airbyte Cloud](https://docs.airbyte.com/cloud/getting-started-with-airbyte-cloud).
-*   **Create Connectors:** Use the [no-code Connector Builder](https://docs.airbyte.com/connector-development/connector-builder-ui/overview) or [low-code CDK](https://docs.airbyte.com/connector-development/config-based/low-code-cdk-overview).
-*   **Explore:**  Explore popular use cases in our [tutorials](https://airbyte.com/tutorials) and try our [demo app](https://demo.airbyte.io/).
-*   **Orchestration:** Orchestrate Airbyte syncs with [Airflow](https://docs.airbyte.com/operator-guides/using-the-airflow-airbyte-operator), [Prefect](https://docs.airbyte.com/operator-guides/using-prefect-task), [Dagster](https://docs.airbyte.com/operator-guides/using-dagster-integration), [Kestra](https://docs.airbyte.com/operator-guides/using-kestra-plugin), or the [Airbyte API](https://reference.airbyte.com/reference/start).
+*   **Deploy Airbyte:**  Get started by [Deploying Airbyte Open Source](https://docs.airbyte.com/quickstart/deploy-airbyte) or [setting up Airbyte Cloud](https://docs.airbyte.com/cloud/getting-started-with-airbyte-cloud).
+*   **Build Connectors:** Create connectors in minutes with our [no-code Connector Builder](https://docs.airbyte.com/connector-development/connector-builder-ui/overview) or [low-code CDK](https://docs.airbyte.com/connector-development/config-based/low-code-cdk-overview).
+*   **Explore Use Cases:** Discover popular use cases with our [tutorials](https://airbyte.com/tutorials).
+*   **Orchestrate Syncs:** Orchestrate Airbyte syncs with [Airflow](https://docs.airbyte.com/operator-guides/using-the-airflow-airbyte-operator), [Prefect](https://docs.airbyte.com/operator-guides/using-prefect-task), [Dagster](https://docs.airbyte.com/operator-guides/using-dagster-integration), [Kestra](https://docs.airbyte.com/operator-guides/using-kestra-plugin), or the [Airbyte API](https://reference.airbyte.com/reference/start).
 
-### Join the Airbyte Community
+Try it out yourself with our [demo app](https://demo.airbyte.io/), visit our [full documentation](https://docs.airbyte.com/), and learn more about [recent announcements](https://airbyte.com/blog-categories/company-updates). See our [registry](https://connectors.airbyte.com/files/generated_reports/connector_registry_report.html) for a full list of connectors already available in Airbyte or Airbyte Cloud.
 
-*   **Slack:** [Airbyte Community Slack](https://airbyte.com/community)
-*   **Forum:** [Airbyte Forum](https://github.com/airbytehq/airbyte/discussions)
-*   **Office Hours:** [Airbyte Office Hours](https://airbyte.io/daily-office-hours/)
-*   **Roadmap:** [GitHub](https://github.com/orgs/airbytehq/projects/37/views/1?pane=issue&itemId=26937554)
-*   **Content:** Check out our [Content Hub](https://airbyte.com/content-hub), [YouTube](https://www.youtube.com/c/AirbyteHQ), and sign up for our [newsletter](https://airbyte.com/newsletter).
+## Join the Airbyte Community
 
-### Contributing
+The Airbyte community can be found in the [Airbyte Community Slack](https://airbyte.com/community), where you can ask questions and voice ideas. You can also ask for help in our [Airbyte Forum](https://github.com/airbytehq/airbyte/discussions), or join our [Office Hours](https://airbyte.io/daily-office-hours/). Airbyte's roadmap is publicly viewable on [GitHub](https://github.com/orgs/airbytehq/projects/37/views/1?pane=issue&itemId=26937554).
 
-*   **Report Issues:** Open a [GitHub issue](https://github.com/airbytehq/airbyte/issues/new/choose).
-*   **Contribute:** See the [contributing guide](https://docs.airbyte.com/contributing-to-airbyte/).
-*   **Good First Issues:** Explore [good first issues](https://github.com/airbytehq/airbyte/labels/contributor-program).
+For videos and blogs on data engineering and building your data stack, check out Airbyte's [Content Hub](https://airbyte.com/content-hub), [YouTube](https://www.youtube.com/c/AirbyteHQ), and sign up for our [newsletter](https://airbyte.com/newsletter).
 
-### Security
+## Contributing
 
-*   **Report Vulnerabilities:** Email `security@airbyte.io`.
-*   **Airbyte Enterprise:** Learn about additional security features at [Airbyte Enterprise](https://airbyte.com/airbyte-enterprise).
+If you've found a problem with Airbyte, please open a [GitHub issue](https://github.com/airbytehq/airbyte/issues/new/choose). To contribute to Airbyte and see our Code of Conduct, please see the [contributing guide](https://docs.airbyte.com/contributing-to-airbyte/). We have a list of [good first issues](https://github.com/airbytehq/airbyte/labels/contributor-program) that contain bugs that have a relatively limited scope. This is a great place to get started, gain experience, and get familiar with our contribution process.
 
-### License
+## Security
+
+Airbyte takes security issues very seriously. **Please do not file GitHub issues or post on our public forum for security vulnerabilities**. Email `security@airbyte.io` if you believe you have uncovered a vulnerability. In the message, try to provide a description of the issue and ideally a way of reproducing it. The security team will get back to you as soon as possible.
+
+[Airbyte Enterprise](https://airbyte.com/airbyte-enterprise) also offers additional security features (among others) on top of Airbyte open-source.
+
+## License
 
 See the [LICENSE](docs/project-overview/licenses/) file for licensing information, and our [FAQ](docs/project-overview/licenses/license-faq.md) for any questions you may have on that topic.
 
-### Thank You
+## Thank You
 
-Visit our [thank you page](THANK-YOU.md) to learn more.
+Airbyte would not be possible without the support and assistance of other open-source tools and companies! Visit our [thank you page](THANK-YOU.md) to learn more about how we build Airbyte.
 
 <a href="https://github.com/airbytehq/airbyte/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=airbytehq/airbyte"/>

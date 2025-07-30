@@ -1,26 +1,27 @@
-# pytest-asyncio: Seamlessly Test Your Asynchronous Python Code
+# pytest-asyncio: Seamlessly Test Asynchronous Python Code with pytest
 
-Effortlessly test your asynchronous Python applications with `pytest-asyncio`, a powerful plugin that extends the functionality of the popular pytest testing framework.  **[View the original repository on GitHub](https://github.com/pytest-dev/pytest-asyncio)**
+**Effortlessly test your asynchronous Python code using pytest with the pytest-asyncio plugin, enabling cleaner, more readable tests.**
 
-## Key Features of pytest-asyncio:
+[See the original repository on GitHub](https://github.com/pytest-dev/pytest-asyncio)
 
-*   **Enables Async Test Functions:** Write and execute tests using Python's `asyncio` library directly within your pytest setup.
-*   **Awaits Coroutines:**  Easily `await` asynchronous code inside your test functions for clean and readable testing.
-*   **Simple Installation:**  Install with a straightforward `pip install pytest-asyncio` command.
-*   **pytest Integration:** Seamlessly integrates with the pytest testing framework, leveraging its existing features and extensibility.
-*   **Comprehensive Documentation:**  Detailed documentation is available to guide you through the plugin's usage and advanced features.
+## Key Features of pytest-asyncio
 
-## How pytest-asyncio Works
+*   **Asyncio Support:** Directly test code that uses the `asyncio` library.
+*   **Coroutine Test Functions:** Write tests using coroutines (functions defined with `async def`).
+*   **Awaitable Code:**  Use `await` within your tests to interact with asynchronous functions and operations.
+*   **Easy Integration:** Seamlessly integrates with the pytest testing framework.
 
-This plugin empowers you to write asynchronous tests with ease. For example:
+## How it Works
+
+pytest-asyncio enhances pytest to recognize and execute coroutines as test functions.  Simply decorate your test functions with `@pytest.mark.asyncio` and `await` your asynchronous code within them.
 
 ```python
 import pytest
 
 @pytest.mark.asyncio
-async def test_some_asyncio_code():
-    res = await library.do_something()
-    assert b"expected result" == res
+async def test_async_function():
+    result = await my_async_function()
+    assert result == "expected_value"
 ```
 
 ## Installation
@@ -31,12 +32,13 @@ Install pytest-asyncio using pip:
 pip install pytest-asyncio
 ```
 
-pytest will automatically discover and utilize the plugin after installation.
+pytest will automatically discover and use the plugin.
 
 ## Contributing
 
-Contributions are highly encouraged! Ensure test coverage remains consistent before submitting a pull request; run tests with `tox`.
+Contributions are welcome! Run tests using `tox` and ensure that test coverage remains at least the same before submitting pull requests.
 
-## License
+## Further Information
 
-pytest-asyncio is released under the [Apache License 2.0](https://github.com/pytest-dev/pytest-asyncio/blob/main/LICENSE).
+*   **Documentation:**  [pytest-asyncio Documentation](https://pytest-asyncio.readthedocs.io/en/latest/)
+*   **License:** Apache License 2.0 ([LICENSE](https://github.com/pytest-dev/pytest-asyncio/blob/main/LICENSE))

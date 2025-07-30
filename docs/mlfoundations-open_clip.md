@@ -1,28 +1,38 @@
-# OpenCLIP: Open Source CLIP Implementation for Image-Text Understanding
+# OpenCLIP: State-of-the-Art Image-Text Understanding
 
-**OpenCLIP empowers researchers and developers with a powerful open-source implementation of OpenAI's CLIP (Contrastive Language-Image Pre-training) model, enabling advanced image-text understanding capabilities.**  Explore the original repo [here](https://github.com/mlfoundations/open_clip).
+**OpenCLIP provides open-source implementations of CLIP models, enabling cutting-edge image-text understanding through contrastive learning.**
 
-*   **Reproducible Scaling Laws:** Train models on diverse datasets, from small-scale experiments to massive datasets like LAION-2B and DataComp-1B.  Our paper details reproducible scaling laws for contrastive language-image learning.
-*   **Pre-trained Models:** Access a wide array of pre-trained models, including ConvNext, ViT, and SigLIP, with detailed zero-shot ImageNet-1k accuracy results.  Browse a comprehensive list of pretrained models [here](docs/PRETRAINED.md).
-*   **Flexible Usage:**  Easily integrate OpenCLIP into your projects using the provided Python package and example code.  Leverage our [interactive Colab notebooks](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb) and [CoCa Colab](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb) for hands-on experience.
-*   **Training & Fine-tuning:** Comprehensive training scripts and guidance for fine-tuning on downstream classification tasks.  For fine-tuning code, see [WiSE-FT](https://github.com/mlfoundations/wise-ft) for robust fine-tuning techniques.
-*   **CoCa Model Support:** Includes training and generation examples for CoCa models (Contrastive Captions), allowing for image captioning and text generation tasks.
-*   **Efficient Data Handling:** Supports webdataset format and integration with img2dataset for large-scale datasets.
+[[Paper]](https://arxiv.org/abs/2212.07143) | [[Citations]](#citing) | [[Colab: CLIP]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb) | [[Colab: CoCa]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb) | [![PyPI](https://img.shields.io/pypi/v/open_clip_torch.svg)](https://pypi.python.org/pypi/open_clip_torch) | [Original Repo](https://github.com/mlfoundations/open_clip)
+
+OpenCLIP offers a powerful toolkit for researchers and developers interested in image-text models, providing:
+
+*   **Pre-trained Models:** Access a wide range of models trained on diverse datasets like LAION-400M, LAION-2B, and DataComp-1B, including state-of-the-art architectures.
+*   **Reproducibility:**  Train your own CLIP models, and reproduce the models of the paper "[Reproducible scaling laws for contrastive language-image learning](https://arxiv.org/abs/2212.07143)".
+*   **Flexible Usage:** Easily integrate OpenCLIP models into your projects with a simple Python API for encoding images and text.
+*   **Efficient Training:** Optimize training with multi-GPU support, gradient accumulation, and other advanced features.
+*   **Fine-tuning:** Code for fine-tuning the zero-shot models is available in [WiSE-FT](https://github.com/mlfoundations/wise-ft).
+*   **CoCa Support:** Supports training and interacting with CoCa models.
 
 ## Key Features
 
-*   **State-of-the-art Models:** Utilize models trained on massive datasets for high-performance image-text understanding.
-*   **Ease of Use:** Simple installation and a user-friendly API make it easy to get started.
-*   **Customization:** Train your own models, fine-tune existing models, and experiment with different architectures.
-*   **Scalability:** Supports multi-GPU and distributed training for efficient large-scale model training.
-*   **Model Distillation:**  Distill models for improved performance on smaller models
-*   **Int8 Support:** Beta support for int8 training and inference for faster training.
+*   **Wide Variety of Models:** Includes ConvNext, ViT (Vision Transformer), and SigLIP models, with different sizes and training data.
+*   **Zero-Shot Performance:** Explore impressive zero-shot ImageNet-1k accuracy and performance on 38 datasets.
+*   **Easy Installation:** Install with `pip install open_clip_torch`.
+*   **Model Loading:** Easily load pre-trained and untrained models with `open_clip.create_model_and_transforms`.
+*   **Training Scripts:** Offers comprehensive training scripts for single and multi-GPU environments, including SLURM support.
+*   **Data Handling:** Supports webdataset and CSV datasets.
+*   **Int8 Support:** Beta support for int8 training and inference for faster training and inference.
+*   **Hugging Face Integration:** Push models to the Hugging Face Hub.
 
 ## Quick Start
+
+### Installation
 
 ```bash
 pip install open_clip_torch
 ```
+
+### Usage
 
 ```python
 import torch
@@ -48,37 +58,40 @@ print("Label probs:", text_probs)
 ```
 
 ## Pre-trained Models
-Explore available pre-trained models using:
+
+See [here](docs/PRETRAINED.md) for more details about the pre-trained models. You can find available models using:
 
 ```python
->>> import open_clip
->>> open_clip.list_pretrained()
+import open_clip
+open_clip.list_pretrained()
 ```
-More details about the models we support (e.g. number of parameters, FLOPs) are available in [this table](docs/model_profile.csv).
 
-## Training and Fine-tuning
+## Training CLIP
 
-Comprehensive instructions and examples are provided for training CLIP models from scratch.  Utilize multi-GPU training and options for optimization.  Detailed guides are also available for fine-tuning on downstream tasks such as image classification.
-See the "Training CLIP" section in the original README for more details, including:
+Detailed instructions for training CLIP models are available in the original README.
 
-*   Installation instructions for training.
-*   Single-process running code examples.
-*   Multi-GPU and SLURM training setup.
-*   Resuming from checkpoints.
-*   CoCa Training, Generating, and Fine-tuning.
-*   Model Distillation.
-*   Gradient accumulation.
-*   Int8 support.
+## Evaluation and Zero-Shot
 
-## Evaluation
+Evaluate your models using the provided scripts or integrate them with external evaluation frameworks.  We recommend [CLIP_benchmark](https://github.com/LAION-AI/CLIP_benchmark#how-to-use).
 
-Evaluate your models using the provided scripts and the [CLIP_benchmark](https://github.com/LAION-AI/CLIP_benchmark) framework.
+## CoCa
 
-## Acknowledgments & Citation
+OpenCLIP also supports CoCa models. See details in the original README.
 
-This project is a collaborative effort.  We thank the Gauss Centre for Supercomputing e.V. and the John von Neumann Institute for Computing (NIC) for providing computing resources.
+## Acknowledgments
+
+We gratefully acknowledge the Gauss Centre for Supercomputing e.V. (www.gauss-centre.eu) for funding this part of work by providing computing time through the John von Neumann Institute for Computing (NIC) on the GCS Supercomputer JUWELS Booster at Jülich Supercomputing Centre (JSC).
+
+## The Team
+
+Current development of this repository is led by [Ross Wightman](https://rwightman.com/), [Romain Beaumont](https://github.com/rom1504), [Cade Gordon](http://cadegordon.io/), and [Vaishaal Shankar](http://vaishaal.com/).
+
+The original version of this repository is from a group of researchers at UW, Google, Stanford, Amazon, Columbia, and Berkeley.
+
+## Citing
 
 If you found this repository useful, please consider citing:
+
 ```bibtex
 @software{ilharco_gabriel_2021_5143773,
   author       = {Ilharco, Gabriel and
@@ -104,4 +117,49 @@ If you found this repository useful, please consider citing:
   url          = {https://doi.org/10.5281/zenodo.5143773}
 }
 ```
-and the other citations available in the original README.
+
+```bibtex
+@inproceedings{cherti2023reproducible,
+  title={Reproducible scaling laws for contrastive language-image learning},
+  author={Cherti, Mehdi and Beaumont, Romain and Wightman, Ross and Wortsman, Mitchell and Ilharco, Gabriel and Gordon, Cade and Schuhmann, Christoph and Schmidt, Ludwig and Jitsev, Jenia},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={2818--2829},
+  year={2023}
+}
+```
+
+```bibtex
+@inproceedings{Radford2021LearningTV,
+  title={Learning Transferable Visual Models From Natural Language Supervision},
+  author={Alec Radford and Jong Wook Kim and Chris Hallacy and A. Ramesh and Gabriel Goh and Sandhini Agarwal and Girish Sastry and Amanda Askell and Pamela Mishkin and Jack Clark and Gretchen Krueger and Ilya Sutskever},
+  booktitle={ICML},
+  year={2021}
+}
+```
+
+```bibtex
+@inproceedings{schuhmann2022laionb,
+  title={{LAION}-5B: An open large-scale dataset for training next generation image-text models},
+  author={Christoph Schuhmann and
+          Romain Beaumont and
+          Richard Vencu and
+          Cade W Gordon and
+          Ross Wightman and
+          Mehdi Cherti and
+          Theo Coombes and
+          Aarush Katta and
+          Clayton Mullis and
+          Mitchell Wortsman and
+          Patrick Schramowski and
+          Srivatsa R Kundurthy and
+          Katherine Crowson and
+          Ludwig Schmidt and
+          Robert Kaczmarczyk and
+          Jenia Jitsev},
+  booktitle={Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  year={2022},
+  url={https://openreview.net/forum?id=M3Y74vmsMcY}
+}
+```
+
+[![DOI](https://zenodo.org/badge/390536799.svg)](https://zenodo.org/badge/latestdoi/390536799)

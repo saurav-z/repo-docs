@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  <em>Supercharge Your AI Agent Development with AgentOps: Build, Monitor, and Optimize!</em>
+  <em>**Supercharge Your AI Agents with AgentOps: Observe, Debug, and Optimize**</em>
 </div>
 
 <br />
@@ -53,43 +53,43 @@
 
 <br/>
 
-AgentOps is your all-in-one platform for building, evaluating, and monitoring AI agents, taking you from prototype to production with ease.
+AgentOps provides developers with the essential observability, debugging, and evaluation tools for building and monitoring high-performing AI agents, from prototype to production.  [Visit our GitHub repo](https://github.com/AgentOps-AI/agentops).
 
 ## Key Features
 
-*   ✅ **Replay Analytics and Debugging:** Step-by-step agent execution graphs for detailed analysis.
-*   💸 **LLM Cost Management:** Track and manage your LLM spend across different providers.
-*   🧪 **Agent Benchmarking:** Test your agents against 1,000+ evaluations.
-*   🔐 **Compliance and Security:** Detect prompt injection and data exfiltration vulnerabilities.
-*   🤝 **Framework Integrations:** Seamlessly integrates with CrewAI, AG2 (AutoGen), Camel AI, Langchain, and more.
+*   **Replay Analytics and Debugging:** Step-by-step agent execution graphs.
+*   **LLM Cost Management:** Track LLM spend with leading providers.
+*   **Agent Benchmarking:** Test agents against 1,000+ evaluations.
+*   **Compliance and Security:** Detect prompt injection and data exfiltration.
+*   **Framework Integrations:** Native integrations with CrewAI, AG2 (AutoGen), Camel AI, and LangChain.
 
-## Getting Started
+## Quick Start
 
-1.  **Install AgentOps:**
+Install AgentOps with pip:
 
-    ```bash
-    pip install agentops
-    ```
+```bash
+pip install agentops
+```
 
-2.  **Get Your API Key:**  Sign up for a free account and get your API key on the [AgentOps dashboard](https://app.agentops.ai/settings/projects).
+Add session replays with 2 lines of code:
 
-3.  **Initialize AgentOps in Your Code:**  Add the following lines to your Python code to start tracking your agent's performance.
+1.  Get an API key:  [Get an API key](https://app.agentops.ai/settings/projects)
+2.  Initialize AgentOps in your code:
 
-    ```python
-    import agentops
+```python
+import agentops
 
-    # Initialize AgentOps at the beginning of your program
-    agentops.init( < INSERT YOUR API KEY HERE >)
+# Beginning of your program (i.e. main.py, __init__.py)
+agentops.init( < INSERT YOUR API KEY HERE >)
 
-    # ... your agent code ...
+...
 
-    # End the session
-    agentops.end_session('Success')
-    ```
+# End of program
+agentops.end_session('Success')
+```
 
-4.  **View Your Analytics:**  Visit the [AgentOps dashboard](https://app.agentops.ai?ref=gh) to view session replays, analytics, and debug your agents.
+View your sessions on the [AgentOps dashboard](https://app.agentops.ai?ref=gh).
 
-### Agent Debugging
 <details>
   <summary>Agent Debugging</summary>
   <a href="https://app.agentops.ai?ref=gh">
@@ -103,7 +103,6 @@ AgentOps is your all-in-one platform for building, evaluating, and monitoring AI
   </a>
 </details>
 
-### Session Replays
 <details>
   <summary>Session Replays</summary>
   <a href="https://app.agentops.ai?ref=gh">
@@ -111,7 +110,6 @@ AgentOps is your all-in-one platform for building, evaluating, and monitoring AI
   </a>
 </details>
 
-### Summary Analytics
 <details>
   <summary>Summary Analytics</summary>
   <a href="https://app.agentops.ai?ref=gh">
@@ -122,12 +120,11 @@ AgentOps is your all-in-one platform for building, evaluating, and monitoring AI
   </a>
 </details>
 
+## Advanced Usage: First Class Developer Experience
 
-## Supercharge your Agents with First-Class Developer Experience
+Add powerful observability to your agents, tools, and functions with minimal code using decorators.
 
-Add powerful observability to your agents, tools, and functions with as little code as possible.
-
-*   Refer to our [documentation](http://docs.agentops.ai) for detailed guides and examples.
+Refer to our [documentation](http://docs.agentops.ai) for details.
 
 ```python
 # Create a session span (root for all other spans)
@@ -193,20 +190,22 @@ def my_session():
 ```
 
 All decorators support:
-- Input/Output Recording
-- Exception Handling
-- Async/await functions
-- Generator functions
-- Custom attributes and names
 
-## Integrations 🦾
+*   Input/Output Recording
+*   Exception Handling
+*   Async/await functions
+*   Generator functions
+*   Custom attributes and names
 
-### OpenAI Agents SDK 🖇️
+## Integrations
 
-AgentOps seamlessly integrates with the OpenAI Agents SDKs for both Python and TypeScript.
+AgentOps seamlessly integrates with popular AI agent frameworks, including:
+
+### OpenAI Agents SDK
+
+Integrate with OpenAI Agents SDKs (Python and Typescript)
 
 #### Python
-
 ```bash
 pip install openai-agents
 ```
@@ -215,7 +214,6 @@ pip install openai-agents
 *   [OpenAI Agents Python documentation](https://openai.github.io/openai-agents-python/)
 
 #### TypeScript
-
 ```bash
 npm install agentops @openai/agents
 ```
@@ -223,9 +221,9 @@ npm install agentops @openai/agents
 *   [TypeScript integration guide](https://docs.agentops.ai/v2/integrations/openai_agents_js)
 *   [OpenAI Agents JS documentation](https://openai.github.io/openai-agents-js)
 
-### CrewAI 🛶
+### CrewAI
 
-Integrate CrewAI agents with observability in just 2 lines of code, set the `AGENTOPS_API_KEY` environment variable and get automatic monitoring.
+Add observability to CrewAI agents in 2 lines of code.
 
 ```bash
 pip install 'crewai[agentops]'
@@ -234,15 +232,16 @@ pip install 'crewai[agentops]'
 *   [AgentOps integration example](https://docs.agentops.ai/v1/integrations/crewai)
 *   [Official CrewAI documentation](https://docs.crewai.com/how-to/AgentOps-Observability)
 
-### AG2 🤖
-Add full observability and monitoring to AG2 (formerly AutoGen) agents with a simple `agentops.init()` call.
+### AG2 (AutoGen)
+
+Add full observability and monitoring to AG2 (formerly AutoGen) agents with only two lines of code.
 
 *   [AG2 Observability Example](https://docs.ag2.ai/notebooks/agentchat_agentops)
 *   [AG2 - AgentOps Documentation](https://docs.ag2.ai/docs/ecosystem/agentops)
 
-### Camel AI 🐪
+### Camel AI
 
-Track and analyze CAMEL agents with full observability. Set an `AGENTOPS_API_KEY` in your environment and initialize AgentOps to get started.
+Track and analyze CAMEL agents with full observability.
 
 *   [Camel AI](https://www.camel-ai.org/) - Advanced agent communication framework
 *   [AgentOps integration example](https://docs.agentops.ai/v1/integrations/camel)
@@ -299,9 +298,9 @@ agentops.end_session("Success")
 Check out our [Camel integration guide](https://docs.agentops.ai/v1/integrations/camel) for more examples including multi-agent scenarios.
 </details>
 
-### Langchain 🦜🔗
+### Langchain
 
-AgentOps integrates with Langchain applications; install the Langchain as an optional dependency and set the callback handler to enable Langchain agent observability.
+AgentOps integrates with Langchain applications.
 
 <details>
   <summary>Installation</summary>
@@ -337,9 +336,9 @@ Check out the [Langchain Examples Notebook](./examples/langchain/langchain_examp
 
 </details>
 
-### Cohere ⌨️
+### Cohere
 
-AgentOps supports Cohere(>=5.4.0) for first-class observability, with more to come. Message us on Discord if you need any added functionality.
+First class support for Cohere(>=5.4.0).
 
 *   [AgentOps integration example](https://docs.agentops.ai/v1/integrations/cohere)
 *   [Official Cohere documentation](https://docs.cohere.com/reference/about)
@@ -389,8 +388,7 @@ agentops.end_session('Success')
 ```
 </details>
 
-
-### Anthropic ﹨
+### Anthropic
 
 Track agents built with the Anthropic Python SDK (>=0.32.0).
 
@@ -496,7 +494,7 @@ await main()
 ```
 </details>
 
-### Mistral 〽️
+### Mistral
 
 Track agents built with the Mistral Python SDK (>=0.32.0).
 
@@ -639,7 +637,7 @@ await main()
 ```
 </details>
 
-### CamelAI ﹨
+### CamelAI
 
 Track agents built with the CamelAI Python SDK (>=0.32.0).
 
@@ -670,9 +668,9 @@ agentops_api_key = os.getenv("AGENTOPS_API_KEY") or "<your agentops key here>"
 
 [You can find usage examples here!](examples/camelai_examples/README.md).
 
-### LiteLLM 🚅
+### LiteLLM
 
-AgentOps supports LiteLLM(>=1.3.1), allowing you to call 100+ LLMs using the same Input/Output Format.
+AgentOps provides support for LiteLLM(>=1.3.1), allowing you to call 100+ LLMs using the same Input/Output Format.
 
 *   [AgentOps integration example](https://docs.agentops.ai/v1/integrations/litellm)
 *   [Official LiteLLM documentation](https://docs.litellm.ai/docs/providers)
@@ -699,9 +697,9 @@ response = await litellm.acompletion(model="claude-3", messages=messages)
 ```
 </details>
 
-### LlamaIndex 🦙
+### LlamaIndex
 
-AgentOps integrates with LlamaIndex, use the following install steps for observability.
+AgentOps works seamlessly with LlamaIndex, a framework for context-augmented generative AI applications with LLMs.
 
 <details>
   <summary>Installation</summary>
@@ -726,17 +724,17 @@ Check out the [LlamaIndex docs](https://docs.llamaindex.ai/en/stable/module_guid
 
 </details>
 
-### Llama Stack 🦙🥞
+### Llama Stack
 
-AgentOps provides support for Llama Stack Python Client(>=0.0.53), allowing you to monitor your Agentic applications. 
+AgentOps provides support for Llama Stack Python Client(>=0.0.53), allowing you to monitor your Agentic applications.
 
 *   [AgentOps integration example 1](https://github.com/AgentOps-AI/agentops/pull/530/files/65a5ab4fdcf310326f191d4b870d4f553591e3ea#diff-fdddf65549f3714f8f007ce7dfd1cde720329fe54155d54389dd50fbd81813cb)
 *   [AgentOps integration example 2](https://github.com/AgentOps-AI/agentops/pull/530/files/65a5ab4fdcf310326f191d4b870d4f553591e3ea#diff-6688ff4fb7ab1ce7b1cc9b8362ca27264a3060c16737fb1d850305787a6e3699)
 *   [Official Llama Stack Python Client](https://github.com/meta-llama/llama-stack-client-python)
 
-### SwarmZero AI 🐝
+### SwarmZero AI
 
-Track and analyze SwarmZero agents with full observability. Set an `AGENTOPS_API_KEY` in your environment and initialize AgentOps to get started.
+Track and analyze SwarmZero agents with full observability.
 
 *   [SwarmZero](https://swarmzero.ai) - Advanced multi-agent framework
 *   [AgentOps integration example](https://docs.agentops.ai/v1/integrations/swarmzero)
@@ -764,37 +762,22 @@ from swarmzero import Agent, Swarm
 ```
 </details>
 
-## Evaluations Roadmap 🧭
+## Evaluations Roadmap
 
-| Platform                                                                     | Dashboard                                  | Evals                                  |
-| ---------------------------------------------------------------------------- | ------------------------------------------ | -------------------------------------- |
-| ✅ Python SDK                                                                | ✅ Multi-session and Cross-session metrics | ✅ Custom eval metrics                 |
-| 🚧 Evaluation builder API                                                    | ✅ Custom event tag tracking              | 🔜 Agent scorecards                    |
-| 🚧 [Javascript/Typescript SDK (Alpha)](https://github.com/AgentOps-AI/agentops-node) | ✅ Session replays                         | 🔜 Evaluation playground + leaderboard |
+### Debugging Roadmap
 
-## Debugging Roadmap 🧭
+### Why AgentOps?
 
-| Performance testing                       | Environments                                                                        | LLM Testing                                 | Reasoning and execution testing                   |
-| ----------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------- |
-| ✅ Event latency analysis                 | 🔜 Non-stationary environment testing                                               | 🔜 LLM non-deterministic function detection | 🚧 Infinite loops and recursive thought detection |
-| ✅ Agent workflow execution pricing       | 🔜 Multi-modal environments                                                         | 🚧 Token limit overflow flags               | 🔜 Faulty reasoning detection                     |
-| 🚧 Success validators (external)          | 🔜 Execution containers                                                             | 🔜 Context limit overflow flags             | 🔜 Generative code validators                     |
-| 🔜 Agent controllers/skill tests          | ✅ Honeypot and prompt injection detection ([PromptArmor](https://promptarmor.com)) | ✅ API bill tracking                        | 🔜 Error breakpoint analysis                      |
-| 🔜 Information context constraint testing | 🔜 Anti-agent roadblocks (i.e. Captchas)                                            | 🔜 CI/CD integration checks                 |                                                   |
-| 🔜 Regression testing                     | ✅ Multi-agent framework visualization                                              |                                             |                                                   |
+AgentOps helps you build production-ready AI agents by providing essential observability, testing, and monitoring.
 
-### Why AgentOps? 🤔
-
-AgentOps simplifies AI agent observability, testing, and monitoring. AgentOps delivers:
-
-*   **Comprehensive Observability:**  Track performance, user interactions, and API usage.
-*   **Real-Time Monitoring:** Get instant insights with session replays, metrics, and live monitoring tools.
-*   **Cost Control:** Monitor and manage your LLM and API call expenses.
+*   **Comprehensive Observability:** Track AI agent performance, user interactions, and API usage.
+*   **Real-Time Monitoring:**  Gain instant insights with session replays, metrics, and live monitoring.
+*   **Cost Control:**  Monitor and manage LLM and API costs.
 *   **Failure Detection:** Quickly identify and respond to agent failures and multi-agent interaction issues.
-*   **Tool Usage Statistics:** Understand how your agents utilize external tools with detailed analytics.
-*   **Session-Wide Metrics:** Gain a holistic view of your agents' sessions with comprehensive statistics.
+*   **Tool Usage Statistics:**  Understand how your agents utilize external tools with detailed analytics.
+*   **Session-Wide Metrics:** Get a holistic view of agent sessions with comprehensive statistics.
 
-AgentOps simplifies agent observability, testing, and monitoring.
+AgentOps makes agent observability, testing, and monitoring easy!
 
 ## Star History
 
@@ -818,4 +801,10 @@ Check out our growth in the community:
 |<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/173542722?s=48&v=4" width="20" height="20" alt="">  &nbsp; [swarmzero](https://github.com/swarmzero) / [swarmzero](https://github.com/swarmzero/swarmzero) | 195 |
 |<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/3074263?s=40&v=4" width="20" height="20" alt="">  &nbsp; [strnad](https://github.com/strnad) / [CrewAI-Studio](https://github.com/strnad/CrewAI-Studio) | 134 |
 |<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/18406448?s=40&v=4" width="20" height="20" alt="">  &nbsp; [alejandro-ao](https://github.com/alejandro-ao) / [exa-crewai](https://github.com/alejandro-ao/exa-crewai) | 55 |
-|<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/64493665?s=40&v=4" width="20" height="20" alt="">  &nbsp; [tonykipkemboi](https://github.com/tonykipkemboi) / [youtube_yapper_t
+|<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/64493665?s=40&v=4" width="20" height="20" alt="">  &nbsp; [tonykipkemboi](https://github.com/tonykipkemboi) / [youtube_yapper_trapper](https://github.com/tonykipkemboi/youtube_yapper_trapper) | 47 |
+|<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/17598928?s=40&v=4" width="20" height="20" alt="">  &nbsp; [sethcoast](https://github.com/sethcoast) / [cover-letter-builder](https://github.com/sethcoast/cover-letter-builder) | 27 |
+|<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/109994880?s=40&v=4" width="20" height="20" alt="">  &nbsp; [bhancockio](https://github.com/bhancockio) / [chatgpt4o-analysis](https://github.com/bhancockio/chatgpt4o-analysis) | 19 |
+|<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/14105911?s=40&v=4" width="20" height="20" alt="">  &nbsp; [breakstring](https://github.com/breakstring) / [Agentic_Story_Book_Workflow](https://github.com/breakstring/Agentic_Story_Book_Workflow) | 14 |
+|<img class="avatar mr-2" src="https://avatars.githubusercontent.com/u/124134656?s=40&v=4" width="20" height="20" alt="">  &nbsp; [MULTI-ON](https://github.com/MULTI-ON) / [multion-python](https://github.com/MULTI-ON/multion-python) | 13 |
+
+_Generated using [github-dependents-info](https://github.com/nvuillam/github-dependents-info), by [Nicolas Vuillamy](https://github.com/nvuillam)_
