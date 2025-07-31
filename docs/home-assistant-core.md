@@ -1,36 +1,29 @@
 # Home Assistant: Open Source Home Automation for Local Control
 
-**Take control of your home and your data with Home Assistant, the leading open-source home automation platform.** ([View the original repo](https://github.com/home-assistant/core))
+**Take control of your home with Home Assistant, the open-source home automation platform that prioritizes your privacy and puts you in command.**  Learn more and contribute at the [Home Assistant Core GitHub repository](https://github.com/home-assistant/core).
 
-## Key Features
+## Key Features:
 
-*   **Local Control and Privacy:** Enjoy full control of your smart home devices without relying on cloud services, ensuring your data stays private and secure.
-*   **Open Source and Community-Driven:** Benefit from a vibrant community of developers and users who are constantly improving and expanding the platform.
-*   **Modular Design:** Easily integrate new devices and services thanks to Home Assistant's flexible and extensible architecture.
-*   **Perfect for DIY Enthusiasts:** Designed to run on a variety of hardware, including Raspberry Pis and local servers.
-*   **Extensive Integrations:** Supports a wide array of smart home devices and services (see screenshot below).
+*   **Local Control:**  Enjoy complete control of your smart home devices without relying on cloud services.
+*   **Privacy-Focused:** Your data stays local, giving you peace of mind and protecting your personal information.
+*   **Open Source & Community Driven:**  Benefit from a vibrant worldwide community of developers and enthusiasts.
+*   **Modular Architecture:** Easily integrate new devices and services with a flexible, extensible design.
+*   **DIY Friendly:** Perfect for tinkerers and DIY enthusiasts to customize and automate their homes.
+*   **Run Anywhere:** Works seamlessly on a Raspberry Pi, local server, or other hardware.
+*   **Wide Range of Integrations:**  Supports a vast and growing list of smart home devices and services.
 
-## Get Started
+## Get Started:
 
-*   **[Demo](https://demo.home-assistant.io):** Explore a live demonstration of Home Assistant.
-*   **[Installation Instructions](https://home-assistant.io/getting-started/):** Learn how to install Home Assistant on your preferred hardware.
-*   **[Tutorials](https://home-assistant.io/getting-started/automation/):** Get started with automations and create smart home experiences.
-*   **[Documentation](https://home-assistant.io/docs/):** Dive deep into the platform with comprehensive documentation.
+*   **Explore the Demo:**  See Home Assistant in action at the [online demo](https://demo.home-assistant.io).
+*   **Installation Instructions:**  [Get started with the installation process](https://home-assistant.io/getting-started/).
+*   **Tutorials & Documentation:**  [Learn how to automate your home](https://home-assistant.io/getting-started/automation/) and dive deep with the [comprehensive documentation](https://home-assistant.io/docs/).
+*   **Integrations:** See the [featured integrations](https://home-assistant.io/integrations/).
 
-## Featured Integrations
+## Development & Customization:
 
-![Home Assistant Integrations](https://raw.githubusercontent.com/home-assistant/core/dev/.github/assets/screenshot-integrations.png)
-
-## Build Your Own Components
-
-Home Assistant's modular design allows you to easily implement support for new devices and actions.
-*   **[Architecture Documentation](https://developers.home-assistant.io/docs/architecture_index/):** Learn about the Home Assistant architecture.
-*   **[Creating Components](https://developers.home-assistant.io/docs/creating_component_index/):** Discover how to build your own custom components.
+*   **Architecture:** Learn about the [Home Assistant architecture](https://developers.home-assistant.io/docs/architecture_index/).
+*   **Create Components:** [Build your own components](https://developers.home-assistant.io/docs/creating_component_index/) to extend Home Assistant's functionality.
 
 ## Need Help?
 
-*   **[Home Assistant Help](https://home-assistant.io/help/):** Visit the help section on our website for troubleshooting and support.
-
-![Home Assistant States](https://raw.githubusercontent.com/home-assistant/core/dev/.github/assets/screenshot-states.png)
-
-[![Discord Chat](https://img.shields.io/discord/330944238910963714.svg)](https://www.home-assistant.io/join-chat/)
+Visit the [Home Assistant help section](https://home-assistant.io/help/) for troubleshooting, support, and community resources.

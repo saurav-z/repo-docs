@@ -1,36 +1,61 @@
-# OSGameClones: Discover and Contribute to Open Source Game Clones
+# OSGameClones: Your Comprehensive Directory of Open-Source Game Clones and Remakes
 
-This project is your one-stop resource for finding and contributing to open-source clones and remakes of classic video games.  [(Original Repository)](https://github.com/opengaming/osgameclones)
+Discover a vast collection of open-source game clones and remakes, all in one place! This repository ([original repo](https://github.com/opengaming/osgameclones)) provides the source code and database behind [osgameclones.com](https://osgameclones.com), a curated list of games inspired by classic titles.
 
-## Key Features:
+[![Build and Deploy](https://github.com/opengaming/osgameclones/actions/workflows/main.yml/badge.svg)](https://github.com/opengaming/osgameclones/actions/workflows/main.yml)
 
-*   **Comprehensive Database:** Explore a curated collection of open-source game clones, remakes, and reimplementations.
-*   **Community Driven:** Contribute to the database by adding new games or improving existing information through pull requests and issues.
-*   **YAML-Based Data:** Game and original game data are stored in easy-to-understand YAML files, making contributions straightforward.
-*   **Validation & Structure:**  Data is validated against schema files (`schema/games.yaml` and `schema/originals.yaml`) to ensure data quality and consistency.
-*   **Easy Contribution:**  Use pre-built forms to add games and original game references, or directly edit YAML files.
+## Key Features
+
+*   **Extensive Database:** Explore a curated list of game clones and remakes.
+*   **Open-Source & Community Driven:** Contribute new games or improve existing entries via pull requests.
+*   **YAML-Based Data:** Game and original game information is stored in easily readable YAML files under the `games` and `originals` directories.
+*   **Validation:** All entries are validated against schema rules for data integrity.
+*   **Easy Contribution:** Add new games or references using provided forms.
+
+## Database Structure
+
+The database of games and their corresponding original games is meticulously organized:
+
+*   **`games/`:** Contains YAML files describing the clone/remake games.
+*   **`originals/`:** Contains YAML files with information about the original games that these clones are based on.
 
 ## Contributing
 
-### Prerequisites
+We welcome contributions to expand and improve the OSGameClones database!
 
-*   [Poetry](https://python-poetry.org/) (Python dependency management)
+### Adding a Game Clone/Remake
 
-### Installation
+1.  Use the [game form](https://osgameclones.com/add_game.html) to submit details of the new game.
+2.  Alternatively, create a new entry by directly editing the files in the `games/` directory.
+3.  Your changes will be submitted as a pull request.
 
-1.  Clone the repository: `git clone <repository-url>`
-2.  Navigate to the project directory: `cd osgameclones`
-3.  Install dependencies: `poetry install`
+### Adding a Reference to an Original Game
 
-### Building the Project
+1.  Use the [add original form](https://osgameclones.com/add_original.html).
+2.  If the original game doesn't exist, create a new entry in the `originals/` directory using the provided format.
 
-Build the project into the `_build` directory:
+## Prerequisites
+
+*   [poetry](https://python-poetry.org/)
+
+## Installation
+
+To get started:
+
+1.  Clone this repository.
+2.  Run `poetry install` inside the project directory.
+
+## Building
+
+Build the project by running:
 
 ```bash
 make
 ```
 
-### Running with Docker
+The built project will be available in the `_build` directory.
+
+## Running with Docker
 
 1.  Build the Docker image:
 
@@ -38,30 +63,18 @@ make
     make docker-build
     ```
 
-2.  Run the server:
+2.  Run the server using Docker:
 
     ```bash
     make docker-run
     ```
 
-    The server will be available at `http://localhost:80`. You can specify a different port:
+    The server will be accessible at http://localhost:80. You can customize the port using the `PORT` variable:
 
     ```bash
-    make docker-run PORT=3000 # Server available at http://localhost:3000
+    make docker-run PORT=3000  # Access at http://localhost:3000
     ```
-
-## Adding a New Game or Original Game Reference
-
-*   **Add a Game Clone/Remake:**  Use the [game form](https://osgameclones.com/add_game.html) to submit information about a new game, or directly edit files in the `games/` directory.  Changes will be submitted as a pull request.
-*   **Add an Original Game Reference:** Use the [add original form](https://osgameclones.com/add_original.html) to add a reference to the original game.  If an entry doesn't exist in the `originals/` directory, create a new one following the specified format.
-
-##  Data Organization
-
-*   **`games/`:** Contains YAML files describing the open-source game clones.
-*   **`originals/`:** Contains YAML files describing the original games.
-*   **`schema/games.yaml`:**  Defines the validation rules for game entries.
-*   **`schema/originals.yaml`:** Defines the validation rules for original game entries.
 
 ## License
 
-See the [LICENSE](LICENSE) file for details.
+This project is licensed under the [LICENSE](LICENSE).

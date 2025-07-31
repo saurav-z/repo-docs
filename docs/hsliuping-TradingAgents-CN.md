@@ -1,56 +1,46 @@
-# TradingAgents-CN: 中文金融交易决策框架 - AI 赋能，中文优化 (基于 TauricResearch/TradingAgents)
+# TradingAgents-CN: AI赋能的中文金融交易决策框架
 
-[![](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![](https://img.shields.io/badge/Version-cn--0.1.12-green.svg)](./VERSION)
-[![](https://img.shields.io/badge/docs-中文文档-green.svg)](./docs/)
-[![](https://img.shields.io/badge/基于-TauricResearch/TradingAgents-orange.svg)](https://github.com/TauricResearch/TradingAgents)
+> **解锁智能金融交易新境界！** TradingAgents-CN是基于[TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents)的中文增强版，专为中国市场优化，提供全面的A股、港股、美股分析能力，助您洞悉市场脉搏。
 
-🚀 **开启 AI 金融新时代：** TradingAgents-CN 是一个基于多智能体大语言模型的中文金融交易决策框架，专为中文用户优化，提供完整的 A股/港股/美股分析能力。 **[查看原始项目](https://github.com/hsliuping/TradingAgents-CN) 以获取更多信息!**
+## 🚀 主要特点
 
-## 🎯 核心特性
+*   **🇨🇳 中文优化**：专为中文用户设计，界面、数据源及模型全面支持中文。
+*   **🧠 智能新闻分析**：**v0.1.12重大升级**，AI驱动的新闻过滤、质量评估与相关性分析，助力精准决策。
+    *   **📰 智能新闻过滤**：基础、增强、集成多层过滤机制。
+    *   **📰 统一新闻工具**：整合多源新闻，智能检索。
+*   **🤖 多LLM提供商**：**v0.1.11全面升级**，支持阿里云百炼、DeepSeek、Google AI、OpenRouter，60+模型任您选择。
+*   **💾 模型持久化**：模型选择持久化，通过URL分享配置。
+*   **🐳 一键部署**：Docker一键部署，快速搭建，轻松上手。
+*   **📊 专业报告**：自动生成Word/PDF/Markdown格式的专业分析报告，便于分享和查阅。
+*   **🇨🇳 A股全面支持**：提供全面的A股市场数据和分析能力。
+*   **⚙️ 易于配置**：Web端API密钥管理，模型选择和参数配置。
 
-*   **智能新闻分析 (v0.1.12 新增)**：AI 驱动的新闻过滤、质量评估和相关性分析。
-*   **多 LLM 提供商集成 (v0.1.11)**：支持 阿里百炼, DeepSeek V3, Google AI, OpenRouter (60+ 模型)。
-*   **模型选择持久化 (v0.1.11)**：通过 URL 参数保存模型配置，刷新不丢失。
-*   **A股/港股/美股支持**：全面覆盖中国股票市场，提供实时行情和分析。
-*   **多智能体协作**: 基本面、技术面、新闻面、社交媒体四大分析师 + 看涨/看跌研究员 + 交易员。
-*   **Web 界面 & 命令行界面**: 提供友好的用户体验，方便操作。
-*   **专业报告导出**: 支持 Word/PDF/Markdown 格式，一键生成投资建议。
-*   **Docker 部署**: 一键部署，环境隔离，快速扩展。
+## ✨ 最新版本更新
 
-## 🆕 最新更新 - v0.1.12 亮点
+### 🧠 智能新闻分析模块 v0.1.12
 
-### 🧠 智能新闻分析模块
+*   **🚀 智能新闻过滤**：基于AI的新闻相关性评分和质量评估。
+*   **🔧 新闻过滤器**：多层次过滤，基础/增强/集成三级处理。
+*   **📰 统一新闻工具**：整合多源新闻，提供统一接口，智能检索。
 
-*   **智能新闻过滤器**:  基于 AI 的新闻相关性评分和质量评估。
-*   **多层次过滤机制**:  基础、增强、集成三级过滤。
-*   **新闻质量评估**: 自动识别和过滤低质量、重复、无关新闻。
-*   **统一新闻工具**:  整合多个新闻源，提供统一的新闻获取接口。
+### 🤖 多LLM提供商 v0.1.11
 
-### 🔧 技术修复和优化
+*   **4大提供商支持**：阿里云百炼、DeepSeek、Google AI、OpenRouter。
+*   **60+模型选择**：涵盖最新模型，如Claude 4 Opus、GPT-4o。
+*   **智能模型分类**：OpenRouter支持多种模型类别。
+*   **💾 模型选择持久化**：URL参数存储，刷新保持配置。
+*   **🎯 快速选择按钮**：一键切换热门模型，提升操作效率。
 
-*   **DashScope 适配器修复**: 解决工具调用兼容性问题。
-*   **DeepSeek 死循环修复**: 修复新闻分析师的无限循环问题。
-*   **LLM 工具调用增强**: 提升工具调用的可靠性和稳定性。
-*   **新闻检索器优化**:  增强新闻数据获取和处理能力。
+## 📚 核心功能
 
-### 📚 完善测试和文档
+*   **多智能体协作**：基本面、技术面、新闻面、情绪面分析师协同工作，给出综合投资建议。
+*   **支持市场**：涵盖A股、港股、美股市场，提供实时数据和分析。
+*   **风险管理**：多层次风险评估和管理机制，降低投资风险。
+*   **自定义配置**：支持多种LLM模型和参数配置，满足个性化需求。
 
-*   **全面测试覆盖**: 新增 15+ 个测试文件，覆盖所有新功能。
-*   **详细技术文档**: 新增 8 个技术分析报告和修复文档。
-*   **用户指南完善**: 新增新闻过滤使用指南和最佳实践。
-*   **演示脚本**:  提供完整的新闻过滤功能演示。
+## 🚀 快速开始
 
-### 🗂️ 项目结构优化
-
-*   **文档分类整理**: 按功能将文档分类到 `docs` 子目录。
-*   **示例代码归位**: 演示脚本统一到 `examples` 目录。
-*   **根目录整洁**: 保持根目录简洁，提升项目专业度。
-
-## 快速开始
-
-### 🐳 Docker 部署 (推荐)
+### 🐳 Docker部署 (推荐)
 
 ```bash
 # 1. 克隆项目
@@ -71,7 +61,7 @@ docker-compose up -d --build
 ### 💻 本地部署
 
 ```bash
-# 1. 升级 pip
+# 1. 升级pip
 python -m pip install --upgrade pip
 
 # 2. 安装依赖
@@ -83,41 +73,33 @@ python start_web.py
 # 4. 访问 http://localhost:8501
 ```
 
-### 📊 开始分析
+## 💡 核心优势
 
-1.  **选择模型**:  DeepSeek V3 / 通义千问 / Gemini
-2.  **输入股票**: `000001` (A股) / `AAPL` (美股) / `0700.HK` (港股)
-3.  **开始分析**: 点击"🚀 开始分析"按钮
-4.  **实时跟踪**:  观察实时进度和分析步骤
-5.  **查看报告**: 点击"📊 查看分析报告"按钮
-6.  **导出报告**:  支持 Word/PDF/Markdown 格式
+*   **易于上手**：一键部署，快速搭建，用户友好的Web界面。
+*   **功能丰富**：多LLM集成、智能新闻分析、A股全面支持、专业报告导出等。
+*   **性能卓越**：多层缓存、异步处理，提升运行效率。
+*   **持续更新**：持续优化和更新，紧跟技术发展趋势。
+*   **社区支持**：活跃的社区，提供技术支持和交流。
 
-## 🎯 核心优势
+## 📚 文档与支持
 
-*   **🇨🇳 中文优化**: A股/港股数据 + 国产LLM + 中文界面
-*   **🐳 容器化**: Docker 一键部署，环境隔离，快速扩展
-*   **📄 专业报告**: 多格式导出，自动生成投资建议
-*   **🛡️ 稳定可靠**: 多层数据源，智能降级，错误恢复
+*   **完整文档**：[docs/](./docs/) - 详细的安装、使用、API文档。
+*   **故障排除**：[troubleshooting/](./docs/troubleshooting/) - 常见问题解决方案。
+*   **更新日志**：[CHANGELOG.md](./docs/releases/CHANGELOG.md) - 详细的版本更新历史。
+*   **联系方式**:  GitHub Issues, 邮箱 (hsliup@163.com), QQ群 (782124367)。
 
-## 📚 详细文档
+## 🔗 贡献
 
-*   [**📖 快速开始**](docs/overview/quick-start.md) -  快速上手指南
-*   [**🏛️ 系统架构**](docs/architecture/system-architecture.md) -  深入了解系统设计
-*   [**🤖 智能体详解**](docs/agents/analysts.md) - 了解每个分析师的职责
-*   [**❓ 常见问题**](docs/faq/faq.md) -  解决您的问题
+我们欢迎社区贡献，一起完善TradingAgents-CN！
 
-## 🤝 贡献
+*   **贡献指南**：[CONTRIBUTING.md](CONTRIBUTING.md)
 
-欢迎贡献代码、文档和建议！  查阅 [CONTRIBUTORS.md](CONTRIBUTORS.md) 了解更多信息。
+## 📜 许可证
 
-## 📄 许可证
-
-本项目基于 Apache 2.0 许可证开源。 详见 [LICENSE](LICENSE) 文件。
-
-## 🙏 致谢
-
-感谢 [Tauric Research](https://github.com/TauricResearch) 团队创建的原始项目 [TradingAgents](https://github.com/TauricResearch/TradingAgents)！
+本项目基于 [Apache 2.0](LICENSE) 许可证开源。
 
 ---
 
-**请为我们点亮 ⭐ Star， 如果本项目对您有所帮助！**
+**立即体验AI驱动的智能金融交易，开启您的投资新篇章！**
+
+[⭐ Star this repo](https://github.com/hsliuping/TradingAgents-CN)

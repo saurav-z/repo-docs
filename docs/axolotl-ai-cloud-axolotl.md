@@ -22,33 +22,35 @@
     <img src="https://github.com/axolotl-ai-cloud/axolotl/actions/workflows/multi-gpu-e2e.yml/badge.svg" alt="multigpu-semi-weekly tests">
 </p>
 
-## Axolotl: The Open-Source Toolkit for Fine-Tuning Your AI Models 
+## Axolotl: Supercharge Your AI Model Training and Fine-tuning
 
-Axolotl is your all-in-one solution for efficient and versatile post-training of a wide range of AI models. Visit the [original repository](https://github.com/axolotl-ai-cloud/axolotl) for more details.
+Axolotl is a powerful and versatile tool designed to streamline and optimize the post-training process for a wide array of AI models.  Learn more and contribute on the [Axolotl GitHub](https://github.com/axolotl-ai-cloud/axolotl).
 
 **Key Features:**
 
-*   **Extensive Model Support:** Fine-tune models like LLaMA, Mistral, Mixtral, Pythia, and more, with compatibility for Hugging Face Transformers causal language models.
-*   **Diverse Training Methods:** Utilize full fine-tuning, LoRA, QLoRA, GPTQ, QAT, Preference Tuning (DPO, IPO, KTO, ORPO), RL (GRPO), Multimodal training, and Reward Modelling (RM) / Process Reward Modelling (PRM).
-*   **Simplified Configuration:** Manage your entire workflow – from dataset preparation to training, evaluation, quantization, and inference – using a single YAML configuration file.
-*   **Performance Optimization:** Benefit from cutting-edge optimizations including Multipacking, Flash Attention, Xformers, Flex Attention, Liger Kernel, Cut Cross Entropy, Sequence Parallelism (SP), LoRA optimizations, and robust multi-GPU/multi-node training support.
-*   **Flexible Data Handling:** Load datasets seamlessly from local storage, Hugging Face Hub, and cloud providers (S3, Azure, GCP, OCI).
-*   **Cloud-Ready Deployment:** Deploy effortlessly with pre-built Docker images and PyPI packages, suitable for cloud platforms and local hardware.
+*   **Broad Model Support:** Train and fine-tune models like LLaMA, Mistral, Mixtral, Pythia, and other Hugging Face transformers causal language models.
+*   **Comprehensive Training Methods:** Full fine-tuning, LoRA, QLoRA, GPTQ, QAT, Preference Tuning (DPO, IPO, KTO, ORPO), RL (GRPO), Multimodal, and Reward Modelling (RM) / Process Reward Modelling (PRM)
+*   **Simplified Configuration:** Utilize a single YAML file for dataset preprocessing, training, evaluation, quantization, and inference, making your workflow efficient.
+*   **Performance-Driven Optimizations:** Leverage cutting-edge techniques like Multipacking, Flash Attention, Xformers, Flex Attention, Liger Kernel, Cut Cross Entropy, Sequence Parallelism (SP), LoRA optimizations, Multi-GPU training (FSDP1, FSDP2, DeepSpeed), and Multi-node training (Torchrun, Ray) for optimal performance.
+*   **Flexible Dataset Handling:** Easily load datasets from local directories, Hugging Face Hub, and cloud storage services (S3, Azure, GCP, OCI).
+*   **Cloud-Ready Deployment:**  Deploy Axolotl effortlessly with provided Docker images and PyPI packages, perfect for cloud platforms and local hardware.
 
-## 🎉 Latest Updates
-*   **2025/07:** TiledMLP support for single-GPU to multi-GPU training with DDP, DeepSpeed and FSDP support has been added to support Arctic Long Sequence Training. (ALST). See [examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/alst) for using ALST with Axolotl!
-*   **2025/06:** Magistral with mistral-common tokenizer support has been added to Axolotl. See [examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/magistral) to start training your own Magistral models with Axolotl!
-*   **2025/05:** Quantization Aware Training (QAT) support has been added to Axolotl. Explore the [docs](https://docs.axolotl.ai/docs/qat.html) to learn more!
-*   **2025/04:** Llama 4 support has been added in Axolotl. See [examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/llama-4) to start training your own Llama 4 models with Axolotl's linearized version!
-*   **2025/03:** Axolotl has implemented Sequence Parallelism (SP) support. Read the [blog](https://huggingface.co/blog/axolotl-ai-co/long-context-with-sequence-parallelism-in-axolotl) and [docs](https://docs.axolotl.ai/docs/sequence_parallelism.html) to learn how to scale your context length when fine-tuning.
-*   **2025/03:** (Beta) Fine-tuning Multimodal models is now supported in Axolotl. Check out the [docs](https://docs.axolotl.ai/docs/multimodal.html) to fine-tune your own!
-*   **2025/02:** Axolotl has added LoRA optimizations to reduce memory usage and improve training speed for LoRA and QLoRA in single GPU and multi-GPU training (DDP and DeepSpeed). Jump into the [docs](https://docs.axolotl.ai/docs/lora_optims.html) to give it a try.
-*   **2025/02:** Axolotl has added GRPO support. Dive into our [blog](https://huggingface.co/blog/axolotl-ai-co/training-llms-w-interpreter-feedback-wasm) and [GRPO example](https://github.com/axolotl-ai-cloud/grpo_code) and have some fun!
-*   **2025/01:** Axolotl has added Reward Modelling / Process Reward Modelling fine-tuning support. See [docs](https://docs.axolotl.ai/docs/reward_modelling.html).
+## Latest Updates
 
-## 🚀 Quick Start
+*   **2025/07**: Voxtral with mistral-common tokenizer support has been integrated in Axolotl. Read the [docs](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/voxtral)!
+*   **2025/07**: TiledMLP support for single-GPU to multi-GPU training with DDP, DeepSpeed and FSDP support has been added to support Arctic Long Sequence Training. (ALST). See [examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/alst) for using ALST with Axolotl!
+*   **2025/06**: Magistral with mistral-common tokenizer support has been added to Axolotl. See [examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/magistral) to start training your own Magistral models with Axolotl!
+*   **2025/05**: Quantization Aware Training (QAT) support has been added to Axolotl. Explore the [docs](https://docs.axolotl.ai/docs/qat.html) to learn more!
+*   **2025/04**: Llama 4 support has been added in Axolotl. See [examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/llama-4) to start training your own Llama 4 models with Axolotl's linearized version!
+*   **2025/03**: Axolotl has implemented Sequence Parallelism (SP) support. Read the [blog](https://huggingface.co/blog/axolotl-ai-co/long-context-with-sequence-parallelism-in-axolotl) and [docs](https://docs.axolotl.ai/docs/sequence_parallelism.html) to learn how to scale your context length when fine-tuning.
+*   **2025/03**: (Beta) Fine-tuning Multimodal models is now supported in Axolotl. Check out the [docs](https://docs.axolotl.ai/docs/multimodal.html) to fine-tune your own!
+*   **2025/02**: Axolotl has added LoRA optimizations to reduce memory usage and improve training speed for LoRA and QLoRA in single GPU and multi-GPU training (DDP and DeepSpeed). Jump into the [docs](https://docs.axolotl.ai/docs/lora_optims.html) to give it a try.
+*   **2025/02**: Axolotl has added GRPO support. Dive into our [blog](https://huggingface.co/blog/axolotl-ai-co/training-llms-w-interpreter-feedback-wasm) and [GRPO example](https://github.com/axolotl-ai-cloud/grpo_code) and have some fun!
+*   **2025/01**: Axolotl has added Reward Modelling / Process Reward Modelling fine-tuning support. See [docs](https://docs.axolotl.ai/docs/reward_modelling.html).
 
-**Prerequisites:**
+## Getting Started: Quick Start
+
+**Requirements:**
 
 *   NVIDIA GPU (Ampere or newer for `bf16` and Flash Attention) or AMD GPU
 *   Python 3.11
@@ -70,7 +72,6 @@ axolotl fetch deepspeed_configs  # OPTIONAL
 #### Using Docker
 
 Installing with Docker can be less error prone than installing in your own environment.
-
 ```bash
 docker run --gpus '"all"' --rm -it axolotlai/axolotl:main-latest
 ```
@@ -91,7 +92,7 @@ Other installation approaches are described [here](https://docs.axolotl.ai/docs/
 
 </details>
 
-### Your First Fine-tune
+### Fine-tuning Example
 
 ```bash
 # Fetch axolotl examples
@@ -104,9 +105,9 @@ axolotl fetch examples --dest path/to/folder
 axolotl train examples/llama-3/lora-1b.yml
 ```
 
-For a more detailed walkthrough, consult our [Getting Started Guide](https://docs.axolotl.ai/docs/getting-started.html).
+For a complete guide, refer to the [Getting Started Guide](https://docs.axolotl.ai/docs/getting-started.html).
 
-## 📚 Documentation
+## Documentation
 
 *   [Installation Options](https://docs.axolotl.ai/docs/installation.html) - Detailed setup instructions for different environments
 *   [Configuration Guide](https://docs.axolotl.ai/docs/config-reference.html) - Full configuration options and examples
@@ -118,21 +119,21 @@ For a more detailed walkthrough, consult our [Getting Started Guide](https://doc
 *   [API Reference](https://docs.axolotl.ai/docs/api/) - Auto-generated code documentation
 *   [FAQ](https://docs.axolotl.ai/docs/faq.html) - Frequently asked questions
 
-## 🤝 Getting Help
+## Getting Help
 
 *   Join our [Discord community](https://discord.gg/HhrNrHJPRb) for support
 *   Check out our [Examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/) directory
 *   Read our [Debugging Guide](https://docs.axolotl.ai/docs/debugging.html)
-*   For dedicated support, contact [✉️wing@axolotl.ai](mailto:wing@axolotl.ai) for options
+*   Need dedicated support? Please contact [✉️wing@axolotl.ai](mailto:wing@axolotl.ai) for options
 
-## 🌟 Contributing
+## Contributing
 
-We welcome contributions! Please review our [Contributing Guide](https://github.com/axolotl-ai-cloud/axolotl/blob/main/.github/CONTRIBUTING.md) for details.
+Contributions are welcome! Please see our [Contributing Guide](https://github.com/axolotl-ai-cloud/axolotl/blob/main/.github/CONTRIBUTING.md) for details.
 
-## ❤️ Sponsors
+## Sponsors
 
 Interested in sponsoring? Contact us at [wing@axolotl.ai](mailto:wing@axolotl.ai)
 
-## 📜 License
+## License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.

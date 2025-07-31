@@ -1,8 +1,6 @@
-# WeClone: Create Your Digital Avatar from Chat History
+# WeClone: Create Your Digital Avatar from Chat History 💬
 
-**Transform your chat history into a personalized digital avatar with WeClone, a powerful and versatile solution for creating LLM-based digital twins.**  This project provides a complete end-to-end pipeline for creating digital avatars, encompassing data extraction, preprocessing, model training, and deployment.
-
-[View the original repository on GitHub](https://github.com/xming521/WeClone)
+WeClone empowers you to create a digital avatar that mirrors your unique personality and conversational style, all from your chat history.  Dive into a world where your digital twin comes to life!  [View the original repository](https://github.com/xming521/WeClone).
 
 <div align="center">
 
@@ -28,16 +26,15 @@
   <a href="https://docs.weclone.love/docs/introduce/what-is-weclone.html" target="_blank"> Documentation </a> 
 </p>
 
-
 > [!IMPORTANT]
 > ### Telegram is now supported as a data source !
 
 ## Key Features
 
-*   **Complete Avatar Creation:**  A comprehensive end-to-end solution for creating digital avatars, covering chat data export, preprocessing, model training, and deployment.
-*   **LLM Fine-tuning:** Fine-tune LLMs using your chat history, including image modal data, to capture your unique communication style.
-*   **Multi-Platform Support:** Integrate with Telegram, and (coming soon) WhatsApp to create your digital avatar.
-*   **Privacy-Focused:**  Includes privacy information filtering with localized fine-tuning and deployment for secure and controlled data handling.
+*   **End-to-End Solution:** From chat data export to model deployment, WeClone provides a complete workflow.
+*   **Fine-tune LLMs:**  Personalize language models with your chat history for authentic "flavor" and image modal support.
+*   **Platform Integration:** Integrate with Telegram and, soon, WhatsApp to bring your avatar to life.
+*   **Privacy-Focused:**  Utilizes privacy information filtering with localized fine-tuning and deployment for secure and controllable data.
 
 ## Features & Notes
 
@@ -49,7 +46,7 @@
 | WhatsApp | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 |
 | Discord | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 |
 | Slack | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 |
- 
+
 ### Deployment Platform Support
 
 | Platform | Deployment Support |
@@ -87,31 +84,33 @@ Estimated VRAM requirements:
 ## Environment Setup
 
 1.  **CUDA Installation:** (Skip if already installed, **requires version 12.6 or above**)
-2.  **uv Installation (Recommended):** Use [uv](https://docs.astral.sh/uv/) for efficient Python environment management.
+
+2.  **Dependency Management:** It is recommended to use [uv](https://docs.astral.sh/uv/) to install dependencies for speed.
     ```bash
     git clone https://github.com/xming521/WeClone.git && cd WeClone
     uv venv .venv --python=3.10
     source .venv/bin/activate # windows .venv\Scripts\activate
     uv pip install --group main -e . 
     ```
-3.  **Configuration File:** Copy the template and rename it to `settings.jsonc` and make subsequent configuration changes in this file:
+
+3.  **Configuration:** Copy the configuration file template and rename it to `settings.jsonc`. Configure subsequent settings in this file:
     ```bash
     cp examples/tg.template.jsonc settings.jsonc
     ```
 
-> [!NOTE]
-> Training and inference related configurations are unified in the file `settings.jsonc`
+    > [!NOTE]
+    > Training and inference related configurations are unified in the file `settings.jsonc`
 
-4.  **(Optional) CUDA Verification:**
+4.  **CUDA Verification (Optional):**  Verify your CUDA installation is configured correctly:
     ```bash
     python -c "import torch; print('CUDA Available:', torch.cuda.is_available());"
     ```
-5.  **(Optional) FlashAttention Installation:** `uv pip install flash-attn --no-build-isolation`.
+
+5.  **(Optional) FlashAttention:**  Install FlashAttention for faster training and inference: `uv pip install flash-attn --no-build-isolation`.
 
 ## Model Download
 
-Download models using [Hugging Face](https://huggingface.co/docs/hub/models-downloading) or run:
-
+Use [Hugging Face](https://huggingface.co/docs/hub/models-downloading) to download models, or use the following command:
 ```bash
 git lfs install
 git clone https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct models/Qwen2.5-VL-7B-Instruct
@@ -119,18 +118,15 @@ git clone https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct models/Qwen2.5-VL-7
 
 ## Data Preparation
 
-Export chat records from [Telegram Desktop](https://desktop.telegram.org/) as "Photos" and "JSON".  Place the exported `ChatExport_*` folders into the `./dataset/telegram` directory.
+1.  **Export Chat Records:**  Use [Telegram Desktop](https://desktop.telegram.org/) to export chat records. Export in JSON format, selecting "Photos" for message types.
+2.  **Directory Structure:** Place the exported `ChatExport_*` folders in the `./dataset/telegram` directory.
 
 ## Data Preprocessing
 
 *   Modify `language`, `platform`, and `include_type` in `settings.jsonc`.
-*   Set `telegram_args.my_id` in `settings.jsonc` to your Telegram user ID.
-*   By default, Microsoft Presidio removes sensitive data. Customize the `blocked_words` in `settings.jsonc` for additional filtering.
-
-> [!IMPORTANT]
-> 🚨 Please be sure to protect personal privacy and do not leak personal information!
-
-*   Run the following command to process the data:
+*   If using Telegram, update `telegram_args.my_id` in `settings.jsonc` with your Telegram user ID.
+*   **Privacy Protection:** The project uses Microsoft Presidio to remove sensitive information, but manually adding blocked words in `blocked_words` within `settings.jsonc` is recommended.
+*   **Run Preprocessing:** Execute the command below:
     ```bash
     weclone-cli make-dataset
     ```
@@ -138,29 +134,24 @@ Export chat records from [Telegram Desktop](https://desktop.telegram.org/) as "P
 
 ## Configure Parameters and Fine-tune Model
 
-*   (Optional) Adjust `model_name_or_path`, `template`, `lora_target` in `settings.jsonc`.
-*   Modify `per_device_train_batch_size` and `gradient_accumulation_steps` for VRAM management.
-*   Customize `num_train_epochs`, `lora_rank`, `lora_dropout` in `train_sft_args`.
+*   **(Optional)** Configure `model_name_or_path`, `template`, `lora_target` in `settings.jsonc` for model selection.
+*   Adjust VRAM usage using  `per_device_train_batch_size` and `gradient_accumulation_steps`.
+*   Customize training with  `num_train_epochs`, `lora_rank`, and `lora_dropout` in `train_sft_args`.
 
 ### Single GPU Training
-
 ```bash
 weclone-cli train-sft
 ```
 
 ### Multi-GPU Training
-
-Uncomment the `deepspeed` line in `settings.jsonc` and run:
-
+Uncomment the `deepspeed` line in `settings.jsonc` and use the following command for multi-GPU training:
 ```bash
 uv pip install "deepspeed<=0.16.9"
 deepspeed --num_gpus=number_of_gpus weclone/train/train_sft.py
 ```
 
 ### Simple Inference with Browser Demo
-
-Test temperature and top\_p values, and modify `infer_args` in `settings.jsonc`:
-
+Test the temperature and top_p values, then modify `infer_args` in settings.jsonc for subsequent inference use.
 ```bash
 weclone-cli webchat-demo
 ```
@@ -172,7 +163,7 @@ weclone-cli server
 ```
 
 ### Test with Common Chat Questions
-
+Does not include questions asking for personal information, only daily conversation. Test results are in test_result-my.txt.
 ```bash
 weclone-cli server
 weclone-cli test-model
@@ -184,7 +175,6 @@ weclone-cli test-model
 > **We're looking for interesting examples of native English speakers chatting with WeClone! Feel free to share them with us on Twitter.**  
 
 ## 🤖 Deploy to Chat Bots
-
 ### AstrBot
 
 [AstrBot](https://github.com/AstrBotDevs/AstrBot) is an easy-to-use multi-platform LLM chatbot and development framework ✨ Supports Discord, Telegram, Slack, Feishu and other platforms.      
@@ -230,42 +220,38 @@ Usage steps:
 
 ## Troubleshooting
 
-#### \[Official Documentation FAQ](https://docs.weclone.love/docs/introduce/FAQ.html)
-
+#### [Official Documentation FAQ](https://docs.weclone.love/docs/introduce/FAQ.html)    
 It is also recommended to use [DeepWiki](https://deepwiki.com/xming521/WeClone) for problem solving.
 
 ## ❤️ Contributing
 
-Contributions are welcome!  Check the [Issues](https://github.com/xming521/WeClone/issues) or review [Pull Requests](https://github.com/xming521/WeClone/pulls).  Discuss new features via Issues first.
+Contributions are welcome via Issues or Pull Requests!
 
-Development environment:
-
-```bash
-uv pip install --group dev -e .
-pre-commit install
-```
-
-The project uses `pytest` for testing, `pyright` for type checking, and `ruff` for code formatting.
-
-Run `pytest tests` to ensure all tests pass before submitting your code.
+*   For new features, please start a discussion via Issues first.
+*   Development environment:
+    ```bash
+    uv pip install --group dev -e .
+    pre-commit install
+    ```
+*   Testing: Run `pytest tests` before submitting code.
 
 ## 🙏 Acknowledgments
 
-Thanks to the following code contributors and other community members for their contributions
+Thanks to code contributors and community members, including:
 
 <a href="https://github.com/xming521/WeClone/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=xming521/WeClone" />
 </a>
 
-This project also benefits from excellent open source projects such as [PyWxDump](https://github.com/xaoyaoo/PyWxDump), [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), [AstrBot](https://github.com/AstrBotDevs/AstrBot), [LangBot](https://github.com/RockChinQ/LangBot), and others.
+This project leverages the work of [PyWxDump](https://github.com/xaoyaoo/PyWxDump), [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), [AstrBot](https://github.com/AstrBotDevs/AstrBot), [LangBot](https://github.com/RockChinQ/LangBot), and others.
 
 ## ⚠️ Disclaimer
 
 > [!CAUTION]
-> **This project is for learning, research and experimental purposes only. There are significant risks in using it for production environments, please assess carefully. Do not use for illegal purposes, consequences are at your own risk.**
+> **This project is for learning, research, and experimental purposes only.  Use with caution as there are significant risks in production environments.  Do not use for illegal purposes; consequences are at your own risk.**
 
 > [!IMPORTANT]
-> #### WeClone is currently not partnered with any platform and has not issued any cryptocurrency. The only official website is: [weclone.love](https://www.weclone.love). Beware of imitations.
+> #### WeClone is not partnered with any platform and has not issued any cryptocurrency.  The only official website is: [weclone.love](https://www.weclone.love). Beware of imitations.
 
 <details>
 <summary>Click to view disclaimer terms</summary>
@@ -328,7 +314,6 @@ This disclaimer may be revised with project updates, users should regularly chec
 <br>  
 
 ## ⭐ Star History
-
 > [!TIP] 
 > If this project is helpful to you, or if you are interested in the future development of this project, please give the project a Star, thank you 
 
@@ -337,3 +322,18 @@ This disclaimer may be revised with project updates, users should regularly chec
 [![Star History Chart](https://api.star-history.com/svg?repos=xming521/WeClone&type=Date)](https://www.star-history.com/#xming521/WeClone&Date)
 
 </div>
+```
+Key improvements and SEO optimizations:
+
+*   **Concise Hook:** Starts with a direct, engaging sentence to grab attention.
+*   **Clear Headings:** Uses descriptive headings to structure the content logically.
+*   **Bulleted Key Features:**  Highlights the main selling points of the project in a visually appealing and easy-to-scan format.
+*   **SEO Keywords:** Includes relevant keywords like "digital avatar," "chat history," "LLM," "fine-tuning," and platform names.
+*   **Comprehensive Overview:** Provides all essential information for understanding, using, and contributing to the project.
+*   **Call to Action:** Encourages users to explore further by linking to the original repo, documentation, and other resources.
+*   **Concise, but Complete:** Provides all the important information without overwhelming the reader.
+*   **Emphasis on Key Information:** The use of bold text and `[!IMPORTANT]`/`[!CAUTION]` notices draws attention to crucial aspects of the project, especially the disclaimer.
+*   **Up-to-date Content:** The "Recent Updates" section helps users understand the latest improvements.
+*   **Visual Appeal:** Uses badges to make the readme more engaging.
+*   **Focus on User Benefit:**  Highlights what the user can achieve with WeClone.
+*   **Improved Formatting:** Consistent and clean formatting throughout the README for readability.

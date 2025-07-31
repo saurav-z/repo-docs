@@ -1,72 +1,114 @@
 # Xonsh: The Python-Powered Shell
 
-**Xonsh** is a powerful, cross-platform shell that blends the flexibility of Python with the familiarity of a command-line environment. [Check it out on GitHub!](https://github.com/xonsh/xonsh)
+**Xonsh is a powerful, cross-platform shell that combines the flexibility of Python with the functionality of a command-line interface.** Check out the [official Xonsh repository](https://github.com/xonsh/xonsh).
 
-## Key Features
+## Key Features:
 
-*   **Python-Based:** Xonsh is built on Python 3.6+ and uses Python as its primary language, allowing you to leverage the vast Python ecosystem and libraries.
-*   **Shell Primitives:** Seamlessly integrates shell commands, enabling you to execute commands and interact with your system just like in a traditional shell.
-*   **Cross-Platform:** Works on Linux, macOS, and Windows, providing a consistent shell experience across different operating systems.
-*   **Extensible:** Supports a plugin system (`xontribs`) to customize and extend functionality.
-*   **Interactive and Scriptable:** Use Xonsh interactively for everyday tasks or write scripts for more complex automation.
+*   **Python Integration:** Seamlessly blend Python code and shell commands.
+*   **Cross-Platform:** Works on Linux, macOS, and Windows.
+*   **Extensible:** Supports a plugin system ("xontribs") for customization.
+*   **Shell Primitives:** Includes standard shell functionalities.
+*   **Modern:** Python 3.6+ compatible.
 
-## Key Advantages
+## Xonsh: Shell + Python
 
-*   **Shell Commands in Python:** Run shell commands directly within Python code.
-*   **Python Code in Shell:**  Use Python code directly within the shell environment.
-*   **Familiar Shell Syntax:** Use existing shell commands and learn the basics easily.
+Xonsh lets you use shell commands and Python code in the same environment.
+
+*   **Shell Commands:**
+
+    ```shell
+    cd $HOME
+    id $(whoami)
+    cat /etc/passwd | grep root > ~/root.txt
+    $PROMPT = '@ '
+    ```
+
+*   **Python Code:**
+
+    ```python
+    2 + 2
+    var = "hello".upper()
+    import json; json.loads('{"a":1}')
+    [i for i in range(0,10)]
+    ```
+
+*   **Python in the Shell:**
+
+    ```python
+    len($(curl -L https://xon.sh))
+    $PATH.append('/tmp')
+    p'/etc/passwd'.read_text().find('root')
+    xontrib load dalias
+    id = $(@json docker ps --format json)['ID']
+    ```
+
+*   **Shell in Python:**
+
+    ```python
+    name = 'foo' + 'bar'.upper()
+    echo @(name) > /tmp/@(name)
+    ls @(input('file: '))
+    touch @([f"file{i}" for i in range(0,10)])
+    aliases['e'] = 'echo @(2+2)'
+    aliases['a'] = lambda args: print(args)
+    ```
 
 ## Getting Started
 
-1.  **Installation:**
-    ```bash
-    python -m pip install 'xonsh[full]'
-    ```
-2.  **Explore:** Visit [https://xon.sh](https://xon.sh) for detailed documentation, including installation instructions and a helpful tutorial.
+**Install Xonsh:**
 
-## Xonsh Extensions (Xontribs)
+```shell
+python -m pip install 'xonsh[full]'
+```
 
-Enhance Xonsh's capabilities with `xontribs`, plugins that provide additional functionality. Find and explore available `xontribs` at:
+**Learn more:**
+
+*   [Installation](https://xon.sh/contents.html#installation)
+*   [Tutorial](https://xon.sh/tutorial.html)
+
+## Extensions (Xontribs)
+
+Extend Xonsh's functionality with plugins.
 
 *   [Xontribs on Github](https://github.com/topics/xontrib)
 *   [Awesome xontribs](https://github.com/xonsh/awesome-xontribs)
 *   [Core xontribs](https://xon.sh/api/_autosummary/xontribs/xontrib.html)
+*   [Create a xontrib from template](https://github.com/xonsh/xontrib-template)
 
 ## Projects Using Xonsh
 
-Xonsh integrates with several tools, improving functionality:
+Xonsh integrates with various tools:
 
-*   conda and mamba: Modern package managers.
-*   Starship: Cross-shell prompt.
-*   zoxide: A smarter cd command.
-*   gitsome: Supercharged Git/shell autocompleter with GitHub integration.
-*   xxh: Using xonsh wherever you go through the SSH.
-*   Snakemake: A workflow management system to create reproducible and scalable data analyses.
-*   any-nix-shell: xonsh support for the ``nix run`` and ``nix-shell`` environments of the Nix package manager.
-*   lix: A modern, delicious implementation of the Nix package manager.
-*   x-cmd: x-cmd is a vast and interesting collection of tools guided by the Unix philosophy.
-*   rever: Cross-platform software release tool.
-*   Regro autotick bot: Regro Conda-Forge autoticker.
+*   conda and mamba
+*   Starship
+*   zoxide
+*   gitsome
+*   xxh
+*   Snakemake
+*   any-nix-shell
+*   lix
+*   x-cmd
+*   rever
+*   Regro autotick bot
 
-Jupyter-based interactive notebooks via `xontrib-jupyter <https://github.com/xonsh/xontrib-jupyter>`_:
+## Jupyter Integration
 
-*   Jupyter and JupyterLab: Interactive notebook platform.
-*   euporie: Terminal based interactive computing environment.
-*   Jupytext: Clear and meaningful diffs when doing Jupyter notebooks version control.
+*   [xontrib-jupyter](https://github.com/xonsh/xontrib-jupyter)
+*   Jupyter and JupyterLab
+*   euporie
+*   Jupytext
 
-## Join the Xonsh Community
+## Community
 
-Contribute to Xonsh and help shape its future:
+Contribute to Xonsh! Ways to get involved:
 
-*   Contribute code by working on issues [here](https://github.com/xonsh/xonsh/issues).
-*   Create new xontribs with the [xontrib-template](https://github.com/xonsh/xontrib-template).
-*   Help the docs and website.
-*   Become a sponsor [here](https://github.com/sponsors/xonsh).
-*   Give a star to the Xonsh repository on Github and xontribs.
+*   Help with [issues](https://github.com/xonsh/xonsh/issues)
+*   Create a new xontrib.
+*   Contribute to the API.
+*   Improve documentation and website.
+*   Become a sponsor.
+*   Spread the word!
 
-## Supporting Links
+## Credits
 
-*   [Join the Xonsh Zulip Community](https://xonsh.zulipchat.com/)
-*   [Xonsh GitHub Actions](https://github.com/xonsh/xonsh/actions/workflows/test.yml)
-*   [Xonsh Code Coverage](https://codecov.io/github/xonsh/xonsh?branch=main)
-*   [Xonsh Repology](https://repology.org/project/xonsh/versions)
+*   Thanks to [Zulip](https://zulip.com/) for supporting the community.

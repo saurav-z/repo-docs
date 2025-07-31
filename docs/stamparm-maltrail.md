@@ -2,131 +2,247 @@
 
 [![Python 2.6|2.7|3.x](https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://github.com/stamparm/maltrail#license) [![Malware families](https://img.shields.io/badge/malware_families-1494-orange.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Malware sinkholes](https://img.shields.io/badge/malware_sinkholes-1354-green.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Twitter](https://img.shields.io/badge/twitter-@maltrail-blue.svg)](https://twitter.com/maltrail)
 
-## Maltrail: Your Frontline Defense Against Malicious Network Traffic
+## Maltrail: Detect and Block Malicious Network Traffic
 
-Maltrail is a powerful, open-source malicious traffic detection system, offering real-time monitoring and alerting against a wide range of threats. Designed to be easily deployed and integrated, it helps you identify and respond to suspicious activity on your network.  [See the original repository here.](https://github.com/stamparm/maltrail)
+**Maltrail is an open-source, easy-to-use, and powerful malicious traffic detection system that protects your network by identifying and blocking threats in real-time.**
 
-**Key Features:**
+### Key Features
 
-*   **Real-time Threat Detection:** Monitors network traffic for malicious indicators, including domains, URLs, IPs, and HTTP User-Agent headers.
-*   **Comprehensive Threat Intelligence:** Utilizes a vast collection of blacklists and feeds from various sources, as well as static trails derived from AV reports and custom lists.
-*   **Heuristic Analysis:** Employs advanced heuristics to identify unknown and emerging threats, enhancing detection capabilities.
-*   **Flexible Architecture:**  Employs a modular architecture with a sensor, server, and client components.
-*   **User-Friendly Reporting Interface:** Provides a web-based interface for easy analysis of detected threats.
-*   **Integration with Other Systems:**  Supports integration with popular tools like Syslog and Logstash for centralized logging and analysis.
+*   **Comprehensive Threat Detection:** Utilizes publicly available blacklists, static trails from AV reports, and user-defined lists to identify malicious traffic, including:
+    *   Malware domains and URLs
+    *   Suspicious IP addresses
+    *   Malicious HTTP User-Agent strings
+*   **Heuristic Analysis:** Includes advanced mechanisms to detect unknown and emerging threats.
+*   **Real-Time Monitoring:**  Monitors network traffic passively or inline, providing immediate threat alerts.
+*   **Flexible Architecture:**  Offers a modular design with a sensor, server, and client, allowing for various deployment options.
+*   **Reporting Interface:**  Provides a user-friendly web interface for visualizing and analyzing detected threats.
+*   **Customizable:** Supports user-defined trails and custom configurations to tailor detection to specific environments.
+*   **Integration:**  Integrates with popular security tools such as Wazuh, Splunk, and XSOAR for enhanced threat response.
 
-**Key Features Explained:**
-
-*   **Comprehensive Threat Intelligence:** Maltrail leverages multiple public and private sources to stay on top of new and known threats.
-    *   Utilizes publicly available (black)lists:
-        *   360bigviktor, 360chinad, 360conficker, 360cryptolocker, 360gameover, 360locky, 360necurs, 360suppobox, 360tofsee, 360virut, abuseipdb, alienvault, atmos, badips, bitcoinnodes, blackbook, blocklist, botscout, bruteforceblocker, ciarmy, cobaltstrike, cruzit, cybercrimetracker, dataplane, dshieldip, emergingthreatsbot, emergingthreatscip, emergingthreatsdns, feodotrackerip, gpfcomics, greensnow, ipnoise, kriskinteldns, kriskintelip, malc0de, malwaredomainlistdns, malwaredomains, maxmind, minerchk, myip, openphish, palevotracker, policeman, pony, proxylists, proxyrss, proxyspy, ransomwaretrackerdns, ransomwaretrackerip, ransomwaretrackerurl, riproxies, rutgers, sblam, socksproxy, sslbl, sslproxies, talosintelligence, torproject, trickbot, turris, urlhaus, viriback, vxvault, zeustrackermonitor, zeustrackerurl, etc.
-    *   Static entries included, manually (from AV reports and personal research):
-        *   1ms0rry, 404, 9002, aboc, absent, ab, acbackdoor, acridrain, activeagent, adrozek, advisorbot, adwind, adylkuzz, adzok, afrodita, agaadex, agenttesla, aldibot, alina, allakore, almalocker, almashreq, alpha, alureon, amadey, amavaldo, amend\_miner, ammyyrat, android\_acecard, android\_actionspy, android\_adrd, android\_ahmythrat, android\_alienspy, android\_andichap, android\_androrat, android\_anubis, android\_arspam, android\_asacub, android\_backflash, android\_bankbot, android\_bankun, android\_basbanke, android\_basebridge, android\_besyria, android\_blackrock, android\_boxer, android\_buhsam, android\_busygasper, android\_calibar, android\_callerspy, android\_camscanner, android\_cerberus, android\_chuli, android\_circle, android\_claco, android\_clickfraud, android\_cometbot, android\_cookiethief, android\_coolreaper, android\_copycat, android\_counterclank, android\_cyberwurx, android\_darkshades, android\_dendoroid, android\_dougalek, android\_droidjack, android\_droidkungfu, android\_enesoluty, android\_eventbot, android\_ewalls, android\_ewind, android\_exodus, android\_exprespam, android\_fakeapp, android\_fakebanco, android\_fakedown, android\_fakeinst, android\_fakelog, android\_fakemart, android\_fakemrat, android\_fakeneflic, android\_fakesecsuit, android\_fanta, android\_feabme, android\_flexispy, android\_fobus, android\_fraudbot, android\_friend, android\_frogonal, android\_funkybot, android\_gabas, android\_geinimi, android\_generic, android\_geost, android\_ghostpush, android\_ginmaster, android\_ginp, android\_gmaster, android\_gnews, android\_godwon, android\_golddream, android\_goldencup, android\_golfspy, android\_gonesixty, android\_goontact, android\_gplayed, android\_gustuff, android\_gypte, android\_henbox, android\_hiddad, android\_hydra, android\_ibanking, android\_joker, android\_jsmshider, android\_kbuster, android\_kemoge, android\_ligarat, android\_lockdroid, android\_lotoor, android\_lovetrap, android\_malbus, android\_mandrake, android\_maxit, android\_mobok, android\_mobstspy, android\_monokle, android\_notcompatible, android\_oneclickfraud, android\_opfake, android\_ozotshielder, android\_parcel, android\_phonespy, android\_pikspam, android\_pjapps, android\_qdplugin, android\_raddex, android\_ransomware, android\_redalert, android\_regon, android\_remotecode, android\_repane, android\_riltok, android\_roamingmantis, android\_roidsec, android\_rotexy, android\_samsapo, android\_sandrorat, android\_selfmite, android\_shadowvoice, android\_shopper, android\_simbad, android\_simplocker, android\_skullkey, android\_sndapps, android\_spynote, android\_spytekcell, android\_stels, android\_svpeng, android\_swanalitics, android\_teelog, android\_telerat, android\_tetus, android\_thiefbot, android\_tonclank, android\_torec, android\_triada, android\_uracto, android\_usbcleaver, android\_viceleaker, android\_vmvol, android\_walkinwat, android\_windseeker, android\_wirex, android\_wolfrat, android\_xavirad, android\_xbot007, android\_xerxes, android\_xhelper, android\_xploitspy, android\_z3core, android\_zertsecurity, android\_ztorg, andromeda, antefrigus, antibot, anubis, anuna, apocalypse, apt\_12, apt\_17, apt\_18, apt\_23, apt\_27, apt\_30, apt\_33, apt\_37, apt\_38, apt\_aridviper, apt\_babar, apt\_bahamut, etc.
-
-*   **Architecture**
-    *   **Traffic** -&gt; **Sensor** &lt;-&gt; **Server** &lt;-&gt; **Client** architecture
-    *   **Sensor:** Runs on the monitoring node, passively or inline. Monitors traffic for blacklisted items. Sends events to the server.
-    *   **Server:** Stores event details and provides a reporting interface.  Can be skipped, with events stored locally by the sensor.
-    *   **Client:** Web-based reporting application for data presentation.
-
-### Sections:
+### Table of Contents
 
 *   [Introduction](#introduction)
 *   [Architecture](#architecture)
 *   [Demo pages](#demo-pages)
 *   [Requirements](#requirements)
-*   [Quick start](#quick-start)
-*   [Administrator's guide](#administrators-guide)
-     *   [Sensor](#sensor)
-     *   [Server](#server)
-*   [User's guide](#users-guide)
-     *   [Reporting interface](#reporting-interface)
-*   [Real-life cases](#real-life-cases)
-     *   [Mass scans](#mass-scans)
-     *   [Anonymous attackers](#anonymous-attackers)
-     *   [Service attackers](#service-attackers)
-     *   [Malware](#malware)
-     *   [Suspicious domain lookups](#suspicious-domain-lookups)
-     *   [Suspicious ipinfo requests](#suspicious-ipinfo-requests)
-     *   [Suspicious direct file downloads](#suspicious-direct-file-downloads)
-     *   [Suspicious HTTP requests](#suspicious-http-requests)
-     *   [Port scanning](#port-scanning)
-     *   [DNS resource exhaustion](#dns-resource-exhaustion)
-     *   [Data leakage](#data-leakage)
-     *   [False positives](#false-positives)
-*   [Best practice(s)](#best-practices)
+*   [Quick Start](#quick-start)
+*   [Administrator's Guide](#administrators-guide)
+    *   [Sensor](#sensor)
+    *   [Server](#server)
+*   [User's Guide](#users-guide)
+    *   [Reporting Interface](#reporting-interface)
+*   [Real-Life Cases](#real-life-cases)
+    *   [Mass Scans](#mass-scans)
+    *   [Anonymous Attackers](#anonymous-attackers)
+    *   [Service Attackers](#service-attackers)
+    *   [Malware](#malware)
+    *   [Suspicious Domain Lookups](#suspicious-domain-lookups)
+    *   [Suspicious Ipinfo Requests](#suspicious-ipinfo-requests)
+    *   [Suspicious Direct File Downloads](#suspicious-direct-file-downloads)
+    *   [Suspicious HTTP Requests](#suspicious-http-requests)
+    *   [Port Scanning](#port-scanning)
+    *   [DNS Resource Exhaustion](#dns-resource-exhaustion)
+    *   [Data Leakage](#data-leakage)
+    *   [False Positives](#false-positives)
+*   [Best Practices](#best-practices)
 *   [License](#license)
 *   [Sponsors](#sponsors)
 *   [Developers](#developers)
 *   [Presentations](#presentations)
 *   [Publications](#publications)
 *   [Blacklist](#blacklist)
-*   [Thank you](#thank-you)
-*   [Third-party integrations](#third-party-integrations)
+*   [Thank You](#thank-you)
+*   [Third-Party Integrations](#third-party-integrations)
+
+### Introduction
+
+Maltrail is a robust malicious traffic detection system designed to identify and alert on potentially harmful network activity. It leverages both static and dynamic sources to identify threats. It uses public blacklists and AV reports, and can use static and custom trails.
+
+[See Original README for Details](https://github.com/stamparm/maltrail)
+
+### Architecture
+
+Maltrail employs a flexible, layered architecture comprising:
+
+*   **Traffic:** The network traffic that is being monitored.
+*   **Sensor(s):**  Standalone components that passively monitor network traffic (SPAN/mirroring port, bridge, or standalone machine) for blacklisted items (domain names, URLs, IPs)
+*   **Server:**  A central component that stores event details and provides a web-based reporting application.
+*   **Client:**  The web interface that allows users to view and analyze detected threats.
+
+![Architecture diagram](https://i.imgur.com/2IP9Mh2.png)
 
 ### Demo Pages
-Fully functional demo pages with collected real-life threats can be found [here](https://maltraildemo.github.io/).
+
+Explore real-life threat examples on the [demo pages](https://maltraildemo.github.io/).
 
 ### Requirements
 
 *   Python 2.6, 2.7, or 3.x
-*   \*nix/BSD system
-*   pcapy-ng package
-*   Sensor: at least 1GB of RAM
-*   Sensor: Administrative/root privileges
+*   pcapy-ng package installed
+*   Sensor component requires at least 1GB of RAM, and root privileges.
+*   Server component does not have any special requirements.
 
 ### Quick Start
 
-*   Instructions for Ubuntu/Debian, SUSE/openSUSE, and Docker installations are provided in the original README.  See above.
+Here's how to get Maltrail up and running on Ubuntu/Debian or SUSE/openSUSE:
+
+*   **Ubuntu/Debian:**
+
+    ```bash
+    sudo apt-get install git python3 python3-dev python3-pip python-is-python3 libpcap-dev build-essential procps schedtool
+    sudo pip3 install pcapy-ng
+    git clone --depth 1 https://github.com/stamparm/maltrail.git
+    cd maltrail
+    sudo python3 sensor.py
+    ```
+
+*   **SUSE/openSUSE:**
+
+    ```bash
+    sudo zypper install gcc gcc-c++ git libpcap-devel python3-devel python3-pip procps schedtool
+    sudo pip3 install pcapy-ng
+    git clone --depth 1 https://github.com/stamparm/maltrail.git
+    cd maltrail
+    sudo python3 sensor.py
+    ```
+
+*   Don't forget to put interfaces in promiscuous mode as needed: 
+
+    ```bash
+    for dev in $(ifconfig | grep mtu | grep -Eo '^\w+'); do ifconfig $dev promisc; done
+    ```
+
+![Sensor](https://i.imgur.com/E9tt2ek.png)
+
+To start the (optional) **Server** on same machine, open a new terminal and execute the following:
+
+```bash
+[[ -d maltrail ]] || git clone --depth 1 https://github.com/stamparm/maltrail.git
+cd maltrail
+python server.py
+```
+
+![Server](https://i.imgur.com/loGW6GA.png)
+
+*   **Docker:**
+
+    *   Start the container(s) with `docker run`: 
+
+    ```sh
+    # Build image
+    docker build -t maltrail .
+    # Start the server
+    docker run -d --name maltrail-server --restart=unless-stopped --port 8338:8338/tcp --port 8337:8337/udp -v /etc/maltrail.conf:/opt/maltrail/maltrail.conf:ro maltrail
+    # Update the image regularly
+    sudo git pull
+    docker build -t maltrail .
+    ```
+
+    ... or with `docker compose`:
+
+    ```sh
+    # For the sensor
+    docker compose up -d sensor
+    # For the server
+    docker compose up -d server
+    # For both
+    docker compose up -d
+    # Update image regularly
+    docker compose down --remove-orphans
+    docker compose build
+    docker compose up -d
+    ```
+
+Don't edit the `docker-compose.yml` file directly, as this will be overwritten by `git pull`.  Instead, copy it to `docker-compose.override.yml` and edit that file; it is included in this repo's `.gitignore`.  
+
+To test that everything is up and running execute the following:
+
+```sh
+ping -c 1 136.161.101.53
+cat /var/log/maltrail/$(date +"%Y-%m-%d").log
+```
+
+![Test](https://i.imgur.com/NYJg6Kl.png)
+
+Also, to test the capturing of DNS traffic you can try the following:
+
+```sh
+nslookup morphed.ru
+cat /var/log/maltrail/$(date +"%Y-%m-%d").log
+```
+
+![Test2](https://i.imgur.com/62oafEe.png)
+
+To stop **Sensor** and **Server** instances (if running in background) execute the following:
+
+```sh
+sudo pkill -f sensor.py
+pkill -f server.py
+```
+
+Access the reporting interface (i.e. **Client**) by visiting the http://127.0.0.1:8338 (default credentials: `admin:changeme!`) from your web browser:
+
+![Reporting interface](https://i.imgur.com/VAsq8cs.png)
 
 ### Administrator's Guide
 
-*   Detailed configuration options for the sensor and server components, including logging, security, and integration.
+Refer to the [Administrator's Guide](#administrators-guide) for in-depth configuration options and deployment details.
 
 ### User's Guide
 
-*   Explains the reporting interface's features, including timeline, summary, and threat details.
+Refer to the [User's Guide](#users-guide) for detailed information on using the web interface.
 
 ### Real-Life Cases
 
-*   Illustrates Maltrail's capabilities with examples of real-world threats, such as mass scans, malware, and suspicious activity.
+*   [Mass Scans](#mass-scans)
+*   [Anonymous Attackers](#anonymous-attackers)
+*   [Service Attackers](#service-attackers)
+*   [Malware](#malware)
+*   [Suspicious Domain Lookups](#suspicious-domain-lookups)
+*   [Suspicious Ipinfo Requests](#suspicious-ipinfo-requests)
+*   [Suspicious Direct File Downloads](#suspicious-direct-file-downloads)
+*   [Suspicious HTTP Requests](#suspicious-http-requests)
+*   [Port Scanning](#port-scanning)
+*   [DNS Resource Exhaustion](#dns-resource-exhaustion)
+*   [Data Leakage](#data-leakage)
+*   [False Positives](#false-positives)
 
 ### Best Practices
 
-*   Provides recommended installation and configuration steps.
+[See Best Practices Section for Details](#best-practices)
 
 ### License
 
-*   MIT License. See [LICENSE](https://github.com/stamparm/maltrail/blob/master/LICENSE) for more details.
+[See License Section for Details](#license)
 
 ### Sponsors
 
-*   [Sansec](https://sansec.io/) (2024-)
-*   [Sansec](https://sansec.io/) (2020-2021)
+[See Sponsors Section for Details](#sponsors)
 
 ### Developers
 
-*   Miroslav Stampar ([@stamparm](https://github.com/stamparm))
-*   Mikhail Kasimov ([@MikhailKasimov](https://github.com/MikhailKasimov))
+[See Developers Section for Details](#developers)
 
 ### Presentations
 
-*   47th TF-CSIRT Meeting, Prague (Czech Republic), 2016 ([slides](https://www.terena.org/activities/tf-csirt/meeting47/M.Stampar-Maltrail.pdf))
+[See Presentations Section for Details](#presentations)
 
 ### Publications
 
-*   Detect attacks on your network with Maltrail, Linux Magazine, 2022 ([Annotation](https://www.linux-magazine.com/Issues/2022/258/Maltrail))
-*   Best Cyber Threat Intelligence Feeds ([SilentPush Review, 2022](https://www.silentpush.com/blog/best-cyber-threat-intelligence-feeds))
-*   Research on Network Malicious Traffic Detection System Based on Maltrail ([Nanotechnology Perceptions, ISSN 1660-6795, 2024](https://nano-ntp.com/index.php/nano/article/view/1915/1497))
+[See Publications Section for Details](#publications)
 
 ### Blacklist
 
-*   Maltrail's daily updated blacklist of malware-related domains can be found [here](https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt). It is based on trails found at [trails/static/malware](trails/static/malware) and can be safely used for DNS traffic blocking purposes.
+Maltrail uses a daily updated blacklist of malware-related domains.
+
+[See Blacklist Section for Details](#blacklist)
 
 ### Thank You
 
-*   (List of contributors)
+[See Thank You Section for Details](#thank-you)
 
 ### Third-Party Integrations
 
-*   (List of integrations)
+Maltrail integrates with various security tools.
+
+[See Third-Party Integrations Section for Details](#third-party-integrations)

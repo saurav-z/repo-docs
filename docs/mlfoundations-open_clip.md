@@ -1,38 +1,40 @@
-# OpenCLIP: State-of-the-Art Image-Text Understanding
+# OpenCLIP: Open Source Implementation of CLIP for Image-Text Understanding
 
-**OpenCLIP provides open-source implementations of CLIP models, enabling cutting-edge image-text understanding through contrastive learning.**
+**OpenCLIP provides open-source, high-performing models trained using Contrastive Language-Image Pre-training (CLIP), enabling powerful image-text understanding capabilities.** [Original Repo](https://github.com/mlfoundations/open_clip)
 
-[[Paper]](https://arxiv.org/abs/2212.07143) | [[Citations]](#citing) | [[Colab: CLIP]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb) | [[Colab: CoCa]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb) | [![PyPI](https://img.shields.io/pypi/v/open_clip_torch.svg)](https://pypi.python.org/pypi/open_clip_torch) | [Original Repo](https://github.com/mlfoundations/open_clip)
+*   [Paper](https://arxiv.org/abs/2212.07143)
+*   [Citations](#citing)
+*   [CLIP Colab](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb)
+*   [CoCa Colab](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb)
+*   [![pypi](https://img.shields.io/pypi/v/open_clip_torch.svg)](https://pypi.python.org/pypi/open_clip_torch)
 
-OpenCLIP offers a powerful toolkit for researchers and developers interested in image-text models, providing:
+OpenCLIP offers a robust and versatile framework for training and utilizing CLIP models, allowing you to explore the intersection of images and text. This repository offers:
 
-*   **Pre-trained Models:** Access a wide range of models trained on diverse datasets like LAION-400M, LAION-2B, and DataComp-1B, including state-of-the-art architectures.
-*   **Reproducibility:**  Train your own CLIP models, and reproduce the models of the paper "[Reproducible scaling laws for contrastive language-image learning](https://arxiv.org/abs/2212.07143)".
-*   **Flexible Usage:** Easily integrate OpenCLIP models into your projects with a simple Python API for encoding images and text.
-*   **Efficient Training:** Optimize training with multi-GPU support, gradient accumulation, and other advanced features.
-*   **Fine-tuning:** Code for fine-tuning the zero-shot models is available in [WiSE-FT](https://github.com/mlfoundations/wise-ft).
-*   **CoCa Support:** Supports training and interacting with CoCa models.
+*   **Pre-trained Models:** Access a diverse collection of pre-trained models, including those trained on datasets like LAION-400M, LAION-2B, and DataComp-1B, covering a wide range of model architectures and sizes.
+*   **Reproducible Scaling Laws:** Leverage models and findings detailed in the paper [reproducible scaling laws for contrastive language-image learning](https://arxiv.org/abs/2212.07143).
+*   **Ease of Use:** A simple API for instantiating and utilizing pre-trained models, enabling quick integration into your projects.
+*   **Fine-tuning Support:** Instructions for fine-tuning pre-trained models on downstream classification tasks.
+*   **Training Tools:** Comprehensive training scripts and utilities for training your own CLIP models, including support for multi-GPU and distributed training.
+*   **Model Performance:** Access high-performing models with impressive zero-shot ImageNet-1k accuracy, including ConvNext, ViT, and SigLIP models.
 
 ## Key Features
 
-*   **Wide Variety of Models:** Includes ConvNext, ViT (Vision Transformer), and SigLIP models, with different sizes and training data.
-*   **Zero-Shot Performance:** Explore impressive zero-shot ImageNet-1k accuracy and performance on 38 datasets.
-*   **Easy Installation:** Install with `pip install open_clip_torch`.
-*   **Model Loading:** Easily load pre-trained and untrained models with `open_clip.create_model_and_transforms`.
-*   **Training Scripts:** Offers comprehensive training scripts for single and multi-GPU environments, including SLURM support.
-*   **Data Handling:** Supports webdataset and CSV datasets.
-*   **Int8 Support:** Beta support for int8 training and inference for faster training and inference.
-*   **Hugging Face Integration:** Push models to the Hugging Face Hub.
+*   **State-of-the-Art Models:** Utilize models with impressive zero-shot performance, including ViT and ConvNext architectures, pre-trained on large-scale datasets.
+*   **Flexible Training:** Fine-tune pre-trained models or train new models from scratch with extensive training options, including multi-GPU and distributed training support, with options to integrate with SLURM clusters.
+*   **Efficient Training:** Optimized training strategies, including gradient accumulation and int8 support, for faster and more efficient model training.
+*   **Easy Integration:** Simple API for model loading and usage, including built-in tokenizers and preprocessors, for easy integration into projects.
+*   **Model Distillation:** Distill models from pre-trained models.
+*   **CoCa Support:** Support for CoCa models that enable the generation of text from images.
 
 ## Quick Start
 
-### Installation
+Install the library:
 
 ```bash
 pip install open_clip_torch
 ```
 
-### Usage
+Get started with a basic example:
 
 ```python
 import torch
@@ -57,36 +59,40 @@ with torch.no_grad(), torch.autocast("cuda"):
 print("Label probs:", text_probs)
 ```
 
-## Pre-trained Models
+## Pretrained Models
 
-See [here](docs/PRETRAINED.md) for more details about the pre-trained models. You can find available models using:
+Discover available pretrained models:
 
 ```python
-import open_clip
-open_clip.list_pretrained()
+>>> import open_clip
+>>> open_clip.list_pretrained()
 ```
 
-## Training CLIP
+More details about available models can be found [here](docs/PRETRAINED.md) and in the [Hugging Face Hub](https://huggingface.co/models?library=open_clip).
 
-Detailed instructions for training CLIP models are available in the original README.
+## Training and Usage
 
-## Evaluation and Zero-Shot
+Detailed instructions for training, fine-tuning, and using OpenCLIP can be found in the sections below, including how to set up your training environment, run training scripts, and evaluate model performance, and how to fine tune models.
 
-Evaluate your models using the provided scripts or integrate them with external evaluation frameworks.  We recommend [CLIP_benchmark](https://github.com/LAION-AI/CLIP_benchmark#how-to-use).
+## Example Model Performance
 
-## CoCa
+| Model              | Training data | Resolution | # of samples seen | ImageNet zero-shot acc. |
+| ------------------ | ------------- | ---------- | ----------------- | ----------------------- |
+| ConvNext-Base      | LAION-2B      | 256px      | 13B               | 71.5%                   |
+| ConvNext-Large     | LAION-2B      | 320px      | 29B               | 76.9%                   |
+| ConvNext-XXLarge   | LAION-2B      | 256px      | 34B               | 79.5%                   |
+| ViT-B-32-256       | DataComp-1B   | 256px      | 34B               | 72.8%                   |
+| ViT-B-16           | DataComp-1B   | 224px      | 13B               | 73.5%                   |
+| ViT-L-14           | LAION-2B      | 224px      | 32B               | 75.3%                   |
+| ViT-H-14           | LAION-2B      | 224px      | 32B               | 78.0%                   |
+| ViT-L-14           | DataComp-1B   | 224px      | 13B               | 79.2%                   |
+| ViT-bigG-14        | LAION-2B      | 224px      | 34B               | 80.1%                   |
 
-OpenCLIP also supports CoCa models. See details in the original README.
+*See original README for additional model comparisons.*
 
 ## Acknowledgments
 
-We gratefully acknowledge the Gauss Centre for Supercomputing e.V. (www.gauss-centre.eu) for funding this part of work by providing computing time through the John von Neumann Institute for Computing (NIC) on the GCS Supercomputer JUWELS Booster at Jülich Supercomputing Centre (JSC).
-
-## The Team
-
-Current development of this repository is led by [Ross Wightman](https://rwightman.com/), [Romain Beaumont](https://github.com/rom1504), [Cade Gordon](http://cadegordon.io/), and [Vaishaal Shankar](http://vaishaal.com/).
-
-The original version of this repository is from a group of researchers at UW, Google, Stanford, Amazon, Columbia, and Berkeley.
+*See original README for acknowledgements.*
 
 ## Citing
 
@@ -118,48 +124,6 @@ If you found this repository useful, please consider citing:
 }
 ```
 
-```bibtex
-@inproceedings{cherti2023reproducible,
-  title={Reproducible scaling laws for contrastive language-image learning},
-  author={Cherti, Mehdi and Beaumont, Romain and Wightman, Ross and Wortsman, Mitchell and Ilharco, Gabriel and Gordon, Cade and Schuhmann, Christoph and Schmidt, Ludwig and Jitsev, Jenia},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={2818--2829},
-  year={2023}
-}
-```
-
-```bibtex
-@inproceedings{Radford2021LearningTV,
-  title={Learning Transferable Visual Models From Natural Language Supervision},
-  author={Alec Radford and Jong Wook Kim and Chris Hallacy and A. Ramesh and Gabriel Goh and Sandhini Agarwal and Girish Sastry and Amanda Askell and Pamela Mishkin and Jack Clark and Gretchen Krueger and Ilya Sutskever},
-  booktitle={ICML},
-  year={2021}
-}
-```
-
-```bibtex
-@inproceedings{schuhmann2022laionb,
-  title={{LAION}-5B: An open large-scale dataset for training next generation image-text models},
-  author={Christoph Schuhmann and
-          Romain Beaumont and
-          Richard Vencu and
-          Cade W Gordon and
-          Ross Wightman and
-          Mehdi Cherti and
-          Theo Coombes and
-          Aarush Katta and
-          Clayton Mullis and
-          Mitchell Wortsman and
-          Patrick Schramowski and
-          Srivatsa R Kundurthy and
-          Katherine Crowson and
-          Ludwig Schmidt and
-          Robert Kaczmarczyk and
-          Jenia Jitsev},
-  booktitle={Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
-  year={2022},
-  url={https://openreview.net/forum?id=M3Y74vmsMcY}
-}
-```
+*See original README for additional citations.*
 
 [![DOI](https://zenodo.org/badge/390536799.svg)](https://zenodo.org/badge/latestdoi/390536799)

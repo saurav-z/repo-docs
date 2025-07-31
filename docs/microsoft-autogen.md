@@ -1,6 +1,5 @@
 <div align="center">
 <img src="https://microsoft.github.io/autogen/0.2/img/ag.svg" alt="AutoGen Logo" width="100">
-</div>
 
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40pyautogen)](https://twitter.com/pyautogen)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Company?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/105812540)
@@ -8,27 +7,29 @@
 [![Documentation](https://img.shields.io/badge/Documentation-AutoGen-blue?logo=read-the-docs)](https://microsoft.github.io/autogen/)
 [![Blog](https://img.shields.io/badge/Blog-AutoGen-blue?logo=blogger)](https://devblogs.microsoft.com/autogen/)
 
+</div>
+
 <div align="center" style="background-color: rgba(255, 235, 59, 0.5); padding: 10px; border-radius: 5px; margin: 20px 0;">
   <strong>Important:</strong> This is the official project. We are not affiliated with any fork or startup. See our <a href="https://x.com/pyautogen/status/1857264760951296210">statement</a>.
 </div>
 
 # AutoGen: Build Powerful Multi-Agent AI Applications
 
-**AutoGen** is a versatile framework empowering you to build, experiment with, and deploy sophisticated multi-agent AI applications that work autonomously or collaborate with humans.  [Explore the AutoGen repository](https://github.com/microsoft/autogen).
+AutoGen is a versatile framework developed by Microsoft for constructing multi-agent AI systems that can perform tasks autonomously or in collaboration with humans. [Explore the AutoGen Repository](https://github.com/microsoft/autogen).
 
-## Key Features:
+**Key Features:**
 
-*   **Multi-Agent Workflows:** Design and orchestrate complex AI workflows with multiple agents.
-*   **Flexible Architecture:** Leverage a layered and extensible design for various abstraction levels, from high-level APIs to low-level components.
-*   **Rapid Prototyping:** Use the AgentChat API for quick and efficient development of multi-agent systems.
-*   **Extensible Ecosystem:** Utilize the Extensions API to integrate with LLM clients (like OpenAI, AzureOpenAI) and expand functionality.
-*   **No-Code GUI:** Employ AutoGen Studio for visual prototyping and running multi-agent applications without coding.
-*   **Benchmarking Tools:** Evaluate agent performance using the AutoGen Bench suite.
-*   **.NET Support:** AutoGen also has .NET support.
+*   **Multi-Agent Workflows:** Design and deploy sophisticated AI agent teams.
+*   **Flexible Architecture:** Utilize a layered and extensible design for various levels of abstraction.
+*   **Core API:** Provides message passing, event-driven agents, and runtime environments.
+*   **AgentChat API:** Offers a streamlined API for rapid prototyping of multi-agent interactions.
+*   **Extensible:** Integrate with third-party extensions for LLM clients and more.
+*   **AutoGen Studio:** A no-code GUI for building and testing multi-agent applications.
+*   **AutoGen Bench:** A benchmarking suite for evaluating agent performance.
+*   **Active Community:** Benefit from a thriving ecosystem with weekly office hours, a Discord server, and a blog.
+*   **.NET and Python Support** AutoGen supports both Python and .NET.
 
-## Getting Started
-
-### Installation
+## Installation
 
 AutoGen requires **Python 3.10 or later**.
 
@@ -37,18 +38,18 @@ AutoGen requires **Python 3.10 or later**.
 pip install -U "autogen-agentchat" "autogen-ext[openai]"
 ```
 
-For upgrading from AutoGen v0.2, please refer to the [Migration Guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/migration-guide.html).
+The current stable version is v0.4. If you are upgrading from AutoGen v0.2, please refer to the [Migration Guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/migration-guide.html) for detailed instructions on how to update your code and configurations.
 
 ```bash
 # Install AutoGen Studio for no-code GUI
 pip install -U "autogenstudio"
 ```
 
-### Quickstart
+## Quickstart: Get Started Quickly
 
-#### Hello World
+### Hello World
 
-Create an assistant agent using OpenAI's GPT-4o model:
+Create an assistant agent using OpenAI's GPT-4o model. See [other supported models](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/models.html).
 
 ```python
 import asyncio
@@ -64,9 +65,10 @@ async def main() -> None:
 asyncio.run(main())
 ```
 
-#### Web Browsing Agent Team
+### Web Browsing Agent Team
 
-Create a web surfing agent and a user proxy agent:
+Create a group chat team with a web surfer agent and a user proxy agent
+for web browsing tasks. You need to install [playwright](https://playwright.dev/python/docs/library).
 
 ```python
 # pip install -U autogen-agentchat autogen-ext[openai,web-surfer]
@@ -100,9 +102,9 @@ async def main() -> None:
 asyncio.run(main())
 ```
 
-#### AutoGen Studio
+### AutoGen Studio
 
-Use AutoGen Studio to prototype and run multi-agent workflows without writing code:
+Use AutoGen Studio to prototype and run multi-agent workflows without writing code.
 
 ```bash
 # Run AutoGen Studio on http://localhost:8080
@@ -111,19 +113,23 @@ autogenstudio ui --port 8080 --appdir ./my-app
 
 ## Why Choose AutoGen?
 
-AutoGen provides a complete ecosystem for building and deploying AI agents, including a framework, developer tools, and applications.
+<div align="center">
+  <img src="autogen-landing.jpg" alt="AutoGen Landing" width="500">
+</div>
 
-*   **Framework:** The framework features a layered design:
-    *   **Core API:** Core API implements message passing, event-driven agents, and local and distributed runtime for flexibility and power. It also supports cross-language support for .NET and Python.
-    *   **AgentChat API:** A higher-level API for rapid prototyping.
-    *   **Extensions API:** Enables integration with LLM clients and expanding capabilities, like code execution.
+AutoGen empowers you to build advanced AI applications through its flexible framework, developer tools, and a supportive ecosystem.
+
+*   **Framework:** Layered and extensible design allows for using the framework at different levels of abstraction.
+    *   **Core API:** Implements message passing, event-driven agents, and local and distributed runtime.
+    *   **AgentChat API:** Provides a simpler API for rapid prototyping.
+    *   **Extensions API:** Enables integration of LLM clients (OpenAI, AzureOpenAI), code execution, and more.
 *   **Developer Tools:**
-    *   **AutoGen Studio:** A no-code GUI for building multi-agent applications.
-    *   **AutoGen Bench:** A benchmarking suite for evaluating agent performance.
+    *   **AutoGen Studio:** No-code GUI for building multi-agent applications.
+    *   **AutoGen Bench:** Benchmarking suite for evaluating agent performance.
 
-## Where to Go Next?
+AutoGen allows you to join and contribute to a thriving ecosystem.
 
-Explore these resources:
+## Next Steps
 
 <div align="center">
 
@@ -137,14 +143,23 @@ Explore these resources:
 
 </div>
 
-## Contributing
+## Contribute
 
-Contribute to AutoGen and become part of our thriving community.  See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+Contribute to the AutoGen project by checking out [CONTRIBUTING.md](./CONTRIBUTING.md). Join the community!
 
-## Get Support
+## Get Help
 
-Have questions? Check out our [FAQ](./FAQ.md).  Engage with the community on [GitHub Discussions](https://github.com/microsoft/autogen/discussions) or [Discord](https://aka.ms/autogen-discord).  Stay updated via our [blog](https://devblogs.microsoft.com/autogen/).
+*   [Frequently Asked Questions (FAQ)](./FAQ.md)
+*   [GitHub Discussions](https://github.com/microsoft/autogen/discussions)
+*   [Discord server](https://aka.ms/autogen-discord)
+*   [Blog](https://devblogs.microsoft.com/autogen/)
 
-## Legal Notices
+## Legal
 
-(Same as original)
+See the [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE) files for licensing information.
+
+<p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
+  <a href="#readme-top" style="text-decoration: none; color: blue; font-weight: bold;">
+    ↑ Back to Top ↑
+  </a>
+</p>

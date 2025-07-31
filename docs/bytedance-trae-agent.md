@@ -1,20 +1,20 @@
 # Trae Agent: Your AI-Powered Software Engineering Assistant
 
-Trae Agent is a powerful, LLM-driven CLI tool designed to automate and streamline software engineering tasks using various tools and LLM providers. [Explore the original repository here](https://github.com/bytedance/trae-agent).
+**Trae Agent is an advanced LLM-based agent that streamlines software engineering tasks with natural language commands.**  [Explore the original repository](https://github.com/bytedance/trae-agent)
+
+Trae Agent empowers developers and researchers with a modular and extensible AI agent framework designed for studying AI agent architectures and developing cutting-edge agent capabilities.
 
 **Key Features:**
 
-*   **🤖 Multi-LLM Support:** Integrates with OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, and Google Gemini APIs.
-*   **🛠️ Rich Tool Ecosystem:** Includes file editing, bash execution, and sequential thinking capabilities.
-*   **🎯 Interactive Mode:** Offers a conversational interface for iterative development and debugging.
-*   **📊 Detailed Trajectory Recording:** Logs all agent actions for thorough debugging and analysis.
-*   **⚙️ Flexible Configuration:** Uses JSON-based configuration with environment variable support.
-*   **🚀 Easy Installation:** Simplifies setup with pip-based installation.
+*   **🤖 Multi-LLM Support:** Seamlessly integrates with OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, and Google Gemini APIs for model flexibility.
+*   **🛠️ Rich Tool Ecosystem:** Offers file editing, bash execution, sequential thinking, and more, enabling complex software engineering workflows.
+*   **🎯 Interactive Mode:** Provides a conversational interface for iterative development and experimentation.
+*   **📊 Trajectory Recording:** Records detailed logs of all agent actions, including LLM interactions and tool usage, for in-depth debugging and analysis.
 *   **🌊 Lakeview:** Provides short and concise summarisation for agent steps
+*   **⚙️ Flexible Configuration:** Supports JSON-based configuration with environment variable overrides, making setup and customization easy.
+*   **🚀 Easy Installation:** Simple pip-based installation using `uv` or `make`.
 
-Trae Agent's modular and transparent architecture makes it ideal for research and development, enabling users to easily modify, extend, and analyze AI agent architectures.
-
-## 🚀 Quick Start
+## Getting Started
 
 ### Installation
 
@@ -36,6 +36,8 @@ make uv-sync
 
 ### Setup API Keys
 
+Configure Trae Agent through the config file or environment variables.
+
 **Configuration Setup:**
 
 1.  **Copy the example configuration file:**
@@ -44,9 +46,16 @@ make uv-sync
     cp trae_config.json.example trae_config.json
     ```
 
-2.  **Edit `trae_config.json`:** Replace placeholder values with your API keys for OpenAI, Anthropic, Google, and other providers.  The `trae_config.json` file is ignored by git.
+2.  **Edit `trae_config.json`:** Replace placeholder API keys and URLs with your actual credentials.
+    -   Replace `"your_openai_api_key"` with your actual OpenAI API key
+    -   Replace `"your_anthropic_api_key"` with your actual Anthropic API key
+    -   Replace `"your_google_api_key"` with your actual Google API key
+    -   Replace `"your_azure_base_url"` with your actual Azure base URL
+    -   Replace other placeholder URLs and API keys as needed
 
-You can also set your API keys as environment variables:
+**Note:** The `trae_config.json` file is ignored by git to prevent accidentally committing your API keys.
+
+You can also set API keys as environment variables:
 
 ```bash
 # For OpenAI
@@ -73,6 +82,8 @@ export OPENROUTER_SITE_NAME="Your App Name"
 export OPENAI_BASE_URL="your-openai-compatible-api-base-url"
 ```
 
+Consider using [python-dotenv](https://pypi.org/project/python-dotenv/) to store keys securely in a `.env` file.
+
 ### Basic Usage
 
 ```bash
@@ -90,13 +101,71 @@ trae-cli run "Create a hello world Python script" --provider google --model gemi
 
 ### Command Line Interface
 
-*   **`trae run`**:  Execute a task, specifying the provider and model.  Use `--trajectory-file` to save debugging information.
-*   **`trae interactive`**:  Engage in a conversational mode for iterative task refinement.
-*   **`trae show-config`**: View the current configuration settings.
+The `trae-cli` command is the primary entry point.
+
+#### `trae run` - Execute a Task
+
+```bash
+# Basic task execution
+trae-cli run "Create a Python script that calculates fibonacci numbers"
+
+# With specific provider and model
+trae-cli run "Fix the bug in main.py" --provider anthropic --model claude-sonnet-4-20250514
+
+# Using OpenRouter with any supported model
+trae-cli run "Optimize this code" --provider openrouter --model "openai/gpt-4o"
+trae-cli run "Add documentation" --provider openrouter --model "anthropic/claude-3-5-sonnet"
+
+# Using Google Gemini
+trae-cli run "Implement a data parsing function" --provider google --model gemini-2.5-pro
+
+# With custom working directory
+trae-cli run "Add unit tests for the utils module" --working-dir /path/to/project
+
+# Save trajectory for debugging
+trae-cli run "Refactor the database module" --trajectory-file debug_session.json
+
+# Force to generate patches
+trae-cli run "Update the API endpoints" --must-patch
+```
+
+#### `trae interactive` - Interactive Mode
+
+```bash
+# Start interactive session
+trae-cli interactive
+
+# With custom configuration
+trae-cli interactive --provider openai --model gpt-4o --max-steps 30
+```
+
+In interactive mode, you can:
+
+- Type any task description to execute it
+- Use `status` to see agent information
+- Use `help` for available commands
+- Use `clear` to clear the screen
+- Use `exit` or `quit` to end the session
+
+#### `trae show-config` - Configuration Status
+
+```bash
+trae-cli show-config
+
+# With custom config file
+trae-cli show-config --config-file my_config.json
+```
 
 ### Configuration
 
-The agent uses a JSON configuration file (`trae_config.json`) with command-line arguments taking precedence, followed by the configuration file, environment variables, and default values.
+Trae Agent uses a JSON configuration file. See `trae_config.json` for details.
+
+**WARNING:**
+For Doubao users, please use the following base_url.
+
+```
+base_url=https://ark.cn-beijing.volces.com/api/v3/
+```
 
 **Configuration Priority:**
 
@@ -104,6 +173,25 @@ The agent uses a JSON configuration file (`trae_config.json`) with command-line 
 2.  Configuration file values
 3.  Environment variables
 4.  Default values (lowest)
+
+**Example Usage:**
+
+```bash
+# Use GPT-4 through OpenRouter
+trae-cli run "Write a Python script" --provider openrouter --model "openai/gpt-4o"
+
+# Use Claude through OpenRouter
+trae-cli run "Review this code" --provider openrouter --model "anthropic/claude-3-5-sonnet"
+
+# Use Gemini through OpenRouter
+trae-cli run "Generate docs" --provider openrouter --model "google/gemini-pro"
+
+# Use Gemini directly
+trae-cli run "Analyze this dataset" --provider google --model gemini-2.5-flash
+
+# Use Qwen through Ollama
+trae-cli run "Comment this code" --provider ollama --model "qwen3"
+```
 
 **Popular OpenRouter Models:**
 
@@ -115,20 +203,20 @@ The agent uses a JSON configuration file (`trae_config.json`) with command-line 
 
 ### Environment Variables
 
-*   `OPENAI_API_KEY`
-*   `ANTHROPIC_API_KEY`
-*   `GOOGLE_API_KEY`
-*   `OPENROUTER_API_KEY`
-*   `OPENROUTER_SITE_URL` (optional)
-*   `OPENROUTER_SITE_NAME` (optional)
+-   `OPENAI_API_KEY` - OpenAI API key
+-   `ANTHROPIC_API_KEY` - Anthropic API key
+-   `GOOGLE_API_KEY` - Google Gemini API key
+-   `OPENROUTER_API_KEY` - OpenRouter API key
+-   `OPENROUTER_SITE_URL` - (Optional) Your site URL for OpenRouter rankings
+-   `OPENROUTER_SITE_NAME` - (Optional) Your site name for OpenRouter rankings
 
 ## 🛠️ Available Tools
 
-Trae Agent features a diverse set of tools, including file editing and bash execution, and the toolset is constantly expanding.  See [docs/tools.md](docs/tools.md) for detailed information.
+Trae Agent includes file editing, bash execution, structured thinking, task completion, and JSON manipulation tools. See [docs/tools.md](docs/tools.md) for detailed tool information.
 
 ## 📊 Trajectory Recording
 
-Trae Agent automatically records detailed execution trajectories for debugging and analysis:
+Trae Agent automatically records execution trajectories:
 
 ```bash
 # Auto-generated trajectory file
@@ -141,33 +229,99 @@ trae-cli run "Optimize the database queries" --trajectory-file optimization_debu
 
 Trajectory files contain:
 
--   **LLM Interactions**: All messages, responses, and tool calls
--   **Agent Steps**: State transitions and decision points
--   **Tool Usage**: Which tools were called and their results
--   **Metadata**: Timestamps, token usage, and execution metrics
+-   LLM Interactions
+-   Agent Steps
+-   Tool Usage
+-   Metadata
 
-For more details, see [docs/TRAJECTORY_RECORDING.md](docs/TRAJECTORY_RECORDING.md).
+See [docs/TRAJECTORY_RECORDING.md](docs/TRAJECTORY_RECORDING.md) for more information.
 
 ## 🤝 Contributing
 
-Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines, including setting up a development environment, style guidelines, and creating pull requests.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+
+1.  Fork the repository.
+2.  Set up a development install:
+
+    ```bash
+    make install-dev
+    ```
+
+3.  Create a feature branch.
+4.  Make your changes.
+5.  Add tests.
+6.  Pre-commit check
+
+    ```bash
+     make pre-commit
+     or:
+     make uv-pre-commit
+    ```
+
+     if having formatting error,please try:
+
+    ```
+     make fix-format
+    ```
+7.  Commit your changes.
+8.  Push to the branch.
+9.  Open a Pull Request.
+
+### Development Guidelines
+
+-   Follow PEP 8.
+-   Add tests.
+-   Update documentation.
+-   Use type hints.
+-   Ensure tests pass.
 
 ## 📋 Requirements
 
-*   Python 3.12+
-*   API Keys for your chosen LLM providers (OpenAI, Anthropic, OpenRouter, Google Gemini, etc.)
+-   Python 3.12+
+-   API key for your chosen provider (OpenAI, Anthropic, OpenRouter, Google Gemini).
 
 ## 🔧 Troubleshooting
 
-*   **Import Errors**:  Try setting `PYTHONPATH=.` before running `trae-cli run`.
-*   **API Key Issues**: Verify API keys with `echo $YOUR_API_KEY` and `trae-cli show-config`.
-*   **Permission Errors**: Ensure you have appropriate file permissions.
-*   **Command not found Errors:** Use `uv run trae-cli xxxxx`
+### Common Issues
+
+**Import Errors:**
+
+```bash
+# Try setting PYTHONPATH
+PYTHONPATH=. trae-cli run "your task"
+```
+
+**API Key Issues:**
+
+```bash
+# Verify your API keys are set
+echo $OPENAI_API_KEY
+echo $ANTHROPIC_API_KEY
+echo $GOOGLE_API_KEY
+echo $OPENROUTER_API_KEY
+
+# Check configuration
+trae-cli show-config
+```
+
+**Permission Errors:**
+
+```bash
+# Ensure proper permissions
+chmod +x /path/to/your/project
+```
+
+**Command not found Errors:**
+
+```bash
+# you can try
+uv run trae-cli `xxxxx`
+```
 
 ## 📄 License
 
-This project is licensed under the MIT License (see [LICENSE](LICENSE)).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
-Thanks to Anthropic for the [anthropic-quickstart](https://github.com/anthropics/anthropic-quickstarts) project, which served as a valuable reference.
+We thank Anthropic for their [anthropic-quickstart](https://github.com/anthropics/anthropic-quickstarts) project.

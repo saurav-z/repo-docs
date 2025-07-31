@@ -1,54 +1,53 @@
-# Webassets: Streamline Your Python Web Project's Asset Management
+# Webassets: Streamline Your Python Web Project's Assets
 
-**Webassets empowers Python developers to efficiently manage, merge, and compress their JavaScript and CSS files for optimal web performance.**  For detailed information, visit the [original repository on GitHub](https://github.com/miracle2k/webassets).
+**Webassets simplifies asset management in your Python web projects by merging and compressing JavaScript and CSS files for optimal performance.**
+
+[View the original repository on GitHub](https://github.com/miracle2k/webassets)
 
 ## Key Features
 
-*   **Asset Merging:** Combine multiple CSS and JavaScript files into fewer HTTP requests.
-*   **Asset Compression:** Reduce file sizes through minification and compression techniques (e.g., using Google Closure Compiler).
-*   **Flexible Integration:** Seamlessly integrates with various Python web frameworks.
-*   **Optimized Performance:** Improves website loading speeds and user experience.
+*   **Asset Merging:** Combine multiple JavaScript and CSS files into single files to reduce HTTP requests.
+*   **Compression:**  Compress your assets (JS and CSS) to minimize file sizes, improving page load times.
+*   **Integration:** Designed for easy integration with Python web frameworks.
+*   **Well-Tested:** Rely on a robust library with comprehensive testing.
 
 ## Installation
 
-You can install the development version using pip:
+Install the development version using pip:
 
 ```bash
 pip install webassets==dev
 ```
 
-## Development
-
-To contribute to Webassets, follow these steps:
-
-1.  **Set up a virtual environment:**
-
-    ```bash
-    uv venv
-    ```
-
-2.  **Install Python requirements:**
-
-    ```bash
-    uv pip install -r uv.lock
-    ```
-
-3.  **Install other development requirements:**
-
-    ```bash
-    ./requirements-dev.sh
-    ```
-
-4.  **Run tests:**  Requires Java 7 or later (needed for the Google Closure filter).
-
-    ```bash
-    ./run_tests.sh
-    ```
+Or download a tarball: [https://github.com/miracle2k/webassets/tarball/master#egg=webassets-dev](https://github.com/miracle2k/webassets/tarball/master#egg=webassets-dev)
 
 ## Documentation
 
 Comprehensive documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
 
-## Build Status
+## Development
+
+Follow these steps to contribute to the project:
+
+1.  **Set up a virtual environment using uv**:
+
+    ```bash
+    uv venv
+    uv pip install -r uv.lock
+    ```
+
+2.  **Install development requirements**:
+
+    ```bash
+    ./requirements-dev.sh
+    ```
+
+3.  **Run tests**:
+
+    ```bash
+    ./run_tests.sh
+    ```
+
+    *Note: Running tests requires Java 7 or later for the Google Closure filter.*
 
 [![Build Status](https://github.com/miracle2k/webassets/actions/workflows/ci.yml/badge.svg)](https://github.com/miracle2k/webassets/actions/workflows/ci.yml)

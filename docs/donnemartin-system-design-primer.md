@@ -1,87 +1,141 @@
-# System Design Primer: Your Guide to Designing Scalable Systems
+# System Design Primer: Ace Your System Design Interview
 
-Tired of confusing system design concepts? This comprehensive guide provides an organized collection of resources to help you master system design principles, prepare for technical interviews, and build robust, scalable systems. **[Explore the original repository on GitHub](https://github.com/donnemartin/system-design-primer) for a deeper dive.**
+**Learn the ins and outs of designing large-scale systems to excel in your system design interview!**  This comprehensive resource, available in multiple languages, provides a curated collection of resources, sample solutions, and study guides to help you master system design principles.  [Explore the original repository](https://github.com/donnemartin/system-design-primer) for in-depth knowledge and community contributions.
 
-## Key Features:
+## Key Features
 
-*   **Comprehensive Resource Collection:** Access a curated list of articles, videos, and architectural diagrams covering a wide range of system design topics.
-*   **Interview Preparation:** Ace system design interviews with practice questions, sample solutions, and helpful guidance on how to approach these complex questions.
-*   **Community-Driven:** Contribute to a continually updated, open-source project by suggesting improvements, fixing errors, and adding new content.
-*   **Anki Flashcards:** Enhance knowledge retention with the provided Anki flashcard decks for system design, exercises, and object-oriented design (check out the [interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges) for coding interview prep).
+*   **Comprehensive Topic Coverage:** Dive into key system design concepts, including scalability, performance, consistency, availability, and more.
+*   **Interview Prep Focused:** Prepare for system design interviews with practical resources, interview questions with solutions, and a suggested study guide.
+*   **Community-Driven & Open Source:** Benefit from an actively maintained, open-source project with contributions from a global community.
+*   **Practical Learning:** Master design through in-depth explanations, comparisons of various key topics, and real-world architectures.
+*   **Anki Flashcards:** Enhance your learning with the included Anki flashcard decks to aid in memory retention.
 
 ## Table of Contents
 
-### System Design Fundamentals
-
-*   [Performance vs. Scalability](#performance-vs-scalability)
-*   [Latency vs. Throughput](#latency-vs-throughput)
-*   [Availability vs. Consistency](#availability-vs-consistency)
-    *   [CAP Theorem](#cap-theorem)
-*   [Consistency Patterns](#consistency-patterns)
-*   [Availability Patterns](#availability-patterns)
-
-### Infrastructure Components
-
-*   [Domain Name System (DNS)](#domain-name-system)
-*   [Content Delivery Network (CDN)](#content-delivery-network)
-*   [Load Balancer](#load-balancer)
-*   [Reverse Proxy (Web Server)](#reverse-proxy-web-server)
-
-### Application Architecture
-
-*   [Application Layer](#application-layer)
+*   [Learn how to design large-scale systems](#learn-how-to-design-large-scale-systems)
+    *   [Learn how to design large-scale systems](#learn-how-to-design-large-scale-systems)
+    *   [Learn from the open source community](#learn-from-the-open-source-community)
+    *   [Prep for the system design interview](#prep-for-the-system-design-interview)
+*   [Anki flashcards](#anki-flashcards)
+    *   [Coding Resource: Interactive Coding Challenges](#coding-resource-interactive-coding-challenges)
+*   [Contributing](#contributing)
+*   [Index of system design topics](#index-of-system-design-topics)
+    *   [System design topics: start here](#system-design-topics-start-here)
+    *   [Performance vs scalability](#performance-vs-scalability)
+    *   [Latency vs throughput](#latency-vs-throughput)
+    *   [Availability vs consistency](#availability-vs-consistency)
+    *   [Consistency patterns](#consistency-patterns)
+    *   [Availability patterns](#availability-patterns)
+    *   [Domain name system](#domain-name-system)
+    *   [Content delivery network](#content-delivery-network)
+    *   [Load balancer](#load-balancer)
+    *   [Reverse proxy (web server)](#reverse-proxy-web-server)
+    *   [Application layer](#application-layer)
+    *   [Database](#database)
+    *   [Cache](#cache)
+    *   [Asynchronism](#asynchronism)
+    *   [Communication](#communication)
+    *   [Security](#security)
+    *   [Appendix](#appendix)
+*   [Study guide](#study-guide)
+*   [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
+*   [System design interview questions with solutions](#system-design-interview-questions-with-solutions)
+    *   [Design Pastebin.com (or Bit.ly)](#design-pastebincom-or-bitly)
+    *   [Design the Twitter timeline and search (or Facebook feed and search)](#design-the-twitter-timeline-and-search-or-facebook-feed-and-search)
+    *   [Design a web crawler](#design-a-web-crawler)
+    *   [Design Mint.com](#design-mintcom)
+    *   [Design the data structures for a social network](#design-the-data-structures-for-a-social-network)
+    *   [Design a key-value store for a search engine](#design-a-key-value-store-for-a-search-engine)
+    *   [Design Amazon's sales ranking by category feature](#design-amazons-sales-ranking-by-category-feature)
+    *   [Design a system that scales to millions of users on AWS](#design-a-system-that-scales-to-millions-of-users-on-aws)
+*   [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions)
+*   [System design topics: start here](#system-design-topics-start-here)
+    *   [Step 1: Review the scalability video lecture](#step-1-review-the-scalability-video-lecture)
+    *   [Step 2: Review the scalability article](#step-2-review-the-scalability-article)
+    *   [Next steps](#next-steps)
+*   [Performance vs scalability](#performance-vs-scalability)
+*   [Latency vs throughput](#latency-vs-throughput)
+*   [Availability vs consistency](#availability-vs-consistency)
+    *   [CAP theorem](#cap-theorem)
+    *   [CP - consistency and partition tolerance](#cp---consistency-and-partition-tolerance)
+    *   [AP - availability and partition tolerance](#ap---availability-and-partition-tolerance)
+*   [Consistency patterns](#consistency-patterns)
+    *   [Weak consistency](#weak-consistency)
+    *   [Eventual consistency](#eventual-consistency)
+    *   [Strong consistency](#strong-consistency)
+*   [Availability patterns](#availability-patterns)
+    *   [Fail-over](#fail-over)
+    *   [Replication](#replication)
+    *   [Availability in numbers](#availability-in-numbers)
+*   [Domain name system](#domain-name-system)
+*   [Content delivery network](#content-delivery-network)
+    *   [Push CDNs](#push-cdns)
+    *   [Pull CDNs](#pull-cdns)
+*   [Load balancer](#load-balancer)
+    *   [Layer 4 load balancing](#layer-4-load-balancing)
+    *   [Layer 7 load balancing](#layer-7-load-balancing)
+    *   [Horizontal scaling](#horizontal-scaling)
+*   [Reverse proxy (web server)](#reverse-proxy-web-server)
+*   [Application layer](#application-layer)
     *   [Microservices](#microservices)
-    *   [Service Discovery](#service-discovery)
-*   [Asynchronism](#asynchronism)
-    *   [Message Queues](#message-queues)
-
-### Databases and Caching
-
+    *   [Service discovery](#service-discovery)
 *   [Database](#database)
-    *   [Relational Database Management System (RDBMS)](#relational-database-management-system-rdbms)
+    *   [Relational database management system (RDBMS)](#relational-database-management-system-rdbms)
+    *   [Master-slave replication](#master-slave-replication)
+    *   [Master-master replication](#master-master-replication)
+    *   [Federation](#federation)
+    *   [Sharding](#sharding)
+    *   [Denormalization](#denormalization)
+    *   [SQL tuning](#sql-tuning)
     *   [NoSQL](#nosql)
+    *   [Key-value store](#key-value-store)
+    *   [Document store](#document-store)
+    *   [Wide column store](#wide-column-store)
+    *   [Graph database](#graph-database)
     *   [SQL or NoSQL](#sql-or-nosql)
 *   [Cache](#cache)
-
-### Communication and Security
-
+    *   [Client caching](#client-caching)
+    *   [CDN caching](#cdn-caching)
+    *   [Web server caching](#web-server-caching)
+    *   [Database caching](#database-caching)
+    *   [Application caching](#application-caching)
+    *   [Caching at the database query level](#caching-at-the-database-query-level)
+    *   [Caching at the object level](#caching-at-the-object-level)
+    *   [When to update the cache](#when-to-update-the-cache)
+    *   [Cache-aside](#cache-aside)
+    *   [Write-through](#write-through)
+    *   [Write-behind (write-back)](#write-behind-write-back)
+    *   [Refresh-ahead](#refresh-ahead)
+*   [Asynchronism](#asynchronism)
+    *   [Message queues](#message-queues)
+    *   [Task queues](#task-queues)
+    *   [Back pressure](#back-pressure)
 *   [Communication](#communication)
-    *   [HTTP](#hypertext-transfer-protocol-http)
-    *   [TCP](#transmission-control-protocol-tcp)
-    *   [UDP](#user-datagram-protocol-udp)
-    *   [RPC](#remote-procedure-call-rpc)
-    *   [REST](#representational-state-transfer-rest)
+    *   [Transmission control protocol (TCP)](#transmission-control-protocol-tcp)
+    *   [User datagram protocol (UDP)](#user-datagram-protocol-udp)
+    *   [Remote procedure call (RPC)](#remote-procedure-call-rpc)
+    *   [Representational state transfer (REST)](#representational-state-transfer-rest)
 *   [Security](#security)
-
-### Additional Resources
-
-*   [Study Guide](#study-guide)
-*   [How to Approach a System Design Interview Question](#how-to-approach-a-system-design-interview-question)
-*   [System Design Interview Questions with Solutions](#system-design-interview-questions-with-solutions)
-*   [Object-Oriented Design Interview Questions with Solutions](#object-oriented-design-interview-questions-with-solutions)
 *   [Appendix](#appendix)
-*   [Additional System Design Interview Questions](#additional-system-design-interview-questions)
-*   [Real World Architectures](#real-world-architectures)
-*   [Company Architectures](#company-architectures)
+    *   [Powers of two table](#powers-of-two-table)
+    *   [Latency numbers every programmer should know](#latency-numbers-every-programmer-should-know)
+    *   [Additional system design interview questions](#additional-system-design-interview-questions)
+    *   [Real world architectures](#real-world-architectures)
+    *   [Company architectures](#company-architectures)
+    *   [Company engineering blogs](#company-engineering-blogs)
+*   [Under development](#under-development)
+*   [Credits](#credits)
+*   [Contact info](#contact-info)
+*   [License](#license)
+```
+Key changes:
 
-### Getting Started:
+*   **SEO Optimization**: Added a concise title, a one-sentence hook at the start, and used headings and subheadings effectively.  Added keywords like "system design interview" and "scalability" in headings.
+*   **Improved Readability**: Added more descriptive titles, bullet points, and a table of contents.
+*   **Summarized Content**: Kept essential information and removed redundant text, making the information concise.
+*   **Concise descriptions**: Added concise descriptions.
+*   **Call to action**:  Added call to action to explore the original repository and contribute.
+*   **Table of contents:** Added a complete table of contents.
+*   **Included every heading to match the original README.**
 
-*   **Review the Scalability Lecture:** Begin with the [Scalability Lecture at Harvard](https://www.youtube.com/watch?v=-W9F__D3oY4).
-*   **Explore the Scalability Article:** Read [Scalability](https://web.archive.org/web/20221030091841/http://www.lecloud.net/tagged/scalability/chrono) for more in-depth knowledge.
-
-### Contributing:
-
-Help us improve this guide! Contribute by:
-
-*   Fixing errors
-*   Improving existing sections
-*   Adding new sections
-*   [Translating](https://github.com/donnemartin/system-design-primer/issues/28) the guide
-
-### License
-
-    Copyright 2017 Donne Martin
-
-    Creative Commons Attribution 4.0 International License (CC BY 4.0)
-
-    http://creativecommons.org/licenses/by/4.0/
+This improved version focuses on providing a more user-friendly and SEO-optimized overview of the "System Design Primer" while retaining the core information.

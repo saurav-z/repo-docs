@@ -1,97 +1,96 @@
-# CTFd: The Open-Source Capture The Flag Framework
+# CTFd: The Customizable Capture The Flag Framework
 
-<p align="center">
-  <img src="https://github.com/CTFd/CTFd/blob/master/CTFd/themes/core/static/img/logo.png?raw=true" alt="CTFd Logo" width="200">
-</p>
-
-**CTFd is a powerful, open-source platform designed to easily host and manage your own Capture The Flag (CTF) competitions.**
-
-[![CTFd MySQL CI](https://github.com/CTFd/CTFd/workflows/CTFd%20MySQL%20CI/badge.svg?branch=master)](https://github.com/CTFd/CTFd/workflows/CTFd%20MySQL%20CI)
-[![Linting](https://github.com/CTFd/CTFd/workflows/Linting/badge.svg?branch=master)](https://github.com/CTFd/CTFd/workflows/Linting)
+[![CTFd MySQL CI](https://github.com/CTFd/CTFd/workflows/CTFd%20MySQL%20CI/badge.svg?branch=master)](https://github.com/CTFd/CTFd/actions/workflows/ctfd-mysql-ci.yml)
+[![Linting](https://github.com/CTFd/CTFd/workflows/Linting/badge.svg?branch=master)](https://github.com/CTFd/CTFd/actions/workflows/linting.yml)
 [![MajorLeagueCyber Discourse](https://img.shields.io/discourse/status?server=https%3A%2F%2Fcommunity.majorleaguecyber.org%2F)](https://community.majorleaguecyber.org/)
 [![Documentation Status](https://api.netlify.com/api/v1/badges/6d10883a-77bb-45c1-a003-22ce1284190e/deploy-status)](https://docs.ctfd.io)
 
-## Key Features
+**CTFd is the ultimate open-source platform to host and manage your own Capture The Flag (CTF) competitions.**  Offering a flexible and user-friendly experience, CTFd allows you to create engaging cybersecurity challenges for individual players or teams.
 
-CTFd offers a comprehensive set of features to create engaging and customizable CTF experiences:
+[Visit the original repository on GitHub](https://github.com/CTFd/CTFd)
+
+## Key Features of CTFd:
 
 *   **Challenge Management:**
-    *   Create and manage challenges, categories, hints, and flags through the admin interface.
-    *   Support for dynamic scoring challenges.
-    *   Unlockable challenge support.
-    *   Plugin architecture for custom challenge creation.
-    *   Support for static and regex-based flags.
-    *   Custom flag plugins.
-    *   Unlockable hints.
-    *   File uploads to server or S3-compatible backend.
+    *   Create and manage challenges with ease through an intuitive admin interface.
+    *   Supports dynamic scoring for varied difficulty levels.
+    *   Implement unlockable challenges to guide participants.
+    *   Utilize a powerful plugin architecture for custom challenge types.
+    *   Supports static and regex-based flags.
+    *   Integrate custom flag plugins.
+    *   Implement unlockable hints to help players.
+    *   Allow file uploads to the server or S3-compatible backends.
     *   Limit challenge attempts and hide challenges.
-    *   Automatic brute-force protection.
 *   **Competition Modes:**
-    *   Individual and team-based competitions.
-    *   Allow users to compete individually or form teams.
-*   **Scoreboard & Reporting:**
-    *   Automatic tie resolution.
-    *   Option to hide scores from the public.
-    *   Freeze scores at a specific time.
-    *   Scoregraphs for the top 10 teams and team progress graphs.
-*   **Content & Communication:**
-    *   Markdown content management system.
-    *   SMTP + Mailgun email support.
-    *   Email confirmation and password reset support.
+    *   Individual and team-based competition options.
+    *   Allows players to compete solo or collaborate in teams.
+*   **Scoring & Leaderboards:**
+    *   Real-time scoreboards with automatic tie resolution.
+    *   Option to hide scores from public view.
+    *   Freeze scores at a specific time to prevent late game advantages.
+*   **Visualization & Communication:**
+    *   Scoregraphs for visual team comparison (top 10 teams).
+    *   Team progress graphs for insight.
+    *   Markdown-based content management system for rich content.
+*   **Notifications & Email:**
+    *   SMTP and Mailgun email support for notifications.
+    *   Email confirmation for user accounts.
+    *   Forgot password support.
 *   **Competition Control:**
-    *   Automated competition start and end times.
-    *   Team management features, including hiding and banning.
+    *   Automatic competition start and end times.
+    *   Team management features: hiding and banning.
 *   **Customization:**
-    *   Extensive customization via [plugin](https://docs.ctfd.io/docs/plugins/overview) and [theme](https://docs.ctfd.io/docs/themes/overview) interfaces.
-    *   Import and export CTF data for archiving.
+    *   Highly customizable through a robust plugin and theme system.
+    *   Import and export CTF data for archiving and reuse.
 
 ## Installation
 
-Follow these steps to get CTFd up and running:
-
 1.  **Install Dependencies:** `pip install -r requirements.txt`
-    *   You can also use the `prepare.sh` script to install system dependencies using apt.
-2.  **Configure:** Modify `CTFd/config.ini` to your liking.
-3.  **Run:** Use `python serve.py` or `flask run` in a terminal.
+    *   Alternatively, use the `prepare.sh` script to install system dependencies using `apt`.
+2.  **Configure:** Modify `CTFd/config.ini` to set up your CTF settings.
+3.  **Run:** Use `python serve.py` or `flask run` to launch in debug mode.
 
 **Docker:**
 
-*   **Run with Docker (Auto-Generated):**  `docker run -p 8000:8000 -it ctfd/ctfd`
-*   **Run with Docker Compose:** `docker compose up` (from the source repository)
+*   **Run with Docker (Simple):** `docker run -p 8000:8000 -it ctfd/ctfd`
+*   **Run with Docker Compose:**  `docker compose up` (from the source repository)
 
-For detailed deployment options, consult the [CTFd Documentation](https://docs.ctfd.io/) and the [Getting Started](https://docs.ctfd.io/tutorials/getting-started/) guide.
+**Documentation:**
+
+*   Refer to the [CTFd docs](https://docs.ctfd.io/) for detailed [deployment options](https://docs.ctfd.io/docs/deployment/installation) and a [Getting Started](https://docs.ctfd.io/tutorials/getting-started/) guide.
 
 ## Live Demo
 
-Explore a live demo of CTFd at: [https://demo.ctfd.io/](https://demo.ctfd.io/)
+[https://demo.ctfd.io/](https://demo.ctfd.io/)
 
-## Support and Community
+## Support & Community
 
-*   **Community Support:** Join the [MajorLeagueCyber Community](https://community.majorleaguecyber.org/)
-*   **Commercial Support:**  For commercial support or special projects, contact us at [https://ctfd.io/contact/](https://ctfd.io/contact/).
+*   Get help on the [MajorLeagueCyber Community](https://community.majorleaguecyber.org/).
 
-## Managed Hosting
+## Managed Hosting & Commercial Support
 
-For a hassle-free CTFd experience, check out the [CTFd website](https://ctfd.io/) for managed CTFd deployments.
+*   For managed CTFd deployments, visit [the CTFd website](https://ctfd.io/).
+*   Contact us for commercial support via the [CTFd contact page](https://ctfd.io/contact/).
 
 ## MajorLeagueCyber Integration
 
-CTFd integrates seamlessly with [MajorLeagueCyber (MLC)](https://majorleaguecyber.org/), a platform for CTF event scheduling, team tracking, and single sign-on.  Integrating with MLC allows users to automatically log in, track their scores, submit writeups, and receive notifications.
+CTFd seamlessly integrates with [MajorLeagueCyber](https://majorleaguecyber.org/), a CTF stats tracker, providing event scheduling, team tracking, and single sign-on. This allows for:
 
-To integrate:
-1. Register an account and create an event on MajorLeagueCyber.
-2. Install the client ID and client secret in the `CTFd/config.py` file or admin panel:
+*   Automated user logins.
+*   Individual and team score tracking.
+*   Writeup submissions.
+*   Event notifications.
 
-```python
-OAUTH_CLIENT_ID = None
-OAUTH_CLIENT_SECRET = None
-```
+**Integration Steps:**
+
+1.  Register an account on MajorLeagueCyber.
+2.  Create an event.
+3.  Install the client ID and client secret in either:
+    *   `CTFd/config.py` (using `OAUTH_CLIENT_ID` and `OAUTH_CLIENT_SECRET`).
+    *   Or the admin panel.
 
 ## Credits
 
 *   **Logo:** [Laura Barbera](http://www.laurabb.com/)
 *   **Theme:** [Christopher Thompson](https://github.com/breadchris)
 *   **Notification Sound:** [Terrence Martin](https://soundcloud.com/tj-martin-composer)
-
----
-**[Back to the CTFd Repository](https://github.com/CTFd/CTFd)**

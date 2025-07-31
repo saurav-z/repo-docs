@@ -1,38 +1,42 @@
-# Empower AI with the Model Context Protocol (MCP) Servers
+# Enhance Your AI with Model Context Protocol (MCP) Servers
 
-**Unlock the potential of Large Language Models (LLMs) by giving them secure and controlled access to tools and data sources using MCP servers.** Explore a growing collection of reference and community-built implementations. [Access the original repository](https://github.com/modelcontextprotocol/servers) for the latest updates and contribute to the future of AI.
+**Unlock the power of large language models by giving them secure and controlled access to tools and data sources with Model Context Protocol (MCP) servers.**
 
-## Key Features
+[<img src="https://github.com/modelcontextprotocol/servers/blob/main/docs/mcp-icon-color.svg?raw=true" alt="MCP Icon" width="20">  View the original repository](https://github.com/modelcontextprotocol/servers)
 
-*   **Reference Implementations:** Explore a comprehensive suite of reference servers built with official MCP SDKs, showcasing the versatility and extensibility of MCP.
-*   **Language Support:** Benefit from SDKs in multiple languages including C#, Go, Java, Kotlin, Python, Ruby, Rust, Swift, and TypeScript.
-*   **Secure Access:** Provide LLMs with safe, controlled access to tools and data, enhancing their capabilities while maintaining data integrity.
-*   **Extensive Integrations:** Discover a vibrant ecosystem of third-party servers connecting to a wide range of services, from cloud platforms to financial data and beyond.
-*   **Community Driven:** Contribute to and benefit from a growing community of developers building and sharing MCP servers.
+This repository serves as a central hub for **reference implementations** of the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), along with community-built servers and resources, offering developers a robust framework for integrating LLMs with diverse functionalities.
 
-## Reference Servers
+**Key Features:**
 
-These servers serve as examples and demonstrate MCP features.
+*   **Modular Design:** Extend LLMs with specific functionalities using individual servers.
+*   **Secure Access:** Grant LLMs controlled access to tools and data.
+*   **Versatile Applications:** Cover a wide range of functionalities, from web content fetching to database interaction.
+*   **Multi-Language SDK Support:** Available for C#, Go, Java, Kotlin, Python, Ruby, Rust, Swift, and TypeScript via [MCP SDKs](https://modelcontextprotocol.io/).
+*   **Community-Driven:** Benefit from a growing ecosystem of servers and resources.
 
-*   **Everything:** Comprehensive reference / test server with prompts, resources, and tools.
-*   **Fetch:** Fetches and converts web content for efficient LLM usage.
+## 🌟 Reference Servers
+
+Explore these servers to understand MCP features and leverage official SDKs:
+
+*   **Everything:** Test server with prompts, resources, and tools.
+*   **Fetch:** Web content retrieval and conversion for efficient LLM use.
 *   **Filesystem:** Secure file operations with configurable access controls.
-*   **Git:** Tools for reading, searching, and manipulating Git repositories.
-*   **Memory:** Knowledge graph-based persistent memory system.
-*   **Sequential Thinking:** Dynamic problem-solving through thought sequences.
-*   **Time:** Time and timezone conversion capabilities.
+*   **Git:** Tools to interact with and modify Git repositories.
+*   **Memory:** Persistent memory system based on knowledge graphs.
+*   **Sequential Thinking:** Dynamic problem-solving through sequences of thought.
+*   **Time:** Capabilities for time and timezone conversion.
 
 ### Archived Servers
 
-Explore archived servers at [servers-archived](https://github.com/modelcontextprotocol/servers-archived).
+Find archived reference servers at the [servers-archived](https://github.com/modelcontextprotocol/servers-archived) repository.
 
-## 🤝 Third-Party Integrations
+## 🤝 Third-Party Servers
 
-Discover a thriving community of developers building production-ready MCP servers for their platforms.
+Discover a thriving ecosystem of community-developed servers:
 
 ### 🎖️ Official Integrations
 
-**(A comprehensive list of official integrations is provided in the original README, and has been retained in full below to maintain the value of the updated document.)**
+Official integrations are maintained by companies building production ready MCP servers for their platforms.
 
 *   <img height="12" width="12" src="https://www.21st.dev/favicon.ico" alt="21st.dev Logo" /> **[21st.dev Magic](https://github.com/21st-dev/magic-mcp)** - Create crafted UI components inspired by the best 21st.dev design engineers.
 *   <img height="12" width="12" src="https://framerusercontent.com/images/LpSK1tSZweomrAHOMAj9Gea96lA.svg" alt="Paragon Logo" /> **[ActionKit by Paragon](https://github.com/useparagon/paragon-mcp)** - Connect to 130+ SaaS integrations (e.g. Slack, Salesforce, Gmail) with Paragon’s [ActionKit](https://www.useparagon.com/actionkit) API.
@@ -108,5 +112,4 @@ Discover a thriving community of developers building production-ready MCP server
 *   <img height="12" width="12" src="https://www.cloudbees.com/favicon.ico" alt="CloudBees Logo" /> **[CloudBees](https://docs.cloudbees.com/docs/cloudbees-mcp/latest/)** - Enable AI access to your [CloudBees Unify](https://www.cloudbees.com/unify) environment.
 *   <img src="http://www.google.com/s2/favicons?domain=www.cloudera.com" alt="Cloudera Iceberg" width="12" height="12"> **[Cloudera Iceberg](https://github.com/cloudera/iceberg-mcp-server)** - enabling AI on the [Open Data Lakehouse](https://www.cloudera.com/products/open-data-lakehouse.html).
 *   <img height="12" width="12" src="https://cdn.simpleicons.org/cloudflare" /> **[Cloudflare](https://github.com/cloudflare/mcp-server-cloudflare)** - Deploy, configure & interrogate your resources on the Cloudflare developer platform (e.g. Workers/KV/R2/D1)
-*   <img src="https://cdn.prod.website-files.com/64d41aab8183c7c3324ddb29/67c0f1e272e51cf3c511c17c_Gyph.svg" alt="Cloudinary" width="12" height="12"> **[Cloudinary](https://github.com/cloudinary/mcp-servers)** - Exposes Cloudinary's media upload, transformation, AI analysis, management, optimization and delivery as tools usable by AI agents
-*   <img height="12" width="12" src="https
+*   <img src="https://cdn.prod.website-files.com/64d41aab8183c7c3324ddb29/67c0f1e272e51cf3c511c17c_Gyph.svg" alt="Cloudinary" width="12" height="12"> **[Cloudinary](https://github.com/cloudinary/mcp-servers)** - Exposes Cloudinary's media upload, transformation, AI analysis, management, optimization

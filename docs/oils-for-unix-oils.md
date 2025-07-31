@@ -1,73 +1,59 @@
-# Oils: A Modern Upgrade for Your Shell
+# Oils: Your Upgrade Path From Bash with OSH and YSH
 
-**Oils** is a new shell that aims to be a modern upgrade path from bash, offering improved language features and a more robust runtime.
-
-[Visit the original Oils repository](https://github.com/oils-for-unix/oils).
+Oils is a modern shell and programming language designed to be a direct upgrade from Bash and a more user-friendly alternative for Python and JavaScript developers. [Check out the Oils project on GitHub!](https://github.com/oils-for-unix/oils)
 
 ## Key Features
 
-*   **OSH (Oil Shell):** Run your existing shell scripts with improved compatibility and features.
-*   **YSH (Oil Shell):** A new shell language for Python and JavaScript users, designed to be a more user-friendly alternative to Bash.
-*   **Performance:** Written in Python and translated to C++ for speed and a small footprint. The deployed executable doesn't depend on Python.
-*   **Easy Contribution:** The code is written in Python, making it easier to understand and contribute to.
-*   **Rapid Development:**  Contributions are often accepted, including failing spec tests, making it a great project for prototyping and learning.
+*   **OSH (Oil Shell):** Runs your existing shell scripts, offering improved compatibility and performance over traditional Bash.
+*   **YSH (Yet Another Shell):** A new language tailored for Python and JavaScript users, offering a more familiar syntax and advanced features.
+*   **Fast and Efficient:** Written in Python for ease of development, but automatically translated to C++ for speed and minimal dependencies.
+*   **Easy to Contribute:** The codebase is designed for easy contribution, especially for Python developers. The focus is on making the process simple.
+*   **Active Community:** The project has an active community with quick response times on questions and contributions.
+
+## Why Oils?
+
+Oils aims to provide a smooth transition from Bash while incorporating modern language features and a focus on improved usability. It provides a path for both existing shell script users and those who prefer Python and JavaScript.
 
 ## Getting Started
 
-### For Users
+**For Users:**
 
-If you want to *use* Oils, don't clone this repo. Instead, visit <https://oils.pub/release/latest/>.
+*   Don't clone this repository. Instead, download the latest release from [the Oils home page](https://oils.pub/release/latest/).
 
-### For Developers
+**For Developers (Contributing):**
 
-1.  Follow the instructions on the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page to build the developer version.
-2.  Run interactively:
+1.  Follow the instructions on the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page to set up a development build.
+2.  Join the `#oil-dev` channel on [oilshell.zulipchat.com](https://oilshell.zulipchat.com/) for questions and support, or open an issue on Github.
+3.  Start by tackling [good first issues](https://github.com/oils-for-unix/oils/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
 
-    ```bash
-    bash$ bin/osh
-    osh$ name=world
-    osh$ echo "hello $name"
-    hello world
-    ```
+### Quick Start on Linux (for Developers)
 
-3.  Run your shell scripts with `bin/osh myscript.sh`.
-4.  Try [YSH](https://oils.pub/cross-ref.html#YSH) with `bin/ysh`.
+After setting up the development environment, run:
 
-## Contributing
+```bash
+bash$ bin/osh
+osh$ name=world
+osh$ echo "hello $name"
+hello world
+```
 
-Oils welcomes contributions! Here's how you can help:
+*   Run your scripts with `bin/osh myscript.sh`.
+*   Experiment with YSH: `bin/ysh`.
 
-*   Check out the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page for build instructions.
-*   Join the `#oil-dev` channel on [oilshell.zulipchat.com](https://oilshell.zulipchat.com/) to ask questions.
-*   Browse the [Github issues](https://github.com/oils-for-unix/oils/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) for good first issues.
+### Dev Build vs. Release Build
 
-## Build vs. Release Builds
+Remember the developer build is different from the release tarballs.
 
-The **developer build** is different from the release tarballs, as detailed on the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page. Release tarballs are linked from the [home page](https://oils.pub/).
+## Contributing and Community
 
-## Small Contributions Welcome
-
-Oils thrives on small contributions.  Your contributions can include:
-
-*   Fixing failing [spec tests](https://oils.pub/cross-ref.html#spec-test).
-*   Implementing new features in Python.
-*   Influencing the design of [YSH](https://oils.pub/cross-ref.html#YSH).
-
-## Response Time
-
-The maintainer, `andychu`, aims to respond to queries and pull requests within 24 hours. Ping `andychu` on Zulip or Github if you need assistance.
+Oils welcomes contributions of all sizes! Focus on making your code work in Python first; the translation to C++ is often automated. We are especially looking for failing spec tests.
 
 ## Documentation
 
-*   The [Wiki](https://github.com/oils-for-unix/oils/wiki) has developer documentation.
-*   End-user documentation is linked from each [release page](https://oils.pub/releases.html).
+*   **Home Page:** [Oils Home Page](https://oils.pub/)
+*   **Wiki:** [Oils Wiki](https://github.com/oils-for-unix/oils/wiki)
+*   **Releases:** [Release Page](https://oils.pub/releases.html)
 
-## Links
+## Contact
 
-*   [Oils Home Page](https://oils.pub/)
-*   [Oils Repo Overview](doc/repo-overview.md)
-*   [README-index.md](README-index.md)
-*   [The Oils Repo Is Different From the Tarball Releases](https://github.com/oils-for-unix/oils/wiki/The-Oils-Repo-Is-Different-From-the-Tarball-Releases)
-*   [Oilshell Zulip Chat](https://oilshell.zulipchat.com/)
-*   [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing)
-*   [Oils Releases](https://oils.pub/releases.html)
+For questions or PR reviews, contact `andychu` on Zulip or Github. Expect a response within 24 hours!

@@ -1,156 +1,316 @@
-# AI 闲鱼智能监控机器人: 实时监控、智能分析，不错过每一个好物!
+# AI 闲鱼监控机器人: 智能监控你的闲鱼宝贝
 
-🤖 告别手动刷闲鱼，这款 AI 驱动的监控机器人基于 Playwright 和 AI 技术，实时追踪闲鱼商品，并通过智能分析快速筛选出符合您需求的商品，同时提供功能完善的 Web 管理界面。 [查看项目原仓库](https://github.com/dingyufei615/ai-goofish-monitor)
+Tired of missing out on the best deals? **AI 闲鱼监控机器人** is a powerful tool that uses AI and Playwright to intelligently monitor and analyze Xianyu (闲鱼) listings, helping you find your next purchase effortlessly.
 
-## ✨ 核心功能
+[View the original repository on GitHub](https://github.com/dingyufei615/ai-goofish-monitor)
 
-*   ✅ **智能任务创建:** 使用自然语言描述您的需求，一键生成复杂筛选规则的监控任务。
-*   🌐 **可视化 Web UI:** 友好的 Web 界面，用于任务管理、AI 标准编辑、日志查看和结果筛选。
-*   🚀 **多任务并发:** 同时监控多个关键词，互不干扰，高效追踪。
-*   ⏱️ **实时流式处理:** 发现新商品后即时分析，告别延迟。
-*   🧠 **深度 AI 分析:** 结合多模态大语言模型 (如 GPT-4o)，分析商品图文和卖家信息，精准筛选。
-*   ⚙️ **高度可定制:** 为每个任务配置独立的关键词、价格范围、AI 分析指令 (Prompt) 等。
-*   🔔 **即时通知:** 支持通过 ntfy.sh, 企业微信机器人和 Bark 推送。
-*   🗓️ **定时任务调度:** 支持 Cron 表达式，实现自动化周期性运行。
-*   🐳 **Docker 一键部署:** 快速、标准化的容器化部署。
-*   🛡️ **健壮的反爬策略:** 模拟真人操作，提高稳定性。
+## Key Features
 
-## 📸 快速上手
+*   ✅ **Intuitive Web UI:** Manage tasks, edit AI criteria, view real-time logs, and browse results with a user-friendly web interface – no command line needed!
+*   💬 **AI-Powered Task Creation:** Simply describe your desired item in natural language, and the AI creates a sophisticated monitoring task for you.
+*   ⚙️ **Multi-Task Concurrency:** Monitor multiple keywords simultaneously with independent tasks, ensuring you don't miss any opportunities.
+*   ⚡️ **Real-time Processing:** Get instant analysis of new listings, eliminating batch processing delays.
+*   🧠 **Deep AI Analysis:** Leverages multi-modal large language models (e.g., GPT-4o) to analyze listing images, descriptions, and seller profiles for precise filtering.
+*   🛠️ **Highly Customizable:** Configure unique keywords, price ranges, filters, and AI prompts for each monitoring task.
+*   🔔 **Instant Notifications:** Receive immediate alerts via [ntfy.sh](https://ntfy.sh/), WeChat Enterprise Robot, and [Bark](https://bark.day.app/) when a matching item is found.
+*   📅 **Scheduled Tasks:** Utilize Cron expressions for automated, scheduled task execution.
+*   🐳 **Docker Deployment:** Deploy quickly and easily with pre-configured `docker-compose` settings.
+*   🛡️ **Robust Anti-Scraping Measures:** Mimics human behavior with randomized delays and user interactions to improve stability and avoid detection.
 
-### 1. 环境准备
+## Screenshots
 
-1.  **克隆项目:**
+**Web UI - Task Management**
+![img.png](static/img.png)
+
+**Web UI - Monitoring Dashboard**
+![img_1.png](static/img_1.png)
+
+**Notification Example (ntfy.sh)**
+![img_2.png](static/img_2.png)
+
+## Getting Started (Recommended: Web UI)
+
+The Web UI provides the best user experience.
+
+### Step 1: Environment Setup
+
+1.  **Clone the Repository:**
 
     ```bash
     git clone https://github.com/dingyufei615/ai-goofish-monitor
     cd ai-goofish-monitor
     ```
 
-2.  **安装依赖:**
+2.  **Install Dependencies:**
 
     ```bash
     pip install -r requirements.txt
     ```
 
-### 2. 基础配置
+### Step 2: Configuration
 
-1.  **配置 .env 文件:**
+1.  **Configure Environment Variables:** Rename `.env.example` to `.env` and customize the values.
 
-    *   复制 `.env.example` 文件并重命名为 `.env`。
-        *   **Windows:** `copy .env.example .env`
-        *   **Linux/macOS:** `cp .env.example .env`
-    *   编辑 `.env` 文件，配置以下关键变量:
+    *   **Windows:**
 
-    | 环境变量          | 说明                                                              | 是否必填 | 注意事项                                                                                                                                  |
-    | :---------------- | :---------------------------------------------------------------- | :------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
-    | `OPENAI_API_KEY`  | 你的 AI 模型服务商的 API Key。                                          | 是       |                                                                                                                                         |
-    | `OPENAI_BASE_URL` | AI 模型的 API 接口地址，必须兼容 OpenAI 格式。                               | 是       | 填写 API 的基础路径，例如 `https://api.example.com/v1`。                                                                               |
-    | `OPENAI_MODEL_NAME` | 你要使用的具体模型名称。                                                               | 是       | **必须**选择支持图片分析的多模态模型，如 `gpt-4o`, `gemini-1.5-pro` 等。                                                              |
-    | `PROXY_URL`       | (可选) 为 AI 请求配置的 HTTP/S 代理。                                     | 否       | 支持 `http://` 和 `socks5://` 格式。                                                                                                  |
-    | (其他变量)      | ... (查看原 README 获取完整的环境变量说明)                                      |          |                                                                                                                                         |
-
-2.  **获取登录状态 (重要!)**
-    *   **推荐：通过 Web UI 更新**
-        1.  启动 Web 服务 (见第 3 步)。
-        2.  在 Web UI 的 "系统设置" 页面中，点击 "手动更新" 按钮。
-        3.  按照弹窗中的指引，登录闲鱼，复制登录信息并粘贴到 Web UI。
-    *   **备用: 运行登录脚本 (如果可以在本地运行)**
-        ```bash
-        python login.py
+        ```cmd
+        copy .env.example .env
         ```
-        使用手机闲鱼App扫描二维码完成登录，程序会生成 `xianyu_state.json` 文件。
 
-### 3. 启动 Web 服务
+    *   **Linux/macOS:**
+
+        ```bash
+        cp .env.example .env
+        ```
+
+    Environment Variables:
+
+    | Variable | Description | Required? | Notes |
+    | :--- | :--- | :--- | :--- |
+    | `OPENAI_API_KEY` | Your AI model provider's API Key. | Yes | May be optional for some local or proxy services. |
+    | `OPENAI_BASE_URL` | The API endpoint for your AI model, must be compatible with OpenAI format. | Yes |  Enter the base URL, e.g., `https://api.example.com/v1`. |
+    | `OPENAI_MODEL_NAME` | The specific model name you want to use. | Yes |  **MUST** choose a multi-modal model that supports image analysis, like `gpt-4o`, `gemini-1.5-pro`. |
+    | `PROXY_URL` | (Optional) HTTP/S proxy configuration for AI requests. | No | Supports `http://` and `socks5://` formats, e.g., `http://127.0.0.1:7890`. |
+    | `NTFY_TOPIC_URL` | (Optional) [ntfy.sh](https://ntfy.sh/) topic URL for notifications. | No |  Leave blank to disable ntfy notifications. |
+    | `GOTIFY_URL` | (Optional) Gotify service address. | No |  Example: `https://push.example.de`. |
+    | `GOTIFY_TOKEN` | (Optional) Gotify application token. | No |  |
+    | `BARK_URL` | (Optional) [Bark](https://bark.day.app/) push address. | No | Example: `https://api.day.app/your_key`. Leave blank to disable Bark notifications. |
+    | `WX_BOT_URL` | (Optional) WeChat Enterprise Robot Webhook URL. | No |  Leave blank to disable WeChat notifications. |
+    | `WEBHOOK_URL` | (Optional) General Webhook URL. | No | Leave blank to disable general Webhook notifications. |
+    | `WEBHOOK_METHOD` | (Optional) Webhook request method. | No | Supports `GET` or `POST`, defaults to `POST`. |
+    | `WEBHOOK_HEADERS` | (Optional) Webhook custom request headers. | No | Must be a valid JSON string, e.g., `'{"Authorization": "Bearer xxx"}'`. |
+    | `WEBHOOK_CONTENT_TYPE` | (Optional) POST request content type. | No | Supports `JSON` or `FORM`, defaults to `JSON`. |
+    | `WEBHOOK_QUERY_PARAMETERS` | (Optional) GET request query parameters. | No | JSON string, supports `${title}` and `${content}` placeholders. |
+    | `WEBHOOK_BODY` | (Optional) POST request body. | No | JSON string, supports `${title}` and `${content}` placeholders. |
+    | `LOGIN_IS_EDGE` | Whether to use Edge browser for login and crawling. | No | Defaults to `false`, using Chrome/Chromium. |
+    | `PCURL_TO_MOBILE` | Whether to convert PC product links to mobile links in notifications. | No | Defaults to `true`. |
+    | `RUN_HEADLESS` | Whether to run the crawler browser in headless mode. | No | Defaults to `true`. Set to `false` for manual captcha handling during local debugging. **Must be `true` for Docker deployment.** |
+    | `AI_DEBUG_MODE` | Whether to enable AI debug mode. | No | Defaults to `false`. When enabled, prints detailed AI request and response logs to the console. |
+    | `SERVER_PORT` | The port for the Web UI service. | No | Defaults to `8000`. |
+
+2.  **Get Login Credentials (Important!)**: You need valid login credentials for the crawler to access Xianyu.
+
+    **Recommended: Update via Web UI**
+
+    1.  Skip this step and proceed to Step 3 to start the web server.
+    2.  Open the Web UI and go to the "System Settings" page.
+    3.  Find "Login Status File" and click the "Manual Update" button.
+    4.  Follow the instructions in the pop-up window to log in to Xianyu on your own computer and copy the necessary login information into the Web UI.
+
+    This method is the easiest, as it doesn't require running a graphical program on the server.
+
+    **Alternative: Run Login Script**
+
+    If you can run programs locally or on a server with a desktop environment, you can use the traditional script method:
+
+    ```bash
+    python login.py
+    ```
+
+    A browser window will open. Use the **Xianyu App on your phone to scan the QR code** and log in. After successful login, the program will close automatically and generate an `xianyu_state.json` file in the project root directory.
+
+### Step 3: Start the Web Server
+
+With everything set up, start the web management server:
 
 ```bash
 python web_server.py
 ```
 
-### 4. 开始使用
+### Step 4: Start Monitoring!
 
-在浏览器中打开 `http://127.0.0.1:8000`。
+Open your browser and navigate to `http://127.0.0.1:8000`.
 
-1.  在 "任务管理" 页面，点击 "创建新任务"。
-2.  用自然语言描述您的购买需求 (例如：“我想买一台95新以上的索尼A7M4相机，预算1万3以内，快门数低于5000”)。
-3.  点击创建，AI 将自动生成分析标准。
-4.  启动任务，开始监控！
+1.  Go to the **"Task Management"** page and click **"Create New Task"**.
+2.  Describe your desired purchase in natural language (e.g., "I want to buy a Sony A7M4 camera, 95% new or better, under 13,000 yuan, shutter count under 5000"), and fill in the task name and keywords.
+3.  Click "Create", and the AI will automatically generate complex analysis criteria.
+4.  Return to the main interface, add a schedule or click "Start" to begin automated monitoring!
 
-## 🐳 Docker 部署 (推荐)
+## 🐳 Docker Deployment (Recommended)
 
-1.  **环境准备:** (同本地部署，但 Docker 内登录需要通过 Web UI)
-    *   安装 Docker。
-    *   克隆项目。
-    *   配置 `.env` 文件。
-    *   **重要: 在 Docker 启动后，通过 Web UI 设置登录状态.**
-        *   `docker-compose up -d` 启动 Docker。
-        *   在浏览器中访问 `http://127.0.0.1:8000`。
-        *   在 Web UI 的 "系统设置" 页面中，点击 "手动更新" 按钮。
-        *   按照指引在**本地浏览器**中获取登录信息，并粘贴到 Web UI.
+Docker allows you to package the application and all its dependencies into a standardized unit for fast, reliable, and consistent deployment.
 
-2.  **运行 Docker 容器:**
+### Step 1: Environment Setup (Similar to Local Deployment)
+
+1.  **Install Docker:** Ensure you have [Docker Engine](https://docs.docker.com/engine/install/) installed.
+
+2.  **Clone the Project and Configure:**
 
     ```bash
-    docker-compose up --build -d
+    git clone https://github.com/dingyufei615/ai-goofish-monitor
+    cd ai-goofish-monitor
     ```
 
-3.  **访问和管理:**
+3.  **Create `.env` File:** Create and populate the `.env` file in the project root, following the instructions in the **[Getting Started](#getting-started-recommended-web-ui)** section.
 
-    *   访问 Web UI: `http://127.0.0.1:8000`
-    *   查看实时日志: `docker-compose logs -f`
-    *   停止容器: `docker-compose stop`
-    *   启动已停止的容器: `docker-compose start`
-    *   停止并移除容器: `docker-compose down`
+4.  **Get Login Credentials (Critical!)**:  You can't perform QR code login inside the Docker container.  Get your login credentials *after* starting the container by accessing the Web UI:
 
-## 📸 Web UI 功能
+    1.  (On your host machine) Run `docker-compose up -d` to start the service.
+    2.  Open the Web UI in your browser: `http://127.0.0.1:8000`.
+    3.  Go to "System Settings" and click the "Manual Update" button.
+    4.  Follow the instructions in the pop-up, and copy your login information from your **local computer's browser** into the Web UI. The `xianyu_state.json` file will be automatically created in the correct shared volume location within the Docker container.
 
-*   **任务管理:** AI 创建任务、可视化编辑、定时调度。
-*   **结果查看:** 卡片式浏览、智能筛选、深度详情。
-*   **运行日志:** 实时日志流、日志管理。
-*   **系统设置:** 状态检查、Prompt 在线编辑。
+### Step 2: Run the Docker Container
 
-## 🚀 工作流程
+The project includes a `docker-compose.yaml` file. Use `docker-compose` for easier container management.
+
+In the project root directory, run:
+
+```bash
+docker-compose up --build -d
+```
+
+This starts the service in detached mode. `docker-compose` will read the `.env` and `docker-compose.yaml` files and build and start the container accordingly.
+
+If you encounter network issues inside the container, troubleshoot or use a proxy.
+
+### Step 3: Access and Manage
+
+*   **Access Web UI:** Open `http://127.0.0.1:8000` in your browser.
+*   **View Real-time Logs:** `docker-compose logs -f`
+*   **Stop Container:** `docker-compose stop`
+*   **Start Stopped Container:** `docker-compose start`
+*   **Stop and Remove Container:** `docker-compose down`
+
+## 📸 Web UI Features Overview
+
+*   **Task Management:**
+    *   **AI Task Creation:** Generate monitoring tasks and AI analysis criteria with natural language descriptions.
+    *   **Visual Editing and Control:** Modify task parameters (keywords, price, schedule, etc.) directly in a table, and individually start/stop/delete tasks.
+    *   **Scheduled Tasks:** Configure Cron expressions for automated periodic execution of tasks.
+*   **Result Viewing:**
+    *   **Card View:** Display matching items clearly in image-based cards.
+    *   **Smart Filtering and Sorting:** Filter for items marked "Recommended" by the AI and sort by crawl time, posting time, price, etc.
+    *   **Detailed Information:** Click to see complete data and detailed AI analysis results for each item in JSON format.
+*   **Running Logs:**
+    *   **Real-time Log Stream:** View detailed real-time logs of the crawler's operation on the webpage for progress tracking and troubleshooting.
+    *   **Log Management:** Supports automatic refresh, manual refresh, and one-click log clearing.
+*   **System Settings:**
+    *   **Status Check:** One-click check of `.env` configurations, login status, and other critical dependencies.
+    *   **Prompt Online Editing:** Edit and save `prompt` files used for AI analysis directly on the webpage and adjust the AI's logic in real time.
+
+## 🚀 Workflow
+
+The diagram below describes the core processing logic for a single monitoring task, from start to finish. In practice, `web_server.py` acts as the main service, starting one or more task processes based on user actions or scheduled triggers.
 
 ```mermaid
 graph TD
-    A[启动监控任务] --> B[任务: 搜索商品];
-    B --> C{发现新商品?};
-    C -- 是 --> D[抓取商品详情 & 卖家信息];
-    D --> E[下载商品图片];
-    E --> F[调用AI进行分析];
-    F --> G{AI是否推荐?};
-    G -- 是 --> H[发送通知];
-    H --> I[保存记录到 JSONL];
-    G -- 否 --> I;
-    C -- 否 --> J[翻页/等待];
+    A[Start Monitoring Task] --> B[Task: Search for Items];
+    B --> C{New Item Found?};
+    C -- Yes --> D[Fetch Item Details & Seller Info];
+    D --> E[Download Item Images];
+    E --> F[Call AI for Analysis];
+    F --> G{AI Recommends Item?};
+    G -- Yes --> H[Send Notification];
+    H --> I[Save Record to JSONL];
+    G -- No --> I;
+    C -- No --> J[Go to Next Page/Wait];
     J --> B;
     I --> C;
 ```
 
-## 常见问题 (FAQ)
+## Frequently Asked Questions (FAQ)
 
-*   **Q: 编码错误 `'gbk' codec can't encode character`?**
-    *   **A:**  Windows 环境编码问题。 解决方法：设置 `PYTHONUTF8=1` 或者使用 `chcp 65001`。
-*   **Q: 提示需要 `playwright install`?**
-    *   **A:**  确保已通过 `pip install -r requirements.txt` 安装依赖。 如果问题依旧，尝试 `playwright install chromium`。
-*   **Q: "Request timed out" 或 "Connection error"?**
-    *   **A:** 检查网络连接和 `OPENAI_BASE_URL` 设置，可能需要配置代理（通过 `PROXY_URL`）。
-*   **Q:  AI 模型不支持图片分析？**
-    *   **A:**  `OPENAI_MODEL_NAME` 必须选择支持图片识别的多模态模型 (例如： `gpt-4o`, `gemini-1.5-pro`).
-*   **Q:  群晖 NAS 上部署？**
-    *   **A:**  类似标准 Docker 部署，登录状态在**群晖启动后**通过 Web UI 设置。
-*   **Q: 如何配置 Gemini / Qwen / Grok 或其他非 OpenAI 的大语言模型？**
-    *   **A:**  正确配置 `.env` 中的 `OPENAI_API_KEY`, `OPENAI_BASE_URL` (API-Compatible Endpoint 地址), 和 `OPENAI_MODEL_NAME` (支持图片识别).
-    *   **示例:** Completions 接口是 `https://xx.xx.com/v1/chat/completions`，那么 `OPENAI_BASE_URL` 就应该填 `https://xx.xx.com/v1`。
-*   **Q: 被闲鱼检测到？**
-    *   **A:**  设置 `RUN_HEADLESS=false`, 降低监控频率, 使用干净的网络环境。
+Here are answers to common questions from the community (Issues).
 
-## 致谢
+1.  **Q:  `'gbk' codec can't encode character` errors when running `login.py` or `spider_v2.py`?**
+    *   **A:** This is a common encoding issue on Windows. The project code and logs default to UTF-8 encoding.
+    *   **Solution:**  Set the `PYTHONUTF8=1` environment variable *before* running the Python script:
 
-感谢 [superboyyy/xianyu_spider](https://github.com/superboyyy/xianyu_spider), LinuxDo 社区贡献,以及Aider和Gemini的支持。
+        ```bash
+        set PYTHONUTF8=1
+        python spider_v2.py
+        ```
+
+        Or, use `chcp 65001` to switch the active code page to UTF-8.
+
+2.  **Q:  `playwright install` needed when running `login.py`?**
+    *   **A:** This error means the browser files required by Playwright are missing. The best solution is to ensure all dependencies are correctly installed via `requirements.txt`:
+
+        ```bash
+        pip install -r requirements.txt
+        ```
+
+        If the issue persists, try manually installing the Chromium browser:
+
+        ```bash
+        playwright install chromium
+        ```
+
+3.  **Q:  "Request timed out" or "Connection error" when creating or running tasks?**
+    *   **A:**  This is usually a network issue, meaning your server can't connect to the `OPENAI_BASE_URL` configured in the `.env` file. Check:
+        *   Your server's network connectivity.
+        *   If you're in mainland China, you might need a network proxy to access foreign AI services (like OpenAI, Gemini). Configure this via the `PROXY_URL` variable in `.env`.
+        *   Verify that the `OPENAI_BASE_URL` address is correct and that the service is running.
+
+4.  **Q:  What if the AI model I chose doesn't support image analysis?**
+    *   **A:**  A key advantage of this project is multi-modal analysis using images.  **You MUST** select an AI model that supports image recognition (Vision / Multi-modal). If your configured model doesn't support images, the AI analysis will fail or be significantly less effective. Change `OPENAI_MODEL_NAME` in `.env` to a model that supports image input, such as `gpt-4o`, `gemini-1.5-pro`, `deepseek-v2`, or `qwen-vl-plus`.
+
+5.  **Q:  Can I deploy on a Synology NAS via Docker?**
+    *   **A:** Yes. Deployment steps are generally the same as standard Docker deployment:
+        1.  Complete the `login.py` step on your computer (not the Synology NAS) to generate the `xianyu_state.json` file.
+        2.  Upload the entire project folder (including `.env` and `xianyu_state.json`) to a directory on your Synology NAS.
+        3.  In the Synology Container Manager (or older Docker), run `docker-compose up -d` (via SSH or Task Scheduler) to start the project. Ensure that the volume mapping paths in `docker-compose.yaml` correctly point to your project folder on the NAS.
+
+6.  **Q:  How to configure Gemini / Qwen / Grok or other non-OpenAI LLMs?**
+    *   **A:** This project supports any model that provides an OpenAI-compatible API. The key is to correctly configure the three variables in your `.env` file:
+        *   `OPENAI_API_KEY`:  Your model provider's API key.
+        *   `OPENAI_BASE_URL`:  The API-compatible endpoint address provided by your model service.  **Carefully review the official documentation for the model you're using.**  The format is usually `https://api.your-provider.com/v1` (Note:  You **do not** need `/chat/completions` at the end).
+        *   `OPENAI_MODEL_NAME`: The specific model name that you want to use. Requires image recognition support, e.g., `gemini-2.5-flash`.
+    *   **Example:**  If your service's documentation says the Completions endpoint is `https://xx.xx.com/v1/chat/completions`, then set `OPENAI_BASE_URL` to `https://xx.xx.com/v1`.
+
+7.  **Q: Getting detected by Xianyu, showing "abnormal traffic" or requiring verification?**
+    *   **A:** This is Xianyu's anti-scraping mechanism. To reduce detection risk:
+        *   **Disable Headless Mode:**  Set `RUN_HEADLESS=false` in `.env`. The browser will run with a visible window, allowing you to manually complete the verification process.
+        *   **Reduce Monitoring Frequency:** Avoid running a large number of monitoring tasks simultaneously.
+        *   **Use a Clean Network Environment:** Frequent crawling can lead to IP address marking.
+
+8.  **Q: How do I fix pyzbar installation failing on Windows?**
+    *   **A:** `pyzbar` needs additional zbar dynamic link library support on Windows.
+    *   **Solution (Windows):**
+        *   **Method 1 (Recommended):** Install with Chocolatey:
+
+            ```cmd
+            choco install zbar
+            ```
+
+        *   **Method 2:** Manually download and add to PATH:
+            1.  Download the correct version of `libzbar-64.dll` from [zbar releases](https://github.com/NaturalHistoryMuseum/pyzbar/releases).
+            2.  Place the file in your Python installation directory or add it to your system PATH.
+        *   **Method 3:** Install with conda:
+
+            ```cmd
+            conda install -c conda-forge zbar
+            ```
+
+    *   **Linux Users:** Install the system package directly:
+
+        ```bash
+        # Ubuntu/Debian
+        sudo apt-get install libzbar0
+
+        # CentOS/RHEL
+        sudo yum install zbar
+
+        # Arch Linux
+        sudo pacman -S zbar
+        ```
+
+## Acknowledgements
+
+This project was developed by referencing these excellent projects, and I would like to express my gratitude:
+
+-   [superboyyy/xianyu_spider](https://github.com/superboyyy/xianyu_spider)
+
+And thanks to the contributions of LinuxDo friends
+
+-   [@jooooody](https://linux.do/u/jooooody/summary)
+
+And thank Aider and Gemini free my hands, It's such an amazing experience writing codes
 
 ## Support & Sponsoring
 
-如果您觉得这个项目对您有帮助，请考虑赞助我一杯咖啡！
+If this project is helpful to you, please consider buying me a coffee, thank you for your support!
 
 <table>
   <tr>
@@ -159,9 +319,9 @@ graph TD
   </tr>
 </table>
 
-## ⚠️ 注意事项
+## ⚠️ Important Notes
 
-*   请遵守闲鱼的用户协议和 robots.txt 规则。
-*   本项目仅供学习和研究，请勿用于非法用途。
+*   Please abide by Xianyu's user agreement and robots.txt rules. Avoid making excessive requests to avoid server overload or account restrictions.
+*   This project is for learning and technical research only; please do not use it for illegal purposes.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=dingyufei615/ai-goofish-monitor&type=Date)](https://star-history.com/#dingyufei615/ai-goofish-monitor&Date)
