@@ -1,111 +1,99 @@
-# Awesome Python: A Curated List of Python Tools & Resources
+# Awesome Python: A Curated List of Python Libraries and Resources
 
-**Kickstart your Python journey with this comprehensive, opinionated list of top-tier Python frameworks, libraries, software, and resources – your one-stop shop for everything Python!**  Explore a massive collection of tools and resources, curated to help you find the best libraries for any task. Dive in and discover amazing Python tools at the original repo: [https://github.com/vinta/awesome-python](https://github.com/vinta/awesome-python).
+**Kickstart your Python journey with this comprehensive list of awesome Python frameworks, libraries, software, and resources!** Explore the vast ecosystem of Python tools, inspired by [awesome-python](https://github.com/vinta/awesome-python), and discover everything you need to excel in your projects.
 
-**Key Features:**
-
-*   **Extensive Coverage:** A vast and ever-growing collection of Python libraries and tools, covering a wide range of applications.
-*   **Organized Categories:**  Tools are meticulously categorized for easy navigation and discovery.
-*   **Opinionated Selection:** Features a carefully curated selection of the best Python resources, saving you time and effort.
-*   **Regular Updates:**  The list is consistently updated to include the latest and greatest Python libraries and tools.
-*   **Community Driven:** Contributions are welcome to expand the usefulness of this list.
-
-**Explore the wealth of Python resources available:**
-
-*   **Admin Panels:** Administrative interfaces.
-*   **Algorithms and Design Patterns:** Implementations of data structures, algorithms, and design patterns.
-*   **ASGI Servers:** ASGI-compatible web servers.
-*   **Asynchronous Programming:** Libraries for asynchronous, concurrent and parallel execution.
-*   **Audio:** Libraries for manipulating audio and its metadata.
-*   **Authentication:** Libraries for implementing authentication schemes.
+*   **Admin Panels:** Enhance your administrative interfaces with libraries like Ajenti and Django-Grappelli.
+*   **Algorithms and Design Patterns:** Implement data structures, algorithms, and design patterns.
+*   **ASGI Servers:** Explore ASGI-compatible web servers like Daphne and Uvicorn.
+*   **Asynchronous Programming:** Harness the power of concurrency with libraries like asyncio and Twisted.
+*   **Audio:** Manipulate audio and its metadata with tools like Librosa and Mutagen.
+*   **Authentication:** Secure your applications with authentication libraries like Django-Allauth and PyJWT.
 *   **Build Tools:** Compile software from source code.
-*   **Built-in Classes Enhancement:** Libraries for enhancing Python built-in classes.
-*   **Caching:** Libraries for caching data.
-*   **ChatOps Tools:** Libraries for chatbot development.
-*   **CMS:** Content Management Systems.
-*   **Code Analysis:** Tools of static analysis, linters and code quality checkers.
-*   **Command-line Interface Development:** Libraries for building command-line applications.
-*   **Command-line Tools:** Useful CLI-based tools for productivity.
-*   **Computer Vision:** Libraries for Computer Vision.
-*   **Configuration Files:** Libraries for storing and parsing configuration options.
-*   **Cryptography:** Security-related libraries.
-*   **Data Analysis:** Libraries for data analyzing.
-*   **Data Validation:** Libraries for validating data.
-*   **Data Visualization:** Libraries for visualizing data.
-*   **Database Drivers:** Libraries for connecting and operating databases.
-*   **Database:** Databases implemented in Python.
-*   **Date and Time:** Libraries for working with dates and times.
-*   **Debugging Tools:** Libraries for debugging code.
-*   **Deep Learning:** Frameworks for Neural Networks and Deep Learning.
-*   **DevOps Tools:** Software and libraries for DevOps.
-*   **Distributed Computing:** Frameworks and libraries for Distributed Computing.
-*   **Distribution:** Libraries to create packaged executables for release distribution.
-*   **Documentation:** Libraries for generating project documentation.
-*   **Downloader:** Libraries for downloading.
-*   **Editor Plugins and IDEs:** Editor plugins and IDEs.
-*   **Email:** Libraries for sending and parsing email.
-*   **Environment Management:** Libraries for Python version and virtual environment management.
-*   **File Manipulation:** Libraries for file manipulation.
-*   **Functional Programming:** Functional Programming with Python.
-*   **GUI Development:** Libraries for working with graphical user interface applications.
-*   **Geolocation:** Libraries for geocoding addresses and working with latitudes and longitudes.
-*   **GraphQL:** Libraries for working with GraphQL.
-*   **Game Development:** Awesome game development libraries.
-*   **HTML Manipulation:** Libraries for working with HTML and XML.
-*   **HTTP Clients:** Libraries for working with HTTP.
-*   **Hardware:** Libraries for programming with hardware.
-*   **Image Processing:** Libraries for manipulating images.
-*   **Implementations:** Implementations of Python.
-*   **Interactive Interpreter:** Interactive Python interpreters (REPL).
-*   **Internationalization:** Libraries for working with i18n.
-*   **Job Scheduler:** Libraries for scheduling jobs.
-*   **Logging:** Libraries for generating and working with logs.
-*   **Machine Learning:** Libraries for Machine Learning.
-*   **Microsoft Windows:** Python programming on Microsoft Windows.
-*   **Miscellaneous:** Useful libraries or tools that don't fit in the categories above.
-*   **Natural Language Processing:** Libraries for working with human languages.
-*   **Network Virtualization:** Tools and libraries for Virtual Networking and SDN (Software Defined Networking).
-*   **News Feed:** Libraries for building user's activities.
-*   **ORM:** Libraries that implement Object-Relational Mapping or data mapping techniques.
-*   **Package Management:** Libraries for package and dependency management.
-*   **Package Repositories:** Local PyPI repository server and proxies.
-*   **Penetration Testing:** Frameworks and tools for penetration testing.
-*   **Permissions:** Libraries that allow or deny users access to data or functionality.
-*   **Processes:** Libraries for starting and communicating with OS processes.
-*   **Recommender Systems:** Libraries for building recommender systems.
+*   **Built-in Classes Enhancement:** Boost the capabilities of built-in classes with attrs and dataclasses.
+*   **Caching:** Optimize performance with caching libraries like Django-Cache-Machine and Redis.
+*   **ChatOps Tools:** Build chatbots with errbot.
+*   **CMS:** Explore content management systems like FeinCMS and Wagtail.
+*   **Code Analysis:** Improve code quality with tools like Flake8 and Pylint.
+*   **Command-line Interface Development:** Create powerful CLI applications with Click and Python-Fire.
+*   **Command-line Tools:** Boost your productivity with tools like Cookiecutter and Howdoi.
+*   **Computer Vision:** Dive into computer vision with OpenCV and EasyOCR.
+*   **Configuration Files:** Manage configuration options with ConfigParser and Python-Decouple.
+*   **Cryptography:** Secure your data with cryptography and Paramiko.
+*   **Data Analysis:** Analyze data with Pandas and OptiMus.
+*   **Data Validation:** Validate data with Cerberus and Pydantic.
+*   **Data Visualization:** Visualize data with Matplotlib and Seaborn.
+*   **Database:** Explore databases implemented in Python, such as PickleDB.
+*   **Database Drivers:** Connect and operate on various databases.
+*   **Date and Time:** Work with dates and times using Arrow and Pendulum.
+*   **Debugging Tools:** Debug code with tools like IPDB and Py-Spy.
+*   **Deep Learning:** Build deep learning models with Keras, PyTorch, and TensorFlow.
+*   **DevOps Tools:** Automate your infrastructure with Ansible and Fabric.
+*   **Distributed Computing:** Utilize distributed computing with Dask and Luigi.
+*   **Distribution:** Create packaged executables for release distribution.
+*   **Documentation:** Generate project documentation with Sphinx and PDoc.
+*   **Downloader:** Download files with S3cmd and Youtube-DL.
+*   **Editor Plugins and IDEs:** Enhance your development environment with Emacs, Vim, and PyCharm.
+*   **Email:** Send and parse email with Mail Servers and Clients.
+*   **Environment Management:** Manage Python versions and environments with Pyenv and Virtualenv.
+*   **File Manipulation:** Manipulate files with Mimetypes and Pathlib.
+*   **Functional Programming:** Functional Programming with Coconut and Toolz.
+*   **GUI Development:** Develop GUI applications with Tkinter and PyQt.
+*   **GraphQL:** Explore GraphQL with Graphene.
+*   **Game Development:** Create games with Pygame and Panda3D.
+*   **Geolocation:** Work with Geolocation with Django-Countries and Geopy.
+*   **HTML Manipulation:** Manipulate HTML with Beautiful Soup and LXML.
+*   **HTTP Clients:** Work with HTTP using Requests and Httpx.
+*   **Hardware:** Program with hardware using Keyboard and Pynput.
+*   **Image Processing:** Manipulate images with Pillow and Scikit-Image.
+*   **Implementations:** Explore different Python implementations, including CPython and PyPy.
+*   **Interactive Interpreter:** Use interactive Python interpreters like Jupyter Notebook.
+*   **Internationalization:** Work with internationalization with Babel and PyICU.
+*   **Job Scheduler:** Schedule jobs with Airflow and APScheduler.
+*   **Logging:** Generate and work with logs with Logging and Loguru.
+*   **Machine Learning:** Explore machine learning with Scikit-Learn and XGBoost.
+*   **Microsoft Windows:** Python programming on Microsoft Windows with Pythonnet and PyWin32.
+*   **Miscellaneous:** Explore useful libraries that don't fit in other categories.
+*   **Natural Language Processing:** Process human languages with NLTK and SpaCy.
+*   **Network Virtualization:** Work with Virtual Networking and SDN.
+*   **News Feed:** Build user activity feeds with Django-Activity-Stream.
+*   **ORM:** Libraries for ORM and data mapping techniques.
+*   **Package Management:** Manage packages with Pip and Poetry.
+*   **Package Repositories:** Use package repositories like Bandersnatch and Devpi.
+*   **Penetration Testing:** Test security with Fsociety and Sqlmap.
+*   **Permissions:** Manage permissions with Django-Guardian.
+*   **Processes:** Start and communicate with OS processes.
+*   **Recommender Systems:** Build recommender systems with Surprise.
 *   **Refactoring:** Refactoring tools and libraries for Python.
-*   **RESTful API:** Libraries for building RESTful APIs.
-*   **Robotics:** Libraries for robotics.
-*   **RPC Servers:** RPC-compatible servers.
-*   **Science:** Libraries for scientific computing.
-*   **Search:** Libraries and software for indexing and performing search queries on data.
-*   **Serialization:** Libraries for serializing complex data types.
-*   **Serverless Frameworks:** Frameworks for developing serverless Python code.
-*   **Shell:** Shells based on Python.
-*   **Specific Formats Processing:** Libraries for parsing and manipulating specific text formats.
-*   **Static Site Generator:** Static site generator is a software that takes some text + templates as input and produces HTML files on the output.
-*   **Tagging:** Libraries for tagging items.
-*   **Task Queues:** Libraries for working with task queues.
-*   **Template Engine:** Libraries and tools for templating and lexing.
-*   **Testing:** Libraries for testing codebases and generating test data.
-*   **Text Processing:** Libraries for parsing and manipulating plain texts.
-*   **Third-party APIs:** Libraries for accessing third party services APIs.
-*   **URL Manipulation:** Libraries for parsing URLs.
-*   **Video:** Libraries for manipulating video and GIFs.
-*   **Web Asset Management:** Tools for managing, compressing and minifying website assets.
-*   **Web Content Extracting:** Libraries for extracting web contents.
-*   **Web Crawling:** Libraries to automate web scraping.
-*   **Web Frameworks:** Traditional full stack web frameworks.
-*   **WebSocket:** Libraries for working with WebSocket.
+*   **RESTful API:** Build RESTful APIs with Django REST Framework and Flask-RESTful.
+*   **Robotics:** Use Robotics tools with PythonRobotics.
+*   **RPC Servers:** RPC-compatible servers like RPyC.
+*   **Science:** Work in scientific computing with SciPy and NumPy.
+*   **Search:** Index and search data with Elasticsearch and Whoosh.
+*   **Serialization:** Serialize data with Marshmallow and UltraJSON.
+*   **Serverless Frameworks:** Develop serverless code with Python-Lambda and Zappa.
+*   **Shell:** Use Python-powered shells with Xonsh.
+*   **Specific Formats Processing:** Parse and manipulate specific text formats.
+*   **Static Site Generator:** Generate static sites with Pelican and MkDocs.
+*   **Tagging:** Tag items with Django-Taggit.
+*   **Task Queues:** Work with task queues using Celery and RQ.
+*   **Template Engine:** Templating and lexing with Jinja2 and Mako.
+*   **Testing:** Test codebases and generate test data.
+*   **Text Processing:** Parse and manipulate plain texts.
+*   **Third-party APIs:** Access third-party service APIs.
+*   **URL Manipulation:** Parse URLs with Furl and Purl.
+*   **Video:** Manipulate video and GIFs.
+*   **Web Asset Management:** Manage website assets.
+*   **Web Content Extracting:** Extract web contents.
+*   **Web Crawling:** Automate web scraping with Scrapy and MechanicalSoup.
+*   **Web Frameworks:** Build web applications with Django and Flask.
+*   **WebSocket:** Work with WebSocket with Autobahn-Python and Django-Channels.
 *   **WSGI Servers:** WSGI-compatible web servers.
 
-**Resources:**
+## Resources
 
-*   **Newsletters:** Stay up-to-date with the latest Python news and trends.
-*   **Podcasts:** Listen to engaging conversations about Python development.
-
-**Contributing:**
-
-Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md) first.
+*   **Newsletters:** Stay updated with Python newsletters like PyCoder's Weekly and Python Weekly.
+*   **Podcasts:** Listen to Python podcasts such as Talk Python To Me and The Real Python Podcast.
 
 ---
+
+**Contribute:** Help make this list even better!  Check out the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md).

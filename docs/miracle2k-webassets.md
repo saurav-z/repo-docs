@@ -1,53 +1,61 @@
-# Webassets: Streamline Your Python Web Project's Assets
+Here's an improved and SEO-optimized README for the webassets project:
 
-**Webassets simplifies asset management in your Python web projects by merging and compressing JavaScript and CSS files for optimal performance.**
+# Webassets: Streamline Your Python Web Development with Asset Management
 
-[View the original repository on GitHub](https://github.com/miracle2k/webassets)
+**Effortlessly merge and compress your JavaScript and CSS files to optimize your Python web applications.**
+
+[Link to original repo: https://github.com/miracle2k/webassets](https://github.com/miracle2k/webassets)
 
 ## Key Features
 
-*   **Asset Merging:** Combine multiple JavaScript and CSS files into single files to reduce HTTP requests.
-*   **Compression:**  Compress your assets (JS and CSS) to minimize file sizes, improving page load times.
-*   **Integration:** Designed for easy integration with Python web frameworks.
-*   **Well-Tested:** Rely on a robust library with comprehensive testing.
+*   **Asset Merging:** Combine multiple JavaScript and CSS files into single files, reducing HTTP requests.
+*   **Asset Compression:** Minimize file sizes through compression (e.g., using tools like YUI Compressor, Google Closure Compiler).
+*   **Easy Integration:** Designed for seamless integration with various Python web frameworks.
+*   **Development-Ready:**  Supports development workflows, including easy installation and testing.
 
 ## Installation
 
-Install the development version using pip:
+To install the latest development version, you can use pip:
 
 ```bash
 pip install webassets==dev
 ```
 
-Or download a tarball: [https://github.com/miracle2k/webassets/tarball/master#egg=webassets-dev](https://github.com/miracle2k/webassets/tarball/master#egg=webassets-dev)
+or by downloading a tarball.
 
 ## Documentation
 
-Comprehensive documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
+Comprehensive documentation is available: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
 
 ## Development
 
-Follow these steps to contribute to the project:
+### Setting up the Development Environment
 
-1.  **Set up a virtual environment using uv**:
+1.  **Create a virtual environment using uv:**
 
     ```bash
     uv venv
+    ```
+2.  **Install Python requirements:**
+
+    ```bash
     uv pip install -r uv.lock
     ```
 
-2.  **Install development requirements**:
+3.  **Install other requirements:**
 
     ```bash
     ./requirements-dev.sh
     ```
 
-3.  **Run tests**:
+### Running Tests
 
-    ```bash
-    ./run_tests.sh
-    ```
+Ensure you have Java 7 or higher installed (required for some filters, like Google Closure Compiler).
 
-    *Note: Running tests requires Java 7 or later for the Google Closure filter.*
+```bash
+./run_tests.sh
+```
+
+## Build Status
 
 [![Build Status](https://github.com/miracle2k/webassets/actions/workflows/ci.yml/badge.svg)](https://github.com/miracle2k/webassets/actions/workflows/ci.yml)

@@ -1,6 +1,6 @@
-# Game Cheats Manager: Your Ultimate Trainer Management Solution for PC Games
+# Game Cheats Manager: Your Ultimate Trainer Management Solution
 
-**Simplify your gaming experience with Game Cheats Manager, a powerful and user-friendly application designed to help you easily manage, download, and launch trainers for your favorite single-player PC games.**  ([View the original repository on GitHub](https://github.com/dyang886/Game-Cheats-Manager))
+Streamline your single-player gaming experience with Game Cheats Manager, the all-in-one application for browsing, downloading, and managing game trainers. Check out the [original repository](https://github.com/dyang886/Game-Cheats-Manager) for more details!
 
 [![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/dyang886/Game-Cheats-Manager/total)](https://github.com/dyang886/Game-Cheats-Manager/releases/latest)
 [![GitHub Repo stars](https://img.shields.io/github/stars/dyang886/Game-Cheats-Manager?style=flat&color=ffc000)](https://github.com/dyang886/Game-Cheats-Manager)
@@ -14,36 +14,36 @@
     <img src="src/assets/logo.png" alt="Game Cheats Manager logo" width="250" />
 </div>
 
-## Key Features:
+## Key Features
 
-*   **Effortless Trainer Management:**  Browse, download, and manage all your game trainers in one central location.
-*   **Easy Launch & Delete:**  Quickly launch or delete trainers directly from the application.
-*   **Built-in Trainer Search:**  Find and download trainers for your games with a convenient search function.
-*   **Customizable Settings:**  Configure trainer sources, auto-updates, download paths, and more.
-*   **Import & Manage Existing Trainers:** Import trainers you already have for complete organization.
-*   **Windows Defender Whitelist Integration:**  Easily add your trainer download path to the Windows Defender whitelist.
-*   **Regular Updates:** Benefit from automatic trainer updates to keep your cheats current.
+*   **Effortless Trainer Browsing:** Quickly search and find trainers for your favorite single-player games.
+*   **Seamless Trainer Downloading:** Download trainers directly from within the application with a few clicks.
+*   **Intuitive Trainer Management:** Launch and delete trainers easily from a centralized location.
+*   **Customizable Settings:** Personalize your experience with theme and language options.
+*   **Trainer Management Panel:** Easily manage all of your trainer sources, update settings, and more!
+*   **Import & Manage Trainers:** Import existing trainers for streamlined organization.
+*   **Whitelist Support:** Easily add trainer download paths to your Windows Defender whitelist.
 
-## How to Use:
+## How to Use
 
-1.  **Browse Trainers:** Search for downloaded trainers on the left side of the application, and launch or delete them as needed.
-2.  **Download Trainers:** Use the search bar on the right side to find trainers and download them directly.  Customize your download location by clicking the "..." button.
-3.  **Trainer Management:** Customize your trainer sources and update settings in the Trainer Management panel.
-4.  **Options Menu:** Access settings, import trainers, open the download path, add paths to whitelist, and view application information.
+1.  **Browse Trainers:** Use the search bar or browse the trainer list on the left to find your trainer. Double-click or click `Launch` to start, or `Delete` to remove.
+2.  **Download Trainers:** Search in the right column and press `Enter` to find available trainers, then double-click to download.  Change the download path by clicking the `...` button.
+3.  **Trainer Management:** Adjust trainer source settings from the `Trainer Management` panel.
+4.  **Options:** Access settings like themes, language, trainer import, download path, and whitelist features from the `Options` menu.
 
-## Installation:
+## Installation
 
-1.  **Download:** Get the latest installer from the [releases page](https://github.com/dyang886/Game-Cheats-Manager/releases).
-2.  **Run the Installer:** Execute the downloaded installer and follow the on-screen instructions.
-3.  **Launch:** Start Game Cheats Manager from your applications folder or start menu.
+1.  **Download:** Download the Windows (64-bit) installer from the [latest release](https://github.com/dyang886/Game-Cheats-Manager/releases).
+2.  **Run Installer:** Execute the downloaded file and follow the on-screen instructions.
+3.  **Launch:** Open Game Cheats Manager from your applications folder or start menu.
 
-## Support and Contributions
+## Support & Contribution
 
-For assistance, feature requests, or to contribute to the project, please visit the [GitHub repository](https://github.com/dyang886/Game-Cheats-Manager).
+For any issues, feature requests, or contributions, please visit the [GitHub repository](https://github.com/dyang886/Game-Cheats-Manager).
 
-## Support the Project:
+## Funding
 
-If you find Game Cheats Manager helpful, consider supporting the project:
+Support the project with the following methods:
 
 |                            WeChat                            |                          Alipay                          |                          QQ                          |
 | :----------------------------------------------------------: | :------------------------------------------------------: | :--------------------------------------------------: |

@@ -1,55 +1,54 @@
-# LocalStack: Your Local AWS Cloud Development & Testing Framework
+<!--  LocalStack - A fully functional local cloud stack -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/localstack/localstack/main/docs/localstack-readme-banner.svg" alt="LocalStack - A fully functional local cloud stack">
+</p>
 
-LocalStack empowers developers to build, test, and experiment with AWS applications locally, saving time and cost.  [See the original repo](https://github.com/localstack/localstack).
+<p align="center">
+  <a href="https://github.com/localstack/localstack/actions/workflows/aws-main.yml?query=branch%3Amain"><img alt="GitHub Actions" src="https://github.com/localstack/localstack/actions/workflows/aws-main.yml/badge.svg?branch=main"></a>
+  <a href="https://coveralls.io/github/localstack/localstack?branch=main"><img alt="Coverage Status" src="https://coveralls.io/repos/github/localstack/localstack/badge.svg?branch=main"></a>
+  <a href="https://pypi.org/project/localstack/"><img alt="PyPI Version" src="https://img.shields.io/pypi/v/localstack?color=blue"></a>
+  <a href="https://hub.docker.com/r/localstack/localstack"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/localstack/localstack"></a>
+  <a href="https://pypi.org/project/localstack"><img alt="PyPi downloads" src="https://static.pepy.tech/badge/localstack"></a>
+  <a href="#backers"><img alt="Backers on Open Collective" src="https://opencollective.com/localstack/backers/badge.svg"></a>
+  <a href="#sponsors"><img alt="Sponsors on Open Collective" src="https://opencollective.com/localstack/sponsors/badge.svg"></a>
+  <a href="https://img.shields.io/pypi/l/localstack.svg"><img alt="PyPI License" src="https://img.shields.io/pypi/l/localstack.svg"></a>
+  <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+  <a href="https://github.com/astral-sh/ruff"><img alt="Ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json"></a>
+  <a href="https://bsky.app/profile/localstack.cloud"><img alt="Bluesky" src="https://img.shields.io/badge/bluesky-Follow-blue?logo=bluesky"></a>
+</p>
 
-[![GitHub Actions](https://github.com/localstack/localstack/actions/workflows/aws-main.yml/badge.svg?branch=main)](https://github.com/localstack/localstack/actions/workflows/aws-main.yml?query=branch%3Amain)
-[![Coverage Status](https://coveralls.io/repos/github/localstack/localstack/badge.svg?branch=main)](https://coveralls.io/github/localstack/localstack?branch=main)
-[![PyPI Version](https://img.shields.io/pypi/v/localstack?color=blue)](https://pypi.org/project/localstack/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/localstack/localstack)](https://hub.docker.com/r/localstack/localstack)
-[![PyPi downloads](https://static.pepy.tech/badge/localstack)](https://pypi.org/project/localstack)
-[![Backers on Open Collective](https://opencollective.com/localstack/backers/badge.svg)](#backers)
-[![Sponsors on Open Collective](https://opencollective.com/localstack/sponsors/badge.svg)](#sponsors)
-[![PyPI License](https://img.shields.io/pypi/l/localstack.svg)](https://img.shields.io/pypi/l/localstack.svg)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Bluesky](https://img.shields.io/badge/bluesky-Follow-blue?logo=bluesky)](https://bsky.app/profile/localstack.cloud)
+# LocalStack: Your Local Cloud for AWS Development and Testing
 
-## Key Features
+LocalStack empowers developers to build, test, and deploy AWS applications locally, providing a fully functional cloud environment on your machine. Check out the [LocalStack GitHub Repository](https://github.com/localstack/localstack) for more details.
 
-*   **Local AWS Emulation:** Run a comprehensive set of AWS services locally, including Lambda, S3, DynamoDB, SQS, SNS, and many more.
-*   **Faster Development Cycles:**  Develop and test your AWS applications without incurring cloud costs or waiting for deployments.
-*   **Simplified Testing:** Easily test complex CDK applications and Terraform configurations in an isolated local environment.
-*   **CI/CD Integration:** Seamlessly integrate LocalStack into your CI/CD pipelines for automated testing.
-*   **CLI and API Compatibility:** Utilize the familiar AWS CLI (`awslocal`) and AWS SDKs to interact with local services.
-*   **Pro Version:** Access additional APIs and advanced features for expanded capabilities.
-*   **Comprehensive Documentation:** Extensive documentation and user guides to help you get started and troubleshoot.
-*   **Community Support:** Connect with the LocalStack community for support, discussions, and contributions.
+**Key Features:**
 
-## Table of Contents
+*   **Local AWS Environment:** Run your AWS applications and Lambdas locally, without needing a remote cloud provider.
+*   **Comprehensive AWS Service Support:**  Supports a growing list of AWS services like Lambda, S3, DynamoDB, Kinesis, SQS, and SNS.
+*   **Faster Development & Testing:** Speeds up your workflow by enabling local testing of CDK applications, Terraform configurations, and more.
+*   **CLI and Integration Support:** Offers a command-line interface (CLI) for easy management, along with integrations for various tools.
+*   **Pro Version:**  Access additional APIs and advanced features with the [Pro version of LocalStack](https://localstack.cloud/pricing).
+
+**In this README:**
 
 *   [Overview](#overview)
 *   [Install](#install)
-    *   [Brew (macOS or Linux with Homebrew)](#brew-macos-or-linux-with-homebrew)
-    *   [Binary download (macOS, Linux, Windows)](#binary-download-macos-linux-windows)
-    *   [PyPI (macOS, Linux, Windows)](#pypi-macos-linux-windows)
 *   [Quickstart](#quickstart)
 *   [Running](#running)
 *   [Usage](#usage)
 *   [Releases](#releases)
 *   [Contributing](#contributing)
 *   [Get in touch](#get-in-touch)
-    *   [Contributors](#contributors)
-    *   [Backers](#backers)
-    *   [Sponsors](#sponsors)
-*   [License](#license)
 
 ---
 
 ## Overview
 
-[LocalStack](https://localstack.cloud) is a powerful cloud service emulator that runs in a single container, allowing you to develop and test your AWS applications and Lambdas entirely on your local machine. Whether you are testing complex CDK applications or Terraform configurations, or just beginning to learn about AWS services, LocalStack helps speed up and simplify your testing and development workflow.
+[LocalStack](https://localstack.cloud) is a cloud service emulator that runs in a single container on your laptop or in your CI environment. With LocalStack, you can run your AWS applications or Lambdas entirely on your local machine without connecting to a remote cloud provider! Whether you are testing complex CDK applications or Terraform configurations, or just beginning to learn about AWS services, LocalStack helps speed up and simplify your testing and development workflow.
 
-LocalStack supports a growing number of AWS services. The [Pro version of LocalStack](https://localstack.cloud/pricing) supports additional APIs and advanced features. You can find a comprehensive list of supported APIs on our [☑️ Feature Coverage](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) page.
+LocalStack supports a growing number of AWS services, like AWS Lambda, S3, DynamoDB, Kinesis, SQS, SNS, and many more! The [Pro version of LocalStack](https://localstack.cloud/pricing) supports additional APIs and advanced features. You can find a comprehensive list of supported APIs on our [☑️ Feature Coverage](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) page.
+
+LocalStack also provides additional features to make your life as a cloud developer easier! Check out LocalStack's [User Guides](https://docs.localstack.cloud/user-guide/) for more information.
 
 ## Install
 
@@ -96,7 +95,7 @@ Start LocalStack inside a Docker container by running:
   / /___/ /_/ / /__/ /_/ / /___/ / /_/ /_/ / /__/ ,<
  /_____/\____/\___/\__,_/_//____/\__/\__,_/\___/_/|_|
 
-- LocalStack CLI: 4.6.0
+- LocalStack CLI: 4.7.0
 - Profile: default
 - App: https://app.localstack.cloud
 
@@ -113,7 +112,7 @@ You can query the status of respective services on LocalStack by running:
 % localstack status services
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓
 ┃ Service                  ┃ Status      ┃
-┡━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┷
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┥
 │ acm                      │ ✔ available │
 │ apigateway               │ ✔ available │
 │ cloudformation           │ ✔ available │

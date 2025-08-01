@@ -1,6 +1,4 @@
-<p align="center">
-    <img src="https://github.com/PrefectHQ/prefect/assets/3407835/c654cbc6-63e8-4ada-a92a-efd2f8f24b85" width=1000>
-</p>
+<p align="center"><img src="https://github.com/PrefectHQ/prefect/assets/3407835/c654cbc6-63e8-4ada-a92a-efd2f8f24b85" width=1000></p>
 
 <p align="center">
     <a href="https://pypi.org/project/prefect/" alt="PyPI version">
@@ -46,24 +44,27 @@
     </a>
 </p>
 
-# Prefect: Production-Ready Workflow Orchestration for Data Pipelines
+# Prefect: Build, Observe, and Orchestrate Data Pipelines in Python
 
-Prefect is a powerful, Python-based workflow orchestration framework designed to simplify and streamline data pipeline creation and management.  [See the original repository](https://github.com/PrefectHQ/prefect).
+Prefect is a powerful Python-based workflow orchestration platform that empowers data teams to build, monitor, and manage complex data pipelines with ease.  [Explore the Prefect repository on GitHub](https://github.com/PrefectHQ/prefect).
 
-Key features of Prefect:
+**Key Features:**
 
-*   **Simplified Workflow Creation:** Easily transform Python scripts into robust, production-ready workflows.
-*   **Resilience & Reliability:** Build dynamic data pipelines that react to changes and recover from failures.
-*   **Built-in Features:** Benefit from features like scheduling, caching, retries, and event-driven automations.
-*   **Monitoring & Observability:** Track workflow activity and monitor performance with a self-hosted server or Prefect Cloud.
-*   **Event-Driven Automation:**  Trigger workflows based on events for real-time data processing.
-*   **Easy to Integrate:** Seamlessly integrate with existing tools and infrastructure.
+*   **Simplified Workflow Creation:** Transform Python scripts into robust, production-ready workflows with minimal code using `@flow` and `@task` decorators.
+*   **Resilient Pipelines:** Build pipelines that automatically handle retries, dependencies, and even complex branching logic, ensuring reliability.
+*   **Dynamic Workflows:** Create pipelines that react to the world around them and recover from unexpected changes.
+*   **Scheduling and Automation:** Easily schedule workflows and trigger them based on events for automated data processing.
+*   **Monitoring and Observability:** Track workflow activity and performance with a self-hosted Prefect server or the managed Prefect Cloud dashboard.
+*   **Error Handling and Retries:** Built-in mechanisms for handling errors and retrying tasks, ensuring data pipeline resilience.
+*   **Integration with Existing Tools:** Seamlessly integrate Prefect with your existing tools and services.
 
 ## Getting Started
 
 Prefect requires Python 3.9+.
 
 **Installation:**
+
+Install the latest version of Prefect using either of the following commands:
 
 ```bash
 pip install -U prefect
@@ -73,11 +74,11 @@ pip install -U prefect
 uv add prefect
 ```
 
-Here's a simple example to get you started:
-
+**Example:**
 ```python
 from prefect import flow, task
 import httpx
+
 
 @task(log_prints=True)
 def get_stars(repo: str):
@@ -85,23 +86,24 @@ def get_stars(repo: str):
     count = httpx.get(url).json()["stargazers_count"]
     print(f"{repo} has {count} stars!")
 
+
 @flow(name="GitHub Stars")
 def github_stars(repos: list[str]):
     for repo in repos:
         get_stars(repo)
+
 
 # run the flow!
 if __name__ == "__main__":
     github_stars(["PrefectHQ/Prefect"])
 ```
 
-**Run Prefect Server:**
+**Running the Workflow:**
 
-```bash
-prefect server start
-```
+1.  **Start the Prefect Server:**  `prefect server start`
+2.  **Open the UI:**  Access the Prefect UI at http://localhost:4200.
+3.  **Deployment and Scheduling (Optional):** To schedule your workflow, modify your script as follows:
 
-**Run with Scheduling (Deployment):**
 ```python
 if __name__ == "__main__":
     github_stars.serve(
@@ -111,37 +113,36 @@ if __name__ == "__main__":
     )
 ```
 
-For more information, check out:
-
-*   [Deploying flows to production environments](https://docs.prefect.io/v3/deploy?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none)
-*   [Adding error handling and retries](https://docs.prefect.io/v3/develop/write-tasks#retries?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none)
-*   [Integrating with your existing tools](https://docs.prefect.io/integrations/integrations?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none)
-*   [Setting up team collaboration features](https://docs.prefect.io/v3/manage/cloud/manage-users/manage-teams#manage-teams?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none)
-
 ## Prefect Cloud
 
-Prefect Cloud is a fully managed workflow orchestration platform that helps modern data teams streamline and optimize their data pipelines. Prefect Cloud empowers organizations, like Progressive Insurance and Cash App, to increase engineering productivity, reduce pipeline errors, and cut data workflow compute costs.
+Prefect Cloud offers workflow orchestration for modern data enterprises, automating over 200 million data tasks monthly.
 
-Learn more about Prefect Cloud [here](https://www.prefect.io/cloud-vs-oss?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none) or [try it for yourself](https://app.prefect.cloud?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none).
+**Key Benefits:**
+
+*   Increased engineering productivity.
+*   Reduced pipeline errors.
+*   Cut data workflow compute costs.
+
+Learn more about Prefect Cloud [here](https://www.prefect.io/cloud-vs-oss?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none) and [try it for yourself](https://app.prefect.cloud?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none).
 
 ## prefect-client
 
-For communicating with Prefect Cloud or a remote Prefect server, explore the [prefect-client](https://pypi.org/project/prefect-client/), a lighter-weight option ideal for ephemeral environments.
+For interacting with Prefect Cloud or a remote Prefect server, explore the [prefect-client](https://pypi.org/project/prefect-client/), a lighter-weight option.
 
 ## Connect & Contribute
 
-Join the Prefect community and connect with over 25,000 data professionals.
+Join the Prefect community to collaborate and contribute to data pipeline innovation.
 
-### Community Resources
+**Community Resources:**
 
-*   🌐 **[Explore the Documentation](https://docs.prefect.io)** - Comprehensive guides and API references
-*   💬 **[Join the Slack Community](https://prefect.io/slack)** - Connect with thousands of practitioners
-*   🤝 **[Contribute to Prefect](https://docs.prefect.io/contribute/)** - Help shape the future of the project
-*   🔌 **[Support or create a new Prefect integration](https://docs.prefect.io/contribute/contribute-integrations)** - Extend Prefect's capabilities
+*   🌐 [Explore the Documentation](https://docs.prefect.io)
+*   💬 [Join the Slack Community](https://prefect.io/slack)
+*   🤝 [Contribute to Prefect](https://docs.prefect.io/contribute/)
+*   🔌 [Support or create a new Prefect integration](https://docs.prefect.io/contribute/contribute-integrations)
 
-### Stay Informed
+**Stay Informed:**
 
-*   📥 **[Subscribe to our Newsletter](https://prefect.io/newsletter)** - Get the latest Prefect news and updates
-*   📣 **[Twitter/X](https://x.com/PrefectIO)** - Latest updates and announcements
-*   📺 **[YouTube](https://www.youtube.com/@PrefectIO)** - Video tutorials and webinars
-*   📱 **[LinkedIn](https://www.linkedin.com/company/prefect)** - Professional networking and company news
+*   📥 [Subscribe to our Newsletter](https://prefect.io/newsletter)
+*   📣 [Twitter/X](https://x.com/PrefectIO)
+*   📺 [YouTube](https://www.youtube.com/@PrefectIO)
+*   📱 [LinkedIn](https://www.linkedin.com/company/prefect)

@@ -1,7 +1,9 @@
 <div align="center">
-  <img src="assets/logo.png" alt="LLaMA Factory Logo" width="200">
-  <h1>LLaMA Factory: Fine-tune Any LLM with Ease</h1>
-  <p>Supercharge your language models! LLaMA Factory provides a user-friendly, open-source framework to fine-tune a vast array of large language models (LLMs) efficiently, whether you're a beginner or an expert. <a href="https://github.com/hiyouga/LLaMA-Factory">Explore the repo</a>.</p>
+  <a href="https://github.com/hiyouga/LLaMA-Factory">
+    <img src="assets/logo.png" alt="LLaMA Factory Logo" width="200"/>
+  </a>
+  <h1>LLaMA Factory: Fine-tune 100+ LLMs with Ease</h1>
+  <p>Effortlessly fine-tune a wide range of large language models with a zero-code CLI and intuitive web UI.</p>
 </div>
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=social)](https://github.com/hiyouga/LLaMA-Factory/stargazers)
@@ -65,77 +67,80 @@ Choose your path:
 > [!NOTE]
 > Except for the above links, all other websites are unauthorized third-party websites. Please carefully use them.
 
+## Table of Contents
+
+- [Key Features](#key-features)
+- [Supported Models](#supported-models)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Quickstart](#quickstart)
+- [Additional Resources](#additional-resources)
+- [License](#license)
+- [Citation](#citation)
+- [Acknowledgement](#acknowledgement)
+
 ## Key Features
 
-*   **Extensive Model Support:** Fine-tune Llama, Mistral, Mixtral, Qwen, DeepSeek, Yi, Gemma, ChatGLM, Phi, and many more (100+ models).
-*   **Versatile Training Methods:** Choose from pre-training, supervised fine-tuning, reward modeling, PPO, DPO, KTO, ORPO, and more.
-*   **Efficient Optimization:** Utilize full-tuning, freeze-tuning, LoRA, and QLoRA for scalable resource utilization.
-*   **Advanced Algorithms:** Benefit from cutting-edge techniques like GaLore, BAdam, APOLLO, and others.
-*   **Practical Enhancements:** Leverage FlashAttention-2, Unsloth, Liger Kernel, RoPE scaling, and NEFTune.
-*   **Broad Application Scope:** Tackle tasks like multi-turn dialogue, image understanding, and video recognition.
-*   **Comprehensive Monitoring:** Track experiments with LlamaBoard, TensorBoard, Wandb, MLflow, and SwanLab.
-*   **Fast Inference Options:** Deploy with OpenAI-style API, Gradio UI, and CLI using vLLM or SGLang.
-
-## Quickstart
-
-1.  **Install:** Follow the [installation instructions](#installation).
-2.  **Prepare Data:** Refer to the [data preparation guide](#data-preparation).
-3.  **Run Fine-tuning:** Use the provided YAML examples, like the following commands to run fine-tuning, inference, and merging on Llama3-8B-Instruct:
-    ```bash
-    llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
-    llamafactory-cli chat examples/inference/llama3_lora_sft.yaml
-    llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
-    ```
-
-## Contents
-
-*   [Key Features](#key-features)
-*   [Supported Models](#supported-models)
-*   [Supported Training Approaches](#supported-training-approaches)
-*   [Getting Started](#getting-started)
-    *   [Installation](#installation)
-    *   [Data Preparation](#data-preparation)
-    *   [Quickstart](#quickstart)
-    *   [Fine-Tuning with LLaMA Board GUI](#fine-tuning-with-llama-board-gui-powered-by-gradio)
-    *   [API Deployment](#deploy-with-openai-style-api-and-vllm)
-    *   [Docker](#build-docker)
-    *   [Use W&B Logger](#use-wb-logger)
-    *   [Use SwanLab Logger](#use-swanlab-logger)
-*   [Projects Using LLaMA Factory](#projects-using-llama-factory)
-*   [License](#license)
-*   [Citation](#citation)
-*   [Acknowledgements](#acknowledgement)
+*   **Extensive Model Support:** Fine-tune over 100+ LLMs, including LLaMA, Mistral, Qwen, and more.
+*   **Versatile Training Approaches:**  Supports (Continuous) pre-training, (multimodal) supervised fine-tuning, reward modeling, PPO, DPO, KTO, ORPO, and SimPO
+*   **Efficient Training:** Utilize various methods for efficient training and inference, including 16-bit full-tuning, LoRA, QLoRA, FlashAttention-2, and more.
+*   **User-Friendly Interfaces:** Offers both a zero-code CLI and a Web UI (LLaMA Board) for ease of use.
+*   **Comprehensive Tooling:**  Integrates with experiment monitoring tools like LlamaBoard, TensorBoard, Wandb, MLflow, and SwanLab.
 
 ## Supported Models
 
-A comprehensive list of supported models, including Baichuan 2, Bloom, ChatGLM3, Command R, DeepSeek, Falcon, Gemma, GLM-4, GPT-2, Llama, Llama 2, Llama 3, Llama 4, Mixtral, Mistral, Qwen, Yi, and many more, is available in the [Supported Models](#supported-models) section.
+A wide array of models is supported. Some of the most popular ones are:
 
-## Supported Training Approaches
+*   [Baichuan 2](https://huggingface.co/baichuan-inc)
+*   [ChatGLM3](https://huggingface.co/THUDM)
+*   [DeepSeek](https://huggingface.co/deepseek-ai)
+*   [Gemma](https://huggingface.co/google)
+*   [GLM-4](https://huggingface.co/zai-org)
+*   [InternLM](https://huggingface.co/internlm)
+*   [Llama 2 & 3](https://huggingface.co/meta-llama)
+*   [Mistral/Mixtral](https://huggingface.co/mistralai)
+*   [Qwen](https://huggingface.co/Qwen)
+*   [Yi](https://huggingface.co/01-ai)
 
-The framework supports a variety of training approaches, including pre-training, supervised fine-tuning, reward modeling, PPO, DPO, KTO, ORPO and SimPO training.
+See the [Supported Models](#supported-models) section for a comprehensive list.
 
-## API Deployment
+## Getting Started
 
-Deploy your fine-tuned models using an OpenAI-style API for easy integration.
+### Installation
+
+Install LLaMA Factory with the following command:
 
 ```bash
-API_PORT=8000 llamafactory-cli api examples/inference/llama3.yaml infer_backend=vllm vllm_enforce_eager=true
+git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
+cd LLaMA-Factory
+pip install -e ".[torch,metrics]" --no-build-isolation
+```
+For additional installation details and options (e.g., CUDA, Ascend NPU), refer to the [Installation](#installation) section in the full README.
+
+### Quickstart
+
+Fine-tune, infer, and merge a Llama3-8B-Instruct model using the CLI:
+
+```bash
+llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
+llamafactory-cli chat examples/inference/llama3_lora_sft.yaml
+llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
 ```
 
-## Docker
-Build and run LLaMA Factory using Docker for easy setup and reproducibility, you can refer to [build docker](#build-docker).
+For more detailed instructions and examples, explore the [examples/README.md](examples/README.md) file.
 
-## Projects Using LLaMA Factory
+## Additional Resources
 
-Find a list of projects that leverage LLaMA Factory in the [Projects using LLaMA Factory](#projects-using-llama-factory) section.
+*   **Full Documentation:** [https://llamafactory.readthedocs.io/en/latest/](https://llamafactory.readthedocs.io/en/latest/)
+*   **Colab Notebook:** [https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing](https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing)
+*   **Web UI (Gradio):** `llamafactory-cli webui` (after installation)
+*   **API Deployment (OpenAI-style):** See [Deployment with OpenAI-style API and vLLM](#deploy-with-openai-style-api-and-vllm) section
 
 ## License
 
-LLaMA Factory is licensed under the [Apache-2.0 License](LICENSE).
+This project is licensed under the [Apache-2.0 License](LICENSE).
 
 ## Citation
-
-If this work is helpful, please kindly cite as:
 
 ```bibtex
 @inproceedings{zheng2024llamafactory,
@@ -149,6 +154,6 @@ If this work is helpful, please kindly cite as:
 }
 ```
 
-## Acknowledgements
+## Acknowledgement
 
-This repository builds upon the work of [PEFT](https://github.com/huggingface/peft), [TRL](https://github.com/huggingface/trl), [QLoRA](https://github.com/artidoro/qlora) and [FastChat](https://github.com/lm-sys/FastChat).
+This project leverages the contributions of [PEFT](https://github.com/huggingface/peft), [TRL](https://github.com/huggingface/trl), [QLoRA](https://github.com/artidoro/qlora), and [FastChat](https://github.com/lm-sys/FastChat).
