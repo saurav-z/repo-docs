@@ -4,7 +4,7 @@
 
 # Long-RL: Revolutionizing Long Video Reasoning with Reinforcement Learning
 
-Tackle long video reasoning challenges with Long-RL, a full-stack framework that leverages reinforcement learning to scale reasoning in vision-language models, providing state-of-the-art performance on video benchmarks.  [Explore the code!](https://github.com/NVlabs/Long-RL)
+**Tackle long video reasoning with Long-RL, a groundbreaking framework that scales Reinforcement Learning (RL) for advanced vision-language understanding.  [Explore the cutting-edge research on GitHub!](https://github.com/NVlabs/Long-RL)**
 
 [![Paper](https://img.shields.io/badge/ArXiv-Paper-brown)](https://arxiv.org/abs/2507.07966)
 [![Code](https://img.shields.io/badge/GitHub-Long%20RL-blue)](https://github.com/NVlabs/Long-RL)
@@ -18,17 +18,16 @@ Tackle long video reasoning challenges with Long-RL, a full-stack framework that
 
 </div>
 
+Long-RL introduces a comprehensive framework for scaling vision-language models (VLMs) to handle long video sequences effectively using reinforcement learning. It addresses the challenges of long video reasoning through three critical components: a large-scale dataset, a two-stage training pipeline, and a dedicated training infrastructure.  The LongVILA-R1-7B model demonstrates exceptional performance on video benchmarks.
+
 ## Key Features
 
-*   **Scalable RL Training:** Train on hour-long videos (e.g., 3,600 frames / ~256k tokens) on a single A100 node (8 GPUs) with sequence parallelism.
-*   **Multi-Modal Support:** Train on models with various modalities: video, text, and audio.
-*   **Model Agnostic:** Support for VILA and Qwen series models.
-*   **RL for Image/Video Generation:** Apply RL to image/video generation models like Stable Diffusion and Wan series.
-*   **High-Quality Dataset:** Utilizes LongVideo-Reason, a large-scale dataset of 104K long video QA pairs with high-quality reasoning annotations.
-*   **Efficient Training Infrastructure:** Leverages Multi-modal Reinforcement Sequence Parallelism (MR-SP) with vLLM for efficient rollout and prefilling, achieving up to 2.1x speedup on long video RL training.
-*   **Open-Ended Reward Support:** Training for open-ended QA tasks.
-*   **Cached Video Embeddings:** Support for using cached video embeddings for video RL training.
-*   **Chunked Gathering:** Support for chunked gathering for `all_gather_data_proto`.
+*   **State-of-the-Art Performance:**  LongVILA-R1-7B achieves strong performance on video benchmarks, consistently outperforming previous models.
+*   **Hour-Level RL Training:** Supports RL training on videos up to an hour long (3,600 frames, ~256k tokens) on a single A100 node (8 GPUs).
+*   **Multi-Modal & Multi-Model Support:**  Supports RL training on models using video, text, and audio inputs, including VILA, Qwen series models, and image/video generation models (Stable Diffusion, Wan series).
+*   **Efficient Training Infrastructure:**  Utilizes Multi-modal Reinforcement Sequence Parallelism (MR-SP) for optimized training speed, achieving up to 2.1x speedup in long video RL training.
+*   **LongVideo-Reason Dataset:** Leverages a large-scale dataset with 104K long video QA pairs, featuring high-quality reasoning annotations across various domains.
+*   **Flexible Inference:**  Supports both thinking and non-thinking modes.
 
 ## Table of Contents
 
@@ -48,40 +47,44 @@ Tackle long video reasoning challenges with Long-RL, a full-stack framework that
 
 ## News
 
-*   \[2025.7.30] **LongVILA-R1-7B** supports processing up to **8,192** video frames per video, with configurable FPS settings. Please refer to its [usage instructions](#longvila-r1-model-usage).
-*   \[2025.7.24] Gradio demo released (https://long-rl.hanlab.ai) with LongVILA-R1-7B.
-*   \[2025.7.24] Model weights of **LongVILA-R1-7B** on HuggingFace (https://huggingface.co/Efficient-Large-Model/LongVILA-R1-7B).  Achieves **65.1% / 71.1%** on VideoMME. Supports multiple-choice and open-ended questions, and a non-thinking mode.
-*   \[2025.7.19] Detailed instructions and scripts for LongVideo-Reason dataset generation in the [`longvideo-reason`](longvideo-reason/) directory.
-*   \[2025.7.18] New supported features: *Open-ended reward*, *Cached video embeddings*, and *Chunked gathering* ([Supported Features](#supported-features)).
-*   \[2025.7.10] Paper and GitHub repository released.
+*   \[2025.07.30] **LongVILA-R1-7B** now supports up to **8,192** video frames, with configurable FPS settings.  Refer to the [usage instructions](#longvila-r1-model-usage).
+*   \[2025.07.24] Gradio demo released:  [https://long-rl.hanlab.ai](https://long-rl.hanlab.ai)
+*   \[2025.07.24] Model weights for **LongVILA-R1-7B** released on HuggingFace: [https://huggingface.co/Efficient-Large-Model/LongVILA-R1-7B](https://huggingface.co/Efficient-Large-Model/LongVILA-R1-7B).  Achieves **65.1% / 71.1%** on VideoMME. Supports multiple-choice and open-ended questions and non-thinking mode.
+*   \[2025.07.19] Detailed data generation instructions for the LongVideo-Reason dataset are in the [`longvideo-reason/`](longvideo-reason/) directory.
+*   \[2025.07.18] New supported features, including *Open-ended reward*, *Cached video embeddings*, and *Chunked gathering* (see [Supported Features](#supported-features)).
+*   \[2025.07.10]  Paper released: [https://arxiv.org/abs/2507.07966](https://arxiv.org/abs/2507.07966) and this GitHub repo [Long-RL](https://github.com/NVlabs/Long-RL).
 
 ## Highlights
 
-1.  **Hour-level Long Video RL Training:** Train on hour-long videos (3,600 frames, ~256k tokens) on a single node (8 GPUs) using sequence parallelism. See `examples/new_supports/qwen2_5_vl_3b_video_1h.sh`.
-2.  **Omni-Model RL:**  Support RL training on models that take text, video, and audio as inputs. See `examples/new_supports/qwen2_5_omni_3b_grpo.sh`.
-3.  **Image/Video Generation RL:** Train with RL on image/video generation models like [Stable Diffusion](https://huggingface.co/stabilityai/stable-diffusion-3.5-medium) and [Wan](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B-Diffusers). See `examples/new_supports/sd3_image_grpo.sh` and `examples/new_supports/wan_video_grpo.sh`.
+1.  **Hour-Level Long Video RL Training:**  Supports RL training on hour-long videos (3,600 frames / ~256k tokens) using sequence parallelism, on a single A100 node (8 GPUs). Example: `examples/new_supports/qwen2_5_vl_3b_video_1h.sh`
+2.  **Omni-Model RL:** Supports RL training on models that accept text, video, and audio inputs. Example: `examples/new_supports/qwen2_5_omni_3b_grpo.sh`
+3.  **Image/Video Generation RL:** Supports RL training on image/video generation models like [Stable Diffusion](https://huggingface.co/stabilityai/stable-diffusion-3.5-medium) and [Wan](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B-Diffusers). Examples: `examples/new_supports/sd3_image_grpo.sh` and `examples/new_supports/wan_video_grpo.sh`.
 
 ## Introduction
 
-Long-RL introduces a comprehensive framework for scaling reinforcement learning to the challenges of long-form video understanding. It incorporates: (1) the LongVideo-Reason dataset, a large-scale dataset for reasoning across diverse video domains; (2) a two-stage training pipeline extending VLMs with chain-of-thought supervised fine-tuning (CoT-SFT) and reinforcement learning (RL); and (3) Multi-modal Reinforcement Sequence Parallelism (MR-SP), an efficient training infrastructure built on vLLM.
+Long-RL advances reasoning in vision-language models (VLMs) for long videos using reinforcement learning.  The framework leverages:
+
+*   A large-scale dataset, **LongVideo-Reason**, comprising 104K long video QA pairs.
+*   A two-stage training pipeline using chain-of-thought supervised fine-tuning (CoT-SFT) and reinforcement learning (RL).
+*   **Multi-modal Reinforcement Sequence Parallelism (MR-SP)** for efficient RL training.
 
 **Supported Models:**
 
-*   [x] VILA series models on image and video, with SP support
+*   VILA series models on image and video (with SP support)
     *   `examples/new_supports/nvila_2b_clevr_grpo.sh`
     *   `examples/new_supports/nvila_2b_video_grpo.sh`
     *   `examples/new_supports/longvila_7b_video_grpo.sh`
-*   [x] Qwen-VL series models on text, image, video, and audio, with SP support
+*   Qwen-VL series models on text, image, video, and audio (with SP support)
     *   `examples/new_supports/qwen2_5_3b_math_grpo.sh`
     *   `examples/new_supports/qwen2_5_vl_3b_video_grpo.sh`
     *   `examples/new_supports/qwen2_5_omni_3b_grpo.sh`
-*   [x] Image and video diffusion model RL
+*   Image and video diffusion model RL
     *   `examples/new_supports/sd3_image_grpo.sh`
     *   `examples/new_supports/wan_video_grpo.sh`
 
 **Supported Algorithms:**
 
-*   [x] GRPO, DAPO & Reinforce, with SP support
+*   GRPO, DAPO & Reinforce are supported (with SP support)
     *   `examples/new_supports/qwen2_5_vl_3b_video_dapo.sh`
     *   `examples/new_supports/qwen2_5_vl_3b_video_grpo.sh`
     *   `examples/new_supports/qwen2_5_vl_3b_video_reinforce.sh`
@@ -96,21 +99,20 @@ from transformers import AutoModel
 model_path = "Efficient-Large-Model/LongVILA-R1-7B"
 model = AutoModel.from_pretrained(model_path, trust_remote_code=True, device_map="auto")
 
-# You can adjust the FPS value as needed. 
+# You can adjust the FPS value as needed.
 # To disable FPS control, set it to 0 and manually specify the number of processed video frames via `num_video_frames`.
 # Example:
 # model.config.fps = 8.0
 # model.config.num_video_frames, model.config.fps = 512, 0
 
-
-use_thinking = True # Switching between thinking and non-thinking modes
+use_thinking = True  # Switching between thinking and non-thinking modes
 system_prompt_thinking = "You are a helpful assistant. The user asks a question, and then you solves it.\n\nPlease first think deeply about the question based on the given video, and then provide the final answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>.\n\n Question: {question}"
 
 prompt = "What is the main purpose of the video?"
 video_path = "video.mp4"
 
 if use_thinking:
-  prompt = system_prompt_thinking.format(question=prompt)
+    prompt = system_prompt_thinking.format(question=prompt)
 
 response = model.generate_content([prompt, {"path": video_path}])
 print("Response: ", response)
@@ -118,13 +120,13 @@ print("Response: ", response)
 
 ### with vLLM engine
 
-Tested on `vllm==0.9.1`.  Requires the remote code to be copied.
+Tested on `vllm==0.9.1`. Requires the remote code.
+
 ```bash
 mkdir remote_code
 cp path_to/Efficient-Large-Model/LongVILA-R1-7B/*.py remote_code
 ```
 
-Then, use the following code for model generation.
 ```python
 import os
 from transformers import AutoModel
@@ -139,14 +141,14 @@ model_encoder = AutoModel.from_pretrained(model_path, trust_remote_code=True, de
 # you can change gpu_memory_utilization according to GPU memory
 llm = LLM(model=os.path.join(model_path, "llm"), enable_prompt_embeds=True, gpu_memory_utilization=0.5)
 
-use_thinking = True # Switching between thinking and non-thinking modes
+use_thinking = True  # Switching between thinking and non-thinking modes
 system_prompt_thinking = "You are a helpful assistant. The user asks a question, and then you solves it.\n\nPlease first think deeply about the question based on the given video, and then provide the final answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>.\n\n Question: {question}"
 
 prompt = "What is the main purpose of the video?"
 video_path = "video.mp4"
 
 if use_thinking:
-  prompt = system_prompt_thinking.format(question=prompt)
+    prompt = system_prompt_thinking.format(question=prompt)
 
 conversation = [{"from": "human", "value": [prompt, {"path": video_path}]}]
 media = extract_media(conversation, model_encoder.config)
@@ -165,14 +167,9 @@ print("Response: ", response)
 
 ## Supported Features
 
-*   \[x] **Open-ended reward**:
-    *   Set `--worker.rollout.open_ended_reward=True` in the training script.
-    *   Export your openai API key: `export OPENAI_API_KEY=xxx`.
-*   \[x] **Cached video embeddings**:
-    *   Follow `verl/utils/cache_video_embeds_vila.py` to cache video embeddings in a local directory.
-    *   Set `--data.cache_dir` and `--worker.actor.cached_embeds_dir` in the training script.
-*   \[x] **Chunked gathering**:
-    *   Set `--worker.rollout.num_chunk_seq` in the training script (e.g., 8/16/32).
+*   \[x] **Open-ended reward**:  Support for training on open-ended QA. Requires setting `--worker.rollout.open_ended_reward=True` and exporting your OpenAI API key.
+*   \[x] **Cached video embeddings**:  Support for cached video embeddings to accelerate training. Requires caching video embeddings using `verl/utils/cache_video_embeds_vila.py` and setting `--data.cache_dir` and `--worker.actor.cached_embeds_dir` in the training script.
+*   \[x] **Chunked gathering**: Support for chunked gathering via `--worker.rollout.num_chunk_seq` in training scripts (8, 16, or 32).  Smaller values use more memory but are faster.
 
 ## Installation
 
@@ -182,7 +179,7 @@ cd Long-RL
 pip install -e .
 ```
 
-If you want to train Qwen-Omni models, please run:
+If you intend to train Qwen-Omni models, execute:
 
 ```bash
 bash vllm_replace.sh
@@ -192,7 +189,7 @@ bash vllm_replace.sh
 
 ### Single Node
 
-Refer to the training scripts in the `examples` directory. For example:
+Refer to the example training scripts in the `examples` directory. For example:
 
 ```bash
 bash examples/new_supports/qwen2_5_vl_3b_video_grpo.sh $VIDEO_PATH
@@ -200,21 +197,22 @@ bash examples/new_supports/qwen2_5_vl_3b_video_grpo.sh $VIDEO_PATH
 
 ### Multi-Nodes
 
-Follow the instructions from the EasyR1 repo [here](https://github.com/hiyouga/EasyR1/tree/main?tab=readme-ov-file#how-to-run-70b-model-in-multi-node-environment).
+Instructions for multi-node training are available at [EasyR1's documentation](https://github.com/hiyouga/EasyR1/tree/main?tab=readme-ov-file#how-to-run-70b-model-in-multi-node-environment).
 
-Example `sbatch` script using `$TRAIN_SCRIPT` and `$NNODES`:
+Example `sbatch` script:
 
 ```bash
 bash scripts/srun_multi_nodes.sh $TRAIN_SCRIPT $NNODES
 ```
 
 Example:
-
 ```bash
 bash scripts/srun_multi_nodes.sh examples/new_supports/qwen2_5_vl_3b_video_grpo.sh 2
 ```
 
 ### Merge Checkpoint in Hugging Face Format
+
+Use the merging instructions from the EasyR1 repository:
 
 ```bash
 python3 scripts/model_merger.py --local_dir checkpoints/easy_r1/exp_name/global_step_1/actor
@@ -222,7 +220,7 @@ python3 scripts/model_merger.py --local_dir checkpoints/easy_r1/exp_name/global_
 
 ## LongVideo-Reason
 
-Find detailed instructions for data generation and model evaluation on the `LongVideo-Reason` benchmark in the [`longvideo-reason`](longvideo-reason/) directory.
+Detailed data generation instructions and model evaluation guidance on the `LongVideo-Reason` benchmark are in the [`longvideo-reason/`](longvideo-reason/) directory.
 
 ## Examples
 
@@ -256,22 +254,22 @@ Find detailed instructions for data generation and model evaluation on the `Long
 
 ## How to Contribute
 
-*   Ensure you have `git` installed.
-*   Create a [fork](https://github.com/NVlabs/Long-RL/fork) of the project.
-*   Clone the repository locally.
-*   Follow the [Installation](#installation) steps.
-*   Commit and push your changes.
-*   Make a pull request.
+1.  Ensure `git` is installed.
+2.  Fork the project:  [https://github.com/NVlabs/Long-RL/fork](https://github.com/NVlabs/Long-RL/fork)
+3.  Clone your fork locally.
+4.  Follow the [Installation](#installation) instructions.
+5.  Commit and push your changes.
+6.  Submit a pull request.
 
 ## Core Contributors
 
 [Yukang Chen](https://yukangchen.com/), [Wei Huang](https://aaron-weihuang.com/), [Shuai Yang](https://andysonys.github.io), [Qinghao Hu](https://tonyhao.xyz/), [Baifeng Shi](https://bfshi.github.io/), [Hanrong Ye](https://sites.google.com/site/yhrspace/home), [Ligeng Zhu](https://lzhu.me/).
 
-We welcome contributions!
+We welcome all contributions and will acknowledge all contributors.
 
 ## Citation
 
-Please cite our paper and this framework:
+If you find this work useful, please cite our paper and the framework:
 
 ```bibtex
 @misc{long-rl,
@@ -306,7 +304,7 @@ Please cite our paper and this framework:
 
 ## Acknowledgement
 
-*   [EasyR1](https://github.com/hiyouga/EasyR1): for the codebase.
-*   [verl](https://github.com/volcengine/verl): for the RL training framework.
-*   [vllm](https://github.com/vllm-project/vllm): for the rollout engine.
-*   [Flow-GRPO](https://github.com/yifan123/flow_grpo): for the image/video generation RL part inspiration.
+*   [EasyR1](https://github.com/hiyouga/EasyR1): the codebase we built upon. Thanks for their wonderful work.
+*   [verl](https://github.com/volcengine/verl): the RL training framework we built upon.
+*   [vllm](https://github.com/vllm-project/vllm): we built upon vllm for the rollout engine.
+*   [Flow-GRPO](https://github.com/yifan123/flow_grpo): we refer to the Flow-GRPO for the image/video generation RL part.

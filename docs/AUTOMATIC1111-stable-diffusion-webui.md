@@ -1,42 +1,64 @@
-# Stable Diffusion WebUI: Unleash Your Creativity with AI-Powered Image Generation
+# Stable Diffusion Web UI: Unleash Your Creativity with AI-Powered Image Generation
 
-Unleash your imagination and create stunning AI-generated images with the Stable Diffusion web UI, a user-friendly interface for Stable Diffusion, offering a wide array of features and customization options. ([Original Repo](https://github.com/AUTOMATIC1111/stable-diffusion-webui))
+This powerful web interface brings the magic of Stable Diffusion to your fingertips, allowing you to generate stunning images from text prompts. ([Original Repo](https://github.com/AUTOMATIC1111/stable-diffusion-webui))
 
-## Key Features:
+## Key Features
 
-*   **Versatile Image Generation Modes:** Generate images from text prompts (txt2img), modify existing images (img2img), outpaint, and inpaint with ease.
-*   **One-Click Installation:** Simplify the setup process with a convenient one-click install and run script (Python and Git required).
-*   **Advanced Image Manipulation:** Utilize features like color sketches, prompt matrices, and Stable Diffusion upscaling for enhanced control.
-*   **Attention & Prompt Customization:** Fine-tune the model's focus with attention mechanisms, including attention syntax for weighting words and phrases, and use prompt editing to change prompts mid-generation.
-*   **Innovative Techniques:** Experiment with Loopback, X/Y/Z plots, variations, and seed resizing to explore different image variations.
-*   **Textual Inversion & LoRAs:** Train and utilize textual inversions and LoRAs (Like Hypernetworks, but prettier) for custom styles and appearances.
-*   **Powerful Extras:** Enhance your images with integrated tools like GFPGAN, CodeFormer, RealESRGAN, ESRGAN, and SwinIR upscalers, and apply aesthetic gradients to specific aesthetics.
-*   **Custom Scripts & Extensions:** Extend functionality with custom scripts and community extensions for advanced capabilities.
-*   **Deep Integration:** Utilize DeepDanbooru for anime prompts, and Composable Diffusion to use multiple prompts simultaneously.
-*   **Comprehensive Features:** Enjoy features like negative prompts, styles, CLIP interrogator, batch processing, high-res fix, checkpoint merging, and much more.
-*   **Supports Stable Diffusion 2.0, Alt-Diffusion, and Segmind Stable Diffusion models.**
-*   **Additional features:** Added options for hypernetworks, clip skip, and VAE selection.
+*   **Versatile Image Generation:** Generate images from text (txt2img) or modify existing images (img2img) with ease.
+*   **One-Click Installation:** Get up and running quickly with a straightforward install script.
+*   **Advanced Features:** Explore inpainting, outpainting, color sketches, prompt matrices, and more.
+*   **Attention Mechanism:** Refine your prompts with attention weighting to control the model's focus.
+*   **Textual Inversion & Embeddings:** Train and utilize custom embeddings for personalized image generation.
+*   **Upscaling Tools:** Enhance image quality with GFPGAN, CodeFormer, RealESRGAN, ESRGAN, SwinIR, Swin2SR, and LDSR.
+*   **Interactive UI:** Enjoy a user-friendly interface with features like a progress bar, live preview, and generation parameter saving.
+*   **Negative Prompting:** Specify what you *don't* want to see in your images for greater control.
+*   **Extensions & Integrations:** Utilize custom scripts, Composable-Diffusion, and other community-driven enhancements.
+*   **Model Compatibility:** Supports Stable Diffusion 2.0, Alt-Diffusion, and Segmind Stable Diffusion.
+*   **Batch Processing:** Process multiple images with img2img functionality.
+*   **API Access:** Integrate Stable Diffusion Web UI into your own applications.
+*   **Highres Fix:** Generate High resolution images in a single click
+*   **Checkpoint Merger:** Merge up to 3 checkpoints into one
 
 ## Installation and Running
 
-Comprehensive installation instructions are available on the project's wiki, including options for:
+Detailed installation instructions are available for various platforms:
 
-*   **NVidia GPUs (Recommended)**
-*   **AMD GPUs**
-*   **Intel CPUs and GPUs**
-*   **Ascend NPUs**
-*   **Online Services (e.g., Google Colab)**
+*   [NVidia](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-NVidia-GPUs) (Recommended)
+*   [AMD](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs) GPUs
+*   [Intel CPUs and GPUs](https://github.com/openvinotoolkit/stable-diffusion-webui/wiki/Installation-on-Intel-Silicon)
+*   [Ascend NPUs](https://github.com/wangshuai09/stable-diffusion-webui/wiki/Install-and-run-on-Ascend-NPUs)
+*   [Apple Silicon](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon)
 
-Simplified installation instructions for Windows are provided.
+Alternatively, utilize online services for quick access:
+
+*   [List of Online Services](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Online-Services)
+
+### Windows Installation (NVidia GPUs - Release Package)
+
+1.  Download `sd.webui.zip` from [v1.0.0-pre](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases/tag/v1.0.0-pre)
+2.  Run `update.bat`.
+3.  Run `run.bat`.
+
+### Automatic Installation on Windows
+
+1.  Install Python 3.10.6 and Git.
+2.  Clone the repository: `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git`.
+3.  Run `webui-user.bat`.
+
+### Automatic Installation on Linux
+
+1.  Install dependencies using the appropriate package manager (e.g., `apt`, `dnf`, `zypper`, `pacman`).
+2.  Clone the repository: `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui`.
+3.  Run `webui.sh`.
 
 ## Contributing
 
-Contribute to the project and find out more about how to get involved:  [Contributing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing)
+Learn how to contribute to the project: [Contributing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing)
 
 ## Documentation
 
-Find detailed documentation on the project's [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki).
+Comprehensive documentation is available on the project's [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki).
 
 ## Credits
 
-[See original README for credits.](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+A list of credits can be found in the original repo.

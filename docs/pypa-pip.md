@@ -1,48 +1,60 @@
-# pip: The Essential Python Package Installer
+pip - The Python Package Installer
+==================================
 
-**Easily manage and install Python packages with pip, the official package installer for Python.**
+.. |pypi-version| image:: https://img.shields.io/pypi/v/pip.svg
+   :target: https://pypi.org/project/pip/
+   :alt: PyPI
 
-[![PyPI Version](https://img.shields.io/pypi/v/pip.svg)](https://pypi.org/project/pip/)
-[![Python Versions](https://img.shields.io/pypi/pyversions/pip)](https://pypi.org/project/pip)
-[![Documentation](https://readthedocs.org/projects/pip/badge/?version=latest)](https://pip.pypa.io/en/latest)
+.. |python-versions| image:: https://img.shields.io/pypi/pyversions/pip
+   :target: https://pypi.org/project/pip
+   :alt: PyPI - Python Version
 
-## Key Features of pip
+.. |docs-badge| image:: https://readthedocs.org/projects/pip/badge/?version=latest
+   :target: https://pip.pypa.io/en/latest
+   :alt: Documentation
 
-*   **Simplified Package Management:** Install, upgrade, and uninstall Python packages with ease.
-*   **Python Package Index (PyPI) Integration:** Access a vast repository of packages from the official Python Package Index.
-*   **Dependency Management:**  Handles package dependencies automatically, ensuring your projects have everything they need.
-*   **Regular Updates:** Benefit from frequent releases with new features and improvements (every 3 months).
+|pypi-version| |python-versions| |docs-badge|
 
-## Getting Started
+pip is the `package installer`_ for Python. You can use pip to install packages from the `Python Package Index`_ and other indexes.
 
-### Installation
+Please take a look at our documentation for how to install and use pip:
 
-Refer to the official documentation for detailed installation instructions:  [Installation](https://pip.pypa.io/en/stable/installation/)
+* `Installation`_
+* `Usage`_
 
-### Usage
+We release updates regularly, with a new version every 3 months. Find more details in our documentation:
 
-Learn how to use pip effectively: [Usage](https://pip.pypa.io/en/stable/)
+* `Release notes`_
+* `Release process`_
 
-## Stay Updated
+If you find bugs, need help, or want to talk to the developers, please use our mailing lists or chat rooms:
 
-*   **Release Notes:**  [Release notes](https://pip.pypa.io/en/stable/news.html)
-*   **Release Process:** [Release process](https://pip.pypa.io/en/latest/development/release-process/)
+* `Issue tracking`_
+* `Discourse channel`_
+* `User IRC`_
 
-## Get Involved & Get Help
+If you want to get involved head over to GitHub to get the source code, look at our development documentation and feel free to jump on the developer mailing lists and chat rooms:
 
-We encourage contributions and welcome your feedback.
+* `GitHub page`_
+* `Development documentation`_
+* `Development IRC`_
 
-*   **Issue Tracking:** [Issue tracking](https://github.com/pypa/pip/issues)
-*   **Discourse Channel:** [Discourse channel](https://discuss.python.org/c/packaging)
-*   **User IRC:** [User IRC](https://kiwiirc.com/nextclient/#ircs://irc.libera.chat:+6697/pypa)
-*   **GitHub Page:** [GitHub page](https://github.com/pypa/pip)
-*   **Development Documentation:** [Development documentation](https://pip.pypa.io/en/latest/development)
-*   **Development IRC:** [Development IRC](https://kiwiirc.com/nextclient/#ircs://irc.libera.chat:+6697/pypa-dev)
+Code of Conduct
+---------------
 
-## Code of Conduct
+Everyone interacting in the pip project's codebases, issue trackers, chat
+rooms, and mailing lists is expected to follow the `PSF Code of Conduct`_.
 
-We are committed to fostering a welcoming and inclusive community.  Please review the [PSF Code of Conduct](https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md)
-
----
-
-**[Back to the original repository](https://github.com/pypa/pip)**
+.. _package installer: https://packaging.python.org/guides/tool-recommendations/
+.. _Python Package Index: https://pypi.org
+.. _Installation: https://pip.pypa.io/en/stable/installation/
+.. _Usage: https://pip.pypa.io/en/stable/
+.. _Release notes: https://pip.pypa.io/en/stable/news.html
+.. _Release process: https://pip.pypa.io/en/latest/development/release-process/
+.. _GitHub page: https://github.com/pypa/pip
+.. _Development documentation: https://pip.pypa.io/en/latest/development
+.. _Issue tracking: https://github.com/pypa/pip/issues
+.. _Discourse channel: https://discuss.python.org/c/packaging
+.. _User IRC: https://kiwiirc.com/nextclient/#ircs://irc.libera.chat:+6697/pypa
+.. _Development IRC: https://kiwiirc.com/nextclient/#ircs://irc.libera.chat:+6697/pypa-dev
+.. _PSF Code of Conduct: https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md

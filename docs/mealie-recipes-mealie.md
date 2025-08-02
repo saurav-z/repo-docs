@@ -31,39 +31,59 @@
     <a href="https://github.com/mealie-recipes/mealie/pkgs/container/mealie">GitHub Container Registry</a>
 </p>
 
+
+
+
 [![Product Name Screen Shot][product-screenshot]](https://docs.mealie.io)
 
-## Mealie: Your Self-Hosted Recipe Manager & Meal Planner
+# About The Project
 
-Mealie is a powerful and user-friendly, self-hosted application that simplifies recipe management, meal planning, and grocery shopping.  **Tired of scattered recipes?**  Mealie helps you organize everything in one place, making cooking and meal prep a breeze.  Find out more on the [Mealie GitHub Repository](https://github.com/mealie-recipes/mealie).
+Mealie is a self hosted recipe manager, meal planner and shopping list with a RestAPI backend and a reactive frontend built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the URL and Mealie will automatically import the relevant data, or add a family recipe with the UI editor. Mealie also provides an API for interactions from 3rd party applications.
+
+- [Remember to join the Discord](https://discord.gg/QuStdQGSGK)!
+- [Documentation](https://docs.mealie.io/)
+
 
 ## Key Features
+- Recipe imports: Create recipes, by **importing from a URL** or entering data manually
+- Meal Planner: Use the **Meal Planner** to plan your what you'll cook for the next week
+- Shopping List: Put the necessary ingredients on your **Shopping List**, organised into sections of your local supermarket
+- Cookbooks: Group recipes into **Cookbooks** based on your own criteria
+- Docker: Easy **Docker** deployment
+- Localisation: **Translations** for 35+ languages
 
-*   **Recipe Import:** Easily add recipes by importing them from a URL or entering details manually.
-*   **Meal Planning:** Plan your weekly meals with the intuitive meal planner.
-*   **Shopping List Generation:** Automatically create a shopping list organized by supermarket sections.
-*   **Cookbook Organization:** Group your recipes into custom cookbooks for easy access.
-*   **Docker Deployment:** Deploy Mealie quickly and easily with Docker.
-*   **Multi-Language Support:**  Enjoy Mealie in 35+ languages.
-
+<!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are welcome! Whether you're a coder or not, you can help improve Mealie.  Check out the [Contributors Guide](https://nightly.mealie.io/contributors/developers-guide/code-contributions/) to learn how to get started.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. If you're going to be working on the code-base, you'll want to use the nightly documentation to ensure you get the latest information.
 
-*   **Developers:**  Use [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) for easy setup.
-*   **Non-Coders:** Contribute financially via <a href="https://www.buymeacoffee.com/haykot" target="_blank">Buy Me a Coffee</a> or by translating Mealie using [Crowdin](https://crowdin.com/project/mealie).
+- See the [Contributors Guide](https://nightly.mealie.io/contributors/developers-guide/code-contributions/) for help getting started.
+- We use [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) to make it easy for contributors to get started!
 
+If you are not a coder, you can still contribute financially. Financial contributions help me prioritize working on this project over others and helps me know that there is a real demand for project development.
+
+<a href="https://www.buymeacoffee.com/haykot" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 30px !important;width: 107px !important;" ></a>
+
+### Translations
+
+Translations can be a great way for **non-coders** to contribute to the project. We use [Crowdin](https://crowdin.com/project/mealie) to allow several contributors to work on translating Mealie. You can simply help by voting for your preferred translations, or even by completely translating Mealie into a new language.
+
+For more information, check out the translation page on the [contributor's guide](https://nightly.mealie.io/contributors/translating/).
+
+<!-- LICENSE -->
 ## License
-
 Distributed under the AGPL License. See `LICENSE` for more information.
+
 
 ## Sponsors
 
-Special thanks to all the sponsors who support the project, including those on [Github Sponsors](https://github.com/sponsors/hay-kot) and Buy Me a Coffee.
+Huge thanks to all the sponsors of this project on [Github Sponsors](https://github.com/sponsors/hay-kot) and Buy Me a Coffee. Without you, this project would surely not be possible.
 
 Thanks to Depot for providing build instances for our Docker image builds.
 
 [![Built with Depot](https://depot.dev/badges/built-with-depot.svg)](https://depot.dev?utm_source=Mealie)
+
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -84,14 +104,3 @@ Thanks to Depot for providing build instances for our Docker image builds.
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/hay-kot
 [product-screenshot]: docs/docs/assets/img/home_screenshot.png
-```
-Key improvements and SEO enhancements:
-
-*   **Clear Heading Structure:** Uses `##` and `###` to organize the content logically.
-*   **SEO-Optimized Hook:**  The one-sentence hook is designed to grab attention and is keyword-rich.
-*   **Keyword Integration:** Includes relevant keywords like "recipe manager," "meal planner," "self-hosted," and "recipe management" throughout the description.
-*   **Concise Feature List:** Presents key features in a clear, bulleted format.
-*   **Call to Action:** Provides clear links to the documentation, demo, and issue tracker.
-*   **Emphasis:** Uses bolding to highlight important features and actions.
-*   **Contributing section:** Reorganized for better readability.
-*   **Sponsor Section:** Moved it to the end for better flow and focus on the product first.

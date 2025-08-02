@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <div align="center">
 <img src="https://microsoft.github.io/autogen/0.2/img/ag.svg" alt="AutoGen Logo" width="100">
 
@@ -13,18 +15,9 @@
   <strong>Important:</strong> This is the official project. We are not affiliated with any fork or startup. See our <a href="https://x.com/pyautogen/status/1857264760951296210">statement</a>.
 </div>
 
-# AutoGen: Build Powerful Multi-Agent AI Applications
+# AutoGen
 
-AutoGen is a versatile framework by Microsoft for developing and deploying multi-agent AI applications that can work autonomously or collaboratively with humans.  [Explore the AutoGen GitHub Repository](https://github.com/microsoft/autogen).
-
-## Key Features
-
-*   **Multi-Agent Framework:** Design and implement complex AI workflows with multiple agents.
-*   **Extensible Architecture:** Leverage a modular design for flexible customization and integration.
-*   **No-Code Development with AutoGen Studio:** Quickly prototype and test multi-agent applications using a user-friendly GUI.
-*   **Comprehensive Ecosystem:** Access a wide range of tools, including a benchmarking suite and support for popular LLM clients.
-*   **Cross-Platform Support:**  AutoGen supports both Python and .NET for broad application development.
-*   **Community Driven:** Join a thriving community through Discord, GitHub Discussions, and regular office hours.
+**AutoGen** is a framework for creating multi-agent AI applications that can act autonomously or work alongside humans.
 
 ## Installation
 
@@ -148,6 +141,7 @@ With AutoGen you get to join and contribute to a thriving ecosystem. We host wee
 | Packages      | [![PyPi autogen-core](https://img.shields.io/badge/PyPi-autogen--core-blue?logo=pypi)](https://pypi.org/project/autogen-core/) <br> [![PyPi autogen-agentchat](https://img.shields.io/badge/PyPi-autogen--agentchat-blue?logo=pypi)](https://pypi.org/project/autogen-agentchat/) <br> [![PyPi autogen-ext](https://img.shields.io/badge/PyPi-autogen--ext-blue?logo=pypi)](https://pypi.org/project/autogen-ext/) | [![NuGet Contracts](https://img.shields.io/badge/NuGet-Contracts-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Contracts/) <br> [![NuGet Core](https://img.shields.io/badge/NuGet-Core-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Core/) <br> [![NuGet Core.Grpc](https://img.shields.io/badge/NuGet-Core.Grpc-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Core.Grpc/) <br> [![NuGet RuntimeGateway.Grpc](https://img.shields.io/badge/NuGet-RuntimeGateway.Grpc-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.RuntimeGateway.Grpc/) | [![PyPi autogenstudio](https://img.shields.io/badge/PyPi-autogenstudio-purple?logo=pypi)](https://pypi.org/project/autogenstudio/)                       |
 
 </div>
+
 
 Interested in contributing? See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started. We welcome contributions of all kinds, including bug fixes, new features, and documentation improvements. Join our community and help us make AutoGen better!
 

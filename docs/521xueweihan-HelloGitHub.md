@@ -3,28 +3,30 @@
   <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
 </p>
 
-# HelloGitHub: Discover Awesome Open-Source Projects (每月更新)
+# HelloGitHub: Discover Awesome Open Source Projects!
 
-**HelloGitHub** is your gateway to exploring the exciting world of open-source projects on GitHub, making it easy to find interesting and beginner-friendly resources.
+HelloGitHub is your gateway to the exciting world of open-source projects, curated to help you discover and enjoy the best of GitHub.
 
-[View the original repository on GitHub](https://github.com/521xueweihan/HelloGitHub)
+[Explore the original repository on GitHub](https://github.com/521xueweihan/HelloGitHub)
 
-## Key Features
+## Key Features:
 
-*   **Monthly Updates:** Freshly curated content is released on the 28th of each month.
-*   **Diverse Content:** Discover a wide range of projects, including:
-    *   Interesting open-source projects
-    *   Beginner-friendly projects
+*   **Discover Interesting Projects:** Find a curated selection of engaging and beginner-friendly open-source projects.
+*   **Monthly Updates:** Stay updated with a monthly newsletter (published on the 28th) featuring new and noteworthy projects.
+*   **Diverse Content:** Explore a variety of project types, including:
+    *   Interesting and beginner-friendly open-source projects
     *   Open-source books
-    *   Practical project examples
+    *   Practical projects
     *   Enterprise-level projects
-*   **Easy to Get Started:** Designed to help you quickly understand and appreciate the power of open source.
-*   **Community Driven:**  Contribute and recommend projects!
-*   **Multilingual:**  Available in Chinese, English, and Japanese.
+*   **Community Driven:** Contribute by recommending or self-nominating projects.
+*   **Multiple languages:** Available in Chinese, English, and Japanese.
 
-## Content
+## Learn More
 
-Explore the latest issues for the best reading experience: [Official Website](https://hellogithub.com/) or [HelloGitHub WeChat Public Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png)
+*   **Website:** [hellogithub.com](https://hellogithub.com/)
+*   **WeChat:** [HelloGitHub Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png)
+
+## Contents
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -37,11 +39,7 @@ Explore the latest issues for the best reading experience: [Official Website](ht
 | [第 85 期](/content/HelloGitHub85.md) | [第 84 期](/content/HelloGitHub84.md) | [第 83 期](/content/HelloGitHub83.md) | [第 82 期](/content/HelloGitHub82.md) | [第 81 期](/content/HelloGitHub81.md) |
 | [第 80 期](/content/HelloGitHub80.md) | [第 79 期](/content/HelloGitHub79.md) | [第 78 期](/content/HelloGitHub78.md) | [第 77 期](/content/HelloGitHub77.md) | [第 76 期](/content/HelloGitHub76.md) |
 
-## Contribute
-
-Welcome to [recommend or self-recommend](https://hellogithub.com/periodical) projects as a **HelloGitHub** [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
-
-## Sponsors
+## Sponsorship
 
 <table>
   <thead>
@@ -79,4 +77,4 @@ Welcome to [recommend or self-recommend](https://hellogithub.com/periodical) pro
 
 ## License
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact <a href="mailto:595666367@qq.com">me</a>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact [595666367@qq.com](mailto:595666367@qq.com)

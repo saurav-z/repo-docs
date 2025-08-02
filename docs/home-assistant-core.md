@@ -1,40 +1,33 @@
-# Home Assistant: Open Source Home Automation for Local Control and Privacy
+Home Assistant |Chat Status|
+=================================================================================
 
-**Take control of your smart home and prioritize your privacy with Home Assistant, the leading open-source home automation platform.**
+Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.
 
-[View the original repository on GitHub](https://github.com/home-assistant/core)
+Check out `home-assistant.io <https://home-assistant.io>`__ for `a
+demo <https://demo.home-assistant.io>`__, `installation instructions <https://home-assistant.io/getting-started/>`__,
+`tutorials <https://home-assistant.io/getting-started/automation/>`__ and `documentation <https://home-assistant.io/docs/>`__.
 
-## Key Features
+|screenshot-states|
 
-*   **Local Control:**  Operate your smart home devices without relying on cloud services, ensuring privacy and reliability.
-*   **Open Source:** Benefit from a transparent and collaborative development model, backed by a global community.
-*   **Modular Design:**  Easily extend Home Assistant's capabilities with support for new devices and actions.
-*   **Wide Integration Support:** Compatible with a vast array of smart home devices and services.
-*   **Run Anywhere:**  Perfect for running on a Raspberry Pi, a local server, or other hardware.
-*   **Active Community:** Leverage a large and supportive community for help, inspiration, and new integrations.
+Featured integrations
+---------------------
 
-## Get Started
+|screenshot-integrations|
 
-*   **Demo:** [Explore a live demo](https://demo.home-assistant.io)
-*   **Installation:** [Get started with installation instructions](https://home-assistant.io/getting-started/)
-*   **Tutorials:** [Learn to automate with tutorials](https://home-assistant.io/getting-started/automation/)
-*   **Documentation:** [Explore the comprehensive documentation](https://home-assistant.io/docs/)
+The system is built using a modular approach so support for other devices or actions can be implemented easily. See also the `section on architecture <https://developers.home-assistant.io/docs/architecture_index/>`__ and the `section on creating your own
+components <https://developers.home-assistant.io/docs/creating_component_index/>`__.
 
-## Featured Integrations
+If you run into issues while using Home Assistant or during development
+of a component, check the `Home Assistant help section <https://home-assistant.io/help/>`__ of our website for further help and information.
 
-[Image of Integrations Screenshot - Link to home-assistant.io/integrations/ ]
+|ohf-logo|
 
-## Architecture and Development
-
-*   **Architecture:** [Learn about the system architecture](https://developers.home-assistant.io/docs/architecture_index/)
-*   **Component Development:** [Create your own custom components](https://developers.home-assistant.io/docs/creating_component_index/)
-
-## Need Help?
-
-*   **Help Section:** [Find help and information](https://home-assistant.io/help/)
-
-[Image of States Screenshot - Link to demo.home-assistant.io]
-
-[Image of Discord Chat Badge - Link to https://www.home-assistant.io/join-chat/]
-
-[Image of Open Home Foundation Logo - Link to https://www.openhomefoundation.org/]
+.. |Chat Status| image:: https://img.shields.io/discord/330944238910963714.svg
+   :target: https://www.home-assistant.io/join-chat/
+.. |screenshot-states| image:: https://raw.githubusercontent.com/home-assistant/core/dev/.github/assets/screenshot-states.png
+   :target: https://demo.home-assistant.io
+.. |screenshot-integrations| image:: https://raw.githubusercontent.com/home-assistant/core/dev/.github/assets/screenshot-integrations.png
+   :target: https://home-assistant.io/integrations/
+.. |ohf-logo| image:: https://www.openhomefoundation.org/badges/home-assistant.png
+   :alt: Home Assistant - A project from the Open Home Foundation
+   :target: https://www.openhomefoundation.org/

@@ -20,81 +20,87 @@
 </a>
 </p>
 
-# Biomni: Revolutionizing Biomedical Research with AI
 
-Biomni is a cutting-edge, general-purpose AI agent designed to automate and accelerate biomedical research, empowering scientists to make groundbreaking discoveries. Explore the original repository on [GitHub](https://github.com/snap-stanford/Biomni).
 
-**Key Features:**
+# Biomni: A General-Purpose Biomedical AI Agent
 
-*   **Autonomous Task Execution:** Biomni autonomously executes a wide range of research tasks across diverse biomedical subfields.
-*   **LLM-Powered Reasoning:** Integrates advanced large language model (LLM) reasoning for intelligent decision-making.
-*   **Retrieval-Augmented Planning:** Employs retrieval-augmented planning for efficient information retrieval and strategic task execution.
-*   **Code-Based Execution:** Utilizes code-based execution to translate research goals into actionable steps.
-*   **Web Interface:** Accessible through a user-friendly web interface for easy exploration and experimentation: [biomni.stanford.edu](https://biomni.stanford.edu).
+## Overview
 
-## Getting Started
+
+Biomni is a general-purpose biomedical AI agent designed to autonomously execute a wide range of research tasks across diverse biomedical subfields. By integrating cutting-edge large language model (LLM) reasoning with retrieval-augmented planning and code-based execution, Biomni helps scientists dramatically enhance research productivity and generate testable hypotheses.
+
+
+## Quick Start
 
 ### Installation
 
-1.  **Set up the Environment:** Follow the instructions in the [biomni\_env/README.md](biomni_env/README.md) file to set up the environment.
-2.  **Activate the Environment:** Activate the environment using:
-    ```bash
-    conda activate biomni_e1
-    ```
-3.  **Install the Biomni Package:** Install the official Biomni package:
-    ```bash
-    pip install biomni --upgrade
-    ```
-    Or, for the latest updates:
-    ```bash
-    pip install git+https://github.com/snap-stanford/Biomni.git@main
-    ```
+Our software environment is massive and we provide a single setup.sh script to setup.
+Follow this [file](biomni_env/README.md) to setup the env first.
 
-### Configure API Keys
+Then activate the environment E1:
 
-Configure your API keys using either of the following methods:
+```bash
+conda activate biomni_e1
+```
+
+then install the biomni official pip package:
+
+```bash
+pip install biomni --upgrade
+```
+
+For the latest update, install from the github source version, or do:
+
+```bash
+pip install git+https://github.com/snap-stanford/Biomni.git@main
+```
+
+Lastly, configure your API keys using one of the following methods:
 
 <details>
 <summary>Click to expand</summary>
 
 #### Option 1: Using .env file (Recommended)
 
-1.  Create a `.env` file in your project directory:
-    ```bash
-    # Copy the example file
-    cp .env.example .env
+Create a `.env` file in your project directory:
 
-    # Edit the .env file with your actual API keys
-    ```
-2.  Your `.env` file should look like:
-    ```env
-    # Required: Anthropic API Key for Claude models
-    ANTHROPIC_API_KEY=your_anthropic_api_key_here
+```bash
+# Copy the example file
+cp .env.example .env
 
-    # Optional: OpenAI API Key (if using OpenAI models)
-    OPENAI_API_KEY=your_openai_api_key_here
+# Edit the .env file with your actual API keys
+```
 
-    # Optional: AI Studio Gemini API Key (if using Gemini models)
-    GEMINI_API_KEY=your_gemini_api_key_here
+Your `.env` file should look like:
 
-    # Optional: AWS Bedrock Configuration (if using AWS Bedrock models)
-    AWS_BEARER_TOKEN_BEDROCK=your_bedrock_api_key_here
-    AWS_REGION=us-east-1
+```env
+# Required: Anthropic API Key for Claude models
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
 
-    # Optional: Custom model serving configuration
-    # CUSTOM_MODEL_BASE_URL=http://localhost:8000/v1
-    # CUSTOM_MODEL_API_KEY=your_custom_api_key_here
+# Optional: OpenAI API Key (if using OpenAI models)
+OPENAI_API_KEY=your_openai_api_key_here
 
-    # Optional: Biomni data path (defaults to ./data)
-    # BIOMNI_DATA_PATH=/path/to/your/data
+# Optional: AI Studio Gemini API Key (if using Gemini models)
+GEMINI_API_KEY=your_gemini_api_key_here
 
-    # Optional: Timeout settings (defaults to 600 seconds)
-    # BIOMNI_TIMEOUT_SECONDS=600
-    ```
+# Optional: AWS Bedrock Configuration (if using AWS Bedrock models)
+AWS_BEARER_TOKEN_BEDROCK=your_bedrock_api_key_here
+AWS_REGION=us-east-1
+
+# Optional: Custom model serving configuration
+# CUSTOM_MODEL_BASE_URL=http://localhost:8000/v1
+# CUSTOM_MODEL_API_KEY=your_custom_api_key_here
+
+# Optional: Biomni data path (defaults to ./data)
+# BIOMNI_DATA_PATH=/path/to/your/data
+
+# Optional: Timeout settings (defaults to 600 seconds)
+# BIOMNI_TIMEOUT_SECONDS=600
+```
 
 #### Option 2: Using shell environment variables
 
-Configure your API keys in your bash profile, for example, `~/.bashrc`:
+Alternatively, configure your API keys in bash profile `~/.bashrc`:
 
 ```bash
 export ANTHROPIC_API_KEY="YOUR_API_KEY"
@@ -107,7 +113,7 @@ export GEMINI_API_KEY="YOUR_GEMINI_API_KEY" #optional if you want to use a gemin
 
 #### ⚠️ Known Package Conflicts
 
-Address potential package conflicts by referring to [docs/known\_conflicts.md](./docs/known_conflicts.md).
+Some Python packages are not installed by default in the Biomni environment due to dependency conflicts. If you need these features, you must install the packages manually and may need to uncomment relevant code in the codebase. See the up-to-date list and details in [docs/known_conflicts.md](./docs/known_conflicts.md).
 
 ### Basic Usage
 
@@ -125,53 +131,61 @@ agent.go("Perform scRNA-seq annotation at [PATH] and generate meaningful hypothe
 agent.go("Predict ADMET properties for this compound: CC(C)CC1=CC=C(C=C1)C(C)C(=O)O")
 ```
 
-## Contribute to Biomni
+## 🤝 Contributing to Biomni
 
-Biomni is an open-science initiative welcoming contributions from the community!
+Biomni is an open-science initiative that thrives on community contributions. We welcome:
 
-**We're looking for contributions in the following areas:**
+- **🔧 New Tools**: Specialized analysis functions and algorithms
+- **📊 Datasets**: Curated biomedical data and knowledge bases
+- **💻 Software**: Integration of existing biomedical software packages
+- **📋 Benchmarks**: Evaluation datasets and performance metrics
+- **📚 Misc**: Tutorials, examples, and use cases
+- **🔧 Update existing tools**: many current tools are not optimized - fix and replacements are welcome!
 
-*   🔧 New Tools: Specialized analysis functions and algorithms
-*   📊 Datasets: Curated biomedical data and knowledge bases
-*   💻 Software: Integration of existing biomedical software packages
-*   📋 Benchmarks: Evaluation datasets and performance metrics
-*   📚 Misc: Tutorials, examples, and use cases
-*   🔧 Update existing tools: Fixes and replacements are welcome!
+Check out this **[Contributing Guide](CONTRIBUTION.md)** on how to contribute to the Biomni ecosystem.
 
-**Contribute:** See our [Contributing Guide](CONTRIBUTION.md) for details. You can also submit specific tool/database/software ideas via [this form](https://forms.gle/nu2n1unzAYodTLVj6).
+If you have particular tool/database/software in mind that you want to add, you can also submit to [this form](https://forms.gle/nu2n1unzAYodTLVj6) and the biomni team will implement them.
 
-## Biomni-E2: The Future of Biomedical AI
+## 🔬 Call for Contributors: Help Build Biomni-E2
 
-Help build Biomni-E2, a next-generation environment developed with and for the community!
+Biomni-E1 only scratches the surface of what’s possible in the biomedical action space.
 
-*   **Significant Contributors:** Invitation as co-authors on our upcoming paper (e.g., 10+ tool contributions).
-*   **All Contributors:** Acknowledgment in our publications.
-*   More contributor perks...
+Now, we’re building **Biomni-E2** — a next-generation environment developed **with and for the community**.
+
+We believe that by collaboratively defining and curating a shared library of standard biomedical actions, we can accelerate science for everyone.
+
+**Join us in shaping the future of biomedical AI agent.**
+
+- **Contributors with significant impact** (e.g., 10+ significant & integrated tool contributions or equivalent) will be **invited as co-authors** on our upcoming paper in a top-tier journal or conference.
+- **All contributors** will be acknowledged in our publications.
+- More contributor perks...
+
+Let’s build it together.
+
 
 ## Tutorials and Examples
 
-Explore our tutorials to get started:
+**[Biomni 101](./tutorials/biomni_101.ipynb)** - Basic concepts and first steps
 
-*   **[Biomni 101](./tutorials/biomni_101.ipynb)** - Basic concepts and first steps
+More to come!
 
-## Web Interface
+## 🌐 Web Interface
 
-Experience Biomni through our user-friendly web interface at **[biomni.stanford.edu](https://biomni.stanford.edu)**.
+Experience Biomni through our no-code web interface at **[biomni.stanford.edu](https://biomni.stanford.edu)**.
 
 [![Watch the video](https://img.youtube.com/vi/E0BRvl23hLs/maxresdefault.jpg)](https://youtu.be/E0BRvl23hLs)
 
-## Release Schedule
+## Release schedule
 
-*   \[ ] 8 Real-world research task benchmark/leaderboard release
-*   \[ ] A tutorial on how to contribute to Biomni
-*   \[ ] A tutorial on baseline agents
-*   \[x] Biomni A1+E1 release
+- [ ] 8 Real-world research task benchmark/leaderboard release
+- [ ] A tutorial on how to contribute to Biomni
+- [ ] A tutorial on baseline agents
+- [x] Biomni A1+E1 release
 
-## Important Notes
-
-*   **Security Warning:** Currently, Biomni executes LLM-generated code with full system privileges. Use it in isolated/sandboxed environments. Be careful with sensitive data.
-*   **Version:** This release was frozen as of April 15 2025.
-*   **Licensing:** Biomni is Apache 2.0-licensed. Review licenses for integrated components before commercial use.
+## Important Note
+- Security warning: Currently, Biomni executes LLM-generated code with full system privileges. If you want to use it in production, please use in isolated/sandboxed environments. The agent can access files, network, and system commands. Be careful with sensitive data or credentials.
+- This release was frozen as of April 15 2025, so it differs from the current web platform.
+- Biomni itself is Apache 2.0-licensed, but certain integrated tools, databases, or software may carry more restrictive commercial licenses. Review each component carefully before any commercial use.
 
 ## Cite Us
 

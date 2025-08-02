@@ -1,70 +1,64 @@
 <div style="display: block;" align="center">
     <a href="https://ivy.dev/">
-        <img class="dark-light" width="50%" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/ivy-long.svg" alt="Ivy Logo"/>
+        <img class="dark-light" width="50%" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/ivy-long.svg"/>
     </a>
 </div>
 <br clear="all" />
 
 <div style="margin-top: 10px; margin-bottom: 10px; display: block;" align="center">
     <a href="https://github.com/ivy-llc/ivy/stargazers">
-        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://img.shields.io/github/stars/ivy-llc/ivy" alt="GitHub Stars"/>
+        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://img.shields.io/github/stars/ivy-llc/ivy">
     </a>
     <a href="https://discord.gg/uYRmyPxMQq">
-        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://img.shields.io/discord/1220325004013604945?color=blue&label=%20&logo=discord&logoColor=white" alt="Discord"/>
+        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://img.shields.io/discord/1220325004013604945?color=blue&label=%20&logo=discord&logoColor=white">
     </a>
     <a href="https://ivy-llc.github.io/docs/">
-        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://img.shields.io/badge/docs-purple" alt="Documentation"/>
+        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://img.shields.io/badge/docs-purple">
     </a>
     <a href="https://github.com/ivy-llc/ivy/actions/workflows/test-transpiler.yml">
-        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://github.com/ivy-llc/ivy/actions/workflows/test-transpiler.yml/badge.svg" alt="Test Transpiler"/>
+        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://github.com/ivy-llc/ivy/actions/workflows/test-transpiler.yml/badge.svg">
     </a>
     <a href="https://github.com/ivy-llc/ivy/actions/workflows/integration-tests.yml">
-        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://github.com/ivy-llc/ivy/actions/workflows/integration-tests.yml/badge.svg" alt="Integration Tests"/>
+        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://github.com/ivy-llc/ivy/actions/workflows/integration-tests.yml/badge.svg">
     </a>
 </div>
 <br clear="all" />
 
-## Ivy: Seamlessly Convert Machine Learning Code Between Frameworks
 
-Ivy empowers you to effortlessly convert and utilize machine learning code across different frameworks, simplifying your workflow and boosting your productivity.  [Explore the Ivy repository on GitHub](https://github.com/ivy-llc/ivy).
+# Convert Machine Learning Code Between Frameworks
 
-**Key Features:**
-
-*   **Framework Conversion:** Easily convert ML models and libraries between PyTorch, TensorFlow, JAX, and NumPy.
-*   **Code Portability:**  Write code once and run it across multiple frameworks, maximizing flexibility.
-*   **Efficient Graph Tracing:** Trace computational graphs for optimized performance and streamlined execution.
-*   **Simplified Workflow:** Reduce the complexities of framework-specific code, saving time and effort.
+Ivy enables you to convert ML models, tools and libraries between frameworks using `ivy.transpile`
 
 <div style="display: block;" align="center">
     <div>
     <a href="https://jax.readthedocs.io">
-        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/jax.svg" alt="JAX"/>
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/jax.svg">
     </a>
-    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="Spacer">
-    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="Spacer">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true">
     <a href="https://www.tensorflow.org">
-        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/tensorflow.svg" alt="TensorFlow"/>
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/tensorflow.svg">
     </a>
-    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="Spacer">
-    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="Spacer">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true">
     <a href="https://pytorch.org">
-        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/pytorch.svg" alt="PyTorch"/>
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/pytorch.svg">
     </a>
-    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="Spacer">
-    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="Spacer">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true">
     <a href="https://numpy.org">
-        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/numpy.svg" alt="NumPy"/>
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/numpy.svg">
     </a>
     </div>
 </div>
 
 <br clear="all" />
 
-## Installation
+# Installation
 
-Install Ivy with a single command using **pip**:
+The easiest way to install Ivy is using **pip**:
 
-```bash
+``` bash
 pip install ivy
 ```
 
@@ -72,9 +66,10 @@ pip install ivy
 <summary><b>From Source</b></summary>
 <br clear="all" />
 
-To install the latest version from source:
+You can also install Ivy from source if you want to take advantage of
+the latest changes:
 
-```bash
+``` bash
 git clone https://github.com/ivy-llc/ivy.git
 cd ivy
 pip install --user -e .
@@ -84,9 +79,9 @@ pip install --user -e .
 
 <br clear="all" />
 
-## Supported Frameworks
+# Supported Frameworks
 
-Ivy currently supports conversions between these popular machine learning frameworks:
+These are the frameworks that `ivy.transpile` currently supports conversions from and to.
 
 | Framework  | Source | Target |
 |------------|:------:|:------:|
@@ -97,15 +92,16 @@ Ivy currently supports conversions between these popular machine learning framew
 
 <br clear="all" />
 
-## Getting Started with Ivy
+# Using ivy
 
-Explore these examples to see Ivy in action!  For more in-depth tutorials and demos, visit the [examples page](https://www.docs.ivy.dev/demos/examples_and_demos.html) in the documentation.
+Here's some examples, to help you get started using Ivy! The [examples page](https://www.docs.ivy.dev/demos/examples_and_demos.html) also features a wide range of
+demos and tutorials showcasing some more use cases for Ivy.
 
   <details>
-    <summary><b>Transpiling code from one framework to another</b></summary>
+    <summary><b>Transpiling any code from one framework to another</b></summary>
     <br clear="all" />
 
-   ```python
+   ``` python
    import ivy
    import torch
    import tensorflow as tf
@@ -127,7 +123,7 @@ Explore these examples to see Ivy in action!  For more in-depth tutorials and de
     <summary><b>Tracing a computational graph of any code</b></summary>
     <br clear="all" />
 
-   ```python
+   ``` python
    import ivy
    import torch
 
@@ -144,22 +140,24 @@ Explore these examples to see Ivy in action!  For more in-depth tutorials and de
    </details>
 
 <details>
-<summary><b>How Ivy Works</b></summary>
+<summary><b>How does ivy work?</b></summary>
 <br clear="all" />
 
-Ivy's transpiler makes it easy to use code from different frameworks within your own project.  Here are the key functions:
+Ivy\'s transpiler allows you to use code from any other framework in your own code.
+Feel free to head over to the docs for the full API
+reference, but the functions you\'d most likely want to use are:
 
-```python
-# Converts framework-specific code to a target framework. See usage in the documentation
+``` python
+# Converts framework-specific code to a target framework of choice. See usage in the documentation
 ivy.transpile()
 
-# Creates an efficient and fully-functional graph from a function. See usage in the documentation
+# Traces an efficient fully-functional graph from a function, removing all wrapping and redundant code. See usage in the documentation
 ivy.trace_graph()
 ```
 
-#### `ivy.transpile` Eagerly Transpiles for Functions and Classes
+#### `ivy.transpile` will eagerly transpile if a class or function is provided
 
-```python
+``` python
 import ivy
 import torch
 import tensorflow as tf
@@ -178,9 +176,9 @@ tf_fn = ivy.transpile(test_fn, source="torch", target="tensorflow")
 ret = tf_fn(x1)
 ```
 
-#### `ivy.transpile` Lazily Transpiles for Modules (Libraries)
+#### `ivy.transpile` will lazily transpile if a module (library) is provided
 
-```python
+``` python
 import ivy
 import kornia
 import tensorflow as tf
@@ -200,28 +198,30 @@ ret = tf_kornia.color.rgb_to_grayscale(x2)
 
 <br clear="all" />
 
-## Contributing
+# Contributing
 
-Ivy welcomes contributions from everyone!  Whether you're writing code, finding bugs, or providing feedback, your input is valuable.
+We believe that everyone can contribute and make a difference. Whether
+it\'s writing code, fixing bugs, or simply sharing feedback,
+your contributions are definitely welcome and appreciated"
 
-Browse our [Open Tasks](https://docs.ivy.dev/overview/contributing/open_tasks.html) to find ways to contribute and learn more in our [Contributing Guide](https://docs.ivy.dev/overview/contributing.html).
+Check out all of our [Open Tasks](https://docs.ivy.dev/overview/contributing/open_tasks.html),
+and find out more info in our [Contributing Guide](https://docs.ivy.dev/overview/contributing.html)
+in the docs.
 
 <br clear="all" />
 
 <a href="https://github.com/ivy-llc/ivy/graphs/contributors">
-  <img class="dark-light" src="https://contrib.rocks/image?repo=ivy-llc/ivy&anon=0&columns=20&max=100&r=true" alt="Contributors"/>
+  <img class="dark-light" src="https://contrib.rocks/image?repo=ivy-llc/ivy&anon=0&columns=20&max=100&r=true" />
 </a>
 
 <br clear="all" />
 <br clear="all" />
 
-## Citation
+# Citation
 
-```
-@article{lenton2021ivy,
-  title={Ivy: Templated deep learning for inter-framework portability},
-  author={Lenton, Daniel and Pardo, Fabio and Falck, Fabian and James, Stephen and Clark, Ronald},
-  journal={arXiv preprint arXiv:2102.02886},
-  year={2021}
-}
-```
+    @article{lenton2021ivy,
+      title={Ivy: Templated deep learning for inter-framework portability},
+      author={Lenton, Daniel and Pardo, Fabio and Falck, Fabian and James, Stephen and Clark, Ronald},
+      journal={arXiv preprint arXiv:2102.02886},
+      year={2021}
+    }

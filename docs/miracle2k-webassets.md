@@ -1,61 +1,38 @@
-Here's an improved and SEO-optimized README for the webassets project:
+Asset management application for Python web development - use it to
+merge and compress your JavaScript and CSS files.
 
-# Webassets: Streamline Your Python Web Development with Asset Management
+Documentation: |ci|
+        https://webassets.readthedocs.io/
 
-**Effortlessly merge and compress your JavaScript and CSS files to optimize your Python web applications.**
+        Since releases aren't exactly happening on a regular schedule, you are
+        encouraged to use the latest code. ``webassets`` is pretty well tested,
+        so as long as the build status icon above remains a reassuring green,
+        you shouldn't run into any trouble.
 
-[Link to original repo: https://github.com/miracle2k/webassets](https://github.com/miracle2k/webassets)
+        You can `download a tarball`__ of the development version, or
+        install it via ``pip install webassets==dev``.
 
-## Key Features
 
-*   **Asset Merging:** Combine multiple JavaScript and CSS files into single files, reducing HTTP requests.
-*   **Asset Compression:** Minimize file sizes through compression (e.g., using tools like YUI Compressor, Google Closure Compiler).
-*   **Easy Integration:** Designed for seamless integration with various Python web frameworks.
-*   **Development-Ready:**  Supports development workflows, including easy installation and testing.
+Development:
+        For development, to run all the tests, you need to have at least Java 7
+        installed (required for example to run the `Google closure`_ filter).
 
-## Installation
+        1. Install Python requirements with uv::
 
-To install the latest development version, you can use pip:
+                   $ uv venv
+                   $ uv pip install -r uv.lock
 
-```bash
-pip install webassets==dev
-```
+        2. Install other requirements::
 
-or by downloading a tarball.
+                   $ ./requirements-dev.sh
 
-## Documentation
+        3. Run the tests::
 
-Comprehensive documentation is available: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
+                   ./run_tests.sh
 
-## Development
+__ http://github.com/miracle2k/webassets/tarball/master#egg=webassets-dev
 
-### Setting up the Development Environment
+.. _`Google closure`: https://github.com/google/closure-compiler/wiki/FAQ#the-compiler-crashes-with-unsupportedclassversionerror-or-unsupported-majorminor-version-510
 
-1.  **Create a virtual environment using uv:**
-
-    ```bash
-    uv venv
-    ```
-2.  **Install Python requirements:**
-
-    ```bash
-    uv pip install -r uv.lock
-    ```
-
-3.  **Install other requirements:**
-
-    ```bash
-    ./requirements-dev.sh
-    ```
-
-### Running Tests
-
-Ensure you have Java 7 or higher installed (required for some filters, like Google Closure Compiler).
-
-```bash
-./run_tests.sh
-```
-
-## Build Status
-
-[![Build Status](https://github.com/miracle2k/webassets/actions/workflows/ci.yml/badge.svg)](https://github.com/miracle2k/webassets/actions/workflows/ci.yml)
+.. |ci| image:: https://github.com/miracle2k/webassets/actions/workflows/ci.yml/badge.svg
+       :target: https://github.com/miracle2k/webassets/actions/workflows/ci.yml

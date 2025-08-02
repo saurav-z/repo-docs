@@ -1,43 +1,83 @@
-# CapCutAPI: Unleash the Power of CapCut with Python
+# CapCutAPI
 
-**Unlock advanced video editing capabilities with CapCutAPI, a powerful open-source Python tool for programmatic control and automation. [View the original repository](https://github.com/sun-guannan/CapCutAPI).**
+Open source CapCut API tool.
 
-## Key Features
+Try It: https://www.capcutapi.top
 
-*   **Draft Management:** Create, read, modify, and save CapCut draft files.
-*   **Comprehensive Material Support:** Add and edit videos, audios, images, text, and stickers.
-*   **Extensive Effects Library:** Implement transitions, filters, masks, and animations.
-*   **API-Driven Control:** Access and automate video editing functions via HTTP APIs.
-*   **AI Integration:** Leverage AI services for intelligent subtitle generation, text creation, and image enhancements.
-*   **Cross-Platform Compatibility:** Works with both CapCut China and International versions.
-*   **Automated Workflows:** Enable batch processing and automated video editing.
-*   **Flexible Configuration:** Customize functionality with easy-to-use configuration files.
+[中文说明](https://github.com/sun-guannan/CapCutAPI/blob/main/README-zh.md)
 
-## Quick Start
+## Gallery
 
-### Installation
+**Connect AI generated via CapCutAPI**
 
-1.  **Configure the project:**
-    ```bash
-    cp config.json.example config.json
-    ```
-    Modify `config.json` as needed.
+[![Horse](https://img.youtube.com/vi/IF1RDFGOtEU/hqdefault.jpg)](https://www.youtube.com/watch?v=IF1RDFGOtEU)
 
-2.  **Install Dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+[![Song](https://img.youtube.com/vi/rGNLE_slAJ8/hqdefault.jpg)](https://www.youtube.com/watch?v=rGNLE_slAJ8)
 
-3.  **Configure the environment:**
-    *   Install `ffmpeg` and add it to system's environment variables.
-    *   Ensure Python version 3.8.20 is installed.
+## Project Features
 
-4.  **Run the Server:**
-    ```bash
-    python capcut_server.py
-    ```
+This project is a Python-based CapCut processing tool that offers the following core functionalities:
 
-    Access the API interfaces through the specified ports.
+### Core Features
+
+- **Draft File Management**: Create, read, modify, and save CapCut draft files
+- **Material Processing**: Support adding and editing various materials such as videos, audios, images, texts, stickers, etc.
+- **Effect Application**: Support adding multiple effects like transitions, filters, masks, animations, etc.
+- **API Service**: Provide HTTP API interfaces to support remote calls and automated processing
+- **AI Integration**: Integrate multiple AI services to support intelligent generation of subtitles, texts, and images
+
+### Main API Interfaces
+
+- `/create_draft`: Create a draft
+- `/add_video`: Add video material to the draft
+- `/add_audio`: Add audio material to the draft
+- `/add_image`: Add image material to the draft
+- `/add_text`: Add text material to the draft
+- `/add_subtitle`: Add subtitles to the draft
+- `/add_effect`: Add effects to materials
+- `/add_sticker`: Add stickers to the draft
+- `/save_draft`: Save the draft file
+
+## Configuration Instructions
+
+### Configuration File
+
+The project supports custom settings through a configuration file. To use the configuration file:
+
+1. Copy `config.json.example` to `config.json`
+2. Modify the configuration items as needed
+
+```bash
+cp config.json.example config.json
+```
+
+### Environment Configuration
+
+#### ffmpeg
+
+This project depends on ffmpeg. You need to ensure that ffmpeg is installed on your system and added to the system's environment variables.
+
+#### Python Environment
+
+This project requires Python version 3.8.20. Please ensure that the correct version of Python is installed on your system.
+
+#### Install Dependencies
+
+Install the required dependency packages for the project:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run the Server
+
+After completing the configuration and environment setup, execute the following command to start the server:
+
+```bash
+python capcut_server.py
+```
+
+Once the server is started, you can access the related functions through the API interfaces.
 
 ## Usage Examples
 
@@ -86,31 +126,20 @@ response = requests.post("http://localhost:9001/save_draft", json={
 
 print(response.json())
 ```
+You can also use the ```rest_client_test.http``` file of the REST Client for HTTP testing. Just need to install the corresponding IDE plugin
+
 ### Copying the Draft to CapCut Draft Path
 
 Calling `save_draft` will generate a folder starting with `dfd_` in the current directory of the server. Copy this folder to the CapCut draft directory, and you will be able to see the generated draft.
 
 ### More Examples
-For more comprehensive usage examples, please refer to the `example.py` file.
 
-## Gallery
+Please refer to the `example.py` file in the project, which contains more usage examples such as adding audio and effects.
 
-### AI-Generated Content Integration
+## Project Features
 
-**Explore how CapCutAPI seamlessly integrates AI-generated content.**
-
-[![Horse](https://img.youtube.com/vi/IF1RDFGOtEU/hqdefault.jpg)](https://www.youtube.com/watch?v=IF1RDFGOtEU)
-
-[![Song](https://img.youtube.com/vi/rGNLE_slAJ8/hqdefault.jpg)](https://www.youtube.com/watch?v=rGNLE_slAJ8)
-
-## API Endpoints
-
-*   `/create_draft`: Create a new draft.
-*   `/add_video`: Add video material.
-*   `/add_audio`: Add audio material.
-*   `/add_image`: Add image material.
-*   `/add_text`: Add text to the draft.
-*   `/add_subtitle`: Add subtitles.
-*   `/add_effect`: Add effects to materials.
-*   `/add_sticker`: Add stickers.
-*   `/save_draft`: Save the current draft.
+- **Cross-platform Support**: Supports both CapCut China version and CapCut International version
+- **Automated Processing**: Supports batch processing and automated workflows
+- **Rich APIs**: Provides comprehensive API interfaces for easy integration into other systems
+- **Flexible Configuration**: Achieve flexible function customization through configuration files
+- **AI Enhancement**: Integrate multiple AI services to improve video production efficiency

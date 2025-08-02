@@ -1,6 +1,4 @@
-# 🌌 &pi;³: Scalable Permutation-Equivariant Visual Geometry Learning
-
-&pi;³ revolutionizes visual geometry reconstruction by eliminating the need for a fixed reference view, achieving state-of-the-art performance in 3D scene understanding.  [See the original repository](https://github.com/yyfz/Pi3)
+<h1 align="center">🌌 <em>&pi;³</em>: Scalable Permutation-Equivariant Visual Geometry Learning</h1>
 
 <div align="center">
     <p>
@@ -32,7 +30,7 @@
     <img src="https://img.shields.io/badge/Paper-00AEEF?style=plastic&logo=arxiv&logoColor=white" alt="Paper">
     </a>
     <a href="https://yyfz.github.io/pi3/" target="_blank">
-    <img src="https://img.shields.io/badge/Project%20Page-F78100?style=plastic&logo=google-chrome&logoColor=white" alt="Project Page">
+    <img src="https://img.shields.io/badge/Project Page-F78100?style=plastic&logo=google-chrome&logoColor=white" alt="Project Page">
     </a>
     <a href="https://huggingface.co/spaces/yyfz233/Pi3" target="_blank">
     <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-blue" alt="Hugging Face Demo">
@@ -48,34 +46,35 @@
     </p>
 </div>
 
-## Key Features
-
-*   **Permutation-Equivariant Architecture:** Enables robust and scalable visual geometry reconstruction by processing unordered sets of images, eliminating the need for a fixed reference view.
-*   **State-of-the-Art Performance:** Achieves top results in camera pose estimation, monocular/video depth estimation, and dense point map estimation.
-*   **Robust to Input Ordering:** The architecture's design makes it highly resistant to variations in the order of input images.
-*   **Dense and Structured Latent Representation:** Learns a rich latent representation of the camera pose manifold without requiring complex priors or training schemes.
-*   **Easy to Use:** Includes a straightforward quick start guide with example code and a Gradio demo for interactive exploration.
 
 ## 📣 Updates
+* **[July 29, 2025]** 📈 Evaluation code is released! See `evaluation` branch for details.
+* **[July 16, 2025]** 🚀 Hugging Face Demo and inference code are released!
 
-*   **[July 29, 2025]** 📈 Evaluation code is released! See `evaluation` branch for details.
-*   **[July 16, 2025]** 🚀 Hugging Face Demo and inference code are released!
 
 ## ✨ Overview
+We introduce $\pi^3$ (Pi-Cubed), a novel feed-forward neural network that revolutionizes visual geometry reconstruction by **eliminating the need for a fixed reference view**. Traditional methods, which rely on a designated reference frame, are often prone to instability and failure if the reference is suboptimal.
 
-&pi;³ (Pi-Cubed) is a novel feed-forward neural network that addresses limitations in traditional visual geometry reconstruction by eliminating the need for a fixed reference view. This fully permutation-equivariant architecture processes an unordered set of images, directly predicting affine-invariant camera poses and scale-invariant local point maps. This innovative approach makes &pi;³ inherently robust to input ordering and highly scalable. The model's simple, bias-free design allows it to learn a dense and structured latent representation of the camera pose manifold, achieving state-of-the-art performance on various visual geometry tasks.
+In contrast, $\pi^3$ employs a fully **permutation-equivariant** architecture. This allows it to directly predict affine-invariant camera poses and scale-invariant local point maps from an unordered set of images, breaking free from the constraints of a reference frame. This design makes our model inherently **robust to input ordering** and **highly scalable**.
+
+A key emergent property of our simple, bias-free design is the learning of a dense and structured latent representation of the camera pose manifold. Without complex priors or training schemes, $\pi^3$ achieves **state-of-the-art performance** 🏆 on a wide range of tasks, including camera pose estimation, monocular/video depth estimation, and dense point map estimation.
+
 
 ## 🚀 Quick Start
 
 ### 1. Clone & Install Dependencies
-
+First, clone the repository and install the required packages.
 ```bash
 git clone https://github.com/yyfz/Pi3.git
 cd Pi3
 pip install -r requirements.txt
 ```
 
-### 2. Run Inference from Command Line
+### 2\. Run Inference from Command Line
+
+Try our example inference script. You can run it on a directory of images or a video file.
+
+If the automatic download from Hugging Face is slow, you can download the model checkpoint manually from [here](https://huggingface.co/yyfz233/Pi3/resolve/main/model.safetensors) and specify its local path using the `--ckpt` argument.
 
 ```bash
 # Run with default example video
@@ -87,13 +86,15 @@ python example.py --data_path <path/to/your/images_dir_or_video.mp4>
 
 **Optional Arguments:**
 
-*   `--data_path`: Path to the input image directory or a video file. (Default: `examples/skating.mp4`)
-*   `--save_path`: Path to save the output `.ply` point cloud. (Default: `examples/result.ply`)
-*   `--interval`: Frame sampling interval. (Default: `1` for images, `10` for video)
-*   `--ckpt`: Path to a custom model checkpoint file.
-*   `--device`: Device to run inference on. (Default: `cuda`)
+  * `--data_path`: Path to the input image directory or a video file. (Default: `examples/skating.mp4`)
+  * `--save_path`: Path to save the output `.ply` point cloud. (Default: `examples/result.ply`)
+  * `--interval`: Frame sampling interval. (Default: `1` for images, `10` for video)
+  * `--ckpt`: Path to a custom model checkpoint file.
+  * `--device`: Device to run inference on. (Default: `cuda`)
 
-### 3. Run with Gradio Demo
+### 3\. Run with Gradio Demo
+
+You can also launch a local Gradio demo for an interactive experience.
 
 ```bash
 # Install demo-specific requirements
@@ -103,18 +104,23 @@ pip install -r requirements_demo.txt
 python demo_gradio.py
 ```
 
+
 ## 🛠️ Detailed Usage
 
 ### Model Input & Output
 
-*   **Input**: A `torch.Tensor` of shape $B \times N \times 3 \times H \times W$ with pixel values in the range `[0, 1]`.
-*   **Output**: A `dict` containing:
-    *   `points`: Global point cloud unprojected by `local points` and `camerae_poses` (`torch.Tensor`, $B \times N \times H \times W \times 3$).
-    *   `local_points`: Per-view local point maps (`torch.Tensor`,  $B \times N \times H \times W \times 3$).
-    *   `conf`: Confidence scores for local points (values in `[0, 1]`, higher is better) (`torch.Tensor`,  $B \times N \times H \times W \times 1$).
-    *   `camera_poses`: Camera-to-world transformation matrices (`4x4` in OpenCV format) (`torch.Tensor`,  $B \times N \times 4 \times 4`).
+The model takes a tensor of images and outputs a dictionary containing the reconstructed geometry.
+
+  * **Input**: A `torch.Tensor` of shape $B \times N \times 3 \times H \times W$ with pixel values in the range `[0, 1]`.
+  * **Output**: A `dict` with the following keys:
+      * `points`: Global point cloud unprojected by `local points` and `camerae_poses` (`torch.Tensor`, $B \times N \times H \times W \times 3$).
+      * `local_points`: Per-view local point maps (`torch.Tensor`,  $B \times N \times H \times W \times 3$).
+      * `conf`: Confidence scores for local points (values in `[0, 1]`, higher is better) (`torch.Tensor`,  $B \times N \times H \times W \times 1$).
+      * `camera_poses`: Camera-to-world transformation matrices (`4x4` in OpenCV format) (`torch.Tensor`,  $B \times N \times 4 \times 4$).
 
 ### Example Code Snippet
+
+Here is a minimal example of how to run the model on a batch of images.
 
 ```python
 import torch
@@ -146,15 +152,19 @@ print("Reconstruction complete!")
 # Access outputs: results['points'], results['camera_poses'] and results['local_points'].
 ```
 
+
 ## 🙏 Acknowledgements
 
-This project is built upon the shoulders of giants. We are grateful to the authors of:
+Our work builds upon several fantastic open-source projects. We'd like to express our gratitude to the authors of:
 
-*   [DUSt3R](https://github.com/naver/dust3r)
-*   [CUT3R](https://github.com/CUT3R/CUT3R)
-*   [VGGT](https://github.com/facebookresearch/vggt)
+  * [DUSt3R](https://github.com/naver/dust3r)
+  * [CUT3R](https://github.com/CUT3R/CUT3R)
+  * [VGGT](https://github.com/facebookresearch/vggt)
+
 
 ## 📜 Citation
+
+If you find our work useful, please consider citing:
 
 ```bibtex
 @misc{wang2025pi3,
@@ -168,6 +178,6 @@ This project is built upon the shoulders of giants. We are grateful to the autho
 }
 ```
 
-## 📄 License
 
-This project is licensed under the 2-clause BSD License for academic use. See the [LICENSE](./LICENSE) file for details. For commercial use, please contact the authors.
+## 📄 License
+For academic use, this project is licensed under the 2-clause BSD License. See the [LICENSE](./LICENSE) file for details. For commercial use, please contact the authors.

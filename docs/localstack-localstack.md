@@ -1,4 +1,7 @@
-<!--  LocalStack - A fully functional local cloud stack -->
+<p align="center">
+:zap: We are thrilled to announce the release of <a href="https://blog.localstack.cloud/localstack-for-aws-release-v-4-7-0/">LocalStack 4.7</a> :zap:
+</p>
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/localstack/localstack/main/docs/localstack-readme-banner.svg" alt="LocalStack - A fully functional local cloud stack">
 </p>
@@ -17,32 +20,27 @@
   <a href="https://bsky.app/profile/localstack.cloud"><img alt="Bluesky" src="https://img.shields.io/badge/bluesky-Follow-blue?logo=bluesky"></a>
 </p>
 
-# LocalStack: Your Local Cloud for AWS Development and Testing
+<p align="center">
+  LocalStack is a cloud software development framework to develop and test your AWS applications locally.
+</p>
 
-LocalStack empowers developers to build, test, and deploy AWS applications locally, providing a fully functional cloud environment on your machine. Check out the [LocalStack GitHub Repository](https://github.com/localstack/localstack) for more details.
-
-**Key Features:**
-
-*   **Local AWS Environment:** Run your AWS applications and Lambdas locally, without needing a remote cloud provider.
-*   **Comprehensive AWS Service Support:**  Supports a growing list of AWS services like Lambda, S3, DynamoDB, Kinesis, SQS, and SNS.
-*   **Faster Development & Testing:** Speeds up your workflow by enabling local testing of CDK applications, Terraform configurations, and more.
-*   **CLI and Integration Support:** Offers a command-line interface (CLI) for easy management, along with integrations for various tools.
-*   **Pro Version:**  Access additional APIs and advanced features with the [Pro version of LocalStack](https://localstack.cloud/pricing).
-
-**In this README:**
-
-*   [Overview](#overview)
-*   [Install](#install)
-*   [Quickstart](#quickstart)
-*   [Running](#running)
-*   [Usage](#usage)
-*   [Releases](#releases)
-*   [Contributing](#contributing)
-*   [Get in touch](#get-in-touch)
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#install">Install</a> •
+  <a href="#quickstart">Quickstart</a> •
+  <a href="#running">Run</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#releases">Releases</a> •
+  <a href="#contributing">Contributing</a>
+  <br/>
+  <a href="https://docs.localstack.cloud" target="_blank">📖 Docs</a> •
+  <a href="https://app.localstack.cloud" target="_blank">💻 Pro version</a> •
+  <a href="https://docs.localstack.cloud/references/coverage/" target="_blank">☑️ LocalStack coverage</a>
+</p>
 
 ---
 
-## Overview
+# Overview
 
 [LocalStack](https://localstack.cloud) is a cloud service emulator that runs in a single container on your laptop or in your CI environment. With LocalStack, you can run your AWS applications or Lambdas entirely on your local machine without connecting to a remote cloud provider! Whether you are testing complex CDK applications or Terraform configurations, or just beginning to learn about AWS services, LocalStack helps speed up and simplify your testing and development workflow.
 
@@ -112,7 +110,7 @@ You can query the status of respective services on LocalStack by running:
 % localstack status services
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓
 ┃ Service                  ┃ Status      ┃
-┡━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┥
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩
 │ acm                      │ ✔ available │
 │ apigateway               │ ✔ available │
 │ cloudformation           │ ✔ available │
@@ -137,27 +135,27 @@ Learn more about [LocalStack AWS services](https://docs.localstack.cloud/referen
 
 You can run LocalStack through the following options:
 
--   [LocalStack CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
--   [Docker](https://docs.localstack.cloud/getting-started/installation/#docker)
--   [Docker Compose](https://docs.localstack.cloud/getting-started/installation/#docker-compose)
--   [Helm](https://docs.localstack.cloud/getting-started/installation/#helm)
+- [LocalStack CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
+- [Docker](https://docs.localstack.cloud/getting-started/installation/#docker)
+- [Docker Compose](https://docs.localstack.cloud/getting-started/installation/#docker-compose)
+- [Helm](https://docs.localstack.cloud/getting-started/installation/#helm)
 
 ## Usage
 
 To start using LocalStack, check out our [documentation](https://docs.localstack.cloud).
 
--   [LocalStack Configuration](https://docs.localstack.cloud/references/configuration/)
--   [LocalStack in CI](https://docs.localstack.cloud/user-guide/ci/)
--   [LocalStack Integrations](https://docs.localstack.cloud/user-guide/integrations/)
--   [LocalStack Tools](https://docs.localstack.cloud/user-guide/tools/)
--   [Understanding LocalStack](https://docs.localstack.cloud/references/)
--   [Frequently Asked Questions](https://docs.localstack.cloud/getting-started/faq/)
+- [LocalStack Configuration](https://docs.localstack.cloud/references/configuration/)
+- [LocalStack in CI](https://docs.localstack.cloud/user-guide/ci/)
+- [LocalStack Integrations](https://docs.localstack.cloud/user-guide/integrations/)
+- [LocalStack Tools](https://docs.localstack.cloud/user-guide/tools/)
+- [Understanding LocalStack](https://docs.localstack.cloud/references/)
+- [Frequently Asked Questions](https://docs.localstack.cloud/getting-started/faq/)
 
 To use LocalStack with a graphical user interface, you can use the following UI clients:
 
-*   [LocalStack Web Application](https://app.localstack.cloud)
-*   [LocalStack Desktop](https://docs.localstack.cloud/user-guide/tools/localstack-desktop/)
-*   [LocalStack Docker Extension](https://docs.localstack.cloud/user-guide/tools/localstack-docker-extension/)
+* [LocalStack Web Application](https://app.localstack.cloud)
+* [LocalStack Desktop](https://docs.localstack.cloud/user-guide/tools/localstack-desktop/)
+* [LocalStack Docker Extension](https://docs.localstack.cloud/user-guide/tools/localstack-docker-extension/)
 
 ## Releases
 
@@ -167,9 +165,9 @@ Please refer to [GitHub releases](https://github.com/localstack/localstack/relea
 
 If you are interested in contributing to LocalStack:
 
--   Start by reading our [contributing guide](docs/CONTRIBUTING.md).
--   Check out our [development environment setup guide](docs/development-environment-setup/README.md).
--   Navigate our codebase and [open issues](https://github.com/localstack/localstack/issues).
+- Start by reading our [contributing guide](docs/CONTRIBUTING.md).
+- Check out our [development environment setup guide](docs/development-environment-setup/README.md).
+- Navigate our codebase and [open issues](https://github.com/localstack/localstack/issues).
 
 We are thankful for all the contributions and feedback we receive.
 
@@ -181,8 +179,8 @@ upvote 👍 [feature requests](https://github.com/localstack/localstack/issues?q
 🙋🏽 ask [support questions](https://docs.localstack.cloud/getting-started/help-and-support/),
 or 🗣️ discuss local cloud development:
 
--   [LocalStack Slack Community](https://localstack.cloud/contact/)
--   [LocalStack GitHub Issue tracker](https://github.com/localstack/localstack/issues)
+- [LocalStack Slack Community](https://localstack.cloud/contact/)
+- [LocalStack GitHub Issue tracker](https://github.com/localstack/localstack/issues)
 
 ### Contributors
 
