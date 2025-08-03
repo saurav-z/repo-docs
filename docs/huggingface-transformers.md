@@ -1,19 +1,3 @@
-<!---
-Copyright 2020 The HuggingFace Team. All rights reserved.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-dark.svg">
@@ -54,31 +38,26 @@ limitations under the License.
     </p>
 </h4>
 
-<h3 align="center">
-    <p>State-of-the-art pretrained models for inference and training</p>
-</h3>
+## Hugging Face Transformers: State-of-the-Art Models for NLP, Computer Vision, and More
+
+**Harness the power of cutting-edge machine learning with Hugging Face Transformers, a versatile library providing pre-trained models for various tasks.**
 
 <h3 align="center">
     <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/transformers_as_a_model_definition.png"/>
 </h3>
 
+Hugging Face Transformers is your go-to solution for using state-of-the-art pre-trained models in diverse areas such as text, computer vision, audio, and multimodal applications, facilitating both inference and training.  It acts as a central model definition hub, ensuring compatibility across the machine learning ecosystem, including training frameworks, inference engines, and related libraries. Explore the  [Hugging Face Hub](https://huggingface.co/models) for over 1 million model checkpoints.
 
-Transformers acts as the model-definition framework for state-of-the-art machine learning models in text, computer 
-vision, audio, video, and multimodal model, for both inference and training. 
+**Key Features:**
 
-It centralizes the model definition so that this definition is agreed upon across the ecosystem. `transformers` is the 
-pivot across frameworks: if a model definition is supported, it will be compatible with the majority of training 
-frameworks (Axolotl, Unsloth, DeepSpeed, FSDP, PyTorch-Lightning, ...), inference engines (vLLM, SGLang, TGI, ...),
-and adjacent modeling libraries (llama.cpp, mlx, ...) which leverage the model definition from `transformers`.
+*   **Wide Range of Models:** Access a vast library of pre-trained models for various modalities, including text, vision, audio, and multimodal tasks.
+*   **Simplified Usage:** Easily utilize state-of-the-art models with a user-friendly API.
+*   **Framework Agnostic:** Supports PyTorch, TensorFlow, and Flax, allowing you to train, evaluate, and deploy models in the framework of your choice.
+*   **Customization:** Easily adapt models to your specific needs.
+*   **Cost-Effective:** Leverage pre-trained models to reduce compute costs and carbon footprint.
+*   **Comprehensive Examples:** Get started quickly with example scripts for each architecture.
 
-We pledge to help support new state-of-the-art models and democratize their usage by having their model definition be
-simple, customizable, and efficient.
-
-There are over 1M+ Transformers [model checkpoints](https://huggingface.co/models?library=transformers&sort=trending) on the [Hugging Face Hub](https://huggingface.com/models) you can use.
-
-Explore the [Hub](https://huggingface.com/) today to find a model and use Transformers to help you get started right away.
-
-## Installation
+### Installation
 
 Transformers works with Python 3.9+ [PyTorch](https://pytorch.org/get-started/locally/) 2.1+, [TensorFlow](https://www.tensorflow.org/install/pip) 2.6+, and [Flax](https://flax.readthedocs.io/en/latest/) 0.4.1+.
 
@@ -116,11 +95,9 @@ pip install .[torch]
 uv pip install .[torch]
 ```
 
-## Quickstart
+### Quickstart
 
-Get started with Transformers right away with the [Pipeline](https://huggingface.co/docs/transformers/pipeline_tutorial) API. The `Pipeline` is a high-level inference class that supports text, audio, vision, and multimodal tasks. It handles preprocessing the input and returns the appropriate output.
-
-Instantiate a pipeline and specify model to use for text generation. The model is downloaded and cached so you can easily reuse it again. Finally, pass some text to prompt the model.
+The `Pipeline` API offers an easy way to get started.  Here's how to generate text:
 
 ```py
 from transformers import pipeline
@@ -211,56 +188,26 @@ pipeline(
 
 </details>
 
-## Why should I use Transformers?
+### Why use Transformers?
 
-1. Easy-to-use state-of-the-art models:
-    - High performance on natural language understanding & generation, computer vision, audio, video, and multimodal tasks.
-    - Low barrier to entry for researchers, engineers, and developers.
-    - Few user-facing abstractions with just three classes to learn.
-    - A unified API for using all our pretrained models.
+*   **Ease of Use:** Quickly implement state-of-the-art models with minimal code.
+*   **Efficiency:** Benefit from pre-trained models, reducing training time and costs.
+*   **Flexibility:** Choose your preferred framework for any part of a model's lifecycle.
+*   **Customization:**  Easily adapt models to your specific needs.
 
-1. Lower compute costs, smaller carbon footprint:
-    - Share trained models instead of training from scratch.
-    - Reduce compute time and production costs.
-    - Dozens of model architectures with 1M+ pretrained checkpoints across all modalities.
+### Potential Drawbacks
 
-1. Choose the right framework for every part of a models lifetime:
-    - Train state-of-the-art models in 3 lines of code.
-    - Move a single model between PyTorch/JAX/TF2.0 frameworks at will.
-    - Pick the right framework for training, evaluation, and production.
+*   This library isn't designed as a modular toolbox of neural net building blocks.
+*   The training API is optimized for PyTorch models provided by Transformers; use a library like [Accelerate](https://huggingface.co/docs/accelerate) for generic ML loops.
+*   The [example scripts](https://github.com/huggingface/transformers/tree/main/examples) may require adaptation for your specific use case.
 
-1. Easily customize a model or an example to your needs:
-    - We provide examples for each architecture to reproduce the results published by its original authors.
-    - Model internals are exposed as consistently as possible.
-    - Model files can be used independently of the library for quick experiments.
+### Projects using Transformers
 
-<a target="_blank" href="https://huggingface.co/enterprise">
-    <img alt="Hugging Face Enterprise Hub" src="https://github.com/user-attachments/assets/247fb16d-d251-4583-96c4-d3d76dda4925">
-</a><br>
+Transformers powers a thriving community of developers and researchers, including the [awesome-transformers](./awesome-transformers.md) list with 100+ projects.
 
-## Why shouldn't I use Transformers?
+### Example Models
 
-- This library is not a modular toolbox of building blocks for neural nets. The code in the model files is not refactored with additional abstractions on purpose, so that researchers can quickly iterate on each of the models without diving into additional abstractions/files.
-- The training API is optimized to work with PyTorch models provided by Transformers. For generic machine learning loops, you should use another library like [Accelerate](https://huggingface.co/docs/accelerate).
-- The [example scripts](https://github.com/huggingface/transformers/tree/main/examples) are only *examples*. They may not necessarily work out-of-the-box on your specific use case and you'll need to adapt the code for it to work.
-
-## 100 projects using Transformers
-
-Transformers is more than a toolkit to use pretrained models, it's a community of projects built around it and the
-Hugging Face Hub. We want Transformers to enable developers, researchers, students, professors, engineers, and anyone
-else to build their dream projects.
-
-In order to celebrate Transformers 100,000 stars, we wanted to put the spotlight on the
-community with the [awesome-transformers](./awesome-transformers.md) page which lists 100
-incredible projects built with Transformers.
-
-If you own or use a project that you believe should be part of the list, please open a PR to add it!
-
-## Example models
-
-You can test most of our models directly on their [Hub model pages](https://huggingface.co/models).
-
-Expand each modality below to see a few example models for various use cases.
+Explore a wide variety of models across different modalities on the [Hugging Face Hub](https://huggingface.co/models).  Here are some examples:
 
 <details>
 <summary>Audio</summary>
@@ -318,9 +265,9 @@ Expand each modality below to see a few example models for various use cases.
 
 </details>
 
-## Citation
+### Citation
 
-We now have a [paper](https://www.aclweb.org/anthology/2020.emnlp-demos.6/) you can cite for the 🤗 Transformers library:
+If you use the library, please cite the following paper:
 ```bibtex
 @inproceedings{wolf-etal-2020-transformers,
     title = "Transformers: State-of-the-Art Natural Language Processing",
@@ -334,3 +281,5 @@ We now have a [paper](https://www.aclweb.org/anthology/2020.emnlp-demos.6/) you 
     pages = "38--45"
 }
 ```
+
+Explore the official  [Hugging Face Transformers repository](https://github.com/huggingface/transformers)  for more details.

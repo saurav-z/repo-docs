@@ -1,353 +1,346 @@
-# 闲鱼智能监控机器人
+# AI-Powered Xianyu (Goofish) Monitor: Real-time Monitoring & Smart Analysis
 
-一个基于 Playwright 和AI过滤分析的闲鱼多任务实时监控与智能分析工具，配备了功能完善的 Web 管理界面。
+**Effortlessly track and analyze Xianyu (Goofish) listings with AI, complete with a user-friendly web interface and robust features. [View the original repository](https://github.com/dingyufei615/ai-goofish-monitor)**
 
-## ✨ 项目亮点
+## Key Features:
 
-- **可视化Web界面**: 提供完整的Web UI，支持任务的可视化管理、AI标准在线编辑、运行日志实时查看和结果筛选浏览，无需直接操作命令行和配置文件。
-- **AI驱动的任务创建**: 只需用自然语言描述你的购买需求，即可一键创建包含复杂筛选逻辑的全新监控任务。
-- **多任务并发**: 通过 `config.json` 同时监控多个关键词，各任务独立运行，互不干扰。
-- **实时流式处理**: 发现新商品后，立即进入分析流程，告别批处理延迟。
-- **深度AI分析**: 集成多模态大语言模型（如 GPT-4o），结合商品图文和卖家画像进行深度分析，精准筛选。
-- **高度可定制**: 每个监控任务均可配置独立的关键词、价格范围、筛选条件和AI分析指令 (Prompt)。
-- **即时通知**: 支持通过 [ntfy.sh](https://ntfy.sh/)、企业微信机器人和 [Bark](https://bark.day.app/)，将符合AI推荐的商品立即推送到你的手机或桌面。
-- **定时任务调度**: 支持 Cron 表达式，可为每个任务设置独立的定时执行计划。
-- **Docker 一键部署**: 提供 `docker-compose` 配置，实现快速、标准化的容器化部署。
-- **健壮的反爬策略**: 模拟真人操作，包含多种随机延迟和用户行为，提高稳定性。
+*   ✅ **Intuitive Web UI:** Manage tasks, edit AI prompts, view real-time logs, and filter results without command-line fuss.
+*   🧠 **AI-Driven Task Creation:** Describe your desired item in natural language and let the AI create complex monitoring tasks.
+*   🚀 **Multi-Task Concurrency:** Monitor multiple keywords simultaneously with independent, non-interfering tasks configured via `config.json`.
+*   ⚡ **Real-Time Processing:** Instantly analyze new listings, eliminating batch processing delays.
+*   💡 **Deep AI Analysis:** Leverage multimodal LLMs (like GPT-4o) to analyze item descriptions, images, and seller profiles for precise filtering.
+*   ⚙️ **Highly Customizable:** Configure each task with unique keywords, price ranges, filters, and AI analysis prompts.
+*   🔔 **Instant Notifications:** Receive alerts via [ntfy.sh](https://ntfy.sh/), WeChat Work bot, and [Bark](https://bark.day.app/) for matching items.
+*   📅 **Scheduled Task Execution:** Utilize Cron expressions for automated, scheduled monitoring.
+*   🐳 **Docker Deployment Ready:** Deploy quickly with a pre-configured `docker-compose` setup.
+*   🛡️ **Robust Anti-Scraping Measures:** Simulate human behavior with random delays and user actions for stable performance.
 
-## 页面截图
+## Web UI Screenshots:
 
-**后台任务管理**
-![img.png](static/img.png)
+*   **Task Management:**
+    ![img.png](static/img.png)
+*   **Monitoring Interface:**
+    ![img_1.png](static/img_1.png)
+*   **Notification Example:**
+    ![img_2.png](static/img_2.png)
 
-**后台监控截图**
-![img_1.png](static/img_1.png)
+## Quick Start (Web UI Recommended):
 
-**ntf通知截图**
-![img_2.png](static/img_2.png)
+The Web UI provides the best user experience.
 
-## 🚀 快速开始 (Web UI 推荐)
+### Step 1: Environment Setup
 
-推荐使用 Web 管理界面来操作本项目，体验最佳。
+> ⚠️ **Python Version:** Python 3.10 or higher is recommended for local deployment and debugging. Older versions may cause dependency installation issues or runtime errors (e.g., `ModuleNotFoundError: No module named 'PIL'`).
 
-### 第 1 步: 环境准备
-
-> ⚠️ **Python版本要求**: 本地部署调试时建议使用 Python 3.10 或更高版本。较低版本的Python可能会导致依赖包安装失败或运行时错误（如 `ModuleNotFoundError: No module named 'PIL'`）。
-
-克隆本项目到本地:
+Clone the project:
 
 ```bash
 git clone https://github.com/dingyufei615/ai-goofish-monitor
 cd ai-goofish-monitor
 ```
 
-安装所需的Python依赖：
+Install Python dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 第 2 步: 基础配置
+### Step 2: Configuration
 
-1. **配置环境变量**: 复制`.env.example`文件并命名为`.env`，并修改里面的内容。  
+1.  **Configure Environment Variables:**  Copy `.env.example` to `.env` and modify its contents.
 
-    Windows使用命令行：
+    **Windows:**
 
     ```cmd
     copy .env.example .env
     ```
 
-    Linux/MacOS使用命令行：
+    **Linux/macOS:**
 
-    ```shell
+    ```bash
     cp .env.example .env
     ```
 
-    `.env` 文件中的所有可用配置项如下：
+    Available environment variables:
 
-    | 环境变量 | 说明 | 是否必填 | 注意事项 |
-    | :--- | :--- | :--- | :--- |
-    | `OPENAI_API_KEY` | 你的AI模型服务商提供的API Key。 | 是 | 对于某些本地或特定代理的服务，此项可能为可选。 |
-    | `OPENAI_BASE_URL` | AI模型的API接口地址，必须兼容OpenAI格式。 | 是 | 请填写API的基础路径，例如 `https://ark.cn-beijing.volces.com/api/v3/`。 |
-    | `OPENAI_MODEL_NAME` | 你要使用的具体模型名称。 | 是 | **必须**选择一个支持图片分析的多模态模型，如 `doubao-seed-1-6-250615`, `gemini-2.5-pro` 等。 |
-    | `PROXY_URL` | (可选) 需要翻墙时配置的HTTP/S代理。 | 否 | 支持 `http://` 和 `socks5://` 格式。例如 `http://127.0.0.1:7890`。 |
-    | `NTFY_TOPIC_URL` | (可选) [ntfy.sh](https://ntfy.sh/) 的主题URL，用于发送通知。 | 否 | 如果留空，将不会发送 ntfy 通知。 |
-    | `GOTIFY_URL` | (可选) Gotify 服务地址。 | 否 | 例如 `https://push.example.de`。 |
-    | `GOTIFY_TOKEN` | (可选) Gotify 应用的 Token。 | 否 | |
-    | `BARK_URL` | (可选) [Bark](https://bark.day.app/) 的推送地址。 | 否 | 例如 `https://api.day.app/your_key`。如果留空，将不发送 Bark 通知。 |
-    | `WX_BOT_URL` | (可选) 企业微信机器人的 Webhook 地址。 | 否 | 如果留空，将不会发送企业微信通知。 |
-    | `WEBHOOK_URL` | (可选) 通用 Webhook 的 URL 地址。 | 否 | 如果留空，将不发送通用 Webhook 通知。 |
-    | `WEBHOOK_METHOD` | (可选) Webhook 请求方法。 | 否 | 支持 `GET` 或 `POST`，默认为 `POST`。 |
-    | `WEBHOOK_HEADERS` | (可选) Webhook 的自定义请求头。 | 否 | 必须是有效的 JSON 字符串，例如 `'{"Authorization": "Bearer xxx"}'`。 |
-    | `WEBHOOK_CONTENT_TYPE` | (可选) POST 请求的内容类型。 | 否 | 支持 `JSON` 或 `FORM`，默认为 `JSON`。 |
-    | `WEBHOOK_QUERY_PARAMETERS` | (可选) GET 请求的查询参数。 | 否 | JSON 字符串，支持 `{{title}}` 和 `{{content}}` 占位符。 |
-    | `WEBHOOK_BODY` | (可选) POST 请求的请求体。 | 否 | JSON 字符串，支持 `{{title}}` 和 `{{content}}` 占位符。 |
-    | `LOGIN_IS_EDGE` | 是否使用 Edge 浏览器进行登录和爬取。 | 否 | 默认为 `false`，使用 Chrome/Chromium。 |
-    | `PCURL_TO_MOBILE` | 是否在通知中将电脑版商品链接转换为手机版。 | 否 | 默认为 `true`。 |
-    | `RUN_HEADLESS` | 是否以无头模式运行爬虫浏览器。 | 否 | 默认为 `true`。在本地调试遇到验证码时可设为 `false` 手动处理。**Docker部署时必须为 `true`**。 |
-    | `AI_DEBUG_MODE` | 是否开启AI调试模式。 | 否 | 默认为 `false`。开启后会在控制台打印详细的AI请求和响应日志。 |
-    | `SERVER_PORT` | Web UI服务的运行端口。 | 否 | 默认为 `8000`。 |
+    | Variable            | Description                                                              | Required? | Notes                                                                                                                                                     |
+    | :------------------ | :----------------------------------------------------------------------- | :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `OPENAI_API_KEY`    | Your AI model provider's API Key.                                         | Yes       | May be optional for some local or proxy services.                                                                                                     |
+    | `OPENAI_BASE_URL`   | The base URL for the AI model's API, must be OpenAI-compatible.          | Yes       | Fill in the base path of the API, e.g., `https://ark.cn-beijing.volces.com/api/v3/`.                                                                 |
+    | `OPENAI_MODEL_NAME` | The specific model name you want to use.                               | Yes       | **Must** choose a multimodal model supporting image analysis, like `doubao-seed-1-6-250615`, `gemini-2.5-pro`, etc.                                    |
+    | `PROXY_URL`         | (Optional) HTTP/S proxy for bypassing network restrictions.               | No        | Supports `http://` and `socks5://` formats. For example, `http://127.0.0.1:7890`.                                                                      |
+    | `NTFY_TOPIC_URL`    | (Optional) [ntfy.sh](https://ntfy.sh/) topic URL for sending notifications. | No        | If left empty, no ntfy notifications will be sent.                                                                                                  |
+    | `GOTIFY_URL`        | (Optional) Gotify service address.                                      | No        | For example, `https://push.example.de`.                                                                                                            |
+    | `GOTIFY_TOKEN`      | (Optional) Gotify application token.                                    | No        |                                                                                                                                                         |
+    | `BARK_URL`          | (Optional) [Bark](https://bark.day.app/) push address.                    | No        | For example, `https://api.day.app/your_key`. If empty, no Bark notifications will be sent.                                                                 |
+    | `WX_BOT_URL`        | (Optional) Enterprise WeChat bot webhook address.                        | No        | If empty, no Enterprise WeChat notifications will be sent.                                                                                             |
+    | `WEBHOOK_URL`       | (Optional) Generic Webhook URL.                                        | No        | If empty, no generic Webhook notifications will be sent.                                                                                               |
+    | `WEBHOOK_METHOD`    | (Optional) Webhook request method.                                       | No        | Supports `GET` or `POST`, defaults to `POST`.                                                                                                          |
+    | `WEBHOOK_HEADERS`   | (Optional) Custom Webhook request headers.                               | No        | Must be a valid JSON string, e.g., `'{"Authorization": "Bearer xxx"}'`.                                                                             |
+    | `WEBHOOK_CONTENT_TYPE`| (Optional) Content type for POST requests.                              | No        | Supports `JSON` or `FORM`, defaults to `JSON`.                                                                                                         |
+    | `WEBHOOK_QUERY_PARAMETERS`| (Optional) Query parameters for GET requests.                       | No        | JSON string, supports `{{title}}` and `{{content}}` placeholders.                                                                                     |
+    | `WEBHOOK_BODY`      | (Optional) POST request body.                                           | No        | JSON string, supports `{{title}}` and `{{content}}` placeholders.                                                                                     |
+    | `LOGIN_IS_EDGE`     | Whether to use the Edge browser for login and scraping.                  | No        | Defaults to `false`, using Chrome/Chromium.                                                                                                             |
+    | `PCURL_TO_MOBILE`   | Whether to convert PC item links to mobile links in notifications.       | No        | Defaults to `true`.                                                                                                                                   |
+    | `RUN_HEADLESS`      | Whether to run the browser in headless mode.                           | No        | Defaults to `true`. Set to `false` during local debugging if you encounter CAPTCHAs. **Must be `true` for Docker deployment.**                         |
+    | `AI_DEBUG_MODE`     | Whether to enable AI debug mode.                                         | No        | Defaults to `false`. Enable to print detailed AI request and response logs to the console.                                                             |
+    | `SERVER_PORT`       | The port the Web UI service runs on.                                      | No        | Defaults to `8000`.                                                                                                                                    |
 
-    > 💡 **调试建议**: 如果在配置AI API时遇到404错误，建议先使用阿里云或火山提供的API进行调试，确保基础功能正常后再尝试其他API提供商。某些API提供商可能存在兼容性问题或需要特殊的配置。
+    > 💡 **Debugging Tip:** If you encounter 404 errors when configuring the AI API, it is recommended to first use the API provided by Alibaba Cloud or Volcano Engine for debugging, and ensure that the basic functions are normal before trying other API providers. Some API providers may have compatibility issues or require special configurations.
 
-2. **获取登录状态 (重要!)**: 为了让爬虫能够以登录状态访问闲鱼，必须先提供有效的登录凭证。我们推荐使用Web UI来完成此操作：
+2.  **Get Login State (Important!)**: You must provide valid login credentials for the scraper to access Xianyu.  We recommend using the Web UI:
 
-    **推荐方式：通过 Web UI 更新**
-    1. 先跳过此步骤，直接执行第3步启动Web服务。
-    2. 打开Web UI后，进入 **"系统设置"** 页面。
-    3. 找到 "登录状态文件"，点击 **"手动更新"** 按钮。
-    4. 按照弹窗内的详细指引操作：
-       - 在您的个人电脑上，使用Chrome浏览器安装[闲鱼登录状态提取扩展](https://chromewebstore.google.com/detail/xianyu-login-state-extrac/eidlpfjiodpigmfcahkmlenhppfklcoa)
-       - 打开并登录闲鱼官网
-       - 登录成功后，点击浏览器工具栏中的扩展图标
-       - 点击"提取登录状态"按钮获取登录信息
-       - 点击"复制到剪贴板"按钮
-       - 将复制的内容粘贴到Web UI中保存即可
+    **Recommended: Using the Web UI to Update Login State**
+    1.  Skip this step and proceed to Step 3 to start the Web service.
+    2.  Open the Web UI and go to the **"System Settings"** page.
+    3.  Find "Login State File" and click the **"Manual Update"** button.
+    4.  Follow the instructions in the pop-up window:
+        *   Install the [Xianyu Login State Extraction Extension](https://chromewebstore.google.com/detail/xianyu-login-state-extrac/eidlpfjiodpigmfcahkmlenhppfklcoa) in Chrome on your PC.
+        *   Open and log in to the Xianyu website.
+        *   After successful login, click the extension icon in the browser toolbar.
+        *   Click the "Extract Login State" button to get the login information.
+        *   Click the "Copy to Clipboard" button.
+        *   Paste the copied content into the Web UI and save it.
 
-    这种方式无需在服务器上运行带图形界面的程序，最为便捷。
+    This method is the most convenient, as it doesn't require running a program with a graphical interface on the server.
 
-    **备用方式：运行登录脚本**
-    如果您可以在本地或带桌面的服务器上运行程序，也可以使用传统的脚本方式：
+    **Alternative: Run the Login Script**
+    If you can run programs locally or on a server with a desktop environment, you can use the traditional script method:
 
     ```bash
     python login.py
     ```
 
-    运行后会弹出一个浏览器窗口，请使用**手机闲鱼App扫描二维码**完成登录。成功后，程序会自动关闭，并在项目根目录生成一个 `xianyu_state.json` 文件。
+    This will open a browser window. Use your **mobile Xianyu App to scan the QR code** to log in. Upon success, the program will close automatically and generate an `xianyu_state.json` file in the project root.
 
-### 第 3 步: 启动 Web 服务
+### Step 3: Start the Web Service
 
-一切就绪后，启动 Web 管理后台服务器。
+Once ready, start the Web UI server:
 
 ```bash
 python web_server.py
 ```
 
-### 第 4 步: 开始使用
+### Step 4: Start Monitoring
 
-在浏览器中打开 `http://127.0.0.1:8000` 访问管理后台。
+Open `http://127.0.0.1:8000` in your browser.
 
-1. 在 **“任务管理”** 页面，点击 **“创建新任务”**。
-2. 在弹出的窗口中，用自然语言描述你的购买需求（例如：“我想买一台95新以上的索尼A7M4相机，预算1万3以内，快门数低于5000”），并填写任务名称、关键词等信息。
-3. 点击创建，AI将自动为你生成一套复杂的分析标准。
-4. 回到主界面，为任务添加定时或直接点击启动，开始自动化监控！
+1.  Go to **"Task Management"** and click **"Create New Task"**.
+2.  Describe your needs in natural language (e.g., "I want to buy a Sony A7M4 camera, 95% new or better, budget under 13,000, shutter count below 5000"), and fill in task name, keywords, etc.
+3.  Click "Create". The AI will generate the analysis criteria.
+4.  Go back to the main interface, set a schedule or click "Start" to begin automated monitoring!
 
-## 🐳 Docker 部署 (推荐)
+## Docker Deployment (Recommended):
 
-使用 Docker 可以将应用及其所有依赖项打包到一个标准化的单元中，实现快速、可靠和一致的部署。
+Docker enables quick, reliable, and consistent deployment by packaging the application and its dependencies.
 
-### 第 1 步: 环境准备 (与本地部署类似)
+### Step 1: Environment Setup (Similar to Local Deployment)
 
-1. **安装 Docker**: 请确保你的系统已安装 [Docker Engine](https://docs.docker.com/engine/install/)。
-
-2. **克隆项目并配置**:
+1.  **Install Docker**:  Ensure you have [Docker Engine](https://docs.docker.com/engine/install/) installed.
+2.  **Clone and Configure**:
 
     ```bash
     git clone https://github.com/dingyufei615/ai-goofish-monitor
     cd ai-goofish-monitor
     ```
 
-3. **创建 `.env` 文件**: 参考 **[快速开始](#-快速开始-web-ui-推荐)** 部分的说明，在项目根目录创建并填写 `.env` 文件。
+3.  **Create `.env` file**: Refer to **[Quick Start](#-快速开始-web-ui-推荐)** for creating and populating the `.env` file.
+4.  **Get Login State (Critical!)**:  You cannot scan the QR code to log in inside the Docker container. Set the login state **after** starting the container via the Web UI:
+    1.  (On the host machine) Run `docker-compose up -d` to start the service.
+    2.  Open `http://127.0.0.1:8000` in your browser.
+    3.  Go to the **"System Settings"** page, and click the **"Manual Update"** button.
+    4.  Follow the instructions in the pop-up window:
+        *   Install the [Xianyu Login State Extraction Extension](https://chromewebstore.google.com/detail/xianyu-login-state-extrac/eidlpfjiodpigmfcahkmlenhppfklcoa) in Chrome on your PC.
+        *   Open and log in to the Xianyu website.
+        *   After successful login, click the extension icon in the browser toolbar.
+        *   Click the "Extract Login State" button to get the login information.
+        *   Click the "Copy to Clipboard" button.
+        *   Paste the copied content into the Web UI and save it.
 
-4. **获取登录状态 (关键步骤!)**: Docker容器内无法进行扫码登录。请在**启动容器后**，通过访问Web UI来设置登录状态：
-    1. （在宿主机上）执行 `docker-compose up -d` 启动服务。
-    2. 在浏览器中打开 `http://127.0.0.1:8000` 访问Web UI。
-    3. 进入 **"系统设置"** 页面，点击 **"手动更新"** 按钮。
-    4. 按照弹窗内的指引操作：
-       - 在您的个人电脑上，使用Chrome浏览器安装[闲鱼登录状态提取扩展](https://chromewebstore.google.com/detail/xianyu-login-state-extrac/eidlpfjiodpigmfcahkmlenhppfklcoa)
-       - 打开并登录闲鱼官网
-       - 登录成功后，点击浏览器工具栏中的扩展图标
-       - 点击"提取登录状态"按钮获取登录信息
-       - 点击"复制到剪贴板"按钮
-       - 将复制的内容粘贴到Web UI中保存即可
+> ℹ️ **Regarding Python Version:** When deploying with Docker, the project uses Python 3.11, specified in the Dockerfile, so you don't need to worry about local Python version compatibility.
 
-> ℹ️ **关于Python版本**: 使用Docker部署时，项目使用的是Dockerfile中指定的Python 3.11版本，无需担心本地Python版本兼容性问题。
+### Step 2: Run the Docker Container
 
-### 第 2 步: 运行 Docker 容器
+The project includes `docker-compose.yaml`. Use `docker-compose` for easier container management.
 
-项目已包含 `docker-compose.yaml` 文件，我们推荐使用 `docker-compose` 来管理容器，这比使用 `docker run` 更方便。
-
-在项目根目录下，运行以下命令来启动容器：
+Run this command in the project root:
 
 ```bash
 docker-compose up --build -d
 ```
 
-这会以后台模式启动服务。`docker-compose` 会自动读取 `.env` 文件和 `docker-compose.yaml` 的配置，并根据其内容来创建和启动容器。
+This starts the service in detached mode. `docker-compose` reads `.env` and `docker-compose.yaml` to create and start the container.
 
-如果容器内遇到网络问题，请自行排查或使用代理。
+If you encounter network issues within the container, troubleshoot or use a proxy.
 
-> ⚠️ **OpenWrt 环境部署注意事项**: 如果您在 OpenWrt 路由器上部署此应用，可能会遇到 DNS 解析问题。这是因为 Docker Compose 创建的默认网络可能无法正确继承 OpenWrt 的 DNS 设置。如果遇到 `ERR_CONNECTION_REFUSED` 错误，请检查您的容器网络配置，可能需要手动配置 DNS 或调整网络模式以确保容器可以正常访问外部网络。
+> ⚠️ **OpenWrt Deployment Notes**:  If deploying on an OpenWrt router, you might encounter DNS resolution problems. This is because the default network created by Docker Compose may not correctly inherit OpenWrt's DNS settings.  If you get an `ERR_CONNECTION_REFUSED` error, check your container's network configuration; you might need to manually configure DNS or adjust the network mode to ensure the container can access the external network.
 
-### 第 3 步: 访问和管理
+### Step 3: Access and Manage
 
-- **访问 Web UI**: 在浏览器中打开 `http://127.0.0.1:8000`。
-- **查看实时日志**: `docker-compose logs -f`
-- **停止容器**: `docker-compose stop`
-- **启动已停止的容器**: `docker-compose start`
-- **停止并移除容器**: `docker-compose down`
+*   **Access Web UI:** Open `http://127.0.0.1:8000` in your browser.
+*   **View Real-time Logs:** `docker-compose logs -f`
+*   **Stop Container:** `docker-compose stop`
+*   **Start Stopped Container:** `docker-compose start`
+*   **Stop and Remove Container:** `docker-compose down`
 
-## 📸 Web UI 功能一览
+## Web UI Feature Overview:
 
-- **任务管理**:
-  - **AI创建任务**: 使用自然语言描述需求，一键生成监控任务和配套AI分析标准。
-  - **可视化编辑与控制**: 在表格中直接修改任务参数（如关键词、价格、定时规则等），并能独立启/停、删除每个任务。
-  - **定时调度**: 为任务配置 Cron 表达式，实现自动化周期性运行。
-- **结果查看**:
-  - **卡片式浏览**: 以图文卡片形式清晰展示每个符合条件的商品。
-  - **智能筛选与排序**: 可一键筛选出所有被AI标记为“推荐”的商品，并支持按爬取时间、发布时间、价格等多种方式排序。
-  - **深度详情**: 点击即可查看每个商品的完整抓取数据和AI分析的详细JSON结果。
-- **运行日志**:
-  - **实时日志流**: 在网页上实时查看爬虫运行的详细日志，方便追踪进度和排查问题。
-  - **日志管理**: 支持自动刷新、手动刷新和一键清空日志。
-- **系统设置**:
-  - **状态检查**: 一键检查 `.env` 配置、登录状态等关键依赖是否正常。
-  - **Prompt在线编辑**: 直接在网页上编辑和保存用于AI分析的 `prompt` 文件，实时调整AI的思考逻辑。
+*   **Task Management:**
+    *   **AI Task Creation:**  Describe your needs in natural language for automated task generation and AI analysis setup.
+    *   **Visual Editing & Control:** Modify task parameters (keywords, prices, scheduling, etc.) and individually start/stop or delete tasks directly in the table.
+    *   **Scheduled Execution:** Configure Cron expressions for automated, periodic task runs.
+*   **Result Viewing:**
+    *   **Card View:**  Displays matching items in a clear, visual card format.
+    *   **Smart Filtering & Sorting:**  Filter for AI-recommended items and sort by crawl time, listing time, price, etc.
+    *   **Detailed Views:** Click to see full item data and AI analysis results in JSON format.
+*   **Running Logs:**
+    *   **Real-time Log Stream:**  View detailed crawler logs in real-time on the web, to track progress and troubleshoot issues.
+    *   **Log Management:** Supports auto-refresh, manual refresh, and one-click log clearing.
+*   **System Settings:**
+    *   **Status Check:**  Check the `.env` configuration, login status, and other critical dependencies.
+    *   **Prompt Editing:**  Edit and save the `prompt` files used by the AI analysis directly on the web, to adjust the AI's logic in real-time.
 
-## 🚀 工作流程
+## Workflow:
 
-下图描述了单个监控任务从启动到完成的核心处理逻辑。在实际使用中，`web_server.py` 会作为主服务，根据用户操作或定时调度来启动一个或多个这样的任务进程。
+The diagram describes the core logic of a single monitoring task. The `web_server.py` acts as the main service and starts one or more of these task processes based on user actions or scheduled tasks.
 
 ```mermaid
 graph TD
-    A[启动监控任务] --> B[任务: 搜索商品];
-    B --> C{发现新商品?};
-    C -- 是 --> D[抓取商品详情 & 卖家信息];
-    D --> E[下载商品图片];
-    E --> F[调用AI进行分析];
-    F --> G{AI是否推荐?};
-    G -- 是 --> H[发送通知];
-    H --> I[保存记录到 JSONL];
-    G -- 否 --> I;
-    C -- 否 --> J[翻页/等待];
+    A[Start Monitoring Task] --> B[Task: Search Items];
+    B --> C{New Item Found?};
+    C -- Yes --> D[Fetch Item Details & Seller Info];
+    D --> E[Download Item Images];
+    E --> F[Call AI for Analysis];
+    F --> G{AI Recommends?};
+    G -- Yes --> H[Send Notification];
+    H --> I[Save Record to JSONL];
+    G -- No --> I;
+    C -- No --> J[Paginate/Wait];
     J --> B;
     I --> C;
 ```
 
-## 常见问题 (FAQ)
+## Frequently Asked Questions (FAQ):
 
-这里整理了一些社区用户在 Issues 中提出的常见问题及其解答。
-
-1. **Q: 运行 `login.py` 或 `spider_v2.py` 时出现 `'gbk' codec can't encode character` 相关的编码错误？**
-    - **A:** 这是典型的 Windows 环境下的编码问题。项目代码和日志默认使用 UTF-8 编码。
-    - **解决方案:** 在运行 Python 脚本前，通过设置环境变量强制使用 UTF-8。在 PowerShell 或 CMD 中执行以下命令，然后再运行脚本：
+1.  **Q: "gbk' codec can't encode character" errors when running `login.py` or `spider_v2.py`?**
+    *   **A:**  This is a common encoding issue on Windows. The code defaults to UTF-8.
+    *   **Solution:** Set the `PYTHONUTF8=1` environment variable before running:
 
         ```bash
         set PYTHONUTF8=1
         python spider_v2.py
         ```
 
-        或者使用 `chcp 65001` 命令切换活动代码页为 UTF-8。
+        Or use `chcp 65001` to switch the active code page to UTF-8.
 
-2. **Q: 运行 `login.py` 时提示需要 `playwright install` 怎么办？**
-    - **A:** 这个错误表示 Playwright 运行所需的浏览器文件缺失。推荐的解决方法是，确保所有依赖都已通过 `requirements.txt` 正确安装。请在命令行中运行：
+2.  **Q:  `login.py` says `playwright install` is needed?**
+    *   **A:** This means the required browser files for Playwright are missing. The recommended solution is to ensure all dependencies are installed correctly via `requirements.txt`:
 
         ```bash
         pip install -r requirements.txt
         ```
 
-        如果问题依旧，可以尝试手动安装 chromium 浏览器：
+        If the problem persists, try manually installing the Chromium browser:
 
         ```bash
         playwright install chromium
         ```
 
-3. **Q: 创建任务或运行时，提示 "Request timed out" 或 "Connection error" 是什么原因？**
-    - **A:** 这通常是网络问题，表示你的服务器无法连接到 `.env` 文件中配置的 `OPENAI_BASE_URL`。请检查：
-        - 你的服务器网络是否通畅。
-        - 如果你在中国大陆，访问国外 AI 服务（如 OpenAI, Gemini）可能需要设置网络代理。现在你可以直接在 `.env` 文件中配置 `PROXY_URL` 变量来解决此问题。
-        - 确认 `OPENAI_BASE_URL` 地址填写正确，并且该服务正在正常运行。
+3.  **Q:  "Request timed out" or "Connection error" when creating or running tasks?**
+    *   **A:**  This is usually a network problem. Check:
+        *   Your server's network connection.
+        *   If in mainland China, you might need a proxy for accessing foreign AI services. Now configure `PROXY_URL` in your `.env` file.
+        *   Verify the `OPENAI_BASE_URL` is correct and the service is running.
 
-4. **Q: 我选择的 AI 模型不支持图片分析怎么办？**
-    - **A:** 本项目的核心优势之一是结合图片进行多模态分析，因此 **必须** 选择一个支持图片识别（Vision / Multi-modal）的 AI 模型。如果你配置的模型不支持图片，AI 分析会失败或效果大打折扣。请在 `.env` 文件中将 `OPENAI_MODEL_NAME` 更换为支持图片输入的模型，例如 `gpt-4o`, `gemini-1.5-pro`, `deepseek-v2`, `qwen-vl-plus` 等。
+4.  **Q:  My AI model doesn't support image analysis?**
+    *   **A:**  The core feature is multimodal analysis, so you **must** select an AI model with Vision/Multi-modal capabilities. Set `OPENAI_MODEL_NAME` in `.env` to a model that accepts image inputs (e.g., `gpt-4o`, `gemini-1.5-pro`, `deepseek-v2`, `qwen-vl-plus`).
 
-5. **Q: 我可以在群晖 (Synology) NAS 上通过 Docker 部署吗？**
-    - **A:** 可以。部署步骤与标准的 Docker 部署基本一致：
-        1. 在你的电脑上（而不是群晖上）完成 `login.py` 步骤，生成 `xianyu_state.json` 文件。
-        2. 将整个项目文件夹（包含 `.env` 和 `xianyu_state.json`）上传到群晖的某个目录下。
-        3. 在群晖的 Container Manager (或旧版 Docker) 中，使用 `docker-compose up -d` 命令（通过 SSH 或任务计划）来启动项目。确保 `docker-compose.yaml` 中的 volume 映射路径正确指向你在群晖上的项目文件夹。
+5.  **Q:  Can I deploy on a Synology NAS via Docker?**
+    *   **A:** Yes. The deployment is similar to standard Docker deployment:
+        1.  Complete the `login.py` step on your computer (not the Synology) and generate `xianyu_state.json`.
+        2.  Upload the entire project folder (including `.env` and `xianyu_state.json`) to a directory on your Synology.
+        3.  In Container Manager (or Docker), run `docker-compose up -d` (via SSH or Task Scheduler).  Ensure the volume mapping in `docker-compose.yaml` points to the correct project folder on your Synology.
 
-6. **Q: 如何配置使用 Gemini / Qwen / Grok 或其他非 OpenAI 的大语言模型？**
-    ***A:** 本项目理论上支持任何提供 OpenAI 兼容 API 接口的模型。关键在于正确配置 `.env` 文件中的三个变量：
-        *   `OPENAI_API_KEY`: 你的模型服务商提供的 API Key。
-        *`OPENAI_BASE_URL`: 模型服务商提供的 API-Compatible Endpoint 地址。请务必查阅你所使用模型的官方文档，通常格式为 `https://api.your-provider.com/v1` (注意，末尾不需要 `/chat/completions`)。
-        *   `OPENAI_MODEL_NAME`: 你要使用的具体模型名称，需要模型支持图片识别，例如 `gemini-2.5-flash`。
-    - **示例:** 如果你的服务商文档说 Completions 接口是 `https://xx.xx.com/v1/chat/completions`，那么 `OPENAI_BASE_URL` 就应该填 `https://xx.xx.com/v1`。
+6.  **Q: How to configure Gemini / Qwen / Grok or other non-OpenAI LLMs?**
+    *   ***A:** This project theoretically supports any model with an OpenAI-compatible API interface. Configure the `.env` variables correctly:
+        *   `OPENAI_API_KEY`: Your model provider's API Key.
+        *   `OPENAI_BASE_URL`: The API-Compatible Endpoint address. Check your model's documentation, typically in the format of `https://api.your-provider.com/v1` (note, no `/chat/completions` at the end).
+        *   `OPENAI_MODEL_NAME`: The specific model name you are using, which needs to support image recognition, such as `gemini-2.5-flash`.
+    *   **Example:** If your provider's documentation states the Completions interface as `https://xx.xx.com/v1/chat/completions`, then `OPENAI_BASE_URL` should be `https://xx.xx.com/v1`.
 
-7. **Q: 运行一段时间后被闲鱼检测到，提示“异常流量”或需要滑动验证？**
-    ***A:** 这是闲鱼的反爬虫机制。为了降低被检测的风险，可以尝试以下方法：
-        *   **关闭无头模式:** 在 `.env` 文件中设置 `RUN_HEADLESS=false`。这样浏览器会以有界面的方式运行，当出现滑动验证码时，你可以手动完成验证，程序会继续执行。
-        ***降低监控频率:** 避免同时运行大量监控任务。
-        *   **使用干净的网络环境:** 频繁爬取可能导致 IP 被临时标记。
-8. **Q: pyzbar 在 Windows 上安装失败怎么办？**
-    - **A:** pyzbar 在 Windows 上需要额外的 zbar 动态链接库支持。
-    - **解决方案 (Windows):**
-        - **方法1 (推荐):** 使用 Chocolatey 安装：
+7.  **Q: Flagged by Xianyu after running for a while?**
+    *   ***A:** This is an anti-scraping measure. Reduce detection risks:
+        *   **Disable headless mode:** Set `RUN_HEADLESS=false` in `.env`. This runs the browser with a visible interface.  You can manually complete CAPTCHAs.
+        *   **Reduce monitoring frequency:** Avoid running many tasks concurrently.
+        *   **Use a clean network environment:** Frequent scraping may result in IP blocking.
+
+8.  **Q: pyzbar installation fails on Windows?**
+    *   **A:** pyzbar needs the zbar DLL on Windows.
+    *   **Solutions (Windows):**
+        *   **Method 1 (Recommended):** Use Chocolatey:
 
             ```cmd
             choco install zbar
             ```
 
-        - **方法2:** 手动下载并添加到 PATH：
-            1. 从 [zbar releases](https://github.com/NaturalHistoryMuseum/pyzbar/releases) 下载对应版本的 `libzbar-64.dll`
-            2. 将文件放到 Python 安装目录或添加到系统 PATH
-        - **方法3:** 使用 conda 安装：
+        *   **Method 2:** Download `libzbar-64.dll` from [zbar releases](https://github.com/NaturalHistoryMuseum/pyzbar/releases), and put it in Python installation directory or add it to the system PATH.
+        *   **Method 3:** Use conda:
 
             ```cmd
             conda install -c conda-forge zbar
             ```
 
-    - **Linux 用户:** 直接安装系统包即可：
+    *   **Linux Users:** Install the system package:
 
         ```bash
         # Ubuntu/Debian
         sudo apt-get install libzbar0
-        
+
         # CentOS/RHEL
         sudo yum install zbar
-        
+
         # Arch Linux
         sudo pacman -S zbar
         ```
 
-9. **Q: 运行 `login.py` 时提示 `ModuleNotFoundError: No module named 'PIL'` 是什么原因？**
-    - **A:** 这个错误通常是因为Python版本过低或者依赖包安装不完整导致的。本项目推荐使用 Python 3.10 或更高版本。
-    - **解决方案:**
-        - 确保使用 Python 3.10+ 版本运行项目
-        - 重新安装依赖包：
+9.  **Q: `ModuleNotFoundError: No module named 'PIL'` when running `login.py`?**
+    *   **A:** Usually caused by a low Python version or incomplete dependencies. This project recommends Python 3.10+.
+    *   **Solutions:**
+        *   Make sure you're using Python 3.10+.
+        *   Reinstall dependencies:
 
             ```bash
             pip install -r requirements.txt
             ```
 
-        - 如果问题依旧，可以尝试单独安装 Pillow 包：
+        *   If the problem persists, try installing Pillow:
 
             ```bash
             pip install Pillow
             ```
-            
-10. **Q: 配置AI API时遇到404错误怎么办？**
-    - **A:** 如果在配置AI API时遇到404错误，建议先使用阿里云提供的API进行调试，确保基础功能正常后再尝试其他API提供商。某些API提供商可能存在兼容性问题或需要特殊的配置。请检查：
-        - 确认 `OPENAI_BASE_URL` 地址填写正确，确保该服务正在正常运行。
-        - 检查网络连接是否正常。
-        - 确认API Key是否正确且具有访问权限。
-        - 某些API提供商可能需要特殊的请求头或参数配置，请查阅其官方文档。
 
-## 致谢
+10. **Q:  404 errors when configuring AI API?**
+    *   **A:** If you get 404 errors with the AI API, debug with the Alibaba Cloud API first, to make sure the basic functions are working, then try other AI API providers, because some API providers may have compatibility issues or need special configurations. Please check:
+        *   Ensure that the address `OPENAI_BASE_URL` is filled in correctly and that the service is operating normally.
+        *   Check whether the network connection is normal.
+        *   Confirm that the API Key is correct and has access rights.
+        *   Some API providers may require special request headers or parameter configuration, please refer to their official documentation.
 
-本项目在开发过程中参考了以下优秀项目，特此感谢：
+## Acknowledgements:
 
-- [superboyyy/xianyu_spider](https://github.com/superboyyy/xianyu_spider)
+This project is inspired by and built upon the following projects:
 
-以及感谢LinuxDo相关佬友的脚本贡献
+*   [superboyyy/xianyu_spider](https://github.com/superboyyy/xianyu_spider)
 
-- [@jooooody](https://linux.do/u/jooooody/summary)
+And also, thanks for the scripts from LinuxDo users:
 
-以及感谢Aider和Gemini 解放双手，代码写起来飞一般的感觉～
+*   [@jooooody](https://linux.do/u/jooooody/summary)
+
+Thanks to Aider and Gemini for helping to free my hands and make the code writing feel like flying.
 
 ## Support & Sponsoring
 
-如果该项目对您有帮助，请考虑 buy a coffe for me , 非常感谢您的支持！
+If this project helps you, please consider buying a coffee for me, thank you very much for your support!
 
 <table>
   <tr>
@@ -356,9 +349,9 @@ graph TD
   </tr>
 </table>
 
-## ⚠️ 注意事项
+## ⚠️ Important Notes:
 
-- 请遵守闲鱼的用户协议和robots.txt规则，不要进行过于频繁的请求，以免对服务器造成负担或导致账号被限制。
-- 本项目仅供学习和技术研究使用，请勿用于非法用途。
+*   Please adhere to Xianyu's user agreement and `robots.txt` to avoid server load and account restrictions.
+*   This project is for educational and research purposes only; do not use it for illegal activities.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=dingyufei615/ai-goofish-monitor&type=Date)](https://star-history.com/#dingyufei615/ai-goofish-monitor&Date)

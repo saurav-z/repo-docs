@@ -1,49 +1,63 @@
-# OpenAI Agents SDK
+# Build Intelligent Workflows with the OpenAI Agents SDK
 
-The OpenAI Agents SDK is a lightweight yet powerful framework for building multi-agent workflows. It is provider-agnostic, supporting the OpenAI Responses and Chat Completions APIs, as well as 100+ other LLMs.
+**Unlock the power of multi-agent workflows with the OpenAI Agents SDK, a lightweight and versatile Python framework designed for creating sophisticated AI applications.**  [View the original repository on GitHub](https://github.com/openai/openai-agents-python).
 
 <img src="https://cdn.openai.com/API/docs/images/orchestration.png" alt="Image of the Agents Tracing UI" style="max-height: 803px;">
 
 > [!NOTE]
 > Looking for the JavaScript/TypeScript version? Check out [Agents SDK JS/TS](https://github.com/openai/openai-agents-js).
 
-### Core concepts:
+## Key Features
 
-1. [**Agents**](https://openai.github.io/openai-agents-python/agents): LLMs configured with instructions, tools, guardrails, and handoffs
-2. [**Handoffs**](https://openai.github.io/openai-agents-python/handoffs/): A specialized tool call used by the Agents SDK for transferring control between agents
-3. [**Guardrails**](https://openai.github.io/openai-agents-python/guardrails/): Configurable safety checks for input and output validation
-4. [**Sessions**](#sessions): Automatic conversation history management across agent runs
-5. [**Tracing**](https://openai.github.io/openai-agents-python/tracing/): Built-in tracking of agent runs, allowing you to view, debug and optimize your workflows
+*   **Agent-Driven Workflows:**  Define and orchestrate LLMs (Large Language Models) as intelligent agents with specific instructions, tools, and handoffs.
+*   **Provider-Agnostic:**  Seamlessly integrate with OpenAI's APIs, Chat Completions, and over 100+ other LLMs.
+*   **Handoffs:** Enable efficient agent-to-agent communication and workflow transitions.
+*   **Guardrails:** Implement configurable safety checks for robust input and output validation, ensuring reliability.
+*   **Session Management:** Leverage automatic conversation history management for persistent and context-aware agent interactions.
+*   **Built-in Tracing:**  Monitor, debug, and optimize your agent workflows with built-in tracing capabilities, which can be integrated with various external services like Logfire, AgentOps, Braintrust, Scorecard, and Keywords AI.
+*   **Temporal Integration:** Integrate long-running workflows and human-in-the-loop tasks with the [Temporal](https://temporal.io/) integration.
 
-Explore the [examples](examples) directory to see the SDK in action, and read our [documentation](https://openai.github.io/openai-agents-python/) for more details.
+## Core Concepts
 
-## Get started
+1.  **Agents:** LLMs configured with instructions, tools, guardrails, and handoffs ([Agents documentation](https://openai.github.io/openai-agents-python/agents)).
+2.  **Handoffs:** Specialized tool calls to transfer control between agents ([Handoffs documentation](https://openai.github.io/openai-agents-python/handoffs/)).
+3.  **Guardrails:** Configurable safety checks ([Guardrails documentation](https://openai.github.io/openai-agents-python/guardrails/)).
+4.  **Sessions:** Automatic conversation history management.
+5.  **Tracing:** Built-in tracking of agent runs ([Tracing documentation](https://openai.github.io/openai-agents-python/tracing/)).
 
-1. Set up your Python environment
+## Getting Started
 
--   Option A: Using venv (traditional method)
+### Prerequisites
 
-```bash
-python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
-```
+*   Python 3.8 or higher
+*   An OpenAI API key (or access to another supported LLM)
 
--   Option B: Using uv (recommended)
+### Installation
 
-```bash
-uv venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-```
+1.  **Set up your Python environment** (choose one):
 
-2. Install Agents SDK
+    *   **Using venv (traditional):**
+        ```bash
+        python -m venv env
+        source env/bin/activate  # On Windows: env\Scripts\activate
+        ```
+    *   **Using uv (recommended):**
+        ```bash
+        uv venv
+        source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+        ```
 
-```bash
-pip install openai-agents
-```
+2.  **Install the Agents SDK:**
 
-For voice support, install with the optional `voice` group: `pip install 'openai-agents[voice]'`.
+    ```bash
+    pip install openai-agents
+    ```
 
-## Hello world example
+    *   For voice support: `pip install 'openai-agents[voice]'`
+
+## Examples
+
+### Hello World
 
 ```python
 from agents import Agent, Runner
@@ -58,11 +72,11 @@ print(result.final_output)
 # Infinite loop's dance.
 ```
 
-(_If running this, ensure you set the `OPENAI_API_KEY` environment variable_)
+(_Ensure you set the `OPENAI_API_KEY` environment variable_)
 
 (_For Jupyter notebook users, see [hello_world_jupyter.ipynb](examples/basic/hello_world_jupyter.ipynb)_)
 
-## Handoffs example
+### Handoffs
 
 ```python
 from agents import Agent, Runner
@@ -95,7 +109,7 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-## Functions example
+### Functions
 
 ```python
 import asyncio
@@ -125,47 +139,40 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-## The agent loop
+## The Agent Loop
 
-When you call `Runner.run()`, we run a loop until we get a final output.
+The `Runner.run()` method executes an agent loop until a final output is generated.
 
-1. We call the LLM, using the model and settings on the agent, and the message history.
-2. The LLM returns a response, which may include tool calls.
-3. If the response has a final output (see below for more on this), we return it and end the loop.
-4. If the response has a handoff, we set the agent to the new agent and go back to step 1.
-5. We process the tool calls (if any) and append the tool responses messages. Then we go to step 1.
+1.  The LLM is called with the agent's settings and message history.
+2.  The LLM returns a response, which can include tool calls.
+3.  If the response has a final output, it is returned, and the loop ends.
+4.  If the response has a handoff, control is transferred to the new agent, and the loop restarts.
+5.  Tool calls are processed (if any), and tool responses are added to the messages. Then the loop restarts.
 
-There is a `max_turns` parameter that you can use to limit the number of times the loop executes.
+*   You can limit the loop iterations with the `max_turns` parameter.
 
-### Final output
+### Final Output
 
-Final output is the last thing the agent produces in the loop.
+*   If an `output_type` is set, the final output is when the LLM returns data matching that type.
+*   If no `output_type` is set, the first LLM response without tool calls or handoffs is considered the final output.
 
-1.  If you set an `output_type` on the agent, the final output is when the LLM returns something of that type. We use [structured outputs](https://platform.openai.com/docs/guides/structured-outputs) for this.
-2.  If there's no `output_type` (i.e. plain text responses), then the first LLM response without any tool calls or handoffs is considered as the final output.
+## Common Agent Patterns
 
-As a result, the mental model for the agent loop is:
+The SDK is designed to support diverse LLM workflow patterns, including deterministic flows and iterative loops. Explore example patterns in [`examples/agent_patterns`](examples/agent_patterns).
 
-1. If the current agent has an `output_type`, the loop runs until the agent produces structured output matching that type.
-2. If the current agent does not have an `output_type`, the loop runs until the current agent produces a message without any tool calls/handoffs.
+## Tracing & Monitoring
 
-## Common agent patterns
+Easily track and debug agent behavior with automatic tracing.  Integrate with external services for advanced monitoring (Logfire, AgentOps, Braintrust, Scorecard, Keywords AI).  See the [Tracing documentation](http://openai.github.io/openai-agents-python/tracing) for customization.
 
-The Agents SDK is designed to be highly flexible, allowing you to model a wide range of LLM workflows including deterministic flows, iterative loops, and more. See examples in [`examples/agent_patterns`](examples/agent_patterns).
+## Long Running Agents & Human-in-the-Loop
 
-## Tracing
+Integrate with [Temporal](https://temporal.io/) for durable, long-running workflows and human-in-the-loop tasks. See this [video](https://www.youtube.com/watch?v=fFBZqzT4DD8) for a demonstration.
 
-The Agents SDK automatically traces your agent runs, making it easy to track and debug the behavior of your agents. Tracing is extensible by design, supporting custom spans and a wide variety of external destinations, including [Logfire](https://logfire.pydantic.dev/docs/integrations/llms/openai/#openai-agents), [AgentOps](https://docs.agentops.ai/v1/integrations/agentssdk), [Braintrust](https://braintrust.dev/docs/guides/traces/integrations#openai-agents-sdk), [Scorecard](https://docs.scorecard.io/docs/documentation/features/tracing#openai-agents-sdk-integration), and [Keywords AI](https://docs.keywordsai.co/integration/development-frameworks/openai-agent). For more details about how to customize or disable tracing, see [Tracing](http://openai.github.io/openai-agents-python/tracing), which also includes a larger list of [external tracing processors](http://openai.github.io/openai-agents-python/tracing/#external-tracing-processors-list).
+## Sessions & Memory
 
-## Long running agents & human-in-the-loop
+Maintain conversation history across agent runs with built-in session memory.
 
-You can use the Agents SDK [Temporal](https://temporal.io/) integration to run durable, long-running workflows, including human-in-the-loop tasks. View a demo of Temporal and the Agents SDK working in action to complete long-running tasks [in this video](https://www.youtube.com/watch?v=fFBZqzT4DD8), and [view docs here](https://github.com/temporalio/sdk-python/tree/main/temporalio/contrib/openai_agents).
-
-## Sessions
-
-The Agents SDK provides built-in session memory to automatically maintain conversation history across multiple agent runs, eliminating the need to manually handle `.to_input_list()` between turns.
-
-### Quick start
+### Quick Start
 
 ```python
 from agents import Agent, Runner, SQLiteSession
@@ -204,10 +211,10 @@ result = Runner.run_sync(
 print(result.final_output)  # "Approximately 39 million"
 ```
 
-### Session options
+### Session Options
 
--   **No memory** (default): No session memory when session parameter is omitted
--   **`session: Session = DatabaseSession(...)`**: Use a Session instance to manage conversation history
+*   **No memory** (default): No session memory when session parameter is omitted
+*   **`session: Session = DatabaseSession(...)`**: Use a Session instance to manage conversation history
 
 ```python
 from agents import Agent, Runner, SQLiteSession
@@ -229,9 +236,9 @@ result2 = await Runner.run(
 )
 ```
 
-### Custom session implementations
+### Custom Session Implementations
 
-You can implement your own session memory by creating a class that follows the `Session` protocol:
+Create a custom class following the `Session` protocol:
 
 ```python
 from agents.memory import Session
@@ -269,21 +276,23 @@ result = await Runner.run(
 )
 ```
 
-## Development (only needed if you need to edit the SDK/examples)
+## Development
 
-0. Ensure you have [`uv`](https://docs.astral.sh/uv/) installed.
+(Instructions for contributing to the SDK)
+
+0.  Ensure you have [`uv`](https://docs.astral.sh/uv/) installed.
 
 ```bash
 uv --version
 ```
 
-1. Install dependencies
+1.  Install dependencies
 
 ```bash
 make sync
 ```
 
-2. (After making changes) lint/test
+2.  (After making changes) lint/test
 
 ```
 make check # run tests linter and typechecker
@@ -300,12 +309,12 @@ make format-check # run style checker
 
 ## Acknowledgements
 
-We'd like to acknowledge the excellent work of the open-source community, especially:
+We acknowledge the contributions of the open-source community, including:
 
--   [Pydantic](https://docs.pydantic.dev/latest/) (data validation) and [PydanticAI](https://ai.pydantic.dev/) (advanced agent framework)
--   [LiteLLM](https://github.com/BerriAI/litellm) (unified interface for 100+ LLMs)
--   [MkDocs](https://github.com/squidfunk/mkdocs-material)
--   [Griffe](https://github.com/mkdocstrings/griffe)
--   [uv](https://github.com/astral-sh/uv) and [ruff](https://github.com/astral-sh/ruff)
+*   [Pydantic](https://docs.pydantic.dev/latest/) and [PydanticAI](https://ai.pydantic.dev/)
+*   [LiteLLM](https://github.com/BerriAI/litellm)
+*   [MkDocs](https://github.com/squidfunk/mkdocs-material)
+*   [Griffe](https://github.com/mkdocstrings/griffe)
+*   [uv](https://github.com/astral-sh/uv) and [ruff](https://github.com/astral-sh/ruff)
 
-We're committed to continuing to build the Agents SDK as an open source framework so others in the community can expand on our approach.
+We are committed to developing the Agents SDK as an open-source framework to foster community expansion.

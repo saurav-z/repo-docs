@@ -20,104 +20,90 @@
 </a>
 </p>
 
+# Biomni: Your AI Assistant for Biomedical Research
 
+**Biomni is a cutting-edge, general-purpose AI agent designed to revolutionize biomedical research by autonomously executing complex tasks and generating novel hypotheses.** [Explore the original repository](https://github.com/snap-stanford/Biomni).
 
-# Biomni: A General-Purpose Biomedical AI Agent
+## Key Features:
 
-## Overview
+*   **Autonomous Task Execution:** Automates a wide range of research tasks across various biomedical subfields.
+*   **LLM-Powered Reasoning:** Leverages state-of-the-art Large Language Models (LLMs) for intelligent reasoning and planning.
+*   **Retrieval-Augmented Planning:** Enhances accuracy and efficiency through integrated retrieval mechanisms.
+*   **Code-Based Execution:** Executes tasks through generated code, enabling complex analysis and simulations.
+*   **Web Interface:**  Experience Biomni through our user-friendly no-code web interface.
+*   **Open Source & Community Driven:** Biomni is built with open science principles and welcomes community contributions.
+*   **MCP Support:** Supports Model Context Protocol (MCP) servers for seamless external tool integration.
 
-
-Biomni is a general-purpose biomedical AI agent designed to autonomously execute a wide range of research tasks across diverse biomedical subfields. By integrating cutting-edge large language model (LLM) reasoning with retrieval-augmented planning and code-based execution, Biomni helps scientists dramatically enhance research productivity and generate testable hypotheses.
-
-
-## Quick Start
+## Getting Started
 
 ### Installation
 
-Our software environment is massive and we provide a single setup.sh script to setup.
-Follow this [file](biomni_env/README.md) to setup the env first.
+1.  **Environment Setup:** Follow the instructions in the [biomni\_env/README.md](biomni_env/README.md) file to set up the necessary environment.
+2.  **Activate Environment:** Activate the environment using: `conda activate biomni_e1`
+3.  **Install Package:** Install the Biomni package using pip:
+    *   Recommended: `pip install biomni --upgrade`
+    *   Alternative: `pip install git+https://github.com/snap-stanford/Biomni.git@main`
+4.  **Configure API Keys:** Configure your API keys using one of the following methods:
 
-Then activate the environment E1:
+    <details>
+    <summary>Click to expand</summary>
 
-```bash
-conda activate biomni_e1
-```
+    #### Option 1: Using .env file (Recommended)
 
-then install the biomni official pip package:
+    Create a `.env` file in your project directory:
 
-```bash
-pip install biomni --upgrade
-```
+    ```bash
+    # Copy the example file
+    cp .env.example .env
 
-For the latest update, install from the github source version, or do:
+    # Edit the .env file with your actual API keys
+    ```
 
-```bash
-pip install git+https://github.com/snap-stanford/Biomni.git@main
-```
+    Your `.env` file should look like:
 
-Lastly, configure your API keys using one of the following methods:
+    ```env
+    # Required: Anthropic API Key for Claude models
+    ANTHROPIC_API_KEY=your_anthropic_api_key_here
 
-<details>
-<summary>Click to expand</summary>
+    # Optional: OpenAI API Key (if using OpenAI models)
+    OPENAI_API_KEY=your_openai_api_key_here
 
-#### Option 1: Using .env file (Recommended)
+    # Optional: AI Studio Gemini API Key (if using Gemini models)
+    GEMINI_API_KEY=your_gemini_api_key_here
 
-Create a `.env` file in your project directory:
+    # Optional: AWS Bedrock Configuration (if using AWS Bedrock models)
+    AWS_BEARER_TOKEN_BEDROCK=your_bedrock_api_key_here
+    AWS_REGION=us-east-1
 
-```bash
-# Copy the example file
-cp .env.example .env
+    # Optional: Custom model serving configuration
+    # CUSTOM_MODEL_BASE_URL=http://localhost:8000/v1
+    # CUSTOM_MODEL_API_KEY=your_custom_api_key_here
 
-# Edit the .env file with your actual API keys
-```
+    # Optional: Biomni data path (defaults to ./data)
+    # BIOMNI_DATA_PATH=/path/to/your/data
 
-Your `.env` file should look like:
+    # Optional: Timeout settings (defaults to 600 seconds)
+    # BIOMNI_TIMEOUT_SECONDS=600
+    ```
 
-```env
-# Required: Anthropic API Key for Claude models
-ANTHROPIC_API_KEY=your_anthropic_api_key_here
+    #### Option 2: Using shell environment variables
 
-# Optional: OpenAI API Key (if using OpenAI models)
-OPENAI_API_KEY=your_openai_api_key_here
+    Alternatively, configure your API keys in bash profile `~/.bashrc`:
 
-# Optional: AI Studio Gemini API Key (if using Gemini models)
-GEMINI_API_KEY=your_gemini_api_key_here
+    ```bash
+    export ANTHROPIC_API_KEY="YOUR_API_KEY"
+    export OPENAI_API_KEY="YOUR_API_KEY" # optional if you just use Claude
+    export AWS_BEARER_TOKEN_BEDROCK="YOUR_BEDROCK_API_KEY" # optional for AWS Bedrock models
+    export AWS_REGION="us-east-1" # optional, defaults to us-east-1 for Bedrock
+    export GEMINI_API_KEY="YOUR_GEMINI_API_KEY" #optional if you want to use a gemini model
+    ```
+    </details>
 
-# Optional: AWS Bedrock Configuration (if using AWS Bedrock models)
-AWS_BEARER_TOKEN_BEDROCK=your_bedrock_api_key_here
-AWS_REGION=us-east-1
+    #### ⚠️ Known Package Conflicts
 
-# Optional: Custom model serving configuration
-# CUSTOM_MODEL_BASE_URL=http://localhost:8000/v1
-# CUSTOM_MODEL_API_KEY=your_custom_api_key_here
-
-# Optional: Biomni data path (defaults to ./data)
-# BIOMNI_DATA_PATH=/path/to/your/data
-
-# Optional: Timeout settings (defaults to 600 seconds)
-# BIOMNI_TIMEOUT_SECONDS=600
-```
-
-#### Option 2: Using shell environment variables
-
-Alternatively, configure your API keys in bash profile `~/.bashrc`:
-
-```bash
-export ANTHROPIC_API_KEY="YOUR_API_KEY"
-export OPENAI_API_KEY="YOUR_API_KEY" # optional if you just use Claude
-export AWS_BEARER_TOKEN_BEDROCK="YOUR_BEDROCK_API_KEY" # optional for AWS Bedrock models
-export AWS_REGION="us-east-1" # optional, defaults to us-east-1 for Bedrock
-export GEMINI_API_KEY="YOUR_GEMINI_API_KEY" #optional if you want to use a gemini model
-```
-</details>
-
-#### ⚠️ Known Package Conflicts
-
-Some Python packages are not installed by default in the Biomni environment due to dependency conflicts. If you need these features, you must install the packages manually and may need to uncomment relevant code in the codebase. See the up-to-date list and details in [docs/known_conflicts.md](./docs/known_conflicts.md).
+    Some Python packages are not installed by default in the Biomni environment due to dependency conflicts. If you need these features, you must install the packages manually and may need to uncomment relevant code in the codebase. See the up-to-date list and details in [docs/known_conflicts.md](./docs/known_conflicts.md).
 
 ### Basic Usage
-
-Once inside the environment, you can start using Biomni:
 
 ```python
 from biomni.agent import A1
@@ -131,61 +117,70 @@ agent.go("Perform scRNA-seq annotation at [PATH] and generate meaningful hypothe
 agent.go("Predict ADMET properties for this compound: CC(C)CC1=CC=C(C=C1)C(C)C(=O)O")
 ```
 
-## 🤝 Contributing to Biomni
+## MCP (Model Context Protocol) Support
 
-Biomni is an open-science initiative that thrives on community contributions. We welcome:
+Integrate external tools with Biomni using MCP servers.
 
-- **🔧 New Tools**: Specialized analysis functions and algorithms
-- **📊 Datasets**: Curated biomedical data and knowledge bases
-- **💻 Software**: Integration of existing biomedical software packages
-- **📋 Benchmarks**: Evaluation datasets and performance metrics
-- **📚 Misc**: Tutorials, examples, and use cases
-- **🔧 Update existing tools**: many current tools are not optimized - fix and replacements are welcome!
+```python
+from biomni.agent import A1
 
-Check out this **[Contributing Guide](CONTRIBUTION.md)** on how to contribute to the Biomni ecosystem.
+agent = A1()
+agent.add_mcp(config_path="./mcp_config.yaml")
+agent.go("Find FDA active ingredient information for ibuprofen")
+```
 
-If you have particular tool/database/software in mind that you want to add, you can also submit to [this form](https://forms.gle/nu2n1unzAYodTLVj6) and the biomni team will implement them.
+**Built-in MCP Servers:**  Refer to the [MCP Integration Documentation](docs/mcp_integration.md) and examples in [`tutorials/examples/add_mcp_server/`](tutorials/examples/add_mcp_server/) and [`tutorials/examples/expose_biomni_server/`](tutorials/examples/expose_biomni_server/) for details.
 
-## 🔬 Call for Contributors: Help Build Biomni-E2
+## Contribute to Biomni
 
-Biomni-E1 only scratches the surface of what’s possible in the biomedical action space.
+Join our open-science initiative and help shape the future of biomedical AI! We welcome contributions in the following areas:
 
-Now, we’re building **Biomni-E2** — a next-generation environment developed **with and for the community**.
+*   🔧 New Tools
+*   📊 Datasets
+*   💻 Software Integration
+*   📋 Benchmarks
+*   📚 Tutorials and Examples
+*   🔧 Update existing tools
 
-We believe that by collaboratively defining and curating a shared library of standard biomedical actions, we can accelerate science for everyone.
+See our **[Contributing Guide](CONTRIBUTION.md)** for details.
 
-**Join us in shaping the future of biomedical AI agent.**
+Want to add a specific tool or database? Submit your suggestions using [this form](https://forms.gle/nu2n1unzAYodTLVj6).
 
-- **Contributors with significant impact** (e.g., 10+ significant & integrated tool contributions or equivalent) will be **invited as co-authors** on our upcoming paper in a top-tier journal or conference.
-- **All contributors** will be acknowledged in our publications.
-- More contributor perks...
+## Biomni-E2: The Next Generation
+
+Be a part of building **Biomni-E2** - the next-generation environment developed *with and for the community*.
+
+**Contributors with significant impact** (e.g., 10+ significant & integrated tool contributions or equivalent) will be **invited as co-authors** on our upcoming paper in a top-tier journal or conference.
+
+**All contributors** will be acknowledged in our publications.
 
 Let’s build it together.
 
-
 ## Tutorials and Examples
 
-**[Biomni 101](./tutorials/biomni_101.ipynb)** - Basic concepts and first steps
+*   **[Biomni 101](./tutorials/biomni_101.ipynb)** - Basic concepts and first steps
 
 More to come!
 
-## 🌐 Web Interface
+## Web Interface
 
-Experience Biomni through our no-code web interface at **[biomni.stanford.edu](https://biomni.stanford.edu)**.
+Try Biomni through our user-friendly web interface at **[biomni.stanford.edu](https://biomni.stanford.edu)**.
 
 [![Watch the video](https://img.youtube.com/vi/E0BRvl23hLs/maxresdefault.jpg)](https://youtu.be/E0BRvl23hLs)
 
-## Release schedule
+## Release Schedule
 
-- [ ] 8 Real-world research task benchmark/leaderboard release
-- [ ] A tutorial on how to contribute to Biomni
-- [ ] A tutorial on baseline agents
-- [x] Biomni A1+E1 release
+*   [ ] 8 Real-world research task benchmark/leaderboard release
+*   [ ] A tutorial on how to contribute to Biomni
+*   [ ] A tutorial on baseline agents
+*   [x] MCP support
+*   [x] Biomni A1+E1 release
 
-## Important Note
-- Security warning: Currently, Biomni executes LLM-generated code with full system privileges. If you want to use it in production, please use in isolated/sandboxed environments. The agent can access files, network, and system commands. Be careful with sensitive data or credentials.
-- This release was frozen as of April 15 2025, so it differs from the current web platform.
-- Biomni itself is Apache 2.0-licensed, but certain integrated tools, databases, or software may carry more restrictive commercial licenses. Review each component carefully before any commercial use.
+## Important Notes
+
+*   **Security Warning:** Biomni executes LLM-generated code with full system privileges. Use in isolated/sandboxed environments for production.  Be cautious with sensitive data and credentials.
+*   **Release Freeze:** This release was frozen as of April 15, 2025, and may differ from the current web platform.
+*   **Licensing:** Biomni is Apache 2.0-licensed.  Review the licenses of integrated tools, databases, and software before commercial use.
 
 ## Cite Us
 

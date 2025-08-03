@@ -1,9 +1,13 @@
-[![ci](https://github.com/paperless-ngx/paperless-ngx/workflows/ci/badge.svg)](https://github.com/paperless-ngx/paperless-ngx/actions)
+# Paperless-ngx: Your Digital Document Management System
+
+**Tired of paper clutter? Paperless-ngx is a powerful, open-source document management system that helps you effortlessly organize, archive, and search your documents.**  [Explore the original repository](https://github.com/paperless-ngx/paperless-ngx).
+
+[![CI](https://github.com/paperless-ngx/paperless-ngx/workflows/ci/badge.svg)](https://github.com/paperless-ngx/paperless-ngx/actions)
 [![Crowdin](https://badges.crowdin.net/paperless-ngx/localized.svg)](https://crowdin.com/project/paperless-ngx)
 [![Documentation Status](https://img.shields.io/github/deployments/paperless-ngx/paperless-ngx/github-pages?label=docs)](https://docs.paperless-ngx.com)
-[![codecov](https://codecov.io/gh/paperless-ngx/paperless-ngx/branch/main/graph/badge.svg?token=VK6OUPJ3TY)](https://codecov.io/gh/paperless-ngx/paperless-ngx)
+[![Codecov](https://codecov.io/gh/paperless-ngx/paperless-ngx/branch/main/graph/badge.svg?token=VK6OUPJ3TY)](https://codecov.io/gh/paperless-ngx/paperless-ngx)
 [![Chat on Matrix](https://matrix.to/img/matrix-badge.svg)](https://matrix.to/#/%23paperlessngx%3Amatrix.org)
-[![demo](https://cronitor.io/badges/ve7ItY/production/W5E_B9jkelG9ZbDiNHUPQEVH3MY.svg)](https://demo.paperless-ngx.com)
+[![Demo](https://cronitor.io/badges/ve7ItY/production/W5E_B9jkelG9ZbDiNHUPQEVH3MY.svg)](https://demo.paperless-ngx.com)
 
 <p align="center">
   <picture>
@@ -13,37 +17,18 @@
   </picture>
 </p>
 
-<!-- omit in toc -->
+Paperless-ngx is the official successor to Paperless and Paperless-ng, built to provide a robust, user-friendly solution for managing your documents digitally.
 
-# Paperless-ngx
+## Key Features
 
-Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep, well, _less paper_.
-
-Paperless-ngx is the official successor to the original [Paperless](https://github.com/the-paperless-project/paperless) & [Paperless-ng](https://github.com/jonaswinkler/paperless-ng) projects and is designed to distribute the responsibility of advancing and supporting the project among a team of people. [Consider joining us!](#community-support)
-
-Thanks to the generous folks at [DigitalOcean](https://m.do.co/c/8d70b916d462), a demo is available at [demo.paperless-ngx.com](https://demo.paperless-ngx.com) using login `demo` / `demo`. _Note: demo content is reset frequently and confidential information should not be uploaded._
-
-- [Features](#features)
-- [Getting started](#getting-started)
-- [Contributing](#contributing)
-  - [Community Support](#community-support)
-  - [Translation](#translation)
-  - [Feature Requests](#feature-requests)
-  - [Bugs](#bugs)
-- [Related Projects](#related-projects)
-- [Important Note](#important-note)
-
-<p align="right">This project is supported by:<br/>
-  <a href="https://m.do.co/c/8d70b916d462" style="padding-top: 4px; display: block;">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_horizontal_white.svg" width="140px">
-      <source media="(prefers-color-scheme: light)" srcset="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_horizontal_blue.svg" width="140px">
-      <img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_horizontal_black_.svg" width="140px">
-    </picture>
-  </a>
-</p>
-
-# Features
+*   **OCR (Optical Character Recognition):** Convert scanned documents into searchable text.
+*   **Automated Tagging and Organization:**  Intelligent document classification and tagging for effortless retrieval.
+*   **Full-Text Search:** Quickly find documents using keywords and phrases.
+*   **User-Friendly Interface:**  Intuitive design for easy navigation and management.
+*   **Web-Based Access:** Access your documents from anywhere, anytime.
+*   **Open Source:**  Free to use and customize, with a thriving community.
+*   **Docker Compose Support:** Easy setup with Docker Compose for quick deployment.
+*   **Migration from Paperless-ng:** Easily migrate existing documents.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docs/assets/screenshots/documents-smallcards-dark.png">
@@ -51,53 +36,44 @@ Thanks to the generous folks at [DigitalOcean](https://m.do.co/c/8d70b916d462), 
   <img src="https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docs/assets/screenshots/documents-smallcards.png">
 </picture>
 
-A full list of [features](https://docs.paperless-ngx.com/#features) and [screenshots](https://docs.paperless-ngx.com/#screenshots) are available in the [documentation](https://docs.paperless-ngx.com/).
+## Getting Started
 
-# Getting started
-
-The easiest way to deploy paperless is `docker compose`. The files in the [`/docker/compose` directory](https://github.com/paperless-ngx/paperless-ngx/tree/main/docker/compose) are configured to pull the image from the GitHub container registry.
-
-If you'd like to jump right in, you can configure a `docker compose` environment with our install script:
+The easiest way to get started is with Docker Compose:
 
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)"
 ```
 
-More details and step-by-step guides for alternative installation methods can be found in [the documentation](https://docs.paperless-ngx.com/setup/#installation).
+Detailed installation guides and alternative methods are available in the [documentation](https://docs.paperless-ngx.com/setup/#installation).
 
-Migrating from Paperless-ng is easy, just drop in the new docker image! See the [documentation on migrating](https://docs.paperless-ngx.com/setup/#migrating-to-paperless-ngx) for more details.
+## Documentation
 
-<!-- omit in toc -->
+Comprehensive documentation is available at: [https://docs.paperless-ngx.com](https://docs.paperless-ngx.com/).
 
-### Documentation
+## Contribute
 
-The documentation for Paperless-ngx is available at [https://docs.paperless-ngx.com](https://docs.paperless-ngx.com/).
+We welcome contributions!  Help improve Paperless-ngx through bug fixes, feature enhancements, and more.  Check the [documentation](https://docs.paperless-ngx.com/development/) for information on getting started.
 
-# Contributing
+### Community Support
 
-If you feel like contributing to the project, please do! Bug fixes, enhancements, visual fixes etc. are always welcome. If you want to implement something big: Please start a discussion about that! The [documentation](https://docs.paperless-ngx.com/development/) has some basic information on how to get started.
+Join our community on GitHub and in the [Matrix Room](https://matrix.to/#/#paperless:matrix.org) to connect with other users and contributors.  We have multiple teams available for ongoing contributions.
 
-## Community Support
+### Translation
 
-People interested in continuing the work on paperless-ngx are encouraged to reach out here on github and in the [Matrix Room](https://matrix.to/#/#paperless:matrix.org). If you would like to contribute to the project on an ongoing basis there are multiple [teams](https://github.com/orgs/paperless-ngx/people) (frontend, ci/cd, etc) that could use your help so please reach out!
+Help translate Paperless-ngx into your language on Crowdin: [https://crowdin.com/project/paperless-ngx](https://crowdin.com/project/paperless-ngx).
 
-## Translation
+### Feature Requests
 
-Paperless-ngx is available in many languages that are coordinated on Crowdin. If you want to help out by translating paperless-ngx into your language, please head over to https://crowdin.com/project/paperless-ngx, and thank you! More details can be found in [CONTRIBUTING.md](https://github.com/paperless-ngx/paperless-ngx/blob/main/CONTRIBUTING.md#translating-paperless-ngx).
+Submit feature requests and discuss new ideas on [GitHub Discussions](https://github.com/paperless-ngx/paperless-ngx/discussions/categories/feature-requests).
 
-## Feature Requests
+### Bugs
 
-Feature requests can be submitted via [GitHub Discussions](https://github.com/paperless-ngx/paperless-ngx/discussions/categories/feature-requests), you can search for existing ideas, add your own and vote for the ones you care about.
+Report bugs or ask questions by [opening an issue](https://github.com/paperless-ngx/paperless-ngx/issues) or starting a discussion on [GitHub Discussions](https://github.com/paperless-ngx/paperless-ngx/discussions).
 
-## Bugs
+## Related Projects
 
-For bugs please [open an issue](https://github.com/paperless-ngx/paperless-ngx/issues) or [start a discussion](https://github.com/paperless-ngx/paperless-ngx/discussions) if you have questions.
+Explore related projects and integrations on the [wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Related-Projects).
 
-# Related Projects
+## Important Security Note
 
-Please see [the wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Related-Projects) for a user-maintained list of related projects and software that is compatible with Paperless-ngx.
-
-# Important Note
-
-> Document scanners are typically used to scan sensitive documents like your social insurance number, tax records, invoices, etc. **Paperless-ngx should never be run on an untrusted host** because information is stored in clear text without encryption. No guarantees are made regarding security (but we do try!) and you use the app at your own risk.
-> **The safest way to run Paperless-ngx is on a local server in your own home with backups in place**.
+> **Important:**  Paperless-ngx is designed for use on trusted hosts. Data is stored in clear text without encryption.  We recommend running Paperless-ngx on a local server with backups.

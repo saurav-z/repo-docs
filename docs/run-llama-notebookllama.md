@@ -1,11 +1,13 @@
-# NotebookLlaMa🦙
+# NotebookLlaMa: Your Open-Source AI-Powered Notebook Companion
 
-## A fluffy and open-source alternative to NotebookLM!
-
-https://github.com/user-attachments/assets/7e9cca45-8a4c-4dfa-98d2-2cef147422f2
+**Unlock the power of AI for your notes with NotebookLlaMa, a fully open-source alternative to NotebookLM!**  Find the original repo [here](https://github.com/run-llama/notebookllama).
 
 <p align="center">
-  A fully open-source alternative to NotebookLM, backed by <a href="https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM"><strong>LlamaCloud</strong></a>.
+  <img src="https://github.com/user-attachments/assets/7e9cca45-8a4c-4dfa-98d2-2cef147422f2" alt="NotebookLlaMa Screenshot">
+</p>
+
+<p align="center">
+  Built with the support of <a href="https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM"><strong>LlamaCloud</strong></a>.
 </p>
 
 <p align="center">
@@ -16,27 +18,38 @@ https://github.com/user-attachments/assets/7e9cca45-8a4c-4dfa-98d2-2cef147422f2
     <a href="https://mseep.ai/app/run-llama-notebookllama"><img alt="MseeP.ai Security Assessment Badge" src="https://mseep.net/pr/run-llama-notebookllama-badge.png"></a>
 </p>
 
+## Key Features
+
+*   **Open-Source:** Fully accessible and customizable.
+*   **AI-Powered:** Leverages advanced AI models for note-taking and knowledge management.
+*   **LlamaCloud Integration:** Powered by LlamaCloud for robust backend infrastructure.
+*   **Easy Setup:** Simple installation process using `uv`.
+
+## Getting Started
+
 ### Prerequisites
 
-This project uses `uv` to manage dependencies. Before you begin, make sure you have `uv` installed.
+Ensure you have `uv` installed to manage project dependencies.
 
-On macOS and Linux:
+**Installation:**
 
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+*   **macOS and Linux:**
 
-On Windows:
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
 
-```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
+*   **Windows:**
 
-For more install options, see `uv`'s [official documentation](https://docs.astral.sh/uv/getting-started/installation/).
+    ```powershell
+    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
 
----
+    For additional installation methods, refer to the official `uv` [documentation](https://docs.astral.sh/uv/getting-started/installation/).
 
-### Get it up and running!
+### Installation and Configuration
+
+Follow these steps to get NotebookLlaMa up and running:
 
 **1. Clone the Repository**
 
@@ -53,59 +66,50 @@ uv sync
 
 **3. Configure API Keys**
 
-First, create your `.env` file by renaming the example file:
+*   Create a `.env` file:
 
-```bash
-mv .env.example .env
-```
+    ```bash
+    mv .env.example .env
+    ```
 
-Next, open the `.env` file and add your API keys:
+*   Add your API keys to `.env`:
 
-- `OPENAI_API_KEY`: find it [on OpenAI Platform](https://platform.openai.com/api-keys)
-- `ELEVENLABS_API_KEY`: find it [on ElevenLabs Settings](https://elevenlabs.io/app/settings/api-keys)
-- `LLAMACLOUD_API_KEY`: find it [on LlamaCloud Dashboard](https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM)
+    *   `OPENAI_API_KEY`: [OpenAI Platform](https://platform.openai.com/api-keys)
+    *   `ELEVENLABS_API_KEY`: [ElevenLabs Settings](https://elevenlabs.io/app/settings/api-keys)
+    *   `LLAMACLOUD_API_KEY`: [LlamaCloud Dashboard](https://cloud.llamaindex.ai?utm_source=demo&utm_medium=notebookLM)
 
 **4. Activate the Virtual Environment**
 
-(on mac/unix)
+*   **macOS/Linux:**
 
-```bash
-source .venv/bin/activate
-```
+    ```bash
+    source .venv/bin/activate
+    ```
 
-(on Windows):
+*   **Windows:**
 
-```bash
-.\.venv\Scripts\activate
-```
+    ```bash
+    .\.venv\Scripts\activate
+    ```
 
 **5. Create LlamaCloud Agent & Pipeline**
 
-You will now execute two scripts to configure your backend agents and pipelines.
+*   Create the data extraction agent:
 
-First, create the data extraction agent:
+    ```bash
+    uv run tools/create_llama_extract_agent.py
+    ```
 
-```bash
-uv run tools/create_llama_extract_agent.py
-```
+*   Run the index pipeline setup wizard:
 
-Next, run the interactive setup wizard to configure your index pipeline.
+    ```bash
+    uv run tools/create_llama_cloud_index.py
+    ```
 
-> **⚡ Quick Start (Default OpenAI):**
-> For the fastest setup, select **"With Default Settings"** when prompted. This will automatically create a pipeline using OpenAI's `text-embedding-3-small` embedding model.
-
-> **🧠 Advanced (Custom Embedding Models):**
-> To use a different embedding model, select **"With Custom Settings"** and follow the on-screen instructions.
-
-Run the wizard with the following command:
-
-```bash
-uv run tools/create_llama_cloud_index.py
-```
+    *   **Quick Start (Default OpenAI):**  Choose "With Default Settings".
+    *   **Advanced (Custom Embedding Models):** Choose "With Custom Settings".
 
 **6. Launch Backend Services**
-
-This command will start the required Postgres and Jaeger containers.
 
 ```bash
 docker compose up -d
@@ -113,30 +117,28 @@ docker compose up -d
 
 **7. Run the Application**
 
-First, run the **MCP** server:
+*   Run the MCP server:
 
-```bash
-uv run src/notebookllama/server.py
-```
+    ```bash
+    uv run src/notebookllama/server.py
+    ```
 
-Then, in a **new terminal window**, launch the Streamlit app:
+*   In a **new terminal window**, launch the Streamlit app:
 
-```bash
-streamlit run src/notebookllama/Home.py
-```
+    ```bash
+    streamlit run src/notebookllama/Home.py
+    ```
 
-> [!IMPORTANT]
->
-> _You might need to install `ffmpeg` if you do not have it installed already_
+    > [!IMPORTANT]
+    >
+    > _You might need to install `ffmpeg` if you do not have it installed already_
 
-And start exploring the app at `http://localhost:8501/`.
+Access the app at `http://localhost:8501/`.
 
----
+## Contributing
 
-### Contributing
+Contribute to the project by following the [guidelines](./CONTRIBUTING.md).
 
-Contribute to this project following the [guidelines](./CONTRIBUTING.md).
+## License
 
-### License
-
-This project is provided under an [MIT License](./LICENSE).
+NotebookLlaMa is licensed under the [MIT License](./LICENSE).

@@ -1,97 +1,66 @@
-# Lossless Scaling for Steam Deck
+# Lossless Scaling for Steam Deck: Enhance Your Gaming Experience
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B71HZTAX)
+**Unlock smoother frame rates and stunning visuals on your Steam Deck with the Lossless Scaling plugin, bringing the power of frame generation to your favorite games.**
 
-<p align="center">
-   <img src="assets/decky-lossless-logo.png" alt="Lossless Scaling for Steam Deck Logo" width="200"/>
-</p>
+[Check out the original repository](https://github.com/xXJSONDeruloXx/decky-lossless-scaling-vk)
 
-> **Note:**  
-> This is an **unofficial community plugin**. It is independently developed and **not officially supported** by the creators of Lossless Scaling or lsfg-vk. For support, please use the [Decky Lossless Discord Channel](https://discord.gg/TwvHdVucC3).
+---
 
-## What is this?
+## Key Features
 
-A Decky plugin that streamlines the installation of **lsfg-vk** ([Lossless Scaling Frame Generation Vulkan layer](https://github.com/PancakeTAS/lsfg-vk)) on Steam Deck, allowing you to use the Lossless Scaling features on Linux with a controller friendly UI in SteamOS or Bazzite. 
+This plugin simplifies the installation and configuration of `lsfg-vk` (Lossless Scaling Frame Generation Vulkan layer) on your Steam Deck, offering a user-friendly way to leverage frame generation technology.
+
+*   **Simplified Installation:**  Automates the download and setup of `lsfg-vk`.
+*   **Controller-Friendly UI:** Provides an intuitive interface within SteamOS and Bazzite for easy configuration.
+*   **Seamless Integration:** Integrates with the existing **Lossless Scaling** application.
+*   **Real-time Configuration:**  Changes to your settings are applied instantly without needing to restart the game.
+*   **Customizable Settings:**
+    *   **FPS Multiplier:** Choose between 2x, 3x, or 4x frame generation.
+    *   **Flow Scale:** Adjust motion estimation for performance vs. quality.
+    *   **Performance Mode:** Optimizes performance with a lighter processing model.
+    *   **HDR Mode:** Enables HDR output for supported games.
+    *   **Experimental Features:**  Override presentation modes and set base FPS limits.
+
+---
 
 ## Installation
 
-**Note:** This plugin is currently in active development. While functional, some features may change before the official Decky Plugin Store release.
+1.  **Download the plugin:** Get the "Lossless Scaling.zip" file from the [latest release](https://github.com/xXJSONDeruloXx/decky-lossless-scaling-vk/releases)
+2.  **Install via Decky Loader:**
+    *   Enable "Developer Mode" in Decky Loader settings.
+    *   Go to the "Developer" tab and select "Install Plugin from Zip."
+    *   Choose the downloaded "Lossless Scaling.zip" file.
 
-1. **Download the plugin** from the [latest release](https://github.com/xXJSONDeruloXx/decky-lossless-scaling-vk/releases)
-   - Download the "Lossless Scaling.zip" file to your Steam Deck
-2. **Install manually through Decky**:
-   - In Game Mode, go to the settings cog in the top right of the Decky Loader tab
-   - Enable "Developer Mode"
-   - Go to "Developer" tab and select "Install Plugin from Zip"
-   - Select the downloaded "Lossless Scaling.zip" file
+---
 
 ## How to Use
 
-1. **Purchase and install** [Lossless Scaling](https://store.steampowered.com/app/993090/Lossless_Scaling/) from Steam
-2. **Open the plugin** from the Decky menu
-3. **Click "Install lsfg-vk"** to automatically set up the lsfg-vk vulkan layer
-4. **Configure settings** using the plugin's UI - adjust FPS multiplier, flow scale, performance mode, HDR settings, and experimental features
-5. **Apply launch option** to games you want to use frame generation with:
-   - Add `~/lsfg %command%` to your game's launch options in Steam Properties
-   - Or use the "Launch Option Clipboard" button in the plugin to copy the command
-6. **Launch your game** - frame generation will activate automatically using your plugin configuration
+1.  **Purchase and install Lossless Scaling:**  Get the Lossless Scaling application from the [Steam store](https://store.steampowered.com/app/993090/Lossless_Scaling/).
+2.  **Open the plugin:** Access it from the Decky Loader menu.
+3.  **Install lsfg-vk:** Click "Install lsfg-vk" within the plugin.
+4.  **Configure Settings:** Adjust FPS multiplier, flow scale, and other settings in the UI.
+5.  **Apply Launch Option:** Add `~/lsfg %command%` to your game's launch options.
+6.  **Launch Your Game:** Frame generation will activate automatically using your chosen configuration.
 
-**Note**: Configuration changes are applied in real-time and will take effect immediately without restarting your game.
-
-## Configuration Options
-
-The plugin provides several configuration options to optimize frame generation for your games:
-
-### Core Settings
-- **FPS Multiplier**: Choose between 2x, 3x, or 4x frame generation
-- **Flow Scale**: Adjust motion estimation quality (lower = better performance, higher = better quality)
-- **Performance Mode**: Uses a lighter processing model - recommended for most games
-- **HDR Mode**: Enable for games that support HDR output
-
-### Experimental Features
-- **Present Mode Override**: Force specific Vulkan presentation modes for compatibility
-- **Base FPS Limit**: Set a base framerate cap before the multiplier is applied (useful for DirectX games)
-
-All settings (except base FPS limit) are saved automatically and can be changed while games are running.
-
-## Feedback and Support
-
-For per-game feedback and community support, please join the [Decky Lossless Discord Channel](https://discord.gg/TwvHdVucC3)
+---
 
 ## Troubleshooting
 
-**Frame generation not working?**
-- Ensure you've added `LSFG_PROCESS=decky-lsfg-vk %command%` to your game's launch options
-- Check that the Lossless Scaling DLL was detected correctly in the plugin
-- Try enabling Performance Mode if you're experiencing crashes
-- Make sure your game is running in fullscreen mode for best results
+*   **Frame Generation Not Working?**
+    *   Ensure you've added the correct launch option: `~/lsfg %command%`
+    *   Verify that the Lossless Scaling DLL was detected correctly.
+    *   Try enabling Performance Mode.
+    *   Ensure the game is running in fullscreen mode.
+*   **Performance Issues?**
+    *   Lower the "Flow Scale" setting.
+    *   Enable "Performance Mode."
+    *   Reduce the FPS multiplier (e.g., from 4x to 2x or 3x).
+    *   Consider using the experimental FPS limit feature.
 
-**Performance issues?**
-- Lower the Flow Scale setting for better performance
-- Enable Performance Mode (recommended for most games)
-- Try reducing the FPS multiplier from 4x to 2x or 3x
-- Consider using the experimental FPS limit feature for DirectX games
+---
 
-## What it does
+## Feedback and Support
 
-The plugin:
-- Automatically downloads and installs the latest lsfg-vk Vulkan layer to `~/.local/lib/`
-- Configures the Vulkan layer in `~/.local/share/vulkan/implicit_layer.d/`
-- Creates a TOML configuration file in `~/.config/lsfg-vk/conf.toml` with your settings
-- Automatically detects your Lossless Scaling DLL installation
-- Provides an easy-to-use interface to configure frame generation settings:
-  - **FPS Multiplier**: Choose 2x, 3x, or 4x frame generation
-  - **Flow Scale**: Adjust motion estimation quality vs performance
-  - **Performance Mode**: Use lighter processing for better performance
-  - **HDR Mode**: Enable for HDR-compatible games
-  - **Experimental Features**: Override present mode and set FPS limits
-- **Hot-reloading**: Configuration changes apply immediately without restarting games
-- Easy uninstallation that removes all installed files when no longer needed
+Join the [Decky Lossless Discord Channel](https://discord.gg/TwvHdVucC3) for community support and game-specific feedback.
 
-## Credits
-
-- **[PancakeTAS](https://github.com/PancakeTAS/lsfg-vk)** for creating the lsfg-vk Vulkan compatibility layer
-- **[Lossless Scaling](https://store.steampowered.com/app/993090/Lossless_Scaling/)** developers for the original frame generation technology
-- **[Deck Wizard](https://www.youtube.com/@DeckWizard)** for the helpful video tutorial
-- The **Decky Loader** team for the plugin framework
-- Community contributors and testers for feedback and bug reports
+---

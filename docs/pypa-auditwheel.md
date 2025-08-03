@@ -1,155 +1,64 @@
-auditwheel
-==========
+# auditwheel: Audit and Repair Linux Wheels for Maximum Compatibility
 
-.. image:: https://travis-ci.org/pypa/auditwheel.svg?branch=main
-    :target: https://travis-ci.org/pypa/auditwheel
-.. image:: https://badge.fury.io/py/auditwheel.svg
-    :target: https://pypi.org/project/auditwheel
-.. image:: https://pepy.tech/badge/auditwheel/month
-    :target: https://pepy.tech/project/auditwheel/month
+**auditwheel** is your go-to command-line tool for ensuring Python wheel packages containing compiled extensions are compatible across a wide range of Linux distributions.  Learn more and contribute at the [original repository](https://github.com/pypa/auditwheel).
 
-Auditing and relabeling of `PEP 600 manylinux_x_y
-<https://www.python.org/dev/peps/pep-0600/>`_, `PEP 513 manylinux1
-<https://www.python.org/dev/peps/pep-0513/>`_, `PEP 571 manylinux2010
-<https://www.python.org/dev/peps/pep-0571/>`_ and `PEP 599 manylinux2014
-<https://www.python.org/dev/peps/pep-0599/>`_ Linux wheels.
+## Key Features
 
-Overview
---------
+*   **Auditing:** Identifies external shared library dependencies and versioned symbols within your wheel packages, ensuring they meet the `manylinux` standards (PEP 600, PEP 513, PEP 571, and PEP 599).
+*   **Repairing:** Copies required external shared libraries into the wheel and modifies `RPATH` entries to ensure they are found at runtime, increasing compatibility without requiring changes to your build process.
+*   **Platform Tagging:**  Updates wheel filename tags to reflect manylinux compliance (e.g., `manylinux1_x86_64`).
+*   **Easy Installation:** Install with pip: `pip3 install auditwheel`
+*   **Broad Compatibility:** Supports ELF-based Linux systems.
 
-``auditwheel`` is a command line tool to facilitate the creation of Python
-`wheel packages <http://pythonwheels.com/>`_ for Linux (containing pre-compiled
-binary extensions) that are compatible with a wide variety of Linux distributions,
-consistent with the `PEP 600 manylinux_x_y
-<https://www.python.org/dev/peps/pep-0600/>`_, `PEP 513 manylinux1
-<https://www.python.org/dev/peps/pep-0513/>`_, `PEP 571 manylinux2010
-<https://www.python.org/dev/peps/pep-0571/>`_ and `PEP 599 manylinux2014
-<https://www.python.org/dev/peps/pep-0599/>`_ platform tags.
+## Overview
 
-``auditwheel show``: shows external shared libraries that the wheel depends on
-(beyond the libraries included in the ``manylinux`` policies), and
-checks the extension modules for the use of versioned symbols that exceed
-the ``manylinux`` ABI.
+`auditwheel` helps you create Python wheel packages that are compatible with a broad range of Linux distributions.  It achieves this by:
 
-``auditwheel repair``: copies these external shared libraries into the wheel itself,
-and automatically modifies the appropriate ``RPATH`` entries such that these libraries
-will be picked up at runtime. This accomplishes a similar result as if the libraries had
-been statically linked without requiring changes to the build system. Packagers are
-advised that bundling, like static linking, may implicate copyright concerns.
+*   **Inspecting Wheels:**  Using `auditwheel show` to reveal external shared library dependencies and potential compatibility issues, such as the use of versioned symbols exceeding `manylinux` ABI standards.
+*   **Repairing Wheels:**  Using `auditwheel repair` to bundle external shared libraries into the wheel and adjust the `RPATH` entries to ensure they're accessible at runtime. This mimics static linking without the need to change your build setup.
 
-Requirements
-------------
-- OS: Linux
-- Python: 3.9+
-- `patchelf <https://github.com/NixOS/patchelf>`_: 0.14+
+## Requirements
 
-Only systems that use `ELF
-<https://en.wikipedia.org/wiki/Executable_and_Linkable_Format>`_-based linkage
-are supported (this should be essentially every Linux).
+*   **Operating System:** Linux
+*   **Python:** 3.9+
+*   **Dependency:**  `patchelf` (version 0.14 or greater).  Make sure to install [patchelf](https://github.com/NixOS/patchelf) as a prerequisite.
 
-In general, building ``manylinux1`` wheels requires running on a CentOS5
-machine, building ``manylinux2010`` wheels requires running on a CentOS6
-machine, and building ``manylinux2014`` wheels requires running on a CentOS7
-machine, so we recommend using the pre-built manylinux `Docker images
-<https://quay.io/repository/pypa/manylinux1_x86_64>`_, e.g. ::
+## Examples
 
-  $ docker run -i -t -v `pwd`:/io quay.io/pypa/manylinux1_x86_64 /bin/bash
+**Inspect a wheel:**
 
-Installation
-------------
+```bash
+auditwheel show cffi-1.5.0-cp35-cp35m-linux_x86_64.whl
+```
 
-``auditwheel`` can be installed using pip:
+**Repair a wheel:**
 
-.. code:: bash
+```bash
+auditwheel repair cffi-1.5.2-cp35-cp35m-linux_x86_64.whl
+```
 
-  $ pip3 install auditwheel
+## Limitations
 
-Examples
---------
+*   **Dynamic Loading:** `auditwheel` relies on `DT_NEEDED` information.  Dependencies loaded dynamically via `ctypes`, `cffi`, or `dlopen` might be missed.
+*   **glibc/libstdc++ Versioning:**  `auditwheel` cannot fix binaries compiled against overly new versions of `glibc` or `libstdc++`.  Compile on older Linux distributions, such as manylinux Docker images, for best compatibility.
 
-Inspecting a wheel: ::
+## Testing
 
-    $ auditwheel show cffi-1.5.0-cp35-cp35m-linux_x86_64.whl
+The tests can be run using `nox`.
 
-    cffi-1.5.0-cp35-cp35m-linux_x86_64.whl is consistent with the
-    following platform tag: "linux_x86_64".
+Some integration tests require a running and accessible Docker daemon. To update related docker images, run:
 
-    The wheel references the following external versioned symbols in
-    system-provided shared libraries: GLIBC_2.3.
+```bash
+docker pull python:3.9-slim-bookworm
+docker pull quay.io/pypa/manylinux1_x86_64
+docker pull quay.io/pypa/manylinux2010_x86_64
+docker pull quay.io/pypa/manylinux2014_x86_64
+docker pull quay.io/pypa/manylinux_2_28_x86_64
+docker pull quay.io/pypa/manylinux_2_34_x86_64
+docker pull quay.io/pypa/musllinux_1_2_x86_64
+```
+You may also remove these images using `docker rmi`.
 
-    The following external shared libraries are required by the wheel:
-    {
-        "libc.so.6": "/lib64/libc-2.5.so",
-        "libffi.so.5": "/usr/lib64/libffi.so.5.0.6",
-        "libpthread.so.0": "/lib64/libpthread-2.5.so"
-    }
+## Code of Conduct
 
-    In order to achieve the tag platform tag "manylinux1_x86_64" the
-    following shared library dependencies will need to be eliminated:
-
-    libffi.so.5
-
-Repairing a wheel. ::
-
-    $ auditwheel repair cffi-1.5.2-cp35-cp35m-linux_x86_64.whl
-    Repairing cffi-1.5.2-cp35-cp35m-linux_x86_64.whl
-    Grafting: /usr/lib64/libffi.so.5.0.6
-    Setting RPATH: _cffi_backend.cpython-35m-x86_64-linux-gnu.so to "$ORIGIN/.libs_cffi_backend"
-    Previous filename tags: linux_x86_64
-    New filename tags: manylinux1_x86_64
-    Previous WHEEL info tags: cp35-cp35m-linux_x86_64
-    New WHEEL info tags: cp35-cp35m-manylinux1_x86_64
-
-    Fixed-up wheel written to /wheelhouse/cffi-1.5.2-cp35-cp35m-manylinux1_x86_64.whl
-
-
-Limitations
------------
-
-1. ``auditwheel`` uses the `DT_NEEDED <https://en.wikipedia.org/wiki/Direct_binding>`_
-   information (like ``ldd``) from the Python extension modules to determine
-   which system libraries they depend on. Code that dynamically
-   loads libraries at runtime using ``ctypes`` / ``cffi`` (from Python) or
-   ``dlopen`` (from C/C++) doesn't contain this information in a way that can
-   be statically determined, so dependencies that are loaded via those
-   mechanisms will be missed.
-2. There's nothing we can do about "fixing" binaries if they were compiled and
-   linked against a too-recent version of ``libc`` or ``libstdc++``. These
-   libraries (and some others) use symbol versioning for backward
-   compatibility. In general, this means that code that was compiled against an
-   old version of ``glibc`` will run fine on systems with a newer version of
-   ``glibc``, but code what was compiled on a new system won't / might not run
-   on older system.
-
-   So, to compile widely-compatible binaries, you're best off doing the build
-   on an old Linux distribution, such as a manylinux Docker image.
-
-Testing
--------
-
-The tests can be run with ``nox``, which will automatically install
-test dependencies.
-
-Some of the integration tests also require a running and accessible Docker
-daemon. These tests will pull a number of docker images if they are not already
-available on your system, but it won't update existing images.
-To update these images manually, run::
-
-    docker pull python:3.9-slim-bookworm
-    docker pull quay.io/pypa/manylinux1_x86_64
-    docker pull quay.io/pypa/manylinux2010_x86_64
-    docker pull quay.io/pypa/manylinux2014_x86_64
-    docker pull quay.io/pypa/manylinux_2_28_x86_64
-    docker pull quay.io/pypa/manylinux_2_34_x86_64
-    docker pull quay.io/pypa/musllinux_1_2_x86_64
-
-You may also remove these images using ``docker rmi``.
-
-Code of Conduct
----------------
-
-Everyone interacting in the ``auditwheel`` project's codebases, issue trackers,
-chat rooms, and mailing lists is expected to follow the
-`PSF Code of Conduct`_.
-
-.. _PSF Code of Conduct: https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md
+Please adhere to the [PSF Code of Conduct](https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md) when interacting with the `auditwheel` project.

@@ -4,30 +4,43 @@
   </a>
 </p>
 
-# LangExtract
+# LangExtract: Extract Structured Data from Unstructured Text with LLMs
+
+**Effortlessly transform raw text into structured data using the power of Large Language Models (LLMs) with LangExtract, a versatile Python library.**
 
 [![PyPI version](https://img.shields.io/pypi/v/langextract.svg)](https://pypi.org/project/langextract/)
 [![GitHub stars](https://img.shields.io/github/stars/google/langextract.svg?style=social&label=Star)](https://github.com/google/langextract)
 ![Tests](https://github.com/google/langextract/actions/workflows/ci.yaml/badge.svg)
 
+**Key Features:**
+
+*   **Precise Source Grounding:** Extracts link extractions to the exact source text for easy verification.
+*   **Consistent, Structured Outputs:** Guarantees reliable results based on your predefined schemas and few-shot examples.
+*   **Optimized for Long Documents:** Handles large documents using chunking, parallel processing, and multi-pass extraction.
+*   **Interactive Visualization:** Generates interactive HTML visualizations to easily review and analyze extracted entities.
+*   **Flexible LLM Support:** Works with both cloud-based LLMs like Gemini and local open-source models via Ollama.
+*   **Domain Agnostic:** Adaptable to any domain with just a few examples, no model fine-tuning required.
+*   **Leverages LLM World Knowledge:** Utilizes prompt wording and few-shot examples to leverage LLM knowledge (accuracy dependent on the model, task complexity, and prompt quality).
+
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Why LangExtract?](#why-langextract)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
-- [API Key Setup for Cloud Models](#api-key-setup-for-cloud-models)
-- [More Examples](#more-examples)
-  - [*Romeo and Juliet* Full Text Extraction](#romeo-and-juliet-full-text-extraction)
-  - [Medication Extraction](#medication-extraction)
-  - [Radiology Report Structuring: RadExtract](#radiology-report-structuring-radextract)
-- [Contributing](#contributing)
-- [Testing](#testing)
-- [Disclaimer](#disclaimer)
+-   [Introduction](#introduction)
+-   [Why LangExtract?](#why-langextract)
+-   [Quick Start](#quick-start)
+-   [Installation](#installation)
+-   [API Key Setup for Cloud Models](#api-key-setup-for-cloud-models)
+-   [More Examples](#more-examples)
+    -   [*Romeo and Juliet* Full Text Extraction](#romeo-and-juliet-full-text-extraction)
+    -   [Medication Extraction](#medication-extraction)
+    -   [Radiology Report Structuring: RadExtract](#radiology-report-structuring-radextract)
+-   [Contributing](#contributing)
+-   [Testing](#testing)
+-   [Troubleshooting](#troubleshooting)
+-   [Disclaimer](#disclaimer)
 
 ## Introduction
 
-LangExtract is a Python library that uses LLMs to extract structured information from unstructured text documents based on user-defined instructions. It processes materials such as clinical notes or reports, identifying and organizing key details while ensuring the extracted data corresponds to the source text.
+LangExtract is a powerful Python library that simplifies extracting structured information from unstructured text documents. It leverages the capabilities of Large Language Models (LLMs) to identify, organize, and extract key details from documents like clinical notes, reports, and more. This allows users to structure their text data with accuracy, precision and ease, with visual feedback on the output data.
 
 ## Why LangExtract?
 
@@ -43,7 +56,7 @@ LangExtract is a Python library that uses LLMs to extract structured information
 
 > **Note:** Using cloud-hosted models like Gemini requires an API key. See the [API Key Setup](#api-key-setup-for-cloud-models) section for instructions on how to get and configure your key.
 
-Extract structured information with just a few lines of code.
+Get started extracting structured information in just a few lines of code.
 
 ### 1. Define Your Extraction Task
 
@@ -111,7 +124,7 @@ The extractions can be saved to a `.jsonl` file, a popular format for working wi
 
 ```python
 # Save the results to a JSONL file
-lx.io.save_annotated_documents([result], output_name="extraction_results.jsonl")
+lx.io.save_annotated_documents([result], output_name="extraction_results.jsonl", output_dir=".")
 
 # Generate the visualization from the file
 html_content = lx.visualize("extraction_results.jsonl")
@@ -165,7 +178,6 @@ pip install langextract
 LangExtract uses modern Python packaging with `pyproject.toml` for dependency management:
 
 *Installing with `-e` puts the package in development mode, allowing you to modify the code without reinstalling.*
-
 
 ```bash
 git clone https://github.com/google/langextract.git
@@ -252,7 +264,7 @@ result = lx.extract(
 
 ## More Examples
 
-Additional examples of LangExtract in action:
+Explore the power of LangExtract with these additional examples:
 
 ### *Romeo and Juliet* Full Text Extraction
 

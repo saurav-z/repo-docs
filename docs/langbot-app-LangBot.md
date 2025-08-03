@@ -1,3 +1,6 @@
+# LangBot: The Open-Source LLM-Powered IM Bot Platform
+
+**LangBot** is an open-source platform designed to simplify the creation of large language model (LLM)-powered instant messaging (IM) bots, offering a seamless, out-of-the-box experience.  ([Visit the original repo](https://github.com/langbot-app/LangBot))
 
 <p align="center">
 <a href="https://langbot.app">
@@ -25,11 +28,23 @@
 
 </p>
 
-LangBot 是一个开源的大语言模型原生即时通信机器人开发平台，旨在提供开箱即用的 IM 机器人开发体验，具有 Agent、RAG、MCP 等多种 LLM 应用功能，适配全球主流即时通信平台，并提供丰富的 API 接口，支持自定义开发。
+## Key Features
 
-## 📦 开始使用
+*   **Versatile LLM Applications:** Supports Agent, RAG (Retrieval-Augmented Generation), and MCP (Model Context Protocol) functionalities, offering diverse LLM applications.
+*   **Cross-Platform Compatibility:** Works seamlessly with popular messaging platforms, including QQ, QQ Channels, WeChat, Enterprise WeChat, Feishu, Discord, Telegram, Slack and more.
+*   **Robust and Feature-Rich:** Includes built-in access control, rate limiting, and profanity filtering. Supports multiple deployment options and allows for multi-pipeline configuration for various use cases.
+*   **Extensible Plugin Architecture:** Features a plugin system with event-driven and component-based extension capabilities.  Adapts to the Anthropic MCP protocol and has hundreds of available plugins.
+*   **User-Friendly Web Interface:** Provides a web management panel, allowing you to configure and manage your LangBot instances through a browser, eliminating the need for manual configuration file editing.
+*   **Model Agnostic**: LangBot works with many different LLMs, including OpenAI, DeepSeek, Moonshot, Anthropic, xAI, and others.
 
-#### Docker Compose 部署
+  For a detailed feature list, visit the [documentation](https://docs.langbot.app/zh/insight/features.html).
+  Or, check out the demo environment: https://demo.langbot.dev/
+    *   Login Information: Email: `demo@langbot.app` Password: `langbot123456`
+    *   Note: This is a public environment. Please refrain from entering sensitive information.
+
+## Getting Started
+
+### Docker Compose Deployment
 
 ```bash
 git clone https://github.com/langbot-app/LangBot
@@ -37,104 +52,79 @@ cd LangBot
 docker compose up -d
 ```
 
-访问 http://localhost:5300 即可开始使用。
+Access the bot at http://localhost:5300.
 
-详细文档[Docker 部署](https://docs.langbot.app/zh/deploy/langbot/docker.html)。
+For detailed instructions, see the [Docker deployment documentation](https://docs.langbot.app/zh/deploy/langbot/docker.html).
 
-#### 宝塔面板部署
+### Other Deployment Options
 
-已上架宝塔面板，若您已安装宝塔面板，可以根据[文档](https://docs.langbot.app/zh/deploy/langbot/one-click/bt.html)使用。
+*   **BaoTa Panel:** Available on the BaoTa Panel. Instructions can be found [here](https://docs.langbot.app/zh/deploy/langbot/one-click/bt.html).
+*   **Zeabur Cloud:** Community-contributed Zeabur template. [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/zh-CN/templates/ZKTBDH)
+*   **Railway Cloud:** [![Deploy on Railway](https://railway.com/button.svg)](https://railway.app/template/yRrAyL?referralCode=vogKPF)
+*   **Manual Deployment:** Run the release version. See the [manual deployment documentation](https://docs.langbot.app/zh/deploy/langbot/manual.html).
 
-#### Zeabur 云部署
+## Stay Updated
 
-社区贡献的 Zeabur 模板。
-
-[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/zh-CN/templates/ZKTBDH)
-
-#### Railway 云部署
-
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.app/template/yRrAyL?referralCode=vogKPF)
-
-#### 手动部署
-
-直接使用发行版运行，查看文档[手动部署](https://docs.langbot.app/zh/deploy/langbot/manual.html)。
-
-## 😎 保持更新
-
-点击仓库右上角 Star 和 Watch 按钮，获取最新动态。
+Star and watch the repository to receive the latest updates.
 
 ![star gif](https://docs.langbot.app/star.gif)
 
-## ✨ 特性
+## Messaging Platform Support
 
-- 💬 大模型对话、Agent：支持多种大模型，适配群聊和私聊；具有多轮对话、工具调用、多模态能力，自带 RAG（知识库）实现，并深度适配 [Dify](https://dify.ai)。
-- 🤖 多平台支持：目前支持 QQ、QQ频道、企业微信、个人微信、飞书、Discord、Telegram 等平台。
-- 🛠️ 高稳定性、功能完备：原生支持访问控制、限速、敏感词过滤等机制；配置简单，支持多种部署方式。支持多流水线配置，不同机器人用于不同应用场景。
-- 🧩 插件扩展、活跃社区：支持事件驱动、组件扩展等插件机制；适配 Anthropic [MCP 协议](https://modelcontextprotocol.io/)；目前已有数百个插件。
-- 😻 Web 管理面板：支持通过浏览器管理 LangBot 实例，不再需要手动编写配置文件。
+| Platform          | Status | Notes                                                                                             |
+| ----------------- | ------ | ------------------------------------------------------------------------------------------------- |
+| QQ (Personal)     | ✅     | Private and group chats                                                                             |
+| QQ (Official Bot) | ✅     | Supports Channels, private and group chats                                                          |
+| WeChat            | ✅     |                                                                                                   |
+| Enterprise WeChat | ✅     |                                                                                                   |
+| WeChat Official Account   | ✅     |                                                                                                   |
+| Feishu            | ✅     |                                                                                                   |
+| DingTalk          | ✅     |                                                                                                   |
+| Discord           | ✅     |                                                                                                   |
+| Telegram          | ✅     |                                                                                                   |
+| Slack             | ✅     |                                                                                                   |
 
-详细规格特性请访问[文档](https://docs.langbot.app/zh/insight/features.html)。
+## Large Language Model Support
 
-或访问 demo 环境：https://demo.langbot.dev/  
-  - 登录信息：邮箱：`demo@langbot.app` 密码：`langbot123456`
-  - 注意：仅展示 WebUI 效果，公开环境，请不要在其中填入您的任何敏感信息。
+| Model                                    | Status | Notes                                                            |
+| ---------------------------------------- | ------ | ---------------------------------------------------------------- |
+| [OpenAI](https://platform.openai.com/)   | ✅     | Compatible with any OpenAI API-compatible models.                |
+| [DeepSeek](https://www.deepseek.com/)    | ✅     |                                                                  |
+| [Moonshot](https://www.moonshot.cn/)    | ✅     |                                                                  |
+| [Anthropic](https://www.anthropic.com/)  | ✅     |                                                                  |
+| [xAI](https://x.ai/)    | ✅     |                                                                  |
+| [智谱AI](https://open.bigmodel.cn/)   | ✅     |                                                                  |
+| [优云智算](https://www.compshare.cn/?ytag=GPU_YY-gh_langbot) | ✅     | Large model and GPU resource platform                                                |
+| [PPIO](https://ppinfra.com/user/register?invited_by=QJKFYD&utm_source=github_langbot) | ✅     | Large model and GPU resource platform                                                |
+| [302.AI](https://share.302.ai/SuTG99)  | ✅     | Large model aggregation platform                                                  |
+| [Google Gemini](https://aistudio.google.com/prompts/new_chat)  | ✅     |                                              |
+| [Dify](https://dify.ai)  | ✅     | LLMOps platform                                               |
+| [Ollama](https://ollama.com/)  | ✅     | Local large model running platform                                               |
+| [LMStudio](https://lmstudio.ai/)  | ✅     | Local large model running platform                                               |
+| [GiteeAI](https://ai.gitee.com/)  | ✅     | Large model interface aggregation platform                                               |
+| [SiliconFlow](https://siliconflow.cn/)  | ✅     | Large model aggregation platform                                               |
+| [阿里云百炼](https://bailian.console.aliyun.com/)  | ✅     | Large model aggregation platform, LLMOps platform                                            |
+| [火山方舟](https://console.volcengine.com/ark/region:ark+cn-beijing/model?vendor=Bytedance&view=LIST_VIEW)  | ✅     | Large model aggregation platform, LLMOps platform                                           |
+| [ModelScope](https://modelscope.cn/docs/model-service/API-Inference/intro)  | ✅     | Large model aggregation platform                                           |
+| [MCP](https://modelcontextprotocol.io/) | ✅     | Supports obtaining tools via the MCP protocol.                                      |
 
-### 消息平台
+## TTS Support
 
-| 平台 | 状态 | 备注 |
-| --- | --- | --- |
-| QQ 个人号 | ✅ | QQ 个人号私聊、群聊 |
-| QQ 官方机器人 | ✅ | QQ 官方机器人，支持频道、私聊、群聊 |
-| 微信 | ✅ |  |
-| 企微对外客服 | ✅ |  |
-| 微信公众号 | ✅ |  |
-| 飞书 | ✅ |  |
-| 钉钉 | ✅ |  |
-| Discord | ✅ |  |
-| Telegram | ✅ |  |
-| Slack | ✅ |  |
+| Platform/Model              | Notes                                                                                                   |
+| --------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [FishAudio](https://fish.audio/zh-CN/discovery/)      | [Plugin](https://github.com/the-lazy-me/NewChatVoice)                                              |
+| [海豚 AI](https://www.ttson.cn/?source=thelazy)        | [Plugin](https://github.com/the-lazy-me/NewChatVoice)                                              |
+| [AzureTTS](https://portal.azure.com/) | [Plugin](https://github.com/Ingnaryk/LangBot_AzureTTS)                                              |
 
-### 大模型能力
+## Text-to-Image Support
 
-| 模型 | 状态 | 备注 |
-| --- | --- | --- |
-| [OpenAI](https://platform.openai.com/) | ✅ | 可接入任何 OpenAI 接口格式模型 |
-| [DeepSeek](https://www.deepseek.com/) | ✅ |  |
-| [Moonshot](https://www.moonshot.cn/) | ✅ |  |
-| [Anthropic](https://www.anthropic.com/) | ✅ |  |
-| [xAI](https://x.ai/) | ✅ |  |
-| [智谱AI](https://open.bigmodel.cn/) | ✅ |  |
-| [优云智算](https://www.compshare.cn/?ytag=GPU_YY-gh_langbot) | ✅ | 大模型和 GPU 资源平台 |
-| [PPIO](https://ppinfra.com/user/register?invited_by=QJKFYD&utm_source=github_langbot) | ✅ | 大模型和 GPU 资源平台 |
-| [302.AI](https://share.302.ai/SuTG99) | ✅ | 大模型聚合平台 |
-| [Google Gemini](https://aistudio.google.com/prompts/new_chat) | ✅ | |
-| [Dify](https://dify.ai) | ✅ | LLMOps 平台 |
-| [Ollama](https://ollama.com/) | ✅ | 本地大模型运行平台 |
-| [LMStudio](https://lmstudio.ai/) | ✅ | 本地大模型运行平台 |
-| [GiteeAI](https://ai.gitee.com/) | ✅ | 大模型接口聚合平台 |
-| [SiliconFlow](https://siliconflow.cn/) | ✅ | 大模型聚合平台 |
-| [阿里云百炼](https://bailian.console.aliyun.com/) | ✅ | 大模型聚合平台, LLMOps 平台 |
-| [火山方舟](https://console.volcengine.com/ark/region:ark+cn-beijing/model?vendor=Bytedance&view=LIST_VIEW) | ✅ | 大模型聚合平台, LLMOps 平台 |
-| [ModelScope](https://modelscope.cn/docs/model-service/API-Inference/intro) | ✅ | 大模型聚合平台 |
-| [MCP](https://modelcontextprotocol.io/) | ✅ | 支持通过 MCP 协议获取工具 |
+| Platform/Model    | Notes                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------ |
+| 阿里云百炼          | [Plugin](https://github.com/Thetail001/LangBot_BailianTextToImagePlugin) |
 
-### TTS
+## Community Contributions
 
-| 平台/模型 | 备注 |
-| --- | --- |
-| [FishAudio](https://fish.audio/zh-CN/discovery/) | [插件](https://github.com/the-lazy-me/NewChatVoice) |
-| [海豚 AI](https://www.ttson.cn/?source=thelazy) | [插件](https://github.com/the-lazy-me/NewChatVoice) |
-| [AzureTTS](https://portal.azure.com/) | [插件](https://github.com/Ingnaryk/LangBot_AzureTTS) |
-
-### 文生图
-
-| 平台/模型 | 备注 |
-| --- | --- |
-| 阿里云百炼 | [插件](https://github.com/Thetail001/LangBot_BailianTextToImagePlugin)
-
-## 😘 社区贡献
-
-感谢以下[代码贡献者](https://github.com/langbot-app/LangBot/graphs/contributors)和社区里其他成员对 LangBot 的贡献：
+We appreciate the contributions from our [code contributors](https://github.com/langbot-app/LangBot/graphs/contributors) and the wider community!
 
 <a href="https://github.com/langbot-app/LangBot/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=langbot-app/LangBot" />

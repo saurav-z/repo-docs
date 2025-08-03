@@ -1,53 +1,49 @@
-pytest-asyncio
-==============
+# pytest-asyncio: Seamlessly Test Asynchronous Python Code
 
-.. image:: https://img.shields.io/pypi/v/pytest-asyncio.svg
-    :target: https://pypi.python.org/pypi/pytest-asyncio
-.. image:: https://github.com/pytest-dev/pytest-asyncio/workflows/CI/badge.svg
-    :target: https://github.com/pytest-dev/pytest-asyncio/actions?workflow=CI
-.. image:: https://codecov.io/gh/pytest-dev/pytest-asyncio/branch/main/graph/badge.svg
-    :target: https://codecov.io/gh/pytest-dev/pytest-asyncio
-.. image:: https://img.shields.io/pypi/pyversions/pytest-asyncio.svg
-    :target: https://github.com/pytest-dev/pytest-asyncio
-    :alt: Supported Python versions
-.. image:: https://img.shields.io/badge/Matrix-%23pytest--asyncio-brightgreen
-    :alt: Matrix chat room: #pytest-asyncio
-    :target: https://matrix.to/#/#pytest-asyncio:matrix.org
+Easily test your asynchronous Python code with `pytest-asyncio`, a powerful pytest plugin that simplifies testing asyncio applications. You can find the original source code and more information at [the pytest-asyncio GitHub repository](https://github.com/pytest-dev/pytest-asyncio).
 
-`pytest-asyncio <https://pytest-asyncio.readthedocs.io/en/latest/>`_ is a `pytest <https://docs.pytest.org/en/latest/contents.html>`_ plugin. It facilitates testing of code that uses the `asyncio <https://docs.python.org/3/library/asyncio.html>`_ library.
+## Key Features
 
-Specifically, pytest-asyncio provides support for coroutines as test functions. This allows users to *await* code inside their tests. For example, the following code is executed as a test item by pytest:
+*   **Async Function Support:** Write tests using `async` and `await` directly in your test functions.
+*   **Easy Integration:**  Simply install the plugin and start writing async tests – no complex setup required.
+*   **pytest Compatibility:**  Leverages the familiar and flexible pytest testing framework.
+*   **Coroutine as Test Functions:** Enables the use of coroutines as test functions.
+*   **Clear Assertions:** Use standard `assert` statements within your async tests.
 
-.. code-block:: python
+## Installation
 
-    @pytest.mark.asyncio
-    async def test_some_asyncio_code():
-        res = await library.do_something()
-        assert b"expected result" == res
+Install pytest-asyncio using pip:
 
-More details can be found in the `documentation <https://pytest-asyncio.readthedocs.io/en/latest/>`_.
+```bash
+pip install pytest-asyncio
+```
 
-Note that test classes subclassing the standard `unittest <https://docs.python.org/3/library/unittest.html>`__ library are not supported. Users
-are advised to use `unittest.IsolatedAsyncioTestCase <https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase>`__
-or an async framework such as `asynctest <https://asynctest.readthedocs.io/en/latest>`__.
+pytest will automatically detect and use the plugin after installation.
 
+## Example Usage
 
-pytest-asyncio is available under the `Apache License 2.0 <https://github.com/pytest-dev/pytest-asyncio/blob/main/LICENSE>`_.
+```python
+import pytest
 
+@pytest.mark.asyncio
+async def test_some_asyncio_code():
+    res = await library.do_something()
+    assert b"expected result" == res
+```
 
-Installation
-------------
+##  Important Note:
 
-To install pytest-asyncio, simply:
+pytest-asyncio does not support test classes subclassing the standard `unittest` library.  Consider using `unittest.IsolatedAsyncioTestCase` or an async framework like `asynctest` for these scenarios.
 
-.. code-block:: bash
+## Contributing
 
-    $ pip install pytest-asyncio
+Contributions are welcome! Ensure test coverage remains consistent before submitting a pull request.  Use `tox` to run tests.
 
-This is enough for pytest to pick up pytest-asyncio.
+## License
 
+pytest-asyncio is available under the [Apache License 2.0](https://github.com/pytest-dev/pytest-asyncio/blob/main/LICENSE).
 
-Contributing
-------------
-Contributions are very welcome. Tests can be run with ``tox``, please ensure
-the coverage at least stays the same before you submit a pull request.
+## Additional Resources
+
+*   [Documentation](https://pytest-asyncio.readthedocs.io/en/latest/)
+*   [GitHub Repository](https://github.com/pytest-dev/pytest-asyncio)

@@ -1,25 +1,39 @@
-## cf-speed-dns是什么?
-CloudflareSpeedTest 推送「每5分钟自选优选 IP」获取Cloudflare CDN 延迟和速度最快 IP ！
+# Optimize Your Cloudflare CDN Speed with cf-speed-dns
 
-## cf-speed-dns有哪些功能？
-* CloudflareSpeedTest优选IP，实时更新列表页面。[https://ip.164746.xyz](https://ip.164746.xyz)
-* CloudflareSpeedTest优选IP，Top接口(默认)[https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html)；Top10接口[https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html)。
-* DNSPOD实时域名解析推送，fork 本项目。
-  * Action配置，Actions secrets and variables 添加 DOMAIN(例如：164746.xyz)，SUB_DOMAIN（例如：dns），SECRETID（xxxxx），SECRETKEY（xxxxx），PUSHPLUS_TOKEN（xxxxx）。
-* DNSCF实时域名解析推送，fork 本项目。
-  * Action配置，Actions secrets and variables 添加 CF_API_TOKEN(例如：xxxxx)，CF_ZONE_ID（例如：xxxxx），CF_DNS_NAME（dns.164746.xyz），PUSHPLUS_TOKEN（xxxxx）。
-* 接入PUSHPLUS消息通知。[https://www.pushplus.plus/push1.html](https://www.pushplus.plus/push1.html)
+**Tired of slow website loading times?** `cf-speed-dns` automatically finds and updates the fastest Cloudflare CDN IP addresses, ensuring optimal performance for your website.  ([See the original repository](https://github.com/ZhiXuanWang/cf-speed-dns))
 
-## 接口请求
-```javascript
+## Key Features:
+
+*   **Real-time Cloudflare IP Optimization:** Automatically selects and updates the best-performing Cloudflare IPs every 5 minutes.
+*   **Optimized IP Lists:** Provides access to top-performing IP lists, including:
+    *   [https://ip.164746.xyz](https://ip.164746.xyz) (Real-time updated list)
+    *   [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html) (Top IPs - default)
+    *   [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html) (Top 10 IPs)
+*   **DNSPOD Integration:**  Supports real-time domain name resolution updates via DNSPOD. (Requires configuration of `DOMAIN`, `SUB_DOMAIN`, `SECRETID`, `SECRETKEY`, and optionally `PUSHPLUS_TOKEN` in Actions secrets and variables).
+*   **DNSCF Integration:** Provides support for real-time domain name resolution updates via DNSCF. (Requires configuration of `CF_API_TOKEN`, `CF_ZONE_ID`, `CF_DNS_NAME`, and optionally `PUSHPLUS_TOKEN` in Actions secrets and variables).
+*   **Push Notifications:** Integrates with PUSHPLUS for notification alerts. ([https://www.pushplus.plus/push1.html](https://www.pushplus.plus/push1.html))
+
+## API Endpoint
+
+You can retrieve the optimized IP list via this endpoint:
+
+```bash
 curl 'https://ip.164746.xyz/ipTop.html'
 ```
-## 接口返回
-```javascript
+
+## API Response Example
+
+The API returns a comma-separated list of the top-performing Cloudflare IPs:
+
+```
 104.16.204.6,104.18.103.125
 ```
 
-## 感谢
-[XIU2](https://github.com/XIU2/CloudflareSpeedTest)、[ddgth](https://github.com/ddgth/cf2dns)
-## 广告
+## Acknowledgements
+
+*   [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
+*   [ddgth](https://github.com/ddgth/cf2dns)
+
+## Support
+
 [![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")

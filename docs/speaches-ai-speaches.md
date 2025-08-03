@@ -1,41 +1,42 @@
-> [!NOTE]
-> This project was previously named `faster-whisper-server`. I've decided to change the name from `faster-whisper-server`, as the project has evolved to support more than just ASR.
+# Speaches: Your Open-Source AI Companion for Speech & Audio Processing
 
-# Speaches
+**Tired of the limitations of proprietary speech APIs?** Speaches is an open-source, OpenAI API-compatible server empowering you with streaming transcription, translation, and speech generation, giving you complete control over your audio processing needs.  ([See the original repository](https://github.com/speaches-ai/speaches))
 
-`speaches` is an OpenAI API-compatible server supporting streaming transcription, translation, and speech generation. Speach-to-Text is powered by [faster-whisper](https://github.com/SYSTRAN/faster-whisper) and for Text-to-Speech [piper](https://github.com/rhasspy/piper) and [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M) are used. This project aims to be Ollama, but for TTS/STT models.
+## Key Features:
 
-See the documentation for installation instructions and usage: [speaches.ai](https://speaches.ai/)
-
-## Features:
-
-- OpenAI API compatible. All tools and SDKs that work with OpenAI's API should work with `speaches`.
-- Audio generation (chat completions endpoint) | [OpenAI Documentation](https://platform.openai.com/docs/guides/realtime)
-  - Generate a spoken audio summary of a body of text (text in, audio out)
-  - Perform sentiment analysis on a recording (audio in, text out)
-  - Async speech to speech interactions with a model (audio in, audio out)
-- Streaming support (transcription is sent via SSE as the audio is transcribed. You don't need to wait for the audio to fully be transcribed before receiving it).
-- Dynamic model loading / offloading. Just specify which model you want to use in the request and it will be loaded automatically. It will then be unloaded after a period of inactivity.
-- Text-to-Speech via `kokoro`(Ranked #1 in the [TTS Arena](https://huggingface.co/spaces/Pendrokar/TTS-Spaces-Arena)) and `piper` models.
-- GPU and CPU support.
-- [Deployable via Docker Compose / Docker](https://speaches.ai/installation/)
-- [Realtime API](https://speaches.ai/usage/realtime-api)
-- [Highly configurable](https://speaches.ai/configuration/)
-
-Please create an issue if you find a bug, have a question, or a feature suggestion.
+*   **OpenAI API Compatibility:** Seamlessly integrates with existing tools and SDKs designed for the OpenAI API, making it easy to get started.
+*   **Versatile Audio Generation:**
+    *   Generate spoken audio summaries from text inputs.
+    *   Perform sentiment analysis on audio recordings.
+    *   Enable asynchronous speech-to-speech interactions with AI models.
+*   **Real-Time Streaming:** Receive transcription results via Server-Sent Events (SSE) as audio is processed, eliminating wait times.
+*   **Dynamic Model Management:** Automatically loads and unloads models based on request, optimizing resource usage.
+*   **Text-to-Speech Capabilities:** Utilizes the top-rated `kokoro` (from the [TTS Arena](https://huggingface.co/spaces/Pendrokar/TTS-Spaces-Arena)) and `piper` models for high-quality speech generation.
+*   **GPU & CPU Support:** Optimized to run efficiently on both CPU and GPU hardware.
+*   **Docker Deployment:** Easily deployable using Docker Compose and Docker for streamlined setup.
+*   **Real-time API:** Implement real-time audio processing.
+*   **Highly Configurable:** Fine-tune the server to meet your specific requirements.
 
 ## Demos
 
 ### Realtime API
 
-https://github.com/user-attachments/assets/457a736d-4c29-4b43-984b-05cc4d9995bc
+<img src="https://github.com/user-attachments/assets/457a736d-4c29-4b43-984b-05cc4d9995bc" alt="Realtime API Demo" width="500"/>
 
-(Excuse the breathing lol. Didn't have enough time to record a better demo)
+*(Note: Excuse the audio quality in the demo.)*
 
 ### Streaming Transcription
 
-TODO
+*   [TODO: Streaming Transcription Demo - Coming Soon]
 
 ### Speech Generation
 
-https://github.com/user-attachments/assets/0021acd9-f480-4bc3-904d-831f54c4d45b
+<img src="https://github.com/user-attachments/assets/0021acd9-f480-4bc3-904d-831f54c4d45b" alt="Speech Generation Demo" width="500"/>
+
+## Get Started
+
+Explore the [speaches.ai](https://speaches.ai/) documentation for detailed installation instructions, usage guides, and configuration options.
+
+## Contribute
+
+Encounter a bug, have a question, or want to suggest a new feature? Please open an issue on the [GitHub repository](https://github.com/speaches-ai/speaches).

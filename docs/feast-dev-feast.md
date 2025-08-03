@@ -1,8 +1,6 @@
-<!--Do not modify this file. It is auto-generated from a template (infra/templates/README.md.jinja2)-->
-
 <p align="center">
     <a href="https://feast.dev/">
-      <img src="docs/assets/feast_logo.png" width="550">
+      <img src="docs/assets/feast_logo.png" width="550" alt="Feast Feature Store Logo">
     </a>
 </p>
 <br />
@@ -17,30 +15,26 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue)](https://github.com/feast-dev/feast/blob/master/LICENSE)
 [![GitHub Release](https://img.shields.io/github/v/release/feast-dev/feast.svg?style=flat&sort=semver&color=blue)](https://github.com/feast-dev/feast/releases)
 
+## Feast: The Open-Source Feature Store for Machine Learning
 
-## Join us on Slack!
-👋👋👋 [Come say hi on Slack!](https://communityinviter.com/apps/feastopensource/feast-the-open-source-feature-store)
+Feast (**Fea**ture **St**ore) is an open-source feature store that streamlines the productionization of machine learning by providing a centralized and consistent way to manage, serve, and discover features for both training and real-time inference. [Explore the original repository](https://github.com/feast-dev/feast).
+
+Join us on Slack! 👋👋👋 [Come say hi on Slack!](https://communityinviter.com/apps/feastopensource/feast-the-open-source-feature-store)
 
 [Check out our DeepWiki!](https://deepwiki.com/feast-dev/feast)
 
-## Overview
-<a href="https://trendshift.io/repositories/8046" target="_blank"><img src="https://trendshift.io/api/badge/repositories/8046" alt="feast-dev%2Ffeast | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+## Key Features
 
-Feast (**Fea**ture **St**ore) is an open source feature store for machine learning. Feast is the fastest path to manage existing infrastructure to productionize analytic data for model training and online inference.
-
-
-Feast allows ML platform teams to:
-
-* **Make features consistently available for training and serving** by managing an _offline store_ (to process historical data for scale-out batch scoring or model training), a low-latency _online store_ (to power real-time prediction)_,_ and a battle-tested _feature server_ (to serve pre-computed features online).
-* **Avoid data leakage** by generating point-in-time correct feature sets so data scientists can focus on feature engineering rather than debugging error-prone dataset joining logic. This ensure that future feature values do not leak to models during training.
-* **Decouple ML from data infrastructure** by providing a single data access layer that abstracts feature storage from feature retrieval, ensuring models remain portable as you move from training models to serving models, from batch models to realtime models, and from one data infra system to another.
-
-Please see our [documentation](https://docs.feast.dev/) for more information about the project.
+*   **Consistent Feature Availability:** Manage an offline store for historical data, a low-latency online store for real-time predictions, and a battle-tested feature server for efficient feature serving.
+*   **Data Leakage Prevention:** Generate point-in-time correct feature sets to ensure data scientists can focus on feature engineering without worrying about erroneous data joining.
+*   **Decoupled Infrastructure:** Abstract feature storage and retrieval to maintain model portability across different training and serving environments (batch, real-time), and data infrastructure.
+*   **Feature Discovery and Governance:** Includes an experimental Web UI (Beta release. See [docs](https://docs.feast.dev/reference/alpha-web-ui))
 
 ## 📐 Architecture
+
 ![](docs/assets/feast_marchitecture.png)
 
-The above architecture is the minimal Feast deployment. Want to run the full Feast on Snowflake/GCP/AWS? Click [here](https://docs.feast.dev/how-to-guides/feast-snowflake-gcp-aws).
+Want to run the full Feast on Snowflake/GCP/AWS? Click [here](https://docs.feast.dev/how-to-guides/feast-snowflake-gcp-aws).
 
 ## 🐣 Getting Started
 
@@ -61,7 +55,6 @@ feast apply
 ```
 
 ### 4. Explore your data in the web UI (experimental)
-
 ![Web UI](ui/sample.png)
 ```commandline
 feast ui
@@ -226,7 +219,6 @@ The list below contains the functionality that contributors are planning to deve
   * [x] Feast Web UI (Beta release. See [docs](https://docs.feast.dev/reference/alpha-web-ui))
   * [ ] Feast Lineage Explorer
 
-
 ## 🎓 Important Resources
 
 Please refer to the official documentation at [Documentation](https://docs.feast.dev/)
@@ -237,12 +229,14 @@ Please refer to the official documentation at [Documentation](https://docs.feast
  * [Change Log](https://github.com/feast-dev/feast/blob/master/CHANGELOG.md)
 
 ## 👋 Contributing
+
 Feast is a community project and is still under active development. Please have a look at our contributing and development guides if you want to contribute to the project:
 - [Contribution Process for Feast](https://docs.feast.dev/project/contributing)
 - [Development Guide for Feast](https://docs.feast.dev/project/development-guide)
 - [Development Guide for the Main Feast Repository](./CONTRIBUTING.md)
 
 ## 🌟 GitHub Star History
+
 <p align="center">
 <a href="https://star-history.com/#feast-dev/feast&Date">
  <picture>
@@ -252,7 +246,6 @@ Feast is a community project and is still under active development. Please have 
  </picture>
 </a>
 </p>
-
 
 ## ✨ Contributors
 

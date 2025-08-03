@@ -2,7 +2,7 @@
   <h1 align="center">
     <img src="./assets/screenshot/March7th.png" width="200">
     <br/>
-    March7thAssistant · 三月七小助手
+    March7thAssistant - Your Automated Honkai: Star Rail Companion
   </h1>
   <a href="https://trendshift.io/repositories/3892" target="_blank"><img src="https://trendshift.io/api/badge/repositories/3892" alt="moesnow%2FMarch7thAssistant | Trendshift" style="width: 200px; height: 46px;" width="250" height="46"/></a>
 </div>
@@ -10,9 +10,9 @@
 <br/>
 
 <div align="center">
-  <img alt="" src="https://img.shields.io/badge/platform-Windows-blue?style=flat-square&color=4096d8" />
-  <img alt="" src="https://img.shields.io/github/v/release/moesnow/March7thAssistant?style=flat-square&color=f18cb9" />
-  <img alt="" src="https://img.shields.io/github/downloads/moesnow/March7thAssistant/total?style=flat-square&color=4096d8" />
+  <img alt="Platform: Windows" src="https://img.shields.io/badge/platform-Windows-blue?style=flat-square&color=4096d8" />
+  <img alt="Release Version" src="https://img.shields.io/github/v/release/moesnow/March7thAssistant?style=flat-square&color=f18cb9" />
+  <img alt="Total Downloads" src="https://img.shields.io/github/downloads/moesnow/March7thAssistant/total?style=flat-square&color=4096d8" />
 </div>
 
 <br/>
@@ -21,47 +21,61 @@
 
 **简体中文** | [繁體中文](./README_TW.md) | [English](./README_EN.md)
 
-快速上手，请访问：[使用教程](https://m7a.top/#/assets/docs/Tutorial)
-
-遇到问题，请在提问前查看：[FAQ](https://m7a.top/#/assets/docs/FAQ)
+[Quick Start Tutorial](https://m7a.top/#/assets/docs/Tutorial) | [FAQ](https://m7a.top/#/assets/docs/FAQ)
 
 </div>
 
-## 功能简介
+---
 
-- **日常**：清体力、每日实训、领取奖励、委托、锄大地
-- **周常**：历战余响、模拟宇宙、忘却之庭
-- **抽卡记录导出**：支持 [SRGF](https://uigf.org/zh/standards/SRGF.html) 标准、**自动对话**
-- 每日实训等任务的完成情况支持**消息推送**
-- 任务刷新或体力恢复到指定值后**自动启动**
-- 任务完成后**声音提示、自动关闭游戏或关机等**
+## About March7thAssistant
 
-> 其中模拟宇宙调用的 [Auto_Simulated_Universe](https://github.com/CHNZYX/Auto_Simulated_Universe) 项目，锄大地调用的 [Fhoe-Rail](https://github.com/linruowuyin/Fhoe-Rail) 项目
+**March7thAssistant is a powerful and easy-to-use automation tool designed to streamline your Honkai: Star Rail gameplay on PC, saving you time and effort.** Check out the original repo [here](https://github.com/moesnow/March7thAssistant).
 
-详情见 [配置文件](assets/config/config.example.yaml) 或图形界面设置 ｜🌟喜欢就给个星星吧|･ω･) 🌟｜QQ群 [点击跳转](https://qm.qq.com/q/LpfAkDPlWa) TG群 [点击跳转](https://t.me/+ZgH5zpvFS8o0NGI1)
+---
 
-## 界面展示
+## Key Features
 
-![README](assets/screenshot/README.png)
+*   **Automated Daily Tasks:**
+    *   Clear stamina
+    *   Daily Training
+    *   Claim Rewards
+    *   Commissions
+    *   World Exploration (锄大地)
+*   **Automated Weekly Tasks:**
+    *   Echo of War (历战余响)
+    *   Simulated Universe
+    *   Forgotten Hall
+*   **Automated Actions & Triggers:**
+    *   SRGF standard support for **gacha record export** and **auto-dialogue**.
+    *   **Automated Launch:** Starts tasks automatically upon refresh or stamina recovery to a specific value.
+    *   **Notifications:** Get notified via message push after completing tasks
+    *   **Action completion notification:** Sound alerts, auto-close game or shutdown.
+*   **Customizable and Configurable:**
+    *   Easily adjust settings via a graphical user interface or modify the `config.example.yaml` file.
 
-## 注意事项
+>   This project utilizes [Auto_Simulated_Universe](https://github.com/CHNZYX/Auto_Simulated_Universe) for Simulated Universe automation and [Fhoe-Rail](https://github.com/linruowuyin/Fhoe-Rail) for World Exploration automation.
 
-- 必须使用**PC端** `1920*1080` 分辨率窗口或全屏运行游戏（不支持HDR）
-- 模拟宇宙相关 [项目文档](https://github.com/Night-stars-1/Auto_Simulated_Universe_Docs/blob/docs/docs/guide/index.md)  [Q&A](https://github.com/Night-stars-1/Auto_Simulated_Universe_Docs/blob/docs/docs/guide/qa.md)
-- 需要后台运行或多显示器可以尝试 [远程本地多用户桌面](https://m7a.top/#/assets/docs/Background)
-- 遇到错误请在 [Issue](https://github.com/moesnow/March7thAssistant/issues) 反馈，提问讨论可以在 [Discussions](https://github.com/moesnow/March7thAssistant/discussions) ，群聊随缘看，欢迎 [PR](https://github.com/moesnow/March7thAssistant/pulls)
+## Screenshots
 
-## 下载安装
+![Screenshot of March7thAssistant Interface](assets/screenshot/README.png)
 
-前往 [Releases](https://github.com/moesnow/March7thAssistant/releases/latest) 下载后解压双击三月七图标的 `March7th Launcher.exe` 打开图形界面
+## Important Notes
 
-如果需要使用 **任务计划程序** 定时运行或直接执行 **完整运行**，可以使用终端图标的 `March7th Assistant.exe`
+*   **PC Only:**  Requires a PC running the game at `1920*1080` resolution, either in full-screen or windowed mode (HDR not supported).
+*   **Simulated Universe Documentation:** Find more information in the [Auto_Simulated_Universe Docs](https://github.com/Night-stars-1/Auto_Simulated_Universe_Docs/blob/docs/docs/guide/index.md) and [Q&A](https://github.com/Night-stars-1/Auto_Simulated_Universe_Docs/blob/docs/docs/guide/qa.md).
+*   **Background Execution:**  For background operation and multi-monitor setups, consider using [Remote Desktop](https://m7a.top/#/assets/docs/Background).
+*   **Feedback & Support:** Report issues in the [GitHub Issues](https://github.com/moesnow/March7thAssistant/issues), discuss features or problems in the [Discussions](https://github.com/moesnow/March7thAssistant/discussions), and feel free to submit [Pull Requests](https://github.com/moesnow/March7thAssistant/pulls).
 
-检测更新可以点击图形界面设置最底下的按钮，或双击 `March7th Updater.exe`
+## Installation and Usage
 
-## 源码运行
+1.  **Download:**  Go to the [Releases](https://github.com/moesnow/March7thAssistant/releases/latest) page and download the latest release.
+2.  **Run:** Unzip the downloaded archive and double-click `March7th Launcher.exe` to open the graphical interface.
+3.  **Advanced:** To use the **Task Scheduler** or run the full application directly, use `March7th Assistant.exe`.
+4.  **Updates:** Check for updates by clicking the button at the bottom of the graphical interface, or double-click `March7th Updater.exe`.
 
-如果你是完全不懂的小白，请通过上面的方式下载安装，不用往下看了。
+## Source Code Run (For Developers)
+
+**If you're not a developer, it's recommended to use the download installation method above.**
 
 ```cmd
 # Installation (using venv is recommended)
@@ -77,42 +91,35 @@ git submodule update --init --recursive
 ```
 
 <details>
-<summary>开发相关</summary>
+<summary>Development Notes</summary>
 
-获取 crop 参数表示的裁剪坐标可以通过小助手工具箱内的捕获截图功能
+Use the capture screenshot function in the helper toolbox to get crop parameters.
 
-python main.py 后面支持参数 fight/universe/forgottenhall 等
+You can run `python main.py` with arguments such as `fight/universe/forgottenhall`.
 
 </details>
 
 ---
 
-如果喜欢本项目，可以微信赞赏送作者一杯咖啡☕
+If you enjoy this project, consider supporting the developer with a coffee ☕ (link to sponsor image)
 
-您的支持就是作者开发和维护项目的动力🚀
-
-![sponsor](assets/app/images/sponsor.jpg)
+Your support fuels the development and maintenance of this project!🚀
 
 ---
 
-## 相关项目
+## Related Projects
 
-March7thAssistant 离不开以下开源项目的帮助：
+March7thAssistant relies on these open-source projects:
 
-- 模拟宇宙自动化 [https://github.com/CHNZYX/Auto_Simulated_Universe](https://github.com/CHNZYX/Auto_Simulated_Universe)
-
-- 锄大地自动化 [https://github.com/linruowuyin/Fhoe-Rail](https://github.com/linruowuyin/Fhoe-Rail)
-
-- OCR文字识别 [https://github.com/hiroi-sora/PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)
-
-- 图形界面组件库 [https://github.com/zhiyiYo/PyQt-Fluent-Widgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets)
-
+*   Simulated Universe Automation: [https://github.com/CHNZYX/Auto_Simulated_Universe](https://github.com/CHNZYX/Auto_Simulated_Universe)
+*   World Exploration Automation: [https://github.com/linruowuyin/Fhoe-Rail](https://github.com/linruowuyin/Fhoe-Rail)
+*   OCR (Optical Character Recognition): [https://github.com/hiroi-sora/PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)
+*   GUI Framework: [https://github.com/zhiyiYo/PyQt-Fluent-Widgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets)
 
 ## Contributors
+
 <a href="https://github.com/moesnow/March7thAssistant/graphs/contributors">
-
-  <img src="https://contrib.rocks/image?repo=moesnow/March7thAssistant" />
-
+  <img src="https://contrib.rocks/image?repo=moesnow/March7thAssistant" alt="Contributors" />
 </a>
 
 ## Stargazers over time
