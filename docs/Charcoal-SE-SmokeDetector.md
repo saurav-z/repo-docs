@@ -1,36 +1,57 @@
-# SmokeDetector: Real-Time Spam Detection for Stack Exchange
+# SmokeDetector: Real-time Spam Detection for Stack Exchange
 
-Tired of spam cluttering your Stack Exchange communities? **SmokeDetector is a powerful, open-source chatbot that automatically identifies and reports spam in real-time.** This project is available on [GitHub](https://github.com/Charcoal-SE/SmokeDetector).
+**SmokeDetector** is a powerful, headless chatbot designed to identify and report spam across the Stack Exchange network.  Check out the [original repository](https://github.com/Charcoal-SE/SmokeDetector) for more details.
 
 ## Key Features:
 
-*   **Automated Spam Detection:** Monitors the Stack Exchange real-time feed for suspicious content.
-*   **Real-time Reporting:** Posts detected spam to designated chatrooms for moderator review and action.
-*   **Headless Chatbot:** Operates seamlessly in the background, requiring minimal user interaction.
-*   **Uses ChatExchange:** Leverages the ChatExchange library for efficient communication with chat rooms.
-*   **Open Source:**  Contribute to the project and customize it to meet your community's needs.
+*   **Real-time Spam Detection:** Monitors Stack Exchange's real-time feed to identify potentially malicious content.
+*   **Automated Reporting:** Posts detected spam to designated chatrooms for community review and action.
+*   **Headless Operation:** Runs autonomously, requiring minimal manual intervention.
+*   **Uses Stack Exchange APIs:** Leverages the Stack Exchange API and ChatExchange for data access and chat integration.
+*   **Flexible Setup:** Supports various setup methods, including standard, virtual environment, and Docker for optimized deployment.
 
-## Getting Started
+## Getting Started:
 
-SmokeDetector is designed to be flexible and can be deployed using several methods:
+### Basic Setup:
 
-*   **Basic Setup:** Follow the command-line instructions in the wiki to get the code, install requirements and configure your connection to Stack Exchange.
-*   **Virtual Environment Setup:** Protect your system dependencies and ensure isolation using virtual environments.
-*   **Docker Setup:**  Utilize Docker containers for a streamlined and portable deployment experience. Instructions for building an image and running a container are included in the main README.
-*   **Docker Compose Setup:** Automate deployments with Docker Compose and add constraints like memory and CPU to manage resources.
+1.  Clone the repository: `git clone https://github.com/Charcoal-SE/SmokeDetector.git`
+2.  Navigate to the directory: `cd SmokeDetector`
+3.  Switch to the deploy branch: `git checkout deploy`
+4.  Install dependencies: `sudo pip3 install -r requirements.txt --upgrade`
+5.  Install user requirements: `pip3 install --user -r user_requirements.txt --upgrade`
+6.  Configure: Copy `config.sample` to `config` and fill in the required values.
+7.  Run:  `python3 nocrash.py` (recommended) or `python3 ws.py`
 
-Detailed setup and configuration instructions are available in the [wiki](https://charcoal-se.org/smokey/Set-Up-and-Run-SmokeDetector).
+### Virtual Environment Setup
 
-## Requirements
+1. Clone the repository: `git clone https://github.com/Charcoal-SE/SmokeDetector.git`
+2. Navigate to the directory: `cd SmokeDetector`
+3. Configure user details:
+    `git config user.email "smokey@erwaysoftware.com"`
+    `git config user.name "SmokeDetector"`
+4. Switch to the deploy branch: `git checkout deploy`
+5. Create and activate the environment: `python3 -m venv env`
+6. Install dependencies: `env/bin/pip3 install -r requirements.txt --upgrade`
+7. Install user requirements: `env/bin/pip3 install --user -r user_requirements.txt --upgrade`
+8. Configure: Copy `config.sample` to `config` and fill in the required values.
+9. Run: `env/bin/python3 nocrash.py`
 
-*   **Python:** Supports Python versions in the [supported phase of the Python life cycle](https://devguide.python.org/versions/) (between "First release" and "End of life").
-*   **Stack Exchange Login:** Requires a valid Stack Exchange account.
-*   **Git (Recommended):** Git 1.8 or higher (2.11+ recommended) is required for committing blacklist/watchlist modifications.
+### Docker Setup:
 
-## Blacklist Removal
+1.  **Build the Docker Image:**  Follow the instructions in the original README for building and setting up a container.
+2.  **Configure:** Copy `config.sample` to `config` and populate it with the correct information.
+3.  **Run:** Follow the Docker deployment instructions to start SmokeDetector within your container.
 
-If you are a representative of a website that you would like to have removed from the blacklist, please consult the "[Process for blacklist removal](https://charcoal-se.org/smokey/Process-for-blacklist-removal)" for instructions.
+## Requirements:
 
-## License
+*   Stack Exchange login credentials.
+*   Python 3.7 or higher (matching the Python versions under active development).
+*   Git 1.8 or higher (Git 2.11+ recommended) for blacklist and watchlist modifications.
 
-SmokeDetector is licensed under the Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or <https://www.apache.org/licenses/LICENSE-2.0>) and the MIT license ([LICENSE-MIT](LICENSE-MIT) or <https://opensource.org/licenses/MIT>), at your option.
+## Blacklist Removal Requests:
+
+If you are an official representative of a website and wish to request removal from the blacklist, please see "[Process for blacklist removal](https://charcoal-se.org/smokey/Process-for-blacklist-removal)" for details.
+
+## License:
+
+SmokeDetector is available under the Apache License, Version 2.0, or the MIT license at your option. See [LICENSE-APACHE](LICENSE-APACHE) and [LICENSE-MIT](LICENSE-MIT) for more details.

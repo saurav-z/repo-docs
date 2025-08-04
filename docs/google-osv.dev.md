@@ -2,50 +2,44 @@
 
 # OSV.dev: Open Source Vulnerability Database
 
-**OSV.dev is a comprehensive open-source vulnerability database and platform designed to help developers identify and address security issues in their software dependencies.**  This repository contains the code that powers the OSV.dev platform, providing a central hub for vulnerability information and tools to help you secure your open-source projects. ([Original Repository](https://github.com/google/osv.dev))
+**OSV.dev is a comprehensive, open-source database of vulnerabilities in open-source software, designed to help developers and security professionals identify and mitigate risks.**  ([Visit the original repository](https://github.com/google/osv.dev))
 
 ## Key Features
 
-*   **Comprehensive Vulnerability Database:** Access a vast and growing database of known vulnerabilities affecting open-source software.
-*   **API Access:** Integrate OSV data directly into your security tools and workflows using the OSV API ([API documentation](https://google.github.io/osv.dev/api/)).
-*   **Web UI:** Easily browse and search the OSV database through the user-friendly web interface: <https://osv.dev>.
-*   **Data Dumps:** Download data dumps for offline analysis and integration with your own security systems ([Data dump documentation](https://google.github.io/osv.dev/data/#data-dumps)).
-*   **Dependency Scanning Tool:** Utilize the Go-based OSV scanner ([scanner repository](https://github.com/google/osv-scanner)) to identify vulnerable dependencies in your projects.  This tool supports various formats, including lockfiles, Debian containers, SPDX, CycloneDB SBOMs, and Git repositories.
+*   **Centralized Vulnerability Database:**  A single source of truth for vulnerabilities across various open-source ecosystems.
+*   **Web UI:** User-friendly interface for searching and exploring vulnerability data: <https://osv.dev>
+*   **API Access:**  Programmatic access to vulnerability data for integration with security tools.
+*   **Data Dumps:** Availability of data dumps for offline analysis and integration:  `gs://osv-vulnerabilities` (See [documentation](https://google.github.io/osv.dev/data/#data-dumps))
+*   **Dependency Scanning Tool:** A Go-based scanner to identify vulnerabilities in your dependencies ([osv-scanner](https://github.com/google/osv-scanner)).
+*   **Go-based scanner:**  Scans various lockfiles, Debian Docker containers, SBOMs, and Git repositories.
 
-## Repository Structure
+## Project Structure
 
-This repository contains the infrastructure and code for running the OSV.dev platform on Google Cloud Platform (GCP), organized as follows:
+This repository contains the code that powers [osv.dev](https://osv.dev), including:
 
-*   `deployment/`: Terraform & Cloud Deploy configurations.
-*   `docker/`: Dockerfiles for CI and deployment.
-*   `docs/`: Documentation files (Jekyll for https://google.github.io/osv.dev/).
-*   `gcp/api`: OSV API server files (including local ESP server).
+*   `deployment/`:  Terraform and Cloud Deploy configurations.
+*   `docker/`:  Docker files for CI and deployment.
+*   `docs/`:  Documentation files built with Jekyll.
+*   `gcp/api`:  OSV API server files.
 *   `gcp/datastore`: Datastore index configuration.
-*   `gcp/functions`: Cloud Function for PyPI vulnerability publishing.
+*   `gcp/functions`: Cloud Functions for PyPI vulnerability publishing.
 *   `gcp/indexer`: Version determination indexer.
-*   `gcp/website`: Backend for the OSV.dev web interface.
-*   `gcp/workers/`: Background worker processes for various tasks.
-*   `osv/`: Core OSV Python library.
-*   `tools/`: Development scripts and tools.
-*   `vulnfeeds/`: Go module for NVD CVE conversion.
+*   `gcp/website`:  Backend for the osv.dev web interface.
+*   `gcp/workers/`:  Background workers for bisection, import, and export.
+*   `osv/`:  The core OSV Python library.
+*   `tools/`:  Development scripts and tools.
+*   `vulnfeeds/`:  Go module for vulnerability feed conversions (e.g., NVD, Alpine, Debian).
 
-## Getting Started
-
-To build locally, you may need to check out submodules:
-
-```bash
-git submodule update --init --recursive
-```
+**Important:**  Remember to initialize submodules for local building: `git submodule update --init --recursive`
 
 ## Contributing
 
-We welcome contributions from the community!  Learn more about contributing code, data, and documentation in our [CONTRIBUTING.md](CONTRIBUTING.md) file.  Join the conversation on our [mailing list](https://groups.google.com/g/osv-discuss).
-
-Have questions or suggestions? [Open an issue](https://github.com/google/osv.dev/issues).
+We welcome contributions! Learn more about contributing [code](CONTRIBUTING.md#contributing-code), [data](CONTRIBUTING.md#contributing-data), and [documentation](CONTRIBUTING.md#contributing-documentation).
+Join the discussion on our [mailing list](https://groups.google.com/g/osv-discuss).  Have a question or suggestion?  [Open an issue](https://github.com/google/osv.dev/issues).
 
 ## Third-Party Tools and Integrations
 
-OSV is compatible with a wide range of community-developed tools. Here are some popular options (not supported or endorsed by OSV):
+A vibrant community has built tools and integrations using OSV.  Note that these are community-built and not officially supported by the OSV maintainers.  Consider consulting the [OpenSSF's Concise Guide for Evaluating Open Source Software](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software) to determine their suitability.  Examples include:
 
 *   [Cortex XSOAR](https://github.com/demisto/content)
 *   [dep-scan](https://github.com/AppThreat/dep-scan)

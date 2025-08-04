@@ -1,6 +1,6 @@
-# DataChain: AI-Powered Data Warehousing for Unstructured Data
+# DataChain: Effortlessly Transform and Analyze Unstructured Data
 
-**DataChain** is a Python-based data warehousing solution designed for transforming, analyzing, and versioning unstructured data like images, audio, videos, text, and PDFs. [Visit the original repository on GitHub](https://github.com/iterative/datachain).
+DataChain is a Python-based AI data warehouse that empowers you to efficiently process and analyze unstructured data like images, videos, text, and PDFs.  [Explore the original repository](https://github.com/iterative/datachain).
 
 [![PyPI](https://img.shields.io/pypi/v/datachain.svg)](https://pypi.org/project/datachain/)
 [![Python Version](https://img.shields.io/pypi/pyversions/datachain)](https://pypi.org/project/datachain)
@@ -10,35 +10,41 @@
 
 ## Key Features
 
-*   **Effortless Data Versioning:** Version unstructured data without data duplication by referencing files in S3, GCP, Azure, or local file systems.
-*   **Broad Multimodal Data Support:**  Process images, videos, text, PDFs, JSONs, CSVs, parquet, and more.
-*   **Pythonic Data Manipulation:** Operate on Python objects and object fields using a dataframe-like API with vectorized operations.
-*   **Efficient ETL Pipelines:** Build and run Pythonic data transformation and enrichment pipelines with local AI models and LLM APIs.
-*   **Seamless Metadata Management:** Generate, filter, join, group, and search datasets by metadata.
-*   **Incremental Processing:** Utilize delta and retry features for efficient processing of new or changed files and error handling.
-*   **Scalable Analytics:** Perform high-performance vectorized operations like sum, count, and average on large datasets.
-*   **External Storage Integration:** Process data directly from external storage (e.g., S3) without data duplication.
-*   **LLM Integration:** Easily integrate with LLMs for advanced data processing and analysis.
+*   **Multimodal Data Support & Versioning:**
+    *   Effortlessly version unstructured data (images, video, text, PDFs, JSON, CSV, parquet, etc.) without data duplication, supporting references to S3, GCP, Azure, and local file systems.
+    *   Unite files and metadata into persistent, versioned, columnar datasets.
+*   **Python-Native Integration:**
+    *   Operate directly on Python objects and their fields, including float scores, strings, matrixes, and LLM response objects.
+    *   Run high-scale operations (terabytes of data) with built-in parallelization and efficient memory usage, eliminating the need for SQL or Spark.
+*   **AI-Powered Data Enrichment and Processing:**
+    *   Generate metadata using local AI models and LLM APIs.
+    *   Filter, join, and group datasets by metadata; search by vector embeddings.
+    *   Perform high-performance vectorized operations on Python objects: sum, count, average, etc.
+    *   Seamlessly integrate with PyTorch and TensorFlow, or export data back into storage.
+*   **ETL, Analytics, and Incremental Processing:**
+    *   Pythonic framework for describing and running unstructured data transformations and enrichments.
+    *   DataChain datasets combine all data object information in one place, providing a dataframe-like API and vectorized engine for large-scale analytics.
+    *   Delta and retry features for efficient processing workflows:
+        *   **Delta Processing:** Process only new or changed files/records.
+        *   **Retry Processing:** Automatically reprocess records with errors.
+        *   **Combined Approach:** Process new data and fix errors in a single pipeline.
 
 ## Use Cases
 
-1.  **ETL:** Pythonic framework for describing and running unstructured data transformations and enrichments, applying models to data, including LLMs.
-2.  **Analytics:** DataChain dataset is a table that combines all the information about data objects in one place + it provides dataframe-like API and vectorized engine to do analytics on these tables at scale.
-3.  **Versioning:** DataChain doesn't store, require moving or copying data (unlike DVC). Perfect use case is a bucket with thousands or millions of images, videos, audio, PDFs.
-4.  **Incremental Processing:** DataChain's delta and retry features allow for efficient processing workflows:
-
-    *   **Delta Processing**: Process only new or changed files/records
-    *   **Retry Processing**: Automatically reprocess records with errors or missing results
-    *   **Combined Approach**: Process new data and fix errors in a single pipeline
+1.  **ETL**: Pythonic framework for describing and running unstructured data transformations and enrichments, applying models to data, including LLMs.
+2.  **Analytics**: DataChain datasets combine all data object information in one place, providing a dataframe-like API and vectorized engine for large-scale analytics.
+3.  **Versioning**: Supports versioning of unstructured data without moving or creating data copies, by supporting references to S3, GCP, Azure, and local file systems.
+4.  **Incremental Processing**: Delta and retry features allow for efficient processing workflows.
 
 ## Getting Started
 
-*   Visit the [Quick Start Guide](https://docs.datachain.ai/quick-start) to get started.
-*   Explore the comprehensive [Documentation](https://docs.datachain.ai/) for detailed information.
+Install DataChain using pip:
 
 ```bash
 pip install datachain
 ```
+
+Visit the [Quick Start](https://docs.datachain.ai/quick-start) and [Docs](https://docs.datachain.ai/) for detailed information.
 
 ## Examples
 
@@ -102,12 +108,7 @@ chain = (
 )
 ```
 
-### LLM based text-file evaluation
-
-```shell
-$ pip install mistralai # Requires version >=1.0.0
-$ export MISTRAL_API_KEY=_your_key_
-```
+### LLM-Based Text-File Evaluation
 
 ```python
 import os
@@ -140,7 +141,7 @@ print(f"{successful_chain.count()} files were exported")
 
 ## Community and Support
 
-*   [Documentation](https://docs.datachain.ai/)
+*   [Docs](https://docs.datachain.ai/)
 *   [File an issue](https://github.com/iterative/datachain/issues)
 *   [Discord Chat](https://dvc.org/chat)
 *   [Email](mailto:support@dvc.org)
@@ -148,10 +149,10 @@ print(f"{successful_chain.count()} files were exported")
 
 ## DataChain Studio Platform
 
-`DataChain Studio` is a proprietary solution for teams that offers:
+[DataChain Studio](https://studio.datachain.ai/) is a proprietary solution for teams, offering:
 
--   **Centralized dataset registry** to manage data, code and dependencies in one place.
--   **Data Lineage** for data sources as well as derivative dataset.
--   **UI for Multimodal Data** like images, videos, and PDFs.
--   **Scalable Compute** to handle large datasets (100M+ files) and in-house AI model inference.
--   **Access control** including SSO and team based collaboration.
+*   **Centralized dataset registry** to manage data, code, and dependencies.
+*   **Data Lineage** for data sources and derivative datasets.
+*   **UI for Multimodal Data** like images, videos, and PDFs.
+*   **Scalable Compute** to handle large datasets (100M+ files) and in-house AI model inference.
+*   **Access control** including SSO and team-based collaboration.

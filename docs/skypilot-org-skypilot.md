@@ -21,147 +21,180 @@
   <a href="https://github.com/skypilot-org/skypilot/releases">
     <img alt="Downloads" src="https://img.shields.io/pypi/dm/skypilot">
   </a>
+
 </p>
 
-## SkyPilot: Run Your AI Workloads Anywhere, Easily and Affordably
+<h1 align="center">SkyPilot: Run AI Workloads Anywhere, Faster, and Cheaper</h1>
 
-SkyPilot is an open-source framework that empowers you to run AI and batch workloads across any infrastructure, optimizing for speed, cost, and ease of use.  [**Get started with SkyPilot on GitHub**](https://github.com/skypilot-org/skypilot).
+<div align="center">
 
-### Key Features
+#### [🌟 **SkyPilot Demo** 🌟: Click to see a 1-minute tour](https://demo.skypilot.co/dashboard/)
 
-*   **Unified Infrastructure Management:** Run AI workloads on Kubernetes, AWS, GCP, Azure, and more, all from a single interface.
-*   **Cost Optimization:** Leverage spot instances for up to 6x cost savings, with automatic preemption recovery and intelligent scheduling.
-*   **Simplified Deployment:**  Define your jobs and environments as code, ensuring portability and easy management.
-*   **Automated Resource Provisioning:** SkyPilot handles VM provisioning, auto-retry, and data syncing, saving you valuable time.
-*   **Scalable & Flexible:**  Supports diverse hardware including GPUs, TPUs, and CPUs, enabling you to scale your AI projects.
-*   **Team Collaboration:** Easily manage resources and share them within your team.
+</div>
 
-### What's New?
+---
 
-*   **[July 2025]** Run distributed **RL training for LLMs** with Verl (PPO, GRPO) on any cloud: [**example**](./llm/verl/)
-*   **[July 2025]** 🎉 SkyPilot v0.10.0 released! [**blog post**](https://blog.skypilot.co/announcing-skypilot-0.10.0/), [**release notes**](https://github.com/skypilot-org/skypilot/releases/tag/v0.10.0)
-*   **[July 2025]** Finetune **Llama4** on any distributed cluster/cloud: [**example**](./llm/llama-4-finetuning/)
-*   **[July 2025]** Two-part blog series, `The Evolution of AI Job Orchestration`: (1) [Running AI jobs on GPU Neoclouds](https://blog.skypilot.co/ai-job-orchestration-pt1-gpu-neoclouds/), (2) [The AI-Native Control Plane & Orchestration that Finally Works for ML](https://blog.skypilot.co/ai-job-orchestration-pt2-ai-control-plane/)
-*   **[Apr 2025]** Spin up **Qwen3** on your cluster/cloud: [**example**](./llm/qwen/)
-*   **[Mar 2025]** Run and serve **Google Gemma 3** using SkyPilot [**example**](./llm/gemma3/)
-*   **[Feb 2025]** Prepare and serve **Retrieval Augmented Generation (RAG) with DeepSeek-R1**: [**blog post**](https://blog.skypilot.co/deepseek-rag), [**example**](./llm/rag/)
-*   **[Feb 2025]** Run and serve **DeepSeek-R1 671B** using SkyPilot and SGLang with high throughput: [**example**](./llm/deepseek-r1/)
-*   **[Feb 2025]** Prepare and serve large-scale image search with **vector databases**: [**blog post**](https://blog.skypilot.co/large-scale-vector-database/), [**example**](./examples/vector_database/)
-*   **[Jan 2025]** Launch and serve distilled models from **[DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1)** and **[Janus](https://github.com/deepseek-ai/DeepSeek-Janus)** on Kubernetes or any cloud: [**R1 example**](./llm/deepseek-r1-distilled/) and [**Janus example**](./llm/deepseek-janus/)
-*   **[Oct 2024]** :tada: **SkyPilot crossed 1M+ downloads** :tada:: Thank you to our community! [**Twitter/X**](https://x.com/skypilot_org/status/1844770841718067638)
+## **About SkyPilot**
 
-### LLM Finetuning Cookbooks
+SkyPilot is an open-source framework that empowers you to run AI and batch workloads seamlessly across any cloud, Kubernetes, or on-premise infrastructure, optimizing for speed, cost, and ease of use.  **<a href="https://github.com/skypilot-org/skypilot">Explore the SkyPilot GitHub repository here.</a>**
 
-Finetuning Llama 2 / Llama 3.1 in your own cloud environment, privately: Llama 2 [**example**](./llm/vicuna-llama-2/) and [**blog**](https://blog.skypilot.co/finetuning-llama2-operational-guide/); Llama 3.1 [**example**](./llm/llama-3_1-finetuning/) and [**blog**](https://blog.skypilot.co/finetune-llama-3_1-on-your-infra/)
+## **Key Features**
 
-### Get Started: Installation
+*   **Unified Interface:** Manage your AI tasks with a single, user-friendly interface, simplifying deployments across diverse infrastructure.
+*   **Cloud Agnostic:**  Easily switch between 16+ supported clouds including AWS, GCP, Azure, Kubernetes, and more, avoiding vendor lock-in.
+*   **Cost Optimization:**  Leverage spot instances and intelligent scheduling to significantly reduce cloud costs while maximizing resource availability (3-6x cost savings).
+*   **Simplified Deployment:**  Define your environment and jobs as code for portability, reproducibility, and efficient job management.
+*   **Auto-Scaling and Resilience:** SkyPilot automatically handles resource provisioning, scaling, and failure recovery for robust and reliable workloads.
+
+---
+
+## **What's New**
+
+*   **July 2025:** Run distributed **RL training for LLMs** with Verl (PPO, GRPO) on any cloud: [**example**](./llm/verl/)
+*   **July 2025:** 🎉 SkyPilot v0.10.0 released! [**blog post**](https://blog.skypilot.co/announcing-skypilot-0.10.0/), [**release notes**](https://github.com/skypilot-org/skypilot/releases/tag/v0.10.0)
+*   **July 2025:** Finetune **Llama4** on any distributed cluster/cloud: [**example**](./llm/llama-4-finetuning/)
+*   **July 2025:** Two-part blog series, `The Evolution of AI Job Orchestration`: (1) [Running AI jobs on GPU Neoclouds](https://blog.skypilot.co/ai-job-orchestration-pt1-gpu-neoclouds/), (2) [The AI-Native Control Plane & Orchestration that Finally Works for ML](https://blog.skypilot.co/ai-job-orchestration-pt2-ai-control-plane/)
+*   **Apr 2025:** Spin up **Qwen3** on your cluster/cloud: [**example**](./llm/qwen/)
+*   **Mar 2025:** Run and serve **Google Gemma 3** using SkyPilot [**example**](./llm/gemma3/)
+*   **Feb 2025:** Prepare and serve **Retrieval Augmented Generation (RAG) with DeepSeek-R1**: [**blog post**](https://blog.skypilot.co/deepseek-rag), [**example**](./llm/rag/)
+*   **Feb 2025:** Run and serve **DeepSeek-R1 671B** using SkyPilot and SGLang with high throughput: [**example**](./llm/deepseek-r1/)
+*   **Feb 2025:** Prepare and serve large-scale image search with **vector databases**: [**blog post**](https://blog.skypilot.co/large-scale-vector-database/), [**example**](./examples/vector_database/)
+*   **Jan 2025:** Launch and serve distilled models from **[DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1)** and **[Janus](https://github.com/deepseek-ai/DeepSeek-Janus)** on Kubernetes or any cloud: [**R1 example**](./llm/deepseek-r1-distilled/) and [**Janus example**](./llm/deepseek-janus/)
+*   **Oct 2024:** :tada: **SkyPilot crossed 1M+ downloads** :tada:: Thank you to our community! [**Twitter/X**](https://x.com/skypilot_org/status/1844770841718067638)
+
+**LLM Finetuning Cookbooks:** Finetuning Llama 2 / Llama 3.1 in your own cloud environment, privately: Llama 2 [**example**](./llm/vicuna-llama-2/) and [**blog**](https://blog.skypilot.co/finetuning-llama2-operational-guide/); Llama 3.1 [**example**](./llm/llama-3_1-finetuning/) and [**blog**](https://blog.skypilot.co/finetune-llama-3_1-on-your-infra/)
+
+---
+
+## **Getting Started**
+
+SkyPilot offers a streamlined approach to AI workload management. Key benefits include:
+
+*   **Rapid Compute Provisioning:** Quickly launch compute instances on your preferred infrastructure.
+*   **Environment & Job as Code:** Define your tasks using a simple, portable format (YAML or Python).
+*   **Simplified Job Management:** Easily queue, run, and automatically recover multiple jobs.
+
+### **Installation**
 
 Install SkyPilot using pip:
 
 ```bash
+# Choose your clouds:
 pip install -U "skypilot[kubernetes,aws,gcp,azure,oci,lambda,runpod,fluidstack,paperspace,cudo,ibm,scp,nebius]"
 ```
 
-For the latest features, use the nightly build or install from source:
+For the latest features and fixes, consider the nightly build or install from source:
 
 ```bash
+# Choose your clouds:
 pip install "skypilot-nightly[kubernetes,aws,gcp,azure,oci,lambda,runpod,fluidstack,paperspace,cudo,ibm,scp,nebius]"
 ```
 
-### Example:  Running a PyTorch Training Job
+### **Quickstart**
 
-Here's a quick example demonstrating how to launch a training job with SkyPilot:
+A SkyPilot task defines: resource requirements, data synchronization, setup commands, and the task's primary commands.  These tasks are defined in a **unified interface**  (YAML or Python API), which is launched on any available cloud without vendor lock-in.
 
-1.  **Create a YAML file (`my_task.yaml`)**:
+**Example:**
 
-    ```yaml
-    resources:
-      accelerators: A100:8  # 8x NVIDIA A100 GPU
-    num_nodes: 1  # Number of VMs to launch
-    workdir: ~/torch_examples
-    setup: |
-      cd mnist
-      pip install -r requirements.txt
-    run: |
-      cd mnist
-      python main.py --epochs 1
-    ```
+1.  **Create `my_task.yaml`:**
 
-2.  **Prepare the workdir**:
+```yaml
+resources:
+  accelerators: A100:8  # 8x NVIDIA A100 GPU
 
-    ```bash
-    git clone https://github.com/pytorch/examples.git ~/torch_examples
-    ```
+num_nodes: 1  # Number of VMs to launch
 
-3.  **Launch the task**:
+# Working directory (optional) containing the project codebase.
+# Its contents are synced to ~/sky_workdir/ on the cluster.
+workdir: ~/torch_examples
 
-    ```bash
-    sky launch my_task.yaml
-    ```
+# Commands to be run before executing the job.
+# Typical use: pip install -r requirements.txt, git clone, etc.
+setup: |
+  cd mnist
+  pip install -r requirements.txt
 
-###  SkyPilot in 1 Minute
+# Commands to run as a job.
+# Typical use: launch the main program.
+run: |
+  cd mnist
+  python main.py --epochs 1
+```
 
-*   Define a task specifying resources, data, setup commands, and the job commands.
-*   Launch the task using the unified interface (YAML or Python API).
-*   SkyPilot handles:
-    *   Finding the most cost-effective VM instance.
-    *   Provisioning the VM with auto-failover.
-    *   Syncing your local workdir.
-    *   Running setup and job commands.
+2.  **Prepare the workdir:**
 
-See [Quickstart](https://docs.skypilot.co/en/latest/getting-started/quickstart.html) for a full guide.
+```bash
+git clone https://github.com/pytorch/examples.git ~/torch_examples
+```
 
-### Runnable Examples
+3.  **Launch with `sky launch`:**
 
-Explore a wide range of examples for training, serving, and AI app development:
+```bash
+sky launch my_task.yaml
+```
 
-*   **Training:** PyTorch, DeepSpeed, Finetune Llama 3, NeMo, Ray, Unsloth, Jax/TPU
-*   **Serving:** vLLM, SGLang, Ollama
-*   **Models:** DeepSeek-R1, Llama 3, CodeLlama, Qwen, Mixtral
-*   **AI Apps:** RAG, vector databases (ChromaDB, CLIP)
-*   **Frameworks:** Airflow, Jupyter
+SkyPilot automatically handles:
 
-Find source files and more examples in [`llm/`](https://github.com/skypilot-org/skypilot/tree/master/llm) and [`examples/`](https://github.com/skypilot-org/skypilot/tree/master/examples).
+1.  Finding the most cost-effective VM instance.
+2.  Provisioning the VM, with auto-failover.
+3.  Syncing the local `workdir`.
+4.  Executing `setup` commands.
+5.  Running the task's `run` commands.
 
-### Supported Infrastructure
+See the [Quickstart](https://docs.skypilot.co/en/latest/getting-started/quickstart.html) for a more in-depth guide.
 
-SkyPilot supports a wide range of infrastructure providers:  Kubernetes, AWS, GCP, Azure, OCI, Lambda Cloud, Fluidstack, RunPod, Cudo, Digital Ocean, Paperspace, Cloudflare, Samsung, IBM, Vast.ai, VMware vSphere, Nebius.
+---
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/skypilot-org/skypilot/master/docs/source/images/cloud-logos-dark.png">
-    <img alt="SkyPilot" src="https://raw.githubusercontent.com/skypilot-org/skypilot/master/docs/source/images/cloud-logos-light.png" width=85%>
-  </picture>
-</p>
+## **Runnable Examples**
 
-### Resources
+Explore a wide range of [SkyPilot examples](https://docs.skypilot.co/en/docs-examples/examples/index.html) for development, training, serving, LLM models, and popular AI frameworks.
 
-*   **Documentation:** [SkyPilot Documentation](https://docs.skypilot.co/en/latest/)
-*   **Getting Started:** [Installation](https://docs.skypilot.co/en/latest/getting-started/installation.html), [Quickstart](https://docs.skypilot.co/en/latest/getting-started/quickstart.html)
-*   **CLI Reference:** [CLI Reference](https://docs.skypilot.co/en/latest/reference/cli.html)
-*   **SkyPilot Overview:** [Overview](https://docs.skypilot.co/en/latest/overview.html)
-*   **Sky Computing:** [Concept: Sky Computing](https://docs.skypilot.co/en/latest/sky-computing.html)
-*   **Blog:** [SkyPilot Blog](https://blog.skypilot.co/) ([Introductory blog post](https://blog.skypilot.co/introducing-skypilot/))
+**Featured Examples:**
 
-###  Connect with the Community
+| Task         | Examples                                                                                                                                                                                                                          |
+| :----------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Training     | [PyTorch](https://docs.skypilot.co/en/latest/getting-started/tutorial.html), [DeepSpeed](https://docs.skypilot.co/en/latest/examples/training/deepspeed.html), [Finetune Llama 3](https://docs.skypilot.co/en/latest/examples/training/llama-3_1-finetuning.html), [NeMo](https://docs.skypilot.co/en/latest/examples/training/nemo.html), [Ray](https://docs.skypilot.co/en/latest/examples/training/ray.html), [Unsloth](https://docs.skypilot.co/en/latest/examples/training/unsloth.html), [Jax/TPU](https://docs.skypilot.co/en/latest/examples/training/tpu.html) |
+| Serving      | [vLLM](https://docs.skypilot.co/en/latest/examples/serving/vllm.html), [SGLang](https://docs.skypilot.co/en/latest/examples/serving/sglang.html), [Ollama](https://docs.skypilot.co/en/latest/examples/serving/ollama.html)             |
+| Models       | [DeepSeek-R1](https://docs.skypilot.co/en/latest/examples/models/deepseek-r1.html), [Llama 3](https://docs.skypilot.co/en/latest/examples/models/llama-3.html), [CodeLlama](https://docs.skypilot.co/en/latest/examples/models/codellama.html), [Qwen](https://docs.skypilot.co/en/latest/examples/models/qwen.html), [Mixtral](https://docs.skypilot.co/en/latest/examples/models/mixtral.html)        |
+| AI apps      | [RAG](https://docs.skypilot.co/en/latest/examples/applications/rag.html), [vector databases](https://docs.skypilot.co/en/latest/examples/applications/vector_database.html) (ChromaDB, CLIP)                                                                           |
+| Frameworks   | [Airflow](https://docs.skypilot.co/en/latest/examples/frameworks/airflow.html), [Jupyter](https://docs.skypilot.co/en/latest/examples/frameworks/jupyter.html)                                                                   |
 
-*   **Slack:** [Join SkyPilot Slack](http://slack.skypilot.co)
-*   **X / Twitter:** [SkyPilot on Twitter](https://twitter.com/skypilot_org)
-*   **LinkedIn:** [SkyPilot on LinkedIn](https://www.linkedin.com/company/skypilot-oss/)
+Find source files and more examples in the [`llm/`](https://github.com/skypilot-org/skypilot/tree/master/llm) and [`examples/`](https://github.com/skypilot-org/skypilot/tree/master/examples) directories.
 
-###  Research
+---
 
-*   **SkyPilot Paper:** [SkyPilot paper](https://www.usenix.org/system/files/nsdi23-yang-zongheng.pdf) and [talk](https://www.usenix.org/conference/nsdi23/presentation/yang-zongheng) (NSDI 2023)
-*   **Sky Computing whitepaper:** [Sky Computing whitepaper](https://arxiv.org/abs/2205.07147)
-*   **Sky Computing vision paper:** [Sky Computing vision paper](https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s02-stoica.pdf) (HotOS 2021)
-*   **SkyServe: AI serving across regions and clouds:** [SkyServe: AI serving across regions and clouds](https://arxiv.org/pdf/2411.01438) (EuroSys 2025)
-*   **Managed jobs spot instance policy:** [Managed jobs spot instance policy](https://www.usenix.org/conference/nsdi24/presentation/wu-zhanghao)  (NSDI 2024)
+## **Learn More**
 
-###  Contribute
+*   [SkyPilot Overview](https://docs.skypilot.co/en/latest/overview.html)
+*   [SkyPilot Documentation](https://docs.skypilot.co/en/latest/)
+*   [SkyPilot Blog](https://blog.skypilot.co/)
 
-We welcome contributions!  See [CONTRIBUTING](CONTRIBUTING.md) for guidelines.
+**Community Spotlights:** [Community Spotlights](https://blog.skypilot.co/community/)
 
-###  Questions and Feedback
+**Stay Updated:**
+
+*   [Slack](http://slack.skypilot.co)
+*   [X / Twitter](https://twitter.com/skypilot_org)
+*   [LinkedIn](https://www.linkedin.com/company/skypilot-oss/)
+*   [SkyPilot Blog](https://blog.skypilot.co/) ([Introductory blog post](https://blog.skypilot.co/introducing-skypilot/))
+
+**Research:**
+
+*   [SkyPilot paper](https://www.usenix.org/system/files/nsdi23-yang-zongheng.pdf) and [talk](https://www.usenix.org/conference/nsdi23/presentation/yang-zongheng) (NSDI 2023)
+*   [Sky Computing whitepaper](https://arxiv.org/abs/2205.07147)
+*   [Sky Computing vision paper](https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s02-stoica.pdf) (HotOS 2021)
+*   [SkyServe: AI serving across regions and clouds](https://arxiv.org/pdf/2411.01438) (EuroSys 2025)
+*   [Managed jobs spot instance policy](https://www.usenix.org/conference/nsdi24/presentation/wu-zhanghao)  (NSDI 2024)
+
+SkyPilot was initially started at the [Sky Computing Lab](https://sky.cs.berkeley.edu) at UC Berkeley. See [Concept: Sky Computing](https://docs.skypilot.co/en/latest/sky-computing.html).
+
+---
+
+## **Get Involved**
+
+We welcome your feedback and contributions!
 
 *   **Issues and Feature Requests:** [Open a GitHub issue](https://github.com/skypilot-org/skypilot/issues/new).
 *   **Questions:** Use [GitHub Discussions](https://github.com/skypilot-org/skypilot/discussions).
+*   **General Discussions:** Join the [SkyPilot Slack](http://slack.skypilot.co).
+*   **Contributing:**  See [CONTRIBUTING](CONTRIBUTING.md).

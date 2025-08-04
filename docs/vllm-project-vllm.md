@@ -1,9 +1,4 @@
----
-title: vLLM: Fast and Efficient LLM Inference and Serving - [Project Name]
-description: vLLM is a fast and easy-to-use library for LLM inference and serving, enabling efficient and cost-effective deployment of large language models.
-keywords: vLLM, LLM, large language models, inference, serving, PagedAttention, CUDA, Hugging Face, OpenAI, distributed inference, quantization, model serving
----
-
+<!-- markdownlint-disable MD001 MD041 -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-dark.png">
@@ -11,99 +6,97 @@ keywords: vLLM, LLM, large language models, inference, serving, PagedAttention, 
   </picture>
 </p>
 
-<h2 align="center">vLLM: Revolutionizing LLM Serving for Speed and Efficiency</h2>
+<h1 align="center">vLLM: Fast and Efficient LLM Serving</h1>
 
 <p align="center">
-  <a href="https://docs.vllm.ai"><b>Documentation</b></a> | <a href="https://blog.vllm.ai/"><b>Blog</b></a> | <a href="https://arxiv.org/abs/2309.06180"><b>Paper</b></a> | <a href="https://x.com/vllm_project"><b>Twitter/X</b></a> | <a href="https://discuss.vllm.ai"><b>User Forum</b></a> | <a href="https://slack.vllm.ai"><b>Developer Slack</b></a> |
-  <a href="https://github.com/vllm-project/vllm"><b>GitHub</b></a>
+  <b>Accelerate your Large Language Model (LLM) inference with vLLM, the open-source framework for serving LLMs efficiently and affordably.</b>
+</p>
+
+<p align="center">
+| <a href="https://docs.vllm.ai"><b>Documentation</b></a> | <a href="https://blog.vllm.ai/"><b>Blog</b></a> | <a href="https://arxiv.org/abs/2309.06180"><b>Paper</b></a> | <a href="https://x.com/vllm_project"><b>Twitter/X</b></a> | <a href="https://discuss.vllm.ai"><b>User Forum</b></a> | <a href="https://slack.vllm.ai"><b>Developer Slack</b></a> |
 </p>
 
 ---
 
-vLLM empowers you to serve LLMs faster, cheaper, and easier than ever before.  Developed at UC Berkeley and now a thriving community project, vLLM is engineered for high-performance LLM inference and serving.
+## Key Features
 
-**Key Features of vLLM:**
+vLLM offers a suite of features designed for speed, efficiency, and ease of use.
 
-*   **Blazing Fast Inference:**
-    *   State-of-the-art serving throughput.
-    *   Optimized with PagedAttention for efficient memory management.
-    *   Continuous batching for handling incoming requests.
-    *   Fast model execution with CUDA/HIP graph.
-    *   Speculative Decoding and Chunked Prefill
-*   **Flexible and Easy to Use:**
-    *   Seamless Hugging Face integration.
-    *   Supports various decoding algorithms (parallel sampling, beam search, etc.).
-    *   Distributed inference with tensor, pipeline, data, and expert parallelism.
-    *   Streaming output for real-time results.
-    *   OpenAI-compatible API server.
-    *   Supports NVIDIA, AMD, Intel, PowerPC, TPU, and AWS Neuron.
-    *   Multi-LoRA and Prefix Caching support
-*   **Broad Model Support:**
-    *   Supports most popular open-source models on Hugging Face including:
-        *   Transformer-like LLMs (e.g., Llama)
-        *   Mixture-of-Expert LLMs (e.g., Mixtral, Deepseek-V2 and V3)
-        *   Embedding Models (e.g., E5-Mistral)
-        *   Multi-modal LLMs (e.g., LLaVA)
-        *   Find the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).
-*   **Optimized for Cost Efficiency:**
-    *   Quantization support: GPTQ, AWQ, AutoRound, INT4, INT8, and FP8
+*   🚀 **Blazing-Fast Inference:** State-of-the-art serving throughput with optimized CUDA kernels, including FlashAttention and FlashInfer, and continuous batching of incoming requests.
+*   🧠 **Efficient Memory Management:**  PagedAttention for efficient management of attention key and value memory.
+*   🛠️ **Model Quantization Support:** Optimized for GPTQ, AWQ, AutoRound, INT4, INT8, and FP8 for reduced memory footprint and improved performance.
+*   🤝 **Broad Model Compatibility:**  Seamless integration with popular Hugging Face models, including Transformer-like LLMs, Mixture-of-Experts LLMs, Embedding Models, and Multi-modal LLMs.  [See supported models](https://docs.vllm.ai/en/latest/models/supported_models.html).
+*   ⚙️ **Flexible Serving Options:** High-throughput serving with various decoding algorithms such as parallel sampling, beam search, and more.
+*   💻 **Distributed Inference:** Support for tensor, pipeline, data and expert parallelism.
+*   🌐 **OpenAI-Compatible API:**  Easy integration with existing infrastructure.
+*   🔄 **Streaming and Advanced Features:**  Streaming outputs, speculative decoding, and chunked prefill for enhanced user experience.
+*   ⚙️ **Hardware Support:** Runs on NVIDIA GPUs, AMD CPUs and GPUs, Intel CPUs and GPUs, PowerPC CPUs, TPUs, and AWS Neuron.
+*   💾 **Prefix Caching and Multi-LoRA:** Supports prefix caching and Multi-LoRA for efficient inference with specific use cases.
+
+## About vLLM
+
+vLLM, originally developed at UC Berkeley's Sky Computing Lab, is an open-source project focused on providing a fast and user-friendly solution for Large Language Model (LLM) inference and serving. The project is community-driven, attracting contributions from both academic and industry experts.  [Learn more about vLLM](https://github.com/vllm-project/vllm).
 
 ## Getting Started
 
-Install vLLM easily using pip:
+Quickly install vLLM and start serving your LLMs.
+
+**Installation:**
 
 ```bash
 pip install vllm
 ```
 
-Or build from source: [Build from Source Instructions](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/index.html#build-wheel-from-source).
+For more detailed installation instructions, including building from source, visit the [installation guide](https://docs.vllm.ai/en/latest/getting_started/installation.html) in the documentation.
 
-Explore our comprehensive [documentation](https://docs.vllm.ai/en/latest/) for more in-depth information:
+**Resources:**
 
-*   [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)
+*   [Documentation](https://docs.vllm.ai/en/latest/)
 *   [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)
 *   [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)
 
 ## Contributing
 
-We welcome contributions! Learn how to contribute to the project at: [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html).
+Contribute to the vLLM project and help improve the landscape of efficient LLM serving.  We welcome your contributions!  Check out our [Contributing Guide](https://docs.vllm.ai/en/latest/contributing/index.html) to get started.
 
 ## Sponsors
 
-vLLM is a community project and is supported by many organizations:
+vLLM is supported by a vibrant community and the following organizations:
 
+<!-- Note: Please sort them in alphabetical order. -->
+<!-- Note: Please keep these consistent with docs/community/sponsors.md -->
 **Cash Donations:**
 
-*   a16z
-*   Dropbox
-*   Sequoia Capital
-*   Skywork AI
-*   ZhenFund
+- a16z
+- Dropbox
+- Sequoia Capital
+- Skywork AI
+- ZhenFund
 
 **Compute Resources:**
 
-*   AMD
-*   Anyscale
-*   AWS
-*   Crusoe Cloud
-*   Databricks
-*   DeepInfra
-*   Google Cloud
-*   Intel
-*   Lambda Lab
-*   Nebius
-*   Novita AI
-*   NVIDIA
-*   Replicate
-*   Roblox
-*   RunPod
-*   Trainy
-*   UC Berkeley
-*   UC San Diego
+- AMD
+- Anyscale
+- AWS
+- Crusoe Cloud
+- Databricks
+- DeepInfra
+- Google Cloud
+- Intel
+- Lambda Lab
+- Nebius
+- Novita AI
+- NVIDIA
+- Replicate
+- Roblox
+- RunPod
+- Trainy
+- UC Berkeley
+- UC San Diego
 
 **Slack Sponsor:** Anyscale
 
-Support the project via [OpenCollective](https://opencollective.com/vllm)
+We also have an official fundraising venue through [OpenCollective](https://opencollective.com/vllm). We plan to use the fund to support the development, maintenance, and adoption of vLLM.
 
 ## Citation
 
@@ -128,19 +121,4 @@ If you use vLLM in your research, please cite our paper:
 
 ## Media Kit
 
-Find the vLLM logo and branding assets in the [media kit repo](https://github.com/vllm-project/media-kit).
-```
-Key improvements and SEO optimizations:
-
-*   **Clear Title and Description:**  Includes the target keywords and a concise description optimized for search engines.
-*   **SEO Keywords:** Added relevant keywords in the description to boost search visibility.
-*   **Structured Headings:**  Uses `<h2>` and `<h3>` tags for better readability and SEO.
-*   **Concise Language:**  Improved the phrasing and overall structure of the text.
-*   **Call to Action:**  Highlights the benefits of using vLLM.
-*   **Emphasis on Benefits:** Focused on what users gain (speed, efficiency, cost savings).
-*   **Internal Linking:** Added links to key sections.
-*   **GitHub Link:** Included the link to the original repository.
-*   **Community Focus:** Highlighted that the project is community-driven.
-*   **Clear Structure:** Added a "Key Features" section with a bulleted list for quick understanding.
-*   **Removed Redundancy:** Eliminated repetitive phrases.
-*   **Maintain Original Content:**  Incorporated the original content while improving structure and clarity.
+For using vLLM's logo and other assets, please refer to the [media kit repo](https://github.com/vllm-project/media-kit).

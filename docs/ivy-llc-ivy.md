@@ -16,26 +16,33 @@
         <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://img.shields.io/badge/docs-purple" alt="Documentation"/>
     </a>
     <a href="https://github.com/ivy-llc/ivy/actions/workflows/test-transpiler.yml">
-        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://github.com/ivy-llc/ivy/actions/workflows/test-transpiler.yml/badge.svg" alt="Test Transpiler Status"/>
+        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://github.com/ivy-llc/ivy/actions/workflows/test-transpiler.yml/badge.svg" alt="Test Transpiler Workflow"/>
     </a>
     <a href="https://github.com/ivy-llc/ivy/actions/workflows/integration-tests.yml">
-        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://github.com/ivy-llc/ivy/actions/workflows/integration-tests.yml/badge.svg" alt="Integration Tests Status"/>
+        <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://github.com/ivy-llc/ivy/actions/workflows/integration-tests.yml/badge.svg" alt="Integration Tests Workflow"/>
     </a>
 </div>
 <br clear="all" />
 
 # Ivy: Seamlessly Convert Machine Learning Code Between Frameworks
 
-Ivy empowers you to convert and utilize your machine learning models and code across different frameworks with ease.  Explore the power of framework interoperability with [the original Ivy repository](https://github.com/ivy-llc/ivy).
+Ivy is a powerful library that allows you to effortlessly convert machine learning models and code between popular frameworks, promoting code reusability and flexibility. Check out the original repo [here](https://github.com/ivy-llc/ivy).
 
 ## Key Features
 
-*   **Framework Conversion:** Easily transpile code between popular frameworks.
-*   **Graph Tracing:** Trace and optimize computational graphs for improved performance.
-*   **Broad Framework Support:**  Supports PyTorch, TensorFlow, JAX, and NumPy.
-*   **Easy Installation:**  Install quickly using pip.
-*   **Comprehensive Documentation:**  Access detailed API references and examples.
-*   **Open Source:**  Contribute and collaborate on the project.
+*   **Framework Conversion:** Convert ML code between PyTorch, TensorFlow, JAX, and NumPy.
+*   **Code Portability:**  Easily migrate models and functions across different frameworks.
+*   **Simplified Development:** Reduce the need to rewrite code for each framework.
+*   **Efficient Graph Tracing:** Trace computational graphs for optimized performance.
+
+## Supported Frameworks
+
+| Framework  | Source | Target |
+|------------|:------:|:------:|
+| PyTorch    |   ✅   |   🚧   |
+| TensorFlow |   🚧   |   ✅   |
+| JAX        |   🚧   |   ✅   |
+| NumPy      |   🚧   |   ✅   |
 
 <div style="display: block;" align="center">
     <div>
@@ -64,7 +71,7 @@ Ivy empowers you to convert and utilize your machine learning models and code ac
 
 ## Installation
 
-Get started with Ivy using pip:
+Install Ivy easily using pip:
 
 ```bash
 pip install ivy
@@ -74,7 +81,7 @@ pip install ivy
 <summary><b>From Source</b></summary>
 <br clear="all" />
 
-To install from source, use the following steps:
+For the latest changes, install from source:
 
 ```bash
 git clone https://github.com/ivy-llc/ivy.git
@@ -86,25 +93,12 @@ pip install --user -e .
 
 <br clear="all" />
 
-## Supported Frameworks
+## Usage Examples
 
-Ivy currently supports transpilation to and from these frameworks:
-
-| Framework    | Source | Target |
-|--------------|:------:|:------:|
-| PyTorch      |   ✅   |   🚧   |
-| TensorFlow   |   🚧   |   ✅   |
-| JAX          |   🚧   |   ✅   |
-| NumPy        |   🚧   |   ✅   |
-
-<br clear="all" />
-
-## Getting Started with Ivy
-
-Here are a few examples to demonstrate Ivy's core functionalities:
+Here are examples to get you started. For more use cases, see the [examples page](https://www.docs.ivy.dev/demos/examples_and_demos.html).
 
   <details>
-    <summary><b>Transpiling Code Between Frameworks</b></summary>
+    <summary><b>Transpiling any code from one framework to another</b></summary>
     <br clear="all" />
 
    ```python
@@ -126,7 +120,7 @@ Here are a few examples to demonstrate Ivy's core functionalities:
   </details>
 
   <details>
-    <summary><b>Tracing a Computational Graph</b></summary>
+    <summary><b>Tracing a computational graph of any code</b></summary>
     <br clear="all" />
 
    ```python
@@ -139,27 +133,29 @@ Here are a few examples to demonstrate Ivy's core functionalities:
        return x * a + b
 
    torch_x = torch.tensor([1., 2., 3.])
-   graph = ivy.trace_graph(torch_fn, to="torch", args=(torch_x,))
+   graph = ivy.trace_graph(jax_fn, to="torch", args=(torch_x,))
    ret = graph(torch_x)
    ```
 
    </details>
 
 <details>
-<summary><b>How Ivy Works</b></summary>
+<summary><b>How does ivy work?</b></summary>
 <br clear="all" />
 
-Ivy's transpiler enables you to leverage code from any supported framework within your own projects.  Key functions include:
+Ivy's transpiler allows you to use code from any other framework in your own code.
+Feel free to head over to the docs for the full API
+reference, but the functions you'd most likely want to use are:
 
 ```python
-# Converts framework-specific code to a target framework.
+# Converts framework-specific code to a target framework of choice. See usage in the documentation
 ivy.transpile()
 
-# Traces an efficient graph from a function, removing unnecessary code.
+# Traces an efficient fully-functional graph from a function, removing all wrapping and redundant code. See usage in the documentation
 ivy.trace_graph()
 ```
 
-#### `ivy.transpile` Eager Compilation (Function/Class)
+#### `ivy.transpile` will eagerly transpile if a class or function is provided
 
 ```python
 import ivy
@@ -180,7 +176,7 @@ tf_fn = ivy.transpile(test_fn, source="torch", target="tensorflow")
 ret = tf_fn(x1)
 ```
 
-#### `ivy.transpile` Lazy Compilation (Module/Library)
+#### `ivy.transpile` will lazily transpile if a module (library) is provided
 
 ```python
 import ivy
@@ -204,9 +200,7 @@ ret = tf_kornia.color.rgb_to_grayscale(x2)
 
 ## Contributing
 
-Your contributions are invaluable!  Help us improve Ivy by contributing code, reporting bugs, or providing feedback.
-
-Explore our [Open Tasks](https://docs.ivy.dev/overview/contributing/open_tasks.html) and learn more in the [Contributing Guide](https://docs.ivy.dev/overview/contributing.html).
+Contribute to Ivy by writing code, fixing bugs, or sharing feedback – your contributions are welcome!  Explore the [Open Tasks](https://docs.ivy.dev/overview/contributing/open_tasks.html) and learn more in the [Contributing Guide](https://docs.ivy.dev/overview/contributing.html).
 
 <br clear="all" />
 

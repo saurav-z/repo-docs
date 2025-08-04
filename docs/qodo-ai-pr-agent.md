@@ -5,62 +5,55 @@
   <source media="(prefers-color-scheme: light)" srcset="https://www.qodo.ai/wp-content/uploads/2025/02/PR-Agent-Purple-2.png">
   <img src="https://codium.ai/images/pr_agent/logo-light.png" alt="PR-Agent Logo" width="330">
 </picture>
-<br/>
-<a href="https://github.com/qodo-ai/pr-agent">
-  **PR-Agent: Supercharge Your Pull Request Workflow with AI**
-</a>
-<br/>
+
 </div>
 
-PR-Agent is an AI-powered tool designed to streamline pull request reviews and enhance collaboration for developers, available for [free on GitHub](https://github.com/qodo-ai/pr-agent).
+## PR-Agent: AI-Powered Pull Request Review and Automation
 
----
+**PR-Agent, available on [GitHub](https://github.com/qodo-ai/pr-agent), streamlines your pull request workflow with AI-driven feedback, suggestions, and automation, enhancing code quality and developer productivity.**
 
-**Key Features:**
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-violet)](https://chromewebstore.google.com/detail/qodo-merge-ai-powered-cod/ephlnjeghhogofkifjloamocljapahnl)
+[![Pro App](https://img.shields.io/badge/Pro-App-blue)](https://github.com/apps/qodo-merge-pro/)
+[![Open Source App](https://img.shields.io/badge/OpenSource-App-red)](https://github.com/apps/qodo-merge-pro-for-open-source/)
+[![Discord](https://badgen.net/badge/icon/discord?icon=discord&label&color=purple)](https://discord.com/invite/SgSxuQ65GF)
+<a href="https://github.com/Codium-ai/pr-agent/commits/main">
+<img alt="GitHub" src="https://img.shields.io/github/last-commit/Codium-ai/pr-agent/main?style=for-the-badge" height="20">
+</a>
 
-*   **Automated PR Review:** Get instant feedback and suggestions on your code.
-*   **Multi-Platform Support:** Works with GitHub, GitLab, BitBucket, and Azure DevOps.
-*   **Multiple Usage Options:** Use via CLI, GitHub Action, GitHub App, or Docker.
-*   **Modular Tools:** Customizable tools with a focus on speed and affordability, with rapid response times (~30 seconds).
-*   **Adaptive PR Compression:** PR Compression strategy intelligently handles both short and long pull requests.
-*   **Comprehensive Tools:** Leverage tools for describing, reviewing, improving, and asking questions about your code, plus many more.
-*   **Qodo Merge Integration:** Unlock advanced features and priority support with [Qodo Merge](https://www.qodo.ai/pricing/) (hosted by Qodo, with a free tier for open source).
-*   **Multiple Model Support:** Choose from GPT, Claude, Deepseek, and more.
+### Key Features:
 
----
+*   **Automated Code Review:** Get instant feedback on your code changes.
+*   **AI-Powered Suggestions:** Receive intelligent recommendations for improvement.
+*   **Multiple Git Provider Support:** Works seamlessly with GitHub, GitLab, BitBucket, and Azure DevOps.
+*   **Flexible Integration:** Use it via CLI, GitHub Actions, or as a Chrome extension.
+*   **Qodo Merge Integration:** Access advanced features and priority support through the hosted Qodo Merge platform.
+*   **Customizable Tools:** Configure the `/review` tool and create custom prompts for tailored feedback.
+*   **Efficient and Affordable:** Get quick results with a single LLM call per tool, ensuring fast and cost-effective use.
 
-**Table of Contents**
+## Table of Contents
 
--   [Getting Started](#getting-started)
-    -   [Try It Instantly](#try-it-instantly)
-    -   [GitHub Action](#github-action)
-    -   [Other Platforms](#other-platforms)
-    -   [CLI Usage](#cli-usage)
-    -   [Qodo Merge as post-commit in your local IDE](#qodo-merge-as-post-commit-in-your-local-ide)
-    -   [Discover Qodo Merge 💎](#discover-qodo-merge-)
-    -   [Qodo Merge as a Post-commit in Your Local IDE](#qodo-merge-as-a-post-commit-in-your-local-ide-1)
--   [News and Updates](#news-and-updates)
--   [Why Use PR-Agent?](#why-use-pr-agent)
--   [Features](#features)
--   [See It in Action](#see-it-in-action)
--   [Try It Now](#try-it-now)
--   [Qodo Merge 💎](#qodo-merge-)
--   [How It Works](#how-it-works)
--   [Data Privacy](#data-privacy)
--   [Contributing](#contributing)
--   [Links](#links)
-
----
+*   [Getting Started](#getting-started)
+*   [Features Overview](#features)
+*   [Why Use PR-Agent?](#why-use-pr-agent)
+*   [See It in Action](#see-it-in-action)
+*   [Try It Now](#try-it-now)
+*   [Qodo Merge 💎](#qodo-merge-)
+*   [How It Works](#how-it-works)
+*   [Data Privacy](#data-privacy)
+*   [Contributing](#contributing)
+*   [Links](#links)
 
 ## Getting Started
 
+PR-Agent is designed for easy integration into your workflow.  Choose your preferred method:
+
 ### Try It Instantly
 
-Test PR-Agent on any public GitHub repository by commenting `@CodiumAI-Agent /improve`
+Test PR-Agent on any public GitHub repository by commenting `@CodiumAI-Agent /improve`.
 
 ### GitHub Action
 
-Add automated PR reviews to your repository with a simple workflow file using [GitHub Action setup guide](https://qodo-merge-docs.qodo.ai/installation/github/#run-as-a-github-action)
+Integrate automated PR reviews into your repository with a simple workflow file using our [GitHub Action setup guide](https://qodo-merge-docs.qodo.ai/installation/github/#run-as-a-github-action).
 
 ### Other Platforms
 
@@ -78,66 +71,19 @@ See [here](https://github.com/qodo-ai/agents/tree/main/agents/qodo-merge-post-co
 
 ### Discover Qodo Merge 💎
 
-Zero-setup hosted solution with advanced features and priority support
+Unlock advanced features with Qodo Merge, a zero-setup hosted solution:
 
-*   **[FREE for Open Source](https://github.com/marketplace/qodo-merge-pro-for-open-source)**: Full features, zero cost for public repos
+*   **[FREE for Open Source](https://github.com/marketplace/qodo-merge-pro-for-open-source)**: Access full features at no cost for public repositories.
 *   [Intro and Installation guide](https://qodo-merge-docs.qodo.ai/installation/qodo_merge/)
 *   [Plans & Pricing](https://www.qodo.ai/pricing/)
 
 ### Qodo Merge as a Post-commit in Your Local IDE
 
-You can receive automatic feedback from Qodo Merge on your local IDE after each [commit](https://github.com/qodo-ai/agents/tree/main/agents/qodo-merge-post-commit)
+Receive automatic feedback from Qodo Merge on your local IDE after each [commit](https://github.com/qodo-ai/agents/tree/main/agents/qodo-merge-post-commit)
 
----
+## Features Overview
 
-## News and Updates
-
-**Jul 1, 2025:**
-
-You can now receive automatic feedback from Qodo Merge in your local IDE after each commit. Read more about it [here](https://github.com/qodo-ai/agents/tree/main/agents/qodo-merge-post-commit).
-
-**Jun 21, 2025:**
-
-v0.30 was [released](https://github.com/qodo-ai/pr-agent/releases)
-
-**Jun 3, 2025:**
-
-Qodo Merge now offers a simplified free tier 💎. Organizations can use Qodo Merge at no cost, with a [monthly limit](https://qodo-merge-docs.qodo.ai/installation/qodo_merge/#cloud-users) of 75 PR reviews per organization.
-
-**Apr 30, 2025:**
-
-A new feature is now available in the `/improve` tool for Qodo Merge 💎 - Chat on code suggestions.
-
-<img width="512" alt="image" src="https://codium.ai/images/pr_agent/improve_chat_on_code_suggestions_ask.png" />
-
-Read more about it [here](https://qodo-merge-docs.qodo.ai/tools/improve/#chat-on-code-suggestions).
-
-**Apr 16, 2025:**
-
-New tool for Qodo Merge 💎 - `/scan_repo_discussions`.
-
-<img width="635" alt="image" src="https://codium.ai/images/pr_agent/scan_repo_discussions_2.png" />
-
-Read more about it [here](https://qodo-merge-docs.qodo.ai/tools/scan_repo_discussions/).
-
----
-
-## Why Use PR-Agent?
-
-PR-Agent stands out by focusing on:
-
-*   **Practicality:** Each tool (review, improve, ask, etc.) uses a single LLM call for fast and affordable results.
-*   **Effective PR Handling:** The PR Compression strategy efficiently handles both small and large PRs.
-*   **Customization:** JSON prompting enables modular and customizable tools, configurable via the configuration file.
-*   **Cross-Platform Compatibility:** Works with multiple git providers, usage methods (CLI, GitHub Action, etc.), and models (GPT, Claude, etc.).
-
----
-
-## Features
-
-<div style="text-align:left;">
-
-PR-Agent and Qodo Merge offer comprehensive pull request functionalities integrated with various git providers:
+PR-Agent and Qodo Merge provide a robust suite of tools for pull request management, supporting various git providers:
 
 |                                                         |                                                                                        | GitHub | GitLab | Bitbucket | Azure DevOps | Gitea |
 |---------------------------------------------------------|----------------------------------------------------------------------------------------|:------:|:------:|:---------:|:------------:|:-----:|
@@ -186,109 +132,96 @@ PR-Agent and Qodo Merge offer comprehensive pull request functionalities integra
 |                                                         | [RAG context enrichment](https://qodo-merge-docs.qodo.ai/core-abilities/rag_context_enrichment/)                    |   ✅    |       |    ✅     |              |       |
 |                                                         | [Self reflection](https://qodo-merge-docs.qodo.ai/core-abilities/self_reflection/)                                  |   ✅   |   ✅   |    ✅     |      ✅      |       |
 |                                                         | [Static code analysis](https://qodo-merge-docs.qodo.ai/core-abilities/static_code_analysis/) 💎                     |   ✅   |   ✅   |           |              |       |
-- 💎 means this feature is available only in [Qodo Merge](https://www.qodo.ai/pricing/)
+|                                                         |                                                                                                                     |        |        |           |              |       |
 
-[//]: # (- Support for additional git providers is described in [here]&#40;./docs/Full_environments.md&#41;)
-___
+*💎 denotes features available in Qodo Merge.*
 
----
+## Why Use PR-Agent?
+
+PR-Agent distinguishes itself with:
+
+*   **Practical Use:** Tools are designed for real-world team usage, providing quick and affordable results with a single LLM call.
+*   **PR Compression Strategy:** Effectively handles both short and long pull requests.
+*   **Modular and Customizable:** JSON prompting allows for flexible tool configuration.
+*   **Multi-Platform Support:** Compatible with GitHub, GitLab, BitBucket, and various deployment methods (CLI, GitHub Action, Docker, etc.).
+*   **Multiple Model Support:**  Offers choices of GPT, Claude, Deepseek, and more.
 
 ## See It in Action
 
-<h4><a href="https://github.com/Codium-ai/pr-agent/pull/530">/describe</a></h4>
-<div align="center">
-<p float="center">
-<img src="https://www.codium.ai/images/pr_agent/describe_new_short_main.png" width="512">
-</p>
-</div>
-<hr>
+*   **/describe:**
 
-<h4><a href="https://github.com/Codium-ai/pr-agent/pull/732#issuecomment-1975099151">/review</a></h4>
-<div align="center">
-<p float="center">
-<kbd>
-<img src="https://www.codium.ai/images/pr_agent/review_new_short_main.png" width="512">
-</kbd>
-</p>
-</div>
-<hr>
+    <div align="center">
+    <p float="center">
+    <img src="https://www.codium.ai/images/pr_agent/describe_new_short_main.png" width="512">
+    </p>
+    </div>
+    <hr>
+*   **/review:**
 
-<h4><a href="https://github.com/Codium-ai/pr-agent/pull/732#issuecomment-1975099159">/improve</a></h4>
-<div align="center">
-<p float="center">
-<kbd>
-<img src="https://www.codium.ai/images/pr_agent/improve_new_short_main.png" width="512">
-</kbd>
-</p>
-</div>
+    <div align="center">
+    <p float="center">
+    <kbd>
+    <img src="https://www.codium.ai/images/pr_agent/review_new_short_main.png" width="512">
+    </kbd>
+    </p>
+    </div>
+    <hr>
+*   **/improve:**
 
-<div align="left">
-
-</div>
-<hr>
+    <div align="center">
+    <p float="center">
+    <kbd>
+    <img src="https://www.codium.ai/images/pr_agent/improve_new_short_main.png" width="512">
+    </kbd>
+    </p>
+    </div>
 
 ## Try It Now
 
-Try the Claude Sonnet powered PR-Agent instantly on _your public GitHub repository_. Just mention `@CodiumAI-Agent` and add the desired command in any PR comment. The agent will generate a response based on your command.
-For example, add a comment to any pull request with the following text:
+Use PR-Agent on your public GitHub repository. Simply mention `@CodiumAI-Agent /command` in any PR comment.
+For example,  `@CodiumAI-Agent /review` to get an instant PR review.
 
-```
-@CodiumAI-Agent /review
-```
-
-and the agent will respond with a review of your PR.
-
-Note that this is a promotional bot, suitable only for initial experimentation.
-It does not have 'edit' access to your repo, for example, so it cannot update the PR description or add labels (`@CodiumAI-Agent /describe` will publish PR description as a comment). In addition, the bot cannot be used on private repositories, as it does not have access to the files there.
+*Note:* This is a promotional bot, not suitable for private repositories or editing features (e.g., description or labels).
 
 ---
 
 ## Qodo Merge 💎
 
-[Qodo Merge](https://www.qodo.ai/pricing/) is a hosted version of PR-Agent, provided by Qodo. It is available for a monthly fee, and provides the following benefits:
+Qodo Merge is a fully managed, hosted version of PR-Agent, offering:
 
-1.  **Fully managed** - We take care of everything for you - hosting, models, regular updates, and more. Installation is as simple as signing up and adding the Qodo Merge app to your GitHub/GitLab/BitBucket repo.
-2.  **Improved privacy** - No data will be stored or used to train models. Qodo Merge will employ zero data retention, and will use an OpenAI account with zero data retention.
-3.  **Improved support** - Qodo Merge users will receive priority support, and will be able to request new features and capabilities.
-4.  **Extra features** - In addition to the benefits listed above, Qodo Merge will emphasize more customization, and the usage of static code analysis, in addition to LLM logic, to improve results.
-See [here](https://qodo-merge-docs.qodo.ai/overview/pr_agent_pro/) for a list of features available in Qodo Merge.
-
----
+1.  **Full Management:** We handle hosting, models, and updates. Installation is easy through the Qodo Merge app for GitHub/GitLab/BitBucket.
+2.  **Enhanced Privacy:** No data storage or model training with your data. It uses an OpenAI account with zero data retention.
+3.  **Prioritized Support:** Qodo Merge users receive priority support and can request new features.
+4.  **Advanced Features:** Offers more customization and static code analysis enhancements.
+    Find more features at [Qodo Merge](https://www.qodo.ai/pricing/).
 
 ## How It Works
 
-The following diagram illustrates PR-Agent tools and their flow:
+The PR-Agent architecture is illustrated below:
 
 ![PR-Agent Tools](https://www.qodo.ai/images/pr_agent/diagram-v0.9.png)
 
-Check out the [PR Compression strategy](https://qodo-merge-docs.qodo.ai/core-abilities/#pr-compression-strategy) page for more details on how we convert a code diff to a manageable LLM prompt
-
----
+Learn more about our  [PR Compression strategy](https://qodo-merge-docs.qodo.ai/core-abilities/#pr-compression-strategy) to understand how we process code diffs.
 
 ## Data Privacy
 
 ### Self-hosted PR-Agent
 
-*   If you host PR-Agent with your OpenAI API key, it is between you and OpenAI. You can read their API data privacy policy here:
-    https://openai.com/enterprise-privacy
+*   Data privacy is between you and OpenAI, see their policy: [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy)
 
 ### Qodo-hosted Qodo Merge 💎
 
-*   When using Qodo Merge 💎, hosted by Qodo, we will not store any of your data, nor will we use it for training. You will also benefit from an OpenAI account with zero data retention.
-*   For certain clients, Qodo-hosted Qodo Merge will use Qodo’s proprietary models — if this is the case, you will be notified.
-*   No passive collection of Code and Pull Requests’ data — Qodo Merge will be active only when you invoke it, and it will then extract and analyze only data relevant to the executed command and queried pull request.
+*   No data is stored or used for training. Qodo Merge utilizes an OpenAI account with zero data retention.
+*   Qodo Merge might use Qodo's proprietary models (clients will be notified).
+*   Qodo Merge is active only when you invoke it, extracting and analyzing data specific to the executed command and pull request.
 
 ### Qodo Merge Chrome extension
 
-*   The [Qodo Merge Chrome extension](https://chromewebstore.google.com/detail/qodo-merge-ai-powered-cod/ephlnjeghhogofkifjloamocljapahnl) serves solely to modify the visual appearance of a GitHub PR screen. It does not transmit any user's repo or pull request code. Code is only sent for processing when a user submits a GitHub comment that activates a PR-Agent tool, in accordance with the standard privacy policy of Qodo-Merge.
-
----
+*   The extension modifies the GitHub PR screen's appearance and doesn't transmit code unless activated by a user comment, adhering to Qodo-Merge's standard privacy policy.
 
 ## Contributing
 
-To contribute to the project, get started by reading our [Contributing Guide](https://github.com/qodo-ai/pr-agent/blob/b09eec265ef7d36c232063f76553efb6b53979ff/CONTRIBUTING.md).
-
----
+Contribute by following our [Contributing Guide](https://github.com/qodo-ai/pr-agent/blob/b09eec265ef7d36c232063f76553efb6b53979ff/CONTRIBUTING.md).
 
 ## Links
 

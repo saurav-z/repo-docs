@@ -1,6 +1,6 @@
-# LLaMA Factory: The Ultimate Toolkit for Fine-Tuning Large Language Models
+# LLaMA Factory: Fine-tune any Large Language Model (LLM) with Ease
 
-Fine-tune 100+ large language models with ease, from LLaMA 3 to Qwen and beyond. [Get started with LLaMA Factory on GitHub](https://github.com/hiyouga/LLaMA-Factory)!
+Fine-tune over 100 large language models with ease using LLaMA Factory, a powerful and versatile toolkit for efficient and scalable LLM training. Visit the [original repo](https://github.com/hiyouga/LLaMA-Factory) for more details.
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=social)](https://github.com/hiyouga/LLaMA-Factory/stargazers)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hiyouga/LLaMA-Factory)](https://github.com/hiyouga/LLaMA-Factory/commits/main)
@@ -15,13 +15,13 @@ Fine-tune 100+ large language models with ease, from LLaMA 3 to Qwen and beyond.
 [![GitCode](https://gitcode.com/zhengyaowei/LLaMA-Factory/star/badge.svg)](https://gitcode.com/zhengyaowei/LLaMA-Factory)
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing)
-[![Open in DSW](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory)
+[![Open in DSW](https://gallery.pai-ml.com/assets/open-in-dsw.svg)](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory)
 [![Open in Alaya](assets/alaya_new.svg)](https://docs.alayanew.com/docs/documents/newActivities/llamafactory/?utm_source=LLaMA-Factory)
 [![Open in Spaces](https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/hiyouga/LLaMA-Board)
 [![Open in Studios](https://img.shields.io/badge/ModelScope-Open%20in%20Studios-blue)](https://modelscope.cn/studios/hiyouga/LLaMA-Board)
 [![Open in Novita](https://img.shields.io/badge/Novita-Deploy%20Template-blue)](https://novita.ai/templates-library/105981?sharer=88115474-394e-4bda-968e-b88e123d0c47)
 
-### Used by Amazon, NVIDIA, Aliyun, and More
+### Used by [Amazon](https://aws.amazon.com/cn/blogs/machine-learning/how-apoidea-group-enhances-visual-information-extraction-from-banking-documents-with-multimodal-models-using-llama-factory-on-amazon-sagemaker-hyperpod/), [NVIDIA](https://developer.nvidia.com/rtx/ai-toolkit), [Aliyun](https://help.aliyun.com/zh/pai/use-cases/fine-tune-a-llama-3-model-with-llama-factory), etc.
 
 <div align="center" markdown="1">
 
@@ -37,7 +37,7 @@ Fine-tune 100+ large language models with ease, from LLaMA 3 to Qwen and beyond.
 
 ----
 
-### Fine-tune Large Language Models with Ease: Zero-Code and Web UI
+### Fine-tune models easily with zero-code [CLI](#quickstart) and [Web UI](#fine-tuning-with-llama-board-gui-powered-by-gradio)
 
 ![GitHub Trend](https://trendshift.io/api/badge/repositories/4535)
 
@@ -47,7 +47,7 @@ Fine-tune 100+ large language models with ease, from LLaMA 3 to Qwen and beyond.
 
 \[ English | [中文](README_zh.md) \]
 
-**Easily fine-tune large language models in just a few steps...**
+**Fine-tuning a large language model can be easy as...**
 
 https://github.com/user-attachments/assets/3991a3a8-4276-4d30-9cab-4cb0c4b9b99e
 
@@ -65,14 +65,14 @@ Choose your path:
 
 ## Key Features
 
-*   **Extensive Model Support:** LLaMA, LLaVA, Mistral, Mixtral-MoE, Qwen, Qwen2-VL, DeepSeek, Yi, Gemma, ChatGLM, Phi, and many more!
-*   **Versatile Fine-tuning Methods:** (Continuous) pre-training, (multimodal) supervised fine-tuning, reward modeling, PPO, DPO, KTO, ORPO, and SimPO.
-*   **Efficient Training:** Supports 16-bit full-tuning, freeze-tuning, LoRA, and 2/3/4/5/6/8-bit QLoRA via AQLM/AWQ/GPTQ/LLM.int8/HQQ/EETQ.
-*   **Advanced Algorithms:** GaLore, BAdam, APOLLO, Adam-mini, Muon, DoRA, LongLoRA, LLaMA Pro, Mixture-of-Depths, LoRA+, LoftQ, and PiSSA.
-*   **Performance Optimizations:** FlashAttention-2, Unsloth, Liger Kernel, RoPE scaling, NEFTune and rsLoRA.
-*   **Broad Application Support:** Multi-turn dialogue, tool use, image understanding, visual grounding, video recognition, and audio understanding.
-*   **Monitoring and Visualization:** LlamaBoard, TensorBoard, Wandb, MLflow, [SwanLab](https://github.com/SwanHubX/SwanLab), etc.
-*   **Fast Inference Options:** OpenAI-style API, Gradio UI, and CLI with [vLLM worker](https://github.com/vllm-project/vllm) or [SGLang worker](https://github.com/sgl-project/sglang).
+*   **Wide Model Support:** Fine-tune LLaMA, Mistral, Mixtral-MoE, Qwen, DeepSeek, Gemma, ChatGLM, and many other models.
+*   **Versatile Training Methods:** Supports (pre-)training, (SFT), reward modeling, PPO, DPO, and more.
+*   **Efficient Training:** Leverage 16-bit, freeze-tuning, LoRA, and various quantization techniques like QLoRA to optimize resource usage.
+*   **Advanced Algorithms:** Incorporates cutting-edge algorithms such as GaLore, BAdam, APOLLO, and others.
+*   **Practical Optimizations:** Integrates techniques like FlashAttention-2, Unsloth, and RoPE scaling for improved performance.
+*   **Broad Task Compatibility:** Adaptable to multi-turn dialogue, tool usage, image/video/audio understanding tasks.
+*   **Comprehensive Monitoring:** Provides support for LlamaBoard, TensorBoard, Wandb, and other experiment trackers.
+*   **Fast Inference:** Offers OpenAI-style API, Gradio UI, and CLI with vLLM or SGLang for faster inference.
 
 ### Day-N Support for Fine-Tuning Cutting-Edge Models
 
@@ -233,40 +233,123 @@ Choose your path:
 
 ## Supported Models
 
-| Model                                                             | Model size                       | Template            |
-| ----------------------------------------------------------------- | -------------------------------- | ------------------- |
-| [Baichuan 2](https://huggingface.co/baichuan-inc)                 | 7B/13B                           | baichuan2           |
-| [BLOOM/BLOOMZ](https://huggingface.co/bigscience)                 | 560M/1.1B/1.7B/3B/7.1B/176B      | -                   |
-| [ChatGLM3](https://huggingface.co/THUDM)                          | 6B                               | chatglm3            |
-| [Command R](https://huggingface.co/CohereForAI)                   | 35B/104B                         | cohere              |
-| [DeepSeek (Code/MoE)](https://huggingface.co/deepseek-ai)         | 7B/16B/67B/236B                  | deepseek            |
-| [DeepSeek 2.5/3](https://huggingface.co/deepseek-ai)              | 236B/671B                        | deepseek3           |
-| [DeepSeek R1 (Distill)](https://huggingface.co/deepseek-ai)       | 1.5B/7B/8B/14B/32B/70B/671B      | deepseekr1          |
-| [Falcon](https://huggingface.co/tiiuae)                           | 7B/11B/40B/180B                  | falcon              |
-| [Falcon-H1](https://huggingface.co/tiiuae)                        | 0.5B/1.5B/3B/7B/34B              | falcon_h1           |
-| [Gemma/Gemma 2/CodeGemma](https://huggingface.co/google)          | 2B/7B/9B/27B                     | gemma/gemma2        |
-| [Gemma 3/Gemma 3n](https://huggingface.co/google)                 | 1B/4B/6B/8B/12B/27B              | gemma3/gemma3n      |
-| [GLM-4/GLM-4-0414/GLM-Z1](https://huggingface.co/zai-org)         | 9B/32B                           | glm4/glmz1          |
-| [GLM-4.1V](https://huggingface.co/zai-org)*                       | 9B                               | glm4v               |
-| [GLM-4.5](https://huggingface.co/zai-org)*                        | 106B/355B                        | glm4_moe            |
-| [GPT-2](https://huggingface.co/openai-community)                  | 0.1B/0.4B/0.8B/1.5B              | -                   |
-| [Granite 3.0-3.3](https://huggingface.co/ibm-granite)             | 1B/2B/3B/8B                      | granite3            |
-| [Granite 4](https://huggingface.co/ibm-granite)                   | 7B                               | granite4            |
-| [Hunyuan](https://huggingface.co/tencent/)                        | 7B                               | hunyuan             |
-| [Index](https://huggingface.co/IndexTeam)                         | 1.9B                             | index               |
-| [InternLM 2-3](https://huggingface.co/internlm)                   | 7B/8B/20B                        | intern2             |
-| [InternVL 2.5-3](https://huggingface.co/OpenGVLab)                | 1B/2B/8B/14B/38B/78B             | intern_vl           |
-| [Kimi-VL](https://huggingface.co/moonshotai)                      | 16B                              | kimi_vl             |
-| [Llama](https://github.com/facebookresearch/llama)                | 7B/13B/33B/65B                   | -                   |
-| [Llama 2](https://huggingface.co/meta-llama)                      | 7B/13B/70B                       | llama2              |
-| [Llama 3-3.3](https://huggingface.co/meta-llama)                  | 1B/3B/8B/70B                     | llama3              |
-| [Llama 4](https://huggingface.co/meta-llama)                      | 109B/402B                        | llama4              |
-| [Llama 3.2 Vision](https://huggingface.co/meta-llama)             | 11B/90B                          | mllama              |
-| [LLaVA-1.5](https://huggingface.co/llava-hf)                      | 7B/13B                           | llava               |
-| [LLaVA-NeXT](https://huggingface.co/llava-hf)                     | 7B/8B/13B/34B/72B/110B           | llava_next          |
-| [LLaVA-NeXT-Video](https://huggingface.co/llava-hf)               | 7B/34B                           | llava_next_video    |
-| [MiMo](https://huggingface.co/XiaomiMiMo)                         | 7B                               | mimo                |
-| [MiniCPM](https://huggingface.co/openbmb)                         | 0.5B/1B/2B/4B/8B                 | cpm/cpm3/cpm4       |
-| [MiniCPM-o-2.6/MiniCPM-V-2.6](https://huggingface.co/openbmb)     | 8B                               | minicpm_o/minicpm_v |
-| [Ministral/Mistral-Nemo](https://huggingface.co/mistralai)        | 8B/12B                           | ministral           |
-| [Mistral/Mixtral](https://huggingface.co/mistralai)               | 7B/8x7B/8x22
+*(See the README for a complete list and template information.)*
+
+*   Baichuan 2
+*   BLOOM/BLOOMZ
+*   ChatGLM3
+*   Command R
+*   DeepSeek (Code/MoE)
+*   Falcon
+*   Gemma/Gemma 2
+*   GLM-4/GLM-4.1V/GLM-Z1
+*   GPT-2
+*   Granite 3.0-3.3
+*   Hunyuan
+*   InternLM 2-3
+*   Llama / Llama 2 / Llama 3 / Llama 4
+*   LLaVA-1.5
+*   MiMo
+*   Mistral/Mixtral
+*   Phi-3/Phi-4
+*   Qwen (1-2.5)
+*   Yi/Yi-1.5
+*   Yuan 2
+
+## Supported Training Approaches
+
+| Approach               |     Full-tuning    |    Freeze-tuning   |       LoRA         |       QLoRA        |
+| ---------------------- | ------------------ | ------------------ | ------------------ | ------------------ |
+| Pre-Training           | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Supervised Fine-Tuning | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Reward Modeling        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| PPO Training           | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| DPO Training           | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| KTO Training           | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| ORPO Training          | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| SimPO Training         | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+## Provided Datasets
+
+*(See the README for a complete list.)*
+
+*   Wiki Demo
+*   Stanford Alpaca
+*   BELLE
+*   UltraChat
+*   OpenOrca
+*   MathInstruct
+*   ...and many more.
+
+## Requirement
+
+*(See the README for specific version details.)*
+
+*   Python 3.9+
+*   PyTorch 2.0.0+
+*   Transformers 4.49.0+
+*   Datasets 2.16.0+
+
+## Getting Started
+
+### Installation
+
+```bash
+git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
+cd LLaMA-Factory
+pip install -e ".[torch,metrics]" --no-build-isolation
+```
+
+### Data Preparation
+
+*(Refer to `data/README.md` for dataset format details.)*
+
+### Quickstart
+
+```bash
+llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
+llamafactory-cli chat examples/inference/llama3_lora_sft.yaml
+llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
+```
+
+### Fine-Tuning with LLaMA Board GUI
+
+```bash
+llamafactory-cli webui
+```
+
+### Build Docker
+
+*(See the README for detailed Docker build instructions.)*
+
+### Deploy with OpenAI-style API and vLLM
+
+```bash
+API_PORT=8000 llamafactory-cli api examples/inference/llama3.yaml infer_backend=vllm vllm_enforce_eager=true
+```
+
+## Projects using LLaMA Factory
+
+*(See the README for a list of projects using LLaMA Factory.)*
+
+## License
+
+This project is licensed under the [Apache-2.0 License](LICENSE).
+
+## Citation
+
+```bibtex
+@inproceedings{zheng2024llamafactory,
+  title={LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models},
+  author={Yaowei Zheng and Richong Zhang and Junhao Zhang and Yanhan Ye and Zheyan Luo and Zhangchi Feng and Yongqiang Ma},
+  booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)},
+  address={Bangkok, Thailand},
+  publisher={Association for Computational Linguistics},
+  year={2024},
+  url={http://arxiv.org/abs/2403.13372}
+}
+```
+
+## Acknowledgement
+
+This project is built upon the work of PEFT, TRL, QLoRA, and FastChat.

@@ -20,30 +20,41 @@
 </a>
 </p>
 
-# Biomni: Your AI Assistant for Biomedical Research
+# Biomni: Revolutionizing Biomedical Research with AI
 
-**Biomni is a cutting-edge, general-purpose AI agent designed to revolutionize biomedical research by autonomously executing complex tasks and generating novel hypotheses.** [Explore the original repository](https://github.com/snap-stanford/Biomni).
+**Biomni is a groundbreaking, general-purpose AI agent designed to accelerate biomedical research by automating complex tasks and generating testable hypotheses.** For more details, visit the [original repository](https://github.com/snap-stanford/Biomni).
 
-## Key Features:
+## Key Features
 
-*   **Autonomous Task Execution:** Automates a wide range of research tasks across various biomedical subfields.
-*   **LLM-Powered Reasoning:** Leverages state-of-the-art Large Language Models (LLMs) for intelligent reasoning and planning.
-*   **Retrieval-Augmented Planning:** Enhances accuracy and efficiency through integrated retrieval mechanisms.
-*   **Code-Based Execution:** Executes tasks through generated code, enabling complex analysis and simulations.
-*   **Web Interface:**  Experience Biomni through our user-friendly no-code web interface.
-*   **Open Source & Community Driven:** Biomni is built with open science principles and welcomes community contributions.
-*   **MCP Support:** Supports Model Context Protocol (MCP) servers for seamless external tool integration.
+*   **Autonomous Research Tasks:** Executes a wide range of research tasks across diverse biomedical subfields.
+*   **LLM-Powered Reasoning:** Integrates cutting-edge large language model (LLM) reasoning.
+*   **Retrieval-Augmented Planning:** Utilizes retrieval-augmented planning for enhanced accuracy and context.
+*   **Code-Based Execution:** Leverages code execution for reproducible and scalable results.
+*   **Web Interface:** Access Biomni easily through a no-code web interface at [biomni.stanford.edu](https://biomni.stanford.edu).
+*   **MCP Support:** Supports MCP (Model Context Protocol) servers for external tool integration.
 
-## Getting Started
+## Quick Start
 
 ### Installation
 
-1.  **Environment Setup:** Follow the instructions in the [biomni\_env/README.md](biomni_env/README.md) file to set up the necessary environment.
-2.  **Activate Environment:** Activate the environment using: `conda activate biomni_e1`
-3.  **Install Package:** Install the Biomni package using pip:
-    *   Recommended: `pip install biomni --upgrade`
-    *   Alternative: `pip install git+https://github.com/snap-stanford/Biomni.git@main`
-4.  **Configure API Keys:** Configure your API keys using one of the following methods:
+1.  **Set up the Environment:** Follow the instructions in the [biomni\_env/README.md](biomni_env/README.md) file to set up the software environment.
+2.  **Activate the Environment:**
+
+    ```bash
+    conda activate biomni_e1
+    ```
+3.  **Install the Biomni Package:**
+
+    ```bash
+    pip install biomni --upgrade
+    ```
+
+    For the latest updates, install from the GitHub source:
+
+    ```bash
+    pip install git+https://github.com/snap-stanford/Biomni.git@main
+    ```
+4.  **Configure API Keys:** Choose one of the following methods:
 
     <details>
     <summary>Click to expand</summary>
@@ -99,11 +110,13 @@
     ```
     </details>
 
-    #### ⚠️ Known Package Conflicts
+### ⚠️ Known Package Conflicts
 
-    Some Python packages are not installed by default in the Biomni environment due to dependency conflicts. If you need these features, you must install the packages manually and may need to uncomment relevant code in the codebase. See the up-to-date list and details in [docs/known_conflicts.md](./docs/known_conflicts.md).
+Refer to [docs/known\_conflicts.md](./docs/known_conflicts.md) for a list of packages that require manual installation.
 
 ### Basic Usage
+
+Once inside the environment, you can start using Biomni:
 
 ```python
 from biomni.agent import A1
@@ -119,7 +132,7 @@ agent.go("Predict ADMET properties for this compound: CC(C)CC1=CC=C(C=C1)C(C)C(=
 
 ## MCP (Model Context Protocol) Support
 
-Integrate external tools with Biomni using MCP servers.
+Biomni supports MCP servers for external tool integration:
 
 ```python
 from biomni.agent import A1
@@ -129,42 +142,40 @@ agent.add_mcp(config_path="./mcp_config.yaml")
 agent.go("Find FDA active ingredient information for ibuprofen")
 ```
 
-**Built-in MCP Servers:**  Refer to the [MCP Integration Documentation](docs/mcp_integration.md) and examples in [`tutorials/examples/add_mcp_server/`](tutorials/examples/add_mcp_server/) and [`tutorials/examples/expose_biomni_server/`](tutorials/examples/expose_biomni_server/) for details.
+**Built-in MCP Servers:**
 
-## Contribute to Biomni
+See the [MCP Integration Documentation](docs/mcp_integration.md) and examples in [`tutorials/examples/add_mcp_server/`](tutorials/examples/add_mcp_server/) and [`tutorials/examples/expose_biomni_server/`](tutorials/examples/expose_biomni_server/) for usage and implementation details.
 
-Join our open-science initiative and help shape the future of biomedical AI! We welcome contributions in the following areas:
+## Contributing to Biomni
+
+Join the open-science Biomni community and contribute to its development! We welcome contributions in the following areas:
 
 *   🔧 New Tools
 *   📊 Datasets
 *   💻 Software Integration
 *   📋 Benchmarks
-*   📚 Tutorials and Examples
-*   🔧 Update existing tools
+*   📚 Tutorials & Examples
+*   🔧 Tool Updates
 
-See our **[Contributing Guide](CONTRIBUTION.md)** for details.
+See the **[Contributing Guide](CONTRIBUTION.md)** for details on how to contribute.  You can also submit tool/database/software suggestions via [this form](https://forms.gle/nu2n1unzAYodTLVj6).
 
-Want to add a specific tool or database? Submit your suggestions using [this form](https://forms.gle/nu2n1unzAYodTLVj6).
+## Biomni-E2: Shaping the Future of Biomedical AI
 
-## Biomni-E2: The Next Generation
+Join us in building **Biomni-E2**, the next generation of biomedical AI agents, developed with and for the community.
 
-Be a part of building **Biomni-E2** - the next-generation environment developed *with and for the community*.
-
-**Contributors with significant impact** (e.g., 10+ significant & integrated tool contributions or equivalent) will be **invited as co-authors** on our upcoming paper in a top-tier journal or conference.
-
-**All contributors** will be acknowledged in our publications.
-
-Let’s build it together.
+*   **Co-authorship** on upcoming publications for significant contributors.
+*   Acknowledgment for all contributions.
+*   More contributor perks!
 
 ## Tutorials and Examples
 
 *   **[Biomni 101](./tutorials/biomni_101.ipynb)** - Basic concepts and first steps
 
-More to come!
+More tutorials are planned!
 
-## Web Interface
+## 🌐 Web Interface
 
-Try Biomni through our user-friendly web interface at **[biomni.stanford.edu](https://biomni.stanford.edu)**.
+Try Biomni through our web interface at **[biomni.stanford.edu](https://biomni.stanford.edu)**.
 
 [![Watch the video](https://img.youtube.com/vi/E0BRvl23hLs/maxresdefault.jpg)](https://youtu.be/E0BRvl23hLs)
 
@@ -178,9 +189,9 @@ Try Biomni through our user-friendly web interface at **[biomni.stanford.edu](ht
 
 ## Important Notes
 
-*   **Security Warning:** Biomni executes LLM-generated code with full system privileges. Use in isolated/sandboxed environments for production.  Be cautious with sensitive data and credentials.
-*   **Release Freeze:** This release was frozen as of April 15, 2025, and may differ from the current web platform.
-*   **Licensing:** Biomni is Apache 2.0-licensed.  Review the licenses of integrated tools, databases, and software before commercial use.
+*   **Security:** Biomni executes LLM-generated code with full system privileges. Use it in isolated/sandboxed environments. Be cautious with sensitive data.
+*   **Release Version:** This release was frozen as of April 15 2025, and it may differ from the current web platform.
+*   **Licensing:** Biomni is Apache 2.0-licensed, but integrated tools, databases, or software may have more restrictive licenses. Review each component before commercial use.
 
 ## Cite Us
 

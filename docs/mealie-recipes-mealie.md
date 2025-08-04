@@ -1,47 +1,55 @@
-[![Latest Release][latest-release-shield]][latest-release-url]
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![AGPL License][license-shield]][license-url]
-[![Docker Pulls][docker-pull]][docker-url]
-[![GHCR Pulls][ghcr-pulls]][ghcr-url]
+<!-- ALL-IN-ONE RECIPE MANAGER & MEAL PLANNER -->
+# Mealie: Your Self-Hosted Recipe Manager and Meal Planner 
 
+Tired of juggling recipes and meal plans? Mealie is your all-in-one solution for organizing recipes, planning meals, and creating shopping lists.  [Explore Mealie on GitHub](https://github.com/mealie-recipes/mealie).
+
+<!-- PROJECT LOGO -->
 <p align="center">
   <a href="https://github.com/mealie-recipes/mealie">
-    <img src="docs/docs/assets/img/home_screenshot.png" alt="Mealie Logo" width="200">
+<svg style="width:100px;height:100px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.36,10.22L13.16,10C12.38,9.23 12.38,7.97 13.16,7.19L17.5,2.82L18.43,3.74L15.19,7L16.15,7.94L19.39,4.69L20.31,5.61L17.06,8.85L18,9.81L21.26,6.56L22.18,7.5L17.81,11.84C17.03,12.62 15.77,12.62 15,11.84L14.78,11.64L13.41,13Z" />
+</svg>
   </a>
 </p>
 
-## Mealie: Your Self-Hosted Recipe Manager & Meal Planner
+<p align="center">
+  <a href="https://docs.mealie.io/"><strong>Explore the docs »</strong></a>
+    <br />
+    <a href="https://demo.mealie.io/">View Demo</a>
+    ·
+    <a href="https://github.com/mealie-recipes/mealie/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/mealie-recipes/mealie/pkgs/container/mealie">GitHub Container Registry</a>
+</p>
 
-**Tired of losing your favorite recipes?** Mealie is a powerful and user-friendly self-hosted recipe manager, meal planner, and shopping list application, making it easy to organize your culinary life. Check out the [Mealie GitHub Repository](https://github.com/mealie-recipes/mealie) for more details.
+[![Product Name Screen Shot][product-screenshot]](https://docs.mealie.io)
 
-**Key Features:**
+## Key Features
 
-*   **Recipe Import:** Easily import recipes from URLs or add them manually with a user-friendly editor.
-*   **Meal Planning:** Plan your meals for the week with a simple, visual meal planner.
-*   **Shopping List Generation:** Automatically generate shopping lists organized by supermarket sections.
-*   **Cookbook Organization:** Organize recipes into custom cookbooks for easy access.
-*   **Docker Deployment:** Deploy Mealie quickly and easily with Docker.
-*   **Multi-Language Support:** Available in 35+ languages for a global user base.
+*   **Recipe Import:** Easily add recipes by importing from a URL or manually entering details.
+*   **Meal Planning:** Plan your meals with an intuitive meal planner.
+*   **Shopping List:** Generate and organize shopping lists based on your meal plan.
+*   **Cookbooks:** Organize your recipes into custom cookbooks.
+*   **Docker Support:** Easy deployment with Docker.
+*   **Multi-language Support:** Available in 35+ languages.
 
-## Getting Started
+## About Mealie
 
-*   [Explore the Documentation](https://docs.mealie.io/)
-*   [View the Demo](https://demo.mealie.io/)
-*   [Join the Discord](https://discord.gg/QuStdQGSGK)
+Mealie is a self-hosted recipe manager, meal planner, and shopping list application with a user-friendly Vue.js frontend and a REST API backend.  It makes managing your recipes a breeze, with features like automated recipe importing from URLs, a meal planner for easy weekly planning, and shopping lists to ensure you have everything you need for your meals.  Mealie is designed for the whole family!
 
 ## Contributing
 
-Contributions are welcome!  Help improve Mealie by:
+We welcome contributions from everyone! 
 
-*   Reviewing the [Contributors Guide](https://nightly.mealie.io/contributors/developers-guide/code-contributions/).
-*   Using [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) for easy setup.
-*   Contributing financially via [Buy Me a Coffee](https://www.buymeacoffee.com/haykot).
+*   See the [Contributors Guide](https://nightly.mealie.io/contributors/developers-guide/code-contributions/) for help getting started.
+*   Use [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) for a streamlined development experience.
 
-### Translation Contributions
+You can also support the project financially:
+<a href="https://www.buymeacoffee.com/haykot" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 30px !important;width: 107px !important;" ></a>
 
-Help translate Mealie! Visit the [Crowdin](https://crowdin.com/project/mealie) project to contribute translations (no coding required).  See the [translation page](https://nightly.mealie.io/contributors/translating/) for details.
+### Translations
+
+Non-coders can contribute by translating Mealie into different languages.  Use [Crowdin](https://crowdin.com/project/mealie) to help translate or vote on existing translations.
 
 ## License
 
@@ -49,11 +57,11 @@ Distributed under the AGPL License. See `LICENSE` for more information.
 
 ## Sponsors
 
-A huge thank you to all the sponsors on [GitHub Sponsors](https://github.com/sponsors/hay-kot) and Buy Me a Coffee for making this project possible.
+Huge thanks to all the sponsors of this project on [Github Sponsors](https://github.com/sponsors/hay-kot) and Buy Me a Coffee. Without you, this project would surely not be possible.
 
 Thanks to Depot for providing build instances for our Docker image builds.
-[![Built with Depot](https://depot.dev/badges/built-with-depot.svg)](https://depot.dev?utm_source=Mealie)
 
+[![Built with Depot](https://depot.dev/badges/built-with-depot.svg)](https://depot.dev?utm_source=Mealie)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -71,3 +79,6 @@ Thanks to Depot for providing build instances for our Docker image builds.
 [latest-release-url]: https://github.com/mealie-recipes/mealie/releases
 [license-shield]: https://img.shields.io/github/license/mealie-recipes/mealie.svg?style=flat-square
 [license-url]: https://github.com/mealie-recipes/mealie/blob/mealie-next/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/hay-kot
+[product-screenshot]: docs/docs/assets/img/home_screenshot.png

@@ -2,7 +2,7 @@
   <h1 align="center">
     <img src="./assets/screenshot/March7th.png" width="200">
     <br/>
-    March7thAssistant - Your Automated Honkai: Star Rail Companion
+    March7th Assistant · 三月七小助手
   </h1>
   <a href="https://trendshift.io/repositories/3892" target="_blank"><img src="https://trendshift.io/api/badge/repositories/3892" alt="moesnow%2FMarch7thAssistant | Trendshift" style="width: 200px; height: 46px;" width="250" height="46"/></a>
 </div>
@@ -12,7 +12,7 @@
 <div align="center">
   <img alt="Platform: Windows" src="https://img.shields.io/badge/platform-Windows-blue?style=flat-square&color=4096d8" />
   <img alt="Release Version" src="https://img.shields.io/github/v/release/moesnow/March7thAssistant?style=flat-square&color=f18cb9" />
-  <img alt="Total Downloads" src="https://img.shields.io/github/downloads/moesnow/March7thAssistant/total?style=flat-square&color=4096d8" />
+  <img alt="Downloads" src="https://img.shields.io/github/downloads/moesnow/March7thAssistant/total?style=flat-square&color=4096d8" />
 </div>
 
 <br/>
@@ -21,61 +21,65 @@
 
 **简体中文** | [繁體中文](./README_TW.md) | [English](./README_EN.md)
 
-[Quick Start Tutorial](https://m7a.top/#/assets/docs/Tutorial) | [FAQ](https://m7a.top/#/assets/docs/FAQ)
+快速上手，请访问：[使用教程](https://m7a.top/#/assets/docs/Tutorial)
+
+遇到问题，请在提问前查看：[FAQ](https://m7a.top/#/assets/docs/FAQ)
 
 </div>
 
 ---
 
-## About March7thAssistant
+## Automate Your Honkai: Star Rail Daily Tasks with March7th Assistant
 
-**March7thAssistant is a powerful and easy-to-use automation tool designed to streamline your Honkai: Star Rail gameplay on PC, saving you time and effort.** Check out the original repo [here](https://github.com/moesnow/March7thAssistant).
+March7th Assistant is a Windows-based automation tool designed to streamline your daily and weekly tasks in Honkai: Star Rail. [Check out the original repository](https://github.com/moesnow/March7thAssistant).
 
 ---
 
 ## Key Features
 
-*   **Automated Daily Tasks:**
-    *   Clear stamina
-    *   Daily Training
-    *   Claim Rewards
-    *   Commissions
-    *   World Exploration (锄大地)
-*   **Automated Weekly Tasks:**
-    *   Echo of War (历战余响)
-    *   Simulated Universe
-    *   Forgotten Hall
-*   **Automated Actions & Triggers:**
-    *   SRGF standard support for **gacha record export** and **auto-dialogue**.
-    *   **Automated Launch:** Starts tasks automatically upon refresh or stamina recovery to a specific value.
-    *   **Notifications:** Get notified via message push after completing tasks
-    *   **Action completion notification:** Sound alerts, auto-close game or shutdown.
-*   **Customizable and Configurable:**
-    *   Easily adjust settings via a graphical user interface or modify the `config.example.yaml` file.
+*   **Automated Daily Tasks**:
+    *   Clear stamina.
+    *   Complete daily training.
+    *   Collect rewards.
+    *   Handle commissions.
+    *   Farm open-world resources ("锄大地").
+*   **Automated Weekly Tasks**:
+    *   Complete Simulated Universe runs.
+    *   Clear Forgotten Hall.
+    *   Fight Echo of War (历战余响).
+*   **Gacha Record Export**:
+    *   Supports the [SRGF](https://uigf.org/zh/standards/SRGF.html) standard.
+    *   Features **automatic dialog handling** for seamless operation.
+*   **Notifications & Automation**:
+    *   Receive **message notifications** upon completion of daily training and other tasks.
+    *   **Auto-start** tasks when tasks refresh or stamina reaches a specified level.
+    *   **Sound alerts, automatic game closure, or shutdown** upon task completion.
 
->   This project utilizes [Auto_Simulated_Universe](https://github.com/CHNZYX/Auto_Simulated_Universe) for Simulated Universe automation and [Fhoe-Rail](https://github.com/linruowuyin/Fhoe-Rail) for World Exploration automation.
+## Getting Started
 
-## Screenshots
+### Download and Installation
 
-![Screenshot of March7thAssistant Interface](assets/screenshot/README.png)
+1.  Go to the [Releases](https://github.com/moesnow/March7thAssistant/releases/latest) page.
+2.  Download the latest release.
+3.  Extract the archive.
+4.  Double-click the `March7th Launcher.exe` (with the March7th icon) to open the graphical user interface.
 
-## Important Notes
+If you wish to use the **Task Scheduler** for automated runs or execute the **full program** directly, use the terminal icon `March7th Assistant.exe`.
 
-*   **PC Only:**  Requires a PC running the game at `1920*1080` resolution, either in full-screen or windowed mode (HDR not supported).
-*   **Simulated Universe Documentation:** Find more information in the [Auto_Simulated_Universe Docs](https://github.com/Night-stars-1/Auto_Simulated_Universe_Docs/blob/docs/docs/guide/index.md) and [Q&A](https://github.com/Night-stars-1/Auto_Simulated_Universe_Docs/blob/docs/docs/guide/qa.md).
-*   **Background Execution:**  For background operation and multi-monitor setups, consider using [Remote Desktop](https://m7a.top/#/assets/docs/Background).
-*   **Feedback & Support:** Report issues in the [GitHub Issues](https://github.com/moesnow/March7thAssistant/issues), discuss features or problems in the [Discussions](https://github.com/moesnow/March7thAssistant/discussions), and feel free to submit [Pull Requests](https://github.com/moesnow/March7thAssistant/pulls).
+### Updating
 
-## Installation and Usage
+Check for updates within the GUI or by double-clicking `March7th Updater.exe`.
 
-1.  **Download:**  Go to the [Releases](https://github.com/moesnow/March7thAssistant/releases/latest) page and download the latest release.
-2.  **Run:** Unzip the downloaded archive and double-click `March7th Launcher.exe` to open the graphical interface.
-3.  **Advanced:** To use the **Task Scheduler** or run the full application directly, use `March7th Assistant.exe`.
-4.  **Updates:** Check for updates by clicking the button at the bottom of the graphical interface, or double-click `March7th Updater.exe`.
+### Important Notes
 
-## Source Code Run (For Developers)
+*   Requires a **PC** with a `1920x1080` resolution window or full-screen game mode (HDR is *not* supported).
+*   Configuration is available via the graphical interface or in the [configuration file](assets/config/config.example.yaml).
+*   For background operation or multi-monitor setups, consider using [Remote Desktop](https://m7a.top/#/assets/docs/Background).
+*   For issues, please submit them on [Issues](https://github.com/moesnow/March7thAssistant/issues).  For discussion and questions, see [Discussions](https://github.com/moesnow/March7thAssistant/discussions).
 
-**If you're not a developer, it's recommended to use the download installation method above.**
+## Development (For Advanced Users)
+
+If you're a developer, follow these steps to run the code:
 
 ```cmd
 # Installation (using venv is recommended)
@@ -89,37 +93,33 @@ python main.py
 git pull
 git submodule update --init --recursive
 ```
-
 <details>
-<summary>Development Notes</summary>
+<summary>Development Tips</summary>
 
-Use the capture screenshot function in the helper toolbox to get crop parameters.
-
-You can run `python main.py` with arguments such as `fight/universe/forgottenhall`.
-
+Use the screenshot capture feature in the assistant toolbox to get the crop parameters.
+You can pass arguments to `python main.py` like `fight`, `universe`, or `forgottenhall`.
 </details>
 
 ---
 
-If you enjoy this project, consider supporting the developer with a coffee ☕ (link to sponsor image)
-
-Your support fuels the development and maintenance of this project!🚀
+If you like this project, you can buy the author a coffee ☕
+![sponsor](assets/app/images/sponsor.jpg)
 
 ---
 
 ## Related Projects
 
-March7thAssistant relies on these open-source projects:
+March7th Assistant leverages the following open-source projects:
 
-*   Simulated Universe Automation: [https://github.com/CHNZYX/Auto_Simulated_Universe](https://github.com/CHNZYX/Auto_Simulated_Universe)
-*   World Exploration Automation: [https://github.com/linruowuyin/Fhoe-Rail](https://github.com/linruowuyin/Fhoe-Rail)
-*   OCR (Optical Character Recognition): [https://github.com/hiroi-sora/PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)
-*   GUI Framework: [https://github.com/zhiyiYo/PyQt-Fluent-Widgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets)
+*   **Simulated Universe Automation:** [https://github.com/CHNZYX/Auto_Simulated_Universe](https://github.com/CHNZYX/Auto_Simulated_Universe)
+*   **Open World Farming Automation:** [https://github.com/linruowuyin/Fhoe-Rail](https://github.com/linruowuyin/Fhoe-Rail)
+*   **OCR (Optical Character Recognition):** [https://github.com/hiroi-sora/PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)
+*   **GUI Component Library:** [https://github.com/zhiyiYo/PyQt-Fluent-Widgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets)
 
 ## Contributors
 
 <a href="https://github.com/moesnow/March7thAssistant/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=moesnow/March7thAssistant" alt="Contributors" />
+  <img src="https://contrib.rocks/image?repo=moesnow/March7thAssistant" />
 </a>
 
 ## Stargazers over time

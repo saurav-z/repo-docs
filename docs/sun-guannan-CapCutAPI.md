@@ -1,80 +1,57 @@
-# CapCut API: Automate Video Editing with Python
+# CapCutAPI: Open-Source Python API for CapCut Video Editing
 
-**Effortlessly create and manipulate CapCut video projects programmatically using this powerful Python-based API.**  [Explore the original repository](https://github.com/sun-guannan/CapCutAPI).
+Unlock the power of CapCut video editing programmatically with CapCutAPI, an open-source Python tool that allows you to automate and customize your video creation workflow.  [View the original repository on GitHub](https://github.com/sun-guannan/CapCutAPI).
 
 ## Key Features
 
-*   **Comprehensive Draft Management:**
-    *   Create, read, modify, and save CapCut draft files.
-*   **Rich Material Support:**
-    *   Add and edit videos, audios, images, text, and stickers.
-*   **Extensive Effects Library:**
-    *   Apply transitions, filters, masks, and animations.
-*   **Robust API Service:**
-    *   Utilize HTTP APIs for remote calls and automated processing.
-*   **AI-Powered Enhancements:**
-    *   Integrate AI for subtitle generation, text creation, and image manipulation.
-*   **Cross-Platform Compatibility:**
-    *   Supports both CapCut China and International versions.
-*   **Automated Workflows:**
-    *   Supports batch processing for efficient video editing.
-*   **Flexible Configuration:**
-    *   Customize functionality using configuration files.
+*   **Draft File Management**: Create, read, modify, and save CapCut draft files.
+*   **Comprehensive Material Support**: Add and edit videos, audios, images, text, stickers, and more.
+*   **Extensive Effect Application**: Apply transitions, filters, masks, and animations to your videos.
+*   **Robust API Service**: Utilize HTTP API interfaces for remote calls and automated processing.
+*   **AI Integration**: Enhance your videos with AI-powered features like subtitle generation and text/image creation.
+*   **Cross-Platform Compatibility:** Supports both CapCut China and International versions.
+*   **Automated Workflows:** Enables batch processing and automated video creation pipelines.
+*   **Flexible Configuration:** Customize the tool using configuration files.
 
-## Showcase
+## Core API Endpoints
 
-*   **AI-Powered Integration**
-    *   [AI Cut](https://www.youtube.com/watch?v=fBqy6WFC78E)
-    *   [Airbnb](https://www.youtube.com/watch?v=1zmQWt13Dx0)
-    *   [Horse](https://www.youtube.com/watch?v=IF1RDFGOtEU)
-    *   [Song](https://www.youtube.com/watch?v=rGNLE_slAJ8)
+*   `/create_draft`: Create a new CapCut draft.
+*   `/add_video`: Add video material to a draft.
+*   `/add_audio`: Add audio material to a draft.
+*   `/add_image`: Add image material to a draft.
+*   `/add_text`: Add text to your video drafts.
+*   `/add_subtitle`: Add subtitles to your video.
+*   `/add_effect`: Apply effects to your video elements.
+*   `/add_sticker`: Add stickers to your video drafts.
+*   `/save_draft`: Save your finalized draft files.
 
 ## Getting Started
 
 ### Configuration
 
-1.  **Create Configuration File:**
-    *   Copy `config.json.example` to `config.json`.
-    *   Modify the configuration settings in `config.json` as needed.
-
+1.  **Configuration File:** Customize settings by copying `config.json.example` to `config.json` and modifying the values.
     ```bash
     cp config.json.example config.json
     ```
 
-### Prerequisites
+### Environment Setup
 
-*   **ffmpeg:**  Ensure ffmpeg is installed and accessible in your system's environment variables.
-*   **Python:** Python 3.8.20 or higher is required.
-
-### Installation
-
-1.  **Install Dependencies:**
-
+1.  **FFmpeg:** Ensure FFmpeg is installed and accessible in your system's environment variables.
+2.  **Python:** Requires Python version 3.8.20.
+3.  **Dependencies:** Install project dependencies.
     ```bash
     pip install -r requirements.txt
     ```
 
 ### Running the Server
 
-1.  **Start the Server:**
+Execute the following command to launch the CapCutAPI server:
 
-    ```bash
-    python capcut_server.py
-    ```
+```bash
+python capcut_server.py
+```
 
-    Access the API interfaces after the server starts.
-
-## API Endpoints
-
-*   `/create_draft`: Create a draft
-*   `/add_video`: Add video material to the draft
-*   `/add_audio`: Add audio material to the draft
-*   `/add_image`: Add image material to the draft
-*   `/add_text`: Add text material to the draft
-*   `/add_subtitle`: Add subtitles to the draft
-*   `/add_effect`: Add effects to materials
-*   `/add_sticker`: Add stickers to the draft
-*   `/save_draft`: Save the draft file
+You can then access the API endpoints to begin your automated video editing processes.
 
 ## Usage Examples
 
@@ -124,10 +101,17 @@ response = requests.post("http://localhost:9001/save_draft", json={
 print(response.json())
 ```
 
-### Testing with REST Client
+### Integrating with CapCut
 
-You can also use the `rest_client_test.http` file with a REST Client plugin in your IDE for easy testing.
+Saving a draft generates a folder starting with `dfd_` in the server's directory. Copy this folder into your CapCut draft directory to view and edit the generated draft within the CapCut application.
 
-## Copying Drafts to CapCut
+### Advanced Examples
 
-Saving a draft generates a folder starting with `dfd_` in the server's directory. Copy this folder into your CapCut draft directory to view and edit the generated project.
+Refer to the `example.py` file in the project for more advanced API usage, including adding audio and applying effects.
+
+## Demo Videos
+
+*   **AI Cut**:  [![AI Cut](https://img.youtube.com/vi/fBqy6WFC78E/hqdefault.jpg)](https://www.youtube.com/watch?v=fBqy6WFC78E)
+*   **Connect AI generated**:  [![Airbnb](https://img.youtube.com/vi/1zmQWt13Dx0/hqdefault.jpg)](https://www.youtube.com/watch?v=1zmQWt13Dx0)
+    [![Horse](https://img.youtube.com/vi/IF1RDFGOtEU/hqdefault.jpg)](https://www.youtube.com/watch?v=IF1RDFGOtEU)
+    [![Song](https://img.youtube.com/vi/rGNLE_slAJ8/hqdefault.jpg)](https://www.youtube.com/watch?v=rGNLE_slAJ8)

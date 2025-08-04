@@ -1,19 +1,16 @@
-Here's an improved and SEO-optimized README for webassets, tailored for clarity and discoverability:
+Here's an improved and SEO-optimized README for the webassets project:
 
-```markdown
-# webassets: Streamline Your Python Web Project's Assets
+# Webassets: Streamline Your Python Web Project's Assets
 
-**Simplify your Python web development workflow by effortlessly merging and compressing your JavaScript and CSS files with webassets!**
+**Webassets simplifies asset management for Python web developers, making it easy to merge and compress your JavaScript and CSS files.**
 
-[View the original repository on GitHub](https://github.com/miracle2k/webassets)
+[Link to Original Repository:  https://github.com/miracle2k/webassets](https://github.com/miracle2k/webassets)
 
 ## Key Features
 
-*   **Asset Bundling:** Combine multiple JavaScript and CSS files into single, optimized bundles.
-*   **Compression:** Minify your assets to reduce file sizes and improve loading times.
-*   **Integration:** Seamlessly integrates with various Python web frameworks.
-*   **Extensible:** Supports a variety of filters for asset processing, including Google Closure Compiler.
-*   **Easy Installation:** Install with pip.
+*   **Asset Merging:** Combine multiple JavaScript and CSS files into single, optimized files.
+*   **Asset Compression:** Reduce file sizes for faster loading times, including support for CSS and JavaScript compression.
+*   **Easy Integration:** Seamlessly integrates with your Python web framework.
 
 ## Documentation
 
@@ -21,9 +18,7 @@ Comprehensive documentation is available at: [https://webassets.readthedocs.io/]
 
 ## Installation
 
-While releases may not follow a strict schedule, the project is well-tested.  You can confidently use the latest code, especially when the build status badge (above) is green.
-
-Install the development version using pip:
+While regular releases aren't on a strict schedule, using the latest code is encouraged.  Webassets is well-tested.  You can install the development version using:
 
 ```bash
 pip install webassets==dev
@@ -31,41 +26,34 @@ pip install webassets==dev
 
 ## Development
 
-To contribute to the development of webassets, you'll need the following steps:
+To contribute to the project, follow these steps:
 
 **Prerequisites:**
 
-*   Java 7 or later (required for Google Closure filter and potentially others).
-*   Python 3.x
-*   [uv](https://github.com/astral-sh/uv) - A fast Python package manager
+*   Java 7 or higher (required for the Google Closure filter).
+*   Python 3.7+
+*   `uv` (for dependency management)
 
-**Setup and Testing:**
+**Setup:**
 
-1.  **Create a virtual environment and install Python requirements using uv:**
+1.  **Create a virtual environment and install Python requirements:**
 
     ```bash
     uv venv
     uv pip install -r uv.lock
     ```
-
-2.  **Install additional requirements:**
+2.  **Install other requirements:**
 
     ```bash
     ./requirements-dev.sh
     ```
 
-3.  **Run the tests:**
+3.  **Run tests:**
 
     ```bash
     ./run_tests.sh
     ```
-```
-Key improvements and SEO considerations:
 
-*   **Clear, concise title and hook:** The title uses a key keyword ("webassets") and the hook sentence immediately highlights the core benefit.
-*   **Keyword-rich headings:**  Uses headings that incorporate keywords relevant to asset management, Python web development, and optimization.
-*   **Bulleted Key Features:** Highlights the main functionalities of webassets, making it easy to scan and understand.
-*   **Clear Installation and Development Instructions:** Provides practical and up-to-date installation and development guidance.
-*   **Explicit Link to Original Repository:** Ensures users can easily find and contribute to the source code.
-*   **Removed unnecessary information:** Removed the download link and references to tarballs, because `pip install webassets==dev` is much easier to use.
-*   **Formatting:** Uses markdown to make it easy to read and understand.
+## Build Status
+
+[![Build Status](https://github.com/miracle2k/webassets/actions/workflows/ci.yml/badge.svg)](https://github.com/miracle2k/webassets/actions/workflows/ci.yml)

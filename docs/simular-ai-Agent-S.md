@@ -1,27 +1,25 @@
 <h1 align="center">
-  <img src="images/agent_s.png" alt="Agent S Logo" style="vertical-align:middle" width="60"> Agent S: Revolutionizing Computer Interaction with AI
+  <img src="images/agent_s.png" alt="Agent S Logo" style="vertical-align:middle" width="60"> Agent S: Empowering Computers to Work Like Humans
 </h1>
 
 <p align="center">
-  <a href="https://github.com/simular-ai/Agent-S">
-    <img src="https://img.shields.io/github/stars/simular-ai/Agent-S?style=social" alt="GitHub Stars">
-  </a>
-</p>
-
-<p align="center">Agent S empowers your computer to act and learn like a human, enabling seamless automation and intelligent interaction.</p>
-
-<p align="center">
-  🌐 <a href="https://www.simular.ai/articles/agent-s2-technical-review">Agent S2 Blog</a> |
-  📄 <a href="https://arxiv.org/abs/2504.00906">Agent S2 Paper (COLM 2025)</a> |
-  🎥 <a href="https://www.youtube.com/watch?v=wUGVQl7c0eg">Agent S2 Video</a>
+  Agent S is an open-source framework that allows your computer to be used autonomously. Explore the power of AI agents! 
   <br>
-  🌐 <a href="https://www.simular.ai/agent-s">Agent S1 Blog</a> |
-  📄 <a href="https://arxiv.org/abs/2410.08164">Agent S1 Paper (ICLR 2025)</a> |
-  🎥 <a href="https://www.youtube.com/watch?v=OBDE3Knte0g">Agent S1 Video</a>
+  <a href="https://github.com/simular-ai/Agent-S"> View the Project on GitHub </a>
 </p>
 
 <p align="center">
-<a href="https://trendshift.io/repositories/13151" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13151" alt="simular-ai%2FAgent-S | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+  🌐 <a href="https://www.simular.ai/articles/agent-s2-technical-review">[S2 blog]</a>&nbsp;
+  📄 <a href="https://arxiv.org/abs/2504.00906">[S2 Paper (COLM 2025)]</a>&nbsp;
+  🎥 <a href="https://www.youtube.com/watch?v=wUGVQl7c0eg">[S2 Video]</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  🌐 <a href="https://www.simular.ai/agent-s">[S1 blog]</a>&nbsp;
+  📄 <a href="https://arxiv.org/abs/2410.08164">[S1 Paper (ICLR 2025)]</a>&nbsp;
+  🎥 <a href="https://www.youtube.com/watch?v=OBDE3Knte0g">[S1 Video]</a>
+</p>
+
+<p align="center">
+  <a href="https://trendshift.io/repositories/13151" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13151" alt="simular-ai%2FAgent-S | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
 <p align="center">
@@ -48,27 +46,28 @@
 
 <div align="center">
   &nbsp;&nbsp;
-  <p>Skip the setup? Try Agent S in <a href="https://cloud.simular.ai/">Simular Cloud</a>
+<p>Skip the setup? Try Agent S in <a href="https://cloud.simular.ai/">Simular Cloud</a>
 </div>
 
 ## Key Features
 
-*   **Advanced Computer Control:** Interact with your computer using natural language commands.
-*   **Autonomous Task Execution:** Automate complex tasks and workflows.
-*   **Open Source & Customizable:** Build upon a robust framework.
-*   **Cross-Platform Support:** Works on Linux, Mac, and Windows.
-*   **Cutting-Edge Performance:** Achieve state-of-the-art results in computer use agent benchmarks.
+*   **Autonomous Computer Interaction:**  Control your computer through natural language instructions, automating tasks and workflows.
+*   **Open-Source Framework:**  Build upon our technology or contribute to the advancements of agent-based systems.
+*   **GUI Agents:**  Interact directly with graphical user interfaces, enabling a wide range of automation possibilities.
+*   **SOTA Performance:** Agent S2.5 achieves new state-of-the-art results.
+*   **Cross-Platform Support:**  Works with Linux, MacOS, and Windows.
+*   **Easy to Use SDK:** Integrate Agent S into your own projects with our Python SDK.
 
 ## Updates
 
-*   **2025/08/01**: Agent S2.5 is released (gui-agents v0.2.5): simpler, better, and faster! New SOTA on [OSWorld-Verified](https://os-world.github.io)!
-*   **2025/07/07**: The [Agent S2 paper](https://arxiv.org/abs/2504.00906) is accepted to COLM 2025! See you in Montreal!
-*   **2025/04/01**: Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
-*   **2025/03/12**: Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
-*   **2025/01/22**: The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
-*   **2025/01/21**: Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
-*   **2024/12/05**: Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
-*   **2024/10/10**: Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase!
+*   [x] **2025/08/01**: Agent S2.5 is released (gui-agents v0.2.5): simpler, better, and faster! New SOTA on [OSWorld-Verified](https://os-world.github.io)!
+*   [x] **2025/07/07**: The [Agent S2 paper](https://arxiv.org/abs/2504.00906) is accepted to COLM 2025! See you in Montreal!
+*   [x] **2025/04/01**: Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
+*   [x] **2025/03/12**: Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
+*   [x] **2025/01/22**: The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
+*   [x] **2025/01/21**: Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
+*   [x] **2024/12/05**: Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
+*   [x] **2024/10/10**: Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase!
 
 ## Table of Contents
 
@@ -81,7 +80,7 @@
 
 ## 💡 Introduction
 
-Agent S is an open-source framework designed to enable autonomous interaction with computers through an Agent-Computer Interface, empowering intelligent GUI agents to learn and perform tasks autonomously.  Explore the future of human-computer interaction!
+Agent S is an open-source framework that lets you automate computer tasks using AI.
 
 ## 🎯 Current Results
 
@@ -102,6 +101,16 @@ Agent S is an open-source framework designed to enable autonomous interaction wi
       <td><b>54.2%</b></td>
       <td>50.6%</td>
     </tr>
+    <!--     <tr>
+      <td>WindowsAgentArena</td>
+      <td>29.8%</td>
+      <td>19.5% (NAVI)</td>
+    </tr>
+    <tr>
+      <td>AndroidWorld</td>
+      <td>54.3%</td>
+      <td>46.8% (UI-TARS)</td>
+    </tr> -->
   </table>
 </div>
 
@@ -109,9 +118,9 @@ Agent S is an open-source framework designed to enable autonomous interaction wi
 
 ### Prerequisites
 
-*   **Single Monitor:** Designed for single-monitor setups.
-*   **Security:** Runs Python code; use with caution.
-*   **Supported Platforms:** Linux, Mac, and Windows.
+*   **Single Monitor**: Our agent is designed for single monitor screens
+*   **Security**: The agent runs Python code to control your computer - use with care
+*   **Supported Platforms**: Linux, Mac, and Windows
 
 ### Installation
 
@@ -148,7 +157,7 @@ For optimal performance, we recommend [UI-TARS-1.5-7B](https://huggingface.co/By
 
 ## 🚀 Usage
 
-> ⚡️ **Recommended Setup:**
+> ⚡️ **Recommended Setup:**  
 > For the best configuration, we recommend using **OpenAI o3-2025-04-16** as the main model, paired with **UI-TARS-1.5-7B** for grounding.
 
 ### CLI

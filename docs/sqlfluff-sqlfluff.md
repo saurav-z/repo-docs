@@ -1,8 +1,11 @@
+<!-- SQLFluff Banner -->
 ![SQLFluff](https://raw.githubusercontent.com/sqlfluff/sqlfluff/main/images/sqlfluff-wide.png)
 
-# SQLFluff: The SQL Linter for Humans
+# SQLFluff: The SQL Linter for Humans 🚀
 
-**SQLFluff is a dialect-flexible and configurable SQL linter that helps you write clean, consistent, and error-free SQL code.**  Improve your SQL code quality and maintainability with this powerful tool.  Get started today and [visit the SQLFluff repository](https://github.com/sqlfluff/sqlfluff).
+SQLFluff is a powerful, dialect-flexible SQL linter that helps you write clean, consistent, and error-free SQL code. Improve your SQL code quality and efficiency with automatic fixes and customization!
+
+[Visit the original repo on GitHub](https://github.com/sqlfluff/sqlfluff)
 
 [![PyPi Version](https://img.shields.io/pypi/v/sqlfluff.svg?style=flat-square&logo=PyPi)](https://pypi.org/project/sqlfluff/)
 [![PyPi License](https://img.shields.io/pypi/l/sqlfluff.svg?style=flat-square)](https://pypi.org/project/sqlfluff/)
@@ -18,15 +21,15 @@
 
 ## Key Features
 
-*   **Dialect Flexibility:** Supports a wide range of SQL dialects.
-*   **Configurable Rules:** Customize linting rules to match your style.
-*   **Automatic Fixes:** Auto-fix most linting errors to save time.
-*   **Template Support:** Integrates with Jinja, dbt, and other templating languages.
-*   **VS Code Extension:**  Seamlessly integrate SQLFluff into your workflow.
+*   **Dialect Flexibility:** Supports a wide range of SQL dialects, including ANSI SQL, BigQuery, PostgreSQL, MySQL, Snowflake, and many more.
+*   **Automatic Fixing:**  SQLFluff automatically fixes most linting errors, saving you time and effort.
+*   **Configurable:** Customize linting rules to match your specific coding style and project requirements.
+*   **Template Support:**  Works seamlessly with Jinja, dbt, and other templating languages.
+*   **VS Code Extension:**  Integrates directly into VS Code for real-time linting and code quality checks.
 
 ## Supported SQL Dialects
 
-SQLFluff supports a large and growing list of SQL dialects, including:
+SQLFluff offers extensive support for the following SQL dialects:
 
 *   ANSI SQL
 *   Athena
@@ -44,7 +47,7 @@ SQLFluff supports a large and growing list of SQL dialects, including:
 *   Materialize
 *   MySQL
 *   Oracle
-*   PostgreSQL (Postgres)
+*   PostgreSQL
 *   Redshift
 *   Snowflake
 *   SOQL
@@ -56,39 +59,55 @@ SQLFluff supports a large and growing list of SQL dialects, including:
 *   Trino
 *   Vertica
 
-(See the original README for full dialect descriptions.)
+  *   *(...and more!)*
+
+We encourage contributions for adding support for more dialects - see the [Contributing](#contributing) section below.
 
 ## Templates Supported
+
+Enhance your SQL code with support for templating languages:
 
 *   Jinja (Jinja2)
 *   SQL placeholders (e.g. SQLAlchemy parameters)
 *   Python format strings
 *   dbt (requires plugin)
 
+## VS Code Extension
+
+Integrate SQLFluff directly into your VS Code workflow:
+
+*   [Github Repository](https://github.com/sqlfluff/vscode-sqlfluff)
+*   [Extension in VS Code marketplace](https://marketplace.visualstudio.com/items?itemName=dorzey.vscode-sqlfluff)
+
 ## Getting Started
 
-Install and use SQLFluff with a simple `pip install sqlfluff` and then:
+Get started with SQLFluff by installing and linting your SQL files.
 
 ```bash
+$ pip install sqlfluff
 $ echo "  SELECT a  +  b FROM tbl;  " > test.sql
 $ sqlfluff lint test.sql --dialect ansi
+# (Output from the original README)
 ```
 
-(See the original README for full Getting Started instructions and an example.)
+You can also use the official [**SQLFluff Docker Image**](https://hub.docker.com/r/sqlfluff/sqlfluff) or try it out with [**SQLFluff online**](https://online.sqlfluff.com/).  For detailed CLI usage, refer to the [SQLFluff docs](https://docs.sqlfluff.com/en/stable/).
 
-For full CLI usage and rules reference, see the [SQLFluff docs](https://docs.sqlfluff.com/en/stable/). You can also use the [Official SQLFluff Docker Image](https://hub.docker.com/r/sqlfluff/sqlfluff) or [SQLFluff online](https://online.sqlfluff.com/).
+## Documentation
 
-## Additional Resources
+Find comprehensive documentation and guides at [docs.sqlfluff.com](https://docs.sqlfluff.com/en/stable/).
 
-*   **Documentation:** [docs.sqlfluff.com](https://docs.sqlfluff.com/en/stable/)
-*   **VS Code Extension:**
-    *   [GitHub Repository](https://github.com/sqlfluff/vscode-sqlfluff)
-    *   [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=dorzey.vscode-sqlfluff)
-*   **Releases:** [Releases](https://github.com/sqlfluff/sqlfluff/releases)
-*   **Changelog:** [CHANGELOG.md](CHANGELOG.md)
-*   **Slack:** [SQLFluff on Slack](https://join.slack.com/t/sqlfluff/shared_invite/zt-2qtu36kdt-OS4iONPbQ3aCz2DIbYJdWg)
-*   **Twitter:** [SQLFluff on Twitter @SQLFluff](https://twitter.com/SQLFluff)
-*   **Contributing:** [Contributing Guide](CONTRIBUTING.md)
+## Releases
+
+SQLFluff follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).  Refer to the [release notes](https://docs.sqlfluff.com/en/latest/perma/releasenotes.html) for details on breaking changes. Check the [changelog](CHANGELOG.md) for more. New releases are made monthly. See [Releases](https://github.com/sqlfluff/sqlfluff/releases).
+
+## Community
+
+*   **Slack:** Join our fast-growing community [on Slack](https://join.slack.com/t/sqlfluff/shared_invite/zt-2qtu36kdt-OS4iONPbQ3aCz2DIbYJdWg)
+*   **Twitter:** Follow us [on Twitter @SQLFluff](https://twitter.com/SQLFluff)
+
+## Contributing
+
+We welcome contributions!  Check out the [open issues on GitHub](https://github.com/sqlfluff/sqlfluff/issues) and see the guide to [contributing](CONTRIBUTING.md).  Learn more about SQLFluff's architecture at [docs.sqlfluff.com/en/latest/perma/architecture.html](https://docs.sqlfluff.com/en/latest/perma/architecture.html).
 
 ## Sponsors
 

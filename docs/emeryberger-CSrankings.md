@@ -1,42 +1,42 @@
-# CSrankings: Your Comprehensive Guide to Top Computer Science Schools
+# CS Rankings: Your Guide to Top Computer Science Schools
 
-Looking for the best computer science programs? **CSrankings.org provides a metrics-based ranking of computer science schools, identifying institutions and faculty actively engaged in research across various areas of computer science.** This approach offers a unique perspective by focusing on publications in highly selective conferences, aiming to provide a more robust and less easily manipulated evaluation than methods based on surveys or citations alone. 
+**Looking for the best computer science programs?** CS Rankings provides a data-driven, metrics-based ranking of top computer science schools, focusing on faculty research output.
 
-[Visit the original repository on GitHub](https://github.com/emeryberger/CSrankings)
+**Learn more and explore the rankings at [csrankings.org](https://csrankings.org/) or visit the original repository on GitHub: [emeryberger/CSrankings](https://github.com/emeryberger/CSrankings).**
 
-## Key Features:
+## Key Features
 
-*   **Metrics-Based Ranking:**  Evaluates schools based on the number of publications by faculty in the most selective computer science conferences.
-*   **Data-Driven Approach:**  Employs a data-driven methodology, avoiding the subjectivity of survey-based rankings.
-*   **Areas of Computer Science:** Offers rankings across a variety of computer science areas.
-*   **Difficult-to-Game Methodology:** Designed to be resistant to manipulation compared to citation-based metrics.
-*   **Regular Updates:** The site is updated quarterly to reflect the latest research activity.
+*   **Metrics-Based Ranking:**  Ranks schools based on the number of publications by faculty in top computer science conferences, offering a data-driven alternative to survey-based approaches.
+*   **Difficult to Game:** Designed to be resistant to manipulation compared to citation-based rankings.
+*   **Comprehensive Data:** Leverages data from DBLP.org and community contributions.
+*   **Community-Driven:**  Actively maintained and improved by contributors who add and update faculty affiliations and other data.
+*   **Quarterly Updates:** Rankings are updated quarterly to ensure data freshness.
+
+## How it Works
+
+CS Rankings uses a metrics-based approach to rank computer science departments, focusing on the research output of faculty. The ranking is based on the number of publications by faculty in the most selective computer science conferences.
 
 ## Contributing
 
-### Adding or modifying affiliations
-*   Updates are processed quarterly.
-*   Submit pull requests via the `csrankings-[a-z].csv` files.
-*   See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+*   **Contribution Process:**  Contributions are processed quarterly; submit pull requests at any time.
+*   **Data Files:**  Faculty and affiliation data are primarily stored in `csrankings-[a-z].csv` files.
+*   **Contribution Guide:** See [`CONTRIBUTING.md`](CONTRIBUTING.md) (in the original repository) for detailed instructions on how to contribute.
+*   **Quick Contribution:**  Use shallow cloning for faster contribution without a full repository download.
 
-### Shallow Clone for Quick Contributions
+## Setting Up Locally
 
-1.  Fork the CSrankings repo.
-2.  Do a shallow clone: `git clone --depth 1 https://github.com/yourusername/CSrankings`
-3.  Make changes on a branch and create a pull request.
+To run the website locally, follow these steps:
 
-## Requirements to Run Locally
-To run the site locally, you'll need to download the DBLP data (`make update-dblp`) and then rebuild the databases (`make`). You will need to install several dependencies. See the original README for the exact list of dependencies.
+1.  Download DBLP data: `make update-dblp` (requires ~19GiB of memory).
+2.  Rebuild the databases: `make`.
+3.  Run a local web server:  `python3 -m http.server` and connect to `http://0.0.0.0:8000`.
+
+**Dependencies:** You will need to install various dependencies, including `libxml2-utils`, `npm`, `typescript`, `closure-compiler`, `python-lxml`, `pypy`, and `basex`. Instructions are in the original README.
 
 ## Acknowledgements
 
-This project was primarily developed and is maintained by [Emery Berger](https://emeryberger.com).
-It incorporates data and code from:
-
-*   [Swarat Chaudhuri](https://www.cs.utexas.edu/~swarat/)
-*   [Papoutsaki et al.](http://cs.brown.edu/people/alexpap/faculty_dataset.html)
-*   [DBLP.org](http://dblp.org)
+The CS Rankings site was developed primarily by [Emery Berger](https://emeryberger.com) and built upon prior work by Swarat Chaudhuri and others. It also incorporates data from DBLP.org.
 
 ## License
 
-CSRankings is covered by the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+CSRankings is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
