@@ -1,25 +1,23 @@
 <h1 align="center">
-  <img src="images/agent_s.png" alt="Agent S Logo" style="vertical-align:middle" width="60"> Agent S: Empowering Computers to Work Like Humans
+  <img src="images/agent_s.png" alt="Agent S Logo" style="vertical-align:middle" width="60"> Agent S: Unleash the Power of AI on Your Computer
 </h1>
 
-<p align="center">
-  Agent S is an open-source framework that allows your computer to be used autonomously. Explore the power of AI agents! 
-  <br>
-  <a href="https://github.com/simular-ai/Agent-S"> View the Project on GitHub </a>
-</p>
+<p align="center">Effortlessly automate tasks and interact with your computer like never before with Agent S!  Explore the [original repository](https://github.com/simular-ai/Agent-S) for the latest updates.</p>
 
-<p align="center">
+<p align="center">&nbsp;
   🌐 <a href="https://www.simular.ai/articles/agent-s2-technical-review">[S2 blog]</a>&nbsp;
   📄 <a href="https://arxiv.org/abs/2504.00906">[S2 Paper (COLM 2025)]</a>&nbsp;
   🎥 <a href="https://www.youtube.com/watch?v=wUGVQl7c0eg">[S2 Video]</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p align="center">&nbsp;
   🌐 <a href="https://www.simular.ai/agent-s">[S1 blog]</a>&nbsp;
   📄 <a href="https://arxiv.org/abs/2410.08164">[S1 Paper (ICLR 2025)]</a>&nbsp;
   🎥 <a href="https://www.youtube.com/watch?v=OBDE3Knte0g">[S1 Video]</a>
 </p>
 
-<p align="center">
-  <a href="https://trendshift.io/repositories/13151" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13151" alt="simular-ai%2FAgent-S | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<p align="center">&nbsp;
+<a href="https://trendshift.io/repositories/13151" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13151" alt="simular-ai%2FAgent-S | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
 <p align="center">
@@ -34,13 +32,13 @@
 
 <div align="center">
   <!-- Keep these links. Translations will automatically update with the README. -->
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=de">Deutsch</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=es">Español</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=fr">français</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ja">日本語</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ko">한국어</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=pt">Português</a> |
-  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ru">Русский</a> |
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=de">Deutsch</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=es">Español</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=fr">français</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ja">日本語</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ko">한국어</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=pt">Português</a> | 
+  <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=ru">Русский</a> | 
   <a href="https://www.readme-i18n.com/simular-ai/Agent-S?lang=zh">中文</a>
 </div>
 
@@ -51,23 +49,22 @@
 
 ## Key Features
 
-*   **Autonomous Computer Interaction:**  Control your computer through natural language instructions, automating tasks and workflows.
-*   **Open-Source Framework:**  Build upon our technology or contribute to the advancements of agent-based systems.
-*   **GUI Agents:**  Interact directly with graphical user interfaces, enabling a wide range of automation possibilities.
-*   **SOTA Performance:** Agent S2.5 achieves new state-of-the-art results.
-*   **Cross-Platform Support:**  Works with Linux, MacOS, and Windows.
-*   **Easy to Use SDK:** Integrate Agent S into your own projects with our Python SDK.
+*   **Autonomous Computer Interaction:**  Agent S allows you to control your computer through an Agent-Computer Interface, automating tasks and mimicking human behavior.
+*   **Open Source Framework:**  Build and customize intelligent GUI agents with our open-source framework.
+*   **Cutting-Edge Technology:** Leverages the latest advancements in AI for superior performance.
+*   **Multi-Platform Support:**  Works across Linux, macOS, and Windows.
+*   **High Performance:** Achieve state-of-the-art results on benchmarks such as OSWorld.
 
-## Updates
+## What's New
 
-*   [x] **2025/08/01**: Agent S2.5 is released (gui-agents v0.2.5): simpler, better, and faster! New SOTA on [OSWorld-Verified](https://os-world.github.io)!
-*   [x] **2025/07/07**: The [Agent S2 paper](https://arxiv.org/abs/2504.00906) is accepted to COLM 2025! See you in Montreal!
-*   [x] **2025/04/01**: Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
-*   [x] **2025/03/12**: Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
-*   [x] **2025/01/22**: The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
-*   [x] **2025/01/21**: Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
-*   [x] **2024/12/05**: Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
-*   [x] **2024/10/10**: Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase!
+*   **2025/08/01**: Agent S2.5 is released (gui-agents v0.2.5): simpler, better, and faster! New SOTA on [OSWorld-Verified](https://os-world.github.io)!
+*   **2025/07/07**: The [Agent S2 paper](https://arxiv.org/abs/2504.00906) is accepted to COLM 2025! See you in Montreal!
+*   **2025/04/01**: Released the [Agent S2 paper](https://arxiv.org/abs/2504.00906) with new SOTA results on OSWorld, WindowsAgentArena, and AndroidWorld!
+*   **2025/03/12**: Released Agent S2 along with v0.2.0 of [gui-agents](https://github.com/simular-ai/Agent-S), the new state-of-the-art for computer use agents (CUA), outperforming OpenAI's CUA/Operator and Anthropic's Claude 3.7 Sonnet Computer-Use!
+*   **2025/01/22**: The [Agent S paper](https://arxiv.org/abs/2410.08164) is accepted to ICLR 2025!
+*   **2025/01/21**: Released v0.1.2 of [gui-agents](https://github.com/simular-ai/Agent-S) library, with support for Linux and Windows!
+*   **2024/12/05**: Released v0.1.0 of [gui-agents](https://github.com/simular-ai/Agent-S) library, allowing you to use Agent-S for Mac, OSWorld, and WindowsAgentArena with ease!
+*   **2024/10/10**: Released the [Agent S paper](https://arxiv.org/abs/2410.08164) and codebase!
 
 ## Table of Contents
 
@@ -80,7 +77,7 @@
 
 ## 💡 Introduction
 
-Agent S is an open-source framework that lets you automate computer tasks using AI.
+Agent S is an innovative, open-source framework designed to empower AI agents to interact with your computer's graphical user interface, offering a novel Agent-Computer Interface (ACI). This project aims to build intelligent GUI agents that learn from past experiences and autonomously perform complex tasks on your computer.
 
 ## 🎯 Current Results
 
@@ -101,7 +98,7 @@ Agent S is an open-source framework that lets you automate computer tasks using 
       <td><b>54.2%</b></td>
       <td>50.6%</td>
     </tr>
-    <!--     <tr>
+<!--     <tr>
       <td>WindowsAgentArena</td>
       <td>29.8%</td>
       <td>19.5% (NAVI)</td>
@@ -118,9 +115,9 @@ Agent S is an open-source framework that lets you automate computer tasks using 
 
 ### Prerequisites
 
-*   **Single Monitor**: Our agent is designed for single monitor screens
-*   **Security**: The agent runs Python code to control your computer - use with care
-*   **Supported Platforms**: Linux, Mac, and Windows
+*   **Single Monitor:** The agent is designed for use with a single monitor.
+*   **Security:**  Exercise caution as the agent runs Python code to control your computer.
+*   **Supported Platforms:** Linux, Mac, and Windows.
 
 ### Installation
 
@@ -132,7 +129,7 @@ pip install gui-agents
 
 #### Option 1: Environment Variables
 
-Add to your `.bashrc` (Linux) or `.zshrc` (MacOS):
+Add the following lines to your `.bashrc` (Linux) or `.zshrc` (MacOS) file, replacing the placeholders with your actual API keys:
 
 ```bash
 export OPENAI_API_KEY=<YOUR_API_KEY>
@@ -142,6 +139,8 @@ export HF_TOKEN=<YOUR_HF_TOKEN>
 
 #### Option 2: Python Script
 
+You can also set the API keys directly within your Python script:
+
 ```python
 import os
 os.environ["OPENAI_API_KEY"] = "<YOUR_API_KEY>"
@@ -149,20 +148,19 @@ os.environ["OPENAI_API_KEY"] = "<YOUR_API_KEY>"
 
 ### Supported Models
 
-We support Azure OpenAI, Anthropic, Gemini, Open Router, and vLLM inference. See [models.md](models.md) for details.
+Agent S supports Azure OpenAI, Anthropic, Gemini, Open Router, and vLLM inference.  See [models.md](models.md) for detailed information about supported models.
 
 ### Grounding Models (Required)
 
-For optimal performance, we recommend [UI-TARS-1.5-7B](https://huggingface.co/ByteDance-Seed/UI-TARS-1.5-7B) hosted on Hugging Face Inference Endpoints or another provider. See [Hugging Face Inference Endpoints](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints) for setup instructions.
+For optimal performance, we recommend using [UI-TARS-1.5-7B](https://huggingface.co/ByteDance-Seed/UI-TARS-1.5-7B) hosted on Hugging Face Inference Endpoints, or another provider. See [Hugging Face Inference Endpoints](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints) for detailed setup instructions.
 
 ## 🚀 Usage
 
-> ⚡️ **Recommended Setup:**  
-> For the best configuration, we recommend using **OpenAI o3-2025-04-16** as the main model, paired with **UI-TARS-1.5-7B** for grounding.
+> ⚡️ **Recommended Setup:** For the best performance, use **OpenAI o3-2025-04-16** as the main model, paired with **UI-TARS-1.5-7B** for grounding.
 
 ### CLI
 
-Run Agent S2.5 with the required parameters:
+Run Agent S2.5 using the command-line interface with the necessary parameters:
 
 ```bash
 agent_s \
@@ -187,10 +185,10 @@ agent_s \
 
 #### Grounding Model Dimensions
 
-The grounding width and height should match the output coordinate resolution of your grounding model:
+Ensure the grounding width and height parameters match the output coordinate resolution of your grounding model:
 
-*   **UI-TARS-1.5-7B**: Use `--grounding_width 1920 --grounding_height 1080`
-*   **UI-TARS-72B**: Use `--grounding_width 1000 --grounding_height 1000`
+*   **UI-TARS-1.5-7B**:  Use `--grounding_width 1920 --grounding_height 1080`
+*   **UI-TARS-72B**:  Use `--grounding_width 1000 --grounding_height 1000`
 
 #### Optional Parameters
 
@@ -202,7 +200,7 @@ The grounding width and height should match the output coordinate resolution of 
 
 ### `gui_agents` SDK
 
-First, we import the necessary modules. `AgentS2_5` is the main agent class for Agent S2.5. `OSWorldACI` is our grounding agent that translates agent actions into executable python code.
+First, import necessary modules. `AgentS2_5` is the main agent class for Agent S2.5. `OSWorldACI` is our grounding agent that translates agent actions into executable python code.
 
 ```python
 import pyautogui
@@ -217,7 +215,7 @@ load_dotenv()
 current_platform = "linux"  # "darwin", "windows"
 ```
 
-Next, we define our engine parameters. `engine_params` is used for the main agent, and `engine_params_for_grounding` is for grounding. For `engine_params_for_grounding`, we support custom endpoints like HuggingFace TGI, vLLM, and Open Router.
+Next, define your engine parameters. `engine_params` is used for the main agent, while `engine_params_for_grounding` is used for grounding. For the latter, custom endpoints like HuggingFace TGI, vLLM, and Open Router are supported.
 
 ```python
 engine_params = {
@@ -249,7 +247,7 @@ engine_params_for_grounding = {
 }
 ```
 
-Then, we define our grounding agent and Agent S2.5.
+Then, define your grounding agent and Agent S2.5.
 
 ```python
 grounding_agent = OSWorldACI(
@@ -269,7 +267,7 @@ agent = AgentS2_5(
 )
 ```
 
-Finally, let's query the agent!
+Finally, query the agent!
 
 ```python
 # Get screenshot.
@@ -288,15 +286,15 @@ info, action = agent.predict(instruction=instruction, observation=obs)
 exec(action[0])
 ```
 
-Refer to `gui_agents/s2_5/cli_app.py` for more details on how the inference loop works.
+Refer to `gui_agents/s2_5/cli_app.py` for more details on the inference loop.
 
 ### OSWorld
 
-To deploy Agent S2.5 in OSWorld, follow the [OSWorld Deployment instructions](osworld_setup/s2_5/OSWorld.md).
+To deploy Agent S2.5 in OSWorld, please follow the [OSWorld Deployment instructions](osworld_setup/s2_5/OSWorld.md).
 
 ## 💬 Citations
 
-If you find this codebase useful, please cite:
+If you find this codebase useful, please cite the following:
 
 ```
 @misc{Agent-S2,

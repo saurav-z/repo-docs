@@ -1,42 +1,49 @@
-# Oppia: Interactive Learning Platform - Create Engaging Educational Experiences
+# Oppia: Create and Share Interactive Learning Experiences (Online Learning Tool)
 
-**Oppia is an open-source platform that empowers anyone to create and share interactive lessons, fostering a dynamic learning environment.** Explore the original repository [here](https://github.com/oppia/oppia).
+Oppia is an open-source platform empowering anyone to create and share engaging, interactive learning activities.  [Visit the original repository](https://github.com/oppia/oppia).
 
 [![Full-stack tests](https://github.com/oppia/oppia/actions/workflows/full_stack_tests.yml/badge.svg)](https://github.com/oppia/oppia/actions/workflows/full_stack_tests.yml)
 
-## Key Features:
+## Key Features
 
-*   **Interactive Explorations:** Create and share engaging, conversational learning activities that provide feedback and guide learners.
-*   **Simulates One-on-One Tutoring:**  Activities are designed to mimic personalized tutoring sessions, enhancing understanding through interactive engagement.
-*   **Open-Source and Accessible:**  The platform is free to use and open-source, promoting access to quality educational resources.
-*   **Focus on Mathematics, Science, and Financial Literacy:** Oppia offers lessons in core subjects and is expanding its educational offerings.
-*   **Community-Driven Development:** Benefit from a collaborative environment where contributions from developers and various contributors are welcome.
+*   **Interactive Learning:** Creates interactive activities, called "explorations," that simulate one-on-one tutoring experiences.
+*   **Feedback-Driven Learning:** Students receive instant feedback, promoting active learning and understanding.
+*   **Open-Source:**  Benefit from a platform built by a community and licensed under Apache v2.
+*   **Curriculum Development:** The Oppia team develops free, high-quality lessons in basic mathematics, science, and financial literacy.
+*   **Accessibility:**  Provides educational resources to learners who may lack access to traditional educational materials.
+*   **Built with robust Technologies:** Utilizing Python, Angular, and Google App Engine.
 
-## Core Technologies
+## Why Choose Oppia?
 
-*   Python
-*   Angular
-*   Google App Engine
+Oppia transforms the way people learn by offering a platform that:
 
-## Getting Started
+*   Makes learning interactive and engaging.
+*   Provides immediate feedback to students.
+*   Empowers educators and content creators.
+*   Supports a global community of learners.
 
-*   **Installation:** Detailed instructions can be found on the [Installing Oppia page](https://github.com/oppia/oppia/wiki/Installing-Oppia).
-*   **User Documentation:** Get acquainted with the platform through the comprehensive [User Documentation](https://oppia.github.io/).
-*   **Explore Existing Lessons:** Check out the existing educational content on [Oppia.org](https://www.oppia.org/).
+## Get Started
 
-## Contribute to Oppia
+*   **Installation:**  Follow the instructions on the [Installing Oppia page](https://github.com/oppia/oppia/wiki/Installing-Oppia)
+*   **Community Site:** [Oppia.org](https://www.oppia.org)
+*   **User Documentation:** [User Documentation](https://oppia.github.io/)
+*   **Contribute:** [Contributors' wiki](https://github.com/oppia/oppia/wiki)
+*   **Discussions:** [GitHub Discussions](https://github.com/oppia/oppia/discussions)
+*   **Report Issues:** [File an issue](https://github.com/oppia/oppia/issues/new/choose)
+*   **Newsletter:**  Sign up for our [email newsletter](https://shorturl.at/CHPY6)
+*   **Donate:** Support our work [here](https://www.oppia.org/donate)
 
-Oppia thrives on community involvement, and welcomes contributions of all kinds!
+## Contributing
 
-*   **Developers:** Follow the instructions on [this wiki page](https://github.com/oppia/oppia/wiki/Contributing-code-to-Oppia#setting-things-up) to set up your environment and contribute code.
-*   **All Contributors:**  Review the general guidelines on the [general contributor guidelines](https://github.com/oppia/oppia/wiki).
+Join the Oppia community! We welcome contributions of all kinds: art, code, design, and documentation.
 
-## Support and Community
+*   **Developers:** See the [wiki page](https://github.com/oppia/oppia/wiki/Contributing-code-to-Oppia#setting-things-up) for setup instructions.
+*   **All Contributors:** Review our [general contributor guidelines](https://github.com/oppia/oppia/wiki).
 
-*   **Report Issues:**  Submit feature requests or bug reports via the [issue tracker](https://github.com/oppia/oppia/issues/new/choose).
-*   **Security Concerns:** Report security issues directly to admin@oppia.org.
-*   **Discussion Forum:** Join the conversation on the [discussion forum](https://github.com/oppia/oppia/discussions).
-*   **Announcements Mailing List:** Stay updated via the [announcements mailing list](http://groups.google.com/group/oppia-announce).
+## Support
+
+*   Report feature requests or bug reports on our [issue tracker](https://github.com/oppia/oppia/issues/new/choose).
+*   Report security issues directly to admin@oppia.org.
 
 ## License
 
@@ -44,9 +51,16 @@ Oppia is released under the [Apache v2 license](https://github.com/oppia/oppia/b
 
 ## Stay Connected
 
-*   **Twitter:** [![Twitter](https://img.shields.io/badge/twitter-1DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/oppiaorg)
-*   **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/linkedin-0077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/oppia-org/)
-*   **Facebook:** [![Facebook](https://img.shields.io/badge/facebook-1877F2.svg?&style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/oppiaorg/)
-*   **Medium:** [![Medium](https://img.shields.io/badge/medium-12100E.svg?&style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@oppia.org)
-*   **Oppia.org YouTube:** [![Oppia.org YouTube](https://img.shields.io/badge/oppia.org%20youtube-FF0000.svg?&style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC5c1G7BNDCfv1rczcBp9FPw)
-*   **Oppia Dev YouTube:** [![Oppia Dev YouTube](https://img.shields.io/badge/oppia%20dev%20youtube-FF0000.svg?&style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCsrAX-oeqm0-NIQzQrdiUkQ)
+*   **Discussion Forum:** [GitHub Discussions](https://github.com/oppia/oppia/discussions)
+*   **Announcements Mailing List:** [Announcements mailing list](http://groups.google.com/group/oppia-announce)
+
+## Social Media
+
+[<img height="30" src="https://img.shields.io/badge/twitter-1DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" />][twitter] [<img height="30" src="https://img.shields.io/badge/linkedin-0077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />][LinkedIn] [<img height="30" src = "https://img.shields.io/badge/facebook-1877F2.svg?&style=for-the-badge&logo=facebook&logoColor=white">][Facebook] [<img height="30" src = "https://img.shields.io/badge/medium-12100E.svg?&style=for-the-badge&logo=medium&logoColor=white">][medium] [<img height="30" src = "https://img.shields.io/badge/oppia.org%20youtube-FF0000.svg?&style=for-the-badge&logo=youtube&logoColor=white">][oppia-org-youtube] [<img height="30" src = "https://img.shields.io/badge/oppia%20dev%20youtube-FF0000.svg?&style=for-the-badge&logo=youtube&logoColor=white">][dev-youtube]
+
+[twitter]: https://twitter.com/oppiaorg
+[linkedIn]: https://www.linkedin.com/company/oppia-org/
+[medium]: https://medium.com/@oppia.org
+[facebook]: https://www.facebook.com/oppiaorg/
+[oppia-org-youtube]: https://www.youtube.com/channel/UC5c1G7BNDCfv1rczcBp9FPw
+[dev-youtube]: https://www.youtube.com/channel/UCsrAX-oeqm0-NIQzQrdiUkQ

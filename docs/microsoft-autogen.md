@@ -1,6 +1,5 @@
 <div align="center">
 <img src="https://microsoft.github.io/autogen/0.2/img/ag.svg" alt="AutoGen Logo" width="100">
-</div>
 
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40pyautogen)](https://twitter.com/pyautogen)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Company?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/105812540)
@@ -8,43 +7,51 @@
 [![Documentation](https://img.shields.io/badge/Documentation-AutoGen-blue?logo=read-the-docs)](https://microsoft.github.io/autogen/)
 [![Blog](https://img.shields.io/badge/Blog-AutoGen-blue?logo=blogger)](https://devblogs.microsoft.com/autogen/)
 
+</div>
+
 <div align="center" style="background-color: rgba(255, 235, 59, 0.5); padding: 10px; border-radius: 5px; margin: 20px 0;">
   <strong>Important:</strong> This is the official project. We are not affiliated with any fork or startup. See our <a href="https://x.com/pyautogen/status/1857264760951296210">statement</a>.
 </div>
 
-# AutoGen: Build Powerful Multi-Agent AI Applications with Ease
+# AutoGen: Build Powerful Multi-Agent AI Applications
 
-AutoGen is a versatile framework by Microsoft for building cutting-edge multi-agent AI applications, enabling autonomous actions and seamless human-AI collaboration.  Explore the original repository [here](https://github.com/microsoft/autogen).
+**AutoGen is a groundbreaking framework for creating sophisticated multi-agent AI applications that can operate autonomously or collaboratively with humans.** This README provides a comprehensive overview of AutoGen, including installation, quickstart guides, key features, and resources for getting started.
+
+**[Get started with AutoGen on GitHub!](https://github.com/microsoft/autogen)**
 
 ## Key Features
 
-*   **Multi-Agent Workflows:** Design and deploy complex AI workflows with multiple agents.
-*   **Flexible Architecture:** Use the framework at different abstraction levels, from high-level APIs to low-level components.
-*   **Extensible Design:** Utilize a layered architecture with clearly defined responsibilities for flexibility.
-*   **Integration with LLMs:** Supports various LLM clients like OpenAI and AzureOpenAI.
-*   **No-Code GUI:** Develop and test multi-agent applications visually with AutoGen Studio.
-*   **Benchmarking Suite:** Evaluate your agent performance with the AutoGen Bench tool.
-*   **.NET Support:** Cross-language support for .NET and Python.
+*   **Multi-Agent Architecture:** Design and implement complex workflows with multiple AI agents.
+*   **Extensible Framework:** Easily customize agents, communication protocols, and interaction patterns.
+*   **No-Code GUI:** Utilize AutoGen Studio for rapid prototyping and building multi-agent applications without coding.
+*   **OpenAI & Azure OpenAI Integration:** Seamlessly integrate with leading LLM providers.
+*   **Comprehensive Ecosystem:** Benefit from a thriving community, extensive documentation, and developer tools.
+*   **Flexible Design:** Use the framework at different levels of abstraction, from high-level APIs to low-level components.
 
 ## Installation
 
 AutoGen requires **Python 3.10 or later**.
 
-Install the core packages:
+Install the core packages and OpenAI client with:
 
 ```bash
 pip install -U "autogen-agentchat" "autogen-ext[openai]"
 ```
 
-For AutoGen Studio:
+For the no-code GUI, install AutoGen Studio:
 
 ```bash
 pip install -U "autogenstudio"
 ```
 
-## Quickstart: Get Started Quickly
+For more detailed information, refer to the [official installation guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/installation.html).
 
-### Hello World Example
+## Quickstart
+
+### Hello World
+
+Create a simple assistant agent using OpenAI's GPT-4o model:
+
 ```python
 import asyncio
 from autogen_agentchat.agents import AssistantAgent
@@ -59,7 +66,10 @@ async def main() -> None:
 asyncio.run(main())
 ```
 
-### Web Browsing Agent Team Example
+### Web Browsing Agent Team
+
+Create a team with a web surfer agent and a user proxy agent for web browsing tasks:
+
 ```python
 # pip install -U autogen-agentchat autogen-ext[openai,web-surfer]
 # playwright install
@@ -92,67 +102,47 @@ async def main() -> None:
 asyncio.run(main())
 ```
 
-### AutoGen Studio: No-Code Development
+### AutoGen Studio
 
-Launch AutoGen Studio to visually build and run multi-agent workflows:
+Launch the no-code GUI for prototyping and running multi-agent workflows:
 
 ```bash
+# Run AutoGen Studio on http://localhost:8080
 autogenstudio ui --port 8080 --appdir ./my-app
 ```
 
-## Why Choose AutoGen?
+## Why Use AutoGen?
 
-AutoGen is a comprehensive ecosystem designed for the rapid development of AI agents, especially multi-agent systems.
+AutoGen provides a complete ecosystem for building multi-agent AI applications, including a flexible framework, developer tools, and ready-to-use applications.
 
-*   **Modular Design:**
-    *   **Core API:** Provides the foundation for message passing, event-driven agents, and runtime flexibility.
-    *   **AgentChat API:** Offers a streamlined API for quick prototyping, built on the Core API.
-    *   **Extensions API:** Enables integration of LLM clients and capabilities such as code execution.
-*   **Developer Tools:**
-    *   **AutoGen Studio:** A no-code GUI for easy multi-agent application building.
-    *   **AutoGen Bench:** A benchmarking suite to evaluate agent performance.
-*   **Thriving Community:** Engage in weekly office hours, discussions, and community-driven content.
+*   **Core API:** Implements message passing, event-driven agents, and local/distributed runtime.
+*   **AgentChat API:** Simplifies rapid prototyping with a user-friendly API built on top of the Core API.
+*   **Extensions API:** Enables integration with specific LLM clients (e.g., OpenAI, Azure OpenAI) and capabilities like code execution.
+*   **AutoGen Studio:** A no-code GUI for building multi-agent applications.
+*   **AutoGen Bench:** A benchmarking suite for evaluating agent performance.
 
 ## Where to Go Next
 
-Explore resources for Python, .NET and AutoGen Studio:
+Explore these resources to dive deeper into AutoGen:
 
-|               | Python                                                                                                                                                                                                                                                | .NET                                                                                                                                                                                                                                    | AutoGen Studio                                                                                                                                                                                     |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Installation  | [![Installation](https://img.shields.io/badge/Install-blue)](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/installation.html)                                                                                                 | [![Install](https://img.shields.io/badge/Install-green)](https://microsoft.github.io/autogen/dotnet/dev/core/installation.html)                                                                                                 | [![Install](https://img.shields.io/badge/Install-purple)](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/installation.html)                                                                           |
-| Quickstart    | [![Quickstart](https://img.shields.io/badge/Quickstart-blue)](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/quickstart.html#)                                                                                                 | [![Quickstart](https://img.shields.io/badge/Quickstart-green)](https://microsoft.github.io/autogen/dotnet/dev/core/index.html)                                                                                                     | [![Usage](https://img.shields.io/badge/Quickstart-purple)](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/usage.html#)                                                                              |
-| Tutorial      | [![Tutorial](https://img.shields.io/badge/Tutorial-blue)](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/index.html)                                                                                                 | [![Tutorial](https://img.shields.io/badge/Tutorial-green)](https://microsoft.github.io/autogen/dotnet/dev/core/tutorial.html)                                                                                                     | [![Usage](https://img.shields.io/badge/Tutorial-purple)](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/usage.html#)                                                                              |
-| API Reference | [![API](https://img.shields.io/badge/Docs-blue)](https://microsoft.github.io/autogen/stable/reference/index.html#)                                                                                                                                         | [![API](https://img.shields.io/badge/Docs-green)](https://microsoft.github.io/autogen/dotnet/dev/api/Microsoft.AutoGen.Contracts.html)                                                                                              | [![API](https://img.shields.io/badge/Docs-purple)](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/usage.html)                                                                                |
-| Packages      | [![PyPi autogen-core](https://img.shields.io/badge/PyPi-autogen--core-blue?logo=pypi)](https://pypi.org/project/autogen-core/) <br> [![PyPi autogen-agentchat](https://img.shields.io/badge/PyPi-autogen--agentchat-blue?logo=pypi)](https://pypi.org/project/autogen-agentchat/) <br> [![PyPi autogen-ext](https://img.shields.io/badge/PyPi-autogen--ext-blue?logo=pypi)](https://pypi.org/project/autogen-ext/) | [![NuGet Contracts](https://img.shields.io/badge/NuGet-Contracts-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Contracts/) <br> [![NuGet Core](https://img.shields.io/badge/NuGet-Core-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Core/) <br> [![NuGet Core.Grpc](https://img.shields.io/badge/NuGet-Core.Grpc-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Core.Grpc/) <br> [![NuGet RuntimeGateway.Grpc](https://img.shields.io/badge/NuGet-RuntimeGateway.Grpc-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.RuntimeGateway.Grpc/) | [![PyPi autogenstudio](https://img.shields.io/badge/PyPi-autogenstudio-purple?logo=pypi)](https://pypi.org/project/autogenstudio/)                                                               |
+<div align="center">
 
-## Get Involved
+|               | [![Python](https://img.shields.io/badge/AutoGen-Python-blue?logo=python&logoColor=white)](./python)                                                                                                                                                                                                                                                                                                                | [![.NET](https://img.shields.io/badge/AutoGen-.NET-green?logo=.net&logoColor=white)](./dotnet) | [![Studio](https://img.shields.io/badge/AutoGen-Studio-purple?logo=visual-studio&logoColor=white)](./python/packages/autogen-studio)                     |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Installation  | [![Installation](https://img.shields.io/badge/Install-blue)](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/installation.html)                                                                                                                                                                                                                                                            | [![Install](https://img.shields.io/badge/Install-green)](https://microsoft.github.io/autogen/dotnet/dev/core/installation.html) | [![Install](https://img.shields.io/badge/Install-purple)](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/installation.html) |
+| Quickstart    | [![Quickstart](https://img.shields.io/badge/Quickstart-blue)](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/quickstart.html#)                                                                                                                                                                                                                                                            | [![Quickstart](https://img.shields.io/badge/Quickstart-green)](https://microsoft.github.io/autogen/dotnet/dev/core/index.html) | [![Usage](https://img.shields.io/badge/Quickstart-purple)](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/usage.html#)        |
+| Tutorial      | [![Tutorial](https://img.shields.io/badge/Tutorial-blue)](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/index.html)                                                                                                                                                                                                                                                            | [![Tutorial](https://img.shields.io/badge/Tutorial-green)](https://microsoft.github.io/autogen/dotnet/dev/core/tutorial.html) | [![Usage](https://img.shields.io/badge/Tutorial-purple)](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/usage.html#)        |
+| API Reference | [![API](https://img.shields.io/badge/Docs-blue)](https://microsoft.github.io/autogen/stable/reference/index.html#)                                                                                                                                                                                                                                                                                                    | [![API](https://img.shields.io/badge/Docs-green)](https://microsoft.github.io/autogen/dotnet/dev/api/Microsoft.AutoGen.Contracts.html) | [![API](https://img.shields.io/badge/Docs-purple)](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/usage.html)               |
+| Packages      | [![PyPi autogen-core](https://img.shields.io/badge/PyPi-autogen--core-blue?logo=pypi)](https://pypi.org/project/autogen-core/) <br> [![PyPi autogen-agentchat](https://img.shields.io/badge/PyPi-autogen--agentchat-blue?logo=pypi)](https://pypi.org/project/autogen-agentchat/) <br> [![PyPi autogen-ext](https://img.shields.io/badge/PyPi-autogen--ext-blue?logo=pypi)](https://pypi.org/project/autogen-ext/) | [![NuGet Contracts](https://img.shields.io/badge/NuGet-Contracts-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Contracts/) <br> [![NuGet Core](https://img.shields.io/badge/NuGet-Core-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Core/) <br> [![NuGet Core.Grpc](https://img.shields.io/badge/NuGet-Core.Grpc-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Core.Grpc/) <br> [![NuGet RuntimeGateway.Grpc](https://img.shields.io/badge/NuGet-RuntimeGateway.Grpc-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.RuntimeGateway.Grpc/) | [![PyPi autogenstudio](https://img.shields.io/badge/PyPi-autogenstudio-purple?logo=pypi)](https://pypi.org/project/autogenstudio/)                       |
 
-Contribute to AutoGen by reviewing the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines. Join our community on [Discord](https://aka.ms/autogen-discord) or through [GitHub Discussions](https://github.com/microsoft/autogen/discussions).
+</div>
 
-## Legal
+## Community and Contributing
+
+*   **Contribute:** See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+*   **Ask Questions:** Use [GitHub Discussions](https://github.com/microsoft/autogen/discussions) or join our [Discord server](https://aka.ms/autogen-discord).
+*   **Stay Updated:** Read the [blog](https://devblogs.microsoft.com/autogen/) for the latest news and tutorials.
+
+## Legal Notices
 
 See [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE) for licensing information.
-
-<p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
-  <a href="#readme-top" style="text-decoration: none; color: blue; font-weight: bold;">
-    ↑ Back to Top ↑
-  </a>
-</p>
-```
-Key improvements and SEO considerations:
-
-*   **Clear Headline:**  "AutoGen: Build Powerful Multi-Agent AI Applications with Ease" immediately grabs attention and includes relevant keywords.
-*   **Concise Summary:** A short, compelling one-sentence hook is provided.
-*   **Bulleted Key Features:**  Uses bullet points for readability and highlights the most important aspects.
-*   **Keyword Optimization:**  Includes relevant keywords like "multi-agent AI," "AI applications," and "framework."
-*   **Structured Sections:**  Uses clear headings for better organization and SEO.
-*   **Installation Instructions:**  Easy-to-follow installation instructions for quick user onboarding.
-*   **Quickstart Examples:**  Provides code examples to get users started rapidly.
-*   **Benefits Section:**  Explains *why* to use AutoGen, highlighting its advantages.
-*   **Clear Calls to Action:**  Encourages contribution and community participation.
-*   **Links to Important Resources:**  Provides clear links to documentation, tutorials, and the original repository.
-*   **Clean Code Blocks:** Added code blocks for the quickstart examples, ready to copy and paste.
-*   **FAQ and Contact Information:**  Directs users to support resources.
-*   **Legal Notices:**  Includes legal information as provided in the original README.
-*   **Back to Top Link:**  Added at the end for better user experience.
-*   **Removed Redundancy:** streamlined the content, removing repetitive elements.

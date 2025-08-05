@@ -1,63 +1,62 @@
-# WilmerAI: Expertly Routing Language Model Inference
+# WilmerAI: Expertly Routing Your Language Model Inferences
 
-**Unlock the power of interconnected LLMs with WilmerAI, a flexible and customizable application that orchestrates your AI workflows.** [Visit the original repo for more details.](https://github.com/SomeOddCodeGuy/WilmerAI)
+**Unlock the power of intelligent workflows and distributed LLMs with WilmerAI, an application that orchestrates complex interactions between your front-end and various LLM APIs.**  [Visit the original repository](https://github.com/SomeOddCodeGuy/WilmerAI).
 
-## Key Features
+## Key Features:
 
-*   **Customizable Workflows:** Design intricate workflows to chain multiple LLMs, tools, and resources for complex tasks.
-*   **Prompt Routing:** Direct prompts to specific categories or personas, utilizing tailored presets and workflows.
-*   **Distributed LLM Support:** Leverage multiple LLMs, including local and cloud-based APIs, to work together.
-*   **Flexible API Endpoints:** Compatible with OpenAI, Ollama, and KoboldCpp APIs for seamless integration with various frontends.
-*   **Dynamic Memory Management:** Continuously generate chat summaries and recent memories to enhance context and consistency.
-*   **Offline Wikipedia Integration:** Utilize the Offline Wikipedia API for enhanced factual recall and RAG capabilities.
-*   **Vision Multi-Modal Support:** Experimental image processing using Ollama, enabling image analysis and integration into conversations.
-*   **Mid-Workflow Logic:** Implement conditional workflows and execution paths based on LLM responses.
-*   **Tool Integration**: Experimental integration with MCP server for advanced tool usage.
-*   **Model Hotswapping**: Utilizing Ollama's hotswapping, users can run complex workflows even on systems with smaller amounts of VRAM
+*   **Flexible Prompt Routing:** Direct prompts to custom categories (coding, math, personas) for tailored responses.
+*   **Customizable Workflows:** Design unique sequences of LLM calls for optimal results, bypassing routing if needed.
+*   **Multi-LLM Orchestration:** Leverage multiple LLMs simultaneously within a single workflow for enhanced capabilities.
+*   **Offline Wikipedia Integration:** Improve factual responses by connecting to the Offline Wikipedia API.
+*   **Contextual Chat Summaries:** Maintain long-term conversation consistency with continuously updated summaries and memories.
+*   **Hot-Swappable Models:** Maximize VRAM usage with Ollama's model hotswapping to run complex workflows on limited hardware.
+*   **Customizable Presets:** Tailor LLM parameters with easily modifiable JSON configuration files.
+*   **Experimental Vision Support:** Enhance prompts with image processing capabilities via Ollama integration.
+*   **Conditional Workflow Execution:** Trigger different workflows mid-conversation based on conditional evaluations.
+*   **Advanced Tool Calling (MCP):** Leverage MCP server tool calling for powerful and flexible workflow integrations.
+*   **Model Agnostic:** WilmerAI is designed to handle any LLM compatible with its API setup.
 
-## How WilmerAI Works
+## What is WilmerAI?
 
-WilmerAI acts as an intelligent intermediary between your frontend applications (like SillyTavern or Open WebUI) and LLM APIs. It exposes OpenAI and Ollama compatible endpoints, while on the backend, it connects to various LLM APIs such as OpenAI, KoboldCpp, and Ollama. The user can type a prompt into your front end, which is connected to Wilmer, which will then send this prompt to a series of workflows. Each workflow may make calls to multiple LLMs, after which the final response comes backs to you. From your perspective, it looked like a (likely long running) one shot call to an LLM. But in reality, it could be many LLM and even tools doing complex work.
-
-**Think of it as a command center for your LLMs.**
-
-### Example:
-1.  **Frontend Input:** You enter a prompt into your chosen application.
-2.  **Wilmer's Role:** Wilmer receives the prompt.
-3.  **Workflow Execution:** Wilmer routes the prompt through a series of pre-defined workflows.
-4.  **LLM Interactions:** The workflows execute, potentially calling multiple LLMs (OpenAI, KoboldCpp, Ollama) and tools.
-5.  **Output:** The final, enhanced response is returned to your frontend.
+WilmerAI acts as a powerful intermediary between your front-end application and the underlying LLM APIs. By exposing OpenAI and Ollama compatible endpoints, WilmerAI connects to various LLM APIs like OpenAI, KoboldCpp, and Ollama. Users can then construct intricate workflows. The user types a prompt into their frontend, which is then sent to WilmerAI. Here, it is routed through a sequence of customizable workflows, potentially involving multiple LLMs and tools. This allows for sophisticated processing behind the scenes, giving the appearance of a single, streamlined LLM call while in reality, many actions could be taking place.
 
 ## Why Use WilmerAI?
 
-WilmerAI was created to maximize the potential of Language Models by enabling users to utilize multiple models, tools, and resources to accomplish complex tasks. Wilmer's architecture is focused on enabling flexible and user-defined workflows.
+WilmerAI offers a flexible solution for managing LLM interactions, built around semi-autonomous workflows that give you granular control over the LLMs' paths. Instead of simply routing to a single LLM, Wilmer routes prompts to comprehensive workflows. This approach enables complex and adaptable categorization, where categorization is handled by user-defined workflows with numerous nodes and LLMs. This allows users to experiment with different prompting styles to optimize results. The goal is to empower users to easily refine and customize their interactions, and to maximize their domain knowledge and experience.
 
-## Getting Started
+## Setup and Configuration
 
-1.  **Installation:** Follow the instructions in the original [README](https://github.com/SomeOddCodeGuy/WilmerAI) to set up WilmerAI using either the provided scripts or manual installation. Python is required.
+1.  **Installation:**
+    *   Install Python 3.10 or 3.12.
+    *   Use the provided `.bat` (Windows) or `.sh` (macOS) files, or manually install dependencies using `pip install -r requirements.txt` and then run `python server.py`.
 2.  **Configuration:**
-    *   **Endpoints:** Configure your LLM API endpoints within the `Public/Configs/Endpoints` directory.
-    *   **Users:** Set up user profiles in the `Public/Configs/Users` directory, specifying routing, workflows, and settings.
-    *   **Routing:** Define prompt routing rules within the `Public/Configs/Routing` directory.
-    *   **Workflows:** Customize workflows within the `Public/Workflows` directory to define the flow of interactions between LLMs.
-3.  **Connect:** Connect your chosen frontend application (SillyTavern, Open WebUI, etc.) to WilmerAI via the available API endpoints (OpenAI or Ollama compatible).
+    *   All configurations are handled via JSON files in the `Public` folder.
+    *   Essential configurations reside in the `Endpoints` and `Users` folders.
+    *   For quick setup, copy a pre-made user configuration from `Public/Configs/Users/` and modify it to your needs, including adjusting the endpoints found under `Public/Configs/Endpoints`.
+    *   Update `Public/Configs/Users/_current-user.json` to specify your active user profile, or use the `--User` argument when starting the server.
+    *   Tailor your routing and workflows in the `Routing` and `Workflow` folders, creating custom categories and actions.
 
-## Further Exploration
+## Key Concepts:
 
-*   **YouTube Tutorials:** Explore the available [WilmerAI Setup Tutorial](https://www.youtube.com/watch?v=v2xYQCHZwJM) and the comprehensive [WilmerAI Tutorial Youtube PlayList](https://www.youtube.com/playlist?list=PLjIfeYFu5Pl7J7KGJqVmHM4HU56nByb4X) for in-depth guidance and examples.
-*   **Troubleshooting:** Consult the original README's troubleshooting section for common issues and solutions.
-*   **Configuration Files:** Dive into the configuration files to understand how to customize endpoints, users, routing, and workflows.
+*   **Endpoints:** Define the LLM API connection details (address, API type, model, and prompt template).
+*   **Workflows:** Define the steps, in a JSON file, that will need to take place in order to send prompts to and receive responses from the LLMs.
+*   **Users:** Configuration files that set the user-specific settings (port, workflows to run, memory and summary settings, etc.).
+*   **Routing:** Choose a workflow based on a request's characteristics.
+*   **Presets:** Customizable JSON configuration for settings like temperature, top\_p, and truncation length.
+*   **Workflow Nodes**: The individual prompts that get sent to the LLM, from the system and user prompt to the response.
+*   **Variables in Prompts:** Allows for many functions in the prompt to send out to the LLM, from the memories and summary to the categories.
+*   **Workflow Lock:** Allows a workflow to pause or remain incomplete while a longer process, like memory generation, is taking place.
 
----
+##  Additional Resources
+
+*   [Setup Tutorial](https://www.youtube.com/watch?v=v2xYQCHZwJM): A walkthrough of downloading and setting up WilmerAI.
+*   [WilmerAI Tutorial Playlist](https://www.youtube.com/playlist?list=PLjIfeYFu5Pl7J7KGJqVmHM4HU56nByb4X): In-depth tutorial.
+*   [How to Connect to WilmerAI](Docs/README.md#connecting-in-sillytavern)
 
 ## Disclaimer
 
-This project is under active development and provided "as is" without warranty. The maintainer and contributors are not liable for any issues arising from its use.
-
----
+This is an active personal project, so it may contain bugs. Updates may occur later in the evenings or on weekends. WilmerAI is provided "as is" and does not represent the views of any employer.
 
 ## Contact
 
-For inquiries, feedback, or support, contact:
-
-WilmerAI.Project@gmail.com
+Reach out to WilmerAI.Project@gmail.com for inquiries.

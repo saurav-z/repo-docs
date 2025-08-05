@@ -1,32 +1,36 @@
-# OpenCLIP: Open Source Implementation of CLIP
+# OpenCLIP: Open Source Implementation of CLIP for Image-Text Understanding
 
-**OpenCLIP provides an open-source implementation of CLIP, offering state-of-the-art performance in image-text understanding.** This repository allows you to leverage the power of Contrastive Language-Image Pre-training (CLIP) with a focus on reproducibility, scalability, and access to a wide range of pre-trained models. Check out the original repository on [GitHub](https://github.com/mlfoundations/open_clip)
+**OpenCLIP provides a versatile and powerful open-source implementation of OpenAI's CLIP (Contrastive Language-Image Pre-training), enabling cutting-edge image-text understanding and generation.  [Explore the original repository](https://github.com/mlfoundations/open_clip) for full details.**
 
-**Key Features:**
+*   **Key Features:**
+    *   **Pre-trained Models:** Access a wide range of pre-trained models trained on diverse datasets, including LAION-400M, LAION-2B, and DataComp-1B.
+    *   **Reproducible Scaling Laws:** Explore models and their scaling properties as studied in detail in the paper [reproducible scaling laws for contrastive language-image learning](https://arxiv.org/abs/2212.07143).
+    *   **Zero-Shot Performance:** Achieve impressive zero-shot performance on ImageNet-1k and other datasets.
+    *   **Flexible Training:** Train CLIP models with support for multi-GPU, SLURM clusters, and various data sources.
+    *   **Model Distillation:**  Distill from pre-trained models to create a smaller, more efficient models.
+    *   **CoCa Support:** Train CoCa models (Contrastive Captions) for image captioning and generation.
+    *   **Int8 Support:** Accelerate training and inference with int8 quantization.
+    *   **Easy Integration:**  Seamlessly integrate with tools like [clip-retrieval](https://github.com/rom1504/clip-retrieval) for efficient embedding computations and the Hugging Face Hub for model sharing.
 
-*   **Pre-trained Models:** Access a diverse collection of pre-trained CLIP models, trained on datasets like LAION-400M, LAION-2B, and DataComp-1B, along with results for 38 datasets.
-*   **Model Variety:** Supports various architectures, including ConvNext, ViT, and SigLIP models, with a range of sizes for different performance needs.
-*   **Reproducibility:**  Explore the paper [Reproducible scaling laws for contrastive language-image learning](https://arxiv.org/abs/2212.07143) for in-depth analysis and insights into model scaling.
-*   **Ease of Use:** Simple model instantiation and preprocessing steps for quick integration.
-*   **Fine-tuning:**  Tools and guidance for fine-tuning zero-shot models on downstream classification tasks are available in the [WiSE-FT](https://github.com/mlfoundations/wise-ft) repository.
-*   **Training Support:** Comprehensive instructions for training CLIP models with various data formats, distributed training configurations (including SLURM), and features like gradient accumulation and int8 support.
-*   **Model Distillation**  Distill from a pre-trained model, `--distill-model` and `--distill-pretrained` to specify the model you'd like to distill from.
-*   **Remote loading and Training:**  Support for remote filesystems (e.g. S3).
+*   **Model Highlights:**
+    *   Pretrained models are available on the Hugging Face Hub under the OpenCLIP library tag: https://huggingface.co/models?library=open_clip.
 
-**Zero-Shot ImageNet-1k Performance (Example)**
+    | Model                | Training Data | Resolution | ImageNet Zero-Shot Accuracy |
+    | -------------------- | ------------- | ---------- | --------------------------- |
+    | ConvNext-Base        | LAION-2B      | 256px      | 71.5%                       |
+    | ConvNext-Large       | LAION-2B      | 320px      | 76.9%                       |
+    | ConvNext-XXLarge     | LAION-2B      | 256px      | 79.5%                       |
+    | ViT-B-32-256         | DataComp-1B   | 256px      | 72.8%                       |
+    | ViT-L-14             | DataComp-1B   | 224px      | 79.2%                       |
+    | ViT-bigG-14          | LAION-2B      | 224px      | 80.1%                       |
+    | ... (and many more!) | ...           | ...        | ...                         |
 
-| Model             | Training Data | ImageNet Zero-Shot Accuracy |
-| ----------------- | ------------- | --------------------------- |
-| ConvNext-Base     | LAION-2B      | 71.5%                       |
-| ViT-H-14          | LAION-2B      | 78.0%                       |
-| ViT-bigG-14       | LAION-2B      | 80.1%                       |
-| ViT-gopt-16-SigLIP2-384 | WebLI (multi-lang) | 85.0%                       |
+*   **Installation:**
+    ```bash
+    pip install open_clip_torch
+    ```
 
-**Get Started:**
-
-1.  **Installation:** `pip install open_clip_torch`
-2.  **Example Usage:**
-
+*   **Usage Example:**
     ```python
     import torch
     from PIL import Image
@@ -49,15 +53,28 @@
 
     print("Label probs:", text_probs)
     ```
-3.  **Explore Pretrained Models:** `open_clip.list_pretrained()`
-4.  **Fine-tuning:** Refer to [WiSE-FT](https://github.com/mlfoundations/wise-ft) repository for fine-tuning details.
 
-**For detailed information on usage, model details, and training procedures, please refer to the [official documentation](docs/PRETRAINED.md, and other docs)**
+*   **Fine-tuning:**
+    For fine-tuning zero-shot models on downstream tasks, explore the [WiSE-FT repository](https://github.com/mlfoundations/wise-ft).
 
-**Acknowledgments:**
+*   **Training CLI Example:**
+    ```bash
+    python -m open_clip_train.main \
+        --train-data="/path/to/train_data.csv"  \
+        --val-data="/path/to/validation_data.csv"  \
+        --csv-img-key filepath \
+        --csv-caption-key title \
+        --imagenet-val=/path/to/imagenet/root/val/ \
+        --warmup 10000 \
+        --batch-size=128 \
+        --lr=1e-3 \
+        --wd=0.1 \
+        --epochs=30 \
+        --workers=8 \
+        --model RN50
+    ```
 
-This project is supported by the GCS and John von Neumann Institute for Computing (NIC) on the GCS Supercomputer JUWELS Booster at Jülich Supercomputing Centre (JSC).
+*   **Acknowledgments and Citations:**  The development team gratefully acknowledges the Gauss Centre for Supercomputing e.V. (www.gauss-centre.eu) for funding this part of work by providing computing time through the John von Neumann Institute for Computing (NIC) on the GCS Supercomputer JUWELS Booster at Jülich Supercomputing Centre (JSC).  Please cite the provided bibtex entries if you use this library.
 
-**Citations:**
-
-Please cite the relevant papers if you use this repository. Details can be found in the "Citing" section of the original README.
+*   **Team:**
+    Current development is led by [Ross Wightman](https://rwightman.com/), [Romain Beaumont](https://github.com/rom1504), [Cade Gordon](http://cadegordon.io/), and [Vaishaal Shankar](http://vaishaal.com/).

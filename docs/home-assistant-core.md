@@ -1,29 +1,33 @@
-# Home Assistant: Open Source Home Automation for Local Control & Privacy
+# Home Assistant: Your Open Source Home Automation Hub
 
-**Take control of your smart home with Home Assistant, the open-source platform that prioritizes your privacy and puts you in charge.**  ([View the source on GitHub](https://github.com/home-assistant/core))
+**Take control of your smart home with Home Assistant, the open-source home automation platform that prioritizes local control and user privacy.**
+
+[Visit the Home Assistant Core repository on GitHub](https://github.com/home-assistant/core)
 
 ## Key Features:
 
-*   **Local Control:** Manage your devices without relying on cloud services, ensuring privacy and reliability.
-*   **Open Source:** Benefit from a community-driven project with transparent code and extensive customization options.
-*   **Modular Architecture:** Easily extend functionality and integrate with new devices through a flexible and adaptable design.
-*   **Worldwide Community:** Join a global network of enthusiasts, tinkerers, and DIYers for support, inspiration, and collaboration.
-*   **Runs on Raspberry Pi & More:** Deploy on a variety of hardware, from a Raspberry Pi to a local server.
+*   **Local Control:** All your data and automations stay within your home network.
+*   **Privacy Focused:** Your data is yours. Home Assistant doesn't send it to the cloud.
+*   **Open Source & Community Driven:** Benefit from the collaborative efforts of a global community.
+*   **Modular Design:** Easily add support for new devices and integrations.
+*   **Runs Anywhere:** Perfect for a Raspberry Pi, local server, or other hardware.
 
 ## Get Started:
 
-*   **Explore a Demo:** [Interactive Demo](https://demo.home-assistant.io)
-*   **Installation Instructions:** [Installation Guide](https://home-assistant.io/getting-started/)
-*   **Learn with Tutorials:** [Automation Tutorials](https://home-assistant.io/getting-started/automation/)
-*   **Browse the Documentation:** [Comprehensive Documentation](https://home-assistant.io/docs/)
-*   **Discover Integrations:** [Supported Integrations](https://home-assistant.io/integrations/)
+*   **Explore a Demo:** [Demo](https://demo.home-assistant.io)
+*   **Installation:** [Installation Instructions](https://home-assistant.io/getting-started/)
+*   **Learn with Tutorials:** [Tutorials](https://home-assistant.io/getting-started/automation/)
+*   **Dive into the Documentation:** [Documentation](https://home-assistant.io/docs/)
 
-## Developer Resources:
+## Featured Integrations
+![Screenshot showing integrations](https://raw.githubusercontent.com/home-assistant/core/dev/.github/assets/screenshot-integrations.png)
 
-*   **Architecture Overview:** [Architecture Documentation](https://developers.home-assistant.io/docs/architecture_index/)
-*   **Create Your Own Components:** [Component Creation Guide](https://developers.home-assistant.io/docs/creating_component_index/)
+## Contributing & Support
 
-## Need Help?
+*   **Architecture & Development:** [Architecture](https://developers.home-assistant.io/docs/architecture_index/) & [Creating Components](https://developers.home-assistant.io/docs/creating_component_index/)
+*   **Need Help?:** [Home Assistant Help Section](https://home-assistant.io/help/)
+*   **Join the Community:** [Chat](https://www.home-assistant.io/join-chat/)
 
-*   **Find Support:** [Home Assistant Help](https://home-assistant.io/help/)
-*   **Join the Community Chat:** [Discord Chat](https://www.home-assistant.io/join-chat/)
+![Screenshot of Home Assistant](https://raw.githubusercontent.com/home-assistant/core/dev/.github/assets/screenshot-states.png)
+
+[![Home Assistant - A project from the Open Home Foundation](https://www.openhomefoundation.org/badges/home-assistant.png)](https://www.openhomefoundation.org/)

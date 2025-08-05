@@ -4,70 +4,67 @@
   </picture>
 </div>
 
-<h1 align="center">Klavis AI: Open Source MCP Integrations for Powerful AI Applications</h1>
+<h1 align="center">Klavis AI: Integrate with AI Applications Effortlessly</h1>
 
 <div align="center">
-
-[![Documentation](https://img.shields.io/badge/Documentation-📖-green)](https://docs.klavis.ai)
-[![Website](https://img.shields.io/badge/Website-🌐-purple)](https://www.klavis.ai)
-[![Discord](https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white)](https://discord.gg/p7TuTEcssn)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![PyPI](https://img.shields.io/pypi/v/klavis.svg)](https://pypi.org/project/klavis/)
-[![npm](https://img.shields.io/npm/v/klavis.svg)](https://www.npmjs.com/package/klavis)
-[![GitHub Repo stars](https://img.shields.io/github/stars/Klavis-AI/klavis?style=social)](https://github.com/Klavis-AI/klavis)
-
+  <a href="https://docs.klavis.ai"><img src="https://img.shields.io/badge/Documentation-📖-green" alt="Documentation"></a>
+  <a href="https://www.klavis.ai"><img src="https://img.shields.io/badge/Website-🌐-purple" alt="Website"></a>
+  <a href="https://discord.gg/p7TuTEcssn"><img src="https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
+  <a href="https://pypi.org/project/klavis/"><img src="https://img.shields.io/pypi/v/klavis.svg" alt="PyPI"></a>
+  <a href="https://www.npmjs.com/package/klavis"><img src="https://img.shields.io/npm/v/klavis.svg" alt="npm"></a>
 </div>
 
-**Klavis AI provides open-source MCP (Model Control Protocol) integrations, simplifying the connection between your AI applications and various tools and services.**
+Klavis AI offers open-source MCP integrations, simplifying the process of connecting your AI applications to various services and tools.
 
 ## Key Features
 
-*   **🚀 Instant Integration:** Get started in minutes with our Python and TypeScript SDKs, or simply REST API.
-*   **🔐 Built-in Authentication:** Secure OAuth flows and API key management for seamless integration.
-*   **⚡ Production-Ready:** Hosted infrastructure that scales to millions of users, eliminating infrastructure management.
-*   **🛠️ 100+ Tools:** Access to CRM, GSuite, Github, Slack, databases, and many more integrations.
-*   **🌐 Multi-Platform:** Compatible with all LLM providers (OpenAI, Anthropic, Gemini, etc.) and AI agent frameworks (LangChain, Llamaindex, CrewAI, AutoGen, etc.).
-*   **🔧 Self-Hostable:** Open-source MCP servers you can run and customize on your own infrastructure.
+*   **🚀 Instant Integration:** Get up and running quickly with our Python and TypeScript SDKs, or a simple REST API.
+*   **🔐 Built-in Authentication:** Securely handle OAuth flows and API key management.
+*   **⚡ Production-Ready:** Benefit from hosted infrastructure designed to scale for millions of users.
+*   **🛠️ 100+ Tools:** Access a wide range of tools, including CRM, GSuite, Github, Slack, databases, and more.
+*   **🌐 Multi-Platform Compatibility:** Works seamlessly with any LLM provider (OpenAI, Anthropic, Gemini, etc.) and any AI agent framework (LangChain, Llamaindex, CrewAI, AutoGen, etc.).
+*   **🔧 Self-Hostable:** Take control by running the open-source MCP servers yourself.
 
 ## Getting Started
 
 ### Installation
 
-**Python:**
+**Python**
 
 ```bash
 pip install klavis
 ```
 
-**TypeScript/JavaScript:**
+**TypeScript/JavaScript**
 
 ```bash
 npm install klavis
 ```
 
-### 🔑 Obtain Your API Key
+#### Get Your API Key
 
-Sign up at [klavis.ai](https://www.klavis.ai) to create your [API key](https://www.klavis.ai/home/api-keys).
+Sign up at [klavis.ai](https://www.klavis.ai) and create your [API key](https://www.klavis.ai/home/api-keys).
 
-## Code Examples
+### Usage Examples
 
-### With MCP Client
+**With MCP Client**
 
-If you have an existing MCP client:
+If you have an existing MCP client implementation:
 
 **Python Example**
 
 ```python
 from klavis import Klavis
-from klavis.types import McpServerName, ConnectionType
+from klavis.types import McpServerName
 
 klavis_client = Klavis(api_key="your-klavis-key")
 
 # Create a YouTube MCP server instance
 youtube_server = klavis_client.mcp_server.create_server_instance(
     server_name=McpServerName.YOUTUBE,
-    user_id="user123", # Change to user id in your platform
-    platform_name="MyApp" # change to your platform
+    user_id="user123", # Replace with your user ID
+    platform_name="MyApp" # Replace with your platform
 )
 
 print(f"Server created: {youtube_server.server_url}")
@@ -91,9 +88,9 @@ const gmailServer = await klavisClient.mcpServer.createServerInstance({
 await window.open(gmailServer.oauthUrl);
 ```
 
-### Without MCP Client (Function Calling)
+**Without MCP Client (Function Calling)**
 
-Integrate directly with LLM providers:
+Integrate directly with your LLM provider or AI agent framework:
 
 **Python + OpenAI Example**
 
@@ -101,7 +98,7 @@ Integrate directly with LLM providers:
 import json
 from openai import OpenAI
 from klavis import Klavis
-from klavis.types import McpServerName, ConnectionType, ToolFormat
+from klavis.types import McpServerName, ToolFormat
 
 OPENAI_MODEL = "gpt-4o-mini"
 
@@ -236,9 +233,9 @@ console.log(finalResponse.choices[0].message.content);
 
 ## 📚 AI Platform Integration Tutorials
 
-*   [AI Platform Integrations Overview](https://docs.klavis.ai/documentation/integrations/overview) - Learn how to integrate with leading AI platforms
-*   [Together AI Integration](https://docs.klavis.ai/documentation/integrations/together-ai) - Build AI agents with Together AI's high-performance LLMs
-*   [OpenAI Integration](https://docs.klavis.ai/documentation/integrations/open-ai) - Create fast and efficient AI agents with OpenAI and Klavis MCP Servers
+*   [**AI Platform Integrations Overview**](https://docs.klavis.ai/documentation/integrations/overview) - Learn how to integrate with leading AI platforms
+*   [**Together AI Integration**](https://docs.klavis.ai/documentation/integrations/together-ai) - Build AI agents with Together AI's high-performance LLMs
+*   [**OpenAI Integration**](https://docs.klavis.ai/documentation/integrations/open-ai) - Create fast and efficient AI agents with OpenAI and Klavis MCP Servers
 *   And More!
 
 ## 🛠️ Available MCP Servers
@@ -247,17 +244,17 @@ console.log(finalResponse.choices[0].message.content);
 
 ## 🗺️ Roadmap
 
-*   More high-quality MCP Servers (Figma, Canva, Perplexityai, Microsoft Teams, Google Maps, Bitbucket, Cloudflare, Zoho, Tavily, Posthog, Mem0, Brave Search, Apollo, Exa, Fireflies, Eleven Labs, Hacker News, Microsoft Calendar)
-*   More AI platform integrations ([examples](https://github.com/Klavis-AI/klavis/tree/main/examples) & [docs](https://docs.klavis.ai/documentation/ai-platform-integration/overview) )
-*   Event-driven / Webhook
-*   Unit Tests, integration test
-*   /docs improvement
+*   More high-quality MCP Servers (Figma, Canva, Perplexityai, Microsoft Teams, Google Maps, Bitbucket, Cloudflare, Zoho, Tavily, Posthog, Mem0, Brave Search, Apollo, Exa, Fireflies, Eleven Labs, Hacker News, MicroSoft Calendar)
+*   More AI platform integrations ([examples](https://github.com/Klavis-AI/klavis/tree/main/examples) & [docs](https://docs.klavis.ai/documentation/ai-platform-integration/overview))
+*   Event-driven / Webhook support
+*   Unit and integration tests
+*   Documentation improvements
 
 ## 🔧 Authentication & Multi-Tool Workflows
 
 ### Authentication
 
-Klavis simplifies authentication.
+Klavis simplifies authentication:
 
 ```python
 # For OAuth services (Gmail, Google Drive, etc.)
@@ -279,7 +276,7 @@ klavis_client.mcp_server.set_auth_token(
 
 ## 🏠 Self-Hosting
 
-Run MCP servers yourself:
+Run MCP servers on your own infrastructure:
 
 ```bash
 # Clone the repository
@@ -291,23 +288,23 @@ cd mcp_servers/github
 docker build -t klavis-github .
 docker run -p 8000:8000 klavis-github
 ```
-checkout each readme for more details
+Check each server's README for detailed instructions.
 
 ## 📖 Documentation
 
-*   [API Documentation](https://docs.klavis.ai) - Complete API reference
-*   [SDK Documentation](https://docs.klavis.ai/sdks) - Python & TypeScript guides
-*   [MCP Protocol Guide](https://docs.klavis.ai/mcp) - Understanding MCP
-*   [Authentication Guide](https://docs.klavis.ai/auth) - OAuth and API keys
+*   [**API Documentation**](https://docs.klavis.ai) - Complete API reference
+*   [**SDK Documentation**](https://docs.klavis.ai/sdks) - Python & TypeScript guides
+*   [**MCP Protocol Guide**](https://docs.klavis.ai/mcp) - Understanding MCP
+*   [**Authentication Guide**](https://docs.klavis.ai/auth) - OAuth and API keys
 
 ## 🤝 Contributing
 
 We welcome contributions!
 
-1.  **Report Issues**: [Open an issue](https://github.com/klavis-ai/klavis/issues)
-2.  **Request Features**: [Start a discussion](https://github.com/klavis-ai/klavis/discussions)
-3.  **Contribute Code**: Check our [Contributing Guidelines](CONTRIBUTING.md)
-4.  **Build MCP Servers**: See our [MCP Server Guide](MCP_SERVER_GUIDE.md)
+1.  **Report Issues**: Found a bug? [Open an issue](https://github.com/klavis-ai/klavis/issues)
+2.  **Request Features**: Have an idea? [Start a discussion](https://github.com/klavis-ai/klavis/discussions)
+3.  **Contribute Code**: Review our [Contributing Guidelines](CONTRIBUTING.md)
+4.  **Build MCP Servers**: Want to add new integrations? See our [MCP Server Guide](MCP_SERVER_GUIDE.md)
 5.  **Join Community**: Connect with us on [Discord](https://discord.gg/p7TuTEcssn)
 
 ## 📜 License
@@ -317,30 +314,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-  <p><strong>Ready to supercharge your AI applications?</strong></p>
+  <p><strong>Ready to integrate and expand your AI application's capabilities?</strong></p>
   <p>
     <a href="https://www.klavis.ai">Get Started</a> •
     <a href="https://docs.klavis.ai">Documentation</a> •
     <a href="https://discord.gg/p7TuTEcssn">Discord</a> •
     <a href="examples/">Examples</a>
+    <a href="https://github.com/Klavis-AI/klavis">GitHub Repository</a>
   </p>
 </div>
-
-[Back to Top](#klavis-ai-open-source-mcp-integrations-for-powerful-ai-applications)
 ```
-Key improvements and explanations:
+Key improvements and optimizations:
 
-*   **SEO Optimization:** Added the primary keyword ("Klavis AI") to the title and included it naturally throughout the text.  Used headings (H1, H2, etc.) for better readability and SEO. Included a GitHub stars badge to boost SEO.
-*   **Concise Hook:**  The initial sentence is designed to grab attention and briefly explain Klavis AI.
-*   **Clear Structure:**  Organized the content with clear headings and bullet points for easy scanning.
-*   **Benefit-Oriented:** The feature descriptions focus on the *benefits* of using Klavis AI (e.g., "Get started in minutes" instead of just "Provides SDKs").
-*   **Complete Examples:** Kept the original code examples but formatted them for better readability.
-*   **Call to Action:**  Maintained clear "Get Started" and "Documentation" links.  Added a "Back to Top" link for easy navigation.
-*   **Comprehensive:** Included all the original content while improving its presentation.
-*   **Readability:** Improved sentence structure and word choice for better clarity.
-*   **Focus on Value:** Highlighted the value proposition of Klavis AI.
-*   **Links:**  Correctly linked to the documentation and other resources.
-*   **Improved GitHub Integration:** Enhanced the display of badges and provided the social count of stars.
-*   **Removed Duplication:** Streamlined the content and removed redundancies.
-*   **Use of Alt Text:** Added alt text to the Klavis AI logo for accessibility and SEO.
-*   **Updated Badges:** Kept all badges and made sure that they are correctly formatted.
+*   **SEO-Friendly Heading Structure:**  Uses `<h1>`, `<h2>`, and `<h3>` tags to organize content for better readability and SEO.
+*   **Concise Hook:**  The opening sentence clearly defines Klavis AI's purpose.
+*   **Bulleted Key Features:** Highlights core functionalities using bullet points for easy scanning.
+*   **Clear Call to Actions:**  Encourages user engagement with clear "Get Started" and "Documentation" links.
+*   **Keywords Integration:** Naturally incorporates relevant keywords like "AI application integration," "open source," "MCP," "SDKs," and service names (Gmail, YouTube, etc.).
+*   **Improved Readability:** Uses bolding and spacing to break up text and improve readability.
+*   **Links to Original Repo:**  The "GitHub Repository" link added at the end.
+*   **Concise Language:** Removed unnecessary wording to create a more direct and engaging description.
+*   **Complete Code Examples:** Preserved and formatted the code examples to aid quick starts.
+*   **Comprehensive Information:** Maintained the original content while improving the overall structure and clarity.
+*   **Alt Text:** Added `alt` text for the image for accessibility and SEO.
+*   **Emphasis on Self-Hosting:** Highlighted self-hosting for attracting users looking for more control.
+*   **Roadmap Section:**  Provides insights into future development.

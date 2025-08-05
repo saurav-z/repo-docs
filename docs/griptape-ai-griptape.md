@@ -1,4 +1,4 @@
-![Griptape](https://assets-global.website-files.com/65d658559223871198e78bca/65fb8d85c1ab3c9b858ab18a_Griptape%20logo%20dark.svg)
+# Griptape: Build Powerful Generative AI Applications with Ease
 
 [![PyPI Version](https://img.shields.io/pypi/v/griptape.svg)](https://pypi.python.org/pypi/griptape)
 [![Tests](https://github.com/griptape-ai/griptape/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/griptape-ai/griptape/actions/workflows/unit-tests.yml)
@@ -7,102 +7,86 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![codecov](https://codecov.io/github/griptape-ai/griptape/graph/badge.svg?token=HUBqUpl3NB)](https://codecov.io/github/griptape-ai/griptape)
 [![Griptape Discord](https://dcbadge.vercel.app/api/server/gnWRz88eym?compact=true&style=flat)](https://discord.gg/griptape)
+<br/>
+<p align="center">
+  <img src="https://assets-global.website-files.com/65d658559223871198e78bca/65fb8d85c1ab3c9b858ab18a_Griptape%20logo%20dark.svg" alt="Griptape Logo" width="200"/>
+</p>
 
-# Griptape: Build Powerful AI Applications with Ease
-
-**Griptape is a Python framework that simplifies the development of generative AI (genAI) applications, offering flexible abstractions for LLMs, Retrieval-Augmented Generation (RAG), and more.**
+**Griptape is a Python framework that simplifies the development of generative AI (genAI) applications, offering flexible abstractions for building powerful and scalable AI solutions.** Explore the capabilities and flexibility of Griptape in the [original repo](https://github.com/griptape-ai/griptape).
 
 ## Key Features
 
-*   **Modular Structure:** Build AI applications with Agents, Pipelines, and Workflows for organized task execution.
-*   **Versatile Task Management:** Utilize Tasks as the core building blocks, interacting with Engines, Tools, and other components.
-*   **Intelligent Memory:** Leverage Conversation, Task, and Meta Memory to enhance LLM context and improve interactions.
-*   **Extensive Driver Support:** Integrate with external resources and services with LLM & Orchestration, Retrieval & Storage, Multimodal, Web, and Observability drivers.
-*   **Robust Tooling:** Access a wide range of built-in Tools and easily create custom tools to empower your AI applications.
-*   **Specialized Engines:** Utilize engines like RAG Engine, Extraction Engine, Summary Engine, and Eval Engine for specialized use cases.
-*   **Additional Components:** Employ Rulesets, Loaders, Artifacts, and Chunkers to refine and streamline your AI workflows.
+*   **Modular Architecture:** Build AI applications using core components like Agents, Pipelines, and Workflows for flexible and organized task management.
+*   **LLM Integration:** Seamlessly integrate with Large Language Models (LLMs) using Prompt Drivers, enabling text and image interactions.
+*   **RAG Capabilities:** Implement Retrieval-Augmented Generation (RAG) pipelines with the RAG Engine and associated drivers.
+*   **Memory Management:** Utilize Conversation Memory, Task Memory, and Meta Memory to enhance context and relevance.
+*   **Extensive Driver Support:** Connect to various external services and resources with drivers for LLMs, retrieval, storage, multimodal applications, web, and observability.
+*   **Built-in Tools:** Leverage built-in tools for web searching, scraping, and more. Easily create custom tools to extend functionality.
+*   **Use-case-specific Engines:** Utilize engines like RAG Engine, Extraction Engine, Summary Engine, and Eval Engine for specialized functionalities.
 
 ## Core Components
 
-### 🏗️ Structures
+### Structures
+*   **Agents**: Single task, configured for Agent-specific behavior.
+*   **Pipelines**: Sequence of tasks.
+*   **Workflows**: Configured Tasks operate in parallel.
 
-*   🤖 **Agents:** Single task, agent-specific behavior.
-*   🔄 **Pipelines:** Sequenced Tasks for output flow.
-*   🌐 **Workflows:** Parallel Task execution.
+### Tasks
 
-### 📝 Tasks
+*   Core building blocks enabling interaction with Engines, Tools, and other Griptape components.
 
-Tasks are the core building blocks within Structures, enabling interaction with Engines, Tools, and other Griptape components.
+### Memory
+*   **Conversation Memory**: Enables LLMs to retain and retrieve information across interactions.
+*   **Task Memory**: Keeps large or sensitive Task outputs off the prompt that is sent to the LLM.
+*   **Meta Memory**: Enables passing in additional metadata to the LLM, enhancing the context and relevance of the interaction.
 
-### 🧠 Memory
+### Drivers
 
-*   💬 **Conversation Memory:** Retain information across interactions.
-*   🗃️ **Task Memory:** Keeps large or sensitive outputs off the prompt.
-*   📊 **Meta Memory:** Pass additional metadata to LLM.
+*   **LLM & Orchestration**
+    *   🗣️ Prompt Drivers
+    *   🤖 Assistant Drivers
+    *   📜 Ruleset Drivers
+    *   🧠 Conversation Memory Drivers
+    *   📡 Event Listener Drivers
+    *   🏗️ Structure Run Drivers
+*   **Retrieval & Storage**
+    *   🔢 Embedding Drivers
+    *   🔀 Rerank Drivers
+    *   💾 Vector Store Drivers
+    *   🗂️ File Manager Drivers
+    *   💼 SQL Drivers
+*   **Multimodal**
+    *   🎨 Image Generation Drivers
+    *   🗣️ Text to Speech Drivers
+    *   🎙️ Audio Transcription Drivers
+*   **Web**
+    *   🔍 Web Search Drivers
+    *   🌐 Web Scraper Drivers
+*   **Observability**
+    *   📈 Observability Drivers
 
-### 🚗 Drivers
+### Tools
 
-Drivers facilitate interactions with external resources and services in Griptape.
+*   Tools provide capabilities for LLMs to interact with data and services. Griptape includes a variety of [built-in Tools](https://docs.griptape.ai/stable/griptape-framework/tools/official-tools/), and makes it easy to create [custom Tools](https://docs.griptape.ai/stable/griptape-framework/tools/custom-tools/).
 
-#### LLM & Orchestration
+### Engines
 
-*   🗣️ **Prompt Drivers:** Manage textual and image interactions with LLMs.
-*   🤖 **Assistant Drivers:** Enable interactions with various “assistant” services.
-*   📜 **Ruleset Drivers:** Load and apply rulesets from external sources.
-*   🧠 **Conversation Memory Drivers:** Store and retrieve conversational data.
-*   📡 **Event Listener Drivers:** Forward framework events to external services.
-*   🏗️ **Structure Run Drivers:** Execute structures locally or in the cloud.
+*   **RAG Engine:**  Retrieval Augmented Generation (RAG) pipelines.
+*   **Extraction Engine:** Extracts JSON or CSV data from unstructured text.
+*   **Summary Engine:** Generates summaries from textual content.
+*   **Eval Engine:** Evaluates and scores the quality of generated text.
 
-#### Retrieval & Storage
+### Additional Components
 
-*   🔢 **Embedding Drivers:** Generate vector embeddings from textual inputs.
-*   🔀 **Rerank Drivers:** Rerank search results for improved relevance.
-*   💾 **Vector Store Drivers:** Manage the storage and retrieval of embeddings.
-*   🗂️ **File Manager Drivers:** Handle file operations on local and remote storage.
-*   💼 **SQL Drivers:** Interact with SQL databases.
+*   **Rulesets**
+*   **Loaders**
+*   **Artifacts**
+*   **Chunkers**
+*   **Tokenizers**
 
-#### Multimodal
+## Documentation
 
-*   🎨 **Image Generation Drivers:** Create images from text descriptions.
-*   🗣️ **Text to Speech Drivers:** Convert text to speech.
-*   🎙️ **Audio Transcription Drivers:** Convert audio to text.
-
-#### Web
-
-*   🔍 **Web Search Drivers:** Search the web for information.
-*   🌐 **Web Scraper Drivers:** Extract data from web pages.
-
-#### Observability
-
-*   📈 **Observability Drivers:** Send trace and event data to observability platforms.
-
-### 🔧 Tools
-
-Tools provide capabilities for LLMs to interact with data and services.
-Griptape includes a variety of [built-in Tools](https://docs.griptape.ai/stable/griptape-framework/tools/official-tools/), and makes it easy to create [custom Tools](https://docs.griptape.ai/stable/griptape-framework/tools/custom-tools/).
-
-### 🚂 Engines
-
-Engines wrap Drivers and provide use-case-specific functionality:
-
-*   📊 **RAG Engine:** Implement modular Retrieval Augmented Generation (RAG) pipelines.
-*   🛠️ **Extraction Engine:** Extract JSON or CSV data from unstructured text.
-*   📝 **Summary Engine:** Generate summaries from textual content.
-*   ✅ **Eval Engine:** Evaluate and score generated text.
-
-### 📦 Additional Components
-
-*   📐 **Rulesets:** Steer LLM behavior with minimal prompt engineering.
-*   🔄 **Loaders:** Load data from various sources.
-*   🏺 **Artifacts:** Allow for passing data of different types between Griptape components.
-*   ✂️ **Chunkers:** Segment texts into manageable pieces for diverse text types.
-*   🔢 **Tokenizers:** Count the number of tokens in a text to not exceed LLM token limits.
-
-## Getting Started
-
-Explore the [documentation](https://docs.griptape.ai/) for detailed installation and usage instructions.
-
-Check out [Griptape Trade School](https://learn.griptape.ai/) for free online courses.
+Explore detailed information on installation, usage, and more in the [Griptape documentation](https://docs.griptape.ai/).
 
 ## Examples
 
@@ -123,15 +107,13 @@ result = task.run("How do I do a kickflip?")
 print(result.value)
 ```
 
-Output:
-
 ```text
 To do a kickflip, start by positioning your front foot slightly angled near the middle of the board and your back foot on the tail.
 Pop the tail down with your back foot while flicking the edge of the board with your front foot to make it spin.
 Jump and keep your body centered over the board, then catch it with your feet and land smoothly. Practice and patience are key!
 ```
 
-### Task and Workflow
+### Task and Workflow Example
 
 ```python
 from griptape.drivers.prompt.openai_chat_prompt_driver import OpenAiChatPromptDriver
@@ -194,8 +176,6 @@ workflow.run()
 print(StructureVisualizer(workflow).to_url())
 ```
 
-Output:
-
 ```text
  Output: Here's a detailed summary of the open-source projects mentioned:
 
@@ -238,24 +218,8 @@ Griptape uses [Semantic Versioning](https://semver.org/).
 
 ## Contributing
 
-Interested in contributing?  Please review our [Contributing Guidelines](https://github.com/griptape-ai/griptape/blob/main/CONTRIBUTING.md).
+Contributions are welcome! Please review the [Contributing Guidelines](https://github.com/griptape-ai/griptape/blob/main/CONTRIBUTING.md).
 
 ## License
 
 Griptape is available under the Apache 2.0 License.
-
-[Back to top](#griptape-build-powerful-ai-applications-with-ease)
-```
-Key improvements and SEO optimizations:
-
-*   **Clear Headline:**  Uses a strong, keyword-rich headline.
-*   **Concise Hook:**  A one-sentence summary as the first line.
-*   **Keyword Optimization:**  Includes relevant keywords like "AI," "genAI," "LLMs," "RAG," and "Python framework."
-*   **Structured Content:** Uses clear headings and bullet points for readability.
-*   **Comprehensive Feature List:** Highlights key advantages in a user-friendly way.
-*   **Internal Linking:** Provides links to different parts of the README.
-*   **Call to Action:** Encourages exploration of documentation and online courses.
-*   **Contextual Examples:** Includes the original code examples.
-*   **Clear Structure and Formatting:** Improved formatting for better readability.
-*   **Back to Top Link:** Added a link to quickly jump back to the top of the README.
-*   **Emphasis on Benefits:** Highlights what users can *do* with Griptape.

@@ -1,108 +1,73 @@
-# Levanter: Train Large Language Models with Speed and Reproducibility
+# Levanter: Train Large Language Models with Speed, Scalability, and Reproducibility
 
-> **Levanter** is a cutting-edge framework for training large language models (LLMs) and other foundation models, offering legibility, scalability, and deterministic results for unparalleled performance. [Check out the original repo](https://github.com/stanford-crfm/levanter).
+Levanter is a powerful framework for training large language models (LLMs), offering unparalleled legibility, scalability, and deterministic reproducibility, built on JAX and Haliax. **[Explore Levanter on GitHub](https://github.com/stanford-crfm/levanter)**
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/stanford-crfm/levanter/run_tests.yaml?branch=main)](https://github.com/stanford-crfm/levanter/actions?query=branch%3Amain++)
-[![Documentation Status](https://readthedocs.org/projects/levanter/badge/?version=latest)](https://levanter.readthedocs.io/en/latest/)
+[![Documentation Status](https://readthedocs.org/projects/levanter/badge/?version=latest)](https://levanter.readthedocs.io/en/latest/?badge=latest)
 [![License](https://img.shields.io/github/license/stanford-crfm/levanter?color=blue)](https://github.com/stanford-crfm/levanter/blob/main/LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/levanter?color=blue)](https://pypi.org/project/levanter/)
 
-Levanter empowers researchers and developers to train LLMs efficiently and reliably. Built with JAX, Equinox, and Haliax, Levanter provides a robust and flexible platform for your foundation model training needs.
+> *You could not prevent a thunderstorm, but you could use the electricity; you could not direct the wind, but you could trim your sail so as to propel your vessel as you pleased, no matter which way the wind blew.* <br/>
+> — Cora L. V. Hatch
 
-**Key Features:**
+## Key Features
 
-*   **Legible Code:** Built upon [Haliax](https://github.com/stanford-crfm/haliax), Levanter uses named tensors for easy-to-follow and composable deep learning code.
-*   **Scalability:** Train large models across various hardware, including GPUs and TPUs, with distributed training support.
-*   **Reproducibility:** Achieve bitwise deterministic results on TPUs, ensuring consistent outcomes across training runs.
-*   **Distributed Training:** Support for distributed training on TPUs and GPUs, including FSDP and tensor parallelism.
-*   **Hugging Face Integration:** Seamlessly import and export models, tokenizers, and datasets from the Hugging Face ecosystem using [SafeTensors](https://github.com/huggingface/safetensors).
-*   **High Performance:** Enjoy performance that rivals commercially-backed frameworks.
-*   **Resilience:** Benefit from fast, distributed checkpointing and resume functionality to ensure robust training, even in the face of hardware failures.
-*   **Cached Data Preprocessing:** Accelerate training with cached preprocessing, enabling faster resumes and subsequent runs.
-*   **Comprehensive Logging:** Monitor your training with detailed metrics and support for logging backends like [WandB](https://wandb.ai/site) and [TensorBoard](https://www.tensorflow.org/tensorboard).
-*   **Optimization Support:** Explore cutting-edge optimizers like [Sophia](https://arxiv.org/abs/2305.14342) and Optax for AdamW and more.
-*   **Data Flexibility:** Tune data mixtures without retokenizing or shuffling your data.
-
-## Documentation
-
-*   **Levanter Documentation:** [levanter.readthedocs.io](https://levanter.readthedocs.io/en/latest/)
-*   **Haliax Documentation:** [haliax.readthedocs.io](https://haliax.readthedocs.io/en/latest/)
+*   **Legible Code:** Built on Haliax for easy-to-follow and composable deep learning code.
+*   **Scalability:** Train large models efficiently on GPUs and TPUs.
+*   **Reproducibility:** Ensures consistent results with the same configuration, even with preemption and resumption.
+*   **Distributed Training:** Supports FSDP and tensor parallelism across TPUs and GPUs.
+*   **Hugging Face Compatibility:** Seamlessly integrates with Hugging Face tokenizers, datasets, and models via SafeTensors.
+*   **High Performance:** Achieves performance comparable to commercial frameworks.
+*   **Resilience:** Offers fast, distributed checkpointing and resume features to avoid data seek.
+*   **Cached Data Preprocessing:** Caches online preprocessing for faster resumes and subsequent runs.
+*   **Rich Logging:** Provides comprehensive metrics logging with support for WandB, TensorBoard, and custom backends.
+*   **Optimization:** Supports the Sophia optimizer and Optax for efficient training.
+*   **Flexible Data Handling:** Supports tuning data mixtures without needing to retokenize or shuffle data.
 
 ## Getting Started
 
 ### Installation
 
-After installing [JAX](https://github.com/google/jax/blob/main/README.md#installation) with the appropriate configuration
-for your platform, you can install Levanter with:
+After installing JAX, install Levanter using pip:
 
 ```bash
 pip install levanter
 ```
 
-or using the latest version from GitHub:
+For the latest version:
 
 ```bash
 pip install git+https://github.com/stanford-crfm/levanter.git
-wandb login  # optional, we use wandb for logging
+wandb login  # optional
 ```
 
-For detailed installation steps, see the [Installation Guide](docs/Installation.md).
+For detailed installation instructions, see the [Installation Guide](docs/Installation.md).  For TPU setup, refer to the [TPU Getting Started Guide](docs/Getting-Started-TPU-VM.md) and the [GPU Getting Started Guide](docs/Getting-Started-GPU.md).
 
 ### Training Examples
 
-Here are some examples to get you started:
-
-#### Training a GPT2-nano
+**Training a GPT2-nano:**
 
 ```bash
 python -m levanter.main.train_lm --config_path config/gpt2_nano.yaml
 ```
 
-#### Training a Llama-small on your own data
+**Training a Llama-small on your own data:**
 
 ```bash
 python -m levanter.main.train_lm --config_path config/llama_small_fast.yaml --data.id openwebtext
 ```
 
-#### Customizing a Config File
+Or, specify your dataset URLs:
 
-Here's
-the `llama_small_fast.yaml` file:
-
-```yaml
-data:
-  train_urls:
-      - "gs://pubmed-mosaic/openwebtext-sharded/openwebtext_train.{1..128}-of-128.jsonl.gz"
-  validation_urls:
-      - "gs://pubmed-mosaic/openwebtext-sharded/openwebtext_val.{1..8}-of-8.jsonl.gz"
-  cache_dir: "gs://pubmed-mosaic/tokenized/openwebtext/"
-model:
-  type: llama
-  hidden_dim: 768
-  intermediate_dim: 2048
-  num_heads: 12
-  num_kv_heads: 12
-  num_layers: 12
-  seq_len: 1024
-  gradient_checkpointing: true
-trainer:
-  tracker:
-    type: wandb
-    project: "levanter"
-    tags: [ "openwebtext", "llama" ]
-
-  mp: p=f32,c=bfloat16
-  model_axis_size: 1
-  per_device_parallelism: 4
-
-  train_batch_size: 512
-optimizer:
-  learning_rate: 6E-4
-  weight_decay: 0.1
-  min_lr_ratio: 0.1
+```bash
+python -m levanter.main.train_lm --config_path config/llama_small_fast.yaml --data.train_urls ["https://path/to/train/data_*.jsonl.gz"] --data.validation_urls ["https://path/to/val/data_*.jsonl.gz"]
 ```
 
+See [Getting Started](./docs/Getting-Started-Training.md) or the [In-Depth Configuration Guide](doc./reference/Configuration.md) for further configuration options.
+
 ### Supported Architectures
+
+Levanter supports the following architectures:
 
 *   GPT-2
 *   [LLama](https://ai.meta.com/llama/), including Llama 1, 2 and 3
@@ -117,25 +82,36 @@ For speech, we currently only support [Whisper](https://huggingface.co/openai/wh
 
 #### Continued Pretraining with Llama
 
+Here's an example of how to continue pretraining a Llama 1 or Llama 2 model on the OpenWebText dataset:
+
 ```bash
 python -m levanter.main.train_lm --config_path config/llama2_7b_continued.yaml
 ```
+
 
 ## Distributed and Cloud Training
 
 ### Training on a TPU Cloud VM
 
-See the [TPU Getting Started](docs/Getting-Started-TPU-VM.md) guide.
+Please see the [TPU Getting Started](docs/Getting-Started-TPU-VM.md) guide for more information on how to set up a TPU Cloud VM and run Levanter there.
 
 ### Training with CUDA
 
-See the [CUDA Getting Started](docs/Getting-Started-GPU.md) guide.
+Please see the [CUDA Getting Started](docs/Getting-Started-GPU.md) guide for more information on how to set up a CUDA environment and run Levanter there.
+
+## Documentation
+
+*   [Levanter Documentation](https://levanter.readthedocs.io/en/latest/)
+*   [Haliax Documentation](https://haliax.readthedocs.io/en/latest/)
 
 ## Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md).
+We welcome contributions!  See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
-[![GitHub repo Good Issues for newbies](https://img.shields.io/github/issues/stanford-crfm/levanter/good%20first%20issue?style=flat&logo=github&logoColor=green&label=Good%20First%20issues)](https://github.com/stanford-crfm/levanter/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) [![GitHub Help Wanted issues](https://img.shields.io/github/issues/stanford-crfm/levanter/help%20wanted?style=flat&logo=github&logoColor=b545d1&label=%22Help%20Wanted%22%20issues)](https://github.com/stanford-crfm/levanter/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) [![GitHub Help Wanted PRs](https://img.shields.io/github/issues-pr/stanford-crfm/levanter/help%20wanted?style=flat&logo=github&logoColor=b545d1&label=%22Help%20Wanted%22%20PRs)](https://github.com/stanford-crfm/levanter/pulls?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) [![GitHub repo Issues](https://img.shields.io/github/issues/stanford-crfm/levanter?style=flat&logo=github&logoColor=red&label=Issues)](https://github.com/stanford-crfm/levanter/issues?q=is%3Aopen)
+[![GitHub repo Good Issues for newbies](https://img.shields.io/github/issues/stanford-crfm/levanter/good%20first%20issue?style=flat&logo=github&logoColor=green&label=Good%20First%20issues)](https://github.com/stanford-crfm/levanter/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+[![GitHub Help Wanted issues](https://img.shields.io/github/issues/stanford-crfm/levanter/help%20wanted?style=flat&logo=github&logoColor=b545d1&label=%22Help%20Wanted%22%20issues)](https://github.com/stanford-crfm/levanter/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+[![GitHub Help Wanted PRs](https://img.shields.io/github/issues-pr/stanford-crfm/levanter/help%20wanted?style=flat&logo=github&logoColor=b545d1&label=%22Help%20Wanted%22%20PRs)](https://github.com/stanford-crfm/levanter/pulls?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+[![GitHub repo Issues](https://img.shields.io/github/issues/stanford-crfm/levanter?style=flat&logo=github&logoColor=red&label=Issues)](https://github.com/stanford-crfm/levanter/issues?q=is%3Aopen)
 
 ## License
 
