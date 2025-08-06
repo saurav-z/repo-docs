@@ -1,85 +1,169 @@
-# Free IPTV Live Streams - Updated Daily!
+---
+layout: default
+title: 最新IPTV直播源|每日更新直播源|免费电视直播源|Github开源项目
+description: 本项目免费提供最新开源的IPTV直播源,每6小时自动更新。收录国内外数千个高清直播频道源,包括央视、卫视、港澳台、海外频道。完全免费无广告,提供M3U/TXT格式,支持IPv4/IPv6双栈访问,支持EPG节目单及台标,可用于所有苹果、安卓4.0+系统的电视盒子、手机、和任何电脑等设备。
+keywords: IPTV,直播源,IPTV直播源,直播电视,电视直播,CCTV,全套卫视,全套央视,iptv,iptv直播源,ipv4直播源,IPv6直播源,免费直播源,m3u8直播源,港澳台,海外,国内,直播电视app,live.izbds.com,live.zbds.top, liev.zbds.org
+permalink: /
+hide_edgeone: true
+---
 
-**Get access to a vast collection of free, high-quality IPTV streams, including channels from China, Hong Kong, Taiwan, and beyond, all updated automatically!**  [View the original repository on GitHub](https://github.com/vbskycn/iptv).
 
-## Key Features:
+<h2 align="center">✯ 这是一个国内可直连的iptv直播源分享项目 ✯</h2>
 
-*   **Free & Open Source:** Access IPTV streams without any cost.
-*   **Automatic Updates:**  Live streams are updated every 6 hours to ensure availability.
-*   **Global Coverage:** Includes thousands of channels from China (CCTV, local channels), Hong Kong, Taiwan, and international broadcasts.
-*   **Multiple Formats:** Available in M3U and TXT formats for compatibility with various devices.
-*   **IPv4/IPv6 Support:** Compatible with both IPv4 and IPv6 networks.
-*   **EPG & Logos:** Supports Electronic Program Guides (EPG) and channel logos for a better viewing experience.
-*   **Cross-Platform Compatibility:** Works on all Apple devices, Android 4.0+ devices, TV boxes, smartphones, and computers.
+<h2>🔄永久免费 完全开源 不含广告 直播源支持IPv4/IPv6双栈访问🔄</h2>
 
-## Available Live Stream Sources
+<p>本项目免费提供最新开源的IPTV直播源,每6小时自动更新。收录国内外数千个高清直播频道源,包括央视、卫视、港澳台、海外频道。完全免费无广告,提供M3U/TXT格式,支持IPv4/IPv6双栈访问,支持EPG节目单及台标,可用于所有苹果、安卓4.0+系统的电视盒子、手机、和任何电脑等设备。<br><br /><span style="color: #e03e2d;"><strong>请注意:</strong></span>直播源全部来源于网络公开资源，本项目不存储任何直播源媒体的内容，所有直播源均由第三方提供，本项目不对其内容负责，不保证直播源的可用性、稳定性和合法性。为维持网站开销，页面上有些自动广告链接，上面有标注，请自行甄别。</p>
 
-### IPTV4 (IPv4)
+<div class="badges-container">
+    <img src="https://img.shields.io/github/stars/vbskycn/iptv?style=flat-square" alt="GitHub stars" />
+    <img src="https://img.shields.io/github/forks/vbskycn/iptv?style=flat-square" alt="GitHub forks" />
+    <img src="https://img.shields.io/github/issues/vbskycn/iptv?style=flat-square" alt="GitHub issues" />
+    <img src="https://img.shields.io/github/watchers/vbskycn/iptv?style=flat-square" alt="GitHub watchers" />
+    <img src="https://img.shields.io/github/contributors/vbskycn/iptv?style=flat-square" alt="GitHub contributors" />
+    <img src="https://img.shields.io/github/license/vbskycn/iptv?style=flat-square" alt="GitHub license" />
+    <img src="https://views.whatilearened.today/views/github/vbskycn/iptv.svg" alt="访问统计" />
+</div>
 
-**Updated: 2025-08-05 12:31:48**
+---
 
-| Name                 | URL                                                                  | Quick Copy              |
-| -------------------- | -------------------------------------------------------------------- | ----------------------- |
-| TXT Format Live Stream | [https://live.zbds.org/tv/iptv4.txt](https://live.zbds.org/tv/iptv4.txt) | <button onclick="copyToClipboard('https://live.zbds.org/tv/iptv4.txt')">Copy</button> |
-| M3U Format (with EPG)  | [https://live.zbds.org/tv/iptv4.m3u](https://live.zbds.org/tv/iptv4.m3u)   | <button onclick="copyToClipboard('https://live.zbds.org/tv/iptv4.m3u')">Copy</button> |
+> 如不愿折腾开源项目，推荐直接下载第三方开发的软件 **直播电视**APP 使用，手机电视盒子都兼容，没有广告，完全免费。
+>
+> 直播电视APP 下载地址：[https://izbds.com](https://izbds.com/aztv/)   [野草助手](https://www.yecao.net/download/)安装码：**0024**
+>
+> 软件内包含大量直播源，包含港澳台频道，速度流畅，并且每日多次更新。
 
-*If the main domain is blocked in your area, use these proxy links:*
+------
+
+
+
+
+<h2>📡 自动扫描直播源 IPTV4</h2>
+
+<p><strong>IPTV4直播源</strong>由部署在服务器上的程序自动扫描验证，确保<strong>直播源</strong>的时效性和稳定性。</p>
+
+<!-- UPDATE_TIME_IPTV4 -->本次更新时间: 2025-08-06 06:34:02<!-- END_UPDATE_TIME_IPTV4 -->
+
+<table>
+  <colgroup>
+    <col style="width: 20%;">
+    <col style="width: 60%;">
+    <col style="width: 20%;">
+  </colgroup>
+  <tr>
+    <th>名称</th>
+    <th>网址</th>
+    <th>快速复制</th>
+  </tr>
+  <tr>
+    <td>TXT 格式直播源</td>
+    <td><a href="https://live.zbds.org/tv/iptv4.txt">https://live.zbds.org/tv/iptv4.txt</a></td>
+    <td><button class="button" onclick="copyToClipboard('https://live.zbds.org/tv/iptv4.txt')">快速复制</button></td>
+  </tr>
+  <tr>
+    <td>M3U 格式直播源（已带台标和EPG）</td>
+    <td><a href="https://live.zbds.org/tv/iptv4.m3u">https://live.zbds.org/tv/iptv4.m3u</a></td>
+    <td><button class="button" onclick="copyToClipboard('https://live.zbds.org/tv/iptv4.m3u')">快速复制</button></td>
+  </tr>
+</table>
+*如果你打不开github域名，请使用加速地址访问，加速地址也失效了？那就在找一个*
+
 ```
 https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.txt
 ```
+
 ```
 https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u
 ```
 
-### IPTV6 (IPv6)
 
-**Optimized for IPv6 Networks**
 
-**Updated: 2025-08-05 12:31:48**
 
-*Strongly recommended for IPv6 users for faster and more stable streaming.*
+<h2>📡 自动扫描直播源 IPTV6</h2>
 
-| Name                 | URL                                                                  | Quick Copy              |
-| -------------------- | -------------------------------------------------------------------- | ----------------------- |
-| TXT Format Live Stream | [https://live.zbds.org/tv/iptv6.txt](https://live.zbds.org/tv/iptv6.txt) | <button onclick="copyToClipboard('https://live.zbds.org/tv/iptv6.txt')">Copy</button> |
-| M3U Format (with EPG)  | [https://live.zbds.org/tv/iptv6.m3u](https://live.zbds.org/tv/iptv6.m3u)   | <button onclick="copyToClipboard('https://live.zbds.org/tv/iptv6.m3u')">Copy</button> |
+<p><strong>IPTV6直播源</strong>专为IPv6网络优化，由部署在服务器上的程序自动扫描验证，确保<strong>直播源</strong>的时效和稳定</p>
 
-*If the main domain is blocked in your area, use these proxy links:*
+<!-- UPDATE_TIME_IPTV6 -->本次更新时间: 2025-08-06 06:34:02<!-- END_UPDATE_TIME_IPTV6 -->
+
+<p><em>有ipv6环境的强烈推荐这个列表，高速稳定</em></p>
+
+**近期由于不可力抗原因，大部分ipv6源都关门了，大玩家各玩各的。造成网友们不能一网通吃，请大家静待花开吧！！如有开门的大玩家，本仓库第一时间更新上来给大家分享**
+
+<table>
+  <colgroup>
+    <col style="width: 20%;">
+    <col style="width: 60%;">
+    <col style="width: 20%;">
+  </colgroup>
+  <tr>
+    <th>名称</th>
+    <th>网址</th>
+    <th>快速复制</th>
+  </tr>
+  <tr>
+    <td>TXT 格式直播源</td>
+    <td><a href="https://live.zbds.org/tv/iptv6.txt">https://live.zbds.org/tv/iptv6.txt</a></td>
+    <td><button class="button" onclick="copyToClipboard('https://live.zbds.org/tv/iptv6.txt')">快速复制</button></td>
+  </tr>
+  <tr>
+    <td>M3U 格式直播源（已带台标和EPG）</td>
+    <td><a href="https://live.zbds.org/tv/iptv6.m3u">https://live.zbds.org/tv/iptv6.m3u</a></td>
+    <td><button class="button" onclick="copyToClipboard('https://live.zbds.org/tv/iptv6.m3u')">快速复制</button></td>
+  </tr>
+</table>
+
+*有地方的宽带运营商已经污染本项目域名了，如果你打开失败，请使用加速地址访问*
+
 ```
 https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.txt
 ```
+
 ```
 https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u
 ```
 
-## Demo
+
+
+
+
+<h2>💽DEMO</h2>
 
 ![IPTV直播源演示截图 - 展示直播源列表和播放界面](assets/demo.png "IPTV直播源演示")
 
-## Tools
 
-*   **Live Stream Format Converter:**  A front-end live stream format converter (available in the `tools` directory of this repository).
-    *   [https://izbds.com/tools/index.html](https://izbds.com/tools/index.html)
 
-## Recommended IPTV App
+<h2>🛠️工具</h2>
 
-For a hassle-free experience, try this recommended IPTV app:
+<p>我们提供多种<strong>直播源</strong>相关工具，帮助您更好地使用<strong>IPTV直播源</strong>：</p>
 
-### Latest Stable Version
+<h3>直播源格式转换器</h3>
+<p>纯前端<strong>直播源</strong>格式转换器（开源在本仓库tools目录）</p>
 
-*   Download: [https://izbds.com/aztv/](https://izbds.com/aztv/)
+- [https://izbds.com/tools/index.html](https://izbds.com/tools/index.html)
 
-## Recent Updates
 
-*   2025.8.1 - Updated live streams.
-*   2025.5.20 - EPG service discontinued.
-*   2025.1.11 - Page optimization.
-*   2024.12.13 - Continued optimization.
-*   2024.10.18 - Optimized and tested source code.
-*   2024.9.9 - Implemented daily updates via a new server due to rapid source expiration.
-*   2024.6.22 - Added IPTV4/IPTV6 automatic update sources.
 
-## Contact
+<h2>📱 直播电视APP</h2>
+<p>如果你不愿意折腾，这里有折腾好的可直接使用的直播电视软件</p>
+
+<h3>最新稳定版</h3>
+
+- 下载链接： [https://izbds.com](https://izbds.com/aztv/)  （包含港澳台）
+
+
+
+<h2>📅 更新</h2>
+
+- 2025.8.1 更新一些直播源
+- 2025.5.20 不提供epg服务
+- 2025.1.11 优化页面
+- 2024.12.13 跟着节奏继续优化
+- 2024.10.18 优化测试有效源代码
+- 2024.9.9 直播源失效速度太快，新添加deibian服务器，每日三次更新
+- 2024.6.22 新增 IPTV4/IPTV6 自动更新源
+
+
+
+<h2>💬 联系</h2>
 
 <div class="contact-info">
     <a href="https://t.me/starkluistn98" target="_blank">
@@ -87,22 +171,32 @@ For a hassle-free experience, try this recommended IPTV app:
     </a>
 </div>
 
-## Disclaimer
 
-*   This project is for technical research, learning, and communication purposes only.
-*   All content is collected from public internet sources and *not* intended for commercial use.
-*   The project does not store any media content. All live streams are provided by third parties.  We are not responsible for their content, availability, stability, or legality. Users assume all responsibility.
-*   This project is released under an open-source license.  Please follow the license terms if you fork or use this project.
-*   We do not guarantee the validity of live streams. Streams may become unavailable due to factors outside our control.
-*   The project is community-maintained.
-*   We reserve the right to modify or terminate the project and maintain the final interpretation.
-*   By using this project, you agree to this disclaimer.
+<h2>📝 免责声明</h2>
 
-## Support the Project
+- 本项目仅作为技术研究用途，用于学习和交流。所有内容均收集自互联网公开链接，严禁用于任何商业用途，包括但不限于商业直播、商业推广等。
+
+- 本项目不存储任何的流媒体内容，所有直播源均由第三方提供，本项目不对其内容负责，不保证直播源的可用性、稳定性和合法性，所有的法律责任与后果应由使用者自行承担。
+
+- 本项目采用开源协议发布，您可以 Fork 本项目，但引用本项目内容到其他仓库的情况，务必要遵守开源协议，必须注明来源。
+
+- 本项目不保证直播频道的有效性，直播内容可能受直播服务提供商因素影响而失效。
+
+- 本项目由社区维护，所有文件均托管在 [GitHub仓库](https://github.com/vbskycn/iptv) 且自动构建，由项目发起人公益维护，欢迎 Star 本项目或点击 [Issues](https://github.com/vbskycn/iptv/issues/new/choose) 反馈您的问题。
+
+- 本项目维护者保留随时修改或终止项目的权利，且最终解释权归项目维护者所有。
+
+- 使用本项目即表示您已阅读并同意本免责声明，如不同意本声明，请立即停止使用本项目，本项目保留随时更新免责声明的权利
+
+  
+
+<h2>🎁 欢迎请我喝杯饮料</h2>
 
 ![微信赞赏码 - 支持项目维护者](assets/wxds.png "微信赞赏码")
 
-## Star History
+
+
+<h2>📊 Star History</h2>
 
 [![Star History Chart](https://api.star-history.com/svg?repos=vbskycn/iptv&type=Date)](https://star-history.com/#vbskycn/iptv&Date)
 
@@ -117,17 +211,4 @@ For a hassle-free experience, try this recommended IPTV app:
   />
 </a>
 <!-- edgeone_end -->
-```
 
-Key improvements and SEO considerations:
-
-*   **Clear Headings:**  Uses H1, H2, and H3 tags for better structure and SEO.
-*   **Keyword Optimization:** Includes relevant keywords in headings, descriptions, and body text.
-*   **Concise Summary:** Starts with a one-sentence hook to grab attention.
-*   **Bullet Points:** Highlights key features for easy readability.
-*   **Updated Content:**  Keeps the update times.
-*   **Clear Disclaimer:** Emphasizes the disclaimer and legal aspects.
-*   **Call to Action:** Encourages users to copy links or check out the app.
-*   **Contact & Support:** Provides contact information and ways to support the project.
-*   **Star History:**  Adds a star history graph to show project popularity.
-*   **EdgeOne integration:** Added back in.

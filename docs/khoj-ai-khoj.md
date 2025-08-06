@@ -10,7 +10,7 @@
 </div>
 
 <div align="center">
-<b>Your AI second brain</b>
+<b>Your AI Second Brain</b>
 </div>
 
 <br />
@@ -33,80 +33,93 @@
 
 ---
 
-## Khoj: Your AI-Powered Personal Knowledge Hub
+## Khoj: Your AI-Powered Second Brain for Enhanced Productivity
 
-**Supercharge your productivity and unlock the power of your information with Khoj, your AI-powered second brain.** ([See the original repository](https://github.com/khoj-ai/khoj))
-
-<br>
+**Khoj empowers you to unlock your potential by transforming how you interact with information and manage your tasks.**
 
 ### Key Features
 
-*   **Chat with Any LLM:** Seamlessly integrate with popular LLMs like Llama3, Qwen, Gemma, Mistral, GPT, Claude, Gemini, and Deepseek for insightful conversations.
-*   **Comprehensive Document Support:** Get answers from the internet and your documents, including PDFs, Markdown, Word, Notion, and more.
-*   **Multi-Platform Access:** Access Khoj from your browser, Obsidian, Emacs, desktop, phone, or WhatsApp for ultimate convenience.
-*   **Custom AI Agents:** Create specialized agents with custom knowledge, personas, chat models, and tools to automate research and tackle specific tasks.
-*   **Automated Research & Notifications:** Automate your research with personal newsletters and smart notifications delivered to your inbox.
-*   **Advanced Semantic Search:** Quickly and easily find relevant information within your documents.
-*   **Multimedia Capabilities:** Generate images, utilize text-to-speech, and playback your messages.
-*   **Open-Source and Self-Hostable:** Take control of your data with Khoj's open-source, self-hostable architecture.
-*   **Flexible Deployment Options:** Use the cloud app, or self-host on your computer.  Enterprise solutions also available.
-
-<br>
+*   **AI Chat:** Converse with local or online Large Language Models (LLMs) like Llama3, Qwen, Gemma, Mistral, GPT, Claude, Gemini, and Deepseek.
+*   **Document Understanding:** Get answers from the internet and your documents (including images, PDFs, markdown, org-mode, Word, and Notion files).
+*   **Cross-Platform Access:** Access Khoj from your Browser, Obsidian, Emacs, Desktop, Phone, or WhatsApp.
+*   **Custom Agents:** Create agents with custom knowledge, personas, chat models, and tools to automate research and take on various roles.
+*   **Automated Research & Notifications:** Automate away repetitive research and receive personalized newsletters and smart notifications.
+*   **Semantic Search:** Quickly and easily find relevant documents with advanced semantic search.
+*   **Multimedia Capabilities:** Generate images, and utilize text-to-speech functionality.
+*   **Open Source & Self-Hostable:** Run Khoj privately on your computer or try it on our cloud app.
+*   **Enterprise Ready:** Available as a cloud service, on-premises, or as a hybrid solution.
 
 ### What's New?
 
-*   Use `/research` at the start of any message to activate the experimental research mode.
-*   Create custom agents with tailored personalities, tools, and knowledge bases.
-*   Read about Khoj's performance on [modern retrieval and reasoning benchmarks](https://blog.khoj.dev/posts/evaluate-khoj-quality/).
+*   **Experimental Research Mode:** Start any message with `/research` to utilize the experimental research mode.
+*   **Custom Agents:** Create custom agents with tunable personality, tools, and knowledge bases. ( [Learn More](https://blog.khoj.dev/posts/create-agents-on-khoj/) )
+*   **Excellent Performance:**  Khoj shows excellent performance on modern retrieval and reasoning benchmarks. ( [Read More](https://blog.khoj.dev/posts/evaluate-khoj-quality/) )
 
-<br>
-
-## Demo
+### See it in Action
 
 ![demo_chat](https://github.com/khoj-ai/khoj/blob/master/documentation/assets/img/quadratic_equation_khoj_web.gif?raw=true)
 
-Explore Khoj in action at [https://app.khoj.dev](https://app.khoj.dev).
+Experience Khoj live at [https://app.khoj.dev](https://app.khoj.dev).
 
-<br>
+### Get Started
 
-## Getting Started
+*   **Self-Hosting:** Learn how to self-host Khoj by reading the [setup documentation](https://docs.khoj.dev/get-started/setup).
+*   **Cloud App:** Use Khoj instantly at [https://app.khoj.dev](https://app.khoj.dev)
 
-*   **Try it Now:** Use Khoj instantly at [https://app.khoj.dev](https://app.khoj.dev).
-*   **Self-Hosting:** For self-hosting instructions, consult the [setup guide](https://docs.khoj.dev/get-started/setup).
-*   **Feature List:** For a comprehensive list of features, visit the [features page](https://docs.khoj.dev/category/features).
-*   **Enterprise Solutions:** Learn more about Khoj Enterprise at [https://khoj.dev/teams](https://khoj.dev/teams).
+### Enterprise Solutions
 
-<br>
+Explore Khoj Enterprise solutions and how they can benefit your organization by visiting [our website](https://khoj.dev/teams).
 
-## Frequently Asked Questions (FAQ)
+### Frequently Asked Questions (FAQ)
 
-*   **Do I need to self-host?** No, use Khoj immediately at [https://app.khoj.dev](https://app.khoj.dev).
-*   **What document types are supported?** Khoj supports PDFs, Markdown, Notion, Word docs, org-mode files, and more.
-*   **How do I create my own agent?** Check out [this blog post](https://blog.khoj.dev/posts/create-agents-on-khoj/) for a guide.
-*   **Additional questions?** Join us on [Discord](https://discord.gg/BDgyabRM6e).
+**Q: Can I use Khoj without self-hosting?**
 
-<br>
+Yes! You can use Khoj right away at [https://app.khoj.dev](https://app.khoj.dev) — no setup required.
 
-## Contributing
+**Q: What kinds of documents can Khoj read?**
 
-Khoj is an open-source project, and contributions from the community are welcome!
+Khoj supports a wide variety: PDFs, Markdown, Notion, Word docs, org-mode files, and more.
 
-### How to Contribute
+**Q: How can I make my own agent?**
 
-*   Help us build new features.
-*   Improve project documentation.
-*   Report and fix bugs.
+Check out [this blog post](https://blog.khoj.dev/posts/create-agents-on-khoj/) for a step-by-step guide to custom agents.
 
-If you're a developer, please see our [Contributing Guidelines](https://docs.khoj.dev/contributing/development) and check out [good first issues](https://github.com/khoj-ai/khoj/contribute) to work on.
+For more questions, head over to our [Discord](https://discord.gg/BDgyabRM6e)!
 
-<br>
+### Contribute
 
-## Contributors
+Khoj is an open-source project, and contributions from the community are welcome!  Find the source code on [GitHub](https://github.com/khoj-ai/khoj).
 
-Thanks to our amazing contributors!
+#### Contributors
+Cheers to our awesome contributors! 🎉
 
 <a href="https://github.com/khoj-ai/khoj/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=khoj-ai/khoj" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
+
+#### Interested in Contributing?
+
+Khoj is open source. It is sustained by the community and we’d love for you to join it! Whether you’re a coder, designer, writer, or enthusiast, there’s a place for you.
+
+Why Contribute?
+
+*   Make an Impact: Help build, test and improve a tool used by thousands to boost productivity.
+*   Learn & Grow: Work on cutting-edge AI, LLMs, and semantic search technologies.
+
+You can help us build new features, improve the project documentation, report issues and fix bugs. If you're a developer, please see our [Contributing Guidelines](https://docs.khoj.dev/contributing/development) and check out [good first issues](https://github.com/khoj-ai/khoj/contribute) to work on.
+```
+Key improvements and SEO considerations:
+
+*   **Concise, Engaging Hook:**  The one-sentence hook grabs attention immediately.
+*   **Keyword Optimization:**  Keywords like "AI," "second brain," "productivity," and specific features are integrated naturally.
+*   **Clear Headings:**  Uses headings for better readability and SEO.
+*   **Bulleted Feature List:** Easy to scan and highlights key benefits.
+*   **Contextual Links:** Links are relevant and include anchor text.
+*   **FAQ Section:**  Addresses common user questions.
+*   **Call to action:** Encourages users to contribute.
+*   **Simplified Language:** Makes the text easier to understand.
+*   **Overall Structure:**  Improves readability and organization.
+*   **Contributors Section:** Showcases community contributions.
+*   **Removed redundant content:** Cleaned up repetition.

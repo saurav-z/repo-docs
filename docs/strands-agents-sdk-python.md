@@ -1,3 +1,7 @@
+# Strands Agents: Build Powerful AI Agents with Ease
+
+**Effortlessly create and deploy AI agents with the Strands Agents SDK, a model-driven approach that empowers you to build complex applications in just a few lines of code.** Explore the original repository on [GitHub](https://github.com/strands-agents/sdk-python).
+
 <div align="center">
   <div>
     <a href="https://strandsagents.com">
@@ -5,14 +9,7 @@
     </a>
   </div>
 
-  <h1>
-    Strands Agents: Build Powerful AI Agents Quickly
-  </h1>
-
-  <p>
-    <b>Create sophisticated AI agents with ease using Strands Agents, a model-driven Python SDK.</b>
-  </p>
-
+  
   <div align="center">
     <a href="https://github.com/strands-agents/sdk-python/graphs/commit-activity"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/strands-agents/sdk-python"/></a>
     <a href="https://github.com/strands-agents/sdk-python/issues"><img alt="GitHub open issues" src="https://img.shields.io/github/issues/strands-agents/sdk-python"/></a>
@@ -32,19 +29,20 @@
   </p>
 </div>
 
-Strands Agents is a powerful Python SDK designed to simplify the creation and deployment of AI agents.  It offers a model-driven approach, allowing you to build everything from simple conversational bots to complex, autonomous workflows with minimal code.  Scale your AI agent projects seamlessly, whether you're developing locally or deploying to production.
 
 ## Key Features
 
-*   **Model Agnostic:** Supports a wide range of model providers including Amazon Bedrock, Anthropic, LiteLLM, Llama, Ollama, OpenAI, Writer, and custom providers.
-*   **Easy Tool Integration:**  Build and integrate custom tools with Python decorators for enhanced agent capabilities. Hot reloading from a directory for development.
-*   **Model Context Protocol (MCP) Support:**  Native support for MCP servers, providing access to a vast library of pre-built tools and knowledge resources.
-*   **Built-in features:** Multi-agent systems, autonomous agents, and streaming support
+*   **Model-Agnostic:** Seamlessly integrate with a variety of LLM providers, including Amazon Bedrock, Anthropic, OpenAI, and more.
+*   **Easy Agent Creation:** Build AI agents with just a few lines of code.
+*   **Customizable:** The simple agent loop is fully customizable.
+*   **Built-in MCP Support:** Native support for Model Context Protocol (MCP) servers to access a wide range of pre-built tools.
+*   **Python-Based Tools:** Create custom tools easily using Python decorators with automatic reloading.
+*   **Advanced Capabilities:** Supports multi-agent systems, autonomous agents, and streaming support.
 
 ## Quick Start
 
 ```bash
-# Install Strands Agents and tools
+# Install Strands Agents
 pip install strands-agents strands-agents-tools
 ```
 
@@ -55,11 +53,11 @@ agent = Agent(tools=[calculator])
 agent("What is the square root of 1764")
 ```
 
-> **Note:** Configure AWS credentials and enable model access for Claude 4 Sonnet in the us-west-2 region for the default Amazon Bedrock provider. Refer to the [Quickstart Guide](https://strandsagents.com/) for detailed model provider configuration instructions.
+> **Note**: For the default Amazon Bedrock model provider, you'll need AWS credentials configured and model access enabled for Claude 4 Sonnet in the us-west-2 region. See the [Quickstart Guide](https://strandsagents.com/) for details on configuring other model providers.
 
 ## Installation
 
-To get started with Strands Agents, ensure you have Python 3.10+ installed and follow these steps:
+Ensure you have Python 3.10+ installed:
 
 ```bash
 # Create and activate virtual environment
@@ -74,7 +72,7 @@ pip install strands-agents strands-agents-tools
 
 ### Python-Based Tools
 
-Easily create and integrate custom tools using Python decorators.
+Easily build and load tools via Python decorators. The tools are automatically discovered and reloaded from the specified directory.
 
 ```python
 from strands import Agent, tool
@@ -91,9 +89,7 @@ agent = Agent(tools=[word_count])
 response = agent("How many words are in this sentence?")
 ```
 
-#### Hot Reloading
-
-Enable automatic tool loading and reloading from the `./tools/` directory:
+**Hot Reloading from Directory:**
 
 ```python
 from strands import Agent
@@ -103,9 +99,9 @@ agent = Agent(load_tools_from_directory=True)
 response = agent("Use any tools you find in the tools directory")
 ```
 
-### Model Context Protocol (MCP) Support
+### MCP Support
 
-Seamlessly integrate with Model Context Protocol (MCP) servers for access to additional tools and resources.
+Seamlessly integrates with Model Context Protocol (MCP) servers.
 
 ```python
 from strands import Agent
@@ -123,7 +119,7 @@ with aws_docs_client:
 
 ### Multiple Model Providers
 
-Strands Agents offers broad support for various Large Language Models (LLMs).
+Supports a wide range of model providers, offering flexibility and choice:
 
 ```python
 from strands import Agent
@@ -156,21 +152,20 @@ agent = Agent(model=llama_model)
 response = agent("Tell me about Agentic AI")
 ```
 
-**Built-in Providers:**
-*   [Amazon Bedrock](https://strandsagents.com/latest/user-guide/concepts/model-providers/amazon-bedrock/)
-*   [Anthropic](https://strandsagents.com/latest/user-guide/concepts/model-providers/anthropic/)
-*   [LiteLLM](https://strandsagents.com/latest/user-guide/concepts/model-providers/litellm/)
-*   [LlamaAPI](https://strandsagents.com/latest/user-guide/concepts/model-providers/llamaapi/)
-*   [Ollama](https://strandsagents.com/latest/user-guide/concepts/model-providers/ollama/)
-*   [OpenAI](https://strandsagents.com/latest/user-guide/concepts/model-providers/openai/)
-*   [Writer](https://strandsagents.com/latest/documentation/docs/user-guide/concepts/model-providers/writer/)
+Built-in providers:
+ - [Amazon Bedrock](https://strandsagents.com/latest/user-guide/concepts/model-providers/amazon-bedrock/)
+ - [Anthropic](https://strandsagents.com/latest/user-guide/concepts/model-providers/anthropic/)
+ - [LiteLLM](https://strandsagents.com/latest/user-guide/concepts/model-providers/litellm/)
+ - [LlamaAPI](https://strandsagents.com/latest/user-guide/concepts/model-providers/llamaapi/)
+ - [Ollama](https://strandsagents.com/latest/user-guide/concepts/model-providers/ollama/)
+ - [OpenAI](https://strandsagents.com/latest/user-guide/concepts/model-providers/openai/)
+ - [Writer](https://strandsagents.com/latest/documentation/docs/user-guide/concepts/model-providers/writer/)
 
-**Custom Providers:**
-Implement custom providers using the [Custom Providers](https://strandsagents.com/latest/user-guide/concepts/model-providers/custom_model_provider/) documentation.
+Custom providers can be implemented using [Custom Providers](https://strandsagents.com/latest/user-guide/concepts/model-providers/custom_model_provider/)
 
 ### Example Tools
 
-The `strands-agents-tools` package provides pre-built tools for rapid experimentation:
+The `strands-agents-tools` package provides pre-built tools for rapid experimentation.
 
 ```python
 from strands import Agent
@@ -179,28 +174,28 @@ agent = Agent(tools=[calculator])
 agent("What is the square root of 1764")
 ```
 
-Explore the `strands-agents-tools` package on GitHub:  [strands-agents/tools](https://github.com/strands-agents/tools).
+## Resources
 
-## Documentation
+### Documentation
 
-Find comprehensive documentation and examples to guide your projects:
+Comprehensive documentation is available to guide you:
 
--   [User Guide](https://strandsagents.com/)
--   [Quick Start Guide](https://strandsagents.com/latest/user-guide/quickstart/)
--   [Agent Loop](https://strandsagents.com/latest/user-guide/concepts/agents/agent-loop/)
--   [Examples](https://strandsagents.com/latest/examples/)
--   [API Reference](https://strandsagents.com/latest/api-reference/agent/)
--   [Production & Deployment Guide](https://strandsagents.com/latest/user-guide/deploy/operating-agents-in-production/)
+*   [User Guide](https://strandsagents.com/)
+*   [Quick Start Guide](https://strandsagents.com/latest/user-guide/quickstart/)
+*   [Agent Loop](https://strandsagents.com/latest/user-guide/concepts/agents/agent-loop/)
+*   [Examples](https://strandsagents.com/latest/examples/)
+*   [API Reference](https://strandsagents.com/latest/api-reference/agent/)
+*   [Production & Deployment Guide](https://strandsagents.com/latest/user-guide/deploy/operating-agents-in-production/)
 
 ## Contributing ❤️
 
-We welcome contributions! Learn how to contribute by reviewing our [Contributing Guide](CONTRIBUTING.md), including details on:
+We welcome community contributions.  See our [Contributing Guide](CONTRIBUTING.md) for details on:
 
--   Reporting bugs & features
--   Development setup
--   Contributing via Pull Requests
--   Code of Conduct
--   Reporting of security issues
+*   Reporting bugs & features
+*   Development setup
+*   Contributing via Pull Requests
+*   Code of Conduct
+*   Reporting of security issues
 
 ## License
 
@@ -208,23 +203,4 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Security
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for information on security.
-
-**[Back to Top](#top)**  (Added for better navigation)
-
-**(Original Repo: [https://github.com/strands-agents/sdk-python](https://github.com/strands-agents/sdk-python))**
-```
-Key improvements and SEO considerations:
-
-*   **Clear Headline:**  The title is optimized with the keyword "AI Agents" to improve search visibility.
-*   **One-Sentence Hook:** A concise and compelling introduction to capture attention.
-*   **Keyword Optimization:** "AI Agents," "Python SDK," "Model-driven" used strategically.
-*   **Bulleted Key Features:** Uses bullet points for scannability and clarity.
-*   **Structured Sections:**  Uses headings (H1, H2, H3) for better readability and SEO ranking.
-*   **Detailed Explanations:** Expanded explanations of features.
-*   **Internal Linking:**  Added a "Back to Top" link for easy navigation and the original repo link.
-*   **Stronger Call to Action:** Encourages use with installation and quick start examples.
-*   **More Comprehensive Feature Descriptions:** Expand on the benefits of each feature.
-*   **Clean Formatting:** Consistent Markdown for readability.
-*   **Emphasis on Benefits:** Focuses on what users can *do* with the SDK (e.g., "Create sophisticated AI agents").
-*   **Clearer Instructions:** Improves installation and usage guidance.
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for security issue reporting.

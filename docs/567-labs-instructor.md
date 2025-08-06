@@ -1,6 +1,8 @@
 # Instructor: Effortless Structured Data Extraction from LLMs
 
-**Simplify your interactions with large language models by reliably extracting structured data, eliminating the need for complex JSON parsing and error handling.** Get started at the [Instructor GitHub Repository](https://github.com/567-labs/instructor).
+**Simplify your LLM interactions by effortlessly extracting reliable, validated JSON and structured data from any language model with Instructor, built on Pydantic.**
+
+[View the project on GitHub](https://github.com/567-labs/instructor)
 
 [![PyPI](https://img.shields.io/pypi/v/instructor?style=flat-square)](https://pypi.org/project/instructor/)
 [![Downloads](https://img.shields.io/pypi/dm/instructor?style=flat-square)](https://pypi.org/project/instructor/)
@@ -10,71 +12,75 @@
 
 ## Key Features
 
-*   **Simplified Data Extraction:** Define Python models (using Pydantic) and effortlessly extract structured data from LLM responses.
-*   **Provider Agnostic:** Works seamlessly with major LLM providers, including OpenAI, Anthropic, Google, and local models (Ollama).
-*   **Automatic Error Handling:** Includes automatic retry mechanisms for failed extractions and validation errors.
-*   **Streaming Support:** Stream partial objects for real-time processing as they're generated.
-*   **Nested Object Support:** Easily extract and handle complex, nested data structures.
-*   **Production-Ready:** Battle-tested and trusted by over 100,000 developers and companies.
+*   **Simplified Extraction:** Define your desired data structure with Pydantic models and let Instructor handle the extraction.
+*   **Automatic Validation:** Ensures data integrity with built-in validation based on your Pydantic models.
+*   **Intelligent Retries:** Automatically retries failed extractions, improving reliability.
+*   **Streaming Support:** Stream partial data as it's generated for faster feedback.
+*   **Nested Object Support:** Easily extract complex, hierarchical data structures.
+*   **Multi-Provider Compatibility:** Works seamlessly with a wide range of LLM providers, including OpenAI, Anthropic, Google, and local models like Ollama.
+*   **Production-Ready:** Trusted by over 100,000 developers and companies, handling real-world use cases.
+
+## Why Instructor?
+
+Extracting structured data from LLMs can be a complex and error-prone process, often involving:
+
+*   Writing and managing complex JSON schemas
+*   Handling validation errors manually
+*   Implementing retry mechanisms for failed extractions
+*   Parsing unstructured responses
+*   Adapting to different provider APIs
+
+**Instructor eliminates these complexities with a simple, intuitive interface:**
+
+| **Without Instructor**                                                                     | **With Instructor**                                                                    |
+| ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| ```python response = openai.chat.completions.create(model="gpt-4",messages=[...],tools=[...]) user_data = json.loads(tool_call.function.arguments) if "name" not in user_data: # Handle error... pass ``` | ```python client = instructor.from_provider("openai/gpt-4") user = client.chat.completions.create(response_model=User,messages=[...]) # That's it! ``` |
 
 ## Getting Started
 
 ### Installation
 
-Install Instructor using pip:
+Install Instructor in seconds using pip:
 
 ```bash
 pip install instructor
 ```
 
-Or use your preferred package manager (uv, poetry, etc.):
-
+Or with your preferred package manager:
 ```bash
 uv add instructor
 poetry add instructor
 ```
 
-### Basic Usage Example
+### Basic Usage
 
-Define your data model and extract data with a few lines of code:
+Define your data model and extract structured data:
 
 ```python
 from pydantic import BaseModel
 import instructor
 
-# Define your data model
+client = instructor.from_provider("openai/gpt-4o-mini")
+
 class Product(BaseModel):
     name: str
     price: float
     in_stock: bool
 
-# Initialize the Instructor client
-client = instructor.from_provider("openai/gpt-4o-mini")
-
-# Extract data from a text prompt
 product = client.chat.completions.create(
     response_model=Product,
     messages=[{"role": "user", "content": "iPhone 15 Pro, $999, available now"}],
 )
 
 print(product)
-# Output: Product(name='iPhone 15 Pro', price=999.0, in_stock=True)
+# Product(name='iPhone 15 Pro', price=999.0, in_stock=True)
 ```
 
-## Why Choose Instructor?
-
-Instructor provides a streamlined approach to structured data extraction compared to alternatives:
-
-*   **Effortless Data Extraction:** No manual schema writing.
-*   **Handles Common Challenges:** Automatic validation, retries, streaming, and nested object support.
-*   **Focused and Efficient:** Lightweight and easy to debug, in contrast to more complex frameworks.
-*   **Battle-Tested:** Trusted by a large community for robust and reliable extraction.
-
-## Production-Ready Features in Detail
+## Powerful Features
 
 ### Automatic Retries
 
-Handle validation failures automatically:
+Instructor automatically retries extractions when validation fails:
 
 ```python
 from pydantic import BaseModel, field_validator
@@ -92,7 +98,7 @@ class User(BaseModel):
 user = client.chat.completions.create(
     response_model=User,
     messages=[{"role": "user", "content": "..."}],
-    max_retries=3,  # Instructor automatically retries when validation fails
+    max_retries=3,
 )
 ```
 
@@ -134,19 +140,9 @@ user = client.chat.completions.create(
 )
 ```
 
-## Used in Production By
-
-Instructor is trusted by a large and growing community:
-
-*   **3M+ monthly downloads**
-*   **10K+ GitHub stars**
-*   **1000+ community contributors**
-
-Companies using Instructor include teams at OpenAI, Google, Microsoft, AWS, and many YC startups.
-
 ## Provider Support
 
-Instructor supports all major LLM providers, offering a consistent API:
+Instructor supports major LLM providers:
 
 ```python
 # OpenAI
@@ -161,28 +157,41 @@ client = instructor.from_provider("google/gemini-pro")
 # Ollama (local)
 client = instructor.from_provider("ollama/llama3.2")
 
-# With API keys directly (no environment variables needed)
+# With API keys directly
 client = instructor.from_provider("openai/gpt-4o", api_key="sk-...")
 client = instructor.from_provider("anthropic/claude-3-5-sonnet", api_key="sk-ant-...")
 client = instructor.from_provider("groq/llama-3.1-8b-instant", api_key="gsk_...")
-
-# All use the same API!
-user = client.chat.completions.create(
-    response_model=User,
-    messages=[{"role": "user", "content": "..."}],
-)
 ```
+
+## Language Support
+
+Instructor's simple API is available in multiple languages:
+
+*   [Python](https://python.useinstructor.com) - The original
+*   [TypeScript](https://js.useinstructor.com) - Full TypeScript support
+*   [Ruby](https://ruby.useinstructor.com) - Ruby implementation
+*   [Go](https://go.useinstructor.com) - Go implementation
+*   [Elixir](https://hex.pm/packages/instructor) - Elixir implementation
+*   [Rust](https://rust.useinstructor.com) - Rust implementation
 
 ## Learn More
 
-*   [Documentation](https://python.useinstructor.com)
-*   [Examples](https://python.useinstructor.com/examples/)
-*   [Blog](https://python.useinstructor.com/blog/)
-*   [Discord](https://discord.gg/bD9YE9JArw)
+*   [Documentation](https://python.useinstructor.com) - Comprehensive guides
+*   [Examples](https://python.useinstructor.com/examples/) - Copy-paste recipes
+*   [Blog](https://python.useinstructor.com/blog/) - Tutorials and best practices
+*   [Discord](https://discord.gg/bD9YE9JArw) - Get help from the community
+
+## Why Instructor?
+
+**Instructor offers significant advantages over alternatives:**
+
+*   **vs Raw JSON mode:** Provides automatic validation, retries, streaming, and nested object support. No manual schema writing.
+*   **vs LangChain/LlamaIndex:** Focused solely on structured extraction. It's lighter, faster, and easier to debug.
+*   **vs Custom solutions:** Battle-tested by thousands of developers. Handles edge cases you haven't thought of yet.
 
 ## Contributing
 
-We welcome contributions! Check out our [good first issues](https://github.com/instructor-ai/instructor/labels/good%20first%20issue) to get started.
+We welcome contributions! Explore our [good first issues](https://github.com/instructor-ai/instructor/labels/good%20first%20issue) to get started.
 
 ## License
 

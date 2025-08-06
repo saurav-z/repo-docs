@@ -1,24 +1,27 @@
-# VRM Add-on for Blender: Create and Customize VRM Models within Blender
+# VRM Add-on for Blender
 
-Easily import, export, and create VRM models directly within Blender with the VRM Add-on!  [View the source code on GitHub](https://github.com/saturday06/VRM-Addon-for-Blender).
+**Easily import, export, and create VRM models within Blender with this powerful and versatile add-on!** Explore the [VRM Add-on for Blender](https://github.com/saturday06/VRM-Addon-for-Blender) repository for more information.
 
-## Key Features
+[![CI status](https://github.com/saturday06/VRM-Addon-for-Blender/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/saturday06/VRM-Addon-for-Blender/actions) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 
-*   **VRM Import & Export:** Seamlessly import and export VRM files for easy integration with other VRM-compatible platforms and applications.
-*   **VRM Humanoid Support:** Add and configure VRM Humanoid rigs, enabling easy rigging and animation.
-*   **MToon Shader Integration:** Easily configure the MToon shader for anime-style rendering within Blender.
-*   **PBR Material Support:** Utilize Physics Based Rendering (PBR) materials for realistic VRM model visuals.
-*   **Animation Tools:** Create and edit animations for your VRM models directly in Blender.
-*   **Scripting API:** Automate tasks and extend functionality through Python scripting.
+## Key Features:
 
-## Downloads
+*   **VRM Import/Export:** Seamlessly import and export VRM files directly within Blender.
+*   **VRM Humanoid Support:** Easily add and configure VRM humanoid rigs for animation and rigging.
+*   **MToon Shader Integration:** Configure MToon shaders for anime-style rendering of your models.
+*   **PBR Material Support:** Create realistic materials using PBR (Physically Based Rendering) workflows.
+*   **Animation Tools:** Utilize VRM animation features within Blender.
+*   **Scripting API:** Automate tasks and extend functionality using Python scripting.
+*   **Development Ready:** Contribute or modify the add-on with detailed development documentation.
 
-*   **Blender 4.2 or later:**  Get it from the [🛠️**Blender Extensions Platform**](https://extensions.blender.org/add-ons/vrm).
-*   **Blender 2.93 to 4.1:** Download from the [🌐**Official Site**](https://vrm-addon-for-blender.info).
+## Download & Installation:
 
-## Tutorials
+*   **Blender 4.2 or later:** [🛠️**Blender Extensions Platform**](https://extensions.blender.org/add-ons/vrm)
+*   **Blender 2.93 to 4.1:** [🌐**The Official Site**](https://vrm-addon-for-blender.info)
 
-Explore comprehensive tutorials to get you started:
+## Tutorials:
+
+Explore a variety of tutorials to get started with the VRM Add-on:
 
 |                                         [Installation](https://vrm-addon-for-blender.info/en/installation?locale_redirection)                                          |                                    [Create Simple VRM](https://vrm-addon-for-blender.info/en/create-simple-vrm-from-scratch?locale_redirection)                                    |                                    [Create Humanoid VRM](https://vrm-addon-for-blender.info/en/create-humanoid-vrm-from-scratch?locale_redirection)                                    |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -30,21 +33,8 @@ Explore comprehensive tutorials to get you started:
 
 ## Development
 
-The core addon files are located in the `src/io_scene_vrm` directory. For easier development, create a symbolic link to this directory within your Blender addons folder. Detailed instructions on setting up a development environment are available in the  [development how-to tutorial](https://vrm-addon-for-blender.info/en/development?locale_redirection).
+The add-on's main code resides in the [`src/io_scene_vrm`](https://github.com/saturday06/VRM-Addon-for-Blender/tree/main/src/io_scene_vrm) directory.  Follow the instructions to create development links for testing and contributing to the add-on.
 
-**Setup symbolic link (example for Blender 4.2 or later):**
+### Development Link Creation Instructions:
 
-```bash
-# Linux
-ln -Ts "$PWD/src/io_scene_vrm" "$HOME/.config/blender/BLENDER_VERSION/extensions/user_default/vrm"
-# macOS
-ln -s "$PWD/src/io_scene_vrm" "$HOME/Library/Application Support/Blender/BLENDER_VERSION/extensions/user_default/vrm"
-# Windows PowerShell
-New-Item -ItemType Junction -Path "$Env:APPDATA\Blender Foundation\Blender\BLENDER_VERSION\extensions\user_default\vrm" -Value "$(Get-Location)\src\io_scene_vrm"
-# Windows Command Prompt
-mklink /j "%APPDATA%\Blender Foundation\Blender\BLENDER_VERSION\extensions\user_default\vrm" src\io_scene_vrm
-```
-
-**(Adapt commands for older Blender versions or your OS as shown in the original README.)**
-
----
+Provides detailed instructions for creating symbolic links or junctions for your OS and Blender version.

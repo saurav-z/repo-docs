@@ -1,16 +1,17 @@
-# QuACK: Unleash Blazing-Fast Kernel Performance with CuTe-DSL!
+# QuACK: Accelerate Your AI with Optimized CUDA Kernels 🦆
 
-**QuACK** offers a suite of high-performance kernels optimized with the [CuTe-DSL](https://docs.nvidia.com/cutlass/media/docs/pythonDSL/cute_dsl_general/dsl_introduction.html) for your NVIDIA H100/B200 GPU.
+**QuACK provides a collection of high-performance CUDA kernels, written in the CuTe-DSL, designed to boost the performance of your AI applications.**
 
-[See the original repository on GitHub](https://github.com/Dao-AILab/quack)
+[Visit the original repository on GitHub](https://github.com/Dao-AILab/quack)
 
-## Key Features:
+## Key Features
 
-*   **Optimized Kernels:**  Leverages the power of CuTe-DSL for superior performance on modern NVIDIA GPUs.
-*   **Ease of Use:** Simple installation and import for quick integration into your projects.
-*   **Production-Ready:** Provides essential kernels for common deep learning operations.
+*   **Optimized Kernels:**  Leverages the CuTe-DSL for efficient CUDA kernel implementation.
+*   **Comprehensive Kernel Suite:** Includes essential kernels for common AI tasks.
+*   **Easy to Use:** Simple Python interface for seamless integration into your projects.
+*   **High Performance:** Designed for optimal performance on NVIDIA H100 and B200 GPUs.
 
-## Kernels Included:
+## Available Kernels
 
 *   🦆 RMSNorm forward + backward
 *   🦆 Softmax forward + backward
@@ -27,7 +28,7 @@ pip install quack-kernels
 ## Requirements
 
 *   NVIDIA H100 or B200 GPU
-*   CUDA toolkit 12.9+
+*   CUDA Toolkit 12.9+
 *   Python 3.12
 
 ## Usage
@@ -36,17 +37,18 @@ pip install quack-kernels
 from quack import rmsnorm, softmax, cross_entropy
 ```
 
-## Performance & Optimization
+## Documentation & Performance
 
-Learn how to achieve incredible speeds with memory-bound kernels in our detailed [blog post](media/2025-07-10-membound-sol.md), demonstrating performance improvements achieved with QuACK!
-
-<div align="center">
-<figure>
-  <img
-  src="media/bf16_kernel_benchmarks_single_row.svg"
-  >
-</figure>
-</div>
+*   **Blogpost:** Explore a detailed blog post that describes how to optimize memory-bound kernels for peak performance with CuTe-DSL.
+    *   [Blogpost Link](media/2025-07-10-membound-sol.md)
+*   **Performance Benchmarks:**  See visual performance data in our benchmarks.
+    <div align="center">
+    <figure>
+      <img
+      src="media/bf16_kernel_benchmarks_single_row.svg"
+      >
+    </figure>
+    </div>
 
 ## Development
 
@@ -55,3 +57,4 @@ To set up the development environment:
 ```bash
 pip install -e '.[dev]'
 pre-commit install
+```

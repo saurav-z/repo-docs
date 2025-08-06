@@ -1,102 +1,105 @@
-# spotDL: Download Your Favorite Spotify Music
+# spotDL: Download Your Favorite Spotify Music with Ease
 
-**Tired of relying on streaming?** spotDL lets you download songs from Spotify playlists with ease, complete with album art, lyrics, and metadata, ensuring you can enjoy your music offline. [Check out the original repo!](https://github.com/spotDL/spotify-downloader)
+Tired of limited music streaming? **spotDL** is the ultimate command-line tool that effortlessly downloads your favorite songs from Spotify, complete with album art, lyrics, and metadata. [Explore the original repository](https://github.com/spotDL/spotify-downloader) for more information and to contribute.
 
-[![MIT License](https://img.shields.io/github/license/spotdl/spotify-downloader?color=44CC11&style=flat-square)](https://github.com/spotDL/spotify-downloader/blob/master/LICENSE)
-[![PyPI version](https://img.shields.io/pypi/pyversions/spotDL?color=%2344CC11&style=flat-square)](https://pypi.org/project/spotdl/)
-[![PyPi downloads](https://img.shields.io/pypi/dw/spotDL?label=downloads@pypi&color=344CC11&style=flat-square)](https://pypi.org/project/spotdl/)
-![Contributors](https://img.shields.io/github/contributors/spotDL/spotify-downloader?style=flat-square)
-[![Discord](https://img.shields.io/discord/771628785447337985?label=discord&logo=discord&style=flat-square)](https://discord.gg/xCa23pwJWY)
+<div align="center">
+  <img src="https://img.shields.io/github/license/spotdl/spotify-downloader?color=44CC11&style=flat-square" alt="MIT License">
+  <img src="https://img.shields.io/pypi/pyversions/spotDL?color=%2344CC11&style=flat-square" alt="Python Versions">
+  <img src="https://img.shields.io/pypi/dw/spotDL?label=downloads@pypi&color=344CC11&style=flat-square" alt="PyPI Downloads">
+  <img src="https://img.shields.io/github/contributors/spotDL/spotify-downloader?style=flat-square" alt="Contributors">
+  <img src="https://img.shields.io/discord/771628785447337985?label=discord&logo=discord&style=flat-square" alt="Discord">
+</div>
 
 ## Key Features
 
-*   🎵 **Effortless Downloads:** Download your favorite Spotify tracks and playlists with a simple command.
-*   🖼️ **Complete Metadata:** Automatically downloads album art, lyrics, and song metadata.
-*   🌐 **YouTube Sourcing:** Uses YouTube as a reliable source for music downloads.
-*   ⚙️ **Flexible Operations:** Supports various operations including downloading, saving metadata, syncing directories, and more.
-*   🎧 **High-Quality Audio:** Downloads music in the best available quality (up to 256 kbps for YouTube Music Premium users).
-*   💻 **Cross-Platform:** Works on Windows, macOS, and Linux.
+*   **Seamless Downloads:** Download music from Spotify playlists and albums directly to your device.
+*   **Metadata Magic:** Automatically adds album art, lyrics, and song metadata.
+*   **High-Quality Audio:** Downloads the best available quality (up to 256kbps) from YouTube.
+*   **Flexible Usage:** Supports various operations, including saving metadata, syncing directories, and updating metadata for existing files.
+*   **Cross-Platform:** Works on Windows, macOS, and Linux.
 
 ## Installation
 
-For detailed instructions, please refer to our [Installation Guide](https://spotdl.readthedocs.io/en/latest/installation.html).
+For detailed installation instructions, see the [Installation Guide](https://spotdl.readthedocs.io/en/latest/installation.html).
 
 ### Python (Recommended)
 
-1.  Install using pip: `pip install spotdl`
+1.  Install: `pip install spotdl`
 2.  Update: `pip install --upgrade spotdl`
 
-    > *Note:* You might need to use `pip3` instead of `pip` on some systems.
+    > On some systems, you may need to replace `pip` with `pip3`.
 
-### Other Installation Options
+<details>
+    <summary style="font-size:1.25em"><strong>Other Options</strong></summary>
 
 *   **Prebuilt Executable:** Download from the [Releases Tab](https://github.com/spotDL/spotify-downloader/releases).
 *   **Termux:** `curl -L https://raw.githubusercontent.com/spotDL/spotify-downloader/master/scripts/termux.sh | sh`
-*   **Arch Linux (AUR):**  Use the [AUR package](https://aur.archlinux.org/packages/spotdl/).
-*   **Docker:** Build an image and run a container (see original README for commands).
+*   **Arch Linux (AUR):** Use the [AUR package](https://aur.archlinux.org/packages/spotdl/).
+*   **Docker:** Build and run using the provided Dockerfile.
+
+</details>
 
 ### Installing FFmpeg
 
-FFmpeg is required for spotDL. To install FFmpeg to your spotDL installation directory: `spotdl --download-ffmpeg`
+FFmpeg is required for spotDL.  If you only need FFmpeg for spotDL, install it to the spotdl installation directory:
+`spotdl --download-ffmpeg`
 
-Alternatively, install it system-wide:
+For system-wide installation, follow these guides:
 
-*   **Windows:** [Windows Tutorial](https://windowsloop.com/install-ffmpeg-windows-10/)
-*   **macOS:** `brew install ffmpeg`
-*   **Linux:** `sudo apt install ffmpeg` (or your distro's package manager)
+*   [Windows Tutorial](https://windowsloop.com/install-ffmpeg-windows-10/)
+*   OSX - `brew install ffmpeg`
+*   Linux - `sudo apt install ffmpeg` or use your distro's package manager
 
 ## Usage
 
 Basic usage:
 
 ```bash
-spotdl [spotify_urls]
+spotdl [urls]
 ```
 
-Or run it as a Python package:
+To run spotDL as a package if running it as a script doesn't work:
 
 ```bash
-python -m spotdl [spotify_urls]
+python -m spotdl [urls]
 ```
 
-General syntax:
+General usage:
 
 ```bash
-spotdl [operation] [options] [query]
+spotdl [operation] [options] QUERY
 ```
 
-Where `download` is the default operation. Use `spotdl -h` for a full list of options.
+The default **operation** is `download`. The **query** is typically a Spotify URL. For all **options**, run `spotdl -h`.
 
-### Supported Operations
+<details>
+<summary style="font-size:1em"><strong>Supported Operations</strong></summary>
 
-*   **save:** Saves metadata only, no download.
+*   `save`: Save metadata only.
     *   Usage: `spotdl save [query] --save-file {filename}.spotdl`
-*   **web:** Starts a web interface (limited functionality).
-*   **url:** Get direct download links.
+*   `web`: Launch a web interface (limited features).
+*   `url`: Get direct download links.
     *   Usage: `spotdl url [query]`
-*   **sync:** Updates a directory to match a playlist.
-    *   Usage: `spotdl sync [query] --save-file {filename}.spotdl` and then `spotdl sync {filename}.spotdl` to update.
-*   **meta:** Updates metadata for existing song files.
+*   `sync`: Update directories based on a playlist.
+    *   Usage: `spotdl sync [query] --save-file {filename}.spotdl`
+*   `meta`: Update metadata for existing files.
 
-## Music Sourcing and Quality
+</details>
 
-spotDL uses YouTube as the source for music downloads to avoid any issues related to downloading music from Spotify.
+## Music Sourcing and Audio Quality
 
-> **Disclaimer:** Users are responsible for their actions and any legal consequences. We do not endorse the unauthorized download of copyrighted material.
+spotDL uses YouTube for music downloads, aiming for the highest available bitrate (up to 256kbps).
 
-### Audio Quality
-
-spotDL downloads music from YouTube at the best possible quality, up to 128 kbps (or 256 kbps for YouTube Music Premium users).
-Check the [Audio Formats](docs/usage.md#audio-formats-and-quality) page for more info.
+> **Disclaimer:** Users are responsible for their actions. We do not support unauthorized downloading of copyrighted material.
 
 ## Contributing
 
-We welcome contributions! See our [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details on contributing and setting up a development environment.
+Interested in contributing?  See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for resources and setup instructions.
 
-### Join Our Community!
+### Join the Community
 
 <a href="https://github.com/spotDL/spotify-downloader/graphs/contributors">
-  <img class="dark-light" src="https://contrib.rocks/image?repo=spotDL/spotify-downloader&anon=0&columns=25&max=100&r=true" />
+  <img class="dark-light" src="https://contrib.rocks/image?repo=spotDL/spotify-downloader&anon=0&columns=25&max=100&r=true" alt="Contributors">
 </a>
 
 ## License

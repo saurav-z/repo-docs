@@ -1,24 +1,37 @@
-# Buzz: Offline Audio Transcription and Translation Powered by Whisper
+# Buzz: Offline Audio Transcription and Translation
 
-Buzz is an open-source application that lets you transcribe and translate audio offline, directly on your computer.  [Learn more on the original repository](https://github.com/chidiwilliams/buzz).
+**Buzz** empowers you to transcribe and translate audio offline on your computer, leveraging the power of OpenAI's Whisper.  [View the original repository](https://github.com/chidiwilliams/buzz).
 
-[Documentation](https://chidiwilliams.github.io/buzz/) | [Buzz Captions on the App Store](https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&itsct=apps_box_badge&itscg=30200)
+[简体中文](readme/README.zh_CN.md)
 
 **Key Features:**
 
-*   **Offline Transcription & Translation:** Processes audio locally using OpenAI's Whisper, ensuring privacy and speed.
-*   **Cross-Platform Support:** Available for macOS, Windows, and Linux.
-*   **Multiple Installation Options:** Install via PyPI, macOS (Homebrew, DMG), Windows (exe, winget), Linux (Flatpak, Snap).
-*   **GPU Support:**  Utilizes your GPU (Nvidia) for faster transcription (PyPI version).
+*   **Offline Transcription & Translation:** Process audio files locally without requiring an internet connection.
+*   **Powered by Whisper:** Utilizes the cutting-edge, open-source Whisper model from OpenAI for accurate results.
+*   **Cross-Platform Compatibility:** Available for macOS, Windows, and Linux.
+*   **Multiple Installation Options:** Install via PyPI, Homebrew, winget, Flatpak, or Snap, depending on your operating system.
+*   **GPU Acceleration (Optional):** Supports GPU acceleration for faster processing on compatible systems.
+*   **Mac App Store Version:** For a more polished experience, consider the [Buzz Captions](https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&itsct=apps_box_badge&itscg=30200) available on the Mac App Store with additional features like audio playback, editing and search.
 
-**Get a Mac-native version of Buzz with additional features:**
-[Download on the Mac App Store](https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&itsct=apps_box_badge&itscg=30200)
+**Resources:**
+
+*   [Documentation](https://chidiwilliams.github.io/buzz/)
+*   [Buzz Captions on the App Store](https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&itsct=apps_box_badge&itscg=30200)
+
+[![MIT License](https://img.shields.io/badge/license-MIT-green)](https://github.com/chidiwilliams/buzz/blob/main/LICENSE)
+[![CI](https://github.com/chidiwilliams/buzz/actions/workflows/ci.yml/badge.svg)](https://github.com/chidiwilliams/buzz/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/github/chidiwilliams/buzz/branch/main/graph/badge.svg?token=YJSB8S2VEP)](https://codecov.io/github/chidiwilliams/buzz)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/chidiwilliams/buzz)
+[![Github all releases](https://img.shields.io/github/downloads/chidiwilliams/buzz/total.svg)](https://GitHub.com/chidiwilliams/buzz/releases/)
+
+>
+>   <p>Buzz is better on the App Store. Get a Mac-native version of Buzz with a cleaner look, audio playback, drag-and-drop import, transcript editing, search, and much more.</p>
+>   <a href="https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&amp;itsct=apps_box_badge&amp;itscg=30200"><img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83&amp;releaseDate=1679529600" alt="Download on the Mac App Store" /></a>
+>
 
 ![Buzz](./buzz/assets/buzz-banner.jpg)
 
 ## Installation
-
-Choose your operating system for installation instructions:
 
 ### PyPI
 
@@ -32,27 +45,29 @@ python -m buzz
 
 ### macOS
 
-*   **Homebrew:**
+Install with [brew utility](https://brew.sh/)
 
-    ```shell
-    brew install --cask buzz
-    ```
+```shell
+brew install --cask buzz
+```
 
-*   **DMG:** Download the `.dmg` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
+Or download the `.dmg` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
 
 ### Windows
 
-*   **Executable:** Download and run the `.exe` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).  *Note: You may receive a security warning; select "More info" -> "Run anyway".*
+Download and run the `.exe` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
 
-*   **Winget:**
+App is not signed, you will get a warning when you install it. Select `More info` -> `Run anyway`.
 
-    ```shell
-    winget install ChidiWilliams.Buzz
-    ```
+**Alternatively, install with [winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/)**
 
-**GPU Support for PyPI (Nvidia)**
+```shell
+winget install ChidiWilliams.Buzz
+```
 
-Ensure CUDA support for [torch](https://pytorch.org/get-started/locally/) is enabled, then run:
+**GPU support for PyPI**
+
+To have GPU support for Nvidia GPUS on Windows, for PyPI installed version ensure, CUDA support for [torch](https://pytorch.org/get-started/locally/)
 
 ```
 pip3 install -U torch==2.7.1+cu128 torchaudio==2.7.1+cu128 --index-url https://download.pytorch.org/whl/cu128
@@ -61,23 +76,25 @@ pip3 install nvidia-cublas-cu12==12.8.3.14 nvidia-cuda-cupti-cu12==12.8.57 nvidi
 
 ### Linux
 
-*   **Flatpak:**
+Buzz is available as a [Flatpak](https://flathub.org/apps/io.github.chidiwilliams.Buzz) or a [Snap](https://snapcraft.io/buzz).
 
-    ```shell
-    flatpak install flathub io.github.chidiwilliams.Buzz
-    ```
+To install flatpak, run:
 
-*   **Snap:**
+```shell
+flatpak install flathub io.github.chidiwilliams.Buzz
+```
 
-    ```shell
-    sudo apt-get install libportaudio2 libcanberra-gtk-module libcanberra-gtk3-module
-    sudo snap install buzz
-    sudo snap connect buzz:password-manager-service
-    ```
+To install snap, run:
 
-### Latest Development Version
+```shell
+sudo apt-get install libportaudio2 libcanberra-gtk-module libcanberra-gtk3-module
+sudo snap install buzz
+sudo snap connect buzz:password-manager-service
+```
 
-For the latest features and bug fixes, see the [FAQ](https://chidiwilliams.github.io/buzz/docs/faq#9-where-can-i-get-latest-development-version).
+### Latest development version
+
+For info on how to get latest development version with latest features and bug fixes see [FAQ](https://chidiwilliams.github.io/buzz/docs/faq#9-where-can-i-get-latest-development-version).
 
 ### Screenshots
 

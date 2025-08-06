@@ -1,22 +1,26 @@
-# FieldStation42: Relive the Golden Age of Television 📺
+# FieldStation42: Relive the Golden Age of Television
 
-**FieldStation42 is a Python-based cable and broadcast TV simulator that brings the nostalgic experience of classic over-the-air television to life.**  [View on GitHub](https://github.com/shane-mason/FieldStation42)
+Tired of endless streaming options? **FieldStation42** is a cable and broadcast TV simulator that creates an authentic retro TV experience, complete with channel surfing, scheduled programming, and nostalgic charm. Check out the [original repo](https://github.com/shane-mason/FieldStation42)!
 
 ![An older TV with an antenna rotator box in the background](docs/retro-tv.png?raw=true)
 
+---
+
 ## Key Features
 
-*   **Multiple Channels:** Simulate a complete TV lineup with simultaneous channel support.
-*   **Realistic Schedules:** Automatically generates weekly schedules based on customizable station configurations.
-*   **Commercial & Bump Integration:** Seamlessly integrates commercial breaks and station IDs into content.
-*   **Flexible Scheduling:** Supports various channel types, including traditional networks, movie channels, and looping community channels.
-*   **Content Management:** Manages video catalogs, ensuring shows play in sequence as if broadcast live.
-*   **UI & Web Control:**  Includes a user interface for catalog and schedule management, plus a web-based remote control.
-*   **On-Screen Display:** Features a customizable on-screen display showing channel info and the current time.
-*   **Hardware Integration:** (Optional) Supports hardware connections for channel changing.
-*   **Preview/Guide Channel:**  Provides a channel for previews and information.
-*   **Date Range Functionality:** Set date ranges for specific shows like sports or holiday specials.
-*   **Looping channels** useful for community bulletin style channels or information loops.
+*   **Multiple Channels:** Simulate a full cable or OTA lineup.
+*   **Realistic Scheduling:** Plays shows in time slots, just like real TV.
+*   **Commercial Breaks & Bumps:** Adds to the authenticity with breaks and station identification.
+*   **Content Flexibility:** Supports movies and all video lengths.
+*   **Dynamic Content:** Randomly selects unwatched content to keep the lineup fresh.
+*   **Configurable:** Station configurations, including sign-off videos and loop channels.
+*   **Web UI:** Built-in remote control and content management.
+*   **On-Screen Display:** Displays channel information and time/date.
+*   **Looping Channels:** Create community bulletin boards or information feeds.
+*   **Preview/Guide Channel:** Includes embedded video and configurable messages.
+*   **Flexible Scheduling:** Supports various channel types (network, commercial-free, loop).
+
+---
 
 ## 🚀 Getting Started
 
@@ -32,8 +36,8 @@
     ./install.sh
     ```
 3.  **Add Your Content:** Place video files in the `catalog/` directory.
-4.  **Configure Stations:**  Copy an example config from `confs/examples/` to `confs/` and customize it.
-5.  **Build Catalogs and Schedules:**
+4.  **Configure Stations:** Copy and edit example config files in `confs/`.
+5.  **Build Catalogs & Schedules:**
     ```bash
     python3 station_42.py --rebuild_catalog --schedule
     ```
@@ -46,60 +50,89 @@
     python3 station_42.py --server
     ```
 
-For a comprehensive guide, refer to the [FieldStation42 Guide](https://github.com/shane-mason/FieldStation42/wiki).
+For a full guide, see the [FieldStation42 Guide](https://github.com/shane-mason/FieldStation42/wiki).
+
+---
 
 ## 📁 Project Structure
 
-*   `station_42.py` — Main CLI and UI for building catalogs and schedules
-*   `field_player.py` — Main TV interface/player
-*   `fs42/` — Core Python modules (catalog, schedule, API, etc.)
-*   `confs/` — Station and system configuration files
-*   `catalog/` — Your video content, organized by channel (created by installer)
-*   `runtime/` — Runtime files, sockets, and status (created by installer)
-*   `fs42/fs42_server/static/` — Web UI static files (HTML, JS, CSS)
-*   `docs/` — Images and documentation
+*   `station_42.py` — CLI and UI for catalog and schedule management.
+*   `field_player.py` — Main TV interface.
+*   `fs42/` — Core Python modules.
+*   `confs/` — Station and system configuration files.
+*   `catalog/` — Video content organized by channel.
+*   `runtime/` — Runtime files and status.
+*   `fs42/fs42_server/static/` — Web UI static files.
+*   `docs/` — Images and documentation.
 
-## 🛠️ Configuration & Administration
+---
 
-### Quickstart Setup
+## 🛠️ Installation & Setup - Simplified
 
-*   Ensure Python 3 and MPV are installed.
-*   Clone the repository.
-*   Run the install script.
-*   Add your video content.
-*   Configure your stations by copying an example JSON file from `confs/examples` into `confs/`.
-*   Generate a weekly schedule using `python3 station_42.py`. Use `--rebuild_catalog` if the video content has changed.
-*   Run `field_player.py` to start watching.
-*   (Optional) Configure start-on-boot using `fs42/hot_start.sh`.
+### Steps
 
-For detailed steps, consult the [FieldStation42 Guide](https://github.com/shane-mason/FieldStation42/wiki).
+1.  **Prerequisites:** Ensure you have Python 3 and MPV installed.
+2.  **Clone:** Clone the GitHub repository.
+3.  **Install:** Run the installation script.
+4.  **Content:** Add your video content.
+5.  **Configure:** Edit the station configuration files.
+6.  **Generate:** Generate a weekly schedule.
+7.  **Watch:** Run `field_player.py` to watch TV.
+
+For detailed setup instructions, consult the [FieldStation42 Guide](https://github.com/shane-mason/FieldStation42/wiki).
+
+---
 
 ## How It Works
 
-FieldStation42 recreates the TV experience with multiple components:
+*   **`station_42.py`:** Creates catalogs of your content and schedules. Use the command-line arguments or the terminal UI.
+*   **`field_player.py`:** The main TV interface, which starts the correct video and resumes where the previous show left off.
 
-*   **`station_42.py`:** Manages content catalogs and generates schedules.
-*   **`field_player.py`:** The main TV interface, playing videos based on the schedule and current time.  It uses the runtime/play_status.socket to provide information.
+---
+
+## Connecting to a TV
+
+*   **HDMI:** Use a Raspberry Pi with HDMI output.
+*   **Vintage TVs:** Use an HDMI to composite or HDMI to RF adapter.
+
+---
+
+## Extending FieldStation42
+
+*   **Remote Control:** You can connect external devices using `channel.socket` and `play_status.socket`. See [Changing Channel From Script](https://github.com/shane-mason/FieldStation42/wiki/Changing-Channel-From-Script) and the [Bluetooth remote guide](https://github.com/shane-mason/FieldStation42/discussions/47).
+
+---
 
 ## 🤝 Contributing
 
 1.  Fork the repository and create a feature branch.
 2.  Make your changes and add tests.
 3.  Open a pull request.
-4.  Ask questions or discuss on the [Discussions](https://github.com/shane-mason/FieldStation42/discussions).
+4.  For questions, use the [Discussions](https://github.com/shane-mason/FieldStation42/discussions) or open an issue.
+
+---
 
 ## 🐞 Troubleshooting
 
-*   **Player won't start:**  Check video paths and config files.
-*   **No video/audio:** Verify MPV installation and functionality.
-*   **Web UI not loading:** Ensure the server is running with `--server` and check for browser errors.
-*   **Database errors:** Check file permissions and Python version.
-*   See the [wiki](https://github.com/shane-mason/FieldStation42/wiki) or open an issue.
+*   **Player Won't Start:** Check video paths and config files.
+*   **No Video/Audio:** Ensure MPV is installed.
+*   **Web UI Issues:** Start the server with `--server` and check browser developer tools for errors.
 
-## 📚 Resources
+For more help, see the [wiki](https://github.com/shane-mason/FieldStation42/wiki) or open an issue.
+
+---
+
+## 📚 Links & Resources
 
 *   [FieldStation42 Guide (Wiki)](https://github.com/shane-mason/FieldStation42/wiki)
 *   [API Reference](fs42/fs42_server/README.md)
 *   [Discussions](https://github.com/shane-mason/FieldStation42/discussions)
 *   [Releases](https://github.com/shane-mason/FieldStation42/releases)
 *   [Issues](https://github.com/shane-mason/FieldStation42/issues)
+
+---
+
+## Important Notes
+
+*   This is an alpha project in active development.
+*   Requires basic Linux command-line knowledge and editing JSON config files.

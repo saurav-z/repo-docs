@@ -1,40 +1,66 @@
-[![SearXNG Logo](https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng.svg)](https://docs.searxng.org/)
+# SearXNG: The Privacy-Respecting Metasearch Engine
 
-# SearXNG: The Privacy-Respecting, Hackable Metasearch Engine
+SearXNG is a free, open-source metasearch engine that respects your privacy and allows you to customize your search experience. You can find the original repository [here](https://github.com/searxng/searxng).
 
-SearXNG is a powerful, open-source metasearch engine designed to provide privacy-focused search results.  Find out more and contribute at the [official SearXNG repository](https://github.com/searxng/searxng).
+<p align="center">
+  <img src="https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng.svg" alt="SearXNG Logo" width="100%">
+</p>
 
 ## Key Features
 
-*   **Privacy-Focused:** SearXNG doesn't track your searches, protecting your privacy.
-*   **Open Source:** Hackable and customizable, allowing you to tailor the search engine to your needs.
-*   **Metasearch Capabilities:** Aggregates results from various search engines, providing a comprehensive search experience.
-*   **Easy to Install:**  Offers Docker images, installation scripts, and detailed setup guides for various architectures (including ARM64 and ARM/v7).
-*   **Active Community:**  Join the community on IRC and Matrix for support and discussions.
-*   **Translations:**  Help translate SearXNG via Weblate.
-*   **Developer-Friendly:**  Easy to contribute with guides and Codespaces support.
+*   **Privacy-Focused:** SearXNG does not track your searches, ensuring your privacy.
+*   **Open Source:**  Modify and customize the code to suit your needs.
+*   **Metasearch:** Aggregates results from various search engines for comprehensive results.
+*   **Hackable:** Highly customizable to tailor your search experience.
+*   **Self-Hostable:** Run your own SearXNG instance for complete control.
+*   **User-Friendly:**  Easy-to-use interface.
+*   **Community Driven:** Active community for support and development.
 
 ## Get Started
 
-*   **Ready-to-use instances:** [Searx.space](https://searx.space)
-*   **User Documentation:** [User Handbook](https://docs.searxng.org/user)
-*   **Admin Documentation:** [Admin Handbook](https://docs.searxng.org/admin)
-*   **Developer Documentation:** [Developer Handbook](https://docs.searxng.org/dev)
-*   **Installation:**  [Installation Guide](https://docs.searxng.org/admin/installation.html)
-*   **Installation Scripts:** [Installation Scripts](https://docs.searxng.org/admin/installation-scripts.html)
-*   **Docker Image:** [SearXNG Docker](https://github.com/searxng/searxng-docker)
+### Ready-to-Use Instances
 
-## Join the Community
+*   Browse ready-to-use instances on [Searx.space](https://searx.space).
 
-*   **IRC:**  `#searxng on libera.chat <https://web.libera.chat/?channel=#searxng>`_ (bridged to Matrix)
-*   **Matrix:**  `#searxng:matrix.org <https://matrix.to/#/#searxng:matrix.org>`_
+### Installation
+
+*   **Docker:**  Use the well-maintained Docker image, also available for ARM64 and ARM/v7 architectures.
+*   **Installation Scripts:** Utilize up-to-date installation scripts.
+*   **Step-by-Step Instructions:** Consult our detailed instructions for individual setup.
+
+### Documentation
+
+*   **User Handbook:** Learn how to use SearXNG: [https://docs.searxng.org/user](https://docs.searxng.org/user)
+*   **Administrator Handbook:** Configure and manage your instance: [https://docs.searxng.org/admin/index.html](https://docs.searxng.org/admin/index.html)
+*   **Developer Handbook:**  Contribute to the project: [https://docs.searxng.org/dev/index.html](https://docs.searxng.org/dev/index.html)
+*   **Wiki:** Explore our wiki for further information: [https://github.com/searxng/searxng/wiki](https://github.com/searxng/searxng/wiki)
 
 ## Contribute
 
-*   **Development Quickstart:**  [Development Quickstart Guide](https://docs.searxng.org/dev/quickstart.html)
-*   **Contribute with GitHub Codespaces:**  [GitHub Codespaces](https://docs.github.com/en/codespaces/overview)
-*   **Translate:** [Weblate](https://translate.codeberg.org/projects/searxng/searxng/)
+### Development
 
-## License
+*   Get started with the `development quickstart` guide: [https://docs.searxng.org/dev/quickstart.html](https://docs.searxng.org/dev/quickstart.html)
+*   Familiarize yourself with the `developer documentation`: [https://docs.searxng.org/dev/index.html](https://docs.searxng.org/dev/index.html)
 
-SearXNG is licensed under the AGPL-3.0-or-later License.  See the [LICENSE](https://github.com/searxng/searxng/blob/master/LICENSE) file.
+### Codespaces
+
+Contribute directly from your browser using `GitHub Codespaces`:
+(See the original README for instructions.)
+
+### Translations
+
+Help translate SearXNG at [Weblate](https://translate.codeberg.org/projects/searxng/searxng/)
+
+<a href="https://translate.codeberg.org/projects/searxng/searxng/"><img src="https://translate.codeberg.org/widgets/searxng/-/multi-auto.svg" alt="Translation status"></a>
+
+## Contact
+
+*   Join the SearXNG community on IRC:  `#searxng on libera.chat <https://web.libera.chat/?channel=#searxng>` (bridged to Matrix).
+*   Or on Matrix: `#searxng:matrix.org <https://matrix.to/#/#searxng:matrix.org>`
+
+## Links
+
+*   **SearXNG Homepage:** [https://docs.searxng.org/](https://docs.searxng.org/)
+*   **GitHub Repository:** [https://github.com/searxng/searxng](https://github.com/searxng/searxng)
+*   **Issues:** [https://github.com/searxng/searxng/issues](https://github.com/searxng/searxng/issues)
+*   **License:** [https://github.com/searxng/searxng/blob/master/LICENSE](https://github.com/searxng/searxng/blob/master/LICENSE)
