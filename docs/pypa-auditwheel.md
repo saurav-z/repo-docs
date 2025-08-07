@@ -1,33 +1,34 @@
-# auditwheel: Ensure Compatibility for Python Wheels on Linux
+# Auditwheel: Ensure Linux Wheel Compatibility for Python Packages
 
-**auditwheel is a powerful command-line tool that helps you create and verify Python wheels compatible with various Linux distributions, adhering to manylinux standards.** ([See the original repo](https://github.com/pypa/auditwheel))
+Auditwheel is a powerful command-line tool designed to audit, repair, and relabel Python wheel packages for Linux, ensuring compatibility across a wide range of distributions. You can find the original repository [here](https://github.com/pypa/auditwheel).
 
-## Key Features:
+## Key Features
 
-*   **Auditing Wheels:** Inspects Python wheel packages to identify external shared library dependencies and compatibility issues based on PEP 600, PEP 513, PEP 571, and PEP 599 manylinux standards.
-*   **Dependency Analysis:**  Shows external shared libraries that the wheel depends on, and checks for the use of versioned symbols.
-*   **Repairing Wheels:**  Copies external shared libraries into the wheel and modifies RPATH entries to ensure runtime compatibility.
-*   **Platform Tag Management:**  Correctly modifies the wheel's platform tags to reflect manylinux compliance.
+*   **Auditing:** Analyze Python wheels to identify external shared library dependencies and potential compatibility issues with `manylinux` standards (PEP 600, PEP 513, PEP 571, and PEP 599).
+*   **Repairing:** Copies necessary external shared libraries into the wheel and automatically adjusts the `RPATH` entries to resolve runtime dependencies.
+*   **Relabeling:** Modifies wheel filenames and metadata to comply with `manylinux` platform tags for broader compatibility.
+*   **Extensive Platform Support:** Supports manylinux1, manylinux2010, manylinux2014 and newer standards.
 
 ## Overview
 
-`auditwheel` simplifies the creation of Python wheel packages for Linux, especially those containing pre-compiled binary extensions.  It focuses on ensuring these wheels are compatible across a wide range of Linux distributions, aligning with the manylinux policies (PEP 600, PEP 513, PEP 571, PEP 599).  This tool is essential for packaging Python extensions that need to run seamlessly on different Linux systems.
+Auditwheel is a crucial tool for Python developers who need to distribute pre-compiled binary extensions for Linux. It streamlines the process of creating `wheel packages` that are compatible with diverse Linux distributions, adhering to the `PEP 600 manylinux_x_y`, `PEP 513 manylinux1`, `PEP 571 manylinux2010`, and `PEP 599 manylinux2014` platform tags.
 
-### Functionality
+### Usage
 
-*   **`auditwheel show`**: Displays external shared libraries and versioned symbols a wheel depends on. It verifies compliance with manylinux standards.
-*   **`auditwheel repair`**: Copies external shared libraries into the wheel and updates RPATH entries for correct runtime behavior.
+*   **`auditwheel show`:** Displays external shared libraries required by a wheel and checks for versioned symbols exceeding the `manylinux` ABI.
+*   **`auditwheel repair`:** Copies external shared libraries into the wheel and modifies `RPATH` entries to ensure they are found at runtime.
 
 ## Requirements
 
 *   **Operating System:** Linux
 *   **Python:** 3.9+
-*   **Dependencies:** `patchelf <https://github.com/NixOS/patchelf>`_ (version 0.14+)
-*   **ELF Support:**  Requires an ELF-based system (virtually all Linux distributions).
+*   **Dependencies:**
+    *   `patchelf <https://github.com/NixOS/patchelf>`_: 0.14+
+    *   Only systems that use `ELF <https://en.wikipedia.org/wiki/Executable_and_Linkable_Format>`_-based linkage are supported
 
 ## Installation
 
-Install `auditwheel` easily using pip:
+Install `auditwheel` using pip:
 
 ```bash
 pip3 install auditwheel
@@ -35,32 +36,26 @@ pip3 install auditwheel
 
 ## Examples
 
-**Inspect a wheel:**
+**Inspecting a Wheel:**
 
 ```bash
-auditwheel show cffi-1.5.0-cp35-cp35m-linux_x86_64.whl
+$ auditwheel show cffi-1.5.0-cp35-cp35m-linux_x86_64.whl
 ```
 
-This will show the wheel's dependencies and any compatibility issues.
-
-**Repair a wheel:**
+**Repairing a Wheel:**
 
 ```bash
-auditwheel repair cffi-1.5.2-cp35-cp35m-linux_x86_64.whl
+$ auditwheel repair cffi-1.5.2-cp35-cp35m-linux_x86_64.whl
 ```
-
-This will fix the wheel to be manylinux compliant, copying necessary libraries and updating paths.
 
 ## Limitations
 
-*   **Dynamic Library Loading:**  Dependencies loaded using `ctypes`, `cffi` (Python), or `dlopen` (C/C++) may not be detected.
-*   **Compiler Compatibility:**  `auditwheel` cannot fix issues from binaries compiled with excessively new versions of `glibc` or `libstdc++`. Building on older Linux distributions (e.g., within manylinux Docker images) is recommended.
+1.  Dependencies loaded dynamically through `ctypes`, `cffi`, or `dlopen` are not always detected.
+2.  Binaries compiled against newer versions of `libc` or `libstdc++` might not be compatible with older systems.
 
 ## Testing
 
-Run tests using `nox`. Some integration tests require a Docker daemon.
-
-To update Docker images:
+Run tests with `nox`.  Integration tests may require a running Docker daemon and the following images:
 
 ```bash
 docker pull python:3.9-slim-bookworm
@@ -72,8 +67,6 @@ docker pull quay.io/pypa/manylinux_2_34_x86_64
 docker pull quay.io/pypa/musllinux_1_2_x86_64
 ```
 
-You can remove Docker images with `docker rmi`.
-
 ## Code of Conduct
 
-This project adheres to the `PSF Code of Conduct <https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md>`.
+This project follows the `PSF Code of Conduct`_.

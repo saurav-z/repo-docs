@@ -20,64 +20,63 @@
 </a>
 </p>
 
-# Biomni: Revolutionizing Biomedical Research with an AI Agent
+# Biomni: Revolutionizing Biomedical Research with AI
 
-**Biomni is a cutting-edge, general-purpose biomedical AI agent designed to accelerate scientific discovery across various subfields.**
+**Biomni is a groundbreaking general-purpose AI agent designed to automate complex research tasks and accelerate discoveries across diverse biomedical fields.**
 
 ## Key Features
 
-*   **Autonomous Task Execution:** Automates complex research tasks, freeing up researchers' time.
-*   **LLM-Powered Reasoning:** Leverages advanced large language models for intelligent decision-making.
-*   **Retrieval-Augmented Planning:** Enhances planning capabilities with relevant data retrieval.
-*   **Code-Based Execution:** Executes tasks by generating and running code.
-*   **Wide Range of Applications:** Supports diverse biomedical research tasks.
-*   **Web Interface:** Accessible and easy-to-use web interface for quick experimentation.
-*   **Open Source and Community-Driven:** Active community with opportunities for contributions.
+*   **Autonomous Task Execution:** Biomni uses large language models (LLMs) to understand and execute a wide array of biomedical research tasks.
+*   **Retrieval-Augmented Planning:** Enhances LLM capabilities by integrating retrieval-augmented planning for more accurate and relevant results.
+*   **Code-Based Execution:** Executes code to perform complex analyses, simulations, and data manipulations.
+*   **Versatile Applications:** Suitable for a broad range of biomedical subfields, from genomics to drug discovery.
+*   **Web Interface:** Accessible and easy to use through a web interface [biomni.stanford.edu](https://biomni.stanford.edu).
 
 ## Getting Started
 
 ### Installation
 
-To get started with Biomni, follow these steps:
-
-1.  **Set up the Environment:** Follow the instructions in the [biomni_env/README.md](biomni_env/README.md) file to set up the software environment.
-2.  **Activate the Environment:**
+1.  **Environment Setup:** Follow the instructions in the [biomni\_env/README.md](biomni_env/README.md) file to set up the necessary environment.
+2.  **Activate Environment:** Activate the environment:
 
     ```bash
     conda activate biomni_e1
     ```
 
-3.  **Install the Biomni Package:**
+3.  **Install Biomni Package:**
+
     ```bash
     pip install biomni --upgrade
     ```
-    Or install from the GitHub source:
+
+    Or, for the latest updates from the GitHub repository:
+
     ```bash
     pip install git+https://github.com/snap-stanford/Biomni.git@main
     ```
 
-4.  **Configure API Keys:**
-    Choose one of the following methods to configure your API keys:
+4.  **Configure API Keys:** Configure API keys using one of the following methods:
 
-    *   **Option 1: Using `.env` File (Recommended)**
-        *   Create a `.env` file in your project directory.
-        *   Copy the example file: `cp .env.example .env`
-        *   Edit the `.env` file with your API keys.  See the original README for details on setting API keys.
-    *   **Option 2: Using Shell Environment Variables**
-        *   Configure your API keys in your bash profile (`~/.bashrc` or similar). See the original README for details on setting API keys.
+    *   **Option 1: .env file (Recommended)**
+        *   Create a `.env` file in your project directory:
+            ```bash
+            # Copy the example file
+            cp .env.example .env
+            ```
+        *   Edit the `.env` file with your API keys. See the original README for details.
+    *   **Option 2: Shell environment variables**
+        *   Set the API keys in your bash profile (`~/.bashrc`). See the original README for details.
 
-### Known Package Conflicts
-
-Some Python packages are not installed by default due to dependency conflicts. Consult the [docs/known_conflicts.md](./docs/known_conflicts.md) for a current list and solutions.
+    **Note:** See the [docs/known\_conflicts.md](./docs/known_conflicts.md) file for known package conflicts and workarounds.
 
 ### Basic Usage
 
-Once the environment is set up and activated, you can start using Biomni:
+Once your environment is set up:
 
 ```python
 from biomni.agent import A1
 
-# Initialize the agent with data path (Data lake will be automatically downloaded on first run (~11GB))
+# Initialize the agent with data path, Data lake will be automatically downloaded on first run (~11GB)
 agent = A1(path='./data', llm='claude-sonnet-4-20250514')
 
 # Execute biomedical tasks using natural language
@@ -85,11 +84,12 @@ agent.go("Plan a CRISPR screen to identify genes that regulate T cell exhaustion
 agent.go("Perform scRNA-seq annotation at [PATH] and generate meaningful hypothesis")
 agent.go("Predict ADMET properties for this compound: CC(C)CC1=CC=C(C=C1)C(C)C(=O)O")
 ```
-If you plan on using Azure for your model, always prefix the model name with azure- (e.g. llm='azure-gpt-4o').
+
+**Important:** If using Azure for your model, always prefix the model name with `azure-` (e.g., `llm='azure-gpt-4o'`).
 
 ## Model Context Protocol (MCP) Support
 
-Biomni supports MCP servers for external tool integration, see the [MCP Integration Documentation](docs/mcp_integration.md) and examples in [`tutorials/examples/add_mcp_server/`](tutorials/examples/add_mcp_server/) and [`tutorials/examples/expose_biomni_server/`](tutorials/examples/expose_biomni_server/).
+Biomni supports MCP servers for seamless integration with external tools:
 
 ```python
 from biomni.agent import A1
@@ -99,32 +99,42 @@ agent.add_mcp(config_path="./mcp_config.yaml")
 agent.go("Find FDA active ingredient information for ibuprofen")
 ```
 
+**Built-in MCP Servers:**
+
+For usage and implementation details, refer to the [MCP Integration Documentation](docs/mcp_integration.md) and examples in [`tutorials/examples/add_mcp_server/`](tutorials/examples/add_mcp_server/) and [`tutorials/examples/expose_biomni_server/`](tutorials/examples/expose_biomni_server/).
+
 ## Contribute to Biomni
 
-Biomni is an open-science initiative that welcomes community contributions. We encourage contributions in the following areas:
+**Join the open-science initiative and help build the future of biomedical AI!** We welcome contributions in the following areas:
 
-*   New Tools
-*   Datasets
-*   Software Integration
-*   Benchmarks
-*   Tutorials and Examples
-*   Update existing tools
+*   🔧 **New Tools:** Develop specialized analysis functions and algorithms.
+*   📊 **Datasets:** Contribute curated biomedical data and knowledge bases.
+*   💻 **Software:** Integrate existing biomedical software packages.
+*   📋 **Benchmarks:** Create evaluation datasets and performance metrics.
+*   📚 **Misc:**  Develop tutorials, examples, and use cases.
+*   🔧 **Update existing tools**: Refactor and improve existing tools!
 
-See the [Contributing Guide](CONTRIBUTION.md) for detailed instructions.
+See the **[Contributing Guide](CONTRIBUTION.md)** for details on how to contribute.
 
-## Biomni-E2: Join the Next Generation
+You can also submit suggestions for tools/databases/software to [this form](https://forms.gle/nu2n1unzAYodTLVj6).
 
-We are building **Biomni-E2**, a next-generation environment, with the community. Contribute and get invited as co-authors! All contributors will be acknowledged in our publications.
+## Biomni-E2: The Next Generation
+
+We're building **Biomni-E2** – a next-generation environment developed **with and for the community**.
+**Join us in shaping the future of biomedical AI agent.**
+
+*   Contributors with significant impact will be invited as co-authors on our upcoming publications.
+*   All contributors will be acknowledged in our publications.
 
 ## Tutorials and Examples
 
-Get started with our tutorials:
-
 *   **[Biomni 101](./tutorials/biomni_101.ipynb)** - Basic concepts and first steps
+
+More to come!
 
 ## Web Interface
 
-Try Biomni through our no-code web interface at **[biomni.stanford.edu](https://biomni.stanford.edu)**.
+Experience Biomni through our no-code web interface at **[biomni.stanford.edu](https://biomni.stanford.edu)**.
 
 [![Watch the video](https://img.youtube.com/vi/E0BRvl23hLs/maxresdefault.jpg)](https://youtu.be/E0BRvl23hLs)
 
@@ -136,13 +146,13 @@ Try Biomni through our no-code web interface at **[biomni.stanford.edu](https://
 *   [x] MCP support
 *   [x] Biomni A1+E1 release
 
-## Important Notes
+## Important Notes and Security
 
-*   **Security:** Biomni executes LLM-generated code with full system privileges. Use in isolated/sandboxed environments for production.
-*   **Version Freeze:** This release was frozen as of April 15, 2025, and may differ from the current web platform.
-*   **Licensing:** Biomni is Apache 2.0-licensed; however, integrated tools may have more restrictive commercial licenses. Review each component before commercial use.
+*   **Security Warning:** Biomni executes LLM-generated code with full system privileges. Use it in isolated/sandboxed environments. The agent can access files, network, and system commands. Be careful with sensitive data or credentials.
+*   This release was frozen as of April 15 2025.
+*   Biomni is Apache 2.0-licensed, but certain integrated tools may carry more restrictive commercial licenses. Review each component carefully.
 
-## Citation
+## Cite Us
 
 ```
 @article{huang2025biomni,
@@ -155,4 +165,4 @@ Try Biomni through our no-code web interface at **[biomni.stanford.edu](https://
 }
 ```
 
-**[Back to Top](#)** - Back to the original repository.
+[Back to Top](#biomni-revolutionizing-biomedical-research-with-ai)

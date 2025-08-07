@@ -1,54 +1,61 @@
 # PyTorch/XLA: Accelerate Your PyTorch Models with TPUs and GPUs
 
-**Supercharge your deep learning workflows by seamlessly integrating PyTorch with Google Cloud TPUs and GPUs using PyTorch/XLA!**  Visit the [PyTorch/XLA GitHub repository](https://github.com/pytorch/xla) for the source code and more information.
+**Supercharge your PyTorch deep learning projects by leveraging the power of Google Cloud TPUs and GPUs with PyTorch/XLA!**  ([View the original repository](https://github.com/pytorch/xla))
 
-Key Features:
+[![GitHub Actions status](https://github.com/pytorch/xla/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/pytorch/xla/actions/workflows/build_and_test.yml)
 
-*   **TPU Acceleration:** Leverage the power of Cloud TPUs for significantly faster training and inference of your PyTorch models.
-*   **GPU Support:** Extend the reach to run PyTorch on a wide range of GPUs.
-*   **Easy Integration:** Integrate with minimal code changes, making it simple to adopt XLA.
-*   **Kaggle Ready:** Experiment and get started easily on Kaggle with pre-built notebooks.
-*   **Comprehensive Documentation:** Access detailed guides and tutorials for setup, optimization, and troubleshooting.
-*   **Active Community:** Engage with the PyTorch/XLA community through GitHub issues and forums.
+PyTorch/XLA seamlessly connects the popular [PyTorch](https://pytorch.org/) framework with the [XLA deep learning compiler](https://www.tensorflow.org/xla), enabling you to run your models on:
+*   **Cloud TPUs:** Take advantage of the high-performance computing capabilities of Google Cloud TPUs for faster training and inference.
+*   **GPUs:**  Accelerate your models on NVIDIA GPUs.
+*   **CPUs:** You can also run your models on CPUs.
+
+## Key Features
+
+*   **TPU Integration:**  Easily run your PyTorch models on Cloud TPUs.
+*   **GPU Support:** Runs models on NVIDIA GPUs.
+*   **XLA Compilation:** Utilizes the XLA compiler for optimized performance.
+*   **Distributed Training:** Supports distributed training across multiple TPUs or GPUs.
+*   **Easy Integration:** Simple modifications to your existing PyTorch code.
+*   **Comprehensive Documentation:**  Extensive documentation and tutorials to get you started.
 
 ## Installation
 
-### TPU
+Choose the installation method appropriate for your target device:
 
-To install PyTorch/XLA for Cloud TPUs, follow these steps:
+###  TPU Installation
 
-**Prerequisites:** Ensure you're using a supported Python version (3.8 to 3.13, see notes below).
+1.  **Set up a TPU VM:**  Follow the instructions from [Kaggle](https://www.kaggle.com/discussions/product-feedback/369338) to create a single TPU VM.
 
-**Stable Builds:**
+    *   Supports Python versions 3.8 to 3.11
+    *   **As of 07/16/2025, PyTorch/XLA provides nightly and release wheels for Python 3.11 to 3.13**
+2.  **Install Stable Build (Recommended):**
 
-```bash
-# - for venv
-# python3.11 -m venv py311
-# - for conda
-# conda create -n py311 python=3.11
+    ```bash
+    # - for venv
+    # python3.11 -m venv py311
+    # - for conda
+    # conda create -n py311 python=3.11
 
-pip install torch==2.7.0 'torch_xla[tpu]==2.7.0'
+    pip install torch==2.7.0 'torch_xla[tpu]==2.7.0'
 
-# Optional: If using custom kernels, install Pallas dependencies:
-pip install 'torch_xla[pallas]'
-```
+    # Optional: Install Pallas dependencies for custom kernels
+    pip install 'torch_xla[pallas]'
+    ```
 
-**Nightly Builds:**
+3.  **Install Nightly Build:**
 
-*   **Important Note:** As of 07/16/2025 and starting from Pytorch/XLA 2.8 release, PyTorch/XLA will provide nightly and release wheels for Python 3.11 to 3.13.
-
-```bash
-pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cpu
-# Edit `cp310-cp310` to fit your desired Python version as needed
-pip install 'torch_xla[tpu] @ https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.9.0.dev-cp312-cp312-linux_x86_64.whl' \
-  -f https://storage.googleapis.com/libtpu-wheels/index.html
-```
+    ```bash
+    pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cpu
+    # Edit `cp310-cp310` to fit your desired Python version as needed
+    pip install 'torch_xla[tpu] @ https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.9.0.dev-cp312-cp312-linux_x86_64.whl' \
+      -f https://storage.googleapis.com/libtpu-wheels/index.html
+    ```
 
 ### C++11 ABI Builds
 
-*   **Important Note:** As of 03/18/2025 and starting from Pytorch/XLA 2.7 release, C++11 ABI builds are the default and wheels with pre-C++11 ABI are no longer provided.
+**As of 03/18/2025, PyTorch/XLA 2.7 wheels will use the C++11 ABI by default.**
 
-  To install C++11 ABI flavored 2.6 wheels (Python 3.10 example):
+To install C++11 ABI flavored 2.6 wheels (Python 3.10 example):
 
 ```bash
 pip install torch==2.6.0+cpu.cxx11.abi \
@@ -59,109 +66,117 @@ pip install torch==2.6.0+cpu.cxx11.abi \
   -f https://download.pytorch.org/whl/torch
 ```
 
-  The above command works for Python 3.10. We additionally have Python 3.9 and 3.11
-wheels:
-
-*   3.9: https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.6.0%2Bcxx11-cp39-cp39-manylinux_2_28_x86_64.whl
-*   3.10: https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.6.0%2Bcxx11-cp310-cp310-manylinux_2_28_x86_64.whl
-*   3.11: https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.6.0%2Bcxx11-cp311-cp311-manylinux_2_28_x86_64.whl
-
-  To access C++11 ABI flavored docker image:
-
+**C++11 ABI Docker image:**
 ```
 us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.6.0_3.10_tpuvm_cxx11
 ```
 
-## GitHub Documentation Map
+## Github Doc Map
 
-The PyTorch/XLA repository houses a wealth of documentation. Here are key resource areas:
+Explore the wealth of resources in our Github:
 
-*   [Learn](https://github.com/pytorch/xla/tree/master/docs/source/learn): Concepts, troubleshooting, PJRT, eager mode, and dynamic shapes.
-*   [Accelerators](https://github.com/pytorch/xla/tree/master/docs/source/accelerators): GPU and TPU specific documents.
-*   [Performance](https://github.com/pytorch/xla/tree/master/docs/source/perf): AMP, DDP, Dynamo, Fori loop, FSDP, quantization, recompilation, and SPMD.
-*   [Features](https://github.com/pytorch/xla/tree/master/docs/source/features): Distributed training, Pallas, scan, stable HLO, and Triton.
-*   [Contribute](https://github.com/pytorch/xla/tree/master/docs/source/contribute): Development setup and operation lowering guides.
-*   PJRT Plugins:
+*   [docs/source/learn](https://github.com/pytorch/xla/tree/master/docs/source/learn): XLA concepts, troubleshooting, PJRT, eager mode, and dynamic shapes.
+*   [docs/source/accelerators](https://github.com/pytorch/xla/tree/master/docs/source/accelerators): GPU and TPU accelerator documentation.
+*   [docs/source/perf](https://github.com/pytorch/xla/tree/master/docs/source/perf): Performance optimization: AMP, DDP, Dynamo, Fori loop, FSDP, quantization, recompilation, and SPMD.
+*   [docs/source/features](https://github.com/pytorch/xla/tree/master/docs/source/features): Distributed torch, Pallas, scan, stable HLO, and Triton.
+*   [docs/source/contribute](https://github.com/pytorch/xla/tree/master/docs/source/contribute): Setting up PyTorch for development, and guides for lowering operations.
+*   PJRT plugins:
     *   [CPU](https://github.com/pytorch/xla/blob/master/plugins/cpu/README.md)
     *   [CUDA](https://github.com/pytorch/xla/blob/master/plugins/cuda/README.md)
-*   [torchax/docs](https://github.com/pytorch/xla/tree/master/torchax/docs): torchax documentation
+*   [torchax/docs](https://github.com/pytorch/xla/tree/master/torchax/docs): torchax documents
     *   [torchax/examples](https://github.com/pytorch/xla/tree/master/torchax/examples): torchax examples
 
 ## Getting Started
 
-PyTorch/XLA supports both single-process and multi-process training:
+### Single Process
 
-*   **Single Process:** One Python interpreter controls a single GPU/TPU.
-*   **Multi-Process:** Multiple Python interpreters are launched, each managing a GPU/TPU.  See SPMD guide for more on SPMD.
-
-### Single Process Example
+Modify your training loop for single-process execution:
 
 ```python
-import torch_xla
++import torch_xla
 
-def train(model, training_data, ...):
+ def train(model, training_data, ...):
    ...
    for inputs, labels in train_loader:
-    with torch_xla.step():
++    with torch_xla.step():
        inputs, labels = training_data[i]
-       inputs, labels = inputs.to('xla'), labels.to('xla')
++      inputs, labels = inputs.to('xla'), labels.to('xla')
        optimizer.zero_grad()
        outputs = model(inputs)
        loss = loss_fn(outputs, labels)
        loss.backward()
        optimizer.step()
 
-  torch_xla.sync()
++  torch_xla.sync()
    ...
 
  if __name__ == '__main__':
    ...
-  model.to('xla')
++  # Move the model paramters to your XLA device
++  model.to('xla')
    train(model, training_data, ...)
    ...
 ```
 
-### Multi-Process Example
+### Multi-Process
+
+Update your code for multi-process training:
 
 ```python
-import torch_xla
-import torch_xla.core.xla_model as xm
+-import torch.multiprocessing as mp
++import torch_xla
++import torch_xla.core.xla_model as xm
 
-def _mp_fn(index):
+ def _mp_fn(index):
    ...
 
-  model.to('xla')
++  # Move the model paramters to your XLA device
++  model.to('xla')
 
    for inputs, labels in train_loader:
-    with torch_xla.step():
-      inputs, labels = inputs.to('xla'), labels.to('xla')
++    with torch_xla.step():
++      # Transfer data to the XLA device. This happens asynchronously.
++      inputs, labels = inputs.to('xla'), labels.to('xla')
        optimizer.zero_grad()
        outputs = model(inputs)
        loss = loss_fn(outputs, labels)
        loss.backward()
-      xm.optimizer_step(optimizer)
+-      optimizer.step()
++      # `xm.optimizer_step` combines gradients across replicas
++      xm.optimizer_step(optimizer)
 
  if __name__ == '__main__':
-  torch_xla.launch(_mp_fn, args=())
+-  mp.spawn(_mp_fn, args=(), nprocs=world_size)
++  # torch_xla.launch automatically selects the correct world size
++  torch_xla.launch(_mp_fn, args=())
 ```
 
-### Multi-Process with DistributedDataParallel
+If using `DistributedDataParallel`:
 
 ```python
-import torch.distributed as dist
-import torch_xla
-import torch_xla.distributed.xla_backend
+ import torch.distributed as dist
+-import torch.multiprocessing as mp
++import torch_xla
++import torch_xla.distributed.xla_backend
 
-def _mp_fn(rank):
+ def _mp_fn(rank):
    ...
 
-  dist.init_process_group("xla", init_method='xla://')
-  model.to('xla')
-  ddp_model = DDP(model, gradient_as_bucket_view=True)
+-  os.environ['MASTER_ADDR'] = 'localhost'
+-  os.environ['MASTER_PORT'] = '12355'
+-  dist.init_process_group("gloo", rank=rank, world_size=world_size)
++  # Rank and world size are inferred from the XLA device runtime
++  dist.init_process_group("xla", init_method='xla://')
++
++  model.to('xla')
++  ddp_model = DDP(model, gradient_as_bucket_view=True)
+
+-  model = model.to(rank)
+-  ddp_model = DDP(model, device_ids=[rank])
 
    for inputs, labels in train_loader:
-    with torch_xla.step():
-      inputs, labels = inputs.to('xla'), labels.to('xla')
++    with torch_xla.step():
++      inputs, labels = inputs.to('xla'), labels.to('xla')
        optimizer.zero_grad()
        outputs = ddp_model(inputs)
        loss = loss_fn(outputs, labels)
@@ -169,60 +184,112 @@ def _mp_fn(rank):
        optimizer.step()
 
  if __name__ == '__main__':
-  torch_xla.launch(_mp_fn, args=())
+-  mp.spawn(_mp_fn, args=(), nprocs=world_size)
++  torch_xla.launch(_mp_fn, args=())
 ```
 
 ## Tutorials and Guides
 
-*   [Cloud TPU VM Quickstart](https://cloud.google.com/tpu/docs/run-calculation-pytorch)
-*   [Cloud TPU Pod Slice Quickstart](https://cloud.google.com/tpu/docs/pytorch-pods)
+*   [Cloud TPU VM quickstart](https://cloud.google.com/tpu/docs/run-calculation-pytorch)
+*   [Cloud TPU Pod slice quickstart](https://cloud.google.com/tpu/docs/pytorch-pods)
 *   [Profiling on TPU VM](https://cloud.google.com/tpu/docs/pytorch-xla-performance-profiling-tpu-vm)
-*   [GPU Guide](docs/gpu.md)
-*   [API Guide](API_GUIDE.md)
+*   [GPU guide](docs/gpu.md)
 
-## Reference Implementations
+## Docker and Wheel Availability
 
-*   [AI-Hypercomputer/tpu-recipes](https://github.com/AI-Hypercomputer/tpu-recipes): Examples for LLM and diffusion model training and serving.
-
-## Available Docker Images and Wheels
-
-Find the latest pre-built packages and images:
+Find pre-built Docker images and wheel packages for various versions:
 
 ### Python Packages
 
-PyTorch/XLA packages are available on PyPI and through GCS buckets.  Install the core package:
-```bash
-pip install torch_xla
-pip install torch_xla[tpu]
+PyTorch/XLA releases starting with version r2.1 are available on PyPI, accessible using `pip install torch_xla`.
+For Cloud TPU plugins, install `pip install torch_xla[tpu]` after the main build.
+
+| Version | Cloud GPU VM Wheels |
+| --- | ----------- |
+| 2.7 (CUDA 12.6 + Python 3.10) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/cuda/12.6/torch_xla-2.7.0-cp310-cp310-manylinux_2_28_x86_64.whl` |
+| 2.7 (CUDA 12.6 + Python 3.11) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/cuda/12.6/torch_xla-2.7.0-cp311-cp311-manylinux_2_28_x86_64.whl` |
+| nightly (Python 3.11) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.9.0.dev-cp311-cp311-linux_x86_64.whl` |
+| nightly (Python 3.12) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.9.0.dev-cp312-cp312-linux_x86_64.whl` |
+| nightly (Python 3.13) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.9.0.dev-cp312-cp312-linux_x86_64.whl` |
+
+#### Use nightly build
+
+You can also add `yyyymmdd` like `torch_xla-2.9.0.devyyyymmdd` (or the latest dev version)
+to get the nightly wheel of a specified date. Here is an example:
+
 ```
-See the README for specific installation details.
+pip3 install torch==2.9.0.dev20250423+cpu --index-url https://download.pytorch.org/whl/nightly/cpu
+pip3 install https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.9.0.dev20250423-cp310-cp310-linux_x86_64.whl
+```
 
-### Docker
+The torch wheel version `2.9.0.dev20250423+cpu` can be found at https://download.pytorch.org/whl/nightly/torch/.
 
+### Docker Images
+
+| Version | Cloud TPU VMs Docker |
+| --- | ----------- |
+| 2.7 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.7.0_3.10_tpuvm` |
+| 2.6 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.6.0_3.10_tpuvm` |
+| 2.6 (C++11 ABI) | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.6.0_3.10_tpuvm_cxx11` |
+| 2.5 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.5.0_3.10_tpuvm` |
+| 2.4 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.4.0_3.10_tpuvm` |
+| 2.3 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.3.0_3.10_tpuvm` |
+| 2.2 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.2.0_3.10_tpuvm` |
+| 2.1 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.1.0_3.10_tpuvm` |
+| nightly python | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:nightly_3.10_tpuvm` |
+
+To use the above dockers, please pass `--privileged --net host --shm-size=16G` along. Here is an example:
 ```bash
 docker run --privileged --net host --shm-size=16G -it us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:nightly_3.10_tpuvm /bin/bash
 ```
-And more images are available in the above sections.
+<br/>
+
+| Version | GPU CUDA 12.6 Docker |
+| --- | ----------- |
+| 2.7 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.7.0_3.10_cuda_12.6` |
+
+<br/>
+
+| Version | GPU CUDA 12.4 Docker |
+| --- | ----------- |
+| 2.5 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.5.0_3.10_cuda_12.4` |
+| 2.4 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.4.0_3.10_cuda_12.4` |
+
+<br/>
+
+| Version | GPU CUDA 12.1 Docker |
+| --- | ----------- |
+| 2.5 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.5.0_3.10_cuda_12.1` |
+| 2.4 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.4.0_3.10_cuda_12.1` |
+| 2.3 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.3.0_3.10_cuda_12.1` |
+| 2.2 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.2.0_3.10_cuda_12.1` |
+| 2.1 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.1.0_3.10_cuda_12.1` |
+| nightly | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:nightly_3.8_cuda_12.1` |
+| nightly at date | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:nightly_3.8_cuda_12.1_YYYYMMDD` |
+
+<br/>
+
+| Version | GPU CUDA 11.8 + Docker |
+| --- | ----------- |
+| 2.1 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.1.0_3.10_cuda_11.8` |
+| 2.0 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.0_3.8_cuda_11.8` |
+
+<br/>
 
 ## Troubleshooting
 
-Refer to the [troubleshooting guide](docs/source/learn/troubleshoot.md) for debugging and performance optimization tips.
+Consult the [troubleshooting guide](docs/source/learn/troubleshoot.md) for performance issues and optimization tips.
 
-## Feedback and Contribution
+## Contributing and Support
 
-*   **Feedback:**  Please file issues on GitHub for questions, bug reports, and feature requests.
-*   **Contribution:** See the [contribution guide](CONTRIBUTING.md) to get involved.
-
-## Disclaimer
-
-This project is jointly maintained by Google, Meta, and individual contributors.
+We welcome your contributions! Please refer to the [contribution guide](CONTRIBUTING.md).  Reach out through GitHub issues for questions, bug reports, or feature requests.
 
 ## Additional Resources
 
-*   [Performance Debugging on Cloud TPU VM](https://cloud.google.com/blog/topics/developers-practitioners/pytorchxla-performance-debugging-tpu-vm-part-1)
-*   [Lazy Tensor Intro](https://pytorch.org/blog/understanding-lazytensor-system-performance-with-pytorch-xla-on-cloud-tpu/)
-*   [Scaling Deep Learning Workloads with PyTorch/XLA and Cloud TPU VM](https://cloud.google.com/blog/topics/developers-practitioners/scaling-deep-learning-workloads-pytorch-xla-and-cloud-tpu-vm)
-*   [Scaling PyTorch Models on Cloud TPUs with FSDP](https://pytorch.org/blog/scaling-pytorch-models-on-cloud-tpus-with-fsdp/)
+*   [Performance debugging on Cloud TPU VM](https://cloud.google.com/blog/topics/developers-practitioners/pytorchxla-performance-debugging-tpu-vm-part-1)
+*   [Lazy tensor intro](https://pytorch.org/blog/understanding-lazytensor-system-performance-with-pytorch-xla-on-cloud-tpu/)
+*   [Scaling deep learning workloads with PyTorch / XLA and Cloud TPU VM](https://cloud.google.com/blog/topics/developers-practitioners/scaling-deep-learning-workloads-pytorch-xla-and-cloud-tpu-vm)
+*   [Scaling PyTorch models on Cloud TPUs with FSDP](https://pytorch.org/blog/scaling-pytorch-models-on-cloud-tpus-with-fsdp/)
 
 ## Related Projects
 

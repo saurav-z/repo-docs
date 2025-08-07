@@ -1,54 +1,61 @@
-Here's an improved and SEO-optimized README for `webassets`, incorporating the requested features:
+# webassets: Streamline Web Asset Management for Python
 
-# Webassets: Streamline Your Web Development Asset Management
-
-**Webassets simplifies and optimizes your web project by efficiently merging and compressing JavaScript and CSS files.**
-
-[Link to Original Repo](https://github.com/miracle2k/webassets)
+**webassets empowers Python web developers to effortlessly merge and compress JavaScript and CSS files, optimizing website performance and streamlining development workflows.** For more in-depth information, check out the [original repository](https://github.com/miracle2k/webassets).
 
 ## Key Features
 
-*   **Asset Bundling:**  Combine multiple CSS and JavaScript files into single, optimized bundles for faster loading times.
-*   **Compression:** Minify CSS and JavaScript to reduce file sizes and improve performance.
-*   **Flexible Integration:** Seamlessly integrate with various Python web frameworks.
-*   **Extensible:** Easily add custom filters and processors.
-*   **Well-Tested:** The project is well tested, see the CI badge above to ensure its stability.
+*   **Asset Bundling:** Merge multiple JavaScript and CSS files into single, optimized bundles.
+*   **Compression:** Automatically compress your assets to reduce file sizes and improve loading times.
+*   **Extensible:** Supports a variety of filters for pre-processing, minification, and more.
+*   **Production-Ready:** Designed for use in production environments to ensure optimal website performance.
 
 ## Installation
 
-You can install `webassets` using pip:
+Install the development version using pip:
 
 ```bash
 pip install webassets==dev
 ```
 
-or install the latest code via a tarball.
-
 ## Development
 
-For development, you'll need to set up the development environment:
+To contribute to webassets, you'll need to set up your development environment.
 
 **Prerequisites:**
 
-*   Python 3.x
-*   Java 7 or later (required for some filters like Google Closure)
+*   Python 3.7+
+*   Java 7+ (required for Google Closure filter)
 
-**Setup:**
+**Steps:**
 
-1.  **Install Python requirements using uv:**
+1.  **Create a virtual environment using uv:**
 
     ```bash
     uv venv
+    ```
+
+2.  **Install Python dependencies using uv:**
+
+    ```bash
     uv pip install -r uv.lock
     ```
 
-2.  **Install other requirements:**
+3.  **Install other requirements:**
 
     ```bash
     ./requirements-dev.sh
     ```
 
-3.  **Run tests:**
+4.  **Run tests:**
 
     ```bash
     ./run_tests.sh
+    ```
+
+## Documentation
+
+Comprehensive documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
+
+---
+
+**Note:**  While releases may not be on a strict schedule, the project is well-tested.  The build status badge at the top of the [original repository](https://github.com/miracle2k/webassets) provides a quick indicator of build health.

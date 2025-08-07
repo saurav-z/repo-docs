@@ -1,9 +1,7 @@
 <!-- pytest Logo -->
-<div align="center">
-  <a href="https://docs.pytest.org/en/stable/">
-    <img src="https://github.com/pytest-dev/pytest/raw/main/doc/en/img/pytest_logo_curves.svg" alt="pytest" height="200">
-  </a>
-</div>
+<p align="center">
+  <img src="https://github.com/pytest-dev/pytest/raw/main/doc/en/img/pytest_logo_curves.svg" alt="pytest Logo" height="200">
+</p>
 
 <!-- Badges -->
 <p align="center">
@@ -35,26 +33,26 @@
     <img src="https://img.shields.io/badge/Discord-pytest--dev-blue" alt="Discord">
   </a>
   <a href="https://web.libera.chat/#pytest">
-    <img src="https://img.shields.io/badge/Libera%20chat-%23pytest-orange" alt="Libera Chat">
+    <img src="https://img.shields.io/badge/Libera%20chat-%23pytest-orange" alt="Libera chat">
   </a>
 </p>
 
-# pytest: Powerful Testing with Python
+# pytest: Powerful Python Testing Made Easy
 
-**pytest is a mature and feature-rich Python testing framework that helps you write better tests more efficiently.**
+**pytest** is a leading Python testing framework, making it simple to write effective tests and scale them for complex applications.  [Visit the original repository on GitHub](https://github.com/pytest-dev/pytest).
 
 ## Key Features
 
-*   **Clear and Concise Assertions:** Provides detailed information for failing `assert statements <https://docs.pytest.org/en/stable/how_to/assert.html>`_ to pinpoint issues quickly.
-*   **Automatic Test Discovery:**  Effortlessly discovers test modules and functions, saving you time and effort.
-*   **Modular Fixtures:** Offers flexible fixtures for managing test resources, enabling clean and reusable test setups.
-*   **Unittest Compatibility:** Seamlessly runs `unittest <https://docs.pytest.org/en/stable/how_to/unittest.html>`_ test suites.
-*   **Python Compatibility:** Supports Python 3.9+ and PyPy3.
-*   **Extensible with Plugins:** Boasts a rich plugin ecosystem with 1300+ `external plugins <https://docs.pytest.org/en/latest/reference/plugin_list.html>`_ to customize and extend pytest's functionality.
+*   **Clear and Concise Assertions:** Get detailed information on failing `assert statements <https://docs.pytest.org/en/stable/how_to/assert.html>`_, eliminating the need for `self.assert*` methods.
+*   **Automatic Test Discovery:** pytest automatically finds your test modules and functions, streamlining your workflow with `Auto-discovery <https://docs.pytest.org/en/stable/explanation/goodpractices.html#python-test-discovery>`_.
+*   **Modular Fixtures:** Use `Modular fixtures <https://docs.pytest.org/en/stable/explanation/fixtures.html>`_ to manage reusable and parametrized test resources efficiently.
+*   **Unittest Compatibility:** Seamlessly run `unittest <https://docs.pytest.org/en/stable/how_to/unittest.html>`_ (and trial) test suites directly within pytest.
+*   **Broad Python Support:** Compatible with Python 3.9+ and PyPy3.
+*   **Extensible Architecture:** Benefit from a rich plugin ecosystem with over 1300+ `external plugins <https://docs.pytest.org/en/latest/reference/plugin_list.html>`_ and a thriving community.
 
 ## Getting Started
 
-Here's a simple example to get you started:
+Here's a simple example of a test:
 
 ```python
 # content of test_sample.py
@@ -65,40 +63,45 @@ def test_answer():
     assert inc(3) == 5
 ```
 
-Run your tests with:
+To run it:
 
 ```bash
-pytest
-```
+$ pytest
+============================= test session starts =============================
+collected 1 items
 
-pytest will show you the results, and, in the case of a failure, provide detailed information to help you debug.
+test_sample.py F
+
+================================== FAILURES ===================================
+_________________________________ test_answer _________________________________
+
+    def test_answer():
+        assert inc(3) == 5
+    E       assert 4 == 5
+    E        +  where 4 = inc(3)
+
+test_sample.py:5: AssertionError
+========================== 1 failed in 0.04 seconds ===========================
+```
 
 ## Documentation
 
-Comprehensive documentation, including installation guides, tutorials, and more, can be found at:  [https://docs.pytest.org/en/stable/](https://docs.pytest.org/en/stable/).
+Comprehensive documentation, including installation guides, tutorials, and more, can be found at [https://docs.pytest.org/en/stable/](https://docs.pytest.org/en/stable/).
 
-##  Bugs and Feature Requests
+## Contributing and Support
 
-Please report bugs or request features via the `GitHub issue tracker <https://github.com/pytest-dev/pytest/issues>`.
-
-## Changelog
-
-Review the `Changelog <https://docs.pytest.org/en/stable/changelog.html>` for information on releases and enhancements.
-
-## Support pytest
-
-Support the continued development of pytest through the [Open Collective](https://opencollective.com/pytest).
+*   **Bug Reports and Feature Requests:** Please use the `GitHub issue tracker <https://github.com/pytest-dev/pytest/issues>`_.
+*   **Changelog:** Review the `Changelog <https://docs.pytest.org/en/stable/changelog.html>`_ for updates.
+*   **Support the Project:** Consider supporting pytest through [Open Collective](https://opencollective.com/pytest).
 
 ## pytest for Enterprise
 
-pytest is available as part of the Tidelift Subscription. Get commercial support and maintenance from the maintainers of pytest and other open source dependencies. Learn more at:  <https://tidelift.com/subscription/pkg/pypi-pytest?utm_source=pypi-pytest&utm_medium=referral&utm_campaign=enterprise&utm_term=repo>
+pytest is available as part of the Tidelift Subscription, offering commercial support and maintenance for the dependencies you use.  [Learn more.](https://tidelift.com/subscription/pkg/pypi-pytest?utm_source=pypi-pytest&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## Security
 
-If you find a security vulnerability, please report it via the `Tidelift security contact <https://tidelift.com/security>`.
+To report any security vulnerabilities, please use the `Tidelift security contact <https://tidelift.com/security>`_.
 
 ## License
 
-pytest is distributed under the [MIT License](https://github.com/pytest-dev/pytest/blob/main/LICENSE).
-
-[Back to the Project Repository](https://github.com/pytest-dev/pytest)
+pytest is distributed under the `MIT`_ license and is free and open-source software.

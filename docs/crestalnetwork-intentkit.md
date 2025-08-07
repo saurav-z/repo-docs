@@ -1,121 +1,90 @@
-# IntentKit: Build and Manage Autonomous AI Agents
+# IntentKit: Build Autonomous AI Agents with Ease
 
-IntentKit empowers you to create and manage intelligent AI agents with diverse capabilities, from blockchain interactions to social media management.  [Learn more at the original repository](https://github.com/crestalnetwork/intentkit).
+**IntentKit empowers you to create and manage sophisticated AI agents capable of interacting with blockchains, social media, and custom integrations.** Explore the full capabilities on [GitHub](https://github.com/crestalnetwork/intentkit).
 
 <div align="center">
   <img src="docs/images/intentkit_banner.png" alt="IntentKit by Crestal" width="100%" />
 </div>
 <br>
 
-## Key Features of IntentKit
+## Key Features
 
-*   🤖 **Multi-Agent Support:** Easily create and manage multiple autonomous agents.
-*   🔄 **Autonomous Agent Management:** Simplify the lifecycle of your AI agents.
-*   🔗 **Blockchain Integration:** Interact with EVM-compatible blockchains for various on-chain actions.
-*   🐦 **Social Media Integration:** Connect with platforms like Twitter and Telegram to interact with your audience.
-*   🛠️ **Extensible Skill System:** Add custom skills to extend agent capabilities, with a base of LangChain tools.
-*   🔌 **MCP (WIP):** Placeholder for upcoming features.
+*   🤖 **Multi-Agent Support:** Manage multiple autonomous agents concurrently.
+*   🔄 **Autonomous Agent Management:** Efficiently control and orchestrate your AI agents.
+*   🔗 **Blockchain Integration:** Interact with EVM-compatible blockchains.
+*   🐦 **Social Media Integration:** Connect with platforms like Twitter, Telegram, and more.
+*   🛠️ **Extensible Skill System:** Easily integrate custom functionalities and capabilities.
+*   🔌 **MCP (WIP):**  Modular Component Protocol for advanced agent design.
 
-## Architecture Overview
+## Architecture
 
-IntentKit's architecture is designed for flexibility and extensibility.  The agent system uses LangGraph at its core.
+IntentKit's architecture is designed for flexibility and extensibility.  The core of the system leverages LangGraph for agent management, integrating various components:
 
-```
-                                                                                    
-                                 Entrypoints                                        
-                       │                             │                              
-                       │   Twitter/Telegram & more   │                              
-                       └──────────────┬──────────────┘                              
-                                      │                                             
-  Storage:  ────┐                     │                      ┌──── Skills:          
-                │                     │                      │                      
-  Agent Config  │     ┌───────────────▼────────────────┐     │  Chain Integration   
-                │     │                                │     │                      
-  Credentials   │     │                                │     │  Wallet Management   
-                │     │           The Agent            │     │                      
-  Personality   │     │                                │     │  On-Chain Actions    
-                │     │                                │     │                      
-  Memory        │     │      Powered by LangGraph      │     │  Internet Search     
-                │     │                                │     │  Image Processing    
-  Skill State   │     └────────────────────────────────┘     │                      
-            ────┘                                            └────                  
-                                                                                    
-                                                                More and More...    
-                         ┌──────────────────────────┐                               
-                         │                          │                               
-                         │  Agent Config & Memory   │                               
-                         │                          │                               
-                         └──────────────────────────┘                               
-                                                                                    
-```
+*   **Entrypoints:**  Handles interactions from various sources (Twitter, Telegram, etc.).
+*   **Storage:** Manages agent configurations, credentials, personality, memory, and skill states.
+*   **Skills:** Enables a broad range of agent capabilities, including:
+    *   Chain Integration
+    *   Wallet Management
+    *   On-Chain Actions
+    *   Internet Search
+    *   Image Processing
+    *   And more...
 
-For a more detailed view, consult the [Architecture](docs/architecture.md) documentation.
+For a detailed architectural overview, refer to the [Architecture](docs/architecture.md) section.
 
-## Development & Getting Started
+## Development
 
-### Package Manager Migration Warning
+Get started with IntentKit by following the [Development Guide](DEVELOPMENT.md).
 
-If you are setting up your environment, you need to remove the .venv folder and run `uv sync` to create a new virtual environment. (one time)
+## Documentation & Resources
 
-```bash
-rm -rf .venv
-uv sync
-```
-
-### Development Guide
-
-To start developing with IntentKit, consult the [Development Guide](DEVELOPMENT.md).
-
-### Documentation
-
-Comprehensive documentation is available to guide you.  Explore the [Documentation](docs/) for detailed information.
+*   **Comprehensive Documentation:** Explore the full documentation suite at [Documentation](docs/).
+*   **Agent API:** Utilize the REST API for programmatic access to your agents via the [Agent API Documentation](docs/agent_api.md).
 
 ## Project Structure
 
-The project is organized into two main parts: the core package and the application.
-
-*   **`intentkit/`**: The IntentKit package (published as a pip package)
-    *   `abstracts/`: Abstract classes and interfaces
-    *   `clients/`: Clients for external services
-    *   `config/`: System level configurations
-    *   `core/`: Core agent system, driven by LangGraph
-    *   `models/`: Entity models using Pydantic and SQLAlchemy
-    *   `skills/`: Extensible skills system
-    *   `utils/`: Utility functions
-*   **`app/`**: The IntentKit application (API server, autonomous runner, and background scheduler)
-    *   `admin/`: Admin APIs, agent generators, and related functionality
-    *   `entrypoints/`: Entrypoints for interacting with agents (web, Telegram, Twitter, etc.)
-    *   `services/`: Service implementations for Telegram, Twitter, etc.
-    *   `api.py`: REST API server
-    *   `autonomous.py`: Autonomous agent runner
-    *   `checker.py`: Health and credit checking logic
-    *   `readonly.py`: Readonly entrypoint
-    *   `scheduler.py`: Background task scheduler
-    *   `singleton.py`: Singleton agent manager
-    *   `telegram.py`: Telegram integration
-    *   `twitter.py`: Twitter integration
-*   `docs/`: Documentation
-*   `scripts/`: Operation and temporary scripts
-
-## Agent API
-
-IntentKit offers a robust REST API for programmatic access to your agents. Use the Agent API to integrate IntentKit into existing systems, build custom interfaces, and build applications.
-
-**Access the API:** [Agent API Documentation](docs/agent_api.md)
+*   **[intentkit/](intentkit/)**: The IntentKit Python package (installed via pip)
+    *   [abstracts/](intentkit/abstracts/): Abstract classes and interfaces.
+    *   [clients/](intentkit/clients/): Clients for external services.
+    *   [config/](intentkit/config/): System configurations.
+    *   [core/](intentkit/core/): Core agent system (LangGraph based).
+    *   [models/](intentkit/models/): Data models using Pydantic and SQLAlchemy.
+    *   [skills/](intentkit/skills/): Extensible skill system.
+    *   [utils/](intentkit/utils/): Utility functions.
+*   **[app/](app/)**: The IntentKit application (API server, autonomous runner, and background scheduler)
+    *   [admin/](app/admin/): Admin APIs.
+    *   [entrypoints/](app/entrypoints/): Entrypoints for interacting with agents.
+    *   [services/](app/services/): Service implementations.
+    *   [api.py](app/api.py): REST API server.
+    *   [autonomous.py](app/autonomous.py): Autonomous agent runner.
+    *   [checker.py](app/checker.py): Health and credit checking.
+    *   [readonly.py](app/readonly.py): Readonly entrypoint.
+    *   [scheduler.py](app/scheduler.py): Background task scheduler.
+    *   [singleton.py](app/singleton.py): Singleton agent manager.
+    *   [telegram.py](app/telegram.py): Telegram integration.
+    *   [twitter.py](app/twitter.py): Twitter integration.
+*   [docs/](docs/): Documentation
+*   [scripts/](scripts/): Operation and management scripts
 
 ## Contributing
 
-We welcome contributions!  Please review the [Contributing Guidelines](CONTRIBUTING.md) before submitting a pull request.
+Contributions are welcome! Please review our [Contributing Guidelines](CONTRIBUTING.md).
 
-### Contribute Skills
+### Contributing Skills
 
-1.  Check the [Wishlist](docs/contributing/wishlist.md) for active skill requests.
-2.  Follow the [Skill Development Guide](docs/contributing/skills.md) to contribute a skill.
+Check the [Wishlist](docs/contributing/wishlist.md) for active requests. Learn more in the [Skill Development Guide](docs/contributing/skills.md).
 
-### Developer Chat
+### Developer Community
 
-Join our [Discord](https://discord.com/invite/crestal) to connect with the IntentKit community and apply for a dev role.
+Join the community on [Discord](https://discord.com/invite/crestal) and apply for a developer role to participate in discussions.
 
 ## License
 
-IntentKit is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License.  See the [LICENSE](LICENSE) file for details.
+
+## Package Manager Migration Warning
+
+After migrating to uv from poetry, delete the .venv folder and run `uv sync` to create a new virtual environment. (one time)
+```bash
+rm -rf .venv
+uv sync

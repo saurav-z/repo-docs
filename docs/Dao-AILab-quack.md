@@ -1,23 +1,24 @@
-# QuACK: Accelerate Your AI with Optimized CUDA Kernels 🦆
+# QuACK: Accelerate Your AI Workflows with CuTe Kernels 🦆
 
-**QuACK provides a collection of high-performance CUDA kernels, written in the CuTe-DSL, designed to boost the performance of your AI applications.**
-
-[Visit the original repository on GitHub](https://github.com/Dao-AILab/quack)
+**Supercharge your AI models with QuACK, a collection of high-performance kernels written in the CuTe-DSL, optimized for NVIDIA GPUs.**  (Check out the [original repository](https://github.com/Dao-AILab/quack)!)
 
 ## Key Features
 
-*   **Optimized Kernels:**  Leverages the CuTe-DSL for efficient CUDA kernel implementation.
-*   **Comprehensive Kernel Suite:** Includes essential kernels for common AI tasks.
-*   **Easy to Use:** Simple Python interface for seamless integration into your projects.
-*   **High Performance:** Designed for optimal performance on NVIDIA H100 and B200 GPUs.
+*   **Optimized Kernels:**  Leverage pre-built kernels for common AI operations.
+*   **CuTe-DSL:**  Built using the CuTe-DSL, ensuring performance and flexibility.
+*   **Easy Installation:**  Install and integrate QuACK kernels with a simple `pip` command.
+*   **Ready for Production:**  Designed for speed and efficiency on supported hardware.
 
 ## Available Kernels
 
-*   🦆 RMSNorm forward + backward
-*   🦆 Softmax forward + backward
-*   🦆 Cross entropy forward + backward
-*   🦆 Layernorm forward
-*   🦆 Rotary forward + backward (Upcoming)
+*   🦆 RMSNorm (forward and backward)
+*   🦆 Softmax (forward and backward)
+*   🦆 Cross Entropy (forward and backward)
+*   🦆 Layernorm (forward)
+
+**Upcoming:**
+
+*   🦆 Rotary (forward and backward)
 
 ## Installation
 
@@ -37,18 +38,19 @@ pip install quack-kernels
 from quack import rmsnorm, softmax, cross_entropy
 ```
 
-## Documentation & Performance
+## Performance and Optimization
 
-*   **Blogpost:** Explore a detailed blog post that describes how to optimize memory-bound kernels for peak performance with CuTe-DSL.
-    *   [Blogpost Link](media/2025-07-10-membound-sol.md)
-*   **Performance Benchmarks:**  See visual performance data in our benchmarks.
-    <div align="center">
-    <figure>
-      <img
-      src="media/bf16_kernel_benchmarks_single_row.svg"
-      >
-    </figure>
-    </div>
+QuACK kernels are designed for optimal performance on supported hardware.  For detailed benchmarks and memory-bound optimization strategies, see our comprehensive blog post:
+
+[Blogpost](media/2025-07-10-membound-sol.md)
+
+<div align="center">
+<figure>
+  <img
+  src="media/bf16_kernel_benchmarks_single_row.svg"
+  alt="Performance Benchmarks">
+</figure>
+</div>
 
 ## Development
 
@@ -58,3 +60,15 @@ To set up the development environment:
 pip install -e '.[dev]'
 pre-commit install
 ```
+```
+
+Key improvements and SEO considerations:
+
+*   **Concise and Engaging Hook:** Immediately grabs the reader's attention.
+*   **Targeted Keywords:**  Includes relevant terms like "AI," "kernels," "CuTe-DSL," and "NVIDIA GPUs."
+*   **Clear Headings:**  Organizes the information logically.
+*   **Bulleted Key Features:**  Highlights the benefits of using QuACK.
+*   **Stronger Call to Action:** Implies the benefits in the opening sentence.
+*   **Alt text for image:**  Provides context for accessibility and SEO.
+*   **Hyperlinked relevant URLs:**  Links to the blogpost and original repo.
+*   **Clear Requirements Section:**  Specifies the hardware and software prerequisites.

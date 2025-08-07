@@ -6,64 +6,95 @@
   </picture>
 </div>
 
-# Meltano: The Code-First Data Integration Engine
+<h1 align="center">Meltano: The Code-First Data Integration Engine</h1>
 
-**Meltano is a powerful, code-first data integration engine that simplifies building and managing data pipelines, enabling you to connect to 600+ APIs and databases and realize your data-driven ambitions.**  [Learn more on GitHub](https://github.com/meltano/meltano).
+**Meltano empowers you to build data and ML-powered products by providing a declarative, code-first approach to data integration, eliminating the complexities of API integrations and data pipelines.** Explore the original repository on [GitHub](https://github.com/meltano/meltano).
+
+<div align="center">
+<a href="https://meltano.com/demo">
+<img alt="Try codespaces" src="https://img.shields.io/static/v1?label=&message=Try live demo with Codespaces&color=02a5a5&style=for-the-badge&logo=github"/>
+</a>
+</div>
+
+---
 
 ## Key Features
 
-*   **Declarative Configuration:** Define your data pipelines as code for version control, reproducibility, and easier collaboration.
-*   **600+ Integrations:** Access pre-built integrations (taps and targets) for a vast range of APIs and databases.
-*   **Open-Source & Community Driven:** Benefit from a vibrant community and contribute to the ongoing development of Meltano.
-*   **Scalable and Flexible:** Build data pipelines that can handle your growing data needs with ease.
-*   **Meltano Hub:** Discover, manage, and share plugins within the Meltano ecosystem.
-*   **Singer.io Compatibility:** Leverage the extensive library of Singer taps and targets for data extraction and loading.
+*   **Declarative Approach:** Define your data pipelines as code, making them versionable, repeatable, and easily managed.
+*   **600+ Integrations:** Access a vast library of pre-built integrations for APIs and databases, saving you time and effort.
+*   **Scalable Data Workflows:** Build and scale your data pipelines with confidence.
+*   **Community-Driven:** Benefit from a vibrant and supportive community, ensuring continuous improvement and innovation.
+*   **Meltano Hub:**  A centralized source for finding and managing plugins, including Singer taps and targets.
 
-## Get Started
+<div align="center">
+<a href="https://docs.meltano.com/">
+<img alt="Docs" src="https://img.shields.io/website?down_color=red&down_message=offline&label=Docs&up_color=blue&up_message=online&url=https%3A%2F%2Fdocs.meltano.com%2F"/>
+</a>
+<a href="https://github.com/meltano/meltano/actions/workflows/test.yml?query=branch%3Amain">
+<img alt="Tests" src="https://github.com/meltano/meltano/actions/workflows/test.yml/badge.svg"/>
+</a>
+<a href="https://codecov.io/github/meltano/meltano">
+<img alt="Codecov" src="https://codecov.io/gh/meltano/meltano/branch/main/graph/badge.svg"/>
+</a>
+<a href="https://libraries.io/pypi/meltano/sourcerank">
+<img alt="Libraries.io SourceRank" src="https://img.shields.io/librariesio/sourcerank/pypi/meltano?label=SourceRank"/>
+</a>
+<a href="https://libraries.io/pypi/meltano">
+<img alt="Libraries.io dependency status for latest release" src="https://img.shields.io/librariesio/release/pypi/meltano?label=Dependencies"/>
+</a>
+<a href="https://github.com/meltano/meltano/blob/main/CONTRIBUTORS.md">
+<img alt="All Contributors" src="https://img.shields.io/github/all-contributors/meltano/meltano?color=orange"/>
+</a>
+</div>
 
-Ready to build your ideal data platform?
+<div align="center">
+<a href="https://github.com/meltano/meltano/graphs/contributors">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/meltano/meltano?label=Contributors"/>
+</a>
+<a href="https://github.com/meltano/meltano/blob/main/LICENSE">
+<img alt="GitHub" src="https://img.shields.io/github/license/meltano/meltano?color=blue&label=License"/>
+</a>
+<a href="https://pypi.org/project/meltano/">
+<img alt="Meltano Python Package Version" src="https://img.shields.io/pypi/v/meltano?label=Version"/>
+</a>
+<a href="https://pypi.org/project/meltano/">
+<img alt="Supported Python Versions" src="https://img.shields.io/pypi/pyversions/meltano?label=Python"/>
+</a>
+<a href="https://pypi.org/project/meltano/">
+<img alt="Monthly PyPI Downloads" src="https://img.shields.io/pypi/dm/meltano?label=PyPI%20Downloads"/>
+</a>
+<a href="https://hub.docker.com/r/meltano/meltano">
+<img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/meltano/meltano?label=Docker%20Pulls"/>
+</a>
+</div>
 
-*   **Try a live demo:** [![Try codespaces](https://img.shields.io/static/v1?label=&message=Try live demo with Codespaces&color=02a5a5&style=for-the-badge&logo=github)](https://meltano.com/demo)
-*   **Installation:** Follow the [Installation guide](https://docs.meltano.com/getting-started/installation) to get Meltano up and running.
-*   **Documentation:** Explore the comprehensive [documentation](https://docs.meltano.com/) to learn more about Meltano's features and capabilities.
 
-## Resources
+## Integrations
 
-*   **Documentation:** [![Docs](https://img.shields.io/website?down_color=red&down_message=offline&label=Docs&up_color=blue&up_message=online&url=https%3A%2F%2Fdocs.meltano.com%2F)](https://docs.meltano.com/)
-*   **Meltano Hub:** [Meltano Hub](https://hub.meltano.com/)
-*   **Getting Started Guide:** ["Getting Started" guide](https://docs.meltano.com/getting-started)
+Meltano Hub ([https://hub.meltano.com/](https://hub.meltano.com/)) serves as the central repository for Meltano plugins, including Singer taps and targets.  Users can easily add and discover new plugins for seamless integration.  The Meltano and the broader community carefully curate the Hub.
+
+## Installation
+
+Get started building your ideal data platform! Follow the [Installation guide](https://docs.meltano.com/getting-started/installation) to set up Meltano on your device.
+
+## Documentation
+
+Explore the [Getting Started guide](https://docs.meltano.com/getting-started) or dive into the full documentation at [https://docs.meltano.com](https://docs.meltano.com/).
+
+## Contributing
+
+Meltano thrives on community contributions.  We encourage you to get involved!  Browse our [issue tracker](https://github.com/meltano/meltano/issues?q=is%3Aopen+is%3Aissue) to suggest ideas or explore issues labeled "[Accepting Merge Requests](https://github.com/meltano/meltano/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+merge+requests%22)". Refer to our [contribution guidelines](https://docs.meltano.com/contribute/) for more details.
 
 ## Community
 
-*   **Join us on Slack!** 👋 [Join us on Slack!](https://meltano.com/slack)
-*   **Community Page:** [Community](https://meltano.com/community/)
+Join our weekly online events and connect with over 2,500 data professionals! Visit our [Community](https://meltano.com/community/) page for details.
 
-## Contribute
+👋 [Join us on Slack!](https://meltano.com/slack)
 
-Meltano thrives on community contributions!  Get involved by:
+## Responsible Disclosure Policy
 
-*   Browsing the [issue tracker](https://github.com/meltano/meltano/issues?q=is%3Aopen+is%3Aissue)
-*   Reviewing issues labeled as "[Accepting Merge Requests](https://github.com/meltano/meltano/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+merge+requests%22)"
-*   Consulting the [contribution guidelines](https://docs.meltano.com/contribute/)
-
-## Project Details
-
-*   **Tests:** [![Tests](https://github.com/meltano/meltano/actions/workflows/test.yml/badge.svg)](https://github.com/meltano/meltano/actions/workflows/test.yml?query=branch%3Amain)
-*   **Code Coverage:** [![Codecov](https://codecov.io/gh/meltano/meltano/branch/main/graph/badge.svg)](https://codecov.io/github/meltano/meltano)
-*   **SourceRank:** [![Libraries.io SourceRank](https://img.shields.io/librariesio/sourcerank/pypi/meltano?label=SourceRank)](https://libraries.io/pypi/meltano/sourcerank)
-*   **Dependencies:** [![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pypi/meltano?label=Dependencies)](https://libraries.io/pypi/meltano)
-*   **Contributors:** [![All Contributors](https://img.shields.io/github/all-contributors/meltano/meltano?color=orange)](https://github.com/meltano/meltano/blob/main/CONTRIBUTORS.md)
-*   **GitHub Contributors:** [![GitHub contributors](https://img.shields.io/github/contributors/meltano/meltano?label=Contributors)](https://github.com/meltano/meltano/graphs/contributors)
-*   **License:** [![GitHub](https://img.shields.io/github/license/meltano/meltano?color=blue&label=License)](https://github.com/meltano/meltano/blob/main/LICENSE)
-*   **Python Package Version:** [![Meltano Python Package Version](https://img.shields.io/pypi/v/meltano?label=Version)](https://pypi.org/project/meltano/)
-*   **Supported Python Versions:** [![Supported Python Versions](https://img.shields.io/pypi/pyversions/meltano?label=Python)](https://pypi.org/project/meltano/)
-*   **PyPI Downloads:** [![Monthly PyPI Downloads](https://img.shields.io/pypi/dm/meltano?label=PyPI%20Downloads)](https://pypi.org/project/meltano/)
-*   **Docker Pulls:** [![Docker Pulls](https://img.shields.io/docker/pulls/meltano/meltano?label=Docker%20Pulls)](https://hub.docker.com/r/meltano/meltano)
-
-## Responsible Disclosure
-
-Please refer to the [responsible disclosure policy](https://docs.meltano.com/contribute/responsible-disclosure) on our website.
+Please review the [responsible disclosure policy](https://docs.meltano.com/contribute/responsible-disclosure) on our website.
 
 ## License
 
-This code is distributed under the MIT license, see the [LICENSE](https://github.com/meltano/meltano/blob/main/LICENSE) file.
+Meltano is distributed under the MIT license. See the [LICENSE](https://github.com/meltano/meltano/blob/main/LICENSE) file.

@@ -1,17 +1,16 @@
 # Machine Learning Systems: Build Real-World AI Systems
 
-**Master the principles and practices of building robust and scalable AI systems with this open-source textbook, originally developed at Harvard University.** ([Original Repo](https://github.com/harvard-edge/cs249r_book))
+**Learn to build and deploy cutting-edge AI systems with this comprehensive, open-source textbook, originally developed at Harvard University!** [(Original Repository)](https://github.com/harvard-edge/cs249r_book)
 
 <div align="center">
-  
+
 [![Build Status](https://img.shields.io/github/actions/workflow/status/harvard-edge/cs249r_book/build-manager.yml?branch=dev&label=Build&logo=github)](https://github.com/harvard-edge/cs249r_book/actions/workflows/build-manager.yml)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmlsysbook.ai&label=Website&logo=readthedocs)](https://mlsysbook.ai)
 [![Ecosystem](https://img.shields.io/website?url=https%3A%2F%2Fmlsysbook.org&label=Ecosystem&logo=internet-explorer)](https://mlsysbook.org)
 [![License](https://img.shields.io/badge/License-CC--BY--NC--SA%204.0-blue.svg)](https://github.com/harvard-edge/cs249r_book/blob/dev/LICENSE)
 [![Funding](https://img.shields.io/badge/Fund%20Us-Open%20Collective-blue.svg?logo=open-collective)](https://opencollective.com/mlsysbook)
 
-
-**[📖 Read Online](https://mlsysbook.ai)** • **[💾 Download PDF](https://mlsysbook.ai/Machine-Learning-Systems.pdf)** • **[🌐 Explore Ecosystem](https://mlsysbook.org)**
+**[📖 Read Online](https://mlsysbook.ai)** | **[💾 Download PDF](https://mlsysbook.ai/Machine-Learning-Systems.pdf)** | **[🌐 Explore Ecosystem](https://mlsysbook.org)**
 
 📚 **Hardcopy edition coming 2026 via MIT Press!**
 
@@ -19,37 +18,25 @@
 
 ---
 
-## About the Book
+## Key Features
 
-This open-source textbook, developed from Harvard University's CS249r course, provides a comprehensive guide to building and deploying real-world AI systems.  It goes beyond model training, focusing on the entire system lifecycle, from edge devices to cloud deployment.  Join a global community and empower your AI systems engineering skills.
+*   **Comprehensive Curriculum:** Master the full stack of ML systems, from design to deployment.
+*   **Open-Source & Accessible:**  Free and open-source textbook, empowering learners worldwide.
+*   **Hands-on Learning:**  Go beyond theory with practical labs and real-world examples.
+*   **Community-Driven:**  Join a vibrant community of learners, educators, and contributors.
+*   **Harvard-Developed:** Based on the CS249r course, refined by leading AI experts.
 
-### Key Features:
-
-*   **Comprehensive Coverage:** Master the full stack of real-world ML systems.
-*   **Open Source:**  Access to all content and contribute to the project.
-*   **Hands-on Labs:**  Learn by building practical AI systems.
-*   **Community Focused:**  Join a global community of learners and educators.
-*   **Scalable & Production Ready**: Learn to build systems that can grow with your needs.
-
-### Why This Book Matters
-
-*"As AI becomes more capable and autonomous, the critical bottleneck won't be the algorithms - it will be the engineers who can build efficient, scalable, and sustainable systems that safely harness that intelligence."* - Vijay Janapa Reddi, Author
-
----
-
-## What You'll Learn:
-
-**Master the full stack of real-world ML systems, going beyond model training:**
+## What You'll Learn
 
 *   **System Design:** Architect scalable and maintainable ML systems.
-*   **Data Engineering:** Build robust pipelines for data collection, labeling, and processing.
-*   **Model Deployment:** Take your models from prototypes to production-ready systems.
-*   **MLOps & Monitoring:**  Develop reliable and continuously operating systems.
+*   **Data Engineering:** Build robust data pipelines for collection, processing, and labeling.
+*   **Model Deployment:** Deploy production-ready systems from prototypes.
+*   **MLOps & Monitoring:** Implement reliable, continuously operating systems.
 *   **Edge AI:** Deploy resource-efficient AI on mobile, embedded, and IoT devices.
 
 ---
 
-## 🌟 Support This Work
+## Support This Work
 
 <div align="center">
 
@@ -73,39 +60,38 @@ We've graduated this project from Harvard to enable global access and expand AI 
 
 ---
 
-## 🌐 Community & Resources
+## 🌐 Resources & Community
 
-| Resource | Description |
-|----------|-------------|
-| [📚 **Main Site**](https://mlsysbook.org) | Complete learning platform |
-| [🔥 **TinyTorch**](https://mlsysbook.org/tinytorch) | Educational ML framework |
-| [💬 **Discussions**](https://github.com/harvard-edge/cs249r_book/discussions) | Ask questions, share insights |
-| [👥 **Community**](https://mlsysbook.org/community) | Join our global learning community |
+*   [📚 **Main Site:**](https://mlsysbook.org) Complete learning platform
+*   [🔥 **TinyTorch:**](https://mlsysbook.org/tinytorch) Educational ML framework
+*   [💬 **Discussions:**](https://github.com/harvard-edge/cs249r_book/discussions) Ask questions, share insights
+*   [👥 **Community:**](https://mlsysbook.org/community) Join our global learning community
 
 ---
 
-## 🎯 For Different Audiences
+## 🎯 Who Should Use This Book?
 
 ### 🎓 Students
--   [📖 Read online](https://mlsysbook.ai)
--   [📄 Download PDF](https://mlsysbook.ai/Machine-Learning-Systems.pdf)
--   [🧪 Try hands-on labs](https://mlsysbook.org)
+*   [📖 Read online](https://mlsysbook.ai)
+*   [📄 Download PDF](https://mlsysbook.ai/Machine-Learning-Systems.pdf)
+*   [🧪 Try hands-on labs](https://mlsysbook.org)
 
 ### 👩‍🏫 Educators
--   [📋 Course materials](https://mlsysbook.org)
--   [🎯 Instructor resources](https://mlsysbook.org)
--   [💡 Teaching guides](https://mlsysbook.org)
+*   [📋 Course materials](https://mlsysbook.org)
+*   [🎯 Instructor resources](https://mlsysbook.org)
+*   [💡 Teaching guides](https://mlsysbook.org)
 
 ### 🛠️ Contributors
--   [🤝 Contribution guide](docs/contribute.md)
--   [⚡ Development setup](#development)
--   [💬 Join discussions](https://github.com/harvard-edge/cs249r_book/discussions)
+*   [🤝 Contribution guide](docs/contribute.md)
+*   [⚡ Development setup](#development)
+*   [💬 Join discussions](https://github.com/harvard-edge/cs249r_book/discussions)
 
 ---
 
 ## 🚀 Quick Start
 
 ### For Readers
+
 ```bash
 # Read online (continuously updated)
 open https://mlsysbook.ai
@@ -115,6 +101,7 @@ curl -O https://mlsysbook.ai/Machine-Learning-Systems.pdf
 ```
 
 ### For Contributors
+
 ```bash
 git clone https://github.com/harvard-edge/cs249r_book.git
 cd cs249r_book
@@ -133,21 +120,24 @@ make preview        # Start development server
 
 ## 🤝 Contributing
 
-We welcome contributions from the global community! Here's how you can help:
+We welcome your contributions to improve and expand this valuable resource!
 
 ### Ways to Contribute
--   **📝 Content** — Suggest edits, improvements, or new examples
--   **🛠️ Tools** — Enhance development scripts and automation
--   **🎨 Design** — Improve figures, diagrams, and visual elements
--   **🌍 Localization** — Translate content for global accessibility
--   **🔧 Infrastructure** — Help with build systems and deployment
+
+*   📝 **Content:** Suggest edits, improvements, or new examples.
+*   🛠️ **Tools:** Enhance development scripts and automation.
+*   🎨 **Design:** Improve figures, diagrams, and visual elements.
+*   🌍 **Localization:** Translate content for global accessibility.
+*   🔧 **Infrastructure:** Help with build systems and deployment.
 
 ### Quality Standards
+
 All contributions benefit from automated quality assurance:
--   ✅ **Pre-commit validation** — Automatic cleanup and checks
--   📋 **Content review** — Formatting and style validation
--   🧪 **Testing** — Build and link verification
--   👥 **Peer review** — Community feedback
+
+*   ✅ **Pre-commit validation:** Automatic cleanup and checks.
+*   📋 **Content review:** Formatting and style validation.
+*   🧪 **Testing:** Build and link verification.
+*   👥 **Peer review:** Community feedback.
 
 [**Start Contributing →**](docs/contribute.md)
 
@@ -176,6 +166,7 @@ The **Book Binder** is our lightning-fast development CLI for streamlined buildi
 ```
 
 ### Make Commands (Traditional)
+
 ```bash
 # Building
 make build          # Build HTML version
@@ -192,6 +183,7 @@ make help           # Show all commands
 ```
 
 ### Project Structure
+
 ```
 MLSysBook/
 ├── binder                   # ⚡ Fast development CLI (recommended)
@@ -251,13 +243,15 @@ MLSysBook/
 ```
 
 ### Documentation
--   [⚡ Binder CLI Guide](docs/BINDER.md) — Fast development with the Book Binder
--   [📋 Development Guide](docs/DEVELOPMENT.md) — Comprehensive setup and workflow
--   [🛠️ Maintenance Guide](docs/MAINTENANCE_GUIDE.md) — Daily tasks and troubleshooting
--   [🔨 Build Instructions](docs/BUILD.md) — Detailed build process
--   [🤝 Contribution Guidelines](docs/contribute.md) — How to contribute effectively
+
+*   [⚡ Binder CLI Guide](docs/BINDER.md) — Fast development with the Book Binder
+*   [📋 Development Guide](docs/DEVELOPMENT.md) — Comprehensive setup and workflow
+*   [🛠️ Maintenance Guide](docs/MAINTENANCE_GUIDE.md) — Daily tasks and troubleshooting
+*   [🔨 Build Instructions](docs/BUILD.md) — Detailed build process
+*   [🤝 Contribution Guidelines](docs/contribute.md) — How to contribute effectively
 
 ### Publishing
+
 ```bash
 # Command-line trigger (recommended)
 ./binder publish "Description" COMMIT_HASH
@@ -271,10 +265,12 @@ MLSysBook/
 ```
 
 **Publishing Options:**
--   **`./binder publish`** — Unified command with interactive and command-line modes
--   **Web Interface** — Manual trigger via GitHub Actions UI
+
+*   **`./binder publish`** — Unified command with interactive and command-line modes
+*   **Web Interface** — Manual trigger via GitHub Actions UI
 
 ### Getting Started
+
 ```bash
 # Welcome and overview
 ./binder hello
@@ -291,6 +287,7 @@ MLSysBook/
 ## 📋 Citation & License
 
 ### Citation
+
 ```bibtex
 @inproceedings{reddi2024mlsysbook,
   title        = {MLSysBook.AI: Principles and Practices of Machine Learning Systems Engineering},
@@ -304,6 +301,7 @@ MLSysBook/
 ```
 
 ### License
+
 This work is licensed under **Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International** (CC BY-NC-SA 4.0). You may share and adapt the material for non-commercial purposes with appropriate credit.
 
 ---
