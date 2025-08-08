@@ -1,33 +1,29 @@
-<!-- SciPy Logo -->
-<img src="https://raw.githubusercontent.com/scipy/scipy/main/doc/source/_static/logo.svg" alt="SciPy Logo" width="110" height="110" align="left">
+<div align="left">
+  <a href="https://scipy.org" target="_blank">
+    <img src="https://raw.githubusercontent.com/scipy/scipy/main/doc/source/_static/logo.svg" alt="SciPy Logo" width="110" height="110" align="left"/>
+  </a>
+</div>
 
 # SciPy: Your Go-To Library for Scientific Computing in Python
 
-SciPy, pronounced "Sigh Pie," is a powerful open-source library offering a wealth of tools for mathematics, science, and engineering, all within the Python ecosystem. Check out the original repository [here](https://github.com/scipy/scipy).
+**SciPy**, pronounced "Sigh Pie," is a powerful open-source Python library packed with tools for mathematics, science, and engineering, making complex numerical computations more accessible than ever. [Visit the original repo](https://github.com/scipy/scipy).
 
-<!-- Badges -->
 [![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
-[![PyPI downloads](https://img.shields.io/pypi/dm/scipy.svg?label=Pypi%20downloads)](https://pypi.org/project/scipy/)
-[![Conda downloads](https://img.shields.io/conda/dn/conda-forge/scipy.svg?label=Conda%20downloads)](https://anaconda.org/conda-forge/scipy)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/scipy.svg?label=Pypi%20downloads)](https://pypi.org/project/scipy/)
+[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scipy.svg?label=Conda%20downloads)](https://anaconda.org/conda-forge/scipy)
 [![Stack Overflow](https://img.shields.io/badge/stackoverflow-Ask%20questions-blue.svg)](https://stackoverflow.com/questions/tagged/scipy)
 [![DOI](https://img.shields.io/badge/DOI-10.1038%2Fs41592--019--0686--2-blue.svg)](https://www.nature.com/articles/s41592-019-0686-2)
 
-## Key Features of SciPy:
+## Key Features of SciPy
 
-*   **Comprehensive Modules:** Provides modules for a wide range of scientific and technical computing tasks, including:
-    *   Statistics
-    *   Optimization
-    *   Integration
-    *   Linear Algebra
-    *   Fourier Transforms
-    *   Signal and Image Processing
-    *   ODE Solvers
-*   **Built on NumPy:** Designed to seamlessly integrate with NumPy arrays for efficient numerical computation.
-*   **User-Friendly and Efficient:** Offers easy-to-use routines for complex numerical operations.
-*   **Cross-Platform Compatibility:** Works on all popular operating systems.
-*   **Free and Open Source:**  Available free of charge under an open-source license.
+*   **Comprehensive Functionality:** Includes modules for statistics, optimization, integration, linear algebra, Fourier transforms, signal and image processing, and ODE solvers.
+*   **Built on NumPy:** Seamlessly integrates with NumPy arrays for efficient numerical computations.
+*   **User-Friendly:** Provides a wide range of easy-to-use numerical routines.
+*   **Cross-Platform:** Works on all major operating systems.
+*   **Free and Open Source:** Available under a permissive license, enabling free use and modification.
+*   **Widely Used:** Relied upon by leading scientists and engineers worldwide.
 
-## Resources:
+## Resources
 
 *   **Website:** [https://scipy.org](https://scipy.org)
 *   **Documentation:** [https://docs.scipy.org/doc/scipy/](https://docs.scipy.org/doc/scipy/)
@@ -40,18 +36,21 @@ SciPy, pronounced "Sigh Pie," is a powerful open-source library offering a wealt
 *   **Code of Conduct:** [https://docs.scipy.org/doc/scipy/dev/conduct/code_of_conduct.html](https://docs.scipy.org/doc/scipy/dev/conduct/code_of_conduct.html)
 *   **Report a Security Vulnerability:** [https://tidelift.com/docs/security](https://tidelift.com/docs/security)
 *   **Citing SciPy:** [https://www.scipy.org/citing-scipy/](https://www.scipy.org/citing-scipy/)
-*   **Installation:** [https://scipy.org/install/](https://scipy.org/install/)
 
-## Contributing
+## Installation
 
-SciPy thrives on community contributions!  Whether you're a seasoned developer or just starting out, there are many ways to get involved:
+For installation instructions, please refer to the [SciPy installation guide](https://scipy.org/install/).
 
-*   **Code Contributions:**  Small improvements and bug fixes are always welcome!  Look for issues tagged as "good first issue" to get started.
-*   **Code Review:** Help improve the quality of the code by reviewing pull requests.
-*   **Issue Triage:**  Assist in organizing and prioritizing reported issues.
-*   **Documentation and Education:**  Develop tutorials, presentations, and other educational materials.
-*   **Website Maintenance:** Help maintain and improve the SciPy website.
-*   **Design and Outreach:** Create promotional materials and help onboard new contributors.
-*   **Fundraising:**  Contribute to grant proposals and fundraising efforts.
+## Contributing to SciPy
 
-If you're unsure where to begin, reach out on the [SciPy development forum](https://discuss.scientific-python.org/c/contributor/scipy) or comment on a relevant issue on GitHub.  For newcomers, [this guide](https://opensource.guide/how-to-contribute/) offers helpful insights on open-source contributions.
+We warmly welcome contributions!  Here's how you can help:
+
+*   **Code Contributions:** Submit bug fixes, improvements, and new features. Start with issues labeled "good first issue".
+*   **Code Review:** Assist by reviewing pull requests.
+*   **Issue Triage:** Help categorize and prioritize issues.
+*   **Documentation:** Create tutorials, presentations, and improve documentation.
+*   **Website Maintenance:** Contribute to the [SciPy website](https://github.com/scipy/scipy.org).
+*   **Design & Outreach:** Help with graphic design, outreach, and onboarding new contributors.
+*   **Fundraising:** Assist with grant proposals and other fundraising efforts.
+
+If you're unsure where to begin, ask for help on the [forum](https://discuss.scientific-python.org/c/contributor/scipy) or by commenting on an open issue on GitHub.  Also, check out [this guide](https://opensource.guide/how-to-contribute/) for more details on contributing to open source.

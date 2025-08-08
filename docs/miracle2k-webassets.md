@@ -1,61 +1,53 @@
-# webassets: Streamline Web Asset Management for Python
+# Webassets: Powerful Asset Management for Python Web Development
 
-**webassets empowers Python web developers to effortlessly merge and compress JavaScript and CSS files, optimizing website performance and streamlining development workflows.** For more in-depth information, check out the [original repository](https://github.com/miracle2k/webassets).
+**Webassets simplifies and optimizes your Python web projects by merging and compressing your JavaScript and CSS files.**
 
-## Key Features
+[View the original repository on GitHub](https://github.com/miracle2k/webassets)
 
-*   **Asset Bundling:** Merge multiple JavaScript and CSS files into single, optimized bundles.
-*   **Compression:** Automatically compress your assets to reduce file sizes and improve loading times.
-*   **Extensible:** Supports a variety of filters for pre-processing, minification, and more.
-*   **Production-Ready:** Designed for use in production environments to ensure optimal website performance.
+## Key Features:
+
+*   **Asset Merging:** Combine multiple JavaScript and CSS files into single files to reduce HTTP requests.
+*   **Asset Compression:** Minify and compress your assets to improve page load times.
+*   **Flexible:** Works seamlessly with various Python web frameworks.
+*   **Well-Tested:** Benefit from a robust and reliable asset management solution.
 
 ## Installation
 
-Install the development version using pip:
+Install the latest development version using pip:
 
 ```bash
 pip install webassets==dev
 ```
 
+## Documentation
+
+Detailed documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
+
 ## Development
 
-To contribute to webassets, you'll need to set up your development environment.
+For development, follow these steps:
 
-**Prerequisites:**
-
-*   Python 3.7+
-*   Java 7+ (required for Google Closure filter)
-
-**Steps:**
-
-1.  **Create a virtual environment using uv:**
+1.  **Install Python requirements with uv:**
 
     ```bash
     uv venv
-    ```
-
-2.  **Install Python dependencies using uv:**
-
-    ```bash
     uv pip install -r uv.lock
     ```
 
-3.  **Install other requirements:**
+2.  **Install other requirements:**
 
     ```bash
     ./requirements-dev.sh
     ```
 
-4.  **Run tests:**
+3.  **Run the tests:**
 
     ```bash
     ./run_tests.sh
     ```
 
-## Documentation
+**Note:** Running tests requires Java 7 or higher for certain filters (e.g., Google Closure).
 
-Comprehensive documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
+## Contributing
 
----
-
-**Note:**  While releases may not be on a strict schedule, the project is well-tested.  The build status badge at the top of the [original repository](https://github.com/miracle2k/webassets) provides a quick indicator of build health.
+We encourage you to contribute to `webassets`!  Please refer to the documentation and existing issues for guidelines on how to contribute.

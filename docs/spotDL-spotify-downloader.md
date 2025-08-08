@@ -1,105 +1,87 @@
-# Download Spotify Music with spotDL
+# spotDL: Download Music from Spotify with Ease
 
-**Effortlessly download your favorite Spotify playlists and tracks with spotDL, complete with metadata and high-quality audio.**
+Tired of juggling multiple apps to enjoy your favorite Spotify playlists offline? spotDL is your all-in-one solution for downloading Spotify music with album art, lyrics, and metadata, all from the command line. [(Back to original repo)](https://github.com/spotDL/spotify-downloader)
 
-[View the spotDL repository on GitHub](https://github.com/spotDL/spotify-downloader)
+**Key Features:**
 
-## Key Features
-
-*   **Batch Downloads:** Download entire Spotify playlists, albums, or individual tracks with ease.
-*   **Metadata Embedding:** Automatically adds album art, lyrics, and comprehensive metadata to your downloaded music files.
-*   **High-Quality Audio:** Downloads music from YouTube, offering the highest possible bitrate (up to 256 kbps for premium users).
-*   **Multiple Operations:** Beyond downloading, also supports saving metadata, syncing directories, getting download URLs, and updating metadata for existing files.
-*   **Cross-Platform Compatibility:** Works seamlessly on Windows, macOS, and Linux.
+*   🎶 **Effortless Downloads:** Download entire Spotify playlists or individual tracks with a simple command.
+*   🖼️ **Metadata Magic:** Automatically embeds album art, lyrics, and other essential metadata.
+*   🎬 **YouTube Sourcing:** Reliably finds music sources on YouTube, ensuring broad compatibility.
+*   🎧 **Flexible Audio Quality:** Downloads the highest possible bitrate available on YouTube (up to 256kbps for premium users).
+*   🔄 **Playlist Synchronization:** Keeps your downloaded music in sync with your Spotify playlists.
+*   💻 **Cross-Platform:** Works seamlessly on Windows, macOS, and Linux.
+*   🌐 **Web Interface (Optional):** Offers a web interface for simpler downloads.
+*   ⚙️ **Advanced Operations:** Supports various operations like saving metadata, generating download links, and updating metadata.
 
 ## Installation
 
-### Recommended Method: Python
+Follow the installation guide for detailed instructions.
 
-1.  Install spotDL using pip:
-    ```bash
-    pip install spotdl
-    ```
-2.  Update spotDL with:
-    ```bash
-    pip install --upgrade spotdl
-    ```
+*   **Python (Recommended):**
+    *   Install: `pip install spotdl`
+    *   Update: `pip install --upgrade spotdl`
 
-    >   **Note:** On some systems, you might need to use `pip3` instead of `pip`.
+    > Note:  You may need to use `pip3` instead of `pip` on some systems.
 
-<details>
-    <summary><strong>Other Installation Options</strong></summary>
-
-*   **Prebuilt Executable:** Download the latest version from the [Releases Tab](https://github.com/spotDL/spotify-downloader/releases).
-*   **Termux:**
-    ```bash
-    curl -L https://raw.githubusercontent.com/spotDL/spotify-downloader/master/scripts/termux.sh | sh
-    ```
-*   **Arch Linux (AUR):** Use the [AUR package](https://aur.archlinux.org/packages/spotdl/).
-*   **Docker:** Instructions are available in the original README.
-</details>
+*   **Other Options:**
+    *   Prebuilt Executable (from [Releases](https://github.com/spotDL/spotify-downloader/releases))
+    *   Termux: `curl -L https://raw.githubusercontent.com/spotDL/spotify-downloader/master/scripts/termux.sh | sh`
+    *   Arch Linux (AUR):  [spotdl AUR package](https://aur.archlinux.org/packages/spotdl/)
+    *   Docker:  Build and run container (see original README for instructions).
 
 ### Installing FFmpeg
 
-FFmpeg is essential for spotDL. You can install it to your spotDL installation directory:
-`spotdl --download-ffmpeg`
+FFmpeg is required for spotDL. Install as follows.
 
-Or install it system-wide using the instructions provided in the original README (Windows, macOS, Linux).
+*   **Recommended:** `spotdl --download-ffmpeg` (installs to spotDL directory)
+*   **System-wide:** (Follow instructions for your OS)
+    *   Windows: [FFmpeg on Windows](https://windowsloop.com/install-ffmpeg-windows-10/)
+    *   macOS: `brew install ffmpeg`
+    *   Linux: `sudo apt install ffmpeg` or use your distribution's package manager
 
 ## Usage
 
-Download music using a Spotify URL:
+Basic usage:
 
-```bash
-spotdl [Spotify URL(s)]
+```sh
+spotdl [spotify_url_or_query]
 ```
 
-Or run spotDL as a Python package, if running the script is not working:
+Alternatively, use spotDL as a package:
 
-```bash
-python -m spotdl [Spotify URL(s)]
+```sh
+python -m spotdl [spotify_url_or_query]
 ```
 
-General command structure:
+General usage with operations and options:
 
-```bash
+```sh
 spotdl [operation] [options] QUERY
 ```
 
-By default, the operation is `download`.
+Supported operations:
 
-For a list of all **options** use `spotdl -h`
-
-<details>
-<summary><strong>Supported Operations</strong></summary>
-
-*   `save`: Saves metadata without downloading.
-    *   Usage: `spotdl save [query] --save-file {filename}.spotdl`
-*   `web`: Starts a web interface (limited features).
-*   `url`: Gets direct download links.
-    *   Usage: `spotdl url [query]`
-*   `sync`: Updates directories by comparing with the playlist.
-    *   Usage: `spotdl sync [query] --save-file {filename}.spotdl` (creates a sync file)
-    *   To update the directory later: `spotdl sync {filename}.spotdl`
-*   `meta`: Updates metadata for song files.
-
-</details>
+*   `download` (default): Downloads songs from YouTube, embedding metadata.
+*   `save`: Saves metadata without downloading files.
+*   `web`: Launches a web interface (limited features).
+*   `url`: Retrieves direct download links for songs.
+*   `sync`:  Synchronizes a local directory with a Spotify playlist (downloads new songs, removes deleted ones).
+*   `meta`: Updates metadata for existing song files.
 
 ## Music Sourcing and Audio Quality
 
-spotDL downloads music from YouTube to avoid issues related to downloading directly from Spotify.
+spotDL utilizes YouTube as its primary music source.
 
-**Note:** Users are responsible for their actions and potential legal consequences. We do not support unauthorized downloading of copyrighted material.
+*   **Audio Quality:** Downloads the highest possible bitrate available on YouTube (up to 256kbps for YouTube Music Premium users).
+*   See the [Audio Formats and Quality](docs/usage.md#audio-formats-and-quality) page for more details.
 
-### Audio Quality
-
-spotDL downloads the highest possible bitrate from YouTube: typically 128 kbps, and up to 256 kbps for YouTube Music premium users.
+> **Disclaimer:**  Users are responsible for their actions and legal compliance regarding copyright.  spotDL does not condone unauthorized downloading of copyrighted material.
 
 ## Contributing
 
-We welcome contributions! See our [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details on getting started.
+Contribute to the project! Check out the [CONTRIBUTING.md](docs/CONTRIBUTING.md) for information on how to set up a development environment.
 
-### Join Our Community
+### Code Contributors
 
 <a href="https://github.com/spotDL/spotify-downloader/graphs/contributors">
   <img class="dark-light" src="https://contrib.rocks/image?repo=spotDL/spotify-downloader&anon=0&columns=25&max=100&r=true" />
@@ -107,4 +89,4 @@ We welcome contributions! See our [CONTRIBUTING.md](docs/CONTRIBUTING.md) for de
 
 ## License
 
-This project is licensed under the [MIT](/LICENSE) License.
+This project is licensed under the [MIT License](/LICENSE).

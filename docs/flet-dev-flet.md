@@ -26,21 +26,21 @@
 
 ---
 
-# Flet: Build Cross-Platform Apps with Python and Flutter
+# Flet: Build Beautiful, Multi-Platform Apps in Python with Flutter
 
-**Flet empowers you to build stunning web, desktop, and mobile applications in Python using the power of Flutter, without the complexities of frontend development.**
+**Flet is a Python framework that empowers developers to build stunning web, desktop, and mobile applications using the power of Flutter, without the complexities of frontend development.**  [See the original repository](https://github.com/flet-dev/flet).
 
 ## Key Features
 
-*   **Rapid Development:**  Go from idea to functional app in minutes with Flet's streamlined architecture.
-*   **Simple Architecture:** Develop stateful, multi-user applications in pure Python – no need for complex REST APIs or JavaScript frontends.
-*   **Batteries Included:**  Get started quickly with no need for extensive SDKs or complex tooling; Flet provides a built-in web server and desktop clients.
-*   **Powered by Flutter:** Build visually appealing and professional-looking apps, ensuring a consistent user experience across all platforms.
-*   **Multi-Platform Deployment:** Deploy your app as a desktop application (Windows, macOS, Linux), mobile app (iOS, Android), web app, or Progressive Web App (PWA).
+*   **Rapid Development:**  Go from idea to a functional app in minutes, perfect for internal tools, prototypes, and more.
+*   **Simplified Architecture:**  Develop complete, stateful apps in Python with a streamlined, single-codebase approach.
+*   **Batteries Included:**  Start coding immediately with a built-in web server, asset hosting, and desktop clients, eliminating complex setups.
+*   **Powered by Flutter:** Leverage the beauty and power of Flutter for professional-looking UIs that run flawlessly on any platform.
+*   **Multi-Platform Deployment:**  Deploy your Flet apps as standalone desktop apps (Windows, macOS, Linux), mobile apps (iOS, Android), web apps, or Progressive Web Apps (PWAs).
 
-## Flet App Example: Counter
+## Flet App Example
 
-Here's a simple counter app written in Python:
+Below is a simple "Counter" app, with a text field and two buttons to increment and decrement the counter value:
 
 ```python title="counter.py"
 import flet as ft
@@ -73,31 +73,31 @@ def main(page: ft.Page):
 ft.run(main)
 ```
 
-To run the app, install Flet:
+To run the app, install `flet`:
 
 ```bash
 pip install 'flet[all]'
 ```
 
-Then launch the app:
+then launch the app:
 
 ```bash
 flet run counter.py
 ```
 
-This will launch the app in a native OS window.
+This will open the app in a native OS window - what a nice alternative to Electron! 🙂
 
 <p align="center">
     <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/macos.png" width="45%" />
 </p>
 
-To run the same app as a web app, change the `ft.run()` call:
+To run the same app as a web app, update the last line in your script to:
 
 ```python
 ft.run(main, view=flet.AppView.WEB_BROWSER)
 ```
 
-Or use the `--web` flag:
+Alternatively, you can use the `--web` flag when running the `flet run` command:
 
 ```bash
 flet run --web counter.py
@@ -124,7 +124,4 @@ flet run --web counter.py
 
 ## Contributing
 
-Contribute to Flet!  See the [contribution guide](https://docs.flet.dev/contributing).
-
----
-👉  [Back to the original repository](https://github.com/flet-dev/flet)
+Want to help improve Flet? Check out the [contribution guide](https://docs.flet.dev/contributing).

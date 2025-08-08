@@ -1,109 +1,88 @@
-# OxyGent: Build Intelligent Systems Faster with this Open-Source Framework
+# OxyGent: Build Production-Ready Intelligent Systems with Ease
 
-**OxyGent** empowers developers to rapidly build and deploy production-ready intelligent systems, streamlining development and accelerating innovation. [Explore the OxyGent repository](https://github.com/jd-opensource/OxyGent)
+**OxyGent empowers developers to build and deploy advanced, production-ready multi-agent systems quickly and efficiently.** [Explore the OxyGent Repository](https://github.com/jd-opensource/OxyGent)
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/jd-opensource/OxyGent/pulls)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://github.com/jd-opensource/OxyGent/blob/v4/LICENSE)
-[![PyPI](https://img.shields.io/pypi/v/oxygent.svg?logo=pypi&logoColor=white)](https://pypi.org/project/oxygent/)
+---
 
-<p align="center">
-  <img src="https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/banner.jpg" width="100%" alt="OxyGent Banner">
-</p>
+## Key Features
 
-<p align="center">
-  Visit our website:
-  <a href="http://oxygent.jd.com">OxyGent Website</a>
-</p>
-
-## Key Features of OxyGent
-
-*   **🚀 Efficient Development:** Build, deploy, and evolve AI teams with unprecedented speed using modular, reusable components.
-
-*   **🤝 Intelligent Collaboration:**  Facilitate dynamic task decomposition, negotiation, and real-time adaptation for robust multi-agent systems.
-
-*   **🕸️ Elastic Architecture:** Supports diverse agent topologies and provides tools for performance optimization across distributed systems.
-
-*   **🔁 Continuous Evolution:**  Leverage built-in evaluation engines and knowledge feedback loops for continuous agent improvement and full transparency.
-
-*   **📈 Scalability:**  Achieve linear cost growth while delivering exponential gains in collaborative intelligence with OxyGent's distributed scheduler.
+*   🚀 **Rapid Development:** Build, deploy, and evolve AI teams with unprecedented efficiency using modular components.
+*   🤝 **Intelligent Collaboration:**  Enable dynamic planning, task decomposition, and real-time adaptation for intelligent collaboration.
+*   🕸️ **Elastic Architecture:** Supports diverse agent topologies, from simple to complex hybrid planning patterns.
+*   🔁 **Continuous Evolution:** Built-in evaluation engines generate training data, enabling continuous improvement and transparency.
+*   📈 **Scalability:** Distributed scheduler allows for linear cost growth while delivering exponential gains in collaborative intelligence.
 
 ## 1. Project Overview
 
-OxyGent is an open-source framework designed to unify tools, models, and agents, fostering the development of sophisticated multi-agent systems. It offers a streamlined, end-to-end pipeline that simplifies building, running, and evolving AI-powered applications.
+OxyGent is an open-source framework designed to unify tools, models, and agents into modular components. It provides developers with end-to-end pipelines for building, running, and evolving multi-agent systems seamlessly and with limitless extensibility.
 
-## 2. Core Features in Detail
+## 2. Core Features - Detailed
 
-*   **Modular Components:** OxyGent offers standardized components for easy agent assembly, supporting hot-swapping and cross-scenario reuse.
-*   **Dynamic Planning:** Agents intelligently decompose tasks, negotiate, and adapt in real-time.
-*   **Auditability:** Maintain complete transparency of every agent decision.
-*   **Flexible Architecture:** Supports various agent topologies.
-*   **Automated Optimization:** Utilize automated dependency mapping and visual debugging tools for performance enhancement.
-*   **Evaluation Engines:** Built-in evaluation engines auto-generate training data.
-*   **Scalable Design:** OxyGent's distributed scheduler enables scalable collaborative intelligence.
+*   **Efficient Development:** OxyGent's modular multi-agent framework allows for the efficient building, deployment, and evolution of AI teams. Its standardized components enable rapid agent assembly, hot-swapping, and cross-scenario reuse via clean Python interfaces, eliminating the need for complex configurations.
+*   **Intelligent Collaboration:** This framework enhances collaboration through dynamic planning, task decomposition, and intelligent solution negotiation. Agents can adapt in real-time to changing conditions, maintaining full auditability of all decisions.
+*   **Elastic Architecture:** The underlying architecture supports any agent topology, from simple ReAct agents to complex hybrid planning models. Automated dependency mapping and visual debugging tools facilitate performance optimization across distributed systems.
+*   **Continuous Evolution:**  Built-in evaluation engines generate training data automatically. Your agents continuously improve through knowledge feedback loops while maintaining full transparency.
+*   **Scalability:** OxyGent's distributed scheduler delivers exponential gains in collaborative intelligence with linear cost growth, effortlessly handling domain-wide optimization and real-time decision-making at scale.
 
 ## 3. Software Architecture
 
 ### 3.1 Diagram
 
-<p align="center">
-  <img src="https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/structure.png" alt="OxyGent Architecture Diagram">
-</p>
+<!-- Insert architecture diagram here -->
 
 ### 3.2 Architecture Description
 
-*   **📦 Repository:** Centralized storage for agents, tools, LLMs, data, and system files.
-*   **🛠 Production Framework:** Includes registration, building, running, evaluation, and evolution.
-*   **🖥 Service Framework:** Provides a comprehensive business system server with storage and monitoring.
-*   **⚙️ Engineering Base:** Offers extensive external support, including databases and inference engines.
+*   📦 **Repository**: Stores agents, tools, LLMs, data, and system files in a unified structure.
+*   🛠 **Production Framework**: Complete production chain including registration, building, running, evaluation, and evolution.
+*   🖥 **Service Framework**: Comprehensive business system server, providing full storage and monitoring support.
+*   ⚙️ **Engineering Base**: Rich external support, including integrated modules such as databases and inference engines.
 
-## 4. Feature Highlights
+## 4. Feature Highlight
 
-*   **For Developers:**  Focus on core business logic without reinventing the wheel.
-*   **For Enterprises:**  Replace siloed AI systems with a unified framework, streamlining communication.
-*   **For Users:** Experience seamless teamwork from an intelligent agent ecosystem.
+**Target Audience:**
 
-OxyGent streamlines the entire lifecycle:
+*   **For Developers:** Focus on business logic without the overhead of reinventing foundational elements.
+*   **For Enterprises:** Replace siloed AI systems with a unified framework to reduce communication overhead.
+*   **For Users:** Experience seamless teamwork within an intelligent agent ecosystem.
 
-1.  **Code** agents in Python (no YAML needed).
-2.  **Deploy** with a single command (local or cloud).
-3.  **Monitor** every decision (full transparency).
-4.  **Evolve** automatically (self-improving systems).
+**Key Lifecycle Stages:**
+
+1.  **Code** agents in Python.
+2.  **Deploy** with a single command.
+3.  **Monitor** every decision with full transparency.
+4.  **Evolve** automatically, enabling self-improving systems.
 
 ## 5. Quick Start
 
-### Prerequisites
+**Prerequisites:** Python 3.10 or higher, pip, and an environment to install OxyGent.
 
-*   Python 3.10 or higher
-*   [Node.js](https://nodejs.org) (for development environment)
-
-### Installation
-
-**Using Conda:**
+**Installation (using conda or uv):**
 
 ```bash
+# Using conda
 conda create -n oxy_env python==3.10
 conda activate oxy_env
 pip install oxygent
-```
 
-**Using uv:**
-
-```bash
+# or (uv)
 curl -LsSf https://astral.sh/uv/install.sh | sh
-uv python install 3.10
+uv python install 3.10 
 uv venv .venv --python 3.10
 source .venv/bin/activate
 uv pip install oxygent
 ```
 
-### Development Environment (Optional)
+**Development Environment Setup (optional):**
+
+1.  Download **[Node.js](https://nodejs.org)**
+2.  Install required dependencies:
 
 ```bash
 pip install -r requirements.txt # or in uv
 brew install coreutils # maybe essential
 ```
 
-### Example Usage
+**Example Python Script:**
 
 ```python
 import os
@@ -112,100 +91,97 @@ from oxygent import MAS, Config, oxy, preset_tools
 Config.set_agent_llm_model("default_llm")
 
 oxy_space = [
-    oxy.HttpLLM(
-        name="default_llm",
-        api_key=os.getenv("DEFAULT_LLM_API_KEY"),
-        base_url=os.getenv("DEFAULT_LLM_BASE_URL"),
-        model_name=os.getenv("DEFAULT_LLM_MODEL_NAME"),
-        llm_params={"temperature": 0.01},
-        semaphore=4,
-    ),
-    preset_tools.time_tools,
-    oxy.ReActAgent(
-        name="time_agent",
-        desc="A tool that can query the time",
-        tools=["time_tools"],
-    ),
-    preset_tools.file_tools,
-    oxy.ReActAgent(
-        name="file_agent",
-        desc="A tool that can operate the file system",
-        tools=["file_tools"],
-    ),
-    preset_tools.math_tools,
-    oxy.ReActAgent(
-        name="math_agent",
-        desc="A tool that can perform mathematical calculations.",
-        tools=["math_tools"],
-    ),
-    oxy.ReActAgent(
-        is_master=True,
-        name="master_agent",
-        sub_agents=["time_agent", "file_agent", "math_agent"],
-    ),
+   oxy.HttpLLM(
+      name="default_llm",
+      api_key=os.getenv("DEFAULT_LLM_API_KEY"),
+      base_url=os.getenv("DEFAULT_LLM_BASE_URL"),
+      model_name=os.getenv("DEFAULT_LLM_MODEL_NAME"),
+      llm_params={"temperature": 0.01},
+      semaphore=4,
+   ),
+   preset_tools.time_tools,
+   oxy.ReActAgent(
+      name="time_agent",
+      desc="A tool that can query the time",
+      tools=["time_tools"],
+   ),
+   preset_tools.file_tools,
+   oxy.ReActAgent(
+      name="file_agent",
+      desc="A tool that can operate the file system",
+      tools=["file_tools"],
+   ),
+   preset_tools.math_tools,
+   oxy.ReActAgent(
+      name="math_agent",
+      desc="A tool that can perform mathematical calculations.",
+      tools=["math_tools"],
+   ),
+   oxy.ReActAgent(
+      is_master=True,
+      name="master_agent",
+      sub_agents=["time_agent", "file_agent", "math_agent"],
+   ),
 ]
 
 async def main():
-    async with MAS(oxy_space=oxy_space) as mas:
-        await mas.start_web_service(first_query="What time is it now? Please save it into time.txt.")
+   async with MAS(oxy_space=oxy_space) as mas:
+      await mas.start_web_service(first_query="What time is it now? Please save it into time.txt.")
 
 if __name__ == "__main__":
-    import asyncio
-    asyncio.run(main())
+   import asyncio
+   asyncio.run(main())
 ```
 
-### Configure LLM settings
+**LLM Configuration:**
 
 ```bash
 export DEFAULT_LLM_API_KEY="your_api_key"
 export DEFAULT_LLM_BASE_URL="your_base_url"  # if you want to use a custom base URL
-export DEFAULT_LLM_MODEL_NAME="your_model_name"
+export DEFAULT_LLM_MODEL_NAME="your_model_name"  
 ```
 
-**Or using a .env file:**
+or, create a `.env` file:
 
-```bash
-# create a .env file
+```
 DEFAULT_LLM_API_KEY="your_api_key"
 DEFAULT_LLM_BASE_URL="your_base_url"
 DEFAULT_LLM_MODEL_NAME="your_model_name"
 ```
 
-### Run the Example
+**Run the Example:**
 
 ```bash
 python demo.py
 ```
 
-### Output
+**Output:**
 
-<p align="center">
-  <img src="https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/vision.png" alt="Example Output">
-</p>
+![](https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/vision.png)
 
 ## 6. Contributing
 
-Contributions to OxyGent are highly welcomed! You can contribute by:
+We welcome contributions in various forms:
 
 1.  Reporting Issues (Bugs & Errors)
 2.  Suggesting Enhancements
 3.  Improving Documentation
-    *   Fork the repository
-    *   Add your views in the document
-    *   Send your pull request
 4.  Writing Code
-    *   Fork the repository
-    *   Create a new branch
-    *   Add your feature or improvement
-    *   Send your pull request
 
-Refer to the [OxyGent documentation](http://oxygent.jd.com/docs/) for more information.
+**Contribution Guidelines:**
+
+1.  Fork the repository.
+2.  Create a new branch.
+3.  Add your feature or improvement.
+4.  Send your pull request.
+
+For development-related issues, refer to the documentation: **[Document](http://oxygent.jd.com/docs/)**
 
 ## 7. Community & Support
 
-For assistance or to report issues, please submit reproducible steps and log snippets in the project's Issues area or contact the OxyGent Core team directly.
+If you have questions or encounter any issues, please submit reproducible steps and log snippets in the project's Issues area or contact the OxyGent Core team.
 
-Contact Us:
+**Contact:**
 
 <div align="center">
   <img src="https://pfst.cf2.poecdn.net/base/image/b1e96084336a823af7835f4fe418ff49da6379570f0c32898de1ffe50304d564?w=1760&h=2085&pmaid=425510216" alt="contact" width="50%" height="50%">
@@ -213,7 +189,7 @@ Contact Us:
 
 ## 8. About the Contributors
 
-Thank you to all the [developers](https://github.com/jd-opensource/OxyGent/graphs/contributors) who have contributed to OxyGent!
+A big thank you to all [developers](https://github.com/jd-opensource/OxyGent/graphs/contributors) who have contributed to OxyGent.
 
 <a href="https://github.com/jd-opensource/OxyGent/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=jd-opensource/OxyGent" />
@@ -221,7 +197,7 @@ Thank you to all the [developers](https://github.com/jd-opensource/OxyGent/graph
 
 ## 9. License
 
-[Apache License](./LICENSE.md)
+[Apache License]( ./LICENSE.md)
 
 #### OxyGent is provided by Oxygen JD.com
 #### Thanks for your Contributions!

@@ -1,251 +1,131 @@
-# ComfyUI-RMBG: Effortlessly Remove Backgrounds and Segment Images with Advanced AI
+# ComfyUI-RMBG: Advanced Image Background Removal and Segmentation for ComfyUI
 
-**Enhance your ComfyUI workflows with ComfyUI-RMBG, a powerful custom node offering advanced image background removal, object segmentation, and more!**  Access the original repository [here](https://github.com/1038lab/ComfyUI-RMBG).
+**Unlock unparalleled image editing capabilities with ComfyUI-RMBG, the ultimate ComfyUI custom node for precise background removal, object segmentation, and more.**  Access the original repo here:  [https://github.com/1038lab/ComfyUI-RMBG](https://github.com/1038lab/ComfyUI-RMBG)
 
-## Key Features:
+## Key Features
 
-*   **Advanced Background Removal:**
-    *   Utilizes multiple models, including RMBG-2.0, INSPYRENET, BEN, and BEN2, for precise background removal.
-    *   Offers flexible background options: transparent, black, white, green, blue, or red.
-    *   Supports batch processing for efficient workflow.
+*   **Multiple Models:** Utilize state-of-the-art models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet-HR, SAM, and GroundingDINO for versatile image processing.
+*   **Background Removal:** Easily remove backgrounds from images with multiple background color options (transparent, black, white, green, blue, red) and various model options.
+*   **Object Segmentation:** Segment specific objects using text prompts, supporting tag-style and natural language inputs, powered by SAM and GroundingDINO.
+*   **Facial Feature Segmentation:** Accurately segment faces into 19 categories, including skin, eyes, nose, and eyebrows.
+*   **Clothes & Fashion Segmentation:** Isolate clothing and accessories with dedicated models and multiple category selection.
+*   **Image Processing Tools:** Includes nodes for image combining, stitching, conversion, masking, and enhancement.
+*   **Batch Processing Support:** Streamline your workflow by processing multiple images simultaneously.
+*   **Flexible Parameter Controls:** Fine-tune results with adjustable sensitivity, processing resolution, mask blur, and offset settings.
+*   **Easy Installation:**  Install via ComfyUI Manager, cloning the repository, or using the Comfy CLI.
 
-*   **Object Segmentation:**
-    *   Segment objects using text prompts (tag-style or natural language) with Segment node.
-    *   Utilizes SAM (Segment Anything Model) and GroundingDINO for high-precision segmentation.
-    *   Provides flexible parameter controls for refining results.
+## Recent Updates
+*   **v2.7.1** (2025/08/06): [View Update Details](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v271-20250806)
+    *   Enhanced LoadImage into three distinct nodes.
+    *   Redesigned ImageStitch node.
+    *   Fixed background color handling issues.
+*   **v2.7.0** (2025/07/27): [View Update Details](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v270-20250727)
+    *   Enhanced LoadImage into three distinct nodes.
+    *   Redesigned ImageStitch node.
+    *   Fixed background color handling issues.
+*   **v2.6.0** (2025/07/15): [View Update Details](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v260-20250715)
+    *   Added `Kontext Refence latent Mask` node.
+*   **v2.5.2, v2.5.1, v2.5.0, v2.4.0, v2.3.2, v2.3.1, v2.3.0, v2.2.1, v2.2.0, v2.1.1, v2.1.0, v2.0.0, v1.9.3, v1.9.2, v1.9.1, v1.9.0, v1.8.0, v1.7.0, v1.6.0, v1.5.0, v1.4.0, v1.3.2, v1.3.1, v1.3.0, v1.2.2, v1.2.1, v1.2.0, v1.1.0** Added new features, improved performance and new models.
 
-*   **Facial and Fashion Segmentation:**
-    *   Dedicated nodes for Face, Fashion, and Clothes segmentation for detailed content editing.
-    *   Face Node supports 19 facial feature categories.
-    *   Clothes Node supports 18 different clothing categories.
+## Installation
 
-*   **Model Variety & Flexibility:**
-    *   Includes BiRefNet models, including HR versions for high-resolution image processing.
-    *   Offers various resolution and parameter options to optimize performance.
+Choose from the following methods:
 
-*   **Easy Installation:**
-    *   Install via ComfyUI Manager, cloning the repository, or Comfy CLI.
-    *   Includes automatic model downloading.
-    *   Dependencies are automatically installed.
+*   **ComfyUI Manager:** Search for `Comfyui-RMBG` and install.
+*   **Manual Clone:** Clone the repository into your ComfyUI `custom_nodes` folder and install requirements.
+*   **Comfy CLI:** Use `comfy node install ComfyUI-RMBG`.
 
-*   **Continuous Updates:**
-    *   Regular updates with new models, features, and bug fixes.
+**Important:** After installation, ensure you install the required packages in the ComfyUI-RMBG folder by using the command:
+  ```bash
+  ./ComfyUI/python_embeded/python -m pip install -r requirements.txt
+  ```
 
-## Recent Updates:
+### Model Downloads
+The models are automatically downloaded upon first use.  However, you can manually download models from the links provided in the  [About Models](#about-models) section of this document. Place the downloaded model files into the corresponding folders within your `ComfyUI/models/RMBG/` directory.
 
-*   **v2.7.1 (2025/08/06):** ( [update.md](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v271-20250806) )
-*   **v2.7.0 (2025/07/27):** ( [update.md](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v270-20250727) )
-    *   Enhanced LoadImage node with three distinct options for versatile image loading, including URL support.
-    *   Redesigned ImageStitch node compatible with ComfyUI's native functionalities.
-    *   Addressed background color handling issues reported by users.
-*   **v2.6.0 (2025/07/15):** ( [update.md](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v260-20250715) )
-    *   Added `Kontext Refence latent Mask` node, Which uses a reference latent and mask for precise region conditioning.
-*   **v2.5.2 (2025/07/11):** ( [update.md](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v252-20250711) )
-*   **v2.5.1 (2025/07/07):** ( [update.md](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v251-20250707) )
-*   **v2.5.0 (2025/07/01):** ( [update.md](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v250-20250701) )
-    *   Added new nodes: `MaskOverlay`, `ObjectRemover`, `ImageMaskResize`.
-    *   Added 2 BiRefNet models: `BiRefNet_lite-matting` and `BiRefNet_dynamic`.
-    *   Added batch image support for `Segment_v1` and `Segment_V2` nodes.
-
-*(See update.md files for comprehensive update details)*
-
-## Installation:
-
-1.  **ComfyUI Manager:** Search for and install "ComfyUI-RMBG" within the ComfyUI Manager.
-2.  **Clone Repository:**
-    ```bash
-    cd ComfyUI/custom_nodes
-    git clone https://github.com/1038lab/ComfyUI-RMBG
-    ```
-    Then install dependencies:
-    ```bash
-    ./ComfyUI/python_embeded/python -m pip install -r requirements.txt
-    ```
-3.  **Comfy CLI:**
-    ```bash
-    comfy node install ComfyUI-RMBG
-    ```
-    Then install dependencies:
-    ```bash
-    ./ComfyUI/python_embeded/python -m pip install -r requirements.txt
-    ```
-
-4.  **Model Download (Automatic):** Models are automatically downloaded upon first use.
-5.  **Manual Model Download:** (If needed) Place model files in the specified `/ComfyUI/models/RMBG/` and `/ComfyUI/models/SAM/` or `/ComfyUI/models/grounding-dino/` directories.  Links to download are provided in the original README (see below).
-
-## Basic Usage:
+## Usage
 
 ### RMBG Node
-1.  Add an `RMBG (Remove Background)` node from the `🧪AILab/🧽RMBG` category.
+
+1.  Load the `RMBG (Remove Background)` node from the `🧪AILab/🧽RMBG` category.
 2.  Connect an image to the input.
-3.  Select a model.
-4.  Adjust optional parameters like sensitivity, resolution, and background color.
-5.  View the processed image and mask outputs.
+3.  Select a model from the dropdown.
+4.  Adjust parameters as needed (optional).
 
 ### Segment Node
-1.  Add a `Segment (RMBG)` node from the `🧪AILab/🧽RMBG` category.
+
+1.  Load the `Segment (RMBG)` node from the `🧪AILab/🧽RMBG` category.
 2.  Connect an image to the input.
-3.  Enter a text prompt.
-4.  Select SAM and GroundingDINO models.
-5.  Adjust the threshold, mask blur, and background color as needed.
+3.  Enter a text prompt (tag-style or natural language).
+4.  Select SAM or GroundingDINO models.
+5.  Adjust parameters.
 
-## Optional Settings:
+## Optional Settings
 
-*   **Sensitivity:** Controls mask detection strength. Higher values = stricter.
-*   **Processing Resolution:** Affects detail and memory usage.
-*   **Mask Blur:** Smooths mask edges.
-*   **Mask Offset:** Expands or shrinks the mask boundary.
-*   **Background:** Choose output background color.
-*   **Invert Output:** Flip mask and image output.
-*   **Refine Foreground:** Improves transparency with Fast Foreground Color Estimation.
+| Setting                 | Description                                                                 | Tips                                                                                                                      |
+| :---------------------- | :-------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| **Sensitivity**         | Adjusts mask detection strength. Higher values for stricter detection.       | Default: 0.5. Adjust based on image complexity.                                                                           |
+| **Processing Resolution** | Controls image processing resolution.                                      | Values: 256-2048 (step 128). Higher resolution = better detail, higher memory usage.                                     |
+| **Mask Blur**           | Blurs mask edges for smoother results.                                         | Default: 0. Recommended: 1-5.                                                                                             |
+| **Mask Offset**         | Expands or shrinks mask boundaries.                                          | Default: 0. Fine-tune between -10 and 10.                                                                                 |
+| **Background**          | Select the desired output background color.                                 | Choose from: Alpha, Black, White, Green, Blue, Red.                                                                        |
+| **Invert Output**       | Flips mask and image output.                                                 | Inverts both the image and mask.                                                                                           |
+| **Refine Foreground**   | Uses Fast Foreground Color Estimation to optimize transparency.              | Enable for improved edge quality and transparency.                                                                        |
+| **Performance Optimization** | Fine-tune settings for multiple image processing. | Consider increasing `process_res` and `mask_blur` with enough memory, but be mindful of memory usage. |
 
-## Models: (More details in the original README, see below)
+<details>
+<summary><h2>About Models</h2></summary>
+**RMBG-2.0**
+  *   Developed by BRIA AI using the BiRefNet architecture.
+  *   Key features: High accuracy, precise edge detection, fine detail handling, support for multiple objects, batch processing.
+  *   Trained on a dataset of over 15,000 high-quality images.
 
-*   RMBG-2.0
-*   INSPYRENET
-*   BEN
-*   BEN2
-*   BiRefNet (Various versions)
-*   SAM
-*   GroundingDINO
-*   Clothes Segment
-*   Fashion Segment
+**INSPYRENET**
+  *   Specialized in human portrait segmentation.
+  *   Fast processing with good edge detection.
 
-## Requirements:
+**BEN & BEN2**
+  *   Robust on various image types.
+  *   BEN2 offers improved accuracy and speed.
+
+**BiRefNet Models**
+  *   A suite of models for image segmentation: general purpose, optimized for specific resolutions, portrait/human matting, and high-resolution (up to 2560x2560).
+
+**SAM**
+  *   Segment Anything Model for high accuracy object detection and segmentation.
+
+**GroundingDINO**
+  *   Text-prompted object detection and segmentation.
+
+**Clothes Segment**
+  *   Segment objects into clothes with 18 different categories.
+
+**Fashion Segment**
+  *   Segment objects by Fashion and Accessories.
+</details>
+
+## Requirements
 
 *   ComfyUI
 *   Python 3.10+
-*   Dependencies (automatically installed, see original README for the list).
-
-## Credits:
-
-*   Created by: [AILab](https://github.com/1038lab)
-*   Refer to the original README for model credits and links.
-
-## Star History
-**(See original README for Star History chart)**
-
-## License:
-GPL-3.0 License
-
----
-**(Original README content starts below - kept for detailed model information and download links)**
-
-```
-
-## About Models
-
-## RMBG-2.0
-RMBG-2.0 is is developed by BRIA AI and uses the BiRefNet architecture which includes:
-- High accuracy in complex environments
-- Precise edge detection and preservation
-- Excellent handling of fine details
-- Support for multiple objects in a single image
-- Output Comparison
-- Output with background
-- Batch output for video
-The model is trained on a diverse dataset of over 15,000 high-quality images, ensuring:
-- Balanced representation across different image types
-- High accuracy in various scenarios
-- Robust performance with complex backgrounds
-
-## INSPYRENET
-INSPYRENET is specialized in human portrait segmentation, offering:
-- Fast processing speed
-- Good edge detection capability
-- Ideal for portrait photos and human subjects
-
-## BEN
-BEN is robust on various image types, offering:
-- Good balance between speed and accuracy
-- Effective on both simple and complex scenes
-- Suitable for batch processing
-
-## BEN2
-BEN2 is a more advanced version of BEN, offering:
-- Improved accuracy and speed
-- Better handling of complex scenes
-- Support for more image types
-- Suitable for batch processing
-
-## BIREFNET MODELS
-BIREFNET is a powerful model for image segmentation, offering:
-- BiRefNet-general purpose model (balanced performance)
-- BiRefNet_512x512 model (optimized for 512x512 resolution)
-- BiRefNet-portrait model (optimized for portrait/human matting)
-- BiRefNet-matting model (general purpose matting)
-- BiRefNet-HR model (high resolution up to 2560x2560)
-- BiRefNet-HR-matting model (high resolution matting)
-- BiRefNet_lite model (lightweight version for faster processing)
-- BiRefNet_lite-2K model (lightweight version for 2K resolution)
-
-## SAM
-SAM is a powerful model for object detection and segmentation, offering:
-- High accuracy in complex environments
-- Precise edge detection and preservation
-- Excellent handling of fine details
-- Support for multiple objects in a single image
-- Output Comparison
-- Output with background
-- Batch output for video
-
-## GroundingDINO
-GroundingDINO is a model for text-prompted object detection and segmentation, offering:
-- High accuracy in complex environments
-- Precise edge detection and preservation
-- Excellent handling of fine details
-- Support for multiple objects in a single image
-- Output Comparison
-- Output with background
-- Batch output for video
-
-## BiRefNet Models
-- BiRefNet-general purpose model (balanced performance)
-- BiRefNet_512x512 model (optimized for 512x512 resolution)
-- BiRefNet-portrait model (optimized for portrait/human matting)
-- BiRefNet-matting model (general purpose matting)
-- BiRefNet-HR model (high resolution up to 2560x2560)
-- BiRefNet-HR-matting model (high resolution matting)
-- BiRefNet_lite model (lightweight version for faster processing)
-- BiRefNet_lite-2K model (lightweight version for 2K resolution)
-
-## Requirements
-- ComfyUI
-- Python 3.10+
-- Required packages (automatically installed):
-  - torch>=2.0.0
-  - torchvision>=0.15.0
-  - Pillow>=9.0.0
-  - numpy>=1.22.0
-  - huggingface-hub>=0.19.0
-  - tqdm>=4.65.0
-  - transformers>=4.35.0
-  - transparent-background>=1.2.4
-  - opencv-python>=4.7.0
+*   Required Packages (installed automatically): `torch>=2.0.0`, `torchvision>=0.15.0`, `Pillow>=9.0.0`, `numpy>=1.22.0`, `huggingface-hub>=0.19.0`, `tqdm>=4.65.0`, `transformers>=4.35.0`, `transparent-background>=1.2.4`, `opencv-python>=4.7.0`
 
 ## Credits
-- RMBG-2.0: https://huggingface.co/briaai/RMBG-2.0
-- INSPYRENET: https://github.com/plemeri/InSPyReNet
-- BEN: https://huggingface.co/PramaLLC/BEN
-- BEN2: https://huggingface.co/PramaLLC/BEN2
-- BiRefNet: https://huggingface.co/ZhengPeng7
-- SAM: https://huggingface.co/facebook/sam-vit-base
-- GroundingDINO: https://github.com/IDEA-Research/GroundingDINO
-- Clothes Segment: https://huggingface.co/mattmdjaga/segformer_b2_clothes
 
-- Created by: [AILab](https://github.com/1038lab)
+*   RMBG-2.0: [https://huggingface.co/briaai/RMBG-2.0](https://huggingface.co/briaai/RMBG-2.0)
+*   INSPYRENET: [https://github.com/plemeri/InSPyReNet](https://github.com/plemeri/InSPyReNet)
+*   BEN: [https://huggingface.co/PramaLLC/BEN](https://huggingface.co/PramaLLC/BEN)
+*   BEN2: [https://huggingface.co/PramaLLC/BEN2](https://huggingface.co/PramaLLC/BEN2)
+*   BiRefNet: [https://huggingface.co/ZhengPeng7](https://huggingface.co/ZhengPeng7)
+*   SAM: [https://huggingface.co/facebook/sam-vit-base](https://huggingface.co/facebook/sam-vit-base)
+*   GroundingDINO: [https://github.com/IDEA-Research/GroundingDINO](https://github.com/IDEA-Research/GroundingDINO)
+*   Clothes Segment: [https://huggingface.co/mattmdjaga/segformer_b2_clothes](https://huggingface.co/mattmdjaga/segformer_b2_clothes)
+*   Created by: [AILab](https://github.com/1038lab)
 
 ## Star History
 
-<a href="https://www.star-history.com/#1038lab/comfyui-rmbg&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=1038lab/comfyui-rmbg&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=1038lab/comfyui-rmbg&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=1038lab/comfyui-rmbg&type=Date" />
- </picture>
-</a>
-
-If this custom node helps you or you like my work, please give me ⭐ on this repo! It's a great encouragement for my efforts!
+[![Star History](https://api.star-history.com/svg?repos=1038lab/comfyui-rmbg&type=Date)](https://star-history.com/#1038lab/comfyui-rmbg&Date)
 
 ## License
+
 GPL-3.0 License

@@ -1,72 +1,76 @@
-# Stable Diffusion Web UI: Unleash Your Creativity with AI Art
+# Stable Diffusion WebUI: Unleash Your Creativity with AI-Powered Image Generation
 
-**Create stunning images from text prompts with the Stable Diffusion web UI, a user-friendly interface built with Gradio.** [(Original Repository)](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+**Generate stunning images from text prompts with Stable Diffusion WebUI, a powerful and versatile web interface.** ([Original Repo](https://github.com/AUTOMATIC1111/stable-diffusion-webui))
 
 ## Key Features:
 
-*   **Versatile Generation Modes:** Explore text-to-image (txt2img) and image-to-image (img2img) generation.
-*   **One-Click Setup:** Simplify installation with a convenient script (Python and Git required).
-*   **Advanced Image Editing:** Utilize outpainting, inpainting, and color sketch features.
-*   **Prompt Engineering Tools:** Leverage prompt matrix, attention mechanisms, and negative prompts for precise control.
-*   **Upscaling and Enhancement:** Improve image quality with Stable Diffusion Upscale and other integrated tools like GFPGAN, CodeFormer, RealESRGAN, and more.
-*   **Iterative Refinement:** Use loopback and variations for creating unique images.
-*   **Batch Processing:** Process multiple images at once using img2img.
-*   **Seed Control:** Utilize correct seeds for batches and seed resizing to generate similar images with slight variations.
-*   **Extensive Customization:** Benefit from textual inversion, custom scripts, and a settings page for personalized control.
-*   **Seamless Integration:** Drag and drop images to generate parameters or load them in the promptbox.
-*   **Community Driven**: Benefit from the custom scripts, extensions and integrations with the community.
+*   **Versatile Image Generation:**
+    *   Text-to-Image (txt2img) and Image-to-Image (img2img) modes.
+    *   Outpainting, Inpainting, and Color Sketch features for image manipulation.
+    *   Prompt Matrix, Loopback, and X/Y/Z plot for advanced experimentation.
+*   **Enhanced Prompting & Control:**
+    *   Attention mechanism for fine-tuning prompt emphasis.
+    *   Negative prompting to exclude unwanted elements.
+    *   Styles to save and easily apply prompt components.
+    *   Prompt editing for mid-generation adjustments.
+    *   Composable Diffusion for multi-prompt generation.
+    *   No token limit for prompts.
+*   **Advanced Technologies & Integrations:**
+    *   Textual Inversion for custom embeddings.
+    *   Extras tab with face restoration (GFPGAN, CodeFormer) and upscaling tools (RealESRGAN, ESRGAN, SwinIR, Swin2SR, LDSR).
+    *   CLIP interrogator to generate prompts from images.
+    *   DeepDanbooru integration for anime-style prompting.
+    *   xformers for performance enhancements.
+    *   Support for custom scripts and extensions.
+    *   LoRAs (LyCORIS) and Hypernetworks.
+    *   Aesthetic Gradients.
+    *   Support for Stable Diffusion 2.0, Alt-Diffusion, and Segmind Stable Diffusion.
+*   **User-Friendly Experience:**
+    *   One-click install and run script (Python and Git required).
+    *   Live image generation preview and progress bar.
+    *   Generation parameters saved with images.
+    *   Settings page and UI customization options.
+    *   API for programmatic access.
+*   **Additional Features**
+    *   Resizing aspect ratio options
+    *   Sampling method selection
+    *   Interrupt processing at any time
+    *   Correct seeds for batches
+    *   Live prompt token length validation
 
 ## Installation and Running
 
-### Prerequisites
-Ensure you have the required dependencies before proceeding. More information can be found here: [Dependencies](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Dependencies)
+Detailed installation instructions, including options for NVidia, AMD, and Intel GPUs, as well as online service alternatives (like Google Colab) are available.
 
-### Instructions
+**Installation for Windows 10/11 with NVIDIA GPUs (using release package):**
 
-Follow the installation instructions for your operating system:
+1.  Download the `sd.webui.zip` from the releases.
+2.  Extract the contents.
+3.  Run `update.bat`.
+4.  Run `run.bat`.
 
-*   **Nvidia GPUs:** Detailed instructions are available in the [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-NVidia-GPUs). (Recommended)
-*   **AMD GPUs:** [Installation on AMD GPUs](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs).
-*   **Intel CPUs/GPUs:** [Installation on Intel Silicon](https://github.com/openvinotoolkit/stable-diffusion-webui/wiki/Installation-on-Intel-Silicon)
-*   **Ascend NPUs:** [Install and run on Ascend NPUs](https://github.com/wangshuai09/stable-diffusion-webui/wiki/Install-and-run-on-Ascend-NPUs)
+**Automatic Installation for Windows:**
 
-**Windows (Simplified)**
+1.  Install [Python 3.10.6](https://www.python.org/downloads/release/python-3106/) and [git](https://git-scm.com/download/win).
+2.  Download the repository using `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git`.
+3.  Run `webui-user.bat`.
 
-1.  Download the `sd.webui.zip` from the [releases](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases)
-2.  Run `update.bat`.
-3.  Run `run.bat`.
+**Automatic Installation for Linux:**
 
-**Automatic Installation on Windows**
+1.  Install Dependencies (see README for specific commands based on your Linux distribution).
+2.  Run `webui.sh` or clone the repo and then run the webui
+3.  Check `webui-user.sh` for options.
 
-1.  Install [Python 3.10.6](https://www.python.org/downloads/release/python-3106/) (Newer version of Python does not support torch), checking "Add Python to PATH".
-2.  Install [git](https://git-scm.com/download/win).
-3.  Download the stable-diffusion-webui repository, for example by running `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git`.
-4.  Run `webui-user.bat` from Windows Explorer as normal, non-administrator, user.
-
-**Automatic Installation on Linux**
-
-1.  Install dependencies. Follow these commands based on your system:
-    *   Debian-based: `sudo apt install wget git python3 python3-venv libgl1 libglib2.0-0`
-    *   Red Hat-based: `sudo dnf install wget git python3 gperftools-libs libglvnd-glx`
-    *   openSUSE-based: `sudo zypper install wget git python3 libtcmalloc4 libglvnd`
-    *   Arch-based: `sudo pacman -S wget git python3`
-
-2.  Navigate to your desired installation directory and execute:
-    `wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh`
-    OR
-    `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui`
-
-3.  Run `webui.sh`.
-4.  Customize with `webui-user.sh`
-
-**Apple Silicon**
-
-Find instructions [here](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon).
+**Installation on Apple Silicon:** Instructions are located [here](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon).
 
 ## Contributing
 
-Learn how to contribute to the project here: [Contributing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing).
+Learn how to contribute to the project: [Contributing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing)
+
+## Documentation
+
+Comprehensive documentation is available on the project's [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki).
 
 ## Credits
 
-*   [See Original README for a complete list of credits](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+See the original README for detailed credit information, including the names of the creators of the tools used in the project.

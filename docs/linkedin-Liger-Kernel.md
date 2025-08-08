@@ -1,6 +1,22 @@
 # Liger Kernel: Supercharge LLM Training with Optimized Triton Kernels
 
-**Liger Kernel accelerates Large Language Model (LLM) training by up to 20% and reduces memory usage by 60% using efficient Triton kernels.**  Check out the original repo on [GitHub](https://github.com/linkedin/Liger-Kernel).
+**Boost your Large Language Model (LLM) training by up to 20% and reduce memory usage by 60% with Liger Kernel, a collection of efficient Triton kernels.**  [Go to the original repository](https://github.com/linkedin/Liger-Kernel).
+
+---
+
+**Key Features:**
+
+*   ⚡ **Performance Boost:** Increase multi-GPU training throughput by up to 20%.
+*   💾 **Memory Savings:** Reduce memory usage by up to 60%, enabling larger models and context lengths.
+*   🔄 **Easy Integration:**  Integrates seamlessly with Hugging Face Transformers, PyTorch FSDP, and Microsoft DeepSpeed.  Use a simple patching API or compose your own models using individual kernels.
+*   🛠️ **Optimized Post-Training:** Reduce memory usage by up to 80% for alignment and distillation tasks (DPO, CPO, ORPO, etc.).
+*   🔬 **Exact Computations:** Ensures accuracy with rigorous unit tests and convergence testing.
+*   📦 **Lightweight:** Minimal dependencies, requiring only Torch and Triton.
+*   ⚙️ **Multi-GPU Support:**  Compatible with PyTorch FSDP, DeepSpeed, DDP, and more.
+*   🔄 **Trainer Framework Integration:** Seamlessly integrates with Axolotl, LLaMa-Factory, SFTTrainer, Hugging Face Trainer, SWIFT, and oumi.
+*   🚀 **Rapid Development:** Actively developed with frequent releases and contributions from the community.
+
+---
 
 <table style="width: 100%; text-align: center; border-collapse: collapse;">
     <tr>
@@ -37,9 +53,9 @@
     </tr>
 </table>
 
-<img src="https://raw.githubusercontent.com/linkedin/Liger-Kernel/main/docs/images/logo-banner.png" alt="Liger Kernel Logo">
+<img src="https://raw.githubusercontent.com/linkedin/Liger-Kernel/main/docs/images/logo-banner.png" alt="Liger Kernel Banner">
 
-[Installation](#installation) | [Getting Started](#getting-started) | [Key Features](#key-features) | [Examples](#examples) | [High-level APIs](#high-level-apis) | [Low-level APIs](#low-level-apis) | [Cite this work](#cite-this-work)
+**Quick Links:** [Installation](#installation) | [Getting Started](#getting-started) | [Examples](#examples) | [High-level APIs](#high-level-apis) | [Low-level APIs](#low-level-apis) | [Cite our work](#cite-this-work)
 
 <details>
   <summary>Latest News 🔥</summary>
@@ -55,31 +71,19 @@
 
 </details>
 
-## What is Liger Kernel?
+## Supercharge Your Model with Liger Kernel
 
-Liger Kernel is a powerful collection of Triton kernels designed specifically for accelerating LLM training. It offers significant performance improvements and memory savings by optimizing key operations within LLM architectures. It provides:
+![Banner](https://raw.githubusercontent.com/linkedin/Liger-Kernel/main/docs/images/banner.GIF)
 
-*   **Speed and Efficiency:** Increase multi-GPU training throughput by 20% and reduces memory usage by 60%.
-*   **Optimized Post-Training:** Up to 80% memory savings for alignment and distillation tasks using optimized kernels.
-*   **Hugging Face Compatibility:** Seamlessly integrates with Hugging Face models.
-
-## Key Features
-
-*   **Performance Boost:** Significantly accelerates LLM training with optimized Triton kernels.
-*   **Memory Reduction:** Reduces memory usage, enabling larger batch sizes and longer context lengths.
-*   **Ease of Use:** Simple integration via patching or modular composition.
-*   **Accuracy:** Exact computation with rigorous unit tests to ensure accuracy.
-*   **Lightweight:** Minimal dependencies for easy setup.
-*   **Multi-GPU Support:** Compatible with common multi-GPU training strategies (FSDP, DeepSpeed, etc.).
-*   **Trainer Framework Integration:**  Works with Axolotl, LLaMa-Factory, SFTTrainer, Hugging Face Trainer, SWIFT, and oumi.
-
-## Performance Highlights
+With one line of code, Liger Kernel can increase throughput by more than 20% and reduce memory usage by 60%, thereby enabling longer context lengths, larger batch sizes, and massive vocabularies.
 
 | Speed Up                 | Memory Reduction        |
 |--------------------------|-------------------------|
 | ![Speed up](https://raw.githubusercontent.com/linkedin/Liger-Kernel/main/docs/images/e2e-tps.png) | ![Memory](https://raw.githubusercontent.com/linkedin/Liger-Kernel/main/docs/images/e2e-memory.png) |
 
-> **Note:** Benchmark conditions: LLaMA 3-8B, Batch Size = 8, Data Type = `bf16`, Optimizer = AdamW, Gradient Checkpointing = True, Distributed Strategy = FSDP1 on 8 A100s. Hugging Face models start to OOM at a 4K context length, whereas Hugging Face + Liger Kernel scales up to 16K.
+> **Note:**
+> - Benchmark conditions: LLaMA 3-8B, Batch Size = 8, Data Type = `bf16`, Optimizer = AdamW, Gradient Checkpointing = True, Distributed Strategy = FSDP1 on 8 A100s.
+> - Hugging Face models start to OOM at a 4K context length, whereas Hugging Face + Liger Kernel scales up to 16K.
 
 ## Optimize Post Training with Liger Kernel
 
@@ -87,7 +91,7 @@ Liger Kernel is a powerful collection of Triton kernels designed specifically fo
     <img src="https://raw.githubusercontent.com/linkedin/Liger-Kernel/main/docs/images/post-training.png" width="50%" alt="Post Training">
 </p>
 
-Optimized post-training kernels like DPO, ORPO, and SimPO offer up to 80% memory savings. Use them as Python modules:
+We provide optimized post training kernels like DPO, ORPO, SimPO, and more which can reduce memory usage by up to 80%. You can easily use them as python modules.
 
 ```python
 from liger_kernel.chunked_loss import LigerFusedLinearORPOLoss
@@ -128,7 +132,8 @@ pip install -e .[dev] --extra-index-url https://download.pytorch.org/whl/nightly
 
 *   `transformers >= 4.x`: Required if you plan to use the transformers models patching APIs. The specific model you are working will dictate the minimum version of transformers.
 
->   **Note:**  Our kernels inherit the full spectrum of hardware compatibility offered by [Triton](https://github.com/triton-lang/triton).
+> **Note:**
+> Our kernels inherit the full spectrum of hardware compatibility offered by [Triton](https://github.com/triton-lang/triton).
 
 To install the stable version:
 
@@ -158,11 +163,11 @@ pip install -e ".[dev]"
 
 ## Getting Started
 
-Apply Liger kernels in a few ways, depending on the needed customization:
+There are a couple of ways to apply Liger kernels, depending on the level of customization required.
 
-### 1. AutoLigerKernelForCausalLM
+### 1. Use AutoLigerKernelForCausalLM
 
-The simplest: `AutoLigerKernelForCausalLM` automatically patches the model.
+Using the `AutoLigerKernelForCausalLM` is the simplest approach, as you don't have to import a model-specific patching API. If the model type is supported, the modeling code will be automatically patched using the default settings.
 
 ```python
 from liger_kernel.transformers import AutoLigerKernelForCausalLM
@@ -172,9 +177,9 @@ from liger_kernel.transformers import AutoLigerKernelForCausalLM
 model = AutoLigerKernelForCausalLM.from_pretrained("path/to/some/model")
 ```
 
-### 2. Model-Specific Patching APIs
+### 2. Apply Model-Specific Patching APIs
 
-Use the [patching APIs](#patching) to swap Hugging Face models with optimized Liger Kernels.
+Using the [patching APIs](#patching), you can swap Hugging Face models with optimized Liger Kernels.
 
 ```python
 import transformers
@@ -198,7 +203,7 @@ model = transformers.AutoModelForCausalLM("path/to/llama/model")
 
 ### 3. Compose Your Own Model
 
-Compose your models with individual [kernels](https://github.com/linkedin/Liger-Kernel?tab=readme-ov-file#model-kernels).
+You can take individual [kernels](https://github.com/linkedin/Liger-Kernel?tab=readme-ov-file#model-kernels) to compose your models.
 
 ```python
 from liger_kernel.transformers import LigerFusedLinearCrossEntropyLoss
@@ -251,8 +256,8 @@ loss.backward()
 
 ## Low-level APIs
 
-*   `Fused Linear` kernels combine linear layers with losses, reducing memory usage by up to 80% for HBM-constrained workloads.
-*   Other kernels use fusion and in-place techniques for memory and performance optimization.
+-   `Fused Linear` kernels combine linear layers with losses, reducing memory usage by up to 80% - ideal for HBM-constrained workloads.
+-   Other kernels use fusion and in-place techniques for memory and performance optimization.
 
 ### Model Kernels
 
@@ -349,6 +354,7 @@ loss.backward()
 ## Cite this work
 
 Biblatex entry:
+
 ```bib
 @inproceedings{
 hsu2025ligerkernel,

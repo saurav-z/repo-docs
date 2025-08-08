@@ -1,48 +1,21 @@
-# Context Engineering Template: Revolutionize AI Coding with Comprehensive Context
+# Context Engineering: The Future of AI Coding Assistants
 
-**Unlock the power of AI coding assistants by providing them with the complete context they need to build features end-to-end.**
+**Revolutionize your AI coding with Context Engineering, a comprehensive framework for building robust, consistent, and complex applications with AI.**
 
-Learn how to use context engineering to get 10x better results than prompt engineering and 100x better results than vibe coding.
-
-[Visit the original repository for more details](https://github.com/coleam00/context-engineering-intro)
+[View the original repository](https://github.com/coleam00/context-engineering-intro)
 
 ## Key Features
 
-*   **Comprehensive Context:** Provide AI with documentation, examples, rules, patterns, and validation for complete project awareness.
-*   **Reduced AI Failures:** Minimize agent errors by addressing context deficiencies, the leading cause of AI coding failures.
-*   **Consistent & Complex Features:** Ensure AI follows project conventions, enabling the implementation of multi-step features.
-*   **Self-Correcting Mechanism:** Employ validation loops that empower AI to autonomously rectify its own mistakes.
-*   **Automated Product Requirement Prompts (PRPs):** Leverage the `/generate-prp` command to automatically create PRPs from your feature requests.
-*   **Simplified Feature Implementation:** Use the `/execute-prp` command to guide AI in implementing features from PRPs with validation.
-
-## Quick Start
-
-```bash
-# 1. Clone the template
-git clone https://github.com/coleam00/Context-Engineering-Intro.git
-cd Context-Engineering-Intro
-
-# 2. Set up project rules (optional - template provided)
-# Edit CLAUDE.md to customize your project-specific guidelines
-
-# 3. Add code examples (highly recommended)
-# Place relevant code examples in the examples/ folder
-
-# 4. Create your initial feature request
-# Edit INITIAL.md with your feature requirements
-
-# 5. Generate a comprehensive PRP (Product Requirements Prompt)
-# In Claude Code, run:
-/generate-prp INITIAL.md
-
-# 6. Execute the PRP to implement your feature
-# In Claude Code, run:
-/execute-prp PRPs/your-feature-name.md
-```
+*   **10x Better than Prompt Engineering:** Move beyond basic prompts and provide AI with everything it needs to succeed.
+*   **Reduce AI Failures:** Equip your AI with the context it needs for consistent, reliable code generation.
+*   **Ensure Consistency:** Enforce project-specific patterns, conventions, and documentation standards.
+*   **Enable Complex Features:** Empower your AI to handle multi-step implementations with ease.
+*   **Self-Correcting:** Leverage built-in validation loops for automated error detection and resolution.
 
 ## Table of Contents
 
 *   [What is Context Engineering?](#what-is-context-engineering)
+*   [Quick Start](#quick-start)
 *   [Template Structure](#template-structure)
 *   [Step-by-Step Guide](#step-by-step-guide)
 *   [Writing Effective INITIAL.md Files](#writing-effective-initialmd-files)
@@ -52,25 +25,46 @@ cd Context-Engineering-Intro
 
 ## What is Context Engineering?
 
-Context Engineering goes beyond traditional prompt engineering by equipping AI coding assistants with a holistic understanding of your project, resulting in superior performance and reliability.
+Context Engineering goes beyond traditional prompt engineering, providing a complete system for guiding AI coding assistants.
 
 ### Prompt Engineering vs. Context Engineering
 
-*   **Prompt Engineering:**
-    *   Relies on clever wording and precise phrasing.
-    *   Limited by the ability to frame a specific task.
-    *   Analogous to a sticky note.
-*   **Context Engineering:**
-    *   A complete system for providing comprehensive context.
-    *   Includes documentation, examples, rules, patterns, and validation.
-    *   Analogous to writing a complete screenplay with all the details.
+*   **Prompt Engineering:** Relies on clever wording and specific phrasing. It is limited to task phrasing, akin to a sticky note.
+*   **Context Engineering:** Provides a complete context system, including documentation, examples, rules, patterns, and validation. It's like writing a full screenplay with all details.
 
 ### Why Context Engineering Matters
 
-1.  **Reduces AI Failures:** Most agent failures are due to context failures, not model limitations.
-2.  **Ensures Consistency:** AI consistently follows project patterns and conventions.
-3.  **Enables Complex Features:** AI can handle multi-step implementations with proper context.
-4.  **Self-Correcting:** Validation loops allow AI to fix its own mistakes.
+1.  **Reduces AI Failures:** Addresses context failures, the leading cause of agent failures.
+2.  **Ensures Consistency:** AI adheres to project-specific patterns and conventions.
+3.  **Enables Complex Features:** Supports multi-step implementations with proper context.
+4.  **Self-Correcting:** Uses validation loops for automated error correction.
+
+## Quick Start
+
+Get started with this template in a few easy steps:
+
+```bash
+# 1. Clone the template
+git clone https://github.com/coleam00/Context-Engineering-Intro.git
+cd Context-Engineering-Intro
+
+# 2. Set up project rules (optional)
+# Edit CLAUDE.md to add project guidelines
+
+# 3. Add examples (highly recommended)
+# Place relevant code examples in the examples/ folder
+
+# 4. Create your feature request
+# Edit INITIAL.md with feature requirements
+
+# 5. Generate a Product Requirements Prompt (PRP)
+# In Claude Code, run:
+/generate-prp INITIAL.md
+
+# 6. Execute the PRP to implement your feature
+# In Claude Code, run:
+/execute-prp PRPs/your-feature-name.md
+```
 
 ## Template Structure
 
@@ -78,189 +72,111 @@ Context Engineering goes beyond traditional prompt engineering by equipping AI c
 context-engineering-intro/
 ├── .claude/
 │   ├── commands/
-│   │   ├── generate-prp.md    # Generates comprehensive PRPs
-│   │   └── execute-prp.md     # Executes PRPs to implement features
+│   │   ├── generate-prp.md    # Generates PRPs
+│   │   └── execute-prp.md     # Executes PRPs
 │   └── settings.local.json    # Claude Code permissions
 ├── PRPs/
 │   ├── templates/
 │   │   └── prp_base.md       # Base template for PRPs
-│   └── EXAMPLE_multi_agent_prp.md  # Example of a complete PRP
-├── examples/                  # Your code examples (critical!)
+│   └── EXAMPLE_multi_agent_prp.md  # Example PRP
+├── examples/                  # Your code examples
 ├── CLAUDE.md                 # Global rules for AI assistant
-├── INITIAL.md               # Template for feature requests
+├── INITIAL.md               # Feature request template
 ├── INITIAL_EXAMPLE.md       # Example feature request
 └── README.md                # This file
 ```
 
-This template provides the essential framework for getting started with context engineering.
-
 ## Step-by-Step Guide
 
-### 1. Set Up Global Rules (CLAUDE.md)
+1.  **Set Up Global Rules (CLAUDE.md):** Define project-wide rules for the AI assistant. The template includes:
 
-The `CLAUDE.md` file establishes project-wide rules for the AI assistant. The provided template includes:
+    *   Project awareness
+    *   Code structure
+    *   Testing requirements
+    *   Style conventions
+    *   Documentation standards
 
-*   **Project Awareness:** Guidance on reading planning documents and checking tasks.
-*   **Code Structure:** Guidelines for file size limits and module organization.
-*   **Testing Requirements:** Unit test patterns and coverage expectations.
-*   **Style Conventions:** Language preferences and formatting rules.
-*   **Documentation Standards:** Docstring formats and commenting practices.
+2.  **Create Your Initial Feature Request (INITIAL.md):** Describe your desired feature:
 
-**Customize the provided template to align with your project's specific requirements.**
+    ```markdown
+    ## FEATURE:
+    [Describe your desired functionality]
 
-### 2. Create Your Initial Feature Request
+    ## EXAMPLES:
+    [Reference example files]
 
-Use `INITIAL.md` to describe the feature you want to build:
+    ## DOCUMENTATION:
+    [Include relevant documentation]
 
-```markdown
-## FEATURE:
-[Clearly describe what you want to build, focusing on functionality and requirements]
+    ## OTHER CONSIDERATIONS:
+    [Note specific requirements or gotchas]
+    ```
 
-## EXAMPLES:
-[List and explain relevant example files in the examples/ folder and how they should be used]
+    See `INITIAL_EXAMPLE.md` for an example.
+3.  **Generate the PRP:** Create a comprehensive implementation blueprint using the following command in Claude Code:
 
-## DOCUMENTATION:
-[Include links to relevant documentation, APIs, or server resources]
+    ```bash
+    /generate-prp INITIAL.md
+    ```
 
-## OTHER CONSIDERATIONS:
-[Mention any constraints, requirements, or common AI assistant pitfalls]
-```
+    This command:
+    *   Analyzes your codebase.
+    *   Searches for relevant documentation.
+    *   Creates a PRP in `PRPs/your-feature-name.md`.
+4.  **Execute the PRP:** Implement your feature with the following command:
 
-**Refer to `INITIAL_EXAMPLE.md` for a detailed example.**
+    ```bash
+    /execute-prp PRPs/your-feature-name.md
+    ```
 
-### 3. Generate the PRP
+    The AI coding assistant will:
 
-PRPs (Product Requirements Prompts) are comprehensive implementation blueprints that guide AI coding assistants:
-
-*   Provide complete context and documentation.
-*   Outline implementation steps with validation checks.
-*   Incorporate error handling patterns.
-*   Specify test requirements.
-
-Run this command within Claude Code:
-
-```bash
-/generate-prp INITIAL.md
-```
-
-The command automatically:
-
-1.  Reads your feature request.
-2.  Analyzes the codebase for patterns.
-3.  Searches for relevant documentation.
-4.  Creates a comprehensive PRP in `PRPs/your-feature-name.md`.
-
-**Note:** The slash commands are custom commands defined in `.claude/commands/`. You can view their implementation:
-- `.claude/commands/generate-prp.md` - See how it researches and creates PRPs
-- `.claude/commands/execute-prp.md` - See how it implements features from PRPs
-
-The `$ARGUMENTS` variable in these commands receives whatever you pass after the command name (e.g., `INITIAL.md` or `PRPs/your-feature.md`).
-
-### 4. Execute the PRP
-
-Once generated, execute the PRP to implement your feature:
-
-```bash
-/execute-prp PRPs/your-feature-name.md
-```
-
-The AI coding assistant will:
-
-1.  Read all context from the PRP.
-2.  Create a detailed implementation plan.
-3.  Execute each step with validation.
-4.  Run tests and fix any issues.
-5.  Ensure all success criteria are met.
+    *   Read the PRP.
+    *   Create an implementation plan.
+    *   Execute each step with validation.
+    *   Run tests and fix any issues.
+    *   Ensure success criteria are met.
 
 ## Writing Effective INITIAL.md Files
 
 ### Key Sections Explained
 
-**FEATURE:** Be specific and comprehensive.
-*   ❌ "Build a web scraper"
-*   ✅ "Build an async web scraper using BeautifulSoup that extracts product data from e-commerce sites, handles rate limiting, and stores results in PostgreSQL"
-
-**EXAMPLES:** Leverage the `examples/` folder to provide relevant code.
-
-*   Place code patterns in `examples/`.
-*   Reference specific files and patterns to be followed.
-*   Explain how examples should be used.
-
-**DOCUMENTATION:** Include essential resources.
-
-*   API documentation URLs.
-*   Library guides.
-*   Server documentation.
-*   Database schemas.
-
-**OTHER CONSIDERATIONS:** Capture important details.
-
-*   Authentication requirements.
-*   Rate limits or quotas.
-*   Common pitfalls.
-*   Performance requirements.
+*   **FEATURE**: Be specific about functionality.
+    *   **Good:** "Build an async web scraper using BeautifulSoup that extracts product data from e-commerce sites, handles rate limiting, and stores results in PostgreSQL"
+*   **EXAMPLES**: Leverage the `examples/` folder, explaining how they should be used.
+*   **DOCUMENTATION**: Include API docs, library guides, and server resources.
+*   **OTHER CONSIDERATIONS**: Note authentication requirements, rate limits, common pitfalls, and performance.
 
 ## The PRP Workflow
 
-### How /generate-prp Works
+### How `/generate-prp` Works
 
-The `/generate-prp` command follows this process:
+1.  **Research Phase:** Analyzes codebase, searches for implementations and conventions.
+2.  **Documentation Gathering:** Fetches API docs, library documentation, and includes gotchas.
+3.  **Blueprint Creation:** Creates a step-by-step implementation plan with validation and tests.
+4.  **Quality Check:** Scores confidence level and ensures context inclusion.
 
-1.  **Research Phase**
-    *   Analyzes your codebase for patterns.
-    *   Searches for similar implementations.
-    *   Identifies conventions to follow.
+### How `/execute-prp` Works
 
-2.  **Documentation Gathering**
-    *   Fetches relevant API documentation.
-    *   Includes library documentation.
-    *   Adds gotchas and quirks.
-
-3.  **Blueprint Creation**
-    *   Creates step-by-step implementation plan.
-    *   Includes validation gates.
-    *   Adds test requirements.
-
-4.  **Quality Check**
-    *   Scores confidence level (1-10).
-    *   Ensures all context is included.
-
-### How /execute-prp Works
-
-1.  **Load Context**: Reads the entire PRP.
+1.  **Load Context**: Reads the entire PRP
 2.  **Plan**: Creates detailed task list.
-3.  **Execute**: Implements each component.
+3.  **Execute**: Implements each component
 4.  **Validate**: Runs tests and linting.
-5.  **Iterate**: Fixes any issues found.
+5.  **Iterate**: Fixes any issues.
 6.  **Complete**: Ensures all requirements are met.
 
-See `PRPs/EXAMPLE_multi_agent_prp.md` for a complete example.
+See `PRPs/EXAMPLE_multi_agent_prp.md` for a PRP example.
 
 ## Using Examples Effectively
 
-The `examples/` folder is **critical** for success. AI coding assistants perform much better when they can see patterns to follow.
+The `examples/` folder is crucial for the AI's performance.
 
 ### What to Include in Examples
 
-1.  **Code Structure Patterns**
-    *   Module organization.
-    *   Import conventions.
-    *   Class/function patterns.
-
-2.  **Testing Patterns**
-    *   Test file structure.
-    *   Mocking approaches.
-    *   Assertion styles.
-
-3.  **Integration Patterns**
-    *   API client implementations.
-    *   Database connections.
-    *   Authentication flows.
-
-4.  **CLI Patterns**
-    *   Argument parsing.
-    *   Output formatting.
-    *   Error handling.
+1.  **Code Structure Patterns:** Module organization, import conventions, and class/function patterns.
+2.  **Testing Patterns:** Test file structure, mocking approaches, and assertion styles.
+3.  **Integration Patterns:** API client implementations, database connections, and authentication flows.
+4.  **CLI Patterns:** Argument parsing, output formatting, and error handling.
 
 ### Example Structure
 
@@ -279,35 +195,11 @@ examples/
 
 ## Best Practices
 
-### 1. Be Explicit in INITIAL.md
-
-*   Provide specific requirements and constraints.
-*   Reference examples liberally.
-*   Don't assume the AI knows your preferences.
-
-### 2. Provide Comprehensive Examples
-
-*   More examples lead to better implementations.
-*   Include error handling patterns.
-*   Show what to do and what not to do.
-
-### 3. Use Validation Gates
-
-*   PRPs include test commands that must pass.
-*   The AI will iterate until all validations succeed.
-*   This ensures working code on the first try.
-
-### 4. Leverage Documentation
-
-*   Include official API documentation.
-*   Reference specific documentation sections.
-*   Add server resources.
-
-### 5. Customize CLAUDE.md
-
-*   Include project-specific rules.
-*   Define coding standards.
-*   Add your coding conventions.
+1.  **Be Explicit in INITIAL.md:** Include specific requirements and reference examples.
+2.  **Provide Comprehensive Examples:** More examples result in better implementations.
+3.  **Use Validation Gates:** PRPs include test commands that must pass.
+4.  **Leverage Documentation:** Include API docs and server resources.
+5.  **Customize CLAUDE.md:** Add conventions, project-specific rules, and coding standards.
 
 ## Resources
 

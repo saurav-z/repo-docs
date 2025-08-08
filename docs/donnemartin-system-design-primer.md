@@ -1,40 +1,75 @@
 # System Design Primer: Your Guide to Building Scalable Systems
 
-**Master system design and ace your technical interviews with this comprehensive, open-source resource.** Dive into the core principles and patterns behind designing large-scale systems, perfect for interview preparation and building your engineering skills.  [Explore the original repository](https://github.com/donnemartin/system-design-primer) for a wealth of knowledge!
+**Master the art of designing large-scale systems with this comprehensive, community-driven resource.**
 
-## Key Features
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
+[View on GitHub](https://github.com/donnemartin/system-design-primer)
 
-*   **In-Depth Coverage:** Explore a wide array of system design topics, including performance, scalability, consistency, availability, and more.
-*   **Interview Prep:** Prepare for system design interviews with sample questions, solutions, and a study guide tailored to your timeline.
-*   **Community-Driven:** Contribute to this open-source project by fixing errors, improving content, and adding new sections.
-*   **Practical Examples:** Learn from real-world architectures and company engineering blogs to understand how systems are built in practice.
-*   **Interactive Resources:** Access Anki flashcard decks to solidify your knowledge and practice coding challenges.
+## Key Features:
+
+*   **Comprehensive Coverage:** Explore essential topics from fundamental principles to advanced architectures.
+*   **Interview Prep Focused:** Ace system design interviews with practice questions, solutions, and study guides.
+*   **Community-Driven:** Benefit from a constantly updated resource, enriched by contributions from engineers worldwide.
+*   **Real-World Examples:** Learn from case studies of popular platforms and their architectural choices.
+*   **Anki Flashcard Decks:** Reinforce your knowledge with spaced repetition using pre-made Anki decks.
+*   **Multilingual Support:** Access the guide in multiple languages (see below for links).
+
+## Why System Design Matters
+
+System design is a critical skill for engineers, enabling you to create robust, scalable, and efficient systems. This primer provides a structured approach to learning system design, preparing you for interviews and real-world challenges.
 
 ## Core Concepts
 
-*   **Performance vs. Scalability:** Understanding the difference and how to address each.
-*   **Latency vs. Throughput:** Maximizing throughput while managing acceptable latency.
-*   **CAP Theorem:** Exploring the trade-offs between consistency, availability, and partition tolerance.
-*   **Consistency Patterns:** Examining weak, eventual, and strong consistency models.
-*   **Availability Patterns:** Discovering failover and replication strategies.
-*   **Database Design:** Learning about relational, NoSQL, and caching strategies.
-*   **Asynchronism:** Utilizing message and task queues for improved performance.
-*   **Communication Protocols:** Understanding TCP, UDP, RPC, and REST.
+*   **Scalability, Performance, and Trade-offs**: Understanding the relationship between scalability and performance is crucial for efficient system design.
+*   **CAP Theorem**: Explore consistency, availability, and partition tolerance in distributed systems.
+*   **Consistency and Availability Patterns**: Study various patterns to maintain data consistency and system availability.
+*   **Core System Components**: Dive into technologies like DNS, CDNs, Load Balancers, Databases, and Caching strategies.
+*   **Communication Protocols**: Master the details of HTTP, TCP, UDP, RPC, and REST.
 
-## Sections
+## System Design Interview Prep
 
-*   **[Study Guide](#study-guide):** A structured approach to mastering system design concepts.
-*   **[How to Approach a System Design Interview Question](#how-to-approach-a-system-design-interview-question):** Step-by-step guide to tackle interview questions.
-*   **[System Design Interview Questions with Solutions](#system-design-interview-questions-with-solutions):** Practical examples, discussions, and diagrams.
-*   **[Object-Oriented Design Interview Questions with Solutions](#object-oriented-design-interview-questions-with-solutions):** Common design questions with sample solutions.
-*   **[System Design Topics: Start Here](#system-design-topics-start-here):** Foundations and a basic understanding of the common principles.
-*   **[Appendix](#appendix):** Powers of two, latency numbers, additional interview questions, and real-world architectures.
+###  Get Started
 
-## Get Started
+Begin by learning key principles and understand the core building blocks of large-scale systems.
 
-1.  **Review the Scalability Video Lecture:** [Scalability Lecture at Harvard](https://www.youtube.com/watch?v=-W9F__D3oY4)
-2.  **Review the Scalability Article:** [Scalability](https://web.archive.org/web/20221030091841/http://www.lecloud.net/tagged/scalability/chrono)
-3.  **Explore the [Index of System Design Topics](#index-of-system-design-topics):** Dive into the details and learn about trade-offs.
-4.  **Practice with [System Design Interview Questions with Solutions](#system-design-interview-questions-with-solutions):** Apply your knowledge to real-world scenarios.
+### How to Approach a System Design Interview Question
 
-This README has been optimized for SEO with keyword-rich headings, bulleted key features, and a concise introduction. The original content has been summarized and organized for easier navigation.
+*   **Step 1**: Identify key use cases, constraints, and assumptions.
+*   **Step 2**: Outline a high-level design with components.
+*   **Step 3**: Focus on the core components with detailed design and trade-offs.
+*   **Step 4**: Address scalability and other challenges.
+
+### System Design Topics Index
+*   [System Design Topics: Start Here](#system-design-topics-start-here)
+*   [Performance vs Scalability](#performance-vs-scalability)
+*   [Latency vs Throughput](#latency-vs-throughput)
+*   [Availability vs Consistency](#availability-vs-consistency)
+*   [Consistency Patterns](#consistency-patterns)
+*   [Availability Patterns](#availability-patterns)
+*   [Domain Name System](#domain-name-system)
+*   [Content Delivery Network](#content-delivery-network)
+*   [Load Balancer](#load-balancer)
+*   [Reverse Proxy](#reverse-proxy-web-server)
+*   [Application Layer](#application-layer)
+*   [Database](#database)
+*   [Cache](#cache)
+*   [Asynchronism](#asynchronism)
+*   [Communication](#communication)
+*   [Security](#security)
+
+### System Design and Object-Oriented Design Questions and Solutions
+
+Explore example questions and detailed solutions to prepare for system design and object-oriented design interviews.
+
+*   [System design interview questions with solutions](#system-design-interview-questions-with-solutions)
+*   [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions)
+
+## Contribute
+
+Help improve the guide by submitting pull requests to fix errors, improve sections, or add new sections.
+
+## Translations
+
+*[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) | [العَرَبِيَّة‎](https://github.com/donnemartin/system-design-primer/issues/170) ∙ [বাংলা](https://github.com/donnemartin/system-design-primer/issues/220) ∙ [Português do Brasil](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [Deutsch](https://github.com/donnemartin/system-design-primer/issues/186) ∙ [ελληνικά](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [עברית](https://github.com/donnemartin/system-design-primer/issues/272) ∙ [Italiano](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [한국어](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [فارسی](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polski](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [русский язык](https://github.com/donnemartin/system-design-primer/issues/87) ∙ [Español](https://github.com/donnemartin/system-design-primer/issues/136) ∙ [ภาษาไทย](https://github.com/donnemartin/system-design-primer/issues/187) ∙ [Türkçe](https://github.com/donnemartin/system-design-primer/issues/39) ∙ [tiếng Việt](https://github.com/donnemartin/system-design-primer/issues/127) ∙ [Français](https://github.com/donnemartin/system-design-primer/issues/250) | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)*
+
+**Help [translate](TRANSLATIONS.md) this guide!**

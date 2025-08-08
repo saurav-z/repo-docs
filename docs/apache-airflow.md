@@ -1,58 +1,66 @@
-# Apache Airflow: Orchestrate Your Workflows as Code
+# Apache Airflow: Orchestrate, Schedule, and Monitor Workflows at Scale
 
-**Automate, schedule, and monitor your workflows with Apache Airflow – the open-source platform that empowers data engineers.**
+**Apache Airflow** is a leading open-source platform for programmatically authoring, scheduling, and monitoring complex data pipelines.  This powerful tool allows data engineers and data scientists to define workflows as code, making them more manageable, versionable, and collaborative.  [Explore the official Apache Airflow repository](https://github.com/apache/airflow).
 
 [![License](https://img.shields.io/:license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
 [![PyPI version](https://badge.fury.io/py/apache-airflow.svg)](https://badge.fury.io/py/apache-airflow)
 [![Docker Pulls](https://img.shields.io/docker/pulls/apache/airflow.svg)](https://hub.docker.com/r/apache/airflow)
 [![Contributors](https://img.shields.io/github/contributors/apache/airflow)](https://github.com/apache/airflow/graphs/contributors)
+[![Slack Status](https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social)](https://s.apache.org/airflow-slack)
 
-[Apache Airflow](https://github.com/apache/airflow) is a powerful platform for defining, scheduling, and monitoring complex workflows. Built on the principle of "configuration as code," Airflow allows you to create data pipelines that are maintainable, versionable, and easily collaborative.
+## Key Features
 
-**Key Features:**
+*   **Dynamic Workflows:** Define pipelines using Python code for flexibility and parameterization.
+*   **Extensible Architecture:** Leverage a wide range of built-in operators and easily create custom ones.
+*   **User-Friendly Interface:** Monitor progress, visualize pipelines, and troubleshoot issues with an intuitive web UI.
+*   **Scalable Scheduling:**  The Airflow scheduler executes tasks on a distributed array of workers, ensuring efficient execution.
+*   **Idempotent Tasks:** Designed with a focus on idempotent tasks, promoting data integrity.
 
-*   **Dynamic:** Define pipelines as code, allowing for dynamic DAG generation and flexible parameterization.
-*   **Extensible:** Leverage a wide range of built-in operators and easily extend Airflow to meet specific needs.
-*   **Flexible:** Customize your workflows using the Jinja templating engine for rich control.
-*   **Scalable:** Execute tasks on an array of workers, enabling scalability for demanding workloads.
-*   **User-Friendly UI:** Visualize pipelines, monitor progress, and troubleshoot issues with an intuitive web interface.
+## Core Principles
 
-**Getting Started:**
+*   **Dynamic:** Pipelines are defined in code, enabling dynamic DAG generation and parameterization.
+*   **Extensible:** The Airflow framework includes a wide range of built-in operators and can be extended to fit your needs.
+*   **Flexible:** Airflow leverages the [**Jinja**](https://jinja.palletsprojects.com) templating engine, allowing rich customizations.
 
-*   **Installation:**  Refer to the detailed [INSTALLING.md](INSTALLING.md) file for comprehensive instructions.
-*   **Documentation:**  Explore the official Airflow documentation for [installation](https://airflow.apache.org/docs/apache-airflow/stable/installation/), [getting started](https://airflow.apache.org/docs/apache-airflow/stable/start.html), and [tutorials](https://airflow.apache.org/docs/apache-airflow/stable/tutorial/).
-*   **Community:**  Join the conversation on [Slack](https://s.apache.org/airflow-slack) and contribute to the project on [GitHub](https://github.com/apache/airflow).
+## Getting Started
 
-**Core Concepts:**
+Jumpstart your data pipeline journey with Airflow!  Visit the [official Airflow documentation](https://airflow.apache.org/docs/apache-airflow/stable/) for installation, getting started guides, and comprehensive tutorials.
 
-*   **DAGs (Directed Acyclic Graphs):**  Workflows are defined as code, structured as DAGs.
-*   **Operators:** Pre-built components for executing tasks (e.g., running shell commands, interacting with databases).
-*   **Schedulers:** Responsible for triggering and managing workflow runs.
-*   **Workers:** Execute tasks assigned by the scheduler.
-*   **XComs:** Allows tasks to pass metadata to each other.
+## Installation
 
-**Benefits:**
+For detailed instructions on installing and configuring Apache Airflow, please refer to the [INSTALLING.md](INSTALLING.md) file within this repository.  You can also install Airflow from PyPI.
 
-*   **Improved Maintainability:** Workflows defined as code are easier to understand, modify, and maintain.
-*   **Increased Collaboration:** Version control and code review facilitate teamwork.
-*   **Enhanced Testability:** Unit tests and integration tests ensure workflow reliability.
-*   **Simplified Monitoring:**  Airflow's UI provides real-time visibility into pipeline performance.
+```bash
+pip install 'apache-airflow==3.0.3' \
+ --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.3/constraints-3.10.txt"
+```
 
-**Additional Information:**
+## User Interface
 
-*   **Official Source Code:**  All official releases are available from the [ASF Distribution Directory](https://downloads.apache.org/airflow).
-*   **Installing from PyPI:** Install Airflow via pip: `pip install 'apache-airflow==3.0.3' --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.3/constraints-3.10.txt"`
-*   **User Interface:** (Briefly describe UI features - see original README)
-*   **Contributing:**  Contribute to Apache Airflow – see our [contributors' guide](https://github.com/apache/airflow/blob/main/contributing-docs/README.rst).
+*   **DAGs:** Overview of all DAGs in your environment.
+    ![DAGs](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/dags.png)
+*   **Assets:** Overview of Assets with dependencies.
+    ![Asset Dependencies](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/assets_graph.png)
+*   **Grid:** Grid representation of a DAG that spans across time.
+    ![Grid](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/grid.png)
+*   **Graph:** Visualization of a DAG's dependencies and their current status for a specific run.
+    ![Graph](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/graph.png)
+*   **Home:** Summary statistics of your Airflow environment.
+    ![Home](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/home.png)
+*   **Backfill:** Backfilling a DAG for a specific date range.
+    ![Backfill](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/backfill.png)
+*   **Code:** Quick way to view source code of a DAG.
+    ![Code](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/code.png)
 
-**Links:**
+## Links
 
 *   [Documentation](https://airflow.apache.org/docs/apache-airflow/stable/)
 *   [Chat](https://s.apache.org/airflow-slack)
 *   [Community Information](https://airflow.apache.org/community/)
 
-**Sponsors:**
+## Sponsors
 
-(Include sponsor logos as provided in original README)
+The CI infrastructure for Apache Airflow has been sponsored by:
 
----
+<a href="https://astronomer.io"><img src="https://assets2.astronomer.io/logos/logoForLIGHTbackground.png" alt="astronomer.io" width="250px"></a>
+<a href="https://aws.amazon.com/opensource/"><img src="https://github.com/apache/airflow/blob/main/providers/amazon/docs/integration-logos/AWS-Cloud-alt_light-bg@4x.png?raw=true" alt="AWS OpenSource" width="130px"></a>

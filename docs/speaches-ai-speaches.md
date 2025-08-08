@@ -1,40 +1,39 @@
-# Speaches: Your Open-Source AI Companion for Speech & Audio
+# Speaches: Your Open-Source AI Speech & Transcription Toolkit
 
-**Looking for a powerful, open-source alternative to OpenAI for speech-to-text, text-to-speech, and audio generation?** Speaches offers an OpenAI API-compatible server, empowering you to easily integrate cutting-edge AI audio capabilities into your projects. [(View the original project on GitHub)](https://github.com/speaches-ai/speaches)
+**Unlock the power of AI-powered speech with Speaches, an OpenAI API-compatible server for streaming transcription, translation, and speech generation.**
 
-## Key Features:
+[View the original repository on GitHub](https://github.com/speaches-ai/speaches)
 
-*   **OpenAI API Compatibility:** Seamlessly integrates with all tools and SDKs designed for OpenAI's API.
-*   **Versatile Audio Generation:** Leverage the chat completions endpoint for a variety of use cases:
-    *   Generate spoken audio summaries from text.
-    *   Perform sentiment analysis on recordings.
-    *   Enable asynchronous speech-to-speech interactions with AI models.
-*   **Real-time Streaming:** Receive transcription results via Server-Sent Events (SSE) as the audio is processed, eliminating the need to wait for complete transcription.
-*   **Dynamic Model Management:** Automatically load and unload models based on your requests, optimizing resource usage.
-*   **High-Quality Text-to-Speech (TTS):** Utilizes the top-performing [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M) model (as ranked in the [TTS Arena](https://huggingface.co/spaces/Pendrokar/TTS-Spaces-Arena)) along with `piper` models for exceptional speech synthesis.
-*   **GPU & CPU Support:** Benefit from optimized performance regardless of your hardware setup.
-*   **Easy Deployment:** Deploy with Docker Compose or Docker.
-*   **Real-time API:** Access real-time audio processing capabilities.
-*   **Highly Configurable:** Tailor Speaches to your specific needs with extensive configuration options.
+**Key Features:**
 
-## Demos
+*   **OpenAI API Compatibility:** Seamlessly integrates with all tools and SDKs designed for the OpenAI API, making it easy to adopt.
+*   **Versatile Audio Generation:**
+    *   Generate spoken audio summaries from text inputs (text-to-speech).
+    *   Perform sentiment analysis on audio recordings (speech-to-text).
+    *   Enable async speech-to-speech interactions with AI models.
+*   **Streaming Transcription:** Receive transcriptions in real-time via Server-Sent Events (SSE) as audio is processed, enhancing user experience.
+*   **Dynamic Model Management:** Automatically loads and unloads models based on your request, optimizing resource utilization.
+*   **Text-to-Speech (TTS) Capabilities:** Utilizes cutting-edge TTS models, including `kokoro` (Top-ranked in TTS Arena) and `piper`, delivering high-quality voice synthesis.
+*   **GPU & CPU Support:** Flexible hardware support for optimal performance.
+*   **Deployment Options:** Easily deployable using Docker Compose and Docker.
+*   **Realtime API:** Provides a dedicated realtime API for instant speech interactions.
+*   **Highly Configurable:** Tailor `speaches` to your specific needs with extensive configuration options.
 
-### Realtime API
+**Powered By:**
 
-![Realtime API Demo](https://github.com/user-attachments/assets/457a736d-4c29-4b43-984b-05cc4d9995bc)
+*   **Speech-to-Text:** [faster-whisper](https://github.com/SYSTRAN/faster-whisper)
+*   **Text-to-Speech:** [piper](https://github.com/rhasspy/piper) and [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M)
 
-### Streaming Transcription
+**Get Started:**
 
-TODO
+Explore the detailed documentation for installation and usage: [speaches.ai](https://speaches.ai/)
 
-### Speech Generation
+**Demos:**
 
-![Speech Generation Demo](https://github.com/user-attachments/assets/0021acd9-f480-4bc3-904d-831f54c4d45b)
+*   **Realtime API:** [Link to demo video]
+*   **Streaming Transcription:** (Coming Soon)
+*   **Speech Generation:** [Link to demo video]
 
-## Get Started
+**Contribute & Support:**
 
-For installation instructions, usage guides, and detailed configuration options, visit the official documentation: [speaches.ai](https://speaches.ai/)
-
-## Contribute
-
-Encounter a bug, have a question, or a feature suggestion? Please open an issue on GitHub!
+If you encounter any issues, have questions, or suggestions, please [create an issue](https://github.com/speaches-ai/speaches/issues) in the repository.

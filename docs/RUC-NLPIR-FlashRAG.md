@@ -1,56 +1,52 @@
-# FlashRAG: Your Toolkit for Efficient RAG Research
+# FlashRAG: Your Toolkit for Cutting-Edge RAG Research
 
-> Unleash the power of Retrieval-Augmented Generation (RAG) with FlashRAG, a Python toolkit designed to accelerate your research and development in the RAG domain.  [Explore the FlashRAG repository on GitHub](https://github.com/RUC-NLPIR/FlashRAG).
+**Unlock the power of Retrieval-Augmented Generation (RAG) with FlashRAG!** This Python toolkit provides everything you need to efficiently reproduce, develop, and experiment with state-of-the-art RAG models. From comprehensive benchmark datasets to pre-implemented advanced algorithms, FlashRAG empowers you to push the boundaries of RAG research.
 
-<div align="center">
-<a href="https://arxiv.org/abs/2405.13576" target="_blank"><img src=https://img.shields.io/badge/arXiv-b5212f.svg?logo=arxiv></a>
-<a href="https://huggingface.co/datasets/RUC-NLPIR/FlashRAG_datasets/" target="_blank"><img src=https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace%20Datasets-27b3b4.svg></a>
-<a href="https://www.modelscope.cn/datasets/hhjinjiajie/FlashRAG_Dataset" target="_blank"><img src=https://custom-icon-badges.demolab.com/badge/ModelScope%20Datasets-624aff?style=flat&logo=modelscope&logoColor=white></a>
-<a href="https://deepwiki.com/RUC-NLPIR/FlashRAG"><img src="https://devin.ai/assets/deepwiki-badge.png" alt="DeepWiki Document" height="20"/></a>
-<a href="https://github.com/RUC-NLPIR/FlashRAG/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/LICENSE-MIT-green"></a>
-<a><img alt="Static Badge" src="https://img.shields.io/badge/made_with-Python-blue"></a>
-</div>
+[![](https://img.shields.io/badge/arXiv-b5212f.svg?logo=arxiv)](https://arxiv.org/abs/2405.13576)
+[![](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace%20Datasets-27b3b4.svg)](https://huggingface.co/datasets/RUC-NLPIR/FlashRAG_datasets/)
+[![](https://custom-icon-badges.demolab.com/badge/ModelScope%20Datasets-624aff?style=flat&logo=modelscope&logoColor=white)](https://www.modelscope.cn/datasets/hhjinjiajie/FlashRAG_Dataset)
+[![](https://devin.ai/assets/deepwiki-badge.png)](https://deepwiki.com/RUC-NLPIR/FlashRAG)
+[![](https://img.shields.io/badge/LICENSE-MIT-green)](https://github.com/RUC-NLPIR/FlashRAG/blob/main/LICENSE)
+[![](https://img.shields.io/badge/made_with-Python-blue)](https://www.python.org/)
 
-<h4 align="center">
+[**Original Repo:**](https://github.com/RUC-NLPIR/FlashRAG)
 
-<p>
-<a href="#wrench-installation">Installation</a> |
-<a href="#sparkles-features">Features</a> |
-<a href="#rocket-quick-start">Quick-Start</a> |
-<a href="#gear-components"> Components</a> |
-<a href="#art-flashrag-ui"> FlashRAG-UI</a> |
-<a href="#robot-supporting-methods"> Supporting Methods</a> |
-<a href="#notebook-supporting-datasets--document-corpus"> Supporting Datasets</a> |
-<a href="#raised_hands-additional-faqs"> FAQs</a>
-</p>
+**Key Features:**
 
-</h4>
-
-FlashRAG empowers researchers to easily reproduce state-of-the-art (SOTA) RAG models and build their own customized RAG pipelines. This toolkit provides a comprehensive framework, pre-processed datasets, and pre-implemented algorithms for efficient RAG research.
+*   **Modular and Extensible Framework:** Easily assemble complex RAG pipelines with customizable components like retrievers, rerankers, generators, and more.
+*   **Extensive Benchmark Datasets:** Evaluate your models on **36 pre-processed RAG datasets**, ensuring robust performance assessment.
+*   **Advanced RAG Algorithms:** Access **23 pre-implemented, state-of-the-art RAG algorithms** with reported results, streamlining your research.
+*   **Reasoning-Powered RAG:** Explore the cutting edge with support for **7 reasoning-based methods** that excel in complex, multi-hop tasks.
+*   **Efficient Preprocessing:** Simplify your workflow with tools for corpus processing, index building, and document pre-retrieval.
+*   **Optimized Execution:** Leverage libraries like vLLM and FastChat for faster LLM inference, and Faiss for efficient vector indexing.
+*   **User-Friendly UI:** Quickly configure, experiment with, and evaluate RAG methods through our intuitive, easy-to-use FlashRAG-UI.
 
 <p align="center">
-<img src="asset/framework.jpg">
+    <img src="asset/framework.jpg" alt="Framework Overview" />
 </p>
 
-## Key Features
+## Quick Navigation
 
-*   **Extensive and Customizable Framework:** Assemble complex pipelines with modular components like retrievers, rerankers, generators, and compressors.
-*   **Comprehensive Benchmark Datasets:** Evaluate RAG models with 36 pre-processed benchmark datasets.
-*   **Pre-implemented Advanced RAG Algorithms:** Reproduce results quickly with 23 advanced RAG algorithms.
-*   **🚀 Reasoning-Based Methods:**  **NEW!**  Explore cutting-edge research with support for 7 reasoning-based methods, combining reasoning and retrieval.
-*   **Efficient Preprocessing:** Simplify your RAG workflow with streamlined corpus and index preparation.
-*   **Optimized Execution:** Accelerate inference using vLLM, FastChat for LLM inference, and Faiss for vector indexing.
-*   **Easy-to-Use UI:** Easily configure, experiment with, and evaluate RAG baselines using a user-friendly visual interface.
+*   [🚀 Installation](#wrench-installation)
+*   [✨ Features](#sparkles-features)
+*   [🧭 Quick Start](#rocket-quick-start)
+*   [🛠️ Components](#gear-components)
+*   [🖼️ FlashRAG-UI](#art-flashrag-ui)
+*   [🧠 Supporting Methods](#robot-supporting-methods)
+*   [📚 Supporting Datasets](#notebook-supporting-datasets--document-corpus)
+*   [❓ FAQs](#raised_hands-additional-faqs)
+*   [📄 License](#bookmark-license)
+*   [🌟 Citation](#star2-citation)
 
-## :wrench: Installation
+## 🚀 Installation
 
-Get started by installing FlashRAG using pip:
+Install FlashRAG using pip:
 
 ```bash
 pip install flashrag-dev --pre
 ```
 
-Or clone the repository and install:
+Alternatively, install from source:
 
 ```bash
 git clone https://github.com/RUC-NLPIR/FlashRAG.git
@@ -58,193 +54,139 @@ cd FlashRAG
 pip install -e .
 ```
 
-For optional dependencies like vLLM, sentence-transformers, and pyserini, use:
+**Optional Dependencies:**
 
 ```bash
+# Install all extra dependencies
 pip install flashrag-dev[full]
+
+# Install vllm for faster speed
+pip install vllm>=0.4.1
+
+# Install sentence-transformers
+pip install sentence-transformers
+
+# Install pyserini for bm25
+pip install pyserini
 ```
 
-Follow the instructions in the original README for specific installation instructions regarding `faiss`.
+For FAISS installation, use conda:
 
-## :rocket: Quick Start
+```bash
+# CPU-only version
+conda install -c pytorch faiss-cpu=1.8.0
 
-FlashRAG provides ready-to-use components for building RAG pipelines.
+# GPU(+CPU) version
+conda install -c pytorch -c nvidia faiss-gpu=1.8.0
+```
 
-### Corpus Construction
+## ✨ Features
 
-1.  Prepare your corpus as a `jsonl` file.
+*   **Modular Design:** Build custom RAG pipelines with flexible components (retrievers, rerankers, generators, etc.).
+*   **Comprehensive Benchmarks:** Access **36 pre-processed RAG benchmark datasets** for thorough evaluation.
+*   **State-of-the-Art Implementations:** Experiment with **23 advanced RAG algorithms**, ready to run with reported results.
+*   **Reasoning-Enhanced RAG:** Includes **7 reasoning-based methods** for improved performance on challenging tasks.
+*   **Simplified Workflow:** Streamline your experiments with efficient preprocessing tools.
+*   **Optimized Performance:** Leverage vLLM, FastChat, and Faiss for faster inference and index management.
+*   **User-Friendly UI:** Visualize and experiment with RAG methods easily using FlashRAG-UI.
+
+## 🧭 Quick Start
+
+1.  **Corpus Construction:** Prepare your data in `jsonl` format:
 
     ```jsonl
     {"id": "0", "contents": "..."}
     {"id": "1", "contents": "..."}
     ```
 
-2.  See [Processing Wikipedia](./docs/original_docs/process-wiki.md) to convert your data.
+2.  **Index Construction:** Choose your retrieval method (dense, sparse, or SPLADE) and build your index using the provided scripts:
 
-### Index Construction
+    *   **Dense Retrieval:**
 
-Choose your retrieval method and build an index using the provided scripts.
+        ```bash
+        python -m flashrag.retriever.index_builder \
+            --retrieval_method e5 \
+            --model_path /model/e5-base-v2/ \
+            --corpus_path indexes/sample_corpus.jsonl \
+            --save_dir indexes/ \
+            --use_fp16 \
+            --max_length 512 \
+            --batch_size 256 \
+            --pooling_method mean \
+            --faiss_type Flat
+        ```
 
-#### Dense Retrieval Methods
+    *   **Sparse Retrieval (BM25):**
 
-```bash
-python -m flashrag.retriever.index_builder \
-  --retrieval_method e5 \
-  --model_path /model/e5-base-v2/ \
-  --corpus_path indexes/sample_corpus.jsonl \
-  --save_dir indexes/ \
-  --use_fp16 \
-  --max_length 512 \
-  --batch_size 256 \
-  --pooling_method mean \
-  --faiss_type Flat
-```
+        ```bash
+        python -m flashrag.retriever.index_builder \
+            --retrieval_method bm25 \
+            --corpus_path indexes/sample_corpus.jsonl \
+            --bm25_backend bm25s \
+            --save_dir indexes/
+        ```
+3.  **Using the ready-made pipeline**
+    *   Load config file, you can input yaml files or config variables
+    *   Load corresponding dataset and initialize the pipeline
+    *   Specify input prompt using `PromptTemplete`
+    *   execute `pipeline.run` to get the final result
 
-*   Refer to the original documentation for parameter details.
+4.  **Build your own pipeline**
+    *   Inherit `BasicPipeline`
+    *   Initialize the components you need
+    *   Complete the `run` function
 
-#### Sparse Retrieval Methods (BM25)
+5.  **Just use components**
+    *   Refer to the [<u>basic introduction of the components</u>](./docs/original_docs/basic_usage.md)
 
-##### Building Index with BM25s
+## 🛠️ Components
 
-```bash
-python -m flashrag.retriever.index_builder \
-  --retrieval_method bm25 \
-  --corpus_path indexes/sample_corpus.jsonl \
-  --bm25_backend bm25s \
-  --save_dir indexes/
-```
+FlashRAG offers a comprehensive suite of RAG components:
 
-##### Building Index with Pyserini
+**RAG Components:**
 
-```bash
-python -m flashrag.retriever.index_builder \
-  --retrieval_method bm25 \
-  --corpus_path indexes/sample_corpus.jsonl \
-  --bm25_backend pyserini \
-  --save_dir indexes/
-```
+| Type        | Module            | Description                                                 |
+| ----------- | ----------------- | ----------------------------------------------------------- |
+| Judger      | SKR Judger        | Determines retrieval based on the SKR method.               |
+| Retriever   | Dense/BM25/Reranker | Various retrieval methods (Bi-Encoder, BM25, Cross-Encoder).  |
+| Refiner     | Extractive/Abstractive | Refine inputs using different strategies.                  |
+| Generator   | Encoder-Decoder/Decoder-only | Different generator models including FastChat/vllm     |
 
-### Use Ready-Made Pipeline
+**Pipelines:**
 
-Load a pipeline and configure it with a yaml or dictionary config
+| Type         | Module              | Description                                                                                                |
+| ------------ | ------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Sequential   | Sequential Pipeline | Linear execution of RAG process                                                                            |
+| Conditional  | Conditional Pipeline| Different paths for different query types                                                                    |
+| Branching    | REPLUG/SuRe Pipeline    | Executes multiple paths in parallel                                                                                               |
+| Loop         | Iterative/Self-Ask/Self-RAG/FLARE/IRCoT/Reasoning Pipeline | Iterative RAG processes                                                                                                 |
 
-```python
-from flashrag.config import Config
-from flashrag.utils import get_dataset
-from flashrag.pipeline import SequentialPipeline
-from flashrag.prompt import PromptTemplate
+## 🖼️ FlashRAG-UI
 
-# hybrid load configs
-config_dict = {'data_dir': 'dataset/'}
-my_config = Config(
-    config_file_path = 'my_config.yaml',
-    config_dict = config_dict
-)
+<p>Explore and experiment with RAG methods using the intuitive <strong>FlashRAG-UI</strong> interface, which is both user-friendly and visually appealing.
+</p>
 
-all_split = get_dataset(my_config)
-test_data = all_split['test']
+### FlashRAG-UI Features:
+*   **Easy Configuration Loading:** Quickly load RAG method parameters and configuration files.
+*   **Rapid Method Exploration:** Load corpora and index files to explore various RAG methods.
+*   **Efficient Benchmark Reproduction:** Easily reproduce built-in baseline methods and benchmarks.
 
-pipeline = SequentialPipeline(my_config)
-
-# Customize prompts
-prompt_templete = PromptTemplate(
-    config,
-    system_prompt = "Answer the question based on the given document. Only give me the answer and do not output any other words.\nThe following are given documents.\n\n{reference}",
-    user_prompt = "Question: {question}\nAnswer:"
-)
-pipeline = SequentialPipeline(
-  my_config,
-  prompt_template = prompt_templete
-)
-
-output_dataset = pipeline.run(test_data, do_eval=True)
-```
-
-### Build Your Own Pipeline
-
-Inherit `BasicPipeline` and create your custom RAG process.
-
-```python
-from flashrag.pipeline import BasicPipeline
-from flashrag.utils import get_retriever, get_generator
-
-class ToyPipeline(BasicPipeline):
-  def __init__(self, config, prompt_templete=None):
-    # Load your own components
-    pass
-
-  def run(self, dataset, do_eval=True):
-    # Complete your own process logic
-
-    # get attribute in dataset using `.`
-    input_query = dataset.question
-    ...
-    # use `update_output` to save intermeidate data
-    dataset.update_output("pred",pred_answer_list)
-    dataset = self.evaluate(dataset, do_eval=do_eval)
-    return dataset
-```
-
-## :gear: Components
-
-FlashRAG provides the flexibility to create custom pipelines:
-
-#### RAG Components
-
-| Type        | Module            | Description                                                        |
-| ----------- | ----------------- | ------------------------------------------------------------------ |
-| Judger      | SKR Judger        | Judge whether to retrieve using <a href="https://aclanthology.org/2023.findings-emnlp.691.pdf">SKR</a> method           |
-| Retriever   | Dense Retriever   | Bi-encoder models like dpr, bge, e5, using faiss.                  |
-|             | BM25 Retriever    | Sparse retrieval method based on Lucene.                           |
-|             | Bi-Encoder Reranker| Calculate matching score using bi-encoder          |
-|             | Cross-Encoder Reranker| Calculate matching score using cross-encoder         |
-| Refiner     | Extractive Refiner| Refine input by extracting important context            |
-|             | Abstractive Refiner| Refine input through seq2seq model           |
-|             | LLMLingua Refiner   | <a href="https://aclanthology.org/2023.emnlp-main.825/">LLMLingua-series</a> prompt compressor |
-|             | SelectiveContext Refiner   | <a href="https://arxiv.org/abs/2310.06201">Selective-Context</a> prompt compressor |
-|             | KG Refiner        | Use <a hred='https://arxiv.org/abs/2406.11460'>Trace method to construct a knowledge graph |
-| Generator   | Encoder-Decoder Generator | Encoder-Decoder model, supporting <a href="https://arxiv.org/abs/2007.01282">Fusion-in-Decoder (FiD)</a> |
-|             | Decoder-only Generator | Native transformers implementation                 |
-|             | FastChat Generator  | Accelerate with <a href="https://github.com/lm-sys/FastChat">FastChat</a> |
-|             | vllm Generator      | Accelerate with <a href="https://github.com/vllm-project/vllm">vllm</a> |
-
-#### Pipelines
-
-| Type         | Module             | Description                                                                      |
-| ------------ | ------------------ | -------------------------------------------------------------------------------- |
-| Sequential   | Sequential Pipeline| Linear execution, supporting refiner, reranker                                 |
-| Conditional  | Conditional Pipeline| Different paths for different query types                                        |
-| Branching    | REPLUG Pipeline    | Integrate probabilities in multiple generation paths.                           |
-| Branching    | SuRe Pipeline    | Ranking and merging generated results based on each document.                           |
-| Loop         | Iterative Pipeline | Alternating retrieval and generation                                             |
-|              | Self-Ask Pipeline  | Decompose complex problems using <a href="https://arxiv.org/abs/2210.03350">self-ask</a>      |
-|              | Self-RAG Pipeline  | Adaptive retrieval, critique, and generation                                      |
-|              | FLARE Pipeline     | Dynamic retrieval during generation                                               |
-|              | IRCoT Pipeline     | Integrate retrieval with CoT                                                      |
-|              | Reasoning Pipeline   | Reasoning with retrieval         |
-
-## :art: FlashRAG-UI
-
-FlashRAG-UI is a user-friendly interface to easily and quickly configure and experience RAG methods.
-
-### Features
-
-*   One-Click configuration
-*   Quick Method Experience
-*   Efficient Benchmark Reproduction
+To launch the UI:
 
 ```bash
 cd webui
 python interface.py
 ```
 
-## :robot: Supporting Methods
+## 🧠 Supporting Methods
 
-FlashRAG implements **23 works** with the following default settings:
+We have implemented **23 works** with a consistent setting of:
 
 -   **Generator:** LLAMA3-8B-instruct with input length of 2048
 -   **Retriever:** e5-base-v2 as embedding model, retrieve 5 docs per query
--   **Prompt:** A consistent default prompt (see [<u>method details</u>](./docs/original_docs/baseline_details.md)).
+-   **Prompt:** A consistent default prompt, template can be found in the [<u>method details</u>](./docs/original_docs/baseline_details.md).
+
+We also provide the result of our supporting methods, please see below table:
 
 | Method                                                                                    | Type        | NQ (EM) | TriviaQA (EM) | Hotpotqa (F1) | 2Wiki (F1) | PopQA (F1) | WebQA(EM) | Specific setting                                |
 | ----------------------------------------------------------------------------------------- | ----------- | ------- | ------------- | ------------- | ---------- | ---------- | --------- | ----------------------------------------------- |
@@ -265,9 +207,11 @@ FlashRAG implements **23 works** with the following default settings:
 | [FLARE](https://arxiv.org/abs/2305.06983)                                                 | Loop        | 22.5    | 55.8          | 28.0          | 33.9       | 20.7       | 20.2      |                                                 |
 | [Iter-Retgen](https://arxiv.org/abs/2305.15294), [ITRG](https://arxiv.org/abs/2310.05149) | Loop        | 36.8    | 60.1          | 38.3          | 21.6       | 37.9       | 18.2      |                                                 |
 | [IRCoT](https://aclanthology.org/2023.acl-long.557.pdf)                                   | Loop        | 33.3    | 56.9          | 41.5          | 32.4       | 45.6       | 20.7      |                                                 |
-| [RQRAG](https://arxiv.org/abs/2404.00610)                                   | Loop        | 32.6    | 52.5          | 33.5          | 35.8       | 46.4       | 26.2      |  Use trained rqrag-llama2-7B                                               |
+| [RQRAG](https://arxiv.org/abs/2404.00610)                                   | Loop        | 32.6    | 52.5          | 33.5          | 35.8       | 46.4       | 26.2      |  Use trained rqrag-llama2-7B                                               | 
 
-#### 🚀 Reasoning-based Methods (NEW!)
+**🚀 Reasoning-based Methods (NEW!)**
+
+We now support **7 reasoning-based methods** that combine reasoning ability with retrieval, achieving superior performance on complex multi-hop tasks:
 
 | Method                                                                                    | Type        | NQ (EM) | TriviaQA (EM) | PopQA (EM) | Hotpotqa (F1) | 2Wiki (F1) |  Musique (F1) | Bamboogle (F1) | Specific setting                             |
 | ----------------------------------------------------------------------------------------- | ----------- | ------- | ------- | ------------- | ------------- | ---------- | ---------- | --------- | ----------------------------------------------- |
@@ -279,54 +223,76 @@ FlashRAG implements **23 works** with the following default settings:
 | [CoRAG](https://arxiv.org/abs/2503.21729) | Reasoning | 40.9 | 63.1 | 36.0 | 56.6 | 60.7 | 31.9 | 54.1 | CoRAG-Llama3.1-8B-MultihopQA |
 | [SimpleDeepSearcher](https://arxiv.org/pdf/2505.16834) | Reasoning | 36.1 | 61.6 | 42.0 | 49.0 | 49.1 | 24.7 | 57.7 | Qwen-7B-SimpleDeepSearcher |
 
-## :notebook: Supporting Datasets & Document Corpus
+## 📚 Supporting Datasets
 
-### Datasets
+FlashRAG provides access to a comprehensive collection of datasets.  All datasets are available at [<u>Huggingface datasets</u>](https://huggingface.co/datasets/RUC-NLPIR/FlashRAG_datasets).
 
-FlashRAG supports a wide range of datasets for RAG research, available on [Huggingface datasets](https://huggingface.co/datasets/RUC-NLPIR/FlashRAG_datasets).
+**Dataset Overview:**
 
 | Task                      | Dataset Name    | Knowledge Source | # Train   | # Dev   | # Test |
 | ------------------------- | --------------- | ---------------- | --------- | ------- | ------ |
 | QA                        | NQ              | wiki             | 79,168    | 8,757   | 3,610  |
 | QA                        | TriviaQA        | wiki & web       | 78,785    | 8,837   | 11,313 |
 | QA                        | PopQA           | wiki             | /         | /       | 14,267 |
-| ...                       | ...             | ...              | ...       | ...     | ...    |
+| QA                        | SQuAD           | wiki             | 87,599    | 10,570  | /      |
+| QA                        | MSMARCO-QA      | web              | 808,731   | 101,093 | /      |
+| QA                        | NarrativeQA     | books and story  | 32,747    | 3,461   | 10,557 |
+| QA                        | WikiQA          | wiki             | 20,360    | 2,733   | 6,165  |
+| QA                        | WebQuestions    | Google Freebase  | 3,778     | /       | 2,032  |
+| QA                        | AmbigQA         | wiki             | 10,036    | 2,002   | /      |
+| QA                        | SIQA            | -                | 33,410    | 1,954   | /      |
+| QA                        | CommonSenseQA   | -                | 9,741     | 1,221   | /      |
+| QA                        | BoolQ           | wiki             | 9,427     | 3,270   | /      |
+| QA                        | PIQA            | -                | 16,113    | 1,838   | /      |
+| QA                        | Fermi           | wiki             | 8,000     | 1,000   | 1,000  |
+| multi-hop QA              | HotpotQA        | wiki             | 90,447    | 7,405   | /      |
+| multi-hop QA              | 2WikiMultiHopQA | wiki             | 15,000    | 12,576  | /      |
+| multi-hop QA              | Musique         | wiki             | 19,938    | 2,417   | /      |
+| multi-hop QA              | Bamboogle       | wiki             | /         | /       | 125    |
+| multi-hop QA              | StrategyQA      | wiki             | 2290      | /       | /      |
+| Long-form QA              | ASQA            | wiki             | 4,353     | 948     | /      |
+| Long-form QA              | ELI5            | Reddit           | 272,634   | 1,507   | /      |
+| Long-form QA              | WikiPassageQA   | wiki             | 3,332     | 417     | 416    |
+| Open-Domain Summarization | WikiASP         | wiki             | 300,636   | 37,046  | 37,368 |
+| multiple-choice           | MMLU            | -                | 99,842    | 1,531   | 14,042 |
+| multiple-choice           | TruthfulQA      | wiki             | /         | 817     | /      |
+| multiple-choice           | HellaSWAG       | ActivityNet      | 39,905    | 10,042  | /      |
+| multiple-choice           | ARC             | -                | 3,370     | 869     | 3,548  |
+| multiple-choice           | OpenBookQA      | -                | 4,957     | 500     | 500    |
+| multiple-choice           | QuaRTz          | -                | 2696      | 384     | 784    |
+| Fact Verification         | FEVER           | wiki             | 104,966   | 10,444  | /      |
+| Dialog Generation         | WOW             | wiki             | 63,734    | 3,054   | /      |
+| Entity Linking            | AIDA CoNll-yago | Freebase & wiki  | 18,395    | 4,784   | /      |
+| Entity Linking            | WNED            | Wiki             | /         | 8,995   | /      |
+| Slot Filling              | T-REx           | DBPedia          | 2,284,168 | 5,000   | /      |
+| Slot Filling              | Zero-shot RE    | wiki             | 147,909   | 3,724   | /      |
+| In-domain QA              | DomainRAG       | Web pages of RUC | /         | /       | 485    |
 
 ### Document Corpus
 
-Use JSONL format:
+*   Supports `jsonl` format:
 
-```jsonl
-{"id":"0", "contents": "..."}
-{"id":"1", "contents": "..."}
-```
+    ```jsonl
+    {"id":"0", "contents": "..."}
+    {"id":"1", "contents": "..."}
+    ```
 
-For Wikipedia, refer to  [<u>comprehensive script</u>](./docs/original_docs/process-wiki.md).
+*   For Wikipedia, use our [<u>comprehensive script</u>](./docs/original_docs/process-wiki.md) or explore existing processed versions.
+*   MS MARCO corpus is available on Hugging Face.
+*   [FlashRAG_Dataset/retrieval_corpus/wiki18_100w_e5_index.zip](https://www.modelscope.cn/datasets/hhjinjiajie/FlashRAG_Dataset/file/view/master?id=47985&status=2&fileName=retrieval_corpus%252Fwiki18_100w_e5_index.zip).
 
-### Index
+## ❓ FAQs
 
-Download the preprocessed index from [FlashRAG\_Dataset/retrieval\_corpus/wiki18\_100w\_e5\_index.zip](https://www.modelscope.cn/datasets/hhjinjiajie/FlashRAG_Dataset/file/view/master?id=47985&status=2&fileName=retrieval_corpus%252Fwiki18_100w_e5_index.zip).
+*   [How to configure experiment parameters?](./docs/original_docs/configuration.md)
+*   [How to process and build your own corpus?](./docs/original_docs/process-wiki.md)
+*   [How to index my corpus?](./docs/original_docs/building-index.md)
+*   [How to reproduce the supporting methods?](./docs/original_docs/reproduce_experiment.md)
 
-## :lollipop: Awesome Work using FlashRAG
-
-- [R1-Searcher](https://github.com/SsmallSong/R1-Searcher)
-- [ReSearch](https://github.com/Agent-RL/ReSearch)
-- [AutoCoA](https://github.com/ADaM-BJTU/AutoCoA)
-
-## :raised_hands: Additional FAQs
-
--   [How should I set different experimental parameters?](./docs/original_docs/configuration.md)
--   [How to build my own corpus, such as a specific segmented Wikipedia?](./docs/original_docs/process-wiki.md)
--   [How to index my own corpus?](./docs/original_docs/building-index.md)
--   [How to reproduce supporting methods?](./docs/original_docs/reproduce_experiment.md)
-
-## :bookmark: License
+## 📄 License
 
 FlashRAG is licensed under the [<u>MIT License</u>](./LICENSE).
 
-## :star2: Citation
-
-If you use FlashRAG in your research, please cite our paper:
+## 🌟 Citation
 
 ```BibTex
 @article{FlashRAG,
