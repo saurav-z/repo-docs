@@ -1,72 +1,72 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 
-# SearXNG: The Privacy-Respecting, Hackable Metasearch Engine
+# SearXNG: The Privacy-Respecting Metasearch Engine
 
-SearXNG is a powerful and customizable metasearch engine that protects your privacy while providing comprehensive search results. [View the source code on GitHub](https://github.com/searxng/searxng).
+SearXNG is a free and open-source metasearch engine that respects your privacy and provides customizable search results.  Find out more and contribute on the [SearXNG GitHub](https://github.com/searxng/searxng).
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng.svg" alt="SearXNG Logo" width="400">
+  <img src="https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng.svg" alt="SearXNG Logo" width="300">
 </p>
 
 ## Key Features
 
-*   **Privacy-Focused:** SearXNG doesn't track your searches, ensuring your online activity remains private.
-*   **Metasearch Engine:** Aggregates results from various search engines, providing a broader range of information.
-*   **Hackable and Customizable:** Modify and adapt the engine to your specific needs and preferences.
-*   **Open Source:** Benefit from the transparency and collaborative development of open-source software.
-*   **User-Friendly:** Easy to use with a clean and intuitive interface.
+*   **Privacy-Focused:** SearXNG doesn't track your searches and respects your personal data.
+*   **Open Source:** Fully transparent and customizable, with an active community.
+*   **Metasearch:** Aggregates results from multiple search engines, giving you a broader view.
+*   **Hackable:** Customize your search experience to your liking.
+*   **Easy to Install:**  Available as a Docker image and with installation scripts.
 
-## Resources
+## Getting Started
 
-*   **Ready-to-use Instances:**  Browse available instances on [Searx.space](https://searx.space).
-*   **Documentation:**
-    *   [User Handbook](https://docs.searxng.org/user)
-    *   [Admin Handbook](https://docs.searxng.org/admin)
-    *   [Developer Handbook](https://docs.searxng.org/dev)
-*   **Installation:**  [Admin Installation Guide](https://docs.searxng.org/admin/installation.html)
-*   **Wiki:** [GitHub Wiki](https://github.com/searxng/searxng/wiki)
-*   **License:** [AGPL License](https://github.com/searxng/searxng/blob/master/LICENSE)
-*   **Issues:**  [![Issues](https://img.shields.io/github/issues/searxng/searxng?color=yellow&label=issues)](https://github.com/searxng/searxng/issues)
-*   **Pull Requests:** [![PR](https://img.shields.io/github/issues-pr-raw/searxng/searxng?color=yellow&label=PR)](https://github.com/searxng/searxng/pulls)
-*   **Commits:**  [![Commits](https://img.shields.io/github/commit-activity/y/searxng/searxng?color=yellow&label=commits)](https://github.com/searxng/searxng/commits/master)
-*   **Translations:** [![Weblate](https://translate.codeberg.org/widgets/searxng/-/searxng/svg-badge.svg)](https://translate.codeberg.org/projects/searxng/)
+### Ready-to-Use Instances
 
-## Contact
+Browse a list of public instances at [Searx.space](https://searx.space).
 
-Connect with the SearXNG community:
+### Installation
 
-*   **IRC:** `#searxng` on [libera.chat](https://web.libera.chat/?channel=#searxng) (bridged to Matrix)
-*   **Matrix:** `#searxng:matrix.org <https://matrix.to/#/#searxng:matrix.org>`
+Choose your preferred method:
 
-## Setup
+*   **Docker:** A well-maintained Docker image is available, including builds for ARM64 and ARM/v7 architectures: [SearXNG Docker](https://github.com/searxng/searxng-docker)
+*   **Installation Scripts:**  Use up-to-date installation scripts: [Installation Scripts](https://docs.searxng.org/admin/installation-scripts.html)
+*   **Step-by-Step Instructions:** For individual setup, follow the detailed instructions: [Step-by-Step Instructions](https://docs.searxng.org/admin/installation-searxng.html)
 
-Easily set up your own instance:
+### Documentation
 
-*   **Docker:**  A well-maintained [Docker image](https://github.com/searxng/searxng-docker) is available, built for ARM64 and ARM/v7 architectures.
-*   **Installation Scripts:**  Use our *up-to-date* [installation scripts](https://docs.searxng.org/admin/installation-scripts.html).
-*   **Step-by-step Instructions:** Consult our detailed [step-by-step guide](https://docs.searxng.org/admin/installation-searxng.html).
-*   **Administrator Documentation:**  [Administrator Documentation](https://docs.searxng.org/admin/index.html)
+*   **User Handbook:** [User Documentation](https://docs.searxng.org/user)
+*   **Administrator Handbook:** [Admin Documentation](https://docs.searxng.org/admin/index.html)
+*   **Developer Handbook:** [Developer Documentation](https://docs.searxng.org/dev/index.html)
+*   **Wiki:** [SearXNG Wiki](https://github.com/searxng/searxng/wiki)
 
-## Translations
+## Contribute
 
-Help translate SearXNG using [Weblate](https://translate.codeberg.org/projects/searxng/searxng/).
+Developers are welcome to contribute! Check out the:
 
-<img src="https://translate.codeberg.org/widgets/searxng/-/multi-auto.svg" alt="Translation Progress" width="200">
-
-## Contributing
-
-Developers are welcome!
-
-*   **Development Quickstart:**  Get started with our [development quickstart guide](https://docs.searxng.org/dev/quickstart.html).
+*   **Development Quickstart:** [Development Quickstart Guide](https://docs.searxng.org/dev/quickstart.html)
 *   **Developer Documentation:** [Developer Documentation](https://docs.searxng.org/dev/index.html)
 
-### Codespaces
+## Translation
 
-Contribute from your browser using [GitHub Codespaces](https://docs.github.com/en/codespaces/overview):
+Help translate SearXNG!  Visit: [Weblate](https://translate.codeberg.org/projects/searxng/searxng/)
+
+<p align="center">
+  <img src="https://translate.codeberg.org/widgets/searxng/-/multi-auto.svg" alt="Translation Status">
+</p>
+
+## Contact & Community
+
+Join the SearXNG community and ask questions:
+
+*   **IRC:** `#searxng` on libera.chat (bridged to Matrix) - [Libera Chat Link](https://web.libera.chat/?channel=#searxng)
+*   **Matrix:** `#searxng:matrix.org` - [Matrix Link](https://matrix.to/#/#searxng:matrix.org)
+
+## Codespaces
+
+Contribute directly from your browser using GitHub Codespaces:
 
 1.  Fork the repository.
-2.  Click the "<> Code" green button.
-3.  Click on the "Codespaces" tab instead of "Local."
-4.  Click on "Create codespace on master."
-5.  Wait for `git pull && make install` to finish.
-6.  Start SearXNG using `make run` in the terminal (or press `Ctrl+Shift+B`).
+2.  Click the "Code" button, then select the "Codespaces" tab.
+3.  Click "Create codespace on master."
+4.  Wait for "git pull && make install" to complete.
+5.  Run SearXNG with "make run" in the terminal or Ctrl+Shift+B.
+
+You have [120 hours per month](https://github.com/settings/billing).  See your [list of existing Codespaces](https://github.com/codespaces).

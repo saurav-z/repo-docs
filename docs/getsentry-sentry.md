@@ -4,35 +4,24 @@
   </a>
 </p>
 
-## Stop Chasing Bugs and Start Building: Introducing Sentry
+# Sentry: Debugging Platform for Modern Software Development
 
-Sentry is the leading debugging platform that empowers developers to detect, trace, and fix issues with unparalleled speed and efficiency. ([View the original repo](https://github.com/getsentry/sentry))
+Sentry is the leading debugging platform that empowers developers to identify, understand, and resolve errors quickly and efficiently.
 
-### Key Features
+## Key Features of Sentry
 
-*   **Error Tracking & Monitoring:** Proactively identify and resolve errors in your applications.
-*   **Performance Monitoring:** Optimize application performance with detailed insights into transactions, traces, and spans.
-*   **Real-time Issue Detection:** Get instant notifications and detailed context when errors occur.
-*   **Code-Level Diagnostics:** Drill down into the root cause of issues with stack traces, context data, and more.
-*   **Session Replay:**  Record user sessions to see exactly what happened, enabling faster issue resolution.
-*   **Log Management:** Centralize and analyze your application logs for comprehensive observability.
-*   **Uptime Monitoring:** Ensure your applications are always available with robust uptime checks and alerts.
+*   **Error Tracking & Monitoring:** Detect and track errors in real-time across your applications.
+*   **Detailed Context:** Gain in-depth insights into each error, including stack traces, user context, and environment details.
+*   **Performance Monitoring:** Identify performance bottlenecks and optimize application speed with distributed tracing.
+*   **Session Replay:** Record user sessions to understand how users interact with your application and diagnose issues.
+*   **Uptime Monitoring:** Monitor the availability of your services and receive alerts when outages occur.
+*   **Advanced Analytics:**  Analyze error trends and identify critical issues with powerful dashboards and data visualizations.
+*   **Log Management:**  Aggregate and analyze logs to provide additional context when debugging issues.
+*   **Integration:** Seamlessly integrates with popular frameworks, languages, and development tools.
 
-<p align="center">
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/issue-details.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/seer.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/insights.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/traces.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/trace-explorer.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/replays.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/insights.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/logs.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/uptime.png" width="270" />
-</p>
+## Official Sentry SDKs
 
-### Official Sentry SDKs
-
-Sentry offers a wide range of SDKs to integrate with your preferred programming languages and frameworks.
+Sentry supports a wide range of programming languages and frameworks, including:
 
 *   [JavaScript](https://github.com/getsentry/sentry-javascript)
 *   [Electron](https://github.com/getsentry/sentry-electron/)
@@ -56,12 +45,12 @@ Sentry offers a wide range of SDKs to integrate with your preferred programming 
 *   [Godot Engine](https://github.com/getsentry/sentry-godot)
 *   [PowerShell](https://github.com/getsentry/sentry-powershell)
 
-### Resources
+## Resources
 
 *   [Documentation](https://docs.sentry.io/)
 *   [Discussions](https://github.com/getsentry/sentry/discussions) (Bugs, feature requests, general questions)
 *   [Discord](https://discord.gg/PXa5Apfe7K)
 *   [Contributing](https://docs.sentry.io/internal/contributing/)
 *   [Bug Tracker](https://github.com/getsentry/sentry/issues)
-*   [Code](https://github.com/getsentry/sentry)
+*   [Code](https://github.com/getsentry/sentry) - **[View the source code on GitHub](https://github.com/getsentry/sentry)**
 *   [Transifex](https://www.transifex.com/getsentry/sentry/) (Translate Sentry!)

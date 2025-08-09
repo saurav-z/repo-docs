@@ -1,6 +1,6 @@
 # Trae Agent: Your AI-Powered Software Engineering Assistant
 
-Trae Agent is an innovative, LLM-based agent designed to simplify and automate software engineering tasks with its powerful natural language processing capabilities. **[Explore the Trae Agent GitHub Repository](https://github.com/bytedance/trae-agent)**
+Trae Agent is an innovative LLM-based agent designed to automate and streamline software engineering tasks, offering a powerful CLI interface and a research-friendly architecture. **[Explore Trae Agent on GitHub](https://github.com/bytedance/trae-agent)**.
 
 [![arXiv:2507.23370](https://img.shields.io/badge/TechReport-arXiv%3A2507.23370-b31a1b)](https://arxiv.org/abs/2507.23370)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -10,23 +10,19 @@ Trae Agent is an innovative, LLM-based agent designed to simplify and automate s
 
 ## Key Features
 
-*   **Multi-LLM Support:** Compatible with leading LLM providers, including OpenAI, Anthropic, Google Gemini, and more.
-*   **Rich Tool Ecosystem:** Equipped with file editing, bash execution, sequential thinking, and other essential tools.
-*   **Interactive Mode:** Engage in conversational development sessions for iterative refinement.
-*   **Trajectory Recording:** Detailed logging of all agent actions for thorough debugging and analysis.
-*   **Flexible Configuration:** Easily configurable via YAML or environment variables, offering adaptability to suit different needs.
-*   **Easy Installation:** Simple pip-based installation for quick setup and deployment.
-*   **Lakeview summarization:** Provides concise summaries of agent steps.
-
-## Core Functionality
-
-Trae Agent enables developers and researchers to build, study, and extend AI agent capabilities. Its transparent and modular architecture is designed for easy modification, experimentation, and analysis, making it an ideal platform for exploring AI agent architectures and conducting innovative research in the field of AI agents.
+*   **Multi-LLM Support:** Seamlessly integrate with OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, and Google Gemini APIs.
+*   **Rich Tool Ecosystem:** Leverage a comprehensive suite of tools, including file editing, bash execution, sequential thinking, and more, for efficient software development.
+*   **Interactive Mode:** Engage in conversational development with an intuitive interactive interface.
+*   **Trajectory Recording:** Detailed logging of agent actions for debugging and thorough analysis.
+*   **Flexible Configuration:** Configure settings easily using YAML files and environment variables.
+*   **Research-Friendly Design:** Explore and extend agent capabilities through a transparent, modular architecture.
+*   **Lakeview summarization**: Get short and concise summaries of agent steps
 
 ## Installation
 
-### Prerequisites
+### Requirements
 
-*   UV (https://docs.astral.sh/uv/)
+*   UV ([https://docs.astral.sh/uv/](https://docs.astral.sh/uv/))
 *   API key for your chosen provider (OpenAI, Anthropic, Google Gemini, OpenRouter, etc.)
 
 ### Setup
@@ -40,8 +36,6 @@ source .venv/bin/activate
 
 ## Configuration
 
-Configure Trae Agent to connect to the LLM provider of your choice using YAML configuration files or environment variables.
-
 ### YAML Configuration (Recommended)
 
 1.  Copy the example configuration file:
@@ -50,7 +44,7 @@ Configure Trae Agent to connect to the LLM provider of your choice using YAML co
     cp trae_config.yaml.example trae_config.yaml
     ```
 
-2.  Edit `trae_config.yaml` with your API credentials and preferences.
+2.  Edit `trae_config.yaml` with your API credentials and preferences:
 
     ```yaml
     agents:
@@ -80,11 +74,11 @@ Configure Trae Agent to connect to the LLM provider of your choice using YAML co
         temperature: 0.5
     ```
 
-    **Note:** The `trae_config.yaml` file is ignored by Git to protect your API keys.
+    **Note:** The `trae_config.yaml` file is ignored by git to protect your API keys.
 
 ### Environment Variables (Alternative)
 
-You can also configure API keys using environment variables and store them in the `.env` file.
+You can configure API keys using environment variables and store them in the .env file:
 
 ```bash
 export OPENAI_API_KEY="your-openai-api-key"
@@ -97,7 +91,7 @@ export DOUBAO_BASE_URL="https://ark.cn-beijing.volces.com/api/v3/"
 
 ### MCP Services (Optional)
 
-To enable Model Context Protocol (MCP) services, add an `mcp_servers` section to your configuration.
+To enable Model Context Protocol (MCP) services, add an `mcp_servers` section to your configuration:
 
 ```yaml
 mcp_servers:
@@ -109,7 +103,7 @@ mcp_servers:
 
 **Configuration Priority:** Command-line arguments > Configuration file > Environment variables > Default values
 
-**Legacy JSON Configuration:** If using the older JSON format, see [docs/legacy_config.md](docs/legacy_config.md). We recommend migrating to YAML.
+**Legacy JSON Configuration:** If using the older JSON format, see [docs/legacy_config.md](docs/legacy_config.md).  We recommend migrating to YAML.
 
 ## Usage
 
@@ -179,11 +173,11 @@ In interactive mode, you can use:
 
 ### Available Tools
 
-Trae Agent features a comprehensive toolkit for software engineering tasks including file editing, bash execution, structured thinking, and task completion. See [docs/tools.md](docs/tools.md) for details.
+Trae Agent provides a comprehensive toolkit for software engineering tasks including file editing, bash execution, structured thinking, and task completion. For detailed information about all available tools and their capabilities, see [docs/tools.md](docs/tools.md).
 
 ### Trajectory Recording
 
-Trae Agent automatically records detailed execution trajectories for debugging and analysis.
+Trae Agent automatically records detailed execution trajectories for debugging and analysis:
 
 ```bash
 # Auto-generated trajectory file
@@ -194,7 +188,7 @@ trae-cli run "Debug the authentication module"
 trae-cli run "Optimize database queries" --trajectory-file optimization_debug.json
 ```
 
-Trajectory files capture LLM interactions, agent steps, tool usage, and execution metadata. For more details, see [docs/TRAJECTORY_RECORDING.md](docs/TRAJECTORY_RECORDING.md).
+Trajectory files contain LLM interactions, agent steps, tool usage, and execution metadata. For more details, see [docs/TRAJECTORY_RECORDING.md](docs/TRAJECTORY_RECORDING.md).
 
 ## Development
 

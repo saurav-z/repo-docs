@@ -1,15 +1,13 @@
 <p align="center">
-    <a href="https://www.manim.community/"><img src="https://raw.githubusercontent.com/ManimCommunity/manim/main/logo/cropped.png" alt="Manim Community Logo"></a>
-    <br />
-    <br />
+    <a href="https://www.manim.community/"><img src="https://raw.githubusercontent.com/ManimCommunity/manim/main/logo/cropped.png" alt="Manim Logo"></a>
 </p>
 
-# Manim: Create Stunning Math Animations with Code
+# Manim: Create Stunning Explanatory Math Videos with Code
 
-**Transform complex mathematical concepts into captivating visuals with Manim, the open-source animation engine.**  Based on the work of 3Blue1Brown, Manim empowers you to create clear and engaging explanatory math videos through code.  Get started today by visiting the [original repo](https://github.com/ManimCommunity/manim).
+**Bring your mathematical concepts to life with Manim, a powerful and versatile animation engine used to generate high-quality videos.** This community-driven version of Manim allows you to create intricate animations programmatically, similar to those seen in the popular 3Blue1Brown educational math videos. Check out the original repo [here](https://github.com/ManimCommunity/manim).
 
 [![PyPI Latest Release](https://img.shields.io/pypi/v/manim.svg?style=flat&logo=pypi)](https://pypi.org/project/manim/)
-[![Docker image](https://img.shields.io/docker/v/manimcommunity/manim?color=%23099cec&label=docker%20image&logo=docker)](https://hub.docker.com/r/manimcommunity/manim)
+[![Docker Image](https://img.shields.io/docker/v/manimcommunity/manim?color=%23099cec&label=docker%20image&logo=docker)](https://hub.docker.com/r/manimcommunity/manim)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ManimCommunity/jupyter_examples/HEAD?filepath=basic_example_scenes.ipynb)
 [![MIT License](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](http://choosealicense.com/licenses/mit/)
 [![Reddit](https://img.shields.io/reddit/subreddit-subscribers/manim.svg?color=orange&label=reddit&logo=reddit)](https://www.reddit.com/r/manim/)
@@ -18,27 +16,26 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Documentation Status](https://readthedocs.org/projects/manimce/badge/?version=latest)](https://docs.manim.community/)
 [![Downloads](https://pepy.tech/badge/manim/month?)](https://pepy.tech/project/manim)
-[![CI](https://github.com/ManimCommunity/manim/workflows/CI/badge.svg)](https://github.com/ManimCommunity/manim/workflows/CI/badge.svg)
+[![CI](https://github.com/ManimCommunity/manim/workflows/CI/badge.svg)](https://github.com/ManimCommunity/manim/workflows/CI)
 
 <hr />
 
 **Key Features:**
 
-*   **Programmatic Animation:** Create animations with precise control using Python code.
-*   **Versatile Scene Creation:** Build a wide variety of scenes, from simple diagrams to complex mathematical visualizations.
-*   **Community-Driven Development:** Benefit from active community support, enhanced features, and ongoing improvements.
-*   **Integration with Jupyter:** Use the `%%manim` IPython magic for convenient animation creation within Jupyter notebooks.
-*   **Extensive Documentation:** Comprehensive documentation and examples to help you get started and master Manim.
-*   **Docker Support:** Easily set up and run Manim using Docker containers.
+*   **Programmatic Animation:** Create animations using Python code, offering precise control and flexibility.
+*   **Mathematical Visualization:** Visualize complex mathematical concepts with ease.
+*   **Community-Driven:** Benefit from an active community, continuous development, and enhanced documentation.
+*   **Versatile Application:** Use Manim for educational videos, presentations, and more.
+*   **Integration:** Seamlessly integrate Manim with Jupyter notebooks for interactive development.
 
-## Table of Contents:
+## Table of Contents
 
 *   [Installation](#installation)
 *   [Usage](#usage)
-*   [Command line arguments](#command-line-arguments)
+*   [Command Line Arguments](#command-line-arguments)
 *   [Documentation](#documentation)
 *   [Docker](#docker)
-*   [Help with Manim](#help-with-manim)
+*   [Help & Community](#help-with-manim)
 *   [Contributing](#contributing)
 *   [How to Cite Manim](#how-to-cite-manim)
 *   [Code of Conduct](#code-of-conduct)
@@ -46,18 +43,15 @@
 
 ## Installation
 
+Manim requires specific dependencies for proper functionality. We recommend you try it out in the [online Jupyter environment](https://try.manim.community/) before local installation.
+
+Detailed installation instructions for various operating systems are available in the [official Documentation](https://docs.manim.community/en/stable/installation.html).
 > [!CAUTION]
-> These instructions are for the community version _only_. Trying to use these instructions to install [3b1b/manim](https://github.com/3b1b/manim) or instructions there to install this version will cause problems. Read [this](https://docs.manim.community/en/stable/faq/installation.html#why-are-there-different-versions-of-manim) and decide which version you wish to install, then only follow the instructions for your desired version.
-
-To install the Manim Community Edition, you'll need to set up a few dependencies.
-For local installation, please visit the [Documentation](https://docs.manim.community/en/stable/installation.html)
-and follow the appropriate instructions for your operating system.
-
-If you'd like to test Manim without installing, you can try it out [in our online Jupyter environment](https://try.manim.community/).
+> Ensure you are following the instructions for the community version (ManimCE). Avoid using instructions from the [3b1b/manim](https://github.com/3b1b/manim) repository.
 
 ## Usage
 
-Here's a basic example to get you started:
+Here's an example of a `Scene` demonstrating the transformation of a square into a circle:
 
 ```python
 from manim import *
@@ -75,63 +69,56 @@ class SquareToCircle(Scene):
         self.play(FadeOut(square))
 ```
 
-Save this code as `example.py` and run the following command in your terminal:
+Save the code as `example.py` and then run the following command in your terminal:
 
-```sh
+```bash
 manim -p -ql example.py SquareToCircle
 ```
 
-This will render and preview a scene transforming a square into a circle. Explore more examples in the [GitHub repository](example_scenes) or the [official gallery](https://docs.manim.community/en/stable/examples.html).
+This command will render and automatically preview the animation. For further examples, explore the [GitHub repository](example_scenes) and the [official gallery](https://docs.manim.community/en/stable/examples.html).  Manim can also be used within Jupyter notebooks with the `%%manim` IPython magic; documentation is available [here](https://docs.manim.community/en/stable/reference/manim.utils.ipython_magic.ManimMagic.html) with a live example [here](https://mybinder.org/v2/gh/ManimCommunity/jupyter_examples/HEAD?filepath=basic_example_scenes.ipynb).
 
-Manim also seamlessly integrates with Jupyter notebooks using the `%%manim` magic command.  See the [corresponding documentation](https://docs.manim.community/en/stable/reference/manim.utils.ipython_magic.ManimMagic.html) and [try it out online](https://mybinder.org/v2/gh/ManimCommunity/jupyter_examples/HEAD?filepath=basic_example_scenes.ipynb).
+## Command Line Arguments
 
-## Command line arguments
-
-The general usage of Manim is as follows:
+The basic structure for using Manim via the command line is as follows:
 
 ![manim-illustration](https://raw.githubusercontent.com/ManimCommunity/manim/main/docs/source/_static/command.png)
 
-The `-p` flag previews the video, while `-ql` renders at a lower quality.
-
-Other useful flags:
+The `-p` flag opens the rendered video, and `-ql` provides a quick, lower-quality render. Additional useful flags include:
 
 *   `-s`: Show the final frame.
 *   `-n <number>`: Skip to the nth animation.
-*   `-f`: Show the file in the file browser.
+*   `-f`: Open the file in the file browser.
 
-For a complete list of command-line arguments, see the [documentation](https://docs.manim.community/en/stable/guides/configuration.html).
+For a complete list of command line arguments, see the [documentation](https://docs.manim.community/en/stable/guides/configuration.html).
 
 ## Documentation
 
-Find comprehensive documentation at [ReadTheDocs](https://docs.manim.community/).
+Comprehensive documentation is available on [ReadTheDocs](https://docs.manim.community/).
 
 ## Docker
 
-The Manim Community also provides a Docker image (`manimcommunity/manim`) on [DockerHub](https://hub.docker.com/r/manimcommunity/manim).  Find installation and usage instructions in the [documentation](https://docs.manim.community/en/stable/installation/docker.html).
+A Docker image (`manimcommunity/manim`) is maintained and available on [DockerHub](https://hub.docker.com/r/manimcommunity/manim).  Installation and usage instructions can be found in the [documentation](https://docs.manim.community/en/stable/installation/docker.html).
 
-## Help with Manim
+## Help & Community
 
-Need assistance?  Connect with the community on our [Discord Server](https://www.manim.community/discord/) or [Reddit Community](https://www.reddit.com/r/manim/).  Report bugs or request features by opening an issue.
+Get help and connect with the community through the [Discord Server](https://www.manim.community/discord/) and [Reddit Community](https://www.reddit.com/r/manim/). For bug reports or feature requests, please submit an issue.
 
 ## Contributing
 
-Contributions are always welcome!  We particularly need help with tests and documentation.  See the [documentation](https://docs.manim.community/en/stable/contributing.html) for contribution guidelines.
+Contributions to Manim are welcome.  We particularly need help with tests and documentation. For contribution guidelines, see the [documentation](https://docs.manim.community/en/stable/contributing.html).
 
-Please note that Manim is currently undergoing a major refactor. We highly recommend joining our
-[Discord server](https://www.manim.community/discord/) to discuss any potential
-contributions and keep up to date with the latest developments.
+> Note: The project is undergoing a major refactor, and feature contributions may be limited. Join the [Discord server](https://www.manim.community/discord/) to stay updated on the latest developments.
 
-Most developers on the project use `uv` for management. You'll want to have uv installed and available in your environment.
-Learn more about `uv` at its [documentation](https://docs.astral.sh/uv/) and find out how to install manim with uv at the [manim dev-installation guide](https://docs.manim.community/en/latest/contributing/development.html) in the manim documentation.
+Many developers use `uv` for package management. Install uv using its [documentation](https://docs.astral.sh/uv/) and find out how to install manim with uv at the [manim dev-installation guide](https://docs.manim.community/en/latest/contributing/development.html) in the manim documentation.
 
 ## How to Cite Manim
 
-To properly credit Manim in your work, go to our [repository page](https://github.com/ManimCommunity/manim) and click the "cite this repository" button.
+To ensure the value of Manim is recognized, please cite it in your work.  You can generate a citation in your preferred format by clicking the "cite this repository" button on the right sidebar of the [GitHub repository](https://github.com/ManimCommunity/manim).
 
 ## Code of Conduct
 
-Read our full code of conduct on [our website](https://docs.manim.community/en/stable/conduct.html).
+Read our full code of conduct, and how we enforce it, on [our website](https://docs.manim.community/en/stable/conduct.html).
 
 ## License
 
-Manim is double-licensed under the MIT license, with copyright by 3blue1brown LLC (see LICENSE), and copyright by Manim Community Developers (see LICENSE.community).
+The software is double-licensed under the MIT license (copyright by 3blue1brown LLC and Manim Community Developers). See `LICENSE` and `LICENSE.community` for details.

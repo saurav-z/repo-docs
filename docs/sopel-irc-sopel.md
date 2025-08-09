@@ -1,23 +1,26 @@
-# Sopel: The Simple, Lightweight, and Extensible IRC Bot
+# Sopel: Your Easy-to-Use Python IRC Bot
 
-Sopel is a powerful and user-friendly IRC bot written in Python, designed to be easy to use, run, and extend.
+**Sopel** is a lightweight, open-source IRC bot written in Python, designed for simplicity, ease of use, and extensibility. Build your own IRC bot with custom plugins to manage your channel and more.  Get started today with [the original Sopel repository](https://github.com/sopel-irc/sopel)!
 
-[View the original repository on GitHub](https://github.com/sopel-irc/sopel)
+[![PyPI version](https://img.shields.io/pypi/v/sopel.svg)](https://pypi.python.org/pypi/sopel)
+[![Build Status](https://github.com/sopel-irc/sopel/actions/workflows/ci.yml/badge.svg?branch=master&event=push)](https://github.com/sopel-irc/sopel/actions/workflows/ci.yml?query=branch%3Amaster+event%3Apush)
+[![GitHub issues](https://img.shields.io/github/issues/sopel-irc/sopel.svg)](https://github.com/sopel-irc/sopel/issues)
+[![Coverage Status](https://coveralls.io/repos/github/sopel-irc/sopel/badge.svg?branch=master)](https://coveralls.io/github/sopel-irc/sopel?branch=master)
+[![License](https://img.shields.io/pypi/l/sopel.svg)](https://github.com/sopel-irc/sopel/blob/master/COPYING)
 
 ## Key Features
 
-*   **Easy to Use:**  Sopel is designed with simplicity in mind, making it easy for both beginners and experienced users to set up and manage.
-*   **Lightweight:**  Efficient design ensures minimal resource consumption, ideal for various hosting environments.
-*   **Extensible:**  Create or use existing plugins to customize Sopel's functionality, adding commands, features, and integrations.
-*   **Open Source:**  Benefit from community contributions, transparency, and the freedom to modify and redistribute the software.
-*   **Database Support:** Supports SQLite, MySQL, PostgreSQL, MSSQL, Oracle, Firebird, and Sybase, using SQLAlchemy.
-*   **Python-based:** Leverage the power and flexibility of the Python programming language.
+*   **Simple and Lightweight:** Easy to set up, run, and manage.
+*   **Open Source:** Freely available and customizable.
+*   **Extensible with Plugins:** Easily add new functionality.
+*   **Database Support:** Supports SQLite, MySQL, PostgreSQL, MSSQL, Oracle, Firebird, and Sybase for persistent data.
+*   **Python-based:**  Leverages the power and flexibility of Python.
 
 ## Installation
 
 ### Latest Stable Release
 
-The recommended way to install Sopel is using `pip`:
+The easiest way to install Sopel is using pip:
 
 ```bash
 pip install sopel
@@ -25,63 +28,69 @@ pip install sopel
 
 ### From Source
 
-1.  **Clone the repository:**
+1.  Clone the repository or download a source archive:
 
     ```bash
     git clone https://github.com/sopel-irc/sopel.git
     ```
-    Or download a source archive from GitHub.
 
-2.  **Navigate to the source directory:**
+2.  Navigate to the source directory and install:
 
     ```bash
     cd sopel
-    ```
-
-3.  **Install:**
-
-    ```bash
     pip install -e .
     ```
 
-4.  **Run the bot:**
+3.  Run to start the bot:
 
     ```bash
     sopel
     ```
 
-    *Note: Requires Python 3.8+.*
+   *   **Note:** Sopel requires Python 3.8 or higher.
 
 ## Database Support
 
-Sopel utilizes SQLAlchemy, offering support for various database types: SQLite (default), MySQL, PostgreSQL, MSSQL, Oracle, Firebird, and Sybase.
+Sopel uses SQLAlchemy to provide support for various databases, including:
 
-To configure alternative databases, use the following options: `db_type`, `db_filename` (SQLite only), `db_driver`, `db_user`, `db_pass`, `db_host`, `db_port`, and `db_name`.  You may need to install required database drivers separately.
+*   SQLite
+*   MySQL
+*   PostgreSQL
+*   MSSQL
+*   Oracle
+*   Firebird
+*   Sybase
+
+Configure database settings using the following options: `db_type`, `db_filename` (SQLite only), `db_driver`, `db_user`, `db_pass`, `db_host`, `db_port`, and `db_name`.  You'll need to install the necessary packages for your chosen database.
+
+*   **Important Note:** Plugins created before Sopel 7.0 *may* have issues with databases other than SQLite.
 
 ## Adding Plugins
 
-1.  **Default Plugin Directory:** Place your plugins in the `~/.sopel/plugins` directory.
-2.  **Installable Packages:** Search PyPI for available Sopel plugins: [PyPI Search](https://pypi.org/search/?q=%22sopel%22)
-3.  **Sopel-Extras Repository:**  Explore additional plugins in the `sopel-extras <https://github.com/sopel-irc/sopel-extras>`_ repository.
-4.  **Create Your Own:**  A `tutorial <https://sopel.chat/tutorials/part-1-writing-plugins/>`_ is available for creating new plugins.
+*   Place custom plugins in the `~/.sopel/plugins` directory.
+*   Search PyPI for installable plugins.
+*   Explore the [sopel-extras](https://github.com/sopel-irc/sopel-extras) repository for additional plugins.
+*   Learn to create your own plugins with the [plugin tutorial](https://sopel.chat/tutorials/part-1-writing-plugins/).
 
-## Further Information
+## Further Documentation
 
-*   **Official Website:**  [https://sopel.chat/](https://sopel.chat/)
-    *   Built-in `commands <https://sopel.chat/usage/commands/>`_
-    *   `Tutorials <https://sopel.chat/tutorials/>`_
-    *   `API documentation <https://sopel.chat/docs/>`_
-    *   `Usage information <https://sopel.chat/usage/>`_
+Find detailed information on the official website:
 
-## Get Help
+*   [Official Website](https://sopel.chat/)
+*   [Built-in Commands](https://sopel.chat/usage/commands/)
+*   [Tutorials](https://sopel.chat/tutorials/)
+*   [API Documentation](https://sopel.chat/docs/)
+*   [Usage Information](https://sopel.chat/usage/)
 
-*   **Join the Community:** `#sopel <irc://irc.libera.chat/#sopel>`_ on Libera Chat.
+## Get Involved
 
-## Donations
+Have questions or need help? Join us on IRC in `#sopel <irc://irc.libera.chat/#sopel>`_ on Libera Chat.
+
+## Donate
 
 Support the Sopel project:
 
-*   **GitHub Sponsors:** [https://github.com/sponsors/sopel-irc](https://github.com/sponsors/sopel-irc)
-*   **Open Collective:** [https://opencollective.com/sopel](https://opencollective.com/sopel)
+*   [Sponsor Sopel on GitHub](https://github.com/sponsors/sopel-irc)
+*   [Donate via Open Collective](https://opencollective.com/sopel)
 
-Donations are used for infrastructure costs.  Transparency is maintained through Open Collective expenses.
+Donations help cover infrastructure costs. Transparency for expenses can be found on our Open Collective profile.

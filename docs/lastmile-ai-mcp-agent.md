@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="https://github.com/lastmile-ai/mcp-agent"><img src="https://github.com/user-attachments/assets/c8d059e5-bd56-4ea2-a72d-807fb4897bde" alt="mcp-agent Logo" width="300" /></a>
+  <a href="https://github.com/lastmile-ai/mcp-agent"><img src="https://github.com/user-attachments/assets/c8d059e5-bd56-4ea2-a72d-807fb4897bde" alt="MCP Agent Logo" width="300" /></a>
 </p>
 
 <p align="center">
-  <em>Build powerful, composable AI agents with the Model Context Protocol.</em>
+  <em>Build powerful, composable AI agents with the Model Context Protocol using simple patterns.</em>
 </p>
 
 <p align="center">
@@ -18,71 +18,70 @@
 <a href="https://docs.mcp-agent.com"><img src="https://img.shields.io/badge/docs-8F?style=flat&link=https%3A%2F%2Fdocs.mcp-agent.com%2F" /><a/>
 <a href="https://pypi.org/project/mcp-agent/"><img src="https://img.shields.io/pypi/v/mcp-agent?color=%2334D058&label=pypi" /></a>
 <a href="https://github.com/lastmile-ai/mcp-agent/issues"><img src="https://img.shields.io/github/issues-raw/lastmile-ai/mcp-agent" /></a>
-<a href="https://lmai.link/discord/mcp-agent"><img src="https://shields.io/discord/1089284610329952357" alt="discord" /></a>
 <img alt="Pepy Total Downloads" src="https://img.shields.io/pepy/dt/mcp-agent?label=pypi%20%7C%20downloads"/>
-<a href="https://github.com/lastmile-ai/mcp-agent/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/mcp-agent" /></a>
+<a href="https://github.com/lastmile-ai/mcp-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg"/></a>
+<a href="https://lmai.link/discord/mcp-agent"><img src="https://img.shields.io/badge/Discord-%235865F2.svg?logo=discord&logoColor=white" alt="discord"/></a>
 </p>
 
 <p align="center">
 <a href="https://trendshift.io/repositories/13216" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13216" alt="lastmile-ai%2Fmcp-agent | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
-## mcp-agent: The Easiest Way to Build AI Agents with MCP
+## mcp-agent: Build Robust AI Agents with Ease
 
-mcp-agent is a Python framework designed to simplify the creation of AI agents using the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction). Leveraging composable patterns inspired by [Anthropic's "Building Effective Agents"](https://www.anthropic.com/research/building-effective-agents), mcp-agent empowers developers to build robust, production-ready AI applications with ease.
+**mcp-agent** is a Python framework designed to simplify the creation of AI agents, leveraging the power of the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction).  Built on the principles outlined in [Anthropic's "Building Effective Agents"](https://www.anthropic.com/research/building-effective-agents), mcp-agent provides composable patterns for building production-ready AI applications.  This framework handles the complexities of MCP server connections and offers a straightforward way to build and deploy agents.  Get started today and explore the [mcp-agent repository](https://github.com/lastmile-ai/mcp-agent) to revolutionize your AI agent development!
 
 **Key Features:**
 
-*   🔌 **MCP Server Integration**: Seamlessly connect to and manage MCP servers, streamlining tool integration.
-*   🛠️ **Composable Workflows**: Utilize pre-built, modular workflow patterns for complex agent behavior.
-*   🤖 **Model Agnostic**: Supports multiple LLM providers and is easily extensible.
-*   🔄 **Multi-Agent Orchestration**: Includes implementations of the OpenAI Swarm pattern for advanced coordination.
-*   🔥 **Simple & Lightweight**: Focus on building, not boilerplate – mcp-agent is designed to be intuitive and easy to use.
-*   🤝 **Human-in-the-Loop**: supports human input mid-workflow.
-
-Ready to build powerful AI agents? Explore the [mcp-agent repository](https://github.com/lastmile-ai/mcp-agent) now!
+*   **Simplified MCP Integration:** Manages MCP server lifecycles, simplifying connection and interaction.
+*   **Composable Workflows:** Implements patterns from "Building Effective Agents" in a modular and chainable way.
+*   **Model-Agnostic Design:** Works with various LLMs, providing flexibility in your agent development.
+*   **Multi-Agent Orchestration:** Includes an implementation of OpenAI's Swarm pattern.
+*   **Human-in-the-Loop**: Supports pausing workflow for external signals, such as human input.
 
 ## Table of Contents
 
-*   [Why use mcp-agent?](#why-use-mcp-agent)
-*   [Getting Started](#get-started)
-    *   [Installation](#installation)
-    *   [Quickstart](#quickstart)
-*   [Examples](#examples)
-    *   [Claude Desktop Integration](#claude-desktop)
-    *   [Streamlit Applications](#streamlit)
-        *   [Gmail Agent](#gmail-agent)
-        *   [Simple RAG Chatbot](#simple-rag-chatbot)
-    *   [Marimo Integration](#marimo)
-    *   [Python Scripts/Notebooks](#python)
-        *   [Swarm Workflow](#swarm)
-*   [Core Components](#core-components)
-*   [Workflows](#workflows)
-    *   [Augmented LLM](#augmentedllm)
-    *   [Parallel Workflow](#parallel)
-    *   [Router Workflow](#router)
-    *   [Intent Classifier Workflow](#intentclassifier)
-    *   [Evaluator-Optimizer Workflow](#evaluator-optimizer)
-    *   [Orchestrator-Workers Workflow](#orchestrator-workers)
-    *   [Swarm Workflow](#swarm-1)
-*   [Advanced Features](#advanced)
-    *   [Composability](#composability)
-    *   [Signaling and Human Input](#signaling-and-human-input)
-    *   [App Configuration](#app-config)
-    *   [MCP Server Management](#mcp-server-management)
-*   [Contributing](#contributing)
-*   [Roadmap](#roadmap)
-*   [FAQs](#faqs)
+-   [Why use mcp-agent?](#why-use-mcp-agent)
+-   [Key Benefits](#key-benefits)
+-   [Get Started](#get-started)
+-   [Examples](#examples)
+    -   [Claude Desktop](#claude-desktop)
+    -   [Streamlit](#streamlit)
+        -   [Gmail Agent](#gmail-agent)
+        -   [RAG Chatbot](#simple-rag-chatbot)
+    -   [Marimo](#marimo)
+    -   [Python](#python)
+        -   [Swarm (CLI)](#swarm)
+-   [Core Concepts](#core-components)
+-   [Workflows Patterns](#workflows)
+    -   [AugmentedLLM](#augmentedllm)
+    -   [Parallel](#parallel)
+    -   [Router](#router)
+    -   [IntentClassifier](#intentclassifier)
+    -   [Evaluator-Optimizer](#evaluator-optimizer)
+    -   [Orchestrator-Workers](#orchestrator-workers)
+    -   [Swarm](#swarm-1)
+-   [Advanced](#advanced)
+    -   [Composability](#composability)
+    -   [Signaling and Human Input](#signaling-and-human-input)
+    -   [App Config](#app-config)
+    -   [MCP Server Management](#mcp-server-management)
+-   [Contributing](#contributing)
+-   [Roadmap](#roadmap)
+-   [FAQs](#faqs)
 
 ## Why use mcp-agent?
 
-mcp-agent provides a streamlined and efficient approach to developing AI agents, unlike many frameworks, it's purpose-built for the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction).  It is also the most lightweight, and is closer to an agent pattern library than a framework.
+mcp-agent is purpose-built for building AI agents that leverage the Model Context Protocol (MCP).  It is lightweight and offers a streamlined approach to agent development, making it an ideal choice for those seeking to build robust and manageable AI applications. As more services become MCP-aware, your agents built with mcp-agent can seamlessly integrate and leverage those services.
 
-As [more services become MCP-aware](https://github.com/punkpeye/awesome-mcp-servers), you can use mcp-agent to build robust and controllable AI agents that can leverage those services out-of-the-box.
+## Key Benefits
 
-## Getting Started
+*   **Interoperability**: ensures that any tool exposed by any number of MCP servers can seamlessly plug in to your agents.
+*   **Composability & Customization**: Implements well-defined workflows, but in a composable way that enables compound workflows, and allows full customization across model provider, logging, orchestrator, etc.
+*   **Programmatic control flow**: Keeps things simple as developers just write code instead of thinking in graphs, nodes and edges. For branching logic, you write `if` statements. For cycles, use `while` loops.
+*   **Human Input & Signals**: Supports pausing workflows for external signals, such as human input, which are exposed as tool calls an Agent can make.
 
-### Installation
+## Get Started
 
 We recommend using [uv](https://docs.astral.sh/uv/) to manage your Python projects:
 
@@ -208,32 +207,30 @@ openai:
 
 ## Examples
 
-mcp-agent is designed to be used to build any kind of AI application: multi-agent collaborative workflows, human-in-the-loop workflows, RAG pipelines and more.
+Explore practical applications of mcp-agent.  You can build various AI applications, including multi-agent collaborative workflows, human-in-the-loop workflows, RAG pipelines, and more.
 
-### Claude Desktop Integration
+### Claude Desktop
 
-Integrate mcp-agent applications into MCP clients like Claude Desktop.
+Integrate mcp-agent apps into MCP clients like Claude Desktop.
 
 #### mcp-agent server
 
-This app wraps an mcp-agent application inside an MCP server, and exposes that server to Claude Desktop.
-The app exposes agents and workflows that Claude Desktop can invoke to service of the user's request.
+This app wraps an mcp-agent application inside an MCP server, exposing the server to Claude Desktop.
 
 https://github.com/user-attachments/assets/7807cffd-dba7-4f0c-9c70-9482fd7e0699
 
-This demo shows a multi-agent evaluation task where each agent evaluates aspects of an input poem, and
-then an aggregator summarizes their findings into a final response.
+This demo showcases a multi-agent evaluation task.
 
 **Details**: Starting from a user's request over text, the application:
 
-- dynamically defines agents to do the job
-- uses the appropriate workflow to orchestrate those agents (in this case the Parallel workflow)
+-   Dynamically defines agents to do the job
+-   Uses the appropriate workflow to orchestrate those agents (in this case the Parallel workflow)
 
 **Link to code**: [examples/basic/mcp_server_aggregator](./examples/basic/mcp_server_aggregator)
 
-> [!NOTE]
-> Huge thanks to [Jerron Lim (@StreetLamb)](https://github.com/StreetLamb)
-> for developing and contributing this example!
+>   [!NOTE]
+>   Huge thanks to [Jerron Lim (@StreetLamb)](https://github.com/StreetLamb)
+>   for developing and contributing this example!
 
 ### Streamlit
 
@@ -241,28 +238,27 @@ Deploy mcp-agent apps using Streamlit.
 
 #### Gmail agent
 
-This app is able to perform read and write actions on gmail using text prompts -- i.e. read, delete, send emails, mark as read/unread, etc.
-It uses an MCP server for Gmail.
+This app performs read and write actions on Gmail using text prompts.
 
 https://github.com/user-attachments/assets/54899cac-de24-4102-bd7e-4b2022c956e3
 
 **Link to code**: [gmail-mcp-server](https://github.com/jasonsum/gmail-mcp-server/blob/add-mcp-agent-streamlit/streamlit_app.py)
 
-> [!NOTE]
-> Huge thanks to [Jason Summer (@jasonsum)](https://github.com/jasonsum)
-> for developing and contributing this example!
+>   [!NOTE]
+>   Huge thanks to [Jason Summer (@jasonsum)](https://github.com/jasonsum)
+>   for developing and contributing this example!
 
 #### Simple RAG Chatbot
 
-This app uses a Qdrant vector database (via an MCP server) to do Q&A over a corpus of text.
+This app uses a Qdrant vector database (via an MCP server) for Q&A over a text corpus.
 
 https://github.com/user-attachments/assets/f4dcd227-cae9-4a59-aa9e-0eceeb4acaf4
 
 **Link to code**: [examples/usecases/streamlit_mcp_rag_agent](./examples/usecases/streamlit_mcp_rag_agent/)
 
-> [!NOTE]
-> Huge thanks to [Jerron Lim (@StreetLamb)](https://github.com/StreetLamb)
-> for developing and contributing this example!
+>   [!NOTE]
+>   Huge thanks to [Jerron Lim (@StreetLamb)](https://github.com/StreetLamb)
+>   for developing and contributing this example!
 
 ### Marimo
 
@@ -273,9 +269,9 @@ Here's the "file finder" agent from [Quickstart](#quickstart) implemented in Mar
 
 **Link to code**: [examples/usecases/marimo_mcp_basic_agent](./examples/usecases/marimo_mcp_basic_agent/)
 
-> [!NOTE]
-> Huge thanks to [Akshay Agrawal (@akshayka)](https://github.com/akshayka)
-> for developing and contributing this example!
+>   [!NOTE]
+>   Huge thanks to [Akshay Agrawal (@akshayka)](https://github.com/akshayka)
+>   for developing and contributing this example!
 
 ### Python
 
@@ -291,29 +287,29 @@ https://github.com/user-attachments/assets/b314d75d-7945-4de6-965b-7f21eb14a8bd
 
 ## Core Components
 
-The building blocks of the mcp-agent framework:
+The fundamental building blocks of the mcp-agent framework:
 
-*   **[MCPApp](./src/mcp_agent/app.py)**: Global state and app configuration.
-*   **MCP Server Management**: [`gen_client`](./src/mcp_agent/mcp/gen_client.py) and [`MCPConnectionManager`](./src/mcp_agent/mcp/mcp_connection_manager.py) simplify MCP server connections.
-*   **[Agent](./src/mcp_agent/agents/agent.py)**: An Agent has access to MCP servers and exposes them as tool calls to an LLM. It has a name and purpose (instruction).
-*   **[AugmentedLLM](./src/mcp_agent/workflows/llm/augmented_llm.py)**: An LLM enhanced with tools from MCP servers via Agents. Every Workflow pattern is an `AugmentedLLM`.
+*   **[MCPApp](./src/mcp_agent/app.py)**: Global state and application configuration.
+*   **MCP server management**: [`gen_client`](./src/mcp_agent/mcp/gen_client.py) and [`MCPConnectionManager`](./src/mcp_agent/mcp/mcp_connection_manager.py) for easy MCP server connections.
+*   **[Agent](./src/mcp_agent/agents/agent.py)**: An Agent accesses MCP servers and exposes them as tool calls to an LLM.  It has a name and an instruction.
+*   **[AugmentedLLM](./src/mcp_agent/workflows/llm/augmented_llm.py)**: An LLM enhanced with tools from MCP servers via Agents. Every workflow pattern is an `AugmentedLLM`.
 
 ## Workflows
 
-mcp-agent provides implementations for every pattern in Anthropic’s [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents), as well as the OpenAI [Swarm](https://github.com/openai/swarm) pattern.
-Each pattern is model-agnostic, and exposed as an `AugmentedLLM`, making everything very composable.
+mcp-agent provides implementations for Anthropic’s [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) and the OpenAI [Swarm](https://github.com/openai/swarm) pattern.
+Each pattern is model-agnostic and exposed as an `AugmentedLLM`, enabling composability.
 
 ### AugmentedLLM
 
-[AugmentedLLM](./src/mcp_agent/workflows/llm/augmented_llm.py) is an LLM that has access to MCP servers and functions via Agents.
+[AugmentedLLM](./src/mcp_agent/workflows/llm/augmented_llm.py) is an LLM with access to MCP servers and functions via Agents.
 
-LLM providers implement the AugmentedLLM interface to expose 3 functions:
+LLM providers implement the AugmentedLLM interface, exposing three functions:
 
--   `generate`: Generate message(s) given a prompt, possibly over multiple iterations and making tool calls as needed.
--   `generate_str`: Calls `generate` and returns result as a string output.
--   `generate_structured`: Uses [Instructor](https://github.com/instructor-ai/instructor) to return the generated result as a Pydantic model.
+*   `generate`: Generate message(s) given a prompt, possibly over multiple iterations and making tool calls as needed.
+*   `generate_str`: Calls `generate` and returns the result as a string.
+*   `generate_structured`: Uses [Instructor](https://github.com/instructor-ai/instructor) to return the generated result as a Pydantic model.
 
-Additionally, `AugmentedLLM` has memory, to keep track of long or short-term history.
+Additionally, `AugmentedLLM` has memory to track history.
 
 <details>
 <summary>Example</summary>
@@ -352,9 +348,9 @@ async with finder_agent:
 
 Fan-out tasks to multiple sub-agents and fan-in the results. Each subtask is an AugmentedLLM, as is the overall Parallel workflow, meaning each subtask can optionally be a more complex workflow itself.
 
-> [!NOTE]
+>   [!NOTE]
 >
-> **[Link to full example](examples/workflows/workflow_parallel/main.py)**
+>   **[Link to full example](examples/workflows/workflow_parallel/main.py)**
 
 <details>
 <summary>Example</summary>
@@ -385,12 +381,12 @@ Given an input, route to the `top_k` most relevant categories. A category can be
 
 mcp-agent provides several router implementations, including:
 
--   [`EmbeddingRouter`](src/mcp_agent/workflows/router/router_embedding.py): uses embedding models for classification
--   [`LLMRouter`](src/mcp_agent/workflows/router/router_llm.py): uses LLMs for classification
+*   [`EmbeddingRouter`](src/mcp_agent/workflows/router/router_embedding.py): uses embedding models for classification
+*   [`LLMRouter`](src/mcp_agent/workflows/router/router_llm.py): uses LLMs for classification
 
-> [!NOTE]
+>   [!NOTE]
 >
-> **[Link to full example](examples/workflows/workflow_router/main.py)**
+>   **[Link to full example](examples/workflows/workflow_router/main.py)**
 
 <details>
 <summary>Example</summary>
@@ -422,8 +418,7 @@ async with chosen_agent:
 
 ### [IntentClassifier](src/mcp_agent/workflows/intent_classifier/)
 
-A close sibling of Router, the Intent Classifier pattern identifies the `top_k` Intents that most closely match a given input.
-Just like a Router, mcp-agent provides both an [embedding](src/mcp_agent/workflows/intent_classifier/intent_classifier_embedding.py) and [LLM-based](src/mcp_agent/workflows/intent_classifier/intent_classifier_llm.py) intent classifier.
+Identifies the `top_k` Intents that most closely match a given input. mcp-agent provides both an [embedding](src/mcp_agent/workflows/intent_classifier/intent_classifier_embedding.py) and [LLM-based](src/mcp_agent/workflows/intent_classifier/intent_classifier_llm.py) intent classifier.
 
 ### [Evaluator-Optimizer](src/mcp_agent/workflows/evaluator_optimizer/evaluator_optimizer.py)
 
@@ -431,9 +426,9 @@ Just like a Router, mcp-agent provides both an [embedding](src/mcp_agent/workflo
 
 One LLM (the “optimizer”) refines a response, another (the “evaluator”) critiques it until a response exceeds a quality criteria.
 
-> [!NOTE]
+>   [!NOTE]
 >
-> **[Link to full example](examples/workflows/workflow_evaluator_optimizer/main.py)**
+>   **[Link to full example](examples/workflows/workflow_evaluator_optimizer/main.py)**
 
 <details>
 <summary>Example</summary>
@@ -459,12 +454,11 @@ print("Final refined cover letter:", result)
 
 ![Orchestrator workflow (Image credit: Anthropic)](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F8985fc683fae4780fb34eab1365ab78c7e51bc8e-2401x1000.png&w=3840&q=75)
 
-A higher-level LLM generates a plan, then assigns them to sub-agents, and synthesizes the results.
-The Orchestrator workflow automatically parallelizes steps that can be done in parallel, and blocks on dependencies.
+A higher-level LLM generates a plan, assigns sub-agents, and synthesizes results. The Orchestrator workflow automatically parallelizes steps and blocks on dependencies.
 
-> [!NOTE]
+>   [!NOTE]
 >
-> **[Link to full example](examples/workflows/workflow_orchestrator_worker/main.py)**
+>   **[Link to full example](examples/workflows/workflow_orchestrator_worker/main.py)**
 
 <details>
 <summary>Example</summary>
@@ -490,15 +484,15 @@ print(result)
 
 ### [Swarm](src/mcp_agent/workflows/swarm/swarm.py)
 
-OpenAI has an experimental multi-agent pattern called [Swarm](https://github.com/openai/swarm), which we provide a model-agnostic reference implementation for in mcp-agent.
+OpenAI's multi-agent [Swarm](https://github.com/openai/swarm) pattern is implemented in mcp-agent as a model-agnostic reference.
 
 <img src="https://github.com/openai/swarm/blob/main/assets/swarm_diagram.png?raw=true" width=500 />
 
-The mcp-agent Swarm pattern works seamlessly with MCP servers, and is exposed as an `AugmentedLLM`, allowing for composability with other patterns above.
+The mcp-agent Swarm pattern works seamlessly with MCP servers, and is exposed as an `AugmentedLLM`.
 
-> [!NOTE]
+>   [!NOTE]
 >
-> **[Link to full example](examples/workflows/workflow_swarm/main.py)**
+>   **[Link to full example](examples/workflows/workflow_swarm/main.py)**
 
 <details>
 <summary>Example</summary>
@@ -522,10 +516,9 @@ print("Result:", result)
 
 ### Composability
 
-An example of composability is using an [Evaluator-Optimizer](#evaluator-optimizer) workflow as the planner LLM inside
-the [Orchestrator](#orchestrator-workers) workflow. Generating a high-quality plan to execute is important for robust behavior, and an evaluator-optimizer can help ensure that.
+Use an [Evaluator-Optimizer](#evaluator-optimizer) as the planner LLM inside the [Orchestrator](#orchestrator-workers) workflow to generate a high-quality plan for robust behavior.
 
-Doing so is seamless in mcp-agent, because each workflow is implemented as an `AugmentedLLM`.
+This is seamless in mcp-agent, as each workflow is an `AugmentedLLM`.
 
 <details>
 <summary>Example</summary>
@@ -590,11 +583,11 @@ lost_baggage = SwarmAgent(
 
 ### App Config
 
-Create an [`mcp_agent.config.yaml`](/schema/mcp-agent.config.schema.json) and a gitignored [`mcp_agent.secrets.yaml`](./examples/basic/mcp_basic_agent/mcp_agent.secrets.yaml.example) to define MCP app configuration. This controls logging, execution, LLM provider APIs, and MCP server configuration.
+Create an [`mcp_agent.config.yaml`](/schema/mcp-agent.config.schema.json) and a gitignored [`mcp_agent.secrets.yaml`](./examples/basic/mcp_basic_agent/mcp_agent.secrets.yaml.example) to define MCP app configuration, including logging, execution, LLM provider APIs, and MCP server configuration.
 
 ### MCP server management
 
-mcp-agent makes it trivial to connect to MCP servers. Create an [`mcp_agent.config.yaml`](/schema/mcp-agent.config.schema.json) to define server configuration under the `mcp` section:
+mcp-agent makes it easy to connect to MCP servers. Define server configuration in [`mcp_agent.config.yaml`](/schema/mcp-agent.config.schema.json) under the `mcp` section:
 
 ```yaml
 mcp:
@@ -619,14 +612,11 @@ async with gen_client("fetch") as fetch_client:
 # Fetch server is automatically disconnected/shutdown
 ```
 
-The gen_client function makes it easy to spin up connections to MCP servers.
-
 #### Persistent server connections
 
-In many cases, you want an MCP server to stay online for persistent use (e.g. in a multi-step tool use workflow).
-For persistent connections, use:
+For persistent MCP server use, use:
 
-*   [`connect`](src/mcp_agent/mcp/gen_client.py) and [`disconnect`](src/mcp_agent/mcp/gen_client.py)
+-   [`connect`](src/mcp_agent/mcp/gen_client.py) and [`disconnect`](src/mcp_agent/mcp/gen_client.py)
 
 ```python
 from mcp_agent.mcp.gen_client import connect, disconnect
@@ -639,12 +629,7 @@ finally:
      disconnect("fetch")
 ```
 
-*   [`MCPConnectionManager`](src/mcp_agent/mcp/mcp_connection_manager.py)
-
-For even more fine-grained control over server connections, you can use the MCPConnectionManager.
-
-<details>
-<summary>Example</summary>
+-   [`MCPConnectionManager`](src/mcp_agent/mcp/mcp_connection_manager.py)
 
 ```python
 from mcp_agent.context import get_current_context
@@ -660,8 +645,6 @@ fetch_client2 = await connection_manager.get_server("fetch") # Reuses same serve
 
 # All servers managed by connection manager are automatically disconnected/shut down
 ```
-
-</details>
 
 #### MCP Server Aggregator
 
@@ -692,23 +675,38 @@ async with aggregator:
 
 ## Contributing
 
-We welcome any and all kinds of contributions. Please see the [CONTRIBUTING guidelines](./CONTRIBUTING.md) to get started.
+We welcome all contributions. See the [CONTRIBUTING guidelines](./CONTRIBUTING.md) for details.
 
 ### Special Mentions
 
-There have already been incredible community contributors who are driving this project forward:
+Community contributors driving this project:
 
-*   [Shaun Smith (@evalstate)](https://github.com/evalstate) -- who has been leading the charge on countless complex improvements, both to `mcp-agent` and generally to the MCP ecosystem.
-*   [Jerron Lim (@StreetLamb)](https://github.com/StreetLamb) -- who has contributed countless hours and excellent examples, and great ideas to the project.
-*   [Jason Summer (@jasonsum)](https://github.com/jasonsum) -- for identifying several issues and adapting his Gmail MCP server to work with mcp-agent
+*   [Shaun Smith (@evalstate)](https://github.com/evalstate) - Leading on complex improvements to `mcp-agent` and the MCP ecosystem.
+*   [Jerron Lim (@StreetLamb)](https://github.com/StreetLamb) - Contributions and excellent examples.
+*   [Jason Summer (@jasonsum)](https://github.com/jasonsum) - Identifying issues and Gmail MCP server adaptation.
 
 ## Roadmap
 
 We will be adding a detailed roadmap (ideally driven by your feedback). The current set of priorities include:
 
-*   **Durable Execution** -- allow workflows to pause/resume and serialize state so they can be replayed or be paused indefinitely. We are working on integrating [Temporal](./src/mcp_agent/executor/temporal.py) for this purpose.
-*   **Memory** -- adding support for long-term memory
-*   **Streaming** -- Support streaming listeners for iterative progress
-*   **Additional MCP capabilities** -- Expand beyond tool calls to support:
-    *   Resources
-    *   Prompts
+-   **Durable Execution** -- allow workflows to pause/resume and serialize state so they can be replayed or be paused indefinitely. We are working on integrating [Temporal](./src/mcp_agent/executor/temporal.py) for this purpose.
+-   **Memory** -- adding support for long-term memory
+-   **Streaming** -- Support streaming listeners for iterative progress
+-   **Additional MCP capabilities** -- Expand beyond tool calls to support:
+    -   Resources
+    -   Prompts
+    -   Notifications
+
+## FAQs
+
+### What are the core benefits of using mcp-agent?
+
+mcp-agent streamlines AI agent creation using MCP servers.
+
+MCP is low-level, and this framework handles connecting to servers, working with LLMs, handling external signals (like human input) and supporting persistent state via durable execution. This helps developers to focus on the core business logic of your AI application.
+
+Core benefits:
+
+-   🤝 **Interoperability**: ensures that any tool exposed by any number of MCP servers can seamlessly plug in to your agents.
+-   ⛓️ **Composability & Customizability**: Implements well-defined workflows, but in a composable way that enables compound workflows, and allows full customization across model provider, logging, orchestrator, etc.
+-   💻 **Programmatic control flow**: Keeps things simple

@@ -1,49 +1,53 @@
 # NVDA: The Free and Open-Source Screen Reader for Windows
 
-**Empowering accessibility, NVDA (NonVisual Desktop Access) provides a powerful and free way for blind and visually impaired users to access and interact with their Windows computers.**
+**Empowering visually impaired users, NVDA provides access to the Windows operating system and its applications through speech and braille.**
 
 [Visit the original NVDA repository on GitHub](https://github.com/nvaccess/nvda)
 
-## Key Features of NVDA:
+## Key Features of NVDA
 
-*   **Free and Open Source:** NVDA is completely free to use and distribute, with its source code available for review, modification, and contribution.
-*   **Screen Reader Functionality:** Reads aloud text on the screen, describes interface elements, and provides information about the user's current context.
-*   **Supports a Wide Range of Applications:** Works with popular applications like web browsers, email clients, word processors, and more.
-*   **Global Community Support:** Developed by NV Access with a global community of contributors, ensuring continuous improvement and support.
-*   **Customizable and Extensible:** Allows for user customization through settings and add-ons, offering flexibility and a personalized experience.
-*   **Regular Updates:** NV Access provides ongoing updates and improvements to ensure compatibility and address user feedback.
-*   **Multi-Language Support:** NVDA is available in multiple languages, allowing users from all over the world to access information in their preferred language.
+*   **Free and Open Source:**  NVDA is available at no cost and is open-source, allowing for community contributions and customization.
+*   **Comprehensive Windows Support:** Compatible with a wide range of Windows versions and applications, ensuring broad accessibility.
+*   **Speech and Braille Output:**  Provides auditory and tactile feedback, catering to diverse user preferences and needs.
+*   **Global Community Development:**  Developed by NV Access and a global community, fostering continuous improvement and innovation.
+*   **Add-on Support:** Extends functionality through a robust add-on ecosystem.
+*   **Regular Updates:** Continuous development and releases to enhance compatibility and address user feedback.
 
-## Get Started with NVDA
+## Learn More About NVDA
 
-*   **Download NVDA:** Visit the [NV Access](http://www.nvaccess.org/) website to download the latest version.
-*   **User Support:** Find support and information for users at the [NV Access Get Help](https://www.nvaccess.org/get-help/) page.
-*   **Add-ons:** Discover add-ons to enhance NVDA's functionality via the [Addons Manager](https://download.nvaccess.org/documentation/userGuide.html#AddonsManager).
-*   **Community:** Connect with other users and experts via the [Contact List](./projectDocs/community/expertsList.md).
+For in-depth information, downloads, and support, visit the official [NV Access website](http://www.nvaccess.org/).
 
-## Contribute to NVDA
+## Contributing to NVDA
 
-NVDA thrives on community involvement. You can contribute by:
+Your contributions are welcome! Learn how to contribute by reading the [contributing guide](./.github/CONTRIBUTING.md).
+This includes information on reporting issues, triaging issues, testing, translating, contributing code/documentation and creating add-ons.
 
-*   [Reporting Issues or Feature Requests](./projectDocs/issues/readme.md)
-*   [Contributing Code, Documentation, or Translations](./.github/CONTRIBUTING.md)
-*   Testing
-*   Creating Add-ons
+## Important Links & Resources
 
-## Important Information
+*   **Support and Information for Users:** [https://www.nvaccess.org/get-help/](https://www.nvaccess.org/get-help/)
+*   **Report an Issue or Feature Request:**  [./projectDocs/issues/readme.md](https://github.com/nvaccess/nvda/blob/master/projectDocs/issues/readme.md)
+*   **Getting Add-ons:** [https://download.nvaccess.org/documentation/userGuide.html#AddonsManager](https://download.nvaccess.org/documentation/userGuide.html#AddonsManager)
+*   **Contact List:** [./projectDocs/community/expertsList.md](https://github.com/nvaccess/nvda/blob/master/projectDocs/community/expertsList.md)
+*   **More Community Information:** [./projectDocs/community/readme.md](https://github.com/nvaccess/nvda/blob/master/projectDocs/community/readme.md)
+*   **NV Access Website:** [http://www.nvaccess.org/](http://www.nvaccess.org/)
 
-*   **Code of Conduct:** The NVDA project adheres to a [Citizen and Contributor Code of Conduct](CODE_OF_CONDUCT.md)
-*   **Product Vision:** NVDA's development is guided by a [product vision statement and set of principles](./projectDocs/product_vision.md)
-*   **License:** NVDA is available under a modified GNU General Public License version 2.  See [our license](./copying.txt) for details.
+## Governance & Community Guidelines
+
+*   **Code of Conduct:**  All contributors and community members are expected to adhere to the [Citizen and Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+*   **Product Vision and Principles:**  Features and work prioritization align with the [product vision statement and set of principles](./projectDocs/product_vision.md).
+*   **Development Roadmap:**  Stay updated on the future of NVDA through the [development roadmap](https://www.nvaccess.org/post/nvda-roadmap/).
+
+## License
+
+NVDA is licensed under a modified GNU General Public License version 2.  See [our license](./copying.txt) for details.
 
 ## Acknowledgements
 
-NV Access would like to thank [SignPath](https://www.signpath.io/) for their generous support in providing code signing services.
+Special thanks to [SignPath](https://www.signpath.io/) for providing code signing services, enhancing the security and integrity of NVDA releases.
 
 ## Status Checks
 
-*   AppVeyor
-    *   Alpha build status: [![view latest alpha builds](https://ci.appveyor.com/api/projects/status/sqeer6p8lc80lvqe/branch/master?svg=true)](https://ci.appveyor.com/project/NVAccess/nvda/branch/master)
-    *   Beta build status: [![view latest beta builds](https://ci.appveyor.com/api/projects/status/sqeer6p8lc80lvqe/branch/beta?svg=true)](https://ci.appveyor.com/project/NVAccess/nvda/branch/beta)
-*   Pre-commit status (master): [![view pre-commit checks on master](https://results.pre-commit.ci/badge/github/nvaccess/nvda/master.svg)](https://results.pre-commit.ci/latest/github/nvaccess/nvda/master)
-*   CodeQL security analysis status (master): [![view CodeQL security analysis checks on master](https://github.com/nvaccess/nvda/actions/workflows/github-code-scanning/codeql/badge.svg?branch=master)](https://github.com/nvaccess/nvda/actions/workflows/github-code-scanning/codeql?query=branch%3Amaster)
+*   **Alpha Build Status:** [![view latest alpha builds](https://ci.appveyor.com/api/projects/status/sqeer6p8lc80lvqe/branch/master?svg=true)](https://ci.appveyor.com/project/NVAccess/nvda/branch/master)
+*   **Beta Build Status:** [![view latest beta builds](https://ci.appveyor.com/api/projects/status/sqeer6p8lc80lvqe/branch/beta?svg=true)](https://ci.appveyor.com/project/NVAccess/nvda/branch/beta)
+*   **Pre-commit Status (master):** [![view pre-commit checks on master](https://results.pre-commit.ci/badge/github/nvaccess/nvda/master.svg)](https://results.pre-commit.ci/latest/github/nvaccess/nvda/master)
+*   **CodeQL Security Analysis Status (master):** [![view CodeQL security analysis checks on master](https://github.com/nvaccess/nvda/actions/workflows/github-code-scanning/codeql/badge.svg?branch=master)](https://github.com/nvaccess/nvda/actions/workflows/github-code-scanning/codeql?query=branch%3Amaster)

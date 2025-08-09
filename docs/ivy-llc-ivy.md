@@ -1,4 +1,4 @@
-<div style="display: block;" align="center">
+<div align="center">
     <a href="https://ivy.dev/">
         <img class="dark-light" width="50%" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/ivy-long.svg" alt="Ivy Logo"/>
     </a>
@@ -24,40 +24,56 @@
 </div>
 <br clear="all" />
 
-# Ivy: Convert and Run Machine Learning Code Across Frameworks
+# Ivy: Universal Machine Learning Framework Converter
 
-**Ivy is a powerful library that empowers you to seamlessly convert and execute machine learning code between popular frameworks.**
+**Ivy allows you to seamlessly convert your machine learning code between various frameworks, breaking down silos and boosting flexibility.**  Check out the [original repository](https://github.com/ivy-llc/ivy) for more details!
 
 ## Key Features
 
-*   **Framework Conversion:** Effortlessly transpile ML models, tools, and libraries between PyTorch, TensorFlow, JAX, and NumPy.
-*   **Simplified Cross-Framework Compatibility:** Run your code in the framework of your choice, regardless of its original implementation.
-*   **Efficient Graph Tracing:** Trace computational graphs to optimize performance and remove redundant code.
-*   **Easy Installation:** Get started quickly with a straightforward `pip install ivy`.
-*   **Comprehensive Documentation:** Explore detailed examples, demos, and an API reference.
+*   **Framework Conversion:**  Easily transpile ML models, tools, and libraries between frameworks like PyTorch, TensorFlow, JAX, and NumPy.
+*   **Simplified Portability:** Enables you to use code from one framework in another, maximizing code reuse and reducing vendor lock-in.
+*   **Computational Graph Tracing:** Trace the computational graph of any code for efficient execution and optimization.
+*   **Eager and Lazy Transpilation:** Choose between eager and lazy transpilation based on your needs.
+*   **Comprehensive Documentation:** Access detailed documentation, demos, and tutorials to get started quickly.
 
-## Supported Frameworks
+<div align="center">
+    <div>
+    <a href="https://jax.readthedocs.io">
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/jax.svg" alt="JAX Logo">
+    </a>
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <a href="https://www.tensorflow.org">
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/tensorflow.svg" alt="TensorFlow Logo">
+    </a>
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <a href="https://pytorch.org">
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/pytorch.svg" alt="PyTorch Logo">
+    </a>
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <a href="https://numpy.org">
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/numpy.svg" alt="NumPy Logo">
+    </a>
+    </div>
+</div>
 
-Ivy currently supports conversions between the following frameworks:
-
-| Framework  | Source | Target |
-|------------|:------:|:------:|
-| PyTorch    |   ✅   |   🚧   |
-| TensorFlow |   🚧   |   ✅   |
-| JAX        |   🚧   |   ✅   |
-| NumPy      |   🚧   |   ✅   |
+<br clear="all" />
 
 ## Installation
 
-Install Ivy using `pip`:
+Install Ivy using pip:
 
 ```bash
 pip install ivy
 ```
 
-### From Source
+<details>
+<summary><b>Installation From Source</b></summary>
+<br clear="all" />
 
-Alternatively, install from source to access the latest updates:
+Install from source to access the latest features:
 
 ```bash
 git clone https://github.com/ivy-llc/ivy.git
@@ -65,104 +81,136 @@ cd ivy
 pip install --user -e .
 ```
 
-## Getting Started
+</details>
 
-### Transpiling Code Between Frameworks
+<br clear="all" />
 
-Convert code from one framework to another using `ivy.transpile`.
+## Supported Frameworks
 
-```python
-import ivy
-import torch
-import tensorflow as tf
+| Framework    | Source | Target |
+|--------------|:------:|:------:|
+| PyTorch      |   ✅   |   🚧   |
+| TensorFlow   |   🚧   |   ✅   |
+| JAX          |   🚧   |   ✅   |
+| NumPy        |   🚧   |   ✅   |
 
-def torch_fn(x):
-    a = torch.mul(x, x)
-    b = torch.mean(x)
-    return x * a + b
+<br clear="all" />
 
-tf_fn = ivy.transpile(torch_fn, source="torch", target="tensorflow")
+## Getting Started with Ivy
 
-tf_x = tf.convert_to_tensor([1., 2., 3.])
-ret = tf_fn(tf_x)
-```
+Here are some examples to help you get started with Ivy!
 
-### Tracing a Computational Graph
+  <details>
+    <summary><b>Transpiling Code Between Frameworks</b></summary>
+    <br clear="all" />
 
-Trace a computational graph to optimize performance.
+   ```python
+   import ivy
+   import torch
+   import tensorflow as tf
 
-```python
-import ivy
-import torch
+   def torch_fn(x):
+       a = torch.mul(x, x)
+       b = torch.mean(x)
+       return x * a + b
 
-def torch_fn(x):
-    a = torch.mul(x, x)
-    b = torch.mean(x)
-    return x * a + b
+   tf_fn = ivy.transpile(torch_fn, source="torch", target="tensorflow")
 
-torch_x = torch.tensor([1., 2., 3.])
-graph = ivy.trace_graph(torch_fn, to="torch", args=(torch_x,))
-ret = graph(torch_x)
-```
+   tf_x = tf.convert_to_tensor([1., 2., 3.])
+   ret = tf_fn(tf_x)
+   ```
 
-### How Ivy Works
+  </details>
 
-Ivy's transpiler enables you to use code from any other framework in your own code. Key functions include:
+  <details>
+    <summary><b>Tracing a Computational Graph</b></summary>
+    <br clear="all" />
 
-*   `ivy.transpile()`: Converts framework-specific code to a target framework (see usage in the documentation).
-*   `ivy.trace_graph()`: Traces an efficient, fully-functional graph from a function (see usage in the documentation).
+   ```python
+   import ivy
+   import torch
 
-#### Eager Transpilation
+   def torch_fn(x):
+       a = torch.mul(x, x)
+       b = torch.mean(x)
+       return x * a + b
 
-`ivy.transpile` transpiles eagerly when a class or function is provided:
+   torch_x = torch.tensor([1., 2., 3.])
+   graph = ivy.trace_graph(jax_fn, to="torch", args=(torch_x,))
+   ret = graph(torch_x)
+   ```
 
-```python
-import ivy
-import torch
-import tensorflow as tf
+   </details>
 
-def torch_fn(x):
-    x = torch.abs(x)
-    return torch.sum(x)
+  <details>
+  <summary><b>How Ivy Works</b></summary>
+  <br clear="all" />
 
-x1 = torch.tensor([1., 2.])
-x1 = tf.convert_to_tensor([1., 2.])
+  Ivy's transpiler enables you to use code from various frameworks in your own code. The key functions are:
 
-# Transpilation happens eagerly
-tf_fn = ivy.transpile(torch_fn, source="torch", target="tensorflow")
+  ```python
+  # Converts framework-specific code to a target framework. See documentation for usage.
+  ivy.transpile()
 
-# tf_fn is now tensorflow code and runs efficiently
-ret = tf_fn(x1)
-```
+  # Traces an efficient graph from a function, removing redundant code.  See documentation for usage.
+  ivy.trace_graph()
+  ```
 
-#### Lazy Transpilation
+  #### `ivy.transpile` Eagerly Transpiles When a Class or Function is Provided
 
-`ivy.transpile` transpiles lazily if a module (library) is provided:
+  ```python
+  import ivy
+  import torch
+  import tensorflow as tf
 
-```python
-import ivy
-import kornia
-import tensorflow as tf
+  def torch_fn(x):
+      x = torch.abs(x)
+      return torch.sum(x)
 
-x2 = tf.random.normal((5, 3, 4, 4))
+  x1 = torch.tensor([1., 2.])
+  x1 = tf.convert_to_tensor([1., 2.])
 
-# Module is provided -> transpilation happens lazily
-tf_kornia = ivy.transpile(kornia, source="torch", target="tensorflow")
+  # Transpilation happens eagerly
+  tf_fn = ivy.transpile(test_fn, source="torch", target="tensorflow")
 
-# The transpilation is initialized here, and this function is converted to tensorflow
-ret = tf_kornia.color.rgb_to_grayscale(x2)
+  # tf_fn is now tensorflow code and runs efficiently
+  ret = tf_fn(x1)
+  ```
 
-# Transpilation has already occurred, the tensorflow function runs efficiently
-ret = tf_kornia.color.rgb_to_grayscale(x2)
-```
+  #### `ivy.transpile` Lazily Transpiles When a Module (Library) is Provided
 
-## Contribute
+  ```python
+  import ivy
+  import kornia
+  import tensorflow as tf
 
-Contribute to Ivy and help improve machine learning interoperability!  Check out the [Open Tasks](https://docs.ivy.dev/overview/contributing/open_tasks.html) and learn more in the [Contributing Guide](https://docs.ivy.dev/overview/contributing.html).
+  x2 = tf.random.normal((5, 3, 4, 4))
+
+  # Module is provided -> transpilation happens lazily
+  tf_kornia = ivy.transpile(kornia, source="torch", target="tensorflow")
+
+  # The transpilation is initialized here, and this function is converted to tensorflow
+  ret = tf_kornia.color.rgb_to_grayscale(x2)
+
+  # Transpilation has already occurred, the tensorflow function runs efficiently
+  ret = tf_kornia.color.rgb_to_grayscale(x2)
+  ```
+  </details>
+
+<br clear="all" />
+
+## Contributing
+
+We welcome contributions from everyone!  Check out our [Open Tasks](https://docs.ivy.dev/overview/contributing/open_tasks.html) and the [Contributing Guide](https://docs.ivy.dev/overview/contributing.html) in the docs.
+
+<br clear="all" />
 
 <a href="https://github.com/ivy-llc/ivy/graphs/contributors">
   <img class="dark-light" src="https://contrib.rocks/image?repo=ivy-llc/ivy&anon=0&columns=20&max=100&r=true" alt="Contributors"/>
 </a>
+
+<br clear="all" />
+<br clear="all" />
 
 ## Citation
 
@@ -174,5 +222,3 @@ Contribute to Ivy and help improve machine learning interoperability!  Check out
   year={2021}
 }
 ```
-
-[View the original repository on GitHub](https://github.com/ivy-llc/ivy)

@@ -1,6 +1,6 @@
 <div align="center">
   <img src="docs/source/_static/img/et-logo.png" alt="ExecuTorch Logo" width="200">
-  <h1>ExecuTorch: Unleash the Power of On-Device AI</h1>
+  <h1>ExecuTorch: Powering On-Device AI with High Performance</h1>
 </div>
 
 <div align="center">
@@ -11,61 +11,42 @@
   <hr>
 </div>
 
-ExecuTorch is a cutting-edge, open-source framework from PyTorch, enabling high-performance on-device AI experiences across various platforms. ([See the original repository](https://github.com/pytorch/executorch))
+ExecuTorch is a cutting-edge, end-to-end solution from Meta designed to revolutionize on-device AI experiences, enabling high-performance inference and training directly on a wide range of devices. ([See the original repo](https://github.com/pytorch/executorch))
 
-## Key Features & Benefits
+**Key Features of ExecuTorch:**
 
-ExecuTorch empowers developers to deploy and run AI models directly on devices, offering significant advantages:
-
-*   **Wide Platform Support:**
-    *   iOS
-    *   MacOS (ARM64)
-    *   Android
-    *   Linux
-    *   Microcontrollers
-*   **Hardware Acceleration:** Optimized for various hardware including:
-    *   Apple
-    *   Arm
-    *   Cadence
-    *   MediaTek
-    *   NXP
-    *   OpenVINO
-    *   Qualcomm
-    *   Vulkan
-    *   XNNPACK
-*   **Portability:**  Deploy your models across a diverse range of hardware, from mobile phones to embedded systems.
-*   **Productivity:**  Leverage familiar PyTorch tools and workflows for model authoring, conversion, debugging, and deployment.
-*   **Performance:**  Experience high-performance inference and training with a lightweight runtime that utilizes CPU, NPU, and DSP capabilities.
-*   **Model Compatibility:** Supports a broad range of model types, including:
+*   **Broad Model Support:** Compatible with a diverse range of AI models, including:
     *   Large Language Models (LLMs)
-    *   Computer Vision (CV)
-    *   Automatic Speech Recognition (ASR)
-    *   Text-to-Speech (TTS)
+    *   Computer Vision (CV) models
+    *   Automatic Speech Recognition (ASR) models
+    *   Text-to-Speech (TTS) models
+*   **Extensive Platform Support:** Runs on various operating systems and hardware:
+    *   **Operating Systems:** iOS, macOS (ARM64), Android, Linux, Microcontrollers
+    *   **Hardware Acceleration:** Apple, Arm, Cadence, MediaTek, NXP, OpenVINO, Qualcomm, Vulkan, XNNPACK
+*   **Portability:**  Runs across a wide spectrum of devices, from high-end mobile phones to resource-constrained embedded systems and microcontrollers.
+*   **Developer Productivity:**  Empowers developers with familiar PyTorch tools and streamlined workflows for model authoring, conversion, debugging, and deployment.
+*   **High Performance:** Delivers a seamless user experience with a lightweight runtime that leverages the full capabilities of hardware accelerators like CPUs, NPUs, and DSPs.
 
 ## Getting Started
 
-Dive into on-device AI development with these resources:
+Quickly get started with ExecuTorch:
 
-*   [Step by Step Tutorial](https://pytorch.org/executorch/stable/getting-started.html): Get up and running locally and deploy a model to a device.
-*   [Colab Notebook](https://colab.research.google.com/drive/1qpxrXC3YdJQzly3mRg-4ayYiOjC6rue3?usp=sharing): Experiment with ExecuTorch directly in your browser.
-*   **LLM Examples:** Explore pre-built examples for popular open-source models:
-    *   [Llama](examples/models/llama/README.md)
-    *   [Qwen 3](examples/models/qwen3/README.md)
-    *   [Phi-4-mini](examples/models/phi_4_mini/README.md)
-    *   [Llava](examples/models/llava/README.md)
+*   **Step-by-Step Tutorial:**  Learn how to get things running locally and deploy a model to a device by visiting the [Step by Step Tutorial](https://pytorch.org/executorch/stable/getting-started.html).
+*   **Interactive Colab Notebook:** Experiment and explore ExecuTorch directly in your browser using this [Colab Notebook](https://colab.research.google.com/drive/1qpxrXC3YdJQzly3mRg-4ayYiOjC6rue3?usp=sharing).
+*   **LLM Examples:** Dive into LLM use cases with specific instructions for popular open-source models such as [Llama](examples/models/llama/README.md), [Qwen 3](examples/models/qwen3/README.md), [Phi-4-mini](examples/models/phi_4_mini/README.md), and [Llava](examples/models/llava/README.md).
 
-## Contribute and Connect
+## Community and Contribution
 
-We encourage community involvement!
+We encourage community feedback and contributions.
 
-*   [Discussion Board](https://github.com/pytorch/executorch/discussions): Share feedback, suggestions, and report issues.
-*   [Discord](https://discord.gg/Dh43CKSAdc): Chat with the community and the development team in real-time.
-*   [Contributing Guidelines](CONTRIBUTING.md): Learn how to contribute code, documentation, and more.
+*   **Discussion:** Share your ideas and questions on the [Discussion Board](https://github.com/pytorch/executorch/discussions).
+*   **Real-time Chat:** Connect with the community on [Discord](https://discord.gg/Dh43CKSAdc).
+*   **Contributing Guidelines:** Review the [CONTRIBUTING.md](CONTRIBUTING.md) file for details on how to contribute.
 
 ## Directory Structure
 
-For details on the codebase structure, refer to the [Codebase structure](CONTRIBUTING.md#codebase-structure) section of the [Contributing Guidelines](CONTRIBUTING.md).
+Refer to the [Codebase structure](CONTRIBUTING.md#codebase-structure) section of the [Contributing Guidelines](CONTRIBUTING.md) for detailed information.
 
 ## License
 
-ExecuTorch is licensed under the BSD license. See the `LICENSE` file for details.
+ExecuTorch is licensed under the BSD license; see the `LICENSE` file for details.

@@ -1,29 +1,44 @@
-# Explore Free Public APIs: The Ultimate Resource for Developers
+# Public APIs: Unleash a World of Free Data for Your Projects
 
-**Need free APIs for your projects?** This community-driven repository is a **treasure trove** of public APIs, curated by developers like you, offering a diverse range of services from numerous domains. 
+**Unlock a vast and constantly updated collection of public APIs for your next project!** This repository, curated by community members and supported by APILayer, is a treasure trove of free and open APIs, providing data from a multitude of domains.  Explore this comprehensive list of APIs and discover how to integrate powerful functionalities into your applications. 
 
-[![APILayer Logo](.github/cs1586-APILayerLogoUpdate2022-LJ_v2-HighRes.png)](https://apilayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo)
+[**Check out the original repository here:**](https://github.com/public-apis/public-apis)
 
-Explore a wide variety of APIs, and jumpstart your next project today!
+**Key Features:**
 
-*   **Comprehensive Collection:** Access a vast catalog of free APIs across multiple categories.
-*   **Community-Driven:** Maintained and updated by a dedicated community.
-*   **Easy Integration:** Quickly incorporate APIs into your applications.
+*   **Extensive Coverage:**  Access APIs across a wide range of categories, including Animals, Weather, Finance, and more.
+*   **Community-Driven:** Maintained and updated by a vibrant community of developers like you.
+*   **Free to Use:** Utilize these APIs to build your own products, without any cost.
+*   **Organized & Categorized:**  Browse APIs efficiently with clear categories and descriptions.
+*   **Growing Collection:**  The list is constantly being updated with new and valuable APIs.
 
-Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) for updates, community discussions, and support.
+**APILayer - Enhance Your API Integration**
 
-## Featured APIs from APILayer
+[APILayer](https://apilayer.com/products/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) offers a range of powerful APIs to accelerate your development.
 
-*   **IPstack:** Locate and Identify Website Visitors by IP Address
-*   **Marketstack:** Free, easy-to-use REST API interface delivering worldwide stock market data in JSON format
-*   **Weatherstack:** Retrieve instant, accurate weather information for any location in the world in lightweight JSON format
-*   **Numverify:** Global Phone Number Validation & Lookup JSON API
-*   **Fixer:** A simple and lightweight API for current and historical foreign exchange (forex) rates.
-*   **Aviationstack:** Free, real-time flight status and global Aviation data API
+**APILayer APIs**
+*   **IPstack**: Locate and Identify Website Visitors by IP Address.
+*   **Marketstack**:  Free, easy-to-use REST API interface delivering worldwide stock market data in JSON format.
+*   **Weatherstack**: Retrieve instant, accurate weather information for any location in the world in lightweight JSON format.
+*   **Numverify**: Global Phone Number Validation & Lookup JSON API.
+*   **Fixer**:  Foreign exchange (forex) rates.
+*   **Aviationstack**: Real-time flight status and global Aviation data API.
 
-## Table of Contents
+**Connect with the Community:**
 
-Explore the categorized list of APIs:
+Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) for updates, questions, and community interaction.
+
+**Get Involved:**
+
+*   [Contributing Guide](CONTRIBUTING.md)
+*   [API for this project](https://github.com/davemachado/public-api)
+*   [Issues](https://github.com/public-apis/public-apis/issues)
+*   [Pull Requests](https://github.com/public-apis/public-apis/pulls)
+*   [LICENSE](LICENSE)
+
+<br />
+
+## Index
 
 *   [Animals](#animals)
 *   [Anime](#anime)
@@ -77,24 +92,13 @@ Explore the categorized list of APIs:
 *   [Video](#video)
 *   [Weather](#weather)
 
-## Get Involved
-
-*   [Contributing Guide](CONTRIBUTING.md)
-*   [API for this project](https://github.com/davemachado/public-api)
-*   [Issues](https://github.com/public-apis/public-apis/issues)
-*   [Pull Requests](https://github.com/public-apis/public-apis/pulls)
-
----
-
-_(For original README content, see the [original repository](https://github.com/public-apis/public-apis) )_
-
----
-
-## API Listings
-(Note: This section contains a truncated sample of the original API listings. The full list is available in the original repository.)
+<br>
+**Each category below includes a list of APIs with their descriptions, authentication details, and CORS support, making it easier to integrate APIs into your projects.**
+<br>
+**This list is exhaustive, please refer to original repo at:** [https://github.com/public-apis/public-apis]
 
 ### Animals
-API | Description | Auth | HTTPS | CORS 
+API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [AdoptAPet](https://www.adoptapet.com/public/apis/pet_list.html) | Resource to help get pets adopted | `apiKey` | Yes | Yes |
 | [Axolotl](https://theaxolotlapi.netlify.app/) | Collection of axolotl pictures and facts | No | Yes | No |
@@ -125,9 +129,8 @@ API | Description | Auth | HTTPS | CORS
 | [Zoo Animals](https://zoo-animal-api.herokuapp.com/) | Facts and pictures of zoo animals | No | Yes | Yes |
 
 **[⬆ Back to Index](#index)**
-
-<br>
-<br>
+<br >
+<br >
 
 ### Anime
 API | Description | Auth | HTTPS | CORS |
@@ -153,8 +156,8 @@ API | Description | Auth | HTTPS | CORS |
 | [Waifu.pics](https://waifu.pics/docs) | Image sharing platform for anime images | No | Yes | No |
 
 **[⬆ Back to Index](#index)**
-<br>
-<br>
+<br >
+<br >
 
 ### Anti-Malware
 API | Description | Auth | HTTPS | CORS |
@@ -173,11 +176,12 @@ API | Description | Auth | HTTPS | CORS |
 | [URLhaus](https://urlhaus-api.abuse.ch/) | Bulk queries and Download Malware Samples | No | Yes | Yes |
 | [URLScan.io](https://urlscan.io/about-api/) | Scan and Analyse URLs | `apiKey` | Yes | Unknown |
 | [VirusTotal](https://www.virustotal.com/en/documentation/public-api/) | VirusTotal File/URL Analysis | `apiKey` | Yes | Unknown |
-| [Web of Trust](https://support.mywot.com/hc/en-us/sections/360004477734-API-) | IP/domain/URL reputation | `apiKey` | Yes | Unknown | 
+| [Web of Trust](https://support.mywot.com/hc/en-us/sections/360004477734-API-) | IP/domain/URL reputation | `apiKey` | Yes | Unknown |
 
 **[⬆ Back to Index](#index)**
-<br>
-<br>
+<br >
+<br >
+
 ### Art & Design
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
@@ -203,8 +207,9 @@ API | Description | Auth | HTTPS | CORS |
 | [xColors](https://x-colors.herokuapp.com/) | Generate & convert colors | No | Yes | Yes |
 
 **[⬆ Back to Index](#index)**
-<br>
-<br>
+<br >
+<br >
+
 ### Authentication & Authorization
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
@@ -217,8 +222,9 @@ API | Description | Auth | HTTPS | CORS |
 | [Warrant](https://warrant.dev/) | APIs for authorization and access control | `apiKey` | Yes | Yes |
 
 **[⬆ Back to Index](#index)**
-<br>
-<br>
+<br >
+<br >
+
 ### Blockchain
 | API | Description | Auth | HTTPS | CORS |
 |---|:---|:---|:---|:---|
@@ -235,8 +241,9 @@ API | Description | Auth | HTTPS | CORS |
 | [Watchdata](https://docs.watchdata.io) | Provide simple and reliable API access to Ethereum blockchain | `apiKey` | Yes | Unknown |
 
 **[⬆ Back to Index](#index)**
-<br>
-<br>
+<br >
+<br >
+
 ### Books
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
@@ -265,8 +272,9 @@ API | Description | Auth | HTTPS | CORS |
 | [Wolne Lektury](https://wolnelektury.pl/api/) | API for obtaining information about e-books available on the WolneLektury.pl website | No | Yes | Unknown |
 
 **[⬆ Back to Index](#index)**
-<br>
-<br>
+<br >
+<br >
+
 ### Business
 API | Description | Auth | HTTPS | CORS |
 |---|:---|:---|:---|:---|
@@ -295,8 +303,9 @@ API | Description | Auth | HTTPS | CORS |
 | [Trello](https://developers.trello.com/) | Boards, lists and cards to help you organize and prioritize your projects | `OAuth` | Yes | Unknown |
 
 **[⬆ Back to Index](#index)**
-<br>
-<br>
+<br >
+<br >
+
 ### Calendar
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
@@ -318,8 +327,9 @@ API | Description | Auth | HTTPS | CORS |
 | [UK Bank Holidays](https://www.gov.uk/bank-holidays.json) | Bank holidays in England and Wales, Scotland and Northern Ireland | No | Yes | Unknown |
 
 **[⬆ Back to Index](#index)**
-<br>
-<br>
+<br >
+<br >
+
 ### Cloud Storage & File Sharing
 API | Description | Auth | HTTPS | CORS |
 |---|:---|:---|:---|:---|
@@ -344,8 +354,9 @@ API | Description | Auth | HTTPS | CORS |
 | [Web3 Storage](https://web3.storage/) | File Sharing and Storage for Free with 1TB Space | `apiKey` | Yes | Yes | |
 
 **[⬆ Back to Index](#index)**
-<br>
-<br>
+<br >
+<br >
+
 ### Continuous Integration
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
@@ -353,9 +364,4 @@ API | Description | Auth | HTTPS | CORS |
 | [Bitrise](https://api-docs.bitrise.io/) | Build tool and processes integrations to create efficient development pipelines | `apiKey` | Yes | Unknown |
 | [Buddy](https://buddy.works/docs/api/getting-started/overview) | The fastest continuous integration and continuous delivery platform | `OAuth` | Yes | Unknown |
 | [CircleCI](https://circleci.com/docs/api/v1-reference/) | Automate the software development process using continuous integration and continuous delivery | `apiKey` | Yes | Unknown |
-| [Codeship](https://docs.cloudbees.com/docs/cloudbees-codeship/latest/api-overview/) | Codeship is a Continuous Integration Platform in the cloud | `apiKey` | Yes | Unknown |
-| [Travis CI](https://docs.travis-ci.com/api/) | Sync your GitHub projects with Travis CI to test your code in minutes | `apiKey` | Yes | Unknown |
-
-**[⬆ Back to Index](#index)**
-<br>
-<br>
+| [Codes

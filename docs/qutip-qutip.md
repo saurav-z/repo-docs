@@ -1,61 +1,69 @@
-# QuTiP: Quantum Toolbox in Python - Simulate Quantum Systems with Ease
+# QuTiP: Quantum Toolbox in Python - Simulate Quantum Systems Easily
 
-**QuTiP (Quantum Toolbox in Python) is a powerful, open-source software for simulating the dynamics of closed and open quantum systems, providing researchers and educators with a versatile platform for exploring quantum mechanics.**  [Visit the original repository on GitHub](https://github.com/qutip/qutip).
+**QuTiP (Quantum Toolbox in Python) is an open-source software package that empowers researchers and educators to simulate the dynamics of closed and open quantum systems.** [Explore the QuTiP repository](https://github.com/qutip/qutip) to unlock the power of quantum simulations!
 
-## Key Features:
+[![Build Status](https://github.com/qutip/qutip/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/qutip/qutip/actions/workflows/tests.yml)
+[![Coverage Status](https://img.shields.io/coveralls/qutip/qutip.svg?logo=Coveralls)](https://coveralls.io/r/qutip/qutip)
+[![Maintainability](https://api.codeclimate.com/v1/badges/df502674f1dfa1f1b67a/maintainability)](https://codeclimate.com/github/qutip/qutip/maintainability)
+[![license](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![PyPi Downloads](https://img.shields.io/pypi/dm/qutip?label=downloads%20%7C%20pip&logo=PyPI)](https://pypi.org/project/qutip)
+[![Conda-Forge Downloads](https://img.shields.io/conda/dn/conda-forge/qutip?label=downloads%20%7C%20conda&logo=Conda-Forge)](https://anaconda.org/conda-forge/qutip)
 
-*   **Open-Source & Free:**  Freely available for use, modification, and distribution under a New BSD license.
-*   **Versatile Simulation:**  Simulates a wide range of quantum mechanical problems, including those with time-dependent Hamiltonians and collapse operators.
-*   **Numerical Backend:** Leverages the efficiency of NumPy, SciPy, and Cython for numerical computations.
-*   **Graphical Output:**  Utilizes Matplotlib for generating visualizations of simulation results.
-*   **Cross-Platform Compatibility:** Compatible with Unix-based platforms and Windows.
-*   **User-Friendly:** Designed for efficient numerical simulations and easy exploration of quantum mechanics.
-*   **Extensive Documentation and Tutorials:**  Comprehensive documentation, tutorials, and examples to get you started quickly.
+## Key Features of QuTiP
+
+*   **Versatile Simulation Capabilities:** Simulate a wide range of quantum mechanical problems, including those with time-dependent Hamiltonians and/or collapse operators.
+*   **User-Friendly Interface:** Designed for efficient numerical simulations, making it ideal for both research and educational purposes.
+*   **Open-Source and Free:** Utilize and modify the software without any licensing fees, perfect for exploring quantum mechanics.
+*   **Cross-Platform Compatibility:** Works seamlessly on Unix-based platforms and Windows.
+*   **Leverages Powerful Libraries:** Built upon the robust NumPy, SciPy, and Cython libraries for numerical computations, with graphical output provided by Matplotlib.
+
+## Why Choose QuTiP?
+
+QuTiP provides a user-friendly and efficient environment for numerical simulations of quantum systems, making complex quantum mechanics accessible.  It's a valuable tool for researchers, students, and educators alike.
 
 ## Installation
 
-QuTiP is readily available through both `pip` and `conda` (via the `conda-forge` channel).
-
-**Installation via pip (minimal):**
+QuTiP is easily installed using `pip` or `conda`.
 
 ```bash
 pip install qutip
 ```
 
-**Installation via pip (with optional dependencies):**
+For a full installation with all optional dependencies:
 
 ```bash
 pip install qutip[full]
 ```
 
-For detailed installation instructions, including building from source, please refer to the [detailed installation guide](https://qutip.readthedocs.io/en/stable/installation.html).
+Or install via conda:
+
+```bash
+conda install -c conda-forge qutip
+```
+Detailed installation instructions, including building from source, can be found in the [documentation](https://qutip.readthedocs.io/en/stable/installation.html).
 
 ## Documentation
 
+Comprehensive documentation, including tutorials and examples, is readily available:
+
 *   [Latest Stable Release Documentation](https://qutip.readthedocs.io/en/latest/)
 *   [Development Documentation (Master Branch)](https://qutip.readthedocs.io/en/master/)
+*   [Tutorials](https://qutip.org/tutorials.html)
 *   [QuTiP Website Documentation](https://qutip.org/documentation.html)
-*   [Tutorials and Demonstration Notebooks](https://qutip.org/tutorials.html)
 
 ## Contribute
 
-We encourage contributions to QuTiP! You can contribute by:
+Your contributions are welcome!  Join the QuTiP community by:
 
 *   Forking the repository and submitting pull requests.
 *   Reporting bugs on the [issues page](https://github.com/qutip/qutip/issues).
-*   Assisting with user questions.
-*   Discussing proposed changes in the [QuTiP discussion group](https://groups.google.com/g/qutip).
-
-Find detailed information on contributing in the ["contributing to QuTiP development" section](https://qutip.readthedocs.io/en/stable/development/contributing.html) of the documentation.
+*   Participating in the [QuTiP discussion group](https://groups.google.com/g/qutip).
+*   Reviewing the ["contributing to QuTiP development" section of the documentation](https://qutip.readthedocs.io/en/stable/development/contributing.html).
 
 ## Support
 
-QuTiP is supported by:
-
-*   [Unitary Fund](https://unitary.fund)
-*   [NumFOCUS](https://numfocus.org)
-
-We are grateful for the support from various organizations, including [Nori's lab](https://dml.riken.jp/), [Blais' lab](https://www.physique.usherbrooke.ca/blais/), Google, and other [supporting organizations](https://qutip.org/#supporting-organizations).
+QuTiP is supported by the [Unitary Fund](https://unitary.fund) and [NumFOCUS](https://numfocus.org).
+We are also grateful to [Nori's lab](https://dml.riken.jp/) at RIKEN and [Blais' lab](https://www.physique.usherbrooke.ca/blais/) at the Institut Quantique.
 
 ## Citing QuTiP
 

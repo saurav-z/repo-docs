@@ -1,14 +1,18 @@
 # Pylint: Static Code Analysis for Python
 
-**Pylint is the go-to static code analyzer for Python, helping you write cleaner, more reliable, and maintainable code.**  Check out the original repository: [https://github.com/pylint-dev/pylint](https://github.com/pylint-dev/pylint)
+**Pylint is a powerful static code analyzer for Python that helps you write cleaner, more maintainable, and bug-free code.**
+
+[Go to the Pylint Repository](https://github.com/pylint-dev/pylint)
 
 ## Key Features:
 
-*   **Comprehensive Code Analysis:**  Detects errors, enforces coding standards, and identifies code smells.
-*   **Customizable Configuration:** Tailor Pylint to your specific project needs with extensive configuration options, including disabling specific checks.
-*   **Inference Engine:**  Pylint's sophisticated inference engine (astroid) accurately understands your code, even without type hints, for more precise issue detection.
-*   **Plugin Ecosystem:** Extend Pylint's capabilities with a wide range of plugins for popular frameworks and libraries (e.g., pylint-django, pylint-pydantic).
-*   **Additional Tools:** Includes pyreverse (diagram generation) and symilar (duplicate code finder).
+*   **Static Code Analysis:** Analyzes your Python code without running it, identifying potential errors, style issues, and code smells.
+*   **Coding Standard Enforcement:** Enforces a customizable coding style, promoting consistency across your projects.
+*   **Error Detection:** Detects a wide range of errors, from simple typos to complex logic flaws, using astroid for comprehensive code representation and inference.
+*   **Code Smell Detection:** Identifies code that could be improved, such as overly complex functions or duplicated code.
+*   **Highly Configurable:** Offers extensive configuration options to tailor Pylint to your specific needs and preferences, and allows you to write custom plugins.
+*   **Integration with IDEs and Editors:** Seamlessly integrates with popular IDEs and editors for real-time feedback and issue highlighting.
+*   **Additional Tools:** Includes tools like `pyreverse` (for generating UML diagrams) and `symilar` (for finding duplicate code).
 
 ## Installation
 
@@ -18,49 +22,41 @@ Install Pylint using pip:
 pip install pylint
 ```
 
-For spell checking (requires `enchant` and potentially the `enchant C library`):
+For spell checking (requires `enchant` and potentially the enchant C library):
 
 ```bash
 pip install pylint[spelling]
 ```
 
-## Why Choose Pylint?
+Detailed installation instructions can be found in the [Pylint documentation](https://pylint.readthedocs.io/en/latest/user_guide/installation/index.html).
 
-Pylint goes beyond simple linting by inferring the actual values of nodes using its internal code representation (astroid), even in the absence of comprehensive type annotations. This approach allows Pylint to identify a broader range of potential issues, making it a more thorough analyzer than many alternatives.  While this may result in slower performance, the depth of analysis often justifies the trade-off.
+## How to Use Pylint
 
-## How to Use Pylint Effectively
+Start by running Pylint on your Python code:
 
-Start with the `--errors-only` flag to focus on critical errors.  Disable less important checks (e.g., convention and refactor messages with `--disable=C,R`) and progressively re-enable them as your project evolves.  Pylint's configurability and plugin support provide the flexibility to adapt to your project's specific coding style and standards.
+```bash
+pylint your_module.py
+```
 
-## Tools to Consider Alongside Pylint
+Pylint's output will highlight any issues it finds. Start with the `--errors-only` flag, then disable convention and refactor messages with `--disable=C,R` and progressively re-evaluate and re-enable messages as your priorities evolve.
+Pylint is highly configurable and permits to write plugins in order to add your own checks.
 
-Enhance your Python development workflow with these complementary tools:
+## What Differentiates Pylint?
 
-*   **Ruff:** A blazingly fast linter and formatter.
-*   **Flake8:** A framework for implementing custom checks.
-*   **Mypy, Pyright/Pylance, Pyre:** Typing checks.
-*   **Bandit:** Security-focused checks.
-*   **Black & isort:** Automatic code formatting.
-*   **Autoflake:** Removes unused imports.
-*   **Pyupgrade:** Automates Python syntax upgrades.
-*   **Pydocstringformatter:** Auto formats docstrings.
+Pylint utilizes its internal code representation (astroid) to infer the actual values of nodes, making it more thorough than other linters. This helps to identify more issues, even in partially typed code. Pylint is designed to be thorough and is not afraid of being slow than other linters.
+
+## Advised linters alongside pylint
+
+Projects that you might want to use alongside pylint include ruff (**really** fast, with builtin auto-fix and a large number of checks taken from popular linters, but implemented in rust) or flake8 (a framework to implement your own checks in python using ast directly), mypy, pyright / pylance or pyre (typing checks), bandit (security oriented checks), black and isort (auto-formatting), autoflake (automated removal of unused imports or variables), pyupgrade (automated upgrade to newer python syntax) and pydocstringformatter (automated pep257).
 
 ## Contributing
 
-We welcome contributions of all kinds!  See the [Contributor Guides](https://pylint.readthedocs.io/en/latest/development_guide/contribute.html) for details.
-
-## Show Your Support
-
-Add a badge to your README to show that your project uses Pylint:
-
-```markdown
-[![linting](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
-```
+We welcome contributions! Please review the [code of conduct](https://github.com/pylint-dev/pylint/blob/main/CODE_OF_CONDUCT.md) and the [contributor guide](https://pylint.readthedocs.io/en/latest/development_guide/contribute.html) for guidance.
 
 ## License
 
-Pylint is licensed under the GPLv2, with the exception of the icon files which are licensed under CC BY-SA 4.0.
+Pylint is licensed under the [GPLv2](https://github.com/pylint-dev/pylint/blob/main/LICENSE), with icon files under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
 
 ## Support
 
-For support, please check the [contact information](https://pylint.readthedocs.io/en/latest/contact.html).
+For support and contact information, please see the [Pylint documentation](https://pylint.readthedocs.io/en/latest/contact.html).

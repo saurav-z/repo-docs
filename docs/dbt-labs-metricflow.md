@@ -4,96 +4,68 @@
       <img  alt="MetricFlow Logo" src="https://github.com/dbt-labs/metricflow/raw/main/assets/MetricFlow_logo.png" width="auto" height="120">
     </picture>
   </a>
-  <br /><br />
-  <b>Build and maintain all of your metric logic in code.</b>
-  <br /><br />
-  <a target="_blank" href="https://twitter.com/dbt_labs">
-    <img src="https://img.shields.io/twitter/follow/dbt_labs?labelColor=image.png&color=163B36&logo=twitter&style=flat">
-  </a>
-  <a target="_blank" href="https://www.getdbt.com/community/">
-    <img src="https://img.shields.io/badge/Slack-join-163B36">
-  </a>
-  <a target="_blank" href="https://github.com/dbt-labs/metricflow">
-    <img src="https://img.shields.io/github/stars/dbt-labs/metricflow?labelColor=image.png&color=163B36&logo=github">
-  </a>
-  <br />
-  <a target="_blank" href="https://github.com/dbt-labs/metricflow/blob/master/LICENSE">
-    <img src="https://img.shields.io/pypi/l/metricflow?color=163B36&logo=AGPL-3.0">
-  </a>
-  <a target="_blank" href="https://pypi.org/project/metricflow/">
-    <img src="https://img.shields.io/pypi/v/metricflow?labelColor=&color=163B36">
-  </a>
-  <img src="https://img.shields.io/pypi/pyversions/metricflow?labelColor=&color=163B36">
 </p>
 
-# MetricFlow: The Semantic Layer for Consistent and Reusable Metrics
+## MetricFlow: Build Consistent, Reusable Metrics in Code
 
-MetricFlow empowers data teams to define and manage metrics in code, ensuring accuracy and consistency across all your data analysis.  [See the original repository](https://github.com/dbt-labs/metricflow).
+**MetricFlow empowers data teams to define and manage metrics as code, ensuring accuracy and consistency across all your analyses.**
 
-## Key Features
+[![Twitter](https://img.shields.io/twitter/follow/dbt_labs?labelColor=image.png&color=163B36&logo=twitter&style=flat)](https://twitter.com/dbt_labs)
+[![Slack](https://img.shields.io/badge/Slack-join-163B36)](https://www.getdbt.com/community/)
+[![GitHub Stars](https://img.shields.io/github/stars/dbt-labs/metricflow?labelColor=image.png&color=163B36&logo=github)](https://github.com/dbt-labs/metricflow)
+[![License](https://img.shields.io/pypi/l/metricflow?color=163B36&logo=AGPL-3.0)](https://github.com/dbt-labs/metricflow/blob/master/LICENSE)
+[![PyPI Version](https://img.shields.io/pypi/v/metricflow?labelColor=&color=163B36)](https://pypi.org/project/metricflow/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/metricflow?labelColor=&color=163B36)](https://pypi.org/project/metricflow/)
 
-*   **Metric Definition in Code:** Define your metrics in a clean, reusable, and version-controlled manner.
-*   **Consistent Results:**  Ensure accurate and consistent results when analyzing data across different dimensions.
-*   **Multi-Hop Joins:** Handles complex joins between fact and dimension tables.
-*   **Complex Metric Types:** Supports ratio, expression, and cumulative metrics.
-*   **Time Granularity Aggregation:** Aggregate metrics to different time granularities.
-*   **Dataflow-Based Query Optimization:** Compiles metric requests into a dataflow-based query plan for optimization and efficient SQL generation.
+**[See the latest updates in the MetricFlow Changelog](https://github.com/dbt-labs/metricflow/blob/main/CHANGELOG.md)**
 
-## Getting Started
+MetricFlow is a semantic layer that transforms how you define and manage your business metrics. It simplifies the process by compiling metric definitions into clear, reusable SQL, guaranteeing consistent and accurate results when analyzing data. MetricFlow's architecture is centered around a dataflow-based query plan, optimized and translated into engine-specific SQL.
 
-### Installation
+<p align="center">
+<img src="https://github.com/dbt-labs/metricflow/raw/main/assets/example_plan.svg" height="500"/>
+<br /><br />
+</p>
 
-Install MetricFlow using pip:
+### Key Features
 
-```bash
-pip install dbt-metricflow
-```
+*   **Metric Definition as Code:** Define your metrics in a structured, code-based format for version control, reusability, and collaboration.
+*   **Multi-Hop Joins:** Handles complex joins between fact and dimension tables, simplifying your data modeling.
+*   **Advanced Metric Types:** Supports complex metrics like ratios, expressions, and cumulative calculations.
+*   **Time Granularity Control:** Aggregates metrics to different time granularities for flexible analysis.
+*   **Dataflow-Based Query Optimization:** Creates an optimized query plan for efficient execution.
+*   **SQL Generation:** Translates metric definitions into engine-specific SQL for various data warehouses.
 
-MetricFlow integrates with your existing dbt project, serving as a query compilation and SQL rendering library. You'll need a working dbt project and adapter. The `dbt-metricflow` bundle is provided for this purpose and you can install other adapters as optional extras.
+### Getting Started
 
-### Dependencies
+1.  **Install MetricFlow:**
 
-You may need to install Postgres or Graphviz. You can do so by following the install instructions for [Postgres](https://www.postgresql.org/download/) or [Graphviz](https://www.graphviz.org/download/). Mac users may prefer to use brew: `brew install postgresql` or `brew install graphviz`.
+    ```bash
+    pip install dbt-metricflow
+    ```
 
-### Tutorial
+    MetricFlow is designed to work with a dbt project. You'll need a working dbt project and adapter. The `dbt-metricflow` bundle is provided for this purpose. Install optional adapters as needed.
+2.  **Prerequisites:** You may need to install Postgres or Graphviz. Instructions are available at:  [Postgres](https://www.postgresql.org/download/) and [Graphviz](https://www.graphviz.org/download/).
 
-The best way to start using MetricFlow is through the tutorial. Run the following command within your dbt project root directory:
+3.  **Run the Tutorial:** Get started quickly with the tutorial by running the command from your dbt project root:
 
-```bash
-mf tutorial
-```
+    ```bash
+    mf tutorial
+    ```
 
-## Resources
+### Resources
 
-*   [Website](https://transform.co/metricflow)
-*   [Documentation](https://docs.getdbt.com/docs/build/build-metrics-intro)
-*   [Slack Community](https://www.getdbt.com/community/)
-*   [MetricFlow Git Repository](https://github.com/dbt-labs/metricflow)
-*   [CHANGELOG.md](https://github.com/dbt-labs/metricflow/blob/main/CHANGELOG.md)
-*   [TENETS.md](https://github.com/dbt-labs/metricflow/blob/main/TENETS.md)
+*   **Website:** [https://transform.co/metricflow](https://transform.co/metricflow)
+*   **Documentation:** [https://docs.getdbt.com/docs/build/build-metrics-intro](https://docs.getdbt.com/docs/build/build-metrics-intro)
+*   **Slack Community:** [https://www.getdbt.com/community/](https://www.getdbt.com/community/)
+*   **GitHub Repository:** [https://github.com/dbt-labs/metricflow](https://github.com/dbt-labs/metricflow)
+*   **Changelog:** [https://github.com/dbt-labs/metricflow/blob/main/CHANGELOG.md](https://github.com/dbt-labs/metricflow/blob/main/CHANGELOG.md)
+*   **TENETS.md:** [https://github.com/dbt-labs/metricflow/blob/main/TENETS.md](https://github.com/dbt-labs/metricflow/blob/main/TENETS.md)
 
-## Contributing and Code of Conduct
+### Contributing
 
-We encourage contributions! Please review our [code of conduct](https://docs.getdbt.com/community/resources/code-of-conduct) and [contributor guide](https://github.com/dbt-labs/metricflow/blob/main/CONTRIBUTING.md) to get started.
+We welcome contributions! Please review the [Code of Conduct](https://docs.getdbt.com/community/resources/code-of-conduct) and the [Contributor Guide](https://github.com/dbt-labs/metricflow/blob/main/CONTRIBUTING.md) to get started.
 
-## License
+### Licensing
 
-MetricFlow is source-available software.
-
-Version 0 to 0.140.0 was covered by the Affero GPL license.
-Version 0.150.0 and greater is covered by the BSL license.
-
-MetricFlow is built by [dbt Labs](https://www.getdbt.com/).
-```
-Key improvements and explanations:
-
-*   **SEO Optimization:** Added a concise and keyword-rich title "MetricFlow: The Semantic Layer for Consistent and Reusable Metrics".  This includes relevant keywords like "semantic layer" and emphasizes the benefits of the tool.
-*   **One-Sentence Hook:**  The first sentence now immediately explains the value proposition: "MetricFlow empowers data teams to define and manage metrics in code, ensuring accuracy and consistency across all your data analysis."  This grabs the reader's attention.
-*   **Clear Headings:** Used clear and descriptive headings for each section (Key Features, Getting Started, etc.) for readability and SEO.
-*   **Bulleted Key Features:**  Uses bullet points to highlight the main capabilities of MetricFlow, making the information easy to scan.
-*   **Concise Language:**  Streamlined the descriptions to be more direct and easier to understand.
-*   **Installation & Dependencies:**  Improved the installation instructions by clarifying the necessary environment.  I also added a section for dependencies and included installation instructions for postgres and graphviz, since those are sometimes required.
-*   **Resource Links:** Keeps the original links but organized them more clearly.
-*   **Link Back to Original Repo:** Includes a prominent link back to the original GitHub repository.
-*   **Code Formatting:** Maintained code formatting (e.g., code blocks, bold text) for improved readability.
-*   **License Clarification**: Added that Metricflow is source-available software and clarified the license history.
+MetricFlow is source-available software, currently under the BSL license.
+This project is built by [dbt Labs](https://www.getdbt.com/).

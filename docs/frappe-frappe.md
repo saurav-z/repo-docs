@@ -1,41 +1,35 @@
 <div align="center" markdown="1">
-	<img src=".github/framework-logo-new.svg" width="80" height="80"/>
-	<h1>Frappe Framework</h1>
-
- **Build powerful, semantic web applications faster with the Frappe Framework, a low-code platform built on Python and JavaScript.**
+    <img src=".github/framework-logo-new.svg" width="80" height="80" alt="Frappe Framework Logo"/>
+    <h1>Frappe Framework: Build Powerful Web Applications with Ease</h1>
 </div>
 
 <div align="center">
-	<a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-success.svg"></a>
-	<a href="https://codecov.io/gh/frappe/frappe"><img src="https://codecov.io/gh/frappe/frappe/branch/develop/graph/badge.svg?token=XoTa679hIj"/></a>
-	<br>
-	<a href="https://github.com/frappe/frappe">
-	    <img src="https://img.shields.io/github/stars/frappe/frappe?style=social" alt="GitHub stars">
-	</a>
+    <a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-success.svg" alt="MIT License"></a>
+    <a href="https://codecov.io/gh/frappe/frappe"><img src="https://codecov.io/gh/frappe/frappe/branch/develop/graph/badge.svg?token=XoTa679hIj" alt="Code Coverage"></a>
 </div>
 <div align="center">
-	<img src=".github/hero-image.png" alt="Hero Image" />
+    <img src=".github/hero-image.png" alt="Hero Image" />
 </div>
 <div align="center">
     <a href="https://frappe.io/framework">Website</a>
     -
     <a href="https://docs.frappe.io/framework">Documentation</a>
+    -
+    <a href="https://github.com/frappe/frappe">Original Repository</a>
 </div>
 
-## Frappe Framework: Your Full-Stack Web Application Powerhouse
+## Frappe Framework: The Low-Code Powerhouse for Web Applications
 
-Frappe Framework is a powerful, open-source, full-stack web application framework that simplifies building robust and scalable applications using Python on the server-side and a tightly integrated JavaScript client-side library. Inspired by semantic web principles, Frappe allows you to define the *meaning* of your data, leading to more consistent, extensible, and maintainable applications.
+Frappe Framework is a full-stack, open-source web application framework that simplifies development, allowing you to build robust and scalable applications with Python and JavaScript.  It's the engine behind ERPNext and offers a comprehensive suite of tools and features to streamline your development workflow.
 
-**[Learn More and Contribute on GitHub](https://github.com/frappe/frappe)**
+### Key Features:
 
-### Key Features
-
-*   **Full-Stack Development:** Build complete web applications with a unified framework for both front-end and back-end development.
-*   **Low-Code Admin Interface:**  Quickly create and customize admin dashboards for efficient data management, saving development time.
-*   **Role-Based Access Control:**  Implement granular user and role management to control access permissions and data security.
-*   **RESTful API Generation:** Automatically generates a REST API for all models, making integration with other systems seamless.
-*   **Customizable Forms and Views:**  Tailor forms and views to your specific needs using server-side scripting and client-side JavaScript for a personalized user experience.
-*   **Powerful Report Builder:** Empower users to create custom reports without writing any code, facilitating data analysis and insights.
+*   **Full-Stack Development:**  Develop both front-end and back-end applications with a single framework.
+*   **Built-in Admin Interface:**  Customize and manage your application data with a pre-built admin dashboard.
+*   **Role-Based Permissions:** Implement granular user and role management for secure access control.
+*   **REST API (Automatic):**  Instantly integrate with other systems using automatically generated RESTful APIs.
+*   **Customizable Forms and Views:** Tailor forms and views with server-side scripting and client-side JavaScript to match your needs.
+*   **Powerful Report Builder:** Create custom reports without writing any code.
 
 <details>
 <summary>Screenshots</summary>
@@ -45,77 +39,65 @@ Frappe Framework is a powerful, open-source, full-stack web application framewor
 ![Role Permission Manager](.github/fw-rpm.png)
 </details>
 
-## Production Setup
+## Getting Started
 
-### Managed Hosting
+### Production Setup
 
-Consider [Frappe Cloud](https://frappecloud.com) for a hassle-free, open-source platform to host your Frappe applications. It offers easy installation, setup, upgrades, monitoring, maintenance, and support for your deployments.
+Choose the best hosting solution for your project:
 
-<div>
-    <a href="https://frappecloud.com/" target="_blank">
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/try-on-fc-white.png">
-            <img src="https://frappe.io/files/try-on-fc-black.png" alt="Try on Frappe Cloud" height="28" />
-        </picture>
-    </a>
-</div>
+*   **Frappe Cloud:**  Get a simple, user-friendly, and sophisticated [open-source](https://github.com/frappe/press) platform to host Frappe applications. Frappe Cloud takes care of installation, setup, upgrades, monitoring, maintenance, and support. It is a fully featured developer platform with an ability to manage and control multiple Frappe deployments.
+    <div>
+        <a href="https://frappecloud.com/" target="_blank">
+            <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/try-on-fc-white.png">
+                <img src="https://frappe.io/files/try-on-fc-black.png" alt="Try on Frappe Cloud" height="28" />
+            </picture>
+        </a>
+    </div>
 
-### Self Hosting
+*   **Self Hosting:**
 
-### Docker
-
-**Prerequisites**:  Docker, docker-compose, and git. Refer to [Docker Documentation](https://docs.docker.com) for detailed setup instructions.
-
-**Installation**:
-
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/frappe/frappe_docker
-    cd frappe_docker
-    ```
-2.  Run Docker Compose:
-    ```bash
-    docker compose -f pwd.yml up -d
-    ```
-
-After a couple of minutes, your site should be accessible on `localhost:8080`. Use the following credentials:
-
-*   **Username:** Administrator
-*   **Password:** admin
-
-Refer to [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM-based Docker setup.
+    *   **Docker:**
+        *   **Prerequisites:** `docker`, `docker-compose`, `git`.  Refer to [Docker Documentation](https://docs.docker.com) for setup.
+        *   **Setup:**
+            ```bash
+            git clone https://github.com/frappe/frappe_docker
+            cd frappe_docker
+            docker compose -f pwd.yml up -d
+            ```
+        *   Your site will be accessible on localhost:8080.
+        *   **Default Login:** Administrator / admin.
+        *   **ARM Setup:** See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM-based Docker setup.
 
 ## Development Setup
 
 ### Manual Install
 
-The easiest way is to use our install script for bench which installs all dependencies (e.g. MariaDB).  See [bench documentation](https://github.com/frappe/bench) for more details.
+The easy way to install Frappe: use the install script for bench, which will install all dependencies (e.g., MariaDB). See [Bench Documentation](https://github.com/frappe/bench) for more details.
 
-New passwords will be created for the Frappe "Administrator" user, the MariaDB root user, and the frappe user (the script displays the passwords and saves them to `~/frappe_passwords.txt`).
+New passwords will be created for the Frappe "Administrator" user, the MariaDB root user, and the frappe user (the script displays the passwords and saves them to ~/frappe_passwords.txt).
 
 ### Local Development
 
-Follow these steps to set up the repository locally:
-
-1.  Install bench by following the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) and start the server:
-
+1.  Setup bench by following the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) and start the server
     ```bash
     bench start
     ```
-2.  In a separate terminal window:
 
+2.  In a separate terminal window, run:
     ```bash
     # Create a new site
     bench new-site frappe.localhost
     ```
-3.  Open the URL `http://frappe.localhost:8000/app` in your browser. You should see the application running.
+
+3.  Open `http://frappe.localhost:8000/app` in your browser to see the running app.
 
 ## Learning and Community
 
-*   [Frappe School](https://frappe.school) - Courses for learning Frappe Framework and ERPNext.
-*   [Official Documentation](https://docs.frappe.io/framework) - Comprehensive documentation.
-*   [Discussion Forum](https://discuss.frappe.io/) - Engage with the Frappe community.
-*   [buildwithhussain.com](https://buildwithhussain.com) - See Frappe Framework in action building web apps.
+*   [Frappe School](https://frappe.school): Learn Frappe Framework and ERPNext through courses by the maintainers and community.
+*   [Official Documentation](https://docs.frappe.io/framework): Extensive documentation.
+*   [Discussion Forum](https://discuss.frappe.io/): Engage with the Frappe community.
+*   [buildwithhussain.com](https://buildwithhussain.com): See Frappe Framework in action.
 
 ## Contributing
 
@@ -127,10 +109,10 @@ Follow these steps to set up the repository locally:
 <br>
 <br>
 <div align="center">
-	<a href="https://frappe.io" target="_blank">
-		<picture>
-			<source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/Frappe-white.png">
-			<img src="https://frappe.io/files/Frappe-black.png" alt="Frappe Technologies" height="28"/>
-		</picture>
-	</a>
+    <a href="https://frappe.io" target="_blank">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/Frappe-white.png">
+            <img src="https://frappe.io/files/Frappe-black.png" alt="Frappe Technologies" height="28"/>
+        </picture>
+    </a>
 </div>

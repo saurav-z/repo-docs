@@ -1,47 +1,47 @@
-# curl_cffi: The Ultimate Python Library for Web Scraping and Browser Impersonation
-
-Tired of being blocked? **curl_cffi** is a powerful Python library that mimics browser behavior, allowing you to bypass bot detection and scrape websites effectively.  [Check out the original repo](https://github.com/lexiforest/curl_cffi).
+# curl_cffi: The Fastest Python HTTP Client with Browser Impersonation
 
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/curl-cffi)](https://pypi.org/project/curl-cffi/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/curl_cffi)](https://pypi.org/project/curl-cffi/)
-[![PyPI version](https://badge.fury.io/py/curl-cffi.svg)](https://pypi.org/project/curl-cffi)
+[![PyPI version](https://badge.fury.io/py/curl-cffi.svg)](https://badge.fury.io/py/curl-cffi)
 [![Telegram Group](https://img.shields.io/badge/Telegram%20Group-join-blue?logo=telegram)](https://t.me/+lL9n33eZp480MGM1)
 [![Discord](https://img.shields.io/badge/Discord-join-purple?logo=blue)](https://discord.gg/kJqMHHgdn2)
-[Documentation](https://curl-cffi.readthedocs.io)
 
-Built upon the `curl-impersonate` fork and `cffi`, curl_cffi provides a high-performance, browser-mimicking HTTP client. Perfect for web scraping, data extraction, and any task that requires robust and undetectable web requests.
+**Bypass website restrictions and achieve lightning-fast web requests with `curl_cffi`, a Python library leveraging the power of `curl-impersonate`.**
+
+[Documentation](https://curl-cffi.readthedocs.io) | [GitHub Repository](https://github.com/lexiforest/curl_cffi)
+
+`curl_cffi` provides a high-performance Python binding for the `curl-impersonate` fork, using `cffi`.  It's designed for speed and flexibility, enabling you to mimic browser behavior and overcome anti-bot measures.  For commercial support, visit [impersonate.pro](https://impersonate.pro).
 
 **Key Features:**
 
-*   **Browser Impersonation:** Mimic various browsers' TLS/JA3 and HTTP/2 fingerprints (Chrome, Safari, Firefox, etc.).
-*   **High Performance:** Significantly faster than `requests` and `httpx`, on par with `aiohttp` and `pycurl`.
-*   **Familiar API:** Uses a `requests`-like API for easy integration.
-*   **Asynchronous Support:** Built-in `asyncio` support with proxy rotation.
-*   **HTTP/2 & HTTP/3 Support:**  Includes support for the latest HTTP protocols.
-*   **Websocket Support:**  Offers both synchronous and asynchronous WebSocket APIs.
-*   **Pre-compiled Binaries:** Easy installation without needing to compile on your machine.
-*   **Proxy Support:**  Supports HTTP and SOCKS proxies.
-*   **Open Source & MIT Licensed:**  Free to use and modify.
+*   **Browser Impersonation:** Mimic various browsers' TLS/JA3 and HTTP/2 fingerprints to bypass bot detection.
+*   **Blazing Fast:** Outperforms `requests` and `httpx`, comparable to `aiohttp` and `pycurl`. See [benchmarks](https://github.com/lexiforest/curl_cffi/tree/main/benchmark).
+*   **Familiar API:** Uses a `requests`-like API for ease of use.
+*   **Pre-compiled:**  No need to compile on your machine.
+*   **Asyncio Support:**  Offers asynchronous requests with proxy rotation.
+*   **HTTP/2 & HTTP/3 Support:** Includes support for modern protocols.
+*   **Websocket Support:** Provides websocket client functionality.
+*   **Open Source:**  MIT licensed, allowing for free use and modification.
 
-**Why Choose curl_cffi?**
+**[YesCaptcha](https://yescaptcha.com/i/stfnIO) - Bypass Cloudflare with API:**
 
-| Feature          | requests | aiohttp | httpx | pycurl | curl_cffi |
-|------------------|----------|---------|-------|--------|-------------|
-| HTTP/2           | ❌       | ❌      | ✅    | ✅     | ✅          |
-| HTTP/3           | ❌       | ❌      | ❌    | ✅     | ✅          |
-| Sync             | ✅       | ❌      | ✅    | ✅     | ✅          |
-| Async            | ❌       | ✅      | ✅    | ❌     | ✅          |
-| WebSockets       | ❌       | ✅      | ❌    | ❌     | ✅          |
-| Fingerprints     | ❌       | ❌      | ❌    | ❌     | ✅          |
-| Speed            | 🐇       | 🐇🐇    | 🐇    | 🐇🐇   | 🐇🐇        |
+[<img src="https://raw.githubusercontent.com/lexiforest/curl_cffi/main/assets/yescaptcha.png" alt="Yes Captcha!" height="47" width="149">](https://yescaptcha.com/i/stfnIO)
 
-**Installation**
+Yescaptcha is a proxy service that bypasses Cloudflare and uses the API interface to obtain verified cookies (e.g. `cf_clearance`). Click [here](https://yescaptcha.com/i/stfnIO) to register.
+
+**Installation:**
 
 ```bash
 pip install curl_cffi --upgrade
 ```
 
-**Usage**
+For beta releases:
+
+```bash
+pip install curl_cffi --upgrade --pre
+```
+
+**Usage Examples:**
 
 ```python
 import curl_cffi
@@ -50,32 +50,23 @@ import curl_cffi
 r = curl_cffi.get("https://tls.browserleaks.com/json", impersonate="chrome")
 print(r.json())
 
-# Asyncio Example
-from curl_cffi import AsyncSession
-import asyncio
-
-async with AsyncSession() as s:
-    r = await s.get("https://example.com", impersonate="chrome")
-    print(r.text)
+# Use sessions
+s = curl_cffi.Session()
+s.get("https://httpbin.org/cookies/set/foo/bar")
+print(s.cookies)
 ```
 
-**Supported Browsers:**
+**Supported Impersonation Browsers:**
 
-`curl_cffi` supports a wide range of browser versions for effective impersonation.  See the original repo for a full list.
+`curl_cffi` supports a variety of browser versions, constantly updated to reflect the latest browser fingerprints.  See the original README for details.
 
-**Bypass Cloudflare with API**
+**Ecosystem Integrations:**
 
-<a href="https://yescaptcha.com/i/stfnIO" target="_blank"><img src="https://raw.githubusercontent.com/lexiforest/curl_cffi/main/assets/yescaptcha.png" alt="Yes Captcha!" height="47" width="149"></a>
-[Yescaptcha](https://yescaptcha.com/i/stfnIO) is a proxy service that bypasses Cloudflare and uses the API interface to
-obtain verified cookies (e.g. `cf_clearance`).
+*   Scrapy: [divtiply/scrapy-curl-cffi](https://github.com/divtiply/scrapy-curl-cffi), [jxlil/scrapy-impersonate](https://github.com/jxlil/scrapy-impersonate) and [tieyongjie/scrapy-fingerprint](https://github.com/tieyongjie/scrapy-fingerprint).
+*   Requests Adapter: [el1s7/curl-adapter](https://github.com/el1s7/curl-adapter)
+*   Httpx Adapter: [vgavro/httpx-curl-cffi](https://github.com/vgavro/httpx-curl-cffi)
+*   Captcha Resolvers: CapSolver, YesCaptcha
 
-**Ecosystem & Integrations:**
+**Contribute:**
 
-*   **Scrapy:** `scrapy-curl-cffi`, `scrapy-impersonate`, `scrapy-fingerprint`
-*   **Requests Adapters:** `curl-adapter`
-*   **HTTPX Adapters:**  `httpx-curl-cffi`
-*   **Captcha Resolvers:**  CapSolver, YesCaptcha
-
-**Contribute**
-Please use a different branch other than `main` and check the
-"Allow edits by maintainers" box when creating pull requests.
+Contributions are welcome! Please submit your PRs on a separate branch, and check the "Allow edits by maintainers" box.
