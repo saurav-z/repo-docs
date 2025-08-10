@@ -1,40 +1,39 @@
-# MaxText: High-Performance, Open-Source LLM Training and Inference
+# MaxText: High-Performance, Scalable, Open-Source LLM Training and Inference
 
-**Maximize your LLM performance with MaxText, a cutting-edge, open-source LLM framework optimized for speed and scalability on TPUs and GPUs.** ([Original Repository](https://github.com/AI-Hypercomputer/maxtext))
+**Maximize your LLM potential with MaxText, a cutting-edge, open-source framework built for high-performance training and inference on TPUs and GPUs.**
 
 [![Unit Tests](https://github.com/google/maxtext/actions/workflows/RunTests.yml/badge.svg)](https://github.com/google/maxtext/actions/workflows/RunTests.yml)
 
-## Key Features:
+## Key Features
 
-*   **High Performance:** Achieve exceptional Model Flops Utilization (MFU) thanks to pure Python/Jax and the XLA compiler. See impressive [Runtime Performance Results](#runtime-performance-results) below.
-*   **Scalable:** Train and infer LLMs from single-host to large clusters of Google Cloud TPUs and GPUs.
-*   **Open Source:**  Freely experiment, customize, and contribute to your LLM projects.
-*   **TPU and GPU Support:** Runs efficiently on both hardware platforms.
-*   **Training and Inference:** Supports both training and inference workflows.
-*   **Model Support:** Pre-configured for popular LLMs, including:
-    *   Llama 2, Llama 3, Llama 4 (Maverick and Scout models)
-    *   Mistral and Mixtral family
-    *   Gemma, Gemma 2, Gemma 3
-    *   DeepSeek family
-*   **Modular Imports:** Improved code organization with modular imports.
+*   **High Performance:** Achieves exceptional Model Flops Utilization (MFU) for fast training and inference.
+*   **Scalability:** Designed to scale from single-host to very large clusters, supporting thousands of chips.
+*   **Open Source:** Built in pure Python/Jax, fostering community contributions and customization.
+*   **TPU & GPU Support:** Optimized for Google Cloud TPUs and GPUs.
+*   **Training and Inference:** Supports both training and inference workloads.
+*   **Model Compatibility:** Supports a wide range of LLMs, including Llama 2/3/4, Mistral/Mixtral, Gemma/Gemma 2/3, and DeepSeek families.
 
-## Announcements
+## Overview
 
-*   [July 27, 2025] Updated TFLOPS/s calculations to account for causal, sliding window, and chunked attention, improving accuracy.
-*   [July 16, 2025] Repository restructuring for improved organization is underway.
-*   [July 11, 2025] Multi-Token Prediction (MTP) training support for enhanced efficiency.
-*   [June 25, 2025] DeepSeek R1-0528 variant is now supported!
-*   [April 24, 2025] Llama 4 Maverick models are now supported!
-*   [April 14, 2025] Llama 4 Scout models are now supported (8k context length).
-*   **[April 7, 2025] API change for `train.py`: Use `python3 -m MaxText.train MaxText/configs/base.yml run_name=...` now.**
-*   [April 2, 2025] DeepSeek v3-0324 variant is now supported!
-*   [March 24, 2025] DeepSeek v3 (671B) and v2-Lite (16B) support for both TPUs and GPUs.
-*   [March 12, 2025] Gemma 3 (4B, 12B, 27B) text-only support.
-*   [February, 2025] (Preview): Build MaxText Docker images using JAX AI Training Images.
+MaxText is a powerful, open-source Large Language Model (LLM) framework written in pure Python/Jax, specifically designed for high-performance and scalability on Google Cloud TPUs and GPUs. Built for both training and inference, MaxText leverages the power of Jax and the XLA compiler to deliver exceptional Model Flops Utilization (MFU) and seamlessly scales from single-host to massive clusters. It's an ideal starting point for ambitious LLM projects, providing a flexible foundation for research and production.  Explore the original repository [here](https://github.com/AI-Hypercomputer/maxtext).
+
+## What's New
+
+*   **[July 27, 2024]**:  Attention flop calculations updated to account for causal, sliding window and chunked attention.
+*   **[July 16, 2024]**:  Repository restructuring for improved organization and clarity is proposed; see [RESTRUCTURE.md](RESTRUCTURE.md) for feedback.
+*   **[July 11, 2024]**:  Multi-Token Prediction (MTP) training support added, enhancing training efficiency.
+*   **[June 25, 2024]**:  DeepSeek R1-0528 variant supported.
+*   **[April 24, 2024]**: Llama 4 Maverick models are now supported.
+*   **[April 14, 2024]**: Llama 4 Scout models are now supported (8k context length).
+*   **[April 7, 2024]**: Modular imports supported with associated API change for `train.py`.
+*   **[April 2, 2024]**: DeepSeek v3-0324 variant is now supported.
+*   **[March 24, 2024]**: DeepSeek v3 (671B) and v2-Lite (16B) support added.
+*   **[March 12, 2024]**: Gemma 3: 4B, 12B, and 27B support added.
+*   **[February, 2024]**: Preview of MaxText Docker image building using JAX AI Training Images.
 
 ## Table of Contents
 
-*   [Getting Started](#getting-started)
+*   [Getting Started](getting_started/First_run.md)
 *   [Runtime Performance Results](#runtime-performance-results)
 *   [Comparison To Alternatives](#comparison-to-alternatives)
 *   [Development](#development)
@@ -42,20 +41,20 @@
 
 ## Getting Started
 
-Begin your MaxText journey with detailed [instructions](getting_started/First_run.md) for your first run.
+Start your MaxText journey with the [getting started instructions](getting_started/First_run.md).
 
-Explore guides for training and inference with various open models in the [getting started](getting_started) folder:
+### Supported Models & Guides
 
-*   [Gemma (generations 1-3)](https://ai.google.dev/gemma)
-*   [Llama2](https://llama.meta.com/llama2/)
-*   [Mixtral](https://mistral.ai/news/mixtral-of-experts/)
-*   [DeepSeek](https://api-docs.deepseek.com/news/news1226)
+Explore the following resources to get started:
 
-Also, find additional information in the [end_to_end](end_to_end) tests and [unit tests](.github/workflows/RunTests.yml).
+*   **Gemma:** Fine-tune and decode with [these instructions](end_to_end/tpu/gemma/Run_Gemma.md).  Gemma 2 & 3 have their own scripts in [end_to_end/tpu/gemma2](end_to_end/tpu/gemma2) and [end_to_end/tpu/gemma3](end_to_end/tpu/gemma3).
+*   **Llama2:** Fine-tune and decode with [these instructions](getting_started/Run_Llama2.md).
+*   **Mixtral:** Fine-tune and decode with [these instructions](end_to_end/tpu/mixtral/Run_Mixtral.md).
+*   **DeepSeek:** Pre-train, fine-tune, and decode with [these instructions](end_to_end/tpu/deepseek/Run_DeepSeek.md).
 
 ## Runtime Performance Results
 
-Reproduce these results with details in [MaxText/configs/README.md](MaxText/configs/README.md).
+See the performance achieved on TPUs. More details on reproducing these results can be found in [MaxText/configs/README.md](MaxText/configs/README.md).
 
 ### TPU v5p
 
@@ -74,8 +73,6 @@ Reproduce these results with details in [MaxText/configs/README.md](MaxText/conf
 
 ### TPU v5e
 
-For 16B, 32B, 64B, and 128B models. See full run configs in [MaxText/configs/v5e/](MaxText/configs/v5e/) as `16b.sh`, `32b.sh`, `64b.sh`, `128b.sh`.
-
 | Hardware    | 16B TFLOP/sec/chip | 16B MFU | 32B TFLOP/sec/chip | 32B MFU | 64B TFLOP/sec/chip | 64B MFU | 128B TFLOP/sec/chip | 128B MFU |
 | ----------- | -----------------: | ------- | -----------------: | ------- | -----------------: | ------- | ------------------: | -------- |
 | 1x v5e-256  | 120                | 61.10%  | 132                | 66.86%  | 118                | 59.90%  | 110                 | 56.06%   |
@@ -87,99 +84,31 @@ For 16B, 32B, 64B, and 128B models. See full run configs in [MaxText/configs/v5e
 
 ## Comparison to Alternatives
 
-MaxText differentiates itself through its focus on performance, scalability, and code simplicity. MaxText achieves high MFU compared to similar implementations. In comparison to Megatron-LM, the codebases differ in programming strategies, MaxText is pure Python relying on the XLA compiler. Compared to Pax, MaxText is a simple, concrete implementation of various LLMs that encourages users to extend by forking and directly editing the source code.
-
-## Development
-
-[Original Repository](https://github.com/AI-Hypercomputer/maxtext)
+MaxText, heavily influenced by projects like MinGPT and NanoGPT, delivers superior MFU, and is comparable to Megatron-LM, while offering the benefits of pure Python and XLA compilation.
 
 ## Features and Diagnostics
 
 ### Collect Stack Traces
 
-Configure stack trace collection for debugging in `MaxText/configs/base.yml`:
+Enhance debugging by collecting stack traces during SPMD jobs. Configure the following parameters in `MaxText/configs/base.yml`:
 
-1.  `collect_stack_trace: True` enables stack trace collection. Set to `False` to disable.
-2.  `stack_trace_to_cloud: False` displays traces on the console. `True` stores traces in `/tmp/debugging` and uploads to Cloud Logging.
+1.  `collect_stack_trace: True` to enable trace collection.
+2.  `stack_trace_to_cloud: False` to display traces on the console, or `True` to store them in the cloud using a temporary directory and then log the traces to Cloud Logging.
 3.  `stack_trace_interval_seconds` sets the trace collection interval.
 
-View traces in Cloud Logging using:
-
-```
-logName="projects/<project_name>/logs/tpu.googleapis.com%2Fruntime_monitor"
-jsonPayload.verb="stacktraceanalyzer"
-```
-
-For information on the PyPI package see: https://pypi.org/project/cloud-tpu-diagnostics.
+Package: [cloud-tpu-diagnostics](https://pypi.org/project/cloud-tpu-diagnostics).
 
 ### Ahead of Time Compilation (AOT)
 
-Use `train_compile.py` to pre-compile for target hardware (TPUs and GPUs):
+Use `train_compile.py` to pre-compile training runs for faster startup and restart times.
 
-*   Provides OOM detection.
-*   Enables fast startup and restart times.
-*   Install `jax[tpu]` (and other dependencies) using `setup.sh`.
-
-**AOT Example 1: Compile basics**
-
-```bash
-python3 -m MaxText.train_compile MaxText/configs/base.yml compile_topology=v5e-256 compile_topology_num_slices=2 \
-global_parameter_scale=16 per_device_batch_size=4
-```
-
-**AOT Example 2: Save/load compiled function**
-
-**Step 1: Run AOT and save compiled function**
-
-```bash
-export LIBTPU_INIT_ARGS="--xla_enable_async_all_gather=true"
-python3 -m MaxText.train_compile MaxText/configs/base.yml compile_topology=v5e-256 \
-compile_topology_num_slices=2 \
-compiled_trainstep_file=my_compiled_train.pickle global_parameter_scale=16 \
-per_device_batch_size=4 steps=10000 learning_rate=1e-3
-```
-
-**Step 2: Run train.py and load the compiled function**
-
-```bash
-export LIBTPU_INIT_ARGS="--xla_enable_async_all_gather=true"
-python3 -m MaxText.train MaxText/configs/base.yml run_name=example_load_compile \
-compiled_trainstep_file=my_compiled_train.pickle \
-global_parameter_scale=16  per_device_batch_size=4 steps=10000 learning_rate=1e-3 \
-base_output_directory=gs://my-output-bucket dataset_path=gs://my-dataset-bucket
-```
-
-**GPU Support**
-
-*   Single GPU host required for compilation.
-*   `compile_topology_num_slices` represents the number of A3 machines.
-
-**GPU Example**
-
-**Step 1: Run AOT and save compiled function**
-
-```bash
-export XLA_FLAGS="--xla_gpu_enable_async_collectives=true"
-python3 -m MaxText.train_compile MaxText/configs/base.yml compile_topology=a3 \
-compile_topology_num_slices=4 \
-compiled_trainstep_file=my_compiled_train.pickle global_parameter_scale=16 \
-attention=dot_product per_device_batch_size=4 steps=10000 learning_rate=1e-3
-```
-
-**Step 2: Run train.py and load the compiled function**
-
-```bash
-export XLA_FLAGS="--xla_gpu_enable_async_collectives=true"
-python3 -m MaxText.train MaxText/configs/base.yml run_name=example_load_compile \
-compiled_trainstep_file=my_compiled_train.pickle \
-attention=dot_product global_parameter_scale=16  per_device_batch_size=4 steps=10000 learning_rate=1e-3 \
-base_output_directory=gs://my-output-bucket dataset_path=gs://my-dataset-bucket
-```
+*   TPU Support: Pre-compile on a CPU or single VM to identify OOM issues and save the compiled function for efficient execution. See detailed examples in the original README.
+*   GPU Support: A single GPU host can compile for a larger cluster of the same hardware.
 
 ### Automatically Upload Logs to Vertex Tensorboard
 
-See [user guide](getting_started/Use_Vertex_AI_Tensorboard.md).
+Integrate with Vertex AI Tensorboard for automatic log uploads. See the [user guide](getting_started/Use_Vertex_AI_Tensorboard.md).
 
 ### Monitor Goodput of Your Workload
 
-See [user guide](getting_started/Monitor_Goodput.md).
+Track goodput metrics with the [user guide](getting_started/Monitor_Goodput.md).

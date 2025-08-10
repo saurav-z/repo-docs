@@ -9,22 +9,18 @@
 
 </div>
 
-# AutoGen: Build Powerful Multi-Agent AI Applications
+# AutoGen: Build Powerful Multi-Agent AI Applications with Ease
 
-**AutoGen** is a versatile framework enabling developers to create advanced multi-agent AI applications that can work autonomously or collaboratively with humans.
-
-**[Explore the AutoGen Repository](https://github.com/microsoft/autogen)**
+AutoGen is a versatile framework designed for building, running, and managing sophisticated multi-agent AI applications.  <br> **[View the original repo](https://github.com/microsoft/autogen)**
 
 ## Key Features
 
-*   **Multi-Agent Framework:** Design and implement complex AI workflows with multiple agents.
-*   **Flexible Architecture:** Build applications using layered and extensible design, ranging from high-level APIs to low-level components.
-*   **AgentChat API:** Rapid prototyping with a simple, opinionated API.
-*   **AutoGen Studio:** Develop multi-agent applications with a no-code GUI.
-*   **Extensible Ecosystem:** Integrate first- and third-party extensions to expand framework capabilities.
-*   **Developer Tools:** Access benchmarking tools (AutoGen Bench) and more to evaluate performance.
-*   **.NET Support:** Cross-language support for both Python and .NET applications.
-*   **Thriving Community:** Join weekly office hours and interact with the AutoGen community via Discord, GitHub Discussions, and the official blog.
+*   **Multi-Agent Workflows:** Easily design and deploy complex AI agent collaborations.
+*   **Extensible Architecture:** Leverage a layered and modular design for flexible development and customization.
+*   **Core API & AgentChat API:** Choose the right level of abstraction, from core components to rapid prototyping APIs.
+*   **AutoGen Studio:** A no-code GUI for prototyping and running multi-agent workflows.
+*   **Extensive Tooling:** Includes a benchmarking suite (AutoGen Bench) and support for various LLM clients (OpenAI, Azure OpenAI) and code execution capabilities.
+*   **Community & Support:** Benefit from a thriving ecosystem with weekly office hours, Discord server, and active community engagement.
 
 ## Installation
 
@@ -35,7 +31,7 @@ AutoGen requires **Python 3.10 or later**.
 pip install -U "autogen-agentchat" "autogen-ext[openai]"
 ```
 
-For those upgrading from v0.2, consult the [Migration Guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/migration-guide.html).
+The current stable version is v0.4. If you are upgrading from AutoGen v0.2, please refer to the [Migration Guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/migration-guide.html) for detailed instructions on how to update your code and configurations.
 
 ```bash
 # Install AutoGen Studio for no-code GUI
@@ -122,30 +118,23 @@ autogenstudio ui --port 8080 --appdir ./my-app
   <img src="autogen-landing.jpg" alt="AutoGen Landing" width="500">
 </div>
 
-The AutoGen ecosystem is your comprehensive solution for creating AI agents, especially for multi-agent workflows, offering a robust framework, essential developer tools, and readily available applications.
+AutoGen offers a complete ecosystem for building, testing, and deploying multi-agent AI applications.  The framework's modular design allows you to choose the level of abstraction that best suits your needs, from high-level APIs for rapid prototyping to low-level components for advanced customization.
 
-The framework features a layered design for maximum flexibility:
+*   **Core API:** Provides message passing, event-driven agents, and local/distributed runtime. Supports cross-language support for .NET and Python.
+*   **AgentChat API:** Simplifies multi-agent interactions for faster development.
+*   **Extensions API:** Adds support for LLM clients, code execution, and third-party integrations.
 
-*   **Core API:** Implements message passing, event-driven agents, and local/distributed runtime. Supports cross-language (.NET and Python) support.
-*   **AgentChat API:** Simplifies development with a more opinionated API built on the Core API (akin to v0.2) and supporting patterns like two-agent chat or group chats.
-*   **Extensions API:** Expands the framework with first- and third-party extensions, including LLM clients (e.g., OpenAI, AzureOpenAI) and capabilities like code execution.
+## Developer Tools
 
-AutoGen also equips you with vital developer tools:
+*   **AutoGen Studio:** (No-code GUI for building multi-agent applications)
+    <div align="center">
+      <img src="https://media.githubusercontent.com/media/microsoft/autogen/refs/heads/main/python/packages/autogen-studio/docs/ags_screen.png" alt="AutoGen Studio Screenshot" width="500">
+    </div>
+*   **AutoGen Bench:** (Benchmarking suite for evaluating agent performance)
 
-<div align="center">
-  <img src="https://media.githubusercontent.com/media/microsoft/autogen/refs/heads/main/python/packages/autogen-studio/docs/ags_screen.png" alt="AutoGen Studio Screenshot" width="500">
-</div>
+AutoGen empowers you to build innovative applications in your domain.  The ecosystem's active community provides valuable support through weekly office hours, a Discord server, GitHub Discussions, and a blog.
 
-*   **AutoGen Studio:** A no-code GUI for building multi-agent applications.
-*   **AutoGen Bench:** Evaluate agent performance with a dedicated benchmarking suite.
-
-Utilize AutoGen to develop solutions for your domain, like [Magentic-One](./python/packages/magentic-one-cli/), a state-of-the-art multi-agent team built using AgentChat API and Extensions API for web browsing, code execution, and file handling.
-
-Join and contribute to the thriving AutoGen ecosystem, with community support, including weekly office hours and talks with maintainers, a [Discord server](https://aka.ms/autogen-discord) for real-time chat, GitHub Discussions for Q&A, and a blog for tutorials and updates.
-
-## Where to Go Next?
-
-<div align="center">
+## Get Started
 
 |               | [![Python](https://img.shields.io/badge/AutoGen-Python-blue?logo=python&logoColor=white)](./python)                                                                                                                                                                                                                                                                                                                | [![.NET](https://img.shields.io/badge/AutoGen-.NET-green?logo=.net&logoColor=white)](./dotnet)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | [![Studio](https://img.shields.io/badge/AutoGen-Studio-purple?logo=visual-studio&logoColor=white)](./python/packages/autogen-studio)                        |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -155,48 +144,23 @@ Join and contribute to the thriving AutoGen ecosystem, with community support, i
 | API Reference | [![API](https://img.shields.io/badge/Docs-blue)](https://microsoft.github.io/autogen/stable/reference/index.html#)                                                                                                                                                                                                                                                                                                 | [![API](https://img.shields.io/badge/Docs-green)](https://microsoft.github.io/autogen/dotnet/dev/api/Microsoft.AutoGen.Contracts.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | [![API](https://img.shields.io/badge/Docs-purple)](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/usage.html)               |
 | Packages      | [![PyPi autogen-core](https://img.shields.io/badge/PyPi-autogen--core-blue?logo=pypi)](https://pypi.org/project/autogen-core/) <br> [![PyPi autogen-agentchat](https://img.shields.io/badge/PyPi-autogen--agentchat-blue?logo=pypi)](https://pypi.org/project/autogen-agentchat/) <br> [![PyPi autogen-ext](https://img.shields.io/badge/PyPi-autogen--ext-blue?logo=pypi)](https://pypi.org/project/autogen-ext/) | [![NuGet Contracts](https://img.shields.io/badge/NuGet-Contracts-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Contracts/) <br> [![NuGet Core](https://img.shields.io/badge/NuGet-Core-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Core/) <br> [![NuGet Core.Grpc](https://img.shields.io/badge/NuGet-Core.Grpc-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.Core.Grpc/) <br> [![NuGet RuntimeGateway.Grpc](https://img.shields.io/badge/NuGet-RuntimeGateway.Grpc-green?logo=nuget)](https://www.nuget.org/packages/Microsoft.AutoGen.RuntimeGateway.Grpc/) | [![PyPi autogenstudio](https://img.shields.io/badge/PyPi-autogenstudio-purple?logo=pypi)](https://pypi.org/project/autogenstudio/)                          |
 
-</div>
+## Contribute
 
-Interested in contributing? See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines. We welcome contributions of all kinds, including bug fixes, new features, and documentation improvements. Join our community and help us make AutoGen better!
+We welcome contributions of all kinds.  See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
 
-## Support and Community
+## Get Support
 
-Have questions? Check our [Frequently Asked Questions (FAQ)](./FAQ.md). For further assistance, use [GitHub Discussions](https://github.com/microsoft/autogen/discussions) or the [Discord server](https://aka.ms/autogen-discord). You can also stay informed via the [blog](https://devblogs.microsoft.com/autogen/).
+*   [Frequently Asked Questions (FAQ)](./FAQ.md)
+*   [GitHub Discussions](https://github.com/microsoft/autogen/discussions)
+*   [Discord server](https://aka.ms/autogen-discord)
+*   [Blog](https://devblogs.microsoft.com/autogen/)
 
 ## Legal Notices
 
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
-
-Microsoft, Windows, Microsoft Azure, and/or other Microsoft products and services referenced in the documentation
-may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
-The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at <http://go.microsoft.com/fwlink/?LinkID=254653>.
-
-Privacy information can be found at <https://go.microsoft.com/fwlink/?LinkId=521839>
-
-Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel, or otherwise.
+(See original README)
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
   <a href="#readme-top" style="text-decoration: none; color: blue; font-weight: bold;">
     ↑ Back to Top ↑
   </a>
 </p>
-```
-Key improvements and optimizations:
-
-*   **SEO-friendly Title:** The main heading is now more descriptive and includes keywords ("Multi-Agent AI Applications").
-*   **One-Sentence Hook:** The opening sentence now effectively captures the essence of AutoGen's value proposition.
-*   **Clear Headings:**  Uses clear, descriptive headings to improve readability and SEO (e.g., "Key Features," "Installation," "Quickstart," "Why Use AutoGen?").
-*   **Bulleted Key Features:** Highlights core functionalities with concise bullet points.
-*   **Keyword Optimization:**  Incorporates relevant keywords naturally throughout the text (e.g., "multi-agent AI," "AI agents," "framework," "developer tools").
-*   **Internal Linking:** Creates a link back to the original repo.
-*   **User-Friendly:** The text is better organized and the language is clearer and more concise.
-*   **Call to action:** Includes prompts that help drive users to get started.
-*   **Clearer Installation Section:** Improves clarity.
-*   **Enhanced "Why Use AutoGen?" Section:**  Expanded and rewritten for better impact, emphasizing benefits and the ecosystem.
-*   **Improved Community and Support Section**: Highlights the means to find support.
-*   **Updated Legal Notices**: Retains the relevant legal information.

@@ -1,23 +1,24 @@
-# auditwheel: Audit and Repair Linux Wheels for Python
+# auditwheel: Ensuring Linux Wheel Compatibility for Python Packages
 
-**Ensure your Python wheels are compatible with a wide range of Linux distributions with `auditwheel`.** ([Original Repository](https://github.com/pypa/auditwheel))
+**Auditwheel is a powerful command-line tool designed to audit and repair Python wheel packages for compatibility with various Linux distributions, specifically those adhering to PEP 600 manylinux standards.** [(See original repo)](https://github.com/pypa/auditwheel)
 
 ## Key Features
 
-*   **Auditing:**  Inspects Python wheel packages to identify external shared library dependencies and versioned symbols.
-*   **Repairing:**  Copies necessary shared libraries into the wheel and modifies RPATH entries for runtime compatibility.
-*   **Manylinux Compliance:**  Helps create wheels compliant with PEP 600 (manylinux_x_y), PEP 513 (manylinux1), PEP 571 (manylinux2010), and PEP 599 (manylinux2014) standards.
-*   **Command-Line Tool:**  Provides easy-to-use `show` and `repair` commands for wheel inspection and modification.
+*   **Auditing:** Identifies external shared library dependencies and versioned symbols in your wheel packages.
+*   **Repairing:** Copies required external shared libraries into the wheel and modifies RPATH entries, ensuring compatibility across a wider range of Linux systems.
+*   **Manylinux Compliance:** Supports PEP 600 (manylinux_x_y), PEP 513 (manylinux1), PEP 571 (manylinux2010), and PEP 599 (manylinux2014) wheel standards.
+*   **Platform Tag Management:** Updates wheel platform tags to reflect manylinux compatibility (e.g., from `linux_x86_64` to `manylinux1_x86_64`).
+*   **Command-Line Interface:** Provides easy-to-use commands like `show` (for inspection) and `repair` (for fixing wheels).
 
 ## Overview
 
-`auditwheel` is a command-line tool designed to simplify the creation of Python wheel packages for Linux. These wheels often contain pre-compiled binary extensions, and `auditwheel` helps ensure they are compatible across various Linux distributions by aligning with the `manylinux` standards.  It addresses the challenge of providing pre-built binaries that work consistently across different Linux environments by identifying and resolving shared library dependencies.
+Auditwheel simplifies the creation of cross-platform Python wheel packages that include pre-compiled binary extensions. It helps developers ensure their packages work on diverse Linux distributions.
 
-## Requirements
+### Requirements
 
-*   **OS:** Linux
+*   **Operating System:** Linux
 *   **Python:** 3.9+
-*   **Dependency:** `patchelf` (version 0.14+)
+*   **patchelf:** 0.14+ (Get it from [here](https://github.com/NixOS/patchelf))
 
 ## Installation
 
@@ -43,14 +44,14 @@ auditwheel repair cffi-1.5.2-cp35-cp35m-linux_x86_64.whl
 
 ## Limitations
 
-*   **Dynamic Library Loading:**  `auditwheel` may miss dependencies loaded dynamically at runtime using `ctypes`, `cffi`, or `dlopen`.
-*   **GLIBC/libstdc++ Compatibility:**  Cannot fix binaries compiled against newer versions of `glibc` or `libstdc++` that are incompatible with older systems. Build on older distributions or use manylinux Docker images for best compatibility.
+*   **Dynamic Library Loading:** Does not detect dependencies loaded dynamically at runtime (via `ctypes`, `cffi`, or `dlopen`).
+*   **glibc/libstdc++ Compatibility:** Cannot "fix" binaries compiled against overly recent versions of `glibc` or `libstdc++` due to symbol versioning issues. Building on an older Linux distribution is recommended.
 
 ## Testing
 
-Run tests using `nox`. Integration tests may require a Docker daemon and specific images.
+Test `auditwheel` by using ``nox``.
 
-To update the Docker images, run:
+To update the test Docker images:
 
 ```bash
 docker pull python:3.9-slim-bookworm
@@ -62,6 +63,8 @@ docker pull quay.io/pypa/manylinux_2_34_x86_64
 docker pull quay.io/pypa/musllinux_1_2_x86_64
 ```
 
+You may remove these images using ``docker rmi``.
+
 ## Code of Conduct
 
-Please adhere to the `PSF Code of Conduct`.
+Please adhere to the [PSF Code of Conduct](https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md).

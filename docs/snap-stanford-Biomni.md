@@ -1,7 +1,3 @@
-# Biomni: Revolutionizing Biomedical Research with an AI Agent
-
-**Biomni empowers scientists to accelerate biomedical research by autonomously executing complex tasks using cutting-edge AI.** [Learn more on the original repo](https://github.com/snap-stanford/Biomni).
-
 <p align="center">
   <img src="./figs/biomni_logo.png" alt="Biomni Logo" width="600px" />
 </p>
@@ -25,108 +21,120 @@
 </p>
 
 
-## Key Features
 
-*   **Autonomous Task Execution:** Biomni utilizes advanced AI to autonomously plan and execute a wide array of biomedical research tasks.
-*   **LLM-Powered Reasoning:** Leverages the power of Large Language Models (LLMs) for intelligent reasoning and hypothesis generation.
-*   **Retrieval-Augmented Planning:** Combines LLM capabilities with retrieval-augmented planning for enhanced task execution.
-*   **Code-Based Execution:** Executes tasks through code, providing a flexible and powerful approach to biomedical research.
-*   **Web Interface:** Access and experiment with Biomni's capabilities via a user-friendly, no-code web interface.
-*   **MCP (Model Context Protocol) Support:** Integrate external tools via MCP servers.
-*   **Open-Source & Community-Driven:** Biomni thrives on community contributions, offering opportunities for collaboration and innovation.
+# Biomni: A General-Purpose Biomedical AI Agent
+
+## Overview
+
+
+Biomni is a general-purpose biomedical AI agent designed to autonomously execute a wide range of research tasks across diverse biomedical subfields. By integrating cutting-edge large language model (LLM) reasoning with retrieval-augmented planning and code-based execution, Biomni helps scientists dramatically enhance research productivity and generate testable hypotheses.
+
 
 ## Quick Start
 
 ### Installation
 
-1.  **Set up the Environment:** Follow the instructions in the [biomni\_env/README.md](biomni_env/README.md) file to set up the software environment.
-2.  **Activate the Environment:**
-    ```bash
-    conda activate biomni_e1
-    ```
-3.  **Install the Biomni Package:**
-    ```bash
-    pip install biomni --upgrade
-    ```
-    or for the latest updates
-    ```bash
-    pip install git+https://github.com/snap-stanford/Biomni.git@main
-    ```
-4.  **Configure API Keys:** Choose one of the following methods:
+Our software environment is massive and we provide a single setup.sh script to setup.
+Follow this [file](biomni_env/README.md) to setup the env first.
 
-    <details>
-    <summary>Click to expand - API Key Configuration</summary>
+Then activate the environment E1:
 
-    #### Option 1: Using .env file (Recommended)
+```bash
+conda activate biomni_e1
+```
 
-    Create a `.env` file in your project directory:
+then install the biomni official pip package:
 
-    ```bash
-    # Copy the example file
-    cp .env.example .env
+```bash
+pip install biomni --upgrade
+```
 
-    # Edit the .env file with your actual API keys
-    ```
+For the latest update, install from the github source version, or do:
 
-    Your `.env` file should look like:
+```bash
+pip install git+https://github.com/snap-stanford/Biomni.git@main
+```
 
-    ```env
-    # Required: Anthropic API Key for Claude models
-    ANTHROPIC_API_KEY=your_anthropic_api_key_here
+Lastly, configure your API keys using one of the following methods:
 
-    # Optional: OpenAI API Key (if using OpenAI models)
-    OPENAI_API_KEY=your_openai_api_key_here
+<details>
+<summary>Click to expand</summary>
 
-    # Optional: Azure OpenAI API Key (if using Azure OpenAI models)
-    OPENAI_API_KEY=your_azure_openai_api_key
-    OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
+#### Option 1: Using .env file (Recommended)
 
-    # Optional: AI Studio Gemini API Key (if using Gemini models)
-    GEMINI_API_KEY=your_gemini_api_key_here
+Create a `.env` file in your project directory:
 
-    # Optional: groq API Key (if using groq as model provider)
-    GROQ_API_KEY=your_groq_api_key_here
+```bash
+# Copy the example file
+cp .env.example .env
 
-    # Optional: Set the source of your LLM for example:
-    #"OpenAI", "AzureOpenAI", "Anthropic", "Ollama", "Gemini", "Bedrock", "Groq", "Custom"
-    LLM_SOURCE=your_LLM_source_here
+# Edit the .env file with your actual API keys
+```
 
-    # Optional: AWS Bedrock Configuration (if using AWS Bedrock models)
-    AWS_BEARER_TOKEN_BEDROCK=your_bedrock_api_key_here
-    AWS_REGION=us-east-1
+Your `.env` file should look like:
 
-    # Optional: Custom model serving configuration
-    # CUSTOM_MODEL_BASE_URL=http://localhost:8000/v1
-    # CUSTOM_MODEL_API_KEY=your_custom_api_key_here
+```env
+# Required: Anthropic API Key for Claude models
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
 
-    # Optional: Biomni data path (defaults to ./data)
-    # BIOMNI_DATA_PATH=/path/to/your/data
+# Optional: OpenAI API Key (if using OpenAI models)
+OPENAI_API_KEY=your_openai_api_key_here
 
-    # Optional: Timeout settings (defaults to 600 seconds)
-    # BIOMNI_TIMEOUT_SECONDS=600
-    ```
+# Optional: Azure OpenAI API Key (if using Azure OpenAI models)
+OPENAI_API_KEY=your_azure_openai_api_key
+OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
 
-    #### Option 2: Using shell environment variables
+# Optional: AI Studio Gemini API Key (if using Gemini models)
+GEMINI_API_KEY=your_gemini_api_key_here
 
-    Alternatively, configure your API keys in bash profile `~/.bashrc`:
+# Optional: groq API Key (if using groq as model provider)
+GROQ_API_KEY=your_groq_api_key_here
 
-    ```bash
-    export ANTHROPIC_API_KEY="YOUR_API_KEY"
-    export OPENAI_API_KEY="YOUR_API_KEY" # optional if you just use Claude
-    export OPENAI_ENDPOINT="https://your-resource-name.openai.azure.com/" # optional unless you are using Azure
-    export AWS_BEARER_TOKEN_BEDROCK="YOUR_BEDROCK_API_KEY" # optional for AWS Bedrock models
-    export AWS_REGION="us-east-1" # optional, defaults to us-east-1 for Bedrock
-    export GEMINI_API_KEY="YOUR_GEMINI_API_KEY" #optional if you want to use a gemini model
-    export GROQ_API_KEY="YOUR_GROQ_API_KEY" # Optional: set this to use models served by Groq
-    export LLM_SOURCE="Groq" # Optional: set this to use models served by Groq
-    ```
-    </details>
+# Optional: Set the source of your LLM for example:
+#"OpenAI", "AzureOpenAI", "Anthropic", "Ollama", "Gemini", "Bedrock", "Groq", "Custom"
+LLM_SOURCE=your_LLM_source_here
 
-### Known Package Conflicts
+# Optional: AWS Bedrock Configuration (if using AWS Bedrock models)
+AWS_BEARER_TOKEN_BEDROCK=your_bedrock_api_key_here
+AWS_REGION=us-east-1
 
-Address potential package conflicts by reviewing the [docs/known\_conflicts.md](./docs/known_conflicts.md) file for a list of packages that may need manual installation.
+# Optional: Custom model serving configuration
+# CUSTOM_MODEL_BASE_URL=http://localhost:8000/v1
+# CUSTOM_MODEL_API_KEY=your_custom_api_key_here
+
+# Optional: Biomni data path (defaults to ./data)
+# BIOMNI_DATA_PATH=/path/to/your/data
+
+# Optional: Timeout settings (defaults to 600 seconds)
+# BIOMNI_TIMEOUT_SECONDS=600
+```
+
+#### Option 2: Using shell environment variables
+
+Alternatively, configure your API keys in bash profile `~/.bashrc`:
+
+```bash
+export ANTHROPIC_API_KEY="YOUR_API_KEY"
+export OPENAI_API_KEY="YOUR_API_KEY" # optional if you just use Claude
+export OPENAI_ENDPOINT="https://your-resource-name.openai.azure.com/" # optional unless you are using Azure
+export AWS_BEARER_TOKEN_BEDROCK="YOUR_BEDROCK_API_KEY" # optional for AWS Bedrock models
+export AWS_REGION="us-east-1" # optional, defaults to us-east-1 for Bedrock
+export GEMINI_API_KEY="YOUR_GEMINI_API_KEY" #optional if you want to use a gemini model
+export GROQ_API_KEY="YOUR_GROQ_API_KEY" # Optional: set this to use models served by Groq
+export LLM_SOURCE="Groq" # Optional: set this to use models served by Groq
+
+
+```
+</details>
+
+
+#### ⚠️ Known Package Conflicts
+
+Some Python packages are not installed by default in the Biomni environment due to dependency conflicts. If you need these features, you must install the packages manually and may need to uncomment relevant code in the codebase. See the up-to-date list and details in [docs/known_conflicts.md](./docs/known_conflicts.md).
 
 ### Basic Usage
+
+Once inside the environment, you can start using Biomni:
 
 ```python
 from biomni.agent import A1
@@ -139,11 +147,11 @@ agent.go("Plan a CRISPR screen to identify genes that regulate T cell exhaustion
 agent.go("Perform scRNA-seq annotation at [PATH] and generate meaningful hypothesis")
 agent.go("Predict ADMET properties for this compound: CC(C)CC1=CC=C(C=C1)C(C)C(=O)O")
 ```
-*If using Azure, prefix the model name with `azure-`*
+If you plan on using Azure for your model, always prefix the model name with azure- (e.g. llm='azure-gpt-4o').
 
 ## MCP (Model Context Protocol) Support
 
-Integrate external tools using MCP servers:
+Biomni supports MCP servers for external tool integration:
 
 ```python
 from biomni.agent import A1
@@ -153,51 +161,67 @@ agent.add_mcp(config_path="./mcp_config.yaml")
 agent.go("Find FDA active ingredient information for ibuprofen")
 ```
 
-**Built-in MCP Servers:** Explore examples in [`tutorials/examples/add_mcp_server/`](tutorials/examples/add_mcp_server/) and [`tutorials/examples/expose_biomni_server/`](tutorials/examples/expose_biomni_server/) and learn more in the [MCP Integration Documentation](docs/mcp_integration.md).
 
-## Contributing to Biomni
+**Built-in MCP Servers:**
+For usage and implementation details, see the [MCP Integration Documentation](docs/mcp_integration.md) and examples in [`tutorials/examples/add_mcp_server/`](tutorials/examples/add_mcp_server/) and [`tutorials/examples/expose_biomni_server/`](tutorials/examples/expose_biomni_server/).
 
-Join the open-science initiative! We welcome contributions in these areas:
 
-*   New Tools
-*   Datasets
-*   Software Integration
-*   Benchmarks
-*   Tutorials, Examples, and Use Cases
-*   Fixes/Improvements for Existing Tools
+## 🤝 Contributing to Biomni
 
-See the **[Contributing Guide](CONTRIBUTION.md)**.
+Biomni is an open-science initiative that thrives on community contributions. We welcome:
 
-You can also submit tool/database/software suggestions via [this form](https://forms.gle/nu2n1unzAYodTLVj6).
+- **🔧 New Tools**: Specialized analysis functions and algorithms
+- **📊 Datasets**: Curated biomedical data and knowledge bases
+- **💻 Software**: Integration of existing biomedical software packages
+- **📋 Benchmarks**: Evaluation datasets and performance metrics
+- **📚 Misc**: Tutorials, examples, and use cases
+- **🔧 Update existing tools**: many current tools are not optimized - fix and replacements are welcome!
 
-## Biomni-E2: Shaping the Future of Biomedical AI
+Check out this **[Contributing Guide](CONTRIBUTION.md)** on how to contribute to the Biomni ecosystem.
 
-Be a part of **Biomni-E2**! Contribute and be invited as a co-author on an upcoming paper, with all contributors acknowledged in our publications.
+If you have particular tool/database/software in mind that you want to add, you can also submit to [this form](https://forms.gle/nu2n1unzAYodTLVj6) and the biomni team will implement them.
+
+## 🔬 Call for Contributors: Help Build Biomni-E2
+
+Biomni-E1 only scratches the surface of what’s possible in the biomedical action space.
+
+Now, we’re building **Biomni-E2** — a next-generation environment developed **with and for the community**.
+
+We believe that by collaboratively defining and curating a shared library of standard biomedical actions, we can accelerate science for everyone.
+
+**Join us in shaping the future of biomedical AI agent.**
+
+- **Contributors with significant impact** (e.g., 10+ significant & integrated tool contributions or equivalent) will be **invited as co-authors** on our upcoming paper in a top-tier journal or conference.
+- **All contributors** will be acknowledged in our publications.
+- More contributor perks...
+
+Let’s build it together.
+
 
 ## Tutorials and Examples
 
-*   **[Biomni 101](./tutorials/biomni_101.ipynb)** - Get started with basic concepts.
-*   More tutorials are coming soon!
+**[Biomni 101](./tutorials/biomni_101.ipynb)** - Basic concepts and first steps
+
+More to come!
 
 ## 🌐 Web Interface
 
-Explore Biomni's capabilities through our no-code web interface: **[biomni.stanford.edu](https://biomni.stanford.edu)**.
+Experience Biomni through our no-code web interface at **[biomni.stanford.edu](https://biomni.stanford.edu)**.
 
 [![Watch the video](https://img.youtube.com/vi/E0BRvl23hLs/maxresdefault.jpg)](https://youtu.be/E0BRvl23hLs)
 
 ## Release schedule
 
-*   \[ ] 8 Real-world research task benchmark/leaderboard release
-*   \[ ] A tutorial on how to contribute to Biomni
-*   \[ ] A tutorial on baseline agents
-*   \[x] MCP support
-*   \[x] Biomni A1+E1 release
+- [ ] 8 Real-world research task benchmark/leaderboard release
+- [ ] A tutorial on how to contribute to Biomni
+- [ ] A tutorial on baseline agents
+- [x] MCP support
+- [x] Biomni A1+E1 release
 
-## Important Notes
-
-*   **Security:** Exercise caution as Biomni executes LLM-generated code with full system privileges. Use in isolated/sandboxed environments.
-*   **Release Date:** This release was frozen as of April 15, 2025, and may differ from the web platform.
-*   **Licensing:** Review licenses of integrated tools before commercial use, as they may have restrictive licenses.
+## Important Note
+- Security warning: Currently, Biomni executes LLM-generated code with full system privileges. If you want to use it in production, please use in isolated/sandboxed environments. The agent can access files, network, and system commands. Be careful with sensitive data or credentials.
+- This release was frozen as of April 15 2025, so it differs from the current web platform.
+- Biomni itself is Apache 2.0-licensed, but certain integrated tools, databases, or software may carry more restrictive commercial licenses. Review each component carefully before any commercial use.
 
 ## Cite Us
 
@@ -210,3 +234,4 @@ Explore Biomni's capabilities through our no-code web interface: **[biomni.stanf
   year={2025},
   publisher={Cold Spring Harbor Laboratory}
 }
+```

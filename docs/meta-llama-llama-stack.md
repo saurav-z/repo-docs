@@ -1,6 +1,6 @@
-# Llama Stack: Build, Deploy, and Scale Your AI Applications with Ease
+# Llama Stack: Build Generative AI Apps Faster
 
-**Llama Stack simplifies AI application development by providing a standardized and extensible framework for building, deploying, and scaling LLM-powered applications. [Explore the Llama Stack Repo](https://github.com/meta-llama/llama-stack)**
+**Llama Stack is your all-in-one solution for simplifying and accelerating the development of generative AI applications.** Explore the official [Llama Stack repository](https://github.com/meta-llama/llama-stack) for the latest updates.
 
 [![PyPI version](https://img.shields.io/pypi/v/llama_stack.svg)](https://pypi.org/project/llama_stack/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/llama-stack)](https://pypi.org/project/llama-stack/)
@@ -9,19 +9,23 @@
 [![Unit Tests](https://github.com/meta-llama/llama-stack/actions/workflows/unit-tests.yml/badge.svg?branch=main)](https://github.com/meta-llama/llama-stack/actions/workflows/unit-tests.yml?query=branch%3Amain)
 [![Integration Tests](https://github.com/meta-llama/llama-stack/actions/workflows/integration-tests.yml/badge.svg?branch=main)](https://github.com/meta-llama/llama-stack/actions/workflows/integration-tests.yml?query=branch%3Amain)
 
-[**Quick Start**](https://llama-stack.readthedocs.io/en/latest/getting_started/index.html) | [**Documentation**](https://llama-stack.readthedocs.io/en/latest/index.html) | [**Colab Notebook**](./docs/getting_started.ipynb) | [**Discord**](https://discord.gg/llama-stack)
+*   [**Quick Start**](https://llama-stack.readthedocs.io/en/latest/getting_started/index.html)
+*   [**Documentation**](https://llama-stack.readthedocs.io/en/latest/index.html)
+*   [**Colab Notebook**](./docs/getting_started.ipynb)
+*   [**Discord**](https://discord.gg/llama-stack)
 
-## Key Features of Llama Stack:
+## Key Features
 
-*   **Unified API Layer:** Standardizes APIs for Inference, RAG, Agents, Tools, Safety, Evals, and Telemetry, simplifying development and deployment.
-*   **Plugin Architecture:** Supports a rich ecosystem of API implementations, allowing flexibility across various environments (local, cloud, on-premise, mobile).
-*   **Prepackaged Distributions:** Offers ready-to-use solutions for quick and reliable setup in any environment.
-*   **Multiple Developer Interfaces:** Provides CLI and SDKs for Python, Typescript, iOS, and Android, enhancing developer accessibility.
-*   **Standalone Applications:** Includes example applications to demonstrate production-grade AI application development with Llama Stack.
+*   **Unified API Layer:** Standardizes core building blocks for inference, RAG, agents, tools, safety, evaluations, and telemetry.
+*   **Plugin Architecture:** Supports a wide ecosystem of API implementations across various environments (local, on-premise, cloud, mobile).
+*   **Prepackaged Distributions:** Offers ready-to-use solutions for quick and reliable deployments.
+*   **Multiple Developer Interfaces:** Provides CLI and SDKs for Python, Typescript, iOS, and Android.
+*   **Standalone Applications:**  Includes examples demonstrating how to build production-grade AI applications.
 
-## Llama 4 Support
+## What's New? Support for Llama 4 Models!
 
-Llama Stack fully supports the Llama 4 family of models.
+Llama Stack now supports the latest Llama 4 models, giving you access to the cutting-edge capabilities of these powerful models.
+[Version 0.2.0](https://github.com/meta-llama/llama-stack/releases/tag/v0.2.0) released with support for the Llama 4 herd of models released by Meta.
 
 <details>
 
@@ -83,27 +87,25 @@ As more providers start supporting Llama 4, you can use them in Llama Stack as w
 
 </details>
 
-## Getting Started: Installation
+## Get Started Quickly
 
 ### 🚀 One-Line Installer 🚀
 
-To try Llama Stack locally, run:
+Easily set up Llama Stack locally with a single command:
 
 ```bash
 curl -LsSf https://github.com/meta-llama/llama-stack/raw/main/scripts/install.sh | bash
 ```
 
-## Llama Stack Benefits
+## Benefits of Using Llama Stack
 
-*   **Flexible Infrastructure:** Choose your preferred infrastructure without code changes, along with flexible deployment options.
-*   **Consistent Application Behavior:** Build, test, and deploy AI applications more easily with unified APIs and consistent application behavior.
-*   **Robust Ecosystem:** Leverage integrations with cloud providers, hardware vendors, and AI companies that provide specialized infrastructure, software, and services.
-
-Llama Stack helps developers reduce complexity, empowering them to build innovative generative AI applications.
+*   **Flexible Deployment:** Choose your preferred infrastructure without code changes.
+*   **Consistent Experience:** Build and deploy AI applications with unified APIs.
+*   **Robust Ecosystem:** Leverage integrations with cloud providers, hardware vendors, and AI-focused companies.
 
 ## API Providers
 
-Llama Stack supports a wide range of API providers.  See [full list](https://llama-stack.readthedocs.io/en/latest/providers/index.html) for details.
+Llama Stack supports a growing list of API providers, giving you flexibility and choice.  See the full list at [API Providers](https://llama-stack.readthedocs.io/en/latest/providers/index.html).
 
 | API Provider Builder | Environments | Agents | Inference | VectorIO | Safety | Telemetry | Post Training | Eval | DatasetIO |
 |:--------------------:|:------------:|:------:|:---------:|:--------:|:------:|:---------:|:-------------:|:----:|:--------:|
@@ -136,9 +138,9 @@ Llama Stack supports a wide range of API providers.  See [full list](https://lla
 
 > **Note**: Additional providers are available through external packages. See [External Providers](https://llama-stack.readthedocs.io/en/latest/providers/external.html) documentation.
 
-## Distributions
+## Pre-configured Distributions
 
-Llama Stack Distributions streamline deployments by providing pre-configured bundles of provider implementations for each API component.
+Llama Stack Distributions offer pre-configured bundles for different deployment scenarios.
 
 |               **Distribution**                |                                                                    **Llama Stack Docker**                                                                     |                                                 Start This Distribution                                                  |
 |:---------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------:|
@@ -146,22 +148,25 @@ Llama Stack Distributions streamline deployments by providing pre-configured bun
 |                Meta Reference                 |           [llamastack/distribution-meta-reference-gpu](https://hub.docker.com/repository/docker/llamastack/distribution-meta-reference-gpu/general)           |      [Guide](https://llama-stack.readthedocs.io/en/latest/distributions/self_hosted_distro/meta-reference-gpu.html)      |
 |                   PostgreSQL                  |                [llamastack/distribution-postgres-demo](https://hub.docker.com/repository/docker/llamastack/distribution-postgres-demo/general)                |                  |
 
-## Documentation
+## Documentation & Resources
 
-Comprehensive documentation is available on our [Documentation](https://llama-stack.readthedocs.io/en/latest/index.html) page.  This includes:
+Explore our comprehensive documentation and resources:
 
-*   CLI references
-    *   [llama (server-side) CLI Reference](https://llama-stack.readthedocs.io/en/latest/references/llama_cli_reference/index.html): Guide for using the `llama` CLI to work with Llama models (download, study prompts), and building/starting a Llama Stack distribution.
-    *   [llama (client-side) CLI Reference](https://llama-stack.readthedocs.io/en/latest/references/llama_stack_client_cli_reference.html): Guide for using the `llama-stack-client` CLI, which allows you to query information about the distribution.
-*   Getting Started Guides
-    *   [Quick guide to start a Llama Stack server](https://llama-stack.readthedocs.io/en/latest/getting_started/index.html).
-    *   [Jupyter notebook](./docs/getting_started.ipynb) to walk-through how to use simple text and vision inference llama_stack_client APIs
-    *   The complete Llama Stack lesson [Colab notebook](https://colab.research.google.com/drive/1dtVmxotBsI4cGZQNsJRYPrLiDeT0Wnwt) of the new [Llama 3.2 course on Deeplearning.ai](https://learn.deeplearning.ai/courses/introducing-multimodal-llama-3-2/lesson/8/llama-stack).
-    *   A [Zero-to-Hero Guide](https://github.com/meta-llama/llama-stack/tree/main/docs/zero_to_hero_guide) that guide you through all the key components of llama stack with code samples.
-*   [Contributing](CONTRIBUTING.md)
-    *   [Adding a new API Provider](https://llama-stack.readthedocs.io/en/latest/contributing/new_api_provider.html) to walk-through how to add a new API provider.
+*   **CLI References:**
+    *   [llama (server-side) CLI Reference](https://llama-stack.readthedocs.io/en/latest/references/llama_cli_reference/index.html)
+    *   [llama (client-side) CLI Reference](https://llama-stack.readthedocs.io/en/latest/references/llama_stack_client_cli_reference.html)
+*   **Getting Started:**
+    *   [Quick Start Guide](https://llama-stack.readthedocs.io/en/latest/getting_started/index.html)
+    *   [Jupyter Notebook](docs/getting_started.ipynb)
+    *   [Llama 3.2 Course Colab Notebook](https://colab.research.google.com/drive/1dtVmxotBsI4cGZQNsJRYPrLiDeT0Wnwt)
+    *   [Zero-to-Hero Guide](https://github.com/meta-llama/llama-stack/tree/main/docs/zero_to_hero_guide)
+*   **Contributing:**
+    *   [Contributing Guide](CONTRIBUTING.md)
+    *   [Adding a New API Provider](https://llama-stack.readthedocs.io/en/latest/contributing/new_api_provider.html)
 
 ## Llama Stack Client SDKs
+
+Build your applications in your preferred language with our Client SDKs:
 
 |  **Language** |  **Client SDK** | **Package** |
 | :----: | :----: | :----: |
@@ -170,6 +175,4 @@ Comprehensive documentation is available on our [Documentation](https://llama-st
 | Typescript   | [llama-stack-client-typescript](https://github.com/meta-llama/llama-stack-client-typescript) | [![NPM version](https://img.shields.io/npm/v/llama-stack-client.svg)](https://npmjs.org/package/llama-stack-client)
 | Kotlin | [llama-stack-client-kotlin](https://github.com/meta-llama/llama-stack-client-kotlin) | [![Maven version](https://img.shields.io/maven-central/v/com.llama.llamastack/llama-stack-client-kotlin)](https://central.sonatype.com/artifact/com.llama.llamastack/llama-stack-client-kotlin)
 
-Choose from our client SDKs for connecting to a Llama Stack server in your preferred language: [python](https://github.com/meta-llama/llama-stack-client-python), [typescript](https://github.com/meta-llama/llama-stack-client-typescript), [swift](https://github.com/meta-llama/llama-stack-client-swift), and [kotlin](https://github.com/meta-llama/llama-stack-client-kotlin) to quickly build your applications.
-
-Find more example scripts in our [llama-stack-apps](https://github.com/meta-llama/llama-stack-apps/tree/main/examples) repo.
+Find example scripts and connect with a Llama Stack server in the [llama-stack-apps](https://github.com/meta-llama/llama-stack-apps/tree/main/examples) repo.

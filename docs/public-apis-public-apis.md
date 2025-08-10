@@ -1,44 +1,40 @@
-# Public APIs: Unleash a World of Free Data for Your Projects
+# **Unleash the Power of Public APIs: Your Ultimate Guide to Free Data**
 
-**Unlock a vast and constantly updated collection of public APIs for your next project!** This repository, curated by community members and supported by APILayer, is a treasure trove of free and open APIs, providing data from a multitude of domains.  Explore this comprehensive list of APIs and discover how to integrate powerful functionalities into your applications. 
+Looking to integrate data into your next project? Explore a massive, community-curated collection of free and open APIs with the **Public APIs** repository! This comprehensive resource provides developers with access to a vast array of APIs across diverse categories, from weather and sports to finance and entertainment.  **[Explore the Original Repository](https://github.com/public-apis/public-apis) for the most up-to-date information.**
 
-[**Check out the original repository here:**](https://github.com/public-apis/public-apis)
+<p align="center">
+  <a href="https://apilayer.com">
+    <img src=".github/cs1586-APILayerLogoUpdate2022-LJ_v2-HighRes.png" alt="APILayer Logo" width="40%"/>
+  </a>
+</p>
+
+**APILayer** empowers developers to seamlessly integrate APIs into their projects.  Check out [APILayer APIs](https://apilayer.com/products/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) for your next project!
+
+<br>
 
 **Key Features:**
 
-*   **Extensive Coverage:**  Access APIs across a wide range of categories, including Animals, Weather, Finance, and more.
-*   **Community-Driven:** Maintained and updated by a vibrant community of developers like you.
-*   **Free to Use:** Utilize these APIs to build your own products, without any cost.
-*   **Organized & Categorized:**  Browse APIs efficiently with clear categories and descriptions.
-*   **Growing Collection:**  The list is constantly being updated with new and valuable APIs.
+*   **Extensive API List:**  A constantly updated, community-driven list of public APIs, covering a wide spectrum of categories.
+*   **Diverse Categories:** From Animals to Weather, find APIs tailored to your project needs.
+*   **Easy Integration:** Discover APIs with clear documentation and implementation examples.
+*   **Community-Driven:** Contribute to and benefit from a collaborative resource.
+*   **Free to Use:** Access a wealth of APIs without any paywalls.
 
-**APILayer - Enhance Your API Integration**
+<br>
 
-[APILayer](https://apilayer.com/products/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) offers a range of powerful APIs to accelerate your development.
+**Key Highlights from APILayer**
 
-**APILayer APIs**
-*   **IPstack**: Locate and Identify Website Visitors by IP Address.
-*   **Marketstack**:  Free, easy-to-use REST API interface delivering worldwide stock market data in JSON format.
-*   **Weatherstack**: Retrieve instant, accurate weather information for any location in the world in lightweight JSON format.
-*   **Numverify**: Global Phone Number Validation & Lookup JSON API.
-*   **Fixer**:  Foreign exchange (forex) rates.
-*   **Aviationstack**: Real-time flight status and global Aviation data API.
+*  **IPstack:**  Locate and Identify Website Visitors by IP Address
+*  **Marketstack:** Free, easy-to-use REST API interface delivering worldwide stock market data in JSON format
+*  **Weatherstack:** Retrieve instant, accurate weather information for any location in the world in lightweight JSON format
+*  **Numverify:** Global Phone Number Validation & Lookup JSON API
+*  **Fixer:** Simple and lightweight API for current and historical foreign exchange (forex) rates.
+*  **Aviationstack:** Free, real-time flight status and global Aviation data API
 
-**Connect with the Community:**
+Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) to connect with other developers and stay up-to-date!
 
-Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) for updates, questions, and community interaction.
-
-**Get Involved:**
-
-*   [Contributing Guide](CONTRIBUTING.md)
-*   [API for this project](https://github.com/davemachado/public-api)
-*   [Issues](https://github.com/public-apis/public-apis/issues)
-*   [Pull Requests](https://github.com/public-apis/public-apis/pulls)
-*   [LICENSE](LICENSE)
-
-<br />
-
-## Index
+<br>
+## API Index:
 
 *   [Animals](#animals)
 *   [Anime](#anime)
@@ -93,9 +89,7 @@ Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Gith
 *   [Weather](#weather)
 
 <br>
-**Each category below includes a list of APIs with their descriptions, authentication details, and CORS support, making it easier to integrate APIs into your projects.**
 <br>
-**This list is exhaustive, please refer to original repo at:** [https://github.com/public-apis/public-apis]
 
 ### Animals
 API | Description | Auth | HTTPS | CORS |
@@ -176,7 +170,7 @@ API | Description | Auth | HTTPS | CORS |
 | [URLhaus](https://urlhaus-api.abuse.ch/) | Bulk queries and Download Malware Samples | No | Yes | Yes |
 | [URLScan.io](https://urlscan.io/about-api/) | Scan and Analyse URLs | `apiKey` | Yes | Unknown |
 | [VirusTotal](https://www.virustotal.com/en/documentation/public-api/) | VirusTotal File/URL Analysis | `apiKey` | Yes | Unknown |
-| [Web of Trust](https://support.mywot.com/hc/en-us/sections/360004477734-API-) | IP/domain/URL reputation | `apiKey` | Yes | Unknown |
+| [Web of Trust](https://support.mywot.com/hc/en-us/sections/360004477734-API-) | IP/domain/URL reputation | `apiKey` | Yes | Unknown | 
 
 **[⬆ Back to Index](#index)**
 <br >
@@ -364,4 +358,5 @@ API | Description | Auth | HTTPS | CORS |
 | [Bitrise](https://api-docs.bitrise.io/) | Build tool and processes integrations to create efficient development pipelines | `apiKey` | Yes | Unknown |
 | [Buddy](https://buddy.works/docs/api/getting-started/overview) | The fastest continuous integration and continuous delivery platform | `OAuth` | Yes | Unknown |
 | [CircleCI](https://circleci.com/docs/api/v1-reference/) | Automate the software development process using continuous integration and continuous delivery | `apiKey` | Yes | Unknown |
-| [Codes
+| [Codeship](https://docs.cloudbees.com/docs/cloudbees-codeship/latest/api-overview/) | Codeship is a Continuous Integration Platform in the cloud | `apiKey` | Yes | Unknown |
+| [Travis CI](https://docs.travis-ci.com/api/) | Sync your GitHub projects with Travis CI to test your code

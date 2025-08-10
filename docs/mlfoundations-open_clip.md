@@ -1,32 +1,32 @@
-# OpenCLIP: Open Source Implementation of CLIP for Image-Text Learning
+# OpenCLIP: Open Source Implementation of CLIP for Advanced Image-Text Understanding
 
-**OpenCLIP** is a powerful open-source implementation of OpenAI's CLIP (Contrastive Language-Image Pre-training), enabling you to train and utilize models that excel at bridging the gap between images and text.  [Explore the original repository](https://github.com/mlfoundations/open_clip).
+**OpenCLIP** empowers you to explore state-of-the-art image-text models by providing an open-source implementation of OpenAI's CLIP (Contrastive Language-Image Pre-training), enabling you to train, evaluate, and deploy powerful vision-language models.  [Visit the Original Repo](https://github.com/mlfoundations/open_clip)
 
-*   **Key Features:**
-    *   **Pre-trained Models:** Access a wide range of pre-trained models, including those trained on massive datasets like LAION-2B and DataComp-1B, for immediate use.
-    *   **Reproducible Research:**  Based on the paper "Reproducible scaling laws for contrastive language-image learning," OpenCLIP provides a robust framework for studying and scaling CLIP models.
-    *   **Flexible Training:**  Supports training on diverse datasets and offers various training configurations, including multi-GPU and SLURM support.
-    *   **Easy Integration:** Simple Python API for model loading, image and text encoding, and downstream tasks.
-    *   **Fine-tuning Capabilities:**  Fine-tune pre-trained models on classification tasks using our companion repository [WiSE-FT](https://github.com/mlfoundations/wise-ft).
-    *   **CoCa Support:** Train and utilize CoCa (Contrastive Captioned) models.
-    *   **Int8 Support:** Beta support for int8 training and inference.
-    *   **Remote Training & Loading:** Supports training and loading from remote filesystems.
+*   **Pre-trained Models:** Access a wide range of pre-trained CLIP models trained on diverse datasets like LAION-400M, LAION-2B, and DataComp-1B.
+*   **Reproducible Research:**  Leverage our codebase to reproduce and build upon cutting-edge research in contrastive language-image learning.
+*   **Flexible Training:** Easily fine-tune models on downstream tasks using our robust training scripts, supporting multi-GPU and distributed training configurations.
+*   **Model Loading & Usage:** Simplified API for loading models, tokenizers, and performing image-text encoding.
+*   **CoCa Integration:** Train and utilize CoCa (Contrastive Captions) models for advanced image captioning tasks.
+*   **Hugging Face Hub Integration:** Effortlessly push and pull your models and configurations to and from the Hugging Face Hub.
 
-*   **Key Benefits:**
-    *   **State-of-the-Art Performance:** Leverage models that achieve cutting-edge zero-shot accuracy on various image recognition tasks.
-    *   **Community-Driven:** Benefit from an active community and contribute to open-source research in image-text learning.
-    *   **Scalability:** Train models on a wide range of datasets using the optimized training pipeline.
+## Key Features
+
+*   **Model Variety:** Supports a wide variety of architectures, including ConvNext, ViT, and more, offering flexibility in model selection.
+*   **Large-Scale Training:** Optimized for training on large datasets and with distributed computing resources.
+*   **Zero-Shot Performance:** Achieve impressive zero-shot performance on various benchmarks.
+*   **Fine-tuning Support:**  Detailed instructions and resources for fine-tuning models on specific tasks (see [WiSE-FT](https://github.com/mlfoundations/wise-ft)).
+*   **Easy Installation:**  Simple `pip install` command for quick setup.
+*   **Int8 Support:** Experimental support for int8 training and inference, for potentially faster training times.
+*   **Remote Training:** Support for loading data from remote filesystems and backing up to S3 during training.
 
 ## Quick Start
 
-1.  **Installation:**
-
+### Installation
 ```bash
 pip install open_clip_torch
 ```
 
-2.  **Basic Usage:**
-
+### Example Usage
 ```python
 import torch
 from PIL import Image
@@ -47,32 +47,53 @@ with torch.no_grad(), torch.autocast("cuda"):
 
     text_probs = (100.0 * image_features @ text_features.T).softmax(dim=-1)
 
-print("Label probs:", text_probs)
+print("Label probs:", text_probs) # prints: [[1., 0., 0.]]
 ```
+*See the [CLIP Colab](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb) and the [CoCa Colab](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb) for interactive examples.*
 
 ## Pre-trained Models
 
-OpenCLIP offers a convenient interface for accessing a variety of pre-trained models. Explore the available models and their performance characteristics in [docs/PRETRAINED.md](docs/PRETRAINED.md).
+Explore a comprehensive collection of pre-trained models to quickly get started with image-text tasks. Detailed information on available models and their performance can be found [here](docs/PRETRAINED.md).
 
-*   **Example:** List available pre-trained models:
-
-```python
-import open_clip
-open_clip.list_pretrained()
-```
+*   Use `open_clip.list_pretrained()` to list available pre-trained models.
 
 ## Training
 
-Detailed instructions for training your own CLIP models are available in the [Training](#training) section of the original README.
+To begin training your own models, please refer to the detailed instructions in the original repository's README.  [Visit the original repository for full training instructions.](https://github.com/mlfoundations/open_clip)
 
-## Evaluation / Zero-Shot
+## Fine-tuning
 
-For systematic evaluation, we recommend the [CLIP_benchmark](https://github.com/LAION-AI/CLIP_benchmark#how-to-use) for assessing model performance across various datasets.
+To fine-tune a trained zero-shot model on downstream classification tasks (e.g., ImageNet), please see our separate repository: [WiSE-FT](https://github.com/mlfoundations/wise-ft).
 
-## Acknowledgments & Citation
+## Acknowledgements
+* The Gauss Centre for Supercomputing e.V. (www.gauss-centre.eu) and the John von Neumann Institute for Computing (NIC) for computing resources.
 
-This project is a collaborative effort, supported by various organizations.  If you use OpenCLIP, please cite the relevant papers, detailed in the [Citing](#citing) section of the original README.
+## Citation
+Please consider citing the following when using OpenCLIP:
 
----
-
-*For more detailed information, including training procedures, evaluation, and model details, please refer to the original [OpenCLIP GitHub repository](https://github.com/mlfoundations/open_clip).*
+```bibtex
+@software{ilharco_gabriel_2021_5143773,
+  author       = {Ilharco, Gabriel and
+                  Wortsman, Mitchell and
+                  Wightman, Ross and
+                  Gordon, Cade and
+                  Carlini, Nicholas and
+                  Taori, Rohan and
+                  Dave, Achal and
+                  Shankar, Vaishaal and
+                  Namkoong, Hongseok and
+                  Miller, John and
+                  Hajishirzi, Hannaneh and
+                  Farhadi, Ali and
+                  Schmidt, Ludwig},
+  title        = {OpenCLIP},
+  month        = jul,
+  year         = 2021,
+  note         = {If you use this software, please cite it as below.},
+  publisher    = {Zenodo},
+  version      = {0.1},
+  doi          = {10.5281/zenodo.5143773},
+  url          = {https://doi.org/10.5281/zenodo.5143773}
+}
+```
+... (and other citations from the original readme)

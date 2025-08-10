@@ -1,8 +1,8 @@
-# Supercharge Your Development with CCPlugins: Enterprise-Grade Commands for Claude Code CLI
+# CCPlugins: Supercharge Your Claude Code CLI Workflow (Save Hours!)
 
-**Tired of repetitive coding tasks?** CCPlugins provides professional commands for Claude Code CLI, saving developers up to 5 hours per week on common development tasks. [Explore CCPlugins on GitHub](https://github.com/brennercruvinel/CCPlugins).
+**Tired of repetitive development tasks?** CCPlugins extends your Claude Code CLI, providing professional commands that streamline your workflow and save you valuable time. [Check out the CCPlugins repo](https://github.com/brennercruvinel/CCPlugins).
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)](https://github.com/brennercruvinel/CCPlugins)
+[![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)]
 [![Version](https://img.shields.io/badge/version-2.5.2-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
 [![Claude Code CLI](https://img.shields.io/badge/for-Claude%20Code%20CLI-purple.svg)](https://docs.anthropic.com/en/docs/claude-code)
 [![Tested on](https://img.shields.io/badge/tested%20on-Opus%204%20%26%20Sonnet%204-orange.svg)](https://claude.ai)
@@ -11,23 +11,12 @@
 
 ## Key Features
 
-*   **Automated Workflows:** Streamline your development process with pre-built commands for common tasks.
-*   **Enhanced Code Quality:** Improve code with security scans, refactoring, and code review tools.
-*   **Time-Saving Automation:** Eliminate repetitive tasks and save hours each week.
-*   **Contextual Understanding:** Leverages Claude's intelligence for smarter, more accurate results.
-*   **Robust Validation and Refinement:** Ensures completeness and accuracy.
-*   **Safe Operation:** Uses Git checkpoints to ensure safe operations.
-*   **Multi-Agent Architecture:** Complex tasks benefit from sub-agents for more in-depth analysis.
-
-## Core Functionality:
-
-CCPlugins extends Claude Code CLI to help developers by offering 24 professional commands. These commands leverage Claude's contextual understanding while providing structured, predictable outcomes optimized for Opus 4 and Sonnet 4 models.
-Specifically, CCPlugins offers a workflow tailored towards:
-
-*   Development workflow
-*   Code Quality & Security
-*   Advanced Analysis
-*   Session & Project Management
+*   **Automated Workflows:** Streamline development with commands like `/cleanproject`, `/commit`, `/test`, and more.
+*   **Code Quality & Security:** Improve code with `/review`, `/security-scan`, `/fix-imports`, and more.
+*   **Advanced Analysis:** Gain deeper insights with commands like `/understand`, `/explain-like-senior`.
+*   **Validation & Refinement:** Ensure completeness and accuracy with validation phases for complex commands.
+*   **Session Management:** Document sessions and track changes with commands like `/session-start`, `/session-end`.
+*   **Time-Saving:** Designed to save developers 2-3 hours per week by automating repetitive tasks.
 
 ## Installation
 
@@ -63,9 +52,11 @@ python install.py
 python uninstall.py
 ```
 
-## Command Overview
+## Commands
 
-### Development Workflow
+CCPlugins offers a suite of commands categorized for efficient workflow management:
+
+### 🚀 Development Workflow
 
 ```bash
 /cleanproject                    # Remove debug artifacts with git safety
@@ -77,7 +68,7 @@ python uninstall.py
 /refactor                        # Intelligent code restructuring with validation & de-para mapping
 ```
 
-### Code Quality & Security
+### 🛡️ Code Quality & Security
 
 ```bash
 /review                # Multi-agent analysis (security, performance, quality, architecture)
@@ -90,7 +81,7 @@ python uninstall.py
 /fix-todos             # Intelligently implement TODO fixes with context
 ```
 
-### Advanced Analysis
+### 🔍 Advanced Analysis
 
 ```bash
 /understand            # Analyze entire project architecture and patterns
@@ -99,7 +90,7 @@ python uninstall.py
 /make-it-pretty        # Improve readability without functional changes
 ```
 
-### Session & Project Management
+### 📋 Session & Project Management
 
 ```bash
 /session-start         # Begin documented sessions with CLAUDE.md integration
@@ -109,74 +100,17 @@ python uninstall.py
 /undo                  # Safe rollback with git checkpoint restore
 ```
 
-## Real-World Benefits
+## How It Works
 
-*   **Increase Productivity:** Save up to 5 hours per week by automating tasks.
-*   **Improve Code Quality:** Utilize advanced analysis tools for better, more secure code.
-*   **Simplify Workflows:** Streamline your development process for faster iterations.
+CCPlugins leverages Claude Code CLI's capabilities, using intelligent instructions and native tool integration.  It ensures safety with git checkpoints and framework-agnostic compatibility.
 
-## Advanced Usage
+## Real-World Example
 
-### Creating Custom Commands
+**Before `/cleanproject`:** (messy project structure)
 
-Create your own commands by adding markdown files to `~/.claude/commands/`:
+**After `/cleanproject`:** (clean project structure)
 
-```markdown
-# My Custom Command
-
-I'll help you with your specific workflow.
-
-[Your instructions here]
-```
-
-### Using Arguments
-
-Commands support arguments via `$ARGUMENTS`:
-
-```bash
-/mycommand some-file.js
-# $ARGUMENTS will contain "some-file.js"
-```
-
-### CI/CD Integration
-
-Use commands in automated workflows:
-
-```bash
-# Quality pipeline
-claude "/security-scan" && claude "/review" && claude "/test"
-
-# Pre-commit validation
-claude "/format" && claude "/commit"
-
-# Feature development
-claude "/scaffold api-users" && claude "/test"
-
-# Complete workflow
-claude "/security-scan" && claude "/create-todos" && claude "/todos-to-issues"
-
-# TODO resolution workflow
-claude "/find-todos" && claude "/fix-todos" && claude "/test"
-```
-
-### Manual Workflow Integration
-
-Perfect for development routines:
-
-```bash
-# Morning routine
-claude "/session-start"
-claude "/security-scan"
-
-# During development
-claude "/scaffold user-management"
-claude "/review"
-claude "/format"
-
-# End of day
-claude "/commit"
-claude "/session-end"
-```
+*(Refer to original README for more details on example.)*
 
 ## Requirements
 
@@ -186,17 +120,8 @@ claude "/session-end"
 
 ## Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
-*Built by a developer tired of typing "please act like a senior engineer" in every conversation.*
-
-## Community
-
-[![Star History Chart](https://api.star-history.com/svg?repos=brennercruvinel/CCPlugins&type=Date)](https://star-history.com/#brennercruvinel/CCPlugins&Date)
-
----
-
-**Last Updated:** August 2, 2025 (Based on Anthropic Claude Code CLI documentation v2025.08.01)
