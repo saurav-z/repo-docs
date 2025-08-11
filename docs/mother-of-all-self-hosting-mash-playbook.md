@@ -1,47 +1,56 @@
-[![Support room on Matrix](https://img.shields.io/matrix/mash-playbook:devture.com.svg?label=%23mash-playbook%3Adevture.com&logo=matrix&style=for-the-badge&server_fqdn=matrix.devture.com&fetchMode=summary)](https://matrixrooms.info/room/mash-playbook:devture.com)
-[![donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/mother-of-all-self-hosting/donate)
+[![Support room on Matrix](https://img.shields.io/matrix/mash-playbook:devture.com.svg?label=%23mash-playbook%3Adevture.com&logo=matrix&style=for-the-badge&server_fqdn=matrix.devture.com&fetchMode=summary)](https://matrixrooms.info/room/mash-playbook:devture.com) [![donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/mother-of-all-self-hosting/donate)
 
-# MASH Playbook: Your All-in-One Solution for Self-Hosting with Ansible
+# MASH: The Ultimate Self-Hosting Ansible Playbook
 
-**MASH (Mother-of-All-Self-Hosting) provides a streamlined, reliable, and easy way to self-host numerous services using Docker containers and Ansible automation.** Get started with your own self-hosted services today!
+**Simplify your self-hosting journey with MASH, a comprehensive Ansible playbook that empowers you to deploy and manage a wide range of self-hosted services in Docker containers.**
 
-➡️ **[View the original repository on GitHub](https://github.com/mother-of-all-self-hosting/mash-playbook)**
+[Visit the original repository on GitHub](https://github.com/mother-of-all-self-hosting/mash-playbook)
 
 ## Key Features
 
-*   **Simplified Self-Hosting:** Manage a wide array of services in Docker containers with ease.
-*   **Automated Deployment:** Utilize Ansible for consistent and repeatable setups.
-*   **Comprehensive Service Support:** Support for a growing number of [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) services.
-*   **Predictable and Up-to-Date:** Benefit from a predictable setup across multiple supported distros and CPU architectures.
-*   **Easy Updates and Maintenance:** Automated updates and maintenance tasks for a hassle-free experience.
-*   **Centralized Configuration:** Manage shared services like databases and reverse proxies from a single location.
-*   **Simplified Backups:** Easy integration of backups for all your self-hosted services.
+*   **Simplified Self-Hosting:** Easily deploy and manage numerous self-hosted services using a single, unified Ansible playbook.
+*   **Containerized Deployments:** Leverage Docker containers for consistent, predictable, and up-to-date service installations across various Linux distributions and CPU architectures.
+*   **Extensive Service Support:** Deploy a [wide array of supported services](docs/supported-services.md), with ongoing expansion to include more free and open-source software (FOSS).
+*   **Automated Management:** Utilize Ansible for streamlined installation, upgrades, and maintenance tasks, ensuring an efficient self-hosting experience.
+*   **Unified Infrastructure:** Benefit from shared services like PostgreSQL and Traefik reverse proxy, simplifying configuration and management.
+*   **Easy Service Integration:** Effortlessly incorporate new services with minimal configuration, enabling quick experimentation and customization.
+*   **Simplified Backups:** Centralized management of services and data paths makes backups straightforward.
 
 ## Supported Services
 
-Discover the wide range of services supported by the MASH Playbook.
+Explore the full list of supported services [here](docs/supported-services.md).
 
-*   [See the full list of supported services here](docs/supported-services.md)
+## Getting Started
 
-## Installation
+To install and configure services on your server, follow the instructions in the [README](docs/README.md) located in the `docs/` directory.
 
-Get started with self-hosting by following the simple installation instructions.
+## Staying Up-to-Date
 
-*   [Installation Guide](docs/README.md)
+The MASH playbook is constantly evolving. Stay informed about changes and updates by reviewing the [CHANGELOG](CHANGELOG.md).
 
-## Changelog
+## Support and Community
 
-Stay informed about the latest updates and changes.
+*   **Matrix Chat:** Connect with the community in the [#mash-playbook:devture.com](https://matrixrooms.info/room/mash-playbook:devture.com) Matrix room. You can use a public server like `matrix.org` or self-host Matrix.
+*   **GitHub Issues:** Report bugs, request features, and engage in discussions via the [GitHub issues](https://github.com/mother-of-all-self-hosting/mash-playbook/issues).
 
-*   [Changelog](CHANGELOG.md)
+## Why MASH? A Unified Approach to Self-Hosting
 
-## Support
+MASH addresses the challenges of managing multiple, separate playbooks by consolidating service deployments. This unified approach simplifies your workflow, reduces duplication, and makes it easy to add new services. It also ensures shared services, like databases and reverse proxies, are maintained in one place. Whether you are new to self-hosting or a veteran, MASH provides a powerful toolkit to create a personalized, self-hosted infrastructure.
 
-Get help and connect with the community:
+## MASH vs. Dedicated Playbooks
 
-*   **Matrix:** Join the conversation in the [#mash-playbook:devture.com](https://matrixrooms.info/room/mash-playbook:devture.com) Matrix room.
-*   **GitHub Issues:** Report issues and discuss improvements in the [GitHub Issues](https://github.com/mother-of-all-self-hosting/mash-playbook/issues).
+MASH replaces the need to juggle multiple playbooks, such as:
 
-## Why MASH?
+*   [Matrix](https://github.com/spantaleev/matrix-docker-ansible-deploy)
+*   [Nextcloud](https://github.com/spantaleev/nextcloud-docker-ansible-deploy)
+*   [Gitea](https://github.com/spantaleev/gitea-docker-ansible-deploy)
+*   [Gitlab](https://github.com/spantaleev/gitlab-docker-ansible-deploy)
+*   [Vaultwarden](https://github.com/spantaleev/vaultwarden-docker-ansible-deploy)
+*   [PeerTube](https://github.com/spantaleev/peertube-docker-ansible-deploy)
+*   And more...
 
-The MASH Playbook simplifies self-hosting by consolidating the configuration and management of multiple services into a single, unified Ansible playbook. This approach eliminates the need to juggle multiple playbooks and streamlines the process of setting up and maintaining your self-hosted infrastructure. It allows you to easily deploy a wide variety of services, share common infrastructure components, and ensure that your self-hosted services stay up-to-date.
+The [Matrix playbook](https://github.com/spantaleev/matrix-docker-ansible-deploy) remains separate, as it contains a huge number of components.
+
+## The MASH Name
+
+"MASH" stands for Mother-of-All-Self-Hosting, and represents the playbook's goal to be your all-in-one solution for self-hosting, allowing you to mix and mash various software components to build the self-hosted setup of your dreams.

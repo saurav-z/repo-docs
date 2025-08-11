@@ -1,39 +1,88 @@
-# Model Context Protocol (MCP) Servers: Empowering AI with Secure Tool and Data Access
+# Model Context Protocol Servers
 
-**Unlock the power of Large Language Models (LLMs) by giving them secure and controlled access to tools and data sources with the Model Context Protocol (MCP).** This repository provides reference implementations and a vibrant ecosystem of community-built servers to enhance your AI applications. [Explore the original repository](https://github.com/modelcontextprotocol/servers) for details and the latest updates.
+Unlock the power of Large Language Models (LLMs) with secure and controlled access to tools and data using the Model Context Protocol (MCP). This repository provides reference implementations, community-built servers, and essential resources to help you build, deploy, and integrate MCP servers.  Explore the [original repository](https://github.com/modelcontextprotocol/servers) for more details.
 
-**Key Features:**
+## Key Features
 
-*   **Secure Access:** Grant LLMs controlled access to external resources and data.
-*   **Reference Implementations:** Explore example servers demonstrating MCP capabilities.
-*   **SDKs & Frameworks:** Leverage existing SDKs and frameworks to build your own servers.
-*   **Community-Driven:** Benefit from a growing ecosystem of community-developed and maintained servers.
-*   **Extensible:** Extend MCP functionality with new servers tailored to your specific needs.
+*   **Reference Implementations:** Explore working examples of MCP servers to understand how to securely provide LLMs with access to tools and data.
+*   **Extensible:** Showcase the versatility and adaptability of MCP across various use cases by implementing the MCP SDKs.
+*   **Community-Driven:** Discover a rich ecosystem of community-built servers addressing diverse needs.
+*   **Cross-Language SDKs:** Access easy to use SDKs to implement MCP servers using various programming languages.
 
-## 💡 Getting Started
+## SDKs
 
-### 🚀 Deploying a Reference Server
+Quickly build your own MCP servers with language-specific SDKs:
 
-Easily run TypeScript-based servers with `npx`:
+*   [C# MCP SDK](https://github.com/modelcontextprotocol/csharp-sdk)
+*   [Go MCP SDK](https://github.com/modelcontextprotocol/go-sdk)
+*   [Java MCP SDK](https://github.com/modelcontextprotocol/java-sdk)
+*   [Kotlin MCP SDK](https://github.com/modelcontextprotocol/kotlin-sdk)
+*   [Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk)
+*   [Ruby MCP SDK](https://github.com/modelcontextprotocol/ruby-sdk)
+*   [Rust MCP SDK](https://github.com/modelcontextprotocol/rust-sdk)
+*   [Swift MCP SDK](https://github.com/modelcontextprotocol/swift-sdk)
+*   [TypeScript MCP SDK](https://github.com/modelcontextprotocol/typescript-sdk)
 
-```bash
+## Reference Servers
+
+Explore example servers demonstrating the core functionalities of MCP:
+
+*   **[Everything](src/everything)** - Comprehensive reference server with prompts, resources, and tools.
+*   **[Fetch](src/fetch)** - Web content fetching and conversion for streamlined LLM interactions.
+*   **[Filesystem](src/filesystem)** - Secure file operations with customizable access control.
+*   **[Git](src/git)** - Tools to read, search, and manipulate Git repositories.
+*   **[Memory](src/memory)** - Persistent memory system based on knowledge graphs.
+*   **[Sequential Thinking](src/sequentialthinking)** - Dynamic, reflective problem-solving via thought sequences.
+*   **[Time](src/time)** - Time and timezone conversion capabilities.
+
+### Archived Servers
+
+These servers are archived and available at the [servers-archived](https://github.com/modelcontextprotocol/servers-archived) repository.
+
+## Third-Party Servers
+
+### Official Integrations
+
+Leverage production-ready MCP servers from leading companies:
+
+*   [Full list of official integrations](https://github.com/modelcontextprotocol/servers#official-integrations)
+
+### Community Servers
+
+Explore a growing collection of community-developed servers, demonstrating the versatility of MCP across a wide range of applications:
+
+*   [Full list of community servers](https://github.com/modelcontextprotocol/servers#community-servers)
+
+## 🚀 Getting Started
+
+### Using MCP Servers in this Repository
+
+TypeScript-based servers in this repository can be used directly with `npx`.
+
+For example, this will start the [Memory](src/memory) server:
+
+```sh
 npx -y @modelcontextprotocol/server-memory
 ```
 
-For Python-based servers, use `uvx` (recommended) or `pip`:
+Python-based servers in this repository can be used directly with [`uvx`](https://docs.astral.sh/uv/concepts/tools/) or [`pip`](https://pypi.org/project/pip/). `uvx` is recommended for ease of use and setup.
 
-```bash
-# Using uvx
+For example, this will start the [Git](src/git) server:
+
+```sh
+# With uvx
 uvx mcp-server-git
 
-# Using pip
+# With pip
 pip install mcp-server-git
 python -m mcp_server_git
 ```
 
-### 💻 Configuring an MCP Client
+Follow [these](https://docs.astral.sh/uv/getting-started/installation/) instructions to install `uv` / `uvx` and [these](https://pip.pypa.io/en/stable/installation/) to install `pip`.
 
-Configure your MCP client (e.g., Claude Desktop) by specifying the server command and arguments:
+### Using an MCP Client
+
+To connect to your new server and make it useful, it should be configured into an MCP client. For example, here's the Claude Desktop configuration to use the above server:
 
 ```json
 {
@@ -46,54 +95,21 @@ Configure your MCP client (e.g., Claude Desktop) by specifying the server comman
 }
 ```
 
-## 🌟 Reference Servers
+## 🛠️ Creating Your Own Server
 
-These servers showcase MCP features using the official SDKs:
-
-*   **Everything:** Test server with prompts, resources, and tools.
-*   **Fetch:** Web content retrieval and conversion.
-*   **Filesystem:** Secure file operations.
-*   **Git:** Git repository interaction.
-*   **Memory:** Persistent knowledge graph memory system.
-*   **Sequential Thinking:** Dynamic problem-solving.
-*   **Time:** Time and timezone conversion.
-
-## 🤝 Third-Party Servers
-
-A comprehensive list of community-built servers, categorized for easy navigation:
-
-### 🎖️ Official Integrations
-
-Official integrations maintained by companies building production ready MCP servers for their platforms.
-(Listed in the original README)
-
-### 🌎 Community Servers
-
-A growing collection of community-developed servers (listed in the original README). **Use these at your own risk.**
-
-## 🛠️ Build Your Own Server
-
-For in-depth guidance on building your own MCP server, explore the official documentation: [modelcontextprotocol.io](https://modelcontextprotocol.io/introduction).
-
-## 📚 Resources
-
-*   Frameworks for easier server and client development
-*   Directories to discover more MCP servers
-*   Related libraries, articles, and news
-*   A large list of community MCP servers with links to documentation and code.
-(Listed in the original README)
+Learn to build your own MCP server with the official documentation: [modelcontextprotocol.io](https://modelcontextprotocol.io/introduction).
 
 ## 🤝 Contributing
 
-Contribute to the MCP ecosystem! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Contribute to the MCP ecosystem by reviewing the [CONTRIBUTING.md](CONTRIBUTING.md) for information.
 
 ## 🔒 Security
 
-Report security vulnerabilities in [SECURITY.md](SECURITY.md).
+Report security vulnerabilities via [SECURITY.md](SECURITY.md).
 
 ## 📜 License
 
-This project is MIT licensed.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 💬 Community
 

@@ -2,62 +2,52 @@
 
 # OSV: Open Source Vulnerability Database
 
-**OSV is a comprehensive, open-source database of vulnerabilities affecting open-source software, empowering developers to proactively identify and address security risks.**
-
-This repository houses the infrastructure and code powering the OSV database and related services.
+**OSV is a free, open-source, and community-driven vulnerability database designed to improve the security of open-source software.** This repository is the core infrastructure behind OSV.
 
 [View the original repository on GitHub](https://github.com/google/osv.dev)
 
 ## Key Features
 
-*   **Comprehensive Vulnerability Data:** Access a vast and regularly updated database of known vulnerabilities.
-*   **Go-based Scanner:** Utilize a powerful tool to scan your dependencies and identify vulnerabilities.
-*   **Web UI:** Explore and search the OSV database through a user-friendly web interface.
-*   **API Access:** Integrate OSV data directly into your tools and workflows via our API.
-*   **Data Dumps:** Download data dumps for offline analysis and integration.
-*   **Community Driven:** Benefit from a collaborative effort to improve vulnerability information.
+*   **Comprehensive Vulnerability Data:** OSV provides a centralized and standardized database of known vulnerabilities across various open-source projects.
+*   **Free and Open Source:** Accessible to everyone, empowering the community to improve software security.
+*   **Integration with Existing Tools:** OSV is compatible with tools like Trivy, Dependency-Track, and Renovate.
+*   **Regular Updates:** The database is continuously updated with new vulnerabilities.
+*   **API Access:** A robust API allows developers to query the OSV database for vulnerability information.
 
-## Core Components
+## Key Components of This Repository
 
-This repository contains code for the following components:
+This repository contains the source code and configuration for the OSV infrastructure, including:
 
-*   `deployment/`: Infrastructure configuration (Terraform, Cloud Deploy, Cloud Build)
-*   `docker/`: Dockerfiles for CI, deployment, and worker images.
-*   `docs/`: Documentation files (Jekyll) and API documentation generation.
-*   `gcp/api`: OSV API server code.
-*   `gcp/datastore`: Datastore configuration.
-*   `gcp/functions`: Cloud Functions for vulnerability import (e.g., PyPI).
-*   `gcp/indexer`: Version determination and indexing tools.
-*   `gcp/website`: Backend for the OSV web interface.
-*   `gcp/workers/`: Background workers for tasks like bisection and impact analysis.
-*   `osv/`: Core OSV Python library and ecosystem helpers.
-*   `tools/`: Development scripts and utilities.
-*   `vulnfeeds/`: Conversion tools for vulnerability feeds (e.g., NVD, Alpine, Debian).
+*   **Deployment:** Terraform and Cloud Deploy configurations.
+*   **API Server:** OSV API server files.
+*   **Website Backend:** Code for the OSV web interface.
+*   **Data Processing Workers:** Workers for bisection, impact analysis, importing, and exporting vulnerability data.
+*   **Core OSV Library:** The OSV Python library, used across multiple services.
+*   **Vulnerability Data Feeds:** Converters for various vulnerability data feeds.
 
 ## Getting Started
 
-To build locally, you'll need to initialize submodules:
+To build locally, update submodules:
 
 ```bash
 git submodule update --init --recursive
 ```
 
-## Resources
+## Useful Links
 
-*   **Documentation:** [Comprehensive documentation](https://google.github.io/osv.dev)
-*   **API Documentation:** [API Documentation](https://google.github.io/osv.dev/api/)
-*   **Data Dumps:** [Data dumps information](https://google.github.io/osv.dev/data/#data-dumps)
+*   **Documentation:** [https://google.github.io/osv.dev](https://google.github.io/osv.dev)
+*   **API Documentation:** [https://google.github.io/osv.dev/api/](https://google.github.io/osv.dev/api/)
 *   **Web UI:** <https://osv.dev>
-*   **Scanner:** [OSV Scanner](https://github.com/google/osv-scanner)
-*   **Mailing List:** [OSV Discuss](https://groups.google.com/g/osv-discuss)
+*   **Data Dumps:** Available from a GCS bucket at `gs://osv-vulnerabilities`. More information in our [documentation](https://google.github.io/osv.dev/data/#data-dumps).
+*   **OSV Scanner:** [https://github.com/google/osv-scanner](https://github.com/google/osv-scanner)
 
 ## Contributing
 
-We welcome contributions to OSV!  Learn more about contributing code, data, and documentation in the [CONTRIBUTING.md](CONTRIBUTING.md) file.  Have a question or suggestion? [Open an issue](https://github.com/google/osv.dev/issues).
+We welcome contributions! Learn how to contribute to [code](CONTRIBUTING.md#contributing-code), [data](CONTRIBUTING.md#contributing-data), and [documentation](CONTRIBUTING.md#contributing-documentation). Join the [mailing list](https://groups.google.com/g/osv-discuss) or [open an issue](https://github.com/google/osv.dev/issues) with questions or suggestions.
 
 ## Third-Party Tools and Integrations
 
-OSV data is integrated into various third-party tools.  *Note: These tools are community-built and not officially endorsed by OSV.*
+OSV integrates with various community-built tools. Note these are not supported or endorsed by the core OSV maintainers.
 
 *   [Cortex XSOAR](https://github.com/demisto/content)
 *   [dep-scan](https://github.com/AppThreat/dep-scan)

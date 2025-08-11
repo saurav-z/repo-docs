@@ -1,75 +1,68 @@
-<img src="https://beeware.org/project/briefcase/briefcase.png" width="72" alt="Briefcase Logo" />
+[<img src="https://beeware.org/project/briefcase/briefcase.png" width="72" alt="Briefcase Logo" />](https://beeware.org/briefcase)
 
 # Briefcase: Turn Your Python Code into Native Apps
 
-**Briefcase makes it easy to convert your Python projects into standalone, native applications for various platforms.**  This allows you to distribute your Python applications as if they were built natively.
+Briefcase empowers you to transform your Python projects into standalone, native applications for various platforms, enabling you to share your code across devices easily.
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
 [![PyPI Version](https://img.shields.io/pypi/v/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
-[![Maturity](https://img.shields.io/pypi/status/briefcase.svg)](https://pypi.org/project/briefcase/)
+[![Maturity](https://img.shields.io/pypi/status/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
 [![BSD License](https://img.shields.io/pypi/l/briefcase.svg)](https://github.com/beeware/briefcase/blob/main/LICENSE)
 [![Build Status](https://github.com/beeware/briefcase/workflows/CI/badge.svg?branch=main)](https://github.com/beeware/briefcase/actions)
 [![Discord server](https://img.shields.io/discord/836455665257021440?label=Discord%20Chat&logo=discord&style=plastic)](https://beeware.org/bee/chat/)
 
 ## Key Features
 
-*   **Cross-Platform Packaging:** Package your Python projects for multiple platforms.
+*   **Cross-Platform Deployment:** Package your Python projects for a wide range of operating systems and devices.
 *   **Supported Platforms:**
     *   macOS
     *   Windows
     *   Linux
     *   iOS (iPhone/iPad)
     *   Android
-    *   Web (via WebAssembly)
-*   **Future Support:** Planned support for AppleTV, watchOS, and wearOS.
+    *   Web (Browser-based applications)
+*   **Future Support:**  Planned support for AppleTV, watchOS, and wearOS.
+*   **Easy to Use:**  Simple command-line interface for packaging and building your apps.
 
 ## Getting Started
 
-To install Briefcase, use pip:
+Install Briefcase quickly with pip:
 
 ```bash
-python -m pip install briefcase
+$ python -m pip install briefcase
 ```
 
-For a complete guide to using Briefcase, check out the [BeeWare tutorial](https://docs.beeware.org), which guides you through creating and packaging a new application.
+For a comprehensive guide, explore the [BeeWare tutorial](https://docs.beeware.org) which walks you through creating and packaging your first application.
 
 ## Financial Support
 
-The BeeWare project relies on the support of financial members like [Anaconda](https://anaconda.com/), as well as individual contributions from users. If you find Briefcase or other BeeWare tools useful, please consider becoming a financial member by visiting the [BeeWare Community members page](https://beeware.org/community/members/).
+The BeeWare project thrives on the support of its community, including:
+
+[![Anaconda logo](https://beeware.org/community/members/anaconda/anaconda-large.png)](https://anaconda.com/)
+
+Anaconda Inc. - Advancing AI through open source.
+
+And contributions from individual users. Consider supporting Briefcase and the BeeWare suite. See [how to contribute](https://beeware.org/community/members/).
 
 ## Documentation
 
-Comprehensive documentation for Briefcase is available on [Read The Docs](https://briefcase.readthedocs.io).
+Access detailed documentation on [Read The Docs](https://briefcase.readthedocs.io) for comprehensive information.
 
-## Community and Support
+## Community
 
-Join the Briefcase and BeeWare community:
+Join the vibrant BeeWare community!
 
 *   **Mastodon:** [@beeware@fosstodon.org](https://fosstodon.org/@beeware)
-*   **Discord:** [BeeWare Discord](https://beeware.org/bee/chat/)
+*   **Discord:** [BeeWare Discord Server](https://beeware.org/bee/chat/)
 *   **GitHub Discussions:** [Briefcase Discussions](https://github.com/beeware/briefcase/discussions)
 
-The BeeWare community adheres to a [Code of Conduct](https://beeware.org/community/behavior/) to ensure a welcoming and respectful environment.
+We uphold a welcoming environment under the [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/).
 
 ## Contributing
 
-We welcome contributions!
+Report issues and contribute to Briefcase's development!
 
-*   **Report Issues:**  If you encounter any problems, please [log them on GitHub](https://github.com/beeware/briefcase/issues).
-*   **Development:** Learn how to contribute to Briefcase development through the [contribution guide](https://briefcase.readthedocs.io/en/latest/how-to/contribute/index.html), which outlines how to set up a development environment and other requirements.
+*   **Report Issues:** [GitHub Issues](https://github.com/beeware/briefcase/issues)
+*   **Contribute:** Learn how to contribute in the [contribution guide](https://briefcase.readthedocs.io/en/latest/how_to/contribute/index.html).
 
-**[Visit the Briefcase GitHub Repository](https://github.com/beeware/briefcase) for more information and to get involved.**
-```
-Key improvements and SEO considerations:
-
-*   **Clear Hook:** A concise, benefit-driven opening sentence.
-*   **Keyword Optimization:** Included relevant keywords like "Python," "native apps," "cross-platform," and platform names (macOS, Windows, etc.).
-*   **Structured Headings:**  Used clear, descriptive headings for organization.
-*   **Bulleted Key Features:**  Highlights key benefits.
-*   **Action-Oriented Language:**  Used "Turn Your..." and "Getting Started" to encourage action.
-*   **Internal Linking:**  Linking to key resources like documentation and the community.
-*   **External Links:** Included relevant links to financial supporters.
-*   **Call to Action:** Added a clear call to action with the link back to the GitHub repository at the end.
-*   **Simplified Language:** Streamlined the language for better readability.
-*   **Alt Text:** Included alt text for the logo image for accessibility and SEO.
-*   **PyPI Link Adjustment:** Changed the pypi link to point to the specific project.
+Find the original repository on GitHub: [https://github.com/beeware/briefcase](https://github.com/beeware/briefcase)

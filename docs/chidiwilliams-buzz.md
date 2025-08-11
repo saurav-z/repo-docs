@@ -1,25 +1,46 @@
-# Buzz: Offline Audio Transcription and Translation Powered by Whisper
+# Buzz: Offline Audio Transcription and Translation
 
-**Buzz** empowers you to transcribe and translate audio effortlessly on your computer using the power of OpenAI's Whisper. ([See the original repo](https://github.com/chidiwilliams/buzz))
+**Effortlessly transcribe and translate audio files on your computer with Buzz, powered by OpenAI's Whisper.** [Learn more about Buzz](https://github.com/chidiwilliams/buzz)
 
-**Key Features:**
+[![MIT License](https://img.shields.io/badge/license-MIT-green)](https://github.com/chidiwilliams/buzz)
+[![CI](https://github.com/chidiwilliams/buzz/actions/workflows/ci.yml/badge.svg)](https://github.com/chidiwilliams/buzz/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/github/chidiwilliams/buzz/branch/main/graph/badge.svg?token=YJSB8S2VEP)](https://codecov.io/github/chidiwilliams/buzz)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/chidiwilliams/buzz)
+[![Github all releases](https://img.shields.io/github/downloads/chidiwilliams/buzz/total.svg)](https://GitHub.com/chidiwilliams/buzz/releases/)
 
-*   **Offline Functionality:** Transcribe and translate audio without an internet connection, ensuring privacy and efficiency.
-*   **Whisper Integration:** Leverages the robust speech recognition capabilities of OpenAI's Whisper.
-*   **Cross-Platform Support:** Available for macOS, Windows, and Linux.
-*   **Multiple Installation Options:** Install via PyPI, Homebrew (macOS), winget (Windows), Flatpak (Linux), or Snap (Linux).
-*   **GPU Acceleration:** Supports GPU acceleration for faster processing (requires CUDA setup for PyPI on Windows).
-*   **User-Friendly Interface:** Clean and intuitive interface for seamless audio processing.
-*   **[Mac App Store Version Available](https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&itsct=apps_box_badge&itscg=30200)**: Get a Mac-native version with added features like audio playback, editing, and search.
+**Get the Mac-native version of Buzz with advanced features:**
+
+<blockquote>
+<p>Buzz is better on the App Store. Get a Mac-native version of Buzz with a cleaner look, audio playback, drag-and-drop import, transcript editing, search, and much more.</p>
+<a href="https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&amp;itsct=apps_box_badge&amp;itscg=30200"><img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83&amp;releaseDate=1679529600" alt="Download on the Mac App Store" /></a>
+</blockquote>
+
+![Buzz](./buzz/assets/buzz-banner.jpg)
+
+## Key Features
+
+*   **Offline Transcription:** Transcribe audio files directly on your computer.
+*   **Audio Translation:** Translate your audio into different languages.
+*   **Powered by Whisper:** Utilizes the powerful OpenAI Whisper for accurate transcription.
+*   **Cross-Platform:** Available for macOS, Windows, and Linux.
+*   **Mac App Store Version:**  Enhanced features and native macOS experience available on the App Store.
 
 ## Installation
 
-Choose your operating system for installation instructions:
+Choose your preferred method to install Buzz:
+
+### PyPI
+
+1.  Install [ffmpeg](https://www.ffmpeg.org/download.html).
+2.  Install Buzz:
+    ```shell
+    pip install buzz-captions
+    python -m buzz
+    ```
 
 ### macOS
 
 *   **Homebrew:**
-
     ```shell
     brew install --cask buzz
     ```
@@ -27,49 +48,45 @@ Choose your operating system for installation instructions:
 
 ### Windows
 
-*   **Direct Download:** Download and run the `.exe` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest). (Note: App is not signed; you may need to select `More info` -> `Run anyway` during installation).
+*   **Direct Download:** Download and run the `.exe` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest). (May require selecting `More info` -> `Run anyway` due to the app not being signed.)
 *   **Winget:**
-
     ```shell
     winget install ChidiWilliams.Buzz
     ```
 
-*   **GPU Support (PyPI):** For GPU acceleration with an Nvidia GPU, install CUDA-compatible PyTorch and related packages:
+**GPU Support for PyPI (Nvidia GPUs on Windows):**
 
-    ```
-    pip3 install -U torch==2.7.1+cu128 torchaudio==2.7.1+cu128 --index-url https://download.pytorch.org/whl/cu128
-    pip3 install nvidia-cublas-cu12==12.8.3.14 nvidia-cuda-cupti-cu12==12.8.57 nvidia-cuda-nvrtc-cu12==12.8.61 nvidia-cuda-runtime-cu12==12.8.57 nvidia-cudnn-cu12==9.7.1.26 nvidia-cufft-cu12==11.3.3.41 nvidia-curand-cu12==10.3.9.55 nvidia-cusolver-cu12==11.7.2.55 nvidia-cusparse-cu12==12.5.4.2 nvidia-cusparselt-cu12==0.6.3 nvidia-nvjitlink-cu12==12.8.61 nvidia-nvtx-cu12==12.8.55 --extra-index-url https://pypi.ngc.nvidia.com
-    ```
+For GPU acceleration, install CUDA support for [torch](https://pytorch.org/get-started/locally/) and the following packages:
+```
+pip3 install -U torch==2.7.1+cu128 torchaudio==2.7.1+cu128 --index-url https://download.pytorch.org/whl/cu128
+pip3 install nvidia-cublas-cu12==12.8.3.14 nvidia-cuda-cupti-cu12==12.8.57 nvidia-cuda-nvrtc-cu12==12.8.61 nvidia-cuda-runtime-cu12==12.8.57 nvidia-cudnn-cu12==9.7.1.26 nvidia-cufft-cu12==11.3.3.41 nvidia-curand-cu12==10.3.9.55 nvidia-cusolver-cu12==11.7.2.55 nvidia-cusparse-cu12==12.5.4.2 nvidia-cusparselt-cu12==0.6.3 nvidia-nvjitlink-cu12==12.8.61 nvidia-nvtx-cu12==12.8.55 --extra-index-url https://pypi.ngc.nvidia.com
+```
 
 ### Linux
 
 *   **Flatpak:**
-
     ```shell
     flatpak install flathub io.github.chidiwilliams.Buzz
     ```
 *   **Snap:**
-
     ```shell
     sudo apt-get install libportaudio2 libcanberra-gtk-module libcanberra-gtk3-module
     sudo snap install buzz
     sudo snap connect buzz:password-manager-service
     ```
 
-### PyPI
-
-*   Install [ffmpeg](https://www.ffmpeg.org/download.html)
-*   Install Buzz:
-
-    ```shell
-    pip install buzz-captions
-    python -m buzz
-    ```
-
 ### Latest Development Version
 
-For information on how to get the latest development version with the latest features and bug fixes, see the [FAQ](https://chidiwilliams.github.io/buzz/docs/faq#9-where-can-i-get-latest-development-version).
+For the latest features and bug fixes, refer to the [FAQ](https://chidiwilliams.github.io/buzz/docs/faq#9-where-can-i-get-latest-development-version).
 
 ## Screenshots
 
-**(Screenshots of the app's interface are included here, as in the original README.)**
+<div style="display: flex; flex-wrap: wrap;">
+    <img alt="File import" src="share/screenshots/buzz-1-import.png" style="max-width: 18%; margin-right: 1%;" />
+    <img alt="Main screen" src="share/screenshots/buzz-2-main_screen.png" style="max-width: 18%; margin-right: 1%; height:auto;" />
+    <img alt="Preferences" src="share/screenshots/buzz-3-preferences.png" style="max-width: 18%; margin-right: 1%; height:auto;" />
+    <img alt="Model preferences" src="share/screenshots/buzz-3.2-model-preferences.png" style="max-width: 18%; margin-right: 1%; height:auto;" />
+    <img alt="Transcript" src="share/screenshots/buzz-4-transcript.png" style="max-width: 18%; margin-right: 1%; height:auto;" />
+    <img alt="Live recording" src="share/screenshots/buzz-5-live_recording.png" style="max-width: 18%; margin-right: 1%; height:auto;" />
+    <img alt="Resize" src="share/screenshots/buzz-6-resize.png" style="max-width: 18%;" />
+</div>

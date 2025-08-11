@@ -1,6 +1,6 @@
-# MonkeyOCR: Intelligent Document Parsing with Structure-Recognition-Relation
+# MonkeyOCR: Revolutionizing Document Parsing with a New Triplet Paradigm
 
-**Unlock the power of structured document understanding with MonkeyOCR, a cutting-edge model leveraging a Structure-Recognition-Relation (SRR) triplet paradigm.  [Explore the original repo](https://github.com/Yuliang-Liu/MonkeyOCR)!**
+**Unleash the power of MonkeyOCR, a cutting-edge document parsing system that leverages a Structure-Recognition-Relation (SRR) triplet paradigm to efficiently and accurately process documents.**  [Explore the Original Repo](https://github.com/Yuliang-Liu/MonkeyOCR)
 
 [![arXiv](https://img.shields.io/badge/Arxiv-MonkeyOCR-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2506.05218)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace%20Weights-black.svg?logo=HuggingFace)](https://huggingface.co/echo840/MonkeyOCR)
@@ -9,94 +9,73 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/LICENSE.txt)
 [![GitHub views](https://komarev.com/ghpvc/?username=Yuliang-Liu&repo=MonkeyOCR&color=brightgreen&label=Views)](https://github.com/Yuliang-Liu/MonkeyOCR)
 
-MonkeyOCR streamlines document processing by effectively recognizing and understanding document structure. This approach simplifies the multi-step pipelines of other modular systems.
+MonkeyOCR offers a streamlined and efficient approach to document processing, excelling in both English and Chinese documents.
 
 **Key Features:**
 
-*   **Superior Performance:** MonkeyOCR-pro-1.2B surpasses MonkeyOCR-3B by 7.4% on Chinese documents, excelling against leading open and closed-source models.
-*   **Enhanced Speed & Efficiency:** MonkeyOCR-pro-1.2B offers approximately a 36% speed boost over MonkeyOCR-pro-3B, with a minimal performance trade-off.
-*   **State-of-the-Art Results:** On OmniDocBench, MonkeyOCR-pro-3B achieves top-tier results on both English and Chinese documents, outperforming even cutting-edge VLMs.
-*   **Versatile Hardware Support:**  Compatible with a wide range of GPUs including 3090, 4090, A6000, H800, and others, along with community support for various hardware.
-*   **Easy to Use:**  Includes a Gradio demo and Fast API, making experimentation and integration straightforward.
+*   **SRR Paradigm:** Simplifies document parsing, avoiding the complexity of multi-tool pipelines.
+*   **Superior Performance:** MonkeyOCR-pro-1.2B surpasses MonkeyOCR-3B on Chinese documents and outperforms other methods like Nanonets-OCR-3B.
+*   **Speed & Efficiency:**  Achieves significant speed improvements over previous versions while maintaining high accuracy.
+*   **Strong Results:** Outperforms closed-source and large open-source VLMs on the OmniDocBench, even including Gemini 2.0-Flash, Gemini 2.5-Pro, Qwen2.5-VL-72B, GPT-4o, and InternVL3-78B.
+*   **Gradio Demo & FastAPI:**  Easily test & integrate via a user-friendly Gradio demo and a FastAPI for API access.
+*   **Hardware Support:**  Optimized for various GPU configurations (3090, 4090, A6000, H800, and more).
+*   **Quantization:** Model supports AWQ quantization.
+*   **Flexible Output:** Produces Markdown files, layout results, and detailed intermediate block results for comprehensive document analysis.
 
-## Quick Start
+**Performance Highlights:**
 
-### 1.  Installation
-Follow the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda_pp.md#install-with-cuda-support) to set up your environment.
+*   **MonkeyOCR-pro-1.2B vs MonkeyOCR-3B:** Up to 7.4% better on Chinese documents with approximately a 36% speed improvement, with approximately a 1.6% drop in performance.
+*   **OmniDocBench:** MonkeyOCR-pro-3B delivers top-tier performance on both English and Chinese documents.
+*   **olmOCR-Bench:** MonkeyOCR-pro-1.2B outperforms Nanonets-OCR-3B by 7.3%.
 
-### 2.  Model Download
-Download the model weights using either Hugging Face or ModelScope:
-```bash
+### Quick Start
+
+**1.  Install**
+
+See the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda_pp.md#install-with-cuda-support) to set up your environment.
+
+**2. Download Model Weights**
+
+```python
 pip install huggingface_hub
 python tools/download_model.py -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
-
-pip install modelscope
-python tools/download_model.py -t modelscope -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
 ```
-### 3.  Inference
-Run inference on your documents using the following commands:
+
+**3. Inference**
+
 ```bash
-# Replace input_path with the path to a PDF or image or directory
-# End-to-end parsing
 python parse.py input_path
-# Parse files in a dir with specific group page num
-python parse.py input_path -g 20
-# Single-task recognition (outputs markdown only)
-python parse.py input_path -t text/formula/table
-# Parse PDFs in input_path and split results by pages
-python parse.py input_path -s
-# Specify output directory and model config file
-python parse.py input_path -o ./output -c config.yaml
 ```
-For more usage examples please see the original README
 
-### 4.  Gradio Demo
-Launch the interactive demo:
+**4.  Run Gradio Demo:**
+
 ```bash
 python demo/demo_gradio.py
 ```
-Access the demo at `http://localhost:7860`.
+Access the demo at http://localhost:7860
 
-### 5.  FastAPI
-Start the FastAPI service:
+**5. Run Fast API**
 ```bash
 uvicorn api.main:app --port 8000
 ```
-Explore the API documentation at `http://localhost:8000/docs`.
+Access the API documentation at http://localhost:8000/docs
 
-## Docker Deployment
+### Docker Deployment
 
-Detailed instructions are available in the original README.  See the original README for details.
+Follow the instructions for Docker deployment.
 
-## Quantization
+### Windows Support
 
-See the [quantization guide](docs/Quantization.md) for information on quantizing the model.
+See the [windows support guide](docs/windows_support.md) for details.
 
-## Benchmark Results
+### Benchmarks and Results
 
-See the original README for the benchmark results.
+[Detailed benchmark results can be found in the original README, including performance comparisons on OmniDocBench and olmOCR-Bench, as well as text recognition across multiple document types, hardware configurations, and GPU inference speeds.]
 
-## Visualization Demo
-(See the original README for details.)
+**[See the original README for comprehensive benchmark results and performance comparisons.]**
 
-## Citing MonkeyOCR
-```BibTeX
-@misc{li2025monkeyocrdocumentparsingstructurerecognitionrelation,
-      title={MonkeyOCR: Document Parsing with a Structure-Recognition-Relation Triplet Paradigm}, 
-      author={Zhang Li and Yuliang Liu and Qiang Liu and Zhiyin Ma and Ziyang Zhang and Shuo Zhang and Zidun Guo and Jiarui Zhang and Xinyu Wang and Xiang Bai},
-      year={2025},
-      eprint={2506.05218},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2506.05218}, 
-}
-```
+###  Get Started Now!
 
-## Acknowledgments
-(See the original README for details.)
+Explore the capabilities of MonkeyOCR and experience the future of document parsing.  [Get started with the Quick Start guide and unleash the power of MonkeyOCR!](https://github.com/Yuliang-Liu/MonkeyOCR)
 
-## Limitation
-(See the original README for details.)
-
-## Copyright
-(See the original README for details.)
+---

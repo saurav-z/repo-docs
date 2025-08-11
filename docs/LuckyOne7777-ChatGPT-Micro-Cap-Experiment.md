@@ -1,52 +1,54 @@
-# Can ChatGPT Beat the Market? A Live Micro-Cap Trading Experiment
+# Can ChatGPT Beat the Market? A Live Trading Experiment
 
-Can artificial intelligence make smart investment decisions? Follow along with this exciting real-world experiment where ChatGPT manages a micro-cap portfolio. Learn more and explore the code on GitHub: [https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment).
+**Can a large language model like ChatGPT successfully navigate the stock market and generate alpha?** Explore the intriguing experiment detailed in this repository: [ChatGPT-Micro-Cap-Experiment](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment). This project puts ChatGPT to the test, managing a real-money micro-cap portfolio with live trading, and provides transparent results and insights.
 
-## Key Features
+## Key Features:
 
-*   **Real-World Experiment:** A live 6-month trading experiment using ChatGPT.
-*   **Data-Driven:** Utilizes real-time market data and strict stop-loss rules.
-*   **LLM-Powered Trading:** ChatGPT makes the investment decisions.
-*   **Transparent Performance Tracking:** Daily P&L, trade history, and performance data are tracked and published.
-*   **Weekly Deep Research:** ChatGPT conducts weekly deep research to re-evaluate its portfolio.
-*   **Visualization Tools:**  Matplotlib graphs for easy performance analysis.
-*   **Open-Source:**  All scripts, data, and analysis are available for review and to inspire your own experiments.
-*   **Detailed Documentation:**  Includes research summaries, disclaimers, Q&A, prompts, and a guide for starting your own experiment.
+*   **Real-Time Trading:** ChatGPT makes daily trading decisions using live market data.
+*   **Performance Tracking:** Detailed performance data, including daily P&L, equity, and trade history, is tracked and published.
+*   **AI-Powered Decision Making:** Leverages ChatGPT for stock selection and trading strategies.
+*   **Strict Risk Management:** Implements stop-loss rules to manage risk.
+*   **Weekly Deep Research:** Provides in-depth analysis and reevaluation of the portfolio's holdings on a weekly basis.
+*   **Transparent Data:** All trading data, logs, and decisions are recorded and available for analysis.
+*   **Visualizations:** Utilizes Matplotlib to compare ChatGPT's performance against market indexes.
+*   **Educational Resources:** Includes comprehensive documentation, research summaries, and a Q&A section.
 
-## The Concept
+## Project Concept:
 
-Inspired by the common AI-driven investment ads, this project dives into the potential of Large Language Models (LLMs) in financial markets. The experiment starts with a small portfolio and asks a simple question: can ChatGPT generate alpha (or at least make smart trading decisions) using real-time data?
+This experiment, running from June to December 2025, aims to answer the question: Can AI, specifically ChatGPT, make intelligent trading decisions in the stock market? The project uses a $100 starting budget and provides ChatGPT with market data each trading day, while adhering to strict stop-loss rules. Weekly, the AI uses deep research to re-evaluate its account. This repo offers a transparent look at the process and results, with weekly performance updates available on the author's blog.
 
-## How it Works
+## Performance and Results:
 
-Each trading day involves:
+The repository includes example performance data, such as the performance from 6/30 to 7/25, demonstrating how the ChatGPT-managed portfolio performs against benchmarks like the Russell 2000.
 
-*   Providing ChatGPT with trading data on the portfolio's stocks.
-*   Applying strict stop-loss rules to manage risk.
-*   Allowing ChatGPT to conduct in-depth research weekly for portfolio re-evaluation.
-*   Weekly updates and performance reports available on the author's blog. [SubStack Link](https://nathanbsmith729.substack.com)
+## Resources & Documentation:
 
-## Tech Stack
+*   [Research Index](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Deep%20Research%20Index.md)
+*   [Disclaimer](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Disclaimer.md)
+*   [Q&A](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Q%26A.md)
+*   [Prompts](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Prompts.md)
+*   [Starting Your Own](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Start%20Your%20Own/README.md)
+*   [Markdown Research Summaries (MD)](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/tree/main/Weekly%20Deep%20Research%20(MD))
+*   [Weekly Deep Research Reports (PDF)](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/tree/main/Weekly%20Deep%20Research%20(PDF))
 
-*   Python
-*   Pandas & yFinance
-*   Matplotlib
-*   ChatGPT
+## Technology Stack:
 
-## Installation
+*   **Programming Language:** Python
+*   **Libraries:** Pandas, yFinance, Matplotlib
+*   **AI Engine:** ChatGPT
 
-To get started and run the scripts locally, install the required Python dependencies:
+## Installation:
+
+To run the scripts locally, ensure you have Python and install the necessary dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Why This Matters
+## Stay Updated:
 
-This project offers an inside look at the intersection of AI and finance, providing valuable insights into whether AI can effectively manage money.  
+Follow the experiment's progress and results. Weekly updates are posted on the author's blog: [SubStack](https://substack.com/@nathanbsmith?utm_source=edit-profile-page).
 
-## Follow Along
+## Contact:
 
-The experiment runs from June 2025 to December 2025. Follow along for updates, weekly blog posts, and insights into the performance of the ChatGPT-managed portfolio!
-
-**Contact:**  nathanbsmith.business@gmail.com (for questions or advice)
+For any questions, feedback, or to report issues, contact nathanbsmith.business@gmail.com.

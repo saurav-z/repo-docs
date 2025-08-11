@@ -1,28 +1,30 @@
-# auditwheel: Ensuring Linux Wheel Compatibility for Python Packages
+# auditwheel: Ensure Cross-Platform Compatibility for Python Wheels
 
-**Auditwheel is a powerful command-line tool designed to audit and repair Python wheel packages for compatibility with various Linux distributions, specifically those adhering to PEP 600 manylinux standards.** [(See original repo)](https://github.com/pypa/auditwheel)
+**auditwheel** is your go-to command-line tool for creating Python wheels that seamlessly work across various Linux distributions, adhering to the manylinux standards.  [Learn more at the original repository](https://github.com/pypa/auditwheel).
 
 ## Key Features
 
-*   **Auditing:** Identifies external shared library dependencies and versioned symbols in your wheel packages.
-*   **Repairing:** Copies required external shared libraries into the wheel and modifies RPATH entries, ensuring compatibility across a wider range of Linux systems.
-*   **Manylinux Compliance:** Supports PEP 600 (manylinux_x_y), PEP 513 (manylinux1), PEP 571 (manylinux2010), and PEP 599 (manylinux2014) wheel standards.
-*   **Platform Tag Management:** Updates wheel platform tags to reflect manylinux compatibility (e.g., from `linux_x86_64` to `manylinux1_x86_64`).
-*   **Command-Line Interface:** Provides easy-to-use commands like `show` (for inspection) and `repair` (for fixing wheels).
+*   **Inspects Wheel Dependencies:** Analyzes Python wheels to identify external shared libraries and versioned symbols that could cause compatibility issues.
+*   **Repairs Wheels:**  Copies external shared libraries into the wheel and modifies RPATH entries, making your wheels compatible with a wider range of Linux distributions without modifying the build system.
+*   **Supports Manylinux Standards:**  Works with `PEP 600 manylinux_x_y`, `PEP 513 manylinux1`, `PEP 571 manylinux2010`, and `PEP 599 manylinux2014` platform tags.
+*   **Simple Command-Line Interface:** Provides easy-to-use commands for inspection (`auditwheel show`) and repair (`auditwheel repair`).
 
 ## Overview
 
-Auditwheel simplifies the creation of cross-platform Python wheel packages that include pre-compiled binary extensions. It helps developers ensure their packages work on diverse Linux distributions.
+Auditwheel streamlines the process of building and distributing Python wheel packages containing pre-compiled binary extensions for Linux. It addresses the challenge of ensuring compatibility across different Linux distributions by:
 
-### Requirements
+*   Identifying dependencies on external shared libraries that might not be available on all target systems.
+*   "Repairing" wheels by bundling necessary shared libraries and adjusting runtime paths (RPATH) to ensure they are found.
+
+## Requirements
 
 *   **Operating System:** Linux
 *   **Python:** 3.9+
-*   **patchelf:** 0.14+ (Get it from [here](https://github.com/NixOS/patchelf))
+*   **Dependencies:** `patchelf` (version 0.14+)
 
 ## Installation
 
-Install `auditwheel` using pip:
+Install auditwheel using pip:
 
 ```bash
 pip3 install auditwheel
@@ -44,14 +46,14 @@ auditwheel repair cffi-1.5.2-cp35-cp35m-linux_x86_64.whl
 
 ## Limitations
 
-*   **Dynamic Library Loading:** Does not detect dependencies loaded dynamically at runtime (via `ctypes`, `cffi`, or `dlopen`).
-*   **glibc/libstdc++ Compatibility:** Cannot "fix" binaries compiled against overly recent versions of `glibc` or `libstdc++` due to symbol versioning issues. Building on an older Linux distribution is recommended.
+*   **Dynamic Library Loading:**  Dependencies loaded dynamically via `ctypes`, `cffi`, or `dlopen` might be missed.
+*   **`libc` and `libstdc++` Versioning:** Auditwheel cannot fix binaries compiled against overly recent versions of `libc` or `libstdc++`.  Building in a manylinux Docker image is recommended for maximum compatibility.
 
 ## Testing
 
-Test `auditwheel` by using ``nox``.
+Run tests using `nox`. Some integration tests require a running Docker daemon.
 
-To update the test Docker images:
+**Docker Image Updates:**
 
 ```bash
 docker pull python:3.9-slim-bookworm
@@ -63,8 +65,6 @@ docker pull quay.io/pypa/manylinux_2_34_x86_64
 docker pull quay.io/pypa/musllinux_1_2_x86_64
 ```
 
-You may remove these images using ``docker rmi``.
-
 ## Code of Conduct
 
-Please adhere to the [PSF Code of Conduct](https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md).
+Please adhere to the `PSF Code of Conduct`_ when interacting with the `auditwheel` project.

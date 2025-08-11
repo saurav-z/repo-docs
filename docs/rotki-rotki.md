@@ -2,14 +2,10 @@
   <img src="https://raw.githubusercontent.com/rotki/rotki/develop/frontend/app/public/assets/images/rotkehlchen_no_text.png" alt="rotki Logo" width="250">
 </div>
 
-<h1 align="center">rotki: Self-Hosted, Privacy-Focused Portfolio Manager</h1>
+<h1 align="center">rotki: Your Self-Hosted, Privacy-Focused Crypto Portfolio Manager</h1>
 
 <p align="center">
-  <b>Take control of your crypto finances with rotki, the open-source portfolio manager that puts your privacy first.</b>
-  <br>
-  <a href="https://github.com/rotki/rotki">
-    <img src="https://img.shields.io/github/stars/rotki/rotki?style=social" alt="GitHub Stars">
-  </a>
+  <em>Take control of your crypto finances with rotki – the open-source portfolio manager that prioritizes your privacy.</em>
 </p>
 
 <div align="center">
@@ -32,113 +28,95 @@
 
 ---
 
-## 📌 **Table of Contents**
+## 🔑 **Key Features of rotki**
 
--   [🔑 **Key Features**](#key-features)
--   [📖 **Overview**](#overview)
--   [💻 **Getting Started**](#getting-started)
--   [⚙️ **Requirements**](#requirements)
--   [🚀 **Installation**](#installation)
--   [📚 **Usage**](#usage)
--   [📜 **Changelog**](#changelog)
--   [🤝 **Contribute**](#contribute)
--   [📢 **Get in Touch**](#get-in-touch)
--   [💰 **Donations**](#donations)
--   [📄 **License**](#license)
+*   **Self-Hosted:** Keep your financial data secure by hosting it yourself.
+*   **Open Source:**  Benefit from transparency and community-driven development.
+*   **Privacy-Focused:**  Your data is encrypted and stored locally.
+*   **Portfolio Tracking:** Monitor balances across multiple platforms, blockchains, and exchanges.
+*   **Advanced Analytics:** Visualize historical data and gain insights for better financial decisions.
+*   **Transaction Decoding:** Understand your blockchain transactions and exchange activity.
+*   **Customizable Reporting:** Generate detailed profit/loss reports tailored to your needs.
+*   **Multi-Platform Support:** Supports Windows, macOS, and Linux.
 
 ---
-
-<div id="key-features"></div>
-
-## 🔑 **Key Features**
-
-*   ✅ **Self-Hosted:** Own your data; run rotki on your own server.
-*   ✅ **Privacy-Focused:** Your financial data is encrypted and stored locally.
-*   ✅ **Portfolio Tracking:** Monitor balances across various platforms, blockchains, and exchanges.
-*   ✅ **Transaction Decoding:** Easily understand blockchain and exchange events.
-*   ✅ **Profit/Loss Analysis:** Detailed P&L reports with customizable accounting settings.
-*   ✅ **Open-Source:** Transparent and auditable code.
-
-<div id="overview"></div>
 
 ## 📖 **Overview**
 
-[rotki](https://rotki.com/) is the ultimate open-source, self-hosted portfolio management tool for cryptocurrency enthusiasts who prioritize privacy. Unlike proprietary SaaS platforms that harvest your financial data, rotki empowers you with complete control. It keeps your financial data encrypted and stored locally. It offers powerful analytics, transaction decoding, and P&L reporting, all while respecting your privacy. This ensures you stay in control of your financial data, and bring transparency to the financial sector.
+[rotki](https://rotki.com/) is an open-source, self-hosted portfolio management tool designed with privacy as its top priority. Unlike closed-source platforms, rotki empowers you to control your financial data by keeping it encrypted and stored locally. This ensures you maintain complete ownership and privacy, free from the concerns of cloud-based tracking services. Our mission is to bring transparency to the crypto and financial sectors by providing a secure, self-sovereign alternative.
+
+**Why choose rotki?**
+
+*   **Open-source and Transparent**: Inspect the code and contribute to its development.
+*   **Self-Hosted**: Control where your data resides.
+*   **Privacy-Focused**: Data is encrypted and stored locally.
+*   **Multi-Platform Support**: Access rotki on Windows, macOS, and Linux.
+*   **Powerful Analytics & Reporting**: Gain actionable insights into your portfolio.
+
+Explore the [Pro Version](https://rotki.com/products/) for advanced features or delve deeper into feature coverage on the [Feature Coverage Page](https://rotki.com/products/details).
 
 ---
 
-<div id="getting-started"></div>
+## 💻 **Requirements**
 
-## 💻 **Getting Started**
-
-To start using rotki, you can use the following approaches:
-
-*   **Download Pre-Packaged Binaries**:  The easiest way to get started with rotki.  See the [installation section](#installation) below for links.
-*   **Build from Source**: For developers, rotki can be [built from source](https://docs.rotki.com/requirement-and-installation/build-from-source.html).
-
----
-
-<div id="requirements"></div>
-
-## ⚙️ **Requirements**
-
-Ensure you have the following software installed before installing rotki:
+Before installing rotki, ensure you have these dependencies:
 
 *   `Node.js`
 *   `npm` (Node Package Manager)
 *   `Python 3.11`
 *   `uv` (Python Package Manager)
-*   `Docker` (Recommended for easy setup)
+*   `Docker`
 
 ---
-
-<div id="installation"></div>
 
 ## 🚀 **Installation**
 
-rotki supports installation on **Windows, macOS, and Linux**.
+rotki supports Windows, macOS, and Linux.
 
-*   **Recommended**:  [Download Pre-Packaged Binaries](https://docs.rotki.com/requirement-and-installation/packaged-binaries.html)
-*   **Advanced**: [Build from Source](https://docs.rotki.com/requirement-and-installation/build-from-source.html) (For developers)
+**Recommended Installation:**
 
----
+*   [Download Pre-Packaged Binaries](https://docs.rotki.com/requirement-and-installation/packaged-binaries.html)
 
-<div id="usage"></div>
+**Advanced Installation (for developers):**
 
-## 📚 **Usage**
-
-For detailed setup and usage instructions, explore our comprehensive [documentation](https://docs.rotki.com/).
-
-*   Follow the [usage guide](https://docs.rotki.com/usage-guides/).
-*   Configure settings and import your addresses.
-*   Start managing and analyzing your portfolio! 🚀
+*   [Build from Source](https://docs.rotki.com/requirement-and-installation/build-from-source.html)
 
 ---
 
-<div id="changelog"></div>
+## 📝 **Usage**
 
-## 📜 **Changelog**
+For detailed setup and usage instructions, consult our comprehensive [documentation](https://docs.rotki.com/).
 
-Stay up to date with the latest changes:
+**Quick Start Guide:**
+
+1.  Follow the [usage guide](https://docs.rotki.com/usage-guides/).
+2.  Configure settings and import your addresses.
+3.  Start managing and analyzing your portfolio! 🚀
+
+---
+
+## 📢 **Changelog**
+
+Stay informed about the latest features and improvements:
 
 *   [Full Changelog](https://rotki.readthedocs.io/en/latest/changelog.html)
 *   [Release Notes](https://github.com/rotki/rotki/releases)
 
 ---
 
-<div id="contribute"></div>
-
 ## 🤝 **Contribute**
 
-We welcome contributions from the community! 🎉
+Join the rotki community and contribute to its development! 🎉
+
+**Getting Started:**
 
 *   Read the [Contribution Guide](CONTRIBUTING.md)
 *   Explore the [Developer Guide](https://docs.rotki.com/contribution-guides/)
 *   Check out [Open Issues](https://github.com/rotki/rotki/issues)
 
-📌 **Claim Your Contributor Badge!**
+**Claim Your Contributor Badge!**
 
-Contributors receive a **GitPOAP Badge** for each year they contribute! 🎖 [Claim yours here](https://www.gitpoap.io/rp/62).
+Contributors receive a GitPOAP Badge for their contributions. 🎖 [Claim yours here](https://www.gitpoap.io/rp/62).
 
 ---
 
@@ -152,67 +130,44 @@ We are thankful to all the people who have contributed to rotki.
 
 ---
 
-<div id="get-in-touch"></div>
-
-## 📢 **Get in Touch**
+## 📞 **Get in Touch**
 
 Need help or want to discuss features? Connect with us!
 
 ### 💬 **Community & Support**
 
-[![Discord](https://img.shields.io/badge/Join%20our%20Discord-5865F2?logo=discord&logoColor=white&style=for-the-badge)](https://discord.rotki.com)
-[![GitHub Discussions](https://img.shields.io/badge/GitHub%20Discussions-181717?logo=github&logoColor=white&style=for-the-badge)](https://github.com/rotki/rotki/discussions)
-[![GitHub Issues](https://img.shields.io/badge/Report%20an%20Issue-F05032?logo=github&logoColor=white&style=for-the-badge)](https://github.com/rotki/rotki/issues)
+*   [![Discord](https://img.shields.io/badge/Join%20our%20Discord-5865F2?logo=discord&logoColor=white&style=for-the-badge)](https://discord.rotki.com)
+*   [![GitHub Discussions](https://img.shields.io/badge/GitHub%20Discussions-181717?logo=github&logoColor=white&style=for-the-badge)](https://github.com/rotki/rotki/discussions)
+*   [![GitHub Issues](https://img.shields.io/badge/Report%20an%20Issue-F05032?logo=github&logoColor=white&style=for-the-badge)](https://github.com/rotki/rotki/issues)
 
 ### 📌 **Follow Us for Updates**
 
-[![Website](https://img.shields.io/badge/Visit%20rotki-1E90FF?logoColor=white&style=for-the-badge)](https://rotki.com)
-[![Docs](https://img.shields.io/badge/Read%20the%20Docs-FF4500?logo=read-the-docs&logoColor=white&style=for-the-badge)](https://docs.rotki.com/)
-[![X (Twitter)](https://img.shields.io/badge/Follow%20on%20X-000000?logo=x&logoColor=white&style=for-the-badge)](https://twitter.com/rotkiapp)
-[![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-0077B5?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/company/rotki)
+*   [![Website](https://img.shields.io/badge/Visit%20rotki-1E90FF?logoColor=white&style=for-the-badge)](https://rotki.com)
+*   [![Docs](https://img.shields.io/badge/Read%20the%20Docs-FF4500?logo=read-the-docs&logoColor=white&style=for-the-badge)](https://docs.rotki.com/)
+*   [![X (Twitter)](https://img.shields.io/badge/Follow%20on%20X-000000?logo=x&logoColor=white&style=for-the-badge)](https://twitter.com/rotkiapp)
+*   [![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-0077B5?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/company/rotki)
 
 ---
-
-<div id="donations"></div>
 
 ## 💰 **Donations**
 
-If you find rotki helpful and would like to support its development, you can make a donation using the following cryptocurrency addresses 🚀
+Support the development of rotki by making a donation!
 
-*   📌 **Bitcoin (BTC)**: `1PfvkW8MC7Ns2y8zn6CE2P2t5f19KF8XiW`
-*   📌 **Ethereum (ETH)**: `rotki.eth` (`0x9531c059098e3d194ff87febb587ab07b30b1306`)
+**Cryptocurrency Addresses:**
 
-💡 Your contribution will directly support project enhancements, development costs, and ongoing maintenance.
+*   **Bitcoin (BTC):** `1PfvkW8MC7Ns2y8zn6CE2P2t5f19KF8XiW`
+*   **Ethereum (ETH):** `rotki.eth` (`0x9531c059098e3d194ff87febb587ab07b30b1306`)
 
-We appreciate every donation, no matter the size. It helps to ensure the project's sustainability and motivates us to continue delivering valuable updates and improvements.
-
-Thank you for considering a donation to support our work!
+Your contributions help fund development costs and ongoing maintenance. We appreciate every donation, no matter the size!
 
 ---
 
-<div id="license"></div>
-
 ## 📄 **License**
 
-rotki is open-source and distributed under the **AGPLv3 License**.
+rotki is open-source and licensed under the **AGPLv3 License**.
 
-📜 [Read the Full License](https://github.com/rotki/rotki/blob/develop/LICENSE.md)
+*   [Read the Full License](https://github.com/rotki/rotki/blob/develop/LICENSE.md)
 
-<p align="right">(<a href="#top">🔼 Back to top</a>)</p>
-```
-Key improvements and SEO considerations:
+---
 
-*   **Concise Hook:** Starts with a strong one-sentence description, including the primary keyword "portfolio manager".
-*   **Keyword Optimization:** Uses relevant keywords like "self-hosted", "privacy-focused", "crypto", "portfolio management", and "open-source" throughout the text and headings.
-*   **Clear Headings:** Uses clear and descriptive headings to organize information and improve readability.
-*   **Bulleted Lists:** Features are presented using bulleted lists for easy scanning.
-*   **Table of Contents:**  Includes a table of contents for quick navigation.
-*   **Detailed Descriptions:** Explains each feature and section thoroughly.
-*   **Call to Actions:** Encourages users to get involved and contribute.
-*   **Links to Key Resources:** Includes links to the documentation, community, and donation options.
-*   **Alt Text on Images:** Improves image SEO (added alt text where missing).
-*   **Emphasis on Privacy:** Highlights the privacy-focused nature of the tool.
-*   **Contributor Section:**  Retained the contributor information.
-*   **License and Back to Top:** Includes the license and back to top links.
-*   **Improved Formatting:**  Better formatting and spacing for readability.
-*   **Clearer Language:** Used more accessible language.
+[Back to top](#top)

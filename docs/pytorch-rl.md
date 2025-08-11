@@ -11,52 +11,89 @@
 [![Downloads](https://static.pepy.tech/personalized-badge/torchrl-nightly?period=total&units=international_system&left_color=blue&right_color=orange&left_text=Downloads%20(nightly))](https://pepy.tech/project/torchrl-nightly)
 [![Discord Shield](https://dcbadge.vercel.app/api/server/cZs26Qq3Dd)](https://discord.gg/cZs26Qq3Dd)
 
-# TorchRL: Your Gateway to Cutting-Edge Reinforcement Learning with PyTorch
+# TorchRL: Your Gateway to Advanced Reinforcement Learning with PyTorch
 
-TorchRL is an open-source library designed to accelerate your Reinforcement Learning (RL) research, offering a modular, efficient, and user-friendly environment for developing and deploying RL algorithms.  Find out more and contribute at the original [repository](https://github.com/pytorch/rl).
+TorchRL provides a flexible, efficient, and modular framework for reinforcement learning research and development in PyTorch. Learn more at the [original repository](https://github.com/pytorch/rl).
 
 ## Key Features
 
-*   🐍 **Python-first:** Designed with Python for ease of use and flexibility.
-*   ⏱️ **Efficient:** Optimized for performance to support demanding RL research applications.
-*   🧮 **Modular, Customizable, Extensible:** Highly modular architecture allows for easy swapping, transformation, or creation of new components.
-*   📚 **Well-Documented:** Thorough documentation ensures users can quickly understand and utilize the library.
-*   ✅ **Extensively Tested:** Rigorously tested to ensure reliability and stability.
-*   ⚙️ **Reusable Functionals:** Provides a set of highly reusable functions for cost functions, returns, and data processing.
-*   🧠 **LLM API**: Integrated framework for language model fine-tuning, including RLHF, with Hugging Face and vLLM wrappers, conversation management, and specialized objectives (GRPO, SFT).
+*   **Python-First:** Designed with Python for ease of use and flexibility.
+*   **Efficient:** Optimized for high-performance RL research.
+*   **Modular & Customizable:** Easily swap, transform, or create new components.
+*   **Well-Documented:** Comprehensive documentation and tutorials.
+*   **Rigorously Tested:** Reliability and stability are ensured.
+*   **Reusable Functionals:** Offers a set of highly reusable functions for cost functions, returns, and data processing.
+*   **LLM API:** Complete framework for language model fine-tuning.
 
-## Core Components
+    *   Unified LLM Wrappers (Hugging Face and vLLM).
+    *   Conversation Management with automatic chat template detection.
+    *   Tool Integration (Python code execution, function calling).
+    *   Specialized Objectives (GRPO, SFT).
+    *   High-Performance Async Collectors.
 
-*   **Environments:** Unified interface supporting common libraries (OpenAI Gym, DeepMind Control, etc.) and state-less execution. Includes batched environments for parallel execution and PyTorch-first tensor-specification classes.
-*   **Data Collectors:** Multiprocess and distributed data collectors, working synchronously or asynchronously.
-*   **Replay Buffers:** Efficient and generic replay buffers with modularized storage, including wrappers for offline RL datasets (D4RL).
-*   **Environment Transforms:** Cross-library environment transforms executed on device and in a vectorized fashion.
-*   **Models and Architectures:** Various architectures and models, including actor-critic implementations.
-*   **Exploration Wrappers and Modules:** Easily switch between exploration and exploitation strategies.
-*   **Loss Modules and Functionals:** Efficient loss modules and vectorized functional return/advantage computation.
-*   **Trainer Class:** A generic trainer class supporting logging and data transformation hooks.
-*   **Recipes:** Models tailored for the environment being deployed.
+## What's New
 
-## 🚀 What's New: LLM API
+### LLM API - Complete Framework for Language Model Fine-tuning
 
-The TorchRL library now features a comprehensive **LLM API** to facilitate the fine-tuning of language models. This includes a variety of modules for RLHF, supervised fine-tuning, and tool-augmented training. Check out the [complete documentation](https://pytorch.org/rl/main/reference/llms.html) and [GRPO implementation example](https://github.com/pytorch/rl/tree/main/sota-implementations/grpo) to get started!
+TorchRL now includes a comprehensive **LLM API** for post-training and fine-tuning of language models! This new framework provides everything you need for RLHF, supervised fine-tuning, and tool-augmented training:
+
+- 🤖 **Unified LLM Wrappers**: Seamless integration with Hugging Face models and vLLM inference engines - more to come!
+- 💬 **Conversation Management**: Advanced [`History`](torchrl/data/llm/history.py) class for multi-turn dialogue with automatic chat template detection
+- 🛠️ **Tool Integration**: [Built-in support](torchrl/envs/llm/transforms/) for Python code execution, function calling, and custom tool transforms
+- 🎯 **Specialized Objectives**: [GRPO](torchrl/objectives/llm/grpo.py) (Group Relative Policy Optimization) and [SFT](torchrl/objectives/llm/sft.py) loss functions optimized for language models
+- ⚡ **High-Performance Collectors**: [Async data collection](torchrl/collectors/llm/) with distributed training support
+- 🔄 **Flexible Environments**: Transform-based architecture for reward computation, data loading, and conversation augmentation
+
+The LLM API follows TorchRL's modular design principles, allowing you to mix and match components for your specific use case. Check out the [complete documentation](https://pytorch.org/rl/main/reference/llms.html) and [GRPO implementation example](https://github.com/pytorch/rl/tree/main/sota-implementations/grpo) to get started!
+
+<details>
+  <summary>Quick LLM API Example</summary>
+
+```python
+from torchrl.envs.llm import ChatEnv
+from torchrl.modules.llm import TransformersWrapper
+from torchrl.objectives.llm import GRPOLoss
+from torchrl.collectors.llm import LLMCollector
+
+# Create environment with Python tool execution
+env = ChatEnv(
+    tokenizer=tokenizer,
+    system_prompt="You are an assistant that can execute Python code.",
+    batch_size=[1]
+).append_transform(PythonInterpreter())
+
+# Wrap your language model
+llm = TransformersWrapper(
+    model=model,
+    tokenizer=tokenizer,
+    input_mode="history"
+)
+
+# Set up GRPO training
+loss_fn = GRPOLoss(llm, critic, gamma=0.99)
+collector = LLMCollector(env, llm, frames_per_batch=100)
+
+# Training loop
+for data in collector:
+    loss = loss_fn(data)
+    loss.backward()
+    optimizer.step()
+```
+
+</details>
 
 ## Getting Started
 
-Check out the [Getting Started tutorials](https://pytorch.org/rl/stable/index.html#getting-started) to quickly learn the basics of the library!
-
-<p align="center">
-  <img src="docs/ppo.png"  width="800" >
-</p>
+Jumpstart your RL journey with our [Getting Started tutorials](https://pytorch.org/rl/stable/index.html#getting-started).
 
 ## Documentation and Knowledge Base
 
-*   [Documentation](https://pytorch.org/rl): Tutorials and API reference.
-*   [RL Knowledge Base](https://pytorch.org/rl/stable/reference/knowledge_base.html): Resources to debug your code or learn the basics of RL.
+*   **Documentation:** Access comprehensive documentation [here](https://pytorch.org/rl).
+*   **RL Knowledge Base:**  Find helpful resources and tutorials [here](https://pytorch.org/rl/stable/reference/knowledge_base.html).
 
 ## Spotlight Publications
 
-TorchRL is versatile and can be used across many different fields, here are a few examples:
+TorchRL is a versatile tool used across many domains. Here are a few examples:
 
 *   [ACEGEN](https://pubs.acs.org/doi/10.1021/acs.jcim.4c00895): Reinforcement Learning of Generative Chemical Agents
     for Drug Discovery
@@ -69,103 +106,84 @@ TorchRL is versatile and can be used across many different fields, here are a fe
 
 ## Writing Simplified and Portable RL Codebase with `TensorDict`
 
-TorchRL leverages `TensorDict`, a data structure that simplifies RL code by streamlining your codebase and providing a convenient tool for writing Portable RL code.
-With this tool, one can write a complete PPO training script in less than 100 lines of code!
+TorchRL leverages `TensorDict` ([documentation](https://pytorch.github.io/tensordict/)) for streamlined RL codebase development.
 
-  <details>
-    <summary>Code</summary>
+## Features
 
-  ```python
-  import torch
-  from tensordict.nn import TensorDictModule
-  from tensordict.nn.distributions import NormalParamExtractor
-  from torch import nn
-  
-  from torchrl.collectors import SyncDataCollector
-  from torchrl.data.replay_buffers import TensorDictReplayBuffer, \
-    LazyTensorStorage, SamplerWithoutReplacement
-  from torchrl.envs.libs.gym import GymEnv
-  from torchrl.modules import ProbabilisticActor, ValueOperator, TanhNormal
-  from torchrl.objectives import ClipPPOLoss
-  from torchrl.objectives.value import GAE
-  
-  env = GymEnv("Pendulum-v1") 
-  model = TensorDictModule(
-    nn.Sequential(
-        nn.Linear(3, 128), nn.Tanh(),
-        nn.Linear(128, 128), nn.Tanh(),
-        nn.Linear(128, 128), nn.Tanh(),
-        nn.Linear(128, 2),
-        NormalParamExtractor()
-    ),
-    in_keys=["observation"],
-    out_keys=["loc", "scale"]
-  )
-  critic = ValueOperator(
-    nn.Sequential(
-        nn.Linear(3, 128), nn.Tanh(),
-        nn.Linear(128, 128), nn.Tanh(),
-        nn.Linear(128, 128), nn.Tanh(),
-        nn.Linear(128, 1),
-    ),
-    in_keys=["observation"],
-  )
-  actor = ProbabilisticActor(
-    model,
-    in_keys=["loc", "scale"],
-    distribution_class=TanhNormal,
-    distribution_kwargs={"low": -1.0, "high": 1.0},
-    return_log_prob=True
-    )
-  buffer = TensorDictReplayBuffer(
-    storage=LazyTensorStorage(1000),
-    sampler=SamplerWithoutReplacement(),
-    batch_size=50,
-    )
-  collector = SyncDataCollector(
-    env,
-    actor,
-    frames_per_batch=1000,
-    total_frames=1_000_000,
-  )
-  loss_fn = ClipPPOLoss(actor, critic)
-  adv_fn = GAE(value_network=critic, average_gae=True, gamma=0.99, lmbda=0.95)
-  optim = torch.optim.Adam(loss_fn.parameters(), lr=2e-4)
-  
-  for data in collector:  # collect data
-    for epoch in range(10):
-        adv_fn(data)  # compute advantage
-        buffer.extend(data)
-        for sample in buffer:  # consume data
-            loss_vals = loss_fn(sample)
-            loss_val = sum(
-                value for key, value in loss_vals.items() if
-                key.startswith("loss")
-                )
-            loss_val.backward()
-            optim.step()
-            optim.zero_grad()
-    print(f"avg reward: {data['next', 'reward'].mean().item(): 4.4f}")
-  ```
-  </details>
+*   A common [interface for environments](https://github.com/pytorch/rl/blob/main/torchrl/envs) which supports common libraries (OpenAI gym, deepmind control lab, etc.) and state-less execution.
+*   Multiprocess and distributed [data collectors](https://github.com/pytorch/rl/blob/main/torchrl/collectors/collectors.py).
+*   Efficient and generic [replay buffers](https://github.com/pytorch/rl/blob/main/torchrl/data/replay_buffers/replay_buffers.py) with modularized storage.
+*   Cross-library [environment transforms](https://github.com/pytorch/rl/blob/main/torchrl/envs/transforms/transforms.py).
+*   Various architectures and models.
+*   Exploration wrappers and modules.
+*   Efficient loss modules and functional return and advantage computation.
+*   A generic [trainer class](https://github.com/pytorch/rl/blob/main/torchrl/trainers/trainers.py) and various recipes.
 
 ## Examples, Tutorials, and Demos
 
-Explore our [State-of-the-Art implementations](https://github.com/pytorch/rl/blob/main/sota-implementations/)! Code examples and training scripts are also available.
+Explore [State-of-the-Art implementations](https://github.com/pytorch/rl/blob/main/sota-implementations/), [code examples](examples/), and [tutorials and demos](https://pytorch.org/rl/stable#tutorials).
 
 ## Citation
 
-If you're using TorchRL, please refer to the [citation](https://github.com/pytorch/rl#citation) in the original README.
+If you use TorchRL, please cite the following:
+
+```
+@misc{bou2023torchrl,
+      title={TorchRL: A data-driven decision-making library for PyTorch}, 
+      author={Albert Bou and Matteo Bettini and Sebastian Dittert and Vikash Kumar and Shagun Sodhani and Xiaomeng Yang and Gianni De Fabritiis and Vincent Moens},
+      year={2023},
+      eprint={2306.00577},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
 
 ## Installation
 
-Follow the [installation instructions](https://github.com/pytorch/rl#installation) in the original README.
+### Create a new virtual environment:
+```bash
+python -m venv torchrl
+source torchrl/bin/activate  # On Windows use: venv\Scripts\activate
+```
+
+Or create a conda environment where the packages will be installed.
+
+```
+conda create --name torchrl python=3.9
+conda activate torchrl
+```
+
+### Install dependencies:
+
+#### PyTorch
+
+See [here](https://pytorch.org/get-started/locally/) for installation.
+
+#### Torchrl
+
+```bash
+pip3 install torchrl
+```
+
+The **nightly build** can be installed via
+```bash
+pip3 install tensordict-nightly torchrl-nightly
+```
 
 ## Asking a Question
 
-*   Report bugs in the [issue tracker](https://github.com/pytorch/rl/issues).
-*   Ask general questions on the [PyTorch forum](https://discuss.pytorch.org/c/reinforcement-learning/6).
+For bugs, please raise an issue in this repo.
+
+For more general questions, use the [PyTorch forum](https://discuss.pytorch.org/c/reinforcement-learning/6).
 
 ## Contributing
 
-Contributions are welcome! See the [contribution guide](https://github.com/pytorch/rl/blob/main/CONTRIBUTING.md) for details.
+Contributions are welcome!  See the [contribution guide](https://github.com/pytorch/rl/blob/main/CONTRIBUTING.md) for details.  A list of open contributions is found [here](https://github.com/pytorch/rl/issues/509). Install [pre-commit hooks](https://pre-commit.com/) for linting.
+
+## Disclaimer
+
+This is a beta feature, and breaking changes are possible.
+
+## License
+
+TorchRL is licensed under the MIT License. See [LICENSE](https://github.com/pytorch/rl/blob/main/LICENSE) for details.

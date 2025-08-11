@@ -1,52 +1,56 @@
-[![SciPy Logo](https://raw.githubusercontent.com/scipy/scipy/main/doc/source/_static/logo.svg)](https://scipy.org)
+<div align="left">
+  <a href="https://scipy.org">
+    <img src="https://raw.githubusercontent.com/scipy/scipy/main/doc/source/_static/logo.svg" alt="SciPy Logo" width="110" height="110" align="left">
+  </a>
+</div>
 
-# SciPy: Open-Source Software for Science, Math, and Engineering
+# SciPy: Open Source Software for Science, Math, and Engineering
 
-SciPy, pronounced "Sigh Pie," is your go-to open-source library for advanced scientific computing in Python, offering a comprehensive suite of tools for tackling complex problems.  [View the original repository](https://github.com/scipy/scipy).
+**SciPy is a powerful and versatile Python library packed with tools for scientific computing, making complex tasks in math, science, and engineering easier than ever.** ([View the original repository](https://github.com/scipy/scipy))
 
-**Key Features of SciPy:**
+SciPy (pronounced "Sigh Pie") seamlessly integrates with NumPy arrays, providing a rich collection of numerical routines that are both user-friendly and highly efficient.  It runs on all popular operating systems, is quick to install, and is completely free to use.
 
-*   **Comprehensive Scientific Computing Tools:** Offers modules for a wide range of scientific and engineering tasks.
-*   **Statistics:** Includes modules for statistical analysis and modeling.
-*   **Optimization:** Provides algorithms for optimizing functions.
-*   **Integration:** Supports numerical integration techniques.
-*   **Linear Algebra:** Contains robust linear algebra capabilities.
-*   **Fourier Transforms:** Implements efficient Fourier transform algorithms.
-*   **Signal and Image Processing:** Offers tools for signal and image manipulation.
-*   **ODE Solvers:** Includes solvers for ordinary differential equations.
-*   **Built on NumPy:** Designed to work seamlessly with NumPy arrays for efficient numerical computation.
-*   **Cross-Platform:** Runs on all major operating systems (Windows, macOS, Linux).
-*   **Free and Open Source:** Available under a permissive license, free of charge.
-*   **Extensive Documentation:** Well-documented with tutorials, examples, and API references.
+## Key Features of SciPy:
 
-**Getting Started:**
+*   **Comprehensive Modules:** Offers a wide range of functionality, including:
+    *   Statistics
+    *   Optimization
+    *   Integration
+    *   Linear Algebra
+    *   Fourier Transforms
+    *   Signal and Image Processing
+    *   ODE Solvers
+*   **Built for NumPy:** Designed to work effortlessly with NumPy arrays, maximizing performance.
+*   **Open Source and Free:**  Available under an open-source license, allowing for free use and distribution.
+*   **Cross-Platform Compatibility:** Works seamlessly on all major operating systems.
+*   **Community Driven:**  A thriving community actively contributes to its development and support.
+
+## Resources:
 
 *   **Website:** [https://scipy.org](https://scipy.org)
 *   **Documentation:** [https://docs.scipy.org/doc/scipy/](https://docs.scipy.org/doc/scipy/)
-*   **Installation:** [https://scipy.org/install/](https://scipy.org/install/)
-
-**Community & Support:**
-
-*   **SciPy Development Forum:** [https://discuss.scientific-python.org/c/contributor/scipy](https://discuss.scientific-python.org/c/contributor/scipy)
+*   **Development Documentation:** [https://scipy.github.io/devdocs](https://scipy.github.io/devdocs)
+*   **Development Forum:** [https://discuss.scientific-python.org/c/contributor/scipy](https://discuss.scientific-python.org/c/contributor/scipy)
 *   **Stack Overflow:** [https://stackoverflow.com/questions/tagged/scipy](https://stackoverflow.com/questions/tagged/scipy)
 *   **Source Code:** [https://github.com/scipy/scipy](https://github.com/scipy/scipy)
 *   **Contributing:** [https://scipy.github.io/devdocs/dev/index.html](https://scipy.github.io/devdocs/dev/index.html)
 *   **Bug Reports:** [https://github.com/scipy/scipy/issues](https://github.com/scipy/scipy/issues)
 *   **Code of Conduct:** [https://docs.scipy.org/doc/scipy/dev/conduct/code_of_conduct.html](https://docs.scipy.org/doc/scipy/dev/conduct/code_of_conduct.html)
-*   **Citing SciPy:** [https://www.scipy.org/citing-scipy/](https://www.scipy.org/citing-scipy/)
+*   **Report a security vulnerability:** [https://tidelift.com/docs/security](https://tidelift.com/docs/security)
+*   **Citing in your work:** [https://www.scipy.org/citing-scipy/](https://www.scipy.org/citing-scipy/)
+*   **Installation Guide:** [https://scipy.org/install/](https://scipy.org/install/)
 
-**Contributing to SciPy:**
+## Contributing
 
-We welcome contributions from the community!  There are many ways to get involved:
+SciPy welcomes contributions from everyone!  You can contribute by:
 
-*   **Code Contributions:** Submit bug fixes, improvements, and new features. Explore "good first issue" labels.
-*   **Code Review:** Review pull requests from other contributors.
-*   **Issue Triage:** Help categorize and prioritize issues.
-*   **Documentation and Tutorials:** Create tutorials, presentations, and improve the documentation.
-*   **Website Maintenance:** Assist with maintaining and improving the SciPy website ([https://github.com/scipy/scipy.org](https://github.com/scipy/scipy.org)).
-*   **Design & Outreach:** Help with graphic design, outreach, and onboarding new contributors.
-*   **Fundraising:**  Assist with grant proposals and fundraising efforts.
+*   Writing code
+*   Reviewing pull requests
+*   Triaging issues
+*   Developing tutorials and educational materials
+*   Maintaining and improving the website
+*   Developing graphic design for brand assets
+*   Helping with outreach and onboarding new contributors
+*   Writing grant proposals and fundraising
 
-**How to Contribute:**
-
-If you're unsure where to start, reach out on the [SciPy development forum](https://discuss.scientific-python.org/c/contributor/scipy) or leave a comment on a relevant issue on GitHub.  For guidance on contributing to open source, see [this guide](https://opensource.guide/how-to-contribute/).
+If you're new to open source or unsure where to start, the community is happy to help.  Reach out on the [development forum](https://discuss.scientific-python.org/c/contributor/scipy) or by commenting on relevant issues.  A guide to contributing to open source can be found [here](https://opensource.guide/how-to-contribute/).

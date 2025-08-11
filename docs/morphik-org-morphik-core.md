@@ -9,84 +9,93 @@
   <a href="https://discord.gg/BwMtv3Zaju"><img alt="Discord" src="https://img.shields.io/discord/1336524712817332276?logo=discord&label=discord"></a>
 </p>
 
-## Morphik: Revolutionizing AI with Multimodal Data Understanding
+## Morphik: Unlock the Power of Your Data with AI-Native Search and Knowledge Management
 
-Morphik empowers developers to build AI applications that truly understand complex documents and multimodal data.  Explore the [Morphik Core GitHub repository](https://github.com/morphik-org/morphik-core) to learn more.
+Tired of AI applications that misunderstand your documents? **Morphik** is the AI-native toolset designed to help developers effortlessly integrate context and unlock the full potential of unstructured and multimodal data. Explore the [Morphik Core GitHub repository](https://github.com/morphik-org/morphik-core) for open-source components.
 
-### Key Features
+**Key Features:**
 
-*   **Multimodal Search:** Go beyond text; search images, PDFs, videos, and more with ColPali technology.
-*   **Knowledge Graphs:** Quickly build domain-specific knowledge graphs with a single line of code.
-*   **Fast Metadata Extraction:** Extract valuable information from documents, including bounding boxes and classifications.
-*   **Seamless Integrations:** Connect to existing tools and workflows, including Google Suite, Slack, and Confluence.
-*   **Cache-Augmented-Generation:** Speed up generation with persistent KV-caches of your documents.
+*   **Multimodal Search:** Understand and search visual content within your documents, including images, PDFs, and videos, all through a single endpoint. Learn more about [ColPali](https://morphik.ai/docs/concepts/colpali).
+*   **Knowledge Graphs:** Build domain-specific knowledge graphs in a single line of code, leveraging battle-tested system prompts or your own custom configurations.
+*   **Fast and Scalable Metadata Extraction:** Efficiently extract metadata from documents, including bounding boxes, labeling, and classification.
+*   **Seamless Integrations:** Connect with your existing tools and workflows, including (but not limited to) Google Suite, Slack, and Confluence. See our [Integrations](https://morphik.ai/docs/integrations) documentation.
+*   **Cache-Augmented-Generation:** Create persistent KV-caches of your documents to dramatically speed up generation.
+*   **[Free Tier Available](https://www.morphik.ai/pricing):** Get started without any commitment!
 
-### Why Morphik?
+## Table of Contents
 
-Traditional RAG approaches often struggle with real-world data, especially visually rich documents. Morphik solves this by:
+*   [Getting Started with Morphik (Recommended)](#getting-started-with-morphik-recommended)
+*   [Self-hosting Morphik](#self-hosting-morphik)
+*   [Using Morphik](#using-morphik)
+*   [Contributing](#contributing)
+*   [License](#license)
 
-*   **Addressing RAG Limitations:** Overcoming the limitations of traditional Retrieval-Augmented Generation (RAG) systems.
-*   **Understanding Visuals:** Enabling AI applications to truly understand images, charts, diagrams, and other visual elements.
-*   **Improving Accuracy:** Ensuring AI applications provide accurate answers by comprehending all data types.
-*   **Boosting Performance:** Reducing infrastructure costs and speeding up query processing with efficient data handling.
+## Getting Started with Morphik (Recommended)
 
-### Getting Started
+The fastest and easiest way to experience Morphik is by signing up for a free account at [Morphik](https://www.morphik.ai/signup). Our generous free tier and transparent, compute-usage-based pricing make it easy to get started.
 
-The easiest way to start with Morphik is to sign up for the [free tier](https://www.morphik.ai/signup) on the Morphik website.
+## Self-hosting Morphik
 
-### Migration Notice
+For those who prefer self-hosting, we provide installation instructions [here](https://morphik.ai/docs/getting-started), including options for direct installation and Docker.
 
-If you installed Morphik before June 22nd, 2025, please run the following migration script to optimize performance:
+**Important:** Due to limited resources, we can only provide basic support for self-hosted deployments. A [Discord community](https://discord.gg/BwMtv3Zaju) is available to help.
 
-```bash
-python scripts/migrate_auth_columns_complete.py --postgres-uri "postgresql+asyncpg://user:pass@host:port/db"
-```
+## Using Morphik
 
-###  Self-Hosting
+Once you've signed up or set up your self-hosted instance, you can immediately begin ingesting and querying your data.
 
-For self-hosting instructions, refer to the [Morphik documentation](https://morphik.ai/docs/getting-started). Note that self-hosted deployments have limited support. Join our [Discord community](https://discord.gg/BwMtv3Zaju) for help!
+### Code (Example: Python SDK)
 
-###  Using Morphik
-
-Once you're set up, start ingesting and querying your data immediately.
-
-####  Code Example (Python SDK)
+Developers can use our [Python SDK](https://morphik.ai/docs/python-sdk/morphik) or [REST API](https://morphik.ai/docs/api-reference/health-check). Ingesting a file is as simple as:
 
 ```python
 from morphik import Morphik
 
 morphik = Morphik("<your-morphik-uri>")
 morphik.ingest_file("path/to/your/super/complex/file.pdf")
+```
+
+Searching and querying is just as straightforward:
+
+```python
 morphik.query("What's the height of screw 14-A in the chair assembly instructions?")
 ```
 
-###  Morphik Console
+### Morphik Console
 
-Use the web-based console to ingest, search, and query your data.
+Use the web-based Morphik Console to ingest, search, and query your data. Upload files, connect to data sources, and interact with your data all in one place.
 
-###  Model Context Protocol (MCP)
+### Model Context Protocol
 
-Access Morphik via the Model Context Protocol; instructions are available [here](https://morphik.ai/docs/using-morphik/mcp).
+Access Morphik via MCP. Instructions are available [here](https://morphik.ai/docs/using-morphik/mcp).
 
-### Contributing
+## Contributing
 
-We welcome contributions!
+We welcome contributions! Help us by:
 
-*   Report bugs via [GitHub issues](https://github.com/morphik-org/morphik-core/issues).
-*   Suggest features via [GitHub issues](https://github.com/morphik-org/morphik-core/issues).
-*   Submit pull requests.
+*   Reporting bugs through [GitHub issues](https://github.com/morphik-org/morphik-core/issues)
+*   Suggesting new features via [GitHub issues](https://github.com/morphik-org/morphik-core/issues)
+*   Submitting pull requests
 
-### License
+We are currently focused on improving performance, expanding integrations, and incorporating cutting-edge research. Share your thoughts on Discord or GitHub!
 
-Morphik Core is source-available under the [Business Source License 1.1](./LICENSE).
+## License
 
--   **Personal / Indie use**: free.
--   **Commercial production use**: free if your Morphik deployment generates < $2 000/month in gross revenue.
-    Otherwise purchase a commercial key at <https://morphik.ai/pricing>.
--   **Future open source**: each code version automatically re-licenses to Apache 2.0 exactly four years after its first release.
+Morphik Core is **source-available** under the [Business Source License 1.1](./LICENSE).
+
+*   **Personal / Indie use**: free.
+*   **Commercial production use**: free if your Morphik deployment generates < $2 000/month in gross revenue.
+  Otherwise purchase a commercial key at <https://morphik.ai/pricing>.
+*   **Future open source**: each code version automatically re-licenses to Apache 2.0 exactly four years after its first release.
 
 See the full licence text for details.
 
-### Contributors
+## Contributors
 
-See our [special thanks page](https://morphik.ai/docs/special-thanks) for a list of contributors.
+Special thanks to our contributors. Visit our [special thanks page](https://morphik.ai/docs/special-thanks).
+
+***
+**Migration Notice:** If you installed Morphik before June 22nd, 2025, improve query performance by running this migration script:
+
+```bash
+python scripts/migrate_auth_columns_complete.py --postgres-uri "postgresql+asyncpg://user:pass@host:port/db"

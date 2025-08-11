@@ -1,8 +1,6 @@
-# Machine Learning Systems: The Open-Source Guide to Building Real-World AI
+# Machine Learning Systems: Build Real-World AI Systems
 
-**Learn how to build and deploy cutting-edge AI systems from edge devices to the cloud with this comprehensive, open-source textbook. Find the original repo [here](https://github.com/harvard-edge/cs249r_book).**
-
----
+**Learn how to build and deploy real-world AI systems, from edge devices to the cloud, with this open-source textbook!** ([Original Repo](https://github.com/harvard-edge/cs249r_book))
 
 [![Build](https://github.com/harvard-edge/cs249r_book/actions/workflows/validate-dev.yml/badge.svg?label=Build)](https://github.com/harvard-edge/cs249r_book/actions/workflows/validate-dev.yml)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmlsysbook.ai&label=Website&logo=readthedocs)](https://mlsysbook.ai)
@@ -16,43 +14,34 @@
 
 ---
 
-## Key Features
+## About the Book
 
-*   **Comprehensive Curriculum:** Master the complete ML systems stack, from data engineering to deployment and MLOps.
-*   **Hands-on Labs:** Build practical AI systems through interactive labs.
-*   **Open-Source & Accessible:** Learn from a freely available, community-driven resource.
-*   **Edge to Cloud:** Explore deployment strategies for diverse environments, including edge devices and cloud platforms.
-*   **Community-Driven:**  Join a global community of learners and contributors.
+Developed from Harvard University's CS249r course, this open-source textbook equips you with the knowledge and skills to build production-ready AI systems. It was originally created by [Prof. Vijay Janapa Reddi](https://github.com/profvjreddi/homepage).
 
----
+### Key Features:
 
-## About This Book
+*   **Comprehensive Coverage:** Master the full stack of ML systems, from edge devices to cloud deployment.
+*   **Hands-on Learning:** Go beyond training models and build real-world AI systems.
+*   **Open-Source & Accessible:** Learn from a community-driven resource, available to everyone.
+*   **Community Focused**: Join a global community focused on AI education.
 
-This open-source textbook, originally developed as Harvard University's CS249r course by [Prof. Vijay Janapa Reddi](https://github.com/profvjreddi/homepage), guides you through the principles and practices of engineering AI systems.  The mission is to expand access to AI systems education worldwide, empowering learners one chapter and one lab at a time.
-
-### Why This Book Exists
-
-*"This grew out of a concern that while students could train AI models, few understood how to build the systems that actually make them work. As AI becomes more capable and autonomous, the critical bottleneck won't be the algorithms - it will be the engineers who can build efficient, scalable, and sustainable systems that safely harness that intelligence."*
-
-**— Vijay Janapa Reddi**
+> *"This grew out of a concern that while students could train AI models, few understood how to build the systems that actually make them work. As AI becomes more capable and autonomous, the critical bottleneck won't be the algorithms - it will be the engineers who can build efficient, scalable, and sustainable systems that safely harness that intelligence."* - **Vijay Janapa Reddi**
 
 ---
 
-## 📚 What You'll Learn
+## What You'll Learn
 
-Go beyond training models — master the **full stack** of real-world ML systems.
+This book teaches you how to build and deploy real-world AI systems, covering:
 
-| Topic | What You'll Build |
-|-------|------------------|
-| **System Design** | Scalable, maintainable ML architectures |
-| **Data Engineering** | Robust pipelines for collection, labeling, and processing |
-| **Model Deployment** | Production-ready systems from prototypes |
-| **MLOps & Monitoring** | Reliable, continuously operating systems |
-| **Edge AI** | Resource-efficient deployment on mobile, embedded, and IoT |
+*   **System Design:** Architect scalable and maintainable ML systems.
+*   **Data Engineering:** Build robust pipelines for data collection, processing, and labeling.
+*   **Model Deployment:** Deploy your models into production-ready systems.
+*   **MLOps & Monitoring:** Implement reliable and continuously operating systems.
+*   **Edge AI:** Optimize for resource-efficient deployment on mobile, embedded, and IoT devices.
 
 ---
 
-## ⭐ Support This Work
+## Support the Mission
 
 <div align="center">
 
@@ -76,7 +65,7 @@ We've graduated this project from Harvard to enable global access and expand AI 
 
 ---
 
-## 🌐 Community & Resources
+## Resources
 
 | Resource | Description |
 |----------|-------------|
@@ -87,37 +76,42 @@ We've graduated this project from Harvard to enable global access and expand AI 
 
 ---
 
-## 🎯 For Different Audiences
+## Who is this for?
 
 ### 🎓 Students
--   [📖 Read online](https://mlsysbook.ai)
--   [📄 Download PDF](https://mlsysbook.ai/Machine-Learning-Systems.pdf)
--   [🧪 Try hands-on labs](https://mlsysbook.org)
+
+*   [📖 Read online](https://mlsysbook.ai)
+*   [📄 Download PDF](https://mlsysbook.ai/Machine-Learning-Systems.pdf)
+*   [🧪 Try hands-on labs](https://mlsysbook.org)
 
 ### 👩‍🏫 Educators
--   [📋 Course materials](https://mlsysbook.org)
--   [🎯 Instructor resources](https://mlsysbook.org)
--   [💡 Teaching guides](https://mlsysbook.org)
+
+*   [📋 Course materials](https://mlsysbook.org)
+*   [🎯 Instructor resources](https://mlsysbook.org)
+*   [💡 Teaching guides](https://mlsysbook.org)
 
 ### 🛠️ Contributors
--   [🤝 Contribution guide](docs/contribute.md)
--   [⚡ Development setup](#development)
--   [💬 Join discussions](https://github.com/harvard-edge/cs249r_book/discussions)
+
+*   [🤝 Contribution guide](docs/contribute.md)
+*   [⚡ Development setup](#development)
+*   [💬 Join discussions](https://github.com/harvard-edge/cs249r_book/discussions)
 
 ---
 
-## 🚀 Quick Start
+## Getting Started
 
 ### For Readers
+
 ```bash
-# Read online (continuously updated)
+# Read online
 open https://mlsysbook.ai
 
-# Or download PDF for offline access
+# Download PDF
 curl -O https://mlsysbook.ai/Machine-Learning-Systems.pdf
 ```
 
 ### For Contributors
+
 ```bash
 git clone https://github.com/harvard-edge/cs249r_book.git
 cd cs249r_book
@@ -134,166 +128,139 @@ make preview        # Start development server
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-We welcome contributions from the global community! Here's how you can help:
+We welcome contributions!
 
-### Ways to Contribute
--   **📝 Content** — Suggest edits, improvements, or new examples
--   **🛠️ Tools** — Enhance development scripts and automation
--   **🎨 Design** — Improve figures, diagrams, and visual elements
--   **🌍 Localization** — Translate content for global accessibility
--   **🔧 Infrastructure** — Help with build systems and deployment
+### How to Contribute
+
+*   **📝 Content:** Suggest edits, improvements, or new examples.
+*   **🛠️ Tools:** Enhance development scripts and automation.
+*   **🎨 Design:** Improve figures, diagrams, and visual elements.
+*   **🌍 Localization:** Translate content.
+*   **🔧 Infrastructure:** Help with build systems and deployment.
 
 ### Quality Standards
-All contributions benefit from automated quality assurance:
--   ✅ **Pre-commit validation** — Automatic cleanup and checks
--   📋 **Content review** — Formatting and style validation
--   🧪 **Testing** — Build and link verification
--   👥 **Peer review** — Community feedback
+
+*   ✅ **Pre-commit validation**
+*   📋 **Content review**
+*   🧪 **Testing**
+*   👥 **Peer review**
 
 [**Start Contributing →**](docs/contribute.md)
 
 ---
 
-## 🛠️ Development
+## Development
 
 ### Book Binder CLI (Recommended)
 
-The **Book Binder** is our lightning-fast development CLI for streamlined building and iteration:
-
 ```bash
-# Fast chapter development
-./binder build intro html             # Build single chapter
-./binder build intro,ml_systems html  # Build multiple chapters together
-./binder preview intro                # Build and preview chapter
-
-# Full book building
-./binder build * html                 # Build complete website
-./binder build * pdf                  # Build complete PDF
-
-# Management
-./binder clean                    # Clean artifacts
-./binder status                   # Show current status
-./binder help                     # Show all commands
+./binder build intro html
+./binder build intro,ml_systems html
+./binder preview intro
+./binder build * html
+./binder build * pdf
+./binder clean
+./binder status
+./binder help
 ```
 
-### Make Commands (Traditional)
+### Make Commands
+
 ```bash
-# Building
-make build          # Build HTML version
-make build-pdf      # Build PDF version
-make preview        # Start development server
-
-# Quality Control
-make clean          # Clean build artifacts
-make test           # Run validation tests
-make lint           # Check for issues
-
-# Get help
-make help           # Show all commands
+make build
+make build-pdf
+make preview
+make clean
+make test
+make lint
+make help
 ```
 
 ### Project Structure
+
 ```
 MLSysBook/
-├── binder                   # ⚡ Fast development CLI (recommended)
-├── book/                    # Main book content (Quarto)
-│   ├── contents/            # Chapter content
-│   │   ├── core/            # Core chapters
-│   │   ├── labs/            # Hands-on labs
-│   │   ├── frontmatter/     # Preface, acknowledgments
-│   │   ├── backmatter/      # References and resources
-│   │   └── parts/           # Book parts and sections
-│   ├── _extensions/         # Quarto extensions
-│   ├── data/                # Cross-reference and metadata files
-│   ├── _quarto-html.yml     # Website build configuration
-│   ├── _quarto-pdf.yml      # PDF build configuration
-
-│   ├── _quarto.yml          # Active config (symlink)
-│   ├── index.qmd            # Main entry point
-│   └── assets/              # Images, styles, media
-├── build/                   # Build artifacts (git-ignored)
-│   ├── html/                # HTML website output
-│   ├── pdf/                 # PDF book output
-│   └── dist/                # Distribution files
-├── scripts/                 # Root-level development scripts
-│   ├── content/             # Content management tools
-│   ├── cross_refs/          # Cross-reference management
-│   ├── genai/               # AI-assisted content tools
-│   ├── maintenance/         # Maintenance scripts
-│   ├── testing/             # Test scripts
-│   └── utilities/           # General utilities
-├── tools/                   # Development automation
-│   ├── scripts/             # Organized development scripts
-│   │   ├── build/           # Build and development tools
-│   │   ├── content/         # Content management tools
-│   │   ├── maintenance/     # System maintenance scripts
-│   │   ├── testing/         # Test and validation scripts
-│   │   ├── utilities/       # General utility scripts
-│   │   └── docs/            # Script documentation
-│   ├── dependencies/        # Package requirements
-│   └── setup/               # Setup and configuration
-├── config/                  # Build configuration
-│   ├── dev/                 # Development configurations
-│   ├── linting/             # Code quality configurations
-│   ├── quarto/              # Quarto publishing settings
-│   ├── lua/                 # Lua filters and scripts
-│   └── tex/                 # LaTeX templates
-├── locals/                  # Local development files
-├── assets/                  # Global assets (covers, icons)
-├── docs/                    # Documentation
-│   ├── BINDER.md            # Binder CLI guide
-│   ├── DEVELOPMENT.md       # Development guide
-│   ├── MAINTENANCE_GUIDE.md # Daily workflow guide
-│   ├── BUILD.md             # Build instructions
-│   └── contribute.md        # Contribution guidelines
-├── CHANGELOG.md             # Project changelog
-├── CITATION.bib             # Citation information
-└── Makefile                 # Traditional development commands
+├── binder
+├── book/
+│   ├── contents/
+│   ├── _extensions/
+│   ├── data/
+│   ├── _quarto-html.yml
+│   ├── _quarto-pdf.yml
+│   ├── _quarto.yml
+│   ├── index.qmd
+│   └── assets/
+├── build/
+│   ├── html/
+│   ├── pdf/
+│   └── dist/
+├── scripts/
+│   ├── content/
+│   ├── cross_refs/
+│   ├── genai/
+│   ├── maintenance/
+│   ├── testing/
+│   └── utilities/
+├── tools/
+│   ├── scripts/
+│   ├── dependencies/
+│   └── setup/
+├── config/
+│   ├── dev/
+│   ├── linting/
+│   ├── quarto/
+│   ├── lua/
+│   └── tex/
+├── locals/
+├── assets/
+├── docs/
+│   ├── BINDER.md
+│   ├── DEVELOPMENT.md
+│   ├── MAINTENANCE_GUIDE.md
+│   ├── BUILD.md
+│   └── contribute.md
+├── CHANGELOG.md
+├── CITATION.bib
+└── Makefile
 ```
 
 ### Documentation
--   [⚡ Binder CLI Guide](docs/BINDER.md) — Fast development with the Book Binder
--   [📋 Development Guide](docs/DEVELOPMENT.md) — Comprehensive setup and workflow
--   [🛠️ Maintenance Guide](docs/MAINTENANCE_GUIDE.md) — Daily tasks and troubleshooting
--   [🔨 Build Instructions](docs/BUILD.md) — Detailed build process
--   [🤝 Contribution Guidelines](docs/contribute.md) — How to contribute effectively
+
+*   [⚡ Binder CLI Guide](docs/BINDER.md)
+*   [📋 Development Guide](docs/DEVELOPMENT.md)
+*   [🛠️ Maintenance Guide](docs/MAINTENANCE_GUIDE.md)
+*   [🔨 Build Instructions](docs/BUILD.md)
+*   [🤝 Contribution Guidelines](docs/contribute.md)
 
 ### Publishing
+
 ```bash
-# Command-line trigger (recommended)
 ./binder publish "Description" COMMIT_HASH
-
-# Interactive wizard
 ./binder publish
-
-# Manual steps
 ./binder build - html && ./binder build - pdf
-# Then copy PDF to assets and push to main
 ```
 
 **Publishing Options:**
--   **`./binder publish`** — Unified command with interactive and command-line modes
--   **Web Interface** — Manual trigger via GitHub Actions UI
+
+*   `./binder publish` - Unified command with interactive and command-line modes
+*   Web Interface - Manual trigger via GitHub Actions UI
 
 ### Getting Started
+
 ```bash
-# Welcome and overview
 ./binder hello
-
-# First time setup
 ./binder setup
-
-# Quick preview
 ./binder preview intro
 ```
 
 ---
 
-## 📋 Citation & License
+## Citation & License
 
 ### Citation
+
 ```bibtex
 @inproceedings{reddi2024mlsysbook,
   title        = {MLSysBook.AI: Principles and Practices of Machine Learning Systems Engineering},
@@ -307,13 +274,12 @@ MLSysBook/
 ```
 
 ### License
-This work is licensed under **Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International** (CC BY-NC-SA 4.0). You may share and adapt the material for non-commercial purposes with appropriate credit.
+
+This work is licensed under **Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International** (CC BY-NC-SA 4.0).
 
 ---
 
 <div align="center">
 
 **Made with ❤️ for AI learners worldwide**
-
-Our goal is to educate 1 million AI systems engineers for the future at the edge of AI.
 </div>

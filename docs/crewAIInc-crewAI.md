@@ -3,6 +3,7 @@
     <img src="docs/images/crewai_logo.png" width="600px" alt="Open source Multi-AI Agent orchestration framework">
   </a>
 </p>
+
 <p align="center" style="display: flex; justify-content: center; gap: 20px; align-items: center;">
   <a href="https://trendshift.io/repositories/11239" target="_blank">
     <img src="https://trendshift.io/api/badge/repositories/11239" alt="crewAIInc%2FcrewAI | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
@@ -51,63 +52,68 @@
   </a>
 </p>
 
+## 🚀 Revolutionize AI Automation with CrewAI: Build Powerful Multi-Agent Systems
 
-## CrewAI: Unleash the Power of Autonomous AI Agents for Ultimate Automation
+**CrewAI** is a cutting-edge, **standalone** Python framework designed to simplify and supercharge the development of multi-agent AI systems. [Explore CrewAI on GitHub](https://github.com/crewAIInc/crewAI)
 
-**[CrewAI](https://github.com/crewAIInc/crewAI) is the groundbreaking framework that allows you to effortlessly build and deploy sophisticated multi-agent AI systems, offering unparalleled speed, flexibility, and control.**
+**Key Features:**
 
-### Key Features
+*   🎯 **Standalone & Lean:** Unlike other frameworks, CrewAI is built from scratch, ensuring faster execution and minimal dependencies.
+*   💡 **Flexible & Precise:** Choose between autonomous [Crews](https://docs.crewai.com/concepts/crews) for collaborative intelligence or precise [Flows](https://docs.crewai.com/concepts/flows) for event-driven control.
+*   🔗 **Seamless Integration:** Combine Crews and Flows to create sophisticated, real-world automations.
+*   🛠️ **Deep Customization:** Tailor workflows from high-level orchestration to low-level agent behaviors.
+*   ⚡ **High Performance:** Optimized for speed and efficiency, delivering consistent results across all use cases.
+*   🌱 **Thriving Community:** Benefit from robust documentation and support from a rapidly growing community of over 100,000 certified developers.
 
-*   **Standalone & Lean:** Unlike other frameworks, CrewAI is built from the ground up without dependencies like LangChain, guaranteeing fast execution and minimal resource usage.
-*   **Autonomous Crews & Precise Flows:** Choose between the collaborative intelligence of [Crews](https://docs.crewai.com/concepts/crews) or the granular control of [Flows](https://docs.crewai.com/concepts/flows) to perfectly match your automation needs.
-*   **Effortless Integration:** Seamlessly blend Crews (autonomy) and Flows (precision) for complex, real-world automation pipelines.
-*   **Deep Customization:** Tailor your agents and workflows to the finest detail, from high-level orchestration to internal prompts and behavior.
-*   **Reliable Performance:** Experience consistent and reliable results across all use cases, from simple tasks to complex, enterprise-grade automations.
-*   **Thriving Community:** Benefit from comprehensive documentation and support from a rapidly growing community of over 100,000 certified developers.
+**[Get Started Now](https://github.com/crewAIInc/crewAI) and unlock the full potential of multi-agent automation!**
 
-### Why Choose CrewAI?
+## Table of Contents
 
-CrewAI empowers developers to create truly intelligent automations by bridging the gap between simplicity, flexibility, and performance. With CrewAI, you can:
+*   [Why CrewAI?](#why-crewai)
+*   [Getting Started](#getting-started)
+    *   [Installation](#installation)
+    *   [Create your first project](#create-your-first-project)
+    *   [Running Your Crew](#running-your-crew)
+    *   [Learning Resources](#learning-resources)
+*   [Key Features](#key-features)
+*   [Understanding Flows and Crews](#understanding-flows-and-crews)
+*   [How CrewAI Compares](#how-crewai-compares)
+*   [Examples](#examples)
+    *   [Quick Tutorial](#quick-tutorial)
+    *   [Write Job Descriptions](#write-job-descriptions)
+    *   [Trip Planner](#trip-planner)
+    *   [Stock Analysis](#stock-analysis)
+    *   [Using Crews and Flows Together](#using-crews-and-flows-together)
+*   [Connecting Your Crew to a Model](#connecting-your-crew-to-a-model)
+*   [Contribution](#contribution)
+    *   [Installing Dependencies](#installing-dependencies)
+    *   [Virtual Env](#virtual-env)
+    *   [Pre-commit hooks](#pre-commit-hooks)
+    *   [Running Tests](#running-tests)
+    *   [Running static type checks](#running-static-type-checks)
+    *   [Packaging](#packaging)
+    *   [Installing Locally](#installing-locally)
+*   [Telemetry](#telemetry)
+*   [License](#license)
+*   [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
 
-*   **Maximize Automation:** Unlock the full potential of multi-agent systems to tackle complex challenges.
-*   **Accelerate Development:** Build and deploy AI-powered solutions faster than ever before.
-*   **Gain Unrivaled Control:** Fine-tune every aspect of your agent's behavior and workflow.
-*   **Scale with Confidence:** Easily scale your automations to meet the demands of enterprise-level applications.
+## Why CrewAI?
 
-### Getting Started
+<div align="center" style="margin-bottom: 30px;">
+  <img src="docs/images/asset.png" alt="CrewAI Logo" width="100%">
+</div>
 
-Follow the quick start guide to set up and run your first CrewAI agents:
+CrewAI empowers developers and enterprises to confidently build intelligent automations, bridging the gap between simplicity, flexibility, and performance.
 
-[![CrewAI Getting Started Tutorial](https://img.youtube.com/vi/-kSOTtYzgEw/hqdefault.jpg)](https://www.youtube.com/watch?v=-kSOTtYzgEw "CrewAI Getting Started Tutorial")
+*   **Standalone Framework**: Built from scratch, independent of LangChain or any other agent framework.
+*   **High Performance**: Optimized for speed and minimal resource usage, enabling faster execution.
+*   **Flexible Low Level Customization**: Complete freedom to customize at both high and low levels - from overall workflows and system architecture to granular agent behaviors, internal prompts, and execution logic.
+*   **Ideal for Every Use Case**: Proven effective for both simple tasks and highly complex, real-world, enterprise-grade scenarios.
+*   **Robust Community**: Backed by a rapidly growing community of over **100,000 certified** developers offering comprehensive support and resources.
 
-### Learn More
+## Getting Started
 
--   [Multi AI Agent Systems with CrewAI](https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/)
--   [Practical Multi AI Agents and Advanced Use Cases with CrewAI](https://www.deeplearning.ai/short-courses/practical-multi-ai-agents-and-advanced-use-cases-with-crewai/)
-
-### Understanding Flows and Crews
-
-CrewAI offers two powerful, complementary approaches:
-
-1.  **Crews**: Teams of AI agents with true autonomy and agency, working together to accomplish complex tasks through role-based collaboration. Crews enable:
-
-    *   Natural, autonomous decision-making between agents
-    *   Dynamic task delegation and collaboration
-    *   Specialized roles with defined goals and expertise
-    *   Flexible problem-solving approaches
-2.  **Flows**: Production-ready, event-driven workflows that deliver precise control over complex automations. Flows provide:
-
-    *   Fine-grained control over execution paths for real-world scenarios
-    *   Secure, consistent state management between tasks
-    *   Clean integration of AI agents with production Python code
-    *   Conditional branching for complex business logic
-
-The true power of CrewAI emerges when combining Crews and Flows. This synergy allows you to:
-
-- Build complex, production-grade applications
-- Balance autonomy with precise control
-- Handle sophisticated real-world scenarios
-- Maintain clean, maintainable code structure
+Follow these steps to quickly set up and run your first CrewAI agents.
 
 ### Installation
 
@@ -144,7 +150,7 @@ If you encounter issues during installation or usage, here are some common solut
     *   Try upgrading pip: `pip install --upgrade pip`
     *   If issues persist, use a pre-built wheel: `pip install tiktoken --prefer-binary`
 
-### Create a CrewAI Project
+### Create your first project
 
 To create a new CrewAI project, run the following CLI (Command Line Interface) command:
 
@@ -177,11 +183,11 @@ You can now start developing your crew by editing the files in the `src/my_proje
 
 #### To customize your project, you can:
 
--   Modify `src/my_project/config/agents.yaml` to define your agents.
--   Modify `src/my_project/config/tasks.yaml` to define your tasks.
--   Modify `src/my_project/crew.py` to add your own logic, tools, and specific arguments.
--   Modify `src/my_project/main.py` to add custom inputs for your agents and tasks.
--   Add your environment variables into the `.env` file.
+*   Modify `src/my_project/config/agents.yaml` to define your agents.
+*   Modify `src/my_project/config/tasks.yaml` to define your tasks.
+*   Modify `src/my_project/crew.py` to add your own logic, tools, and specific arguments.
+*   Modify `src/my_project/main.py` to add custom inputs for your agents and tasks.
+*   Add your environment variables into the `.env` file.
 
 #### Example of a simple crew with a sequential process:
 
@@ -319,8 +325,8 @@ def run():
 
 Before running your crew, make sure you have the following keys set as environment variables in your `.env` file:
 
--   An [OpenAI API key](https://platform.openai.com/account/api-keys) (or other LLM API key): `OPENAI_API_KEY=sk-...`
--   A [Serper.dev](https://serper.dev/) API key: `SERPER_API_KEY=YOUR_KEY_HERE`
+*   An [OpenAI API key](https://platform.openai.com/account/api-keys) (or other LLM API key): `OPENAI_API_KEY=sk-...`
+*   A [Serper.dev](https://serper.dev/) API key: `SERPER_API_KEY=YOUR_KEY_HERE`
 
 Lock the dependencies and install them by using the CLI command but first, navigate to your project directory:
 
@@ -351,43 +357,97 @@ You should see the output in the console and the `report.md` file should be crea
 
 In addition to the sequential process, you can use the hierarchical process, which automatically assigns a manager to the defined crew to properly coordinate the planning and execution of tasks through delegation and validation of results. [See more about the processes here](https://docs.crewai.com/core-concepts/Processes/).
 
-### Examples
+### Learning Resources
 
-Explore practical, real-world examples of CrewAI in action:
+Learn CrewAI through our comprehensive courses:
+
+*   [Multi AI Agent Systems with CrewAI](https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/) - Master the fundamentals of multi-agent systems
+*   [Practical Multi AI Agents and Advanced Use Cases](https://www.deeplearning.ai/short-courses/practical-multi-ai-agents-and-advanced-use-cases-with-crewai/) - Deep dive into advanced implementations
+
+## Key Features
+
+CrewAI offers a lean, standalone, high-performance multi-AI Agent framework. It delivers simplicity, flexibility, and precise control—free from the complexity and limitations found in other agent frameworks.
+
+*   **Standalone & Lean**: Completely independent from other frameworks like LangChain, offering faster execution and lighter resource demands.
+*   **Flexible & Precise**: Easily orchestrate autonomous agents through intuitive [Crews](https://docs.crewai.com/concepts/crews) or precise [Flows](https://docs.crewai.com/concepts/flows), achieving perfect balance for your needs.
+*   **Seamless Integration**: Effortlessly combine Crews (autonomy) and Flows (precision) to create complex, real-world automations.
+*   **Deep Customization**: Tailor every aspect—from high-level workflows down to low-level internal prompts and agent behaviors.
+*   **Reliable Performance**: Consistent results across simple tasks and complex, enterprise-level automations.
+*   **Thriving Community**: Backed by robust documentation and over 100,000 certified developers, providing exceptional support and guidance.
+
+## Understanding Flows and Crews
+
+CrewAI provides two powerful, complementary approaches for building sophisticated AI applications:
+
+1.  **Crews**: Teams of AI agents with true autonomy, working collaboratively to accomplish complex tasks through role-based collaboration. Crews enable:
+
+    *   Natural, autonomous decision-making between agents
+    *   Dynamic task delegation and collaboration
+    *   Specialized roles with defined goals and expertise
+    *   Flexible problem-solving approaches
+2.  **Flows**: Production-ready, event-driven workflows that deliver precise control over complex automations. Flows provide:
+
+    *   Fine-grained control over execution paths for real-world scenarios
+    *   Secure, consistent state management between tasks
+    *   Clean integration of AI agents with production Python code
+    *   Conditional branching for complex business logic
+
+The true power of CrewAI emerges when combining Crews and Flows. This synergy allows you to:
+
+*   Build complex, production-grade applications
+*   Balance autonomy with precise control
+*   Handle sophisticated real-world scenarios
+*   Maintain clean, maintainable code structure
+
+## How CrewAI Compares
+
+**CrewAI's Advantage**: CrewAI combines autonomous agent intelligence with precise workflow control through its unique Crews and Flows architecture. The framework excels at both high-level orchestration and low-level customization, enabling complex, production-grade systems with granular control.
+
+*   **LangGraph**: While LangGraph provides a foundation for building agent workflows, its approach requires significant boilerplate code and complex state management patterns. The framework's tight coupling with LangChain can limit flexibility when implementing custom agent behaviors or integrating with external systems.
+
+*P.S. CrewAI demonstrates significant performance advantages over LangGraph, executing 5.76x faster in certain cases like this QA task example ([see comparison](https://github.com/crewAIInc/crewAI-examples/tree/main/Notebooks/CrewAI%20Flows%20%26%20Langgraph/QA%20Agent)) while achieving higher evaluation scores with faster completion times in certain coding tasks, like in this example ([detailed analysis](https://github.com/crewAIInc/crewAI-examples/blob/main/Notebooks/CrewAI%20Flows%20%26%20Langgraph/Coding%20Assistant/coding_assistant_eval.ipynb)).*
+
+*   **Autogen**: While Autogen excels at creating conversational agents capable of working together, it lacks an inherent concept of process. In Autogen, orchestrating agents' interactions requires additional programming, which can become complex and cumbersome as the scale of tasks grows.
+*   **ChatDev**: ChatDev introduced the idea of processes into the realm of AI agents, but its implementation is quite rigid. Customizations in ChatDev are limited and not geared towards production environments, which can hinder scalability and flexibility in real-world applications.
+
+## Examples
+
+Explore these real-world examples to see CrewAI in action:
 
 *   [Landing Page Generator](https://github.com/crewAIInc/crewAI-examples/tree/main/landing_page_generator)
-*   [Human Input on Execution](https://docs.crewai.com/how-to/Human-Input-on-Execution)
+*   [Having Human input on the execution](https://docs.crewai.com/how-to/Human-Input-on-Execution)
 *   [Trip Planner](https://github.com/crewAIInc/crewAI-examples/tree/main/trip_planner)
 *   [Stock Analysis](https://github.com/crewAIInc/crewAI-examples/tree/main/stock_analysis)
 
-#### Quick Tutorial
+### Quick Tutorial
 
 [![CrewAI Tutorial](https://img.youtube.com/vi/tnejrr-0a94/maxresdefault.jpg)](https://www.youtube.com/watch?v=tnejrr-0a94 "CrewAI Tutorial")
 
-#### Write Job Descriptions
+### Write Job Descriptions
 
 [Check out code for this example](https://github.com/crewAIInc/crewAI-examples/tree/main/job-posting) or watch a video below:
 
 [![Jobs postings](https://img.youtube.com/vi/u98wEMz-9to/maxresdefault.jpg)](https://www.youtube.com/watch?v=u98wEMz-9to "Jobs postings")
 
-#### Trip Planner
+### Trip Planner
 
 [Check out code for this example](https://github.com/crewAIInc/crewAI-examples/tree/main/trip_planner) or watch a video below:
 
 [![Trip Planner](https://img.youtube.com/vi/xis7rWp-hjs/maxresdefault.jpg)](https://www.youtube.com/watch?v=xis7rWp-hjs "Trip Planner")
 
-#### Stock Analysis
+### Stock Analysis
 
 [Check out code for this example](https://github.com/crewAIInc/crewAI-examples/tree/main/stock_analysis) or watch a video below:
 
 [![Stock Analysis](https://img.youtube.com/vi/e0Uj4yWdaAg/maxresdefault.jpg)](https://www.youtube.com/watch?v=e0Uj4yWdaAg "Stock Analysis")
 
-### Combining Crews and Flows
+### Using Crews and Flows Together
 
-CrewAI truly shines when you combine Crews with Flows to create intricate automation pipelines, supporting logical operators for conditional triggering:
+CrewAI's power truly shines when combining Crews with Flows to create sophisticated automation pipelines.
+CrewAI flows support logical operators like `or_` and `and_` to combine multiple conditions. This can be used with `@start`, `@listen`, or `@router` decorators to create complex triggering conditions.
 
--   `or_`: Triggers when any of the specified conditions are met.
--   `and_`Triggers when all of the specified conditions are met.
+*   `or_`: Triggers when any of the specified conditions are met.
+*   `and_`Triggers when all of the specified conditions are met.
 
 Here's how you can orchestrate multiple Crews within a Flow:
 
@@ -480,77 +540,66 @@ This example demonstrates how to:
 3.  Use Flow decorators to manage the sequence of operations
 4.  Implement conditional branching based on Crew results
 
-### Connecting Your Crew to a Model
+## Connecting Your Crew to a Model
 
 CrewAI supports using various LLMs through a variety of connection options. By default your agents will use the OpenAI API when querying the model. However, there are several other ways to allow your agents to connect to models. For example, you can configure your agents to use a local model via the Ollama tool.
 
 Please refer to the [Connect CrewAI to LLMs](https://docs.crewai.com/how-to/LLM-Connections/) page for details on configuring your agents' connections to models.
 
-### How CrewAI Compares
-
-**CrewAI's Advantage**: CrewAI combines autonomous agent intelligence with precise workflow control through its unique Crews and Flows architecture. The framework excels at both high-level orchestration and low-level customization, enabling complex, production-grade systems with granular control.
-
-*   **LangGraph**: While LangGraph provides a foundation for building agent workflows, its approach requires significant boilerplate code and complex state management patterns. The framework's tight coupling with LangChain can limit flexibility when implementing custom agent behaviors or integrating with external systems.
-
-*P.S. CrewAI demonstrates significant performance advantages over LangGraph, executing 5.76x faster in certain cases like this QA task example ([see comparison](https://github.com/crewAIInc/crewAI-examples/tree/main/Notebooks/CrewAI%20Flows%20%26%20Langgraph/QA%20Agent)) while achieving higher evaluation scores with faster completion times in certain coding tasks, like in this example ([detailed analysis](https://github.com/crewAIInc/crewAI-examples/blob/main/Notebooks/CrewAI%20Flows%20%26%20Langgraph/Coding%20Assistant/coding_assistant_eval.ipynb)).*
-
-*   **Autogen**: While Autogen excels at creating conversational agents capable of working together, it lacks an inherent concept of process. In Autogen, orchestrating agents' interactions requires additional programming, which can become complex and cumbersome as the scale of tasks grows.
-*   **ChatDev**: ChatDev introduced the idea of processes into the realm of AI agents, but its implementation is quite rigid. Customizations in ChatDev are limited and not geared towards production environments, which can hinder scalability and flexibility in real-world applications.
-
-### Contribution
+## Contribution
 
 CrewAI is open-source and we welcome contributions. If you're looking to contribute, please:
 
--   Fork the repository.
--   Create a new branch for your feature.
--   Add your feature or improvement.
--   Send a pull request.
--   We appreciate your input!
+*   Fork the repository.
+*   Create a new branch for your feature.
+*   Add your feature or improvement.
+*   Send a pull request.
+*   We appreciate your input!
 
-#### Installing Dependencies
+### Installing Dependencies
 
 ```bash
 uv lock
 uv sync
 ```
 
-#### Virtual Env
+### Virtual Env
 
 ```bash
 uv venv
 ```
 
-#### Pre-commit hooks
+### Pre-commit hooks
 
 ```bash
 pre-commit install
 ```
 
-#### Running Tests
+### Running Tests
 
 ```bash
 uv run pytest .
 ```
 
-#### Running static type checks
+### Running static type checks
 
 ```bash
 uvx mypy src
 ```
 
-#### Packaging
+### Packaging
 
 ```bash
 uv build
 ```
 
-#### Installing Locally
+### Installing Locally
 
 ```bash
 pip install dist/*.tar.gz
 ```
 
-### Telemetry
+## Telemetry
 
 CrewAI uses anonymous telemetry to collect usage data with the main purpose of helping us improve the library by focusing our efforts on the most used features, integrations and tools.
 
@@ -558,36 +607,36 @@ It's pivotal to understand that **NO data is collected** concerning prompts, tas
 
 Data collected includes:
 
--   Version of CrewAI
-    -   So we can understand how many users are using the latest version
--   Version of Python
-    -   So we can decide on what versions to better support
--   General OS (e.g. number of CPUs, macOS/Windows/Linux)
-    -   So we know what OS we should focus on and if we could build specific OS related features
--   Number of agents and tasks in a crew
-    -   So we make sure we are testing internally with similar use cases and educate people on the best practices
--   Crew Process being used
-    -   Understand where we should focus our efforts
--   If Agents are using memory or allowing delegation
-    -   Understand if we improved the features or maybe even drop them
--   If Tasks are being executed in parallel or sequentially
-    -   Understand if we should focus more on parallel execution
--   Language model being used
-    -   Improved support on most used languages
--   Roles of agents in a crew
-    -   Understand high level use cases so we can build better tools, integrations and examples about it
--   Tools names available
-    -   Understand out of the publicly available tools, which ones are being used the most so we can improve them
+*   Version of CrewAI
+    *   So we can understand how many users are using the latest version
+*   Version of Python
+    *   So we can decide on what versions to better support
+*   General OS (e.g. number of CPUs, macOS/Windows/Linux)
+    *   So we know what OS we should focus on and if we could build specific OS related features
+*   Number of agents and tasks in a crew
+    *   So we make sure we are testing internally with similar use cases and educate people on the best practices
+*   Crew Process being used
+    *   Understand where we should focus our efforts
+*   If Agents are using memory or allowing delegation
+    *   Understand if we improved the features or maybe even drop them
+*   If Tasks are being executed in parallel or sequentially
+    *   Understand if we should focus more on parallel execution
+*   Language model being used
+    *   Improved support on most used languages
+*   Roles of agents in a crew
+    *   Understand high level use cases so we can build better tools, integrations and examples about it
+*   Tools names available
+    *   Understand out of the publicly available tools, which ones are being used the most so we can improve them
 
 Users can opt-in to Further Telemetry, sharing the complete telemetry data by setting the `share_crew` attribute to `True` on their Crews. Enabling `share_crew` results in the collection of detailed crew and task execution data, including `goal`, `backstory`, `context`, and `output` of tasks. This enables a deeper insight into usage patterns while respecting the user's choice to share.
 
-### License
+## License
 
 CrewAI is released under the [MIT License](https://github.com/crewAIInc/crewAI/blob/main/LICENSE).
 
-### Frequently Asked Questions (FAQ)
+## Frequently Asked Questions (FAQ)
 
-#### General
+### General
 
 *   [What exactly is CrewAI?](#q-what-exactly-is-crewai)
 *   [How do I install CrewAI?](#q-how-do-i-install-crewai)
@@ -595,7 +644,7 @@ CrewAI is released under the [MIT License](https://github.com/crewAIInc/crewAI/b
 *   [Is CrewAI open-source?](#q-is-crewai-open-source)
 *   [Does CrewAI collect data from users?](#q-does-crewai-collect-data-from-users)
 
-#### Features and Capabilities
+### Features and Capabilities
 
 *   [Can CrewAI handle complex use cases?](#q-can-crewai-handle-complex-use-cases)
 *   [Can I use CrewAI with local AI models?](#q-can-i-use-crewai-with-local-ai-models)
@@ -603,22 +652,22 @@ CrewAI is released under the [MIT License](https://github.com/crewAIInc/crewAI/b
 *   [How is CrewAI better than LangChain?](#q-how-is-crewai-better-than-langchain)
 *   [Does CrewAI support fine-tuning or training custom models?](#q-does-crewai-support-fine-tuning-or-training-custom-models)
 
-#### Resources and Community
+### Resources and Community
 
 *   [Where can I find real-world CrewAI examples?](#q-where-can-i-find-real-world-crewai-examples)
 *   [How can I contribute to CrewAI?](#q-how-can-i-contribute-to-crewai)
 
-#### Enterprise Features
+### Enterprise Features
 
 *   [What additional features does CrewAI Enterprise offer?](#q-what-additional-features-does-crewai-enterprise-offer)
 *   [Is CrewAI Enterprise available for cloud and on-premise deployments?](#q-is-crewai-enterprise-available-for-cloud-and-on-premise-deployments)
 *   [Can I try CrewAI Enterprise for free?](#q-can-i-try-crewai-enterprise-for-free)
 
-#### Q: What exactly is CrewAI?
+### Q: What exactly is CrewAI?
 
 A: CrewAI is a standalone, lean, and fast Python framework built specifically for orchestrating autonomous AI agents. Unlike frameworks like LangChain, CrewAI does not rely on external dependencies, making it leaner, faster, and simpler.
 
-#### Q: How do I install CrewAI?
+### Q: How do I install CrewAI?
 
 A: Install CrewAI using pip:
 
@@ -632,82 +681,78 @@ For additional tools, use:
 pip install 'crewai[tools]'
 ```
 
-#### Q: Does CrewAI depend on LangChain?
+### Q: Does CrewAI depend on LangChain?
 
 A: No. CrewAI is built entirely from the ground up, with no dependencies on LangChain or other agent frameworks. This ensures a lean, fast, and flexible experience.
 
-#### Q: Can CrewAI handle complex use cases?
+### Q: Can CrewAI handle complex use cases?
 
 A: Yes. CrewAI excels at both simple and highly complex real-world scenarios, offering deep customization options at both high and low levels, from internal prompts to sophisticated workflow orchestration.
 
-#### Q: Can I use CrewAI with local AI models?
+### Q: Can I use CrewAI with local AI models?
 
 A: Absolutely! CrewAI supports various language models, including local ones. Tools like Ollama and LM Studio allow seamless integration. Check the [LLM Connections documentation](https://docs.crewai.com/how-to/LLM-Connections/) for more details.
 
-#### Q: What makes Crews different from Flows?
+### Q: What makes Crews different from Flows?
 
 A: Crews provide autonomous agent collaboration, ideal for tasks requiring flexible decision-making and dynamic interaction. Flows offer precise, event-driven control, ideal for managing detailed execution paths and secure state management. You can seamlessly combine both for maximum effectiveness.
 
-#### Q: How is CrewAI better than LangChain?
+### Q: How is CrewAI better than LangChain?
 
 A: CrewAI provides simpler, more intuitive APIs, faster execution speeds, more reliable and consistent results, robust documentation, and an active community—addressing common criticisms and limitations associated with LangChain.
 
-#### Q: Is CrewAI open-source?
+### Q: Is CrewAI open-source?
 
 A: Yes, CrewAI is open-source and actively encourages community contributions and collaboration.
 
-#### Q: Does CrewAI collect data from users?
+### Q: Does CrewAI collect data from users?
 
 A: CrewAI collects anonymous telemetry data strictly for improvement purposes. Sensitive data such as prompts, tasks, or API responses are never collected unless explicitly enabled by the user.
 
-#### Q: Where can I find real-world CrewAI examples?
+### Q: Where can I find real-world CrewAI examples?
 
 A: Check out practical examples in the [CrewAI-examples repository](https://github.com/crewAIInc/crewAI-examples), covering use cases like trip planners, stock analysis, and job postings.
 
-#### Q: How can I contribute to CrewAI?
+### Q: How can I contribute to CrewAI?
 
 A: Contributions are warmly welcomed! Fork the repository, create your branch, implement your changes, and submit a pull request. See the Contribution section of the README for detailed guidelines.
 
-#### Q: What additional features does CrewAI Enterprise offer?
+### Q: What additional features does CrewAI Enterprise offer?
 
 A: CrewAI Enterprise provides advanced features such as a unified control plane, real-time observability, secure integrations, advanced security, actionable insights, and dedicated 24/7 enterprise support.
 
-#### Q: Is CrewAI Enterprise available for cloud and on-premise deployments?
+### Q: Is CrewAI Enterprise available for cloud and on-premise deployments?
 
 A: Yes, CrewAI Enterprise supports both cloud-based and on-premise deployment options, allowing enterprises to meet their specific security and compliance requirements.
 
-#### Q: Can I try CrewAI Enterprise for free?
+### Q: Can I try CrewAI Enterprise for free?
 
 A: Yes, you can explore part of the CrewAI Enterprise Suite by accessing the [Crew Control Plane](https://app.crewai.com) for free.
 
-#### Q: Does CrewAI support fine-tuning or training custom models?
+### Q: Does CrewAI support fine-tuning or training custom models?
 
 A: Yes, CrewAI can integrate with custom-trained or fine-tuned models, allowing you to enhance your agents with domain-specific knowledge and accuracy.
 
-#### Q: Can CrewAI agents interact with external tools and APIs?
+### Q: Can CrewAI agents interact with external tools and APIs?
 
 A: Absolutely! CrewAI agents can easily integrate with external tools, APIs, and databases, empowering them to leverage real-world data and resources.
 
-#### Q: Is CrewAI suitable for production environments?
+### Q: Is CrewAI suitable for production environments?
 
 A: Yes, CrewAI is explicitly designed with production-grade standards, ensuring reliability, stability, and scalability for enterprise deployments.
 
-#### Q: How scalable is CrewAI?
+### Q: How scalable is CrewAI?
 
 A: CrewAI is highly scalable, supporting simple automations and large-scale enterprise workflows involving numerous agents and complex tasks simultaneously.
 
-#### Q: Does CrewAI offer debugging and monitoring tools?
+### Q: Does CrewAI offer debugging and monitoring tools?
 
 A: Yes, CrewAI Enterprise includes advanced debugging, tracing, and real-time observability features, simplifying the management and troubleshooting of your automations.
 
-#### Q: What programming languages does CrewAI support?
+### Q: What programming languages does CrewAI support?
 
 A: CrewAI is primarily Python-based but easily integrates with services and APIs written in any programming language through its flexible API integration capabilities.
 
-#### Q: Does CrewAI offer educational resources for beginners?
+### Q: Does CrewAI offer educational resources for beginners?
 
-A: Yes, CrewAI provides extensive beginner-friendly tutorials, courses, and documentation through learn.crewai.com, supporting developers at all skill levels.
-
-#### Q: Can CrewAI automate human-in-the-loop workflows?
-
-A: Yes, CrewAI fully supports human-in-the-loop workflows, allowing seamless collaboration between human experts and AI agents for enhanced decision-making.
+A: Yes, CrewAI provides extensive beginner-friendly
