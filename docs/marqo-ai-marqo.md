@@ -15,57 +15,80 @@
 
 ## Marqo: The Open-Source Vector Search Engine for Text and Images
 
-**Marqo simplifies vector search by handling vector generation, storage, and retrieval with a single API, enabling developers to quickly build powerful search applications.** [Explore the Marqo Repository](https://github.com/marqo-ai/marqo)
+**Marqo is a powerful, open-source vector search engine that simplifies building semantic search into your applications, handling everything from vector generation to retrieval.** Explore the [Marqo GitHub Repository](https://github.com/marqo-ai/marqo) to get started.
 
 **Key Features:**
 
-*   🤖 **State-of-the-Art Embeddings:** Utilize cutting-edge machine learning models from PyTorch, Hugging Face, OpenAI, and more.
-*   ⚡ **High Performance:** Experience fast search speeds with in-memory HNSW indexes and scale to millions of documents.
-*   🌌 **Documents-In, Documents-Out:** Seamlessly generate, store, and retrieve vectors for text and images with a single API.
-*   🍱 **Managed Cloud Option:** Easily scale inference, access control and 24/7 support through Marqo Cloud.
-*   🖼 **Multimodal Search:** Index and search using text and images with CLIP models.
-*   🚀 **Integrations:** Compatible with Haystack, Griptape, Langchain, and Hamilton.
+*   **🚀 State-of-the-Art Embeddings:** Leverage the latest machine learning models from PyTorch, Hugging Face, OpenAI, and more, with both CPU and GPU support.
+*   **⚡ High Performance:** Experience cutting-edge search speeds with in-memory HNSW indexes and scale to millions of documents. Benefit from asynchronous and non-blocking data upload and search.
+*   **🌌 Documents-in, Documents-Out:** Simplify your workflow with built-in vector generation, storage, and retrieval for both text and images, enabling complex semantic queries and metadata storage.
+*   **🍱 Managed Cloud Option:** Take advantage of a fully managed cloud service with low-latency deployments, scalability, high availability, and 24/7 support. Learn more at [Marqo Cloud](https://www.marqo.ai/cloud).
+*   **🔌 Easy Integrations:** Seamlessly integrate with popular AI and data processing frameworks like Haystack, Griptape, Langchain, and Hamilton.
 
-## Getting Started
+## Quick Start
 
-1.  **Prerequisites:** Docker installed (ensure at least 8GB memory and 50GB storage allocated).
+Get up and running with Marqo in minutes.
+
+1.  **Install Docker:**  Make sure you have Docker installed ([Docker Official Website](https://docs.docker.com/get-docker/)). Ensure Docker has at least 8GB memory and 50GB storage allocated.
 2.  **Run Marqo with Docker:**
+
     ```bash
     docker rm -f marqo
     docker pull marqoai/marqo:latest
     docker run --name marqo -it -p 8882:8882 marqoai/marqo:latest
     ```
-3.  **Install the Marqo client:**
+
+3.  **Install the Marqo Client:**
+
     ```bash
     pip install marqo
     ```
-4.  **Start Indexing and Searching:**
 
-```python
-import marqo
+4.  **Index and Search:**  Here's a basic example:
 
-mq = marqo.Client(url='http://localhost:8882')
+    ```python
+    import marqo
 
-mq.create_index("my-first-index", model="hf/e5-base-v2")
+    mq = marqo.Client(url='http://localhost:8882')
 
-mq.index("my-first-index").add_documents([
-    {
-        "Title": "The Travels of Marco Polo",
-        "Description": "A 13th-century travelogue describing Polo's travels"
-    }, 
-    {
-        "Title": "Extravehicular Mobility Unit (EMU)",
-        "Description": "The EMU is a spacesuit that provides environmental protection, "
-                       "mobility, life support, and communications for astronauts",
-        "_id": "article_591"
-    }],
-    tensor_fields=["Description"]
-)
+    mq.create_index("my-first-index", model="hf/e5-base-v2")
 
-results = mq.index("my-first-index").search(
-    q="What is the best outfit to wear on the moon?"
-)
-```
+    mq.index("my-first-index").add_documents([
+        {
+            "Title": "The Travels of Marco Polo",
+            "Description": "A 13th-century travelogue describing Polo's travels"
+        }, 
+        {
+            "Title": "Extravehicular Mobility Unit (EMU)",
+            "Description": "The EMU is a spacesuit that provides environmental protection, "
+                           "mobility, life support, and communications for astronauts",
+            "_id": "article_591"
+        }],
+        tensor_fields=["Description"]
+    )
+
+    results = mq.index("my-first-index").search(
+        q="What is the best outfit to wear on the moon?"
+    )
+    ```
+
+    *   `mq` is the Marqo API client.
+    *   `create_index()` creates an index (specify a model like `"hf/e5-base-v2"`).
+    *   `add_documents()` adds documents to the index, specifying `tensor_fields` for vectorization.
+    *   You can retrieve results using `search()` to find the best matches.
+    *   Refer to [here](https://docs.marqo.ai/1.0.0/Models-Reference/dense_retrieval/) for the full list of models.
+
+    **Example Results:**
+
+    ```python
+    import pprint
+    pprint.pprint(results)
+    ```
+
+    (Output demonstrating the search results.)
+
+    *   `hits` contains matching documents (ordered by relevance).
+    *   `_highlights` shows the most relevant parts of each document.
 
 ## Core Operations
 
@@ -87,19 +110,19 @@ results = mq.index("my-first-index").get_stats()
 result = mq.index("my-first-index").search('marco polo', search_method=marqo.SearchMethods.LEXICAL)
 ```
 
-### Multimodal & Cross-Modal Search
+### Multi Modal and Cross Modal Search
 
-Enable image search by configuring your index:
+Enable image and text search. Create an index with a CLIP configuration, as below:
 
 ```python
 settings = {
-    "treat_urls_and_pointers_as_images":True,
+    "treat_urls_and_pointers_as_images":True,   # allows us to find an image file and index it 
     "model":"ViT-L/14"
 }
 response = mq.create_index("my-multimodal-index", **settings)
 ```
 
-Add images within documents and search by text:
+Images can then be added within documents as follows. You can use urls from the internet (for example S3) or from the disk of the machine:
 
 ```python
 response = mq.index("my-multimodal-index").add_documents([{
@@ -107,145 +130,34 @@ response = mq.index("my-multimodal-index").add_documents([{
     "Description": "The hippopotamus, also called the common hippopotamus or river hippopotamus, is a large semiaquatic mammal native to sub-Saharan Africa",
     "_id": "hippo-facts"
 }], tensor_fields=["My_Image"])
+```
 
+You can then search the image field using text.
+
+```python
 results = mq.index("my-multimodal-index").search('animal')
 ```
 
-### Search using an image
+### Searching using an image
+
+Searching using an image can be achieved by providing the image link.
 
 ```python
 results = mq.index("my-multimodal-index").search('https://raw.githubusercontent.com/marqo-ai/marqo-api-tests/mainline/assets/ai_hippo_statue.png')
 ```
 
-### Searching Using Weights in Queries
+### Searching with Weighted Queries
+
+Use weighted queries for more advanced and nuanced searches.
 
 ```python
-import marqo
-import pprint
-
-mq = marqo.Client(url="http://localhost:8882")
-
-mq.create_index("my-weighted-query-index")
-
-mq.index("my-weighted-query-index").add_documents(
-    [
-        {
-            "Title": "Smartphone",
-            "Description": "A smartphone is a portable computer device that combines mobile telephone "
-            "functions and computing functions into one unit.",
-        },
-        {
-            "Title": "Telephone",
-            "Description": "A telephone is a telecommunications device that permits two or more users to"
-            "conduct a conversation when they are too far apart to be easily heard directly.",
-        },
-        {
-            "Title": "Thylacine",
-            "Description": "The thylacine, also commonly known as the Tasmanian tiger or Tasmanian wolf, "
-            "is an extinct carnivorous marsupial."
-            "The last known of its species died in 1936.",
-        }
-    ],
-    tensor_fields=["Description"]
-)
-
-query = {
-    # a weighting of 1.1 gives this query slightly more importance
-    "I need to buy a communications device, what should I get?": 1.1,
-    # a weighting of 1 gives this query a neutral importance
-    # this will lead to 'Smartphone' being the top result
-    "The device should work like an intelligent computer.": 1.0,
-}
-
-results = mq.index("my-weighted-query-index").search(q=query)
-
-print("Query 1:")
-pprint.pprint(results)
-
-query = {
-    # a weighting of 1 gives this query a neutral importance
-    "I need to buy a communications device, what should I get?": 1.0,
-    # a weighting of -1 gives this query a negation effect
-    # this will lead to 'Telephone' being the top result
-    "The device should work like an intelligent computer.": -0.3,
-}
-
-results = mq.index("my-weighted-query-index").search(q=query)
-
-print("\nQuery 2:")
-pprint.pprint(results)
+# (See example code in original README)
 ```
 
-### Creating and Searching Indexes with Multimodal Combination Fields
+### Creating and searching indexes with multimodal combination fields
 
 ```python
-import marqo
-import pprint
-
-mq = marqo.Client(url="http://localhost:8882")
-
-settings = {"treat_urls_and_pointers_as_images": True, "model": "ViT-L/14"}
-
-mq.create_index("my-first-multimodal-index", **settings)
-
-mq.index("my-first-multimodal-index").add_documents(
-    [
-        {
-            "Title": "Flying Plane",
-            "caption": "An image of a passenger plane flying in front of the moon.",
-            "image": "https://raw.githubusercontent.com/marqo-ai/marqo/mainline/examples/ImageSearchGuide/data/image2.jpg",
-        },
-        {
-            "Title": "Red Bus",
-            "caption": "A red double decker London bus traveling to Aldwych",
-            "image": "https://raw.githubusercontent.com/marqo-ai/marqo/mainline/examples/ImageSearchGuide/data/image4.jpg",
-        },
-        {
-            "Title": "Horse Jumping",
-            "caption": "A person riding a horse over a jump in a competition.",
-            "image": "https://raw.githubusercontent.com/marqo-ai/marqo/mainline/examples/ImageSearchGuide/data/image1.jpg",
-        },
-    ],
-    # Create the mappings, here we define our captioned_image mapping 
-    # which weights the image more heavily than the caption - these pairs 
-    # will be represented by a single vector in the index
-    mappings={
-        "captioned_image": {
-            "type": "multimodal_combination",
-            "weights": {
-                "caption": 0.3,
-                "image": 0.7
-            }
-        }
-    },
-    # We specify which fields to create vectors for. 
-    # Note that captioned_image is treated as a single field.
-    tensor_fields=["captioned_image"]
-)
-
-# Search this index with a simple text query
-results = mq.index("my-first-multimodal-index").search(
-    q="Give me some images of vehicles and modes of transport. I am especially interested in air travel and commercial aeroplanes."
-)
-
-print("Query 1:")
-pprint.pprint(results)
-
-# search the index with a query that uses weighted components
-results = mq.index("my-first-multimodal-index").search(
-    q={
-        "What are some vehicles and modes of transport?": 1.0,
-        "Aeroplanes and other things that fly": -1.0
-    },
-)
-print("\nQuery 2:")
-pprint.pprint(results)
-
-results = mq.index("my-first-multimodal-index").search(
-    q={"Animals of the Perissodactyla order": -1.0}
-)
-print("\nQuery 3:")
-pprint.pprint(results)
+# (See example code in original README)
 ```
 
 ### Delete Documents
@@ -262,35 +174,52 @@ results = mq.index("my-first-index").delete()
 
 ## Production Deployment
 
-*   **Kubernetes:**  Deploy Marqo clusters using provided Kubernetes templates: [Marqo on Kubernetes](https://github.com/marqo-ai/marqo-on-kubernetes)
-*   **Marqo Cloud:** For a fully managed solution, sign up for Marqo Cloud: [Marqo Cloud](https://cloud.marqo.ai)
+*   **Kubernetes:** Deploy Marqo using Kubernetes templates: [marqo-on-kubernetes](https://github.com/marqo-ai/marqo-on-kubernetes)
+*   **Marqo Cloud:**  Get a fully managed experience at [https://cloud.marqo.ai](https://cloud.marqo.ai).
+
+## Learn More
+
+| Resource | Description |
+|---|---|
+| [Quick Start](#quick-start) | Build your first application. |
+| [Marqo for Image Data](https://www.marqo.ai/blog/context-is-all-you-need-multimodal-vector-search-with-personalization) | Building advanced image search. |
+| [Marqo for Text](https://www.marqo.ai/blog/how-i-used-marqo-to-create-a-multilingual-legal-databse-in-5-key-lines-of-code) | Building a multilingual database. |
+| [Integrating Marqo with GPT](https://www.marqo.ai/blog/from-iron-manual-to-ironman-augmenting-gpt-with-marqo-for-fast-editable-memory-to-enable-context-aware-question-answering) | Augmenting GPT with Marqo. |
+| [Marqo for Creative AI](https://www.marqo.ai/blog/combining-stable-diffusion-with-semantic-search-generating-and-categorising-100k-hot-dogs) | Semantic search with Stable Diffusion. |
+| [Marqo and Speech Data](https://www.marqo.ai/blog/speech-processing) | Speech processing with Marqo. |
+| [Marqo for content moderation](https://www.marqo.ai/blog/refining-image-quality-and-eliminating-nsfw-content-with-marqo) | Find and remove content with Marqo. |
+| [Getting started with Marqo Cloud](https://github.com/marqo-ai/getting_started_marqo_cloud) | How to get set up and running with Marqo Cloud. |
+| [Marqo for e-commerce](https://github.com/marqo-ai/getting_started_marqo_cloud/blob/main/e-commerce-demo/README.md) | Web application with frontend and backend. |
+| [Marqo chatbot](https://github.com/marqo-ai/getting_started_marqo_cloud/tree/main/chatbot-demo) | Chatbot application using Marqo and OpenAI's ChatGPT API. |
+| [Features](#-core-features) | Marqo's core features. |
 
 ## Documentation
 
-Comprehensive documentation is available at [Marqo Documentation](https://docs.marqo.ai/).
+Access the full documentation at [https://docs.marqo.ai/](https://docs.marqo.ai/).
 
-## Important Notes
+## Important
 
-*   Do not run other applications on Marqo's Vespa cluster; Marqo manages the settings.
+Do not run other applications on Marqo's Vespa cluster; Marqo automatically modifies the cluster settings.
 
-## Contributing
+## Contribute
 
-Marqo is a community project!  Contributions are welcome – learn more in the [CONTRIBUTING.md](./CONTRIBUTING.md) file.
+Marqo welcomes contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) to get started.
 
 ## Development Setup
 
-1.  Create a virtual environment: `python -m venv ./venv`
-2.  Activate the environment: `source ./venv/bin/activate`
-3.  Install requirements: `pip install -r requirements.txt`
-4.  Run tests: `tox`
-5.  If dependencies are updated, delete the `.tox` directory and rerun.
+```bash
+python -m venv ./venv
+source ./venv/bin/activate
+pip install -r requirements.txt
+tox
+```
 
 ## Merge Instructions
 
-1.  Run the full test suite: `tox`
-2.  Create a pull request with a linked GitHub issue.
+1.  Run the full test suite (`tox`).
+2.  Create a pull request with an associated GitHub issue.
 
 ## Support
 
-*   [Discourse Forum](https://community.marqo.ai) - Ask questions and share your work.
-*   [Slack Community](https://bit.ly/marqo-community-slack) - Chat with the community.
+*   **Discourse:** [Discourse Forum](https://community.marqo.ai)
+*   **Slack:** [Slack Community](https://bit.ly/marqo-community-slack)

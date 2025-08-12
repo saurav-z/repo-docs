@@ -1,62 +1,68 @@
 # PyVista: Effortless 3D Visualization and Mesh Analysis in Python
 
-**Unlock the power of 3D visualization with PyVista, a user-friendly Python library built on the Visualization Toolkit (VTK).**  [Visit the GitHub repository](https://github.com/pyvista/pyvista) to get started!
-
-<img src="https://github.com/pyvista/pyvista/raw/main/doc/source/_static/pyvista_banner_small.png" alt="PyVista Banner" width="600">
+**Unlock the power of 3D data with PyVista, a user-friendly Python library built on the Visualization Toolkit (VTK).** Explore the original repository [here](https://github.com/pyvista/pyvista).
 
 ## Key Features
 
-*   **Pythonic VTK:** A high-level, intuitive API for the Visualization Toolkit (VTK), making complex 3D data analysis and visualization accessible.
-*   **Mesh Data Structures & Filtering:** Powerful tools for working with and manipulating mesh data, including spatial datasets.
-*   **Simplified 3D Plotting:** Create stunning 3D visualizations with ease, designed for both small and large/complex datasets.
-*   **Interactive Visualization:** Interactive plotting capabilities within Jupyter Notebooks, including server-side and client-side rendering with Trame.
-*   **Wide Format Support:** Import and export meshes from and to various common formats including VTK, STL, OBJ, and PLY, and many formats supported by meshio.
-*   **Mesh Analysis & Transformation:** Direct access to mesh analysis and transformation routines, as well as intuitive plotting routines with matplotlib-like syntax.
+*   **Pythonic VTK:** A high-level, intuitive API for VTK, making complex visualizations simple.
+*   **Mesh Data Structures & Filtering:** Powerful tools for working with and analyzing spatial datasets.
+*   **Simplified 3D Plotting:** Create stunning 3D plots and visualizations for large and complex data with ease.
+*   **Interactive Plotting:** Integration with Jupyter Notebooks for interactive exploration, with support for both server-side and client-side rendering through `trame`.
+*   **Mesh Import/Export:** Seamlessly import meshes from various formats (VTK, STL, OBJ, PLY, and more via `meshio`) and export in multiple formats.
+*   **Rich Examples & Tutorials:** Extensive gallery of examples and interactive widgets to accelerate your learning and get you visualizing data quickly.
 
-## Highlights
+## Why Choose PyVista?
 
-*   **Extensive Example Gallery:** Explore a rich collection of examples to discover PyVista's capabilities. [Quick Examples](http://docs.pyvista.org/examples/index.html)
-*   **Interactive Plotting:** Interactive plotting in Jupyter Notebooks with server-side and client-side rendering with `trame`.
-*   **Widgets & Filters:** Filtering/plotting tools built for interactivity (see `Widgets`_ and `Filters`_)
-*   **Try It Now (Binder):** Experiment with PyVista directly in your browser without any installation using MyBinder: [![Binder](https://static.mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pyvista/pyvista-examples/master)
+PyVista simplifies the process of visualizing and analyzing 3D data, empowering researchers, scientists, and engineers to:
 
-## Installation
+*   **Rapid Prototyping:** Quickly create visualizations and explore your datasets.
+*   **Data Analysis:** Utilize powerful mesh analysis and transformation routines.
+*   **Scientific Plotting:** Generate publication-quality figures for research papers and presentations.
+*   **Integrate into Workflows:** Easily incorporate 3D visualization into your existing Python projects.
 
-Easily install PyVista using pip:
+## Getting Started
+
+### Installation
+
+Install PyVista easily using pip:
 
 ```bash
 pip install pyvista
 ```
 
-For more detailed installation instructions, including optional dependencies, see the [Installation Documentation](http://docs.pyvista.org/getting-started/installation.html#install-ref.).
+For more detailed installation instructions, including optional dependencies, visit the [installation guide](http://docs.pyvista.org/getting-started/installation.html#install-ref.).
 
-## Documentation & Community
+### Examples
 
-*   **Comprehensive Documentation:** Dive deep into the [official documentation](http://docs.pyvista.org/) for detailed usage instructions and API references.
-*   **Community Support:** Get your questions answered and engage with the PyVista community via [GitHub Discussions](https://github.com/pyvista/pyvista/discussions) and [Slack](https://communityinviter.com/apps/pyvista/pyvista).
+Explore the diverse capabilities of PyVista through our comprehensive example gallery: [Quick Examples](http://docs.pyvista.org/examples/index.html).
 
-## Contributing
+## Additional Resources
 
-We warmly welcome contributions!  Check out the [Contributing Guide](https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst) and our [Code of Conduct](https://github.com/pyvista/pyvista/blob/main/CODE_OF_CONDUCT.md) to learn how you can help improve PyVista.
+*   **Documentation:** Comprehensive documentation is available at [docs.pyvista.org](http://docs.pyvista.org/).
+*   **Community:** Join the discussion on [GitHub Discussions](https://github.com/pyvista/pyvista/discussions) or on [Slack](https://communityinviter.com/apps/pyvista/pyvista).
+*   **Connections:** Discover how PyVista is being used across various disciplines on the [Connections page](https://docs.pyvista.org/getting-started/connections.html).
+*   **Contributing:** Learn how you can contribute to the project by reading the [Contributing Guide](https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst) and the [Code of Conduct](https://github.com/pyvista/pyvista/blob/main/CODE_OF_CONDUCT.md).
 
 ## Citing PyVista
 
-If you use PyVista in your research, please cite the following paper:
+If you use PyVista in your research, please cite our work:
 
-*   Sullivan and Kaszynski, (2019). PyVista: 3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK). Journal of Open Source Software, 4(37), 1450, [https://doi.org/10.21105/joss.01450](https://doi.org/10.21105/joss.01450)
+```
+@article{sullivan2019pyvista,
+  doi = {10.21105/joss.01450},
+  url = {https://doi.org/10.21105/joss.01450},
+  year = {2019},
+  month = {May},
+  publisher = {The Open Journal},
+  volume = {4},
+  number = {37},
+  pages = {1450},
+  author = {Bane Sullivan and Alexander Kaszynski},
+  title = {{PyVista}: {3D} plotting and mesh analysis through a streamlined interface for the {Visualization Toolkit} ({VTK})},
+  journal = {Journal of Open Source Software}
+}
+```
 
 ## Professional Support
 
-For professional support and VTK/PyVista expertise, consider contacting:
-
-+---------------+-----------------------------------------+
-| Company Name  | Kitware Inc.                            |
-+---------------+-----------------------------------------+
-| Description   | Kitware is dedicated to build solutions |
-|               | for our customers based on our          |
-|               | well-established open source platforms. |
-+---------------+-----------------------------------------+
-| Expertise     | CMake, VTK, PyVista, ParaView, Trame    |
-+---------------+-----------------------------------------+
-| Contact       | https://www.kitware.com/contact/        |
-+---------------+-----------------------------------------+
+For professional support with VTK and PyVista, consider Kitware Inc: [https://www.kitware.com/contact/](https://www.kitware.com/contact/)

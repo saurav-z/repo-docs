@@ -1,58 +1,110 @@
-# RoboTwin: The Premier Bimanual Robotic Manipulation Platform
+# RoboTwin: The Ultimate Benchmark for Bimanual Robotic Manipulation
 
-**Unleash the power of dual-arm robotics with RoboTwin, a cutting-edge platform for research and development in bimanual manipulation.** [Explore the RoboTwin Repository](https://github.com/RoboTwin-Platform/RoboTwin)
+RoboTwin is a cutting-edge platform designed to advance research in dual-arm robotic manipulation, offering a comprehensive benchmark with generative digital twins.  Explore the RoboTwin platform and contribute to the future of robotics!  Check out the original repo [here](https://github.com/RoboTwin-Platform/RoboTwin).
 
 ## Key Features
 
-*   **Scalable Data Generation:** RoboTwin 2.0 offers a robust data generation pipeline.
-*   **Strong Domain Randomization:**  Enhance the generalization capabilities of your models.
-*   **Comprehensive Benchmark:**  Evaluate and compare bimanual robotic manipulation algorithms.
-*   **Pre-collected Datasets:** Access over 100,000 pre-collected trajectories for efficient research.
-*   **Multiple Policy Baselines:**  Explore state-of-the-art policy baselines including DP, ACT, DP3, RDT, PI0, TinyVLA, DexVLA, and LLaVA-VLA.
-*   **Open-Source and Accessible:** RoboTwin is released under the MIT license for open use.
-*   **Community & Collaboration:**  Connect with researchers through the community resources.
+*   **Scalable Data Generation:** Generate diverse and realistic datasets for robust training.
+*   **Strong Domain Randomization:**  Enhance generalization capabilities through robust domain randomization techniques.
+*   **Comprehensive Benchmark:** Evaluate and compare algorithms across various bimanual manipulation tasks.
+*   **Diverse Tasks:**  Supports a wide range of complex manipulation scenarios.
+*   **Leaderboard:** Track and compare performance with state-of-the-art results on the RoboTwin leaderboard.
+*   **Open Source:**  Freely accessible for research and development with an MIT license.
 
-## What's New in RoboTwin 2.0
+## Latest Updates
 
-*   **RoboTwin 2.0 Leaderboard:**  Compete and compare your results at [https://robotwin-platform.github.io/leaderboard](https://robotwin-platform.github.io/leaderboard).
-*   **CVPR 2025 Recognition:** RoboTwin 2.0 received Outstanding Poster at ChinaSI 2025 and RoboTwin was selected as a CVPR Highlight paper!
-*   **Latest Updates:** Regularly updated with new features, bug fixes, and improvements.
+*   **RoboTwin 2.0:** The latest version features improvements and enhancements.
+    *   **Webpage:** [https://robotwin-platform.github.io/](https://robotwin-platform.github.io/)
+    *   **Document:** [https://robotwin-platform.github.io/doc/](https://robotwin-platform.github.io/doc/)
+    *   **Paper:** [arXiv:2506.18088](https://arxiv.org/abs/2506.18088)
+    *   **Leaderboard:** [https://robotwin-platform.github.io/leaderboard](https://robotwin-platform.github.io/leaderboard)
 
-## Getting Started
+*   **RoboTwin Dual-Arm Collaboration Challenge @ CVPR '25 MEIS Workshop:**
+    *   **Technical Report:** [arXiv:2506.23351](https://arxiv.org/abs/2506.23351)
 
-### Installation
+*   **RoboTwin 1.0 (CVPR 2025 Highlight):**
+    *   **Paper:** [arXiv:2504.13059](https://arxiv.org/pdf/2504.13059)
 
-1.  Follow the detailed installation instructions in the [RoboTwin 2.0 Document (Usage - Install & Download)](https://robotwin-platform.github.io/doc/usage/robotwin-install.html). Installation typically takes around 20 minutes.
+*   **RoboTwin (Early Version, ECCV Workshop 2024 Best Paper Award):**
+    *   **Paper:** [arXiv:2409.02920](https://arxiv.org/pdf/2409.02920)
 
-### Tasks and Usage
+## Overview
 
-*   Explore various tasks available in [RoboTwin 2.0 Tasks Doc](https://robotwin-platform.github.io/doc/tasks/index.html).
-*   For more details on usage, please refer to [RoboTwin 2.0 Document (Usage)](https://robotwin-platform.github.io/doc/usage/index.html).
+| Branch Name                                  | Link                                                                 |
+| :------------------------------------------- | :------------------------------------------------------------------- |
+| 2.0 Version Branch (latest)                  | [main](https://github.com/RoboTwin-Platform/RoboTwin/tree/main)         |
+| 1.0 Version Branch                           | [1.0 Version](https://github.com/RoboTwin-Platform/RoboTwin/tree/RoboTwin-1.0) |
+| 1.0 Version Code Generation Branch           | [1.0 Version GPT](https://github.com/RoboTwin-Platform/RoboTwin/tree/gpt) |
+| Early Version Branch                         | [Early Version](https://github.com/RoboTwin-Platform/RoboTwin/tree/early_version) |
+| 第十九届“挑战杯”人工智能专项赛分支                  | [Challenge-Cup-2025](https://github.com/RoboTwin-Platform/RoboTwin/tree/Challenge-Cup-2025) |
+| CVPR 2025 Challenge Round 1 Branch           | [CVPR-Challenge-2025-Round1](https://github.com/RoboTwin-Platform/RoboTwin/tree/CVPR-Challenge-2025-Round1) |
+| CVPR 2025 Challenge Round 2 Branch           | [CVPR-Challenge-2025-Round2](https://github.com/RoboTwin-Platform/RoboTwin/tree/CVPR-Challenge-2025-Round2) |
+
+## Installation
+
+Follow the detailed instructions in the [RoboTwin 2.0 Document (Usage - Install & Download)](https://robotwin-platform.github.io/doc/usage/robotwin-install.html). Installation typically takes around 20 minutes.
+
+## Tasks
+
+Explore the wide range of bimanual manipulation tasks available in RoboTwin.  Refer to the [RoboTwin 2.0 Tasks Doc](https://robotwin-platform.github.io/doc/tasks/index.html) for a comprehensive overview.
+
+![RoboTwin Tasks](https://github.com/RoboTwin-Platform/RoboTwin/raw/main/assets/files/50_tasks.gif)
+
+## Usage
+
+Detailed usage instructions, including data collection and task configuration, are available in the [RoboTwin 2.0 Document (Usage)](https://robotwin-platform.github.io/doc/usage/index.html).
 
 ### Data Collection
 
-*   Easily collect data by running the following command, replacing the placeholders with your desired task and configuration:
+We provide pre-collected trajectories for your convenience, but users are encouraged to collect their own data for maximum customization and task diversity.
 
-    ```bash
-    bash collect_data.sh ${task_name} ${task_config} ${gpu_id}
-    # Example: bash collect_data.sh beat_block_hammer demo_randomized 0
-    ```
+*   **RoboTwin Dataset:** [https://huggingface.co/datasets/TianxingChen/RoboTwin2.0/tree/main/dataset](https://huggingface.co/datasets/TianxingChen/RoboTwin2.0/tree/main/dataset)
 
-### Configurations
+![Domain Randomization Example](https://github.com/RoboTwin-Platform/RoboTwin/raw/main/assets/files/domain_randomization.png)
 
-*   Refer to [RoboTwin 2.0 Tasks Configurations Doc](https://robotwin-platform.github.io/doc/usage/configurations.html) for task configurations.
+### Task Running & Data Collection
 
-## Explore RoboTwin
+Run the following command to collect data:
 
-*   **Webpage:** [https://robotwin-platform.github.io/](https://robotwin-platform.github.io/)
-*   **Documentation:** [https://robotwin-platform.github.io/doc/](https://robotwin-platform.github.io/doc/)
-*   **Leaderboard:** [https://robotwin-platform.github.io/leaderboard](https://robotwin-platform.github.io/leaderboard)
-*   **Paper:** [https://arxiv.org/abs/2506.18088](https://arxiv.org/abs/2506.18088)
-*   **Community:** [https://robotwin-platform.github.io/doc/community/index.html](https://robotwin-platform.github.io/doc/community/index.html)
+```bash
+bash collect_data.sh ${task_name} ${task_config} ${gpu_id}
+# Example: bash collect_data.sh beat_block_hammer demo_randomized 0
+```
+
+### Task Configuration
+
+Consult the [RoboTwin 2.0 Tasks Configurations Doc](https://robotwin-platform.github.io/doc/usage/configurations.html) for detailed task configuration options.
+
+## Policy Baselines
+
+RoboTwin supports a variety of policy baselines to facilitate your research:
+
+*   [DP](https://robotwin-platform.github.io/doc/usage/DP.html)
+*   [ACT](https://robotwin-platform.github.io/doc/usage/ACT.html)
+*   [DP3](https://robotwin-platform.github.io/doc/usage/DP3.html)
+*   [RDT](https://robotwin-platform.github.io/doc/usage/RDT.html)
+*   [PI0](https://robotwin-platform.github.io/doc/usage/Pi0.html)
+*   [TinyVLA](https://robotwin-platform.github.io/doc/usage/TinyVLA.html)
+*   [DexVLA](https://robotwin-platform.github.io/doc/usage/DexVLA.html) (Contributed by Media Group)
+*   [LLaVA-VLA](https://robotwin-platform.github.io/doc/usage/LLaVA-VLA.html) (Contributed by IRPN Lab, HKUST(GZ))
+
+Deploy your own policies using the [deploy guide](https://robotwin-platform.github.io/doc/usage/deploy-your-policy.html).
+
+## Experiment & Leaderboard
+
+RoboTwin encourages experimentation in areas such as:
+
+*   Single-task fine-tuning
+*   Visual robustness
+*   Language diversity robustness
+*   Multi-task capabilities
+*   Cross-embodiment performance
+
+Find the latest leaderboard results and settings here: [https://robotwin-platform.github.io/leaderboard](https://robotwin-platform.github.io/leaderboard)
 
 ## Citations
 
-Please cite the following papers if you use RoboTwin in your research:
+If you utilize RoboTwin in your research, please cite the following papers:
 
 ```bibtex
 @article{chen2025robotwin,
@@ -92,14 +144,18 @@ Please cite the following papers if you use RoboTwin in your research:
 }
 ```
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-
 ## Acknowledgements
 
-**Software Support**: D-Robotics, **Hardware Support**: AgileX Robotics, **AIGC Support**: Deemos
+*   **Software Support**: D-Robotics
+*   **Hardware Support**: AgileX Robotics
+*   **AIGC Support**: Deemos
+
+Code Style: `find . -name "*.py" -exec sh -c 'echo "Processing: {}"; yapf -i --style='"'"'{based_on_style: pep8, column_limit: 120}'"'"' {}' \;`
 
 ## Contact
 
-For any questions or suggestions, please contact [Tianxing Chen](https://tianxingchen.github.io).
+For questions or suggestions, please reach out to [Tianxing Chen](https://tianxingchen.github.io).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.

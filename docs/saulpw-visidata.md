@@ -1,70 +1,73 @@
-# VisiData: Explore and Manipulate Tabular Data in Your Terminal
+# VisiData v3.2
 
-**Effortlessly explore, analyze, and transform your data directly within your terminal with VisiData, a powerful and versatile data exploration tool.** 
+[![Tests](https://github.com/saulpw/visidata/workflows/visidata-ci-build/badge.svg)](https://github.com/saulpw/visidata/actions/workflows/main.yml)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/saulpw/visidata)
 
-[View the VisiData Repository on GitHub](https://github.com/saulpw/visidata)
+[![discord](https://img.shields.io/discord/880915750007750737?label=discord)](https://visidata.org/chat)
+[![mastodon @visidata@fosstodon.org][2.1]][2]
+[![twitter @VisiData][1.1]][1]
 
-## Key Features of VisiData
+A terminal interface for exploring and arranging tabular data.
 
-*   **Versatile Data Format Support:** Open and work with a wide variety of formats including CSV, TSV, JSON, XLSX (Excel), SQLite, HDF5, and many more ([see supported formats](https://visidata.org/formats)).
-*   **Interactive Data Exploration:** Navigate, filter, sort, and group your data with an intuitive terminal interface.
-*   **Powerful Command System:** Utilize hundreds of commands and options for in-depth data manipulation and analysis.
-*   **Cross-Platform Compatibility:** Works seamlessly on Linux, macOS, and Windows (with WSL).
-*   **Extensive Documentation:** Access comprehensive documentation, tutorials, and a quick reference guide (accessible within `vd` via `Ctrl+H`).
-*   **Extensible with Plugins:** Extend functionality with custom plugins.
+![Frequency table](http://visidata.org/freq-move-row.gif)
 
-## Installation
+VisiData supports tsv, csv, sqlite, json, xlsx (Excel), hdf5, and [many other formats](https://visidata.org/formats).
 
-### Using pip
+## Platform requirements
+
+- Linux, OS/X, or Windows (with WSL)
+- Python 3.8+
+- additional Python modules are required for certain formats and sources
+
+## Install
 
 To install the latest release from PyPi:
 
-```bash
-pip3 install visidata
-```
+    pip3 install visidata
 
-To install the cutting-edge `develop` branch (use with caution):
+To install the cutting edge `develop` branch (no warranty expressed or implied):
 
-```bash
-pip3 install git+https://github.com/saulpw/visidata.git@develop
-```
+    pip3 install git+https://github.com/saulpw/visidata.git@develop
 
-**For detailed installation instructions for all platforms and package managers, please visit [visidata.org/install](https://visidata.org/install).**
+See [visidata.org/install](https://visidata.org/install) for detailed instructions for all available platforms and package managers.
 
-## Usage
+### Usage
 
-Simply launch VisiData with a data source or pipe data to it:
+    $ vd <input>
+    $ <command> | vd
 
-```bash
-vd <input_file.csv>
-<command> | vd
-```
+Press `Ctrl+Q` to quit at any time.
 
-Quit at any time with `Ctrl+Q`.
+Hundreds of other commands and options are also available; see the documentation.
 
-## Documentation and Resources
+### Documentation
 
-*   [VisiData Documentation](https://visidata.org/docs)
-*   [Plugin Author's Guide and API Reference](https://visidata.org/docs/api)
-*   [Quick Reference](https://visidata.org/man) (within `vd` with `Ctrl+H`)
-*   [Intro to VisiData Tutorial](https://jsvine.github.io/intro-to-visidata/) by [Jeremy Singer-Vine](https://www.jsvine.com/)
+* [VisiData documentation](https://visidata.org/docs)
+* [Plugin Author's Guide and API Reference](https://visidata.org/docs/api)
+* [Quick reference](https://visidata.org/man) (available within `vd` with `Ctrl+H`), which has a list of commands and options.
+* [Intro to VisiData Tutorial](https://jsvine.github.io/intro-to-visidata/) by [Jeremy Singer-Vine](https://www.jsvine.com/)
 
-## Get Help and Support
+### Help and Support
 
-*   **Report Issues or Suggest Features:** [Create an issue on Github](https://github.com/saulpw/visidata/issues)
-*   **Chat with the Community:** Join us on #visidata on [irc.libera.chat](https://libera.chat/).
+If you have a question, issue, or suggestion regarding VisiData, please [create an issue on Github](https://github.com/saulpw/visidata/issues) or chat with us at #visidata on [irc.libera.chat](https://libera.chat/).
 
-## Support the Project
-
-If you find VisiData valuable, consider supporting the project on [Patreon](https://www.patreon.com/saulpw)!
+If you use VisiData regularly, please [support me on Patreon](https://www.patreon.com/saulpw)!
 
 ## License
 
-VisiData is available under the GPLv3 license.
+Code in the `stable` branch of this repository, including the main `vd` application, loaders, and plugins, is available for use and redistribution under GPLv3.
 
 ## Credits
 
-*   **Lead Developer:** Saul Pwanson `<vd@saul.pw>`
-*   **Documentation & Packaging:** Anja Kefala `<anja.kefala@gmail.com>`
+VisiData is conceived and developed by Saul Pwanson `<vd@saul.pw>`.
 
-A big thank you to all [contributors](https://visidata.org/credits/) and users!
+Anja Kefala `<anja.kefala@gmail.com>` maintains the documentation and packages for all platforms.
+
+Many thanks to numerous other [contributors](https://visidata.org/credits/), and to those wonderful users who provide feedback, for helping to make VisiData the awesome tool that it is.
+
+[1.1]: http://i.imgur.com/tXSoThF.png
+[1]: http://www.twitter.com/VisiData
+[2.1]: https://raw.githubusercontent.com/mastodon/mastodon/main/app/javascript/images/logo.svg
+[2]: https://fosstodon.org/@visidata
+
+<!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->

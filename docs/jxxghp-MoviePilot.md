@@ -1,4 +1,6 @@
-# MoviePilot: Automate Your Movie Workflow with Ease
+# MoviePilot: Your Automated Movie & Media Management Solution
+
+MoviePilot is a powerful and user-friendly application designed to streamline your movie and media library management.  Explore the original project on GitHub: [MoviePilot](https://github.com/jxxghp/MoviePilot).
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 [![GitHub forks](https://img.shields.io/github/forks/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
@@ -9,76 +11,49 @@
 [![Docker Pulls V2](https://img.shields.io/docker/pulls/jxxghp/moviepilot-v2?style=for-the-badge)](https://hub.docker.com/r/jxxghp/moviepilot-v2)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20Synology-blue?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 
-MoviePilot is a streamlined and user-friendly solution designed for automating your movie management tasks. Inspired by [NAStool](https://github.com/NAStool/nas-tools), MoviePilot focuses on core automation needs, simplifying functionality for enhanced maintainability and extensibility.
-
-**Important Disclaimer:**  This project is intended for learning and educational purposes only. **Please do not promote this project on any platform within China.**
-
-*   **Stay Updated:** [Telegram Channel](https://t.me/moviepilot_channel)
-
 ## Key Features
 
-*   **Modern Architecture:** Built with a clean separation of front-end (Vue3) and back-end (FastAPI) for improved maintainability and scalability.
-*   **Focused Functionality:** Streamlined features and settings, with sensible defaults for ease of use.
-*   **Intuitive User Interface:** Redesigned user interface for a more pleasant and efficient experience.
-*   **Extensible with Plugins:** Easily extend functionality through a plugin system (see [Plugin Development Guide](https://wiki.movie-pilot.org/zh/plugindev)).
+*   **Frontend & Backend Separation:** Built with a modern architecture using FastAPI (backend) and Vue3 (frontend) for enhanced performance and flexibility.
+*   **Simplified Design:**  Focuses on core automation needs, reducing complexity and offering sensible defaults for ease of use.
+*   **Intuitive User Interface:** Experience a redesigned, visually appealing, and user-friendly interface.
+*   **Extensible with Plugins:** Customize and extend functionality through plugin development.
 
-## Getting Started
+## Installation and Usage
+
+For detailed instructions on installation and configuration, please refer to the official Wiki: [MoviePilot Wiki](https://wiki.movie-pilot.org)
 
 ### Prerequisites
 
 *   Python 3.12
 *   Node.js v20.12.1
 
-### Installation and Setup
+### Installation Steps
 
 1.  **Clone the Main Project:**
-
-    ```bash
+    ```shell
     git clone https://github.com/jxxghp/MoviePilot
     ```
-
-2.  **Clone the Resources Project (for required libraries):**
-
-    ```bash
+2.  **Clone the Resources Project:**
+    ```shell
     git clone https://github.com/jxxghp/MoviePilot-Resources
     ```
-
-    *   Copy the platform-specific library files (`.so`, `.pyd`, `.bin`) from the `MoviePilot-Resources/resources` directory to the `app/helper` directory in the main project.
-
-3.  **Install Backend Dependencies:**
-
-    ```bash
-    cd MoviePilot/app
+    Copy the necessary `.so`, `.pyd`, or `.bin` files from the `MoviePilot-Resources/resources` directory (matching your platform and version) to the `MoviePilot/app/helper` directory.
+3.  **Install Backend Dependencies & Run Backend:**
+    ```shell
+    cd MoviePilot
     pip install -r requirements.txt
-    ```
-
-4.  **Run the Backend:**
-
-    ```bash
     python3 main.py
     ```
-
-    *   The backend will run on port 3001 by default.
-    *   Access the API documentation at `http://localhost:3001/docs`.
-
-5.  **Clone the Frontend Project:**
-
-    ```bash
+    The backend will start on port 3001 by default.  Access the API documentation at `http://localhost:3001/docs`.
+4.  **Clone and Run the Frontend Project:**
+    ```shell
     git clone https://github.com/jxxghp/MoviePilot-Frontend
-    ```
-
-6.  **Install Frontend Dependencies and Run the Frontend:**
-
-    ```bash
     cd MoviePilot-Frontend
     yarn
     yarn dev
     ```
-
-    *   Access the frontend at `http://localhost:5173`.
-
-7.  **Plugin Development:**
-    *   Refer to the [Plugin Development Guide](https://wiki.movie-pilot.org/zh/plugindev) to create plugins in the `app/plugins` directory.
+    The frontend will be accessible at `http://localhost:5173`.
+5.  **Develop Plugins:** Consult the [Plugin Development Guide](https://wiki.movie-pilot.org/zh/plugindev) to develop plugins in the `app/plugins` directory.
 
 ## Related Projects
 
@@ -88,19 +63,15 @@ MoviePilot is a streamlined and user-friendly solution designed for automating y
 *   [MoviePilot-Server](https://github.com/jxxghp/MoviePilot-Server)
 *   [MoviePilot-Wiki](https://github.com/jxxghp/MoviePilot-Wiki)
 
-## Legal and Ethical Considerations
+## Disclaimer
 
-**Disclaimer:** This software is for educational and personal use only. The developers are not responsible for any misuse or illegal activities performed with this software.
+*   This software is for learning and educational purposes only.
+*   It is not intended for commercial use or any illegal activities.
+*   The developers are not responsible for user actions.
+*   The code is open-source.  Modifications that circumvent restrictions and lead to misuse are the responsibility of the modifier.
+*   Donations are not accepted.
 
-*   **Use at Your Own Risk:** The use of this software is entirely at your own risk.
-*   **No Commercial Use:** This software should not be used for commercial purposes.
-*   **No Responsibility:** The developers are not responsible for any actions taken by users.
-*   **Open Source and Modification:**  The code is open source; however, any modifications that remove restrictions are the responsibility of the modifier.
-*   **No Donations:** The project does not accept donations.
-
-## Contribution
-
-We welcome contributions from the community!
+## Contributors
 
 <a href="https://github.com/jxxghp/MoviePilot/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=jxxghp/MoviePilot" />

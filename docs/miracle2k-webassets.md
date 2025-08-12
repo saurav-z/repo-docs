@@ -1,18 +1,19 @@
-# Webassets: Simplify Your Python Web Project's Asset Management
+# Webassets: Streamline Your Python Web Project's Assets with Powerful Management
 
-**Streamline your web development workflow and boost performance with Webassets, the powerful Python asset management tool.**
+**Webassets is the ultimate asset management tool for Python web developers, helping you merge and compress your JavaScript and CSS files to optimize performance.**
 
 [View the original repository on GitHub](https://github.com/miracle2k/webassets)
 
 ## Key Features
 
-*   **Merge and Compress:** Efficiently combines and minifies your JavaScript and CSS files to reduce HTTP requests and improve page load times.
-*   **Python-Based:** Integrates seamlessly with your Python web development projects.
-*   **Flexible:** Provides a range of filters and options for advanced asset processing.
+*   **Merge and Compress:** Efficiently combines and minimizes your JavaScript and CSS files for faster loading times.
+*   **Easy Integration:** Seamlessly integrates with your existing Python web development workflow.
+*   **Well-Tested:** Relies on a stable and reliable codebase.
+*   **Development Version Available:** Access the latest features by installing the development version.
 
 ## Installation
 
-Install Webassets using pip:
+You can install webassets using pip:
 
 ```bash
 pip install webassets==dev
@@ -20,40 +21,29 @@ pip install webassets==dev
 
 ## Development
 
-To contribute to Webassets, follow these steps:
+To contribute to webassets, follow these steps:
 
-1.  **Set up a virtual environment using uv:**
+1.  **Install Python requirements using `uv`:**
 
     ```bash
     uv venv
-    ```
-
-2.  **Install Python requirements:**
-
-    ```bash
     uv pip install -r uv.lock
     ```
-
-3.  **Install other requirements:**
+2.  **Install other requirements:**
 
     ```bash
     ./requirements-dev.sh
     ```
-
-4.  **Run tests:**
+3.  **Run the tests:**
 
     ```bash
     ./run_tests.sh
     ```
 
-    *Note: You will need Java 7 or higher installed to run all tests (required for the Google Closure filter).*
-
 ## Documentation
 
-For comprehensive information and usage examples, refer to the official documentation:
+Detailed documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
 
-*   [Webassets Documentation](https://webassets.readthedocs.io/)
-
-## Staying Up-to-Date
-
-Since releases are not on a fixed schedule, it's recommended to use the latest code. Webassets is well-tested, and the build status badge above provides a good indication of stability. You can also download a tarball of the development version.
+## Important Notes
+*   For development, Java 7 or higher is required (needed for filters like Google Closure).
+*   The build status can be checked in the badge above.

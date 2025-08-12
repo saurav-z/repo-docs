@@ -1,6 +1,6 @@
 # Pycord: The Modern Python Library for Discord Bots
 
-**Pycord is a powerful and easy-to-use Python library that simplifies creating feature-rich and asynchronous Discord bots.** You can find the source code on [GitHub](https://github.com/Pycord-Development/pycord).
+**Pycord is a powerful, easy-to-use, and feature-rich Python library for building interactive and engaging Discord bots.**  [Explore the Pycord repository](https://github.com/Pycord-Development/pycord) for the latest updates and contributions.
 
 [![PyPI version info](https://img.shields.io/pypi/v/py-cord.svg?style=for-the-badge&logo=pypi&color=yellowgreen&logoColor=white)](https://pypi.python.org/pypi/py-cord)
 [![PyPI supported Python versions](https://img.shields.io/pypi/pyversions/py-cord.svg?style=for-the-badge&logo=python&logoColor=white)](https://pypi.python.org/pypi/py-cord)
@@ -11,20 +11,17 @@
 
 ## Key Features
 
-*   **Asynchronous and Modern:** Built with `async` and `await` for efficient, non-blocking operations.
-*   **Rate Limit Handling:** Automatically manages Discord's rate limits to prevent errors.
+*   **Asynchronous & Modern:** Built with `async` and `await` for efficient and responsive bot development.
+*   **Rate Limit Handling:**  Automated and robust rate limit management to ensure your bot runs smoothly.
 *   **Optimized Performance:** Designed for speed and minimal memory usage.
-*   **Full API Support:** Comprehensive coverage of the Discord API, including application commands.
-
-## Supported Python Versions
-
-Pycord supports Python versions **3.9** through **3.13**.
+*   **Full Application API Support:** Access all Discord API features.
+*   **Slash Commands & User Commands Support:** Allows you to use the latest Discord bot command features.
 
 ## Installation
 
-**Prerequisites:** Python 3.9 or higher is required.
+**Requires Python 3.9 or higher.**
 
-**Without Voice Support:**
+Install without voice support:
 
 ```bash
 # Linux/macOS
@@ -34,7 +31,7 @@ python3 -m pip install -U py-cord
 py -3 -m pip install -U py-cord
 ```
 
-**With Full Voice Support:**
+Install with full voice support:
 
 ```bash
 # Linux/macOS
@@ -44,16 +41,17 @@ python3 -m pip install -U "py-cord[voice]"
 py -3 -m pip install -U py-cord[voice]
 ```
 
-**For speed up packages:**
+Install packages for speedup:
 
 ```bash
 # Linux/macOS
 python3 -m pip install -U "py-cord[speed]"
+
 # Windows
 py -3 -m pip install -U py-cord[speed]
 ```
 
-**Development Version:**
+Install the development version:
 
 ```bash
 $ git clone https://github.com/Pycord-Development/pycord
@@ -66,22 +64,22 @@ or
 ```bash
 # Linux/macOS
 python3 -m pip install git+https://github.com/Pycord-Development/pycord
+
 # Windows
 py -3 -m pip install git+https://github.com/Pycord-Development/pycord
 ```
 
-**Optional Packages**
+### Optional Packages
 
-*   `PyNaCl <https://pypi.org/project/PyNaCl/>`__ (for voice support)
-*   `aiodns <https://pypi.org/project/aiodns/>`__, `brotlipy <https://pypi.org/project/brotlipy/>`__, `cchardet <https://pypi.org/project/cchardet/>`__ (for aiohttp speedup)
-*   `msgspec <https://pypi.org/project/msgspec/>`__ (for json speedup)
+*   `PyNaCl <https://pypi.org/project/PyNaCl/>` (for voice support)
+*   `aiodns <https://pypi.org/project/aiodns/>`, `brotlipy <https://pypi.org/project/brotlipy/>`, `cchardet <https://pypi.org/project/cchardet/>` (for aiohttp speedup)
+*   `msgspec <https://pypi.org/project/msgspec/>` (for json speedup)
 
-**Linux Voice Support Prerequisites:** Before installing with voice support, install the following:
+**Important for Linux (voice support):**  Before installing with voice support, ensure you have the following packages installed via your system's package manager: `libffi-dev` (or `libffi-devel`) and `python-dev` (e.g., `python3.10-dev`).
 
-*   `libffi-dev` (or `libffi-devel` on some systems)
-*   `python-dev` (e.g., `python3.10-dev` for Python 3.10) using your system's package manager (e.g., `apt`, `dnf`).
+## Quick Examples
 
-## Quick Example (Slash Commands)
+**Slash Commands:**
 
 ```python
 import discord
@@ -100,7 +98,7 @@ async def hi(ctx, user):
 bot.run("token")
 ```
 
-## Traditional Commands Example
+**Traditional Commands:**
 
 ```python
 import discord
@@ -117,17 +115,13 @@ async def ping(ctx):
 bot.run("token")
 ```
 
-For more examples, see the `examples` directory.
-
-**Important:** Never share your bot token.
+More code examples are in the `examples` directory of the [Pycord repository](https://github.com/Pycord-Development/pycord).  Remember to keep your bot token secure.
 
 ## Useful Links
 
 *   [Documentation](https://docs.pycord.dev/en/master/index.html)
-*   [Guide - Creating Discord Bots with Pycord](https://guide.pycord.dev)
+*   [Pycord Guide](https://guide.pycord.dev)
 *   [Official Discord Server](https://pycord.dev/discord)
 *   [Official Discord Developers Server](https://discord.gg/discord-developers)
 
-## Translations
-
-[![Translation Status](https://badges.awesome-crowdin.com/translation-200034237-5.png)](https://translations.pycord.dev/)
+[![Translation Status](https://badges.awesome-crowdin.com/translation-200034237-5.png)](https://translations.pycord.dev/documentation/?utm_source=badge&utm_medium=referral&utm_campaign=badge-add-on)

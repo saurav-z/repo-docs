@@ -9,57 +9,54 @@
   </p>
 </p>
 
-# Commix: Automated Command Injection Exploitation Tool
+# Commix: Automate Command Injection Exploitation
 
-**Commix** (short for **Comm**and **I**njection E**x**ploiter) is an open-source penetration testing tool designed to automate the detection and exploitation of command injection vulnerabilities. ([View original repository](https://github.com/commixproject/commix))
+**Commix**, short for "Command Injection Exploiter," is a powerful open-source penetration testing tool designed to detect and exploit command injection vulnerabilities. ([Original Repository](https://github.com/commixproject/commix))
 
 ![Screenshot](https://commixproject.com/images/background.png)
 
 ## Key Features
 
-*   **Automated Vulnerability Detection:** Quickly identifies command injection flaws.
-*   **Exploitation Automation:** Automates the process of exploiting command injection vulnerabilities.
-*   **Open Source:** Freely available for use and contribution.
-*   **Cross-Platform Compatibility:** Works on various platforms.
-*   **Python-Based:** Written in Python, making it easy to use and modify.
-*   **Detailed Reporting:** Provides comprehensive reports on discovered vulnerabilities.
-
-Visit the [collection of screenshots](https://github.com/commixproject/commix/wiki/Screenshots) demonstrating some of the features on the wiki.
+*   **Automated Detection:** Automatically identifies command injection vulnerabilities.
+*   **Exploitation:** Enables the exploitation of identified vulnerabilities.
+*   **Open Source:** Free and open-source tool.
+*   **Cross-Platform:** Works on various operating systems.
+*   **Written in Python:** Utilizes the versatile Python programming language.
 
 ## Installation
 
-To install Commix, clone the Git repository:
+To install Commix, clone the official Git repository:
 
 ```bash
-git clone https://github.com/commixproject/commix.git commix
+$ git clone https://github.com/commixproject/commix.git commix
 ```
 
-Alternatively, you can download the latest [tarball](https://github.com/commixproject/commix/tarball/master) or [zipball](https://github.com/commixproject/commix/zipball/master).
+Alternatively, download the latest [tarball](https://github.com/commixproject/commix/tarball/master) or [zipball](https://github.com/commixproject/commix/zipball/master).
 
-*__Note:__ **[Python](http://www.python.org/download/)** (version **2.6**, **2.7** or **3.x**) is required for running Commix.*
+**Note:** Requires **Python** (version **2.6**, **2.7**, or **3.x**).
 
 ## Usage
 
-To view all options and switches:
+Get started by running Commix with the `-h` flag to view all options and switches:
 
 ```bash
-python commix.py -h
+$ python commix.py -h
 ```
 
-For an overview of Commix options, switches, and basic usage, see the following resources:
+For detailed usage instructions, examples, and filter bypass techniques, please consult the following resources:
 
-*   [Usage](https://github.com/commixproject/commix/wiki/Usage)
-*   [Usage Examples](https://github.com/commixproject/commix/wiki/Usage-Examples)
-*   [Filters Bypasses](https://github.com/commixproject/commix/wiki/Filters-Bypasses)
+*   [Usage Wiki](https://github.com/commixproject/commix/wiki/Usage)
+*   [Usage Examples Wiki](https://github.com/commixproject/commix/wiki/Usage-Examples)
+*   [Filters Bypasses Wiki](https://github.com/commixproject/commix/wiki/Filters-Bypasses)
 
-## Links
+## Resources
 
 *   **User's Manual:** [https://github.com/commixproject/commix/wiki](https://github.com/commixproject/commix/wiki)
-*   **Issues Tracker:** [https://github.com/commixproject/commix/issues](https://github.com/commixproject/commix/issues)
+*   **Issue Tracker:** [https://github.com/commixproject/commix/issues](https://github.com/commixproject/commix/issues)
 
 ## Translations
 
-*   [Farsi (Persian)](https://github.com/commixproject/commix/blob/master/doc/translations/README-fa-FA.md)
+*   [Farsi(Persian)](https://github.com/commixproject/commix/blob/master/doc/translations/README-fa-FA.md)
 *   [Greek](https://github.com/commixproject/commix/blob/master/doc/translations/README-gr-GR.md)
 *   [Indonesian](https://github.com/commixproject/commix/blob/master/doc/translations/README-idn-IDN.md)
 *   [Turkish](https://github.com/commixproject/commix/blob/master/doc/translations/README-tr-TR.md)

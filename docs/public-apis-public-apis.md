@@ -1,245 +1,104 @@
-# Explore Free Public APIs: A Treasure Trove for Developers
+# Public APIs: Your Free Treasure Trove of Web Service Endpoints
 
-**Looking for free APIs to power your next project?** This repository offers a comprehensive, community-curated list of public APIs across various domains, making it a valuable resource for developers of all levels. Find the original repo [here](https://github.com/public-apis/public-apis).
+**Discover and integrate free APIs for your next project with Public APIs, a curated collection of web service endpoints brought to you by the community!** 
 
-**Key Features:**
-
-*   **Extensive Directory:** Discover a vast collection of public APIs categorized by domain, including Animals, Entertainment, Weather, and much more.
-*   **Community-Driven:** The list is maintained by community members, ensuring a well-managed and up-to-date resource.
-*   **Diverse Functionality:** Explore APIs for various purposes, from weather forecasts and currency exchange to movie information and social media integration.
-*   **Easy to Use:** APIs typically return data in user-friendly JSON format.
-
----
-
-## Featured APIs (Provided by APILayer)
-
-*   **IPstack:** Locate and Identify Website Visitors by IP Address ([Run in Postman](https://god.gw.postman.com/run-collection/10131015-55145132-244c-448c-8e6f-8780866e4862?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D10131015-55145132-244c-448c-8e6f-8780866e4862%26entityType%3Dcollection%26workspaceId%3D2b7498b6-6d91-4fa8-817f-608441fe42a8))
-*   **Marketstack:** Free, easy-to-use REST API interface delivering worldwide stock market data in JSON format ([Run in Postman](https://god.gw.postman.com/run-collection/10131015-9cbac391-3611-4f50-9bfd-d24ae41c97c1?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D10131015-9cbac391-3611-4f50-9bfd-d24ae41c97c1%26entityType%3Dcollection%26workspaceId%3D2b7498b6-6d91-4fa8-817f-608441fe42a8))
-*   **Weatherstack:** Retrieve instant, accurate weather information for any location in the world in lightweight JSON format ([Run in Postman](https://god.gw.postman.com/run-collection/10131015-276c4312-f682-425d-b6b1-0f82c0a7f2b3?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D10131015-276c4312-f682-425d-b6b1-0f82c0a7f2b3%26entityType%3Dcollection%26workspaceId%3D2b7498b6-6d91-4fa8-817f-608441fe42a8))
-*   **Numverify:** Global Phone Number Validation & Lookup JSON API ([Run in Postman](https://god.gw.postman.com/run-collection/10131015-0760d25e-b802-412e-b0e4-26e5ca3b9ffa?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D10131015-0760d25e-b802-412e-b0e4-26e5ca3b9ffa%26entityType%3Dcollection%26workspaceId%3D2b7498b6-6d91-4fa8-817f-608441fe42a8))
-*   **Fixer:** Simple and lightweight API for current and historical foreign exchange (forex) rates ([Run in Postman](https://god.gw.postman.com/run-collection/10131015-0d9c66b3-5f1a-42ed-a5ca-379217bd629d?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D10131015-0d9c66b3-5f1a-42ed-a5ca-379217bd629d%26entityType%3Dcollection%26workspaceId%3D2b7498b6-6d91-4fa8-817f-608441fe42a8))
-*   **Aviationstack:** Free, real-time flight status and global Aviation data API ([Run in Postman](https://god.gw.postman.com/run-collection/10131015-72ee0d35-018e-4370-a2b6-a66d3ebd5b5a?action=collection/fork))
-
-Learn more about the fastest way to integrate APIs into any product with **[APILayer APIs](https://apilayer.com/products/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo)**
-
-Join the community and stay updated on new additions, ask questions, and participate in community calls on our **[Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo)**.
+[Visit the original repository here](https://github.com/public-apis/public-apis) for updates, contributions, and a deeper dive into the world of public APIs.
 
 <br>
 
-## Explore the API Categories:
-
-### Animals
-
-*   ...
-
-### Anime
-
-*   ...
-
-### Anti-Malware
-
-*   ...
-
-### Art & Design
-
-*   ...
-
-### Authentication & Authorization
-
-*   ...
-
-### Blockchain
-
-*   ...
-
-### Books
-
-*   ...
-
-### Business
-
-*   ...
-
-### Calendar
-
-*   ...
-
-### Cloud Storage & File Sharing
-
-*   ...
-
-### Continuous Integration
-
-*   ...
-
-### Cryptocurrency
-
-*   ...
-
-### Currency Exchange
-
-*   ...
-
-### Data Validation
-
-*   ...
-
-### Development
-
-*   ...
-
-### Dictionaries
-
-*   ...
-
-### Documents & Productivity
-
-*   ...
-
-### Email
-
-*   ...
-
-### Entertainment
-
-*   ...
-
-### Environment
-
-*   ...
-
-### Events
-
-*   ...
-
-### Finance
-
-*   ...
-
-### Food & Drink
-
-*   ...
-
-### Games & Comics
-
-*   ...
-
-### Geocoding
-
-*   ...
-
-### Government
-
-*   ...
-
-### Health
-
-*   ...
-
-### Jobs
-
-*   ...
-
-### Machine Learning
-
-*   ...
-
-### Music
-
-*   ...
-
-### News
-
-*   ...
-
-### Open Data
-
-*   ...
-
-### Open Source Projects
-
-*   ...
-
-### Patent
-
-*   ...
-
-### Personality
-
-*   ...
-
-### Phone
-
-*   ...
-
-### Photography
-
-*   ...
-
-### Programming
-
-*   ...
-
-### Science & Math
-
-*   ...
-
-### Security
-
-*   ...
-
-### Shopping
-
-*   ...
-
-### Social
-
-*   ...
-
-### Sports & Fitness
-
-*   ...
-
-### Test Data
-
-*   ...
-
-### Text Analysis
-
-*   ...
-
-### Tracking
-
-*   ...
-
-### Transportation
-
-*   ...
-
-### URL Shorteners
-
-*   ...
-
-### Vehicle
-
-*   ...
-
-### Video
-
-*   ...
-
-### Weather
-
-*   ...
+**Key Features:**
+
+*   **Comprehensive Collection:** Access a vast and diverse catalog of publicly available APIs across numerous categories.
+*   **Community-Driven:** Enjoy an actively maintained repository, with new APIs and updates contributed by developers like you.
+*   **Free to Use:** Explore and integrate APIs without hidden costs, empowering your projects without financial barriers.
+*   **Categorized & Organized:** Easily find the perfect API for your needs with clear organization and categorization.
+
+<br>
+
+*   **APILayer:** Quickly integrate APIs into any product and explore a wide range of best-selling APIs.
+
+<p align="center">
+  <a href="https://apilayer.com">
+    <img src=".github/cs1586-APILayerLogoUpdate2022-LJ_v2-HighRes.png" alt="APILayer Logo" width="100%" />
+  </a>
+</p>
+
+<br>
+
+**Explore curated APIs from APILayer**:
+
+*   [IPstack](https://ipstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) - Locate and Identify Website Visitors by IP Address
+*   [Marketstack](https://marketstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) - Worldwide stock market data in JSON format
+*   [Weatherstack](https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) - Accurate weather information for any location in JSON format
+*   [Numverify](https://numverify.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers ) - Global Phone Number Validation & Lookup JSON API
+*   [Fixer](https://fixer.io/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) - Foreign exchange (forex) rates.
+*   [Aviationstack](https://avaitionstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) - Free, real-time flight status and global Aviation data API
+
+<br>
+
+**Join the Community:**
+
+*   [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) for updates, Q&A, and community discussions.
+
+<br>
+
+## Table of Contents
+
+*   [Animals](#animals)
+*   [Anime](#anime)
+*   [Anti-Malware](#anti-malware)
+*   [Art & Design](#art--design)
+*   [Authentication & Authorization](#authentication--authorization)
+*   [Blockchain](#blockchain)
+*   [Books](#books)
+*   [Business](#business)
+*   [Calendar](#calendar)
+*   [Cloud Storage & File Sharing](#cloud-storage--file-sharing)
+*   [Continuous Integration](#continuous-integration)
+*   [Cryptocurrency](#cryptocurrency)
+*   [Currency Exchange](#currency-exchange)
+*   [Data Validation](#data-validation)
+*   [Development](#development)
+*   [Dictionaries](#dictionaries)
+*   [Documents & Productivity](#documents--productivity)
+*   [Email](#email)
+*   [Entertainment](#entertainment)
+*   [Environment](#environment)
+*   [Events](#events)
+*   [Finance](#finance)
+*   [Food & Drink](#food--drink)
+*   [Games & Comics](#games--comics)
+*   [Geocoding](#geocoding)
+*   [Government](#government)
+*   [Health](#health)
+*   [Jobs](#jobs)
+*   [Machine Learning](#machine-learning)
+*   [Music](#music)
+*   [News](#news)
+*   [Open Data](#open-data)
+*   [Open Source Projects](#open-source-projects)
+*   [Patent](#patent)
+*   [Personality](#personality)
+*   [Phone](#phone)
+*   [Photography](#photography)
+*   [Programming](#programming)
+*   [Science & Math](#science--math)
+*   [Security](#security)
+*   [Shopping](#shopping)
+*   [Social](#social)
+*   [Sports & Fitness](#sports--fitness)
+*   [Test Data](#test-data)
+*   [Text Analysis](#text-analysis)
+*   [Tracking](#tracking)
+*   [Transportation](#transportation)
+*   [URL Shorteners](#url-shorteners)
+*   [Vehicle](#vehicle)
+*   [Video](#video)
+*   [Weather](#weather)
+
+<br>
 
 ---
 
-## Learn More
-
-**Get Involved**
-
-*   [Contributing Guide](CONTRIBUTING.md)
-*   [API for this project](https://github.com/davemachado/public-api)
-*   [Issues](https://github.com/public-apis/public-apis/issues)
-*   [Pull Requests](https://github.com/public-apis/public-apis/pulls)
-*   [LICENSE](LICENSE)
+## License
+[MIT](LICENSE) (c) 2022 public-apis

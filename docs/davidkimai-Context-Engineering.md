@@ -1,67 +1,69 @@
-# Context Engineering: Unlock the Power of LLMs Beyond Prompt Engineering
+# Context Engineering: Beyond Prompt Engineering and into the Future of LLMs
 
-**Go beyond basic prompting and master context engineering, the art and science of optimizing the entire information payload for large language models (LLMs), and supercharge your AI applications. [Explore the original repository](https://github.com/davidkimai/Context-Engineering) for a comprehensive handbook and practical resources.**
-
-<div align="center">
-  
-<img width="1600" height="400" alt="image" src="https://github.com/user-attachments/assets/f41f9664-b707-4291-98c8-5bab3054a572" />
-
-</div>
-
-> *"Context engineering is the delicate art and science of filling the context window with just the right information for the next step."* - **Andrej Karpathy**
+**Unlock the full potential of Large Language Models by mastering context design, orchestration, and optimization with this comprehensive, first-principles handbook. Explore the cutting edge of LLM technology!** ([Original Repository](https://github.com/davidkimai/Context-Engineering))
 
 ## Key Features:
 
-*   **Comprehensive Handbook:** A first-principles guide to context design, orchestration, and optimization.
-*   **First Principles Approach:** A progressive learning path, built around a biological metaphor (atoms -> molecules -> cells -> ...).
-*   **Practical Tutorials:** Hands-on guides (Jupyter Notebooks) to get you started.
-*   **Reusable Templates:** Code snippets and templates to integrate into your projects.
-*   **Real-World Examples:** Practical implementations across various use cases.
-*   **Cutting-Edge Research:** Grounded in the latest findings from leading AI research.
-*   **Community Driven:**  Leveraging a community of researchers and builders.
+*   **Comprehensive Handbook:**  Go beyond prompt engineering to the wider discipline of context design, orchestration, and optimization.
+*   **First-Principles Approach:** Learn from the ground up with a structured, biological metaphor, from atoms to neural systems and beyond.
+*   **Practical Tutorials & Examples:** Hands-on guides and real-world implementations to put theory into practice.
+*   **Research-Driven Insights:** Stay ahead of the curve with summaries of cutting-edge research papers and their implications, including [Context Engineering Survey-Review of 1400 Research Papers](https://arxiv.org/pdf/2507.13334).
+*   **Progressive Learning Path:**  A clear roadmap from foundational concepts to advanced techniques.
+*   **Community & Collaboration:**  Join the community on [Discord](https://discord.gg/pCM6kdxB) and contribute to the development of context engineering.
 
-## Core Concepts
+## What is Context Engineering?
 
-*   **Prompt Engineering vs. Context Engineering:** Understand the distinction between crafting prompts and managing the broader context.
-*   **Token Optimization:** Learn strategies to optimize token usage for efficiency and cost.
-*   **Few-Shot Learning:** Leverage examples for effective AI guidance.
-*   **Memory Systems:** Implement systems that persist information across interactions.
-*   **Retrieval Augmentation:** Integrate external knowledge sources to improve accuracy.
-*   **Control Flow:** Break down complex tasks into manageable steps.
-*   **Cognitive Tools & Prompt Programming**:  Learn to build custom tools and templates
-*   **Neural Field Theory:** Use a dynamic neural field to update the context iteratively
-*   **Symbolic Mechanisms:** Develop higher order reasoning through symbolic architectures
-*   **Quantum Semantics:** Design context systems by leveraging superpositional techniques
+Context Engineering goes beyond the simple prompt to encompass the entire information payload a language model processes at inference time. This includes:
 
-## Research and Insights
+*   **Prompts:**  The initial instruction.
+*   **Examples & Memory:**  Guiding the model through examples and retaining information.
+*   **Retrieval & Tools:**  Augmenting the model's knowledge and capabilities.
+*   **State & Control Flow:**  Managing conversations and complex task execution.
 
-**Explore key research papers shaping context engineering:**
+## Core Concepts and Structure
 
-*   **[Comprehensive Context Engineering Survey-Review of 1400 Research Papers](https://arxiv.org/pdf/2507.13334)**
-*   **[MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents - Singapore-MIT June 2025](https://www.arxiv.org/pdf/2506.15841)**
-*   **[Eliciting Reasoning in Language Models with Cognitive Tools - IBM Zurich June 2025](https://www.arxiv.org/pdf/2506.12115)**
-*   **[Emergent Symbolic Mechanisms Support Abstract Reasoning in Large Language Models - ICML Princeton June 18, 2025](https://openreview.net/forum?id=y1SnRPDWx4)**
+This repository provides a structured learning path:
 
-##  Learning Path & Structure
-The repository provides a structured learning path, moving from foundational concepts to advanced techniques:
+*   **Foundations:** Core theoretical components of context engineering.
+*   **Guides:** Hands-on walkthroughs and practical tutorials.
+*   **Templates:** Reusable components for your projects.
+*   **Examples:** Real-world implementations and use cases.
+*   **Reference:** In-depth documentation and evaluation checklists.
+*   **Contribution:** Community contribution guidelines.
 
-*   **Foundations:** Core principles and context engineering theories.
-*   **Guides:** Hands-on tutorials.
-*   **Templates:** Reusable code snippets.
-*   **Examples:** Practical implementations.
-*   **Reference:** Deep dive documentation and evaluation checklists.
-*   **Community Contributions:** Open for contributions.
+<img src="https://github.com/user-attachments/assets/580a9b1a-539f-41dc-abce-a5106b33350e" alt="Context Engineering Structure" width="800">
+<p align="center"><em>Context Engineering Progression</em></p>
 
-## Additional Resources:
+## Why Context Engineering?
 
-*   **[Ask DeepWiki](https://deepwiki.com/davidkimai/Context-Engineering)**
-*   **[DeepGraph](https://www.deepgraph.co/davidkimai/Context-Engineering)**
-*   **[Chat with NotebookLM + Podcast Deep Dive](https://notebooklm.google.com/notebook/0c6e4dc6-9c30-4f53-8e1a-05cc9ff3bc7e)**
-*   **[Discord](https://discord.gg/pCM6kdxB)**
+The future of LLMs hinges on effective context management. Mastering context engineering allows you to:
 
-## Contributing
+*   Improve model performance.
+*   Reduce costs and latency.
+*   Build more sophisticated and reliable applications.
+*   Stay ahead of the rapidly evolving field of AI.
 
-Contributions are welcome! See the [CONTRIBUTING.md](.github/CONTRIBUTING.md) file for details.
+## Research Evidence
+
+This repository highlights the importance of context engineering through summaries of recent research.
+
+*   **MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents:** Blends memory and reasoning to create more efficient agents. ([Singapore-MIT](https://arxiv.org/pdf/2506.15841))
+*   **Eliciting Reasoning in Language Models with Cognitive Tools:** Enables modular "cognitive tools" for expert-level problem-solving. ([IBM Zurich](https://www.arxiv.org/pdf/2506.12115))
+*   **Emergent Symbolic Mechanisms Support Abstract Reasoning in Large Language Models:**  LLMs develop inner symbolic "logic circuits," enabling abstract reasoning. ([ICML Princeton](https://openreview.net/forum?id=y1SnRPDWx4))
+
+## Getting Started
+
+1.  **Explore the Foundations:** Begin with the core concepts in `00_foundations/01_atoms_prompting.md`.
+2.  **Experiment with a Minimal Example:** Try out the Jupyter Notebook-style example in `10_guides_zero_to_one/01_min_prompt.ipynb`.
+3.  **Use Templates:** Copy and adapt templates from `20_templates/minimal_context.yaml` for your own projects.
+4.  **Examine Examples:** Dive into the practical implementations in `30_examples/00_toy_chatbot/`.
+
+## Contribute
+
+We welcome your contributions! Please review the [CONTRIBUTING.md](.github/CONTRIBUTING.md) file for details.
+
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=davidkimai/Context-Engineering&type=Date)](https://www.star-history.com/#davidkimai/Context-Engineering&Date)
 
 ## License
 
@@ -77,3 +79,8 @@ This project is licensed under the [MIT License](LICENSE).
   publisher = {GitHub},
   url = {https://github.com/davidkimai/context-engineering}
 }
+```
+
+## Acknowledgements
+
+Special thanks to Andrej Karpathy for inspiring this field, and all contributors to this open-source project.

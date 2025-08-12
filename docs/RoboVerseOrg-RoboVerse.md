@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/source/_static/RoboVerse86.22.svg" width="50%" alt="RoboVerse">
+  <img src="docs/source/_static/RoboVerse86.22.svg" width="50%" alt="RoboVerse Logo">
 </p>
 
-![RoboVerse](docs/source/metasim/images/tea.jpg)
+![RoboVerse: A Unified Platform for Robot Learning](docs/source/metasim/images/tea.jpg)
 
 <p align="center">
   <a href="https://roboverseorg.github.io"><img src="https://img.shields.io/badge/project-page-brightgreen" alt="Project Page"></a>
@@ -14,38 +14,42 @@
   <a href="docs/source/_static/wechat.jpg"><img src="https://img.shields.io/badge/wechat-QR_code-green" alt="WeChat"></a>
 </p>
 
-# RoboVerse: A Unified Platform for Scalable and Generalizable Robot Learning
+## RoboVerse: The Future of Robot Learning
 
-**RoboVerse provides a comprehensive platform, dataset, and benchmark designed to advance the field of scalable and generalizable robot learning.**
+**RoboVerse is a cutting-edge, unified platform and benchmark designed to accelerate research in scalable and generalizable robot learning.**
 
-## Key Features
+### Key Features:
 
-*   **Unified Platform:** RoboVerse unifies various robot simulators, renderers, and libraries to create a versatile environment for robot learning research.
-*   **Rich Dataset:** Includes data from several projects to facilitate training, benchmarking, and development of robot learning algorithms.
-*   **Open-Source:** Actively maintained and welcomes contributions from the open-source community.
-*   **Detailed Tutorials:** Comprehensive documentation and tutorials to help you get started quickly.
-*   **Community Support:** Engage with the community through GitHub issues, discussions, and Discord.
+*   **Unified Platform:** Provides a comprehensive framework for robot learning research.
+*   **Rich Dataset:** Integrates data from a wide array of existing projects, offering a diverse and extensive dataset for training and evaluation.
+*   **Advanced Simulation:**  Leverages various simulators for realistic and efficient training environments.
+*   **Open Source:**  Encourages community contributions and collaboration.
+*   **Scalable & Generalizable:** Designed to facilitate the development of robots capable of learning and adapting to a wide range of tasks and environments.
 
-## What's New
+### What's New
 
 *   **[2025-04-10]** RoboVerse accepted by RSS 2025!
-*   **[2025-04-03]** Code released!  Continuous improvements and updates are planned.
+*   **[2025-04-03]** Code released!  Explore the code and contribute to its continuous improvement.  Your feedback and bug reports are welcome via the GitHub Issues page.
 
-## Getting Started
+### Getting Started
 
-Dive into the RoboVerse ecosystem with our detailed [documentation](https://roboverse.wiki/metasim/#) and [tutorials](https://roboverse.wiki/metasim/get_started/quick_start/0_static_scene).
+Refer to our comprehensive [documentation](https://roboverse.wiki/metasim/#) for detailed instructions.
 
-## Contribute
+*   Detailed [tutorials](https://roboverse.wiki/metasim/get_started/quick_start/0_static_scene) are available to guide you through the initial setup and usage.
 
-Your contributions are essential! Review the [CONTRIBUTING.md](./CONTRIBUTING.md) file for instructions on how to contribute to RoboVerse.
+### Contribute to RoboVerse
 
-## Feature Requests & Wish List
+We welcome your contributions!  Please consult [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to contribute to the project.
 
-Have a suggestion? Share your feature requests in the Wish List section of our [GitHub Discussions](https://github.com/RoboVerseOrg/RoboVerse/discussions/categories/wish-list). Upvote the ideas you find most important!
+### Feature Requests & Wish List
 
-## License and Acknowledgements
+Have a feature request or suggestion?  Share it in the Wish List section of our [GitHub Discussions](https://github.com/RoboVerseOrg/RoboVerse/discussions/categories/wish-list).  Upvote your favorite requests to help us prioritize future updates!
 
-RoboVerse is licensed under the Apache License 2.0.  We acknowledge the use of the following simulation frameworks, renderers, and libraries:
+### License and Acknowledgments
+
+RoboVerse is released under the Apache License 2.0.
+
+The platform utilizes the following simulation frameworks, renderers, and libraries:
 
 *   [Isaac Lab](https://github.com/isaac-sim/IsaacLab) (built on [Isaac Sim](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html))
 *   [Isaac Gym](https://developer.nvidia.com/isaac-gym)
@@ -57,7 +61,8 @@ RoboVerse is licensed under the Apache License 2.0.  We acknowledge the use of t
 *   [PyRep](https://github.com/stepjam/PyRep) (built on [CoppeliaSim](https://www.coppeliarobotics.com/))
 *   [Blender](https://www.blender.org/)
 
-We also incorporate data from these projects:
+RoboVerse also integrates data from these projects:
+
 *   [RLBench](https://github.com/stepjam/RLBench)
 *   [Maniskill](https://github.com/haosulab/ManiSkill)
 *   [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)
@@ -80,20 +85,20 @@ We also incorporate data from these projects:
 
 The licenses for the assets used in RoboVerse will be added soon. Please contact us if you have any issues.
 
-## Citation
+### Citation
 
-If you use RoboVerse in your research, please cite it using the following BibTeX entry:
+If you find RoboVerse useful, please cite our work:
 
 ```bibtex
 @misc{geng2025roboverse,
-      title={RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning}, 
+      title={RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning},
       author={Haoran Geng and Feishi Wang and Songlin Wei and Yuyang Li and Bangjun Wang and Boshi An and Charlie Tianyue Cheng and Haozhe Lou and Peihao Li and Yen-Jen Wang and Yutong Liang and Dylan Goetting and Chaoyi Xu and Haozhe Chen and Yuxi Qian and Yiran Geng and Jiageng Mao and Weikang Wan and Mingtong Zhang and Jiangran Lyu and Siheng Zhao and Jiazhao Zhang and Jialiang Zhang and Chengyang Zhao and Haoran Lu and Yufei Ding and Ran Gong and Yuran Wang and Yuxuan Kuang and Ruihai Wu and Baoxiong Jia and Carlo Sferrazza and Hao Dong and Siyuan Huang and Yue Wang and Jitendra Malik and Pieter Abbeel},
       year={2025},
       eprint={2504.18904},
       archivePrefix={arXiv},
       primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2504.18904}, 
+      url={https://arxiv.org/abs/2504.18904},
 }
 ```
 
-**[Explore RoboVerse on GitHub](https://github.com/RoboVerseOrg/RoboVerse)**
+[**Explore the RoboVerse repository on GitHub!**](https://github.com/RoboVerseOrg/RoboVerse)

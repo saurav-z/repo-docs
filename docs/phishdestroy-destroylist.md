@@ -1,48 +1,49 @@
-# Destroylist: Your Shield Against Phishing and Scam Domains
+# Destroylist: Your Ultimate Phishing and Scam Domain Blacklist
 
-Tired of phishing scams? **Destroylist provides real-time, comprehensive blacklists to protect you and your systems from online threats.** ([View the original repo](https://github.com/phishdestroy/destroylist))
+Tired of phishing scams? **Destroylist** provides real-time intelligence to block malicious domains and protect your online security. ([Visit the repository](https://github.com/phishdestroy/destroylist))
 
-## Key Features
+## Key Features:
 
-*   **Comprehensive Blacklists:** Access multiple data feeds, including primary curated lists, DNS-verified active threats, and community-sourced blocklists.
-*   **Real-time Updates:** Stay ahead of threats with frequently updated domain lists.
-*   **Data Formats:** Utilizes JSON for easy integration with firewalls, DNS resolvers, browser extensions, and threat platforms.
-*   **Community Driven:** Benefit from community contributions and open collaboration.
+*   **Real-time Updates:** Continuously updated lists of phishing and scam domains.
+*   **Multiple Data Feeds:** Access various data feeds, including DNS-checked and community-sourced lists.
+*   **Community Driven:** Benefit from a collaborative effort to combat online threats.
+*   **Actionable Data:** Integrate the lists into firewalls, DNS resolvers, and browser extensions.
 *   **Historical Archive:** Access a vast archive of over 500,000+ domains for research and analysis.
 
-## Data Feeds
+## Core Data Feeds:
 
-| Data Feed                 | Description                                     | Link                                                                     |
-| ------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------ |
-| Primary Curated List     | Core phishing/scam domains, real-time updates   | [list.json](https://github.com/phishdestroy/destroylist/raw/main/list.json) |
-| Active DNS-Verified      | DNS-checked live threats                        | [active\_domains.json](https://github.com/phishdestroy/destroylist/raw/main/dns/active\_domains.json) |
-| Community General        | Broad aggregated blocklist, hourly updates        | [blocklist.json](https://github.com/phishdestroy/destroylist/raw/main/community/blocklist.json) |
-| Community Live           | DNS-checked active community threats            | [live\_blocklist.json](https://github.com/phishdestroy/destroylist/raw/main/community/live\_blocklist.json) |
+*   **Primary Curated List:** Core phishing/scam domains ([list.json](https://github.com/phishdestroy/destroylist/raw/main/list.json))
+*   **Active DNS-Verified:** DNS-checked live threats ([active\_domains.json](https://github.com/phishdestroy/destroylist/raw/main/dns/active_domains.json))
+*   **Community General:** Broad aggregated blocklist, hourly updates ([blocklist.json](https://github.com/phishdestroy/destroylist/raw/main/community/blocklist.json))
+*   **Community Live:** DNS-checked active community threats ([live\_blocklist.json](https://github.com/phishdestroy/destroylist/raw/main/community/live_blocklist.json))
 
-## How It Works
+## How Destroylist Works:
 
-Destroylist continuously gathers, syncs, and cleans data to provide up-to-date blacklists.  Domains are scanned, and complaints are filed with registrars to combat malicious activity.
+Destroylist employs a multi-step process:
 
-## Use Cases
+1.  **Gather:** Continuous collection of phishing domains.
+2.  **Sync:** Cross-referencing with trusted sources.
+3.  **Add:** Real-time integration of malicious domains.
+4.  **Clean:** Deduplication and removal of inactive domains.
 
-*   **Firewall Integration:** Enhance your network security with real-time threat intelligence.
-*   **DNS Filtering:** Block malicious domains at the DNS level.
-*   **Browser Extensions:** Protect users with browser-based phishing protection.
-*   **Threat Research:** Analyze historical data and trends in phishing attacks.
+## Benefits:
 
-## Appeals Process
+*   **Enhanced Security:** Protect yourself and your systems from phishing attacks.
+*   **Actionable Intelligence:** Integrate with security tools for proactive threat defense.
+*   **Community Support:** Contribute to a collective effort to combat online fraud.
 
-If you believe a domain has been incorrectly listed:
+## Connect with Destroylist:
 
-*   Submit an [Appeals Form](https://phishdestroy.io/appeals/)
-*   Open a GitHub Issue with supporting evidence.
+*   **Website:** [phishdestroy.io](https://phishdestroy.io)
+*   **Telegram Alerts:** [t.me/PhishDestroyAlerts](https://t.me/PhishDestroyAlerts)
+*   **Telegram Bot:** [t.me/PhishDestroy_bot](https://t.me/PhishDestroy_bot)
+*   **Twitter / X:** [x.com/Phish_Destroy](https://x.com/Phish_Destroy)
+*   **Ban Service:** [ban.destroy.tools](https://ban.destroy.tools)
 
-## Get Involved
+## License:
 
-Contribute to the project by:
+*   MIT License - Free and open-source.
 
-*   Suggesting detection improvements.
-*   Sharing integration tips.
-*   Providing fresh threat intelligence.
+## Contribute:
 
-Open an issue or submit a pull request!
+Help improve Destroylist! Submit ideas, share sources, and propose improvements through Issues and Pull Requests.

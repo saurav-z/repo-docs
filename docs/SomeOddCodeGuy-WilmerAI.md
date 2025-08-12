@@ -1,122 +1,110 @@
 # WilmerAI: Expertly Routing Your Language Model Inferences
 
-🚀 **Unlock the power of multi-LLM workflows with WilmerAI, an application that orchestrates complex interactions between your front-end and various language model APIs.**
-
-[View the Original Repository](https://github.com/SomeOddCodeGuy/WilmerAI)
+🚀 **Unleash the power of semi-autonomous workflows to orchestrate complex LLM interactions and unlock unparalleled control over your AI responses!** This project sits between your frontend and LLM APIs, exposing OpenAI and Ollama compatible API endpoints, and connecting to LLMs like OpenAI, KoboldCpp, and Ollama.  [Explore the WilmerAI repo](https://github.com/SomeOddCodeGuy/WilmerAI).
 
 ## Key Features
 
-*   **Prompt Routing:** Direct prompts to custom categories (coding, math, personas, etc.) or directly to workflows.
-*   **Custom Workflows:** Design tailored sequences of LLM calls for specific tasks.
-*   **Multi-LLM Support:** Combine the strengths of multiple LLMs within a single workflow.
-*   **Offline Wikipedia Integration:** Enhance factual accuracy using the Offline Wikipedia API.
-*   **Continually Generated Chat Summaries:** Simulate conversational "memory" for long-running chats.
-*   **Hotswap Models:** Maximize VRAM usage with Ollama's model hotswapping.
-*   **Customizable Presets:** Easily configure LLM parameters with customizable JSON files.
-*   **Vision Multi-Modal Support:** Experimental image processing via Ollama.
-*   **Mid-Workflow Conditional Workflows:** Trigger specific workflows based on conditions.
-*   **MCP Server Tool Integration:** Integrating MCP server tool calling allowing tool use mid-workflow.
+*   ✅ **Prompt Routing:** Direct prompts to custom categories (coding, math, personas) using user-defined workflows.
+*   ✅ **Custom Workflows:** Create tailored workflows for specific tasks, bypassing routing for direct control.
+*   ✅ **Multi-LLM Orchestration:** Leverage multiple LLMs in a single workflow to enhance responses.
+*   ✅ **Offline Wikipedia API Support:** Integrate with the [OfflineWikipediaTextApi](https://github.com/SomeOddCodeGuy/OfflineWikipediaTextApi) for RAG-based responses.
+*   ✅ **Conversation Memory (with Summaries):** Maintains context with continually generated chat summaries, extending beyond LLM context limits.
+*   ✅ **Model Hotswapping (Ollama):** Maximize VRAM usage by hotswapping models, enabling complex workflows even on limited hardware.
+*   ✅ **Customizable Presets:** Configure LLM behavior through readily customizable JSON files.
+*   ✅ **Vision Multi-Modal Support (Ollama):** Process images via Ollama, even when your LLM does not directly support images.
+*   ✅ **Mid-Workflow Conditional Flows:** Dynamically branch workflows based on LLM responses.
+*   ✅ **MCP Server Tool Integration:** Experimental support for MCP server tool calling.
 
 ## Getting Started
 
-### 🛠️ Installation
+### Prerequisites
 
-1.  **Prerequisites:** Ensure Python is installed (3.10 or 3.12 recommended).
-2.  **Install Dependencies:**
+*   Python (3.10 or 3.12 recommended)
+*   [OfflineWikipediaTextApi](https://github.com/SomeOddCodeGuy/OfflineWikipediaTextApi) (Optional)
+
+### Installation
+
+**Option 1: Using Provided Scripts (Recommended)**
+
+- **Windows:** Run the provided `.bat` file.
+- **macOS:** Run the provided `.sh` file.
+- **linux:** Not tested, but can manually install the requirements as outlined below.
+
+**Option 2: Manual Installation**
+
+1.  Install dependencies:
+
     ```bash
     pip install -r requirements.txt
     ```
-3.  **Run WilmerAI:**
+
+2.  Run the server:
+
     ```bash
     python server.py
     ```
 
-    *   Alternatively, run the `.bat` (Windows) or `.sh` (macOS) scripts for convenient setup. See the original readme for script arguments.
+### Configuration
 
-### 📦 Pre-made Users: Fast Track Setup
+1.  **Endpoints:** Configure LLM API endpoints in the `Public/Configs/Endpoints` directory using pre-built user configs, or build your own.
+2.  **User Setup:**
+    *   Choose an example user from `Public/Configs/Users` to get started.
+    *   Set the desired `_current-user.json` in `Public/Configs/Users`.
+3.  **Routing (Optional):** Customize routing behavior within the `Public/Configs/Routing` directory by editing the routing configurations.
+4.  **Workflows (Advanced):** Customize and create your workflows in the `Public/Workflows/your_user` directory (e.g., `Public/Workflows/socg`).
 
-Quickly set up WilmerAI using pre-configured user templates, including single-model and multi-model assistants, roleplay options, and coding workflows.  
+### Connecting to Wilmer
 
-*   **assistant-single-model**: A single small model used on all nodes, with category-specific presets.
-*   **assistant-multi-model**: Utilize multiple models for different tasks with category-specific endpoints.
-*   **convo-roleplay-single-model**: Good for conversations and roleplay.
-*   **convo-roleplay-dual-model**: Leverages two models in tandem for high performance on conversation.
-*   **group-chat-example**: Multi-persona group chats using different models.
-*   **openwebui-norouting-single/dual-model**: Similar to roleplay models, but designed for Open WebUI.
-*   **openwebui-routing-single/multi-model**: Similar to the assistant models, but designed for Open WebUI.
-*   **socg-* (Advanced)**: Socg's personal coding and general workflows (designed for advanced users, see original readme).
+*   **OpenAI/Ollama Compatible v1/Completions:** Configure front-end applications (like SillyTavern) to connect as OpenAI/Ollama-compatible text completions. Use a WilmerAI-specific prompt template (see `Docs/SillyTavern/InstructTemplate`).
 
-#### Configuration
+*   **OpenAI Chat Completions:**  Connect as OpenAI Chat Completions; configure settings for maximum token limit.
 
-1.  **Endpoints:** Configure your LLM API endpoints in the `Public/Configs/Endpoints` directory.
-2.  **Current User:** Set your current user in `Public/Configs/Users/_current-user.json`.
-3.  **User Settings:** Customize your user configuration file (`Users/your_user.json`) with streaming preferences, Offline Wikipedia API settings, and file paths.
-4.  **Routing:** In your User JSON specify what Routing file you would like to use, or use a pre-existing one.
-5.  **Workflows:** In the Workflows folder, ensure you have a workflow that matches your user and each workflow from your routing file.
+*   **Open WebUI:** Simply connect Open WebUI to Wilmer as if it were an Ollama instance.
 
-## Understanding Workflows
+## Deep Dive: Understanding Workflows, Memories, and Chat Summaries
 
-### ⚙️ Workflow Structure
+### Workflows
 
-Workflows are defined using JSON files and are located in the `Public/Workflows` directory within your user's specific workflows folder.
+Workflows organize LLM interactions by defining the flow of prompts, endpoints, and operations.  Each workflow consists of nodes that perform specific actions like:
 
-### 🧩 Workflow Nodes
+*   Calling an LLM via an endpoint.
+*   Retrieving information from an API, like the offline Wikipedia API.
+*   Using tools like generating memories.
+*   Executing python modules.
 
-Workflows consist of nodes that define interactions with LLMs.
--   **title**: for debugging
--   **agentName**: similar to title
--   **systemPrompt**: The system prompt to send to the LLM API.
--   **prompt**: The prompt to send. If left blank, either the last five messages from your conversation will be sent, or
-  however many you specify.
--   **lastMessagesToSendInsteadOfPrompt**: Specify how many messages to send to the LLM if "prompt" is left as an empty
-  string.
--   **endpointName**: The LLM API endpoint to send the prompt to. This should match a JSON file name from the `Endpoints`
-  folder, without the `.json` extension.
--   **preset**: The preset to send to the API. Truncate length and max tokens to send come from this. This should match a
-  JSON file name from the `Presets` folder, without the `.json` extension.
--   **maxResponseSizeInTokens**: Specifies the maximum number of tokens you want the LLM to send back to you as a
-  response.
-  This can be set per node, in case you want some nodes to respond with only 100 tokens and others to respond with 3000.
--   **addUserTurnTemplate**: Whether to wrap the prompt being sent to the LLM within a user turn template. If you send the
-  last few messages, set this as `false` (see first example node above). If you send a prompt, set this as `true` (see
-  second example node above).
--   **returnToUser**: This forces a node that is not the final node in a workflow to be the one to return its output
-  to the user. This can be especially helpful in workflow lock scenarios. (please see
-  the [Workflow lock section](#workflow-lock)). **IMPORTANT**: This only works for streaming workflows. This does not
-  work for non-streaming.
--   **addDiscussionIdTimestampsForLLM**: This will generate timestamps and track them across your conversation starting
-  from the moment you add this. The timestamps will be added to the beginning of any message sent to the LLM
-  where that timestamp has been tracked. So, for example, if you turn this on after 10 messages have been sent, messages
-  11 onward will be tracked on when the message arrived. When the messages are sent to the LLM, the timestamps will be
-  included.
-  
-#### Node Types (examples)
+### Memory and Chat Summaries
 
-*   **Recent Memory Summarizer Tool** - Summarize and use memories
-*   **Full Chat Summary Node** - summarize an entire chat
-*   **Python Module Caller Node** - Extend functionality with python
-*   **Image Processor** - add images
+*   **Recent Memories:** Wilmer creates summaries and stores them, generating  `DiscussionId_memories.json`, along with `[DiscussionId]####[/DiscussionId]` tags within your prompt/system prompt.
 
-### 🔐 Workflow Lock
+*   **Chat Summaries:** Updates the entire conversation by summarizing existing memories in the file `[DiscussionId]_chatsummary.json`.
 
-Use workflow locks to avoid race conditions when performing asynchronous operations.  See details for the use case.
+### Parallel Processing (Advanced)
 
-### 🖼️ Image Processor
-
-Utilize an Ollama image endpoint in your workflows.
-
-### ➡️ Conditional Custom Workflow Node
-
-Dynamically execute sub-workflows based on conditions.
-
-## Presets
-
-Customize model parameters within JSON files.  See the original readme for more details on setup.
+By using parallel processing, you can divide memory-heavy tasks across multiple LLMs simultaneously.
 
 ## Troubleshooting
 
-See the original README for troubleshooting tips!
+*   **Memory/Summary Files:** Check your workflows and user settings. Ensure the target folder and files are configured, or create them for first run.
 
-## 📧 Contact
+*   **Frontend Responses:** Verify that streaming settings align between Wilmer and your frontend (e.g., SillyTavern).
 
-WilmerAI.Project@gmail.com
+*   **Preset Errors:**  Check preset configurations in your workflows and make sure your LLM supports them.
+
+*   **Token Length Errors:**  Be mindful of context limits. WilmerAI *does not* have a token limit.
+*   **Runtime Errors**:  Check logs, endpoints, and user profiles. If there is an error it could be related to a non-valid API call.
+
+## Additional Information
+
+*   **YouTube Tutorials:** Comprehensive setup tutorials and workflow examples.
+
+    *   [WilmerAI Setup Tutorial](https://www.youtube.com/watch?v=v2xYQCHZwJM)
+    *   [WilmerAI Tutorial Youtube PlayList](https://www.youtube.com/playlist?list=PLjIfeYFu5Pl7J7KGJqVmHM4HU56nByb4X)
+*   **Documentation:**  See the README for further instructions!
+
+## Contact
+
+For feedback, requests, or questions, reach out to WilmerAI.Project@gmail.com
+
+## Third-Party Libraries & Licensing
+
+See the `ThirdParty-Licenses` folder for information regarding license details.

@@ -8,70 +8,59 @@
 
 <p align="center">
   <a href="https://github.com/mealie-recipes/mealie">
-    <img src="https://raw.githubusercontent.com/mealie-recipes/mealie/mealie-next/docs/docs/assets/img/mealie_icon.svg" alt="Mealie Logo" width="100" height="100">
+    <img src="https://github.com/mealie-recipes/mealie/blob/mealie-next/docs/docs/assets/img/logo_dark.png?raw=true" alt="Mealie Logo" width="100" height="100">
   </a>
+  <h1 align="center">Mealie - Self-Hosted Recipe Manager & Meal Planner</h1>
+  <p align="center">
+    Organize your recipes, plan your meals, and generate shopping lists with Mealie, a user-friendly and feature-rich application.
+    <br />
+    <a href="https://docs.mealie.io/"><strong>Explore the Docs</strong></a>
+    ·
+    <a href="https://demo.mealie.io/">View Demo</a>
+    ·
+    <a href="https://github.com/mealie-recipes/mealie/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/mealie-recipes/mealie/pkgs/container/mealie">GitHub Container Registry</a>
+  </p>
 </p>
-
-<h1 align="center">Mealie: Your Self-Hosted Recipe Manager and Meal Planner</h1>
-
-**Tired of juggling recipes and meal planning? Mealie is your all-in-one solution for organizing recipes, planning meals, and generating shopping lists, all in a user-friendly, self-hosted application.**  Check out the [Mealie GitHub Repository](https://github.com/mealie-recipes/mealie)
-
-<p align="center">
-  <a href="https://docs.mealie.io/"><strong>Explore the Docs</strong></a>
-  ·
-  <a href="https://demo.mealie.io/">Live Demo</a>
-  ·
-  <a href="https://github.com/mealie-recipes/mealie/issues">Report Bug</a>
-  ·
-  <a href="https://github.com/mealie-recipes/mealie/pkgs/container/mealie">GitHub Container Registry</a>
-</p>
-
-[![Mealie Screenshot](docs/docs/assets/img/home_screenshot.png)](https://docs.mealie.io)
 
 ## About Mealie
 
-Mealie is a robust, self-hosted recipe manager and meal planner designed for the modern home cook. Built with a RestAPI backend and a reactive frontend in Vue, Mealie offers a seamless and enjoyable user experience. Effortlessly add recipes, whether by importing them from a URL, or inputting your own from scratch! Plus, with an API, you can even integrate Mealie with other third-party applications.
+Mealie is a self-hosted recipe manager, meal planner, and shopping list application designed for ease of use and a pleasant experience for the whole family.  With a REST API backend and a reactive frontend built with Vue, Mealie makes it simple to manage your culinary life.  [Visit the original repository](https://github.com/mealie-recipes/mealie) to learn more and get started!
 
-- Join the Community: [Discord](https://discord.gg/QuStdQGSGK)
-- Get Started: [Documentation](https://docs.mealie.io/)
+<br />
+[![Mealie Screenshot](docs/docs/assets/img/home_screenshot.png)](https://docs.mealie.io)
 
 ## Key Features
 
-*   **Recipe Import:** Quickly create recipes by importing them from a URL or entering data manually.
-*   **Meal Planning:** Plan your weekly meals with the intuitive Meal Planner.
-*   **Shopping List:** Generate and organize shopping lists, grouped by supermarket sections.
-*   **Cookbooks:** Organize your recipes into custom cookbooks.
-*   **Docker Deployment:** Easy and efficient deployment using Docker.
-*   **Localization:** Available in 35+ languages for a global audience.
-*   **API Access**: Integrates with your other smart-home and recipe applications
+*   **Recipe Importing:** Easily add recipes by importing from URLs; Mealie automatically extracts the relevant data.
+*   **Manual Recipe Entry:** Create and customize your family recipes with the intuitive UI editor.
+*   **Meal Planning:** Plan your weekly meals using the integrated meal planner.
+*   **Shopping List Generation:** Generate organized shopping lists, categorized by supermarket sections, to simplify your grocery shopping.
+*   **Cookbooks:** Organize recipes into custom cookbooks for easy access and categorization.
+*   **Docker Support:** Deploy Mealie quickly and easily with Docker.
+*   **Multi-Language Support:** Enjoy Mealie in 35+ languages.
 
 ## Contributing
 
-Contributions are welcome and greatly appreciated! Whether you're a coder, translator, or simply want to support the project, your input is valued.
+Contributions are welcomed and appreciated!  See the [Contributors Guide](https://nightly.mealie.io/contributors/developers-guide/code-contributions/) for help getting started.
 
-*   Review the [Contributor's Guide](https://nightly.mealie.io/contributors/developers-guide/code-contributions/) to get started.
-*   Use [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) for a streamlined development environment.
-
-**Financial Contributions:** Support the project by contributing financially. This helps prioritize development and demonstrates demand.
-
-<a href="https://www.buymeacoffee.com/haykot" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 30px !important;width: 107px !important;" ></a>
+*   **Coding:** Use [VSCode Dev Containers](https://code.visualstudio.com/docs/remote/containers) for a streamlined development experience.
+*   **Financial:** Support the project financially via [Buy Me a Coffee](https://www.buymeacoffee.com/haykot).
 
 ### Translations
 
-Help translate Mealie!  Non-coders can contribute by voting for preferred translations or translating the app into a new language via [Crowdin](https://crowdin.com/project/mealie).
-
-Learn more in the [contributor's guide](https://nightly.mealie.io/contributors/translating/).
+Non-coders can also contribute by translating Mealie into new languages or improving existing translations via [Crowdin](https://crowdin.com/project/mealie).  Find more information on the [contributor's guide](https://nightly.mealie.io/contributors/translating/).
 
 ## License
 
-Distributed under the AGPL License.  See `LICENSE` for more details.
+Distributed under the AGPL License. See `LICENSE` for more information.
 
 ## Sponsors
 
-A huge thank you to the sponsors on [GitHub Sponsors](https://github.com/sponsors/hay-kot) and Buy Me a Coffee for their support, which makes this project possible.
+A huge thank you to all sponsors on [Github Sponsors](https://github.com/sponsors/hay-kot) and Buy Me a Coffee.
 
 Special thanks to Depot for providing build instances for our Docker image builds.
-
 [![Built with Depot](https://depot.dev/badges/built-with-depot.svg)](https://depot.dev?utm_source=Mealie)
 
 <!-- MARKDOWN LINKS & IMAGES -->
