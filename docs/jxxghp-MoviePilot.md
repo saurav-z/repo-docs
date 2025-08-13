@@ -1,6 +1,6 @@
-# MoviePilot: Your Automated Movie & Media Management Solution
+# MoviePilot: Your Ultimate Automation Solution for Media Management
 
-MoviePilot is a powerful and user-friendly application designed to streamline your movie and media library management.  Explore the original project on GitHub: [MoviePilot](https://github.com/jxxghp/MoviePilot).
+[Original Repository](https://github.com/jxxghp/MoviePilot)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 [![GitHub forks](https://img.shields.io/github/forks/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
@@ -11,49 +11,57 @@ MoviePilot is a powerful and user-friendly application designed to streamline yo
 [![Docker Pulls V2](https://img.shields.io/docker/pulls/jxxghp/moviepilot-v2?style=for-the-badge)](https://hub.docker.com/r/jxxghp/moviepilot-v2)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20Synology-blue?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 
+MoviePilot is a reimagined media management tool built for automation, offering a streamlined experience for users seeking efficiency and ease of use.
+
 ## Key Features
 
-*   **Frontend & Backend Separation:** Built with a modern architecture using FastAPI (backend) and Vue3 (frontend) for enhanced performance and flexibility.
-*   **Simplified Design:**  Focuses on core automation needs, reducing complexity and offering sensible defaults for ease of use.
-*   **Intuitive User Interface:** Experience a redesigned, visually appealing, and user-friendly interface.
-*   **Extensible with Plugins:** Customize and extend functionality through plugin development.
+*   **Frontend & Backend Separation:** Built on FastApi + Vue3 for a modern, responsive user interface.
+*   **Focused Core Functionality:** Simplifies features and settings, making the platform easier to understand and use.
+*   **Enhanced User Interface:** Redesigned UI for a more intuitive and visually appealing experience.
+*   **Extensible with Plugins:** Supports plugin development for extending functionality.
 
-## Installation and Usage
+## Installation & Usage
 
-For detailed instructions on installation and configuration, please refer to the official Wiki: [MoviePilot Wiki](https://wiki.movie-pilot.org)
+For detailed instructions, please refer to the official Wiki: [https://wiki.movie-pilot.org](https://wiki.movie-pilot.org)
 
 ### Prerequisites
 
 *   Python 3.12
-*   Node.js v20.12.1
+*   Node JS v20.12.1
 
 ### Installation Steps
 
 1.  **Clone the Main Project:**
-    ```shell
+    ```bash
     git clone https://github.com/jxxghp/MoviePilot
     ```
-2.  **Clone the Resources Project:**
-    ```shell
+2.  **Clone the Resources Project:**  Get necessary platform-specific libraries.
+    ```bash
     git clone https://github.com/jxxghp/MoviePilot-Resources
     ```
-    Copy the necessary `.so`, `.pyd`, or `.bin` files from the `MoviePilot-Resources/resources` directory (matching your platform and version) to the `MoviePilot/app/helper` directory.
-3.  **Install Backend Dependencies & Run Backend:**
-    ```shell
-    cd MoviePilot
+    *   Copy the correct `.so`/`.pyd`/`.bin` files from the `MoviePilot-Resources/resources` directory to `MoviePilot/app/helper`.
+3.  **Install Backend Dependencies:**
+    ```bash
+    cd MoviePilot/app
     pip install -r requirements.txt
     python3 main.py
     ```
-    The backend will start on port 3001 by default.  Access the API documentation at `http://localhost:3001/docs`.
-4.  **Clone and Run the Frontend Project:**
-    ```shell
+    *   The backend service runs on port `3001` by default.
+    *   API Documentation: `http://localhost:3001/docs`
+4.  **Clone the Frontend Project:**
+    ```bash
     git clone https://github.com/jxxghp/MoviePilot-Frontend
+    ```
+5.  **Install Frontend Dependencies & Run:**
+    ```bash
     cd MoviePilot-Frontend
     yarn
     yarn dev
     ```
-    The frontend will be accessible at `http://localhost:5173`.
-5.  **Develop Plugins:** Consult the [Plugin Development Guide](https://wiki.movie-pilot.org/zh/plugindev) to develop plugins in the `app/plugins` directory.
+    *   Access the frontend at `http://localhost:5173`
+
+6.  **Develop Plugins:**
+    *   Consult the [plugin development guide](https://wiki.movie-pilot.org/zh/plugindev) for creating custom plugins in the `MoviePilot/app/plugins` directory.
 
 ## Related Projects
 
@@ -65,11 +73,9 @@ For detailed instructions on installation and configuration, please refer to the
 
 ## Disclaimer
 
-*   This software is for learning and educational purposes only.
-*   It is not intended for commercial use or any illegal activities.
-*   The developers are not responsible for user actions.
-*   The code is open-source.  Modifications that circumvent restrictions and lead to misuse are the responsibility of the modifier.
-*   Donations are not accepted.
+*   This software is for learning and communication purposes only. Do not use it for commercial purposes or illegal activities.  Users are solely responsible for their actions.
+*   This project is open source. Users are responsible for any modifications and resulting issues.
+*   The project does not accept donations.
 
 ## Contributors
 

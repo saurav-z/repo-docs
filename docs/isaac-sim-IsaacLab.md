@@ -2,7 +2,7 @@
 
 # Isaac Lab: Accelerate Your Robotics Research with GPU-Powered Simulation
 
-**Isaac Lab is a cutting-edge, open-source framework built on NVIDIA Isaac Sim, designed to streamline robotics research workflows by providing fast, accurate, and GPU-accelerated simulations.** Explore the possibilities and contribute to the future of robotics with [Isaac Lab](https://github.com/isaac-sim/IsaacLab)!
+**Isaac Lab is an open-source framework built on NVIDIA Isaac Sim, empowering robotics researchers with GPU-accelerated simulation for reinforcement learning, imitation learning, and motion planning.**  Explore the power of realistic physics and sensor simulation for your robotics projects.  Find out more on the original repository [here](https://github.com/isaac-sim/IsaacLab).
 
 [![IsaacSim](https://img.shields.io/badge/IsaacSim-5.0.0-silver.svg)](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)
 [![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://docs.python.org/3/whatsnew/3.11.html)
@@ -15,24 +15,21 @@
 
 ## Key Features
 
-Isaac Lab offers a comprehensive suite of features to facilitate your robotics research:
+*   **Realistic Simulation:** Leverage the power of NVIDIA Isaac Sim for accurate physics and sensor simulation, enabling sim-to-real transfer.
+*   **GPU Acceleration:**  Run complex simulations and computations faster with GPU acceleration, crucial for iterative processes like reinforcement learning.
+*   **Diverse Robotics Support:**  Includes a comprehensive selection of robots, environments, physics and sensors for a wide variety of research applications.
 
-*   **Diverse Robot Models:** Access a wide range of robot models, including manipulators, quadrupeds, and humanoids, with 16 commonly available models.
-*   **Rich Environments:** Train your robots with over 30 ready-to-use environments, compatible with popular reinforcement learning frameworks like RSL RL, SKRL, RL Games, and Stable Baselines, as well as multi-agent reinforcement learning.
-*   **Advanced Physics Simulation:** Leverage accurate and fast physics simulation with rigid bodies, articulated systems, and deformable objects.
-*   **Realistic Sensor Simulation:** Utilize a variety of sensors, including RGB/depth/segmentation cameras, camera annotations, IMU, contact sensors, and ray casters.
-*   **GPU-Accelerated Performance:** Benefit from GPU acceleration for faster simulations and computations, ideal for iterative processes like reinforcement learning.
-*   **Flexible Deployment:** Run simulations locally or distribute them across the cloud for large-scale deployments.
+    *   **Robots:** 16+ pre-built robot models (manipulators, quadrupeds, humanoids).
+    *   **Environments:**  30+ ready-to-train environments, compatible with popular RL frameworks (RSL RL, SKRL, RL Games, Stable Baselines) and MARL.
+    *   **Physics:** Support for rigid bodies, articulated systems, and deformable objects.
+    *   **Sensors:**  Simulated RGB/depth/segmentation cameras, IMUs, contact sensors, and ray casters.
+*   **Flexible Deployment:** Run simulations locally or in the cloud for scalability.
 
 ## Getting Started
 
-### Prerequisites:
+### Prerequisites
 
-*   [NVIDIA Isaac Sim](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html) - Ensure you have a compatible version installed. See the version dependency table below.
-
-### Installation
-
-Follow these steps to get Isaac Lab up and running:
+Before you begin, ensure you have installed NVIDIA Isaac Sim. Detailed installation instructions are in the [Isaac Sim README](https://github.com/isaac-sim/IsaacSim?tab=readme-ov-file#quick-start).
 
 1.  **Clone Isaac Sim:**
 
@@ -55,112 +52,111 @@ Follow these steps to get Isaac Lab up and running:
     cd isaaclab
     ```
 
-4.  **Set up symlink:**
+4.  **Set up Symlink (Linux):**
 
-    *   **Linux:**
+    ```bash
+    ln -s ../IsaacSim/_build/linux-x86_64/release _isaac_sim
+    ```
 
-        ```bash
-        ln -s ../IsaacSim/_build/linux-x86_64/release _isaac_sim
-        ```
+    **Set up Symlink (Windows):**
 
-    *   **Windows:**
+    ```bash
+    mklink /D _isaac_sim ..\IsaacSim\_build\windows-x86_64\release
+    ```
 
-        ```bash
-        mklink /D _isaac_sim ..\IsaacSim\_build\windows-x86_64\release
-        ```
+5.  **Install Isaac Lab (Linux):**
 
-5.  **Install Isaac Lab:**
+    ```bash
+    ./isaaclab.sh -i
+    ```
 
-    *   **Linux:**
+    **Install Isaac Lab (Windows):**
 
-        ```bash
-        ./isaaclab.sh -i
-        ```
+    ```bash
+    isaaclab.bat -i
+    ```
 
-    *   **Windows:**
+6.  **(Optional) Set up a Virtual Environment:**
 
-        ```bash
-        isaaclab.bat -i
-        ```
+    **Linux (Conda):**
 
-6.  **(Optional) Set up a virtual Python environment:**
+    ```bash
+    source _isaac_sim/setup_conda_env.sh
+    ```
 
-    *   **Linux:**
+    **Windows:**
 
-        ```bash
-        source _isaac_sim/setup_conda_env.sh
-        ```
-
-    *   **Windows:**
-
-        ```bash
-        _isaac_sim\setup_python_env.bat
-        ```
+    ```bash
+    _isaac_sim\setup_python_env.bat
+    ```
 
 7.  **Train!**
 
-    *   **Linux:**
+    **Linux:**
 
-        ```bash
-        ./isaaclab.sh -p scripts/reinforcement_learning/skrl/train.py --task Isaac-Ant-v0 --headless
-        ```
+    ```bash
+    ./isaaclab.sh -p scripts/reinforcement_learning/skrl/train.py --task Isaac-Ant-v0 --headless
+    ```
 
-    *   **Windows:**
+    **Windows:**
 
-        ```bash
-        isaaclab.bat -p scripts\reinforcement_learning\skrl\train.py --task Isaac-Ant-v0 --headless
-        ```
+    ```bash
+    isaaclab.bat -p scripts\reinforcement_learning\skrl\train.py --task Isaac-Ant-v0 --headless
+    ```
 
-### Documentation & Resources
+### Documentation
 
-*   **Documentation:** Find detailed tutorials, installation guides, and more at our [documentation page](https://isaac-sim.github.io/IsaacLab).
-    *   [Installation steps](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html#local-installation)
-    *   [Reinforcement learning](https://isaac-sim.github.io/IsaacLab/main/source/overview/reinforcement-learning/rl_existing_scripts.html)
-    *   [Tutorials](https://isaac-sim.github.io/IsaacLab/main/source/tutorials/index.html)
-    *   [Available environments](https://isaac-sim.github.io/IsaacLab/main/source/overview/environments.html)
+Find comprehensive guides and tutorials at our documentation page:
+
+*   [Installation steps](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html#local-installation)
+*   [Reinforcement learning](https://isaac-sim.github.io/IsaacLab/main/source/overview/reinforcement-learning/rl_existing_scripts.html)
+*   [Tutorials](https://isaac-sim.github.io/IsaacLab/main/source/tutorials/index.html)
+*   [Available environments](https://isaac-sim.github.io/IsaacLab/main/source/overview/environments.html)
 
 ## Isaac Sim Version Compatibility
 
-Ensure you use the correct Isaac Sim version with your Isaac Lab release:
+Ensure you use the correct Isaac Sim version for your Isaac Lab release:
 
-| Isaac Lab Version             | Isaac Sim Version   |
-| ----------------------------- | ------------------- |
-| `main` branch                 | Isaac Sim 4.5 / 5.0 |
-| `v2.2.0`                      | Isaac Sim 4.5 / 5.0 |
-| `v2.1.1`                      | Isaac Sim 4.5       |
-| `v2.1.0`                      | Isaac Sim 4.5       |
-| `v2.0.2`                      | Isaac Sim 4.5       |
-| `v2.0.1`                      | Isaac Sim 4.5       |
-| `v2.0.0`                      | Isaac Sim 4.5       |
+| Isaac Lab Version       | Isaac Sim Version   |
+| ----------------------- | ------------------- |
+| `main` branch           | Isaac Sim 4.5 / 5.0 |
+| `v2.2.0`                | Isaac Sim 4.5 / 5.0 |
+| `v2.1.1`                | Isaac Sim 4.5       |
+| `v2.1.0`                | Isaac Sim 4.5       |
+| `v2.0.2`                | Isaac Sim 4.5       |
+| `v2.0.1`                | Isaac Sim 4.5       |
+| `v2.0.0`                | Isaac Sim 4.5       |
 
 ## Contributing
 
-We welcome contributions from the community! Please see our [contribution guidelines](https://isaac-sim.github.io/IsaacLab/main/source/refs/contributing.html) for details on how to contribute.
+We welcome community contributions!  Review the [contribution guidelines](https://isaac-sim.github.io/IsaacLab/main/source/refs/contributing.html) for details.
 
-## Show & Tell: Share Your Work
+## Show & Tell: Share Your Projects
 
-We encourage you to showcase your projects and tutorials in the [Show & Tell](https://github.com/isaac-sim/IsaacLab/discussions/categories/show-and-tell) section of our Discussions. Share your work to inspire others and foster collaboration within the community.
+Showcase your work and inspire others in the [Show & Tell](https://github.com/isaac-sim/IsaacLab/discussions/categories/show-and-tell) section.
 
-## Troubleshooting & Support
+## Troubleshooting
 
-*   **Troubleshooting:** Consult the [troubleshooting](https://isaac-sim.github.io/IsaacLab/main/source/refs/troubleshooting.html) section for common issues.
-*   **Issues:** Report bugs and feature requests via [GitHub Issues](https://github.com/isaac-sim/IsaacLab/issues).
-*   **Isaac Sim Issues:** For issues related to Isaac Sim, refer to the [Isaac Sim documentation](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html) or the [Isaac Sim forums](https://forums.developer.nvidia.com/c/agx-autonomous-machines/isaac/67).
-*   **Support:** Use [GitHub Discussions](https://github.com/isaac-sim/IsaacLab/discussions) for general questions and discussions.
+Consult the [troubleshooting](https://isaac-sim.github.io/IsaacLab/main/source/refs/troubleshooting.html) guide for common issues or [submit an issue](https://github.com/isaac-sim/IsaacLab/issues).
+
+For Isaac Sim-specific problems, check the [documentation](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html) or [forums](https://forums.developer.nvidia.com/c/agx-autonomous-machines/isaac/67).
+
+## Support
+
+*   Use GitHub [Discussions](https://github.com/isaac-sim/IsaacLab/discussions) for general discussions and feature requests.
+*   Report bugs and track development in GitHub [Issues](https://github.com/isaac-sim/IsaacLab/issues).
 
 ## Connect with the NVIDIA Omniverse Community
 
-For opportunities to spotlight your work, reach out to the NVIDIA Omniverse Community team at OmniverseCommunity@nvidia.com.
-
-Join the conversation on the [Omniverse Discord](https://discord.com/invite/nvidiaomniverse) to connect with other developers and grow the ecosystem.
+Share your projects and collaborate by contacting the NVIDIA Omniverse Community team at OmniverseCommunity@nvidia.com or joining the [Omniverse Discord](https://discord.com/invite/nvidiaomniverse).
 
 ## License
 
-The Isaac Lab framework is licensed under the [BSD-3 License](LICENSE). The `isaaclab_mimic` extension and standalone scripts are licensed under [Apache 2.0](LICENSE-mimic). Dependency and asset licenses are located in the [`docs/licenses`](docs/licenses) directory.
+Released under the [BSD-3 License](LICENSE). The `isaaclab_mimic` extension is under [Apache 2.0](LICENSE-mimic). Dependencies are in the [`docs/licenses`](docs/licenses) directory.
 
 ## Acknowledgement
 
-Isaac Lab is built upon the foundation of the [Orbit](https://isaac-orbit.github.io/) framework. If you use Isaac Lab in your academic work, please cite the following paper:
+This project is based on the [Orbit](https://isaac-orbit.github.io/) framework. Please cite the following paper:
 
 ```
 @article{mittal2023orbit,

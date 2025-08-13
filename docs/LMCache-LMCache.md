@@ -21,70 +21,64 @@
 
 </div>
 
----
+## LMCache: Accelerate LLM Serving with Intelligent KV Cache Management
 
-## LMCache: Accelerate LLM Serving with Efficient KV Cache Management
+LMCache dramatically boosts the performance of LLM serving by efficiently caching and reusing Key-Value (KV) caches, significantly reducing latency and cost. Visit the [LMCache GitHub repository](https://github.com/LMCache/LMCache) to get started!
 
-LMCache is a powerful extension for LLM serving engines, designed to dramatically improve performance by optimizing KV cache management.  For more information, visit the [LMCache GitHub repository](https://github.com/LMCache/LMCache).
+### Key Features
 
-**Key Features:**
+*   **Reduced TTFT & Increased Throughput:** Minimize Time-to-First-Token and maximize the number of requests your LLM serving can handle.
+*   **KV Cache Reuse:** Reuses KV caches for any reused text across different serving engine instances, saving GPU cycles.
+*   **vLLM Integration:** Optimized for vLLM v1, offering high-performance CPU KV Cache offloading, disaggregated prefill, and P2P KV Cache sharing.
+*   **Multi-Storage Support:** Store KV caches in CPU, Disk, and NIXL for optimal flexibility and cost-efficiency.
+*   **Production-Ready:** Supported by the [vLLM production stack](https://github.com/vllm-project/production-stack/), [llm-d](https://github.com/llm-d/llm-d/), and [KServe](https://github.com/kserve).
+*   **Stable Non-Prefix Cache Support:** Provides reliable support for KV caches, independent of the prefix.
 
-*   **Reduced TTFT (Time-To-First-Token) and Increased Throughput:** Experience faster responses and handle more requests with LMCache's optimized KV caching.
-*   **KV Cache Reuse:** Reuse KV caches for any reused text, not just prefixes, saving GPU cycles and reducing latency.
-*   **vLLM Integration:** Seamlessly integrates with vLLM, providing high-performance CPU KVCache offloading, disaggregated prefill, and P2P KVCache sharing.
-*   **Production-Ready:** Supported in the vLLM production stack, llm-d, and KServe.
-*   **Non-Prefix Cache Support:** Stable support for caching non-prefix KV data, expanding reusability.
-*   **Flexible Storage Options:** Supports caching on CPU, Disk, and [NIXL](https://github.com/ai-dynamo/nixl).
+### Installation
 
-## Installation
-
-Install LMCache easily using pip:
+Easily install LMCache using pip:
 
 ```bash
 pip install lmcache
 ```
 
-*   **Platform:** Works on Linux NVIDIA GPU platforms.
-*   **Detailed Installation:**  Refer to the [detailed installation instructions](https://docs.lmcache.ai/getting_started/installation) in the documentation.
+For detailed instructions, refer to the [installation guide](https://docs.lmcache.ai/getting_started/installation) in our documentation.
 
-## Getting Started
+### Getting Started
 
-Start using LMCache quickly with our [Quickstart Examples](https://docs.lmcache.ai/getting_started/quickstart/) in the documentation.
+Explore our [Quickstart Examples](https://docs.lmcache.ai/getting_started/quickstart/) to quickly understand and implement LMCache in your projects.
 
-## Documentation
+### Documentation
 
-Explore comprehensive documentation for LMCache: [https://docs.lmcache.ai/](https://docs.lmcache.ai/)
+Access comprehensive documentation at [docs.lmcache.ai](https://docs.lmcache.ai/) to learn more about features, usage, and advanced configurations.
+Stay updated with the latest news and insights through our [blog](https://blog.lmcache.ai/).
 
-Stay updated with the latest news on our [LMCache blogs](https://blog.lmcache.ai/).
+### Examples
 
-## Examples
+Dive into practical applications with our [examples](https://github.com/LMCache/LMCache/tree/dev/examples) to see how LMCache can address various use cases.
 
-Explore practical implementations in our [examples](https://github.com/LMCache/LMCache/tree/dev/examples) directory, showing how to apply LMCache to various use cases.
+### Interested in Connecting?
 
-## Interested in Connecting?
-
-Connect with the LMCache community:
-
+Join our community and stay informed:
 *   **Interest Form:** [Interest Form](https://forms.gle/MHwLiYDU6kcW3dLj7)
-*   **Newsletter:**  [Sign up for our newsletter](https://mailchi.mp/tensormesh/lmcache-sign-up-newsletter)
-*   **Slack:** [Join LMCache slack](https://join.slack.com/t/lmcacheworkspace/shared_invite/zt-2viziwhue-5Amprc9k5hcIdXT7XevTaQ)
-*   **Website:** [LMCache Website](https://lmcache.ai/)
+*   **Newsletter:** [Sign Up](https://mailchi.mp/tensormesh/lmcache-sign-up-newsletter)
+*   **Slack:** [Join Slack](https://join.slack.com/t/lmcacheworkspace/shared_invite/zt-36x1m765z-8FgDA_73vcXtlZ_4XvpE6Q)
+*   **Website:** [lmcache.ai](https://lmcache.ai/)
 *   **Email:** [contact@lmcache.ai](mailto:contact@lmcache.ai)
 
-## Community Meetings
+### Community Meeting
 
-*   **Frequency:** Bi-weekly
-*   **Schedule:** Tuesdays at 9:00 AM PT - [Add to Calendar](https://drive.usercontent.google.com/u/0/uc?id=1f5EXbooGcwNwzIpTgn5u4PHqXgfypMtu&export=download)
+*   **Schedule:** Bi-weekly on Tuesdays at 9:00 AM PT. [Add to Calendar](https://drive.usercontent.google.com/u/0/uc?id=1f5EXbooGcwNwzIpTgn5u4PHqXgfypMtu&export=download)
 *   **Meeting Notes:** [Meeting Notes](https://docs.google.com/document/d/1_Fl3vLtERFa3vTH00cezri78NihNBtSClK-_1tSrcow)
 *   **Recordings:** [YouTube Channel](https://www.youtube.com/channel/UC58zMz55n70rtf1Ak2PULJA)
 
-## Contributing
+### Contributing
 
-We welcome your contributions! Check our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions! Review our [Contributing Guide](CONTRIBUTING.md) to learn how to contribute.
 
-## Citation
+### Citation
 
-If you use LMCache in your research, please cite our papers:
+If you use LMCache for your research, please cite our papers:
 
 ```
 @inproceedings{liu2024cachegen,
@@ -113,12 +107,12 @@ If you use LMCache in your research, please cite our papers:
 }
 ```
 
-## Socials
+### Socials
 
 *   [LinkedIn](https://www.linkedin.com/company/lmcache-lab/?viewAsMember=true)
 *   [Twitter](https://x.com/lmcache)
 *   [YouTube](https://www.youtube.com/@LMCacheTeam)
 
-## License
+### License
 
 LMCache is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.

@@ -1,186 +1,145 @@
-# Wan2.2: Unleash Cinematic Video Generation with Advanced AI
+# Wan2.2: Unleashing Cinematic Video Generation with Advanced AI
 
-**Wan2.2** is a cutting-edge open-source video generation model that empowers users to create stunning, cinematic-quality videos with unprecedented ease and control.  [Explore Wan2.2 on GitHub](https://github.com/Wan-Video/Wan2.2)!
+**Wan2.2** is a cutting-edge, open-source video generation model that empowers you to create stunning, cinematic-quality videos from text, images, or a combination of both.  Dive into the future of video creation!  [See the original repo](https://github.com/Wan-Video/Wan2.2).
 
 <p align="center">
     <img src="assets/logo.png" width="400"/>
 <p>
 
-<p align="center">
-    💜 <a href="https://wan.video"><b>Wan</b></a> &nbsp&nbsp ｜ &nbsp&nbsp 🖥️ <a href="https://github.com/Wan-Video/Wan2.2">GitHub</a> &nbsp&nbsp  | &nbsp&nbsp🤗 <a href="https://huggingface.co/Wan-AI/">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/Wan-AI">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2503.20314">Paper</a> &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://wan.video/welcome?spm=a2ty_o02.30011076.0.0.6c9ee41eCcluqg">Blog</a> &nbsp&nbsp |  &nbsp&nbsp 💬  <a href="https://discord.gg/AKNgpMK4Yj">Discord</a>&nbsp&nbsp
-    <br>
-    📕 <a href="https://alidocs.dingtalk.com/i/nodes/jb9Y4gmKWrx9eo4dCql9LlbYJGXn6lpz">使用指南(中文)</a>&nbsp&nbsp | &nbsp&nbsp 📘 <a href="https://alidocs.dingtalk.com/i/nodes/EpGBa2Lm8aZxe5myC99MelA2WgN7R35y">User Guide(English)</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://gw.alicdn.com/imgextra/i2/O1CN01tqjWFi1ByuyehkTSB_!!6000000000015-0-tps-611-1279.jpg">WeChat(微信)</a>&nbsp&nbsp
-<br>
+[**Wan Paper**](https://arxiv.org/abs/2503.20314) | [**Wan Blog**](https://wan.video/welcome?spm=a2ty_o02.30011076.0.0.6c9ee41eCcluqg) | [**Discord**](https://discord.gg/AKNgpMK4Yj) | [**User Guide (English)**](https://alidocs.dingtalk.com/i/nodes/EpGBa2Lm8aZxe5myC99MelA2WgN7R35y)
 
 ---
 
-## Key Features
+## Key Features:
 
-*   **Mixture-of-Experts (MoE) Architecture:**  Leverages an innovative MoE design to boost model capacity while maintaining efficient computational costs, allowing for richer details and enhanced video quality.
-*   **Cinematic Aesthetics:**  Trained on a meticulously curated dataset with detailed aesthetic labels, empowering users with precise control over lighting, composition, color grading, and overall cinematic style.
-*   **Advanced Motion Generation:** Trained on a significantly expanded dataset to produce videos with realistic and intricate motions, surpassing the capabilities of previous iterations.
-*   **Efficient High-Definition Hybrid TI2V:**  Offers a fast, efficient 5B model for text-to-video and image-to-video generation at 720P resolution and 24fps, making high-quality video creation accessible on consumer-grade hardware.
+*   🎬 **Mixture-of-Experts (MoE) Architecture:**  Leverages a sophisticated MoE design to enhance model capacity without increasing computational cost, resulting in higher-quality video output.
+*   🎨 **Cinematic Aesthetics Control:**  Trained with meticulously curated aesthetic data, offering unparalleled control over lighting, composition, color tones, and other elements for professional-grade video generation.
+*   🚀 **Enhanced Motion and Detail:** Built on a significantly larger dataset, Wan2.2 excels at generating complex motions, richer semantics, and refined aesthetics, outperforming other open and closed-source models.
+*   ⚡ **Efficient High-Definition Generation:** Open-sources a fast 5B model (TI2V-5B) capable of generating 720P videos at 24fps on consumer-grade GPUs, making it ideal for both research and industrial applications.
 
-## Recent Updates & Integrations
+## Key Highlights and Updates:
 
-*   **HF Space:** Launch of a [Hugging Face Space](https://huggingface.co/spaces/Wan-AI/Wan-2.2-5B) utilizing the TI2V-5B model.
-*   **ComfyUI Integration:**  Now seamlessly integrated with ComfyUI ([CN](https://docs.comfy.org/zh-CN/tutorials/video/wan/wan2_2) | [EN](https://docs.comfy.org/tutorials/video/wan/wan2_2)).
-*   **Diffusers Integration:**  T2V, I2V, and TI2V models integrated into Diffusers ([T2V-A14B](https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers) | [I2V-A14B](https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers) | [TI2V-5B](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers)).
-*   **Model Release:** Inference code and model weights for Wan2.2 are now available.
+*   **Latest News:** The latest integration of Wan2.2 into ComfyUI and Diffusers, and the TI2V-5B model has been released on Hugging Face.
+*   **Model Availability:** Comprehensive support for Text-to-Video (T2V), Image-to-Video (I2V), and Text-Image-to-Video (TI2V) generation.
+*   **Performance:** Superior video generation quality compared to leading commercial models.
+*   **Efficiency:** Detailed benchmark results on computational efficiency, including multi-GPU tests.
 
-## Video Demos
-
+## Demos
 <div align="center">
   <video src="https://github.com/user-attachments/assets/b63bfa58-d5d7-4de6-a1a2-98970b06d9a7" width="70%" poster=""> </video>
 </div>
 
-## Community Contributions
+## Community Works
+Explore community resources:
+- [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio)
+- [Kijai's ComfyUI WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
 
-*   **DiffSynth-Studio:** Provides comprehensive support for Wan 2.2, including optimizations like low-GPU-memory offload and FP8 quantization.
-*   **Kijai's ComfyUI WanVideoWrapper:** An alternative implementation for ComfyUI, offering cutting-edge optimizations.
+## Getting Started:
 
-## Getting Started
+### Installation:
 
-### Installation
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/Wan-Video/Wan2.2.git
+    cd Wan2.2
+    ```
 
-```bash
-git clone https://github.com/Wan-Video/Wan2.2.git
-cd Wan2.2
-pip install -r requirements.txt
-```
+2.  Install the required packages:
+    ```bash
+    # Ensure torch >= 2.4.0
+    # If the installation of `flash_attn` fails, try installing the other packages first and install `flash_attn` last
+    pip install -r requirements.txt
+    ```
 
-**Important:** Ensure `torch >= 2.4.0`. If `flash_attn` installation fails, try installing other packages first.
+### Model Download:
 
-### Model Downloads
+Choose your model and download it from Hugging Face or ModelScope.
 
-Download the necessary models from Hugging Face or ModelScope:
+| Models              | Download Links                                                                                                                              | Description |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| T2V-A14B    | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B)    🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-T2V-A14B)    | Text-to-Video MoE model, supports 480P & 720P |
+| I2V-A14B    | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B)    🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-I2V-A14B)    | Image-to-Video MoE model, supports 480P & 720P |
+| TI2V-5B     | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B)     🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-TI2V-5B)     | High-compression VAE, T2V+I2V, supports 720P |
 
-| Model | Download Link                                                                   | Description                                    |
-| ----- | ------------------------------------------------------------------------------- | ---------------------------------------------- |
-| T2V-A14B | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B)    🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-T2V-A14B) | Text-to-Video MoE, 480P & 720P                 |
-| I2V-A14B | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B)    🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-I2V-A14B) | Image-to-Video MoE, 480P & 720P                |
-| TI2V-5B | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B)     🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-TI2V-5B)     | High-Compression VAE, T2V+I2V, 720P, 24 FPS |
-
-> **Note:** TI2V-5B is optimized for 720P @ 24 FPS video generation.
-
-#### Hugging Face CLI Download Example
-
-```bash
+#### Using Hugging Face CLI
+``` sh
 pip install "huggingface_hub[cli]"
 huggingface-cli download Wan-AI/Wan2.2-T2V-A14B --local-dir ./Wan2.2-T2V-A14B
 ```
 
-#### ModelScope CLI Download Example
-
-```bash
+#### Using ModelScope CLI
+``` sh
 pip install modelscope
 modelscope download Wan-AI/Wan2.2-T2V-A14B --local_dir ./Wan2.2-T2V-A14B
 ```
 
-### Running Text-to-Video Generation
+### Running the Models:
 
-#### (1) Basic Generation
+Detailed instructions for running text-to-video, image-to-video, and text-image-to-video generation, including multi-GPU support and prompt extension, are available in the original README.  See the original README for detailed usage instructions.
 
-```bash
-python generate.py --task t2v-A14B --size 1280*720 --ckpt_dir ./Wan2.2-T2V-A14B --offload_model True --convert_model_dtype --prompt "Two anthropomorphic cats in comfy boxing gear and bright gloves fight intensely on a spotlighted stage."
-```
+##  Introduction of Wan2.2
 
-*   Requires at least 80GB VRAM.  Use `--offload_model True`, `--convert_model_dtype`, and `--t5_cpu` to reduce memory usage.
-*   Multi-GPU example using FSDP + DeepSpeed Ulysses
+**Wan2.2** builds on the foundation of Wan2.1 with notable improvements in generation quality and model capability. This upgrade is driven by a series of key technical innovations, mainly including the Mixture-of-Experts (MoE) architecture, upgraded training data, and high-compression video generation.
 
-```bash
-torchrun --nproc_per_node=8 generate.py --task t2v-A14B --size 1280*720 --ckpt_dir ./Wan2.2-T2V-A14B --dit_fsdp --t5_fsdp --ulysses_size 8 --prompt "Two anthropomorphic cats in comfy boxing gear and bright gloves fight intensely on a spotlighted stage."
-```
+##### (1) Mixture-of-Experts (MoE) Architecture
 
-#### (2) Using Prompt Extension (Recommended)
+Wan2.2 introduces Mixture-of-Experts (MoE) architecture into the video generation diffusion model. MoE has been widely validated in large language models as an efficient approach to increase total model parameters while keeping inference cost nearly unchanged. In Wan2.2, the A14B model series adopts a two-expert design tailored to the denoising process of diffusion models: a high-noise expert for the early stages, focusing on overall layout; and a low-noise expert for the later stages, refining video details. Each expert model has about 14B parameters, resulting in a total of 27B parameters but only 14B active parameters per step, keeping inference computation and GPU memory nearly unchanged.
 
-*   **Dashscope API:** Use Qwen-plus for T2V or Qwen-vl-max for I2V.  Requires a Dashscope API key.
-    ```bash
-    DASH_API_KEY=your_key torchrun --nproc_per_node=8 generate.py  --task t2v-A14B --size 1280*720 --ckpt_dir ./Wan2.2-T2V-A14B --dit_fsdp --t5_fsdp --ulysses_size 8 --prompt "Your prompt" --use_prompt_extend --prompt_extend_method 'dashscope' --prompt_extend_target_lang 'zh'
-    ```
-*   **Local Qwen Model:** Use models like `Qwen/Qwen2.5-14B-Instruct` (T2V) or  `Qwen/Qwen2.5-VL-7B-Instruct` (I2V) .
+<div align="center">
+    <img src="assets/moe_arch.png" alt="" style="width: 90%;" />
+</div>
 
-    ```bash
-    torchrun --nproc_per_node=8 generate.py  --task t2v-A14B --size 1280*720 --ckpt_dir ./Wan2.2-T2V-A14B --dit_fsdp --t5_fsdp --ulysses_size 8 --prompt "Your prompt" --use_prompt_extend --prompt_extend_method 'local_qwen' --prompt_extend_target_lang 'zh'
-    ```
+The transition point between the two experts is determined by the signal-to-noise ratio (SNR), a metric that decreases monotonically as the denoising step $t$ increases. At the beginning of the denoising process, $t$ is large and the noise level is high, so the SNR is at its minimum, denoted as ${SNR}_{min}$. In this stage, the high-noise expert is activated. We define a threshold step ${t}_{moe}$ corresponding to half of the ${SNR}_{min}$, and switch to the low-noise expert when $t<{t}_{moe}$.
 
-### Running Image-to-Video Generation
+<div align="center">
+    <img src="assets/moe_2.png" alt="" style="width: 90%;" />
+</div>
 
-```bash
-python generate.py --task i2v-A14B --size 1280*720 --ckpt_dir ./Wan2.2-I2V-A14B --offload_model True --convert_model_dtype --image examples/i2v_input.JPG --prompt "Summer beach vacation style, a white cat wearing sunglasses sits on a surfboard..."
-```
+To validate the effectiveness of the MoE architecture, four settings are compared based on their validation loss curves. The baseline **Wan2.1** model does not employ the MoE architecture. Among the MoE-based variants, the **Wan2.1 & High-Noise Expert** reuses the Wan2.1 model as the low-noise expert while uses the  Wan2.2's high-noise expert, while the **Wan2.1 & Low-Noise Expert** uses Wan2.1 as the high-noise expert and employ the Wan2.2's low-noise expert. The **Wan2.2 (MoE)** (our final version) achieves the lowest validation loss, indicating that its generated video distribution is closest to ground-truth and exhibits superior convergence.
 
-*   `size` parameter respects the aspect ratio of the input image.
-*   Multi-GPU example (FSDP + DeepSpeed Ulysses):
 
-```bash
-torchrun --nproc_per_node=8 generate.py --task i2v-A14B --size 1280*720 --ckpt_dir ./Wan2.2-I2V-A14B --image examples/i2v_input.JPG --dit_fsdp --t5_fsdp --ulysses_size 8 --prompt "Your prompt"
-```
+##### (2) Efficient High-Definition Hybrid TI2V
+To enable more efficient deployment, Wan2.2 also explores a high-compression design. In addition to the 27B MoE models, a 5B dense model, i.e., TI2V-5B, is released. It is supported by a high-compression Wan2.2-VAE, which achieves a $T\times H\times W$ compression ratio of $4\times16\times16$, increasing the overall compression rate to 64 while maintaining high-quality video reconstruction. With an additional patchification layer, the total compression ratio of TI2V-5B reaches $4\times32\times32$. Without specific optimization, TI2V-5B can generate a 5-second 720P video in under 9 minutes on a single consumer-grade GPU, ranking among the fastest 720P@24fps video generation models. This model also natively supports both text-to-video and image-to-video tasks within a single unified framework, covering both academic research and practical applications.
 
-*   Image-to-Video generation without prompt
-```bash
-DASH_API_KEY=your_key torchrun --nproc_per_node=8 generate.py --task i2v-A14B --size 1280*720 --ckpt_dir ./Wan2.2-I2V-A14B --prompt '' --image examples/i2v_input.JPG --dit_fsdp --t5_fsdp --ulysses_size 8 --use_prompt_extend --prompt_extend_method 'dashscope'
-```
-### Running Text-Image-to-Video Generation
 
-```bash
-python generate.py --task ti2v-5B --size 1280*704 --ckpt_dir ./Wan2.2-TI2V-5B --offload_model True --convert_model_dtype --t5_cpu --prompt "Your prompt"
-```
+<div align="center">
+    <img src="assets/vae.png" alt="" style="width: 80%;" />
+</div>
 
-*   720P resolution for TI2V is `1280*704` or `704*1280`.
-*   Requires at least 24GB VRAM (e.g., RTX 4090).
 
-### Computational Efficiency
 
-[Link to image of computation efficiency chart](assets/comp_effic.png) - _See the README on GitHub for the detailed chart._
+##### Comparisons to SOTAs
+We compared Wan2.2 with leading closed-source commercial models on our new Wan-Bench 2.0, evaluating performance across multiple crucial dimensions. The results demonstrate that Wan2.2 achieves superior performance compared to these leading models.
 
-### Introduction of Wan2.2
 
-Wan2.2 builds upon the foundational models of Wan2.1 with significant advancements, driven by innovations in:
+<div align="center">
+    <img src="assets/performance.png" alt="" style="width: 90%;" />
+</div>
 
-*   **Mixture-of-Experts (MoE) Architecture:**  A  two-expert design to enhance video quality while maintaining efficient computation.
-*   **High-Definition Hybrid TI2V:**  TI2V-5B supports text-to-video and image-to-video tasks efficiently.
-
-[Link to MoE Arch Diagram](assets/moe_arch.png)
-[Link to VAE Diagram](assets/vae.png)
-[Link to Performance Chart](assets/performance.png)
-
-### Citation
+## Citation
+If you find our work helpful, please cite us.
 
 ```
 @article{wan2025,
-      title={Wan: Open and Advanced Large-Scale Video Generative Models},
-      author={...},
+      title={Wan: Open and Advanced Large-Scale Video Generative Models}, 
+      author={Team Wan and Ang Wang and Baole Ai and Bin Wen and Chaojie Mao and Chen-Wei Xie and Di Chen and Feiwu Yu and Haiming Zhao and Jianxiao Yang and Jianyuan Zeng and Jiayu Wang and Jingfeng Zhang and Jingren Zhou and Jinkai Wang and Jixuan Chen and Kai Zhu and Kang Zhao and Keyu Yan and Lianghua Huang and Mengyang Feng and Ningyi Zhang and Pandeng Li and Pingyu Wu and Ruihang Chu and Ruili Feng and Shiwei Zhang and Siyang Sun and Tao Fang and Tianxing Wang and Tianyi Gui and Tingyu Weng and Tong Shen and Wei Lin and Wei Wang and Wei Wang and Wenmeng Zhou and Wente Wang and Wenting Shen and Wenyuan Yu and Xianzhong Shi and Xiaoming Huang and Xin Xu and Yan Kou and Yangyu Lv and Yifei Li and Yijing Liu and Yiming Wang and Yingya Zhang and Yitong Huang and Yong Li and You Wu and Yu Liu and Yulin Pan and Yun Zheng and Yuntao Hong and Yupeng Shi and Yutong Feng and Zeyinzi Jiang and Zhen Han and Zhi-Fan Wu and Ziyu Liu},
       journal = {arXiv preprint arXiv:2503.20314},
       year={2025}
 }
 ```
 
-### License
+## License
 
-Licensed under the Apache 2.0 License.  See `LICENSE.txt` for details.
+The models in this repository are licensed under the Apache 2.0 License. Please review the [LICENSE.txt](LICENSE.txt) for complete details.
 
-### Acknowledgements
+## Acknowledgements
 
-Thanks to the contributors of [SD3](https://huggingface.co/stabilityai/stable-diffusion-3-medium), [Qwen](https://huggingface.co/Qwen), [umt5-xxl](https://huggingface.co/google/umt5-xxl), [diffusers](https://github.com/huggingface/diffusers) and [HuggingFace](https://huggingface.co) repositories.
+We would like to thank the contributors to the [SD3](https://huggingface.co/stabilityai/stable-diffusion-3-medium), [Qwen](https://huggingface.co/Qwen), [umt5-xxl](https://huggingface.co/google/umt5-xxl), [diffusers](https://github.com/huggingface/diffusers) and [HuggingFace](https://huggingface.co) repositories, for their open research.
 
-### Contact
 
-Join our [Discord](https://discord.gg/AKNgpMK4Yj) or [WeChat](https://gw.alicdn.com/imgextra/i2/O1CN01tqjWFi1ByuyehkTSB_!!6000000000015-0-tps-611-1279.jpg) groups.
-```
-Key improvements and summarization:
+## Get Involved:
 
-*   **SEO-Optimized Heading:**  Uses "Wan2.2: Unleash Cinematic Video Generation with Advanced AI" to target relevant keywords.
-*   **One-Sentence Hook:** Immediately captures attention and highlights the key benefit.
-*   **Clear Structure:** Uses headings and subheadings for readability.
-*   **Bulleted Key Features:**  Highlights key selling points and innovations.
-*   **Concise Language:**  Removes redundancy and improves clarity.
-*   **Actionable Instructions:**  Provides clear installation and usage examples with command snippets.
-*   **Links:**  Keeps all original links, and adds a link back to the GitHub repo at the start.
-*   **Emphasis on Benefits:** Focuses on what users *get* (cinematic videos, easy creation, etc.)
-*   **Call to Action:**  Encourages the user to explore the project.
-*   **Model Download:** Made easier to understand using a table
-*   **Text-Image-to-Video:** Improved the instructions for Text-Image-to-Video generation, using a Single-GPU example.
-*   **Image-to-Video:** Improved the instructions for Image-to-Video generation.
+Join our vibrant community and stay connected!
 
-This revised README is more engaging, informative, and optimized for both user experience and search engines.
+*   💬 [Discord](https://discord.gg/AKNgpMK4Yj)
+*   💬 [WeChat groups](https://gw.alicdn.com/imgextra/i2/O1CN01tqjWFi1ByuyehkTSB_!!6000000000015-0-tps-611-1279.jpg)

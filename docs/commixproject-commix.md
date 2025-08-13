@@ -9,50 +9,51 @@
   </p>
 </p>
 
-# Commix: Automate Command Injection Exploitation
+# Commix: Automated Command Injection Exploitation Tool
 
-**Commix**, short for "Command Injection Exploiter," is a powerful open-source penetration testing tool designed to detect and exploit command injection vulnerabilities. ([Original Repository](https://github.com/commixproject/commix))
+**Commix** (short for **Comm**and **I**njection e**x**ploiter) is a powerful open-source penetration testing tool that simplifies the process of discovering and exploiting command injection vulnerabilities.  Developed by [Anastasios Stasinopoulos](https://github.com/stasinopoulos) (@ancst), Commix automates the identification and exploitation of command injection flaws, allowing security professionals and ethical hackers to assess web application security effectively. You can find the original repo [here](https://github.com/commixproject/commix).
 
 ![Screenshot](https://commixproject.com/images/background.png)
 
 ## Key Features
 
-*   **Automated Detection:** Automatically identifies command injection vulnerabilities.
-*   **Exploitation:** Enables the exploitation of identified vulnerabilities.
-*   **Open Source:** Free and open-source tool.
-*   **Cross-Platform:** Works on various operating systems.
-*   **Written in Python:** Utilizes the versatile Python programming language.
+*   **Automated Vulnerability Detection:**  Commix automatically detects potential command injection vulnerabilities.
+*   **Exploitation Capabilities:**  Offers a wide range of exploitation techniques to verify and exploit discovered vulnerabilities.
+*   **Open Source:**  Completely free and open-source, allowing for community contributions and customization.
+*   **Cross-Platform Compatibility:**  Runs on various platforms, providing flexibility for security assessments.
+*   **Detailed Reporting:** Generates comprehensive reports of detected vulnerabilities and exploitation results.
+*   **User-Friendly Interface:** Designed for ease of use, enabling both beginners and experienced penetration testers to utilize its features effectively.
 
 ## Installation
 
 To install Commix, clone the official Git repository:
 
 ```bash
-$ git clone https://github.com/commixproject/commix.git commix
+git clone https://github.com/commixproject/commix.git commix
 ```
 
 Alternatively, download the latest [tarball](https://github.com/commixproject/commix/tarball/master) or [zipball](https://github.com/commixproject/commix/zipball/master).
 
-**Note:** Requires **Python** (version **2.6**, **2.7**, or **3.x**).
+*__Note:__ **[Python](http://www.python.org/download/)** (version **2.6**, **2.7** or **3.x**) is required for running commix.*
 
 ## Usage
 
-Get started by running Commix with the `-h` flag to view all options and switches:
+For a comprehensive list of options and switches, use:
 
 ```bash
-$ python commix.py -h
+python commix.py -h
 ```
 
-For detailed usage instructions, examples, and filter bypass techniques, please consult the following resources:
+For detailed information on Commix's options, switches, and usage examples, refer to the following wiki pages:
 
-*   [Usage Wiki](https://github.com/commixproject/commix/wiki/Usage)
-*   [Usage Examples Wiki](https://github.com/commixproject/commix/wiki/Usage-Examples)
-*   [Filters Bypasses Wiki](https://github.com/commixproject/commix/wiki/Filters-Bypasses)
+*   [Usage](https://github.com/commixproject/commix/wiki/Usage)
+*   [Usage Examples](https://github.com/commixproject/commix/wiki/Usage-Examples)
+*   [Filters Bypasses](https://github.com/commixproject/commix/wiki/Filters-Bypasses)
 
 ## Resources
 
 *   **User's Manual:** [https://github.com/commixproject/commix/wiki](https://github.com/commixproject/commix/wiki)
-*   **Issue Tracker:** [https://github.com/commixproject/commix/issues](https://github.com/commixproject/commix/issues)
+*   **Issues Tracker:** [https://github.com/commixproject/commix/issues](https://github.com/commixproject/commix/issues)
 
 ## Translations
 

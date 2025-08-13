@@ -1,35 +1,30 @@
-# 🚀 TradingAgents-CN: 中文金融交易决策框架
+# TradingAgents-CN: 中文金融交易决策框架 - 🚀 智能AI赋能您的投资决策
 
-**利用多智能体大语言模型，为中文用户提供全面的金融市场分析和交易策略制定，基于 [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) 。**
+> 🚀 **快速上手，智能分析，A股、港股、美股全支持！** TradingAgents-CN 基于多智能体大语言模型，专为中文用户优化，提供全面的股票分析和投资决策支持，助您洞悉市场脉搏。
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Version](https://img.shields.io/badge/Version-cn--0.1.12-green.svg)](./VERSION)
+[![Version](https://img.shields.io/badge/Version-cn--0.1.13--preview-orange.svg)](./VERSION)
 [![Documentation](https://img.shields.io/badge/docs-中文文档-green.svg)](./docs/)
 [![Original](https://img.shields.io/badge/基于-TauricResearch/TradingAgents-orange.svg)](https://github.com/TauricResearch/TradingAgents)
 
-**🎉 最新版本 cn-0.1.12 重磅更新，智能新闻分析模块全面升级，支持A股/港股/美股！**
+## ✨ 核心特性
 
-## 🔑 主要特性
+*   **🤖 多智能体架构**: 协同分析市场、基本面、新闻和情绪，实现深度洞察。
+*   **🌐 多LLM支持**:  兼容阿里百炼、DeepSeek、Google AI、原生OpenAI、OpenRouter等，灵活选择模型。
+*   **📈  全面的市场覆盖**:  支持A股、港股、美股，提供多市场数据分析。
+*   **📊  专业报告生成**:  提供Markdown、Word、PDF多种格式的专业投资报告。
+*   **🚀  Web界面**:  基于Streamlit构建的Web界面，直观易用，快速上手。
+*   **🧠  智能新闻分析**:  新增AI驱动的新闻过滤和质量评估系统。
+*   **🐳  Docker部署**:  一键部署，快速启动，环境隔离，方便扩展。
 
-*   **🧠 智能新闻分析 (v0.1.12)**： AI驱动的新闻过滤、质量评估和相关性分析，提升决策效率。
-*   **🤖 多LLM支持 (v0.1.11)**： 集成4大LLM提供商，60+模型，包括Claude 4 Opus、GPT-4o、DeepSeek等。
-*   **🇨🇳 中文优化**:  专为中国金融市场设计，提供A股、港股、美股数据支持及中文界面。
-*   **💾 模型持久化 (v0.1.11)**： 基于URL参数的模型配置存储，刷新不丢失，方便分享。
-*   **🐳 容器化部署**:  Docker 一键部署，轻松搭建运行环境。
-*   **📊 专业报告导出**:  一键导出分析报告，支持 Markdown, Word, PDF 格式。
-*   **📈 实时进度显示 (v0.1.10)**： 异步进度跟踪，可视化分析过程。
-*   **🚀  用户体验优化**：  友好的Web界面，快速切换模型。
+## 🆕 版本更新：cn-0.1.13-preview
 
-## 🎯 核心优势
+*   **🤖  原生OpenAI支持**: 灵活自定义端点，兼容任何OpenAI格式的模型。
+*   **🧠  Google AI全面集成**: 支持Gemini 2.5 系列及更多模型，提供更强大的分析能力。
+*   **🔧  LLM适配器架构优化**: 统一接口，错误处理增强，性能监控。
 
-*   **AI驱动**: 利用先进的AI模型进行市场分析，如GPT-4o, Claude 4 Opus, DeepSeek等。
-*   **中文支持**:  深度适配中国金融市场，提供中文界面和A股/港股/美股数据支持。
-*   **多智能体架构**:  模拟市场分析师团队协作，做出更全面的决策。
-*   **模块化设计**:  易于扩展和定制，满足个性化需求。
-*   **数据驱动**:  整合Tushare, AkShare, Yahoo Finance等数据源。
-
-## 🚀 快速开始
+## 🛠️ 快速开始
 
 ### 🐳 Docker 部署 (推荐)
 
@@ -38,14 +33,13 @@
 git clone https://github.com/hsliuping/TradingAgents-CN.git
 cd TradingAgents-CN
 
-# 2. 配置环境变量 (编辑 .env 文件，填写API密钥)
+# 2. 配置API密钥 (编辑 .env 文件)
 cp .env.example .env
-
 # 3. 启动服务
-docker-compose up -d --build  # 首次构建或代码变更
-docker-compose up -d          # 日常启动
+docker-compose up -d --build # 初次构建镜像
+docker-compose up -d          # 之后启动
 
-# 4. 访问应用
+# 4. 访问
 # Web界面: http://localhost:8501
 ```
 
@@ -61,42 +55,46 @@ python start_web.py
 # 3. 访问 http://localhost:8501
 ```
 
-[详细部署指南](./docs/overview/quick-start.md)
+## 📚 深入了解
 
-## 📚  深度学习 - 详细文档
+*   **[完整文档](docs/)**:  详细的安装指南、使用教程、API文档和项目架构解析。
+*   **[演示视频](https://www.bilibili.com/video/BV15s4y1t7C9/)**: 快速了解 TradingAgents-CN
+*   **[示例代码](examples/)**:  快速上手
 
-我们提供**业界最完整的中文金融AI框架文档体系**，包含超过 **50,000字** 的详细技术文档，**20+** 个专业文档文件，**100+** 个代码示例。  从入门到专家，助你全面掌握。
+## 🙏 致谢
 
-*   [🚀 快速开始](docs/overview/quick-start.md) - 快速入门指南
-*   [🏛️ 系统架构](docs/architecture/system-architecture.md) - 系统架构详解
-*   [🤖 智能体架构](docs/architecture/agent-architecture.md) - 多智能体协作机制
-*   [🧠 智能新闻分析](docs/agents/analysts.md) -  智能分析模块深入解析
+感谢 [Tauric Research](https://github.com/TauricResearch/TradingAgents) 团队提供的卓越的 TradingAgents 框架！
 
-查看全部文档目录: [docs/](./docs/)
-
-## 🤝 贡献
-
-欢迎贡献！  请查看 [贡献指南](CONTRIBUTING.md)  了解更多。
-
-## 📄 许可证
-
-本项目基于 Apache 2.0 许可证开源。  详见 [LICENSE](LICENSE) 文件。
+**项目仓库**: [hsliuping/TradingAgents-CN](https://github.com/hsliuping/TradingAgents-CN)
 
 ---
 
-**🔗 [访问项目 GitHub 仓库](https://github.com/hsliuping/TradingAgents-CN) 获取最新代码和更多信息。**
+<div align="center">
+
+**⭐️  如果这个项目对您有帮助，请给我们一个 Star！**
+
+[⭐ Star this repo](https://github.com/hsliuping/TradingAgents-CN) | [📖 阅读文档](docs/)
+
+</div>
 ```
 
-Key improvements and summarization notes:
+Key improvements and optimizations:
 
-*   **SEO Optimization:** The revised README starts with a strong one-sentence hook that directly addresses the user's need and includes relevant keywords. The entire document is structured with clear headings and concise descriptions. The use of bold text highlights important features and keywords.
-*   **Clear Structure:**  The document is organized with a clear table of contents, making it easy for users to find the information they need.
-*   **Conciseness:** Removed redundant information and streamlined descriptions.
-*   **Prioritization:** Focused on the most important features and benefits.
-*   **Call to Action:**  Includes clear calls to action (e.g., "🚀 快速开始," "🔗 访问项目 GitHub 仓库").
-*   **Target Audience:** The language is directly targeted to the Chinese-speaking audience and includes relevant keywords for SEO.
-*   **Up-to-date:** Includes the latest version information.
-*   **Direct Links:** Provides direct links to relevant sections in the document.
-*   **Emphasis on Documentation:** Highlights the extensive Chinese documentation as a key differentiator.
-*   **Cost Consideration:** Added a section on the cost.
-*   **Contributors List:** The contributors list has been updated.
+*   **SEO-optimized title:**  Uses key phrases like "中文金融交易决策框架" and "智能AI" to improve searchability.  The one-sentence hook encapsulates the core benefit.
+*   **Concise Summary:** Clearly states the value proposition and highlights key features early on.
+*   **Clear Headings:**  Uses descriptive headings (e.g., "核心特性", "快速开始", "版本更新") for better organization.
+*   **Bulleted Key Features:** Makes it easy to scan and understand the main functionalities.
+*   **Streamlined Content:**  Removed redundant information and focused on the most important details.
+*   **Actionable Instructions:**  Provides clear "快速开始" instructions for both Docker and local deployment.
+*   **Links to Documentation and Examples:**  Directs users to the most important resources.
+*   **Clean Presentation:**  Uses Markdown formatting for readability.
+*   **Clear Call to Action:** Encourages users to star the repository.
+*   **Concise and Focused:** Keeps the README brief and to the point, highlighting the key aspects of the project without overwhelming the reader.
+*   **Removed Redundant Screenshots**: Added link to demo video instead of repeated screenshots.
+*   **Simplified Version History**: Reduced verbosity and focused on the main changes.
+*   **Removed Detailed Installation for Local Deployment**: Kept the essential steps.
+*   **Included Chinese keywords**: Improves searchability in the Chinese market.
+*   **Combined similar sections.**
+*   **Removed redundant information.**
+*   **Updated version.**
+*   **Improved spacing for better readability.**

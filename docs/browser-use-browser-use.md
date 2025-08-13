@@ -4,7 +4,9 @@
   <img alt="Shows a black Browser Use Logo in light color mode and a white one in dark color mode." src="./static/browser-use.png"  width="full">
 </picture>
 
-<h1 align="center">Browser Use: Unleash AI to Automate Your Web Interactions</h1>
+# Browser Use: Supercharge Your AI with Browser Automation
+
+**Effortlessly connect your AI agents to the web and unlock limitless possibilities with Browser Use!** ([See the original repo](https://github.com/browser-use/browser-use))
 
 [![GitHub stars](https://img.shields.io/github/stars/gregpr07/browser-use?style=social)](https://github.com/gregpr07/browser-use/stargazers)
 [![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)
@@ -14,78 +16,81 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
 [![Weave Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fapp.workweave.ai%2Fapi%2Frepository%2Fbadge%2Forg_T5Pvn3UBswTHIsN1dWS3voPg%2F881458615&labelColor=#EC6341)](https://app.workweave.ai/reports/repository/org_T5Pvn3UBswTHIsN1dWS3voPg/881458615)
 
-**Browser Use empowers you to automate your web tasks with the power of AI, turning complex actions into simple commands.** ([Original Repo](https://github.com/browser-use/browser-use))
-
 ## Key Features
 
-*   **AI-Powered Automation:** Control your browser using natural language.
-*   **Easy Integration:** Simple Python installation with `pip install browser-use`.
-*   **Cloud-Based Option:**  Skip the setup and try the [hosted cloud version ☁︎](https://cloud.browser-use.com).
-*   **Model Context Protocol (MCP) Support:** Integrates with MCP-compatible clients like Claude Desktop for enhanced functionality.
-*   **Interactive CLI:** Experiment with the `browser-use` CLI for quick testing.
-*   **Robust Testing:** Automate your task validations with CI.
+*   **AI-Powered Browser Control:** Enable your AI to interact with web pages, automating tasks like web scraping, form filling, and more.
+*   **Easy Integration:** Simple installation with pip and minimal setup required to get started.
+*   **Flexible LLM Support:** Compatible with a variety of LLMs including OpenAI, Anthropic, and more.
+*   **MCP Integration:** Seamlessly integrates with the Model Context Protocol (MCP) for enhanced functionality with tools like Claude Desktop.
+*   **Cloud-Based Option:** Quickly get started with a hosted version for instant browser automation.
+*   **Interactive CLI:** Test and experiment with a user-friendly interactive command-line interface.
+*   **Extensive Examples:** Explore a variety of use cases and demos to kickstart your projects.
+*   **Robust Testing:** Contribute tasks and run automated validation in our CI.
 
 ## Quick Start
 
-Get started with Browser Use quickly:
+### Installation
 
-1.  **Install:**
-    ```bash
-    pip install browser-use
-    ```
+With pip (Python>=3.11):
 
-2.  **Install browser dependencies:**
-    ```bash
-    playwright install chromium --with-deps --no-shell
-    ```
+```bash
+pip install browser-use
+```
 
-3.  **Create your Agent:**
+Install the browser:
 
-    ```python
-    import asyncio
-    from dotenv import load_dotenv
-    load_dotenv()
-    from browser_use import Agent
-    from browser_use.llm import ChatOpenAI
+```bash
+playwright install chromium --with-deps --no-shell
+```
 
-    async def main():
-        agent = Agent(
-            task="Compare the price of gpt-4o and DeepSeek-V3",
-            llm=ChatOpenAI(model="o4-mini", temperature=1.0),
-        )
-        await agent.run()
+### Basic Usage
 
-    asyncio.run(main())
-    ```
+Spin up your agent:
 
-4.  **Set up API Keys:** Add your API keys to a `.env` file:
+```python
+import asyncio
+from dotenv import load_dotenv
+load_dotenv()
+from browser_use import Agent
+from browser_use.llm import ChatOpenAI
 
-    ```bash
-    OPENAI_API_KEY=
-    ANTHROPIC_API_KEY=
-    AZURE_OPENAI_ENDPOINT=
-    AZURE_OPENAI_KEY=
-    GOOGLE_API_KEY=
-    DEEPSEEK_API_KEY=
-    GROK_API_KEY=
-    NOVITA_API_KEY=
-    ```
+async def main():
+    agent = Agent(
+        task="Compare the price of gpt-4o and DeepSeek-V3",
+        llm=ChatOpenAI(model="o4-mini", temperature=1.0),
+    )
+    await agent.run()
 
-5.  **Explore the Documentation:** For further customization, settings, and models, consult the [documentation 📕](https://docs.browser-use.com).
+asyncio.run(main())
+```
 
-### Testing & Interaction
+Add your API keys for the provider you want to use to your `.env` file.
 
-*   **Web UI:** Test Browser Use using the [Web UI](https://github.com/browser-use/web-ui).
-*   **Desktop App:** Explore the [Desktop App](https://github.com/browser-use/desktop).
-*   **Interactive CLI:** Use the `browser-use` interactive CLI with: `pip install "browser-use[cli]" && browser-use`.
+```bash
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+AZURE_OPENAI_ENDPOINT=
+AZURE_OPENAI_KEY=
+GOOGLE_API_KEY=
+DEEPSEEK_API_KEY=
+GROK_API_KEY=
+NOVITA_API_KEY=
+```
 
-## MCP Integration
+### Explore Further
 
-Browser Use seamlessly integrates with the Model Context Protocol (MCP).
+*   **Documentation:**  Find detailed information on setup, usage, and customization [here](https://docs.browser-use.com).
+*   **Try the Cloud:** Skip the setup and test instantly with our [hosted version](https://cloud.browser-use.com).
+*   **Web UI and Desktop App:** Test browser-use using its [Web UI](https://github.com/browser-use/web-ui) or [Desktop App](https://github.com/browser-use/desktop).
+*   **Interactive CLI:** Use our `browser-use` interactive CLI.
+
+## Model Context Protocol (MCP) Integration
+
+Browser-use supports the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), enabling integration with Claude Desktop and other MCP-compatible clients.
 
 ### Use as MCP Server with Claude Desktop
 
-Configure Claude Desktop to use Browser Use:
+Add browser-use to your Claude Desktop configuration:
 
 ```json
 {
@@ -101,9 +106,11 @@ Configure Claude Desktop to use Browser Use:
 }
 ```
 
+This gives Claude Desktop access to browser automation tools for web scraping, form filling, and more.
+
 ### Connect External MCP Servers to Browser-Use Agent
 
-Extend agent capabilities by connecting multiple external MCP servers:
+Browser-use agents can connect to multiple external MCP servers to extend their capabilities:
 
 ```python
 import asyncio
@@ -153,49 +160,47 @@ async def main():
 asyncio.run(main())
 ```
 
-Refer to the [MCP documentation](https://docs.browser-use.com/customize/mcp-server) for details.
+See the [MCP documentation](https://docs.browser-use.com/customize/mcp-server) for more details.
 
 ## Demos
 
-<br/><br/>
+<br/>
 
 [Task](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/shopping.py): Add grocery items to cart, and checkout.
 
 [![AI Did My Groceries](https://github.com/user-attachments/assets/a0ffd23d-9a11-4368-8893-b092703abc14)](https://www.youtube.com/watch?v=L2Ya9PYNns8)
 
-<br/><br/>
+<br/>
 
 Prompt: Add my latest LinkedIn follower to my leads in Salesforce.
 
 ![LinkedIn to Salesforce](https://github.com/user-attachments/assets/50d6e691-b66b-4077-a46c-49e9d4707e07)
 
-<br/><br/>
+<br/>
 
 [Prompt](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/find_and_apply_to_jobs.py): Read my CV & find ML jobs, save them to a file, and then start applying for them in new tabs, if you need help, ask me.'
 
 https://github.com/user-attachments/assets/171fb4d6-0355-46f2-863e-edb04a828d04
 
-<br/><br/>
+<br/>
 
 [Prompt](https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py): Write a letter in Google Docs to my Papa, thanking him for everything, and save the document as a PDF.
 
 ![Letter to Papa](https://github.com/user-attachments/assets/242ade3e-15bc-41c2-988f-cbc5415a66aa)
 
-<br/><br/>
+<br/>
 
 [Prompt](https://github.com/browser-use/browser-use/blob/main/examples/custom-functions/save_to_file_hugging_face.py): Look up models with a license of cc-by-sa-4.0 and sort by most likes on Hugging face, save top 5 to file.
 
 https://github.com/user-attachments/assets/de73ee39-432c-4b97-b4e8-939fd7f323b3
 
-<br/><br/>
-
 ## More Examples
 
-Discover more examples in the [examples](examples) folder or connect with the community on [Discord](https://link.browser-use.com/discord) to showcase your projects. Browse the [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repo for prompting inspiration.
+Explore the [examples](examples) folder for more use cases, or join the [Discord](https://link.browser-use.com/discord) to share your projects and get inspired. Also, check out our [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repo for prompting ideas.
 
 ## Vision
 
-Transform your instructions into automated actions with Browser Use.
+Enable your AI agents to perform complex tasks by giving them the power to interact with the web.
 
 ## Roadmap
 
@@ -227,30 +232,30 @@ Transform your instructions into automated actions with Browser Use.
 
 ## Contributing
 
-Contributions are welcome!  Please submit issues for bugs or feature requests.  Contribute to the docs in the `/docs` folder.
+We welcome contributions! Please feel free to open issues for bug reports or feature requests. For contributing to the docs, check out the `/docs` folder.
 
 ## 🧪 Robust Agent Testing
 
-Ensure your agents' reliability by running tasks in our automated CI.
+Ensure the reliability of your agents with our CI.
 
-*   **Add Your Task:**  Add a YAML file in `tests/agent_tasks/` following the instructions in the [`README there`](tests/agent_tasks/README.md).
-*   **Automated Validation:** Your task will run and be evaluated with every update.
+*   **Add Your Task:** Submit a YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for details).
+*   **Automated Validation:** Your task will be automatically executed and evaluated with your criteria on every update.
 
 ## Local Setup
 
-For detailed library information, consult the [local setup 📕](https://docs.browser-use.com/development/local-setup).
+Learn more about the library by checking out the [local setup 📕](https://docs.browser-use.com/development/local-setup).
 
-**Important:** `main` is the main development branch. Use a stable [versioned release](https://github.com/browser-use/browser-use/releases) for production.
+**Note:** `main` is the primary development branch with frequent changes. For production, use a stable [versioned release](https://github.com/browser-use/browser-use/releases).
 
 ---
 
 ## Swag
 
-Show off your support with Browser Use swag from our [Merch store](https://browsermerch.com).  Good contributors may receive free swag!
+Show off your Browser-use swag! Check out our [Merch store](https://browsermerch.com). Receive free swag as a good contributor 👀.
 
 ## Citation
 
-Cite Browser Use if used in research or projects:
+If you use Browser Use in your research or project, please cite:
 
 ```bibtex
 @software{browser_use2024,
@@ -262,13 +267,13 @@ Cite Browser Use if used in research or projects:
 }
 ```
 
- <div align="center"> <img src="https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f" width="400"/>
+<div align="center">
+ <img src="https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f" width="400"/>
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
-
- </div>
+</div>
 
 <div align="center">
 Made with ❤️ in Zurich and San Francisco
- </div>
+</div>

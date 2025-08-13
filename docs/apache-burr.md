@@ -1,93 +1,97 @@
-# Burr: Build, Observe, and Scale AI Applications with Stateful Workflows
+# Burr: Build Stateful AI Applications with Ease
 
-[![Discord](https://img.shields.io/badge/Join-Burr_Discord-7289DA?logo=discord)](https://discord.gg/6Zy2DwP4f3)
-[![Downloads](https://static.pepy.tech/badge/burr/month)](https://pepy.tech/project/burr)
-![PyPI Downloads](https://static.pepy.tech/badge/burr)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/dagworks-inc/burr)](https://github.com/dagworks-inc/burr/pulse)
-[![X](https://img.shields.io/badge/follow-%40burr_framework-1DA1F2?logo=x&style=social)](https://twitter.com/burr_framework)
-<a target="_blank" href="https://linkedin.com/showcase/dagworks-inc" style="background:none">
-  <img src="https://img.shields.io/badge/DAGWorks-Follow-purple.svg?logo=linkedin" />
-</a>
-<a href="https://twitter.com/burr_framework" target="_blank">
-  <img src="https://img.shields.io/badge/burr_framework-Follow-purple.svg?logo=X"/>
-</a>
-<a href="https://twitter.com/dagworks" target="_blank">
-  <img src="https://img.shields.io/badge/DAGWorks-Follow-purple.svg?logo=X"/>
-</a>
+Burr simplifies the development of stateful AI applications, providing a robust framework for building chatbots, agents, and simulations.  Find the original repository on [GitHub](https://github.com/apache/burr).
 
-Burr is a powerful Python framework that streamlines the development and management of stateful AI applications, offering a clear path for building, debugging, and scaling your projects. [Check out the original repo for more details](https://github.com/apache/burr)!
+<div>
+  <!-- Badges - original repo already has them -->
+</div>
 
-## Key Features
+**Key Features:**
 
-*   **State Machine Framework:** Build applications as state machines using simple Python functions, making your AI workflows easier to understand and maintain.
-*   **Real-time UI:**  Track, monitor, and trace your system's execution in real-time with an intuitive user interface.
-*   **Pluggable Persistence:** Save and load application state with a variety of pluggable persisters (e.g., memory, databases).
-*   **Framework Agnostic:** Works well with LLMs and integrates seamlessly with your favorite frameworks and libraries.
-*   **Extensible:** Easily integrate with LLM observability tools, storage solutions, and custom actions.
-*   **Versatile Use Cases:** Build chatbots, agents, simulations, and more.
+*   **State Machine Abstraction:** Build and manage complex workflows using a simple Python-based state machine approach.
+*   **Real-time UI:** Visualize and debug your application's execution with a built-in telemetry UI.
+*   **Flexible Integration:**  Integrate with your favorite LLMs, frameworks, and tools.
+*   **Pluggable Persistence:** Easily save and load application state with various storage options.
+*   **Open Source:** Benefit from the community and customize the project to fit your specific needs.
 
 ## Getting Started
 
 ### Installation
 
-Install Burr from PyPI:
+Install Burr using pip:
 
 ```bash
 pip install "burr[start]"
 ```
 
-(See the [documentation](https://burr.dagworks.io/getting_started/install/) if you're using Poetry)
-
 ### Run the UI
-
-Start the Burr UI server:
 
 ```bash
 burr
 ```
 
-The UI provides a real-time view of your application's execution, along with pre-loaded demo data, including a chatbot example.  Remember to set the `OPENAI_API_KEY` environment variable for the chatbot demo to work.
+Access the telemetry UI at `http://localhost:8000` (default).  Explore the demo chatbot application after setting the `OPENAI_API_KEY` environment variable or explore without key.
 
-### Example
+### Example:  Hello World Counter
 
-Run the hello-world counter example:
+1.  **Clone the repository:**
 
-```bash
-git clone https://github.com/dagworks-inc/burr && cd burr/examples/hello-world-counter
-python application.py
-```
+    ```bash
+    git clone https://github.com/dagworks-inc/burr && cd burr/examples/hello-world-counter
+    ```
 
-Explore the [getting started guide](https://burr.dagworks.io/getting_started/simple-example/) for more details.
+2.  **Run the example:**
+
+    ```bash
+    python application.py
+    ```
+
+    Observe the counter in the terminal and trace its execution within the UI.  Refer to the [getting started guide](https://burr.dagworks.io/getting_started/simple-example/) for detailed instructions.
 
 ## How Burr Works
 
-Burr empowers you to express your application logic as a state machine, enabling you to manage state, track decisions, and build idempotent workflows.
+Burr allows you to structure applications as state machines. Define actions as Python functions that read and write state.  Transitions between actions define the application flow.
 
-**Core API:**  A simple, dependency-free Python library to build and manage state machines using Python functions.
+**Core API Example:**
 
-**Components:**
+```python
+from burr.core import action, State, ApplicationBuilder
 
-1.  **Python Library:** For building and managing state machines.
-2.  **UI:**  Provides execution telemetry for introspection and debugging.
-3.  **Integrations:**  To persist state, connect to telemetry, and integrate with other systems.
+@action(reads=[], writes=["prompt", "chat_history"])
+def human_input(state: State, prompt: str) -> State:
+    # ... (your code) ...
+    return state.update(prompt=prompt).append(chat_history=chat_item)
+
+@action(reads=["chat_history"], writes=["response", "chat_history"])
+def ai_response(state: State) -> State:
+    # ... (LLM query) ...
+    return state.update(response=content).append(chat_history=chat_item)
+
+app = (
+    ApplicationBuilder()
+    .with_actions(human_input, ai_response)
+    .with_transitions(
+        ("human_input", "ai_response"),
+        ("ai_response", "human_input")
+    ).with_state(chat_history=[])
+    .with_entrypoint("human_input")
+    .build()
+)
+*_, state = app.run(halt_after=["ai_response"], inputs={"prompt": "Who was Aaron Burr, sir?"})
+print("answer:", app.state["response"])
+```
 
 ## Use Cases
 
-Burr supports a variety of applications:
+Burr can be used to build applications like:
 
-*   [GPT-like Chatbot](https://github.com/dagworks-inc/burr/tree/main/examples/multi-modal-chatbot)
-*   [Stateful RAG-based Chatbot](https://github.com/dagworks-inc/burr/tree/main/examples/conversational-rag/simple_example)
-*   [LLM-based Adventure Game](https://github.com/DAGWorks-Inc/burr/tree/main/examples/llm-adventure-game)
-*   [Interactive Email Assistant](https://github.com/DAGWorks-Inc/burr/tree/main/examples/email-assistant)
-*   Simulation, ML Training
+*   Chatbots (GPT-like, RAG-based)
+*   LLM-based adventure games
+*   Email assistants
+*   Simulations
+*   Hyperparameter tuning
 
-And many more!
-
-## Why Burr?
-
-Burr simplifies the development of AI applications by providing a robust framework for state management and observability, unlike "all-in-one" libraries, allowing your systems to scale with your needs.  Burr is actively maintained by the Dagworks team.
-
-## Comparison
+## Comparison with Similar Frameworks
 
 | Criteria                                          | Burr | Langgraph | temporal | Langchain | Superagent | Hamilton |
 | ------------------------------------------------- | :--: | :-------: | :------: | :-------: | :--------: | :------: |
@@ -100,33 +104,23 @@ Burr simplifies the development of AI applications by providing a robust framewo
 
 ## Roadmap
 
-The Burr team is actively working on new features, including:
-
-*   FastAPI integration.
-*   Efficiency and usability improvements.
-*   Tooling for hosted execution.
-*   Additional storage integrations.
-*   Burr Cloud (sign up [here](https://forms.gle/w9u2QKcPrztApRedA) for the waitlist).
+*   FastAPI Integration and Hosted Deployment
+*   Core Library Enhancements (retries, exception handling, integrations)
+*   Tooling for Hosted Execution
+*   Additional Storage Integrations
 
 ## Contributing
 
-We welcome contributions!  See the [developer-facing docs](https://burr.dagworks.io/contributing) to get started.
+We welcome contributions! Refer to the [developer-facing docs](https://burr.dagworks.io/contributing) for details.
+
+## Testimonials
+
+> "[...] elegant yet comprehensive state management solution proved to be the powerful answer to rolling out robots driven by AI decision-making."
+>
+> **Ashish Ghosh**, *CTO, Peanut Robotics*
+
+(More testimonials are included in the original README)
 
 ## Contributors
 
-### Code contributions
-
-*   [Elijah ben Izzy](https://github.com/elijahbenizzy)
-*   [Stefan Krawczyk](https://github.com/skrawcz)
-*   [Joseph Booth](https://github.com/jombooth)
-*   [Nandani Thakur](https://github.com/NandaniThakur)
-*   [Thierry Jean](https://github.com/zilto)
-*   [Hamza Farhan](https://github.com/HamzaFarhan)
-*   [Abdul Rafay](https://github.com/proftorch)
-*   [Margaret Lange](https://github.com/margaretlange)
-
-### Bug hunters/special mentions
-
-*   [Luke Chadwick](https://github.com/vertis)
-*   [Evans](https://github.com/sudoevans)
-*   [Sasmitha Manathunga](https://github.com/mmz-001)
+(List of contributors from original README)

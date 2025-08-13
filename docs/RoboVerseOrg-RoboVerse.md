@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/source/_static/RoboVerse86.22.svg" width="50%" alt="RoboVerse Logo">
+  <img src="docs/source/_static/RoboVerse86.22.svg" width="50%" alt="RoboVerse">
 </p>
 
-![RoboVerse: A Unified Platform for Robot Learning](docs/source/metasim/images/tea.jpg)
+![RoboVerse](docs/source/metasim/images/tea.jpg)
 
 <p align="center">
   <a href="https://roboverseorg.github.io"><img src="https://img.shields.io/badge/project-page-brightgreen" alt="Project Page"></a>
@@ -14,54 +14,52 @@
   <a href="docs/source/_static/wechat.jpg"><img src="https://img.shields.io/badge/wechat-QR_code-green" alt="WeChat"></a>
 </p>
 
-## RoboVerse: The Future of Robot Learning
+# RoboVerse: A Unified Platform for Scalable and Generalizable Robot Learning
 
-**RoboVerse is a cutting-edge, unified platform and benchmark designed to accelerate research in scalable and generalizable robot learning.**
+RoboVerse provides a comprehensive platform, dataset, and benchmark for advancing the field of robot learning.  ([View the original repository](https://github.com/RoboVerseOrg/RoboVerse))
 
-### Key Features:
+## Key Features
 
-*   **Unified Platform:** Provides a comprehensive framework for robot learning research.
-*   **Rich Dataset:** Integrates data from a wide array of existing projects, offering a diverse and extensive dataset for training and evaluation.
-*   **Advanced Simulation:**  Leverages various simulators for realistic and efficient training environments.
-*   **Open Source:**  Encourages community contributions and collaboration.
-*   **Scalable & Generalizable:** Designed to facilitate the development of robots capable of learning and adapting to a wide range of tasks and environments.
+*   **Unified Platform:** Integrates multiple simulation frameworks and datasets.
+*   **Extensive Dataset:** Offers a rich dataset for robot learning tasks.
+*   **Benchmarking:** Provides a standardized benchmark for evaluating robot learning algorithms.
+*   **Community Driven:** Actively encourages contributions and welcomes feedback.
+*   **Flexible and Extensible:** Supports various simulators and tasks, with options for extension.
 
-### What's New
+## What's New
 
-*   **[2025-04-10]** RoboVerse accepted by RSS 2025!
-*   **[2025-04-03]** Code released!  Explore the code and contribute to its continuous improvement.  Your feedback and bug reports are welcome via the GitHub Issues page.
+*   **RSS 2025 Acceptance:** RoboVerse has been accepted by RSS 2025! (April 10, 2025)
+*   **Code Release:** The codebase is actively evolving with open-source contributions encouraged. (April 3, 2025)
 
-### Getting Started
+## Getting Started
 
-Refer to our comprehensive [documentation](https://roboverse.wiki/metasim/#) for detailed instructions.
+Begin your journey with RoboVerse by exploring the detailed [documentation](https://roboverse.wiki/metasim/#) and [tutorials](https://roboverse.wiki/metasim/get_started/quick_start/0_static_scene).
 
-*   Detailed [tutorials](https://roboverse.wiki/metasim/get_started/quick_start/0_static_scene) are available to guide you through the initial setup and usage.
+## Contribute
 
-### Contribute to RoboVerse
+We welcome contributions! Review the [CONTRIBUTING.md](./CONTRIBUTING.md) file for guidelines on how to contribute to the project.
 
-We welcome your contributions!  Please consult [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to contribute to the project.
+## Feature Requests & Wish List
 
-### Feature Requests & Wish List
+Have an idea for a new feature? Share it in the Wish List section of our [GitHub Discussions](https://github.com/RoboVerseOrg/RoboVerse/discussions/categories/wish-list) and upvote the requests you find most relevant.
 
-Have a feature request or suggestion?  Share it in the Wish List section of our [GitHub Discussions](https://github.com/RoboVerseOrg/RoboVerse/discussions/categories/wish-list).  Upvote your favorite requests to help us prioritize future updates!
+## License and Acknowledgements
 
-### License and Acknowledgments
+RoboVerse is licensed under the Apache License 2.0.
 
-RoboVerse is released under the Apache License 2.0.
+This project leverages the following simulation frameworks, renderers, and libraries:
 
-The platform utilizes the following simulation frameworks, renderers, and libraries:
-
-*   [Isaac Lab](https://github.com/isaac-sim/IsaacLab) (built on [Isaac Sim](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html))
+*   [Isaac Lab](https://github.com/isaac-sim/IsaacLab), built on [Isaac Sim](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)
 *   [Isaac Gym](https://developer.nvidia.com/isaac-gym)
 *   [MuJoCo](https://github.com/google-deepmind/mujoco)
 *   [SAPIEN](https://github.com/haosulab/SAPIEN)
 *   [PyBullet](https://github.com/bulletphysics/bullet3)
 *   [Genesis](https://github.com/Genesis-Embodied-AI/Genesis)
 *   [cuRobo](https://github.com/NVlabs/curobo)
-*   [PyRep](https://github.com/stepjam/PyRep) (built on [CoppeliaSim](https://www.coppeliarobotics.com/))
+*   [PyRep](https://github.com/stepjam/PyRep), built on [CoppeliaSim](https://www.coppeliarobotics.com/)
 *   [Blender](https://www.blender.org/)
 
-RoboVerse also integrates data from these projects:
+RoboVerse also integrates data from the following projects:
 
 *   [RLBench](https://github.com/stepjam/RLBench)
 *   [Maniskill](https://github.com/haosulab/ManiSkill)
@@ -85,7 +83,7 @@ RoboVerse also integrates data from these projects:
 
 The licenses for the assets used in RoboVerse will be added soon. Please contact us if you have any issues.
 
-### Citation
+## Citation
 
 If you find RoboVerse useful, please cite our work:
 
@@ -99,6 +97,3 @@ If you find RoboVerse useful, please cite our work:
       primaryClass={cs.RO},
       url={https://arxiv.org/abs/2504.18904},
 }
-```
-
-[**Explore the RoboVerse repository on GitHub!**](https://github.com/RoboVerseOrg/RoboVerse)

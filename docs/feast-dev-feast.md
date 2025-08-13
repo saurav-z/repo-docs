@@ -1,47 +1,37 @@
-<!-- Do not modify this file. It is auto-generated from a template (infra/templates/README.md.jinja2) -->
+# Feast: The Open-Source Feature Store for Machine Learning
 
-<p align="center">
-    <a href="https://feast.dev/">
-      <img src="docs/assets/feast_logo.png" width="550" alt="Feast Logo">
-    </a>
-</p>
-<br />
+**Feast is an open-source feature store that helps machine learning teams consistently serve and manage features for training and inference.** [Explore the Feast Repository](https://github.com/feast-dev/feast)
 
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/feast)](https://pypi.org/project/feast/)
 [![GitHub contributors](https://img.shields.io/github/contributors/feast-dev/feast)](https://github.com/feast-dev/feast/graphs/contributors)
-[![Unit Tests](https://github.com/feast-dev/feast/actions/workflows/unit_tests.yml/badge.svg?branch=master&event=pull_request)](https://github.com/feast-dev/feast/actions/workflows/unit_tests.yml)
-[![Integration Tests and Build](https://github.com/feast-dev/feast/actions/workflows/master_only.yml/badge.svg?branch=master&event=push)](https://github.com/feast-dev/feast/actions/workflows/master_only.yml)
-[![Linter](https://github.com/feast-dev/feast/actions/workflows/linter.yml/badge.svg?branch=master&event=push)](https://github.com/feast-dev/feast/actions/workflows/linter.yml)
+[![unit-tests](https://github.com/feast-dev/feast/actions/workflows/unit_tests.yml/badge.svg?branch=master&event=pull_request)](https://github.com/feast-dev/feast/actions/workflows/unit_tests.yml)
+[![integration-tests-and-build](https://github.com/feast-dev/feast/actions/workflows/master_only.yml/badge.svg?branch=master&event=push)](https://github.com/feast-dev/feast/actions/workflows/master_only.yml)
+[![linter](https://github.com/feast-dev/feast/actions/workflows/linter.yml/badge.svg?branch=master&event=push)](https://github.com/feast-dev/feast/actions/workflows/linter.yml)
 [![Docs Latest](https://img.shields.io/badge/docs-latest-blue.svg)](https://docs.feast.dev/)
 [![Python API](https://img.shields.io/badge/docs-latest-brightgreen.svg)](http://rtd.feast.dev/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue)](https://github.com/feast-dev/feast/blob/master/LICENSE)
 [![GitHub Release](https://img.shields.io/github/v/release/feast-dev/feast.svg?style=flat&sort=semver&color=blue)](https://github.com/feast-dev/feast/releases)
 
-## Feast: The Open Source Feature Store for Machine Learning
+## Key Features
 
-Feast is an open-source feature store designed to streamline and accelerate the machine learning lifecycle.  [Explore the Feast Repository on GitHub](https://github.com/feast-dev/feast).
-
-**Key Features:**
-
-*   **Consistent Feature Availability:**  Manage both offline (for model training) and low-latency online (for real-time prediction) feature stores, along with a feature server.
-*   **Data Leakage Prevention:** Generate point-in-time correct feature sets to avoid data leakage during model training.
-*   **Decoupled ML from Data Infrastructure:** Provides a unified data access layer, allowing you to move models between training and serving, batch and real-time, and different data infrastructure systems.
+*   **Unified Feature Serving:**  Consistently serve features from both offline and online stores for training and real-time prediction.
+*   **Data Leakage Prevention:** Ensure data scientists can focus on feature engineering with point-in-time correct feature sets.
+*   **Decoupled ML Infrastructure:**  Abstracts feature storage for portability across training, serving, and infrastructure changes.
+*   **Scalable Feature Management:** Manage historical data with an offline store, low-latency online stores, and a battle-tested feature server.
 
 ## Overview
 
-Feast enables ML platform teams to solve the hard problems related to feature management in production:
+Feast is an open-source feature store designed to streamline the machine learning pipeline by providing a centralized and reliable platform for managing features.  It enables machine learning platform teams to:
 
-*   **Accelerate ML Development:**  Simplify the process of building and deploying machine learning models.
-*   **Reduce Data Engineering Overhead:** Minimize the need for complex data pipelines.
-*   **Improve Model Accuracy:** Ensure that models are trained on consistent and reliable data.
-
-See our [documentation](https://docs.feast.dev/) for more detailed information.
+*   **Improve data consistency** for both model training and real-time prediction.
+*   **Reduce data leakage** and ensure the integrity of training datasets.
+*   **Simplify feature access** by providing a single access layer.
 
 ## 📐 Architecture
 
 ![](docs/assets/feast_marchitecture.png)
 
-Want to run the full Feast on Snowflake/GCP/AWS? Click [here](https://docs.feast.dev/how-to-guides/feast-snowflake-gcp-aws).
+[Learn how to run Feast on Snowflake/GCP/AWS](https://docs.feast.dev/how-to-guides/feast-snowflake-gcp-aws).
 
 ## 🐣 Getting Started
 
@@ -159,8 +149,6 @@ pprint(feature_vector)
 
 ## 📦 Functionality and Roadmap
 
-Feast continues to evolve with new features and integrations.  We welcome contributions!
-
 *   **Natural Language Processing**
     *   [x] Vector Search (Alpha release. See [RFC](https://docs.google.com/document/d/18IWzLEA9i2lDWnbfbwXnMCg3StlqaLVI-uRpQjr_Vos/edit#heading=h.9gaqqtox9jg6))
     *   [ ] [Enhanced Feature Server and SDK for native support for NLP](https://github.com/feast-dev/feast/issues/4964)
@@ -235,18 +223,16 @@ Feast continues to evolve with new features and integrations.  We welcome contri
 
 ## 🎓 Important Resources
 
-Access key information for Feast:
-
-*   [Quickstart](https://docs.feast.dev/getting-started/quickstart)
-*   [Tutorials](https://docs.feast.dev/tutorials/tutorials-overview)
-*   [Examples](https://github.com/feast-dev/feast/tree/master/examples)
-*   [Running Feast with Snowflake/GCP/AWS](https://docs.feast.dev/how-to-guides/feast-snowflake-gcp-aws)
-*   [Change Log](https://github.com/feast-dev/feast/blob/master/CHANGELOG.md)
+*   [Official Documentation](https://docs.feast.dev/)
+    *   [Quickstart](https://docs.feast.dev/getting-started/quickstart)
+    *   [Tutorials](https://docs.feast.dev/tutorials/tutorials-overview)
+    *   [Examples](https://github.com/feast-dev/feast/tree/master/examples)
+    *   [Running Feast with Snowflake/GCP/AWS](https://docs.feast.dev/how-to-guides/feast-snowflake-gcp-aws)
+    *   [Change Log](https://github.com/feast-dev/feast/blob/master/CHANGELOG.md)
 
 ## 👋 Contributing
 
-Feast is a community-driven project.  We welcome contributions! Review the following for more details.
-
+Feast is a community project and welcomes contributions. Review the following guides:
 *   [Contribution Process for Feast](https://docs.feast.dev/project/contributing)
 *   [Development Guide for Feast](https://docs.feast.dev/project/development-guide)
 *   [Development Guide for the Main Feast Repository](./CONTRIBUTING.md)
@@ -265,8 +251,8 @@ Feast is a community-driven project.  We welcome contributions! Review the follo
 
 ## ✨ Contributors
 
-Thank you to these awesome contributors!
+Thanks to these incredible people:
 
 <a href="https://github.com/feast-dev/feast/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=feast-dev/feast" alt="Feast Contributors"/>
+  <img src="https://contrib.rocks/image?repo=feast-dev/feast" />
 </a>

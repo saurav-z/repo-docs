@@ -1,20 +1,20 @@
-# pytest-asyncio: Easily Test Asynchronous Python Code
+# Test Asynchronous Code with pytest-asyncio
 
-Tired of struggling to test your asynchronous Python code? **pytest-asyncio makes it easy to write and run tests for code that uses the `asyncio` library, seamlessly integrating with the popular `pytest` testing framework.**
-
-[Check out the original repository](https://github.com/pytest-dev/pytest-asyncio)
+**Easily write and run tests for your Python asynchronous code using pytest-asyncio, a powerful pytest plugin.** Learn more and contribute on the [original repository](https://github.com/pytest-dev/pytest-asyncio).
 
 ## Key Features
 
-*   **Asyncio Support:** Enables testing of code that uses the `asyncio` library, including coroutines.
-*   **Await in Tests:** Allows you to `await` code directly within your test functions.
-*   **Simple Integration:**  A pytest plugin that is automatically discovered and loaded when installed.
+*   **Enables Testing of `asyncio` Code:** Write tests that directly interact with asynchronous code, simplifying the testing process.
+*   **Coroutine Support:**  Use coroutines (async functions) as test functions, allowing you to `await` code directly within your tests.
+*   **Simple Integration with pytest:**  pytest-asyncio is a pytest plugin, so installation and usage are straightforward.
+*   **Comprehensive Documentation:** Extensive documentation is available to help you get started and explore advanced features.
 
-## How it Works
-
-pytest-asyncio provides support for coroutines as test functions. This allows you to write tests like this:
+## Example Usage
 
 ```python
+import pytest
+import library  # Assuming your async library
+
 @pytest.mark.asyncio
 async def test_some_asyncio_code():
     res = await library.do_something()
@@ -23,18 +23,16 @@ async def test_some_asyncio_code():
 
 ## Installation
 
-Install pytest-asyncio using pip:
+Get started with pytest-asyncio in seconds:
 
 ```bash
 pip install pytest-asyncio
 ```
 
-pytest will automatically discover and use the plugin after installation.
-
-## Contributing
-
-Contributions are welcome!  Ensure test coverage remains consistent or improves before submitting a pull request.  Use `tox` to run the tests.
-
 ## License
 
 pytest-asyncio is available under the [Apache License 2.0](https://github.com/pytest-dev/pytest-asyncio/blob/main/LICENSE).
+
+## Contributing
+
+We welcome contributions!  Run tests with `tox` and ensure coverage remains consistent before submitting a pull request.

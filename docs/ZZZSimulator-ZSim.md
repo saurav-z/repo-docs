@@ -1,67 +1,61 @@
-# ZSim: Your Ultimate Zenless Zone Zero Battle Simulator
+# ZSim: Zenless Zone Zero Damage Calculator and Battle Simulator
 
-**Maximize your team's potential in Zenless Zone Zero with ZSim, a powerful and user-friendly battle simulator.** ([Original Repo](https://github.com/ZZZSimulator/ZSim))
+**Maximize your Zenless Zone Zero team's potential with ZSim, a powerful and user-friendly damage calculator and battle simulator!** 
 
-![ZSim Logo](docs/img/横板logo成图.png)
-
-## Introduction
-
-ZSim is a comprehensive battle simulator and damage calculator specifically designed for Zenless Zone Zero (ZZZ), Hoyoverse's action RPG. This tool allows you to optimize your team compositions and equipment setups for maximum damage output.  It **automatically simulates** battles based on Action Priority Lists (APLs), providing detailed insights into your team's performance without the need for manual skill sequence input.
+[View the original repository on GitHub](https://github.com/ZZZSimulator/ZSim)
 
 ## Key Features
 
-*   **Automated Battle Simulation:**  Simulates battles based on your chosen APLs, eliminating manual input.
-*   **Damage Calculation:** Accurately calculates total damage output, considering character stats, equipment, and weapon characteristics.
-*   **Visual Reports:** Generates easy-to-understand charts and tables to visualize battle results and damage breakdowns.
-*   **Agent Equipment Editing:** Customize your agents' equipment within the simulator.
-*   **APL Customization:**  Edit and fine-tune Action Priority Lists (APLs) to optimize your team's actions.
-*   **Detailed Damage Information:** Provides a comprehensive breakdown of damage for each character in your team.
+*   **Automatic Battle Simulation:**  No manual skill sequence setup required; ZSim automatically simulates battles based on a pre-set Action Priority List (APL).
+*   **Comprehensive Damage Calculation:** Calculates total damage output for your team compositions, considering character equipment and weapon characteristics.
+*   **Detailed Reporting:** Generates visual charts and tables for in-depth damage analysis, including individual character damage breakdowns.
+*   **User-Friendly Interface:** Easy-to-use interface for editing agent equipment and APL codes.
+*   **Flexible Team Building:**  Experiment with different team compositions to optimize your performance.
 
 ## Installation
 
-To get started with ZSim, follow these simple steps:
+ZSim is easy to set up.  Follow these steps:
 
-1.  **Install UV (if you haven't already):**  UV is a fast Python package manager that is required.
+1.  **Install UV Package Manager (if you haven't already):**
 
-    ```bash
-    # Using pip if you have python installed:
-    pip install uv
-    ```
+    *   **Using `pip` (if Python is installed):**
+        ```bash
+        pip install uv
+        ```
+    *   **macOS or Linux:**
+        ```bash
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        ```
+    *   **Windows 11 24H2 or later:**
+        ```bash
+        winget install --id=astral-sh.uv  -e
+        ```
+    *   **Older Windows versions:**
+        ```powershell
+        powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+        ```
+    *   **For more detailed instructions, see the official UV documentation:** [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)
 
-    ```bash
-    # On macOS or Linux:
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    ```
+2.  **Install and Run ZSim:**
 
-    ```bash
-    # On Windows11 24H2 or later:
-    winget install --id=astral-sh.uv  -e
-    ```
-
-    ```bash
-    # On lower version of Windows:
-    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-    ```
-
-    For more detailed UV installation instructions, visit the official documentation: [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)
-
-2.  **Install and Run ZSim:** Open your terminal in the project directory and run the following commands:
-
-    ```bash
-    uv sync
-    uv run zsim run
-    ```
+    *   Open your terminal in the project directory and run these commands:
+        ```bash
+        uv sync
+        uv run zsim run
+        ```
 
 ## Development
 
 ### Key Components
 
-*   **Simulation Engine:** Located in `zsim/simulator/`, responsible for the core battle simulation logic.
-*   **Web API:** A FastAPI-based REST API in `zsim/api_src/` for programmatic interaction.
-*   **Web UI:** A Streamlit-based interface in `zsim/webui.py`, with a new Vue.js + Electron desktop application in `electron-app/`.
-*   **CLI:** Command-line interface accessible via `zsim/run.py`.
-*   **Database:** Uses SQLite for storing character and enemy configurations.
-*   **Electron App:** A desktop application built with Vue.js and Electron, communicating with the FastAPI backend.
+ZSim is built using a modular architecture:
+
+1.  **Simulation Engine:** Core logic within the `zsim/simulator/` directory handles battle simulations.
+2.  **Web API:**  A FastAPI-based REST API in `zsim/api_src/` provides programmatic access.
+3.  **Web UI:**  A Streamlit-based interface in `zsim/webui.py` and a new Vue.js + Electron desktop application in `electron-app/` provide user interfaces.
+4.  **CLI:**  Command-line interface available via `zsim/run.py`.
+5.  **Database:** SQLite-based storage for character and enemy configurations.
+6.  **Electron App:** Desktop application built with Vue.js and Electron that communicates with the FastAPI backend.
 
 ### Setup and Installation for Development
 
@@ -81,13 +75,14 @@ pnpm install
 
 ### Testing Structure
 
-ZSim uses pytest for testing, with the following structure:
+ZSim utilizes comprehensive testing:
 
 *   Unit tests are located in the `tests/` directory.
-*   API tests are located in `tests/api/`.
+*   API tests are in `tests/api/`.
 *   Fixtures are defined in `tests/conftest.py`.
+*   pytest with asyncio support is used for testing.
 
-To run tests:
+### Running Tests
 
 ```bash
 # Run the tests
@@ -96,6 +91,6 @@ uv run pytest
 uv run pytest -v --cov=zsim --cov-report=html
 ```
 
-## Further Information
+## TODO List
 
-For detailed development information and contribution guidelines, please refer to the [development guide](https://github.com/ZZZSimulator/ZSim/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97-Develop-Guide).
+For more details on contributions and future development plans, consult the [Develop Guide](https://github.com/ZZZSimulator/ZSim/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97-Develop-Guide).
