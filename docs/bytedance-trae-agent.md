@@ -1,26 +1,27 @@
 # Trae Agent: An LLM-Powered Agent for Software Engineering
 
-**Trae Agent** is an innovative, open-source LLM-based agent designed to streamline software engineering tasks. **([Original Repository](https://github.com/bytedance/trae-agent))**
+**Trae Agent** is a cutting-edge AI agent designed to automate and streamline software engineering tasks, providing a powerful CLI interface and enabling developers to build software faster and more efficiently. ([Original Repository](https://github.com/bytedance/trae-agent))
 
 [![arXiv:2507.23370](https://img.shields.io/badge/TechReport-arXiv%3A2507.23370-b31a1b)](https://arxiv.org/abs/2507.23370)
-[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pre-commit](https://github.com/bytedance/trae-agent/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/bytedance/trae-agent/actions/workflows/pre-commit.yml)
 [![Unit Tests](https://github.com/bytedance/trae-agent/actions/workflows/unit-test.yml/badge.svg)](https://github.com/bytedance/trae-agent/actions/workflows/unit-test.yml)
 [![Discord](https://img.shields.io/discord/1320998163615846420?label=Join%20Discord&color=7289DA)](https://discord.gg/VwaQ4ZBHvC)
 
-## Key Features
+**Key Features:**
 
-*   **Multi-LLM Support:** Integrate with OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, and Google Gemini APIs.
-*   **Rich Tool Ecosystem:** Leverage file editing, bash execution, sequential thinking, and more for comprehensive task completion.
-*   **Interactive Mode:** Engage in a conversational interface for iterative development and debugging.
-*   **Trajectory Recording:** Detailed logging of agent actions for easy debugging and analysis.
-*   **Flexible Configuration:** Configure Trae Agent using YAML files or environment variables.
-*   **Easy Installation:** Install and get started quickly with a simple pip-based installation.
-*   **Lakeview**: Provides short and concise summarisation for agent steps
+*   🌊 **Lakeview**: Provides concise summarization for agent steps, making it easier to follow the agent's actions.
+*   🤖 **Multi-LLM Support**: Compatible with a wide range of LLM providers, including OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama and Google Gemini.
+*   🛠️ **Rich Tool Ecosystem**: Offers a comprehensive suite of tools, including file editing, bash execution, and more, to handle complex software engineering workflows.
+*   🎯 **Interactive Mode**: Enables iterative development through a conversational interface.
+*   📊 **Trajectory Recording**: Detailed logging of all agent actions, facilitating debugging and analysis.
+*   ⚙️ **Flexible Configuration**: Provides both YAML-based configuration and environment variable support for customization.
+*   🚀 **Easy Installation**: Simple pip-based installation.
 
-## Why Trae Agent?
+## Why Choose Trae Agent?
 
-Trae Agent offers a transparent, modular architecture ideal for studying AI agent architectures, conducting ablation studies, and developing novel agent capabilities. Its research-friendly design makes it an excellent platform for researchers and developers to contribute to the rapidly evolving field of AI agents.
+Trae Agent's modular and transparent architecture empowers researchers and developers to explore AI agent architectures, conduct thorough ablation studies, and create novel agent capabilities. This research-friendly design promotes innovation and collaboration within the AI community.
 
 ## Installation
 
@@ -43,46 +44,44 @@ source .venv/bin/activate
 ### YAML Configuration (Recommended)
 
 1.  Copy the example configuration file:
-
     ```bash
     cp trae_config.yaml.example trae_config.yaml
     ```
-
 2.  Edit `trae_config.yaml` with your API credentials and preferences:
 
-    ```yaml
-    agents:
-      trae_agent:
-        enable_lakeview: true
-        model: trae_agent_model  # the model configuration name for Trae Agent
-        max_steps: 200  # max number of agent steps
-        tools:  # tools used with Trae Agent
-          - bash
-          - str_replace_based_edit_tool
-          - sequentialthinking
-          - task_done
+```yaml
+agents:
+  trae_agent:
+    enable_lakeview: true
+    model: trae_agent_model  # the model configuration name for Trae Agent
+    max_steps: 200  # max number of agent steps
+    tools:  # tools used with Trae Agent
+      - bash
+      - str_replace_based_edit_tool
+      - sequentialthinking
+      - task_done
 
-    model_providers:  # model providers configuration
-      anthropic:
-        api_key: your_anthropic_api_key
-        provider: anthropic
-      openai:
-        api_key: your_openai_api_key
-        provider: openai
+model_providers:  # model providers configuration
+  anthropic:
+    api_key: your_anthropic_api_key
+    provider: anthropic
+  openai:
+    api_key: your_openai_api_key
+    provider: openai
 
-    models:
-      trae_agent_model:
-        model_provider: anthropic
-        model: claude-sonnet-4-20250514
-        max_tokens: 4096
-        temperature: 0.5
-    ```
+models:
+  trae_agent_model:
+    model_provider: anthropic
+    model: claude-sonnet-4-20250514
+    max_tokens: 4096
+    temperature: 0.5
+```
 
-    **Note:** The `trae_config.yaml` file is ignored by git to protect your API keys.
+**Note:** The `trae_config.yaml` file is ignored by git to protect your API keys.
 
 ### Environment Variables (Alternative)
 
-You can also configure API keys using environment variables and store them in the .env file:
+You can also configure API keys using environment variables:
 
 ```bash
 export OPENAI_API_KEY="your-openai-api-key"

@@ -1,51 +1,51 @@
-# Machine Learning Systems: The Comprehensive Guide to Building Real-World AI Systems
+# Machine Learning Systems: Build Real-World AI Systems 🚀
 
-**Master the art and science of building, deploying, and maintaining cutting-edge AI systems with this open-source textbook.** ([Original Repo](https://github.com/harvard-edge/cs249r_book))
+**Learn the principles and practices of engineering intelligent systems with this comprehensive, open-source textbook.** Originally developed at Harvard, this book empowers you to build AI systems from edge devices to cloud deployment.  [View the original repository](https://github.com/harvard-edge/cs249r_book)
+
+<div align="center">
+
+[![Build](https://img.shields.io/github/actions/workflow/status/harvard-edge/cs249r_book/validate-dev.yml?branch=dev&label=Build&logo=githubactions&cacheSeconds=300)](https://github.com/harvard-edge/cs249r_book/actions/workflows/validate-dev.yml)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmlsysbook.ai&label=Website&logo=readthedocs)](https://mlsysbook.ai)
+[![Ecosystem](https://img.shields.io/website?url=https%3A%2F%2Fmlsysbook.org&label=Ecosystem&logo=internet-explorer)](https://mlsysbook.org)
+[![License](https://img.shields.io/badge/License-CC--BY--NC--SA%204.0-blue.svg)](https://github.com/harvard-edge/cs249r_book/blob/dev/LICENSE)
+[![Funding](https://img.shields.io/badge/Fund%20Us-Open%20Collective-blue.svg?logo=open-collective)](https://opencollective.com/mlsysbook)
+[![Powered by Netlify](https://img.shields.io/badge/Powered%20by-Netlify-00C7B7?logo=netlify&logoColor=white)](https://www.netlify.com)
+
+**[📖 Read Online](https://mlsysbook.ai)** • **[💾 Download PDF](https://mlsysbook.ai/Machine-Learning-Systems.pdf)** • **[🌐 Explore Ecosystem](https://mlsysbook.org)**
+
+📚 **Hardcopy edition coming 2026 via MIT Press!**
+
+</div>
 
 ---
 
-## Key Features:
+## Key Features
 
-*   **Comprehensive Coverage:** Learn about system design, data engineering, model deployment, MLOps, edge AI, and more.
-*   **Hands-on Approach:** Go beyond theory and build real-world AI systems, from edge devices to the cloud.
-*   **Open-Source & Accessible:** Benefit from a community-driven resource, free for all to learn, use, and contribute.
-*   **Community-Driven:** Join a vibrant global community of learners, educators, and contributors.
-*   **Future-Proof Your Skills:** Gain the expertise to create efficient, scalable, and sustainable AI systems.
-
----
-
-## About This Book
-
-Developed from Harvard University's CS249r course, this open-source textbook equips you with the knowledge to build AI systems. Originally created by [Prof. Vijay Janapa Reddi](https://github.com/profvjreddi/homepage), it's now used by universities and students worldwide.
-
-> **Our Mission:** Democratize AI systems education, one chapter and one lab at a time.
-
-### Why This Book Exists
-
-*"This grew out of a concern that while students could train AI models, few understood how to build the systems that actually make them work. As AI becomes more capable and autonomous, the critical bottleneck won't be the algorithms - it will be the engineers who can build efficient, scalable, and sustainable systems that safely harness that intelligence."*
-
-**— Vijay Janapa Reddi**
+*   **Comprehensive Coverage:**  Go beyond model training and master the full stack of ML systems, from edge to cloud.
+*   **Hands-On Learning:**  Build real-world AI systems with practical projects and labs.
+*   **Open Source:**  Access a free, community-driven resource with ongoing updates and contributions.
+*   **Community Driven:**  Join a global community of learners, educators, and contributors.
+*   **Edge AI Focus:**  Learn to deploy efficient ML systems on resource-constrained devices.
 
 ---
 
 ## What You'll Learn
 
-Master the **full stack** of real-world ML systems, going beyond model training.
+Master the key aspects of building and deploying production-ready ML systems:
 
 *   **System Design:** Architect scalable and maintainable ML systems.
-*   **Data Engineering:** Build robust pipelines for data collection, labeling, and processing.
-*   **Model Deployment:** Deploy production-ready systems from prototype models.
-*   **MLOps & Monitoring:** Ensure reliable and continuously operating systems.
-*   **Edge AI:** Optimize deployment for resource-constrained devices (mobile, embedded, IoT).
+*   **Data Engineering:** Build robust data pipelines for collection, labeling, and processing.
+*   **Model Deployment:** Deploy models to production from prototypes.
+*   **MLOps & Monitoring:** Implement reliable and continuously operating ML systems.
+*   **Edge AI:** Optimize ML for mobile, embedded, and IoT devices.
 
 ---
 
-## Support This Work
+## ⭐ Support This Work
 
 <div align="center">
 
 ### Show Your Support
-
 **Star this repository** to help us demonstrate the value of open AI education to funders and institutions.
 
 [![Stars](https://img.shields.io/github/stars/harvard-edge/cs249r_book?style=for-the-badge&logo=github&color=gold)](https://github.com/harvard-edge/cs249r_book/stargazers)
@@ -55,8 +55,7 @@ Master the **full stack** of real-world ML systems, going beyond model training.
 [**⭐ Star Now**](https://github.com/harvard-edge/cs249r_book) — *takes 2 seconds!*
 
 ### Fund the Mission (New!)
-
-Help us expand AI systems education globally! Donate to support educators, provide TinyML kits, fund workshops, and sustain our open-source infrastructure.
+We've graduated this project from Harvard to enable global access and expand AI systems education worldwide. Please help us support educators globally, especially in the Global South, by providing TinyML kits for students, funding workshops, and sustaining our open-source infrastructure.
 
 [![Open Collective](https://img.shields.io/badge/💝%20Support%20AI%20Education-Open%20Collective-blue.svg?style=for-the-badge)](https://opencollective.com/mlsysbook)
 
@@ -66,18 +65,18 @@ Help us expand AI systems education globally! Donate to support educators, provi
 
 ---
 
-## Community & Resources
+## 🌐 Community & Resources
 
-| Resource                        | Description                            |
-| ------------------------------- | -------------------------------------- |
-| [📚 **Main Site**](https://mlsysbook.org)  | Complete learning platform          |
-| [🔥 **TinyTorch**](https://mlsysbook.org/tinytorch) | Educational ML framework            |
-| [💬 **Discussions**](https://github.com/harvard-edge/cs249r_book/discussions) | Ask questions, share insights      |
-| [👥 **Community**](https://mlsysbook.org/community)   | Join our global learning community |
+| Resource                         | Description                                  |
+| :------------------------------- | :------------------------------------------- |
+| [📚 **Main Site**](https://mlsysbook.org) | Complete learning platform                  |
+| [🔥 **TinyTorch**](https://mlsysbook.org/tinytorch) | Educational ML framework                     |
+| [💬 **Discussions**](https://github.com/harvard-edge/cs249r_book/discussions) | Ask questions, share insights              |
+| [👥 **Community**](https://mlsysbook.org/community) | Join our global learning community          |
 
 ---
 
-## For Different Audiences
+## 🎯 Who is this book for?
 
 ### 🎓 Students
 
@@ -99,7 +98,7 @@ Help us expand AI systems education globally! Donate to support educators, provi
 
 ---
 
-## Quick Start
+## 🚀 Get Started
 
 ### For Readers
 
@@ -129,7 +128,7 @@ make preview        # Start development server
 
 ---
 
-## Contributing
+## 🤝 Contribute
 
 We welcome contributions from the global community!
 
@@ -154,11 +153,11 @@ All contributions benefit from automated quality assurance:
 
 ---
 
-## Development
+## 🛠️ Development
 
 ### Book Binder CLI (Recommended)
 
-The **Book Binder** streamlines building and iteration:
+The **Book Binder** is our lightning-fast development CLI for streamlined building and iteration:
 
 ```bash
 # Fast chapter development
@@ -195,7 +194,7 @@ make help           # Show all commands
 
 ### Project Structure
 
-```text
+```
 MLSysBook/
 ├── binder                   # ⚡ Fast development CLI (recommended)
 ├── book/                    # Main book content (Quarto)
@@ -209,6 +208,7 @@ MLSysBook/
 │   ├── data/                # Cross-reference and metadata files
 │   ├── _quarto-html.yml     # Website build configuration
 │   ├── _quarto-pdf.yml      # PDF build configuration
+
 │   ├── _quarto.yml          # Active config (symlink)
 │   ├── index.qmd            # Main entry point
 │   └── assets/              # Images, styles, media
@@ -294,7 +294,7 @@ MLSysBook/
 
 ---
 
-## Citation & License
+## 📋 Citation & License
 
 ### Citation
 

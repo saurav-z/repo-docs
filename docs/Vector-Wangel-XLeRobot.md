@@ -1,7 +1,9 @@
-# XLeRobot: Affordable Dual-Arm Mobile Robot for Everyone 🤖
+# XLeRobot: Build Your Own Affordable Embodied AI Robot
 
-**XLeRobot offers a revolutionary, low-cost, and accessible entry point into the world of embodied AI, costing less than an iPhone and assembled in under 4 hours!** Discover a practical and open-source dual-arm mobile robot designed for household tasks and general manipulation, all at an incredible price point.  [Explore the XLeRobot project on GitHub](https://github.com/Vector-Wangel/XLeRobot).
+**Embark on your AI robotics journey with XLeRobot, a low-cost, dual-arm mobile robot designed for household tasks, starting at just $660!**  Explore the future of robotics without breaking the bank! Learn more and contribute at the original repo: [https://github.com/Vector-Wangel/XLeRobot](https://github.com/Vector-Wangel/XLeRobot).
 
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
+[![中文](https://img.shields.io/badge/lang-中文-brown.svg)](README_CN.md)
 [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
 [![Docs status](https://img.shields.io/badge/docs-passing-brightgreen.svg)](https://xlerobot.readthedocs.io/en/latest/)
@@ -11,56 +13,48 @@
   <img width="1725" height="1140" alt="front" src="https://github.com/user-attachments/assets/f9c454ee-2c46-42b4-a5d7-88834a1c95ab" />
 </a>
 
----
 
-## Key Features & Benefits
+## Key Features
 
-*   **Ultra-Affordable:** Starting at just $660 USD, making embodied AI accessible to a wider audience.
-*   **Rapid Assembly:**  Assemble your XLeRobot in under 4 hours.
-*   **Versatile Control:** Control the robot using keyboard, Xbox controller, or Switch Joy-Con.
-*   **Realistic Simulation:** Utilize comprehensive simulation environments for testing and development, including support for Quest3 VR.
-*   **Open-Source:** Built upon the shoulders of giants:  LeRobot, SO-100/SO-101, Lekiwi, and Bambot.
-*   **Dual-Arm Manipulation:** Designed for household tasks and general manipulation.
-*   **Comprehensive Documentation:**  Well-organized tutorials, demos, and resources available.
-
----
+*   **Affordable:** Starting at $660, XLeRobot makes embodied AI accessible.
+*   **Fast Assembly:** Build your robot in under 4 hours.
+*   **Dual-Arm Mobile Robot:** Designed for household tasks and general manipulation.
+*   **Real-World Control:** Control XLeRobot with a keyboard, Xbox controller, or Switch joycon via Bluetooth with zero latency.
+*   **Advanced Simulation:**  Utilize VR, keyboard, Xbox controller, or Switch joycon within a simulated environment for testing and development.
+*   **Detailed Documentation:** Comprehensive documentation and tutorials to guide you through the build process.
+*   **Community Driven:** Collaboration with contributors on various parts.
 
 ## Cost Breakdown
 
 > [!NOTE]
 > Cost excludes 3D printing, tools, shipping, and taxes.
 
-| Price                                        | US      | EU      | CN      |
-| -------------------------------------------- | ------- | ------- | ------- |
+| Price | US | EU | CN |
+|---|---|---|---|
 | **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** |
-| ↑ Stereo dual-eye RGB head cam                 | +$30    | +€30    | +¥199   |
-| + RasberryPi                                 | +$79    | +€79    | +¥399   |
-| ↑ RealSense RGBD head cam                     | +$220   | +€230   | +¥1499  |
-
----
+| ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 |
+| + RasberryPi | +$79 | +€79 | +¥399 |
+| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 |
 
 ## What's New
 
-*   **2025-07-30:** Control XLeRobot in real life with keyboard/Xbox controller/Switch joycon. All bluetooth, no wifi needed and zero latency.
-    ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
-*   **2025-07-08:** Simulation environment with updated urdfs, control scripts (support Quest3 VR, keyboard, Xbox controller, switch joycon), support for new hardware and cameras, RL environment. Get started in 15 min.
-    ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
-*   **2025-07-01:** Documentation website launched.
-*   **2025-06-13:** XLeRobot 0.2.0 released, capable for autonomous household tasks, starts from 660$.
+*   **Real-Life Control** (July 30, 2025): Control XLeRobot in real life with keyboard/Xbox controller/Switch joycon.
+*   **Simulation Release** (July 8, 2025): Improved simulation environment with updated URDFs and control scripts.
+*   **Comprehensive Documentation** (July 1, 2025): Documentation website for tutorials, demos, and resources.
+*   **XLeRobot 0.2.0** (June 13, 2025): Initial fully-capable household tasks with hardware setup.
 
----
-
-## Getting Started
+## Get Started
 
 > [!NOTE]
-> This tutorial is designed to be beginner-friendly. Please familiarize yourself with Python, Ubuntu, and Git before starting.
+> This project welcomes all levels of experience. Beginners are welcome!
 
-1.  💵 **Buy your parts**: [Bill of Materials](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/material.html)
-2.  🖨️ **Print your stuff**: [3D printing](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/3d.html)
-3.  🔨 **Assemble**! : [Assemble](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble.html)
-4.  💻 **Software**: [Get your robot moving!](https://xlerobot.readthedocs.io/en/latest/software/index.html)
+> [!NOTE]
+> If you're new to programming, make sure you are familiar with the basics of Python, Ubuntu and Github (with the help of Google and AI).
 
----
+1.  **Buy Your Parts:** [Bill of Materials](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/material.html)
+2.  **Print Your Stuff:** [3D Printing Guide](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/3d.html)
+3.  **Assemble:** [Assembly Instructions](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble.html)
+4.  **Software:** [Software Setup](https://xlerobot.readthedocs.io/en/latest/software/index.html) - Get your robot moving!
 
 ## Contributors
 
@@ -69,12 +63,13 @@
 *   Nicole Yue: Documentation website setup
 *   Yuesong Wang: Mujoco simulation
 
-Thanks to the contributions from: LeRobot, SO-100, Lekiwi, and Bambot!  We welcome all contributors!
+## Acknowledgements
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Vector-Wangel/XLeRobot&type=Timeline)](https://star-history.com/#Vector-Wangel/XLeRobot&Timeline)
----
+XLeRobot is built upon the shoulders of giants, including: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot).
 
 ## Citation
+
+If you find this project useful, please cite it:
 
 ```bibtex
 @misc{wang2025xlerobot,
@@ -84,9 +79,8 @@ Thanks to the contributions from: LeRobot, SO-100, Lekiwi, and Bambot!  We welco
     year = {2025}
 }
 ```
----
 
 ## 🪧 Disclaimer 🪧
 
 > [!NOTE]
-> If you build, buy, or develop a XLeRobot based on this repo, you will be fully responsible for all the physical and mental damages it does to you or others.
+> You are fully responsible for any physical or mental damages caused by building or using XLeRobot.

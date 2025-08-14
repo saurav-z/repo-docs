@@ -1,31 +1,27 @@
 # OpenBench: The Open-Source LLM Evaluation Powerhouse
 
-**Tired of siloed LLM evaluations? OpenBench provides a unified, provider-agnostic platform for standardized and reproducible benchmarking of large language models.**  [Access the original repository here](https://github.com/groq/openbench).
+**Tired of fragmented LLM benchmarking? OpenBench offers a comprehensive, provider-agnostic solution for standardized and reproducible language model evaluation.**
 
 [![PyPI version](https://badge.fury.io/py/openbench.svg)](https://badge.fury.io/py/openbench)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-OpenBench is a robust, open-source evaluation infrastructure designed for comprehensive LLM benchmarking. It supports a vast array of models from leading providers and facilitates reproducible results across various domains. This platform offers a simple CLI, extensible architecture, and first-class support for local evaluations, ensuring both flexibility and privacy.
+[View the original repository on GitHub](https://github.com/groq/openbench)
 
-## Key Features:
+OpenBench is your all-in-one toolkit for evaluating Large Language Models (LLMs). It provides a standardized and reproducible benchmarking infrastructure, supporting a wide range of models and evaluation suites. With OpenBench, you can easily compare models, explore their strengths and weaknesses, and ensure consistent and reliable results across different providers.
 
-*   **Extensive Benchmark Suite**: Access over 30+ benchmarks spanning:
-    *   Knowledge
-    *   Math
-    *   Reasoning
-    *   Reading Comprehension
-    *   Health
-    *   Long-Context Recall
-*   **Provider-Agnostic**: Works seamlessly with 15+ model providers: Groq, OpenAI, Anthropic, Cohere, Google, AWS Bedrock, Azure, local models via Ollama, and more.
-*   **Simple CLI**: Easily navigate and execute evaluations with intuitive commands: `bench list`, `bench describe`, and `bench eval`.
-*   **Local Evaluation Support**: Run privatized benchmarks with confidence using `bench eval <path>`.
-*   **Built on Inspect AI**: Leverages the industry-standard Inspect AI framework for reliable evaluations.
-*   **Extensible**: Add new benchmarks and metrics with ease.
+## Key Features
 
-## Quick Start: Evaluate a Model in 60 Seconds
+*   **✅ Comprehensive Benchmarks:** Evaluate your models across 30+ benchmarks, including MMLU, HumanEval, GPQA, and more, covering knowledge, math, reasoning, and reading comprehension.
+*   **🌐 Provider-Agnostic:** Seamlessly works with 15+ model providers out of the box, including Groq, OpenAI, Anthropic, Google, and local models.
+*   **⚙️ Simple CLI:** Easily manage your evaluations with intuitive commands like `bench list`, `bench describe`, and `bench eval`.
+*   **🛠️ Local Eval Support:** Run private or custom evaluations with the `bench eval <path>` command, built using the Inspect AI framework, preserving data privacy.
+*   **📊 Extensible:** Easily add new benchmarks and metrics to meet your specific needs.
+*   **🚀 Built on Inspect AI:** Leverages the industry-standard evaluation framework for robust and reliable results.
 
-**Prerequisite**: [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
+## Getting Started: Evaluate a Model in Under a Minute
+
+**Prerequisites:** [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 ```bash
 # Create a virtual environment and install OpenBench (30 seconds)
@@ -43,7 +39,9 @@ bench eval mmlu --model groq/llama-3.3-70b-versatile --limit 10
 bench view
 ```
 
-## Supported Providers and Examples
+## Supported Model Providers
+
+OpenBench offers flexibility in choosing your model provider:
 
 ```bash
 # Groq (blazing fast!)
@@ -67,18 +65,22 @@ bench eval mmlu --model huggingface/gpt-oss-120b:groq
 # Any provider supported by Inspect AI!
 ```
 
-## Benchmarks by Category
+## Benchmark Categories
 
-| Category       | Benchmarks                                                                                                                                                                                                                                                           |
-|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Knowledge**  | MMLU (57 subjects), GPQA (graduate-level), SuperGPQA (285 disciplines), OpenBookQA, HLE (Humanity's Last Exam - 2,500 questions from 1,000+ experts), HLE_text (text-only version)                                                                               |
-| **Coding**     | HumanEval (164 problems)                                                                                                                                                                                                                                          |
-| **Math**       | AIME 2023-2025, HMMT Feb 2023-2025, BRUMO 2025, MATH (competition-level problems), MATH-500 (challenging subset), MGSM (multilingual grade school math), MGSM_en (English), MGSM_latin (5 languages), MGSM_non_latin (6 languages)                                |
-| **Reasoning**  | SimpleQA (factuality), MuSR (multi-step reasoning)                                                                                                                                                                                                               |
-| **Long Context** | OpenAI MRCR (multiple needle retrieval), OpenAI MRCR_2n (2 needle), OpenAI MRCR_4 (4 needle), OpenAI MRCR_8n (8 needle)                                                                                                                                         |
-| **Healthcare** | HealthBench (open-ended healthcare eval), HealthBench_hard (challenging variant), HealthBench_consensus (consensus variant)                                                                                                                                    |
+OpenBench supports a wide range of benchmarks, categorized for easy selection:
 
-## Configuration
+| Category        | Benchmarks                                                                                                                                                                                                                                                                 |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Knowledge**   | MMLU (57 subjects), GPQA (graduate-level), SuperGPQA (285 disciplines), OpenBookQA, HLE (Humanity's Last Exam - 2,500 questions from 1,000+ experts), HLE_text (text-only version)                                                                                   |
+| **Coding**      | HumanEval (164 problems)                                                                                                                                                                                                                                                  |
+| **Math**        | AIME 2023-2025, HMMT Feb 2023-2025, BRUMO 2025, MATH (competition-level problems), MATH-500 (challenging subset), MGSM (multilingual grade school math), MGSM_en (English), MGSM_latin (5 languages), MGSM_non_latin (6 languages)                                       |
+| **Reasoning**   | SimpleQA (factuality), MuSR (multi-step reasoning)                                                                                                                                                                                                                         |
+| **Long Context** | OpenAI MRCR (multiple needle retrieval), OpenAI MRCR_2n (2 needle), OpenAI MRCR_4 (4 needle), OpenAI MRCR_8n (8 needle)                                                                                                                                                  |
+| **Healthcare**  | HealthBench (open-ended healthcare eval), HealthBench_hard (challenging variant), HealthBench_consensus (consensus variant)                                                                                                                                           |
+
+## Configuration and Commands
+
+### Configuration
 
 ```bash
 # Set your API keys
@@ -90,9 +92,9 @@ export OPENAI_API_KEY=your_key  # Optional
 export BENCH_MODEL=groq/llama-3.1-70b
 ```
 
-## Command-Line Interface
+### Commands
 
-For a complete list of all commands and options, run: `bench --help`
+For a full list of commands and options, run `bench --help`.
 
 | Command                  | Description                                        |
 |--------------------------|----------------------------------------------------|
@@ -102,7 +104,7 @@ For a complete list of all commands and options, run: `bench --help`
 | `bench view`             | View logs from previous benchmark runs             |
 | `bench eval <path>`      | Run your local/private evals built with Inspect AI |
 
-### Key `eval` Command Options
+### `eval` Command Options
 
 | Option               | Environment Variable     | Default                                          | Description                                      |
 |----------------------|--------------------------|--------------------------------------------------|--------------------------------------------------|
@@ -120,33 +122,40 @@ For a complete list of all commands and options, run: `bench --help`
 | `--display`          | `BENCH_DISPLAY`          | `None`                                           | Display type (full/conversation/rich/plain/none) |
 | `--reasoning-effort` | `BENCH_REASONING_EFFORT` | `None`                                           | Reasoning effort level (low/medium/high)         |
 | `--json`             | None                     | `False`                                          | Output results in JSON format                    |
+| `--hub-repo`         | `BENCH_HUB_REPO`         | `None`                                           | Push results to a Hugging Face Hub dataset                    |
 
-## Building Custom Evaluations
+## Building Your Own Evals
 
-OpenBench is built on [Inspect AI](https://inspect.aisi.org.uk/). Leverage Inspect AI's documentation to create your custom evaluations. Integrate them into OpenBench with `bench eval <path>` to run your private evals.
+OpenBench is built on [Inspect AI](https://inspect.aisi.org.uk/). You can create custom evaluations using their framework. After building your private evaluations, use `bench eval <path>` to run them within OpenBench.
+
+## Exporting Logs to Hugging Face
+
+Share your results and collaborate with the community by exporting logs to a Hugging Face Hub dataset:
+
+```bash
+export HF_TOKEN=<your-huggingface-token>
+
+bench eval mmlu --model groq/llama-3.3-70b-versatile --limit 10 --hub-repo <your-username>/openbench-logs 
+```
 
 ## FAQ
 
 ### How does OpenBench differ from Inspect AI?
 
-OpenBench provides:
-
-*   **Reference implementations** of 20+ major benchmarks with consistent interfaces.
-*   **Shared utilities** for common patterns (math scoring, multi-language support, etc.).
-*   **Curated scorers** that work across different eval types.
-*   **CLI tooling** optimized for running standardized benchmarks.
+OpenBench enhances the Inspect AI framework with:
+*   **Pre-built benchmarks:** Ready-to-use evaluations with consistent interfaces.
+*   **Shared utilities:** Common scoring and dataset handling across benchmarks.
+*   **Curated scorers:** Optimized for different evaluation types.
+*   **User-friendly CLI:** Simplified benchmarking workflows.
 
 ### Why not just use Inspect AI, lm-evaluation-harness, or lighteval?
 
-OpenBench focuses on:
-
-*   **Shared components**: Common scorers, solvers, and datasets across benchmarks to reduce code duplication.
-*   **Clean implementations**: Each eval is written for readability and reliability.
-*   **Developer experience**: Simple CLI, consistent patterns, and easy extensibility.
+OpenBench provides:
+*   **Focus on usability**: OpenBench is optimized for ease of use and extension, making it easy for developers to run tests.
+*   **Improved DX:** Simplifies the process of running existing benchmarks.
+*   **Focus on collaboration:** Making it easy for others to replicate results.
 
 ### How can I run `bench` outside of the `uv` environment?
-
-Run the following command:
 
 ```bash
 uv run pip install -e .
@@ -154,42 +163,37 @@ uv run pip install -e .
 
 ### I'm running into an issue when downloading a dataset from HuggingFace - how do I fix it?
 
-Define the environment variable:
-
 ```bash
 HF_TOKEN="<HUGGINGFACE_TOKEN>"
 ```
 
-For full HuggingFace documentation, see the [HuggingFace docs on Authentication](https://huggingface.co/docs/hub/en/datasets-polars-auth).
-
 ## Development
 
+For development, clone the repository, set up with UV, and run tests:
+
 ```bash
-# Clone the repo
 git clone https://github.com/groq/openbench.git
 cd openbench
-
-# Setup with UV
 uv venv && uv sync --dev
 source .venv/bin/activate
-
-# Run tests
 pytest
 ```
 
 ## Contributing
 
-Contribute to OpenBench!  Open issues and submit PRs at [github.com/groq/openbench](https://github.com/groq/openbench).
+Contribute to OpenBench by opening issues and pull requests at [github.com/groq/openbench](https://github.com/groq/openbench).
 
 ## Reproducibility Statement
 
-We strive to implement evaluations as faithfully as possible. Note that there might be numerical discrepancies between OpenBench and external sources due to variations in model prompts, quantization, and inference approaches. Ensure you use the same OpenBench version for meaningful comparisons.  We welcome contributions to improve this tool.
+OpenBench strives for faithfulness in implementing evaluations but acknowledges potential numerical discrepancies. Results should be compared within the same OpenBench version.
 
 ## Acknowledgments
 
-*   [Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai)
-*   [EleutherAI's lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)
-*   [Hugging Face's lighteval](https://github.com/huggingface/lighteval)
+Special thanks to:
+
+*   **[Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai)**
+*   **[EleutherAI's lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)**
+*   **[Hugging Face's lighteval](https://github.com/huggingface/lighteval)**
 
 ## Citation
 

@@ -53,63 +53,45 @@
     <a href="https://www.readme-i18n.com/confident-ai/deepeval?lang=zh">中文</a>
 </p>
 
-## DeepEval: Evaluate and Test Your LLMs with Ease
+## Introduction: Revolutionize Your LLM Evaluation with DeepEval
 
-DeepEval is an open-source, easy-to-use LLM evaluation framework, acting as your personal LLM quality assurance specialist, allowing you to rigorously test and improve your large language model systems. This framework provides a comprehensive suite of tools, similar to pytest but specifically tailored for LLM output testing, allowing you to analyze and refine your LLM applications for optimal performance.  [Check out the original repository.](https://github.com/confident-ai/deepeval)
+**DeepEval** is an open-source framework that simplifies and streamlines the evaluation and testing of Large Language Models (LLMs).  Built like Pytest but specialized for LLMs, DeepEval empowers you to thoroughly test and refine your LLM applications, improving their performance and reliability.  Check out the [DeepEval repository](https://github.com/confident-ai/deepeval) for the code.
 
-**Key Features:**
+### Key Features:
 
 *   **Comprehensive Metrics:**
     *   G-Eval
-    *   DAG ([deep acyclic graph](https://deepeval.com/docs/metrics-dag))
-    *   **RAG Metrics**: Answer Relevancy, Faithfulness, Contextual Recall, Contextual Precision, Contextual Relevancy, RAGAS
-    *   **Agentic Metrics**: Task Completion, Tool Correctness
-    *   **Other Metrics**: Hallucination, Summarization, Bias, Toxicity
-    *   **Conversational Metrics**: Knowledge Retention, Conversation Completeness, Conversation Relevancy, Role Adherence
-    *   And more!
-*   **Local Execution**: All evaluations run locally on your machine.
-*   **Custom Metric Creation:** Build and integrate your own custom metrics seamlessly.
-*   **Synthetic Dataset Generation:** Create datasets for thorough evaluation.
-*   **CI/CD Integration:** Works effortlessly within any CI/CD environment.
-*   **Red Teaming:**  Red team your LLM application for 40+ safety vulnerabilities in a few lines of code.
-    *   Toxicity
-    *   Bias
-    *   SQL Injection
-*   **Benchmarking:** Benchmark LLMs on popular benchmarks in under 10 lines of code:
-    *   MMLU
-    *   HellaSwag
-    *   DROP
-    *   BIG-Bench Hard
-    *   TruthfulQA
-    *   HumanEval
-    *   GSM8K
-*   **Confident AI Integration:** 100% integrated with Confident AI for the full evaluation lifecycle:
+    *   DAG (Deep Acyclic Graph)
+    *   RAG metrics: Answer Relevancy, Faithfulness, Contextual Recall & Precision, Contextual Relevancy, RAGAS
+    *   Agentic metrics: Task Completion, Tool Correctness
+    *   Other metrics: Hallucination, Summarization, Bias, Toxicity
+    *   Conversational metrics: Knowledge Retention, Conversation Completeness & Relevancy, Role Adherence
+*   **Component-Level and End-to-End Evaluation:** Evaluate individual components (LLM calls, retrievers, etc.) or your entire LLM application.
+*   **Custom Metric Creation:**  Build and integrate your own custom evaluation metrics seamlessly.
+*   **Synthetic Dataset Generation:** Create datasets for robust evaluation.
+*   **CI/CD Integration:** Easily integrate DeepEval into your CI/CD pipeline.
+*   **Red Teaming:** Test your LLM for over 40 safety vulnerabilities with prompt injection attacks.
+*   **Benchmarking:** Easily benchmark ANY LLM on popular LLM benchmarks.
+*   **Confident AI Integration:** 100% integrated with [Confident AI](https://confident-ai.com?utm_source=GitHub), for full evaluation lifecycle.
+
     *   Curate/annotate evaluation datasets on the cloud
     *   Benchmark LLM app using dataset, and compare with previous iterations to experiment which models/prompts works best
     *   Fine-tune metrics for custom results
     *   Debug evaluation results via LLM traces
     *   Monitor & evaluate LLM responses in product to improve datasets with real-world data
     *   Repeat until perfection
-
 > [!IMPORTANT]
 > Need a place for your DeepEval testing data to live 🏡❤️? [Sign up to the DeepEval platform](https://confident-ai.com?utm_source=GitHub) to compare iterations of your LLM app, generate & share testing reports, and more.
+>
+> ![Demo GIF](assets/demo.gif)
 
 > Want to talk LLM evaluation, need help picking metrics, or just to say hi? [Come join our discord.](https://discord.com/invite/3SEyvpgu2f)
 
 <br />
 
-## 🔌 Integrations
+## Getting Started with DeepEval
 
-*   🦄 LlamaIndex, for [**unit testing RAG applications in CI/CD**](https://www.deepeval.com/integrations/frameworks/llamaindex?utm_source=GitHub)
-*   🤗 Hugging Face, to [**enable real-time evaluations during LLM fine-tuning**](https://www.deepeval.com/integrations/frameworks/huggingface?utm_source=GitHub)
-
-<br />
-
-## 🚀 QuickStart
-
-Here's how to get started with DeepEval, using the example of a RAG customer support chatbot.
-
-### Installation
+### Installation:
 
 ```bash
 pip install -U deepeval
@@ -127,67 +109,58 @@ deepeval login
 
 Follow the instructions in the CLI to create an account, copy your API key, and paste it into the CLI. All test cases will automatically be logged (find more information on data privacy [here](https://deepeval.com/docs/data-privacy?utm_source=GitHub)).
 
-### Writing your first test case
+### Writing Your First Test Case:
 
-Create a test file:
+1.  **Create a test file:**
 
-```bash
-touch test_chatbot.py
-```
+    ```bash
+    touch test_chatbot.py
+    ```
 
-Open `test_chatbot.py` and write your first test case to run an **end-to-end** evaluation using DeepEval, which treats your LLM app as a black-box:
+2.  **Write your test case (end-to-end):**
 
-```python
-import pytest
-from deepeval import assert_test
-from deepeval.metrics import GEval
-from deepeval.test_case import LLMTestCase, LLMTestCaseParams
+    ```python
+    import pytest
+    from deepeval import assert_test
+    from deepeval.metrics import GEval
+    from deepeval.test_case import LLMTestCase, LLMTestCaseParams
 
-def test_case():
-    correctness_metric = GEval(
-        name="Correctness",
-        criteria="Determine if the 'actual output' is correct based on the 'expected output'.",
-        evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.EXPECTED_OUTPUT],
-        threshold=0.5
-    )
-    test_case = LLMTestCase(
-        input="What if these shoes don't fit?",
-        # Replace this with the actual output from your LLM application
-        actual_output="You have 30 days to get a full refund at no extra cost.",
-        expected_output="We offer a 30-day full refund at no extra costs.",
-        retrieval_context=["All customers are eligible for a 30 day full refund at no extra costs."]
-    )
-    assert_test(test_case, [correctness_metric])
-```
+    def test_case():
+        correctness_metric = GEval(
+            name="Correctness",
+            criteria="Determine if the 'actual output' is correct based on the 'expected output'.",
+            evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.EXPECTED_OUTPUT],
+            threshold=0.5
+        )
+        test_case = LLMTestCase(
+            input="What if these shoes don't fit?",
+            # Replace this with the actual output from your LLM application
+            actual_output="You have 30 days to get a full refund at no extra cost.",
+            expected_output="We offer a 30-day full refund at no extra costs.",
+            retrieval_context=["All customers are eligible for a 30 day full refund at no extra costs."]
+        )
+        assert_test(test_case, [correctness_metric])
+    ```
 
-Set your `OPENAI_API_KEY` as an environment variable (you can also evaluate using your own custom model, for more details visit [this part of our docs](https://deepeval.com/docs/metrics-introduction#using-a-custom-llm?utm_source=GitHub)):
+3.  **Set your OpenAI API key:**
 
-```
-export OPENAI_API_KEY="..."
-```
+    ```bash
+    export OPENAI_API_KEY="..."
+    ```
 
-And finally, run `test_chatbot.py` in the CLI:
+4.  **Run your test:**
 
-```
-deepeval test run test_chatbot.py
-```
+    ```bash
+    deepeval test run test_chatbot.py
+    ```
 
-**Congratulations! Your test case should have passed ✅** Let's breakdown what happened.
-
-- The variable `input` mimics a user input, and `actual_output` is a placeholder for what your application's supposed to output based on this input.
-- The variable `expected_output` represents the ideal answer for a given `input`, and [`GEval`](https://deepeval.com/docs/metrics-llm-evals) is a research-backed metric provided by `deepeval` for you to evaluate your LLM output's on any custom with human-like accuracy.
-- In this example, the metric `criteria` is correctness of the `actual_output` based on the provided `expected_output`.
-- All metric scores range from 0 - 1, which the `threshold=0.5` threshold ultimately determines if your test have passed or not.
-
-[Read our documentation](https://deepeval.com/docs/getting-started?utm_source=GitHub) for more information on more options to run end-to-end evaluation, how to use additional metrics, create your own custom metrics, and tutorials on how to integrate with other tools like LangChain and LlamaIndex.
+**Congratulations!** You've run your first DeepEval test.  Review the documentation for more advanced use cases.
 
 <br />
 
-## Evaluating Nested Components
+## Component-Level Evaluations
 
-If you wish to evaluate individual components within your LLM app, you need to run **component-level** evals - a powerful way to evaluate any component within an LLM system.
-
-Simply trace "components" such as LLM calls, retrievers, tool calls, and agents within your LLM application using the `@observe` decorator to apply metrics on a component-level. Tracing with `deepeval` is non-instrusive (learn more [here](https://deepeval.com/docs/evaluation-llm-tracing#dont-be-worried-about-tracing)) and helps you avoid rewriting your codebase just for evals:
+DeepEval allows you to evaluate individual components within your LLM app.
 
 ```python
 from deepeval.tracing import observe, update_current_span
@@ -216,25 +189,6 @@ You can learn everything about component-level evaluations [here.](https://www.d
 
 <br />
 
-## Evaluating Without Pytest Integration
-
-Alternatively, you can evaluate without Pytest, which is more suited for a notebook environment.
-
-```python
-from deepeval import evaluate
-from deepeval.metrics import AnswerRelevancyMetric
-from deepeval.test_case import LLMTestCase
-
-answer_relevancy_metric = AnswerRelevancyMetric(threshold=0.7)
-test_case = LLMTestCase(
-    input="What if these shoes don't fit?",
-    # Replace this with the actual output from your LLM application
-    actual_output="We offer a 30-day full refund at no extra costs.",
-    retrieval_context=["All customers are eligible for a 30 day full refund at no extra costs."]
-)
-evaluate([test_case], [answer_relevancy_metric])
-```
-
 ## Using Standalone Metrics
 
 DeepEval is extremely modular, making it easy for anyone to use any of our metrics. Continuing from the previous example:
@@ -258,6 +212,8 @@ print(answer_relevancy_metric.reason)
 ```
 
 Note that some metrics are for RAG pipelines, while others are for fine-tuning. Make sure to use our docs to pick the right one for your use case.
+
+<br />
 
 ## Evaluating a Dataset / Test Cases in Bulk
 
@@ -306,18 +262,23 @@ evaluate(dataset, [answer_relevancy_metric])
 dataset.evaluate([answer_relevancy_metric])
 ```
 
-# LLM Evaluation With Confident AI
+## Integrations
 
-The correct LLM evaluation lifecycle is only achievable with [the DeepEval platform](https://confident-ai.com?utm_source=Github). It allows you to:
+*   🦄 LlamaIndex, to [**unit test RAG applications in CI/CD**](https://www.deepeval.com/integrations/frameworks/llamaindex?utm_source=GitHub)
+*   🤗 Hugging Face, to [**enable real-time evaluations during LLM fine-tuning**](https://www.deepeval.com/integrations/frameworks/huggingface?utm_source=GitHub)
 
-1. Curate/annotate evaluation datasets on the cloud
-2. Benchmark LLM app using dataset, and compare with previous iterations to experiment which models/prompts works best
-3. Fine-tune metrics for custom results
-4. Debug evaluation results via LLM traces
-5. Monitor & evaluate LLM responses in product to improve datasets with real-world data
-6. Repeat until perfection
+<br />
 
-Everything on Confident AI, including how to use Confident is available [here](https://documentation.confident-ai.com/docs?utm_source=GitHub).
+## LLM Evaluation with Confident AI
+
+Maximize your LLM evaluation lifecycle with [the DeepEval platform](https://confident-ai.com?utm_source=Github):
+
+1.  Curate/annotate evaluation datasets on the cloud
+2.  Benchmark LLM app using dataset, and compare with previous iterations to experiment which models/prompts works best
+3.  Fine-tune metrics for custom results
+4.  Debug evaluation results via LLM traces
+5.  Monitor & evaluate LLM responses in product to improve datasets with real-world data
+6.  Repeat until perfection
 
 To begin, login from the CLI:
 
@@ -339,33 +300,27 @@ You should see a link displayed in the CLI once the test has finished running. P
 
 <br />
 
-# Contributing
+## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/confident-ai/deepeval/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-<br />
-
-# Roadmap
-
-Features:
-
-- [x] Integration with Confident AI
-- [x] Implement G-Eval
-- [x] Implement RAG metrics
-- [x] Implement Conversational metrics
-- [x] Evaluation Dataset Creation
-- [x] Red-Teaming
-- [ ] DAG custom metrics
-- [ ] Guardrails
+We welcome contributions!  Please review the [CONTRIBUTING.md](https://github.com/confident-ai/deepeval/blob/main/CONTRIBUTING.md) file for details on our code of conduct and contribution process.
 
 <br />
 
-# Authors
+## Roadmap
 
-Built by the founders of Confident AI. Contact jeffreyip@confident-ai.com for all enquiries.
+### Planned Features:
+
+*   [ ] DAG custom metrics
+*   [ ] Guardrails
 
 <br />
 
-# License
+## Authors
 
-DeepEval is licensed under Apache 2.0 - see the [LICENSE.md](https://github.com/confident-ai/deepeval/blob/main/LICENSE.md) file for details.
+DeepEval is built by the founders of Confident AI.  For all inquiries, please contact jeffreyip@confident-ai.com.
+
+<br />
+
+## License
+
+DeepEval is licensed under the Apache 2.0 License - see [LICENSE.md](https://github.com/confident-ai/deepeval/blob/main/LICENSE.md) for details.

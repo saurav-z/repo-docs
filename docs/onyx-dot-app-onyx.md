@@ -7,7 +7,7 @@
 </h2>
 
 <p align="center">
-<p align="center">Supercharge your team's productivity with **Onyx**, the open-source Gen-AI platform that connects to your enterprise knowledge and fuels intelligent search.
+  **Onyx: Unlock your company's knowledge with an open-source Gen-AI and enterprise search platform.**
 </p>
 
 <p align="center">
@@ -25,57 +25,51 @@
 </a>
 </p>
 
-**[Onyx](https://www.onyx.app/)** (formerly Danswer) is the cutting-edge AI platform designed to unlock the full potential of your company's data, applications, and people. Integrate with your existing tools and effortlessly connect to your chosen LLM to benefit from a powerful, unified knowledge hub.
+**[Onyx](https://www.onyx.app/)** (formerly Danswer) is an open-source AI platform designed to connect with your company's documents, applications, and people, offering a powerful, secure, and customizable knowledge management solution.  Leveraging advanced AI, Onyx allows you to build intelligent search capabilities, custom AI agents, and integrations with numerous data sources.
 
-## Key Features of Onyx:
+### Key Features of Onyx:
 
-*   **AI-Powered Search and Discovery:**
-    *   Deeply research your team's knowledge base, uncovering insights with advanced AI capabilities.
-    *   [Deep research over your team's knowledge](https://private-user-images.githubusercontent.com/32520769/414509312-48392e83-95d0-4fb5-8650-a396e05e0a32.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzk5Mjg2MzYsIm5iZiI6MTczOTkyODMzNiwicGF0aCI6Ii8zMjUyMDc2OS80MTQ1MDkzMTItNDgzOTJlODMtOTVkMC00ZmI1LTg2NTAtYTM5NmUwNWUwYTMyLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjE5VDAxMjUzNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFhMzk5Njg2Y2Y5YjFmNDNiYTQ2YzM5ZTg5YWJiYTU2NWMyY2YwNmUyODE2NWUxMDRiMWQxZWJmODI4YTA0MTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.a9D8A0sgKE9AoaoE-mfFbJ6_OKYeqaf7TZ4Han2JfW8)
-*   **Flexible AI Chat Interface:**
-    *   Utilize Onyx as a secure and adaptable AI chat interface, compatible with any LLM of your preference.
-    *   [Onyx Chat Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxChatSilentDemo.gif)
-*   **Seamless Integrations:**
-    *   Effortlessly integrate with over 40 connectors, syncing knowledge and access controls across your key tools.
-    *   [Onyx Connector Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxConnectorSilentDemo.gif)
-*   **Customizable AI Agents:**
-    *   Create AI agents tailored to specific needs with unique prompts, knowledge bases, and actions.
-*   **Multi-Platform Deployment:**
-    *   Deploy Onyx securely across various environments, including local machines, on-premises servers, and the cloud.
-    *   [Onyx Bot Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxBot.png)
+*   **AI-Powered Chat Interface:** Interact with your data using a feature-rich chat interface, supporting any LLM of your choice for natural language understanding and response generation.
+*   **Seamless Integrations:**  Keep your knowledge synchronized across 40+ connectors including Google Drive, Slack, Confluence, Salesforce, and many more.
+*   **Custom AI Agents:** Create and deploy custom AI agents tailored to specific tasks with unique prompts, knowledge bases, and actions.
+*   **Flexible Deployment:** Deploy Onyx securely and efficiently on any scale – from a laptop to on-premise servers or the cloud.
+*   **Deep Research Capabilities:**  Uncover insights by searching deeply within your team's collective knowledge.  [See example](https://private-user-images.githubusercontent.com/32520769/414509312-48392e83-95d0-4fb5-8650-a396e05e0a32.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzk5Mjg2MzYsIm5iZiI6MTczOTkyODMzNiwicGF0aCI6Ii8zMjUyMDc2OS80MTQ1MDkzMTItNDgzOTJlODMtOTVkMC00ZmI1LTg2NTAtYTM5NmUwNWUwYTMyLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjE5VDAxMjUzNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFhMzk5Njg2Y2Y5YjFmNDNiYTQ2YzM5ZTg5YWJiYTU2NWMyY2YwNmUyODE2NWUxMDRiMWQxZWJmODI4YTA0MTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.a9D8A0sgKE9AoaoE-mfFbJ6_OKYeqaf7TZ4Han2JfW8)
+*   **Secure AI Chat with LLM:** Leverage secure and robust AI chat capabilities using your preferred LLM.  [See Example](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxChatSilentDemo.gif)
+*   **Easy Connector Setup:** Connect your data sources effortlessly. [See Example](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxConnectorSilentDemo.gif)
+*   **Accessibility:**  Access Onyx where your team already works. [See Example](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxBot.png)
 
-## Deployment
+### Deployment
 
-**Get Started Instantly:** Try Onyx for free with [Onyx Cloud](https://cloud.onyx.app/signup) or deploy it locally using Docker Compose. For detailed instructions, refer to our [Quickstart Guide](https://docs.onyx.app/quickstart).
+**Get started in seconds with [Onyx Cloud](https://cloud.onyx.app/signup)** (free).
 
-Onyx also offers robust support for high-availability and scalable deployments on Kubernetes. Explore our [deployment resources](https://github.com/onyx-dot-app/onyx/tree/main/deployment).
+For self-hosting, deploy Onyx locally or on a virtual machine with a simple `docker compose` command.  Refer to the [documentation](https://docs.onyx.app/quickstart) for detailed instructions. Onyx also supports high-availability/scalable deployments on Kubernetes ([deployment](https://github.com/onyx-dot-app/onyx/tree/main/deployment)).
 
-## Additional Benefits:
+### Other Notable Benefits of Onyx
 
-*   **Advanced AI Models:** Leverages custom deep learning models for optimized indexing and inference, refined by user feedback.
-*   **Robust Security:** Includes flexible security features like SSO (OIDC/SAML/OAuth2), RBAC, and credential encryption.
-*   **Knowledge Management:** Offers knowledge curation tools such as document sets, query history, and usage analytics.
-*   **Scalability:** Proven to scale to tens of thousands of users and hundreds of millions of documents.
+*   Custom deep learning models for improved indexing and inference, refined through user feedback.
+*   Robust security features, including SSO (OIDC/SAML/OAuth2), RBAC, and credential encryption.
+*   Knowledge curation tools such as document sets, query history, and usage analytics.
+*   Scalable deployment options, tested to support tens of thousands of users and millions of documents.
 
-## 🚀 Roadmap
+### Roadmap
 
-*   Advanced information retrieval methods (e.g., StructRAG, LightGraphRAG).
-*   Personalized search experiences.
-*   Organizational understanding and expert recommendation features.
-*   Code Search capabilities.
-*   SQL and structured query language support.
+*   New methods in information retrieval (StructRAG, LightGraphRAG, etc.)
+*   Personalized Search
+*   Organizational understanding and expert suggestions.
+*   Code Search
+*   SQL and Structured Query Language
 
-## 🔌 Connectors
+### 🔌 Connectors
 
-Sync knowledge and access across 40+ connectors, including:
+Onyx connects with over 40 different data sources, ensuring all your team's knowledge is at your fingertips.
 
 *   Google Drive
 *   Confluence
 *   Slack
 *   Gmail
 *   Salesforce
-*   Microsoft SharePoint
-*   GitHub
+*   Microsoft Sharepoint
+*   Github
 *   Jira
 *   Zendesk
 *   Gong
@@ -83,26 +77,39 @@ Sync knowledge and access across 40+ connectors, including:
 *   Dropbox
 *   Local Files
 *   Websites
-*   And more...
+*   And more ...
 
-View the complete list of connectors [here](https://docs.onyx.app/connectors).
+See the full list [here](https://docs.onyx.app/connectors).
 
-## 📚 Licensing
+### 📚 Licensing
 
 Onyx is available in two editions:
 
-*   **Onyx Community Edition (CE):**  Freely available under the MIT Expat license. Deploy it using the instructions above.
-*   **Onyx Enterprise Edition (EE):** Offers enhanced features for larger organizations.  Visit [our website](https://www.onyx.app/pricing) for details.
+*   **Onyx Community Edition (CE):**  Freely available under the MIT Expat license. Deploy easily using the instructions above.
+*   **Onyx Enterprise Edition (EE):** Offers additional features for larger organizations. Explore the [pricing](https://www.onyx.app/pricing) to learn more.
 
-To access the Onyx Enterprise Edition:
+To try the Onyx Enterprise Edition:
 
 1.  Sign up for [Onyx Cloud](https://cloud.onyx.app/signup).
-2.  For self-hosting the Enterprise Edition, contact us at [founders@onyx.app](mailto:founders@onyx.app) or schedule a call [here](https://cal.com/team/onyx/founders).
+2.  For self-hosting the Enterprise Edition, contact us at [founders@onyx.app](mailto:founders@onyx.app) or book a call on [Cal](https://cal.com/team/onyx/founders).
 
-## 🤝 Contributing
+### 💡 Contributing
 
-Interested in contributing? Please review the [Contribution Guide](CONTRIBUTING.md) for details.
+Interested in contributing?  Review the [Contribution Guide](CONTRIBUTING.md) for details.
 
-[Back to Top](#readme-top)
+<br>
 
-[Return to the Onyx GitHub Repository](https://github.com/onyx-dot-app/onyx)
+👉 **[Back to the Onyx Repository](https://github.com/onyx-dot-app/onyx)**
+```
+Key improvements and SEO considerations:
+
+*   **Clear Hook:**  The first sentence is a strong hook, highlighting the core value proposition.
+*   **Keyword Optimization:** The title and introduction use relevant keywords like "Gen-AI," "enterprise search," "open-source," and "knowledge management." The text is also peppered with related keywords.
+*   **Structured Content:** Uses headings, bullet points, and visual examples to improve readability.
+*   **Call to Action:** Encourages users to explore resources.
+*   **Internal Links:** Connects sections to relevant parts of the README (where applicable).
+*   **External Links:** Links to the official Onyx website, documentation, cloud signup, and relevant sections.
+*   **Concise Language:**  The text is rewritten to be more succinct and engaging.
+*   **Visuals:**  Includes the original examples to enhance the presentation.
+*   **License and Contribution Details:**  Keeps the important information from the original README.
+*   **Return to Repo Link:** Includes a link at the end for the user's convenience.

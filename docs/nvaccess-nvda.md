@@ -1,39 +1,38 @@
-# NVDA: Free and Open Source Screen Reader for Windows
+# NVDA: Free & Open Source Screen Reader for Windows
 
-**NVDA (NonVisual Desktop Access) empowers visually impaired users by providing a powerful, free, and open-source screen reader for Microsoft Windows.**
+**NVDA (NonVisual Desktop Access) empowers visually impaired users with a powerful and accessible screen reader for Windows.** Developed by NV Access and a global community, NVDA is a leading solution for those who are blind or have low vision. Check out the [original repo](https://github.com/nvaccess/nvda) for more information.
 
-[Visit the original NVDA repository on GitHub](https://github.com/nvaccess/nvda)
+## Key Features of NVDA:
 
-## Key Features of NVDA
+*   **Free and Open Source:** NVDA is completely free to download and use, and its open-source nature encourages community contributions and transparency.
+*   **Comprehensive Screen Reading:** Provides access to applications, web pages, and documents by speaking or outputting to refreshable braille displays.
+*   **Cross-Application Support:** Works with a wide range of popular Windows applications, including web browsers, word processors, and email clients.
+*   **Extensible with Add-ons:** Enhance NVDA's functionality with a vast library of add-ons created by the community.
+*   **Multi-Language Support:** Available in numerous languages, making it accessible to users around the world.
 
-*   **Free and Open Source:** NVDA is available at no cost and its source code is open for anyone to inspect, modify, and distribute.
-*   **Compatibility:** Designed specifically for Microsoft Windows, ensuring broad compatibility with various applications and operating system versions.
-*   **Community Driven:** Developed by NV Access in collaboration with a global community, ensuring continuous improvement and user support.
-*   **Customizable:** NVDA allows users to personalize their experience through add-ons and configuration options.
-*   **Regular Updates:** NVDA receives frequent updates, incorporating new features, bug fixes, and improvements to accessibility.
-*   **Secure and Reliable:**  Maintained with security in mind, including code signing services.
+## Important Information for Users and Contributors
 
-## How to Get Started
+### Code of Conduct
 
-To learn more about NVDA, download a copy, and access support resources, visit the main [NV Access](http://www.nvaccess.org/) website.
+The NVDA project adheres to a [Citizen and Contributor Code of Conduct](CODE_OF_CONDUCT.md). Please review and abide by the guidelines while participating in the project.
 
-## Important Information for Contributors
+### Project Vision & Roadmap
 
-The NVDA project operates under a [Citizen and Contributor Code of Conduct](CODE_OF_CONDUCT.md) to foster a respectful and collaborative environment. NV Access expects all contributors and community members to adhere to these guidelines.
+NVDA is guided by a [product vision statement and set of principles](./projectDocs/product_vision.md). NV Access also maintains a [development roadmap](https://www.nvaccess.org/post/nvda-roadmap/) to provide insight into future features and ongoing development.
 
-*   The NVDA project is guided by a [product vision statement and set of principles](./projectDocs/product_vision.md).
-*   View the NVDA [development roadmap](https://www.nvaccess.org/post/nvda-roadmap/).
-*   NVDA is available under a modified GNU General Public License version 2. Please refer to [our license](./copying.txt) for more information.
+### Licensing
+
+NVDA is licensed under a modified GNU General Public License version 2.  Refer to [our license](./copying.txt) for complete details.
 
 ### Proposed License Update
 
-We are proposing an update to the NVDA license and are seeking feedback from all historical contributors.  Review the proposal and contribute to the discussion:  [Proposed update to the NVDA license](https://github.com/nvaccess/nvda/discussions/18574). The consultation period ends on 28 September 2025.
+NV Access is proposing an update to the NVDA license.  Feedback from historical contributors is welcome.  Review the proposal: [Proposed update to the NVDA license](https://github.com/nvaccess/nvda/discussions/18574).  The consultation period ends on September 28, 2025.
 
 ## Acknowledgements
 
-We extend our sincere gratitude to [SignPath](https://www.signpath.io/) for their generous support in providing code signing services, ensuring the security and integrity of our releases.
+Thank you to [SignPath](https://www.signpath.io/) for their generous support, providing code signing services to ensure the security and integrity of NVDA releases.
 
-## NVDA Community Resources
+## Getting Help and Community Resources
 
 *   [Support and information for NVDA users](https://www.nvaccess.org/get-help/)
 *   [Report an issue or feature request](./projectDocs/issues/readme.md)
@@ -43,9 +42,15 @@ We extend our sincere gratitude to [SignPath](https://www.signpath.io/) for thei
 
 ## Contributing to NVDA
 
-If you're interested in contributing to NVDA, please review the [contributing guide](./.github/CONTRIBUTING.md) for details on reporting issues, testing, translating, contributing code/documentation, and creating add-ons.
+We welcome contributions! Learn how to get involved by reading our [contributing guide](./.github/CONTRIBUTING.md), including information on:
 
-## Status Checks
+*   Reporting and triaging issues.
+*   Testing NVDA.
+*   Translating NVDA.
+*   Contributing code and documentation.
+*   Creating add-ons.
+
+## Build Status Checks
 
 *   Alpha build status: [![view latest alpha builds](https://github.com/nvaccess/nvda/actions/workflows/testAndPublish.yml/badge.svg?branch=master)](https://github.com/nvaccess/nvda/actions/workflows/testAndPublish.yml?query=branch%3Amaster+event%3Apush)
 *   Beta build status: [![view latest beta builds](https://github.com/nvaccess/nvda/actions/workflows/testAndPublish.yml/badge.svg?branch=beta)](https://github.com/nvaccess/nvda/actions/workflows/testAndPublish.yml?query=branch%3Abeta+event%3Apush)

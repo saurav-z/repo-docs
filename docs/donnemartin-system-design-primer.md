@@ -1,53 +1,47 @@
-# System Design Primer: Ace Your System Design Interview
+# System Design Primer: Your Guide to Building Scalable Systems
 
-**Want to master system design and excel in your technical interviews?** This comprehensive primer provides a wealth of resources, from foundational concepts to practical solutions, to help you design large-scale systems.  Explore the [original repository](https://github.com/donnemartin/system-design-primer) for the full experience!
+**Master the art of designing large-scale systems with this comprehensive, open-source resource.** [<ins>View the original repository</ins>](https://github.com/donnemartin/system-design-primer)
 
-## Key Features
+This primer is your one-stop shop for learning how to design robust and scalable systems, perfect for system design interviews and real-world application.  It's an organized collection of resources, constantly updated by a vibrant open-source community.  Use our Anki flashcard decks to aid with retention!
 
-*   **Comprehensive Coverage:** Dive deep into essential system design topics, including performance, scalability, consistency, and availability.
-*   **Practical Solutions:** Study detailed solutions to common system design interview questions, complete with discussions, code, and diagrams.
-*   **Community-Driven:** Contribute to an open-source project, learn from others, and help improve the resource.
-*   **Interview Prep:** Master system design interview techniques, including how to approach questions and conduct back-of-the-envelope calculations.
-*   **Anki Flashcards:** Leverage Anki flashcards to retain key concepts using spaced repetition.
+## Key Features:
 
-## Core Concepts
+*   **Comprehensive Coverage:** Explore a vast range of system design topics, from fundamental principles to advanced architectures.
+*   **Interview Prep:** Prepare for system design interviews with detailed study guides, sample questions, and solutions.
+*   **Open-Source Community:** Contribute to a living document and learn from the community.
+*   **Anki Flashcards:** Enhance your learning with pre-built Anki flashcard decks for key concepts and exercises.
+*   **Real-World Architectures:** Study successful system designs from top tech companies.
 
-### Scalability, Performance, and Trade-offs
+## Table of Contents:
 
-*   **Performance vs. Scalability:** Understand the difference and how to handle both.
-*   **Latency vs. Throughput:** Learn how to balance these critical metrics.
-*   **CAP Theorem:** Explore the trade-offs between consistency, availability, and partition tolerance.
-*   **Consistency Patterns:** Study weak, eventual, and strong consistency models.
-*   **Availability Patterns:** Learn about failover and replication strategies.
-*   **System Design Topics:** Dive into DNS, CDNs, Load Balancers, and many other topics.
+(Links to the main headings, no need for the subheadings)
 
-### Database Design
-
-*   **RDBMS:** Learn about relational databases, ACID properties, and common scaling techniques (master-slave, federation, sharding, etc.).
-*   **NoSQL Databases:** Explore key-value stores, document stores, wide-column stores, and graph databases.
-*   **SQL vs. NoSQL:** Understand the strengths and weaknesses of each approach.
-
-### Caching, Asynchronism, and Communication
-
-*   **Caching Strategies:** Master client, CDN, web server, database, and application caching.
-*   **Asynchronism:** Explore message queues, task queues, and back pressure.
-*   **Communication Protocols:** Understand TCP, UDP, RPC, and REST.
-
-### Security, Study Guide, and Resources
-
-*   **Security Basics:** Review essential security principles.
-*   **Study Guide:** Tailor your preparation based on your interview timeline (short, medium, long).
-*   **Additional Resources:** Find links to real-world architectures, company engineering blogs, and more.
-
-## Contributing
-
-Help improve this guide:
-
-*   Fix errors
-*   Improve sections
-*   Add new sections
-*   [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
-
-Review the [Contributing Guidelines](CONTRIBUTING.md).
-
----
+*   [Motivation](#motivation)
+*   [Anki flashcards](#anki-flashcards)
+*   [Contributing](#contributing)
+*   [Index of system design topics](#index-of-system-design-topics)
+*   [Study guide](#study-guide)
+*   [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
+*   [System design interview questions with solutions](#system-design-interview-questions-with-solutions)
+*   [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions)
+*   [System design topics: start here](#system-design-topics-start-here)
+*   [Performance vs scalability](#performance-vs-scalability)
+*   [Latency vs throughput](#latency-vs-throughput)
+*   [Availability vs consistency](#availability-vs-consistency)
+*   [Consistency patterns](#consistency-patterns)
+*   [Availability patterns](#availability-patterns)
+*   [Domain name system](#domain-name-system)
+*   [Content delivery network](#content-delivery-network)
+*   [Load balancer](#load-balancer)
+*   [Reverse proxy (web server)](#reverse-proxy-web-server)
+*   [Application layer](#application-layer)
+*   [Database](#database)
+*   [Cache](#cache)
+*   [Asynchronism](#asynchronism)
+*   [Communication](#communication)
+*   [Security](#security)
+*   [Appendix](#appendix)
+*   [Under development](#under-development)
+*   [Credits](#credits)
+*   [Contact info](#contact-info)
+*   [License](#license)

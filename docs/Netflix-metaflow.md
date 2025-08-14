@@ -1,40 +1,28 @@
-<!--
-  **SEO Optimized README for Metaflow**
+[![Metaflow](https://user-images.githubusercontent.com/763451/89453116-96a57e00-d713-11ea-9fa6-82b29d4d6eff.png)](https://github.com/Netflix/metaflow)
 
-  Original Repo: https://github.com/Netflix/metaflow
--->
+# Metaflow: Build, Manage, and Scale Your AI/ML Systems with Ease
 
-<img src="https://user-images.githubusercontent.com/763451/89453116-96a57e00-d713-11ea-9fa6-82b29d4d6eff.png" alt="Metaflow Logo" width="400">
+**Metaflow is a human-centric framework, developed at Netflix and now supported by Outerbounds, designed to empower data scientists and engineers to build and manage robust, real-world AI and ML systems from prototype to production.**
 
-# Metaflow: Build, Manage, and Scale AI & ML Systems with Ease
+[Metaflow](https://metaflow.org) streamlines the entire AI/ML development lifecycle, enabling teams of all sizes to iterate quickly and deliver reliable, maintainable systems efficiently.  Metaflow supports a wide variety of projects, from classical statistics to state-of-the-art deep learning and foundation models. By unifying code, data, and compute, Metaflow ensures seamless, end-to-end management of your AI/ML workflows.
 
-**Metaflow**, originally developed at Netflix, is a human-centric framework designed to empower data scientists and engineers to build, manage, and deploy robust AI and Machine Learning (ML) systems at scale. [Learn more on GitHub](https://github.com/Netflix/metaflow).
+Today, Metaflow powers thousands of AI/ML experiences across a diverse array of companies, including Amazon, Doordash, Dyson, Goldman Sachs, and Netflix (supporting over 3000 AI/ML projects!).
 
-Metaflow streamlines the entire AI/ML development lifecycle, from rapid prototyping to production deployment. This empowers teams of all sizes to iterate quickly and deliver high-quality systems efficiently, making it ideal for projects ranging from classical statistics to cutting-edge deep learning.
+## Key Features and Benefits
 
-## Key Features
-
-*   **Rapid Prototyping & Experimentation:**
-    *   Develop and test AI/ML models locally with a Pythonic API.
-    *   Seamlessly integrate with notebooks for iterative development.
-    *   Built-in support for experiment tracking, versioning, and visualization for comprehensive model management.
-*   **Scalable Infrastructure & Computation:**
-    *   Effortlessly scale workloads horizontally and vertically in your cloud environment (AWS, GCP, Azure etc.).
-    *   Supports both CPU and GPU resources for compute-intensive tasks.
-    *   Fast data access for efficient processing of massive datasets.
-*   **Production-Ready Deployment & Management:**
-    *   Simplify dependency management for reproducible results.
-    *   Deploy with one-click to highly available production orchestrators.
-    *   Reactive orchestration with event-triggered workflows.
-
-## From Prototype to Production and Back
-
-Metaflow provides a simple and friendly Pythonic [API](https://docs.metaflow.org) that covers foundational needs of AI and ML systems:
-<img src="./docs/prototype-to-prod.png" width="800px">
+*   **Rapid Prototyping and Experimentation:**
+    *   Quickly prototype and experiment with your models in notebooks.
+    *   Built-in support for experiment tracking, versioning, and visualization.
+*   **Scalable Computing and Data Handling:**
+    *   Seamlessly scale workloads horizontally and vertically on your cloud infrastructure (CPUs and GPUs).
+    *   Fast and efficient data access for handling large datasets.
+    *   Supports both embarrassingly parallel and gang-scheduled compute workloads.
+*   **Production-Ready Deployment:**
+    *   Effortlessly manage dependencies.
+    *   Deploy your workflows with one-click to production-grade orchestrators.
+    *   Built-in support for reactive orchestration.
 
 ## Getting Started
-
-Metaflow is easy to set up and use!  Explore the power of Metaflow with the [Metaflow sandbox](https://outerbounds.com/sandbox).
 
 ### Installation
 
@@ -44,26 +32,35 @@ Install Metaflow using pip:
 pip install metaflow
 ```
 
-Or, use conda-forge:
+Or using conda:
 
 ```bash
 conda install -c conda-forge metaflow
 ```
 
-Then, follow the [tutorial](https://docs.metaflow.org/getting-started/tutorials) to create and run your first Metaflow flow.
+### Quickstart
+
+Follow our [tutorial](https://docs.metaflow.org/getting-started/tutorials) to create and run your first Metaflow flow.
 
 ### Resources
 
-*   [How Metaflow Works](https://docs.metaflow.org/metaflow/basics)
-*   [Additional Resources](https://docs.metaflow.org/introduction/metaflow-resources)
+*   [How Metaflow works](https://docs.metaflow.org/metaflow/basics)
+*   [Additional resources](https://docs.metaflow.org/introduction/metaflow-resources)
 
-## Deploying Infrastructure
+For more detailed information, explore the [API Reference](https://docs.metaflow.org/api) or review the [Release Notes](https://github.com/Netflix/metaflow/releases) for the latest features and improvements.
+
+## Deploying to Production
 
 <img src="./docs/multicloud.png" width="800px">
 
-To benefit from the scaling and deployment capabilities of Metaflow, you can configure the infrastructure to your cloud environment using this [guide](https://outerbounds.com/engineering/welcome/).
+To leverage Metaflow's full potential, configure your infrastructure using this [guide](https://outerbounds.com/engineering/welcome/).
 
-## Community & Contribution
+## Join the Community
 
-*   **Join the Community:** Get help and connect with other users on our [Slack Workspace](http://slack.outerbounds.co/).
-*   **Contribute:** We welcome contributions! Review the [Contribution Guide](https://docs.metaflow.org/introduction/contributing-to-metaflow) to get started.
+We encourage you to join our community [Slack workspace](http://slack.outerbounds.co/)!
+
+## Contributing
+
+We welcome your contributions! See our [contribution guide](https://docs.metaflow.org/introduction/contributing-to-metaflow) for details.
+
+[View the original repository on GitHub](https://github.com/Netflix/metaflow)

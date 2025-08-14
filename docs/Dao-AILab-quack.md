@@ -1,67 +1,65 @@
-# QuACK: Unleash Blazing-Fast AI Kernels with CuTe-DSL 🦆
+# 🦆 QuACK: Unleash Lightning-Fast Kernels with CuTe 🦆
 
-[Explore the QuACK repository](https://github.com/Dao-AILab/quack) for cutting-edge AI kernels optimized with the CuTe-DSL.
+**Supercharge your AI workloads with QuACK, a collection of optimized kernels written in the CuTe-DSL, delivering unparalleled performance for your H100 and B200 GPUs!**  For the original repository, see [Dao-AILab/quack](https://github.com/Dao-AILab/quack).
 
 ## Key Features
 
-*   **High-Performance Kernels:** Optimized kernels written using the CuTe-DSL for maximum performance.
-*   **Easy Installation:**  Install with a simple pip command.
-*   **Ready for Modern Hardware:** Designed to leverage the power of H100 and B200 GPUs.
-*   **Python Integration:** Seamlessly integrate kernels into your Python workflows.
-
-## Available Kernels
-
-*   🦆 RMSNorm (Forward & Backward)
-*   🦆 Softmax (Forward & Backward)
-*   🦆 Cross Entropy (Forward & Backward)
-*   🦆 LayerNorm (Forward)
-*   **Upcoming:** 🦆 Rotary (Forward & Backward)
-
-## Requirements
-
-*   NVIDIA H100 or B200 GPU
-*   CUDA Toolkit 12.9+
-*   Python 3.12
+*   **Optimized Kernels:** Pre-built kernels for common AI operations, including:
+    *   RMSNorm (forward & backward)
+    *   Softmax (forward & backward)
+    *   Cross Entropy (forward & backward)
+    *   LayerNorm (forward)
+*   **CuTe-DSL Powered:** Kernels are built using the CuTe-DSL, enabling high performance and customization.
+*   **Easy Installation:** Simple pip installation for quick setup.
+*   **Python Integration:** Seamlessly integrate QuACK kernels into your Python projects.
+*   **Future-Proof:** Actively developed with upcoming features, including Rotary kernels.
 
 ## Installation
+
+Get started with QuACK in seconds:
 
 ```bash
 pip install quack-kernels
 ```
 
+## Requirements
+
+Ensure your environment meets the following:
+
+*   NVIDIA H100 or B200 GPU
+*   CUDA Toolkit 12.9 or later
+*   Python 3.12
+
 ## Usage
+
+Easily integrate QuACK kernels into your Python code:
 
 ```python
 from quack import rmsnorm, softmax, cross_entropy
 ```
 
-## Performance
+## Performance and Benchmarks
 
-[Include your performance image here. It is not possible to download and include images via the API.]  (Note: You can link the image or paste the HTML if the markdown renderer supports it)
+QuACK kernels are designed for exceptional speed. Detailed performance insights are available in our blog post.
 
-See our [blogpost](media/2025-07-10-membound-sol.md) for detailed performance benchmarks.
+<div align="center">
+<figure>
+  <img
+  src="media/bf16_kernel_benchmarks_single_row.svg"
+  alt="QuACK Kernel Benchmarks"
+  >
+</figure>
+</div>
+
+## Documentation and Blog Post
+
+Dive deeper into the architecture and performance of QuACK in our comprehensive [blogpost](media/2025-07-10-membound-sol.md) which discusses how to leverage the CuTe-DSL for memory-bound kernels to deliver lightning-fast performance.
 
 ## Development
 
-Set up your development environment:
+Contribute and customize QuACK with ease:
 
 ```bash
 pip install -e '.[dev]'
 pre-commit install
 ```
-
-## Documentation
-
-Dive deeper into the memory-bound kernel optimization techniques detailed in our [blogpost](media/2025-07-10-membound-sol.md), demonstrating how to achieve exceptional speeds using the CuTe-DSL within Python.
-```
-
-Key improvements and explanations:
-
-*   **SEO Optimization:**  Uses relevant keywords like "AI Kernels," "CuTe-DSL," "H100," and "B200" in headings and content. The introductory sentence is designed to attract searchers.
-*   **Clear Headings:**  Uses clear and concise headings to structure the information.
-*   **Bulleted Key Features:**  Highlights the core benefits of the project.
-*   **Concise Language:**  Rephrases information for brevity and clarity.
-*   **Actionable Instructions:**  Provides clear and easy-to-follow installation and usage instructions.
-*   **Links:** Keeps link back to original repo and blog post
-*   **Complete Content:**  Includes all the original information in an organized manner.
-*   **Image Handling note:** Provides the markdown for how the image should be included and a comment on how it isn't possible to do so through the API.

@@ -1,54 +1,58 @@
 # QuTiP: Quantum Toolbox in Python
 
-**QuTiP is an open-source software package built for simulating the dynamics of closed and open quantum systems.**
+**QuTiP empowers researchers and educators with an open-source Python toolkit for simulating quantum systems.**
 
-[Link to original repo:](https://github.com/qutip/qutip)
+[View the original repository on GitHub](https://github.com/qutip/qutip)
 
-QuTiP provides a powerful and user-friendly environment for quantum mechanics research and education, built on Python and leveraging the power of NumPy, SciPy, and Cython.
+[![Build Status](https://github.com/qutip/qutip/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/qutip/qutip/actions/workflows/tests.yml)
+[![Coverage Status](https://img.shields.io/coveralls/qutip/qutip.svg?logo=Coveralls)](https://coveralls.io/r/qutip/qutip)
+[![Maintainability](https://api.codeclimate.com/v1/badges/df502674f1dfa1f1b67a/maintainability)](https://codeclimate.com/github/qutip/qutip/maintainability)
+[![license](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![PyPi Downloads](https://img.shields.io/pypi/dm/qutip?label=downloads%20%7C%20pip&logo=PyPI)](https://pypi.org/project/qutip)
+[![Conda-Forge Downloads](https://img.shields.io/conda/dn/conda-forge/qutip?label=downloads%20%7C%20conda&logo=Conda-Forge)](https://anaconda.org/conda-forge/qutip)
 
 ## Key Features
 
-*   **Simulate Quantum Systems:** Model both closed and open quantum systems with time-dependent Hamiltonians and collapse operators.
-*   **Efficient Numerical Simulations:** Utilizes NumPy, SciPy, and Cython for high-performance numerical backends.
-*   **User-Friendly Interface:** Designed for easy use, ideal for both research and classroom settings.
-*   **Visualization:** Offers graphical output via Matplotlib for clear representation of results.
-*   **Cross-Platform Compatibility:** Works seamlessly on Unix-based platforms and Windows.
-*   **Open Source & Free:** Accessible for use, modification, and distribution without licensing fees.
-*   **Comprehensive Documentation:** Extensive documentation, tutorials, and demonstration notebooks are available.
+*   **Simulate Quantum Dynamics:** Model closed and open quantum systems with time-dependent Hamiltonians and collapse operators.
+*   **User-Friendly Interface:** Built with Python and leverages NumPy, SciPy, and Cython for efficient numerical simulations.
+*   **Versatile Applications:** Ideal for a wide array of quantum mechanical problems, including those in physics, education, and research.
+*   **Open Source & Free:** Utilize and modify QuTiP without licensing fees.
+*   **Cross-Platform Compatibility:** Runs seamlessly on Unix-based systems and Windows.
+
+## About QuTiP
+
+QuTiP (Quantum Toolbox in Python) provides a comprehensive environment for numerical simulations of quantum mechanical systems.  It utilizes powerful numerical libraries like NumPy, SciPy, and Cython, and offers graphical output via Matplotlib.  QuTiP is designed to be user-friendly and efficient, making it perfect for researchers and students alike.
 
 ## Installation
 
-QuTiP is readily available through:
+QuTiP is available for installation via `pip` and `conda`.
 
-*   **pip:** `pip install qutip` (minimal installation) or `pip install qutip[full]` (with optional dependencies).
-*   **conda:** `conda install -c conda-forge qutip`
+```bash
+pip install qutip  # Minimal installation
+pip install qutip[full] # Installation with all optional dependencies
+```
 
-For detailed installation instructions, including building from source, refer to the [official documentation](https://qutip.readthedocs.io/en/stable/installation.html).
+Detailed installation instructions, including building from source, can be found in the [official documentation](https://qutip.readthedocs.io/en/stable/installation.html).
 
 ## Documentation
 
-Access the latest documentation for stable releases and the development branch:
+Comprehensive documentation, including tutorials and examples, is available at:
 
-*   [Latest Stable Release](https://qutip.readthedocs.io/en/latest/)
-*   [Development Branch](https://qutip.readthedocs.io/en/master/)
-*   [Documentation on QuTiP Website](https://qutip.org/documentation.html)
-
-Explore demonstration notebooks and tutorials in the [qutip/qutip-tutorials repository](https://github.com/qutip/qutip-tutorials).
+*   [Latest Stable Release Documentation](https://qutip.readthedocs.io/en/latest/)
+*   [Development Documentation (Master Branch)](https://qutip.readthedocs.io/en/master/)
+*   [QuTiP Website Documentation](https://qutip.org/documentation.html)
+*   [Tutorials](https://qutip.org/tutorials.html)
 
 ## Contribute
 
-Join the QuTiP community by:
+Contribute to the development of QuTiP by:
 
 *   Forking the repository and submitting pull requests.
 *   Reporting bugs on the [issues page](https://github.com/qutip/qutip/issues).
-*   Participating in the [QuTiP discussion group](https://groups.google.com/g/qutip).
+*   Participating in discussions in the [QuTiP discussion group](https://groups.google.com/g/qutip).
 
-Learn more about contributing to QuTiP development in the [documentation](https://qutip.readthedocs.io/en/stable/development/contributing.html).
-
-## Support
-
-QuTiP is supported by the [Unitary Fund](https://unitary.fund) and [NumFOCUS](https://numfocus.org).
+For more information, please consult the ["contributing to QuTiP development" section of the documentation](https://qutip.readthedocs.io/en/stable/development/contributing.html).
 
 ## Citing QuTiP
 
-If you use QuTiP in your research, please cite the original QuTiP papers, available [here](https://dml.riken.jp/?s=QuTiP).
+If you use QuTiP in your research, please cite the original QuTiP papers available [here](https://dml.riken.jp/?s=QuTiP).

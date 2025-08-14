@@ -1,4 +1,6 @@
-<!-- # BabelDOC: Scientific PDF Translation & Bilingual Comparison -->
+# BabelDOC: Effortlessly Translate Scientific Papers and Documents
+
+**Quickly translate PDF scientific papers, research documents, and more!** BabelDOC offers powerful PDF translation capabilities, providing both online and self-hosted options. Learn more at the [original repo](https://github.com/funstory-ai/BabelDOC).
 
 <div align="center">
 <picture>
@@ -7,10 +9,12 @@
 </picture>
 
 <p>
+  <!-- PyPI -->
   <a href="https://pypi.org/project/BabelDOC/">
     <img src="https://img.shields.io/pypi/v/BabelDOC"></a>
   <a href="https://pepy.tech/projects/BabelDOC">
     <img src="https://static.pepy.tech/badge/BabelDOC"></a>
+  <!-- License -->
   <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/funstory-ai/BabelDOC"></a>
   <a href="https://t.me/+Z9_SgnxmsmA5NzBl">
@@ -21,171 +25,171 @@
 
 </div>
 
-## BabelDOC: Translate and Compare Scientific PDFs with AI
+## Key Features
 
-BabelDOC is a powerful Python library designed for translating and comparing scientific PDF documents, providing both online and self-hosted options.  Explore the [BabelDOC GitHub Repository](https://github.com/funstory-ai/BabelDOC) for more details.
-
-**Key Features:**
-
-*   **PDF Translation:**  Translate scientific papers from English to Chinese (and increasingly, other languages) using advanced AI models.
-*   **Bilingual Comparison:** Generate dual-language PDFs for side-by-side comparison of original and translated text.
-*   **Command Line Interface (CLI):** Easily translate PDFs with a simple command-line tool.
-*   **Python API:** Integrate BabelDOC's translation capabilities into your own Python applications.
-*   **Online Service:**  Try the beta version on [Immersive Translate - BabelDOC](https://app.immersivetranslate.com/babel-doc/) (1000 free pages per month).
-*   **Self-Deployment:**  Leverage [PDFMathTranslate 2.0](https://github.com/PDFMathTranslate/PDFMathTranslate-next) for self-hosting and a WebUI.
-*   **Glossary Support:** Incorporate custom glossaries for accurate domain-specific translations.
-*   **Offline Assets:** Support for offline operation with assets packaged for environments without internet access.
+*   **High-Quality Translation:** Translate scientific papers and documents.
+*   **Online and Self-Hosted Options:** Utilize the [Immersive Translate - BabelDOC](https://app.immersivetranslate.com/babel-doc/) beta, or self-deploy with [PDFMathTranslate 2.0](https://github.com/PDFMathTranslate/PDFMathTranslate-next).
+*   **Command Line Interface (CLI):** Easy-to-use CLI for quick translations.
+*   **Python API:** Integrate BabelDOC into your Python projects.
+*   **Bilingual PDF Output:** Generate translated PDFs with original and translated text side-by-side or alternating pages.
+*   **Extensive Configuration:** Fine-tune your translations with various options, including language selection, OpenAI integration, and glossary support.
+*   **Offline Assets Management:** Generate and restore offline asset packages for use in air-gapped or offline environments.
 
 ## Getting Started
 
-### Installation
+BabelDOC offers flexible installation options using `uv`.
 
-We recommend using [uv](https://github.com/astral-sh/uv) for managing your environment.
+### Install from PyPI
 
-1.  **Install uv:** Follow the [uv installation instructions](https://github.com/astral-sh/uv#installation).
-2.  **Install BabelDOC from PyPI:**
+1.  Follow the [uv installation instructions](https://github.com/astral-sh/uv#installation) to install uv and set up the PATH environment variable.
+2.  Install BabelDOC using:
 
     ```bash
     uv tool install --python 3.12 BabelDOC
     babeldoc --help
     ```
 
-3.  **Use the `babeldoc` command**:
+3.  Use the `babeldoc` command, for example:
 
     ```bash
     babeldoc --openai --openai-model "gpt-4o-mini" --openai-base-url "https://api.openai.com/v1" --openai-api-key "your-api-key-here"  --files example.pdf
+
     # multiple files
     babeldoc --openai --openai-model "gpt-4o-mini" --openai-base-url "https://api.openai.com/v1" --openai-api-key "your-api-key-here"  --files example1.pdf --files example2.pdf
     ```
 
-### Installation from Source
+### Install from Source
 
-1.  **Clone the repository:**
+1.  Follow the [uv installation instructions](https://github.com/astral-sh/uv#installation) to install uv and set up the PATH environment variable.
+2.  Clone the repository:
 
     ```bash
     git clone https://github.com/funstory-ai/BabelDOC
     cd BabelDOC
     ```
 
-2.  **Install dependencies and run BabelDOC:**
+3.  Install dependencies and run BabelDOC:
 
     ```bash
     uv run babeldoc --help
     ```
 
-3.  **Use the `uv run babeldoc` command:**
+4.  Use the `uv run babeldoc` command:
 
     ```bash
     uv run babeldoc --files example.pdf --openai --openai-model "gpt-4o-mini" --openai-base-url "https://api.openai.com/v1" --openai-api-key "your-api-key-here"
+
     # multiple files
     uv run babeldoc --files example.pdf --files example2.pdf --openai --openai-model "gpt-4o-mini" --openai-base-url "https://api.openai.com/v1" --openai-api-key "your-api-key-here"
     ```
 
-## Advanced Options
+### Advanced Options
 
-BabelDOC offers several advanced options to customize your translation process.  For debugging, use the CLI. End users should utilize [Immersive Translate - BabelDOC](https://app.immersivetranslate.com/babel-doc/) or [PDFMathTranslate 2.0](https://github.com/PDFMathTranslate/PDFMathTranslate-next).
+>   [!NOTE]
+>   For end-users, the recommended method is to use the **Online Service** (beta) or **Self-deployment** options. The CLI is primarily for debugging.
 
-### Language Options
+BabelDOC provides a range of options to customize your translations.
 
-*   `--lang-in`, `-li`: Source language code (default: en)
-*   `--lang-out`, `-lo`: Target language code (default: zh)
+*   **Language Options:** Specify input and output languages (`--lang-in`, `--lang-out`).
+*   **PDF Processing Options:** Control page selection, text cleaning, dual PDF output, and compatibility enhancements.
+*   **Translation Service Options:** Configure QPS limits, ignore cache, enable OpenAI, and set custom prompts.
+*   **OpenAI Specific Options:** Configure OpenAI model, base URL, and API key.
+*   **Glossary Options:** Provide custom glossaries for accurate term translation.
+*   **Output Control:** Set the output directory, debug level, and report interval.
+*   **Offline Assets Management:** Generate and restore offline assets packages.
+*   **Configuration File:** Use TOML configuration files for easy setup.
 
-### PDF Processing Options
+[See full details on Advanced Options](#advanced-options)
 
-*   `--files`: Input PDF file paths
-*   `--pages`, `-p`: Specify pages to translate (e.g., "1,2,1-,-3,3-5"). If not set, translate all pages
-*   `--split-short-lines`: Force split short lines into different paragraphs (may cause poor typesetting & bugs)
-*   `--short-line-split-factor`: Split threshold factor (default: 0.8)
-*   `--skip-clean`: Skip PDF cleaning step
-*   `--dual-translate-first`: Put translated pages first in dual PDF mode (default: original pages first)
-*   `--disable-rich-text-translate`: Disable rich text translation
-*   `--enhance-compatibility`: Enable all compatibility enhancement options
-*   `--use-alternating-pages-dual`: Use alternating pages mode for dual PDF.
-*   `--watermark-output-mode`: Control watermark output mode
-*   `--max-pages-per-part`: Maximum number of pages per part for split translation
-*   `--translate-table-text`: Translate table text (experimental, default: False)
-*   `--formular-font-pattern`: Font pattern to identify formula text
-*   `--formular-char-pattern`: Character pattern to identify formula text
-*   `--show-char-box`: Show character bounding boxes (debug only, default: False)
-*   `--skip-scanned-detection`: Skip scanned document detection (default: False).
-*   `--ocr-workaround`: Use OCR workaround (default: False).
-*   `--auto-enable-ocr-workaround`: Enable automatic OCR workaround (default: False).
-*   `--primary-font-family`: Override primary font family for translated text.
-*   `--only-include-translated-page`: Only include translated pages in the output PDF.
+### Supported Languages
 
-### Translation Service Options
+[See supported languages](https://funstory-ai.github.io/BabelDOC/supported_languages/)
 
-*   `--qps`: QPS (Queries Per Second) limit for translation service (default: 4)
-*   `--ignore-cache`: Ignore translation cache and force retranslation
-*   `--no-dual`: Do not output bilingual PDF files
-*   `--no-mono`: Do not output monolingual PDF files
-*   `--min-text-length`: Minimum text length to translate (default: 5)
-*   `--openai`: Use OpenAI for translation (default: False)
-*   `--custom-system-prompt`: Custom system prompt for translation.
-*   `--add-formula-placehold-hint`: Add formula placeholder hint for translation. (Currently not recommended, it may affect translation quality, default: False)
-*   `--pool-max-workers`: Maximum number of worker threads for internal task processing pools. If not specified, defaults to QPS value. This parameter directly sets the worker count, replacing previous QPS-based dynamic calculations.
-*   `--no-auto-extract-glossary`: Disable automatic term extraction. If this flag is present, the step is skipped. Defaults to enabled.
+## Preview
 
-### OpenAI Specific Options
+<div align="center">
+<img src="https://s.immersivetranslate.com/assets/r2-uploads/images/babeldoc-preview.png" width="80%"/>
+</div>
 
-*   `--openai-model`: OpenAI model to use (default: gpt-4o-mini)
-*   `--openai-base-url`: Base URL for OpenAI API
-*   `--openai-api-key`: API key for OpenAI service
+## We are hiring
 
-### Glossary Options
-
-*   `--glossary-files`: Comma-separated paths to glossary CSV files.
-
-### Output Control
-
-*   `--output`, `-o`: Output directory for translated files.
-*   `--debug`: Enable debug logging
-*   `--report-interval`: Progress report interval in seconds (default: 0.1)
-
-### General Options
-
-*   `--warmup`: Only download and verify required assets then exit (default: False)
-
-### Offline Assets Management
-
-*   `--generate-offline-assets`: Generate an offline assets package.
-*   `--restore-offline-assets`: Restore an offline assets package.
-
-### Configuration File
-
-*   `--config`, `-c`: Configuration file path (TOML format).
+See details: [EN](https://github.com/funstory-ai/jobs) | [ZH](https://github.com/funstory-ai/jobs/blob/main/README_ZH.md)
 
 ## Python API
 
-While awaiting the release of pdf2zh 2.0, you can use BabelDOC's Python API.  Refer to [main.py](https://github.com/funstory-ai/yadt/blob/main/babeldoc/main.py) for usage examples.
+>   [!TIP]
+>   Before pdf2zh 2.0 is released, you can temporarily use BabelDOC's Python API. However, after pdf2zh 2.0 is released, please directly use pdf2zh's Python API.
+>   This project's Python API does not guarantee any compatibility. However, the Python API from pdf2zh will guarantee a certain level of compatibility.
+>   We do not provide any technical support for the BabelDOC API.
+>   When performing secondary development, please refer to [pdf2zh 2.0 high level](https://github.com/PDFMathTranslate/PDFMathTranslate-next/blob/main/pdf2zh_next/high_level.py) and ensure that BabelDOC runs in a subprocess.
 
-## Background & Motivation
+You can refer to the example in [main.py](https://github.com/funstory-ai/yadt/blob/main/babeldoc/main.py) to use BabelDOC's Python API.
 
-BabelDOC aims to streamline scientific document translation, addressing the challenges of parsing and rendering complex PDF structures.  It offers a flexible, plugin-based pipeline for translation, building upon existing solutions like PDFMathTranslate and other projects to deliver a more efficient and accurate translation process.
+Please note:
+
+1.  Make sure call `babeldoc.format.pdf.high_level.init()` before using the API
+2.  The current `TranslationConfig` does not fully validate input parameters, so you need to ensure the validity of input parameters
+3.  For offline assets management, you can use the following functions:
+
+    ```python
+    # Generate an offline assets package
+    from pathlib import Path
+    import babeldoc.assets.assets
+
+    # Generate package to a specific directory
+    # path is optional, default is ~/.cache/babeldoc/assets/offline_assets_{hash}.zip
+    babeldoc.assets.assets.generate_offline_assets_package(Path("/path/to/output/dir"))
+
+    # Restore from a package file
+    # path is optional, default is ~/.cache/babeldoc/assets/offline_assets_{hash}.zip
+    babeldoc.assets.assets.restore_offline_assets_package(Path("/path/to/offline_assets_package.zip"))
+
+    # You can also restore from a directory containing the offline assets package
+    # The tool will automatically find the correct package file based on the hash
+    babeldoc.assets.assets.restore_offline_assets_package(Path("/path/to/directory"))
+    ```
+
+    >   [!TIP]
+    >
+    >   1. The offline assets package name cannot be modified because the file list hash is encoded in the name.
+    >   2. When using in production environments, it's recommended to pre-generate the assets package and include it with your application distribution.
+    >   3. The package verification ensures that all required assets are intact and match their expected checksums.
+
+## Background
+
+This project aims to standardize and simplify the PDF translation process, leveraging advancements in PDF parsing and rendering techniques.  It draws inspiration from projects like Mathpix, Doc2X, minerU, and PDFMathTranslate, and addresses challenges in parsing, rendering, and maintaining the original document structure during translation.
 
 ## Roadmap
 
-*   Line Support
-*   Table Support
-*   Cross-Page/Cross-Column Paragraph Support
-*   Advanced Typesetting Features
-*   Outline Support
+*   Add line support
+*   Add table support
+*   Add cross-page/cross-column paragraph support
+*   More advanced typesetting features
+*   Outline support
 *   ...
 
-## Versioning
+The initial 1.0 version focuses on translating documents from English to Simplified Chinese, Traditional Chinese, Japanese, and Spanish while maintaining layout and content accuracy.
 
-BabelDOC uses Semantic Versioning and Pride Versioning. The version number format is: "0.MAJOR.MINOR".
+## Version Number Explanation
+
+This project uses a combination of [Semantic Versioning](https://semver.org/) and [Pride Versioning](https://pridever.org/). The version number format is: "0.MAJOR.MINOR".
+
+-   MAJOR: Incremented by 1 when API incompatible changes are made or when proud improvements are implemented.
+
+-   MINOR: Incremented by 1 when any API compatible changes are made.
 
 ## Known Issues
 
-*   Parsing errors in the author and reference sections.
-*   Lines are not supported.
+*   Parsing errors in author and reference sections.
+*   Line support is not yet implemented.
 *   Does not support drop caps.
 *   Large pages may be skipped.
 
-## Contribute
+## How to Contribute
 
-We welcome contributions! See the [CONTRIBUTING](https://github.com/funstory-ai/yadt/blob/main/docs/CONTRIBUTING.md) guide.
+We welcome contributions!  Please see the [CONTRIBUTING](https://github.com/funstory-ai/yadt/blob/main/docs/CONTRIBUTING.md) guide for more information. The [Code of Conduct](https://github.com/funstory-ai/yadt/blob/main/docs/CODE_OF_CONDUCT.md) applies.
+
+[Immersive Translation](https://immersivetranslate.com) sponsors monthly Pro membership redemption codes for active contributors, see details at: [CONTRIBUTOR_REWARD.md](https://github.com/funstory-ai/BabelDOC/blob/main/docs/CONTRIBUTOR_REWARD.md)
 
 ## Acknowledgements
 
@@ -206,13 +210,13 @@ We welcome contributions! See the [CONTRIBUTING](https://github.com/funstory-ai/
  </picture>
 </a>
 
-> [!WARNING]
-> **Important Interaction Note for `--auto-enable-ocr-workaround`:**
+>   [!WARNING]
+>   **Important Interaction Note for `--auto-enable-ocr-workaround`:**
 >
-> When `--auto-enable-ocr-workaround` is set to `true` (either via command line or config file):
+>   When `--auto-enable-ocr-workaround` is set to `true` (either via command line or config file):
 >
-> 1.  During the initial setup, the values for `ocr_workaround` and `skip_scanned_detection` will be forced to `false` by `TranslationConfig`, regardless of whether you also set `--ocr-workaround` or `--skip-scanned-detection` flags.
-> 2.  Then, during the scanned document detection phase (`DetectScannedFile` stage):
->     *   If the document is identified as heavily scanned (e.g., >80% scanned pages) AND `auto_enable_ocr_workaround` is `true` (i.e., `translation_config.auto_enable_ocr_workaround` is true), the system will then attempt to set both `ocr_workaround` to `true` and `skip_scanned_detection` to `true`.
+>   1.  During the initial setup, the values for `ocr_workaround` and `skip_scanned_detection` will be forced to `false` by `TranslationConfig`, regardless of whether you also set `--ocr-workaround` or `--skip-scanned-detection` flags.
+>   2.  Then, during the scanned document detection phase (`DetectScannedFile` stage):
+>       *   If the document is identified as heavily scanned (e.g., >80% scanned pages) AND `auto_enable_ocr_workaround` is `true` (i.e., `translation_config.auto_enable_ocr_workaround` is true), the system will then attempt to set both `ocr_workaround` to `true` and `skip_scanned_detection` to `true`.
 >
-> This means that `--auto-enable-ocr-workaround` effectively gives the system control to enable OCR processing for scanned documents, potentially overriding manual settings for `--ocr-workaround` and `--skip_scanned_detection` based on its detection results. If the document is *not* detected as heavily scanned, then the initial `false` values for `ocr_workaround` and `skip_scanned_detection` (forced by `--auto-enable-ocr-workaround` at the `TranslationConfig` initialization stage) will remain in effect unless changed by other logic.
+>   This means that `--auto-enable-ocr-workaround` effectively gives the system control to enable OCR processing for scanned documents, potentially overriding manual settings for `--ocr-workaround` and `--skip_scanned_detection` based on its detection results. If the document is *not* detected as heavily scanned, then the initial `false` values for `ocr_workaround` and `skip_scanned_detection` (forced by `--auto-enable-ocr-workaround` at the `TranslationConfig` initialization stage) will remain in effect unless changed by other logic.

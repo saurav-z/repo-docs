@@ -1,32 +1,32 @@
 # Comprehensive Python Cheatsheet 🔗
 
-This comprehensive Python cheatsheet is your ultimate guide to mastering Python, providing quick access to essential syntax, data structures, and libraries.  Dive deep into Python and become a proficient programmer with this indispensable resource!  ([Original Repo](https://github.com/gto76/python-cheatsheet))
+Master Python with this comprehensive cheatsheet, packed with essential features and optimized for quick reference. Get a head start and streamline your workflow with this indispensable guide! Check out the original repository [here](https://github.com/gto76/python-cheatsheet).
 
-## Key Features:
+**Key Features:**
 
-*   **Collections:** Lists, Dictionaries, Sets, Tuples, Ranges, Iterators, Generators
-*   **Types:** Strings, Regular Expressions, Numbers, Datetime, and more.
-*   **Syntax:** Functions, Classes, Imports, Decorators, and various Pythonic constructs.
-*   **System:** File I/O, Command-Line Arguments, OS Commands.
-*   **Data:** JSON, Pickle, CSV, SQLite, Bytes, Struct, and Array manipulation.
-*   **Advanced:** Operator Overloading, Match Statements, Threading, Coroutines.
-*   **Libraries:** Plotting, Console/GUI apps, Web scraping, Profiling.
-*   **Multimedia:** NumPy, Image processing, Animation, Audio, and more.
-
----
+*   **Complete Coverage:** Lists, dictionaries, sets, and more.
+*   **Core Concepts:**  Types, syntax, and essential system tools.
+*   **Advanced Topics:** Regular expressions, threading, and introspection.
+*   **Essential Libraries:** Includes Matplotlib, Pandas, and Plotly.
+*   **Clear & Concise:**  Easy-to-understand examples and explanations.
 
 ## Contents
 
-1.  **Collections:** 🔗 [List](#list) 🔗 [Dictionary](#dictionary) 🔗 [Set](#set) 🔗 [Tuple](#tuple) 🔗 [Range](#range) 🔗 [Enumerate](#enumerate) 🔗 [Iterator](#iterator) 🔗 [Generator](#generator)
-2.  **Types:** 🔗 [Type](#type) 🔗 [String](#string) 🔗 [Regex](#regex) 🔗 [Format](#format) 🔗 [Numbers](#numbers-1) 🔗 [Combinatorics](#combinatorics) 🔗 [Datetime](#datetime)
-3.  **Syntax:** 🔗 [Function](#function) 🔗 [Inline](#inline) 🔗 [Imports](#imports) 🔗 [Decorator](#decorator) 🔗 [Class](#class) 🔗 [Duck Types](#duck-types) 🔗 [Enum](#enum) 🔗 [Exceptions](#exceptions)
-4.  **System:** 🔗 [Exit](#exit) 🔗 [Print](#print) 🔗 [Input](#input) 🔗 [Command Line Arguments](#command-line-arguments) 🔗 [Open](#open) 🔗 [Path](#paths) 🔗 [OS Commands](#os-commands)
-5.  **Data:** 🔗 [JSON](#json) 🔗 [Pickle](#pickle) 🔗 [CSV](#csv) 🔗 [SQLite](#sqlite) 🔗 [Bytes](#bytes) 🔗 [Struct](#struct) 🔗 [Array](#array) 🔗 [Memory View](#memory-view) 🔗 [Deque](#deque)
-6.  **Advanced:** 🔗 [Operator](#operator) 🔗 [Match Statement](#match-statement) 🔗 [Logging](#logging) 🔗 [Introspection](#introspection) 🔗 [Threading](#threading) 🔗 [Coroutines](#coroutines)
-7.  **Libraries:** 🔗 [Progress Bar](#progress-bar) 🔗 [Plot](#plot) 🔗 [Table](#table) 🔗 [Console App](#console-app) 🔗 [GUI App](#gui-app) 🔗 [Scraping](#scraping) 🔗 [Web App](#web-app) 🔗 [Profiling](#profiling)
-8.  **Multimedia:** 🔗 [NumPy](#numpy) 🔗 [Image](#image) 🔗 [Animation](#animation) 🔗 [Audio](#audio) 🔗 [Synthesizer](#synthesizer) 🔗 [Pygame](#pygame) 🔗 [Pandas](#pandas) 🔗 [Plotly](#plotly)
+**1. Collections:** 🔗 [List](#list)__,__ [Dictionary](#dictionary)__,__ [Set](#set)__,__ [Tuple](#tuple)__,__ [Range](#range)__,__ [Enumerate](#enumerate)__,__ [Iterator](#iterator)__,__ [Generator](#generator).__
 
----
+**2. Types:** 🔗 [Type](#type)__,__ [String](#string)__,__ [Regular_Exp](#regex)__,__ [Format](#format)__,__ [Numbers](#numbers-1)__,__ [Combinatorics](#combinatorics)__,__ [Datetime](#datetime).__
+
+**3. Syntax:** 🔗 [Function](#function)__,__ [Inline](#inline)__,__ [Import](#imports)__,__ [Decorator](#decorator)__,__ [Class](#class)__,__ [Duck_Type](#duck-types)__,__ [Enum](#enum)__,__ [Except](#exceptions).__
+
+**4. System:** 🔗 [Exit](#exit)__,__ [Print](#print)__,__ [Input](#input)__,__ [Command_Line_Arguments](#command-line-arguments)__,__ [Open](#open)__,__ [Path](#paths)__,__ [OS_Commands](#os-commands).__
+
+**5. Data:** 🔗 [JSON](#json)__,__ [Pickle](#pickle)__,__ [CSV](#csv)__,__ [SQLite](#sqlite)__,__ [Bytes](#bytes)__,__ [Struct](#struct)__,__ [Array](#array)__,__ [Memory_View](#memory-view)__,__ [Deque](#deque).__
+
+**6. Advanced:** 🔗 [Operator](#operator)__,__ [Match_Stmt](#match-statement)__,__ [Logging](#logging)__,__ [Introspection](#introspection)__,__ [Threading](#threading)__,__ [Coroutines](#coroutines).__
+
+**7. Libraries:** 🔗 [Progress_Bar](#progress-bar)__,__ [Plot](#plot)__,__ [Table](#table)__,__ [Console_App](#console-app)__,__ [GUI](#gui-app)__,__ [Scraping](#scraping)__,__ [Web](#web-app)__,__ [Profile](#profiling).__
+
+**8. Multimedia:** 🔗 [NumPy](#numpy)__,__ [Image](#image)__,__ [Animation](#animation)__,__ [Audio](#audio)__,__ [Synthesizer](#synthesizer)__,__ [Pygame](#pygame)__,__ [Pandas](#pandas)__,__ [Plotly](#plotly).__
 
 ## Main 🔗
 
@@ -34,8 +34,6 @@ This comprehensive Python cheatsheet is your ultimate guide to mastering Python,
 if __name__ == '__main__':      # Skips next line if file was imported.
     main()                      # Runs `def main(): ...` function.
 ```
-
----
 
 ## List 🔗
 
@@ -86,8 +84,6 @@ flatter_list     = list(itertools.chain.from_iterable(<list>))
 <list>.clear()                  # Removes all list's items. Also works on dictionary and set.
 ```
 
----
-
 ## Dictionary 🔗
 
 ```python
@@ -130,8 +126,6 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 [('blue', 3), ('red', 2), ('yellow', 1)]
 ```
 
----
-
 ## Set 🔗
 
 ```python
@@ -149,7 +143,7 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 <set>  = <set>.difference(<coll.>)              # Or: <set> - <set>
 <set>  = <set>.symmetric_difference(<coll.>)    # Or: <set> ^ <set>
 <bool> = <set>.issubset(<coll.>)                # Or: <set> <= <set>
-<bool> = <set>.issuperset(<coll.>)              # Or: <set> >= <set>
+<bool> = <set>.issuperset(<coll.>)                # Or: <set> >= <set>
 ```
 
 ```python
@@ -166,8 +160,6 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 ```python
 <frozenset> = frozenset(<collection>)
 ```
-
----
 
 ## Tuple 🔗
 
@@ -193,8 +185,6 @@ Point(x=1, y=2)
 (1, 2)
 ```
 
----
-
 ## Range 🔗
 
 **Immutable and hashable sequence of integers.**
@@ -210,16 +200,12 @@ Point(x=1, y=2)
 [0, 1, 2]
 ```
 
----
-
 ## Enumerate 🔗
 
 ```python
 for i, el in enumerate(<coll>, start=0):   # Returns next element and its index on each pass.
     ...
 ```
-
----
 
 ## Iterator 🔗
 
@@ -254,8 +240,6 @@ import itertools as it
 <iter> = it.islice(<coll>, from_inc, …)    # `to_exclusive, +step_size`. Indices can be None.
 ```
 
----
-
 ## Generator 🔗
 
 *   **Any function that contains a yield statement returns a generator.**
@@ -273,8 +257,6 @@ def count(start, step):
 >>> next(counter), next(counter), next(counter)
 (10, 12, 14)
 ```
-
----
 
 ## Type 🔗
 
@@ -336,8 +318,6 @@ True
 +--------------------+----------+----------+----------+----------+----------+
 ```
 
----
-
 ## String 🔗
 
 **Immutable sequence of characters.**
@@ -386,8 +366,6 @@ True
 <bool> = <str>.isspace()                     # Checks for [ \t\n\r\f\v\x1c-\x1f\x85…].
 ```
 
----
-
 ## Regex 🔗
 
 **Functions for regular expression matching.**
@@ -429,8 +407,6 @@ import re
 
 *   **By default, decimal characters and alphanumerics from all alphabets are matched unless `'flags=re.ASCII'` is used. It restricts special sequence matches to the first 128 Unicode characters and also prevents `'\s'` from accepting `'\x1c'`, `'\x1d'`, `'\x1e'` and `'\x1f'` (non-printable characters that divide text into files, tables, rows and fields, respectively).**
 *   **Use a capital letter for negation (all non-ASCII characters will be matched when used in combination with ASCII flag).**
-
----
 
 ## Format 🔗
 
@@ -524,9 +500,9 @@ import re
 +--------------+----------------+----------------+----------------+----------------+
 ```
 
-*   `'{<float>:g}'` is `'{<float>:.6}'` with stripped zeros, exponent starting at `'1e+06'`.
-*   When both rounding up and rounding down are possible, the one that returns result with even last digit is chosen. That makes `'{6.5:.0f}'` a `'6'` and `'{7.5:.0f}'` an `'8'`.
-*   This rule only effects numbers that can be represented exactly by a float (`.5`, `.25`, …).
+*   **`'{<float>:g}'` is `'{<float>:.6}'` with stripped zeros, exponent starting at `'1e+06'`.**
+*   **When both rounding up and rounding down are possible, the one that returns result with even last digit is chosen. That makes `'{6.5:.0f}'` a `'6'` and `'{7.5:.0f}'` an `'8'`.**
+*   **This rule only effects numbers that can be represented exactly by a float (`.5`, `.25`, …).**
 
 ### Ints 🔗
 
@@ -535,8 +511,6 @@ import re
 {90:b}                                   # '1011010'. Binary representation of the int.
 {90:X}                                   # '5A'. Hexadecimal with upper-case letters.
 ```
-
----
 
 ## Numbers 🔗
 
@@ -548,11 +522,11 @@ import re
 <Decimal>  = decimal.Decimal(<str/int/tuple>)  # E.g. `Decimal((1, (2, 3), 4)) == -230_000`.
 ```
 
-*   `'int(<str>)'` and `'float(<str>)'` raise ValueError if passed string is malformed.
-*   Decimal objects store numbers exactly, unlike most floats where `'1.1 + 2.2 != 3.3'`.
-*   Floats can be compared with: `'math.isclose(<float>, <float>, rel_tol=1e-09)'`.
-*   Precision of decimal operations is set with: `'decimal.getcontext().prec = <int>'`.
-*   Bools can be used anywhere ints can, because bool is a subclass of int: `'True + 1 == 2'`.
+*   **`'int(<str>)'` and `'float(<str>)'` raise ValueError if passed string is malformed.**
+*   **Decimal objects store numbers exactly, unlike most floats where `'1.1 + 2.2 != 3.3'`.**
+*   **Floats can be compared with: `'math.isclose(<float>, <float>, rel_tol=1e-09)'`.**
+*   **Precision of decimal operations is set with: `'decimal.getcontext().prec = <int>'`.**
+*   **Bools can be used anywhere ints can, because bool is a subclass of int: `'True + 1 == 2'`.**
 
 ### Built-in Functions 🔗
 
@@ -610,4 +584,16 @@ shuffle(<list>)                                # Works on all mutable sequences.
 <int> = <int> | <int>                          # E.g. `0b1100 | 0b1010 == 0b1110`.
 <int> = <int> ^ <int>                          # E.g. `0b1100 ^ 0b1010 == 0b0110`.
 <int> = <int> << n_bits                        # E.g. `0b1111 << 4 == 0b11110000`.
-<int> = ~<int>                                 # E.g. `~0
+<int> = ~<int>                                 # E.g. `~0b1 == -0b10 == -(0b1+1)`.
+```
+
+## Combinatorics 🔗
+
+```python
+import itertools as it
+```
+
+```python
+>>> list(it.product('abc', repeat=2))        #   a  b  c
+[('a', 'a'), ('a', 'b'), ('a', 'c'),         # a x  x  x
+ ('b', 'a'), ('b', '

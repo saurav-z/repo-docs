@@ -1,35 +1,34 @@
-# MASH: Self-Host Your Digital Life with Ease
+[![Support room on Matrix](https://img.shields.io/matrix/mash-playbook:devture.com.svg?label=%23mash-playbook%3Adevture.com&logo=matrix&style=for-the-badge&server_fqdn=matrix.devture.com&fetchMode=summary)](https://matrixrooms.info/room/mash-playbook:devture.com) [![donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/mother-of-all-self-hosting/donate)
 
-MASH (Mother-of-All-Self-Hosting) is an Ansible playbook designed to simplify self-hosting by deploying and managing various services as Docker containers on your own server.
+# MASH: Your All-in-One Ansible Playbook for Self-Hosting with Docker
 
-[Visit the original repository](https://github.com/mother-of-all-self-hosting/mash-playbook)
+**MASH** (Mother-of-All-Self-Hosting) simplifies self-hosting by providing a comprehensive Ansible playbook for deploying and managing a wide range of services in Docker containers. 
 
-**Key Features:**
+[Check out the original repo](https://github.com/mother-of-all-self-hosting/mash-playbook)
 
-*   **Comprehensive Service Support:** Self-host a growing number of services, with support for a wide range of open-source software (FOSS).
-*   **Containerized Deployments:** Utilize Docker containers for predictable, up-to-date service installations across multiple Linux distributions and CPU architectures.
-*   **Simplified Management:** Leverage Ansible for automated installation, upgrades, and maintenance tasks.
-*   **Centralized Configuration:** Manage shared services like databases and reverse proxies in one place for streamlined operations.
-*   **Easy Service Deployment:** Quickly deploy new services with minimal configuration, simplifying the self-hosting process.
-*   **Backup Capabilities:** Benefit from easy backups since all services live together and can share resources.
+## Key Features:
 
-**Why Choose MASH?**
+*   **Simplified Self-Hosting:** Easily deploy and manage multiple services on your own server using a single Ansible playbook.
+*   **Dockerized Services:** Utilizes Docker containers for a predictable, up-to-date, and isolated environment across various Linux distributions and CPU architectures.
+*   **Extensive Service Support:** Offers a wide selection of supported services, with continuous expansion to include more open-source software.  [See the full list here](docs/supported-services.md).
+*   **Automated Installation & Updates:**  Leverages Ansible for automated installation, upgrades, and maintenance tasks. See the [Ansible guide](docs/ansible.md).
+*   **Simplified Management:** Eliminates the need to juggle multiple playbooks and simplifies trying out new services.
+*   **Shared Service Management:** Centralizes management of shared services like databases and reverse proxies for consistency.
+*   **Easy Backup Solutions:** Simplifies data backup due to all services running under the same data path.
 
-MASH consolidates multiple self-hosting playbooks, offering a unified solution that reduces the complexity of managing multiple services. This approach allows you to easily try out new software and maintain a consistent, reliable self-hosted environment.
+## Supported Services
 
-**Supported Services:**
+A comprehensive list of supported services is available in the [documentation](docs/supported-services.md).
 
-See the [full list of supported services](docs/supported-services.md).
+## Installation
 
-**Installation:**
+To get started, follow the installation instructions located in the [README](docs/README.md) file within the `/docs/` directory of this repository.
 
-Refer to the [README in the docs/ directory](docs/README.md) for detailed installation instructions.
+## Changelog
 
-**Changes:**
+Stay up-to-date with the latest changes and updates by reviewing the [CHANGELOG.md](CHANGELOG.md).
 
-Review the [changelog](CHANGELOG.md) to stay up-to-date with the latest updates and changes.
+## Get Support
 
-**Support:**
-
-*   **Matrix Room:** Join the community at [#mash-playbook:devture.com](https://matrixrooms.info/room/mash-playbook:devture.com).
-*   **GitHub Issues:** Report issues and get support on [GitHub](https://github.com/mother-of-all-self-hosting/mash-playbook/issues).
+*   **Matrix:** Join the community in the `#mash-playbook:devture.com` Matrix room for support and discussions.
+*   **GitHub Issues:** Report bugs, request features, and get help via [GitHub issues](https://github.com/mother-of-all-self-hosting/mash-playbook/issues).

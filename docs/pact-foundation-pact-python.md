@@ -1,70 +1,68 @@
-# Pact Python: API Contract Testing for Microservices
+<div align="center">
+    <img src="https://raw.githubusercontent.com/pact-foundation/pact-python/main/mascot.svg" alt="Pact Python Mascot" height="250" align="left" hspace="20">
+</div>
 
-**Simplify and accelerate your API and microservice testing with Pact Python, the leading contract testing framework for Python.**
+# Pact Python: Contract Testing for Reliable APIs and Microservices
 
-[View the original repository on GitHub](https://github.com/pact-foundation/pact-python)
+**Pact Python empowers you to build robust and reliable APIs and microservices by replacing brittle end-to-end tests with fast and efficient contract tests.**  For the original repository, see the [Pact Python GitHub](https://github.com/pact-foundation/pact-python).
 
 ## Key Features
 
-*   **⚡ Lightning Fast Testing:** Achieve rapid feedback cycles with efficient testing.
-*   **🎈 Full-Stack Integration:** Test end-to-end integration seamlessly, from front-end to back-end.
-*   **🔌 REST and Event-Driven Systems Support:**  Test a wide range of API architectures.
-*   **🛠️ Configurable Mock Server:**  Customize your testing environment for precise control.
-*   **😌 Powerful Matching Rules:** Avoid brittle tests with advanced matching capabilities.
-*   **🤝 Pact Broker/PactFlow Integration:**  Streamline CI/CD workflows.
-*   **🔡 Multi-Language Support:** Pact supports 12+ languages, ensuring broad compatibility.
+*   ⚡ **Lightning Fast Testing:** Accelerate your testing cycle.
+*   🎈 **Full-Stack Integration:** Effortlessly test from front-end to back-end.
+*   🔌 **Broad Protocol Support:** Works seamlessly with HTTP/REST and event-driven systems.
+*   🛠️ **Configurable Mock Server:** Customize the testing environment to your needs.
+*   😌 **Powerful Matching Rules:** Prevent brittle tests with smart matching.
+*   🤝 **CI/CD Integration:** Integrates with Pact Broker / PactFlow for streamlined workflows.
+*   🔡 **Multi-Language Support:** Pact is available in 12+ languages.
 
-## Why Use Pact Python?
+## Why Choose Pact Python?
 
-Pact Python empowers you to:
+Contract testing with Pact Python allows you to:
 
-*   ⚡ **Test Locally:** Develop and test independently.
-*   🚀 **Deploy Faster:** Reduce lead times with reliable tests.
-*   ⬇️ **Reduce Lead Time for Change:** Increase confidence in deployments.
-*   💰 **Reduce API Integration Testing Costs:** Save money by minimizing test environment dependencies.
+*   ⚡ **Test Locally:** Run tests without needing a deployed environment.
+*   🚀 **Deploy Faster:** Reduce testing bottlenecks for quicker releases.
+*   ⬇️ **Reduce Lead Time:** Speed up the change-to-deployment process.
+*   💰 **Reduce Costs:** Minimize the expenses associated with API integration testing.
 *   💥 **Prevent Breaking Changes:** Ensure compatibility between services.
 *   🔎 **Understand System Usage:** Gain insights into API interactions.
 *   📃 **Document APIs for Free:** Generate API documentation automatically.
-*   🗄 **Remove the Need for Complex Data Fixtures:** Simplify test data management.
-*   🤷‍♂️ **Reduce Reliance on Complex Test Environments:** Simplify testing infrastructure.
+*   🗄 **Simplify Data:** Remove the need for complex test data fixtures.
+*   🤷‍♂️ **Reduce Environment Complexity:** Less reliance on intricate test setups.
 
-## Installation
+## Documentation & Resources
+
+For comprehensive documentation, please refer to:
+
+*   [Full Pact Python Documentation](https://pact-foundation.github.io/pact-python)
+*   [Pact Documentation](https://docs.pact.io) (General Pact Overview)
+
+### Installation
+
+Install the latest version of Pact Python from PyPi:
 
 ```bash
 pip install pact-python
 ```
 
-## Documentation
+### Requirements
 
-*   For detailed documentation, see the [full Pact Python documentation](https://pact-foundation.github.io/pact-python).
-*   For a general overview of Pact, see the [Pact documentation](https://docs.pact.io).
+Pact Python supports all versions of Python supported by the Python Software Foundation.
 
-### Sections
-*   [Installation](#installation)
-*   [Consumer testing](docs/consumer.md)
-*   [Provider testing](docs/provider.md)
-*   [Examples](examples/README.md)
+### Telemetry
 
-### API Reference
-
-Documentation for the API is generated from the docstrings in the code which you can view at [`pact-foundation.github.io/pact-python/pact`](https://pact-foundation.github.io/pact-python/API).
-
-## Need Help?
-
-*   [Join the Pact Foundation Slack](https://slack.pact.io)
-*   Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/pact)
-*   Follow us on Twitter: [@pact_up](https://twitter.com/pact_up)
-*   Join a discussion 💬 on [GitHub Discussions](https://github.com/pact-foundation/pact-python/discussions)
-*   [Raise an issue][GitHub Issues] on GitHub
-
-[GitHub Issues]: https://github.com/pact-foundation/pact-python/issues
+Pact Python collects anonymous telemetry data to track usage.  You can disable telemetry by setting the environment variable `PACT_DO_NOT_TRACK=1`.  [Read more about the telemetry](https://docs.pact.io/metrics).
 
 ## Contributing
 
-Contributions to the Pact Python library are welcome! For more information, see the [contributing guide](CONTRIBUTING.md).
+We welcome contributions!  Check out the [contributing guide](CONTRIBUTING.md) for more information.
 
 [![Table of contributors](https://contrib.rocks/image?repo=pact-foundation/pact-python)](https://github.com/pact-foundation/pact-python/graphs/contributors)
 
-## Telemetry
+## Need Help?
 
-Pact Python collects anonymous telemetry to improve understanding of usage. Disable telemetry with `PACT_DO_NOT_TRACK=1`.
+*   Join our community [Slack workspace](https://slack.pact.io).
+*   Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/pact).
+*   Follow us on [Twitter](https://twitter.com/pact_up).
+*   Participate in [GitHub Discussions](https://github.com/pact-foundation/pact-python/discussions).
+*   [Raise an issue on GitHub](https://github.com/pact-foundation/pact-python/issues).
