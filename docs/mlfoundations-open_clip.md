@@ -1,99 +1,93 @@
 # OpenCLIP: Open Source Implementation of CLIP for Image-Text Learning
 
-**OpenCLIP** is an open-source initiative to reproduce and advance the state-of-the-art in contrastive language-image pre-training (CLIP), offering a comprehensive toolkit for researchers and developers to explore and build upon this powerful technology. [(Paper)](https://arxiv.org/abs/2212.07143) | [(Citations)](#citing) | [(Clip Colab)](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb) | [(Coca Colab)](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb)
-[![PyPI](https://img.shields.io/pypi/v/open_clip_torch.svg)](https://pypi.python.org/pypi/open_clip_torch)
-
-OpenCLIP provides a robust and flexible framework for training, evaluating, and utilizing CLIP models. It features a wide range of pre-trained models and comprehensive training tools to empower researchers to explore the potential of image-text understanding.  This repository allows you to:
-
-*   **Access a diverse library of pre-trained models:** Including models trained on datasets like LAION-400M, LAION-2B, and DataComp-1B, with varying architectures and performance characteristics.
-*   **Train your own CLIP models:**  With flexible training scripts supporting multi-GPU, multi-node, and SLURM environments, enabling you to train CLIP models from scratch or fine-tune pre-trained models.
-*   **Easily integrate into your projects:** Use the provided Python package and examples to encode images and text, perform zero-shot classification, and explore other image-text tasks.
-*   **Fine-tune and experiment with CoCa models:** Experiment with cutting-edge CoCa models which leverage both contrastive and generative losses.
-*   **Leverage Hugging Face Hub:** Easily push and use the open_clip models on the Hugging Face Hub.
+**OpenCLIP** is an open-source implementation of OpenAI's Contrastive Language-Image Pre-training (CLIP), enabling you to train and utilize state-of-the-art models for image-text understanding. [[Paper]](https://arxiv.org/abs/2212.07143) | [[Citations]](#citing) | [[Clip Colab]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb) | [[Coca Colab]](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb) [![PyPI version](https://img.shields.io/pypi/v/open_clip_torch.svg)](https://pypi.python.org/pypi/open_clip_torch)
 
 ## Key Features
 
-*   **Pre-trained Model Zoo:** Extensive collection of pre-trained models with varying architectures and datasets, including state-of-the-art models and OpenAI's ViT-L models.
-*   **Flexible Training Framework:** Supports multi-GPU and multi-node training, SLURM integration, and features for data augmentation, mixed-precision training, and distributed training strategies.
-*   **Easy-to-Use API:** Simple Python API for loading models, encoding images and text, and performing zero-shot classification.
-*   **Comprehensive Documentation:** Detailed documentation and tutorials to guide you through the process of using and contributing to the library.
-*   **CoCa Support:** Support for both training and generation with CoCa models, facilitating the exploration of multimodal understanding.
-*   **Int8 Support:** Support for int8 training and inference.
-*   **Remote Training Support:** Option to resume from remote files (e.g., s3 buckets)
+*   **Pre-trained Models:** Access a wide variety of pre-trained models, including those trained on LAION-2B, LAION-400M, DataComp-1B and others, achieving high zero-shot accuracy on ImageNet and other datasets.
+*   **Training Flexibility:** Train your own CLIP models with customizable parameters and support for multi-GPU and multi-node training.
+*   **Easy to Use:** Simple API for loading models, tokenizing text, and encoding images and text.
+*   **Fine-tuning Support:** Fine-tune pre-trained models on downstream classification tasks using our WiSE-FT repository ([https://github.com/mlfoundations/wise-ft](https://github.com/mlfoundations/wise-ft)).
+*   **Reproducibility:** Detailed training configurations, model cards and results in the paper [reproducible scaling laws for contrastive language-image learning](https://arxiv.org/abs/2212.07143)
 
-## Quick Start
+## Pre-trained Models & Performance
 
-### Installation
+OpenCLIP offers a diverse set of pre-trained models, excelling in zero-shot performance across multiple datasets. Below are some examples from the paper showcasing state-of-the-art results. Further details are available [here](docs/PRETRAINED.md).
+
+| Model                | Training Data | Resolution | # of Samples | ImageNet Zero-Shot Acc. |
+| -------------------- | ------------- | ---------- | ------------- | ------------------------ |
+| ConvNext-Base        | LAION-2B      | 256px      | 13B           | 71.5%                    |
+| ConvNext-Large       | LAION-2B      | 320px      | 29B           | 76.9%                    |
+| ConvNext-XXLarge     | LAION-2B      | 256px      | 34B           | 79.5%                    |
+| ViT-B-32-256         | DataComp-1B   | 256px      | 34B           | 72.8%                    |
+| ViT-B-16             | DataComp-1B   | 224px      | 13B           | 73.5%                    |
+| ViT-L-14             | LAION-2B      | 224px      | 32B           | 75.3%                    |
+| ViT-H-14             | LAION-2B      | 224px      | 32B           | 78.0%                    |
+| ViT-L-14             | DataComp-1B   | 224px      | 13B           | 79.2%                    |
+| ViT-bigG-14          | LAION-2B      | 224px      | 34B           | 80.1%                    |
+| ViT-L-14-quickgelu [(Original CLIP)](https://arxiv.org/abs/2103.00020) | WIT | 224px | 13B | 75.5% |
+| ViT-SO400M-14-SigLIP [(SigLIP)](https://arxiv.org/abs/2303.15343) | WebLI | 224px | 45B | 82.0% |
+| ViT-L-14 [(DFN)](https://arxiv.org/abs/2309.17425) | DFN-2B | 224px | 39B | 82.2% |
+| ViT-L-16-256 [(SigLIP2)](https://arxiv.org/abs/2502.14786) |  WebLI (multi-lang) | 256px | 40B | 82.5% |
+| ViT-SO400M-14-SigLIP-384 [(SigLIP)](https://arxiv.org/abs/2303.15343) |  WebLI | 384px | 45B | 83.1% |
+| ViT-H-14-quickgelu [(DFN)](https://arxiv.org/abs/2309.17425) | DFN-5B | 224px | 39B | 83.4% |
+| PE-Core-L-14-336 [(PE)](https://arxiv.org/abs/2504.13181) | MetaCLIP-5.4B | 336px | 58B | 83.5% |
+| ViT-SO400M-16-SigLIP2-384 [(SigLIP2)](https://arxiv.org/abs/2502.14786) |  WebLI (multi-lang) | 384px | 40B | 84.1% |
+| ViT-H-14-378-quickgelu [(DFN)](https://arxiv.org/abs/2309.17425) | DFN-5B | 378px | 44B | 84.4% |
+| ViT-gopt-16-SigLIP2-384 [(SigLIP2)](https://arxiv.org/abs/2502.14786) | WebLI (multi-lang) | 384px | 40B | 85.0% |
+| PE-Core-bigG-14-448 [(PE)](https://arxiv.org/abs/2504.13181) | MetaCLIP-5.4B | 448px | 86B | 85.4% |
+
+For additional details, explore the models available on the Hugging Face Hub under the OpenCLIP library tag: [https://huggingface.co/models?library=open_clip](https://huggingface.co/models?library=open_clip).
+
+## Quickstart
+
+Install the necessary packages:
 
 ```bash
 pip install open_clip_torch
 ```
 
-### Basic Usage
+Then use the code below to implement the CLIP model:
 
 ```python
 import torch
 from PIL import Image
 import open_clip
 
-# Load a pre-trained model
 model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32', pretrained='laion2b_s34b_b79k')
-model.eval()  # Set the model to evaluation mode
-
-# Get the tokenizer for the model
+model.eval()  # model in train mode by default, impacts some models with BatchNorm or stochastic depth active
 tokenizer = open_clip.get_tokenizer('ViT-B-32')
 
-# Preprocess the image
 image = preprocess(Image.open("docs/CLIP.png")).unsqueeze(0)
-
-# Tokenize the text
 text = tokenizer(["a diagram", "a dog", "a cat"])
 
-# Perform inference
 with torch.no_grad(), torch.autocast("cuda"):
     image_features = model.encode_image(image)
     text_features = model.encode_text(text)
     image_features /= image_features.norm(dim=-1, keepdim=True)
     text_features /= text_features.norm(dim=-1, keepdim=True)
+
     text_probs = (100.0 * image_features @ text_features.T).softmax(dim=-1)
 
-print("Label probs:", text_probs)
+print("Label probs:", text_probs)  # prints: [[1., 0., 0.]]
 ```
 
-## Pre-trained Models
+## Training and Usage
 
-Explore our full collection of pre-trained models [here](docs/PRETRAINED.md).  You can list available models with:
+The repository provides comprehensive documentation, Colab notebooks, and example scripts for training and utilizing CLIP models, including options for multi-GPU and distributed training. More details are in the [Usage](#usage) section.
 
-```python
-import open_clip
-open_clip.list_pretrained()
-```
+## Contributing
 
-## Fine-tuning
-
-For fine-tuning on downstream classification tasks, see [WiSE-FT](https://github.com/mlfoundations/wise-ft).
-
-## Training
-
-Detailed instructions for training CLIP models, including multi-GPU/node setup and data preparation, are available in the [Training CLIP](#training-clip) section of the README.
-
-## Evaluation
-
-We recommend using [CLIP_benchmark](https://github.com/LAION-AI/CLIP_benchmark#how-to-use) for systematic evaluation on 40 datasets.
+We welcome contributions!  Feel free to submit issues or contact us with suggestions.
 
 ## Acknowledgments
 
-We gratefully acknowledge the Gauss Centre for Supercomputing e.V. (www.gauss-centre.eu) for funding this part of work by providing computing time through the John von Neumann Institute for Computing (NIC) on the GCS Supercomputer JUWELS Booster at Jülich Supercomputing Centre (JSC).
+*   We gratefully acknowledge the Gauss Centre for Supercomputing e.V. (www.gauss-centre.eu) for funding this part of work.
+*   This code is based on the original OpenAI CLIP implementation.
 
 ## The Team
 
-Current development of this repository is led by [Ross Wightman](https://rwightman.com/), [Romain Beaumont](https://github.com/rom1504), [Cade Gordon](http://cadegordon.io/), and [Vaishaal Shankar](http://vaishaal.com/).
-
-The original version of this repository is from a group of researchers at UW, Google, Stanford, Amazon, Columbia, and Berkeley.
-
-[Gabriel Ilharco*](http://gabrielilharco.com/), [Mitchell Wortsman*](https://mitchellnw.github.io/), [Nicholas Carlini](https://nicholas.carlini.com/), [Rohan Taori](https://www.rohantaori.com/), [Achal Dave](http://www.achaldave.com/), [Vaishaal Shankar](http://vaishaal.com/), [John Miller](https://people.eecs.berkeley.edu/~miller_john/), [Hongseok Namkoong](https://hsnamkoong.github.io/), [Hannaneh Hajishirzi](https://homes.cs.washington.edu/~hannaneh/), [Ali Farhadi](https://homes.cs.washington.edu/~ali/), [Ludwig Schmidt](https://people.csail.mit.edu/ludwigs/)
-
-Special thanks to [Jong Wook Kim](https://jongwook.kim/) and [Alec Radford](https://github.com/Newmu) for help with reproducing CLIP!
+*   Led by [Ross Wightman](https://rwightman.com/), [Romain Beaumont](https://github.com/rom1504), [Cade Gordon](http://cadegordon.io/), and [Vaishaal Shankar](http://vaishaal.com/).
 
 ## Citing
 
@@ -172,5 +166,3 @@ If you found this repository useful, please consider citing:
 [![DOI](https://zenodo.org/badge/390536799.svg)](https://zenodo.org/badge/latestdoi/390536799)
 
 ---
-
-**[Go to the original repository](https://github.com/mlfoundations/open_clip)**

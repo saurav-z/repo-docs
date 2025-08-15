@@ -1,42 +1,30 @@
-# Newton: Accelerate Your Robotics Simulations with GPU Power
+# Newton: GPU-Accelerated Physics Simulation for Robotics & Research
 
-[<img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License">](https://opensource.org/licenses/Apache-2.0)
-<img src="https://img.shields.io/github/commit-activity/m/newton-physics/newton/main" alt="GitHub commit activity">
-[<img src="https://codecov.io/gh/newton-physics/newton/graph/badge.svg?token=V6ZXNPAWVG" alt="codecov">](https://codecov.io/gh/newton-physics/newton)
-[<img src="https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml/badge.svg" alt="Push Events - AWS GPU Tests">](https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml)
+**Unlock the power of rapid robotics simulation and research with Newton, a cutting-edge, GPU-accelerated physics engine.** (See the [original repo](https://github.com/newton-physics/newton) for more details.)
 
-**Newton, a GPU-accelerated physics simulation engine, empowers researchers and roboticists to build and test complex simulations with unprecedented speed and efficiency.**
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/newton-physics/newton/main)
+[![codecov](https://codecov.io/gh/newton-physics/newton/graph/badge.svg?token=V6ZXNPAWVG)](https://codecov.io/gh/newton-physics/newton)
+[![Push Events - AWS GPU Tests](https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml/badge.svg)](https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml)
 
-**⚠️ Prerelease Software: Alpha Development ⚠️**
+**⚠️ Prerelease Software ⚠️**
 
-Please note that Newton is currently in alpha development. The API is subject to change, and breaking changes may occur.
+**Please note: This project is in active alpha development.** The API is subject to change.
 
 ## Key Features
 
-*   **GPU Acceleration:** Leveraging the power of NVIDIA GPUs for significantly faster physics simulation.
-*   **Differentiable Physics:** Enables gradient-based optimization and control for advanced robotics research.
-*   **Extensible Design:** Built with user-defined customization in mind, allowing for tailored simulations.
-*   **MuJoCo Warp Integration:** Uses [MuJoCo Warp](https://github.com/google-deepmind/mujoco_warp) as a primary backend, providing robust and established physics models.
-*   **Based on NVIDIA Warp:** Extends and generalizes the `warp.sim` module for advanced simulation capabilities.
+Newton leverages the power of the GPU for efficient physics simulation, making it ideal for robotics and research applications:
 
-## Target Audience
+*   **GPU Acceleration:** Built on NVIDIA Warp, enabling significant performance gains.
+*   **Differentiability:** Supports differentiable simulations, facilitating gradient-based optimization and control.
+*   **Extensibility:** Designed for user-defined extensions and customization to meet specific research needs.
+*   **Integration with MuJoCo Warp:** Uses MuJoCo Warp as a primary backend for robust simulation capabilities.
+*   **Rapid Iteration:** Empowers researchers to iterate quickly and scale their robotics simulations.
 
-*   Robotics Researchers
-*   Simulation Specialists
-*   AI and Machine Learning Engineers (interested in differentiable physics)
+## Overview
 
-## Supported By
+Newton is a physics simulation engine designed specifically for robotics and simulation researchers. It extends and generalizes NVIDIA's Warp's existing `warp.sim` module. Newton also integrates MuJoCo Warp for its simulation backend. The project emphasizes GPU-based computation, differentiability, and user-defined extensibility, facilitating rapid iteration and scalable robotics simulation.
 
-Newton is developed and maintained by leading organizations in the field:
+## Development
 
-*   [Disney Research](https://www.disneyresearch.com/)
-*   [Google DeepMind](https://deepmind.google/)
-*   [NVIDIA](https://www.nvidia.com/)
-
-## Get Started
-
-For detailed instructions on how to get started with Newton, please refer to the [development guide](https://newton-physics.github.io/newton/development-guide.html).
-
-## Learn More
-
-Explore the original Newton repository on GitHub: [https://github.com/newton-physics/newton](https://github.com/newton-physics/newton)
+Get started with Newton by following the instructions in the [development guide](https://newton-physics.github.io/newton/development-guide.html).

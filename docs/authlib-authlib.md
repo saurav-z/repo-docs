@@ -14,55 +14,81 @@
 
 </div>
 
-# Authlib: Build Secure OAuth and OpenID Connect Solutions in Python
+# Authlib: The Ultimate Python Library for OAuth and OpenID Connect
 
-**Authlib empowers developers to implement robust authentication and authorization, offering comprehensive support for OAuth, OpenID Connect, and related standards.** ([View the original repo](https://github.com/authlib/authlib))
+**Authlib empowers developers with a comprehensive and spec-compliant toolkit for building robust OAuth and OpenID Connect solutions in Python.**  [View the original repository](https://github.com/authlib/authlib).
 
-Authlib is a versatile Python library designed for building both clients and servers adhering to modern web authentication standards. It includes implementations for JWS, JWK, JWA, and JWT. Authlib is compatible with Python 3.9+ and provides a wide range of features for secure authentication and authorization.
+Authlib is a versatile library for Python 3.9+ that simplifies the integration of authentication and authorization protocols. It provides a wide range of features for both client and server-side implementations, including support for JWS, JWK, JWA, and JWT.
 
 ## Key Features
 
 *   **Comprehensive Protocol Support:**
-    *   OAuth 1.0 and 2.0
+    *   OAuth 1.0 & 2.0
     *   OpenID Connect 1.0
-    *   JSON Web Signature (JWS), JSON Web Encryption (JWE), JSON Web Key (JWK), JSON Web Token (JWT)
-    *   Extensive support for related RFCs (listed in detail in the original README)
+    *   JSON Web Signature (JWS), JSON Web Encryption (JWE), JSON Web Key (JWK), JSON Web Algorithms (JWA), JSON Web Token (JWT)
 *   **Client Integrations:**
-    *   Requests and HTTPX clients for easy integration with third-party OAuth providers.
-    *   Support for Flask, Django, Starlette, and FastAPI frameworks.
-*   **Provider Implementation:**
-    *   Build custom OAuth 1.0, OAuth 2.0, and OpenID Connect providers.
-    *   Framework-specific implementations for Flask and Django.
+    *   Requests (OAuth1Session, OAuth2Session, OpenID Connect, AssertionSession)
+    *   HTTPX (AsyncOAuth1Client, AsyncOAuth2Client, OpenID Connect, AsyncAssertionClient)
+    *   Flask, Django, Starlette, and FastAPI OAuth Clients
+*   **Provider Implementations:**
+    *   Flask, Django (OAuth 1.0 & 2.0, OpenID Connect 1.0)
+*   **Security:**
+    *   Includes support for RFC specifications and security best practices.
 
 ## Migrations
 
-*   Authlib will deprecate the `authlib.jose` module.  Please read:
-    *   [Migrating from `authlib.jose` to `joserfc`](https://jose.authlib.org/en/dev/migrations/authlib/)
+Authlib will deprecate `authlib.jose` module, please read:
+
+- [Migrating from `authlib.jose` to `joserfc`](https://jose.authlib.org/en/dev/migrations/authlib/)
 
 ## Sponsors
 
-[Sponsor information from original README - include details here.]
+<table>
+<tr>
+<td><img align="middle" width="48" src="https://cdn.auth0.com/website/website/favicons/auth0-favicon.svg"></td>
+<td>If you want to quickly add secure token-based authentication to Python projects, feel free to check Auth0's Python SDK and free plan at <a href="https://auth0.com/overview?utm_source=GHsponsor&utm_medium=GHsponsor&utm_campaign=authlib&utm_content=auth">auth0.com/overview</a>.</td>
+</tr>
+<tr>
+<td><img align="middle" width="48" src="https://typlog.com/assets/icon-white.svg"></td>
+<td>A blogging and podcast hosting platform with minimal design but powerful features. Host your blog and Podcast with <a href="https://typlog.com/">Typlog.com</a>.
+</td>
+</tr>
+</table>
+
+[**Fund Authlib to access additional features**](https://docs.authlib.org/en/latest/community/funding.html)
 
 ## Useful Links
 
-1.  Homepage: <https://authlib.org/>
-2.  Documentation: <https://docs.authlib.org/>
-3.  Purchase Commercial License: <https://authlib.org/plans>
-4.  Blog: <https://blog.authlib.org/>
-5.  Twitter: <https://twitter.com/authlib>
-6.  StackOverflow: <https://stackoverflow.com/questions/tagged/authlib>
-7.  Other Repositories: <https://github.com/authlib>
+1.  Homepage: <https://authlib.org/>.
+2.  Documentation: <https://docs.authlib.org/>.
+3.  Purchase Commercial License: <https://authlib.org/plans>.
+4.  Blog: <https://blog.authlib.org/>.
+5.  Twitter: <https://twitter.com/authlib>.
+6.  StackOverflow: <https://stackoverflow.com/questions/tagged/authlib>.
+7.  Other Repositories: <https://github.com/authlib>.
 8.  Subscribe Tidelift: [https://tidelift.com/subscription/pkg/pypi-authlib](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links).
 
 ## Security Reporting
 
-If you discover any security vulnerabilities, please report them privately to <me@lepture.com> with a patch if possible.  You can also use the [Tidelift security contact](https://tidelift.com/security).
+If you found security bugs, please do not send a public issue or patch.
+You can send me email at <me@lepture.com>. Attachment with patch is welcome.
+My PGP Key fingerprint is:
+
+```
+72F8 E895 A70C EBDF 4F2A DFE0 7E55 E3E0 118B 2B4C
+```
+
+Or, you can use the [Tidelift security contact](https://tidelift.com/security).
+Tidelift will coordinate the fix and disclosure.
 
 ## License
 
-Authlib is available under two licenses:
+Authlib offers two licenses:
 
 1.  BSD LICENSE
-2.  COMMERCIAL LICENSE
+2.  COMMERCIAL-LICENSE
 
-The BSD license is available for any project. For commercial support, purchase a commercial license at [Authlib Plans](https://authlib.org/plans).
+Any project, open or closed source, can use the BSD license.
+If your company needs commercial support, you can purchase a commercial license at
+[Authlib Plans](https://authlib.org/plans). You can find more information at
+<https://authlib.org/support>.

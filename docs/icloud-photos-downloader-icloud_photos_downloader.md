@@ -1,6 +1,6 @@
-# iCloud Photos Downloader: Download Your iCloud Photos with Ease
+# iCloud Photos Downloader: Effortlessly Download Your iCloud Photos
 
-Easily back up and manage your precious memories by downloading all your iCloud photos to your local device with **iCloud Photos Downloader** - a versatile and cross-platform command-line tool. [(Back to Original Repo)](https://github.com/icloud-photos-downloader/icloud_photos_downloader)
+**Easily back up and manage your iCloud photo library with iCloud Photos Downloader, a versatile command-line tool.** ([View the original repository](https://github.com/icloud-photos-downloader/icloud_photos_downloader))
 
 [![Quality Checks](https://github.com/icloud-photos-downloader/icloud_photos_downloader/workflows/Quality%20Checks/badge.svg)](https://github.com/icloud-photos-downloader/icloud_photos_downloader/actions/workflows/quality-checks.yml)
 [![Build and Package](https://github.com/icloud-photos-downloader/icloud_photos_downloader/workflows/Produce%20Artifacts/badge.svg)](https://github.com/icloud-photos-downloader/icloud_photos_downloader/actions/workflows/produce-artifacts.yml)
@@ -8,55 +8,53 @@ Easily back up and manage your precious memories by downloading all your iCloud 
 
 ## Key Features
 
-*   **Cross-Platform Compatibility:** Works seamlessly on Linux, Windows, and macOS.
-*   **Multiple Download Modes:** Copy, Sync (with auto-delete), and Move options for flexible management.
-*   **Live Photo & RAW Image Support:** Download Live Photos (image and video) and RAW images, including RAW+JPEG.
-*   **Automatic De-duplication:** Prevents downloading duplicate photos with the same names.
-*   **Continuous Monitoring:** Option to watch for iCloud changes continuously.
-*   **Incremental Downloads:** Optimized with `--until-found` and `--recent` options for efficient incremental updates.
-*   **Metadata Preservation:**  Option to update photo metadata (EXIF).
-*   **Multiple Installation Options:** Available as an executable, via package managers (Docker, PyPI, AUR, npm), and from source.
+*   **Cross-Platform Compatibility:** Works seamlessly on Linux, Windows, and macOS, suitable for laptops, desktops, and NAS devices.
+*   **Multiple Download Modes:** Choose between Copy, Sync (with auto-delete), and Move (with iCloud photo deletion).
+*   **Live Photo & RAW Support:** Downloads both Live Photos (image & video) and RAW images (including RAW+JPEG).
+*   **Automated Deduplication:** Avoids downloading duplicate photos with the same names.
+*   **Continuous Monitoring:** Option to automatically monitor for and download new iCloud changes.
+*   **Incremental Downloads:** Optimized options for efficient incremental downloads (`--until-found` and `--recent`).
+*   **Metadata Preservation:**  Preserves and updates photo metadata (EXIF) with the `--set-exif-datetime` option.
+*   **Flexible Installation:** Available as an executable, via package managers, and from source (Docker, PyPI, AUR, npm).
 
 ## iCloud Prerequisites
 
-To ensure the iCloud Photos Downloader works correctly, please configure your iCloud account as follows:
+To ensure successful downloads, please configure your iCloud account:
 
-*   **Enable Access iCloud Data on the Web:**  `Settings > Apple ID > iCloud > Access iCloud Data on the Web`
-*   **Disable Advanced Data Protection:** `Settings > Apple ID > iCloud > Advanced Data Protection`
+*   **Enable "Access iCloud Data on the Web"**:  Navigate to `Settings > Apple ID > iCloud` on your iPhone/iPad.
+*   **Disable "Advanced Data Protection"**: In `Settings > Apple ID > iCloud`, disable "Advanced Data Protection" on your iPhone/iPad.
 
 ## Installation
 
-You can install and run `icloudpd` in several ways:
+You can install and run `icloudpd` using several methods:
 
 1.  **Download Executable:** Download the executable for your platform from the GitHub [Releases](https://github.com/icloud-photos-downloader/icloud_photos_downloader/releases/tag/v1.29.4) page.
-2.  **Package Managers:** Install via Docker, PyPI, AUR, or npm (See [Installation Documentation](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html) for details).
-3.  **Build from Source:** Build and run the tool from the source code.
+2.  **Package Managers:** Install using package managers such as [Docker](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html#docker), [PyPI](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html#pypi), [AUR](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html#aur), or [npm](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html#npm).
+3.  **Build from Source:** Build and run the tool directly from the source code.
 
-## Usage
+See the [Documentation](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html) for detailed installation instructions.
 
-**Basic Synchronization:**
+## Usage Examples
 
-To keep your iCloud photo collection synchronized to a local directory, use a command like this:
+**Syncing your iCloud photos to a local directory:**
 
 ```bash
 icloudpd --directory /data --username my@email.address --watch-with-interval 3600
 ```
 
-> [!IMPORTANT]
-> Remember to use `icloudpd`, not `icloud`, when running the executable.
-
-**Authentication:**
-
-To create and authorize a session independently (and complete 2FA validation if needed):
+**Authenticating a session independently:**
 
 ```bash
 icloudpd --username my@email.address --password my_password --auth-only
 ```
 
+> **Important:** Use `icloudpd` and not `icloud` to execute the tool.
+> **Tip:** Customize your download behavior using the command-line parameters.  Run `icloudpd --help` for a full list.
+
 ## Experimental Mode
 
-Explore cutting-edge features in the [Experimental Mode](EXPERIMENTAL.md) before they graduate into the main package.
+Explore cutting-edge features in experimental mode. Learn more in [EXPERIMENTAL.md](EXPERIMENTAL.md).
 
 ## Contributing
 
-We welcome contributions!  Please review our [contributing guidelines](CONTRIBUTING.md) to get involved.
+We welcome contributions! Review the [contributing guidelines](CONTRIBUTING.md) to get involved.

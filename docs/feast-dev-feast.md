@@ -1,139 +1,145 @@
-# Feast: The Open Source Feature Store for Machine Learning
+# Feast: The Open-Source Feature Store for Machine Learning
 
-**Feast is the open-source feature store that enables data scientists and ML engineers to manage, discover, and serve features for machine learning models.** Learn more and contribute on the original repository: [https://github.com/feast-dev/feast](https://github.com/feast-dev/feast)
+**Feast** is an open-source feature store that makes productionizing machine learning faster and more reliable.
 
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/feast)](https://pypi.org/project/feast/)
 [![GitHub contributors](https://img.shields.io/github/contributors/feast-dev/feast)](https://github.com/feast-dev/feast/graphs/contributors)
-[![unit-tests](https://github.com/feast-dev/feast/actions/workflows/unit_tests.yml/badge.svg?branch=master&event=pull_request)](https://github.com/feast-dev/feast/actions/workflows/unit_tests.yml)
-[![integration-tests-and-build](https://github.com/feast-dev/feast/actions/workflows/master_only.yml/badge.svg?branch=master&event=push)](https://github.com/feast-dev/feast/actions/workflows/master_only.yml)
-[![linter](https://github.com/feast-dev/feast/actions/workflows/linter.yml/badge.svg?branch=master&event=push)](https://github.com/feast-dev/feast/actions/workflows/linter.yml)
+[![Unit Tests](https://github.com/feast-dev/feast/actions/workflows/unit_tests.yml/badge.svg?branch=master&event=pull_request)](https://github.com/feast-dev/feast/actions/workflows/unit_tests.yml)
+[![Integration Tests & Build](https://github.com/feast-dev/feast/actions/workflows/master_only.yml/badge.svg?branch=master&event=push)](https://github.com/feast-dev/feast/actions/workflows/master_only.yml)
+[![Linter](https://github.com/feast-dev/feast/actions/workflows/linter.yml/badge.svg?branch=master&event=push)](https://github.com/feast-dev/feast/actions/workflows/linter.yml)
 [![Docs Latest](https://img.shields.io/badge/docs-latest-blue.svg)](https://docs.feast.dev/)
 [![Python API](https://img.shields.io/badge/docs-latest-brightgreen.svg)](http://rtd.feast.dev/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue)](https://github.com/feast-dev/feast/blob/master/LICENSE)
 [![GitHub Release](https://img.shields.io/github/v/release/feast-dev/feast.svg?style=flat&sort=semver&color=blue)](https://github.com/feast-dev/feast/releases)
 
-## Key Features
+## Key Features of Feast
 
-*   **Consistent Feature Availability:** Manage features for both training and serving, ensuring consistency through offline and online stores.
-*   **Data Leakage Prevention:** Generate point-in-time correct feature sets, allowing data scientists to focus on feature engineering.
-*   **Decoupled Infrastructure:** Abstract feature storage from retrieval, enabling model portability across training, serving, and different data infrastructure systems.
-*   **Real-Time Prediction:** Serve pre-computed features for low-latency online predictions.
-*   **Comprehensive Documentation:**  Access extensive documentation and tutorials to get started quickly.
+*   **Unified Feature Management:** Manage features consistently across training and serving environments with offline and online stores.
+*   **Data Leakage Prevention:** Generate point-in-time correct feature sets to avoid data leakage and improve model accuracy.
+*   **Infrastructure Decoupling:** Abstract feature storage and retrieval, ensuring model portability and simplifying data infrastructure changes.
+*   **Scalability:**  Built to handle large-scale datasets for both batch and real-time model serving.
 
-## Quick Start
+## Get Started with Feast
 
-### 1. Install Feast
-```commandline
-pip install feast
-```
+1.  **Install Feast:**
 
-### 2. Create a feature repository
-```commandline
-feast init my_feature_repo
-cd my_feature_repo/feature_repo
-```
+    ```bash
+    pip install feast
+    ```
 
-### 3. Register your feature definitions and set up your feature store
-```commandline
-feast apply
-```
+2.  **Create a Feature Repository:**
 
-### 4. Explore your data in the web UI (experimental)
+    ```bash
+    feast init my_feature_repo
+    cd my_feature_repo/feature_repo
+    ```
 
-![Web UI](ui/sample.png)
-```commandline
-feast ui
-```
+3.  **Register Features & Set up Feature Store:**
 
-### 5. Build a training dataset
-```python
-from feast import FeatureStore
-import pandas as pd
-from datetime import datetime
+    ```bash
+    feast apply
+    ```
 
-entity_df = pd.DataFrame.from_dict({
-    "driver_id": [1001, 1002, 1003, 1004],
-    "event_timestamp": [
-        datetime(2021, 4, 12, 10, 59, 42),
-        datetime(2021, 4, 12, 8,  12, 10),
-        datetime(2021, 4, 12, 16, 40, 26),
-        datetime(2021, 4, 12, 15, 1 , 12)
-    ]
-})
+4.  **Explore Data with Web UI (Experimental)**
 
-store = FeatureStore(repo_path=".")
+    ![Web UI](ui/sample.png)
 
-training_df = store.get_historical_features(
-    entity_df=entity_df,
-    features = [
-        'driver_hourly_stats:conv_rate',
-        'driver_hourly_stats:acc_rate',
-        'driver_hourly_stats:avg_daily_trips'
-    ],
-).to_df()
+    ```bash
+    feast ui
+    ```
 
-print(training_df.head())
+5.  **Build a Training Dataset**
 
-# Train model
-# model = ml.fit(training_df)
-```
-```commandline
-            event_timestamp  driver_id  conv_rate  acc_rate  avg_daily_trips
-0 2021-04-12 08:12:10+00:00       1002   0.713465  0.597095              531
-1 2021-04-12 10:59:42+00:00       1001   0.072752  0.044344               11
-2 2021-04-12 15:01:12+00:00       1004   0.658182  0.079150              220
-3 2021-04-12 16:40:26+00:00       1003   0.162092  0.309035              959
+    ```python
+    from feast import FeatureStore
+    import pandas as pd
+    from datetime import datetime
 
-```
+    entity_df = pd.DataFrame.from_dict({
+        "driver_id": [1001, 1002, 1003, 1004],
+        "event_timestamp": [
+            datetime(2021, 4, 12, 10, 59, 42),
+            datetime(2021, 4, 12, 8,  12, 10),
+            datetime(2021, 4, 12, 16, 40, 26),
+            datetime(2021, 4, 12, 15, 1 , 12)
+        ]
+    })
 
-### 6. Load feature values into your online store
-```commandline
-CURRENT_TIME=$(date -u +"%Y-%m-%dT%H:%M:%S")
-feast materialize-incremental $CURRENT_TIME
-```
+    store = FeatureStore(repo_path=".")
 
-```commandline
-Materializing feature view driver_hourly_stats from 2021-04-14 to 2021-04-15 done!
-```
+    training_df = store.get_historical_features(
+        entity_df=entity_df,
+        features = [
+            'driver_hourly_stats:conv_rate',
+            'driver_hourly_stats:acc_rate',
+            'driver_hourly_stats:avg_daily_trips'
+        ],
+    ).to_df()
 
-### 7. Read online features at low latency
-```python
-from pprint import pprint
-from feast import FeatureStore
+    print(training_df.head())
 
-store = FeatureStore(repo_path=".")
+    # Train model
+    # model = ml.fit(training_df)
+    ```
 
-feature_vector = store.get_online_features(
-    features=[
-        'driver_hourly_stats:conv_rate',
-        'driver_hourly_stats:acc_rate',
-        'driver_hourly_stats:avg_daily_trips'
-    ],
-    entity_rows=[{"driver_id": 1001}]
-).to_dict()
+    ```bash
+                event_timestamp  driver_id  conv_rate  acc_rate  avg_daily_trips
+    0 2021-04-12 08:12:10+00:00       1002   0.713465  0.597095              531
+    1 2021-04-12 10:59:42+00:00       1001   0.072752  0.044344               11
+    2 2021-04-12 15:01:12+00:00       1004   0.658182  0.079150              220
+    3 2021-04-12 16:40:26+00:00       1003   0.162092  0.309035              959
+    ```
 
-pprint(feature_vector)
+6.  **Load Feature Values to Online Store:**
 
-# Make prediction
-# model.predict(feature_vector)
-```
-```json
-{
-    "driver_id": [1001],
-    "driver_hourly_stats__conv_rate": [0.49274],
-    "driver_hourly_stats__acc_rate": [0.92743],
-    "driver_hourly_stats__avg_daily_trips": [72]
-}
-```
+    ```bash
+    CURRENT_TIME=$(date -u +"%Y-%m-%dT%H:%M:%S")
+    feast materialize-incremental $CURRENT_TIME
+    ```
 
-## Architecture
+    ```bash
+    Materializing feature view driver_hourly_stats from 2021-04-14 to 2021-04-15 done!
+    ```
+
+7.  **Read Online Features at Low Latency**
+
+    ```python
+    from pprint import pprint
+    from feast import FeatureStore
+
+    store = FeatureStore(repo_path=".")
+
+    feature_vector = store.get_online_features(
+        features=[
+            'driver_hourly_stats:conv_rate',
+            'driver_hourly_stats:acc_rate',
+            'driver_hourly_stats:avg_daily_trips'
+        ],
+        entity_rows=[{"driver_id": 1001}]
+    ).to_dict()
+
+    pprint(feature_vector)
+
+    # Make prediction
+    # model.predict(feature_vector)
+    ```
+
+    ```json
+    {
+        "driver_id": [1001],
+        "driver_hourly_stats__conv_rate": [0.49274],
+        "driver_hourly_stats__acc_rate": [0.92743],
+        "driver_hourly_stats__avg_daily_trips": [72]
+    }
+    ```
+
+## Feast Architecture
 
 ![](docs/assets/feast_marchitecture.png)
 
-For a full Feast deployment on Snowflake/GCP/AWS, see [here](https://docs.feast.dev/how-to-guides/feast-snowflake-gcp-aws).
+##  Functionality and Roadmap
 
-## Functionality and Roadmap
-
+*We welcome contribution to all items in the roadmap!*
 *   **Natural Language Processing**
     *   [x] Vector Search (Alpha release. See [RFC](https://docs.google.com/document/d/18IWzLEA9i2lDWnbfbwXnMCg3StlqaLVI-uRpQjr_Vos/edit#heading=h.9gaqqtox9jg6))
     *   [ ] [Enhanced Feature Server and SDK for native support for NLP](https://github.com/feast-dev/feast/issues/4964)
@@ -178,7 +184,7 @@ For a full Feast deployment on Snowflake/GCP/AWS, see [here](https://docs.feast.
 *   **Feature Engineering**
     *   [x] On-demand Transformations (On Read) (Beta release. See [RFC](https://docs.google.com/document/d/1lgfIw0Drc65LpaxbUu49RCeJgMew547meSJttnUqz7c/edit#))
     *   [x] Streaming Transformations (Alpha release. See [RFC](https://docs.google.com/document/d/1UzEyETHUaGpn0ap4G82DHluiCj7zEbrQLkJJkKSv4e8/edit))
-    *   [ ] Batch transformation (In progress. See [RFC](https://docs.google.com/document/d/1964OkzuBljifDvkV-0fakp2uaijnVzdwWNGdz7Vz50A/edit))
+    *   [ ] Batch transformation (In progress. See [RFC](https://docs.google.com/document/d/1964OkzuBljifDvkV-0fakp2uaijnVzdwWNGdz7VzdwWNGdz7Vz50A/edit))
     *   [x] On-demand Transformations (On Write) (Beta release. See [GitHub Issue](https://github.com/feast-dev/feast/issues/4376))
 *   **Streaming**
     *   [x] [Custom streaming ingestion job support](https://docs.feast.dev/how-to-guides/customizing-feast/creating-a-custom-provider)
@@ -206,9 +212,9 @@ For a full Feast deployment on Snowflake/GCP/AWS, see [here](https://docs.feast.
     *   [x] Feast Web UI (Beta release. See [docs](https://docs.feast.dev/reference/alpha-web-ui))
     *   [ ] Feast Lineage Explorer
 
-## Resources
+## Important Resources
 
-*   [Documentation](https://docs.feast.dev/)
+*   **Documentation:** [https://docs.feast.dev/](https://docs.feast.dev/)
     *   [Quickstart](https://docs.feast.dev/getting-started/quickstart)
     *   [Tutorials](https://docs.feast.dev/tutorials/tutorials-overview)
     *   [Examples](https://github.com/feast-dev/feast/tree/master/examples)
@@ -217,9 +223,17 @@ For a full Feast deployment on Snowflake/GCP/AWS, see [here](https://docs.feast.
 
 ## Contribute
 
-Feast welcomes contributions from the community; check out the [contribution process](https://docs.feast.dev/project/contributing) and the [development guide](https://docs.feast.dev/project/development-guide) to get started.
+Feast is an actively developed community project; join our efforts by contributing:
+*   [Contribution Process for Feast](https://docs.feast.dev/project/contributing)
+*   [Development Guide for Feast](https://docs.feast.dev/project/development-guide)
+*   [Development Guide for the Main Feast Repository](./CONTRIBUTING.md)
 
-## Star History
+## Get Involved
+
+*   👋👋👋 [Join us on Slack!](https://communityinviter.com/apps/feastopensource/feast-the-open-source-feature-store)
+*   [Check out our DeepWiki!](https://deepwiki.com/feast-dev/feast)
+
+##  🌟 GitHub Star History
 
 <p align="center">
 <a href="https://star-history.com/#feast-dev/feast&Date">
@@ -236,3 +250,5 @@ Feast welcomes contributions from the community; check out the [contribution pro
 <a href="https://github.com/feast-dev/feast/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=feast-dev/feast" />
 </a>
+
+**[Explore the Feast Repository](https://github.com/feast-dev/feast)** to learn more and contribute.

@@ -26,22 +26,21 @@
 
 ---
 
-## Flet: Build Beautiful, Multi-Platform Apps in Python
+# Flet: Build Cross-Platform Apps in Python with Flutter
 
-**Create stunning web, desktop, and mobile applications effortlessly using Python and the power of Flutter.**
+**Flet empowers you to create stunning web, desktop, and mobile applications using Python, leveraging the power of Flutter.**
 
-### Key Features:
+## Key Features
 
-*   **Cross-Platform Development:** Build apps for web, desktop (Windows, macOS, Linux), iOS, and Android from a single codebase.
-*   **Simplified Architecture:** Develop stateful, multi-user, real-time Single-Page Applications (SPAs) with a Python-only codebase.
-*   **Rapid Development:** Go from idea to functional app in minutes, ideal for internal tools, prototypes, and more.
-*   **Flutter-Powered UI:** Leverage the rich UI capabilities of Flutter for professional-looking apps.
-*   **Batteries Included:**  No complex setup - just Python and your favorite IDE. Flet includes a built-in web server and desktop clients.
-*   **Package and Deploy:** Easily package your Flet app as a standalone desktop app, mobile app, web app, or PWA.
+*   **Rapid Development:** Quickly transform your ideas into functional apps within minutes.
+*   **Simplified Architecture:** Build stateful, multi-user, real-time Single-Page Applications (SPAs) with Python, eliminating complex frontend and backend setups.
+*   **Batteries Included:** Develop effortlessly with a built-in web server, asset hosting, and desktop clients, eliminating the need for extensive SDKs or dependencies.
+*   **Powered by Flutter:** Craft professional-looking UIs that are natively rendered on any platform.
+*   **Multi-Platform Deployment:** Deploy your app to Windows, macOS, Linux, iOS, Android, as a web app, or a Progressive Web App (PWA).
 
-### Flet App Example: Counter
+## Flet App Example: Counter App
 
-Here's a simple "Counter" app demonstrating Flet's ease of use:
+Here's a simple "Counter" app built with Flet:
 
 ```python title="counter.py"
 import flet as ft
@@ -74,45 +73,52 @@ def main(page: ft.Page):
 ft.run(main)
 ```
 
-**Installation:**
+### How to Run
 
-```bash
-pip install 'flet[all]'
-```
+1.  **Install Flet:**
 
-**Running the app (Desktop):**
+    ```bash
+    pip install 'flet[all]'
+    ```
 
-```bash
-flet run counter.py
-```
+2.  **Run the app:**
 
-<p align="center">
-    <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/macos.png" width="45%" />
-</p>
+    ```bash
+    flet run counter.py
+    ```
 
-**Running the app (Web):**
+    This opens the app in a native OS window.
 
-```python
-ft.run(main, view=flet.AppView.WEB_BROWSER)
-```
-or
-```bash
-flet run --web counter.py
-```
+    <p align="center">
+        <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/macos.png" width="45%" />
+    </p>
 
-<p align="center">
-    <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/safari.png" width="60%" />
-</p>
+    To run the same app as a web app:
 
-### Learn More
+    *   **Option 1:**  Modify the last line of your script:
+
+        ```python
+        ft.run(main, view=flet.AppView.WEB_BROWSER)
+        ```
+
+    *   **Option 2:** Use the `--web` flag:
+
+        ```bash
+        flet run --web counter.py
+        ```
+
+    <p align="center">
+        <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/safari.png" width="60%" />
+    </p>
+
+## Learn More
 
 *   [Website](https://flet.dev)
 *   [Documentation](https://docs.flet.dev)
 *   [Roadmap](https://flet.dev/roadmap)
 *   [Apps Gallery](https://docs.flet.dev/gallery)
-*   [GitHub Repository](https://github.com/flet-dev/flet)
 
-### Community
+## Community
 
 *   [Discussions](https://github.com/flet-dev/flet/discussions)
 *   [Discord](https://discord.gg/dzWXP8SHG8)
@@ -120,6 +126,10 @@ flet run --web counter.py
 *   [Bluesky](https://bsky.app/profile/fletdev.bsky.social)
 *   [Email us](mailto:hello@flet.dev)
 
-### Contributing
+## Contributing
 
-*   [Contribution Guide](https://docs.flet.dev/contributing)
+*   Check out the [contribution guide](https://docs.flet.dev/contributing) to help improve Flet.
+
+---
+
+[Back to Original Repository](https://github.com/flet-dev/flet)

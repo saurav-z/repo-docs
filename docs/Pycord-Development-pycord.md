@@ -1,14 +1,14 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/Pycord-Development/pycord/master/pycord.png" alt="Pycord v3" width="200">
-  <h1>Pycord: The Modern Python Library for Discord Bots</h1>
+  <h1>Pycord</h1>
+  <p><b>Build powerful and feature-rich Discord bots with Pycord, a modern and easy-to-use Python library.</b></p>
+  <a href="https://github.com/Pycord-Development/pycord">
+    <img src="https://img.shields.io/github/stars/Pycord-Development/pycord?style=social" alt="GitHub stars">
+  </a>
 </div>
 
-Pycord is a powerful and easy-to-use Python library, built for creating feature-rich Discord bots with a modern and asynchronous approach.  [Explore the original repository](https://github.com/Pycord-Development/pycord) for more information.
-
-<br>
-
 [![PyPI Version](https://img.shields.io/pypi/v/py-cord.svg?style=for-the-badge&logo=pypi&color=yellowgreen&logoColor=white)](https://pypi.python.org/pypi/py-cord)
-[![PyPI Python Versions](https://img.shields.io/pypi/pyversions/py-cord.svg?style=for-the-badge&logo=python&logoColor=white)](https://pypi.python.org/pypi/py-cord)
+[![Python Versions](https://img.shields.io/pypi/pyversions/py-cord.svg?style=for-the-badge&logo=python&logoColor=white)](https://pypi.python.org/pypi/py-cord)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/py-cord?color=blueviolet&logo=pypi&logoColor=white&style=for-the-badge)](https://pypi.python.org/pypi/py-cord)
 [![Latest Release](https://img.shields.io/github/v/release/Pycord-Development/pycord?include_prereleases&label=Latest%20Release&logo=github&sort=semver&style=for-the-badge&logoColor=white)](https://github.com/Pycord-Development/pycord/releases)
 [![Discord Server](https://img.shields.io/discord/881207955029110855?label=discord&style=for-the-badge&logo=discord&color=5865F2&logoColor=white)](https://pycord.dev/discord)
@@ -16,16 +16,16 @@ Pycord is a powerful and easy-to-use Python library, built for creating feature-
 
 ## Key Features
 
-*   **Modern Pythonic API:** Leverages `async` and `await` for efficient and responsive bot development.
-*   **Robust Rate Limit Handling:** Automatically manages Discord's rate limits to ensure smooth operation.
-*   **Optimized Performance:** Designed for speed and low memory usage, providing a performant bot experience.
-*   **Full Application API Support:**  Access to the complete Discord API for comprehensive bot capabilities.
+*   **Modern Pythonic API:** Leverage the power of `async` and `await` for efficient, non-blocking code.
+*   **Robust Rate Limit Handling:**  Pycord automatically handles Discord's rate limits, preventing your bot from being throttled.
+*   **Optimized Performance:** Designed for speed and memory efficiency, ensuring a smooth bot experience.
+*   **Full Application API Support:** Access all the latest Discord features through Pycord's comprehensive API coverage.
 
 ## Installation
 
-**Prerequisites:** Python 3.9 - 3.13
+**Requires Python 3.9 - 3.13**
 
-**Basic Installation (without voice support):**
+Install the core library:
 
 ```bash
 # Linux/macOS
@@ -34,7 +34,7 @@ python3 -m pip install -U py-cord
 py -3 -m pip install -U py-cord
 ```
 
-**Installation with Voice Support:**
+For full voice support, install with the `voice` extra:
 
 ```bash
 # Linux/macOS
@@ -43,7 +43,7 @@ python3 -m pip install -U "py-cord[voice]"
 py -3 -m pip install -U py-cord[voice]
 ```
 
-**Installation with Optional Speedup Packages:**
+For performance enhancements, install with the `speed` extra:
 
 ```bash
 # Linux/macOS
@@ -52,15 +52,15 @@ python3 -m pip install -U "py-cord[speed]"
 py -3 -m pip install -U py-cord[speed]
 ```
 
-**Development Version Installation:**
+To install the development version:
 
 ```bash
-git clone https://github.com/Pycord-Development/pycord
-cd pycord
-python3 -m pip install -U .[voice]
+$ git clone https://github.com/Pycord-Development/pycord
+$ cd pycord
+$ python3 -m pip install -U .[voice]
 ```
 
-**Or using pip:**
+or:
 
 ```bash
 # Linux/macOS
@@ -71,13 +71,13 @@ py -3 -m pip install git+https://github.com/Pycord-Development/pycord
 
 ### Optional Packages
 
-*   `PyNaCl`:  (for voice support) - *Required for voice functionality.*
-*   `aiodns`, `brotlipy`, `cchardet`:  (for aiohttp speedup) - *Improve network performance.*
-*   `msgspec`:  (for JSON speedup) - *Enhance JSON parsing efficiency.*
+*   `PyNaCl <https://pypi.org/project/PyNaCl/>`__ (for voice support)
+*   `aiodns <https://pypi.org/project/aiodns/>`, `brotlipy <https://pypi.org/project/brotlipy/>`, `cchardet <https://pypi.org/project/cchardet/>` (for aiohttp speedup)
+*   `msgspec <https://pypi.org/project/msgspec/>` (for JSON speedup)
 
-**Important for Linux Voice Support:** Before installing with voice support, ensure you have the following packages installed via your system's package manager (e.g., `apt`, `dnf`):
+**Important for Linux voice support:**  Before installing with `[voice]`, ensure you have installed the following system packages:
 
-*   `libffi-dev` (or `libffi-devel` on some systems)
+*   `libffi-dev` (or `libffi-devel`)
 *   `python-dev` (e.g., `python3.10-dev` for Python 3.10)
 
 ## Quick Example
@@ -116,16 +116,15 @@ async def ping(ctx):
 bot.run("token")
 ```
 
-For more detailed examples, check the `examples` directory in the repository.
-
-**Security Note:** Protect your bot token; do not share it publicly.
+Remember to keep your bot token secure!
 
 ## Useful Links
 
 *   [Documentation](https://docs.pycord.dev/en/master/index.html)
-*   [Pycord Guide](https://guide.pycord.dev/) - Learn how to create Discord bots.
+*   [Pycord Guide](https://guide.pycord.dev) - Learn how to create Discord bots with Pycord
 *   [Official Discord Server](https://pycord.dev/discord)
 *   [Official Discord Developers Server](https://discord.gg/discord-developers)
+*   [Pycord GitHub Repository](https://github.com/Pycord-Development/pycord)
 
 ## Translations
 

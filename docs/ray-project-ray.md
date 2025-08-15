@@ -1,92 +1,140 @@
-<div align="center">
-  <img src="https://github.com/ray-project/ray/raw/master/doc/source/images/ray_header_logo.png" alt="Ray Logo" width="400"/>
-</div>
+.. image:: https://github.com/ray-project/ray/raw/master/doc/source/images/ray_header_logo.png
 
-# Ray: Scale Your AI and Python Applications
+.. image:: https://readthedocs.org/projects/ray/badge/?version=master
+    :target: http://docs.ray.io/en/master/?badge=master
 
-**Ray is a unified framework that makes it simple to scale your Python and AI applications from your laptop to the cloud.**
+.. image:: https://img.shields.io/badge/Ray-Join%20Slack-blue
+    :target: https://www.ray.io/join-slack
 
-[![Documentation Status](https://readthedocs.org/projects/ray/badge/?version=master)](http://docs.ray.io/en/master/?badge=master)
-[![Join Slack](https://img.shields.io/badge/Ray-Join%20Slack-blue)](https://www.ray.io/join-slack)
-[![Discuss](https://img.shields.io/badge/Discuss-Ask%20Questions-blue)](https://discuss.ray.io/)
-[![Follow on Twitter](https://img.shields.io/twitter/follow/raydistributed.svg?style=social&logo=twitter)](https://x.com/raydistributed)
-[![Get Started for Free](https://img.shields.io/badge/Get_started_for_free-3C8AE9?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8%2F9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAA0VXHyAAABKElEQVQ4Ea2TvWoCQRRGnWCVWChIIlikC9hpJdikSbGgaONbpAoY8gKBdAGfwkfwKQypLQ1sEGyMYhN1Pd%2B6A8PqwBZeOHt%2FvsvMnd3ZXBRFPQjBZ9K6OY8ZxF%2B0IYw9PW3qz8aY6lk92bZ%2BVqSI3oC9T7%2FyCVnrF1ngj93us%2B540sf5BrCDfw9b6jJ5lx%2FyjtGKBBXc3cnqx0INN4ImbI%2Bl%2BPnI8zWfFEr4chLLrWHCp9OO9j19Kbc91HX0zzzBO8EbLK2Iv4ZvNO3is3h6jb%2BCwO0iL8AaWqB7ILPTxq3kDypqvBuYuwswqo6wgYJbT8XxBPZ8KS1TepkFdC79TAHHce%2F7LbVioi3wEfTpmeKtPRGEeoldSP%2FOeoEftpP4BRbgXrYZefsAI%2BP9JU7ImyEAAAAASUVORK5CYII%3D)](https://www.anyscale.com/ray-on-anyscale?utm_source=github&utm_medium=ray_readme&utm_campaign=get_started_badge)
+.. image:: https://img.shields.io/badge/Discuss-Ask%20Questions-blue
+    :target: https://discuss.ray.io/
 
-<img src="https://github.com/ray-project/ray/raw/master/doc/source/images/what-is-ray-padded.svg" alt="What is Ray" width="700"/>
+.. image:: https://img.shields.io/twitter/follow/raydistributed.svg?style=social&logo=twitter
+    :target: https://x.com/raydistributed
 
-Ray provides a comprehensive platform for distributed computing, including a core distributed runtime and a suite of AI libraries.
+.. image:: https://img.shields.io/badge/Get_started_for_free-3C8AE9?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8%2F9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAA0VXHyAAABKElEQVQ4Ea2TvWoCQRRGnWCVWChIIlikC9hpJdikSbGgaONbpAoY8gKBdAGfwkfwKQypLQ1sEGyMYhN1Pd%2B6A8PqwBZeOHt%2FvsvMnd3ZXBRFPQjBZ9K6OY8ZxF%2B0IYw9PW3qz8aY6lk92bZ%2BVqSI3oC9T7%2FyCVnrF1ngj93us%2B540sf5BrCDfw9b6jJ5lx%2FyjtGKBBXc3cnqx0INN4ImbI%2Bl%2BPnI8zWfFEr4chLLrWHCp9OO9j19Kbc91HX0zzzBO8EbLK2Iv4ZvNO3is3h6jb%2BCwO0iL8AaWqB7ILPTxq3kDypqvBuYuwswqo6wgYJbT8XxBPZ8KS1TepkFdC79TAHHce%2F7LbVioi3wEfTpmeKtPRGEeoldSP%2FOeoEftpP4BRbgXrYZefsAI%2BP9JU7ImyEAAAAASUVORK5CYII%3D
+   :target: https://www.anyscale.com/ray-on-anyscale?utm_source=github&utm_medium=ray_readme&utm_campaign=get_started_badge
 
-## Key Features
+Ray is a unified framework for scaling AI and Python applications. Ray consists of a core distributed runtime and a set of AI libraries for simplifying ML compute:
 
-*   **Unified Framework:** Simplify scaling from your laptop to a cluster using the same Python code.
-*   **General Purpose:** Designed to efficiently run any workload, making it adaptable to a variety of applications.
-*   **AI Libraries:**
-    *   Scalable Datasets for ML (`Data <https://docs.ray.io/en/latest/data/dataset.html>`_)
-    *   Distributed Training (`Train <https://docs.ray.io/en/latest/train/train.html>`_)
-    *   Scalable Hyperparameter Tuning (`Tune <https://docs.ray.io/en/latest/tune/index.html>`_)
-    *   Scalable Reinforcement Learning (`RLlib <https://docs.ray.io/en/latest/rllib/index.html>`_)
-    *   Scalable and Programmable Serving (`Serve <https://docs.ray.io/en/latest/serve/index.html>`_)
-*   **Ray Core Abstractions:**
-    *   Tasks: Stateless functions executed in the cluster.
-    *   Actors: Stateful worker processes created in the cluster.
-    *   Objects: Immutable values accessible across the cluster.
-*   **Monitoring and Debugging:**
-    *   Ray Dashboard: Monitor your Ray apps and clusters (`Ray Dashboard <https://docs.ray.io/en/latest/ray-core/ray-dashboard.html>`__)
-    *   Ray Distributed Debugger: Debug Ray apps (`Ray Distributed Debugger <https://docs.ray.io/en/latest/ray-observability/ray-distributed-debugger.html>`__)
-*   **Broad Compatibility:** Runs on any machine, cluster, cloud provider, and Kubernetes.
-*   **Extensive Ecosystem:** Integrations with a growing list of community tools and libraries (`ecosystem of community integrations <https://docs.ray.io/en/latest/ray-overview/ray-libraries.html>`_).
+.. image:: https://github.com/ray-project/ray/raw/master/doc/source/images/what-is-ray-padded.svg
 
-## Installation
+..
+  https://docs.google.com/drawings/d/1Pl8aCYOsZCo61cmp57c7Sja6HhIygGCvSZLi_AuBuqo/edit
 
-Install Ray with: `pip install ray`
+Learn more about `Ray AI Libraries`_:
 
-For nightly builds and more installation options, see the `Installation page <https://docs.ray.io/en/latest/ray-overview/installation.html>`_.
+- `Data`_: Scalable Datasets for ML
+- `Train`_: Distributed Training
+- `Tune`_: Scalable Hyperparameter Tuning
+- `RLlib`_: Scalable Reinforcement Learning
+- `Serve`_: Scalable and Programmable Serving
 
-## Why Ray?
+Or more about `Ray Core`_ and its key abstractions:
 
-Modern machine learning workloads are increasingly demanding in terms of computational resources. Single-node development environments are often inadequate to meet these needs. Ray offers a unified and scalable solution for Python and AI applications, allowing seamless scaling from local development to large-scale clusters. With Ray, the same code runs efficiently everywhere, eliminating infrastructure complexity.
+- `Tasks`_: Stateless functions executed in the cluster.
+- `Actors`_: Stateful worker processes created in the cluster.
+- `Objects`_: Immutable values accessible across the cluster.
 
-## Learn More
+Learn more about Monitoring and Debugging:
 
-*   `Documentation`_
-*   `Ray Architecture Whitepaper`_
-*   `Exoshuffle: large-scale data shuffle in Ray`_
-*   `Ownership: a distributed futures system for fine-grained tasks`_
-*   `RLlib Paper`_
-*   `Tune Paper`_
+- Monitor Ray apps and clusters with the `Ray Dashboard <https://docs.ray.io/en/latest/ray-core/ray-dashboard.html>`__.
+- Debug Ray apps with the `Ray Distributed Debugger <https://docs.ray.io/en/latest/ray-observability/ray-distributed-debugger.html>`__.
 
-### Older Documents:
-*   `Ray Paper`_
-*   `Ray HotOS Paper`_
-*   `Ray Architecture v1 Whitepaper`_
+Ray runs on any machine, cluster, cloud provider, and Kubernetes, and features a growing
+`ecosystem of community integrations`_.
 
-## Getting Involved
+Install Ray with: ``pip install ray``. For nightly wheels, see the
+`Installation page <https://docs.ray.io/en/latest/ray-overview/installation.html>`__.
 
-We welcome your contributions!
+.. _`Serve`: https://docs.ray.io/en/latest/serve/index.html
+.. _`Data`: https://docs.ray.io/en/latest/data/dataset.html
+.. _`Workflow`: https://docs.ray.io/en/latest/workflows/
+.. _`Train`: https://docs.ray.io/en/latest/train/train.html
+.. _`Tune`: https://docs.ray.io/en/latest/tune/index.html
+.. _`RLlib`: https://docs.ray.io/en/latest/rllib/index.html
+.. _`ecosystem of community integrations`: https://docs.ray.io/en/latest/ray-overview/ray-libraries.html
 
-| Platform           | Purpose                                  | Estimated Response Time | Support Level |
-| ------------------ | ---------------------------------------- | ----------------------- | ------------- |
-| `Discourse Forum`_ | Discussions and usage questions.          | < 1 day                 | Community     |
-| `GitHub Issues`_   | Bug reports and feature requests.        | < 2 days                | Ray OSS Team  |
-| `Slack`_           | Collaborating with other Ray users.       | < 2 days                | Community     |
-| `StackOverflow`_   | Questions about using Ray.             | 3-5 days                | Community     |
-| `Meetup Group`_    | Learning about Ray projects and best practices. | Monthly                 | Ray DevRel    |
-| `Twitter`_         | Stay up-to-date on new features.          | Daily                   | Ray DevRel    |
 
-[Back to Top](#ray-scale-your-ai-and-python-applications)
+Why Ray?
+--------
 
-**[View the source code on GitHub](https://github.com/ray-project/ray)**
+Today's ML workloads are increasingly compute-intensive. As convenient as they are, single-node development environments such as your laptop cannot scale to meet these demands.
 
-```
+Ray is a unified way to scale Python and AI applications from a laptop to a cluster.
 
-Key improvements:
+With Ray, you can seamlessly scale the same code from a laptop to a cluster. Ray is designed to be general-purpose, meaning that it can performantly run any kind of workload. If your application is written in Python, you can scale it with Ray, no other infrastructure required.
 
-*   **SEO Optimization:** Added keywords ("Ray", "AI", "Python", "distributed", "scaling", "machine learning") in headings, descriptions, and throughout the text.
-*   **Concise Hook:** The first sentence is a direct, benefit-driven introduction.
-*   **Clear Structure:** Uses headings, bullet points, and tables for readability.
-*   **Comprehensive Summary:** Covers all the key aspects of Ray, including its features, libraries, and core components.
-*   **Actionable:**  Installation instructions are clear.
-*   **Call to action:**  Links back to the original repo.
-*   **Removed redundancy:** Streamlined sections.
-*   **Formatting:** Consistent Markdown formatting.
-*   **Added Anchors:** Added an anchor to the top so users can easily get back to the start of the README.
+More Information
+----------------
+
+- `Documentation`_
+- `Ray Architecture whitepaper`_
+- `Exoshuffle: large-scale data shuffle in Ray`_
+- `Ownership: a distributed futures system for fine-grained tasks`_
+- `RLlib paper`_
+- `Tune paper`_
+
+*Older documents:*
+
+- `Ray paper`_
+- `Ray HotOS paper`_
+- `Ray Architecture v1 whitepaper`_
+
+.. _`Ray AI Libraries`: https://docs.ray.io/en/latest/ray-air/getting-started.html
+.. _`Ray Core`: https://docs.ray.io/en/latest/ray-core/walkthrough.html
+.. _`Tasks`: https://docs.ray.io/en/latest/ray-core/tasks.html
+.. _`Actors`: https://docs.ray.io/en/latest/ray-core/actors.html
+.. _`Objects`: https://docs.ray.io/en/latest/ray-core/objects.html
+.. _`Documentation`: http://docs.ray.io/en/latest/index.html
+.. _`Ray Architecture v1 whitepaper`: https://docs.google.com/document/d/1lAy0Owi-vPz2jEqBSaHNQcy2IBSDEHyXNOQZlGuj93c/preview
+.. _`Ray Architecture whitepaper`: https://docs.google.com/document/d/1tBw9A4j62ruI5omIJbMxly-la5w4q_TjyJgJL_jN2fI/preview
+.. _`Exoshuffle: large-scale data shuffle in Ray`: https://arxiv.org/abs/2203.05072
+.. _`Ownership: a distributed futures system for fine-grained tasks`: https://www.usenix.org/system/files/nsdi21-wang.pdf
+.. _`Ray paper`: https://arxiv.org/abs/1712.05889
+.. _`Ray HotOS paper`: https://arxiv.org/abs/1703.03924
+.. _`RLlib paper`: https://arxiv.org/abs/1712.09381
+.. _`Tune paper`: https://arxiv.org/abs/1807.05118
+
+Getting Involved
+----------------
+
+.. list-table::
+   :widths: 25 50 25 25
+   :header-rows: 1
+
+   * - Platform
+     - Purpose
+     - Estimated Response Time
+     - Support Level
+   * - `Discourse Forum`_
+     - For discussions about development and questions about usage.
+     - < 1 day
+     - Community
+   * - `GitHub Issues`_
+     - For reporting bugs and filing feature requests.
+     - < 2 days
+     - Ray OSS Team
+   * - `Slack`_
+     - For collaborating with other Ray users.
+     - < 2 days
+     - Community
+   * - `StackOverflow`_
+     - For asking questions about how to use Ray.
+     - 3-5 days
+     - Community
+   * - `Meetup Group`_
+     - For learning about Ray projects and best practices.
+     - Monthly
+     - Ray DevRel
+   * - `Twitter`_
+     - For staying up-to-date on new features.
+     - Daily
+     - Ray DevRel
+
+.. _`Discourse Forum`: https://discuss.ray.io/
+.. _`GitHub Issues`: https://github.com/ray-project/ray/issues
+.. _`StackOverflow`: https://stackoverflow.com/questions/tagged/ray
+.. _`Meetup Group`: https://www.meetup.com/Bay-Area-Ray-Meetup/
+.. _`Twitter`: https://x.com/raydistributed
+.. _`Slack`: https://www.ray.io/join-slack?utm_source=github&utm_medium=ray_readme&utm_campaign=getting_involved

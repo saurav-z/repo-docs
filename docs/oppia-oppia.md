@@ -1,55 +1,54 @@
-# Oppia: Interactive Learning for Everyone
+# Oppia: Interactive Learning Platform for All 
 
-**Oppia is a free, open-source platform that empowers anyone to create and share engaging, interactive learning experiences.** [(See the original repository)](https://github.com/oppia/oppia)
+**(Original Repository: [https://github.com/oppia/oppia](https://github.com/oppia/oppia))**
 
-Oppia transforms education by enabling the creation of "explorations" – interactive activities designed to simulate one-on-one tutoring, allowing learners to grasp concepts through active participation and receive instant feedback.  
+Empower anyone to create and share engaging, interactive learning experiences with Oppia, a revolutionary online educational tool.
 
-## Key Features
+[![Full-stack tests](https://github.com/oppia/oppia/actions/workflows/full_stack_tests.yml/badge.svg)](https://github.com/oppia/oppia/actions/workflows/full_stack_tests.yml)
 
-*   **Interactive Explorations:** Create and share engaging learning activities.
-*   **Tutor-like Experience:**  Simulates a one-on-one tutoring experience, fostering active learning.
-*   **Feedback-Driven Learning:** Students receive immediate feedback, reinforcing understanding.
-*   **Free & Open Source:** Access and contribute to a platform dedicated to accessible education.
-*   **Community-Driven:** Built and maintained by a global community of contributors.
-*   **Expand Educational Offering:**  Offering lessons in mathematics, science and financial literacy.
+Oppia is an online learning platform that enables educators and learners to create and share interactive activities, also known as 'explorations'. These activities simulate one-on-one tutoring, facilitating an engaging "learn by doing" approach with personalized feedback. Oppia is committed to making education accessible and effective for everyone.
 
-## Learn More
+**Key Features:**
 
-*   **[Oppia.org community site](https://www.oppia.org)**
-*   **[User Documentation](https://oppia.github.io/)**
-*   **[Contributors' wiki](https://github.com/oppia/oppia/wiki)**
-*   **[GitHub Discussions](https://github.com/oppia/oppia/discussions)**
-*   **[File an issue](https://github.com/oppia/oppia/issues/new/choose)**
-*   **Email Newsletter:** Sign up for news and updates about the Oppia project: [https://shorturl.at/CHPY6](https://shorturl.at/CHPY6)
+*   **Interactive Explorations:** Create dynamic learning experiences that simulate a one-on-one tutor.
+*   **Engaging Feedback:** Provide immediate and personalized feedback to learners.
+*   **Community-Driven:** Benefit from a collaborative platform built by and for the community.
+*   **Free Educational Content:** Access free, effective lessons in basic mathematics, science, and financial literacy.
+*   **Open Source:** Benefit from a community-driven open source platform.
 
-## Installation
+**Explore Oppia Further:**
 
-Refer to the [Installing Oppia page](https://github.com/oppia/oppia/wiki/Installing-Oppia) for detailed instructions.
+*   [Oppia.org Community Site](https://www.oppia.org)
+*   [User Documentation](https://oppia.github.io/)
+*   [Contributors' Wiki](https://github.com/oppia/oppia/wiki)
+*   [GitHub Discussions](https://github.com/oppia/oppia/discussions)
+*   [File an Issue](https://github.com/oppia/oppia/issues/new/choose)
 
-## Contribute
+**Get Started:**
 
-The Oppia project thrives on community contributions.  We welcome contributions in various areas, including code, design, documentation, and art.
+For detailed installation instructions, please refer to the [Installing Oppia page](https://github.com/oppia/oppia/wiki/Installing-Oppia).
 
-*   **Developers:**  See [this wiki page](https://github.com/oppia/oppia/wiki/Contributing-code-to-Oppia#setting-things-up) for setup instructions.
-*   **All other contributors:** See our [general contributor guidelines](https://github.com/oppia/oppia/wiki).
-*   **Donate:** Support our work [here](https://www.oppia.org/donate).
+**Contribute to Oppia:**
 
-## Support
+The Oppia project thrives on community contributions. We welcome developers, designers, artists, and anyone interested in improving education.
 
-Report feature requests or bug reports via our [issue tracker](https://github.com/oppia/oppia/issues/new/choose).
+*   **Developers:** [Contributing Code to Oppia](https://github.com/oppia/oppia/wiki/Contributing-code-to-Oppia#setting-things-up)
+*   **General Contributors:** [General Contributor Guidelines](https://github.com/oppia/oppia/wiki)
 
-Report security issues directly to admin@oppia.org.
+**Support Oppia:**
 
-## License
+Support our mission by [donating here](https://www.oppia.org/donate) or by reporting any feature requests or bugs on our [issue tracker](https://github.com/oppia/oppia/issues/new/choose). Report security issues directly to admin@oppia.org.
+
+**License:**
 
 Oppia is released under the [Apache v2 license](https://github.com/oppia/oppia/blob/develop/LICENSE).
 
-## Stay Connected
+**Stay Connected:**
 
-*   [Discussion forum](https://github.com/oppia/oppia/discussions)
-*   [Announcements mailing list](http://groups.google.com/group/oppia-announce)
+*   [Discussion Forum](https://github.com/oppia/oppia/discussions)
+*   [Announcements Mailing List](http://groups.google.com/group/oppia-announce)
 
-## Social Media
+**Social Media:**
 
 [<img height="30" src="https://img.shields.io/badge/twitter-1DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" />][twitter] [<img height="30" src="https://img.shields.io/badge/linkedin-0077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />][LinkedIn] [<img height="30" src = "https://img.shields.io/badge/facebook-1877F2.svg?&style=for-the-badge&logo=facebook&logoColor=white">][Facebook] [<img height="30" src = "https://img.shields.io/badge/medium-12100E.svg?&style=for-the-badge&logo=medium&logoColor=white">][medium] [<img height="30" src = "https://img.shields.io/badge/oppia.org%20youtube-FF0000.svg?&style=for-the-badge&logo=youtube&logoColor=white">][oppia-org-youtube] [<img height="30" src = "https://img.shields.io/badge/oppia%20dev%20youtube-FF0000.svg?&style=for-the-badge&logo=youtube&logoColor=white">][dev-youtube]
 

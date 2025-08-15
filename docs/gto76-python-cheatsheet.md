@@ -1,41 +1,38 @@
 # Comprehensive Python Cheatsheet 🔗
 
-Master Python with this comprehensive cheatsheet, packed with essential features and optimized for quick reference. Get a head start and streamline your workflow with this indispensable guide! Check out the original repository [here](https://github.com/gto76/python-cheatsheet).
+**Unlock the power of Python with this comprehensive cheat sheet, your go-to resource for everything from basic syntax to advanced libraries.**  [Explore the original repository](https://github.com/gto76/python-cheatsheet) for a deeper dive and keep this invaluable reference at your fingertips.
 
-**Key Features:**
+## Key Features
 
-*   **Complete Coverage:** Lists, dictionaries, sets, and more.
-*   **Core Concepts:**  Types, syntax, and essential system tools.
-*   **Advanced Topics:** Regular expressions, threading, and introspection.
-*   **Essential Libraries:** Includes Matplotlib, Pandas, and Plotly.
-*   **Clear & Concise:**  Easy-to-understand examples and explanations.
+*   **Concise, Organized Structure:** Quickly find the information you need with clear headings and subheadings.
+*   **Essential Topics Covered:** From collections and types to advanced techniques and libraries, master every aspect of Python.
+*   **Code Examples:** Learn by doing with illustrative code snippets for each concept.
+*   **Practical Applications:** See how to use various Python tools in real-world scenarios.
+*   **SEO-Optimized Content:** Easily find what you're looking for with relevant keywords and phrases.
 
-## Contents
+## Table of Contents
 
-**1. Collections:** 🔗 [List](#list)__,__ [Dictionary](#dictionary)__,__ [Set](#set)__,__ [Tuple](#tuple)__,__ [Range](#range)__,__ [Enumerate](#enumerate)__,__ [Iterator](#iterator)__,__ [Generator](#generator).__
+1.  **Collections** 🔗: List, Dictionary, Set, Tuple, Range, Enumerate, Iterator, Generator
+2.  **Types** 🔗: Type, String, Regular\_Exp, Format, Numbers, Combinatorics, Datetime
+3.  **Syntax** 🔗: Function, Inline, Import, Decorator, Class, Duck\_Type, Enum, Except
+4.  **System** 🔗: Exit, Print, Input, Command\_Line\_Arguments, Open, Path, OS\_Commands
+5.  **Data** 🔗: JSON, Pickle, CSV, SQLite, Bytes, Struct, Array, Memory\_View, Deque
+6.  **Advanced** 🔗: Operator, Match\_Stmt, Logging, Introspection, Threading, Coroutines
+7.  **Libraries** 🔗: Progress\_Bar, Plot, Table, Console\_App, GUI, Scraping, Web, Profile
+8.  **Multimedia** 🔗: NumPy, Image, Animation, Audio, Synthesizer, Pygame, Pandas, Plotly
 
-**2. Types:** 🔗 [Type](#type)__,__ [String](#string)__,__ [Regular_Exp](#regex)__,__ [Format](#format)__,__ [Numbers](#numbers-1)__,__ [Combinatorics](#combinatorics)__,__ [Datetime](#datetime).__
+---
 
-**3. Syntax:** 🔗 [Function](#function)__,__ [Inline](#inline)__,__ [Import](#imports)__,__ [Decorator](#decorator)__,__ [Class](#class)__,__ [Duck_Type](#duck-types)__,__ [Enum](#enum)__,__ [Except](#exceptions).__
-
-**4. System:** 🔗 [Exit](#exit)__,__ [Print](#print)__,__ [Input](#input)__,__ [Command_Line_Arguments](#command-line-arguments)__,__ [Open](#open)__,__ [Path](#paths)__,__ [OS_Commands](#os-commands).__
-
-**5. Data:** 🔗 [JSON](#json)__,__ [Pickle](#pickle)__,__ [CSV](#csv)__,__ [SQLite](#sqlite)__,__ [Bytes](#bytes)__,__ [Struct](#struct)__,__ [Array](#array)__,__ [Memory_View](#memory-view)__,__ [Deque](#deque).__
-
-**6. Advanced:** 🔗 [Operator](#operator)__,__ [Match_Stmt](#match-statement)__,__ [Logging](#logging)__,__ [Introspection](#introspection)__,__ [Threading](#threading)__,__ [Coroutines](#coroutines).__
-
-**7. Libraries:** 🔗 [Progress_Bar](#progress-bar)__,__ [Plot](#plot)__,__ [Table](#table)__,__ [Console_App](#console-app)__,__ [GUI](#gui-app)__,__ [Scraping](#scraping)__,__ [Web](#web-app)__,__ [Profile](#profiling).__
-
-**8. Multimedia:** 🔗 [NumPy](#numpy)__,__ [Image](#image)__,__ [Animation](#animation)__,__ [Audio](#audio)__,__ [Synthesizer](#synthesizer)__,__ [Pygame](#pygame)__,__ [Pandas](#pandas)__,__ [Plotly](#plotly).__
-
-## Main 🔗
+### Main 🔗
 
 ```python
 if __name__ == '__main__':      # Skips next line if file was imported.
     main()                      # Runs `def main(): ...` function.
 ```
 
-## List 🔗
+---
+
+### List 🔗
 
 ```python
 <list> = [<el_1>, <el_2>, ...]  # Creates a list object. Also list(<collection>).
@@ -84,7 +81,9 @@ flatter_list     = list(itertools.chain.from_iterable(<list>))
 <list>.clear()                  # Removes all list's items. Also works on dictionary and set.
 ```
 
-## Dictionary 🔗
+---
+
+### Dictionary 🔗
 
 ```python
 <dict> = {key_1: val_1, key_2: val_2, ...}      # Use `<dict>[key]` to get or set the value.
@@ -116,7 +115,7 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 {k: v for k, v in <dict>.items() if k in keys}  # Filters the dictionary by specified keys.
 ```
 
-### Counter 🔗
+#### Counter 🔗
 
 ```python
 >>> from collections import Counter
@@ -126,7 +125,9 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 [('blue', 3), ('red', 2), ('yellow', 1)]
 ```
 
-## Set 🔗
+---
+
+### Set 🔗
 
 ```python
 <set> = {<el_1>, <el_2>, ...}                   # Use `set()` for empty set.
@@ -143,7 +144,7 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 <set>  = <set>.difference(<coll.>)              # Or: <set> - <set>
 <set>  = <set>.symmetric_difference(<coll.>)    # Or: <set> ^ <set>
 <bool> = <set>.issubset(<coll.>)                # Or: <set> <= <set>
-<bool> = <set>.issuperset(<coll.>)                # Or: <set> >= <set>
+<bool> = <set>.issuperset(<coll.>)              # Or: <set> >= <set>
 ```
 
 ```python
@@ -152,7 +153,7 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 <set>.discard(<el>)                             # Doesn't raise an error.
 ```
 
-### Frozen Set 🔗
+#### Frozen Set 🔗
 
 *   **Is immutable and hashable.**
 *   **That means it can be used as a key in a dictionary or as an element in a set.**
@@ -161,7 +162,9 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 <frozenset> = frozenset(<collection>)
 ```
 
-## Tuple 🔗
+---
+
+### Tuple 🔗
 
 **Tuple is an immutable and hashable list.**
 
@@ -171,7 +174,7 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 <tuple> = (<el_1>, <el_2> [, ...])         # Or: <el_1>, <el_2> [, ...]
 ```
 
-### Named Tuple 🔗
+#### Named Tuple 🔗
 
 **Tuple's subclass with named elements.**
 
@@ -185,7 +188,9 @@ Point(x=1, y=2)
 (1, 2)
 ```
 
-## Range 🔗
+---
+
+### Range 🔗
 
 **Immutable and hashable sequence of integers.**
 
@@ -200,14 +205,18 @@ Point(x=1, y=2)
 [0, 1, 2]
 ```
 
-## Enumerate 🔗
+---
+
+### Enumerate 🔗
 
 ```python
 for i, el in enumerate(<coll>, start=0):   # Returns next element and its index on each pass.
     ...
 ```
 
-## Iterator 🔗
+---
+
+### Iterator 🔗
 
 **Potentially endless stream of elements.**
 
@@ -218,7 +227,7 @@ for i, el in enumerate(<coll>, start=0):   # Returns next element and its index 
 <list> = list(<iter>)                      # Returns a list of iterator's remaining elements.
 ```
 
-### Itertools 🔗
+#### Itertools 🔗
 
 ```python
 import itertools as it
@@ -240,7 +249,9 @@ import itertools as it
 <iter> = it.islice(<coll>, from_inc, …)    # `to_exclusive, +step_size`. Indices can be None.
 ```
 
-## Generator 🔗
+---
+
+### Generator 🔗
 
 *   **Any function that contains a yield statement returns a generator.**
 *   **Generators and iterators are interchangeable.**
@@ -258,7 +269,9 @@ def count(start, step):
 (10, 12, 14)
 ```
 
-## Type 🔗
+---
+
+### Type 🔗
 
 *   **Everything is an object.**
 *   **Every object has a type.**
@@ -280,7 +293,7 @@ def count(start, step):
 from types import FunctionType, MethodType, LambdaType, GeneratorType, ModuleType
 ```
 
-### Abstract Base Classes 🔗
+#### Abstract Base Classes 🔗
 
 **Each abstract base class specifies a set of virtual subclasses. These classes are then recognized by isinstance() and issubclass() as subclasses of the ABC, although they are really not. ABC can also manually decide whether or not a specific class is its virtual subclass, usually based on which methods the class has implemented. For instance, Iterable ABC looks for method iter(), while Collection ABC looks for iter(), contains() and len().**
 
@@ -318,7 +331,9 @@ True
 +--------------------+----------+----------+----------+----------+----------+
 ```
 
-## String 🔗
+---
+
+### String 🔗
 
 **Immutable sequence of characters.**
 
@@ -355,7 +370,7 @@ True
 *   **Use `'unicodedata.normalize("NFC", <str>)'` on strings like `'Motörhead'` before comparing them to other strings, because `'ö'` can be stored as one or two characters.**
 *   **`'NFC'` converts such characters to a single character, while `'NFD'` converts them to two.**
 
-### Property Methods 🔗
+#### Property Methods 🔗
 
 ```python
 <bool> = <str>.isdecimal()                   # Checks for [0-9]. Also [०-९] and [٠-٩].
@@ -366,7 +381,9 @@ True
 <bool> = <str>.isspace()                     # Checks for [ \t\n\r\f\v\x1c-\x1f\x85…].
 ```
 
-## Regex 🔗
+---
+
+### Regex 🔗
 
 **Functions for regular expression matching.**
 
@@ -387,7 +404,7 @@ import re
 *   **Argument `'flags=re.DOTALL'` makes `'.'` also accept the `'\n'` (besides all other chars).**
 *   **`'re.compile(<regex>)'` returns a Pattern object with methods sub(), findall(), etc.**
 
-### Match Object 🔗
+#### Match Object 🔗
 
 ```python
 <str>   = <Match>.group()                         # Returns the whole match. Also group(0).
@@ -397,7 +414,7 @@ import re
 <int>   = <Match>.end()                           # Returns its exclusive end index.
 ```
 
-### Special Sequences 🔗
+#### Special Sequences 🔗
 
 ```python
 '\d' == '[0-9]'                                   # Also [०-९…]. Matches a decimal character.
@@ -408,7 +425,9 @@ import re
 *   **By default, decimal characters and alphanumerics from all alphabets are matched unless `'flags=re.ASCII'` is used. It restricts special sequence matches to the first 128 Unicode characters and also prevents `'\s'` from accepting `'\x1c'`, `'\x1d'`, `'\x1e'` and `'\x1f'` (non-printable characters that divide text into files, tables, rows and fields, respectively).**
 *   **Use a capital letter for negation (all non-ASCII characters will be matched when used in combination with ASCII flag).**
 
-## Format 🔗
+---
+
+### Format 🔗
 
 ```perl
 <str> = f'{<el_1>}, {<el_2>}'            # Curly braces can also contain expressions.
@@ -416,7 +435,7 @@ import re
 <str> = '%s, %s' % (<el_1>, <el_2>)      # Redundant and inferior C-style formatting.
 ```
 
-### Example 🔗
+#### Example 🔗
 
 ```python
 >>> Person = collections.namedtuple('Person', 'name height')
@@ -425,7 +444,7 @@ import re
 'Jean-Luc is 1.87 meters tall.'
 ```
 
-### General Options 🔗
+#### General Options 🔗
 
 ```python
 {<el>:<10}                               # '<el>      '
@@ -440,7 +459,7 @@ import re
 *   **Adding `'='` to the expression prepends it to the output: `f'{1+1=}'` returns `'1+1=2'`.**
 *   **Adding `'!r'` to the expression converts object to string by calling its [repr()](#class) method.**
 
-### Strings 🔗
+#### Strings 🔗
 
 ```python
 {'abcde':10}                             # 'abcde     '
@@ -449,7 +468,7 @@ import re
 {'abcde'!r:10}                           # "'abcde'   "
 ```
 
-### Numbers 🔗
+#### Numbers 🔗
 
 ```python
 {123456:10}                              # '    123456'
@@ -461,7 +480,7 @@ import re
 {-123456: }                              # '-123456'
 ```
 
-### Floats 🔗
+#### Floats 🔗
 
 ```python
 {1.23456:10.3}                           # '      1.23'
@@ -500,11 +519,11 @@ import re
 +--------------+----------------+----------------+----------------+----------------+
 ```
 
-*   **`'{<float>:g}'` is `'{<float>:.6}'` with stripped zeros, exponent starting at `'1e+06'`.**
+*   `'{<float>:g}'` is `'{<float>:.6}'` with stripped zeros, exponent starting at `'1e+06'`.
 *   **When both rounding up and rounding down are possible, the one that returns result with even last digit is chosen. That makes `'{6.5:.0f}'` a `'6'` and `'{7.5:.0f}'` an `'8'`.**
 *   **This rule only effects numbers that can be represented exactly by a float (`.5`, `.25`, …).**
 
-### Ints 🔗
+#### Ints 🔗
 
 ```python
 {90:c}                                   # 'Z'. Unicode character with value 90.
@@ -512,7 +531,9 @@ import re
 {90:X}                                   # '5A'. Hexadecimal with upper-case letters.
 ```
 
-## Numbers 🔗
+---
+
+### Numbers 🔗
 
 ```python
 <int>      = int(<float/str/bool>)             # Whole number of any size. Truncates floats.
@@ -522,13 +543,13 @@ import re
 <Decimal>  = decimal.Decimal(<str/int/tuple>)  # E.g. `Decimal((1, (2, 3), 4)) == -230_000`.
 ```
 
-*   **`'int(<str>)'` and `'float(<str>)'` raise ValueError if passed string is malformed.**
-*   **Decimal objects store numbers exactly, unlike most floats where `'1.1 + 2.2 != 3.3'`.**
-*   **Floats can be compared with: `'math.isclose(<float>, <float>, rel_tol=1e-09)'`.**
-*   **Precision of decimal operations is set with: `'decimal.getcontext().prec = <int>'`.**
-*   **Bools can be used anywhere ints can, because bool is a subclass of int: `'True + 1 == 2'`.**
+*   `'int(<str>)'` and `'float(<str>)'` raise ValueError if passed string is malformed.
+*   Decimal objects store numbers exactly, unlike most floats where `'1.1 + 2.2 != 3.3'`.
+*   Floats can be compared with: `'math.isclose(<float>, <float>, rel_tol=1e-09)'`.
+*   Precision of decimal operations is set with: `'decimal.getcontext().prec = <int>'`.
+*   Bools can be used anywhere ints can, because bool is a subclass of int: `'True + 1 == 2'`.
 
-### Built-in Functions 🔗
+#### Built-in Functions 🔗
 
 ```python
 <num> = pow(<num>, <num>)                      # E.g. `pow(2, 3) == 2 ** 3 == 8`.
@@ -538,7 +559,7 @@ import re
 <num> = sum(<collection>)                      # Also math.prod(<collection>).
 ```
 
-### Math 🔗
+#### Math 🔗
 
 ```python
 from math import floor, ceil, trunc            # They convert floats into integers.
@@ -548,14 +569,14 @@ from math import sin, cos, tan                 # Also: asin, acos, degrees, radi
 from math import log, log10, log2              # Log accepts base as second argument.
 ```
 
-### Statistics 🔗
+#### Statistics 🔗
 
 ```python
 from statistics import mean, median, mode      # Mode returns the most common item.
 from statistics import variance, stdev         # Also: pvariance, pstdev, quantiles.
 ```
 
-### Random 🔗
+#### Random 🔗
 
 ```python
 from random import random, randint, uniform    # Also: gauss, choice, shuffle, seed.
@@ -569,7 +590,7 @@ from random import random, randint, uniform    # Also: gauss, choice, shuffle, s
 shuffle(<list>)                                # Works on all mutable sequences.
 ```
 
-### Hexadecimal Numbers 🔗
+#### Hexadecimal Numbers 🔗
 
 ```python
 <int> = 0x<hex>                                # E.g. `0xFF == 255`. Also 0b<bin>.
@@ -577,7 +598,7 @@ shuffle(<list>)                                # Works on all mutable sequences.
 <str> = hex(<int>)                             # Returns '[-]0x<hex>'. Also bin().
 ```
 
-### Bitwise Operators 🔗
+#### Bitwise Operators 🔗
 
 ```python
 <int> = <int> & <int>                          # E.g. `0b1100 & 0b1010 == 0b1000`.
@@ -587,7 +608,9 @@ shuffle(<list>)                                # Works on all mutable sequences.
 <int> = ~<int>                                 # E.g. `~0b1 == -0b10 == -(0b1+1)`.
 ```
 
-## Combinatorics 🔗
+---
+
+### Combinatorics 🔗
 
 ```python
 import itertools as it
@@ -596,4 +619,29 @@ import itertools as it
 ```python
 >>> list(it.product('abc', repeat=2))        #   a  b  c
 [('a', 'a'), ('a', 'b'), ('a', 'c'),         # a x  x  x
- ('b', 'a'), ('b', '
+ ('b', 'a'), ('b', 'b'), ('b', 'c'),         # b x  x  x
+ ('c', 'a'), ('c', 'b'), ('c', 'c')]         # c x  x  x
+```
+
+```python
+>>> list(it.permutations('abc', 2))          #   a  b  c
+[('a', 'b'), ('a', 'c'),                     # a .  x  x
+ ('b', 'a'), ('b', 'c'),                     # b x  .  x
+ ('c', 'a'), ('c', 'b')]                     # c x  x  .
+```
+
+```python
+>>> list(it.combinations('abc', 2))          #   a  b  c
+[('a', 'b'), ('a', 'c'),                     # a .  x  x
+ ('b', 'c')                                  # b .  .  x
+]                                            # c .  .  .
+```
+
+---
+
+### Datetime 🔗
+
+**Provides 'date', 'time', 'datetime' and 'timedelta' classes. All are immutable and hashable.**
+
+```python
+# $ pip3 install python-

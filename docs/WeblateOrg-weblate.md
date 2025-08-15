@@ -1,53 +1,36 @@
-<img src="https://s.weblate.org/cdn/Logo-Darktext-borders.png" alt="Weblate Logo" height="80px">
+# Weblate: The Open-Source Continuous Localization Platform
 
-# Weblate: The Leading Web-Based Continuous Localization System
+**Weblate empowers teams to effortlessly translate software and websites, fostering global reach and accessibility.**  This platform is a leading libre software solution, used by over 2,500 projects and companies across 165+ countries.
 
-**Weblate is a powerful, open-source platform that streamlines the localization process for projects of all sizes.**  Used by thousands of projects and companies globally, Weblate simplifies translation management and empowers teams to collaborate effectively.  Learn more about Weblate and its capabilities on the official [Weblate GitHub repository](https://github.com/WeblateOrg/weblate).
+[![Weblate Logo](https://s.weblate.org/cdn/Logo-Darktext-borders.png)](https://weblate.org/)
 
-[![Website](https://img.shields.io/badge/website-weblate.org-blue.svg)](https://weblate.org/)
-[![Translation Status](https://hosted.weblate.org/widget/weblate/svg-badge.svg)](https://hosted.weblate.org/engage/weblate/)
-[![CII Best Practices](https://www.bestpractices.dev/projects/552/badge)](https://www.bestpractices.dev/en/projects/552)
-[![REUSE status](https://api.reuse.software/badge/github.com/WeblateOrg/weblate)](https://api.reuse.software/info/github.com/WeblateOrg/weblate)
-[![PyPI Version](https://img.shields.io/pypi/v/weblate.svg)](https://pypi.org/project/Weblate/)
-[![Documentation](https://readthedocs.org/projects/weblate/badge/)](https://docs.weblate.org/)
-[![License](https://img.shields.io/github/license/WeblateOrg/weblate.svg)](https://github.com/WeblateOrg/weblate/blob/main/COPYING)
-<img src="https://repobeats.axiom.co/api/embed/e0cfcc1b19f13f78669d3a93ca26b59974faaa22.svg" alt="Repobeats analytics image">
+**Key Features:**
 
-## Key Features of Weblate:
+*   **Web-Based Interface:**  A user-friendly web interface simplifies the translation process for translators and maintainers.
+*   **Continuous Localization:** Seamlessly integrates with your development workflow for efficient translation updates.
+*   **Supports Numerous Formats:** Compatible with a wide array of translation file formats (Gettext, YAML, JSON, etc.).
+*   **Translation Memory:**  Leverages translation memories to reuse existing translations and speed up the process.
+*   **Quality Assurance:** Built-in quality checks and automated suggestions to improve translation accuracy.
+*   **Integration:** Easy integration with popular version control systems (Git, etc.) for smooth collaboration.
+*   **Open Source & Community Driven:** Libre software with a vibrant community.
 
-*   **Web-Based Interface:**  Access and manage your localization efforts from anywhere with a web browser.
-*   **Continuous Localization:** Integrate Weblate into your development workflow for real-time translation updates.
-*   **Collaborative Translation:** Empower your team and community to contribute through a user-friendly interface.
-*   **Supports Numerous File Formats:**  Works seamlessly with a wide range of localization file formats.
-*   **Translation Memory and Machine Translation:** Leverage existing translations and machine translation services to accelerate the process.
-*   **Extensive Integration Options:**  Connect with your existing tools and platforms.
-*   **Open Source and Free:**  Benefit from the power of open-source software.
-*   **Used by thousands of projects worldwide:** Used by over 2500 libre projects and companies in more than 165 countries.
+**Get Started:**
 
-## Support
+*   **Try Hosted Weblate:** Explore the platform at [weblate.org](https://weblate.org/).
+*   **Install Locally:**  Refer to the detailed installation instructions on the [documentation](https://docs.weblate.org/en/latest/admin/install.html).
 
-Weblate offers both community support and optional professional services.  For hosting and support options, visit: [https://weblate.org/hosting/](https://weblate.org/hosting/)
+**Resources:**
 
-## Documentation
+*   **Website:** [weblate.org](https://weblate.org/)
+*   **Documentation:** [https://docs.weblate.org/](https://docs.weblate.org/)
+*   **Source Code:** [GitHub Repository](https://github.com/WeblateOrg/weblate)
+*   **Issue Tracker:** [https://github.com/WeblateOrg/weblate/issues](https://github.com/WeblateOrg/weblate/issues)
+*   **Live Chat:**  Join the Weblate community on Libera.Chat IRC in the `#weblate` channel.
 
-Comprehensive documentation is available in the `docs` directory of the source code and online at: [https://docs.weblate.org/](https://docs.weblate.org/)
+**Support:**
 
-## Installation
+Weblate offers both community support and optional professional services.  Visit [https://weblate.org/hosting/](https://weblate.org/hosting/) for more information on hosting and support options.
 
-Detailed installation instructions can be found here: [https://docs.weblate.org/en/latest/admin/install.html](https://docs.weblate.org/en/latest/admin/install.html)
+**License:**
 
-## Reporting Issues
-
-Report bugs, request features, or provide feedback through the issue tracker: [https://github.com/WeblateOrg/weblate/issues](https://github.com/WeblateOrg/weblate/issues)
-
-## Live Chat
-
-Join the Weblate community in real-time on Libera.Chat IRC.
-*   **Channel:** `#weblate`
-*   **Web Access:** [https://web.libera.chat/#weblate](https://web.libera.chat/#weblate)
-
-## License
-
-Weblate is licensed under the GNU General Public License, version 3.  See the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.html) for more details.
-
-Copyright © Michal Čihař michal@weblate.org
+Weblate is licensed under the GNU General Public License, Version 3. See the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.html) for more details.

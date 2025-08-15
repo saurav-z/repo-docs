@@ -1,29 +1,29 @@
-# Wrapt: Python Decorators, Wrappers, and Monkey Patching for Robust Code
+# wrapt: Python Decorators, Wrappers, and Monkey Patching - Enhanced & Optimized
 
-**Wrapt is the go-to Python module for building powerful and reliable decorators, wrappers, and safe monkey patching, ensuring your code remains introspectable and performs optimally.**
+**wrapt** is a powerful Python module that simplifies the creation of decorators, wrappers, and monkey patching solutions, ensuring correctness and optimal performance. ([View on GitHub](https://github.com/GrahamDumpleton/wrapt))
 
 [![PyPI](https://img.shields.io/pypi/v/wrapt.svg?logo=python&cacheSeconds=3600)](https://pypi.python.org/pypi/wrapt)
 [![Documentation](https://img.shields.io/badge/docs-wrapt.readthedocs.io-blue.svg)](https://wrapt.readthedocs.io/)
 [![License](https://img.shields.io/badge/license-BSD-green.svg)](LICENSE)
 
-## Key Features of Wrapt
+## Key Features of wrapt
 
-*   **Universal Decorators:** Works seamlessly with functions, methods (instance, class, and static), and classes.
-*   **Transparent Object Proxies:** Enables advanced wrapping and proxying scenarios.
-*   **Safe Monkey Patching:** Provides utilities for reliable runtime modifications.
-*   **C Extension for Performance:** Leverages a C extension for speed, with a Python fallback.
-*   **Introspection Preservation:** Maintains function signatures, annotations, and other crucial metadata.
-*   **Thread-Safe Implementations:** Ensures decorators function correctly in multi-threaded environments.
+*   **Universal Decorators:** Works seamlessly with functions, methods (including classmethods and staticmethods), and classes.
+*   **Transparent Object Proxies:** Enables advanced wrapping techniques for complex scenarios.
+*   **Safe Monkey Patching:** Provides utilities for safe and reliable runtime modifications of code.
+*   **Optimized Performance:** Includes a C extension module for speed-critical components, with a Python fallback.
+*   **Introspection Preservation:** Preserves essential information like signatures and annotations for robust decorators.
+*   **Thread-Safe Implementations:** Ensures your decorators are safe to use in multi-threaded environments.
 
 ## Installation
 
-Install Wrapt using pip:
+Install wrapt using pip:
 
 ```bash
 pip install wrapt
 ```
 
-## Quick Start
+## Examples
 
 ### Basic Decorator
 
@@ -82,11 +82,12 @@ def universal(wrapped, instance, args, kwargs):
     return wrapped(*args, **kwargs)
 ```
 
-## Documentation
+## Documentation & Resources
 
-For comprehensive documentation, examples, and advanced usage, see the official documentation:
-
-*   **[wrapt.readthedocs.io](https://wrapt.readthedocs.io/)**
+*   **Comprehensive Documentation:** [wrapt.readthedocs.io](https://wrapt.readthedocs.io/)
+*   **PyPI:** [PyPI](https://pypi.python.org/pypi/wrapt)
+*   **GitHub Issues:** [GitHub Issues](https://github.com/GrahamDumpleton/wrapt/issues/)
+*   **Changelog:** [Changelog](https://wrapt.readthedocs.io/en/latest/changes.html)
 
 ## Supported Python Versions
 
@@ -96,41 +97,11 @@ For comprehensive documentation, examples, and advanced usage, see the official 
 
 ## Contributing
 
-Contributions are welcome!  Please use the [GitHub issue tracker](https://github.com/GrahamDumpleton/wrapt/issues/) to suggest changes, report issues, or ask questions.
-
-**Note:** Wrapt is a mature project.  Focus is on compatibility and maintaining functionality with current Python versions.
-
-### Testing
-
-See [TESTING.md](TESTING.md) for information on running tests.
+Contributions are welcome! Please use the [GitHub issue tracker](https://github.com/GrahamDumpleton/wrapt/issues/) to discuss any changes or report bugs.  Note that wrapt is now a mature project, and the focus is on maintaining compatibility.
 
 ## License
 
-This project is licensed under the BSD License.  See the [LICENSE](LICENSE) file for details.
-
-## Links
-
-*   **Documentation:** https://wrapt.readthedocs.io/
-*   **PyPI:** https://pypi.python.org/pypi/wrapt
-*   **Issues:** https://github.com/GrahamDumpleton/wrapt/issues/
-*   **Changelog:** https://wrapt.readthedocs.io/en/latest/changes.html
-*   **GitHub Repository:** [https://github.com/GrahamDumpleton/wrapt](https://github.com/GrahamDumpleton/wrapt)
+This project is licensed under the BSD License - see the [LICENSE](LICENSE) file for details.
 
 ## Related Blog Posts
-
-A series of blog posts explaining the design and implementation of wrapt:
-
--   [How you implemented your Python decorator is wrong](blog/01-how-you-implemented-your-python-decorator-is-wrong.md)
--   [The interaction between decorators and descriptors](blog/02-the-interaction-between-decorators-and-descriptors.md)
--   [Implementing a factory for creating decorators](blog/03-implementing-a-factory-for-creating-decorators.md)
--   [Implementing a universal decorator](blog/04-implementing-a-universal-decorator.md)
--   [Decorators which accept arguments](blog/05-decorators-which-accept-arguments.md)
--   [Maintaining decorator state using a class](blog/06-maintaining-decorator-state-using-a-class.md)
--   [The missing synchronized decorator](blog/07-the-missing-synchronized-decorator.md)
--   [The synchronized decorator as context manager](blog/08-the-synchronized-decorator-as-context-manager.md)
--   [Performance overhead of using decorators](blog/09-performance-overhead-of-using-decorators.md)
--   [Performance overhead when applying decorators to methods](blog/10-performance-overhead-when-applying-decorators-to-methods.md)
--   [Safely applying monkey patches in Python](blog/11-safely-applying-monkey-patches-in-python.md)
--   [Using wrapt to support testing of software](blog/12-using-wrapt-to-support-testing-of-software.md)
--   [Ordering issues when monkey patching in Python](blog/13-ordering-issues-when-monkey-patching-in-python.md)
--   [Automatic patching of Python applications](blog/14-automatic-patching-of-python-applications.md)
+This repository also contains a series of blog posts explaining the design and implementation of wrapt.  See the original README for links to those posts.
