@@ -9,57 +9,52 @@
   <a href="https://discord.gg/BwMtv3Zaju"><img alt="Discord" src="https://img.shields.io/discord/1336524712817332276?logo=discord&label=discord"></a>
 </p>
 
-<!-- add a roadmap! - <a href="https://morphik.ai/roadmap">Roadmap</a> - -->
-<!-- Add a changelog! - <a href="https://morphik.ai/changelog">Changelog</a> -->
+## Morphik: Unlock the Power of Multimodal Data for Your AI Applications
 
-<p align="center">
-  <a href="https://morphik.ai/docs">Docs</a> - <a href="https://discord.gg/BwMtv3Zaju">Community</a> - <a href="https://morphik.ai/docs/blogs/gpt-vs-morphik-multimodal">Why Morphik?</a> - <a href="https://github.com/morphik-org/morphik-core/issues/new?assignees=&labels=bug&template=bug_report.md">Bug reports</a>
-</p>
+Morphik is an AI-native toolset designed to revolutionize how developers integrate context into their applications by providing end-to-end solutions for storing, representing, and searching unstructured and multimodal data.  Explore the [Morphik Core repository](https://github.com/morphik-org/morphik-core) for the open-source foundation of this powerful tool.
 
-## Morphik Core: Unlock the Power of Multimodal Data for Your AI Applications
+**Important: Migration Required!**  If you installed Morphik before June 22nd, 2025, please run the provided migration script for optimized authentication.
 
-Morphik Core is an open-source toolkit designed to revolutionize how developers integrate complex data into their AI applications, going beyond traditional RAG limitations to provide truly comprehensive data understanding.  **[Explore the original repository on GitHub](https://github.com/morphik-org/morphik-core).**
+```bash
+python scripts/migrate_auth_columns_complete.py --postgres-uri "postgresql+asyncpg://user:pass@host:port/db"
+```
 
-> **Migration Required for Existing Installations**: If you installed Morphik before June 22nd, 2025, we've optimized our authentication system for 70-80% faster query performance. Please run the migration script before launching Morphik:
-> ```bash
-> python scripts/migrate_auth_columns_complete.py --postgres-uri "postgresql+asyncpg://user:pass@host:port/db"
-> ```
+**Key Features:**
 
-## Key Features
-
-*   **Multimodal Search:** Leverage advanced techniques like ColPali to search across images, PDFs, videos, and more, truly understanding visual content.
-*   **Knowledge Graphs:** Build domain-specific knowledge graphs in a single line of code, using battle-tested system prompts or your own.
-*   **Fast and Scalable Metadata Extraction:** Efficiently extract metadata from documents, including bounding boxes, labeling, and classification.
+*   **Multimodal Search:** Go beyond text-based search and truly understand the visual content of documents. Search images, PDFs, videos, and more with our ColPali technology.
+*   **Knowledge Graphs:** Build domain-specific knowledge graphs quickly and easily, with customizable system prompts.
+*   **Fast and Scalable Metadata Extraction:**  Efficiently extract metadata, including bounding boxes, labeling, and classification, from your documents.
 *   **Integrations:** Seamlessly integrate with existing tools and workflows, including Google Suite, Slack, and Confluence.
-*   **Cache-Augmented-Generation:** Speed up generation by creating persistent KV-caches of your documents.
+*   **Cache-Augmented-Generation:**  Create persistent KV-caches for faster generation and optimized performance.
 
-## Why Morphik?
+### Table of Contents
 
-Tired of AI applications that misunderstand visually rich documents and struggle with complex data? Morphik offers a comprehensive solution to the limitations of traditional RAG approaches. It helps you build AI applications that:
+*   [Why Morphik?](#why)
+*   [Getting Started (Recommended)](#getting-started-with-morphik-recommended)
+*   [Self-Hosting](#self-hosting-the-open-source-version)
+*   [Using Morphik](#using-morphik)
+*   [Contributing](#contributing)
+*   [License](#license)
 
-*   **Understand Visual Data:** Go beyond simple text extraction to truly understand images, charts, diagrams, and other visual elements.
-*   **Maintain Accuracy:** Avoid the pitfalls of misinterpreting technical specifications and complex documents.
-*   **Optimize Performance & Reduce Costs:** Reduce infrastructure costs and improve query performance by efficiently processing and retrieving data.
+### Why Morphik?
 
-## Getting Started
+Tired of struggling with complex RAG pipelines that fail to understand visually rich documents? Morphik eliminates the need for duct-taped solutions.  We tackle the challenges of unstructured and multimodal data head-on, providing a robust platform that goes beyond traditional methods, ensuring your AI applications are accurate, efficient, and understand the full context of your data.
 
-### Recommended: Morphik Cloud (Free Tier)
+### Getting Started with Morphik (Recommended)
 
-The easiest way to get started is to sign up for a free account at [Morphik](https://www.morphik.ai/signup). We offer a generous free tier and transparent, compute-usage-based pricing.
+The easiest way to get started is to sign up for free at [Morphik](https://www.morphik.ai/signup).
 
-### Self-hosting (Open Source)
+### Self-Hosting Morphik
 
-For those who prefer self-hosting, find the dedicated installation instructions [here](https://morphik.ai/docs/getting-started).  Installation options include direct installation and Docker.
+For those who prefer to self-host, detailed instructions are available at [Morphik's Getting Started Guide](https://morphik.ai/docs/getting-started), with options for direct installation and Docker.  Please note that full support is limited.  Join our [Discord community](https://discord.gg/BwMtv3Zaju) for assistance.
 
-**Important:**  Due to limited resources, support for self-hosted deployments is limited. The [Discord community](https://discord.gg/BwMtv3Zaju) is available for assistance.
+### Using Morphik
 
-## Using Morphik
+Once signed up, you can begin ingesting and searching your data immediately.
 
-Once you have access to Morphik, you can quickly ingest and search your data using the following methods:
+#### Code Example (Python SDK)
 
-### Code (Python SDK)
-
-For developers, the [Python SDK](https://morphik.ai/docs/python-sdk/morphik) and [REST API](https://morphik.ai/docs/api-reference/health-check) offer seamless integration:
+Our Python SDK simplifies integration:
 
 ```python
 from morphik import Morphik
@@ -70,40 +65,35 @@ morphik.ingest_file("path/to/your/super/complex/file.pdf")
 query_result = morphik.query("What's the height of screw 14-A in the chair assembly instructions?")
 ```
 
-### Morphik Console
+#### Morphik Console
 
-Use the web-based [Morphik Console](<>) to ingest, search, and query your data with a user-friendly interface.  Upload files, connect to data sources, and interact with your data all in one place.
+Utilize the web-based Morphik Console to ingest, search, and query your data.
 
-### Model Context Protocol (MCP)
+#### Model Context Protocol
 
-Access Morphik via MCP. Instructions are available [here](https://morphik.ai/docs/using-morphik/mcp).
+Access Morphik via MCP; instructions are available [here](https://morphik.ai/docs/using-morphik/mcp).
 
-## Contributing
+### Contributing
 
-We welcome contributions to Morphik Core!  Help us improve the project by:
+We welcome contributions!
 
-*   Reporting bugs via [GitHub issues](https://github.com/morphik-org/morphik-core/issues)
-*   Suggesting new features via [GitHub issues](https://github.com/morphik-org/morphik-core/issues)
-*   Submitting pull requests
+*   Report bugs via [GitHub Issues](https://github.com/morphik-org/morphik-core/issues)
+*   Suggest features via [GitHub Issues](https://github.com/morphik-org/morphik-core/issues)
+*   Submit pull requests
 
-We're currently focused on:
+We're currently focused on improving speed, expanding integrations, and leveraging valuable research. Share your thoughts in our Discord or on GitHub.
 
-*   Improving performance.
-*   Expanding integrations with other tools.
-*   Identifying and incorporating valuable research papers.
-
-Share your ideas and feedback on Discord or GitHub!
-
-## License
+### License
 
 Morphik Core is **source-available** under the [Business Source License 1.1](./LICENSE).
 
-*   **Personal / Indie use:** Free.
-*   **Commercial production use:** Free if your Morphik deployment generates < $2,000/month in gross revenue. Otherwise, purchase a commercial key at <https://morphik.ai/pricing>.
-*   **Future open source:** Each code version automatically re-licenses to Apache 2.0 exactly four years after its first release.
+*   **Personal / Indie use**: free.
+*   **Commercial production use**: free if your Morphik deployment generates < $2 000/month in gross revenue.
+    Otherwise purchase a commercial key at <https://morphik.ai/pricing>.
+*   **Future open source**: each code version automatically re-licenses to Apache 2.0 exactly four years after its first release.
 
-See the full license text for details.
+See the full licence text for details.
 
-## Contributors
+### Contributors
 
-Visit our [special thanks page](https://morphik.ai/docs/special-thanks) dedicated to our contributors.
+Special thanks to our contributors, acknowledged on our [special thanks page](https://morphik.ai/docs/special-thanks).

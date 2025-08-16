@@ -1,21 +1,21 @@
-# OpenHands: AI-Powered Software Development Made Easy
-
 <div align="center">
   <a href="https://github.com/All-Hands-AI/OpenHands"><img src="./docs/static/img/logo.png" alt="OpenHands Logo" width="200"></a>
+  <h1>OpenHands: The AI-Powered Platform for Smarter Software Development</h1>
+  <p><em>Reduce code and increase output with OpenHands, your AI-powered development assistant.</em></p>
 </div>
 
 <div align="center">
-  [![Contributors](https://img.shields.io/github/contributors/All-Hands-AI/OpenHands?style=for-the-badge&color=blue)](https://github.com/All-Hands-AI/OpenHands/graphs/contributors)
-  [![Stars](https://img.shields.io/github/stars/All-Hands-AI/OpenHands?style=for-the-badge&color=blue)](https://github.com/All-Hands-AI/OpenHands/stargazers)
-  [![License](https://img.shields.io/github/license/All-Hands-AI/OpenHands?style=for-the-badge&color=blue)](https://github.com/All-Hands-AI/OpenHands/blob/main/LICENSE)
+  <a href="https://github.com/All-Hands-AI/OpenHands/graphs/contributors"><img src="https://img.shields.io/github/contributors/All-Hands-AI/OpenHands?style=for-the-badge&color=blue" alt="Contributors"></a>
+  <a href="https://github.com/All-Hands-AI/OpenHands/stargazers"><img src="https://img.shields.io/github/stars/All-Hands-AI/OpenHands?style=for-the-badge&color=blue" alt="Stargazers"></a>
+  <a href="https://github.com/All-Hands-AI/OpenHands/blob/main/LICENSE"><img src="https://img.shields.io/github/license/All-Hands-AI/OpenHands?style=for-the-badge&color=blue" alt="MIT License"></a>
   <br/>
-  [![Slack](https://img.shields.io/badge/Slack-Join%20Us-red?logo=slack&logoColor=white&style=for-the-badge)](https://join.slack.com/t/openhands-ai/shared_invite/zt-3847of6xi-xuYJIPa6YIPg4ElbDWbtSA)
-  [![Discord](https://img.shields.io/badge/Discord-Join%20Us-purple?logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/ESHStjSjD4)
-  [![Credits](https://img.shields.io/badge/Project-Credits-blue?style=for-the-badge&color=FFE165&logo=github&logoColor=white)](https://github.com/All-Hands-AI/OpenHands/blob/main/CREDITS.md)
+  <a href="https://join.slack.com/t/openhands-ai/shared_invite/zt-3847of6xi-xuYJIPa6YIPg4ElbDWbtSA"><img src="https://img.shields.io/badge/Slack-Join%20Us-red?logo=slack&logoColor=white&style=for-the-badge" alt="Join our Slack community"></a>
+  <a href="https://discord.gg/ESHStjSjD4"><img src="https://img.shields.io/badge/Discord-Join%20Us-purple?logo=discord&logoColor=white&style=for-the-badge" alt="Join our Discord community"></a>
+  <a href="https://github.com/All-Hands-AI/OpenHands/blob/main/CREDITS.md"><img src="https://img.shields.io/badge/Project-Credits-blue?style=for-the-badge&color=FFE165&logo=github&logoColor=white" alt="Credits"></a>
   <br/>
-  [![Documentation](https://img.shields.io/badge/Documentation-000?logo=googledocs&logoColor=FFE165&style=for-the-badge)](https://docs.all-hands.dev/usage/getting-started)
-  [![Paper on Arxiv](https://img.shields.io/badge/Paper%20on%20Arxiv-000?logoColor=FFE165&logo=arxiv&style=for-the-badge)](https://arxiv.org/abs/2407.16741)
-  [![Benchmark Score](https://img.shields.io/badge/Benchmark%20score-000?logoColor=FFE165&logo=huggingface&style=for-the-badge)](https://docs.google.com/spreadsheets/d/1wOUdFCMyY6Nt0AIqF705KN4JKOWgeI4wUGUP60krXXs/edit?gid=0#gid=0)
+  <a href="https://docs.all-hands.dev/usage/getting-started"><img src="https://img.shields.io/badge/Documentation-000?logo=googledocs&logoColor=FFE165&style=for-the-badge" alt="Check out the documentation"></a>
+  <a href="https://arxiv.org/abs/2407.16741"><img src="https://img.shields.io/badge/Paper%20on%20Arxiv-000?logoColor=FFE165&logo=arxiv&style=for-the-badge" alt="Paper on Arxiv"></a>
+  <a href="https://docs.google.com/spreadsheets/d/1wOUdFCMyY6Nt0AIqF705KN4JKOWgeI4wUGUP60krXXs/edit?gid=0#gid=0"><img src="https://img.shields.io/badge/Benchmark%20score-000?logoColor=FFE165&logo=huggingface&style=for-the-badge" alt="Evaluation Benchmark Score"></a>
 
   <!-- Keep these links. Translations will automatically update with the README. -->
   <a href="https://www.readme-i18n.com/All-Hands-AI/OpenHands?lang=de">Deutsch</a> |
@@ -26,27 +26,38 @@
   <a href="https://www.readme-i18n.com/All-Hands-AI/OpenHands?lang=pt">Português</a> |
   <a href="https://www.readme-i18n.com/All-Hands-AI/OpenHands?lang=ru">Русский</a> |
   <a href="https://www.readme-i18n.com/All-Hands-AI/OpenHands?lang=zh">中文</a>
-
   <hr>
 </div>
 
-OpenHands is an open-source platform for AI-powered software development, designed to help you build more with less code.  [Explore the OpenHands repository](https://github.com/All-Hands-AI/OpenHands) to get started!
+## What is OpenHands?
+
+OpenHands is a cutting-edge AI platform designed to revolutionize software development. Empowered by AI agents, OpenHands streamlines coding tasks, allowing developers to build more, faster, with less code.  Find the original repository on [GitHub](https://github.com/All-Hands-AI/OpenHands).
 
 ## Key Features
 
-*   **AI-Powered Development:** Leverage AI agents to automate coding tasks, modify code, run commands, and more.
-*   **Web Browsing & API Integration:** Enable agents to browse the web and interact with APIs, expanding their capabilities.
-*   **Code Snippet Access:** Access and utilize code snippets from resources like StackOverflow directly within your development workflow.
-*   **Cloud and Local Deployment:** Easily get started with OpenHands Cloud or run it locally using CLI or Docker.
-*   **Community-Driven:** Join a thriving community on Slack and Discord to collaborate, share ideas, and get support.
+*   **AI-Powered Agents:** OpenHands utilizes intelligent agents capable of performing a wide range of development tasks.
+*   **Code Modification:** Seamlessly modify existing code with AI assistance.
+*   **Command Execution:** Execute commands directly within the development environment.
+*   **Web Browsing & API Integration:** Access web resources and integrate with APIs to enhance functionality.
+*   **Code Snippet Integration:** Leverage code snippets from StackOverflow and other resources.
 
-## Getting Started
+## Get Started
 
-The easiest way to get started is with **OpenHands Cloud**, which comes with $20 in free credits for new users.
+### OpenHands Cloud
 
-Alternatively, you can set up OpenHands locally using the following options:
+The simplest way to experience OpenHands is through [OpenHands Cloud](https://app.all-hands.dev), which offers new users $20 in free credits.
 
-### Option 1: CLI Launcher (Recommended)
+### Running OpenHands Locally
+
+Choose from the following options to run OpenHands on your local machine:
+
+#### Option 1: CLI Launcher (Recommended)
+
+The CLI launcher, using [uv](https://docs.astral.sh/uv/), is the recommended method for local operation.
+
+**Install uv (if you haven't already):**  Refer to the [uv installation guide](https://docs.astral.sh/uv/getting-started/installation/) for instructions.
+
+**Launch OpenHands:**
 
 ```bash
 # Launch the GUI server
@@ -56,7 +67,12 @@ uvx --python 3.12 --from openhands-ai openhands serve
 uvx --python 3.12 --from openhands-ai openhands
 ```
 
-### Option 2: Docker
+Access OpenHands in GUI mode at [http://localhost:3000](http://localhost:3000).
+
+#### Option 2: Docker
+
+<details>
+<summary>Expand Docker Command</summary>
 
 ```bash
 docker pull docker.all-hands.dev/all-hands-ai/runtime:0.53-nikolaik
@@ -72,34 +88,52 @@ docker run -it --rm --pull=always \
     docker.all-hands.dev/all-hands-ai/openhands:0.53
 ```
 
-When you open the application, you'll be asked to choose an LLM provider and add an API key. Anthropic's Claude Sonnet 4 (`anthropic/claude-sonnet-4-20250514`) works best.
+</details>
 
-## ☁️ OpenHands Cloud
+> **Note:** If using OpenHands before version 0.44, run `mv ~/.openhands-state ~/.openhands` to migrate your conversation history.
 
-Easily get started with OpenHands on [OpenHands Cloud](https://app.all-hands.dev), which offers free credits for new users!
+> [!WARNING]
+> Secure your deployment on a public network by consulting our [Hardened Docker Installation Guide](https://docs.all-hands.dev/usage/runtimes/docker#hardened-docker-installation).
 
-## 💡 Other Ways to Run OpenHands
+#### Getting Started
 
-You can [connect OpenHands to your local filesystem](https://docs.all-hands.dev/usage/runtimes/docker#connecting-to-your-filesystem),
-interact with it via a [friendly CLI](https://docs.all-hands.dev/usage/how-to/cli-mode),
-run OpenHands in a scriptable [headless mode](https://docs.all-hands.dev/usage/how-to/headless-mode),
-or run it on tagged issues with [a github action](https://docs.all-hands.dev/usage/how-to/github-action).
+Select an LLM provider and enter your API key upon opening the application. [Anthropic's Claude Sonnet 4](https://www.anthropic.com/api) (`anthropic/claude-sonnet-4-20250514`) is recommended, but many [other options](https://docs.all-hands.dev/usage/llms) are available.  Visit the [Running OpenHands](https://docs.all-hands.dev/usage/installation) guide for more details.
 
-## 📖 Documentation
+## Other Ways to Run OpenHands
 
-For in-depth guides, tutorials, and troubleshooting tips, explore our comprehensive [documentation](https://docs.all-hands.dev/usage/getting-started).
+> [!WARNING]
+> OpenHands is designed for single-user, local workstation use and is not suitable for multi-tenant environments without authentication, isolation, or scalability features.  Consider the source-available, commercially-licensed [OpenHands Cloud Helm Chart](https://github.com/all-Hands-AI/OpenHands-cloud) for multi-tenant deployments.
 
-## 🤝 Join the Community
+Explore these additional options:
 
-Connect with the OpenHands community for support, discussions, and collaboration:
+*   [Connect to your local filesystem](https://docs.all-hands.dev/usage/runtimes/docker#connecting-to-your-filesystem).
+*   Interact via a [friendly CLI](https://docs.all-hands.dev/usage/how-to/cli-mode).
+*   Run in [headless mode](https://docs.all-hands.dev/usage/how-to/headless-mode).
+*   Use a [GitHub action](https://docs.all-hands.dev/usage/how-to/github-action).
 
-*   [Join our Slack workspace](https://join.slack.com/t/openhands-ai/shared_invite/zt-3847of6xi-xuYJIPa6YIPg4ElbDWbtSA)
-*   [Join our Discord server](https://discord.gg/ESHStjSjD4)
-*   [Explore GitHub Issues](https://github.com/All-Hands-AI/OpenHands/issues)
+Refer to [Running OpenHands](https://docs.all-hands.dev/usage/installation) for further instructions.
 
-## 📈 Progress
+Modify the OpenHands source by consulting [Development.md](https://github.com/All-Hands-AI/OpenHands/blob/main/Development.md). For troubleshooting, see the [Troubleshooting Guide](https://docs.all-hands.dev/usage/troubleshooting).
 
-See the monthly OpenHands roadmap [here](https://github.com/orgs/All-Hands-AI/projects/1) (updated at the maintainer's meeting at the end of each month).
+## Documentation
+
+<a href="https://deepwiki.com/All-Hands-AI/OpenHands"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki" title="Autogenerated Documentation by DeepWiki"></a>
+
+Access detailed documentation at [docs.all-hands.dev/usage/getting-started] to learn about LLM providers, troubleshoot issues, and configure advanced features.
+
+## Join the Community
+
+Join the OpenHands community and contribute to its growth! We primarily communicate through Slack:
+
+*   [Join our Slack workspace](https://join.slack.com/t/openhands-ai/shared_invite/zt-3847of6xi-xuYJIPa6YIPg4ElbDWbtSA): Discuss research, architecture, and development plans.
+*   [Join our Discord server](https://discord.gg/ESHStjSjD4): Participate in general discussions and provide feedback.
+*   [View or submit GitHub Issues](https://github.com/All-Hands-AI/OpenHands/issues): Share your ideas and track ongoing issues.
+
+Additional community information is available in [COMMUNITY.md](./COMMUNITY.md) and [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+## Progress
+
+View the monthly OpenHands roadmap [here](https://github.com/orgs/All-Hands-AI/projects/1).
 
 <p align="center">
   <a href="https://star-history.com/#All-Hands-AI/OpenHands&Date">
@@ -107,17 +141,17 @@ See the monthly OpenHands roadmap [here](https://github.com/orgs/All-Hands-AI/pr
   </a>
 </p>
 
-## 📜 License
+## License
 
-Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
+Distributed under the MIT License. For details, see [`LICENSE`](./LICENSE).
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
-OpenHands is built by a large number of contributors, and every contribution is greatly appreciated! We also build upon other open source projects, and we are deeply thankful for their work.
+OpenHands is a community effort, and we're grateful for every contribution. We also appreciate the open-source projects upon which OpenHands is built.
 
-For a list of open source projects and licenses used in OpenHands, please see our [CREDITS.md](./CREDITS.md) file.
+See [CREDITS.md](./CREDITS.md) for a list of open-source projects and licenses.
 
-## 📚 Cite
+## Cite
 
 ```
 @inproceedings{

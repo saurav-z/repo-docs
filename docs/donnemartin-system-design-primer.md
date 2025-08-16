@@ -1,57 +1,129 @@
-# System Design Primer: Ace Your System Design Interview
+# System Design Primer: Your Guide to Designing Large-Scale Systems
 
-**Learn how to design large-scale systems and prepare for system design interviews with this comprehensive, open-source resource.  Learn more at [https://github.com/donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer).**
-
-## Overview
-
-This repository is your guide to mastering system design, a critical skill for software engineers and a key component of technical interviews. Whether you're a seasoned developer or just starting, this primer provides a structured, community-driven approach to understanding the complexities of building scalable and robust systems.
+**Master system design for interviews and real-world applications with this open-source collection of resources.** Find the original repo [here](https://github.com/donnemartin/system-design-primer).
 
 ## Key Features
 
-*   **Comprehensive Resources:** Access an organized collection of articles, diagrams, and sample solutions to help you understand system design principles.
-*   **Open-Source & Community Driven:** Benefit from a continuously updated, collaborative project where contributions are welcomed and encouraged.
-*   **Interview Prep:** Prepare for system design interviews with practice questions, solutions, and a suggested study guide.
-*   **Anki Flashcards:** Enhance your learning with provided Anki flashcard decks to reinforce key system design concepts.
-*   **Interactive Coding Challenges:** Link to the sister repo for interactive coding challenges to further your interview prep.
+*   **Comprehensive Resource Collection:** Organized collection of resources on system design principles.
+*   **Interview Prep:**  Learn how to design systems at scale and prepare for system design interviews.
+*   **Community Driven:** A continually updated, open-source project, allowing you to learn from and contribute to the community.
+*   **Practical Solutions:** Common system design interview questions with sample discussions, code, and diagrams.
+*   **Anki Flashcards:** Spaced repetition flashcards for efficient retention of key system design concepts.
+*   **Study Guides:** Suggested topics and approaches to interview prep based on your timeline.
 
-## What You'll Learn
+## Index of System Design Topics
 
-*   **Core System Design Concepts:** Understand the fundamental principles of scalability, performance, and trade-offs in system design.
-*   **System Components:** Learn about the functionalities of DNS, CDNs, Load Balancers, Application Layers, Databases, Caching, Asynchronism, and Communication protocols.
-*   **Interview Preparation:** Master the key techniques, questions, and the general process for approaching a system design interview.
-*   **Architectural Patterns:** Study real-world architectures used by top tech companies.
-
-## Key Topics Covered
-
-*   **Performance vs. Scalability**
-*   **Latency vs. Throughput**
-*   **CAP Theorem** (Consistency, Availability, Partition Tolerance)
-*   **Consistency Patterns** (Weak, Eventual, Strong)
-*   **Availability Patterns** (Fail-over, Replication)
-*   **DNS, CDNs, Load Balancers**
-*   **Databases** (RDBMS, NoSQL)
-*   **Caching Strategies**
-*   **Asynchronism**
-*   **Communication Protocols** (TCP, UDP, REST)
-*   **Security Basics**
+*   **System Design Topics: Start Here**
+    *   Step 1: Review the Scalability Video Lecture
+    *   Step 2: Review the Scalability Article
+    *   Next Steps
+*   Performance vs Scalability
+*   Latency vs Throughput
+*   Availability vs Consistency
+    *   CAP Theorem
+        *   CP - Consistency and Partition Tolerance
+        *   AP - Availability and Partition Tolerance
+*   Consistency Patterns
+    *   Weak Consistency
+    *   Eventual Consistency
+    *   Strong Consistency
+*   Availability Patterns
+    *   Fail-Over
+        *   Active-Passive
+        *   Active-Active
+    *   Replication
+        *   Master-Slave and Master-Master
+    *   Availability in Numbers
+*   Domain Name System
+*   Content Delivery Network
+    *   Push CDNs
+    *   Pull CDNs
+*   Load Balancer
+    *   Active-Passive
+    *   Active-Active
+    *   Layer 4 Load Balancing
+    *   Layer 7 Load Balancing
+    *   Horizontal Scaling
+*   Reverse Proxy (Web Server)
+    *   Load Balancer vs Reverse Proxy
+*   Application Layer
+    *   Microservices
+    *   Service Discovery
+*   Database
+    *   Relational Database Management System (RDBMS)
+        *   Master-Slave Replication
+        *   Master-Master Replication
+        *   Federation
+        *   Sharding
+        *   Denormalization
+        *   SQL Tuning
+    *   NoSQL
+        *   Key-Value Store
+        *   Document Store
+        *   Wide Column Store
+        *   Graph Database
+    *   SQL or NoSQL
+*   Cache
+    *   Client Caching
+    *   CDN Caching
+    *   Web Server Caching
+    *   Database Caching
+    *   Application Caching
+    *   Caching at the Database Query Level
+    *   Caching at the Object Level
+    *   When to Update the Cache
+        *   Cache-Aside
+        *   Write-Through
+        *   Write-Behind (Write-Back)
+        *   Refresh-Ahead
+*   Asynchronism
+    *   Message Queues
+    *   Task Queues
+    *   Back Pressure
+*   Communication
+    *   Transmission Control Protocol (TCP)
+    *   User Datagram Protocol (UDP)
+    *   Remote Procedure Call (RPC)
+    *   Representational State Transfer (REST)
+*   Security
+*   Appendix
+    *   Powers of Two Table
+    *   Latency Numbers Every Programmer Should Know
+    *   Additional System Design Interview Questions
+    *   Real World Architectures
+    *   Company Architectures
+    *   Company Engineering Blogs
+*   Under Development
+*   Credits
+*   Contact Info
+*   License
 
 ## Study Guide
 
-The guide is based on your interview timeline to help you prioritize:
+Follow this suggested study guide.
 
-*   **Short Timeline:** Focus on breadth with system design topics and solve some interview questions.
-*   **Medium Timeline:** Aim for breadth and depth, and solve many interview questions.
-*   **Long Timeline:** Focus on breadth and depth, and practice solving most interview questions.
+| | Short | Medium | Long |
+|---|---|---|---|
+| Read through the [System design topics](#index-of-system-design-topics) to get a broad understanding of how systems work | :+1: | :+1: | :+1: |
+| Read through a few articles in the [Company engineering blogs](#company-engineering-blogs) for the companies you are interviewing with | :+1: | :+1: | :+1: |
+| Read through a few [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |
+| Review [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
+| Work through [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | Some | Many | Most |
+| Work through [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | Some | Many | Most |
+| Review [Additional system design interview questions](#additional-system-design-interview-questions) | Some | Many | Most |
 
 ## How to Approach a System Design Interview Question
 
-1.  **Outline Use Cases, Constraints, and Assumptions:** Clarify requirements and scope the problem.
-2.  **Create a High-Level Design:** Sketch the main components and connections.
-3.  **Design Core Components:** Dive into details for each core component.
-4.  **Scale the Design:** Identify and address bottlenecks, given the constraints.
-5.  **Back-of-the-Envelope Calculations:** Use the provided table and numbers to estimate.
+Follow these steps:
 
-## System Design Interview Questions (with Solutions)
+1.  **Outline use cases, constraints, and assumptions:** Define the problem.
+2.  **Create a high-level design:** Sketch out the components.
+3.  **Design core components:** Dive into details of each core component.
+4.  **Scale the design:** Identify and address potential bottlenecks.
+
+## System Design Interview Questions with Solutions
+
+Here are some sample questions:
 
 *   Design Pastebin.com (or Bit.ly)
 *   Design the Twitter timeline and search (or Facebook feed and search)
@@ -62,7 +134,7 @@ The guide is based on your interview timeline to help you prioritize:
 *   Design Amazon's sales ranking by category feature
 *   Design a system that scales to millions of users on AWS
 
-## Object-Oriented Design Interview Questions (Under Development)
+## Object-Oriented Design Interview Questions with Solutions
 
 *   Design a hash map
 *   Design a least recently used cache
@@ -71,20 +143,66 @@ The guide is based on your interview timeline to help you prioritize:
 *   Design a parking lot
 *   Design a chat server
 
-## Contribute
+## System Design Topics: Start Here
 
-Help improve this resource! Feel free to submit pull requests to:
+*   Review the scalability video lecture.
+*   Review the scalability article.
+*   Then, review performance vs scalability, latency vs throughput, and availability vs consistency.
 
-*   Fix errors
-*   Improve sections
-*   Add new sections
-*   [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
+## Real-World Architectures
 
-## Resources
+Study the common principles, common technologies, and patterns. Review the lessons learned.
 
-*   **Additional System Design Questions:** Common system design interview questions, with links to resources on how to solve each.
-*   **Real World Architectures:** Learn about real-world systems design.
-*   **Company Architectures:** Architectures for various tech companies.
-*   **Company Engineering Blogs:** Engineering blog links to keep you informed on the latest technologies.
+| Type          | System                     | Reference(s)                                                                                                                                                                     |
+|---------------|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Data Processing | MapReduce                  | [research.google.com](http://static.googleusercontent.com/media/research.google.com/zh-CN/us/archive/mapreduce-osdi04.pdf)                                                 |
+| Data Processing | Spark                      | [slideshare.net](http://www.slideshare.net/AGrishchenko/apache-spark-architecture)                                                                                          |
+| Data Processing | Storm                      | [slideshare.net](http://www.slideshare.net/previa/storm-16094009)                                                                                                            |
+| Data Store      | Bigtable                   | [harvard.edu](http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/chang06bigtable.pdf)                                                                                |
+| Data Store      | HBase                      | [slideshare.net](http://www.slideshare.net/alexbaranau/intro-to-hbase)                                                                                                       |
+| Data Store      | Cassandra                  | [slideshare.net](http://www.slideshare.net/planetcassandra/cassandra-introduction-features-30103666)                                                                         |
+| Data Store      | DynamoDB                   | [harvard.edu](http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/decandia07dynamo.pdf)                                                                                |
+| Data Store      | MongoDB                    | [slideshare.net](http://www.slideshare.net/mdirolf/introduction-to-mongodb)                                                                                                    |
+| Data Store      | Spanner                    | [research.google.com](http://research.google.com/archive/spanner-osdi2012.pdf)                                                                                              |
+| Data Store      | Memcached                  | [slideshare.net](http://www.slideshare.net/oemebamo/introduction-to-memcached)                                                                                                |
+| Data Store      | Redis                      | [slideshare.net](http://www.slideshare.net/dvirsky/introduction-to-redis)                                                                                                     |
+| Misc          | Chubby                     | [research.google.com](http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/archive/chubby-osdi06.pdf)                                 |
+| Misc          | Dapper                     | [research.google.com](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36356.pdf)                                                               |
+| Misc          | Kafka                      | [slideshare.net](http://www.slideshare.net/mumrah/kafka-talk-tri-hug)                                                                                                           |
+| Misc          | Zookeeper                  | [slideshare.net](http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper)                                                                                        |
 
-**Get started today and ace your system design interview!**
+## Company Architectures
+
+Here are some examples of company architectures.
+
+*   Amazon
+*   Cinchcast
+*   DataSift
+*   Dropbox
+*   ESPN
+*   Google
+*   Instagram
+*   Justin.tv
+*   Facebook
+*   Flickr
+*   Mailbox
+*   Netflix
+*   Pinterest
+*   Playfish
+*   PlentyOfFish
+*   Salesforce
+*   Stack Overflow
+*   TripAdvisor
+*   Tumblr
+*   Twitter
+*   Uber
+*   WhatsApp
+*   YouTube
+
+## Contributing
+
+Contribute to this resource by submitting pull requests to fix errors, improve sections, or add new sections.
+
+## Contact Info
+
+Contact the author on his [GitHub page](https://github.com/donnemartin) with any questions.

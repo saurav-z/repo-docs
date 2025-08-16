@@ -1,32 +1,25 @@
-# Discover & Explore Open Source Game Clones: A Comprehensive Database
+# Discover & Play Open Source Game Clones!
 
-**Looking for free and open-source alternatives to your favorite classic games?** This project provides a curated, searchable database of game clones and remakes, empowering you to rediscover gaming classics in a community-driven, open-source environment. Visit the live site at [https://osgameclones.com](https://osgameclones.com/)!
+This project curates a comprehensive database of open-source game clones and remakes, offering a fantastic resource for gamers and developers alike. Explore the [osgameclones.com](https://osgameclones.com) website and contribute to the community! [(Original Repository)](https://github.com/opengaming/osgameclones)
 
 [![Build and Deploy](https://github.com/opengaming/osgameclones/actions/workflows/main.yml/badge.svg)](https://github.com/opengaming/osgameclones/actions/workflows/main.yml)
 
-This repository serves as the source code and data repository for [osgameclones.com](https://osgameclones.com), a comprehensive directory of open-source game clones.  Contribute to the project by adding new games, improving existing information, or suggesting new features.
+## Key Features:
 
-## Key Features of the Open Source Game Clones Database:
-
-*   **Extensive Game Listings:** Browse a vast collection of open-source clones and remakes, covering a wide range of genres and classic titles.
-*   **Organized Data:**  Game information is stored in easily accessible and well-structured YAML files for easy understanding and contribution.
-*   **Community-Driven:**  Actively contribute to the database by submitting pull requests and creating issues.
-*   **Validation & Quality:**  Game entries are validated against defined schema to ensure data accuracy and consistency.
-*   **Searchable & User-Friendly:** Provides easy access to find clones and remakes of your favorite games.
+*   **Comprehensive Game Database:**  A curated collection of open-source game clones, remakes, and reimplementations.
+*   **Easy Contribution:**  Help expand the database by adding new games or updating existing information.
+*   **YAML-Based Data:** Game and original game information stored in easily readable and modifiable YAML files.
+*   **Data Validation:**  Games and original game entries are validated against schemas for data integrity.
+*   **Community-Driven:**  Leverage the power of the open-source community to keep the database up-to-date.
+*   **Website Integration**: The data from this project powers the [osgameclones.com](https://osgameclones.com) website.
 
 ## How to Contribute
 
-This project thrives on community contributions.  Here's how you can get involved:
+We welcome contributions from the community!  Here's how you can help:
 
-### Adding a Game Clone or Remake
-
-1.  **Create a New Issue:** Use the [game form](https://osgameclones.com/add_game.html) to provide details about the game clone.
-2.  **Direct Editing:**  Alternatively, edit the YAML files in the [`games`](games/) directory directly and submit a pull request.
-
-### Adding a Reference to an Original Game
-
-1.  **Use the Original Game Form:** Fill out the [add original form](https://osgameclones.com/add_original.html) to add details of the original game.
-2.  **Create a New Entry:** If the original game is not already listed, create a new entry in the [`originals`](originals/) directory.
+*   **Add New Games:** Use the [game form](https://osgameclones.com/add_game.html) or directly edit the YAML files in the [`games`](games/) directory.
+*   **Add Original Game References:** Use the [add original form](https://osgameclones.com/add_original.html) or create entries in the [`originals`](originals/) directory.
+*   **Improve Existing Data:**  Submit pull requests to correct inaccuracies or add more details.
 
 ## Technical Details
 
@@ -36,20 +29,18 @@ This project thrives on community contributions.  Here's how you can get involve
 
 ### Installation
 
-1.  Clone the repository.
-2.  Navigate to the project directory and run:
-
-    ```bash
-    poetry install
-    ```
+1.  Clone the repository:
+2.  Navigate into the project directory.
+3.  Run `poetry install`.
 
 ### Building
 
-Build the project to the `_build` directory:
+To build the project:
 
 ```bash
 make
 ```
+The build output is placed into the `_build` directory.
 
 ### Running with Docker
 
@@ -58,22 +49,28 @@ make
     ```bash
     make docker-build
     ```
-
-2.  Run the server:
+2.  Run the server with Docker:
 
     ```bash
     make docker-run
     ```
 
-    The server will be accessible at `http://localhost:80`.  Customize the port using the `PORT` variable:
+    The server will be accessible at `http://localhost:80`. You can change the port using the `PORT` variable, for example:
 
     ```bash
     make docker-run PORT=3000
-    # Server will be available at http://localhost:3000
     ```
+    (Server available at http://localhost:3000)
 
 ## License
 
-This project is licensed under the [LICENSE](LICENSE) (MIT License).
+See the [LICENSE][license] file for details.
 
-**[Visit the original repository on GitHub](https://github.com/opengaming/osgameclones) for source code and more information.**
+[games]: games/
+[originals]: originals/
+[schema_games]: schema/games.yaml
+[schema_originals]: schema/originals.yaml
+[game_form]: https://osgameclones.com/add_game.html
+[original_form]: https://osgameclones.com/add_original.html
+[license]: LICENSE
+[poetry]: https://python-poetry.org/

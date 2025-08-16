@@ -1,40 +1,103 @@
 # Instructor: Effortlessly Extract Structured Data from LLMs
 
-**Simplify your interactions with Large Language Models and get reliable JSON outputs every time with Instructor.**
+**Simplify LLM interactions and get reliable, validated JSON outputs with Instructor, built on Pydantic for type safety and ease of use.**  [See the original repo](https://github.com/567-labs/instructor)
 
-[Visit the original repo](https://github.com/567-labs/instructor)
+Instructor empowers developers to seamlessly extract structured data from any Large Language Model (LLM), eliminating the complexities of manual parsing, validation, and error handling.
 
-Instructor is a powerful Python library built on Pydantic that streamlines the process of extracting structured data from any LLM, providing validation, type safety, and robust error handling.
+[![PyPI](https://img.shields.io/pypi/v/instructor?style=flat-square)](https://pypi.org/project/instructor/)
+[![Downloads](https://img.shields.io/pypi/dm/instructor?style=flat-square)](https://pypi.org/project/instructor/)
+[![GitHub Stars](https://img.shields.io/github/stars/instructor-ai/instructor?style=flat-square)](https://github.com/instructor-ai/instructor)
+[![Discord](https://img.shields.io/discord/1192334452110659664?style=flat-square)](https://discord.gg/bD9YE9JArw)
+[![Twitter](https://img.shields.io/twitter/follow/jxnlco?style=flat-square)](https://twitter.com/jxnlco)
 
 ## Key Features
 
-*   **Simplified Extraction:** Define your desired data model using Pydantic and let Instructor handle the rest.
-*   **Automatic Validation & Retries:** Ensures data integrity with automatic validation and retries for failed extractions.
-*   **Broad Provider Compatibility:** Works seamlessly with leading LLM providers, including OpenAI, Anthropic, Google, and Ollama.
-*   **Streaming Support:** Stream partial objects as they're generated for a more responsive user experience.
+*   **Simplified Data Extraction:** Define data models using Pydantic and get structured output effortlessly.
+*   **Automatic Validation:** Built-in validation using Pydantic ensures data integrity and type safety.
+*   **Provider Agnostic:** Works seamlessly with leading LLM providers like OpenAI, Anthropic, Google, and Ollama.
+*   **Automatic Retries:** Handles validation failures with automatic retries and error reporting.
+*   **Streaming Support:** Stream partial objects as they are generated for a responsive user experience.
 *   **Nested Object Support:** Easily extract complex, nested data structures.
-*   **Multi-Language Support:** Available in Python, TypeScript, Ruby, Go, Elixir, and Rust.
 
-## Get Started
+## Why Choose Instructor?
 
-### Installation
+Instructor streamlines the process of obtaining structured data from LLMs, eliminating the need for manual work and reducing the risk of errors. Here's a comparison:
 
-Install Instructor with pip:
+<table>
+<tr>
+<td><b>Without Instructor</b></td>
+<td><b>With Instructor</b></td>
+</tr>
+<tr>
+<td>
+
+```python
+response = openai.chat.completions.create(
+    model="gpt-4",
+    messages=[{"role": "user", "content": "..."}],
+    tools=[
+        {
+            "type": "function",
+            "function": {
+                "name": "extract_user",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "age": {"type": "integer"},
+                    },
+                },
+            },
+        }
+    ],
+)
+
+# Parse response
+tool_call = response.choices[0].message.tool_calls[0]
+user_data = json.loads(tool_call.function.arguments)
+
+# Validate manually
+if "name" not in user_data:
+    # Handle error...
+    pass
+```
+
+</td>
+<td>
+
+```python
+client = instructor.from_provider("openai/gpt-4")
+
+user = client.chat.completions.create(
+    response_model=User,
+    messages=[{"role": "user", "content": "..."}],
+)
+
+# That's it! user is validated and typed
+```
+
+</td>
+</tr>
+</table>
+
+## Installation
+
+Get started in seconds:
 
 ```bash
 pip install instructor
 ```
 
-Or with your preferred package manager:
+or with your package manager:
 
 ```bash
 uv add instructor
 poetry add instructor
 ```
 
-### Basic Usage
+## Example Usage
 
-Effortlessly extract structured data from any text:
+### Basic Extraction
 
 ```python
 from pydantic import BaseModel
@@ -56,19 +119,9 @@ print(product)
 # Product(name='iPhone 15 Pro', price=999.0, in_stock=True)
 ```
 
-## Why Choose Instructor?
-
-Instructor offers a superior experience compared to other solutions:
-
-*   **Compared to Raw JSON Mode:** Instructor provides automatic validation, retries, streaming, and nested object support, eliminating the need for manual schema writing and error handling.
-*   **Compared to LangChain/LlamaIndex:** Instructor focuses solely on structured extraction, making it lightweight, faster, and easier to debug.
-*   **Compared to Custom Solutions:** Benefit from a battle-tested library used by thousands of developers, designed to handle a wide range of edge cases.
-
 ## Production-Ready Features
 
 ### Automatic Retries
-
-Instructor automatically retries extractions when validation fails:
 
 ```python
 from pydantic import BaseModel, field_validator
@@ -83,6 +136,7 @@ class User(BaseModel):
             raise ValueError('Age must be positive')
         return v
 
+# Instructor automatically retries when validation fails
 user = client.chat.completions.create(
     response_model=User,
     messages=[{"role": "user", "content": "..."}],
@@ -91,8 +145,6 @@ user = client.chat.completions.create(
 ```
 
 ### Streaming Support
-
-Stream partial objects as they're generated:
 
 ```python
 from instructor import Partial
@@ -109,8 +161,6 @@ for partial_user in client.chat.completions.create(
 ```
 
 ### Nested Objects
-
-Extract complex, nested data structures:
 
 ```python
 from typing import List
@@ -132,9 +182,20 @@ user = client.chat.completions.create(
 )
 ```
 
-## Used in Production By
+## Multi-Language Support
 
-Trusted by over 100,000 developers and companies building AI applications:
+Instructor's simple API is available in many languages:
+
+*   [Python](https://python.useinstructor.com) - The original
+*   [TypeScript](https://js.useinstructor.com) - Full TypeScript support
+*   [Ruby](https://ruby.useinstructor.com) - Ruby implementation
+*   [Go](https://go.useinstructor.com) - Go implementation
+*   [Elixir](https://hex.pm/packages/instructor) - Elixir implementation
+*   [Rust](https://rust.useinstructor.com) - Rust implementation
+
+## Used in Production by
+
+Instructor is a trusted solution used by over 100,000 developers and companies, including teams at OpenAI, Google, Microsoft, AWS, and numerous YC startups.
 
 *   **3M+ monthly downloads**
 *   **10K+ GitHub stars**
@@ -146,6 +207,14 @@ Trusted by over 100,000 developers and companies building AI applications:
 *   [Examples](https://python.useinstructor.com/examples/) - Copy-paste recipes
 *   [Blog](https://python.useinstructor.com/blog/) - Tutorials and best practices
 *   [Discord](https://discord.gg/bD9YE9JArw) - Get help from the community
+
+## Why use Instructor?
+
+**Instructor vs Raw JSON mode**: Instructor provides automatic validation, retries, streaming, and nested object support. No manual schema writing.
+
+**Instructor vs LangChain/LlamaIndex**: Instructor is focused on one thing - structured extraction. It's lighter, faster, and easier to debug.
+
+**Instructor vs Custom solutions**: Battle-tested by thousands of developers. Handles edge cases you haven't thought of yet.
 
 ## Contributing
 

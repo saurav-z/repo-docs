@@ -1,42 +1,46 @@
-[![Support room on Matrix](https://img.shields.io/matrix/mash-playbook:devture.com.svg?label=%23mash-playbook%3Adevture.com&logo=matrix&style=for-the-badge&server_fqdn=matrix.devture.com&fetchMode=summary)](https://matrixrooms.info/room/mash-playbook:devture.com) [![donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/mother-of-all-self-hosting/donate)
+# Self-Host Your Digital Life with the Mother-of-All-Self-Hosting Playbook
 
-# MASH Playbook: Your Ultimate Self-Hosting Toolkit
+**Simplify your self-hosting journey and take control of your data with the Mother-of-All-Self-Hosting (MASH) Ansible playbook, a comprehensive solution for deploying and managing self-hosted services using Docker containers.** ([View the original repository](https://github.com/mother-of-all-self-hosting/mash-playbook))
 
-**Tired of juggling multiple playbooks and complex setups?** The MASH (Mother-of-All-Self-Hosting) Ansible playbook simplifies self-hosting by deploying and managing a wide array of services in Docker containers on your own server.
+MASH streamlines self-hosting by automating the deployment and management of numerous services, all within Docker containers, ensuring a consistent and easily updatable setup across various Linux distributions and CPU architectures.
 
-**[Visit the original repository](https://github.com/mother-of-all-self-hosting/mash-playbook) for the latest updates and information.**
+**Key Features:**
 
-## Key Features
-
-*   **Simplified Self-Hosting:** Manage numerous services with a single, unified Ansible playbook.
-*   **Containerized Deployments:** Utilize Docker containers for consistent and up-to-date service installations across multiple Linux distributions and CPU architectures.
-*   **Extensive Service Support:** Easily deploy a growing list of [supported services](docs/supported-services.md).
-*   **Automated Installation & Updates:** Leverage Ansible for seamless installation, configuration, and upgrades.
-*   **Easy to Try New Services:** Quickly experiment with various services through simple configuration changes.
-*   **Shared Services Management:** Centralized management of shared services like databases and reverse proxies.
-*   **Simplified Backups:** Streamlined backup procedures due to all services residing under a single base data path.
+*   **Simplified Deployment:** Automates the installation and configuration of self-hosted services.
+*   **Docker-Based:** Leverages Docker containers for consistent and isolated service environments.
+*   **Comprehensive Service Support:** Supports a wide range of popular services, with continuous expansion. [View the list of supported services](docs/supported-services.md).
+*   **Ansible Automation:**  Automates installation, upgrades, and maintenance tasks using Ansible.
+*   **Easy Updates:**  Stay up-to-date with the latest features and security patches via the CHANGELOG.md.
+*   **Centralized Management:** Reduces the need to manage multiple playbooks, simplifying your self-hosting infrastructure.
+*   **Shared Resources:** Manages shared services like databases and reverse proxies in a single, unified location.
+*   **Easy Backups:** Simplifies the backup process by keeping all data within the same base path and Postgres instance.
 
 ## Supported Services
 
-Discover the full list of supported services in the [supported services documentation](docs/supported-services.md).
+Explore the [full list of supported services](docs/supported-services.md) to see the wide array of applications you can self-host with MASH.
 
 ## Getting Started
 
-Follow the instructions in the [installation guide](docs/README.md) to configure and install services on your server.
+To configure and install services on your server, follow the instructions in the [README](docs/README.md) within the `docs/` directory.
 
-## Staying Updated
+## Changes & Updates
 
-Refer to the [changelog](CHANGELOG.md) to stay informed about updates and any potential backward-incompatible changes.
+Stay informed about changes and new features by consulting the [CHANGELOG.md](CHANGELOG.md) when updating the playbook.
 
-## Support and Community
+## Support
 
-*   **Matrix:** Join the community in the [#mash-playbook:devture.com](https://matrixrooms.info/room/mash-playbook:devture.com) Matrix room. You can join using a public server like `matrix.org` or self-host Matrix using the [matrix-docker-ansible-deploy](https://github.com/spantaleev/matrix-docker-ansible-deploy) playbook.
-*   **GitHub Issues:** Report issues and contribute to the project via [GitHub issues](https://github.com/mother-of-all-self-hosting/mash-playbook/issues).
+*   **Matrix Room:** Connect with the community and get support in the Matrix room: [#mash-playbook:devture.com](https://matrixrooms.info/room/mash-playbook:devture.com).
+*   **GitHub Issues:** Report issues and track progress on GitHub: [mother-of-all-self-hosting/mash-playbook/issues](https://github.com/mother-of-all-self-hosting/mash-playbook/issues)
 
 ## Why MASH?
 
-MASH consolidates the functionality of multiple service-specific playbooks (like those for Matrix, Nextcloud, Gitea, etc.) into a single, easy-to-manage solution. This approach streamlines deployment, reduces duplication of effort, and simplifies the process of self-hosting a wide variety of services. With MASH, you can easily create your ideal self-hosted stack, backed by a reliable and well-maintained Ansible playbook.
+MASH consolidates the functionality of multiple playbooks, providing a streamlined and efficient approach to self-hosting:
 
-## What's in a name?
+*   Avoids the complexity of managing numerous individual playbooks.
+*   Simplifies the process of trying out new services with minimal configuration.
+*   Provides a home for smaller applications that might not warrant their own dedicated playbooks.
+*   Ensures consistency and quality across all supported services.
+*   Centralizes the management of shared services such as databases and reverse proxies.
+*   Facilitates easy and unified backups.
 
-The name "MASH" reflects the playbook's purpose: to mix and match various services, providing a comprehensive toolkit for self-hosting, much like mashing ingredients in the brewing process to create a satisfying final product.
+While MASH supports hosting a wide variety of services, you're not limited to a single server.  Utilize as many servers as needed for your infrastructure.

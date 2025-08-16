@@ -1,53 +1,50 @@
-# Can ChatGPT Beat the Market? Live Trading Experiment with Micro-Cap Stocks
+# ChatGPT Micro-Cap Stock Trading Experiment: Can AI Beat the Market?
 
-**Can a large language model like ChatGPT generate alpha in the stock market?** This project explores that question through a live trading experiment using real money and micro-cap stocks.  Follow along with the experiment, access the code, and learn about the potential of AI in finance. ([Original Repo](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment))
+**Can an AI, like ChatGPT, make smart trading decisions and generate alpha in the stock market?**  This repository documents a live, real-money trading experiment where ChatGPT manages a micro-cap stock portfolio.  [View the original repository](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment).
 
-## Project Overview
+## Key Features:
 
-This experiment tests whether ChatGPT can make profitable trading decisions using real-time market data within a micro-cap portfolio.  The experiment began with a $100 budget and runs from June 2025 to December 2025. The project offers complete transparency, tracking every trade, and publishing detailed performance metrics.
+*   **AI-Powered Trading:** ChatGPT makes daily trading decisions based on provided market data.
+*   **Real-World Experiment:** Uses real money ($100 starting capital) to trade micro-cap stocks.
+*   **Strict Risk Management:** Stop-loss rules are implemented to manage risk.
+*   **Weekly Deep Research:** Allows for thorough account evaluation and research.
+*   **Performance Tracking:**  Daily P&L, equity, and trade history are meticulously tracked and published.
+*   **Transparency & Documentation:**  All data, decisions, and performance metrics are publicly available.
+*   **Visualization Tools:**  Matplotlib graphs compare the portfolio's performance against market benchmarks.
+*   **Open Source & Replicable:**  Provides scripts and data for anyone to understand the approach and potentially replicate the experiment.
 
-## Key Features
+## Experiment Details:
 
-*   **AI-Driven Trading:**  ChatGPT makes all trading decisions based on provided market data.
-*   **Real-World Application:** Uses a live trading account with a real-money budget.
-*   **Daily & Weekly Data:**
-    *   **Daily:**  Trading data provided on portfolio stocks. Strict stop-loss rules are applied.
-    *   **Weekly:** Deep research is allowed to reevaluate the account.
-*   **Performance Tracking:**  Weekly performance data published on [SubStack](https://nathanbsmith729.substack.com).
-*   **Transparency:** All trades are logged, and performance is tracked with CSV files, providing a comprehensive view of the AI's decision-making process.
-*   **Detailed Documentation:** Includes:
-    *   Research Index
-    *   Disclaimer
-    *   Q&A
-    *   Prompts
-    *   Instructions on How to Start Your Own
-    *   Markdown Research Summaries (MD)
-    *   Weekly Deep Research Reports (PDF)
-*   **Visualization Tools:**  Matplotlib graphs to compare ChatGPT performance against market indices.
-*   **Open Source:** The scripts and data are available for review and potential replication.
+This project aims to explore the potential of large language models (LLMs) like ChatGPT in financial markets. Each trading day, ChatGPT receives trading data for its portfolio, while adhering to strict stop-loss rules. Weekly, the AI leverages in-depth research to re-evaluate its holdings.
 
-## Performance Example (6/30 – 7/25)
+*   **Performance Updates:** Weekly performance data is published on a personal blog ([Here](https://nathanbsmith729.substack.com)).
+*   **Research & Documentation:** Explore detailed insights into the experiment:
+    *   [Research Index](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Deep%20Research%20Index.md)
+    *   [Disclaimer](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Disclaimer.md)
+    *   [Q&A](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Q%26A.md)
+    *   [Prompts](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Prompts.md)
+    *   [Starting Your Own](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Start%20Your%20Own/README.md)
+    *   [Research Summaries (MD)](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/tree/main/Weekly%20Deep%20Research%20(MD))
+    *   [Full Deep Research Reports (PDF)](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/tree/main/Weekly%20Deep%20Research%20(PDF))
 
----
+## Performance Example:
 
-![Week 4 Performance](%286-30%20-%207-25%29%20Results.png)
+![Week 7 Performance](%286-30%20-%208-15%29%20Results.png)  *This image showcases an example of the performance results.*
 
----
+*   **Current Performance:**  The portfolio is outperforming the S&P 500 (as of the current evaluation).
 
-*   Currently outperforming the Russell 2K.
+## Why This Matters:
 
-## Why This Matters
+This project offers a unique perspective on AI's potential in finance. By documenting the process transparently, it aims to provide valuable insights into the realities of AI-driven trading, especially within a volatile market environment.
 
-This project provides a valuable opportunity to assess the capabilities of AI in financial decision-making, offering insight into the potential and limitations of large language models in the investment landscape.
-
-## Technology Stack
+## Tech Stack:
 
 *   **Programming Language:** Python
-*   **Data & Logic:** Pandas + yFinance
+*   **Data Handling & Logic:** Pandas & yFinance
 *   **Visualization:** Matplotlib
-*   **AI Engine:** ChatGPT
+*   **AI Engine:** ChatGPT-5
 
-## Installation
+## Installation:
 
 To run the scripts locally, install the required Python dependencies:
 
@@ -55,12 +52,12 @@ To run the scripts locally, install the required Python dependencies:
 pip install -r requirements.txt
 ```
 
-## Follow the Experiment
+## Follow Along:
 
-Stay updated on the experiment's progress! Daily portfolio updates and weekly performance analysis are published on the repo.
+The experiment runs from June 2025 to December 2025. Daily portfolio updates are posted to the main CSV file.
 
-*   **Blog:** Weekly updates on [SubStack](https://substack.com/@nathanbsmith?utm_source=edit-profile-page)
+*   **Weekly Updates:**  Check out the blog for regular performance reviews ([https://substack.com/@nathanbsmith?utm_source=edit-profile-page](https://substack.com/@nathanbsmith?utm_source=edit-profile-page))
 
-## Get Involved
+## Contact:
 
-Have questions or advice?  Contact the project creator at [nathanbsmith.business@gmail.com](mailto:nathanbsmith.business@gmail.com).
+For any questions or feedback, please reach out: nathanbsmith.business@gmail.com

@@ -1,4 +1,6 @@
-# Agent Development Kit (ADK): Build, Evaluate, and Deploy AI Agents with Ease
+# Agent Development Kit (ADK): Build & Deploy Powerful AI Agents
+
+**Unleash the power of AI agents with the Agent Development Kit (ADK), a code-first Python toolkit for building, evaluating, and deploying sophisticated agents.** ([Original Repo](https://github.com/google/adk-python))
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/google-adk)](https://pypi.org/project/google-adk/)
@@ -10,54 +12,42 @@
   <img src="https://raw.githubusercontent.com/google/adk-python/main/assets/agent-development-kit.png" width="256" alt="Agent Development Kit Logo"/>
 </div>
 
-**Unleash the power of AI with the Agent Development Kit (ADK), a Python-first toolkit designed for crafting, evaluating, and deploying sophisticated AI agents.**
-
-ADK empowers developers to build, test, and deploy cutting-edge AI agents with flexibility and control.  Designed for the Google ecosystem, ADK is also model-agnostic and deployment-agnostic, ensuring compatibility with diverse frameworks. Dive in and make agent development feel like software development, simplifying the creation, deployment, and orchestration of agents from simple tasks to complex workflows. [Explore the original repository on GitHub](https://github.com/google/adk-python).
+ADK is an open-source, flexible, and modular framework designed to simplify the development, evaluation, and deployment of AI agents. While optimized for the Google ecosystem, ADK is model-agnostic and deployment-agnostic, fostering compatibility with various frameworks and tools.  ADK empowers developers to build and orchestrate agentic architectures, from simple tasks to complex workflows, with ease.
 
 ## Key Features
 
-*   **Rich Tool Ecosystem:** Integrate pre-built tools, custom functions, OpenAPI specs, and existing tools to give agents diverse capabilities, ensuring tight integration with the Google ecosystem.
-*   **Code-First Development:** Define agent logic, tools, and orchestration directly in Python for ultimate flexibility, testability, and versioning.
-*   **Modular Multi-Agent Systems:** Design scalable applications by composing multiple specialized agents into flexible hierarchies.
+*   **Code-First Development:** Define agent logic, tools, and orchestration directly in Python for maximum flexibility, testability, and version control.
+*   **Rich Tool Ecosystem:** Leverage pre-built tools, custom functions, OpenAPI specifications, and integrate with existing tools to give agents diverse capabilities, with seamless Google ecosystem integration.
+*   **Modular Multi-Agent Systems:** Design and build scalable applications by composing multiple specialized agents into flexible hierarchies.
 *   **Deploy Anywhere:** Easily containerize and deploy agents on Cloud Run or scale seamlessly with Vertex AI Agent Engine.
-*   **Built-in Development UI:** Test, evaluate, debug, and showcase your agent(s) with a built-in development UI.
-*   **Evaluation Tools:**  Evaluate agent performance using included evaluation tools.
+*   **Built-in Development UI**: Test, evaluate, debug, and showcase your agent(s) with a built-in UI.
+*   **Agent2Agent (A2A) Protocol Integration**: Facilitates remote agent-to-agent communication. See this [example](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents) for details.
 
-## 🤖 Agent2Agent (A2A) Protocol and ADK Integration
-
-ADK seamlessly integrates with the [A2A protocol](https://github.com/google-a2a/A2A/) for remote agent-to-agent communication. Explore this [example](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents) to see A2A and ADK in action.
-
-## 🚀 Installation
+## Installation
 
 ### Stable Release (Recommended)
 
-Install the latest stable version of ADK using `pip`:
+Install the latest stable version using pip:
 
 ```bash
 pip install google-adk
 ```
 
-Official releases are published weekly.
+This version is recommended for most users and is updated weekly.
 
 ### Development Version
 
-To access the latest bug fixes and features from the `main` branch:
+Install the latest changes directly from the `main` branch:
 
 ```bash
 pip install git+https://github.com/google/adk-python.git@main
 ```
 
-**Note:** The development version may include experimental features or bugs.  Use this version for testing or critical fixes before the official release.
+Use the development version for testing upcoming changes or accessing critical fixes.
 
-## 📚 Documentation
+## Getting Started: Example Code
 
-Comprehensive documentation is available to guide you through building, evaluating, and deploying agents:
-
-*   [Documentation](https://google.github.io/adk-docs)
-
-## 🏁 Quickstart
-
-### Define a single agent:
+### Define a Single Agent
 
 ```python
 from google.adk.agents import Agent
@@ -72,7 +62,7 @@ root_agent = Agent(
 )
 ```
 
-### Define a multi-agent system:
+### Define a Multi-Agent System
 
 ```python
 from google.adk.agents import LlmAgent, BaseAgent
@@ -102,23 +92,29 @@ adk eval \
 ```
 
 ### Development UI
-<img src="https://raw.githubusercontent.com/google/adk-python/main/assets/adk-web-dev-ui-function-call.png" alt="ADK Web Dev UI Function Call"/>
 
-## 🤝 Contributing
+<img src="https://raw.githubusercontent.com/google/adk-python/main/assets/adk-web-dev-ui-function-call.png"/>
 
-We welcome contributions! Review the following resources:
+## Documentation
+
+Comprehensive documentation is available for building, evaluating, and deploying agents:
+
+*   [**Documentation**](https://google.github.io/adk-docs)
+
+## Vibe Coding
+
+For agent development via vibe coding, use the provided context files:
+
+*   [`llms.txt`](./llms.txt) (Summarized LLM context)
+*   [`llms-full.txt`](./llms-full.txt) (Full LLM context)
+
+## Contributing
+
+We welcome contributions from the community!  See:
 
 *   [General contribution guideline and flow](https://google.github.io/adk-docs/contributing-guide/)
 *   [Code Contributing Guidelines](./CONTRIBUTING.md)
 
-## Vibe Coding
-
-For agent development via vibe coding, reference the [llms.txt](./llms.txt) and [llms-full.txt](./llms-full.txt) files as context for your LLM. The former is a summary, while the latter contains full information.
-
-## 📄 License
+## License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
-
----
-
-*Happy Agent Building!*

@@ -1,35 +1,37 @@
 <div align="center" markdown="1">
-    <img src=".github/framework-logo-new.svg" width="80" height="80" alt="Frappe Framework Logo"/>
-    <h1>Frappe Framework: Low-Code Web App Development</h1>
+	<img src=".github/framework-logo-new.svg" width="80" height="80"/>
+	<h1>Frappe Framework</h1>
+
+ **Build powerful, real-world web applications quickly with the low-code Frappe Framework, combining Python and JavaScript.**
 </div>
 
 <div align="center">
-    <a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-success.svg" alt="MIT License"></a>
-    <a href="https://codecov.io/gh/frappe/frappe"><img src="https://codecov.io/gh/frappe/frappe/branch/develop/graph/badge.svg?token=XoTa679hIj" alt="Codecov Coverage"></a>
+	<a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-success.svg"></a>
+	<a href="https://codecov.io/gh/frappe/frappe"><img src="https://codecov.io/gh/frappe/frappe/branch/develop/graph/badge.svg?token=XoTa679hIj"/></a>
 </div>
 <div align="center">
-    <img src=".github/hero-image.png" alt="Frappe Framework Hero Image" />
+	<img src=".github/hero-image.png" alt="Hero Image" />
 </div>
 <div align="center">
     <a href="https://frappe.io/framework">Website</a>
     -
     <a href="https://docs.frappe.io/framework">Documentation</a>
-    -
-    <a href="https://github.com/frappe/frappe">View on GitHub</a>
 </div>
 
-## Build Powerful Web Applications Quickly with Frappe Framework
+## Frappe Framework: Build Web Apps Faster with Low-Code
 
-Frappe Framework is a full-stack, low-code web application framework built on Python and JavaScript, designed for rapid development of real-world applications.  Based on semantic web principles, Frappe helps you build consistent, extensible applications with ease.
+Frappe Framework is a full-stack, low-code web application framework that uses Python and MariaDB on the server side and a tightly integrated client-side library. It's designed for building robust, scalable applications, inspired by the semantic web to focus on the meaning of data rather than just its presentation. Originally developed for ERPNext, Frappe empowers developers to create complex applications with ease.
 
-**Key Features:**
+**[Explore the Original Repository](https://github.com/frappe/frappe)**
 
-*   **Full-Stack Development:** Develop both front-end and back-end with a single framework using Python on the server-side and JavaScript on the client-side.
-*   **Built-in Admin Interface:** Get a ready-to-use, customizable admin dashboard for efficient data management.
-*   **Role-Based Permissions:** Implement comprehensive user and role management for robust access control.
-*   **REST API:** Automatically generate RESTful APIs for seamless integration with other services.
-*   **Customizable Forms and Views:** Tailor forms and views using server-side scripting and client-side JavaScript.
-*   **Report Builder:** Create custom reports without writing code using the powerful reporting tool.
+## Key Features
+
+*   **Full-Stack Development:** Develop both front-end and back-end components within a single framework.
+*   **Built-in Admin Interface:** Get a ready-to-use and customizable admin dashboard to manage your application's data efficiently.
+*   **Role-Based Permissions:** Secure your application with a comprehensive user and role management system.
+*   **REST API Generation:** Automatically generate RESTful APIs for seamless integration with other services.
+*   **Customizable Forms and Views:** Tailor forms and views using server-side scripting and client-side JavaScript to match your specific requirements.
+*   **Report Builder:** Easily create custom reports without writing code, using the powerful reporting tool.
 
 <details>
 <summary>Screenshots</summary>
@@ -41,9 +43,9 @@ Frappe Framework is a full-stack, low-code web application framework built on Py
 
 ## Production Setup
 
-### Managed Hosting
+### Managed Hosting: Frappe Cloud
 
-Consider [Frappe Cloud](https://frappecloud.com) for hassle-free hosting, offering easy setup, upgrades, monitoring, and support.
+For ease of use, consider [Frappe Cloud](https://frappecloud.com), a user-friendly, open-source platform for hosting Frappe applications. It simplifies installation, upgrades, monitoring, and maintenance.
 
 <div>
     <a href="https://frappecloud.com/" target="_blank">
@@ -56,33 +58,33 @@ Consider [Frappe Cloud](https://frappecloud.com) for hassle-free hosting, offeri
 
 ### Self Hosting
 
-#### Docker
+### Docker
 
-**Prerequisites:** Docker, Docker Compose, Git. Refer to [Docker Documentation](https://docs.docker.com) for details.
+**Prerequisites:** Docker, Docker Compose, and Git. See [Docker Documentation](https://docs.docker.com) for setup details.
 
 **Steps:**
 
-```bash
-git clone https://github.com/frappe/frappe_docker
-cd frappe_docker
-docker compose -f pwd.yml up -d
-```
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/frappe/frappe_docker
+    cd frappe_docker
+    docker compose -f pwd.yml up -d
+    ```
+2.  Access your site on `localhost:8080` using the default credentials:
+    *   Username: Administrator
+    *   Password: admin
 
-Your site should be accessible on `localhost:8080`. Use "Administrator" and "admin" for default login credentials.
-
-See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM-based Docker setup.
+See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM based docker setup.
 
 ## Development Setup
 
 ### Manual Install
 
-Use the `bench` install script for easy dependency setup. See [bench installation steps](https://docs.frappe.io/framework/user/en/installation).
+The Easy Way: Use the install script for bench. See [Bench](https://github.com/frappe/bench) for more details.
 
-New passwords will be created for Frappe "Administrator", MariaDB root user, and the frappe user (the script displays the passwords and saves them to `~/frappe_passwords.txt`).
+### Local Setup
 
-### Local
-
-1.  Follow the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) to setup bench and start the server:
+1.  Set up bench: Follow the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) and start the server:
     ```bash
     bench start
     ```
@@ -95,10 +97,10 @@ New passwords will be created for Frappe "Administrator", MariaDB root user, and
 
 ## Learning and Community
 
-*   [Frappe School](https://frappe.school): Courses on Frappe Framework and ERPNext.
-*   [Official Documentation](https://docs.frappe.io/framework): Comprehensive framework documentation.
-*   [Discussion Forum](https://discuss.frappe.io/): Engage with the Frappe community.
-*   [buildwithhussain.com](https://buildwithhussain.com): Learn by watching Frappe in action.
+*   [Frappe School](https://frappe.school) - Learn Frappe Framework and ERPNext through courses.
+*   [Official documentation](https://docs.frappe.io/framework) - Comprehensive documentation.
+*   [Discussion Forum](https://discuss.frappe.io/) - Engage with the Frappe community.
+*   [buildwithhussain.com](https://buildwithhussain.com) - See Frappe Framework in action building real-world apps.
 
 ## Contributing
 
@@ -110,24 +112,10 @@ New passwords will be created for Frappe "Administrator", MariaDB root user, and
 <br>
 <br>
 <div align="center">
-    <a href="https://frappe.io" target="_blank">
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/Frappe-white.png">
-            <img src="https://frappe.io/files/Frappe-black.png" alt="Frappe Technologies" height="28"/>
-        </picture>
-    </a>
+	<a href="https://frappe.io" target="_blank">
+		<picture>
+			<source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/Frappe-white.png">
+			<img src="https://frappe.io/files/Frappe-black.png" alt="Frappe Technologies" height="28"/>
+		</picture>
+	</a>
 </div>
-```
-
-Key changes and improvements:
-
-*   **SEO Optimization:** Included keywords like "low-code," "web application framework," "Python," and "JavaScript."
-*   **Concise Hook:**  A clear, compelling one-sentence introduction.
-*   **Structured Headings:**  Improved readability with clear headings and subheadings.
-*   **Bulleted Key Features:**  Easy-to-scan list of core functionalities.
-*   **Call to Action:**  Emphasized learning and community resources.
-*   **GitHub Link:** Added the link back to the original repository.
-*   **Removed Redundancy:** Streamlined text and removed unnecessary phrases.
-*   **Alt Text for Images:** Added alt text for all images to improve accessibility and SEO.
-*   **Formatting:** Added bolding and emphasis for important aspects.
-*   **Markdown Compliance:** Corrected markdown syntax for better rendering.

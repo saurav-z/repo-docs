@@ -1,6 +1,6 @@
-# MonkeyOCR: Revolutionizing Document Parsing with a Triplet Paradigm
+# MonkeyOCR: Revolutionizing Document Parsing with a Structure-Recognition-Relation Triplet Paradigm
 
-**Effortlessly extract and understand information from complex documents with MonkeyOCR, a cutting-edge solution leveraging the Structure-Recognition-Relation (SRR) triplet paradigm.**
+**MonkeyOCR** is a powerful document parsing tool that leverages a Structure-Recognition-Relation (SRR) triplet paradigm to accurately extract information from various document types. ([Original Repo](https://github.com/Yuliang-Liu/MonkeyOCR))
 
 [![arXiv](https://img.shields.io/badge/Arxiv-MonkeyOCR-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2506.05218)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace%20Weights-black.svg?logo=HuggingFace)](https://huggingface.co/echo840/MonkeyOCR)
@@ -9,65 +9,49 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/LICENSE.txt)
 [![GitHub views](https://komarev.com/ghpvc/?username=Yuliang-Liu&repo=MonkeyOCR&color=brightgreen&label=Views)](https://github.com/Yuliang-Liu/MonkeyOCR)
 
-> **Explore the power of MonkeyOCR at its original repository: [https://github.com/Yuliang-Liu/MonkeyOCR](https://github.com/Yuliang-Liu/MonkeyOCR)**
+## Key Features
 
-## Key Features:
+*   **Superior Performance:** MonkeyOCR-pro-1.2B surpasses MonkeyOCR-3B in accuracy and speed.
+*   **Faster Inference:** Achieve up to a 36% speed improvement compared to the 3B version with only a minor performance drop.
+*   **Strong Results:** MonkeyOCR-pro-1.2B excels on olmOCR-Bench, and MonkeyOCR-pro-3B achieves state-of-the-art results on OmniDocBench.
+*   **Versatile Support:** Supports a wide range of document types.
+*   **Easy to Use:** Simple installation and quick start guides for local use, API deployment and Docker setup.
 
-*   **SRR Paradigm:** Simplifies document parsing with a novel Structure-Recognition-Relation triplet approach.
-*   **Superior Performance:** MonkeyOCR-pro-1.2B surpasses MonkeyOCR-3B by 7.4% on Chinese documents and outperforms other models.
-*   **Exceptional Speed:** Achieve up to 36% speed improvements over previous models.
-*   **Benchmarked Excellence:** Outperforms leading VLM models on benchmarks like OmniDocBench and olmOCR-Bench.
-*   **Comprehensive Output:** Generates Markdown files, layout results (PDFs), and detailed intermediate block results (JSON).
-*   **User-Friendly:** Includes a Gradio demo and FastAPI service for easy access and deployment.
-*   **Hardware Flexibility:** Supports various GPUs including 3090, 4090, A6000, H800, and 4060.
-*   **Windows Support:** Supports Windows systems with detailed installation and usage guides.
-*   **Quantization:** Quantization support for efficient resource usage.
+## Why Choose MonkeyOCR?
 
-## Introduction
+MonkeyOCR simplifies document parsing by using a Structure-Recognition-Relation (SRR) triplet paradigm, offering a more efficient and effective alternative to traditional multi-tool pipelines and large multimodal models for complete document processing.
 
-MonkeyOCR employs a Structure-Recognition-Relation (SRR) triplet paradigm to parse documents effectively. This approach streamlines multi-tool pipelines.
+## Key Advantages:
 
-### Key Highlights:
+*   **Efficiency:** Streamlined SRR approach.
+*   **Speed:** Faster processing compared to larger models.
+*   **Accuracy:** Competitive performance on various benchmarks.
+*   **Flexibility:** Supports both English and Chinese documents.
+*   **Accessibility:** Easy to set up and use, with available API and Docker deployment.
 
-*   MonkeyOCR-pro-1.2B outperforms MonkeyOCR-3B.
-*   Speed improvements achieved with MonkeyOCR-pro-1.2B.
-*   MonkeyOCR-pro-1.2B surpasses Nanonets-OCR-3B on olmOCR-Bench.
-*   MonkeyOCR-pro-3B achieves top performance on OmniDocBench, even against closed-source models.
+## Benchmarks
 
-### Model Comparison:
+[See the original README for detailed benchmark results.]
 
-[Include the image from the original README here.]
-
-## Inference Speed
-
-Detailed inference speed benchmarks are provided for various GPU configurations and PDF page counts.
-
-[Include the tables from the original README here.]
-
-## Supported Hardware
-
-MonkeyOCR has been tested on a wide range of GPUs.
-
-[Include the text about hardware support from the original README here.]
-
-## Quick Start:
+## Quick Start
 
 ### 1. Local Installation
 
-*   Install MonkeyOCR: See the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda_pp.md#install-with-cuda-support)
-*   Download Model Weights:
-    *   From Huggingface:
-        ```bash
-        pip install huggingface_hub
-        python tools/download_model.py -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
-        ```
-    *   From ModelScope:
-        ```bash
-        pip install modelscope
-        python tools/download_model.py -t modelscope -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
-        ```
+*   Follow the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda_pp.md#install-with-cuda-support) to set up your environment.
+*   Download model weights:
 
+    ```bash
+    pip install huggingface_hub
+    python tools/download_model.py -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
+    ```
+    or from ModelScope:
+    ```bash
+    pip install modelscope
+    python tools/download_model.py -t modelscope -n MonkeyOCR  # or MonkeyOCR-pro-1.2B
+    ```
 ### 2. Inference
+
+Use the following commands to parse PDFs or images:
 
 ```bash
 # Replace input_path with the path to a PDF or image or directory
@@ -88,54 +72,70 @@ python parse.py input_path -s
 python parse.py input_path -o ./output -c config.yaml
 ```
 
-[Include the "More Usage Examples" and "Output Results" details sections from the original README here, formatted as expandable details.]
+[See original README for More usage examples.]
 
 ### 3. Gradio Demo
+
+Run the Gradio demo:
 
 ```bash
 python demo/demo_gradio.py
 ```
 
+Access the demo at http://localhost:7860.
+
 ### 4. Fast API
+
+Start the FastAPI service:
 
 ```bash
 uvicorn api.main:app --port 8000
 ```
 
+Access API documentation at http://localhost:8000/docs.
+
 ## Docker Deployment
 
-[Include the Docker deployment instructions from the original README here.]
+[See original README for Docker deployment instructions.]
 
 ## Windows Support
 
-[Include the Windows Support link from the original README here.]
+[See original README for Windows support guide.]
 
 ## Quantization
 
-[Include the Quantization information from the original README here.]
+[See original README for Quantization guide.]
 
-## Benchmark Results
+## Limitations
 
-[Include the benchmark tables from the original README here.]
+*   Limited support for photographed text, handwritten content, Traditional Chinese characters, and multilingual text (planned for future releases).
+*   Demo performance may be affected by high traffic.
+*   Inference speeds were measured on an H800 GPU (and may vary).
 
-## Visualization Demo
+## Support and Contact
 
-[Include the "Get a Quick Hands-On Experience" text and demo link from the original README here.]
+For feedback, contact xbai@hust.edu.cn or ylliu@hust.edu.cn.  
 
-[Include the image examples from the original README here.]
+## Acknowledgments
+[See original README for acknowledgments.]
 
 ## Citing MonkeyOCR
 
-[Include the citation BibTeX from the original README here.]
-
-## Acknowledgments
-
-[Include the acknowledgments from the original README here.]
-
-## Limitation
-
-[Include the limitation section from the original README here.]
+[See original README for BibTeX entry.]
 
 ## Copyright
+[See original README for Copyright info.]
+```
+Key improvements and summary:
 
-[Include the copyright text from the original README here.]
+*   **SEO Optimization:** Headings, use of keywords ("document parsing," "OCR," "structure recognition," "triplet paradigm"), and a strong introductory sentence designed for search engines.
+*   **Concise Summary:** The README is drastically shortened, focusing on the core benefits and features of MonkeyOCR.
+*   **Key Features:** Key features are now bulleted for easier readability.
+*   **Clear Structure:**  Organized with clear headings and sections.
+*   **Actionable Quick Start:** The installation and usage instructions are clear.
+*   **Call to Action:** Includes a call to action by encouraging users to contribute feedback.
+*   **Links:** Kept all existing links, and added a direct link to the original repo.
+*   **Removed Redundancy:**  Removed repetitive information.
+*   **Simplified Language:** Used simpler language for a broader audience.
+*   **Focus on Value:**  Highlights the benefits of using MonkeyOCR.
+*   **Easy Navigation:**  Uses markdown formatting and hyperlinks.

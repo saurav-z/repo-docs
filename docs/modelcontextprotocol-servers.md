@@ -1,372 +1,1035 @@
-# Model Context Protocol Servers: Unlock AI's Potential with Secure Tool and Data Access
+# Model Context Protocol Servers: Empowering LLMs with Controlled Tool Access
 
-**Empower your Large Language Models (LLMs) by securely connecting them to tools and data with the Model Context Protocol (MCP).** This repository hosts reference implementations, official and community-built servers, and resources to help you get started. Explore the [original repo](https://github.com/modelcontextprotocol/servers) for the source code and more.
+Harness the power of Large Language Models (LLMs) by giving them secure and controlled access to tools and data with the **Model Context Protocol (MCP)**.  Explore a universe of possibilities for your AI agents! 🚀 View the original repo [here](https://github.com/modelcontextprotocol/servers).
 
-## Key Features:
+## Key Features
 
-*   **Reference Implementations:** Explore example servers demonstrating MCP functionality.
-*   **Official SDK Support:** Utilize official SDKs in multiple languages for server development (C#, Go, Java, Kotlin, Python, Ruby, Rust, Swift, TypeScript).
-*   **Secure Tool Access:** Enable LLMs to securely interact with tools and data sources.
-*   **Extensible Ecosystem:**  Discover a growing collection of third-party servers built by the community.
-*   **Open Source & Community Driven:**  Contribute your own servers and improvements.
+*   **Reference Implementations:**  Explore official MCP server examples for various functionalities, built using the official SDKs.
+*   **Community-Driven Ecosystem:**  Discover and utilize a vast array of community-built servers extending MCP's capabilities across diverse domains.
+*   **Secure Access Control:**  Design secure and controlled interactions between LLMs and external resources.
+*   **Extensible & Versatile:** Build and adapt MCP servers to connect LLMs to your unique tools, data, and services.
+*   **Open Source & Community Supported:** Leverage a thriving community, contribute your own servers, and enhance the future of LLMs.
 
-## 🚀 Getting Started
+## SDKs
 
-### Server Installation
+Leverage these SDKs to build your own MCP servers:
 
-TypeScript-based servers can be run directly with `npx`:
+*   [C# MCP SDK](https://github.com/modelcontextprotocol/csharp-sdk)
+*   [Go MCP SDK](https://github.com/modelcontextprotocol/go-sdk)
+*   [Java MCP SDK](https://github.com/modelcontextprotocol/java-sdk)
+*   [Kotlin MCP SDK](https://github.com/modelcontextprotocol/kotlin-sdk)
+*   [Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk)
+*   [Ruby MCP SDK](https://github.com/modelcontextprotocol/ruby-sdk)
+*   [Rust MCP SDK](https://github.com/modelcontextprotocol/rust-sdk)
+*   [Swift MCP SDK](https://github.com/modelcontextprotocol/swift-sdk)
+*   [TypeScript MCP SDK](https://github.com/modelcontextprotocol/typescript-sdk)
 
-```bash
-npx -y @modelcontextprotocol/server-memory
-```
+## Reference Servers
 
-Python-based servers can be run using [`uvx`](https://docs.astral.sh/uv/getting-started/installation/) or [`pip`](https://pip.pypa.io/en/stable/installation/). `uvx` is generally easier to set up.
+Learn how to build your own servers with these examples.
 
-```bash
-# With uvx
-uvx mcp-server-git
+*   **[Everything](src/everything):**  A reference server showcasing prompts, resources, and tools.
+*   **[Fetch](src/fetch):**  Fetches and converts web content for efficient LLM utilization.
+*   **[Filesystem](src/filesystem):**  Enables secure file operations with customizable access controls.
+*   **[Git](src/git):**  Tools to manage Git repositories - read, search, and manipulate.
+*   **[Memory](src/memory):**  A knowledge graph-based, persistent memory system.
+*   **[Sequential Thinking](src/sequentialthinking):**  Dynamic, reflective problem-solving through sequences of thought.
+*   **[Time](src/time):**  Provides time and timezone conversion capabilities.
 
-# With pip
-pip install mcp-server-git
-python -m mcp_server_git
-```
+### Archived
 
-### Client Configuration
+Archived servers can be found at [servers-archived](https://github.com/modelcontextprotocol/servers-archived). These servers are:
+*   AWS KB Retrieval
+*   Brave Search
+*   EverArt
+*   GitHub
+*   GitLab
+*   Google Drive
+*   Google Maps
+*   PostgreSQL
+*   Puppeteer
+*   Redis
+*   Sentry
+*   Slack
+*   SQLite
 
-Configure MCP clients like Claude Desktop to use your server:
+## Third-Party Servers
 
-```json
-{
-  "mcpServers": {
-    "memory": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"]
-    }
-  }
-}
-```
-
-## 🌟 Reference Servers
-
-These servers demonstrate key MCP features and official SDK usage:
-
-*   **Everything** - Comprehensive reference/test server with prompts, resources, and tools.
-*   **Fetch** - Web content fetching and conversion.
-*   **Filesystem** - Secure file operations with access controls.
-*   **Git** - Git repository interaction tools.
-*   **Memory** - Knowledge graph-based persistent memory system.
-*   **Sequential Thinking** - Reflective problem-solving.
-*   **Time** - Time and timezone conversions.
-
-**Archived Servers**
-Older versions can be found at [servers-archived](https://github.com/modelcontextprotocol/servers-archived).
-
-## 🤝 Third-Party Servers
-
-This section showcases the vibrant MCP ecosystem:
+Explore real-world integrations built by companies and the community!
 
 ### 🎖️ Official Integrations
 
-Official integrations, maintained by companies that are building MCP servers for their platforms:
+Official integrations are maintained by companies building production ready MCP servers for their platforms. These servers allow you to access a variety of different tools. Here are a few examples:
+*   <img height="12" width="12" src="https://www.21st.dev/favicon.ico" alt="21st.dev Logo" /> **[21st.dev Magic](https://github.com/21st-dev/magic-mcp)** - Create crafted UI components inspired by the best 21st.dev design engineers.
+*   <img height="12" width="12" src="https://framerusercontent.com/images/LpSK1tSZweomrAHOMAj9Gea96lA.svg" alt="Paragon Logo" /> **[ActionKit by Paragon](https://github.com/useparagon/paragon-mcp)** - Connect to 130+ SaaS integrations (e.g. Slack, Salesforce, Gmail) with Paragon’s [ActionKit](https://www.useparagon.com/actionkit) API.
+*   <img height="12" width="12" src="https://invoxx-public-bucket.s3.eu-central-1.amazonaws.com/frontend-resources/adfin-logo-small.svg" alt="Adfin Logo" /> **[Adfin](https://github.com/Adfin-Engineering/mcp-server-adfin)** - The only platform you need to get paid - all payments in one place, invoicing and accounting reconciliations with [Adfin](https://www.adfin.com/).
+*   <img height="12" width="12" src="https://github.com/AgentOps-AI/agentops/blob/main/docs/favicon.png" alt="AgentOps Logo" /> **[AgentOps](https://github.com/AgentOps-AI/agentops-mcp)** - Provide observability and tracing for debugging AI agents with [AgentOps](https://www.agentops.ai/) API.
 
-*   [21st.dev Magic](https://github.com/21st-dev/magic-mcp)
-*   [ActionKit by Paragon](https://github.com/useparagon/paragon-mcp)
-*   [Adfin](https://github.com/Adfin-Engineering/mcp-server-adfin)
-*   [AgentOps](https://github.com/AgentOps-AI/agentops-mcp)
-*   [AgentQL](https://github.com/tinyfish-io/agentql-mcp)
-*   [AgentRPC](https://github.com/agentrpc/agentrpc)
-*   [Agentset](https://github.com/agentset-ai/mcp-server)
-*   [Aiven](https://github.com/Aiven-Open/mcp-aiven)
-*   [Alation](https://github.com/Alation/alation-ai-agent-sdk)
-*   [Alby Bitcoin Payments](https://github.com/getAlby/mcp)
-*   [Algolia](https://github.com/algolia/mcp)
-*   [Alibaba Cloud AnalyticDB for MySQL](https://github.com/aliyun/alibabacloud-adb-mysql-mcp-server)
-*   [Alibaba Cloud AnalyticDB for PostgreSQL](https://github.com/aliyun/alibabacloud-adbpg-mcp-server)
-*   [Alibaba Cloud DataWorks](https://github.com/aliyun/alibabacloud-dataworks-mcp-server)
-*   [Alibaba Cloud OpenSearch](https://github.com/aliyun/alibabacloud-opensearch-mcp-server)
-*   [Alibaba Cloud OPS](https://github.com/aliyun/alibaba-cloud-ops-mcp-server)
-*   [Alibaba Cloud RDS](https://github.com/aliyun/alibabacloud-rds-openapi-mcp-server)
-*   [AlipayPlus](https://github.com/alipay/global-alipayplus-mcp)
-*   [AllVoiceLab](https://www.allvoicelab.com/mcp)
-*   [Alpaca](https://github.com/alpacahq/alpaca-mcp-server)
-*   [AlphaVantage](https://github.com/calvernaz/alphavantage)
-*   [Antom](https://github.com/alipay/global-antom-mcp)
-*   [Anytype](https://github.com/anyproto/anytype-mcp)
-*   [Apache Doris](https://github.com/apache/doris-mcp-server)
-*   [Apache IoTDB](https://github.com/apache/iotdb-mcp-server)
-*   [Apache Pinot](https://github.com/startreedata/mcp-pinot)
-*   [Apify](https://github.com/apify/actors-mcp-server)
-*   [APIMatic MCP](https://github.com/apimatic/apimatic-validator-mcp)
-*   [Apollo Graph](https://github.com/apollographql/apollo-mcp-server/)
-*   [Aqara MCP Server](https://github.com/aqara/aqara-mcp-server/)
-*   [Archbee](https://www.npmjs.com/package/@archbee/mcp)
-*   [Arize Phoenix](https://github.com/Arize-ai/phoenix/tree/main/js/packages/phoenix-mcp)
-*   [Armor Crypto MCP](https://github.com/armorwallet/armor-crypto-mcp)
-*   [Asgardeo](https://github.com/asgardeo/asgardeo-mcp-server)
-*   [Astra DB](https://github.com/datastax/astra-db-mcp)
-*   [Atla](https://github.com/atla-ai/atla-mcp-server)
-*   [Atlan](https://github.com/atlanhq/agent-toolkit/tree/main/modelcontextprotocol)
-*   [Atlassian](https://www.atlassian.com/platform/remote-mcp-server)
-*   [AtomGit](https://atomgit.com/atomgit-open-source-ecosystem/atomgit-mcp-server)
-*   [Audiense Insights](https://github.com/AudienseCo/mcp-audiense-insights)
-*   [Auth0](https://github.com/auth0/auth0-mcp-server)
-*   [Authenticator App · 2FA](https://github.com/firstorderai/authenticator_mcp)
-*   [AWS](https://github.com/awslabs/mcp)
-*   [Axiom](https://github.com/axiomhq/mcp-server-axiom)
-*   [Azure](https://github.com/Azure/azure-mcp)
-*   [Azure DevOps](https://github.com/microsoft/azure-devops-mcp)
-*   [Baidu Map](https://github.com/baidu-maps/mcp)
-*   [Bankless Onchain](https://github.com/bankless/onchain-mcp)
-*   [BICScan](https://github.com/ahnlabio/bicscan-mcp)
-*   [Bitrise](https://github.com/bitrise-io/bitrise-mcp)
-*   [BoldSign](https://github.com/boldsign/boldsign-mcp)
-*   [Boost.space](https://github.com/boostspace/boostspace-mcp-server)
-*   [Box](https://github.com/box-community/mcp-server-box)
-*   [BrightData](https://github.com/luminati-io/brightdata-mcp)
-*   [Browserbase](https://github.com/browserbase/mcp-server-browserbase)
-*   [BrowserStack](https://github.com/browserstack/mcp-server)
-*   [Bucket](https://github.com/bucketco/bucket-javascript-sdk/tree/main/packages/cli#model-context-protocol)
-*   [Buildkite](https://github.com/buildkite/buildkite-mcp-server)
-*   [Buildable](https://github.com/chunkydotdev/bldbl-mcp)
-*   [BuiltWith](https://github.com/builtwith/mcp)
-*   [Burp Suite](https://github.com/PortSwigger/mcp-server)
-*   [Cal.com](https://www.npmjs.com/package/@calcom/cal-mcp?activeTab=readme)
-*   [Campertunity](https://github.com/campertunity/mcp-server)
-*   [Canva](https://www.canva.dev/docs/apps/mcp-server/)
-*   [Cartesia](https://github.com/cartesia-ai/cartesia-mcp)
-*   [Cashfree](https://github.com/cashfree/cashfree-mcp)
-*   [CB Insights](https://github.com/cbinsights/cbi-mcp-server)
-*   [Chargebee](https://github.com/chargebee/agentkit/tree/main/modelcontextprotocol)
-*   [Cheqd](https://github.com/cheqd/mcp-toolkit)
-*   [Chiki StudIO](https://chiki.studio/galimybes/mcp/)
-*   [Chroma](https://github.com/chroma-core/chroma-mcp)
-*   [Chronulus AI](https://github.com/ChronulusAI/chronulus-mcp)
-*   [CircleCI](https://github.com/CircleCI-Public/mcp-server-circleci)
-*   [ClickHouse](https://github.com/ClickHouse/mcp-clickhouse)
-*   [CloudBase](https://github.com/TencentCloudBase/CloudBase-AI-ToolKit)
-*   [CloudBees](https://docs.cloudbees.com/docs/cloudbees-mcp/latest/)
-*   [Cloudera Iceberg](https://github.com/cloudera/iceberg-mcp-server)
-*   [Cloudflare](https://github.com/cloudflare/mcp-server-cloudflare)
-*   [Cloudinary](https://github.com/cloudinary/mcp-servers)
-*   [Codacy](https://github.com/codacy/codacy-mcp-server/)
-*   [CodeLogic](https://github.com/CodeLogicIncEngineering/codelogic-mcp-server)
-*   [CoinGecko](https://github.com/coingecko/coingecko-typescript/tree/main/packages/mcp-server)
-*   [Comet Opik](https://github.com/comet-ml/opik-mcp)
-*   [Conductor](https://github.com/conductor-oss/conductor-mcp)
-*   [Composio](https://docs.composio.dev/docs/mcp-overview#-getting-started)
-*   [Confluent](https://github.com/confluentinc/mcp-confluent)
-*   [Contrast Security](https://github.com/Contrast-Security-OSS/mcp-contrast)
-*   [Convex](https://stack.convex.dev/convex-mcp-server)
-*   [Cortex](https://github.com/cortexapps/cortex-mcp)
-*   [Couchbase](https://github.com/Couchbase-Ecosystem/mcp-server-couchbase)
-*   [CRIC Wuye AI](https://github.com/wuye-ai/mcp-server-wuye-ai)
-*   [CTERA Edge Filer](https://github.com/ctera/mcp-ctera-edge)
-*   [CTERA Portal](https://github.com/ctera/mcp-ctera-core)
-*   [Cycode](https://github.com/cycodehq/cycode-cli#mcp-command-experiment)
-*   [Dart](https://github.com/its-dart/dart-mcp-server)
-*   [DataHub](https://github.com/acryldata/mcp-server-datahub)
-*   [Daytona](https://github.com/daytonaio/daytona/tree/main/apps/cli/mcp)
-*   [Debugg.AI](https://github.com/debugg-ai/debugg-ai-mcp)
-*   [DeepL](https://github.com/DeepLcom/deepl-mcp-server)
-*   [Defang](https://github.com/DefangLabs/defang/blob/main/src/pkg/mcp/README.md)
-*   [Detailer](https://detailer.ginylil.com/)
-*   [DevHub](https://github.com/devhub/devhub-cms-mcp)
-*   [DevRev](https://github.com/devrev/mcp-server)
-*   [DexPaprika (CoinPaprika)](https://github.com/coinpaprika/dexpaprika-mcp)
-*   [Dicom](https://github.com/ChristianHinge/dicom-mcp)
-*   [Drata](https://drata.com/mcp)
-*   [Dumpling AI](https://github.com/Dumpling-AI/mcp-server-dumplingai)
-*   [Dynatrace](https://github.com/dynatrace-oss/dynatrace-mcp)
-*   [E2B](https://github.com/e2b-dev/mcp-server)
-*   [Edgee](https://github.com/edgee-cloud/mcp-server-edgee)
-*   [EduBase](https://github.com/EduBase/MCP)
-*   [Elasticsearch](https://github.com/elastic/mcp-server-elasticsearch)
-*   [Endor Labs](https://docs.endorlabs.com/deployment/ide/mcp/)
-*   [eSignatures](https://github.com/esignaturescom/mcp-server-esignatures)
-*   [ESP RainMaker](https://github.com/espressif/esp-rainmaker-mcp)
-*   [Exa](https://github.com/exa-labs/exa-mcp-server)
-*   [FalkorDB](https://github.com/FalkorDB/FalkorDB-MCPServer)
-*   [fetchSERP](https://github.com/fetchSERP/fetchserp-mcp-server-node)
-*   [Fewsats](https://github.com/Fewsats/fewsats-mcp)
-*   [Fibery](https://github.com/Fibery-inc/fibery-mcp-server)
-*   [Financial Datasets](https://github.com/financial-datasets/mcp-server)
-*   [Firebase](https://github.com/firebase/firebase-tools/blob/master/src/mcp)
-*   [Firecrawl](https://github.com/mendableai/firecrawl-mcp-server)
-*   [Firefly](https://github.com/gofireflyio/firefly-mcp)
-*   [Fireproof](https://github.com/fireproof-storage/mcp-database-server)
-*   [FIXParser](https://gitlab.com/logotype/fixparser/-/tree/main/packages/fixparser-plugin-mcp)
-*   [Fluid Attacks](https://github.com/fluidattacks/mcp)
-*   [ForeverVM](https://github.com/jamsocket/forevervm/tree/main/javascript/mcp-server)
-*   [GibsonAI](https://github.com/GibsonAI/mcp)
-*   [Gitea](https://gitea.com/gitea/gitea-mcp)
-*   [Gitee](https://github.com/oschina/mcp-gitee)
-*   [GitGuardian](https://github.com/GitGuardian/gg-mcp)
-*   [GitHub](https://github.com/github/github-mcp-server)
-*   [Glean](https://github.com/gleanwork/mcp-server)
-*   [Globalping](https://github.com/jsdelivr/globalping-mcp-server)
-*   [gNucleus Text-To-CAD](https://github.com/gNucleus/text-to-cad-mcp)
-*   [Google Cloud Run](https://github.com/GoogleCloudPlatform/cloud-run-mcp)
-*   [GoLogin MCP server](https://github.com/gologinapp/gologin-mcp)
-*   [gotoHuman](https://github.com/gotohuman/gotohuman-mcp-server)
-*   [Grafana](https://github.com/grafana/mcp-grafana)
-*   [Grafbase](https://github.com/grafbase/grafbase/tree/main/crates/mcp)
-*   [Grain](https://grain.com/release-note/06-18-2025)
-*   [Graphlit](https://github.com/graphlit/graphlit-mcp-server)
-*   [GreptimeDB](https://github.com/GreptimeTeam/greptimedb-mcp-server)
-*   [GROWI](https://github.com/growilabs/growi-mcp-server)
-*   [Gyazo](https://github.com/nota/gyazo-mcp-server)
-*   [Harper](https://github.com/HarperDB/mcp-server)
-*   [Heroku](https://github.com/heroku/heroku-mcp-server)
-*   [Hiveflow](https://github.com/hiveflowai/hiveflow-mcp-server)
-*   [Hologres](https://github.com/aliyun/alibabacloud-hologres-mcp-server)
-*   [Homebrew](https://docs.brew.sh/MCP-Server)
-*   [Honeycomb](https://github.com/honeycombio/honeycomb-mcp)
-*   [HubSpot](https://developer.hubspot.com/mcp)
-*   [Hugging Face](https://huggingface.co/settings/mcp)
-*   [Hunter](https://github.com/hunter-io/hunter-mcp)
-*   [Hyperbolic](https://github.com/HyperbolicLabs/hyperbolic-mcp)
-*   [Hyperbrowser](https://github.com/hyperbrowserai/mcp)
-*   [IBM wxflows](https://github.com/IBM/wxflows/tree/main/examples/mcp/javascript)
-*   [Inbox Zero](https://github.com/elie222/inbox-zero/tree/main/apps/mcp-server)
-*   [Inflectra Spira](https://github.com/Inflectra/mcp-server-spira)
-*   [Inkeep](https://github.com/inkeep/mcp-server-python)
-*   [Integration App](https://github.com/integration-app/mcp-server)
-*   [IP2Location.io](https://github.com/ip2location/mcp-ip2location-io)
-*   [IPLocate](https://github.com/iplocate/mcp-server-iplocate)
-*   [JetBrains](https://github.com/JetBrains/mcp-jetbrains)
-*   [JFrog](https://github.com/jfrog/mcp-jfrog)
-*   [Kagi Search](https://github.com/kagisearch/kagimcp)
-*   [Keboola](https://github.com/keboola/keboola-mcp-server)
-*   [KeywordsPeopleUse.com](https://github.com/data-skunks/kpu-mcp)
-*   [KirokuForms](https://www.kirokuforms.com/ai/mcp)
-*   [Klavis ReportGen](https://github.com/Klavis-AI/klavis/tree/main/mcp_servers/report_generation)
-*   [Klaviyo](https://developers.klaviyo.com/en/docs/klaviyo_mcp_server)
-*   [kluster.ai](https://docs.kluster.ai/get-started/mcp/overview/)
-*   [Knit MCP Server](https://developers.getknit.dev/docs/knit-mcp-server-getting-started)
-*   [Knock MCP Server](https://github.com/knocklabs/agent-toolkit#model-context-protocol-mcp)
-*   [KurrentDB](https://github.com/kurrent-io/mcp-server)
-*   [Kuzu](https://github.com/kuzudb/kuzu-mcp-server)
-*   [KWDB](https://github.com/KWDB/kwdb-mcp-server)
-*   [Label Studio](https://github.com/HumanSignal/label-studio-mcp-server)
-*   [Lambda Capture](https://github.com/lambda-capture/mcp-server)
-*   [Langfuse Prompt Management](https://github.com/langfuse/mcp-server-langfuse)
-*   [Lara Translate](https://github.com/translated/lara-mcp)
-*   [Last9](https://github.com/last9/last9-mcp-server)
-*   [LaunchDarkly](https://github.com/launchdarkly/mcp-server)
-*   [LINE](https://github.com/line/line-bot-mcp-server)
-*   [Linear](https://linear.app/docs/mcp)
-*   [Lingo.dev](https://github.com/lingodotdev/lingo.dev/blob/main/mcp.md)
-*   [LinkedIn MCP Runner](https://github.com/ertiqah/linkedin-mcp-runner)
-*   [Lisply](https://github.com/gornskew/lisply-mcp)
-*   [Litmus.io](https://github.com/litmusautomation/litmus-mcp-server)
-*   [Liveblocks](https://github.com/liveblocks/liveblocks-mcp-server)
-*   [Logfire](https://github.com/pydantic/logfire-mcp)
-*   [Magic Meal Kits](https://github.com/pureugong/mmk-mcp)
-*   [Mailgun](https://github.com/mailgun/mailgun-mcp-server)
-*   [Mailjet](https://github.com/mailgun/mailjet-mcp-server)
-*   [Make](https://github.com/integromat/make-mcp-server)
-*   [Mapbox](https://github.com/mapbox/mcp-server)
-*   [MariaDB](https://github.com/mariadb/mcp)
-*   [mcp-discovery](https://github.com/rust-mcp-stack/mcp-discovery)
-*   [MCP Toolbox for Databases](https://github.com/googleapis/genai-toolbox)
-*   [Meilisearch](https://github.com/meilisearch/meilisearch-mcp)
-*   [Memgraph](https://github.com/memgraph/ai-toolkit/tree/main/integrations/mcp-memgraph)
-*   [Mercado Libre](https://mcp.mercadolibre.com/)
-*   [Mercado Pago](https://mcp.mercadopago.com/)
-*   [Metoro](https://github.com/metoro-io/metoro-mcp-server)
-*   [Microsoft Clarity](https://github.com/microsoft/clarity-mcp-server)
-*   [Microsoft Dataverse](https://go.microsoft.com/fwlink/?linkid=2320176)
-*   [Microsoft Learn Docs](https://github.com/microsoftdocs/mcp)
-*   [Milvus](https://github.com/zilliztech/mcp-server-milvus)
-*   [mimilabs](https://www.mimilabs.ai/mcp)
-*   [Mobb](https://github.com/mobb-dev/bugsy?tab=readme-ov-file#model-context-protocol-mcp-server)
-*   [Momento](https://github.com/momentohq/mcp-momento)
-*   [MongoDB](https://github.com/mongodb-js/mongodb-mcp-server)
-*   [MotherDuck](https://github.com/motherduckdb/mcp-server-motherduck)
-*   [Mulesoft](https://www.npmjs.com/package/@mulesoft/mcp-server)
-*   [Multiplayer](https://www.multiplayer.app/docs/ai/mcp-server)
-*   [NanoVMs](https://github.com/nanovms/ops-mcp)
-*   [Needle](https://github.com/needle-ai/needle-mcp)
-*   [Neo4j](https://github.com/neo4j-contrib/mcp-neo4j/)
-*   [Neo4j Agent Memory](https://github.com/knowall-ai/mcp-neo4j-agent-memory)
-*   [Neo4j GDS](https://github.com/neo4j-contrib/gds-agent)
-*   [Neon](https://github.com/neondatabase/mcp-server-neon)
-*   [Nerve](https://github.com/nerve-hq/nerve-mcp-server)
-*   [Netdata](https://github.com/netdata/netdata/blob/master/src/web/mcp/README.md)
-*   [Netlify](https://docs.netlify.com/welcome/build-with-ai/netlify-mcp-server/)
-*   [Nile](https://github.com/niledatabase/nile-mcp-server)
-*   [Nodit](https://github.com/noditlabs/nodit-mcp-server)
-*   [Norman Finance](https://github.com/norman-finance/norman-mcp-server)
-*   [Notion](https://github.com/makenotion/notion-mcp-server#readme)
-*   [Nutrient](https://github.com/PSPDFKit/nutrient-dws-mcp-server)
-*   [Nx](https://github.com/nrwl/nx-console/blob/master/apps/nx-mcp)
-*   [OceanBase](https://github.com/oceanbase/mcp-oceanbase)
-*   [Octagon](https://github.com/OctagonAI/octagon-mcp-server)
-*   [OctoEverywhere](https://github.com/OctoEverywhere/mcp)
-*   [Offorte](https://github.com/offorte/offorte-mcp-server#readme)
-*   [OlaMaps](https://pypi.org/project/ola-maps-mcp-server)
-*   [ONLYOFFICE DocSpace](https://github.com/ONLYOFFICE/docspace-mcp)
-*   [OP.GG](https://github.com/opgginc/opgg-mcp)
-*   [Openfort](https://github.com/openfort-xyz/mcp)
-*   [OpenMetadata](https://open-metadata.org/mcp)
-*   [OpenSearch](https://github.com/opensearch-project/opensearch-mcp-server-py)
-*   [OpsLevel](https://github.com/opslevel/opslevel-mcp)
-*   [Optuna](https://github.com/optuna/optuna-mcp)
-*   [Oracle](https://docs.oracle.com/en/database/oracle/sql-developer-command-line/25.2/sqcug/starting-and-managing-sqlcl-mcp-server.html#GUID-5F916B5D-8670-42BD-9F8B-D3D2424EC47E)
-*   [Orshot](https://github.com/rishimohan/orshot-mcp-server)
-*   [Oxylabs](https://github.com/oxylabs/oxylabs-mcp)
-*   [Paddle](https://github.com/PaddleHQ/paddle-mcp-server)
-*   [PaddleOCR](https://paddlepaddle.github.io/PaddleOCR/latest/en/version3.x/deployment/mcp_server.html)
-*   [PagerDuty](https://github.com/PagerDuty/pagerduty-mcp-server)
-*   [Pagos](https://github.com/pagos-ai/pagos-mcp)
-*   [PAIML MCP Agent Toolkit](https://github.com/paiml/paiml-mcp-agent-toolkit)
-*   [Paper](https://github.com/paperinvest/mcp-server)
-*   [Patronus AI](https://github.com/patronus-ai/patronus-mcp-server)
-*   [PayPal](https://mcp.paypal.com)
-*   [Pearl](https://github.com/Pearl-com/pearl_mcp_server)
-*   [Perplexity](https://github.com/ppl-ai/modelcontextprotocol)
-*   [PGA (Golf)](https://mcp.pga.com)
-*   [Pinecone](https://github.com/pinecone-io/pinecone-mcp)
-*   [Pinecone Assistant](https://github.com/pinecone-io/assistant-mcp)
-*   [Pipedream](https://github.com/PipedreamHQ/pipedream/tree/master/modelcontextprotocol)
-*   [PlayCanvas](https://github.com/playcanvas/editor-mcp-server)
-*   [Plugged.in](https://github.com/VeriTeknik/pluggedin-mcp)
-*   [Port IO](https://github.com/port-labs/port-mcp-server)
-*   [PostHog](https://github.com/posthog/mcp)
-*   [Postman API](https://github.com/postmanlabs/postman-api-mcp)
-*   [Powerdrill](https://github.com/powerdrillai/powerdrill-mcp)
-*   [Prisma](https://www.prisma.io/docs/postgres/mcp-server)
-*   [Probe.dev](https://docs.probe.dev/guides/mcp-integration)
-*   [PromptHouse](https://github.com/newtype-01/prompthouse-mcp)
-*   [proxymock](https://docs.speedscale.com/proxymock/reference/mcp/)
-*   [PubNub](https://github.com/pubnub/pubnub-mcp-server)
-*   [Pulumi](https://github.com/pulumi/mcp-server)
-*   [Pure.md](https://github.com/puremd/puremd-mcp)
-*   [Put.io](https://github.com/putdotio/putio-mcp-server)
-*   [Qdrant](https://github.com/qdrant/mcp-server-qdrant/)
-*   [Qorus](https://qoretechnologies.com/manual/qorus/current/qorus/sysarch.html#mcp_server)
-*   [Quickchat AI](https://github.com/incentivai/quickchat-ai-mcp)
-*   [Ragie](https://github.com/ragieai/ragie-mcp-server/)
-*   [Ramp](https://github.com/ramp-public/ramp-mcp)
-*   [Raygun](https://github.com/MindscapeHQ/mcp-server-raygun)
-*   [Razorpay](https://github.com/razorpay/razorpay-mcp-server)
-*   [Recraft](https://github.com/recraft-ai/mcp-recraft-server)
-*   [Redis](https://github.com/redis/mcp-redis/)
-*   [Redis Cloud API](https://github.com/redis/mcp-redis-cloud/)
-*   [Reexpress](https://github.com/ReexpressAI/reexpress_mcp_server)
-*   [Rember](https://github.com/rember/rember-mcp)
-*   [Revit](https://github.com/NonicaTeam/AI-Connector-for-Revit)
-*   [Rill Data](https://docs.rilldata.com/explore/mcp)
-*   [Riza](https://github.com/riza-io/riza-mcp)
-*   [Roblox Studio](https://github.com/Roblox/studio-rust-mcp-server)
-*   [Rodin](https://github.com/DeemosTech/rodin-api-mcp)
-*   [Root Signals](https://github.com/root-signals/root-signals-mcp)
-*   [Routine](https://github.com/routineco/mcp-server)
-*   [SafeDep](https://github.com/safedep/vet/blob/main/docs/mcp.md)
-*   [SafeLine](https://github.com/chaitin/SafeLine/tree/main/mcp_server)
-*   [ScrAPI](https://github.com/DevEnterpriseSoftware/scrapi-mcp)
-*   [ScreenshotMCP](https://github.com/upnorthmedia/ScreenshotMCP/)
-*   [ScreenshotOne](https://github.com/screenshotone/mcp/)
-*   [Search1API](https://github.com/fatwang2/search1api-mcp)
-*   [Secureframe](https://github.com/secureframe/secureframe-mcp-server)
-*   [Sem
+  *(... and many more! See the full list below...)*
+
+*   [Official Integrations Full List]
+    *   21st.dev Magic
+    *   ActionKit by Paragon
+    *   Adfin
+    *   AgentOps
+    *   AgentQL
+    *   AgentRPC
+    *   Agentset
+    *   Aiven
+    *   Alation
+    *   Alby Bitcoin Payments
+    *   Algolia
+    *   Alibaba Cloud AnalyticDB for MySQL
+    *   Alibaba Cloud AnalyticDB for PostgreSQL
+    *   Alibaba Cloud DataWorks
+    *   Alibaba Cloud OpenSearch
+    *   Alibaba Cloud OPS
+    *   Alibaba Cloud RDS
+    *   AlipayPlus
+    *   AllVoiceLab
+    *   Alpaca
+    *   AlphaVantage
+    *   Antom
+    *   Anytype
+    *   Apache Doris
+    *   Apache IoTDB
+    *   Apache Pinot
+    *   Apify
+    *   APIMatic MCP
+    *   Apollo MCP Server
+    *   Aqara MCP Server
+    *   Archbee
+    *   Arize Phoenix
+    *   Armor Crypto MCP
+    *   Asgardeo
+    *   Astra DB
+    *   Atla
+    *   Atlan
+    *   Atlassian
+    *   AtomGit
+    *   Audiense Insights
+    *   Auth0
+    *   Authenticator App · 2FA
+    *   AWS
+    *   Axiom
+    *   Azure
+    *   Azure DevOps
+    *   Baidu Map
+    *   Bankless Onchain
+    *   BICScan
+    *   Bitrise
+    *   BoldSign
+    *   Boost.space
+    *   Box
+    *   BrightData
+    *   Browserbase
+    *   BrowserStack
+    *   Bucket
+    *   Buildkite
+    *   Buildable
+    *   BuiltWith
+    *   Burp Suite
+    *   Cal.com
+    *   Campertunity
+    *   Canva
+    *   Cartesia
+    *   Cashfree
+    *   CB Insights
+    *   Chargebee
+    *   Cheqd
+    *   Chiki StudIO
+    *   Chroma
+    *   Chronulus AI
+    *   CircleCI
+    *   ClickHouse
+    *   CloudBase
+    *   CloudBees
+    *   Cloudera Iceberg
+    *   Cloudflare
+    *   Cloudinary
+    *   Codacy
+    *   CodeLogic
+    *   CoinGecko
+    *   Comet Opik
+    *   Conductor
+    *   Composio
+    *   Confluent
+    *   Contrast Security
+    *   Convex
+    *   Cortex
+    *   Couchbase
+    *   CRIC Wuye AI
+    *   CTERA Edge Filer
+    *   CTERA Portal
+    *   Cycode
+    *   Dart
+    *   DataHub
+    *   Daytona
+    *   Debugg.AI
+    *   DeepL
+    *   Defang
+    *   Detailer
+    *   DevHub
+    *   DevRev
+    *   DexPaprika (CoinPaprika)
+    *   Dicom
+    *   Drata
+    *   Dumpling AI
+    *   Dynatrace
+    *   E2B
+    *   Edgee
+    *   EduBase
+    *   Elasticsearch
+    *   Endor Labs
+    *   eSignatures
+    *   ESP RainMaker
+    *   Exa
+    *   FalkorDB
+    *   fetchSERP
+    *   Fewsats
+    *   Fibery
+    *   Financial Datasets
+    *   Firebase
+    *   Firecrawl
+    *   Firefly
+    *   Fireproof
+    *   FIXParser
+    *   Fluid Attacks
+    *   ForeverVM
+    *   GibsonAI
+    *   Gitea
+    *   Gitee
+    *   GitGuardian
+    *   GitHub
+    *   GitKraken
+    *   Glean
+    *   Globalping
+    *   gNucleus Text-To-CAD
+    *   Google Cloud Run
+    *   GoLogin MCP server
+    *   gotoHuman
+    *   Grafana
+    *   Grafbase
+    *   Grain
+    *   Graphlit
+    *   GreptimeDB
+    *   GROWI
+    *   Gyazo
+    *   Harper
+    *   Heroku
+    *   Hiveflow
+    *   Hologres
+    *   Homebrew
+    *   Honeycomb
+    *   HubSpot
+    *   Hugging Face
+    *   Hunter
+    *   Hyperbolic
+    *   Hyperbrowser
+    *   IBM wxflows
+    *   Inbox Zero
+    *   Inflectra Spira
+    *   Inkeep
+    *   Integration App
+    *   IP2Location.io
+    *   IPLocate
+    *   Jellyfish
+    *   JetBrains
+    *   JFrog
+    *   Kagi Search
+    *   Keboola
+    *   KeywordsPeopleUse.com
+    *   KirokuForms
+    *   Klavis ReportGen
+    *   Klaviyo
+    *   kluster.ai
+    *   Knit MCP Server
+    *   Knock MCP Server
+    *   KurrentDB
+    *   Kuzu
+    *   KWDB
+    *   Label Studio
+    *   Lambda Capture
+    *   Langfuse Prompt Management
+    *   Lara Translate
+    *   Last9
+    *   LaunchDarkly
+    *   LINE
+    *   Linear
+    *   Lingo.dev
+    *   LiGo
+    *   Lisply
+    *   Litmus.io
+    *   Liveblocks
+    *   Logfire
+    *   Magic Meal Kits
+    *   Mailgun
+    *   Mailjet
+    *   Make
+    *   Mapbox
+    *   MariaDB
+    *   mcp-discovery
+    *   MCP Toolbox for Databases
+    *   Meilisearch
+    *   Memgraph
+    *   Mercado Libre
+    *   Mercado Pago
+    *   Metoro
+    *   Microsoft Clarity
+    *   Microsoft Dataverse
+    *   Microsoft Learn Docs
+    *   Milvus
+    *   mimilabs
+    *   Mobb
+    *   Momento
+    *   MongoDB
+    *   MotherDuck
+    *   Mulesoft
+    *   Multiplayer
+    *   NanoVMs
+    *   Needle
+    *   Neo4j
+    *   Neo4j Agent Memory
+    *   Neo4j GDS
+    *   Neon
+    *   Nerve
+    *   Netdata
+    *   Netlify
+    *   Nile
+    *   Nodit
+    *   Norman Finance
+    *   Notion
+    *   Nutrient
+    *   Nx
+    *   OceanBase
+    *   Octagon
+    *   OctoEverywhere
+    *   Offorte
+    *   OlaMaps
+    *   ONLYOFFICE DocSpace
+    *   OP.GG
+    *   Openfort
+    *   OpenMetadata
+    *   OpenSearch
+    *   OpsLevel
+    *   Optuna
+    *   Oracle
+    *   Orshot
+    *   Oxylabs
+    *   Paddle
+    *   PaddleOCR
+    *   PagerDuty
+    *   Pagos
+    *   PAIML MCP Agent Toolkit
+    *   Paper
+    *   Patronus AI
+    *   PayPal
+    *   Pearl
+    *   Perplexity
+    *   PGA (Golf)
+    *   Pinecone
+    *   Pinecone Assistant
+    *   Pipedream
+    *   PlayCanvas
+    *   Plugged.in
+    *   Port IO
+    *   PostHog
+    *   Postman API
+    *   Powerdrill
+    *   Prisma
+    *   Probe.dev
+    *   PromptHouse
+    *   proxymock
+    *   PubNub
+    *   Pulumi
+    *   Pure.md
+    *   Put.io
+    *   Qdrant
+    *   Qorus
+    *   Quickchat AI
+    *   Ragie
+    *   Ramp
+    *   Raygun
+    *   Razorpay
+    *   Recraft
+    *   Redis
+    *   Redis Cloud API
+    *   Reexpress
+    *   Rember
+    *   Revit
+    *   Rill Data
+    *   Riza
+    *   Roblox Studio
+    *   Rodin
+    *   Root Signals
+    *   Routine
+    *   SafeDep
+    *   SafeLine
+    *   ScrAPI
+    *   ScreenshotMCP
+    *   ScreenshotOne
+    *   Search1API
+    *   SearchUnify
+    *   Secureframe
+    *   Semgrep
+    *   Sequa.AI
+    *   Shortcut
+    *   SingleStore
+    *   SmartBear
+    *   Smooth Operator
+    *   Snyk
+    *   SonarQube
+    *   Sophtron
+    *   StackHawk
+    *   StarRocks
+    *   Steadybit
+    *   Stripe
+    *   Sunra AI
+    *   Supabase
+    *   Supadata
+    *   Tako
+    *   Tavily
+    *   Teradata
+    *   Terraform
+    *   TextIn
+    *   Thena
+    *   ThinQ Connect
+    *   Thirdweb
+    *   ThoughtSpot
+    *   Tianji
+    *   TiDB
+    *   Tinybird
+    *   Tldv
+    *   Token Metrics
+    *   TomTom-MCP
+    *   Trade Agent
+    *   Twelve Data
+    *   Twilio
+    *   Uberall
+    *   UnifAI
+    *   Unstructured
+    *   Upstash
+    *   Vantage
+    *   VariFlight
+    *   VCAgents
+    *   Vectorize
+    *   Verbwire
+    *   Vercel
+    *   Verodat
+    *   VeyraX
+    *   VictoriaMetrics
+    *   VideoDB Director
+    *   VisionAgent MCP
+    *   Vizro
+    *   WaveSpeed
+    *   WayStation
+    *   Webflow
+    *   WebScraping.AI
+    *   Winston AI
+    *   Xero
+    *   YDB
+    *   Yeelight MCP Server
+    *   YepCode
+    *   YugabyteDB
+    *   Yunxin
+    *   Zapier
+    *   ZenML
+    *   ZIZAI Recruitment
+
+### 🌎 Community Servers
+
+Discover innovative applications developed by the community. These servers are untested and should be used at your own risk.
+
+*(... and many more! See the full list below...)*
+*   [Community Servers Full List]
+    *   1Panel
+    *   A2A
+    *   Ableton Live
+    *   Adobe Commerce
+    *   Actor Critic Thinking
+    *   AgentBay
+    *   AgentMode
+    *   AI Agent Marketplace Index
+    *   AI Tasks
+    *   ai-Bible
+    *   Airbnb
+    *   Airflow
+    *   Airtable
+    *   Algorand
+    *   Amadeus
+    *   Amazon Ads
+    *   AniList
+    *   Anki
+    *   AntV Chart
+    *   Any Chat Completions
+    *   Apache Gravitino(incubating)
+    *   APIWeaver
+    *   Apollo IO MCP Server
+    *   Apple Books
+    *   Apple Calendar
+    *   Apple Docs
+    *   Apple Script
+    *   APT MCP
+    *   Aranet4
+    *   ArangoDB
+    *   Arduino
+    *   arXiv API
+    *   arxiv-latex-mcp
+    *   Atlassian
+    *   Atlassian Server
+    *   Attestable MCP
+    *   Audius
+    *   AutoML
+    *   AWS
+    *   AWS Athena
+    *   AWS Cognito
+    *   AWS Cost Explorer
+    *   AWS Resources Operations
+    *   AWS S3
+    *   AWS SES
+    *   Azure ADX
+    *   Azure DevOps
+    *   Azure MCP Hub
+    *   Azure OpenAI DALL-E 3 MCP Server
+    *   Azure Wiki Search
+    *   Baidu AI Search
+    *   BambooHR MCP
+    *   Base Free USDC Transfer
+    *   Basic Memory
+    *   BGG MCP
+    *   Bible
+    *   BigQuery
+    *   Bilibili
+    *   Binance
+    *   Bing Web Search API
+    *   BioMCP
+    *   bioRxiv
+    *   Bitable MCP
+    *   Blender
+    *   Blender MCP
+    *   Blockchain MCP
+    *   Bluesky
+    *   Bluetooth MCP Server
+    *   BNBChain MCP
+    *   Braintree
+    *   Brazilian Law
+    *   BreakoutRoom
+    *   Browser MCP
+    *   browser-use
+    *   BrowserLoop
+    *   Bsc-mcp
+    *   BVG MCP Server - (Unofficial)
+    *   Bybit
+    *   CAD-MCP
+    *   Calculator
+    *   CalDAV MCP
+    *   Calendly-mcp-server
+    *   Catalysis Hub
+    *   CCTV VMS MCP
+    *   CFBD API
+    *   ChatMCP
+    *   ChatSum
+    *   Chess.com
+    *   ChessPal Chess Engine (stockfish)
+    *   Chroma
+    *   Chrome history
+    *   Claude Thread Continuity
+    *   ClaudePost
+    *   CLDGeminiPDF Analyzer
+    *   ClearML MCP
+    *   ClickUp
+    *   Cloudinary
+    *   CockroachDB
+    *   CockroachDB MCP Server
+    *   code-assistant
+    *   code-context-provider-mcp
+    *   code-executor
+    *   code-sandbox-mcp
+    *   cognee-mcp
+    *   coin_api_mcp
+    *   CoinMarketCap
+    *   commands
+    *   computer-control-mcp
+    *   Computer-Use - Remote MacOS Use
+    *   Congress.gov API
+    *   consul-mcp
+    *   consult7
+    *   Contentful-mcp
+    *   Context Crystallizer
+    *   context-portal
+    *   CreateveAI Nexus
+    *   Creatify
+    *   Cronlytic
+    *   crypto-feargreed-mcp
+    *   crypto-indicators-mcp
+    *   crypto-sentiment-mcp
+    *   cryptopanic-mcp-server
+    *   Cursor MCP Installer
+    *   Dappier
+    *   Data Exploration
+    *   Databricks
+    *   Databricks Genie
+    *   Databricks Smart SQL
+    *   Datadog
+    *   Dataset Viewer
+    *   DataWorks
+    *   DaVinci Resolve
+    *   DBHub
+    *   Deebo
+    *   Deep Research
+    *   DeepSeek MCP Server
+    *   deepseek-thinker-mcp
+    *   Deepseek_R1
+    *   Descope
+    *   DesktopCommander
+    *   Devcontainer
+    *   DevDb
+    *   DevOps-MCP
+    *   Dicom
+    *   Dify
+    *   Discogs
+    *   Discord
+    *   Discourse
+    *   Docker
+    *   Docs
+    *   Docy
+    *   Dodo Payments
+    *   Domain Tools
+    *   DPLP
+    *   Druid MCP Server
+    *   Drupal
+    *   dune-analytics-mcp
+    *   DynamoDB-Toolbox
+    *   eBook-mcp
+    *   ECharts MCP Server
+    *   EdgeOne Pages MCP
+    *   Edwin
+    *   eechat
+    *   Elasticsearch
+    *   ElevenLabs
+    *   Email
+    *   Email SMTP
+    *   Enhance Prompt
+    *   Ergo Blockchain MCP
+    *   ESP MCP Server
+    *   Eunomia
+    *   Everything Search
+    *   EVM MCP Server
+    *   Excel
+    *   Excel to JSON MCP by WTSolutions
+    *   Extended Memory
+    *   F1
+    *   Fabric MCP
+    *   Fabric Real-Time Intelligence MCP
+    *   fabric-mcp-server
+    *   Facebook Ads
+    *   Facebook Ads 10xeR
+    *   Facebook Ads Library
+    *   Fantasy PL
+    *   fastn.ai – Unified API MCP Server
+    *   FDIC BankFind MCP Server - (Unofficial)
+    *   Federal Reserve Economic Data (FRED)
+    *   Fetch
+    *   Feyod
+    *   FHIR
+    *   Fibaro HC3
+    *   Figma
+    *   Figma
+    *   Files
+    *   Firebase
+    *   Firecrawl
+    *   Firefly
+    *   Fireproof
+    *   FIXParser
+    *   Fluid Attacks
+    *   ForeverVM
+    *   GibsonAI
+    *   Gitea
+    *   Gitee
+    *   GitGuardian
+    *   Git
+    *   Git Mob
+    *   GitHub Actions
+    *   GitHub Enterprise MCP
+    *   GitHub GraphQL
+    *   GitHub Repos Manager MCP Server
+    *   GitMCP
+    *   Glean
+    *   Gmail
+    *   Gmail
+    *   Gmail Headless
+    *   Gmail MCP
+    *   Gnuradio
+    *   Goal Story
+    *   GOAT
+    *   Godot
+    *   Golang Filesystem Server
+    *   Goodnews
+    *   Google Ads
+    *   Google Analytics
+    *   Google Calendar
+    *   Google Calendar
+    *   Google Custom Search
+    *   Google Maps
+    *   Google Sheets
+    *   Google Sheets
+    *   Google Tasks
+    *   Google Vertex AI Search
+    *   Google Workspace
+    *   Google-Scholar
+    *   Google-Scholar
+    *   Gralio SaaS Database
+    *   Grafana
+    *   Grafbase
+    *   Grain
+    *   Graphlit
+    *   GreptimeDB
+    *   GROWI
+    *   Gyazo
+    *   Harper
+    *   Heroku
+    *   Hiveflow
+    *   Hologres
+    *   Homebrew
+    *   Honeycomb
+    *   HubSpot
+    *   Hugging Face Spaces
+    *   Human-In-the-Loop
+    *   Human-use
+    *   Hyperledger Fabric Agent Suite
+    *   Hyperliquid
+    *   hyprmcp
+    *   iFlytek SparkAgent Platform
+    *   iFlytek Workflow
+    *   IIIF
+    *   Image Generation
+    *   ImageSorcery MCP
+    *   IMAP MCP
+    *   iMCP
+    *   InfluxDB
+    *   Inner Monologue MCP
+    *   Inoyu
+    *   Instagram DM
+    *   interactive-mcp
+    *   Intercom
+    *   iOS Simulator
+    *   it-tools-mcp
+    *   itemit MCP
+    *   iTerm MCP
+    *   iTerm MCP Server
+    *   Java Decompiler
+    *   JavaFX
+    *   JDBC
+    *   JMeter
+    *   Job Searcher
+    *   jobswithgpt
+    *   joinly
+    *   JSON
+    *   JSON
+    *   JSON2Video MCP
+    *   jupiter-mcp
+    *   Jupyter MCP Server
+    *   Jupyter Notebook
+    *   k8s-multicluster-mcp
+    *   Kafka
+    *   Kafka Schema Registry MCP
+    *   kafka-mcp
+    *   Keycloak MCP
+    *   Keycloak MCP Server
+    *   Kibana MCP
+    *   Kibela
+    *   KiCad MCP
+    *   kill-process-mcp
+    *   Kindred Offers & Discounts MCP
+    *   kintone
+    *   Klavis ReportGen
+    *   Klaviyo
+    *   kluster.ai
+    *   Knit MCP Server
+    *   Knock MCP Server
+    *   KurrentDB
+    *   Kuzu
+    *   KWDB
+    *   Label Studio
+    *   Lambda Capture
+    *   Langfuse Prompt Management
+    *   Lara Translate
+    *   Last9
+    *   LaunchDarkly
+    *   LINE
+    *   Linear
+    *   Linear
+    *   Linear (Go)
+    *   Linear MCP
+    *   LlamaCloud
+    *   lldb-mcp
+    *   llm-context
+    *   Locust
+    *   Loki
+    *   LottieFiles
+    *   lsp-mcp
+    *   Lspace
+    *   lucene-mcp-server
+    *   lucid-mcp-server
+    *   LunarCrush Remote MCP
+    *   mac-messages-mcp
+    *   Maestro MCP
+    *   Magg: The MCP Aggregator
+    *   Mailchimp MCP
+    *   MalwareBazaar_MCP
+    *   man-mcp-server
+    *   MariaDB
+    *   Markdown2doc
+    *   Markdownify
+    *   market-fiyati
+    *   Markitdown
+    *   Masquerade
+    *   MasterGo
+    *   Matlab-MCP-Tools
+    *   Maton
+    *   MCP Compass
+    *   MCP Create
+    *   MCP Documentation Server
+    *   MCP Installer
+    *   MCP ProjectManage OpenProject
+    *   MCP Proxy Server
+    *   MCP Server Creator
+    *   MCP Server Generator
+    *   MCP STDIO to Streamable HTTP Adapter
+    *   mcp-containerd
+    *   MCP-Database-Server
+    *   mcp-grep
+    *   mcp-k8s-go
+    *   mcp-local-rag
+    *   mcp-mcp
+    *   mcp-meme-sticky
+    *   MCP-NixOS
+    *   mcp-open-library
+    *   mcp-proxy
+    *   mcp-read-website-fast
+    *   mcp-salesforce
+    *   mcp-sanctions
+    *   mcp-screenshot-website-fast
+    *   mcp-server-leetcode
+    *   Mcp-Swagger-Server
+    *   mcp-vision
+    *   mcp-weather
+    *   mcp-youtube-extract
+    *   mcp_weather
+    *   MCPfinder
+    *   MCPIgnore Filesytem
+    *   MCPJungle
+    *   Md2doc
+    *   MeasureSpace MCP
+    *   MediaWiki
+    *   MediaWiki MCP adapter
+    *   medRxiv
+    *   mem0-mcp
+    *   Membase
+    *   Meme MCP
+    *   memento-mcp
+    *   Metoro
+    *   Microsoft 365
+    *   Microsoft 365
+    *   Microsoft 365
+    *   Microsoft 365 Files (SharePoint/OneDrive)
+    *   Microsoft Teams
+    *   Mifos X
+    *   Mikrotik
+    *   Mindmap
+    *   Minima
+    *   Mobile MCP
+    *   Monday.com
+    *   MongoDB
+    *   MongoDB & Mongoose
+    *   MongoDB Lens
+    *   Monzo
+    *   Morningstar
+    *   MSSQL
+    *   MSSQL
+    *   MSSQL-MCP
+    *   MSSQL-MCP-Node
+    *   MSSQL-Python
+    *   Multi-Model Advisor
+    *   Multicluster-MCP-Sever
+    *   MySQL
+    *   MySQL
+    *   MySQL-Server
+    *   n8n
+    *   Nacos MCP Router
+    *   NASA
+    *   NASA Image MCP Server
+    *   Nasdaq Data Link
+    *   National Parks
+    *   NAVER
+    *   Naver
+    *   NBA
+    *   Neo4j
+    *   Neo4j Agent Memory
+    *   Neo4j GDS
+    *   Neon
+    *   Nerve
+    *   Netdata
+    *   Netlify
+    *   Nile
+    *   Nodit
+    *   Norman Finance
+    *   Notion
+    *   NS Travel Information
+    *   ntfy-mcp
+    *   ntfy-me-mcp
+    *   oatpp-mcp
+    *   Obsidian Markdown Notes
+    *   obsidian-mcp
+    *   OceanBase
+    *   Octagon
+    *   OctoEverywhere
+    *   Offorte
+    *   OlaMaps
+    *   ONLYOFFICE DocSpace
+    *   OP.GG
+    *   Openfort
+    *   OpenMetadata
+    *   OpenSearch
+    *   OpsLevel
+    *   Optuna
+    *   Oracle
+    *   Orshot
+    *   Oxylabs
+    *   Paddle
+    *   PaddleOCR
+    *   PagerDuty
+    *   Pagos
+    *   PAIML MCP Agent Toolkit
+    *   Paper
+    *   Patronus AI
+    *   PayPal
+    *   Pearl
+    *   Perplexity
+    *   PGA (Golf)
+    *   Pinecone
+    *   Pinecone Assistant
+    *   Pipedream
+    *   PlayCanvas
+    *   Plugged.in
+    *   Port IO
+    *   PostHog
+    *   Postman
+    *   Powerdrill
+    *   Prisma
+    *   Probe.dev
+    *   PromptHouse
+    *   proxymock
+    *   PubNub
+    *   Pulumi
+    *   Pure.md
+    *   Put.io
+    *   Qdrant
+    *   Qorus
+    *   Quickchat AI
+    *   Ragie
+    *   Ramp
+    *   Raygun
+    *   Razorpay
+    *   Recraft
+    *   Redis
+    *   Redis Cloud API
+    *   Reexpress
+    *   Rember
+    *   Revit
+    *   Rill Data
+    *   Riza
+    *   Roblox Studio
+    *   Rodin
+    *   Root Signals
+    *   Routine
+    *   SafeDep
+    *   SafeLine
+    *   ScrAPI
+    *   ScreenshotMCP
+    *   ScreenshotOne
+    *   Search1API
+    *   SearchUnify
+    *   Secureframe
+    *   Semgrep
+    *   Sequa.AI
+    *   Shortcut
+    *   SingleStore
+    *   SmartBear
+    *   Smooth Operator
+    *   Snyk
+    *   SonarQube
+    *   Sophtron
+    *   StackHawk
+    *   StarRocks
+    *   Steadybit
+    *   Stripe
+    *   Sunra AI
+    *   Supabase
+    *   Supadata
+    *   Tako
+    *   Tavily
+    *   Teradata
+    *   Terraform
+    *   TextIn
+    *   Thena
+    *   ThinQ Connect
+    *   Thirdweb
+    *   ThoughtSpot
+    *   Tianji
+    *   TiDB
+    *   Tinybird
+    *   Tldv
+    *   Token Metrics
+    *   TomTom-MCP
+    *   Trade Agent
+    *   Twelve Data
+    *   Twilio
+    *   Uberall
+    *   UnifAI
+    *   Unstructured
+    *   Upstash
+    *   Vantage
+    *   VariFlight
+    *   VCAgents
+    *   Vectorize
+    *   Verbwire
+    *   Vercel
+    *   Verodat
+    *   VeyraX
+    *   VictoriaMetrics
+    *   VideoDB Director
+    *   VisionAgent MCP
+    *   Vizro
+    *   WaveSpeed
+    *   WayStation
+    *   Webflow
+    *   WebScraping.AI
+    *   Winston AI
+    *   Xero
+    *   YDB
+    *   Yeelight MCP Server
+    *   YepCode
+    *   YugabyteDB
+    *   Yunxin
+    *   Zapier
+    *   ZenML
+    *   ZIZAI Recruitment
+
+## 📚 Resources
+
+*   **[A2A-MCP Java Bridge](https://github.com/vishalmysore/a2ajava)**
+*   **[AiMCP](https://www.aimcp.info)**
+*   **[Awesome Crypto MCP Servers by badkk](https://github.com/badkk/awesome-crypto-mcp-servers)**
+*   **[Awesome MCP Servers by appcypher](https://github.com/appcypher/awesome-mcp-servers)**
+*   **[Awesome MCP Servers by punkpeye](https://github.com/punkpeye/awesome-mcp-servers)** ([website](https://glama.ai/mcp/servers))
+*   **[Awesome MCP Servers by wong2](https://github.com/wong2/awesome-mcp-servers)** ([website](https://mcpservers.org))
+*   **[Awesome Remote MCP Servers by JAW9C](https://github.com/jaw9c/awesome-remote-mcp-servers)**
+*   **[Discord Server](https://glama.ai/mcp/discord)**
+*   **[Discord Server (ModelContextProtocol)](https://discord.gg/jHEGxQu2a5)**
+*   <img height="12" width="12" src="https://raw.githubusercontent.com/klavis-ai/klavis/main/static/klavis-ai.png" alt="Klavis Logo" /> **[Klavis AI](https://www.klavis.ai)**
+*   **[MCP Badges](https://github.com/mcpx-dev/mcp-badges)**
+*   **[MCPRepository.com](https://mcprepository.com/)**
+*   **[mcp-cli](https://github.com/wong2/mcp-cli)**
+*   **[mcp-dockmaster](https://mcp-dockmaster.com)**
+*   **[mcp-get](https://mcp-get.com)**

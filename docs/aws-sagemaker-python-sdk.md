@@ -1,18 +1,21 @@
-[![SageMaker](https://github.com/aws/sagemaker-python-sdk/raw/master/branding/icon/sagemaker-banner.png)](https://github.com/aws/sagemaker-python-sdk)
+# SageMaker Python SDK: Train and Deploy Machine Learning Models on AWS
 
-# Amazon SageMaker Python SDK: Train and Deploy Machine Learning Models
+**Easily build, train, and deploy machine learning models on Amazon SageMaker with the open-source SageMaker Python SDK, streamlining your ML workflow.**  [View the original repo](https://github.com/aws/sagemaker-python-sdk)
 
-**Unlock the power of Amazon SageMaker with the open-source Python SDK, enabling you to build, train, and deploy machine learning models seamlessly.** This SDK provides a simplified interface for interacting with SageMaker, making it easier than ever to bring your ML projects to life.  Learn more at the [original repository](https://github.com/aws/sagemaker-python-sdk).
+![SageMaker Banner](https://github.com/aws/sagemaker-python-sdk/raw/master/branding/icon/sagemaker-banner.png)
 
-## Key Features
+## Key Features:
 
-*   **Simplified Model Training:** Train models using popular deep learning frameworks like Apache MXNet and TensorFlow.
-*   **Amazon Algorithm Support:** Leverage scalable, optimized implementations of core machine learning algorithms.
-*   **Bring Your Own Algorithms:** Train and host models using custom algorithms packaged in SageMaker compatible Docker containers.
-*   **Framework Compatibility:** Seamlessly integrate with Chainer, PyTorch, Scikit-learn, and XGBoost.
-*   **Model Deployment:** Easily deploy your trained models for real-time inference.
-*   **SparkML Integration:** Deploy and perform predictions against SparkML models serialized with the MLeap library.
-*   **Comprehensive Documentation:** Access detailed documentation, including API references, on [Read the Docs](https://sagemaker.readthedocs.io/).
+*   **Framework Support:** Train and deploy models using popular deep learning frameworks like Apache MXNet and TensorFlow.
+*   **Amazon Algorithms:** Utilize scalable, pre-built Amazon algorithms optimized for SageMaker and GPU training.
+*   **Bring Your Own Algorithms:**  Seamlessly integrate your custom algorithms built into SageMaker-compatible Docker containers.
+*   **SparkML Serving:**  Deploy SparkML models using the MLeap library.
+*   **Extensive Documentation:** Comprehensive documentation and API reference available on [Read the Docs](https://sagemaker.readthedocs.io/en/stable/).
+*   **Flexible Deployment:** Deploy models with a variety of instance types and configurations.
+*   **Model Monitoring:** Monitor deployed models.
+*   **Model Debugging:** Use the SageMaker Debugger.
+*   **Model Autotuning:** Automatic model tuning.
+*   **Batch Transform:** Support for batch transform jobs.
 
 ## Installation
 
@@ -21,9 +24,8 @@ Install the latest version of the SageMaker Python SDK using pip:
 ```bash
 pip install sagemaker
 ```
-*   The latest version can be found on [PyPI](https://pypi.org/project/sagemaker/)
 
-Or, install from source:
+You can also install from source:
 
 ```bash
 git clone https://github.com/aws/sagemaker-python-sdk.git
@@ -31,44 +33,56 @@ cd sagemaker-python-sdk
 pip install .
 ```
 
-## Supported Technologies and Features
+## Supported Features
 
-*   **Supported Operating Systems:** Unix/Linux, Mac.
-*   **Supported Python Versions:**
-    *   3.9
-    *   3.10
-    *   3.11
-    *   3.12
-*   **Telemetry:** The SDK includes telemetry to improve the product.  Opt-out instructions are available in the documentation.
-*   **AWS Permissions:** Learn about necessary permissions in the [AWS Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html).
+*   **Operating Systems:** Unix/Linux and Mac.
+*   **Python Versions:** 3.9, 3.10, 3.11, and 3.12.
 
-## Example: Deploying a SparkML Model
+## AWS Permissions
 
-Here's how to deploy a SparkML model:
+Ensure your AWS Identity and Access Management (IAM) role has the necessary permissions as detailed in the [AWS Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html).
 
-```python
-from sagemaker.sparkml.model import SparkMLModel
+## Telemetry
 
-sparkml_model = SparkMLModel(model_data='s3://path/to/model.tar.gz', env={'SAGEMAKER_SPARKML_SCHEMA': schema})
-predictor = sparkml_model.deploy(initial_instance_count=1, instance_type='ml.c4.xlarge')
-```
+The SDK includes telemetry to improve user experience. Opt-out by setting the `TelemetryOptOut` parameter to `true` in your SDK configuration. For detailed instructions, please visit `Configuring and using defaults with the SageMaker Python SDK <https://sagemaker.readthedocs.io/en/stable/overview.html#configuring-and-using-defaults-with-the-sagemaker-python-sdk>`__.
 
-For more information on model deployment, please see the [SageMaker SparkML Serving Container](https://github.com/aws/sagemaker-sparkml-serving-container).
+## Licensing
+
+The SageMaker Python SDK is licensed under the Apache 2.0 License.
+
+## Resources
+*   [Read the Docs](https://sagemaker.readthedocs.io/en/stable/)
+*   [SageMaker SparkML Serving Container](https://github.com/aws/sagemaker-sparkml-serving-container)
 
 ## Testing
 
-Run tests with tox:
-
+### Unit Tests
 ```bash
 tox tests/unit
 ```
 
-Or run integration tests:
+### Integration Tests
 
+**Prerequisites:**
+
+1.  AWS account credentials in the environment.
+2.  An IAM role named `SageMakerRole` with the `AmazonSageMakerFullAccess` policy and the permissions to use Elastic Inference.
+3.  Dummy ECR repo to run remote_function tests - :code:`aws ecr create-repository --repository-name remote-function-dummy-container`
+
+**Running Specific Integration Tests:**
+```bash
+tox -- -k 'test_i_care_about'
+```
+
+**Running All Integration Tests:**
 ```bash
 tox -- tests/integ
 ```
 
-## Licensing
+**Running Integration Tests in Parallel:**
+```bash
+tox -- -n auto tests/integ
+```
+## Contributing
 
-The SageMaker Python SDK is licensed under the [Apache 2.0 License](http://aws.amazon.com/apache2.0/).
+For information on how to contribute, see the [Contributing Guidelines](CONTRIBUTING.md).

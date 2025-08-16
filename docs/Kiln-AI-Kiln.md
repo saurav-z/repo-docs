@@ -6,35 +6,33 @@
     </a>
 </p>
 
-# Kiln: The AI Prototyping and Dataset Collaboration Tool You Need
+## Kiln: Supercharge Your AI Development with Rapid Prototyping and Effortless Dataset Collaboration
 
-**Quickly prototype and refine AI models with Kiln, the open-source platform for fine-tuning, synthetic data generation, and seamless team collaboration.**  [Visit the Kiln GitHub Repository](https://github.com/Kiln-AI/Kiln)
+Kiln is your all-in-one solution for rapidly prototyping AI applications and streamlining dataset collaboration, enabling you to build high-quality AI products faster.  [Explore Kiln on GitHub](https://github.com/Kiln-AI/Kiln).
 
-## Key Features
+### Key Features:
 
-*   🚀 **Intuitive Desktop Apps:** User-friendly apps for macOS, Windows, and Linux make AI accessible.
-*   🎛️ **Zero-Code Fine-Tuning:** Easily fine-tune models like Llama and GPT-4o without complex coding, with automatic model deployment.
-*   📊 **Comprehensive Evals:** Evaluate your models and tasks using state-of-the-art evaluation tools.
-*   🤖 **Interactive Synthetic Data Generation:** Create and refine training data with ease using our visual tools.
-*   🧠 **Reasoning Models:** Train or distill custom reasoning models to fit your specific use case.
-*   🤝 **Git-Based Team Collaboration:** Leverage Git for version control of AI datasets, simplifying collaboration among teams.
-*   📝 **Automated Prompt Generation:** Generate prompts like chain-of-thought and few-shot from your data.
-*   🌐 **Broad Model & Provider Support:** Compatible with Ollama, OpenAI, OpenRouter, Fireworks, Groq, AWS, and any OpenAI-compatible API.
-*   🧑‍💻 **Open-Source Library and API:** Integrate Kiln into your workflow using our MIT-licensed Python library and REST API.
-*   🔒 **Privacy-Focused:** Control your data; bring your own API keys or run locally with Ollama.
-*   🗃️ **Structured Data:** Build AI tasks using the power of JSON.
-*   💰 **Free to Use:** Kiln provides free apps and an open-source library.
+*   **🚀 Intuitive Desktop Apps:**  Easy-to-use, one-click apps available for Windows, MacOS, and Linux, providing a truly intuitive design.
+*   **🎛️ Zero-Code Fine-Tuning:** Fine-tune LLMs like Llama and GPT-4o with no code required.  Includes automatic serverless deployment.
+*   **📊 Powerful Evaluations:** Assess your models effectively using state-of-the-art evaluation tools.
+*   **🤖 Visual Synthetic Data Generation:** Create training data with ease using our interactive visual tooling.
+*   **🧠 Reasoning Models:** Train or distill your custom reasoning models.
+*   **🤝 Team Collaboration:** Git-based version control for your AI datasets, simplifying collaboration across teams. Collaborate with QA, PM, and subject matter experts, using a straightforward UI for structured data (examples, prompts, ratings, and more).
+*   **📝 Automated Prompt Generation:** Generate prompts automatically from your data, including chain-of-thought, few-shot, and multi-shot techniques.
+*   **🌐 Wide Model & Provider Support:** Utilize a broad range of models through Ollama, OpenAI, OpenRouter, Fireworks, Groq, AWS, and any OpenAI-compatible API.
+*   **🧑‍💻 Open Source:** Our Python library and REST API are open-source under the MIT license.
+*   **🔒 Privacy-First:**  We prioritize your privacy; use your own API keys or run locally with Ollama.
+*   **🗃️ Structured Data:** Easily build AI tasks that speak JSON.
+*   **💰 Free & Open Source:** Our apps are free, and our Python library is open-source.
 
-## Get Started
+### Download Kiln Desktop Apps
 
-### Download the Free Kiln Desktop Apps
-
-Available for macOS, Windows, and Linux.
+Get started with Kiln today! The desktop app is completely free and available for MacOS, Windows, and Linux.
 
 [<img width="220" alt="Download button" src="https://github.com/user-attachments/assets/a5d51b8b-b30a-4a16-a902-ab6ef1d58dc0">](https://getkiln.ai/download)
 
-### Explore the Demo
-
+### Demo
+See Kiln in action!
 [<img width="220" alt="Download button" src="https://github.com/user-attachments/assets/e5268dd9-8813-45fe-b091-0d9f4c1907f9">](https://getkiln.ai#demo)
 
 <kbd>
@@ -43,13 +41,19 @@ Available for macOS, Windows, and Linux.
 </a>
 </kbd>
 
-## Resources and Documentation
+### Docs & Guides
 
-Kiln offers intuitive applications. Get started with our [Quick Start Guide](https://docs.getkiln.ai/getting-started/quickstart) or explore the following sections:
+Kiln is designed to be intuitive. We suggest launching the desktop app and diving in. However, if you have questions or want to learn more, our comprehensive [docs are here to help](https://docs.getkiln.ai).
 
-*   [Fine Tuning LLM Models](https://docs.getkiln.ai/docs/fine-tuning-guide)
-*   [Train a Reasoning Model](https://docs.getkiln.ai/docs/guide-train-a-reasoning-model)
+#### Featured Video Guides
+
+*   [Fine-tuning LLM Models](https://docs.getkiln.ai/docs/fine-tuning-guide)
+*   [Guide: Train a Reasoning Model](https://docs.getkiln.ai/docs/guide-train-a-reasoning-model)
 *   [LLM Evaluators](https://docs.getkiln.ai/docs/evaluators)
+
+#### Full Documentation
+
+*   [Quick Start](https://docs.getkiln.ai/getting-started/quickstart)
 *   [How to use any AI model or provider in Kiln](https://docs.getkiln.ai/docs/models-and-ai-providers)
 *   [Reasoning & Chain of Thought](https://docs.getkiln.ai/docs/reasoning-and-chain-of-thought)
 *   [Synthetic Data Generation](https://docs.getkiln.ai/docs/synthetic-data-generation)
@@ -63,39 +67,34 @@ Kiln offers intuitive applications. Get started with our [Quick Start Guide](htt
 *   [Keyboard Shortcuts](https://docs.getkiln.ai/docs/keyboard-shortcuts)
 *   [Privacy Overview: Private by Design](https://docs.getkiln.ai/docs/privacy)
 
-### Python Library Documentation
+For developers, explore the [Kiln Python Library Docs](https://kiln-ai.github.io/Kiln/kiln_core_docs/kiln_ai.html). Learn how to load datasets into Kiln or utilize Kiln datasets in your code and notebooks.
 
-For developers, explore the [Kiln Python Library Docs](https://kiln-ai.github.io/Kiln/kiln_core_docs/kiln_ai.html) to understand how to load and utilize Kiln datasets within your own code.
-
-## Install the Kiln Python Library
+### Install Python Library
 
 [![PyPI - Version](https://img.shields.io/pypi/v/kiln-ai.svg?logo=pypi&label=PyPI&logoColor=gold)](https://pypi.org/project/kiln-ai/) [![Docs](https://img.shields.io/badge/docs-pdoc-blue)](https://kiln-ai.github.io/Kiln/kiln_core_docs/index.html)
 
-Integrate Kiln datasets into your projects effortlessly with our open-source Python library.
+Integrate Kiln datasets into your workflows with our open-source [python library](https://pypi.org/project/kiln-ai/) to build fine-tunes, use Kiln in notebooks, develop custom tools, and much more! Refer to the [docs](https://kiln-ai.github.io/Kiln/kiln_core_docs/index.html) for examples.
 
 ```bash
 pip install kiln-ai
 ```
 
-## Learn More
+### Key Use Cases & Benefits
 
-### AI Prototyping Speed
+#### Rapid Prototyping
+Quickly experiment with different AI approaches and compare them without writing extensive code. Explore prompt techniques, experiment with chain-of-thought, test various models (GPT, Llama, Claude, etc.), and fine-tune your own models using Kiln datasets.
 
-Kiln simplifies the process of trying different AI approaches and comparing them without coding, supporting various prompting techniques (basic, few-shot, multi-shot, repair & feedback, and chain of thought), and models (GPT, Llama, Claude, Gemini, Mistral, Gemma, Phi).
+#### Effortless Team Collaboration
+Bridge the gap between technical and non-technical teams. Subject matter experts can use the intuitive desktop app to create structured datasets and ratings. Data scientists can then consume the dataset via the UI or dive deeper with the Python library. QA and PM teams can identify issues earlier in the process.
+#### Build High Quality AI Products
 
-### Team Collaboration
+Kiln simplifies creating and iterating on datasets. Capture inputs, outputs, human ratings, feedback, and repairs. The more you use Kiln, the more data you generate and model quality improves. If your product goals shift or issues arise, easily update your dataset to resolve those issues.
 
-Kiln bridges the gap between technical and non-technical teams by allowing subject matter experts to create structured datasets without coding, data scientists to leverage datasets through the UI or Python library, and QA/PM to collaborate on data and model improvements.
+### Contributing & Development
 
-### Build High-Quality AI Products
+Find details on setting up a development environment and contributing to Kiln in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Kiln helps you build high-quality AI products by automatically improving your model as datasets grow and capturing all necessary inputs, outputs, human ratings, feedback, and repairs.
-
-## Contributing
-
-Contribute to Kiln by reviewing our [CONTRIBUTING.md](CONTRIBUTING.md) for setup and contribution guidelines.
-
-## Citation
+### Citation
 
 ```bibtex
 @software{kiln_ai,
@@ -107,26 +106,26 @@ Contribute to Kiln by reviewing our [CONTRIBUTING.md](CONTRIBUTING.md) for setup
 }
 ```
 
-## Licenses & Trademarks
+### Licenses & Trademarks
 
 *   Python Library: [MIT License](libs/core/LICENSE.txt)
 *   Python REST Server/API: [MIT License](libs/server/LICENSE.txt)
-*   Desktop App: Free to download and use under our [EULA](app/EULA.md), and [source-available](/app). [License](app/LICENSE.txt)
+*   Desktop App: free to download and use under our [EULA](app/EULA.md), and [source-available](/app). [License](app/LICENSE.txt)
 *   The Kiln names and logos are trademarks of Chesterfield Laboratories Inc.
 
 Copyright 2024 - Chesterfield Laboratories Inc.
 ```
-Key improvements and SEO optimizations:
+Key improvements and why:
 
-*   **Clear, concise one-sentence hook:** Immediately tells the user what Kiln is and its core benefit.
-*   **Descriptive headings:**  Use of `###` for subheadings to improve readability and SEO.
-*   **Keyword optimization:** Included relevant keywords throughout (AI prototyping, dataset collaboration, fine-tuning, synthetic data generation, etc.).
-*   **Bulleted Key Features:**  Easy to scan and highlights the value proposition.
-*   **Internal Linking:**  Links to other sections of the README and documentation, encouraging user engagement.
-*   **Call to Action:** Prominent download and demo links.
-*   **Clear structure:** Logical organization of information for easy navigation.
-*   **Conciseness:** Removed redundant information while maintaining all key content.
-*   **Emphasis on benefits:** Focused on what users *gain* from using Kiln.
-*   **Consistent formatting:**  Improved the overall look and feel.
-*   **Updated badges** Kept most of the badges, but organized them.
-*   **SEO Optimized title**  Used the most important keywords.
+*   **SEO Optimization:** Includes relevant keywords like "AI prototyping," "dataset collaboration," "fine-tuning," etc.
+*   **Clear Hook:**  A concise, engaging opening sentence immediately grabs the reader's attention.
+*   **Structured Headings:**  Uses `h3` and `h4` tags for improved readability and SEO.
+*   **Bulleted Lists:**  Uses bullet points for key features, making them easy to scan.
+*   **Summarized Content:** Streamlines the information, removing redundancies and focusing on core benefits.
+*   **Actionable Language:** Uses phrases like "Explore Kiln," "Get started," and "Download" to encourage engagement.
+*   **Added Value Propositions:** Highlights the benefits of Kiln, such as speed, collaboration, and data quality.
+*   **Concise Descriptions:** Short, compelling descriptions of features.
+*   **Links Back to Repo:**  The link to the repo is included in the opening sentence.
+*   **Improved Formatting**: Improved the formatting to be more consistent and visually appealing.
+*   **Reorganized Content**:  Prioritizes essential information and user actions.
+*   **Key Use Cases & Benefits**: Added a section for a deeper understanding of the tool's value.

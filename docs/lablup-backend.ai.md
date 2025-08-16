@@ -1,75 +1,55 @@
-# Backend.AI: Your All-in-One Platform for Containerized Computing and AI Workloads
+# Backend.AI: Your Container-Based Computing Platform for Modern Workloads
 
-[Backend.AI](https://github.com/lablup/backend.ai) is a powerful platform that simplifies and accelerates your computing and AI/ML workloads with container-based infrastructure and robust features.
+Backend.AI is a powerful platform designed to streamline and accelerate your computing and machine learning workflows, providing a flexible and scalable environment for diverse applications. [Explore the Backend.AI repository](https://github.com/lablup/backend.ai) for a comprehensive container-based solution.
 
-[![PyPI release version](https://badge.fury.io/py/backend.ai-manager.svg)](https://pypi.org/project/backend.ai-manager/)
-![Supported Python versions](https://img.shields.io/pypi/pyversions/backend.ai-manager.svg)
-![Wheels](https://img.shields.io/pypi/wheel/backend.ai-manager.svg)
-[![Gitter](https://badges.gitter.im/lablup/backend.ai.svg)](https://gitter.im/lablup/backend.ai)
+## Key Features
 
-**Key Features:**
+*   **Container-Based Computing:** Leverages containerization for resource isolation and efficient execution of diverse workloads.
+*   **Framework Support:** Hosts popular computing and machine learning frameworks, including support for CUDA GPUs, ROCm GPUs, and various NPUs.
+*   **Multi-Language Support:** Enables the execution of code in a wide range of programming languages.
+*   **Resource Management:** Allocates and isolates computing resources for multi-tenant computation sessions.
+*   **API-Driven:** Offers REST and GraphQL APIs for seamless integration and automation.
+*   **Flexible Scheduling:** Provides customizable job schedulers for on-demand or batch processing.
+*   **Web-Based Access:** Provides Web UI via the web server.
+*   **Client SDKs:** Client SDKs are available in Python, Java, Javascript, and PHP to ease integration.
+*   **Extensible with Plugins:** Supports plugins for accelerators, monitoring, and other enhancements.
 
-*   **Container-Based Computing:** Easily deploy and manage containerized computing environments.
-*   **Framework & Language Support:** Hosts popular computing/ML frameworks and diverse programming languages.
-*   **Heterogeneous Accelerator Support:** Includes support for CUDA GPU, ROCm GPU, and other NPUs for accelerated computing.
-*   **Multi-Tenant & Resource Isolation:** Allocates and isolates resources for secure, multi-tenant computation sessions.
-*   **REST and GraphQL APIs:** Exposes all functionalities through standardized APIs for easy integration.
-*   **Flexible Job Scheduling:** Customizable job schedulers, including the built-in "Sokovan" orchestrator.
-*   **Web-Based Access:** Provides web-based access to computing sessions via Jupyter, web terminals, SSH, and VS Code.
-*   **Storage Abstraction:** Simplifies storage operations with vfolders for easy data sharing and access.
-*   **Client SDKs:**  Python, Java, JavaScript, and PHP SDKs are available to simplify integration.
+## Core Components
 
-## Components
+*   **Manager:** Manages the cluster, routes API requests, and scales resources.
+*   **Agent:** Controls individual server instances and manages container lifecycles.
+*   **Storage Proxy:** Provides a unified interface for various storage devices.
+*   **Webserver:** Hosts the web UI for user access and administration.
 
-### Manager
+## Getting Started
 
-The Manager is the cluster control plane that routes external API requests and manages the cluster.
+### Installation for Single-node Development
 
-### Agent
+1.  Clone the repository.
+2.  Run `./scripts/install-dev.sh` to set up a development environment. This requires `sudo` and a modern Linux or macOS system.
 
-Manages individual server instances and launches/destroys Docker containers.
+### Installation for Multi-node Tests &amp; Production
 
-### Storage Proxy
+Consult the [Backend.AI documentation](http://docs.backend.ai) for detailed multi-node deployment instructions.
 
-Provides a unified abstraction over network storage devices.
+## Accessing Compute Sessions
 
-### Webserver
+Backend.AI provides several ways to access computation sessions (kernels):
 
-Hosts the web UI for end-users and administration.
-
-##  Getting Started
-
-*   **Installation for Single-node Development:** Run `scripts/install-dev.sh` after cloning this repository. This requires `sudo` and a modern Linux (Debian/RHEL-likes) or macOS installation.
-*   **Installation for Multi-node Tests &amp; Production:** Consult [our documentation](http://docs.backend.ai) or contact our sales team (contact@lablup.com).
-
-## Accessing Compute Sessions (Kernels)
-
-Backend.AI offers flexible methods for accessing your computing sessions:
-
-*   **Jupyter:**  Integrates data science workflows with built-in Jupyter and JupyterLab support.
-*   **Web-based terminal:** Access sessions through a web-based terminal (ttyd).
-*   **SSH:** Securely connect to sessions via SSH/SFTP/SCP with auto-generated SSH keypairs. Supports IDEs like PyCharm.
-*   **VSCode:** Provides web-based VSCode support within the containers.
+*   **Jupyter:** Leverage Jupyter and JupyterLab within the containers.
+*   **Web-based terminal:** Use the built-in ttyd support.
+*   **SSH:** Secure SSH access with auto-generated key pairs.
+*   **VSCode:** Use web-based VSCode support.
 
 ## Plugins
 
-Extend Backend.AI with plugins using Python package entrypoints. Examples include:
+Extend Backend.AI's functionality using plugins, including:
 
-*   `backendai_accelerator_v21`:
-    *   `ai.backend.accelerator.cuda`: CUDA accelerator plugin
-    *   `ai.backend.accelerator.cuda` (mock): CUDA mockup plugin
-    *   `ai.backend.accelerator.rocm`
-*   `backendai_monitor_stats_v10`: Datadog statistics collector.
-*   `backendai_monitor_error_v10`: Sentry exception collector.
+*   `backendai_accelerator_v21`: Accelerator plugins for CUDA, ROCm, and more.
+*   `backendai_monitor_stats_v10`: Statistics collection (e.g., Datadog).
+*   `backendai_monitor_error_v10`: Exception tracking (e.g., Sentry).
 
-## Legacy Components
-
-These components are still available but no longer actively maintained:
-
-*   **Media:** Front-end libraries for multi-media output.
-*   **IDE and Editor Extensions:**  VSCode and Atom extensions (recommend using in-kernel applications like Jupyter Lab, VS Code Server, or SSH connections).
-
-## Python Version Compatibility
+## Version Compatibility
 
 | Backend.AI Core Version | Python Version | Pantsbuild version |
 |:-----------------------:|:--------------:|:------------------:|
@@ -81,18 +61,15 @@ These components are still available but no longer actively maintained:
 
 ## Building Packages
 
-Backend.AI packages can be built as:
-
-1.  Python wheels (.whl)
-2.  SCIE (Self-Contained Installable Executables)
-
-Build packages with:
+Build Python wheels and SCIE (Self-Contained Installable Executables) packages:
 
 ```bash
 ./scripts/build-wheel.sh
 ./scripts/build-scies.sh
 ```
 
+Built packages are located in the `dist/` directory.
+
 ## License
 
-Refer to the [LICENSE](https://github.com/lablup/backend.ai/blob/main/LICENSE) file.
+This project is licensed under the [LGPLv3](https://github.com/lablup/backend.ai/blob/main/LICENSE) license.

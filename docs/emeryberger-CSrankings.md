@@ -1,53 +1,58 @@
-# CSrankings: Data-Driven Ranking of Top Computer Science Schools
+# CSrankings: A Metrics-Driven Ranking of Top Computer Science Schools
 
-**CSrankings provides an objective, metrics-based ranking of computer science departments worldwide, based on the publications of their faculty.** Find the source code and contribute to this valuable resource on [GitHub](https://github.com/emeryberger/CSrankings).
+**CSrankings provides a data-driven, objective ranking of computer science institutions and faculty based on publications in top-tier conferences.** This repository contains the code and data that powers the CSrankings website.
 
-## Key Features:
+[View the live website: https://csrankings.org](https://csrankings.org)
 
-*   **Metrics-Driven Approach:**  Uses publication data from selective computer science conferences to assess research productivity and impact, avoiding subjective survey-based rankings.
-*   **Objective Ranking:**  Focuses on measurable research output, making it harder to manipulate rankings.
-*   **Open-Source & Collaborative:**  Built on open-source code and data, and welcomes contributions from the community to improve accuracy and expand coverage.
-*   **Regularly Updated:**  Data is processed and updated quarterly to reflect the latest research activity.
-*   **Detailed Methodology:**  Provides transparency in its ranking methodology, with an FAQ for more details.
-*   **Focus on Publications:** Based on publications, rather than citations, which can be easily manipulated.
+[Go to the original repository on GitHub](https://github.com/emeryberger/CSrankings)
 
-## Contribute to CSrankings
+**Key Features:**
 
-**Want to contribute to this amazing resource?**
-You can contribute by adding or modifying affiliations.
+*   **Metrics-Based Ranking:**  Uses publication counts in highly selective computer science conferences, providing a robust and objective ranking system.
+*   **Difficult-to-Game Methodology:**  Employs a methodology designed to be resistant to manipulation, unlike survey-based or citation-based rankings.
+*   **Open and Transparent:**  All code and data are publicly available, allowing for community contributions and transparency.
+*   **Regularly Updated:** The ranking is updated quarterly to reflect the latest research output.
 
-**Here's how to get involved:**
+## Contributing
 
-*   **Submit Pull Requests:** Changes are processed quarterly.  Submit pull requests at any time.
-*   **Edit Directly on GitHub:**  Edit data files (`csrankings-[a-z].csv`) directly in GitHub to create pull requests.
-*   **See CONTRIBUTING.md for details:** Read [CONTRIBUTING.md](CONTRIBUTING.md) for full instructions on how to contribute.
-*   **Use a Shallow Clone:** Contribute without needing to clone the full repository using the shallow clone instructions.
+### Adding or Modifying Affiliations
 
-## Running CSrankings Locally
+**_NOTE: Updates are now processed on a quarterly basis. You may submit pull requests at any time, but they may not be processed until the next quarter (after three months have elapsed)._**
 
-**To run CSrankings locally, you'll need to:**
+You can contribute by modifying the data files (`csrankings-[a-z].csv`) which are organized alphabetically by the first name of the author.
 
-1.  Download the DBLP data using `make update-dblp` (requires ~19GB of memory).
-2.  Rebuild the databases with `make`.
-3.  Set up a local web server (e.g., `python3 -m http.server`) and access it through `http://0.0.0.0:8000`.
+*   **Direct GitHub Edits:** Edit files directly within GitHub to create pull requests.
+*   **Contribution Guidelines:** Please read the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for detailed instructions on how to contribute.
+*   **Shallow Clone Option:** For faster contribution without a full clone, use a shallow clone to make changes and create pull requests.
 
-**Required Tools:**
+## Setting up Locally
 
-*   libxml2-utils (or package with xmllint)
+### Prerequisites
+
+You will need the following tools installed on your system:
+
+*   libxml2-utils (or equivalent)
 *   npm
 *   typescript
 *   google-closure-compiler
 *   python-lxml
-*   [pypy](https://doc.pypy.org/en/latest/install.html)
+*   pypy
 *   basex
 
-Install these with a command like:
+Install these using:
+```bash
+apt-get install libxml2-utils npm python-lxml basex; npm install -g typescript google-closure-compiler
+```
 
-`apt-get install libxml2-utils npm python-lxml basex; npm install -g typescript google-closure-compiler`
+### Build and Run
+
+1.  Download the DBLP data by running: ``make update-dblp`` (requires ~19GiB of memory).
+2.  Rebuild the databases by running: ``make``.
+3.  Test the website by running a local web server (e.g., ``python3 -m http.server``) and then connecting to [http://0.0.0.0:8000](http://0.0.0.0:8000).
 
 ## Acknowledgements
 
-CSrankings was primarily developed and is maintained by [Emery Berger](https://emeryberger.com). The project incorporates data and feedback from numerous contributors.  It builds upon work by [Swarat Chaudhuri](https://www.cs.utexas.edu/~swarat/) and the faculty affiliation dataset constructed by [Papoutsaki et al.](http://cs.brown.edu/people/alexpap/faculty_dataset.html). Data from [DBLP.org](http://dblp.org) is used under the ODC Attribution License.
+This project was developed by [Emery Berger](https://emeryberger.com) and incorporates contributions from numerous individuals. It is based on the work of Swarat Chaudhuri, Papoutsaki et al., and utilizes data from DBLP.org, which is available under the ODC Attribution License.
 
 ## License
 

@@ -1,35 +1,42 @@
-# NVDA: Free & Open Source Screen Reader for Windows
+# NVDA: Free & Open-Source Screen Reader for Windows
 
-**NVDA (NonVisual Desktop Access) empowers blind and visually impaired users to access and interact with their Windows computers.**  This is the official repository for NVDA, developed by NV Access in collaboration with a global community.  For more information and downloads, visit the main [NV Access](http://www.nvaccess.org/) website.
+**Empowering accessibility, NVDA (NonVisual Desktop Access) is a powerful, free, and open-source screen reader for Microsoft Windows, enabling visually impaired users to access and interact with their computers.**  [See the original repository on GitHub](https://github.com/nvaccess/nvda).
 
-## Key Features of NVDA
+## Key Features & Benefits
 
-*   **Free and Open Source:**  NVDA is completely free to use and distribute, with its source code available under a modified GNU General Public License version 2 ([copying.txt](./copying.txt)).
-*   **Comprehensive Screen Reading:** Reads text, icons, and other elements on the screen, allowing users to navigate and understand Windows applications.
-*   **Community-Driven Development:**  Developed collaboratively by NV Access and a global community of contributors.
-*   **Regular Updates:** NVDA is regularly updated with new features, bug fixes, and support for the latest technologies.
-*   **Add-on Support:**  Extends NVDA's functionality through a wide range of community-created add-ons ([Getting add-ons](https://download.nvaccess.org/documentation/userGuide.html#AddonsManager)).
+*   **Free and Open Source:** NVDA is available without cost and its source code is open, fostering community contributions and transparency.
+*   **Comprehensive Screen Reading:**  Reads text, icons, and other elements displayed on the screen, providing access to applications, documents, and the internet.
+*   **Global Community Support:** Developed in collaboration with a worldwide community, ensuring continuous improvement and a wide range of features.
+*   **Customizable and Extensible:**  Allows users to customize settings and extend functionality through add-ons.
+*   **Regular Updates:** NV Access provides frequent updates, ensuring compatibility with the latest Windows versions and applications.
 
-## Important Notices
+##  Getting Started
 
-*   **License Update Consultation:** The NVDA project is currently proposing an update to its license and is seeking feedback from historical contributors.  Please review the [Proposed update to the NVDA license](https://github.com/nvaccess/nvda/discussions/18574). The consultation period ends on 28 September 2025.
-*   **Code of Conduct:**  Please review the [Citizen and Contributor Code of Conduct](CODE_OF_CONDUCT.md) before participating or contributing to the project.
+To learn more about NVDA or download a copy, visit the main [NV Access website](http://www.nvaccess.org/).
 
-## Acknowledgements
+##  Community Resources & Support
 
-We extend our sincere gratitude to [SignPath](https://www.signpath.io/) for their generous support in providing code signing services, which helps maintain the security and integrity of NVDA releases.
+*   **User Support and Information:** [https://www.nvaccess.org/get-help/](https://www.nvaccess.org/get-help/)
+*   **Report Issues or Feature Requests:**  (See `./projectDocs/issues/readme.md` in the original repository)
+*   **Add-ons:** (See the User Guide: [https://download.nvaccess.org/documentation/userGuide.html#AddonsManager](https://download.nvaccess.org/documentation/userGuide.html#AddonsManager))
+*   **Contact Experts:** (See `./projectDocs/community/expertsList.md` in the original repository)
+*   **Community Information:** (See `./projectDocs/community/readme.md` in the original repository)
 
-## NVDA Community Resources
+## Contributing
 
-*   [Support and information for NVDA users](https://www.nvaccess.org/get-help/)
-*   [Report an issue or feature request](./projectDocs/issues/readme.md)
-*   [Getting add-ons](https://download.nvaccess.org/documentation/userGuide.html#AddonsManager)
-*   [Contact list](./projectDocs/community/expertsList.md) for NV Access and community experts.
-*   [More important links and community information](./projectDocs/community/readme.md)
+NVDA thrives on community contributions!  Read the [contributing guide](./.github/CONTRIBUTING.md) to learn how to report issues, triage, test, translate, contribute code/documentation and create add-ons.
 
-## Contributing to NVDA
+##  Important Information
 
-Interested in contributing?  Learn how to get involved by reviewing the [contributing guide](./.github/CONTRIBUTING.md), which includes information on reporting issues, testing, translating, contributing code/documentation, and creating add-ons.
+*   **Code of Conduct:** The NVDA project adheres to a [Citizen and Contributor Code of Conduct](CODE_OF_CONDUCT.md).  All community members are expected to abide by these rules.
+*   **Product Vision and Principles:** The project is guided by a [product vision statement and set of principles](./projectDocs/product_vision.md) which inform feature development and prioritization.
+*   **Roadmap:**  See the [development roadmap](https://www.nvaccess.org/post/nvda-roadmap/) for upcoming features and infrastructure work.
+*   **License:** NVDA is available under a modified GNU General Public License version 2. Refer to [our license](./copying.txt) for details.
+*   **License Update Consultation:** We are proposing an update to the NVDA license and are seeking feedback. Review the proposal at [Proposed update to the NVDA license](https://github.com/nvaccess/nvda/discussions/18574). The consultation period ends on 28 September 2025.
+
+##  Acknowledgements
+
+NV Access is grateful for the support of [SignPath](https://www.signpath.io/) for their code signing services, which enhance the security of NVDA releases.
 
 ## Status Checks
 

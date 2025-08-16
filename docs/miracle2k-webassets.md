@@ -1,59 +1,55 @@
 # Webassets: Streamline Your Python Web Development with Powerful Asset Management
 
-**Webassets simplifies your Python web development workflow by providing a robust asset management solution for merging and compressing your JavaScript and CSS files.**  Optimize your web application's performance and improve user experience with this versatile tool.
+**Webassets** is a robust Python asset management application designed to simplify and optimize your web projects by merging and compressing your JavaScript and CSS files. For more details, visit the [Webassets GitHub repository](https://github.com/miracle2k/webassets).
 
-[View the original repository on GitHub](https://github.com/miracle2k/webassets)
+## Key Features
 
-## Key Features of Webassets:
+*   **Asset Merging:** Combine multiple JavaScript and CSS files into single files for improved performance.
+*   **Compression:** Reduce file sizes through compression (e.g., minification) to speed up page loading times.
+*   **Easy Integration:** Seamlessly integrate with your existing Python web development workflow.
+*   **Well-Tested:** Benefit from a stable and reliable asset management solution.
 
-*   **Asset Merging:** Combine multiple JavaScript and CSS files into single, optimized files to reduce HTTP requests.
-*   **Asset Compression:**  Compress your JavaScript and CSS files to minimize file sizes and improve page load times.
-*   **Flexible Integration:** Easily integrate webassets with various Python web frameworks.
-*   **Well-Tested & Reliable:** Benefit from a well-tested codebase, ensuring stability and consistent performance.
+## Installation
 
-## Getting Started
-
-### Installation
-
-Install the development version using pip:
+You can install the latest development version using pip:
 
 ```bash
 pip install webassets==dev
 ```
 
-### Documentation
-
-Comprehensive documentation is available at:  [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
-
 ## Development
 
 To contribute to the development of Webassets, follow these steps:
 
-1.  **Set up a virtual environment:**
+1.  **Set up your development environment:**
 
-    ```bash
-    uv venv
-    ```
-2.  **Install Python requirements:**
+    *   Create a virtual environment using `uv`:
 
-    ```bash
-    uv pip install -r uv.lock
-    ```
+        ```bash
+        uv venv
+        ```
+    *   Install Python requirements:
 
-3.  **Install other requirements:**
+        ```bash
+        uv pip install -r uv.lock
+        ```
 
-    ```bash
-    ./requirements-dev.sh
-    ```
+    *   Install other development requirements:
 
-4.  **Run the tests:**
+        ```bash
+        ./requirements-dev.sh
+        ```
+
+2.  **Run tests:**
 
     ```bash
     ./run_tests.sh
     ```
 
-## Build Status
+    *Note: Running tests requires Java 7 or higher for the Google Closure filter.*
 
-[![Build Status](https://github.com/miracle2k/webassets/actions/workflows/ci.yml/badge.svg)](https://github.com/miracle2k/webassets/actions/workflows/ci.yml)
+## Documentation
 
-**Note:** Development requires Java 7 or higher for certain filters (e.g., Google Closure).
+Comprehensive documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
+
+---
