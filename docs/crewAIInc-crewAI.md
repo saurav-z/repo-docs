@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  **Unleash the Power of Autonomous AI Agents: Build Intelligent Automations with CrewAI**
+  **Unleash the Power of Autonomous AI Agents: Build Lightning-Fast, Flexible Automations with CrewAI!**
 </p>
 
 <p align="center" style="display: flex; justify-content: center; gap: 20px; align-items: center;">
@@ -56,69 +56,49 @@
   </a>
 </p>
 
-##  CrewAI: The Leading Framework for Multi-Agent Automation
+## What is CrewAI?
 
-CrewAI is a powerful, **standalone Python framework** designed to empower developers to build and orchestrate autonomous AI agents with unparalleled ease and flexibility.  Unlike other frameworks, CrewAI is built from scratch, providing you with complete control and optimal performance for any AI automation project.  [Explore the original repo here!](https://github.com/crewAIInc/crewAI)
+CrewAI is a cutting-edge, **standalone Python framework** designed to revolutionize multi-agent automation. Build powerful, intelligent, and production-ready AI applications with unprecedented speed, flexibility, and control.  Visit the [original repo](https://github.com/crewAIInc/crewAI) for more details.
 
 **Key Features:**
 
-*   **Autonomous Crews:**  Create collaborative teams of AI agents that autonomously work together, making decisions and solving complex tasks.
-*   **Precise Flows:** Design event-driven workflows for granular control, precise task execution, and seamless integration with your existing systems.
-*   **Standalone & Lean:**  Built from the ground up for speed and minimal resource usage.
-*   **Deep Customization:** Tailor agents, workflows, and system architecture to your exact needs.
-*   **Seamless Combination:** Easily combine Crews and Flows for maximum power and flexibility.
-*   **Thriving Community:** Benefit from extensive documentation, a rapidly growing community, and comprehensive support.
+*   **🚀 Standalone & Lean:**  Completely independent of LangChain and other frameworks, ensuring faster execution and lighter resource usage.
+*   **🧠 Intelligent Crews:**  Orchestrate autonomous AI agents that collaborate to solve complex tasks.
+*   **⚙️ Granular Flows:**  Precise, event-driven workflows for fine-grained control over complex automations.
+*   **🛠️ Deep Customization:** Tailor everything from workflows to agent behavior and prompts.
+*   **⚡ High Performance:** Optimized for speed and minimal resource usage, resulting in faster execution and reduced costs.
+*   **🤝 Thriving Community:** Backed by a rapidly growing community of over 100,000 certified developers with extensive documentation and support.
 
-## Table of Contents
-
-*   [Why CrewAI?](#why-crewai)
-*   [Getting Started](#getting-started)
-*   [Key Features](#key-features)
-*   [Understanding Flows and Crews](#understanding-flows-and-crews)
-*   [CrewAI vs LangGraph](#how-crewai-compares)
-*   [Examples](#examples)
-    *   [Quick Tutorial](#quick-tutorial)
-    *   [Write Job Descriptions](#write-job-descriptions)
-    *   [Trip Planner](#trip-planner)
-    *   [Stock Analysis](#stock-analysis)
-    *   [Using Crews and Flows Together](#using-crews-and-flows-together)
-*   [Connecting Your Crew to a Model](#connecting-your-crew-to-a-model)
-*   [How CrewAI Compares](#how-crewai-compares)
-*   [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
-*   [Contribution](#contribution)
-*   [Telemetry](#telemetry)
-*   [License](#license)
-
-## Why CrewAI?
+## Why Choose CrewAI?
 
 <div align="center" style="margin-bottom: 30px;">
   <img src="docs/images/asset.png" alt="CrewAI Logo" width="100%">
 </div>
 
-CrewAI offers the best combination of **speed, flexibility, and control** for building AI-powered automations:
+CrewAI empowers you to build intelligent automations that bridge the gap between simplicity, flexibility, and performance.  It offers:
 
-*   **Standalone Framework:** Independent of LangChain or other frameworks for faster execution and lighter resource usage.
-*   **High Performance:** Optimized for speed and minimal resource usage, enabling faster execution.
-*   **Flexible Low Level Customization:** Complete freedom to customize at both high and low levels - from overall workflows and system architecture to granular agent behaviors, internal prompts, and execution logic.
-*   **Ideal for Every Use Case:** Proven effective for both simple tasks and highly complex, real-world, enterprise-grade scenarios.
-*   **Robust Community:** Backed by a rapidly growing community of over **100,000 certified** developers offering comprehensive support and resources.
+*   **No external Dependencies:** A standalone framework built from scratch, independent of LangChain or any other agent framework.
+*   **Optimized Performance:** High performance and minimal resource usage, enabling faster execution.
+*   **Unparalleled Customization:** Complete freedom to customize at both high and low levels - from overall workflows and system architecture to granular agent behaviors, internal prompts, and execution logic.
+*   **Versatile for Any Use Case:** Proven effective for both simple tasks and highly complex, real-world, enterprise-grade scenarios.
+*   **Robust Community Support:** Backed by a rapidly growing community of over **100,000 certified** developers offering comprehensive support and resources.
 
 ## Getting Started
 
-Get up and running quickly with CrewAI!
+Get up and running with CrewAI in minutes!
 
 [![CrewAI Getting Started Tutorial](https://img.youtube.com/vi/-kSOTtYzgEw/hqdefault.jpg)](https://www.youtube.com/watch?v=-kSOTtYzgEw "CrewAI Getting Started Tutorial")
 
 ### Learning Resources
 
-Master CrewAI with these comprehensive courses:
+Master CrewAI with comprehensive courses:
 
-*   [Multi AI Agent Systems with CrewAI](https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/) - Fundamentals of Multi-Agent Systems
-*   [Practical Multi AI Agents and Advanced Use Cases with CrewAI](https://www.deeplearning.ai/short-courses/practical-multi-ai-agents-and-advanced-use-cases-with-crewai/) - Dive into Advanced Implementations
+*   [Multi AI Agent Systems with CrewAI](https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/) - Learn the fundamentals.
+*   [Practical Multi AI Agents and Advanced Use Cases with CrewAI](https://www.deeplearning.ai/short-courses/practical-multi-ai-agents-and-advanced-use-cases-with-crewai/) - Explore advanced implementations.
 
 ### Installation
 
-1.  **Prerequisites:** Ensure you have Python >=3.10 <3.14 installed.  CrewAI uses [UV](https://docs.astral.sh/uv/) for dependency management.
+1.  **Prerequisites:**  Ensure you have Python >=3.10 <3.14 installed.
 
 2.  **Install CrewAI:**
 
@@ -126,7 +106,7 @@ Master CrewAI with these comprehensive courses:
     pip install crewai
     ```
 
-3.  **Install Optional Tools:** For additional tools, install using the following:
+    For additional tools:
 
     ```bash
     pip install 'crewai[tools]'
@@ -134,209 +114,192 @@ Master CrewAI with these comprehensive courses:
 
 ### Troubleshooting Dependencies
 
-*   **ModuleNotFoundError: No module named 'tiktoken'**:  Install tiktoken explicitly: `pip install 'crewai[embeddings]'`. If using embedchain or other tools: `pip install 'crewai[tools]'`.
-*   **Failed building wheel for tiktoken**: Ensure Rust compiler is installed and that Visual C++ Build Tools are installed on Windows.  Try upgrading pip (`pip install --upgrade pip`) or using a pre-built wheel (`pip install tiktoken --prefer-binary`).
+*   **`ModuleNotFoundError: No module named 'tiktoken'`**: Install explicitly with `pip install 'crewai[embeddings]'` or if using embedchain: `pip install 'crewai[tools]'`
+*   **`Failed building wheel for tiktoken`**: Ensure the Rust compiler is installed (see the install steps). Upgrade pip with `pip install --upgrade pip`
 
-###  Project Setup
+### Setting up your Crew
 
-1.  **Create a New Project:** Use the CLI to generate a project structure:
+1.  Create a new project with the CLI:
 
     ```bash
     crewai create crew <project_name>
     ```
 
-    This generates a project directory with files like `main.py`, `crew.py`, and configuration files.
+2.  Modify project files (`src/my_project/`):
 
-2.  **Customize Your Project:**
+    *   `agents.yaml`: Define your agents.
+    *   `tasks.yaml`: Define your tasks.
+    *   `crew.py`: Add custom logic, tools, and arguments.
+    *   `main.py`: Add custom inputs for your agents and tasks.
+    *   `.env`: Store your environment variables.
 
-    *   Modify `src/my_project/config/agents.yaml` to define your agents.
-    *   Modify `src/my_project/config/tasks.yaml` to define your tasks.
-    *   Modify `src/my_project/crew.py` to add your own logic, tools, and specific arguments.
-    *   Modify `src/my_project/main.py` to add custom inputs for your agents and tasks.
-    *   Add environment variables into the `.env` file.
+3.  **Example Crew (Sequential Process):**
 
-### Example Crew and Run Instructions
+    *   Instantiate a crew: `crewai create crew latest-ai-development`
+    *   Modify the files:
+        *   **agents.yaml:**
+            ```yaml
+            # src/my_project/config/agents.yaml
+            researcher:
+              role: >
+                {topic} Senior Data Researcher
+              goal: >
+                Uncover cutting-edge developments in {topic}
+              backstory: >
+                You're a seasoned researcher with a knack for uncovering the latest
+                developments in {topic}. Known for your ability to find the most relevant
+                information and present it in a clear and concise manner.
 
-**agents.yaml**
+            reporting_analyst:
+              role: >
+                {topic} Reporting Analyst
+              goal: >
+                Create detailed reports based on {topic} data analysis and research findings
+              backstory: >
+                You're a meticulous analyst with a keen eye for detail. You're known for
+                your ability to turn complex data into clear and concise reports, making
+                it easy for others to understand and act on the information you provide.
+            ```
 
-```yaml
-# src/my_project/config/agents.yaml
-researcher:
-  role: >
-    {topic} Senior Data Researcher
-  goal: >
-    Uncover cutting-edge developments in {topic}
-  backstory: >
-    You're a seasoned researcher with a knack for uncovering the latest
-    developments in {topic}. Known for your ability to find the most relevant
-    information and present it in a clear and concise manner.
+        *   **tasks.yaml:**
+            ```yaml
+            # src/my_project/config/tasks.yaml
+            research_task:
+              description: >
+                Conduct a thorough research about {topic}
+                Make sure you find any interesting and relevant information given
+                the current year is 2025.
+              expected_output: >
+                A list with 10 bullet points of the most relevant information about {topic}
+              agent: researcher
 
-reporting_analyst:
-  role: >
-    {topic} Reporting Analyst
-  goal: >
-    Create detailed reports based on {topic} data analysis and research findings
-  backstory: >
-    You're a meticulous analyst with a keen eye for detail. You're known for
-    your ability to turn complex data into clear and concise reports, making
-    it easy for others to understand and act on the information you provide.
-```
+            reporting_task:
+              description: >
+                Review the context you got and expand each topic into a full section for a report.
+                Make sure the report is detailed and contains any and all relevant information.
+              expected_output: >
+                A fully fledge reports with the mains topics, each with a full section of information.
+                Formatted as markdown without '```'
+              agent: reporting_analyst
+              output_file: report.md
+            ```
 
-**tasks.yaml**
+        *   **crew.py:**
+            ```python
+            # src/my_project/crew.py
+            from crewai import Agent, Crew, Process, Task
+            from crewai.project import CrewBase, agent, crew, task
+            from crewai_tools import SerperDevTool
+            from crewai.agents.agent_builder.base_agent import BaseAgent
+            from typing import List
 
-```yaml
-# src/my_project/config/tasks.yaml
-research_task:
-  description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is 2025.
-  expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+            @CrewBase
+            class LatestAiDevelopmentCrew():
+            	"""LatestAiDevelopment crew"""
+            	agents: List[BaseAgent]
+            	tasks: List[Task]
 
-reporting_task:
-  description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
-  expected_output: >
-    A fully fledge reports with the mains topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
-  output_file: report.md
-```
+            	@agent
+            	def researcher(self) -> Agent:
+            		return Agent(
+            			config=self.agents_config['researcher'],
+            			verbose=True,
+            			tools=[SerperDevTool()]
+            		)
 
-**crew.py**
+            	@agent
+            	def reporting_analyst(self) -> Agent:
+            		return Agent(
+            			config=self.agents_config['reporting_analyst'],
+            			verbose=True
+            		)
 
-```python
-# src/my_project/crew.py
-from crewai import Agent, Crew, Process, Task
-from crewai.project import CrewBase, agent, crew, task
-from crewai_tools import SerperDevTool
-from crewai.agents.agent_builder.base_agent import BaseAgent
-from typing import List
+            	@task
+            	def research_task(self) -> Task:
+            		return Task(
+            			config=self.tasks_config['research_task'],
+            		)
 
-@CrewBase
-class LatestAiDevelopmentCrew():
-	"""LatestAiDevelopment crew"""
-	agents: List[BaseAgent]
-	tasks: List[Task]
+            	@task
+            	def reporting_task(self) -> Task:
+            		return Task(
+            			config=self.tasks_config['reporting_task'],
+            			output_file='report.md'
+            		)
 
-	@agent
-	def researcher(self) -> Agent:
-		return Agent(
-			config=self.agents_config['researcher'],
-			verbose=True,
-			tools=[SerperDevTool()]
-		)
+            	@crew
+            	def crew(self) -> Crew:
+            		"""Creates the LatestAiDevelopment crew"""
+            		return Crew(
+            			agents=self.agents, # Automatically created by the @agent decorator
+            			tasks=self.tasks, # Automatically created by the @task decorator
+            			process=Process.sequential,
+            			verbose=True,
+            		)
+            ```
 
-	@agent
-	def reporting_analyst(self) -> Agent:
-		return Agent(
-			config=self.agents_config['reporting_analyst'],
-			verbose=True
-		)
+        *   **main.py:**
+            ```python
+            #!/usr/bin/env python
+            # src/my_project/main.py
+            import sys
+            from latest_ai_development.crew import LatestAiDevelopmentCrew
 
-	@task
-	def research_task(self) -> Task:
-		return Task(
-			config=self.tasks_config['research_task'],
-		)
+            def run():
+                """
+                Run the crew.
+                """
+                inputs = {
+                    'topic': 'AI Agents'
+                }
+                LatestAiDevelopmentCrew().crew().kickoff(inputs=inputs)
+            ```
 
-	@task
-	def reporting_task(self) -> Task:
-		return Task(
-			config=self.tasks_config['reporting_task'],
-			output_file='report.md'
-		)
+4.  **Running Your Crew:**
 
-	@crew
-	def crew(self) -> Crew:
-		"""Creates the LatestAiDevelopment crew"""
-		return Crew(
-			agents=self.agents, # Automatically created by the @agent decorator
-			tasks=self.tasks, # Automatically created by the @task decorator
-			process=Process.sequential,
-			verbose=True,
-		)
-```
+    *   Set OpenAI and Serper.dev API keys as environment variables in your `.env` file: `OPENAI_API_KEY=sk-...` and `SERPER_API_KEY=YOUR_KEY_HERE`.
+    *   Navigate to your project directory: `cd my_project`
+    *   Lock and install your dependencies:
+        ```bash
+        crewai install (Optional)
+        ```
 
-**main.py**
+    *   Run your crew:
 
-```python
-#!/usr/bin/env python
-# src/my_project/main.py
-import sys
-from latest_ai_development.crew import LatestAiDevelopmentCrew
+        ```bash
+        crewai run
+        ```
+        or
+        ```bash
+        python src/my_project/main.py
+        ```
+    *   If an error happens due to the usage of poetry, please run the following command to update your crewai package:
+        ```bash
+        crewai update
+        ```
 
-def run():
-    """
-    Run the crew.
-    """
-    inputs = {
-        'topic': 'AI Agents'
-    }
-    LatestAiDevelopmentCrew().crew().kickoff(inputs=inputs)
-```
-
-3.  **Configure API Keys:** Set your OpenAI API key and a Serper.dev API key as environment variables in a `.env` file:
-
-    ```
-    OPENAI_API_KEY=sk-...
-    SERPER_API_KEY=YOUR_KEY_HERE
-    ```
-
-4.  **Run Your Crew:** Navigate to your project directory and execute the following command to lock the dependencies and run the crew:
-
-```bash
-cd my_project
-crewai install (Optional)
-crewai run
-```
-
-or
-
-```bash
-python src/my_project/main.py
-```
+    *   Check your console output and the `report.md` file for results.
 
 ## Key Features
 
-CrewAI provides a unique combination of features designed for power, flexibility, and control, unlike frameworks like LangChain:
+CrewAI empowers you to build powerful, adaptable, and production-ready AI automations.  Here's why it stands out:
 
-*   **Standalone & Lean:** Built from scratch, independent of other frameworks, for faster execution and lower resource usage.
-*   **Flexible & Precise:** Easily orchestrate autonomous agents through Crews or Flows.
-*   **Seamless Integration:** Combine Crews (autonomy) and Flows (precision) to create sophisticated, real-world automations.
-*   **Deep Customization:** Tailor every aspect, from high-level workflows down to low-level internal prompts and agent behaviors.
-*   **Reliable Performance:** Achieve consistent results across both simple tasks and complex, enterprise-level automations.
-*   **Thriving Community:** Supported by robust documentation and a community of over 100,000 certified developers.
-
-## Understanding Flows and Crews
-
-CrewAI gives you two powerful options for building sophisticated AI applications:
-
-1.  **Crews:** Teams of AI agents with true autonomy and agency, ideal for collaborative projects:
-    *   Natural, autonomous decision-making between agents
-    *   Dynamic task delegation and collaboration
-    *   Specialized roles with defined goals and expertise
-    *   Flexible problem-solving approaches
-
-2.  **Flows:** Production-ready, event-driven workflows for precise control:
-    *   Fine-grained control over execution paths for real-world scenarios
-    *   Secure, consistent state management between tasks
-    *   Clean integration of AI agents with production Python code
-    *   Conditional branching for complex business logic
-
-The true power of CrewAI emerges when combining Crews and Flows.
+*   **🛠️ Standalone & Lean:** Independent of LangChain and other frameworks, resulting in faster execution and reduced overhead.
+*   **💡 Flexible & Precise:**  Leverage both [Crews](https://docs.crewai.com/concepts/crews) and [Flows](https://docs.crewai.com/concepts/flows) for tailored automation.
+*   **🤝 Seamless Integration:** Effortlessly combine Crews (autonomy) and Flows (precision) for complex, real-world applications.
+*   **⚙️ Deep Customization:**  Control every detail, from high-level workflows to internal prompts and agent behaviors.
+*   **⚡ Reliable Performance:** Get consistent results across various tasks, from simple to complex enterprise-level automations.
+*   **🌱 Thriving Community:** Benefit from extensive documentation and the support of a vibrant community with over 100,000 certified developers.
 
 ## Examples
 
-Explore real-world applications with these examples:
+Explore real-world use cases with our example repos:
 
--   [Landing Page Generator](https://github.com/crewAIInc/crewAI-examples/tree/main/landing_page_generator)
--   [Having Human input on the execution](https://docs.crewai.com/how-to/Human-Input-on-Execution)
--   [Trip Planner](https://github.com/crewAIInc/crewAI-examples/tree/main/trip_planner)
--   [Stock Analysis](https://github.com/crewAIInc/crewAI-examples/tree/main/stock_analysis)
+*   [CrewAI-examples repo](https://github.com/crewAIInc/crewAI-examples?tab=readme-ov-file)
+*   [Landing Page Generator](https://github.com/crewAIInc/crewAI-examples/tree/main/landing_page_generator)
+*   [Having Human input on the execution](https://docs.crewai.com/how-to/Human-Input-on-Execution)
+*   [Trip Planner](https://github.com/crewAIInc/crewAI-examples/tree/main/trip_planner)
+*   [Stock Analysis](https://github.com/crewAIInc/crewAI-examples/tree/main/stock_analysis)
 
 ### Quick Tutorial
 
@@ -362,12 +325,13 @@ Explore real-world applications with these examples:
 
 ### Using Crews and Flows Together
 
+Unleash the power of CrewAI by combining Crews and Flows:
+
 ```python
 from crewai.flow.flow import Flow, listen, start, router, or_
 from crewai import Crew, Agent, Task, Process
 from pydantic import BaseModel
 
-# Define structured state for precise control
 class MarketState(BaseModel):
     sentiment: str = "neutral"
     confidence: float = 0.0
@@ -376,47 +340,26 @@ class MarketState(BaseModel):
 class AdvancedAnalysisFlow(Flow[MarketState]):
     @start()
     def fetch_market_data(self):
-        # Demonstrate low-level control with structured state
         self.state.sentiment = "analyzing"
-        return {"sector": "tech", "timeframe": "1W"}  # These parameters match the task description template
+        return {"sector": "tech", "timeframe": "1W"}
 
     @listen(fetch_market_data)
     def analyze_with_crew(self, market_data):
-        # Show crew agency through specialized roles
-        analyst = Agent(
-            role="Senior Market Analyst",
-            goal="Conduct deep market analysis with expert insight",
-            backstory="You're a veteran analyst known for identifying subtle market patterns"
-        )
-        researcher = Agent(
-            role="Data Researcher",
-            goal="Gather and validate supporting market data",
-            backstory="You excel at finding and correlating multiple data sources"
-        )
+        analyst = Agent(...)
+        researcher = Agent(...)
+        analysis_task = Task(...)
+        research_task = Task(...)
 
-        analysis_task = Task(
-            description="Analyze {sector} sector data for the past {timeframe}",
-            expected_output="Detailed market analysis with confidence score",
-            agent=analyst
-        )
-        research_task = Task(
-            description="Find supporting data to validate the analysis",
-            expected_output="Corroborating evidence and potential contradictions",
-            agent=researcher
-        )
-
-        # Demonstrate crew autonomy
         analysis_crew = Crew(
             agents=[analyst, researcher],
             tasks=[analysis_task, research_task],
             process=Process.sequential,
             verbose=True
         )
-        return analysis_crew.kickoff(inputs=market_data)  # Pass market_data as named inputs
+        return analysis_crew.kickoff(inputs=market_data)
 
     @router(analyze_with_crew)
     def determine_next_steps(self):
-        # Show flow control with conditional routing
         if self.state.confidence > 0.8:
             return "high_confidence"
         elif self.state.confidence > 0.5:
@@ -425,17 +368,7 @@ class AdvancedAnalysisFlow(Flow[MarketState]):
 
     @listen("high_confidence")
     def execute_strategy(self):
-        # Demonstrate complex decision making
-        strategy_crew = Crew(
-            agents=[
-                Agent(role="Strategy Expert",
-                      goal="Develop optimal market strategy")
-            ],
-            tasks=[
-                Task(description="Create detailed strategy based on analysis",
-                     expected_output="Step-by-step action plan")
-            ]
-        )
+        strategy_crew = Crew(...)
         return strategy_crew.kickoff()
 
     @listen(or_("medium_confidence", "low_confidence"))
@@ -444,30 +377,30 @@ class AdvancedAnalysisFlow(Flow[MarketState]):
         return "Additional analysis required"
 ```
 
+*This example shows how to combine Crews and Flows for advanced automation.*
+
 ## Connecting Your Crew to a Model
 
-CrewAI supports various LLMs through flexible connection options. By default, agents use the OpenAI API. For detailed configuration, refer to the [LLM Connections](https://docs.crewai.com/how-to/LLM-Connections/) page.
+CrewAI supports a variety of LLMs.  Use the default OpenAI API, or configure agents to use local models like Ollama.  See [LLM Connections](https://docs.crewai.com/how-to/LLM-Connections/) for details.
 
 ## How CrewAI Compares
 
-CrewAI is designed to provide both autonomous agent intelligence and workflow control:
+**CrewAI's Advantage:** CrewAI offers the best of both worlds: autonomous agent intelligence and precise workflow control through Crews and Flows.  It excels at both high-level orchestration and low-level customization.
 
-*   **CrewAI's Advantage:**  CrewAI combines autonomous agent intelligence with precise workflow control through its unique Crews and Flows architecture. The framework excels at both high-level orchestration and low-level customization, enabling complex, production-grade systems with granular control.
-*   **LangGraph:** While LangGraph provides a foundation for building agent workflows, its approach requires significant boilerplate code and complex state management patterns. The framework's tight coupling with LangChain can limit flexibility when implementing custom agent behaviors or integrating with external systems.
+*   **LangGraph:**  LangGraph requires significant boilerplate and complex state management.  Its coupling with LangChain can limit flexibility.
+*   **Autogen:** Autogen lacks inherent process, so orchestrating agents' interactions requires additional programming, which can become complex.
+*   **ChatDev:** ChatDev's implementations are rigid and not geared toward production, which can hinder scalability and flexibility in real-world applications.
 
 *P.S. CrewAI demonstrates significant performance advantages over LangGraph, executing 5.76x faster in certain cases like this QA task example ([see comparison](https://github.com/crewAIInc/crewAI-examples/tree/main/Notebooks/CrewAI%20Flows%20%26%20Langgraph/QA%20Agent)) while achieving higher evaluation scores with faster completion times in certain coding tasks, like in this example ([detailed analysis](https://github.com/crewAIInc/crewAI-examples/blob/main/Notebooks/CrewAI%20Flows%20%26%20Langgraph/Coding%20Assistant/coding_assistant_eval.ipynb)).*
 
-*   **Autogen:** While Autogen excels at creating conversational agents capable of working together, it lacks an inherent concept of process. In Autogen, orchestrating agents' interactions requires additional programming, which can become complex and cumbersome as the scale of tasks grows.
-*   **ChatDev:** ChatDev introduced the idea of processes into the realm of AI agents, but its implementation is quite rigid. Customizations in ChatDev are limited and not geared towards production environments, which can hinder scalability and flexibility in real-world applications.
-
 ## Contribution
 
-CrewAI is open-source and welcomes community contributions. To contribute:
+We welcome contributions!
 
-*   Fork the repository.
-*   Create a new branch for your feature.
-*   Add your feature or improvement.
-*   Send a pull request.
+1.  Fork the repository.
+2.  Create a new branch.
+3.  Add your feature or improvement.
+4.  Submit a pull request.
 
 ### Installing Dependencies
 
@@ -514,34 +447,8 @@ pip install dist/*.tar.gz
 
 ## Telemetry
 
-CrewAI uses anonymous telemetry to collect usage data to help us improve the library.
-
-It's important that **NO data is collected** concerning prompts, task descriptions, agents' backstories or goals, usage of tools, API calls, responses, any data processed by the agents, or secrets and environment variables, with the exception of the conditions mentioned. When the `share_crew` feature is enabled, detailed data including task descriptions, agents' backstories or goals, and other specific attributes are collected to provide deeper insights while respecting user privacy. Users can disable telemetry by setting the environment variable OTEL_SDK_DISABLED to true.
-
-Data collected includes:
-
--   Version of CrewAI
-    -   So we can understand how many users are using the latest version
--   Version of Python
-    -   So we can decide on what versions to better support
--   General OS (e.g. number of CPUs, macOS/Windows/Linux)
-    -   So we know what OS we should focus on and if we could build specific OS related features
--   Number of agents and tasks in a crew
-    -   So we make sure we are testing internally with similar use cases and educate people on the best practices
--   Crew Process being used
-    -   Understand where we should focus our efforts
--   If Agents are using memory or allowing delegation
-    -   Understand if we improved the features or maybe even drop them
--   If Tasks are being executed in parallel or sequentially
-    -   Understand if we should focus more on parallel execution
--   Language model being used
-    -   Improved support on most used languages
--   Roles of agents in a crew
-    -   Understand high level use cases so we can build better tools, integrations and examples about it
--   Tools names available
-    -   Understand out of the publicly available tools, which ones are being used the most so we can improve them
-
-Users can opt-in to Further Telemetry, sharing the complete telemetry data by setting the `share_crew` attribute to `True` on their Crews. Enabling `share_crew` results in the collection of detailed crew and task execution data, including `goal`, `backstory`, `context`, and `output` of tasks. This enables a deeper insight into usage patterns while respecting the user's choice to share.
+CrewAI uses anonymous telemetry to improve the library by focusing on the most used features. No sensitive data is collected. You can disable telemetry by setting the `OTEL_SDK_DISABLED` environment variable to `true`.
+You can opt-in to Further Telemetry, sharing the complete telemetry data by setting the `share_crew` attribute to `True` on their Crews.
 
 ## License
 

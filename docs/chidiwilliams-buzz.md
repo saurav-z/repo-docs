@@ -1,6 +1,6 @@
-# Buzz: Offline Audio Transcription and Translation Powered by OpenAI Whisper
+# Buzz: Offline Audio Transcription and Translation
 
-**Effortlessly transcribe and translate audio offline on your computer using Buzz, a powerful tool leveraging the cutting-edge OpenAI Whisper model.** ([Original Repo](https://github.com/chidiwilliams/buzz))
+**Buzz empowers you to transcribe and translate audio files offline on your computer, using the power of OpenAI's Whisper.** ([Original Repo](https://github.com/chidiwilliams/buzz))
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green)](https://github.com/chidiwilliams/buzz)
 [![CI](https://github.com/chidiwilliams/buzz/actions/workflows/ci.yml/badge.svg)](https://github.com/chidiwilliams/buzz/actions/workflows/ci.yml)
@@ -8,81 +8,90 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/chidiwilliams/buzz)
 [![Github all releases](https://img.shields.io/github/downloads/chidiwilliams/buzz/total.svg)](https://GitHub.com/chidiwilliams/buzz/releases/)
 
-<br>
+[Documentation](https://chidiwilliams.github.io/buzz/) | [Buzz Captions on the App Store](https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&itsct=apps_box_badge&itscg=30200)
 
-Get the **Mac-native** version with enhanced features on the [Mac App Store](https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&itsct=apps_box_badge&itscg=30200):
+*For a more refined experience with enhanced features like audio playback and transcript editing, consider the Mac-native version on the App Store.*
+
 <a href="https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&amp;itsct=apps_box_badge&amp;itscg=30200"><img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83&amp;releaseDate=1679529600" alt="Download on the Mac App Store" /></a>
-
-<br>
 
 ![Buzz](./buzz/assets/buzz-banner.jpg)
 
 ## Key Features
 
-*   **Offline Transcription & Translation:** Transcribe and translate audio directly on your device without internet dependency.
-*   **Powered by OpenAI Whisper:** Utilize the advanced capabilities of OpenAI's Whisper for highly accurate results.
-*   **Cross-Platform Support:** Available for macOS, Windows, and Linux, with flexible installation options.
-*   **Multiple Installation Methods:** Install via PyPI, brew (macOS), winget (Windows), Flatpak & Snap (Linux), or direct downloads.
-*   **GPU Acceleration (Optional):** Leverage your GPU for faster processing (available for PyPI installation on compatible systems).
-*   **Mac App Store Version:** Experience a feature-rich, native macOS application with audio playback, editing, and more.
-*   **Regular Updates:** Benefit from ongoing improvements and the latest features.
+*   **Offline Transcription:** Transcribe audio files directly on your computer without requiring an internet connection, ensuring privacy and speed.
+*   **Offline Translation:** Translate transcriptions into various languages.
+*   **Powered by OpenAI Whisper:** Leverages the cutting-edge speech recognition technology of OpenAI's Whisper for accurate results.
+*   **Cross-Platform Compatibility:** Available for macOS, Windows, and Linux.
+*   **Multiple Installation Options:** Supports installation via PyPI, brew (macOS), winget (Windows), Flatpak (Linux), and Snap (Linux).
 
-## Installation Guide
+## Installation
+
+Choose your operating system for installation instructions:
 
 ### PyPI
 
-1.  **Install ffmpeg:**  Download from [ffmpeg](https://www.ffmpeg.org/download.html)
-2.  **Install Buzz:**
-    ```bash
+1.  Install [ffmpeg](https://www.ffmpeg.org/download.html)
+2.  Install Buzz
+
+    ```shell
     pip install buzz-captions
     python -m buzz
     ```
 
 ### macOS
 
-*   **Using Homebrew:**
-    ```bash
-    brew install --cask buzz
-    ```
-*   **Download from Releases:** Download the `.dmg` file from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
+Install with [brew utility](https://brew.sh/)
+
+```shell
+brew install --cask buzz
+```
+
+Or download the `.dmg` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
 
 ### Windows
 
-*   **Download from Releases:** Download the `.exe` file from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest). *Note: You may need to bypass a security warning.*
-*   **Using winget:**
-    ```bash
-    winget install ChidiWilliams.Buzz
-    ```
+Download and run the `.exe` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
 
-    **Enable GPU Support (PyPI only):**
-    To enable GPU support for Nvidia GPUs when using the PyPI installation on Windows, ensure you have CUDA support for [torch](https://pytorch.org/get-started/locally/) installed:
+*App is not signed, you will get a warning when you install it. Select `More info` -> `Run anyway`.*
 
-    ```
-    pip3 install -U torch==2.7.1+cu128 torchaudio==2.7.1+cu128 --index-url https://download.pytorch.org/whl/cu128
-    pip3 install nvidia-cublas-cu12==12.8.3.14 nvidia-cuda-cupti-cu12==12.8.57 nvidia-cuda-nvrtc-cu12==12.8.61 nvidia-cuda-runtime-cu12==12.8.57 nvidia-cudnn-cu12==9.7.1.26 nvidia-cufft-cu12==11.3.3.41 nvidia-curand-cu12==10.3.9.55 nvidia-cusolver-cu12==11.7.2.55 nvidia-cusparse-cu12==12.5.4.2 nvidia-cusparselt-cu12==0.6.3 nvidia-nvjitlink-cu12==12.8.61 nvidia-nvtx-cu12==12.8.55 --extra-index-url https://pypi.ngc.nvidia.com
-    ```
+**Alternatively, install with [winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/)**
+
+```shell
+winget install ChidiWilliams.Buzz
+```
+
+**GPU support for PyPI**
+
+To enable GPU support for Nvidia GPUs on Windows for the PyPI installed version:
+
+1.  Ensure CUDA support for [torch](https://pytorch.org/get-started/locally/) 
+
+```
+pip3 install -U torch==2.7.1+cu128 torchaudio==2.7.1+cu128 --index-url https://download.pytorch.org/whl/cu128
+pip3 install nvidia-cublas-cu12==12.8.3.14 nvidia-cuda-cupti-cu12==12.8.57 nvidia-cuda-nvrtc-cu12==12.8.61 nvidia-cuda-runtime-cu12==12.8.57 nvidia-cudnn-cu12==9.7.1.26 nvidia-cufft-cu12==11.3.3.41 nvidia-curand-cu12==10.3.9.55 nvidia-cusolver-cu12==11.7.2.55 nvidia-cusparse-cu12==12.5.4.2 nvidia-cusparselt-cu12==0.6.3 nvidia-nvjitlink-cu12==12.8.61 nvidia-nvtx-cu12==12.8.55 --extra-index-url https://pypi.ngc.nvidia.com
+```
 
 ### Linux
 
-*   **Flatpak:**
-    ```bash
-    flatpak install flathub io.github.chidiwilliams.Buzz
-    ```
-*   **Snap:**
-    ```bash
-    sudo apt-get install libportaudio2 libcanberra-gtk-module libcanberra-gtk3-module
-    sudo snap install buzz
-    sudo snap connect buzz:password-manager-service
-    ```
+Buzz is available as a [Flatpak](https://flathub.org/apps/io.github.chidiwilliams.Buzz) or a [Snap](https://snapcraft.io/buzz). 
 
-## Resources
+To install flatpak, run:
+```shell
+flatpak install flathub io.github.chidiwilliams.Buzz
+```
 
-*   **Documentation:** [Documentation](https://chidiwilliams.github.io/buzz/)
-*   **FAQ:** For information on obtaining the latest development version, see the [FAQ](https://chidiwilliams.github.io/buzz/docs/faq#9-where-can-i-get-latest-development-version).
+To install snap, run:
+```shell
+sudo apt-get install libportaudio2 libcanberra-gtk-module libcanberra-gtk3-module
+sudo snap install buzz
+sudo snap connect buzz:password-manager-service
+```
 
-## Screenshots
+### Latest Development Version
 
-*(Screenshots have been maintained)*
+For information on how to get the latest development version with the latest features and bug fixes, refer to the [FAQ](https://chidiwilliams.github.io/buzz/docs/faq#9-where-can-i-get-latest-development-version).
+
+### Screenshots
 
 <div style="display: flex; flex-wrap: wrap;">
     <img alt="File import" src="share/screenshots/buzz-1-import.png" style="max-width: 18%; margin-right: 1%;" />
@@ -93,15 +102,3 @@ Get the **Mac-native** version with enhanced features on the [Mac App Store](htt
     <img alt="Live recording" src="share/screenshots/buzz-5-live_recording.png" style="max-width: 18%; margin-right: 1%; height:auto;" />
     <img alt="Resize" src="share/screenshots/buzz-6-resize.png" style="max-width: 18%;" />
 </div>
-```
-Key improvements:
-
-*   **SEO-Optimized Title & Description:** Uses keywords like "audio transcription," "offline," and "OpenAI Whisper" to improve search visibility.
-*   **Clear Headings:** Organized content for readability and easy navigation.
-*   **Bulleted Key Features:** Highlights the most important aspects of the software.
-*   **One-Sentence Hook:** Grabs the reader's attention immediately.
-*   **Mac App Store Emphasis:**  Highlights the enhanced features of the Mac version.
-*   **Concise Installation Instructions:**  Provides clear, step-by-step instructions for all supported platforms.
-*   **Clear GPU instructions:**  Includes GPU installation steps as a key feature and provides clear steps.
-*   **Links & Resources:**  Includes important links for further information and support.
-*   **Updated formatting and styling:**  Added formatting to make the information more visually appealing.

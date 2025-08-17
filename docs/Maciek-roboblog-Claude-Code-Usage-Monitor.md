@@ -1,6 +1,6 @@
-# 🚀 Claude Code Usage Monitor: Track, Analyze, and Optimize Your Claude AI Token Usage
+# 🚀 Claude Code Usage Monitor: Stay Ahead of Your Anthropic AI Token Usage
 
-Tired of exceeding your Claude AI token limits? **Claude Code Usage Monitor** is a powerful, real-time terminal tool that helps you track, analyze, and optimize your token consumption with advanced analytics and intelligent predictions. View the original repo [here](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor).
+Tired of hitting those AI token limits?  **Claude Code Usage Monitor** ([Original Repo](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor)) is the ultimate real-time terminal tool for tracking your Claude AI token consumption. Get advanced analytics, machine learning-based predictions, and a beautiful, informative Rich UI, all designed to keep you productive.
 
 [![PyPI Version](https://img.shields.io/pypi/v/claude-monitor.svg)](https://pypi.org/project/claude-monitor/)
 [![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)](https://python.org)
@@ -10,92 +10,197 @@ Tired of exceeding your Claude AI token limits? **Claude Code Usage Monitor** is
 
 ![Claude Token Monitor Screenshot](https://raw.githubusercontent.com/Maciek-roboblog/Claude-Code-Usage-Monitor/main/doc/scnew.png)
 
-## ✨ Key Features
+---
 
-*   **🔮 ML-based Predictions:** Leverage machine learning for intelligent session limit detection.
-*   **🔄 Real-time Monitoring:** Configurable refresh rates with dynamic display updates.
-*   **📊 Advanced Rich UI:** Beautiful color-coded progress bars, tables, and layouts.
-*   **🤖 Smart Auto-Detection:** Automatic plan switching and custom limit discovery.
-*   **📋 Enhanced Plan Support:** Updated limits: Pro, Max5, Max20, and Custom (P90-based).
-*   **⚠️ Advanced Warning System:** Multi-level alerts with cost and time predictions.
-*   **🎨 Intelligent Theming:** Scientific color schemes with terminal background detection.
-*   **📈 Cost Analytics:** Model-specific pricing with cache token calculations.
-*   **⚡ Performance Optimized:** Advanced caching and efficient data processing.
+## 📌 Key Features
 
-## 🚀 Installation
+*   ✅ **Real-time Monitoring:** Track your token usage, burn rate, and cost in real-time with configurable refresh rates (0.1-20 Hz).
+*   📊 **Advanced UI:**  Enjoy a beautiful Rich UI with color-coded progress bars, tables, and WCAG-compliant contrast for optimal readability.
+*   🔮 **ML-Powered Predictions:** Get intelligent session limit detection and accurate predictions about remaining tokens and session expirations.
+*   🤖 **Smart Auto-Detection:** Automatic plan switching and custom limit discovery based on your usage patterns.
+*   📈 **Cost Analytics:** Detailed model-specific pricing with cache token calculations to help you manage your spending.
+*   ✨ **Comprehensive Logging:**  Optional file logging with configurable levels for in-depth analysis and troubleshooting.
+*   📦 **Easy Installation:** Modern installation using `uv` for simplified setup and management.
+
+---
+
+## 🛠️ Installation
 
 ### ⚡ Modern Installation with `uv` (Recommended)
 
-`uv` provides a fast and reliable way to install and manage the monitor.
+`uv` simplifies installation, resolves Python version conflicts, and creates isolated environments automatically.
 
 ```bash
-# Install with uv
+# Install uv (one-time setup - Linux/macOS)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Install uv (one-time setup - Windows)
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# After installation, restart your terminal
+
+# Install claude-monitor from PyPI using uv
 uv tool install claude-monitor
 
-# Run
+# Run from anywhere
 claude-monitor  # or cmonitor, ccmonitor for short
 ```
-
-*   **Advantages:** Creates isolated environments, handles Python versions, and simplifies updates.
 
 ### 📦 Installation with `pip`
 
 ```bash
+# Install from PyPI
 pip install claude-monitor
+
+# If claude-monitor command is not found, add ~/.local/bin to PATH:
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc  # or restart your terminal
+
+# Run from anywhere
 claude-monitor  # or cmonitor, ccmonitor for short
 ```
 
-### 🛠️ Other Package Managers
+### 🐳 Other Package Managers
 
-Install with `pipx` or `conda/mamba`:
-
+#### pipx (Isolated Environments)
 ```bash
-# pipx
+# Install with pipx
 pipx install claude-monitor
 
-# conda/mamba
-pip install claude-monitor
+# Run from anywhere
+claude-monitor  # or claude-code-monitor, cmonitor, ccmonitor, ccm for short
 ```
+
+
+#### conda/mamba
+```bash
+# Install with pip in conda environment
+pip install claude-monitor
+
+# Run from anywhere
+claude-monitor  # or cmonitor, ccmonitor for short
+```
+
+---
 
 ## 📖 Usage
 
-### Get Help
+### Basic Commands
 
 ```bash
+# Run the monitor with default settings (Custom plan with auto-detection)
+claude-monitor
+
+# View help information
 claude-monitor --help
+
+# Press Ctrl+C to gracefully exit
 ```
 
-### Basic Usage
+### Configuration Options
 
-```bash
-claude-monitor  # or cmonitor, ccmonitor for short
-```
+Control the monitor's behavior with various command-line parameters:
 
-## 💡 Key Configuration Options
+| Parameter              | Type    | Default | Description                                                   |
+| ---------------------- | ------- | ------- | ------------------------------------------------------------- |
+| `--plan`               | string  | custom  | Plan type: `pro`, `max5`, `max20`, or `custom`                |
+| `--custom-limit-tokens` | int     | None    | Token limit for custom plan (must be > 0)                     |
+| `--view`               | string  | realtime | View type: `realtime`, `daily`, or `monthly`                    |
+| `--timezone`           | string  | auto    | Timezone (auto-detected). Examples: `UTC`, `America/New_York` |
+| `--time-format`        | string  | auto    | Time format: `12h`, `24h`, or `auto`                          |
+| `--theme`              | string  | auto    | Display theme: `light`, `dark`, `classic`, or `auto`            |
+| `--refresh-rate`       | int     | 10      | Data refresh rate in seconds (1-60)                           |
+| `--refresh-per-second` | float   | 0.75    | Display refresh rate in Hz (0.1-20.0)                         |
+| `--reset-hour`         | int     | None    | Daily reset hour (0-23)                                       |
+| `--log-level`          | string  | INFO    | Logging level: `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL` |
+| `--log-file`           | path    | None    | Log file path                                                 |
+| `--debug`              | flag    | False   | Enable debug logging                                          |
+| `--version, -v`        | flag    | False   | Show version information                                      |
+| `--clear`              | flag    | False   | Clear saved configuration                                     |
 
-*   **`--plan`**: `pro`, `max5`, `max20`, or `custom`.
-*   **`--view`**: `realtime`, `daily`, or `monthly`.
-*   **`--timezone`**: Set timezone (e.g., `America/New_York`).
-*   **`--time-format`**: Set time format (`12h`, `24h`, or `auto`).
-*   **`--theme`**: Set display theme (`light`, `dark`, `classic`, or `auto`).
-*   **`--refresh-rate`**: Update interval in seconds (1-60).
+### Plan Options
 
-## ✨ Understanding the Custom Plan
+Select your Anthropic Claude plan:
 
-The **Custom plan** is the default and analyzes your usage over the last 192 hours (8 days) to calculate personalized limits based on your actual usage for accurate predictions and warnings.
+| Plan        | Token Limit     | Best For                         |
+| ----------- | --------------- | -------------------------------- |
+| **custom**  | P90 auto-detect | Intelligent limit detection (default) |
+| **pro**     | ~19,000         | Claude Pro subscription          |
+| **max5**    | ~88,000         | Claude Max5 subscription         |
+| **max20**   | ~220,000        | Claude Max20 subscription        |
 
-## 📄 What's New in v3.0.0
+---
 
-*   **Complete Architecture Rewrite**: Improved modularity and stability.
-*   **P90 Analysis:** Machine learning-based limit detection.
-*   **Updated Plan Limits:** Expanded plan options.
-*   **New CLI Options**: More control over the display and behavior.
-*   **Breaking Changes**: Package name changes and updated defaults.
+## ✨ Features Deep Dive
 
-## 📞 Contact
+### 🔄 Real-time Monitoring & Rich UI
 
-Need help or have suggestions? Contact [maciek@roboblog.eu](mailto:maciek@roboblog.eu).
+*   **Configurable Refresh Rates:** Fine-tune the update intervals to match your needs.
+*   **High-Precision Display Refresh:**  Control the display refresh rate (0.1-20 Hz) for optimal performance and responsiveness.
+*   **Intelligent Change Detection:** Minimize CPU usage by only updating when necessary.
+*   **Adaptive UI Themes:**  The monitor automatically detects your terminal background and provides optimized themes.
+*   **Multiple Views:** Switch between real-time, daily, and monthly views for comprehensive analysis.
+
+### 🔮 Machine Learning Predictions
+
+*   **P90 Calculator:** Uses 90th percentile analysis for intelligent limit detection and accurate forecasts.
+*   **Burn Rate Analytics:** Tracks your consumption patterns across multiple sessions.
+*   **Cost Projections:** Model-specific pricing with cache token calculations.
+*   **Session Forecasting:** Predicts when your sessions will expire based on your usage patterns.
+
+### 🤖 Intelligent Auto-Detection
+
+*   **Automatic Plan Switching:** The monitor can automatically switch plans based on your usage.
+*   **Limit Discovery:**  Analyzes historical data to find your actual token limits.
+
+---
+
+## 🚀 Usage Examples
+
+*   **Basic Usage:** `claude-monitor` (starts with the Custom plan)
+*   **Specify Your Plan:** `claude-monitor --plan pro` (for Pro subscribers)
+*   **Custom Plan with Limit:** `claude-monitor --plan custom --custom-limit-tokens 150000`
+*   **Daily View:** `claude-monitor --view daily`
+*   **Set Timezone:** `claude-monitor --timezone America/Los_Angeles`
+*   **Enable Debugging:** `claude-monitor --debug`
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions!  See our [Contributing Guide](CONTRIBUTING.md) to learn how you can help.
+
+---
+
+## 📚 Additional Resources
+
+*   [Development Roadmap](DEVELOPMENT.md)
+*   [Contributing Guide](CONTRIBUTING.md)
+*   [Troubleshooting](TROUBLESHOOTING.md)
+
+---
 
 ## 📝 License
 
-MIT License - Use and modify freely.
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+Special thanks to our sponsors and contributors:
+
+*   **Ed** - *Buy Me Coffee Supporter*
+*   [@adawalli](https://github.com/adawalli)
+*   [@taylorwilsdon](https://github.com/taylorwilsdon)
+*   [@moneroexamples](https://github.com/moneroexamples)
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if you find it useful! ⭐**
+
+[Report Bug](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor/issues) • [Request Feature](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor/issues) • [Contribute](CONTRIBUTING.md)
+
+</div>

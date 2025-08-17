@@ -1,9 +1,10 @@
 <div align="center">
   <h1 align="center">
-    <img src="./assets/screenshot/March7th.png" width="200">
+    <img src="./assets/screenshot/March7th.png" width="200" alt="March7th Assistant Logo">
     <br/>
-    March7th Assistant - Your Automated Honkai: Star Rail Companion
+    March7th Assistant · 三月七小助手
   </h1>
+  <p>Automate your daily Honkai: Star Rail tasks with March7th Assistant!</p>
   <a href="https://trendshift.io/repositories/3892" target="_blank"><img src="https://trendshift.io/api/badge/repositories/3892" alt="moesnow%2FMarch7thAssistant | Trendshift" style="width: 200px; height: 46px;" width="250" height="46"/></a>
 </div>
 
@@ -11,56 +12,180 @@
 
 <div align="center">
   <img alt="Platform: Windows" src="https://img.shields.io/badge/platform-Windows-blue?style=flat-square&color=4096d8" />
-  <img alt="Latest Release" src="https://img.shields.io/github/v/release/moesnow/March7thAssistant?style=flat-square&color=f18cb9" />
-  <img alt="Total Downloads" src="https://img.shields.io/github/downloads/moesnow/March7thAssistant/total?style=flat-square&color=4096d8" />
+  <img alt="Release Version" src="https://img.shields.io/github/v/release/moesnow/March7thAssistant?style=flat-square&color=f18cb9" />
+  <img alt="Downloads" src="https://img.shields.io/github/downloads/moesnow/March7thAssistant/total?style=flat-square&color=4096d8" />
 </div>
 
 <br/>
 
 <div align="center">
-
-**[简体中文](README.md)** | [繁體中文](./README_TW.md) | [English](./README_EN.md)
-
-Get started quickly: [Tutorial](https://m7a.top/#/assets/docs/Tutorial) | FAQ: [FAQ](https://m7a.top/#/assets/docs/FAQ)
-
+  **[简体中文]** | [繁體中文](./README_TW.md) | [English](./README_EN.md)
+  <br/>
+  <a href="https://m7a.top/#/assets/docs/Tutorial">Quick Start Guide</a> | <a href="https://m7a.top/#/assets/docs/FAQ">FAQ</a>
+  <br/>
+  <a href="https://github.com/moesnow/March7thAssistant">
+    <img src="https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?style=flat-square&logo=github" alt="View on GitHub">
+  </a>
 </div>
 
-## Automate Your Honkai: Star Rail Gameplay with March7th Assistant
+## Key Features
 
-March7th Assistant is a powerful Windows application designed to automate various tasks in Honkai: Star Rail, saving you time and effort. **Visit the [GitHub repository](https://github.com/moesnow/March7thAssistant) for more details!**
+March7th Assistant is a powerful automation tool for Honkai: Star Rail, streamlining your daily gameplay. Key features include:
 
-### Key Features:
+*   **Automated Daily Tasks:** Clears stamina, completes daily training, collects rewards, handles assignments, and farms Simulated Universe.
+*   **Automated Weekly Tasks:** Executes Calyx and Echo of War tasks.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
 
-*   **Daily Task Automation:** Automate daily tasks like clearing stamina, completing daily training, collecting rewards, and sending dispatches.
-*   **Weekly Task Automation:** Automate weekly tasks, including Simulated Universe, Forgotten Hall, and Echo of War.
-*   **Automated Battle:** Automate the whole battle process
-*   **Automated Dialogue:** Automate the whole dialogue process.
-*   **Automated Game Management:** Automatically launch or close game when task starts or completes.
-*   **Automated Notification:** Receive notification for the training progress
-*   **Automatic Trigger:** Trigger tasks upon resource refresh or stamina recovery, and sound notification
-*   **SRGF Export:** Export your gacha records with SRGF format.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
 
-### Important Notes:
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
 
-*   Requires a PC with a `1920x1080` resolution, and supports full screen
-*   [Auto_Simulated_Universe](https://github.com/CHNZYX/Auto_Simulated_Universe) for Simulated Universe automation.
-*   [Fhoe-Rail](https://github.com/linruowuyin/Fhoe-Rail) for "Farming" automation.
-*   Find configurations in the [config file](assets/config/config.example.yaml) or through the graphical interface.  |🌟If you like it, give it a star!･ω･) 🌟 | QQ Group: [Click to Join](https://qm.qq.com/q/LpfAkDPlWa) | TG Group: [Click to Join](https://t.me/+ZgH5zpvFS8o0NGI1)
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
 
-### Interface Preview
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
 
-![README](assets/screenshot/README.png)
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
 
-### Installation and Usage
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
+*   **Automated Simulated Universe and Forgotten Hall:** Automates Simulated Universe and Forgotten Hall for you.
 
-1.  **Download:** Go to [Releases](https://github.com/moesnow/March7thAssistant/releases/latest) and download the latest release.
-2.  **Run:** Extract the archive and double-click `March7th Launcher.exe` to open the graphical interface.
-3.  **Scheduled Tasks/Direct Execution:** For scheduled tasks, use `March7th Assistant.exe` (terminal).
-4.  **Update:** Check for updates by clicking the button in the graphical interface, or by double-clicking `March7th Updater.exe`.
+*   **Pull Record Export:** Supports [SRGF](https://uigf.org/zh/standards/SRGF.html) standard and **automated dialogue.**
+*   **Notification System:**  Receives message notifications for completed tasks.
+*   **Automated Launch:**  Automatically starts tasks upon refresh or stamina recovery to a specific value.
+*   **Task Completion Alerts:** Provides sound notifications and options to automatically close the game or shut down the computer.
 
-### Advanced: Running from Source (For Developers)
+>   Uses [Auto_Simulated_Universe](https://github.com/CHNZYX/Auto_Simulated_Universe) for Simulated Universe and [Fhoe-Rail](https://github.com/linruowuyin/Fhoe-Rail) for farming.
 
-If you're comfortable with coding, you can run the assistant from the source code:
+For more information, see the [configuration file](assets/config/config.example.yaml) or configure through the graphical interface.  🌟If you like it, give a star!|･ω･) 🌟 | QQ Group [Click to Join](https://qm.qq.com/q/LpfAkDPlWa) | TG Group [Click to Join](https://t.me/+ZgH5zpvFS8o0NGI1)
+
+## Interface Display
+
+![Interface Screenshot](assets/screenshot/README.png)
+
+## Important Notes
+
+*   Requires **PC** with a `1920*1080` resolution in a window or full-screen mode (HDR is not supported).
+*   Simulated Universe-related documentation: [Project Documentation](https://github.com/Night-stars-1/Auto_Simulated_Universe_Docs/blob/docs/docs/guide/index.md)  and [Q&A](https://github.com/Night-stars-1/Auto_Simulated_Universe_Docs/blob/docs/docs/guide/qa.md).
+*   For background execution or multiple monitors, consider [Remote Local Multi-User Desktop](https://m7a.top/#/assets/docs/Background).
+*   Report issues in the [Issue Tracker](https://github.com/moesnow/March7thAssistant/issues) and discuss in the [Discussions](https://github.com/moesnow/March7thAssistant/discussions). Group chats are available.  Welcome to submit [PRs](https://github.com/moesnow/March7thAssistant/pulls).
+
+## Download and Installation
+
+1.  Go to [Releases](https://github.com/moesnow/March7thAssistant/releases/latest) to download the latest version.
+2.  Extract the downloaded archive.
+3.  Double-click the `March7th Launcher.exe` icon to launch the graphical interface.
+
+To run with the **Task Scheduler** for scheduled tasks or execute the **complete run**, use the terminal icon: `March7th Assistant.exe`
+
+To check for updates, click the button at the bottom of the graphical interface, or double-click `March7th Updater.exe`.
+
+## Running from Source Code
+
+*If you are a beginner, please download and install via the above steps. No need to read on.*
 
 ```cmd
 # Installation (using venv is recommended)
@@ -76,37 +201,38 @@ git submodule update --init --recursive
 ```
 
 <details>
-<summary>Development Tips</summary>
+<summary>Development Information</summary>
 
-Use the screenshot capture feature in the assistant's toolbox to get crop parameters.
+The cropping coordinates can be obtained by the capture screenshot function within the assistant toolbox.
 
-Run `python main.py` with arguments like `fight`, `universe`, or `forgottenhall`.
-
+`python main.py` supports parameters like `fight/universe/forgottenhall`
 </details>
 
 ---
 
-If you find this project helpful, consider supporting the developer with a coffee! ☕
+If you like the project, you can support the author with a coffee ☕.
 
-![sponsor](assets/app/images/sponsor.jpg)
+Your support is the motivation for the author to develop and maintain the project 🚀.
+
+![Sponsor QR Code](assets/app/images/sponsor.jpg)
 
 ---
 
 ## Related Projects
 
-March7th Assistant leverages the following open-source projects:
+March7th Assistant relies on the following open-source projects:
 
 *   Simulated Universe Automation: [https://github.com/CHNZYX/Auto_Simulated_Universe](https://github.com/CHNZYX/Auto_Simulated_Universe)
-*   "Farming" Automation: [https://github.com/linruowuyin/Fhoe-Rail](https://github.com/linruowuyin/Fhoe-Rail)
-*   OCR: [https://github.com/hiroi-sora/PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)
-*   GUI Library: [https://github.com/zhiyiYo/PyQt-Fluent-Widgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets)
+*   Calyx Automation: [https://github.com/linruowuyin/Fhoe-Rail](https://github.com/linruowuyin/Fhoe-Rail)
+*   OCR Text Recognition: [https://github.com/hiroi-sora/PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)
+*   GUI Component Library: [https://github.com/zhiyiYo/PyQt-Fluent-Widgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets)
 
 ## Contributors
 
 <a href="https://github.com/moesnow/March7thAssistant/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=moesnow/March7thAssistant" />
+  <img src="https://contrib.rocks/image?repo=moesnow/March7thAssistant" alt="Contributors"/>
 </a>
 
-## Stargazers Over Time
+## Stargazers over time
 
 [![Star History](https://starchart.cc/moesnow/March7thAssistant.svg?variant=adaptive)](https://starchart.cc/moesnow/March7thAssistant)

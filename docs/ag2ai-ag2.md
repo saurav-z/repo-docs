@@ -1,31 +1,24 @@
 <p align="center">
-  <!-- The image URL points to the GitHub-hosted content, ensuring it displays correctly on the PyPI website.-->
   <img src="https://raw.githubusercontent.com/ag2ai/ag2/27b37494a6f72b1f8050f6bd7be9a7ff232cf749/website/static/img/ag2.svg" width="150" title="AG2 Logo">
-
   <br>
   <br>
 
   <a href="https://www.pepy.tech/projects/ag2">
-    <img src="https://static.pepy.tech/personalized-badge/ag2?period=month&units=international_system&left_color=grey&right_color=green&left_text=downloads/month" alt="Monthly Downloads">
+    <img src="https://static.pepy.tech/personalized-badge/ag2?period=month&units=international_system&left_color=grey&right_color=green&left_text=downloads/month" alt="Downloads"/>
   </a>
-
   <a href="https://pypi.org/project/autogen/">
-    <img src="https://img.shields.io/pypi/v/ag2?label=PyPI&color=green" alt="PyPI Version">
+    <img src="https://img.shields.io/pypi/v/ag2?label=PyPI&color=green">
   </a>
-
-  <img src="https://img.shields.io/pypi/pyversions/ag2.svg?label=" alt="Python Versions">
-
+  <img src="https://img.shields.io/pypi/pyversions/ag2.svg?label=">
   <a href="https://github.com/ag2ai/ag2/actions/workflows/python-package.yml">
-    <img src="https://github.com/ag2ai/ag2/actions/workflows/python-package.yml/badge.svg" alt="Build Status">
+    <img src="https://github.com/ag2ai/ag2/actions/workflows/python-package.yml/badge.svg">
   </a>
   <a href="https://discord.gg/pAbnFJrkgZ">
-    <img src="https://img.shields.io/discord/1153072414184452236?logo=discord&style=flat" alt="Discord">
+    <img src="https://img.shields.io/discord/1153072414184452236?logo=discord&style=flat">
   </a>
-
   <br>
-
   <a href="https://x.com/ag2oss">
-    <img src="https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40ag2ai" alt="Follow on X">
+    <img src="https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40ag2ai">
   </a>
 </p>
 
@@ -33,31 +26,25 @@
   <a href="https://docs.ag2.ai/">📚 Documentation</a> |
   <a href="https://github.com/ag2ai/build-with-ag2">💡 Examples</a> |
   <a href="https://docs.ag2.ai/latest/docs/contributor-guide/contributing">🤝 Contributing</a> |
-  <a href="#related-papers">📝 Cite Paper</a> |
+  <a href="#related-papers">📝 Cite paper</a> |
   <a href="https://discord.gg/pAbnFJrkgZ">💬 Join Discord</a>
 </p>
 
-<p align="center">
-  **AG2 is the open-source AgentOS, empowering developers to build and orchestrate powerful AI agents for a variety of applications.**
-</p>
+## AG2: Build Powerful AI Agents with This Open-Source Framework
 
-# AG2: Open-Source AgentOS for AI Agents
+AG2 is an open-source framework for building, orchestrating, and collaborating with AI agents, offering developers a robust toolkit for creating advanced agentic AI applications.  ([Back to Top](#readme-top))
 
-AG2 (formerly AutoGen) is a cutting-edge, open-source framework designed for building and coordinating AI agents. It simplifies the development and research of agentic AI by enabling agents to interact, utilize diverse LLMs, leverage tools, and implement autonomous/human-in-the-loop workflows.  [Explore the AG2 repository for the latest updates](https://github.com/ag2ai/ag2).
+**Key Features:**
 
-Key features of AG2 include:
-
-*   **Multi-Agent Collaboration:** Facilitates seamless interaction and cooperation between multiple AI agents.
-*   **LLM Agnostic:** Supports various Large Language Models (LLMs), providing flexibility in model selection.
-*   **Tool Integration:** Enables agents to leverage external tools and APIs for enhanced functionality.
-*   **Autonomous & Human-in-the-Loop Workflows:** Supports both fully automated and human-assisted agent operations.
-*   **Flexible Orchestration:** Offers customizable conversation patterns, including group chats and sequential interactions.
-
-The project is maintained by a collaborative group of volunteers. Contact Chi Wang and Qingyun Wu at [support@ag2.ai](mailto:support@ag2.ai) if you're interested in contributing.
+*   **Multi-Agent Collaboration:** Facilitates seamless cooperation among multiple AI agents to solve complex tasks.
+*   **LLM and Tool Integration:**  Supports various Large Language Models (LLMs) and tool usage for enhanced agent capabilities.
+*   **Flexible Workflows:** Enables both autonomous and human-in-the-loop workflows for adaptable control.
+*   **Conversation Patterns:** Offers pre-built and customizable multi-agent conversation patterns for diverse applications.
+*   **Open-Source and Community-Driven:**  Evolved from AutoGen, AG2 is fully open-sourced and welcomes contributions from all organizations.
 
 ## Table of Contents
 
-*   [AG2: Open-Source AgentOS for AI Agents](#ag2-open-source-agentos-for-ai-agents)
+*   [AG2: Build Powerful AI Agents with This Open-Source Framework](#ag2-build-powerful-ai-agents-with-this-open-source-framework)
     *   [Table of Contents](#table-of-contents)
     *   [Getting Started](#getting-started)
         *   [Installation](#installation)
@@ -66,7 +53,7 @@ The project is maintained by a collaborative group of volunteers. Contact Chi Wa
     *   [Example Applications](#example-applications)
     *   [Introduction of Different Agent Concepts](#introduction-of-different-agent-concepts)
         *   [Conversable Agent](#conversable-agent)
-        *   [Human in the Loop](#human-in-the-loop)
+        *   [Human-in-the-Loop](#human-in-the-loop)
         *   [Orchestrating Multiple Agents](#orchestrating-multiple-agents)
         *   [Tools](#tools)
         *   [Advanced Agentic Design Patterns](#advanced-agentic-design-patterns)
@@ -79,21 +66,25 @@ The project is maintained by a collaborative group of volunteers. Contact Chi Wa
 
 ## Getting Started
 
-Get up and running with AG2 quickly. For detailed guidance, refer to the [Basic Concepts](https://docs.ag2.ai/latest/docs/user-guide/basic-concepts/installing-ag2/) section in our documentation.
+Jumpstart your AG2 journey with these steps:
+
+*   For a detailed walkthrough of AG2 concepts and code, explore the [Basic Concepts](https://docs.ag2.ai/latest/docs/user-guide/basic-concepts/installing-ag2/) in our documentation.
 
 ### Installation
 
-AG2 requires **Python version >= 3.10, < 3.14**. Install AG2 using `pip`:
+AG2 requires **Python version >= 3.10, < 3.14**. Install AG2 via `ag2` (or the alias `autogen`) from PyPI:
 
 ```bash
 pip install ag2[openai]
 ```
 
-Install optional dependencies as needed.
+Install optional dependencies based on the features you need.
 
 ### Setup Your API Keys
 
-Store API keys securely using the `OAI_CONFIG_LIST` file.  Use the sample file as a template.
+Organize your LLM dependencies by using the `OAI_CONFIG_LIST` file to store API keys.
+
+Use the provided sample file `OAI_CONFIG_LIST_sample` as a template:
 
 ```json
 [
@@ -106,7 +97,7 @@ Store API keys securely using the `OAI_CONFIG_LIST` file.  Use the sample file a
 
 ### Run Your First Agent
 
-Create a script or Jupyter Notebook to initiate your first agent.
+Create a script or Jupyter Notebook to execute your initial agent:
 
 ```python
 from autogen import AssistantAgent, UserProxyAgent, LLMConfig
@@ -123,24 +114,26 @@ user_proxy.initiate_chat(assistant, message="Plot a chart of NVDA and TESLA stoc
 
 ## Example Applications
 
-Explore our dedicated repository and Jupyter notebooks for diverse use cases.
+Explore a wide range of example applications in the dedicated repository:
 
 *   [Build with AG2](https://github.com/ag2ai/build-with-ag2)
 *   [Jupyter Notebooks](notebook)
 
 ## Introduction of Different Agent Concepts
 
-AG2 offers key agent concepts for building AI agents:
+AG2 introduces several agent concepts to facilitate the development of AI agents:
 
-*   **Conversable Agent:** Core agent for sending, receiving, and generating responses.
-*   **Human-in-the-Loop:** Integrates human input for oversight.
-*   **Orchestrating Multiple Agents:** Design sophisticated multi-agent interactions.
-*   **Tools:** Enable agents to use external programs and APIs.
-*   **Advanced Concepts:** Support for structured outputs, RAG, code execution, and more.
+*   **Conversable Agent**: Enables communication, message reception, and response generation using GenAI models, tools, or human input.
+*   **Human-in-the-Loop**: Incorporates human input for oversight and decision-making.
+*   **Orchestrating Multiple Agents**: Supports collaboration with built-in conversation patterns like swarms and group chats.
+*   **Tools**: Allows agents to leverage external programs.
+*   **Advanced Concepts**: Includes structured outputs, RAG, code execution, and more.
 
 ### Conversable Agent
 
-The [ConversableAgent](https://docs.ag2.ai/latest/docs/api-reference/autogen/ConversableAgent) is the foundation for agent communication in AG2.
+The [ConversableAgent](https://docs.ag2.ai/latest/docs/api-reference/autogen/ConversableAgent) is the foundational component for AI interaction within AG2.
+
+Example:
 
 ```python
 # 1. Import ConversableAgent class
@@ -173,9 +166,17 @@ assistant.initiate_chat(
 )
 ```
 
-### Human in the Loop
+### Human-in-the-Loop
 
-Incorporate human input for critical decisions using AG2's human-in-the-loop functionality.
+Integrate human feedback into AI workflows with AG2. You can control human input using the `human_input_mode` parameter:
+
+*   `ALWAYS`: Requires human input for every response.
+*   `NEVER`: Operates autonomously.
+*   `TERMINATE`: Requests input to end conversations.
+
+The `UserProxyAgent` simplifies this process.
+
+Example:
 
 ```python
 # 1. Import ConversableAgent and UserProxyAgent classes
@@ -206,12 +207,13 @@ human.initiate_chat(
     recipient=assistant,
     message="Hello! What's 2 + 2?"
 )
-
 ```
 
 ### Orchestrating Multiple Agents
 
-AG2 provides flexible orchestration patterns for multi-agent collaboration.
+AG2 allows you to build collaborative multi-agent systems using orchestration patterns like `GroupChat` and `Swarm`.
+
+Example:
 
 ```python
 from autogen import ConversableAgent, GroupChat, GroupChatManager, LLMConfig
@@ -287,11 +289,11 @@ teacher.initiate_chat(
 )
 ```
 
-Learn more about GroupChat and other patterns [here](https://docs.ag2.ai/latest/docs/user-guide/advanced-concepts/orchestration/group-chat/introduction).
-
 ### Tools
 
-Extend agent capabilities by integrating tools for external data, APIs, and functionality.
+Empower agents with access to external data, APIs, and functions.
+
+Example:
 
 ```python
 from datetime import datetime
@@ -340,35 +342,47 @@ print(chat_result.chat_history[-1]["content"])
 
 ### Advanced Agentic Design Patterns
 
-AG2 supports more advanced concepts, including:
+AG2 supports advanced agent features:
 
 *   [Structured Output](https://docs.ag2.ai/latest/docs/user-guide/basic-concepts/structured-outputs)
-*   [Ending a Conversation](https://docs.ag2.ai/latest/docs/user-guide/advanced-concepts/orchestration/ending-a-chat/)
+*   [Ending a conversation](https://docs.ag2.ai/latest/docs/user-guide/advanced-concepts/orchestration/ending-a-chat/)
 *   [Retrieval Augmented Generation (RAG)](https://docs.ag2.ai/latest/docs/user-guide/advanced-concepts/rag/)
 *   [Code Execution](https://docs.ag2.ai/latest/docs/user-guide/advanced-concepts/code-execution)
 *   [Tools with Secrets](https://docs.ag2.ai/latest/docs/user-guide/advanced-concepts/tools/tools-with-secrets/)
 
 ## Announcements
 
-*   🔥 🎉 **Nov 11, 2024:** AutoGen evolves into **AG2**!  A new organization [AG2AI](https://github.com/ag2ai) hosts AG2 development.  Check out [AG2's new look](https://ag2.ai/).
-*   📄 **License Update:**  AG2 adopts the Apache 2.0 license from v0.3.
-*   🎉 May 29, 2024: DeepLearning.ai launched a course [AI Agentic Design Patterns with AutoGen](https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen).
+*   🔥 🎉 **Nov 11, 2024:**  AutoGen evolves into **AG2**! A new organization [AG2AI](https://github.com/ag2ai) hosts the development with open governance.  Check out [AG2's new look](https://ag2.ai/).
+
+*   📄 **License:**  AG2 adopts the Apache 2.0 license from v0.3.
+
+*   🎉 May 29, 2024: DeepLearning.ai launched a new short course [AI Agentic Design Patterns with AutoGen](https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen), made in collaboration with Microsoft and Penn State University, and taught by AutoGen creators [Chi Wang](https://github.com/sonichi) and [Qingyun Wu](https://github.com/qingyun-wu).
+
 *   🎉 May 24, 2024: Foundation Capital published an article on [Forbes: The Promise of Multi-Agent AI](https://www.forbes.com/sites/joannechen/2024/05/24/the-promise-of-multi-agent-ai/?sh=2c1e4f454d97) and a video [AI in the Real World Episode 2: Exploring Multi-Agent AI and AutoGen with Chi Wang](https://www.youtube.com/watch?v=RLwyXRVvlNk).
+
 *   🎉 Apr 17, 2024: Andrew Ng cited AutoGen in [The Batch newsletter](https://www.deeplearning.ai/the-batch/issue-245/) and [What's next for AI agentic workflows](https://youtu.be/sal78ACtGTc?si=JduUzN_1kDnMq0vF) at Sequoia Capital's AI Ascent (Mar 26).
 
 [More Announcements](announcements.md)
 
 ## Contributors Wall
 
-[Contributors Image](https://github.com/ag2ai/ag2/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=ag2ai/ag2&max=204)](https://github.com/ag2ai/ag2/graphs/contributors)
 
 ## Code Style and Linting
 
-Maintain code quality using pre-commit hooks.
+This project enforces code quality with pre-commit hooks.
 
-1.  Install: `pip install pre-commit`
-2.  Install hooks: `pre-commit install`
-3.  Run hooks: `pre-commit run --all-files` or hooks run automatically on commit.
+1.  Install pre-commit:
+
+    ```bash
+    pip install pre-commit
+    pre-commit install
+    ```
+2.  The hooks run automatically on commit, or manually:
+
+    ```bash
+    pre-commit run --all-files
+    ```
 
 ## Related Papers
 
@@ -393,9 +407,11 @@ version = {latest}
 
 ## License
 
-AG2 is licensed under the [Apache License, Version 2.0 (Apache-2.0)](./LICENSE).  This project is a spin-off of [AutoGen](https://github.com/microsoft/autogen).
+This project is licensed under the [Apache License, Version 2.0 (Apache-2.0)](./LICENSE).
 
-*   Original code from [AutoGen](https://github.com/microsoft/autogen) is licensed under the MIT License ([LICENSE_original_MIT](./license_original/LICENSE_original_MIT)).
-*   Modifications and additions in this fork are licensed under the Apache License, Version 2.0 ([LICENSE](./LICENSE)).
+This project is a spin-off of [AutoGen](https://github.com/microsoft/autogen) and contains code under two licenses:
 
-See [NOTICE](./NOTICE.md) for details.
+*   The original code from https://github.com/microsoft/autogen is licensed under the MIT License. See the [LICENSE_original_MIT](./license_original/LICENSE_original_MIT) file for details.
+*   Modifications and additions made in this fork are licensed under the Apache License, Version 2.0. See the [LICENSE](./LICENSE) file for the full license text.
+
+For clarity and transparency, changes are documented. See the [NOTICE](./NOTICE.md) file.

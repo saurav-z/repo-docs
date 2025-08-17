@@ -1,81 +1,75 @@
-# RoboTwin: The Ultimate Benchmark for Bimanual Robotic Manipulation
+# RoboTwin: The Premier Benchmark for Bimanual Robotic Manipulation
 
-<p align="center">
-  <img src="./assets/files/50_tasks.gif" width="75%">
-</p>
-
-**RoboTwin is a comprehensive, open-source platform designed to advance the field of bimanual robotic manipulation.  Explore the latest advancements and contribute to the future of robotics!**  [Visit the original repo on GitHub](https://github.com/RoboTwin-Platform/RoboTwin).
+**RoboTwin** offers a cutting-edge platform for advancing bimanual robotic manipulation, providing a scalable data generator, comprehensive benchmark, and robust domain randomization capabilities. Explore the latest advancements at the [RoboTwin GitHub Repository](https://github.com/RoboTwin-Platform/RoboTwin).
 
 ## Key Features
 
-*   **Robust & Scalable:** RoboTwin 2.0 features strong domain randomization for realistic simulation and robust performance.
-*   **Extensive Task Variety:**  Includes a diverse set of 50 bimanual manipulation tasks, ideal for evaluating and comparing robotic control algorithms.
-*   **Open-Source & Accessible:** Free to use, modify, and contribute to, with detailed documentation and community support.
-*   **Comprehensive Benchmarks:**  Features leaderboards and standardized evaluation metrics to track progress and compare different approaches.
-*   **Policy Baselines:** Includes implementations of popular algorithms like DP, ACT, DP3, RDT, PI0 and more. Supports deploying your own policies.
-*   **Active Development & Community:**  Regular updates, including new features, tasks, and policies, and strong community support.
-*   **Multiple Versions & Challenges:** Access to Early Version, 1.0 Version, and 2.0 Version along with CVPR challenge datasets and workshops.
+*   **Scalable Data Generation:** Generate diverse datasets for training and evaluating bimanual robotic manipulation algorithms.
+*   **Comprehensive Benchmark:** Evaluate your algorithms across a wide range of challenging tasks and metrics.
+*   **Strong Domain Randomization:** Enhance robustness and generalization through realistic simulation and randomization techniques.
+*   **Cutting-Edge Baselines:** Utilize state-of-the-art baselines including DP, ACT, DP3, RDT, and more.
+*   **Active Community:** Engage with researchers and developers through the official [RoboTwin Webpage](https://robotwin-platform.github.io/) and [Community](https://robotwin-platform.github.io/doc/community/index.html).
+*   **Challenge & Leaderboard:** Participate in the [RoboTwin Dual-Arm Collaboration Challenge@CVPR'25 MEIS Workshop](https://robotwin-platform.github.io/leaderboard) and climb the leaderboard.
 
-## What's New in RoboTwin 2.0
+## Latest Updates
 
-*   **Released Leaderboard:** Explore and compare your results on the [leaderboard website](https://robotwin-platform.github.io/leaderboard).
-*   **Outstanding Poster Award:** Awarded Outstanding Poster at ChinaSI 2025 (Ranking 1st).
-*   **Endpose Control Mode:** Added support for endpose control, providing more control options.
-*   **RoboTwin Dual-Arm Collaboration Challenge:** Technical Report available at [arXiv](https://arxiv.org/abs/2506.23351).
-*   **CVPR Highlight Paper:** RoboTwin 1.0 was selected as a CVPR Highlight paper.
-*   **ECCV Best Paper Award:** RoboTwin (Early Version) received the Best Paper Award at the ECCV Workshop 2024.
+*   **RoboTwin 2.0 Released!** [Webpage](https://robotwin-platform.github.io/) | [Document](https://robotwin-platform.github.io/doc) | [Paper](https://arxiv.org/abs/2506.18088) | [Leaderboard](https://robotwin-platform.github.io/leaderboard)
+*   **RoboTwin Dual-Arm Collaboration Challenge** at CVPR 2025 MEIS Workshop. [Technical Report](https://arxiv.org/abs/2506.23351)
+*   **CVPR 2025 Highlight Paper!** RoboTwin: Dual-Arm Robot Benchmark with Generative Digital Twins.
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Installation
 
-Follow the detailed installation instructions in the [RoboTwin 2.0 Document](https://robotwin-platform.github.io/doc/usage/robotwin-install.html).  Installation takes approximately 20 minutes.
+Follow the detailed installation instructions in the [RoboTwin 2.0 Document](https://robotwin-platform.github.io/doc/usage/robotwin-install.html) to get started.
+
+### Tasks
+
+Explore the various bimanual manipulation tasks available within RoboTwin. For more details see [RoboTwin 2.0 Tasks Doc](https://robotwin-platform.github.io/doc/tasks/index.html)
 
 ### Usage
 
-RoboTwin is designed to be easy to use, even for newcomers.
+1.  **Data Collection:**
 
-*   **Data Collection:** Collect data yourself to fully utilize the high configurability and diversity of RoboTwin. See [RoboTwin Dataset](https://huggingface.co/datasets/TianxingChen/RoboTwin2.0/tree/main/dataset) for pre-collected trajectories.
-*   **Task Running:**  Run tasks and collect data using the provided `collect_data.sh` script.
+    Collect data using the provided scripts. Data collection is highly configurable.
 
     ```bash
     bash collect_data.sh ${task_name} ${task_config} ${gpu_id}
     # Example: bash collect_data.sh beat_block_hammer demo_randomized 0
     ```
 
-*   **Task Configuration:**  Customize tasks with different configurations. See [RoboTwin 2.0 Tasks Configurations Doc](https://robotwin-platform.github.io/doc/usage/configurations.html) for more details.
+2.  **Task Configuration:**
 
-### Policy Baselines
+    Customize task configurations to suit your needs. See [RoboTwin 2.0 Tasks Configurations Doc](https://robotwin-platform.github.io/doc/usage/configurations.html) for more information.
 
-RoboTwin supports a variety of state-of-the-art policy baselines, including:
+## 🤖 Policy Baselines
 
-*   DP
-*   ACT
-*   DP3
-*   RDT
-*   PI0
-*   TinyVLA
-*   DexVLA (Contributed by Media Group)
-*   LLaVA-VLA (Contributed by IRPN Lab, HKUST(GZ))
+RoboTwin supports a range of policy baselines to accelerate your research:
 
-Learn how to deploy your own policies: [guide](https://robotwin-platform.github.io/doc/usage/deploy-your-policy.html)
+*   DP, ACT, DP3, RDT, PI0
+*   TinyVLA, DexVLA
+*   LLaVA-VLA
+*   More coming soon!
 
-## Explore & Contribute
+Deploy your own policies with the [deployment guide](https://robotwin-platform.github.io/doc/usage/deploy-your-policy.html).
 
-RoboTwin is an excellent platform to explore:
+## 🏆 Experiment & Leaderboard
 
-*   Single-task fine-tuning capabilities.
-*   Visual robustness in robotic manipulation.
-*   Language diversity robustness (language conditioning).
-*   Multi-task learning capabilities.
-*   Cross-embodiment performance.
+Use RoboTwin to explore:
 
-## Citations
+1.  Single-task fine-tuning
+2.  Visual robustness
+3.  Language diversity robustness
+4.  Multi-task capability
+5.  Cross-embodiment performance
 
-If you find RoboTwin useful, please consider citing the following:
+Find the full leaderboard and experiment settings at [https://robotwin-platform.github.io/leaderboard](https://robotwin-platform.github.io/leaderboard).
 
-**RoboTwin 2.0:**
-```
+## 📝 Citations
+
+Please cite our work if you find RoboTwin useful:
+
+```bibtex
 @article{chen2025robotwin,
   title={RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation},
   author={Chen, Tianxing and Chen, Zanxin and Chen, Baijun and Cai, Zijian and Liu, Yibin and Liang, Qiwei and Li, Zixuan and Lin, Xianliang and Ge, Yiheng and Gu, Zhenyu and others},
@@ -84,8 +78,7 @@ If you find RoboTwin useful, please consider citing the following:
 }
 ```
 
-**RoboTwin 1.0 (CVPR 2025 Highlight):**
-```
+```bibtex
 @InProceedings{Mu_2025_CVPR,
     author    = {Mu, Yao and Chen, Tianxing and Chen, Zanxin and Peng, Shijia and Lan, Zhiqian and Gao, Zeyu and Liang, Zhixuan and Yu, Qiaojun and Zou, Yude and Xu, Mingkun and Lin, Lunkai and Xie, Zhiqiang and Ding, Mingyu and Luo, Ping},
     title     = {RoboTwin: Dual-Arm Robot Benchmark with Generative Digital Twins},
@@ -96,8 +89,7 @@ If you find RoboTwin useful, please consider citing the following:
 }
 ```
 
-**RoboTwin Dual-Arm Collaboration Challenge (CVPR 2025 MEIS Workshop):**
-```
+```bibtex
 @article{chen2025benchmarking,
   title={Benchmarking Generalizable Bimanual Manipulation: RoboTwin Dual-Arm Collaboration Challenge at CVPR 2025 MEIS Workshop},
   author={Chen, Tianxing and Wang, Kaixuan and Yang, Zhaohui and Zhang, Yuhao and Chen, Zanxin and Chen, Baijun and Dong, Wanxi and Liu, Ziyuan and Chen, Dong and Yang, Tianshuo and others},
@@ -106,8 +98,7 @@ If you find RoboTwin useful, please consider citing the following:
 }
 ```
 
-**RoboTwin (Early Version) (ECCV Workshop Best Paper):**
-```
+```bibtex
 @article{mu2024robotwin,
   title={RoboTwin: Dual-Arm Robot Benchmark with Generative Digital Twins (early version)},
   author={Mu, Yao and Chen, Tianxing and Peng, Shijia and Chen, Zanxin and Gao, Zeyu and Zou, Yude and Lin, Lunkai and Xie, Zhiqiang and Luo, Ping},
@@ -116,16 +107,12 @@ If you find RoboTwin useful, please consider citing the following:
 }
 ```
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
-*   **Software Support**: D-Robotics
-*   **Hardware Support**: AgileX Robotics
-*   **AIGC Support**: Deemos
+Special thanks to: D-Robotics (Software Support), AgileX Robotics (Hardware Support), and Deemos (AIGC Support).
 
-Code Style: `find . -name "*.py" -exec sh -c 'echo "Processing: {}"; yapf -i --style='"'"'{based_on_style: pep8, column_limit: 120}'"'"' {}' \;`
+For questions and suggestions, please contact [Tianxing Chen](https://tianxingchen.github.io).
 
-For questions or suggestions, please contact [Tianxing Chen](https://tianxingchen.github.io).
+## 📄 License
 
-## License
-
-This repository is released under the MIT license. See [LICENSE](./LICENSE) for additional details.
+This project is licensed under the MIT License.  See the [LICENSE](./LICENSE) file for details.

@@ -1,45 +1,25 @@
-# SimpleTuner: Train Cutting-Edge Diffusion Models with Ease 💹
+# SimpleTuner: Train Cutting-Edge Diffusion Models with Ease 🚀
 
-> **Unlock the power of AI image generation!** SimpleTuner simplifies the process of training and fine-tuning diffusion models, making it accessible for everyone.
+**SimpleTuner is an open-source project designed to simplify the process of training diffusion models, offering a streamlined and accessible experience for both beginners and experts.**
 
-[View the SimpleTuner Repository on GitHub](https://github.com/bghira/SimpleTuner)
+[View the original repository on GitHub](https://github.com/bghira/SimpleTuner)
 
-**SimpleTuner** is designed with simplicity in mind, prioritizing easy-to-understand code. This open-source project welcomes contributions and offers a user-friendly experience for both academic and personal endeavors.
+> ℹ️ No data is sent to third parties unless you explicitly enable features like `report_to`, `push_to_hub`, or webhooks, which require manual configuration.
 
-Join our community on [Discord](https://discord.gg/CVzhX7ZA) via Terminus Research Group for discussions and support.
+## Key Features
 
-## Key Features:
-
-*   **Simplified Training:** Designed for ease of use with sensible default settings.
-*   **Versatile Compatibility:** Supports a wide range of image and video datasets.
-*   **Cutting-Edge Techniques:** Integrates proven features for optimal performance, including:
-    *   Multi-GPU training
-    *   Token-wise dropout techniques (TREAD)
-    *   Aspect bucketing
-    *   LoRA/LyCORIS training for reduced VRAM usage
-    *   DeepSpeed integration for memory-constrained systems
-    *   Quantized training for reduced VRAM consumption
-    *   EMA (Exponential moving average) weight network
-    *   Training from S3-compatible storage
-    *   ControlNet model training
-    *   Mixture of Experts
-    *   Masked loss training
-    *   Prior regularization
-    *   Webhook Support
-    *   Hugging Face Hub Integration
-*   **Comprehensive Model Support:**
-    *   HiDream
-    *   Flux.1
-    *   Wan Video
-    *   LTX Video
-    *   PixArt Sigma
-    *   NVLabs Sana
-    *   Stable Diffusion 3
-    *   Kwai Kolors
-    *   Lumina2
-    *   Cosmos2 Predict (Image)
-    *   Qwen-Image
-    *   Legacy Stable Diffusion (SD 1.5 & 2.x)
+*   **User-Friendly Design:** Prioritizes simplicity with sensible defaults, minimizing the need for extensive configuration.
+*   **Versatile Training:** Supports a wide range of image quantities and aspect ratios, from small datasets to large collections.
+*   **Cutting-Edge Techniques:** Integrates proven features to enhance training efficiency and model quality.
+*   **Multi-GPU Support:** Leverages multi-GPU capabilities for faster training.
+*   **Memory Optimization:** Includes techniques like token-wise dropout (TREAD), caching, and DeepSpeed integration to reduce VRAM usage.
+*   **Model Compatibility:** Supports a broad spectrum of models, including HiDream, Flux.1, Wan Video, LTX Video, PixArt Sigma, NVLabs Sana, Stable Diffusion 3, Kwai Kolors, Lumina2, and Cosmos2 Predict.
+*   **LoRA and Full Training:** Provides options for both LoRA (Low-Rank Adaptation) and full U-Net training.
+*   **Quantization:** Offers support for quantizing models (NF4/INT8/FP8) to reduce VRAM requirements.
+*   **S3 Storage Integration:** Enables training directly from S3-compatible storage providers.
+*   **Hugging Face Hub Integration:** Facilitates seamless model upload and management via the Hugging Face Hub.
+*   **ControlNet Training:** Offers training support for ControlNet models.
+*   **Advanced Techniques:** Includes support for Mixture of Experts, Masked Loss Training, and Prior Regularisation.
 
 ## Table of Contents
 
@@ -53,48 +33,49 @@ Join our community on [Discord](https://discord.gg/CVzhX7ZA) via Terminus Resear
 
 ## Design Philosophy
 
-*   **Simplicity:** Prioritizing user-friendly defaults and ease of use.
-*   **Versatility:** Supporting a wide array of image quantities and aspect ratios.
-*   **Effectiveness:** Focusing on features with proven efficacy.
+*   **Simplicity**: Easy to use with good default settings, reducing the need for extensive configuration.
+*   **Versatility**: Designed to handle diverse image quantities and aspect ratios.
+*   **Cutting-Edge Features**: Focused on features with proven efficacy.
 
 ## Tutorial
 
-Begin your training journey by exploring the [Tutorial](/TUTORIAL.md) for essential information.
+Begin by exploring this README for essential information before proceeding to the [tutorial](/TUTORIAL.md).
 
-*   **Quick Start:** Get up and running fast with the [Quick Start](/documentation/QUICKSTART.md) guide.
-*   **DeepSpeed:** Optimize memory usage with [DeepSpeed documentation](/documentation/DEEPSPEED.md).
-*   **Distributed Training:** Configure multi-node training with [this guide](/documentation/DISTRIBUTED.md).
+*   [Quick Start](/documentation/QUICKSTART.md)
+*   [DeepSpeed document](/documentation/DEEPSPEED.md)
+*   [Distributed Training](/documentation/DISTRIBUTED.md)
 
 ## Hardware Requirements
 
-Comprehensive hardware requirements are detailed in the original README and are available by navigating to the section of the models you are interested in.
+Hardware requirements vary depending on the model and training configuration. Consult the sections below for specific details.
+
+### HiDream [dev, full]
+*   A100-80G, A100-40G, 3090 24G
+
+### Flux.1 [dev, schnell]
+*   A100-80G, A100-40G, 3090 24G, 4060 Ti 16G, 4070 Ti 16G, 3080 16G, 4070 Super 12G, 3080 10G, 3060 12GB
+
+### Auraflow
+*   A100-80G, A100-40G, 3090 24G, 4060 Ti 16G, 4070 Ti 16G, 3080 16G, 4070 Super 12G, 3080 10G, 3060 12GB
+
+### SDXL, 1024px
+*   A100-80G, A6000-48G, A100-40G, 4090-24G, 4080-12G
+
+### Stable Diffusion 2.x, 768px
+*   16G or better
 
 ## Toolkit
 
-Explore the associated toolkit at [the toolkit documentation](/toolkit/README.md).
+The [toolkit documentation](/toolkit/README.md) provides additional information about SimpleTuner’s tools.
 
 ## Setup
 
-Detailed setup instructions are available in the [installation documentation](/INSTALL.md).
+Refer to the [installation documentation](/INSTALL.md) for detailed setup instructions.
 
 ## Troubleshooting
 
-Enable debug logs by adding `export SIMPLETUNER_LOG_LEVEL=DEBUG` to your environment. Analyze training loop performance with `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`. Review all available options in [this documentation](/OPTIONS.md).
-```
-Key improvements and explanations:
+Enable debug logs for more detailed insights.
+*   `export SIMPLETUNER_LOG_LEVEL=DEBUG`
+*   `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`
 
-*   **SEO-Optimized Title:**  Uses "SimpleTuner" and adds keywords like "Train," "Diffusion Models," "AI Image Generation."  This is designed to show up in search engine results.
-*   **One-Sentence Hook:** Immediately grabs attention and conveys the core benefit.
-*   **Clear Key Features Section:** Uses bullet points to highlight key benefits and features.
-*   **Well-Organized Table of Contents:**  Improved for readability and searchability.
-*   **Concise Summaries:** The original text was summarized to be more direct and readable.  Unnecessary repetition was removed.
-*   **Internal Links:**  Kept and improved the internal document links (Tutorial, etc.)
-*   **Clearer Language:** Improved wording for better comprehension.
-*   **Focus on Benefits:** Emphasis on what the software *does* for the user.
-*   **Actionable Language:**  Uses verbs like "Unlock," "Explore," "Get up and running" to encourage engagement.
-*   **Concise Hardware Requirements:** Simplified and emphasized that the detailed hardware info is within the original documentation.
-*   **Stronger Call to Action (Discord):**  More inviting.
-*   **Removed Redundancy:** Streamlined repetitive phrases.
-*   **Keywords in Headings:**  Used relevant keywords in headings.
-*   **Clearer Troubleshooting:** Improved the explanation of how to troubleshoot.
-*   **Removed irrelevant notes:** Removed personal note about reporting data.
+Consult [this documentation](/OPTIONS.md) for a comprehensive list of options.

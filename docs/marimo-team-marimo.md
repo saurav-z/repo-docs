@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/marimo-logotype-thick.svg" alt="marimo logo">
+  <img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/marimo-logotype-thick.svg" alt="Marimo Logo">
 </p>
 
 <p align="center">
-  <em>A reactive Python notebook that's reproducible, git-friendly, and deployable as scripts or apps.</em>
+  <em>Revolutionize your Python workflow with marimo, a reactive notebook that's reproducible, git-friendly, and deployable as scripts or apps.</em>
 </p>
 
 <p align="center">
@@ -26,125 +26,148 @@
 </p>
 
 <p align="center">
-<a href="https://pypi.org/project/marimo/"><img src="https://img.shields.io/pypi/v/marimo?color=%2334D058&label=pypi" alt="PyPI version"></a>
-<a href="https://anaconda.org/conda-forge/marimo"><img src="https://img.shields.io/conda/vn/conda-forge/marimo.svg" alt="Conda version"></a>
-<a href="https://marimo.io/discord?ref=readme"><img src="https://shields.io/discord/1059888774789730424" alt="Discord"></a>
-<img alt="Pepy Total Downloads" src="https://img.shields.io/pepy/dt/marimo?label=pypi%20%7C%20downloads">
-<img alt="Conda Downloads" src="https://img.shields.io/conda/d/conda-forge/marimo">
-<a href="https://github.com/marimo-team/marimo/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/marimo" alt="License"></a>
+<a href="https://pypi.org/project/marimo/"><img src="https://img.shields.io/pypi/v/marimo?color=%2334D058&label=pypi" alt="PyPI version"/></a>
+<a href="https://anaconda.org/conda-forge/marimo"><img src="https://img.shields.io/conda/vn/conda-forge/marimo.svg" alt="Conda version"/></a>
+<a href="https://marimo.io/discord?ref=readme"><img src="https://shields.io/discord/1059888774789730424" alt="Discord server" /></a>
+<img alt="Pepy Total Downloads" src="https://img.shields.io/pepy/dt/marimo?label=pypi%20%7C%20downloads"/>
+<img alt="Conda Downloads" src="https://img.shields.io/conda/d/conda-forge/marimo" />
+<a href="https://github.com/marimo-team/marimo/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/marimo" alt="License"/></a>
 </p>
 
-## **marimo: The Reactive Python Notebook for Data Science**
+## What is marimo?
 
-**marimo** is a revolutionary Python notebook designed for modern data science, offering a reactive programming environment that boosts reproducibility, interactivity, and shareability.  [Explore the code on GitHub](https://github.com/marimo-team/marimo).
+**marimo is a next-generation Python notebook designed for data science and research, offering a reactive, reproducible, and shareable environment.**  It replaces traditional notebooks like Jupyter and provides a more streamlined and powerful way to work with Python.
 
 **Key Features:**
 
-*   🚀 **Batteries-Included:**  Replaces Jupyter, Streamlit, and more with a unified experience.
-*   ⚡️ **Reactive Programming:** Automatically updates dependent cells when a cell's code or input changes.
-*   🖐️ **Interactive UI Elements:** Easily integrate sliders, tables, plots, and other UI elements directly into your notebooks.
-*   🐍 **Git-Friendly:**  Notebooks are stored as standard `.py` files for easy version control.
-*   🛢️ **Data-Focused:** Integrates SQL support for querying dataframes, databases, warehouses, and lakehouses.
-*   🤖 **AI-Native:** Leverage AI to generate cells, tailored for data work.
-*   🔬 **Reproducible Results:** Guarantees consistent code and outputs through a deterministic execution order and no hidden state.
-*   🏃 **Executable as Scripts:** Run notebooks as Python scripts with CLI parameterization.
-*   🛜 **Shareable:**  Deploy notebooks as interactive web apps or slides, and run them in the browser via WASM.
-*   🧩 **Reusable Code:** Import functions and classes from one notebook to another for modularity.
-*   🧪 **Testable Code:**  Integrate pytest for robust notebook testing.
-*   ⌨️ **Modern Editor:** Enjoy features like GitHub Copilot, AI assistants, Vim keybindings, and a variable explorer.
+*   🚀 **Batteries-Included:** Replaces multiple tools like Jupyter, Streamlit, and ipywidgets.
+*   ⚡️ **Reactive Execution:** Automatically updates dependent cells when you change code or interact with UI elements.  Eliminates manual cell re-running.
+*   🖐️ **Interactive UI:**  Easily create interactive elements like sliders, tables, and plots with no callback functions needed.
+*   🐍 **Git-Friendly:** Notebooks are stored as plain `.py` files for easy version control.
+*   🛢️ **Data-Focused:**  First-class support for SQL queries, dataframes, and database interactions, built for the modern data professional.
+*   🤖 **AI-Powered:** Integrated AI features to generate code with the assistance of AI, tailored for data tasks.
+*   🔬 **Reproducible:**  Guarantees consistent code execution and no hidden state. Deterministic execution order. Includes built-in package management.
+*   🏃 **Executable as Scripts:** Run notebooks as standard Python scripts, with CLI argument support.
+*   🛜 **Shareable:** Deploy interactive web apps or slides directly from your notebooks. Run in the browser via WASM.
+*   🧩 **Reusable Code:** Import functions and classes from one notebook to another.
+*   🧪 **Testable:** Run pytest on your marimo notebooks.
+*   ⌨️ **Modern Editor:** Built-in support for GitHub Copilot, AI assistants, Vim keybindings, and more.
 
 ```python
 pip install marimo && marimo tutorial intro
 ```
-
 _Try marimo at [our online playground](https://marimo.app/l/c7h6pz), which runs entirely in the browser!_
 
-_Jump to the [quickstart](#quickstart) for a primer on our CLI._
+<a name="quickstart"></a>
 
-## **Why Choose marimo?**
+## Getting Started
 
-marimo addresses the limitations of traditional notebooks like Jupyter by ensuring consistency and reproducibility.
-
-**Core Benefits:**
-
-*   **Reactive Environment:**  Automatically updates code and outputs, eliminating manual cell re-running.
-*   **Handles Expensive Notebooks:**  Configure runtime to mark expensive cells as stale.
-*   **Synchronized UI:**  UI elements update cells automatically.
-*   **Interactive Dataframes:** Easily page through, search, filter, and sort large datasets.
-*   **AI-Powered Code Generation:**  Generate code with an AI assistant tailored to data work.
-*   **Integrated SQL Engine:** Run SQL queries against various data sources and get results as Python dataframes.
-*   **Dynamic Markdown:** Use markdown dynamically generated by your Python code.
-*   **Built-in Package Management:** Install and manage packages directly within your notebooks.
-*   **Deterministic Execution:** Notebooks are executed based on variable references.
-*   **Optimized Performance:**  Runs only necessary cells.
-*   **Comprehensive Features:**  Includes a range of features for a modern, efficient coding experience.
-
-<img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/reactive.gif" width="700px" alt="Reactive Programming Example" />
-
-<a name="expensive-notebooks"></a>
-
-## Quickstart
-
-_The [marimo concepts playlist](https://www.youtube.com/watch?v=3N6lInzq5MI&list=PLNJXGo8e1XT9jP7gPbRdm1XwloZVFvLEq) on our [YouTube channel](https://www.youtube.com/@marimo-team) gives an overview of many features._
-
-**Installation:**
-
+### Installation
 ```bash
 pip install marimo  # or conda install -c conda-forge marimo
 marimo tutorial intro
 ```
-
-Install with additional dependencies for SQL, AI, and more:
-
+For SQL cells, AI features and more:
 ```bash
 pip install marimo[recommended]
 ```
 
-**Commands:**
+### Core Commands
 
-*   `marimo edit`: Create or edit notebooks.
-*   `marimo run your_notebook.py`: Run your notebook as a web app.
-*   `python your_notebook.py`: Execute a notebook as a Python script.
-*   `marimo convert your_notebook.ipynb > your_notebook.py`: Convert Jupyter notebooks to marimo format.
+*   **Create/Edit Notebooks:** `marimo edit`
+*   **Run as Web App:** `marimo run your_notebook.py`
+*   **Execute as Script:** `python your_notebook.py`
+*   **Convert Jupyter Notebooks:** `marimo convert your_notebook.ipynb > your_notebook.py` (or use the [web interface](https://marimo.io/convert))
+*   **List Tutorials:** `marimo tutorial --help`
 
-**Tutorials:**
-List all tutorials:
+### Quickstart
 
-```bash
-marimo tutorial --help
-```
+The [marimo concepts playlist](https://www.youtube.com/watch?v=3N6lInzq5MI&list=PLNJXGo8e1XT9jP7gPbRdm1XwloZVFvLEq) on our [YouTube channel](https://www.youtube.com/@marimo-team) provides an overview of the features.
 
-**Cloud Notebooks:**
-Use [molab](https://molab.marimo.io/notebooks) to create and share notebooks.
+## Deep Dive into Features
 
-## **Need Help?**
+### Reactive Programming Environment
 
-Consult the [FAQ](https://docs.marimo.io/faq.html).
+marimo ensures consistency by automatically updating related parts of your notebook.  This is a vast improvement over standard notebooks.
 
-## **Learn More**
+<img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/reactive.gif" width="700px" alt="Reactive Execution Example" />
 
-Get started quickly and unlock advanced capabilities.  Explore the following resources:
+### Compatible with Expensive Notebooks
+
+Configure the runtime to be lazy and mark cells as stale instead of running them.
+
+### Synchronized UI Elements
+
+Easily integrate UI elements, such as sliders and dropdowns, that update in real-time.
+
+<img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/readme-ui.gif" width="700px" alt="UI Elements Example" />
+
+### Interactive DataFrames
+
+Quickly page, search, filter, and sort through large datasets directly within your notebook.
+
+<img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/docs-df.gif" width="700px" alt="Dataframe Example" />
+
+### AI-Powered Code Generation
+
+Generate data-aware code with specialized AI assistants that have the context of your notebook variables.
+
+<img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/readme-generate-with-ai.gif" width="700px" alt="AI Code Generation Example" />
+
+### SQL Integration
+
+Build SQL queries that depend on Python values and execute them against dataframes, databases, lakehouses, CSVs, Google Sheets, or anything else using our built-in SQL engine, which returns the result as a Python dataframe.
+
+<img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/readme-sql-cell.png" width="700px" alt="SQL Cell Example" />
+
+### Dynamic Markdown
+
+Create dynamic markdown that changes with Python variables.
+
+### Built-in Package Management
+
+Install packages directly from within the notebook and manage dependencies easily.
+
+### Deterministic Execution
+
+Notebooks run in a predictable order based on variable dependencies.
+
+### Performant Runtime
+
+marimo runs only those cells that need to be run by statically analyzing your code.
+
+### Extensive Editor Features
+
+marimo includes features like GitHub Copilot, AI assistants, Ruff code formatting, fast code completion, and more.
+
+## Further Exploration
+
+For a deeper dive, explore the following resources:
+
+*   [Documentation](https://docs.marimo.io)
+*   [Usage Examples](https://docs.marimo.io/examples/)
+*   [Gallery](https://marimo.io/gallery)
 
 <table border="0">
   <tr>
     <td>
       <a target="_blank" href="https://docs.marimo.io/getting_started/key_concepts.html">
-        <img src="https://docs.marimo.io/_static/reactive.gif" style="max-height: 150px; width: auto; display: block" alt="Tutorial: Reactive Programming" />
+        <img src="https://docs.marimo.io/_static/reactive.gif" style="max-height: 150px; width: auto; display: block" alt="Tutorial"/>
       </a>
     </td>
     <td>
       <a target="_blank" href="https://docs.marimo.io/api/inputs/index.html">
-        <img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/readme-ui.gif" style="max-height: 150px; width: auto; display: block" alt="Tutorial: Inputs" />
+        <img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/readme-ui.gif" style="max-height: 150px; width: auto; display: block" alt="Inputs"/>
       </a>
     </td>
     <td>
       <a target="_blank" href="https://docs.marimo.io/guides/working_with_data/plotting.html">
-        <img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/docs-intro.gif" style="max-height: 150px; width: auto; display: block" alt="Tutorial: Plotting" />
+        <img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/docs-intro.gif" style="max-height: 150px; width: auto; display: block" alt="Plots"/>
       </a>
     </td>
     <td>
       <a target="_blank" href="https://docs.marimo.io/api/layouts/index.html">
-        <img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/outputs.gif" style="max-height: 150px; width: auto; display: block" alt="Tutorial: Layout" />
+        <img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/outputs.gif" style="max-height: 150px; width: auto; display: block" alt="Layout"/>
       </a>
     </td>
   </tr>
@@ -165,71 +188,49 @@ Get started quickly and unlock advanced capabilities.  Explore the following res
   <tr>
     <td>
       <a target="_blank" href="https://marimo.app/l/c7h6pz">
-        <img src="https://marimo.io/shield.svg" alt="Try marimo online"/>
+        <img src="https://marimo.io/shield.svg" alt="Playground"/>
       </a>
     </td>
     <td>
       <a target="_blank" href="https://marimo.app/l/0ue871">
-        <img src="https://marimo.io/shield.svg" alt="Try marimo online"/>
+        <img src="https://marimo.io/shield.svg" alt="Example Notebook"/>
       </a>
     </td>
     <td>
       <a target="_blank" href="https://marimo.app/l/lxp1jk">
-        <img src="https://marimo.io/shield.svg" alt="Try marimo online"/>
+        <img src="https://marimo.io/shield.svg" alt="Example Notebook"/>
       </a>
     </td>
     <td>
       <a target="_blank" href="https://marimo.app/l/14ovyr">
-        <img src="https://marimo.io/shield.svg" alt="Try marimo online"/>
+        <img src="https://marimo.io/shield.svg" alt="Example Notebook"/>
       </a>
     </td>
   </tr>
 </table>
 
-## **Get Involved**
+## Contributing
 
-marimo thrives on community contributions!  Learn how to contribute: [CONTRIBUTING.md](https://github.com/marimo-team/marimo/blob/main/CONTRIBUTING.md)
+[Contribute](https://github.com/marimo-team/marimo) to the project.
 
-> Questions?  Join us [on Discord](https://marimo.io/discord?ref=readme).
+## Community & Support
 
-## **Join the Community**
+*   [Join our Discord](https://marimo.io/discord?ref=readme) for help and discussions.
+*   [Star us on GitHub](https://github.com/marimo-team/marimo)
+*   [Subscribe to our Newsletter](https://marimo.io/newsletter)
+*   [Join our Cloud Waitlist](https://marimo.io/cloud)
+*   [Start a GitHub Discussion](https://github.com/marimo-team/marimo/discussions)
+*   [Follow us on Bluesky](https://bsky.app/profile/marimo.io)
+*   [Follow us on Twitter](https://twitter.com/marimo_io)
+*   [Subscribe on YouTube](https://www.youtube.com/@marimo-team)
+*   [Follow us on LinkedIn](https://www.linkedin.com/company/marimo-io)
 
-Connect with us!
+**marimo is a NumFOCUS affiliated project.**
 
-*   🌟 [Star us on GitHub](https://github.com/marimo-team/marimo)
-*   💬 [Chat with us on Discord](https://marimo.io/discord?ref=readme)
-*   📧 [Subscribe to our Newsletter](https://marimo.io/newsletter)
-*   ☁️ [Join our Cloud Waitlist](https://marimo.io/cloud)
-*   ✏️ [Start a GitHub Discussion](https://github.com/marimo-team/marimo/discussions)
-*   🦋 [Follow us on Bluesky](https://bsky.app/profile/marimo.io)
-*   🐦 [Follow us on Twitter](https://twitter.com/marimo_io)
-*   🎥 [Subscribe on YouTube](https://www.youtube.com/@marimo-team)
-*   🕴️ [Follow us on LinkedIn](https://www.linkedin.com/company/marimo-io)
+<img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/numfocus_affiliated_project.png" height="40px" alt="NumFOCUS Logo" />
 
-**A NumFOCUS Affiliated Project:** marimo is a valued member of the NumFOCUS community, alongside projects like NumPy and SciPy.
+## Inspiration
 
-<img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/numfocus_affiliated_project.png" height="40px" alt="NumFOCUS Affiliated Project" />
+marimo reimaginies the Python notebook experience by providing a reproducible, interactive, and shareable Python program, built with better tools in mind.
 
-## **Inspiration**
-
-marimo is a reimagining of the Python notebook, providing a reproducible, interactive, and shareable Python programming environment.  We aim to empower the Python community with better tools for research, communication, and learning.
-
-Our vision draws inspiration from Pluto.jl, ObservableHQ, and Bret Victor's work, and we're part of the movement towards reactive dataflow programming, alongside projects like IPyflow, Streamlit, and TensorFlow.
-
-<p align="right">
-  <img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/marimo-logotype-horizontal.png" height="200px" alt="marimo logo">
-</p>
-```
-Key improvements and summary of changes:
-
-*   **SEO-Optimized Title & Hook:** The title is clear and includes the primary keyword "Reactive Python Notebook." The first sentence now serves as a concise, impactful hook.
-*   **Clear Headings:** Uses clear, concise headings to structure the content for better readability and SEO.
-*   **Bulleted Key Features:**  Highlights key features using bullet points, making them easy to scan.
-*   **Alt Text for Images:** Added `alt` text to all images, which is crucial for SEO and accessibility.
-*   **Concise Language:**  Improved the language for conciseness and clarity.
-*   **Call to Action:** Added clear calls to action throughout (e.g., "Explore the code on GitHub").
-*   **Emphasis on Benefits:** Highlights the *benefits* of using marimo.
-*   **More Contextual Links:** Provides links to relevant sections within the document where possible.
-*   **Streamlined Structure:** Removed redundant information and reorganized the content for better flow.
-*   **Consistent Formatting:** Ensured consistent formatting for headings, lists, and links.
-*   **Removed redundant language** Removed redundant sentences like, "See the [FAQ](https://docs.marimo.io/faq.html) at our docs."
+**[Visit the GitHub repository](https://github.com/marimo-team/marimo) to learn more!**

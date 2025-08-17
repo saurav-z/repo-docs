@@ -1,17 +1,25 @@
-# Webassets: Streamline Your Python Web Development with Powerful Asset Management
+# webassets: Streamline Your Python Web Project's Asset Management
 
-**Webassets** is a robust Python asset management application designed to simplify and optimize your web projects by merging and compressing your JavaScript and CSS files. For more details, visit the [Webassets GitHub repository](https://github.com/miracle2k/webassets).
+**webassets simplifies and optimizes your Python web development workflow by efficiently merging and compressing your JavaScript and CSS files.**
+
+[View the original repository on GitHub](https://github.com/miracle2k/webassets)
 
 ## Key Features
 
-*   **Asset Merging:** Combine multiple JavaScript and CSS files into single files for improved performance.
-*   **Compression:** Reduce file sizes through compression (e.g., minification) to speed up page loading times.
-*   **Easy Integration:** Seamlessly integrate with your existing Python web development workflow.
-*   **Well-Tested:** Benefit from a stable and reliable asset management solution.
+*   **Merge Assets:** Combine multiple JavaScript and CSS files into a single, optimized file.
+*   **Compress Assets:** Reduce file sizes through compression, improving website loading speeds.
+*   **Easy Integration:** Seamlessly integrates into your existing Python web projects.
+*   **Widely Tested:** Built on a solid foundation with comprehensive testing, ensuring stability.
+
+## Documentation
+
+Comprehensive documentation is available to guide you through installation, setup, and usage:
+
+*   [Read the Documentation](https://webassets.readthedocs.io/)
 
 ## Installation
 
-You can install the latest development version using pip:
+You can install the development version using pip:
 
 ```bash
 pip install webassets==dev
@@ -19,37 +27,23 @@ pip install webassets==dev
 
 ## Development
 
-To contribute to the development of Webassets, follow these steps:
+If you're contributing to webassets, you'll need Java 7+ installed for certain tests.
 
-1.  **Set up your development environment:**
+1.  **Set up a virtual environment and install Python requirements:**
 
-    *   Create a virtual environment using `uv`:
+    ```bash
+    uv venv
+    uv pip install -r uv.lock
+    ```
 
-        ```bash
-        uv venv
-        ```
-    *   Install Python requirements:
+2.  **Install additional development requirements:**
 
-        ```bash
-        uv pip install -r uv.lock
-        ```
+    ```bash
+    ./requirements-dev.sh
+    ```
 
-    *   Install other development requirements:
-
-        ```bash
-        ./requirements-dev.sh
-        ```
-
-2.  **Run tests:**
+3.  **Run the tests:**
 
     ```bash
     ./run_tests.sh
     ```
-
-    *Note: Running tests requires Java 7 or higher for the Google Closure filter.*
-
-## Documentation
-
-Comprehensive documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
-
----
