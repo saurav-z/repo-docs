@@ -1,50 +1,57 @@
-# Model Context Protocol (MCP) Servers: Unleash the Power of AI by Connecting Large Language Models (LLMs) to Tools and Data
+# Model Context Protocol Servers: Enhance LLMs with Secure and Controlled Tool Access
 
-Connect your LLMs to a vast ecosystem of tools and data sources with Model Context Protocol (MCP) servers, enhancing their capabilities and expanding their usefulness.  This repository provides **reference implementations**, community-built servers, and resources for leveraging the Model Context Protocol.  Explore the [original repository](https://github.com/modelcontextprotocol/servers) for more details.
+Empower your Large Language Models (LLMs) by giving them secure access to tools and data sources using the **Model Context Protocol (MCP)**, an open-source standard for building connected AI applications. Discover the power of MCP and get started today by visiting the original repo:  [Model Context Protocol Servers](https://github.com/modelcontextprotocol/servers).
 
-## Key Features
+## Key Features of MCP Servers:
 
-*   **Reference Implementations:** Explore ready-to-use examples demonstrating MCP functionality.
-*   **Extensible Framework:** Showcase how MCP enables secure, controlled access for LLMs to various tools and data sources.
-*   **Community-Driven:** Benefit from a growing library of servers contributed and maintained by a vibrant community.
-*   **Versatile Use Cases:** Find servers for web content fetching, file system operations, Git interactions, and more.
-*   **Cross-Platform SDKs:** Utilize SDKs in multiple programming languages.
+*   ✅ **Secure Access:** Grant LLMs controlled and secure access to tools and data.
+*   ✅ **Versatile Implementations:** Explore reference implementations showcasing MCP's flexibility.
+*   ✅ **Extensible Ecosystem:** Leverage community-built servers for diverse applications.
+*   ✅ **SDK Support:** Utilize SDKs in multiple languages for seamless integration:
+    *   [C# MCP SDK](https://github.com/modelcontextprotocol/csharp-sdk)
+    *   [Go MCP SDK](https://github.com/modelcontextprotocol/go-sdk)
+    *   [Java MCP SDK](https://github.com/modelcontextprotocol/java-sdk)
+    *   [Kotlin MCP SDK](https://github.com/modelcontextprotocol/kotlin-sdk)
+    *   [Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk)
+    *   [Ruby MCP SDK](https://github.com/modelcontextprotocol/ruby-sdk)
+    *   [Rust MCP SDK](https://github.com/modelcontextprotocol/rust-sdk)
+    *   [Swift MCP SDK](https://github.com/modelcontextprotocol/swift-sdk)
+    *   [TypeScript MCP SDK](https://github.com/modelcontextprotocol/typescript-sdk)
+*   ✅ **Community-Driven:** Benefit from a thriving community building and maintaining servers.
 
-## Reference Servers
+## Reference Servers:
+These servers provide examples of MCP features and showcase how to build a range of functionalities.
 
-These servers are designed to showcase MCP features and are built using the official MCP SDKs.
+*   **Everything:** Comprehensive server with prompts, resources, and tools.
+*   **Fetch:** Web content fetching and conversion for LLM usage.
+*   **Filesystem:** Secure file operations with access controls.
+*   **Git:** Tools to read, search, and manipulate Git repositories.
+*   **Memory:** Knowledge graph-based persistent memory system.
+*   **Sequential Thinking:** Problem-solving through thought sequences.
+*   **Time:** Time and timezone conversion capabilities.
 
-*   **[Everything](src/everything)** - Test server with diverse prompts, resources, and tools.
-*   **[Fetch](src/fetch)** - Web content fetching and conversion.
-*   **[Filesystem](src/filesystem)** - Secure file operations with access controls.
-*   **[Git](src/git)** - Tools to read, search, and manipulate Git repositories.
-*   **[Memory](src/memory)** - Knowledge graph-based persistent memory system.
-*   **[Sequential Thinking](src/sequentialthinking)** - Dynamic and reflective problem-solving through thought sequences.
-*   **[Time](src/time)** - Time and timezone conversion capabilities.
+## Archived Servers:
+These archived servers provide examples of MCP features and showcase how to build a range of functionalities.
 
-### Archived Servers
+*   **AWS KB Retrieval:** Retrieval from AWS Knowledge Base using Bedrock Agent Runtime.
+*   **Brave Search:** Web and local search using Brave's Search API.  Has been replaced by the [official server](https://github.com/brave/brave-search-mcp-server).
+*   **EverArt:** AI image generation using various models.
+*   **GitHub:** Repository management, file operations, and GitHub API integration.
+*   **GitLab:** GitLab API, enabling project management.
+*   **Google Drive:** File access and search capabilities for Google Drive.
+*   **Google Maps:** Location services, directions, and place details.
+*   **PostgreSQL:** Read-only database access with schema inspection.
+*   **Puppeteer:** Browser automation and web scraping.
+*   **Redis:** Interact with Redis key-value stores.
+*   **Sentry:** Retrieving and analyzing issues from Sentry.io.
+*   **Slack:** Channel management and messaging capabilities. Now maintained by [Zencoder](https://github.com/zencoderai/slack-mcp-server)
+*   **SQLite:** Database interaction and business intelligence capabilities.
 
-The following reference servers are now archived and can be found at [servers-archived](https://github.com/modelcontextprotocol/servers-archived). These are kept as a reference to prior community work.
-
-*   [AWS KB Retrieval](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/aws-kb-retrieval-server)
-*   [Brave Search](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/brave-search)
-*   [EverArt](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/everart)
-*   [GitHub](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/github)
-*   [GitLab](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/gitlab)
-*   [Google Drive](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/gdrive)
-*   [Google Maps](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/google-maps)
-*   [PostgreSQL](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres)
-*   [Puppeteer](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer)
-*   [Redis](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/redis)
-*   [Sentry](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sentry)
-*   [Slack](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/slack)
-*   [SQLite](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite)
-
-## Third-Party Servers
+## Third-Party Servers:
 
 ### 🎖️ Official Integrations
 
-Official integrations are maintained by companies building production ready MCP servers for their platforms. This is a curated and growing list.
+Official integrations are maintained by companies building production ready MCP servers for their platforms.
 
 *   <img height="12" width="12" src="https://www.21st.dev/favicon.ico" alt="21st.dev Logo" /> **[21st.dev Magic](https://github.com/21st-dev/magic-mcp)** - Create crafted UI components inspired by the best 21st.dev design engineers.
 *   <img height="12" width="12" src="https://framerusercontent.com/images/LpSK1tSZweomrAHOMAj9Gea96lA.svg" alt="Paragon Logo" /> **[ActionKit by Paragon](https://github.com/useparagon/paragon-mcp)** - Connect to 130+ SaaS integrations (e.g. Slack, Salesforce, Gmail) with Paragon’s [ActionKit](https://www.useparagon.com/actionkit) API.
@@ -104,7 +111,7 @@ Official integrations are maintained by companies building production ready MCP 
 *   <img height="12" width="12" src="https://www.brightdata.com/favicon.ico" alt="BrightData Logo" /> **[BrightData](https://github.com/luminati-io/brightdata-mcp)** - Discover, extract, and interact with the web - one interface powering automated access across the public internet.
 *   <img height="12" width="12" src="https://browserbase.com/favicon.ico" alt="Browserbase Logo" /> **[Browserbase](https://github.com/browserbase/mcp-server-browserbase)** - Automate browser interactions in the cloud (e.g. web navigation, data extraction, form filling, and more)
 *   <img height="12" width="12" src="https://browserstack.wpenginepowered.com/wp-content/themes/browserstack/img/favicons/favicon.ico" alt="BrowserStack Logo" /> **[BrowserStack](https://github.com/browserstack/mcp-server)** - Access BrowserStack's [Test Platform](https://www.browserstack.com/test-platform) to debug, write and fix tests, do accessibility testing and more.
-*   <img height="12" width="12" src="https://cdn.prod.website-files.com/65c0b8763c04cd15daa89b20/671f9d1301ac85495013761d_Favicon-White.png" alt="Bucket" /> **[Bucket](https://github.com/bucketco/bucket-javascript-sdk/tree/main/packages/cli#model-context-protocol)** - Flag features, manage company data, and control feature access using [Bucket](https://bucket.co)
+*   <img height="12" width="12" src="https://cdn.prod.website-files.com/66598898fd13d51606c3215d/66ccbfef13bd8bc19d587578_favicon-32x32.png" alt="Bucket" /> **[Bucket](https://github.com/bucketco/bucket-javascript-sdk/tree/main/packages/cli#model-context-protocol)** - Flag features, manage company data, and control feature access using [Bucket](https://bucket.co)
 *   <img height="12" width="12" src="https://www.google.com/s2/favicons?domain=buildkite.com&sz=24" alt="Buildkite Logo" /> **[Buildkite](https://github.com/buildkite/buildkite-mcp-server)** - Exposing Buildkite data (pipelines, builds, jobs, tests) to AI tooling and editors.
 *   <img height="12" width="12" src="https://bldbl.dev/favico.png" alt="Buildable Logo" />**[Buildable](https://github.com/chunkydotdev/bldbl-mcp)** (TypeScript) - Official MCP server for Buildable AI-powered development platform. Enables AI assistants to manage tasks, track progress, get project context, and collaborate with humans on software projects.
 *   <img height="12" width="12" src="https://builtwith.com/favicon.ico" alt="BuiltWith Logo" /> **[BuiltWith](https://github.com/builtwith/mcp)** - Identify the technology stack behind any website.
@@ -116,4 +123,5 @@ Official integrations are maintained by companies building production ready MCP 
 *   <img height="12" width="12" src="https://play.cartesia.ai/icon.png" alt="Cartesia logo" /> **[Cartesia](https://github.com/cartesia-ai/cartesia-mcp)** - Connect to the [Cartesia](https://cartesia.ai/) voice platform to perform text-to-speech, voice cloning etc.
 *   <img height="12" width="12" src="https://www.cashfree.com/favicon.ico" alt="Cashfree logo" /> **[Cashfree](https://github.com/cashfree/cashfree-mcp)** - [Cashfree Payments](https://www.cashfree.com/) official MCP server.
 *   **[CB Insights](https://github.com/cbinsights/cbi-mcp-server)** - Use the [CB Insights](https://www.cbinsights.com) MCP Server to connect to [ChatCBI](https://www.cbinsights.com/chatcbi/)
-*   <img height="12" width="12" src="https://www.chargebee.com/static/resources/brand/favicon.png" alt="Chargebee Logo" /> **[Chargebee](https://github.com/chargebee/agentkit/tree/main/modelcontextprotocol)** - MCP Server that connects AI agents to [Chargebee platform](
+*   <img height="12" width="12" src="https://cleanupcrew.ai/favicon-light.png" alt="Cleanup Crew logo" /> **[Cleanup Crew](https://cleanupcrew.ai/install)** - Real-time human support service for non-technical founders using AI coding tools. When AI hits a wall, request instant human help directly from your IDE.
+*   <img height="12" width="12" src="https://www.chargebee.com/static/resources/brand/favicon.png" alt="Chargebee Logo

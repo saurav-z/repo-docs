@@ -1,44 +1,27 @@
 <div align="center">
 <img src="https://github.com/openlit/.github/blob/main/profile/assets/wide-logo-no-bg.png?raw=true" alt="OpenLIT Logo" width="30%">
-
-# OpenLIT: The Open Source Platform for AI Engineering
-
 </div>
 
-**OpenLIT empowers you to build, observe, and optimize your AI applications with ease.**  This platform simplifies AI development workflows, especially for Generative AI and LLMs, providing essential tools for observability, evaluation, and prompt management. Explore key features like dashboards for monitoring performance, cost tracking, and prompt management, and much more!  **[Check out the original repo here!](https://github.com/openlit/openlit)**
+# OpenLIT: Your Open-Source Platform for AI Engineering
 
-*   **[Documentation](https://docs.openlit.io/)** | **[Quickstart](-getting-started-with-llm-observability)** | **[Python SDK](https://github.com/openlit/openlit/tree/main/sdk/python)** | **[Typescript SDK](https://github.com/openlit/openlit/tree/main/sdk/typescript)**
+**OpenLIT empowers you to build, monitor, and optimize your AI applications with ease.** This all-in-one platform provides observability, evaluations, guardrails, prompt management, a secure vault, and a playground.  Learn more at the [OpenLIT GitHub Repository](https://github.com/openlit/openlit).
 
-*   **[Roadmap](#️-roadmap)** | **[Feature Request](https://github.com/openlit/openlit/issues/new?assignees=&labels=%3Araised_hand%3A+Up+for+Grabs%2C+%3Arocket%3A+Feature&projects=&template=feature-request.md&title=%5BFeat%5D%3A)** | **[Report a Bug](https://github.com/openlit/openlit/issues/new?assignees=&labels=%3Abug%3A+Bug%2C+%3Araised_hand%3A+Up+for+Grabs&projects=&template=bug.md&title=%5BBug%5D%3A)**
+**Key Features:**
 
-[![OpenLIT](https://img.shields.io/badge/OpenLIT-orange)](https://openlit.io/)
-[![License](https://img.shields.io/github/license/openlit/openlit?label=License&logo=github&color=f80&logoColor=white)](https://github.com/openlit/openlit/blob/main/LICENSE)
-[![Downloads](https://static.pepy.tech/badge/openlit/month)](https://pepy.tech/project/openlit)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/openlit/openlit)](https://github.com/openlit/openlit/pulse)
-[![GitHub Contributors](https://img.shields.io/github/contributors/openlit/openlit)](https://github.com/openlit/openlit/graphs/contributors)
+*   📈 **AI Application Analytics Dashboard**: Gain insights into your AI application's performance with comprehensive dashboards.
+*   🔌 **OpenTelemetry-native Observability SDKs**: Integrate seamlessly with your existing monitoring tools using vendor-neutral SDKs.
+*   💲 **Cost Tracking for Custom and Fine-Tuned Models**: Manage your budget effectively with precise cost estimations.
+*   🐛 **Exceptions Monitoring Dashboard**: Quickly identify and resolve issues with a dedicated error monitoring dashboard.
+*   💭 **Prompt Management**: Organize and version prompts with Prompt Hub for consistent application access.
+*   🔑 **API Keys and Secrets Management**: Securely manage your sensitive information centrally.
+*   🎮 **Experiment with different LLMs**: Explore, test, and compare various LLMs side by side with OpenGround.
+*   🛡️ **Guardrails**: Implement real-time guardrails to ensure responsible AI usage.
 
-[![Slack](https://img.shields.io/badge/Slack-4A154B?logo=slack&logoColor=white)](https://join.slack.com/t/openlit/shared_invite/zt-2etnfttwg-TjP_7BZXfYg84oAukY8QRQ)
-[![X](https://img.shields.io/badge/follow-%40openlit__io-1DA1F2?logo=x&style=social)](https://twitter.com/openlit_io)
+## Getting Started
 
----
+### 1. Deploy OpenLIT Stack
 
-## Key Features
-
-*   **Observability**: Gain deep insights with OpenTelemetry-native SDKs for comprehensive tracing and metrics across your AI stack.
-*   **LLM Cost Tracking**: Monitor and manage the expenses associated with custom and fine-tuned models.
-*   **Exception Monitoring**:  Quickly identify and resolve issues with a dedicated dashboard for tracking errors.
-*   **Prompt Hub**: Centralize and version control your prompts for consistent access and management.
-*   **Secure API Key Management**:  Use the Vault to securely store and manage API keys.
-*   **LLM Experimentation**: Compare and test different LLMs side-by-side with OpenGround.
-*   **Analytics Dashboard**: Monitor your AI application's health and performance with detailed dashboards.
-
-## Getting Started: LLM Observability
-
-Follow these simple steps to integrate OpenLIT into your project and start visualizing data:
-
-### Step 1: Deploy OpenLIT Stack
-
-1.  **Clone the Repository:**
+1.  **Clone the repository:**
 
     ```shell
     git clone git@github.com:openlit/openlit.git
@@ -50,34 +33,33 @@ Follow these simple steps to integrate OpenLIT into your project and start visua
     docker compose up -d
     ```
 
-    > For detailed Kubernetes installation instructions, see the [Kubernetes Helm installation guide](https://docs.openlit.io/latest/installation#kubernetes).
+    *For Kubernetes deployment using Helm, refer to the [installation guide](https://docs.openlit.io/latest/installation#kubernetes).*
 
-### Step 2: Install OpenLIT SDK
+### 2. Install OpenLIT SDK
 
 ```bash
 pip install openlit
 ```
 
->   For TypeScript SDK installation, see the [TypeScript SDK Installation guide](https://github.com/openlit/openlit/tree/main/sdk/typescript#-installation).
+*For the TypeScript SDK, see the [TypeScript SDK Installation guide](https://github.com/openlit/openlit/tree/main/sdk/typescript#-installation).*
 
-### Step 3: Initialize OpenLIT in Your Application
+### 3. Initialize OpenLIT in Your Application
 
-Integrate OpenLIT into your AI applications by adding the following lines to your code.
+Add the following lines to your application:
 
 ```python
 import openlit
-
 openlit.init()
 ```
 
-Configure the telemetry data destination as follows:
+Configure the telemetry data destination using either `otlp_endpoint` or environment variables:
 
 | Purpose                            | Parameter/Environment Variable                   | For Sending to OpenLIT    |
 | ---------------------------------- | ------------------------------------------------ | ------------------------- |
 | Send data to an HTTP OTLP endpoint | `otlp_endpoint` or `OTEL_EXPORTER_OTLP_ENDPOINT` | `"http://127.0.0.1:4318"` |
 | Authenticate telemetry backends    | `otlp_headers` or `OTEL_EXPORTER_OTLP_HEADERS`   | Not required by default   |
 
->   💡 Info: If the `otlp_endpoint` or `OTEL_EXPORTER_OTLP_ENDPOINT` is not provided, the OpenLIT SDK will output traces directly to your console, which is recommended during the development phase.
+*If no `otlp_endpoint` is provided, the SDK outputs traces to your console (recommended for development).*
 
 #### Example
 
@@ -86,11 +68,9 @@ Configure the telemetry data destination as follows:
 <details>
   <summary>Initialize using Function Arguments</summary>
 
-  Add the following two lines to your application code:
-  
   ```python
   import openlit
-  
+
   openlit.init(
     otlp_endpoint="http://127.0.0.1:4318", 
   )
@@ -101,20 +81,15 @@ Configure the telemetry data destination as follows:
 ---
 
 <details>
-
-  ---
-
   <summary>Initialize using Environment Variables</summary>
   
-  Add the following two lines to your application code:
-
   ```python
   import openlit
 
   openlit.init()
   ```
   
-  Then, configure the your OTLP endpoint using environment variable:
+  Then, configure your OTLP endpoint using environment variable:
 
   ```env
   export OTEL_EXPORTER_OTLP_ENDPOINT = "http://127.0.0.1:4318"
@@ -124,19 +99,21 @@ Configure the telemetry data destination as follows:
 
 ---
 
-### Step 4: Visualize and Optimize
+### 4. Visualize and Optimize
 
-Access your observability data through the OpenLIT UI at `127.0.0.1:3000`. Login with:
+Access your data at `127.0.0.1:3000` in your browser. Use the default credentials:
 
 *   **Email**: `user@openlit.io`
 *   **Password**: `openlituser`
 
-[OpenLIT UI Screenshot 1]
-[OpenLIT UI Screenshot 2]
+<div align="center">
+    <img src="https://github.com/openlit/.github/blob/main/profile/assets/openlit-client-1.png?raw=true" alt="OpenLIT Dashboard 1" width="45%">
+    <img src="https://github.com/openlit/.github/blob/main/profile/assets/openlit-client-2.png?raw=true" alt="OpenLIT Dashboard 2" width="45%">
+</div>
 
-## 🛣️ Roadmap
+## Roadmap
 
-Stay updated on upcoming features and improvements:
+OpenLIT is constantly evolving.  Here's a look at current and upcoming features:
 
 | Feature                                                                                                                           | Status        |
 | --------------------------------------------------------------------------------------------------------------------------------- | ------------- |
@@ -154,24 +131,22 @@ Stay updated on upcoming features and improvements:
 | [Dataset Generation Based on LLM Events](https://github.com/openlit/openlit/issues/472)                                           | 🔜 Coming Soon |
 | [Search over Traces]()                                                                                                            | 🔜 Coming Soon |
 
-## 🌱 Contributing
+## Contribute
 
-We welcome contributions!  Please see our [Contribution guide](./CONTRIBUTING.md) to get started.
+Your contributions are welcome! See the [Contribution guide](./CONTRIBUTING.md) for details.
 
-## 💚 Community & Support
+## Community & Support
 
-Connect with the OpenLIT community:
-
-*   ⭐  Star us on [GitHub](https://github.com/openlit/openlit/)
-*   💬  Join our [Slack](https://join.slack.com/t/openlit/shared_invite/zt-2etnfttwg-TjP_7BZXfYg84oAukY8QRQ) or [Discord](https://discord.gg/CQnXwNT3)
-*   🐞  Report bugs on our [GitHub Issues](https://github.com/openlit/openlit/issues)
-*   𝕏  Follow us on [X](https://twitter.com/openlit_io)
+*   ⭐ Star the repository on [GitHub](https://github.com/openlit/openlit/).
+*   💬 Join our [Slack](https://join.slack.com/t/openlit/shared_invite/zt-2etnfttwg-TjP_7BZXfYg84oAukY8QRQ) or [Discord](https://discord.gg/CQnXwNT3) communities.
+*   🐞 Report bugs on [GitHub Issues](https://github.com/openlit/openlit/issues).
+*   𝕏 Follow us on [X](https://twitter.com/openlit_io).
 
 ## License
 
 OpenLIT is licensed under the [Apache-2.0 license](LICENSE).
 
-## 🙇‍♂️ Acknowledgments
+## Acknowledgments
 
 <p>This project is proudly supported by:</p>
 <p>
@@ -179,17 +154,3 @@ OpenLIT is licensed under the [Apache-2.0 license](LICENSE).
     <img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_horizontal_blue.svg" width="201px">
   </a>
 </p>
-```
-Key improvements and SEO optimizations:
-
-*   **Clear, concise, and keyword-rich title & introduction.** This immediately tells the reader what OpenLIT is and what it does.
-*   **Keyword Use:** Strategically incorporates keywords like "AI Engineering," "LLMs," "Observability," and related terms throughout the document.
-*   **Structured Content:** Uses clear headings and subheadings for readability and SEO benefits.
-*   **Bulleted Key Features:** Makes it easy for users to quickly understand the core functionality.  More descriptive feature names.
-*   **Call to Action:** Encourages exploration with links to key resources (Docs, Quickstart, SDKs)
-*   **Strong focus on LLMs**: mentions LLMs early and often.
-*   **Concise Getting Started:** Streamlines the installation and initialization steps.
-*   **Roadmap:** Clearly outlines planned features.
-*   **Community & Support:** Emphasizes community engagement and provides multiple channels for support.
-*   **Alt text for Images:** I added alt text for the images for accessibility and SEO.
-*   **Overall Readability:** Improved formatting for better user experience and scannability.

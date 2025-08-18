@@ -1,40 +1,42 @@
-# ShivyC: A C Compiler in Python
+# ShivyC: A C Compiler Written in Python 🐍
 
-**ShivyC is a hobby C compiler written in Python, offering a glimpse into compiler design and the inner workings of C programming.**
-
-[View the original repository on GitHub](https://github.com/ShivamSarodia/ShivyC)
-
-ShivyC is a project built to explore the intricacies of C compilation. This compiler supports a subset of the C11 standard and generates reasonably efficient x86-64 binaries, including some optimizations. It also provides helpful compile-time error messages.
+**ShivyC is a hobby C compiler, written in Python, that lets you compile C code and experience how a compiler works.** Check out the original repository on GitHub: [ShivamSarodia/ShivyC](https://github.com/ShivamSarodia/ShivyC).
 
 ## Key Features
 
-*   **Written in Python 3:** Easy to understand and contribute to.
-*   **C11 Standard Support:** Implements a subset of the C11 standard.
-*   **x86-64 Binary Generation:** Produces executable binaries for Linux.
-*   **Optimizations:** Includes optimizations for improved performance.
-*   **Clear Error Messages:** Provides helpful error messages for easier debugging.
+*   **C11 Standard Support:** ShivyC supports a subset of the C11 standard.
+*   **Python-Based:** Built entirely in Python 3, making it easy to understand and modify.
+*   **Generates Efficient Binaries:** Produces reasonably efficient x86-64 binaries, including some optimizations.
+*   **Helpful Error Messages:** Provides clear compile-time error messages to assist with debugging.
+*   **Intermediate Language (IL) Generation:** Uses a custom IL to simplify the compilation process.
+*   **Assembly Generation:** Converts the IL into Intel-format x86-64 assembly code, including register allocation using the George and Appel's iterated register coalescing algorithm.
 
 ## Quickstart
 
 ### Prerequisites
+
 *   Python 3.6 or later
-*   GNU binutils and glibc (typically pre-installed on Linux)
+*   GNU binutils and glibc (usually pre-installed on Linux systems)
 
 ### Installation
+
 ```bash
 pip3 install shivyc
 ```
 
-### Compile and Run a Simple Program
+### Example: "Hello, World!"
 
-1.  Create a `hello.c` file with the following content:
+1.  Create a file named `hello.c`:
+
     ```c
     #include <stdio.h>
     int main() {
       printf("hello, world!\n");
     }
     ```
-2.  Compile and run the program:
+
+2.  Compile and run:
+
     ```bash
     shivyc hello.c
     ./out
@@ -42,29 +44,31 @@ pip3 install shivyc
 
 ### Running Tests
 
+```bash
+git clone https://github.com/ShivamSarodia/ShivyC.git
+cd ShivyC
+python3 -m unittest discover
+```
+
+### Docker Environment
+
+For convenience, a Dockerfile is provided to set up an x86-64 Linux Ubuntu environment:
+
 1.  Clone the repository:
+
     ```bash
     git clone https://github.com/ShivamSarodia/ShivyC.git
     cd ShivyC
     ```
-2.  Run the tests:
-    ```bash
-    python3 -m unittest discover
-    ```
 
-### Using Docker (For Non-Linux Environments)
-The [`docker/`](docker/) directory provides a Dockerfile that sets up an x86-64 Linux Ubuntu environment.
-
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/ShivamSarodia/ShivyC.git
-    cd ShivyC
-    ```
 2.  Run the Docker shell:
+
     ```bash
     docker/shell
     ```
-    This will open a shell with ShivyC installed.  Within the shell:
+
+    Within the Docker shell, you can compile and run tests:
+
     ```bash
     shivyc any_c_file.c           # to compile a file
     python3 -m unittest discover  # to run tests
@@ -72,19 +76,21 @@ The [`docker/`](docker/) directory provides a Dockerfile that sets up an x86-64 
 
 ## Implementation Overview
 
-*   **Preprocessor:** Handles comments and `#include` directives. ([`lexer.py`](shivyc/lexer.py), [`preproc.py`](shivyc/preproc.py))
-*   **Lexer:** Converts source code into tokens. ([`lexer.py`](shivyc/lexer.py), [`tokens.py`](shivyc/tokens.py), [`token_kinds.py`](shivyc/token_kinds.py))
-*   **Parser:** Uses recursive descent to create a parse tree. ([`parser/*.py`](shivyc/parser/), [`tree/*.py`](shivyc/tree/))
-*   **IL Generation:** Transforms the parse tree into a custom intermediate language. ([`il_cmds/*.py`](shivyc/il_cmds/), [`il_gen.py`](shivyc/il_gen.py),  [`tree/*.py`](shivyc/tree/))
-*   **ASM Generation:** Converts IL commands into x86-64 assembly code. ([`asm_gen.py`](shivyc/asm_gen.py), [`il_cmds/*.py`](shivyc/il_cmds/))
+ShivyC's compilation process is broken down into the following stages:
+
+*   **Preprocessor:** Handles comments and `#include` directives (implemented in `lexer.py` and `preproc.py`).
+*   **Lexer:** Converts the source code into tokens (implemented in `lexer.py`, `tokens.py`, and `token_kinds.py`).
+*   **Parser:** Uses recursive descent techniques to create a parse tree (implemented in `parser/*.py` and `tree/*.py`).
+*   **IL Generation:** Transforms the parse tree into a custom intermediate language (IL), implemented in `il_cmds/*.py`, `il_gen.py`, and `tree/*.py`.
+*   **ASM Generation:** Converts the IL into x86-64 assembly code, using register allocation (implemented in `asm_gen.py`, `il_cmds/*.py`, and `tree/*.py`).
 
 ## Contributing
 
-This project is no longer under active development.  However, if you have questions or suggestions, please open a Github Issue.
+Please note that the project is no longer under active development. However, if you have questions or suggestions, please create an issue.
 
 ## References
 
-*   [ShivC](https://github.com/ShivamSarodia/ShivC) - The original C compiler this project is based on.
-*   C11 Specification - http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf
-*   x86_64 ABI - https://github.com/hjl-tools/x86-psABI/wiki/x86-64-psABI-1.0.pdf
-*   Iterated Register Coalescing (George and Appel) - https://www.cs.purdue.edu/homes/hosking/502/george.pdf
+*   [ShivC (Older Compiler)](https://github.com/ShivamSarodia/ShivC) - The original C compiler that ShivyC is based on.
+*   [C11 Specification](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf)
+*   [x86_64 ABI](https://github.com/hjl-tools/x86-psABI/wiki/x86-64-psABI-1.0.pdf)
+*   [Iterated Register Coalescing (George and Appel)](https://www.cs.purdue.edu/homes/hosking/502/george.pdf)

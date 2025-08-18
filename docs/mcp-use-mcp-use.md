@@ -10,109 +10,228 @@
 <div align="center">
   <h2>🎉 <strong>We're LIVE on Product Hunt!</strong> 🎉</h2>
   <p><strong>Support us today and help us reach #1!</strong></p>
-  <a href="https://www.producthunt.com/products/mcp-use?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-mcp&#0045;use" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1002629&theme=neutral&t=1754609432704" alt="mcp&#0045;use - Open&#0032;source&#0032;SDK&#0032;and&#0032;infra&#0032;for&#0032;MCP&#0032;servers&#0032;&#0038;&#0032;agents | Product Hunt" style="width: 220px; height: 54px;" width="250" height="54" /></a>
+  <a href="https://www.producthunt.com/products/mcp-use?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-mcp&#0045;use" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1002629&theme=neutral&t=1754609432704" alt="mcp&#0045;use - Open&#0032;source&#0032;SDK&#0032;and&#0032;infra&#0032;for&#0032;MCP&#0032;servers&#0038;&#0032;agents | Product Hunt" style="width: 220px; height: 54px;" width="250" height="54" /></a>
   <p>👆 <em>Click to upvote and leave a comment!</em></p>
 </div>
+</div>
 
-<h1 align="center">🚀 **mcp-use: Unleash the Power of Open-Source MCP with Your LLM**</h1>
-<p align="center">
-    <a href="https://github.com/pietrozullo/mcp-use/stargazers" alt="GitHub stars">
-        <img src="https://img.shields.io/github/stars/pietrozullo/mcp-use?style=social" /></a>
-    <a href="https://pypi.org/project/mcp_use/" alt="PyPI Downloads">
-        <img src="https://static.pepy.tech/badge/mcp-use" /></a>
-    <a href="https://pypi.org/project/mcp_use/" alt="PyPI Version">
-        <img src="https://img.shields.io/pypi/v/mcp_use.svg"/></a>
-    <a href="https://github.com/mcp-use/mcp-use-ts" alt="TypeScript">
-      <img src="https://img.shields.io/badge/TypeScript-mcp--use-3178C6?logo=typescript&logoColor=white" /></a>
-    <a href="https://github.com/pietrozullo/mcp-use/blob/main/LICENSE" alt="License">
-        <img src="https://img.shields.io/github/license/pietrozullo/mcp-use" /></a>
-    <a href="https://docs.mcp-use.com" alt="Documentation">
-        <img src="https://img.shields.io/badge/docs-mcp--use.com-blue" /></a>
-    <a href="https://mcp-use.com" alt="Website">
-        <img src="https://img.shields.io/badge/website-mcp--use.com-blue" /></a>
-    </p>
-    <p align="center">
+# MCP-Use: Unlock the Power of LLMs with Open-Source MCP Agents
+
+🌐 **MCP-Use** empowers developers to effortlessly connect any Large Language Model (LLM) to any **Model Context Protocol (MCP)** server, enabling the creation of versatile, custom agents with tool access, all within an open-source framework.  [Check out the original repo](https://github.com/mcp-use/mcp-use)!
+
+<div align="center">
+  <a href="https://github.com/pietrozullo/mcp-use/stargazers" alt="GitHub stars">
+      <img src="https://img.shields.io/github/stars/pietrozullo/mcp-use?style=social" /></a>
+  <a href="https://pypi.org/project/mcp_use/" alt="PyPI Downloads">
+      <img src="https://static.pepy.tech/badge/mcp-use" /></a>
+  <a href="https://pypi.org/project/mcp_use/" alt="PyPI Version">
+      <img src="https://img.shields.io/pypi/v/mcp_use.svg"/></a>
+  <a href="https://github.com/mcp-use/mcp-use-ts" alt="TypeScript">
+    <img src="https://img.shields.io/badge/TypeScript-mcp--use-3178C6?logo=typescript&logoColor=white" /></a>
+  <a href="https://github.com/pietrozullo/mcp-use/blob/main/LICENSE" alt="License">
+      <img src="https://img.shields.io/github/license/pietrozullo/mcp-use" /></a>
+  <a href="https://docs.mcp-use.com" alt="Documentation">
+      <img src="https://img.shields.io/badge/docs-mcp--use.com-blue" /></a>
+  <a href="https://mcp-use.com" alt="Website">
+      <img src="https://img.shields.io/badge/website-mcp--use.com-blue" /></a>
     <a href="https://x.com/pietrozullo" alt="Twitter Follow - Pietro">
         <img src="https://img.shields.io/twitter/follow/Pietro?style=social" /></a>
     <a href="https://x.com/pederzh" alt="Twitter Follow - Luigi">
         <img src="https://img.shields.io/twitter/follow/Luigi?style=social" /></a>
     <a href="https://discord.gg/XkNkSkMz3V" alt="Discord">
         <img src="https://dcbadge.limes.pink/api/server/XkNkSkMz3V?style=flat" /></a>
-</p>
 </div>
-
-
-[**mcp-use**](https://github.com/mcp-use/mcp-use) empowers developers to easily connect any Large Language Model (LLM) to various tools and build custom agents using the Model Context Protocol (MCP) without relying on closed-source solutions.
 
 ## Key Features
 
-*   ✅ **LLM Compatibility**: Integrate with a wide range of LLMs supported by Langchain, including OpenAI, Anthropic, and more, provided they support tool calling.
-*   🛠️ **Flexible Tool Access**: Connect your LLM to tools like web browsers, file operations, 3D Modeling and more.
-*   🏗️ **Custom Agent Creation**: Build your own agents using any framework with the LangChain adapter or create new adapters.
-*   🌐 **Multi-Server Support**: Utilize multiple MCP servers simultaneously within a single agent for enhanced functionality.
-*   🔒 **Tool Access Control**: Implement tool restrictions to manage security and control agent capabilities.
-*   ⚡ **Streaming Agent Output**: Supports asynchronous streaming of agent output for real-time feedback.
-*   🖥️ **Sandboxed Execution**: Run MCP servers in a sandboxed environment using E2B's cloud infrastructure for secure and isolated execution.
-*   ✨ **Direct Tool Calls**: Call MCP server tools directly without an LLM for programmatic control.
-*   💻 **Code Builder:** Generate starter code with the interactive [code builder](https://mcp-use.com/builder).
+*   ✅ **Easy Integration:** Connect any LLM (OpenAI, Anthropic, etc.) to your preferred MCP servers.
+*   🛠️ **Tool Access:** Empower your agents with access to web browsing, file operations, and more.
+*   💻 **Code Builder:** Quickly generate starter code with our interactive [code builder](https://mcp-use.com/builder).
+*   🌐 **HTTP Support:**  Connect directly to MCP servers via HTTP.
+*   🔄 **Dynamic Server Selection:** Agents can dynamically choose the best server for the job.
+*   📡 **Multi-Server Support:** Utilize multiple MCP servers simultaneously.
+*   🔒 **Tool Restrictions:** Enhance security with tool access control.
+*   🧩 **Custom Agents:** Build custom agents using the LangChain adapter or create new adapters.
+*   🚀 **Sandboxed Execution:** Run MCP servers in a secure, isolated environment using E2B's infrastructure.
+*   ⚡ **Streaming Output:**  Receive real-time updates and progress reports with asynchronous streaming.
 
-## Quick Start
+## Getting Started
 
-Install mcp-use:
+### Installation
+
+Install `mcp-use` using pip:
 
 ```bash
 pip install mcp-use
 ```
 
-For detailed setup instructions, installation from source, and provider-specific instructions, refer to the detailed documentation.
+For source installation:
+
+```bash
+git clone https://github.com/pietrozullo/mcp-use.git
+cd mcp-use
+pip install -e .
+```
+
+### Install LangChain Providers
+
+Install the necessary LangChain provider for your chosen LLM.  For example:
+
+```bash
+pip install langchain-openai  # For OpenAI
+pip install langchain-anthropic # For Anthropic
+```
+
+Set your API keys in your `.env` file:
+
+```bash
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+ANTHROPIC_API_KEY=YOUR_ANTHROPIC_API_KEY
+```
+
+**Important:** Only models with tool/function calling capabilities are compatible.
+
+### Basic Usage
+
+```python
+import asyncio
+import os
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
+from mcp_use import MCPAgent, MCPClient
+
+async def main():
+    load_dotenv()
+
+    config = {
+      "mcpServers": {
+        "playwright": {
+          "command": "npx",
+          "args": ["@playwright/mcp@latest"],
+          "env": {
+            "DISPLAY": ":1"
+          }
+        }
+      }
+    }
+
+    client = MCPClient.from_dict(config)
+    llm = ChatOpenAI(model="gpt-4o")
+    agent = MCPAgent(llm=llm, client=client, max_steps=30)
+
+    result = await agent.run(
+        "Find the best restaurant in San Francisco",
+    )
+    print(f"\nResult: {result}")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
 
 ## Examples
 
-**Web Browsing with Playwright**
+### Web Browsing with Playwright
 
 ```python
-# [Example code]
+# Example usage (See full examples in README)
 ```
 
-**Airbnb Search**
+### Airbnb Search
 
 ```python
-# [Example code]
+# Example usage (See full examples in README)
 ```
 
-**Blender 3D Creation**
+### Blender 3D Creation
 
 ```python
-# [Example code]
+# Example usage (See full examples in README)
 ```
 
-For additional use cases and configurations, please check out the full documentation.
+## Configuration
 
-## Configuration & Usage
+### HTTP Connection Example
 
-mcp-use offers various configuration options, including HTTP connections, dynamic server selection, and server manager capabilities.
+```python
+# Example usage (See full examples in README)
+```
 
-*   **HTTP Connection Example:**
+## Multi-Server Support
 
-    ```python
-    # [Example code]
-    ```
+Configure and connect to multiple MCP servers simultaneously:
 
-*   **Multi-Server Support** Configure multiple MCP servers and use them simultaneously.
+```json
+{
+  "mcpServers": {
+    "airbnb": {
+      "command": "npx",
+      "args": ["-y", "@openbnb/mcp-server-airbnb", "--ignore-robots-txt"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"],
+      "env": {
+        "DISPLAY": ":1"
+      }
+    }
+  }
+}
+```
 
-*   **Dynamic Server Selection (Server Manager):** Enable the Server Manager to optimize agent tool selection.
+### Dynamic Server Selection (Server Manager)
 
-*   **Tool Access Control:** Restrict which tools are available to the agent.
+```python
+# Example usage (See full examples in README)
+```
+
+## Tool Access Control
+
+Restrict tool access for enhanced security:
+
+```python
+# Example usage (See full examples in README)
+```
+
+## Sandboxed Execution
+
+Run MCP servers in a secure sandbox:
+
+```python
+# Example usage (See full examples in README)
+```
+
+## Direct Tool Calls (Without LLM)
+
+Call MCP server tools directly:
+
+```python
+# Example usage (See full examples in README)
+```
+
+## Build a Custom Agent
+
+Build your own custom agent with LangChain Adapter:
+
+```python
+# Example usage (See full examples in README)
+```
 
 ## Debugging
 
-Enable debug mode for increased log verbosity to diagnose agent implementations.
+Enable debug mode to diagnose issues:
 
-### Debugging Modes
+```bash
+DEBUG=1 python3.11 your_script.py  # INFO level
+DEBUG=2 python3.11 your_script.py  # DEBUG level
+```
+or programmatically
 
-*   **Environment Variable:** Use the `DEBUG` environment variable.
-*   **Programmatically:** Set the global debug flag in your code.
-*   **Agent-Specific Verbosity:** Use the `verbose` parameter in `MCPAgent`.
+```python
+import mcp_use
+mcp_use.set_debug(1)  # INFO level
+# or
+mcp_use.set_debug(2)  # DEBUG level (full verbose output)
+```
 
 ## Star History
 
@@ -120,74 +239,21 @@ Enable debug mode for increased log verbosity to diagnose agent implementations.
 
 ## Contributing
 
-Contributions are welcome! Review the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Contributors
 
-Thanks to all our amazing contributors!
-
-<a href="https://github.com/mcp-use/mcp-use/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=mcp-use/mcp-use" />
-</a>
+[Link to contributors graph]
 
 ## Top Starred Dependents
 
-<!-- gh-dependents-info-used-by-start -->
-
-<table>
-  <tr>
-    <th width="400">Repository</th>
-    <th>Stars</th>
-  </tr>
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/38653995?s=40&v=4" width="20" height="20" style="vertical-align: middle; margin-right: 8px;"> <a href="https://github.com/patchy631/ai-engineering-hub"><strong>patchy631/ai-engineering-hub</strong></a></td>
-    <td>⭐ 15920</td>
-  </tr>
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/170207473?s=40&v=4" width="20" height="20" style="vertical-align: middle; margin-right: 8px;"> <a href="https://github.com/tavily-ai/meeting-prep-agent"><strong>tavily-ai/meeting-prep-agent</strong></a></td>
-    <td>⭐ 129</td>
-  </tr>
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/164294848?s=40&v=4" width="20" height="20" style="vertical-align: middle; margin-right: 8px;"> <a href="https://github.com/buildfastwithai/gen-ai-experiments"><strong>buildfastwithai/gen-ai-experiments</strong></a></td>
-    <td>⭐ 93</td>
-  </tr>
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/187057607?s=40&v=4" width="20" height="20" style="vertical-align: middle; margin-right: 8px;"> <a href="https://github.com/hud-evals/hud-python"><strong>hud-evals/hud-python</strong></a></td>
-    <td>⭐ 76</td>
-  </tr>
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/20041231?s=40&v=4" width="20" height="20" style="vertical-align: middle; margin-right: 8px;"> <a href="https://github.com/krishnaik06/MCP-CRASH-Course"><strong>krishnaik06/MCP-CRASH-Course</strong></a></td>
-    <td>⭐ 61</td>
-  </tr>
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/54944174?s=40&v=4" width="20" height="20" style="vertical-align: middle; margin-right: 8px;"> <a href="https://github.com/larksuite/lark-samples"><strong>larksuite/lark-samples</strong></a></td>
-    <td>⭐ 35</td>
-  </tr>
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/892404?s=40&v=4" width="20" height="20" style="vertical-align: middle; margin-right: 8px;"> <a href="https://github.com/truemagic-coder/solana-agent-app"><strong>truemagic-coder/solana-agent-app</strong></a></td>
-    <td>⭐ 30</td>
-  </tr>
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/8344498?s=40&v=4" width="20" height="20" style="vertical-align: middle; margin-right: 8px;"> <a href="https://github.com/schogini/techietalksai"><strong>schogini/techietalksai</strong></a></td>
-    <td>⭐ 24</td>
-  </tr>
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/201161342?s=40&v=4" width="20" height="20" style="vertical-align: middle; margin-right: 8px;"> <a href="https://github.com/autometa-dev/whatsapp-mcp-voice-agent"><strong>autometa-dev/whatsapp-mcp-voice-agent</strong></a></td>
-    <td>⭐ 22</td>
-  </tr>
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/100749943?s=40&v=4" width="20" height="20" style="vertical-align: middle; margin-right: 8px;"> <a href="https://github.com/Deniscartin/mcp-cli"><strong>Deniscartin/mcp-cli</strong></a></td>
-    <td>⭐ 19</td>
-  </tr>
-</table>
-
-<!-- gh-dependents-info-used-by-end -->
+[Link to top starred dependents table]
 
 ## Requirements
 
 *   Python 3.11+
-*   MCP implementation (like Playwright MCP)
-*   LangChain and appropriate model libraries (OpenAI, Anthropic, etc.)
+*   MCP Implementation (e.g., Playwright MCP)
+*   LangChain and LLM libraries (e.g., OpenAI, Anthropic)
 
 ## License
 

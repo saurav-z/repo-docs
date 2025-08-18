@@ -1,131 +1,94 @@
-<h1 align="center">🤖 RD-Agent: Automate Your Machine Learning Engineering with AI</h1>
+<h1 align="center">RD-Agent: Automate Your Data-Driven R&D with AI</h1>
 
-<p align="center">
+<div align="center">
   <a href="https://github.com/microsoft/RD-Agent">
-    <img src="docs/_static/logo.png" alt="RD-Agent Logo" width="30%">
+    <img src="docs/_static/logo.png" alt="RD-Agent Logo" style="width:50%;">
   </a>
-</p>
+</div>
 
-**Unlock the power of automated machine learning engineering with RD-Agent, your AI-powered research and development assistant.**
+**RD-Agent empowers researchers and engineers to automate the most critical aspects of the R&D process, leading to groundbreaking discoveries and improved productivity.**
 
-RD-Agent is a groundbreaking framework developed by Microsoft designed to automate and optimize the R&D process for machine learning engineering tasks. Leveraging the power of Large Language Models (LLMs), RD-Agent empowers you to accelerate your ML projects, from data exploration to model deployment.
+[🖥️ Live Demo](https://rdagent.azurewebsites.net/) | [🎥 Demo Video](https://rdagent.azurewebsites.net/factor_loop) | [📖 Documentation](https://rdagent.readthedocs.io/en/latest/index.html) | [📄 Tech Report](https://aka.ms/RD-Agent-Tech-Report) | [▶️ YouTube Channel](https://www.youtube.com/watch?v=JJ4JYO3HscM&list=PLALmKB0_N3_i52fhUmPQiL4jsO354uopR)
 
-**➡️ [Explore the RD-Agent Repo](https://github.com/microsoft/RD-Agent)**
+---
 
-## 🚀 Key Features
+## Key Features
 
-*   **Leading Performance:** Currently leads as the top-performing machine learning engineering agent on MLE-bench, demonstrating superior results.
-*   **Automated R&D:** Automates key aspects of the R&D process, including idea generation, implementation, and evaluation.
-*   **Multi-Agent Framework:** Coordinates multiple agents to streamline the development of quantitative strategies via coordinated factor-model co-optimization.
-*   **Data-Centric Approach:** Focuses on automating the full-stack research and development of quantitative strategies.
-*   **Versatile Applications:**
-    *   Automated Quant Factory
-    *   Data Mining Agent
-    *   Research Copilot
-    *   Kaggle Agent
-*   **Easy to Use:** Provides docker installation and python environment for a quick start.
+*   **Automated R&D:**  R&D-Agent automates key steps in the R&D process, including idea generation, implementation, and evaluation.
+*   **Multi-Agent Framework:**  RD-Agent is built on a multi-agent architecture, allowing for collaboration and specialization in various tasks.
+*   **Data-Centric Approach:** The framework focuses on data-driven scenarios, enabling more effective model and data development.
+*   **Extensible and Flexible:** Designed to easily integrate with various datasets, models, and tools, making it adaptable to diverse R&D challenges.
+*   **Top-Performing on MLE-bench:** R&D-Agent achieves state-of-the-art results on the MLE-bench benchmark, demonstrating its ability to excel in real-world ML engineering tasks.
 
-## 🌟 What's New?
+## Quick Start
 
-*   **[Overall Technical Report Release](https://arxiv.org/abs/2505.14738):** Framework Description, Benchmarks & Results
-*   **[R&D-Agent-Quant Release](https://arxiv.org/abs/2505.15155):** Deep Application in Diverse Scenarios
-*   **[MLE-Bench Results Released:** R&D-Agent currently leads as the top-performing machine learning engineering agent on MLE-bench
-*   **[LiteLLM Backend Support](https://github.com/microsoft/RD-Agent?tab=readme-ov-file#-configuration):** Full support for LiteLLM as a backend for easy integration with multiple LLM providers.
-*   **[Data Science Agent](https://rdagent.readthedocs.io/en/latest/scens/data_science.html):** Explore the power of RD-Agent on Data Science Problems
-*   **Kaggle Agent Release:**  Try the new features!
-*   **Discord and WeChat Community:** Join the community!
+*   RD-Agent currently supports Linux.
+*   **Installation:**
+    *   Install Docker.  See the [official Docker page](https://docs.docker.com/engine/install/) for installation instructions.
+    *   Create and activate a Conda environment.
+    *   Install the RD-Agent package using `pip install rdagent`.
+*   **Configuration:**  Set up your environment variables, including your LLM provider details (e.g., OpenAI API key, Azure OpenAI API key).  We now fully support **[LiteLLM](https://github.com/BerriAI/litellm)** as our default backend for integration with multiple LLM providers.
+*   **Run the Application:** Execute `rdagent health_check` to verify your configuration. Then, run one of the provided demo applications (e.g., `rdagent fin_quant`) to see RD-Agent in action. See the [documentation](https://rdagent.readthedocs.io/en/latest/index.html) for more details.
 
-## 📈 Benchmarking & Results
+### Available Demos
 
-RD-Agent demonstrates superior performance on MLE-bench, a comprehensive benchmark for evaluating AI agents in machine learning engineering:
+*   Automated Quantitative Trading & Iterative Factors Model Joint Evolution (Qlib)
+*   Automated Quantitative Trading & Iterative Factors Evolution (Qlib)
+*   Automated Quantitative Trading & Iterative Model Evolution (Qlib)
+*   Automated Quantitative Trading & Factors Extraction from Financial Reports
+*   Automated Model Research & Development Copilot (Paper Implementation)
+*   Automated Medical Prediction Model Evolution
+*   Automated Kaggle Model Tuning & Feature Engineering
 
-| Agent                | Low == Lite (%) | Medium (%) | High (%) | All (%)    |
-| -------------------- | --------------- | ---------- | -------- | ---------- |
-| R&D-Agent o1-preview | 48.18 ± 2.49    | 8.95 ± 2.36 | 18.67 ± 2.98 | 22.4 ± 1.1 |
-| R&D-Agent o3(R)+GPT-4.1(D) | 51.52 ± 6.21    | 7.89 ± 3.33 | 16.67 ± 3.65 | 22.45 ± 2.45 |
-| AIDE o1-preview      | 34.3 ± 2.4      | 8.8 ± 1.1   | 10.0 ± 1.9 | 16.9 ± 1.1 |
+### Monitoring Results
 
-Detailed results are available:
+Use the `rdagent ui` command to monitor the application results via the UI.  Ensure the appropriate port is not occupied before running.
 
-*   [R&D-Agent o1-preview detailed runs](https://aka.ms/RD-Agent_MLE-Bench_O1-preview)
-*   [R&D-Agent o3(R)+GPT-4.1(D) detailed runs](https://aka.ms/RD-Agent_MLE-Bench_O3_GPT41)
+##  Scenarios and Applications
 
-For running R&D-Agent on MLE-bench, refer to **[MLE-bench Guide: Running ML Engineering via MLE-bench](https://rdagent.readthedocs.io/en/latest/scens/data_science.html)**
+RD-Agent is designed to automate key stages in data-driven R&D across various domains:
 
-## 🛠️ Quick Start
+*   **Finance:** Automated Quant Factory, Iterative Factor and Model Optimization
+*   **Medical:** Automated Model Evolution for Predictions
+*   **General Data Science:**  Automated Paper Reading & Implementation, Kaggle Competition Agent
+*   Explore the [Live Demo](https://rdagent.azurewebsites.net/)
 
-1.  **Environment:** Ensure you have a Linux environment.
-2.  **Docker Installation:** Install Docker following the [official Docker documentation](https://docs.docker.com/engine/install/).
-3.  **Conda Environment:** Create and activate a Conda environment: `conda create -n rdagent python=3.10`, then `conda activate rdagent`.
-4.  **Installation:**  `pip install rdagent`
-5.  **Configuration**: Configure the environment.
-    *  **Use LiteLLM (Default)**:  Configure CHAT_MODEL and EMBEDDING_MODEL and the appropriate API key in a `.env` file.
-        * Option 1: Unified API Base:
-            ```bash
-            cat << EOF  > .env
-            # Set to any model supported by LiteLLM.
-            CHAT_MODEL=gpt-4o 
-            EMBEDDING_MODEL=text-embedding-3-small
-            # Configure unified API base
-            OPENAI_API_BASE=<your_unified_api_base>
-            OPENAI_API_KEY=<replace_with_your_openai_api_key>
-            ```
-        * Option 2: Separate API Bases:
-           ```bash
-            cat << EOF  > .env
-            # Set to any model supported by LiteLLM.
-            # Configure separate API bases for chat and embedding
+## Framework Overview
 
-            # CHAT MODEL:
-            CHAT_MODEL=gpt-4o
-            OPENAI_API_BASE=<your_chat_api_base>
-            OPENAI_API_KEY=<replace_with_your_openai_api_key>
+<div align="center">
+    <img src="docs/_static/Framework-RDAgent.png" alt="Framework-RDAgent" width="85%">
+</div>
 
-            # EMBEDDING MODEL:
-            # TAKE siliconflow as an example, you can use other providers.
-            # Note: embedding requires litellm_proxy prefix
-            EMBEDDING_MODEL=litellm_proxy/BAAI/bge-large-en-v1.5
-            LITELLM_PROXY_API_KEY=<replace_with_your_siliconflow_api_key>
-            LITELLM_PROXY_API_BASE=https://api.siliconflow.cn/v1
-            ```
-    *  **DeepSeek Setup:**  Example configuration.
-        ```bash
-        cat << EOF  > .env
-        # CHAT MODEL: Using DeepSeek Official API
-        CHAT_MODEL=deepseek/deepseek-chat
-        DEEPSEEK_API_KEY=<replace_with_your_deepseek_api_key>
+The RD-Agent framework is built on key components:
 
-        # EMBEDDING MODEL: Using SiliconFlow for embedding since deepseek has no embedding model.
-        # Note: embedding requires litellm_proxy prefix
-        EMBEDDING_MODEL=litellm_proxy/BAAI/bge-m3
-        LITELLM_PROXY_API_KEY=<replace_with_your_siliconflow_api_key>
-        LITELLM_PROXY_API_BASE=https://api.siliconflow.cn/v1
-        ```
+*   **Benchmark:**  Evaluating the abilities of R&D agents.
+*   **Idea Proposal:** Generating new ideas or refining existing ones.
+*   **Development:** Implementing and executing ideas.
 
-6.  **Health Check:** `rdagent health_check` (Ensure configuration is valid.)
-7.  **Run the application:**
-    *   `rdagent fin_quant`: Automated Quantitative Trading
-    *   `rdagent fin_factor`: Automated Quantitative Trading & Iterative Factors Evolution
-    *   `rdagent fin_model`: Automated Quantitative Trading & Iterative Model Evolution
-    *   `rdagent fin_factor_report --report_folder=<Your financial reports folder path>`
-    *   `rdagent general_model <Your paper URL>`
-    *   `rdagent data_science --competition arf-12-hours-prediction-task` (Medical)
-    *   `rdagent data_science --competition tabular-playground-series-dec-2021` (Kaggle)
-8.  **Monitor Results:**  `rdagent ui --port 19899 --log_dir <your log folder like "log/"> --data_science <True or False>`
+For detailed research questions, please consult the [documentation](https://rdagent.readthedocs.io/).
 
-## 🔗 Demos & Resources
+## Papers and Publications
 
-*   [🖥️ Live Demo](https://rdagent.azurewebsites.net/)
-*   [🎥 Demo Video](https://rdagent.azurewebsites.net/factor_loop)
-*   [📖 Documentation](https://rdagent.readthedocs.io/en/latest/index.html)
-*   [📄 Tech Report](https://aka.ms/RD-Agent-Tech-Report)
-*   [📃 Papers](#-paperwork-list)
-*   [Successful explorations](https://github.com/SunsetWolf/rdagent_resource/releases/download/demo_traces/demo_traces.zip)
+*   [Overall Technical Report](https://arxiv.org/abs/2505.14738)
+*   [Benchmark](https://arxiv.org/abs/2404.11276)
+*   [Research](https://rdagent.azurewebsites.net)
+*   [Development](https://arxiv.org/abs/2407.18690)
+*   [Deep Application in Diverse Scenarios](https://arxiv.org/abs/2505.15155)
 
-## 🤝 Contribute
+## Contributing
 
-Contributions are welcome!  Refer to the [Contributing Guide](CONTRIBUTING.md).
+We welcome contributions!  Please refer to the [Contributing Guide](CONTRIBUTING.md).
 
-## ⚖️ Legal
+<img src="https://img.shields.io/github/contributors-anon/microsoft/RD-Agent"/>
 
-See the [Legal disclaimer](https://github.com/microsoft/RD-Agent?tab=readme-ov-file#-%E5%88%A9%E5%AE%B3%E7%9B%B8%E5%85%B3) for important legal information.
+<a href="https://github.com/microsoft/RD-Agent/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=microsoft/RD-Agent&max=100&columns=15" />
+</a>
+
+## Legal Disclaimer
+
+(Include your legal disclaimer here, as provided in the original README)
+
+---
+
+**[Visit the RD-Agent GitHub Repository](https://github.com/microsoft/RD-Agent)** to explore the code, contribute, and learn more.

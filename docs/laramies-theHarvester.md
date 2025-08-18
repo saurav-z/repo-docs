@@ -1,104 +1,107 @@
-# theHarvester: Open Source Intelligence (OSINT) Gathering Tool
+<!-- Title -->
+# theHarvester: OSINT Reconnaissance Tool
 
-**Uncover a domain's digital footprint and assess its attack surface with theHarvester, a powerful OSINT tool for penetration testing and red team engagements.**
+<!-- Short Description -->
+**Uncover a domain's attack surface with theHarvester, a powerful open-source intelligence (OSINT) gathering tool for penetration testers and red teamers.**  [Explore the original repository](https://github.com/laramies/theHarvester)
 
-[Visit the Original Repository](https://github.com/laramies/theHarvester)
+<!-- Badges -->
+[![theHarvester](https://github.com/laramies/theHarvester/blob/master/theHarvester-logo.webp)]()
+[![TheHarvester CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Python%20CI/badge.svg)]()
+[![TheHarvester Docker Image CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Docker%20Image%20CI/badge.svg)]()
+[![Rawsec's CyberSecurity Inventory](https://inventory.raw.pm/img/badges/Rawsec-inventoried-FF5050_flat_without_logo.svg)](https://inventory.raw.pm/)
+
 
 ## Key Features
 
-*   **Comprehensive Data Collection:** Gather names, emails, IPs, subdomains, and URLs from multiple public sources.
-*   **Modular Design:** Leverages numerous passive and active modules for diverse data sources.
-*   **User-Friendly:** Simple to use, making it easy to integrate into reconnaissance workflows.
-*   **Supports Numerous Search Engines & APIs:** Integrates with popular OSINT resources.
+*   **Comprehensive Information Gathering:** Collects emails, subdomains, IPs, URLs, and employee names.
+*   **Multiple Data Sources:** Leverages various public sources like search engines, APIs, and DNS records for data.
+*   **Passive and Active Modules:** Includes passive modules for broader coverage and active modules for more in-depth analysis.
+*   **API Key Integration:** Supports integration with various services requiring API keys for enhanced data collection.
+*   **Easy to Use:**  Simple to use, perfect for anyone starting with OSINT.
 
-## Installation
+## Installation and Setup
 
 ### Prerequisites
+* Python 3.12 or higher
 
-*   Python 3.12 or higher
-
-### Installation Steps
-
-1.  **Install `uv`:**
+### Steps
+1.  **Install uv:**
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
-
 2.  **Clone the Repository:**
     ```bash
     git clone https://github.com/laramies/theHarvester
     cd theHarvester
     ```
-
 3.  **Install Dependencies:**
     ```bash
     uv sync
     ```
-
-4.  **Run the Tool:**
+4.  **Run the Harvester**
     ```bash
     uv run theHarvester
     ```
 
 ## Development
 
-To set up your development environment:
+### Install Development Dependencies
+```bash
+uv sync --extra dev
+```
 
-1.  **Install Development Dependencies:**
-    ```bash
-    uv sync --extra dev
-    ```
+### Run Tests
+```bash
+uv run pytest
+```
 
-2.  **Run Tests:**
-    ```bash
-    uv run pytest
-    ```
-
-3.  **Lint and Format Code:**
-    ```bash
-    uv run ruff check
-    uv run ruff format
-    ```
+### Run Linting and Formatting
+```bash
+uv run ruff check
+```
+```bash
+uv run ruff format
+```
 
 ## Passive Modules
 
-theHarvester integrates with a wide range of passive modules, including:
+TheHarvester integrates with numerous passive modules to gather information from various sources:
 
 *   baidu: Baidu search engine
-*   bevigil: CloudSEK BeVigil
-*   brave: Brave search engine
-*   bufferoverun: Fast domain name lookups
-*   builtwith: Website technology analysis
-*   censys: Certificate search engine
-*   certspotter: Certificate Transparency logs
-*   criminalip: Cyber Threat Intelligence (CTI) search engine
+*   bevigil: CloudSEK BeVigil scans mobile application for OSINT assets
+*   brave: Brave search engine - now uses official Brave Search API
+*   bufferoverun: Fast domain name lookups for TLS certificates in IPv4 space
+*   builtwith: Find out what websites are built with
+*   censys: Uses certificates searches to enumerate subdomains and gather emails
+*   certspotter: Cert Spotter monitors Certificate Transparency logs
+*   criminalip: Specialized Cyber Threat Intelligence (CTI) search engine
 *   crtsh: Comodo Certificate search
-*   dehashed: Data breach search engine
-*   dnsdumpster: Domain research tool
+*   dehashed: Take your data security to the next level is
+*   dnsdumpster: Domain research tool that can discover hosts related to a domain
 *   duckduckgo: DuckDuckGo search engine
-*   fullhunt: Attack surface security platform
+*   fullhunt: Next-generation attack surface security platform
 *   github-code: GitHub code search engine
-*   hackertarget: Online vulnerability scanners
-*   haveibeenpwned: Data breach checker
+*   hackertarget: Online vulnerability scanners and network intelligence to help organizations
+*   haveibeenpwned: Check if your email address is in a data breach
 *   hunter: Hunter search engine
-*   hunterhow: Search engine for security researchers
+*   hunterhow: Internet search engines for security researchers
 *   intelx: Intelx search engine
 *   leaklookup: Data breach search engine
 *   netlas: A Shodan or Censys competitor
 *   onyphe: Cyber defense search engine
 *   otx: AlienVault open threat exchange
-*   pentesttools: Offensive security toolkit
-*   projecdiscovery: Internet-wide assets data
-*   rapiddns: DNS query tool
-*   rocketreach: Contact information search
-*   securityscorecard: Vendor risk assessment
-*   securityTrails: Historical DNS data
-*   -s, --shodan: Shodan search engine
-*   subdomaincenter: Subdomain finder
-*   subdomainfinderc99: Subdomain finder
-*   threatminer: Threat intelligence data mining
+*   pentesttools: Cloud-based toolkit for offensive security testing, focused on web applications and network penetration testing
+*   projecdiscovery: Actively collects and maintains internet-wide assets data, to enhance research and analyse changes around DNS for better insights
+*   rapiddns: DNS query tool which make querying subdomains or sites of a same IP easy
+*   rocketreach: Access real-time verified personal/professional emails, phone numbers, and social media links
+*   securityscorecard: helps TPRM and SOC teams detect, prioritize, and remediate vendor risk across their entire supplier ecosystem at scale
+*   securityTrails: Security Trails search engine, the world's largest repository of historical DNS data
+*   -s, --shodan: Shodan search engine will search for ports and banners from discovered hosts
+*   subdomaincenter: A subdomain finder tool used to find subdomains of a given domain
+*   subdomainfinderc99: A subdomain finder is a tool used to find the subdomains of a given domain
+*   threatminer: Data mining for threat intelligence
 *   tomba: Tomba search engine
-*   urlscan: URL and website scanner
+*   urlscan: A sandbox for the web that is a URL and website scanner
 *   venacus: Venacus search engine
 *   virustotal: Domain search
 *   whoisxml: Subdomain search
@@ -107,56 +110,50 @@ theHarvester integrates with a wide range of passive modules, including:
 
 ## Active Modules
 
-*   DNS brute force: Dictionary-based subdomain enumeration
-*   Screenshots: Capture screenshots of discovered subdomains
+*   DNS brute force: dictionary brute force enumeration
+*   Screenshots: Take screenshots of subdomains that were found
 
 ## Modules Requiring API Keys
 
-Many modules require API keys for full functionality. Documentation for setting up API keys can be found [here](https://github.com/laramies/theHarvester/wiki/Installation#api-keys).
+For advanced features and broader data collection, some modules require API keys.  Refer to the installation documentation for detailed setup instructions: [API Key Setup](https://github.com/laramies/theHarvester/wiki/Installation#api-keys).
 
-*   **bevigil** - 50 free queries/month, 1k queries/month $50
-*   **brave** - Free plan available, Pro plans for higher limits
-*   **bufferoverun** - 100 free queries/month, 10k/month $25
-*   **builtwith** - 50 free queries ever, $2950/yr
-*   **censys** - 500 credits $100
-*   **criminalip** - 100 free queries/month, 700k/month $59
-*   **dehashed** - 500 credts $15, 5k credits $150
-*   **dnsdumpster** - 50 free querries/day, $49
-*   **fullhunt** - 50 free queries, 200 queries $29/month, 500 queries $59/month
-*   **github-code**
-*   **haveibeenpwned** - 10 email searches/min $4.50, 50 email searches/min $22
-*   **hunter** - 50 credits/month free, 12k credits/yr $34
-*   **hunterhow** - 10k free API results per 30 days, 50k API results per 30 days $10
-*   **intelx**
-*   **leaklookup** - 20 credits $10, 50 credits $20, 140 credits $50, 300 credits $100
-*   **netlas** - 50 free requests/day, 1k requests $49, 10k requests $249
-*   **onyphe** - 10M results/month $587
-*   **pentesttools** - 5 assets netsec $95/month, 5 assets webnetsec $140/month
-*   **projecdiscovery** - requires work email. Free monthly discovery and vulnerability scans on sign-up email domain, enterprise $
-*   **rocketreach** - 100 email lookups/month $48, 250 email lookups/month $108
-*   **securityscorecard**
-*   **securityTrails** - 50 free queries/month, 20k queries/month $500
-*   **shodan** - Freelancer $69 month, Small Business $359 month
-*   **tomba** - 25 searches/month free, 1k searches/month $39, 5k searches/month $89
-*   **venacus** - 1 search/day free, 10 searches/day $12, 30 searches/day $36
-*   **whoisxml** - 2k queries $50, 5k queries $105
-*   **zoomeye** - 5 results/day free, 30/results/day $190/yr
+*   bevigil
+*   brave
+*   bufferoverun
+*   builtwith
+*   censys
+*   criminalip
+*   dehashed
+*   dnsdumpster
+*   fullhunt
+*   github-code
+*   haveibeenpwned
+*   hunter
+*   hunterhow
+*   intelx
+*   leaklookup
+*   netlas
+*   onyphe
+*   pentesttools
+*   projecdiscovery
+*   rocketreach
+*   securityscorecard
+*   securityTrails
+*   shodan
+*   tomba
+*   venacus
+*   whoisxml
+*   zoomeye
 
-## Contributing
+## Community and Support
 
-Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests.
+*   **Twitter:**  Follow [@laramies](https://twitter.com/laramies) (Christian Martorella) and cmartorella@edge-security.com, [@NotoriousRebel1](https://twitter.com/NotoriousRebel1) (Matthew Brown), and [@jay_townsend1](https://twitter.com/jay_townsend1) (Jay "L1ghtn1ng" Townsend).
 
-## Contact
+## Contributors
 
-*   Christian Martorella @laramies ([@laramies](https://twitter.com/laramies)) cmartorella@edge-security.com
-*   Matthew Brown @NotoriousRebel1 ([@NotoriousRebel1](https://twitter.com/NotoriousRebel1))
-*   Jay "L1ghtn1ng" Townsend @jay_townsend1 ([@jay_townsend1](https://twitter.com/jay_townsend1))
-
-## Main Contributors
-
-*   Matthew Brown @NotoriousRebel1 ([@NotoriousRebel1](https://twitter.com/NotoriousRebel1))
-*   Jay "L1ghtn1ng" Townsend @jay_townsend1 ([@jay_townsend1](https://twitter.com/jay_townsend1))
-*   Lee Baird @discoverscripts ([@discoverscripts](https://twitter.com/discoverscripts))
+*   [@NotoriousRebel1](https://twitter.com/NotoriousRebel1) - Matthew Brown
+*   [@jay_townsend1](https://twitter.com/jay_townsend1) - Jay "L1ghtn1ng" Townsend
+*   [@discoverscripts](https://twitter.com/discoverscripts) - Lee Baird
 
 ## Acknowledgements
 

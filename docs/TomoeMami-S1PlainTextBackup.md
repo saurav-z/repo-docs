@@ -1,20 +1,22 @@
-# S1 Plain Text Backup: Preserving Stage1st Forum Discussions
+# S1 Forum Plain Text Backup: Preserving Stage1st Forum Discussions
 
-**Tired of losing important discussions?** This repository provides plain text backups of high-activity threads from the Stage1st (S1) forum, ensuring valuable information is preserved.  For more information, visit the [original repository](https://github.com/TomoeMami/S1PlainTextBackup).
+This repository provides plain text backups of high-activity threads from the Stage1st (S1) forum, ensuring valuable discussions are preserved for posterity.  [View the original repository on GitHub](https://github.com/TomoeMami/S1PlainTextBackup).
 
 ## Key Features:
 
-*   **Plain Text Backups:**  Saves forum threads as plain text files for easy access and long-term preservation.
-*   **High-Activity Focus:** Prioritizes backing up threads with significant activity (over 1 page and active within the last 3 days).
-*   **Organized Structure:**  Files are organized by thread and split into manageable chunks (approximately 1500 posts per file) for easy searching.
-*   **Historical Archives:**  Includes links to archived threads from previous years, ensuring a comprehensive archive of S1 forum history.
-*   **Supported Formatting:**  Supports basic formatting for readability, including:
-    *   Bold text
+*   **Text-Based Backups:** Preserves forum content in plain text format for easy access and archiving.
+*   **Regular Updates:** Captures new and active threads based on specified criteria.
+*   **Archiving:** Moves older threads to historical archives to maintain repository organization.
+*   **Formatted Content Support:** Preserves basic formatting including:
+    *   **Bold text**
     *   Links
     *   Images (jpg, jpeg, png, gif, tif, webp)
-    *   Ratings/Scores
+    *   Ratings
+*   **Organized File Structure:**  Threads are divided into files of approximately 1500 posts, or capped at 50 pages to ensure files are under 1MB for proper GitHub rendering.
 
 ## Historical Archives:
+
+Access backups from previous years via the following links:
 
 *   [2020-2021](https://github.com/TomoeMami/S1PlainTextArchive2021)
 *   [2022](https://github.com/TomoeMami/S1PlainTextArchive2022)
@@ -24,11 +26,11 @@
 
 ## Important Notes:
 
-*   **File Size Limits:**  To ensure compatibility with GitHub's rendering, files are limited to approximately 50 pages (under 1MB).
-*   **Local Backup Tool:** For complete local backups with images, consider using [S1Downloader](https://github.com/shuangluoxss/Stage1st-downloader).
-*   **COVID-19 Thread Backup:**  Backups of specific COVID-19 threads are available at: [https://gitlab.com/memory-s1/virus](https://gitlab.com/memory-s1/virus)
+*   **Searching:**  Utilize search functions within the repository to quickly locate specific content.
+*   **Local Backups:**  For complete local backups, consider using the [S1Downloader](https://github.com/shuangluoxss/Stage1st-downloader) tool.
+*   **Special Topic Backups:** Backups of the COVID-19 threads can be found on [GitLab](https://gitlab.com/memory-s1/virus).
 
 ## Update Log:
 
-*   **2024-02-15:**  Adjusted collection criteria to include threads with over 40 replies within the first page and 24 hours, with a 14-day cache.
-*   **2024-02-03:**  Modified collection criteria to include threads with over 40 replies within the first page and 12 hours, with a 7-day cache due to forum changes.
+*   **February 15, 2024:**  Updated collection criteria to include threads with over 40 replies within 24 hours (1 page), with a 3-day expiration. Cache extended to 14 days.
+*   **February 3, 2024:** Changed collection criteria to threads with over 40 replies within 12 hours (1 page), with a 1-day expiration. Cache reduced to 7 days.

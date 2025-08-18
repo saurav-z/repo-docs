@@ -1,102 +1,81 @@
 <p align="center"><img width="40%" src="https://github.com/onnx/onnx/raw/main/docs/onnx-horizontal-color.png" /></p>
 
-[![PyPI - Version](https://img.shields.io/pypi/v/onnx.svg)](https://pypi.org/project/onnx)
-[![CI](https://github.com/onnx/onnx/actions/workflows/main.yml/badge.svg)](https://github.com/onnx/onnx/actions/workflows/main.yml)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3313/badge)](https://bestpractices.coreinfrastructure.org/projects/3313)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/onnx/onnx/badge)](https://api.securityscorecards.dev/projects/github.com/onnx/onnx)
-[![REUSE compliant](https://api.reuse.software/badge/github.com/onnx/onnx)](https://api.reuse.software/info/github.com/onnx/onnx)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+# ONNX: Open Neural Network Exchange
 
-## ONNX: The Open Standard for AI Models
+**ONNX (Open Neural Network Exchange) is an open ecosystem that empowers AI developers with a standard format for AI models, fostering interoperability and accelerating innovation.**  [Explore the original ONNX repository](https://github.com/onnx/onnx).
 
-**ONNX (Open Neural Network Exchange) is an open ecosystem that simplifies AI development by enabling interoperability between different AI frameworks and streamlining the path from research to production.**
+## Key Features of ONNX:
 
-### Key Features
+*   **Open Standard for AI Models:** Defines a standard format for representing both deep learning and traditional machine learning models, promoting model portability.
+*   **Extensible Computation Graph Model:** Provides a flexible graph model to represent the structure and operations within AI models.
+*   **Built-in Operators and Data Types:**  Includes a comprehensive set of pre-defined operators and standard data types for building and deploying models.
+*   **Framework Interoperability:**  Enables seamless integration between various AI frameworks, tools, and hardware platforms.
+*   **Focus on Inferencing:** Primarily optimized for efficient model inferencing (scoring) in production environments.
+*   **Community-Driven:**  A community project with open governance, encouraging contributions and collaboration.
 
-*   **Open Source Format:** ONNX provides an open standard format for AI models, supporting both deep learning and traditional machine learning models.
-*   **Extensible Computation Graph:** Defines a flexible computation graph model for representing AI models.
-*   **Built-in Operators & Data Types:** Includes a comprehensive set of built-in operators and standard data types for AI model representation.
-*   **Wide Support:**  Extensively supported by frameworks, tools, and hardware, fostering interoperability.
-*   **Community Driven:** Actively developed and supported by a vibrant community, encouraging contributions and collaboration.
+## Get Started with ONNX:
 
-### Getting Started
+*   **Documentation:** [Documentation of ONNX Python Package](https://onnx.ai/onnx/)
+*   **Tutorials:** [Tutorials for creating ONNX models](https://github.com/onnx/tutorials)
+*   **Pre-trained Models:** [Pre-trained ONNX models](https://github.com/onnx/models)
 
-*   **Documentation:** Comprehensive documentation for the [ONNX Python Package](https://onnx.ai/onnx/) and the [ONNX specification](https://github.com/onnx/onnx).
-*   **Tutorials:** Learn how to create ONNX models using the [ONNX Tutorials](https://github.com/onnx/tutorials).
-*   **Pre-trained Models:** Access a collection of pre-trained ONNX models on the [ONNX Models](https://github.com/onnx/models) repository.
-
-### Understanding the ONNX Specification
+## Learn More about the ONNX Specification:
 
 *   [Overview](https://github.com/onnx/onnx/blob/main/docs/Overview.md)
-*   [ONNX Intermediate Representation (IR) Spec](https://github.com/onnx/onnx/blob/main/docs/IR.md)
+*   [ONNX Intermediate Representation Spec](https://github.com/onnx/onnx/blob/main/docs/IR.md)
 *   [Versioning Principles](https://github.com/onnx/onnx/blob/main/docs/Versioning.md)
-*   [Operators Documentation](https://github.com/onnx/onnx/blob/main/docs/Operators.md) &  [latest release](https://onnx.ai/onnx/operators/index.html)
+*   [Operators Documentation](https://github.com/onnx/onnx/blob/main/docs/Operators.md)
+*   [Latest Release Operators](https://onnx.ai/onnx/operators/index.html)
 *   [Python API Overview](https://github.com/onnx/onnx/blob/main/docs/PythonAPIOverview.md)
 
-### Programming Utilities
+## Programming Utilities:
 
 *   [Shape and Type Inference](https://github.com/onnx/onnx/blob/main/docs/ShapeInference.md)
 *   [Graph Optimization](https://github.com/onnx/optimizer)
 *   [Opset Version Conversion](https://github.com/onnx/onnx/blob/main/docs/docsgen/source/api/version_converter.md)
 
-### Contributing
+## Contribute to ONNX:
 
-Join the ONNX community and contribute to the project!  Learn more about our [open governance model](https://github.com/onnx/onnx/blob/main/community/readme.md) and how to [contribute code, ideas, and feedback](https://github.com/onnx/onnx/blob/main/CONTRIBUTING.md).
+*   **Contribution Guide:** [Contribution guide](https://github.com/onnx/onnx/blob/main/CONTRIBUTING.md)
+*   **Special Interest Groups (SIGs):**  [SIGs](https://github.com/onnx/onnx/blob/main/community/sigs.md)
+*   **Working Groups:**  [Working Groups](https://github.com/onnx/onnx/blob/main/community/working-groups.md)
 
-### Community
+## Community & Communication:
 
-*   Participate in [Special Interest Groups (SIGs)](https://github.com/onnx/onnx/blob/main/community/sigs.md) and [Working Groups](https://github.com/onnx/onnx/blob/main/community/working-groups.md).
-*   Find the schedules of the regular meetings of the Steering Committee, the working groups and the SIGs [here](https://onnx.ai/calendar)
-*   Discuss ONNX on [Issues](https://github.com/onnx/onnx/issues) or [Slack](https://lfaifoundation.slack.com/) (use this [link](https://join.slack.com/t/lfaifoundation/shared_invite/zt-o65errpw-gMTbwNr7FnNbVXNVFkmyNA) to join).
+*   **Community Meetings:**  [Meeting schedules](https://onnx.ai/calendar)
+*   **Discuss:** [Issues](https://github.com/onnx/onnx/issues) and [Slack](https://lfaifoundation.slack.com/)
+*   **Follow Us:** [[Facebook](https://www.facebook.com/onnxai/)] [[Twitter/X](https://twitter.com/onnxai)]
 
-### Follow Us
+## Roadmap:
 
-Stay up-to-date with the latest ONNX news on  [[Facebook](https://www.facebook.com/onnxai/)] and [[Twitter/X](https://twitter.com/onnxai)].
+*   [Roadmap](https://github.com/onnx/steering-committee/tree/main/roadmap)
 
-### Roadmap
-
-Review the current [roadmap](https://github.com/onnx/steering-committee/tree/main/roadmap) to understand future development plans.
-
-### Installation
-
-Install the ONNX Python package easily using pip:
+## Installation:
 
 ```bash
-pip install onnx
+pip install onnx # or pip install onnx[reference]
 ```
+More details in the [INSTALL.md](https://github.com/onnx/onnx/blob/main/INSTALL.md)
 
-or, for reference implementations:
-
-```bash
-pip install onnx[reference]
-```
-
-For detailed installation instructions, including common build options and error resolution, see [INSTALL.md](https://github.com/onnx/onnx/blob/main/INSTALL.md).
-
-### Testing
-
-ONNX utilizes [pytest](https://docs.pytest.org) for testing.  To run tests, install pytest and execute:
+## Testing:
 
 ```bash
 pip install pytest
 pytest
 ```
 
-### Development
+## Development:
 
-Refer to the [contributor guide](https://github.com/onnx/onnx/blob/main/CONTRIBUTING.md) for development instructions.
+*   [Contributor Guide](https://github.com/onnx/onnx/blob/main/CONTRIBUTING.md)
 
-### License
+## License:
 
-Licensed under the [Apache License v2.0](LICENSE).
+*   [Apache License v2.0](LICENSE)
 
-### Trademark
+## Trademark:
+*   [https://trademarks.justia.com/877/25/onnx-87725026.html](https://trademarks.justia.com/877/25/onnx-87725026.html)
+*   [General rules of the Linux Foundation on Trademark usage](https://www.linuxfoundation.org/legal/trademark-usage)
 
-See [https://trademarks.justia.com/877/25/onnx-87725026.html](https://trademarks.justia.com/877/25/onnx-87725026.html) for trademark information.
+## Code of Conduct:
 
-### Code of Conduct
-
-Adheres to the [ONNX Open Source Code of Conduct](https://onnx.ai/codeofconduct.html).
-
-[Back to the top](https://github.com/onnx/onnx)
+*   [ONNX Open Source Code of Conduct](https://onnx.ai/codeofconduct.html)

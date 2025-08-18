@@ -26,23 +26,21 @@
 
 ---
 
-# Flet: Build Beautiful, Multi-Platform Apps with Python and Flutter
+## Flet: Build Stunning Multi-Platform Apps with Python and Flutter
 
-Flet empowers developers to create stunning, cross-platform applications with Python, leveraging the power of Flutter.
+**Flet empowers you to create beautiful, interactive web, desktop, and mobile applications using only Python.**
 
-## Key Features
+### Key Features:
 
-*   **Python-First Development:** Build apps using Python, eliminating the need for frontend development experience.
-*   **Multi-Platform Support:** Deploy your apps on web, desktop (Windows, macOS, Linux), mobile (iOS, Android), and as Progressive Web Apps (PWAs).
-*   **Fast Development:** Quickly go from idea to a fully functional app in minutes with Flet's streamlined architecture.
-*   **Simplified Architecture:**  Develop stateful, real-time Single-Page Applications (SPAs) without complex backend setups.
-*   **Batteries Included:** Get started immediately with built-in web servers, asset hosting, and desktop clients – no complex tooling needed.
-*   **Powered by Flutter:** Benefit from Flutter's UI capabilities, resulting in professional-looking apps that can be delivered across various platforms.
-*   **Intuitive Controls:** Flet simplifies Flutter by using ready-to-use "controls" with an imperative programming model.
+*   **Rapid Development:** Build apps in minutes, ideal for internal tools, prototypes, and more.
+*   **Simplified Architecture:** Develop stateful, multi-user Single-Page Applications (SPAs) with Python only.
+*   **Batteries Included:** Get started quickly with a built-in web server and desktop clients; no complex setups needed.
+*   **Flutter Power:** Leverage the power of Flutter for professional-looking UIs across all platforms.
+*   **Multi-Platform Deployment:** Deploy as desktop apps (Windows, macOS, Linux), mobile apps (iOS, Android), web apps, or PWAs.
 
-## Flet App Example
+### Flet App Example
 
-Here's a simple "Counter" app demonstrating Flet's ease of use:
+Here's a simple "Counter" app built with Flet:
 
 ```python title="counter.py"
 import flet as ft
@@ -75,55 +73,49 @@ def main(page: ft.Page):
 ft.run(main)
 ```
 
-### Installation
+**To run this app:**
 
-Install Flet using pip:
+1.  Install Flet:
 
-```bash
-pip install 'flet[all]'
-```
+    ```bash
+    pip install 'flet[all]'
+    ```
+2.  Run the app:
 
-### Running the App
+    ```bash
+    flet run counter.py
+    ```
 
-Run your app using the following command:
+    This opens the app in a native OS window.
 
-```bash
-flet run counter.py
-```
+    <p align="center">
+        <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/macos.png" width="45%" alt="Counter app on macOS"/>
+    </p>
 
-This will launch the app in a native OS window.
+    To run as a web app, change the last line to:
 
-<p align="center">
-    <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/macos.png" width="45%" />
-</p>
+    ```python
+    ft.run(main, view=flet.AppView.WEB_BROWSER)
+    ```
 
-### Web App Deployment
+    Or use the `--web` flag:
 
-To run the app as a web app, modify the last line of your script:
+    ```bash
+    flet run --web counter.py
+    ```
 
-```python
-ft.run(main, view=flet.AppView.WEB_BROWSER)
-```
+    <p align="center">
+        <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/safari.png" width="60%" alt="Counter app in web browser"/>
+    </p>
 
-Alternatively, use the `--web` flag:
-
-```bash
-flet run --web counter.py
-```
-
-<p align="center">
-    <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/safari.png" width="60%" />
-</p>
-
-## Learn More
+### Learn More
 
 *   [Website](https://flet.dev)
 *   [Documentation](https://docs.flet.dev)
 *   [Roadmap](https://flet.dev/roadmap)
 *   [Apps Gallery](https://docs.flet.dev/gallery)
-*   [GitHub Repository](https://github.com/flet-dev/flet)
 
-## Community
+### Community
 
 *   [Discussions](https://github.com/flet-dev/flet/discussions)
 *   [Discord](https://discord.gg/dzWXP8SHG8)
@@ -131,6 +123,8 @@ flet run --web counter.py
 *   [Bluesky](https://bsky.app/profile/fletdev.bsky.social)
 *   [Email us](mailto:hello@flet.dev)
 
-## Contributing
+### Contributing
 
-Contribute to the project by following the [contribution guide](https://docs.flet.dev/contributing).
+*   [Contribution Guide](https://docs.flet.dev/contributing)
+
+For more information, check out the [original repository](https://github.com/flet-dev/flet).

@@ -1,13 +1,15 @@
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/_static/dark-logo.svg" />
-    <img alt="Authlib" src="docs/_static/light-logo.svg" height="68" />
-  </picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/_static/dark-logo.svg" />
+  <img alt="Authlib" src="docs/_static/light-logo.svg" height="68" />
+</picture>
+
 </div>
 
-# Authlib: The Comprehensive Python Library for OAuth, OpenID Connect, and JWT
+# Authlib: The Ultimate Python Library for OAuth and OpenID Connect
 
-**Authlib** simplifies secure authentication and authorization in Python applications, providing robust support for industry-standard protocols like OAuth 1.0, OAuth 2.0, OpenID Connect, and JSON Web Tokens (JWT).  [Check out the original repository](https://github.com/authlib/authlib).
+**Authlib empowers developers to effortlessly build secure and compliant OAuth and OpenID Connect servers and clients in Python.**  [Visit the original repository on GitHub](https://github.com/authlib/authlib).
 
 [![Build Status](https://github.com/authlib/authlib/workflows/tests/badge.svg)](https://github.com/authlib/authlib/actions)
 [![PyPI version](https://img.shields.io/pypi/v/authlib.svg)](https://pypi.org/project/authlib)
@@ -20,26 +22,18 @@ Authlib is compatible with Python 3.9+.
 
 ## Key Features
 
-*   **Comprehensive Protocol Support:** Implements OAuth 1.0, OAuth 2.0, OpenID Connect 1.0, and JWT specifications.
-*   **Build Clients & Providers:** Easily create both OAuth clients and providers.
-*   **JWT, JWS, JWK, and JWA Support:** Includes robust handling of JSON Web Signature (JWS), JSON Web Key (JWK), JSON Web Algorithms (JWA), and JSON Web Token (JWT) for secure data transfer.
-*   **Integration with Popular Frameworks:** Seamlessly integrates with popular Python web frameworks like Flask, Django, Starlette, and FastAPI.
-*   **Client Integrations:** Provides client integrations for popular libraries such as Requests and HTTPX.
+Authlib provides comprehensive support for building robust OAuth and OpenID Connect solutions, including:
 
-## Why Choose Authlib?
-
-Authlib offers a powerful and flexible solution for:
-
-*   **Securing APIs:** Protect your APIs with industry-standard authentication and authorization protocols.
-*   **Implementing Single Sign-On (SSO):** Enable users to log in with their existing accounts.
-*   **Connecting to Third-Party Services:** Integrate your applications with popular services that support OAuth and OpenID Connect.
-*   **Building Custom Authentication Solutions:**  Create tailored authentication and authorization flows to meet your specific needs.
+*   **Comprehensive Protocol Support:** Implementation of OAuth 1.0, OAuth 2.0, and OpenID Connect 1.0 specifications, including support for various RFCs.
+*   **JSON Web Token (JWT) and JOSE Support:** Full suite of tools for handling JWS, JWK, JWA, and JWT for secure authentication and authorization.
+*   **Client Integrations:** Seamless integration with popular Python HTTP clients (Requests, HTTPX) and web frameworks (Flask, Django, Starlette, FastAPI) for easy OAuth and OpenID Connect client implementation.
+*   **Provider Frameworks:** Build your own OAuth 1.0, OAuth 2.0, and OpenID Connect providers for Flask and Django.
 
 ## Migrations
 
 Authlib will deprecate `authlib.jose` module, please read:
 
-- [Migrating from `authlib.jose` to `joserfc`](https://jose.authlib.org/en/dev/migrations/authlib/)
+*   [Migrating from `authlib.jose` to `joserfc`](https://jose.authlib.org/en/dev/migrations/authlib/)
 
 ## Sponsors
 
@@ -59,14 +53,14 @@ Authlib will deprecate `authlib.jose` module, please read:
 
 ## Useful Links
 
-1.  **Homepage:** <https://authlib.org/>
-2.  **Documentation:** <https://docs.authlib.org/>
-3.  **Commercial License:** <https://authlib.org/plans>
-4.  **Blog:** <https://blog.authlib.org/>
-5.  **Twitter:** <https://twitter.com/authlib>
-6.  **StackOverflow:** <https://stackoverflow.com/questions/tagged/authlib>
-7.  **Other Repositories:** <https://github.com/authlib>
-8.  **Subscribe Tidelift:** [https://tidelift.com/subscription/pkg/pypi-authlib](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links)
+1.  [Homepage](https://authlib.org/).
+2.  [Documentation](https://docs.authlib.org/).
+3.  [Purchase Commercial License](https://authlib.org/plans).
+4.  [Blog](https://blog.authlib.org/).
+5.  [Twitter](https://twitter.com/authlib).
+6.  [StackOverflow](https://stackoverflow.com/questions/tagged/authlib).
+7.  [Other Repositories](https://github.com/authlib).
+8.  [Subscribe Tidelift](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links).
 
 ## Security Reporting
 

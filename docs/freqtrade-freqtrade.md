@@ -1,6 +1,6 @@
-# Freqtrade: Your Open-Source Crypto Trading Bot
+# Freqtrade: Your Free and Open Source Crypto Trading Bot
 
-**Automate your crypto trading strategies and take control of your investments with Freqtrade - a powerful, free, and open-source trading bot!** ([Original Repo](https://github.com/freqtrade/freqtrade))
+Freqtrade empowers you to automate your cryptocurrency trading strategies with a robust, open-source platform.  Visit the original repository for more information: [Freqtrade on GitHub](https://github.com/freqtrade/freqtrade).
 
 [![Freqtrade CI](https://github.com/freqtrade/freqtrade/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/freqtrade/freqtrade/actions/)
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.04864/status.svg)](https://doi.org/10.21105/joss.04864)
@@ -8,24 +8,23 @@
 [![Documentation](https://readthedocs.org/projects/freqtrade/badge/)](https://www.freqtrade.io)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5737e6d668200b7518ff/maintainability)](https://codeclimate.com/github/freqtrade/freqtrade/maintainability)
 
-Freqtrade is a versatile crypto trading bot written in Python, designed for both beginners and experienced traders. It supports a wide range of major exchanges and offers features for backtesting, strategy optimization, and flexible control.
-
-![freqtrade](https://raw.githubusercontent.com/freqtrade/freqtrade/develop/docs/assets/freqtrade-screenshot.png)
+**Disclaimer:** *This software is for educational purposes only.  Trade at your own risk.  Start with Dry-run to understand the software before risking real capital.*
 
 ## Key Features
 
-*   **Open Source & Free:** Utilize a community-driven tool with no licensing fees.
-*   **Multi-Exchange Support:** Trade on leading crypto exchanges, including Binance, Kraken, and OKX.
-*   **Automated Trading:** Execute trading strategies 24/7, even while you sleep.
-*   **Backtesting:** Simulate trading strategies using historical data to evaluate performance.
-*   **Strategy Optimization:**  Refine your trading strategies with machine learning for optimal results.
-*   **FreqAI Integration:** Build smart strategies that adapt to market changes with adaptive machine learning methods.
-*   **WebUI & Telegram Control:** Manage your bot via a built-in web interface or through Telegram commands.
-*   **Dry-Run Mode:** Test strategies without risking real capital.
+*   **Open Source & Free:**  Leverage a community-driven project with full control and transparency.
+*   **Multi-Exchange Support:** Trade on major cryptocurrency exchanges.
+*   **Backtesting & Optimization:** Test your strategies with historical data and optimize them using machine learning.
+*   **Automated Trading:**  Automate your buy/sell strategies, freeing up your time.
+*   **Dry-Run Mode:** Safely test your strategies without risking real funds.
+*   **Telegram & WebUI Control:** Monitor and manage your bot via Telegram or the built-in web interface.
+*   **Machine Learning:**  Use adaptive prediction modeling, via FreqAI.
+*   **Advanced Analysis Tools:** Access performance reports, profit/loss calculations, and more.
+*   **Python-Based:** Built on Python, making it easily customizable and extensible.
 
 ## Supported Exchanges
 
-Freqtrade supports a growing list of exchanges, including:
+Freqtrade supports a wide range of cryptocurrency exchanges.  Check the [exchange specific notes](docs/exchanges.md) for details on configuration.
 
 *   Binance
 *   Bitmart
@@ -33,45 +32,114 @@ Freqtrade supports a growing list of exchanges, including:
 *   Bybit
 *   Gate.io
 *   HTX
-*   Hyperliquid
+*   Hyperliquid (DEX)
 *   Kraken
-*   OKX
-*   MyOKX
+*   OKX / MyOKX (OKX EEA)
+*   And many others via CCXT - community tested on Bitvavo, Kucoin
 
-**Note:** Please consult the [exchange specific notes](docs/exchanges.md) for detailed configuration instructions for each exchange.
+### Supported Futures Exchanges (experimental)
+
+*   Binance
+*   Gate.io
+*   Hyperliquid (DEX)
+*   OKX
+*   Bybit
 
 ## Getting Started
 
-*   **Documentation:** Access comprehensive documentation on the [Freqtrade website](https://www.freqtrade.io) to understand the bot's functionality.
-*   **Quickstart:**  Get up and running quickly with our [Docker Quickstart documentation](https://www.freqtrade.io/en/stable/docker_quickstart/).
-*   **Installation:** Find detailed installation instructions on the [Installation documentation page](https://www.freqtrade.io/en/stable/installation/).
+### Quick Start
 
-## Disclaimer
+Follow the [Docker Quickstart documentation](https://www.freqtrade.io/en/stable/docker_quickstart/) for the easiest setup.
 
-*   This software is for educational purposes only.
-*   Do not risk money you cannot afford to lose.
-*   Use the software at your own risk. The authors and affiliates are not responsible for your trading outcomes.
-*   We strongly recommend having coding and Python knowledge to understand the bot's mechanism.
-*   Always start with Dry-run before using real funds.
+### Installation
 
-## Community & Support
+For native installations, see the detailed [Installation documentation page](https://www.freqtrade.io/en/stable/installation/).
 
-*   **Discord:** Join the Freqtrade [Discord server](https://discord.gg/p7nuUNVfP7) for support, discussions, and community engagement.
-*   **Issues:**  Report bugs and issues on the [issue tracker](https://github.com/freqtrade/freqtrade/issues?q=is%3Aissue).
-*   **Feature Requests:**  Suggest new features on the [feature request section](https://github.com/freqtrade/freqtrade/labels/enhancement).
-*   **Pull Requests:** Contribute to the project by submitting pull requests. Review the [Contributing document](https://github.com/freqtrade/freqtrade/blob/develop/CONTRIBUTING.md) for guidelines.
+## Documentation
+
+Comprehensive documentation is available on the [Freqtrade website](https://www.freqtrade.io) to guide you through setup, configuration, and advanced features.
+
+## Basic Usage & Commands
+
+*   **Bot Commands:**
+    *   `trade`: Trade module.
+    *   `create-userdir`: Create user-data directory.
+    *   `new-config`: Create new config
+    *   `show-config`: Show resolved config
+    *   `new-strategy`: Create new strategy
+    *   `download-data`: Download backtesting data.
+    *   `convert-data`: Convert candle (OHLCV) data from one format to another.
+    *   `convert-trade-data`: Convert trade data from one format to another.
+    *   `trades-to-ohlcv`: Convert trade data to OHLCV data.
+    *   `list-data`: List downloaded data.
+    *   `backtesting`: Backtesting module.
+    *   `backtesting-show`: Show past Backtest results
+    *   `backtesting-analysis`: Backtest Analysis module.
+    *   `hyperopt`: Hyperopt module.
+    *   `hyperopt-list`: List Hyperopt results
+    *   `hyperopt-show`: Show details of Hyperopt results
+    *   `list-exchanges`: Print available exchanges.
+    *   `list-markets`: Print markets on exchange.
+    *   `list-pairs`: Print pairs on exchange.
+    *   `list-strategies`: Print available strategies.
+    *   `list-hyperoptloss`: Print available hyperopt loss functions.
+    *   `list-freqaimodels`: Print available freqAI models.
+    *   `list-timeframes`: Print available timeframes for the exchange.
+    *   `show-trades`: Show trades.
+    *   `test-pairlist`: Test your pairlist configuration.
+    *   `convert-db`: Migrate database to different system
+    *   `install-ui`: Install FreqUI
+    *   `plot-dataframe`: Plot candles with indicators.
+    *   `plot-profit`: Generate plot showing profits.
+    *   `webserver`: Webserver module.
+    *   `strategy-updater`: updates outdated strategy files to the current version
+    *   `lookahead-analysis`: Check for potential look ahead bias.
+    *   `recursive-analysis`: Check for potential recursive formula issue.
+
+*   **Telegram Commands:** Control the bot via Telegram (setup required - see the documentation).
+    *   `/start`: Starts trading.
+    *   `/stop`: Stops trading.
+    *   `/stopentry`: Stops entering new trades.
+    *   `/status <trade_id>|[table]`: Lists open trades.
+    *   `/profit [<n>]`: Lists cumulative profit.
+    *   `/profit_long [<n>]`: Lists cumulative profit from all finished long trades, over the last n days.
+    *   `/profit_short [<n>]`: Lists cumulative profit from all finished short trades, over the last n days.
+    *   `/forceexit <trade_id>|all`: Instantly exits a trade.
+    *   `/fx <trade_id>|all`: Alias to `/forceexit`
+    *   `/performance`: Show performance of each finished trade grouped by pair
+    *   `/balance`: Show account balance.
+    *   `/daily <n>`: Shows profit/loss per day.
+    *   `/help`: Shows help.
+    *   `/version`: Shows version.
+
+## Development Branches
+
+*   `develop`:  The branch with new features.  May contain breaking changes.
+*   `stable`:  The latest stable release.
+*   `feat/*`:  Feature branches - test specific features here.
+
+## Support & Community
+
+*   **Discord:** Join the Freqtrade [Discord server](https://discord.gg/p7nuUNVfP7) for support and community discussions.
+*   **Issues:** Report bugs and suggest features on the [GitHub Issues page](https://github.com/freqtrade/freqtrade/issues).
+*   **Pull Requests:** Contribute to the project by submitting [Pull Requests](https://github.com/freqtrade/freqtrade/pulls).  Review the [Contributing document](https://github.com/freqtrade/freqtrade/blob/develop/CONTRIBUTING.md) before submitting.
+*   **Good First Issues:** Consider contributing to issues labeled [good first issue](https://github.com/freqtrade/freqtrade/labels/good%20first%20issue) to get familiar with the codebase.
 
 ## Requirements
 
-*   **Clock Accuracy:**  Ensure your system clock is synchronized with an NTP server.
-*   **Minimum Hardware:**
-    *   2GB RAM (advised)
+### System Requirements
+
+*   **Clock Accuracy:** Ensure your system clock is synchronized with a NTP server.
+*   **Minimal Hardware:**
+    *   2GB RAM (recommended)
     *   1GB disk space
-    *   2 vCPU
-*   **Software:**
-    *   Python >= 3.11
-    *   pip
-    *   git
-    *   TA-Lib
-    *   virtualenv (Recommended)
-    *   Docker (Recommended)
+    *   2 vCPUs
+
+### Software Requirements
+
+*   Python >= 3.11
+*   pip
+*   git
+*   TA-Lib
+*   virtualenv (Recommended)
+*   Docker (Recommended)

@@ -1,6 +1,6 @@
-# TradingAgents-CN: 中文金融交易决策框架 (基于多智能体大语言模型)
+# TradingAgents-CN: 中文金融AI交易框架
 
-> **解锁中国股市投资潜力！** TradingAgents-CN 是一个专为中文用户优化的金融交易决策框架，基于先进的多智能体大语言模型，提供全面的 A 股、港股和美股分析能力，助力您的投资决策。  [查看原项目](https://github.com/hsliuping/TradingAgents-CN)
+🚀 **利用多智能体大语言模型，TradingAgents-CN 助力您深入分析 A 股、港股和美股，做出更明智的投资决策!**
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
@@ -8,69 +8,64 @@
 [![Documentation](https://img.shields.io/badge/docs-中文文档-green.svg)](./docs/)
 [![Original](https://img.shields.io/badge/基于-TauricResearch/TradingAgents-orange.svg)](https://github.com/TauricResearch/TradingAgents)
 
-## ✨ 主要特点
+**TradingAgents-CN** 是一个基于多智能体大语言模型的**中文金融交易决策框架**，专为中国用户优化，提供 A 股、港股和美股的全面分析能力。 它在原版 [TradingAgents](https://github.com/TauricResearch/TradingAgents) 的基础上，针对中国市场和用户需求进行了增强和改进。
 
-*   **🤖  多智能体架构**:  专业分析师团队（基本面、技术面、新闻面、情绪面）协同工作，提供深度分析和投资建议。
-*   **🇨🇳  中文优化**:  深度支持 A 股、港股市场，并集成国产大语言模型，打造本土化体验。
-*   **🆕  最新版本 (cn-0.1.13-preview)**: 原生 OpenAI 和 Google AI 全面集成，支持自定义端点和多种模型。
-*   **📊  Web 界面**: 简洁直观的 Streamlit 界面，方便您配置、分析和查看报告。
-*   **🚀  快速部署**:  支持 Docker 一键部署，本地部署，轻松上手。
-*   **📈  专业报告**:  生成 Markdown、Word 和 PDF 格式的专业投资报告，方便分享和归档。
-*   **💰  成本控制**: 多种 LLM 模型选择，灵活配置，优化分析成本。
+## ✨ 主要特性
 
-## 🔑 核心功能
+*   **🇨🇳 中文支持**:  全面支持中文界面和A股、港股数据。
+*   **🤖 多智能体架构**:  基本面、技术面、新闻面、社交媒体四大分析师协作。
+*   **🌐 多 LLM 支持**:  集成多个大语言模型提供商，包括 OpenAI, Google AI 等。
+*   **📈 智能新闻分析**:  AI驱动的新闻过滤和质量评估，快速获取市场信息。
+*   **🐳 容器化部署**:  Docker 一键部署，环境隔离，轻松上手。
+*   **📊 专业报告导出**:  支持 Markdown, Word, PDF 等格式，方便分享和分析。
+*   **💻 现代化 Web 界面**: 直观的股票分析体验，实时进度跟踪。
 
-*   **📰 智能新闻分析**:  基于 AI 的新闻过滤和质量评估，筛选关键信息。
-*   **🤖  多 LLM 模型支持**:  支持 OpenAI、Google AI、阿里百炼、DeepSeek 和 OpenRouter 等多种模型。
-*   **💾  模型选择持久化**:  URL 参数存储，方便您保存和分享配置。
-*   **🚀  实时进度显示**:  清晰的分析进度跟踪，告别黑盒等待。
-*   **🇨🇳  中国市场数据**:  全面支持 A 股、港股和美股，实时行情和基本面数据。
-*   **🐳  Docker 部署**:  轻松实现环境隔离，快速部署和扩展。
+## 🆕 最新版本 cn-0.1.13-preview 更新亮点
 
-## 🚀 快速上手
+*   **🤖 原生 OpenAI 支持**:  支持自定义 OpenAI 端点，灵活选择模型，提供更好的兼容性和性能。
+*   **🧠 Google AI 集成**:  全面支持 Google AI 生态系统，包括 Gemini 2.5 系列模型，提供更强大的分析能力。
+*   **🔧 LLM 适配器架构优化**:  统一的 LLM 调用接口，增强错误处理和性能监控。
+*   **🎨 Web 界面智能优化**:  智能模型选择、UI 响应优化、更友好的错误提示。
 
-1.  **Docker 部署 (推荐)**
-    ```bash
-    git clone https://github.com/hsliuping/TradingAgents-CN.git
-    cd TradingAgents-CN
-    cp .env.example .env  # 编辑 .env 文件，配置 API 密钥
-    docker-compose up -d --build # 首次启动或代码变更时
-    docker-compose up -d # 日常启动
-    # Web 界面: http://localhost:8501
-    ```
+## 💡 核心功能
 
-2.  **本地部署**
-    ```bash
-    pip install -e .  # 安装依赖
-    python start_web.py  # 启动应用
-    # 访问 http://localhost:8501
-    ```
+*   **智能分析配置**：支持 A 股、港股、美股，提供多级研究深度。
+*   **实时进度跟踪**：可视化分析过程，预估剩余时间。
+*   **专业结果展示**：明确的买入/持有/卖出建议，多维度分析结果，一键导出报告。
+*   **多 LLM 模型管理**：灵活选择模型，配置持久化，快速切换。
 
-## 📚 深度学习与资源
+## 🚀 快速开始 (Docker 部署)
 
-*   **📖 完整文档**:  深入了解项目的各个方面，包括安装、使用、架构和 API，文档目录: `./docs/`
-*   **🚀 示例代码**:  提供多种代码示例，帮助您快速上手和扩展，示例目录: `./examples/`
-*   **🤝 贡献指南**:  了解如何为本项目贡献代码，贡献者名单: `./CONTRIBUTORS.md`
-*   **📜 许可证**: Apache 2.0 许可证，允许自由使用和修改，[LICENSE](LICENSE)
+```bash
+# 克隆项目
+git clone https://github.com/hsliuping/TradingAgents-CN.git
+cd TradingAgents-CN
 
-## 💡 最新更新 (cn-0.1.13-preview)
+# 配置环境变量
+cp .env.example .env
+# 编辑 .env 文件，填入API密钥 (强烈建议)
 
-*   **🤖 原生OpenAI集成**: 支持自定义端点，灵活模型选择。
-*   **🧠 Google AI 生态集成**:  全面支持 Google AI 模型，包含 Gemini 2.5 系列。
-*   **🔧 LLM 适配器架构优化**:  统一接口，增强错误处理和性能监控。
-*   **🎨 Web 界面优化**:  智能模型选择、KeyError 修复，提升用户体验。
+# 启动服务
+docker-compose up -d --build  # 首次构建镜像
+# 或 docker-compose up -d      # 之后启动
 
-## 📈 更多信息
+# 访问
+# Web 界面: http://localhost:8501
+```
 
-*   **项目ＱＱ群：782124367**
-*   **联系我们**: hsliup@163.com
-*   **原项目**: [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents)
-*   **欢迎提交问题和建议**: [GitHub Issues](https://github.com/hsliuping/TradingAgents-CN/issues)
+## 📚 文档与支持
 
----
+*   [📖 完整文档](./docs/):  全面、详细的中文文档，从入门到精通。
+*   [🚨 故障排除](./docs/troubleshooting/):  常见问题解决方案。
+*   [🚀 快速开始](./QUICKSTART.md):  5 分钟快速部署指南。
+*   **GitHub Issues**: [提交问题和建议](https://github.com/hsliuping/TradingAgents-CN/issues)
 
-<div align="center">
-  **如果您觉得这个项目对您有帮助，请给个 Star 吧！**
-  <br>
-  [⭐ Star this repo](https://github.com/hsliuping/TradingAgents-CN)
-</div>
+## 🙏 致谢
+
+感谢 [Tauric Research](https://github.com/TauricResearch) 团队创建了 [TradingAgents](https://github.com/TauricResearch/TradingAgents)。 TradingAgents-CN 旨在为中国用户提供一个更适合中文环境的金融交易决策框架，推动 AI 金融技术在中文社区的普及应用。
+
+## 🤝 贡献
+
+我们欢迎各种形式的贡献。  查看 [CONTRIBUTORS.md](CONTRIBUTORS.md) 了解贡献者名单。
+
+[⭐ Star this repo](https://github.com/hsliuping/TradingAgents-CN)

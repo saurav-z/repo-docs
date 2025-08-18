@@ -7,58 +7,68 @@
 [![Repository License](https://img.shields.io/badge/license-GPL%20v3.0-brightgreen.svg)](COPYING)
 [![Ansible CII Best Practices certification](https://bestpractices.coreinfrastructure.org/projects/2372/badge)](https://bestpractices.coreinfrastructure.org/projects/2372)
 
-# Ansible: Automate IT with Ease
+# Ansible: Simple IT Automation for Everyone
 
-Ansible is a powerful and easy-to-use IT automation engine that simplifies configuration management, application deployment, and orchestration.  **[Visit the original repository on GitHub](https://github.com/ansible/ansible) to learn more.**
+Ansible is a powerful, open-source automation tool that simplifies configuration management, application deployment, and orchestration.  [Explore the original Ansible repository](https://github.com/ansible/ansible) to learn more.
 
-## Key Features
+## Key Features & Benefits
 
-*   **Configuration Management:** Automate the configuration of your systems, ensuring consistency and reducing manual errors.
-*   **Application Deployment:**  Streamline the deployment of your applications across multiple environments.
-*   **Cloud Provisioning:** Easily provision and manage cloud resources.
-*   **Orchestration:**  Orchestrate complex, multi-tier deployments and updates with ease.
-*   **Agentless Architecture:** Operates via SSH, eliminating the need for agents and simplifying setup.
-*   **Human-Readable Automation:** Uses a simple, YAML-based language to describe infrastructure as code.
-*   **Extensive Module Library:** Provides a vast collection of modules for managing a wide range of technologies.
-*   **Network Automation:** Enables automation of network device configuration and management.
-*   **Parallel Execution:** Manages machines quickly and in parallel, improving efficiency.
-*   **Security Focused:** Designed with security in mind, making it easy to audit and review automation content.
+*   **Agentless Architecture:** Manages systems using SSH, eliminating the need for agents and simplifying setup.
+*   **Simplified Configuration Management:** Automates system configuration tasks, reducing manual effort and errors.
+*   **Application Deployment:** Streamlines application deployment across multiple servers.
+*   **Cloud Provisioning:** Automates the provisioning of cloud resources.
+*   **Orchestration & Multi-Node Execution:** Coordinates tasks across multiple machines, enabling complex workflows.
+*   **Human-Readable Automation:** Uses a declarative language (YAML) that's easy to understand and maintain.
+*   **Parallel Execution:** Manages machines quickly and in parallel.
+*   **Security-Focused:** Emphasizes security and easy auditability.
+*   **Extensible:** Allows module development in any dynamic language.
 
 ## Getting Started with Ansible
 
 ### Installation
 
-You can easily install Ansible using `pip` or your preferred package manager.  See the [installation guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) for platform-specific instructions.
+Install Ansible using `pip` or your preferred package manager. Comprehensive installation instructions are available in the [installation guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 
-### Community and Support
+### Community & Support
 
-*   **Forums:** Ask questions, get help, and connect with the Ansible community on the [Ansible forum](https://forum.ansible.com/c/help/6).
-*   **Social Spaces:** Interact with fellow enthusiasts in the [social spaces](https://forum.ansible.com/c/chat/4).
-*   **News & Announcements:** Stay updated on project-wide announcements via the [News & Announcements](https://forum.ansible.com/c/news/5) section.
-*   **Bullhorn Newsletter:** Receive release announcements and important updates by subscribing to the [Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn).
-*   **More ways to get in touch:** See [Communicating with the Ansible community](https://docs.ansible.com/ansible/devel/community/communication.html).
+Join the active Ansible community for help, discussions, and to share your knowledge.
 
-## Contributing
+*   **Forums:** [Ansible Forum](https://forum.ansible.com/c/help/6) for help and community interaction.
+*   **Social Spaces:** [Ansible Social Spaces](https://forum.ansible.com/c/chat/4) to meet and interact with fellow enthusiasts.
+*   **News & Announcements:** [News & Announcements](https://forum.ansible.com/c/news/5) to stay updated on project news.
+*   **Bullhorn newsletter:** [Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn): Get release announcements and important changes.
+*   **Communication:** Additional ways to get in touch are in [Communicating with the Ansible community](https://docs.ansible.com/ansible/devel/community/communication.html).
 
-We welcome contributions!  Please review the following resources:
+## Contributing to Ansible
 
-*   **Contributor's Guide:** Review the [Contributor's Guide](./.github/CONTRIBUTING.md) to get started.
-*   **Community Information:** Explore [Community Information](https://docs.ansible.com/ansible/devel/community) for ways to engage with the project.
-*   **Submit a Pull Request:** Submit code updates to the `devel` branch.
-*   **Coding Guidelines:** Follow the coding guidelines documented in the [Developer Guide](https://docs.ansible.com/ansible/devel/dev_guide/).
+We welcome contributions!  Please review the following:
+
+*   **Contributor's Guide:** Check out the [Contributor's Guide](./.github/CONTRIBUTING.md).
+*   **Community Information:** Refer to [Community Information](https://docs.ansible.com/ansible/devel/community) to learn how to contribute.
+*   **Code Submissions:** Submit code updates via pull requests to the `devel` branch.
+*   **Collaboration:** Discuss significant changes beforehand to avoid duplicate efforts.
+
+## Development Guidelines
+
+For developers, please refer to:
+
+*   **Developer Guide:** [Developer Guide](https://docs.ansible.com/ansible/devel/dev_guide/)
+*   **Module Development Checklist:** [Contributing your module to Ansible](https://docs.ansible.com/ansible/devel/dev_guide/developing_modules_checklist.html)
+*   **Best Practices:** [Conventions, tips, and pitfalls](https://docs.ansible.com/ansible/devel/dev_guide/developing_modules_best_practices.html)
 
 ## Branch Information
 
-*   `devel`:  The branch for active development.
-*   `stable-2.X`: Branches for stable releases.
-*   See the [Ansible release and maintenance](https://docs.ansible.com/ansible/devel/reference_appendices/release_and_maintenance.html) page for details on active branches.
+*   `devel`: Active development branch.
+*   `stable-2.X`: Stable release branches.
+*   Create branches based on `devel` for pull requests, following the [dev environment setup](https://docs.ansible.com/ansible/devel/dev_guide/developing_modules_general.html#common-environment-setup).
+*   Consult the [Ansible release and maintenance](https://docs.ansible.com/ansible/devel/reference_appendices/release_and_maintenance.html) page for more information.
 
 ## Roadmap
 
-The [Ansible Roadmap page](https://docs.ansible.com/ansible/devel/roadmap/) outlines planned features and allows you to influence future development.
+The [Ansible Roadmap page](https://docs.ansible.com/ansible/devel/roadmap/) provides details on planned features and how to influence the roadmap.
 
 ## Authors and License
 
-*   **Created by:** [Michael DeHaan](https://github.com/mpdehaan).
-*   **License:** GNU General Public License v3.0 or later (see [COPYING](COPYING) for the full text).
+*   **Created by:** [Michael DeHaan](https://github.com/mpdehaan) and a large community.
 *   **Sponsored by:** [Red Hat, Inc.](https://www.redhat.com)
+*   **License:** GNU General Public License v3.0 or later (see [COPYING](COPYING)).

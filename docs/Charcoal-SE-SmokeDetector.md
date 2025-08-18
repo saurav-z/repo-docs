@@ -1,49 +1,61 @@
 # SmokeDetector: Real-time Spam Detection for Stack Exchange
 
-**Tired of spam flooding your Stack Exchange communities? SmokeDetector is a powerful, headless chatbot that automatically identifies and reports spam in real-time.**
-
-[![Build Status](https://github.com/Charcoal-SE/SmokeDetector/actions/workflows/build.yml/badge.svg?query=branch%3Amaster)](https://github.com/Charcoal-SE/SmokeDetector/actions/workflows/build.yml?query=branch%3Amaster)
-[![Circle CI](https://circleci.com/gh/Charcoal-SE/SmokeDetector.svg?style=shield)](https://circleci.com/gh/Charcoal-SE/SmokeDetector)
-[![Coverage Status](https://coveralls.io/repos/github/Charcoal-SE/SmokeDetector/badge.svg?branch=master)](https://coveralls.io/github/Charcoal-SE/SmokeDetector?branch=master)
-[![Open issues](https://img.shields.io/github/issues/Charcoal-SE/SmokeDetector.svg)](https://github.com/Charcoal-SE/SmokeDetector/issues)
-[![Open PRs](https://img.shields.io/github/issues-pr/Charcoal-SE/SmokeDetector.svg)](https://github.com/Charcoal-SE/SmokeDetector/pulls)
-
-SmokeDetector leverages the Stack Exchange API and the realtime tab to monitor for and flag unwanted content.
-
-[View the original repository on GitHub](https://github.com/Charcoal-SE/SmokeDetector)
+SmokeDetector is a powerful, headless chatbot designed to identify and report spam on the Stack Exchange network in real-time. Visit the [original repository](https://github.com/Charcoal-SE/SmokeDetector) to learn more.
 
 ## Key Features:
 
-*   **Real-time Spam Detection:** Monitors Stack Exchange for spam and malicious content.
-*   **Automated Reporting:** Posts detected spam to chatrooms for community review.
-*   **Open-Source:** Freely available and customizable to meet your community's needs.
-*   **Easy to Deploy:** Supports setup via Git, virtual environments, and Docker.
+*   **Automated Spam Detection:** Analyzes Stack Exchange questions in real-time to identify and flag potential spam.
+*   **Chatroom Integration:** Posts detected spam to designated chatrooms for review and action.
+*   **Flexible Configuration:** Easily configurable to suit your specific needs.
+*   **Multiple Deployment Options:** Supports setup via command line, virtual environments, and Docker containers.
+*   **Open Source:**  Licensed under the Apache License, Version 2.0 or the MIT license.
 
-## Documentation & Setup
+## Getting Started
 
-Comprehensive user and setup documentation is available on the [wiki](https://charcoal-se.org/smokey), including details for setting up and running SmokeDetector.
+### Setting Up SmokeDetector
 
-### Installation Guide
+Choose your preferred method to set up SmokeDetector:
 
-Choose your preferred installation method:
+*   **Basic Setup:**
+    1.  Clone the repository: `git clone https://github.com/Charcoal-SE/SmokeDetector.git`
+    2.  Navigate to the directory: `cd SmokeDetector`
+    3.  Checkout deploy `git checkout deploy`
+    4.  Install dependencies: `sudo pip3 install -r requirements.txt --upgrade` and `pip3 install --user -r user_requirements.txt --upgrade`
+    5.  Create a `config` file by copying `config.sample`.
+    6.  Edit `config` with your desired settings.
+    7.  Run the bot: `python3 nocrash.py` (recommended for continuous operation).
 
-*   **Basic Setup (Git):** Clone the repository and install dependencies using `pip3`.
-*   **Virtual Environment:** Create an isolated environment to manage dependencies.
-*   **Docker:** Build and run SmokeDetector within a Docker container for easy deployment and isolation.
+*   **Virtual Environment Setup:**
+    1.  Clone the repository: `git clone https://github.com/Charcoal-SE/SmokeDetector.git`
+    2.  Navigate to the directory: `cd SmokeDetector`
+    3.  Configure git `git config user.email "smokey@erwaysoftware.com" && git config user.name "SmokeDetector"`
+    4.  Checkout deploy `git checkout deploy`
+    5.  Create and activate a virtual environment: `python3 -m venv env`
+    6.  Install dependencies: `env/bin/pip3 install -r requirements.txt --upgrade` and `env/bin/pip3 install --user -r user_requirements.txt --upgrade`
+    7.  Create a `config` file by copying `config.sample`.
+    8.  Edit `config` with your desired settings.
+    9.  Run the bot: `env/bin/python3 nocrash.py`
+
+*   **Docker Setup:**
+    1.  Build a Docker image: (see the original README for details)
+    2.  Create a container from the image: (see the original README for details)
+    3.  Copy and configure `config`.
+    4.  (Optional) Customize the container.
+    5.  Start the container.
+    6.  (Optional) Use Docker Compose.
+
+**Detailed setup instructions and troubleshooting are available in the [wiki](https://charcoal-se.org/smokey/Set-Up-and-Run-SmokeDetector).**
 
 ## Requirements
 
-*   Stack Exchange login credentials
-*   Git 1.8+ (recommended: 2.11+) for contributing blacklist and watchlist modifications.
-*   Python versions in the [supported phase of the Python life cycle](https://devguide.python.org/versions/).
+*   Stack Exchange account for login.
+*   Python versions as defined by Python's [supported phase of the Python life cycle](https://devguide.python.org/versions/).
+*   Git 1.8+ (recommended 2.11+) for blacklist/watchlist modifications.
 
 ## Blacklist Removal
 
-Official website representatives can request removal from the blacklist. See "[Process for blacklist removal](https://charcoal-se.org/smokey/Process-for-blacklist-removal)" for details.
+If you are an official representative of a website seeking removal from the blacklist, please consult the "[Process for blacklist removal](https://charcoal-se.org/smokey/Process-for-blacklist-removal)" documentation.
 
 ## License
 
-SmokeDetector is licensed under either:
-
-*   Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or <https://www.apache.org/licenses/LICENSE-2.0>)
-*   MIT license ([LICENSE-MIT](LICENSE-MIT) or <https://opensource.org/licenses/MIT>)
+SmokeDetector is licensed under the Apache License, Version 2.0, or the MIT license, at your option. See [LICENSE-APACHE](LICENSE-APACHE) and [LICENSE-MIT](LICENSE-MIT) files for details.
