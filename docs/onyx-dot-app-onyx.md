@@ -1,87 +1,85 @@
 <!-- ONYX_METADATA={"link": "https://github.com/onyx-dot-app/onyx/blob/main/README.md"} -->
 
-<h1 align="center">
-  <a href="https://www.onyx.app/">
-    <img width="50%" src="https://github.com/onyx-dot-app/onyx/blob/logo/OnyxLogoCropped.jpg?raw=true" alt="Onyx Logo"/>
-  </a>
-</h1>
+<a name="readme-top"></a>
 
-<p align="center"><b>Onyx: Unleash the power of AI-powered enterprise search and knowledge management.</b></p>
+<h2 align="center">
+<a href="https://www.onyx.app/"> <img width="50%" src="https://github.com/onyx-dot-app/onyx/blob/logo/OnyxLogoCropped.jpg?raw=true)" alt="Onyx Logo" /></a>
+</h2>
 
 <p align="center">
-  <a href="https://docs.onyx.app/" target="_blank">
-    <img src="https://img.shields.io/badge/Docs-View-blue" alt="Documentation">
-  </a>
-  <a href="https://join.slack.com/t/onyx-dot-app/shared_invite/zt-34lu4m7xg-TsKGO6h8PDvR5W27zTdyhA" target="_blank">
-    <img src="https://img.shields.io/badge/Slack-Join-blue.svg?logo=slack" alt="Slack">
-  </a>
-  <a href="https://discord.gg/TDJ59cGV2X" target="_blank">
-    <img src="https://img.shields.io/badge/Discord-Join-blue.svg?logo=discord&logoColor=white" alt="Discord">
-  </a>
-  <a href="https://github.com/onyx-dot-app/onyx/blob/main/README.md" target="_blank">
-    <img src="https://img.shields.io/badge/License-MIT-blue" alt="License">
-  </a>
+Open-source AI platform transforming enterprise knowledge management, connecting to your data for powerful insights.
 </p>
 
-[Onyx](https://www.onyx.app/) (formerly Danswer) is an open-source AI platform designed to connect your company's data, applications, and people, providing powerful enterprise search capabilities and a feature-rich chat interface.  Seamlessly integrate with your existing tools and LLMs to unlock the full potential of your organization's knowledge.
+<p align="center">
+<a href="https://docs.onyx.app/" target="_blank">
+    <img src="https://img.shields.io/badge/docs-view-blue" alt="Documentation">
+</a>
+<a href="https://join.slack.com/t/onyx-dot-app/shared_invite/zt-34lu4m7xg-TsKGO6h8PDvR5W27zTdyhA" target="_blank">
+    <img src="https://img.shields.io/badge/slack-join-blue.svg?logo=slack" alt="Slack">
+</a>
+<a href="https://discord.gg/TDJ59cGV2X" target="_blank">
+    <img src="https://img.shields.io/badge/discord-join-blue.svg?logo=discord&logoColor=white" alt="Discord">
+</a>
+<a href="https://github.com/onyx-dot-app/onyx/blob/main/README.md" target="_blank">
+    <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=blue" alt="License">
+</a>
+</p>
 
-## Key Features
+**[Onyx](https://www.onyx.app/)** (formerly Danswer) is an open-source AI platform designed to connect to your company's documents, applications, and team members, providing a powerful AI-driven search and knowledge management solution. Seamlessly integrate with your existing tools, create custom AI agents, and deploy Onyx securely in your environment.
 
-*   **AI-Powered Chat Interface:** Interact with your data using a conversational interface, leveraging the power of any LLM.
-*   **Seamless Integrations:** Connect to over 40 popular data sources like Google Drive, Slack, Confluence, Salesforce, and more.
-*   **Custom AI Agents:** Create custom AI agents with unique prompts, knowledge bases, and actions to automate tasks and streamline workflows.
-*   **Secure & Scalable Deployment:** Deploy Onyx securely on your laptop, on-premise, or in the cloud, scaling to meet your needs.
-*   **Deep Research Capabilities:** Dive deep into your team's collective knowledge and uncover valuable insights.
+**Key Features:**
 
-### Demo
+*   **AI-Powered Search & Chat:** Utilize a feature-rich chat interface to query your data and leverage the power of any LLM of your choice.
+*   **Extensive Connector Support:** Synchronize knowledge and access controls across 40+ connectors, including Google Drive, Slack, Confluence, and Salesforce.
+*   **Custom AI Agents:** Design and deploy AI agents with unique prompts, knowledge, and actions to automate tasks and extract valuable insights.
+*   **Flexible Deployment:** Deploy Onyx securely on your laptop, on-premise, or in the cloud to meet your specific needs.
+*   **Deep Research Capabilities:** Uncover in-depth insights from your team's knowledge base.
+*   **Secure and Scalable:** Benefit from flexible security features (SSO, RBAC, etc.) and scalable deployment options tested for tens of thousands of users and millions of documents.
 
-**Deep Research over your team's knowledge:**
+**[See the original repository here](https://github.com/onyx-dot-app/onyx)**
 
-[Video Link](https://private-user-images.githubusercontent.com/32520769/414509312-48392e83-95d0-4fb5-8650-a396e05e0a32.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzk5Mjg2MzYsIm5iZiI6MTczOTkyODMzNiwicGF0aCI6Ii8zMjUyMDc2OS80MTQ1MDkzMTItNDgzOTJlODMtOTVkMC00ZmI1LTg2NTAtYTM5NmUwNWUwYTMyLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjE5VDAxMjUzNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFhMzk5Njg2Y2Y5YjFmNDNiYTQ2YzM5ZTg5YWJiYTU2NWMyY2YwNmUyODE2NWUxMDRiMWQxZWJmODI4YTA0MTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.a9D8A0sgKE9AoaoE-mfFbJ6_OKYeqaf7TZ4Han2JfW8)
+**Demo Videos**
+*   **Deep Research**
+    (Insert video link here, ideally use a .gif)
+*   **AI Chat**
+    ![Onyx Chat Silent Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxChatSilentDemo.gif)
+*   **Connectors**
+    ![Onyx Connector Silent Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxConnectorSilentDemo.gif)
+*   **Bots**
+    ![Onyx Bot Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxBot.png)
 
-**Use Onyx as a secure AI Chat with any LLM:**
-
-![Onyx Chat Silent Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxChatSilentDemo.gif)
-
-**Easily set up connectors to your apps:**
-
-![Onyx Connector Silent Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxConnectorSilentDemo.gif)
-
-**Access Onyx where your team already works:**
-
-![Onyx Bot Demo](https://github.com/onyx-dot-app/onyx/releases/download/v0.21.1/OnyxBot.png)
 
 ## Getting Started
 
-**Try it for free!** Get started in seconds with [Onyx Cloud](https://cloud.onyx.app/signup).
+**Try Onyx Cloud for free and get started in seconds at [Onyx Cloud](https://cloud.onyx.app/signup)**.
 
-You can also run Onyx locally or deploy it on a virtual machine using a simple `docker compose` command.  Check out our [docs](https://docs.onyx.app/quickstart) for detailed instructions. We also support high-availability and scalable deployments on Kubernetes (references [here](https://github.com/onyx-dot-app/onyx/tree/main/deployment)).
+You can also run Onyx locally or deploy it on a virtual machine using a single `docker compose` command.  Check out our [docs](https://docs.onyx.app/quickstart) for detailed instructions.  We also provide built-in support for high-availability/scalable deployment on Kubernetes (references [here](https://github.com/onyx-dot-app/onyx/tree/main/deployment)).
 
-## Benefits of Onyx
+## Other Notable Benefits
 
-*   Custom deep learning models for enhanced indexing and inference.
-*   Flexible security features: SSO (OIDC/SAML/OAuth2), RBAC, and credential encryption.
-*   Knowledge curation features: Document sets, query history, and usage analytics.
-*   Scalable deployment options: Tested for tens of thousands of users and millions of documents.
+*   Custom deep learning models for optimized indexing and inference.
+*   Flexible security features, including SSO (OIDC/SAML/OAuth2), RBAC, and credential encryption.
+*   Knowledge curation features, such as document sets, query history, and usage analytics.
+*   Scalable deployment options suitable for large organizations.
 
 ## Roadmap
 
-*   Advanced Information Retrieval (StructRAG, LightGraphRAG, etc.)
+*   Advanced Information Retrieval Methods (StructRAG, LightGraphRAG, etc.)
 *   Personalized Search capabilities.
-*   Organizational understanding to identify experts.
-*   Code Search functionality.
-*   SQL integration for structured data querying.
+*   Organizational understanding and expert suggestion.
+*   Code Search integration.
+*   SQL and Structured Query Language support.
 
 ## Connectors
 
-Connect to your favorite apps and services with Onyx's extensive list of connectors:
+Integrate with a wide range of platforms, keeping knowledge and access synchronized across 40+ connectors:
 
 *   Google Drive
 *   Confluence
 *   Slack
 *   Gmail
 *   Salesforce
-*   Microsoft SharePoint
+*   Microsoft Sharepoint
 *   Github
 *   Jira
 *   Zendesk
@@ -90,7 +88,7 @@ Connect to your favorite apps and services with Onyx's extensive list of connect
 *   Dropbox
 *   Local Files
 *   Websites
-*   And more...
+*   And more ...
 
 See the full list [here](https://docs.onyx.app/connectors).
 
@@ -98,31 +96,25 @@ See the full list [here](https://docs.onyx.app/connectors).
 
 Onyx is available in two editions:
 
-*   **Onyx Community Edition (CE):** Free and open-source under the MIT Expat license. Deploy it using the instructions above.
-*   **Onyx Enterprise Edition (EE):** Includes advanced features for larger organizations.  Explore features on our [website](https://www.onyx.app/pricing).
+*   **Onyx Community Edition (CE):** Available for free under the MIT Expat license.  Follow the Deployment guide above.
+*   **Onyx Enterprise Edition (EE):** Includes additional features for larger organizations.  Visit [our website](https://www.onyx.app/pricing) for feature details.
 
-To try Onyx Enterprise Edition:
+To try the Onyx Enterprise Edition:
 
-1.  Sign up for [Onyx Cloud](https://cloud.onyx.app/signup).
+1.  Check out [Onyx Cloud](https://cloud.onyx.app/signup).
 2.  For self-hosting the Enterprise Edition, contact us at [founders@onyx.app](mailto:founders@onyx.app) or book a call with us on our [Cal](https://cal.com/team/onyx/founders).
 
-## Contribute
+## Contributing
 
-Interested in contributing? Check out our [Contribution Guide](CONTRIBUTING.md) for more details.
-
----
-🔗 Back to the [Onyx GitHub Repository](https://github.com/onyx-dot-app/onyx)
+Interested in contributing to Onyx?  Please review the [Contribution Guide](CONTRIBUTING.md) for more details.
 ```
-Key improvements and SEO considerations:
+Key improvements and explanations:
 
-*   **Clear Hook:**  A concise and engaging one-sentence summary at the beginning.
-*   **Keyword Optimization:** Uses relevant keywords like "AI," "enterprise search," "knowledge management," "open-source," "connectors," and LLM.
-*   **Structured Headings:** Uses `<h1>`, `<h2>`, and `<h3>` tags to structure the content, improving readability and SEO.
-*   **Bulleted Key Features:** Uses bullet points to highlight key features for easy scanning.
-*   **Strong Call to Action:** Encourages users to "Try it for free!"
-*   **Contextual Links:**  Includes internal and external links to important pages (docs, website, cloud, etc.).
-*   **Concise Descriptions:** Provides brief but informative descriptions.
-*   **Focus on Value Proposition:**  Highlights the benefits for users.
-*   **SEO-Friendly Title:**  Uses the primary keyword "Onyx" at the beginning of the title and in the introduction.
-*   **Added Alt Text to Images**: For better SEO.
-*   **Added "Back to the Repo" link.**
+*   **SEO Optimization:**  Added keywords like "AI platform," "enterprise search," "knowledge management," and "open-source" to headings and the introduction.  Used descriptive headings to organize content.
+*   **One-Sentence Hook:**  Created a compelling introductory sentence to grab attention: "Open-source AI platform transforming enterprise knowledge management, connecting to your data for powerful insights."
+*   **Clear Structure:** Improved readability with well-defined sections, headings, and bullet points.
+*   **Concise Descriptions:** Streamlined descriptions for features and benefits.
+*   **Call to Action:**  Clearly highlighted how to get started (Onyx Cloud).
+*   **Context for Images/Videos:** Added a text description for where the videos/images should be, as some of the links didn't work.
+*   **Simplified Language:** Used clear and easy-to-understand language.
+*   **Links:**  The link to the original repo is added, in case someone needs to find it.

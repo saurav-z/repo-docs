@@ -4,8 +4,8 @@
     "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet models, SAM, and GroundingDINO.",
     "last_updated": "2025-08-07T04:41:36.340079",
     "readme": "docs/1038lab-ComfyUI-RMBG.md",
-    "readme_generated": "2025-08-18T04:36:32.276796",
-    "readme_hash": "77d7b615c5992dba8ed49ff6571341bb",
+    "readme_generated": "2025-08-19T04:20:16.823462",
+    "readme_hash": "206b0ed861395cc0f7a6db707604117b",
     "repo_updated_at": "2025-08-07T04:37:16Z",
     "stars": 1233
   },
@@ -14,7 +14,7 @@
     "description": ":octocat: \u5206\u4eab GitHub \u4e0a\u6709\u8da3\u3001\u5165\u95e8\u7ea7\u7684\u5f00\u6e90\u9879\u76ee\u3002Share interesting, entry-level open source projects on GitHub.",
     "last_updated": "2025-06-27T04:53:31.521674",
     "readme": "docs/521xueweihan-HelloGitHub.md",
-    "readme_generated": "2025-08-18T04:36:43.918895",
+    "readme_generated": "2025-08-19T04:20:29.823167",
     "readme_hash": "77ed4471fdd6cd1937b52a5565e25179",
     "repo_updated_at": "",
     "stars": 119238
@@ -24,7 +24,7 @@
     "description": "structured outputs for llms ",
     "last_updated": "2025-07-02T04:27:27.311181",
     "readme": "docs/567-labs-instructor.md",
-    "readme_generated": "2025-08-18T04:36:55.935305",
+    "readme_generated": "2025-08-19T04:20:40.572959",
     "readme_hash": "c0781af18983e61297f6df501912ca93",
     "repo_updated_at": "2025-07-02T04:26:52Z",
     "stars": 10869
@@ -34,7 +34,7 @@
     "description": "A simple, performant and scalable Jax LLM!",
     "last_updated": "2025-08-09T04:26:42.824386",
     "readme": "docs/AI-Hypercomputer-maxtext.md",
-    "readme_generated": "2025-08-18T04:37:13.668967",
+    "readme_generated": "2025-08-19T04:21:06.957096",
     "readme_hash": "39442d932a20ff3c387026765ba625a9",
     "repo_updated_at": "2025-08-09T04:22:51Z",
     "stars": 1858
@@ -44,7 +44,7 @@
     "description": "Stable Diffusion web UI",
     "last_updated": "2025-06-27T04:53:31.521663",
     "readme": "docs/AUTOMATIC1111-stable-diffusion-webui.md",
-    "readme_generated": "2025-08-18T04:37:18.825544",
+    "readme_generated": "2025-08-19T04:21:14.071125",
     "readme_hash": "a4e5f6ede763a2457db61266079e08a4",
     "repo_updated_at": "",
     "stars": 153924
@@ -54,7 +54,7 @@
     "description": "A render management system you can deploy for visual effects and animation productions.",
     "last_updated": "2025-08-14T04:27:54.499078",
     "readme": "docs/AcademySoftwareFoundation-OpenCue.md",
-    "readme_generated": "2025-08-18T04:37:24.915386",
+    "readme_generated": "2025-08-19T04:21:20.898657",
     "readme_hash": "5b2fe77b8df5e2ad7535031ae84c680b",
     "repo_updated_at": "2025-08-14T04:23:40Z",
     "stars": 865
@@ -64,7 +64,7 @@
     "description": "Python SDK for AI agent monitoring, LLM cost tracking, benchmarking, and more. Integrates with most LLMs and agent frameworks including CrewAI, Agno, OpenAI Agents SDK, Langchain, Autogen, AG2, and CamelAI",
     "last_updated": "2025-07-09T04:31:44.084782",
     "readme": "docs/AgentOps-AI-agentops.md",
-    "readme_generated": "2025-08-18T04:38:04.381242",
+    "readme_generated": "2025-08-19T04:22:01.616916",
     "readme_hash": "036ea5bfffae9bfbbddd10ee64e46930",
     "repo_updated_at": "2025-07-09T04:24:26Z",
     "stars": 4637
@@ -74,7 +74,7 @@
     "description": "\ud83d\ude4c OpenHands: Code Less, Make More",
     "last_updated": "2025-06-28T04:20:36.756625",
     "readme": "docs/All-Hands-AI-OpenHands.md",
-    "readme_generated": "2025-08-18T04:38:17.756995",
+    "readme_generated": "2025-08-19T04:22:18.013833",
     "readme_hash": "530ae091a642897631e48f9c06dd31a1",
     "repo_updated_at": "2025-06-28T04:11:47Z",
     "stars": 59371
@@ -84,8 +84,8 @@
     "description": "\u7ffb\u5899-\u79d1\u5b66\u4e0a\u7f51\u3001\u81ea\u7531\u4e0a\u7f51\u3001\u514d\u8d39\u79d1\u5b66\u4e0a\u7f51\u3001\u514d\u8d39\u7ffb\u5899\u3001fanqiang\u3001\u6cb9\u7ba1youtube/\u89c6\u9891\u4e0b\u8f7d\u3001\u8f6f\u4ef6\u3001VPN\u3001\u4e00\u952e\u7ffb\u5899\u6d4f\u89c8\u5668\uff0cvps\u4e00\u952e\u642d\u5efa\u7ffb\u5899\u670d\u52a1\u5668\u811a\u672c/\u6559\u7a0b\uff0c\u514d\u8d39shadowsocks/ss/ssr/v2ray/goflyway\u8d26\u53f7/\u8282\u70b9\uff0c\u7ffb\u5899\u68af\u5b50\uff0c\u7535\u8111\u3001\u624b\u673a\u3001iOS\u3001\u5b89\u5353\u3001windows\u3001Mac\u3001Linux\u3001\u8def\u7531\u5668\u7ffb\u5899\u3001\u79d1\u5b66\u4e0a\u7f51\u3001youtube\u89c6\u9891\u4e0b\u8f7d\u3001youtube\u6cb9\u7ba1\u955c\u50cf/\u514d\u7ffb\u5899\u7f51\u7ad9\u3001\u7f8e\u533aapple id\u5171\u4eab\u8d26\u53f7\u3001\u7ffb\u5899-\u79d1\u5b66\u4e0a\u7f51-\u68af\u5b50",
     "last_updated": "2025-06-27T05:18:19.314839",
     "readme": "docs/Alvin9999-new-pac.md",
-    "readme_generated": "2025-08-18T04:38:22.748512",
-    "readme_hash": "7a9f0ec58c0f8d0232ec651ce5de027a",
+    "readme_generated": "2025-08-19T04:22:22.445398",
+    "readme_hash": "172161e11956a648dddd29b7243b87a3",
     "repo_updated_at": "2025-06-27T05:15:31Z",
     "stars": 64342
   },
@@ -94,7 +94,7 @@
     "description": "Cloud-native SIEM for intelligent security analytics for your entire enterprise.",
     "last_updated": "2025-07-08T04:27:56.867498",
     "readme": "docs/Azure-Azure-Sentinel.md",
-    "readme_generated": "2025-08-18T04:38:30.452803",
+    "readme_generated": "2025-08-19T04:22:30.999170",
     "readme_hash": "941894763f91979779bad493aa2f6d34",
     "repo_updated_at": "2025-07-08T04:26:30Z",
     "stars": 5165
@@ -104,7 +104,7 @@
     "description": "This repository is for active development of the Azure SDK for Python. For consumers of the SDK we recommend visiting our public developer docs at https://learn.microsoft.com/python/azure/ or our versioned developer docs at https://azure.github.io/azure-sdk-for-python. ",
     "last_updated": "2025-07-04T04:27:28.366125",
     "readme": "docs/Azure-azure-sdk-for-python.md",
-    "readme_generated": "2025-08-18T04:38:42.191379",
+    "readme_generated": "2025-08-19T04:22:40.946389",
     "readme_hash": "7e6bed1d14720ca8ecec9cc8029279c4",
     "repo_updated_at": "2025-07-04T04:14:19Z",
     "stars": 4980
@@ -114,7 +114,7 @@
     "description": "Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format - [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]",
     "last_updated": "2025-06-28T04:20:36.756652",
     "readme": "docs/BerriAI-litellm.md",
-    "readme_generated": "2025-08-18T04:39:15.309536",
+    "readme_generated": "2025-08-19T04:23:15.447880",
     "readme_hash": "d4f8c4b329908184a96c89e52a3e8cab",
     "repo_updated_at": "2025-06-28T04:13:11Z",
     "stars": 24649
@@ -124,8 +124,8 @@
     "description": "Automatically fetch Google Chrome offline installer using GitHub Actions ",
     "last_updated": "2025-08-13T04:27:48.018901",
     "readme": "docs/Bush2021-chrome_installer.md",
-    "readme_generated": "2025-08-18T04:39:33.162985",
-    "readme_hash": "bc47aad3f98fa519ee57e2853158d9f8",
+    "readme_generated": "2025-08-19T04:23:33.984516",
+    "readme_hash": "da617086a5aedadbea73802ca47cc7ab",
     "repo_updated_at": "2025-08-13T04:27:29Z",
     "stars": 492
   },
@@ -134,7 +134,7 @@
     "description": "CTFs as you need them",
     "last_updated": "2025-07-05T04:21:48.386585",
     "readme": "docs/CTFd-CTFd.md",
-    "readme_generated": "2025-08-18T04:39:40.307822",
+    "readme_generated": "2025-08-19T04:23:41.215311",
     "readme_hash": "a241fabd607494c8b2217c7a4e4a2396",
     "repo_updated_at": "2025-07-05T03:29:51Z",
     "stars": 6086
@@ -144,7 +144,7 @@
     "description": "Headless chatbot that detects spam and posts links to it in chatrooms for quick deletion.",
     "last_updated": "2025-07-27T04:40:45.213743",
     "readme": "docs/Charcoal-SE-SmokeDetector.md",
-    "readme_generated": "2025-08-18T04:39:45.957226",
+    "readme_generated": "2025-08-19T04:23:45.607495",
     "readme_hash": "76d8fa5bbf4ea2c5bfa1ace15193c756",
     "repo_updated_at": "2025-07-27T04:38:40Z",
     "stars": 487
@@ -154,7 +154,7 @@
     "description": "codes for R-Zero: Self-Evolving Reasoning LLM from Zero Data (https://www.arxiv.org/pdf/2508.05004)",
     "last_updated": "2025-08-13T04:27:48.018908",
     "readme": "docs/Chengsong-Huang-R-Zero.md",
-    "readme_generated": "2025-08-18T04:40:00.756106",
+    "readme_generated": "2025-08-19T04:23:58.515662",
     "readme_hash": "6db171a1863115d555a9efba91a7d89e",
     "repo_updated_at": "2025-08-13T04:07:17Z",
     "stars": 384
@@ -164,7 +164,7 @@
     "description": "A Quirky Assortment of CuTe Kernels",
     "last_updated": "2025-08-04T04:55:09.518714",
     "readme": "docs/Dao-AILab-quack.md",
-    "readme_generated": "2025-08-18T04:40:03.990120",
+    "readme_generated": "2025-08-19T04:24:02.369533",
     "readme_hash": "501207a47b45b9bea886b4e82a8f8132",
     "repo_updated_at": "2025-08-04T04:53:39Z",
     "stars": 381
@@ -174,7 +174,7 @@
     "description": ":books: Freely available programming books",
     "last_updated": "2025-06-27T04:53:31.521639",
     "readme": "docs/EbookFoundation-free-programming-books.md",
-    "readme_generated": "2025-08-18T04:40:18.743465",
+    "readme_generated": "2025-08-19T04:24:16.759983",
     "readme_hash": "be1574ac0a52b35ddd119d6d9a49f1af",
     "repo_updated_at": "",
     "stars": 361114
@@ -184,7 +184,7 @@
     "description": "One-for-All Multimodal Evaluation Toolkit Across Text, Image, Video, and Audio Tasks",
     "last_updated": "2025-07-30T04:40:34.450463",
     "readme": "docs/EvolvingLMMs-Lab-lmms-eval.md",
-    "readme_generated": "2025-08-18T04:40:38.577378",
+    "readme_generated": "2025-08-19T04:24:33.875780",
     "readme_hash": "b1d507c454d3877dbfd75595dd31ea27",
     "repo_updated_at": "2025-07-30T04:39:12Z",
     "stars": 2815
@@ -194,8 +194,8 @@
     "description": "We present StableAvatar, the first end-to-end video diffusion transformer, which synthesizes infinite-length high-quality audio-driven avatar videos without any post-processing, conditioned on a reference image and audio.",
     "last_updated": "2025-08-16T04:21:57.354563",
     "readme": "docs/Francis-Rings-StableAvatar.md",
-    "readme_generated": "2025-08-18T04:40:56.160210",
-    "readme_hash": "6ec616a4f13170779ad80cf6510f6891",
+    "readme_generated": "2025-08-19T04:25:11.272406",
+    "readme_hash": "49742e29a02928056dac68e56ce38f3b",
     "repo_updated_at": "2025-08-16T04:20:06Z",
     "stars": 386
   },
@@ -204,7 +204,7 @@
     "description": "PerfKit Benchmarker (PKB) contains a set of benchmarks to measure and compare cloud offerings. The benchmarks use default settings to reflect what most users will see. PerfKit Benchmarker is licensed under the Apache 2 license terms. Please make sure to read, understand and agree to the terms of the LICENSE and CONTRIBUTING files before proceeding.",
     "last_updated": "2025-07-29T04:44:42.824434",
     "readme": "docs/GoogleCloudPlatform-PerfKitBenchmarker.md",
-    "readme_generated": "2025-08-18T04:41:11.962100",
+    "readme_generated": "2025-08-19T04:25:21.246549",
     "readme_hash": "f1505fe5329bd5826eb24c403ec51bb0",
     "repo_updated_at": "2025-07-29T04:32:16Z",
     "stars": 1956
@@ -214,7 +214,7 @@
     "description": "A Python module for decorators, wrappers and monkey patching.",
     "last_updated": "2025-08-06T04:41:40.033723",
     "readme": "docs/GrahamDumpleton-wrapt.md",
-    "readme_generated": "2025-08-18T04:41:19.409660",
+    "readme_generated": "2025-08-19T04:25:29.925985",
     "readme_hash": "df2a6b540dcae0801bfddac07a3fd610",
     "repo_updated_at": "2025-08-06T04:38:29Z",
     "stars": 2164
@@ -224,8 +224,8 @@
     "description": "\"LightRAG: Simple and Fast Retrieval-Augmented Generation\"",
     "last_updated": "2025-07-19T04:28:52.222787",
     "readme": "docs/HKUDS-LightRAG.md",
-    "readme_generated": "2025-08-18T04:42:00.121539",
-    "readme_hash": "f648aef6f87463a7530dcf37c0827ed3",
+    "readme_generated": "2025-08-19T04:26:10.697008",
+    "readme_hash": "5cbb67d0732cfb67507b316291b639d5",
     "repo_updated_at": "2025-07-19T04:22:54Z",
     "stars": 18545
   },
@@ -234,7 +234,7 @@
     "description": "The easiest tool for fine-tuning LLM models, synthetic data generation, and collaborating on datasets.",
     "last_updated": "2025-07-01T04:35:39.936891",
     "readme": "docs/Kiln-AI-Kiln.md",
-    "readme_generated": "2025-08-18T04:42:13.480477",
+    "readme_generated": "2025-08-19T04:26:22.581900",
     "readme_hash": "6caa2b723c44292a4cdc4bbb5367d469",
     "repo_updated_at": "2025-07-01T04:22:05Z",
     "stars": 3859
@@ -244,7 +244,7 @@
     "description": " State-of-the-art TTS model under 25MB \ud83d\ude3b ",
     "last_updated": "2025-08-15T04:28:02.246260",
     "readme": "docs/KittenML-KittenTTS.md",
-    "readme_generated": "2025-08-18T04:42:16.910591",
+    "readme_generated": "2025-08-19T04:26:26.378182",
     "readme_hash": "3f3db8508ac9cb31e5e84d1e93e015fb",
     "repo_updated_at": "2025-08-15T03:37:25Z",
     "stars": 7643
@@ -254,7 +254,7 @@
     "description": "Klavis AI (YC X25):  Open Source MCP integration for AI applications",
     "last_updated": "2025-08-02T04:32:51.575883",
     "readme": "docs/Klavis-AI-klavis.md",
-    "readme_generated": "2025-08-18T04:42:28.634378",
+    "readme_generated": "2025-08-19T04:26:43.085466",
     "readme_hash": "cdf92b67d858c36404854e92fb6f64e9",
     "repo_updated_at": "2025-08-02T04:31:38Z",
     "stars": 3648
@@ -264,8 +264,8 @@
     "description": "Supercharge Your LLM with the Fastest KV Cache Layer",
     "last_updated": "2025-07-17T04:35:36.091865",
     "readme": "docs/LMCache-LMCache.md",
-    "readme_generated": "2025-08-18T04:42:38.706878",
-    "readme_hash": "899503f72dab02e0d4559d17a1757d93",
+    "readme_generated": "2025-08-19T04:27:05.241117",
+    "readme_hash": "f55024829c2f1b6a70e52bbbd90ee276",
     "repo_updated_at": "2025-07-17T04:21:55Z",
     "stars": 3185
   },
@@ -274,7 +274,7 @@
     "description": "A self-hosted open source photo management service. This is the repository of the backend.",
     "last_updated": "2025-08-01T04:51:43.048459",
     "readme": "docs/LibrePhotos-librephotos.md",
-    "readme_generated": "2025-08-18T04:42:45.289812",
+    "readme_generated": "2025-08-19T04:27:10.857559",
     "readme_hash": "c22f1370ec7727adc457d2039b029192",
     "repo_updated_at": "2025-08-01T04:35:01Z",
     "stars": 7742
@@ -284,7 +284,7 @@
     "description": "PyTorch compiler that accelerates training and inference. Get built-in optimizations for performance, memory, parallelism, and easily write your own.",
     "last_updated": "2025-07-30T04:40:34.450466",
     "readme": "docs/Lightning-AI-lightning-thunder.md",
-    "readme_generated": "2025-08-18T04:43:07.223069",
+    "readme_generated": "2025-08-19T04:27:20.065470",
     "readme_hash": "c29946bcae6f2f93871ee904009031d5",
     "repo_updated_at": "2025-07-30T04:30:08Z",
     "stars": 1384
@@ -294,17 +294,27 @@
     "description": "This repo powers my blog experiment where ChatGPT manages a real-money micro-cap stock portfolio.",
     "last_updated": "2025-07-31T04:39:21.741354",
     "readme": "docs/LuckyOne7777-ChatGPT-Micro-Cap-Experiment.md",
-    "readme_generated": "2025-08-18T04:43:13.169751",
+    "readme_generated": "2025-08-19T04:27:24.433360",
     "readme_hash": "81917098127afa696ef111e1b1fd28aa",
     "repo_updated_at": "2025-07-31T04:32:48Z",
     "stars": 674
+  },
+  "MODSetter/SurfSense": {
+    "added_date": "2025-08-19T04:20:02.538888",
+    "description": "Open Source Alternative to NotebookLM / Perplexity, connected to external sources such as Search Engines, Slack, Linear, Jira, ClickUp, Confluence, Notion, YouTube, GitHub, Discord and more. Join our discord: https://discord.gg/ejRNvftDp9",
+    "last_updated": "2025-08-19T04:20:02.538887",
+    "readme": "docs/MODSetter-SurfSense.md",
+    "readme_generated": "2025-08-19T04:27:38.748937",
+    "readme_hash": "0d31d6b995c23c932c27bd8352fda24c",
+    "repo_updated_at": "2025-08-19T04:01:33Z",
+    "stars": 6434
   },
   "Maciek-roboblog/Claude-Code-Usage-Monitor": {
     "added_date": "2025-07-14T04:38:56.355531",
     "description": "Real-time Claude Code usage monitor with predictions and warnings",
     "last_updated": "2025-07-14T04:38:56.355530",
     "readme": "docs/Maciek-roboblog-Claude-Code-Usage-Monitor.md",
-    "readme_generated": "2025-08-18T04:43:23.881613",
+    "readme_generated": "2025-08-19T04:27:49.156684",
     "readme_hash": "0e8c3a9dcc570e2885ae50a2cb11c0ff",
     "repo_updated_at": "2025-07-14T04:12:38Z",
     "stars": 2638
@@ -314,7 +324,7 @@
     "description": "A community-maintained Python framework for creating mathematical animations. ",
     "last_updated": "2025-08-01T04:51:43.048443",
     "readme": "docs/ManimCommunity-manim.md",
-    "readme_generated": "2025-08-18T04:43:32.073719",
+    "readme_generated": "2025-08-19T04:27:59.381336",
     "readme_hash": "085357f6e1e6bc424338cdb12dd9bb4e",
     "repo_updated_at": "2025-08-01T04:31:35Z",
     "stars": 33843
@@ -324,7 +334,7 @@
     "description": "MemOS (Preview) | Intelligence Begins with Memory",
     "last_updated": "2025-07-13T04:34:51.577554",
     "readme": "docs/MemTensor-MemOS.md",
-    "readme_generated": "2025-08-18T04:43:47.646120",
+    "readme_generated": "2025-08-19T04:28:17.638312",
     "readme_hash": "b47f9fab22ebf2c8c7754cca9f7c361b",
     "repo_updated_at": "2025-07-13T03:09:04Z",
     "stars": 1388
@@ -334,7 +344,7 @@
     "description": "\u4e00\u6b3e\u4e13\u6ce8\u4e8eAi\u7ffb\u8bd1\u7684\u5de5\u5177\uff0c\u4e00\u952e\u81ea\u52a8\u7ffb\u8bd1RPG SLG\u6e38\u620f\uff0cEpub TXT\u5c0f\u8bf4\uff0cSrt Vtt Lrc\u5b57\u5e55\uff0cWord MD\u6587\u6863\u7b49\u7b49\u590d\u6742\u957f\u6587\u672c\u3002",
     "last_updated": "2025-08-17T04:30:10.948212",
     "readme": "docs/NEKOparapa-AiNiee.md",
-    "readme_generated": "2025-08-18T04:44:06.834130",
+    "readme_generated": "2025-08-19T04:28:35.994230",
     "readme_hash": "a706cc63937c03d5cf476a4541acc63f",
     "repo_updated_at": "2025-08-17T04:28:18Z",
     "stars": 3043
@@ -344,7 +354,7 @@
     "description": "A scalable generative AI framework built for researchers and developers working on Large Language Models, Multimodal, and Speech AI (Automatic Speech Recognition and Text-to-Speech)",
     "last_updated": "2025-07-11T04:34:48.421309",
     "readme": "docs/NVIDIA-NeMo.md",
-    "readme_generated": "2025-08-18T04:44:18.603719",
+    "readme_generated": "2025-08-19T04:28:47.454878",
     "readme_hash": "6f1c50209cd0a9dd959b2298907c102c",
     "repo_updated_at": "2025-07-11T04:33:39Z",
     "stars": 15058
@@ -354,7 +364,7 @@
     "description": "A library for accelerating Transformer models on NVIDIA GPUs, including using 8-bit floating point (FP8) precision on Hopper, Ada and Blackwell GPUs, to provide better performance with lower memory utilization in both training and inference.",
     "last_updated": "2025-07-24T04:37:04.482033",
     "readme": "docs/NVIDIA-TransformerEngine.md",
-    "readme_generated": "2025-08-18T04:44:37.755267",
+    "readme_generated": "2025-08-19T04:28:58.966459",
     "readme_hash": "7b34f743c7e812d06bd04a4754a230c9",
     "repo_updated_at": "2025-07-24T04:32:25Z",
     "stars": 2573
@@ -364,7 +374,7 @@
     "description": "Long-RL: Scaling RL to Long Sequences",
     "last_updated": "2025-07-25T04:36:44.627538",
     "readme": "docs/NVlabs-Long-RL.md",
-    "readme_generated": "2025-08-18T04:44:59.179775",
+    "readme_generated": "2025-08-19T04:29:22.984627",
     "readme_hash": "47eac77fc3db6acd6eb3ff679d83340f",
     "repo_updated_at": "2025-07-25T04:13:28Z",
     "stars": 514
@@ -374,17 +384,27 @@
     "description": "Build, Manage and Deploy AI/ML Systems",
     "last_updated": "2025-08-09T04:26:42.824369",
     "readme": "docs/Netflix-metaflow.md",
-    "readme_generated": "2025-08-18T04:45:03.797648",
+    "readme_generated": "2025-08-19T04:29:28.745263",
     "readme_hash": "274fc3a64867017da6dcbf0e10d4b5d9",
     "repo_updated_at": "2025-08-09T04:05:26Z",
     "stars": 9370
+  },
+  "NevaMind-AI/memU": {
+    "added_date": "2025-08-19T04:20:02.538895",
+    "description": "MemU is an open-source memory framework for AI companions",
+    "last_updated": "2025-08-19T04:20:02.538894",
+    "readme": "docs/NevaMind-AI-memU.md",
+    "readme_generated": "2025-08-19T04:29:47.019990",
+    "readme_hash": "56cb7fe02e582c340ae67edaae81aea0",
+    "repo_updated_at": "2025-08-19T04:02:24Z",
+    "stars": 1207
   },
   "NotJoeMartinez/yt-fts": {
     "added_date": "2025-08-11T04:40:43.817821",
     "description": "YouTube Full Text Search - Search all of a YouTube channel from the command line",
     "last_updated": "2025-08-11T04:40:43.817820",
     "readme": "docs/NotJoeMartinez-yt-fts.md",
-    "readme_generated": "2025-08-18T04:45:18.137702",
+    "readme_generated": "2025-08-19T04:29:58.858477",
     "readme_hash": "6ecf5e97e70c4cbed9e7195875ad9cac",
     "repo_updated_at": "2025-08-11T04:38:13Z",
     "stars": 1730
@@ -394,7 +414,7 @@
     "description": "Talk to any LLM with hands-free voice interaction, voice interruption, and Live2D taking face running locally across platforms",
     "last_updated": "2025-08-01T04:51:43.048466",
     "readme": "docs/Open-LLM-VTuber-Open-LLM-VTuber.md",
-    "readme_generated": "2025-08-18T04:45:33.241968",
+    "readme_generated": "2025-08-19T04:30:07.157218",
     "readme_hash": "b5c94a8b8369f0fe23a3ed92d6487e47",
     "repo_updated_at": "2025-08-01T04:35:23Z",
     "stars": 4062
@@ -404,7 +424,7 @@
     "description": "Agent Reinforcement Trainer: train multi-step agents for real-world tasks using GRPO. Give your agents on-the-job training. Reinforcement learning for Qwen2.5, Qwen3, Llama, Kimi, and more!",
     "last_updated": "2025-07-12T04:28:58.118810",
     "readme": "docs/OpenPipe-ART.md",
-    "readme_generated": "2025-08-18T04:45:51.106704",
+    "readme_generated": "2025-08-19T04:30:24.487650",
     "readme_hash": "03aec32c34bbf5509150ae6c58899dd7",
     "repo_updated_at": "2025-07-12T04:28:15Z",
     "stars": 1052
@@ -414,7 +434,7 @@
     "description": "\ud83e\udd94 PostHog provides open-source web & product analytics, session recording, feature flagging and A/B testing that you can self-host. Get started - free.",
     "last_updated": "2025-06-28T04:20:36.756646",
     "readme": "docs/PostHog-posthog.md",
-    "readme_generated": "2025-08-18T04:45:58.569380",
+    "readme_generated": "2025-08-19T04:30:33.906184",
     "readme_hash": "15764fef3a5d4a423f4c4e92539d645e",
     "repo_updated_at": "2025-06-28T03:16:19Z",
     "stars": 27443
@@ -424,7 +444,7 @@
     "description": "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
     "last_updated": "2025-07-06T04:30:32.965073",
     "readme": "docs/PrefectHQ-prefect.md",
-    "readme_generated": "2025-08-18T04:46:10.437362",
+    "readme_generated": "2025-08-19T04:30:44.922093",
     "readme_hash": "baf27ef03aaa034aa45775217599a1ed",
     "repo_updated_at": "2025-07-06T04:04:41Z",
     "stars": 19713
@@ -434,7 +454,7 @@
     "description": "Pycord is a modern, easy to use, feature-rich, and async ready API wrapper for Discord written in Python",
     "last_updated": "2025-08-02T04:32:51.575887",
     "readme": "docs/Pycord-Development-pycord.md",
-    "readme_generated": "2025-08-18T04:46:18.688517",
+    "readme_generated": "2025-08-19T04:30:51.122701",
     "readme_hash": "fb73627e0f52225a90390827f2061a9d",
     "repo_updated_at": "2025-08-02T04:14:07Z",
     "stars": 2856
@@ -444,8 +464,8 @@
     "description": "Qwen-Image is a powerful image generation foundation model capable of complex text rendering and precise image editing.",
     "last_updated": "2025-08-06T04:41:40.033726",
     "readme": "docs/QwenLM-Qwen-Image.md",
-    "readme_generated": "2025-08-18T04:46:32.470149",
-    "readme_hash": "335fa942843a8b222226e955b4227cf8",
+    "readme_generated": "2025-08-19T04:31:09.437017",
+    "readme_hash": "ad7ddccc0a4f24fcd43bce827c400da4",
     "repo_updated_at": "2025-08-06T04:34:49Z",
     "stars": 1674
   },
@@ -454,7 +474,7 @@
     "description": "\u26a1FlashRAG: A Python Toolkit for Efficient RAG Research (WWW2025 Resource)",
     "last_updated": "2025-08-05T04:44:47.423244",
     "readme": "docs/RUC-NLPIR-FlashRAG.md",
-    "readme_generated": "2025-08-18T04:46:47.978948",
+    "readme_generated": "2025-08-19T04:31:48.177261",
     "readme_hash": "91c6cb39a3be9c08d3cee102b4fe670b",
     "repo_updated_at": "2025-08-05T04:42:24Z",
     "stars": 2586
@@ -464,7 +484,7 @@
     "description": "RimSort is an open source mod manager for the video game RimWorld. There is support for Linux, Mac, and Windows, built from the ground up to be a reliable, community-managed alternative to RimPy Mod Manager.",
     "last_updated": "2025-07-28T04:43:03.660201",
     "readme": "docs/RimSort-RimSort.md",
-    "readme_generated": "2025-08-18T04:46:52.052929",
+    "readme_generated": "2025-08-19T04:31:52.707058",
     "readme_hash": "5146affd52230ca5f225c3fdc2ccfe21",
     "repo_updated_at": "2025-07-28T04:14:26Z",
     "stars": 615
@@ -474,7 +494,7 @@
     "description": "MiniGPT-4 \u4e2d\u6587\u90e8\u7f72\u7ffb\u8bd1 \u5b8c\u5584\u90e8\u7f72\u7ec6\u8282",
     "last_updated": "2025-08-14T04:27:54.499082",
     "readme": "docs/RiseInRose-MiniGPT-4-ZH.md",
-    "readme_generated": "2025-08-18T04:46:59.914184",
+    "readme_generated": "2025-08-19T04:32:03.416856",
     "readme_hash": "3cd455caa034643e4c7ce2df1fd3ff7c",
     "repo_updated_at": "2025-08-14T04:27:39Z",
     "stars": 859
@@ -484,7 +504,7 @@
     "description": "RoboTwin 2.0 Offical Repo",
     "last_updated": "2025-07-16T04:35:42.062532",
     "readme": "docs/RoboTwin-Platform-RoboTwin.md",
-    "readme_generated": "2025-08-18T04:47:12.596739",
+    "readme_generated": "2025-08-19T04:32:16.830232",
     "readme_hash": "4409da689139aaee8de0da63e7a5e87d",
     "repo_updated_at": "2025-07-16T04:31:53Z",
     "stars": 1260
@@ -494,7 +514,7 @@
     "description": "RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning",
     "last_updated": "2025-07-16T04:35:42.062528",
     "readme": "docs/RoboVerseOrg-RoboVerse.md",
-    "readme_generated": "2025-08-18T04:47:19.930635",
+    "readme_generated": "2025-08-19T04:32:23.603243",
     "readme_hash": "8561e75363fd293022035124bf0d1635",
     "repo_updated_at": "2025-07-16T04:35:00Z",
     "stars": 1319
@@ -504,7 +524,7 @@
     "description": "C compiler created in Python.",
     "last_updated": "2025-07-19T04:28:52.222797",
     "readme": "docs/ShivamSarodia-ShivyC.md",
-    "readme_generated": "2025-08-18T04:47:25.356915",
+    "readme_generated": "2025-08-19T04:32:29.570231",
     "readme_hash": "faf1d8c480b8abe563cbfcc869c1b626",
     "repo_updated_at": "2025-07-19T03:41:20Z",
     "stars": 1062
@@ -514,7 +534,7 @@
     "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
     "last_updated": "2025-06-27T04:53:31.521661",
     "readme": "docs/Significant-Gravitas-AutoGPT.md",
-    "readme_generated": "2025-08-18T04:47:35.361682",
+    "readme_generated": "2025-08-19T04:32:43.423428",
     "readme_hash": "31e9747672133fe3b405adc7f519da98",
     "repo_updated_at": "",
     "stars": 176439
@@ -524,7 +544,7 @@
     "description": "Automate browser-based workflows with LLMs and Computer Vision",
     "last_updated": "2025-07-04T04:27:28.366109",
     "readme": "docs/Skyvern-AI-skyvern.md",
-    "readme_generated": "2025-08-18T04:48:07.345163",
+    "readme_generated": "2025-08-19T04:33:20.628255",
     "readme_hash": "b87f522ae79374f0cf871b40d5c5e689",
     "repo_updated_at": "2025-07-04T04:22:00Z",
     "stars": 13746
@@ -534,7 +554,7 @@
     "description": "Unified Autoregressive Modeling for Visual Understanding and Generation",
     "last_updated": "2025-08-12T04:25:30.139627",
     "readme": "docs/SkyworkAI-UniPic.md",
-    "readme_generated": "2025-08-18T04:48:13.211064",
+    "readme_generated": "2025-08-19T04:33:26.262132",
     "readme_hash": "189dba2542eb58f1b4d98e3ff17646b0",
     "repo_updated_at": "2025-08-12T04:18:26Z",
     "stars": 583
@@ -544,7 +564,7 @@
     "description": "What If Language Models Expertly Routed All Inference? WilmerAI allows prompts to be routed to specialized workflows based on the domain chosen by your LLM. Also allows chat Assistants to be powered by multiple LLMs working in tandem to generate a response. Compatible with Socg's Offline Wikipedia Article API.",
     "last_updated": "2025-07-28T04:43:03.660195",
     "readme": "docs/SomeOddCodeGuy-WilmerAI.md",
-    "readme_generated": "2025-08-18T04:48:20.739951",
+    "readme_generated": "2025-08-19T04:33:33.721242",
     "readme_hash": "a78d350ec8ff28ae47210e4c5c6a57a6",
     "repo_updated_at": "2025-07-28T04:35:47Z",
     "stars": 731
@@ -554,8 +574,8 @@
     "description": "BEHAVIOR-1K: a platform for accelerating Embodied AI research. Join our Discord for support: https://discord.gg/bccR5vGFEx",
     "last_updated": "2025-08-12T04:25:30.139624",
     "readme": "docs/StanfordVL-BEHAVIOR-1K.md",
-    "readme_generated": "2025-08-18T04:48:27.452948",
-    "readme_hash": "dc892c450a7e7d9a274a83e77705a29f",
+    "readme_generated": "2025-08-19T04:33:42.120358",
+    "readme_hash": "1070e15c4d800f42e7c149b1d670fd4a",
     "repo_updated_at": "2025-08-12T04:02:51Z",
     "stars": 739
   },
@@ -564,7 +584,7 @@
     "description": "A configuration framework that enhances Claude Code with specialized commands, cognitive personas, and development methodologies.",
     "last_updated": "2025-07-20T04:39:37.877577",
     "readme": "docs/SuperClaude-Org-SuperClaude_Framework.md",
-    "readme_generated": "2025-08-18T04:48:41.249162",
+    "readme_generated": "2025-08-19T04:33:55.259014",
     "readme_hash": "643e07fc41c4da346d81b84c68dce10f",
     "repo_updated_at": "2025-07-20T04:35:18Z",
     "stars": 9226
@@ -574,7 +594,7 @@
     "description": "\u26a1\ufe0fSwanLab - an open-source, modern-design AI training tracking and visualization tool. Supports Cloud / Self-hosted use. Integrated with PyTorch / Transformers / LLaMA Factory / Swift / Ultralytics / veRL / MMEngine / Keras etc.",
     "last_updated": "2025-07-15T04:36:40.628641",
     "readme": "docs/SwanHubX-SwanLab.md",
-    "readme_generated": "2025-08-18T04:49:12.461606",
+    "readme_generated": "2025-08-19T04:34:23.031130",
     "readme_hash": "7fb3cbf6cadb28cfe786b9feedd62e7c",
     "repo_updated_at": "2025-07-15T04:33:32Z",
     "stars": 2178
@@ -584,8 +604,8 @@
     "description": "Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels with Hunyuan3D World Model",
     "last_updated": "2025-07-30T04:40:34.450469",
     "readme": "docs/Tencent-Hunyuan-HunyuanWorld-1.0.md",
-    "readme_generated": "2025-08-18T04:49:32.403198",
-    "readme_hash": "a38b2716c86c8edc28490081e976d035",
+    "readme_generated": "2025-08-19T04:34:45.498348",
+    "readme_hash": "6e7d6d9a1b0ff30d292b98b9647bdf54",
     "repo_updated_at": "2025-07-30T04:38:55Z",
     "stars": 1146
   },
@@ -594,7 +614,7 @@
     "description": "All Algorithms implemented in Python",
     "last_updated": "2025-06-27T04:53:31.521659",
     "readme": "docs/TheAlgorithms-Python.md",
-    "readme_generated": "2025-08-18T04:49:38.077279",
+    "readme_generated": "2025-08-19T04:34:51.473229",
     "readme_hash": "bea690c323320822fe8bb2090029bfa4",
     "repo_updated_at": "",
     "stars": 202069
@@ -604,7 +624,7 @@
     "description": "\u7eaf\u6587\u672c\u683c\u5f0f\u7684S1\u5e16\u5b50\u5907\u4efd",
     "last_updated": "2025-08-16T04:21:57.354557",
     "readme": "docs/TomoeMami-S1PlainTextBackup.md",
-    "readme_generated": "2025-08-18T04:49:42.128243",
+    "readme_generated": "2025-08-19T04:34:56.242448",
     "readme_hash": "b7117e80588e0d6ca47f6bc65a1acc21",
     "repo_updated_at": "2025-08-16T04:20:09Z",
     "stars": 484
@@ -614,7 +634,7 @@
     "description": "Open source Tines / Splunk SOAR alternative. All-in-one automation platform (workflows, tables, cases) for security and IT teams.",
     "last_updated": "2025-08-16T04:21:57.354553",
     "readme": "docs/TracecatHQ-tracecat.md",
-    "readme_generated": "2025-08-18T04:49:54.866032",
+    "readme_generated": "2025-08-19T04:35:07.589702",
     "readme_hash": "74976ab7d39c1b914c851b94c112cc49",
     "repo_updated_at": "2025-08-16T03:22:46Z",
     "stars": 3128
@@ -624,7 +644,7 @@
     "description": "Inspect: A framework for large language model evaluations",
     "last_updated": "2025-08-08T04:41:36.994322",
     "readme": "docs/UKGovernmentBEIS-inspect_ai.md",
-    "readme_generated": "2025-08-18T04:49:59.424895",
+    "readme_generated": "2025-08-19T04:35:12.625389",
     "readme_hash": "736756c646a99dbd67b015bcfb17f9cc",
     "repo_updated_at": "2025-08-08T04:40:07Z",
     "stars": 1224
@@ -634,7 +654,7 @@
     "description": "XLeRobot: Fully Autonomous Household Dual-Arm Mobile Robot starts from $660",
     "last_updated": "2025-07-22T04:36:36.384402",
     "readme": "docs/Vector-Wangel-XLeRobot.md",
-    "readme_generated": "2025-08-18T04:50:08.551967",
+    "readme_generated": "2025-08-19T04:35:21.874538",
     "readme_hash": "0c7ffc236297c9dda601c7648f404c60",
     "repo_updated_at": "2025-07-22T04:36:19Z",
     "stars": 1080
@@ -644,7 +664,7 @@
     "description": "Wan: Open and Advanced Large-Scale Video Generative Models",
     "last_updated": "2025-08-04T04:55:09.518695",
     "readme": "docs/Wan-Video-Wan2.2.md",
-    "readme_generated": "2025-08-18T04:50:23.328292",
+    "readme_generated": "2025-08-19T04:35:45.469509",
     "readme_hash": "78af223998f9d9ced87a7c22fa9d560c",
     "repo_updated_at": "2025-08-04T04:51:10Z",
     "stars": 2329
@@ -654,7 +674,7 @@
     "description": "Web based localization tool with tight version control integration.",
     "last_updated": "2025-07-06T04:30:32.965093",
     "readme": "docs/WeblateOrg-weblate.md",
-    "readme_generated": "2025-08-18T04:50:27.428467",
+    "readme_generated": "2025-08-19T04:35:51.257276",
     "readme_hash": "f2a85a11ad6d8c2340f78fb20694b971",
     "repo_updated_at": "2025-07-06T04:21:18Z",
     "stars": 5211
@@ -664,8 +684,8 @@
     "description": "A lightweight LMM-based Document Parsing Model",
     "last_updated": "2025-07-01T04:35:39.936894",
     "readme": "docs/Yuliang-Liu-MonkeyOCR.md",
-    "readme_generated": "2025-08-18T04:50:41.986967",
-    "readme_hash": "828e4e0b326eadcbe1c592c87106ba45",
+    "readme_generated": "2025-08-19T04:36:00.705186",
+    "readme_hash": "e284af6a4c84443b266c25aac21357aa",
     "repo_updated_at": "2025-07-01T03:40:58Z",
     "stars": 3294
   },
@@ -674,7 +694,7 @@
     "description": "\u7edd\u533a\u96f6\u6a21\u62df\u4eff\u771f\u7a0b\u5e8f\uff0c\u53ef\u4f7f\u7528\u5b9a\u5236\u5316\u624b\u6cd5\uff0c\u8ba1\u7b97\u4f24\u5bb3\u3002",
     "last_updated": "2025-07-20T04:39:37.877583",
     "readme": "docs/ZZZSimulator-ZSim.md",
-    "readme_generated": "2025-08-18T04:50:48.714756",
+    "readme_generated": "2025-08-19T04:36:06.802909",
     "readme_hash": "34fc9f402bcc2280268298b34accea9c",
     "repo_updated_at": "2025-07-20T04:22:15Z",
     "stars": 633
@@ -684,7 +704,7 @@
     "description": "CF\u4f18\u9009IP\u5de5\u5177\u3002\u52a8\u6001\u83b7\u53d6Cloudflare\u4f18\u9009IP\uff0cCloudflareSpeedTest\u6d4b\u901f\u3002",
     "last_updated": "2025-07-27T04:40:45.213736",
     "readme": "docs/ZhiXuanWang-cf-speed-dns.md",
-    "readme_generated": "2025-08-18T04:50:52.871440",
+    "readme_generated": "2025-08-19T04:36:10.688614",
     "readme_hash": "45d34772f64b4c688f101520bafef908",
     "repo_updated_at": "2025-07-27T04:40:13Z",
     "stars": 1078
@@ -694,7 +714,7 @@
     "description": "AG2 (formerly AutoGen): The Open-Source AgentOS. Join us at: https://discord.gg/pAbnFJrkgZ",
     "last_updated": "2025-08-15T04:28:02.246264",
     "readme": "docs/ag2ai-ag2.md",
-    "readme_generated": "2025-08-18T04:51:15.720525",
+    "readme_generated": "2025-08-19T04:36:25.858935",
     "readme_hash": "421fd288d4fd228d93f114ffc752c9b3",
     "repo_updated_at": "2025-08-15T04:07:04Z",
     "stars": 3251
@@ -704,7 +724,7 @@
     "description": "FastStream is a powerful and easy-to-use Python framework for building asynchronous services interacting with event streams such as Apache Kafka, RabbitMQ, NATS and Redis.",
     "last_updated": "2025-07-04T04:27:28.366131",
     "readme": "docs/ag2ai-faststream.md",
-    "readme_generated": "2025-08-18T04:51:28.885600",
+    "readme_generated": "2025-08-19T04:36:39.377394",
     "readme_hash": "1b53ff0169688c835a5b93a8c30e6d8f",
     "repo_updated_at": "2025-07-04T04:25:21Z",
     "stars": 4122
@@ -714,7 +734,7 @@
     "description": "The leading data integration platform for ETL / ELT data pipelines from APIs, databases & files to data warehouses, data lakes & data lakehouses. Both self-hosted and Cloud-hosted.",
     "last_updated": "2025-06-29T04:32:48.651449",
     "readme": "docs/airbytehq-airbyte.md",
-    "readme_generated": "2025-08-18T04:51:40.041277",
+    "readme_generated": "2025-08-19T04:36:49.462584",
     "readme_hash": "6198b594ebd44ec27cdb0d473f1920d0",
     "repo_updated_at": "2025-06-29T03:52:19Z",
     "stars": 18544
@@ -724,7 +744,7 @@
     "description": "This is a custom component to allow control of Amazon Alexa devices in Home Assistant using the unofficial Alexa API.",
     "last_updated": "2025-07-18T04:36:38.135043",
     "readme": "docs/alandtse-alexa_media_player.md",
-    "readme_generated": "2025-08-18T04:51:44.793977",
+    "readme_generated": "2025-08-19T04:36:54.920464",
     "readme_hash": "3b0f63e1b73e39083fd0ec79f2cbdc1e",
     "repo_updated_at": "2025-07-18T04:34:22Z",
     "stars": 1734
@@ -734,7 +754,7 @@
     "description": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com.",
     "last_updated": "2025-07-25T04:36:44.627515",
     "readme": "docs/ansible-ansible.md",
-    "readme_generated": "2025-08-18T04:51:53.155785",
+    "readme_generated": "2025-08-19T04:37:03.776423",
     "readme_hash": "687044da6d68be93a75ca338f6edb109",
     "repo_updated_at": "2025-07-25T04:35:36Z",
     "stars": 65706
@@ -744,7 +764,7 @@
     "description": "Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",
     "last_updated": "2025-06-27T05:18:19.314850",
     "readme": "docs/apache-airflow.md",
-    "readme_generated": "2025-08-18T04:52:18.588868",
+    "readme_generated": "2025-08-19T04:37:13.503200",
     "readme_hash": "bf756e0ce781b900acea0ae58d959302",
     "repo_updated_at": "2025-06-27T05:12:52Z",
     "stars": 40738
@@ -754,7 +774,7 @@
     "description": "Build applications that make decisions (chatbots, agents, simulations, etc...). Monitor, trace, persist, and execute on your own infrastructure.",
     "last_updated": "2025-07-21T04:40:28.696179",
     "readme": "docs/apache-burr.md",
-    "readme_generated": "2025-08-18T04:52:32.246516",
+    "readme_generated": "2025-08-19T04:37:22.370990",
     "readme_hash": "50eaac2de9f38e51076f2162c8c951c1",
     "repo_updated_at": "2025-07-21T04:09:17Z",
     "stars": 1739
@@ -764,7 +784,7 @@
     "description": "Cookiecutter template for a Python package.",
     "last_updated": "2025-08-18T04:36:26.136592",
     "readme": "docs/audreyfeldroy-cookiecutter-pypackage.md",
-    "readme_generated": "2025-08-18T04:52:35.893974",
+    "readme_generated": "2025-08-19T04:37:26.531360",
     "readme_hash": "3f6ba85904c3a9fe3cb24659f07dc015",
     "repo_updated_at": "2025-08-18T03:50:08Z",
     "stars": 4439
@@ -774,7 +794,7 @@
     "description": "The ultimate Python library in building OAuth, OpenID Connect clients and servers. JWS,JWE,JWK,JWA,JWT included.",
     "last_updated": "2025-08-08T04:41:36.994315",
     "readme": "docs/authlib-authlib.md",
-    "readme_generated": "2025-08-18T04:52:42.857103",
+    "readme_generated": "2025-08-19T04:37:33.648281",
     "readme_hash": "75f140cd6b4cecd1ff4ab498cdbfb14b",
     "repo_updated_at": "2025-08-08T04:38:47Z",
     "stars": 4933
@@ -784,7 +804,7 @@
     "description": "AWS Deep Learning Containers are pre-built Docker images that make it easier to run popular deep learning frameworks and tools on AWS.",
     "last_updated": "2025-08-12T04:25:30.139621",
     "readme": "docs/aws-deep-learning-containers.md",
-    "readme_generated": "2025-08-18T04:52:53.359296",
+    "readme_generated": "2025-08-19T04:37:43.095673",
     "readme_hash": "3278dbd5def135e56a1b4b1b4f7d8477",
     "repo_updated_at": "2025-08-12T04:07:47Z",
     "stars": 1093
@@ -794,7 +814,7 @@
     "description": "A library for training and deploying machine learning models on Amazon SageMaker",
     "last_updated": "2025-07-16T04:35:42.062521",
     "readme": "docs/aws-sagemaker-python-sdk.md",
-    "readme_generated": "2025-08-18T04:53:05.975291",
+    "readme_generated": "2025-08-19T04:37:53.708426",
     "readme_hash": "938bfb3f8edec6a146c70f816a25f2ec",
     "repo_updated_at": "2025-07-16T04:23:00Z",
     "stars": 2170
@@ -804,7 +824,7 @@
     "description": "Go ahead and axolotl questions",
     "last_updated": "2025-07-13T04:34:51.577531",
     "readme": "docs/axolotl-ai-cloud-axolotl.md",
-    "readme_generated": "2025-08-18T04:53:21.639115",
+    "readme_generated": "2025-08-19T04:38:11.386899",
     "readme_hash": "5a34a3f8151faeccfeca33392f7f3f4e",
     "repo_updated_at": "2025-07-13T03:32:33Z",
     "stars": 9905
@@ -814,7 +834,7 @@
     "description": "The simplest way to serve AI/ML models in production",
     "last_updated": "2025-08-05T04:44:47.423247",
     "readme": "docs/basetenlabs-truss.md",
-    "readme_generated": "2025-08-18T04:53:26.886336",
+    "readme_generated": "2025-08-19T04:38:17.221883",
     "readme_hash": "261ae88cec19ec4204c7282236388890",
     "repo_updated_at": "2025-08-05T04:43:41Z",
     "stars": 1036
@@ -824,7 +844,7 @@
     "description": "Tools to support converting a Python project into a standalone native application.",
     "last_updated": "2025-07-23T04:38:42.102992",
     "readme": "docs/beeware-briefcase.md",
-    "readme_generated": "2025-08-18T04:53:31.747510",
+    "readme_generated": "2025-08-19T04:38:22.481174",
     "readme_hash": "98520e2d1ea5dd0ea7b97ae9cb698efb",
     "repo_updated_at": "2025-07-23T04:10:17Z",
     "stars": 2999
@@ -834,7 +854,7 @@
     "description": "A Python native, OS native GUI toolkit.",
     "last_updated": "2025-07-22T04:36:36.384399",
     "readme": "docs/beeware-toga.md",
-    "readme_generated": "2025-08-18T04:53:35.749356",
+    "readme_generated": "2025-08-19T04:38:26.188094",
     "readme_hash": "731adde8a7688241869513560c09d480",
     "repo_updated_at": "2025-07-22T04:06:16Z",
     "stars": 5086
@@ -844,7 +864,7 @@
     "description": "A general fine-tuning kit geared toward diffusion models.",
     "last_updated": "2025-07-10T04:29:48.148264",
     "readme": "docs/bghira-SimpleTuner.md",
-    "readme_generated": "2025-08-18T04:53:54.945915",
+    "readme_generated": "2025-08-19T04:38:37.093426",
     "readme_hash": "9807b3266c54e9f7e2495adcd5d0ac23",
     "repo_updated_at": "2025-07-10T04:25:15Z",
     "stars": 2432
@@ -854,7 +874,7 @@
     "description": "Interesting APT Report Collection And Some Special IOCs",
     "last_updated": "2025-08-15T04:28:02.246267",
     "readme": "docs/blackorbird-APT_REPORT.md",
-    "readme_generated": "2025-08-18T04:54:15.764763",
+    "readme_generated": "2025-08-19T04:38:58.345572",
     "readme_hash": "72b7afff761cc2d8eaa1ce290116e3c7",
     "repo_updated_at": "2025-08-15T04:27:52Z",
     "stars": 2657
@@ -864,7 +884,7 @@
     "description": "Social reading and reviewing, decentralized with ActivityPub",
     "last_updated": "2025-07-14T04:38:56.355534",
     "readme": "docs/bookwyrm-social-bookwyrm.md",
-    "readme_generated": "2025-08-18T04:54:20.242129",
+    "readme_generated": "2025-08-19T04:39:04.860023",
     "readme_hash": "1f5ddc23af0c13d68f06ad17b1e8c852",
     "repo_updated_at": "2025-07-14T04:33:17Z",
     "stars": 2484
@@ -874,7 +894,7 @@
     "description": "Best curated Claude Code commands and automations that actually save time. Built by a dev tired of typing \"please act like a senior engineer\" in every conversation.",
     "last_updated": "2025-08-03T04:45:54.392606",
     "readme": "docs/brennercruvinel-CCPlugins.md",
-    "readme_generated": "2025-08-18T04:54:33.576470",
+    "readme_generated": "2025-08-19T04:39:22.462819",
     "readme_hash": "7d9deb4ac735672e8b1dff5308e1e76a",
     "repo_updated_at": "2025-08-03T04:45:26Z",
     "stars": 1134
@@ -884,8 +904,8 @@
     "description": "\ud83c\udf10 Make websites accessible for AI agents. Automate tasks online with ease.",
     "last_updated": "2025-07-05T04:21:48.386562",
     "readme": "docs/browser-use-browser-use.md",
-    "readme_generated": "2025-08-18T04:54:49.496381",
-    "readme_hash": "d9f7ec9e7a508ab7260dbe69963bbc88",
+    "readme_generated": "2025-08-19T04:39:37.571055",
+    "readme_hash": "28d6978edaa0e34c49937c574e1bdf28",
     "repo_updated_at": "2025-07-05T03:52:03Z",
     "stars": 64689
   },
@@ -894,7 +914,7 @@
     "description": "Trae Agent is an LLM-based agent for general purpose software engineering tasks.",
     "last_updated": "2025-07-08T04:27:56.867501",
     "readme": "docs/bytedance-trae-agent.md",
-    "readme_generated": "2025-08-18T04:55:01.524817",
+    "readme_generated": "2025-08-19T04:40:03.960887",
     "readme_hash": "23e0b42b94eefed63bf12e173a5622b0",
     "repo_updated_at": "2025-07-08T04:26:40Z",
     "stars": 4091
@@ -904,7 +924,7 @@
     "description": "\ud83d\udc2b CAMEL: The first and the best multi-agent framework. Finding the Scaling Law of Agents. https://www.camel-ai.org",
     "last_updated": "2025-06-29T04:32:48.651452",
     "readme": "docs/camel-ai-camel.md",
-    "readme_generated": "2025-08-18T04:55:18.995893",
+    "readme_generated": "2025-08-19T04:40:45.207053",
     "readme_hash": "61dfcbe07315b61868d478d306c431c7",
     "repo_updated_at": "2025-06-29T04:15:52Z",
     "stars": 13113
@@ -914,7 +934,7 @@
     "description": "Package, distribute, and update any app for Linux and IoT.",
     "last_updated": "2025-08-14T04:27:54.499071",
     "readme": "docs/canonical-snapcraft.md",
-    "readme_generated": "2025-08-18T04:55:23.583379",
+    "readme_generated": "2025-08-19T04:40:50.835317",
     "readme_hash": "1806b19546731cb0347e5b2c260f4403",
     "repo_updated_at": "2025-08-14T04:15:02Z",
     "stars": 1225
@@ -924,7 +944,7 @@
     "description": "\u673a\u573a\u63a8\u8350,2025\u6700\u65b0\u79d1\u5b66\u4e0a\u7f51\u6559\u7a0b,\u673a\u573a\u5b9e\u6d4b,\u4e0eVPN\u5bf9\u6bd4,\u652f\u6301 Clash / V2Ray / Trojan\uff0c\u89e3\u9501 ChatGPT / YouTube / Netflix\uff0c\u542b\u514d\u8d39\u4f7f\u7528\u6559\u7a0b\u3002",
     "last_updated": "2025-08-04T04:55:09.518718",
     "readme": "docs/chatgpt-helper-tech-airport-access.md",
-    "readme_generated": "2025-08-18T04:55:54.884922",
+    "readme_generated": "2025-08-19T04:41:26.052063",
     "readme_hash": "04b645eecb2c7879cf126221bda240c1",
     "repo_updated_at": "2025-08-04T04:54:04Z",
     "stars": 311
@@ -934,7 +954,7 @@
     "description": "Buzz transcribes and translates audio offline on your personal computer. Powered by OpenAI's Whisper.",
     "last_updated": "2025-08-05T04:44:47.423225",
     "readme": "docs/chidiwilliams-buzz.md",
-    "readme_generated": "2025-08-18T04:56:03.782861",
+    "readme_generated": "2025-08-19T04:41:30.407001",
     "readme_hash": "102c7efe4f57919002943410c22eedd8",
     "repo_updated_at": "2025-08-05T04:43:06Z",
     "stars": 14960
@@ -944,7 +964,7 @@
     "description": "Python SDK to Interact with Intelligent Code Generation Agents",
     "last_updated": "2025-08-18T04:36:26.136600",
     "readme": "docs/codegen-sh-codegen.md",
-    "readme_generated": "2025-08-18T04:56:09.654907",
+    "readme_generated": "2025-08-19T04:41:36.008148",
     "readme_hash": "c629f741da0a5a04f07fda709a2bfa51",
     "repo_updated_at": "2025-08-18T04:32:36Z",
     "stars": 485
@@ -954,7 +974,7 @@
     "description": "Context engineering is the new vibe coding - it's the way to actually make AI coding assistants work. Claude Code is the best for this so that's what this repo is centered around, but you can apply this strategy with any AI coding assistant!",
     "last_updated": "2025-07-21T04:40:28.696172",
     "readme": "docs/coleam00-context-engineering-intro.md",
-    "readme_generated": "2025-08-18T04:56:17.409588",
+    "readme_generated": "2025-08-19T04:41:49.560588",
     "readme_hash": "f92842576999cb2d661ab693fd770def",
     "repo_updated_at": "2025-07-21T04:36:21Z",
     "stars": 6490
@@ -964,7 +984,7 @@
     "description": "Debug, evaluate, and monitor your LLM applications, RAG systems, and agentic workflows with comprehensive tracing, automated evaluations, and production-ready dashboards.",
     "last_updated": "2025-08-18T04:36:26.136578",
     "readme": "docs/comet-ml-opik.md",
-    "readme_generated": "2025-08-18T04:56:44.852904",
+    "readme_generated": "2025-08-19T04:42:28.332306",
     "readme_hash": "63d280a727d01cb734c7fe6de2302502",
     "repo_updated_at": "2025-08-18T04:34:00Z",
     "stars": 12700
@@ -974,7 +994,7 @@
     "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
     "last_updated": "2025-08-15T04:28:02.246243",
     "readme": "docs/comfyanonymous-ComfyUI.md",
-    "readme_generated": "2025-08-18T04:56:53.869712",
+    "readme_generated": "2025-08-19T04:42:41.666890",
     "readme_hash": "26134c654a8fafea749cc3ac23e65252",
     "repo_updated_at": "2025-08-15T04:26:27Z",
     "stars": 85511
@@ -984,7 +1004,7 @@
     "description": "a Python API for your car",
     "last_updated": "2025-07-24T04:37:04.482040",
     "readme": "docs/commaai-opendbc.md",
-    "readme_generated": "2025-08-18T04:57:09.116436",
+    "readme_generated": "2025-08-19T04:42:57.538067",
     "readme_hash": "1e4dd29c2afdd5d8475ada888234a25d",
     "repo_updated_at": "2025-07-24T04:35:56Z",
     "stars": 2438
@@ -994,7 +1014,7 @@
     "description": "openpilot is an operating system for robotics. Currently, it upgrades the driver assistance system on 300+ supported cars.",
     "last_updated": "2025-07-03T04:29:18.660762",
     "readme": "docs/commaai-openpilot.md",
-    "readme_generated": "2025-08-18T04:57:17.677917",
+    "readme_generated": "2025-08-19T04:43:06.935005",
     "readme_hash": "365d185d8fc85fce38b59d755a2b010e",
     "repo_updated_at": "2025-07-03T04:25:13Z",
     "stars": 54247
@@ -1004,7 +1024,7 @@
     "description": "Automated All-in-One OS Command Injection Exploitation Tool.",
     "last_updated": "2025-08-11T04:40:43.817813",
     "readme": "docs/commixproject-commix.md",
-    "readme_generated": "2025-08-18T04:57:24.591854",
+    "readme_generated": "2025-08-19T04:43:13.857010",
     "readme_hash": "587ce6df915b46bae952a26348fee51e",
     "repo_updated_at": "2025-08-11T04:39:54Z",
     "stars": 5367
@@ -1014,7 +1034,7 @@
     "description": "The LLM Evaluation Framework",
     "last_updated": "2025-08-03T04:45:54.392590",
     "readme": "docs/confident-ai-deepeval.md",
-    "readme_generated": "2025-08-18T04:57:44.776519",
+    "readme_generated": "2025-08-19T04:43:31.658068",
     "readme_hash": "19dbbbc7e6c25adbb262e13d12b0973e",
     "repo_updated_at": "2025-08-03T04:44:41Z",
     "stars": 9721
@@ -1024,7 +1044,7 @@
     "description": "An open and fair framework for everyone to build AI agents equipped with powerful skills. Launch your agent, improve the world, your wallet, or both!",
     "last_updated": "2025-07-10T04:29:48.148254",
     "readme": "docs/crestalnetwork-intentkit.md",
-    "readme_generated": "2025-08-18T04:57:52.159290",
+    "readme_generated": "2025-08-19T04:43:39.874252",
     "readme_hash": "0b87e0131907b5fc12f67551b1d6c626",
     "repo_updated_at": "2025-07-10T04:25:18Z",
     "stars": 6422
@@ -1034,7 +1054,7 @@
     "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
     "last_updated": "2025-07-11T04:34:48.421297",
     "readme": "docs/crewAIInc-crewAI.md",
-    "readme_generated": "2025-08-18T04:58:24.573696",
+    "readme_generated": "2025-08-19T04:44:13.490856",
     "readme_hash": "b42931723146c9d496b41028bb4b78d5",
     "repo_updated_at": "2025-07-11T04:34:08Z",
     "stars": 34028
@@ -1044,7 +1064,7 @@
     "description": "The most widely used Python to C compiler",
     "last_updated": "2025-07-02T04:27:27.311184",
     "readme": "docs/cython-cython.md",
-    "readme_generated": "2025-08-18T04:58:29.379793",
+    "readme_generated": "2025-08-19T04:44:18.575547",
     "readme_hash": "8a493cca04b81d0575b6e305638ecc84",
     "repo_updated_at": "2025-07-02T04:06:06Z",
     "stars": 10111
@@ -1054,7 +1074,7 @@
     "description": "\"Context engineering is the delicate art and science of filling the context window with just the right information for the next step.\" \u2014 Andrej Karpathy. A practical, first-principles handbook inspired by Karpathy and 3Blue1Brown for moving beyond prompt engineering to the wider discipline of context design, orchestration, and optimization.",
     "last_updated": "2025-07-12T04:28:58.118806",
     "readme": "docs/davidkimai-Context-Engineering.md",
-    "readme_generated": "2025-08-18T04:59:01.418904",
+    "readme_generated": "2025-08-19T04:44:27.712017",
     "readme_hash": "ff8ff245ef2d0a7c6bdf8f41a49cffae",
     "repo_updated_at": "2025-07-12T03:47:37Z",
     "stars": 1562
@@ -1064,7 +1084,7 @@
     "description": "MetricFlow allows you to define, build, and maintain metrics in code.",
     "last_updated": "2025-07-25T04:36:44.627532",
     "readme": "docs/dbt-labs-metricflow.md",
-    "readme_generated": "2025-08-18T04:59:07.611815",
+    "readme_generated": "2025-08-19T04:44:33.807094",
     "readme_hash": "e34614a1e7123e0a9fcc5057e9e41a3e",
     "repo_updated_at": "2025-07-25T04:34:20Z",
     "stars": 1238
@@ -1074,7 +1094,7 @@
     "description": "\u4e00\u4e2a\u57fa\u4e8e Playwright \u548cAI\u8fc7\u6ee4\u5206\u6790\u7684\u95f2\u9c7c\u591a\u4efb\u52a1\u5b9e\u65f6\u76d1\u63a7\u4e0e\u667a\u80fd\u5206\u6790\u5de5\u5177\uff0c\u914d\u5907\u4e86\u529f\u80fd\u5b8c\u5584\u7684 Web \u7ba1\u7406\u754c\u9762\u3002",
     "last_updated": "2025-07-24T04:37:04.482036",
     "readme": "docs/dingyufei615-ai-goofish-monitor.md",
-    "readme_generated": "2025-08-18T04:59:21.827947",
+    "readme_generated": "2025-08-19T04:44:47.546838",
     "readme_hash": "09d340b69374f43d406f2ec24312a0ea",
     "repo_updated_at": "2025-07-24T04:24:32Z",
     "stars": 2572
@@ -1084,7 +1104,7 @@
     "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
     "last_updated": "2025-06-27T04:53:31.521654",
     "readme": "docs/donnemartin-system-design-primer.md",
-    "readme_generated": "2025-08-18T04:59:47.355786",
+    "readme_generated": "2025-08-19T04:44:53.567861",
     "readme_hash": "708027c5f2794d7c6d8091854f8ecf09",
     "repo_updated_at": "",
     "stars": 308609
@@ -1094,7 +1114,7 @@
     "description": "Easily download and manage game cheats for your convenience",
     "last_updated": "2025-07-21T04:40:28.696168",
     "readme": "docs/dyang886-Game-Cheats-Manager.md",
-    "readme_generated": "2025-08-18T04:59:54.032455",
+    "readme_generated": "2025-08-19T04:45:01.245802",
     "readme_hash": "9cf2f62437800b62e2cfd92b4b59cbd3",
     "repo_updated_at": "2025-07-21T04:36:13Z",
     "stars": 8462
@@ -1104,7 +1124,7 @@
     "description": "A simple but powerful finance tracker",
     "last_updated": "2025-08-16T04:21:57.354560",
     "readme": "docs/eitchtee-WYGIWYH.md",
-    "readme_generated": "2025-08-18T05:00:09.446424",
+    "readme_generated": "2025-08-19T04:45:13.583119",
     "readme_hash": "4872205cfff1c3d4b383ef6cccce839a",
     "repo_updated_at": "2025-08-16T04:17:46Z",
     "stars": 461
@@ -1114,17 +1134,27 @@
     "description": "A web app for ranking computer science departments according to their research output in selective venues, and for finding active faculty across a wide range of areas.",
     "last_updated": "2025-07-15T04:36:40.628633",
     "readme": "docs/emeryberger-CSrankings.md",
-    "readme_generated": "2025-08-18T05:00:13.419425",
+    "readme_generated": "2025-08-19T04:45:17.911656",
     "readme_hash": "5d8d19244d1261789801ba40fcf8ad7d",
     "repo_updated_at": "2025-07-15T04:35:56Z",
     "stars": 2893
+  },
+  "fastapi-practices/fastapi_best_architecture": {
+    "added_date": "2025-08-19T04:20:02.538899",
+    "description": "\u57fa\u4e8e FastAPI \u6784\u5efa\u7684\u4f01\u4e1a\u7ea7\u540e\u7aef\u67b6\u6784\u89e3\u51b3\u65b9\u6848",
+    "last_updated": "2025-08-19T04:20:02.538898",
+    "readme": "docs/fastapi-practices-fastapi_best_architecture.md",
+    "readme_generated": "2025-08-19T04:45:25.236028",
+    "readme_hash": "a05848f5d4932ae7df2dc7fb92edf346",
+    "repo_updated_at": "2025-08-19T04:19:35Z",
+    "stars": 1206
   },
   "fatihak/InkyPi": {
     "added_date": "2025-08-17T04:30:10.948219",
     "description": "E-Ink Display with a Raspberry Pi and a Web Interface to customize and update the display with various plugins",
     "last_updated": "2025-08-17T04:30:10.948218",
     "readme": "docs/fatihak-InkyPi.md",
-    "readme_generated": "2025-08-18T05:00:24.690463",
+    "readme_generated": "2025-08-19T04:45:37.569265",
     "readme_hash": "dd3a8e400d6a7514fa4d096932d13040",
     "repo_updated_at": "2025-08-17T03:30:41Z",
     "stars": 2103
@@ -1134,7 +1164,7 @@
     "description": "The Open Source Feature Store for AI/ML",
     "last_updated": "2025-07-18T04:36:38.135037",
     "readme": "docs/feast-dev-feast.md",
-    "readme_generated": "2025-08-18T05:00:46.995151",
+    "readme_generated": "2025-08-19T04:45:54.018185",
     "readme_hash": "8d32efdc5868fb86224243c4ff860c8f",
     "repo_updated_at": "2025-07-18T04:17:17Z",
     "stars": 6217
@@ -1144,7 +1174,7 @@
     "description": "Flet enables developers to easily build realtime web, mobile and desktop apps in Python. No frontend experience required.",
     "last_updated": "2025-08-03T04:45:54.392577",
     "readme": "docs/flet-dev-flet.md",
-    "readme_generated": "2025-08-18T05:00:54.721367",
+    "readme_generated": "2025-08-19T04:46:01.277030",
     "readme_hash": "89a07bd49dc77cf4a7feaaeb89c79475",
     "repo_updated_at": "2025-08-03T04:39:40Z",
     "stars": 13775
@@ -1154,7 +1184,7 @@
     "description": "Free and Open Source Enterprise Resource Planning (ERP)",
     "last_updated": "2025-06-29T04:32:48.651444",
     "readme": "docs/frappe-erpnext.md",
-    "readme_generated": "2025-08-18T05:01:07.039854",
+    "readme_generated": "2025-08-19T04:46:10.939590",
     "readme_hash": "5de2ed690381784e65edbc67f3217c56",
     "repo_updated_at": "2025-06-29T04:22:07Z",
     "stars": 25964
@@ -1164,7 +1194,7 @@
     "description": "Low code web framework for real world applications, in Python and Javascript",
     "last_updated": "2025-07-04T04:27:28.366121",
     "readme": "docs/frappe-frappe.md",
-    "readme_generated": "2025-08-18T05:01:15.821185",
+    "readme_generated": "2025-08-19T04:46:21.889362",
     "readme_hash": "d0494b96a7e4bb570bf4b0c88cad4ab8",
     "repo_updated_at": "2025-07-04T04:04:34Z",
     "stars": 8629
@@ -1174,7 +1204,7 @@
     "description": "Open Source HR and Payroll Software",
     "last_updated": "2025-07-15T04:36:40.628637",
     "readme": "docs/frappe-hrms.md",
-    "readme_generated": "2025-08-18T05:01:26.690305",
+    "readme_generated": "2025-08-19T04:46:32.059640",
     "readme_hash": "a9532920ed555f7a4ad93518c6bab3e5",
     "repo_updated_at": "2025-07-15T04:23:53Z",
     "stars": 2744
@@ -1184,7 +1214,7 @@
     "description": "Free, open source crypto trading bot",
     "last_updated": "2025-07-07T04:31:49.953876",
     "readme": "docs/freqtrade-freqtrade.md",
-    "readme_generated": "2025-08-18T05:01:37.323251",
+    "readme_generated": "2025-08-19T04:46:40.377267",
     "readme_hash": "cd3f959140a7078053e7098182130577",
     "repo_updated_at": "2025-07-07T04:26:46Z",
     "stars": 40242
@@ -1194,7 +1224,7 @@
     "description": "Yet Another Document Translator",
     "last_updated": "2025-07-30T04:40:34.450459",
     "readme": "docs/funstory-ai-BabelDOC.md",
-    "readme_generated": "2025-08-18T05:02:00.642292",
+    "readme_generated": "2025-08-19T04:46:54.179789",
     "readme_hash": "d581393c073f4094c7d5019f09071548",
     "repo_updated_at": "2025-07-30T04:28:49Z",
     "stars": 4684
@@ -1204,7 +1234,7 @@
     "description": "Developer-first error tracking and performance monitoring",
     "last_updated": "2025-07-18T04:36:38.135023",
     "readme": "docs/getsentry-sentry.md",
-    "readme_generated": "2025-08-18T05:02:06.686474",
+    "readme_generated": "2025-08-19T04:46:59.617657",
     "readme_hash": "8486a612e102ab47223d84967d83aef9",
     "repo_updated_at": "2025-07-18T04:36:36Z",
     "stars": 41469
@@ -1214,7 +1244,7 @@
     "description": "The authentication glue you need.",
     "last_updated": "2025-07-10T04:29:48.148241",
     "readme": "docs/goauthentik-authentik.md",
-    "readme_generated": "2025-08-18T05:02:13.578600",
+    "readme_generated": "2025-08-19T04:47:06.151857",
     "readme_hash": "b33f00544992e204240c1e3734364007",
     "repo_updated_at": "2025-07-10T04:28:05Z",
     "stars": 16854
@@ -1224,7 +1254,7 @@
     "description": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
     "last_updated": "2025-06-29T04:32:48.651455",
     "readme": "docs/google-adk-python.md",
-    "readme_generated": "2025-08-18T05:02:22.962511",
+    "readme_generated": "2025-08-19T04:47:14.348608",
     "readme_hash": "15dd1c4aadd715b7a4f9ba9eb6842955",
     "repo_updated_at": "2025-06-29T04:24:39Z",
     "stars": 10524
@@ -1234,7 +1264,7 @@
     "description": "A Python library for extracting structured information from unstructured text using LLMs with precise source grounding and interactive visualization.",
     "last_updated": "2025-08-02T04:32:51.575893",
     "readme": "docs/google-langextract.md",
-    "readme_generated": "2025-08-18T05:02:37.069265",
+    "readme_generated": "2025-08-19T04:47:33.751658",
     "readme_hash": "58a2259aa730bff0e773b86a4164418d",
     "repo_updated_at": "2025-08-02T04:23:29Z",
     "stars": 1478
@@ -1244,7 +1274,7 @@
     "description": "Open source vulnerability DB and triage service.",
     "last_updated": "2025-07-14T04:38:56.355540",
     "readme": "docs/google-osv.dev.md",
-    "readme_generated": "2025-08-18T05:02:42.887174",
+    "readme_generated": "2025-08-19T04:47:40.051103",
     "readme_hash": "fc77dbdde5aea2c85e760f21ce789058",
     "repo_updated_at": "2025-07-14T03:53:55Z",
     "stars": 1922
@@ -1254,7 +1284,7 @@
     "description": "Modular Python framework for AI agents and workflows with chain-of-thought reasoning, tools, and memory. ",
     "last_updated": "2025-07-17T04:35:36.091869",
     "readme": "docs/griptape-ai-griptape.md",
-    "readme_generated": "2025-08-18T05:02:53.432459",
+    "readme_generated": "2025-08-19T04:47:53.060698",
     "readme_hash": "c0715a9944a9d61c2f2464a43a76103e",
     "repo_updated_at": "2025-07-17T04:14:24Z",
     "stars": 2349
@@ -1264,7 +1294,7 @@
     "description": "Provider-agnostic, open-source evaluation infrastructure for language models",
     "last_updated": "2025-08-13T04:27:48.018904",
     "readme": "docs/groq-openbench.md",
-    "readme_generated": "2025-08-18T05:03:12.185860",
+    "readme_generated": "2025-08-19T04:48:12.348229",
     "readme_hash": "d0b3d636b6fdab8aa896a9f9afcb527c",
     "repo_updated_at": "2025-08-13T02:49:35Z",
     "stars": 401
@@ -1274,7 +1304,7 @@
     "description": "Comprehensive Python Cheatsheet",
     "last_updated": "2025-07-19T04:28:52.222774",
     "readme": "docs/gto76-python-cheatsheet.md",
-    "readme_generated": "2025-08-18T05:03:45.676397",
+    "readme_generated": "2025-08-19T04:48:19.128117",
     "readme_hash": "8615f5280a9dc0b9f7b2be222b73517e",
     "repo_updated_at": "2025-07-19T04:25:46Z",
     "stars": 37413
@@ -1284,7 +1314,7 @@
     "description": "Introduction to Machine Learning Systems",
     "last_updated": "2025-07-27T04:40:45.213723",
     "readme": "docs/harvard-edge-cs249r_book.md",
-    "readme_generated": "2025-08-18T05:04:01.972221",
+    "readme_generated": "2025-08-19T04:48:34.192719",
     "readme_hash": "1cbbd69fc10e93e195cce7a0a2cdd48e",
     "repo_updated_at": "2025-07-27T04:06:46Z",
     "stars": 2052
@@ -1294,8 +1324,8 @@
     "description": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)",
     "last_updated": "2025-07-05T04:21:48.386575",
     "readme": "docs/hiyouga-LLaMA-Factory.md",
-    "readme_generated": "2025-08-18T05:04:18.615350",
-    "readme_hash": "6dff843090382aae4b05eab91f9d8bdd",
+    "readme_generated": "2025-08-19T04:48:48.365398",
+    "readme_hash": "e09a012ba9b37adff1cc641848b9ddac",
     "repo_updated_at": "2025-07-05T03:33:50Z",
     "stars": 53581
   },
@@ -1304,7 +1334,7 @@
     "description": ":house_with_garden: Open source home automation that puts local control and privacy first.",
     "last_updated": "2025-07-08T04:27:56.867484",
     "readme": "docs/home-assistant-core.md",
-    "readme_generated": "2025-08-18T05:04:22.231626",
+    "readme_generated": "2025-08-19T04:48:52.506531",
     "readme_hash": "9532f18d3571ce670dc2bba4516e36ed",
     "repo_updated_at": "2025-07-08T04:26:03Z",
     "stars": 80026
@@ -1314,7 +1344,7 @@
     "description": "\u57fa\u4e8e\u591a\u667a\u80fd\u4f53LLM\u7684\u4e2d\u6587\u91d1\u878d\u4ea4\u6613\u6846\u67b6 - TradingAgents\u4e2d\u6587\u589e\u5f3a\u7248",
     "last_updated": "2025-07-12T04:28:58.118803",
     "readme": "docs/hsliuping-TradingAgents-CN.md",
-    "readme_generated": "2025-08-18T05:04:29.888711",
+    "readme_generated": "2025-08-19T04:49:37.047530",
     "readme_hash": "8b7412c65a0c9a687cbf8b36e9011b73",
     "repo_updated_at": "2025-07-12T04:19:48Z",
     "stars": 1663
@@ -1324,7 +1354,7 @@
     "description": "\ud83e\udd17 Diffusers: State-of-the-art diffusion models for image, video, and audio generation in PyTorch and FLAX.",
     "last_updated": "2025-07-01T04:35:39.936876",
     "readme": "docs/huggingface-diffusers.md",
-    "readme_generated": "2025-08-18T05:04:45.978035",
+    "readme_generated": "2025-08-19T04:49:54.356585",
     "readme_hash": "4559d90c6010269a68d68cc38d3b5aaa",
     "repo_updated_at": "2025-07-01T04:10:38Z",
     "stars": 29576
@@ -1334,7 +1364,7 @@
     "description": "\ud83e\udd17 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
     "last_updated": "2025-06-27T04:53:31.521666",
     "readme": "docs/huggingface-transformers.md",
-    "readme_generated": "2025-08-18T05:04:57.343310",
+    "readme_generated": "2025-08-19T04:50:16.633340",
     "readme_hash": "653dcb5baef0eec5f7213e559821b2a5",
     "repo_updated_at": "",
     "stars": 146097
@@ -1344,7 +1374,7 @@
     "description": null,
     "last_updated": "2025-08-17T04:30:10.948215",
     "readme": "docs/hwchase17-deepagents.md",
-    "readme_generated": "2025-08-18T05:05:06.853251",
+    "readme_generated": "2025-08-19T04:50:24.887160",
     "readme_hash": "0e7490bdb9ed109695f136ab95b265f1",
     "repo_updated_at": "2025-08-17T04:24:35Z",
     "stars": 2480
@@ -1354,7 +1384,7 @@
     "description": "A command-line tool to download photos from iCloud",
     "last_updated": "2025-07-06T04:30:32.965090",
     "readme": "docs/icloud-photos-downloader-icloud_photos_downloader.md",
-    "readme_generated": "2025-08-18T05:05:12.545773",
+    "readme_generated": "2025-08-19T04:50:29.570724",
     "readme_hash": "12de76ed64204d2f83282e3075eb0e9f",
     "repo_updated_at": "2025-07-06T04:12:48Z",
     "stars": 8422
@@ -1364,7 +1394,7 @@
     "description": "efficient arrays of booleans for Python",
     "last_updated": "2025-07-28T04:43:03.660191",
     "readme": "docs/ilanschnell-bitarray.md",
-    "readme_generated": "2025-08-18T05:05:18.396444",
+    "readme_generated": "2025-08-19T04:50:35.612545",
     "readme_hash": "1fc510cbb01d5673a44eb8f03899346b",
     "repo_updated_at": "2025-07-28T04:41:38Z",
     "stars": 757
@@ -1374,7 +1404,7 @@
     "description": "Open Source Inventory Management System",
     "last_updated": "2025-07-03T04:29:18.660780",
     "readme": "docs/inventree-InvenTree.md",
-    "readme_generated": "2025-08-18T05:05:36.750420",
+    "readme_generated": "2025-08-19T04:50:55.446705",
     "readme_hash": "b0bde89286ae42bf0f48cc8e70f3176a",
     "repo_updated_at": "2025-07-03T04:25:26Z",
     "stars": 5136
@@ -1384,7 +1414,7 @@
     "description": "Unified framework for robot learning built on NVIDIA Isaac Sim",
     "last_updated": "2025-07-10T04:29:48.148257",
     "readme": "docs/isaac-sim-IsaacLab.md",
-    "readme_generated": "2025-08-18T05:05:49.211374",
+    "readme_generated": "2025-08-19T04:51:07.169114",
     "readme_hash": "b3b685c1a440f215bebb032c26a680a4",
     "repo_updated_at": "2025-07-10T04:28:55Z",
     "stars": 4312
@@ -1394,7 +1424,7 @@
     "description": "ETL, Analytics, Versioning for Unstructured Data",
     "last_updated": "2025-07-29T04:44:42.824430",
     "readme": "docs/iterative-datachain.md",
-    "readme_generated": "2025-08-18T05:05:59.938328",
+    "readme_generated": "2025-08-19T04:51:16.821305",
     "readme_hash": "3d096da21a7c93b0a69a5dd728c0b6ae",
     "repo_updated_at": "2025-07-29T04:41:38Z",
     "stars": 2614
@@ -1404,7 +1434,7 @@
     "description": "Convert Machine Learning Code Between Frameworks",
     "last_updated": "2025-06-30T04:31:13.644042",
     "readme": "docs/ivy-llc-ivy.md",
-    "readme_generated": "2025-08-18T05:06:13.462403",
+    "readme_generated": "2025-08-19T04:51:29.358094",
     "readme_hash": "c2930aec1ddfd0c76e900a176737acdb",
     "repo_updated_at": "2025-06-30T04:30:10Z",
     "stars": 14222
@@ -1414,7 +1444,7 @@
     "description": "Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more",
     "last_updated": "2025-06-28T04:20:36.756639",
     "readme": "docs/jax-ml-jax.md",
-    "readme_generated": "2025-08-18T05:06:20.945430",
+    "readme_generated": "2025-08-19T04:51:39.759521",
     "readme_hash": "495a7e7ae2bd342c1fca8489af6f0a7d",
     "repo_updated_at": "2025-06-28T03:50:19Z",
     "stars": 32632
@@ -1424,7 +1454,7 @@
     "description": "Multi-agent collaboration framework",
     "last_updated": "2025-07-31T04:39:21.741365",
     "readme": "docs/jd-opensource-OxyGent.md",
-    "readme_generated": "2025-08-18T05:06:35.753914",
+    "readme_generated": "2025-08-19T04:51:52.005458",
     "readme_hash": "fe0663b8f74476c5050c2cdea9734d85",
     "repo_updated_at": "2025-07-31T03:18:47Z",
     "stars": 535
@@ -1434,7 +1464,7 @@
     "description": "A CalDAV/CardDAV server backed by Git",
     "last_updated": "2025-08-04T04:55:09.518707",
     "readme": "docs/jelmer-xandikos.md",
-    "readme_generated": "2025-08-18T05:06:43.565268",
+    "readme_generated": "2025-08-19T04:51:59.835923",
     "readme_hash": "6953f35e65f8e0bb2d435c150fa8cbd3",
     "repo_updated_at": "2025-08-04T04:50:15Z",
     "stars": 511
@@ -1444,7 +1474,7 @@
     "description": "A lightweight, multi-tenant, scalable and secure gateway that enables Jupyter Notebooks to share resources across distributed clusters such as Apache Spark, Kubernetes and others.",
     "last_updated": "2025-08-09T04:26:42.824393",
     "readme": "docs/jupyter-server-enterprise_gateway.md",
-    "readme_generated": "2025-08-18T05:06:49.219921",
+    "readme_generated": "2025-08-19T04:52:06.524070",
     "readme_hash": "eb444c0807d68b15aa9bac50c996e4e6",
     "repo_updated_at": "2025-08-09T04:02:41Z",
     "stars": 650
@@ -1454,7 +1484,7 @@
     "description": "NAS\u5a92\u4f53\u5e93\u81ea\u52a8\u5316\u7ba1\u7406\u5de5\u5177",
     "last_updated": "2025-07-14T04:38:56.355519",
     "readme": "docs/jxxghp-MoviePilot.md",
-    "readme_generated": "2025-08-18T05:06:57.194225",
+    "readme_generated": "2025-08-19T04:52:14.029837",
     "readme_hash": "e26d409de96d177c8ddc3a5858b5b211",
     "repo_updated_at": "2025-07-14T04:35:17Z",
     "stars": 9022
@@ -1464,7 +1494,7 @@
     "description": "Your AI second brain. Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, gemini, llama, qwen, mistral). Get started - free.",
     "last_updated": "2025-07-09T04:31:44.084767",
     "readme": "docs/khoj-ai-khoj.md",
-    "readme_generated": "2025-08-18T05:07:06.208345",
+    "readme_generated": "2025-08-19T04:52:22.883044",
     "readme_hash": "918bd3b9dc854e073942672a196be69d",
     "repo_updated_at": "2025-07-09T04:11:18Z",
     "stars": 30510
@@ -1474,7 +1504,7 @@
     "description": "The official source code repository for the calibre ebook manager",
     "last_updated": "2025-08-17T04:30:10.948193",
     "readme": "docs/kovidgoyal-calibre.md",
-    "readme_generated": "2025-08-18T05:07:10.498535",
+    "readme_generated": "2025-08-19T04:52:26.857711",
     "readme_hash": "6effd14257781c1ffdd0bfcf3db9f5b6",
     "repo_updated_at": "2025-08-17T04:26:00Z",
     "stars": 22197
@@ -1484,7 +1514,7 @@
     "description": "Machine Learning Pipelines for Kubeflow",
     "last_updated": "2025-07-18T04:36:38.135040",
     "readme": "docs/kubeflow-pipelines.md",
-    "readme_generated": "2025-08-18T05:07:16.670207",
+    "readme_generated": "2025-08-19T04:52:33.722178",
     "readme_hash": "411a177c7df31ae742b12376c42de9d6",
     "repo_updated_at": "2025-07-18T04:21:45Z",
     "stars": 3882
@@ -1494,7 +1524,7 @@
     "description": "A Flexible Framework for Experiencing Cutting-edge LLM Inference Optimizations",
     "last_updated": "2025-07-12T04:28:58.118775",
     "readme": "docs/kvcache-ai-ktransformers.md",
-    "readme_generated": "2025-08-18T05:07:31.295153",
+    "readme_generated": "2025-08-19T04:52:53.429446",
     "readme_hash": "696b3001f1b7a661c2f64eaf54ef9439",
     "repo_updated_at": "2025-07-12T04:24:59Z",
     "stars": 14553
@@ -1504,7 +1534,7 @@
     "description": "The Enterprise-Grade Production-Ready Multi-Agent Orchestration Framework. Website: https://swarms.ai",
     "last_updated": "2025-07-03T04:29:18.660788",
     "readme": "docs/kyegomez-swarms.md",
-    "readme_generated": "2025-08-18T05:08:12.394083",
+    "readme_generated": "2025-08-19T04:53:20.659820",
     "readme_hash": "4ff8627f5f22f5bb41621631866c22d7",
     "repo_updated_at": "2025-07-03T04:02:26Z",
     "stars": 4976
@@ -1514,7 +1544,7 @@
     "description": "Backend.AI is a streamlined, container-based computing cluster platform that hosts popular computing/ML frameworks and diverse programming languages, with pluggable heterogeneous accelerator support including CUDA GPU, ROCm GPU, TPU, IPU and other NPUs.",
     "last_updated": "2025-08-13T04:27:48.018891",
     "readme": "docs/lablup-backend.ai.md",
-    "readme_generated": "2025-08-18T05:08:17.224640",
+    "readme_generated": "2025-08-19T04:53:28.823780",
     "readme_hash": "6875a6fe27c347a15b6d3262c002203a",
     "repo_updated_at": "2025-08-13T04:27:17Z",
     "stars": 577
@@ -1524,8 +1554,8 @@
     "description": "\ud83e\udd29 Easy-to-use global IM bot platform designed for the LLM era / \u7b80\u5355\u6613\u7528\u7684\u5927\u6a21\u578b\u5373\u65f6\u901a\u4fe1\u673a\u5668\u4eba\u5f00\u53d1\u5e73\u53f0 \u26a1\ufe0f Bots for QQ / QQ\u9891\u9053 / Discord / WeChat\uff08\u4f01\u4e1a\u5fae\u4fe1\u3001\u4e2a\u4eba\u5fae\u4fe1\uff09/ Telegram / \u98de\u4e66 / \u9489\u9489 / Slack \ud83e\udde9 Integrated with ChatGPT\u3001DeepSeek\u3001Dify\u3001n8n\u3001Claude\u3001Google Gemini\u3001xAI\u3001PPIO\u3001Ollama\u3001\u963f\u91cc\u4e91\u767e\u70bc\u3001SiliconFlow\u3001Qwen\u3001Moonshot(Kimi K2)\u3001SillyTraven\u3001MCP\u3001WeClone etc. LLM & Agent",
     "last_updated": "2025-07-20T04:39:37.877560",
     "readme": "docs/langbot-app-LangBot.md",
-    "readme_generated": "2025-08-18T05:08:24.258547",
-    "readme_hash": "de67c8b70fd82bb244eb36794d2e3b9b",
+    "readme_generated": "2025-08-19T04:53:35.669396",
+    "readme_hash": "f6bb7e31a19ec33586470c5b51d23e77",
     "repo_updated_at": "2025-07-20T04:32:15Z",
     "stars": 12588
   },
@@ -1534,7 +1564,7 @@
     "description": "E-mails, subdomains and names Harvester - OSINT ",
     "last_updated": "2025-08-17T04:30:10.948208",
     "readme": "docs/laramies-theHarvester.md",
-    "readme_generated": "2025-08-18T05:08:34.013825",
+    "readme_generated": "2025-08-19T04:53:43.000517",
     "readme_hash": "0e87196a768ba25fe4b923c5b0ff5b4b",
     "repo_updated_at": "2025-08-17T03:38:42Z",
     "stars": 13221
@@ -1544,7 +1574,7 @@
     "description": "Build effective agents using Model Context Protocol and simple workflow patterns",
     "last_updated": "2025-08-06T04:41:40.033720",
     "readme": "docs/lastmile-ai-mcp-agent.md",
-    "readme_generated": "2025-08-18T05:09:16.063228",
+    "readme_generated": "2025-08-19T04:54:13.489646",
     "readme_hash": "61d2724e4797903d1fa56be508922eda",
     "repo_updated_at": "2025-08-06T04:30:45Z",
     "stars": 6935
@@ -1554,7 +1584,7 @@
     "description": "Python binding for curl-impersonate fork via cffi. A http client that can impersonate browser tls/ja3/http2 fingerprints.",
     "last_updated": "2025-07-11T04:34:48.421313",
     "readme": "docs/lexiforest-curl_cffi.md",
-    "readme_generated": "2025-08-18T05:09:24.815127",
+    "readme_generated": "2025-08-19T04:54:31.255909",
     "readme_hash": "0ef1b90cb6e69a6a6e123d504bdced81",
     "repo_updated_at": "2025-07-11T04:08:12Z",
     "stars": 3878
@@ -1564,7 +1594,7 @@
     "description": "Efficient Triton Kernels for LLM Training",
     "last_updated": "2025-07-09T04:31:44.084779",
     "readme": "docs/linkedin-Liger-Kernel.md",
-    "readme_generated": "2025-08-18T05:09:54.242911",
+    "readme_generated": "2025-08-19T04:55:00.291330",
     "readme_hash": "8f799ef7ef747fa3eb45cbe7793b276d",
     "repo_updated_at": "2025-07-09T04:21:06Z",
     "stars": 5325
@@ -1574,7 +1604,7 @@
     "description": "Composable building blocks to build Llama Apps",
     "last_updated": "2025-08-15T04:28:02.246256",
     "readme": "docs/llamastack-llama-stack.md",
-    "readme_generated": "2025-08-18T05:10:10.122832",
+    "readme_generated": "2025-08-19T04:55:18.504671",
     "readme_hash": "a8ab7caa55b84dea2d68efa35121f3ba",
     "repo_updated_at": "2025-08-15T04:06:12Z",
     "stars": 7978
@@ -1584,7 +1614,7 @@
     "description": "\ud83d\udcbb A fully functional local AWS cloud stack. Develop and test your cloud & Serverless apps offline",
     "last_updated": "2025-06-27T05:18:19.314843",
     "readme": "docs/localstack-localstack.md",
-    "readme_generated": "2025-08-18T05:10:30.223045",
+    "readme_generated": "2025-08-19T04:55:36.238493",
     "readme_hash": "00bf67fc607faffc8db4d891515ad391",
     "repo_updated_at": "2025-06-27T05:16:21Z",
     "stars": 59405
@@ -1594,7 +1624,7 @@
     "description": "A reactive notebook for Python \u2014 run reproducible experiments, query with SQL, execute as a script, deploy as an app, and version with git. All in a modern, AI-native editor.",
     "last_updated": "2025-07-07T04:31:49.953883",
     "readme": "docs/marimo-team-marimo.md",
-    "readme_generated": "2025-08-18T05:10:51.544171",
+    "readme_generated": "2025-08-19T04:55:59.971442",
     "readme_hash": "e12ac6844b63f24e164bc00aaba23d6d",
     "repo_updated_at": "2025-07-07T04:07:57Z",
     "stars": 14209
@@ -1604,7 +1634,7 @@
     "description": "Unified embedding generation and search engine. Also available on cloud - cloud.marqo.ai",
     "last_updated": "2025-07-04T04:27:28.366128",
     "readme": "docs/marqo-ai-marqo.md",
-    "readme_generated": "2025-08-18T05:11:03.868291",
+    "readme_generated": "2025-08-19T04:56:20.378191",
     "readme_hash": "3eee7f808b78b99fc2bc257068e7545d",
     "repo_updated_at": "2025-07-04T04:03:04Z",
     "stars": 4895
@@ -1614,7 +1644,7 @@
     "description": "matplotlib: plotting with Python",
     "last_updated": "2025-07-26T04:34:05.666796",
     "readme": "docs/matplotlib-matplotlib.md",
-    "readme_generated": "2025-08-18T05:11:10.465795",
+    "readme_generated": "2025-08-19T04:56:26.703641",
     "readme_hash": "108fd3ab9496646857082cdd3514b9f2",
     "repo_updated_at": "2025-07-26T03:28:08Z",
     "stars": 21470
@@ -1624,7 +1654,7 @@
     "description": "Marshalling / communication library for drones.",
     "last_updated": "2025-08-14T04:27:54.499054",
     "readme": "docs/mavlink-mavlink.md",
-    "readme_generated": "2025-08-18T05:11:16.220975",
+    "readme_generated": "2025-08-19T04:56:31.493353",
     "readme_hash": "21943cbafd45c6544722c324787f6d81",
     "repo_updated_at": "2025-08-14T04:25:59Z",
     "stars": 1961
@@ -1634,8 +1664,8 @@
     "description": "mcp-use is the easiest way to interact with mcp servers with custom agents",
     "last_updated": "2025-08-01T04:51:43.048463",
     "readme": "docs/mcp-use-mcp-use.md",
-    "readme_generated": "2025-08-18T05:11:29.562581",
-    "readme_hash": "9271ffc88a57c3531b0040c5d997d96c",
+    "readme_generated": "2025-08-19T04:57:05.365774",
+    "readme_hash": "8fc16226300b66cdf063871324bd476c",
     "repo_updated_at": "2025-08-01T04:49:04Z",
     "stars": 5291
   },
@@ -1644,7 +1674,7 @@
     "description": "Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the url and mealie will automatically import the relevant data or add a family recipe with the UI editor",
     "last_updated": "2025-07-15T04:36:40.628617",
     "readme": "docs/mealie-recipes-mealie.md",
-    "readme_generated": "2025-08-18T05:11:40.262980",
+    "readme_generated": "2025-08-19T04:57:17.460070",
     "readme_hash": "2195acd8201172a25c297738ca3bb507",
     "repo_updated_at": "2025-07-15T04:35:28Z",
     "stars": 9547
@@ -1654,7 +1684,7 @@
     "description": "Meltano: the declarative code-first data integration engine that powers your wildest data and ML-powered product ideas. Say goodbye to writing, maintaining, and scaling your own API integrations.",
     "last_updated": "2025-08-02T04:32:51.575890",
     "readme": "docs/meltano-meltano.md",
-    "readme_generated": "2025-08-18T05:11:51.462212",
+    "readme_generated": "2025-08-19T04:57:26.515028",
     "readme_hash": "44325a8a06de5b07600162b14781bea7",
     "repo_updated_at": "2025-08-02T03:57:10Z",
     "stars": 2153
@@ -1664,7 +1694,7 @@
     "description": "Composable building blocks to build Llama Apps",
     "last_updated": "2025-07-05T04:21:48.386582",
     "readme": "docs/meta-llama-llama-stack.md",
-    "readme_generated": "2025-08-18T05:12:03.450764",
+    "readme_generated": "2025-08-19T04:57:38.165446",
     "readme_hash": "a8ab7caa55b84dea2d68efa35121f3ba",
     "repo_updated_at": "2025-07-05T04:13:37Z",
     "stars": 7886
@@ -1674,7 +1704,7 @@
     "description": "Research and development (R&D) is crucial for the enhancement of industrial productivity, especially in the AI era, where the core aspects of R&D are mainly focused on data and models. We are committed to automating these high-value generic R&D processes through R&D-Agent, which lets AI drive data-driven AI. \ud83d\udd17https://aka.ms/RD-Agent-Tech-Report",
     "last_updated": "2025-07-23T04:38:42.102988",
     "readme": "docs/microsoft-RD-Agent.md",
-    "readme_generated": "2025-08-18T05:12:11.872758",
+    "readme_generated": "2025-08-19T04:57:46.169810",
     "readme_hash": "4be8b3cb346d8fe9bde6607b27266606",
     "repo_updated_at": "2025-07-23T04:38:39Z",
     "stars": 6693
@@ -1684,8 +1714,8 @@
     "description": "A programming framework for agentic AI \ud83e\udd16 PyPi: autogen-agentchat Discord: https://aka.ms/autogen-discord Office Hour: https://aka.ms/autogen-officehour",
     "last_updated": "2025-06-30T04:31:13.644038",
     "readme": "docs/microsoft-autogen.md",
-    "readme_generated": "2025-08-18T05:12:28.001959",
-    "readme_hash": "1bc61048287965896a29df2d0bcc8d7b",
+    "readme_generated": "2025-08-19T04:58:02.711420",
+    "readme_hash": "6e6cc5eca167943e00b8011b24721571",
     "repo_updated_at": "2025-06-30T04:12:54Z",
     "stars": 46643
   },
@@ -1694,7 +1724,7 @@
     "description": "Asset management for Python web development.",
     "last_updated": "2025-07-22T04:36:36.384406",
     "readme": "docs/miracle2k-webassets.md",
-    "readme_generated": "2025-08-18T05:12:31.026398",
+    "readme_generated": "2025-08-19T04:58:05.845522",
     "readme_hash": "c51ea8eeebf12d0fc11e90534e30d5fd",
     "repo_updated_at": "2025-07-22T04:35:14Z",
     "stars": 929
@@ -1704,7 +1734,7 @@
     "description": "Open source platform for the machine learning lifecycle",
     "last_updated": "2025-07-01T04:35:39.936887",
     "readme": "docs/mlflow-mlflow.md",
-    "readme_generated": "2025-08-18T05:12:44.367423",
+    "readme_generated": "2025-08-19T04:58:23.858587",
     "readme_hash": "d6afb55659480b05cd0192d927b28b66",
     "repo_updated_at": "2025-07-01T04:30:20Z",
     "stars": 21075
@@ -1714,7 +1744,7 @@
     "description": "An open source implementation of CLIP.",
     "last_updated": "2025-07-23T04:38:42.102968",
     "readme": "docs/mlfoundations-open_clip.md",
-    "readme_generated": "2025-08-18T05:12:51.668836",
+    "readme_generated": "2025-08-19T04:58:33.965432",
     "readme_hash": "dfcc0282f2b8a88a50bb5c84d813639c",
     "repo_updated_at": "2025-07-23T04:33:36Z",
     "stars": 12218
@@ -1724,7 +1754,7 @@
     "description": "Model Context Protocol Servers",
     "last_updated": "2025-06-30T04:31:13.644028",
     "readme": "docs/modelcontextprotocol-servers.md",
-    "readme_generated": "2025-08-18T05:13:23.076895",
+    "readme_generated": "2025-08-19T04:58:44.037658",
     "readme_hash": "87e9cf054ea9d22e73a1ed1261f88f6e",
     "repo_updated_at": "2025-06-30T04:30:38Z",
     "stars": 56754
@@ -1734,7 +1764,7 @@
     "description": "\u5d29\u574f\uff1a\u661f\u7a79\u94c1\u9053\u5168\u81ea\u52a8 \u4e09\u6708\u4e03\u5c0f\u52a9\u624b",
     "last_updated": "2025-07-17T04:35:36.091848",
     "readme": "docs/moesnow-March7thAssistant.md",
-    "readme_generated": "2025-08-18T05:13:34.801131",
+    "readme_generated": "2025-08-19T04:58:53.509942",
     "readme_hash": "08b22d42509266cc8a43de323fb45474",
     "repo_updated_at": "2025-07-17T04:32:28Z",
     "stars": 8146
@@ -1744,7 +1774,7 @@
     "description": "The most accurate document search and store for building AI apps",
     "last_updated": "2025-07-31T04:39:21.741311",
     "readme": "docs/morphik-org-morphik-core.md",
-    "readme_generated": "2025-08-18T05:13:43.334794",
+    "readme_generated": "2025-08-19T04:59:00.936082",
     "readme_hash": "8a6d09b2691de9fc5c37b5f317471959",
     "repo_updated_at": "2025-07-31T04:36:18Z",
     "stars": 3010
@@ -1754,7 +1784,7 @@
     "description": "\ud83d\udc0b Ansible playbook which helps you host various FOSS services as Docker containers on your own server",
     "last_updated": "2025-07-27T04:40:45.213739",
     "readme": "docs/mother-of-all-self-hosting-mash-playbook.md",
-    "readme_generated": "2025-08-18T05:13:48.718892",
+    "readme_generated": "2025-08-19T04:59:06.192120",
     "readme_hash": "f38cb0f0e414615f00af42663564c2e8",
     "repo_updated_at": "2025-07-27T03:44:07Z",
     "stars": 632
@@ -1764,7 +1794,7 @@
     "description": "A high-performance algorithmic trading platform and event-driven backtester",
     "last_updated": "2025-06-30T04:31:13.644048",
     "readme": "docs/nautechsystems-nautilus_trader.md",
-    "readme_generated": "2025-08-18T05:14:07.779097",
+    "readme_generated": "2025-08-19T04:59:31.466318",
     "readme_hash": "c4bf41187b5ad468a659b81da7c89793",
     "repo_updated_at": "2025-06-30T04:30:58Z",
     "stars": 9506
@@ -1774,7 +1804,7 @@
     "description": "Quickly rewrite git repository history (filter-branch replacement)",
     "last_updated": "2025-07-26T04:34:05.666812",
     "readme": "docs/newren-git-filter-repo.md",
-    "readme_generated": "2025-08-18T05:14:15.730051",
+    "readme_generated": "2025-08-19T04:59:37.482541",
     "readme_hash": "895dacae578c7b5be9beba904f6734f6",
     "repo_updated_at": "2025-07-26T04:31:03Z",
     "stars": 10252
@@ -1784,7 +1814,7 @@
     "description": "An open-source, GPU-accelerated physics simulation engine built upon NVIDIA Warp, specifically targeting roboticists and simulation researchers.",
     "last_updated": "2025-07-22T04:36:36.384409",
     "readme": "docs/newton-physics-newton.md",
-    "readme_generated": "2025-08-18T05:14:18.563464",
+    "readme_generated": "2025-08-19T04:59:50.198611",
     "readme_hash": "34866dccf2415f080d8349d837d5b67d",
     "repo_updated_at": "2025-07-22T04:28:11Z",
     "stars": 619
@@ -1794,7 +1824,7 @@
     "description": "Nix User Repository: User contributed nix packages [maintainer=@Pandapip1]",
     "last_updated": "2025-07-06T04:30:32.965097",
     "readme": "docs/nix-community-NUR.md",
-    "readme_generated": "2025-08-18T05:14:26.605051",
+    "readme_generated": "2025-08-19T05:00:04.820673",
     "readme_hash": "877da1202d537ffa014a34bf40303e3f",
     "repo_updated_at": "2025-07-06T04:26:01Z",
     "stars": 1536
@@ -1804,7 +1834,7 @@
     "description": "NLTK Source",
     "last_updated": "2025-08-07T04:41:36.340059",
     "readme": "docs/nltk-nltk.md",
-    "readme_generated": "2025-08-18T05:14:31.551698",
+    "readme_generated": "2025-08-19T05:00:10.096516",
     "readme_hash": "51f00e3b53e39549a2f1334120989c7c",
     "repo_updated_at": "2025-08-07T04:26:41Z",
     "stars": 14222
@@ -1814,7 +1844,7 @@
     "description": "\u8de8\u5e73\u53f0 Python \u5f02\u6b65\u804a\u5929\u673a\u5668\u4eba\u6846\u67b6 / Asynchronous multi-platform chatbot framework written in Python",
     "last_updated": "2025-07-26T04:34:05.666815",
     "readme": "docs/nonebot-nonebot2.md",
-    "readme_generated": "2025-08-18T05:15:16.486880",
+    "readme_generated": "2025-08-19T05:00:54.083576",
     "readme_hash": "5e6153528f495f3808c5c2f9a2f27da0",
     "repo_updated_at": "2025-07-26T04:29:20Z",
     "stars": 6882
@@ -1824,7 +1854,7 @@
     "description": "NVDA, the free and open source Screen Reader for Microsoft Windows",
     "last_updated": "2025-07-07T04:31:49.953886",
     "readme": "docs/nvaccess-nvda.md",
-    "readme_generated": "2025-08-18T05:15:22.359363",
+    "readme_generated": "2025-08-19T05:01:00.459267",
     "readme_hash": "5992a5b9d38abe0606ed4c3b7273aa49",
     "repo_updated_at": "2025-07-07T04:23:17Z",
     "stars": 2323
@@ -1834,7 +1864,7 @@
     "description": "Odoo. Open Source Apps To Grow Your Business.",
     "last_updated": "2025-07-05T04:21:48.386579",
     "readme": "docs/odoo-odoo.md",
-    "readme_generated": "2025-08-18T05:15:25.229986",
+    "readme_generated": "2025-08-19T05:01:03.529394",
     "readme_hash": "0834321299ca27f78501ed97ee8e3522",
     "repo_updated_at": "2025-07-05T04:21:07Z",
     "stars": 43953
@@ -1844,7 +1874,7 @@
     "description": "Oils is our upgrade path from bash to a better language and runtime.  It's also for Python and JavaScript users who avoid shell!",
     "last_updated": "2025-07-01T04:35:39.936897",
     "readme": "docs/oils-for-unix-oils.md",
-    "readme_generated": "2025-08-18T05:15:33.115587",
+    "readme_generated": "2025-08-19T05:01:10.297851",
     "readme_hash": "d8305f4a8864f6c5d255b45c783ab498",
     "repo_updated_at": "2025-07-01T04:26:46Z",
     "stars": 3140
@@ -1854,7 +1884,7 @@
     "description": "Omnara (YC S25) - Talk to Your AI Agents from Anywhere!",
     "last_updated": "2025-08-14T04:27:54.499075",
     "readme": "docs/omnara-ai-omnara.md",
-    "readme_generated": "2025-08-18T05:15:49.401964",
+    "readme_generated": "2025-08-19T05:01:24.033079",
     "readme_hash": "00d6adaf132a28c8dd805b77f1bd3b3c",
     "repo_updated_at": "2025-08-14T04:26:20Z",
     "stars": 1084
@@ -1864,7 +1894,7 @@
     "description": "Open standard for machine learning interoperability",
     "last_updated": "2025-07-21T04:40:28.696156",
     "readme": "docs/onnx-onnx.md",
-    "readme_generated": "2025-08-18T05:15:56.372768",
+    "readme_generated": "2025-08-19T05:01:32.468283",
     "readme_hash": "aeb811dc7c9cd2b10713db660da0ecc2",
     "repo_updated_at": "2025-07-21T04:11:34Z",
     "stars": 19278
@@ -1874,7 +1904,7 @@
     "description": "Gen-AI Chat for Teams - Think ChatGPT if it had access to your team's unique knowledge.",
     "last_updated": "2025-07-02T04:27:27.311167",
     "readme": "docs/onyx-dot-app-onyx.md",
-    "readme_generated": "2025-08-18T05:16:08.827429",
+    "readme_generated": "2025-08-19T05:01:42.996698",
     "readme_hash": "f2390abdc642f7caea517a8937beaca6",
     "repo_updated_at": "2025-07-02T04:20:19Z",
     "stars": 13093
@@ -1884,8 +1914,8 @@
     "description": "A lightweight, powerful framework for multi-agent workflows",
     "last_updated": "2025-07-29T04:44:42.824426",
     "readme": "docs/openai-openai-agents-python.md",
-    "readme_generated": "2025-08-18T05:16:19.950249",
-    "readme_hash": "758c624af249940208761c7fb4777b8f",
+    "readme_generated": "2025-08-19T05:02:08.312190",
+    "readme_hash": "1783fe43aebce129f8595ff5d57f6c1e",
     "repo_updated_at": "2025-07-29T04:43:23Z",
     "stars": 13018
   },
@@ -1894,7 +1924,7 @@
     "description": "Open Source Clones of Popular Games",
     "last_updated": "2025-07-20T04:39:37.877580",
     "readme": "docs/opengaming-osgameclones.md",
-    "readme_generated": "2025-08-18T05:16:25.002243",
+    "readme_generated": "2025-08-19T05:02:13.377238",
     "readme_hash": "10fa8aa28026c645ac571cfc31f32f55",
     "repo_updated_at": "2025-07-20T04:36:18Z",
     "stars": 1800
@@ -1904,7 +1934,7 @@
     "description": "Open source platform for AI Engineering: OpenTelemetry-native LLM Observability, GPU Monitoring, Guardrails, Evaluations, Prompt Management, Vault, Playground. \ud83d\ude80\ud83d\udcbb Integrates with 50+ LLM Providers, VectorDBs, Agent Frameworks and GPUs.",
     "last_updated": "2025-08-03T04:45:54.392599",
     "readme": "docs/openlit-openlit.md",
-    "readme_generated": "2025-08-18T05:16:34.903271",
+    "readme_generated": "2025-08-19T05:02:27.164264",
     "readme_hash": "144dd5bf188e28eaaf4bf96064609fe8",
     "repo_updated_at": "2025-08-03T03:44:03Z",
     "stars": 1768
@@ -1914,7 +1944,7 @@
     "description": "A free, online learning platform to make quality education accessible for all.",
     "last_updated": "2025-07-24T04:37:04.482029",
     "readme": "docs/oppia-oppia.md",
-    "readme_generated": "2025-08-18T05:16:41.600269",
+    "readme_generated": "2025-08-19T05:02:33.945015",
     "readme_hash": "f9710da799425695d5f497ff77b50683",
     "repo_updated_at": "2025-07-24T04:06:02Z",
     "stars": 6105
@@ -1924,7 +1954,7 @@
     "description": "A hyperparameter optimization framework",
     "last_updated": "2025-08-01T04:51:43.048455",
     "readme": "docs/optuna-optuna.md",
-    "readme_generated": "2025-08-18T05:17:01.714947",
+    "readme_generated": "2025-08-19T05:02:52.034112",
     "readme_hash": "8df19e73426509c5119742d5c8664fb9",
     "repo_updated_at": "2025-08-01T04:49:19Z",
     "stars": 12396
@@ -1934,7 +1964,7 @@
     "description": "Easily fine-tune, evaluate and deploy Qwen3, DeepSeek-R1, Llama 4 or any open source LLM / VLM!",
     "last_updated": "2025-07-23T04:38:42.102985",
     "readme": "docs/oumi-ai-oumi.md",
-    "readme_generated": "2025-08-18T05:17:46.901497",
+    "readme_generated": "2025-08-19T05:03:31.753044",
     "readme_hash": "6b580a2b112c73c311ed9afccc3c353e",
     "repo_updated_at": "2025-07-23T04:19:07Z",
     "stars": 8332
@@ -1944,7 +1974,7 @@
     "description": "Python version of Pact. Enables consumer driven contract testing, providing a mock service and DSL for the consumer project, and interaction playback and verification for the service provider project.",
     "last_updated": "2025-08-11T04:40:43.817823",
     "readme": "docs/pact-foundation-pact-python.md",
-    "readme_generated": "2025-08-18T05:17:47.229302",
+    "readme_generated": "2025-08-19T05:03:37.514516",
     "readme_hash": "ade7878d405d4069ea5d6e7dea334578",
     "repo_updated_at": "2025-08-11T04:09:26Z",
     "stars": 617
@@ -1954,7 +1984,7 @@
     "description": "The Pants Build System",
     "last_updated": "2025-07-03T04:29:18.660795",
     "readme": "docs/pantsbuild-pants.md",
-    "readme_generated": "2025-08-18T05:17:50.725413",
+    "readme_generated": "2025-08-19T05:03:37.851014",
     "readme_hash": "63c703e764bd002d821cc13ae339086b",
     "repo_updated_at": "2025-07-03T04:25:00Z",
     "stars": 3536
@@ -1964,7 +1994,7 @@
     "description": "A community-supported supercharged document management system: scan, index and archive all your documents",
     "last_updated": "2025-07-29T04:44:42.824402",
     "readme": "docs/paperless-ngx-paperless-ngx.md",
-    "readme_generated": "2025-08-18T05:18:00.241070",
+    "readme_generated": "2025-08-19T05:03:38.194652",
     "readme_hash": "fc014df967c3bdd33d83cc0741acce67",
     "repo_updated_at": "2025-07-29T04:41:07Z",
     "stars": 29624
@@ -1974,7 +2004,7 @@
     "description": "An up-to-date blacklist of phishing and scam domains, automatically updated by the PhishDestroy system. A reliable threat intelligence source for integration into security systems.",
     "last_updated": "2025-08-10T04:37:48.677925",
     "readme": "docs/phishdestroy-destroylist.md",
-    "readme_generated": "2025-08-18T05:18:09.047534",
+    "readme_generated": "2025-08-19T05:03:38.563109",
     "readme_hash": "ad485aef00313c17f6005756316a11d7",
     "repo_updated_at": "2025-08-10T03:56:36Z",
     "stars": 506
@@ -1984,7 +2014,7 @@
     "description": "A collective list of free APIs",
     "last_updated": "2025-06-27T04:53:31.521651",
     "readme": "docs/public-apis-public-apis.md",
-    "readme_generated": "2025-08-18T05:18:48.522958",
+    "readme_generated": "2025-08-19T05:03:39.082150",
     "readme_hash": "6e347e56025d597c5e5a06f590e0df9b",
     "repo_updated_at": "",
     "stars": 353523
@@ -1994,7 +2024,7 @@
     "description": "Infrastructure powering the pwn.college dojo",
     "last_updated": "2025-08-18T04:36:26.136603",
     "readme": "docs/pwncollege-dojo.md",
-    "readme_generated": "2025-08-18T05:18:48.810031",
+    "readme_generated": "2025-08-19T05:03:39.464412",
     "readme_hash": "0bbcb419950450fbc6c07b063dfbb4be",
     "repo_updated_at": "2025-08-18T04:27:52Z",
     "stars": 379
@@ -2004,7 +2034,7 @@
     "description": "It's not just a linter that annoys you!",
     "last_updated": "2025-08-05T04:44:47.423241",
     "readme": "docs/pylint-dev-pylint.md",
-    "readme_generated": "2025-08-18T05:18:49.186307",
+    "readme_generated": "2025-08-19T05:03:44.790414",
     "readme_hash": "e55a52aabe5bed26b0511fa484a5e27c",
     "repo_updated_at": "2025-08-05T04:34:39Z",
     "stars": 5529
@@ -2014,7 +2044,7 @@
     "description": "Auditing and relabeling cross-distribution Linux wheels.",
     "last_updated": "2025-07-27T04:40:45.213746",
     "readme": "docs/pypa-auditwheel.md",
-    "readme_generated": "2025-08-18T05:18:49.513290",
+    "readme_generated": "2025-08-19T05:03:45.141881",
     "readme_hash": "a004fbf247c68f42bcbcd61de8fba56f",
     "repo_updated_at": "2025-07-27T04:35:09Z",
     "stars": 487
@@ -2024,8 +2054,8 @@
     "description": "\ud83c\udfa1 Build Python wheels for all the platforms with minimal configuration. ",
     "last_updated": "2025-07-15T04:36:40.628644",
     "readme": "docs/pypa-cibuildwheel.md",
-    "readme_generated": "2025-08-18T05:18:49.921900",
-    "readme_hash": "0c4942a3566719e02ebf4da5b15022f2",
+    "readme_generated": "2025-08-19T05:03:45.510298",
+    "readme_hash": "ccfe276b3505b2b3afbf852dd9ed73c4",
     "repo_updated_at": "2025-07-15T04:34:21Z",
     "stars": 2030
   },
@@ -2034,7 +2064,7 @@
     "description": "The Python package installer",
     "last_updated": "2025-07-20T04:39:37.877573",
     "readme": "docs/pypa-pip.md",
-    "readme_generated": "2025-08-18T05:18:50.275090",
+    "readme_generated": "2025-08-19T05:03:45.837822",
     "readme_hash": "0d23db3bd227ce16f24271b73285dc44",
     "repo_updated_at": "2025-07-20T04:24:25Z",
     "stars": 9858
@@ -2044,7 +2074,7 @@
     "description": "The pytest framework makes it easy to write small tests, yet scales to support complex functional testing",
     "last_updated": "2025-08-05T04:44:47.423237",
     "readme": "docs/pytest-dev-pytest.md",
-    "readme_generated": "2025-08-18T05:18:50.602087",
+    "readme_generated": "2025-08-19T05:03:46.172568",
     "readme_hash": "b67cd902ac235f20de7c12d544645606",
     "repo_updated_at": "2025-08-05T04:36:24Z",
     "stars": 12947
@@ -2054,7 +2084,7 @@
     "description": "Asyncio support for pytest",
     "last_updated": "2025-07-16T04:35:42.062525",
     "readme": "docs/pytest-dev-pytest-asyncio.md",
-    "readme_generated": "2025-08-18T05:18:50.933320",
+    "readme_generated": "2025-08-19T05:03:46.502823",
     "readme_hash": "f915a51e19cdb02a6e2e59e0734ea151",
     "repo_updated_at": "2025-07-16T04:22:03Z",
     "stars": 1534
@@ -2064,7 +2094,7 @@
     "description": "A python wrapper for the GitLab API.",
     "last_updated": "2025-07-14T04:38:56.355537",
     "readme": "docs/python-gitlab-python-gitlab.md",
-    "readme_generated": "2025-08-18T05:18:51.726641",
+    "readme_generated": "2025-08-19T05:03:46.839844",
     "readme_hash": "ceb417f462a2afd806325aaf86acce49",
     "repo_updated_at": "2025-07-14T03:57:38Z",
     "stars": 2373
@@ -2074,7 +2104,7 @@
     "description": "Automating Releases via SemVer and Commit Message Conventions",
     "last_updated": "2025-08-06T04:41:40.033730",
     "readme": "docs/python-semantic-release-python-semantic-release.md",
-    "readme_generated": "2025-08-18T05:18:52.070496",
+    "readme_generated": "2025-08-19T05:03:47.173050",
     "readme_hash": "283e9a79ac45714dc4315ddcac736a6b",
     "repo_updated_at": "2025-08-06T04:40:43Z",
     "stars": 935
@@ -2084,7 +2114,7 @@
     "description": "PyTorch native quantization and sparsity for training and inference",
     "last_updated": "2025-08-12T04:25:30.139605",
     "readme": "docs/pytorch-ao.md",
-    "readme_generated": "2025-08-18T05:18:52.385554",
+    "readme_generated": "2025-08-19T05:03:47.520573",
     "readme_hash": "6472738074abd6bceb4a4f074c49709f",
     "repo_updated_at": "2025-08-12T04:03:42Z",
     "stars": 2250
@@ -2094,7 +2124,7 @@
     "description": "On-device AI across mobile, embedded and edge for PyTorch",
     "last_updated": "2025-07-03T04:29:18.660802",
     "readme": "docs/pytorch-executorch.md",
-    "readme_generated": "2025-08-18T05:18:52.708187",
+    "readme_generated": "2025-08-19T05:03:47.846277",
     "readme_hash": "b2261d3f5317de1497e2205f93f108f4",
     "repo_updated_at": "2025-07-03T04:24:48Z",
     "stars": 3002
@@ -2104,7 +2134,7 @@
     "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
     "last_updated": "2025-06-27T05:18:19.314826",
     "readme": "docs/pytorch-pytorch.md",
-    "readme_generated": "2025-08-18T05:18:53.158206",
+    "readme_generated": "2025-08-19T05:03:48.255323",
     "readme_hash": "b3141dd0689ed11a5dd48b19f09ed4e9",
     "repo_updated_at": "2025-06-27T05:11:19Z",
     "stars": 91056
@@ -2114,7 +2144,7 @@
     "description": "A modular, primitive-first, python-first PyTorch library for Reinforcement Learning.",
     "last_updated": "2025-07-11T04:34:48.421316",
     "readme": "docs/pytorch-rl.md",
-    "readme_generated": "2025-08-18T05:18:53.540969",
+    "readme_generated": "2025-08-19T05:03:48.660716",
     "readme_hash": "0c362b34fb56b27656c20365f56dd18c",
     "repo_updated_at": "2025-07-11T04:13:12Z",
     "stars": 2905
@@ -2124,7 +2154,7 @@
     "description": "Enabling PyTorch on XLA Devices (e.g. Google TPU)",
     "last_updated": "2025-07-10T04:29:48.148261",
     "readme": "docs/pytorch-xla.md",
-    "readme_generated": "2025-08-18T05:18:53.866290",
+    "readme_generated": "2025-08-19T05:03:49.072903",
     "readme_hash": "180128d0a2e445b9a3a0fd4450e72667",
     "repo_updated_at": "2025-07-10T04:00:06Z",
     "stars": 2637
@@ -2134,7 +2164,7 @@
     "description": "3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)",
     "last_updated": "2025-07-26T04:34:05.666825",
     "readme": "docs/pyvista-pyvista.md",
-    "readme_generated": "2025-08-18T05:18:54.196600",
+    "readme_generated": "2025-08-19T05:03:49.434687",
     "readme_hash": "07447989abce2f05d66de18e1b518f10",
     "repo_updated_at": "2025-07-26T03:41:46Z",
     "stars": 3208
@@ -2144,7 +2174,7 @@
     "description": "\ud83d\ude80 PR-Agent (Qodo Merge open-source): An AI-Powered \ud83e\udd16 Tool for Automated Pull Request Analysis, Feedback, Suggestions and More! \ud83d\udcbb\ud83d\udd0d",
     "last_updated": "2025-07-30T04:40:34.450450",
     "readme": "docs/qodo-ai-pr-agent.md",
-    "readme_generated": "2025-08-18T05:18:54.523856",
+    "readme_generated": "2025-08-19T05:03:49.803966",
     "readme_hash": "0952b8d1cd1746e9367fa4edb73715fd",
     "repo_updated_at": "2025-07-30T04:36:40Z",
     "stars": 8514
@@ -2154,7 +2184,7 @@
     "description": "An open-source Python framework for creating, editing, and invoking Noisy Intermediate-Scale Quantum (NISQ) circuits.",
     "last_updated": "2025-07-17T04:35:36.091862",
     "readme": "docs/quantumlib-Cirq.md",
-    "readme_generated": "2025-08-18T05:18:54.817678",
+    "readme_generated": "2025-08-19T05:03:50.149449",
     "readme_hash": "2f12d619c907fb0fed218d735bcbfa13",
     "repo_updated_at": "2025-07-17T04:26:10Z",
     "stars": 4655
@@ -2164,7 +2194,7 @@
     "description": "The electronic structure package for quantum computers.",
     "last_updated": "2025-07-11T04:34:48.421320",
     "readme": "docs/quantumlib-OpenFermion.md",
-    "readme_generated": "2025-08-18T05:18:55.408734",
+    "readme_generated": "2025-08-19T05:03:50.518884",
     "readme_hash": "f691a476efbcd7efc8360258dde1c9de",
     "repo_updated_at": "2025-07-11T04:00:45Z",
     "stars": 1610
@@ -2174,7 +2204,7 @@
     "description": "QuTiP: Quantum Toolbox in Python",
     "last_updated": "2025-07-09T04:31:44.084789",
     "readme": "docs/qutip-qutip.md",
-    "readme_generated": "2025-08-18T05:18:55.723207",
+    "readme_generated": "2025-08-19T05:03:50.820872",
     "readme_hash": "72a0ed4674b0697785d8351b133a228c",
     "repo_updated_at": "2025-07-09T04:11:47Z",
     "stars": 1856
@@ -2184,7 +2214,7 @@
     "description": "Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.",
     "last_updated": "2025-07-22T04:36:36.384387",
     "readme": "docs/ray-project-ray.md",
-    "readme_generated": "2025-08-18T05:18:56.037791",
+    "readme_generated": "2025-08-19T05:03:51.145662",
     "readme_hash": "d674eea128fd6ac0e55775e086e35d53",
     "repo_updated_at": "2025-07-22T04:35:47Z",
     "stars": 38113
@@ -2194,17 +2224,27 @@
     "description": "Multilingual Document Layout Parsing in a Single Vision-Language Model",
     "last_updated": "2025-08-11T04:40:43.817816",
     "readme": "docs/rednote-hilab-dots.ocr.md",
-    "readme_generated": "2025-08-18T05:18:56.388827",
+    "readme_generated": "2025-08-19T05:03:51.618613",
     "readme_hash": "ba2f1f478958f95036d7832f8dff0e2f",
     "repo_updated_at": "2025-08-11T04:34:28Z",
     "stars": 1787
+  },
+  "rio-labs/rio": {
+    "added_date": "2025-08-19T04:20:02.538892",
+    "description": "WebApps in pure Python. No JavaScript, HTML and CSS needed",
+    "last_updated": "2025-08-19T04:20:02.538891",
+    "readme": "docs/rio-labs-rio.md",
+    "readme_generated": "2025-08-19T05:03:51.946006",
+    "readme_hash": "069f72eae332c17c545cd62ac52d1fb6",
+    "repo_updated_at": "2025-08-19T03:50:54Z",
+    "stars": 3233
   },
   "rotki/rotki": {
     "added_date": "2025-08-07T04:41:36.340073",
     "description": "A portfolio tracking, analytics, accounting and management application that protects your privacy",
     "last_updated": "2025-08-07T04:41:36.340072",
     "readme": "docs/rotki-rotki.md",
-    "readme_generated": "2025-08-18T05:18:56.687466",
+    "readme_generated": "2025-08-19T05:03:52.297807",
     "readme_hash": "78583a60ff3b91eafc68641b73bf1436",
     "repo_updated_at": "2025-08-07T04:39:30Z",
     "stars": 3208
@@ -2214,7 +2254,7 @@
     "description": "LlamaIndex is the leading framework for building LLM-powered agents over your data.",
     "last_updated": "2025-07-07T04:31:49.953863",
     "readme": "docs/run-llama-llama_index.md",
-    "readme_generated": "2025-08-18T05:18:57.011557",
+    "readme_generated": "2025-08-19T05:03:52.662148",
     "readme_hash": "48cf9eb3620ce9fb3834fa890bbbee80",
     "repo_updated_at": "2025-07-07T04:29:36Z",
     "stars": 42881
@@ -2224,7 +2264,7 @@
     "description": "A fully open-source, LlamaCloud-backed alternative to NotebookLM",
     "last_updated": "2025-07-17T04:35:36.091872",
     "readme": "docs/run-llama-notebookllama.md",
-    "readme_generated": "2025-08-18T05:18:57.296837",
+    "readme_generated": "2025-08-19T05:03:52.982542",
     "readme_hash": "5d7e02e488ea427c15bb633219dd81a3",
     "repo_updated_at": "2025-07-17T02:18:03Z",
     "stars": 1149
@@ -2234,8 +2274,8 @@
     "description": "VRM Importer, Exporter and Utilities for Blender 2.93 to 4.5",
     "last_updated": "2025-07-19T04:28:52.222794",
     "readme": "docs/saturday06-VRM-Addon-for-Blender.md",
-    "readme_generated": "2025-08-18T05:18:57.668689",
-    "readme_hash": "889f7d9e1bf52a297d11bda52adaa9cb",
+    "readme_generated": "2025-08-19T05:03:53.339143",
+    "readme_hash": "849323a263faea012a2ce7dbdb4416c2",
     "repo_updated_at": "2025-07-19T04:25:20Z",
     "stars": 1467
   },
@@ -2244,7 +2284,7 @@
     "description": "A terminal spreadsheet multitool for discovering and arranging data",
     "last_updated": "2025-08-08T04:41:36.994299",
     "readme": "docs/saulpw-visidata.md",
-    "readme_generated": "2025-08-18T05:18:57.957838",
+    "readme_generated": "2025-08-19T05:03:53.695309",
     "readme_hash": "16610d94ac63850f54dd87d7246e7b53",
     "repo_updated_at": "2025-08-08T04:38:49Z",
     "stars": 8391
@@ -2254,7 +2294,7 @@
     "description": "SciPy library main repository",
     "last_updated": "2025-07-18T04:36:38.135034",
     "readme": "docs/scipy-scipy.md",
-    "readme_generated": "2025-08-18T05:18:58.262747",
+    "readme_generated": "2025-08-19T05:03:54.014106",
     "readme_hash": "02c5013a38e8e5409aef092a732c4400",
     "repo_updated_at": "2025-07-18T04:21:57Z",
     "stars": 13827
@@ -2264,7 +2304,7 @@
     "description": "SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.",
     "last_updated": "2025-07-26T04:34:05.666808",
     "readme": "docs/searxng-searxng.md",
-    "readme_generated": "2025-08-18T05:18:58.586731",
+    "readme_generated": "2025-08-19T05:03:54.369115",
     "readme_hash": "79cd4a85a108da48d1171572188ad1c1",
     "repo_updated_at": "2025-07-26T04:22:50Z",
     "stars": 20673
@@ -2274,7 +2314,7 @@
     "description": "SGLang is a fast serving framework for large language models and vision language models.",
     "last_updated": "2025-06-28T04:20:36.756658",
     "readme": "docs/sgl-project-sglang.md",
-    "readme_generated": "2025-08-18T05:18:58.925190",
+    "readme_generated": "2025-08-19T05:03:54.774202",
     "readme_hash": "a2d595cfebf2f1a8971d3b9e6153a6b5",
     "repo_updated_at": "2025-06-28T04:00:31Z",
     "stars": 15522
@@ -2284,7 +2324,7 @@
     "description": "Broadcast TV simulator",
     "last_updated": "2025-07-31T04:39:21.741349",
     "readme": "docs/shane-mason-FieldStation42.md",
-    "readme_generated": "2025-08-18T05:18:59.216578",
+    "readme_generated": "2025-08-19T05:03:55.121288",
     "readme_hash": "a43cf34febc47f3eef749a8216f6fc05",
     "repo_updated_at": "2025-07-31T04:35:55Z",
     "stars": 851
@@ -2294,7 +2334,7 @@
     "description": "Agent S: an open agentic framework that uses computers like a human",
     "last_updated": "2025-07-08T04:27:56.867492",
     "readme": "docs/simular-ai-Agent-S.md",
-    "readme_generated": "2025-08-18T05:18:59.531142",
+    "readme_generated": "2025-08-19T05:03:55.492021",
     "readme_hash": "71d6b91303743a364ff734e68bf0e844",
     "repo_updated_at": "2025-07-08T04:26:50Z",
     "stars": 5697
@@ -2304,7 +2344,7 @@
     "description": "Self-hosted bookmark manager that is designed be to be minimal, fast, and easy to set up using Docker.",
     "last_updated": "2025-08-16T04:21:57.354540",
     "readme": "docs/sissbruecker-linkding.md",
-    "readme_generated": "2025-08-18T05:18:59.856087",
+    "readme_generated": "2025-08-19T05:03:55.905126",
     "readme_hash": "91e0905d9f6b9870dd74e00abb2465a3",
     "repo_updated_at": "2025-08-16T04:20:11Z",
     "stars": 8889
@@ -2314,7 +2354,7 @@
     "description": "A unified framework for machine learning with time series",
     "last_updated": "2025-07-13T04:34:51.577544",
     "readme": "docs/sktime-sktime.md",
-    "readme_generated": "2025-08-18T05:19:00.260742",
+    "readme_generated": "2025-08-19T05:03:56.273433",
     "readme_hash": "b8427bfa38120cb343e5e27d56b80725",
     "repo_updated_at": "2025-07-13T04:19:57Z",
     "stars": 9150
@@ -2324,7 +2364,7 @@
     "description": "SkyPilot: Run AI and batch jobs on any infra (Kubernetes or 16+ clouds). Get unified execution, cost savings, and high GPU availability via a simple interface.",
     "last_updated": "2025-07-02T04:27:27.311191",
     "readme": "docs/skypilot-org-skypilot.md",
-    "readme_generated": "2025-08-18T05:19:00.582935",
+    "readme_generated": "2025-08-19T05:03:56.604866",
     "readme_hash": "3d4184dfb6a8132ff97e0b9f346c83de",
     "repo_updated_at": "2025-07-02T03:43:00Z",
     "stars": 8304
@@ -2334,7 +2374,7 @@
     "description": "Biomni: a general-purpose biomedical AI agent",
     "last_updated": "2025-07-13T04:34:51.577551",
     "readme": "docs/snap-stanford-Biomni.md",
-    "readme_generated": "2025-08-18T05:19:00.892719",
+    "readme_generated": "2025-08-19T05:03:56.968619",
     "readme_hash": "58b7804cb52ca19d0334a7d6d741b1ea",
     "repo_updated_at": "2025-07-13T04:31:25Z",
     "stars": 1515
@@ -2344,7 +2384,7 @@
     "description": ":robot::speech_balloon: An easy-to-use and highly extensible IRC Bot framework. Formerly Willie.",
     "last_updated": "2025-08-07T04:41:36.340082",
     "readme": "docs/sopel-irc-sopel.md",
-    "readme_generated": "2025-08-18T05:19:01.249443",
+    "readme_generated": "2025-08-19T05:03:57.362422",
     "readme_hash": "f9b30e5aa4de048b626b592254e7a7ac",
     "repo_updated_at": "2025-08-07T04:39:29Z",
     "stars": 964
@@ -2354,7 +2394,7 @@
     "description": "A flexible package manager that supports multiple versions, configurations, platforms, and compilers.",
     "last_updated": "2025-07-16T04:35:42.062509",
     "readme": "docs/spack-spack.md",
-    "readme_generated": "2025-08-18T05:19:01.589091",
+    "readme_generated": "2025-08-19T05:03:57.752229",
     "readme_hash": "711126b51b82cbe3e90f801fea0522c5",
     "repo_updated_at": "2025-07-16T04:19:38Z",
     "stars": 4730
@@ -2364,7 +2404,7 @@
     "description": null,
     "last_updated": "2025-07-09T04:31:44.084785",
     "readme": "docs/speaches-ai-speaches.md",
-    "readme_generated": "2025-08-18T05:19:01.943589",
+    "readme_generated": "2025-08-19T05:03:58.052157",
     "readme_hash": "3f56c8406880222303c6c6827a82e177",
     "repo_updated_at": "2025-07-09T04:05:41Z",
     "stars": 2058
@@ -2374,7 +2414,7 @@
     "description": "The Sphinx documentation generator",
     "last_updated": "2025-08-08T04:41:36.994311",
     "readme": "docs/sphinx-doc-sphinx.md",
-    "readme_generated": "2025-08-18T05:19:02.244907",
+    "readme_generated": "2025-08-19T05:03:58.402368",
     "readme_hash": "b0ab2929be6830fd7abff60714446efb",
     "repo_updated_at": "2025-08-08T04:30:15Z",
     "stars": 7285
@@ -2384,7 +2424,7 @@
     "description": "Download your Spotify playlists and songs along with album art and metadata (from YouTube if a match is found).",
     "last_updated": "2025-08-02T04:32:51.575870",
     "readme": "docs/spotDL-spotify-downloader.md",
-    "readme_generated": "2025-08-18T05:19:02.568732",
+    "readme_generated": "2025-08-19T05:03:58.752650",
     "readme_hash": "0a5b5d4a9fa7fa8f6e0d3a219a9cfa1e",
     "repo_updated_at": "2025-08-02T04:11:35Z",
     "stars": 20820
@@ -2394,7 +2434,7 @@
     "description": "A modular SQL linter and auto-formatter with support for multiple dialects and templated code.",
     "last_updated": "2025-07-23T04:38:42.102981",
     "readme": "docs/sqlfluff-sqlfluff.md",
-    "readme_generated": "2025-08-18T05:19:02.855505",
+    "readme_generated": "2025-08-19T05:03:59.087317",
     "readme_hash": "50588013d2bf1123f55e489a5168b961",
     "repo_updated_at": "2025-07-23T04:13:58Z",
     "stars": 9038
@@ -2404,7 +2444,7 @@
     "description": "Malicious traffic detection system",
     "last_updated": "2025-07-25T04:36:44.627528",
     "readme": "docs/stamparm-maltrail.md",
-    "readme_generated": "2025-08-18T05:19:03.222333",
+    "readme_generated": "2025-08-19T05:03:59.523562",
     "readme_hash": "2ff10428d44b9211c12ddeb6412844ff",
     "repo_updated_at": "2025-07-25T04:33:41Z",
     "stars": 7102
@@ -2414,7 +2454,7 @@
     "description": "Legible, Scalable, Reproducible Foundation Models with Named Tensors and Jax",
     "last_updated": "2025-07-28T04:43:03.660198",
     "readme": "docs/stanford-crfm-levanter.md",
-    "readme_generated": "2025-08-18T05:19:03.586197",
+    "readme_generated": "2025-08-19T05:03:59.858525",
     "readme_hash": "89293e15400bd72bb541aba8e22e2da6",
     "repo_updated_at": "2025-07-28T04:22:31Z",
     "stars": 626
@@ -2424,7 +2464,7 @@
     "description": "A model-driven approach to building AI agents in just a few lines of code.",
     "last_updated": "2025-07-12T04:28:58.118799",
     "readme": "docs/strands-agents-sdk-python.md",
-    "readme_generated": "2025-08-18T05:19:03.893375",
+    "readme_generated": "2025-08-19T05:04:00.216668",
     "readme_hash": "22948a02cd6f98ea3ac56f50eca774f0",
     "repo_updated_at": "2025-07-12T03:47:43Z",
     "stars": 2016
@@ -2434,7 +2474,7 @@
     "description": "Streamlit \u2014 A faster way to build and share data apps.",
     "last_updated": "2025-08-10T04:37:48.677915",
     "readme": "docs/streamlit-streamlit.md",
-    "readme_generated": "2025-08-18T05:19:04.189774",
+    "readme_generated": "2025-08-19T05:04:00.555920",
     "readme_hash": "9208581b78cfdbc345743f3908d6d5f6",
     "repo_updated_at": "2025-08-10T03:10:20Z",
     "stars": 40834
@@ -2444,7 +2484,7 @@
     "description": "A cross platform way to express data transformation, relational algebra, standardized record expression and plans.",
     "last_updated": "2025-08-10T04:37:48.677922",
     "readme": "docs/substrait-io-substrait.md",
-    "readme_generated": "2025-08-18T05:19:04.510492",
+    "readme_generated": "2025-08-19T05:04:00.876302",
     "readme_hash": "67fca4d123690b2e17b726ba7935a168",
     "repo_updated_at": "2025-08-10T03:40:16Z",
     "stars": 1365
@@ -2454,7 +2494,7 @@
     "description": "Open CapCut API.",
     "last_updated": "2025-07-31T04:39:21.741359",
     "readme": "docs/sun-guannan-CapCutAPI.md",
-    "readme_generated": "2025-08-18T05:19:04.850304",
+    "readme_generated": "2025-08-19T05:04:01.235332",
     "readme_hash": "ade645991c29f99b536f288542decbe6",
     "repo_updated_at": "2025-07-31T04:10:46Z",
     "stars": 571
@@ -2464,7 +2504,7 @@
     "description": "A pipeline parallel training script for diffusion models.",
     "last_updated": "2025-08-07T04:41:36.340075",
     "readme": "docs/tdrussell-diffusion-pipe.md",
-    "readme_generated": "2025-08-18T05:19:05.157900",
+    "readme_generated": "2025-08-19T05:04:01.564224",
     "readme_hash": "49f263edac7465097eca008bc2fbdc57",
     "repo_updated_at": "2025-08-07T04:41:17Z",
     "stars": 1370
@@ -2474,7 +2514,7 @@
     "description": "Testcontainers is a Python library that providing a friendly API to run Docker container. It is designed to create runtime environment to use during your automatic tests.",
     "last_updated": "2025-08-08T04:41:36.994319",
     "readme": "docs/testcontainers-testcontainers-python.md",
-    "readme_generated": "2025-08-18T05:19:05.467827",
+    "readme_generated": "2025-08-19T05:04:01.880358",
     "readme_hash": "0e36eee015cc986d441204fb99972746",
     "repo_updated_at": "2025-08-08T04:20:54Z",
     "stars": 1912
@@ -2484,7 +2524,7 @@
     "description": "You like pytorch? You like micrograd? You love tinygrad! \u2764\ufe0f ",
     "last_updated": "2025-06-29T04:32:48.651432",
     "readme": "docs/tinygrad-tinygrad.md",
-    "readme_generated": "2025-08-18T05:19:05.788975",
+    "readme_generated": "2025-08-19T05:04:02.296939",
     "readme_hash": "24904a35398953be4b3eebb97d4a90d6",
     "repo_updated_at": "2025-06-29T02:45:53Z",
     "stars": 29492
@@ -2494,7 +2534,7 @@
     "description": "Open-source observability for your LLM application, based on OpenTelemetry",
     "last_updated": "2025-08-11T04:40:43.817800",
     "readme": "docs/traceloop-openllmetry.md",
-    "readme_generated": "2025-08-18T05:19:06.107863",
+    "readme_generated": "2025-08-19T05:04:02.655384",
     "readme_hash": "efd1bb4e698093f71cc3907cb065b932",
     "repo_updated_at": "2025-08-11T03:52:00Z",
     "stars": 6193
@@ -2504,7 +2544,7 @@
     "description": "Useful localization tools with Python API for building localization & translation systems",
     "last_updated": "2025-08-18T04:36:26.136596",
     "readme": "docs/translate-translate.md",
-    "readme_generated": "2025-08-18T05:19:06.432473",
+    "readme_generated": "2025-08-19T05:04:02.994180",
     "readme_hash": "6184ca18a62ce757e6b86f0f6ca933da",
     "repo_updated_at": "2025-08-18T04:30:08Z",
     "stars": 906
@@ -2514,7 +2554,7 @@
     "description": "\u9e23\u6f6eBot\u63d2\u4ef6, \u652f\u6301OneBot(QQ)\u3001OneBotV12\u3001QQ\u9891\u9053\u3001\u5fae\u4fe1\u3001KOOK\uff08\u5f00\u9ed1\u5566\uff09\u3001Telegram\uff08\u7535\u62a5\uff09\u3001FeiShu\uff08\u98de\u4e66\uff09\u3001DoDo\u3001Villa\uff08\u7c73\u6e38\u793e\u5927\u522b\u91ce\uff09\u3001Discord\u7684\u5168\u529f\u80fdHoshinoBot/NoneBot2/Koishi/yunzai/ZeroBot\u9e23\u6f6e\u673a\u5668\u4eba\u63d2\u4ef6",
     "last_updated": "2025-08-13T04:27:48.018911",
     "readme": "docs/tyql688-WutheringWavesUID.md",
-    "readme_generated": "2025-08-18T05:19:06.753166",
+    "readme_generated": "2025-08-19T05:04:03.348402",
     "readme_hash": "b9358efc62ef475418244005cd7b9833",
     "repo_updated_at": "2025-08-13T04:25:15Z",
     "stars": 379
@@ -2524,7 +2564,7 @@
     "description": "Fine-tuning & Reinforcement Learning for LLMs. \ud83e\udda5 Train gpt-oss, Qwen3, Llama 4, DeepSeek-R1, Gemma 3, TTS 2x faster with 70% less VRAM.",
     "last_updated": "2025-08-06T04:41:40.033706",
     "readme": "docs/unslothai-unsloth.md",
-    "readme_generated": "2025-08-18T05:19:07.141181",
+    "readme_generated": "2025-08-19T05:04:03.714685",
     "readme_hash": "1b56b93db489521721c1659957d87361",
     "repo_updated_at": "2025-08-06T04:07:46Z",
     "stars": 43270
@@ -2534,7 +2574,7 @@
     "description": "Open World Holidays Framework",
     "last_updated": "2025-08-10T04:37:48.677919",
     "readme": "docs/vacanza-holidays.md",
-    "readme_generated": "2025-08-18T05:19:07.550264",
+    "readme_generated": "2025-08-19T05:04:04.126716",
     "readme_hash": "e9fcef72035278cd717dc61f47c7ff0e",
     "repo_updated_at": "2025-08-10T03:52:09Z",
     "stars": 1695
@@ -2544,8 +2584,8 @@
     "description": "iptv\u6700\u65b0\u53ef\u7528\u76f4\u64ad\u6e90iptv4/iptv6\u3002\u76f4\u64ad\u7535\u89c6\u7cfb\u7edf\uff0c\u8fd9\u91cc\u6709\u6298\u817e\u597d\u4e86\u7684\uff0c\u76f4\u63a5\u4e0b\u8f7d\u7528\u5427\u3002\u76f4\u64ad\u7535\u89c6app\u7535\u89c6\u624b\u673a\u5168\u90e8\u517c\u5bb9\u3002\uff08\u5305\u542b\u6e2f\u6fb3\u53f0\uff09",
     "last_updated": "2025-07-13T04:34:51.577547",
     "readme": "docs/vbskycn-iptv.md",
-    "readme_generated": "2025-08-18T05:19:07.843751",
-    "readme_hash": "75f4a331f1ddec1bbdf86ae848c48a71",
+    "readme_generated": "2025-08-19T05:04:04.493829",
+    "readme_hash": "7726fac40795133190a71a523d3476bd",
     "repo_updated_at": "2025-07-13T04:30:41Z",
     "stars": 4024
   },
@@ -2554,7 +2594,7 @@
     "description": "An opinionated list of awesome Python frameworks, libraries, software and resources.",
     "last_updated": "2025-06-27T04:53:31.521656",
     "readme": "docs/vinta-awesome-python.md",
-    "readme_generated": "2025-08-18T05:19:08.245184",
+    "readme_generated": "2025-08-19T05:04:04.924167",
     "readme_hash": "328234017acc5239a8ca0867f968cc22",
     "repo_updated_at": "",
     "stars": 247958
@@ -2564,7 +2604,7 @@
     "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
     "last_updated": "2025-06-27T05:18:19.314847",
     "readme": "docs/vllm-project-vllm.md",
-    "readme_generated": "2025-08-18T05:19:08.597508",
+    "readme_generated": "2025-08-19T05:04:05.281307",
     "readme_hash": "42ef6edaef22976627ff4bf7bdc05228",
     "repo_updated_at": "2025-06-27T05:17:34Z",
     "stars": 50842
@@ -2574,8 +2614,8 @@
     "description": "verl: Volcano Engine Reinforcement Learning for LLMs",
     "last_updated": "2025-06-30T04:31:13.644045",
     "readme": "docs/volcengine-verl.md",
-    "readme_generated": "2025-08-18T05:19:09.000220",
-    "readme_hash": "5020f161efe48f01ea81416de32d8b49",
+    "readme_generated": "2025-08-19T05:04:05.680791",
+    "readme_hash": "0f240afd7593947285252888210b9fbc",
     "repo_updated_at": "2025-06-30T04:26:32Z",
     "stars": 10123
   },
@@ -2584,7 +2624,7 @@
     "description": "Refine high-quality datasets and visual AI models",
     "last_updated": "2025-07-02T04:27:27.311187",
     "readme": "docs/voxel51-fiftyone.md",
-    "readme_generated": "2025-08-18T05:19:09.323861",
+    "readme_generated": "2025-08-19T05:04:06.019663",
     "readme_hash": "ff9d280ee9bc1d17c2568efbcfc0f76f",
     "repo_updated_at": "2025-07-02T03:54:47Z",
     "stars": 9664
@@ -2594,7 +2634,7 @@
     "description": "Decky plugin to streamline installation and usage of lsfg-vk; the Lossless Scaling compatibility layer for linux",
     "last_updated": "2025-07-25T04:36:44.627535",
     "readme": "docs/xXJSONDeruloXx-decky-lossless-scaling-vk.md",
-    "readme_generated": "2025-08-18T05:19:09.619982",
+    "readme_generated": "2025-08-19T05:04:06.371487",
     "readme_hash": "ed9fae2bd3721a41ba90f0ccd5168dbf",
     "repo_updated_at": "2025-07-25T04:08:16Z",
     "stars": 552
@@ -2604,7 +2644,7 @@
     "description": "\u83b7\u53d6\u5fae\u4fe1\u4fe1\u606f\uff1b\u8bfb\u53d6\u6570\u636e\u5e93\uff0c\u672c\u5730\u67e5\u770b\u804a\u5929\u8bb0\u5f55\u5e76\u5bfc\u51fa\u4e3acsv\u3001html\u7b49\u683c\u5f0f\u7528\u4e8eAI\u8bad\u7ec3\uff0c\u81ea\u52a8\u56de\u590d\u7b49\u3002\u652f\u6301\u591a\u8d26\u6237\u4fe1\u606f\u83b7\u53d6\uff0c\u652f\u6301\u6240\u6709\u5fae\u4fe1\u7248\u672c\u3002",
     "last_updated": "2025-07-19T04:28:52.222791",
     "readme": "docs/xaoyaoo-PyWxDump.md",
-    "readme_generated": "2025-08-18T05:19:09.917247",
+    "readme_generated": "2025-08-19T05:04:06.717682",
     "readme_hash": "6041f13fe985f8dee218b6a7f137828b",
     "repo_updated_at": "2025-07-19T04:24:26Z",
     "stars": 9100
@@ -2614,7 +2654,7 @@
     "description": "\u63d0\u5347\u90e8\u7f72\u5728cloudflare\u3001vercel\u6216netlify\u7684\u7f51\u9875\u5728\u4e2d\u56fd\u7684\u8bbf\u95ee\u901f\u5ea6\u548c\u7a33\u5b9a\u6027 Improve the access speed and stability in China of web pages hosted on cloudflare, vercel or netlify by merely changing your CNAME record. cf\u4f18\u9009\u57df\u540d | cf\u4f18\u9009ip | cloudflare | vercel | netlify | \u52a0\u901f | \u56fd\u5185 | \u4e2d\u56fd | \u5883\u5185 | \u5927\u9646",
     "last_updated": "2025-07-28T04:43:03.660177",
     "readme": "docs/xingpingcn-enhanced-FaaS-in-China.md",
-    "readme_generated": "2025-08-18T05:19:10.248413",
+    "readme_generated": "2025-08-19T05:04:07.116258",
     "readme_hash": "a9fea13334405ac5260f64f6e0249f88",
     "repo_updated_at": "2025-07-28T04:42:41Z",
     "stars": 2368
@@ -2624,7 +2664,7 @@
     "description": "\ud83d\ude80 One-stop solution for creating your digital avatar from chat history \ud83d\udca1 Fine-tune LLMs with your chat logs to capture your unique style, then bind to a chatbot to bring your digital self to life.  \u4ece\u804a\u5929\u8bb0\u5f55\u521b\u9020\u6570\u5b57\u5206\u8eab\u7684\u4e00\u7ad9\u5f0f\u89e3\u51b3\u65b9\u6848  ",
     "last_updated": "2025-07-06T04:30:32.965086",
     "readme": "docs/xming521-WeClone.md",
-    "readme_generated": "2025-08-18T05:19:10.645335",
+    "readme_generated": "2025-08-19T05:04:07.509593",
     "readme_hash": "f579e5e64a346f94fb0f1c65730c7226",
     "repo_updated_at": "2025-07-06T03:41:12Z",
     "stars": 14667
@@ -2634,7 +2674,7 @@
     "description": ":shell: Python-powered shell. Full-featured and cross-platform.",
     "last_updated": "2025-07-24T04:37:04.482008",
     "readme": "docs/xonsh-xonsh.md",
-    "readme_generated": "2025-08-18T05:19:10.980612",
+    "readme_generated": "2025-08-19T05:04:07.855893",
     "readme_hash": "993ebe586de402c7f2a949ed9e25d172",
     "repo_updated_at": "2025-07-24T04:32:35Z",
     "stars": 8909
@@ -2644,7 +2684,7 @@
     "description": "The official gpt4free repository | various collection of powerful language models | o4, o3 and deepseek r1, gpt-4.1, gemini 2.5",
     "last_updated": "2025-08-10T04:37:48.677893",
     "readme": "docs/xtekky-gpt4free.md",
-    "readme_generated": "2025-08-18T05:19:11.320525",
+    "readme_generated": "2025-08-19T05:04:08.245246",
     "readme_hash": "9d42882ab743064821334fb7996aebae",
     "repo_updated_at": "2025-08-10T04:32:04Z",
     "stars": 64890
@@ -2654,7 +2694,7 @@
     "description": "Automatically Collect POC or EXP from GitHub by CVE ID.",
     "last_updated": "2025-08-09T04:26:42.824390",
     "readme": "docs/ycdxsb-PocOrExp_in_Github.md",
-    "readme_generated": "2025-08-18T05:19:11.657645",
+    "readme_generated": "2025-08-19T05:04:08.593928",
     "readme_hash": "bb98060131949e6100cedf264835491a",
     "repo_updated_at": "2025-08-09T04:25:16Z",
     "stars": 1055
@@ -2664,7 +2704,7 @@
     "description": "Make your own running home page",
     "last_updated": "2025-08-09T04:26:42.824382",
     "readme": "docs/yihong0618-running_page.md",
-    "readme_generated": "2025-08-18T05:19:12.065308",
+    "readme_generated": "2025-08-19T05:04:08.949127",
     "readme_hash": "454fae014b59a075140fb73d381837bb",
     "repo_updated_at": "2025-08-09T04:20:26Z",
     "stars": 4153
@@ -2674,7 +2714,7 @@
     "description": "A feature-rich command-line audio/video downloader",
     "last_updated": "2025-07-08T04:27:56.867467",
     "readme": "docs/yt-dlp-yt-dlp.md",
-    "readme_generated": "2025-08-18T05:19:12.580861",
+    "readme_generated": "2025-08-19T05:04:09.370606",
     "readme_hash": "9afea3b15a6c8789bc6772a419314cda",
     "repo_updated_at": "2025-07-08T04:25:28Z",
     "stars": 118053
@@ -2684,7 +2724,7 @@
     "description": "Command-line program to download videos from YouTube.com and other video sites",
     "last_updated": "2025-06-27T04:53:31.521669",
     "readme": "docs/ytdl-org-youtube-dl.md",
-    "readme_generated": "2025-08-18T05:19:13.014898",
+    "readme_generated": "2025-08-19T05:04:09.816465",
     "readme_hash": "d9c32bd571576d61256168389d010eb3",
     "repo_updated_at": "",
     "stars": 136229
@@ -2694,7 +2734,7 @@
     "description": "Code of \u03c0^3: Scalable Permutation-Equivariant Visual Geometry Learning",
     "last_updated": "2025-07-29T04:44:42.824437",
     "readme": "docs/yyfz-Pi3.md",
-    "readme_generated": "2025-08-18T05:19:13.328439",
+    "readme_generated": "2025-08-19T05:04:10.182797",
     "readme_hash": "1e94059e0f37d01708f4583ef1948a4a",
     "repo_updated_at": "2025-07-29T03:31:47Z",
     "stars": 881
@@ -2704,17 +2744,27 @@
     "description": "GLM-4.5: An open-source large language model designed for intelligent agents by Z.ai",
     "last_updated": "2025-08-12T04:25:30.139617",
     "readme": "docs/zai-org-GLM-4.5.md",
-    "readme_generated": "2025-08-18T05:19:13.639913",
+    "readme_generated": "2025-08-19T05:04:10.535086",
     "readme_hash": "e0d60649129d55e08b2b7d93746d6ab5",
     "repo_updated_at": "2025-08-12T04:13:47Z",
     "stars": 1848
+  },
+  "zauberzeug/nicegui": {
+    "added_date": "2025-08-19T04:20:02.538882",
+    "description": "Create web-based user interfaces with Python. The nice way.",
+    "last_updated": "2025-08-19T04:20:02.538871",
+    "readme": "docs/zauberzeug-nicegui.md",
+    "readme_generated": "2025-08-19T05:04:10.848245",
+    "readme_hash": "187ce86374c48f3932f00801c35366c3",
+    "repo_updated_at": "2025-08-19T04:19:12Z",
+    "stars": 13203
   },
   "zeromq/pyzmq": {
     "added_date": "2025-08-03T04:45:54.392595",
     "description": "PyZMQ:  Python bindings for zeromq",
     "last_updated": "2025-08-03T04:45:54.392594",
     "readme": "docs/zeromq-pyzmq.md",
-    "readme_generated": "2025-08-18T05:19:13.982316",
+    "readme_generated": "2025-08-19T05:04:11.193618",
     "readme_hash": "be925f8fa2c348fa670f24465f4cb90a",
     "repo_updated_at": "2025-08-03T04:45:38Z",
     "stars": 3944
@@ -2724,7 +2774,7 @@
     "description": "My learning notes/codes for ML SYS.",
     "last_updated": "2025-07-21T04:40:28.696176",
     "readme": "docs/zhaochenyang20-Awesome-ML-SYS-Tutorial.md",
-    "readme_generated": "2025-08-18T05:19:14.333570",
+    "readme_generated": "2025-08-19T05:04:11.569115",
     "readme_hash": "8bc1a0bec0e53a96016fb1848ac4d5c1",
     "repo_updated_at": "2025-07-21T04:39:40Z",
     "stars": 2964
@@ -2734,7 +2784,7 @@
     "description": "\u95f2\u9c7c\u81ea\u52a8\u56de\u590d\u7ba1\u7406\u7cfb\u7edf\u662f\u4e00\u4e2a\u57fa\u4e8e Python + FastAPI \u5f00\u53d1\u7684\u81ea\u52a8\u5316\u5ba2\u670d\u7cfb\u7edf\uff0c\u4e13\u4e3a\u95f2\u9c7c\u5e73\u53f0\u8bbe\u8ba1\u3002\u7cfb\u7edf\u901a\u8fc7 WebSocket \u8fde\u63a5\u95f2\u9c7c\u670d\u52a1\u5668\uff0c\u5b9e\u65f6\u63a5\u6536\u548c\u5904\u7406\u6d88\u606f\uff0c\u63d0\u4f9b\u667a\u80fd\u5316\u7684\u81ea\u52a8\u56de\u590d\u670d\u52a1\u3002",
     "last_updated": "2025-08-04T04:55:09.518711",
     "readme": "docs/zhinianboke-xianyu-auto-reply.md",
-    "readme_generated": "2025-08-18T05:19:14.696704",
+    "readme_generated": "2025-08-19T05:04:12.049261",
     "readme_hash": "c5bdf3c95dd80f416871627a249a1114",
     "repo_updated_at": "2025-08-04T04:28:02Z",
     "stars": 449
@@ -2744,7 +2794,7 @@
     "description": "Zulip server and web application. Open-source team chat that helps teams stay productive and focused.",
     "last_updated": "2025-07-07T04:31:49.953880",
     "readme": "docs/zulip-zulip.md",
-    "readme_generated": "2025-08-18T05:19:15.048048",
+    "readme_generated": "2025-08-19T05:04:12.453028",
     "readme_hash": "000cd63c9b9e17395d18f4c4d160a0fd",
     "repo_updated_at": "2025-07-07T04:30:46Z",
     "stars": 23103

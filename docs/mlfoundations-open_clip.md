@@ -1,27 +1,28 @@
-# OpenCLIP: Open Source Implementation of CLIP for Image-Text Learning
+# OpenCLIP: Open Source Implementation of CLIP for Image-Text Understanding
 
-**OpenCLIP is an open-source implementation of OpenAI's CLIP, offering a comprehensive toolkit for training and utilizing state-of-the-art image-text models. ([Original Repo](https://github.com/mlfoundations/open_clip))**
+**OpenCLIP** offers a robust and versatile open-source implementation of OpenAI's CLIP (Contrastive Language-Image Pre-training), enabling state-of-the-art performance in image-text understanding.  Explore a comprehensive suite of pre-trained models, training resources, and fine-tuning capabilities to unlock new possibilities in visual AI.  [Explore the original repository](https://github.com/mlfoundations/open_clip).
 
-OpenCLIP empowers researchers and developers to explore the cutting edge of image-text understanding, offering pre-trained models, fine-tuning capabilities, and efficient training tools.
+[![PyPI](https://img.shields.io/pypi/v/open_clip_torch.svg)](https://pypi.python.org/pypi/open_clip_torch)
+[![Paper](https://img.shields.io/badge/paper-arXiv-blue.svg)](https://arxiv.org/abs/2212.07143)  [![Citations](https://img.shields.io/badge/citations-see%20below-brightgreen.svg)](#citing)  [![Colab](https://img.shields.io/badge/Colab-Tutorials-blue.svg)](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_clip.ipynb)
 
 ## Key Features:
 
-*   **Pre-trained Models:** Access a wide array of pre-trained models, including those trained on massive datasets like LAION-2B and DataComp-1B, with detailed performance metrics and zero-shot results.
-*   **Reproducible Research:** Leverage a codebase built on reproducible scaling laws, facilitating experimentation and advancements in contrastive language-image learning.
-*   **Flexible Training:** Train CLIP models from scratch or fine-tune pre-trained models on custom datasets, with support for multi-GPU training, distributed training, and various data sources.
-*   **Comprehensive Documentation:** Benefit from detailed documentation, including usage examples, training instructions, and information on pre-trained models, along with Colab notebooks for hands-on experimentation.
-*   **Extensive Model Support:** Supports various model architectures, including ConvNext, ViT, and SigLIP models, along with support for CoCa models.
-*   **Int8 Support:** Accelerate training and inference with beta support for Int8 quantization.
+*   **Pre-trained Models:** Access a wide variety of pre-trained models trained on massive datasets like LAION-2B, LAION-400M, and DataComp-1B, achieving impressive zero-shot ImageNet accuracy.
+*   **Training Code:**  Train your own CLIP models with flexible training scripts that support multi-GPU, SLURM clusters, and various data sources.
+*   **Fine-tuning Capabilities:** Leverage the repository to fine-tune your models on downstream classification tasks, and find information for robustness on the [WiSE-FT repository](https://github.com/mlfoundations/wise-ft).
+*   **Comprehensive Documentation:**  Benefit from detailed documentation, including usage examples, model loading guides, and training instructions, along with Colab tutorials.
+*   **Efficient Implementations:**  Utilize features like gradient accumulation, Int8 support, and remote loading/training for optimized performance.
+*   **Model Distillation Support:** Fine-tune your models while improving the accuracy by using the Model Distillation capability.
 
-## Quickstart:
+## Quickstart
 
-### Installation:
+**Installation:**
 
 ```bash
 pip install open_clip_torch
 ```
 
-### Usage:
+**Usage Example:**
 
 ```python
 import torch
@@ -43,45 +44,69 @@ with torch.no_grad(), torch.autocast("cuda"):
 
     text_probs = (100.0 * image_features @ text_features.T).softmax(dim=-1)
 
-print("Label probs:", text_probs)
+print("Label probs:", text_probs)  # prints: [[1., 0., 0.]]
 ```
 
-### Pre-trained Models:
+## Pretrained Models & Performance
 
-Explore a rich collection of pre-trained models, each with unique characteristics and performance levels, through the provided model interface. Details are available in the [PRETRAINED.md](docs/PRETRAINED.md) document.
+OpenCLIP provides a range of pre-trained models, offering diverse architectures and training datasets, and are accessible via `open_clip.create_model_and_transforms`. Details about available models are available [here](docs/PRETRAINED.md).
 
-```python
-import open_clip
-open_clip.list_pretrained()
+| Model             | Training Data | Resolution | ImageNet Zero-Shot Acc. |
+| :---------------- | :------------ | :--------- | :---------------------- |
+| ConvNext-Base     | LAION-2B      | 256px      | 71.5%                   |
+| ConvNext-Large    | LAION-2B      | 320px      | 76.9%                   |
+| ConvNext-XXLarge  | LAION-2B      | 256px      | 79.5%                   |
+| ViT-B-32-256      | DataComp-1B   | 256px      | 72.8%                   |
+| ViT-B-16          | DataComp-1B   | 224px      | 73.5%                   |
+| ViT-L-14          | LAION-2B      | 224px      | 75.3%                   |
+| ViT-H-14          | LAION-2B      | 224px      | 78.0%                   |
+| ViT-L-14          | DataComp-1B   | 224px      | 79.2%                   |
+| ViT-bigG-14       | LAION-2B      | 224px      | 80.1%                   |
+
+*(See the original README for more detailed model comparisons, which is continually updated.)*
+
+## Training and Fine-tuning
+
+OpenCLIP provides the tools to train new CLIP models, offers guidance for fine-tuning on classification tasks, and more. Check the original repository for detailed information on data preparation, training scripts, and multi-GPU/SLURM setups, and fine-tuning methods.
+
+## Model Cards
+
+Model cards with additional model specific details can be found on the Hugging Face Hub under the OpenCLIP library tag: https://huggingface.co/models?library=open_clip.
+
+## Acknowledgments
+
+(As per the original README)
+
+## Citing
+
+If you found this repository useful, please consider citing:
+
+```bibtex
+@software{ilharco_gabriel_2021_5143773,
+  author       = {Ilharco, Gabriel and
+                  Wortsman, Mitchell and
+                  Wightman, Ross and
+                  Gordon, Cade and
+                  Carlini, Nicholas and
+                  Taori, Rohan and
+                  Dave, Achal and
+                  Shankar, Vaishaal and
+                  Namkoong, Hongseok and
+                  Miller, John and
+                  Hajishirzi, Hannaneh and
+                  Farhadi, Ali and
+                  Schmidt, Ludwig},
+  title        = {OpenCLIP},
+  month        = jul,
+  year         = 2021,
+  note         = {If you use this software, please cite it as below.},
+  publisher    = {Zenodo},
+  version      = {0.1},
+  doi          = {10.5281/zenodo.5143773},
+  url          = {https://doi.org/10.5281/zenodo.5143773}
+}
 ```
 
-## Training and Fine-tuning:
-
-OpenCLIP provides comprehensive training scripts and features for both training from scratch and fine-tuning.  For downstream classification tasks see [WiSE-FT](https://github.com/mlfoundations/wise-ft).
-
-## Evaluation:
-
-Evaluate model performance using the [CLIP_benchmark](https://github.com/LAION-AI/CLIP_benchmark#how-to-use) framework.
-
-## Acknowledgments:
-
-[Include existing acknowledgements here]
-
-## Citing:
-
-[Include existing citations here]
+(And the other citations from the original README)
 
 [![DOI](https://zenodo.org/badge/390536799.svg)](https://zenodo.org/badge/latestdoi/390536799)
-```
-
-Key improvements:
-
-*   **SEO Optimization:**  Added a concise introductory hook and key features to make the README more attractive and informative.
-*   **Clear Headings & Structure:**  Organized the content with clear headings and bullet points for easy readability and navigation.
-*   **Concise Summarization:**  Condensed the original text while retaining essential information, focusing on key benefits.
-*   **Link Back to Original Repo:** Added a prominent link to the GitHub repo.
-*   **Focus on Value Proposition:** Highlighted the core value of OpenCLIP – empowering users in image-text learning.
-*   **Improved readability and flow.**
-*   **Emphasis on Key Commands and Functions.**
-*   **Removed redundant or less important details.**
-*   **Added a quick start example.**

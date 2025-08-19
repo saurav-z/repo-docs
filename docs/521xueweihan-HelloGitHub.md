@@ -3,35 +3,28 @@
   <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
 </p>
 
-## HelloGitHub: Discover Exciting Open Source Projects
+## HelloGitHub: Discover Exciting and Beginner-Friendly Open Source Projects
 
-**HelloGitHub is your monthly guide to the most interesting, beginner-friendly open-source projects on GitHub, making open source fun and accessible!**
+**HelloGitHub** is your go-to resource for uncovering fascinating and accessible open-source projects on GitHub.  Find out more at the [original repository](https://github.com/521xueweihan/HelloGitHub).
 
-[![Featured｜HelloGitHub](https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt)](https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70)
-<br>
-<a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
-<a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
+<p align="center">
+  <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
+  <a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
+    <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
+</p>
 
 ### Key Features
 
-*   **Curated Content:** Discover a hand-picked selection of fascinating open-source projects, perfect for beginners.
-*   **Monthly Updates:** Stay informed with new projects released monthly (on the 28th).
-*   **Diverse Topics:** Explore a wide range of projects, including open-source books, practical projects, and enterprise-level solutions.
-*   **Learn and Grow:** Quickly grasp the essence of open source and cultivate a love for contributing.
-*   **Community Driven**: [Contribute](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) to HelloGitHub by recommending or self-nominating projects.
+*   **Curated Open Source Projects:** Discover hand-picked, interesting, and beginner-friendly open-source projects.
+*   **Monthly Updates:** Stay up-to-date with new project discoveries, published monthly on the 28th.
+*   **Diverse Content:** Explore a variety of projects, including practical examples and enterprise-level solutions.
+*   **Easy Entry:** Designed to help you quickly understand the appeal of open source and get started.
 
-### What You'll Find
+### Content Overview
 
-Each monthly release ([see latest issue](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MzYyNzQ0MQ==&action=getalbum&album_id=1331197538447310849#wechat_redirect)) features:
-
-*   Interesting open-source projects suitable for beginners.
-*   Insights into noteworthy open-source books.
-*   Practical, real-world project examples.
-*   Information on enterprise-level projects.
-
-### Access the Latest Issues
-
-For the best reading experience, visit the [official website](https://hellogithub.com/) or follow the [HelloGitHub Official WeChat Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
+Explore the curated lists of projects, with links to each monthly publication.
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -44,9 +37,14 @@ For the best reading experience, visit the [official website](https://hellogithu
 | [第 85 期](/content/HelloGitHub85.md) | [第 84 期](/content/HelloGitHub84.md) | [第 83 期](/content/HelloGitHub83.md) | [第 82 期](/content/HelloGitHub82.md) | [第 81 期](/content/HelloGitHub81.md) |
 | [第 80 期](/content/HelloGitHub80.md) | [第 79 期](/content/HelloGitHub79.md) | [第 78 期](/content/HelloGitHub78.md) | [第 77 期](/content/HelloGitHub77.md) | [第 76 期](/content/HelloGitHub76.md) |
 
+For a better reading experience, check out the [official website](https://hellogithub.com/) or the [HelloGitHub WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
+
+### Contribute
+
+Contribute to **HelloGitHub** by [recommending or self-recommending](https://hellogithub.com/periodical) projects. You can also become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
+
 ### Sponsors
 
-<!-- Sponsor Table (same as original) -->
 <table>
   <thead>
     <tr>
@@ -83,20 +81,17 @@ For the best reading experience, visit the [official website](https://hellogithu
 
 ### License
 
-This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en).
-
----
-
-[Back to the Top](#)
-**[Find the original repo here](https://github.com/521xueweihan/HelloGitHub)**
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Contact [595666367@qq.com](mailto:595666367@qq.com)
 ```
-
 Key improvements and SEO optimizations:
 
-*   **Clear, concise headings:** Using headings for each section enhances readability and SEO.
-*   **Keywords:** Incorporated relevant keywords like "open source," "GitHub," "projects," "beginner-friendly," etc. to help with search.
-*   **Benefit-driven descriptions:** Focuses on what the user gains (discovering projects, learning, community).
-*   **Call to action:** Includes clear calls to action (visit the website, contribute).
-*   **Concise Summary:** The one-sentence hook at the beginning is a strong, SEO-friendly summary.
-*   **Link to the Original Repo:** Added a link to the original repository.
-*   **Cleaned up the content:** Removed extraneous content to present the content efficiently.
+*   **Clear Headline:** "HelloGitHub: Discover Exciting and Beginner-Friendly Open Source Projects" is a concise and keyword-rich headline.
+*   **One-Sentence Hook:** The opening sentence is a clear and compelling introduction.
+*   **Keyword Optimization:**  Uses keywords like "open source projects," "GitHub," and "beginner-friendly."
+*   **Structured Headings:**  Uses clear headings like "Key Features" and "Content Overview" for readability and SEO.
+*   **Bulleted Lists:** Highlights key features with bullet points for easy scanning.
+*   **Internal Links:**  Includes links to content sections, contributor guidelines, and the official website.
+*   **External Links:** Provides links to the original repository, social media, and sponsor websites.
+*   **Concise Language:**  The text is more direct and action-oriented.
+*   **Call to Action:** Encourages contribution.
+*   **Alt text on Images:** Added `alt` attributes to all the images.

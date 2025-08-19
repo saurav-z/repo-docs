@@ -1,33 +1,44 @@
-# Calibre: Your All-in-One Ebook Management Solution
+# Calibre: The Ultimate E-book Manager (View, Convert, & Catalog)
 
-Tired of juggling ebooks across different formats and devices? **Calibre is a powerful, free, and open-source ebook manager that lets you view, convert, edit, and catalog your ebook library with ease.** ([See the original repo](https://github.com/kovidgoyal/calibre))
+**Tired of struggling to manage your e-book library?** Calibre is a powerful, open-source e-book management solution that allows you to easily view, convert, edit, and catalog your e-books across all major formats.  [Learn more and explore the original repository](https://github.com/kovidgoyal/calibre).
 
 <img align="left" src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" height="200" width="200"/>
 
-## Key Features
+## Key Features of Calibre:
 
-*   **Comprehensive Ebook Management:** View, convert, edit, and organize ebooks in all major formats.
-*   **Cross-Platform Compatibility:** Runs seamlessly on Linux, Windows, and macOS.
-*   **Device Synchronization:** Easily connect and manage ebooks on your e-reader devices.
-*   **Metadata Fetching:** Automatically download metadata (author, cover art, etc.) for your books from the internet.
-*   **News Conversion:** Download and convert news articles into ebooks for offline reading.
+*   **Comprehensive E-book Management:** Organize your e-books with ease, including viewing, converting, and editing.
+*   **Format Support:** Works with all major e-book formats.
+*   **Device Compatibility:** Seamlessly connects to and interacts with e-book reader devices.
+*   **Metadata Retrieval:** Automatically fetches metadata (author, title, cover art, etc.) for your books from the internet.
+*   **News & Content Conversion:** Downloads newspapers and converts them into e-books for convenient reading.
+*   **Cross-Platform:** Runs smoothly on Linux, Windows, and macOS.
 
-## Resources
+## Screenshots
 
-*   **About Calibre:** Learn more about the project on the [Calibre About page](https://calibre-ebook.com/about).
-*   **Screenshots:** Explore the interface and features on the [Screenshots page](https://calibre-ebook.com/demo).
-*   **User Manual:** Get detailed instructions and guidance in the [User Manual](https://manual.calibre-ebook.com).
-*   **Development:**
-    *   Set up a development environment: [Setting up a development environment for calibre](https://manual.calibre-ebook.com/develop.html).
-    *   Source code: [tarball of the source code](https://calibre-ebook.com/dist/src)
-*   **Bug Reports & Feature Requests:** Report issues and suggest improvements via the [calibre bug tracker on Launchpad](https://bugs.launchpad.net/calibre).
-*   **Build Instructions:** Build calibre binaries for various platforms. ([bypy/README.rst](bypy/README.rst))
-*   **Package Status:** See package versions in various repositories. [![Packaging Status](https://repology.org/badge/vertical-allrepos/calibre.svg?columns=3&header=calibre)](https://repology.org/project/calibre/versions)
+See Calibre in action on the [Screenshots page](https://calibre-ebook.com/demo).
 
-## Support Calibre
+## Usage
 
-calibre is a project built by many volunteers. If you find it useful, please consider supporting its development through [Donation](https://calibre-ebook.com/donate).
+For in-depth information on how to use Calibre, refer to the comprehensive [User Manual](https://manual.calibre-ebook.com).
 
-## Build Status
+## Development
 
-[![Build Status](https://github.com/kovidgoyal/calibre/workflows/CI/badge.svg)](https://github.com/kovidgoyal/calibre/actions?query=workflow%3ACI)
+Interested in contributing to Calibre? Find details on setting up a development environment in the [Development documentation](https://manual.calibre-ebook.com/develop.html). You can also download a [tarball of the source code](https://calibre-ebook.com/dist/src).
+
+## Reporting Bugs & Feature Requests
+
+Report any bugs or suggest new features via the official Calibre bug tracker on [Launchpad](https://bugs.launchpad.net/calibre).  GitHub is used primarily for code hosting and pull requests.
+
+## Supporting Calibre Development
+
+Calibre is a community-driven project built by volunteers.  If you find Calibre useful, please consider supporting its continued development by [donating](https://calibre-ebook.com/donate).
+
+## Building Calibre Binaries
+
+Instructions for building Calibre binaries and installers for all supported platforms are available in the [Build instructions](bypy/README.rst).
+
+## Package Versions
+
+Check the packaging status of Calibre across various repositories:
+
+[![Packaging Status](https://repology.org/badge/vertical-allrepos/calibre.svg?columns=3&header=calibre)](https://repology.org/project/calibre/versions)

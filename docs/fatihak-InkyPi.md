@@ -1,126 +1,107 @@
-# InkyPi: Your Customizable E-Ink Display
+# InkyPi: Your Customizable E-Ink Display for Effortless Content Display
 
-**Transform your Raspberry Pi into a stylish and energy-efficient information hub with InkyPi.** ([Original Repo](https://github.com/fatihak/InkyPi))
+<img src="./docs/images/inky_clock.jpg" alt="InkyPi Clock">
 
-<img src="./docs/images/inky_clock.jpg" alt="InkyPi Clock Display" />
+**InkyPi transforms your Raspberry Pi into a sleek, low-power e-ink display, perfect for displaying the information you need without distractions.** [View the original repository on GitHub](https://github.com/fatihak/InkyPi).
 
-## About InkyPi
+## Key Features
 
-InkyPi is an open-source project that lets you create a personalized e-ink display using a Raspberry Pi. Enjoy a distraction-free experience with its crisp, paper-like visuals, perfect for displaying the information you care about most.  With a simple web interface, setup and customization are a breeze!
-
-**Key Features:**
-
-*   **Eye-Friendly Display:** Experience crisp, glare-free visuals with a natural paper-like aesthetic.
-*   **Web-Based Configuration:** Effortlessly update and configure your display from any device on your network.
-*   **Minimize Distractions:** Eliminate LEDs, noise, and notifications; focus solely on the content you want.
-*   **Beginner-Friendly:** Easy installation and configuration for makers of all skill levels.
-*   **Open Source & Customizable:** Modify, extend, and build your own plugins.
-*   **Scheduled Playlists:** Display different content with scheduled playlists.
+*   **Eye-Friendly Display:** Enjoy crisp, paper-like visuals with no glare or backlight.
+*   **Web-Based Configuration:** Easily set up and manage your display from any device on your network.
+*   **Minimalist Design:** Eliminate distractions with no LEDs, noise, or notifications.
+*   **Simple Setup:**  Designed for both beginners and experienced makers.
+*   **Open Source:** Modify, customize, and create your own plugins.
+*   **Scheduled Playlists:** Display different plugins at designated times.
 
 ## Plugins
 
-InkyPi offers a variety of plugins to display the information you need. New plugins are constantly being added!
+InkyPi offers a variety of plugins to display the information you care about, with more in development!
 
-*   **Image Upload:** Display any image from your browser.
-*   **Daily Newspaper/Comic:** View daily comics and front pages of major newspapers.
-*   **Clock:** Customize your clock faces.
-*   **AI Image/Text:** Generate images and dynamic text using OpenAI's models.
-*   **Weather:** Display current weather conditions and forecasts.
-*   **Calendar:** Visualize your calendar from Google, Outlook, or Apple Calendar.
+*   Image Upload
+*   Daily Newspaper/Comic
+*   Clock (Customizable)
+*   AI Image/Text Generation
+*   Weather Forecasts
+*   Calendar Visualization
 
-For documentation on creating custom plugins, see [Building InkyPi Plugins](./docs/building_plugins.md).
+For information on building custom plugins, see [Building InkyPi Plugins](./docs/building_plugins.md).
 
-## Hardware
+## Hardware Requirements
 
-The following hardware is required to run InkyPi:
+*   **Raspberry Pi:** (4 | 3 | Zero 2 W)
+    *   Recommended: 40-pin Pre-Soldered Header
+*   **MicroSD Card:** (min 8 GB) (e.g., [Amazon Link](https://amzn.to/3G3Tq9W))
+*   **E-Ink Display:**
 
-*   Raspberry Pi (4 | 3 | Zero 2 W)
-    *   Recommended to get 40 pin Pre Soldered Header
-*   MicroSD Card (min 8 GB) ([Example](https://amzn.to/3G3Tq9W))
-*   E-Ink Display:
-    *   Inky Impression by Pimoroni
+    *   **Inky Impression by Pimoroni:**
         *   [13.3 Inch Display](https://collabs.shop/q2jmza)
         *   [7.3 Inch Display](https://collabs.shop/q2jmza)
         *   [5.7 Inch Display](https://collabs.shop/ns6m6m)
         *   [4 Inch Display](https://collabs.shop/cpwtbh)
-    *   Inky wHAT by Pimoroni
+    *   **Inky wHAT by Pimoroni:**
         *   [4.2 Inch Display](https://collabs.shop/jrzqmf)
-    *   Waveshare e-Paper Displays
-        *   Spectra 6 (E6) Full Color [4 inch](https://www.waveshare.com/4inch-e-paper-hat-plus-e.htm?&aff_id=111126) [7.3 inch](https://www.waveshare.com/7.3inch-e-paper-hat-e.htm?&aff_id=111126) [13.3 inch](https://www.waveshare.com/13.3inch-e-paper-hat-plus-e.htm?&aff_id=111126)
-        *   Black and White [7.5 inch](https://www.waveshare.com/7.5inch-e-paper-hat.htm?&aff_id=111126) [13.3 inch](https://www.waveshare.com/13.3inch-e-paper-hat-k.htm?&aff_id=111126)
-        *   See [Waveshare e-paper displays](https://www.waveshare.com/product/raspberry-pi/displays/e-paper.htm?&aff_id=111126) or visit their [Amazon store](https://amzn.to/3HPRTEZ) for additional models.
+    *   **Waveshare e-Paper Displays:**
+        *   Spectra 6 (E6) Full Color:  [4 inch](https://www.waveshare.com/4inch-e-paper-hat-plus-e.htm?&aff_id=111126), [7.3 inch](https://www.waveshare.com/7.3inch-e-paper-hat-e.htm?&aff_id=111126), [13.3 inch](https://www.waveshare.com/13.3inch-e-paper-hat-plus-e.htm?&aff_id=111126)
+        *   Black and White: [7.5 inch](https://www.waveshare.com/7.5inch-e-paper-hat.htm?&aff_id=111126), [13.3 inch](https://www.waveshare.com/13.3inch-e-paper-hat-k.htm?&aff_id=111126)
+        *   More models at: [Waveshare e-paper displays](https://www.waveshare.com/product/raspberry-pi/displays/e-paper.htm?&aff_id=111126) or their [Amazon store](https://amzn.to/3HPRTEZ).  Note that IT8951-based displays are **not** supported. See the [Waveshare Display Support](#waveshare-display-support) section below.
+*   **Picture Frame or 3D Stand:** See [community.md](./docs/community.md) for community-created designs.
 
-*   Picture Frame or 3D Stand
-    *   See [community.md](./docs/community.md) for community submissions
-
-**Disclaimer:** Some links above are affiliate links, and may earn a commission.
+**Affiliate Disclosure:**  Some links are affiliate links, and I may earn a commission from qualifying purchases, at no extra cost to you. This helps support the project.
 
 ## Installation
 
-Get started with InkyPi in a few simple steps:
+Follow these steps to install InkyPi:
 
-1.  Clone the repository:
-
+1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/fatihak/InkyPi.git
     ```
-
-2.  Navigate to the project directory:
-
+2.  **Navigate to the Project Directory:**
     ```bash
     cd InkyPi
     ```
-
-3.  Run the installation script with `sudo`:
-
+3.  **Run the Installation Script (with `sudo`):**
+    ```bash
+    sudo bash install/install.sh [-W <waveshare device model>]
+    ```
+    *   `-W <waveshare device model>`:  Specify this option *only* if using a Waveshare display (e.g., `-W epd7in3f`).
     *   For Inky displays:
-
         ```bash
         sudo bash install/install.sh
         ```
-
-    *   For [Waveshare displays](#waveshare-display-support):  Specify your display model:
-
+    *   For Waveshare displays:
         ```bash
-        sudo bash install/install.sh -W <waveshare device model>
+        sudo bash install/install.sh -W epd7in3f
         ```
 
-    (Replace `<waveshare device model>` with your display's model, e.g., `epd7in3f`).
-
-After installation, reboot your Raspberry Pi. The display will then show the InkyPi splash screen.
+After installation, reboot your Raspberry Pi.  The display will then show the InkyPi splash screen.
 
 **Important Notes:**
 
-*   The installation script requires `sudo` privileges.
-*   We recommend a fresh Raspberry Pi OS installation to avoid conflicts.
-*   The script automatically enables necessary SPI and I2C interfaces.
-*   Refer to [installation.md](./docs/installation.md) for detailed instructions and [this YouTube tutorial](https://youtu.be/L5PvQj1vfC4).
+*   The installation script requires `sudo` privileges.  Start with a fresh Raspberry Pi OS installation to avoid conflicts.
+*   SPI and I2C interfaces are automatically enabled.
+*   Refer to [installation.md](./docs/installation.md) for more detailed instructions, including imaging your microSD card.  Also, watch [this YouTube tutorial](https://youtu.be/L5PvQj1vfC4).
 
 ## Update
 
-To keep your InkyPi up-to-date:
+To update your InkyPi installation:
 
-1.  Navigate to the project directory:
-
+1.  **Navigate to the Project Directory:**
     ```bash
     cd InkyPi
     ```
-
-2.  Fetch the latest changes:
-
+2.  **Fetch Latest Changes:**
     ```bash
     git pull
     ```
-
-3.  Run the update script:
-
+3.  **Run the Update Script (with `sudo`):**
     ```bash
     sudo bash install/update.sh
     ```
 
 ## Uninstall
 
-To remove InkyPi:
+To uninstall InkyPi:
 
 ```bash
 sudo bash install/uninstall.sh
@@ -128,38 +109,42 @@ sudo bash install/uninstall.sh
 
 ## Roadmap
 
-Explore the future of InkyPi:
+Explore upcoming features and vote on what you want to see next!
 
-*   Additional Plugins
-*   Modular layouts for mixing and matching plugins.
-*   Support for buttons with customizable action bindings.
+*   More plugins!
+*   Modular layouts
+*   Button support with custom actions
 *   Improved Web UI on mobile devices
 
-Check out the public [Trello board](https://trello.com/b/SWJYWqe4/inkypi) to contribute and vote on new features!
+Check out the public [Trello board](https://trello.com/b/SWJYWqe4/inkypi).
 
 ## Waveshare Display Support
 
-InkyPi offers support for Waveshare e-Paper displays.  **Note:** Displays based on the IT8951 controller are not supported, and screens smaller than 4 inches are not recommended.
+InkyPi also supports Waveshare e-Paper displays.
 
-See [Waveshare e-paper displays](https://www.waveshare.com/product/raspberry-pi/displays/e-paper.htm?&aff_id=111126) for additional models.
+**Compatibility:**  If your Waveshare display has a driver in their [Python EPD library](https://github.com/waveshareteam/e-Paper/tree/master/RaspberryPi_JetsonNano/python/lib/waveshare_epd), it's likely compatible.
 
-When installing, specify your Waveshare model with the `-W` option. The script will automatically install the necessary driver.
+**Important Notes:**
+
+*   **IT8951 Controller Not Supported.**
+*   **Displays Smaller Than 4 Inches Are Not Recommended.**
+*   Use the `-W` option during installation, specifying your display model (without the `.py` extension).  The script will install the necessary drivers.
 
 ## License
 
-Distributed under the GPL 3.0 License. See [LICENSE](./LICENSE) for details.
+Distributed under the GPL 3.0 License ([LICENSE](./LICENSE)).
 
-## Attribution
+This project uses fonts and icons with their own licensing; see [Attribution](./docs/attribution.md).
 
-This project includes fonts and icons with separate licensing. See [Attribution](./docs/attribution.md) for details.
+## Troubleshooting
 
-## Troubleshooting & Issues
+See the [troubleshooting guide](./docs/troubleshooting.md).  If you still need help, open an issue on the [GitHub Issues](https://github.com/fatihak/InkyPi/issues) page.
 
-Check the [troubleshooting guide](./docs/troubleshooting.md). If you're still having problems, report an issue on the [GitHub Issues](https://github.com/fatihak/InkyPi/issues) page.
+**Pi Zero W Users:**  See the [Known Issues during Pi Zero W Installation](./docs/troubleshooting.md#known-issues-during-pi-zero-w-installation) section for details.
 
 ## Sponsoring
 
-Support the continued development of InkyPi:
+Support the ongoing development of InkyPi!
 
 <p align="center">
 <a href="https://github.com/sponsors/fatihak" target="_blank"><img src="https://user-images.githubusercontent.com/345274/133218454-014a4101-b36a-48c6-a1f6-342881974938.png" alt="Become a Patreon" height="35" width="auto"></a>
@@ -169,7 +154,9 @@ Support the continued development of InkyPi:
 
 ## Acknowledgements
 
-*   [PaperPi](https://github.com/txoof/PaperPi)
-*   [InkyCal](https://github.com/aceinnolab/Inkycal)
-*   [PiInk](https://github.com/tlstommy/PiInk)
-*   [rpi_weather_display](https://github.com/sjnims/rpi_weather_display)
+Check out these similar projects:
+
+*   [PaperPi](https://github.com/txoof/PaperPi) - Supports Waveshare devices.  Shoutout to @txoof for installation assistance.
+*   [InkyCal](https://github.com/aceinnolab/Inkycal) - Modular plugins.
+*   [PiInk](https://github.com/tlstommy/PiInk) - Inspiration for the Flask web UI.
+*   [rpi_weather_display](https://github.com/sjnims/rpi_weather_display) - Weather dashboard with advanced power efficiency.

@@ -6,60 +6,19 @@
   </picture>
 </div>
 
-<h1 align="center">Meltano: The Code-First Data Integration Engine</h1>
+# Meltano: The Declarative Data Integration Engine
 
-**Simplify your data integration and unlock insights with Meltano, the open-source platform for building data pipelines.**
+**Meltano is the open-source, code-first data integration platform that simplifies data pipelines by integrating with over 600+ APIs and databases.**
 
-[<img alt="Try Codespaces" src="https://img.shields.io/static/v1?label=&message=Try live demo with Codespaces&color=02a5a5&style=for-the-badge&logo=github"/>](https://meltano.com/demo)
+[Explore the Meltano project on GitHub](https://github.com/meltano/meltano)
 
----
-
-## Key Features
-
-*   **Declarative Configuration:** Define your data pipelines as code for version control, reproducibility, and collaboration.
-*   **Extensive Integrations:** Access over 600+ pre-built integrations for popular APIs and databases via Meltano Hub.
-*   **Open Source & Community-Driven:** Benefit from a vibrant community and contribute to the future of data integration.
-*   **Modular Design:** Easily add and customize plugins, including taps and targets, to fit your specific needs.
-*   **Scalable & Flexible:** Build data pipelines that scale with your business needs, from small projects to enterprise-level deployments.
-*   **Code-First Approach:** Avoid writing, maintaining, and scaling your own API integrations, improving developer productivity.
-
-## Integrations
-
-Meltano Hub is your single source of truth for discovering and managing Meltano plugins, including [Singer](https://singer.io/) taps and targets. Expand your data integration capabilities with curated plugins and community contributions.
-
-## Installation
-
-Get started building your ideal data platform! Follow the [Installation guide](https://docs.meltano.com/getting-started/installation) to quickly set up Meltano.
-
-## Documentation
-
-*   **Getting Started:** [https://docs.meltano.com/getting-started](https://docs.meltano.com/getting-started)
-*   **Full Documentation:** [https://docs.meltano.com](https://docs.meltano.com)
-
-## Contributing
-
-We welcome your contributions to the Meltano project! Explore the [issue tracker](https://github.com/meltano/meltano/issues?q=is%3Aopen+is%3Aissue) to find ways to contribute, or start with issues labeled "[Accepting Merge Requests](https://github.com/meltano/meltano/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+merge+requests%22)". Refer to our [contribution guidelines](https://docs.meltano.com/contribute/) for more details.
-
-## Community
-
-Join the Meltano community to connect with data professionals and get support.
-
-*   **Community Page:** [https://meltano.com/community/](https://meltano.com/community/)
-*   **Slack:** 👋 [Join us on Slack!](https://meltano.com/slack)
-
-## Responsible Disclosure
-
-Review our [responsible disclosure policy](https://docs.meltano.com/contribute/responsible-disclosure) on our website.
-
-## License
-
-Meltano is distributed under the MIT license. See the [LICENSE](https://github.com/meltano/meltano/blob/main/LICENSE) file for details.
+<div align="center">
+<a href="https://meltano.com/demo">
+<img alt="Try codespaces" src="https://img.shields.io/static/v1?label=&message=Try live demo with Codespaces&color=02a5a5&style=for-the-badge&logo=github"/>
+</a>
+</div>
 
 ---
-
-## Additional Resources
-
-*   **GitHub Repository:** [https://github.com/meltano/meltano](https://github.com/meltano/meltano)
 
 <div align="center">
 <a href="https://docs.meltano.com/">
@@ -102,17 +61,46 @@ Meltano is distributed under the MIT license. See the [LICENSE](https://github.c
 <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/meltano/meltano?label=Docker%20Pulls"/>
 </a>
 </div>
-```
 
-Key improvements and SEO considerations:
+## Key Features
 
-*   **Strong Hook:** The one-sentence hook immediately grabs attention and highlights a key benefit.
-*   **Keyword Integration:**  Used relevant keywords like "data integration," "data pipelines," and "open-source" to improve search visibility.
-*   **Clear Headings:**  Uses descriptive headings to organize the information, making it easy to scan and understand.
-*   **Bulleted Key Features:**  Provides a concise overview of Meltano's core functionalities, enhancing readability and highlighting value.
-*   **SEO-Friendly Formatting:** Uses Markdown formatting for headings and lists, making it easy for search engines to parse.
-*   **Call to Action:** Encourages users to try the demo and join the community.
-*   **Link to Original Repo:**  Included a clear link back to the original repository for easy navigation.
-*   **Contextual Links:**  Links to other resources (documentation, installation, contributing, community) are more specific and provide context.
-*   **Concise Language:** Streamlines the original text for better clarity and impact.
-*   **Emphasis on Benefits:** The text focuses on the value proposition of Meltano: saving time, simplifying integration, and empowering users.
+*   **Code-First Approach:** Define your data pipelines as code for version control, collaboration, and automation.
+*   **Extensive Integrations:** Connect to over 600+ APIs and databases through pre-built connectors (taps and targets) compatible with the [Singer](https://singer.io/) framework.
+*   **Declarative Configuration:** Easily configure your data pipelines using YAML files, simplifying setup and maintenance.
+*   **Open Source & Community Driven:** Benefit from a vibrant community, extensive documentation, and open-source contributions.
+*   **Scalable and Flexible:** Build data pipelines that can scale to meet your evolving needs.
+*   **Meltano Hub:** Discover, manage, and deploy plugins directly from the Meltano Hub.
+
+## Getting Started
+
+### Installation
+
+Follow the [Installation guide](https://docs.meltano.com/getting-started/installation) to install Meltano and start building your data platform.
+
+### Documentation
+
+*   Explore the ["Getting Started" guide](https://docs.meltano.com/getting-started)
+*   Full documentation: [https://docs.meltano.com](https://docs.meltano.com/)
+
+## Contributing
+
+Meltano thrives on community contributions.  We welcome your contributions!
+
+*   Browse the [issue tracker](https://github.com/meltano/meltano/issues?q=is%3Aopen+is%3Aissue) to find ways to contribute.
+*   View the issues labeled as "[Accepting Merge Requests](https://github.com/meltano/meltano/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+merge+requests%22)".
+*   Read the [contribution guidelines](https://docs.meltano.com/contribute/) for more information.
+
+## Community
+
+Join our growing community of data professionals!
+
+*   Learn more on our [Community](https://meltano.com/community/) page.
+*   👋 [Join us on Slack!](https://meltano.com/slack)
+
+## Responsible Disclosure Policy
+
+Review the [responsible disclosure policy](https://docs.meltano.com/contribute/responsible-disclosure) on our website.
+
+## License
+
+Meltano is licensed under the MIT license.  See the [LICENSE](https://github.com/meltano/meltano/blob/main/LICENSE) file.

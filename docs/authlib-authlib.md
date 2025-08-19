@@ -9,7 +9,9 @@
 
 # Authlib: The Ultimate Python Library for OAuth and OpenID Connect
 
-**Authlib empowers developers to effortlessly build secure and compliant OAuth and OpenID Connect servers and clients in Python.**  [Visit the original repository on GitHub](https://github.com/authlib/authlib).
+**Authlib empowers developers to easily build secure and robust OAuth and OpenID Connect solutions in their Python applications.**
+
+[View the original repository on GitHub](https://github.com/authlib/authlib)
 
 [![Build Status](https://github.com/authlib/authlib/workflows/tests/badge.svg)](https://github.com/authlib/authlib/actions)
 [![PyPI version](https://img.shields.io/pypi/v/authlib.svg)](https://pypi.org/project/authlib)
@@ -18,22 +20,26 @@
 [![Code Coverage](https://codecov.io/gh/authlib/authlib/graph/badge.svg?token=OWTdxAIsPI)](https://codecov.io/gh/authlib/authlib)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=authlib_authlib&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=authlib_authlib)
 
-Authlib is compatible with Python 3.9+.
+Authlib is a comprehensive Python library for implementing OAuth and OpenID Connect, offering extensive features and broad compatibility. Compatible with Python 3.9+.
 
 ## Key Features
 
-Authlib provides comprehensive support for building robust OAuth and OpenID Connect solutions, including:
-
-*   **Comprehensive Protocol Support:** Implementation of OAuth 1.0, OAuth 2.0, and OpenID Connect 1.0 specifications, including support for various RFCs.
-*   **JSON Web Token (JWT) and JOSE Support:** Full suite of tools for handling JWS, JWK, JWA, and JWT for secure authentication and authorization.
-*   **Client Integrations:** Seamless integration with popular Python HTTP clients (Requests, HTTPX) and web frameworks (Flask, Django, Starlette, FastAPI) for easy OAuth and OpenID Connect client implementation.
-*   **Provider Frameworks:** Build your own OAuth 1.0, OAuth 2.0, and OpenID Connect providers for Flask and Django.
+*   **Comprehensive Protocol Support:**
+    *   OAuth 1.0 and 2.0
+    *   OpenID Connect 1.0
+    *   JWT, JWS, JWK, JWA, and JOSE standards
+*   **Client Integrations:**
+    *   Built-in clients for popular libraries: `requests`, `httpx`, Flask, Django, Starlette, and FastAPI.
+*   **Server Implementations:**
+    *   Easily build OAuth 1.0, OAuth 2.0, and OpenID Connect providers for Flask and Django.
+*   **Security Focused:** Includes features for token handling, signing, encryption, and more.
+*   **Spec-Compliant:** Adheres to all relevant RFC specifications for reliable and interoperable implementations.
 
 ## Migrations
 
 Authlib will deprecate `authlib.jose` module, please read:
 
-*   [Migrating from `authlib.jose` to `joserfc`](https://jose.authlib.org/en/dev/migrations/authlib/)
+-   [Migrating from `authlib.jose` to `joserfc`](https://jose.authlib.org/en/dev/migrations/authlib/)
 
 ## Sponsors
 
@@ -53,14 +59,14 @@ Authlib will deprecate `authlib.jose` module, please read:
 
 ## Useful Links
 
-1.  [Homepage](https://authlib.org/).
-2.  [Documentation](https://docs.authlib.org/).
-3.  [Purchase Commercial License](https://authlib.org/plans).
-4.  [Blog](https://blog.authlib.org/).
-5.  [Twitter](https://twitter.com/authlib).
-6.  [StackOverflow](https://stackoverflow.com/questions/tagged/authlib).
-7.  [Other Repositories](https://github.com/authlib).
-8.  [Subscribe Tidelift](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links).
+1.  Homepage: <https://authlib.org/>
+2.  Documentation: <https://docs.authlib.org/>
+3.  Purchase Commercial License: <https://authlib.org/plans>
+4.  Blog: <https://blog.authlib.org/>
+5.  Twitter: <https://twitter.com/authlib>
+6.  StackOverflow: <https://stackoverflow.com/questions/tagged/authlib>
+7.  Other Repositories: <https://github.com/authlib>
+8.  Subscribe Tidelift: [https://tidelift.com/subscription/pkg/pypi-authlib](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links)
 
 ## Security Reporting
 

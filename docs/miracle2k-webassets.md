@@ -1,58 +1,57 @@
-# Webassets: Streamline Your Web Development with Asset Management
+Here's an improved and SEO-optimized README for the webassets project:
 
-**Webassets is a powerful Python library that simplifies asset management, enabling you to merge and compress your JavaScript and CSS files for optimal website performance.**
+# webassets: Streamline Your Python Web Project's Assets
 
-[View the Webassets project on GitHub](https://github.com/miracle2k/webassets)
+**webassets simplifies asset management in your Python web projects, making it easy to merge and compress your JavaScript and CSS files for improved performance.**
 
-## Key Features of Webassets:
+[Link to Original Repository: https://github.com/miracle2k/webassets](https://github.com/miracle2k/webassets)
 
-*   **Asset Merging:** Combines multiple JavaScript and CSS files into fewer files to reduce HTTP requests.
-*   **Asset Compression:** Minifies and compresses your assets (JavaScript, CSS, etc.) to reduce file sizes and improve loading times.
-*   **Efficient Workflow:** Easily integrates into your Python web development workflow.
-*   **Well-Tested & Reliable:**  The project is thoroughly tested.
+## Key Features
+
+*   **Asset Bundling:** Combine multiple CSS and JavaScript files into single files to reduce HTTP requests.
+*   **Compression:** Minimize file sizes using various compression techniques to speed up page load times.
+*   **Filters:** Integrate preprocessors and postprocessors (like LESS, SASS, CoffeeScript, etc.) to automatically compile and transform your assets.
+*   **Integration:** Seamlessly integrates with popular Python web frameworks such as Flask and Django.
+*   **Flexibility:** Highly configurable, allowing you to tailor asset management to your project's specific needs.
 
 ## Installation
 
-Install the latest development version using pip:
+Install webassets using pip:
 
 ```bash
 pip install webassets==dev
 ```
 
-## Development Setup
-
-To contribute or develop Webassets, follow these steps:
-
-1.  **Set up your virtual environment:**
-
-    ```bash
-    uv venv
-    ```
-
-2.  **Install Python dependencies:**
-
-    ```bash
-    uv pip install -r uv.lock
-    ```
-
-3.  **Install other requirements:**
-
-    ```bash
-    ./requirements-dev.sh
-    ```
-
-4.  **Run the tests:**
-
-    ```bash
-    ./run_tests.sh
-    ```
-
-    *   **Note:** Running tests requires Java 7 or later (needed for the Google Closure filter).
-
 ## Documentation
 
 Comprehensive documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
 
-## Staying Up-to-Date
+## Development
 
-Since releases aren't on a strict schedule, it's recommended to use the latest code.  The build status badge (above) indicates the health of the project.
+**Note:** Due to infrequent releases, using the latest code is recommended. The project is well-tested; refer to the build status badge (above) for assurance.
+
+To contribute to the development of webassets, follow these steps:
+
+**Prerequisites:**
+
+*   Python 3.x
+*   Java 7+ (required for some filters, like Google Closure)
+
+1.  **Set up a virtual environment:**
+    ```bash
+    uv venv
+    ```
+
+2.  **Install Python requirements:**
+    ```bash
+    uv pip install -r uv.lock
+    ```
+
+3.  **Install other development requirements:**
+    ```bash
+    ./requirements-dev.sh
+    ```
+
+4.  **Run tests:**
+    ```bash
+    ./run_tests.sh

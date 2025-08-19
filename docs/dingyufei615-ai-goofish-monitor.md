@@ -1,159 +1,135 @@
-# AI-Powered Goofish (Xianyu) Monitor: Effortlessly Track & Analyze Secondhand Goods 🔍
+# AI-Powered Goofish (Xianyu) Monitor: Smartly Track & Analyze Secondhand Goods
 
-**Tired of missing out on great deals?** This AI-powered tool uses Playwright and large language models to monitor Xianyu (Goofish) for you, providing real-time analysis and intelligent filtering with a user-friendly web interface.  [View the original repo](https://github.com/dingyufei615/ai-goofish-monitor).
+**Tired of missing out on great deals?** This AI-powered tool uses Playwright and AI to intelligently monitor and analyze items on Goofish (闲鱼), featuring a user-friendly web interface for effortless management and real-time alerts. [Visit the original repo](https://github.com/dingyufei615/ai-goofish-monitor) to get started!
 
-## Key Features:
+## Key Features
 
-*   ✅ **Intuitive Web UI:** Manage tasks, edit AI criteria, view logs, and browse results all from a complete web interface – no command-line fuss!
-*   ✍️ **AI-Driven Task Creation:** Describe your desired item in natural language, and the AI will generate a complex monitoring task with advanced filtering.
-*   ⚙️ **Concurrent Multi-Tasking:** Monitor multiple keywords simultaneously with independent tasks, ensuring comprehensive coverage.
-*   ⏱️ **Real-time Processing:** Instantly analyzes new listings as they appear, eliminating lag.
-*   🧠 **Deep AI Analysis:** Leverages multimodal large language models (like GPT-4o) to analyze listings, images, and seller profiles for precise filtering.
-*   🛠️ **Highly Customizable:** Configure each task with unique keywords, price ranges, filtering conditions, and custom AI prompts.
-*   🔔 **Instant Notifications:** Get alerts via ntfy.sh, WeChat group bots, and Bark, ensuring you never miss a deal.
-*   📅 **Scheduled Task Execution:** Set up automated monitoring with flexible Cron expressions for each task.
-*   🐳 **Docker Deployment:**  Deploy quickly and consistently with a pre-configured `docker-compose` setup.
-*   🛡️ **Robust Anti-Scraping:** Mimics human behavior, incorporating random delays and user interactions for stable operation.
+*   ✨ **Intuitive Web UI:** Manage tasks, edit AI criteria, view real-time logs, and filter results without command-line complexities.
+*   🤖 **AI-Driven Task Creation:** Simply describe what you want, and the AI creates a task with complex filtering logic.
+*   🔄 **Concurrent Multi-Tasking:** Monitor multiple keywords simultaneously via `config.json`, each running independently.
+*   ⚡ **Real-time Stream Processing:** Analyze new listings instantly, eliminating delays.
+*   🧠 **Advanced AI Analysis:** Leverage multimodal large language models (like GPT-4o) to analyze item descriptions, images, and seller profiles for accurate filtering.
+*   ⚙️ **Highly Customizable:** Tailor each task with unique keywords, price ranges, filter conditions, and AI prompts.
+*   🔔 **Instant Notifications:** Receive immediate alerts via ntfy.sh, Enterprise WeChat Group Bot, or Bark when desirable items are found.
+*   📅 **Scheduled Task Execution:** Utilize Cron expressions for automated, time-based task scheduling.
+*   🐳 **Docker Ready:** Deploy quickly with provided `docker-compose` configuration.
+*   🛡️ **Robust Anti-Scraping:** Mimics human behavior with random delays and actions for increased stability.
 
-## Core Components
+## Core Functionality at a Glance
 
-*   **Playwright:** Handles browser automation, simulating user interactions.
-*   **Large Language Models (LLMs):**  Performs advanced analysis of listings, including image recognition, text understanding, and seller assessment.
-*   **Web UI:** Provides a user-friendly interface for task management, result viewing, and system configuration.
-*   **Notification System:**  Delivers alerts through various channels (ntfy.sh, WeChat, Bark).
+*   **Task Creation:** Describe your desired item in plain language, and the system will create and configure a monitoring task for you.
+*   **Real-time Monitoring:** Continuously searches Goofish for new listings that match your criteria.
+*   **Advanced AI Analysis:** Analyzes each listing using a large language model (LLM), evaluating the item's details, images, and seller information to determine if it meets your needs.
+*   **Notifications:** Sends instant alerts to your preferred channels (ntfy.sh, WeChat Bot, etc.) when a matching item is found.
 
-## Quick Start (Web UI Recommended)
+## Quick Start Guide
 
-The Web UI offers the best user experience.
+### 1. Environment Setup
 
-### 1. Prerequisites:
+*   **Python:** Python 3.10 or higher is recommended.
+*   Clone the repository:
 
-*   **Python:** Python 3.10+ is recommended for local development to avoid dependency issues.
-
-*   **Clone the Repository:**
     ```bash
     git clone https://github.com/dingyufei615/ai-goofish-monitor
     cd ai-goofish-monitor
     ```
 
-*   **Install Dependencies:**
+*   Install dependencies:
+
     ```bash
     pip install -r requirements.txt
     ```
 
-### 2. Configuration:
+### 2. Configuration
 
-1.  **Configure Environment Variables:**  Copy `.env.example` to `.env` and adjust the settings:
+1.  **Environment Variables:** Create a `.env` file from the example and configure it:
 
     ```bash
-    # Windows
-    copy .env.example .env
-    # Linux/macOS
     cp .env.example .env
     ```
 
-    Key Variables:
+    Key environment variables:
 
-    | Environment Variable   | Description                                                                     | Required | Notes                                                                                                       |
-    | :--------------------- | :------------------------------------------------------------------------------ | :------- | :---------------------------------------------------------------------------------------------------------- |
-    | `OPENAI_API_KEY`       | Your AI model provider's API key.                                               | Yes      |                                                                                                             |
-    | `OPENAI_BASE_URL`      | AI model API endpoint (OpenAI compatible).                                      | Yes      | For example, `https://ark.cn-beijing.volces.com/api/v3/`.                                                      |
-    | `OPENAI_MODEL_NAME`    | The specific model to use (must support image analysis).                        | Yes      | Models like `doubao-seed-1-6-250615` and `gemini-2.5-pro` are supported.                                      |
-    | `PROXY_URL`            | (Optional) HTTP/S proxy for bypassing geo-restrictions.                         | No       |  `http://` and `socks5://` formats are supported, e.g., `http://127.0.0.1:7890`.                             |
-    | ... (Other notification and UI settings) | ... | ... | ... |
+    | Variable           | Description                                         | Required? | Notes                                                                          |
+    | ------------------ | --------------------------------------------------- | --------- | ------------------------------------------------------------------------------ |
+    | `OPENAI_API_KEY`   | Your AI model provider API key.                     | Yes       |                                                                                |
+    | `OPENAI_BASE_URL`  | AI model API endpoint (compatible with OpenAI format). | Yes       |  Specify base URL, e.g., `https://ark.cn-beijing.volces.com/api/v3/`       |
+    | `OPENAI_MODEL_NAME` | The AI model to use.                                 | Yes       | Must be a multimodal model like `doubao-seed-1-6-250615` or `gemini-2.5-pro`. |
+    | `PROXY_URL`        | (Optional) HTTP/S proxy (e.g., `http://127.0.0.1:7890`).| No        |                                                                                |
 
-    *   **Debugging Tip:** If you encounter 404 errors with your AI API, test with an API from Alibaba Cloud or Volces to verify basic functionality before switching to other providers.
+2.  **Login Status (Critical!)** Obtain login credentials.  The Web UI is the easiest way:
 
-2.  **Get Login Credentials (Crucial!)**: Obtain valid login credentials to allow the crawler to access Xianyu in a logged-in state.  The Web UI is the easiest way to accomplish this:
+    *   Start the web service in Step 3.
+    *   Go to **"System Settings"** in the Web UI.
+    *   Click **"Manual Update"** for the "Login Status File."
+    *   Follow the instructions to use the Xianyu Login State Extractor browser extension.  Copy the data to the Web UI.
 
-    *   **Recommended: Web UI Update**
-        1.  Start the Web server (Step 3).
-        2.  Open the Web UI and navigate to "System Settings".
-        3.  Click the "Manual Update" button next to "Login State File".
-        4.  Follow the instructions in the pop-up to:
-            *   Install the Xianyu login state extraction extension in Chrome.
-            *   Log in to the Xianyu website.
-            *   Use the extension to extract and copy your login state.
-            *   Paste the login state into the Web UI and save it.
+    **Alternative: Run login.py:**
 
-    *   **Alternative:  Login Script (If you can run programs locally):**
-        ```bash
-        python login.py
-        ```
-        Scan the QR code that appears with the Xianyu app to log in. This will generate `xianyu_state.json`.
+    ```bash
+    python login.py
+    ```
 
-### 3. Start the Web Server:
+    Scan the QR code that appears in the browser with your Xianyu app. This creates an `xianyu_state.json` file in the project root.
+
+### 3. Start the Web Service
 
 ```bash
 python web_server.py
 ```
 
-### 4. Start Monitoring:
+### 4. Get Started!
 
-1.  In your browser, go to `http://127.0.0.1:8000`.
-2.  Go to "Task Management" -> "Create New Task".
-3.  Use natural language to describe your item (e.g., "Buy a Sony A7M4 camera, 95% new, under $1300, under 5000 shutter count").
-4.  Fill in other information like name and keywords.  The AI will generate your task.
-5.  Enable scheduled execution or start your new task.
+1.  Open the Web UI at `http://127.0.0.1:8000`.
+2.  In "Task Management," create a new task, and describe what you are looking for.
+3.  The AI generates the analysis criteria. Start the task to begin monitoring.
 
-## Docker Deployment (Recommended)
+## 🐳 Docker Deployment (Recommended)
 
-Docker provides a simplified and efficient way to deploy.
+### 1. Preparation
 
-### 1. Prerequisites (Similar to Local Setup):
-
-1.  **Install Docker:** Ensure Docker Engine is installed ([Docker Engine](https://docs.docker.com/engine/install/)).
-
-2.  **Clone and Configure:**
+*   **Docker:** Install [Docker Engine](https://docs.docker.com/engine/install/).
+*   Clone the repository and configure the `.env` file (as described above).
+*   **Login Status (Crucial):** Run the following to set up the login through the Web UI after starting the container:
 
     ```bash
-    git clone https://github.com/dingyufei615/ai-goofish-monitor
-    cd ai-goofish-monitor
+    docker-compose up -d
     ```
 
-3.  **Create `.env`:** Follow the instructions in the Quick Start section to create and populate the `.env` file.
+    Then, access the Web UI, go to "System Settings," click "Manual Update," and use the Xianyu Login State Extractor extension.
 
-4.  **Get Login State (Critical!)**: You **must** set the login state using the Web UI after starting the Docker container:
-    1.  Run `docker-compose up -d` to start the service (in host machine).
-    2.  Open the Web UI in your browser, and navigate to http://127.0.0.1:8000.
-    3.  Follow the instructions in **"Get Login Credentials"** (Method: Web UI update) in section 2, after you login in web UI.
-
->   ℹ️  The Docker image uses Python 3.11.
-
-### 2. Run the Docker Container:
-
-Use `docker-compose` to manage the container (recommended):
+### 2. Run the Container
 
 ```bash
 docker-compose up --build -d
 ```
 
-### 3. Access and Manage:
+### 3. Access and Manage
 
-*   **Web UI:** Access the web interface at `http://127.0.0.1:8000`.
-*   **Real-time Logs:** View logs with `docker-compose logs -f`.
-*   **Stop Container:** `docker-compose stop`
-*   **Start Container:** `docker-compose start`
-*   **Stop and Remove Container:** `docker-compose down`
+*   **Web UI:** `http://127.0.0.1:8000`
+*   **Real-time Logs:** `docker-compose logs -f`
+*   **Stop:** `docker-compose stop`
+*   **Start:** `docker-compose start`
+*   **Remove:** `docker-compose down`
 
-## Key Web UI Features
+## Web UI Feature Overview
 
-*   **Task Management:** Create, edit, schedule, and manage monitoring tasks.
-*   **Results Viewing:** Browse results with a visual display, filtering and sorting capabilities.
-*   **Real-time Logs:**  View logs to track progress and troubleshoot issues.
-*   **System Settings:** Configure the system, including prompt editing and authentication settings.
+*   **Task Management:** AI-powered task creation, visualization, scheduling (Cron), editing, and control.
+*   **Result Viewing:** Card-based display, intelligent filtering, and detailed views of each item's data.
+*   **Run Logs:** Real-time logging with auto/manual refresh options.
+*   **System Settings:** Status checks and prompt editing.
 
-##  Working Process Diagram
+## Workflow Diagram
 
 ```mermaid
 graph TD
-    A[Start Monitoring Task] --> B[Task: Search for Items];
-    B --> C{New Item Found?};
-    C -- Yes --> D[Grab Item Details & Seller Info];
-    D --> E[Download Item Images];
-    E --> F[Call AI Analysis];
+    A[Start Task] --> B[Search Items];
+    B --> C{New Item?};
+    C -- Yes --> D[Fetch Item & Seller Details];
+    D --> E[Download Images];
+    E --> F[AI Analysis];
     F --> G{AI Recommends?};
-    G -- Yes --> H[Send Notifications];
+    G -- Yes --> H[Send Notification];
     H --> I[Save to JSONL];
     G -- No --> I;
     C -- No --> J[Paginate/Wait];
@@ -161,35 +137,44 @@ graph TD
     I --> C;
 ```
 
-## Web UI Authentication
+## Authentication
 
-This project utilizes Basic authentication to protect the web interface and API endpoints.
+Basic authentication protects the Web UI.
 
-*   **Configuration:** Set the credentials in the `.env` file:
+*   Configure credentials in the `.env` file.
+*   Default credentials are `admin` / `admin123`. *Change these in production!*
+*   All API endpoints, the Web UI, and static resources require authentication.
 
-    ```bash
-    WEB_USERNAME=admin
-    WEB_PASSWORD=admin123
-    ```
+## FAQ
 
-*   **Default Credentials:**  If credentials are not set in the .env file, the default username and password are `admin` and `admin123`.
-
-    **⚠️ Important:**  Change these defaults in production!
-
-## FAQ & Support
-
-Access the [Frequently Asked Questions (FAQ.md)](FAQ.md) to troubleshoot any issues.
+Find answers to common questions in [FAQ.md](FAQ.md).
 
 ## Acknowledgements
 
-We are deeply grateful to the projects listed in the original README, and to the community and contributors mentioned there.
+Thanks to the projects and communities that helped make this possible:
 
-## Disclaimer
+*   [superboyyy/xianyu_spider](https://github.com/superboyyy/xianyu_spider)
+*   [@jooooody](https://linux.do/u/jooooody/summary)
+*   [LinuxDo](https://linux.do/)
+*   ClaudeCode/Aider/Gemini
 
-*   Please abide by Xianyu's terms of service and robots.txt rules.
-*   This project is for educational and research purposes only.
-*   We provide no warranties.
-*   We are not liable for any damages resulting from the use of this software.
-*   See [DISCLAIMER.md](DISCLAIMER.md) for more details.
+## Support & Sponsoring
+
+If you find this project helpful, please consider supporting it!
+
+<table>
+  <tr>
+    <td><img src="static/zfb_support.jpg" width="200" alt="Alipay" /></td>
+    <td><img src="static/wx_support.png" width="200" alt="WeChat Pay" /></td>
+  </tr>
+</table>
+
+## Important Notes
+
+*   Respect Xianyu's terms of service and robots.txt. Avoid excessive requests.
+*   Use responsibly and for legal purposes only.
+*   This project is licensed under the [MIT License](LICENSE).
+*   No warranty is provided. The author is not responsible for any damages.
+*   See [DISCLAIMER.md](DISCLAIMER.md) for more information.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=dingyufei615/ai-goofish-monitor&type=Date)](https://star-history.com/#dingyufei615/ai-goofish-monitor&Date)
