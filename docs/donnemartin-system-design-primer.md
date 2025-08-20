@@ -1,49 +1,71 @@
-# System Design Primer: Your Guide to Designing Scalable Systems
+# System Design Primer: Your Guide to Building Scalable Systems
 
-**Tackle system design interviews and learn to build large-scale systems with this comprehensive, community-driven resource.  [Explore the original repo](https://github.com/donnemartin/system-design-primer) for in-depth content and contributions.**
+**Tired of complex system design concepts? Master the art of designing large-scale systems and ace your system design interview with this open-source resource.  [Get started on GitHub](https://github.com/donnemartin/system-design-primer)!**
+
+This comprehensive guide provides a structured approach to system design, covering essential topics and offering valuable resources to help you become a better engineer and excel in technical interviews.
 
 ## Key Features
 
-*   **Comprehensive Coverage:** Dive into essential system design topics, from fundamental principles to advanced architectures.
-*   **Interview Preparation:** Master system design interview questions with sample solutions, discussions, code, and diagrams.
-*   **Community Driven:** Learn from a continually updated, open-source project with contributions welcome.
-*   **Anki Flashcards:** Reinforce key concepts with spaced repetition decks, perfect for on-the-go learning.
-*   **Interactive Coding Challenges:**  Supplement your learning with the sister repo, [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), offering additional Anki decks and coding practice.
+*   **Learn by Doing:** Understand how to design scalable systems and prepare for system design interviews.
+*   **Community Driven:** Benefit from a continually updated, open-source project, with contributions welcomed.
+*   **Interview Prep:** Practice with system design interview questions, complete with solutions, discussions, code, and diagrams.
+*   **Comprehensive Index:** Explore in-depth summaries of various system design topics, including pros and cons, alongside links to further resources.
+*   **Anki Flashcards:** Use Anki flashcards for spaced repetition to retain key system design concepts.
 
-## Core Concepts & Topics
+## Core Concepts
 
-### Fundamental Principles
-Understand the fundamental principles of designing scalable systems:
+*   **System Design Fundamentals**: Grasp core concepts with the help of a comprehensive list of key topics.
+    *   Performance vs. Scalability
+    *   Latency vs. Throughput
+    *   Availability vs. Consistency (CAP Theorem)
+    *   Consistency and Availability Patterns
+    *   And many more (see index below)
+*   **Essential Technologies**: Master the practical aspects of system design with details on common technologies.
+    *   Domain Name System (DNS)
+    *   Content Delivery Networks (CDNs)
+    *   Load Balancers
+    *   Reverse Proxies
+    *   Application Layer (Microservices)
+    *   Databases (SQL, NoSQL)
+    *   Caching Strategies
+    *   Asynchronism (Message Queues)
+    *   Communication Protocols (TCP, UDP, REST, RPC)
+    *   Security Best Practices
 
-*   **Performance vs. Scalability:** Learn how to balance performance with the ability to handle increased load.
-*   **Latency vs. Throughput:** Explore the relationship between response time and the volume of processed requests.
-*   **Availability vs. Consistency:** Grasp the CAP theorem and its implications for distributed systems.
+## Index of System Design Topics
 
-### Key System Components
+*   [System design topics: start here](#system-design-topics-start-here)
+*   [Performance vs scalability](#performance-vs-scalability)
+*   [Latency vs throughput](#latency-vs-throughput)
+*   [Availability vs consistency](#availability-vs-consistency)
+*   [Consistency patterns](#consistency-patterns)
+*   [Availability patterns](#availability-patterns)
+*   [Domain name system](#domain-name-system)
+*   [Content delivery network](#content-delivery-network)
+*   [Load balancer](#load-balancer)
+*   [Reverse proxy (web server)](#reverse-proxy-web-server)
+*   [Application layer](#application-layer)
+*   [Database](#database)
+*   [Cache](#cache)
+*   [Asynchronism](#asynchronism)
+*   [Communication](#communication)
+*   [Security](#security)
+*   [Appendix](#appendix)
+*   [Study guide](#study-guide)
+*   [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
+*   [System design interview questions with solutions](#system-design-interview-questions-with-solutions)
+*   [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions)
+*   [Additional system design interview questions](#additional-system-design-interview-questions)
+*   [Real world architectures](#real-world-architectures)
 
-Delve into essential components of system design:
+## Study Guide
 
-*   **Caching:** Master strategies for optimizing data retrieval and reducing server load.
-*   **Load Balancing:** Distribute traffic effectively to improve performance and reliability.
-*   **Databases:** Explore relational and NoSQL database options, including sharding, replication, and consistency patterns.
-*   **CDNs:** Learn how content delivery networks boost performance and reduce latency.
-*   **Message Queues:** Utilize asynchronous communication patterns for increased efficiency.
-
-### Interview Preparation
-
-Get ready to ace your system design interviews with comprehensive guides:
-
-*   **Study Guide:** Tailor your preparation based on your interview timeline (short, medium, long).
-*   **How to Approach a System Design Interview Question:** Master the structured approach to tackling system design problems.
-*   **System Design Interview Questions with Solutions:** Practice with common interview questions and detailed solutions, including diagrams and code examples.
+A structured study guide is provided based on your interview timeline (short, medium, long), covering the suggested areas.
 
 ## Contributing
 
-This is a community-driven project!  Help improve the primer by:
+Help improve this guide by submitting pull requests! You can contribute by fixing errors, adding sections, or [translating](https://github.com/donnemartin/system-design-primer/issues/28) the guide.  Review the [Contributing Guidelines](CONTRIBUTING.md).
 
-*   Fixing errors
-*   Improving existing sections
-*   Adding new sections
-*   Translating the guide
+## License
 
-Review the [Contributing Guidelines](CONTRIBUTING.md).
+This project is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).

@@ -1,106 +1,88 @@
-# ShivyC: A C Compiler Written in Python
+# ShivyC: A C Compiler in Python
 
-**ShivyC is a hobby C compiler implemented in Python, offering a glimpse into the inner workings of a compiler and generating reasonably efficient binaries for a subset of the C11 standard.** ([Original Repository](https://github.com/ShivamSarodia/ShivyC))
+**ShivyC is a hobby C compiler built in Python that brings a subset of the C11 standard to life, allowing you to compile and run C code with helpful error messages.** Check out the original repository for more information: [https://github.com/ShivamSarodia/ShivyC](https://github.com/ShivamSarodia/ShivyC)
 
-[![Build Status](https://travis-ci.org/ShivamSarodia/ShivyC.svg?branch=master)](https://travis-ci.org/ShivamSarodia/ShivyC) [![Code Coverage](https://codecov.io/gh/ShivamSarodia/ShivyC/branch/master/graph/badge.svg)](https://codecov.io/gh/ShivamSarodia/ShivyC)
+[![Build Status](https://travis-ci.org/ShivamSarodia/ShivyC.svg?branch=master)](https://travis-ci.org/ShivamSarodia/ShivyC)
+[![Code Coverage](https://codecov.io/gh/ShivamSarodia/ShivyC/branch/master/graph/badge.svg)](https://codecov.io/gh/ShivamSarodia/ShivyC)
 
 ## Key Features
 
-*   **C11 Subset Support:** ShivyC supports a subset of the C11 standard.
-*   **Python-Based:** Written entirely in Python 3.
-*   **Efficient Binaries:** Generates reasonably efficient x86-64 binaries.
-*   **Helpful Error Messages:** Provides informative compile-time error messages.
-*   **Includes Optimizations:** The compiler includes optimizations to improve generated code.
+*   **C11 Standard Support:** ShivyC compiles a subset of the C11 standard, allowing you to experiment with a core set of C features.
+*   **Efficient Binaries:** Generates reasonably efficient x86-64 binaries, including optimizations to improve performance.
+*   **Helpful Error Messages:** Provides informative compile-time error messages to assist in debugging.
+*   **Written in Python:** Built entirely in Python 3, making it accessible and easy to understand.
+*   **x86-64 Linux Support:** Compiles and runs on x86-64 Linux systems, leveraging GNU binutils and glibc for assembly and linking.
 
-## Getting Started
+## Quickstart
 
-### Prerequisites
+### x86-64 Linux
 
-*   Python 3.6 or later
-*   GNU binutils and glibc (typically pre-installed on Linux)
+**Prerequisites:** Python 3.6 or later, GNU binutils, and glibc (typically pre-installed on Linux systems).
 
-### Installation
+1.  **Install:**
+    ```bash
+    pip3 install shivyc
+    ```
+2.  **Create, Compile, and Run a "Hello, World!" Program:**
 
-Install ShivyC using pip:
+    ```c
+    $ vim hello.c
+    $ cat hello.c
 
-```bash
-pip3 install shivyc
-```
+    #include <stdio.h>
+    int main() {
+      printf("hello, world!\n");
+    }
 
-### Example Usage
+    $ shivyc hello.c
+    $ ./out
+    hello, world!
+    ```
 
-1.  Create a simple C program (e.g., `hello.c`):
+3.  **Run Tests:**
+    ```bash
+    git clone https://github.com/ShivamSarodia/ShivyC.git
+    cd ShivyC
+    python3 -m unittest discover
+    ```
 
-```c
-#include <stdio.h>
-int main() {
-  printf("hello, world!\n");
-}
-```
+### Other Architectures (Docker)
 
-2.  Compile the program:
+For convenience, a Dockerfile is provided in the [`docker/`](docker/) directory to set up an x86-64 Linux Ubuntu environment.
 
-```bash
-shivyc hello.c
-```
+1.  **Clone the Repository and Build/Enter Docker:**
+    ```bash
+    git clone https://github.com/ShivamSarodia/ShivyC.git
+    cd ShivyC
+    docker/shell
+    ```
+2.  **Compile and Run Inside Docker:**
 
-3.  Run the compiled executable:
+    ```bash
+    shivyc any_c_file.c           # to compile a file
+    python3 -m unittest discover  # to run tests
+    ```
 
-```bash
-./out
-```
-
-### Running Tests
-
-1.  Clone the repository:
-
-```bash
-git clone https://github.com/ShivamSarodia/ShivyC.git
-cd ShivyC
-```
-
-2.  Run the tests:
-
-```bash
-python3 -m unittest discover
-```
-
-### Docker Support
-
-For non-Linux users, the `docker/` directory provides a Dockerfile to set up an x86-64 Ubuntu environment with ShivyC.
-
-1.  Clone the repository (if you haven't already):
-
-```bash
-git clone https://github.com/ShivamSarodia/ShivyC.git
-cd ShivyC
-```
-
-2.  Run the Docker shell:
-
-```bash
-docker/shell
-```
-
-This provides a shell with ShivyC pre-installed, allowing you to compile and test C files within the Docker environment.
+    *Note: The Docker ShivyC executable updates live with local changes in your ShivyC directory.*
 
 ## Implementation Overview
 
-ShivyC's compilation process consists of the following stages:
-
-*   **Preprocessor:** Handles comments and `#include` directives (implemented in `lexer.py` and `preproc.py`).
-*   **Lexer:** Converts the source code into tokens (implemented primarily in `lexer.py`, with token definitions in `tokens.py` and `token_kinds.py`).
-*   **Parser:** Uses recursive descent to parse the tokens and create a parse tree (implemented in `parser/*.py` and `tree/*.py`).
-*   **IL Generation:** Transforms the parse tree into a custom Intermediate Language (IL) (implemented in `il_cmds/*.py`, `il_gen.py`, and the `make_code` functions in `tree/*.py`).
-*   **ASM Generation:** Converts the IL into x86-64 assembly code (implemented in `asm_gen.py`, and the `make_asm` functions in `il_cmds/*.py`).  Register allocation uses George and Appel’s iterated register coalescing algorithm.
+*   **Preprocessor:** Limited preprocessor functionality includes comment removal and `#include` directive expansion (lexer.py and preproc.py).
+*   **Lexer:** Implemented in lexer.py, with token definitions in tokens.py and token kinds in token\_kinds.py.
+*   **Parser:** Uses recursive descent techniques (parser/\*.py) to create a parse tree (tree/\*.py).
+*   **IL Generation:** Generates a custom intermediate language (IL) by traversing the parse tree (il\_cmds/\*.py, il\_gen.py, and tree/\*.py).
+*   **ASM Generation:** Converts IL commands into Intel-format x86-64 assembly code, with register allocation using George and Appel's iterated register coalescing algorithm (asm\_gen.py and il\_cmds/\*.py).
 
 ## Contributing
 
-This project is no longer under active development.  However, if you have questions or suggestions, please create an Issue on GitHub.
+This project is no longer under active development. However, you can still contribute!
+
+*   **Questions:** Ask questions via GitHub Issues.
+*   **Suggestions:** Suggest improvements via GitHub Issues.
 
 ## References
 
-*   [ShivC](https://github.com/ShivamSarodia/ShivC) - ShivyC is a rewrite from scratch of my old C compiler, ShivC, with much more emphasis on feature completeness and code quality. See the ShivC README for more details.
+*   [ShivC](https://github.com/ShivamSarodia/ShivC) - The original C compiler which this project is a rewrite of.
 *   C11 Specification - http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf
-*   x86_64 ABI - https://github.com/hjl-tools/x86-psABI/wiki/x86-64-psABI-1.0.pdf
+*   x86\_64 ABI - https://github.com/hjl-tools/x86-psABI/wiki/x86-64-psABI-1.0.pdf
 *   Iterated Register Coalescing (George and Appel) - https://www.cs.purdue.edu/homes/hosking/502/george.pdf

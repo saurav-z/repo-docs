@@ -1,47 +1,47 @@
 # R-Zero: Revolutionizing Reasoning with Self-Evolving LLMs
 
-**R-Zero empowers Large Language Models to learn and improve their reasoning abilities without any pre-existing data, allowing them to autonomously evolve from a blank slate.** ([Original Repo](https://github.com/Chengsong-Huang/R-Zero))
+**R-Zero empowers Large Language Models to learn and evolve their reasoning abilities autonomously, starting from scratch without any pre-existing data.**  Check out our paper and learn more on our [webpage](https://chengsong-huang.github.io/R-Zero.github.io/).  For the latest updates, visit the original repository at [https://github.com/Chengsong-Huang/R-Zero](https://github.com/Chengsong-Huang/R-Zero).
 
 ## Key Features
 
-*   **Fully Autonomous Learning:** Trains LLMs from scratch, eliminating the need for pre-existing datasets or human-annotated solutions.
-*   **Co-Evolutionary Architecture:** Leverages a Challenger-Solver loop to create a dynamic curriculum for continuous improvement.
-*   **Proven Performance Gains:** Achieves significant performance boosts on diverse reasoning benchmarks.
-*   **Strong Generalization Capabilities:** Transfers reasoning skills learned on specific tasks to general reasoning scenarios.
-*   **Model Agnostic:** Enhances the reasoning abilities of various base LLMs.
+*   **Zero-Shot Learning:**  No pre-existing datasets or labeled examples required.
+*   **Autonomous Evolution:**  Leverages a dynamic co-evolutionary loop between a Challenger and a Solver.
+*   **Adaptive Curriculum:**  The Challenger generates progressively challenging tasks tailored for the Solver.
+*   **Proven Performance:**  Achieves significant reasoning performance improvements across various benchmarks.
+*   **Generalization:**  Reasoning skills learned transfer effectively to broader reasoning tasks.
+*   **Model Agnostic:**  Enhances the capabilities of different backbone LLMs.
 
 ## Updates
 
-*   **2025-08-12:** Code updates for smoother training.
-*   **2025-08-08:**  Featured as `#2 Paper of the day` on Hugging Face's daily paper.
-*   **2025-08-07:** Paper and code released.
+*   **2025-08-08:**  R-Zero was featured as the #2 Paper of the day on [Hugging Face Papers](https://huggingface.co/papers/2508.05004).
+*   **2025-08-07:**  Paper and code released, sparking interest in the LLM community.
+<!-- - [2025-8-12] Update codes to make training more smooth. -->
 
 ## Overview
 
-[![R-Zero Architecture](figs/abstract.png)](https://arxiv.org/abs/2508.05004)
+![Abstract](figs/abstract.png)
 
-Traditional reasoning models often require vast, manually-curated datasets, which are costly and challenging to scale. R-Zero presents a groundbreaking framework that enables LLMs to enhance their reasoning skills autonomously, without any initial tasks or labels. The system is self-evolving, learning entirely from its own interactions.
+Traditional methods for training powerful reasoning models rely on extensive, manually curated datasets, which are costly and difficult to scale. R-Zero introduces a groundbreaking framework that allows LLMs to self-improve their reasoning skills without any pre-existing tasks or labeled data.
 
-R-Zero utilizes a co-evolutionary loop between two instances of the same base model:
+R-Zero uses a co-evolutionary loop between two components:
 
-1.  **The Challenger:** Generates challenging problems to identify and exploit the Solver's weaknesses.
-2.  **The Solver:** Continuously improves by tackling the progressively difficult tasks created by the Challenger.
+*   **Challenger 🎯:**  Probes the Solver for weaknesses and creates challenging problems.
+*   **Solver 🧠:**  Continuously improves by solving the increasingly difficult tasks from the Challenger.
 
-This process results in a perfectly tailored, adaptive learning curriculum. The Challenger refines its questioning, while the Solver optimizes its answering. The entire cycle is self-contained, utilizing techniques like majority voting for pseudo-labels and relative policy optimization to drive learning.
+This creates a self-contained, adaptive curriculum where the Challenger asks better questions and the Solver learns better answers.  The system employs techniques like majority voting for pseudo-labels and relative policy optimization to guide learning.
 
 ## Quickstart Guide
 
-Get started quickly with these simple steps:
+Get up and running quickly with these steps:
 
-### 1. Set Up Environment and Directories
+### 1.  Environment Setup
 
 ```bash
 git clone https://github.com/Chengsong-Huang/R-Zero.git
 cd R-Zero
 pip install -r requirements.txt
-export STORAGE_PATH="/path/to/your/storage"
-export HUGGINGFACENAME="yourhuggingfacename"
-
+export STORAGE_PATH="/path/to/your/storage"  # Set a path for checkpoints and generated data
+export HUGGINGFACENAME="yourhuggingfacename" # Set the Hugging Face name
 mkdir -p \
   "$STORAGE_PATH/evaluation" \
   "$STORAGE_PATH/models" \
@@ -49,75 +49,72 @@ mkdir -p \
   "$STORAGE_PATH/temp_results"
 ```
 
-### 2. Configure API Keys
+### 2.  API Key Configuration
 
-You'll need API keys for:
+*   Add your Hugging Face and WandB API keys to `tokens.json`.
+*   Add your OpenAI GPT API key to `evaluation/results_recheck.py` for evaluation.
 
-*   **Hugging Face** and **WandB** (in `tokens.json` for logging).
-*   **OpenAI GPT** (in `evaluation/results_recheck.py` for evaluation).
+### 3.  Run the Experiments
 
-### 3. Run the Experiments
-
-Replicate the experiments with a single script:
+Replicate our experimental results with a single script:
 
 ```bash
-# bash scripts/main.sh [Base_Model_Name] [Abbreviation]
-# Example:
-bash scripts/main.sh Qwen/Qwen3-4B-Base qwen3-4b
+# Run with: bash scripts/main.sh [Base_Model_Name] [Abbreviation]
+# Example: bash scripts/main.sh Qwen/Qwen3-4B-Base qwen3-4b
 ```
 
 ## Results
 
-The table below shows the performance comparison of the Base Model, a Zero-Shot Challenger baseline, and the iterative R-Zero framework. Best results are highlighted in **bold**.
+Performance comparison between the Base Model, a Zero-Shot Challenger baseline, and R-Zero iterations. Best performance highlighted in **bold**.
 
-| Model Name        | Overall AVG | MATH AVG | SuperGPQA | MMLU-Pro | BBEH   |
-| :---------------- | :----------: | :------: | :-------: | :------: | :-----: |
-| ***Qwen3-4B-Base*** |              |          |           |          |         |
-| &emsp;Base Model    |    27.10     |   42.58  |   20.88   |   37.38  |  7.57   |
-| &emsp;Base Challenger|    30.83     |   44.36  |   24.77   |   47.59  |  6.59   |
-| &emsp;R-Zero (Iter 1) |    34.27     |   48.06  |   **27.92**  |   51.69  |  9.42   |
-| &emsp;R-Zero (Iter 2) |   **34.92**   |   48.44  |   27.72   |  **53.75**   |  9.76   |
-| &emsp;R-Zero (Iter 3) |    34.64     |  **49.07** |   27.55   |   51.53  | **10.42**  |
-| ***Qwen3-8B-Base*** |              |          |           |          |         |
-| &emsp;Base Model    |    34.49     |   49.18  |   28.33   |   51.80  |  8.63   |
-| &emsp;Base Challenger|    36.43     |   51.87  |   30.12   |   54.14  |  9.60   |
-| &emsp;R-Zero (Iter 1) |    37.93     |   53.39  |   31.26   |   57.17  |  9.91   |
-| &emsp;R-Zero (Iter 2) |    38.45     |   53.84  |   **31.58**  |  **58.20**   | 10.20   |
-| &emsp;R-Zero (Iter 3) |   **38.73**   |  **54.69** |   31.38   |  **58.23**   | **10.60**  |
-| ***OctoThinker-3B*** |              |          |           |          |         |
-| &emsp;Base Model    |    12.27     |   26.64  |   10.09   |   10.87  |  1.46   |
-| &emsp;Base Challenger|    14.41     |   27.51  |   11.19   |   14.53  |  **4.40**   |
-| &emsp;R-Zero (Iter 1) |    14.93     |   27.76  |   12.21   |   15.72  |  4.05   |
-| &emsp;R-Zero (Iter 2) |    15.11     |   28.20  |   12.43   |   16.08  |  3.74   |
-| &emsp;R-Zero (Iter 3) |   **15.67**   |  **29.32** |   **12.44**  |  **16.71**   |  4.20   |
-| ***OctoThinker-8B*** |              |          |           |          |         |
-| &emsp;Base Model    |    16.81     |   32.11  |   13.26   |   20.21  |  1.64   |
-| &emsp;Base Challenger|    25.08     |   36.41  |   16.99   |   41.46  |  5.46   |
-| &emsp;R-Zero (Iter 1) |    26.44     |   37.80  |   19.15   |  **42.05**   |  6.77   |
-| &emsp;R-Zero (Iter 2) |    26.77     |   38.23  |   19.27   |   41.34  |  **8.25**   |
-| &emsp;R-Zero (Iter 3) |   **26.88**   |  **38.52** |   **19.82**  |   40.92  |  **8.25**   |
+| Model Name | Overall AVG | MATH AVG | SuperGPQA | MMLU-Pro | BBEH |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| ***Qwen3-4B-Base*** | | | | | |
+| &emsp;Base Model | 27.10 | 42.58 | 20.88 | 37.38 | 7.57 |
+| &emsp;Base Challenger | 30.83 | 44.36 | 24.77 | 47.59 | 6.59 |
+| &emsp;R-Zero (Iter 1) | 34.27 | 48.06 | **27.92** | 51.69 | 9.42 |
+| &emsp;R-Zero (Iter 2) | **34.92** | 48.44 | 27.72 | **53.75** | 9.76 |
+| &emsp;R-Zero (Iter 3) | 34.64 | **49.07** | 27.55 | 51.53 | **10.42** |
+| ***Qwen3-8B-Base*** | | | | | |
+| &emsp;Base Model | 34.49 | 49.18 | 28.33 | 51.80 | 8.63 |
+| &emsp;Base Challenger | 36.43 | 51.87 | 30.12 | 54.14 | 9.60 |
+| &emsp;R-Zero (Iter 1) | 37.93 | 53.39 | 31.26 | 57.17 | 9.91 |
+| &emsp;R-Zero (Iter 2) | 38.45 | 53.84 | **31.58** | 58.20 | 10.20 |
+| &emsp;R-Zero (Iter 3) | **38.73** | **54.69** | 31.38 | **58.23** | **10.60** |
+| ***OctoThinker-3B*** | | | | | |
+| &emsp;Base Model | 12.27 | 26.64 | 10.09 | 10.87 | 1.46 |
+| &emsp;Base Challenger | 14.41 | 27.51 | 11.19 | 14.53 | **4.40** |
+| &emsp;R-Zero (Iter 1) | 14.93 | 27.76 | 12.21 | 15.72 | 4.05 |
+| &emsp;R-Zero (Iter 2) | 15.11 | 28.20 | 12.43 | 16.08 | 3.74 |
+| &emsp;R-Zero (Iter 3) | **15.67** | **29.32** | **12.44** | **16.71** | 4.20 |
+| ***OctoThinker-8B*** | | | | | |
+| &emsp;Base Model | 16.81 | 32.11 | 13.26 | 20.21 | 1.64 |
+| &emsp;Base Challenger | 25.08 | 36.41 | 16.99 | 41.46 | 5.46 |
+| &emsp;R-Zero (Iter 1) | 26.44 | 37.80 | 19.15 | **42.05** | 6.77 |
+| &emsp;R-Zero (Iter 2) | 26.77 | 38.23 | 19.27 | 41.34 | **8.25** |
+| &emsp;R-Zero (Iter 3) | **26.88** | **38.52** | **19.82** | 40.92 | **8.25** |
 
-## FAQ for Developers
+## Frequently Asked Questions (FAQ)
 
-### **Q: What is the hardware setup for the experiments?**
+### Q: What hardware is required for experiments?
 
-**A:** Experiments were run on an 8-GPU server using models that can run on a single GPU (4B or 8B). Modifying the code will be needed for larger models or different hardware.
+**A:** Experiments were performed on an 8-GPU server using models that fit on a single GPU (e.g., 4B or 8B). You may need to adjust the code for larger models or different hardware.
 
-### **Q: How to troubleshoot environment configuration issues?**
+### Q:  How do I resolve environment configuration issues?
 
-**A:** The framework is inspired by [EasyR1](https://github.com/hiyouga/EasyR1/tree/main). Check their setup instructions or use their Docker environment for guidance.
+**A:** R-Zero's structure is based on [EasyR1](https://github.com/hiyouga/EasyR1/tree/main). Consult their setup instructions or use their Docker environment for guidance.
 
-### **Q: Where are the training logs and model checkpoints saved?**
+### Q: Where are training logs and model checkpoints saved?
 
-**A:** Training data, logs, datasets, and model checkpoints are saved in the directory set by the `STORAGE_PATH` environment variable. Datasets are also sent to Hugging Face via `HUGGINGFACENAME`.
+**A:** All data, including logs, datasets, and checkpoints, is saved in the directory set by the `STORAGE_PATH` environment variable. Datasets are also sent to Hugging Face via `HUGGINGFACENAME`.
 
-### **Q: What if the code gets stuck during the questioner training process?**
+### Q: What if the code gets stuck during training?
 
-**A:** A timeout control has been added to handle a potential issue with the `math_verify` library. Restart training from the last checkpoint if you encounter problems.
+**A:**  A timeout has been added to `math_verify` to handle potential infinite loops. If problems persist, restart training from the latest checkpoint.
 
 ## Acknowledgements
 
-R-Zero is based on the work of [**EasyR1**](https://github.com/hiyouga/EasyR1/tree/main) and leverages the evaluation process from [**General-Reasoner**](https://github.com/TIGER-AI-Lab/General-Reasoner).
+This framework is built upon the foundational work of [**EasyR1**](https://github.com/hiyouga/EasyR1/tree/main) and leverages components from [**General-Reasoner**](https://github.com/TIGER-AI-Lab/General-Reasoner) for evaluation.
 
 ## Citation
 

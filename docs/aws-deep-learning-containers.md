@@ -1,37 +1,38 @@
-# AWS Deep Learning Containers: Optimized Docker Images for Machine Learning
+# AWS Deep Learning Containers: Pre-built Docker Images for Machine Learning
 
-**Accelerate your machine learning projects with AWS Deep Learning Containers (DLCs), pre-built Docker images optimized for training and deploying models.**  ([Original Repo](https://github.com/aws/deep-learning-containers))
+**Get started quickly with optimized Docker images for training and serving your machine learning models on AWS.**
 
-**Key Features:**
+[View the original repository on GitHub](https://github.com/aws/deep-learning-containers)
 
-*   **Pre-built and Optimized:** Ready-to-use Docker images for popular deep learning frameworks.
-*   **Framework Support:**  Includes TensorFlow, TensorFlow 2, PyTorch, and MXNet.
-*   **Hardware Acceleration:** Optimized for both CPU (with Intel MKL) and GPU (with Nvidia CUDA) instances.
-*   **Amazon Integration:** Designed for seamless use with Amazon SageMaker, EC2, ECS, and EKS.
-*   **Easy Deployment:**  Available in Amazon Elastic Container Registry (ECR) for quick deployment.
+## Key Features:
 
-## Table of Contents
-
-*   [Getting Started](#getting-started)
-*   [Building Your Image](#building-your-image)
-*   [Upgrading the Framework Version](#upgrading-the-framework-version)
-*   [Adding Artifacts to Your Build Context](#adding-artifacts-to-your-build-context)
-*   [Adding a Package](#adding-a-package)
-*   [Running Tests Locally](#running-tests-locally)
+*   **Optimized Environments:** Pre-configured with popular deep learning frameworks like TensorFlow, PyTorch, and MXNet, along with NVIDIA CUDA (for GPU instances) and Intel MKL (for CPU instances).
+*   **Easy Deployment:** Available in Amazon Elastic Container Registry (Amazon ECR), making them ideal for use with Amazon SageMaker, EC2, ECS, and EKS.
+*   **Flexible Framework Support:** Supports multiple versions of TensorFlow, TensorFlow 2, PyTorch, and MXNet.
+*   **Simplified Development:** Streamlined build and testing processes with clear instructions.
 
 ## Getting Started
 
-This section outlines the setup for building and testing DLCs on Amazon SageMaker, EC2, ECS, and EKS.  This example focuses on building an MXNet GPU python3 training container.
+This section provides a guide to building and testing AWS Deep Learning Containers on various platforms.
 
-**Prerequisites:**
+### Prerequisites
 
-*   An AWS account with configured CLI access (IAM role recommended, with the permissions detailed in the original README).
-*   An ECR repository (e.g., "beta-mxnet-training" in us-west-2).
-*   Docker installed on your system.
+*   An active AWS account with appropriate permissions.  Ensure your AWS CLI is configured. Recommended IAM permissions include:
+    *   AmazonEC2ContainerRegistryFullAccess
+    *   AmazonEC2FullAccess
+    *   AmazonEKSClusterPolicy
+    *   AmazonEKSServicePolicy
+    *   AmazonEKSServiceRolePolicy
+    *   AWSServiceRoleForAmazonEKSNodegroup
+    *   AmazonSageMakerFullAccess
+    *   AmazonS3FullAccess
+*   Docker installed on your system (e.g., OSX, EC2).
 
-**Steps:**
+### Build & Test Setup (Example: MXNet GPU Python3 Training)
 
-1.  **Clone the repository** and set the following environment variables:
+1.  **Set Up Your Environment:**
+    *   Clone the repository.
+    *   Define environment variables (replace placeholders with your values):
 
     ```shell
     export ACCOUNT_ID=<YOUR_ACCOUNT_ID>
@@ -39,13 +40,14 @@ This section outlines the setup for building and testing DLCs on Amazon SageMake
     export REPOSITORY_NAME=beta-mxnet-training
     ```
 
-2.  **Login to ECR:**
+2.  **Authenticate with ECR:**
 
     ```shell
-    aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com
+    aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
     ```
 
-3.  **Create a virtual environment** and install requirements:
+3.  **Prepare Your Build Environment:**
+    *   Create a Python virtual environment:
 
     ```shell
     python3 -m venv dlc
@@ -53,7 +55,7 @@ This section outlines the setup for building and testing DLCs on Amazon SageMake
     pip install -r src/requirements.txt
     ```
 
-4.  **Perform initial setup:**
+4.  **Initial Setup:**
 
     ```shell
     bash src/setup.sh mxnet
@@ -61,16 +63,14 @@ This section outlines the setup for building and testing DLCs on Amazon SageMake
 
 ## Building Your Image
 
-The DLC build process uses `buildspec.yml` files to define Dockerfile paths. These paths follow a consistent pattern.
+Dockerfiles follow a structured path.  Customize your build using the `buildspec.yml` files located in the framework-specific directories (e.g., `mxnet/training/buildspec.yml`).
 
-1.  **Build all images:**
+1.  **Build All Images:**
 
     ```shell
     python src/main.py --buildspec mxnet/training/buildspec.yml --framework mxnet
     ```
-
-    (First run will take longer as it downloads base layers).
-2.  **Build a single image:**
+2.  **Build a Specific Image:**
 
     ```shell
     python src/main.py --buildspec mxnet/training/buildspec.yml \
@@ -80,98 +80,47 @@ The DLC build process uses `buildspec.yml` files to define Dockerfile paths. The
                        --py_versions py3
     ```
 
-3.  **Specify Image Types, Device Types, and Python Versions:** Use the `--image_types`, `--device_types`, and `--py_versions` arguments (comma-separated lists).
+    *   `--image_types`: `training`/`inference`
+    *   `--device_types`: `cpu`/`gpu`
+    *   `--py_versions`: `py2`/`py3`
 
-    *   `--image_types`:  `training`, `inference`
-    *   `--device_types`: `cpu`, `gpu`
-    *   `--py_versions`: `py2`, `py3`
+## Upgrading Framework Versions
 
-4.  **Example:** Build all GPU training containers with Python 3:
+To incorporate a new framework version (e.g., MXNet 1.7.0), modify the relevant `buildspec.yml` file and ensure the corresponding Dockerfile exists.
 
-    ```shell
-    python src/main.py --buildspec mxnet/training/buildspec.yml \
-                       --framework mxnet \
-                       --image_types training \
-                       --device_types gpu \
-                       --py_versions py3
-    ```
+## Adding Artifacts & Packages
 
-## Upgrading the Framework Version
-
-To update to a new framework version (e.g., MXNet 1.7.0):
-
-1.  **Modify `buildspec.yml`:** Change the `version` key in the appropriate `buildspec.yml` file.
-2.  **Update Dockerfile path (if needed):** Ensure the Dockerfile for the new version exists at the expected path.
-3.  **Build the container** as described above.
-
-## Adding Artifacts to Your Build Context
-
-To include files in the build context (e.g., a README file):
-
-1.  **Add to `buildspec.yml`:** Define the artifact under the `context`, `training_context`, or `inference_context` key in the  `buildspec.yml` file, specifying the source and target paths.
-2.  **Build the container** as described above.
-
-## Adding a Package
-
-To add a package to your image:
-
-1.  **Modify the Dockerfile:** Add the package installation command (e.g., `pip install`) to the Dockerfile.
-2.  **Build the container** as described above.
+*   **Adding Artifacts:**  Use the `context` key in your `buildspec.yml` to include files from your build context.
+*   **Adding Packages:** Modify your Dockerfile (e.g., the `Dockerfile.gpu` for the MXNet 1.6.0 py3 GPU image) to include the desired package using `pip install`.
 
 ## Running Tests Locally
 
-Run tests locally to validate your changes without using too many resources.
+Run tests locally for faster iteration using the pytest framework. Requires access to an AWS account.
 
-1.  **Prerequisites:**
-    *   Ensure the images to be tested are available locally (pull from ECR).
-    *   Install the requirements for tests:
-
-        ```shell
-        cd deep-learning-containers/
-        pip install -r src/requirements.txt
-        pip install -r test/requirements.txt
-        ```
-
-2.  **Set environment variables:**
-
+1.  **Prerequisites**  Ensure the images you want to test are available locally.
+2.  **Set Up Testing Environment:**
     ```shell
+    cd deep-learning-containers/
+    pip install -r src/requirements.txt
+    pip install -r test/requirements.txt
     export DLC_IMAGES="$ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com/pr-pytorch-training:training-gpu-py3 $ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com/pr-mxnet-training:training-gpu-py3"
     export PYTHONPATH=$(pwd)/src
     export CODEBUILD_RESOLVED_SOURCE_VERSION="my-unique-test"
-    ```
-
-3.  **Navigate to the test directory:**
-
-    ```shell
     cd test/dlc_tests
     ```
+3.  **Run Tests:**
 
-4.  **Run tests (series) for a specific platform:**
+    *   **All Tests (EC2):** `pytest -s -rA ec2/ -n=auto`
+    *   **All Tests (ECS):** `pytest -s -rA ecs/ -n=auto`
+    *   **All Tests (EKS)**
+        ```bash
+        cd ../
+        export TEST_TYPE=eks
+        python test/testrunner.py
+        ```
+    *   **Specific Test File:**  `pytest -s ecs/mxnet/training/test_ecs_mxnet_training.py`
+    *   **Specific Test Function:** `pytest -s ecs/mxnet/training/test_ecs_mxnet_training.py::test_ecs_mxnet_training_dgl_cpu`
 
-    ```shell
-    # EC2
-    pytest -s -rA ec2/ -n=auto
-    # ECS
-    pytest -s -rA ecs/ -n=auto
-
-    #EKS
-    cd ../
-    export TEST_TYPE=eks
-    python test/testrunner.py
-    ```
-
-    (Remove `-n=auto` for sequential tests)
-5.  **Run a specific test file:**
-
-    ```shell
-    pytest -s ecs/mxnet/training/test_ecs_mxnet_training.py
-    ```
-
-6.  **Run a specific test function:**
-
-    ```shell
-    pytest -s ecs/mxnet/training/test_ecs_mxnet_training.py::test_ecs_mxnet_training_dgl_cpu
-    ```
-7.  **Run SageMaker local mode tests**
-8.  **Run SageMaker remote tests**
-9.  **Run SageMaker benchmark tests**
+4.  **SageMaker Local Mode Tests:** Launch an EC2 instance with a Deep Learning AMI and run the tests described in the original README.
+5.  **SageMaker Remote Tests** : Run remote tests using SageMaker. Create an IAM role and run the pytest commands as detailed in the original README.
+6.  **SageMaker Benchmark Tests** :  Perform benchmarking tests following the instructions in the original README.

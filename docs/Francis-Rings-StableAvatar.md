@@ -1,6 +1,6 @@
-# StableAvatar: Generate Infinite-Length, Audio-Driven Avatar Videos
+# StableAvatar: Generate Infinite-Length Avatar Videos from Audio 
 
-**Unleash the power of StableAvatar to create stunning, infinite-length avatar videos driven by audio, without face-swapping or post-processing!** [View the original repository](https://github.com/Francis-Rings/StableAvatar)
+**Unleash the power of audio to create endless, high-quality avatar videos that preserve identity with StableAvatar!** ([Original Repo](https://github.com/Francis-Rings/StableAvatar))
 
 [![Project Page](https://img.shields.io/badge/Project-Page-Green)](https://francis-rings.github.io/StableAvatar)
 [![Arxiv](https://img.shields.io/badge/Paper-Arxiv-red)](https://arxiv.org/abs/2508.08248)
@@ -8,79 +8,98 @@
 [![YouTube Demo](https://img.shields.io/badge/YouTube-Watch-red?style=flat-square&logo=youtube)](https://www.youtube.com/watch?v=6lhvmbzvv3Y)
 [![Bilibili Demo](https://img.shields.io/badge/Bilibili-Watch-blue?style=flat-square&logo=bilibili)](https://www.bilibili.com/video/BV1hUt9z4EoQ)
 
-StableAvatar is a cutting-edge AI model that generates high-fidelity, identity-preserving avatar videos driven by audio.  It overcomes the limitations of existing models, offering the ability to synthesize **infinite-length** videos directly, without relying on face-related post-processing.
+StableAvatar revolutionizes audio-driven avatar video generation, enabling the synthesis of infinite-length, high-fidelity videos that maintain the subject's identity. Leveraging a novel end-to-end video diffusion transformer, StableAvatar bypasses the need for post-processing tools, delivering impressive results directly from audio and a reference image.
 
 **Key Features:**
 
-*   **Infinite-Length Video Generation:** Generate videos of any length without degradation in quality or identity consistency.
-*   **Audio-Driven Animation:** Synchronizes avatar movements precisely to the provided audio input.
-*   **Identity Preservation:**  Maintains the consistent identity of the avatar throughout the video.
-*   **End-to-End Solution:**  Generates videos without the need for external face-swapping or restoration tools.
-*   **High-Fidelity Results:** Produces videos with exceptional visual quality and natural movement.
+*   **Infinite-Length Video Generation:** Generate avatar videos of unlimited duration.
+*   **Identity Preservation:**  Guaranteed identity consistency throughout the video.
+*   **High-Fidelity Output:**  Produces high-quality videos directly without face-related post-processing.
+*   **Audio-Driven Animation:**  Synchronizes avatar movements perfectly with the provided audio.
+*   **End-to-End Solution:** No external face-swapping or restoration tools required.
+*   **Supports Multiple Resolutions:** 512x512, 480x832, and 832x480.
 
-**Demonstration Videos:**
+<table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
+  <tr>
+      <td>
+          <video src="https://github.com/user-attachments/assets/d7eca208-6a14-46af-b337-fb4d2b66ba8d" width="320" controls loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/b5902ac4-8188-4da8-b9e6-6df280690ed1" width="320" controls loop></video>
+      </td>
+       <td>
+          <video src="https://github.com/user-attachments/assets/87faa5c1-a118-4a03-a071-45f18e87e6a0" width="320" controls loop></video>
+     </td>
+  </tr>
+  <tr>
+      <td>
+          <video src="https://github.com/user-attachments/assets/531eb413-8993-4f8f-9804-e3c5ec5794d4" width="320" controls loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/cdc603e2-df46-4cf8-a14e-1575053f996f" width="320" controls loop></video>
+      </td>
+       <td>
+          <video src="https://github.com/user-attachments/assets/7022dc93-f705-46e5-b8fc-3a3fb755795c" width="320" controls loop></video>
+     </td>
+  </tr>
+  <tr>
+      <td>
+          <video src="https://github.com/user-attachments/assets/0ba059eb-ff6f-4d94-80e6-f758c613b737" width="320" controls loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/03e6c1df-85c6-448d-b40d-aacb8add4e45" width="320" controls loop></video>
+      </td>
+       <td>
+          <video src="https://github.com/user-attachments/assets/90b78154-dda0-4eaa-91fd-b5485b718a7f" width="320" controls loop></video>
+     </td>
+  </tr>
+</table>
 
-*(Embedded video examples showcasing StableAvatar's capabilities)*
-
-*(Insert example videos here - replace the placeholders)*
-
-<video src="https://github.com/user-attachments/assets/d7eca208-6a14-46af-b337-fb4d2b66ba8d" width="320" controls loop></video>
-<video src="https://github.com/user-attachments/assets/b5902ac4-8188-4da8-b9e6-6df280690ed1" width="320" controls loop></video>
-<video src="https://github.com/user-attachments/assets/87faa5c1-a118-4a03-a071-45f18e87e6a0" width="320" controls loop></video>
-
-<video src="https://github.com/user-attachments/assets/531eb413-8993-4f8f-9804-e3c5ec5794d4" width="320" controls loop></video>
-<video src="https://github.com/user-attachments/assets/cdc603e2-df46-4cf8-a14e-1575053f996f" width="320" controls loop></video>
-<video src="https://github.com/user-attachments/assets/7022dc93-f705-46e5-b8fc-3a3fb755795c" width="320" controls loop></video>
-
-<video src="https://github.com/user-attachments/assets/0ba059eb-ff6f-4d94-80e6-f758c613b737" width="320" controls loop></video>
-<video src="https://github.com/user-attachments/assets/03e6c1df-85c6-448d-b40d-aacb8add4e45" width="320" controls loop></video>
-<video src="https://github.com/user-attachments/assets/90b78154-dda0-4eaa-91fd-b5485b718a7f" width="320" controls loop></video>
-<br/>
-
-*A comparison video demonstrating StableAvatar's superior performance.*
+<p style="text-align: justify;">
+  <span>Audio-driven avatar videos generated by StableAvatar, showing its power to synthesize <b>infinite-length</b> and <b>ID-preserving videos</b>. All videos are <b>directly synthesized by StableAvatar without the use of any face-related post-processing tools</b>, such as the face-swapping tool FaceFusion or face restoration models like GFP-GAN and CodeFormer.</span>
+</p>
 
 <p align="center">
   <video src="https://github.com/user-attachments/assets/90691318-311e-40b9-9bd9-62db83ab1492" width="768" autoplay loop muted playsinline></video>
   <br/>
+  <span>Comparison results between StableAvatar and state-of-the-art (SOTA) audio-driven avatar video generation models highlight the superior performance of StableAvatar in delivering <b>infinite-length, high-fidelity, identity-preserving avatar animation</b>.</span>
 </p>
 
 ## Overview
 
-*(Insert the architectural diagram of StableAvatar)*
-
 <p align="center">
   <img src="assets/figures/framework.jpg" alt="model architecture" width="1280"/>
-</br>
+  </br>
   <i>The overview of the framework of StableAvatar.</i>
 </p>
 
-StableAvatar tackles the challenge of long-form audio-driven avatar video generation by introducing a novel Time-step-aware Audio Adapter and an Audio Native Guidance Mechanism, preventing error accumulation and enhancing audio synchronization. A Dynamic Weighted Sliding-window Strategy is implemented to enhance the smoothness of the infinite-length videos.
+StableAvatar overcomes limitations in existing models by integrating a novel Time-step-aware Audio Adapter and Audio Native Guidance Mechanism for improved audio synchronization and smoothness. This innovative approach allows StableAvatar to generate long, natural-looking videos without error accumulation.
 
 ## News
 
-*   `[2025-8-18]`: 🔥 StableAvatar can run on [ComfyUI](https://github.com/smthemex/ComfyUI_StableAvatar) in just 10 steps, making it 3x faster. Thanks @[smthemex](https://github.com/smthemex) for the contribution.
-*   `[2025-8-16]`: 🔥 We release the finetuning codes and lora training/finetuning codes! Other codes will be public as soon as possible. Stay tuned!
-*   `[2025-8-15]`: 🔥 StableAvatar can run on Gradio Interface. Thanks @[gluttony-10](https://space.bilibili.com/893892) for the contribution!
-*   `[2025-8-15]`: 🔥 StableAvatar can run on [ComfyUI](https://github.com/smthemex/ComfyUI_StableAvatar). Thanks @[smthemex](https://github.com/smthemex) for the contribution.
-*   `[2025-8-13]`: 🔥 Added changes to run StableAvatar on the new Blackwell series Nvidia chips, including the RTX 6000 Pro.
-*   `[2025-8-11]`: 🔥 The project page, code, technical report and [a basic model checkpoint](https://huggingface.co/FrancisRing/StableAvatar/tree/main) are released. Further lora training codes, the evaluation dataset and StableAvatar-pro will be released very soon. Stay tuned!
+*   `[2025-08-18]`: 🔥 StableAvatar now runs on [ComfyUI](https://github.com/smthemex/ComfyUI_StableAvatar), making it 3x faster! Thanks @[smthemex](https://github.com/smthemex)!
+*   `[2025-08-16]`: 🔥 Finetuning and LoRA training codes are released!
+*   `[2025-08-15]`: 🔥 Gradio Interface available! Thanks @[gluttony-10](https://space.bilibili.com/893892)!
+*   `[2025-08-15]`: 🔥  Compatible with [ComfyUI](https://github.com/smthemex/ComfyUI_StableAvatar). Thanks @[smthemex](https://github.com/smthemex)!
+*   `[2025-08-13]`: 🔥  Updated to support the new Blackwell series Nvidia chips.
+*   `[2025-08-11]`: 🔥  Project page, code, technical report, and basic model checkpoint released.
 
 ## 🛠️ To-Do List
 
-*   \[x] StableAvatar-1.3B-basic
-*   \[x] Inference Code
-*   \[x] Data Pre-Processing Code (Audio Extraction)
-*   \[x] Data Pre-Processing Code (Vocal Separation)
-*   \[x] Training Code
-*   \[x] Full Finetuning Code
-*   \[x] Lora Training Code
-*   \[x] Lora Finetuning Code
-*   \[ ] Inference Code with Audio Native Guidance
-*   \[ ] StableAvatar-pro
+*   [x] StableAvatar-1.3B-basic
+*   [x] Inference Code
+*   [x] Data Pre-Processing Code (Audio Extraction)
+*   [x] Data Pre-Processing Code (Vocal Separation)
+*   [x] Training Code
+*   [x] Full Finetuning Code
+*   [x] Lora Training Code
+*   [x] Lora Finetuning Code
+*   [ ] Inference Code with Audio Native Guidance
+*   [ ] StableAvatar-pro
 
-## 🔑 Quickstart
+## 🚀 Quickstart
 
-The basic model checkpoint (Wan2.1-1.3B-based) supports generating infinite-length videos at 480x832, 832x480, or 512x512 resolutions. Reduce the number of animated frames or the output resolution if you encounter memory issues.
+The basic version of the model supports generating **infinite-length videos at 480x832, 832x480, or 512x512 resolution**. Adjust frame numbers or output resolution if you encounter memory issues.
 
 ### 🧱 Environment Setup
 
@@ -102,7 +121,7 @@ pip install flash_attn
 
 ### 🧱 Download Weights
 
-If you have connection issues with Hugging Face, use the mirror endpoint: `export HF_ENDPOINT=https://hf-mirror.com`.
+If you have trouble with Hugging Face connections, use the mirror endpoint: `export HF_ENDPOINT=https://hf-mirror.com`.
 
 ```bash
 pip install "huggingface_hub[cli]"
@@ -111,17 +130,28 @@ mkdir checkpoints
 huggingface-cli download FrancisRing/StableAvatar --local-dir ./checkpoints
 ```
 
-The file structure should be:
+Organize the weights as follows:
 
 ```
 StableAvatar/
-├── ...
+├── accelerate_config
+├── deepspeed_config
+├── examples
+├── wan
 ├── checkpoints
 │   ├── Kim_Vocal_2.onnx
 │   ├── wav2vec2-base-960h
 │   ├── Wan2.1-Fun-V1.1-1.3B-InP
 │   └── StableAvatar-1.3B
-├── ...
+├── inference.py
+├── inference.sh
+├── train_1B_square.py
+├── train_1B_square.sh
+├── train_1B_vec_rec.py
+├── train_1B_vec_rec.sh
+├── audio_extractor.py
+├── vocal_seperator.py
+├── requirement.txt
 ```
 
 ### 🧱 Audio Extraction
@@ -134,7 +164,7 @@ python audio_extractor.py --video_path="path/test/video.mp4" --saved_audio_path=
 
 ### 🧱 Vocal Separation
 
-Separate vocals from audio:
+Separate vocals from audio for improved lip-sync:
 
 ```bash
 pip install audio-separator[gpu]
@@ -143,43 +173,36 @@ python vocal_seperator.py --audio_separator_model_file="path/StableAvatar/checkp
 
 ### 🧱 Base Model Inference
 
-Run inference using `inference.sh`:
+Run the example `inference.sh` script, or modify it for your needs:
 
 ```bash
 bash inference.sh
 ```
 
-*   Modify `--width`, `--height` in `inference.sh` to set resolution (512x512, 480x832, or 832x480).
-*   `--output_dir`:  Output directory for generated animation.
-*   `--validation_reference_path`, `--validation_driven_audio_path`, `--validation_prompts`: Paths to the reference image, audio, and text prompts, respectively.
-*   Prompts: Recommended format `[Description of first frame]-[Description of human behavior]-[Description of background (optional)]`.
-*   `--pretrained_model_name_or_path`, `--pretrained_wav2vec_path`, `--transformer_path`:  Paths to pretrained model weights.
-*   `--sample_steps`, `--overlap_window_length`, `--clip_sample_n_frames`:  Inference parameters.
-    *   Recommended `--sample_steps`: \[30-50]
-    *   Recommended `--overlap_window_length`: \[5-15]
-*   `--sample_text_guide_scale`, `--sample_audio_guide_scale`: CFG scales.  Recommended range: \[3-6]. Increase audio CFG for better lip sync.
+The Wan2.1-1.3B-based model supports generating audio-driven avatar videos at 512x512, 480x832, and 832x480 resolutions. Configure the resolution using `--width` and `--height` in `inference.sh`. Set the output path with `--output_dir`.  Use `--validation_reference_path`, `--validation_driven_audio_path`, and `--validation_prompts` to specify the reference image, audio, and text prompts.
 
-Gradio Interface:
+Prompts are critical. Recommended format: `[Description of first frame]-[Description of human behavior]-[Description of background (optional)]`.
+
+Specify the model paths with `--pretrained_model_name_or_path`, `--pretrained_wav2vec_path`, and `--transformer_path`.
+
+Adjust `--sample_steps`, `--overlap_window_length`, and `--clip_sample_n_frames` for quality and speed.  Text and audio CFG scales (`--sample_text_guide_scale` and `--sample_audio_guide_scale`) are also important.
+
+You can also launch a Gradio interface:
 
 ```bash
 python app.py
 ```
 
-Example videos are provided in `path/StableAvatar/examples`.
+See the `/examples` directory for 6 example cases.
 
 #### 💡 Tips
-- The two versions of Wan2.1-1.3B-based StableAvatar weights: `transformer3d-square.pt` and `transformer3d-rec-vec.pt`. You can modify `--transformer_path` in `inference.sh` to switch these two versions.
 
-- You can change the loading mode of StableAvatar by modifying "--GPU_memory_mode" in `inference.sh`. The options of "--GPU_memory_mode" are `model_full_load`, `sequential_cpu_offload`, `model_cpu_offload_and_qfloat8`, and `model_cpu_offload`. In particular, when you set `--GPU_memory_mode` to `sequential_cpu_offload`, the total GPU memory consumption is approximately 3G with slower inference speed.
-Setting `--GPU_memory_mode` to `model_cpu_offload` can significantly cut GPU memory usage, reducing it by roughly half compared to `model_full_load` mode.
+*   Use the `transformer3d-square.pt` or `transformer3d-rec-vec.pt` weights to switch between training datasets.
+*   If GPU memory is limited, use `--GPU_memory_mode` (e.g., `sequential_cpu_offload`, `model_cpu_offload`, or `model_cpu_offload_and_qfloat8`).
+*   Use multi-GPU inference with `--ulysses_degree` and `--ring_degree`.
+*   Use FSDP in DiT with `--fsdp_dit` for further memory reduction.
 
-- If you have multiple Gpus, you can run Multi-GPU inference to speed up by modifying "--ulysses_degree" and "--ring_degree" in `inference.sh`. For example, if you have 8 GPUs, you can set `--ulysses_degree=4` and `--ring_degree=2`. Notably, you have to ensure ulysses_degree*ring_degree=total GPU number/world-size. Moreover, you can also add `--fsdp_dit` in `inference.sh` to activate FSDP in DiT to further reduce GPU memory consumption.
-You can fun the following command:
-```
-bash multiple_gpu_inference.sh
-```
-
-Use ffmpeg to add audio to the output:
+To create a high-quality MP4 with audio, use `ffmpeg` on the output:
 
 ```bash
 ffmpeg -i video_without_audio.mp4 -i /path/audio.wav -c:v copy -c:a aac -shortest /path/output_with_audio.mp4
@@ -187,9 +210,9 @@ ffmpeg -i video_without_audio.mp4 -i /path/audio.wav -c:v copy -c:a aac -shortes
 
 ### 🧱 Model Training
 
-**Training Tutorial for Video Diffusion Transformer (DiT) models (Wan2.1) and StableAvatar.**
+**🔥🔥This tutorial is also applicable to training conditioned Video Diffusion Transformer (DiT) models, like Wan2.1!🔥🔥**
 
-Dataset Structure:
+Organize your training data as specified in the README.
 
 ```
 talking_face_data/
@@ -199,20 +222,20 @@ talking_face_data/
 │   │  │  │  ├──sub_clip.mp4
 │   │  │  │  ├──audio.wav
 │   │  │  │  ├──images
-│   │  │  │  ├──frame_0.png
-│   │  │  │  ├──frame_1.png
-│   │  │  │  ├──frame_2.png
-│   │  │  │  ├──...
+│   │  │  │  │  ├──frame_0.png
+│   │  │  │  │  ├──frame_1.png
+│   │  │  │  │  ├──frame_2.png
+│   │  │  │  │  ├──...
 │   │  │  │  ├──face_masks
-│   │  │  │  ├──frame_0.png
-│   │  │  │  ├──frame_1.png
-│   │  │  │  ├──frame_2.png
-│   │  │  │  ├──...
+│   │  │  │  │  ├──frame_0.png
+│   │  │  │  │  ├──frame_1.png
+│   │  │  │  │  ├──frame_2.png
+│   │  │  │  │  ├──...
 │   │  │  │  ├──lip_masks
-│   │  │  │  ├──frame_0.png
-│   │  │  │  ├──frame_1.png
-│   │  │  │  ├──frame_2.png
-│   │  │  │  ├──...
+│   │  │  │  │  ├──frame_0.png
+│   │  │  │  │  ├──frame_1.png
+│   │  │  │  │  ├──frame_2.png
+│   │  │  │  │  ├──...
 │   │  │  ├──00002
 │   │  │  │  ├──sub_clip.mp4
 │   │  │  │  ├──audio.wav
@@ -290,119 +313,80 @@ talking_face_data/
 ├── video_square_path.txt
 └── video_vec_path.txt
 ```
-*   Mixed-resolution videos:  `talking_face_data/square` (512x512), `talking_face_data/vec` (480x832), and `talking_face_data/rec` (832x480).
-*   Each subfolder contains different types of videos (speech, singing, and dancing).
-*   `.png` image files are named `frame_i.png`.
-*   `images`, `face_masks`, and `lip_masks`:  RGB frames, face masks, and lip masks, respectively.
-*   `sub_clip.mp4` and `audio.wav`: Video and audio files.
-*   `video_square_path.txt`, `video_rec_path.txt`, `video_vec_path.txt`:  Text files listing the paths to the video data.
 
-Use ffmpeg to extract frames from videos:
+Prepare your video data and extract frames with ffmpeg:
 
 ```bash
 ffmpeg -i raw_video_1.mp4 -q:v 1 -start_number 0 path/StableAvatar/talking_face_data/rec/speech/00001/images/frame_%d.png
 ```
 
-*   For human face masks, refer to [StableAnimator repo](https://github.com/Francis-Rings/StableAnimator).
-*   For human lip masks:
+Extract face and lip masks. For face masks, see [StableAnimator repo](https://github.com/Francis-Rings/StableAnimator). For lip masks:
 
 ```bash
 pip install mediapipe
 python lip_mask_extractor.py --folder_root="path/StableAvatar/talking_face_data/rec/singing" --start=1 --end=500
 ```
 
-*   For Audio Extraction, refer to the Audio Extraction section.
-
-Training Commands:
+Then run the training scripts:
 
 ```bash
-# Training StableAvatar on a single resolution setting (512x512) in a single machine
+# Train on a single resolution (512x512) on a single machine
 bash train_1B_square.sh
-# Training StableAvatar on a single resolution setting (512x512) in multiple machines
+# Train on a single resolution (512x512) on multiple machines
 bash train_1B_square_64.sh
-# Training StableAvatar on a mixed resolution setting (480x832 and 832x480) in a single machine
+# Train on mixed resolutions (480x832, 832x480) on a single machine
 bash train_1B_rec_vec.sh
-# Training StableAvatar on a mixed resolution setting (480x832 and 832x480) in multiple machines
+# Train on mixed resolutions (480x832, 832x480) on multiple machines
 bash train_1B_rec_vec_64.sh
 ```
-Parameter details for `train_1B_square.sh` and `train_1B_rec_vec.sh`:
-*  `CUDA_VISIBLE_DEVICES`: gpu devices
-*  `--pretrained_model_name_or_path`, `--pretrained_wav2vec_path`, and `--output_dir` : pretrained Wan2.1-1.3B path, pretrained Wav2Vec2.0 path, and the checkpoint saved path of the trained StableAvatar.
-* `--train_data_square_dir`, `--train_data_rec_dir`, and `--train_data_vec_dir` are the paths of `video_square_path.txt`, `video_rec_path.txt`, and `video_vec_path.txt`, respectively.
-*   `--validation_reference_path` and `--validation_driven_audio_path`: Paths to the validation reference image and validation driven audio.
-*   `--video_sample_n_frames`:  The number of frames processed in a single batch.
-*   `--num_train_epochs`: The training epoch number.
-For the parameter details of `train_1B_square_64.sh` and `train_1B_rec_vec_64.sh`, we set the GPU configuration in `path/StableAvatar/accelerate_config/accelerate_config_machine_1B_multiple.yaml`. In my setting, the training setup consists of 8 nodes, each equipped with 8 NVIDIA A100 80GB GPUs, for training StableAvatar.
 
-The overall file structure of StableAvatar at training is shown as follows:
-```
-StableAvatar/
-├── ...
-├── checkpoints
-│   ├── Kim_Vocal_2.onnx
-│   ├── wav2vec2-base-960h
-│   ├── Wan2.1-Fun-V1.1-1.3B-InP
-│   └── StableAvatar-1.3B
-├── ...
-```
+Configure the training parameters as detailed in the training scripts.
 
-**Important Notes:**
+Training requires considerable VRAM, depending on resolution and training setup. The VRAM requirement is approximately 40GB for training on 512x512 videos.
 
-*   Training StableAvatar requires approximately 50GB of VRAM (mixed resolution) or 40GB (512x512 only).
-*   Use static backgrounds in training videos for accurate loss calculation.
-*   Use clear audio without excessive noise.
+The backgrounds of training videos should be static, and the audio should be clear.
 
-Wan2.1-14B-based StableAvatar training:
+For training Wan2.1-14B:
+
 ```bash
-# Training StableAvatar on a mixed resolution setting (480x832, 832x480, and 512x512) in multiple machines
+# Train on mixed resolutions (480x832, 832x480, and 512x512) on multiple machines
 huggingface-cli download Wan-AI/Wan2.1-I2V-14B-480P --local-dir ./checkpoints/Wan2.1-I2V-14B-480P
 huggingface-cli download Wan-AI/Wan2.1-I2V-14B-720P --local-dir ./checkpoints/Wan2.1-I2V-14B-720P # Optional
 bash train_14B.sh
 ```
-Deepspeed configurations in `path/StableAvatar/deepspeed_config/zero_stage2_config.json`.
 
-Lora Training:
+### 🧱 Model Finetuning and LoRA Training
+
+Finetuning StableAvatar: add `--transformer_path` to the `train_1B_rec_vec.sh` or `train_1B_rec_vec_64.sh`:
+
 ```bash
-# Training StableAvatar-1.3B on a mixed resolution setting (480x832 and 832x480) in a single machine
+# Finetune on mixed resolutions (480x832, 832x480) on a single machine
+bash train_1B_rec_vec.sh
+# Finetune on mixed resolutions (480x832, 832x480) on multiple machines
+bash train_1B_rec_vec_64.sh
+```
+
+LoRA Training:
+
+```bash
+# LoRA Training
 bash train_1B_rec_vec_lora.sh
-# Training StableAvatar-1.3B on a mixed resolution setting (480x832 and 832x480) in multiple machines
-bash train_1B_rec_vec_lora_64.sh
-# Lora-Training StableAvatar-14B on a mixed resolution setting (480x832, 832x480, and 512x512) in multiple machines
-bash train_14B_lora.sh
-```
-You can modify `--rank` and `--network_alpha` to control the quality of your lora training/finetuning.
-
-To train 720P Wan2.1-1.3B-based or Wan2.1-14B-based StableAvatar, you can directly modify the height and width of the dataloader (480p-->720p) in `train_1B_square.py`/`train_1B_vec_rec.py`/`train_14B.py`.
-
-### 🧱 Model Finetuning
-
-Finetune:  Add `--transformer_path` to the training script:
-```bash
-# Finetuning StableAvatar on a mixed resolution setting (480x832 and 832x480) in a single machine
-bash train_1B_rec_vec.sh --transformer_path="path/StableAvatar/checkpoints/StableAvatar-1.3B/transformer3d-square.pt"
-# Finetuning StableAvatar on a mixed resolution setting (480x832 and 832x480) in multiple machines
-bash train_1B_rec_vec_64.sh --transformer_path="path/StableAvatar/checkpoints/StableAvatar-1.3B/transformer3d-square.pt"
-```
-Lora Finetuning:  Add `--transformer_path`:
-
-```bash
-# Lora-Finetuning StableAvatar-1.3B on a mixed resolution setting (480x832 and 832x480) in a single machine
-bash train_1B_rec_vec_lora.sh --transformer_path="path/StableAvatar/checkpoints/StableAvatar-1.3B/transformer3d-square.pt"
 ```
 
-Modify `--rank` and `--network_alpha` for Lora quality.
+Modify `--rank` and `--network_alpha` for LoRA quality control.
 
-### 🧱 VRAM Requirement and Runtime
+### 🧱 VRAM and Runtime
 
-For a 5-second video (480x832, 25 fps), the basic model requires approximately 18GB VRAM and finishes in 3 minutes on a 4090 GPU.
-
-**StableAvatar can theoretically generate hours of video. You can run the VAE decoder on the CPU if memory is limited.**
+The basic model requires ~18GB of VRAM and finishes in ~3 minutes for a 5-second video (480x832, fps=25) on a 4090 GPU.
+Theoretically, StableAvatar can generate hours of video, but the 3D VAE decoder demands significant GPU memory. You can run the VAE decoder on CPU to alleviate this problem.
 
 ## Contact
 
-For suggestions or help, contact:  francisshuyuan@gmail.com
+For any suggestions, or if you find our work helpful, please reach out:
 
-If you find our work useful, consider giving a star to this repository and citing it:
+Email: francisshuyuan@gmail.com
+
+If you find our work useful, **please consider giving a star ⭐ to this repository and citing it ❤️**:
 
 ```bib
 @article{tu2025stableavatar,

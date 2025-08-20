@@ -1,42 +1,36 @@
-# CSrankings: Data-Driven Rankings of Top Computer Science Schools
+# CS Rankings: Your Definitive Guide to Top Computer Science Schools
 
-This repository powers CSrankings.org, a data-driven ranking system for computer science schools based on faculty publications at top conferences. [Visit the original repository on GitHub](https://github.com/emeryberger/CSrankings).
+**Discover the leading computer science institutions and faculty worldwide with the data-driven and metrics-based CS Rankings.**  ([Original Repository](https://github.com/emeryberger/CSrankings))
 
-## Key Features
+## Key Features:
 
-*   **Metrics-Based Approach:** Ranks institutions and faculty based on the number of publications in highly selective computer science conferences.
-*   **Avoids Survey-Based Bias:** Unlike traditional rankings, this system relies entirely on objective metrics, minimizing the impact of subjective surveys.
-*   **Difficult to Game:** The focus on publications in top conferences aims to provide a robust and reliable ranking system, resistant to manipulation.
-*   **Open Source and Transparent:** The code and data used to generate the rankings are publicly available, promoting transparency and community contribution.
-*   **Quarterly Updates:** The ranking data is updated on a quarterly basis to ensure relevance.
+*   **Metrics-Driven Ranking:** Unlike rankings based on surveys, CS Rankings uses a purely metrics-based approach, focusing on publications in top computer science conferences to identify leading institutions and faculty.
+*   **Objective Evaluation:**  Avoids the subjectivity of survey-based rankings by analyzing the number of publications by faculty in the most selective computer science conferences.
+*   **Difficult-to-Game Approach:**  Focuses on publications in highly selective conferences, making the ranking resistant to manipulation.
+*   **Community-Driven:** Actively maintained and improved with community contributions for accuracy and comprehensiveness.
+*   **Comprehensive Data Source:** Leverages data from DBLP (Digital Bibliography & Library Project) for a wide-ranging and up-to-date analysis.
 
 ## Contributing
 
-We welcome contributions to improve the accuracy and coverage of the rankings.  Follow these steps to contribute:
+The project relies on community contributions for updates and corrections.  
+*  **Quarterly Updates:** Data updates are processed quarterly.  
+*   **Easy Contribution:**  Submit updates via pull requests. All data is organized in `csrankings-[a-z].csv` files.
+*   **Detailed Guidance:** Refer to the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for detailed instructions.
+*   **Shallow Clone Contribution:** To contribute without a full repository clone, follow steps to create a shallow clone for easier contribution.
 
-*   **Data Files:** Edit the `csrankings-[a-z].csv` files to add or modify faculty affiliations.
-*   **Contribution Guidelines:** Please review `CONTRIBUTING.md` for detailed instructions on how to contribute.
-*   **GitHub Direct Editing:** You can directly edit files in your GitHub fork and submit pull requests.
-*   **Shallow Clone:** For quick contributions, use a shallow clone of your fork to bypass the full repository size.
+## Technical Details:
 
-## Running the Site Locally
-
-To run the CSrankings website locally, you will need to set up the necessary dependencies and rebuild the databases.
-
-1.  **Install Dependencies:**
-
-    *   `apt-get install libxml2-utils npm python-lxml basex` (or equivalent for your system)
-    *   `npm install -g typescript google-closure-compiler`
-    *   Install `pypy`
-2.  **Download DBLP Data:**  `make update-dblp` (requires ~19GB of memory)
-3.  **Rebuild Databases:** `make`
-4.  **Run Local Web Server:**  (e.g., `python3 -m http.server`)
-5.  **Access the Site:** Open [http://0.0.0.0:8000](http://0.0.0.0:8000) in your browser.
+*   **Data Source:**  Utilizes data from DBLP (Digital Bibliography & Library Project).
+*   **Local Setup:**  Instructions provided for setting up a local development environment, including necessary dependencies (libxml2-utils, npm, TypeScript, etc.) and build processes (`make update-dblp`, `make`).
+*   **Testing:**  Instructions for testing the local website with a local web server.
 
 ## Acknowledgements
 
-CSrankings was primarily developed and is maintained by [Emery Berger](https://emeryberger.com). This project benefits from the contributions of many individuals and incorporates data from DBLP.org, made available under the ODC Attribution License.
+*   **Developed and Maintained by:** [Emery Berger](https://emeryberger.com)
+*   **Inspired by:** Swarat Chaudhuri (UT-Austin)
+*   **Original Dataset:** Papoutsaki et al.
+*   **Data Source:** DBLP.org (ODC Attribution License)
 
 ## License
 
-CSRankings is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+*   **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License**

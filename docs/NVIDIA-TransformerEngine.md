@@ -1,147 +1,189 @@
-# Transformer Engine: Accelerate Transformer Models on NVIDIA GPUs
+# Transformer Engine: Accelerate Transformer Models with FP8 Precision
 
-**Supercharge your Transformer model performance with NVIDIA Transformer Engine, unlocking faster training and inference through optimized kernels and FP8 support.** [Learn more at the original repository](https://github.com/NVIDIA/TransformerEngine).
+**Supercharge your Transformer model performance on NVIDIA GPUs with the Transformer Engine library, achieving faster training and inference with lower memory utilization.**  ([Original Repo](https://github.com/NVIDIA/TransformerEngine))
 
-## Key Features
+## Key Features:
 
-*   **FP8 Precision Support:** Leverage 8-bit floating point (FP8) precision on Hopper, Ada, and Blackwell GPUs for improved performance and lower memory utilization.
-*   **Optimized Kernels:** Benefit from highly optimized building blocks and fused kernels for Transformer architectures.
-*   **Simplified Mixed Precision:**  Easily integrate FP8 training with framework-specific code using an automatic mixed precision-like API.
-*   **Framework Agnostic C++ API:** Integrate with other deep learning libraries to enable FP8 support.
-*   **Broad Compatibility:**  Supports all precisions (FP16, BF16) on NVIDIA Ampere and later GPU architectures.
+*   **FP8 Support:** Accelerate training and inference with 8-bit floating-point precision on Hopper, Ada, and Blackwell GPUs.
+*   **Optimized Modules:** Utilize easy-to-use modules designed for building Transformer layers.
+*   **Performance Boosts:** Benefit from optimizations like fused kernels specifically tailored for Transformer models.
+*   **Broad Precision Support:** Leverage optimizations across FP16, BF16, and FP8 on NVIDIA Ampere and later architectures.
+*   **Framework Agnostic:** Integrate with popular LLM frameworks and libraries through C++ and Python APIs.
 
-## Quickstart
+## Quickstart:
 
-[PyTorch and JAX examples are available in the original README.](https://github.com/NVIDIA/TransformerEngine)
+### PyTorch
 
-For a more comprehensive tutorial, check out our `Quickstart Notebook <https://github.com/NVIDIA/TransformerEngine/blob/main/docs/examples/quickstart.ipynb>`_.
+```python
+import torch
+import transformer_engine.pytorch as te
+from transformer_engine.common import recipe
 
-## Installation
+# Set dimensions.
+in_features = 768
+out_features = 3072
+hidden_size = 2048
 
-### System Requirements
-* **Hardware:** Blackwell, Hopper, Grace Hopper/Blackwell, Ada, Ampere
-* **OS:** Linux (official), WSL2 (limited support)
-* **CUDA:** 12.1+ (Hopper/Ada/Ampere), 12.8+ (Blackwell) with compatible NVIDIA drivers
-* **cuDNN:** 9.3+
-* **Compiler:** GCC 9+ or Clang 10+ with C++17 support
-* **Python:** 3.12 recommended
-* **Source Build Requirements:** CMake 3.18+, Ninja, Git 2.17+, pybind11 2.6.0+
-*   **Notes:** FP8 features require Compute Capability 8.9+ (Ada/Hopper/Blackwell)
+# Initialize model and inputs.
+model = te.Linear(in_features, out_features, bias=True)
+inp = torch.randn(hidden_size, in_features, device="cuda")
 
-### Installation Methods
+# Create an FP8 recipe.
+fp8_recipe = recipe.DelayedScaling(margin=0, fp8_format=recipe.Format.E4M3)
 
-*   **Docker (Recommended):** Utilize pre-built Docker images from the [NVIDIA GPU Cloud (NGC) Catalog](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch).
+# Enable autocasting for the forward pass
+with te.fp8_autocast(enabled=True, fp8_recipe=fp8_recipe):
+    out = model(inp)
+
+loss = out.sum()
+loss.backward()
+```
+
+### JAX (Flax)
+
+```python
+import flax
+import jax
+import jax.numpy as jnp
+import transformer_engine.jax as te
+import transformer_engine.jax.flax as te_flax
+from transformer_engine.common import recipe
+
+BATCH = 32
+SEQLEN = 128
+HIDDEN = 1024
+
+# Initialize RNG and inputs.
+rng = jax.random.PRNGKey(0)
+init_rng, data_rng = jax.random.split(rng)
+inp = jax.random.normal(data_rng, [BATCH, SEQLEN, HIDDEN], jnp.float32)
+
+# Create an FP8 recipe.
+fp8_recipe = recipe.DelayedScaling(margin=0, fp8_format=recipe.Format.HYBRID)
+
+# Enable autocasting for the forward pass
+with te.fp8_autocast(enabled=True, fp8_recipe=fp8_recipe):
+    model = te_flax.DenseGeneral(features=HIDDEN)
+
+    def loss_fn(params, other_vars, inp):
+        out = model.apply({'params':params, **other_vars}, inp)
+        return jnp.mean(out)
+
+    # Initialize models.
+    variables = model.init(init_rng, inp)
+    other_variables, params = flax.core.pop(variables, 'params')
+
+    # Construct the forward and backward function
+    fwd_bwd_fn = jax.value_and_grad(loss_fn, argnums=(0, 1))
+
+    for _ in range(10):
+        loss, (param_grads, other_grads) = fwd_bwd_fn(params, other_variables, inp)
+```
+
+For a more detailed tutorial, check out the [Quickstart Notebook](https://github.com/NVIDIA/TransformerEngine/blob/main/docs/examples/quickstart.ipynb).
+
+## Installation:
+
+### System Requirements:
+
+*   **Hardware:** Blackwell, Hopper, Grace Hopper/Blackwell, Ada, Ampere GPUs
+*   **OS:** Linux (Official), WSL2 (Limited Support)
+*   **CUDA:** 12.1+ (Hopper/Ada/Ampere), 12.8+ (Blackwell) with compatible NVIDIA drivers
+*   **cuDNN:** 9.3+
+*   **Compiler:** GCC 9+ or Clang 10+ with C++17 support
+*   **Python:** 3.12 recommended
+
+### Installation Methods:
+
+1.  **Docker (Recommended):**  Use pre-built images from the [NVIDIA GPU Cloud (NGC) Catalog](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch).
 
     ```bash
-    docker run --gpus all -it --rm nvcr.io/nvidia/pytorch:25.04-py3
+    docker run --gpus all -it --rm nvcr.io/nvidia/pytorch:25.04-py3  # PyTorch Example
+    docker run --gpus all -it --rm nvcr.io/nvidia/jax:25.04-py3 # JAX Example
     ```
-    (Replace `25.04` with the desired container version).
 
-*   **pip:**
+2.  **pip:**
 
     ```bash
-    # For PyTorch integration
-    pip install --no-build-isolation transformer_engine[pytorch]
-    
-    # For JAX integration
-    pip install --no-build-isolation transformer_engine[jax]
-    
-    # For both frameworks
-    pip install --no-build-isolation transformer_engine[pytorch,jax]
+    pip install --no-build-isolation transformer_engine[pytorch] # For PyTorch
+    pip install --no-build-isolation transformer_engine[jax]   # For JAX
+    pip install --no-build-isolation transformer_engine[pytorch,jax] # For both
     ```
-
-    or install directly from the GitHub repository:
-
+    Alternatively, install from the GitHub repository:
     ```bash
     pip install --no-build-isolation git+https://github.com/NVIDIA/TransformerEngine.git@stable
     ```
-
-*   **conda:**
-
+    You can specify frameworks with the environment variable:
     ```bash
-    # For PyTorch integration
-    conda install -c conda-forge transformer-engine-torch
-    
-    # JAX integration (coming soon)
+    NVTE_FRAMEWORK=pytorch,jax pip install --no-build-isolation git+https://github.com/NVIDIA/TransformerEngine.git@stable
     ```
 
-*   **Source:** See the installation guide for details on [Installation from Source](https://docs.nvidia.com/deeplearning/transformer-engine/user-guide/installation.html#installation-from-source).
+3.  **conda:**
 
-### Environment Variables
+    ```bash
+    conda install -c conda-forge transformer-engine-torch # For PyTorch
+    # JAX integration (coming soon)
+    ```
+4.  **Source Installation:** [See the Installation Guide](https://docs.nvidia.com/deeplearning/transformer-engine/user-guide/installation.html#installation-from-source)
 
-Customize the build process with these environment variables:
+### Troubleshooting:
 
-*   **CUDA_PATH:** Path to CUDA installation
-*   **CUDNN_PATH:** Path to cuDNN installation
-*   **CXX:** Path to C++ compiler
-*   **NVTE_FRAMEWORK:**  Comma-separated list of frameworks (e.g., `pytorch,jax`)
-*   **MAX_JOBS:** Limit parallel build jobs (default varies)
-*   **NVTE_BUILD_THREADS_PER_JOB:** Control threads per build job
+1.  **ABI Compatibility Issues:** Ensure PyTorch and Transformer Engine are built with the same C++ ABI setting. Rebuild PyTorch from source if necessary.
+2.  **Missing Headers or Libraries:** Install development packages (e.g., CUDA, cuDNN) or set environment variables like `CUDA_PATH` and `CUDNN_PATH`.
+3.  **Build Resource Issues:** Limit parallel builds to resolve compilation hangs or out-of-memory errors.
+    ```bash
+    MAX_JOBS=1 NVTE_BUILD_THREADS_PER_JOB=1 pip install ...
+    ```
+4.  **Verbose Build Logging:** Use verbose flags (`-v -v -v`) for detailed build logs.
 
-### Compiling with FlashAttention
+## Breaking Changes:
 
-Transformer Engine supports FlashAttention-2 and FlashAttention-3 in PyTorch, prioritized if both are present. Verify the version with:
+*   **v1.7:** Padding mask definition change.  In PyTorch, `True` in the padding mask now *excludes* tokens from attention, aligning with other frameworks.
 
-```bash
-NVTE_DEBUG=1 NVTE_DEBUG_LEVEL=1 python your_script.py
-```
+## FP8 Convergence:
 
-**Troubleshooting**
+Extensive testing demonstrates **no significant difference** in convergence between FP8 and BF16 training.  FP8 achieves equivalent accuracy on downstream tasks like LAMBADA and WikiText.
 
-*   **ABI Compatibility Issues:** If you encounter ``ImportError``, ensure PyTorch and Transformer Engine are built with the same C++ ABI setting.
-*   **Missing Headers or Libraries:** Install development packages or set environment variables (e.g., `CUDA_PATH`, `CUDNN_PATH`).
-*   **Build Resource Issues:** Limit parallel builds with `MAX_JOBS=1` if compilation fails.
-*   **Verbose Build Logging:** Use `pip install -v -v -v --no-build-isolation .` for detailed logs.
+| Model       | Framework        | Source                                                                                                     |
+|-------------|------------------|-------------------------------------------------------------------------------------------------------------|
+| T5-770M     | JAX/T5x          | [JAX Toolbox](https://github.com/NVIDIA/JAX-Toolbox/tree/main/rosetta/rosetta/projects/t5x#convergence-and-performance)       |
+| MPT-1.3B    | Mosaic Composer  | [MosaicML Blog](https://www.mosaicml.com/blog/coreweave-nvidia-h100-part-1)                                                |
+| GPT-5B      | JAX/Paxml        | [JAX Toolbox](https://github.com/NVIDIA/JAX-Toolbox/tree/main/rosetta/rosetta/projects/pax#h100-results)               |
+| GPT-5B      | NeMo Framework   | (Available on request)                                                                                    |
+| LLama2-7B   | Alibaba Pai      | [WeChat](https://mp.weixin.qq.com/s/NQT0uKXLbXyh5031zBdeBQ)                                                       |
+| T5-11B      | JAX/T5x          | (Available on request)                                                                                    |
+| MPT-13B     | Mosaic Composer  | [Databricks Blog](https://www.databricks.com/blog/turbocharged-training-optimizing-databricks-mosaic-ai-stack-fp8)         |
+| GPT-22B     | NeMo Framework   | (Available on request)                                                                                    |
+| LLama2-70B  | Alibaba Pai      | [WeChat](https://mp.weixin.qq.com/s/NQT0uKXLbXyh5031zBdeBQ)                                                       |
+| GPT-175B    | JAX/Paxml        | [JAX Toolbox](https://github.com/NVIDIA/JAX-Toolbox/tree/main/rosetta/rosetta/projects/pax#h100-results)               |
 
-### Breaking Changes
+## Integrations:
 
-*   **v1.7:** Padding mask definition for PyTorch - now `True` masks out the corresponding position.
+Transformer Engine is integrated with leading LLM frameworks: DeepSpeed, Hugging Face Accelerate, Lightning, MosaicML Composer, NVIDIA JAX Toolbox, NVIDIA Megatron-LM, NVIDIA NeMo Framework, Amazon SageMaker Model Parallel Library, Levanter, GPT-NeoX, Hugging Face Nanotron (coming soon), Colossal-AI (coming soon), PeriFlow (coming soon).
 
-## FP8 Convergence
+## Contributing:
 
-Extensive testing shows **no significant difference** between FP8 and BF16 training loss curves. FP8 accuracy has also been validated on downstream LLM tasks. See the original README for a list of tested models.
+We welcome your contributions!  Please refer to the `<CONTRIBUTING.rst>` guide for details.
 
-## Integrations
+## Papers:
 
-Transformer Engine integrates with popular LLM frameworks, including:
+*   [Attention is All You Need](https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
+*   [Megatron-LM Tensor Parallel](https://arxiv.org/pdf/1909.08053.pdf)
+*   [Megatron-LM Sequence Parallel](https://arxiv.org/pdf/2205.05198.pdf)
+*   [FP8 Formats for Deep Learning](https://arxiv.org/abs/2209.05433)
 
-*   DeepSpeed
-*   Hugging Face Accelerate
-*   Lightning
-*   MosaicML Composer
-*   NVIDIA JAX Toolbox
-*   NVIDIA Megatron-LM
-*   NVIDIA NeMo Framework
-*   Amazon SageMaker Model Parallel Library
-*   Levanter
-*   GPT-NeoX
-*   Hugging Face Nanotron - Coming soon!
-*   Colossal-AI - Coming soon!
-*   PeriFlow - Coming soon!
+## Videos:
 
-## Contributing
+*   [Stable and Scalable FP8 Deep Learning Training on Blackwell | GTC 2025](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72457/)
+*   [Blackwell Numerics for AI | GTC 2025](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72458/)
+*   [Building LLMs: Accelerating Pretraining of Foundational Models With FP8 Precision | GTC 2025](https://www.nvidia.com/gtc/session-catalog/?regcode=no-ncid&ncid=no-ncid&tab.catalogallsessionstab=16566177511100015Kus&search=zoho#/session/1726152813607001vnYK)
+*   [From FP8 LLM Training to Inference: Language AI at Scale | GTC 2025](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72799/)
+*   [What's New in Transformer Engine and FP8 Training | GTC 2024](https://www.nvidia.com/en-us/on-demand/session/gtc24-s62457/)
+*   [FP8 Training with Transformer Engine | GTC 2023](https://www.nvidia.com/en-us/on-demand/session/gtcspring23-s51393)
+*   [FP8 for Deep Learning | GTC 2023](https://www.nvidia.com/en-us/on-demand/session/gtcspring23-s52166/)
+*   [Inside the Hopper Architecture | GTC 2022](https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s42663/)
 
-Contribute to Transformer Engine by following the guidelines in the `<CONTRIBUTING.rst>`_ guide.
-
-## Papers
-
-*   Attention original paper
-*   Megatron-LM tensor parallel
-*   Megatron-LM sequence parallel
-*   FP8 Formats for Deep Learning
-
-## Videos
-
-*   Stable and Scalable FP8 Deep Learning Training on Blackwell | GTC 2025
-*   Blackwell Numerics for AI | GTC 2025
-*   Building LLMs: Accelerating Pretraining of Foundational Models With FP8 Precision | GTC 2025
-*   From FP8 LLM Training to Inference: Language AI at Scale | GTC 2025
-*   What's New in Transformer Engine and FP8 Training | GTC 2024
-*   FP8 Training with Transformer Engine | GTC 2023
-*   FP8 for Deep Learning | GTC 2023
-*   Inside the Hopper Architecture | GTC 2022
-
-## Previous News
+## Previous News:
 
 *   [11/2024] Developing a 172B LLM with Strong Japanese Capabilities Using NVIDIA Megatron-LM
 *   [11/2024] How FP8 boosts LLM training by 18% on Amazon SageMaker P5 instances

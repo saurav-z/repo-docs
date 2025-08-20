@@ -1,166 +1,85 @@
-# theHarvester: Powerful OSINT Tool for Reconnaissance
+# theHarvester: Your OSINT Reconnaissance Toolkit
 
-**Uncover a domain's attack surface and gather valuable intelligence with theHarvester, a versatile open-source intelligence (OSINT) gathering tool.**  [Check out the original repository](https://github.com/laramies/theHarvester)
+**Uncover a domain's digital footprint and identify potential attack vectors with theHarvester, a powerful open-source intelligence (OSINT) gathering tool.**
 
-![theHarvester](https://github.com/laramies/theHarvester/blob/master/theHarvester-logo.webp)
-
-[![TheHarvester CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Python%20CI/badge.svg)]
-[![TheHarvester Docker Image CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Docker%20Image%20CI/badge.svg)]
+[![theHarvester](https://github.com/laramies/theHarvester/blob/master/theHarvester-logo.webp)](https://github.com/laramies/theHarvester)
+[![TheHarvester CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Python%20CI/badge.svg)](https://github.com/laramies/theHarvester/actions/workflows/python-app.yml)
+[![TheHarvester Docker Image CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Docker%20Image%20CI/badge.svg)](https://github.com/laramies/theHarvester/actions/workflows/docker-image.yml)
 [![Rawsec's CyberSecurity Inventory](https://inventory.raw.pm/img/badges/Rawsec-inventoried-FF5050_flat_without_logo.svg)](https://inventory.raw.pm/)
 
-## Key Features
+theHarvester is a versatile tool for penetration testers and red teamers, designed to automate the reconnaissance phase by collecting valuable information from various public sources. Use theHarvester to discover potential vulnerabilities and weaknesses in your target's online presence.
 
-*   **Automated OSINT Gathering:** Quickly collect information from multiple public sources.
-*   **Comprehensive Data Collection:**  Find names, emails, IPs, subdomains, and URLs.
-*   **Modular Design:** Leverages numerous passive and active modules for diverse data collection.
-*   **Easy to Use:** Simple command-line interface for efficient reconnaissance.
-*   **Essential for Security Assessments:**  A vital tool for red team engagements and penetration testing.
+**Key Features:**
 
-## Installation
+*   **Automated OSINT Gathering:** Collects emails, subdomains, IPs, URLs, and more from a wide range of public sources.
+*   **Modular Design:** Supports numerous passive and active modules for comprehensive data collection.
+*   **Easy to Use:** Simple command-line interface for quick and efficient reconnaissance.
+*   **API Integration:** Integrates with various search engines and services, including Shodan, Censys, and more.
+*   **Versatile Reporting:** Provides structured output for easy analysis and reporting.
 
-**Prerequisites:**
+**Getting Started**
 
-*   Python 3.12 or higher
+1.  **Installation**
+    *   Requires Python 3.12 or higher.
+    *   Refer to the [Installation Guide](https://github.com/laramies/theHarvester/wiki/Installation) for detailed instructions.
 
-**Installation Steps:**
+    **Quick Installation using `uv` (recommended):**
 
-1.  **Install `uv` (optional, recommended for dependency management):**
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
-    ```
-2.  **Clone the repository:**
-    ```bash
     git clone https://github.com/laramies/theHarvester
     cd theHarvester
-    ```
-3.  **Install dependencies and create a virtual environment:**
-    ```bash
     uv sync
-    ```
-
-4.  **Run theHarvester:**
-    ```bash
     uv run theHarvester
     ```
 
-## Development
+2.  **Development Setup**
 
-To install development dependencies:
-```bash
-uv sync --extra dev
-```
+    To install development dependencies:
 
-To run tests:
-```bash
-uv run pytest
-```
+    ```bash
+    uv sync --extra dev
+    ```
 
-To run linting and formatting:
-```bash
-uv run ruff check
-```
-```bash
-uv run ruff format
-```
-## Modules
+    Run tests:
+    ```bash
+    uv run pytest
+    ```
 
-### Passive Modules
+    Run linting and formatting:
+    ```bash
+    uv run ruff check
+    ```
 
-theHarvester utilizes a wide array of passive modules to gather intelligence without direct interaction with the target.  These modules query various search engines, APIs, and data sources to uncover valuable information.
+    ```bash
+    uv run ruff format
+    ```
 
-*   baidu
-*   bevigil
-*   brave
-*   bufferoverun
-*   builtwith
-*   censys
-*   certspotter
-*   criminalip
-*   crtsh
-*   dehashed
-*   dnsdumpster
-*   duckduckgo
-*   fullhunt
-*   github-code
-*   hackertarget
-*   haveibeenpwned
-*   hunter
-*   hunterhow
-*   intelx
-*   leaklookup
-*   netlas
-*   onyphe
-*   otx
-*   pentesttools
-*   projecdiscovery
-*   rapiddns
-*   rocketreach
-*   securityscorecard
-*   securityTrails
-*   -s, --shodan
-*   subdomaincenter
-*   subdomainfinderc99
-*   threatminer
-*   tomba
-*   urlscan
-*   venacus
-*   virustotal
-*   whoisxml
-*   yahoo
-*   zoomeye
+**Modules**
 
-### Active Modules
+*   **Passive Modules:**
 
-theHarvester also includes active modules for probing and interacting with the target environment.
+    *   Baidu, BeVigil, Brave, Bufferoverun, Builtwith, Censys, Certspotter, Criminalip, Crtsh, Dehashed, Dnsdumpster, Duckduckgo, Fullhunt, Github-code, Hackertarget, Haveibeenpwned, Hunter, Hunterhow, Intelx, Leaklookup, Netlas, Onytpe, Otx, Pentesttools, Projectdiscovery, Rapiddns, Rocketreach, Securityscorecard, SecurityTrails, Shodan, Subdomaincenter, Subdomainfinderc99, Threatminer, Tomba, Urlscan, Venacus, Virustotal, Whoisxml, Yahoo, Zoomeye
 
-*   DNS brute force
-*   Screenshots
+*   **Active Modules:**
 
-### Modules Requiring API Keys
+    *   DNS brute force, Screenshots
 
-Some modules require API keys for access.  Refer to the [Installation Wiki](https://github.com/laramies/theHarvester/wiki/Installation#api-keys) for detailed setup instructions.
+**Modules Requiring API Keys**
 
-* bevigil
-* brave
-* bufferoverun
-* builtwith
-* censys
-* criminalip
-* dehashed
-* dnsdumpster
-* fullhunt
-* github-code
-* haveibeenpwned
-* hunter
-* hunterhow
-* intelx
-* leaklookup
-* netlas
-* onyphe
-* pentesttools
-* projecdiscovery
-* rocketreach
-* securityscorecard
-* securityTrails
-* shodan
-* tomba
-* venacus
-* whoisxml
-* zoomeye
+See the [API Keys Documentation](https://github.com/laramies/theHarvester/wiki/Installation#api-keys) for setup.
 
+**Contributing**
 
-## Get Involved
+We welcome contributions! Feel free to submit bug reports, feature requests, or pull requests.
 
-*   **Follow:** [@laramies](https://twitter.com/laramies) (Christian Martorella) and [@NotoriousRebel1](https://twitter.com/NotoriousRebel1)  and [@jay_townsend1](https://twitter.com/jay_townsend1) and [@discoverscripts](https://twitter.com/discoverscripts)
-*   **Contact:** cmartorella@edge-security.com
+**Get in Touch**
 
-## Main Contributors
+*   [Twitter - Christian Martorella](https://twitter.com/laramies)
+*   [Twitter - Matthew Brown](https://twitter.com/NotoriousRebel1)
+*   [Twitter - Jay Townsend](https://twitter.com/jay_townsend1)
 
-*   [@NotoriousRebel1](https://twitter.com/NotoriousRebel1) Matthew Brown
-*   [@jay_townsend1](https://twitter.com/jay_townsend1) Jay "L1ghtn1ng" Townsend
-*   [@discoverscripts](https://twitter.com/discoverscripts) Lee Baird
+**License**
+*   [MIT License](https://github.com/laramies/theHarvester/blob/master/LICENSE)
 
-## Thanks
-
-*   John Matherly - Shodan project
-*   Ahmed Aboul Ela - subdomain names dictionaries (big and small)
+**[Back to the GitHub Repository](https://github.com/laramies/theHarvester)**

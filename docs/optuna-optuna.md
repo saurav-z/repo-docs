@@ -1,8 +1,8 @@
 <div align="center"><img src="https://raw.githubusercontent.com/optuna/optuna/master/docs/image/optuna-logo.png" width="800"/></div>
 
-# Optuna: Unlock Optimal Machine Learning Performance with Automated Hyperparameter Tuning
+# Optuna: Optimize Your Machine Learning Models with Ease
 
-Optimize your machine learning models with Optuna, an open-source hyperparameter optimization framework designed for efficiency and ease of use.  Explore the original repository at [https://github.com/optuna/optuna](https://github.com/optuna/optuna).
+**Supercharge your machine learning projects with Optuna, a powerful and versatile hyperparameter optimization framework.**  Find the original repository [here](https://github.com/optuna/optuna).
 
 [![Python](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](https://www.python.org)
 [![pypi](https://img.shields.io/pypi/v/optuna.svg)](https://pypi.python.org/pypi/optuna)
@@ -11,42 +11,40 @@ Optimize your machine learning models with Optuna, an open-source hyperparameter
 [![Read the Docs](https://readthedocs.org/projects/optuna/badge/?version=stable)](https://optuna.readthedocs.io/en/stable/)
 [![Codecov](https://codecov.io/gh/optuna/optuna/branch/master/graph/badge.svg)](https://codecov.io/gh/optuna/optuna)
 
-*   **[Website](https://optuna.org/)**
-*   **[Docs](https://optuna.readthedocs.io/en/stable/)**
-*   **[Install Guide](https://optuna.readthedocs.io/en/stable/installation.html)**
-*   **[Tutorial](https://optuna.readthedocs.io/en/stable/tutorial/index.html)**
-*   **[Examples](https://github.com/optuna/optuna-examples)**
-*   **[Twitter](https://twitter.com/OptunaAutoML)**
-*   **[LinkedIn](https://www.linkedin.com/showcase/optuna/)**
-*   **[Medium](https://medium.com/optuna)**
+*   🌐 [**Website**](https://optuna.org/)
+*   📖 [**Docs**](https://optuna.readthedocs.io/en/stable/)
+*   ⚙️ [**Install Guide**](https://optuna.readthedocs.io/en/stable/installation.html)
+*   🎓 [**Tutorial**](https://optuna.readthedocs.io/en/stable/tutorial/index.html)
+*   💡 [**Examples**](https://github.com/optuna/optuna-examples)
+*   🐦 [**Twitter**](https://twitter.com/OptunaAutoML)
+*   👔 [**LinkedIn**](https://www.linkedin.com/showcase/optuna/)
+*   ✍️ [**Medium**](https://medium.com/optuna)
 
-Optuna is a powerful and flexible hyperparameter optimization framework built for machine learning. Its define-by-run API allows for highly modular code and dynamic search space construction.
+## Key Features of Optuna
 
-## Key Features:
-
-*   **Pythonic Search Spaces:** Define hyperparameter search spaces using intuitive Python syntax, including conditionals and loops, for flexible and dynamic tuning.
-*   **Efficient Optimization Algorithms:** Utilize state-of-the-art algorithms to sample hyperparameters and prune unpromising trials, accelerating your optimization process.
-*   **Easy Parallelization:** Seamlessly scale studies across multiple workers with minimal code changes, enabling faster experimentation.
-*   **Lightweight and Versatile:**  Optuna offers a simple installation with minimal dependencies, and supports a wide range of machine learning tasks.
-*   **Quick Visualization:** Visualize optimization histories and results using built-in plotting functions for rapid analysis and insights.
+*   **Define-by-Run API:** Write highly modular code and dynamically construct hyperparameter search spaces with ease.
+*   **Pythonic Search Spaces:** Define search spaces using familiar Python syntax including conditionals and loops.
+*   **Efficient Optimization Algorithms:** Leverage state-of-the-art algorithms for sampling hyperparameters and pruning unpromising trials, saving time and resources.
+*   **Easy Parallelization:** Scale your studies across multiple workers with minimal code changes.
+*   **Quick Visualization:**  Visualize optimization histories and gain insights from a variety of plotting functions.
+*   **Lightweight & Versatile:** Lightweight, platform-agnostic architecture, adaptable to diverse tasks.
 
 ## What's New
 
-Stay up-to-date with the latest Optuna developments:
+Stay up-to-date with the latest Optuna releases and developments.
 
 *   **Jun 16, 2025**: Optuna 4.4.0 has been released! Check out [the release blog](https://medium.com/optuna/announcing-optuna-4-4-ece661493126).
 *   **May 26, 2025**: Optuna 5.0 roadmap has been published! See [the blog](https://medium.com/optuna/optuna-v5-roadmap-ac7d6935a878) for more details.
 *   **Apr 14, 2025**: Optuna 4.3.0 is out! Check out [the release note](https://github.com/optuna/optuna/releases/tag/v4.3.0) for details.
-*   **Mar 24, 2025**: A new article [Distributed Optimization in Optuna and gRPC Storage Proxy](https://medium.com/optuna/distributed-optimization-in-optuna-and-grpc-storage-proxy-08db83f1d608) has been published.
-*   **Mar 11, 2025**: A new article [[Optuna v4.2] Gaussian Process-Based Sampler Can Now Handle Inequality Constraints](https://medium.com/optuna/optuna-v4-2-gaussian-process-based-sampler-can-now-handle-inequality-constraints-a4f68e8ee810) has been published.
-*   **Feb 17, 2025**: A new article [SMAC3 Registered on OptunaHub](https://medium.com/optuna/smac3-registered-on-optunahub-4fb9e90855cb) has been published.
 
-## Basic Concepts
+## Basic Concepts: Study and Trial
 
-*   **Study:** Optimization based on an objective function.
-*   **Trial:** A single execution of the objective function.
+Optuna uses the terms *study* and *trial*:
 
-Optuna automates and accelerates optimization *studies* to discover the best set of hyperparameter values by running multiple *trials*.
+*   **Study:** The overall hyperparameter optimization process, optimizing an objective function.
+*   **Trial:** A single execution of the objective function with a specific set of hyperparameters.
+
+Optuna automates and accelerates optimization *studies* by finding the best set of hyperparameter values through multiple *trials*.
 
 <details open>
 <summary>Sample code with scikit-learn</summary>
@@ -79,14 +77,13 @@ def objective(trial):
 
     return error  # An objective value linked with the Trial object.
 
-
 study = optuna.create_study()  # Create a new study.
 study.optimize(objective, n_trials=100)  # Invoke optimization of the objective function.
 ```
 </details>
 
 > [!NOTE]
-> Explore more examples at [optuna/optuna-examples](https://github.com/optuna/optuna-examples) covering various use cases such as multi-objective optimization, pruning, and distributed optimization.
+>  Explore more examples at [optuna/optuna-examples](https://github.com/optuna/optuna-examples) for multi-objective optimization, constrained optimization, pruning, and distributed optimization.
 
 ## Installation
 
@@ -103,16 +100,11 @@ $ conda install -c conda-forge optuna
 ```
 
 > [!IMPORTANT]
-> Optuna supports Python 3.8 or newer.
->
-> Also, we provide Optuna docker images on [DockerHub](https://hub.docker.com/r/optuna/optuna).
+> Optuna requires Python 3.8 or newer. Docker images are available on [DockerHub](https://hub.docker.com/r/optuna/optuna).
 
 ## Integrations
 
-Optuna seamlessly integrates with a wide array of popular machine learning libraries. Explore integrations in [optuna/optuna-integration](https://github.com/optuna/optuna-integration) and detailed documentation [here](https://optuna-integration.readthedocs.io/en/stable/index.html).
-
-<details>
-<summary>Supported integration libraries</summary>
+Optuna seamlessly integrates with popular machine learning libraries.
 
 *   [Catboost](https://github.com/optuna/optuna-examples/tree/main/catboost/catboost_pruning.py)
 *   [Dask](https://github.com/optuna/optuna-examples/tree/main/dask/dask_simple.py)
@@ -128,16 +120,16 @@ Optuna seamlessly integrates with a wide array of popular machine learning libra
 *   [tf.keras](https://github.com/optuna/optuna-examples/tree/main/tfkeras/tfkeras_integration.py)
 *   [Weights & Biases](https://github.com/optuna/optuna-examples/tree/main/wandb/wandb_integration.py)
 *   [XGBoost](https://github.com/optuna/optuna-examples/tree/main/xgboost/xgboost_integration.py)
-</details>
 
-## Optuna Dashboard
+For more information, see [optuna/optuna-integration](https://github.com/optuna/optuna-integration) and the [integration documentation](https://optuna-integration.readthedocs.io/en/stable/index.html).
 
-[Optuna Dashboard](https://github.com/optuna/optuna-dashboard) provides a real-time web interface to monitor and analyze your Optuna studies. Visualize optimization progress, hyperparameter importance, and more without writing extra code.
+## Optuna Dashboard: Real-time Visualization
+
+Visualize your optimization progress in real-time with the [Optuna Dashboard](https://github.com/optuna/optuna-dashboard), a web dashboard for analyzing studies.
 
 ![optuna-dashboard](https://user-images.githubusercontent.com/5564044/204975098-95c2cb8c-0fb5-4388-abc4-da32f56cb4e5.gif)
 
-Install the dashboard with pip:
-
+Install the dashboard:
 ```shell
 $ pip install optuna-dashboard
 ```
@@ -176,21 +168,11 @@ Hit Ctrl-C to quit.
 
 </details>
 
-## OptunaHub
+## OptunaHub: Feature Sharing Platform
 
-[OptunaHub](https://hub.optuna.org/) offers a platform to share and utilize Optuna features.  Load registered modules and publish your own packages.
+[OptunaHub](https://hub.optuna.org/) is a platform for sharing and reusing Optuna features.
 
-### Using Registered Features
-
-Install `optunahub` with pip:
-
-```shell
-$ pip install optunahub
-# Install AutoSampler dependencies (CPU only is sufficient for PyTorch)
-$ pip install cmaes scipy torch --extra-index-url https://download.pytorch.org/whl/cpu
-```
-
-Load a registered module using `optunahub.load_module`.
+### Use Registered Features
 
 ```python
 import optuna
@@ -210,24 +192,18 @@ study.optimize(objective, n_trials=10)
 print(study.best_trial.value, study.best_trial.params)
 ```
 
-Refer to [the optunahub documentation](https://optuna.github.io/optunahub/) for details.
+### Publish Your Packages
 
-### Publishing Packages
-
-Publish your packages through [optunahub-registry](https://github.com/optuna/optunahub-registry). See the [Tutorials for Contributors](https://optuna.github.io/optunahub/tutorials_for_contributors.html) in OptunaHub.
+Contribute your features via [optunahub-registry](https://github.com/optuna/optunahub-registry). Learn more in the [Tutorials for Contributors](https://optuna.github.io/optunahub/tutorials_for_contributors.html).
 
 ## Communication
 
-*   **[GitHub Discussions](https://github.com/optuna/optuna/discussions)**:  Ask questions and engage with the community.
-*   **[GitHub Issues](https://github.com/optuna/optuna/issues)**: Report bugs and suggest new features.
+*   🗣️ [GitHub Discussions] for questions.
+*   🐛 [GitHub Issues] for bug reports and feature requests.
 
-## Contributing
+## Contribution
 
-Contributions to Optuna are highly encouraged!
-
-*   Check out [good first issues](https://github.com/optuna/optuna/labels/good%20first%20issue) for entry points.
-*   See [contribution-welcome issues](https://github.com/optuna/optuna/labels/contribution-welcome) for more opportunities.
-*   Consult [CONTRIBUTING.md](./CONTRIBUTING.md) for general contribution guidelines.
+Your contributions are welcome! Check out the [good first issues](https://github.com/optuna/optuna/labels/good%20first%20issue) for beginners and [contribution-welcome issues](https://github.com/optuna/optuna/labels/contribution-welcome) for those with experience.  Refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
 ## Reference
 
@@ -249,6 +225,4 @@ If you use Optuna in your research, please cite our KDD paper:
 
 ## License
 
-MIT License (see [LICENSE](./LICENSE)).
-
-Optuna uses codes from SciPy and fdlibm projects (see [LICENSE_THIRD_PARTY](./LICENSE_THIRD_PARTY)).
+This project is licensed under the MIT License (see [LICENSE](./LICENSE)). Optuna uses codes from SciPy and fdlibm projects (see [LICENSE_THIRD_PARTY](./LICENSE_THIRD_PARTY)).

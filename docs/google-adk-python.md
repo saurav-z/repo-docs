@@ -1,8 +1,6 @@
-<!-- README.md -->
+# Agent Development Kit (ADK): Build Powerful AI Agents with Ease
 
-# Agent Development Kit (ADK): Build Powerful AI Agents with Python
-
-**Unlock the potential of AI agents with Google's Agent Development Kit (ADK), a flexible, open-source toolkit for building, evaluating, and deploying sophisticated agentic systems.**  Explore the [original repository](https://github.com/google/adk-python) for the latest updates and contributions.
+**Unleash the power of AI with the Agent Development Kit (ADK), a code-first Python toolkit for creating, testing, and deploying advanced AI agents.** [(Original Repository)](https://github.com/google/adk-python)
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/google-adk)](https://pypi.org/project/google-adk/)
@@ -14,53 +12,35 @@
   <img src="https://raw.githubusercontent.com/google/adk-python/main/assets/agent-development-kit.png" width="256" alt="Agent Development Kit Logo"/>
 </div>
 
-<div align="center">
-  <a href="https://google.github.io/adk-docs/">Docs</a> |
-  <a href="https://github.com/google/adk-samples">Samples</a> |
-  <a href="https://github.com/google/adk-java">Java ADK</a> |
-  <a href="https://github.com/google/adk-web">ADK Web</a>
-</div>
-
-ADK is a versatile, code-first Python toolkit designed for building and deploying cutting-edge AI agents. It's optimized for the Google ecosystem, but remains model-agnostic and deployment-agnostic, providing developers with unparalleled flexibility and control.
+ADK provides a flexible, modular, and model-agnostic framework for developers to build AI agents ranging from simple to complex multi-agent systems. Optimized for the Google ecosystem and designed for easy integration with other frameworks.
 
 ## Key Features
 
-*   **Rich Tool Ecosystem:**  Seamlessly integrate pre-built tools, custom functions, OpenAPI specifications, and existing tools to equip your agents with diverse capabilities.
-*   **Code-First Development:**  Define agent logic, tools, and orchestration directly in Python for enhanced flexibility, testability, and version control.
+*   **Code-First Development:** Define agents, tools, and orchestration directly in Python, enabling flexibility, testability, and version control.
+*   **Rich Tool Ecosystem:** Integrate pre-built tools, custom functions, OpenAPI specs, or existing tools to empower your agents with diverse capabilities, with seamless integration within the Google ecosystem.
 *   **Modular Multi-Agent Systems:** Design scalable applications by composing multiple specialized agents into flexible hierarchies.
 *   **Deploy Anywhere:** Easily containerize and deploy agents on Cloud Run or scale seamlessly with Vertex AI Agent Engine.
-
-## Agent2Agent (A2A) Protocol Integration
-
-ADK integrates with the [A2A protocol](https://github.com/google-a2a/A2A/) for remote agent-to-agent communication. See the [A2A Python Samples](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents) for example implementations.
+*   **Agent2Agent (A2A) Protocol Integration:** Leverage the A2A protocol for remote agent-to-agent communication. See [example](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents).
+*   **Built-in Development UI:** Test, evaluate, debug, and showcase your agent(s) with an integrated UI.
+*   **Evaluation Tools:** Evaluate agent performance.
 
 ## Installation
 
 ### Stable Release (Recommended)
 
-Install the latest stable ADK release using `pip`:
-
 ```bash
 pip install google-adk
 ```
 
-The release cycle is weekly.
+Weekly releases ensure you're using the most recent, stable version.
 
 ### Development Version
-
-To access the latest features and bug fixes, install directly from the `main` branch:
 
 ```bash
 pip install git+https://github.com/google/adk-python.git@main
 ```
 
-**Note:** The development version may include experimental features or bugs. Use this version for testing and to access critical fixes.
-
-## Documentation
-
-Comprehensive documentation is available for building, evaluating, and deploying agents:
-
-*   [ADK Documentation](https://google.github.io/adk-docs)
+Install the latest features and bug fixes directly from the `main` branch. However, note that this version may contain experimental features or bugs.
 
 ## Quickstart Examples
 
@@ -79,7 +59,7 @@ root_agent = Agent(
 )
 ```
 
-### Build a Multi-Agent System
+### Define a Multi-Agent System
 
 ```python
 from google.adk.agents import LlmAgent, BaseAgent
@@ -100,12 +80,6 @@ coordinator = LlmAgent(
 )
 ```
 
-### Development UI
-
-ADK offers a built-in development UI for testing, evaluation, and debugging your agents:
-
-<img src="https://raw.githubusercontent.com/google/adk-python/main/assets/adk-web-dev-ui-function-call.png" alt="ADK Development UI" width="600"/>
-
 ### Evaluate Agents
 
 ```bash
@@ -114,17 +88,30 @@ adk eval \
     samples_for_testing/hello_world/hello_world_eval_set_001.evalset.json
 ```
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/google/adk-python/main/assets/adk-web-dev-ui-function-call.png" alt="ADK Web UI Example"/>
+</div>
+
+## Documentation
+
+Explore comprehensive guides for building, evaluating, and deploying agents:
+
+*   **[Documentation](https://google.github.io/adk-docs)**
+
 ## Contributing
 
-We welcome contributions! Refer to the [General contribution guideline and flow](https://google.github.io/adk-docs/contributing-guide/) and the [Code Contributing Guidelines](./CONTRIBUTING.md) to get started.
+We welcome contributions! Review our:
+
+*   [General contribution guideline and flow](https://google.github.io/adk-docs/contributing-guide/)
+*   [Code Contributing Guidelines](./CONTRIBUTING.md)
 
 ## Vibe Coding
 
-For developing agents with Vibe coding, use the context provided in [llms.txt](./llms.txt) (summarized) and [llms-full.txt](./llms-full.txt) (full) for your LLM.
+Use [llms.txt](./llms.txt) (summarized) or [llms-full.txt](./llms-full.txt) (full info) as context for LLM-powered agent development.
 
 ## License
 
-This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
+Licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
 
 ---
 

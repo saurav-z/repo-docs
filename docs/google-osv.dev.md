@@ -1,41 +1,56 @@
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/google/osv.dev/badge)](https://scorecard.dev/viewer/?uri=github.com/google/osv.dev)
 
-# OSV: Open Source Vulnerability Database and Infrastructure
+# OSV: The Open Source Vulnerability Database
 
-**OSV.dev provides a comprehensive, centralized database of open-source vulnerabilities and a suite of tools to help you identify and mitigate risks.**
+**OSV is a free, open-source vulnerability database and API that helps you identify and remediate security vulnerabilities in open-source software.**
 
-This repository contains the code for the OSV infrastructure, powering the [OSV.dev website](https://osv.dev) and related services.
-
-[Visit the original repository on GitHub](https://github.com/google/osv.dev)
+[Go to the original repository](https://github.com/google/osv.dev)
 
 ## Key Features
 
-*   **Centralized Vulnerability Database:** Access a comprehensive and curated database of open-source vulnerabilities.
-*   **Vulnerability Scanning:** Integrates with the [OSV scanner](https://github.com/google/osv-scanner) to scan your dependencies for known vulnerabilities.
-*   **Web UI:** Explore vulnerabilities and related information through the user-friendly web interface at [OSV.dev](https://osv.dev).
-*   **API Access:** Utilize the OSV API to programmatically access vulnerability data and integrate it into your security workflows ([API Documentation](https://google.github.io/osv.dev/api/)).
-*   **Data Dumps:** Access data dumps from a GCS bucket `gs://osv-vulnerabilities` ([Data Dump Documentation](https://google.github.io/osv.dev/data/#data-dumps)).
+*   **Comprehensive Vulnerability Data:** OSV provides a centralized database of known vulnerabilities affecting open-source projects.
+*   **API Access:** Access the OSV database programmatically using a robust API for easy integration into your security tools.
+*   **Dependency Scanning:** The OSV scanner helps you identify vulnerable dependencies in your projects.
+*   **Web UI:** Browse and explore vulnerabilities through a user-friendly web interface.
+*   **Data Dumps:** Download data dumps for offline analysis and integration.
+
+## Documentation
+
+*   Comprehensive documentation is available at: [https://google.github.io/osv.dev](https://google.github.io/osv.dev)
+*   API documentation is available at: [https://google.github.io/osv.dev/api/](https://google.github.io/osv.dev/api/)
+*   Data Dumps: [https://google.github.io/osv.dev/data/#data-dumps](https://google.github.io/osv.dev/data/#data-dumps)
+
+## Using the Scanner
+
+The OSV scanner, a Go-based tool, checks your project's dependencies against the OSV database. It supports:
+
+*   Various lockfiles
+*   Debian Docker containers
+*   SPDX and CycloneDB SBOMs
+*   Git repositories
+
+The scanner is located in its [own repository](https://github.com/google/osv-scanner).
 
 ## Repository Structure
 
-This repository is organized as follows:
+This repository contains the code for running the OSV platform on Google Cloud Platform (GCP). Key directories include:
 
-*   `deployment/`: Terraform & Cloud Deploy configuration files and Cloud Build config yamls.
-*   `docker/`: CI docker files and worker base images.
-*   `docs/`: Jekyll files for the OSV documentation.
-*   `gcp/api`: OSV API server files and protobuf definitions.
+*   `deployment/`: Terraform and Cloud Deploy configuration.
+*   `docker/`: Dockerfiles for CI and deployment.
+*   `docs/`: Jekyll files for the OSV documentation site.
+*   `gcp/api`: OSV API server files.
 *   `gcp/datastore`: Datastore index configuration.
 *   `gcp/functions`: Cloud Function for publishing PyPI vulnerabilities.
-*   `gcp/indexer`: Version indexing logic.
+*   `gcp/indexer`: Version determination indexer.
 *   `gcp/website`: Backend of the OSV web interface.
-*   `gcp/workers/`: Workers for various background tasks (bisection, import, export, alias) and cron jobs.
-*   `osv/`: The core OSV Python library.
-*   `tools/`: Utility scripts for development and maintenance.
-*   `vulnfeeds/`: Go module for vulnerability data conversion (NVD, Alpine, Debian).
+*   `gcp/workers/`: Background workers for various tasks (bisection, import, export, etc.).
+*   `osv/`: Core OSV Python library and ecosystem helpers.
+*   `tools/`: Development and utility scripts.
+*   `vulnfeeds/`: Go module for NVD CVE conversion and feed converters.
 
-### Submodules
+## Getting Started
 
-To build locally, update the submodules:
+Ensure you initialize the submodules for local builds:
 
 ```bash
 git submodule update --init --recursive
@@ -43,21 +58,17 @@ git submodule update --init --recursive
 
 ## Contributing
 
-Contributions are welcome! Please see the following resources:
+Contributions are welcome! Learn more about contributing code, data, and documentation via the following links:
 
-*   [Contributing Code](CONTRIBUTING.md#contributing-code)
-*   [Contributing Data](CONTRIBUTING.md#contributing-data)
-*   [Contributing Documentation](CONTRIBUTING.md#contributing-documentation)
+*   [Code Contributions](CONTRIBUTING.md#contributing-code)
+*   [Data Contributions](CONTRIBUTING.md#contributing-data)
+*   [Documentation Contributions](CONTRIBUTING.md#contributing-documentation)
 
-Join the discussion on the [mailing list](https://groups.google.com/g/osv-discuss).
+For questions and suggestions, please [open an issue](https://github.com/google/osv.dev/issues) or join the [mailing list](https://groups.google.com/g/osv-discuss).
 
-## Questions and Suggestions
+## Third-Party Tools and Integrations
 
-Open an issue on [GitHub](https://github.com/google/osv.dev/issues).
-
-## Third-Party Tools & Integrations
-
-Explore community-built tools that integrate with OSV:
+The OSV database is used by several community tools. Note that these are community-built tools and are not supported or endorsed by the core OSV maintainers.
 
 *   [Cortex XSOAR](https://github.com/demisto/content)
 *   [dep-scan](https://github.com/AppThreat/dep-scan)
@@ -67,5 +78,3 @@ Explore community-built tools that integrate with OSV:
 *   [pip-audit](https://github.com/pypa/pip-audit)
 *   [Renovate](https://github.com/renovatebot/renovate)
 *   [Trivy](https://github.com/aquasecurity/trivy)
-
-*Note: These are community-built tools and are not supported or endorsed by OSV maintainers. Evaluate their suitability using the [OpenSSF's Concise Guide for Evaluating Open Source Software](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software).*

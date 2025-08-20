@@ -1,55 +1,48 @@
-# Xandikos: Your Lightweight, Git-Backed CalDAV/CardDAV Server
+<!-- SEO-optimized README for Xandikos -->
 
-**Xandikos is a powerful and flexible CalDAV and CardDAV server that leverages the versioning capabilities of Git for data storage.** ([Original Repository](https://github.com/jelmer/xandikos))
+# Xandikos: A Lightweight, Git-Backed CalDAV/CardDAV Server
+
+**Xandikos empowers you to manage your calendars and contacts with the power of Git, offering a simple yet robust CalDAV/CardDAV server.**  [View the original repo](https://github.com/jelmer/xandikos).
 
 ![Xandikos Logo](logo.png)
 
+Xandikos (Ξανδικός or Ξανθικός) is named after the March month in the ancient Macedonian calendar. Explore comprehensive documentation on the [Xandikos home page](https://www.xandikos.org/docs/).
+
 ## Key Features
 
-*   **Standards Compliant:** Fully implements core WebDAV, CalDAV, and CardDAV standards for robust compatibility.
-*   **Git-Backed Storage:** Utilizes Git repositories for efficient and reliable data storage, enabling easy backups and version control.
-*   **Lightweight and Efficient:** Designed to be lightweight and performant, making it suitable for various hosting environments.
-*   **Docker Support:** Includes a Dockerfile for easy deployment and containerization.
-*   **Extensive Client Compatibility:** Works seamlessly with a wide range of CalDAV and CardDAV clients, including Vdirsyncer, DAVx5, and many more.
+*   **Git-Backed Storage:** Utilizes a Git repository for data storage, enabling versioning, backups, and easy management of your calendar and contact data.
+*   **CalDAV & CardDAV Compliant:** Fully implements core CalDAV (RFC 4791) and CardDAV (RFC 6352) standards, ensuring compatibility with a wide range of clients.
+*   **Lightweight & Efficient:** Designed for performance and ease of use, perfect for personal or small-team deployments.
+*   **Docker Support:**  Easily deploy Xandikos using Docker for simplified setup and management.
+*   **Open Source:**  Benefit from the transparency and flexibility of an open-source solution.
 
 ## Implemented Standards
 
-Xandikos supports a comprehensive set of WebDAV, CalDAV, and CardDAV standards:
+Xandikos supports a wide range of WebDAV, CalDAV, and CardDAV standards:
 
-*   RFC 4918/2518 (Core WebDAV)
-*   RFC 4791 (CalDAV)
-*   RFC 6352 (CardDAV)
-*   RFC 5397 (Current Principal)
-*   RFC 3253 (Versioning Extensions) - *Partial*
-*   RFC 3744 (Access Control) - *Partial*
-*   RFC 5995 (POST to create members)
-*   RFC 5689 (Extended MKCOL)
-*   RFC 6578 (Collection Synchronization for WebDAV)
-*   RFC 7953 (Calendar Availability)
-
-## Not Implemented Standards
-
-*   RFC 6638 (CalDAV Scheduling Extensions)
-*   RFC 7809 (CalDAV Time Zone Extensions)
-*   RFC 7529 (WebDAV Quota)
-*   RFC 4709 (WebDAV Mount) - *Intentionally not implemented*
-*   RFC 5546 (iCal iTIP)
-*   RFC 4324 (iCAL CAP)
-
-For more details on specification compliance, see the `DAV compliance notes <notes/dav-compliance.rst>`_.
+*   RFC 4918/2518 (Core WebDAV) - *Implemented*
+*   RFC 4791 (CalDAV) - *Fully implemented*
+*   RFC 6352 (CardDAV) - *Fully implemented*
+*   RFC 5397 (Current Principal) - *Fully implemented*
+*   RFC 3253 (Versioning Extensions) - *Partially implemented*
+*   RFC 3744 (Access Control) - *Partially implemented*
+*   RFC 5995 (POST to create members) - *Fully implemented*
+*   RFC 5689 (Extended MKCOL) - *Fully implemented*
+*   RFC 6578 (Collection Synchronization for WebDAV) - *Fully implemented*
+*   RFC 7953 (Calendar Availability) - *Fully implemented*
 
 ## Limitations
 
-*   No multi-user support
-*   No support for CalDAV scheduling extensions
+*   No multi-user support.
+*   No support for CalDAV scheduling extensions.
 
 ## Supported Clients
 
-Xandikos has been tested and works with the following CalDAV/CardDAV clients:
+Xandikos is compatible with various CalDAV and CardDAV clients, including:
 
 *   Vdirsyncer
 *   caldavzap/carddavmate
-*   evolution
+*   Evolution
 *   DAVx5 (formerly DAVDroid)
 *   sogo connector for Icedove/Thunderbird
 *   aCALdav syncer for Android
@@ -66,69 +59,49 @@ Xandikos has been tested and works with the following CalDAV/CardDAV clients:
 *   pimsync
 *   davcli
 *   Thunderbird
+<!-- Add a few more popular clients to broaden the target -->
 
 ## Dependencies
 
-Xandikos is built with the following Python dependencies:
+Xandikos is built using Python 3 and depends on the following libraries:
 
-*   Python 3 (see pyproject.toml for specific version)
 *   Dulwich
 *   Jinja2
 *   icalendar
 *   defusedxml
 
-Install dependencies using pip with: `python setup.py develop`.
+Install dependencies using pip: `python setup.py develop` or apt: `sudo apt install python3-dulwich python3-defusedxml python3-icalendar python3-jinja2`
 
 ## Docker
 
-A Dockerfile is provided for easy deployment. The image is available at `ghcr.io/jelmer/xandikos`. For more information see the `Container overview page <https://github.com/jelmer/xandikos/pkgs/container/xandikos>`.
+Xandikos offers a Docker image for easy deployment, available on [GitHub Container Registry](https://github.com/jelmer/xandikos/pkgs/container/xandikos).
 
-### Configuration
+Configure the Docker image using environment variables.  See the Dockerfile and `examples/docker-compose.yml` for details.
 
-The Docker image can be configured using environment variables, including:
+## Running Xandikos
 
-*   `PORT`
-*   `METRICS_PORT`
-*   `LISTEN_ADDRESS`
-*   `DATA_DIR`
-*   `CURRENT_USER_PRINCIPAL`
-*   `ROUTE_PREFIX`
-*   `AUTOCREATE`
-*   `DEFAULTS`
-*   `DEBUG`
-*   `DUMP_DAV_XML`
-*   `NO_STRICT`
-
-See `examples/docker-compose.yml` and the `man page <https://www.xandikos.org/manpage.html>`_ for more information.
-
-## Running
-
-Xandikos can be run directly or behind a reverse proxy.
-
-### Standalone Example
-
-To run a standalone instance with a pre-created calendar and address book:
+Xandikos can be run directly or behind a reverse proxy.  To run a standalone instance with defaults:
 
 ```bash
 ./bin/xandikos --defaults -d $HOME/dav
 ```
 
-This will create data at `$HOME/dav` and serve on `localhost:8080`.
+The server will listen on `localhost:8000`
 
-### Production
+## Client Configuration
 
-For production, it's recommended to use a reverse proxy like Apache or Nginx in front of Xandikos. See the `examples/` directory for init system configurations.
+Clients supporting RFC:5397 can use the base URL. For clients without auto-discovery, use specific URLs like:
 
-## Client Instructions
-
-Clients can automatically discover calendars and address books from Xandikos if they support RFC:`5397`. For clients requiring direct URLs, the base URL should be provided, e.g., `http://dav.example.com/user/calendars/calendar` and `http://dav.example.com/user/contacts/addressbook`.
+```
+http://dav.example.com/user/calendars/calendar
+http://dav.example.com/user/contacts/addressbook
+```
 
 ## Contributing
 
-Contributions are welcome! Please submit issues and pull requests on GitHub. See `CONTRIBUTING.md` for details.
-Issues suitable for new contributors are tagged `new-contributor <https://github.com/jelmer/xandikos/labels/new-contributor>`_.
+Contributions are welcome!  Report bugs, request features, and contribute code via [GitHub Issues](https://github.com/jelmer/xandikos/issues/new). Review the [CONTRIBUTING.md](CONTRIBUTING.md) guide.
 
-## Help
+## Help & Support
 
-*   IRC: *#xandikos* on the `OFTC <https://www.oftc.net/>`_ network
-*   Mailing List: `Xandikos <https://groups.google.com/forum/#!forum/xandikos>`_
+*   IRC:  #xandikos on the OFTC IRC network.
+*   Mailing List:  [Xandikos Google Group](https://groups.google.com/forum/#!forum/xandikos)

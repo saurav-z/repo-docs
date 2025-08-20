@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Codegen SDK: Automate Software Development with AI</h1>
+<h1 align="center">Codegen: Automate Software Development with AI</h1>
 
 <div align="center">
 
@@ -18,35 +18,35 @@
 
 <br />
 
-**Tired of repetitive coding tasks?** The Codegen SDK provides a powerful Python interface to interact with AI-powered code agents, enabling you to automate software development workflows.
+**Codegen empowers developers to build software faster and more efficiently with the help of AI-powered code agents.** This SDK provides a programmatic interface to the powerful code agents offered by [Codegen](https://codegen.com).
 
-## Key Features:
+## Key Features
 
-*   **AI-Powered Code Generation:** Leverage advanced AI to generate code based on natural language prompts.
-*   **Easy Integration:**  Simple Python SDK for seamless integration into your existing projects.
-*   **Flexible Usage:** Interact with your AI engineer via API, Slack, Linear, Github, or on our website.
-*   **Real-time Status Updates:** Monitor the progress of your tasks with status updates and refresh capabilities.
-*   **Multi-platform support:** Use Codegen in your favorite development environments, including Slack, Github, and Linear.
+*   **AI-Powered Code Generation:** Leverage intelligent agents to automate coding tasks.
+*   **Seamless Integration:** Easily integrate Codegen into your existing development workflow.
+*   **Flexible Interface:** Interact with code agents via API.
+*   **Real-Time Status Updates:** Monitor the progress of your tasks.
+*   **Multi-Platform Support:** Works with Slack, Linear, Github, and on the Codegen website.
 
 ## Getting Started
 
-Install the Codegen SDK using pip:
+Install the Codegen SDK and start building:
 
 ```bash
 pip install codegen
+# or
+uv pip install codegen
 ```
 
-To start using the SDK, you'll need an API token and organization ID, which you can obtain from the [Codegen Developer Portal](https://codegen.com/developer).
-
-Here's a quick example:
+To begin using the SDK, you'll need an API token and your organization ID.  Get these from [codegen.com/token](https://codegen.com/token).
 
 ```python
 from codegen.agents.agent import Agent
 
 # Initialize the Agent with your organization ID and API token
 agent = Agent(
-    org_id="YOUR_ORG_ID",  # Find this at codegen.com/developer
-    token="YOUR_API_TOKEN",  # Get this from codegen.com/developer
+    org_id="YOUR_ORG_ID",  # Find this at codegen.com/token
+    token="YOUR_API_TOKEN",  # Get this from codegen.com/token
     # base_url="https://codegen-sh-rest-api.modal.run",  # Optional - defaults to production
 )
 
@@ -71,15 +71,17 @@ if task.status == "completed":
 
 *   [Documentation](https://docs.codegen.com)
 *   [Getting Started Guide](https://docs.codegen.com/introduction/getting-started)
-*   [Codegen Website](https://codegen.com)
-*   [Codegen GitHub Repository](https://github.com/codegen-sh/codegen)
 *   [Contributing Guide](CONTRIBUTING.md)
 *   [Contact Us](https://codegen.com/contact)
 
 ## Contributing
 
-We welcome contributions!  Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on setting up your development environment and submitting pull requests.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up your development environment and submit pull requests.
 
-## Enterprise
+## Enterprise Solutions
 
-For more information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
+For information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
+
+---
+
+**[Back to the original repository](https://github.com/codegen-sh/codegen)**

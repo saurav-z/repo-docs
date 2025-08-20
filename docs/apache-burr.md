@@ -1,6 +1,8 @@
-# Burr: Build Stateful AI Applications with Ease
+# Burr: Build and Monitor Stateful AI Applications
 
-**Burr is a Python library that simplifies building and managing stateful AI applications, offering a powerful framework for creating decision-making systems.**
+Burr is a Python library that simplifies building and monitoring stateful AI applications, offering a UI for real-time tracing and debugging.  [Check out the original repo](https://github.com/apache/burr).
+
+<div>
 
 [![Discord](https://img.shields.io/badge/Join-Burr_Discord-7289DA?logo=discord)](https://discord.gg/6Zy2DwP4f3)
 [![Downloads](https://static.pepy.tech/badge/burr/month)](https://pepy.tech/project/burr)
@@ -17,61 +19,58 @@
   <img src="https://img.shields.io/badge/DAGWorks-Follow-purple.svg?logo=X"/>
 </a>
 
-Burr allows you to develop AI applications like chatbots, agents, and simulations with ease, integrating seamlessly with your favorite frameworks and offering a user-friendly UI for monitoring and debugging.
+</div>
 
 ## Key Features
 
-*   **State Machine Architecture:** Define your application logic as a state machine, allowing for clear and manageable workflows.
-*   **Real-Time UI:** Track, monitor, and trace your system's execution in real-time with the included user interface.
-*   **Pluggable Persisters:** Save and load application state using various pluggable persisters for memory management.
-*   **Framework Agnostic:** Burr works with any LLM or framework, offering flexibility in your development choices.
-*   **Extensive Integrations:** Leverage integrations for state persistence, telemetry, and connections with other systems.
+*   **State Machine Modeling:**  Define your application's logic as a state machine for clarity and control.
+*   **Real-time UI:**  Monitor, trace, and debug your application's execution with a built-in UI.
+*   **Framework Agnostic:** Integrate Burr with your favorite LLM and AI frameworks.
+*   **Pluggable Persisters:** Save and load application state using various storage options.
+*   **Easy Integration:**  Integrate with existing tools and build custom actions.
+*   **Wide Variety of Use Cases:** Build and monitor stateful AI applications, including chatbots, agents, and simulations.
 
-## Getting Started
+## Quick Start
 
-1.  **Installation:** Install Burr from PyPI:
+1.  **Installation:** Install the Burr package using pip:
 
     ```bash
     pip install "burr[start]"
     ```
+
 2.  **Run the UI:** Start the Burr telemetry UI:
 
     ```bash
     burr
     ```
-3.  **Explore the Demo:** Use the UI's demo chat application (requires an OpenAI API key).
-4.  **Run Examples:** Clone the repository and run the hello-world counter example:
+
+3.  **Explore Examples:** Clone the repository and run example applications:
 
     ```bash
     git clone https://github.com/dagworks-inc/burr && cd burr/examples/hello-world-counter
     python application.py
     ```
-5.  **Dive Deeper:** Check out the [Getting Started Guide](https://burr.dagworks.io/getting_started/simple-example/) for more details.
+
+    See the [documentation](https://burr.dagworks.io/getting_started/simple-example/) for more details.
 
 ## How Burr Works
 
-Burr simplifies the creation of applications by representing your application as a state machine.  This allows you to effectively manage state, complex decisions, incorporate feedback, and create idempotent workflows.
+Burr empowers you to model applications as state machines using simple Python functions.  You define actions and transitions to manage state, track decisions, and create self-persisting workflows.  Burr's core API is intuitive, allowing you to build complex AI applications with ease.
 
-*   **Core API:**  The core API leverages simple Python functions to build and manage state machines.
-*   **UI for Introspection:** Burr includes a dependency-free python library and a UI to help you understand your application's inner workings.
-*   **Integrations:** It provides out-of-the-box tools to persist state, connect to telemetry, and integrate with other systems.
+Burr provides a (dependency-free) low-abstraction python library, along with a UI you can use to view execution telemetry for introspection and debugging, and a set of integrations to make it easier to persist state, connect to telemetry, and integrate with other systems.
 
-[See the full documentation for more information.](https://burr.dagworks.io/)
+## Use Cases
 
-## Applications of Burr
+Burr is ideal for:
 
-Burr empowers you to build various AI applications:
-
-*   Chatbots (GPT-like, RAG-based)
-*   LLM-based Adventure Games
-*   Interactive Assistants (e.g., email writing)
-*   Simulations (e.g., time-series forecasting)
-*   Hyperparameter Tuning
+*   GPT-like chatbots
+*   Stateful RAG-based chatbots
+*   LLM-based adventure games
+*   Interactive assistants (e.g., for writing emails)
+*   Simulations and hyperparameter tuning
 *   And much more!
 
-## Comparison with Similar Frameworks
-
-Burr offers a unique approach. See the comparison table to better understand its strengths:
+##  Comparison against Common Frameworks
 
 | Criteria                                          | Burr | Langgraph | temporal | Langchain | Superagent | Hamilton |
 | ------------------------------------------------- | :--: | :-------: | :------: | :-------: | :--------: | :------: |
@@ -82,16 +81,59 @@ Burr offers a unique approach. See the comparison table to better understand its
 | Open-source user-interface for monitoring/tracing |  ✅  |    ❌     |    ❌    |    ❌     |     ❌     |    ✅    |
 | Works with non-LLM use-cases                      |  ✅  |    ❌     |    ❌    |    ❌     |     ❌     |    ✅    |
 
-## Contributing & Community
+##  Why the name Burr?
 
-Burr welcomes contributions!  See the [developer-facing docs](https://burr.dagworks.io/contributing) to get started.
-Join the community on [Discord](https://discord.gg/6Zy2DwP4f3) for support and discussions.
+Named after Aaron Burr, Burr is the second open-source library from DAGWorks, following Hamilton.
 
-## Learn More
+## Testimonials
 
-*   [Documentation](https://burr.dagworks.io/)
-*   [Quick Intro Video](https://www.loom.com/share/a10f163428b942fea55db1a84b1140d8?sid=1512863b-f533-4a42-a2f3-95b13deb07c9)
-*   [Longer Video & Walkthrough](https://www.youtube.com/watch?v=rEZ4oDN0GdU)
-*   [Blog Post](https://blog.dagworks.io/p/burr-develop-stateful-ai-applications)
+> "After evaluating several other obfuscating LLM frameworks, their elegant yet comprehensive state management solution proved to be the powerful answer to rolling out robots driven by AI decision-making." - **Ashish Ghosh**, *CTO, Peanut Robotics*
 
-[Back to the original repository](https://github.com/apache/burr)
+> "Of course, you can use it [LangChain], but whether it's really production-ready and improves the time from 'code-to-prod' [...], we've been doing LLM apps for two years, and the answer is no [...] All these 'all-in-one' libs suffer from this [...]. Honestly, take a look at Burr. Thank me later." - **Reddit user cyan2k**, *LocalLlama, Subreddit*
+
+> "Using Burr is a no-brainer if you want to build a modular AI application. It is so easy to build with, and I especially love their UI which makes debugging a piece of cake. And the always-ready-to-help team is the cherry on top." - **Ishita**, *Founder, Watto.ai*
+
+> "I just came across Burr and I'm like WOW, this seems like you guys predicted this exact need when building this. No weird esoteric concepts just because it's AI." - **Matthew Rideout**, *Staff Software Engineer, Paxton AI*
+
+> "Burr's state management part is really helpful for creating state snapshots and building debugging, replaying, and even evaluation cases around that." - **Rinat Gareev**, *Senior Solutions Architect, Provectus*
+
+> "I have been using Burr over the past few months, and compared to many agentic LLM platforms out there (e.g. LangChain, CrewAi, AutoGen, Agency Swarm, etc), Burr provides a more robust framework for designing complex behaviors." - **Hadi Nayebi**, *Co-founder, CognitiveGraphs*
+
+> "Moving from LangChain to Burr was a game-changer!
+> - **Time-Saving**: It took me just a few hours to get started with Burr, compared to the days and weeks I spent trying to navigate LangChain.
+> - **Cleaner Implementation**: With Burr, I could finally have a cleaner, more sophisticated, and stable implementation. No more wrestling with complex codebases.
+> - **Team Adoption**: I pitched Burr to my teammates, and we pivoted our entire codebase to it. It's been a smooth ride ever since." - **Aditya K.**, *DS Architect, TaskHuman*
+
+## Roadmap
+
+Upcoming features include:
+
+1.  FastAPI integration + hosted deployment
+2.  Improvements to core library functionality (retries, integrations, metadata)
+3.  Tooling for hosted state machine execution
+4.  Additional storage integrations
+
+Sign up for the Burr Cloud waitlist [here](https://forms.gle/w9u2QKcPrztApRedA).
+
+## Contributing
+
+We welcome contributions! Check out the [developer documentation](https://burr.dagworks.io/contributing) to get started.
+
+## Contributors
+
+### Code contributions
+
+*   [Elijah ben Izzy](https://github.com/elijahbenizzy)
+*   [Stefan Krawczyk](https://github.com/skrawcz)
+*   [Joseph Booth](https://github.com/jombooth)
+*   [Nandani Thakur](https://github.com/NandaniThakur)
+*   [Thierry Jean](https://github.com/zilto)
+*   [Hamza Farhan](https://github.com/HamzaFarhan)
+*   [Abdul Rafay](https://github.com/proftorch)
+*   [Margaret Lange](https://github.com/margaretlange)
+
+### Bug hunters/special mentions
+
+*   [Luke Chadwick](https://github.com/vertis)
+*   [Evans](https://github.com/sudoevans)
+*   [Sasmitha Manathunga](https://github.com/mmz-001)

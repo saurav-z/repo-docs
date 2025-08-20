@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="https://assets.khoj.dev/khoj-logo-sideways-1200x540.png" width="230" alt="Khoj Logo">
-</div>
+<p align="center"><img src="https://assets.khoj.dev/khoj-logo-sideways-1200x540.png" width="230" alt="Khoj Logo"></p>
 
 <div align="center">
 
@@ -12,7 +10,7 @@
 </div>
 
 <div align="center">
-<b>Unlock Your Potential with Khoj: Your AI-Powered Second Brain.</b>
+<b>Your AI Second Brain: Supercharge Your Productivity with Khoj</b>
 </div>
 
 <br />
@@ -37,83 +35,79 @@
 
 ## What is Khoj?
 
-[Khoj](https://khoj.dev) is an open-source, AI-powered personal assistant designed to supercharge your productivity. It seamlessly integrates with your workflow, providing a centralized hub for information access, task automation, and intelligent insights. Whether you're a student, researcher, or professional, Khoj helps you work smarter, not harder.
+Khoj is your personal AI assistant, designed to empower you with enhanced knowledge retrieval, smart search, and seamless access to information—all in one place.  **Access the power of AI and streamline your workflow with Khoj, your intelligent companion.**  ([View on GitHub](https://github.com/khoj-ai/khoj))
+
+***
 
 ## Key Features
 
-*   **Chat with AI:** Engage in conversations with various LLMs, including popular models like Llama3, GPT, and Claude.
-*   **Comprehensive Data Access:** Easily retrieve information from the internet, your local files (PDFs, Markdown, Word docs, and more), and online sources.
-*   **Multi-Platform Accessibility:** Access Khoj from your browser, Obsidian, Emacs, desktop, phone, or even WhatsApp.
-*   **Customizable Agents:** Create AI agents with unique knowledge, personalities, tools, and chat models tailored to specific tasks.
-*   **Automated Research & Insights:** Automate research, receive personalized newsletters, and get smart notifications delivered to your inbox.
-*   **Advanced Semantic Search:** Quickly find relevant documents and information using intelligent semantic search capabilities.
-*   **Multimedia Support:** Generate images, utilize text-to-speech, and replay your messages for a richer experience.
-*   **Self-Hosting & Open Source:** Maintain control and privacy by self-hosting Khoj, or use the cloud app.
+*   **AI-Powered Chat:** Converse with local or online Large Language Models (LLMs) like Llama3, Qwen, Gemma, Mistral, GPT, Claude, and Gemini.
+*   **Comprehensive Search:** Get answers from the internet and your documents, supporting various formats including images, PDFs, Markdown, org-mode, Word documents, and Notion files.
+*   **Cross-Platform Accessibility:** Access Khoj via your browser, Obsidian, Emacs, desktop, phone, or WhatsApp.
+*   **Customizable AI Agents:** Create AI agents with custom knowledge, personalities, tools, and LLMs tailored for specific tasks.
+*   **Automated Research & Notifications:** Automate research tasks and receive personalized newsletters and smart notifications.
+*   **Semantic Search:** Quickly and easily find relevant documents using advanced semantic search capabilities.
+*   **Multimedia Capabilities:** Generate images, use text-to-speech, and play your messages.
+*   **Open Source & Self-Hostable:** Enjoy the flexibility of open-source software and the option to self-host for complete control.
+*   **Available on Cloud:** Try Khoj on our [cloud app](https://app.khoj.dev).
 
-## What's New
+***
 
-*   Try the experimental `/research` mode for enhanced research capabilities.
-*   Create custom agents with personalized settings, knowledge bases, tools, and more!
-*   Explore Khoj's excellent performance on modern retrieval and reasoning benchmarks.
+## New Features & Updates
+
+*   **`/research` Mode:** Initiate research mode by starting any message with `/research` for advanced exploration.
+*   **Custom Agents:** Create custom agents with specific personalities, tools, and knowledge bases. ([Learn More](https://blog.khoj.dev/posts/create-agents-on-khoj/))
+*   **Performance:** Khoj demonstrates excellent performance on modern retrieval and reasoning benchmarks. ([Read More](https://blog.khoj.dev/posts/evaluate-khoj-quality/))
+
+***
 
 ## See Khoj in Action
 
-<p align="center">
-  <img src="https://github.com/khoj-ai/khoj/blob/master/documentation/assets/img/quadratic_equation_khoj_web.gif?raw=true" alt="Khoj Demo" >
-</p>
+![demo_chat](https://github.com/khoj-ai/khoj/blob/master/documentation/assets/img/quadratic_equation_khoj_web.gif?raw=true)
 
-Experience Khoj live at [https://app.khoj.dev](https://app.khoj.dev).
+Explore Khoj live at [https://app.khoj.dev](https://app.khoj.dev).
 
-## Get Started
+***
 
-### Self-Hosting
+## Additional Resources
 
-Take control of your data and privacy by self-hosting Khoj.  Follow the setup instructions in the [documentation](https://docs.khoj.dev/get-started/setup).
+*   **Full Feature List:** [View the complete list of features](https://docs.khoj.dev/category/features).
+*   **Self-Hosting:** Get started with self-hosting by [reading the setup documentation](https://docs.khoj.dev/get-started/setup).
+*   **Enterprise Solutions:** Learn more about Khoj Enterprise, including cloud, on-premises, and hybrid options, by [visiting the website](https://khoj.dev/teams).
 
-### Cloud Access
-
-You can also try Khoj right away without any setup by visiting [https://app.khoj.dev](https://app.khoj.dev).
-
-### Enterprise Solutions
-
-Learn more about Khoj Enterprise for cloud, on-premises, and hybrid solutions on our [website](https://khoj.dev/teams).
+***
 
 ## Frequently Asked Questions (FAQ)
 
 **Q: Can I use Khoj without self-hosting?**
+Yes! You can start using Khoj immediately at [https://app.khoj.dev](https://app.khoj.dev) without any setup.
 
-A: Yes!  Get started immediately at [https://app.khoj.dev](https://app.khoj.dev).
+**Q: What document types does Khoj support?**
+Khoj supports a wide range of document types, including PDFs, Markdown, Notion, Word docs, org-mode files, and more.
 
-**Q: What file types does Khoj support?**
+**Q: How do I create my own AI agent?**
+Check out [this blog post](https://blog.khoj.dev/posts/create-agents-on-khoj/) for a step-by-step guide to custom agents.
+For more questions, head over to our [Discord](https://discord.gg/BDgyabRM6e)!
 
-A: Khoj supports PDFs, Markdown, Notion, Word docs, org-mode files, and more.
+***
 
-**Q: How do I create a custom agent?**
+## Contributing
 
-A: Check out [this blog post](https://blog.khoj.dev/posts/create-agents-on-khoj/) for a step-by-step guide.
+Khoj is an open-source project sustained by the community. We welcome contributions from developers, designers, writers, and enthusiasts.
 
-**For more questions, join our [Discord](https://discord.gg/BDgyabRM6e)!**
+**Why Contribute?**
 
-## Contribute to Khoj
+*   Make an Impact: Help build, test, and improve a tool used by many to boost productivity.
+*   Learn & Grow: Work with cutting-edge AI, LLMs, and semantic search technologies.
 
-Khoj is an open-source project sustained by a vibrant community!  We welcome contributions from everyone.
-
-### How to Contribute
-
-*   Help us build new features
-*   Improve documentation
-*   Report issues and fix bugs.
-*   Developers can see the [Contributing Guidelines](https://docs.khoj.dev/contributing/development) and explore [good first issues](https://github.com/khoj-ai/khoj/contribute).
+Contribute by building new features, improving documentation, reporting issues, and fixing bugs.  If you're a developer, please see our [Contributing Guidelines](https://docs.khoj.dev/contributing/development) and check out [good first issues](https://github.com/khoj-ai/khoj/contribute).
 
 ### Contributors
 
-A huge thank you to our amazing contributors! 🎉
+Thanks to our awesome contributors! 🎉
 
 <a href="https://github.com/khoj-ai/khoj/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=khoj-ai/khoj" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
-
-***
-🔗 [Back to the Khoj Repository](https://github.com/khoj-ai/khoj)

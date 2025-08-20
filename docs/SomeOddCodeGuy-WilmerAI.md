@@ -1,69 +1,85 @@
-# WilmerAI: Supercharge Your LLMs with Customizable Workflows
+# WilmerAI: Expertly Routing Your Language Model Inferences
 
-**Tired of limited LLM responses?** WilmerAI empowers you to orchestrate complex workflows, route prompts intelligently, and leverage multiple LLMs to generate superior results.  [Explore the original repository](https://github.com/SomeOddCodeGuy/WilmerAI) for a deeper dive into this powerful project.
-
-## Key Features
-
-*   **Intelligent Prompt Routing**: Direct prompts to specific LLMs or categories (coding, math, personas, etc.) using customizable workflows.
-*   **Customizable Workflows**: Design workflows tailored to your exact needs, chaining LLM calls, and incorporating external tools.
-*   **Multi-LLM Orchestration**:  Harness the power of multiple LLMs simultaneously for comprehensive and nuanced responses.
-*   **Offline Wikipedia Integration**: Enhance factual accuracy using the Offline Wikipedia API for RAG (Retrieval Augmented Generation).
-*   **Contextual Chat Summaries**: Maintain conversational memory with automatically generated summaries that extend beyond the typical LLM context window.
-*   **VRAM Optimization with Ollama**: Utilize Ollama's hotswapping to run complex workflows on systems with limited VRAM.
-*   **Flexible Preset Management**: Easily configure and modify LLM parameters through customizable JSON presets.
-*   **Ollama Multi-Modal Support**: Experimentally process images alongside text with Ollama.
-*   **Mid-Workflow Conditional Logic**:  Make dynamic decisions in your workflows, branching based on LLM responses.
-*   **MCP Server Tool Integration**: Leveraging the power of MCPO, you can use tool calling in a mid-workflow environment.
-
-## Getting Started
-
-### Installation
-
-1.  **Ensure Python is installed.**  The project has been tested with Python 3.10 and 3.12.
-2.  **Install dependencies:** `pip install -r requirements.txt`
-3.  **Run the server:** `python server.py` (or use the provided `.bat` / `.sh` scripts).
-
-### Quick Setup
-
-1.  **Configure Endpoints:** Modify JSON files in `Public/Configs/Endpoints` to connect to your LLM APIs.
-2.  **Choose a User:**  Set the `_current-user.json` file or use the `--User` command-line argument.
-3.  **Customize Routing:**  Create or select a routing config in `Public/Configs/Routing`.
-4.  **Adjust Workflows:** Tailor workflows within the `Public/Workflows/<your_username>` directory to your needs.
-
-## Advanced Topics
-
-### Understanding Workflows
-
-*   **Nodes**: Workflows are composed of nodes, each performing a specific action (LLM calls, script execution, etc.).
-*   **Variables**: Utilize variables (e.g., `{agent1Output}`) to pass data between nodes and customize prompts.
-*   **Memory System**: Leverage a sophisticated memory system to maintain context, enabling long-running and insightful conversations.
-
-### Memory
-
-*   **Long-Term Memory (File-Based)**: Create and access summaries of past conversation chunks to improve coherence.
-*   **Rolling Chat Summary**: A continuous summarization of the entire conversation for quick context.
-*   **Vector Memory (RAG)**:  Enable intelligent keyword search to find the most relevant information in your conversations.
-
-### Quick Troubleshooting
-
-*   **No Memory Files**: Verify the creation of memory files based on your workflow configuration and the presence of the `[DiscussionId]` tag.
-*   **No Responses**: Ensure correct streaming settings (matching Wilmer and your front-end).
-*   **LLM Errors**: Check presets for API compatibility.
-*   **Out of Memory/Truncation Errors**:  Manage token limits to fit within your LLM's context window.
-
-## Further Information
-
-*   [WilmerAI Setup Tutorial](https://www.youtube.com/watch?v=v2xYQCHZwJM)
-*   [WilmerAI Tutorial Youtube PlayList](https://www.youtube.com/playlist?list=PLjIfeYFu5Pl7J7KGJqVmHM4HU56nByb4X)
-
-## Important Notes
-
-*   This is a personal project under active development; expect potential bugs and ongoing improvements.
-*   Token usage is not tracked within WilmerAI; monitor usage through your LLM API dashboards.
-*   LLM quality significantly impacts WilmerAI's performance; choose reliable and high-quality models.
+**Unlock the power of complex, multi-LLM workflows with WilmerAI, a flexible and customizable application for connecting your front-end to the latest AI models.** [Visit the original repository](https://github.com/SomeOddCodeGuy/WilmerAI) to get started!
 
 ---
 
-## Contact
+## Key Features:
 
-For questions, suggestions, or collaboration: WilmerAI.Project@gmail.com
+*   **Advanced Prompt Routing:** Direct prompts to specific categories or personas, ensuring optimal results.
+*   **Customizable Workflows:** Tailor your AI interactions with flexible, multi-step processes.
+*   **Multi-LLM Orchestration:** Leverage multiple LLMs within a single prompt for superior results.
+*   **Offline Wikipedia Integration:** Enhance responses with factual data using the Offline Wikipedia API.
+*   **Conversation Memory:** Maintain context over long interactions with continually generated chat summaries.
+*   **Model Hotswapping:** Maximize VRAM usage by hotswapping LLMs using Ollama.
+*   **Custom Presets:** Easily configure and customize parameters for different LLM types.
+*   **Vision Multi-Modal Support:** Process images with Ollama, even if your LLM doesn't support images directly.
+*   **Mid-Workflow Conditional Logic:** Create dynamic workflows with branching based on LLM responses.
+*   **Tool Integration:** Use tool integration using MCPO.
+
+---
+
+## Getting Started
+
+### Disclaimer
+
+This is an actively developed personal project and may contain bugs. The software is provided "as-is" without warranty. Views and methodologies within are those of the maintainer and contributors.
+
+### What is WilmerAI?
+
+WilmerAI acts as an intermediary between your front-end application and your chosen Large Language Models (LLMs). It exposes API endpoints compatible with OpenAI and Ollama, while seamlessly connecting to various LLM APIs like OpenAI, KoboldCpp, and Ollama on the backend.
+
+Think of it as a sophisticated workflow manager. You send a prompt to WilmerAI, which then processes it through a series of customizable workflows. Each workflow may involve multiple LLMs and tools, ultimately returning a comprehensive response to you.
+
+### Installation
+
+**Prerequisites:** Python 3.10 or 3.12
+
+**Option 1: Using Provided Scripts (Recommended)**
+   *   **Windows:** Run the `.bat` file.
+   *   **macOS:** Run the `.sh` file.
+
+**Option 2: Manual Installation**
+
+1.  Install dependencies: `pip install -r requirements.txt`
+2.  Run the server: `python server.py`
+
+### Configuration
+
+WilmerAI is configured using JSON files located in the `Public` folder. Copy your `Public` folder to preserve your settings when updating.
+
+*   **Endpoints:** Define your LLM API connections in the `Public/Configs/Endpoints` folder.
+*   **Users:** Create a user configuration file in `Public/Configs/Users` and specify it in the `_current-user.json` file or use the --User argument.
+*   **Workflows:** Customize your workflows in the `Public/Workflows` folder within the user's specific directory.
+
+**For detailed setup instructions, please consult the original project's [README](https://github.com/SomeOddCodeGuy/WilmerAI).**
+
+---
+
+## Key Concepts
+
+*   **Workflows:** Chains of nodes that orchestrate LLM calls.
+*   **Nodes:** Individual steps within a workflow, each with specific configurations.
+*   **Variables:** Dynamic placeholders for data within prompts, supporting inter-node communication.
+*   **Memories:** Long-term, rolling summary, or vector-based storage of conversation history for context.
+*   **Presets:** Customizable configurations for LLM parameters.
+
+---
+
+## Advanced Features
+
+*   **Workflow Locks:** Prevent race conditions during concurrent operations with workflow locks.
+*   **Image Processing:** Process images through Ollama, providing rich context to your LLMs.
+*   **Conditional Workflows:** Dynamically route prompts based on LLM responses.
+*   **Memory System:**  The new memory system is designed to store both file-based memories and the more powerful, searchable Vector Memories (via SQLite). 
+*   **Parallel Processing**:  Allows for using more than one LLM simultaneously when generating and processing summaries and memories.
+*   **Custom Node Functionality:** Add custom logic by using the Python Module Caller.
+
+---
+
+## Community and Support
+
+*   **Contact:** WilmerAI.Project@gmail.com
+*   **License:**  GNU General Public License (GPLv3)
+*   **Third Party Libraries:**  Flask, requests, scikit-learn, urllib3, jinja2, pillow.  See the README in the ThirdParty-Licenses folder for more information.
+---
