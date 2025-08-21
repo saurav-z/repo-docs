@@ -1,28 +1,39 @@
 <p align="center">
-    <a href="https://sentry.io/?utm_source=github&utm_medium=logo" target="_blank">
-        <img src="https://sentry-brand.storage.googleapis.com/sentry-wordmark-dark-280x84.png" alt="Sentry" width="280" height="84" />
-    </a>
+  <a href="https://sentry.io/?utm_source=github&utm_medium=logo" target="_blank">
+    <img src="https://sentry-brand.storage.googleapis.com/sentry-wordmark-dark-280x84.png" alt="Sentry" width="280" height="84" />
+  </a>
 </p>
 
-# Sentry: The Debugging Platform Developers Love
+## Stop chasing bugs and start building with Sentry, the leading debugging platform.
 
-**Sentry is a powerful debugging platform that helps developers detect, trace, and fix issues faster.**
+Sentry empowers developers to detect, trace, and fix errors in their applications, helping you ship better code, faster.
 
-## Key Features:
+**[View the original repository on GitHub](https://github.com/getsentry/sentry)**
 
-*   **Error Tracking:** Quickly identify and understand errors in your applications.
-*   **Performance Monitoring:** Optimize your application's performance by monitoring transactions.
-*   **User Session Replays:**  See how users interact with your application to understand issues.
-*   **Distributed Tracing:** Trace requests across microservices to pinpoint bottlenecks.
-*   **Real-time Insights:**  Gain valuable insights with dashboards and customizable alerts.
-*   **Log Management:** Centralize and analyze application logs for comprehensive issue understanding.
-*   **Uptime Monitoring:**  Monitor your application's availability and get notified of outages.
+### Key Features:
 
-## Get Started with Sentry
+*   **Error Tracking:** Identify and prioritize critical errors impacting your users.
+*   **Performance Monitoring:**  Monitor application performance and pinpoint bottlenecks.
+*   **Distributed Tracing:** Trace requests across services for end-to-end visibility.
+*   **Session Replay:** See exactly what users experienced to quickly understand issues.
+*   **Logs Management:** Centralized logging to correlate events and troubleshoot effectively.
+*   **Uptime Monitoring:** Stay informed about the availability of your applications.
 
-Sentry provides SDKs for a wide range of languages and platforms, making it easy to integrate into your existing projects.
+<p align="center">
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/issue-details.png" width="270" alt="Issue Details" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/seer.png" width="270" alt="Seer" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/insights.png" width="270" alt="Insights" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/traces.png" width="270" alt="Traces" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/trace-explorer.png" width="270" alt="Trace Explorer" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/replays.png" width="270" alt="Replays" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/insights.png" width="270" alt="Insights" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/logs.png" width="270" alt="Logs" />
+  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/uptime.png" width="270" alt="Uptime" />
+</p>
 
-## Official Sentry SDKs:
+### Official Sentry SDKs
+
+Sentry offers comprehensive SDKs for a wide range of languages and frameworks:
 
 *   [JavaScript](https://github.com/getsentry/sentry-javascript)
 *   [Electron](https://github.com/getsentry/sentry-electron/)
@@ -46,12 +57,24 @@ Sentry provides SDKs for a wide range of languages and platforms, making it easy
 *   [Godot Engine](https://github.com/getsentry/sentry-godot)
 *   [PowerShell](https://github.com/getsentry/sentry-powershell)
 
-## Resources
+### Resources
 
 *   [Documentation](https://docs.sentry.io/)
 *   [Discussions](https://github.com/getsentry/sentry/discussions) (Bugs, feature requests, general questions)
 *   [Discord](https://discord.gg/PXa5Apfe7K)
 *   [Contributing](https://docs.sentry.io/internal/contributing/)
 *   [Bug Tracker](https://github.com/getsentry/sentry/issues)
-*   [Code](https://github.com/getsentry/sentry) -  **[View the source code on GitHub](https://github.com/getsentry/sentry)**
+*   [Code](https://github.com/getsentry/sentry)
 *   [Transifex](https://www.transifex.com/getsentry/sentry/) (Translate Sentry!)
+```
+
+Key improvements and SEO considerations:
+
+*   **Clear Hook:** The one-sentence hook immediately highlights the key benefit of using Sentry.
+*   **Descriptive Headings:**  Uses clear and keyword-rich headings (e.g., "Key Features," "Official Sentry SDKs").
+*   **Bulleted Key Features:**  Provides a concise overview of Sentry's core functionalities.  Using bullet points makes it easy to scan and understand.
+*   **Alt Text for Images:** Added alt text to the images to improve accessibility and SEO.
+*   **Keyword Optimization:** Includes relevant keywords throughout the text, such as "debugging platform," "error tracking," "performance monitoring," etc.
+*   **Links Back to Source:** Provides a direct link back to the original repository.
+*   **Summary:**  The text is significantly condensed, focusing on the most important information.
+*   **Readability:** The text is formatted for improved readability and user experience.

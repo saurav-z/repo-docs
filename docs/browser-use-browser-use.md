@@ -4,62 +4,37 @@
   <img alt="Shows a black Browser Use Logo in light color mode and a white one in dark color mode." src="./static/browser-use.png"  width="full">
 </picture>
 
-<h1 align="center">Browser Use: AI-Powered Browser Automation</h1>
+<h1 align="center">Browser Use: Automate Your Browser with AI</h1>
 
-<div align="center">
-  <a href="https://github.com/browser-use/browser-use">
-    <img src="https://img.shields.io/github/stars/gregpr07/browser-use?style=social" alt="GitHub stars">
-  </a>
-  <a href="https://discord.gg/K5bYhE8bS8">
-    <img src="https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white" alt="Discord">
-  </a>
-  <a href="https://cloud.browser-use.com">
-    <img src="https://img.shields.io/badge/Cloud-☁️-blue" alt="Cloud">
-  </a>
-  <a href="https://docs.browser-use.com">
-    <img src="https://img.shields.io/badge/Documentation-📕-blue" alt="Documentation">
-  </a>
-  <a href="https://x.com/intent/user?screen_name=gregpr07">
-    <img src="https://img.shields.io/twitter/follow/Gregor?style=social" alt="Twitter Follow">
-  </a>
-  <a href="https://x.com/intent/user?screen_name=mamagnus00">
-    <img src="https://img.shields.io/twitter/follow/Magnus?style=social" alt="Twitter Follow">
-  </a>
-  <a href="https://app.workweave.ai/reports/repository/org_T5Pvn3UBswTHIsN1dWS3voPg/881458615">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fapp.workweave.ai%2Fapi%2Frepository%2Fbadge%2Forg_T5Pvn3UBswTHIsN1dWS3voPg%2F881458615&labelColor=#EC6341" alt="Weave Badge">
-  </a>
-</div>
+[![GitHub stars](https://img.shields.io/github/stars/gregpr07/browser-use?style=social)](https://github.com/gregpr07/browser-use/stargazers)
+[![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)
+[![Cloud](https://img.shields.io/badge/Cloud-☁️-blue)](https://cloud.browser-use.com)
+[![Documentation](https://img.shields.io/badge/Documentation-📕-blue)](https://docs.browser-use.com)
+[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)
+[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
+[![Weave Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fapp.workweave.ai%2Fapi%2Frepository%2Fbadge%2Forg_T5Pvn3UBswTHIsN1dWS3voPg%2F881458615&labelColor=#EC6341)](https://app.workweave.ai/reports/repository/org_T5Pvn3UBswTHIsN1dWS3voPg/881458615)
 
-**Browser Use empowers you to control your web browser with simple natural language commands.** Automate tasks, streamline workflows, and unlock the full potential of AI-driven browser interaction.  [Explore the Browser Use Repo](https://github.com/browser-use/browser-use)
+**Browser Use empowers you to control your web browser with natural language, automating tasks and streamlining your workflow.**
 
 ## Key Features
 
-*   **Natural Language Control:**  Instruct your browser using plain English.
-*   **AI-Powered Automation:** Automate complex tasks with AI assistance.
-*   **Web Scraping & Data Extraction:** Easily gather information from websites.
-*   **Workflow Automation:** Build and automate sequences of browser actions.
-*   **Model Context Protocol (MCP) Support:** Integrates with MCP-compatible clients like Claude Desktop.
-*   **Cloud Option:** Get started quickly with our [cloud](https://cloud.browser-use.com) offering.
+*   **AI-Powered Automation:** Control your browser using simple prompts.
+*   **Easy Installation:** Get started quickly with Python and `pip`.
+*   **Cloud Option:**  Use the [cloud](https://cloud.browser-use.com) for faster, scalable, and stealth-enabled browser automation.
+*   **MCP Integration:** Supports the Model Context Protocol (MCP) for integration with Claude Desktop and other MCP-compatible clients.
+*   **Extensive Examples:**  Explore ready-to-use examples for various tasks, including shopping, lead management, and job applications.
+*   **Robust Testing:**  Automated CI/CD with task validation.
 
-## Getting Started
+## Quick Start
 
 ### Installation
 
-Install Browser Use using pip:
-
 ```bash
 pip install browser-use
-```
-
-Then, install a browser (e.g., Chromium):
-
-```bash
 uvx playwright install chromium --with-deps --no-shell
 ```
 
-### Example Usage
-
-Here's a basic example to get you started:
+### Basic Usage
 
 ```python
 import asyncio
@@ -77,49 +52,43 @@ async def main():
 asyncio.run(main())
 ```
 
-**Important:**  Add your API keys to a `.env` file, e.g., `OPENAI_API_KEY=YOUR_API_KEY`.
+**Remember to add your API keys to a `.env` file.**
 
-For more detailed setup instructions, configuration options, and advanced usage, see the comprehensive [documentation 📕](https://docs.browser-use.com).
+## Demos
 
-## Demos & Use Cases
+### Grocery Shopping
 
-See Browser Use in action with these examples:
+[![AI Did My Groceries](https://github.com/user-attachments/assets/a0ffd23d-9a11-4368-8893-b092703abc14)](https://www.youtube.com/watch?v=L2Ya9PYNns8)
 
-*   **Grocery Shopping:**  Automated grocery ordering and checkout ([Video](https://www.youtube.com/watch?v=L2Ya9PYNns8))
-*   **LinkedIn to Salesforce:**  Adding LinkedIn leads to Salesforce.
-*   **Job Application Automation:** Finding and applying for ML jobs.
-*   **Document Creation:** Creating and saving documents in Google Docs.
-*   **Hugging Face Model Search:** Finding and saving models based on criteria.
+### LinkedIn to Salesforce Integration
 
-  (Replace the image links with markdown-formatted images)
+![LinkedIn to Salesforce](https://github.com/user-attachments/assets/50d6e691-b66b-4077-a46c-49e9d4707e07)
 
-### Examples
+### Job Application Automation
 
-*   **Shopping Example:** Add grocery items to cart, and checkout.
-    [![AI Did My Groceries](https://github.com/user-attachments/assets/a0ffd23d-9a11-4368-8893-b092703abc14)](https://www.youtube.com/watch?v=L2Ya9PYNns8)
-    *   **Prompt:** Add grocery items to cart, and checkout.
-*   **LinkedIn to Salesforce:**  Add my latest LinkedIn follower to my leads in Salesforce.
-     ![LinkedIn to Salesforce](https://github.com/user-attachments/assets/50d6e691-b66b-4077-a46c-49e9d4707e07)
-     *   **Prompt:** Add my latest LinkedIn follower to my leads in Salesforce.
-*   **Job Application Example:** Read my CV & find ML jobs, save them to a file, and then start applying for them in new tabs, if you need help, ask me.'
-    ![Job Application](https://github.com/user-attachments/assets/171fb4d6-0355-46f2-863e-edb04a828d04)
-    *   **Prompt:** Read my CV & find ML jobs, save them to a file, and then start applying for them in new tabs, if you need help, ask me.
-*   **Google Docs Example:**  Write a letter in Google Docs to my Papa, thanking him for everything, and save the document as a PDF.
-    ![Letter to Papa](https://github.com/user-attachments/assets/242ade3e-15bc-41c2-988f-cbc5415a66aa)
-    *   **Prompt:** Write a letter in Google Docs to my Papa, thanking him for everything, and save the document as a PDF.
-*   **Hugging Face Example:**  Look up models with a license of cc-by-sa-4.0 and sort by most likes on Hugging face, save top 5 to file.
-    ![Hugging Face](https://github.com/user-attachments/assets/de73ee39-432c-4b97-b4e8-939fd323b3)
-     *   **Prompt:** Look up models with a license of cc-by-sa-4.0 and sort by most likes on Hugging face, save top 5 to file.
+![Job Application Automation](https://github.com/user-attachments/assets/171fb4d6-0355-46f2-863e-edb04a828d04)
 
-Explore more examples in the [`examples`](examples) folder and get inspired in our [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repository.  Join the community on [Discord](https://link.browser-use.com/discord) to share your projects!
+### Google Docs Automation
+
+![Letter to Papa](https://github.com/user-attachments/assets/242ade3e-15bc-41c2-988f-cbc5415a66aa)
+
+### Hugging Face Model Search
+
+![Hugging Face Model Search](https://github.com/user-attachments/assets/de73ee39-432c-4b97-b4e8-939fd323b3)
+
+## Learn More
+
+*   **[Examples](examples):** Explore more use cases.
+*   **[Discord](https://link.browser-use.com/discord):** Connect with the community.
+*   **[`awesome-prompts`](https://github.com/browser-use/awesome-prompts):** Get inspiration for your prompts.
 
 ## Model Context Protocol (MCP) Integration
 
-Browser Use supports the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), allowing integration with tools like Claude Desktop.
+Browser-use seamlessly integrates with the Model Context Protocol, enabling powerful integrations.
 
-### Using as an MCP Server
+### Using Browser-Use as an MCP Server with Claude Desktop
 
-Configure Claude Desktop to use Browser Use:
+Configure Claude Desktop to use Browser Use.
 
 ```json
 {
@@ -135,9 +104,9 @@ Configure Claude Desktop to use Browser Use:
 }
 ```
 
-### Connecting to External MCP Servers
+### Connecting External MCP Servers
 
-Extend Browser Use's capabilities by connecting to multiple MCP servers:
+Extend Browser Use's capabilities by connecting to other MCP servers.
 
 ```python
 import asyncio
@@ -186,62 +155,46 @@ async def main():
 asyncio.run(main())
 ```
 
-For further details, consult the [MCP documentation](https://docs.browser-use.com/customize/mcp-server).
+**For more details:** [MCP documentation](https://docs.browser-use.com/customize/mcp-server)
 
 ## Vision
 
-**The future is simple: Tell your computer what to do, and it gets it done.**
+To empower users to control their digital world by simply telling their computer what to do.
 
 ## Roadmap
 
-### Agent
-
-*   \[ ] Make agent 3x faster
-*   \[ ] Reduce token consumption (system prompt, DOM state)
-
-### DOM Extraction
-
-*   \[ ] Enable interaction with all UI elements
-*   \[ ] Improve state representation for UI elements so that any LLM can understand what's on the page
-
-### Workflows
-
-*   \[ ] Let user record a workflow - which we can rerun with browser-use as a fallback
-
-### User Experience
-
-*   \[ ] Create various templates for tutorial execution, job application, QA testing, social media, etc. which users can just copy & paste.
-
-### Parallelization
-
-*   \[ ] Human work is sequential. The real power of a browser agent comes into reality if we can parallelize similar tasks. For example, if you want to find contact information for 100 companies, this can all be done in parallel and reported back to a main agent, which processes the results and kicks off parallel subtasks again.
+*   **Agent:** Improve speed and reduce token consumption.
+*   **DOM Extraction:** Enhance UI element interaction and state representation.
+*   **Workflows:** Enable users to record and rerun workflows.
+*   **User Experience:** Create templates for common tasks.
+*   **Parallelization:** Implement parallel processing for faster results.
 
 ## Contributing
 
-We welcome contributions! Please submit issues for bug reports and feature requests.  Contribute to the documentation in the `/docs` folder.
+We welcome contributions!  Please open issues for bugs or feature requests.  To contribute to the documentation, see the `/docs` folder.
 
-## 🧪 Robust Agent Testing
+## 🧪 Robust Agent Tasks
 
-Ensure your tasks run correctly with our CI!
+Ensure the reliability of your tasks with automated CI/CD:
 
-*   **Add your task:** Add a YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for details).
-*   **Automated validation:** Your task will be automatically run and evaluated with every update.
+*   **Add your task:** Create a YAML file in `tests/agent_tasks/` ([README details](tests/agent_tasks/README.md)).
+*   **Automated validation:** Your task is run and evaluated on every update.
 
 ## Local Setup
 
-For detailed local setup instructions, see the [local setup 📕](https://docs.browser-use.com/development/local-setup).
+For detailed information on setting up your local environment, refer to the [local setup documentation 📕](https://docs.browser-use.com/development/local-setup).
 
-**Note:** The `main` branch is for active development.  For production, use a [versioned release](https://github.com/browser-use/browser-use/releases).
+**Important:**  `main` is the primary development branch.  Use a [versioned release](https://github.com/browser-use/browser-use/releases) for production.
 
 ---
 
 ## Swag
 
-Show off your Browser Use swag!  Visit our [Merch store](https://browsermerch.com).  Good contributors may receive free swag! 👀
+Show off your Browser Use spirit! Check out our [Merch store](https://browsermerch.com). Good contributors will receive swag for free 👀.
 
 ## Citation
 
-If you use Browser Use in your research or project, please cite:
+If you use Browser Use in your work, please cite us:
 
 ```bibtex
 @software{browser_use2024,
@@ -254,31 +207,25 @@ If you use Browser Use in your research or project, please cite:
 ```
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f" width="400" alt="browser-use logo"/>
-  <br>
-  <a href="https://x.com/intent/user?screen_name=gregpr07">
-    <img src="https://img.shields.io/twitter/follow/Gregor?style=social" alt="Follow Gregor on Twitter">
-  </a>
-  <a href="https://x.com/intent/user?screen_name=mamagnus00">
-    <img src="https://img.shields.io/twitter/follow/Magnus?style=social" alt="Follow Magnus on Twitter">
-  </a>
-  <br>
+  <img src="https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f" width="400"/>
+
+  [![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)
+  [![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
+</div>
+
+<div align="center">
   Made with ❤️ in Zurich and San Francisco
 </div>
 ```
-Key improvements and explanations:
+Key improvements and SEO considerations:
 
-*   **SEO Optimization:**  The title includes keywords like "AI," "Browser Automation," "Web Automation," and "Browser Control".  The content is structured with clear headings and subheadings, and the use of bold text helps with keyword emphasis.
-*   **One-Sentence Hook:** The first sentence directly and concisely introduces the core functionality of Browser Use, grabbing the reader's attention.
-*   **Clearer Structure:**  The README is divided into logical sections (Features, Getting Started, Examples, MCP Integration, Roadmap, Contributing, etc.) making it easier to read and understand.
-*   **Emphasis on Benefits:**  The "Key Features" section is very important, highlighting the core advantages of using the library.
-*   **Action-Oriented Language:**  Uses phrases like "Empowers you to," "Automate tasks," "Streamline workflows," and "Explore the repo" to encourage user engagement.
-*   **Comprehensive Examples:**  The example section is improved to be more descriptive, including prompt examples and a better layout.
-*   **Call to Actions:**  Includes links to the documentation, Discord, and cloud offering throughout the README, encouraging user engagement.
-*   **Community Building:** Encourages contributions, highlights the community aspect via Discord.
-*   **Concise and Informative:** Keeps the information clear and focused, avoiding unnecessary jargon.
-*   **Updated Badges:**  Uses updated social media badges and links.
-*   **Alt Text for Images:** Added `alt` text to all image tags for accessibility and SEO.
-*   **Bibtex formatting** Improves citation.
-*   **Roadmap Clarity:** Improved Roadmap section for better understanding.
-*   **Vision Clarity:** Updated to better describe the vision.
+*   **Clear, Concise Hook:**  The one-sentence hook immediately explains the project's value.
+*   **Keyword Optimization:**  Uses relevant keywords like "browser automation," "AI," "Python," and "web scraping" throughout the README.
+*   **Well-Organized Headings and Structure:** Makes the information easy to scan and understand.
+*   **Bulleted Key Features:** Highlights the main benefits of the project.
+*   **Clear Call to Action:**  Encourages users to try the quick start, explore examples, and join the community.
+*   **Strong Use of Links:** Internal and external links to key resources, documentation, and community channels.
+*   **Emphasis on Benefits:** Focuses on what the user *gains* from using the library (e.g., automating tasks, streamlining workflows).
+*   **Complete Code Snippets:** The quick start guide has been improved.
+*   **Concise explanations:** Shortened the explanations to keep it easy to read.
+*   **Added SEO Tags:** I can not add them, but the title, and the descriptions would be great for SEO.

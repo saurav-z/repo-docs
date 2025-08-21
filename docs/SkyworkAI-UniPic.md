@@ -1,38 +1,46 @@
-# Skywork UniPic: The Future of Multimodal AI for Image Creation and Understanding
+# Skywork UniPic: The Future of Unified Multimodal AI
 
-**(Explore the original repository on GitHub: [SkyworkAI/UniPic](https://github.com/SkyworkAI/UniPic))**
-
-Skywork UniPic introduces groundbreaking unified multimodal models, revolutionizing how we interact with images through advanced generation, editing, and understanding capabilities.
+[**Explore the original repository on GitHub**](https://github.com/SkyworkAI/UniPic)
 
 <div align="center">
   <img src="UniPic-2/assets/imgs/teaser.png" alt="Skywork UniPic2 Teaser" width="90%">
 </div>
 
-## 🚀 Key Highlights of UniPic
+## 🚀 Overview: Bridging Vision and Language
 
-UniPic offers a suite of powerful features, making it a versatile tool for various image-related applications:
+Skywork UniPic represents a breakthrough in multimodal AI, offering unified models for image understanding, generation, and editing. This repository provides access to model weights and official implementations, paving the way for innovative applications at the intersection of vision and language. UniPic features two key modeling paradigms to maximize efficiency, accuracy, and adaptability.
 
-*   **🎨 Text-to-Image Generation:** Create stunning, high-fidelity images directly from natural language descriptions.
-*   **🛠 Image Editing:** Perform seamless inpainting, outpainting, and intricate object manipulation with ease.
-*   **🖼 Image Understanding:** Leverage robust perception capabilities for a wide array of visual tasks, from object detection to scene understanding.
-*   **⚡ Efficient Architecture:** Benefit from optimized architectures designed for both exceptional accuracy and efficient deployment, ensuring accessibility and performance.
+## 🌟 Key Features:
 
-## 📰 Latest Updates
+*   **Text-to-Image Generation:** Transform natural language prompts into stunning, high-fidelity images.
+*   **Image Editing:** Effortlessly perform inpainting, outpainting, and sophisticated object manipulation.
+*   **Image Understanding:** Leverage robust perception capabilities to tackle a wide range of visual tasks.
+*   **Efficient Architecture:** Benefit from optimized models designed for both accuracy and efficient deployment.
 
-Stay up-to-date with the latest developments in UniPic:
+## 📢 Recent Updates:
 
-| Date          | Update                                                                                                                                                      |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **2025-08-13** | Released **UniPic-2** — Unified Model Weights with Diffusion-based Post-Training <br>  [GitHub Repo](https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/README.md)  [HuggingFace Collection](https://huggingface.co/collections/Skywork/skywork-unipic2-6899b9e1b038b24674d996fd)  [PDF Report](https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/assets/pdf/UNIPIC2.pdf) |
-| **2025-07-30** | Released **UniPic-1** — Autoregressive unified modeling from scratch <br>  [GitHub Repo](https://github.com/SkyworkAI/UniPic2/tree/main/UniPic-1)  [HuggingFace Collection](https://huggingface.co/collections/Skywork/skywork-unipic-6888c0789cdb82457b2acf32)  [arXiv](https://www.arxiv.org/abs/2508.03320)      |
+| Date       | Update                                                                                                                                                                                        |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2025-08-13 | Released **UniPic-2**: Unified Model Weights with Diffusion-based Post-Training <br> [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/README.md) [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Collection-orange)](https://huggingface.co/collections/Skywork/skywork-unipic2-6899b9e1b038b24674d996fd) [![PDF Report](https://img.shields.io/badge/PDF-Report-green)]( https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/assets/pdf/UNIPIC2.pdf) |
+| 2025-07-30 | Released **UniPic-1**: Autoregressive unified modeling from scratch <br> [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/SkyworkAI/UniPic2/tree/main/UniPic-1) [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Collection-orange)](https://huggingface.co/collections/Skywork/skywork-unipic-6888c0789cdb82457b2acf32) [![arXiv](https://img.shields.io/badge/arXiv-2508.03320-b31b1b?logo=arxiv)](https://www.arxiv.org/abs/2508.03320)|
 
-## 📚 Overview of UniPic Models
+## 🛠️ Model Variants:
 
-This repository hosts the model weights and implementations for two primary UniPic modeling paradigms:
+*   **UniPic-1.0:** Utilizes a 1.5B parameter Unified Autoregressive Modeling approach for joint visual understanding and generation.
+*   **UniPic-2.0 Series:** Leverages Efficient Architectures with Diffusion Post-Training in *SD3.5M-Kontext* and *MetaQuery* variants, delivering state-of-the-art results.
 
-*   **UniPic-1.0:**  A 1.5B parameter model utilizing Unified Autoregressive Modeling for joint visual understanding and generation. This allows a single transformer to handle both perception and synthesis tasks.
-*   **UniPic-2.0 Series:**  Variants including *SD3.5M-Kontext* and *MetaQuery* based on efficient architectures with diffusion post-training, delivering state-of-the-art performance in text-to-image generation, fine-grained image editing, and multimodal reasoning.
+## 📜 License:
 
-## 📜 License
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+```
+Key improvements and SEO considerations:
 
-This project is licensed under the **MIT License**.  Please see the [LICENSE](LICENSE) file for complete details.
+*   **Strong Hook:**  The first sentence immediately establishes the project's core value.
+*   **Clear Headings:**  Uses headings (H1, H2) for easy readability and SEO structure.
+*   **Keyword Optimization:** Includes relevant keywords like "multimodal AI," "image generation," "image editing," and "image understanding" throughout the text.
+*   **Concise Language:**  Rephrases the content for clarity and conciseness.
+*   **Bulleted Lists:** Uses bullet points to highlight key features.
+*   **Call to Action:**  The link to the original repo is prominent.
+*   **Comprehensive Summary:** Provides a good overview of the project.
+*   **Date Formatting:** Uses the provided date formatting.
+*   **Simplified and Concise:** Removed redundant phrases and simplified sentences.

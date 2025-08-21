@@ -13,25 +13,27 @@
 ![Latest version](https://img.shields.io/docker/v/authentik/server?sort=semver&style=for-the-badge)
 [![](https://img.shields.io/badge/Help%20translate-transifex-blue?style=for-the-badge)](https://www.transifex.com/authentik/authentik/)
 
-# authentik: Open-Source Identity Provider
+# authentik: Open-Source Identity and Access Management (IAM)
 
-**authentik is your flexible and versatile open-source solution for identity and access management, providing robust support for various authentication protocols.**  This allows for a self-hosted alternative for Okta, Auth0, Entra ID, and other identity providers.
+**authentik** is a powerful open-source Identity Provider (IdP) offering flexible and versatile IAM solutions with broad protocol support; [learn more on GitHub](https://github.com/goauthentik/authentik).
 
 ## Key Features
 
-*   **Open-Source:** Benefit from the transparency and community-driven development of an open-source platform.
-*   **Versatile Protocol Support:** Integrates with a wide array of authentication protocols for maximum flexibility.
-*   **Self-Hosted:** Maintain control of your identity infrastructure by hosting authentik on your own servers.
-*   **User-Friendly Interface:** Enjoy an intuitive interface for easy management and configuration.
-*   **Enterprise-Grade Capabilities:** Suitable for both small setups and large-scale deployments.
-*   **Alternatives to Legacy IdPs:** A self-hosted replacement for Okta/Auth0, Entra ID, Ping Identity, and others.
+*   **Open-Source:** Leverage the flexibility of an open-source solution.
+*   **Versatile:** Supports a wide range of protocols and use cases.
+*   **Self-Hosted:** Gain control over your identity infrastructure.
+*   **Enterprise-Ready:** Suitable for replacing legacy IdPs like Okta, Auth0, and more.
+*   **Flexible Installation:** Easy setup with Docker Compose or Kubernetes using Helm.
 
 ## Installation
 
-Choose the installation method that best suits your needs:
+### Docker Compose (Recommended for Small/Test Setups)
 
-*   **Docker Compose:** Ideal for small-scale deployments and testing.  Refer to the [documentation](https://goauthentik.io/docs/installation/docker-compose/?utm_source=github).
-*   **Kubernetes (Helm Chart):**  Recommended for larger setups. Find the Helm chart [here](https://github.com/goauthentik/helm) and the documentation [here](https://goauthentik.io/docs/installation/kubernetes/?utm_source=github).
+Refer to the official [documentation](https://goauthentik.io/docs/installation/docker-compose/?utm_source=github) for detailed instructions.
+
+### Kubernetes (For Larger Deployments)
+
+Use the Helm chart available [here](https://github.com/goauthentik/helm). See the [documentation](https://goauthentik.io/docs/installation/kubernetes/?utm_source=github) for setup details.
 
 ## Screenshots
 
@@ -42,17 +44,12 @@ Choose the installation method that best suits your needs:
 
 ## Development
 
-Explore the developer documentation: [Developer Documentation](https://docs.goauthentik.io/docs/developer-docs/?utm_source=github)
+Explore the [Developer Documentation](https://docs.goauthentik.io/docs/developer-docs/?utm_source=github) for details on contributing.
 
 ## Security
 
-Learn about authentik's security measures: [SECURITY.md](SECURITY.md)
+Review the [SECURITY.md](SECURITY.md) file for security information.
 
 ## Adoption and Contributions
 
-We welcome your support!
-
-*   **Adoption:** If your organization uses authentik, let us know! We'd love to add your logo.  Contact us at hello@goauthentik.io or open a GitHub Issue/PR.
-*   **Contributions:**  Learn how to contribute to authentik by reviewing our [contribution guide](https://docs.goauthentik.io/docs/developer-docs?utm_source=github).
-
-**[View the original repository on GitHub](https://github.com/goauthentik/authentik)**
+Is your organization using authentik? We'd love to add your logo to our project! Contact us at hello@goauthentik.io or open a GitHub Issue/PR.  For contribution guidelines, please see the [contribution guide](https://docs.goauthentik.io/docs/developer-docs?utm_source=github).

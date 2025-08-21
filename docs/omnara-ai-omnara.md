@@ -1,48 +1,90 @@
-# Omnara: Your Mobile Command Center for AI Agents 🚀
+# Omnara: Your Mission Control for AI Agents 🚀
 
-**Take control of your AI workforce with Omnara, the platform that lets you monitor, interact, and guide your AI agents from anywhere.**  ([Back to the Omnara Repository](https://github.com/omnara-ai/omnara))
-
-[![PyPI version](https://badge.fury.io/py/omnara.svg)](https://badge.fury.io/py/omnara)
-[![Downloads](https://pepy.tech/badge/omnara)](https://pepy.tech/project/omnara)
-[![Python Versions](https://img.shields.io/pypi/pyversions/omnara.svg)](https://pypi.org/project/omnara/)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![GitHub stars](https://img.shields.io/github/stars/omnara-ai/omnara?style=social)](https://github.com/omnara-ai/omnara)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+**Effortlessly monitor, control, and collaborate with your AI agents from anywhere.** ([Back to Original Repo](https://github.com/omnara-ai/omnara))
 
 <div align="center">
-  [📱 **Download iOS App**](https://apps.apple.com/us/app/omnara-ai-command-center/id6748426727) • [🌐 **Try Web Dashboard**](https://omnara.ai) • [🎥 **See a Demo**](https://www.loom.com/share/03d30efcf8e44035af03cbfebf840c73?sid=1c209c04-8a4c-4dd6-8c92-735c399886a6) • [⭐ **Star on GitHub**](https://github.com/omnara-ai/omnara)
+    <p>
+        <a href="https://github.com/omnara-ai/omnara">
+            <img src="https://img.shields.io/github/stars/omnara-ai/omnara?style=social" alt="GitHub stars"/>
+        </a>
+        <a href="https://pypi.org/project/omnara/">
+            <img src="https://img.shields.io/pypi/v/omnara" alt="PyPI version"/>
+        </a>
+        <a href="https://pepy.tech/project/omnara">
+            <img src="https://pepy.tech/badge/omnara" alt="Downloads"/>
+        </a>
+        <a href="https://pypi.org/project/omnara/">
+            <img src="https://img.shields.io/pypi/pyversions/omnara.svg" alt="Python Versions"/>
+        </a>
+        <a href="https://opensource.org/licenses/Apache-2.0">
+            <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License"/>
+        </a>
+        <a href="https://github.com/astral-sh/ruff">
+            <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" alt="Ruff"/>
+        </a>
+    </p>
+</div>
+
+<div align="center">
+    <img src="./docs/assets/three-panel.png" alt="Omnara Mobile Experience" width="70%"/>
+</div>
+
+<div align="center">
+    <p>
+        <a href="https://apps.apple.com/us/app/omnara-ai-command-center/id6748426727">📱 **Download iOS App**</a> |
+        <a href="https://omnara.ai">🌐 **Try Web Dashboard**</a> |
+        <a href="https://www.loom.com/share/03d30efcf8e44035af03cbfebf840c73?sid=1c209c04-8a4c-4dd6-8c92-735c399886a6">🎥 **See a Demo**</a> |
+        <a href="https://github.com/omnara-ai/omnara">⭐ **Star on GitHub**</a>
+    </p>
 </div>
 
 ---
 
-## Key Features of Omnara
+## What is Omnara?
+
+Omnara empowers you to take control of your AI workforce by providing real-time monitoring and interactive communication with your AI agents, including Claude Code, Cursor, and GitHub Copilot, all from your mobile device.
+
+### Key Features:
 
 *   **Real-Time Monitoring:** Observe every action your AI agents take.
-*   **Interactive Q&A:**  Provide instant feedback and guidance when your agents need it.
-*   **Mobile-First Design:**  Manage your AI from your phone, tablet, or desktop.
-*   **Smart Notifications:**  Receive alerts only when your input is required.
-*   **Unified Dashboard:**  Monitor all your AI agents in one central interface.
+*   **Interactive Q&A:** Provide instant guidance and feedback when your agents need it.
+*   **Mobile-First Design:** Manage your AI agents seamlessly from your phone, tablet, or desktop.
+*   **Smart Notifications:** Receive alerts only when your input is required.
+*   **Universal Dashboard:** Manage all your AI agents in one unified interface.
 
-### See Omnara in Action
-![Mobile Notifications](./docs/assets/iNotifications-Stack.gif)
-![Agent Activity Feed](./docs/assets/Mobile-app-showcase.gif)
+### See it in Action:
 
----
+**Mobile Notifications:**
+<div align="center">
+    <img src="./docs/assets/iNotifications-Stack.gif" alt="Mobile Notifications" width="50%"/>
+</div>
+
+> *Never miss an opportunity to support your agent. Respond immediately when help is needed.*
+
+**Agent Activity Feed:**
+<div align="center">
+    <img src="./docs/assets/Mobile-app-showcase.gif" alt="Agent Activity Feed" width="50%"/>
+</div>
 
 ## Why Choose Omnara?
 
-Omnara solves the common pain points of working with AI agents, providing:
+Omnara solves the common pain points of working with AI agents by:
 
-*   **Visibility:**  No more guessing what your AI is doing.
-*   **Control:** Guide your agents in real-time.
-*   **Productivity:** Reduce wasted time and maximize output.
-*   **Accessibility:** Manage your AI from anywhere.
+*   Eliminating the frustration of agents getting stuck for hours.
+*   Ensuring you don't miss critical questions that halt progress.
+*   Providing clear visibility into your AI's activities.
+*   Removing the need to be tied to your desk.
 
----
+**With Omnara, you can:**
+
+*   Launch and monitor agents from any location.
+*   Receive push notifications for immediate feedback.
+*   Offer real-time guidance to boost agent productivity.
+*   Have confidence in your AI workforce's efficiency.
 
 ## Architecture Overview
 
-Omnara offers a unified platform for monitoring and controlling your AI agents.  The system is built on a robust architecture utilizing a variety of technologies:
+Omnara's unified platform for monitoring and controlling AI agents:
 
 ```mermaid
 graph TB
@@ -79,74 +121,71 @@ graph TB
     style W fill:#f8bbd0,stroke:#c2185b,stroke-width:3px
 ```
 
----
-
 ## How Omnara Works
 
-1.  **Connect Your Agent:** Integrate your AI agents using the Omnara SDK or a wrapper.
-2.  **Get Real-Time Updates:** Monitor agent progress in real-time.
-3.  **Respond Instantly:** Provide input and guidance from any location.
+1.  **Connect Your Agent:** Install the Omnara SDK or wrapper.
+2.  **Get Real-Time Updates:** Monitor every step your agent takes.
+3.  **Respond Instantly:** Answer questions from anywhere.
 
----
+## Ways to Use Omnara:
 
-## Two Ways to Use Omnara
-
-| Mode                     | Setup                                   | How It Works                                                                 |
-| ------------------------ | --------------------------------------- | ---------------------------------------------------------------------------- |
-| **Real-Time Monitoring** | `omnara` or `uv run omnara`             | Monitor your AI session, forwards updates to Omnara.                         |
-| **Remote Launch**        | `omnara serve` or `uv run omnara serve` | Launch and control agents remotely from your mobile device via MCP. |
-
----
+| Mode                | Setup                                     | How It Works                                         |
+|---------------------|-------------------------------------------|------------------------------------------------------|
+| **Real-Time Monitoring** | `omnara` or `uv run omnara`              | Monitor your agent's session in real-time.          |
+| **Remote Launch**      | `omnara serve` or `uv run omnara serve` | Launch agents from your phone and communicate remotely |
 
 ## Technical Stack
 
-*   **Backend:** FastAPI with read/write servers
-*   **Frontend:** React (Web) + React Native (Mobile)
-*   **Protocol:** Model Context Protocol (MCP) & REST API
-*   **Database:** PostgreSQL with SQLAlchemy ORM
-*   **Auth:** Dual JWT system (Supabase for users, custom for agents)
-
----
+*   **Backend:** FastAPI with separate read/write servers.
+*   **Frontend:** React (Web) + React Native (Mobile).
+*   **Protocol:** Model Context Protocol (MCP) + REST API.
+*   **Database:** PostgreSQL with SQLAlchemy ORM.
+*   **Auth:** Dual JWT system (Supabase for users, custom for agents).
 
 ## Quick Start
 
-### Option 1: Monitor Your AI Sessions
+### Option 1: Monitor Your Agent's Sessions
+
+Monitor your agent's actions in real-time:
 
 1.  **Install Omnara:**
+
     ```bash
     # Using pip
     pip install omnara
-
+    
     # Using uv (faster)
     uv tool install omnara
     ```
 2.  **Start Monitoring:**
+
     ```bash
     # If installed with pip
     omnara
-
+    
     # If installed with uv
     omnara
     ```
-3.  **Authenticate:** Open the automatically launched browser window.
-4.  **View:** Access the Omnara dashboard to monitor your agent's activity.
+3.  **Authenticate:** Authenticate in your browser (opens automatically).
+4.  **View Activity:** See your agent's activity on the Omnara dashboard!
 
 ### Option 2: Launch Agents Remotely
 
-1.  **Start the server** on your computer:
+Launch agents from your mobile device:
+
+1.  **Start the Server:**
+
     ```bash
     # Using pip
     pip install omnara
     omnara serve
-
+    
     # Using uv (faster)
     uv tool install omnara
     omnara serve
     ```
-2.  **Configure Agent:** Set up your agent in the mobile app with the provided webhook URL.
-3.  **Launch:** Initiate and manage agents remotely from anywhere.
-
----
+2.  **Configure Agent:** Set up your agent in the mobile app with the webhook URL.
+3.  **Launch Anywhere:** Launch agents from anywhere!
 
 ### For Developers
 
@@ -170,15 +209,13 @@ For detailed setup instructions, manual configuration, and contribution guidelin
 
 </details>
 
----
+## Advanced Usage (Without CLI)
 
-## Advanced Usage
-
-> **Note:** Most users should use the `omnara` or `omnara serve` commands. The following are for advanced use cases.
+> **Note:** Most users should use the simple `omnara` or `omnara serve` commands. These methods are for advanced users.
 
 ### Method 1: Direct Wrapper Script
 
-Run the monitoring wrapper directly (what `omnara` does under the hood):
+Run the monitoring wrapper script:
 
 ```bash
 # Basic usage
@@ -207,6 +244,7 @@ For custom MCP setups, you can configure manually:
 ```
 
 ### Method 3: Python SDK
+
 ```python
 from omnara import OmnaraClient
 import uuid
@@ -231,6 +269,7 @@ answer = client.send_message(
 ```
 
 ### Method 4: REST API
+
 ```bash
 curl -X POST https://api.omnara.ai/api/v1/messages/agent \
   -H "Authorization: Bearer YOUR_API_KEY" \
@@ -238,31 +277,26 @@ curl -X POST https://api.omnara.ai/api/v1/messages/agent \
   -d '{"content": "Starting deployment process", "agent_type": "claude-code", "requires_user_input": false}'
 ```
 
----
-
 ## Pricing
 
-| Plan          | Price    | Features                                   |
-| ------------- | -------- | ------------------------------------------ |
-| **Free**      | $0/mo    | 10 agents/month, Core features              |
-| **Pro**       | $9/mo    | Unlimited agents, Priority support          |
-| **Enterprise** | [Contact Us](https://cal.com/ishaan-sehgal-8kc22w/omnara-demo) | Teams, SSO, Custom integrations |
-
----
+| Plan          | Price    | Features                                |
+|---------------|----------|-----------------------------------------|
+| **Free**      | $0/mo    | 10 agents/month, Core features         |
+| **Pro**       | $9/mo    | Unlimited agents, Priority support       |
+| **Enterprise** | Contact Us | Teams, SSO, Custom integrations         |
 
 ## Contributing
 
-We welcome contributions!  See our [Contributing Guide](CONTRIBUTING.md) for more details.
+Contribute to Omnara by checking out our [Contributing Guide](CONTRIBUTING.md).
 
 ### Development Commands
+
 ```bash
 make lint       # Run code quality checks
 make format     # Auto-format code
 make test       # Run test suite
 ./dev-start.sh  # Start development servers
 ```
-
----
 
 ## Support
 
@@ -271,16 +305,38 @@ make test       # Run test suite
 *   📧 [Email Support](mailto:ishaan@omnara.com)
 *   📖 Documentation (coming soon)
 
----
-
 ## License
 
-Omnara is licensed under the [Apache 2.0 License](LICENSE).
+Omnara is open source software licensed under the [Apache 2.0 License](LICENSE).
 
 ---
 
 <div align="center">
-  **Built with ❤️ by the Omnara team**
-  <br>
-  [Website](https://omnara.ai) • [Twitter](https://twitter.com/omnaraai) • [LinkedIn](https://linkedin.com/company/omnara)
+    <p>
+        **Built with ❤️ by the Omnara team**
+    </p>
+    <p>
+        <a href="https://omnara.ai">Website</a> |
+        <a href="https://twitter.com/omnaraai">Twitter</a> |
+        <a href="https://linkedin.com/company/omnara">LinkedIn</a>
+    </p>
 </div>
+```
+Key improvements and SEO considerations:
+
+*   **Strong Hook:**  The first sentence is a clear and concise value proposition.
+*   **Clear Headings:**  Uses descriptive and keyword-rich headings (e.g., "What is Omnara?", "Key Features").
+*   **Bulleted Lists:**  Makes information scannable and easy to digest (Key Features, Why Choose Omnara).
+*   **Keywords:**  Incorporates relevant keywords like "AI agents," "monitoring," "control," "mobile," and specific agent names (Claude, Cursor, Copilot).
+*   **Concise Descriptions:**  Each section is summarized well.
+*   **Call to Actions:** Encourages users to try the app, download the app, and contribute.
+*   **SEO-Friendly Formatting:** Uses headings and bullet points.
+*   **Visuals:** Includes screenshots for visual engagement.
+*   **Pricing Table:** Clearly presents pricing information.
+*   **Contact & Support Information:** Provides multiple ways to reach out.
+*   **Links:** Back to the original repository and external links.
+*   **Concise Summary:**  The core message is communicated effectively, saving the user's time.
+*   **Improved Readability**: The markdown is cleaned up.
+*   **Emphasis on Benefits:** Highlights the *benefits* of using Omnara, not just the features.
+
+This revised README is much more engaging, informative, and SEO-friendly, making it more likely to attract and retain users.

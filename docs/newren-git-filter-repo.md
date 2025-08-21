@@ -1,34 +1,29 @@
-# git-filter-repo: Rewrite Your Git History with Speed and Precision
+# git-filter-repo: The Powerful Git History Rewriting Tool
 
-Tired of slow and unreliable history rewriting? **git-filter-repo** offers a powerful and efficient solution, recommended by the Git project itself, for complex repository transformations. [Visit the repository](https://github.com/newren/git-filter-repo) for more information.
+**Tired of slow, buggy, and limited git history rewriting?**  `git filter-repo` is the recommended alternative to `git filter-branch`, providing superior performance, more features, and a safer experience for complex Git history modifications.  [Explore the git-filter-repo repository](https://github.com/newren/git-filter-repo).
 
-**Key Features:**
+## Key Features
 
-*   **Speed and Efficiency:** Outperforms `git filter-branch` by orders of magnitude.
-*   **Comprehensive Rewriting Capabilities:** Handles a wide range of history modifications, including path filtering, renaming, and more.
-*   **User-Friendly Design:** Simplifies complex rewriting tasks with intuitive commands and options.
-*   **Safety First:** Encourages fresh clone workflows and provides built-in safety checks.
-*   **Extensible Architecture:** Offers a library for creating custom history rewriting tools.
-*   **Commit Message Rewriting:**  Ensures commit messages are updated to reflect new commit IDs.
-*   **Empty Commit Handling:**  Intelligently prunes commits that become empty due to filtering.
-*   **Upstream Improvements:** Contributes to core Git's fast-export and fast-import commands for enhanced functionality.
+*   **Blazing Fast Performance:** Significantly faster than `git filter-branch` for complex rewrites.
+*   **Comprehensive Functionality:** Offers capabilities not found in other tools, enabling advanced history manipulation.
+*   **Safe and Reliable:** Designed to avoid the pitfalls and data corruption risks associated with `git filter-branch`.
+*   **User-Friendly:** Provides a clear and intuitive command-line interface for common tasks.
+*   **Extensible:** Built as a library for creating custom history rewriting tools.
+*   **Path and Directory Renaming:** Easily rename or move files and directories within your repository.
+*   **Automatic Cleanup:** Automatically removes unnecessary objects and repacks your repository for optimal performance.
+*   **Commit Message Rewriting:**  Handles rewriting commit messages to refer to new commit IDs.
+*   **Become-Empty and Become-Degenerate Pruning:** Automatically removes commits that become empty or degenerate due to filtering.
 
 ## Table of Contents
 
 *   [Prerequisites](#prerequisites)
-*   [How do I install it?](#how-do-i-install-it)
-*   [How do I use it?](#how-do-i-use-it)
-*   [Why filter-repo instead of other alternatives?](#why-filter-repo-instead-of-other-alternatives)
-    *   [filter-branch](#filter-branch)
-    *   [BFG Repo Cleaner](#bfg-repo-cleaner)
-*   [Simple example, with comparisons](#simple-example-with-comparisons)
-    *   [Solving this with filter-repo](#solving-this-with-filter-repo)
-    *   [Solving this with BFG Repo Cleaner](#solving-this-with-bfg-repo-cleaner)
-    *   [Solving this with filter-branch](#solving-this-with-filter-branch)
-    *   [Solving this with fast-export/fast-import](#solving-this-with-fast-exportfast-import)
-*   [Design rationale behind filter-repo](#design-rationale-behind-filter-repo)
-*   [How do I contribute?](#how-do-i-contribute)
-*   [Is there a Code of Conduct?](#is-there-a-code-of-conduct)
+*   [How to Install](#how-to-install)
+*   [How to Use](#how-to-use)
+*   [Why Use `git filter-repo`?](#why-use-git-filter-repo)
+*   [Simple Example: Extracting a Directory](#simple-example-extracting-a-directory)
+*   [Design Rationale](#design-rationale)
+*   [How to Contribute](#how-to-contribute)
+*   [Code of Conduct](#is-there-a-code-of-conduct)
 *   [Upstream Improvements](#upstream-improvements)
 
 ## Prerequisites
@@ -36,166 +31,54 @@ Tired of slow and unreliable history rewriting? **git-filter-repo** offers a pow
 *   git >= 2.36.0
 *   python3 >= 3.6
 
-## How do I install it?
+## How to Install
 
-To get started, simply place the `git-filter-repo` Python script into your system's `$PATH`.
+Installation is straightforward: simply place the single-file Python script `git-filter-repo` into your system's `$PATH`.  See [INSTALL.md](INSTALL.md) for advanced scenarios.
 
-For more advanced usage and installation options, see [INSTALL.md](INSTALL.md). This is required if:
+## How to Use
 
-*   You need more detailed instructions.
-*   You are using a python3 executable that isn't named "python3".
-*   You want to install documentation.
-*   You'd like to run the [contrib](contrib/filter-repo-demos/) examples.
-*   You plan to use filter-repo as a module/library.
+For detailed documentation, consult the [user manual](https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html).  You can also use the examples on the following pages for guidance:
 
-## How do I use it?
+*   [Cheat Sheet for converting filter-branch commands](Documentation/converting-from-filter-branch.md#cheat-sheet-conversion-of-examples-from-the-filter-branch-manpage)
+*   [Cheat Sheet for converting BFG Repo Cleaner commands](Documentation/converting-from-bfg-repo-cleaner.md#cheat-sheet-conversion-of-examples-from-bfg)
+*   [User Manual Examples Section](https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html#EXAMPLES)
+*   [Examples from user-filed issues](Documentation/examples-from-user-filed-issues.md)
 
-For in-depth documentation:
+## Why Use `git filter-repo`?
 
-*   Consult the [user manual](https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html).
-*   Alternative formatting is available on external sites ([example](https://www.mankier.com/1/git-filter-repo)).
+`git filter-repo` surpasses other tools in the following ways:
 
-If you prefer to learn by example:
+*   **Superior Performance:** Significantly faster and more efficient than `git filter-branch`, especially for large repositories.
+*   **Increased Safety:** Avoids data corruption and silent failures common with `git filter-branch`.
+*   **Enhanced Capabilities:** Offers a wider range of features and flexibility compared to BFG Repo Cleaner.
+*   **Git Project Recommendation:** `git-filter-repo` is now the recommended tool by the Git project for history rewriting, instead of `git filter-branch`.
 
-*   The [cheat sheet](Documentation/converting-from-filter-branch.md#cheat-sheet-conversion-of-examples-from-the-filter-branch-manpage) is helpful for converting filter-branch commands.
-*   See the [cheat sheet](Documentation/converting-from-bfg-repo-cleaner.md#cheat-sheet-conversion-of-examples-from-bfg) for BFG Repo Cleaner commands.
-*   The [simple example](#simple-example-with-comparisons) below.
-*   The user manual also includes a comprehensive [examples section](https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html#EXAMPLES).
-*   [Example filterings based on user-filed issues](Documentation/examples-from-user-filed-issues.md)
+## Simple Example: Extracting a Directory
 
-You may also find the [Frequently Answered Questions](Documentation/FAQ.md) useful.
-
-## Why filter-repo instead of other alternatives?
-
-The [Git Rev News article on filter-repo](https://git.github.io/rev_news/2019/08/21/edition-54/#an-introduction-to-git-filter-repo--written-by-elijah-newren) provides a more detailed discussion, but here's a quick comparison with its main competitors:
-
-### filter-branch
-
-*   Significantly slower than `filter-repo`, potentially by multiple orders of magnitude.
-*   Prone to errors that can corrupt your rewrite.
-*   Complex to use for anything beyond basic rewriting tasks.
-*   Not backwards-compatible fixable; Git project recommends against its use.
-*   [filter-lamely](contrib/filter-repo-demos/filter-lamely) is a reimplementation based on filter-repo and may interest die-hard fans.
-*   A [cheat sheet](Documentation/converting-from-filter-branch.md#cheat-sheet-conversion-of-examples-from-the-filter-branch-manpage) is available.
-
-### BFG Repo Cleaner
-
-*   Limited to a few types of rewrites.
-*   Its architecture is limiting for new features.
-*   Can present shortcomings and bugs, even for its intended usecase.
-*   [bfg-ish](contrib/filter-repo-demos/bfg-ish) is a reimplementation based on filter-repo which may interest fans of BFG.
-*   A [cheat sheet](Documentation/converting-from-bfg-repo-cleaner.md#cheat-sheet-conversion-of-examples-from-bfg) is available.
-
-## Simple example, with comparisons
-
-Let's extract a specific part of your repository. We want to:
-
-*   Extract the history of a single directory, src/.
-*   Rename all files to have a new leading directory, my-module/
-*   Rename any tags to have a 'my-module-' prefix.
-
-### Solving this with filter-repo
+To extract the history of the `src/` directory, rename files, and prefix tag names:
 
 ```shell
 git filter-repo --path src/ --to-subdirectory-filter my-module --tag-rename '':'my-module-'
 ```
 
-### Solving this with BFG Repo Cleaner
+## Design Rationale
 
-BFG Repo Cleaner isn't capable of this type of rewrite.
+`git filter-repo` was built to address the limitations of existing tools and provide a more robust and versatile history rewriting solution. Key design principles include:
 
-### Solving this with filter-branch
+*   **Performance:** Fast operation for all common tasks.
+*   **Safety:** Preventing data loss and ensuring consistent results.
+*   **Completeness:** Capabilities not found in other tools
+*   **User-Friendliness:** Easy to use and understand.
+*   **Extensibility:** Openness to add new features.
 
-```shell
-  git filter-branch \
-      --tree-filter 'mkdir -p my-module && \
-                     git ls-files \
-                         | grep -v ^src/ \
-                         | xargs git rm -f -q && \
-                     ls -d * \
-                         | grep -v my-module \
-                         | xargs -I files mv files my-module/' \
-          --tag-name-filter 'echo "my-module-$(cat)"' \
-	  --prune-empty -- --all
-  git clone file://$(pwd) newcopy
-  cd newcopy
-  git for-each-ref --format="delete %(refname)" refs/tags/ \
-      | grep -v refs/tags/my-module- \
-      | git update-ref --stdin
-  git gc --prune=now
-```
+## How to Contribute
 
-or with `index-filter`:
-```shell
-  git filter-branch \
-      --index-filter 'git ls-files \
-                          | grep -v ^src/ \
-                          | xargs git rm -q --cached;
-                      git ls-files -s \
-                          | sed "s%$(printf \\t)%&my-module/%" \
-                          | git update-index --index-info;
-                      git ls-files \
-                          | grep -v ^my-module/ \
-                          | xargs git rm -q --cached' \
-      --tag-name-filter 'echo "my-module-$(cat)"' \
-      --prune-empty -- --all
-  git clone file://$(pwd) newcopy
-  cd newcopy
-  git for-each-ref --format="delete %(refname)" refs/tags/ \
-      | grep -v refs/tags/my-module- \
-      | git update-ref --stdin
-  git gc --prune=now
-```
+Contribute to `git filter-repo` by following the [contributing guidelines](Documentation/Contributing.md).
 
-However, this comes with caveats. Commit messages aren't rewritten, OS specific issues, and potentially slow speed are all issues.
+## Code of Conduct
 
-### Solving this with fast-export/fast-import
-
-```shell
-  git fast-export --no-data --reencode=yes --mark-tags --fake-missing-tagger \
-      --signed-tags=strip --tag-of-filtered-object=rewrite --all \
-      | grep -vP '^M [0-9]+ [0-9a-f]+ (?!src/)' \
-      | grep -vP '^D (?!src/)' \
-      | perl -pe 's%^(M [0-9]+ [0-9a-f]+ )(.*)$%\1my-module/\2%' \
-      | perl -pe 's%^(D )(.*)$%\1my-module/\2%' \
-      | perl -pe s%refs/tags/%refs/tags/my-module-% \
-      | git -c core.ignorecase=false fast-import --date-format=raw-permissive \
-            --force --quiet
-  git for-each-ref --format="delete %(refname)" refs/tags/ \
-      | grep -v refs/tags/my-module- \
-      | git update-ref --stdin
-  git reset --hard
-  git reflog expire --expire=now --all
-  git gc --prune=now
-```
-
-Caveats include operating on entire fast-export streams and assumes all filenames are ASCII characters.
-
-## Design rationale behind filter-repo
-
-filter-repo was designed to overcome the limitations of existing tools, focusing on features like:
-
-1.  [Starting report] Analysis of your repo
-2.  [Keep vs. remove] Keep certain paths
-3.  [Renaming] Easier renaming of paths
-4.  [More intelligent safety] Encouraging fresh clone use.
-5.  [Auto shrink] Removing old cruft after filtering
-6.  [Clean separation] Avoid mixing old repo and rewritten repo
-7.  [Versatility] Ability to extend and create tools from existing features.
-8.  [Old commit references] Way to use old commit IDs with new repo
-9.  [Commit message consistency] Rewrite commit messages
-10. [Become-empty pruning] Prune empty commits
-11. [Become-degenerate pruning] Prune merge commits with no file changes.
-12. [Speed] Reasonably fast filtering
-
-## How do I contribute?
-
-See the [contributing guidelines](Documentation/Contributing.md).
-
-## Is there a Code of Conduct?
-
-The project adheres to the [git Code of Conduct](https://git.kernel.org/pub/scm/git/git.git/tree/CODE_OF_CONDUCT.md).
+Adhere to the [git Code of Conduct](https://git.kernel.org/pub/scm/git/git.git/tree/CODE_OF_CONDUCT.md) when participating in the `git filter-repo` community.
 
 ## Upstream Improvements
 
-filter-repo has driven significant improvements to core Git's `fast-export` and `fast-import` commands.
+`git filter-repo` has driven numerous improvements to core Git commands, including `fast-export` and `fast-import`.

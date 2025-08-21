@@ -1,53 +1,61 @@
-# Oils: Upgrade Your Shell Experience with OSH and YSH
+# Oils: A Modern Upgrade for Your Shell (and a New Scripting Language!)
 
-**Oils is a new Unix shell designed to be a modern upgrade path from Bash, offering improved scripting capabilities and a more user-friendly experience.**  [View the source code on GitHub](https://github.com/oils-for-unix/oils).
+Oils is a project that aims to modernize the Unix shell experience, offering a superior language and runtime that builds upon and improves the foundations of Bash. [Learn more and contribute at the original Oils repository](https://github.com/oils-for-unix/oils).
 
-[![Build Status](https://github.com/oils-for-unix/oils/actions/workflows/all-builds.yml/badge.svg?branch=master)](https://github.com/oils-for-unix/oils/actions/workflows/all-builds.yml)
+[![Build Status](https://github.com/oils-for-unix/oils/actions/workflows/all-builds.yml/badge.svg?branch=master)](https://github.com/oils-for-unix/oils/actions/workflows/all-builds.yml) 
 <a href="https://gitpod.io/from-referrer/">
   <img src="https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod" alt="Contribute with Gitpod" />
 </a>
 
-## Key Features
+**Key Features:**
 
-*   **OSH (Oil Shell):** Runs your existing Bash scripts, ensuring compatibility with your current workflow.
-*   **YSH (Your Shell):** A new shell designed for Python and JavaScript users, providing a more modern and accessible scripting language.
-*   **Fast Performance:** Written in Python and automatically translated to C++ for optimized speed and a small footprint.
-*   **Easy to Contribute:** The codebase is designed to be easy to modify, with a focus on Python development and semi-automated C++ translation.
+*   **OSH:** Run your existing shell scripts with improved performance and features.
+*   **YSH:** A new scripting language designed for Python and JavaScript users, providing a more familiar and modern syntax.
+*   **Performance:** Built with a unique architecture, Oils translates Python code to C++ for speed and efficiency without Python dependencies in the final executable.
+*   **Easy to Contribute:** The project is written in Python, making it easier for developers to understand, modify, and contribute.
 
-## Quick Start on Linux (Development Build)
+## Getting Started
 
-After setting up your development environment (see [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing)), try these commands:
+If you want to **use** Oils, don't clone this repo. Instead, visit [Oils Releases](https://oils.pub/release/latest/).
+
+### Quick Start on Linux (Dev Build)
+
+To try the developer build, follow the instructions on the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page. Then:
 
 ```bash
-bin/osh
-```
-
-```osh
-name=world
-echo "hello $name"
+bash$ bin/osh
+osh$ name=world
+osh$ echo "hello $name"
 hello world
 ```
 
-*   Run your shell scripts with `bin/osh myscript.sh`.
-*   Try YSH with `bin/ysh`.
+-   Try running a shell script you wrote with `bin/osh myscript.sh`.
+-   Try [YSH](https://oils.pub/cross-ref.html#YSH) with `bin/ysh`.
 
 ## Contributing
 
-Oils welcomes contributions of all sizes! Here's how you can get involved:
+Oils welcomes contributions! Here's how you can get involved:
 
-*   **Build the Dev Version:**  Follow the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) guide.
-*   **Find Issues:** Explore the [good first issue](https://github.com/oils-for-unix/oils/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) issues on GitHub.
-*   **Small Contributions Welcome:** Focus on Python code and consider contributing failing spec tests to OSH compatibility.
+*   **Build & Test:** Follow the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page to create a developer build, and let us know if you encounter any issues.
+*   **First Issues:** Explore the [good first issue](https://github.com/oils-for-unix/oils/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) on Github for beginner-friendly tasks.
+*   **Small Contributions:** Contributions are welcome, even for tasks like fixing failing spec tests.
 
-## Important Notes
+###  Developer Build vs. Release Build
 
-*   **Developer Build vs. Release Build:**  The development build is different from the release tarballs (linked from the [Oils Home Page](https://oils.pub/)).  Consult the [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page for details.
-*   **Feedback:**  If you have questions or issues, reach out on the `#oil-dev` channel of [oilshell.zulipchat.com](https://oilshell.zulipchat.com/) or file an issue on Github.
+The **developer build** is **very different** from the release tarball. The [Contributing](https://github.com/oils-for-unix/oils/wiki/Contributing) page describes this difference in detail.
 
-## Documentation and Resources
+The release tarballs are linked from the [home page](https://oils.pub/).  (Developer builds don't work on OS X, so use the release tarballs on OS X.)
 
-*   [Oils Home Page](https://oils.pub/):  All key links are here.
-*   [Oils Wiki](https://github.com/oils-for-unix/oils/wiki): Developer documentation.
+## Important Information
+
+*   **I aim for 24 hour response time.** Please feel free to ping `andychu` on Zulip or Github if you're **waiting** for a pull request review! (or to ask questions)
+
+*   **Docs:** The [Wiki](https://github.com/oils-for-unix/oils/wiki) has many developer docs.
+
+## Links
+
+*   [Oils Home Page](https://oils.pub/) (all important links)
+*   [OSH](https://oils.pub/cross-ref.html#OSH)
+*   [YSH](https://oils.pub/cross-ref.html#YSH)
 *   [Oils Repo Overview](doc/repo-overview.md)
-*   [The Oils Repo Is Different From the Tarball Releases](https://github.com/oils-for-unix/oils/wiki/The-Oils-Repo-Is-Different-From-the-Tarball-Releases)
-*   **End-user documentation** can be found on each [release page](https://oils.pub/releases.html).
+*   [Oils Repo Is Different From the Tarball FAQ](https://github.com/oils-for-unix/oils/wiki/The-Oils-Repo-Is-Different-From-the-Tarball-Releases)

@@ -1,36 +1,34 @@
-# CS Rankings: Your Definitive Guide to Top Computer Science Schools
+# CSrankings: Your Definitive Guide to Top Computer Science Schools (and Repository)
 
-**Discover the leading computer science institutions and faculty worldwide with the data-driven and metrics-based CS Rankings.**  ([Original Repository](https://github.com/emeryberger/CSrankings))
+**Tired of subjective university rankings?** CSrankings.org provides a data-driven, metrics-based ranking of computer science schools based on faculty research publications, offering a transparent and objective assessment. This repository contains the code and data that powers the CSrankings website. [View the live rankings at CSrankings.org](https://csrankings.org)
+
+[View the original repository on GitHub](https://github.com/emeryberger/CSrankings)
 
 ## Key Features:
 
-*   **Metrics-Driven Ranking:** Unlike rankings based on surveys, CS Rankings uses a purely metrics-based approach, focusing on publications in top computer science conferences to identify leading institutions and faculty.
-*   **Objective Evaluation:**  Avoids the subjectivity of survey-based rankings by analyzing the number of publications by faculty in the most selective computer science conferences.
-*   **Difficult-to-Game Approach:**  Focuses on publications in highly selective conferences, making the ranking resistant to manipulation.
-*   **Community-Driven:** Actively maintained and improved with community contributions for accuracy and comprehensiveness.
-*   **Comprehensive Data Source:** Leverages data from DBLP (Digital Bibliography & Library Project) for a wide-ranging and up-to-date analysis.
+*   **Metrics-Driven Ranking:**  CSrankings utilizes a metrics-based approach, focusing on faculty publications in top-tier computer science conferences.
+*   **Objective Assessment:**  The rankings are designed to be difficult to "game," relying on the difficulty of publishing in highly selective conferences rather than subjective surveys.
+*   **Transparent Data:**  All data used to generate the rankings is available and open for community contribution, fostering transparency and accuracy.
+*   **Regular Updates:**  The rankings are updated quarterly to ensure the most current assessment of faculty research activity.
 
-## Contributing
+## How to Contribute:
 
-The project relies on community contributions for updates and corrections.  
-*  **Quarterly Updates:** Data updates are processed quarterly.  
-*   **Easy Contribution:**  Submit updates via pull requests. All data is organized in `csrankings-[a-z].csv` files.
-*   **Detailed Guidance:** Refer to the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for detailed instructions.
-*   **Shallow Clone Contribution:** To contribute without a full repository clone, follow steps to create a shallow clone for easier contribution.
+You can contribute to this project by:
 
-## Technical Details:
+*   **Adding or Modifying Affiliations:** Submit pull requests to update the `csrankings-[a-z].csv` files with new or corrected faculty affiliations. Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for full details on how to contribute. *Note: Updates are processed quarterly.*
+*   **Running Locally:**  Follow the instructions to set up a local development environment and test changes before submitting a pull request.
+*   **Shallow Cloning for Quick Contributions:**  Use a shallow clone to quickly contribute changes without a full local repository clone.
 
-*   **Data Source:**  Utilizes data from DBLP (Digital Bibliography & Library Project).
-*   **Local Setup:**  Instructions provided for setting up a local development environment, including necessary dependencies (libxml2-utils, npm, TypeScript, etc.) and build processes (`make update-dblp`, `make`).
-*   **Testing:**  Instructions for testing the local website with a local web server.
+##  Technical Details:
 
-## Acknowledgements
+*   **Data Source:**  DBLP.org, made available under the ODC Attribution License, is used for publication data.
+*   **Development Stack:** Requires `libxml2-utils`, `npm`, `typescript`, `closure-compiler`, `python-lxml`, `pypy`, and `basex`.
+*   **Make Commands:**  Use `make update-dblp` to download DBLP data and `make` to rebuild the databases.
 
-*   **Developed and Maintained by:** [Emery Berger](https://emeryberger.com)
-*   **Inspired by:** Swarat Chaudhuri (UT-Austin)
-*   **Original Dataset:** Papoutsaki et al.
-*   **Data Source:** DBLP.org (ODC Attribution License)
+## Acknowledgements:
 
-## License
+This project was primarily developed and is maintained by [Emery Berger](https://emeryberger.com). The project incorporates extensive feedback from the community and builds upon the work of [Swarat Chaudhuri](https://www.cs.utexas.edu/~swarat/) and the faculty affiliation dataset constructed by [Papoutsaki et al.](http://cs.brown.edu/people/alexpap/faculty_dataset.html).
 
-*   **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License**
+## License:
+
+CSrankings is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).

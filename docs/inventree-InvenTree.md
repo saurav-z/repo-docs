@@ -1,73 +1,67 @@
-<!-- InvenTree Logo -->
 <div align="center">
   <img src="assets/images/logo/inventree.png" alt="InvenTree logo" width="200" height="auto" />
+  <h1>InvenTree: Open Source Inventory Management</h1>
 </div>
 
-<!-- Title and Description -->
-<h1>InvenTree: Open Source Inventory Management System</h1>
-<p><b>InvenTree is your all-in-one solution for efficient inventory management, stock control, and part tracking.</b></p>
-
-<!-- Badges -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/MIT)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/inventree/inventree)]
 [![CI](https://github.com/inventree/InvenTree/actions/workflows/qc_checks.yaml/badge.svg)]
-[![Documentation Status](https://readthedocs.org/projects/inventree/badge/?version=latest)]
+[![Documentation Status](https://readthedocs.org/projects/inventree/badge/?version=latest)](https://inventree.readthedocs.io/en/latest/?badge=latest)
 [![Docker Build](https://github.com/inventree/InvenTree/actions/workflows/docker.yaml/badge.svg)]
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9bbb2101-0a4d-41e7-ad56-b63fb6053094/deploy-status)]
-[![Performance Testing](https://dev.azure.com/InvenTree/InvenTree%20test%20statistics/_apis/build/status%2Fmatmair.InvenTree?branchName=testing)]
-[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/7179/badge)]
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/inventree/InvenTree/badge)]
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=inventree_InvenTree&metric=sqale_rating)]
-[![codecov](https://codecov.io/gh/inventree/InvenTree/graph/badge.svg?token=9DZRGUUV7B)]
-[![Crowdin](https://badges.crowdin.net/inventree/localized.svg)]
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/inventree/inventree)]
-[![Docker Pulls](https://img.shields.io/docker/pulls/inventree/inventree)]
-[![GitHub Org's stars](https://img.shields.io/github/stars/inventree?style=social)]
-[![Twitter Follow](https://img.shields.io/twitter/follow/inventreedb?style=social)]
-[![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/inventree?style=social)]
-[![Mastdon](https://img.shields.io/badge/dynamic/json?label=Mastodon&query=followers_count&url=https%3A%2F%2Fchaos.social%2Fapi%2Fv1%2Faccounts%2Flookup%3Facct=InvenTree&logo=mastodon&style=social)]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9bbb2101-0a4d-41e7-ad56-b63fb6053094/deploy-status)](https://app.netlify.com/sites/inventree/deploys)
+[![Performance Testing](https://dev.azure.com/InvenTree/InvenTree%20test%20statistics/_apis/build/status%2Fmatmair.InvenTree?branchName=testing)](https://dev.azure.com/InvenTree/InvenTree%20test%20statistics/_build/latest?definitionId=3&branchName=testing)
+[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/7179/badge)](https://bestpractices.coreinfrastructure.org/projects/7179)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/inventree/InvenTree/badge)](https://securityscorecards.dev/viewer/?uri=github.com/inventree/InvenTree)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=inventree_InvenTree&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=inventree_InvenTree)
+[![codecov](https://codecov.io/gh/inventree/InvenTree/graph/badge.svg?token=9DZRGUUV7B)](https://codecov.io/gh/inventree/InvenTree)
+[![Crowdin](https://badges.crowdin.net/inventree/localized.svg)](https://crowdin.com/project/inventree)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/inventree/inventree)
+[![Docker Pulls](https://img.shields.io/docker/pulls/inventree/inventree)](https://hub.docker.com/r/inventree/inventree)
+[![GitHub Org's stars](https://img.shields.io/github/stars/inventree?style=social)](https://github.com/inventree/InvenTree/)
+[![Twitter Follow](https://img.shields.io/twitter/follow/inventreedb?style=social)](https://twitter.com/inventreedb)
+[![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/inventree?style=social)](https://www.reddit.com/r/InvenTree/)
+[![Mastdon](https://img.shields.io/badge/dynamic/json?label=Mastodon&query=followers_count&url=https%3A%2F%2Fchaos.social%2Fapi%2Fv1%2Faccounts%2Flookup%3Facct=InvenTree&logo=mastodon&style=social)](https://chaos.social/@InvenTree)
 
-<!-- Quick Links -->
-<div align="center">
-  <a href="https://demo.inventree.org/">View Demo</a>
+<h4>
+    <a href="https://demo.inventree.org/">View Demo</a>
   <span> · </span>
-  <a href="https://docs.inventree.org/en/latest/">Documentation</a>
+    <a href="https://docs.inventree.org/en/latest/">Documentation</a>
   <span> · </span>
-  <a href="https://github.com/inventree/InvenTree/issues/new?template=bug_report.md&title=[BUG]">Report Bug</a>
+    <a href="https://github.com/inventree/InvenTree/issues/new?template=bug_report.md&title=[BUG]">Report Bug</a>
   <span> · </span>
-  <a href="https://github.com/inventree/InvenTree/issues/new?template=feature_request.md&title=[FR]">Request Feature</a>
-</div>
+    <a href="https://github.com/inventree/InvenTree/issues/new?template=feature_request.md&title=[FR]">Request Feature</a>
+  </h4>
 
-<!-- About the Project -->
-## 🎯 About InvenTree
+## 🚀 InvenTree: Your Complete Open-Source Inventory Management Solution
 
-InvenTree is a powerful, open-source inventory management system designed for streamlined stock control and precise part tracking. Built on a robust Python/Django backend, InvenTree offers a user-friendly web-based admin interface and a comprehensive REST API, facilitating seamless integration with external systems.  Enhance your workflow with a flexible plugin system, allowing for custom applications and tailored extensions.
+InvenTree is a powerful, open-source inventory management system designed to streamline your stock control and part tracking, offering a flexible and scalable solution for businesses of all sizes. Check out the [InvenTree repository](https://github.com/inventree/InvenTree) to get started.
 
-*   **Open Source:** Fully accessible and customizable under the MIT License.
-*   **Web-Based Interface:** Intuitive and easy-to-use for all your inventory needs.
-*   **REST API:** Integrate with other systems and automate your workflows.
-*   **Plugin System:** Extend functionality with custom applications and extensions.
-*   **Part Tracking:** Maintain detailed records of all your parts and components.
+**Key Features:**
 
-Explore more on the [InvenTree website](https://inventree.org) and find the source code on [GitHub](https://github.com/inventree/InvenTree).
+*   **Comprehensive Stock Control:** Manage parts, track stock levels, and monitor locations with ease.
+*   **Web-Based Admin Interface:**  Access and manage your inventory through an intuitive web-based interface.
+*   **REST API:** Integrate InvenTree with other applications and systems via a robust REST API.
+*   **Plugin System:** Customize and extend InvenTree's functionality with a powerful plugin system.
+*   **Mobile App:** Conveniently access and manage inventory information on the go with our companion mobile app.
 
-<!-- Roadmap -->
-### 🚀 Roadmap & Future Plans
+### 🌟 About InvenTree
 
-Stay informed about the future of InvenTree.  View our [roadmap tag](https://github.com/inventree/InvenTree/issues?q=is%3Aopen+is%3Aissue+label%3Aroadmap) and [horizon milestone](https://github.com/inventree/InvenTree/milestone/42) to see what features are being developed and planned.
+InvenTree provides robust low-level stock control and part tracking, and is built on a Python/Django backend with a user-friendly web interface and a REST API for seamless integration.  Learn more at [our website](https://inventree.org).
 
-<!-- Integration -->
-### 🔌 Integration & Extensibility
+### 🧭 Roadmap
 
-InvenTree's design emphasizes extensibility, providing various integration options for external applications and the creation of custom plugins:
+Stay informed on what's being developed!  Check out the [roadmap tag](https://github.com/inventree/InvenTree/issues?q=is%3Aopen+is%3Aissue+label%3Aroadmap) and the [horizon milestone](https://github.com/inventree/InvenTree/milestone/42) to see upcoming features and improvements.
+
+### 🛠️ Integration
+
+InvenTree is built for extensibility, offering multiple options for integration:
 
 *   [InvenTree API](https://docs.inventree.org/en/latest/api/)
 *   [Python module](https://docs.inventree.org/en/latest/api/python/)
 *   [Plugin interface](https://docs.inventree.org/en/latest/plugins/)
 *   [Third party tools](https://docs.inventree.org/en/latest/plugins/integrate/)
 
-<!-- TechStack -->
-### 🛠️ Tech Stack
+### 💻 Tech Stack
 
 <details>
   <summary>Server</summary>
@@ -115,63 +109,57 @@ InvenTree's design emphasizes extensibility, providing various integration optio
   </ul>
 </details>
 
-<!-- Getting Started -->
-## ⚙️ Getting Started & Deployment
+### ⚙️ Getting Started
 
-Choose the deployment method that best suits your needs:
+Easily deploy InvenTree using these options:
 
-<div align="center">
-  <a href="https://docs.inventree.org/en/latest/start/docker/">Docker</a>
-  <span> · </span>
-  <a href="https://inventree.org/digitalocean"><img src="https://www.deploytodo.com/do-btn-blue-ghost.svg" alt="Deploy to DO" width="auto" height="40" /></a>
-  <span> · </span>
-  <a href="https://docs.inventree.org/en/latest/start/install/">Bare Metal</a>
-</div>
+<div align="center"><h4>
+    <a href="https://docs.inventree.org/en/latest/start/docker/">Docker</a>
+    <span> · </span>
+    <a href="https://inventree.org/digitalocean"><img src="https://www.deploytodo.com/do-btn-blue-ghost.svg" alt="Deploy to DO" width="auto" height="40" /></a>
+    <span> · </span>
+    <a href="https://docs.inventree.org/en/latest/start/install/">Bare Metal</a>
+</h4></div>
 
-For a quick setup, use the one-line installer:
+For a quick install, run this command (see [the docs](https://docs.inventree.org/en/latest/start/installer/) for supported distros and details):
+
 ```bash
 wget -qO install.sh https://get.inventree.org && bash install.sh
 ```
 
-For complete installation instructions, refer to the [getting started guide](https://docs.inventree.org/en/latest/start/install/).
+Consult the [getting started guide](https://docs.inventree.org/en/latest/start/install/) for detailed installation instructions.
 
-<!-- Mobile App -->
-## 📱 Mobile App
+### 📱 Mobile App
 
-Access InvenTree on the go with our companion mobile app, available for both Android and iOS:
+Access InvenTree on the go with the companion mobile app.
 
-<div align="center">
-  <a href="https://play.google.com/store/apps/details?id=inventree.inventree_app">Android Play Store</a>
-  <span> · </span>
-  <a href="https://apps.apple.com/au/app/inventree/id1581731101#?platform=iphone">Apple App Store</a>
-</div>
+<div align="center"><h4>
+    <a href="https://play.google.com/store/apps/details?id=inventree.inventree_app">Android Play Store</a>
+     <span> · </span>
+    <a href="https://apps.apple.com/au/app/inventree/id1581731101#?platform=iphone">Apple App Store</a>
+</h4></div>
 
-<!-- Security -->
-## 🔒 Security & Code of Conduct
+### 🔒 Security
 
-We are committed to security and a welcoming community. Review our [Code of Conduct](CODE_OF_CONDUCT.md) and [Security Policy](SECURITY.md) for more details.  You can also find dedicated security pages on [our documentation site](https://docs.inventree.org/en/latest/security/).
+The InvenTree project is committed to security.  See our [Code of Conduct](CODE_OF_CONDUCT.md) and [Security Policy](SECURITY.md).  Detailed security information is available on [our documentation site](https://docs.inventree.org/en/latest/security/).
 
-<!-- Contributing -->
-## 🤝 Contributing
+### 🤝 Contributing
 
-We welcome contributions from the community!  Learn how to contribute by visiting the [contribution page](https://docs.inventree.org/en/latest/develop/contributing/).
+Join the InvenTree community!  Contributions are welcome; review the [contribution page](https://docs.inventree.org/en/latest/develop/contributing/) for details.
 
-<!-- Translation -->
-## 🌐 Translation
+### 🌐 Translation
 
-Help us make InvenTree accessible worldwide by contributing to the native language translations via [Crowdin](https://crowdin.com/project/inventree). **Contributions are greatly appreciated!**
+Help translate the InvenTree web application! Community contributions are made through [crowdin](https://crowdin.com/project/inventree).
 
-<!-- Sponsor -->
-## 💖 Sponsor
+### 🙏 Sponsor
 
-Support the development of InvenTree by becoming a [sponsor](https://github.com/sponsors/inventree).
+Support the project by [sponsoring InvenTree](https://github.com/sponsors/inventree).
 
-<!-- Acknowledgments -->
-## ✨ Acknowledgements
+### ✨ Acknowledgements
 
-We acknowledge [PartKeepr](https://github.com/partkeepr/PartKeepr) as a source of inspiration.  See the license information dialog of your instance for a complete list of third-party libraries.
+We want to acknowledge [PartKeepr](https://github.com/partkeepr/PartKeepr) as a valuable predecessor and inspiration. Find a full list of used third-party libraries in the license information dialog of your instance.
 
-## ❤️ Support
+### ❤️ Support
 
 <p>This project is supported by the following sponsors:</p>
 
@@ -207,24 +195,6 @@ We acknowledge [PartKeepr](https://github.com/partkeepr/PartKeepr) as a source o
   <a href="https://crowdin.com"> <img src="https://crowdin.com/images/crowdin-logo.svg" alt="Translation by Crowdin" /> </a> <br>
 </p>
 
-<!-- License -->
-## 📝 License
+### 📜 License
 
-InvenTree is distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.  See [LICENSE.txt](https://github.com/inventree/InvenTree/blob/master/LICENSE) for details.
-
-<!-- Back to Top Link -->
-<p align="right"><a href="#top">Back to Top</a></p>
-```
-
-Key improvements and SEO considerations:
-
-*   **Clear Hook:**  The first sentence clearly states the value proposition (inventory management).
-*   **Keyword Optimization:**  Keywords like "Inventory Management System," "Stock Control," and "Part Tracking" are used naturally throughout the document.
-*   **Headings:**  Uses H2 and H3 headings to structure the document and improve readability for both users and search engines.
-*   **Bulleted Lists:**  Key features are presented in bulleted lists for easy scanning.
-*   **Clear Calls to Action:** Encourages users to visit the demo, documentation, and report bugs.
-*   **Concise Language:**  Streamlines the text for better comprehension.
-*   **Relevant Links:** Includes links to the GitHub repository, documentation, and other important resources.
-*   **Mobile App Section:** Highlights the mobile app functionality.
-*   **SEO-Friendly Formatting:**  Uses Markdown headings and formatting for SEO.
-*   **Back to Top link:** Adds a back to top link for easier navigation.
+Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License; see [LICENSE.txt](https://github.com/inventree/InvenTree/blob/master/LICENSE) for details.

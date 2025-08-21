@@ -2,7 +2,9 @@
     <img src="https://github.com/user-attachments/assets/c42e675e-497c-4508-8bb9-093ad4d1f216" width=40%>
 </div>
 
-<h1 style="text-align: center;">M3-Agent: A Multimodal Agent with Human-Like Long-Term Memory</h1>
+<h1 style="text-align: center;">M3-Agent: Building Human-Like Long-Term Memory in Multimodal Agents</h1>
+
+**M3-Agent** revolutionizes multimodal AI, enabling agents to see, hear, remember, and reason like humans.  Explore the technology on the [original GitHub repository](https://github.com/ByteDance-Seed/m3-agent).
 
 [![arXiv](https://img.shields.io/badge/arXiv-2508.09736-b31b1b.svg)](https://arxiv.org/abs/2508.09736)
 [![Demo](https://img.shields.io/badge/homepage-M3--Agent-blue)](https://m3-agent.github.io)
@@ -10,76 +12,68 @@
 [![Model](https://img.shields.io/badge/model_HF-Control-darkgreen)](https://huggingface.co/ByteDance-Seed/M3-Agent-Control)
 [![Data](https://img.shields.io/badge/data-M3--Bench-F9D371)](https://huggingface.co/datasets/ByteDance-Seed/M3-Bench)
 
-**Unlock advanced multimodal understanding with M3-Agent, an innovative framework that mimics human-like long-term memory and reasoning abilities.** Explore the original repository here: [ByteDance-Seed/m3-agent](https://github.com/ByteDance-Seed/m3-agent)
+## Key Features of M3-Agent:
 
-## Key Features:
+*   **Multimodal Understanding:** Processes real-time visual and auditory inputs.
+*   **Long-Term Memory:** Builds and updates both episodic and semantic memory.
+*   **Entity-Centric Memory:** Organizes memory in a multimodal graph for deeper understanding.
+*   **Iterative Reasoning:**  Performs multi-turn reasoning to complete tasks.
+*   **Superior Performance:** Achieves higher accuracy on benchmarks compared to leading baselines.
 
-*   **Multimodal Perception:** Processes real-time visual and auditory inputs.
-*   **Long-Term Memory:** Builds and updates both episodic and semantic memory for comprehensive understanding.
-*   **Entity-Centric Memory:** Organizes information in a structured, multimodal graph format for deeper contextual understanding.
-*   **Iterative Reasoning:** Employs multi-turn reasoning and memory retrieval to accomplish tasks.
-*   **M3-Bench Benchmark:** Includes M3-Bench-robot and M3-Bench-web, specifically designed for evaluating long-term memory and reasoning in multimodal agents.
+## M3-Bench: A Benchmark for Multimodal Reasoning
 
-## What is M3-Agent?
+M3-Bench is a comprehensive dataset designed to evaluate the effectiveness of multimodal agents in reasoning over long-term memory.  It includes two subsets:
 
-M3-Agent is a cutting-edge multimodal agent designed to perceive, understand, and reason about its environment in a way that mirrors human cognitive processes. By integrating visual and auditory inputs, the agent constructs a rich, entity-centric, long-term memory. This memory is crucial for the agent's ability to answer questions, solve problems, and interact effectively within complex scenarios. The project introduces M3-Bench, a benchmark designed to assess memory effectiveness and reasoning capabilities in multimodal agents.
+*   **M3-Bench-robot:** 100 real-world videos from a robot's perspective.
+*   **M3-Bench-web:** 920 web-sourced videos covering diverse scenarios.
 
-## M3-Bench Dataset
+**[Illustrative Examples from M3-Bench:**](https://www.youtube.com/watch?v=7W0gRqCRMZQ), [link2](https://www.youtube.com/watch?v=Efk3K4epEzg), [link3](https://www.youtube.com/watch?v=6Unxpxy-Ct4)
 
-M3-Bench is a groundbreaking long-video question-answering dataset tailored to evaluate multimodal agents' reasoning abilities over extended periods. It comprises:
+![architecture](figs/m3-bench-example.png)
+Statistical overview of M3-Bench benchmark. Each question may correspond to multiple question types.
 
-*   **M3-Bench-robot:** 100 real-world videos captured from a robot's perspective.
-*   **M3-Bench-web:** 920 web-sourced videos offering diverse scenarios.
+### Accessing M3-Bench Data:
 
-The dataset facilitates rigorous testing of essential capabilities such as:
-
-*   Human understanding
-*   General knowledge extraction
-*   Cross-modal reasoning
-
-**Example Videos:**
-[Link1](https://www.youtube.com/watch?v=7W0gRqCRMZQ), [Link2](https://www.youtube.com/watch?v=Efk3K4epEzg), [Link3](https://www.youtube.com/watch?v=6Unxpxy-Ct4)
+*   **M3-Bench-robot Videos:** Download from [Hugging Face](https://huggingface.co/datasets/ByteDance-Seed/M3-Bench/tree/main/videos/robot).
+*   **M3-Bench-web Videos:** Access via `video_url` in `data/annotations/web.json`.
+*   **Intermediate Outputs & Memory Graphs:**  Download pre-processed data from [Hugging Face](https://huggingface.co/datasets/ByteDance-Seed/M3-Bench/tree/main/intermediate_outputs) or generate them from the videos (instructions below).
 
 ## M3-Agent Architecture
 
-The M3-Agent architecture is designed with two parallel processes: memorization and control.
-
-*   **Memorization:** Continuously processes video and audio streams to create episodic and semantic memory.
-*   **Control:** Executes instructions by iteratively reasoning and retrieving information from its long-term, multimodal graph-structured memory.
-
 ![architecture](figs/m3-agent.png)
+
+M3-Agent utilizes a dual-process architecture:
+
+*   **Memorization:** Processes video and audio to create episodic and semantic memory.
+*   **Control:** Executes instructions through iterative reasoning and retrieval from long-term memory.  Long-term memory is structured as a multimodal graph.
 
 ## Experimental Results
 
-M3-Agent demonstrates superior performance on M3-Bench and VideoMME-long compared to baseline models.
-
 ![architecture](figs/exp_result.png)
+
+M3-Agent demonstrates state-of-the-art performance on M3-Bench and other benchmarks.
 
 ## Run M3-Agent Locally
 
-Before starting, ensure you have configured the API settings in `configs/api_config.json`.
+Follow these steps to set up and run M3-Agent:
 
-### 1. Memorization
+*   **Important:** Add your API configuration to `configs/api_config.json` before running.
 
-Generate memory graphs for each video. The results are stored in `data/memory_graphs`.
+### 1.  Memorization
 
-*   Follow these steps only if you haven't downloaded *intermediate_outputs* and *memory_graphs* from huggingface or want to process videos beyond M3-Bench.
+Generate memory graphs: Results saved in `data/memory_graphs`.
 
-    1.  **Set Up Environment:**
+*   **Prerequisites:**
 
+    1.  Set up the environment:
         ```bash
         bash setup.sh
         pip install git+https://github.com/huggingface/transformers@f742a644ca32e65758c3adb36225aef1731bd2a8
         pip install qwen-omni-utils==0.0.4
         ```
-
-    2.  **Cut Video:**
-
-        Cut videos into 30-second segments:
-
+    2.  Cut Videos: (Use `ffmpeg` to segment videos into 30-second clips.)
         ```bash
         #!/bin/bash
-
         video="robot/bedroom_01"
         input="data/videos/$video.mp4"
         mkdir -p "data/clips/$video"
@@ -95,36 +89,32 @@ Generate memory graphs for each video. The results are stored in `data/memory_gr
         done
         ```
 
-    3.  **Prepare Data:**
-
-        Create a `data.jsonl` file with video information:
-
+    3.  Prepare Data: Create a `data/data.jsonl` file (one video per line) in JSONL format:
         ```json
         {"id": "bedroom_01", "video_path": "data/videos/robot/bedroom_01.mp4", "clip_path": "data/videos/clips/bedroom_01", "mem_path": "data/videos/memory_graphs/bedroom_01.pkl", "intermediate_path": "data/videos/intermediate_outputs/robot/bedroom_01"}
         ```
 
-    4.  **Generate Intermediate Outputs:**
+    4.  Generate Intermediate Outputs (Face Detection & Speaker Diarization):
 
-        Run the script to generate intermediate outputs using face detection and speaker diarization. Download models from specified links.
+        *   **Important:**  Skip this step if you've downloaded `intermediate_outputs` from Hugging Face.
+        *   Download audio embedding models from [pretrained_eres2netv2.ckpt](https://www.modelscope.cn/models/iic/speech_eres2netv2_sv_zh-cn_16k-common/resolve/master/pretrained_eres2netv2.ckpt) and save into `models\`.
+        *   Download and set up [speakerlab](https://github.com/modelscope/3D-Speaker/tree/main/speakerlab).
 
         ```bash
         python m3_agent/memorization_intermediate_outputs.py \
            --data_file data/data.jsonl
         ```
 
-    5.  **Generate Memory Graphs:**
+    5.  Generate Memory Graphs:  (Uses M3-Agent-Memorization model)
 
-        Use the M3-Agent-Memorization model to produce memory graphs.
+        *   **Important:** Download M3-Agent-Memorization from [huggingface](https://huggingface.co/datasets/ByteDance-Seed/M3-Bench/tree/main/videos/robot)
 
         ```bash
         python m3_agent/memorization_memory_graphs.py \
            --data_file data/data.jsonl
         ```
 
-    6.  **Memory Graph Visualization:**
-
-        Visualize the memory graph:
-
+    6.  Memory Graph Visualization:
         ```bash
         python visualization.py \
            --mem_path data/memory_graphs/robot/bedroom_01.pkl \
@@ -133,7 +123,7 @@ Generate memory graphs for each video. The results are stored in `data/memory_gr
 
 ### 2. Control
 
-1.  **Set Up Environment:**
+1.  Set up the environment:
 
     ```bash
     bash setup.sh
@@ -142,34 +132,34 @@ Generate memory graphs for each video. The results are stored in `data/memory_gr
     pip install numpy==1.26.4
     ```
 
-2.  **Question Answering and Evaluation:**
+2.  Question Answering and Evaluation:
 
-    Use the M3-Agent-Control model to generate answers and GPT-4o for evaluation.
+    *   **Important:**  Download M3-Agent-Control from [huggingface](https://huggingface.co/datasets/ByteDance-Seed/M3-Bench/blob/main/videos/robot)
 
     ```bash
     python m3_agent/control.py \
        --data_file data/annotations/robot.json
     ```
 
-### Using Other Models
+### Alternative Models
 
-Easily adapt other models by modifying model inference to API calls and adjusting the prompts.
+You can adapt the code to use other models for memory generation or question answering by modifying the API calls and prompts.
 
-**Prompts:**
-
-1.  Memorization
-    *   Gemini/GPT-4o: `mmagent.prompts.prompt_generate_captions_with_ids`
-    *   Qwen2.5-Omni-7B: `mmagent.prompts.prompt_generate_full_memory`
-
-2.  Control
-    *   GPT-4o: `mmagent.prompts.prompt_answer_with_retrieval_final`
+*   **Prompts:**
+    *   **Memorization:**
+        *   Gemini/GPT-4o:  `mmagent.prompts.prompt_generate_captions_with_ids`
+        *   Qwen2.5-Omni-7B: `mmagent.prompts.prompt_generate_full_memory`
+    *   **Control:**
+        *   GPT-4o:  `mmagent.prompts.prompt_answer_with_retrieval_final`
 
 ## Training
 
-*   **Memorization:** [sft-qwen2.5-omni-thinker](https://github.com/hyc2026/sft-qwen2.5-omni-thinker)
-*   **Control:** [M3-Agent-Training](https://github.com/hyc2026/M3-Agent-Training)
+1.  Memorization: Refer to the documentation at [https://github.com/hyc2026/sft-qwen2.5-omni-thinker](https://github.com/hyc2026/sft-qwen2.5-omni-thinker).
+2.  Control: See the instructions at [https://github.com/hyc2026/M3-Agent-Training](https://github.com/hyc2026/M3-Agent-Training).
 
 ## Citation
+
+If you use M3-Agent in your research, please cite our work:
 
 ```BibTeX
 @misc{long2025seeing,

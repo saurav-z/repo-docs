@@ -1,65 +1,51 @@
-Here's an improved and SEO-optimized README for the `webassets` project:
+# Webassets: Streamline Your Python Web Development with Asset Management
 
-# Webassets: Powerful Asset Management for Python Web Development
+**Webassets simplifies your Python web development workflow by merging and compressing your JavaScript and CSS files for optimized performance.**
 
-**Effortlessly merge and compress your JavaScript and CSS files with Webassets, streamlining your Python web development workflow.**
+[View the original repository on GitHub](https://github.com/miracle2k/webassets)
 
-[Link to Original Repo: https://github.com/miracle2k/webassets](https://github.com/miracle2k/webassets)
+## Key Features:
 
-## Key Features
+*   **Asset Merging:** Combine multiple JavaScript and CSS files into single files to reduce HTTP requests.
+*   **Asset Compression:** Minimize file sizes through compression, leading to faster page load times.
+*   **Simplified Workflow:** Manage and optimize your static assets efficiently.
+*   **Flexible Integration:** Easily integrates into your existing Python web projects.
 
-*   **Asset Bundling:** Combine multiple CSS and JavaScript files into single, optimized bundles.
-*   **Compression:** Reduce file sizes using built-in compression filters, improving page load times.
-*   **Flexible Integration:** Seamlessly integrates with various Python web frameworks.
-*   **Customizable:** Configure filters and processing pipelines to meet your specific needs.
-*   **Production Ready:** Designed for use in production environments, ensuring optimal performance.
+## Installation
 
-## Getting Started
-
-### Documentation
-
-Comprehensive documentation is available to guide you through setup and usage:
-
-*   [Webassets Documentation](https://webassets.readthedocs.io/)
-
-### Installation
-
-Install the latest development version using pip:
+You can install the latest development version using pip:
 
 ```bash
 pip install webassets==dev
 ```
 
+## Documentation
+
+Comprehensive documentation is available at:  [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
+
 ## Development
 
-To contribute to `webassets`, follow these steps:
+To contribute to the development of Webassets, follow these steps:
 
-1.  **Set up your development environment:**
-
-    *   Install Python requirements using `uv`:
-
-        ```bash
-        uv venv
-        uv pip install -r uv.lock
-        ```
-    *   Install other requirements using:
-
-        ```bash
-        ./requirements-dev.sh
-        ```
-
-2.  **Run the Tests:**
-
+1.  **Set up a virtual environment**:
+    ```bash
+    uv venv
+    ```
+2.  **Install Python requirements:**
+    ```bash
+    uv pip install -r uv.lock
+    ```
+3.  **Install additional requirements:**
+    ```bash
+    ./requirements-dev.sh
+    ```
+4.  **Run tests:**
     ```bash
     ./run_tests.sh
     ```
-    *   Note: Requires Java 7 or later for certain tests (e.g., `Google Closure`).
 
-### Development Resources
+**Note:** Running tests requires Java 7 or higher to be installed (required for some filters like Google Closure).
 
-*   [Download a tarball of the development version](http://github.com/miracle2k/webassets/tarball/master#egg=webassets-dev)
-*   [CI Build Status](https://github.com/miracle2k/webassets/actions/workflows/ci.yml)
+## Build Status
 
-## Contributing
-
-Contributions are welcome! Please see the documentation for guidelines on how to contribute.
+[![Build Status](https://github.com/miracle2k/webassets/actions/workflows/ci.yml/badge.svg)](https://github.com/miracle2k/webassets/actions/workflows/ci.yml)

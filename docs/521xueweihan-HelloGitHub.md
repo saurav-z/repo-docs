@@ -3,27 +3,34 @@
   <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
 </p>
 
-## HelloGitHub: Discover Awesome Open Source Projects
+## HelloGitHub: Discover Awesome Open Source Projects!
 
-**HelloGitHub is your gateway to the exciting world of open-source, showcasing interesting and beginner-friendly projects on GitHub.**  This curated monthly collection helps you discover new projects and get involved in the open-source community.
+HelloGitHub is your monthly guide to exciting and beginner-friendly open-source projects on GitHub, helping you find the fun in open source!
 
-[View the original repository on GitHub](https://github.com/521xueweihan/HelloGitHub)
+[**Explore the original repository on GitHub**](https://github.com/521xueweihan/HelloGitHub)
 
-### Key Features
+<p align="center">
+  <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
+  <a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
+    <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
+</p>
 
-*   **Monthly Updates:**  Stay up-to-date with fresh, hand-picked open-source projects, published on the 28th of each month.
-*   **Beginner-Friendly:**  Focuses on projects that are easy to get started with, making it perfect for newcomers to open source.
-*   **Diverse Content:**  Features a wide range of projects, including:
+### Key Features:
+
+*   **Monthly Updates:**  Stay up-to-date with the latest curated open-source projects, released on the 28th of each month.
+*   **Beginner-Friendly:** Discover projects perfect for those new to open source.
+*   **Diverse Content:** Explore a variety of projects, including:
     *   Interesting and beginner-friendly open-source projects
     *   Open-source books
-    *   Practical, real-world projects
+    *   Practical projects
     *   Enterprise-level projects
-*   **Discover and Contribute:** Find new project ideas, and get inspired to create your own project.
-*   **Community:** The GitHub repository also provides a great community of people who want to connect with others.
+*   **Easy to Explore:** Access content via the [official website](https://hellogithub.com/) or the [HelloGitHub WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
 
-### Content Index
+### Content Highlights:
 
-Access previous issues of HelloGitHub:
+Browse past issues to find projects, books, and more:
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -36,13 +43,13 @@ Access previous issues of HelloGitHub:
 | [第 85 期](/content/HelloGitHub85.md) | [第 84 期](/content/HelloGitHub84.md) | [第 83 期](/content/HelloGitHub83.md) | [第 82 期](/content/HelloGitHub82.md) | [第 81 期](/content/HelloGitHub81.md) |
 | [第 80 期](/content/HelloGitHub80.md) | [第 79 期](/content/HelloGitHub79.md) | [第 78 期](/content/HelloGitHub78.md) | [第 77 期](/content/HelloGitHub77.md) | [第 76 期](/content/HelloGitHub76.md) |
 
-For the best reading experience, visit the [official website](https://hellogithub.com/) or follow the [HelloGitHub public account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
-
 ### Contribute
 
-Want to recommend a project?  [Suggest or self-recommend a project](https://hellogithub.com/periodical). You can also become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
+Want to recommend a project or become a contributor?  See the [contribution guidelines](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
 
-### Sponsorship
+### Sponsors
+
+The project is supported by the following sponsors:
 
 <table>
   <thead>
@@ -80,19 +87,4 @@ Want to recommend a project?  [Suggest or self-recommend a project](https://hell
 
 ### License
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. <a href="mailto:595666367@qq.com">Contact me</a>
-```
-Key improvements and explanations:
-
-*   **SEO Optimization:**
-    *   Uses keywords like "open source," "GitHub," and "projects" throughout the text.
-    *   Includes headings (H1, H2, H3) for better structure and readability, which is crucial for SEO.
-    *   The introduction uses the keyword "open source" right away.
-*   **Clear and Concise Language:**  The descriptions are rewritten for clarity and conciseness.
-*   **Strong Hook:**  The opening sentence provides a compelling reason to explore the repository.
-*   **Bulleted Key Features:** Makes it easy for users to quickly understand the value proposition.
-*   **Emphasis on Benefits:** Highlights what users *gain* from using the resource (e.g., "discover new projects," "get involved").
-*   **Call to Action:** Encourages users to explore and contribute.
-*   **Contextual Links:** The links are placed naturally within the text.
-*   **Removed Redundancy:** Removed repetitive information.
-*   **Maintain Original Content:** Kept all the original content (content index, sponsorships, etc.)
+This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh).  Contact [595666367@qq.com](mailto:595666367@qq.com)
