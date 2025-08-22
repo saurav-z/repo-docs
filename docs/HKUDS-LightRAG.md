@@ -1,12 +1,16 @@
-<div align="center">
+<!--
+  SPDX-FileCopyrightText: 2024 The HKUDS Authors
 
-<div style="margin: 20px 0;">
+  SPDX-License-Identifier: CC-BY-4.0
+-->
+<!-- markdownlint-disable MD041 -->
+# LightRAG: Revolutionizing Retrieval-Augmented Generation 🚀
+
+LightRAG is a simple yet powerful framework designed to make Retrieval-Augmented Generation (RAG) faster and more accessible, enabling you to build intelligent applications that leverage the power of retrieval to enhance the capabilities of Large Language Models (LLMs).  [Explore the LightRAG GitHub repository](https://github.com/HKUDS/LightRAG) to dive in!
+
+<div align="center">
   <img src="./assets/logo.png" width="120" height="120" alt="LightRAG Logo" style="border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);">
 </div>
-
-# LightRAG: Lightning-Fast Retrieval-Augmented Generation
-
-**LightRAG is a simple and efficient framework for building powerful Retrieval-Augmented Generation (RAG) systems, offering speed, flexibility, and multimodal capabilities.**
 
 <div align="center">
     <a href="https://trendshift.io/repositories/13043" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13043" alt="HKUDS%2FLightRAG | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
@@ -38,8 +42,6 @@
   </div>
 </div>
 
-</div>
-
 <div align="center" style="margin: 30px 0;">
   <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="800">
 </div>
@@ -52,36 +54,36 @@
 
 ## Key Features
 
-*   **Fast and Efficient**: Optimized for speed and performance.
-*   **Simple to Use**: Easy to integrate and deploy.
-*   **Flexible Storage**: Supports various storage options (JSON, PostgreSQL, Neo4J, etc.)
-*   **Multimodal Support**:  Integrates with [RAG-Anything](https://github.com/HKUDS/RAG-Anything) for processing text, images, tables, and more.
-*   **Knowledge Graph Capabilities**: Supports entity and relation creation, editing, and deletion.
-*   **Data Export**: Export data in various formats (CSV, Excel, Markdown, etc.).
-*   **Token Usage Tracking**: Monitors and manages token consumption for LLMs.
-*   **Comprehensive Documentation**: Detailed examples and guides.
+*   **Simple and Fast RAG**: Easy to use, with a focus on performance.
+*   **Flexible Storage Options**: Supports various storage backends including JSON, PostgreSQL, Redis, MongoDB, Neo4j, Milvus, Faiss, Qdrant.
+*   **Advanced Querying**: Offers hybrid search, local, global, and naive retrieval modes.
+*   **Multimodal Document Processing (RAG-Anything Integration)**: Seamlessly integrates with [RAG-Anything](https://github.com/HKUDS/RAG-Anything) for advanced parsing of PDFs, Office documents, images, and other formats.
+*   **Knowledge Graph Management**: Create, edit, and delete entities and relationships within your knowledge graph.
+*   **Data Export**: Supports data export in CSV, Excel, Markdown, and TXT formats.
+*   **Token Usage Tracking**: Monitor and manage token consumption to optimize costs.
 
 ---
 
 ## What's New
-- [X] [2025.06.16]🎯📢Our team has released [RAG-Anything](https://github.com/HKUDS/RAG-Anything) an All-in-One Multimodal RAG System for seamless text, image, table, and equation processing.
-- [X] [2025.06.05]🎯📢LightRAG now supports comprehensive multimodal data handling through [RAG-Anything](https://github.com/HKUDS/RAG-Anything) integration, enabling seamless document parsing and RAG capabilities across diverse formats including PDFs, images, Office documents, tables, and formulas. Please refer to the new [multimodal section](https://github.com/HKUDS/LightRAG/?tab=readme-ov-file#multimodal-document-processing-rag-anything-integration) for details.
-- [X] [2025.03.18]🎯📢LightRAG now supports citation functionality, enabling proper source attribution.
-- [X] [2025.02.05]🎯📢Our team has released [VideoRAG](https://github.com/HKUDS/VideoRAG) understanding extremely long-context videos.
-- [X] [2025.01.13]🎯📢Our team has released [MiniRAG](https://github.com/HKUDS/MiniRAG) making RAG simpler with small models.
-- [X] [2025.01.06]🎯📢You can now [use PostgreSQL for Storage](#using-postgresql-for-storage).
-- [X] [2024.12.31]🎯📢LightRAG now supports [deletion by document ID](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
-- [X] [2024.11.25]🎯📢LightRAG now supports seamless integration of [custom knowledge graphs](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#insert-custom-kg), empowering users to enhance the system with their own domain expertise.
-- [X] [2024.11.19]🎯📢A comprehensive guide to LightRAG is now available on [LearnOpenCV](https://learnopencv.com/lightrag). Many thanks to the blog author.
-- [X] [2024.11.11]🎯📢LightRAG now supports [deleting entities by their names](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
-- [X] [2024.11.09]🎯📢Introducing the [LightRAG Gui](https://lightrag-gui.streamlit.app), which allows you to insert, query, visualize, and download LightRAG knowledge.
-- [X] [2024.11.04]🎯📢You can now [use Neo4J for Storage](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#using-neo4j-for-storage).
-- [X] [2024.10.29]🎯📢LightRAG now supports multiple file types, including PDF, DOC, PPT, and CSV via `textract`.
-- [X] [2024.10.20]🎯📢We've added a new feature to LightRAG: Graph Visualization.
-- [X] [2024.10.18]🎯📢We've added a link to a [LightRAG Introduction Video](https://youtu.be/oageL-1I0GE). Thanks to the author!
-- [X] [2024.10.17]🎯📢We have created a [Discord channel](https://discord.gg/yF2MmDJyGJ)! Welcome to join for sharing and discussions! 🎉🎉
-- [X] [2024.10.16]🎯📢LightRAG now supports [Ollama models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
-- [X] [2024.10.15]🎯📢LightRAG now supports [Hugging Face models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
+
+*   **[2025.06.16]**: 🎯📢 Released [RAG-Anything](https://github.com/HKUDS/RAG-Anything) an All-in-One Multimodal RAG System.
+*   **[2025.06.05]**: 🎯📢 LightRAG now supports comprehensive multimodal data handling through [RAG-Anything](https://github.com/HKUDS/RAG-Anything) integration.
+*   **[2025.03.18]**: 🎯📢 LightRAG now supports citation functionality.
+*   **[2025.02.05]**: 🎯📢 Released [VideoRAG](https://github.com/HKUDS/VideoRAG) for understanding long-context videos.
+*   **[2025.01.13]**: 🎯📢 Released [MiniRAG](https://github.com/HKUDS/MiniRAG) for simpler RAG with small models.
+*   **[2025.01.06]**: 🎯📢 Added support for [PostgreSQL for Storage](#using-postgresql-for-storage).
+*   **[2024.12.31]**: 🎯📢 Added support for [deletion by document ID](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
+*   **[2024.11.25]**: 🎯📢 Added support for [custom knowledge graphs](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#insert-custom-kg).
+*   **[2024.11.19]**: 🎯📢 A comprehensive guide to LightRAG is now available on [LearnOpenCV](https://learnopencv.com/lightrag).
+*   **[2024.11.11]**: 🎯📢 Added support for [deleting entities by their names](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
+*   **[2024.11.09]**: 🎯📢 Introduced the [LightRAG Gui](https://lightrag-gui.streamlit.app).
+*   **[2024.11.04]**: 🎯📢 Added support for [Neo4J for Storage](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#using-neo4j-for-storage).
+*   **[2024.10.29]**: 🎯📢 Supports multiple file types, including PDF, DOC, PPT, and CSV via `textract`.
+*   **[2024.10.20]**: 🎯📢 Added Graph Visualization.
+*   **[2024.10.18]**: 🎯📢 Added a link to a [LightRAG Introduction Video](https://youtu.be/oageL-1I0GE).
+*   **[2024.10.17]**: 🎯📢 Created a [Discord channel](https://discord.gg/yF2MmDJyGJ)!
+*   **[2024.10.16]**: 🎯📢 Added support for [Ollama models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
+*   **[2024.10.15]**: 🎯📢 Added support for [Hugging Face models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
 
 <details>
   <summary style="font-size: 1.4em; font-weight: bold; cursor: pointer; display: list-item;">
@@ -101,7 +103,7 @@
 
 ### Install LightRAG Server
 
-The LightRAG Server is designed to provide Web UI and API support. The Web UI facilitates document indexing, knowledge graph exploration, and a simple RAG query interface. LightRAG Server also provide an Ollama compatible interfaces, aiming to emulate LightRAG as an Ollama chat model. This allows AI chat bot, such as Open WebUI, to access LightRAG easily.
+The LightRAG Server provides a Web UI and API for document indexing, knowledge graph exploration, and RAG querying. It also offers an Ollama-compatible interface.
 
 * Install from PyPI
 
@@ -156,15 +158,15 @@ pip install lightrag-hku
 
 ### LLM and Technology Stack Requirements for LightRAG
 
-LightRAG's demands on the capabilities of Large Language Models (LLMs) are significantly higher than those of traditional RAG, as it requires the LLM to perform entity-relationship extraction tasks from documents. Configuring appropriate Embedding and Reranker models is also crucial for improving query performance.
+LightRAG requires specific configurations for Large Language Models (LLMs) and embedding models for optimal performance.
 
 - **LLM Selection**:
-  - It is recommended to use an LLM with at least 32 billion parameters.
-  - The context length should be at least 32KB, with 64KB being recommended.
+  - Use LLMs with at least 32 billion parameters and a context length of at least 32KB.
+  - Avoid reasoning models during indexing.
+  - Use stronger models during the query stage.
 - **Embedding Model**:
-  - A high-performance Embedding model is essential for RAG.
-  - We recommend using mainstream multilingual Embedding models, such as: `BAAI/bge-m3` and `text-embedding-3-large`.
-  - **Important Note**: The Embedding model must be determined before document indexing, and the same model must be used during the document query phase. For certain storage solutions (e.g., PostgreSQL), the vector dimension must be defined upon initial table creation. Therefore, when changing embedding models, it is necessary to delete the existing vector-related tables and allow LightRAG to recreate them with the new dimensions.
+  - Use high-performance multilingual embedding models (e.g., `BAAI/bge-m3`, `text-embedding-3-large`).
+  - The embedding model must be determined before document indexing, and the same model must be used during the document query phase. For certain storage solutions (e.g., PostgreSQL), the vector dimension must be defined upon initial table creation. Therefore, when changing embedding models, it is necessary to delete the existing vector-related tables and allow LightRAG to recreate them with the new dimensions.
 - **Reranker Model Configuration**:
   - Configuring a Reranker model can significantly enhance LightRAG's retrieval performance.
   - When a Reranker model is enabled, it is recommended to set the "mix mode" as the default query mode.
@@ -176,7 +178,7 @@ LightRAG's demands on the capabilities of Large Language Models (LLMs) are signi
 
 ### Quick Start for LightRAG core
 
-To get started with LightRAG core, refer to the sample codes available in the `examples` folder. Additionally, a [video demo](https://www.youtube.com/watch?v=g21royNJ4fw) demonstration is provided to guide you through the local setup process. If you already possess an OpenAI API key, you can run the demo right away:
+Get started with LightRAG core using the sample codes in the `examples` folder. A [video demo](https://www.youtube.com/watch?v=g21royNJ4fw) is available for local setup. If you have an OpenAI API key, run the demo:
 
 ```bash
 ### you should run the demo code with project folder
@@ -189,15 +191,15 @@ curl https://raw.githubusercontent.com/gusye1234/nano-graphrag/main/tests/mock_d
 python examples/lightrag_openai_demo.py
 ```
 
-For a streaming response implementation example, please see `examples/lightrag_openai_compatible_demo.py`. Prior to execution, ensure you modify the sample code's LLM and embedding configurations accordingly.
+For streaming responses, see `examples/lightrag_openai_compatible_demo.py`. Modify LLM and embedding configurations as needed.
 
-**Note 1**: When running the demo program, please be aware that different test scripts may use different embedding models. If you switch to a different embedding model, you must clear the data directory (`./dickens`); otherwise, the program may encounter errors. If you wish to retain the LLM cache, you can preserve the `kv_store_llm_response_cache.json` file while clearing the data directory.
+**Note 1**: Different test scripts may use different embedding models. Clear the data directory (`./dickens`) if switching models. Retain `kv_store_llm_response_cache.json` to keep the LLM cache.
 
 **Note 2**: Only `lightrag_openai_demo.py` and `lightrag_openai_compatible_demo.py` are officially supported sample codes. Other sample files are community contributions that haven't undergone full testing and optimization.
 
 ---
 
-## Programming with LightRAG Core
+## Programing with LightRAG Core
 
 > If you would like to integrate LightRAG into your project, we recommend utilizing the REST API provided by the LightRAG Server. LightRAG Core is typically intended for embedded applications or for researchers who wish to conduct studies and evaluations.
 
@@ -209,7 +211,7 @@ For a streaming response implementation example, please see `examples/lightrag_o
 
 ### A Simple Program
 
-Use the below Python snippet to initialize LightRAG, insert text to it, and perform queries:
+Here's a basic Python snippet to initialize, insert text, and query:
 
 ```python
 import os
@@ -261,11 +263,9 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-Important notes for the above snippet:
-
-- Export your OPENAI_API_KEY environment variable before running the script.
-- This program uses the default storage settings for LightRAG, so all data will be persisted to WORKING_DIR/rag_storage.
-- This program demonstrates only the simplest way to initialize a LightRAG object: Injecting the embedding and LLM functions, and initializing storage and pipeline status after creating the LightRAG object.
+*   Set your `OPENAI_API_KEY` environment variable before running.
+*   This uses default LightRAG storage, saving data to `WORKING_DIR/rag_storage`.
+*   The code demonstrates basic LightRAG initialization:  Injecting embedding and LLM functions, then initializing storage and the pipeline after creating the LightRAG object.
 
 ### LightRAG init parameters
 
@@ -294,7 +294,7 @@ A full list of LightRAG init parameters:
 | **embedding_func_max_async** | `int` | Maximum number of concurrent asynchronous embedding processes | `16` |
 | **llm_model_func** | `callable` | Function for LLM generation | `gpt_4o_mini_complete` |
 | **llm_model_name** | `str` | LLM model name for generation | `meta-llama/Llama-3.2-1B-Instruct` |
-| **summary_max_tokens** | `int` | Maximum tokens send to LLM to generate entity relation summaries | `32000`（default value changed by env var MAX_TOKENS) |
+| **summary_max_tokens** | `int` | Maximum tokens send to LLM to generate entity relation summaries | `30000`（configured by env var SUMMARY_MAX_TOKENS) |
 | **llm_model_max_async** | `int` | Maximum number of concurrent asynchronous LLM processes | `4`（default value changed by env var MAX_ASYNC) |
 | **llm_model_kwargs** | `dict` | Additional parameters for LLM generation | |
 | **vector_db_storage_cls_kwargs** | `dict` | Additional parameters for vector database, like setting the threshold for nodes and relations retrieval | cosine_better_than_threshold: 0.2（default value changed by env var COSINE_THRESHOLD) |
@@ -307,7 +307,7 @@ A full list of LightRAG init parameters:
 
 ### Query Param
 
-Use QueryParam to control the behavior your query:
+Use `QueryParam` to control your query behavior:
 
 ```python
 class QueryParam:
@@ -384,12 +384,12 @@ class QueryParam:
 
 ### LLM and Embedding Injection
 
-LightRAG requires the utilization of LLM and Embedding models to accomplish document indexing and querying tasks. During the initialization phase, it is necessary to inject the invocation methods of the relevant models into LightRAG：
+LightRAG needs LLM and Embedding models for indexing and querying. Inject the model invocation methods during initialization:
 
 <details>
 <summary> <b>Using Open AI-like APIs</b> </summary>
 
-* LightRAG also supports Open AI-like chat/embeddings APIs:
+* LightRAG supports Open AI-like chat/embeddings APIs:
 
 ```python
 async def llm_model_func(
@@ -434,7 +434,7 @@ async def initialize_rag():
 <details>
 <summary> <b>Using Hugging Face Models</b> </summary>
 
-* If you want to use Hugging Face models, you only need to set LightRAG as follows:
+*   To use Hugging Face models, configure LightRAG as follows:
 
 See `lightrag_hf_demo.py`
 
@@ -460,11 +460,12 @@ rag = LightRAG(
 
 <details>
 <summary> <b>Using Ollama Models</b> </summary>
+
 **Overview**
 
-If you want to use Ollama models, you need to pull model you plan to use and embedding model, for example `nomic-embed-text`.
+To use Ollama models, pull the models you plan to use and the embedding model (e.g., `nomic-embed-text`).
 
-Then you only need to set LightRAG as follows:
+Then configure LightRAG as follows:
 
 ```python
 # Initialize LightRAG with Ollama model
@@ -483,39 +484,37 @@ rag = LightRAG(
 )
 ```
 
-* **Increasing context size**
+*   **Increasing context size**
 
-In order for LightRAG to work context should be at least 32k tokens. By default Ollama models have context size of 8k. You can achieve this using one of two ways:
+Increase the context size by either:
+*   **Increasing the `num_ctx` parameter in Modelfile**
+    1.  Pull the model:
 
-* **Increasing the `num_ctx` parameter in Modelfile**
+    ```bash
+    ollama pull qwen2
+    ```
 
-1. Pull the model:
+    2.  Display the model file:
 
-```bash
-ollama pull qwen2
-```
+    ```bash
+    ollama show --modelfile qwen2 > Modelfile
+    ```
 
-2. Display the model file:
+    3.  Edit the Modelfile:
 
-```bash
-ollama show --modelfile qwen2 > Modelfile
-```
+    ```
+    PARAMETER num_ctx 32768
+    ```
 
-3. Edit the Modelfile by adding the following line:
+    4.  Create the modified model:
 
-```bash
-PARAMETER num_ctx 32768
-```
+    ```bash
+    ollama create -f Modelfile qwen2m
+    ```
 
-4. Create the modified model:
+*   **Setup `num_ctx` via Ollama API**
 
-```bash
-ollama create -f Modelfile qwen2m
-```
-
-* **Setup `num_ctx` via Ollama API**
-
-Tiy can use `llm_model_kwargs` param to configure ollama:
+You can use `llm_model_kwargs`:
 
 ```python
 rag = LightRAG(
@@ -534,18 +533,18 @@ rag = LightRAG(
 )
 ```
 
-* **Low RAM GPUs**
+*   **Low RAM GPUs**
 
-In order to run this experiment on low RAM GPU you should select small model and tune context window (increasing context increase memory consumption). For example, running this ollama example on repurposed mining GPU with 6Gb of RAM required to set context size to 26k while using `gemma2:2b`. It was able to find 197 entities and 19 relations on `book.txt`.
+For low RAM GPUs, select a smaller model and adjust the context window, for example, using `gemma2:2b` with a context size of 26k tokens.
 
 </details>
 <details>
 <summary> <b>LlamaIndex</b> </summary>
 
-LightRAG supports integration with LlamaIndex (`llm/llama_index_impl.py`):
+LightRAG supports LlamaIndex integration (`llm/llama_index_impl.py`):
 
-- Integrates with OpenAI and other providers through LlamaIndex
-- See [LlamaIndex Documentation](lightrag/llm/Readme.md) for detailed setup and examples
+-   Integrates with OpenAI and other providers through LlamaIndex
+-   See [LlamaIndex Documentation](lightrag/llm/Readme.md) for detailed setup and examples
 
 **Example Usage**
 
@@ -574,3 +573,51 @@ async def initialize_rag():
 
     await rag.initialize_storages()
     await initialize_pipeline_status()
+
+    return rag
+
+def main():
+    # Initialize RAG instance
+    rag = asyncio.run(initialize_rag())
+
+    with open("./book.txt", "r", encoding="utf-8") as f:
+        rag.insert(f.read())
+
+    # Perform naive search
+    print(
+        rag.query("What are the top themes in this story?", param=QueryParam(mode="naive"))
+    )
+
+    # Perform local search
+    print(
+        rag.query("What are the top themes in this story?", param=QueryParam(mode="local"))
+    )
+
+    # Perform global search
+    print(
+        rag.query("What are the top themes in this story?", param=QueryParam(mode="global"))
+    )
+
+    # Perform hybrid search
+    print(
+        rag.query("What are the top themes in this story?", param=QueryParam(mode="hybrid"))
+    )
+
+if __name__ == "__main__":
+    main()
+```
+
+**For detailed documentation and examples, see:**
+
+-   [LlamaIndex Documentation](lightrag/llm/Readme.md)
+-   [Direct OpenAI Example](examples/lightrag_llamaindex_direct_demo.py)
+-   [LiteLLM Proxy Example](examples/lightrag_llamaindex_litellm_demo.py)
+
+</details>
+
+### Conversation History Support
+
+LightRAG supports multi-turn dialogues using the conversation history feature:
+
+<details>
+  <summary> <b> Usage Example </b></summary>

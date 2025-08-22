@@ -1,117 +1,171 @@
-# Comprehensive Python Cheatsheet 🔗
+# Python Cheat Sheet: Your Comprehensive Guide 🔗
 
-**Python is a versatile and widely-used programming language, known for its readability and extensive libraries, making it ideal for both beginners and experienced developers.** This cheatsheet provides a comprehensive overview of Python's core concepts, syntax, and libraries, optimized for quick reference and efficient coding.
+**Get up to speed with Python quickly!** This cheat sheet provides a concise and SEO-optimized overview of Python's core features, from basic syntax to advanced libraries, perfect for both beginners and experienced developers. Explore Python's full potential with this easy-to-navigate resource, and find a wealth of information that helps you write effective, readable, and efficient Python code. Dive in and start coding with confidence!
+
+[Original Repository](https://github.com/gto76/python-cheatsheet)
 
 **Key Features:**
 
-*   **Collections:** Lists, Dictionaries, Sets, Tuples, Iterators, Generators, etc.
-*   **Types:** Strings, Regular Expressions, Numbers, Datetime, and more.
-*   **Syntax:** Functions, Imports, Decorators, Classes, Exceptions, etc.
-*   **System:** File I/O, Command-Line Arguments, and OS commands.
-*   **Data:** JSON, Pickle, CSV, SQLite, Bytes, Struct, Array, etc.
-*   **Advanced:** Operator, Match Statements, Logging, Introspection, Threads, Coroutines, etc.
-*   **Libraries:** Plotting, Console Apps, GUI Apps, Web Scraping, Profiling, etc.
-*   **Multimedia:** NumPy, Image, Animation, Audio, Pygame, Pandas, Plotly, etc.
+*   **Comprehensive Coverage:** Includes everything from fundamental data structures to advanced concepts like threading and web app development.
+*   **Code Examples:** Clear and concise code snippets illustrate each concept, making it easy to understand and apply.
+*   **Organized Structure:** Topics are logically grouped, allowing you to quickly find what you need.
+*   **SEO Optimized:** Targeted keywords to help you quickly find this useful resource.
 
-**[Original Repo](https://github.com/gto76/python-cheatsheet)**
+**Table of Contents:**
 
----
+*   1.  [Collections](#collections) 🔗
+*   2.  [Types](#types) 🔗
+*   3.  [Syntax](#syntax) 🔗
+*   4.  [System](#system) 🔗
+*   5.  [Data](#data) 🔗
+*   6.  [Advanced](#advanced) 🔗
+*   7.  [Libraries](#libraries) 🔗
+*   8.  [Multimedia](#multimedia) 🔗
+*   9.  [Appendix](#appendix) 🔗
+    *   [Cython](#cython) 🔗
+    *   [Virtual Environments](#virtual-environments) 🔗
+    *   [Basic Script Template](#basic-script-template) 🔗
+    *   [Index](#index) 🔗
 
 ## 1. Collections 🔗
 
-*   **List:**  `[<el_1>, <el_2>, ...]` (Creates a list). Access/modify elements with `<list>[index]`. Methods: `.append()`, `.extend()`, `.sort()`, `.reverse()`, `.index()`, `.pop()`, `.insert()`, `.remove()`, `.clear()`
-*   **Dictionary:** `{key_1: val_1, key_2: val_2, ...}` (Use `<dict>[key]` to get/set values). Methods: `.keys()`, `.values()`, `.items()`, `.get()`, `.setdefault()`, `.update()`, `.pop()`.
-*   **Set:** `{<el_1>, <el_2>, ...}` (Use `set()` for an empty set). Methods: `.add()`, `.update()`, `.union()`, `.intersection()`, `.difference()`, `.symmetric_difference()`, `.issubset()`, `.issuperset()`.
-*   **Tuple:** `(<el_1>, <el_2> [, ...])` (Immutable list).
-*   **Range:** `range(stop)`, `range(start, stop)`, `range(start, stop, ±step)` (Immutable sequence of integers).
-*   **Enumerate:** `for i, el in enumerate(<coll>, start=0): ...` (Iterates with index).
-*   **Iterator:** `iter(<collection>)`, `next(<iter> [, default])` (Potentially endless stream of elements).
-*   **Generator:** `yield` (Function that returns a generator).
-
----
+*   [List](#list) 🔗
+*   [Dictionary](#dictionary) 🔗
+*   [Set](#set) 🔗
+*   [Tuple](#tuple) 🔗
+*   [Range](#range) 🔗
+*   [Enumerate](#enumerate) 🔗
+*   [Iterator](#iterator) 🔗
+*   [Generator](#generator) 🔗
 
 ## 2. Types 🔗
 
-*   **Type:** `type(<el>)`, `isinstance(<el>, <type>)` (Everything is an object, everything has a type).
-*   **String:**  Immutable sequence of characters.  Methods: `.strip()`, `.split()`, `.join()`, `.startswith()`, `.find()`, `.lower()`, `.replace()`, `.translate()`, `.chr()`, `.ord()`.
-*   **Regex:**  For regular expression matching.
-*   **Format:** `f'{<el_1>}, {<el_2>}'`  (String formatting).
-*   **Numbers:** `int(<float/str/bool>)`, `float(<int/str/bool>)`, `complex()`, `fractions.Fraction()`, `decimal.Decimal()`.
-*   **Combinatorics:**  `itertools.product()`, `itertools.permutations()`, `itertools.combinations()`.
-*   **Datetime:** `date()`, `time()`, `datetime()`, `timedelta()`.
-
----
+*   [Type](#type) 🔗
+*   [String](#string) 🔗
+*   [Regex](#regex) 🔗
+*   [Format](#format) 🔗
+*   [Numbers](#numbers) 🔗
+*   [Combinatorics](#combinatorics) 🔗
+*   [Datetime](#datetime) 🔗
 
 ## 3. Syntax 🔗
 
-*   **Function:**  `def <func_name>(<nondefault_args>): ...` (Independent block of code).
-*   **Inline:** `lambda`, comprehensions, map, filter, reduce.
-*   **Import:** `import <module>`, `from <module> import <obj>`.
-*   **Decorator:** `@decorator_name` (Adds functionality to a function).
-*   **Class:**  `class MyClass: ...` (Template for creating objects).
-*   **Duck Types:** Comparable, Hashable, Sortable, Iterator, Callable, Context Manager, Iterable, Collection, Sequence.
-*   **Enum:** `from enum import Enum; class <enum_name>(Enum): ...` (Class of named constants).
-*   **Except:** `try...except...else...finally` (Handling exceptions).
-
----
+*   [Function](#function) 🔗
+*   [Splat Operator](#splat-operator) 🔗
+*   [Inline](#inline) 🔗
+    *   [Lambda](#lambda) 🔗
+    *   [Comprehensions](#comprehensions) 🔗
+    *   [Map, Filter, Reduce](#map-filter-reduce) 🔗
+    *   [Any, All](#any-all) 🔗
+    *   [Conditional Expression](#conditional-expression) 🔗
+    *   [And, Or](#and-or) 🔗
+    *   [Walrus Operator](#walrus-operator) 🔗
+    *   [Named Tuple, Enum, Dataclass](#named-tuple-enum-dataclass) 🔗
+*   [Imports](#imports) 🔗
+*   [Closure](#closure) 🔗
+    *   [Partial](#partial) 🔗
+    *   [Non-Local](#non-local) 🔗
+*   [Decorator](#decorator) 🔗
+*   [Class](#class) 🔗
+    *   [Subclass](#subclass) 🔗
+    *   [Type Annotations](#type-annotations) 🔗
+    *   [Dataclass](#dataclass) 🔗
+    *   [Property](#property) 🔗
+    *   [Slots](#slots) 🔗
+    *   [Copy](#copy) 🔗
+*   [Duck Types](#duck-types) 🔗
+    *   [Comparable](#comparable) 🔗
+    *   [Hashable](#hashable) 🔗
+    *   [Sortable](#sortable) 🔗
+    *   [Iterator](#iterator) 🔗
+    *   [Callable](#callable) 🔗
+    *   [Context Manager](#context-manager) 🔗
+*   [Iterable Duck Types](#iterable-duck-types) 🔗
+    *   [Iterable](#iterable) 🔗
+    *   [Collection](#collection) 🔗
+    *   [Sequence](#sequence) 🔗
+    *   [ABC Sequence](#abc-sequence) 🔗
+*   [Enum](#enum) 🔗
+*   [Exceptions](#exceptions) 🔗
 
 ## 4. System 🔗
 
-*   **Exit:** `sys.exit()` (Exits the interpreter).
-*   **Print:** `print(<el_1>, ..., sep=' ', end='\n', file=sys.stdout, flush=False)`.
-*   **Input:** `<str> = input()` (Reads user input).
-*   **Command-Line Arguments:**  `sys.argv` (Access command-line arguments).
-*   **Open:** `open(<path>, mode='r', encoding=None, newline=None)` (Opens a file).
-*   **Path:** `os.path`, `pathlib.Path` (Working with file paths).
-*   **OS Commands:** `os.chdir()`, `os.mkdir()`, `shutil.copy()`, `os.rename()`, `os.remove()`, `subprocess.run()` (Operating system commands).
-
----
+*   [Exit](#exit) 🔗
+*   [Print](#print) 🔗
+*   [Input](#input) 🔗
+*   [Command Line Arguments](#command-line-arguments) 🔗
+*   [Open](#open) 🔗
+*   [Paths](#paths) 🔗
+*   [OS Commands](#os-commands) 🔗
 
 ## 5. Data 🔗
 
-*   **JSON:**  `json.dumps()`, `json.loads()` (Storing data in JSON format).
-*   **Pickle:**  `pickle.dumps()`, `pickle.loads()` (Storing Python objects).
-*   **CSV:** `csv.reader()`, `csv.writer()` (Reading and writing CSV files).
-*   **SQLite:** `sqlite3.connect()`,  `conn.execute()`, `conn.commit()` (Working with SQLite databases).
-*   **Bytes:** `bytes()`, `bytes.fromhex()`, `<bytes>.decode()` (Immutable sequence of single bytes).
-*   **Struct:**  `struct.pack()`, `struct.unpack()` (Converting between Python values and C structs).
-*   **Array:**  `array.array()` (Array of a predefined type).
-*   **Memory View:** `memoryview()` (Sequence object that points to the memory of another bytes-like object).
-*   **Deque:** `collections.deque()` (List with efficient appends and pops from either side).
-
----
+*   [JSON](#json) 🔗
+*   [Pickle](#pickle) 🔗
+*   [CSV](#csv) 🔗
+*   [SQLite](#sqlite) 🔗
+*   [Bytes](#bytes) 🔗
+*   [Struct](#struct) 🔗
+*   [Array](#array) 🔗
+*   [Memory View](#memory-view) 🔗
+*   [Deque](#deque) 🔗
 
 ## 6. Advanced 🔗
 
-*   **Operator:** `import operator as op` (Functions for operator functionality).
-*   **Match Statement:** `match <object/expression>: ... case <pattern>: ...` (Pattern matching).
-*   **Logging:** `import logging as log` (Logging messages).
-*   **Introspection:** `dir()`, `vars()`, `hasattr()`, `getattr()`, `setattr()`, `delattr()` (Examining objects).
-*   **Threading:** `threading.Thread`, `Lock`, `RLock`, `Semaphore`, `Event`, `Barrier`, `ThreadPoolExecutor` (Multithreading).
-*   **Coroutines:** `async def`, `await`, `asyncio.run()` (Asynchronous programming).
-
----
+*   [Operator](#operator) 🔗
+*   [Match Statement](#match-statement) 🔗
+*   [Logging](#logging) 🔗
+*   [Introspection](#introspection) 🔗
+*   [Threading](#threading) 🔗
+*   [Coroutines](#coroutines) 🔗
 
 ## 7. Libraries 🔗
 
-*   **Progress Bar:** `tqdm` (Progress bar).
-*   **Plot:** `matplotlib.pyplot` (Plotting data).
-*   **Table:** `tabulate` (Printing tables).
-*   **Console App:** `curses` (Creating console applications).
-*   **GUI App:** `PySimpleGUI` (Creating GUI applications).
-*   **Scraping:** `requests`, `BeautifulSoup`, `selenium` (Web scraping).
-*   **Web App:** `flask` (Creating web applications).
-*   **Profiling:**  `timeit`, `cProfile`, `line_profiler`, `pyinstrument`, `py-spy`, `scalene`, `memray` (Profiling code).
-
----
+*   [Progress Bar](#progress-bar) 🔗
+*   [Plot](#plot) 🔗
+*   [Table](#table) 🔗
+*   [Console App](#console-app) 🔗
+*   [GUI App](#gui-app) 🔗
+*   [Scraping](#scraping) 🔗
+    *   [Selenium](#selenium) 🔗
+    *   [XPath](#xpath) 🔗
+*   [Web App](#web-app) 🔗
+*   [Profiling](#profiling) 🔗
+    *   [Timing a Snippet](#timing-a-snippet) 🔗
+    *   [Profiling by Line](#profiling-by-line) 🔗
+    *   [Call and Flame Graphs](#call-and-flame-graphs) 🔗
+    *   [Sampling and Memory Profilers](#sampling-and-memory-profilers) 🔗
 
 ## 8. Multimedia 🔗
 
-*   **NumPy:**  `numpy` (Numerical computing).
-*   **Image:** `PIL.Image` (Image manipulation).
-*   **Animation:**  `imageio` (Creating animations).
-*   **Audio:** `wave`, `simpleaudio`, `pyttsx3` (Audio processing and text-to-speech).
-*   **Synthesizer:** (Generating audio).
-*   **Pygame:** (Game development).
-*   **Pandas:** (Data analysis).
-*   **Plotly:** (Interactive plotting).
+*   [NumPy](#numpy) 🔗
+    *   [Indexing](#indexing) 🔗
+    *   [Broadcasting](#broadcasting) 🔗
+    *   [Example](#example) 🔗
+*   [Image](#image) 🔗
+    *   [Modes](#modes) 🔗
+    *   [Examples](#examples) 🔗
+    *   [Image Draw](#image-draw) 🔗
+*   [Animation](#animation) 🔗
+*   [Audio](#audio) 🔗
+    *   [Sample Values](#sample-values) 🔗
+    *   [Read Float Samples from WAV File](#read-float-samples-from-wav-file) 🔗
+    *   [Write Float Samples to WAV File](#write-float-samples-to-wav-file) 🔗
+    *   [Examples](#examples) 🔗
+    *   [Text to Speech](#text-to-speech) 🔗
+*   [Synthesizer](#synthesizer) 🔗
+*   [Pygame](#pygame) 🔗
+    *   [Rect](#rect) 🔗
+    *   [Surface](#surface) 🔗
+    *   [Basic Mario Brothers Example](#basic-mario-brothers-example) 🔗
+*   [Pandas](#pandas) 🔗
+    *   [Series](#series) 🔗
+        *   [Series — Aggregate, Transform, Map](#series--aggregate-transform-map) 🔗
+    *   [DataFrame](#dataframe) 🔗
+        *   [DataFrame — Merge, Join, Concat](#dataframe--merge-join-concat) 🔗
+        *   [DataFrame — Aggregate, Transform, Map](#dataframe--aggregate-transform-map) 🔗
+    *   [Multi-Index](#multi-index) 🔗
+    *   [File Formats](#file-formats) 🔗
+    *   [GroupBy](#groupby) 🔗
+    *   [Rolling](#rolling) 🔗
+*   [Plotly](#plotly) 🔗

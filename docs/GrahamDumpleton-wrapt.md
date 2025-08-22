@@ -1,25 +1,23 @@
-# Wrapt: Powerful Python Decorators, Wrappers & Monkey Patching
+# wrapt: Python Decorator, Wrapper, and Monkey Patching Library
 
-**Enhance your Python code with `wrapt`, a robust module that simplifies the creation of decorators, wrappers, and enables safe monkey patching.**
+**Wrapt** provides a robust and reliable solution for creating decorators, wrappers, and performing monkey patching in Python, ensuring introspection, signature preservation, and optimal performance. (**[View the original repository on GitHub](https://github.com/GrahamDumpleton/wrapt)**)
 
 [![PyPI](https://img.shields.io/pypi/v/wrapt.svg?logo=python&cacheSeconds=3600)](https://pypi.python.org/pypi/wrapt)
 [![Documentation](https://img.shields.io/badge/docs-wrapt.readthedocs.io-blue.svg)](https://wrapt.readthedocs.io/)
 [![License](https://img.shields.io/badge/license-BSD-green.svg)](LICENSE)
 
-## Key Features
+## Key Features of Wrapt
 
-*   **Universal Decorators:** Works seamlessly with functions, methods, classmethods, staticmethods, and classes.
-*   **Transparent Object Proxies:** Provides a foundation for advanced wrapping scenarios.
-*   **Safe Monkey Patching:** Facilitates runtime modifications with built-in utilities.
-*   **Optimized Performance:** Includes a C extension for speed, with a Python fallback.
-*   **Introspection Preservation:** Maintains signatures, annotations, and other critical metadata.
-*   **Thread-Safe Implementations:** Ensures reliability in multi-threaded environments.
-
-## What is Wrapt?
-
-`wrapt` is a Python module designed to create correct, introspectable, and predictable decorators and function wrappers. It goes beyond standard decorator implementations, providing a robust solution for a wide array of use cases, including method wrapping, monkey patching, and creating sophisticated proxy objects.
+*   **Universal Decorators:** Works seamlessly with functions, methods (instance, class, static), and classes.
+*   **Transparent Object Proxies:** Enables advanced wrapping and modification of objects.
+*   **Safe Monkey Patching:** Provides utilities for safely modifying code at runtime.
+*   **Optimized Performance:** Utilizes a C extension for performance-critical operations with a pure Python fallback.
+*   **Introspection Preservation:** Preserves function signatures, annotations, and other critical introspection attributes.
+*   **Thread-Safe Implementations:** Designed for safe use in multi-threaded environments.
 
 ## Installation
+
+Install wrapt using pip:
 
 ```bash
 pip install wrapt
@@ -86,9 +84,9 @@ def universal(wrapped, instance, args, kwargs):
 
 ## Documentation
 
-Explore comprehensive documentation, examples, and advanced usage patterns at:
+For detailed information, examples, and advanced usage, consult the official documentation:
 
-**[wrapt.readthedocs.io](https://wrapt.readthedocs.io/)**
+*   **Documentation:** [wrapt.readthedocs.io](https://wrapt.readthedocs.io/)
 
 ## Supported Python Versions
 
@@ -98,13 +96,11 @@ Explore comprehensive documentation, examples, and advanced usage patterns at:
 
 ## Contributing
 
-Contributions are welcome!  Please use the [GitHub issue tracker](https://github.com/GrahamDumpleton/wrapt/issues/) to suggest changes, report bugs, or ask questions.
-
-**Note:** Wrapt is considered a mature project, focusing on compatibility and stability.
+Contributions are welcome! Please use the [GitHub issue tracker](https://github.com/GrahamDumpleton/wrapt/issues/) to suggest changes, report bugs, or ask questions. Note that wrapt is a mature project with a focus on maintenance.
 
 ### Testing
 
-See [TESTING.md](TESTING.md) for test details.
+See [TESTING.md](TESTING.md) for information on running tests.
 
 ## License
 
@@ -112,13 +108,14 @@ This project is licensed under the BSD License - see the [LICENSE](LICENSE) file
 
 ## Links
 
-*   **Documentation**: https://wrapt.readthedocs.io/
-*   **PyPI**: https://pypi.python.org/pypi/wrapt
-*   **Issues**: https://github.com/GrahamDumpleton/wrapt/issues/
-*   **Changelog**: https://wrapt.readthedocs.io/en/latest/changes.html
-*   **Original Repository:** [https://github.com/GrahamDumpleton/wrapt](https://github.com/GrahamDumpleton/wrapt)
+*   **Documentation:** https://wrapt.readthedocs.io/
+*   **PyPI:** https://pypi.python.org/pypi/wrapt
+*   **Issues:** https://github.com/GrahamDumpleton/wrapt/issues/
+*   **Changelog:** https://wrapt.readthedocs.io/en/latest/changes.html
 
 ## Related Blog Posts
+
+The repository also features a series of blog posts detailing the design and implementation of wrapt:
 
 *   [How you implemented your Python decorator is wrong](blog/01-how-you-implemented-your-python-decorator-is-wrong.md)
 *   [The interaction between decorators and descriptors](blog/02-the-interaction-between-decorators-and-descriptors.md)

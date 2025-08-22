@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Codegen: Revolutionize Software Development with AI</h1>
+<h1 align="center">Codegen: The AI-Powered Code Generation SDK</h1>
 
 <div align="center">
 
@@ -18,22 +18,19 @@
 
 <br />
 
-**Codegen empowers you to build software faster by providing a programmatic interface to cutting-edge AI code agents.** ([See the original repository](https://github.com/codegen-sh/codegen))
+**Tired of repetitive coding tasks?** The Codegen SDK provides a powerful programmatic interface to AI-powered code agents, enabling you to automate code generation, streamline development, and accelerate your software projects. Explore the [original repository](https://github.com/codegen-sh/codegen) for more details.
 
-## Key Features
+## Key Features of the Codegen SDK
 
-*   **AI-Powered Code Generation:** Leverage AI to automate coding tasks, from simple features to complex implementations.
-*   **API Integration:** Seamlessly integrate Codegen agents into your existing workflows through a user-friendly Python SDK.
-*   **Real-Time Status Tracking:** Monitor the progress of your AI agent tasks.
-*   **Multi-Platform Support:** Interact with your AI engineer via API, Slack, Linear, GitHub, and our website.
-*   **Easy Installation:** Install the SDK with `pip` or `uv`.
-*   **Flexible Integration:** Designed to be compatible with various development environments and projects.
+*   **AI-Driven Code Generation:** Leverage advanced AI models to generate code from natural language prompts.
+*   **Easy Integration:** Seamlessly integrate with your existing workflows using a Python SDK.
+*   **Task Management:** Monitor the status of your code generation tasks with detailed progress updates.
+*   **Versatile Output:** Receive code, summaries, and links tailored to your requests.
+*   **Multiple Integration Points:** Interact with your AI engineer via API, Slack, Linear, Github, and our website.
 
 ## Getting Started
 
-Quickly integrate AI-powered code generation into your workflow.
-
-### Installation
+Install the Codegen SDK using pip or uv:
 
 ```bash
 pip install codegen
@@ -41,7 +38,7 @@ pip install codegen
 uv pip install codegen
 ```
 
-### Usage Example
+### Example Usage:
 
 ```python
 from codegen.agents.agent import Agent
@@ -70,21 +67,19 @@ if task.status == "completed":
     print(task.result)  # Result often contains code, summaries, or links
 ```
 
-### Get Your API Token
-
-Obtain your API token and get started at [codegen.com/token](https://codegen.com/token).
+To begin, sign up at [codegen.com](https://codegen.com) and retrieve your API token from [codegen.com/token](https://codegen.com/token).
 
 ## Resources
 
 *   [Documentation](https://docs.codegen.com)
-*   [Getting Started](https://docs.codegen.com/introduction/getting-started)
+*   [Getting Started Guide](https://docs.codegen.com/introduction/getting-started)
 *   [Contributing Guide](CONTRIBUTING.md)
 *   [Contact Us](https://codegen.com/contact)
 
 ## Contributing
 
-We welcome contributions! Please review our [Contributing Guide](CONTRIBUTING.md) for detailed instructions on setting up your development environment and submitting changes.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up your development environment and submit your contributions.
 
 ## Enterprise Solutions
 
-For inquiries regarding enterprise engagements and custom solutions, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
+For information on enterprise engagements and custom solutions, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).

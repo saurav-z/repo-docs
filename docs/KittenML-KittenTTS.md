@@ -1,29 +1,29 @@
-# Kitten TTS: Lightweight & High-Quality Text-to-Speech
+# KittenTTS: Realistic Text-to-Speech with Lightweight Deployment
 
-**Bring realistic, high-quality voice synthesis to your projects with Kitten TTS, a compact and efficient open-source model.**
+**Create captivating audio experiences with KittenTTS, an open-source, high-quality text-to-speech model that's both lightweight and easy to deploy.**  ([View the Original Repo](https://github.com/KittenML/KittenTTS))
 
-[Check out the original repository on GitHub](https://github.com/KittenML/KittenTTS)
+**Status:** Developer Preview
 
-## Key Features of Kitten TTS
+**Join the Community:** [Discord](https://discord.com/invite/VJ86W4SURW)
 
-*   **Ultra-Lightweight:**  Model size is under 25MB, perfect for resource-constrained environments.
-*   **CPU-Optimized:**  Runs flawlessly on any device without requiring a GPU.
-*   **High-Quality Voices:**  Choose from several premium voice options for a natural and engaging listening experience.
-*   **Fast Inference:** Optimized for real-time speech synthesis, providing quick results.
+**Contact Us:** [Support Form](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview) | [Email](mailto:info@stellonlabs.com)
 
-## Getting Started with Kitten TTS
+## Key Features
+
+*   **Ultra-Lightweight:** Model size under 25MB for efficient deployment.
+*   **CPU-Optimized:** Runs seamlessly on any device without requiring a GPU.
+*   **High-Quality Voices:** Enjoy a selection of premium voice options for diverse applications.
+*   **Fast Inference:** Optimized for real-time speech synthesis, ensuring a responsive user experience.
+
+## Quick Start Guide
 
 ### Installation
-
-Install Kitten TTS easily using pip:
 
 ```bash
 pip install https://github.com/KittenML/KittenTTS/releases/download/0.1/kittentts-0.1.0-py3-none-any.whl
 ```
 
 ### Basic Usage
-
-Here's a quick example to get you started:
 
 ```python
 from kittentts import KittenTTS
@@ -40,17 +40,11 @@ sf.write('output.wav', audio, 24000)
 
 ## System Requirements
 
-Kitten TTS is designed to work on literally any device.
+KittenTTS is designed to work on virtually any system.
 
-##  Future Development
+## Development Roadmap
 
-*   [x] Release a preview model
-*   [ ] Release the fully trained model weights
-*   [ ] Release mobile SDK
-*   [ ] Release web version
-
-## Get Support
-
-*   [Join our Discord](https://discord.com/invite/VJ86W4SURW)
-*   [For custom support - fill this form ](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
-*   Email the creators with any questions : info@stellonlabs.com
+*   \[x] Release a preview model
+*   \[ ] Release the fully trained model weights
+*   \[ ] Release mobile SDK
+*   \[ ] Release web version

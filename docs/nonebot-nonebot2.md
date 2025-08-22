@@ -1,17 +1,13 @@
-# NoneBot: Build Powerful, Cross-Platform Chatbots with Python
-
-**Supercharge your chatbot development with NoneBot, the leading Python framework designed for building versatile and scalable chatbots across multiple platforms. Check out the original repo [here](https://github.com/nonebot/nonebot2).**
-
+<!-- markdownlint-disable MD033 MD041 -->
 <p align="center">
   <a href="https://nonebot.dev/"><img src="https://nonebot.dev/logo.png" width="200" height="200" alt="nonebot"></a>
 </p>
 
 <div align="center">
 
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable-next-line MD036 -->
-_✨ 跨平台 Python 异步机器人框架 ✨_
-<!-- prettier-ignore-end -->
+# NoneBot: Build Powerful, Cross-Platform Chatbots with Python
+
+_✨ Build your dream chatbot today with NoneBot, the powerful, cross-platform, and extensible Python framework! ✨_
 
 </div>
 
@@ -86,11 +82,11 @@ _✨ 跨平台 Python 异步机器人框架 ✨_
 </p>
 
 <p align="center">
-  <a href="https://nonebot.dev/">文档</a>
+  <a href="https://nonebot.dev/">Docs</a>
   ·
-  <a href="https://nonebot.dev/docs/quick-start">快速上手</a>
+  <a href="https://nonebot.dev/docs/quick-start">Quick Start</a>
   ·
-  <a href="#插件">文档打不开？</a>
+  <a href="#plugins">Can't Open Docs?</a>
 </p>
 
 <p align="center">
@@ -99,91 +95,95 @@ _✨ 跨平台 Python 异步机器人框架 ✨_
   </a>
 </p>
 
-## Overview
+## About NoneBot
 
-NoneBot2 is a powerful and versatile Python framework designed to build cross-platform chatbots. It leverages Python's asynchronous capabilities and type hints, providing a flexible and efficient foundation for your chatbot projects.
+**NoneBot is a powerful and flexible Python framework for building chatbots that run on multiple platforms.** Leveraging Python's asynchronous features, NoneBot2 provides a robust and efficient solution for handling a wide range of chatbot functionalities.  Visit the [original repository](https://github.com/nonebot/nonebot2) for more details.
 
 ## Key Features
 
-*   **Asynchronous Architecture:** Handle high message volumes seamlessly with Python's asynchronous features.
-*   **Ease of Development:** Simplify your workflow with the `nb-cli` scaffolding tool, focusing on core logic.
-*   **Reliability:** Benefit from 100% type hints, ensuring code quality and catching bugs early in your editor with built-in editor support.
-*   **Active Community:** Join a vibrant community with tens of thousands of users and extensive resources.
-*   **Cross-Platform Support:** Build chatbots for multiple platforms with a single framework, and choose from a variety of supported protocols.
+*   **Asynchronous by Design:**  Built on Python's async features, ensuring smooth performance even with heavy message traffic.
+*   **Easy Development:**  The NB-CLI scaffolding tool simplifies coding, allowing developers to focus on core business logic.
+*   **Reliable and Robust:** 100% type annotation coverage, enhances code quality and reduces errors through editor integration ([Editor Support](https://nonebot.dev/docs/editor-support)).
+*   **Thriving Community:**  Benefit from a large and active community with tens of thousands of direct and indirect users, offering ample support and resources ([Community Resources](#community-resources)).
+*   **Cross-Platform Compatibility:**  A single framework supporting multiple chat platforms with customizable communication protocols.
 
 ### Supported Platforms
 
-NoneBot2 offers adapters for a wide range of chat platforms.
+| Platform                                                                                                   | Status |                                                   Notes                                                   |
+| :---------------------------------------------------------------------------------------------------------: | :----: | :---------------------------------------------------------------------------------------------------------: |
+| OneBot ([Repo](https://github.com/nonebot/adapter-onebot), [Protocol](https://onebot.dev/))                 |   ✅   |  Supports QQ, TG, WeChat Official Accounts, KOOK, and other [platforms](https://onebot.dev/ecosystem.html)  |
+| Telegram ([Repo](https://github.com/nonebot/adapter-telegram), [Protocol](https://core.telegram.org/bots/api)) |   ✅   |                                                                                                             |
+| Feishu ([Repo](https://github.com/nonebot/adapter-feishu), [Protocol](https://open.feishu.cn/document/home/index)) |   ✅   |                                                                                                             |
+| GitHub ([Repo](https://github.com/nonebot/adapter-github), [Protocol](https://docs.github.com/en/apps))     |   ✅   |                                                   GitHub APP & OAuth APP                                                   |
+| QQ ([Repo](https://github.com/nonebot/adapter-qq), [Protocol](https://bot.q.qq.com/wiki/))                     |   ✅   |                                        QQ official interface changes frequently                                         |
+| Console ([Repo](https://github.com/nonebot/adapter-console))                                                |   ✅   |                                                   Console Interaction                                                   |
+| Red ([Repo](https://github.com/nonebot/adapter-red), [Protocol](https://chrononeko.github.io/QQNTRedProtocol/)) |   ✅   |                                                   QQNT Protocol                                                   |
+| Satori ([Repo](https://github.com/nonebot/adapter-satori), [Protocol](https://satori.js.org/zh-CN))       |   ✅   |                                     Supports Onebot, TG, Feishu, WeChat Official Accounts, Koishi, etc.                                    |
+| Discord ([Repo](https://github.com/nonebot/adapter-discord), [Protocol](https://discord.com/developers/docs/intro)) |   ✅   |                                                   Discord Bot Protocol                                                   |
+| DoDo ([Repo](https://github.com/nonebot/adapter-dodo), [Protocol](https://open.imdodo.com/))                   |   ✅   |                                                   DoDo Bot Protocol                                                   |
+| Kritor ([Repo](https://github.com/nonebot/adapter-kritor), [Protocol](https://github.com/KarinJS/kritor))     |   ✅   |       Kritor (OnebotX) protocol, QQNT robot interface standard         |
+| Mirai ([Repo](https://github.com/nonebot/adapter-mirai), [Protocol](https://docs.mirai.mamoe.net/mirai-api-http/))   |   ✅   |                                                      QQ Protocol                                                      |
+| Milky ([Repo](https://github.com/nonebot/adapter-milky), [Protocol](https://milky.ntqqrev.org/))                |   ✅   |                                                   QQNT Robot Application Interface Standard                                                   |
+| DingTalk ([Repo](https://github.com/nonebot/adapter-ding), [Protocol](https://open.dingtalk.com/document/))    |  🤗  |                                    Seeking Maintainer (currently unavailable)                                     |
+| Kaiheila ([Repo](https://github.com/Tian-que/nonebot-adapter-kaiheila), [Protocol](https://developer.kookapp.cn/)) |  ↗️  |                                                    Community Contribution                                                    |
+| Ntchat ([Repo](https://github.com/JustUndertaker/adapter-ntchat))                                             |  ↗️  |                                                   WeChat protocol, Community Contribution                                                   |
+| MineCraft ([Repo](https://github.com/17TheWord/nonebot-adapter-minecraft))                                    |  ↗️  |                                                    Community Contribution                                                    |
+| Walle-Q ([Repo](https://github.com/onebot-walle/nonebot_adapter_walleq))                                     |  ↗️  |                                                     QQ Protocol, Community Contribution                                                     |
+| Villa ([Repo](https://github.com/CMHopeSunshine/nonebot-adapter-villa))                                      |   ❌   |                                       Miyoushe Dabieye Bot protocol, officially offline                                        |
+| Rocket.Chat ([Repo](https://github.com/IUnlimit/nonebot-adapter-rocketchat), [Protocol](https://developer.rocket.chat/)) |  ↗️  |                                                   Rocket.Chat Bot Protocol, Community Contribution                                                    |
+| Tailchat ([Repo](https://github.com/eya46/nonebot-adapter-tailchat), [Protocol](https://tailchat.msgbyte.com/)) |  ↗️  |                                        Tailchat Open Platform Bot Protocol, Community Contribution                                        |
+| Mail ([Repo](https://github.com/mobyw/nonebot-adapter-mail))                                                  |  ↗️  |                                                 Email Sending and Receiving Protocol, Community Contribution                                                  |
+| Heybox ([Repo](https://github.com/lclbm/adapter-heybox), [Protocol](https://github.com/QingFengOpen/HeychatDoc))  |  ↗️  |                                          Heybox Robot Protocol, Community Contribution                                           |
+| WeChat Official Accounts ([Repo](https://github.com/YangRucheng/nonebot-adapter-wxmp), [Protocol](https://developers.weixin.qq.com/doc/)) |  ↗️  |                                   WeChat Official Accounts Protocol, Community Contribution                                    |
+| Gewechat ([Repo](https://github.com/Shine-Light/nonebot-adapter-gewechat), [Protocol](https://github.com/Devo919/Gewechat)) |   ❌   |                                  Gewechat WeChat Protocol, Gewechat is no longer maintained and available                                   |
+| EFChat ([Repo](https://github.com/molanp/nonebot_adapter_efchat), [Protocol](https://irinu-live.melon.fish/efc-help/))  |  ↗️  |                                               Hengwu Chat Protocol, Community Contribution                                               |
+| VoceChat ([Repo](https://github.com/5656565566/nonebot-adapter-vocechat), [Protocol](https://doc.voce.chat/zh-cn/bot/bot-and-webhook))  |  ↗️  |                                               VoceChat Platform Protocol, Community Contribution                                               |
+| Bilibili Live ([Repo](https://github.com/MingxuanGame/nonebot-adapter-bilibili-live), [Web API Protocol](https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/docs/live), [Open Platform Protocol](https://open-live.bilibili.com/document)) |  ↗️  |                                          Bilibili Live (Web API/Open Platform) protocol, Community Contribution                                          |
 
-| Protocol                                       | Status | Notes                                                                                |
-| :--------------------------------------------- | :----: | :----------------------------------------------------------------------------------- |
-| OneBot ([Repo](https://github.com/nonebot/adapter-onebot), [Spec](https://onebot.dev/))    |  ✅  | Supports QQ, Telegram, WeChat Official Accounts, KOOK, and more.      |
-| Telegram ([Repo](https://github.com/nonebot/adapter-telegram), [Spec](https://core.telegram.org/bots/api))  |  ✅  |                                                                                        |
-| Feishu ([Repo](https://github.com/nonebot/adapter-feishu), [Spec](https://open.feishu.cn/document/home/index))  |  ✅  |                                                                                        |
-| GitHub ([Repo](https://github.com/nonebot/adapter-github), [Spec](https://docs.github.com/en/apps))     |  ✅  | GitHub APP & OAuth APP                                                             |
-| QQ ([Repo](https://github.com/nonebot/adapter-qq), [Spec](https://bot.q.qq.com/wiki/))       |  ✅  | QQ official API has frequent adjustments                                             |
-| Console ([Repo](https://github.com/nonebot/adapter-console))                               |  ✅  | Console Interaction                                                                    |
-| Red ([Repo](https://github.com/nonebot/adapter-red), [Spec](https://chrononeko.github.io/QQNTRedProtocol/))  |  ✅  | QQNT protocol                                                                        |
-| Satori ([Repo](https://github.com/nonebot/adapter-satori), [Spec](https://satori.js.org/zh-CN))        |  ✅  | Supports Onebot, TG, Feishu, WeChat Official Accounts, Koishi and more.          |
-| Discord ([Repo](https://github.com/nonebot/adapter-discord), [Spec](https://discord.com/developers/docs/intro))  |  ✅  | Discord Bot protocol                                                                 |
-| DoDo ([Repo](https://github.com/nonebot/adapter-dodo), [Spec](https://open.imdodo.com/))    |  ✅  | DoDo Bot protocol                                                                    |
-| Kritor ([Repo](https://github.com/nonebot/adapter-kritor), [Spec](https://github.com/KarinJS/kritor))   |  ✅  | Kritor (OnebotX) protocol, QQNT bot interface standard                               |
-| Mirai ([Repo](https://github.com/nonebot/adapter-mirai), [Spec](https://docs.mirai.mamoe.net/mirai-api-http/)) |  ✅  | QQ protocol                                                                          |
-| Milky ([Repo](https://github.com/nonebot/adapter-milky), [Spec](https://milky.ntqqrev.org/))   |  ✅  | QQNT bot application interface standard                                               |
-| Dingtalk ([Repo](https://github.com/nonebot/adapter-ding), [Spec](https://open.dingtalk.com/document/))  |  🤗  | Seeking Maintainer (Currently unavailable)                                           |
-| Kaiheila ([Repo](https://github.com/Tian-que/nonebot-adapter-kaiheila), [Spec](https://developer.kookapp.cn/)) |  ↗️  | Community-contributed                                                               |
-| Ntchat ([Repo](https://github.com/JustUndertaker/adapter-ntchat))                              |  ↗️  | WeChat protocol, community-contributed                                               |
-| MineCraft ([Repo](https://github.com/17TheWord/nonebot-adapter-minecraft))                      |  ↗️  | Community-contributed                                                               |
-| Walle-Q ([Repo](https://github.com/onebot-walle/nonebot_adapter_walleq))                      |  ↗️  | QQ protocol, community-contributed                                                   |
-| Villa ([Repo](https://github.com/CMHopeSunshine/nonebot-adapter-villa))                       |  ❌  | MiHoYo's Villa Bot protocol (Official discontinued)                                   |
-| Rocket.Chat ([Repo](https://github.com/IUnlimit/nonebot-adapter-rocketchat), [Spec](https://developer.rocket.chat/)) |  ↗️  | Rocket.Chat Bot protocol, community-contributed                                    |
-| Tailchat ([Repo](https://github.com/eya46/nonebot-adapter-tailchat), [Spec](https://tailchat.msgbyte.com/))  |  ↗️  | Tailchat Open Platform Bot protocol, community-contributed                         |
-| Mail ([Repo](https://github.com/mobyw/nonebot-adapter-mail))                                  |  ↗️  | Email protocol, community-contributed                                                  |
-| Heybox ([Repo](https://github.com/lclbm/adapter-heybox), [Spec](https://github.com/QingFengOpen/HeychatDoc))  |  ↗️  | Heybox bot protocol, community-contributed                                        |
-| Wxmp ([Repo](https://github.com/YangRucheng/nonebot-adapter-wxmp), [Spec](https://developers.weixin.qq.com/doc/))  |  ↗️  | WeChat Official Account protocol, community-contributed                             |
-| Gewechat ([Repo](https://github.com/Shine-Light/nonebot-adapter-gewechat), [Spec](https://github.com/Devo919/Gewechat)) |  ❌  | Gewechat WeChat protocol, no longer maintained and available                     |
-| EFChat ([Repo](https://github.com/molanp/nonebot_adapter_efchat), [Spec](https://irinu-live.melon.fish/efc-help/))  |  ↗️  | EFChat Platform protocol, community-contributed                                     |
-| VoceChat ([Repo](https://github.com/5656565566/nonebot-adapter-vocechat), [Spec](https://doc.voce.chat/zh-cn/bot/bot-and-webhook))  |  ↗️  | VoceChat Platform protocol, community-contributed                                   |
-| Bilibili Live ([Repo](https://github.com/MingxuanGame/nonebot-adapter-bilibili-live), [Web API](https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/docs/live), [Open Platform](https://open-live.bilibili.com/document))  |  ↗️  | Bilibili Live (Web API/Open Platform) protocol, community-contributed                     |
+*   **Flexible Web Framework Support:** Integrates with various web frameworks, offering customization and composability.
 
-### Web Framework Support
+    | Framework                                                     |  Type   |
+    | :------------------------------------------------------------ | :-----: |
+    | [FastAPI](https://fastapi.tiangolo.com/)                     |  Server  |
+    | [Quart](https://quart.palletsprojects.com/en/latest/) (async Flask) |  Server  |
+    | [aiohttp](https://docs.aiohttp.org/en/stable/)                |  Client  |
+    | [httpx](https://www.python-httpx.org/)                        |  Client  |
+    | [websockets](https://websockets.readthedocs.io/en/stable/)      |  Client  |
 
-*   FastAPI (Server)
-*   Quart (Asynchronous Flask) (Server)
-*   aiohttp (Client)
-*   httpx (Client)
-*   websockets (Client)
+For more information, see: [Overview](https://nonebot.dev/docs/)
 
-## What NoneBot2 is NOT
+## What NoneBot2 Isn't
 
-NoneBot2 provides the core framework and acts as a communication layer to existing platform-specific implementations. Questions about specific platform features should be directed to the platform's documentation or the corresponding adapter developers.
+NoneBot2 is not a specific platform or protocol implementation; it interacts with adapters to handle events. Therefore, questions like "Does NoneBot have feature X for platform Y?" are related to platform-specific features, not NoneBot2 itself. Check the platform's documentation or contact the platform adapter developers.
 
-## Get Started
+NoneBot2 is not a direct replacement for NoneBot1; both are actively maintained. However, NoneBot2 offers new features and broader platform support, making it an excellent choice for new projects or expanding existing ones.
 
-Comprehensive documentation is available [here](https://nonebot.dev/).
+## Get Started Today
 
-### Quick Installation
+Find the [complete documentation here](https://nonebot.dev/).
 
-1.  Install [pipx](https://pypa.github.io/pipx/)
+Here's a quick installation guide:
+
+1.  Install [pipx](https://pypa.github.io/pipx/):
 
     ```bash
     python -m pip install --user pipx
     python -m pipx ensurepath
     ```
 
-2.  Install the scaffolding tool
+2.  Install the scaffolding tool:
 
     ```bash
     pipx install nb-cli
     ```
 
-3.  Create a new project using the scaffolding tool
+3.  Create a new project:
 
     ```bash
     nb create
     ```
 
-4.  Run your project
+4.  Run your project:
 
     ```bash
     nb run
@@ -191,36 +191,36 @@ Comprehensive documentation is available [here](https://nonebot.dev/).
 
 ## Community Resources
 
-### Frequently Asked Questions
+### FAQs
 
-*   [FAQ](https://faq.nonebot.dev/)
+*   [Frequently Asked Questions (FAQ)](https://faq.nonebot.dev/)
 *   [Discussions](https://discussions.nonebot.dev/)
 
-### Tutorials / Projects / Sharing of Experience
+### Tutorials / Projects / Sharing Experiences
 
 *   [awesome-nonebot](https://github.com/nonebot/awesome-nonebot)
 
 ### Plugins
 
-Enhance your chatbot with a rich collection of official and community-contributed plugins.
+Enhance your experience with a rich library of official and third-party plugins:
 
-*   [NoneBot-Plugin-Docs](https://github.com/nonebot/nonebot2/tree/master/packages/nonebot-plugin-docs): Integrate offline documentation into your project.
+*   [NoneBot-Plugin-Docs](https://github.com/nonebot/nonebot2/tree/master/packages/nonebot-plugin-docs): Offline documentation access (no more broken documentation!).
 
-    Run this command inside your project directory:
+    Run in your project directory:
 
     ```bash
     nb plugin install nonebot_plugin_docs
     ```
 
-    Or use the mirror:
+    Or try a mirror:
 
     *   [Documentation Mirror (China)](https://nb2.baka.icu)
 
-*   Find more plugins in the [Store](https://nonebot.dev/store/plugins).
+*   Explore more plugins in the [Store](https://nonebot.dev/store/plugins)
 
 ## License
 
-NoneBot is licensed under the MIT License.
+`NoneBot` is licensed under the `MIT` License
 
 ```text
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
@@ -233,7 +233,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Contributing
 
-See the [Contributing Guide](./CONTRIBUTING.md) for more information.
+See the [Contribution Guide](./CONTRIBUTING.md)
 
 ## Acknowledgements
 
@@ -281,16 +281,10 @@ Thank you to the following organizations for sponsoring the NoneBot project:
   </a>
 </p>
 
-We are grateful for the financial support from our sponsors:
+Thank you to our financial sponsors:
 
 <a href="https://assets.nonebot.dev/sponsors.svg">
   <img src="https://assets.nonebot.dev/sponsors.svg" alt="sponsors" />
 </a>
 
-### Contributors
-
-We thank the following developers for their contributions to NoneBot2:
-
-<a href="https://github.com/nonebot/nonebot2/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nonebot/nonebot2&max=1000" alt="contributors" />
-</a>
+###

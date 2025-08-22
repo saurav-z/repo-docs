@@ -6,56 +6,34 @@
     </a>
 </p>
 
-<h1 align="center">Kiln: The AI Prototyping and Dataset Collaboration Platform</h1>
+## Kiln: Supercharge Your AI Development with Rapid Prototyping and Seamless Collaboration
 
-<p align="center">
-  Quickly build, fine-tune, and collaborate on AI projects with Kiln, the intuitive platform designed for rapid prototyping and dataset management.
-</p>
+Kiln is an all-in-one AI development platform designed to accelerate the creation of high-quality, production-ready AI applications through intuitive tools and robust collaboration features.  [Check out the original repo](https://github.com/Kiln-AI/Kiln).
 
-<p align="center">
-  <a href="https://docs.kiln.tech/docs/fine-tuning-guide"><strong>Fine Tuning</strong></a> •
-  <a href="https://docs.kiln.tech/docs/synthetic-data-generation"><strong>Synthetic Data Generation</strong></a> •
-  <a href="https://docs.kiln.tech/docs/evaluations"><strong>Evals</strong></a> •
-  <a href="https://docs.kiln.tech/docs/collaboration"><strong>Collaboration</strong></a> •
-  <a href="https://docs.kiln.tech"><strong>Docs</strong></a>
-  <a href="https://github.com/Kiln-AI/Kiln"><strong>GitHub</strong></a>
-</p>
+### Key Features
 
-|         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CI      | [![Build and Test](https://github.com/Kiln-AI/kiln/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/Kiln-AI/kiln/actions/workflows/build_and_test.yml) [![Format and Lint](https://github.com/Kiln-AI/kiln/actions/workflows/format_and_lint.yml/badge.svg)](https://github.com/Kiln-AI/kiln/actions/workflows/format_and_lint.yml) [![Desktop Apps Build](https://github.com/Kiln-AI/kiln/actions/workflows/build_desktop.yml/badge.svg)](https://github.com/Kiln-AI/kiln/actions/workflows/build_desktop.yml) [![Web UI Build](https://github.com/Kiln-AI/kiln/actions/workflows/web_format_lint_build.yml/badge.svg)](https://github.com/Kiln-AI/kiln/actions/workflows/web_format_lint_build.yml) |
-| Tests      | [![Test Count Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/scosman/57742c1b1b60d597a6aba5d5148d728e/raw/test_count_kiln.json)](https://github.com/Kiln-AI/kiln/actions/workflows/test_count.yml) [![Test Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/scosman/57742c1b1b60d597a6aba5d5148d728e/raw/library_coverage_kiln.json)](https://github.com/Kiln-AI/kiln/actions/workflows/test_count.yml) |
-| Package | [![PyPI - Version](https://img.shields.io/pypi/v/kiln-ai.svg?logo=pypi&label=PyPI&logoColor=gold)](https://pypi.org/project/kiln-ai/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/kiln-ai.svg?logo=python&label=Python&logoColor=gold)](https://pypi.org/project/kiln-ai/)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Meta    | [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv) [![linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) [![types - Pyright](https://img.shields.io/badge/types-pyright-blue.svg)](https://github.com/microsoft/pyright) [![Docs](https://img.shields.io/badge/docs-pdoc-blue)](https://kiln-ai.github.io/Kiln/kiln_core_docs/index.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Apps    | [![MacOS](https://img.shields.io/badge/MacOS-black?logo=apple)](https://kiln.tech/download) [![Windows](https://img.shields.io/badge/Windows-0067b8.svg?logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyBmaWxsPSIjZmZmIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2Ljc0MiAxNi43NDJ2MTQuMjUzaDE0LjI1M3YtMTQuMjUzek0xLjAwNCAxNi43NDJ2MTQuMjUzaDE0LjI1NnYtMTQuMjUzek0xNi43NDIgMS4wMDR2MTQuMjU2aDE0LjI1M3YtMTQuMjU2ek0xLjAwNCAxLjAwNHYxNC4yNTZoMTQuMjU2di0xNC4yNTZ6Ij48L3BhdGg+Cjwvc3ZnPg==)](https://kiln.tech/download) [![Linux](https://img.shields.io/badge/Linux-444444?logo=linux&logoColor=ffffff)](https://kiln.tech/download) ![Github Downsloads](https://img.shields.io/github/downloads/kiln-ai/kiln/total)                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Connect | [![Discord](https://img.shields.io/badge/Discord-Kiln_AI-blue?logo=Discord&logoColor=white)](https://kiln.tech/discord) [![Newsletter](https://img.shields.io/badge/Newsletter-subscribe-blue?logo=mailboxdotorg&logoColor=white)](https://kiln.tech/blog)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+*   **🚀 Intuitive Desktop Apps:** Access Kiln's features with one-click apps for Windows, macOS, and Linux, offering a truly user-friendly experience.
+*   **🎛️ Fine-tuning:** Easily fine-tune models like Llama, GPT-4o, and more with zero-code fine-tuning and automatic serverless model deployment.
+*   **📊 Evaluation:** Leverage state-of-the-art evaluators to assess the quality and performance of your AI models and tasks.
+*   **🤖 Synthetic Data Generation:** Generate training data quickly and efficiently using our interactive visual tools.
+*   **🧠 Reasoning Models:** Train and customize your own reasoning models to suit your specific needs and tasks.
+*   **🤝 Team Collaboration:** Utilize Git-based version control for your AI datasets and an intuitive UI for seamless collaboration with QA, PM, and subject matter experts on structured data.
+*   **📝 Prompt Generation:** Automatically generate prompts, including chain-of-thought, few-shot, and multi-shot prompts, directly from your data.
+*   **🌐 Wide Model & Provider Support:** Integrate with any model via Ollama, OpenAI, OpenRouter, Fireworks, Groq, AWS, or any OpenAI-compatible API.
+*   **🧑‍💻 Open-Source Library and API:** Benefit from an MIT-licensed open-source Python library and REST API for flexible integration.
+*   **🔒 Privacy-First:** Maintain data privacy with the option to bring your own API keys or run models locally using Ollama.
+*   **🗃️ Structured Data:** Build and manage AI tasks that natively support JSON-based data structures.
+*   **💰 Free & Open-Source:** Enjoy free access to our apps and the open-source library.
 
-[<img width="220" alt="Download button" src="https://github.com/user-attachments/assets/a5d51b8b-b30a-4a16-a902-ab6ef1d58dc0">](https://kiln.tech/download) [<img width="220" alt="Quick start button" src="https://github.com/user-attachments/assets/aff1b35f-72c0-4286-9b28-40a415558359">](https://docs.kiln.tech/getting-started/quickstart)
+### Download Kiln Desktop Apps
 
-## Key Features
-
-*   🚀 **Intuitive Desktop Apps**: Cross-platform one-click apps (Windows, macOS, Linux) for a seamless AI development experience.
-*   🎛️ **Fine-tuning**: Easily fine-tune models like Llama and GPT-4o with no-code solutions and automatic serverless deployments.
-*   📊 **Model Evaluation**: Assess and refine your AI models with cutting-edge evaluators to improve performance.
-*   🤖 **Synthetic Data Generation**: Create training data with interactive visual tools, expanding your dataset quickly.
-*   🧠 **Custom Reasoning Models**: Train and refine custom reasoning models tailored to your specific needs.
-*   🤝 **Team Collaboration**: Collaborate on datasets with integrated Git version control, simplifying teamwork.
-*   📝 **Prompt Generation**: Automatically generate various prompts (chain-of-thought, few-shot, multi-shot, etc.) to optimize model responses.
-*   🌐 **Broad Model and Provider Support**: Works seamlessly with a wide range of models via Ollama, OpenAI, OpenRouter, Fireworks, Groq, AWS, and other OpenAI compatible APIs.
-*   🧑‍💻 **Open-Source Library and API**: Leverage our MIT-licensed Python library and OpenAPI REST API for flexible development.
-*   🔒 **Privacy-First Design**: Your data remains private, supporting BYO API keys and local execution with Ollama.
-*   🗃️ **Structured Data**: Build AI tasks that communicate using JSON.
-*   💰 **Free and Open-Source**: Benefit from free desktop applications and an open-source Python library, reducing costs.
-
-## Download Kiln Desktop Apps
-
-Kiln's desktop application is completely free and designed for intuitive AI prototyping, with versions available for macOS, Windows, and Linux.
+Get started with Kiln today with our free desktop apps for macOS, Windows, and Linux.
 
 [<img width="220" alt="Download button" src="https://github.com/user-attachments/assets/a5d51b8b-b30a-4a16-a902-ab6ef1d58dc0">](https://kiln.tech/download)
 
-## Demo
+### Explore the Demo
 
-Explore Kiln's functionality through our interactive demo showcasing its key features.
+See Kiln in action with our interactive demo.
 
 [<img width="220" alt="Download button" src="https://github.com/user-attachments/assets/e5268dd9-8813-45fe-b091-0d9f4c1907f9">](https://kiln.tech#demo)
 
@@ -65,17 +43,19 @@ Explore Kiln's functionality through our interactive demo showcasing its key fea
 </a>
 </kbd>
 
-## Documentation and Guides
+### Docs & Guides
 
-Kiln offers an intuitive design, but detailed documentation is available to guide you through every step.
+Find comprehensive documentation and guides to help you get the most out of Kiln.
 
-### Video Guides
+[Docs](https://docs.kiln.tech)
+
+#### Video Guides
 
 *   [Fine Tuning LLM Models](https://docs.kiln.tech/docs/fine-tuning-guide)
 *   [Guide: Train a Reasoning Model](https://docs.kiln.tech/docs/guide-train-a-reasoning-model)
 *   [LLM Evaluators](https://docs.kiln.tech/docs/evaluators)
 
-### Comprehensive Documentation
+#### Full List of Docs
 
 *   [Quick Start](https://docs.kiln.tech/getting-started/quickstart)
 *   [How to use any AI model or provider in Kiln](https://docs.kiln.tech/docs/models-and-ai-providers)
@@ -91,55 +71,51 @@ Kiln offers an intuitive design, but detailed documentation is available to guid
 *   [Keyboard Shortcuts](https://docs.kiln.tech/docs/keyboard-shortcuts)
 *   [Privacy Overview: Private by Design](https://docs.kiln.tech/docs/privacy)
 
-For developers, explore the [Kiln Python Library Docs](https://kiln-ai.github.io/Kiln/kiln_core_docs/kiln_ai.html), which includes how to load datasets, and use them in your own applications and notebooks.
+For developers, also see our [Kiln Python Library Docs](https://kiln-ai.github.io/Kiln/kiln_core_docs/kiln_ai.html).
 
-## Install the Python Library
+### Install Python Library
 
-[![PyPI - Version](https://img.shields.io/pypi/v/kiln-ai.svg?logo=pypi&label=PyPI&logoColor=gold)](https://pypi.org/project/kiln-ai/) [![Docs](https://img.shields.io/badge/docs-pdoc-blue)](https://kiln-ai.github.io/Kiln/kiln_core_docs/index.html)
+Integrate Kiln datasets into your workflows with our open-source [Python library](https://pypi.org/project/kiln-ai/).
 
-Integrate Kiln datasets into your workflows by using the [Kiln Python library](https://pypi.org/project/kiln-ai/), and streamline your AI development with ease. [Read the docs](https://kiln-ai.github.io/Kiln/kiln_core_docs/index.html) for usage examples.
+[![PyPI - Version](https://img.shields.io/pypi/v/kiln-ai.svg?logo=pypi&label=PyPI&logoColor=gold)](https://pypi.org/project/kiln-ai/)
+[![Docs](https://img.shields.io/badge/docs-pdoc-blue)](https://kiln-ai.github.io/Kiln/kiln_core_docs/index.html)
 
 ```bash
 pip install kiln-ai
 ```
 
-## Learn More
+### Learn More
 
-### Accelerate AI Prototyping
+#### Rapid Prototyping
 
-Stay ahead of the curve with Kiln, which simplifies experimenting with the latest AI techniques and models, letting you quickly compare various approaches.
+Experiment with various AI approaches with ease, compare results, and improve performance without the need for extensive coding.
 
-Key features:
+#### Current Support
 
-*   Diverse prompting techniques: Basic prompts to advanced methods, including repair & feedback.
-*   Chain of thought / thinking, with optional custom “thinking” instructions
-*   Broad model support: GPT, Llama, Claude, Gemini, Mistral, Gemma, Phi
-*   Fine Tuning: Easily build custom models using datasets from Kiln.
+*   **Prompting Techniques:** Basic, few-shot, multi-shot, repair & feedback
+*   **Chain of Thought/Thinking**
+*   **Models:** GPT, Llama, Claude, Gemini, Mistral, Gemma, Phi
+*   **Fine-tuning:** Create custom models using your Kiln dataset
 
-In the future, Kiln will add more powerful no-code options like evals, and RAG. Experienced data-scientists can already create these techniques today using Kiln datasets and our python library.
+#### Future Plans
 
-### Foster Team Collaboration
+*   Evals and RAG
 
-Kiln bridges the gap between subject matter experts and data scientists, acting as a powerful collaboration tool.
+For experienced data scientists, you can create these techniques using Kiln datasets and our Python library.
 
-*   Subject matter experts can use desktop apps to create and curate structured datasets without needing code.
-*   Data scientists can seamlessly use the UI, or deep dive with our Python library.
-*   QA and PM easily fix issues by generating needed datasets.
+#### Team Collaboration
 
-The dataset format integrates with Git for seamless collaboration, avoiding collisions with UUIDs, and managing attribution.
+Kiln helps bridge the gap between technical and non-technical teams. Subject matter experts can use our desktop apps to generate structured datasets and ratings without coding. Data scientists can consume these datasets via the UI or our Python library. QA and PM can also easily use Kiln to identify and resolve issues.
 
-### Drive AI Product Quality with Datasets
+#### Build High-Quality AI Products with Datasets
 
-Enhance your AI products with datasets created in Kiln, capturing input, outputs, and feedback to build quality models.
+Kiln helps you create datasets as you use the platform, capturing inputs, outputs, human ratings, feedback, and any necessary repairs for building high-quality AI models.
 
-*   Your model quality grows by incorporating more examples of high-quality content, and lessons learned from mistakes.
-*   Easily adjust your datasets to address shifting product goals or new problems.
+### Contributing & Development
 
-## Contributing & Development
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on how to set up a development environment and contribute to Kiln.
 
-Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions on setting up your development environment and contributing to Kiln.
-
-## Citation
+### Citation
 
 ```bibtex
 @software{kiln_ai,
@@ -151,7 +127,7 @@ Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions on setting
 }
 ```
 
-## Licenses & Trademarks
+### Licenses & Trademarks
 
 *   Python Library: [MIT License](libs/core/LICENSE.txt)
 *   Python REST Server/API: [MIT License](libs/server/LICENSE.txt)
@@ -160,27 +136,17 @@ Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions on setting
 
 Copyright 2024 - Chesterfield Laboratories Inc.
 ```
-Key improvements and optimizations:
+Key improvements and SEO optimizations:
 
-*   **SEO Optimization:**
-    *   Added keywords like "AI prototyping," "dataset collaboration," "fine-tuning," "synthetic data," and "LLM evaluation" throughout the README.
-    *   Included the GitHub repository link within the first sentence to improve visibility.
-    *   Used descriptive headings and subheadings to structure content.
-*   **Clearer Structure and Formatting:**
-    *   Improved headings for better readability.
-    *   Used bullet points to highlight key features.
-    *   Improved the "Learn More" section to be more informational
-*   **Concise Summary:**
-    *   Combined the summary and hook into a single sentence, making it more impactful.
-    *   Summarized the key features and benefits, highlighting key use cases.
-*   **Actionable Content:**
-    *   Added calls to action, like "Download" and "Learn More".
-    *   Added a link back to the original repository for easy access.
-*   **Improved Detail:**
-    *   Added more context to sections like Learn More
-*   **Focus on User Benefits:**
-    *   Focused on what users can *do* with Kiln, not just the features.
-*   **Comprehensive Documentation:**
-    *   More comprehensive documentation links.
-*   **Updated Badges:**
-    *   Made sure badges remain up to date.
+*   **Clear and Concise Title:**  The main heading is improved to be more action-oriented, descriptive, and keyword-rich ("Supercharge Your AI Development...").
+*   **SEO-Friendly Introduction:**  The introductory sentence clearly states the purpose of Kiln and incorporates key keywords (AI development, rapid prototyping, collaboration).
+*   **Bulleted Key Features:** Key features are clearly highlighted using bullet points for easy readability and scannability. Each bullet point is concise and benefits from keywords.
+*   **Descriptive Headings:** Headings are used effectively to break up the content and improve readability.
+*   **Call to Action:**  Includes prominent "Download" and "Demo" sections with clear calls to action.
+*   **Keyword Optimization:** Keywords such as "AI development," "fine-tuning," "synthetic data," "collaboration," "open-source" are used throughout.
+*   **Internal Linking:**  Includes links to other sections within the README, as well as external links to documentation, etc.
+*   **Concise Descriptions:** Feature descriptions are brief and highlight benefits.
+*   **Removed Redundancy**:  Condensed/removed duplicate descriptions of features.
+*   **Consistent Formatting:**  The formatting and structure are now consistent, making the README visually appealing and easy to follow.
+*   **Updated Badges**: Kept existing badges, as they are useful.
+*   **Markdown Best Practices**:  Uses Markdown best practices for improved presentation (e.g., spacing, clear sectioning).

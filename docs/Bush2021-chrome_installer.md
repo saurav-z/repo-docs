@@ -1,87 +1,124 @@
-# Download Google Chrome Offline Installers
+# Download Offline Google Chrome Installers for Windows
 
-**Get the latest stable, beta, dev, and canary versions of Google Chrome for Windows, available for offline installation.**
+**Get reliable, offline Google Chrome installers for various Windows versions, including stable, beta, dev, and canary channels from the original source [here](https://github.com/Bush2021/chrome_installer).**
 
-*   **Latest Chrome Builds:** Access a comprehensive archive of Google Chrome installers, including stable, beta, dev, and canary channels.
-*   **Multiple Architectures:** Download installers for x86, x64, and ARM64 architectures, ensuring compatibility with your Windows system.
-*   **Easy Offline Installation:** Install Chrome without an internet connection using the provided uncompressed `.exe` files (requires 7-Zip to decompress).
-*   **Checksum Verification:** Verify the integrity of your downloads using SHA256 checksums provided for each installer.
-*   **Up-to-date Versions:** Stay current with the latest Chrome releases, including version numbers, file sizes, and download links.
+This repository provides direct access to offline installers for Google Chrome, allowing you to install the browser without an internet connection. These installers are especially useful for:
 
-**Access the original repository for more information and releases:** [Google Chrome Installer on GitHub](https://github.com/Bush2021/chrome_installer)
+*   **Offline Installations:** Install Chrome on computers without internet access.
+*   **Version Control:** Maintain specific Chrome versions for testing or compatibility.
+*   **Faster Deployment:** Quickly install Chrome on multiple devices.
 
-## Available Chrome Installers:
+**Key Features:**
 
-**(Note: Use 7-Zip to extract the `.exe` files if you intend to run it, otherwise just open the `.exe` file to execute.)**
+*   **Multiple Channels:** Access installers for Stable, Beta, Dev, and Canary channels.
+*   **Architecture Support:** Download installers for x86, x64, and ARM64 architectures.
+*   **Checksums Provided:** Verify the integrity of the downloaded files using SHA256 checksums.
+*   **Regular Updates:** Get the latest versions as they become available.
+*   **Direct Download Links:**  Download installers directly from Google's servers.
 
-### Stable Channel
+## Available Installers
 
-*   **win stable x86**
-    *   **Latest Version:** 139.0.7258.139
-    *   **File Size:** 333.54 MB
-    *   **SHA256 Checksum:** c7b037eb6e35277c8558f667e85216df553dd48f54503535125f50ad93e525ed
-    *   **Download Link:** [https://dl.google.com/release2/chrome/ijuofmiw6kougwe4vnnl7txy6a_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/ijuofmiw6kougwe4vnnl7txy6a_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe)
-*   **win stable x64**
-    *   **Latest Version:** 139.0.7258.139
-    *   **File Size:** 405.57 MB
-    *   **SHA256 Checksum:** 14f29fa43b84992015bdee499d04411ef4ab70047d3c35ccc34c4ffedfecab70
-    *   **Download Link:** [https://dl.google.com/release2/chrome/jjrbaa52452fvn2fuehjkses74_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/jjrbaa52452fvn2fuehjkses74_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe)
-*   **win stable arm64**
-    *   **Latest Version:** 139.0.7258.139
-    *   **File Size:** 395.21 MB
-    *   **SHA256 Checksum:** d9b48c3a8c19cbd0d87a98abbebcb2136cec9b1e2e368ec897908f84189cec8c
-    *   **Download Link:** [https://dl.google.com/release2/chrome/ac2o56ovbyl4bfqmpmgshmtqdg5a_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/ac2o56ovbyl4bfqmpmgshmtqdg5a_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe)
+The following installers are available.  Each section includes the latest version, file size, SHA256 checksum, and download link.
 
-### Beta Channel
+**Note:**  You'll need to use 7-Zip to extract the downloaded files.
 
-*   **win beta x86**
-    *   **Latest Version:** 140.0.7339.24
-    *   **File Size:** 342.56 MB
-    *   **SHA256 Checksum:** 95ad95da21e3b757a5bca0919c763d07fb0042123ff4b639a4b5dca0d294a360
-    *   **Download Link:** [https://dl.google.com/release2/chrome/ad6re4vy77ydmbyb2nyqbbhoioba_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/ad6re4vy77ydmbyb2nyqbbhoioba_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe)
-*   **win beta x64**
-    *   **Latest Version:** 140.0.7339.24
-    *   **File Size:** 413.86 MB
-    *   **SHA256 Checksum:** f06c859312ce0a4b79ae5ee1d1555f9ec8fad227c6fc5292df33efecede24d5a
-    *   **Download Link:** [https://dl.google.com/release2/chrome/adaolthdsyifl3ed7demc2rgy53q_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/adaolthdsyifl3ed7demc2rgy53q_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe)
-*   **win beta arm64**
-    *   **Latest Version:** 140.0.7339.24
-    *   **File Size:** 406.17 MB
-    *   **SHA256 Checksum:** a8ecd559175f4fd3b61af652636878ac4b200e26c45ac4e86b2d354c69d55ebb
-    *   **Download Link:** [https://dl.google.com/release2/chrome/fthtfj7rsf2cbgyaqsqiico6hu_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/fthtfj7rsf2cbgyaqsqiico6hu_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe)
+*   **[win stable x86](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-stable-x86)**
+*   **[win stable x64](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-stable-x64)**
+*   **[win stable arm64](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-stable-arm64)**
+*   **[win beta x86](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-beta-x86)**
+*   **[win beta x64](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-beta-x64)**
+*   **[win beta arm64](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-beta-arm64)**
+*   **[win dev x86](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-dev-x86)**
+*   **[win dev x64](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-dev-x64)**
+*   **[win dev arm64](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-dev-arm64)**
+*   **[win canary x86](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-canary-x86)**
+*   **[win canary x64](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-canary-x64)**
+*   **[win canary arm64](https://github.com/Bush2021/chrome_installer?tab=readme-ov-file#win-canary-arm64)**
 
-### Dev Channel
+## Installer Details
 
-*   **win dev x86**
-    *   **Latest Version:** 141.0.7354.3
-    *   **File Size:** 344.49 MB
-    *   **SHA256 Checksum:** 733fc4c283339a9072ffd8482475ca5a5d80282be46b2ae7669119618f459df2
-    *   **Download Link:** [https://dl.google.com/release2/chrome/lotkf6gnujjapelkxkcq3vmg6i_141.0.7354.3/141.0.7354.3_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/lotkf6gnujjapelkxkcq3vmg6i_141.0.7354.3/141.0.7354.3_chrome_installer_uncompressed.exe)
-*   **win dev x64**
-    *   **Latest Version:** 141.0.7354.3
-    *   **File Size:** 415.94 MB
-    *   **SHA256 Checksum:** d2feb9e1323a8aa3a915cb2e04cceb3587c92fbd97372d238f0a0e2ea9baa886
-    *   **Download Link:** [https://dl.google.com/release2/chrome/accmzwyqaiqvczlrbivf3nblo2xq_141.0.7354.3/141.0.7354.3_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/accmzwyqaiqvczlrbivf3nblo2xq_141.0.7354.3/141.0.7354.3_chrome_installer_uncompressed.exe)
-*   **win dev arm64**
-    *   **Latest Version:** 141.0.7354.3
-    *   **File Size:** 408.06 MB
-    *   **SHA256 Checksum:** 7820a3f67f46646616cb3baf5dec50862fafd238d40bc4280f61b8e6069e5c62
-    *   **Download Link:** [https://dl.google.com/release2/chrome/m5hoykxdkxizondnqlxfkwa64q_141.0.7354.3/141.0.7354.3_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/m5hoykxdkxizondnqlxfkwa64q_141.0.7354.3/141.0.7354.3_chrome_installer_uncompressed.exe)
+Each section below provides detailed information for the specific installer:
 
-### Canary Channel
+### win stable x86
 
-*   **win canary x86**
-    *   **Latest Version:** 141.0.7368.0
-    *   **File Size:** 343.58 MB
-    *   **SHA256 Checksum:** 34f9a96baa548a0a8ffd2a1827810f3414214d4975e4f3a5e344678a039b992b
-    *   **Download Link:** [https://dl.google.com/release2/chrome/admxxycd3nzmoswvptvt77oclvvq_141.0.7368.0/141.0.7368.0_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/admxxycd3nzmoswvptvt77oclvvq_141.0.7368.0/141.0.7368.0_chrome_installer_uncompressed.exe)
-*   **win canary x64**
-    *   **Latest Version:** 141.0.7368.0
-    *   **File Size:** 416.83 MB
-    *   **SHA256 Checksum:** 39727f0a2007e9591deb5797c7810f46d8718f7d1372ce69616e2e83cd8e436d
-    *   **Download Link:** [https://dl.google.com/release2/chrome/ad224b6xpoa4ddvpe5zpai6qw7ja_141.0.7368.0/141.0.7368.0_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/ad224b6xpoa4ddvpe5zpai6qw7ja_141.0.7368.0/141.0.7368.0_chrome_installer_uncompressed.exe)
-*   **win canary arm64**
-    *   **Latest Version:** 141.0.7368.1
-    *   **File Size:** 568.51 MB
-    *   **SHA256 Checksum:** a7d19575a0c0442867c9c84bd888be53e4bffacb82768bc75e4c1de80604501e
-    *   **Download Link:** [https://dl.google.com/release2/chrome/fm4n5fbskyhzph45v64xnhq2hm_141.0.7368.1/141.0.7368.1_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/fm4n5fbskyhzph45v64xnhq2hm_141.0.7368.1/141.0.7368.1_chrome_installer_uncompressed.exe)
+*   **Latest Version:** 139.0.7258.139
+*   **File Size:** 333.54 MB
+*   **Checksum (Sha256):** c7b037eb6e35277c8558f667e85216df553dd48f54503535125f50ad93e525ed
+*   **Download Link:** [https://dl.google.com/release2/chrome/ijuofmiw6kougwe4vnnl7txy6a_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/ijuofmiw6kougwe4vnnl7txy6a_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe)
+
+### win stable x64
+
+*   **Latest Version:** 139.0.7258.139
+*   **File Size:** 405.57 MB
+*   **Checksum (Sha256):** 14f29fa43b84992015bdee499d04411ef4ab70047d3c35ccc34c4ffedfecab70
+*   **Download Link:** [https://dl.google.com/release2/chrome/jjrbaa52452fvn2fuehjkses74_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/jjrbaa52452fvn2fuehjkses74_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe)
+
+### win stable arm64
+
+*   **Latest Version:** 139.0.7258.139
+*   **File Size:** 395.21 MB
+*   **Checksum (Sha256):** d9b48c3a8c19cbd0d87a98abbebcb2136cec9b1e2e368ec897908f84189cec8c
+*   **Download Link:** [https://dl.google.com/release2/chrome/ac2o56ovbyl4bfqmpmgshmtqdg5a_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/ac2o56ovbyl4bfqmpmgshmtqdg5a_139.0.7258.139/139.0.7258.139_chrome_installer_uncompressed.exe)
+
+### win beta x86
+
+*   **Latest Version:** 140.0.7339.24
+*   **File Size:** 342.56 MB
+*   **Checksum (Sha256):** 95ad95da21e3b757a5bca0919c763d07fb0042123ff4b639a4b5dca0d294a360
+*   **Download Link:** [https://dl.google.com/release2/chrome/ad6re4vy77ydmbyb2nyqbbhoioba_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/ad6re4vy77ydmbyb2nyqbbhoioba_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe)
+
+### win beta x64
+
+*   **Latest Version:** 140.0.7339.24
+*   **File Size:** 413.86 MB
+*   **Checksum (Sha256):** f06c859312ce0a4b79ae5ee1d1555f9ec8fad227c6fc5292df33efecede24d5a
+*   **Download Link:** [https://dl.google.com/release2/chrome/adaolthdsyifl3ed7demc2rgy53q_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/adaolthdsyifl3ed7demc2rgy53q_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe)
+
+### win beta arm64
+
+*   **Latest Version:** 140.0.7339.24
+*   **File Size:** 406.17 MB
+*   **Checksum (Sha256):** a8ecd559175f4fd3b61af652636878ac4b200e26c45ac4e86b2d354c69d55ebb
+*   **Download Link:** [https://dl.google.com/release2/chrome/fthtfj7rsf2cbgyaqsqiico6hu_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/fthtfj7rsf2cbgyaqsqiico6hu_140.0.7339.24/140.0.7339.24_chrome_installer_uncompressed.exe)
+
+### win dev x86
+
+*   **Latest Version:** 141.0.7367.4
+*   **File Size:** 345.59 MB
+*   **Checksum (Sha256):** b1627bdf7b3874275c190119d3bd115d2d83ffac2b7be253d629c842984d5100
+*   **Download Link:** [https://dl.google.com/release2/chrome/ewmynl7jqbqukz23leigsn3eva_141.0.7367.4/141.0.7367.4_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/ewmynl7jqbqukz23leigsn3eva_141.0.7367.4/141.0.7367.4_chrome_installer_uncompressed.exe)
+
+### win dev x64
+
+*   **Latest Version:** 141.0.7367.4
+*   **File Size:** 416.55 MB
+*   **Checksum (Sha256):** c8870f901728ab80aa947406e4d5a229ce8ddcb92c2eb1a13f2c80b81a33fefa
+*   **Download Link:** [https://dl.google.com/release2/chrome/adodn6vrtmyr7dv2pdioztafn3fq_141.0.7367.4/141.0.7367.4_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/adodn6vrtmyr7dv2pdioztafn3fq_141.0.7367.4/141.0.7367.4_chrome_installer_uncompressed.exe)
+
+### win dev arm64
+
+*   **Latest Version:** 141.0.7367.4
+*   **File Size:** 408.96 MB
+*   **Checksum (Sha256):** 552c968a3da27f3d6c96d22853c79b899852818f02c0365b893303babab103df
+*   **Download Link:** [https://dl.google.com/release2/chrome/adodudcu42w5ktofuohp3uwfsxaa_141.0.7367.4/141.0.7367.4_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/adodudcu42w5ktofuohp3uwfsxaa_141.0.7367.4/141.0.7367.4_chrome_installer_uncompressed.exe)
+
+### win canary x86
+
+*   **Latest Version:** 141.0.7370.0
+*   **File Size:** 343.67 MB
+*   **Checksum (Sha256):** ef04d6c3c70ea30f3f0fe9db4ef9820f67394f65de328c49907a1faebf0bf2cb
+*   **Download Link:** [https://dl.google.com/release2/chrome/iafnzmz7lw6wmri2me2th733za_141.0.7370.0/141.0.7370.0_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/iafnzmz7lw6wmri2me2th733za_141.0.7370.0/141.0.7370.0_chrome_installer_uncompressed.exe)
+
+### win canary x64
+
+*   **Latest Version:** 141.0.7370.0
+*   **File Size:** 416.08 MB
+*   **Checksum (Sha256):** 6ef89842a91c19604b361b8b9f8985390479619445e53c47a4467c7fd47f3aea
+*   **Download Link:** [https://dl.google.com/release2/chrome/ftcqasl47zrltvs6os237rwxta_141.0.7370.0/141.0.7370.0_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/ftcqasl47zrltvs6os237rwxta_141.0.7370.0/141.0.7370.0_chrome_installer_uncompressed.exe)
+
+### win canary arm64
+
+*   **Latest Version:** 141.0.7370.0
+*   **File Size:** 408.91 MB
+*   **Checksum (Sha256):** 2ec08b593350a5397676c15fc868e24fc64e999d8a56798636c42aef715e95c0
+*   **Download Link:** [https://dl.google.com/release2/chrome/ad3rotsnkzpuvi2eqtvrcg57prya_141.0.7370.0/141.0.7370.0_chrome_installer_uncompressed.exe](https://dl.google.com/release2/chrome/ad3rotsnkzpuvi2eqtvrcg57prya_141.0.7370.0/141.0.7370.0_chrome_installer_uncompressed.exe)

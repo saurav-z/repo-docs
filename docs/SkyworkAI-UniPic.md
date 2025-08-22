@@ -1,46 +1,34 @@
-# Skywork UniPic: The Future of Unified Multimodal AI
+# Skywork UniPic: Unified Multimodal AI for Image Generation and Understanding
 
-[**Explore the original repository on GitHub**](https://github.com/SkyworkAI/UniPic)
+**Unleash the power of unified multimodal models with Skywork UniPic, your all-in-one solution for image creation, editing, and analysis.**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/SkyworkAI/UniPic)
 
 <div align="center">
   <img src="UniPic-2/assets/imgs/teaser.png" alt="Skywork UniPic2 Teaser" width="90%">
 </div>
 
-## 🚀 Overview: Bridging Vision and Language
+## Overview
 
-Skywork UniPic represents a breakthrough in multimodal AI, offering unified models for image understanding, generation, and editing. This repository provides access to model weights and official implementations, paving the way for innovative applications at the intersection of vision and language. UniPic features two key modeling paradigms to maximize efficiency, accuracy, and adaptability.
+This repository provides the model weights and official implementations for Skywork UniPic, a cutting-edge unified multimodal AI system. UniPic offers two powerful modeling paradigms:
 
-## 🌟 Key Features:
+*   **UniPic-1.0:** A 1.5B parameter model based on Unified Autoregressive Modeling, excelling in joint visual understanding and generation.
+*   **UniPic-2.0 Series:** Featuring efficient architectures with Diffusion Post-Training, delivering state-of-the-art results in text-to-image generation, image editing, and multimodal reasoning.
 
-*   **Text-to-Image Generation:** Transform natural language prompts into stunning, high-fidelity images.
-*   **Image Editing:** Effortlessly perform inpainting, outpainting, and sophisticated object manipulation.
-*   **Image Understanding:** Leverage robust perception capabilities to tackle a wide range of visual tasks.
-*   **Efficient Architecture:** Benefit from optimized models designed for both accuracy and efficient deployment.
+## Key Features
 
-## 📢 Recent Updates:
+*   🎨 **Text-to-Image Generation:** Generate high-quality images from natural language descriptions.
+*   🛠 **Image Editing:** Perform seamless inpainting, outpainting, and object manipulation.
+*   🖼 **Image Understanding:** Gain robust perception capabilities for various visual tasks.
+*   ⚡ **Efficient Architecture:** Benefit from optimized architectures designed for both accuracy and efficient deployment.
+
+## Latest Updates
 
 | Date       | Update                                                                                                                                                                                        |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2025-08-13 | Released **UniPic-2**: Unified Model Weights with Diffusion-based Post-Training <br> [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/README.md) [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Collection-orange)](https://huggingface.co/collections/Skywork/skywork-unipic2-6899b9e1b038b24674d996fd) [![PDF Report](https://img.shields.io/badge/PDF-Report-green)]( https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/assets/pdf/UNIPIC2.pdf) |
-| 2025-07-30 | Released **UniPic-1**: Autoregressive unified modeling from scratch <br> [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/SkyworkAI/UniPic2/tree/main/UniPic-1) [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Collection-orange)](https://huggingface.co/collections/Skywork/skywork-unipic-6888c0789cdb82457b2acf32) [![arXiv](https://img.shields.io/badge/arXiv-2508.03320-b31b1b?logo=arxiv)](https://www.arxiv.org/abs/2508.03320)|
+| 2025-08-13 | Released **UniPic-2** — Unified Model Weights with Diffusion-based Post-Training <br> [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/README.md) [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Collection-orange)](https://huggingface.co/collections/Skywork/skywork-unipic2-6899b9e1b038b24674d996fd) [![PDF Report](https://img.shields.io/badge/PDF-Report-green)]( https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/assets/pdf/UNIPIC2.pdf) |
+| 2025-07-30 | Released **UniPic-1** — Autoregressive unified modeling from scratch <br> [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/SkyworkAI/UniPic2/tree/main/UniPic-1) [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Collection-orange)](https://huggingface.co/collections/Skywork/skywork-unipic-6888c0789cdb82457b2acf32) [![arXiv](https://img.shields.io/badge/arXiv-2508.03320-b31b1b?logo=arxiv)](https://www.arxiv.org/abs/2508.03320)    |
 
-## 🛠️ Model Variants:
+## License
 
-*   **UniPic-1.0:** Utilizes a 1.5B parameter Unified Autoregressive Modeling approach for joint visual understanding and generation.
-*   **UniPic-2.0 Series:** Leverages Efficient Architectures with Diffusion Post-Training in *SD3.5M-Kontext* and *MetaQuery* variants, delivering state-of-the-art results.
-
-## 📜 License:
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-```
-Key improvements and SEO considerations:
-
-*   **Strong Hook:**  The first sentence immediately establishes the project's core value.
-*   **Clear Headings:**  Uses headings (H1, H2) for easy readability and SEO structure.
-*   **Keyword Optimization:** Includes relevant keywords like "multimodal AI," "image generation," "image editing," and "image understanding" throughout the text.
-*   **Concise Language:**  Rephrases the content for clarity and conciseness.
-*   **Bulleted Lists:** Uses bullet points to highlight key features.
-*   **Call to Action:**  The link to the original repo is prominent.
-*   **Comprehensive Summary:** Provides a good overview of the project.
-*   **Date Formatting:** Uses the provided date formatting.
-*   **Simplified and Concise:** Removed redundant phrases and simplified sentences.
+This project is licensed under the [MIT License](LICENSE).

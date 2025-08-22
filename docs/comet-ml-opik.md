@@ -12,6 +12,7 @@
     </div>
 </h1>
 <h2 align="center" style="border-bottom: none">Open-source LLM evaluation platform</h2>
+
 <p align="center">
 Opik helps you build, evaluate, and optimize LLM systems that run better, faster, and cheaper. From RAG chatbots to code assistants to complex agentic pipelines, Opik provides comprehensive tracing, evaluations, dashboards, and powerful features like <b>Opik Agent Optimizer</b> and <b>Opik Guardrails</b> to improve and secure your LLM powered applications in production.
 </p>
@@ -43,35 +44,25 @@ Opik helps you build, evaluate, and optimize LLM systems that run better, faster
 
 [![Opik platform screenshot (thumbnail)](readme-thumbnail-new.png)](https://www.comet.com/signup?from=llm&utm_source=opik&utm_medium=github&utm_content=readme_banner&utm_campaign=opik)
 
-## 🚀 Opik: The Open-Source Platform for Building, Evaluating, and Optimizing LLM Applications
+## Opik: The Open-Source Platform for LLM Development, Evaluation, and Optimization
 
-Opik empowers you to build and deploy better, faster, and more cost-effective LLM applications, from RAG chatbots to complex agentic pipelines. This open-source platform provides a comprehensive suite of tools for every stage of the LLM lifecycle.
+Opik empowers you to build, evaluate, and optimize your Large Language Model (LLM) applications, ensuring they perform at their best. From tracing and evaluation to optimization and security, Opik provides a comprehensive toolkit for the entire LLM lifecycle. Check out the [original repo](https://github.com/comet-ml/opik)!
 
 **Key Features:**
 
-*   **Comprehensive Observability:** Deep tracing of LLM calls, conversation logging, and agent activity.
-*   **Advanced Evaluation:** Robust prompt evaluation, LLM-as-a-judge, and experiment management.
-*   **Production-Ready Monitoring:** Scalable monitoring dashboards and online evaluation rules for production.
-*   **Opik Agent Optimizer:** Dedicated SDK and optimizers to enhance prompts and agents.
-*   **Opik Guardrails:** Features to help you implement safe and responsible AI practices.
-
-**Key Capabilities:**
-
-*   **Development & Tracing:**
-    *   Track all LLM calls and traces with detailed context during development and in production ([Quickstart](https://www.comet.com/docs/opik/quickstart/?from=llm&utm_source=opik&utm_medium=github&utm_content=quickstart_link&utm_campaign=opik)).
-    *   Extensive 3rd-party integrations for easy observability: Seamlessly integrate with a growing list of frameworks, supporting many of the largest and most popular ones natively (including recent additions like **Google ADK**, **Autogen**, and **Flowise AI**). ([Integrations](https://www.comet.com/docs/opik/tracing/integrations/overview/?from=llm&utm_source=opik&utm_medium=github&utm_content=integrations_link&utm_campaign=opik))
-    *   Annotate traces and spans with feedback scores via the [Python SDK](https://www.comet.com/docs/opik/tracing/annotate_traces/#annotating-traces-and-spans-using-the-sdk?from=llm&utm_source=opik&utm_medium=github&utm_content=sdk_link&utm_campaign=opik) or the [UI](https://www.comet.com/docs/opik/tracing/annotate_traces/#annotating-traces-through-the-ui?from=llm&utm_source=opik&utm_medium=github&utm_content=ui_link&utm_campaign=opik).
-    *   Experiment with prompts and models in the [Prompt Playground](https://www.comet.com/docs/opik/prompt_engineering/playground).
-
-*   **Evaluation & Testing:**
-    *   Automate your LLM application evaluation with [Datasets](https://www.comet.com/docs/opik/evaluation/manage_datasets/?from=llm&utm_source=opik&utm_medium=github&utm_content=datasets_link&utm_campaign=opik) and [Experiments](https://www.comet.com/docs/opik/evaluation/evaluate_your_llm/?from=llm&utm_source=opik&utm_medium=github&utm_content=eval_link&utm_campaign=opik).
-    *   Leverage powerful LLM-as-a-judge metrics for complex tasks like [hallucination detection](https://www.comet.com/docs/opik/evaluation/metrics/hallucination/?from=llm&utm_source=opik&utm_medium=github&utm_content=hallucination_link&utm_campaign=opik), [moderation](https://www.comet.com/docs/opik/evaluation/metrics/moderation/?from=llm&utm_source=opik&utm_medium=github&utm_content=moderation_link&utm_campaign=opik), and RAG assessment ([Answer Relevance](https://www.comet.com/docs/opik/evaluation/metrics/answer_relevance/?from=llm&utm_source=opik&utm_medium=github&utm_content=alex_link&utm_campaign=opik), [Context Precision](https://www.comet.com/docs/opik/evaluation/metrics/context_precision/?from=llm&utm_source=opik&utm_medium=github&utm_content=context_link&utm_campaign=opik)).
-    *   Integrate evaluations into your CI/CD pipeline with our [PyTest integration](https://www.comet.com/docs/opik/testing/pytest_integration/?from=llm&utm_source=opik&utm_medium=github&utm_content=pytest_link&utm_campaign=opik).
-
-*   **Production Monitoring & Optimization:**
-    *   Log high volumes of production traces: Opik is designed for scale (40M+ traces/day).
-    *   Monitor feedback scores, trace counts, and token usage over time in the [Opik Dashboard](https://www.comet.com/docs/opik/production/production_monitoring/?from=llm&utm_source=opik&utm_medium=github&utm_content=dashboard_link&utm_campaign=opik).
-    *   Utilize [Online Evaluation Rules](https://www.comet.com/docs/opik/production/rules/?from=llm&utm_source=opik&utm_medium=github&utm_content=dashboard_link&utm_campaign=opik) with LLM-as-a-Judge metrics to identify production issues.
+*   **Comprehensive Observability:**
+    *   Deep tracing of LLM calls, conversation logging, and agent activity.
+    *   Extensive integrations with leading LLM frameworks (Google ADK, Autogen, Flowise AI, and more).
+    *   Annotation of traces and spans with feedback via the Python SDK or UI.
+    *   Experiment with prompts and models in the Prompt Playground.
+*   **Advanced Evaluation:**
+    *   Robust prompt evaluation, LLM-as-a-judge, and experiment management.
+    *   Automated LLM application evaluation with Datasets and Experiments.
+    *   Powerful LLM-as-a-judge metrics for tasks like hallucination detection, moderation, and RAG assessment.
+    *   Integration of evaluations into your CI/CD pipeline using our PyTest integration.
+*   **Production-Ready Optimization & Security:**
+    *   Scalable monitoring dashboards designed to handle high volumes of production traces (40M+ traces/day).
+    *   Online Evaluation Rules with LLM-as-a-Judge metrics for real-time issue detection.
     *   Leverage **Opik Agent Optimizer** and **Opik Guardrails** to continuously improve and secure your LLM applications in production.
 
 > [!TIP]
@@ -81,23 +72,24 @@ Opik empowers you to build and deploy better, faster, and more cost-effective LL
 
 ## 🛠️ Opik Server Installation
 
-Get your Opik server running in minutes. Choose the option that best suits your needs:
+Get started with Opik quickly using the following options:
 
 ### Option 1: Comet.com Cloud (Easiest & Recommended)
 
-Access Opik instantly without any setup. Ideal for quick starts and hassle-free maintenance.
+Access Opik instantly with a free Comet account.
 
 👉 [Create your free Comet account](https://www.comet.com/signup?from=llm&utm_source=opik&utm_medium=github&utm_content=install_create_link&utm_campaign=opik)
 
 ### Option 2: Self-Host Opik for Full Control
 
-Deploy Opik in your own environment. Choose between Docker for local setups or Kubernetes for scalability.
+Deploy Opik in your own environment using Docker Compose (for local development and testing) or Kubernetes (for scalable deployments).
 
-#### Self-Hosting with Docker Compose (for Local Development & Testing)
+#### Self-Hosting with Docker Compose
 
-This is the simplest way to get a local Opik instance running. Note the new `./opik.sh` installation script:
+**Prerequisites:** Ensure you have Docker and Docker Compose installed.
 
-On Linux or Mac Enviroment:
+**Installation (Linux/Mac):**
+
 ```bash
 # Clone the Opik repository
 git clone https://github.com/comet-ml/opik.git
@@ -109,7 +101,8 @@ cd opik
 ./opik.sh
 ```
 
-On Windows Enviroment:
+**Installation (Windows):**
+
 ```powershell
 # Clone the Opik repository
 git clone https://github.com/comet-ml/opik.git
@@ -121,49 +114,45 @@ cd opik
 powershell -ExecutionPolicy ByPass -c ".\\opik.ps1"
 ```
 
-Use the `--help` or `--info` options to troubleshoot issues. Dockerfiles now ensure containers run as non-root users for enhanced security. Once all is up and running, you can now visit [localhost:5173](http://localhost:5173) on your browser! For detailed instructions, see the [Local Deployment Guide](https://www.comet.com/docs/opik/self-host/local_deployment?from=llm&utm_source=opik&utm_medium=github&utm_content=self_host_link&utm_campaign=opik).
+Access the Opik platform at [localhost:5173](http://localhost:5173). For detailed instructions, refer to the [Local Deployment Guide](https://www.comet.com/docs/opik/self-host/local_deployment?from=llm&utm_source=opik&utm_medium=github&utm_content=self_host_link&utm_campaign=opik).
 
-#### Self-Hosting with Kubernetes & Helm (for Scalable Deployments)
+#### Self-Hosting with Kubernetes & Helm
 
-For production or larger-scale self-hosted deployments, Opik can be installed on a Kubernetes cluster using our Helm chart. Click the badge for the full [Kubernetes Installation Guide using Helm](https://www.comet.com/docs/opik/self-host/kubernetes/#kubernetes-installation?from=llm&utm_source=opik&utm_medium=github&utm_content=kubernetes_link&utm_campaign=opik).
+For production deployments, install Opik on a Kubernetes cluster using our Helm chart.
 
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326ce5.svg?&logo=kubernetes&logoColor=white)](https://www.comet.com/docs/opik/self-host/kubernetes/#kubernetes-installation?from=llm&utm_source=opik&utm_medium=github&utm_content=kubernetes_link&utm_campaign=opik)
 
 > [!IMPORTANT]
-> **Version 1.7.0 Changes**: Please check the [changelog](https://github.com/comet-ml/opik/blob/main/CHANGELOG.md) for important updates and breaking changes.
+> **Version 1.7.0 Changes**: Please review the [changelog](https://github.com/comet-ml/opik/blob/main/CHANGELOG.md) for important updates and potential breaking changes.
 
 ## 💻 Opik Client SDK
 
-Opik provides a suite of client libraries and a REST API to interact with the Opik server. This includes SDKs for Python, TypeScript, and Ruby (via OpenTelemetry), allowing for seamless integration into your workflows. For detailed API and SDK references, see the [Opik Client Reference Documentation](apps/opik-documentation/documentation/fern/docs/reference/overview.mdx).
+Interact with the Opik server using a suite of client libraries and a REST API, including Python, TypeScript, and Ruby (via OpenTelemetry). Explore the [Opik Client Reference Documentation](apps/opik-documentation/documentation/fern/docs/reference/overview.mdx) for detailed API and SDK references.
 
 ### Python SDK Quick Start
 
-To get started with the Python SDK:
+Install and configure the Python SDK to begin logging traces:
 
-Install the package:
+1.  **Install the package:**
 
-```bash
-# install using pip
-pip install opik
+    ```bash
+    pip install opik
+    # or install with uv
+    uv pip install opik
+    ```
 
-# or install with uv
-uv pip install opik
-```
+2.  **Configure the SDK:**  Run `opik configure` to set up your server address/API key and workspace. You can also configure the SDK directly in your code using `opik.configure()`.
 
-Configure the python SDK by running the `opik configure` command, which will prompt you for your Opik server address (for self-hosted instances) or your API key and workspace (for Comet.com):
-
-```bash
-opik configure
-```
-
-> [!TIP]
-> You can also call `opik.configure(use_local=True)` from your Python code to configure the SDK to run on a local self-hosted installation, or provide API key and workspace details directly for Comet.com. Refer to the [Python SDK documentation](apps/opik-documentation/documentation/fern/docs/reference/python-sdk/) for more configuration options.
-
-You are now ready to start logging traces using the [Python SDK](https://www.comet.com/docs/opik/python-sdk-reference/?from=llm&utm_source=opik&utm_medium=github&utm_content=sdk_link2&utm_campaign=opik).
+    ```bash
+    opik configure
+    ```
+3.  **Start logging traces** using the [Python SDK](https://www.comet.com/docs/opik/python-sdk-reference/?from=llm&utm_source=opik&utm_medium=github&utm_content=sdk_link2&utm_campaign=opik).
 
 ### 📝 Logging Traces with Integrations
 
-Easily monitor and debug your LLM applications with Opik's extensive integrations. Opik supports a wide array of frameworks, including recent additions like **Google ADK**, **Autogen**, and **Flowise AI**.
+Seamlessly integrate Opik with your LLM workflows using our direct integrations.
+
+**Supported Frameworks:**
 
 | Integration    | Description                                                         | Documentation                                                                                                                                                        | Try in Colab                                                                                                                                                                                                                       |
 |----------------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -201,26 +190,43 @@ Easily monitor and debug your LLM applications with Opik's extensive integration
 | Vercel AI      | Log traces for Vercel AI SDK calls                                  | [Documentation](https://www.comet.com/docs/opik/tracing/integrations/vercel-ai-sdk/?utm_source=opik&utm_medium=github&utm_content=langchain_link&utm_campaign=opik)  | (*Coming Soon*)                                                                                                                                                                                                                    |
 | watsonx        | Log traces for IBM watsonx LLM calls                                | [Documentation](https://www.comet.com/docs/opik/tracing/integrations/watsonx?utm_source=opik&utm_medium=github&utm_content=watsonx_link&utm_campaign=opik)           | [![Open Quickstart In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/comet-ml/opik/blob/main/apps/opik-documentation/documentation/docs/cookbook/watsonx.ipynb)      |
 
-> [!TIP]
-> If the framework you are using is not listed above, feel free to [open an issue](https://github.com/comet-ml/opik/issues) or submit a PR with the integration.
-
-If you are not using any of the frameworks above, you can also use the `track` function decorator to [log traces](https://www.comet.com/docs/opik/tracing/log_traces/?from=llm&utm_source=opik&utm_medium=github&utm_content=traces_link&utm_campaign=opik):
-
-```python
-import opik
-
-opik.configure(use_local=True) # Run locally
-
-@opik.track
-def my_llm_function(user_question: str) -> str:
-    # Your LLM code here
-
-    return "Hello"
-```
-
-> [!TIP]
-> The track decorator can be used in conjunction with any of our integrations and can also be used to track nested function calls.
+If your framework isn't listed, you can also use the `track` function decorator.
 
 ### 🧑‍⚖️ LLM as a Judge Metrics
 
-Enhance your evaluation process with Opik's built-in LLM-as-a-Judge metrics. Learn more about it in the [metrics documentation](https://www.comet.com/docs/opik/evaluation/metrics/overview
+Use built-in and custom LLM-as-a-Judge metrics in your applications.
+
+To use the LLM-as-a-Judge metrics, simply import the relevant metric and use the `score` function:
+
+```python
+from opik.evaluation.metrics import Hallucination
+
+metric = Hallucination()
+score = metric.score(
+    input="What is the capital of France?",
+    output="Paris",
+    context=["France is a country in Europe."]
+)
+print(score)
+```
+
+## 🔍 Evaluating your LLM Application
+
+Utilize Datasets and Experiments to evaluate your LLM applications throughout the development process. Integrate evaluations into your CI/CD pipeline with our PyTest integration.
+
+## ⭐ Star Us on GitHub
+
+Show your support and help grow our community by giving us a star!
+
+[![Star History Chart](https://api.star-history.com/svg?repos=comet-ml/opik&type=Date)](https://github.com/comet-ml/opik)
+
+## 🤝 Contributing
+
+Contribute to the Opik project by:
+
+*   Submitting [bug reports](https://github.com/comet-ml/opik/issues) and [feature requests](https://github.com/comet-ml/opik/issues).
+*   Reviewing and improving the [documentation](CONTRIBUTING.md).
+*   Sharing your experience with Opik.
+*   Upvoting [popular feature requests](https://github.com/comet-ml/opik/issues?q=is%3Aissue+is%3Aopen+label%3A%22enhancement%22).
+
+For contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).

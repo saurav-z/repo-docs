@@ -1,13 +1,13 @@
 <div align="center">
-  <img alt="FastAPI Best Architecture Logo" width="320" src="https://wu-clan.github.io/picx-images-hosting/logo/fba.png">
-</div>
+
+<img alt="The logo includes the abstract combination of the three letters FBA, forming a lightning bolt that seems to spread out from the ground" width="320" src="https://wu-clan.github.io/picx-images-hosting/logo/fba.png">
 
 # FastAPI Best Architecture: Build Robust Backend Solutions
 
-**Looking for a scalable and maintainable backend architecture?** FastAPI Best Architecture provides a robust, enterprise-level solution for building high-performance APIs.  Learn more and contribute on [GitHub](https://github.com/fastapi-practices/fastapi_best_architecture).
+This project provides a robust, enterprise-level backend architecture solution built with FastAPI, offering a solid foundation for your Python web applications.  [See the original repository](https://github.com/fastapi-practices/fastapi_best_architecture) for more details.
 
-[![GitHub License](https://img.shields.io/github/license/fastapi-practices/fastapi_best_architecture)](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE)
-[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
+[![GitHub](https://img.shields.io/github/license/fastapi-practices/fastapi_best_architecture)](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-%2300758f)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16.0%2B-%23336791)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0-%23778877)
@@ -19,34 +19,38 @@
 ![Discord](https://img.shields.io/discord/1185035164577972344)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/fastapi-practices/fastapi_best_architecture)
 
+</div>
 
 ## Key Features
 
-*   **Pseudo 3-Tier Architecture:** Designed with a clear separation of concerns, inspired by 3-tier architecture principles for enhanced maintainability and scalability.
-*   **Modern Tech Stack:** Leverages FastAPI, Pydantic, SQLAlchemy, and other cutting-edge technologies for optimal performance and developer experience.
-*   **Database Support:** Compatible with MySQL and PostgreSQL.
-*   **Code Quality:** Enforces code quality using Ruff and uv.
-*   **Docker Support:**  Includes Docker configurations for easy deployment.
+This project leverages a "pseudo 3-tier" architecture for building robust and scalable FastAPI applications, providing:
 
-## Architecture Overview
+*   **Clean Separation of Concerns:**  Organizes code into distinct layers (API, Schema, Service, CRUD, Model) for maintainability.
+*   **Data Validation with Pydantic:** Ensures data integrity and type safety.
+*   **Database Integration:** Supports MySQL, PostgreSQL, and SQLAlchemy for efficient data management.
+*   **Modern Tooling:** Utilizes Ruff and uv for linting and package management.
+*   **Docker Support:** Simplifies deployment and containerization.
 
-This project implements a "pseudo 3-tier" architecture, offering a structured approach to backend development.  The core components map as follows:
+## Architecture Overview: Pseudo 3-Tier
 
-| Workflow       | Java            | FastAPI Best Architecture |
-|----------------|-----------------|---------------------------|
-| View           | Controller      | API                       |
-| Data Transfer  | DTO             | Schema                    |
-| Business Logic | Service + Impl  | Service                   |
-| Data Access    | DAO / Mapper    | CRUD                      |
-| Model          | Model / Entity  | Model                     |
+This project embraces a "pseudo 3-tier" architecture. While not a traditional multi-app structure, it provides a structured approach to backend development.
 
-## Documentation
+| Workflow       | Java           | FastAPI Best Architecture |
+|----------------|----------------|---------------------------|
+| View           | Controller     | API                       |
+| Data Transfer  | DTO            | Schema                    |
+| Business Logic | Service + Impl | Service                   |
+| Data Access    | DAO / Mapper   | CRUD                      |
+| Model          | Model / Entity | Model                     |
 
-For detailed information on implementation and usage, please refer to the [official documentation](https://fastapi-practices.github.io/fastapi_best_architecture_docs/).
+## Documentation & Resources
 
-## Contributions
+*   **Official Documentation:**  [Official Documentation](https://fastapi-practices.github.io/fastapi_best_architecture_docs/)
+*   **Community Support:** [Discord](https://wu-clan.github.io/homepage/)
 
-We welcome contributions!  See who's helping out:
+## Contributing
+
+We welcome contributions!
 
 <a href="https://github.com/fastapi-practices/fastapi_best_architecture/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=fastapi-practices/fastapi_best_architecture"/>
@@ -61,18 +65,15 @@ Special thanks to the following projects:
 *   [SQLAlchemy](https://docs.sqlalchemy.org/en/20/)
 *   [Casbin](https://casbin.org/zh/)
 *   [Ruff](https://beta.ruff.rs/docs/)
-*   ...
 
-## Get Involved
+## Support & Sponsorship
 
-*   [Discord](https://wu-clan.github.io/homepage/)
+If you find this project helpful, consider supporting it:
 
-## Support Us
-
-If you find this project helpful, consider supporting our efforts: [:coffee: Sponsor :coffee:](https://wu-clan.github.io/sponsor/)
+[:coffee: Sponsor :coffee:](https://wu-clan.github.io/sponsor/)
 
 ## License
 
-This project is licensed under the [MIT](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE) license.
+This project is licensed under the [MIT License](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE).
 
 [![Stargazers over time](https://starchart.cc/fastapi-practices/fastapi_best_architecture.svg?variant=adaptive)](https://starchart.cc/fastapi-practices/fastapi_best_architecture)

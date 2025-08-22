@@ -1,13 +1,9 @@
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/_static/dark-logo.svg" />
-    <img alt="Authlib" src="docs/_static/light-logo.svg" height="68" />
-  </picture>
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/_static/dark-logo.svg" />
+        <img alt="Authlib" src="docs/_static/light-logo.svg" height="68" />
+    </picture>
 </div>
-
-# Authlib: The Ultimate Python Library for OAuth and OpenID Connect
-
-**Authlib** is a powerful Python library designed to simplify the implementation of OAuth and OpenID Connect client and server functionality.  [View the original repo](https://github.com/authlib/authlib)
 
 [![Build Status](https://github.com/authlib/authlib/workflows/tests/badge.svg)](https://github.com/authlib/authlib/actions)
 [![PyPI version](https://img.shields.io/pypi/v/authlib.svg)](https://pypi.org/project/authlib)
@@ -16,23 +12,41 @@
 [![Code Coverage](https://codecov.io/gh/authlib/authlib/graph/badge.svg?token=OWTdxAIsPI)](https://codecov.io/gh/authlib/authlib)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=authlib_authlib&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=authlib_authlib)
 
-## Key Features of Authlib
+# Authlib: The Ultimate Python Library for OAuth, OpenID Connect, and JWT
 
-Authlib provides a comprehensive set of features for both client and server implementations, adhering to relevant specifications:
+**Authlib** empowers developers with a comprehensive and compliant suite of tools to build secure and robust authentication and authorization solutions in Python.  [See the original repository](https://github.com/authlib/authlib).
 
-*   **OAuth 1.0 and 2.0 Support:** Full support for both OAuth 1.0 and 2.0 protocols, including all relevant RFC specifications.
-*   **OpenID Connect 1.0:**  Comprehensive support for OpenID Connect 1.0, including core, discovery, and dynamic client registration.
-*   **JSON Web Token (JWT) and JOSE:** Includes JWS, JWK, JWA, and JWT for secure data transmission and authentication.
-*   **Built-in Client Integrations:** Easy integration with popular Python frameworks like Requests, HTTPX, Flask, Django, Starlette, and FastAPI.
-*   **Flexible Provider Implementations:** Build custom OAuth 1.0, OAuth 2.0, and OpenID Connect providers for Flask and Django.
-*   **Security Focused:**  Includes tools and guidance for secure implementation and reporting of vulnerabilities.
-*   **Spec-Compliant:**  Adheres to industry standards for OAuth and OpenID Connect protocols, ensuring interoperability.
+## Key Features
+
+*   **Comprehensive Protocol Support:**
+
+    *   OAuth 1.0 and 2.0
+    *   OpenID Connect 1.0
+    *   JSON Web Signature (JWS), Encryption (JWE), Key (JWK), and Token (JWT)
+    *   Supports the latest RFC specifications for all protocols.
+
+*   **Client Integrations:**
+
+    *   Seamlessly connect with third-party OAuth providers using:
+        *   Requests
+        *   HTTPX
+        *   Flask, Django, Starlette, and FastAPI OAuth clients
+
+*   **Provider Implementations:**
+
+    *   Build your own OAuth and OpenID Connect providers with:
+        *   Flask
+        *   Django
+
+*   **Standards Compliance:**  Authlib is designed to fully comply with industry standards, ensuring interoperability and security.
+*   **Security:** Provides a reliable and secure foundation for handling sensitive authentication and authorization data.
+*   **Flexible Licensing:** Offers both a permissive BSD license for open-source projects and a commercial license for projects requiring dedicated support.
 
 ## Migrations
 
-Authlib will deprecate `authlib.jose` module. Please read:
+Authlib will deprecate `authlib.jose` module. To learn more, read:
 
-- [Migrating from `authlib.jose` to `joserfc`](https://jose.authlib.org/en/dev/migrations/authlib/)
+*   [Migrating from `authlib.jose` to `joserfc`](https://jose.authlib.org/en/dev/migrations/authlib/)
 
 ## Sponsors
 
@@ -52,19 +66,32 @@ Authlib will deprecate `authlib.jose` module. Please read:
 
 ## Useful Links
 
-1.  Homepage: <https://authlib.org/>
-2.  Documentation: <https://docs.authlib.org/>
-3.  Purchase Commercial License: <https://authlib.org/plans>
-4.  Blog: <https://blog.authlib.org/>
-5.  Twitter: <https://twitter.com/authlib>
-6.  StackOverflow: <https://stackoverflow.com/questions/tagged/authlib>
-7.  Other Repositories: <https://github.com/authlib>
-8.  Subscribe Tidelift: [https://tidelift.com/subscription/pkg/pypi-authlib](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links)
+*   **Homepage:** <https://authlib.org/>
+*   **Documentation:** <https://docs.authlib.org/>
+*   **Commercial License:** <https://authlib.org/plans>
+*   **Blog:** <https://blog.authlib.org/>
+*   **Twitter:** <https://twitter.com/authlib>
+*   **StackOverflow:** <https://stackoverflow.com/questions/tagged/authlib>
+*   **Other Repositories:** <https://github.com/authlib>
+*   **Tidelift:** [https://tidelift.com/subscription/pkg/pypi-authlib](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links)
 
 ## Security Reporting
 
-Report security issues responsibly.  Contact `me@lepture.com` or use the [Tidelift security contact](https://tidelift.com/security).
+Report security issues responsibly. Contact the maintainers directly with security concerns: `me@lepture.com`.
+
+PGP Key fingerprint:
+
+```
+72F8 E895 A70C EBDF 4F2A DFE0 7E55 E3E0 118B 2B4C
+```
+
+Alternatively, use the [Tidelift security contact](https://tidelift.com/security).
 
 ## License
 
-Authlib is available under both BSD and commercial licenses.  See [Authlib Plans](https://authlib.org/plans) for details.
+Authlib is available under both:
+
+*   BSD LICENSE
+*   COMMERCIAL-LICENSE
+
+```

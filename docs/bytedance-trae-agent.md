@@ -1,6 +1,6 @@
-# Trae Agent: An LLM-Powered Agent for Streamlined Software Engineering
+# Trae Agent: Your AI-Powered Software Engineering Assistant
 
-Trae Agent is a cutting-edge, open-source AI agent designed to simplify and automate complex software engineering tasks, offering researchers and developers a flexible and extensible platform. [See the original repository](https://github.com/bytedance/trae-agent).
+**Trae Agent is a powerful, LLM-driven agent designed to automate and enhance software engineering tasks, offering a flexible and research-friendly platform for AI agent development.**  Check out the original repository at [https://github.com/bytedance/trae-agent](https://github.com/bytedance/trae-agent).
 
 [![arXiv:2507.23370](https://img.shields.io/badge/TechReport-arXiv%3A2507.23370-b31a1b)](https://arxiv.org/abs/2507.23370)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -8,24 +8,21 @@ Trae Agent is a cutting-edge, open-source AI agent designed to simplify and auto
 [![Unit Tests](https://github.com/bytedance/trae-agent/actions/workflows/unit-test.yml/badge.svg)](https://github.com/bytedance/trae-agent/actions/workflows/unit-test.yml)
 [![Discord](https://img.shields.io/discord/1320998163615846420?label=Join%20Discord&color=7289DA)](https://discord.gg/VwaQ4ZBHvC)
 
-**Key Features:**
+## Key Features
 
-*   **Multi-LLM Support:** Compatible with OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, and Google Gemini.
-*   **Rich Tool Ecosystem:** Includes file editing, bash execution, sequential thinking, and more, providing a comprehensive suite for various tasks.
-*   **Interactive Mode:** Offers a conversational interface for iterative development and easy experimentation.
-*   **Trajectory Recording:** Detailed logging of all agent actions for debugging, analysis, and understanding agent behavior.
-*   **Flexible Configuration:** YAML-based configuration with environment variable support, making setup and customization simple.
-*   **Easy Installation:** A straightforward pip-based installation process ensures quick setup and deployment.
-*   **Lakeview Summarization:** Short and concise summaries of each agent step, improving understanding of agent actions.
-*   **Research-Friendly Design:** Transparent, modular architecture ideal for studying AI agent architectures and developing novel agent capabilities.
-
-**Project Status:** Actively developed. Refer to [docs/roadmap.md](docs/roadmap.md) and [CONTRIBUTING](CONTRIBUTING.md) for contribution opportunities.
+*   **Multi-LLM Support:** Seamlessly integrates with OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, and Google Gemini.
+*   **Rich Tool Ecosystem:** Includes file editing, bash execution, sequential thinking, and more, offering a comprehensive toolkit for software development.
+*   **Interactive Mode:** Engage in a conversational interface for iterative development and task refinement.
+*   **Trajectory Recording:** Detailed logging of agent actions for in-depth debugging and analysis, with automatic and custom file saving options.
+*   **Flexible Configuration:** Easy YAML-based configuration with environment variable support for convenient customization.
+*   **Lakeview Summarization:** Provides concise summaries of agent steps.
+*   **Easy Installation:** Simplified setup with a straightforward pip-based installation process.
 
 ## Installation
 
 ### Requirements
 
-*   UV ([https://docs.astral.sh/uv/](https://docs.astral.sh/uv/))
+*   UV (https://docs.astral.sh/uv/)
 *   API key for your chosen provider (OpenAI, Anthropic, Google Gemini, OpenRouter, etc.)
 
 ### Setup
@@ -48,35 +45,35 @@ source .venv/bin/activate
 
 2.  Edit `trae_config.yaml` with your API credentials and preferences:
 
-```yaml
-agents:
-  trae_agent:
-    enable_lakeview: true
-    model: trae_agent_model  # the model configuration name for Trae Agent
-    max_steps: 200  # max number of agent steps
-    tools:  # tools used with Trae Agent
-      - bash
-      - str_replace_based_edit_tool
-      - sequentialthinking
-      - task_done
+    ```yaml
+    agents:
+      trae_agent:
+        enable_lakeview: true
+        model: trae_agent_model  # the model configuration name for Trae Agent
+        max_steps: 200  # max number of agent steps
+        tools:  # tools used with Trae Agent
+          - bash
+          - str_replace_based_edit_tool
+          - sequentialthinking
+          - task_done
 
-model_providers:  # model providers configuration
-  anthropic:
-    api_key: your_anthropic_api_key
-    provider: anthropic
-  openai:
-    api_key: your_openai_api_key
-    provider: openai
+    model_providers:  # model providers configuration
+      anthropic:
+        api_key: your_anthropic_api_key
+        provider: anthropic
+      openai:
+        api_key: your_openai_api_key
+        provider: openai
 
-models:
-  trae_agent_model:
-    model_provider: anthropic
-    model: claude-sonnet-4-20250514
-    max_tokens: 4096
-    temperature: 0.5
-```
+    models:
+      trae_agent_model:
+        model_provider: anthropic
+        model: claude-sonnet-4-20250514
+        max_tokens: 4096
+        temperature: 0.5
+    ```
 
-**Note:** The `trae_config.yaml` file is ignored by git to protect your API keys.
+    **Note:** The `trae_config.yaml` file is ignored by git to protect your API keys.
 
 ### Environment Variables (Alternative)
 
@@ -201,11 +198,13 @@ For contribution guidelines, please refer to [CONTRIBUTING.md](CONTRIBUTING.md).
 ### Troubleshooting
 
 **Import Errors:**
+
 ```bash
 PYTHONPATH=. trae-cli run "your task"
 ```
 
 **API Key Issues:**
+
 ```bash
 # Verify API keys
 echo $OPENAI_API_KEY
@@ -213,11 +212,13 @@ trae-cli show-config
 ```
 
 **Command Not Found:**
+
 ```bash
 uv run trae-cli run "your task"
 ```
 
 **Permission Errors:**
+
 ```bash
 chmod +x /path/to/your/project
 ```

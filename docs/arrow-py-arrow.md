@@ -1,26 +1,25 @@
-# Arrow: Intuitive Date and Time Handling for Python
+# Arrow: Dates and Times Made Easy for Python
 
-**Simplify date and time manipulation in Python with Arrow, a user-friendly library that makes working with dates and times a breeze.**  [View the project on GitHub](https://github.com/arrow-py/arrow)
+**Simplify your Python date and time operations with Arrow, a user-friendly library designed for human readability and ease of use.**  For more details, visit the [original repository](https://github.com/arrow-py/arrow).
 
 ## Key Features
 
-*   **User-Friendly:** Provides a clean and intuitive API for all date and time operations.
-*   **Drop-in Replacement:** Fully implements and extends the Python `datetime` type.
-*   **Timezone Awareness:** Handles timezones gracefully, with UTC as the default.
-*   **Easy Creation:** Simple methods for creating dates and times from various input formats.
-*   **Flexible Manipulation:** Offers `shift` methods for relative offsets (including weeks), as well as time spans, ranges, and floors/ceilings.
-*   **Automatic Formatting and Parsing:**  Formats and parses strings automatically, with robust ISO 8601 support.
-*   **Timezone Conversion:** Seamlessly converts between timezones.
-*   **Humanization:** Humanizes dates and times with localization support (multiple locales available).
-*   **Type Hinting:**  Full support for PEP 484-style type hints.
+*   **Intuitive Date and Time Creation:** Easily create Arrow objects from various inputs.
+*   **Timezone Awareness:**  Works seamlessly with timezones, UTC by default.
+*   **Human-Friendly Formatting:**  Format dates and times with built-in options, and humanize them to be more readable.
+*   **Flexible Time Manipulation:** Shift dates and times with relative offsets, including support for weeks.
+*   **ISO 8601 Support:** Full support for parsing and formatting using the ISO 8601 standard.
+*   **Time Span and Range Generation:** Create time spans and ranges for microsecond to year frames.
+*   **Localization:** Supports humanizing dates and times with a growing list of locales.
+*   **Drop-in Replacement:** Provides a fully implemented, drop-in replacement for the datetime module.
 
 ## Why Choose Arrow?
 
-Arrow addresses the common pain points of working with Python's built-in datetime modules:
+Arrow overcomes the complexities of Python's built-in datetime modules by:
 
-*   **Reduces complexity:** Avoids the need to juggle multiple modules and types (datetime, time, tzinfo, etc.).
-*   **Simplifies Timezone Handling:** Makes timezone conversions and timestamp management straightforward.
-*   **Enhances Usability:** Offers features such as ISO 8601 parsing, time spans, and humanization.
+*   Reducing the number of modules and types you need to import and understand.
+*   Simplifying timezone conversions.
+*   Offering intuitive methods for common tasks like ISO 8601 parsing, time spans, and humanization.
 
 ## Quick Start
 
@@ -43,41 +42,35 @@ arrow.get('2013-05-11T21:23:58.970460+07:00')
 
 # Get the current UTC time
 utc = arrow.utcnow()
-# <Arrow [2013-05-11T21:23:58.970460+00:00]>
+# <Arrow [2024-10-27T10:30:00.000000+00:00]>
 
-# Shift time by a given number of hours
+# Shift the time by an hour
 utc = utc.shift(hours=-1)
-# <Arrow [2013-05-11T20:23:58.970460+00:00]>
+# <Arrow [2024-10-27T09:30:00.000000+00:00]>
 
-# Convert to a local timezone
+# Convert to a different timezone
 local = utc.to('US/Pacific')
-# <Arrow [2013-05-11T13:23:58.970460-07:00]>
+# <Arrow [2024-10-27T02:30:00.000000-07:00]>
 
-# Get the timestamp
+# Get a timestamp
 local.timestamp()
-# 1368303838.970460
+# 1700000000.000000
 
 # Format the date and time
 local.format()
-# '2013-05-11 13:23:58 -07:00'
+# '2024-10-27 02:30:00 -07:00'
 local.format('YYYY-MM-DD HH:mm:ss ZZ')
-# '2013-05-11 13:23:58 -07:00'
+# '2024-10-27 02:30:00 -07:00'
 
-# Humanize the date and time
+# Humanize the time
 local.humanize()
-# 'an hour ago'
-local.humanize(locale='ko-kr')
-# '한시간 전'
+# 'a few hours ago'
 ```
 
 ## Documentation
 
-For detailed information, see the full documentation at [arrow.readthedocs.io](https://arrow.readthedocs.io).
+For in-depth information, refer to the official documentation at [arrow.readthedocs.io](https://arrow.readthedocs.io).
 
 ## Contributing
 
-We welcome contributions!  See the [contributing guidelines](https://github.com/arrow-py/arrow/blob/master/CONTRIBUTING.md) for instructions on how to get involved.
-
-## Support Arrow
-
-Support Arrow by donating via [Open Collective](https://opencollective.com/arrow).
+Contributions are welcome!  Refer to the original README for details on how to contribute code, add locales, and more.

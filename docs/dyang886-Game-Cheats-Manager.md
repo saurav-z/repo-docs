@@ -1,41 +1,60 @@
-# Game Cheats Manager: Your Ultimate Trainer Management Solution for PC Gaming
+# Game Cheats Manager: Your Ultimate Trainer Management Solution
 
-Tired of juggling multiple trainer applications for your single-player games? **Game Cheats Manager** simplifies your gaming experience by providing a centralized hub to browse, download, launch, and manage your game trainers.  Visit the original repository for more details: [Game-Cheats-Manager](https://github.com/dyang886/Game-Cheats-Manager)
+**Tired of juggling multiple trainers for your favorite single-player games?** Game Cheats Manager is your all-in-one solution for browsing, downloading, managing, and launching game trainers with ease. [Check out the original repository](https://github.com/dyang886/Game-Cheats-Manager) for more details.
+
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/dyang886/Game-Cheats-Manager/total)](https://github.com/dyang886/Game-Cheats-Manager/releases/latest)
+[![GitHub Repo stars](https://img.shields.io/github/stars/dyang886/Game-Cheats-Manager?style=flat&color=ffc000)](https://github.com/dyang886/Game-Cheats-Manager)
+[![GitHub Release](https://img.shields.io/github/v/release/dyang886/Game-Cheats-Manager?link=https%3A%2F%2Fgithub.com%2Fdyang886%2FGame-Cheats-Manager%2Freleases%2Flatest)](https://github.com/dyang886/Game-Cheats-Manager/releases/latest)
+[![GitHub License](https://img.shields.io/github/license/dyang886/Game-Cheats-Manager)](https://github.com/dyang886/Game-Cheats-Manager/blob/main/LICENSE)
+<a href="https://hellogithub.com/repository/3ca6e8e23401477282ba72d2d8932311" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=3ca6e8e23401477282ba72d2d8932311&claim_uid=UrZOap0AkvuRw7D&theme=small" alt="Featured｜HelloGitHub" /></a>
+<a href="https://discord.gg/d627qVyHEF" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Join_Discord-f0f0f0?logo=discord"></a>
+<a href="https://pd.qq.com/s/h06qbdey6" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Join_QQ-f0f0f0?logo=qq"></a>
 
 <div align="center">
     <img src="src/assets/logo.png" alt="Game Cheats Manager logo" width="250" />
 </div>
 
-## Key Features:
+## Key Features
 
-*   **Effortless Trainer Management:** Easily launch, delete, and organize your game trainers from a single, intuitive interface.
-*   **Trainer Discovery and Download:** Browse and download trainers directly within the application, eliminating the need to search across multiple websites.
-*   **Customizable Settings:** Tailor your experience with theme and language options, trainer update settings, and download path customization.
-*   **Integrated Tools:** Includes features to import existing trainers, open the trainer download folder, and add download paths to the Windows Defender whitelist.
-*   **Trainer Source Management:** Conveniently manage the settings for each trainer source in one place.
+*   **Trainer Browsing & Searching:** Easily find trainers with a built-in search bar and browse available options.
+*   **Direct Download & Management:** Download and manage trainers directly from the application.
+*   **One-Click Launch & Delete:** Launch and delete trainers with a simple click.
+*   **Trainer Management Panel:** Customize trainer sources, automatic updates, and download settings.
+*   **Customization Options:** Adjust themes, languages, import trainers, and configure Windows Defender whitelisting.
+*   **User-Friendly Interface:** Intuitive design for a seamless gaming experience.
 
-## Getting Started:
+## How to Use
 
-### Installation:
+### Browsing & Launching Trainers
 
-1.  **Download:** Obtain the latest Windows (64-bit) installer from the [latest release](https://github.com/dyang886/Game-Cheats-Manager/releases).
-2.  **Run the Installer:** Execute the downloaded file and follow the on-screen prompts.
+1.  **Browse Trainers:** In the left column, search or browse to find downloaded trainers.
+2.  **Launch Trainers:** Double-click or click the "Launch" button to start a trainer.
+3.  **Delete Trainers:** Click the "Delete" button to remove a trainer.
+
+### Downloading Trainers
+
+1.  **Search:** Use the search bar in the right column to find available trainers by keyword.
+2.  **Download:** Double-click the desired match to download it.
+3.  **Configure:** Customize the download path by clicking the "..." button.
+
+### Additional Management & Configuration
+
+1.  **Trainer Management:** Fine-tune settings for each trainer source, including updates and download servers.
+2.  **Options Menu:** Access settings, import trainers, manage download paths, and view app information.
+
+## Installation
+
+1.  **Download:** Get the latest [Windows (64-bit) installer](https://github.com/dyang886/Game-Cheats-Manager/releases) from the releases page.
+2.  **Run:** Execute the installer and follow the instructions.
 3.  **Launch:** Open Game Cheats Manager from your applications folder or start menu.
 
-### Usage:
+## Support & Contributions
 
-*   **Browse & Launch Trainers:** Use the left-hand column to browse and launch your downloaded trainers.
-*   **Download Trainers:** Search and download new trainers using the right-hand column.
-*   **Trainer Management:** Customize trainer source settings within the `Trainer Management` panel.
-*   **Options:**  Access settings, import trainers, open the download folder, add paths to whitelist, and view app information via the `Options` menu.
+For support, feature requests, or to contribute to the project, please visit the [GitHub repository](https://github.com/dyang886/Game-Cheats-Manager).
 
-## Support & Contributions:
+## Funding
 
-For support, to report issues, suggest features, or contribute to the project, please visit the [GitHub repository](https://github.com/dyang886/Game-Cheats-Manager).
-
-## Funding:
-
-Support the development of Game Cheats Manager through the following options:
+Support the project via the following options:
 
 |                            WeChat                            |                          Alipay                          |                          QQ                          |
 | :----------------------------------------------------------: | :------------------------------------------------------: | :--------------------------------------------------: |

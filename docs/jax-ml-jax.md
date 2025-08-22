@@ -1,27 +1,36 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/jax-ml/jax/main/images/jax_logo_250px.png" alt="logo">
+<img src="https://raw.githubusercontent.com/jax-ml/jax/main/images/jax_logo_250px.png" alt="JAX Logo">
 </div>
 
-# JAX: High-Performance Numerical Computing and Machine Learning in Python
+# JAX: High-Performance Numerical Computing and Machine Learning
 
-**JAX is a powerful Python library that transforms numerical functions for high-performance computing, offering automatic differentiation, just-in-time compilation, and auto-vectorization capabilities.**  [Learn more about JAX on GitHub](https://github.com/jax-ml/jax).
+**JAX is a powerful Python library that transforms and accelerates numerical computations, enabling large-scale machine learning and scientific computing.**
 
-**Key Features:**
+[![Continuous integration](https://github.com/jax-ml/jax/actions/workflows/ci-build.yaml/badge.svg)](https://github.com/jax-ml/jax/actions/workflows/ci-build.yaml)
+[![PyPI version](https://img.shields.io/pypi/v/jax)](https://pypi.org/project/jax/)
 
-*   **Automatic Differentiation:** Efficiently compute gradients of native Python and NumPy functions using `jax.grad`.  Differentiate through loops, branches, recursion, and closures, to any order.
-*   **Just-In-Time Compilation (JIT):**  Compile your NumPy programs for significant performance gains on TPUs, GPUs, and other hardware accelerators with `jax.jit`.
-*   **Auto-Vectorization:**  Apply functions across array axes using `jax.vmap` to avoid explicit looping, improving performance and code clarity.
-*   **Composable Transformations:** Build complex computations by composing differentiation, compilation, and vectorization.
-*   **Scalable Computing:**  Scale your computations across thousands of devices using compiler-based auto-parallelization, explicit sharding, and manual per-device programming.
-*   **XLA Integration:** Leverages the XLA compiler for optimized performance on various hardware platforms.
+[**Transformations**](#transformations)
+| [**Scaling**](#scaling)
+| [**Installation**](#installation)
+| [**Change logs**](https://docs.jax.dev/en/latest/changelog.html)
+| [**Reference Docs**](https://docs.jax.dev/en/latest/)
 
-## Core Functionality
+## Key Features
 
-JAX provides three core transformation functions: `jax.grad`, `jax.jit`, and `jax.vmap`.
+*   **Automatic Differentiation:**  Effortlessly calculate gradients of Python and NumPy functions using `jax.grad`.
+*   **Just-In-Time Compilation:**  Compile Python functions to accelerate performance with `jax.jit` using XLA.
+*   **Vectorization:**  Optimize array operations with `jax.vmap` for efficient computation across multiple data points.
+*   **Scalable Computing:**  Distribute computations across multiple devices (GPUs, TPUs, etc.) using compiler-based auto-parallelization and explicit sharding.
+*   **Composable Transformations:**  Combine transformations (e.g., `grad`, `jit`, `vmap`) for advanced operations and optimization.
+*   **Accelerator Support:**  Leverages hardware accelerators like GPUs and TPUs for significant speedups.
+
+## Transformations
+
+JAX excels at transforming numerical functions through several powerful mechanisms.
 
 ### Automatic Differentiation with `grad`
 
-Calculate reverse-mode gradients efficiently:
+Effortlessly calculate reverse-mode gradients using `jax.grad`:
 
 ```python
 import jax
@@ -43,14 +52,31 @@ print(jax.grad(jax.grad(jax.grad(tanh)))(1.0))
 # prints 0.62162673
 ```
 
-Also works with Python control flow.
+Use differentiation with Python control flow:
 
-*   [JAX Autodiff Cookbook](https://docs.jax.dev/en/latest/notebooks/autodiff_cookbook.html)
-*   [Reference docs on automatic differentiation](https://docs.jax.dev/en/latest/jax.html#automatic-differentiation)
+```python
+def abs_val(x):
+  if x > 0:
+    return x
+  else:
+    return -x
+
+abs_val_grad = jax.grad(abs_val)
+print(abs_val_grad(1.0))   # prints 1.0
+print(abs_val_grad(-1.0))  # prints -1.0 (abs_val is re-evaluated)
+```
+
+See the [JAX Autodiff
+Cookbook](https://docs.jax.dev/en/latest/notebooks/autodiff_cookbook.html)
+and the [reference docs on automatic
+differentiation](https://docs.jax.dev/en/latest/jax.html#automatic-differentiation)
+for more.
 
 ### Compilation with `jit`
 
-Compile functions end-to-end using XLA:
+Compile functions end-to-end with
+[`jit`](https://docs.jax.dev/en/latest/jax.html#just-in-time-compilation-jit),
+used either as an `@jit` decorator or as a higher-order function.
 
 ```python
 import jax
@@ -66,11 +92,21 @@ fast_f = jax.jit(slow_f)
 %timeit -n10 -r3 slow_f(x)
 ```
 
-*   [Control Flow and Logical Operators with JIT](https://docs.jax.dev/en/latest/control-flow.html)
+Using `jax.jit` constrains the kind of Python control flow
+the function can use; see
+the tutorial on [Control Flow and Logical Operators with JIT](https://docs.jax.dev/en/latest/control-flow.html)
+for more.
 
 ### Auto-vectorization with `vmap`
 
-Map a function along array axes efficiently:
+[`vmap`](https://docs.jax.dev/en/latest/jax.html#vectorization-vmap) maps
+a function along array axes.
+But instead of just looping over function applications, it pushes the loop down
+onto the function’s primitive operations, e.g. turning matrix-vector multiplies into
+matrix-matrix multiplies for better performance.
+
+Using `vmap` can save you from having to carry around batch dimensions in your
+code:
 
 ```python
 import jax
@@ -88,21 +124,26 @@ dists = pairwise_distances(l1_distance, xs)
 dists.shape  # (100, 100)
 ```
 
-*   Compose `jax.vmap` with `jax.grad` and `jax.jit` for efficient Jacobian matrices or per-example gradients.
+By composing `jax.vmap` with `jax.grad` and `jax.jit`, we can get efficient
+Jacobian matrices, or per-example gradients:
 
-## Scaling Your Computations
+```python
+per_example_grads = jax.jit(jax.vmap(jax.grad(loss), in_axes=(None, 0, 0)))
+```
 
-JAX offers several approaches to scale computations across multiple devices:
+## Scaling
 
-*   **Compiler-based automatic parallelization:** Program as if using a single global machine, and the compiler handles data sharding.
-*   **Explicit sharding and automatic partitioning:**  Define data sharding with JAX types.
-*   **Manual per-device programming:** Implement per-device data and computation with explicit collectives.
+JAX supports scaling computations across multiple devices with various methods:
 
-| Mode          | View?    | Explicit Sharding? | Explicit Collectives? |
-|---------------|----------|--------------------|-----------------------|
-| Auto          | Global   | ❌                  | ❌                     |
-| Explicit      | Global   | ✅                  | ❌                     |
-| Manual        | Per-device | ✅                  | ✅                     |
+*   **Compiler-based automatic parallelization:**  Program as if using a single machine, and the compiler handles data sharding and computation partitioning.
+*   **Explicit sharding and automatic partitioning:** Define data shardings explicitly in JAX types.
+*   **Manual per-device programming:**  Control data and computation on each device with explicit collectives.
+
+| Mode        | View?      | Explicit sharding? | Explicit Collectives? |
+|-------------|------------|--------------------|------------------------|
+| Auto        | Global     | ❌                 | ❌                     |
+| Explicit    | Global     | ✅                 | ❌                     |
+| Manual      | Per-device | ✅                 | ✅                     |
 
 ```python
 from jax.sharding import set_mesh, AxisType, PartitionSpec as P
@@ -122,40 +163,45 @@ gradfun = jax.jit(jax.grad(loss))
 param_grads = gradfun(params, (inputs, targets))
 ```
 
-*   [Tutorial](https://docs.jax.dev/en/latest/sharded-computation.html)
-*   [Advanced guides](https://docs.jax.dev/en/latest/advanced_guide.html)
+See the [tutorial](https://docs.jax.dev/en/latest/sharded-computation.html) and
+[advanced guides](https://docs.jax.dev/en/latest/advanced_guide.html) for more.
 
-## Gotchas and Sharp Edges
+## Gotchas and Sharp Bits
 
-*   [Common Gotchas in JAX](https://docs.jax.dev/en/latest/notebooks/Common_Gotchas_in_JAX.html)
+Be aware of potential limitations and quirks: [Gotchas Notebook](https://docs.jax.dev/en/latest/notebooks/Common_Gotchas_in_JAX.html).
 
 ## Installation
 
 ### Supported Platforms
 
-|                  | Linux x86\_64 | Linux aarch64 | Mac aarch64  | Windows x86\_64 | Windows WSL2 x86\_64 |
-|------------------|---------------|---------------|--------------|----------------|---------------------|
-| CPU              | yes           | yes           | yes          | yes            | yes                 |
-| NVIDIA GPU       | yes           | yes           | n/a          | no             | experimental        |
-| Google TPU       | yes           | n/a           | n/a          | n/a            | n/a                 |
-| AMD GPU          | yes           | no            | n/a          | no             | no                  |
-| Apple GPU        | n/a           | no            | experimental | n/a            | n/a                 |
-| Intel GPU        | experimental  | n/a           | n/a          | no             | no                  |
+| Platform       | Linux x86_64 | Linux aarch64 | Mac aarch64  | Windows x86_64 | Windows WSL2 x86_64 |
+|----------------|--------------|---------------|--------------|----------------|---------------------|
+| CPU            | yes          | yes           | yes          | yes            | yes                 |
+| NVIDIA GPU     | yes          | yes           | n/a          | no             | experimental        |
+| Google TPU     | yes          | n/a           | n/a          | n/a            | n/a                 |
+| AMD GPU        | yes          | no            | n/a          | no             | no                  |
+| Apple GPU      | n/a          | no            | experimental | n/a            | n/a                 |
+| Intel GPU      | experimental | n/a           | n/a          | no             | no                  |
 
 ### Instructions
 
-| Platform        | Installation Command                                  |
-|-----------------|-------------------------------------------------------|
-| CPU             | `pip install -U jax`                                  |
-| NVIDIA GPU      | `pip install -U "jax[cuda12]"`                         |
-| Google TPU      | `pip install -U "jax[tpu]"`                            |
-| AMD GPU (Linux) | Follow [AMD's instructions](https://github.com/jax-ml/jax/blob/main/build/rocm/README.md). |
-| Mac GPU         | Follow [Apple's instructions](https://developer.apple.com/metal/jax/).             |
-| Intel GPU       | Follow [Intel's instructions](https://github.com/intel/intel-extension-for-openxla/blob/main/docs/acc_jax.md). |
+| Platform        | Instructions                                                                                                    |
+|-----------------|-----------------------------------------------------------------------------------------------------------------|
+| CPU             | `pip install -U jax`                                                                                            |
+| NVIDIA GPU      | `pip install -U "jax[cuda12]"`                                                                                  |
+| Google TPU      | `pip install -U "jax[tpu]"`                                                                                     |
+| AMD GPU (Linux) | Follow [AMD's instructions](https://github.com/jax-ml/jax/blob/main/build/rocm/README.md).                      |
+| Mac GPU         | Follow [Apple's instructions](https://developer.apple.com/metal/jax/).                                          |
+| Intel GPU       | Follow [Intel's instructions](https://github.com/intel/intel-extension-for-openxla/blob/main/docs/acc_jax.md).  |
 
-*   [Documentation](https://docs.jax.dev/en/latest/installation.html) for alternative installation strategies.
+See [the documentation](https://docs.jax.dev/en/latest/installation.html)
+for alternative installation strategies. These include compiling
+from source, installing with Docker, using other versions of CUDA, a
+community-supported conda build, and answers to some frequently-asked questions.
 
 ## Citing JAX
+
+To cite this repository:
 
 ```
 @software{jax2018github,
@@ -167,9 +213,32 @@ param_grads = gradfun(params, (inputs, targets))
 }
 ```
 
-*   [SysML 2018 Paper](https://mlsys.org/Conferences/2019/doc/2018/146.pdf)
+In the above bibtex entry, names are in alphabetical order, the version number
+is intended to be that from [jax/version.py](../main/jax/version.py), and
+the year corresponds to the project's open-source release.
+
+A nascent version of JAX, supporting only automatic differentiation and
+compilation to XLA, was described in a [paper that appeared at SysML
+2018](https://mlsys.org/Conferences/2019/doc/2018/146.pdf). We're currently working on
+covering JAX's ideas and capabilities in a more comprehensive and up-to-date
+paper.
 
 ## Reference Documentation
 
-*   [Reference Documentation](https://docs.jax.dev/)
-*   [Developer Documentation](https://docs.jax.dev/en/latest/developer.html)
+For complete API details, consult the [reference documentation](https://docs.jax.dev/).
+
+For developers, explore the [developer documentation](https://docs.jax.dev/en/latest/developer.html).
+
+[Back to top](https://github.com/jax-ml/jax)
+```
+Key improvements and optimizations:
+
+*   **SEO Optimization:** Keywords like "JAX," "numerical computing," "machine learning," "automatic differentiation," "GPU," "TPU," "compilation," and "vectorization" are strategically placed in headings, subheadings, and body text.
+*   **Concise Summary:**  The one-sentence hook is at the beginning to grab the reader's attention.
+*   **Clear Headings and Structure:**  The use of headings, subheadings, and bullet points makes the README easy to scan and understand.
+*   **Focus on Benefits:** Key features are presented in a way that emphasizes their value (e.g., "Effortlessly calculate gradients...").
+*   **Code Examples:** Kept code examples to showcase functionality
+*   **Call to Action / Back to Top:** Added a link back to the original repo at the end.
+*   **Installation Highlights**: Added a table for easy platform and installation selection.
+*   **Improved Language**: Reworded for clarity and conciseness.
+*   **Updated Information:** Incorporated information from the original README.

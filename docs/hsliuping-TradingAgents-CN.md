@@ -1,6 +1,6 @@
-# TradingAgents-CN: 🚀 AI驱动的中文金融交易框架，为A股/港股/美股分析提供支持
+# TradingAgents-CN: 中文金融交易决策框架 (基于多智能体大语言模型)
 
-**解锁智能交易决策的强大力量！** TradingAgents-CN 是一个基于多智能体大语言模型的中文金融交易决策框架，专为中文用户优化，提供全面的A股/港股/美股分析能力，助您洞悉市场先机。
+**🚀 提升您的交易策略，利用 AI 驱动的中文金融分析，提供完整的 A 股、港股、美股分析能力！**
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
@@ -8,85 +8,91 @@
 [![Documentation](https://img.shields.io/badge/docs-中文文档-green.svg)](./docs/)
 [![Original](https://img.shields.io/badge/基于-TauricResearch/TradingAgents-orange.svg)](https://github.com/TauricResearch/TradingAgents)
 
-**⭐  最新版本 cn-0.1.13-preview**:  原生OpenAI支持与Google AI全面集成预览版！ 🚀
+**基于 [Tauric Research](https://github.com/TauricResearch) 的 [TradingAgents](https://github.com/TauricResearch/TradingAgents) 项目，TradingAgents-CN 专为中文用户优化，利用多智能体架构和大型语言模型，提供全面的股票分析和交易决策支持。**
 
-**核心优势**：
+## ✨ **核心特性**
 
-*   🧠 **AI驱动的智能分析**： 结合多智能体协同、新闻分析、以及 LLM 技术的强大能力
-*   🇨🇳 **中文优化 & 全市场支持**： 专为中国市场设计，全面支持 A 股、港股和美股
-*   🐳 **一键部署 & 易于使用**：  Docker 容器化，本地部署，Web 界面，操作简单
-*   🌐 **多 LLM 支持**: 阿里百炼、DeepSeek、Google AI、OpenRouter、原生OpenAI等多种模型
-*   📊 **专业报告**：生成详细的投资分析报告，包括技术面、基本面和新闻面评估，一键导出
-*   🤝 **完善文档**： 超过 50,000 字的中文文档，手把手带你入门
+*   🤖 **多智能体协作**: 基本面、技术面、新闻面、社交媒体全方位分析。
+*   🇨🇳 **中文优化**: 专为 A 股/港股市场量身定制。
+*   🧠 **AI 驱动分析**: 深入的 AI 驱动的智能新闻过滤和质量评估，支持最新 Gemini 系列模型。
+*   🌐 **多 LLM 支持**: 阿里百炼、DeepSeek、Google AI、OpenRouter (包含 OpenAI, Anthropic 等)。
+*   🚀 **实时进度跟踪**: 告别黑盒等待，可视化分析过程。
+*   📊 **专业报告导出**: 一键生成 Markdown/Word/PDF 格式的投资报告。
+*   🐳 **Docker 部署**: 快速、简便的部署方式。
 
-**查看代码库:** [hsliuping/TradingAgents-CN](https://github.com/hsliuping/TradingAgents-CN)
+## 🌟 **主要更新 - cn-0.1.13-preview**
 
-##  ✨ 核心功能
+*   🤖 **原生 OpenAI 支持**: 灵活配置和使用任何 OpenAI 兼容的 API 端点。
+*   🧠 **Google AI 全面集成**: 包含最新 Gemini 2.5 系列模型，提供更强大的分析能力。
+*   🔧 **LLM 适配器架构优化**: 统一的 LLM 调用接口，更好的错误处理和性能监控。
+*   🎨 **Web 界面智能优化**:  更智能的模型选择，更流畅的用户体验。
+*   ✨ **智能新闻分析**:  AI 驱动的新闻过滤，质量评估，相关性分析
 
-*   🤖 **多智能体协作**: 基本面、技术面、新闻面、社交媒体分析师，协同分析
-*   📰 **智能新闻分析**:  AI驱动的新闻过滤、质量评估和相关性分析
-*   🌐 **多LLM模型支持**:  阿里百炼、DeepSeek、Google AI、OpenRouter、原生OpenAI 多种模型
-*   📊 **专业分析报告**:  技术、基本面、新闻等多维度评估，生成专业报告，支持多种格式导出
-*   💻 **Web 界面**:  基于 Streamlit 构建，提供直观的股票分析体验，包括实时进度跟踪和分析结果展示
-*   🇨🇳 **中文支持**:  专为中文用户优化，支持A股/港股/美股，中文界面和分析结果展示
-*   🐳 **Docker 支持**:  一键部署，环境隔离，快速扩展
+## 🚀 **快速入门**
 
-## 🆕  版本更新 (cn-0.1.13-preview)
+1.  **部署**:  使用 Docker (推荐) 或本地部署 (见下方)。
+2.  **访问**:  Web 界面：`http://localhost:8501`。
+3.  **输入**:  输入股票代码 (如 `AAPL`, `000001`, `0700.HK`)。
+4.  **分析**:  选择分析深度，点击 "开始分析"。
+5.  **查看**:  实时跟踪进度，查看分析报告。
+6.  **导出**:  导出专业报告。
 
-### 🤖 原生 OpenAI 与 Google AI 集成
+## 🐳 **Docker 部署** (推荐)
 
-*   **自定义 OpenAI 端点**: 支持配置任意 OpenAI 兼容的 API 端点
-*   **灵活模型选择**: 可以使用任何 OpenAI 格式的模型
-*   **智能适配器**: 新增原生 OpenAI 适配器
-*   **三大 Google AI 包支持**: langchain-google-genai、google-generativeai、google-genai
-*   **9 个验证模型**: 包括 gemini-2.5-pro, gemini-2.5-flash 等最新模型
-*   **Google 工具处理器**: 专门的 Google AI 工具调用处理器
-*   **智能降级机制**: 高级功能失败时自动降级到基础功能
+```bash
+# 1. 克隆项目
+git clone https://github.com/hsliuping/TradingAgents-CN.git
+cd TradingAgents-CN
 
-## 🙏 致敬原项目
+# 2. 配置环境变量
+cp .env.example .env
+# 编辑 .env 文件，填入API密钥
 
-感谢 [Tauric Research](https://github.com/TauricResearch) 团队创建了革命性的多智能体交易框架 [TradingAgents](https://github.com/TauricResearch/TradingAgents)！
+# 3. 启动服务
+# 首次启动或代码变更时（需要构建镜像）
+docker-compose up -d --build
 
-## 🚀  快速开始
+# 日常启动（镜像已存在，无代码变更）
+docker-compose up -d
 
-1.  **Docker 部署（推荐）**:
+# 智能启动（自动判断是否需要构建）
+# Windows环境
+powershell -ExecutionPolicy Bypass -File scripts\smart_start.ps1
 
-    ```bash
-    git clone https://github.com/hsliuping/TradingAgents-CN.git
-    cd TradingAgents-CN
-    cp .env.example .env  # 配置 API 密钥
-    docker-compose up -d --build  # 首次启动或代码更改
-    # or docker-compose up -d
-    # 访问Web界面: http://localhost:8501
-    ```
+# Linux/Mac环境
+chmod +x scripts/smart_start.sh && ./scripts/smart_start.sh
 
-2.  **本地部署**:
+# 4. 访问应用
+# Web界面: http://localhost:8501
+```
 
-    ```bash
-    pip install -e .
-    python start_web.py
-    # 访问 Web 界面: http://localhost:8501
-    ```
+## 💻 **本地部署**
 
-    **重要**:  务必配置 API 密钥，参考 `.env.example`。
+```bash
+# 1.  升级 pip
+python -m pip install --upgrade pip
 
-## 📖 详细文档
+# 2.  安装依赖
+pip install -e .
 
-我们提供了超过 **50,000 字** 的中文文档，包含：
+# 3.  启动应用
+python start_web.py
 
-*   [快速开始指南](docs/overview/quick-start.md)
-*   [系统架构解析](docs/architecture/system-architecture.md)
-*   [LLM 模型配置指南](docs/configuration/llm-config.md)
-*   [Web 界面详细使用说明](docs/usage/web-interface-detailed-guide.md)
+# 4.  访问 http://localhost:8501
+```
 
-[访问完整文档](./docs/)
+## 📚 **文档**
 
-## 🤝 贡献
+*   **[完整文档](./docs/)**：包含安装、使用、API 和技术细节，超过 50,000 字，为中文用户量身定制。
 
-我们欢迎您的贡献！ 请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 了解更多信息。
+## 🤝 **贡献**
 
-## 📄 许可证
+我们欢迎您的贡献！  查看 [CONTRIBUTORS.md](CONTRIBUTORS.md) 了解如何参与。
 
-本项目基于 Apache 2.0 许可证开源，详见 [LICENSE](LICENSE)。
+## 📄 **许可证**
+
+本项目基于 Apache 2.0 许可证开源。
 
 ---
+
+**[访问原项目](https://github.com/TauricResearch/TradingAgents)**  |  [提交问题和建议](https://github.com/hsliuping/TradingAgents-CN/issues) |  [文档](./docs/)

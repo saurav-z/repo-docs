@@ -1,76 +1,79 @@
 # Mobile-Use: Automate Your Phone with Natural Language 🤖
 
-Effortlessly control your Android or iOS device using simple, natural language commands. ✨
+**Tired of tapping and swiping? Mobile-Use lets you control your Android or iOS device with simple, natural language commands.** Explore the future of mobile interaction with this open-source AI agent!  [View the source on GitHub](https://github.com/minitap-ai/mobile-use).
 
 <div align="center">
-  <img src="./doc/linkedin-demo-with-text.gif" alt="Mobile-Use in Action" />
+  <img src="./doc/linkedin-demo-with-text.gif" alt="Mobile-Use in Action" width="70%" />
 </div>
 
 <div align="center">
-  <a href="https://discord.gg/6nSqmQ9pQs"><img src="https://img.shields.io/discord/1403058278342201394?color=7289DA&label=Discord&logo=discord&logoColor=white&style=for-the-badge" alt="Discord"></a>
-  <a href="https://github.com/minitap-ai/mobile-use/stargazers"><img src="https://img.shields.io/github/stars/minitap-ai/mobile-use?style=for-the-badge&color=e0a8dd" alt="GitHub stars"></a>
+  <a href="https://discord.gg/6nSqmQ9pQs">
+    <img src="https://img.shields.io/discord/1403058278342201394?color=7289DA&label=Discord&logo=discord&logoColor=white&style=for-the-badge" alt="Discord">
+  </a>
+  <a href="https://github.com/minitap-ai/mobile-use/stargazers">
+    <img src="https://img.shields.io/github/stars/minitap-ai/mobile-use?style=for-the-badge&color=e0a8dd" alt="GitHub stars">
+  </a>
   <p align="center">
-    <a href="https://discord.gg/6nSqmQ9pQs"><b>Join our Discord</b></a> •
-    <a href="https://x.com/minitap_ai?t=iRWtI497UhRGLeCKYQekig&s=09"><b>Follow us on X (Twitter)</b></a>
+    <a href="https://discord.gg/6nSqmQ9pQs"><b>Join the Discord Community</b></a> •
+    <a href="https://x.com/minitap_ai?t=iRWtI497UhRGLeCKYQekig&s=09"><b>Follow us on X/Twitter</b></a>
   </p>
 </div>
 
-Mobile-use is an open-source AI agent designed to automate your mobile device using natural language.  This project empowers you to control your Android or iOS device by simply speaking or typing your desired actions. From sending messages to navigating complex app interfaces, mobile-use simplifies mobile interaction. Check out the original repo [here](https://github.com/minitap-ai/mobile-use).
+Mobile-use is an open-source AI agent that empowers you to control your Android or iOS device effortlessly.  It understands natural language commands, allowing you to automate tasks, extract data, and navigate apps with ease.
 
-> Your feedback is invaluable! Join the conversation on [Discord](https://discord.gg/6nSqmQ9pQs) to suggest features, report bugs, and help shape the future of mobile-use. ❤️
+>  Your feedback drives Mobile-use's evolution!  Join the conversation on [Discord](https://discord.gg/6nSqmQ9pQs) or contribute directly; all contributions are welcomed!
 
-## Key Features
+## 🚀 Key Features
 
-*   🗣️ **Natural Language Control:**  Command your phone using everyday language.
+*   🗣️ **Natural Language Control:**  Interact with your phone using plain, everyday language.
 *   📱 **UI-Aware Automation:**  Intelligently navigates and interacts with app interfaces.
-*   📊 **Data Scraping:** Extract and format information from any app (e.g., convert to JSON) with natural language instructions.
-*   🔧 **Extensible & Customizable:**  Easily configure different Large Language Models (LLMs) to power your agents.
+*   📊 **Data Scraping:** Extract information from any app and structure it into your desired format (e.g., JSON) using natural language.
+*   🔧 **Extensible & Customizable:** Easily integrate and configure different Large Language Models (LLMs) to power your mobile-use agent.
 
-## Benchmarks & Performance
+## 🏆 Benchmarks
+
+Mobile-use is the **#1 open-source project** on the AndroidWorld benchmark, showcasing its powerful capabilities.
 
 <p align="center">
-  <img src="./doc/benchmark.png" alt="Project banner" />
+  <img src="./doc/benchmark.png" alt="Benchmark results" />
 </p>
 
-Mobile-use achieved #1 Open-source Pass@1 on the AndroidWorld benchmark.
+Find more details at: [https://minitap.ai/research/mobile-ai-agents-benchmark](https://minitap.ai/research/mobile-ai-agents-benchmark)
 
-*   Learn more about the benchmarks: [Mobile AI Agents Benchmark](https://minitap.ai/research/mobile-ai-agents-benchmark)
-*   View the leaderboard: [Benchmark Leaderboard](https://docs.google.com/spreadsheets/d/1cchzP9dlTZ3WXQTfYNhh3avxoLipqHN75v1Tb86uhHo/edit?pli=1&gid=0#gid=0)
+View the official leaderboard: [https://docs.google.com/spreadsheets/d/1cchzP9dlTZ3WXQTfYNhh3avxoLipqHN75v1Tb86uhHo/edit?pli=1&gid=0#gid=0](https://docs.google.com/spreadsheets/d/1cchzP9dlTZ3WXQTfYNhh3avxoLipqHN75v1Tb86uhHo/edit?pli=1&gid=0#gid=0)
 
-## Getting Started
+## 🚦 Getting Started
 
-Follow these steps to quickly set up and use mobile-use:
+Ready to experience the future of mobile interaction?  Follow these steps to get started:
 
-### 1. Environment Setup
+1.  **Set up Environment Variables:**
+    *   Copy the example `.env.example` file to `.env` and add your required API keys.  At least an OpenAI key is necessary.
+    ```bash
+    cp .env.example .env
+    ```
 
-*   **Configure Environment Variables:**
-    *   Copy the example file: `cp .env.example .env`
-    *   Add your required API keys to the `.env` file.  An OpenAI key is required.
+2.  **(Optional) Customize LLM Configuration:**
+    *   To use different models or providers, create your own LLM configuration file.
+        ```bash
+        cp llm-config.override.template.jsonc llm-config.override.jsonc
+        ```
+    *   Edit `llm-config.override.jsonc` to match your specific requirements.
 
-### 2. (Optional) Customize LLM Configuration
-
-*   To use different models or providers, create your own LLM configuration file.
-    *   Copy the template: `cp llm-config.override.template.jsonc llm-config.override.jsonc`
-    *   Edit `llm-config.override.jsonc` to match your needs.
-
-### 3. Quick Launch (Docker - Android Only)
+### Quick Launch (Docker - Android Only)
 
 > [!NOTE]
-> This quickstart is only available for Android devices/emulators at this time. You must have Docker installed.
+> This quickstart is currently only available for Android devices/emulators, and requires Docker to be installed.
 
-First:
+**Prerequisites:**
 
-*   Connect your Android device and enable USB debugging through Developer Options.
-*   Or launch an Android emulator.
+*   Plug in your Android device and enable USB debugging via Developer Options, **OR** launch an Android emulator.
 
 > [!IMPORTANT]
-> At some point, the terminal will HANG, and Maestro will ask you `Maestro CLI would like to collect anonymous usage data to improve the product.`
-> It's up to you whether you accept (i.e enter 'Y') or not (i.e. enter 'n').
+> At some point, the terminal will pause, and Maestro will request anonymous usage data collection. Accept (enter 'Y') or decline (enter 'n') as desired.
 
-Run these commands in your terminal:
+**Run these commands in your terminal:**
 
-1.  **Linux/macOS:**
-
+1.  **For Linux/macOS:**
     ```bash
     chmod +x mobile-use.sh
     ./mobile-use.sh \
@@ -78,8 +81,7 @@ Run these commands in your terminal:
       --output-description "A JSON list of objects, each with 'sender' and 'subject' keys"
     ```
 
-2.  **Windows (PowerShell):**
-
+2.  **For Windows (Powershell):**
     ```powershell
     powershell.exe -ExecutionPolicy Bypass -File mobile-use.ps1 `
       "Open Gmail, find first 3 unread emails, and list their sender and subject line" `
@@ -87,23 +89,44 @@ Run these commands in your terminal:
     ```
 
 > [!NOTE]
-> If you are using your own device, make sure to accept the ADB-related connection requests that will pop up on your device.
-> Similarly, Maestro will need to install its APK on your device, which will also require you to accept the installation request.
+> If using your own device, accept the ADB connection requests that appear.  Maestro will also install its APK, which will require installation approval.
 
-#### Troubleshooting Quick Launch
+#### 🛠️ Troubleshooting Docker
 
-*   **No Device IP Found:** Ensure your device is connected to the same Wi-Fi network as your computer.  If the script can't detect the IP, use the `--interface <YOUR_INTERFACE_NAME>` option with your device's WLAN interface.
-*   **Failed to Connect to <DEVICE_IP>:5555 inside Docker:**  Check your firewall settings to ensure that the connection isn't being blocked.
-*   **Failed to Pull GHCR Docker Images (Unauthorized):** If you've previously used `ghcr.io` for private repositories, you might have an expired token. Try running `docker logout ghcr.io` and retry the script.
+The script attempts to connect to your device via IP.
 
-### 4. Manual Launch (Development Mode)
+*   **Ensure your device is on the same Wi-Fi network as your computer.**
+
+##### 1. Device IP Not Found
+
+If the script fails with:
+```
+Could not get device IP. Is a device connected via USB and on the same Wi-Fi network?
+```
+You may need to determine your phone's WLAN interface name using `adb shell ip addr show up`.  Then, add the `--interface <YOUR_INTERFACE_NAME>` option to the script.
+
+##### 2. Docker Connection Issues
+
+A firewall may be blocking the connection to `<DEVICE_IP>:5555` inside Docker. There may not be a simple fix for this.
+
+##### 3. `ghcr.io` Docker Image Pull Failure (Unauthorized)
+
+If you've previously used `ghcr.io` for private repositories and encounter this issue, try:
+```bash
+docker logout ghcr.io
+```
+Then rerun the script.
+
+### Manual Launch (Development Mode)
+
+For developers:
 
 #### 1. Device Support
 
 Mobile-use currently supports:
 
-*   **Physical Android Phones:**  Connect via USB with USB debugging enabled.
-*   **Android Simulators:**  Set up through Android Studio.
+*   **Physical Android Phones:** Connect via USB with USB debugging enabled.
+*   **Android Simulators:** Set up through Android Studio.
 *   **iOS Simulators:** Supported for macOS users.
 
 > [!NOTE]
@@ -111,63 +134,58 @@ Mobile-use currently supports:
 
 #### 2. Prerequisites
 
-For Android:
+**Android:**
 
-*   **[Android Debug Bridge (ADB)](https://developer.android.com/studio/releases/platform-tools)**: Required for connecting to your device.
+*   **[Android Debug Bridge (ADB)](https://developer.android.com/studio/releases/platform-tools)**: For connecting to your device.
 
-For iOS:
+**iOS:**
 
-*   **[Xcode](https://developer.apple.com/xcode/)**: Apple's IDE.
+*   **[Xcode](https://developer.apple.com/xcode/)**:  Apple's IDE for iOS development.
 
-You'll also need:
+**Required Installations:**
 
 *   **[uv](https://github.com/astral-sh/uv)**: A fast Python package manager.
-*   **[Maestro](https://maestro.mobile.dev/getting-started/installing-maestro)**:  The framework used to interact with your device.
+*   **[Maestro](https://maestro.mobile.dev/getting-started/installing-maestro)**: The framework to interact with your device.
 
 #### 3. Installation
 
-1.  **Clone the repository:**
-
+1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/minitap-ai/mobile-use.git && cd mobile-use
     ```
 
 2.  [**Setup environment variables**](#-getting-started)
 
-3.  **Create and activate the virtual environment:**
-
+3.  **Create and Activate Virtual Environment:**
     ```bash
-    # This will create a .venv directory using the Python version in .python-version
+    # Creates a .venv directory using the Python version specified in .python-version
     uv venv
 
-    # Activate the environment
+    # Activate the environment:
     # On macOS/Linux:
     source .venv/bin/activate
     # On Windows:
     .venv\Scripts\activate
     ```
 
-4.  **Install dependencies:**
-
+4.  **Install Dependencies:**
     ```bash
-    # Sync with the locked dependencies for a consistent setup
+    # Sync with the locked dependencies for consistency
     uv sync
     ```
 
-## Usage
+## ⌨️ Usage
 
-Execute commands using `python ./src/mobile_use/main.py "your command here"`.
+Run Mobile-use by passing your command as an argument:
 
 **Example 1: Basic Command**
-
 ```bash
 python ./src/mobile_use/main.py "Go to settings and tell me my current battery level"
 ```
 
 **Example 2: Data Scraping**
 
-Extract specific information and receive it in a structured format:
-
+Extract and format data (e.g., get a list of unread emails):
 ```bash
 python ./src/mobile_use/main.py \
   "Open Gmail, find all unread emails, and list their sender and subject line" \
@@ -175,12 +193,20 @@ python ./src/mobile_use/main.py \
 ```
 
 > [!NOTE]
-> If a specific model isn't configured, mobile-use will prompt you to select one from the available options.
+> If you haven't configured a specific model, Mobile-use will prompt you to choose from the available options.
 
-## Contributing
+## 🤝 Contributing
 
-We welcome your contributions!  Review our **[Contributing Guidelines](CONTRIBUTING.md)** to get started.
+We welcome contributions! Review our **[Contributing Guidelines](CONTRIBUTING.md)** to get involved.
 
-## License
+## 📈 Star History
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+<p align="center">
+  <a href="https://star-history.com/#minitap-ai/mobile-use&Date">
+    <img src="https://api.star-history.com/svg?repos=minitap-ai/mobile-use&type=Date" alt="Star History Chart" />
+  </a>
+</p>
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.

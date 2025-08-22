@@ -6,69 +6,53 @@
 
 # LibrePhotos: Your Self-Hosted, Open-Source Photo Management Solution
 
-Tired of relying on big tech for your precious memories? **LibrePhotos empowers you to take control of your photo library with a powerful, open-source, and self-hosted photo management solution.**
+Tired of relying on proprietary photo storage? **LibrePhotos** is a powerful and open-source photo management solution, giving you complete control over your memories.  [Check out the original repo](https://github.com/LibrePhotos/librephotos)!
 
-[Visit the LibrePhotos GitHub Repository](https://github.com/LibrePhotos/librephotos)
-
-<img src="https://github.com/LibrePhotos/librephotos/blob/dev/screenshots/mockups_main_fhd.png?raw=true" alt="LibrePhotos Interface" width="700">
+![LibrePhotos Screenshot](https://github.com/LibrePhotos/librephotos/blob/dev/screenshots/mockups_main_fhd.png?raw=true)
 <sub>Mockup designed by rawpixel.com / Freepik</sub>
 
 ## Key Features
 
-LibrePhotos offers a rich set of features to organize, manage, and enjoy your photos and videos:
+*   **Comprehensive Media Support:** Upload, view, and manage all your photos and videos, including RAW files.
+*   **Organized Timeline View:** Browse your memories chronologically with an intuitive timeline.
+*   **Automated Organization:** Automatically scans your file system and creates albums based on events and locations.
+*   **Advanced Search Capabilities:** Find photos easily using face recognition, object detection, semantic image search, and metadata.
+*   **Multi-User Support:** Share and collaborate with others.
+*   **Powerful Face Recognition:** Effortlessly identify and tag people in your photos.
+*   **Location-Based Features:** Reverse geocoding to see where your photos were taken.
+*   **Scene and Object Detection:** Automatic scene and object recognition within your images.
+*   **Built-in Video Support:** Play and manage all your videos.
 
-*   **Comprehensive Media Support:** Supports photos of all types, including RAW files, and videos.
-*   **Organized Views:** Enjoy a timeline view for easy browsing and organization of your memories.
-*   **Intelligent Organization:** Automatically generates albums based on events and locations.
-*   **Advanced Search Capabilities:**
-    *   Semantic image search to find photos based on content.
-    *   Search using metadata
-*   **Facial Recognition:**  Face detection, classification, and clustering features for easy people tagging.
-*   **Location-Aware:** Reverse geocoding to automatically tag photos with location data.
-*   **Object and Scene Detection:** Automatically identifies objects and scenes within your photos.
-*   **Multi-User Support:**  Allows multiple users to access and manage their photos.
+## Installation & Getting Started
 
-## Installation
+Detailed installation instructions are available in our comprehensive [documentation](https://docs.librephotos.com/docs/installation/standard-install).
 
-Get started with LibrePhotos today! Detailed installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install).
+*   **Stable Demo:** Explore a live demo with sample images at: [https://demo1.librephotos.com/](https://demo1.librephotos.com/). Use `demo` as the username and `demo1234` as the password.
+*   **Development Demo:** See the latest features in action at: [https://demo2.librephotos.com/](https://demo2.librephotos.com/) (same credentials).
 
-## How You Can Contribute
+## How to Contribute & Help Out
 
-Help us build a better LibrePhotos! Here's how you can contribute:
+We welcome contributions of all kinds!
 
-*   ⭐ **Star** the repository to show your support!
-*   🚀 **Develop:** Get started in less than 30 minutes using [this guide](https://docs.librephotos.com/docs/development/dev-install).
-*   🗒️ **Documentation:** Improve the documentation by submitting a pull request [here](https://github.com/LibrePhotos/librephotos.docs).
-*   🧪 **Testing:**  Help find bugs by using the ```dev``` tag and reporting issues.
-*   🧑‍🤝‍🧑 **Outreach:** Share LibrePhotos with others!
-*   🌐 **Translations:** Make LibrePhotos accessible in more languages via [weblate](https://hosted.weblate.org/engage/librephotos/).
-*   💸 [**Donate**](https://github.com/sponsors/derneuere) to the developers.
+*   ⭐ **Star the Repository:** Show your support and help others discover LibrePhotos.
+*   🚀 **Develop:** Get started with development quickly by following [this guide](https://docs.librephotos.com/docs/development/dev-install).
+*   🗒️ **Document:** Improve the documentation by submitting pull requests [here](https://github.com/LibrePhotos/librephotos.docs).
+*   🧪 **Test:** Help find bugs by using the `dev` tag and reporting any issues.
+*   🧑‍🤝‍🧑 **Spread the Word:** Share LibrePhotos with others and help them get started.
+*   🌐 **Translate:** Make LibrePhotos accessible to a wider audience through [weblate](https://hosted.weblate.org/engage/librephotos/).
+*   💸 **Donate:** Support the developers via [GitHub Sponsors](https://github.com/sponsors/derneuere).
 
 ## Technologies Used
 
-LibrePhotos leverages several powerful open-source technologies:
+LibrePhotos leverages several powerful technologies:
 
 *   **Image Conversion:** [ImageMagick](https://github.com/ImageMagick/ImageMagick)
 *   **Video Conversion:** [FFmpeg](https://github.com/FFmpeg/FFmpeg)
-*   **EXIF Support:** [ExifTool](https://github.com/exiftool/exiftool)
+*   **Exif Support:** [ExifTool](https://github.com/exiftool/exiftool)
 *   **Face Detection:** [face_recognition](https://github.com/ageitgey/face_recognition)
 *   **Face Classification/Clustering:** [scikit-learn](https://scikit-learn.org/) and [hdbscan](https://github.com/scikit-learn-contrib/hdbscan)
 *   **Image Captioning:** [im2txt](https://github.com/HughKu/Im2txt)
 *   **Scene Classification:** [places365](http://places.csail.mit.edu/)
-*   **Reverse Geocoding:** [Mapbox](https://www.mapbox.com/) (requires an API key - first 50,000 geocode lookups are free monthly)
+*   **Reverse Geocoding:** [Mapbox](https://www.mapbox.com/) (Requires API key; first 50,000 geocode lookups are free monthly)
 
 [discord]: https://discord.gg/xwRvtSDGWb
-```
-Key improvements and SEO considerations:
-
-*   **Concise Hook:**  The one-sentence hook immediately grabs the reader's attention and highlights the core benefit.
-*   **Keyword Optimization:**  Includes relevant keywords like "self-hosted," "open-source," "photo management," and "photo library" throughout.
-*   **Clear Headings:** Uses descriptive headings to structure the content and improve readability.
-*   **Bulleted Lists:** Makes key features and contribution options easy to scan.
-*   **Visual Appeal:**  Includes the project image.
-*   **Call to Action:** Includes a clear call to action ("Visit the LibrePhotos GitHub Repository")
-*   **Contribution Section:**  Provides clear steps on how to contribute.
-*   **Technology Section:** Details technologies used in the project.
-*   **Improved Language:** Uses more engaging and active language.
-*   **Markdown Formatting:** Uses proper markdown formatting for readability.
-*   **Concise Summary:**  Focuses on the most important information.
