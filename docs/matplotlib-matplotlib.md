@@ -16,45 +16,37 @@
 
 ![Matplotlib logotype](https://matplotlib.org/_static/logo2.svg)
 
-# Matplotlib: Python's Premier Plotting Library
+# Matplotlib: Python's Premier 2D Plotting Library
 
-**Matplotlib is a powerful Python library that empowers you to create a wide variety of static, animated, and interactive visualizations.**
+**Matplotlib** is a powerful Python library that empowers you to create stunning static, animated, and interactive visualizations for a wide array of applications.  Find the original repository [here](https://github.com/matplotlib/matplotlib).
 
-For more information, visit the [Matplotlib homepage](https://matplotlib.org/).
+## Key Features:
 
-![image](https://matplotlib.org/_static/readme_preview.png)
-
-## Key Features
-
-*   **Publication-Quality Figures:** Generate high-quality plots suitable for publications and presentations.
-*   **Versatile Output Formats:** Create figures in numerous formats, including PNG, PDF, SVG, and more.
-*   **Interactive Visualization:** Develop interactive plots for exploration and data analysis.
-*   **Cross-Platform Compatibility:** Works seamlessly across various platforms and operating systems.
-*   **Integration with Python Ecosystem:** Easily integrates with Python scripts, IPython shells, web applications, and GUI toolkits.
+*   **Versatile Plotting:** Generate a vast range of plots, including line charts, scatter plots, histograms, bar charts, and more.
+*   **Publication-Quality Output:** Produce figures suitable for scientific publications in various formats (PNG, PDF, SVG, etc.).
+*   **Customization:**  Fine-tune every aspect of your plots, from colors and fonts to axes and annotations.
+*   **Interactive Capabilities:** Create dynamic plots that respond to user input within Python scripts, IPython shells, web applications, and GUI toolkits.
+*   **Cross-Platform Compatibility:** Works seamlessly across various operating systems and environments.
+*   **Extensive Documentation:** Comprehensive documentation and examples to guide you through the plotting process.
+*   **Integration:** Easily integrates with other Python scientific libraries such as NumPy and Pandas.
 
 ## Installation
 
-Detailed installation instructions can be found in the [install documentation](https://matplotlib.org/stable/users/installing/index.html).
+Refer to the detailed [installation guide](https://matplotlib.org/stable/users/installing/index.html) for instructions on how to install Matplotlib.
 
 ## Contributing
 
-We welcome contributions!  If you've found a bug, have a suggestion, or want to contribute code, please see our [contributing guide](https://matplotlib.org/devdocs/devel/contribute.html).
+We welcome contributions!  If you want to contribute, see the [contributing guide](https://matplotlib.org/devdocs/devel/contribute.html) to learn how.
 
 ## Contact & Support
 
-*   **Discussion Forum:** [Discourse](https://discourse.matplotlib.org/) - for general questions and discussions.
+*   **Discourse:** The [Discourse](https://discourse.matplotlib.org/) forum is the primary place for general questions and discussions.
 *   **Mailing Lists:**
-    *   [Users](https://mail.python.org/mailman/listinfo/matplotlib-users): <matplotlib-users@python.org>
-    *   [Announcement](https://mail.python.org/mailman/listinfo/matplotlib-announce): <matplotlib-announce@python.org>
-    *   [Development](https://mail.python.org/mailman/listinfo/matplotlib-devel): <matplotlib-devel@python.org>
-*   **Development Coordination:** [Gitter](https://gitter.im/matplotlib/matplotlib) - for development-related discussions.
+    *   [Users](https://mail.python.org/mailman/listinfo/matplotlib-users) mailing list: <matplotlib-users@python.org>
+    *   [Announcement](https://mail.python.org/mailman/listinfo/matplotlib-announce) mailing list: <matplotlib-announce@python.org>
+    *   [Development](https://mail.python.org/mailman/listinfo/matplotlib-devel) mailing list: <matplotlib-devel@python.org>
+*   **Gitter:** Use [Gitter](https://gitter.im/matplotlib/matplotlib) for development coordination and direct questions related to contributing.
 
 ## Citing Matplotlib
 
-If Matplotlib is used in a project leading to publication, please acknowledge this by citing Matplotlib.
-
-[Ready-made citation entry](https://matplotlib.org/stable/users/project/citing.html) is available.
-
----
-
-**[View the original repository on GitHub](https://github.com/matplotlib/matplotlib)**
+If you use Matplotlib in a project that leads to a publication, please cite the library. [A ready-made citation entry](https://matplotlib.org/stable/users/project/citing.html) is available.

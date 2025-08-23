@@ -4,68 +4,62 @@
 ![Supported Python Versions](https://img.shields.io/badge/python-3.6+-blue.svg)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/2837/badge)](https://bestpractices.coreinfrastructure.org/projects/2837)
 
-# OpenCue: Your Open-Source Solution for VFX and Animation Render Management
+# OpenCue: The Open-Source Render Management System for VFX and Animation
 
-## About OpenCue
-
-OpenCue is an open-source render management system designed to streamline the complex rendering workflows of visual effects (VFX) and animation production.  Developed by the Academy Software Foundation (ASWF), OpenCue allows you to break down large jobs into manageable tasks, efficiently utilizing computational resources for faster and more reliable rendering.  
-
-[Visit the original OpenCue repository on GitHub](https://github.com/AcademySoftwareFoundation/OpenCue) to learn more.
+OpenCue is the ultimate open-source solution for managing your rendering pipeline, designed to handle complex jobs at scale, streamlining the production of visual effects and animation.
 
 ## Key Features
 
-*   **Industry-Proven**: Based on the in-house render manager used by Sony Pictures Imageworks, powering hundreds of films.
-*   **Scalable Architecture**: Supports massive render farms with numerous concurrent machines.
-*   **Flexible Resource Allocation**: Utilize tagging systems to assign jobs to specific machine types.
-*   **Centralized Processing**:  Jobs are rendered on a central farm, freeing up artist workstations.
-*   **Native Multi-Threading**: Supports Katana, Prman, and Arnold for optimal performance.
-*   **Deployment Flexibility**:  Works seamlessly across multi-facility, on-premises, cloud, and hybrid environments.
-*   **Advanced Resource Control**: Split hosts into numerous procs, each with custom core and memory allocations.
-*   **Automated Booking**: Integrated for efficient resource management.
-*   **Unlimited Job Complexity**:  No limitations on the number of procs a job can utilize.
+*   **Production-Proven:** Built upon the foundation of Sony Pictures Imageworks' in-house render manager, used on hundreds of films.
+*   **Highly Scalable:** Supports numerous concurrent machines for efficient rendering.
+*   **Flexible Resource Allocation:** Tagging systems allow for precise job assignment to specific machine types.
+*   **Centralized Rendering:** Jobs are processed on a central render farm, freeing up artist workstations.
+*   **Native Multi-Threading:** Optimized for popular rendering software like Katana, Prman, and Arnold.
+*   **Deployment Flexibility:** Supports multi-facility, on-premises, cloud, and hybrid environments.
+*   **Fine-Grained Control:** Allows splitting a host into multiple [procs](https://www.opencue.io/docs/concepts/glossary/#proc), each with dedicated resources.
+*   **Integrated Automated Booking:** Streamlines resource management.
+*   **Unlimited Job Size:** No limit on the number of [procs](https://www.opencue.io/docs/concepts/glossary/#proc) a job can utilize.
 
 ## Getting Started
 
-### Quick Installation with Sandbox
+### Quick Installation & Testing
 
-Explore OpenCue with the easy-to-use sandbox environment:
+Quickly set up a local OpenCue environment using the sandbox:
 
-*   Run a test OpenCue deployment locally using Docker containers or Python virtual environments.
-*   Ideal for testing, development, and learning.
-*   Learn how to run the sandbox: [OpenCue Sandbox Documentation](https://github.com/AcademySoftwareFoundation/OpenCue/blob/master/sandbox/README.md) 
+*   The sandbox environment offers an easy way to run a test OpenCue deployment locally, with all components running in separate Docker containers or Python virtual environments.
+*   Ideal for small tests, development work, and for those new to OpenCue who want a simple setup for experimentation and learning.
 
-### Full Installation
+See the [OpenCue sandbox documentation](https://github.com/AcademySoftwareFoundation/OpenCue/blob/master/sandbox/README.md) and [quick-starts](https://www.opencue.io/docs/quick-starts/) for more information.
 
-For system administrators, comprehensive guides for deploying OpenCue components are available in the OpenCue documentation:  [OpenCue Documentation](https://www.opencue.io/docs/getting-started/)
+### Full Installation & Documentation
+
+Comprehensive guides for system admins deploying OpenCue and installing dependencies are available in the main [OpenCue documentation](https://www.opencue.io/docs/getting-started/).
 
 ## Documentation
 
-Comprehensive documentation is available at [https://docs.opencue.io/](https://docs.opencue.io/)
+The OpenCue documentation, hosted on GitHub Pages, includes installation guides, user guides, API references, and tutorials.  Find the documentation at [https://docs.opencue.io/](https://docs.opencue.io/).
 
-The documentation includes installation guides, user guides, API references, and tutorials to help you get started with OpenCue.
+### Contributing to Documentation
 
-### Contributing to the Documentation
+When contributing to OpenCue, remember to update the documentation for new features or changes. Each pull request should include documentation updates when applicable.
 
-When contributing to OpenCue, please update the documentation for any new features or changes. Each pull request should include relevant documentation updates when applicable.
-
-#### Building and Testing Documentation
-
-If you make changes to `OpenCue/docs`, please build and test the documentation before submitting your PR:
+**Building & Testing Documentation**
 
 1.  **Build and validate the documentation**
+
     ```bash
     ./docs/build.sh
     ```
 
 2.  **Install bundler binstubs (if needed)**
 
-    If you encounter permission errors when installing to system directories:
     ```bash
     cd docs/
     bundle binstubs --all
     ```
 
 3.  **Run the documentation locally**
+
     ```bash
     cd docs/
     bundle exec jekyll serve --livereload
@@ -77,15 +71,21 @@ If you make changes to `OpenCue/docs`, please build and test the documentation b
 
 For detailed documentation setup instructions, testing procedures, and contribution guidelines, see [docs/README.md](https://github.com/AcademySoftwareFoundation/OpenCue/blob/master/docs/README.md).
 
-**Note:** Once your pull request is merged into master, the documentation will be automatically deployed via GitHub Actions ([.github/workflows/docs.yml](https://github.com/AcademySoftwareFoundation/OpenCue/blob/master/docs/.github/workflows/docs.yml)). The updated documentation will be available at https://docs.opencue.io/.
+**Note:**  Documentation is automatically deployed via GitHub Actions after a merge to the `master` branch.
+
+## Resources
+
+*   **Learn More:** [www.opencue.io](https://www.opencue.io)
+*   **YouTube:** [OpenCue Playlist](https://www.youtube.com/playlist?list=PL9dZxafYCWmzSBEwVT2AQinmZolYqBzdp)
+*   **GitHub Repository:** [AcademySoftwareFoundation/OpenCue](https://github.com/AcademySoftwareFoundation/OpenCue)
 
 ## Meeting Notes
 
-*   **Latest:** Meeting notes from May 2024 onwards are stored on the [Opencue Confluence page](http://wiki.aswf.io/display/OPENCUE/OpenCue+Home).
-*   **Older:**  Meeting notes before May 2024 can be found in the [opencue/tsc/meetings](https://github.com/AcademySoftwareFoundation/OpenCue/tree/master/tsc/meetings) folder of the repository.
+*   **Current:** All OpenCue meeting notes from May 2024 onwards are stored on the [OpenCue Confluence page](http://wiki.aswf.io/display/OPENCUE/OpenCue+Home).
+*   **Previous:** Meeting notes before May 2024 are in the [opencue/tsc/meetings](https://github.com/AcademySoftwareFoundation/OpenCue/tree/master/tsc/meetings) folder of this repository.
 
-## Get in Touch
+## Contact & Community
 
-*   **Discussion Forum**: Join the [opencue-user mailing list](https://lists.aswf.io/g/opencue-user) or email <opencue-user@lists.aswf.io>.
-*   **Slack**: Join the [Opencue Slack channel](https://academysoftwarefdn.slack.com/archives/CMFPXV39Q).
-*   **Working Group**: Meets bi-weekly at 2pm PST on [Zoom](https://www.google.com/url?q=https://zoom-lfx.platform.linuxfoundation.org/meeting/95509555934?password%3Da8d65f0e-c5f0-44fb-b362-d3ed0c22b7c1&sa=D&source=calendar&ust=1717863981078692&usg=AOvVaw1zRcYz7VPAwfwOXeBPpoM6).
+*   **Discussion Forum:** Join the [opencue-user mailing list](https://lists.aswf.io/g/opencue-user) or email <opencue-user@lists.aswf.io>.
+*   **Slack:** Join the [Opencue Slack channel](https://academysoftwarefdn.slack.com/archives/CMFPXV39Q).
+*   **Working Group:** Meets biweekly at 2 PM PST on [Zoom](https://www.google.com/url?q=https://zoom-lfx.platform.linuxfoundation.org/meeting/95509555934?password%3Da8d65f0e-c5f0-44fb-b362-d3ed0c22b7c1&sa=D&source=calendar&ust=1717863981078692&usg=AOvVaw1zRcYz7VPAwfwOXeBPpoM6).

@@ -1,31 +1,37 @@
-# Odoo: Transform Your Business with a Powerful Open-Source ERP System
+# Odoo
 
-**Odoo is a comprehensive suite of open-source business applications designed to streamline operations and boost productivity.**  Explore the capabilities of this versatile platform and take your business to the next level.  [Learn more at the original repository](https://github.com/odoo/odoo).
+[![Build Status](https://runbot.odoo.com/runbot/badge/flat/1/master.svg)](https://runbot.odoo.com/runbot)
+[![Tech Doc](https://img.shields.io/badge/master-docs-875A7B.svg?style=flat&colorA=8F8F8F)](https://www.odoo.com/documentation/master)
+[![Help](https://img.shields.io/badge/master-help-875A7B.svg?style=flat&colorA=8F8F8F)](https://www.odoo.com/forum/help-1)
+[![Nightly Builds](https://img.shields.io/badge/master-nightly-875A7B.svg?style=flat&colorA=8F8F8F)](https://nightly.odoo.com/)
 
-## Key Features of Odoo:
+Odoo is a suite of web based open source business apps.
 
-*   **Comprehensive Business Applications:** Access a vast array of integrated apps covering all essential business functions.
-*   **Open Source CRM:** Manage customer relationships effectively with an integrated CRM.
-*   **Website Builder:** Design and launch a professional website with ease.
-*   **E-commerce Capabilities:** Build a successful online store to sell your products or services.
-*   **Warehouse Management:** Optimize inventory and fulfillment processes.
-*   **Project Management:** Plan, track, and execute projects efficiently.
-*   **Billing & Accounting:** Manage finances, accounting, and invoicing seamlessly.
-*   **Point of Sale (POS):**  Simplify and streamline your in-store sales operations.
-*   **Human Resources:** Streamline HR tasks, including employee management.
-*   **Marketing Automation:** Engage your audience through effective marketing campaigns.
-*   **Manufacturing:** Manage manufacturing processes and workflows.
-*   **Seamless Integration:**  Individual Odoo apps integrate perfectly, providing a full-featured Open Source ERP system.
-*   **Modular Design:** Install only the apps you need, customizing your Odoo experience.
+The main Odoo Apps include an [Open Source CRM](https://www.odoo.com/page/crm),
+[Website Builder](https://www.odoo.com/app/website),
+[eCommerce](https://www.odoo.com/app/ecommerce),
+[Warehouse Management](https://www.odoo.com/app/inventory),
+[Project Management](https://www.odoo.com/app/project),
+[Billing &amp; Accounting](https://www.odoo.com/app/accounting),
+[Point of Sale](https://www.odoo.com/app/point-of-sale-shop),
+[Human Resources](https://www.odoo.com/app/employees),
+[Marketing](https://www.odoo.com/app/social-marketing),
+[Manufacturing](https://www.odoo.com/app/manufacturing),
+[...](https://www.odoo.com/)
 
-## Getting Started with Odoo:
+Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get
+a full-featured [Open Source ERP](https://www.odoo.com) when you install several Apps.
 
-*   **Installation:** Follow the [Setup instructions](https://www.odoo.com/documentation/master/administration/install/install.html) in the official documentation.
-*   **Learning Resources:**
-    *   Explore the [Odoo eLearning](https://www.odoo.com/slides) to learn the software.
-    *   Play the [Scale-up, the business game](https://www.odoo.com/page/scale-up-business-game) to gain business insights.
-    *   Developers can start with the [developer tutorials](https://www.odoo.com/documentation/master/developer/howtos.html).
+## Getting started with Odoo
 
-## Security Information
+For a standard installation please follow the [Setup instructions](https://www.odoo.com/documentation/master/administration/install/install.html)
+from the documentation.
 
-Report security issues responsibly. See the [Responsible Disclosure page](https://www.odoo.com/security-report) for details.
+To learn the software, we recommend the [Odoo eLearning](https://www.odoo.com/slides),
+or [Scale-up, the business game](https://www.odoo.com/page/scale-up-business-game).
+Developers can start with [the developer tutorials](https://www.odoo.com/documentation/master/developer/howtos.html).
+
+## Security
+
+If you believe you have found a security issue, check our [Responsible Disclosure page](https://www.odoo.com/security-report)
+for details and get in touch with us via email.

@@ -1,32 +1,33 @@
-# BEHAVIOR-1K: The Ultimate Benchmark for Embodied AI in Everyday Life
+# BEHAVIOR-1K: Empowering Embodied AI with Realistic Everyday Activities
+
+**BEHAVIOR-1K** is a groundbreaking simulation benchmark designed to test and advance embodied AI agents on a diverse set of 1,000 everyday household activities.
 
 [![BEHAVIOR-1K](./docs/assets/readme_splash_logo.png)](https://github.com/StanfordVL/BEHAVIOR-1K)
 
-**BEHAVIOR-1K** is a comprehensive simulation benchmark designed to evaluate and advance embodied AI agents on a wide range of human-centered activities, providing a realistic and challenging environment for training and testing.  Check out the [original repository on GitHub](https://github.com/StanfordVL/BEHAVIOR-1K) for more details and the latest updates.
+This repository provides all the necessary tools to train and evaluate your AI agents on tasks inspired by real-world human time-use surveys and preference studies, including cooking, cleaning, and organization.  Dive deeper into the project on our [main website](https://behavior.stanford.edu/).
 
-**Key Features:**
+## Key Features of BEHAVIOR-1K
 
-*   **1,000 Everyday Activities:** Tests agents on tasks inspired by real-world human time-use surveys, including cleaning, cooking, and organization.
-*   **Realistic Simulation:** Leverages advanced simulation capabilities to provide a challenging and immersive environment.
-*   **Modular Installation:**  Install only the components you need for maximum flexibility.
-*   **Human-Centered Focus:**  Addresses the need for AI agents capable of assisting with everyday tasks in a human-centric way.
-*   **Extensive Datasets:** Includes datasets to support training and evaluation of your AI agents.
-*   **Teleoperation Support:**  Allows for human teleoperation to interact with the simulated environment.
+*   **Comprehensive Activity Suite:** Experience a rich dataset of 1,000 realistic, everyday household activities.
+*   **Human-Centered Tasks:** Focus on tasks like cooking, cleaning, and organizing, reflecting human behavior.
+*   **Realistic Simulation:** Built using state-of-the-art simulation tools for accurate agent training and evaluation.
+*   **Modular Installation:** Easily customize your installation with modular component options.
+*   **Open-Source:** Leverage a fully open-source platform for research and development.
 
 ## Installation
 
-The BEHAVIOR-1K project offers a convenient installation script to handle all dependencies.  This script is designed for ease of use and allows for modular installation of specific components.
+The installation script simplifies the setup process, handling all dependencies and allowing for modular component selection.
 
 ### System Requirements
 
 *   **OS:** Linux (Ubuntu 20.04+) or Windows 10+
-*   **RAM:** 32GB+ recommended
+*   **RAM:** 32GB+ (Recommended)
 *   **VRAM:** 8GB+
 *   **GPU:** NVIDIA RTX 2080+
 
 ### Quick Start
 
-For most users, a full installation is recommended. Choose to create a new conda environment or use your existing Python environment.
+We recommend the full installation for most users. Choose to create a new conda environment or use your existing Python environment.
 
 #### Linux
 
@@ -48,36 +49,33 @@ cd BEHAVIOR-1K
 
 ### Installation Options
 
+You can customize your installation by selecting specific components.
+
 #### Available Components
 
-| Component        | Flag           | Description                                                    |
-| ---------------- | -------------- | -------------------------------------------------------------- |
-| OmniGibson       | `--omnigibson` | Core physics simulator and robotics environment                  |
-| BDDL             | `--bddl`       | Behavior Domain Definition Language for task specification     |
-| Teleoperation    | `--teleop`     | JoyLo interface for robot teleoperation                        |
+| Component         | Flag          | Description                                                 |
+|-------------------|---------------|-------------------------------------------------------------|
+| OmniGibson        | `--omnigibson` | Core physics simulator and robotics environment           |
+| BDDL              | `--bddl`      | Behavior Domain Definition Language for task specification  |
+| Teleoperation     | `--teleop`    | JoyLo interface for robot teleoperation                     |
 
 #### Additional Options
 
-| Option                     | Flag                    | Description                                                                |
-| -------------------------- | ----------------------- | -------------------------------------------------------------------------- |
-| New Environment            | `--new-env`             | Create a new conda environment named `behavior` (requires conda)          |
-| Datasets                   | `--dataset`             | Download BEHAVIOR datasets (requires `--omnigibson`)                        |
-| Primitives                 | `--primitives`          | Install OmniGibson with action primitives support                             |
-| Development                | `--dev`                 | Install development dependencies                                          |
-| CUDA Version               | `--cuda-version X.X`    | Specify CUDA version (default: 12.4)                                       |
-| No Conda Confirmation      | `--confirm-no-conda`    | Skip confirmation prompt when not in a conda environment                   |
-| Conda TOS                  | `--accept-conda-tos`    | Automatically accept Anaconda Terms of Service                             |
-| NVIDIA EULA                | `--accept-nvidia-eula`  | Automatically accept NVIDIA Isaac Sim End User License Agreement          |
-| Dataset License            | `--accept-dataset-tos`  | Automatically accept BEHAVIOR Data Bundle License Agreement                 |
-
-To see all available options:
-```bash
-./setup.sh --help
-```
+| Option                   | Flag                     | Description                                                                                                 |
+|--------------------------|--------------------------|-------------------------------------------------------------------------------------------------------------|
+| New Environment          | `--new-env`              | Create a new conda environment named `behavior` (requires conda)                                          |
+| Datasets                 | `--dataset`              | Download BEHAVIOR datasets (requires `--omnigibson`)                                                      |
+| Primitives               | `--primitives`           | Install OmniGibson with action primitives support                                                        |
+| Development              | `--dev`                  | Install development dependencies                                                                           |
+| CUDA Version             | `--cuda-version X.X`     | Specify CUDA version (default: 12.4)                                                                        |
+| No Conda Confirmation    | `--confirm-no-conda`     | Skip confirmation prompt when not in a conda environment                                                   |
+| Conda TOS                | `--accept-conda-tos`     | Automatically accept Anaconda Terms of Service                                                             |
+| NVIDIA EULA              | `--accept-nvidia-eula`   | Automatically accept NVIDIA Isaac Sim End User License Agreement                                           |
+| Dataset License          | `--accept-dataset-tos`   | Automatically accept BEHAVIOR Data Bundle License Agreement                                               |
 
 ### Installation without Conda
 
-If you prefer to use your existing Python environment, omit the `--new-env` flag:
+Use your existing Python environment by omitting the `--new-env` flag:
 
 ```bash
 # Linux
@@ -87,18 +85,24 @@ If you prefer to use your existing Python environment, omit the `--new-env` flag
 .\setup.ps1 -OmniGibson -BDDL -Teleop -Dataset
 ```
 
-To skip the confirmation prompt when not in a conda environment, use the `--confirm-no-conda` flag.
+### Automated Installation (CI/CD)
 
-### Terms of Service & License Acceptance
-
-For automated/CI environments, you can bypass all prompts using the following flags:
+To skip prompts during non-interactive installations:
 
 ```bash
 ./setup.sh --new-env --omnigibson --bddl --teleop --dataset \
            --accept-conda-tos --accept-nvidia-eula --accept-dataset-tos
 ```
 
+View all options with:
+
+```bash
+./setup.sh --help
+```
+
 ## Citation
+
+If you use BEHAVIOR-1K in your research, please cite the following:
 
 ```bibtex
 @article{li2024behavior1k,
@@ -108,3 +112,5 @@ For automated/CI environments, you can bypass all prompts using the following fl
     year    = {2024}
 }
 ```
+
+**[Back to Top](https://github.com/StanfordVL/BEHAVIOR-1K)**

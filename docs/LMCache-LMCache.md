@@ -2,7 +2,7 @@
   <p align="center">
     <img src="https://raw.githubusercontent.com/LMCache/LMCache/dev/asset/logo.png" width="720" alt="lmcache logo">
   </p>
-
+  
   [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://docs.lmcache.ai/)
   [![PyPI](https://img.shields.io/pypi/v/lmcache)](https://pypi.org/project/lmcache/)
   [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/lmcache)](https://pypi.org/project/lmcache/)
@@ -21,59 +21,63 @@
 
 </div>
 
-## LMCache: Accelerate LLM Inference with Efficient KV Cache Management
+# LMCache: Supercharge Your LLM Serving with Intelligent Caching
 
-LMCache drastically reduces the latency and cost of Large Language Model (LLM) inference by intelligently caching and reusing KV (key-value) caches.  Check out the original repo [here](https://github.com/LMCache/LMCache).
+LMCache revolutionizes Large Language Model (LLM) serving by dramatically reducing Time-To-First-Token (TTFT) and increasing throughput, particularly for long-context applications.  [Explore LMCache on GitHub](https://github.com/LMCache/LMCache)
 
-### Key Features:
+## Key Features
 
-*   **Significant Performance Boost:** Reduces Time-To-First-Token (TTFT) and increases throughput, especially in long-context scenarios.
-*   **KV Cache Reusability:** Leverages KV caches of reused text across various instances and locations, including GPU, CPU DRAM, and local disk.
-*   **vLLM Integration:** Seamlessly integrates with vLLM, offering high-performance CPU KVCache offloading, disaggregated prefill, and P2P KVCache sharing.
-*   **Versatile Storage Options:** Supports CPU, Disk, and NIXL storage for KV caches.
-*   **Non-Prefix KV Cache Support:** Provides stable support for non-prefix KV caches, enhancing flexibility.
-*   **Production Ready:** Supported in the [vLLM production stack](https://github.com/vllm-project/production-stack/), [llm-d](https://github.com/llm-d/llm-d/), and [KServe](https://github.com/kserve/kserve).
-*   **Easy Installation:** Simple pip install process.
+*   **Accelerated LLM Performance:** Significantly reduces TTFT and boosts throughput by caching and reusing KV caches across various storage locations (GPU, CPU DRAM, Local Disk).
+*   **Non-Prefix Cache Support:**  Efficiently caches and reuses KV caches for *any* reused text, not just prefixes.
+*   **vLLM Integration:** Seamlessly integrates with vLLM v1, providing CPU KVCache offloading, disaggregated prefill, and P2P KVCache sharing for optimized performance.
+*   **Versatile Storage Options:** Supports caching on CPU, Disk, and [NIXL](https://github.com/ai-dynamo/nixl), enabling flexible resource utilization.
+*   **Production-Ready:**  Officially supported in the [vLLM production stack](https://github.com/vllm-project/production-stack/), [llm-d](https://github.com/llm-d/llm-d/), and [KServe](https://github.com/kserve/kserve).
+*   **Easy Installation:** Simple pip installation for quick setup and deployment.
 
-### Installation
+## Installation
 
-Install LMCache using pip:
+Install LMCache easily with pip:
 
 ```bash
 pip install lmcache
 ```
 
-For detailed installation instructions, particularly if you are not using the latest stable version of vLLM or using another serving engine, please refer to the [documentation](https://docs.lmcache.ai/getting_started/installation).
+For more detailed instructions, including those for non-stable vLLM versions and alternative serving engines, refer to the [detailed installation guide](https://docs.lmcache.ai/getting_started/installation) in the documentation.
 
-### Getting Started
+## Getting Started
 
-Explore the [Quickstart Examples](https://docs.lmcache.ai/getting_started/quickstart/) in the documentation to quickly get up and running.
+Dive into LMCache quickly with our [Quickstart Examples](https://docs.lmcache.ai/getting_started/quickstart/) to see the benefits in action.
 
-### Documentation
+## Documentation
 
-Comprehensive documentation is available online: [LMCache Documentation](https://docs.lmcache.ai/).  Stay updated with the latest news and developments through the [LMCache blog](https://blog.lmcache.ai/).
+Comprehensive [documentation](https://docs.lmcache.ai/) is available to guide you through all aspects of LMCache.
 
-### Examples
+## Examples
 
-Dive into practical applications with our [examples](https://github.com/LMCache/LMCache/tree/dev/examples), showcasing how to leverage LMCache for various use cases.
+Explore practical use cases with our [examples](https://github.com/LMCache/LMCache/tree/dev/examples) to see how LMCache can be applied in various scenarios.
 
-### Connect with Us
+## Resources
 
+*   **Blog:** [LMCache Blogs](https://blog.lmcache.ai/)
+*   **Join Slack:** [Join Slack](https://join.slack.com/t/lmcacheworkspace/shared_invite/zt-36x1m765z-8FgDA_73vcXtlZ_4XvpE6Q)
 *   **Interest Form:** [Interest Form](https://forms.gle/MHwLiYDU6kcW3dLj7)
-*   **Newsletter:** [Sign Up](https://mailchi.mp/tensormesh/lmcache-sign-up-newsletter)
-*   **Slack:** [Join Slack](https://join.slack.com/t/lmcacheworkspace/shared_invite/zt-2viziwhue-5Amprc9k5hcIdXT7XevTaQ)
+*   **Roadmap:** [Roadmap](https://github.com/LMCache/LMCache/issues/1253)
 *   **Website:** [LMCache Website](https://lmcache.ai/)
-*   **Email:** [contact@lmcache.ai](mailto:contact@lmcache.ai)
-*   **Community Meeting:**  Bi-weekly on Tuesdays at 9:00 AM PT – [Add to Calendar](https://drive.usercontent.google.com/u/0/uc?id=1f5EXbooGcwNwzIpTgn5u4PHqXgfypMtu&export=download)
-    *   Meeting Notes: [Meeting Notes](https://docs.google.com/document/d/1_Fl3vLtERFa3vTH00cezri78NihNBtSClK-_1tSrcow)
-    *   Recordings: [YouTube LMCache channel](https://www.youtube.com/channel/UC58zMz55n70rtf1Ak2PULJA)
 
-### Contributing
+## Community & Support
 
-We encourage contributions!  See our [Contributing Guide](CONTRIBUTING.md) for details.
-Check out [[Onboarding] Welcoming contributors with good first issues!](https://github.com/LMCache/LMCache/issues/627)
+*   **Bi-Weekly Community Meeting:** Join us bi-weekly on Tuesdays at 9:00 AM PT - [Add to Calendar](https://drive.usercontent.google.com/u/0/uc?id=1f5EXbooGcwNwzIpTgn5u4PHqXgfypMtu&export=download)
+    *   Meeting notes are available [here](https://docs.google.com/document/d/1_Fl3vLtERFa3vTH00cezri78NihNBtSClK-_1tSrcow).
+    *   Meeting recordings are available on the [YouTube LMCache channel](https://www.youtube.com/channel/UC58zMz55n70rtf1Ak2PULJA).
+*   **Contact:**  For any questions, reach out via email at [contact@lmcache.ai](mailto:contact@lmcache.ai).
 
-### Citation
+## Contributing
+
+We welcome contributions!  Please see the [Contributing Guide](CONTRIBUTING.md) for details on how to get involved, and check out [[Onboarding] Welcoming contributors with good first issues!](https://github.com/LMCache/LMCache/issues/627) for good first issues.
+
+## Citation
+
+If you use LMCache in your research, please cite these papers:
 
 ```
 @inproceedings{liu2024cachegen,
@@ -102,12 +106,12 @@ Check out [[Onboarding] Welcoming contributors with good first issues!](https://
 }
 ```
 
-### Social Media
+## Socials
 
 *   [LinkedIn](https://www.linkedin.com/company/lmcache-lab/?viewAsMember=true)
 *   [Twitter](https://x.com/lmcache)
-*   [Youtube](https://www.youtube.com/@LMCacheTeam)
+*   [YouTube](https://www.youtube.com/@LMCacheTeam)
 
-### License
+## License
 
-Licensed under the Apache License 2.0.  See the [LICENSE](LICENSE) file.
+LMCache is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.

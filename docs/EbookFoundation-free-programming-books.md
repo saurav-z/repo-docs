@@ -1,20 +1,14 @@
-# Free Programming Books: Your Ultimate Resource for Learning to Code
+# Free Programming Books: Your Gateway to Accessible Learning
 
-**Unlock your coding potential with this extensive, community-curated list of free programming books, courses, and more, available in numerous languages.** ([Back to Top](#))
-
-<div align="center" markdown="1">
+**Unlock your programming potential with a vast, curated collection of free learning resources in multiple languages.**  
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)&#160;
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)&#160;
 [![Hacktoberfest 2023 stats](https://img.shields.io/github/hacktoberfest/2023/EbookFoundation/free-programming-books?label=Hacktoberfest+2023)](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Apr+is%3Amerged+created%3A2023-10-01..2023-10-31)
 
-</div>
+Explore the comprehensive list at [https://ebookfoundation.github.io/free-programming-books-search/](https://ebookfoundation.github.io/free-programming-books-search/) [![Dynamic Search Site](https://img.shields.io/website?style=flat&logo=www&logoColor=whitesmoke&label=Dynamic%20search%20site&down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Febookfoundation.github.io%2Ffree-programming-books-search%2F)](https://ebookfoundation.github.io/free-programming-books-search/).
 
-**Explore the searchable list at [https://ebookfoundation.github.io/free-programming-books-search/](https://ebookfoundation.github.io/free-programming-books-search/)**
-[![https://ebookfoundation.github.io/free-programming-books-search/](https://img.shields.io/website?style=flat&logo=www&logoColor=whitesmoke&label=Dynamic%20search%20site&down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Febookfoundation.github.io%2Ffree-programming-books-search%2F)](https://ebookfoundation.github.io/free-programming-books-search/).
-
-**Browse the static site at [https://ebookfoundation.github.io/free-programming-books/](https://ebookfoundation.github.io/free-programming-books/)**
-[![https://ebookfoundation.github.io/free-programming-books/](https://img.shields.io/website?style=flat&logo=www&logoColor=whitesmoke&label=Static%20site&down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Febookfoundation.github.io%2Ffree-programming-books%2F)](https://ebookfoundation.github.io/free-programming-books/).
+Access the easy-to-read website here: [![Static Site](https://img.shields.io/website?style=flat&logo=www&logoColor=whitesmoke&label=Static%20site&down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Febookfoundation.github.io%2Ffree-programming-books%2F)](https://ebookfoundation.github.io/free-programming-books/).
 
 <div align="center">
   <form action="https://ebookfoundation.github.io/free-programming-books-search">
@@ -24,17 +18,13 @@
   </form>
 </div>
 
-## What is Free Programming Books?
+## About the Project
 
-Originally a clone of a StackOverflow list, this repository has grown into one of the most popular resources on GitHub, offering a vast collection of free learning materials for programmers of all levels.  It is maintained by the [Free Ebook Foundation](https://ebookfoundation.org).
+This repository, a fork from the original StackOverflow list, has evolved into a leading resource for free programming books, courses, and more.  The project is maintained collaboratively and has become one of the most popular repositories on GitHub. 
 
-**Key Features:**
-
-*   **Comprehensive Resource:** Access books, courses, cheat sheets, and interactive tutorials.
-*   **Multilingual Support:** Learn in your preferred language with resources available in numerous languages.
-*   **Community-Driven:** Benefit from a collaborative effort that ensures the list remains up-to-date and relevant.
-*   **Easy Search:** Utilize the search functionality to find resources quickly.
-*   **Organized by Category:** Find what you need with resources grouped by programming language, subject, and more.
+*   **Original Source:**  Derived from a StackOverflow answer.
+*   **GitHub Popularity:**  One of GitHub's most popular repositories.
+*   **Administered by:** The [Free Ebook Foundation](https://ebookfoundation.org), a not-for-profit organization supporting free ebook access.
 
 <div align="center" markdown="1">
 
@@ -47,13 +37,11 @@ Originally a clone of a StackOverflow list, this repository has grown into one o
 
 </div>
 
-## How to Contribute
+## Contributing & Getting Involved
 
-Help expand this invaluable resource by contributing to the project.
+We welcome contributions!  See [CONTRIBUTING](docs/CONTRIBUTING.md) and [HOWTO](docs/HOWTO.md) for details.  Please adhere to the [Code of Conduct](docs/CODE_OF_CONDUCT.md).
 
-Read the [CONTRIBUTING](docs/CONTRIBUTING.md) guide.
-
-We welcome contributions!  Please review the [Code of Conduct](docs/CODE_OF_CONDUCT.md) before contributing.
+Click on these badges to find the areas where you can contribute to the project:
 
 <div align="center" markdown="1">
 
@@ -66,7 +54,7 @@ We welcome contributions!  Please review the [Code of Conduct](docs/CODE_OF_COND
 
 </div>
 
-## How To Share
+## How to Share
 
 <div align="left" markdown="1">
 <a href="https://www.facebook.com/share.php?u=https%3A%2F%2Fgithub.com%2FEbookFoundation%2Ffree-programming-books&p[images][0]=&p[title]=Free%20Programming%20Books&p[summary]=">Share on Facebook</a><br>
@@ -78,14 +66,16 @@ We welcome contributions!  Please review the [Code of Conduct](docs/CODE_OF_COND
 
 ## Resources
 
+This repository offers a variety of learning resources, categorized for easy access:
+
 ### Books
 
-*   [English, By Programming Language](books/free-programming-books-langs.md)
-*   [English, By Subject](books/free-programming-books-subjects.md)
+*   **English:** [By Programming Language](books/free-programming-books-langs.md)
+*   **English:** [By Subject](books/free-programming-books-subjects.md)
 
 #### Other Languages
 
-*   (List of other languages - too many to list, see original README)
+*   [Extensive list of languages](books/) (Arabic, Chinese, French, German, Spanish, etc.)
 
 ### Cheat Sheets
 
@@ -93,11 +83,15 @@ We welcome contributions!  Please review the [Code of Conduct](docs/CODE_OF_COND
 
 ### Free Online Courses
 
-*   (List of other languages - too many to list, see original README)
+*   [Extensive list of languages](courses/) (English, Chinese, French, Spanish, etc.)
 
 ### Interactive Programming Resources
 
-*   (List of other languages - too many to list, see original README)
+*   [Chinese / 中文](more/free-programming-interactive-tutorials-zh.md)
+*   [English](more/free-programming-interactive-tutorials-en.md)
+*   [German / Deutsch](more/free-programming-interactive-tutorials-de.md)
+*   [Japanese / 日本語](more/free-programming-interactive-tutorials-ja.md)
+*   [Russian / Русский язык](more/free-programming-interactive-tutorials-ru.md)
 
 ### Problem Sets and Competitive Programming
 
@@ -105,18 +99,20 @@ We welcome contributions!  Please review the [Code of Conduct](docs/CODE_OF_COND
 
 ### Podcast - Screencast
 
-*   (List of other languages - too many to list, see original README)
+*   [Extensive list of languages](casts/) (English, Chinese, French, German, Spanish, etc.)
 
 ### Programming Playgrounds
 
-*   (List of other languages - too many to list, see original README)
+*   [Chinese / 中文](more/free-programming-playgrounds-zh.md)
+*   [English](more/free-programming-playgrounds.md)
+*   [German / Deutsch](more/free-programming-playgrounds-de.md)
 
 ## Translations
 
-Find translated documents in [docs/README.md#translations].
+Find translated documentation in the [docs/README.md#translations](docs/README.md#translations) section.
 
 ## License
 
-Licensed under the [CC BY License](LICENSE).
+This project is licensed under the [CC BY License](LICENSE).
 
-**[Return to Top](#)**
+[Back to top](#free-programming-books-your-gateway-to-accessible-learning)

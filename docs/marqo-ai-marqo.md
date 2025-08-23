@@ -12,50 +12,51 @@
 <a href="https://pypi.org/project/marqo/"><img src="https://img.shields.io/pypi/v/marqo?label=PyPI"></a>
 <a href="https://github.com/marqo-ai/marqo/actions/workflows/unit_test_200gb_CI.yml"><img src="https://img.shields.io/github/actions/workflow/status/marqo-ai/marqo/unit_test_200gb_CI.yml?branch=mainline"></a>
 
-# Marqo: The Open-Source Vector Search Engine for Text and Images
+# Marqo: The End-to-End Vector Search Engine for Text and Images
 
-**Effortlessly build cutting-edge search applications with Marqo, the all-in-one vector search engine.**  [Explore the original repository](https://github.com/marqo-ai/marqo).
+**Marqo simplifies vector search by providing vector generation, storage, and retrieval in a single, easy-to-use API.**  [Explore the original repo](https://github.com/marqo-ai/marqo).
 
 ## Key Features
 
-*   **🤖 State-of-the-Art Embeddings:**
-    *   Utilize the latest machine learning models from Hugging Face, OpenAI, and more.
+*   **🚀 State-of-the-Art Embeddings:**
+    *   Leverage the latest machine learning models from Hugging Face, OpenAI, and more.
     *   Choose from pre-configured models or bring your own.
-    *   Supports both CPU and GPU.
+    *   Supports both CPU and GPU acceleration.
 
 *   **⚡ High Performance:**
-    *   Leverage in-memory HNSW indexes for blazing-fast search speeds.
-    *   Scale to indexes with hundreds of millions of documents using horizontal index sharding.
-    *   Benefit from asynchronous and non-blocking data upload and search operations.
+    *   Utilizes in-memory HNSW indexes for blazingly fast search speeds.
+    *   Scales to handle indexes with hundreds of millions of documents through horizontal index sharding.
+    *   Offers async and non-blocking data upload and search capabilities.
 
-*   **🌌 Documents-In-Documents-Out:**
-    *   Vector generation, storage, and retrieval are handled seamlessly.
-    *   Create search, entity resolution, and data exploration applications using your text and images.
-    *   Craft complex semantic queries by combining weighted search terms.
-    *   Filter search results using Marqo’s query DSL.
-    *   Store structured metadata and unstructured data together using a range of supported datatypes.
+*   **📦 Documents-In, Documents-Out:**
+    *   Handles vector generation, storage, and retrieval out-of-the-box.
+    *   Build powerful search, entity resolution, and data exploration applications using your text and images.
+    *   Create complex semantic queries by combining weighted search terms.
+    *   Filter search results using Marqo's flexible query DSL.
+    *   Store both unstructured data and semi-structured metadata seamlessly.
 
-*   **🍱 Managed Cloud Offering:**
-    *   Low-latency deployments are optimized for performance.
-    *   Easily scale inference with a single click.
-    *   Offers high availability and 24/7 support.
-    *   Includes access control for secure management.
+*   **☁️ Managed Cloud:**
+    *   Low-latency optimized deployment of Marqo.
+    *   Scale your inference at the click of a button.
+    *   Ensured high availability with 24/7 support.
+    *   Access control included.
     *   Learn more about [Marqo Cloud](https://www.marqo.ai/cloud).
 
 ## Integrations
 
 Marqo seamlessly integrates with popular AI and data processing frameworks:
 
-*   **💙 [Haystack](https://github.com/deepset-ai/haystack)**: Use Marqo as your Document Store for Haystack pipelines.
-*   **🛹 [Griptape](https://github.com/griptape-ai/griptape)**: Integrate Marqo for scalable search within your LLM-based agents.
-*   **🦜🔗 [Langchain](https://github.com/langchain-ai/langchain)**: Implement Marqo for vector search components in LangChain applications.
-*   **⋙ [Hamilton](https://github.com/DAGWorks-Inc/hamilton/)**: Leverage Marqo for Hamilton LLM applications.
+*   **💙 [Haystack](https://github.com/deepset-ai/haystack):** Integrate Marqo as your Document Store for NLP pipelines.
+*   **🛹 [Griptape](https://github.com/griptape-ai/griptape):** Provide your LLM-based agents access to scalable search.
+*   **🦜🔗 [Langchain](https://github.com/langchain-ai/langchain):** Leverage Marqo for your LangChain applications with a vector search component.
+*   **⋙ [Hamilton](https://github.com/DAGWorks-Inc/hamilton/):** Use Marqo for Hamilton LLM applications.
 
-## Quick Start
+## Get Started Quickly
 
-Get started with Marqo using Docker and Python:
+Follow these steps to get up and running with Marqo in minutes:
 
-1.  **Install Docker**: Ensure Docker is installed and has at least 8GB memory and 50GB storage. (See [Docker Official website](https://docs.docker.com/get-docker/).)
+1.  **Install Docker:**  Ensure you have Docker installed.  Refer to the [Docker Official website](https://docs.docker.com/get-docker/) for installation instructions.  Allocate at least 8GB of memory and 50GB of storage to Docker.
+
 2.  **Run Marqo with Docker:**
 
     ```bash
@@ -63,12 +64,14 @@ Get started with Marqo using Docker and Python:
     docker pull marqoai/marqo:latest
     docker run --name marqo -p 8882:8882 marqoai/marqo:latest
     ```
+
 3.  **Install the Marqo Client:**
 
     ```bash
     pip install marqo
     ```
-4.  **Start Indexing and Searching:**
+
+4.  **Start Indexing and Searching:**  Here's a basic example:
 
     ```python
     import marqo
@@ -96,136 +99,36 @@ Get started with Marqo using Docker and Python:
     )
     ```
 
-For more details, including a comprehensive list of available models, refer to the [Models Reference](https://docs.marqo.ai/1.0.0/Models-Reference/dense_retrieval/) in the Marqo documentation.
-
 ## Learn More
 
-Explore these resources to expand your Marqo knowledge:
+Explore these resources to dive deeper into Marqo:
 
-*   📗 [Quick Start](#getting-started): Build your first application in minutes.
-*   🖼 [Marqo for Image Data](https://www.marqo.ai/blog/context-is-all-you-need-multimodal-vector-search-with-personalization): Advanced image search techniques.
-*   📚 [Marqo for Text](https://www.marqo.ai/blog/how-i-used-marqo-to-create-a-multilingual-legal-databse-in-5-key-lines-of-code): Building a multilingual database.
-*   🔮 [Integrating Marqo with GPT](https://www.marqo.ai/blog/from-iron-manual-to-ironman-augmenting-gpt-with-marqo-for-fast-editable-memory-to-enable-context-aware-question-answering): Enhancing GPT with Marqo.
-*   🎨 [Marqo for Creative AI](https://www.marqo.ai/blog/combining-stable-diffusion-with-semantic-search-generating-and-categorising-100k-hot-dogs): Semantic search with Stable Diffusion.
-*   🔊 [Marqo and Speech Data](https://www.marqo.ai/blog/speech-processing): Preprocessing audio for Q&A.
-*   🚫 [Marqo for Content Moderation](https://www.marqo.ai/blog/refining-image-quality-and-eliminating-nsfw-content-with-marqo): Image content moderation.
-*   ☁️ [Getting Started with Marqo Cloud](https://github.com/marqo-ai/getting_started_marqo_cloud): Setup and deployment guide.
-*   👗 [Marqo for e-commerce](https://github.com/marqo-ai/getting_started_marqo_cloud/blob/main/e-commerce-demo/README.md): Build an e-commerce web application.
-*   🤖 [Marqo chatbot](https://github.com/marqo-ai/getting_started_marqo_cloud/tree/main/chatbot-demo): Build a chatbot application.
-*   🦾 [Core Features](#-Core-Features): Explore Marqo's core features.
+*   📗 [Quick start](#getting-started): Build your first application with Marqo.
+*   🖼 [Marqo for image data](https://www.marqo.ai/blog/context-is-all-you-need-multimodal-vector-search-with-personalization): Advanced image search.
+*   📚 [Marqo for text](https://www.marqo.ai/blog/how-i-used-marqo-to-create-a-multilingual-legal-databse-in-5-key-lines-of-code): Building a multilingual database.
+*   🔮 [Integrating Marqo with GPT](https://www.marqo.ai/blog/from-iron-manual-to-ironman-augmenting-gpt-with-marqo-for-fast-editable-memory-to-enable-context-aware-question-answering): Augmenting GPT.
+*   🎨 [Marqo for Creative AI](https://www.marqo.ai/blog/combining-stable-diffusion-with-semantic-search-generating-and-categorising-100k-hot-dogs): Combining stable diffusion and semantic search.
+*   🔊 [Marqo and Speech Data](https://www.marqo.ai/blog/speech-processing): Add diarization and transcription.
+*   🚫 [Marqo for content moderation](https://www.marqo.ai/blog/refining-image-quality-and-eliminating-nsfw-content-with-marqo): Content moderation with Marqo.
+*   ☁️ [Getting started with Marqo Cloud](https://github.com/marqo-ai/getting_started_marqo_cloud): Set up and run with Marqo Cloud.
+*   👗 [Marqo for e-commerce](https://github.com/marqo-ai/getting_started_marqo_cloud/blob/main/e-commerce-demo/README.md): E-commerce demo.
+*   🤖 [Marqo chatbot](https://github.com/marqo-ai/getting_started_marqo_cloud/tree/main/chatbot-demo): Build a chatbot.
+*   🦾 [Core Features](#-core-features): Learn about Marqo's core features.
 
-## Basic Operations
+## Running Marqo in Production
 
-*   **Get Document:** Retrieve a document by ID.
-    ```python
-    result = mq.index("my-first-index").get_document(document_id="article_591")
-    ```
+*   **Kubernetes:** Utilize our Kubernetes templates for deployment on your preferred cloud provider. Explore [marqo-on-kubernetes](https://github.com/marqo-ai/marqo-on-kubernetes).
+*   **Marqo Cloud:** Experience a fully managed cloud service at [https://cloud.marqo.ai](https://cloud.marqo.ai).
 
-*   **Get Index Stats:** Retrieve index information.
-    ```python
-    results = mq.index("my-first-index").get_stats()
-    ```
+## Documentation
 
-*   **Lexical Search:** Perform keyword-based search.
-    ```python
-    result = mq.index("my-first-index").search('marco polo', search_method=marqo.SearchMethods.LEXICAL)
-    ```
-
-*   **Multimodal and Cross-Modal Search:**
-    *   Configure your index for images:
-        ```python
-        settings = {
-            "treat_urls_and_pointers_as_images":True,
-            "model":"ViT-L/14"
-        }
-        response = mq.create_index("my-multimodal-index", **settings)
-        ```
-    *   Add images within documents.
-        ```python
-        response = mq.index("my-multimodal-index").add_documents([{
-            "My_Image": "https://raw.githubusercontent.com/marqo-ai/marqo-api-tests/mainline/assets/ai_hippo_realistic.png",
-            "Description": "The hippopotamus...",
-            "_id": "hippo-facts"
-        }], tensor_fields=["My_Image"])
-        ```
-    *   Search by text or image URL.
-        ```python
-        results = mq.index("my-multimodal-index").search('animal')
-        results = mq.index("my-multimodal-index").search('https://raw.githubusercontent.com/marqo-ai/marqo-api-tests/mainline/assets/ai_hippo_statue.png')
-        ```
-
-*   **Weighted Queries:** Refine search with query weights.
-    ```python
-    query = {
-        "I need to buy a communications device, what should I get?": 1.1,
-        "The device should work like an intelligent computer.": 1.0,
-    }
-    results = mq.index("my-weighted-query-index").search(q=query)
-    ```
-
-*   **Multimodal Combination Fields:** Combine text and images.
-
-    ```python
-    settings = {"treat_urls_and_pointers_as_images": True, "model": "ViT-L/14"}
-    mq.create_index("my-first-multimodal-index", **settings)
-    mq.index("my-first-multimodal-index").add_documents(
-        [
-            {
-                "Title": "Flying Plane",
-                "caption": "An image of a passenger plane flying in front of the moon.",
-                "image": "https://raw.githubusercontent.com/marqo-ai/marqo/mainline/examples/ImageSearchGuide/data/image2.jpg",
-            },
-        ],
-        mappings={
-            "captioned_image": {
-                "type": "multimodal_combination",
-                "weights": {
-                    "caption": 0.3,
-                    "image": 0.7
-                }
-            }
-        },
-        tensor_fields=["captioned_image"]
-    )
-    ```
-
-*   **Delete Documents:** Delete documents by ID.
-    ```python
-    results = mq.index("my-first-index").delete_documents(ids=["article_591", "article_602"])
-    ```
-
-*   **Delete Index:** Delete an index.
-    ```python
-    results = mq.index("my-first-index").delete()
-    ```
-
-## Production Deployment
-
-*   **Kubernetes:** Deploy Marqo with Kubernetes templates: [marqo-on-kubernetes](https://github.com/marqo-ai/marqo-on-kubernetes)
-*   **Marqo Cloud:** For a fully managed service, sign up at [cloud.marqo.ai](https://cloud.marqo.ai).
-
-## Important Notes
-
-*   Do not run other applications on Marqo's Vespa cluster as Marqo automatically changes and adapts the settings on the cluster.
+Access comprehensive documentation at [https://docs.marqo.ai/](https://docs.marqo.ai/).
 
 ## Contributing
 
-We welcome contributions!  See the [CONTRIBUTING.md](./CONTRIBUTING.md) file for details.
-
-## Development Setup
-
-1.  Create a virtual environment: `python -m venv ./venv`
-2.  Activate the environment: `source ./venv/bin/activate`
-3.  Install requirements: `pip install -r requirements.txt`
-4.  Run tests: `tox`
-5.  Update dependencies by deleting the `.tox` directory and rerunning `tox`.
-
-## Merge Instructions
-
-1.  Run the full test suite: `tox`
-2.  Create a pull request with an attached GitHub issue.
+Marqo is a community-driven project. We welcome contributions!  Read our [CONTRIBUTING.md](./CONTRIBUTING.md) to get started.
 
 ## Support
 
-*   [Discourse forum](https://community.marqo.ai)
-*   [Slack community](https://bit.ly/marqo-community-slack)
+*   Join the community on our [Discourse forum](https://community.marqo.ai).
+*   Connect with us on [Slack](https://bit.ly/marqo-community-slack).

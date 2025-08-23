@@ -3,58 +3,189 @@
 [![codecov](https://codecov.io/gh/newton-physics/newton/graph/badge.svg?token=V6ZXNPAWVG)](https://codecov.io/gh/newton-physics/newton)
 [![Push Events - AWS GPU Tests](https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml/badge.svg)](https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml)
 
-# Newton: GPU-Accelerated Physics Simulation for Robotics
+# Newton: GPU-Accelerated Physics Simulation for Robotics and Research
 
-**Newton** is a cutting-edge, GPU-accelerated physics simulation engine designed for robotics and simulation research, providing unparalleled speed and flexibility.  **(See the original repository on GitHub: [https://github.com/newton-physics/newton](https://github.com/newton-physics/newton))**
+**[Visit the original repository](https://github.com/newton-physics/newton) for the latest updates.**
 
-**⚠️ Prerelease Software ⚠️**
-*This project is in active alpha development.* This means the API is unstable, features may be added or removed, and breaking changes are likely to occur frequently and without notice as the design is refined.
+Newton is a cutting-edge, GPU-accelerated physics simulation engine, designed for roboticists and simulation researchers seeking high performance and flexibility.  This project is in active alpha development, meaning the API is unstable.
 
-Developed with a focus on performance and extensibility, Newton leverages the power of NVIDIA Warp and integrates MuJoCo Warp to provide a robust and differentiable physics simulation environment.
+## Key Features
 
-**Key Features:**
+*   **GPU-Accelerated:** Leverage the power of NVIDIA GPUs for blazing-fast simulations.
+*   **Differentiable:** Enable gradient-based optimization and control.
+*   **Extensible:** Build custom physics models and integrate with existing workflows.
+*   **MuJoCo Integration:** Built upon MuJoCo Warp, providing a robust and widely used backend.
+*   **Robotics-Focused:** Tailored for the specific needs of robotics research and development.
+*   **Rapid Iteration:** Accelerate your research with fast simulation cycles.
 
-*   **GPU-Accelerated:**  Achieve significant speedups with GPU-based computation, enabling faster simulations and rapid iteration.
-*   **Differentiable:**  Supports differentiable physics, crucial for applications like reinforcement learning, optimization, and inverse design.
-*   **Extensible:**  Designed with user-defined extensibility in mind, allowing you to easily customize and integrate new physics models.
-*   **Robotics Focused:** Specifically targets the needs of roboticists and simulation researchers.
-*   **MuJoCo Integration:** Includes MuJoCo Warp as a primary backend, benefiting from its established physics capabilities.
-*   **Rapid Iteration:** Empowers researchers to quickly prototype, test, and refine their simulations.
+## Core Technologies
 
-**Developed By:**
-Newton is maintained by [Disney Research](https://www.disneyresearch.com/), [Google DeepMind](https://deepmind.google/), and [NVIDIA](https://www.nvidia.com/).
+*   **NVIDIA Warp:** Foundation for high-performance, GPU-based computation.
+*   **MuJoCo Warp:** Provides a physics simulation backend.
 
-## Getting Started
+## Development
 
-For detailed instructions on how to get started with Newton, refer to the [development guide](https://newton-physics.github.io/newton/development-guide.html).
+Refer to the [installation guide](https://newton-physics.github.io/newton/guide/installation.html) to get started.
 
 ## Examples
 
-Explore the power of Newton with a variety of basic and advanced examples.  Run the examples directly from the command line.
+Explore various example simulations to get started.
 
 ### Basic Examples
 
-| Example           | Command                                          |
-| ----------------- | ------------------------------------------------ |
-| Pendulum          | `python -m newton.examples basic_pendulum`        |
-| URDF              | `python -m newton.examples basic_urdf`            |
-| Viewer            | `python -m newton.examples basic_viewer`         |
-| Shapes            | `python -m newton.examples basic_shapes`          |
-| Joints            | `python -m newton.examples basic_joints`          |
+<table border="0">
+  <tr>
+    <td align="center" width="33%">
+      <a href="newton/examples/basic/example_basic_pendulum.py">
+        <img src="docs/images/examples/example_basic_pendulum.jpg" alt="Pendulum">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="newton/examples/basic/example_basic_urdf.py">
+        <img src="docs/images/examples/example_basic_urdf.jpg" alt="URDF">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="newton/examples/basic/example_basic_viewer.py">
+        <img src="docs/images/examples/example_basic_viewer.jpg" alt="Viewer">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <code>python -m newton.examples basic_pendulum</code>
+    </td>
+    <td align="center">
+      <code>python -m newton.examples basic_urdf</code>
+    </td>
+    <td align="center">
+      <code>python -m newton.examples basic_viewer</code>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <a href="newton/examples/basic/example_basic_shapes.py">
+        <img src="docs/images/examples/example_basic_shapes.jpg" alt="Shapes">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="newton/examples/basic/example_basic_joints.py">
+        <img src="docs/images/examples/example_basic_joints.jpg" alt="Joints">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <!-- <a href="newton/examples/basic/example_basic_viewer.py">
+        <img src="docs/images/examples/example_basic_viewer.jpg" alt="Viewer">
+      </a> -->
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <code>python -m newton.examples basic_shapes</code>
+    </td>
+    <td align="center">
+      <code>python -m newton.examples basic_joints</code>
+    </td>
+    <td align="center">
+      <!-- <code>python -m newton.examples basic_viewer</code> -->
+    </td>
+  </tr>
+</table>
 
 ### Cloth Examples
 
-| Example           | Command                                        |
-| ----------------- | ---------------------------------------------- |
-| Cloth Bending     | `python -m newton.examples cloth_bending`      |
-| Cloth Hanging     | `python -m newton.examples cloth_hanging`      |
-| Cloth Style3D     | `python -m newton.examples cloth_style3d`      |
+<table border="0">
+  <tr>
+    <td align="center" width="33%">
+      <a href="newton/examples/cloth/example_cloth_bending.py">
+        <img src="docs/images/examples/example_cloth_bending.jpg" alt="Cloth Bending">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="newton/examples/cloth/example_cloth_hanging.py">
+        <img src="docs/images/examples/example_cloth_hanging.jpg" alt="Cloth Hanging">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="newton/examples/cloth/example_cloth_style3d.py">
+        <img src="docs/images/examples/example_cloth_style3d.jpg" alt="Cloth Style3D">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <code>python -m newton.examples cloth_bending</code>
+    </td>
+    <td align="center">
+      <code>python -m newton.examples cloth_hanging</code>
+    </td>
+    <td align="center">
+      <code>python -m newton.examples cloth_style3d</code>
+    </td>
+  </tr>
+</table>
 
 ### MPM Examples
 
-| Example           | Command                                         |
-| ----------------- | ----------------------------------------------- |
-| MPM Granular      | `python -m newton.examples mpm_granular`       |
+<table border="0">
+  <tr>
+    <td align="center" width="33%">
+      <a href="newton/examples/mpm/example_mpm_granular.py">
+        <img src="docs/images/examples/example_mpm_granular.jpg" alt="MPM Granular">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <!-- Future MPM example -->
+    </td>
+    <td align="center" width="33%">
+      <!-- Future MPM example -->
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <code>python -m newton.examples mpm_granular</code>
+    </td>
+    <td align="center">
+      <!-- Future MPM example -->
+    </td>
+    <td align="center">
+      <!-- Future MPM example -->
+    </td>
+  </tr>
+</table>
+
+### Selection Examples
+
+<table border="0">
+  <tr>
+    <td align="center" width="33%">
+      <a href="newton/examples/selection/example_selection_cartpole.py">
+        <img src="docs/images/examples/example_selection_cartpole.jpg" alt="Selection Cartpole">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="newton/examples/selection/example_selection_materials.py">
+        <img src="docs/images/examples/example_selection_materials.jpg" alt="Selection Materials">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="newton/examples/selection/example_selection_articulations.py">
+        <img src="docs/images/examples/example_selection_articulations.jpg" alt="Selection Articulations">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <code>python -m newton.examples selection_cartpole</code>
+    </td>
+    <td align="center">
+      <code>python -m newton.examples selection_materials</code>
+    </td>
+    <td align="center">
+      <code>python -m newton.examples selection_articulations</code>
+    </td>
+  </tr>
+</table>
 
 ## Example Options
 
@@ -88,13 +219,13 @@ Some examples may add additional arguments (see their respective source files fo
 ```
 Key improvements and explanations:
 
-*   **SEO-Optimized Heading:**  Uses "Newton: GPU-Accelerated Physics Simulation for Robotics" which is descriptive and includes relevant keywords.  This is the main selling point.
-*   **One-Sentence Hook:**  Provides a concise and compelling introduction to the project, followed by a direct link to the original repository.
-*   **Clearer Structure:** Uses headings, bullet points, and tables to improve readability and organization.
-*   **Keyword Richness:**  Repeats key terms like "GPU-accelerated," "physics simulation," "robotics," and "differentiable" throughout the description.
-*   **Concise Feature Descriptions:**  The key features are now presented as bullet points for easy scanning and comprehension.
-*   **Actionable Examples:** The example section provides clear commands to run the examples.
-*   **Added "Getting Started" section**: Added a section that points users directly to the development guide to help new users get started.
-*   **Emphasis on Use Cases:** Highlights the benefits of differentiability and GPU acceleration for key applications.
-*   **Warnings emphasized**: Important warnings about the prerelease stage are now clearly highlighted.
-*   **Cleaned up formatting**: Improved readability and conciseness.
+*   **SEO Optimization:**  Added keywords like "GPU-accelerated," "physics simulation," "robotics," and "research" to improve search visibility.
+*   **Clear Hook:** The opening sentence is now a compelling introduction to what Newton offers.
+*   **Headings:**  Organized the content with clear headings for better readability and SEO.
+*   **Key Features:**  Used bullet points to highlight the main benefits of the software, making it easier for users to understand what Newton does.
+*   **Concise Language:** Simplified language to improve clarity.
+*   **Emphasis on Target Audience:** Clearly stated the intended users (roboticists and researchers).
+*   **Call to Action:**  The first sentence includes a call to visit the repo.
+*   **More Descriptive Text:** Improved the descriptions in the key features.
+*   **Code Highlighting:** Maintained the format of the code examples.
+*   **Formatting:** Improved table formatting for readability.

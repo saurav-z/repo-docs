@@ -1,42 +1,58 @@
-# Jupyter Enterprise Gateway: Unleash the Power of Remote Kernels for Jupyter Notebooks
+# Jupyter Enterprise Gateway: Empowering Remote Kernel Access for Jupyter Notebooks
 
-**[GitHub Repository](https://github.com/jupyter-server/enterprise_gateway)** | **[Documentation](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/)**
+**[Website](https://jupyter-enterprise-gateway.readthedocs.io/)** |
+**[Documentation](https://jupyter-enterprise-gateway.readthedocs.io/en/latest)** |
+**[Installation](#installation)** |
+**[System Architecture](#system-architecture)** |
+**[Contributing](#contributing)**
 
-Jupyter Enterprise Gateway empowers your Jupyter Notebooks to connect with remote kernels in a distributed cluster, enabling scalable and efficient data science and analysis.
+[![Actions Status](https://github.com/jupyter-server/enterprise_gateway/workflows/Builds/badge.svg)](https://github.com/jupyter-server/enterprise_gateway/actions)
+[![PyPI version](https://badge.fury.io/py/jupyter-enterprise-gateway.svg)](https://badge.fury.io/py/jupyter-enterprise-gateway)
+[![Downloads](https://pepy.tech/badge/jupyter-enterprise-gateway/month)](https://pepy.tech/project/jupyter-enterprise-gateway)
+[![Documentation Status](https://readthedocs.org/projects/jupyter-enterprise-gateway/badge/?version=latest)](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/?badge=latest)
+[![Google Group](https://img.shields.io/badge/google-group-blue.svg)](https://groups.google.com/forum/#!forum/jupyter)
+
+Jupyter Enterprise Gateway unlocks the power of distributed computing, allowing you to run Jupyter Notebook kernels on remote clusters.
 
 **Key Features:**
 
-*   **Remote Kernel Support:** Launches kernels on remote nodes, including clusters managed by YARN, IBM Spectrum Conductor, Kubernetes, and Docker Swarm.
-*   **Out-of-the-Box Kernel Support:** Supports popular kernels like Python (IPython), R (IRkernel), and Scala (Apache Toree).
-*   **Secure Communication:** Ensures secure communication between the client, Enterprise Gateway, and the kernels.
-*   **Multi-Tenant Capabilities:** Facilitates multi-user environments.
-*   **Persistent Kernel Sessions:** Maintains kernel sessions for continuous workflows.
-*   **Extensible Framework:** Allows for configuration and support of various resource managers and kernel environments.
-*   **[Deployment Diagram](https://github.com/jupyter-server/enterprise_gateway/blob/main/docs/source/images/deployment.png?raw=true)**
+*   **Remote Kernel Launching:** Launch kernels on various cluster environments, including Apache Spark (YARN), IBM Spectrum Conductor, Kubernetes, and Docker Swarm.
+*   **Flexible Deployment:** Supports launching kernels locally or on specific nodes within your cluster, leveraging resource managers.
+*   **Secure Communication:** Provides secure communication between the client, Enterprise Gateway, and the kernels.
+*   **Multi-Tenant Capabilities:** Supports a multi-tenant environment for efficient resource utilization.
+*   **Persistent Kernel Sessions:** Maintains persistent kernel sessions for uninterrupted workflows.
+*   **Extensible Framework:** Easily configure Enterprise Gateway to support other resource managers beyond those provided out of the box.
+*   **Out-of-the-box Kernel Support:** Offers pre-configured support for Python (IPython), R (IRkernel), and Scala (Apache Toree kernel).
 
-**Getting Started:**
+**Learn more about the power of remote kernels at the [official repository](https://github.com/jupyter-server/enterprise_gateway).**
 
-Install Jupyter Enterprise Gateway using pip:
+For a deeper dive, please consult the comprehensive documentation:
+
+*   [Full Documentation](https://jupyter-enterprise-gateway.readthedocs.io/en/latest)
+*   [System Architecture](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/system-architecture.html)
+*   [Contribution Guide](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/contrib.html)
+
+**Installation**
+
+Detailed installation instructions are available in the [Users Guide](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/users/index.html).  Here's a quick start using `pip`:
 
 ```bash
+# install from pypi
 pip install --upgrade jupyter_enterprise_gateway
-```
 
-Explore configuration options:
-
-```bash
+# show all config options
 jupyter enterprisegateway --help-all
-```
 
-Run with default options:
-
-```bash
+# run it with default options
 jupyter enterprisegateway
 ```
 
-For detailed installation instructions and configuration options, refer to the [Users Guide](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/users/index.html) and [Operators Guide](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/operators/index.html#configuring-enterprise-gateway).
+Check the [configuration options within the Operators Guide](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/operators/index.html#configuring-enterprise-gateway) for a complete overview of supported options.
 
-**Dive Deeper:**
+**System Architecture**
 
-*   **System Architecture:** Learn about the inner workings of Enterprise Gateway, including its remote kernel, process proxy, and launcher frameworks: [System Architecture](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/system-architecture.html)
-*   **Contributing:** Discover how to contribute to the project: [Contribution Page](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/contrib.html).
+The [System Architecture page](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/system-architecture.html) details the Enterprise Gateway's remote kernel, process proxy, and launcher frameworks.
+
+**Contributing**
+
+The [Contribution page](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/contrib.html) explains how to contribute to Enterprise Gateway and provides access to the project roadmap.  You can also find instructions on [setting up a development environment](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/devinstall.html).

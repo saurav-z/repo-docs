@@ -1,44 +1,40 @@
-# NLTK: Your Gateway to Natural Language Processing in Python
+# NLTK: Your Toolkit for Natural Language Processing (NLP) in Python
 
-Unlock the power of language with NLTK, a leading open-source toolkit for Natural Language Processing (NLP) in Python.  ([Original Repository](https://github.com/nltk/nltk))
+**NLTK (Natural Language Toolkit)** is a leading open-source Python library, providing powerful tools and resources for all your NLP needs. [Explore the original NLTK repository on GitHub](https://github.com/nltk/nltk).
 
-## Key Features of NLTK
+## Key Features of NLTK:
 
-*   **Comprehensive NLP Tools:** Access a wide range of tools for text processing, including tokenization, stemming, tagging, parsing, and semantic reasoning.
-*   **Extensive Datasets & Corpora:** Leverage a vast collection of pre-built datasets and corpora for training, testing, and experimentation, including everything from the Gutenberg project to WordNet.
-*   **Educational Resources:** Benefit from a wealth of tutorials, examples, and documentation, making NLTK ideal for both beginners and experienced NLP practitioners.
-*   **Flexible & Customizable:** Adapt NLTK to your specific needs with its modular design and extensive customization options.
-*   **Python-Based:** Built on Python, one of the most popular and versatile programming languages for data science and machine learning.
-*   **Open Source & Community Driven:** Contribute to and benefit from an active community, ensuring continuous improvement and a wealth of resources.
+*   **Comprehensive NLP Tools:** Includes a wide range of tools for text processing, including tokenization, stemming, tagging, parsing, and semantic reasoning.
+*   **Extensive Corpora & Datasets:** Access a vast collection of text corpora and datasets for research and development in various languages.
+*   **Python-Based:** Built in Python, making it easy to integrate with existing Python projects and workflows.
+*   **Open Source & Free:** Benefit from the power of open-source software, freely available for both commercial and non-commercial use, under the Apache 2.0 License.
+*   **Well-Documented:** Extensive documentation and tutorials are available to help you get started quickly.
+*   **Active Community:** Benefit from a vibrant community of researchers and developers contributing to the project.
+*   **Supports Multiple Python Versions:** Compatible with Python 3.8, 3.9, 3.10, 3.11 and 3.12.
 
 ## Getting Started
 
-NLTK supports Python versions 3.8, 3.9, 3.10, 3.11 and 3.12.
+*   **Documentation:** Find detailed information and guides on the official NLTK website: [nltk.org](https://www.nltk.org/).
 
-For detailed documentation, guides, and examples, please visit the official [NLTK Documentation](https://www.nltk.org/).
+## Contributing & Support
 
-## Contributing to NLTK
-
-We welcome contributions to the NLTK project!  Please review the [CONTRIBUTING.md](CONTRIBUTING.md) file and see also [how to contribute to NLTK](https://www.nltk.org/contribute.html).
-
-## Supporting NLTK Development
-
-If you find the NLTK toolkit valuable, please consider supporting its ongoing development by donating via PayPal on the [NLTK homepage](https://www.nltk.org/).
+*   **Contribute:**  Your contributions are welcome!  Read the [CONTRIBUTING.md](CONTRIBUTING.md) file to learn more.
+*   **Donate:** Support the development of NLTK by donating via PayPal (link on the NLTK homepage).
 
 ## Citing NLTK
 
 When citing NLTK in your publications, please reference the NLTK book:
 
-```
-Bird, Steven, Edward Loper and Ewan Klein (2009).
-Natural Language Processing with Python.  O'Reilly Media Inc.
-```
+    Bird, Steven, Edward Loper and Ewan Klein (2009).
+    Natural Language Processing with Python.  O'Reilly Media Inc.
 
-## License and Copyright
+## Licensing
 
-*   Copyright (C) 2001-2025 NLTK Project
-*   NLTK is distributed under the [Apache 2.0 License](LICENSE.txt).
-*   Documentation is distributed under the Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 United States license.
-*   Corpora licenses are specified in each corpus' README file.
+*   **Source Code:** Apache 2.0 License.
+*   **Documentation:** Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 United States license.
+*   **Corpora:**  Refer to the README file within each corpus for specific license terms.
 
-See [AUTHORS.md](AUTHORS.md) for a list of contributors.
+## Additional Information
+
+*   **Authors:** See [AUTHORS.md](AUTHORS.md) for a list of contributors.
+*   **License:** [LICENSE.txt](LICENSE.txt)

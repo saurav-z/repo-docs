@@ -1,37 +1,43 @@
 <h1 align="center">
+ <a href="https://www.skyvern.com">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="fern/images/skyvern_logo.png"/>
-    <img height="120" src="fern/images/skyvern_logo_blackbg.png" alt="Skyvern Logo"/>
+    <img height="120" src="fern/images/skyvern_logo_blackbg.png"/>
   </picture>
-  <br/>
-  Skyvern: Automate Your Browser-Based Workflows with AI
+ </a>
+ <br />
 </h1>
 
-**Tired of tedious manual browser tasks?** Skyvern leverages LLMs and computer vision to automate complex browser-based workflows, offering a robust and adaptable alternative to traditional automation methods. [Explore Skyvern's Capabilities](https://github.com/Skyvern-AI/skyvern).
-
 <p align="center">
-  <a href="https://www.skyvern.com/"><img src="https://img.shields.io/badge/Website-blue?logo=googlechrome&logoColor=black" alt="Website"/></a>
-  <a href="https://docs.skyvern.com/"><img src="https://img.shields.io/badge/Docs-yellow?logo=gitbook&logoColor=black" alt="Documentation"/></a>
-  <a href="https://discord.gg/fG2XXEuQX3"><img src="https://img.shields.io/discord/1212486326352617534?logo=discord&label=discord" alt="Discord"/></a>
-  <a href="https://github.com/skyvern-ai/skyvern"><img src="https://img.shields.io/github/stars/skyvern-ai/skyvern" alt="GitHub Stars"/></a>
-  <a href="https://github.com/Skyvern-AI/skyvern/blob/main/LICENSE"><img src="https://img.shields.io/github/license/skyvern-ai/skyvern" alt="License"/></a>
-  <a href="https://twitter.com/skyvernai"><img src="https://img.shields.io/twitter/follow/skyvernai?style=social" alt="Twitter"/></a>
-  <a href="https://www.linkedin.com/company/95726232"><img src="https://img.shields.io/badge/Follow%20 on%20LinkedIn-8A2BE2?logo=linkedin" alt="LinkedIn"/></a>
+  <b>Automate complex browser-based workflows effortlessly with Skyvern, using LLMs and Computer Vision.</b>
 </p>
 
+<p align="center">
+  <a href="https://www.skyvern.com/"><img src="https://img.shields.io/badge/Website-blue?logo=googlechrome&logoColor=black"/></a>
+  <a href="https://docs.skyvern.com/"><img src="https://img.shields.io/badge/Docs-yellow?logo=gitbook&logoColor=black"/></a>
+  <a href="https://discord.gg/fG2XXEuQX3"><img src="https://img.shields.io/discord/1212486326352617534?logo=discord&label=discord"/></a>
+  <a href="https://github.com/skyvern-ai/skyvern"><img src="https://img.shields.io/github/stars/skyvern-ai/skyvern" /></a>
+  <a href="https://github.com/Skyvern-AI/skyvern/blob/main/LICENSE"><img src="https://img.shields.io/github/license/skyvern-ai/skyvern"/></a>
+  <a href="https://twitter.com/skyvernai"><img src="https://img.shields.io/twitter/follow/skyvernai?style=social"/></a>
+  <a href="https://www.linkedin.com/company/95726232"><img src="https://img.shields.io/badge/Follow%20 on%20LinkedIn-8A2BE2?logo=linkedin"/></a>
+</p>
 
-## Key Features:
+[Skyvern](https://www.skyvern.com) empowers you to automate intricate browser-based tasks using the power of Large Language Models (LLMs) and Computer Vision. Replace cumbersome and unreliable automation methods with a streamlined API to automate workflows on a vast number of websites.  **[Explore the Skyvern Repository](https://github.com/Skyvern-AI/skyvern).**
 
-*   **Automated Workflows:** Automate complex, multi-step browser tasks.
-*   **LLM & Computer Vision:** Uses AI to understand and interact with websites.
-*   **Resilient to Changes:** Adaptable to website layout updates.
-*   **Cross-Website Compatibility:** Apply workflows across numerous websites.
-*   **Data Extraction:** Extract specific data from web pages with ease.
-*   **Form Filling:** Native capability to fill out form inputs.
-*   **File Downloading:** Download files directly from websites.
-*   **Authentication Support:** Integrated support for various authentication methods, including 2FA (TOTP).
-*   **Model Context Protocol (MCP):** Supports various LLMs that support MCP.
-*   **Integrations:** Integrations with Zapier, Make.com, and N8N.
+<p align="center">
+  <img src="fern/images/geico_shu_recording_cropped.gif"/>
+</p>
+
+## Key Features
+
+*   **Automated Workflow Execution:**  Execute complex tasks across various websites without custom scripting.
+*   **LLM-Driven Interactions:** Leverage Vision LLMs to understand and interact with web elements, adapting to website changes.
+*   **Robust Against Website Updates:**  Skyvern's vision-based approach avoids reliance on fragile DOM structures.
+*   **Multi-Site Compatibility:** Apply a single workflow to numerous websites, automating repetitive tasks efficiently.
+*   **Advanced Reasoning:** Benefit from LLMs that handle nuances, such as data inference and accurate information retrieval.
+*   **Workflow Building:** Design complex workflows to chain multiple actions together.
+*   **Data Extraction:** Easily extract structured data from websites and save it directly.
+*   **Integrated Features:** Supports file downloads, form filling, authentication methods (including 2FA), and API integrations (Zapier, Make.com, N8N).
 
 ## Quickstart
 
@@ -84,37 +90,43 @@ task = await skyvern.run_task(prompt="Find the top post on hackernews today")
 print(task)
 ```
 
-## How Skyvern Works
+## How It Works
 
-Skyvern, inspired by BabyAGI and AutoGPT, employs a swarm of intelligent agents to navigate websites, plan, and execute actions.  It uses browser automation libraries like [Playwright](https://playwright.dev/).
+Skyvern, inspired by autonomous agent designs like BabyAGI and AutoGPT, integrates with browser automation using libraries like Playwright. Its core design includes the following elements:
 
-*   **Website Understanding:** Maps visual elements to required actions.
-*   **Robustness:** Resistant to website layout changes with LLM-driven actions.
-*   **Versatility:** Single workflows can be applied to numerous sites.
-*   **Advanced Reasoning:** LLMs handle complex scenarios, like insurance quotes or product comparisons.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="fern/images/skyvern_2_0_system_diagram.png" />
+  <img src="fern/images/skyvern_2_0_system_diagram.png" />
+</picture>
 
-Read our detailed technical report [here](https://blog.skyvern.com/skyvern-2-0-state-of-the-art-web-navigation-with-85-8-on-webvoyager-eval/).
+This system allows Skyvern to:
+
+1.  Operate on unfamiliar websites by mapping visual elements to actions, eliminating the need for custom code.
+2.  Adapt to website layout changes.
+3.  Apply single workflow to numerous websites.
+4.  Reason interactions to ensure complex situations are handled effectively.
+
+For technical details, refer to the full report [here](https://blog.skyvern.com/skyvern-2-0-state-of-the-art-web-navigation-with-85-8-on-webvoyager-eval/).
 
 ## Demo
 
-[Redo demo]
+https://github.com/user-attachments/assets/5cab4668-e8e2-4982-8551-aab05ff73a7f
 
 ## Performance & Evaluation
 
-Skyvern has SOTA performance on the [WebBench benchmark](webbench.ai) with a 64.4% accuracy. The technical report + evaluation can be found [here](https://blog.skyvern.com/web-bench-a-new-way-to-compare-ai-browser-agents/)
+Skyvern demonstrates leading performance on the [WebBench benchmark](webbench.ai) with a 64.4% accuracy. Evaluation details are available in the technical report [here](https://blog.skyvern.com/web-bench-a-new-way-to-compare-ai-browser-agents/)
 
 <p align="center">
   <img src="fern/images/performance/webbench_overall.png"/>
 </p>
 
-## Performance on WRITE tasks (eg filling out forms, logging in, downloading files, etc)
+### Performance on WRITE tasks
 
-Skyvern is the best performing agent on WRITE tasks (eg filling out forms, logging in, downloading files, etc), which is primarily used for RPA (Robotic Process Automation) adjacent tasks.
+Skyvern excels at WRITE tasks (eg filling out forms, logging in, downloading files, etc), which is primarily used for RPA (Robotic Process Automation) adjacent tasks.
 
 <p align="center">
   <img src="fern/images/performance/webbench_write.png"/>
 </p>
-
 
 ## Advanced Usage
 
@@ -235,7 +247,7 @@ If you encounter any database related errors while using Docker to run Skyvern, 
 
 ### Skyvern Tasks
 
-Tasks are the fundamental building block inside Skyvern. Each task is a single request to Skyvern, instructing it to navigate through a website and accomplish a specific goal.
+Tasks are the fundamental building blocks inside Skyvern. Each task is a single request to Skyvern, instructing it to navigate through a website and accomplish a specific goal.
 
 Tasks require you to specify a `url`, `prompt`, and can optionally include a `data schema` (if you want the output to conform to a specific schema) and `error codes` (if you want Skyvern to stop running in specific situations).
 
@@ -312,13 +324,13 @@ Skyvern currently supports the following password manager integrations:
 - [ ] 1Password
 - [ ] LastPass
 
-## Model Context Protocol (MCP)
+### Model Context Protocol (MCP)
 
 Skyvern supports the Model Context Protocol (MCP) to allow you to use any LLM that supports MCP.
 
 See the MCP documentation [here](https://github.com/Skyvern-AI/skyvern/blob/main/integrations/mcp/README.md)
 
-## Zapier / Make.com / N8N Integration
+### Zapier / Make.com / N8N Integration
 
 Skyvern supports Zapier, Make.com, and N8N to allow you to connect your Skyvern workflows to other apps.
 
@@ -328,58 +340,46 @@ Skyvern supports Zapier, Make.com, and N8N to allow you to connect your Skyvern 
 
 🔐 Learn more about 2FA support [here](https://docs.skyvern.com/credentials/totp).
 
-## Real-world Examples of Skyvern
+## Real-World Examples
 
-See how Skyvern is used in the real world!  Open a PR to add your own examples.
+See how Skyvern is applied in real-world use cases.  Add your own examples with a pull request!
 
-### Invoice Downloading on many different websites
+*   **Invoice Downloading:** Automate invoice downloads from various websites.  [Book a Demo](https://meetings.hubspot.com/skyvern/demo)
 
-[Book a demo to see it live](https://meetings.hubspot.com/skyvern/demo)
+    <p align="center">
+      <img src="fern/images/invoice_downloading.gif"/>
+    </p>
+*   **Job Application Automation:** Automate the job application process.  [See it in action](https://app.skyvern.com/tasks/create/job_application)
 
-<p align="center">
-  <img src="fern/images/invoice_downloading.gif"/>
-</p>
+    <p align="center">
+      <img src="fern/images/job_application_demo.gif"/>
+    </p>
+*   **Materials Procurement:** Automate materials procurement for manufacturing companies.  [See it in action](https://app.skyvern.com/tasks/create/finditparts)
 
-### Automate the job application process
+    <p align="center">
+      <img src="fern/images/finditparts_recording_crop.gif"/>
+    </p>
+*   **Government Website Navigation:** Automate account registration and form filling on government websites.  [See it in action](https://app.skyvern.com/tasks/create/california_edd)
 
-[💡 See it in action](https://app.skyvern.com/tasks/create/job_application)
-<p align="center">
-  <img src="fern/images/job_application_demo.gif"/>
-</p>
+    <p align="center">
+      <img src="fern/images/edd_services.gif"/>
+    </p>
+*   **Contact Form Filling:** Automate filling out contact us forms.  [See it in action](https://app.skyvern.com/tasks/create/contact_us_forms)
 
-### Automate materials procurement for a manufacturing company
+    <p align="center">
+      <img src="fern/images/contact_forms.gif"/>
+    </p>
+*   **Insurance Quote Retrieval:** Automate insurance quote retrieval from different providers in any language.  [See it in action](https://app.skyvern.com/tasks/create/bci_seguros)
 
-[💡 See it in action](https://app.skyvern.com/tasks/create/finditparts)
-<p align="center">
-  <img src="fern/images/finditparts_recording_crop.gif"/>
-</p>
+    <p align="center">
+      <img src="fern/images/bci_seguros_recording.gif"/>
+    </p>
 
-### Navigating to government websites to register accounts or fill out forms
+    [See it in action](https://app.skyvern.com/tasks/create/geico)
 
-[💡 See it in action](https://app.skyvern.com/tasks/create/california_edd)
-<p align="center">
-  <img src="fern/images/edd_services.gif"/>
-</p>
-
-### Filling out random contact us forms
-
-[💡 See it in action](https://app.skyvern.com/tasks/create/contact_us_forms)
-<p align="center">
-  <img src="fern/images/contact_forms.gif"/>
-</p>
-
-### Retrieving insurance quotes from insurance providers in any language
-
-[💡 See it in action](https://app.skyvern.com/tasks/create/bci_seguros)
-<p align="center">
-  <img src="fern/images/bci_seguros_recording.gif"/>
-</p>
-
-[💡 See it in action](https://app.skyvern.com/tasks/create/geico)
-
-<p align="center">
-  <img src="fern/images/geico_shu_recording_cropped.gif"/>
-</p>
+    <p align="center">
+      <img src="fern/images/geico_shu_recording_cropped.gif"/>
+    </p>
 
 ## Contributor Setup
 
@@ -400,79 +400,79 @@ skyvern quickstart contributors
 
 ## Documentation
 
-Find extensive documentation on our [📕 docs page](https://docs.skyvern.com). Contact us via [email](mailto:founders@skyvern.com) or [discord](https://discord.gg/fG2XXEuQX3) if anything is unclear.
+Find comprehensive information on our [📕 docs page](https://docs.skyvern.com).  For questions, issues, or suggestions, please contact us [via email](mailto:founders@skyvern.com) or [discord](https://discord.gg/fG2XXEuQX3).
 
 ## Supported LLMs
 
-| Provider       | Supported Models                                                                          |
-| -------------- | ----------------------------------------------------------------------------------------- |
-| OpenAI         | gpt4-turbo, gpt-4o, gpt-4o-mini                                                            |
-| Anthropic      | Claude 3 (Haiku, Sonnet, Opus), Claude 3.5 (Sonnet)                                        |
-| Azure OpenAI   | Any GPT models. Better performance with a multimodal llm (azure/gpt4-o)                   |
-| AWS Bedrock    | Anthropic Claude 3 (Haiku, Sonnet, Opus), Claude 3.5 (Sonnet)                             |
-| Gemini         | Gemini 2.5 Pro and flash, Gemini 2.0                                                     |
-| Ollama         | Run any locally hosted model via [Ollama](https://github.com/ollama/ollama)                |
-| OpenRouter     | Access models through [OpenRouter](https://openrouter.ai)                                 |
+| Provider       | Supported Models                                                                    |
+| :------------- | :---------------------------------------------------------------------------------- |
+| OpenAI         | gpt4-turbo, gpt-4o, gpt-4o-mini                                                     |
+| Anthropic      | Claude 3 (Haiku, Sonnet, Opus), Claude 3.5 (Sonnet)                                |
+| Azure OpenAI   | Any GPT models. Better performance with a multimodal llm (azure/gpt4-o)                |
+| AWS Bedrock    | Anthropic Claude 3 (Haiku, Sonnet, Opus), Claude 3.5 (Sonnet)                        |
+| Gemini         | Gemini 2.5 Pro and flash, Gemini 2.0                                                  |
+| Ollama         | Run any locally hosted model via [Ollama](https://github.com/ollama/ollama)         |
+| OpenRouter     | Access models through [OpenRouter](https://openrouter.ai)                           |
 | OpenAI-compatible | Any custom API endpoint that follows OpenAI's API format (via [liteLLM](https://docs.litellm.ai/docs/providers/openai_compatible)) |
 
 #### Environment Variables
 
 ##### OpenAI
 
-| Variable          | Description                              | Type      | Sample Value        |
-| ----------------- | ---------------------------------------- | --------- | ------------------- |
-| `ENABLE_OPENAI`    | Register OpenAI models                   | Boolean   | `true`, `false`     |
-| `OPENAI_API_KEY`   | OpenAI API Key                           | String    | `sk-1234567890`     |
-| `OPENAI_API_BASE`  | OpenAI API Base, optional                | String    | `https://openai.api.base` |
-| `OPENAI_ORGANIZATION` | OpenAI Organization ID, optional          | String    | `your-org-id`       |
+| Variable            | Description                        | Type    | Sample Value           |
+| :------------------ | :--------------------------------- | :------ | :--------------------- |
+| `ENABLE_OPENAI`     | Register OpenAI models             | Boolean | `true`, `false`        |
+| `OPENAI_API_KEY`    | OpenAI API Key                     | String  | `sk-1234567890`        |
+| `OPENAI_API_BASE`   | OpenAI API Base, optional          | String  | `https://openai.api.base` |
+| `OPENAI_ORGANIZATION` | OpenAI Organization ID, optional | String  | `your-org-id`          |
 
 Recommended `LLM_KEY`: `OPENAI_GPT4O`, `OPENAI_GPT4O_MINI`, `OPENAI_GPT4_1`, `OPENAI_O4_MINI`, `OPENAI_O3`
 
 ##### Anthropic
 
-| Variable          | Description                  | Type      | Sample Value        |
-| ----------------- | ---------------------------- | --------- | ------------------- |
-| `ENABLE_ANTHROPIC` | Register Anthropic models    | Boolean   | `true`, `false`     |
-| `ANTHROPIC_API_KEY` | Anthropic API key          | String    | `sk-1234567890`     |
+| Variable           | Description              | Type    | Sample Value           |
+| :----------------- | :----------------------- | :------ | :--------------------- |
+| `ENABLE_ANTHROPIC`  | Register Anthropic models | Boolean | `true`, `false`        |
+| `ANTHROPIC_API_KEY` | Anthropic API key        | String  | `sk-1234567890`        |
 
 Recommended`LLM_KEY`: `ANTHROPIC_CLAUDE3.5_SONNET`, `ANTHROPIC_CLAUDE3.7_SONNET`, `ANTHROPIC_CLAUDE4_OPUS`, `ANTHROPIC_CLAUDE4_SONNET`
 
 ##### Azure OpenAI
 
-| Variable          | Description                                  | Type      | Sample Value                  |
-| ----------------- | -------------------------------------------- | --------- | ----------------------------- |
-| `ENABLE_AZURE`    | Register Azure OpenAI models                 | Boolean   | `true`, `false`               |
-| `AZURE_API_KEY`   | Azure deployment API key                     | String    | `sk-1234567890`               |
-| `AZURE_DEPLOYMENT` | Azure OpenAI Deployment Name                 | String    | `skyvern-deployment`          |
-| `AZURE_API_BASE`  | Azure deployment api base url                | String    | `https://skyvern-deployment.openai.azure.com/` |
-| `AZURE_API_VERSION` | Azure API Version                            | String    | `2024-02-01`                  |
+| Variable             | Description                      | Type    | Sample Value                             |
+| :------------------- | :------------------------------- | :------ | :--------------------------------------- |
+| `ENABLE_AZURE`       | Register Azure OpenAI models     | Boolean | `true`, `false`                          |
+| `AZURE_API_KEY`      | Azure deployment API key         | String  | `sk-1234567890`                          |
+| `AZURE_DEPLOYMENT`   | Azure OpenAI Deployment Name     | String  | `skyvern-deployment`                     |
+| `AZURE_API_BASE`     | Azure deployment api base url    | String  | `https://skyvern-deployment.openai.azure.com/` |
+| `AZURE_API_VERSION` | Azure API Version              | String  | `2024-02-01`                             |
 
 Recommended `LLM_KEY`: `AZURE_OPENAI`
 
 ##### AWS Bedrock
 
-| Variable          | Description                                                                             | Type      | Sample Value        |
-| ----------------- | --------------------------------------------------------------------------------------- | --------- | ------------------- |
-| `ENABLE_BEDROCK`   | Register AWS Bedrock models. To use AWS Bedrock, you need to make sure your [AWS configurations](https://github.com/boto/boto3?tab=readme-ov-file#using-boto3) are set up correctly first. | Boolean   | `true`, `false`     |
+| Variable            | Description                                                                                          | Type    | Sample Value           |
+| :------------------ | :--------------------------------------------------------------------------------------------------- | :------ | :--------------------- |
+| `ENABLE_BEDROCK`    | Register AWS Bedrock models. To use AWS Bedrock, you need to make sure your [AWS configurations](https://github.com/boto/boto3?tab=readme-ov-file#using-boto3) are set up correctly first. | Boolean | `true`, `false`        |
 
 Recommended `LLM_KEY`: `BEDROCK_ANTHROPIC_CLAUDE3.7_SONNET_INFERENCE_PROFILE`, `BEDROCK_ANTHROPIC_CLAUDE4_OPUS_INFERENCE_PROFILE`, `BEDROCK_ANTHROPIC_CLAUDE4_SONNET_INFERENCE_PROFILE`
 
 ##### Gemini
 
-| Variable          | Description               | Type      | Sample Value           |
-| ----------------- | ------------------------- | --------- | ---------------------- |
-| `ENABLE_GEMINI`    | Register Gemini models    | Boolean   | `true`, `false`        |
-| `GEMINI_API_KEY`   | Gemini API Key            | String    | `your_google_gemini_api_key` |
+| Variable          | Description          | Type    | Sample Value           |
+| :---------------- | :------------------- | :------ | :--------------------- |
+| `ENABLE_GEMINI`   | Register Gemini models | Boolean | `true`, `false`        |
+| `GEMINI_API_KEY`  | Gemini API Key       | String  | `your_google_gemini_api_key` |
 
 Recommended `LLM_KEY`: `GEMINI_2.5_PRO_PREVIEW`, `GEMINI_2.5_FLASH_PREVIEW`
 
 ##### Ollama
 
-| Variable           | Description                     | Type      | Sample Value                     |
-| ------------------ | ------------------------------- | --------- | -------------------------------- |
-| `ENABLE_OLLAMA`     | Register local models via Ollama | Boolean   | `true`, `false`                  |
-| `OLLAMA_SERVER_URL` | URL for your Ollama server      | String    | `http://host.docker.internal:11434` |
-| `OLLAMA_MODEL`      | Ollama model name to load       | String    | `qwen2.5:7b-instruct`            |
+| Variable            | Description                    | Type    | Sample Value                    |
+| :------------------ | :----------------------------- | :------ | :------------------------------ |
+| `ENABLE_OLLAMA`     | Register local models via Ollama | Boolean | `true`, `false`                 |
+| `OLLAMA_SERVER_URL` | URL for your Ollama server     | String  | `http://host.docker.internal:11434` |
+| `OLLAMA_MODEL`      | Ollama model name to load      | String  | `qwen2.5:7b-instruct`           |
 
 Recommended `LLM_KEY`: `OLLAMA`
 
@@ -480,72 +480,76 @@ Note: Ollama does not support vision yet.
 
 ##### OpenRouter
 
-| Variable          | Description                    | Type      | Sample Value                 |
-| ----------------- | ------------------------------ | --------- | ---------------------------- |
-| `ENABLE_OPENROUTER`  | Register OpenRouter models     | Boolean   | `true`, `false`              |
-| `OPENROUTER_API_KEY` | OpenRouter API key           | String    | `sk-1234567890`              |
-| `OPENROUTER_MODEL`   | OpenRouter model name          | String    | `mistralai/mistral-small-3.1-24b-instruct` |
-| `OPENROUTER_API_BASE` | OpenRouter API base URL        | String    | `https://api.openrouter.ai/v1` |
+| Variable              | Description                    | Type    | Sample Value                    |
+| :-------------------- | :----------------------------- | :------ | :------------------------------ |
+| `ENABLE_OPENROUTER`    | Register OpenRouter models     | Boolean | `true`, `false`                 |
+| `OPENROUTER_API_KEY`   | OpenRouter API key             | String  | `sk-1234567890`                 |
+| `OPENROUTER_MODEL`    | OpenRouter model name          | String  | `mistralai/mistral-small-3.1-24b-instruct` |
+| `OPENROUTER_API_BASE`  | OpenRouter API base URL       | String  | `https://api.openrouter.ai/v1`  |
 
 Recommended `LLM_KEY`: `OPENROUTER`
 
 ##### OpenAI-Compatible
 
-| Variable                       | Description                                                                        | Type      | Sample Value                                    |
-| ------------------------------ | ---------------------------------------------------------------------------------- | --------- | ----------------------------------------------- |
-| `ENABLE_OPENAI_COMPATIBLE`        | Register a custom OpenAI-compatible API endpoint                                | Boolean   | `true`, `false`                                 |
-| `OPENAI_COMPATIBLE_MODEL_NAME`   | Model name for OpenAI-compatible endpoint                                      | String    | `yi-34b`, `gpt-3.5-turbo`, `mistral-large`, etc. |
-| `OPENAI_COMPATIBLE_API_KEY`      | API key for OpenAI-compatible endpoint                                          | String    | `sk-1234567890`                                 |
-| `OPENAI_COMPATIBLE_API_BASE`     | Base URL for OpenAI-compatible endpoint                                         | String    | `https://api.together.xyz/v1`, `http://localhost:8000/v1`, etc. |
-| `OPENAI_COMPATIBLE_API_VERSION` | API version for OpenAI-compatible endpoint, optional                            | String    | `2023-05-15`                                    |
-| `OPENAI_COMPATIBLE_MAX_TOKENS`  | Maximum tokens for completion, optional                                       | Integer   | `4096`, `8192`, etc.                            |
-| `OPENAI_COMPATIBLE_TEMPERATURE` | Temperature setting, optional                                                | Float     | `0.0`, `0.5`, `0.7`, etc.                         |
-| `OPENAI_COMPATIBLE_SUPPORTS_VISION`| Whether model supports vision, optional                                     | Boolean   | `true`, `false`                                 |
+| Variable                       | Description                                        | Type    | Sample Value                       |
+| :----------------------------- | :------------------------------------------------- | :------ | :--------------------------------- |
+| `ENABLE_OPENAI_COMPATIBLE`     | Register a custom OpenAI-compatible API endpoint     | Boolean | `true`, `false`                    |
+| `OPENAI_COMPATIBLE_MODEL_NAME` | Model name for OpenAI-compatible endpoint          | String  | `yi-34b`, `gpt-3.5-turbo`, `mistral-large`, etc. |
+| `OPENAI_COMPATIBLE_API_KEY`    | API key for OpenAI-compatible endpoint             | String  | `sk-1234567890`                    |
+| `OPENAI_COMPATIBLE_API_BASE`   | Base URL for OpenAI-compatible endpoint           | String  | `https://api.together.xyz/v1`, `http://localhost:8000/v1`, etc. |
+| `OPENAI_COMPATIBLE_API_VERSION` | API version for OpenAI-compatible endpoint, optional | String  | `2023-05-15`                       |
+| `OPENAI_COMPATIBLE_MAX_TOKENS`  | Maximum tokens for completion, optional           | Integer | `4096`, `8192`, etc.               |
+| `OPENAI_COMPATIBLE_TEMPERATURE` | Temperature setting, optional                   | Float   | `0.0`, `0.5`, `0.7`, etc.            |
+| `OPENAI_COMPATIBLE_SUPPORTS_VISION` | Whether model supports vision, optional     | Boolean | `true`, `false`                    |
 
 Supported LLM Key: `OPENAI_COMPATIBLE`
 
 ##### General LLM Configuration
 
-| Variable              | Description                                    | Type      | Sample Value        |
-| --------------------- | ---------------------------------------------- | --------- | ------------------- |
-| `LLM_KEY`             | The name of the model you want to use          | String    | See supported LLM keys above |
-| `SECONDARY_LLM_KEY`   | The name of the model for mini agents skyvern runs with | String    | See supported LLM keys above |
-| `LLM_CONFIG_MAX_TOKENS` | Override the max tokens used by the LLM      | Integer   | `128000`            |
+| Variable            | Description                               | Type    | Sample Value          |
+| :------------------ | :---------------------------------------- | :------ | :-------------------- |
+| `LLM_KEY`           | The name of the model you want to use    | String  | See supported LLM keys above |
+| `SECONDARY_LLM_KEY` | The name of the model for mini agents skyvern runs with | String  | See supported LLM keys above |
+| `LLM_CONFIG_MAX_TOKENS` | Override the max tokens used by the LLM | Integer | `128000` |
 
 ## Feature Roadmap
 
-Our roadmap for the coming months is:
-*   [x] **Open Source** - Open Source Skyvern's core codebase
-*   [x] **Workflow support** - Allow support to chain multiple Skyvern calls together
-*   [x] **Improved context** - Improve Skyvern's ability to understand content around interactable elements by introducing feeding relevant label context through the text prompt
-*   [x] **Cost Savings** - Improve Skyvern's stability and reduce the cost of running Skyvern by optimizing the context tree passed into Skyvern
-*   [x] **Self-serve UI** - Deprecate the Streamlit UI in favour of a React-based UI component that allows users to kick off new jobs in Skyvern
-*   [x] **Workflow UI Builder** - Introduce a UI to allow users to build and analyze workflows visually
-*   [x] **Chrome Viewport streaming** - Introduce a way to live-stream the Chrome viewport to the user's browser (as a part of the self-serve UI)
-*   [x] **Past Runs UI** - Deprecate the Streamlit UI in favour of a React-based UI that allows you to visualize past runs and their results
-*   [X] **Auto workflow builder ("Observer") mode** - Allow Skyvern to auto-generate workflows as it's navigating the web to make it easier to build new workflows
-*   [x] **Prompt Caching** - Introduce a caching layer to the LLM calls to dramatically reduce the cost of running Skyvern (memorize past actions and repeat them!)
-*   [x] **Web Evaluation Dataset** - Integrate Skyvern with public benchmark tests to track the quality of our models over time
-*   [ ] **Improved Debug mode** - Allow Skyvern to plan its actions and get "approval" before running them, allowing you to debug what it's doing and more easily iterate on the prompt
-*   [ ] **Chrome Extension** - Allow users to interact with Skyvern through a Chrome extension (incl voice mode, saving tasks, etc.)
-*   [ ] **Skyvern Action Recorder** - Allow Skyvern to watch a user complete a task and then automatically generate a workflow for it
-*   [ ] **Interactable Livestream** - Allow users to interact with the livestream in real-time to intervene when necessary (such as manually submitting sensitive forms)
-*   [ ] **Integrate LLM Observability tools** - Integrate LLM Observability tools to allow back-testing prompt changes with specific data sets + visualize the performance of Skyvern over time
-*   [x] **Langchain Integration** - Create langchain integration in langchain_community to use Skyvern as a "tool".
+Our planned roadmap for the coming months includes:
+
+-   \[x] **Open Source** - Open Source Skyvern's core codebase
+-   \[x] **Workflow support** - Allow support to chain multiple Skyvern calls together
+-   \[x] **Improved context** - Improve Skyvern's ability to understand content around interactable elements by introducing feeding relevant label context through the text prompt
+-   \[x] **Cost Savings** - Improve Skyvern's stability and reduce the cost of running Skyvern by optimizing the context tree passed into Skyvern
+-   \[x] **Self-serve UI** - Deprecate the Streamlit UI in favour of a React-based UI component that allows users to kick off new jobs in Skyvern
+-   \[x] **Workflow UI Builder** - Introduce a UI to allow users to build and analyze workflows visually
+-   \[x] **Chrome Viewport streaming** - Introduce a way to live-stream the Chrome viewport to the user's browser (as a part of the self-serve UI)
+-   \[x] **Past Runs UI** - Deprecate the Streamlit UI in favour of a React-based UI that allows you to visualize past runs and their results
+-   \[X] **Auto workflow builder ("Observer") mode** - Allow Skyvern to auto-generate workflows as it's navigating the web to make it easier to build new workflows
+-   \[x] **Prompt Caching** - Introduce a caching layer to the LLM calls to dramatically reduce the cost of running Skyvern (memorize past actions and repeat them!)
+-   \[x] **Web Evaluation Dataset** - Integrate Skyvern with public benchmark tests to track the quality of our models over time
+-   \[ ] **Improved Debug mode** - Allow Skyvern to plan its actions and get "approval" before running them, allowing you to debug what it's doing and more easily iterate on the prompt
+-   \[ ] **Chrome Extension** - Allow users to interact with Skyvern through a Chrome extension (incl voice mode, saving tasks, etc.)
+-   \[ ] **Skyvern Action Recorder** - Allow Skyvern to watch a user complete a task and then automatically generate a workflow for it
+-   \[ ] **Interactable Livestream** - Allow users to interact with the livestream in real-time to intervene when necessary (such as manually submitting sensitive forms)
+-   \[ ] **Integrate LLM Observability tools** - Integrate LLM Observability tools to allow back-testing prompt changes with specific data sets + visualize the performance of Skyvern over time
+-   \[x] **Langchain Integration** - Create langchain integration in langchain_community to use Skyvern as a "tool".
 
 ## Contributing
 
-We welcome your contributions! Please open a PR/issue, or contact us via [email](mailto:founders@skyvern.com) or [discord](https://discord.gg/fG2XXEuQX3). See our [contribution guide](CONTRIBUTING.md) and ["Help Wanted" issues](https://github.com/skyvern-ai/skyvern/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) to get started.
+We welcome contributions! For contributions, suggestions, or inquiries, contact us [via email](mailto:founders@skyvern.com) or [discord](https://discord.gg/fG2XXEuQX3).
+Please see the [contribution guide](CONTRIBUTING.md) and explore ["Help Wanted" issues](https://github.com/skyvern-ai/skyvern/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22).
 
 If you want to chat with the skyvern repository to get a high level overview of how it is structured, how to build off it, and how to resolve usage questions, check out [Code Sage](https://sage.storia.ai?utm_source=github&utm_medium=referral&utm_campaign=skyvern-readme).
 
 ## Telemetry
 
-By default, Skyvern collects basic usage statistics.  To opt-out, set the `SKYVERN_TELEMETRY` environment variable to `false`.
+By Default, Skyvern collects basic usage statistics to help us understand how Skyvern is being used. If you would like to opt-out of telemetry, please set the `SKYVERN_TELEMETRY` environment variable to `false`.
 
 ## License
 
-This repository is licensed under the [AGPL-3.0 License](LICENSE).
+Skyvern's open source repository is supported via a managed cloud. All of the core logic powering Skyvern is available in this open source repository licensed under the [AGPL-3.0 License](LICENSE), with the exception of anti-bot measures available in our managed cloud offering.
+
+For any licensing queries, contact us at [support@skyvern.com].
 
 ## Star History
 

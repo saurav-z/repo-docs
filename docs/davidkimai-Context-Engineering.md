@@ -1,92 +1,80 @@
-# Context Engineering: Master the Art and Science of LLM Context
+# Context Engineering: Mastering LLM Performance Beyond Prompts
 
-**Unlock the true potential of Large Language Models (LLMs) by mastering context engineering, moving beyond basic prompt design to create powerful, informed, and efficient AI systems.**
+**Unlock the full potential of Large Language Models by mastering context engineering – the art and science of curating the perfect information environment for optimal LLM performance.** ([Original Repository](https://github.com/davidkimai/Context-Engineering))
 
-[View the Original Repository](https://github.com/davidkimai/Context-Engineering)
-
-Context engineering is the strategic design and optimization of all information provided to an LLM at inference time, including prompts, examples, memory, and tools. This repository provides a comprehensive, first-principles approach to context engineering, offering a practical guide to transforming raw prompts into powerful AI applications.
+Context engineering goes beyond prompt engineering, focusing on the **entire information payload** provided to an LLM. This includes examples, memory, retrieval tools, state, and control flow, enabling more complex and intelligent applications.
 
 ## Key Features
 
-*   **Foundations:** Build a strong understanding of context engineering principles, moving from simple prompts to complex systems.
-*   **Hands-On Guides:**  Step-by-step tutorials and practical examples to apply the concepts directly.
-*   **Reusable Templates:**  Leverage pre-built code snippets and design patterns for common context engineering tasks.
-*   **Real-World Examples:** Explore practical implementations and use cases to inspire your projects.
-*   **Research-Backed:** Explore the latest advancements in the field with links to cutting-edge research papers from ICML, NeurIPS, and more.
+*   **First-Principles Approach:** Learn context engineering from the ground up, building from atomic instructions to complex neural systems and field theory.
+*   **Hands-On Tutorials:**  Interactive guides and Jupyter notebooks to experiment with different context engineering techniques.
+*   **Practical Examples:** Explore real-world implementations, including chatbot, data annotation, multi-agent orchestration, and more.
+*   **Reusable Templates:** Leverage pre-built components, including context structures, control loops, and evaluation metrics, to accelerate development.
+*   **Community Driven:** Join a community of practitioners and researchers, and contribute to this open-source resource.
 
-## Core Concepts
+## What You Will Learn
 
-This repository adopts a progressive learning approach, breaking down context engineering into manageable levels.
+| Concept             | What It Is                                   | Why It Matters                                                        |
+| ------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
+| **Token Budget**     | Optimizing every token in your context         | More tokens = higher cost & slower responses                           |
+| **Few-Shot Learning** | Teaching by showing examples                  | Often more effective than just providing explanations                  |
+| **Memory Systems**   | Persisting information across turns           | Enables stateful, coherent conversations                               |
+| **Retrieval Augmentation** | Finding & injecting relevant documents      | Grounds responses in facts, reduces hallucination                      |
+| **Control Flow**     | Breaking complex tasks into steps            | Solve harder problems with simpler prompts                             |
+| **Context Pruning**  | Removing irrelevant information               | Keeps only what is needed to maintain peak performance                |
+| **Metrics & Evaluation**| Measuring context effectiveness            | Enables iterative optimization                                        |
+| **Cognitive Tools & Prompt Programming** | Build Custom Tools & Templates          | Create new layers for context engineering                                    |
+| **Neural Field Theory** | Modeling context as a dynamic neural field | Iterative context updating                                |
+| **Symbolic Mechanisms** | Symbolic architectures enabling higher order reasoning  | Smarter systems = less work |
+| **Quantum Semantics** |  Meaning as observer-dependent  | Design context systems leveraging superpositional techniques |
 
-*   **Atoms (Prompts):** Basic instruction units.
-*   **Molecules (Examples):** Few-shot learning and demonstration sets.
-*   **Cells (Memory):** Stateful conversation layers and context window management.
-*   **Organs (Applications):** Multi-step control flows and system orchestration.
-*   **Neural Systems (Reasoning):** Cognitive tools, reasoning frameworks, and verification.
-*   **Neural Fields (Context):** Context as a dynamic neural field with iterative updating
+## Research-Driven Insights
 
-## Learning Path
+This repository is continuously updated with the latest research and insights. Key findings include:
 
-This resource offers a structured path to learning:
+*   **MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents**: By compressing each interaction into a compact "internal state," MEM1 agents avoid the problems of endless context expansion.
+*   **Eliciting Reasoning in Language Models with Cognitive Tools**: Utilize modular prompt templates to break down complex tasks, enhancing accuracy and transparency.
+*   **Emergent Symbolic Mechanisms Support Abstract Reasoning in Large Language Models**: LLMs develop internal "logic circuits," enabling abstract reasoning, generalization, and innovative solutions.
 
-1.  **Foundations:** Dive into the core concepts and principles (00\_foundations/).
-2.  **Hands-On Guides:** Follow practical tutorials and walkthroughs (10\_guides\_zero\_to\_one/).
-3.  **Templates:** Access reusable code snippets and design patterns (20\_templates/).
-4.  **Examples:** Explore complete implementations in real-world projects (30\_examples/).
-5.  **Reference:** Deep dives and advanced evaluation techniques (40\_reference/).
-6.  **Community Contributions:** Contribute and share your context engineering expertise (50\_contrib/).
+## Getting Started
 
-## Research Highlights
+1.  **Foundations:** Start with  `00_foundations/01_atoms_prompting.md` for understanding prompts.
+2.  **Experiment:** Run the hands-on guide `10_guides_zero_to_one/01_min_prompt.ipynb` (Jupyter Notebook style).
+3.  **Explore:** Use a template like `20_templates/minimal_context.yaml`.
+4.  **Implement:** Study the implementation `30_examples/00_toy_chatbot/`.
+5. **Join the Discord:**  [![Discord](https://img.shields.io/badge/Discord-join%20chat-7289DA.svg?logo=discord")](https://discord.gg/JeFENHNNNQ)
 
-This repository is informed by cutting-edge research:
 
-### MEM1: Learning to Synergize Memory and Reasoning
+## Roadmap
+**Comprehensive Course Under Construction:**  See the `00_COURSE` directory for in-progress materials.
 
-*   Trains AI agents to integrate memory and reasoning for efficient long-horizon tasks.
-*   Employs a dynamic "internal state" for compact information storage.
-*   Blends memory and thinking for faster, more accurate agents.
-*   Uses a structured system for easy auditing.
-*   Demonstrates recursive, protocol-driven memory outperforming traditional methods.
+```
+                    Prompt Engineering  │  Context Engineering
+                       ↓                │            ↓                      
+               "What you say"           │  "Everything else the model sees"
+             (Single instruction)       │    (Examples, memory, retrieval,
+                                        │     tools, state, control flow)
+```
 
-### Eliciting Reasoning in Language Models with Cognitive Tools
+*   **[Comprehensive Course Under Construction](https://github.com/davidkimai/Context-Engineering/tree/main/00_COURSE)**
+*   **[Context Engineering Survey-Review of 1400 Research Papers](https://arxiv.org/pdf/2507.13334)**
+*   **[Awesome Context Engineering Repo](https://github.com/Meirtz/Awesome-Context-Engineering)**
 
-*   Employs modular "cognitive tools" to enable more thoughtful AI problem-solving.
-*   Uses specialized prompt templates for distinct mental operations.
-*   Creates inner mental shortcuts for greater accuracy and flexibility.
-*   Compartmentalizes reasoning steps to prevent confusion and enhance transparency.
-*   Improves performance without extra training.
+## Dive Deeper
 
-### Emergent Symbolic Mechanisms Support Abstract Reasoning
+*   **[DeepWiki](https://deepwiki.com/davidkimai/Context-Engineering)**
+*   **[DeepGraph](https://www.deepgraph.co/davidkimai/Context-Engineering)**
+*   **[Chat with NotebookLM + Podcast Deep Dive](https://notebooklm.google.com/notebook/0c6e4dc6-9c30-4f53-8e1a-05cc9ff3bc7e)**
+*   **[On Emergence, Attractors, and Dynamical Systems Theory](https://content.csbs.utah.edu/~butner/systems/DynamicalSystemsIntro.html)**
+*   **[Columbia DST](http://wordpress.ei.columbia.edu/ac4/about/our-approach/dynamical-systems-theory/)**
 
-*   Large language models develop their own inner symbolic "logic circuits."
-*   Uses a three-stage process for abstract reasoning.
-*   Develops internal, flexible representations for new problems.
-*   Enables abstract reasoning with attention heads.
-*   Bridges the gap between symbolic and neural nets.
+## Contribute
 
-## Additional Resources
-
-*   [Ask DeepWiki](https://deepwiki.com/davidkimai/Context-Engineering)
-*   [DeepGraph](https://www.deepgraph.co/davidkimai/Context-Engineering)
-*   [Chat with NotebookLM + Podcast Deep Dive](https://notebooklm.google.com/notebook/0c6e4dc6-9c30-4f53-8e1a-05cc9ff3bc7e)
-*   [Discord](https://discord.gg/JeFENHNNNQ)
-*   [Comprehensive Course Under Construction](https://github.com/davidkimai/Context-Engineering/tree/main/00_COURSE)
-*   [Awesome Context Engineering Repo](https://github.com/Meirtz/Awesome-Context-Engineering)
-
-## Quick Start
-
-1.  **Explore the Foundations:**  Start with `00_foundations/01_atoms_prompting.md` (5 min).
-2.  **Run a Simple Example:** Experiment with the minimal working example.
-3.  **Use a Template:**  Copy/paste a template into your project (20\_templates/).
-4.  **Explore a Complete Implementation:** Study a full implementation with context management (30\_examples/).
-
-## Contributing
-
-We welcome your contributions! Please review the [CONTRIBUTING.md](.github/CONTRIBUTING.md) guidelines.
+Help us build the future of context engineering!  Check out our [CONTRIBUTING.md](.github/CONTRIBUTING.md) for guidelines.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+[MIT License](LICENSE)
 
 ## Citation
 
@@ -98,3 +86,9 @@ This project is licensed under the [MIT License](LICENSE).
   publisher = {GitHub},
   url = {https://github.com/davidkimai/context-engineering}
 }
+```
+
+## Acknowledgements
+
+*   [Andrej Karpathy](https://x.com/karpathy/status/1937902205765607626) for inspiring this repo and coining the term "context engineering".
+*   All contributors and the open-source community.

@@ -1,49 +1,50 @@
-# Webassets: Optimize Your Python Web App's Assets
+# Webassets: Streamline Your Python Web Development with Asset Management
 
-**Webassets is the go-to Python asset management tool, helping you merge and compress your JavaScript and CSS files for faster website performance.**  Get started today and boost your web app's efficiency!
+**Effortlessly merge and compress your JavaScript and CSS files to optimize your web applications with Webassets.**
 
 [View the original repository on GitHub](https://github.com/miracle2k/webassets)
 
-## Key Features of Webassets:
+## Key Features
 
-*   **Asset Merging:** Combine multiple CSS and JavaScript files into single files, reducing HTTP requests.
-*   **Asset Compression:** Minify your CSS and JavaScript files, decreasing file sizes and improving loading times.
-*   **Streamlined Workflow:** Easy integration into your Python web development projects.
-*   **Flexible Configuration:** Customize your asset management pipeline to fit your specific needs.
+*   **Asset Merging:** Combine multiple JavaScript and CSS files into single files to reduce HTTP requests.
+*   **Asset Compression:** Minimize file sizes using various compression techniques for faster loading times.
+*   **Python-Based:** Seamlessly integrates with your Python web development workflow.
+*   **Well-Tested:** Relies on a robust testing suite to ensure reliability.
 
-## Getting Started
+## Documentation
 
-### Documentation
+Comprehensive documentation is available at: [https://webassets.readthedocs.io/](https://webassets.readthedocs.io/)
 
-Comprehensive documentation is available:
+## Installation
 
-*   [Webassets Documentation](https://webassets.readthedocs.io/)
-
-### Installation
-
-It is recommended to use the latest code for webassets.
-
-Install the development version using pip:
+While releases are not on a regular schedule, the latest code is encouraged.  Install the latest development version:
 
 ```bash
 pip install webassets==dev
 ```
 
-### Development
+## Development
 
-For development purposes, ensure you have the necessary tools and dependencies:
+### Requirements
 
-1.  **Prerequisites:** Java 7 or higher is required for certain features like the Google Closure filter.
-2.  **Install Python Requirements:**
+*   Java 7 (required for tests using the Google Closure filter)
+
+### Setup
+
+1.  Install Python requirements using `uv`:
+
     ```bash
     uv venv
     uv pip install -r uv.lock
     ```
-3.  **Install Other Requirements:**
+
+2.  Install other development requirements:
+
     ```bash
     ./requirements-dev.sh
     ```
-4.  **Run Tests:**
+
+3.  Run the tests:
+
     ```bash
     ./run_tests.sh
-    ```

@@ -1,20 +1,19 @@
-# DeepAgents: Build Powerful, Deep-Thinking AI Agents (Python)
+# 🧠🤖 DeepAgents: Build Powerful, Deep Agents with Ease
 
-**Tired of shallow AI agents?** DeepAgents empowers you to create sophisticated, autonomous AI systems capable of complex tasks through planning, sub-agents, and advanced tools. ➡️ [Check out the original repo!](https://github.com/hwchase17/deepagents)
+**Unleash the power of advanced AI agents by leveraging planning, sub-agents, and file system access for complex tasks.**  [View the project on GitHub](https://github.com/hwchase17/deepagents)
 
-<img src="deep_agents.png" alt="deep agent" width="600"/>
-
-DeepAgents provides a Python package for building advanced agents that can perform complex tasks using Large Language Models (LLMs). Inspired by architectures like "Claude Code," "Deep Research," and "Manus," it offers a flexible framework for creating agents that can plan, use tools, and manage sub-agents, including:
+DeepAgents is a Python package that enables you to create sophisticated, "deep" agents capable of handling intricate, multi-step tasks that go beyond simple prompt-tool interactions. Inspired by cutting-edge applications like Claude Code, DeepAgents provides a flexible framework built on LangGraph to build agents with advanced features.
 
 **Key Features:**
 
-*   **Planning Tool:**  A built-in planning mechanism to enable the agent to strategize and break down complex tasks.
-*   **Sub-Agents:**  Easily manage and integrate sub-agents for modularity and context isolation.
-*   **File System Tools:** Built-in mock file system tools (`ls`, `edit_file`, `read_file`, `write_file`) for file interactions within the agent's context (no persistent storage).
-*   **Customizable Prompts:** Fine-tune agent behavior with custom instructions and a powerful built-in system prompt.
-*   **Tool Interrupts:** Implement human-in-the-loop tool approval with configurable settings for added safety and control.
-*   **LangGraph Integration:**  Built on LangGraph, giving you access to streaming, memory, and other LangGraph features.
-*   **MCP Support:** Run agents with MCP tools through Langchain MCP Adapter library
+*   **Planning Tool:** Built-in planning mechanism to guide the agent's actions.
+*   **Sub-Agents:** Enables modularity and specialization through the use of custom and general purpose sub-agents for handling specific tasks.
+*   **File System Tools:**  Includes `ls`, `edit_file`, `read_file`, and `write_file` tools using a mocked, state-based file system.
+*   **Detailed Prompting:** Leverage a powerful, customizable system prompt to guide agent behavior, based on Claude Code principles.
+*   **Human-in-the-Loop:** Support for tool interrupt/approval using the `interrupt_config` parameter.
+*   **MCP Integration:** Compatible with the Langchain MCP adapter for integration with MCP tools.
+*   **Customization:**  Easily customize agents with tools, instructions, and sub-agents.
+*   **Model Flexibility:**  Supports LangChain model objects, allowing use of diverse LLMs including OpenAI and Ollama models, with per-subagent model overrides.
 
 ## Installation
 
@@ -22,11 +21,9 @@ DeepAgents provides a Python package for building advanced agents that can perfo
 pip install deepagents
 ```
 
-## Quickstart: Research Agent Example
+## Usage
 
-Get started with a simple research agent:
-
-**(Requires `pip install tavily-python`)**
+(Requires `pip install tavily-python` for the example below)
 
 ```python
 import os
@@ -37,14 +34,13 @@ from deepagents import create_deep_agent
 
 tavily_client = TavilyClient(api_key=os.environ["TAVILY_API_KEY"])
 
-# Search tool to use to do research
+# Search tool
 def internet_search(
     query: str,
     max_results: int = 5,
     topic: Literal["general", "news", "finance"] = "general",
     include_raw_content: bool = False,
 ):
-    """Run a web search"""
     return tavily_client.search(
         query,
         max_results=max_results,
@@ -52,16 +48,11 @@ def internet_search(
         topic=topic,
     )
 
-
-# Prompt prefix to steer the agent to be an expert researcher
-research_instructions = """You are an expert researcher. Your job is to conduct thorough research, and then write a polished report.
+research_instructions = """You are an expert researcher. Conduct research and write a report.
 
 You have access to a few tools.
-
 ## `internet_search`
-
-Use this to run an internet search for a given query. You can specify the number of results, the topic, and whether raw content should be included.
-"""
+Use this to run an internet search."""
 
 # Create the agent
 agent = create_deep_agent(
@@ -73,26 +64,34 @@ agent = create_deep_agent(
 result = agent.invoke({"messages": [{"role": "user", "content": "what is langgraph?"}]})
 ```
 
-See [examples/research/research_agent.py](examples/research/research_agent.py) for a more complex example.
+For a more complex example, see: [examples/research/research_agent.py](examples/research/research_agent.py).
 
-## Customizing Deep Agents
+## Customizing Your Deep Agent
 
-The `create_deep_agent` function accepts the following parameters for customization:
+The `create_deep_agent` function provides flexibility to tailor your agents to specific needs:
 
 ### `tools` (Required)
 
-A list of functions or LangChain `@tool` objects that the agent and sub-agents can utilize.
+Pass a list of functions or LangChain `@tool` objects to grant the agent access to specific functionalities.
 
 ### `instructions` (Required)
 
-The instructions that the agent will follow to guide its behavior, which are integrated within a system prompt.
+Provide the agent's prompt instructions to guide its overall behavior.  A built-in system prompt is also used.
 
 ### `subagents` (Optional)
 
-Define and incorporate custom sub-agents, each with their own instructions, tools, and context to handle specific tasks.  This promotes context isolation and modularity.
+Define custom sub-agents with specific instructions and tools:
 
 ```python
-# Example using a custom subagent
+from typing import TypedDict, NotRequired, Any
+
+class SubAgent(TypedDict):
+    name: str
+    description: str
+    prompt: str
+    tools: NotRequired[list[str]]
+    model_settings: NotRequired[dict[str, Any]]
+
 research_sub_agent = {
     "name": "research-agent",
     "description": "Used to research more in depth questions",
@@ -108,23 +107,24 @@ agent = create_deep_agent(
 
 ### `model` (Optional)
 
-Customize the LLM used by the agent.  Defaults to `"claude-sonnet-4-20250514"`.
+Customize the LLM used by the agent.  By default, `"claude-sonnet-4-20250514"` is used.  You can supply any LangChain model object. Per-subagent model overrides are also possible.
 
-#### Example: Custom Model
+#### Example: Using a Custom Model (Ollama)
 
 ```python
 from deepagents import create_deep_agent
-from langchain_ollama import ChatOllama
+from langchain_community.llms import Ollama
 
-model = ChatOllama(model="gpt-oss:20b")  # Example using Ollama
+model = Ollama(model="gpt-oss:20b")
 agent = create_deep_agent(
     tools=tools,
     instructions=instructions,
     model=model,
+    ...
 )
 ```
 
-#### Example: Per-subagent model override
+#### Example: Per-Subagent Model Override
 
 ```python
 from deepagents import create_deep_agent
@@ -148,18 +148,64 @@ agent = create_deep_agent(
 )
 ```
 
-## Deep Agent Components
+## Deep Agent Architecture
 
-*   **System Prompt:** A built-in, comprehensive prompt that guides the agent's behavior, inspired by Claude Code.  It includes instructions for using the planning tool, file system tools, and sub-agents.
-*   **Planning Tool:**  A basic planning tool to help the agent strategize and manage tasks.
-*   **File System Tools:** Mock file system tools for basic file operations within the agent's context.
-*   **Sub Agents:**  Easily integrate sub-agents for specialized tasks and better context management.
-*   **Tool Interrupts:** Implement human-in-the-loop tool approval for safe tool execution.
+`deepagents` builds upon LangGraph and provides several built-in components for creating effective agents:
+
+### System Prompt
+
+A detailed system prompt (available in [src/deepagents/prompts.py](src/deepagents/prompts.py)), inspired by Claude Code, provides instructions for planning, using file system tools, and utilizing sub-agents.
+
+### Planning Tool
+
+A basic planning tool, similar to Claude Code's TodoWrite, helps the agent strategize and stay on track.
+
+### File System Tools
+
+A set of file system tools (`ls`, `edit_file`, `read_file`, `write_file`) provide a mocked file system using LangGraph's State object.
+
+### Sub Agents
+
+Supports calling sub-agents, including a built-in general-purpose sub-agent and customizable sub-agents, for context quarantine and specialized instructions.
+
+### Tool Interrupts
+
+Human-in-the-loop approval for tool execution using `interrupt_config`.
+
+## Integration
+
+### MCP
+
+Integrates with MCP tools using the [Langchain MCP Adapter library](https://github.com/langchain-ai/langchain-mcp-adapters).
+
+```python
+import asyncio
+from langchain_mcp_adapters.client import MultiServerMCPClient
+from deepagents import create_deep_agent
+
+async def main():
+    # Collect MCP tools
+    mcp_client = MultiServerMCPClient(...)
+    mcp_tools = await mcp_client.get_tools()
+
+    # Create agent
+    agent = create_deep_agent(tools=mcp_tools, ....)
+
+    # Stream the agent
+    async for chunk in agent.astream(
+        {"messages": [{"role": "user", "content": "what is langgraph?"}]},
+        stream_mode="values"
+    ):
+        if "messages" in chunk:
+            chunk["messages"][-1].pretty_print()
+
+asyncio.run(main())
+```
 
 ## Roadmap
 
-*   \[ ] Allow users to customize full system prompt
-*   \[ ] Code cleanliness (type hinting, docstrings, formating)
-*   \[ ] Allow for more of a robust virtual filesystem
-*   \[ ] Create an example of a deep coding agent built on top of this
-*   \[ ] Benchmark the example of [deep research agent](examples/research/research_agent.py)
+*   \[ ] Allow users to customize the full system prompt.
+*   \[ ] Code cleanliness (type hinting, docstrings, formatting).
+*   \[ ] Enhance the virtual filesystem.
+*   \[ ] Develop a deep coding agent example.
+*   \[ ] Benchmark the deep research agent example.

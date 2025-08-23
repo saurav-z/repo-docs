@@ -1,174 +1,161 @@
-<!-- # BabelDOC: The Ultimate PDF Translation Library -->
-
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://s.immersivetranslate.com/assets/uploads/babeldoc-big-logo-darkmode-with-transparent-background-IKuNO1.svg" width="320px" alt="BabelDOC"/>
-    <img src="https://s.immersivetranslate.com/assets/uploads/babeldoc-big-logo-with-transparent-background-2xweBr.svg" width="320px" alt="BabelDOC"/>
-  </picture>
+<!-- <img src="https://s.immersivetranslate.com/assets/r2-uploads/images/babeldoc-banner.png" width="320px"  alt="YADT"/> -->
 
-  <p>
-    <!-- PyPI -->
-    <a href="https://pypi.org/project/BabelDOC/">
-      <img src="https://img.shields.io/pypi/v/BabelDOC"></a>
-    <a href="https://pepy.tech/projects/BabelDOC">
-      <img src="https://static.pepy.tech/badge/BabelDOC"></a>
-    <!-- License -->
-    <a href="./LICENSE">
-      <img src="https://img.shields.io/github/license/funstory-ai/BabelDOC"></a>
-    <a href="https://t.me/+Z9_SgnxmsmA5NzBl">
-      <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=flat-squeare&logo=telegram&logoColor=white"></a>
-  </p>
+<br/>
 
-  <a href="https://trendshift.io/repositories/13358" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13358" alt="funstory-ai%2FBabelDOC | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://s.immersivetranslate.com/assets/uploads/babeldoc-big-logo-darkmode-with-transparent-background-IKuNO1.svg" width="320px" alt="BabelDOC"/>
+  <img src="https://s.immersivetranslate.com/assets/uploads/babeldoc-big-logo-with-transparent-background-2xweBr.svg" width="320px" alt="BabelDOC"/>
+</picture>
+
 </div>
 
-## BabelDOC: Effortlessly Translate Scientific Papers and PDFs
+# BabelDOC: Effortlessly Translate PDF Scientific Papers
 
-BabelDOC is a powerful Python library designed to translate PDF scientific papers, providing bilingual comparisons and supporting various features for seamless document translation.  [View the source on GitHub](https://github.com/funstory-ai/BabelDOC).
+BabelDOC is a powerful library that simplifies the process of translating PDF scientific papers. [Explore the BabelDOC Repo](https://github.com/funstory-ai/BabelDOC)
 
-**Key Features:**
+## Key Features
 
-*   **PDF Translation:**  Translate PDF documents efficiently.
-*   **Online Service:** Beta version available on [Immersive Translate - BabelDOC](https://app.immersivetranslate.com/babel-doc/) with 1000 free pages per month.
-*   **Self-Deployment:** Integrated with [PDFMathTranslate 2.0](https://github.com/PDFMathTranslate/PDFMathTranslate-next) for self-hosting and WebUI with additional translation services.
-*   **Command Line Interface (CLI):**  Easy-to-use CLI for quick translations.
-*   **Python API:** Integrate translation capabilities directly into your Python projects.
-*   **Glossary Support:** Improve translation accuracy using custom glossaries.
-*   **Offline Assets Management:** Generate and restore offline asset packages for environments with limited or no internet access.
-*   **Advanced PDF Processing Options:** Control page selection, splitting, and compatibility settings.
-*   **OpenAI Integration:** Support for OpenAI-compatible LLMs.
+*   **Online Service**: Utilize the beta version on [Immersive Translate - BabelDOC](https://app.immersivetranslate.com/babel-doc/) for free translations (1000 pages/month).
+*   **Self-Deployment**: Integrate with [PDFMathTranslate 2.0](https://github.com/PDFMathTranslate/PDFMathTranslate-next) for custom deployments and WebUI integration.
+*   **Command-Line Interface**: Easy-to-use CLI for direct translation tasks.
+*   **Python API**: Integrate BabelDOC into your Python projects.
+*   **Bilingual Comparison**: Provides dual PDF output, allowing side-by-side comparison of original and translated text.
 
 ## Getting Started
 
-### Installation
+### Installation (uv recommended)
 
-**Recommended:** Utilize [uv](https://github.com/astral-sh/uv) for managing your virtual environment.
+1.  **Install `uv`**: Refer to [uv installation](https://github.com/astral-sh/uv#installation) and set up your `PATH`.
+2.  **Install BabelDOC**:  `uv tool install --python 3.12 BabelDOC`
+3.  **Run**:  `babeldoc --help` to confirm the installation.
 
-1.  **Install `uv`:**  Follow the [uv installation instructions](https://github.com/astral-sh/uv#installation).
+### Installation from Source (uv recommended)
 
-2.  **Install BabelDOC:**
+1.  **Clone the repository**: `git clone https://github.com/funstory-ai/BabelDOC`
+2.  **Navigate to the directory**: `cd BabelDOC`
+3.  **Install dependencies and run**: `uv run babeldoc --help`
 
-    ```bash
-    uv tool install --python 3.12 BabelDOC
-    babeldoc --help
-    ```
+## Advanced Options and Configuration
 
-### Using the CLI
+BabelDOC offers numerous options for fine-tuning your translation process.
 
-*   **Translate a PDF:**
+### Language Options
+*   `--lang-in`, `-li`: Source language code (default: en)
+*   `--lang-out`, `-lo`: Target language code (default: zh)
 
-    ```bash
-    babeldoc --openai --openai-model "gpt-4o-mini" --openai-base-url "https://api.openai.com/v1" --openai-api-key "your-api-key-here"  --files example.pdf
-    ```
+### PDF Processing Options
 
-*   **Translate Multiple PDFs:**
+*   `--files`: Input PDF documents
+*   `--pages`: Specific pages to translate
+*   `--split-short-lines`: split short lines into different paragraphs
+*   `--short-line-split-factor`: Split threshold factor
+*   `--skip-clean`: Skip PDF cleaning step
+*   `--dual-translate-first`: Translated pages first in dual PDF mode
+*   `--disable-rich-text-translate`: Disable rich text translation
+*   `--enhance-compatibility`: Enable all compatibility enhancement options
+*   `--use-alternating-pages-dual`: Use alternating pages mode for dual PDF
+*   `--watermark-output-mode`: Control watermark output mode: 'watermarked', 'no_watermark', 'both'
+*   `--max-pages-per-part`: Maximum number of pages per part for split translation
+*   `--translate-table-text`: Translate table text (experimental, default: False)
+*   `--formular-font-pattern`: Font pattern to identify formula text
+*   `--formular-char-pattern`: Character pattern to identify formula text
+*   `--show-char-box`: Show character bounding boxes (debug only)
+*   `--skip-scanned-detection`: Skip scanned document detection
+*   `--ocr-workaround`: Use OCR workaround
+*   `--auto-enable-ocr-workaround`: Enable automatic OCR workaround
+*   `--primary-font-family`: Override primary font family for translated text
+*   `--only-include-translated-page`: Only include translated pages in the output PDF
+*   `--merge-alternating-line-numbers`: Enable post-processing to merge alternating line-number layouts
+*   `--skip-form-render`: Skip form rendering
+*   `--skip-curve-render`: Skip curve rendering
+*   `--only-parse-generate-pdf`: Only parse PDF and generate output PDF without translation
+*   `--remove-non-formula-lines`: Remove non-formula lines from paragraph areas
+*   `--non-formula-line-iou-threshold`: IoU threshold for detecting paragraph overlap when removing non-formula lines
+*   `--figure-table-protection-threshold`: IoU threshold for protecting lines in figure/table areas
 
-    ```bash
-    babeldoc --openai --openai-model "gpt-4o-mini" --openai-base-url "https://api.openai.com/v1" --openai-api-key "your-api-key-here"  --files example1.pdf --files example2.pdf
-    ```
+### Translation Service Options
 
-### Installation from Source
+*   `--qps`: QPS (Queries Per Second) limit for translation service
+*   `--ignore-cache`: Ignore translation cache
+*   `--no-dual`: Do not output bilingual PDF files
+*   `--no-mono`: Do not output monolingual PDF files
+*   `--min-text-length`: Minimum text length to translate
+*   `--openai`: Use OpenAI for translation
+*   `--custom-system-prompt`: Custom system prompt for translation.
+*   `--add-formula-placehold-hint`: Add formula placeholder hint for translation.
+*   `--pool-max-workers`: Maximum number of worker threads
+*   `--no-auto-extract-glossary`: Disable automatic term extraction
 
-1.  **Clone the Repository:**
+### OpenAI Specific Options
 
-    ```bash
-    git clone https://github.com/funstory-ai/BabelDOC
-    cd BabelDOC
-    ```
+*   `--openai-model`: OpenAI model to use
+*   `--openai-base-url`: Base URL for OpenAI API
+*   `--openai-api-key`: API key for OpenAI service
 
-2.  **Install Dependencies and Run:**
+### Glossary Options
+*   `--glossary-files`: Comma-separated paths to glossary CSV files.
 
-    ```bash
-    uv run babeldoc --help
-    ```
+### Output Control
 
-*   **Using from Source**
+*   `--output`, `-o`: Output directory
+*   `--debug`: Enable debug logging
+*   `--report-interval`: Progress report interval
 
-    ```bash
-    uv run babeldoc --files example.pdf --openai --openai-model "gpt-4o-mini" --openai-base-url "https://api.openai.com/v1" --openai-api-key "your-api-key-here"
-    ```
-    ```bash
-    uv run babeldoc --files example.pdf --files example2.pdf --openai --openai-model "gpt-4o-mini" --openai-base-url "https://api.openai.com/v1" --openai-api-key "your-api-key-here"
-    ```
+### General Options
 
-## Advanced Options
+*   `--warmup`: Only download and verify required assets then exit
 
-For detailed information on advanced options, refer to the original [README](https://github.com/funstory-ai/BabelDOC).
+### Offline Assets Management
+
+*   `--generate-offline-assets`: Generate an offline assets package
+*   `--restore-offline-assets`: Restore an offline assets package
+
+### Configuration File
+
+*   `--config`, `-c`: Configuration file path (TOML format).
 
 ## Python API
 
-For using BabelDOC as a library within your Python projects, you can refer to the example in [main.py](https://github.com/funstory-ai/yadt/blob/main/babeldoc/main.py).
+The current recommended way to call BabelDOC in Python is to call the `high_level.do_translate_async_stream` function of [pdf2zh next](https://github.com/PDFMathTranslate/PDFMathTranslate-next).
 
-## Offline Assets Management
+## Background and Architecture
 
-*   **Generate Package:**  `babeldoc --generate-offline-assets /path/to/output/dir`
-*   **Restore Package:**  `babeldoc --restore-offline-assets /path/to/offline_assets_*.zip` or `babeldoc --restore-offline-assets /path/to/directory`
+BabelDOC employs a modular architecture with parsing and rendering stages. It offers an intermediate representation for flexibility in handling diverse document structures. The goal is to streamline the translation process, supporting various models, OCR engines, and rendering methods through a plugin-based system.
 
-## Background and Roadmap
+## Roadmap
 
-BabelDOC aims to provide a robust and flexible solution for PDF translation.
+*   Add line support
+*   Add table support
+*   Add cross-page/cross-column paragraph support
+*   More advanced typesetting features
+*   Outline support
+*   ...
 
-*   **Roadmap:**
-    *   Add line support
-    *   Add table support
-    *   Add cross-page/cross-column paragraph support
-    *   More advanced typesetting features
-    *   Outline support
+## Versioning
 
-## Versioning and Contribution
+BabelDOC uses a combination of Semantic Versioning and Pride Versioning. Version format: "0.MAJOR.MINOR".
 
-*   **Versioning:** Uses a combination of Semantic Versioning and Pride Versioning (0.MAJOR.MINOR).
-*   **Contributing:**  We welcome contributions! See the [CONTRIBUTING](https://github.com/funstory-ai/yadt/blob/main/docs/CONTRIBUTING.md) guide.
+## Known Issues
+
+1.  Parsing errors in the author and reference sections.
+2.  Lines are not supported.
+3.  Does not support drop caps.
+4.  Large pages may be skipped.
+
+## Contribute
+
+Contribute to BabelDOC by following the [CONTRIBUTING](https://github.com/funstory-ai/yadt/blob/main/docs/CONTRIBUTING.md) guide. Adhere to the [Code of Conduct](https://github.com/funstory-ai/yadt/blob/main/docs/CODE_OF_CONDUCT.md). Contributors can receive monthly Pro membership redemption codes for Immersive Translation, see [CONTRIBUTOR_REWARD.md](https://github.com/funstory-ai/BabelDOC/blob/main/docs/CONTRIBUTOR_REWARD.md).
 
 ## Acknowledgements
 
-*   PDFMathTranslate
-*   DocLayout-YOLO
-*   pdfminer
-*   PyMuPDF
-*   Asynchronize
-*   PriorityThreadPoolExecutor
+[See original README for list]
 
 <h2 id="star_hist">Star History</h2>
 
-<a href="https://star-history.com/#funstory-ai/babeldoc&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=funstory-ai/babeldoc&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=funstory-ai/babeldoc&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=funstory-ai/babeldoc&type=Date"/>
-  </picture>
-</a>
+[Star History chart]
 
-> [!WARNING]
-> **Important Interaction Note for `--auto-enable-ocr-workaround`:**
->
-> When `--auto-enable-ocr-workaround` is set to `true` (either via command line or config file):
->
-> 1.  During the initial setup, the values for `ocr_workaround` and `skip_scanned_detection` will be forced to `false` by `TranslationConfig`, regardless of whether you also set `--ocr-workaround` or `--skip-scanned-detection` flags.
-> 2.  Then, during the scanned document detection phase (`DetectScannedFile` stage):
->     *   If the document is identified as heavily scanned (e.g., >80% scanned pages) AND `auto_enable_ocr_workaround` is `true` (i.e., `translation_config.auto_enable_ocr_workaround` is true), the system will then attempt to set both `ocr_workaround` to `true` and `skip_scanned_detection` to `true`.
->
-> This means that `--auto-enable-ocr-workaround` effectively gives the system control to enable OCR processing for scanned documents, potentially overriding manual settings for `--ocr-workaround` and `--skip_scanned_detection` based on its detection results. If the document is *not* detected as heavily scanned, then the initial `false` values for `ocr_workaround` and `skip_scanned_detection` (forced by `--auto-enable-ocr-workaround` at the `TranslationConfig` initialization stage) will remain in effect unless changed by other logic.
-```
-Key improvements and explanations:
+**Important Notes:**
 
-*   **SEO Optimization:**
-    *   **Clear Title and Hook:**  "BabelDOC: Effortlessly Translate Scientific Papers and PDFs" immediately grabs attention and includes key search terms.
-    *   **Keyword Placement:**  Keywords like "PDF translation," "scientific papers," "Python library," and "bilingual comparison" are strategically placed throughout the README.
-    *   **Headings:** Using clear headings (`Getting Started`, `Key Features`, `Advanced Options`, `Python API`, etc.) makes the content scannable and improves SEO.
-*   **Summarization and Clarity:**
-    *   The introduction is concise and clearly defines BabelDOC's purpose.
-    *   Information is reorganized and presented in a more user-friendly way, using bullet points and shorter paragraphs.
-    *   Irrelevant content like the author and reference sections in the "Background" section has been removed.
-*   **Structure:**
-    *   **Table of Contents (Implicit):** The use of headings effectively creates an implicit table of contents, guiding the reader through the information.
-*   **Actionable Instructions:**
-    *   Clear installation instructions are provided, with a recommended tool (uv).
-    *   Example CLI usage is given for immediate usability.
-*   **Emphasis on Key Features:**
-    *   The "Key Features" section immediately highlights the most important aspects of BabelDOC.
-*   **Conciseness:** Redundant phrases have been removed, and information is presented efficiently.
-*   **Call to Action (Contribution):** Encourages contributions and provides links to relevant documentation.
-*   **Updated Sections:** The document includes the important interaction notes for `--auto-enable-ocr-workaround`.
-*   **Removed non-essential sections:** The original README contains sections that are not vital for the core documentation (e.g. "Known Issues" and "Background").  These have been omitted for conciseness, as this is a simplified overview. These can be placed into seperate files.
-*   **Clear Instructions to View the Source:** Includes the link to github.
+*   Review the [WARNING] information about `--auto-enable-ocr-workaround` in the original README.
+*   Be sure to install the correct dependencies to avoid errors.

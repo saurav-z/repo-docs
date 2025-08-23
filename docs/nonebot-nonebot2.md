@@ -5,9 +5,12 @@
 
 <div align="center">
 
-# NoneBot: Build Powerful, Cross-Platform Chatbots with Python
+# NoneBot
 
-_✨ Build your dream chatbot today with NoneBot, the powerful, cross-platform, and extensible Python framework! ✨_
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable-next-line MD036 -->
+_✨ 跨平台 Python 异步机器人框架 ✨_
+<!-- prettier-ignore-end -->
 
 </div>
 
@@ -82,11 +85,11 @@ _✨ Build your dream chatbot today with NoneBot, the powerful, cross-platform, 
 </p>
 
 <p align="center">
-  <a href="https://nonebot.dev/">Docs</a>
+  <a href="https://nonebot.dev/">文档</a>
   ·
-  <a href="https://nonebot.dev/docs/quick-start">Quick Start</a>
+  <a href="https://nonebot.dev/docs/quick-start">快速上手</a>
   ·
-  <a href="#plugins">Can't Open Docs?</a>
+  <a href="#插件">文档打不开？</a>
 </p>
 
 <p align="center">
@@ -95,132 +98,132 @@ _✨ Build your dream chatbot today with NoneBot, the powerful, cross-platform, 
   </a>
 </p>
 
-## About NoneBot
+## 简介
 
-**NoneBot is a powerful and flexible Python framework for building chatbots that run on multiple platforms.** Leveraging Python's asynchronous features, NoneBot2 provides a robust and efficient solution for handling a wide range of chatbot functionalities.  Visit the [original repository](https://github.com/nonebot/nonebot2) for more details.
+NoneBot2 是一个现代、跨平台、可扩展的 Python 聊天机器人框架，它基于 Python 的类型注解和异步特性，能够为你的需求实现提供便捷灵活的支持。
 
-## Key Features
+## 特色
 
-*   **Asynchronous by Design:**  Built on Python's async features, ensuring smooth performance even with heavy message traffic.
-*   **Easy Development:**  The NB-CLI scaffolding tool simplifies coding, allowing developers to focus on core business logic.
-*   **Reliable and Robust:** 100% type annotation coverage, enhances code quality and reduces errors through editor integration ([Editor Support](https://nonebot.dev/docs/editor-support)).
-*   **Thriving Community:**  Benefit from a large and active community with tens of thousands of direct and indirect users, offering ample support and resources ([Community Resources](#community-resources)).
-*   **Cross-Platform Compatibility:**  A single framework supporting multiple chat platforms with customizable communication protocols.
+- 异步优先：基于 Python 的异步特性，即使是~~非常~~大量的消息，也能吞吐自如
+- 易于开发：配合 NB-CLI 脚手架，代码编写上手简单，没有过多的冗余代码，可以让开发者专注于业务逻辑
+- 生而可靠：100% 类型注解覆盖，配合编辑器的类型推导功能，能将绝大多数的 Bug 杜绝在编辑器中 ([编辑器支持](https://nonebot.dev/docs/editor-support))
+- 社区丰富：社区用户众多，直接和间接用户超过十万人，每天都有大量的活跃用户 ([社区资源](#社区资源))
+- 海纳百川：一个框架，支持多个聊天软件平台，可自定义通信协议
 
-### Supported Platforms
+  |                                                       协议名称                                                        | 状态 |                                   注释                                    |
+  | :-------------------------------------------------------------------------------------------------------------------: | :--: | :-----------------------------------------------------------------------: |
+  |               OneBot（[仓库](https://github.com/nonebot/adapter-onebot)，[协议](https://onebot.dev/)）                |  ✅  | 支持 QQ、TG、微信公众号、KOOK 等[平台](https://onebot.dev/ecosystem.html) |
+  |      Telegram（[仓库](https://github.com/nonebot/adapter-telegram)，[协议](https://core.telegram.org/bots/api)）      |  ✅  |                                                                           |
+  |     飞书（[仓库](https://github.com/nonebot/adapter-feishu)，[协议](https://open.feishu.cn/document/home/index)）     |  ✅  |                                                                           |
+  |         GitHub（[仓库](https://github.com/nonebot/adapter-github)，[协议](https://docs.github.com/en/apps)）          |  ✅  |                          GitHub APP & OAuth APP                           |
+  |                QQ（[仓库](https://github.com/nonebot/adapter-qq)，[协议](https://bot.q.qq.com/wiki/)）                |  ✅  |                            QQ 官方接口调整较多                            |
+  |                             Console（[仓库](https://github.com/nonebot/adapter-console)）                             |  ✅  |                                控制台交互                                 |
+  |     Red（[仓库](https://github.com/nonebot/adapter-red)，[协议](https://chrononeko.github.io/QQNTRedProtocol/)）      |  ✅  |                                 QQNT 协议                                  |
+  |           Satori（[仓库](https://github.com/nonebot/adapter-satori)，[协议](https://satori.js.org/zh-CN)）            |  ✅  |               支持 Onebot、TG、飞书、微信公众号、Koishi 等                |
+  |   Discord（[仓库](https://github.com/nonebot/adapter-discord)，[协议](https://discord.com/developers/docs/intro)）    |  ✅  |                             Discord Bot 协议                              |
+  |               DoDo（[仓库](https://github.com/nonebot/adapter-dodo)，[协议](https://open.imdodo.com/)）               |  ✅  |                               DoDo Bot 协议                               |
+  |        Kritor（[仓库](https://github.com/nonebot/adapter-kritor)，[协议](https://github.com/KarinJS/kritor)）         |  ✅  |                Kritor (OnebotX) 协议，QQNT 机器人接口标准                  |
+  |    Mirai（[仓库](https://github.com/nonebot/adapter-mirai)，[协议](https://docs.mirai.mamoe.net/mirai-api-http/)）    |  ✅  |                                  QQ 协议                                  |
+  |    Milky（[仓库](https://github.com/nonebot/adapter-milky)，[协议](https://milky.ntqqrev.org/)）                      |  ✅  |                           QQNT 机器人应用接口标准                          |
+  |         钉钉（[仓库](https://github.com/nonebot/adapter-ding)，[协议](https://open.dingtalk.com/document/)）          |  🤗  |                        寻找 Maintainer（暂不可用）                        |
+  |     开黑啦（[仓库](https://github.com/Tian-que/nonebot-adapter-kaiheila)，[协议](https://developer.kookapp.cn/)）     |  ↗️  |                                由社区贡献                                 |
+  |                          Ntchat（[仓库](https://github.com/JustUndertaker/adapter-ntchat)）                           |  ↗️  |                           微信协议，由社区贡献                            |
+  |                      MineCraft（[仓库](https://github.com/17TheWord/nonebot-adapter-minecraft)）                      |  ↗️  |                                由社区贡献                                 |
+  |                       Walle-Q（[仓库](https://github.com/onebot-walle/nonebot_adapter_walleq)）                       |  ↗️  |                            QQ 协议，由社区贡献                            |
+  |                       Villa（[仓库](https://github.com/CMHopeSunshine/nonebot-adapter-villa)）                        |  ❌  |                     米游社大别野 Bot 协议，官方已下线                     |
+  | Rocket.Chat（[仓库](https://github.com/IUnlimit/nonebot-adapter-rocketchat)，[协议](https://developer.rocket.chat/)） |  ↗️  |                     Rocket.Chat Bot 协议，由社区贡献                      |
+  |     Tailchat（[仓库](https://github.com/eya46/nonebot-adapter-tailchat)，[协议](https://tailchat.msgbyte.com/)）      |  ↗️  |                  Tailchat 开放平台 Bot 协议，由社区贡献                   |
+  |                             Mail（[仓库](https://github.com/mobyw/nonebot-adapter-mail)）                             |  ↗️  |                         邮件收发协议，由社区贡献                          |
+  |     黑盒语音（[仓库](https://github.com/lclbm/adapter-heybox)，[协议](https://github.com/QingFengOpen/HeychatDoc)）     |  ↗️  |                       黑盒语音机器人协议，由社区贡献                             |
+  | 微信公众平台（[仓库](https://github.com/YangRucheng/nonebot-adapter-wxmp)，[协议](https://developers.weixin.qq.com/doc/)）|  ↗️  |                       微信公众平台协议，由社区贡献                             |
+  | Gewechat（[仓库](https://github.com/Shine-Light/nonebot-adapter-gewechat)，[协议](https://github.com/Devo919/Gewechat)）|  ❌  |                      Gewechat 微信协议，Gewechat不再维护及可用                            |
+  |  EFChat（[仓库](https://github.com/molanp/nonebot_adapter_efchat)，[协议](https://irinu-live.melon.fish/efc-help/)）   |  ↗️  |                            恒五聊平台协议，由社区贡献                          |
+  |  VoceChat （[仓库](https://github.com/5656565566/nonebot-adapter-vocechat)，[协议](https://doc.voce.chat/zh-cn/bot/bot-and-webhook)）   |  ↗️  |                            VoceChat 平台协议，由社区贡献                          |
+  |  B站直播间（[仓库](https://github.com/MingxuanGame/nonebot-adapter-bilibili-live)，[Web API 协议](https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/docs/live)，[开放平台协议](https://open-live.bilibili.com/document)）   |  ↗️  |                            B站直播间（Web API/开放平台）协议，由社区贡献                          |
 
-| Platform                                                                                                   | Status |                                                   Notes                                                   |
-| :---------------------------------------------------------------------------------------------------------: | :----: | :---------------------------------------------------------------------------------------------------------: |
-| OneBot ([Repo](https://github.com/nonebot/adapter-onebot), [Protocol](https://onebot.dev/))                 |   ✅   |  Supports QQ, TG, WeChat Official Accounts, KOOK, and other [platforms](https://onebot.dev/ecosystem.html)  |
-| Telegram ([Repo](https://github.com/nonebot/adapter-telegram), [Protocol](https://core.telegram.org/bots/api)) |   ✅   |                                                                                                             |
-| Feishu ([Repo](https://github.com/nonebot/adapter-feishu), [Protocol](https://open.feishu.cn/document/home/index)) |   ✅   |                                                                                                             |
-| GitHub ([Repo](https://github.com/nonebot/adapter-github), [Protocol](https://docs.github.com/en/apps))     |   ✅   |                                                   GitHub APP & OAuth APP                                                   |
-| QQ ([Repo](https://github.com/nonebot/adapter-qq), [Protocol](https://bot.q.qq.com/wiki/))                     |   ✅   |                                        QQ official interface changes frequently                                         |
-| Console ([Repo](https://github.com/nonebot/adapter-console))                                                |   ✅   |                                                   Console Interaction                                                   |
-| Red ([Repo](https://github.com/nonebot/adapter-red), [Protocol](https://chrononeko.github.io/QQNTRedProtocol/)) |   ✅   |                                                   QQNT Protocol                                                   |
-| Satori ([Repo](https://github.com/nonebot/adapter-satori), [Protocol](https://satori.js.org/zh-CN))       |   ✅   |                                     Supports Onebot, TG, Feishu, WeChat Official Accounts, Koishi, etc.                                    |
-| Discord ([Repo](https://github.com/nonebot/adapter-discord), [Protocol](https://discord.com/developers/docs/intro)) |   ✅   |                                                   Discord Bot Protocol                                                   |
-| DoDo ([Repo](https://github.com/nonebot/adapter-dodo), [Protocol](https://open.imdodo.com/))                   |   ✅   |                                                   DoDo Bot Protocol                                                   |
-| Kritor ([Repo](https://github.com/nonebot/adapter-kritor), [Protocol](https://github.com/KarinJS/kritor))     |   ✅   |       Kritor (OnebotX) protocol, QQNT robot interface standard         |
-| Mirai ([Repo](https://github.com/nonebot/adapter-mirai), [Protocol](https://docs.mirai.mamoe.net/mirai-api-http/))   |   ✅   |                                                      QQ Protocol                                                      |
-| Milky ([Repo](https://github.com/nonebot/adapter-milky), [Protocol](https://milky.ntqqrev.org/))                |   ✅   |                                                   QQNT Robot Application Interface Standard                                                   |
-| DingTalk ([Repo](https://github.com/nonebot/adapter-ding), [Protocol](https://open.dingtalk.com/document/))    |  🤗  |                                    Seeking Maintainer (currently unavailable)                                     |
-| Kaiheila ([Repo](https://github.com/Tian-que/nonebot-adapter-kaiheila), [Protocol](https://developer.kookapp.cn/)) |  ↗️  |                                                    Community Contribution                                                    |
-| Ntchat ([Repo](https://github.com/JustUndertaker/adapter-ntchat))                                             |  ↗️  |                                                   WeChat protocol, Community Contribution                                                   |
-| MineCraft ([Repo](https://github.com/17TheWord/nonebot-adapter-minecraft))                                    |  ↗️  |                                                    Community Contribution                                                    |
-| Walle-Q ([Repo](https://github.com/onebot-walle/nonebot_adapter_walleq))                                     |  ↗️  |                                                     QQ Protocol, Community Contribution                                                     |
-| Villa ([Repo](https://github.com/CMHopeSunshine/nonebot-adapter-villa))                                      |   ❌   |                                       Miyoushe Dabieye Bot protocol, officially offline                                        |
-| Rocket.Chat ([Repo](https://github.com/IUnlimit/nonebot-adapter-rocketchat), [Protocol](https://developer.rocket.chat/)) |  ↗️  |                                                   Rocket.Chat Bot Protocol, Community Contribution                                                    |
-| Tailchat ([Repo](https://github.com/eya46/nonebot-adapter-tailchat), [Protocol](https://tailchat.msgbyte.com/)) |  ↗️  |                                        Tailchat Open Platform Bot Protocol, Community Contribution                                        |
-| Mail ([Repo](https://github.com/mobyw/nonebot-adapter-mail))                                                  |  ↗️  |                                                 Email Sending and Receiving Protocol, Community Contribution                                                  |
-| Heybox ([Repo](https://github.com/lclbm/adapter-heybox), [Protocol](https://github.com/QingFengOpen/HeychatDoc))  |  ↗️  |                                          Heybox Robot Protocol, Community Contribution                                           |
-| WeChat Official Accounts ([Repo](https://github.com/YangRucheng/nonebot-adapter-wxmp), [Protocol](https://developers.weixin.qq.com/doc/)) |  ↗️  |                                   WeChat Official Accounts Protocol, Community Contribution                                    |
-| Gewechat ([Repo](https://github.com/Shine-Light/nonebot-adapter-gewechat), [Protocol](https://github.com/Devo919/Gewechat)) |   ❌   |                                  Gewechat WeChat Protocol, Gewechat is no longer maintained and available                                   |
-| EFChat ([Repo](https://github.com/molanp/nonebot_adapter_efchat), [Protocol](https://irinu-live.melon.fish/efc-help/))  |  ↗️  |                                               Hengwu Chat Protocol, Community Contribution                                               |
-| VoceChat ([Repo](https://github.com/5656565566/nonebot-adapter-vocechat), [Protocol](https://doc.voce.chat/zh-cn/bot/bot-and-webhook))  |  ↗️  |                                               VoceChat Platform Protocol, Community Contribution                                               |
-| Bilibili Live ([Repo](https://github.com/MingxuanGame/nonebot-adapter-bilibili-live), [Web API Protocol](https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/docs/live), [Open Platform Protocol](https://open-live.bilibili.com/document)) |  ↗️  |                                          Bilibili Live (Web API/Open Platform) protocol, Community Contribution                                          |
+- 坚实后盾：支持多种 web 框架，可自定义替换、组合
 
-*   **Flexible Web Framework Support:** Integrates with various web frameworks, offering customization and composability.
+  |                              驱动框架                               |  类型  |
+  | :-----------------------------------------------------------------: | :----: |
+  |              [FastAPI](https://fastapi.tiangolo.com/)               | 服务端 |
+  | [Quart](https://quart.palletsprojects.com/en/latest/)（异步 Flask） | 服务端 |
+  |           [aiohttp](https://docs.aiohttp.org/en/stable/)            | 客户端 |
+  |               [httpx](https://www.python-httpx.org/)                | 客户端 |
+  |     [websockets](https://websockets.readthedocs.io/en/stable/)      | 客户端 |
 
-    | Framework                                                     |  Type   |
-    | :------------------------------------------------------------ | :-----: |
-    | [FastAPI](https://fastapi.tiangolo.com/)                     |  Server  |
-    | [Quart](https://quart.palletsprojects.com/en/latest/) (async Flask) |  Server  |
-    | [aiohttp](https://docs.aiohttp.org/en/stable/)                |  Client  |
-    | [httpx](https://www.python-httpx.org/)                        |  Client  |
-    | [websockets](https://websockets.readthedocs.io/en/stable/)      |  Client  |
+更多：[概览](https://nonebot.dev/docs/)
 
-For more information, see: [Overview](https://nonebot.dev/docs/)
+## 什么不是 NoneBot2
 
-## What NoneBot2 Isn't
+NoneBot2 不是某个平台或者协议的具体实现，它只负责和已有协议适配器通信，并处理接收到的事件。所以，“NoneBot 有 blabla 平台的 blabla 功能吗？”这种问题是与 NoneBot2 无关的。请在相应平台的功能文档中确认，或与相应平台的协议适配开发者联系。
 
-NoneBot2 is not a specific platform or protocol implementation; it interacts with adapters to handle events. Therefore, questions like "Does NoneBot have feature X for platform Y?" are related to platform-specific features, not NoneBot2 itself. Check the platform's documentation or contact the platform adapter developers.
+NoneBot2 不是 NoneBot1 的替代品。事实上，它们都在被积极的维护着。但是，如果你想尝试一些新功能，或者想要支持更多的平台，可以考虑使用 NoneBot2。
 
-NoneBot2 is not a direct replacement for NoneBot1; both are actively maintained. However, NoneBot2 offers new features and broader platform support, making it an excellent choice for new projects or expanding existing ones.
+> ~~NoneBot2 和 NoneBot1 的区别，就像是 VisualStudio Code 和 VisualStudio 一样~~
 
-## Get Started Today
+## 即刻开始
 
-Find the [complete documentation here](https://nonebot.dev/).
+~~完整~~文档可以在 [这里](https://nonebot.dev/) 查看。
 
-Here's a quick installation guide:
+懒得看文档？下面是快速安装指南：
 
-1.  Install [pipx](https://pypa.github.io/pipx/):
+1. 安装 [pipx](https://pypa.github.io/pipx/)
 
-    ```bash
-    python -m pip install --user pipx
-    python -m pipx ensurepath
-    ```
+   ```bash
+   python -m pip install --user pipx
+   python -m pipx ensurepath
+   ```
 
-2.  Install the scaffolding tool:
+2. 安装脚手架
 
-    ```bash
-    pipx install nb-cli
-    ```
+   ```bash
+   pipx install nb-cli
+   ```
 
-3.  Create a new project:
+3. 使用脚手架创建项目
 
-    ```bash
-    nb create
-    ```
+   ```bash
+   nb create
+   ```
 
-4.  Run your project:
+4. 运行项目
 
-    ```bash
-    nb run
-    ```
+   ```bash
+   nb run
+   ```
 
-## Community Resources
+## 社区资源
 
-### FAQs
+### 常见问题
 
-*   [Frequently Asked Questions (FAQ)](https://faq.nonebot.dev/)
-*   [Discussions](https://discussions.nonebot.dev/)
+- [常见问题解答(FAQ)](https://faq.nonebot.dev/)
+- [论坛(Discussion)](https://discussions.nonebot.dev/)
 
-### Tutorials / Projects / Sharing Experiences
+### 教程/实际项目/经验分享
 
-*   [awesome-nonebot](https://github.com/nonebot/awesome-nonebot)
+- [awesome-nonebot](https://github.com/nonebot/awesome-nonebot)
 
-### Plugins
+### 插件
 
-Enhance your experience with a rich library of official and third-party plugins:
+此外，NoneBot2 还有丰富的官方以及第三方现成的插件供大家使用：
 
-*   [NoneBot-Plugin-Docs](https://github.com/nonebot/nonebot2/tree/master/packages/nonebot-plugin-docs): Offline documentation access (no more broken documentation!).
+- [NoneBot-Plugin-Docs](https://github.com/nonebot/nonebot2/tree/master/packages/nonebot-plugin-docs)：离线文档至本地项目使用 (别再说文档打不开了！)
 
-    Run in your project directory:
+  在项目目录下执行：
 
-    ```bash
-    nb plugin install nonebot_plugin_docs
-    ```
+  ```bash
+  nb plugin install nonebot_plugin_docs
+  ```
 
-    Or try a mirror:
+  或者尝试以下镜像：
 
-    *   [Documentation Mirror (China)](https://nb2.baka.icu)
+  - [文档镜像(中国境内)](https://nb2.baka.icu)
 
-*   Explore more plugins in the [Store](https://nonebot.dev/store/plugins)
+- 其他插件请查看 [商店](https://nonebot.dev/store/plugins)
 
-## License
+## 许可证
 
-`NoneBot` is licensed under the `MIT` License
+`NoneBot` 采用 `MIT` 许可证进行开源
 
 ```text
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
@@ -231,15 +234,15 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-## Contributing
+## 贡献
 
-See the [Contribution Guide](./CONTRIBUTING.md)
+请参考 [贡献指南](./CONTRIBUTING.md)
 
-## Acknowledgements
+## 鸣谢
 
-### Sponsors
+### 赞助者
 
-Thank you to the following organizations for sponsoring the NoneBot project:
+感谢以下产品对 NoneBot 项目提供的赞助：
 
 <p align="center">
   <a href="https://github.com/">
@@ -281,10 +284,16 @@ Thank you to the following organizations for sponsoring the NoneBot project:
   </a>
 </p>
 
-Thank you to our financial sponsors:
+感谢以下赞助者对 NoneBot 项目提供的资金支持：
 
 <a href="https://assets.nonebot.dev/sponsors.svg">
   <img src="https://assets.nonebot.dev/sponsors.svg" alt="sponsors" />
 </a>
 
-###
+### 开发者
+
+感谢以下开发者对 NoneBot2 作出的贡献：
+
+<a href="https://github.com/nonebot/nonebot2/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=nonebot/nonebot2&max=1000" alt="contributors" />
+</a>

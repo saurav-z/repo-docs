@@ -1,34 +1,53 @@
-# Optimize Your Cloudflare CDN with cf-speed-dns
+# Optimize Your Cloudflare CDN Performance with cf-speed-dns
 
-**Instantly boost your Cloudflare CDN performance with `cf-speed-dns`, automatically selecting the fastest IPs for optimal speed and latency.**  This project provides a streamlined way to identify and utilize the best-performing Cloudflare IPs, ensuring your website or application runs at peak efficiency.  Get started today and experience a faster, more responsive online presence.  For the original source code, visit the [cf-speed-dns repository on GitHub](https://github.com/ZhiXuanWang/cf-speed-dns).
+**Tired of slow website loading times?**  `cf-speed-dns` automatically finds and updates the fastest Cloudflare CDN IP addresses, ensuring optimal website performance and a superior user experience.  [View the original repository here](https://github.com/ZhiXuanWang/cf-speed-dns).
 
-## Key Features of cf-speed-dns:
+## Key Features:
 
-*   **Cloudflare IP Optimization:**  Dynamically selects and provides the best Cloudflare IP addresses based on speed and latency.
-*   **Real-Time IP List Updates:**  Access a constantly updated list of optimized IPs via the following interfaces:
-    *   Main List:  [https://ip.164746.xyz](https://ip.164746.xyz)
-    *   Top IPs (Default): [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html)
-    *   Top 10 IPs: [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html)
-*   **Automated DNS Updates:** Integrates with both DNSPOD and DNSCF for automated domain name resolution using the optimized IPs.
-    *   **DNSPOD Integration:** Configure using Actions secrets and variables: `DOMAIN`, `SUB_DOMAIN`, `SECRETID`, `SECRETKEY`, and optionally `PUSHPLUS_TOKEN`.
-    *   **DNSCF Integration:** Configure using Actions secrets and variables: `CF_API_TOKEN`, `CF_ZONE_ID`, `CF_DNS_NAME`, and optionally `PUSHPLUS_TOKEN`.
-*   **PUSHPLUS Notification Support:** Receive notifications through PUSHPLUS for status updates.  Configure your `PUSHPLUS_TOKEN`.
-*   **Easy-to-Use API Endpoint:**  Retrieve the top Cloudflare IPs with a simple `curl` command:
-    ```bash
-    curl 'https://ip.164746.xyz/ipTop.html'
-    ```
-*   **API Response Format:** The API returns a comma-separated list of the fastest IPs, such as:
-    ```
-    104.16.204.6,104.18.103.125
-    ```
+*   **Real-time Cloudflare IP Optimization:**  Continuously updates a list of the fastest Cloudflare CDN IPs.
+*   **Pre-Built IP Lists:** Access optimized IP lists via these convenient endpoints:
+    *   **Top IPs:**  [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html) (Default - provides the fastest IPs)
+    *   **Top 10 IPs:**  [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html)
+*   **Automated DNS Updates:**  Integrates with popular DNS providers to automatically update your DNS records with the optimal Cloudflare IPs.  Supports:
+    *   DNSPOD
+    *   DNSCF
+*   **Customizable Notifications:**  Receive instant updates via PUSHPLUS notification service.
+*   **Easy Implementation:**  Set up automated updates via GitHub Actions.
+*   **Simple API Access:** Get the current top IPs with a simple cURL command.
 
-## Acknowledgements
+## Getting Started:
 
-This project utilizes and is inspired by the work of:
+### API Request:
+
+```bash
+curl 'https://ip.164746.xyz/ipTop.html'
+```
+
+### API Response (Example):
+
+```
+104.16.204.6,104.18.103.125
+```
+
+##  Setting Up DNS Updates (via GitHub Actions):
+
+1.  **Fork this repository.**
+2.  **Configure GitHub Actions Secrets and Variables:**
+
+    *   **DNSPOD:** Add the following secrets/variables: `DOMAIN`, `SUB_DOMAIN`, `SECRETID`, `SECRETKEY`, `PUSHPLUS_TOKEN`
+    *   **DNSCF:** Add the following secrets/variables: `CF_API_TOKEN`, `CF_ZONE_ID`, `CF_DNS_NAME`, `PUSHPLUS_TOKEN`
+
+3.  **Enable DNS Updates:**  The included GitHub Actions workflows will automatically update your DNS records based on the fetched Cloudflare IP data.
+
+##  Notifications:
+
+*   Set up notifications using PUSHPLUS: [https://www.pushplus.plus/push1.html](https://www.pushplus.plus/push1.html)
+
+##  Acknowledgments:
 
 *   [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
 *   [ddgth](https://github.com/ddgth/cf2dns)
 
-## Support
+##  Sponsored by:
 
 [![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")

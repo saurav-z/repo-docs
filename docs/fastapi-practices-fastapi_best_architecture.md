@@ -1,13 +1,13 @@
 <div align="center">
+  <img alt="FastAPI Best Architecture Logo" width="320" src="https://wu-clan.github.io/picx-images-hosting/logo/fba.png">
+</div>
 
-<img alt="The logo includes the abstract combination of the three letters FBA, forming a lightning bolt that seems to spread out from the ground" width="320" src="https://wu-clan.github.io/picx-images-hosting/logo/fba.png">
+# FastAPI Best Architecture: Build Robust Backend Applications
 
-# FastAPI Best Architecture: Build Robust Backend Solutions
+This project offers a comprehensive, enterprise-level architecture solution for building powerful and scalable backends with FastAPI. For more details, please see the [original repository](https://github.com/fastapi-practices/fastapi_best_architecture).
 
-This project provides a robust, enterprise-level backend architecture solution built with FastAPI, offering a solid foundation for your Python web applications.  [See the original repository](https://github.com/fastapi-practices/fastapi_best_architecture) for more details.
-
-[![GitHub](https://img.shields.io/github/license/fastapi-practices/fastapi_best_architecture)](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE)
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
+[![GitHub License](https://img.shields.io/github/license/fastapi-practices/fastapi_best_architecture)](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE)
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-%2300758f)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16.0%2B-%23336791)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0-%23778877)
@@ -19,21 +19,22 @@ This project provides a robust, enterprise-level backend architecture solution b
 ![Discord](https://img.shields.io/discord/1185035164577972344)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/fastapi-practices/fastapi_best_architecture)
 
-</div>
-
 ## Key Features
 
-This project leverages a "pseudo 3-tier" architecture for building robust and scalable FastAPI applications, providing:
+*   **Pseudo 3-Tier Architecture:** Leverages a well-defined structure for clear separation of concerns, inspired by 3-tier architecture principles:
+    *   **API (View):**  Handles incoming requests and returns responses.
+    *   **Schema (Data Transfer):** Defines data structures for input and output using Pydantic.
+    *   **Service (Business Logic):** Implements business rules and orchestrates operations.
+    *   **CRUD (Data Access):**  Manages database interactions.
+    *   **Model:** Represents the data structure.
+*   **Built on Modern Technologies:** Uses FastAPI, Pydantic, SQLAlchemy, and other cutting-edge tools for performance, validation, and data management.
+*   **Database Support:**  Offers support for MySQL and PostgreSQL.
+*   **Code Quality:** Employs tools like Ruff for code linting and formatting.
+*   **Containerization:**  Includes Docker support for easy deployment.
 
-*   **Clean Separation of Concerns:**  Organizes code into distinct layers (API, Schema, Service, CRUD, Model) for maintainability.
-*   **Data Validation with Pydantic:** Ensures data integrity and type safety.
-*   **Database Integration:** Supports MySQL, PostgreSQL, and SQLAlchemy for efficient data management.
-*   **Modern Tooling:** Utilizes Ruff and uv for linting and package management.
-*   **Docker Support:** Simplifies deployment and containerization.
+## Architecture Overview
 
-## Architecture Overview: Pseudo 3-Tier
-
-This project embraces a "pseudo 3-tier" architecture. While not a traditional multi-app structure, it provides a structured approach to backend development.
+This project implements a "pseudo 3-tier" architecture, with components mapped to the following:
 
 | Workflow       | Java           | FastAPI Best Architecture |
 |----------------|----------------|---------------------------|
@@ -45,32 +46,25 @@ This project embraces a "pseudo 3-tier" architecture. While not a traditional mu
 
 ## Documentation & Resources
 
-*   **Official Documentation:**  [Official Documentation](https://fastapi-practices.github.io/fastapi_best_architecture_docs/)
-*   **Community Support:** [Discord](https://wu-clan.github.io/homepage/)
+*   **Official Documentation:**  [https://fastapi-practices.github.io/fastapi_best_architecture_docs/](https://fastapi-practices.github.io/fastapi_best_architecture_docs/)
 
-## Contributing
+## Get Involved
 
-We welcome contributions!
+*   **Discord:** [https://wu-clan.github.io/homepage/](https://wu-clan.github.io/homepage/)
+*   **Contributors:**  See the [contributors graph](https://github.com/fastapi-practices/fastapi_best_architecture/graphs/contributors)
 
-<a href="https://github.com/fastapi-practices/fastapi_best_architecture/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=fastapi-practices/fastapi_best_architecture"/>
-</a>
-
-## Acknowledgements
-
-Special thanks to the following projects:
+## Special Thanks
 
 *   [FastAPI](https://fastapi.tiangolo.com/)
 *   [Pydantic](https://docs.pydantic.dev/latest/)
 *   [SQLAlchemy](https://docs.sqlalchemy.org/en/20/)
 *   [Casbin](https://casbin.org/zh/)
 *   [Ruff](https://beta.ruff.rs/docs/)
+*   ...
 
-## Support & Sponsorship
+## Support the Project
 
-If you find this project helpful, consider supporting it:
-
-[:coffee: Sponsor :coffee:](https://wu-clan.github.io/sponsor/)
+If you find this project helpful, consider supporting it with a coffee donation: [:coffee: Sponsor :coffee:](https://wu-clan.github.io/sponsor/)
 
 ## License
 
