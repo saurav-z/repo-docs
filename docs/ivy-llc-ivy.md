@@ -1,11 +1,10 @@
-<div style="display: block;" align="center">
+<div align="center">
     <a href="https://ivy.dev/">
         <img class="dark-light" width="50%" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/ivy-long.svg" alt="Ivy Logo"/>
     </a>
 </div>
-<br clear="all" />
 
-<div style="margin-top: 10px; margin-bottom: 10px; display: block;" align="center">
+<div align="center">
     <a href="https://github.com/ivy-llc/ivy/stargazers">
         <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://img.shields.io/github/stars/ivy-llc/ivy" alt="GitHub stars">
     </a>
@@ -22,44 +21,53 @@
         <img class="dark-light" style="padding-right: 4px; padding-bottom: 4px;" src="https://github.com/ivy-llc/ivy/actions/workflows/integration-tests.yml/badge.svg" alt="Integration Tests">
     </a>
 </div>
-<br clear="all" />
 
-# Ivy: Seamlessly Convert and Transpile Machine Learning Code Between Frameworks
+## Ivy: Effortlessly Convert and Run Machine Learning Code Across Frameworks
 
-Ivy empowers you to break down framework barriers, enabling easy conversion of your machine learning models, tools, and libraries between popular frameworks like TensorFlow, PyTorch, and JAX.  [Explore the Ivy Repository](https://github.com/ivy-llc/ivy).
+Ivy empowers you to break down framework silos, enabling seamless conversion and execution of your machine learning models and code between popular frameworks. ([View on GitHub](https://github.com/ivy-llc/ivy))
+
+<div align="center">
+    <div>
+    <a href="https://jax.readthedocs.io">
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/jax.svg" alt="JAX">
+    </a>
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <a href="https://www.tensorflow.org">
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/tensorflow.svg" alt="TensorFlow">
+    </a>
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <a href="https://pytorch.org">
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/pytorch.svg" alt="PyTorch">
+    </a>
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <img class="dark-light" width="5%" src="https://github.com/ivy-llc/assets/blob/main/assets/empty.png?raw=true" alt="">
+    <a href="https://numpy.org">
+        <img class="dark-light" width="100" height="100" src="https://raw.githubusercontent.com/ivy-llc/assets/refs/heads/main/assets/logos/numpy.svg" alt="NumPy">
+    </a>
+    </div>
+</div>
 
 ## Key Features
 
-*   **Framework Conversion:** Effortlessly convert code between PyTorch, TensorFlow, JAX, and NumPy.
-*   **Simplified Portability:**  Move your ML code across different frameworks with minimal effort.
-*   **Easy Installation:** Get started quickly with a straightforward pip installation.
-*   **Graph Tracing:** Trace computational graphs for efficient model optimization.
-*   **Comprehensive Documentation:** Explore detailed documentation, examples, and demos.
-
-## Supported Frameworks
-
-Ivy currently supports conversions to and from the following frameworks:
-
-| Framework  | Source | Target |
-|------------|:------:|:------:|
-| PyTorch    |   ✅   |   🚧   |
-| TensorFlow |   🚧   |   ✅   |
-| JAX        |   🚧   |   ✅   |
-| NumPy      |   🚧   |   ✅   |
+*   **Framework Conversion:** Easily convert code between PyTorch, TensorFlow, JAX, and NumPy.
+*   **Simplified Workflow:**  Reduce the complexity of working with multiple deep learning frameworks.
+*   **Efficient Execution:**  Optimize your models and code for different hardware and environments.
+*   **Code Tracing:** Trace computational graphs to remove redundant code.
 
 ## Installation
 
-Install Ivy easily using pip:
+Install Ivy using pip:
 
 ```bash
 pip install ivy
 ```
 
 <details>
-<summary><b>Installation from Source</b></summary>
-<br clear="all" />
+<summary><b>From Source</b></summary>
 
-Alternatively, install Ivy from source to access the latest features:
+Install Ivy from source for the latest updates:
 
 ```bash
 git clone https://github.com/ivy-llc/ivy.git
@@ -69,61 +77,69 @@ pip install --user -e .
 
 </details>
 
-## Getting Started with Ivy: Examples
+## Supported Frameworks
 
-Ivy simplifies the process of converting and optimizing your machine learning code.
+Ivy supports conversions between the following frameworks:
 
-<details>
-    <summary><b>Transpiling Code Between Frameworks</b></summary>
-    <br clear="all" />
+| Framework    | Source | Target |
+|--------------|:------:|:------:|
+| PyTorch      |   ✅   |   🚧   |
+| TensorFlow   |   🚧   |   ✅   |
+| JAX          |   🚧   |   ✅   |
+| NumPy        |   🚧   |   ✅   |
 
-```python
-import ivy
-import torch
-import tensorflow as tf
+## Getting Started: Code Examples
 
-def torch_fn(x):
-    a = torch.mul(x, x)
-    b = torch.mean(x)
-    return x * a + b
-
-tf_fn = ivy.transpile(torch_fn, source="torch", target="tensorflow")
-
-tf_x = tf.convert_to_tensor([1., 2., 3.])
-ret = tf_fn(tf_x)
-```
-
-</details>
+Here are some examples to help you get started with Ivy. For more detailed examples and use cases, check out the [examples page](https://www.docs.ivy.dev/demos/examples_and_demos.html).
 
 <details>
-    <summary><b>Tracing a Computational Graph</b></summary>
-    <br clear="all" />
+    <summary><b>Transpiling code from one framework to another</b></summary>
 
-```python
-import ivy
-import torch
+   ```python
+   import ivy
+   import torch
+   import tensorflow as tf
 
-def torch_fn(x):
-    a = torch.mul(x, x)
-    b = torch.mean(x)
-    return x * a + b
+   def torch_fn(x):
+       a = torch.mul(x, x)
+       b = torch.mean(x)
+       return x * a + b
 
-torch_x = torch.tensor([1., 2., 3.])
-graph = ivy.trace_graph(jax_fn, to="torch", args=(torch_x,))
-ret = graph(torch_x)
-```
+   tf_fn = ivy.transpile(torch_fn, source="torch", target="tensorflow")
 
-</details>
+   tf_x = tf.convert_to_tensor([1., 2., 3.])
+   ret = tf_fn(tf_x)
+   ```
+
+  </details>
+
+  <details>
+    <summary><b>Tracing a computational graph of any code</b></summary>
+
+   ```python
+   import ivy
+   import torch
+
+   def torch_fn(x):
+       a = torch.mul(x, x)
+       b = torch.mean(x)
+       return x * a + b
+
+   torch_x = torch.tensor([1., 2., 3.])
+   graph = ivy.trace_graph(jax_fn, to="torch", args=(torch_x,))
+   ret = graph(torch_x)
+   ```
+
+   </details>
 
 <details>
-<summary><b>How does Ivy Work?</b></summary>
-<br clear="all" />
+<summary><b>How does ivy work?</b></summary>
 
-Ivy's transpiler allows you to use code from any other framework in your own code.
+Ivy\'s transpiler allows you to use code from any other framework in your own code.
 Feel free to head over to the docs for the full API
-reference, but the functions you'd most likely want to use are:
+reference, but the functions you\'d most likely want to use are:
 
-``` python
+```python
 # Converts framework-specific code to a target framework of choice. See usage in the documentation
 ivy.transpile()
 
@@ -133,7 +149,7 @@ ivy.trace_graph()
 
 #### `ivy.transpile` will eagerly transpile if a class or function is provided
 
-``` python
+```python
 import ivy
 import torch
 import tensorflow as tf
@@ -154,7 +170,7 @@ ret = tf_fn(x1)
 
 #### `ivy.transpile` will lazily transpile if a module (library) is provided
 
-``` python
+```python
 import ivy
 import kornia
 import tensorflow as tf
@@ -174,22 +190,13 @@ ret = tf_kornia.color.rgb_to_grayscale(x2)
 
 ## Contributing
 
-Your contributions are welcome!  Help us improve Ivy by:
-
-*   Writing code
-*   Fixing bugs
-*   Providing feedback
-
-Check out our [Open Tasks](https://docs.ivy.dev/overview/contributing/open_tasks.html) and read the [Contributing Guide](https://docs.ivy.dev/overview/contributing.html) for more information.
+We welcome contributions from everyone! Join us in writing code, fixing bugs, or providing feedback.  Explore our [Open Tasks](https://docs.ivy.dev/overview/contributing/open_tasks.html) and learn more in our [Contributing Guide](https://docs.ivy.dev/overview/contributing.html).
 
 <br clear="all" />
 
 <a href="https://github.com/ivy-llc/ivy/graphs/contributors">
-  <img class="dark-light" src="https://contrib.rocks/image?repo=ivy-llc/ivy&anon=0&columns=20&max=100&r=true" alt="Contributors"/>
+  <img class="dark-light" src="https://contrib.rocks/image?repo=ivy-llc/ivy&anon=0&columns=20&max=100&r=true" alt="Contributors">
 </a>
-
-<br clear="all" />
-<br clear="all" />
 
 ## Citation
 
@@ -201,17 +208,3 @@ Check out our [Open Tasks](https://docs.ivy.dev/overview/contributing/open_tasks
   year={2021}
 }
 ```
-```
-
-**Key improvements and explanations:**
-
-*   **SEO Optimization:** Added a clear, concise title and introductory sentence to capture search queries.  Included keywords like "machine learning," "frameworks," "transpile," "convert," and specific framework names.
-*   **Clear Headings:**  Used proper markdown headings (H1, H2, etc.) for better organization and readability.
-*   **Bulleted Key Features:**  Presented the core benefits in an easily digestible bulleted list.
-*   **Concise Language:**  Streamlined the text for clarity and impact.
-*   **Alt Text for Images:** Added `alt` text to all images to improve accessibility and SEO.
-*   **Simplified Formatting:** Replaced `<br clear="all" />` with simpler line breaks for better readability in Markdown.
-*   **Link to Original Repo:**  Included the link to the original repository.
-*   **Action-Oriented Language:** Used phrases like "Explore," "Get Started," and "Help us improve" to encourage engagement.
-*   **Removed Redundant Content:** Consolidated information to provide a more focused overview.
-*   **Removed images between frameworks** Simplified the presentation

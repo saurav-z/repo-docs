@@ -1,39 +1,42 @@
-# theHarvester: Your Go-To OSINT Tool for Reconnaissance
+<!-- theHarvester Logo -->
+<img src="https://github.com/laramies/theHarvester/blob/master/theHarvester-logo.webp" alt="theHarvester Logo" width="200">
 
-**Quickly uncover a target's digital footprint with theHarvester, an open-source intelligence (OSINT) tool designed for effective reconnaissance.**  ([Back to the GitHub Repository](https://github.com/laramies/theHarvester))
-
-[![theHarvester](https://github.com/laramies/theHarvester/blob/master/theHarvester-logo.webp)]()
-[![TheHarvester CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Python%20CI/badge.svg)]()
-[![TheHarvester Docker Image CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Docker%20Image%20CI/badge.svg)]()
+<!-- Badges -->
+[![TheHarvester CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Python%20CI/badge.svg)](https://github.com/laramies/theHarvester/actions/workflows/python-app.yml)
+[![TheHarvester Docker Image CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Docker%20Image%20CI/badge.svg)](https://github.com/laramies/theHarvester/actions/workflows/docker-image.yml)
 [![Rawsec's CyberSecurity Inventory](https://inventory.raw.pm/img/badges/Rawsec-inventoried-FF5050_flat_without_logo.svg)](https://inventory.raw.pm/)
+
+# theHarvester: Open Source Intelligence Gathering Tool
+
+**Uncover a domain's digital footprint with theHarvester, a powerful OSINT tool for reconnaissance and penetration testing.** Explore the original repository at: [https://github.com/laramies/theHarvester](https://github.com/laramies/theHarvester)
 
 ## Key Features
 
-*   **Comprehensive Information Gathering:** Collects crucial data like names, email addresses, IP addresses, subdomains, and URLs.
-*   **Multiple Data Sources:** Leverages a wide array of public resources and search engines for thorough reconnaissance.
-*   **Passive and Active Modules:** Utilize both passive techniques for safe data collection and active modules for more in-depth analysis.
-*   **API Integration:** Supports numerous APIs, allowing for advanced searches and data enrichment (API keys required for some modules).
-*   **Flexible & User-Friendly:**  Simple to use and integrate into your penetration testing or red team assessments.
+*   **Comprehensive OSINT Gathering:** Collects valuable information like names, emails, IPs, subdomains, and URLs.
+*   **Multiple Data Sources:** Leverages a wide range of public resources for comprehensive data collection.
+*   **Passive & Active Modules:** Utilizes both passive and active techniques for in-depth reconnaissance.
+*   **Simple & User-Friendly:** Easy to use, even for those new to OSINT.
+*   **Python-Based:** Written in Python, making it versatile and easy to extend.
 
-## Installation
+## Installation and Setup
 
-**Prerequisites:**
+### Prerequisites
+*   Python 3.12 or higher.
 
-*   Python 3.12 or higher
-*   `uv` package manager (recommended)
+### Installation Steps:
 
-**Steps:**
-
-1.  **Install `uv` (Optional but Recommended):**
+1.  **Install `uv` (optional):**
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
+
 2.  **Clone the Repository:**
     ```bash
     git clone https://github.com/laramies/theHarvester
     cd theHarvester
     ```
-3.  **Install Dependencies & Create Virtual Environment:**
+
+3.  **Install Dependencies:**
     ```bash
     uv sync
     ```
@@ -43,50 +46,120 @@
     uv run theHarvester
     ```
 
-## Development
+### Development
 
-**Install Development Dependencies:**
-```bash
-uv sync --extra dev
-```
+To set up for development:
 
-**Run Tests:**
-```bash
-uv run pytest
-```
+1.  **Install Development Dependencies:**
+    ```bash
+    uv sync --extra dev
+    ```
 
-**Run Linting and Formatting:**
-```bash
-uv run ruff check
-```
-```bash
-uv run ruff format
-```
+2.  **Run Tests:**
+    ```bash
+    uv run pytest
+    ```
 
-## Modules
+3.  **Lint and Format:**
+    ```bash
+    uv run ruff check
+    uv run ruff format
+    ```
 
-### Passive Modules
+## Passive Modules (Data Sources)
 
-*   **Search Engines:** baidu, brave, duckduckgo, google, yahoo, zoomeye
-*   **Certificate Transparency Logs:** crtsh, certspotter
-*   **Data Breach Search Engines:**  haveibeenpwned, leaklookup, dehashed
-*   **DNS and Subdomain Tools:** dnsdumpster, rapiddns, subdomaincenter, subdomainfinderc99
-*   **OSINT APIs:**  bevigil, bufferoverun, builtwith, censys, criminalip, fullhunt, hunter, hunterhow, intelx, netlas, onyphe, otx, pentesttools, projecdiscovery, rocketreach, securityscorecard, securityTrails, shodan, tomba, urlscan, venacus, virustotal, whoisxml
-*   **Social Media and Code Repositories:**  github-code
-*   **Other:** hackertarget, threatminer
+theHarvester integrates with numerous services, offering a broad spectrum of data for reconnaissance:
 
-### Active Modules
+*   baidu
+*   bevigil
+*   brave
+*   bufferoverun
+*   builtwith
+*   censys
+*   certspotter
+*   criminalip
+*   crtsh
+*   dehashed
+*   dnsdumpster
+*   duckduckgo
+*   fullhunt
+*   github-code
+*   hackertarget
+*   haveibeenpwned
+*   hunter
+*   hunterhow
+*   intelx
+*   leaklookup
+*   netlas
+*   onyphe
+*   otx
+*   pentesttools
+*   projecdiscovery
+*   rapiddns
+*   rocketreach
+*   securityscorecard
+*   securityTrails
+*   -s, --shodan
+*   subdomaincenter
+*   subdomainfinderc99
+*   threatminer
+*   tomba
+*   urlscan
+*   venacus
+*   virustotal
+*   whoisxml
+*   yahoo
+*   zoomeye
 
-*   DNS Brute Force
-*   Screenshots
+## Active Modules
+
+*   DNS brute force: dictionary brute force enumeration
+*   Screenshots: Take screenshots of subdomains that were found
 
 ## Modules Requiring API Keys
 
-Documentation to setup API keys can be found at - https://github.com/laramies/theHarvester/wiki/Installation#api-keys
+To unlock the full potential of theHarvester, some modules require API keys. Documentation on setting up API keys is available at: [https://github.com/laramies/theHarvester/wiki/Installation#api-keys](https://github.com/laramies/theHarvester/wiki/Installation#api-keys)
 
-*(A detailed list of modules and their API key requirements and pricing is provided in the original README.)*
+*   bevigil
+*   brave
+*   bufferoverun
+*   builtwith
+*   censys
+*   criminalip
+*   dehashed
+*   dnsdumpster
+*   fullhunt
+*   github-code
+*   haveibeenpwned
+*   hunter
+*   hunterhow
+*   intelx
+*   leaklookup
+*   netlas
+*   onyphe
+*   pentesttools
+*   projecdiscovery
+*   rocketreach
+*   securityscorecard
+*   securityTrails
+*   shodan
+*   tomba
+*   venacus
+*   whoisxml
+*   zoomeye
 
 ## Get Involved
 
-*   **Contact:** Christian Martorella @laramies ([Twitter](https://twitter.com/laramies)) cmartorella@edge-security.com
-*   **Contributors:** Matthew Brown @NotoriousRebel1, Jay "L1ghtn1ng" Townsend @jay_townsend1, Lee Baird @discoverscripts
+### Contact
+*   Christian Martorella @laramies -  [![Twitter Follow](https://img.shields.io/twitter/follow/laramies.svg?style=social&label=Follow)](https://twitter.com/laramies) cmartorella@edge-security.com
+*   Matthew Brown @NotoriousRebel1 - [![Twitter Follow](https://img.shields.io/twitter/follow/NotoriousRebel1.svg?style=social&label=Follow)](https://twitter.com/NotoriousRebel1)
+*   Jay "L1ghtn1ng" Townsend @jay_townsend1 - [![Twitter Follow](https://img.shields.io/twitter/follow/jay_townsend1.svg?style=social&label=Follow)](https://twitter.com/jay_townsend1)
+
+### Main Contributors
+*   Matthew Brown @NotoriousRebel1 - [![Twitter Follow](https://img.shields.io/twitter/follow/NotoriousRebel1.svg?style=social&label=Follow)](https://twitter.com/NotoriousRebel1)
+*   Jay "L1ghtn1ng" Townsend @jay_townsend1 - [![Twitter Follow](https://img.shields.io/twitter/follow/jay_townsend1.svg?style=social&label=Follow)](https://twitter.com/jay_townsend1)
+*   Lee Baird @discoverscripts -  [![Twitter Follow](https://img.shields.io/twitter/follow/discoverscripts.svg?style=social&label=Follow)](https://twitter.com/discoverscripts)
+
+### Thanks
+*   John Matherly - Shodan project
+*   Ahmed Aboul Ela - subdomain names dictionaries (big and small)

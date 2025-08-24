@@ -1,52 +1,21 @@
-# Context Engineering: Mastering LLM Performance Beyond Prompts
+# Context Engineering: Beyond Prompt Engineering - Mastering the Art and Science of LLM Context ([Original Repo](https://github.com/davidkimai/Context-Engineering))
 
-**Unlock the full potential of Large Language Models by mastering context engineering – the art and science of curating the perfect information environment for optimal LLM performance.** ([Original Repository](https://github.com/davidkimai/Context-Engineering))
+Unleash the full potential of Large Language Models by mastering context engineering: moving beyond prompts to design, orchestrate, and optimize the entire information payload.
 
-Context engineering goes beyond prompt engineering, focusing on the **entire information payload** provided to an LLM. This includes examples, memory, retrieval tools, state, and control flow, enabling more complex and intelligent applications.
+**Context engineering** is a rapidly evolving field focused on optimizing the information provided to a Large Language Model (LLM) at inference time to achieve superior performance. This repository provides a comprehensive, first-principles approach, helping you build more effective and efficient AI systems.
 
-## Key Features
+**Key Features:**
 
-*   **First-Principles Approach:** Learn context engineering from the ground up, building from atomic instructions to complex neural systems and field theory.
-*   **Hands-On Tutorials:**  Interactive guides and Jupyter notebooks to experiment with different context engineering techniques.
-*   **Practical Examples:** Explore real-world implementations, including chatbot, data annotation, multi-agent orchestration, and more.
-*   **Reusable Templates:** Leverage pre-built components, including context structures, control loops, and evaluation metrics, to accelerate development.
-*   **Community Driven:** Join a community of practitioners and researchers, and contribute to this open-source resource.
+*   **Comprehensive Course:** A structured learning path covering foundational concepts, system implementation, integration strategies, and cutting-edge research. (See [Comprehensive Course Under Construction](https://github.com/davidkimai/Context-Engineering/tree/main/00_COURSE))
+*   **Hands-on Guides & Examples:** Practical, runnable code examples and walkthroughs to accelerate your learning (e.g. [`00_foundations/01_atoms_prompting.md`](00_foundations/01_atoms_prompting.md) and [`10_guides_zero_to_hero/01_min_prompt.py`](10_guides_zero_to_hero/01_min_prompt.py)).
+*   **Cutting-Edge Research:** Explore the latest advancements in the field, including research papers on memory, reasoning, cognitive tools, and emergent symbolic mechanisms ([Context Engineering Survey-Review of 1400 Research Papers](https://arxiv.org/pdf/2507.13334)).
+*   **Visualizations & Diagrams:** Concepts are explained with clear visuals and diagrams to improve understanding, inspired by the style of 3Blue1Brown and Andrej Karpathy.
+*   **Community Driven:** A collaborative environment that encourages contributions and knowledge sharing (See [CONTRIBUTING.md](.github/CONTRIBUTING.md)).
+*   **Agent Commands** Integration of various LLMs ([`Agent Commands`](https://github.com/davidkimai/Context-Engineering/tree/main/.claude/commands) : Support for [Claude Code](https://www.anthropic.com/claude-code) | [OpenCode](https://opencode.ai/) | [Amp](https://sourcegraph.com/amp) | [Kiro](https://kiro.dev/) | [Codex](https://openai.com/codex/) | [Gemini CLI](https://github.com/google-gemini/gemini-cli))
 
-## What You Will Learn
+## What is Context Engineering?
 
-| Concept             | What It Is                                   | Why It Matters                                                        |
-| ------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
-| **Token Budget**     | Optimizing every token in your context         | More tokens = higher cost & slower responses                           |
-| **Few-Shot Learning** | Teaching by showing examples                  | Often more effective than just providing explanations                  |
-| **Memory Systems**   | Persisting information across turns           | Enables stateful, coherent conversations                               |
-| **Retrieval Augmentation** | Finding & injecting relevant documents      | Grounds responses in facts, reduces hallucination                      |
-| **Control Flow**     | Breaking complex tasks into steps            | Solve harder problems with simpler prompts                             |
-| **Context Pruning**  | Removing irrelevant information               | Keeps only what is needed to maintain peak performance                |
-| **Metrics & Evaluation**| Measuring context effectiveness            | Enables iterative optimization                                        |
-| **Cognitive Tools & Prompt Programming** | Build Custom Tools & Templates          | Create new layers for context engineering                                    |
-| **Neural Field Theory** | Modeling context as a dynamic neural field | Iterative context updating                                |
-| **Symbolic Mechanisms** | Symbolic architectures enabling higher order reasoning  | Smarter systems = less work |
-| **Quantum Semantics** |  Meaning as observer-dependent  | Design context systems leveraging superpositional techniques |
-
-## Research-Driven Insights
-
-This repository is continuously updated with the latest research and insights. Key findings include:
-
-*   **MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents**: By compressing each interaction into a compact "internal state," MEM1 agents avoid the problems of endless context expansion.
-*   **Eliciting Reasoning in Language Models with Cognitive Tools**: Utilize modular prompt templates to break down complex tasks, enhancing accuracy and transparency.
-*   **Emergent Symbolic Mechanisms Support Abstract Reasoning in Large Language Models**: LLMs develop internal "logic circuits," enabling abstract reasoning, generalization, and innovative solutions.
-
-## Getting Started
-
-1.  **Foundations:** Start with  `00_foundations/01_atoms_prompting.md` for understanding prompts.
-2.  **Experiment:** Run the hands-on guide `10_guides_zero_to_one/01_min_prompt.ipynb` (Jupyter Notebook style).
-3.  **Explore:** Use a template like `20_templates/minimal_context.yaml`.
-4.  **Implement:** Study the implementation `30_examples/00_toy_chatbot/`.
-5. **Join the Discord:**  [![Discord](https://img.shields.io/badge/Discord-join%20chat-7289DA.svg?logo=discord")](https://discord.gg/JeFENHNNNQ)
-
-
-## Roadmap
-**Comprehensive Course Under Construction:**  See the `00_COURSE` directory for in-progress materials.
+Context Engineering moves beyond simple prompt design, focusing on the entire information payload an LLM receives. The information that surrounds prompts is more often than not overlooked. Context is the complete information provided to an LLM at inference time to enable it to accomplish a given task.
 
 ```
                     Prompt Engineering  │  Context Engineering
@@ -56,21 +25,38 @@ This repository is continuously updated with the latest research and insights. K
                                         │     tools, state, control flow)
 ```
 
-*   **[Comprehensive Course Under Construction](https://github.com/davidkimai/Context-Engineering/tree/main/00_COURSE)**
-*   **[Context Engineering Survey-Review of 1400 Research Papers](https://arxiv.org/pdf/2507.13334)**
-*   **[Awesome Context Engineering Repo](https://github.com/Meirtz/Awesome-Context-Engineering)**
+## Learning Path
 
-## Dive Deeper
+This repository provides a structured learning path to guide you from the fundamentals to advanced concepts:
 
-*   **[DeepWiki](https://deepwiki.com/davidkimai/Context-Engineering)**
-*   **[DeepGraph](https://www.deepgraph.co/davidkimai/Context-Engineering)**
-*   **[Chat with NotebookLM + Podcast Deep Dive](https://notebooklm.google.com/notebook/0c6e4dc6-9c30-4f53-8e1a-05cc9ff3bc7e)**
-*   **[On Emergence, Attractors, and Dynamical Systems Theory](https://content.csbs.utah.edu/~butner/systems/DynamicalSystemsIntro.html)**
-*   **[Columbia DST](http://wordpress.ei.columbia.edu/ac4/about/our-approach/dynamical-systems-theory/)**
+1.  **Foundations:** Theory and core concepts. (00_foundations/)
+2.  **Hands-on Guides:** Hands-on walkthroughs and tutorials. (10_guides_zero_to_one/)
+3.  **Templates:** Copy-paste code snippets. (20_templates/)
+4.  **Examples:** Real-world projects. (30_examples/)
+5.  **Reference:** Deep dives and evaluation. (40\_reference/)
+6.  **Community Contributions:**  Community contributions (50\_contrib/)
 
-## Contribute
+## Key Concepts You'll Master
 
-Help us build the future of context engineering!  Check out our [CONTRIBUTING.md](.github/CONTRIBUTING.md) for guidelines.
+| Concept                   | What It Is                                            | Why It Matters                                                                              |
+| ------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **Token Budget**          | Optimizing token usage                                 | Cost savings and faster responses.                                                          |
+| **Few-Shot Learning**     | Teaching through examples                             | Improves performance and reduces the need for extensive explanations.                        |
+| **Memory Systems**        | Persisting information across turns                    | Enables stateful, coherent interactions.                                                     |
+| **Retrieval Augmentation** | Finding & injecting relevant documents                 | Grounds responses in facts, reduces hallucinations.                                         |
+| **Control Flow**          | Breaking complex tasks into steps                      | Enables solving harder problems with simpler prompts.                                        |
+| **Context Pruning**       | Removing irrelevant information                        | Improves performance by keeping only essential information.                                  |
+| **Metrics & Evaluation**  | Measuring context effectiveness                        | Iterative optimization of token use vs. quality.                                            |
+| **Cognitive Tools**        | Learning to build custom tools and templates.              | Facilitates more organized and advanced LLM interaction. |
+| **Neural Field Theory**        | Designing context systems leveraging superpositional techniques.              | Allows for iterative context updating. |
+| **Quantum Semantics**        | Designing context systems with observer-dependent meaning.              | Makes LLMs more flexible and reliable. |
+
+## Research Highlights
+This repository highlights the most recent research papers and discoveries for better understanding.
+
+## Contributing
+
+We welcome contributions! See [`CONTRIBUTING.md`](.github/CONTRIBUTING.md) for guidelines.
 
 ## License
 
@@ -89,6 +75,5 @@ Help us build the future of context engineering!  Check out our [CONTRIBUTING.md
 ```
 
 ## Acknowledgements
-
-*   [Andrej Karpathy](https://x.com/karpathy/status/1937902205765607626) for inspiring this repo and coining the term "context engineering".
-*   All contributors and the open-source community.
+- [Andrej Karpathy](https://x.com/karpathy/status/1937902205765607626) for coining "context engineering" and inspiring this repo 
+- All contributors and the open source community

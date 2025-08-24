@@ -3,37 +3,32 @@
 [![codecov](https://codecov.io/gh/newton-physics/newton/graph/badge.svg?token=V6ZXNPAWVG)](https://codecov.io/gh/newton-physics/newton)
 [![Push Events - AWS GPU Tests](https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml/badge.svg)](https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml)
 
-# Newton: GPU-Accelerated Physics Simulation for Robotics and Research
+# Newton
 
-**[Visit the original repository](https://github.com/newton-physics/newton) for the latest updates.**
+**⚠️ Prerelease Software ⚠️**
 
-Newton is a cutting-edge, GPU-accelerated physics simulation engine, designed for roboticists and simulation researchers seeking high performance and flexibility.  This project is in active alpha development, meaning the API is unstable.
+**This project is in active alpha development.** This means the API is unstable, features may be added or removed, and
+breaking changes are likely to occur frequently and without notice as the design is refined.
 
-## Key Features
+Newton is a GPU-accelerated physics simulation engine built upon [NVIDIA Warp](https://github.com/NVIDIA/warp),
+specifically targeting roboticists and simulation researchers.
+It extends and generalizes Warp's existing `warp.sim` module, integrating
+[MuJoCo Warp](https://github.com/google-deepmind/mujoco_warp) as a primary backend.
+Newton emphasizes GPU-based computation, differentiability, and user-defined extensibility, facilitating rapid iteration
+and scalable robotics simulation.
 
-*   **GPU-Accelerated:** Leverage the power of NVIDIA GPUs for blazing-fast simulations.
-*   **Differentiable:** Enable gradient-based optimization and control.
-*   **Extensible:** Build custom physics models and integrate with existing workflows.
-*   **MuJoCo Integration:** Built upon MuJoCo Warp, providing a robust and widely used backend.
-*   **Robotics-Focused:** Tailored for the specific needs of robotics research and development.
-*   **Rapid Iteration:** Accelerate your research with fast simulation cycles.
-
-## Core Technologies
-
-*   **NVIDIA Warp:** Foundation for high-performance, GPU-based computation.
-*   **MuJoCo Warp:** Provides a physics simulation backend.
+Newton is maintained by [Disney Research](https://www.disneyresearch.com/), [Google DeepMind](https://deepmind.google/),
+and [NVIDIA](https://www.nvidia.com/).
 
 ## Development
 
-Refer to the [installation guide](https://newton-physics.github.io/newton/guide/installation.html) to get started.
+See the [installation guide](https://newton-physics.github.io/newton/guide/installation.html) for instructions on how to set up and get started.
 
 ## Examples
 
-Explore various example simulations to get started.
+## Basic Examples
 
-### Basic Examples
-
-<table border="0">
+<table>
   <tr>
     <td align="center" width="33%">
       <a href="newton/examples/basic/example_basic_pendulum.py">
@@ -92,9 +87,9 @@ Explore various example simulations to get started.
   </tr>
 </table>
 
-### Cloth Examples
+## Cloth Examples
 
-<table border="0">
+<table>
   <tr>
     <td align="center" width="33%">
       <a href="newton/examples/cloth/example_cloth_bending.py">
@@ -125,9 +120,9 @@ Explore various example simulations to get started.
   </tr>
 </table>
 
-### MPM Examples
+## MPM Examples
 
-<table border="0">
+<table>
   <tr>
     <td align="center" width="33%">
       <a href="newton/examples/mpm/example_mpm_granular.py">
@@ -154,9 +149,10 @@ Explore various example simulations to get started.
   </tr>
 </table>
 
-### Selection Examples
 
-<table border="0">
+## Selection Examples
+
+<table>
   <tr>
     <td align="center" width="33%">
       <a href="newton/examples/selection/example_selection_cartpole.py">
@@ -216,16 +212,3 @@ Some examples may add additional arguments (see their respective source files fo
 
     # Multiple arguments
     python -m newton.examples basic_viewer --viewer gl --num-frames 500 --device cpu
-```
-Key improvements and explanations:
-
-*   **SEO Optimization:**  Added keywords like "GPU-accelerated," "physics simulation," "robotics," and "research" to improve search visibility.
-*   **Clear Hook:** The opening sentence is now a compelling introduction to what Newton offers.
-*   **Headings:**  Organized the content with clear headings for better readability and SEO.
-*   **Key Features:**  Used bullet points to highlight the main benefits of the software, making it easier for users to understand what Newton does.
-*   **Concise Language:** Simplified language to improve clarity.
-*   **Emphasis on Target Audience:** Clearly stated the intended users (roboticists and researchers).
-*   **Call to Action:**  The first sentence includes a call to visit the repo.
-*   **More Descriptive Text:** Improved the descriptions in the key features.
-*   **Code Highlighting:** Maintained the format of the code examples.
-*   **Formatting:** Improved table formatting for readability.

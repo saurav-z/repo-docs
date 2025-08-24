@@ -1,6 +1,6 @@
-# MoviePilot: Your Ultimate Automation Companion for Media Management
+# MoviePilot: Automated Media Management for Your Needs
 
-MoviePilot is a powerful and user-friendly application designed to streamline your media management, offering a clean, efficient, and easily extensible solution.  [Check out the original repository](https://github.com/jxxghp/MoviePilot).
+**MoviePilot is a powerful and streamlined media management solution designed for automation, ease of use, and extensibility.** ([View the original repository on GitHub](https://github.com/jxxghp/MoviePilot))
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 [![GitHub forks](https://img.shields.io/github/forks/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
@@ -11,57 +11,65 @@ MoviePilot is a powerful and user-friendly application designed to streamline yo
 [![Docker Pulls V2](https://img.shields.io/docker/pulls/jxxghp/moviepilot-v2?style=for-the-badge)](https://hub.docker.com/r/jxxghp/moviepilot-v2)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20Synology-blue?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 
-**Key Features:**
+Based on a redesign of code from [NAStool](https://github.com/NAStool/nas-tools), MoviePilot focuses on core automation needs, reducing complexity and improving maintainability and extensibility.
 
-*   **Modern Architecture:** Built with a front-end (Vue3) and back-end (FastAPI) separation for enhanced maintainability and scalability.
-*   **Simplified Design:** Focuses on core automation needs, simplifying configurations with sensible defaults for ease of use.
-*   **Intuitive User Interface:** Enjoy a redesigned, user-friendly interface for a more pleasant experience.
-*   **Extensible with Plugins:**  Expand functionality by creating and integrating custom plugins.
+**Disclaimer: This project is intended for learning and discussion purposes only.  Please refrain from promoting this project on any platforms within China.**
+
+Communication Channel: [MoviePilot Telegram Channel](https://t.me/moviepilot_channel)
+
+## Key Features
+
+*   **Frontend and Backend Separation:** Built with FastAPI (backend) and Vue3 (frontend) for a modern and responsive user experience.
+*   **Core-Focused Design:** Simplifies functionality and settings, often with sensible defaults for ease of use.
+*   **Improved User Interface:** A redesigned UI provides a more intuitive and aesthetically pleasing experience.
 
 ## Getting Started
 
-### Installation and Usage
+For detailed installation and usage instructions, please refer to the official Wiki: [MoviePilot Wiki](https://wiki.movie-pilot.org)
 
-1.  **Prerequisites:** Ensure you have `Python 3.12` and `Node JS v20.12.1` installed.
-2.  **Clone the Main Project:**
+## Development
 
-    ```bash
+### API Documentation
+
+Access the API documentation at: [MoviePilot API Docs](https://api.movie-pilot.org)
+
+### Prerequisites for Local Development
+
+*   Python 3.12
+*   Node.js v20.12.1
+
+### Installation and Running
+
+1.  **Clone the Main Project:**
+    ```shell
     git clone https://github.com/jxxghp/MoviePilot
     ```
+2.  **Clone the Resources Project:**
+    ```shell
+    git clone https://github.com/jxxghp/MoviePilot-Resources
+    ```
+    *   Copy the platform-specific library files (`.so`, `.pyd`, `.bin`) from the `resources` directory of `MoviePilot-Resources` to the `app/helper` directory of `MoviePilot`.
 
-3.  **Clone Resource Project:** Clone the [MoviePilot-Resources](https://github.com/jxxghp/MoviePilot-Resources) repository and copy the necessary platform-specific libraries (`.so`, `.pyd`, `.bin`) from the `resources` directory to the `app/helper` directory within the main project.
-4.  **Install Backend Dependencies and Run:**  Navigate to the `app` directory and install the backend dependencies.  Then, run the `main.py` file to start the backend service. The default API port is `3001`.  Access the API documentation at `http://localhost:3001/docs`.
-
-    ```bash
+3.  **Install Backend Dependencies and Run the Backend:**
+    ```shell
     cd MoviePilot/app
     pip install -r requirements.txt
     python3 main.py
     ```
+    *   The backend service will run on port `3001` by default.
+    *   API Documentation will be available at `http://localhost:3001/docs`.
 
-5.  **Clone Frontend Project:**
-
-    ```bash
+4.  **Clone and Run the Frontend Project:**
+    ```shell
     git clone https://github.com/jxxghp/MoviePilot-Frontend
-    ```
-
-6.  **Install Frontend Dependencies and Run:** Navigate to the frontend project directory and install the dependencies.  Then, start the frontend server and access it at `http://localhost:5173`.
-
-    ```bash
     cd MoviePilot-Frontend
     yarn
     yarn dev
     ```
+    *   The frontend will be accessible at `http://localhost:5173`.
 
-7.  **Plugin Development:** Refer to the [Plugin Development Guide](https://wiki.movie-pilot.org/zh/plugindev) to create plugins within the `app/plugins` directory.
-
-### Additional Resources
-
-*   **Official Wiki:**  [https://wiki.movie-pilot.org](https://wiki.movie-pilot.org)
-*   **API Documentation:** [https://api.movie-pilot.org](https://api.movie-pilot.org)
-
-## Contributing
-
-We welcome contributions!  See the project's contribution guidelines for more information.
+5.  **Plugin Development:**
+    *   Refer to the [Plugin Development Guide](https://wiki.movie-pilot.org/zh/plugindev) to create plugins in the `app/plugins` directory.
 
 ## Related Projects
 
@@ -73,11 +81,9 @@ We welcome contributions!  See the project's contribution guidelines for more in
 
 ## Disclaimer
 
-*   This software is for learning and communication purposes only.
-*   It should not be used for commercial or illegal activities.
-*   The developers are not responsible for user actions.
-*   The software is open-source, and modifications that bypass restrictions are not recommended.
-*   This project does not accept donations and does not offer paid services.
+*   This software is for learning and communication purposes only. It is not intended for commercial use or illegal activities. Users are solely responsible for their actions.
+*   This is open-source software. Modifying the code to remove restrictions and distributing it is the responsibility of the modifier. We do not recommend circumventing or changing the user authentication mechanism and distributing it publicly.
+*   We do not accept donations and do not provide paid services. Please be aware of potential scams.
 
 ## Contributors
 

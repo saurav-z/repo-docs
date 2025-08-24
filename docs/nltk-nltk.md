@@ -1,40 +1,50 @@
-# NLTK: Your Toolkit for Natural Language Processing (NLP) in Python
+# Natural Language Toolkit (NLTK)
+[![PyPI](https://img.shields.io/pypi/v/nltk.svg)](https://pypi.python.org/pypi/nltk)
+![CI](https://github.com/nltk/nltk/actions/workflows/ci.yaml/badge.svg?branch=develop)
 
-**NLTK (Natural Language Toolkit)** is a leading open-source Python library, providing powerful tools and resources for all your NLP needs. [Explore the original NLTK repository on GitHub](https://github.com/nltk/nltk).
+NLTK -- the Natural Language Toolkit -- is a suite of open source Python
+modules, data sets, and tutorials supporting research and development in Natural
+Language Processing. NLTK requires Python version 3.8, 3.9, 3.10, 3.11 or 3.12.
 
-## Key Features of NLTK:
+For documentation, please visit [nltk.org](https://www.nltk.org/).
 
-*   **Comprehensive NLP Tools:** Includes a wide range of tools for text processing, including tokenization, stemming, tagging, parsing, and semantic reasoning.
-*   **Extensive Corpora & Datasets:** Access a vast collection of text corpora and datasets for research and development in various languages.
-*   **Python-Based:** Built in Python, making it easy to integrate with existing Python projects and workflows.
-*   **Open Source & Free:** Benefit from the power of open-source software, freely available for both commercial and non-commercial use, under the Apache 2.0 License.
-*   **Well-Documented:** Extensive documentation and tutorials are available to help you get started quickly.
-*   **Active Community:** Benefit from a vibrant community of researchers and developers contributing to the project.
-*   **Supports Multiple Python Versions:** Compatible with Python 3.8, 3.9, 3.10, 3.11 and 3.12.
 
-## Getting Started
+## Contributing
 
-*   **Documentation:** Find detailed information and guides on the official NLTK website: [nltk.org](https://www.nltk.org/).
+Do you want to contribute to NLTK development? Great!
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
-## Contributing & Support
+See also [how to contribute to NLTK](https://www.nltk.org/contribute.html).
 
-*   **Contribute:**  Your contributions are welcome!  Read the [CONTRIBUTING.md](CONTRIBUTING.md) file to learn more.
-*   **Donate:** Support the development of NLTK by donating via PayPal (link on the NLTK homepage).
 
-## Citing NLTK
+## Donate
 
-When citing NLTK in your publications, please reference the NLTK book:
+Have you found the toolkit helpful?  Please support NLTK development by donating
+to the project via PayPal, using the link on the NLTK homepage.
+
+
+## Citing
+
+If you publish work that uses NLTK, please cite the NLTK book, as follows:
 
     Bird, Steven, Edward Loper and Ewan Klein (2009).
     Natural Language Processing with Python.  O'Reilly Media Inc.
 
-## Licensing
 
-*   **Source Code:** Apache 2.0 License.
-*   **Documentation:** Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 United States license.
-*   **Corpora:**  Refer to the README file within each corpus for specific license terms.
+## Copyright
 
-## Additional Information
+Copyright (C) 2001-2025 NLTK Project
 
-*   **Authors:** See [AUTHORS.md](AUTHORS.md) for a list of contributors.
-*   **License:** [LICENSE.txt](LICENSE.txt)
+For license information, see [LICENSE.txt](LICENSE.txt).
+
+[AUTHORS.md](AUTHORS.md) contains a list of everyone who has contributed to NLTK.
+
+
+### Redistributing
+
+- NLTK source code is distributed under the Apache 2.0 License.
+- NLTK documentation is distributed under the Creative Commons
+  Attribution-Noncommercial-No Derivative Works 3.0 United States license.
+- NLTK corpora are provided under the terms given in the README file for each
+  corpus; all are redistributable and available for non-commercial use.
+- NLTK may be freely redistributed, subject to the provisions of these licenses.

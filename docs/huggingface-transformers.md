@@ -38,187 +38,68 @@
     </p>
 </h4>
 
-## Hugging Face Transformers: State-of-the-Art Models for NLP, Computer Vision, and More
+## Hugging Face Transformers: State-of-the-Art NLP Made Easy
 
-**Harness the power of cutting-edge AI with Hugging Face Transformers, a library providing easy access to pre-trained models for a wide range of applications.**  ([View on GitHub](https://github.com/huggingface/transformers))
+Hugging Face Transformers provides a comprehensive library of pre-trained models for natural language processing, computer vision, audio, video, and multimodal tasks, enabling you to easily build and deploy cutting-edge AI solutions.  ([View the original repository](https://github.com/huggingface/transformers)).
 
-<h3 align="center">
-    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/transformers_as_a_model_definition.png"/>
-</h3>
+### Key Features
 
-### Key Features:
+*   **Extensive Pre-trained Models:** Access a vast collection of over 1 million pre-trained models for various tasks and modalities on the [Hugging Face Hub](https://huggingface.com/models), saving you time and resources.
+*   **Unified API:** Utilize a consistent API for all models, simplifying model selection and integration into your projects.
+*   **Framework Flexibility:** Seamlessly train and deploy models across PyTorch, TensorFlow, and Flax, adapting to your preferred environment.
+*   **Easy Customization:** Adapt models and examples to suit your specific needs, enabling experimentation and innovation.
+*   **Modality Support:** Models available across text, computer vision, audio, video, and multimodal applications.
 
-*   **Wide Variety of Models:** Access a vast library of pre-trained models for text, images, audio, video, and multimodal tasks, including popular architectures like BERT, GPT, and Vision Transformers.
-*   **Ease of Use:** Utilize a simple and consistent API to load, use, and fine-tune models with minimal code.
-*   **Framework Agnostic:** Seamlessly integrate models with PyTorch, TensorFlow, and Flax.
-*   **Pre-trained Checkpoints:** Leverage over 1M+ pre-trained models from the Hugging Face Hub, saving time and resources.
-*   **Customization:** Easily adapt models to your specific needs through fine-tuning and customization options.
-*   **Community Driven:** Benefit from a large and active community, fostering innovation and collaboration.
-*   **Comprehensive Documentation:** Access extensive documentation, tutorials, and examples to get you started quickly.
-*   **Unified API:**  A unified API for using all of our pretrained models.
+### Quickstart Guide
 
-### Installation
-
-Install Hugging Face Transformers using pip:
-
-```bash
-pip install "transformers[torch]"  # or [tensorflow] or [flax]
-```
-
-Or, if you want the latest changes or are interested in contributing:
-
-```bash
-git clone https://github.com/huggingface/transformers.git
-cd transformers
-pip install .[torch] # or [tensorflow] or [flax]
-```
-
-*   **Note:** Create and activate a virtual environment using [venv](https://docs.python.org/3/library/venv.html) or [uv](https://docs.astral.sh/uv/) before installation.
-
-### Quickstart: Get Started with the Pipeline API
-
-The `pipeline` API offers a simple way to get started with various AI tasks.
+Get started with Transformers quickly using the `Pipeline` API for text, audio, vision, and multimodal tasks.
 
 ```python
 from transformers import pipeline
 
-# Text generation
 pipeline = pipeline(task="text-generation", model="Qwen/Qwen2.5-1.5B")
-print(pipeline("the secret to baking a really good cake is ")[0]["generated_text"])
-
-# Chat with a model
-import torch
-chat = [
-    {"role": "system", "content": "You are a sassy, wise-cracking robot as imagined by Hollywood circa 1986."},
-    {"role": "user", "content": "Hey, can you tell me any fun things to do in New York?"}
-]
-pipeline = pipeline(task="text-generation", model="meta-llama/Meta-Llama-3-8B-Instruct", dtype=torch.bfloat16, device_map="auto")
-response = pipeline(chat, max_new_tokens=512)
-print(response[0]["generated_text"][-1]["content"])
-```
-*   Explore the examples below for automatic speech recognition, image classification, and visual question answering.
-
-<details>
-<summary>Automatic speech recognition</summary>
-
-```py
-from transformers import pipeline
-
-pipeline = pipeline(task="automatic-speech-recognition", model="openai/whisper-large-v3")
-print(pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")['text'])
+pipeline("the secret to baking a really good cake is ")
 ```
 
-</details>
+### Installation
 
-<details>
-<summary>Image classification</summary>
+Transformers requires Python 3.9+ with PyTorch 2.1+, TensorFlow 2.6+, or Flax 0.4.1+.
 
-<h3 align="center">
-    <a><img src="https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png"></a>
-</h3>
-
-```py
-from transformers import pipeline
-
-pipeline = pipeline(task="image-classification", model="facebook/dinov2-small-imagenet1k-1-layer")
-print(pipeline("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png"))
+```bash
+pip install "transformers[torch]"
 ```
 
-</details>
+For the latest changes, install from source:
 
-<details>
-<summary>Visual question answering</summary>
-
-
-<h3 align="center">
-    <a><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg"></a>
-</h3>
-
-```py
-from transformers import pipeline
-
-pipeline = pipeline(task="visual-question-answering", model="Salesforce/blip-vqa-base")
-print(pipeline(
-    image="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg",
-    question="What is in the image?",
-))
+```bash
+git clone https://github.com/huggingface/transformers.git
+cd transformers
+pip install .[torch]
 ```
-
-</details>
 
 ### Why Use Transformers?
 
-*   **Accelerate AI Development:** Leverage pre-trained models to reduce development time and costs.
-*   **Maximize Performance:** Utilize state-of-the-art models for superior results across various tasks.
-*   **Optimize Resources:** Share trained models, reducing training time and compute.
-*   **Flexibility:** Easily switch between different frameworks for training, evaluation, and production.
-*   **Customization:** Fine-tune models to match your specific needs.
+*   **Simplified Development:** Leverage easy-to-use, state-of-the-art models to accelerate your development process.
+*   **Cost Efficiency:** Reduce compute costs and carbon footprint by using pre-trained models instead of training from scratch.
+*   **Framework Agnostic:** Train, evaluate, and deploy models using your preferred framework (PyTorch, TensorFlow, or Flax).
+*   **Customization & Flexibility:** Adapt models and examples to meet your specific requirements.
 
-### Why Shouldn't I Use Transformers?
+### Why Not Use Transformers?
 
-*   Not a modular toolbox for building neural nets.
-*   The training API is optimized for PyTorch models provided by Transformers.
-*   Example scripts may need adaptation.
+*   The library is not a modular toolbox of building blocks for neural nets.
+*   The training API is optimized to work with PyTorch models provided by Transformers.
+*   The example scripts are examples and may require adaptation.
 
-### 100+ Projects Using Transformers
+### Examples of Pre-trained Models
 
-Explore the [awesome-transformers](./awesome-transformers.md) page to find inspiration from incredible projects built with Transformers.
-
-### Example Models
-
-<details>
-<summary>Audio</summary>
-*   Audio classification with [Whisper](https://huggingface.co/openai/whisper-large-v3-turbo)
-*   Automatic speech recognition with [Moonshine](https://huggingface.co/UsefulSensors/moonshine)
-*   Keyword spotting with [Wav2Vec2](https://huggingface.co/superb/wav2vec2-base-superb-ks)
-*   Speech to speech generation with [Moshi](https://huggingface.co/kyutai/moshiko-pytorch-bf16)
-*   Text to audio with [MusicGen](https://huggingface.co/facebook/musicgen-large)
-*   Text to speech with [Bark](https://huggingface.co/suno/bark)
-
-</details>
-
-<details>
-<summary>Computer vision</summary>
-*   Automatic mask generation with [SAM](https://huggingface.co/facebook/sam-vit-base)
-*   Depth estimation with [DepthPro](https://huggingface.co/apple/DepthPro-hf)
-*   Image classification with [DINO v2](https://huggingface.co/facebook/dinov2-base)
-*   Keypoint detection with [SuperPoint](https://huggingface.co/magic-leap-community/superpoint)
-*   Keypoint matching with [SuperGlue](https://huggingface.co/magic-leap-community/superglue_outdoor)
-*   Object detection with [RT-DETRv2](https://huggingface.co/PekingU/rtdetr_v2_r50vd)
-*   Pose Estimation with [VitPose](https://huggingface.co/usyd-community/vitpose-base-simple)
-*   Universal segmentation with [OneFormer](https://huggingface.co/shi-labs/oneformer_ade20k_swin_large)
-*   Video classification with [VideoMAE](https://huggingface.co/MCG-NJU/videomae-large)
-
-</details>
-
-<details>
-<summary>Multimodal</summary>
-*   Audio or text to text with [Qwen2-Audio](https://huggingface.co/Qwen/Qwen2-Audio-7B)
-*   Document question answering with [LayoutLMv3](https://huggingface.co/microsoft/layoutlmv3-base)
-*   Image or text to text with [Qwen-VL](https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct)
-*   Image captioning [BLIP-2](https://huggingface.co/Salesforce/blip2-opt-2.7b)
-*   OCR-based document understanding with [GOT-OCR2](https://huggingface.co/stepfun-ai/GOT-OCR-2.0-hf)
-*   Table question answering with [TAPAS](https://huggingface.co/google/tapas-base)
-*   Unified multimodal understanding and generation with [Emu3](https://huggingface.co/BAAI/Emu3-Gen)
-*   Vision to text with [Llava-OneVision](https://huggingface.co/llava-hf/llava-onevision-qwen2-0.5b-ov-hf)
-*   Visual question answering with [Llava](https://huggingface.co/llava-hf/llava-1.5-7b-hf)
-*   Visual referring expression segmentation with [Kosmos-2](https://huggingface.co/microsoft/kosmos-2-patch14-224)
-
-</details>
-
-<details>
-<summary>NLP</summary>
-*   Masked word completion with [ModernBERT](https://huggingface.co/answerdotai/ModernBERT-base)
-*   Named entity recognition with [Gemma](https://huggingface.co/google/gemma-2-2b)
-*   Question answering with [Mixtral](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)
-*   Summarization with [BART](https://huggingface.co/facebook/bart-large-cnn)
-*   Translation with [T5](https://huggingface.co/google-t5/t5-base)
-*   Text generation with [Llama](https://huggingface.co/meta-llama/Llama-3.2-1B)
-*   Text classification with [Qwen](https://huggingface.co/Qwen/Qwen2.5-0.5B)
-
-</details>
+*   **Audio:** Whisper, Moonshine, Wav2Vec2, Moshi, MusicGen, Bark
+*   **Computer Vision:** SAM, DepthPro, DINO v2, SuperPoint, SuperGlue, RT-DETRv2, VitPose, OneFormer, VideoMAE
+*   **Multimodal:** Qwen2-Audio, LayoutLMv3, Qwen-VL, BLIP-2, GOT-OCR2, TAPAS, Emu3, Llava-OneVision, Llava, Kosmos-2
+*   **NLP:** ModernBERT, Gemma, Mixtral, BART, T5, Llama, Qwen
 
 ### Citation
+
+If you use the Transformers library, please cite our paper:
 
 ```bibtex
 @inproceedings{wolf-etal-2020-transformers,
@@ -232,4 +113,3 @@ Explore the [awesome-transformers](./awesome-transformers.md) page to find inspi
     url = "https://www.aclweb.org/anthology/2020.emnlp-demos.6",
     pages = "38--45"
 }
-```

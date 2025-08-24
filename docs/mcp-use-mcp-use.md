@@ -1,20 +1,16 @@
 <div align="center">
-  <img alt="mcp use logo" src="./static/logo-gh.jpg" width="80%" style="margin: 20px auto;">
+<div align="center" style="margin: 0 auto; max-width: 80%;">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="static/logo-gh.jpg">
+    <source media="(prefers-color-scheme: light)" srcset="static/logo-gh.jpg">
+    <img alt="mcp use logo" src="./static/logo-gh.jpg" width="80%" style="margin: 20px auto;">
+  </picture>
 </div>
 
-<div align="center">
-  <h2>🎉 **Live on Product Hunt!** 🎉</h2>
-  <p><strong>Support us today!</strong></p>
-  <a href="https://www.producthunt.com/products/mcp-use?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-mcp&#0045;use" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1002629&theme=neutral&t=1754609432704" alt="mcp&#0045;use - Open&#0032;source&#0032;SDK&#0032;and&#0032;infra&#0032;for&#0032;MCP&#0032;servers&#0038;&#0032;agents | Product Hunt" style="width: 220px; height: 54px;" width="250" height="54" /></a>
-  <p>👆 <em>Click to upvote and leave a comment!</em></p>
-</div>
-
-# MCP-Use: Build Powerful AI Agents with Open Source Tools and LLMs
-
-**Effortlessly connect Large Language Models (LLMs) to any MCP server and create custom AI agents with mcp-use – the open-source SDK that empowers you to build powerful, tool-equipped agents.**  For more information, check out the [original repository](https://github.com/mcp-use/mcp-use).
+<h1 align="center">🚀 MCP-Use: Build Powerful Agents Connecting LLMs to MCP Servers</h1>
 
 <p align="center">
-    <a href="https://github.com/pietrozullo/mcp-use/stargazers" alt="GitHub stars">
+    <a href="https://github.com/mcp-use/mcp-use/stargazers" alt="GitHub stars">
         <img src="https://img.shields.io/github/stars/pietrozullo/mcp-use?style=social" /></a>
     <a href="https://pypi.org/project/mcp_use/" alt="PyPI Downloads">
         <img src="https://static.pepy.tech/badge/mcp-use" /></a>
@@ -37,29 +33,33 @@
     <a href="https://discord.gg/XkNkSkMz3V" alt="Discord">
         <img src="https://dcbadge.limes.pink/api/server/XkNkSkMz3V?style=flat" /></a>
 </p>
+</div>
+
+**MCP-Use empowers you to effortlessly connect any Large Language Model (LLM) to any Model Context Protocol (MCP) server, enabling the creation of custom agents with powerful tool access.** Dive into the world of flexible LLM integration, tool access, and custom agent development with the open-source power of MCP-Use.
 
 ## Key Features
 
-*   **Simplified Agent Creation:** Build an MCP-capable agent with just a few lines of code.
-*   **LLM Flexibility:** Seamlessly integrates with LangChain-supported LLMs that offer tool calling (e.g., OpenAI, Anthropic, Groq, Llama).
-*   **Code Builder:** Generate starter code and explore MCP capabilities with the interactive [code builder](https://mcp-use.com/builder).
-*   **HTTP Support:** Connect directly to MCP servers via HTTP endpoints.
-*   **Dynamic Server Selection:** Intelligent server selection for efficient task execution.
-*   **Multi-Server Support:** Utilize multiple MCP servers within a single agent.
-*   **Tool Access Control:** Restrict access to potentially dangerous tools.
-*   **Custom Agent Creation:** Build custom agents using the LangChain adapter or create new adapters.
-*   **Sandboxed Execution:** Run MCP servers in secure sandboxes with E2B.
-*   **Direct Tool Calls:** Programmatically call tools without an LLM.
+*   ✅ **Ease of Use:** Get started with a fully functional MCP agent in just a few lines of code.
+*   🤖 **LLM Flexibility:** Works with any Langchain-supported LLM that supports tool calling (e.g., OpenAI, Anthropic, Groq, LLama).
+*   🌐 **Code Builder:** Utilize the interactive [code builder](https://mcp-use.com/builder) to explore MCP capabilities and generate starter code.
+*   🔗 **HTTP Support:** Connect directly to MCP servers running on specific HTTP ports.
+*   ⚙️ **Dynamic Server Selection:** Agents intelligently choose the most suitable MCP server for a given task.
+*   🧩 **Multi-Server Support:** Seamlessly integrate multiple MCP servers within a single agent.
+*   🛡️ **Tool Access Control:** Restrict access to potentially dangerous tools like file system or network access, enhancing security.
+*   🔧 **Custom Agents:** Build your own agents with any framework using the LangChain adapter or create new adapters.
+*   🚀 **Sandboxed Execution:** Run MCP servers in secure, sandboxed environments using E2B's cloud infrastructure.
+*   🔄 **Streaming Agent Output:** Receive real-time updates and incremental results using the `astream` method for responsive applications.
+*   💡 **Direct Tool Calls:** Programmatically invoke MCP server tools without relying on an LLM.
 
-## Quick Start
+## Quickstart
 
-**Install:**
+Install MCP-Use using pip:
 
 ```bash
 pip install mcp-use
 ```
 
-**Or install from source:**
+Or, install from source:
 
 ```bash
 git clone https://github.com/mcp-use/mcp-use.git
@@ -69,23 +69,26 @@ pip install -e .
 
 ### Installing LangChain Providers
 
-MCP-Use leverages LangChain for LLM integration.  Install the appropriate LangChain provider package:
+MCP-Use leverages LangChain for interacting with various LLM providers.  Install the appropriate LangChain provider package for your preferred LLM:
 
 ```bash
+# For OpenAI
 pip install langchain-openai
+
+# For Anthropic
 pip install langchain-anthropic
 ```
 
-Add API keys to your `.env` file.
+Refer to the [LangChain chat models documentation](https://python.langchain.com/docs/integrations/chat/) for further provider-specific information and ensure you've configured your API keys in your `.env` file.
 
 ```bash
-OPENAI_API_KEY=
-ANTHROPIC_API_KEY=
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+ANTHROPIC_API_KEY=YOUR_ANTHROPIC_API_KEY
 ```
 
-> **Important:** Ensure your chosen LLM supports tool calling or function calling capabilities.
+> **Important:** Only models with tool calling/function calling capabilities are compatible with MCP-Use.
 
-### Run Your Agent
+### Example: Run an Agent
 
 ```python
 import asyncio
@@ -98,7 +101,7 @@ async def main():
     # Load environment variables
     load_dotenv()
 
-    # Create configuration dictionary
+    # Configure server settings
     config = {
       "mcpServers": {
         "playwright": {
@@ -111,16 +114,16 @@ async def main():
       }
     }
 
-    # Create MCPClient from configuration dictionary
+    # Create MCPClient
     client = MCPClient.from_dict(config)
 
     # Create LLM
     llm = ChatOpenAI(model="gpt-4o")
 
-    # Create agent with the client
+    # Create the agent
     agent = MCPAgent(llm=llm, client=client, max_steps=30)
 
-    # Run the query
+    # Run a query
     result = await agent.run(
         "Find the best restaurant in San Francisco",
     )
@@ -130,26 +133,48 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
+You can load the server configuration from a JSON config file:
+
+```python
+client = MCPClient.from_config_file(
+        os.path.join("browser_mcp.json")
+    )
+```
+
+Example `browser_mcp.json` configuration:
+
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"],
+      "env": {
+        "DISPLAY": ":1"
+      }
+    }
+  }
+}
+```
+
+Explore the [documentation](https://docs.mcp-use.com) for in-depth configuration and model options.
+
 ## Streaming Agent Output
 
-Get real-time results with `astream()`:
+MCP-Use's `astream` method allows for asynchronous streaming of agent output. This is perfect for building responsive UIs, providing real-time progress, and enabling interactive agent experiences.
+
+### How to Use
+
+Call `agent.astream(query)` and iterate over the results:
 
 ```python
 async for chunk in agent.astream("Find the best restaurant in San Francisco"):
     print(chunk["messages"], end="", flush=True)
 ```
 
-## Example Use Cases
+Each chunk contains details such as `actions`, `steps`, and `messages`. The final chunk includes the agent's `output`.
 
-*   **Web Browsing with Playwright:** Use LLMs with Playwright for web interaction.
-*   **Airbnb Search:** Build agents to search and interact with the Airbnb platform.
-*   **Blender 3D Creation:** Create 3D models using Blender.
-
-## Configuration Support
-
-### HTTP Connection Example
-
-Connect to MCP servers over HTTP:
+#### Streaming in Practice
 
 ```python
 import asyncio
@@ -159,7 +184,159 @@ from langchain_openai import ChatOpenAI
 from mcp_use import MCPAgent, MCPClient
 
 async def main():
-    """Run the example using a configuration file."""
+    load_dotenv()
+    client = MCPClient.from_config_file("browser_mcp.json")
+    llm = ChatOpenAI(model="gpt-4o")
+    agent = MCPAgent(llm=llm, client=client, max_steps=30)
+    async for chunk in agent.astream("Look for job at nvidia for machine learning engineer."):
+        print(chunk["messages"], end="", flush=True)
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+## Example Use Cases
+
+### Web Browsing with Playwright
+
+```python
+import asyncio
+import os
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
+from mcp_use import MCPAgent, MCPClient
+
+async def main():
+    # Load environment variables
+    load_dotenv()
+
+    # Load config
+    client = MCPClient.from_config_file(
+        os.path.join(os.path.dirname(__file__), "browser_mcp.json")
+    )
+
+    # Create LLM
+    llm = ChatOpenAI(model="gpt-4o")
+
+    # Create Agent
+    agent = MCPAgent(llm=llm, client=client, max_steps=30)
+
+    # Run query
+    result = await agent.run(
+        "Find the best restaurant in San Francisco USING GOOGLE SEARCH",
+        max_steps=30,
+    )
+    print(f"\nResult: {result}")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### Airbnb Search
+
+```python
+import asyncio
+import os
+from dotenv import load_dotenv
+from langchain_anthropic import ChatAnthropic
+from mcp_use import MCPAgent, MCPClient
+
+async def run_airbnb_example():
+    # Load environment variables
+    load_dotenv()
+
+    # Create MCPClient with Airbnb configuration
+    client = MCPClient.from_config_file(
+        os.path.join(os.path.dirname(__file__), "airbnb_mcp.json")
+    )
+
+    # Create LLM - you can choose between different models
+    llm = ChatAnthropic(model="claude-3-5-sonnet-20240620")
+
+    # Create agent with the client
+    agent = MCPAgent(llm=llm, client=client, max_steps=30)
+
+    try:
+        # Run a query to search for accommodations
+        result = await agent.run(
+            "Find me a nice place to stay in Barcelona for 2 adults "
+            "for a week in August. I prefer places with a pool and "
+            "good reviews. Show me the top 3 options.",
+            max_steps=30,
+        )
+        print(f"\nResult: {result}")
+    finally:
+        # Ensure we clean up resources properly
+        if client.sessions:
+            await client.close_all_sessions()
+
+if __name__ == "__main__":
+    asyncio.run(run_airbnb_example())
+```
+
+Example `airbnb_mcp.json` configuration:
+
+```json
+{
+  "mcpServers": {
+    "airbnb": {
+      "command": "npx",
+      "args": ["-y", "@openbnb/mcp-server-airbnb"]
+    }
+  }
+}
+```
+
+### Blender 3D Creation
+
+```python
+import asyncio
+from dotenv import load_dotenv
+from langchain_anthropic import ChatAnthropic
+from mcp_use import MCPAgent, MCPClient
+
+async def run_blender_example():
+    # Load environment variables
+    load_dotenv()
+
+    # Create MCPClient with Blender MCP configuration
+    config = {"mcpServers": {"blender": {"command": "uvx", "args": ["blender-mcp"]}}}
+    client = MCPClient.from_dict(config)
+
+    # Create LLM
+    llm = ChatAnthropic(model="claude-3-5-sonnet-20240620")
+
+    # Create agent with the client
+    agent = MCPAgent(llm=llm, client=client, max_steps=30)
+
+    try:
+        # Run the query
+        result = await agent.run(
+            "Create an inflatable cube with soft material and a plane as ground.",
+            max_steps=30,
+        )
+        print(f"\nResult: {result}")
+    finally:
+        # Ensure we clean up resources properly
+        if client.sessions:
+            await client.close_all_sessions()
+
+if __name__ == "__main__":
+    asyncio.run(run_blender_example())
+```
+
+## Configuration Options
+
+### HTTP Connection Example
+
+```python
+import asyncio
+import os
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
+from mcp_use import MCPAgent, MCPClient
+
+async def main():
     # Load environment variables
     load_dotenv()
 
@@ -194,7 +371,7 @@ if __name__ == "__main__":
 
 ### Multi-Server Support
 
-Configure and use multiple MCP servers simultaneously.
+Configure multiple servers in your configuration file (e.g., `config.json`):
 
 ```json
 {
@@ -214,9 +391,24 @@ Configure and use multiple MCP servers simultaneously.
 }
 ```
 
+You can then specify the target server when running the agent:
+
+```python
+# Example: Manually selecting a server for a specific task
+result = await agent.run(
+    "Search for Airbnb listings in Barcelona",
+    server_name="airbnb" # Explicitly use the airbnb server
+)
+
+result_google = await agent.run(
+    "Find restaurants near the first result using Google Search",
+    server_name="playwright" # Explicitly use the playwright server
+)
+```
+
 ### Dynamic Server Selection (Server Manager)
 
-Enable `use_server_manager=True` for intelligent server selection:
+Enable the Server Manager for intelligent server selection:
 
 ```python
 import asyncio
@@ -251,7 +443,7 @@ if __name__ == "__main__":
 
 ### Tool Access Control
 
-Restrict agent access to sensitive tools:
+Restrict agent tool access:
 
 ```python
 import asyncio
@@ -283,8 +475,6 @@ if __name__ == "__main__":
 ```
 
 ### Sandboxed Execution
-
-Run MCP servers in isolated environments using E2B:
 
 ```python
 import asyncio
@@ -337,9 +527,15 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-### Direct Tool Calls
+#### Sandbox Options
 
-Call tools directly without an LLM:
+| Option                 | Description                                                                              | Default               |
+| ---------------------- | ---------------------------------------------------------------------------------------- | --------------------- |
+| `api_key`              | E2B API key. Required - can be provided directly or via E2B_API_KEY environment variable | None                  |
+| `sandbox_template_id`  | Template ID for the sandbox environment                                                  | "base"                |
+| `supergateway_command` | Command to run supergateway                                                              | "npx -y supergateway" |
+
+### Direct Tool Calls (Without LLM)
 
 ```python
 import asyncio
@@ -376,7 +572,11 @@ if __name__ == "__main__":
     asyncio.run(call_tool_example())
 ```
 
-## Build a Custom Agent
+See the complete example: [examples/direct_tool_call.py](examples/direct_tool_call.py)
+
+### Build a Custom Agent
+
+Leverage the LangChain adapter to create tailored agents:
 
 ```python
 import asyncio
@@ -410,19 +610,48 @@ if __name__ == "__main__":
 
 ## Debugging
 
-*   Set `DEBUG=1` or `DEBUG=2` environment variables or set `verbose=True` in `MCPAgent`.
+MCP-Use offers built-in debug mode for enhanced visibility:
+
+### Enabling Debug Mode
+
+1.  **Environment Variable (Recommended):**
+    ```bash
+    DEBUG=1 python3.11 examples/browser_use.py  # INFO level
+    DEBUG=2 python3.11 examples/browser_use.py  # DEBUG level
+    ```
+
+    or
+
+    ```bash
+    export MCP_USE_DEBUG=1 # or 2
+    ```
+
+2.  **Programmatic Debugging:**
+    ```python
+    import mcp_use
+    mcp_use.set_debug(1)  # INFO level
+    # or
+    mcp_use.set_debug(2)  # DEBUG level
+    ```
+
+3.  **Agent-Specific Verbosity:**
+    ```python
+    agent = MCPAgent(llm=your_llm, client=your_client, verbose=True)
+    ```
 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=pietrozullo/mcp-use&type=Date)](https://www.star-history.com/#pietrozullo/mcp-use&Date)
 
-## Contributing
+## Contribute
 
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
+We welcome contributions! Please submit issues or feature requests. Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+**[Visit the mcp-use repository on GitHub](https://github.com/mcp-use/mcp-use)**
 
 ## Contributors
 
-Thanks to our amazing contributors!
+Thanks to all our amazing contributors!
 
 <a href="https://github.com/mcp-use/mcp-use/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=mcp-use/mcp-use" />
@@ -484,7 +713,7 @@ Thanks to our amazing contributors!
 ## Requirements
 
 *   Python 3.11+
-*   MCP Implementation (e.g., Playwright MCP)
+*   MCP implementation (e.g., Playwright MCP)
 *   LangChain and model libraries (OpenAI, Anthropic, etc.)
 
 ## License

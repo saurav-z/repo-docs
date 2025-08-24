@@ -1,53 +1,48 @@
-# Cython: Write C Extensions for Python with Ease
+# Cython: The High-Performance Compiler for Python
 
-**Cython empowers you to write C extensions for Python as easily as you write Python itself, enabling significant performance gains.**  [Learn more about Cython on GitHub](https://github.com/cython/cython).
+**Supercharge your Python code and seamlessly integrate with C/C++ using Cython, the optimizing compiler that brings the speed of C with the ease of Python!**  For the original repository, visit [Cython on GitHub](https://github.com/cython/cython).
 
 ## Key Features of Cython
 
-*   **Optimizing Python Compiler:** Cython translates Python code into highly efficient C/C++ code.
-*   **C/C++ Integration:** Seamlessly call C functions and declare C types for fine-grained control.
-*   **Performance Enhancement:** Significantly speed up Python code execution and wrap external C libraries.
-*   **Broad Compatibility:** Full runtime compatibility with CPython and support for other C-API implementations.
-*   **Mature & Widely Used:**  Backed by a large user base and over two decades of development, with over 70 million monthly downloads on PyPI.
+*   **Blazing-Fast Performance:** Translate Python code to highly efficient C/C++ code, unlocking significant speed improvements.
+*   **C/C++ Integration:** Easily call C functions and declare C types, enabling seamless interaction with existing C/C++ libraries and low-level optimizations.
+*   **Fine-Grained Control:** Manually tune your code with broad to fine-grained control, allowing for optimal C code generation.
+*   **Ideal for Extensions:** Perfect for wrapping external C libraries and creating fast C modules to accelerate Python code execution.
+*   **Cross-Platform Compatibility:** Cython generates "generate once, compile everywhere" C code, ensuring reproducible performance across different platforms.
+*   **Mature and Widely Used:** Benefit from over two decades of development, a large user base, and millions of monthly downloads.
 
 ## Installation
 
-To install Cython, simply use `pip`:
+If you have a C compiler installed, simply run:
 
 ```bash
 pip install Cython
 ```
 
-For more detailed installation instructions, see the [Cython Installation Guide](https://docs.cython.org/en/latest/src/quickstart/install.html).
+Otherwise, refer to the [installation page](https://docs.cython.org/en/latest/src/quickstart/install.html) for detailed instructions.
 
-## License
+## Licensing
 
-Cython is licensed under the permissive **Apache License**.  For more details, see the [LICENSE.txt](https://github.com/cython/cython/blob/master/LICENSE.txt) file.
+Cython is licensed under the permissive **Apache License**.  The original Pyrex program, upon which Cython is based, was licensed "free of restrictions".
+
+See the [LICENSE.txt](https://github.com/cython/cython/blob/master/LICENSE.txt) file for more details.
 
 ## Contributing
 
-We welcome contributions! Learn how you can get involved in the [Cython project](https://github.com/cython/cython/blob/master/docs/CONTRIBUTING.rst).
+Interested in contributing to the Cython project? Get started with this [guide](https://github.com/cython/cython/blob/master/docs/CONTRIBUTING.rst).
 
 ## Cython vs. Other Python Compilers
 
-Cython stands out among other Python compilers, offering a unique blend of features and capabilities.  Here's a comparison:
+Cython stands out from other Python compilers due to its:
 
-| Feature                 | Cython                                                                                                                                                                                                                       | PyPy                                                                                                | Numba                                                                                                                      | Pythran                                                                                                                                                                                             | mypyc                                                                                                               | Nuitka                                                                                                                     |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Compilation Type        | Static                                                                                                                                                                                                                     | JIT                                                                                                 | JIT                                                                                                                        | Static                                                                                                                                                                                            | Static                                                                                                                 | Static                                                                                                                      |
-| Language Compliance     | High, supports almost all Python features.                                                                                                                                                                                | Fully language compliant.                                                                             | Limited                                                                                                                    | Limited                                                                                                                                                                                           | Good support for language and PEP-484 typing.                                                                         | Highly language compliant.                                                                                               |
-| C/C++ Integration       | Seamless                                                                                                                                                                                                                   | Good                                                                                                | Good                                                                                                                       | Seamless                                                                                                                                                                                             | No support for low-level optimizations and typing.                                                                      | No support for low-level optimizations and typing.                                                                       |
-| Performance Optimization| Broad support for manual optimization and tuning down to the C level.                                                                                                                                                     | Runtime optimizations.                                                                                | Runtime optimizations.                                                                                                       | Targeted at numerical computation and can be used as a backend for NumPy code in Cython.                                                                                                       | Reasonable performance gains.                                                                                          | Reasonable performance gains.                                                                                               |
-| Runtime Compatibility   | Full runtime compatibility with CPython.                                                                                                                                                                                  | Non-CPython runtime.                                                                               | Relatively large runtime dependency (LLVM).                                                                                |                                                                                                                                                                                                       | Reduced Python compatibility and introspection after compilation.                                                        |                                                                                                                            |
-| Key Use Cases          | Wrapping external C libraries, creating fast C modules, optimizing existing Python code.                                                                                                                                   | Dynamic runtime optimizations.                                                                        | Mostly targets numerical code using NumPy.                                                                                    | Numerical computation and use as backend for NumPy code in Cython.                                                                                                                                |                                                                                                                       | Supports static application linking.                                                                                         |
+*   **Fast, efficient, and compliant support** for almost all Python language features, including dynamic features and introspection
+*   **Full runtime compatibility** with all still-in-use and future versions of CPython
+*   **C compile time adaptation** to the target platform and Python version
+*   **Seamless integration** with C/C++ code
+*   **Broad support** for manual optimisation and tuning down to the C level
 
-## Support the Project
+Compared to other Python compilers like PyPy, Numba, mypyc, and Nuitka, Cython offers a unique balance of performance, flexibility, and compatibility.
 
-Show your support for Cython by becoming a sponsor via [Github Sponsors](https://github.com/users/scoder/sponsorship) or [Tidelift](https://tidelift.com/subscription/pkg/pypi-cython).
+## History: Based on Pyrex
 
-## Further Resources
-
-*   **Official Website:** [https://cython.org/](https://cython.org/)
-*   **Documentation:** [https://docs.cython.org/](https://docs.cython.org/)
-*   **GitHub Repository:** [https://github.com/cython/cython](https://github.com/cython/cython)
-*   **Wiki:** [https://github.com/cython/cython/wiki](https://github.com/cython/cython/wiki)
+Cython builds upon the foundation of [Pyrex](https://www.cosc.canterbury.ac.nz/~greg/python/Pyrex/), a language for writing Python extension modules, created by Greg Ewing.

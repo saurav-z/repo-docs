@@ -1,29 +1,19 @@
-# Truss: The Simplest Way to Deploy & Serve Your AI/ML Models in Production
+# Truss: The Easiest Way to Deploy Your AI/ML Models
 
-**Quickly and easily deploy your machine learning models with Truss, a powerful tool for packaging, serving, and managing AI/ML models in production.**
+**Truss** simplifies the process of deploying machine learning models, enabling you to get your models into production quickly and efficiently. Learn more at the [original repo](https://github.com/basetenlabs/truss).
 
 [![PyPI version](https://badge.fury.io/py/truss.svg)](https://badge.fury.io/truss)
-[![CI Status](https://github.com/basetenlabs/truss/actions/workflows/release.yml/badge.svg)](https://github.com/basetenlabs/truss/actions/workflows/release.yml)
+[![ci_status](https://github.com/basetenlabs/truss/actions/workflows/release.yml/badge.svg)](https://github.com/basetenlabs/truss/actions/workflows/release.yml)
 
-## Key Features of Truss
+## Key Features of Truss:
 
-*   **Write Once, Run Anywhere:** Package your model code, weights, and dependencies into a consistent environment that behaves the same in development and production.
-*   **Accelerated Development Loop:** Utilize a live reload server for rapid feedback and skip complex Docker and Kubernetes configurations, streamlining your development workflow.
-*   **Framework Agnostic:** Truss seamlessly supports models built with any Python framework, including `transformers`, `diffusers`, `PyTorch`, `TensorFlow`, `TensorRT`, and `Triton`.
-*   **Simplified Deployment:** Easily deploy your models to production environments, starting with Baseten and AWS SageMaker support coming soon.
-*   **Easy Model Invocation:** Simple CLI commands for testing and interacting with your deployed models.
+*   **Write Once, Run Anywhere:** Package and test your model code, weights, and dependencies, ensuring consistent behavior across development and production environments.
+*   **Fast Developer Loop:** Benefit from a live reload server for rapid iteration and feedback, eliminating the need for complex Docker and Kubernetes configurations.
+*   **Framework Agnostic:** Truss supports models built with any Python framework, including Transformers, Diffusers, PyTorch, TensorFlow, TensorRT, and Triton.
+*   **Simplified Deployment:** Deploy models to platforms like Baseten (with AWS SageMaker support coming soon) with a single command.
+*   **Ready-to-Use Examples:** Get started quickly with pre-built Truss examples for popular models like Llama 2, Stable Diffusion XL, and Whisper.
 
-## Explore Truss Examples
-
-Get started quickly with pre-built Trusses for popular models:
-
-*   🦙 [Llama 2](https://github.com/basetenlabs/truss-examples/tree/main/llama) (7B, 13B, and 70B variations)
-*   🎨 [Stable Diffusion XL](https://github.com/basetenlabs/truss-examples/tree/main/stable-diffusion/stable-diffusion-xl-1.0)
-*   🗣 [Whisper](https://github.com/basetenlabs/truss-examples/tree/main/whisper/whisper-truss)
-
-Find even more examples in the [Truss Examples repository](https://github.com/basetenlabs/truss-examples/).
-
-## Getting Started
+## Get Started with Truss
 
 ### Installation
 
@@ -33,9 +23,7 @@ Install Truss using pip:
 pip install --upgrade truss
 ```
 
-### Quickstart: Deploying a Text Classification Model
-
-This quickstart example demonstrates how to deploy a text classification pipeline using the `transformers` library.
+### Quickstart: Deploy a Text Classification Model
 
 1.  **Create a Truss:**
 
@@ -43,16 +31,13 @@ This quickstart example demonstrates how to deploy a text classification pipelin
     truss init text-classification
     ```
 
-    Give your Truss a name, such as "Text classification."
-
 2.  **Navigate to the Directory:**
 
     ```bash
     cd text-classification
     ```
 
-3.  **Implement the Model:**
-    Edit the `model/model.py` file to define your model's `load()` and `predict()` functions:
+3.  **Implement Your Model (model/model.py):**
 
     ```python
     from transformers import pipeline
@@ -68,8 +53,7 @@ This quickstart example demonstrates how to deploy a text classification pipelin
             return self._model(model_input)
     ```
 
-4.  **Add Dependencies:**
-    Modify the `config.yaml` file to include the necessary dependencies:
+4.  **Add Dependencies (config.yaml):**
 
     ```yaml
     requirements:
@@ -77,28 +61,23 @@ This quickstart example demonstrates how to deploy a text classification pipelin
       - transformers==4.30.0
     ```
 
-## Deployment with Baseten
+### Deployment
 
 1.  **Get a Baseten API Key:**
-    If you don't have one, [sign up for a Baseten account](https://app.baseten.co/signup/) and obtain your API key from your [Baseten account settings](https://app.baseten.co/settings/account/api_keys).
-
-2.  **Deploy Your Model:**
-    Run the following command in your terminal to deploy your model:
+    Sign up for a [Baseten account](https://app.baseten.co/signup/) to obtain an API key.
+2.  **Deploy with `truss push`:**
 
     ```bash
     truss push
     ```
 
-    Monitor your model's deployment progress via your [Baseten model dashboard](https://app.baseten.co/models/).
-
 3.  **Invoke the Model:**
-    Once deployed, test your model using the `truss predict` command:
 
     ```bash
     truss predict -d '"Truss is awesome!"'
     ```
 
-    You should receive a JSON response similar to:
+    **Response:**
 
     ```json
     [
@@ -109,8 +88,6 @@ This quickstart example demonstrates how to deploy a text classification pipelin
     ]
     ```
 
-## Contributing
+## Contributions
 
-Truss is an open-source project backed by Baseten, built with the help of ML engineers worldwide. We welcome contributions! Please see our [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).
-
-**Original repository:** [https://github.com/basetenlabs/truss](https://github.com/basetenlabs/truss)
+Truss is an open-source project backed by Baseten, built with contributions from the ML community. Contributions are welcome; please refer to our [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).

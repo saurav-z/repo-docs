@@ -1,74 +1,91 @@
-# MAVLink: The Lightweight Communication Protocol for Drones and Robotics
+# MAVLink: The Lightweight Communication Protocol for Drones and Ground Control Stations
 
-MAVLink is a powerful, yet simple, header-only message library designed for seamless communication between drones, ground control stations, and other robotic systems. ([Original Repo](https://github.com/mavlink/mavlink))
+**MAVLink (Micro Air Vehicle Message Marshalling Library) is a powerful, open-source protocol enabling seamless communication between drones, ground control stations, and other components.** This versatile library is optimized for resource-constrained environments, making it ideal for a wide range of applications.
 
-[![Build Status](https://github.com/mavlink/mavlink/workflows/Test%20and%20deploy/badge.svg)](https://github.com/mavlink/mavlink/actions?query=branch%3Amaster)
+[View the original repository on GitHub](https://github.com/mavlink/mavlink)
 
-## Key Features of MAVLink:
+## Key Features of MAVLink
 
-*   **Lightweight & Efficient:** Optimized for resource-constrained systems, perfect for applications with limited bandwidth, RAM, and flash memory.
-*   **Header-Only Library:** Easy to integrate, reducing build times and dependencies.
-*   **Cross-Platform Compatibility:** Supports multiple programming languages and operating systems.
-*   **XML-Based Message Definitions:**  Uses XML files to define message sets ("dialects"), enabling flexible and extensible communication.
-*   **Field-Proven:** Deployed in numerous products and serves as a reliable interoperability interface.
-*   **Comprehensive Tooling:** Offers Python scripts for code generation, examples, and utilities.
-*   **Interoperability:** Enables seamless communication between components from different manufacturers.
+*   **Lightweight & Efficient:** Designed for low-bandwidth communication, perfect for drones and embedded systems.
+*   **Header-Only Library:** Simple to integrate, minimizing dependencies and compilation overhead.
+*   **Message-Set Specifications:** Uses XML files to define message sets (dialects) for different systems, ensuring interoperability.
+*   **Multi-Language Support:**  Generates code for various languages, including C, Python, and more. [See supported languages.](https://mavlink.io/en/#supported_languages)
+*   **Field-Proven:** Widely adopted and used in numerous products, establishing a robust communication standard.
+*   **Interoperability:** Facilitates communication between components from different manufacturers.
+*   **Customizable:**  Easily adaptable to specific needs through custom message definitions.
 
-## Getting Started
+## Getting Started with MAVLink (C Example)
 
-### Generate C Headers (Ubuntu Example)
+Here's a quick guide to get you started generating C headers using the `common.xml` dialect on Ubuntu:
+
+**Prerequisites:**
+
+*   Ubuntu LTS 20.04 or 22.04
+*   Python 3 and pip
+
+**Installation:**
 
 1.  **Install Dependencies:**
+
     ```bash
     sudo apt install python3-pip
     ```
+
 2.  **Clone the Repository:**
+
     ```bash
     git clone https://github.com/mavlink/mavlink.git --recursive
     cd mavlink
     ```
-3.  **Install Python Requirements:**
+
+3.  **Install Python Packages:**
+
     ```bash
     python3 -m pip install -r pymavlink/requirements.txt
     ```
-4.  **Generate C Headers (Example):**
+
+4.  **Generate C Headers:**
+
     ```bash
     python3 -m pymavlink.tools.mavgen --lang=C --wire-protocol=2.0 --output=generated/include/mavlink/v2.0 message_definitions/v1.0/common.xml
     ```
 
-### Using with CMake
+**Using with CMake:**
 
 1.  **Install Headers Locally:**
+
     ```bash
     cmake -Bbuild -H. -DCMAKE_INSTALL_PREFIX=install -DMAVLINK_DIALECT=common -DMAVLINK_VERSION=2.0
     cmake --build build --target install
     ```
-2.  **Find the Package in CMakeLists.txt:**
+
+2.  **Use `find_package` in `CMakeLists.txt`:**
+
     ```cmake
     find_package(MAVLink REQUIRED)
     add_executable(my_program my_program.c)
     target_link_libraries(my_program PRIVATE MAVLink::mavlink)
     ```
+
 3.  **Pass the Install Directory to CMake:**
+
     ```bash
     cd ../my_program
     cmake -Bbuild -H. -DCMAKE_PREFIX_PATH=../mavlink/install
     ```
 
-    For a full example, refer to `examples/c`.
+   *For a complete working example, see [examples/c](examples/c).*
 
-*Note:  Even though `target_link_libraries` is used in CMake, MAVLink is header-only, so it does not actually "link".*
+**Further Resources:**
 
-### Further Resources
-
-*   [Using C MAVLink Libraries (mavgen)](https://mavlink.io/en/mavgen_c/)
-*   [Installing the MAVLink Toolchain](https://mavlink.io/en/getting_started/installation.html)
-*   [Generating MAVLink Libraries](https://mavlink.io/en/getting_started/generate_libraries.html)
-*   [Using MAVLink Libraries](https://mavlink.io/en/getting_started/use_libraries.html)
+*   **Using C MAVLink Libraries (mavgen):** [Using C MAVLink Libraries (mavgen)](https://mavlink.io/en/mavgen_c/)
+*   **Installing the MAVLink Toolchain:** [Installing the MAVLink Toolchain](https://mavlink.io/en/getting_started/installation.html)
+*   **Generating MAVLink Libraries:** [Generating MAVLink Libraries](https://mavlink.io/en/getting_started/generate_libraries.html)
+*   **Using MAVLink Libraries:** [Using MAVLink Libraries](https://mavlink.io/en/getting_started/use_libraries.html)
 
 ## Key Links
 
-*   **Documentation/Website:** [https://mavlink.io/en/](https://mavlink.io/en/)
-*   **Discussion/Support:** [https://mavlink.io/en/#support](https://mavlink.io/en/#support)
-*   **Contributing:** [https://mavlink.io/en/contributing/contributing.html](https://mavlink.io/en/contributing/contributing.html)
-*   **License:** [https://mavlink.io/en/#license](https://mavlink.io/en/#license)
+*   **Documentation/Website:** [mavlink.io/en/](https://mavlink.io/en/)
+*   **Discussion/Support:** [mavlink.io/en/#support](https://mavlink.io/en/#support)
+*   **Contributing:** [mavlink.io/en/contributing/contributing.html](https://mavlink.io/en/contributing/contributing.html)
+*   **License:** [mavlink.io/en/#license](https://mavlink.io/en/#license)

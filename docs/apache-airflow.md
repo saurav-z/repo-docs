@@ -1,65 +1,52 @@
-# Apache Airflow: Orchestrate and Schedule Workflows with Code
+# Apache Airflow: Orchestrate Your Workflows with Code
 
-**Apache Airflow** is a powerful platform for programmatically authoring, scheduling, and monitoring workflows, transforming complex data pipelines into manageable and collaborative projects.  [Explore the official Apache Airflow repository](https://github.com/apache/airflow) for more details.
+**Apache Airflow is a powerful platform for programmatically authoring, scheduling, and monitoring data pipelines, transforming complex workflows into maintainable and scalable solutions.** [Explore the Apache Airflow Repository](https://github.com/apache/airflow)
 
 [![License](https://img.shields.io/:license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
 [![PyPI version](https://badge.fury.io/py/apache-airflow.svg)](https://badge.fury.io/py/apache-airflow)
 [![Docker Pulls](https://img.shields.io/docker/pulls/apache/airflow.svg)](https://hub.docker.com/r/apache/airflow)
-[![GitHub Build main](https://github.com/apache/airflow/actions/workflows/ci-amd.yml/badge.svg)](https://github.com/apache/airflow/actions)
+[![Contributors](https://img.shields.io/github/contributors/apache/airflow)](https://github.com/apache/airflow/graphs/contributors)
+[![Slack Status](https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social)](https://s.apache.org/airflow-slack)
 
-<picture width="500">
-  <img
-    src="https://github.com/apache/airflow/blob/19ebcac2395ef9a6b6ded3a2faa29dc960c1e635/docs/apache-airflow/img/logos/wordmark_1.png?raw=true"
-    alt="Apache Airflow logo"
-  />
-</picture>
+**Key Features:**
 
-Key features of Apache Airflow:
+*   **Workflow-as-Code:** Define pipelines using Python, enabling version control, testing, and collaboration.
+*   **Dynamic Pipelines:**  Generate and customize pipelines dynamically using Jinja templating.
+*   **Extensible Architecture:**  Utilize a vast library of built-in operators and easily extend Airflow to meet specific needs.
+*   **Scalable Scheduling:**  Orchestrate tasks efficiently across distributed workers with a robust scheduler.
+*   **Rich UI:** Monitor pipeline progress, troubleshoot issues, and visualize workflows through a user-friendly web interface.
 
-*   **Dynamic Workflows:** Define pipelines as code for dynamic DAG generation and parameterization.
-*   **Extensible Architecture:** Benefit from a wide range of built-in operators and extend functionality as needed.
-*   **Flexible Customization:** Leverage the Jinja templating engine for extensive pipeline customization.
-*   **User-Friendly Interface:** Monitor progress, troubleshoot issues, and visualize pipelines through a rich user interface.
-*   **Scalable Scheduling:**  Airflow scheduler executes your tasks on an array of workers.
-*   **Idempotent Tasks:** Recommended for idempotent tasks which ensures that results of the task will be the same, and will not create duplicated data in a destination system.
+## Core Concepts
 
-## Core Principles
+Apache Airflow excels with workflows that are primarily static and evolve gradually, enhancing the clarity and continuity of the unit of work.  While Airflow is often used for data processing, it emphasizes idempotent tasks, which avoid data duplication, and can delegate high-volume tasks to specialized services.
 
-*   **Dynamic:** Define pipelines in code, enabling dynamic DAG generation and parameterization.
-*   **Extensible:** The Airflow framework includes a wide range of built-in operators and can be extended to fit your needs.
+## Key Principles
+
+*   **Dynamic:** Define your pipelines in code, which supports dynamic DAG generation and parameterization.
+*   **Extensible:**  Airflow's framework is built with a broad array of built-in operators and it is extendable to fit any need.
 *   **Flexible:** Airflow leverages the [**Jinja**](https://jinja.palletsprojects.com) templating engine, allowing rich customizations.
-
-## Key Features
-
-*   **DAGs:** Overview of all DAGs in your environment.
-*   **Assets:** Overview of Assets with dependencies.
-*   **Grid:** Grid representation of a DAG that spans across time.
-*   **Graph:** Visualization of a DAG's dependencies and their current status for a specific run.
-*   **Home:** Summary statistics of your Airflow environment.
-*   **Backfill:** Backfilling a DAG for a specific date range.
-*   **Code:** Quick way to view source code of a DAG.
 
 ## Requirements
 
-Apache Airflow is tested with:
+Apache Airflow is tested with the following versions of Python, Kubernetes, and databases.
 
-|            | Main version (dev)     | Stable version (3.0.5) |
-|------------|------------------------|------------------------|
-| Python     | 3.10, 3.11, 3.12, 3.13 | 3.9, 3.10, 3.11, 3.12  |
-| Platform   | AMD64/ARM64(\*)        | AMD64/ARM64(\*)        |
-| Kubernetes | 1.30, 1.31, 1.32, 1.33 | 1.30, 1.31, 1.32, 1.33 |
-| PostgreSQL | 13, 14, 15, 16, 17     | 13, 14, 15, 16, 17     |
-| MySQL      | 8.0, 8.4, Innovation   | 8.0, 8.4, Innovation   |
-| SQLite     | 3.15.0+                | 3.15.0+                |
+| Feature      | Main Version (dev) | Stable Version (3.0.5) |
+|--------------|--------------------|------------------------|
+| Python       | 3.10, 3.11, 3.12, 3.13 | 3.9, 3.10, 3.11, 3.12  |
+| Platform     | AMD64/ARM64(\*)    | AMD64/ARM64(\*)        |
+| Kubernetes   | 1.30, 1.31, 1.32, 1.33 | 1.30, 1.31, 1.32, 1.33 |
+| PostgreSQL   | 13, 14, 15, 16, 17   | 13, 14, 15, 16, 17     |
+| MySQL        | 8.0, 8.4, Innovation | 8.0, 8.4, Innovation   |
+| SQLite       | 3.15.0+            | 3.15.0+                |
 
 \* Experimental
 
-**Note**: MariaDB is not tested/recommended.
+**Note:** MariaDB is not tested/recommended.
 
-**Note**: SQLite is used in Airflow tests. Do not use it in production. We recommend
+**Note:** SQLite is used in Airflow tests. Do not use it in production. We recommend
 using the latest stable version of SQLite for local development.
 
-**Note**: Airflow currently can be run on POSIX-compliant Operating Systems. For development, it is regularly
+**Note:** Airflow currently can be run on POSIX-compliant Operating Systems. For development, it is regularly
 tested on fairly modern Linux Distros and recent versions of macOS.
 On Windows you can run it via WSL2 (Windows Subsystem for Linux 2) or via Linux Containers.
 The work to add Windows support is tracked via [#10388](https://github.com/apache/airflow/issues/10388), but
@@ -70,47 +57,85 @@ is used in the [Community managed DockerHub image](https://hub.docker.com/p/apac
 
 ## Getting Started
 
-Explore the official documentation for [installation](https://airflow.apache.org/docs/apache-airflow/stable/installation/), [getting started](https://airflow.apache.org/docs/apache-airflow/stable/start.html), and comprehensive tutorials.
+Explore the official Apache Airflow website ([latest stable release](https://airflow.apache.org/docs/apache-airflow/stable/)) for complete documentation, installation instructions, tutorials, and more.
 
-> Note: If you're looking for documentation for the main branch (latest development branch): you can find it on [s.apache.org/airflow-docs](https://s.apache.org/airflow-docs/).
+## Installation
+
+For detailed instructions, refer to the [INSTALLING.md](INSTALLING.md) file.
 
 ## Installing from PyPI
 
-Install Airflow from PyPI with the `apache-airflow` package. Repeatable installation is ensured through constraint files.
+Install Apache Airflow using `pip` and carefully review the constraints files to ensure a repeatable and compatible installation.
 
-### Installing Airflow:
+1.  Installing just Airflow:
 
 ```bash
 pip install 'apache-airflow==3.0.5' \
  --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.5/constraints-3.10.txt"
 ```
 
-### Installing with extras:
+2.  Installing with extras (i.e., postgres, google):
 
 ```bash
 pip install 'apache-airflow[postgres,google]==3.0.5' \
  --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.0.5/constraints-3.10.txt"
 ```
 
-## Installation
-
-For detailed setup and installation instructions, see the [INSTALLING.md](INSTALLING.md) file.
+For information on installing provider distributions, check
+[providers](http://airflow.apache.org/docs/apache-airflow-providers/index.html).
 
 ## Official Source Code
 
-Apache Airflow is an Apache Software Foundation (ASF) project with source code releases that adhere to the [ASF Release Policy](https://www.apache.org/legal/release-policy.html).
+Apache Airflow is an Apache Software Foundation (ASF) project with source code releases that:
+
+*   Adhere to the [ASF Release Policy](https://www.apache.org/legal/release-policy.html)
+*   Are available for download from [the ASF Distribution Directory](https://downloads.apache.org/airflow)
+*   Are cryptographically signed by the release manager
+*   Are officially voted on by the PMC members during the [Release Approval Process](https://www.apache.org/legal/release-policy.html#release-approval)
 
 ## Convenience Packages
 
-Convenience methods for installing and using Airflow include:
+The project offers a wide range of convenient installation and deployment methods:
 
-*   [PyPI releases](https://pypi.org/project/apache-airflow/)
-*   [Docker Images](https://hub.docker.com/r/apache/airflow)
-*   [Tags in GitHub](https://github.com/apache/airflow/tags)
+*   **PyPI Releases:** Use `pip` to install Airflow.
+*   **Docker Images:** Deploy Airflow using Docker, Kubernetes, or Helm Charts. Details on the images are in the [images](https://airflow.apache.org/docs/docker-stack/index.html) document.
+*   **GitHub Tags:** Access project sources via tags in GitHub.
+
+## User Interface
+
+The Airflow UI provides a comprehensive view of your workflows.
+
+*   **DAGs:** Overview of all DAGs in your environment.
+
+  ![DAGs](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/dags.png)
+
+*   **Assets:** Overview of Assets with dependencies.
+
+  ![Asset Dependencies](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/assets_graph.png)
+
+*   **Grid:** Grid representation of a DAG that spans across time.
+
+  ![Grid](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/grid.png)
+
+*   **Graph:** Visualization of a DAG's dependencies and their current status for a specific run.
+
+  ![Graph](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/graph.png)
+
+*   **Home:** Summary statistics of your Airflow environment.
+
+  ![Home](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/home.png)
+
+*   **Backfill:** Backfilling a DAG for a specific date range.
+
+  ![Backfill](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/backfill.png)
+
+*   **Code:** Quick way to view source code of a DAG.
+
+  ![Code](https://raw.githubusercontent.com/apache/airflow/main/airflow-core/docs/img/ui-dark/code.png)
 
 ## Semantic Versioning
 
-Airflow 2.0.0 and later follow a strict [SemVer](https://semver.org/) approach for releases, ensuring predictable versioning.
+Airflow utilizes [SemVer](https://semver.org/) for package releases, providing predictable versioning for core functionality.
 
 ## Version Life Cycle
 
@@ -130,44 +155,32 @@ Apache Airflow version life cycle:
 
 <!-- End of auto-generated table -->
 
-We highly recommend upgrading to the latest Airflow major release before the EOL date.
-
-## Support for Python and Kubernetes versions
-
-Airflow follows specific rules for Python and Kubernetes support, based on official release schedules.
-
-## Base OS support for reference Airflow images
-
-Airflow's container images are built using the stable Debian OS.
-
-## Approach to dependencies of Airflow
-
-Airflow uses a dependency management approach that balances application stability with flexibility for DAG developers.
+Limited support versions will be supported with security and critical bug fix only.
+EOL versions will not get any fixes nor support.
+We always recommend that all users run the latest available minor release for whatever major version is in use.
+We **highly** recommend upgrading to the latest Airflow major release at the earliest convenient time and before the EOL date.
 
 ## Contributing
 
-Contribute to Apache Airflow by reviewing the [contributors' guide](https://github.com/apache/airflow/blob/main/contributing-docs/README.rst).
+Join the Apache Airflow community! Review the [contributors' guide](https://github.com/apache/airflow/blob/main/contributing-docs/README.rst) for instructions, and explore the [contribution quickstart](https://github.com/apache/airflow/blob/main/contributing-docs/03_contributors_quick_start.rst).
 
-## Voting Policy
+## Who Uses Apache Airflow?
 
-*   Commits need a +1 vote from a committer who is not the author
-*   When we do AIP voting, both PMC member's and committer's `+1s` are considered a binding vote.
+Many organizations use Airflow, with nearly 500 publicly known ones listed [here](https://github.com/apache/airflow/blob/main/INTHEWILD.md).
 
-## Who uses Apache Airflow?
+## Who Maintains Apache Airflow?
 
-Apache Airflow is used by approximately 500 organizations, find them [in the wild](https://github.com/apache/airflow/blob/main/INTHEWILD.md).
-
-## Who maintains Apache Airflow?
-
-The Apache Airflow [community](https://github.com/apache/airflow/graphs/contributors) and [core committers/maintainers](https://people.apache.org/committers-by-project.html#airflow) are responsible for reviewing and merging PRs and steering new feature requests.
+Airflow is a community-driven project maintained by [core committers/maintainers](https://people.apache.org/committers-by-project.html#airflow). Review the Apache Airflow [committer requirements](https://github.com/apache/airflow/blob/main/COMMITTERS.rst#guidelines-to-become-an-airflow-committer).
 
 ## What goes into the next release?
 
-The process of identifying what goes into each release and more details on the [What goes into the next release](dev/WHAT_GOES_INTO_THE_NEXT_RELEASE.md) document.
+For more information, check out the
+[What goes into the next release](dev/WHAT_GOES_INTO_THE_NEXT_RELEASE.md) document in the `dev` folder of the
+repository.
 
 ## Can I use the Apache Airflow logo in my presentation?
 
-Yes, follow the Apache Foundation [trademark policies](https://www.apache.org/foundation/marks/#books) and the Apache Airflow [Brandbook](https://cwiki.apache.org/confluence/display/AIRFLOW/Brandbook).
+Yes, as long as you adhere to Apache Foundation [trademark policies](https://www.apache.org/foundation/marks/#books) and the Apache Airflow [Brandbook](https://cwiki.apache.org/confluence/display/AIRFLOW/Brandbook).
 
 ## Links
 
@@ -176,10 +189,6 @@ Yes, follow the Apache Foundation [trademark policies](https://www.apache.org/fo
 *   [Community Information](https://airflow.apache.org/community/)
 
 ## Sponsors
-
-The CI infrastructure for Apache Airflow has been sponsored by:
-
-<!-- Ordered by most recently "funded" -->
 
 <a href="https://astronomer.io"><img src="https://assets2.astronomer.io/logos/logoForLIGHTbackground.png" alt="astronomer.io" width="250px"></a>
 <a href="https://aws.amazon.com/opensource/"><img src="https://github.com/apache/airflow/blob/main/providers/amazon/docs/integration-logos/AWS-Cloud-alt_light-bg@4x.png?raw=true" alt="AWS OpenSource" width="130px"></a>
