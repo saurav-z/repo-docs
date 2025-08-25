@@ -1,149 +1,156 @@
-# Mobile-Use: Automate Your Phone with Natural Language 📱🤖
-
-> Take control of your Android or iOS device with natural language using **Mobile-Use**, an open-source AI agent. [Explore the code on GitHub](https://github.com/minitap-ai/mobile-use).
+# mobile-use: automate your phone with natural language
 
 <div align="center">
-  <img src="./doc/linkedin-demo-with-text.gif" alt="Mobile-Use in Action" width="70%">
+
+![mobile-use in Action](./doc/linkedin-demo-with-text.gif)
+
 </div>
 
 <div align="center">
-  <a href="https://discord.gg/6nSqmQ9pQs">
-    <img src="https://img.shields.io/discord/1403058278342201394?color=7289DA&label=Discord&logo=discord&logoColor=white&style=for-the-badge" alt="Discord">
-  </a>
-  <a href="https://github.com/minitap-ai/mobile-use/stargazers">
-    <img src="https://img.shields.io/github/stars/minitap-ai/mobile-use?style=for-the-badge&color=e0a8dd" alt="GitHub stars">
-  </a>
-  <p align="center">
-    <a href="https://discord.gg/6nSqmQ9pQs"><b>Join the Discord Community</b></a> |
-    <a href="https://x.com/minitap_ai?t=iRWtI497UhRGLeCKYQekig&s=09"><b>Follow on X (Twitter)</b></a>
-  </p>
+
+[![Discord](https://img.shields.io/discord/1403058278342201394?color=7289DA&label=Discord&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/6nSqmQ9pQs)
+[![GitHub stars](https://img.shields.io/github/stars/minitap-ai/mobile-use?style=for-the-badge&color=e0a8dd)](https://github.com/minitap-ai/mobile-use/stargazers)
+
+<p align="center">
+    <a href="https://discord.gg/6nSqmQ9pQs"><b>Discord</b></a> •
+    <a href="https://x.com/minitap_ai?t=iRWtI497UhRGLeCKYQekig&s=09"><b>Twitter / X</b></a>
+</p>
+
 </div>
 
-Mobile-Use empowers you to control your smartphone using simple, natural language commands. This innovative AI agent understands your requests and automates tasks within your Android or iOS device. From sending messages and navigating apps to extracting data, Mobile-Use simplifies your mobile experience.
+Mobile-use is a powerful, open-source AI agent that controls your Android or IOS device using natural language. It understands your commands and interacts with the UI to perform tasks, from sending messages to navigating complex apps.
 
-**Key Features:**
+> Mobile-use is quickly evolving. Your suggestions, ideas, and reported bugs will shape this project. Do not hesitate to join in the conversation on [Discord](https://discord.gg/6nSqmQ9pQs) or contribute directly, we will reply to everyone! ❤️
 
-*   🗣️ **Natural Language Control:** Command your phone using everyday language.
-*   📱 **UI-Aware Automation:** Intelligent navigation through app interfaces.
-*   📊 **Data Scraping:** Extract and structure information from any app into your desired format (e.g., JSON).
-*   🔧 **Extensible & Customizable:** Easily configure different LLMs to power the agents.
+## ✨ Features
 
-## Benchmarks & Performance
+- 🗣️ **Natural Language Control**: Interact with your phone using your native language.
+- 📱 **UI-Aware Automation**: Intelligently navigates through app interfaces.
+- 📊 **Data Scraping**: Extract information from any app and structure it into your desired format (e.g., JSON) using a natural language description.
+- 🔧 **Extensible & Customizable**: Easily configure different LLMs to power the agents that power mobile-use.
 
-Mobile-Use is a leader in the field, achieving the #1 spot in the open-source pass@1 on the AndroidWorld benchmark.
+## Benchmarks
 
-<div align="center">
-  <img src="./doc/benchmark.png" alt="AndroidWorld Benchmark" width="70%">
-</div>
+<p align="center">
+  <img src="./doc/benchmark.jpg" alt="Project banner" />
+</p>
 
-*   View the full benchmark results: [Mobile AI Agents Benchmark](https://minitap.ai/research/mobile-ai-agents-benchmark)
-*   Official Leaderboard: [Benchmark Leaderboard](https://docs.google.com/spreadsheets/d/1cchzP9dlTZ3WXQTfYNhh3avxoLipqHN75v1Tb86uhHo/edit?pli=1&gid=0#gid=0)
+We are global number 1 Opensource pass@1 on the AndroidWorld benchmark.
+
+More info here: https://minitap.ai/research/mobile-ai-agents-benchmark
+
+The official leaderboard is available [here](https://docs.google.com/spreadsheets/d/1cchzP9dlTZ3WXQTfYNhh3avxoLipqHN75v1Tb86uhHo/edit?pli=1&gid=0#gid=0)
 
 ## 🚀 Getting Started
 
-Get up and running with Mobile-Use in a few simple steps:
+Ready to automate your mobile experience? Follow these steps to get mobile-use up and running.
 
 1.  **Set up Environment Variables:**
-
-    *   Copy the example `.env.example` file to `.env` and add your API keys.  An OpenAI key is required.
+    Copy the example `.env.example` file to `.env` and add your API keys.
 
     ```bash
     cp .env.example .env
     ```
 
 2.  **(Optional) Customize LLM Configuration:**
-
-    *   To use different models or providers, create your own LLM configuration file:
-
+    To use different models or providers, create your own LLM configuration file.
     ```bash
     cp llm-config.override.template.jsonc llm-config.override.jsonc
     ```
+    Then, edit `llm-config.override.jsonc` to fit your needs.
 
-    *   Edit `llm-config.override.jsonc` to fit your needs.
+### Quick Launch (Docker)
 
-### Quick Launch (Docker - Android Only)
+> [!NOTE]  
+> This quickstart, is only available for Android devices/emulators as of now, and you must have Docker installed.
 
-> [!NOTE]
-> This quickstart is available for Android devices/emulators only and requires Docker.
+First:
 
-1.  **Connect your Android device:**  Either plug in your device with USB debugging enabled, or launch an Android emulator.
+- Either plug your Android device and enable USB-debugging via the Developer Options
+- Or launch an Android emulator
 
-> [!IMPORTANT]
-> The terminal will sometimes hang while Maestro runs.  You will be asked `Maestro CLI would like to collect anonymous usage data to improve the product.` You can accept (Y) or decline (n).
+> [!IMPORTANT]  
+> At some point, the terminal will HANG, and Maestro will ask you `Maestro CLI would like to collect anonymous usage data to improve the product.`
+> It's up to you whether you accept (i.e enter 'Y') or not (i.e. enter 'n').
 
-2.  **Run the appropriate command for your OS:**
+Then run in your terminal:
 
-    *   **Linux/macOS:**
+1. For Linux/macOS:
 
-    ```bash
-    chmod +x mobile-use.sh
-    ./mobile-use.sh \
-      "Open Gmail, find first 3 unread emails, and list their sender and subject line" \
-      --output-description "A JSON list of objects, each with 'sender' and 'subject' keys"
-    ```
+```bash
+chmod +x mobile-use.sh
+./mobile-use.sh \
+  "Open Gmail, find first 3 unread emails, and list their sender and subject line" \
+  --output-description "A JSON list of objects, each with 'sender' and 'subject' keys"
+```
 
-    *   **Windows (PowerShell):**
+2. For Windows (inside a Powershell terminal):
 
-    ```powershell
-    powershell.exe -ExecutionPolicy Bypass -File mobile-use.ps1 `
-      "Open Gmail, find first 3 unread emails, and list their sender and subject line" `
-      --output-description "A JSON list of objects, each with 'sender' and 'subject' keys"
-    ```
+```powershell
+powershell.exe -ExecutionPolicy Bypass -File mobile-use.ps1 `
+  "Open Gmail, find first 3 unread emails, and list their sender and subject line" `
+  --output-description "A JSON list of objects, each with 'sender' and 'subject' keys"
+```
 
-> [!NOTE]
-> When using your own device, accept the ADB-related connection requests that will appear on your device. Maestro will also install its APK; accept the installation request.
+> [!NOTE]  
+> If using your own device, make sure to accept the ADB-related connection requests that will pop up on your device.
+> Similarly, Maestro will need to install its APK on your device, which will also require you to accept the installation request.
 
 #### 🧰 Troubleshooting
 
-The script attempts to connect to your device via IP.  Ensure your device is connected to the same Wi-Fi network as your computer.
+The script will try to connect to your device via IP.  
+Therefore, your device **must be connected to the same Wi-Fi network as your computer**.
 
 ##### 1. No device IP found
 
-If this error occurs:
+If the script fails with the following message:
 
 ```
 Could not get device IP. Is a device connected via USB and on the same Wi-Fi network?
 ```
 
-Determine your phone's WLAN interface via `adb shell ip addr show up`.  Then, add the `--interface <YOUR_INTERFACE_NAME>` option to the script.
+Then it couldn't find one of the common Wi-Fi interfaces on your device.  
+Therefore, you must determine what WLAN interface your phone is using via `adb shell ip addr show up`.
+Then add the `--interface <YOUR_INTERFACE_NAME>` option to the script.
 
 ##### 2. Failed to connect to <DEVICE_IP>:5555 inside Docker
 
-This is likely a firewall issue. There isn't a single fix.
+This is most probably an issue with your firewall blocking the connection. Therefore there is no clear fix for this.
 
 ##### 3. Failed to pull GHCR docker images (unauthorized)
 
-If you've used `ghcr.io` before for private repositories, you may have an expired token.  Try running `docker logout ghcr.io` and re-running the script.
+Since UV docker images rely on a `ghcr.io` public repositories, you may have an expired token if you used `ghcr.io` before for private repositories.  
+Try running `docker logout ghcr.io` and then run the script again.
 
 ### Manual Launch (Development Mode)
 
-For developers, here's how to set up your environment manually:
+For developers who want to set up the environment manually:
 
 #### 1. Device Support
 
-Mobile-Use currently supports:
+Mobile-use currently supports the following devices:
 
-*   Physical Android Phones (USB debugging enabled)
-*   Android Simulators (Android Studio setup)
-*   iOS Simulators (macOS only)
+- **Physical Android Phones**: Connect via USB with USB debugging enabled.
+- **Android Simulators**: Set up through Android Studio.
+- **iOS Simulators**: Supported for macOS users.
 
-> [!NOTE]
+> [!NOTE]  
 > Physical iOS devices are not yet supported.
 
 #### 2. Prerequisites
 
-**Android:**
+For Android:
 
-*   [Android Debug Bridge (ADB)](https://developer.android.com/studio/releases/platform-tools)
+- **[Android Debug Bridge (ADB)](https://developer.android.com/studio/releases/platform-tools)**: A tool to connect to your device.
 
-**iOS:**
+For iOS:
 
-*   [Xcode](https://developer.apple.com/xcode/)
+- **[Xcode](https://developer.apple.com/xcode/)**: Apple's IDE for iOS development.
 
-**General:**
+Before you begin, ensure you have the following installed:
 
-*   [uv](https://github.com/astral-sh/uv) (Python package manager)
-*   [Maestro](https://maestro.mobile.dev/getting-started/installing-maestro)
+- **[uv](https://github.com/astral-sh/uv)**: A lightning-fast Python package manager.
+- **[Maestro](https://maestro.mobile.dev/getting-started/installing-maestro)**: The framework we use to interact with your device.
 
 #### 3. Installation
 
@@ -169,7 +176,6 @@ Mobile-Use currently supports:
     ```
 
 4.  **Install dependencies:**
-
     ```bash
     # Sync with the locked dependencies for a consistent setup
     uv sync
@@ -177,7 +183,7 @@ Mobile-Use currently supports:
 
 ## 👨‍💻 Usage
 
-To run Mobile-Use, pass your command as an argument:
+To run mobile-use, simply pass your command as an argument.
 
 **Example 1: Basic Command**
 
@@ -187,18 +193,20 @@ python ./src/mobile_use/main.py "Go to settings and tell me my current battery l
 
 **Example 2: Data Scraping**
 
+Extract specific information and get it back in a structured format. For instance, to get a list of your unread emails:
+
 ```bash
 python ./src/mobile_use/main.py \
   "Open Gmail, find all unread emails, and list their sender and subject line" \
   --output-description "A JSON list of objects, each with 'sender' and 'subject' keys"
 ```
 
-> [!NOTE]
-> If you haven't configured a specific model, Mobile-Use will prompt you to choose one from the available options.
+> [!NOTE]  
+> If you haven't configured a specific model, mobile-use will prompt you to choose one from the available options.
 
 ## ❤️ Contributing
 
-We welcome contributions!  Please see our **[Contributing Guidelines](CONTRIBUTING.md)** to get started.
+We love contributions! Whether you're fixing a bug, adding a feature, or improving documentation, your help is welcome. Please read our **[Contributing Guidelines](CONTRIBUTING.md)** to get started.
 
 ## ⭐ Star History
 

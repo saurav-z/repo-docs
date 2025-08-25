@@ -1,73 +1,113 @@
-# OpenEvolve: Unleash AI-Driven Code Evolution for Algorithmic Discovery 🚀
+# OpenEvolve: Evolving Code with AI for Algorithmic and Scientific Discovery
 
-**OpenEvolve is an open-source evolutionary coding agent that leverages the power of LLMs to automatically optimize and discover algorithms, empowering scientific and algorithmic breakthroughs.** ([Original Repo](https://github.com/codelion/openevolve))
+> Unleash the power of AI to automatically optimize and discover algorithms; start your journey with [OpenEvolve](https://github.com/codelion/openevolve).
 
-![OpenEvolve Logo](openevolve-logo.png)
+[![OpenEvolve Logo](openevolve-logo.png)](https://github.com/codelion/openevolve)
+
+OpenEvolve is an open-source, cutting-edge evolutionary coding agent that leverages Large Language Models (LLMs) to automate the optimization and discovery of algorithms. Building upon the foundations of AlphaEvolve, OpenEvolve pushes beyond its predecessor, providing a robust platform for scientific and algorithmic breakthroughs.
 
 ## Key Features
 
-*   **Evolutionary Coding Agent:** LLM-guided evolution of complete code files, not just functions.
-*   **Distributed Controller Loop:** Asynchronous pipeline for coordinating LLMs, evaluators, and databases.
-*   **Program Database:** Storage and retrieval of evolved programs with comprehensive evaluation metrics.
-*   **Context-Rich Prompting:** Dynamic prompts incorporating past programs, scores, and problem descriptions.
-*   **LLM Ensemble:** Leverages multiple language models for superior code generation.
-*   **Multi-Objective Optimization:** Simultaneously optimizes multiple evaluation metrics.
-*   **Reproducibility & Control:** Comprehensive seeding for deterministic results, ensuring scientific rigor.
-*   **Advanced LLM Integration:** Supports various LLM providers (OpenAI, Anthropic, local models) with [optillm](https://github.com/codelion/optillm) integration for advanced features like Mixture of Agents (MoA).
-*   **Evolution Algorithm Innovations:** MAP-Elites, Island-Based Evolution, and advanced prompt engineering.
-*   **Robust Evaluation & Feedback Systems:** Artifacts side-channel to capture build errors, profiling, and AI-driven code quality assessment.
-*   **Multi-Language & Platform Support:** Python, Rust, R, Metal Shaders, and platform-specific optimization (Apple Silicon GPU kernels, CUDA, CPU tuning).
-*   **Developer-Friendly Tools:** Interactive web-based visualization, CLI, and comprehensive examples.
-*   **Performance & Scalability:** Process-based parallelism, resource management, and efficient storage.
+*   **Evolutionary Coding Agent**: LLM-driven evolution of complete code files, not just functions.
+*   **Distributed Controller Loop**: Asynchronous pipeline that efficiently coordinates LLMs, evaluators, and a program database.
+*   **Program Database**: Secure storage and sampling of evolved programs accompanied by evaluation metrics.
+*   **Prompt Sampling**: Context-rich prompts that incorporate past programs, performance scores, and detailed problem descriptions.
+*   **LLM Ensemble**: Utilizing multiple language models for improved code generation.
+*   **Multi-objective Optimization**: Optimizing across various evaluation metrics simultaneously.
+*   **Checkpoint System**: Automatic saving and resuming of the evolution process.
 
-## Overview
+### Scientific Reproducibility
 
-OpenEvolve is a powerful evolutionary coding agent designed for automating algorithm optimization and scientific discovery. Built upon the foundation of AlphaEvolve, OpenEvolve has evolved far beyond, offering advanced features for reproducibility, multi-language support, sophisticated evaluation pipelines, and seamless integration with cutting-edge LLM optimization techniques. It serves as a leading research platform for evolutionary AI and a practical tool for automated code optimization.
+*   **Comprehensive Seeding**: Ensures deterministic reproduction with hash-based component isolation.
+*   **Default Reproducibility**: Enables immediate reproducible results with `seed=42`.
+*   **Granular Control**: Per-component seeding for LLMs, databases, and the evaluation pipeline.
+
+### Advanced LLM Integration
+
+*   **Ensemble Sophistication**: Smartly combines models, incorporating intelligent fallback strategies.
+*   **Test-Time Compute**: Integrates with [optillm](https://github.com/codelion/optillm) for advanced techniques like Mixture of Agents (MoA) and enhanced reasoning.
+*   **Universal API Support**: Compatible with any OpenAI-compatible endpoint (Anthropic, Google, local models).
+*   **Plugin Ecosystem**: Supports `optillm` plugins (e.g., readurls, executecode, z3_solver).
+
+### Evolution Algorithm Innovations
+
+*   **MAP-Elites Implementation**: Employs a quality-diversity algorithm for balanced exploration and exploitation.
+*   **Island-Based Evolution**: Features multiple populations with periodic migration to maintain diversity.
+*   **Inspiration vs. Performance**: Sophisticated prompt engineering that differentiates top performers from diverse inspirations.
+*   **Multi-Strategy Selection**: Incorporates elite, diverse, and exploratory program sampling strategies.
+*   **Adaptive Feature Dimensions**: Default dimensions include complexity & diversity; offers customizable multi-dimensional search spaces.
+
+### Evaluation & Feedback Systems
+
+*   **Artifacts Side-Channel**: Captures build errors, profiling data, and execution feedback for LLM improvements.
+*   **Cascade Evaluation**: Multi-stage testing with progressive complexity for efficient resource use.
+*   **LLM-Based Feedback**: Automated code quality assessment and reasoning capture.
+*   **Comprehensive Error Handling**: Graceful recovery from evaluation failures with detailed diagnostics.
+
+### Multi-Language & Platform Support
+
+*   **Language Agnostic**: Supports Python, Rust, R, Metal shaders, and more.
+*   **Platform Optimization**: Includes optimizations for Apple Silicon GPU kernels, CUDA, and CPU-specific tuning.
+*   **Framework Integration**: Integrates with MLX, PyTorch, and various scientific computing libraries.
+
+### Developer Experience & Tooling
+
+*   **Real-Time Visualization**: Interactive, web-based evolution tree viewer for performance analysis.
+*   **Advanced CLI**: Rich command-line interface for checkpoint management and configuration overrides.
+*   **Comprehensive Examples**: Over 12 diverse examples spanning optimization, machine learning, systems programming, and scientific computing.
+*   **Error Recovery**: Robust checkpoint loading with automatic fixes for common serialization issues.
+
+### Performance & Scalability
+
+*   **Process-Based Parallelism**: True parallel execution that bypasses Python's GIL for CPU-bound tasks.
+*   **Resource Management**: Provides memory limits, timeouts, and resource monitoring.
+*   **Efficient Storage**: Utilizes an optimized database with artifact management and cleanup policies.
 
 ## How It Works
 
-OpenEvolve employs a sophisticated evolutionary pipeline:
+OpenEvolve's evolution loop is a sophisticated orchestration of several key components:
 
-1.  **Enhanced Prompt Sampler:** Creates dynamic prompts including top-performing programs, diverse inspirations, execution artifacts, error feedback, and dynamic documentation (via optillm plugins).
-2.  **Intelligent LLM Ensemble:** Utilizes weighted model combinations for quality/speed tradeoffs, along with test-time compute techniques (MoA, chain-of-thought, reflection) and deterministic selection.
-3.  **Advanced Evaluator Pool:** Implements multi-stage cascade evaluation, artifact collection for detailed feedback, LLM-based code quality assessment, and parallel execution with resource limits.
-4.  **Sophisticated Program Database:** Utilizes MAP-Elites for quality-diversity balance, island-based populations with migration, feature map clustering, and archive management with comprehensive metadata and lineage tracking.
+![OpenEvolve Architecture](openevolve-architecture.png)
 
 ### Core Evolution Loop
 
-1.  **Enhanced Prompt Sampler**: Creates rich prompts containing:
+1.  **Enhanced Prompt Sampler**: Generates rich prompts:
     *   Top-performing programs (for optimization guidance)
     *   Diverse inspiration programs (for creative exploration)
     *   Execution artifacts and error feedback
-    *   Dynamic documentation fetching (via optillm plugins)
+    *   Dynamic documentation fetching (via `optillm` plugins)
 
 2.  **Intelligent LLM Ensemble**:
-    *   Weighted model combinations for quality/speed tradeoffs
-    *   Test-time compute techniques (MoA, chain-of-thought, reflection)
-    *   Deterministic selection with comprehensive seeding
+    *   Weights model combinations for quality/speed tradeoffs.
+    *   Applies test-time compute techniques (MoA, chain-of-thought, reflection).
+    *   Ensures deterministic selection with comprehensive seeding.
 
 3.  **Advanced Evaluator Pool**:
-    *   Multi-stage cascade evaluation
-    *   Artifact collection for detailed feedback
-    *   LLM-based code quality assessment
-    *   Parallel execution with resource limits
+    *   Implements multi-stage cascade evaluation.
+    *   Collects artifacts for detailed feedback.
+    *   Uses LLMs for code quality assessment.
+    *   Executes in parallel with resource limits.
 
 4.  **Sophisticated Program Database**:
-    *   MAP-Elites algorithm for quality-diversity balance
-    *   Island-based populations with migration
-    *   Feature map clustering and archive management
-    *   Comprehensive metadata and lineage tracking
+    *   Utilizes MAP-Elites for quality-diversity balance.
+    *   Employs island-based populations with migration.
+    *   Provides feature map clustering and archive management.
+    *   Offers comprehensive metadata and lineage tracking.
 
-## Island-Based Evolution with Worker Pinning
+### Island-Based Evolution with Worker Pinning
 
-OpenEvolve employs an island-based evolutionary architecture to promote diversity and prevent premature convergence.
+OpenEvolve incorporates an island-based evolutionary architecture to prevent premature convergence and preserve genetic diversity.
 
-### How Islands Work
-*   **Multiple Isolated Populations**: Each island maintains its own population of programs that evolve independently
-*   **Periodic Migration**: Top-performing programs periodically migrate between adjacent islands (ring topology) to share beneficial mutations
-*   **True Population Isolation**: Worker processes are deterministically pinned to specific islands to ensure no cross-contamination during parallel evolution
+#### How Islands Work
+
+*   **Multiple Isolated Populations**: Each island manages an independent population of evolving programs.
+*   **Periodic Migration**: Top programs migrate between islands (ring topology) to share beneficial mutations.
+*   **True Population Isolation**: Worker processes are deterministically pinned to specific islands to prevent cross-contamination during parallel evolution.
 
 #### Worker-to-Island Pinning
+
+Worker-to-island pinning is implemented to ensure isolation during parallel execution:
+
 ```python
 # Workers are distributed across islands using modulo arithmetic
 worker_id = 0, 1, 2, 3, 4, 5, ...
@@ -79,23 +119,24 @@ island_id = worker_id % num_islands
 # Worker 2, 5 → Island 2
 ```
 
-#### Benefits of Worker Pinning:
-*   **Genetic Isolation**: Prevents accidental population mixing between islands during parallel sampling
-*   **Consistent Evolution**: Each island maintains its distinct evolutionary trajectory
-*   **Balanced Load**: Workers are evenly distributed across islands automatically
-*   **Migration Integrity**: Controlled migration happens only at designated intervals, not due to race conditions
+**Benefits of Worker Pinning**:
+*   **Genetic Isolation**: Prevents accidental population mixing.
+*   **Consistent Evolution**: Maintains distinct evolutionary trajectories for each island.
+*   **Balanced Load**: Automatically distributes workers across islands.
+*   **Migration Integrity**: Ensures migrations happen at intervals, preventing race conditions.
 
-#### Automatic Distribution
-The system handles all edge cases automatically:
-*   **More workers than islands**: Multiple workers per island with balanced distribution
-*   **Fewer workers than islands**: Some islands may not have dedicated workers but still participate in migration
-*   **Single island**: All workers sample from the same population (degrades to standard evolution)
+**Automatic Distribution**: Handles all edge cases:
+*   **More workers than islands**: Multiple workers per island with balanced distribution.
+*   **Fewer workers than islands**: Some islands may not have dedicated workers, but still participate in migration.
+*   **Single island**: All workers sample from the same population (degrades to standard evolution).
 
-This architecture ensures that each island develops unique evolutionary pressures and solutions, while periodic migration allows successful innovations to spread across the population without destroying diversity.
+This architecture ensures that each island develops unique evolutionary pressures and solutions, while allowing successful innovations to spread across the population without destroying diversity.
 
 ## Getting Started
 
 ### Installation
+
+To install natively, use:
 
 ```bash
 git clone https://github.com/codelion/openevolve.git
@@ -107,27 +148,35 @@ pip install -e .
 
 #### Setting up LLM Access
 
-OpenEvolve uses the OpenAI SDK, compatible with any OpenAI-compatible API.
+OpenEvolve uses the OpenAI SDK and supports any LLM provider with an OpenAI-compatible API:
 
-1.  **Set the API Key:**
+1.  **Set the API Key**: Export the `OPENAI_API_KEY` environment variable:
 
     ```bash
     export OPENAI_API_KEY=your-api-key-here
     ```
-2.  **Alternative LLM Providers:** Update the `api_base` in `config.yaml`:
 
-    ```yaml
-    llm:
-      api_base: "https://your-provider-endpoint.com/v1"
-    ```
-3.  **Maximum Flexibility with optillm:** Recommended for advanced routing, rate limiting, or using multiple providers. Point `api_base` to your optillm instance:
+2.  **Using Alternative LLM Providers**:
 
-    ```yaml
-    llm:
-      api_base: "http://localhost:8000/v1"
-    ```
+    -   Update the `api_base` in `config.yaml` for providers other than OpenAI (e.g., Anthropic, Cohere, local models):
 
-This setup ensures OpenEvolve integrates seamlessly with various LLM providers.
+        ```yaml
+        llm:
+          api_base: "https://your-provider-endpoint.com/v1"
+        ```
+
+3.  **Maximum Flexibility with optillm**:
+
+    -   For routing, rate limiting, or multiple providers, use [optillm](https://github.com/codelion/optillm).
+
+    -   Point `api_base` to your `optillm` instance:
+
+        ```yaml
+        llm:
+          api_base: "http://localhost:8000/v1"
+        ```
+
+    This setup ensures compatibility with a wide range of LLM providers.
 
 ```python
 import os
@@ -159,8 +208,6 @@ python openevolve-run.py path/to/initial_program.py path/to/evaluator.py --confi
 
 ### Resuming from Checkpoints
 
-OpenEvolve saves checkpoints automatically (default interval: 10 iterations).  Resume runs with:
-
 ```bash
 python openevolve-run.py path/to/initial_program.py path/to/evaluator.py \
   --config path/to/config.yaml \
@@ -170,7 +217,22 @@ python openevolve-run.py path/to/initial_program.py path/to/evaluator.py \
 
 ### Comparing Results Across Checkpoints
 
-Each checkpoint directory contains the best program up to that point.  Compare solutions over time with these examples:
+Each checkpoint directory contains the best program found up to that point, making it easy to compare solutions over time:
+
+```
+checkpoints/
+  checkpoint_10/
+    best_program.py         # Best program at iteration 10
+    best_program_info.json  # Metrics and details
+    programs/               # All programs evaluated so far
+    metadata.json           # Database state
+  checkpoint_20/
+    best_program.py         # Best program at iteration 20
+    ...
+```
+
+You can compare the evolution of solutions by examining the best programs at different checkpoints:
+
 ```bash
 # Compare best programs at different checkpoints
 diff -u checkpoints/checkpoint_10/best_program.py checkpoints/checkpoint_20/best_program.py
@@ -213,56 +275,98 @@ docker run --rm -v $(pwd):/app --network="host" openevolve examples/function_min
 
 ## Configuration
 
-OpenEvolve is highly configurable, see detailed examples and configuration guides in:
-- `configs/default_config.yaml`: Comprehensive configuration with all available options
-- `configs/island_config_example.yaml`: Advanced island-based evolution setup
+OpenEvolve provides extensive configuration options.
+
+```yaml
+# Example configuration showcasing advanced features
+max_iterations: 1000
+random_seed: 42  # Full reproducibility by default
+
+llm:
+  # Advanced ensemble configuration
+  models:
+    - name: "gemini-2.0-flash-lite"
+      weight: 0.7
+    - name: "moa&readurls-gemini-2.0-flash"  # optillm test-time compute
+      weight: 0.3
+  temperature: 0.7
+
+database:
+  # MAP-Elites configuration
+  population_size: 500
+  num_islands: 5  # Island-based evolution
+  migration_interval: 20
+  feature_dimensions: ["complexity", "diversity"]  # Default quality-diversity features
+
+evaluator:
+  # Advanced evaluation features
+  enable_artifacts: true  # Capture execution feedback
+  cascade_evaluation: true  # Multi-stage testing
+  use_llm_feedback: true  # AI-based code quality assessment
+
+prompt:
+  # Sophisticated prompt engineering
+  num_top_programs: 3      # Performance examples
+  num_diverse_programs: 2  # Creative inspiration
+  include_artifacts: true  # Execution feedback
+
+  # Template customization
+  template_dir: null               # Directory for custom prompt templates
+  use_template_stochasticity: true # Enable random variations in prompts
+  template_variations: {}          # Define variation placeholders
+```
+
+Sample configurations are available in the `configs/` directory:
+
+*   `default_config.yaml`: Comprehensive configuration with all options.
+*   `island_config_example.yaml`: Advanced island-based evolution setup.
 
 ### Prompt Engineering Design
 
-OpenEvolve employs a sophisticated prompt engineering approach to optimize LLM learning.
+OpenEvolve employs a sophisticated prompt engineering approach:
 
 #### Program Selection Strategy
 
-The system distinguishes between three types of program examples shown to the LLM:
-1. **Previous Attempts** (`num_top_programs`): Shows only the best performing programs to demonstrate high-quality approaches
-   - Used for the "Previous Attempts" section in prompts
-   - Focused on proven successful patterns
-   - Helps LLM understand what constitutes good performance
-
-2. **Top Programs** (`num_top_programs + num_diverse_programs`): Broader selection including both top performers and diverse approaches
-   - Used for the "Top Performing Programs" section
-   - Includes diverse programs to prevent local optima
-   - Balances exploitation of known good solutions with exploration of novel approaches
-
-3. **Inspirations** (`num_top_programs`): Cross-island program samples for creative inspiration
-   - Derived from other evolution islands to maintain diversity
-   - Count automatically configures based on `num_top_programs` setting
-   - Prevents convergence by exposing LLM to different evolutionary trajectories
+*   **Previous Attempts** (`num_top_programs`): Best performing programs.
+    *   Focuses on successful patterns.
+    *   Helps LLM understand good performance.
+*   **Top Programs** (`num_top_programs + num_diverse_programs`): Top performers plus diverse approaches.
+    *   Includes diverse programs to prevent local optima.
+    *   Balances exploitation and exploration.
+*   **Inspirations** (`num_top_programs`): Cross-island program samples for inspiration.
+    *   Derived from other evolution islands.
+    *   Prevents convergence by exposing different evolutionary trajectories.
 
 #### Design Rationale
-This separation is intentional and serves multiple purposes:
-- **Focused Learning**: Previous attempts show only the best patterns, helping LLM understand quality standards
-- **Diversity Maintenance**: Top programs include diverse solutions to encourage exploration beyond local optima
-- **Cross-Pollination**: Inspirations from other islands introduce novel approaches and prevent stagnation
-- **Configurable Balance**: Adjust `num_top_programs` and `num_diverse_programs` to control exploration vs exploitation
+
+This separation serves multiple purposes:
+
+*   **Focused Learning**: Previous attempts show best practices.
+*   **Diversity Maintenance**: Top programs encourage exploration.
+*   **Cross-Pollination**: Inspirations introduce novel approaches.
+*   **Configurable Balance**: `num_top_programs` and `num_diverse_programs` control exploration vs. exploitation.
 
 ### Template Customization
 
-Enhance code evolution with OpenEvolve's advanced prompt template customization.
+OpenEvolve supports advanced prompt template customization:
 
 #### Custom Templates with `template_dir`
+
 ```yaml
 prompt:
   template_dir: "path/to/your/templates"
 ```
+
 Create `.txt` files in your template directory:
-- `diff_user.txt`
-- `full_rewrite_user.txt`
-- `evolution_history.txt`
-- `top_program.txt`
-- `previous_attempt.txt`
+
+*   `diff_user.txt` - Template for diff-based evolution.
+*   `full_rewrite_user.txt` - Template for full code rewrites.
+*   `evolution_history.txt` - Format for presenting evolution history.
+*   `top_program.txt` - Format for top-performing programs.
+*   `previous_attempt.txt` - Format for previous attempts.
 
 #### Template Variations with Stochasticity
+
 ```yaml
 prompt:
   use_template_stochasticity: true
@@ -277,17 +381,41 @@ prompt:
       - "The evaluation reveals"
 ```
 
+Use variation placeholders in custom templates:
+
+```
+# custom_template.txt
+{greeting}
+{analysis_intro} the following results:
+{metrics}
+```
+
 ### Feature Dimensions in MAP-Elites
 
-Feature dimensions control how programs are organized in the MAP-Elites quality-diversity grid:
+Feature dimensions control program organization in the MAP-Elites grid:
 
 **Default Features**: If `feature_dimensions` is NOT specified in your config, OpenEvolve uses `["complexity", "diversity"]` as defaults.
 
-**Built-in Features**:
+**Built-in Features** (always computed internally by OpenEvolve):
 - **complexity**: Code length (recommended default)
-- **diversity**: Code structure diversity (recommended default)
+- **diversity**: Code structure diversity compared to other programs (recommended default)
 
-**Custom Features**: Return raw values from your evaluator, not bin indices:
+Only `complexity` and `diversity` are used as defaults because they work well across all program types.
+
+**Custom Features**: You can mix built-in features with metrics from your evaluator:
+
+```yaml
+database:
+  feature_dimensions: ["complexity", "performance", "correctness"]  # Mix of built-in and custom
+  # Per-dimension bin configuration (optional)
+  feature_bins:
+    complexity: 10        # 10 bins for complexity
+    performance: 20       # 20 bins for performance (from YOUR evaluator)
+    correctness: 15       # 15 bins for correctness (from YOUR evaluator)
+```
+
+**CRITICAL: Return Raw Values, Not Bin Indices**: For custom feature dimensions, your evaluator must return **raw continuous values**, not pre-computed bin indices. OpenEvolve handles all scaling and binning internally.
+
 ```python
 # ✅ CORRECT: Return raw values
 return {
@@ -303,14 +431,27 @@ return {
     "execution_time": 3        # Pre-computed bin index
 }
 ```
+
 OpenEvolve automatically handles:
 - Min-max scaling to [0,1] range
 - Binning into the specified number of bins
 - Adaptive scaling as the value range expands during evolution
 
+**Important**: OpenEvolve will raise an error if a specified feature is not found in the evaluator's metrics. This ensures your configuration is correct. The error message will show available metrics to help you fix the configuration.
+
+See the [Configuration Guide](configs/default_config.yaml) for a full list of options.
+
+### Default Metric for Program Selection
+
+When comparing and selecting programs, OpenEvolve uses the following priority:
+1. **combined_score**: If your evaluator returns a `combined_score` metric, it will be used as the primary fitness measure
+2. **Average of all metrics**: If no `combined_score` is provided, OpenEvolve calculates the average of all numeric metrics returned by your evaluator
+
+This ensures programs can always be compared even without explicit fitness definitions. For best results, consider having your evaluator return a `combined_score` that represents overall program fitness.
+
 ## Artifacts Channel
 
-Enhance your evolution process with an artifacts side-channel:
+The artifacts side-channel enables evaluators to capture build errors, profiling results, etc., providing better feedback to the LLM.
 
 ```python
 from openevolve.evaluation_result import EvaluationResult
@@ -325,37 +466,95 @@ return EvaluationResult(
 )
 ```
 
+### Configuration
+
+```yaml
+# config.yaml
+evaluator:
+  enable_artifacts: true
+
+prompt:
+  include_artifacts: true
+  max_artifact_bytes: 4096  # 4KB limit in prompts
+  artifact_security_filter: true
+```
+
+```bash
+# Environment variable to disable artifacts
+export ENABLE_ARTIFACTS=false
+```
+
+### Benefits
+
+*   **Faster convergence** - LLMs can see what went wrong and fix it directly
+*   **Better error handling** - Compilation and runtime failures become learning opportunities
+*   **Rich debugging context** - Full stack traces and error messages guide improvements
+*   **Zero overhead** - When disabled, no performance impact on evaluation
+
 ## Examples
 
-Explore the `examples/` directory for OpenEvolve implementations on:
+See the `examples/` directory for examples:
 
 ### Mathematical Optimization
-*   Function Minimization
-*   Circle Packing
+
+#### [Function Minimization](examples/function_minimization/)
+
+Demonstrates evolution from random search to simulated annealing.
+
+#### [Circle Packing](examples/circle_packing/)
+
+Achieves state-of-the-art results.
 
 ### Advanced AI & LLM Integration
-*   Web Scraper with optillm
-*   LLM Prompt Optimization
+
+#### [Web Scraper with optillm](examples/web_scraper_optillm/)
+
+Integration with [optillm](https://github.com/codelion/optillm) for test-time compute optimization.
+
+#### [LLM Prompt Optimization](examples/llm_prompt_optimization/)
+
+Evolving prompts on HuggingFace datasets.
 
 ### Systems & Performance Optimization
-*   MLX Metal Kernel Optimization
-*   Rust Adaptive Sort
+
+#### [MLX Metal Kernel Optimization](examples/mlx_metal_kernel_opt/)
+
+Automated discovery of custom GPU kernels for Apple Silicon.
+
+#### [Rust Adaptive Sort](examples/rust_adaptive_sort/)
+
+Evolution of sorting algorithms.
 
 ### Scientific Computing & Discovery
-*   Symbolic Regression
-*   R Robust Regression
-*   Signal Processing
+
+#### [Symbolic Regression](examples/symbolic_regression/)
+
+Automated discovery of mathematical expressions.
+
+#### [R Robust Regression](examples/r_robust_regression/)
+
+Developing robust regression methods.
+
+#### [Signal Processing](examples/signal_processing/)
+
+Automated design of digital filters.
 
 ### Web and Integration Examples
-*   Online Judge Programming
-*   LM-Eval Integration
+
+#### [Online Judge Programming](examples/online_judge_programming/)
+
+Automated competitive programming.
+
+#### [LM-Eval Integration](examples/lm_eval/)
+
+Working with standard ML evaluation harnesses.
 
 ## Preparing Your Own Problems
 
-1.  Mark code sections to evolve with `# EVOLVE-BLOCK-START` and `# EVOLVE-BLOCK-END`.
-2.  Create an evaluation function returning a dictionary of metrics.
-3.  Configure OpenEvolve with appropriate parameters.
-4.  Run the evolution process.
+1.  **Mark code sections** with `# EVOLVE-BLOCK-START` and `# EVOLVE-BLOCK-END`.
+2.  **Create an evaluation function**.
+3.  **Configure OpenEvolve**.
+4.  **Run the evolution**.
 
 ## Citation
 
@@ -367,3 +566,4 @@ Explore the `examples/` directory for OpenEvolve implementations on:
   publisher = {GitHub},
   url = {https://github.com/codelion/openevolve}
 }
+```

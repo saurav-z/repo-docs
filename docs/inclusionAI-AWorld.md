@@ -1,3 +1,4 @@
+<!-- omit in the summary -->
 <div align="center">
 
 # AWorld: The Agent Runtime for Self-Improvement
@@ -13,6 +14,8 @@
 [![Discord][discord-image]][discord-url]
 [![License: MIT][license-image]][license-url]
 [![DeepWiki][deepwiki-image]][deepwiki-url]
+<!-- [![arXiv][arxiv-image]][arxiv-url] -->
+
 </h4>
 
 <h4 align="center">
@@ -27,26 +30,28 @@
 </h4>
 
 ---
+<!-- **AWorld (Agent World)** is a next-generation framework for agent learning with three key characteristics: 
+1. **Plug-and-Play:** Box up complex modules with bulletproof protocols and zero-drama state control.
+2. **Cloud-Native Velocity:** Train smarter agents that evolve their own brains—prompts, workflows, memory, and tools—on the fly.  
+3. **Self-Awareness**: Synthesize the agent's own knowledge and experience to achieve ultimate self-improvement. -->
 
-**Unleash the power of self-improving AI agents with AWorld, the next-generation framework designed for continuous evolution and autonomous learning.  Access the original repo [here](https://github.com/inclusionAI/AWorld).**
+![](./readme_assets/heading_banner.png)
 
-AWorld empowers AI agents to continuously learn and improve by synthesizing their own knowledge and experiences. Key features include:
+## AWorld: Powering Self-Improving AI Agents
 
-*   ✅ **Plug-and-Play Agent Construction:** Easily build and deploy complex agents with robust protocols.
-*   ✅ **Cloud-Native Scalability:** Train smarter agents that evolve their own brains, prompts, workflows, memory, and tools on the fly.
-*   ✅ **Self-Awareness & Continuous Learning:**  Leverage the agent's own knowledge and experience to achieve ultimate self-improvement.
+**AWorld is a cutting-edge framework that enables the creation of self-improving AI agents by leveraging multi-agent systems, cloud-native scalability, and the synthesis of knowledge and experience.** This allows AI agents to continuously evolve and enhance their capabilities.
+
+**Key Features:**
+
+*   **Multi-Agent Systems (MAS):** Build complex, interacting agent societies using plug-and-play protocols and robust context management.
+*   **Intelligence Beyond a Single Model:** Generate high-quality feedback and diverse synthetic training data that fuel individual agent evolution.
+*   **Cloud-Native for Diversity & Scale:** Deliver the high concurrency and scalability for training smarter agents and achieving self-improvement.
+
+AWorld empowers you to build tool-using agents, orchestrate sophisticated multi-agent systems, train agents effectively, and synthesize the high-quality data required for continuous agent evolution – all converging towards autonomous self-improvement.
 
 ---
 
-## Key Features
-
-*   **Multi-Agent Systems (MAS):** Build intricate, interactive agent societies using our ready-to-use protocols and context management.
-*   **Intelligence Beyond a Single Model:**  Generate high-quality feedback and create diverse synthetic training data to fuel individual agent evolution.
-*   **Cloud-Native Architecture:** Benefit from high concurrency and scalability to train smarter agents and achieve self-improvement efficiently.
-
----
-
-## Collective Intelligence Achievements 🚀
+**Collective Intelligence Achievements 🚀**
 
 Demonstrating collective intelligence across diverse domains. Join us in the ongoing projects!
 
@@ -149,6 +154,8 @@ Demonstrating collective intelligence across diverse domains. Join us in the ong
 
 ## 🏃‍♀️ Quickstart
 
+A step-by-step guide to get you started with AWorld.
+
 ### Prerequisites
 
 > [!TIP]
@@ -156,13 +163,12 @@ Demonstrating collective intelligence across diverse domains. Join us in the ong
 
 ```bash
 git clone https://github.com/inclusionAI/AWorld && cd AWorld
-
 python setup.py install
 ```
 
-### Hello world examples
+### Hello World Examples
 
-We introduce the concepts of `Agent` and `Runners` to help you get started quickly.
+#### Single Agent
 
 ```python
 import os
@@ -181,7 +187,7 @@ result = Runners.sync_run(
 )
 ```
 
-In parallel, we introduce the concepts of `Swarm` to construct a team of agents.
+#### Multi-Agent (Swarm)
 
 ```python
 import os
@@ -207,7 +213,7 @@ result = Runners.sync_run(
 )
 ```
 
-Finally, run your own agents or teams
+#### Run Agents
 
 ```bash
 # Set LLM credentials
@@ -223,7 +229,6 @@ python /path/to/agents/or/teams
 <summary style="font-size: 1.2em;font-weight: bold;"> 🌏 Click to View Advanced Usages </summary>
 
 ### Pass AgentConfig Explicitly
-
 ```python
 import os
 
@@ -266,7 +271,6 @@ result = Runners.sync_run(
 ```
 
 ### Agent Equipped with MCP Tools
-
 ```python
 import os
 
@@ -309,7 +313,6 @@ result = Runners.sync_run(
 ```
 
 ### Agent Integrated with Memory
-
 It is recommended to use `MemoryFactory` to initialize and access Memory instances.
 
 ```python
@@ -335,7 +338,6 @@ memory = MemoryFactory.instance()
 ```
 
 `MemoryConfig` allows you to integrate different embedding models and vector databases.
-
 ```python
 import os
 
@@ -367,9 +369,7 @@ MemoryFactory.init(
 ```
 
 ### Mutil-Agent Systems
-
 We present a classic topology: `Leader-Executor`.
-
 ```python
 """
 Leader-Executor topology:
@@ -388,17 +388,13 @@ exec1 = Agent(name="exec1", conf=agent_conf)
 exec2 = Agent(name="exec2", conf=agent_conf)
 swarm = TeamSwarm(plan, exec1, exec2)
 ```
-
 Optionally, you can use `Handsoff` mechanism to customize your own topology.
-
 ```python
 from aworld.core.agent.swarm import HandoffSwarm
 swarm = HandoffSwarm((plan, exec1), (plan, exec2))
 ```
 
 </details>
-
----
 
 ## 🏗️ Architecture Design Principles
 
@@ -471,17 +467,15 @@ git apply 0001-feat-add-agent-training-support-with-aworld-server.patch
 ```
 </details>
 
----
-
 ## 🧩 Applications
 
 AWorld allows you to construct **agents** and **multi-agent systems** with ease. 
 
 ### Multi-Agent Systems for Model Evolutions
 
-AWorld aims to reach the limitations of models and continuously push intelligence forward by constructing diverse runtime environments, such as tools, agents, and models. 
+AWorld aims to reach the limitations of models and continuously push intelligence forward by constructing diverse runtime environments, such as tools, agents, and models.
 
-The following is a list of successful proposals (with open-source models, technical reports, and code):
+The following is a list of successful proposal (with open-source models, technical reports, and code):
 
 | Category | Runtime | <div style="width:400px">Performance</div> | <div style="width:100px;">Key Information</div> |
 | --------------- | --------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------- |
@@ -490,18 +484,16 @@ The following is a list of successful proposals (with open-source models, techni
 
 ### Multi-Agent Systems for Applications
 
-AWorld's plug-and-play MAS architecture enables **real-world web application development** beyond agent training. 
+AWorld's plug-and-play MAS architecture enables **real-world web application development** beyond agent training.
 
 Build production-ready systems that handle complex tasks through:
 
-*   **Code generation & execution**
-*   **Browser automation & tool use**
-*   **Multimodal understanding & generation**
+*   Code generation & execution
+*   Browser automation & tool use
+*   Multimodal understanding & generation
 *   And many more to emerge!
 
 See [Appendix: Web Client Usage](#appendix-web-client-usage) for GAIA implementation examples.
-
----
 
 ## Contributing
 
@@ -521,19 +513,13 @@ For academic citations or wish to contact us, please use the following BibTeX en
 }
 ```
 
----
-
 ## Star History
 ![](https://api.star-history.com/svg?repos=inclusionAI/AWorld&type=Date)
 
----
-
 ## Appendix: Web Client Usage
-
 ![GAIA Agent Runtime Demo](readme_assets/gaia_demo.gif)
 
 Your project structure should look like this:
-
 ```text
 agent-project-root-dir/
     agent_deploy/
@@ -652,7 +638,6 @@ export LLM_BASE_URL="https://api.openai.com/v1"  # Optional for OpenAI
 ```
 
 Launch Your Agent:
-
 ```shell
 # Option 1: Launch with Web UI
 aworld web
@@ -712,5 +697,3 @@ Success! Your agent is now running and ready to chat!
 [Backward]: https://img.shields.io/badge/Backward-7B68EE
 [Code]: https://img.shields.io/badge/Code-FF6B6B
 [Paper]: https://img.shields.io/badge/Paper-4ECDC4
-
-<!-- resource section end -->

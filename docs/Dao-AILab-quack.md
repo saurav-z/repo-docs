@@ -1,28 +1,28 @@
-# QuACK: Accelerate Your AI Workflows with CuTe Kernels 🦆
+# 🦆 QuACK: Accelerate Your AI Workflows with CuTe Kernels 🦆
 
-**Supercharge your AI computations with QuACK, a collection of high-performance kernels written in the CuTe-DSL, optimized for speed and efficiency.**  Explore the QuACK kernels to unlock the full potential of your AI hardware.  See the original repository [here](https://github.com/Dao-AILab/quack).
+**Unleash blazing-fast performance for your AI tasks with QuACK, a library of optimized kernels written in the CuTe-DSL.** ([View on GitHub](https://github.com/Dao-AILab/quack))
 
-## Key Features of QuACK
+## Key Features
 
-*   **Optimized Performance:**  Leverage kernels written in the CuTe-DSL for blazing-fast AI computations.
-*   **Diverse Kernel Suite:** Includes a growing library of essential kernels for deep learning tasks.
-*   **Easy Installation:** Install QuACK with a simple pip command.
-*   **Python Integration:** Seamlessly integrate QuACK kernels into your Python projects.
-*   **Optimized for NVIDIA Hardware:** Designed to take advantage of NVIDIA H100 and B200 GPUs.
+*   **Optimized Kernels:** Leverage highly-tuned kernels for common AI operations.
+*   **CuTe-DSL:** Built using the CuTe Domain-Specific Language for performance and flexibility.
+*   **Easy Installation:** Simple pip installation.
+*   **Comprehensive Documentation:** Get detailed explanations and usage examples.
+*   **High Performance:** Experience significant speed improvements with memory-bound kernels.
 
-## Available Kernels
+## Kernels
 
-QuACK offers a range of optimized kernels, with more on the way:
+QuACK provides optimized kernels for the following operations:
 
-*   🦆 RMSNorm (Forward and Backward)
-*   🦆 Softmax (Forward and Backward)
-*   🦆 Cross Entropy (Forward and Backward)
-*   🦆 Layernorm (Forward)
-*   **Upcoming:** 🦆 Rotary (Forward and Backward)
+*   RMSNorm forward + backward
+*   Softmax forward + backward
+*   Cross entropy forward + backward
+*   Layernorm forward
+*   (Upcoming) Rotary forward + backward
 
 ## Installation
 
-Getting started with QuACK is simple:
+Install QuACK using pip:
 
 ```bash
 pip install quack-kernels
@@ -30,38 +30,41 @@ pip install quack-kernels
 
 ## Requirements
 
-Ensure your environment meets the following requirements:
+Ensure your environment meets these requirements:
 
-*   NVIDIA H100 or B200 GPU
-*   CUDA Toolkit 12.9+
+*   H100 or B200 GPU
+*   CUDA toolkit 12.9+
 *   Python 3.12
 
 ## Usage
 
-Import and utilize QuACK kernels effortlessly within your Python code:
+Import and utilize the kernels in your Python code:
 
 ```python
 from quack import rmsnorm, softmax, cross_entropy
 ```
 
-## Documentation & Performance Insights
+## Performance & Documentation
 
-Dive deeper into the performance benefits and technical details:
+Learn more about the performance benefits and implementation details in our resources:
 
-*   **Blog Post:**  Explore our comprehensive [blogpost](media/2025-07-10-membound-sol.md) to see how to get memory-bound kernels to speed-of-light, right in the comfort of Python thanks to the [CuTe-DSL](https://docs.nvidia.com/cutlass/media/docs/pythonDSL/cute_dsl_general/dsl_introduction.html).
-*   **Performance Benchmarks:**
+*   **Blog Post:** Detailed explanation on optimizing memory-bound kernels:  [blogpost](media/2025-07-10-membound-sol.md) (link in original)
+*   **CuTe-DSL Documentation:** Explore the CuTe-DSL used to build these kernels: [CuTe-DSL](https://docs.nvidia.com/cutlass/media/docs/pythonDSL/cute_dsl_general/dsl_introduction.html)
 
-    <div align="center">
-    <figure>
-      <img
-      src="media/bf16_kernel_benchmarks_single_row.svg"
-      >
-    </figure>
-    </div>
+<!-- Image insertion with alt text and caption -->
+<div align="center">
+<figure>
+  <img
+  src="media/bf16_kernel_benchmarks_single_row.svg"
+  alt="BF16 Kernel Performance Benchmarks"
+  >
+  <figcaption>BF16 Kernel Performance Benchmarks</figcaption>
+</figure>
+</div>
 
 ## Development
 
-To set up your development environment:
+To set up a development environment:
 
 ```bash
 pip install -e '.[dev]'

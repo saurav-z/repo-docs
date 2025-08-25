@@ -1,74 +1,77 @@
-<!-- theHarvester Logo -->
-<img src="https://github.com/laramies/theHarvester/blob/master/theHarvester-logo.webp" alt="theHarvester Logo" width="200">
+# theHarvester: Your Essential OSINT Reconnaissance Tool
 
-<!-- Badges -->
-[![TheHarvester CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Python%20CI/badge.svg)](https://github.com/laramies/theHarvester/actions/workflows/python-app.yml)
-[![TheHarvester Docker Image CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Docker%20Image%20CI/badge.svg)](https://github.com/laramies/theHarvester/actions/workflows/docker-image.yml)
+**Uncover a domain's digital footprint and identify potential vulnerabilities with theHarvester, a powerful open-source intelligence (OSINT) gathering tool.**  [Go to the GitHub Repository](https://github.com/laramies/theHarvester)
+
+![theHarvester](https://github.com/laramies/theHarvester/blob/master/theHarvester-logo.webp)
+
+[![TheHarvester CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Python%20CI/badge.svg)]
+[![TheHarvester Docker Image CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Docker%20Image%20CI/badge.svg)]
 [![Rawsec's CyberSecurity Inventory](https://inventory.raw.pm/img/badges/Rawsec-inventoried-FF5050_flat_without_logo.svg)](https://inventory.raw.pm/)
-
-# theHarvester: Open Source Intelligence Gathering Tool
-
-**Uncover a domain's digital footprint with theHarvester, a powerful OSINT tool for reconnaissance and penetration testing.** Explore the original repository at: [https://github.com/laramies/theHarvester](https://github.com/laramies/theHarvester)
 
 ## Key Features
 
-*   **Comprehensive OSINT Gathering:** Collects valuable information like names, emails, IPs, subdomains, and URLs.
-*   **Multiple Data Sources:** Leverages a wide range of public resources for comprehensive data collection.
-*   **Passive & Active Modules:** Utilizes both passive and active techniques for in-depth reconnaissance.
-*   **Simple & User-Friendly:** Easy to use, even for those new to OSINT.
-*   **Python-Based:** Written in Python, making it versatile and easy to extend.
+*   **Comprehensive OSINT Gathering:** Collects a wide range of information, including:
+    *   Names
+    *   Emails
+    *   IP Addresses
+    *   Subdomains
+    *   URLs
+
+*   **Multiple Public Resource Integration:** Leverages various search engines and data sources to expand reconnaissance efforts.
+*   **Passive and Active Modules:** Includes both passive modules (search engine queries) and active modules (DNS brute force, screenshots) to gather information.
+*   **API Key Integration:** Seamlessly integrates with services requiring API keys for enhanced data collection.
+*   **Easy to Use:**  Simple command-line interface for quick and effective information gathering.
+*   **Actively Maintained:**  Regular updates and improvements to stay current with the latest OSINT techniques.
 
 ## Installation and Setup
 
-### Prerequisites
-*   Python 3.12 or higher.
+1.  **Prerequisites:**
+    *   Python 3.12 or higher.
 
-### Installation Steps:
-
-1.  **Install `uv` (optional):**
+2.  **Install `uv` (recommended):**
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
 
-2.  **Clone the Repository:**
+3.  **Clone the Repository:**
     ```bash
     git clone https://github.com/laramies/theHarvester
     cd theHarvester
     ```
 
-3.  **Install Dependencies:**
+4.  **Install Dependencies and Create a Virtual Environment:**
     ```bash
     uv sync
     ```
 
-4.  **Run theHarvester:**
+5.  **Run theHarvester:**
     ```bash
     uv run theHarvester
     ```
 
-### Development
+## Development
 
-To set up for development:
+To install development dependencies:
+```bash
+uv sync --extra dev
+```
 
-1.  **Install Development Dependencies:**
-    ```bash
-    uv sync --extra dev
-    ```
+To run tests:
+```bash
+uv run pytest
+```
 
-2.  **Run Tests:**
-    ```bash
-    uv run pytest
-    ```
+To run linting and formatting:
+```bash
+uv run ruff check
+```
+```bash
+uv run ruff format
+```
 
-3.  **Lint and Format:**
-    ```bash
-    uv run ruff check
-    uv run ruff format
-    ```
+## Passive Modules
 
-## Passive Modules (Data Sources)
-
-theHarvester integrates with numerous services, offering a broad spectrum of data for reconnaissance:
+theHarvester utilizes a variety of passive modules, including:
 
 *   baidu
 *   bevigil
@@ -118,8 +121,7 @@ theHarvester integrates with numerous services, offering a broad spectrum of dat
 
 ## Modules Requiring API Keys
 
-To unlock the full potential of theHarvester, some modules require API keys. Documentation on setting up API keys is available at: [https://github.com/laramies/theHarvester/wiki/Installation#api-keys](https://github.com/laramies/theHarvester/wiki/Installation#api-keys)
-
+For access to advanced features, the following modules require API keys. Documentation to setup API keys can be found at - https://github.com/laramies/theHarvester/wiki/Installation#api-keys
 *   bevigil
 *   brave
 *   bufferoverun
@@ -148,18 +150,23 @@ To unlock the full potential of theHarvester, some modules require API keys. Doc
 *   whoisxml
 *   zoomeye
 
-## Get Involved
+## Contact & Contributions
 
-### Contact
-*   Christian Martorella @laramies -  [![Twitter Follow](https://img.shields.io/twitter/follow/laramies.svg?style=social&label=Follow)](https://twitter.com/laramies) cmartorella@edge-security.com
-*   Matthew Brown @NotoriousRebel1 - [![Twitter Follow](https://img.shields.io/twitter/follow/NotoriousRebel1.svg?style=social&label=Follow)](https://twitter.com/NotoriousRebel1)
-*   Jay "L1ghtn1ng" Townsend @jay_townsend1 - [![Twitter Follow](https://img.shields.io/twitter/follow/jay_townsend1.svg?style=social&label=Follow)](https://twitter.com/jay_townsend1)
+*   Christian Martorella @laramies:
+    *   [![Twitter Follow](https://img.shields.io/twitter/follow/laramies.svg?style=social&label=Follow)](https://twitter.com/laramies)
+    *   cmartorella@edge-security.com
+*   Matthew Brown @NotoriousRebel1:
+    *   [![Twitter Follow](https://img.shields.io/twitter/follow/NotoriousRebel1.svg?style=social&label=Follow)](https://twitter.com/NotoriousRebel1)
+*   Jay "L1ghtn1ng" Townsend @jay_townsend1:
+    *   [![Twitter Follow](https://img.shields.io/twitter/follow/jay_townsend1.svg?style=social&label=Follow)](https://twitter.com/jay_townsend1)
 
-### Main Contributors
-*   Matthew Brown @NotoriousRebel1 - [![Twitter Follow](https://img.shields.io/twitter/follow/NotoriousRebel1.svg?style=social&label=Follow)](https://twitter.com/NotoriousRebel1)
-*   Jay "L1ghtn1ng" Townsend @jay_townsend1 - [![Twitter Follow](https://img.shields.io/twitter/follow/jay_townsend1.svg?style=social&label=Follow)](https://twitter.com/jay_townsend1)
-*   Lee Baird @discoverscripts -  [![Twitter Follow](https://img.shields.io/twitter/follow/discoverscripts.svg?style=social&label=Follow)](https://twitter.com/discoverscripts)
+## Main Contributors
 
-### Thanks
+*   Matthew Brown @NotoriousRebel1
+*   Jay "L1ghtn1ng" Townsend @jay_townsend1
+*   Lee Baird @discoverscripts
+
+## Acknowledgements
+
 *   John Matherly - Shodan project
 *   Ahmed Aboul Ela - subdomain names dictionaries (big and small)

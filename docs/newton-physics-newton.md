@@ -3,30 +3,39 @@
 [![codecov](https://codecov.io/gh/newton-physics/newton/graph/badge.svg?token=V6ZXNPAWVG)](https://codecov.io/gh/newton-physics/newton)
 [![Push Events - AWS GPU Tests](https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml/badge.svg)](https://github.com/newton-physics/newton/actions/workflows/push_aws_gpu_tests.yml)
 
-# Newton
+# Newton: GPU-Accelerated Physics Simulation for Robotics
+
+**Newton** is a cutting-edge, GPU-accelerated physics simulation engine designed to empower robotics researchers and simulation experts with unparalleled speed and flexibility.  [View the original repository](https://github.com/newton-physics/newton).
 
 **⚠️ Prerelease Software ⚠️**
 
 **This project is in active alpha development.** This means the API is unstable, features may be added or removed, and
 breaking changes are likely to occur frequently and without notice as the design is refined.
 
-Newton is a GPU-accelerated physics simulation engine built upon [NVIDIA Warp](https://github.com/NVIDIA/warp),
-specifically targeting roboticists and simulation researchers.
-It extends and generalizes Warp's existing `warp.sim` module, integrating
-[MuJoCo Warp](https://github.com/google-deepmind/mujoco_warp) as a primary backend.
-Newton emphasizes GPU-based computation, differentiability, and user-defined extensibility, facilitating rapid iteration
-and scalable robotics simulation.
+## Key Features
 
-Newton is maintained by [Disney Research](https://www.disneyresearch.com/), [Google DeepMind](https://deepmind.google/),
-and [NVIDIA](https://www.nvidia.com/).
+*   **GPU-Accelerated Performance:** Leverage the power of NVIDIA GPUs for blazing-fast physics simulations.
+*   **Differentiable Simulation:** Supports differentiable operations for advanced applications like reinforcement learning and control.
+*   **Extensible Design:**  Designed for user extensibility, allowing you to customize and integrate new features easily.
+*   **MuJoCo Integration:** Integrates with MuJoCo Warp for robust and reliable simulation backends.
+*   **Robotics-Focused:** Specifically tailored for the needs of robotics researchers and simulation developers.
 
-## Development
+## Core Technologies
 
-See the [installation guide](https://newton-physics.github.io/newton/guide/installation.html) for instructions on how to set up and get started.
+Newton is built upon [NVIDIA Warp](https://github.com/NVIDIA/warp).
+
+## Getting Started
+
+Refer to the [installation guide](https://newton-physics.github.io/newton/guide/installation.html) for detailed instructions on how to set up and start using Newton.
 
 ## Examples
 
-## Basic Examples
+Explore the capabilities of Newton with these examples, showcasing various simulation scenarios:
+
+### Basic Examples
+
+<details>
+<summary>Click to expand</summary>
 
 <table>
   <tr>
@@ -86,9 +95,12 @@ See the [installation guide](https://newton-physics.github.io/newton/guide/insta
     </td>
   </tr>
 </table>
+</details>
 
-## Cloth Examples
+### Cloth Examples
 
+<details>
+<summary>Click to expand</summary>
 <table>
   <tr>
     <td align="center" width="33%">
@@ -119,9 +131,12 @@ See the [installation guide](https://newton-physics.github.io/newton/guide/insta
     </td>
   </tr>
 </table>
+</details>
 
-## MPM Examples
+### MPM Examples
 
+<details>
+<summary>Click to expand</summary>
 <table>
   <tr>
     <td align="center" width="33%">
@@ -148,10 +163,12 @@ See the [installation guide](https://newton-physics.github.io/newton/guide/insta
     </td>
   </tr>
 </table>
+</details>
 
+### Selection Examples
 
-## Selection Examples
-
+<details>
+<summary>Click to expand</summary>
 <table>
   <tr>
     <td align="center" width="33%">
@@ -182,6 +199,7 @@ See the [installation guide](https://newton-physics.github.io/newton/guide/insta
     </td>
   </tr>
 </table>
+</details>
 
 ## Example Options
 
@@ -212,3 +230,7 @@ Some examples may add additional arguments (see their respective source files fo
 
     # Multiple arguments
     python -m newton.examples basic_viewer --viewer gl --num-frames 500 --device cpu
+
+## Contributors
+
+Newton is maintained by [Disney Research](https://www.disneyresearch.com/), [Google DeepMind](https://deepmind.google/), and [NVIDIA](https://www.nvidia.com/).

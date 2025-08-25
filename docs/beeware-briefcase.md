@@ -1,10 +1,8 @@
-<p align="center">
-  <img src="https://beeware.org/project/briefcase/briefcase.png" width="72" alt="Briefcase Logo" />
-</p>
+<a href="https://beeware.org/project/briefcase/"><img src="https://beeware.org/project/briefcase/briefcase.png" width="72" alt="Briefcase Logo" /></a>
 
 # Briefcase: Turn Your Python Code into Native Apps
 
-**Briefcase empowers Python developers to effortlessly transform their projects into standalone, native applications for various platforms.**  Visit the [Briefcase GitHub Repository](https://github.com/beeware/briefcase) to learn more.
+Briefcase is a powerful tool that effortlessly transforms your Python projects into standalone, native applications for various platforms. 
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
 [![PyPI Version](https://img.shields.io/pypi/v/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
@@ -15,53 +13,57 @@
 
 ## Key Features
 
-*   **Cross-Platform Compatibility:** Package your Python projects for a wide range of operating systems.
-*   **Native Application Generation:** Create standalone applications that run natively on each platform.
-*   **Supported Platforms:**
+*   **Cross-Platform Compatibility:** Package your Python projects for a wide range of operating systems and devices.
+*   **Target Platforms:**
     *   macOS
     *   Windows
     *   Linux
     *   iOS (iPhone/iPad)
     *   Android
-    *   Web (Browser-based apps)
-*   **Future Platform Support:** AppleTV, watchOS, and wearOS deployment are planned.
+    *   Web (browser-based applications)
+*   **Future Support:** Planned deployments for AppleTV, watchOS, and wearOS.
+*   **Easy to Use:** Simple command-line interface for straightforward packaging.
 
 ## Getting Started
 
-Install Briefcase with a simple pip command:
+Install Briefcase quickly using pip:
 
 ```bash
 python -m pip install briefcase
 ```
 
-Explore the [BeeWare tutorial](https://docs.beeware.org) for a comprehensive guide on creating and packaging applications using Briefcase.
+For a comprehensive introduction, explore the [BeeWare tutorial](https://docs.beeware.org), which guides you through building and packaging a new application with Briefcase.
 
 ## Financial Support
 
-The BeeWare project thrives thanks to the generous support of its financial members, including:
+The BeeWare project is sustained by the generous support of financial members and individual contributors. Consider supporting the project!
 
 [![Anaconda logo](https://beeware.org/community/members/anaconda/anaconda-large.png)](https://anaconda.com/)
 
 Anaconda Inc. - Advancing AI through open source.
 
-Support us by becoming a [financial member](https://beeware.org/community/members/)!
+Learn more about supporting the project [here](https://beeware.org/community/members/).
 
 ## Documentation
 
-Comprehensive documentation for Briefcase is available on [Read The Docs](https://briefcase.readthedocs.io).
+Detailed documentation for Briefcase can be found on [Read The Docs](https://briefcase.readthedocs.io).
 
-## Community
+## Community and Support
 
-Connect with the Briefcase and BeeWare community:
+Connect with the BeeWare community for support and discussions:
 
 *   [@beeware@fosstodon.org on Mastodon](https://fosstodon.org/@beeware)
 *   [Discord](https://beeware.org/bee/chat/)
-*   Briefcase [GitHub Discussions](https://github.com/beeware/briefcase/discussions)
+*   Briefcase [GitHub Discussions forum](https://github.com/beeware/briefcase/discussions)
 
-We encourage a welcoming and respectful environment, adhering to our [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/).
+We maintain a welcoming and respectful community, adhering to the [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/).
 
 ## Contributing
 
-Report any issues or bugs on [GitHub](https://github.com/beeware/briefcase/issues).
+Encountered an issue?  Report it on [GitHub](https://github.com/beeware/briefcase/issues).
 
-Contribute to the project by following our [contribution guide](https://briefcase.readthedocs.io/en/latest/how_to/contribute/index.html).
+Want to contribute?  Consult the [contribution guide](https://briefcase.readthedocs.io/en/latest/how_to/contribute/index.html) to set up your development environment and understand contribution requirements.
+
+## Explore the Source Code
+
+Find the source code for Briefcase on [GitHub](https://github.com/beeware/briefcase).

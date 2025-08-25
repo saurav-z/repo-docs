@@ -4,40 +4,22 @@
   </a>
 </p>
 
-# Sentry: Debugging Platform for Developers
+# Sentry: The Debugging Platform That Fixes Code Faster
 
-**Sentry helps developers detect, trace, and fix errors in their applications faster than ever before, ensuring a smooth user experience.**
-
-## What is Sentry?
-
-Sentry is a comprehensive debugging platform designed to help developers monitor and improve their application's health. It allows you to pinpoint the root cause of issues quickly, reduce debugging time, and ultimately build more stable and reliable software.
+Sentry is the leading debugging platform, empowering developers to detect, trace, and resolve errors in their applications.
 
 ## Key Features
 
-*   **Error Tracking:** Automatically capture and track errors across your entire application stack.
-*   **Performance Monitoring:** Identify performance bottlenecks and optimize your application's speed and responsiveness.
-*   **Trace View:** Understand the full context of issues, with detailed traces of user interactions and code execution.
-*   **Session Replay:** Record user sessions to see exactly what happened before an error occurred.
-*   **Issue Management:** Prioritize and assign issues to your team, ensuring efficient collaboration and resolution.
-*   **Real-time Alerts:** Receive instant notifications when critical errors occur, allowing for immediate action.
-*   **Integrations:** Seamlessly integrates with popular development tools and platforms.
-*   **Application Monitoring:** View the overall health of your application, including uptime and performance.
-
-<p align="center">
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/issue-details.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/seer.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/insights.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/traces.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/trace-explorer.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/replays.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/insights.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/logs.png" width="270" />
-  <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/uptime.png" width="270" />
-</p>
+*   **Error Tracking:** Identify and prioritize critical issues with detailed error reports.
+*   **Performance Monitoring:** Analyze application performance, identify bottlenecks, and optimize user experience.
+*   **Distributed Tracing:**  Trace requests across services to pinpoint the source of problems.
+*   **Session Replay:** Record user sessions to understand and reproduce issues.
+*   **Log Management:**  Aggregate and analyze logs for comprehensive debugging insights.
+*   **Uptime Monitoring:** Ensure application availability with proactive monitoring and alerts.
 
 ## Official Sentry SDKs
 
-Sentry offers a wide range of SDKs to support your development needs:
+Sentry offers a wide range of SDKs to integrate seamlessly with your preferred development stack:
 
 *   [JavaScript](https://github.com/getsentry/sentry-javascript)
 *   [Electron](https://github.com/getsentry/sentry-electron/)
@@ -61,6 +43,10 @@ Sentry offers a wide range of SDKs to support your development needs:
 *   [Godot Engine](https://github.com/getsentry/sentry-godot)
 *   [PowerShell](https://github.com/getsentry/sentry-powershell)
 
+## Get Started
+
+Ready to revolutionize your debugging workflow? Explore the [Sentry source code](https://github.com/getsentry/sentry) and discover how to integrate Sentry into your projects.
+
 ## Resources
 
 *   [Documentation](https://docs.sentry.io/)
@@ -68,5 +54,5 @@ Sentry offers a wide range of SDKs to support your development needs:
 *   [Discord](https://discord.gg/PXa5Apfe7K)
 *   [Contributing](https://docs.sentry.io/internal/contributing/)
 *   [Bug Tracker](https://github.com/getsentry/sentry/issues)
-*   [Code](https://github.com/getsentry/sentry) -  [View the source code on GitHub](https://github.com/getsentry/sentry)
+*   [Code](https://github.com/getsentry/sentry)
 *   [Transifex](https://www.transifex.com/getsentry/sentry/) (Translate Sentry!)

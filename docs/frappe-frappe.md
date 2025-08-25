@@ -1,11 +1,11 @@
 <div align="center" markdown="1">
-    <img src=".github/framework-logo-new.svg" width="80" height="80"/>
-    <h1>Frappe Framework: Low-Code Web Development Powerhouse</h1>
+    <img src=".github/framework-logo-new.svg" width="80" height="80" alt="Frappe Framework Logo"/>
+    <h1>Frappe Framework: Low-Code Web Development for Real-World Applications</h1>
 </div>
 
 <div align="center">
-    <a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-success.svg"></a>
-    <a href="https://codecov.io/gh/frappe/frappe"><img src="https://codecov.io/gh/frappe/frappe/branch/develop/graph/badge.svg?token=XoTa679hIj"/></a>
+    <a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-success.svg" alt="MIT License"></a>
+    <a href="https://codecov.io/gh/frappe/frappe"><img src="https://codecov.io/gh/frappe/frappe/branch/develop/graph/badge.svg?token=XoTa679hIj" alt="Code Coverage"></a>
 </div>
 <div align="center">
     <img src=".github/hero-image.png" alt="Hero Image" />
@@ -14,21 +14,23 @@
     <a href="https://frappe.io/framework">Website</a>
     -
     <a href="https://docs.frappe.io/framework">Documentation</a>
+    -
+    <a href="https://github.com/frappe/frappe">View on GitHub</a>
 </div>
 
-## Frappe Framework: Build Real-World Web Apps Faster
+## About Frappe Framework
 
-Frappe Framework is a powerful, open-source, low-code web application framework that empowers developers to build robust and scalable applications using Python and JavaScript. Built on a semantic foundation, Frappe allows for rapid development of complex applications with a focus on user experience and data consistency.  [Explore the Frappe Framework on GitHub](https://github.com/frappe/frappe).
+**Frappe Framework is a powerful, open-source, low-code web application framework, built with Python and JavaScript, enabling developers to build complex, real-world applications rapidly.** Inspired by the Semantic Web, Frappe allows for easy definition of metadata, making building applications that are consistent and extensible. Originally developed for ERPNext, Frappe is a full-stack solution, offering both front-end and back-end development capabilities.
 
-### Key Features of Frappe Framework:
+## Key Features
 
-*   **Full-Stack Development**: Develop both front-end and back-end components within a single framework.
-*   **Low-Code Approach**: Minimize code writing with built-in features like the Admin Interface, automated APIs, and customizable forms.
-*   **Built-in Admin Interface**: Get a ready-to-use, customizable admin dashboard to manage your application data efficiently.
-*   **Role-Based Permissions**: Implement granular access control with a comprehensive user and role management system.
-*   **REST API Generation**: Automatically generates RESTful APIs for your models, ensuring seamless integration with other services.
-*   **Customization Options**: Adapt forms and views to your specific needs using server-side scripting and client-side JavaScript.
-*   **Reporting Tools**: Create custom reports easily with the integrated report builder.
+*   **Full-Stack Development:** Build complete web applications with a single framework using Python (server-side) and JavaScript (client-side).
+*   **Low-Code Approach:** Reduce development time with built-in features and a focus on metadata-driven development.
+*   **Built-in Admin Interface:** Quickly manage application data and settings using a pre-built, customizable admin dashboard.
+*   **Role-Based Permissions:** Implement robust user and role management to control access and permissions within your application.
+*   **REST API:** Automatically generate RESTful APIs for all models, simplifying integration with other systems.
+*   **Customizable Forms and Views:** Tailor forms and views using server-side scripting and client-side JavaScript.
+*   **Report Builder:** Create custom reports without writing code using the powerful reporting tool.
 
 <details>
 <summary>Screenshots</summary>
@@ -42,7 +44,7 @@ Frappe Framework is a powerful, open-source, low-code web application framework 
 
 ### Managed Hosting
 
-Consider [Frappe Cloud](https://frappecloud.com) for hassle-free hosting of your Frappe applications.  It provides easy installation, upgrades, and maintenance.
+Consider [Frappe Cloud](https://frappecloud.com) for a simple and sophisticated open-source platform to host Frappe applications. It handles installation, upgrades, monitoring, maintenance, and support.
 
 <div>
     <a href="https://frappecloud.com/" target="_blank">
@@ -57,70 +59,63 @@ Consider [Frappe Cloud](https://frappecloud.com) for hassle-free hosting of your
 
 ### Docker
 
-**Prerequisites:** Docker, Docker Compose, and Git.  For Docker setup details, see the [Docker Documentation](https://docs.docker.com).
+Prerequisites: Docker, Docker Compose, and Git.
 
-**Installation:**
+Run the following commands:
 
-1.  Clone the repository:
+```bash
+git clone https://github.com/frappe/frappe_docker
+cd frappe_docker
+docker compose -f pwd.yml up -d
+```
 
-    ```bash
-    git clone https://github.com/frappe/frappe_docker
-    cd frappe_docker
-    ```
+After a few minutes, your site should be accessible on your localhost port: 8080. Use the default login credentials to access the site:
 
-2.  Run the application using Docker Compose:
+*   Username: `Administrator`
+*   Password: `admin`
 
-    ```bash
-    docker compose -f pwd.yml up -d
-    ```
-
-**Access:**  Your site will be accessible on `localhost:8080`.  Use the default login credentials below:
-
-*   **Username:** Administrator
-*   **Password:** admin
-
-For ARM-based Docker setups, refer to the [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) documentation.
+See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM-based Docker setup.
 
 ## Development Setup
 
 ### Manual Install
 
-The Easy Way: Use the Frappe install script (bench) to automatically install dependencies, including MariaDB.  See [Frappe Bench Documentation](https://github.com/frappe/bench) for more details.
+The Easy Way: Use the bench install script, which will install all dependencies (e.g., MariaDB). See https://github.com/frappe/bench for more details.
 
-The script will generate new passwords for the Frappe "Administrator" user, the MariaDB root user, and the frappe user (passwords are saved in `~/frappe_passwords.txt`).
+New passwords will be created for the Frappe "Administrator" user, the MariaDB root user, and the frappe user (the script displays the passwords and saves them to `~/frappe_passwords.txt`).
 
-### Local Installation
+### Local
 
-Follow these steps to set up the repository locally:
+To set up the repository locally, follow these steps:
 
-1.  Set up bench using the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) and start the server:
+1.  Set up bench by following the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) and start the server.
 
     ```bash
     bench start
     ```
 
-2.  In a separate terminal window, run:
+2.  In a separate terminal window, run the following commands:
 
     ```bash
     # Create a new site
     bench new-site frappe.localhost
     ```
 
-3.  Access the application in your browser at `http://frappe.localhost:8000/app`.
+3.  Open the URL `http://frappe.localhost:8000/app` in your browser; you should see the app running.
 
 ## Learning and Community
 
-*   [Frappe School](https://frappe.school): Learn Frappe Framework and ERPNext through courses and tutorials.
-*   [Official Documentation](https://docs.frappe.io/framework): Comprehensive documentation for Frappe Framework.
-*   [Discussion Forum](https://discuss.frappe.io/): Engage with the Frappe Framework community.
-*   [buildwithhussain.com](https://buildwithhussain.com):  Explore real-world applications of Frappe Framework.
+1.  [Frappe School](https://frappe.school): Learn Frappe Framework and ERPNext from courses by maintainers or the community.
+2.  [Official Documentation](https://docs.frappe.io/framework): Extensive documentation for Frappe Framework.
+3.  [Discussion Forum](https://discuss.frappe.io/): Engage with the community of Frappe Framework users and service providers.
+4.  [buildwithhussain.com](https://buildwithhussain.com): Watch Frappe Framework used to build web applications.
 
 ## Contributing
 
-*   [Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)
-*   [Report Security Vulnerabilities](https://frappe.io/security)
-*   [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
-*   [Translations](https://crowdin.com/project/frappe)
+1.  [Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)
+2.  [Report Security Vulnerabilities](https://frappe.io/security)
+3.  [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
+4.  [Translations](https://crowdin.com/project/frappe)
 
 <br>
 <br>
@@ -132,15 +127,3 @@ Follow these steps to set up the repository locally:
         </picture>
     </a>
 </div>
-```
-Key improvements and SEO considerations:
-
-*   **Strong Title & Hook:**  The title directly targets a search term ("Frappe Framework") and the hook immediately explains the core benefit (build real-world web apps faster).
-*   **Clear Headings:** Uses H2 and H3 headings for better organization and readability, improving SEO.
-*   **Keyword Optimization:** Includes relevant keywords like "low-code," "web application framework," "Python," "JavaScript," and "open-source."
-*   **Bulleted Key Features:** Makes the core benefits easily scannable for users and search engines.
-*   **Concise Language:** Streamlines the text while retaining key information.
-*   **Links:**  Keeps the existing links, with some adjusted for clarity.  Includes a link back to the original GitHub repo at the beginning.
-*   **Call to Action:** The overview encourages exploration of the framework.
-*   **Structure:** Improved organization of the "Production Setup" and "Development Setup" sections.
-*   **Alt Text:** Ensures images have descriptive alt text.

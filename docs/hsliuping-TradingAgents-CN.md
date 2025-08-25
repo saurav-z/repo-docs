@@ -1,85 +1,94 @@
-# 📈 TradingAgents-CN: 中文金融交易决策框架 🚀
+# TradingAgents-CN: 中文金融交易决策框架 - 基于大语言模型的AI股票分析 (🚀 增强版)
 
-> 💡 **利用多智能体大语言模型，为中国市场量身定制的金融交易决策框架，助您深入分析 A 股、港股和美股。**
+> 💡 **Unlock AI-powered insights for the Chinese stock market!** TradingAgents-CN is a cutting-edge framework built on multi-agent LLMs, specifically designed for Chinese users and optimized for A-share/Hong Kong/US stock analysis.  **[Explore the original repo](https://github.com/hsliuping/TradingAgents-CN)**.
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Version](https://img.shields.io/badge/Version-cn--0.1.13--preview-orange.svg)](./VERSION)
-[![Documentation](https://img.shields.io/badge/docs-中文文档-green.svg)](./docs/)
-[![Based on](https://img.shields.io/badge/基于-TauricResearch/TradingAgents-orange.svg)](https://github.com/TauricResearch/TradingAgents)
+## ✨ Key Features
 
-## ✨ 主要特性
+*   **🤖 Native OpenAI & Google AI Integration**: Seamlessly supports OpenAI and Google AI models, including Gemini 2.5 series
+*   **🇨🇳 Optimized for Chinese Markets**: Comprehensive A-share, Hong Kong, and US stock analysis.
+*   **🧠 Intelligent News Analysis**:  AI-driven news filtering, quality assessment, and sentiment analysis.
+*   **🌐 Multi-LLM Provider Support**: Supports major LLM providers like DashScope, DeepSeek, Google AI, OpenAI, and OpenRouter.
+*   **🚀 Streamlined Web Interface**: Intuitive Streamlit-based web UI for easy stock analysis and reporting.
+*   **📈 Professional Reporting**: Generate detailed reports in Markdown, Word (.docx), or PDF format.
+*   **🐳 Dockerized Deployment**: Easy one-click deployment with Docker for a hassle-free experience.
+*   **💾 Persistent Configuration**:  Model selection and settings are saved using URL parameters, keeping your settings with every refresh!
+*   **🎯 Enhanced Chinese Support**: Built-in Chinese language support for a superior user experience.
 
-*   🤖 **原生OpenAI支持 & Google AI 全面集成**: 利用最新 LLM 模型，提升分析能力。
-*   📰 **智能新闻分析**: 筛选关键新闻，洞悉市场情绪。
-*   🇨🇳 **A 股 / 港股 / 美股全面支持**:  覆盖中国、香港和美国市场。
-*   🐳 **Docker 容器化部署**:  简化安装和环境配置。
-*   📊 **专业报告导出**: 生成 Markdown / Word / PDF 格式的专业分析报告。
-*   📝 **完整中文文档**: 深入解析架构与使用方法。
+## 🌟 What's New in v0.1.13?
 
-## 🌟 核心功能
+This release is a **preview** of the exciting upcoming features!
 
-*   **多智能体协作**: 由基本面、技术面、新闻面和情绪分析师组成，做出综合决策。
-*   **结构化分析**:  支持看涨/看跌研究员进行深度辩论。
-*   **智能决策**: 基于全面的数据分析，生成买入、持有或卖出建议。
-*   **风险管理**:  多维度风险评估，保护您的投资。
+*   **🤖 Native OpenAI and Google AI Integration:** Custom OpenAI endpoints, 9 Google AI models, and  adapter optimization.
+*   **🧠 Google AI Ecosystem Integration**: Full integration of langchain-google-genai, google-generativeai, and google-genai packages.
+*   **🔧 Optimized LLM Adapter Architecture**:  Enhanced error handling and performance monitoring.
+*   **🎨 Intelligent Web Interface Enhancements:** Smart model selection, UI improvements, and friendlier error handling.
 
-## 🚀 最新动态:  cn-0.1.13-preview
+## 🚀 Quick Start
 
-**全面集成 OpenAI 和 Google AI 生态系统，增强了 LLM 模型支持和灵活性**
+1.  **Docker (Recommended):** `docker-compose up -d --build` or follow the smart start script in the `scripts` folder
+2.  **Local Installation:** `pip install -e .` then  `python start_web.py`
+3.  **Access the Web Interface:** `http://localhost:8501`
+4.  **Enter Stock Code:** e.g., `000001` (A-Share), `AAPL` (US), `0700.HK` (HK)
+5.  **Start Analysis:** Choose your research depth and click the "Start Analysis" button.
+6.  **View Results:**  Monitor progress and access your professional report.
 
-*   **原生 OpenAI 支持**: 支持自定义 OpenAI 端点，使用任何 OpenAI 兼容模型。
-*   **Google AI 集成**:  集成 Google AI，包含 Gemini 系列模型。
-*   **LLM 适配器优化**: 统一接口，改进错误处理和性能监控。
-*   **Web 界面优化**:  智能模型选择，提升用户体验。
+## 🖼️ Web Interface Screenshots
 
-## 🛠️ 快速上手
+### 🏠 Main Interface - Analysis Configuration
 
-### 🐳 Docker 部署（推荐）
+![Analysis Configuration](images/README/1755003162925.png)
 
-```bash
-# 1. 克隆项目
-git clone https://github.com/hsliuping/TradingAgents-CN.git
-cd TradingAgents-CN
+![Market Selection](images/README/1755002619976.png)
 
-# 2. 配置环境变量
-cp .env.example .env
-# 编辑 .env 文件，填入API密钥
+*Smart configuration panel supports multi-market stock analysis with 5 levels of research depth.*
 
-# 3. 启动服务
-docker-compose up -d --build
+### 📊 Real-time Analysis Progress
 
-# 4. 访问应用
-# Web界面: http://localhost:8501
-```
+![Real-time Progress](images/README/1755002731483.png)
 
-### 💻 本地部署
+*Real-time progress tracking, visualized analysis process, and smart time estimation.*
 
-```bash
-# 1. 升级pip (重要!)
-python -m pip install --upgrade pip
+### 📈 Analysis Results
 
-# 2. 安装依赖
-pip install -e .
+![Detailed Results](images/README/1755002901204.png)
 
-# 3. 启动应用
-python start_web.py
+![Detailed Results](images/README/1755002924844.png)
 
-# 4. 访问 http://localhost:8501
-```
+![Detailed Results](images/README/1755002939905.png)
 
-### 📊 开始分析
+![Detailed Results](images/README/1755002968608.png)
 
-1.  **选择模型**: DeepSeek V3 / 通义千问 / Gemini
-2.  **输入股票**: `000001` (A股) / `AAPL` (美股) / `0700.HK` (港股)
-3.  **开始分析**: 点击"🚀 开始分析"
-4.  **查看报告**: 浏览分析报告
-5.  **导出报告**: 下载专业报告
+![Detailed Results](images/README/1755002985903.png)
 
-## 📚 深入了解
+![Detailed Results](images/README/1755003004403.png)
 
-*   **完整文档**:  [中文文档](./docs/) - 涵盖安装、使用、架构和 API。
-*   **贡献指南**:  欢迎参与项目贡献： [CONTRIBUTING.md](CONTRIBUTING.md)
-*   **问题反馈**:  提交问题和建议： [GitHub Issues](https://github.com/hsliuping/TradingAgents-CN/issues)
+![Detailed Results](images/README/1755003019759.png)
 
-**基于 [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) 的代码，旨在为中国用户提供更完善、更本土化的金融交易决策工具。**
+![Detailed Results](images/README/1755003033939.png)
+
+![Detailed Results](images/README/1755003048242.png)
+
+![Detailed Results](images/README/1755003064598.png)
+
+![Detailed Results](images/README/1755003090603.png)
+
+*Professional investment reports, multi-dimensional analysis results, and one-click export.*
+
+## 🎯 Core Features at a Glance
+
+*   **🤖 Multi-Agent Architecture**: Four specialized analysts (Technical, Fundamental, News, Social Media).
+*   **📈 Bull/Bear Researchers**: In-depth analysis with structured debate.
+*   **🎯 Trading Agent**: Makes final investment recommendations based on all inputs.
+*   **🛡️ Risk Management**: Multi-layered risk assessment and management.
+*   **🌐 Multi-Market Analysis**:  Support for US, A-share, and Hong Kong markets.
+
+## 📚 Learn More
+
+*   **Comprehensive Documentation:** [docs/](./docs/) - Installation, usage, and API documentation.
+*   **Troubleshooting:** [docs/troubleshooting/](./docs/troubleshooting/) - Solutions to common issues.
+*   **Changelog:** [CHANGELOG.md](./docs/releases/CHANGELOG.md) - Detailed release notes.
+*   **Quickstart Guide:** [QUICKSTART.md](./QUICKSTART.md) - 5-minute deployment guide.
+
+## 🤝  Special Thanks
+
+Huge thanks to the [Tauric Research](https://github.com/TauricResearch/TradingAgents) team for creating the foundational TradingAgents framework!

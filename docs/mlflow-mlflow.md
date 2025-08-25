@@ -1,13 +1,26 @@
-# MLflow: The Open-Source Platform for Productionizing AI
+<h1 align="center" style="border-bottom: none">
+    <a href="https://mlflow.org/">
+        <img alt="MLflow logo" src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/logo.svg" width="200" />
+    </a>
+</h1>
+<h2 align="center" style="border-bottom: none">Open-Source Platform for Productionizing AI</h2>
 
-**Unlock the power of your AI/LLM projects with MLflow, the comprehensive open-source platform for end-to-end AI development and deployment.**  [Visit the original repository](https://github.com/mlflow/mlflow)
+MLflow is an open-source developer platform to build AI/LLM applications and models with confidence. Enhance your AI applications with end-to-end **experiment tracking**, **observability**, and **evaluations**, all in one integrated platform.
 
-[![PyPI version](https://img.shields.io/pypi/v/mlflow)](https://pypi.org/project/mlflow/)
-[![PyPI downloads](https://img.shields.io/pypi/dm/mlflow)](https://pepy.tech/projects/mlflow)
+<div align="center">
+
+[![Python SDK](https://img.shields.io/pypi/v/mlflow)](https://pypi.org/project/mlflow/)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/mlflow)](https://pepy.tech/projects/mlflow)
 [![License](https://img.shields.io/github/license/mlflow/mlflow)](https://github.com/mlflow/mlflow/blob/main/LICENSE)
-[![Twitter Follow](https://img.shields.io/twitter/follow/mlflow?logo=X&color=%20%23f5f5f5)](https://twitter.com/intent/follow?screen_name=mlflow)
-[![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](https://www.linkedin.com/company/mlflow-org/)
+<a href="https://twitter.com/intent/follow?screen_name=mlflow" target="_blank">
+<img src="https://img.shields.io/twitter/follow/mlflow?logo=X&color=%20%23f5f5f5"
+      alt="follow on X(Twitter)"></a>
+<a href="https://www.linkedin.com/company/mlflow-org/" target="_blank">
+<img src="https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff"
+      alt="follow on LinkedIn"></a>
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/mlflow/mlflow)
+
+</div>
 
 <div align="center">
    <div>
@@ -19,112 +32,151 @@
       <a href="https://lu.ma/mlflow?k=c"><strong>Events</strong></a>
    </div>
 </div>
+
 <br>
 
-## Key Features of MLflow:
+## 🚀 Installation
 
-*   **Experiment Tracking:** Effortlessly track and compare your model parameters, metrics, and results for optimal performance.
-*   **Model Registry:** Centralized model store for managing the full lifecycle of your machine learning models.
-*   **Model Deployment:** Seamlessly deploy your models to various platforms, including Docker, Kubernetes, Azure ML, and AWS SageMaker.
-*   **LLM Tracing & Observability:** Gain insights into LLM application behavior for debugging and performance monitoring.
-*   **LLM Evaluation:** Automate model evaluation with a suite of tools integrated with experiment tracking.
-*   **Prompt Management:** Version, track, and reuse prompts to ensure consistency and collaboration in prompt development.
-*   **App Version Tracking:** Track all the moving parts in your AI applications, including models, prompts, tools, and code, with end-to-end lineage.
+To install the MLflow Python package, run the following command:
 
-## Installation
-
-Install the MLflow Python package using pip:
-
-```bash
+```
 pip install mlflow
 ```
 
-## Core Components
+## 📦 Core Components
 
-MLflow offers a unified solution to meet all your AI/ML needs, including LLMs, Agents, Deep Learning, and traditional machine learning.
+MLflow is **the only platform that provides a unified solution for all your AI/ML needs**, including LLMs, Agents, Deep Learning, and traditional machine learning.
 
-### For LLM / GenAI Developers
+### 💡 For LLM / GenAI Developers
 
-#### LLM Tracing / Observability
+<table>
+  <tr>
+    <td>
+    <img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-tracing.png" alt="Tracing" width=100%>
+    <div align="center">
+        <br>
+        <a href="https://mlflow.org/docs/latest/llms/tracing/index.html"><strong>🔍 Tracing / Observability</strong></a>
+        <br><br>
+        <div>Trace the internal states of your LLM/agentic applications for debugging quality issues and monitoring performance with ease.</div><br>
+        <a href="https://mlflow.org/docs/latest/genai/tracing/quickstart/python-openai/">Getting Started →</a>
+        <br><br>
+    </div>
+    </td>
+    <td>
+    <img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-llm-eval.png" alt="LLM Evaluation" width=100%>
+    <div align="center">
+        <br>
+        <a href="https://mlflow.org/docs/latest/genai/eval-monitor/"><strong>📊 LLM Evaluation</strong></a>
+        <br><br>
+        <div>A suite of automated model evaluation tools, seamlessly integrated with experiment tracking to compare across multiple versions.</div><br>
+        <a href="https://mlflow.org/docs/latest/genai/eval-monitor/">Getting Started →</a>
+        <br><br>
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-prompt.png" alt="Prompt Management">
+    <div align="center">
+        <br>
+        <a href="https://mlflow.org/docs/latest/genai/prompt-version-mgmt/prompt-registry/"><strong>🤖 Prompt Management</strong></a>
+        <br><br>
+        <div>Version, track, and reuse prompts across your organization, helping maintain consistency and improve collaboration in prompt development.</div><br>
+        <a href="https://mlflow.org/docs/latest/genai/prompt-registry/create-and-edit-prompts/">Getting Started →</a>
+        <br><br>
+    </div>
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-logged-model.png" alt="MLflow Hero">
+    <div align="center">
+        <br>
+        <a href="https://mlflow.org/docs/latest/genai/prompt-version-mgmt/version-tracking/"><strong>📦 App Version Tracking</strong></a>
+        <br><br>
+        <div>MLflow keeps track of many moving parts in your AI applications, such as models, prompts, tools, and code, with end-to-end lineage.</div><br>
+        <a href="https://mlflow.org/docs/latest/genai/version-tracking/quickstart/">Getting Started →</a>
+        <br><br>
+    </div>
+    </td>
+  </tr>
+</table>
 
-<img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-tracing.png" alt="Tracing" width=100%>
-*Trace the internal states of your LLM/agentic applications for debugging quality issues and monitoring performance with ease.*
-<br><br>
-[Tracing Docs](https://mlflow.org/docs/latest/llms/tracing/index.html)
+### 🎓 For Data Scientists
 
-#### LLM Evaluation
+<table>
+  <tr>
+    <td colspan="2" align="center" >
+      <img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-experiment.png" alt="Tracking" width=50%>
+    <div align="center">
+        <br>
+        <a href="https://mlflow.org/docs/latest/ml/tracking/"><strong>📝 Experiment Tracking</strong></a>
+        <br><br>
+        <div>Track your models, parameters, metrics, and evaluation results in ML experiments and compare them using an interactive UI.</div><br>
+        <a href="https://mlflow.org/docs/latest/ml/tracking/quickstart/">Getting Started →</a>
+        <br><br>
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-model-registry.png" alt="Model Registry" width=100%>
+    <div align="center">
+        <br>
+        <a href="https://mlflow.org/docs/latest/ml/model-registry/"><strong>💾 Model Registry</strong></a>
+        <br><br>
+        <div> A centralized model store designed to collaboratively manage the full lifecycle and deployment of machine learning models.</div><br>
+        <a href="https://mlflow.org/docs/latest/ml/model-registry/tutorial/">Getting Started →</a>
+        <br><br>
+    </div>
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-deployment.png" alt="Deployment" width=100%>
+    <div align="center">
+        <br>
+        <a href="https://mlflow.org/docs/latest/ml/deployment/"><strong>🚀 Deployment</strong></a>
+        <br><br>
+        <div> Tools for seamless model deployment to batch and real-time scoring on platforms like Docker, Kubernetes, Azure ML, and AWS SageMaker.</div><br>
+        <a href="https://mlflow.org/docs/latest/ml/deployment/">Getting Started →</a>
+        <br><br>
+    </div>
+    </td>
+  </tr>
+</table>
 
-<img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-llm-eval.png" alt="LLM Evaluation" width=100%>
-*A suite of automated model evaluation tools, seamlessly integrated with experiment tracking to compare across multiple versions.*
-<br><br>
-[Evaluation Docs](https://mlflow.org/docs/latest/genai/eval-monitor/)
+## 🌐 Hosting MLflow Anywhere
 
-#### Prompt Management
+<div align="center" >
+  <img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-providers.png" alt="Providers" width=100%>
+</div>
 
-<img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-prompt.png" alt="Prompt Management">
-*Version, track, and reuse prompts across your organization, helping maintain consistency and improve collaboration in prompt development.*
-<br><br>
-[Prompt Management Docs](https://mlflow.org/docs/latest/genai/prompt-version-mgmt/prompt-registry/)
+You can run MLflow in many different environments, including local machines, on-premise servers, and cloud infrastructure.
 
-#### App Version Tracking
+Trusted by thousands of organizations, MLflow is now offered as a managed service by most major cloud providers:
 
-<img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-logged-model.png" alt="MLflow Hero">
-*MLflow keeps track of many moving parts in your AI applications, such as models, prompts, tools, and code, with end-to-end lineage.*
-<br><br>
-[Version Tracking Docs](https://mlflow.org/docs/latest/genai/version-tracking/quickstart/)
+- [Amazon SageMaker](https://aws.amazon.com/sagemaker-ai/experiments/)
+- [Azure ML](https://learn.microsoft.com/en-us/azure/machine-learning/concept-mlflow?view=azureml-api-2)
+- [Databricks](https://www.databricks.com/product/managed-mlflow)
+- [Nebius](https://nebius.com/services/managed-mlflow)
 
-### For Data Scientists
+For hosting MLflow on your own infrastructure, please refer to [this guidance](https://mlflow.org/docs/latest/ml/tracking/#tracking-setup).
 
-#### Experiment Tracking
+## 🗣️ Supported Programming Languages
 
-<img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-experiment.png" alt="Tracking" width=50%>
-*Track your models, parameters, metrics, and evaluation results in ML experiments and compare them using an interactive UI.*
-<br><br>
-[Experiment Tracking Docs](https://mlflow.org/docs/latest/ml/tracking/)
+- [Python](https://pypi.org/project/mlflow/)
+- [TypeScript / JavaScript](https://www.npmjs.com/package/mlflow-tracing)
+- [Java](https://mvnrepository.com/artifact/org.mlflow/mlflow-client)
+- [R](https://cran.r-project.org/web/packages/mlflow/readme/README.html)
 
-#### Model Registry
+## 🔗 Integrations
 
-<img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-model-registry.png" alt="Model Registry" width=100%>
-*A centralized model store designed to collaboratively manage the full lifecycle and deployment of machine learning models.*
-<br><br>
-[Model Registry Docs](https://mlflow.org/docs/latest/ml/model-registry/)
-
-#### Deployment
-
-<img src="https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-deployment.png" alt="Deployment" width=100%>
-*Tools for seamless model deployment to batch and real-time scoring on platforms like Docker, Kubernetes, Azure ML, and AWS SageMaker.*
-<br><br>
-[Deployment Docs](https://mlflow.org/docs/latest/ml/deployment/)
-
-## Hosting MLflow Anywhere
-
-MLflow offers flexible deployment options, allowing you to run it on local machines, on-premise servers, and cloud infrastructure.
-
-MLflow is offered as a managed service by major cloud providers:
-
-*   [Amazon SageMaker](https://aws.amazon.com/sagemaker-ai/experiments/)
-*   [Azure ML](https://learn.microsoft.com/en-us/azure/machine-learning/concept-mlflow?view=azureml-api-2)
-*   [Databricks](https://www.databricks.com/product/managed-mlflow)
-*   [Nebius](https://nebius.com/services/managed-mlflow)
-
-For self-hosting, refer to the [tracking setup guidance](https://mlflow.org/docs/latest/ml/tracking/#tracking-setup).
-
-## Supported Programming Languages
-
-*   [Python](https://pypi.org/project/mlflow/)
-*   [TypeScript / JavaScript](https://www.npmjs.com/package/mlflow-tracing)
-*   [Java](https://mvnrepository.com/artifact/org.mlflow/mlflow-client)
-*   [R](https://cran.r-project.org/web/packages/mlflow/readme/README.html)
-
-## Integrations
-
-MLflow seamlessly integrates with many popular machine learning frameworks and GenAI libraries.
+MLflow is natively integrated with many popular machine learning frameworks and GenAI libraries.
 
 ![Integrations](https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/assets/readme-integrations.png)
 
 ## Usage Examples
 
 ### Experiment Tracking ([Doc](https://mlflow.org/docs/latest/ml/tracking/))
+
+The following examples trains a simple regression model with scikit-learn, while enabling MLflow's [autologging](https://mlflow.org/docs/latest/tracking/autolog.html) feature for experiment tracking.
 
 ```python
 import mlflow
@@ -145,9 +197,15 @@ rf = RandomForestRegressor(n_estimators=100, max_depth=6, max_features=3)
 rf.fit(X_train, y_train)
 ```
 
-Run `mlflow ui` in a separate terminal and access the MLflow UI via the URL to view the run.
+Once the above code finishes, run the following command in a separate terminal and access the MLflow UI via the printed URL. An MLflow **Run** should be automatically created, which tracks the training dataset, hyper parameters, performance metrics, the trained model, dependencies, and even more.
+
+```
+mlflow ui
+```
 
 ### Evaluating Models ([Doc](https://mlflow.org/docs/latest/model-evaluation/index.html))
+
+The following example runs automatic evaluation for question-answering tasks with several built-in metrics.
 
 ```python
 import mlflow
@@ -184,6 +242,8 @@ print(results.tables["eval_results_table"])
 
 ### Observability ([Doc](https://mlflow.org/docs/latest/llms/tracing/index.html))
 
+MLflow Tracing provides LLM observability for various GenAI libraries such as OpenAI, LangChain, LlamaIndex, DSPy, AutoGen, and more. To enable auto-tracing, call `mlflow.xyz.autolog()` before running your models. Refer to the documentation for customization and manual instrumentation.
+
 ```python
 import mlflow
 from openai import OpenAI
@@ -201,25 +261,26 @@ response = OpenAI().chat.completions.create(
 
 Then navigate to the "Traces" tab in the MLflow UI to find the trace records OpenAI query.
 
-## Support
+## 💭 Support
 
-*   Find answers in the [documentation](https://mlflow.org/docs/latest/index.html)
-*   Ask our AI-powered chatbot in the documentation by clicking the **"Ask AI"** button at the right bottom.
-*   Join [virtual events](https://lu.ma/mlflow?k=c)
-*   Report bugs/feature requests: [open a GitHub issue](https://github.com/mlflow/mlflow/issues/new/choose).
-*   Subscribe to the mailing list (mlflow-users@googlegroups.com) or join us on [Slack](https://mlflow.org/slack).
+- For help or questions about MLflow usage (e.g. "how do I do X?") visit the [documentation](https://mlflow.org/docs/latest/index.html).
+- In the documentation, you can ask the question to our AI-powered chat bot. Click on the **"Ask AI"** button at the right bottom.
+- Join the [virtual events](https://lu.ma/mlflow?k=c) like office hours and meetups.
+- To report a bug, file a documentation issue, or submit a feature request, please [open a GitHub issue](https://github.com/mlflow/mlflow/issues/new/choose).
+- For release announcements and other discussions, please subscribe to our mailing list (mlflow-users@googlegroups.com)
+  or join us on [Slack](https://mlflow.org/slack).
 
-## Contributing
+## 🤝 Contributing
 
-We welcome contributions!
+We happily welcome contributions to MLflow!
 
-*   Submit [bug reports](https://github.com/mlflow/mlflow/issues/new?template=bug_report_template.yaml) and [feature requests](https://github.com/mlflow/mlflow/issues/new?template=feature_request_template.yaml)
-*   Contribute for [good-first-issues](https://github.com/mlflow/mlflow/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and [help-wanted](https://github.com/mlflow/mlflow/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-*   Share your experience by writing about MLflow
+- Submit [bug reports](https://github.com/mlflow/mlflow/issues/new?template=bug_report_template.yaml) and [feature requests](https://github.com/mlflow/mlflow/issues/new?template=feature_request_template.yaml)
+- Contribute for [good-first-issues](https://github.com/mlflow/mlflow/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and [help-wanted](https://github.com/mlflow/mlflow/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+- Writing about MLflow and sharing your experience
 
-See our [contribution guide](CONTRIBUTING.md).
+Please see our [contribution guide](CONTRIBUTING.md) to learn more about contributing to MLflow.
 
-## Star History
+## ⭐️ Star History
 
 <a href="https://star-history.com/#mlflow/mlflow&Date">
  <picture>
@@ -229,10 +290,20 @@ See our [contribution guide](CONTRIBUTING.md).
  </picture>
 </a>
 
-## Citation
+## ✏️ Citation
 
-Cite MLflow using the "Cite this repository" button on the [GitHub repository page](https://github.com/mlflow/mlflow).
+If you use MLflow in your research, please cite it using the "Cite this repository" button at the top of the [GitHub repository page](https://github.com/mlflow/mlflow), which will provide you with citation formats including APA and BibTeX.
 
-## Core Members
+## 👥 Core Members
 
-Maintained by core members and community contributors.
+MLflow is currently maintained by the following core members with significant contributions from hundreds of exceptionally talented community members.
+
+- [Ben Wilson](https://github.com/BenWilson2)
+- [Corey Zumar](https://github.com/dbczumar)
+- [Daniel Lok](https://github.com/daniellok-db)
+- [Gabriel Fu](https://github.com/gabrielfu)
+- [Harutaka Kawamura](https://github.com/harupy)
+- [Serena Ruan](https://github.com/serena-ruan)
+- [Tomu Hirata](https://github.com/TomeHirata)
+- [Weichen Xu](https://github.com/WeichenXu123)
+- [Yuki Watanabe](https://github.com/B-Step62)

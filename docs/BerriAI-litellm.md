@@ -1,46 +1,55 @@
 <h1 align="center">
-    🚀 LiteLLM: The Universal LLM API Abstraction Layer
+    🚀 LiteLLM: Unified LLM API Access & Management
 </h1>
 
 <p align="center">
-    <b>Simplify LLM integration and unlock seamless access to a wide range of providers with LiteLLM.</b> <br>
-    <a href="https://github.com/BerriAI/litellm">
-        <img src="https://img.shields.io/github/stars/BerriAI/litellm?style=social" alt="GitHub Stars">
-    </a>
-    <a href="https://pypi.org/project/litellm/" target="_blank">
-        <img src="https://img.shields.io/pypi/v/litellm.svg" alt="PyPI Version">
-    </a>
-    <a href="https://discord.gg/wuPM9dRgDw">
-        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
-    </a>
-</p>
-
-<p align="center">
+    **Simplify your LLM integrations and unlock seamless access to a wide range of language models with LiteLLM.  <a href="https://github.com/BerriAI/litellm">Explore the Repo!</a>**
+    <br>
     <a href="https://render.com/deploy?repo=https://github.com/BerriAI/litellm" target="_blank" rel="nofollow"><img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render"></a>
     <a href="https://railway.app/template/HLP0Ub?referralCode=jch2ME">
       <img src="https://railway.app/button.svg" alt="Deploy on Railway">
     </a>
 </p>
 
-<h4 align="center"><a href="https://docs.litellm.ai/docs/simple_proxy" target="_blank">LiteLLM Proxy Server (LLM Gateway)</a> | <a href="https://docs.litellm.ai/docs/hosted" target="_blank"> Hosted Proxy (Preview)</a> | <a href="https://docs.litellm.ai/docs/enterprise"target="_blank">Enterprise Tier</a></h4>
+<h4 align="center">
+  <a href="https://docs.litellm.ai/docs/simple_proxy" target="_blank">LiteLLM Proxy Server (LLM Gateway)</a> |
+  <a href="https://docs.litellm.ai/docs/hosted" target="_blank">Hosted Proxy (Preview)</a> |
+  <a href="https://docs.litellm.ai/docs/enterprise"target="_blank">Enterprise Tier</a>
+</h4>
 
-LiteLLM empowers developers to interact with a wide array of Large Language Models (LLMs) through a unified API, simplifying integration and providing robust features.
+<h4 align="center">
+    <a href="https://pypi.org/project/litellm/" target="_blank">
+        <img src="https://img.shields.io/pypi/v/litellm.svg" alt="PyPI Version">
+    </a>
+    <a href="https://www.ycombinator.com/companies/berriai">
+        <img src="https://img.shields.io/badge/Y%20Combinator-W23-orange?style=flat-square" alt="Y Combinator W23">
+    </a>
+    <a href="https://wa.link/huol9n">
+        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=WhatsApp&color=success&logo=WhatsApp&style=flat-square" alt="Whatsapp">
+    </a>
+    <a href="https://discord.gg/wuPM9dRgDw">
+        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
+    </a>
+    <a href="https://join.slack.com/share/enQtOTE0ODczMzk2Nzk4NC01YjUxNjY2YjBlYTFmNDRiZTM3NDFiYTM3MzVkODFiMDVjOGRjMmNmZTZkZTMzOWQzZGQyZWIwYjQ0MWExYmE3">
+        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Slack&color=black&logo=Slack&style=flat-square" alt="Slack">
+    </a>
+</h4>
 
-## Key Features
+**Key Features:**
 
-*   ✅ **Unified API:**  Call LLM APIs using the OpenAI format, supporting providers like Bedrock, Hugging Face, VertexAI, TogetherAI, Azure, OpenAI, Groq, and many more (see [Supported Providers](#supported-providers)).
-*   ✅ **Consistent Output:**  Receive consistent output format across all providers, with text responses always available at `['choices'][0]['message']['content']`.
-*   ✅ **Intelligent Routing:** Utilize retry/fallback logic for high availability across multiple deployments (e.g., Azure/OpenAI) with our [Router](https://docs.litellm.ai/docs/routing).
-*   ✅ **Cost Management:** Set budgets and rate limits per project, API key, and model using the [LiteLLM Proxy Server (LLM Gateway)](https://docs.litellm.ai/docs/simple_proxy).
-*   ✅ **Async Support**: Utilize asynchronous calls for improved efficiency
-*   ✅ **Streaming Support**: Get the response back in streaming format for a better user experience
+*   ✅ **Provider Agnostic:** Access a wide range of LLMs from OpenAI, Azure, Anthropic, and more through a unified API.
+*   ✅ **Consistent Output:**  Get consistent text responses in a standard format (`['choices'][0]['message']['content']`).
+*   ✅ **Intelligent Routing:** Implement retry and fallback logic across multiple deployments (e.g., Azure/OpenAI) with our Router.
+*   ✅ **Cost & Access Management:** Set budgets and rate limits per project, API key, or model using the LiteLLM Proxy Server (LLM Gateway).
+*   ✅ **Asynchronous Support:** Built-in support for async completion and streaming.
+*   ✅ **Robust Logging:**  Leverage pre-defined callbacks to integrate with observability tools (Lunary, MLflow, Langfuse, etc.).
 
 [**Jump to LiteLLM Proxy (LLM Gateway) Docs**](https://github.com/BerriAI/litellm?tab=readme-ov-file#openai-proxy---docs) <br>
 [**Jump to Supported LLM Providers**](https://github.com/BerriAI/litellm?tab=readme-ov-file#supported-providers-docs)
 
-🚨 **Stable Release:** Use docker images with the `-stable` tag. These have undergone 12 hour load tests, before being published. [More information about the release cycle here](https://docs.litellm.ai/docs/proxy/release_cycle)
+🚨 **Important:** Use docker images with the `-stable` tag for stable releases.  [Read more about our release cycle](https://docs.litellm.ai/docs/proxy/release_cycle)
 
-Missing a provider or LLM Platform?  Raise a [feature request](https://github.com/BerriAI/litellm/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml&title=%5BFeature%5D%3A+).
+Missing a provider?  Submit a [feature request](https://github.com/BerriAI/litellm/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml&title=%5BFeature%5D%3A+).
 
 ## Usage ([**Docs**](https://docs.litellm.ai/docs/))
 
@@ -110,7 +119,7 @@ print(response)
 }
 ```
 
-Call any model supported by a provider, with `model=<provider_name>/<model_name>`. There might be provider-specific details here, so refer to [provider docs for more information](https://docs.litellm.ai/docs/providers)
+Call any model supported by a provider, with `model=<provider_name>/<model_name>`. Refer to [provider docs for more information](https://docs.litellm.ai/docs/providers)
 
 ## Async ([Docs](https://docs.litellm.ai/docs/completion/stream#async-completion))
 
@@ -344,22 +353,84 @@ curl 'http://0.0.0.0:4000/key/generate' \
 
 ## Contributing
 
-Interested in contributing? Contributions to LiteLLM Python SDK, Proxy Server, and LLM integrations are both accepted and highly encouraged!
+We welcome contributions to LiteLLM! Whether you're fixing bugs, adding features, or improving documentation, we appreciate your help.
 
-**Quick start:** `git clone` → `make install-dev` → `make format` → `make lint` → `make test-unit`
+## Quick Start for Contributors
 
-See our comprehensive [Contributing Guide (CONTRIBUTING.md)](CONTRIBUTING.md) for detailed instructions.
+This requires poetry to be installed.
+
+```bash
+git clone https://github.com/BerriAI/litellm.git
+cd litellm
+make install-dev    # Install development dependencies
+make format         # Format your code
+make lint           # Run all linting checks
+make test-unit      # Run unit tests
+make format-check   # Check formatting only
+```
+
+For detailed contributing guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Code Quality / Linting
 
 LiteLLM follows the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).
 
 Our automated checks include:
--   **Black** for code formatting
--   **Ruff** for linting and code quality
--   **MyPy** for type checking
--   **Circular import detection**
--   **Import safety checks**
+
+*   **Black** for code formatting
+*   **Ruff** for linting and code quality
+*   **MyPy** for type checking
+*   **Circular import detection**
+*   **Import safety checks**
+
+All these checks must pass before your PR can be merged.
+
+## Enterprise
+
+For companies that need better security, user management and professional support
+
+[Talk to founders](https://calendly.com/d/4mp-gd3-k5k/litellm-1-1-onboarding-chat)
+
+This covers:
+
+*   ✅ **Features under the [LiteLLM Commercial License](https://docs.litellm.ai/docs/proxy/enterprise):**
+*   ✅ **Feature Prioritization**
+*   ✅ **Custom Integrations**
+*   ✅ **Professional Support - Dedicated discord + slack**
+*   ✅ **Custom SLAs**
+*   ✅ **Secure access with Single Sign-On**
+
+# Contributing
+
+We welcome contributions to LiteLLM! Whether you're fixing bugs, adding features, or improving documentation, we appreciate your help.
+
+## Quick Start for Contributors
+
+This requires poetry to be installed.
+
+```bash
+git clone https://github.com/BerriAI/litellm.git
+cd litellm
+make install-dev    # Install development dependencies
+make format         # Format your code
+make lint           # Run all linting checks
+make test-unit      # Run unit tests
+make format-check   # Check formatting only
+```
+
+For detailed contributing guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Code Quality / Linting
+
+LiteLLM follows the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).
+
+Our automated checks include:
+
+*   **Black** for code formatting
+*   **Ruff** for linting and code quality
+*   **MyPy** for type checking
+*   **Circular import detection**
+*   **Import safety checks**
 
 All these checks must pass before your PR can be merged.
 
@@ -387,22 +458,8 @@ All these checks must pass before your PR can be merged.
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 <a href="https://github.com/BerriAI/litellm/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=BerriAI/litellm" />
+  <img src="https://contrib.rocks/image?repo=BerriAI/litellm" />
 </a>
-
-## Enterprise
-
-For companies that need better security, user management, and professional support
-
-[Talk to founders](https://calendly.com/d/4mp-gd3-k5k/litellm-1-1-onboarding-chat)
-
-This covers:
--   ✅ **Features under the [LiteLLM Commercial License](https://docs.litellm.ai/docs/proxy/enterprise):**
--   ✅ **Feature Prioritization**
--   ✅ **Custom Integrations**
--   ✅ **Professional Support - Dedicated discord + slack**
--   ✅ **Custom SLAs**
--   ✅ **Secure access with Single Sign-On**
 
 ## Run in Developer mode
 

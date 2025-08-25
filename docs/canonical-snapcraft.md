@@ -1,46 +1,52 @@
 <img src="https://dashboard.snapcraft.io/site_media/appmedia/2018/04/Snapcraft-logo-bird.png" alt="Snapcraft logo" style="height: 128px; display: block">
 
-# Snapcraft: Package and Distribute Your Software with Ease
+# Snapcraft: Package and Distribute Your Software Easily
 
-**Snapcraft empowers developers to effortlessly package, distribute, and manage software across all major Linux distributions and IoT devices.**
+**Snapcraft** is the command-line tool that empowers developers to package and distribute software across all major Linux distributions and IoT devices.  Learn more on the [Snapcraft GitHub repository](https://github.com/canonical/snapcraft).
 
-[Original Repository](https://github.com/canonical/snapcraft)
+## Key Features of Snapcraft:
 
-## Key Features
+*   **Simplified Packaging:** Easily bundle your application and its dependencies into a single snap package.
+*   **Cross-Distribution Compatibility:**  Build once and run on any Linux distribution that supports snaps.
+*   **Dependency Management:** Automatically handles dependencies, ensuring your software runs correctly.
+*   **Architecture Support:** Supports various architectures, making your software widely accessible.
+*   **Seamless Distribution:**  Publish your snaps to the Snap Store or your own private app stores.
+*   **Easy to Use:**  Uses a simple `snapcraft.yaml` configuration file, making it easy to integrate into your existing workflow.
 
-*   **Universal Packaging:** Create snaps, a container format that bundles all dependencies, ensuring consistent performance across different Linux distributions.
-*   **Simplified Dependency Management:**  Eliminate dependency conflicts by including all required libraries within the snap.
-*   **Cross-Platform Compatibility:**  Build once and run on multiple Linux distributions and IoT devices.
-*   **Easy-to-Use Project Files:**  Define your build configuration using the `snapcraft.yaml` file, making it simple to integrate into your existing workflow.
-*   **Seamless Distribution:**  Publish your snaps to public or private app stores, including the Snap Store.
-*   **Command-Line Interface:** Provides a suite of CLI commands to initialize, build, pack, register, and upload your snaps.
+## Getting Started with Snapcraft
 
-## Getting Started
+Snapcraft simplifies the process of packaging your software:
 
-1.  **Initialize:** Create a basic `snapcraft.yaml` file in your project's root directory with `snapcraft init`.
-2.  **Configure:**  Add your project's build and runtime details to the `snapcraft.yaml` file.
-3.  **Build:** Package your project into a snap with `snapcraft pack`.
-4.  **Distribute:** Register and upload your snap to the Snap Store or other app stores using `snapcraft register` and `snapcraft upload`.
+1.  **Initialize:** Create a `snapcraft.yaml` file with `snapcraft init`.
+2.  **Configure:** Add your project's build and runtime details to the `snapcraft.yaml` file.
+3.  **Package:** Build your snap with `snapcraft pack`.
+4.  **Distribute:** Register and upload your snap to app stores using `snapcraft register` and `snapcraft upload`.
 
-For a more detailed tutorial, check out [crafting your first snap](https://documentation.ubuntu.com/snapcraft/stable/tutorials/craft-a-snap).
+For a guided tutorial on creating your first snap, see [crafting your first snap](https://documentation.ubuntu.com/snapcraft/stable/tutorials/craft-a-snap).
 
 ## Installation
 
-Snapcraft is easily installed on various platforms:
+Snapcraft is available on various platforms: Linux, Windows, and macOS.
 
-*   **Snap-Enabled Systems:**  Install Snapcraft via the command line: `sudo snap install snapcraft --classic`.
-*   **Traditional Packages:** Available through many popular Linux repositories.
+To install Snapcraft on snap-ready systems:
 
-Refer to the [setup documentation](https://documentation.ubuntu.com/snapcraft/stable/how-to/setup/set-up-snapcraft) for complete installation instructions.
+```bash
+sudo snap install snapcraft --classic
+```
+
+Consult the documentation for [setting up Snapcraft](https://documentation.ubuntu.com/snapcraft/stable/how-to/setup/set-up-snapcraft) for detailed installation instructions, including traditional package installations.
 
 ## Resources
 
-*   **Documentation:** Comprehensive [Snapcraft documentation](https://documentation.ubuntu.com/snapcraft/stable) for building, debugging, resolving interfaces, and command references.
-*   **Community:**  Engage with the community on the [Snapcraft Forum](https://forum.snapcraft.io) and the [Snapcraft Matrix channel](https://matrix.to/#/#snapcraft:ubuntu.com) for support and discussions.
-*   **Issues:** Report bugs and issues on the [GitHub repository](https://github.com/canonical/snapcraft/issues).
+*   **Documentation:**  Explore the comprehensive [Snapcraft documentation](https://documentation.ubuntu.com/snapcraft/stable) for in-depth guides, tutorials, and command references.
+*   **Community:**
+    *   Engage with the community on the [Snapcraft Forum](https://forum.snapcraft.io).
+    *   Connect with other crafters on the [Snapcraft Matrix channel](https://matrix.to/#/#snapcraft:ubuntu.com).
+*   **Bug Reporting:**  Report issues and contribute to the project via the [GitHub repository](https://github.com/canonical/snapcraft/issues).
+*   **Contribution:**  Learn how to contribute to Snapcraft by reviewing the [contribution guide](CONTRIBUTING.md) and the [Canonical Open Documentation Academy](https://github.com/canonical/open-documentation-academy).
 
-## Contribute
+## License
 
-Snapcraft is an open-source project under the [GPL-3.0 license](LICENSE).  We welcome contributions! Check out the [contribution guide](CONTRIBUTING.md) to get started.  The [Canonical Open Documentation Academy](https://github.com/canonical/open-documentation-academy) is the hub for doc development.
+Snapcraft is released under the [GPL-3.0 license](LICENSE).
 
 © 2015-2025 Canonical Ltd.

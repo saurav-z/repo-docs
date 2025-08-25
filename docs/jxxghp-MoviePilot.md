@@ -1,75 +1,71 @@
-# MoviePilot: Automated Media Management for Your Needs
-
-**MoviePilot is a powerful and streamlined media management solution designed for automation, ease of use, and extensibility.** ([View the original repository on GitHub](https://github.com/jxxghp/MoviePilot))
+# MoviePilot: Automate Your Movie Experience (Learn More on GitHub!)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 [![GitHub forks](https://img.shields.io/github/forks/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 [![GitHub contributors](https://img.shields.io/github/contributors/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 [![GitHub repo size](https://img.shields.io/github/repo-size/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 [![GitHub issues](https://img.shields.io/github/issues/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jxxghp/moviepilot?style=for-the-badge)](https://hub.docker.com/r/jxxghp/moviepilot)
-[![Docker Pulls V2](https://img.shields.io/docker/pulls/jxxghp/moviepilot-v2?style=for-the-badge)](https://hub.docker.com/r/jxxghp/moviepilot-v2)
+[![Docker Pulls](https://img.shields.io/docker/pulls/jxxghp/moviepilot?style=for-the-badge)](https://hub.docker.com/repository/docker/jxxghp/moviepilot)
+[![Docker Pulls V2](https://img.shields.io/docker/pulls/jxxghp/moviepilot-v2?style=for-the-badge)](https://hub.docker.com/repository/docker/jxxghp/moviepilot-v2)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20Synology-blue?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 
-Based on a redesign of code from [NAStool](https://github.com/NAStool/nas-tools), MoviePilot focuses on core automation needs, reducing complexity and improving maintainability and extensibility.
+MoviePilot is a streamlined and user-friendly application, designed to automate and enhance your movie-watching experience.  Built on the foundation of [NAStool](https://github.com/NAStool/nas-tools), MoviePilot focuses on core automation needs, offering a simplified and extensible approach to movie management.
 
-**Disclaimer: This project is intended for learning and discussion purposes only.  Please refrain from promoting this project on any platforms within China.**
-
-Communication Channel: [MoviePilot Telegram Channel](https://t.me/moviepilot_channel)
+**[View the original project on GitHub](https://github.com/jxxghp/MoviePilot)**
 
 ## Key Features
 
-*   **Frontend and Backend Separation:** Built with FastAPI (backend) and Vue3 (frontend) for a modern and responsive user experience.
-*   **Core-Focused Design:** Simplifies functionality and settings, often with sensible defaults for ease of use.
-*   **Improved User Interface:** A redesigned UI provides a more intuitive and aesthetically pleasing experience.
+*   **Modern Architecture:**  Built with a front-end and back-end separation using FastApi and Vue3 for enhanced performance and user experience.
+*   **Simplified Design:** Focuses on essential features, streamlining configuration and offering sensible defaults for ease of use.
+*   **Intuitive Interface:**  Features a redesigned, aesthetically pleasing, and user-friendly interface.
+*   **Extensible with Plugins:** Supports plugin development for customization and advanced functionality.
+*   **Docker Support:** Ready to deploy with Docker.
 
-## Getting Started
+## Installation and Usage
 
-For detailed installation and usage instructions, please refer to the official Wiki: [MoviePilot Wiki](https://wiki.movie-pilot.org)
+For detailed instructions, refer to the official Wiki: [https://wiki.movie-pilot.org](https://wiki.movie-pilot.org)
 
-## Development
-
-### API Documentation
-
-Access the API documentation at: [MoviePilot API Docs](https://api.movie-pilot.org)
-
-### Prerequisites for Local Development
+### Prerequisites
 
 *   Python 3.12
-*   Node.js v20.12.1
+*   Node JS v20.12.1
 
-### Installation and Running
+### Getting Started (Local Development)
 
-1.  **Clone the Main Project:**
-    ```shell
+1.  **Clone the main project:**
+
+    ```bash
     git clone https://github.com/jxxghp/MoviePilot
     ```
-2.  **Clone the Resources Project:**
-    ```shell
+
+2.  **Clone the resources project and copy the necessary files:**
+
+    ```bash
     git clone https://github.com/jxxghp/MoviePilot-Resources
     ```
-    *   Copy the platform-specific library files (`.so`, `.pyd`, `.bin`) from the `resources` directory of `MoviePilot-Resources` to the `app/helper` directory of `MoviePilot`.
 
-3.  **Install Backend Dependencies and Run the Backend:**
-    ```shell
-    cd MoviePilot/app
+    Copy the `.so`, `.pyd`, or `.bin` files from the `MoviePilot-Resources/resources` directory (matching your platform and version) into the `app/helper` directory of your main project.
+
+3.  **Install backend dependencies and run the backend:**  Navigate to the `app` directory and run `main.py`. The API will be accessible at `http://localhost:3001/docs`.
+
+    ```bash
+    cd app
     pip install -r requirements.txt
     python3 main.py
     ```
-    *   The backend service will run on port `3001` by default.
-    *   API Documentation will be available at `http://localhost:3001/docs`.
 
-4.  **Clone and Run the Frontend Project:**
-    ```shell
+4.  **Clone and run the frontend:**
+
+    ```bash
     git clone https://github.com/jxxghp/MoviePilot-Frontend
     cd MoviePilot-Frontend
     yarn
     yarn dev
     ```
-    *   The frontend will be accessible at `http://localhost:5173`.
 
-5.  **Plugin Development:**
-    *   Refer to the [Plugin Development Guide](https://wiki.movie-pilot.org/zh/plugindev) to create plugins in the `app/plugins` directory.
+    The frontend will be available at `http://localhost:5173`.
+
+5.  **Plugin Development:**  Learn how to develop plugins in the `app/plugins` directory by referring to the [plugin development guide](https://wiki.movie-pilot.org/zh/plugindev).
 
 ## Related Projects
 
@@ -81,9 +77,11 @@ Access the API documentation at: [MoviePilot API Docs](https://api.movie-pilot.o
 
 ## Disclaimer
 
-*   This software is for learning and communication purposes only. It is not intended for commercial use or illegal activities. Users are solely responsible for their actions.
-*   This is open-source software. Modifying the code to remove restrictions and distributing it is the responsibility of the modifier. We do not recommend circumventing or changing the user authentication mechanism and distributing it publicly.
-*   We do not accept donations and do not provide paid services. Please be aware of potential scams.
+*   This software is intended for learning and personal use only.
+*   Do not use this software for commercial purposes or illegal activities.
+*   The developers are not responsible for user actions.
+*   This project is open-source. Modifications that circumvent restrictions are discouraged.
+*   This project does not accept donations and does not offer any paid services.
 
 ## Contributors
 
