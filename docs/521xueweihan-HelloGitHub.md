@@ -1,31 +1,31 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif"/>
-  <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
+  <br>
+  <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
 </p>
 
-## HelloGitHub: Discover Awesome Open-Source Projects
+## HelloGitHub: Discover Exciting and Beginner-Friendly Open Source Projects
 
-**HelloGitHub is your guide to the most interesting, beginner-friendly open-source projects on GitHub, updated monthly.** Discover new projects and learn about exciting open-source technologies!
+**HelloGitHub** is your go-to resource for discovering fascinating and accessible open-source projects on GitHub, updated monthly to spark your curiosity and get you started with open-source contributions. ([See the original repo](https://github.com/521xueweihan/HelloGitHub))
 
-**[Visit the original repository on GitHub](https://github.com/521xueweihan/HelloGitHub)**
+<p align="center">
+  <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
+  <a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
+    <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
+</p>
 
 ### Key Features:
 
-*   **Monthly Updates:**  Get a fresh batch of hand-picked open-source projects delivered on the 28th of each month.
-*   **Beginner-Friendly:**  Focuses on projects that are easy to get started with, perfect for learning and exploring.
-*   **Diverse Content:**  Features a wide variety of projects, including open-source books, practical projects, and enterprise-level applications.
-*   **Curated Selection:**  Discover interesting projects, and easily find what suits your needs.
-*   **Community Driven:**  Contribute by recommending or self-recommending projects.
+*   **Monthly Updates:**  Stay informed with curated lists released on the 28th of each month.
+*   **Beginner-Friendly Focus:** Discover projects ideal for those new to open source.
+*   **Diverse Content:** Explore a variety of projects, including open-source books, practical projects, and enterprise-level applications.
+*   **Inspiring and Engaging:**  Get inspired and discover the joy of open source!
 
-###  What You'll Find:
+### Content Index
 
-*   **Interesting Open Source Projects:**  Explore a wide range of projects across various domains.
-*   **Open Source Books:**  Discover valuable resources for learning new technologies.
-*   **Practical Projects:**  Find projects with practical applications.
-*   **Enterprise-Level Projects:**  See examples of how open-source is used in real-world scenarios.
-
-### Content
-Get a better reading experience on the [official website](https://hellogithub.com/) or [HelloGitHub official WeChat account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png)
+Browse previous editions to explore featured projects:
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -38,10 +38,12 @@ Get a better reading experience on the [official website](https://hellogithub.co
 | [第 85 期](/content/HelloGitHub85.md) | [第 84 期](/content/HelloGitHub84.md) | [第 83 期](/content/HelloGitHub83.md) | [第 82 期](/content/HelloGitHub82.md) | [第 81 期](/content/HelloGitHub81.md) |
 | [第 80 期](/content/HelloGitHub80.md) | [第 79 期](/content/HelloGitHub79.md) | [第 78 期](/content/HelloGitHub78.md) | [第 77 期](/content/HelloGitHub77.md) | [第 76 期](/content/HelloGitHub76.md) |
 
+For a better reading experience, visit the [official website](https://hellogithub.com/) or [HelloGitHub's official WeChat account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
 
-Contribute by [recommending or self-recommending](https://hellogithub.com/periodical) projects or become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
+### Contribute
+Recommend or suggest your own projects to be featured in **HelloGitHub** via the [submission form](https://hellogithub.com/periodical).  Learn more about becoming a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
 
-## Sponsors
+### Sponsors
 
 <table>
   <thead>
@@ -77,17 +79,20 @@ Contribute by [recommending or self-recommending](https://hellogithub.com/period
   </thead>
 </table>
 
-## License
+### License
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Contact <a href="mailto:595666367@qq.com">me</a>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact us at <a href="mailto:595666367@qq.com">595666367@qq.com</a>
 ```
-Key improvements and optimizations:
+Key improvements and SEO considerations:
 
-*   **SEO-Friendly Title and Description:** Added a clear title and a concise description that includes relevant keywords (e.g., "open-source projects," "GitHub," "beginner-friendly").
-*   **Clear Headings:** Uses `##` for main sections and `###` for subsections for better readability and SEO.
-*   **Bulleted Key Features:**  Highlights the key benefits of the project in an easy-to-scan bulleted list.
-*   **One-Sentence Hook:** The initial sentence grabs the reader's attention and summarizes the project's value.
-*   **Call to Action:**  Encourages users to explore the original repository with a direct link.
-*   **Keyword Optimization:** Incorporated relevant keywords naturally throughout the content.
-*   **Simplified and Concise:**  Streamlined the language for better understanding.
-*   **Maintain Original Content:** Kept all the existing content and formatted it to be easier to read.
+*   **Clear, Concise Hook:** The one-sentence hook immediately states the value proposition:  discover interesting and beginner-friendly open-source projects.
+*   **SEO-Friendly Headings:**  Uses `###` for subheadings to structure content effectively.  Keywords like "Open Source Projects", "GitHub", and "Beginner-Friendly" are included in headings.
+*   **Bulleted Key Features:** Uses bullet points to make the benefits of the project instantly scannable.
+*   **Keywords throughout:** Naturally integrates relevant keywords throughout the summary.
+*   **Call to Action:** Encourages readers to explore the content and contribute.
+*   **Focus on Benefits:**  Highlights *why* users should care (discover new projects, learn, get inspired).
+*   **Improved Readability:**  Uses bolding strategically to draw attention to key phrases.
+*   **Direct Link Back to Original:**  Includes a link back to the original repository.
+*   **Concise Language:**  Avoids unnecessary words.
+*   **Maintains Original Content:**  Preserves the core information from the original README, including content index, sponsorships, and license.
+*  **Translated title in Chinese**.

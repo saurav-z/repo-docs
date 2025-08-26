@@ -1,80 +1,83 @@
-# SimpleTuner: Train Cutting-Edge Diffusion Models with Ease 🚀
+# SimpleTuner: Your Gateway to Accessible and Powerful Diffusion Model Training
 
-> **SimpleTuner empowers you to train various diffusion models efficiently, with a focus on simplicity and cutting-edge features.**
-
-SimpleTuner is designed for ease of use, providing excellent default settings and a streamlined experience for both beginners and experienced users. This repository serves as a collaborative academic exercise, with contributions welcome. Note that no data is sent to third parties except through opt-in flags (`report_to`, `push_to_hub`) or manually configured webhooks.
-
-**Explore the SimpleTuner documentation and start training your own models:** [https://github.com/bghira/SimpleTuner](https://github.com/bghira/SimpleTuner)
-
-Join our community on [Discord](https://discord.gg/CVzhX7ZA) via Terminus Research Group for questions and support!
+**Unlock the potential of diffusion models with SimpleTuner, a user-friendly and versatile toolkit designed for both beginners and experts.** (Check out the original repo [here](https://github.com/bghira/SimpleTuner)!)
 
 ## Key Features
 
-*   **Versatile Model Support:** Train a wide range of models, including:
+*   **Simplified Design:** Easy to understand code with sensible defaults, reducing the need for extensive configuration.
+*   **Broad Compatibility:** Supports a wide range of image quantities and aspect ratios, from small datasets to massive collections.
+*   **Cutting-Edge Techniques:** Implements proven and effective features, avoiding untested options.
+*   **Multi-GPU Support:** Leverage the power of multiple GPUs for faster training.
+*   **Advanced Training Techniques:** Includes token-wise dropout (TREAD), aspect bucketing, refiner LoRA, and EMA for improved performance and stability.
+*   **VRAM Optimization:** Features like DeepSpeed integration, quantization (NF4/INT8/FP8), and S3-compatible storage support to reduce VRAM consumption.
+*   **Hugging Face Integration:** Seamless model upload and model card generation via the Hugging Face Hub.
+*   **Extensive Model Support:** Comprehensive training integration for:
     *   HiDream
     *   Flux.1
-    *   Wan 2.1 Video
+    *   Wan Video
     *   LTX Video
     *   PixArt Sigma
     *   NVLabs Sana
-    *   Stable Diffusion 3.0
+    *   Stable Diffusion 3
     *   Kwai Kolors
     *   Lumina2
-    *   Cosmos2 Predict
+    *   Cosmos2 Predict (Image)
     *   Qwen-Image
-    *   Legacy Stable Diffusion (1.x, 2.x)
-*   **Memory-Efficient Training:** Utilizes techniques like caching, aspect bucketing, and quantisation to minimize VRAM usage, enabling training on GPUs with as little as 16GB VRAM.
-*   **Multi-GPU Training:** Supports multi-GPU training for faster model training.
-*   **Advanced Training Techniques:** Incorporates cutting-edge features such as TREAD (token-wise dropout), ControlNet training, Mixture of Experts, Masked Loss training, and prior regularisation.
-*   **DeepSpeed Integration:** Offers DeepSpeed integration for training large models on systems with limited VRAM.
-*   **Seamless Integration:** Supports training directly from S3-compatible storage, Hugging Face Hub integration (datasets library), and webhooks for monitoring training progress.
-*   **Flexible Configuration:** Provides a wide range of options for customisation, allowing you to tailor the training process to your specific needs.
+    *   Legacy Stable Diffusion (SD 1.5 & 2.x)
 
 ## Table of Contents
 
 *   [Design Philosophy](#design-philosophy)
-*   [Tutorials & Quick Starts](#tutorials-quick-starts)
+*   [Tutorial](#tutorial)
+*   [Features](#features)
+*   [HiDream](#hidream)
+*   [Flux.1](#flux1)
+*   [Wan Video](#wan-video)
+*   [LTX Video](#ltx-video)
+*   [PixArt Sigma](#pixart-sigma)
+*   [NVLabs Sana](#nvlabs-sana)
+*   [Stable Diffusion 3](#stable-diffusion-3)
+*   [Kwai Kolors](#kwai-kolors)
+*   [Lumina2](#lumina2)
+*   [Cosmos2 Predict (Image)](#cosmos2-predict-image)
+*   [Qwen-Image](#qwen-image)
+*   [Legacy Stable Diffusion models](#legacy-stable-diffusion-models)
 *   [Hardware Requirements](#hardware-requirements)
-*   [Scripts](#scripts)
 *   [Toolkit](#toolkit)
 *   [Setup](#setup)
 *   [Troubleshooting](#troubleshooting)
 
 ## Design Philosophy
 
-*   **Simplicity:** Good default settings to minimize the need for extensive configuration.
-*   **Versatility:** Designed to handle datasets of various sizes.
-*   **Cutting-Edge:** Incorporates only proven, effective features.
+*   **Simplicity:** Designed for ease of use with sensible defaults.
+*   **Versatility:** Supports a wide range of datasets and image sizes.
+*   **Proven Features:** Focuses on established and effective training techniques.
 
-## Tutorials & Quick Starts
+## Tutorial
 
-*   **Comprehensive Guide:** Explore the full [tutorial](/TUTORIAL.md) for detailed information.
-*   **Quick Start:** Get started quickly with the [Quick Start](/documentation/QUICKSTART.md) guide.
-*   **DeepSpeed:** Learn about [DeepSpeed](/documentation/DEEPSPEED.md) for memory-constrained systems.
-*   **Multi-Node Training:** [Guide](/documentation/DISTRIBUTED.md) for multi-node distributed training.
-*   Quickstarts are also available for specific models, as mentioned under the "Features" section, above.
+Get started with the [tutorial](/TUTORIAL.md) and [Quick Start](/documentation/QUICKSTART.md) guide to learn more.
 
 ## Hardware Requirements
 
-Requirements vary depending on the model and configuration.
-*   **NVIDIA:** Generally, a 3080 or higher is recommended.
-*   **AMD:** LoRA and full-rank tuning verified on a 7900 XTX 24GB and MI300X.
-*   **Apple:** Works on M3 Max with 128GB memory, but requires 24GB+ for ML.
-*   Specific model requirements are detailed in the original README.
+The hardware requirements vary depending on the specific model and configuration.  Refer to the documentation for specific GPU recommendations:
 
-## Scripts
-
-The original README contains a list of scripts.
+*   [NVIDIA](#nvidia)
+*   [AMD](#amd)
+*   [Apple](#apple)
+*   [HiDream](#hidream)
+*   [Flux.1](#flux1)
+*   [Auraflow](#auraflow)
+*   [SDXL](#sdxl-1024px)
+*   [Stable Diffusion 2.x](#stable-diffusion-2x-768px)
 
 ## Toolkit
 
-For information on the associated toolkit, refer to [the toolkit documentation](/toolkit/README.md).
+For information on the SimpleTuner toolkit, check out the [toolkit documentation](/toolkit/README.md).
 
 ## Setup
 
-Detailed setup information is available in the [installation documentation](/INSTALL.md).
+Detailed setup instructions are available in the [installation documentation](/INSTALL.md).
 
 ## Troubleshooting
 
-Enable debug logs for detailed insights by setting `SIMPLETUNER_LOG_LEVEL=DEBUG` or `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG` in your environment.
-For a list of options, consult [this documentation](/OPTIONS.md).
+Enable debug logs by setting `export SIMPLETUNER_LOG_LEVEL=DEBUG` in your environment. For performance analysis, use `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`. A comprehensive list of options is in the [options documentation](/OPTIONS.md).

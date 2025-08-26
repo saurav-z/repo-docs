@@ -1,102 +1,159 @@
-# Enhance Your Images with Advanced Background Removal and Segmentation: ComfyUI-RMBG
+# Enhance Your Images with ComfyUI-RMBG: Advanced Background Removal and Segmentation
 
-**ComfyUI-RMBG is a powerful ComfyUI custom node that provides advanced image background removal and segmentation capabilities using a variety of cutting-edge models.**  [Visit the original repository](https://github.com/1038lab/ComfyUI-RMBG) for the latest updates and more information.
+Effortlessly remove backgrounds, segment objects, and refine images within ComfyUI using the powerful ComfyUI-RMBG custom node.  [View the original repository](https://github.com/1038lab/ComfyUI-RMBG).
 
 ## Key Features
 
-*   **Versatile Background Removal:** Utilize models like RMBG-2.0, INSPYRENET, BEN, BEN2, and BiRefNet for precise background removal.
-*   **Advanced Segmentation:**  Segment objects, faces, clothing, and fashion elements with precision using SAM, SAM2, and GroundingDINO.
-*   **Real-Time Background Replacement:** Easily replace backgrounds with custom colors or images.
-*   **Improved Edge Detection:** Enhanced edge detection ensures accurate and refined results.
-*   **Text-Prompted Segmentation:** Easily segment objects using text prompts, supporting both tag-style and natural language inputs.
-*   **Multiple Model Support:** Choose from a wide selection of models, including SAM2 (Tiny/Small/Base+/Large) and GroundingDINO for different segmentation needs.
-*   **Batch Processing:** Supports batch processing for efficient handling of multiple images.
-*   **Flexible Image Loading:** Load images from local paths or URLs.
+*   **Advanced Background Removal:** Leverage a variety of models (RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte) for precise background removal.
+*   **Object & Subject Segmentation:** Segment objects, faces, clothing, and fashion elements using text prompts with SAM and GroundingDINO models.
+*   **SAM2 Segmentation:** Utilize the latest SAM2 models (Tiny/Small/Base+/Large) for text-prompted segmentation.
+*   **Real-time Background Replacement:** Seamlessly replace backgrounds with various color options.
+*   **Enhanced Edge Detection:** Achieve superior accuracy with improved edge refinement and detail preservation.
+*   **Model Flexibility:** Choose from a wide array of segmentation models, with automatic or manual model downloads.
+*   **User-Friendly Interface:** Intuitive nodes and parameter controls for easy image manipulation.
+*   **Regular Updates:** Stay up-to-date with the latest features, including new models and enhancements.
 
 ## What's New
 
-*   **v2.9.0:** Added `SDMatte Matting` node
-*   **v2.8.0:** Added `SAM2Segment` node and enhanced color widget support.
-*   **v2.7.1:** Enhanced LoadImage nodes and redesigned ImageStitch node.
-*   **v2.6.0:** Added `Kontext Refence latent Mask` node.
-*   **v2.5.2/v2.5.1/v2.5.0:** Added various new nodes and BiRefNet models and batch image support.
-*   **v2.4.0:** Added new nodes: `CropObject`, `ImageCompare`, `ColorInput` and new Segment V2
-*   **(Previous updates):**  Significant enhancements, including new models, improved features, and bug fixes (see original README for full details).
+*   **v2.9.0 (2025/08/18):** Added `SDMatte Matting` node.
+*   **v2.8.0 (2025/08/11):** Added `SAM2Segment` node and enhanced color widget support.
+*   **v2.7.1 (2025/08/06):** Enhanced LoadImage and ImageStitch nodes, and fixed background color handling issues.
+*   **v2.6.0 (2025/07/15):** Added `Kontext Refence latent Mask` node.
+*   **v2.5.2 (2025/07/11):** Bug fixes and improvements.
+*   **v2.5.1 (2025/07/07):** Bug fixes.
+*   **v2.5.0 (2025/07/01):** Added `MaskOverlay`, `ObjectRemover`, `ImageMaskResize` nodes and new BiRefNet models.
+*   **v2.4.0 (2025/06/01):** Added `CropObject`, `ImageCompare`, `ColorInput` nodes and new Segment V2.
+*   **v2.3.2 (2025/05/15):** Bug fixes.
+*   **v2.3.1 (2025/05/02):** Bug fixes.
+*   **v2.3.0 (2025/05/01):** Added IC-LoRA Concat, Image Crop nodes and resizing options.
+*   **v2.2.1 (2025/04/05):** Bug fixes.
+*   **v2.2.0 (2025/04/05):** Added Image Combiner, Image Stitch, Image/Mask Converter, Mask Enhancer, Mask Combiner, and Mask Extractor and mask image output to segment nodes.
+*   **v2.1.1 (2025/03/21):** Enhanced compatibility with Transformers.
+*   **v2.1.0 (2025/03/19):** Integrated internationalization (i18n) support for multiple languages.
+*   **v2.0.0 (2025/03/13):** Added Image and Mask Tools, improved code structure and documentation.
+*   **v1.9.3 (2025/02/24):** Clean up the code and fix the issue.
+*   **v1.9.2 (2025/02/21):** Added Fast Foreground Color Estimation.
+*   **v1.9.1 (2025/02/20):** Changed repository for model management.
+*   **v1.9.0 (2025/02/19):** BiRefNet model improvements.
+*   **v1.8.0 (2025/02/07):** Added new BiRefNet-HR model.
+*   **v1.7.0 (2025/02/04):** Added new BEN2 model.
+*   **v1.6.0 (2025/01/22):** Added new Face Segment custom node.
+*   **v1.5.0 (2025/01/05):** Added new Fashion and accessories Segment custom node.
+*   **v1.4.0 (2025/01/02):** Added new Clothes Segment node.
+*   **v1.3.2 (2024/12/29):** Enhanced background handling.
+*   **v1.3.1 (2024/12/25):** Bug fixes.
+*   **v1.3.0 (2024/12/23):** Added new Segment node.
+*   **v1.2.2 (2024/12/12):** Bug fixes.
+*   **v1.2.1 (2024/12/02):** Bug fixes.
+*   **v1.2.0 (2024/11/29):** General improvements and bug fixes.
+*   **v1.1.0 (2024/11/21):** General improvements and bug fixes.
 
 ## Installation
 
-Choose your preferred method:
+Choose from the following methods:
 
-1.  **ComfyUI Manager:** Install directly through the ComfyUI Manager by searching for "Comfyui-RMBG."
-2.  **Clone Repository:**
+*   **Method 1: Install via ComfyUI Manager** - Search and install "Comfyui-RMBG". Then install requirment.txt in the ComfyUI-RMBG folder.
+*   **Method 2: Clone to custom_nodes Folder:**
     ```bash
     cd ComfyUI/custom_nodes
     git clone https://github.com/1038lab/ComfyUI-RMBG
-    cd ComfyUI-RMBG
-    ./ComfyUI/python_embeded/python -m pip install -r requirements.txt
     ```
-3.  **Comfy CLI:**
+    Then install requirment.txt in the ComfyUI-RMBG folder.
+*   **Method 3: Install via Comfy CLI:**
     ```bash
     comfy node install ComfyUI-RMBG
-    cd ComfyUI-RMBG
+    ```
+    Then install requirment.txt in the ComfyUI-RMBG folder.
+
+*   **Install Requirements:**
+    ```bash
     ./ComfyUI/python_embeded/python -m pip install -r requirements.txt
     ```
 
-## Model Downloads
+## Model Download
 
-*   **Automatic Download:** Models will be downloaded automatically to the `ComfyUI/models/RMBG/`, `ComfyUI/models/SAM/`, and `ComfyUI/models/grounding-dino/` directories upon first use.
-*   **Manual Download (if needed):** Instructions for manually downloading specific models are available in the original README.
+*   Models will be downloaded automatically on first use to `ComfyUI/models/RMBG/` and  `ComfyUI/models/SAM/`, `ComfyUI/models/sam2`, `ComfyUI/models/grounding-dino`,
+    `/ComfyUI/models/RMBG/segformer_clothes` and `/ComfyUI/models/RMBG/segformer_fashion`.
+*   Manual Download: If needed, download models from the provided Hugging Face links and place them in the corresponding folders (e.g., `ComfyUI/models/RMBG/RMBG-2.0`, `ComfyUI/models/SAM/`).
 
-## Usage
+## Usage Guide
 
-### 1.  RMBG Node (Background Removal)
+### RMBG Node
 
-*   Load the `RMBG (Remove Background)` node from the `🧪AILab/🧽RMBG` category.
-*   Connect an image to the input.
-*   Select a model.
-*   Adjust optional settings.
-*   Get the processed image and mask outputs.
+1.  Load the `RMBG (Remove Background)` node from `🧪AILab/🧽RMBG`.
+2.  Connect your image input.
+3.  Select a background removal model.
+4.  Adjust optional parameters (see below).
+5.  Get the processed image and a foreground mask as outputs.
 
-### Optional Settings and Tips
+### Optional Settings Tips
 
-| Setting                 | Description                                                                     | Tips                                                                                                          |
-| :---------------------- | :------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------ |
-| Sensitivity             | Controls mask detection strength.                                             | Adjust based on image complexity (default: 0.5).                                                            |
-| Processing Resolution   | Controls detail and memory usage.                                             | 256-2048 (default: 1024). Higher values = more detail, higher memory.                                        |
-| Mask Blur               | Softens mask edges.                                                            | Try values between 1 and 5.                                                                                 |
-| Mask Offset             | Expands/shrinks the mask boundary.                                              | Experiment between -10 and 10.                                                                                |
-| Background              | Choose output background color. | Alpha (transparent background) Black, White, Green, Blue, Red |
-| Invert Output           | Flip mask and image output | Invert both image and mask output |
-| Refine Foreground          | Use Fast Foreground Color Estimation to optimize transparent background | Enable for better edge quality and transparency handling |
-| Performance Optimization | Properly setting options can enhance performance when processing multiple images. | If memory allows, consider increasing `process_res` and `mask_blur` values for better results, but be mindful of memory usage. |
+| Optional Settings          | Description                                                                                                                                  | Tips                                                                                                                  |
+| :------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| **Sensitivity**            | Adjusts mask detection strength.  Higher values mean stricter detection.                                                                      | Default: 0.5.  Increase for complex images.                                                                      |
+| **Processing Resolution** | Sets the image processing resolution. Higher res = more detail & memory use.                                                                | Values from 256 to 2048 (step 128).  Default: 1024.                                                                |
+| **Mask Blur**              | Blurs mask edges.                                                                                                                           | Default: 0.  Experiment with values from 1 to 5 for smoother edges.                                                 |
+| **Mask Offset**            | Expands or shrinks the mask boundary.                                                                                                          | Default: 0.  Fine-tune between -10 and 10.                                                                            |
+| **Background**             | Select output background color                                                                                                              | Alpha (transparent background) Black, White, Green, Blue, Red                                                      |
+| **Invert Output**      | Flip mask and image output | Invert both image and mask output |
+| **Refine Foreground**      |  Use Fast Foreground Color Estimation to optimize transparent background                                                                                                              | Enable for better edge quality and transparency handling |
+| **Performance Optimization**      | Properly setting options can enhance performance when processing multiple images.                                                                                                              | If memory allows, consider increasing `process_res` and `mask_blur` values for better results, but be mindful of memory usage. |
 
+### Basic Usage
 
-### 2. Segment Node (Object Segmentation)
+1.  Load `RMBG (Remove Background)` node from the `🧪AILab/🧽RMBG` category
+2.  Connect an image to the input
+3.  Select a model from the dropdown menu
+4.  select the parameters as needed (optional)
+3.  Get two outputs:
+   - IMAGE: Processed image with transparent, black, white, green, blue, or red background
+   - MASK: Binary mask of the foreground
 
-*   Load the `Segment (RMBG)` node from the `🧪AILab/🧽RMBG` category.
-*   Connect an image.
-*   Enter a text prompt (tag-style or natural language).
-*   Select SAM or GroundingDINO models.
-*   Adjust parameters: Threshold (0.25-0.55), Mask blur, and Offset.
+### Segment Node
+
+1.  Load the `Segment (RMBG)` node from `🧪AILab/🧽RMBG`.
+2.  Connect your image.
+3.  Enter a text prompt (tag-style or natural language).
+4.  Select SAM or GroundingDINO model.
+5.  Adjust parameters:
+    *   Threshold: 0.25-0.35 (broad), 0.45-0.55 (precise).
+    *   Mask blur & offset for edge refinement.
+    *   Background color options.
+
+## Parameters
+
+*   `sensitivity`: Sensitivity for background removal (0.0-1.0).
+*   `process_res`: Processing resolution (512-2048, step 128).
+*   `mask_blur`: Mask blur amount (0-64).
+*   `mask_offset`: Adjust mask edges (-20 to 20).
+*   `background`: Choose output background color
+*   `invert_output`: Flip mask and image output
+*   `optimize`: Toggle model optimization
+
+## Models
+
+This node supports a comprehensive selection of models (see the "About Models" section in the original README for in-depth information, which can be found at the bottom).
+
+## Requirements
+
+*   ComfyUI
+*   Python 3.10+
+*   Automatic package installation (see original README for specifics).
 
 ## Troubleshooting
 
-*   Refer to the original README for troubleshooting common issues, such as 401 errors and missing input errors.
+*   Common issues and solutions are listed in the original README.
 
 ## Credits
 
-*   Developed by [AILab](https://github.com/1038lab)
+*   This project utilizes models and code from various sources.  See the original README for a complete list of credits.
 
 ## Star History
 
-<!-- Star History Chart -->
-<a href="https://www.star-history.com/#1038lab/comfyui-rmbg&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=1038lab/comfyui-rmbg&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=1038lab/comfyui-rmbg&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=1038lab/comfyui-rmbg&type=Date" />
- </picture>
-</a>
-<!-- End Star History Chart -->
+[Include Star History Chart here]
 
-If you find this node useful, please consider giving the repository a star!
+Give this repo a ⭐ if you like the work!
+
+## License
+
+GPL-3.0 License

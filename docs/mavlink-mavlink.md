@@ -1,27 +1,29 @@
-# MAVLink: The Lightweight Communication Protocol for Drones and Robotics
+# MAVLink: The Open Standard for Drone Communication
 
-MAVLink (Micro Air Vehicle Message Marshalling Library) is a powerful and lightweight message library designed for seamless communication between drones, ground control stations, and other robotic systems.  This open-source protocol uses a header-only design and XML-based message definitions. For the latest updates and resources, visit the original repository: [https://github.com/mavlink/mavlink](https://github.com/mavlink/mavlink).
+MAVLink is a powerful, lightweight, and widely adopted message protocol, enabling seamless communication between drones and ground control stations.  [Learn more on GitHub](https://github.com/mavlink/mavlink).
+
+[![Build Status](https://github.com/mavlink/mavlink/workflows/Test%20and%20deploy/badge.svg)](https://github.com/mavlink/mavlink/actions?query=branch%3Amaster)
 
 ## Key Features of MAVLink
 
-*   **Lightweight and Efficient:** Optimized for resource-constrained systems, making it ideal for drones and embedded devices.
-*   **Header-Only Library:** Easy to integrate into your projects without complex linking.
-*   **XML-Based Message Definitions:** Simplifies message creation and management using XML files for different systems ("dialects").
-*   **Cross-Platform Support:**  Provides code generation tools for various programming languages, including C, C++, Python, and more.
-*   **Field-Proven:** Widely adopted and used in numerous products for reliable interoperability between components from different manufacturers.
-*   **Bandwidth Optimization:** Designed for efficient communication even with limited bandwidth.
+*   **Lightweight & Efficient:** Optimized for resource-constrained systems with limited bandwidth, RAM, and flash memory.
+*   **Header-Only Library:** Easy integration into various projects with minimal dependencies.
+*   **Cross-Platform Support:** Generates code for multiple languages ([see supported languages](https://mavlink.io/en/#supported_languages)).
+*   **XML-Based Message Definition:** Uses XML files to define message sets ("dialects"), promoting interoperability.
+*   **Widely Adopted:** A field-proven standard used in numerous products, ensuring compatibility between manufacturers.
+*   **Open Source and Community Driven:**  Benefit from a vibrant community and contribute to its ongoing development.
 
-## Getting Started: Generating C Headers
+## Getting Started: Generate C Headers
 
-Here's a quick guide to generate C headers for MAVLink.  Detailed instructions can be found on the [MAVLink website](https://mavlink.io/en/).
+Here's how to get started with the C library:
 
-1.  **Install Dependencies (Ubuntu LTS 20.04/22.04):**
+1.  **Install Dependencies:**
 
     ```bash
     sudo apt install python3-pip
     ```
 
-2.  **Clone the MAVLink Repository:**
+2.  **Clone the Repository:**
 
     ```bash
     git clone https://github.com/mavlink/mavlink.git --recursive
@@ -34,13 +36,13 @@ Here's a quick guide to generate C headers for MAVLink.  Detailed instructions c
     python3 -m pip install -r pymavlink/requirements.txt
     ```
 
-4.  **Generate C Headers (Example):**
+4.  **Generate C Headers:**
 
     ```bash
     python3 -m pymavlink.tools.mavgen --lang=C --wire-protocol=2.0 --output=generated/include/mavlink/v2.0 message_definitions/v1.0/common.xml
     ```
 
-## Using MAVLink with CMake
+## Using with CMake
 
 1.  **Install Headers Locally:**
 
@@ -49,7 +51,7 @@ Here's a quick guide to generate C headers for MAVLink.  Detailed instructions c
     cmake --build build --target install
     ```
 
-2.  **Use `find_package` in your `CMakeLists.txt`:**
+2.  **Use `find_package` in `CMakeLists.txt`:**
 
     ```cmake
     find_package(MAVLink REQUIRED)
@@ -57,20 +59,24 @@ Here's a quick guide to generate C headers for MAVLink.  Detailed instructions c
     target_link_libraries(my_program PRIVATE MAVLink::mavlink)
     ```
 
-3.  **Configure CMake with the Install Directory:**
+3.  **Pass Install Directory to CMake:**
 
     ```bash
     cd ../my_program
     cmake -Bbuild -H. -DCMAKE_PREFIX_PATH=../mavlink/install
     ```
 
-    For a full example, see [examples/c](examples/c).
+    *Note: MAVLink is header-only, so `target_link_libraries` doesn't link but makes the headers available.*
 
-    *Note: MAVLink is a header-only library, so `target_link_libraries` does not perform actual linking.*
+    For a full example, see the [examples/c](examples/c) directory.
 
-## Further Resources and Documentation
+## Further Resources
 
-*   **Website/Documentation:** [https://mavlink.io/en/](https://mavlink.io/en/)
-*   **Discussion/Support:** [https://mavlink.io/en/#support](https://mavlink.io/en/#support)
-*   **Contributing:** [https://mavlink.io/en/contributing/contributing.html](https://mavlink.io/en/contributing/contributing.html)
-*   **License:** [https://mavlink.io/en/#license](https://mavlink.io/en/#license)
+*   [Documentation/Website](https://mavlink.io/en/)
+*   [Discussion/Support](https://mavlink.io/en/#support)
+*   [Contributing](https://mavlink.io/en/contributing/contributing.html)
+*   [License](https://mavlink.io/en/#license)
+*   [Using C MAVLink Libraries (mavgen)](https://mavlink.io/en/mavgen_c/)
+*   [Installing the MAVLink Toolchain](https://mavlink.io/en/getting_started/installation.html)
+*   [Generating MAVLink Libraries](https://mavlink.io/en/getting_started/generate_libraries.html)
+*   [Using MAVLink Libraries](https://mavlink.io/en/getting_started/use_libraries.html)

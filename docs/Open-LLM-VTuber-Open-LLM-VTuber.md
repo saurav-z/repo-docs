@@ -1,52 +1,65 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner.jpg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/banner.jpg">
-  <img alt="Open-LLM-VTuber Banner" src="./assets/banner.jpg">
-</picture>
+[![](./assets/banner.jpg)](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber)
 
-# Open-LLM-VTuber: Your AI Companion with a Live2D Avatar
+# Open-LLM-VTuber: Create Your AI Companion!
 
-**Transform your desktop with a customizable and interactive AI companion powered by open-source LLMs!** Explore the possibilities with the original repository: [Open-LLM-VTuber on GitHub](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber).
+> Bring a charming, interactive AI companion to life with **Open-LLM-VTuber**, a fully customizable, open-source project that combines LLMs, Live2D avatars, and voice interaction, all running locally on your computer!
 
-[![GitHub release](https://img.shields.io/github/v/release/t41372/Open-LLM-VTuber)](https://github.com/t41372/Open-LLM-VTuber/releases)
-[![license](https://img.shields.io/github/license/t41372/Open-LLM-VTuber)](https://github.com/t41372/Open-LLM-VTuber/blob/master/LICENSE)
-[![CodeQL](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/actions/workflows/codeql.yml/badge.svg)](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/actions/workflows/codeql.yml)
-[![Ruff](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/actions/workflows/ruff.yml/badge.svg)](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/actions/workflows/ruff.yml)
-[![Docker](https://img.shields.io/badge/t41372%2FOpen--LLM--VTuber-%25230db7ed.svg?logo=docker&logoColor=blue&labelColor=white&color=blue)](https://hub.docker.com/r/t41372/open-llm-vtuber)
-[![QQ Group](https://img.shields.io/badge/QQ_Group-792615362-white?style=flat&logo=qq&logoColor=white)](https://qm.qq.com/q/ngvNUQpuKI)
-[![QQ Channel](https://img.shields.io/badge/QQ_Channel_(dev)-pd93364606-white?style=flat&logo=qq&logoColor=white)](https://pd.qq.com/s/tt54r3bu)
-[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/yi.ting)
-[![](https://dcbadge.limes.pink/api/server/3UDA8YFDXx)](https://discord.gg/3UDA8YFDXx)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Open-LLM-VTuber/Open-LLM-VTuber)
+**[View the Project on GitHub](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber)**
 
-English README | [中文README](https://github.com/t41372/Open-LLM-VTuber/blob/main/README.CN.md)
+<div align="center">
+    <a href="https://github.com/t41372/Open-LLM-VTuber/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/t41372/Open-LLM-VTuber"/></a>
+    <a href="https://github.com/t41372/Open-LLM-VTuber/blob/master/LICENSE"><img alt="license" src="https://img.shields.io/github/license/t41372/Open-LLM-VTuber"/></a>
+    <a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/actions/workflows/codeql.yml/badge.svg"/></a>
+    <a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/actions/workflows/ruff.yml"><img alt="Ruff" src="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/actions/workflows/ruff.yml/badge.svg"/></a>
+    <a href="https://hub.docker.com/r/t41372/open-llm-vtuber"><img alt="Docker" src="https://img.shields.io/badge/t41372%2FOpen--LLM--VTuber-%25230db7ed.svg?logo=docker&logoColor=blue&labelColor=white&color=blue"/></a>
+    <a href="https://qm.qq.com/q/ngvNUQpuKI"><img alt="QQ Group" src="https://img.shields.io/badge/QQ_Group-792615362-white?style=flat&logo=qq&logoColor=white"/></a>
+    <a href="https://pd.qq.com/s/tt54r3bu"><img alt="QQ Channel (dev)" src="https://img.shields.io/badge/QQ_Channel_(dev)-pd93364606-white?style=flat&logo=qq&logoColor=white"/></a>
+    <a href="https://www.buymeacoffee.com/yi.ting"><img alt="BuyMeACoffee" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black"/></a>
+    <a href="https://discord.gg/3UDA8YFDXx"><img src="https://dcbadge.limes.pink/api/server/3UDA8YFDXx"/></a>
+    <a href="https://deepwiki.com/Open-LLM-VTuber/Open-LLM-VTuber"><img alt="Ask DeepWiki" src="https://deepwiki.com/badge.svg"/></a>
 
-[Documentation](https://open-llm-vtuber.github.io/docs/quick-start) | [![Roadmap](https://img.shields.io/badge/Roadmap-GitHub_Project-yellow)](https://github.com/orgs/Open-LLM-VTuber/projects/2)
+    <a href="https://open-llm-vtuber.github.io/docs/quick-start">Documentation</a> | 
+    <a href="https://github.com/orgs/Open-LLM-VTuber/projects/2">Roadmap</a>
+    
+    <a href="https://trendshift.io/repositories/12358" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12358" alt="t41372%2FOpen-LLM-VTuber | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</div>
 
-<a href="https://trendshift.io/repositories/12358" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12358" alt="t41372%2FOpen-LLM-VTuber | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+>  Common Issues (Chinese): [https://docs.qq.com/pdf/DTFZGQXdTUXhIYWRq](https://docs.qq.com/pdf/DTFZGQXdTUXhIYWRq)
+>  User Survey: [https://forms.gle/w6Y6PiHTZr1nzbtWA](https://forms.gle/w6Y6PiHTZr1nzbtWA)
+>  调查问卷(中文): [https://wj.qq.com/s2/16150415/f50a/](https://wj.qq.com/s2/16150415/f50a/)
 
-> 常见问题 Common Issues doc (Written in Chinese): https://docs.qq.com/pdf/DTFZGQXdTUXhIYWRq
->
-> User Survey: https://forms.gle/w6Y6PiHTZr1nzbtWA
->
-> 调查问卷(中文): https://wj.qq.com/s2/16150415/f50a/
+<div style="color:orange">
+:warning: This project is under active development and in its early stages.
+</div>
 
-> :warning: This project is in its early stages and is currently under **active development**.
-
-> :warning: If you want to run the server remotely and access it on a different machine, such as running the server on your computer and access it on your phone, you will need to configure `https`, because the microphone on the front end will only launch in a secure context (a.k.a. https or localhost). See [MDN Web Doc](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia). Therefore, you should configure https with a reverse proxy to access the page on a remote machine (non-localhost).
+<div style="color:orange">
+:warning: To access the server remotely (e.g., from your phone), configure `https`.  Microphone access requires a secure context (HTTPS or localhost). See [MDN Web Doc](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) for more information. Use a reverse proxy for HTTPS.
+</div>
 
 ## Key Features
 
-*   **Cross-Platform Compatibility:** Runs seamlessly on Windows, macOS, and Linux.
-*   **Offline Mode:** Interact with your AI companion without an internet connection, ensuring privacy and security.
-*   **Versatile Clients:** Offers both a web version and a feature-rich desktop client, with options for windowed and desktop pet modes.
-*   **Advanced Interactions:** Visual perception, voice interruption, touch feedback, Live2D expressions, and more.
-*   **Extensive Model Support:** Compatible with a wide array of LLMs, ASR, and TTS engines.
-*   **Highly Customizable:** Easily modify AI companion appearance, persona, and integrate custom agent architectures.
-
-## How to Get Started
-
-Get up and running in minutes with our [Quick Start guide](https://open-llm-vtuber.github.io/docs/quick-start) in the documentation.
+*   **Cross-Platform Compatibility:** Runs seamlessly on Windows, macOS, and Linux. Includes support for NVIDIA and non-NVIDIA GPUs, with CPU fallback.
+*   **Offline Mode:**  Enjoy complete privacy and security with local model support.  No internet connection is required for core functionality.
+*   **Versatile Clients:**  Use the web version or the feature-rich desktop client (with a desktop pet mode!)
+*   **Interactive Capabilities:**
+    *   Visual Perception:  Utilizes your camera, screen recording, and screenshots.
+    *   Voice Interruption:  The AI companion won't hear itself.
+    *   Touch Feedback: Interact using clicks or drags.
+    *   Live2D Expressions: Control model expressions.
+    *   Pet Mode: Enjoy the AI as a transparent, always-on companion.
+    *   Inner Thoughts: View the AI's thoughts, expressions, and actions.
+    *   Proactive Speaking: AI can initiate conversations.
+    *   Chat Log Persistence: Save and revisit past conversations.
+    *   TTS Translation: Chat in one language, have the AI respond in another!
+*   **Extensive Model Support:** Compatible with a wide variety of LLMs, ASRs, and TTS engines.
+    *   LLMs: Ollama, OpenAI, Gemini, Claude, Mistral, DeepSeek, Zhipu AI, GGUF, LM Studio, vLLM, and more.
+    *   ASR: sherpa-onnx, FunASR, Faster-Whisper, Whisper.cpp, Whisper, Groq Whisper, Azure ASR, etc.
+    *   TTS: sherpa-onnx, pyttsx3, MeloTTS, Coqui-TTS, GPTSoVITS, Bark, CosyVoice, Edge TTS, Fish Audio, Azure TTS, etc.
+*   **Customization Options:**
+    *   Module Configuration: Easy configuration through simple file changes.
+    *   Character Customization: Import Live2D models, customize prompts, and clone voices.
+    *   Agent Integration: Implement your own agent architectures.
+    *   Extensibility: Modular design allows easy addition of new modules.
 
 ## Demo
 
@@ -54,28 +67,34 @@ Get up and running in minutes with our [Quick Start guide](https://open-llm-vtub
 |:---:|:---:|
 | ![](assets/i3.jpg) | ![](assets/i4.jpg) |
 
-## Additional Information
+## Quick Start
 
-*   [Roadmap](https://github.com/users/t41372/projects/1/views/5): Stay updated on future features and developments.
-*   [Contributing Guide](https://docs.llmvtuber.com/docs/development-guide/overview): Learn how you can contribute to the project.
-*   [Third-Party Licenses](#third-party-licenses): Important information regarding Live2D sample models.
-*   [Contributors](#contributors): A list of the amazing people who helped make this project possible.
-*   [Star History](https://star-history.com/#t41372/open-llm-vtuber&Date): A look at the project's popularity over time.
+Get started with Open-LLM-VTuber by following the [Quick Start](https://open-llm-vtuber.github.io/docs/quick-start) guide in our documentation.
 
-## Update Information
-Please use `uv run update.py` to update if you installed any versions later than `v1.0.0`.
+## Update Instructions
 
-## Uninstall Information
-Most files, including Python dependencies and models, are stored in the project folder.
+<div style="color:orange">
+:warning: `v1.0.0` introduced breaking changes. If you're updating from a previous version,  re-deployment is necessary.
+</div>
 
-However, models downloaded via ModelScope or Hugging Face may also be in `MODELSCOPE_CACHE` or `HF_HOME`. While we aim to keep them in the project's `models` directory, it's good to double-check.
+To update after `v1.0.0`, use `uv run update.py`.
 
-Review the installation guide for any extra tools you no longer need, such as `uv`, `ffmpeg`, or `deeplx`.
+## Uninstall
 
-## 🎉🎉🎉 Related Projects
-[ylxmf2005/LLM-Live2D-Desktop-Assitant](https://github.com/ylxmf2005/LLM-Live2D-Desktop-Assitant) - Your Live2D desktop assistant powered by LLM! Available for both Windows and MacOS, it senses your screen, retrieves clipboard content, and responds to voice commands with a unique voice. Featuring voice wake-up, singing capabilities, and full computer control for seamless interaction with your favorite character.
+Most project files, dependencies, and models are stored in the project folder.  However, models downloaded through ModelScope or Hugging Face might also be found in `MODELSCOPE_CACHE` or `HF_HOME`. Double-check the `models` directory.
 
-## 📜 Third-Party Licenses
+Refer to the installation guide for cleaning up tools like `uv`, `ffmpeg`, or `deeplx`.
+
+## Contribute
+
+Contribute to Open-LLM-VTuber!  Check out the [development guide](https://docs.llmvtuber.com/docs/development-guide/overview).
+
+## Related Projects
+
+[ylxmf2005/LLM-Live2D-Desktop-Assitant](https://github.com/ylxmf2005/LLM-Live2D-Desktop-Assitant)
+- Your Live2D desktop assistant powered by LLM! Available for both Windows and MacOS, it senses your screen, retrieves clipboard content, and responds to voice commands with a unique voice. Featuring voice wake-up, singing capabilities, and full computer control for seamless interaction with your favorite character.
+
+## Third-Party Licenses
 
 ### Live2D Sample Models Notice
 
@@ -86,8 +105,6 @@ This content uses sample data owned and copyrighted by Live2D Inc. The sample da
 Note: For commercial use, especially by medium or large-scale enterprises, the use of these Live2D sample models may be subject to additional licensing requirements. If you plan to use this project commercially, please ensure that you have the appropriate permissions from Live2D Inc., or use versions of the project without these models.
 
 ## Contributors
-
-Thanks our contributors and maintainers for making this project possible.
 
 <a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Open-LLM-VTuber/Open-LLM-VTuber" />

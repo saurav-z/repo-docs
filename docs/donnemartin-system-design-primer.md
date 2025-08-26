@@ -1,48 +1,36 @@
-# System Design Primer: Your Guide to Designing Large-Scale Systems
+# System Design Primer: Ace Your System Design Interview
 
-**Tired of feeling lost in system design interviews?**  This open-source resource provides an organized collection of resources, sample solutions, and study guides to help you understand and tackle system design challenges. [Explore the original repo](https://github.com/donnemartin/system-design-primer) for a deeper dive!
+**Tired of feeling lost during system design interviews?**  This comprehensive guide helps you master the art of designing large-scale systems, prepare for the system design interview, and build robust, scalable architectures.  Find the original repo [here](https://github.com/donnemartin/system-design-primer).
 
-## Key Features:
+## Key Features
 
-*   **Comprehensive Topics:**  From basic principles to in-depth explorations of key system design areas such as:
-    *   Scalability and Performance
-    *   Load Balancing, CDNs, and Reverse Proxies
-    *   Databases (SQL, NoSQL), Caching, and Asynchronism
-    *   Communication Protocols (HTTP, TCP, UDP, RPC, REST)
-    *   Security considerations
-*   **Interview Preparation:**  Includes a dedicated study guide, a step-by-step approach to system design interviews, and numerous example questions **with solutions**.
-*   **Open Source & Community Driven:**  Benefit from a continually updated project with contributions from the open source community.  [Contribute](#contributing) to improve the guide!
-*   **Anki Flashcards:**  Utilize provided Anki decks to reinforce your understanding of system design concepts.
-*   **Real-World Architectures:**  Analyze architecture diagrams and articles from leading tech companies like Netflix, Twitter, and Uber to gain insights into how real-world systems are designed.
+*   **Comprehensive Resources:**  Access a vast collection of resources on system design principles, organized to help you learn how to build scalable systems.
+*   **Open Source & Community Driven:** Benefit from a continuously updated open-source project with contributions from the community.  Help by submitting pull requests!
+*   **Interview Prep:**  Practice common system design interview questions, compare your results with sample solutions (discussions, code, and diagrams).
+*   **Anki Flashcards:** Use the provided [Anki flashcard decks](https://apps.ankiweb.net/) and [Interactive Coding Challenges](https://github.com/donnemartin/interactive-coding-challenges) for on-the-go learning.
+*   **Structured Learning:** The guide is designed to help you understand all the core concepts to help you design a scalable system.
 
-## Core Concepts Covered:
+## Core Topics Covered
 
-*   **Performance vs. Scalability:** Understanding the difference and trade-offs.
-*   **Latency vs. Throughput:** Balancing speed and capacity.
-*   **CAP Theorem:**  Explore Consistency, Availability, and Partition Tolerance in distributed systems.
-*   **Consistency and Availability Patterns:**  Learn about weak, eventual, and strong consistency, along with fail-over and replication.
-*   **System Design Topics:** A wide range of core topics, including:
-    *   Domain Name System (DNS)
-    *   Content Delivery Networks (CDNs)
-    *   Load Balancers
-    *   Reverse Proxies
-    *   Application Layer (Microservices, Service Discovery)
-    *   Databases (Relational, NoSQL) and Caching
-    *   Asynchronism and Communication Protocols
+This primer covers the critical aspects of system design:
 
-## Getting Started
-
-1.  **Review the fundamentals:** Start with the provided introductory video lecture and article.
-2.  **Explore System Design Topics:** Dive into the [Index of System Design Topics](#index-of-system-design-topics) to build a broad understanding of the principles.
-3.  **Practice:** Work through the [System design interview questions with solutions](#system-design-interview-questions-with-solutions) section.
+*   **System Design Fundamentals:** Get started with crucial concepts like performance vs. scalability, latency vs. throughput, and availability vs. consistency (CAP theorem).
+*   **Essential Design Patterns:** Explore consistency and availability patterns (fail-over, replication).
+*   **Core System Components:** Learn about DNS, CDNs, load balancers, reverse proxies, and the application layer (microservices, service discovery).
+*   **Database Deep Dive:** Understand relational databases, NoSQL databases, caching strategies, and database tuning.
+*   **Asynchronism and Communication:** Dive into message queues, task queues, and essential communication protocols (TCP, UDP, RPC, REST).
+*   **Security:** Get a basic understanding of security considerations.
+*   **Comprehensive Study Guide:** Plan your interview preparation based on your timeframe (short, medium, or long).
+*   **Interview Guide:** A guide on how to approach system design questions.
+*   **Detailed Interview Questions and Solutions:** Includes system design interview questions with solutions and object-oriented design questions with solutions.
 
 ## Contributing
 
-Help improve this guide by:
+*   Fix errors
+*   Improve sections
+*   Add new sections
+*   [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
 
-*   Fixing errors
-*   Improving existing sections
-*   Adding new sections
-*   [Translating](https://github.com/donnemartin/system-design-primer/issues/28) the guide
+Content that needs some polishing is placed [under development](#under-development).
 
-Review the [Contributing Guidelines](CONTRIBUTING.md) for details.
+Review the [Contributing Guidelines](CONTRIBUTING.md).

@@ -1,72 +1,43 @@
 <img src="header.jpg" alt="Header Image" width="400">
 
-# Kindle Comic Converter (KCC)
+# Kindle Comic Converter (KCC): Optimize Your Comics and Manga for E-Readers
 
-**Transform your black & white comics and manga into optimized, full-screen reading experiences for your e-reader with KCC!**  [Visit the KCC Repo](https://github.com/ciromattia/kcc)
+**Tired of poorly formatted comics on your e-reader?** Kindle Comic Converter (KCC) is the ultimate solution for converting your favorite black & white comics and manga into beautifully optimized files for e-ink devices like Kindle, Kobo, reMarkable, and more.  [Get KCC on GitHub](https://github.com/ciromattia/kcc).
 
-[![GitHub release](https://img.shields.io/github/release/ciromattia/kcc.svg)](https://github.com/ciromattia/kcc/releases)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ciromattia/kcc/docker-publish.yml?label=docker%20build)](https://github.com/ciromattia/kcc/pkgs/container/kcc)
-[![Github All Releases](https://img.shields.io/github/downloads/ciromattia/kcc/total.svg)](https://github.com/ciromattia/kcc/releases)
+## Key Features:
 
-KCC is a powerful and user-friendly tool designed to optimize comics and manga for e-ink e-readers, including Kindle, Kobo, ReMarkable, and more. It addresses common formatting issues and enhances the reading experience on devices with limited resources.
+*   **Superior E-Reader Optimization:** Tailored image processing, including black level adjustments, to enhance readability on e-ink screens, improving contrast and reducing eye strain.
+*   **Full-Screen Viewing:** Eliminates unnecessary margins, ensuring your comics and manga fill the entire screen.
+*   **Flexible Input & Output:** Supports JPG, PNG, GIF, and PDF input formats, and converts to MOBI/AZW3, EPUB, KEPUB, CBZ, and PDF formats.
+*   **reMarkable PDF Support:** Direct PDF output optimized for reMarkable devices for seamless integration with their native PDF reader.
+*   **Customizable Settings:** Adjust image scaling, gamma correction, and other options to fine-tune the reading experience.
+*   **Format Fixes:** Addresses common formatting issues like incorrect page turn direction and misaligned spreads.
 
-**Key Features:**
+## Why Use KCC?
 
-*   **Optimized Output:** Generates files with fullscreen pages without margins.
-*   **Wide Format Support:**  Supports JPG/PNG/GIF images, archives (CBZ, CBR, ZIP, RAR, 7Z), and PDFs as input. Outputs to MOBI/AZW3, EPUB, KEPUB, CBZ, and PDF.
-*   **ReMarkable PDF Support:**  Direct PDF conversion optimized for reMarkable devices.
-*   **Image Processing:** Includes image processing steps to improve appearance on e-ink screens.
-*   **Device-Specific Downscaling:** Downscales to your device's screen resolution for optimal quality and filesize reduction.
-*   **Formatting Fixes:** Corrects common Kindle formatting problems such as faded black levels, incorrect page turn directions and spread alignment.
-*   **User-Friendly GUI:** An intuitive Qt6-built graphical user interface for easy conversion.
+KCC goes beyond simple conversion by addressing the unique display characteristics of e-ink devices.  By downscaling to your device's specific resolution, you'll significantly reduce file sizes, improve battery life, and experience faster page turns.  KCC ensures you get the best possible reading experience on your e-reader.
 
-**New Features**
+## Key Benefits of KCC:
 
-*   PDF output is now supported for direct conversion to reMarkable devices! 
+*   **Improved Readability:** Optimized images make it easier to enjoy comics and manga on e-readers.
+*   **Reduced File Sizes:** Saves storage space on your device.
+*   **Faster Page Turns:** Improves the responsiveness of your e-reader.
+*   **Correct Formatting:** Ensures proper page layout and reading direction.
+*   **Easy to Use:** Simple drag-and-drop interface.
 
-**How to Use:**
+## NEW: PDF Support
 
-1.  Drag and drop your comic files (images, archives, or PDFs) into the KCC window.
-2.  Adjust settings using the tooltips for detailed explanations.
-3.  Click "Convert" to create e-reader-optimized files.
-4.  Hold `Shift` while clicking Convert to change output directory
-5.  Drag and drop the output files to your device's documents folder via USB.
+KCC now supports direct PDF output, making it easy to convert and read comics and manga on reMarkable devices.
 
-**Downloads:**
+## Downloads
 
-*   **[Download the latest release here](https://github.com/ciromattia/kcc/releases)**
+*   **[Download the latest release](https://github.com/ciromattia/kcc/releases)** (Click on **Assets** of the latest release.)
 
-    *   Choose the appropriate file for your operating system (Windows, macOS, or other).
+## Need Help or Have Questions?
 
-**FAQ**
+*   **General questions and feedback:** [Mobileread Forum](http://www.mobileread.com/forums/showthread.php?t=207461)
+*   **Technical issues:** [File an issue on GitHub](https://github.com/ciromattia/kcc/issues/new)
+*   **Wiki:** [KCC Wiki](https://github.com/ciromattia/kcc/wiki/)
+*   **FAQ:** See the FAQ section in the original README (linked below).
 
-*   **Q: Should I use Calibre?**
-    *   A: No. Calibre does not properly support fixed layout EPUB/MOBI, so modifying KCC output in Calibre will break the formatting.
-*   **Q: What output format should I use?**
-    *   A: MOBI for Kindles. CBZ for Kindle DX. CBZ for Koreader. KEPUB for Kobo.
-
-**For more information:**
-* [Our Wiki](https://github.com/ciromattia/kcc/wiki/)
-*   YouTube tutorial: [https://www.youtube.com/watch?v=IR2Fhcm9658](https://www.youtube.com/watch?v=IR2Fhcm9658)
-
-**Get Involved:**
-
-*   **Report Issues:**  [File an issue here](https://github.com/ciromattia/kcc/issues/new).
-*   **Contribute:** Fork the repository and submit pull requests for bug fixes and new features.
-*   **General questions/feedback:** [Post it here](http://www.mobileread.com/forums/showthread.php?t=207461).
-
-**Donate**
-If you find KCC valuable you can consider donating to the authors:
-* Ciro Mattia Gonano (founder, active 2012-2014):
-  [![Donate PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D8WNYNPBGDAS2)
-* Paweł Jastrzębski (active 2013-2019):
-  [![Donate PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YTTJ4LK2JDHPS)
-  [![Donate Bitcoin](https://img.shields.io/badge/Donate-Bitcoin-green.svg)](https://jastrzeb.ski/donate/)
-* Alex Xu (active 2023-Present)
-  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q41BW8HS)
-**Credits:**
-
-*   **Ciro Mattia Gonano, Paweł Jastrzębski, Darodi, and Alex Xu.**
-
-**License:**
-Released under the ISC License; see [LICENSE.txt](./LICENSE.txt) for details.
+[Read the full README on GitHub](https://github.com/ciromattia/kcc)

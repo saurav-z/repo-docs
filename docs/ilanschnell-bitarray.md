@@ -1,112 +1,135 @@
 # bitarray: Efficient Arrays of Booleans
 
-**Representing arrays of booleans efficiently, this library allows for fast bitwise operations, buffer manipulation, and integration with other Python tools.**  Explore the original repository [here](https://github.com/ilanschnell/bitarray).
+**bitarray is a Python library that provides a memory-efficient way to represent and manipulate arrays of booleans, offering fast performance through C-based implementations.** [View the source code](https://github.com/ilanschnell/bitarray)
 
 ## Key Features
 
-*   **Bit-Endianness Control:** Specify little-endian or big-endian representation for each bitarray object.
-*   **Sequence Operations:** Supports slicing (including assignment and deletion), `+`, `*`, `+=`, `*=`, `in` operator, and `len()`.
-*   **Bitwise Operations:** Includes `~`, `&`, `|`, `^`, `<<`, `>>` and in-place versions.
-*   **Variable Bit Length Codes:** Fast encoding and decoding methods for prefix codes.
-*   **Buffer Protocol Support:**  Import and export buffers.
-*   **Integration with Other Formats:** Packing and unpacking to formats like `numpy.ndarray`.
-*   **Pickling and Hashable Objects:** Pickling and unpickling for persistence, and immutable `frozenbitarray` objects for use as dictionary keys.
-*   **Utilities:**  Conversion to/from hex strings, random bitarray generation, pretty printing, Huffman coding, compression, and more in the `bitarray.util` module.
-*   **Extensive Testing:** Comprehensive test suite with nearly 600 unittests.
-*   **Type Hinting:** Includes type hints for improved code readability and maintainability.
+*   **Bit-Endianness Control:** Choose between big-endian and little-endian representations.
+*   **Sequence-like Operations:** Supports slicing, concatenation (`+`), repetition (`*`), and membership (`in`), as well as `len()`.
+*   **Bitwise Operations:** Includes bitwise operators (`~`, `&`, `|`, `^`, `<<`, `>>`) and in-place versions.
+*   **Prefix Code Encoding/Decoding:** Fast methods for variable bit-length prefix code encoding and decoding, including Huffman codes.
+*   **Buffer Protocol Support:**  Works with the Python buffer protocol, allowing interaction with other binary data formats.
+*   **Data Serialization & Pickling:** Supports packing/unpacking, pickling, and unpickling.
+*   **Immutable `frozenbitarray` Objects:**  Provides hashable, immutable bitarrays.
+*   **Efficient Search:**  Includes fast sequential search capabilities.
+*   **Type Hinting:**  Offers type hinting for improved code clarity and maintainability.
+*   **Extensive Testing:**  Comes with a comprehensive test suite of approximately 600 unit tests.
+*   **Utility Module `bitarray.util`:**
+    *   Conversion to and from hexadecimal strings
+    *   Generation of random bitarrays
+    *   Pretty printing
+    *   Conversion to and from integers
+    *   Creation of Huffman codes
+    *   Compression of sparse bitarrays
+    *   (De-)serialization
+    *   Various count functions
+    *   Other helpful functions
 
 ## Installation
 
-Install the `bitarray` package easily using pip:
+Install `bitarray` using pip:
 
 ```bash
 pip install bitarray
 ```
 
-After installation, verify with:
+Test your installation:
 
-```bash
-python -c 'import bitarray; bitarray.test()'
+```python
+import bitarray
+bitarray.test()
 ```
 
 ## Usage
 
-`bitarray` objects behave like lists, but with the efficiency of bit-level storage. The key difference is the ability to access and manipulate the underlying machine representation.
-
 ```python
 from bitarray import bitarray
 
-# Create and modify bitarrays
+# Create an empty bitarray and append elements
 a = bitarray()
 a.append(1)
 a.extend([1, 0])
 print(a)  # Output: bitarray('110')
 
-x = bitarray(2 ** 20)  # Initialize with length 1048576 (all zeros)
+# Initialize from a string
+b = bitarray('1001011')
+print(b)
 
-# Initialize from string or iterable
-a = bitarray('1001 011')
+# Initialize from an iterable
 lst = [1, 0, False, True, True]
-a = bitarray(lst)
+c = bitarray(lst)
+print(c)  # Output: bitarray('10011')
 
-# Indexing and slicing
-print(a[2])
-print(a[2:4])
+# Access elements
+print(c[2])   # Output: 0
+print(c[2:4]) # Output: bitarray('01')
 
-# Count, Remove, Slice Assignment
-print(a.count(1))
-a.remove(0)
-a[11:37:3] = 9 * bitarray('1') # slice assignment
+# Count occurrences
+print(c.count(1))  # Output: 3
+
+# Slice assignment and deletion
+d = bitarray(50)
+d.setall(0)
+d[11:37:3] = 9 * bitarray('1')
+print(d)
+del d[12::3]
+print(d)
+d[-6:] = bitarray('10011')
+print(d)
+d += bitarray('000111')
+print(d[9:])
+
+#Assign a boolean value to a slice:
+a = 20 * bitarray('0')
+a[1:15:3] = True
+print(a)
 ```
 
 ## Bitwise Operators
 
-Bitwise operations are supported:
-
 ```python
 a = bitarray('101110001')
+print(~a)   # Output: bitarray('010001110')
 b = bitarray('111001011')
-
-print(~a)    # Invert
-print(a ^ b)  # XOR
-a &= b       # In-place AND
-a <<= 2      # In-place left-shift
+print(a ^ b)  # Output: bitarray('010111010')
+a &= b
+print(a)    # Output: bitarray('101000001')
+a <<= 2
+print(a)    # Output: bitarray('100000100')
+print(b >> 1)  # Output: bitarray('011100101')
 ```
 
 ## Bit-Endianness
 
-Bit-endianness is relevant when working directly with the bitarray buffer (using methods like `tobytes()`) or when using utility functions like `ba2hex()` and `ba2int()`. Read more about it here:  [`bit-endianness <https://github.com/ilanschnell/bitarray/blob/master/doc/endianness.rst>`].
+Bit-endianness affects how the bits are arranged in memory. It's important when working with the bitarray buffer directly (e.g., `tobytes()`, `frombytes()`) or when using utility functions like `ba2hex()` and `ba2int()`.
 
 ## Buffer Protocol
 
-`bitarray` supports the buffer protocol, allowing interaction with other buffer-compatible objects. Learn more:  [`buffer protocol <https://github.com/ilanschnell/bitarray/blob/master/doc/buffer.rst>`].
+`bitarray` objects support the buffer protocol.  See the documentation for more information.
 
 ## Variable Bit Length Prefix Codes
 
-Encode and decode data using prefix codes (e.g., Huffman codes):
+The `encode()` method allows encoding symbols using a prefix code (like Huffman coding) to extend the bitarray:
 
 ```python
-d = {'H': bitarray('111'), 'e': bitarray('0'), 'l': bitarray('110'), 'o': bitarray('10')}
+d = {'H':bitarray('111'), 'e':bitarray('0'),'l':bitarray('110'), 'o':bitarray('10')}
 a = bitarray()
 a.encode(d, 'Hello')
-print(a)  # Output: bitarray('111011011010')
-print(''.join(a.decode(d))) # Output: Hello
+print(a) # Output: bitarray('111011011010')
 ```
 
-Use `decodetree` for performance improvements.
+The `decode()` method returns an iterator over the symbols.  For faster decoding, create a `decodetree` object:
+
+```python
+from bitarray import bitarray, decodetree
+t = decodetree({'a': bitarray('0'), 'b': bitarray('1')})
+a = bitarray('0110')
+print(list(a.decode(t)))  # Output: ['a', 'b', 'b', 'a']
+```
 
 ## Frozenbitarrays
 
-Immutable, hashable `frozenbitarray` objects can be used as dictionary keys.
-
 ```python
 from bitarray import frozenbitarray
-
 key = frozenbitarray('1100011')
-my_dict = {key: 'some value'}
-print(my_dict)
-```
-
-## Reference
-
-Complete details of the bitarray methods are available in the original repository.
+print({key: 'some value'}) # Output: {frozenbitarray('1100011'): 'some value'}

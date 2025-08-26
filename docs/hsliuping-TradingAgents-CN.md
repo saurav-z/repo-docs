@@ -1,94 +1,88 @@
-# TradingAgents-CN: 中文金融交易决策框架 - 基于大语言模型的AI股票分析 (🚀 增强版)
+# TradingAgents-CN:  🚀  AI-Powered Financial Trading for Chinese Markets
 
-> 💡 **Unlock AI-powered insights for the Chinese stock market!** TradingAgents-CN is a cutting-edge framework built on multi-agent LLMs, specifically designed for Chinese users and optimized for A-share/Hong Kong/US stock analysis.  **[Explore the original repo](https://github.com/hsliuping/TradingAgents-CN)**.
+**Empower your trading strategy with AI!** TradingAgents-CN is a **Chinese-language enhanced financial trading decision-making framework** based on multi-agent large language models. Designed for Chinese users, it provides comprehensive analysis capabilities for **China A-shares, Hong Kong stocks, and US stocks**, with native OpenAI and Google AI integrations.
 
-## ✨ Key Features
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Version](https://img.shields.io/badge/Version-cn--0.1.13--preview-orange.svg)](./VERSION)
+[![Documentation](https://img.shields.io/badge/docs-中文文档-green.svg)](./docs/)
+[![Original](https://img.shields.io/badge/基于-TauricResearch/TradingAgents-orange.svg)](https://github.com/TauricResearch/TradingAgents)
 
-*   **🤖 Native OpenAI & Google AI Integration**: Seamlessly supports OpenAI and Google AI models, including Gemini 2.5 series
-*   **🇨🇳 Optimized for Chinese Markets**: Comprehensive A-share, Hong Kong, and US stock analysis.
-*   **🧠 Intelligent News Analysis**:  AI-driven news filtering, quality assessment, and sentiment analysis.
-*   **🌐 Multi-LLM Provider Support**: Supports major LLM providers like DashScope, DeepSeek, Google AI, OpenAI, and OpenRouter.
-*   **🚀 Streamlined Web Interface**: Intuitive Streamlit-based web UI for easy stock analysis and reporting.
-*   **📈 Professional Reporting**: Generate detailed reports in Markdown, Word (.docx), or PDF format.
-*   **🐳 Dockerized Deployment**: Easy one-click deployment with Docker for a hassle-free experience.
-*   **💾 Persistent Configuration**:  Model selection and settings are saved using URL parameters, keeping your settings with every refresh!
-*   **🎯 Enhanced Chinese Support**: Built-in Chinese language support for a superior user experience.
+[**View the Original Repo: TauricResearch/TradingAgents**](https://github.com/TauricResearch/TradingAgents)
 
-## 🌟 What's New in v0.1.13?
+## ✨ Key Features:
 
-This release is a **preview** of the exciting upcoming features!
+*   **Native OpenAI & Google AI Integration:** Utilizing the latest advancements in LLMs.
+*   **Comprehensive Market Coverage:** Analyze China A-shares, Hong Kong stocks, and US stocks.
+*   **Multi-Agent Architecture:** Fundamental, Technical, News, and Sentiment Analysts collaborate.
+*   **Web Interface:** Intuitive Streamlit-based UI for easy stock analysis.
+*   **Report Generation:** Generate professional reports in Markdown, Word, and PDF formats.
+*   **Docker Deployment:** Easy setup with containerization.
+*   **Chinese Language Support:** Optimized for Chinese users and markets.
+*   **LLM Provider Flexibility:** Supports multiple LLM providers including OpenAI, Google AI, and more!
 
-*   **🤖 Native OpenAI and Google AI Integration:** Custom OpenAI endpoints, 9 Google AI models, and  adapter optimization.
-*   **🧠 Google AI Ecosystem Integration**: Full integration of langchain-google-genai, google-generativeai, and google-genai packages.
-*   **🔧 Optimized LLM Adapter Architecture**:  Enhanced error handling and performance monitoring.
-*   **🎨 Intelligent Web Interface Enhancements:** Smart model selection, UI improvements, and friendlier error handling.
+## 🚀 What's New in cn-0.1.13-preview:
 
-## 🚀 Quick Start
+*   **🚀  Native OpenAI Integration**
+    *   Custom OpenAI endpoint support
+    *   Flexible model selection: Use any OpenAI-compatible model
+    *   Improved compatibility and performance via the native OpenAI adapter
+    *   Unified endpoint and model configuration system
+*   **🧠 Google AI Ecosystem Integration**
+    *   Three Google AI package support
+    *   Nine validated models like Gemini 2.5 Pro/Flash
+    *   Google AI tool processor
+    *   Smart fallback mechanism
+*   **🔧 Optimized LLM Adapter Architecture**
+    *   Google AI OpenAI adapter
+    *   Unified invocation interfaces
+    *   Enhanced error handling
+    *   Performance monitoring
+*   **🎨 Intelligent Web Interface Enhancements**
+    *   Automatic model selection
+    *   KeyError fix
+    *   UI optimization
+    *   Improved error messages
 
-1.  **Docker (Recommended):** `docker-compose up -d --build` or follow the smart start script in the `scripts` folder
-2.  **Local Installation:** `pip install -e .` then  `python start_web.py`
-3.  **Access the Web Interface:** `http://localhost:8501`
-4.  **Enter Stock Code:** e.g., `000001` (A-Share), `AAPL` (US), `0700.HK` (HK)
-5.  **Start Analysis:** Choose your research depth and click the "Start Analysis" button.
-6.  **View Results:**  Monitor progress and access your professional report.
+## 🎯 Core Features:
 
-## 🖼️ Web Interface Screenshots
+*   **Multi-Agent Collaboration:**
+    *   Specialized analysts for fundamental, technical, news, and social media analysis.
+    *   Bullish/Bearish analysts for in-depth analysis.
+    *   Trader makes final investment recommendations based on all inputs.
+    *   Multi-layered risk assessment and management.
+*   **Web Interface (Streamlit):**
+    *   Modern and responsive web interface built with Streamlit.
+    *   Provides an intuitive stock analysis experience.
+    *   Real-time progress tracking.
+    *   Professional investment reports with multi-dimensional results.
+    *   Support for various stock codes.
 
-### 🏠 Main Interface - Analysis Configuration
+## 💻 Quick Start (Docker Recommended):
 
-![Analysis Configuration](images/README/1755003162925.png)
+```bash
+# 1. Clone the repository
+git clone https://github.com/hsliuping/TradingAgents-CN.git
+cd TradingAgents-CN
 
-![Market Selection](images/README/1755002619976.png)
+# 2. Configure environment variables
+cp .env.example .env
+# Edit .env file and fill in API keys.
 
-*Smart configuration panel supports multi-market stock analysis with 5 levels of research depth.*
+# 3. Start the service
+docker-compose up -d --build # First time or after code changes
+# OR
+docker-compose up -d # For daily use (no code changes)
 
-### 📊 Real-time Analysis Progress
+# 4. Access the application
+# Web Interface: http://localhost:8501
+```
 
-![Real-time Progress](images/README/1755002731483.png)
+## 📝  Documentation:
 
-*Real-time progress tracking, visualized analysis process, and smart time estimation.*
+*   **Comprehensive Chinese Documentation:**  Explore detailed guides, tutorials, and API references in our comprehensive Chinese-language documentation.
+*   [View Documentation](./docs/)
 
-### 📈 Analysis Results
+---
 
-![Detailed Results](images/README/1755002901204.png)
-
-![Detailed Results](images/README/1755002924844.png)
-
-![Detailed Results](images/README/1755002939905.png)
-
-![Detailed Results](images/README/1755002968608.png)
-
-![Detailed Results](images/README/1755002985903.png)
-
-![Detailed Results](images/README/1755003004403.png)
-
-![Detailed Results](images/README/1755003019759.png)
-
-![Detailed Results](images/README/1755003033939.png)
-
-![Detailed Results](images/README/1755003048242.png)
-
-![Detailed Results](images/README/1755003064598.png)
-
-![Detailed Results](images/README/1755003090603.png)
-
-*Professional investment reports, multi-dimensional analysis results, and one-click export.*
-
-## 🎯 Core Features at a Glance
-
-*   **🤖 Multi-Agent Architecture**: Four specialized analysts (Technical, Fundamental, News, Social Media).
-*   **📈 Bull/Bear Researchers**: In-depth analysis with structured debate.
-*   **🎯 Trading Agent**: Makes final investment recommendations based on all inputs.
-*   **🛡️ Risk Management**: Multi-layered risk assessment and management.
-*   **🌐 Multi-Market Analysis**:  Support for US, A-share, and Hong Kong markets.
-
-## 📚 Learn More
-
-*   **Comprehensive Documentation:** [docs/](./docs/) - Installation, usage, and API documentation.
-*   **Troubleshooting:** [docs/troubleshooting/](./docs/troubleshooting/) - Solutions to common issues.
-*   **Changelog:** [CHANGELOG.md](./docs/releases/CHANGELOG.md) - Detailed release notes.
-*   **Quickstart Guide:** [QUICKSTART.md](./QUICKSTART.md) - 5-minute deployment guide.
-
-## 🤝  Special Thanks
-
-Huge thanks to the [Tauric Research](https://github.com/TauricResearch/TradingAgents) team for creating the foundational TradingAgents framework!
+**Disclaimer:** *This framework is for research and educational purposes only and does not constitute financial advice. Investing in the stock market involves risk, and decisions should be made with caution.  Always consult with a financial professional.*
