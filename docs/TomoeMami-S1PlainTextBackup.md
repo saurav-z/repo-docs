@@ -1,26 +1,22 @@
-# S1 Plain Text Backup: Archived Forum Posts (S1论坛纯文本备份)
+# S1 Forum Plain Text Backup: Preserving Stage1st Forum Discussions
 
-**Preserve and access the rich history of the Stage1st (S1) forum with this repository's comprehensive plain text backups.**
-
-This repository, [originally from TomoeMami](https://github.com/TomoeMami/S1PlainTextBackup), provides plain text archives of high-traffic threads from the Stage1st (S1) forum, offering a valuable resource for historical research and content preservation.
+This repository provides plain text backups of high-activity threads from the Stage1st (S1) forum, ensuring important discussions are preserved for posterity.  You can find the original repository here: [https://github.com/TomoeMami/S1PlainTextBackup](https://github.com/TomoeMami/S1PlainTextBackup)
 
 ## Key Features
 
-*   **Comprehensive Archiving:** Backups of active forum threads (approximately 1500 posts per file)
-*   **Regular Updates:** Captures new threads meeting activity thresholds, updated every 3 days.
-*   **Historical Archives:** Older threads are moved to historical archives for long-term preservation.
-*   **Supports Basic Formatting:** Preserves basic formatting to improve readability:
-    *   Bold text
+*   **Comprehensive Backups:**  Preserves high-activity S1 forum threads as plain text files.
+*   **Frequent Updates:** Backups are created for new threads exceeding a certain threshold of replies.
+*   **Archival System:**  Older threads are archived to ensure long-term accessibility.
+*   **Searchable Content:**  Text files allow for easy searching and content retrieval.
+*   **Supported Formatting:** Preserves basic formatting elements including:
+    *   **Bold Text**
     *   Links
-    *   Images (JPG, JPEG, PNG, GIF, TIFF, WebP)
-    *   Ratings
-*   **File Size Management:** Files are kept under 1MB to ensure compatibility with GitHub's rendering capabilities, split into 50-page increments.
-*   **Integration with External Tools:** Recommends [S1Downloader](https://github.com/shuangluoxss/Stage1st-downloader) for local, image-inclusive backups.
-*   **Specialized Archives:** Includes dedicated archives for important threads, like those related to the COVID-19 pandemic.
+    *   Images (jpg, jpeg, png, gif, tif, webp)
+    *   Ratings/Scores
 
-## Historical Archives
+## Archive Organization
 
-Access historical backups by year:
+Historical archives are available for various years:
 
 *   [2020-2021](https://github.com/TomoeMami/S1PlainTextArchive2021)
 *   [2022](https://github.com/TomoeMami/S1PlainTextArchive2022)
@@ -28,17 +24,13 @@ Access historical backups by year:
 *   [2024](https://github.com/TomoeMami/S1PlainTextArchive2024)
 *   [2025-Present](https://github.com/TomoeMami/S1PlainTextArchive2025)
 
-## Usage Notes
+## Important Notes
 
-*   **Search Functionality:** Utilize the search function within the repository to locate specific content within the plain text files.
-*   **File Size Limitations:** Files are split into smaller chunks (50 pages) to accommodate GitHub rendering limits.
-*   **External Tools:** For more comprehensive local backups, including images, consider using the recommended [S1Downloader](https://github.com/shuangluoxss/Stage1st-downloader).
+*   **File Size Limits:** Files are split into smaller units (approximately 1500 posts per file, or 50 pages) to ensure compatibility with GitHub's rendering capabilities (under 1MB per file).
+*   **Local Backups:** For local, image-rich backups, consider using the [S1Downloader](https://github.com/shuangluoxss/Stage1st-downloader) tool.
+*   **COVID-19 Threads:** Backups of the COVID-19 specific forum threads come from [https://gitlab.com/memory-s1/virus](https://gitlab.com/memory-s1/virus).
 
 ## Update Log
 
-*   **February 15, 2024:** Modified collection criteria to include threads with over 40 replies within 24 hours, with a 14-day cache.
-*   **February 3, 2024:** Adjusted criteria to collect threads with over 40 replies within 12 hours, and implemented a 7-day cache.
-
-## Get Started
-
-Explore the repository to access archived forum content. This project is a valuable resource for anyone interested in preserving and accessing historical information from the Stage1st forum.
+*   **February 15, 2024:**  Adjusted collection criteria to threads exceeding 40 replies (1 page) within 24 hours, with a 14-day cache.
+*   **February 3, 2024:**  Modified collection criteria to threads exceeding 40 replies (1 page) within 12 hours, with a 7-day cache.

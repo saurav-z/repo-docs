@@ -1,55 +1,87 @@
 <p align="center">
   <a target="_blank" href="https://transform.co/metricflow">
     <picture>
-      <img  alt="MetricFlow logo" src="https://github.com/dbt-labs/metricflow/raw/main/assets/MetricFlow_logo.png" width="auto" height="120">
+      <img  alt="MetricFlow Logo" src="https://github.com/dbt-labs/metricflow/raw/main/assets/MetricFlow_logo.png" width="auto" height="120">
     </picture>
   </a>
-  <br /><br />
 </p>
 
-# MetricFlow: The Semantic Layer for Consistent and Reliable Metrics
+<div align="center">
+  <a href="https://twitter.com/dbt_labs" target="_blank">
+    <img src="https://img.shields.io/twitter/follow/dbt_labs?labelColor=image.png&color=163B36&logo=twitter&style=flat" alt="Twitter">
+  </a>
+  <a href="https://www.getdbt.com/community/" target="_blank">
+    <img src="https://img.shields.io/badge/Slack-join-163B36" alt="Slack">
+  </a>
+  <a href="https://github.com/dbt-labs/metricflow" target="_blank">
+    <img src="https://img.shields.io/github/stars/dbt-labs/metricflow?labelColor=image.png&color=163B36&logo=github" alt="GitHub Stars">
+  </a>
+  <br />
+  <a href="https://github.com/dbt-labs/metricflow/blob/master/LICENSE" target="_blank">
+    <img src="https://img.shields.io/pypi/l/metricflow?color=163B36&logo=AGPL-3.0" alt="License">
+  </a>
+  <a href="https://pypi.org/project/metricflow/" target="_blank">
+    <img src="https://img.shields.io/pypi/v/metricflow?labelColor=&color=163B36" alt="PyPI Version">
+  </a>
+  <img src="https://img.shields.io/pypi/pyversions/metricflow?labelColor=&color=163B36" alt="Python Versions">
+</div>
 
-**MetricFlow empowers you to define, manage, and track your key business metrics in code, ensuring data consistency and accuracy across your organization.**  [Learn more about MetricFlow on GitHub](https://github.com/dbt-labs/metricflow).
+# MetricFlow: Build Consistent Metrics in Code
 
-**Key Features of MetricFlow:**
+**MetricFlow empowers data teams to define and manage metrics in code, ensuring consistent and reliable insights across your organization.**
 
-*   **Centralized Metric Definitions:** Define metrics in code for consistency and reusability.
-*   **Automated Query Generation:** MetricFlow compiles metric definitions into optimized SQL queries, eliminating manual query writing.
-*   **Multi-Hop Joins:** Easily handle complex relationships between fact and dimension tables.
-*   **Support for Complex Metric Types:**  Calculate ratios, expressions, cumulative metrics, and more.
-*   **Time Granularity Flexibility:** Aggregate metrics at different time intervals for comprehensive analysis.
-*   **Data Flow Optimization:**  MetricFlow uses a dataflow-based query plan for efficient execution.
+## Key Features
 
-**Getting Started**
+*   **Semantic Layer:** Define metrics and their relationships in a centralized and reusable way.
+*   **Automated SQL Generation:**  Compile metric definitions into optimized SQL queries, eliminating manual query writing and reducing errors.
+*   **Multi-Hop Joins:** Effortlessly handle complex joins between fact and dimension tables.
+*   **Advanced Metric Types:**  Supports ratio, expression, cumulative, and other complex metric calculations.
+*   **Time Granularity Control:**  Aggregate metrics at various time granularities for flexible analysis.
+*   **Reusability:** Promote consistency and collaboration across your data team.
 
-1.  **Installation:**
+<p align="center">
+  <img src="https://github.com/dbt-labs/metricflow/raw/main/assets/example_plan.svg" height="400" alt="MetricFlow Dataflow Example"/>
+</p>
 
-    ```bash
-    pip install dbt-metricflow
-    ```
+## Getting Started
 
-    *MetricFlow requires a dbt project and adapter.  Optional installations may be needed for Postgres or Graphviz.*
+### Installation
 
-2.  **Tutorial:**  Get hands-on with MetricFlow by running the tutorial from your dbt project root:
+Install MetricFlow using pip:
 
-    ```bash
-    mf tutorial
-    ```
+```bash
+pip install dbt-metricflow
+```
 
-**Resources**
+MetricFlow integrates seamlessly with dbt projects. Ensure you have a dbt project and adapter configured.  Refer to the [documentation](https://docs.getdbt.com/docs/build/build-metrics-intro) for detailed setup instructions.
 
-*   [Documentation](https://docs.getdbt.com/docs/build/build-metrics-intro)
-*   [Slack Community](https://www.getdbt.com/community/)
-*   [MetricFlow GitHub Repository](https://github.com/dbt-labs/metricflow)
-*   [Changelog](https://github.com/dbt-labs/metricflow/blob/main/CHANGELOG.md)
+### Tutorial
+
+Get started quickly with the tutorial by running:
+
+```bash
+mf tutorial
+```
+(Requires a dbt project root directory)
+
+## Resources
+
+*   [**Documentation**](https://docs.getdbt.com/docs/build/build-metrics-intro)
+*   [**Website**](https://transform.co/metricflow)
+*   [**Slack Community**](https://www.getdbt.com/community/)
+*   [**MetricFlow GitHub Repository**](https://github.com/dbt-labs/metricflow)
+*   [CHANGELOG.md](https://github.com/dbt-labs/metricflow/blob/main/CHANGELOG.md)
 *   [TENETS.md](https://github.com/dbt-labs/metricflow/blob/main/TENETS.md)
 
-**Licensing**
+## Contributing
 
-MetricFlow is distributed under a Business Source License (BUSL-1.1). For details on our additional use grant, change license, and change date please refer to our [licensing agreement](https://github.com/dbt-labs/metricflow/blob/main/LICENSE).
+We welcome contributions!  Please review our [Code of Conduct](https://docs.getdbt.com/community/resources/code-of-conduct) and [Contributor Guide](https://github.com/dbt-labs/metricflow/blob/main/CONTRIBUTING.md) to get started.
 
-**Contributing**
+## License
 
-We welcome contributions!  Please review our [code of conduct](https://docs.getdbt.com/community/resources/code-of-conduct) and [contributor guide](https://github.com/dbt-labs/metricflow/blob/main/CONTRIBUTING.md).
+MetricFlow is source-available software.
 
-**Built by dbt Labs**
+*   Version 0 to 0.140.0 was covered by the Affero GPL license.
+*   Version 0.150.0 and greater is covered by the BSL license.
+
+Built by [dbt Labs](https://www.getdbt.com/).

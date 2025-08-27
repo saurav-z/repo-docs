@@ -1,48 +1,41 @@
-# OpenEvolve: Evolve Your Code with AI 🧬
+# OpenEvolve: Unleash AI-Powered Code Evolution
 
-**Unleash the power of AI to discover breakthrough algorithms. OpenEvolve transforms Large Language Models (LLMs) into autonomous code optimizers, revolutionizing how we write and refine software.** ([View on GitHub](https://github.com/codelion/openevolve))
+**Discover breakthrough algorithms and accelerate your code with the power of AI.  OpenEvolve transforms Large Language Models (LLMs) into autonomous coding agents, automating optimization and algorithm discovery.** Explore the original repository: [https://github.com/codelion/openevolve](https://github.com/codelion/openevolve)
 
 [![GitHub stars](https://img.shields.io/github/stars/codelion/openevolve?style=social)](https://github.com/codelion/openevolve/stargazers)
 [![PyPI version](https://img.shields.io/pypi/v/openevolve)](https://pypi.org/project/openevolve/)
 [![PyPI downloads](https://img.shields.io/pypi/dm/openevolve)](https://pypi.org/project/openevolve/)
 [![License](https://img.shields.io/github/license/codelion/openevolve)](https://github.com/codelion/openevolve/blob/main/LICENSE)
 
+[🚀 **Quick Start**](#-quick-start) | [✨ **Key Features**](#-key-features) | [📖 **Examples**](#-examples-gallery) | [🛠️ **Installation**](#-installation--setup)
+
 ---
 
 ## ✨ Key Features
 
-*   **Autonomous Discovery:** LLMs generate and refine code without human intervention, uncovering novel algorithms.
-*   **Proven Results:** Achieve significant performance gains (2-3x speedups), state-of-the-art results, and breakthrough optimizations.
-*   **Research-Grade Reproducibility:** Built-in features ensure reliable, reproducible results and thorough evaluation pipelines.
-*   **Multi-Language Support:** Optimize code in Python, Rust, R, Metal shaders, and more.
-*   **Multi-Objective Optimization:** Automatically discover Pareto-optimal solutions across multiple criteria.
-*   **Comprehensive LLM Integration:** Seamlessly integrate with OpenAI, Google Gemini, local models (Ollama/vLLM), and OptiLLM.
+*   **Autonomous Discovery:**  LLMs evolve and discover entirely new algorithms without human intervention.
+*   **Proven Results:** Achieve **2-3x speedups** on real hardware and discover **state-of-the-art** solutions.
+*   **Research-Grade Reproducibility:**  Benefit from deterministic runs, comprehensive evaluation, and advanced features for scientific rigor.
 
-## 🚀 Why Choose OpenEvolve?
+    *   **Speed & Efficiency:** Outperform manual optimization, delivering solutions in hours compared to days or weeks.
+    *   **Unleash Creativity:**  Tap into the unlimited creative potential of LLMs to explore broader solution spaces.
+    *   **Deterministic Outcomes:**  Guarantee consistent and reproducible results for reliable research.
+    *   **Multi-Objective Optimization:**  Enable automated Pareto optimization for optimal results across multiple objectives.
+    *   **Parallel Evolution:**  Scale optimization efforts with an island-based architecture for efficient, concurrent code evolution.
 
-| Feature             | OpenEvolve                                 | Manual Optimization               |
-| ------------------- | ------------------------------------------ | --------------------------------- |
-| Time to Solution    | Hours                                      | Days to Weeks                     |
-| Exploration Breadth | Unlimited LLM Creativity                  | Limited by Human Creativity      |
-| Reproducibility     | Fully Deterministic                        | Difficult to Replicate            |
-| Multi-objective     | Automatic Pareto Optimization              | Complex Tradeoffs                 |
-| Scaling             | Parallel Evolution Across Multiple 'Islands' | Doesn't Scale Well               |
+## 🏆 OpenEvolve's Achievements
 
-## 🏆 Proven Achievements
-
-| Domain              | Achievement                                     | Example                                                                        |
-| ------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------ |
-| GPU Optimization    | 2-3x speedup on Apple Silicon                  | [MLX Metal Kernels](examples/mlx_metal_kernel_opt/)                              |
-| Mathematical        | State-of-the-art Circle Packing (n=26)           | [Circle Packing](examples/circle_packing/)                                        |
-| Algorithm Design    | Adaptive Sorting Algorithms                       | [Rust Adaptive Sort](examples/rust_adaptive_sort/)                                |
-| Scientific Computing | Automated Filter Design                         | [Signal Processing](examples/signal_processing/)                                  |
-| Multi-Language      | Python, Rust, R, Metal shaders, and more        | [All Examples](examples/)                                                       |
-
----
+| Domain                 | Achievement                                    | Example                                                                 |
+| :--------------------- | :--------------------------------------------- | :---------------------------------------------------------------------- |
+| **GPU Optimization**   | 2-3x speedup on Apple Silicon                | [MLX Metal Kernels](examples/mlx_metal_kernel_opt/)                        |
+| **Mathematical**       | State-of-the-art circle packing (n=26)          | [Circle Packing](examples/circle_packing/)                               |
+| **Algorithm Design**   | Adaptive sorting algorithms                     | [Rust Adaptive Sort](examples/rust_adaptive_sort/)                         |
+| **Scientific Computing** | Automated filter design                        | [Signal Processing](examples/signal_processing/)                           |
+| **Multi-Language**      | Python, Rust, R, Metal shaders optimization | [All Examples](examples/)                                                |
 
 ## 🚀 Quick Start
 
-Get started in **30 seconds**:
+Get started with code evolution in under a minute:
 
 ```bash
 # Install OpenEvolve
@@ -62,7 +55,7 @@ print(f'Best score: {result.best_score:.4f}')
 "
 ```
 
-**Advanced Users:** Explore the full CLI:
+**For Advanced Control:** Use the CLI:
 
 ```bash
 python openevolve-run.py examples/function_minimization/initial_program.py \
@@ -71,7 +64,7 @@ python openevolve-run.py examples/function_minimization/initial_program.py \
   --iterations 1000
 ```
 
-**Docker Users:**
+**Docker Integration:**
 
 ```bash
 docker run --rm -v $(pwd):/app ghcr.io/codelion/openevolve:latest \
@@ -79,28 +72,27 @@ docker run --rm -v $(pwd):/app ghcr.io/codelion/openevolve:latest \
   examples/function_minimization/evaluator.py --iterations 100
 ```
 
----
-
-## 🎬 See OpenEvolve in Action
+## 🎬 See It in Action
 
 <details>
 <summary><b>🔥 Circle Packing: From Random to State-of-the-Art</b></summary>
 
 **Watch OpenEvolve discover optimal circle packing in real-time:**
 
-| Generation 1 | Generation 190 | Generation 460 (Final) |
-|--------------|----------------|----------------------|
-| ![Initial](examples/circle_packing/circle_packing_1.png) | ![Progress](examples/circle_packing/circle_packing_190.png) | ![Final](examples/circle_packing/circle_packing_460.png) |
-| Random placement | Learning structure | **State-of-the-art result** |
+| Generation 1                                                                       | Generation 190                                                                     | Generation 460 (Final)                                                                 |
+| :--------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |
+| <img src="examples/circle_packing/circle_packing_1.png" alt="Generation 1" width="200"> | <img src="examples/circle_packing/circle_packing_190.png" alt="Generation 190" width="200"> | <img src="examples/circle_packing/circle_packing_460.png" alt="Generation 460" width="200"> |
+| Random placement                                                                   | Learning structure                                                                  | **State-of-the-art result**                                                            |
 
-**Result**: Matches published benchmarks for n=26 circle packing problem.
+**Result**: Achieves published benchmarks for n=26 circle packing problem.
 
 </details>
 
 <details>
 <summary><b>⚡ GPU Kernel Evolution</b></summary>
 
-**Before (Baseline)**:
+**Before (Baseline):**
+
 ```metal
 // Standard attention implementation
 kernel void attention_baseline(/* ... */) {
@@ -112,7 +104,8 @@ kernel void attention_baseline(/* ... */) {
 }
 ```
 
-**After Evolution (2.8x faster)**:
+**After Evolution (2.8x faster):**
+
 ```metal
 // OpenEvolve discovered optimization
 kernel void attention_evolved(/* ... */) {
@@ -122,78 +115,72 @@ kernel void attention_evolved(/* ... */) {
 }
 ```
 
-**Performance Impact**: 2.8x speedup on Apple M1 Pro, maintaining numerical accuracy.
+**Performance Impact:** Achieves a 2.8x speedup on Apple M1 Pro while maintaining numerical accuracy.
 
 </details>
 
----
-
 ## 🧬 How OpenEvolve Works
 
-OpenEvolve implements a sophisticated **evolutionary coding pipeline** built around core innovations:
+OpenEvolve uses a sophisticated **evolutionary coding pipeline**:
 
-![OpenEvolve Architecture](openevolve-architecture.png)
+<img src="openevolve-architecture.png" alt="OpenEvolve Architecture" width="700">
 
-### 🎯 **Core Innovation**: MAP-Elites + LLMs
+### 🎯 Core Innovations: MAP-Elites + LLMs
 
-*   **Quality-Diversity Evolution:** Maintains diverse populations across feature dimensions.
-*   **Island-Based Architecture:** Multiple populations prevent premature convergence.
-*   **LLM Ensemble:** Multiple models with intelligent fallback strategies.
-*   **Artifact Side-Channel:** Error feedback improves subsequent generations.
+*   **Quality-Diversity Evolution:** Maintains diverse populations.
+*   **Island-Based Architecture:** Prevents premature convergence through multiple populations.
+*   **LLM Ensemble:** Employs multiple models with smart fallback.
+*   **Artifact Side-Channel:** Feedback improves generations.
 
 ### 🚀 Advanced Features
 
 <details>
 <summary><b>🔬 Scientific Reproducibility</b></summary>
 
-*   **Comprehensive Seeding**: Every component (LLM, database, evaluation) is seeded.
-*   **Default Seed=42**: Immediate reproducible results out of the box.
-*   **Deterministic Evolution**: Exact reproduction of runs across machines.
-*   **Component Isolation**: Hash-based isolation prevents cross-contamination.
+*   **Comprehensive Seeding:** Every component (LLM, database, evaluation) is seeded.
+*   **Default Seed=42:** Provides immediate reproducible results.
+*   **Deterministic Evolution:** Ensures exact run reproduction.
+*   **Component Isolation:** Prevents cross-contamination with hash-based isolation.
 
 </details>
 
 <details>
 <summary><b>🤖 Advanced LLM Integration</b></summary>
 
-*   **Test-Time Compute**: Integration with [OptiLLM](https://github.com/codelion/optillm) for MoA and enhanced reasoning.
-*   **Universal API**: Works with OpenAI, Google, local models.
-*   **Plugin Ecosystem**: Support for OptiLLM plugins (readurls, executecode, z3_solver).
-*   **Intelligent Ensembles**: Weighted combinations with sophisticated fallback.
+*   **Test-Time Compute:** Integration with [OptiLLM](https://github.com/codelion/optillm) for MoA and enhanced reasoning
+*   **Universal API:** Compatibility with OpenAI, Google, and local models.
+*   **Plugin Ecosystem:** Supports OptiLLM plugins (readurls, executecode, z3_solver).
+*   **Intelligent Ensembles:** Utilizes weighted combinations with sophisticated fallback.
 
 </details>
 
 <details>
 <summary><b>🧬 Evolution Algorithm Innovations</b></summary>
 
-*   **Double Selection**: Different programs for performance vs. inspiration.
-*   **Adaptive Feature Dimensions**: Custom quality-diversity metrics.
-*   **Migration Patterns**: Ring topology with controlled gene flow.
-*   **Multi-Strategy Sampling**: Elite, diverse, and exploratory selection.
+*   **Double Selection:** Different programs for performance vs. inspiration.
+*   **Adaptive Feature Dimensions:** Custom quality-diversity metrics.
+*   **Migration Patterns:** Ring topology with controlled gene flow.
+*   **Multi-Strategy Sampling:** Elite, diverse, and exploratory selection.
 
 </details>
 
----
-
 ## 🎯 Perfect For
 
-| Use Case                | Why OpenEvolve Excels                               |
-| ----------------------- | -------------------------------------------------- |
-| 🏃‍♂️ Performance Optimization | Discovers hardware-specific optimizations humans miss. |
-| 🧮 Algorithm Discovery      | Finds novel approaches to classic problems.       |
-| 🔬 Scientific Computing  | Automates tedious manual tuning processes.        |
-| 🎮 Competitive Programming | Generates multiple solution strategies.            |
-| 📊 Multi-Objective Problems | Pareto-optimal solutions across dimensions.       |
+| Use Case                    | Why OpenEvolve Excels                                      |
+| :-------------------------- | :--------------------------------------------------------- |
+| 🏃‍♂️ **Performance Optimization** | Discovers hardware-specific optimizations humans miss. |
+| 🧮 **Algorithm Discovery**      | Finds novel approaches to classic problems.                |
+| 🔬 **Scientific Computing**   | Automates manual tuning processes.                         |
+| 🎮 **Competitive Programming** | Generates multiple solution strategies.                   |
+| 📊 **Multi-Objective Problems** | Pareto-optimal solutions across multiple dimensions.      |
 
----
-
-## 🛠 Installation & Setup
+## 🛠️ Installation & Setup
 
 ### Requirements
 
 *   **Python**: 3.9+
-*   **LLM Access**: Any OpenAI-compatible API
-*   **Optional**: Docker for containerized runs
+*   **LLM Access**: Compatible with any OpenAI-compatible API.
+*   **Optional**: Docker for containerized runs.
 
 ### Installation Options
 
@@ -292,21 +279,19 @@ llm:
 
 </details>
 
----
-
 ## 📸 Examples Gallery
 
 <div align="center">
 
 ### 🏆 Showcase Projects
 
-| Project                                     | Domain           | Achievement                      | Demo                                                                        |
-| ------------------------------------------- | ---------------- | -------------------------------- | --------------------------------------------------------------------------- |
-| [🎯 **Function Minimization**](examples/function_minimization/) | Optimization     | Random → Simulated Annealing   | [View Results](examples/function_minimization/openevolve_output/)           |
-| [⚡ **MLX GPU Kernels**](examples/mlx_metal_kernel_opt/)           | Hardware         | 2-3x Apple Silicon speedup        | [Benchmarks](examples/mlx_metal_kernel_opt/README.md)                      |
-| [🔄 **Rust Adaptive Sort**](examples/rust_adaptive_sort/)         | Algorithms       | Data-aware sorting              | [Code Evolution](examples/rust_adaptive_sort/)                             |
-| [📐 **Symbolic Regression**](examples/symbolic_regression/)     | Science          | Automated equation discovery    | [LLM-SRBench](examples/symbolic_regression/)                               |
-| [🕸️ **Web Scraper + OptiLLM**](examples/web_scraper_optillm/)    | AI Integration   | Test-time compute optimization | [Smart Scraping](examples/web_scraper_optillm/)                              |
+| Project                                                                 | Domain            | Achievement                            | Demo                                                               |
+| :---------------------------------------------------------------------- | :---------------- | :------------------------------------- | :----------------------------------------------------------------- |
+| [🎯 Function Minimization](examples/function_minimization/)              | Optimization      | Random → Simulated Annealing           | [View Results](examples/function_minimization/openevolve_output/)  |
+| [⚡ MLX GPU Kernels](examples/mlx_metal_kernel_opt/)                   | Hardware          | 2-3x Apple Silicon speedup           | [Benchmarks](examples/mlx_metal_kernel_opt/README.md)            |
+| [🔄 Rust Adaptive Sort](examples/rust_adaptive_sort/)                   | Algorithms        | Data-aware sorting                      | [Code Evolution](examples/rust_adaptive_sort/)                      |
+| [📐 Symbolic Regression](examples/symbolic_regression/)                  | Science           | Automated equation discovery           | [LLM-SRBench](examples/symbolic_regression/)                       |
+| [🕸️ Web Scraper + OptiLLM](examples/web_scraper_optillm/)               | AI Integration    | Test-time compute optimization          | [Smart Scraping](examples/web_scraper_optillm/)                     |
 
 </div>
 
@@ -351,7 +336,7 @@ def minimize_function(func, bounds, max_evals=1000):
 ### 🔬 Advanced Examples
 
 <details>
-<summary><b>🎨 Prompt Evolution</b></summary>
+<summary>🎨 Prompt Evolution</summary>
 
 **Evolve prompts instead of code** for better LLM performance:
 
@@ -371,7 +356,7 @@ Result: +23% accuracy improvement on HotpotQA benchmark
 </details>
 
 <details>
-<summary><b>🏁 Competitive Programming</b></summary>
+<summary>🏁 Competitive Programming</summary>
 
 **Automatic solution generation** for programming contests:
 
@@ -388,11 +373,9 @@ Result: +23% accuracy improvement on HotpotQA benchmark
 
 </details>
 
----
-
 ## ⚙️ Configuration
 
-OpenEvolve offers extensive configuration for advanced users:
+OpenEvolve provides extensive configuration for advanced users:
 
 ```yaml
 # Advanced Configuration Example
@@ -432,7 +415,7 @@ prompt:
 ```
 
 <details>
-<summary><b>🎯 Feature Engineering</b></summary>
+<summary>🎯 Feature Engineering</summary>
 
 **Control how programs are organized in the quality-diversity grid:**
 
@@ -450,12 +433,12 @@ database:
     memory_usage: 15    # 15 memory usage categories
 ```
 
-**Important**: Return raw values from evaluator, OpenEvolve handles binning automatically.
+**Important**: Return raw values from the evaluator; OpenEvolve handles binning automatically.
 
 </details>
 
 <details>
-<summary><b>🎨 Custom Prompt Templates</b></summary>
+<summary>🎨 Custom Prompt Templates</summary>
 
 **Advanced prompt engineering** with custom templates:
 
@@ -470,15 +453,13 @@ prompt:
       - "Improving the algorithm:"
 ```
 
-See [prompt examples](examples/llm_prompt_optimization/templates/) for complete template customization.
+See [prompt examples](examples/llm_prompt_optimization/templates/) for full customization.
 
 </details>
 
----
-
 ## 🔧 Artifacts & Debugging
 
-**Artifacts side-channel** provides rich feedback to accelerate evolution:
+**Artifacts side-channel** for enhanced evolution feedback:
 
 ```python
 # Evaluator can return execution context
@@ -496,6 +477,7 @@ return EvaluationResult(
 ```
 
 **Next generation prompt automatically includes:**
+
 ```markdown
 ## Previous Execution Feedback
 ⚠️ Warning: suboptimal memory access pattern
@@ -504,8 +486,6 @@ return EvaluationResult(
 ```
 
 This creates a **feedback loop** where each generation learns from previous mistakes!
-
----
 
 ## 📊 Visualization
 
@@ -524,40 +504,36 @@ python scripts/visualizer.py --path examples/function_minimization/openevolve_ou
 
 **Features:**
 
-*   🌳 **Evolution tree** with parent-child relationships
-*   📈 **Performance tracking** across generations
-*   🔍 **Code diff viewer** showing mutations
-*   📊 **MAP-Elites grid** visualization
-*   🎯 **Multi-metric analysis** with custom dimensions
+*   🌳 **Evolution tree** with parent-child relationships.
+*   📈 **Performance tracking** across generations.
+*   🔍 **Code diff viewer** showing mutations.
+*   📊 **MAP-Elites grid** visualization.
+*   🎯 **Multi-metric analysis** with custom dimensions.
 
 ![OpenEvolve Visualizer](openevolve-visualizer.png)
-
----
 
 ## 🚀 Roadmap
 
 ### 🔥 Upcoming Features
 
-*   [ ] Multi-Modal Evolution: Images, audio, and text simultaneously
-*   [ ] Federated Learning: Distributed evolution across multiple machines
-*   [ ] AutoML Integration: Hyperparameter and architecture evolution
-*   [ ] Benchmark Suite: Standardized evaluation across domains
+*   [ ] **Multi-Modal Evolution**:  Simultaneous image, audio, and text evolution.
+*   [ ] **Federated Learning**: Distributed evolution across multiple machines.
+*   [ ] **AutoML Integration**: Hyperparameter and architecture evolution.
+*   [ ] **Benchmark Suite**: Standardized evaluation across domains.
 
 ### 🌟 Research Directions
 
-*   [ ] Self-Modifying Prompts: Evolution modifies its own prompting strategy
-*   [ ] Cross-Language Evolution: Python → Rust → C++ optimization chains
-*   [ ] Neurosymbolic Reasoning: Combine neural and symbolic approaches
-*   [ ] Human-AI Collaboration: Interactive evolution with human feedback
+*   [ ] **Self-Modifying Prompts**: Evolution modifies its prompting strategy.
+*   [ ] **Cross-Language Evolution**: Python → Rust → C++ optimization chains.
+*   [ ] **Neurosymbolic Reasoning**: Combines neural and symbolic approaches.
+*   [ ] **Human-AI Collaboration**: Interactive evolution with human feedback.
 
-Want to contribute? Check out our [roadmap discussions](https://github.com/codelion/openevolve/discussions/categories/roadmap)!
-
----
+Want to contribute? Explore our [roadmap discussions](https://github.com/codelion/openevolve/discussions/categories/roadmap)!
 
 ## 🤔 FAQ
 
 <details>
-<summary><b>💰 How much does it cost to run?</b></summary>
+<summary>💰 How much does it cost to run?</summary>
 
 **Cost depends on your LLM provider and iterations:**
 
@@ -570,30 +546,30 @@ Want to contribute? Check out our [roadmap discussions](https://github.com/codel
 
 **Cost-saving tips:**
 
-*   Start with fewer iterations (100-200)
-*   Use o3-mini, Gemini-2.5-Flash or local models for exploration
-*   Use cascade evaluation to filter bad programs early
-*   Configure smaller population sizes initially
+*   Start with fewer iterations (100-200).
+*   Use o3-mini, Gemini-2.5-Flash, or local models for exploration.
+*   Use cascade evaluation to filter bad programs early.
+*   Configure smaller population sizes initially.
 
 </details>
 
 <details>
-<summary><b>🆚 How does this compare to manual optimization?</b></summary>
+<summary>🆚 How does this compare to manual optimization?</summary>
 
-| Aspect              | Manual                                   | OpenEvolve                            |
-| ------------------- | ---------------------------------------- | ------------------------------------- |
-| Initial Learning    | Weeks to understand domain               | Minutes to start                      |
-| Solution Quality    | Depends on expertise                   | Consistently explores novel approaches |
-| Time Investment     | Days-weeks per optimization              | Hours for complete evolution          |
-| Reproducibility     | Hard to replicate exact process        | Perfect reproduction with seeds       |
-| Scaling             | Doesn't scale beyond human capacity    | Parallel evolution across islands     |
+| Aspect              | Manual                         | OpenEvolve                                     |
+| :------------------ | :----------------------------- | :--------------------------------------------- |
+| **Initial Learning** | Weeks to understand domain     | Minutes to start                               |
+| **Solution Quality** | Depends on expertise          | Consistently explores novel approaches        |
+| **Time Investment** | Days-weeks per optimization     | Hours for complete evolution                 |
+| **Reproducibility** | Hard to replicate exact process | Perfect reproduction with seeds                |
+| **Scaling**         | Doesn't scale beyond human capacity | Parallel evolution across islands              |
 
 **OpenEvolve shines** when you need to explore large solution spaces or optimize for multiple objectives simultaneously.
 
 </details>
 
 <details>
-<summary><b>🔧 Can I use my own LLM?</b></summary>
+<summary>🔧 Can I use my own LLM?</summary>
 
 **Yes!** OpenEvolve supports any OpenAI-compatible API:
 
@@ -606,76 +582,68 @@ Just set the `api_base` in your config to point to your endpoint.
 </details>
 
 <details>
-<summary><b>🚨 What if evolution gets stuck?</b></summary>
+<summary>🚨 What if evolution gets stuck?</summary>
 
 **Built-in mechanisms prevent stagnation:**
 
-*   Island migration: Fresh genes from other populations
-*   Temperature control: Exploration vs. exploitation balance
-*   Diversity maintenance: MAP-Elites prevents convergence
-*   Artifact feedback: Error messages guide improvements
-*   Template stochasticity: Randomized prompts break patterns
+*   **Island migration**: Fresh genes from other populations.
+*   **Temperature control**: Exploration vs. exploitation balance.
+*   **Diversity maintenance**: MAP-Elites prevents convergence.
+*   **Artifact feedback**: Error messages guide improvements.
+*   **Template stochasticity**: Randomized prompts break patterns.
 
 **Manual interventions:**
 
-*   Increase `num_diverse_programs` for more exploration
-*   Add custom feature dimensions to diversify search
-*   Use template variations to randomize prompts
-*   Adjust migration intervals for more cross-pollination
+*   Increase `num_diverse_programs` for more exploration.
+*   Add custom feature dimensions to diversify the search.
+*   Use template variations to randomize prompts.
+*   Adjust migration intervals for more cross-pollination.
 
 </details>
 
 <details>
-<summary><b>📈 How do I measure success?</b></summary>
+<summary>📈 How do I measure success?</summary>
 
 **Multiple success metrics:**
 
-1.  Primary Metric: Your evaluator's `combined_score` or metric average
-2.  Convergence: Best score improvement over time
-3.  Diversity: MAP-Elites grid coverage
-4.  Efficiency: Iterations to reach target performance
-5.  Robustness: Performance across different test cases
+1.  **Primary Metric**: Your evaluator's `combined_score` or metric average.
+2.  **Convergence**: Best score improvement over time.
+3.  **Diversity**: MAP-Elites grid coverage.
+4.  **Efficiency**: Iterations to reach target performance.
+5.  **Robustness**: Performance across different test cases.
 
 **Use the visualizer** to track all metrics in real-time and identify when evolution has converged.
 
 </details>
 
----
-
 ### 🌟 Contributors
 
-Thanks to all our amazing contributors who make OpenEvolve possible!
+Thank you to the amazing contributors who make OpenEvolve possible!
 
 <a href="https://github.com/codelion/openevolve/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=codelion/openevolve" />
+  <img src="https://contrib.rocks/image?repo=codelion/openevolve" alt="Contributors">
 </a>
-
----
 
 ### 🤝 Contributing
 
-We welcome contributions! Here's how to get started:
+We welcome contributions!  Here's how to get started:
 
-1.  🍴 Fork the repository
-2.  🌿 Create your feature branch: `git checkout -b feat-amazing-feature`
-3.  ✨ Add your changes and tests
-4.  ✅ Test everything: `python -m unittest discover tests`
-5.  📝 Commit with a clear message
-6.  🚀 Push and create a Pull Request
+1.  🍴 **Fork** the repository.
+2.  🌿 **Create** your feature branch: `git checkout -b feat-amazing-feature`.
+3.  ✨ **Add** your changes and tests.
+4.  ✅ **Test** everything: `python -m unittest discover tests`.
+5.  📝 **Commit** with a clear message.
+6.  🚀 **Push** and create a Pull Request.
 
 **New to open source?** Check out our [Contributing Guide](CONTRIBUTING.md) and look for [`good-first-issue`](https://github.com/codelion/openevolve/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) labels!
-
----
 
 ### 📚 Academic & Research
 
 **Articles & Blog Posts About OpenEvolve**:
 
-*   [Towards Open Evolutionary Agents](https://huggingface.co/blog/driaforall/towards-open-evolutionary-agents) - Evolution of coding agents and the open-source movement
-*   [OpenEvolve: GPU Kernel Discovery](https://huggingface.co/blog/codelion/openevolve-gpu-kernel-discovery) - Automated discovery of optimized GPU kernels with 2-3x speedups
-*   [OpenEvolve: Evolutionary Coding with LLMs](https://huggingface.co/blog/codelion/openevolve) - Introduction to evolutionary algorithm discovery using large language models
-
----
+*   [Towards Open Evolutionary Agents](https://huggingface.co/blog/driaforall/towards-open-evolutionary-agents) - Evolution of coding agents and the open-source movement.
+*   [OpenEvolve: GPU Kernel Discovery](https://huggingface.co/blog/codelion/openevolve-gpu-kernel-discovery) - Automated discovery of optimized GPU kernels with 2-3x speedups.
+*   [OpenEvolve: Evolutionary Coding with LLMs](https://huggingface.co/blog/codelion/openevolve) - Introduction to evolutionary algorithm discovery using large language models.
 
 ## 📊 Citation
 
@@ -695,10 +663,28 @@ If you use OpenEvolve in your research, please cite:
 
 <div align="center">
 
-### 🚀 Ready to Evolve Your Code?
+### 🚀 Ready to evolve your code?
 
 **Made with ❤️ by the OpenEvolve community**
 
 *Star ⭐ this repository if OpenEvolve helps you discover breakthrough algorithms!*
 
 </div>
+```
+Key improvements and SEO considerations:
+
+*   **Concise Hook:** The first sentence is a clear, impactful hook, using keywords.
+*   **Keyword Rich Headings:**  Headings incorporate relevant keywords (e.g., "AI-Powered Code Evolution," "Key Features").
+*   **Key Feature Bullets:**  Uses bullet points to make the key features very scannable.
+*   **Quantifiable Achievements:** Highlights specific speedups, matches to benchmarks, and other results (crucial for credibility and SEO).
+*   **Benefit-Driven Descriptions:**  Focuses on the *benefits* of using OpenEvolve (e.g., "achieve speedups," "discover novel approaches").
+*   **Clear Calls to Action:**  Uses visual cues (emojis) and a call to action ("Ready to evolve your code?") to encourage engagement.
+*   **Well-Structured Code Blocks:** Code blocks are clearly formatted and marked for easy readability (important for discoverability and engagement).
+*   **Internal Linking:** Links within the README to relevant sections (Quick Start, Examples, Installation) to guide users and improve navigation.
+*   **Strong Visuals:**  Includes images, including a detailed architecture diagram.
+*   **FAQ and Roadmap:**  Addresses common questions and future plans to provide useful information and establish future-proofing.
+*   **Contributors Section:** Acknowledges contributors (good for community and SEO).
+*   **Citation:**  Includes a citation to promote proper usage and research (if used in research).
+*   **Mobile-Friendly/Readability:** The use of markdown tables, details and summaries are great for display across devices.
+
+This revised README is more engaging, easier to read, and optimized to attract users, improve search ranking, and highlight the value of OpenEvolve.

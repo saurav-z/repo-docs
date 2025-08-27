@@ -7,19 +7,18 @@
   </picture>
 </div>
 
-<h1 align="center">🚀 MCP-Use: Unleash the Power of LLMs with Custom MCP Agents</h1>
-
+<h1 align="center">🚀 MCP-Use: Seamlessly Connect LLMs to MCP Servers</h1>
 <p align="center">
     <a href="https://github.com/mcp-use/mcp-use/stargazers" alt="GitHub stars">
-        <img src="https://img.shields.io/github/stars/pietrozullo/mcp-use?style=social" /></a>
+        <img src="https://img.shields.io/github/stars/mcp-use/mcp-use?style=social" /></a>
     <a href="https://pypi.org/project/mcp_use/" alt="PyPI Downloads">
         <img src="https://static.pepy.tech/badge/mcp-use" /></a>
     <a href="https://pypi.org/project/mcp_use/" alt="PyPI Version">
         <img src="https://img.shields.io/pypi/v/mcp_use.svg"/></a>
     <a href="https://github.com/mcp-use/mcp-use-ts" alt="TypeScript">
       <img src="https://img.shields.io/badge/TypeScript-mcp--use-3178C6?logo=typescript&logoColor=white" /></a>
-    <a href="https://github.com/pietrozullo/mcp-use/blob/main/LICENSE" alt="License">
-        <img src="https://img.shields.io/github/license/pietrozullo/mcp-use" /></a>
+    <a href="https://github.com/mcp-use/mcp-use/blob/main/LICENSE" alt="License">
+        <img src="https://img.shields.io/github/license/mcp-use/mcp-use" /></a>
     <a href="https://docs.mcp-use.com" alt="Documentation">
         <img src="https://img.shields.io/badge/docs-mcp--use.com-blue" /></a>
     <a href="https://mcp-use.com" alt="Website">
@@ -35,36 +34,32 @@
 </p>
 </div>
 
-<br>
-
-**MCP-Use empowers developers to connect any Large Language Model (LLM) to any Model Context Protocol (MCP) server, enabling the creation of powerful, customizable agents with tool access.**
-
-<br>
+**MCP-Use empowers you to build powerful, custom agents by connecting any Large Language Model (LLM) to any MCP server, offering tool access without closed-source clients.**  Explore the [original repo](https://github.com/mcp-use/mcp-use) for in-depth information.
 
 ## Key Features
 
-*   **🛠️ Connect Any LLM:** Seamlessly integrate with any LLM supported by LangChain (OpenAI, Anthropic, Groq, Llama, etc.).
-*   **🔗 Open Source & Flexible:** Build custom MCP agents without relying on closed-source or application clients.
-*   **🌐 Code Builder:** Quickly explore MCP capabilities and generate starter code with the interactive [code builder](https://mcp-use.com/builder).
-*   **💻 HTTP Support:** Directly connect to MCP servers running on specific HTTP ports.
-*   **🔄 Ease of Use:** Create your first MCP-capable agent with as little as six lines of code.
-*   **📦 Multi-Server Support:** Utilize multiple MCP servers simultaneously within a single agent.
-*   **🔒 Tool Access Control:** Restrict tool access for enhanced security and control.
-*   **💡 Dynamic Server Selection:**  Intelligently choose the most appropriate MCP server for each task.
-*   **🚀  Asynchronous Streaming:** Get real-time feedback and progress with asynchronous streaming for agent output using the `astream` method on `MCPAgent`.
-*   **🧩 Build Custom Agents:** Leverage a LangChain adapter to create custom agents and integrate with your preferred frameworks.
-*   **📦 Sandboxed Execution:** Run MCP servers in a sandboxed environment using E2B's cloud infrastructure for secure and resource-efficient operation.
-*   **🔨 Direct Tool Calls:** Call MCP server tools directly without an LLM for programmatic control.
+*   ✅ **LLM Agnostic:** Works with any LangChain-supported LLM that supports tool calling, including OpenAI, Anthropic, and Llama.
+*   🛠️ **Tool Access:** Integrates seamlessly with tools like web browsing, file operations, and more.
+*   💻 **Easy Setup:** Create your first MCP-capable agent with just a few lines of code.
+*   🌐 **Web-Based Builder:** Use the interactive [code builder](https://mcp-use.com/builder) to explore MCP capabilities and generate starter code.
+*   🔗 **HTTP Support:** Connect directly to MCP servers running on HTTP ports.
+*   ⚙️ **Dynamic Server Selection:** Agents intelligently choose the best MCP server.
+*   🧩 **Multi-Server Support:** Leverage multiple MCP servers in a single agent.
+*   🛡️ **Tool Restrictions:** Control access to tools for enhanced security (e.g., file system, network).
+*   ⚡ **Asynchronous Streaming:** Get real-time agent output and progress.
+*   🧑‍💻 **Custom Agents:** Build custom agents using LangChain adapters or create new ones.
+*   🧪 **Sandboxed Execution:** Run MCP servers in a sandboxed environment using E2B.
+*   🔨 **Direct Tool Calls:** Call MCP server tools directly, without an LLM.
 
-## Getting Started
+## Quickstart
 
-### Installation
+Install MCP-Use using pip:
 
 ```bash
 pip install mcp-use
 ```
 
-Or install from source:
+Or, install from source:
 
 ```bash
 git clone https://github.com/mcp-use/mcp-use.git
@@ -74,7 +69,7 @@ pip install -e .
 
 ### Installing LangChain Providers
 
-mcp\_use works with various LLM providers through LangChain. You'll need to install the appropriate LangChain provider package for your chosen LLM. For example:
+Install the appropriate LangChain provider package for your chosen LLM, for example:
 
 ```bash
 # For OpenAI
@@ -84,7 +79,7 @@ pip install langchain-openai
 pip install langchain-anthropic
 ```
 
-For other providers, check the [LangChain chat models documentation](https://python.langchain.com/docs/integrations/chat/) and add your API keys for the provider you want to use to your `.env` file.
+Add your API keys for the provider you want to use to your `.env` file:
 
 ```bash
 OPENAI_API_KEY=
@@ -93,7 +88,7 @@ ANTHROPIC_API_KEY=
 
 > **Important**: Only models with tool calling capabilities can be used with mcp_use. Make sure your chosen model supports function calling or tool use.
 
-### Quickstart Example
+### Run Your Agent
 
 ```python
 import asyncio
@@ -138,409 +133,463 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-You can also add the servers configuration from a config file like this:
+## Streaming Agent Output
+
+MCP-Use supports asynchronous streaming of agent output using the `astream` method on `MCPAgent`, allowing real-time feedback and progress reporting.
+
+### How to Use
+
+Call `agent.astream(query)` and iterate over the results asynchronously:
 
 ```python
-client = MCPClient.from_config_file(
-        os.path.join("browser_mcp.json")
-    )
+async for chunk in agent.astream("Find the best restaurant in San Francisco"):
+    print(chunk["messages"], end="", flush=True)
+```
+
+Each chunk is a dictionary containing keys such as `actions`, `steps`, `messages`, and (on the last chunk) `output`.
+
+#### Example: Streaming in Practice
+
+```python
+import asyncio
+import os
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
+from mcp_use import MCPAgent, MCPClient
+
+async def main():
+    load_dotenv()
+    client = MCPClient.from_config_file("browser_mcp.json")
+    llm = ChatOpenAI(model="gpt-4o")
+    agent = MCPAgent(llm=llm, client=client, max_steps=30)
+    async for chunk in agent.astream("Look for job at nvidia for machine learning engineer."):
+        print(chunk["messages"], end="", flush=True)
+
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 
 ## Example Use Cases
 
-Explore the power of MCP-Use with these practical examples:
+### Web Browsing with Playwright
 
-*   **Web Browsing with Playwright:**
+```python
+import asyncio
+import os
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
+from mcp_use import MCPAgent, MCPClient
 
-    ```python
-    import asyncio
-    import os
-    from dotenv import load_dotenv
-    from langchain_openai import ChatOpenAI
-    from mcp_use import MCPAgent, MCPClient
+async def main():
+    # Load environment variables
+    load_dotenv()
 
-    async def main():
-        # Load environment variables
-        load_dotenv()
+    # Create MCPClient from config file
+    client = MCPClient.from_config_file(
+        os.path.join(os.path.dirname(__file__), "browser_mcp.json")
+    )
 
-        # Create MCPClient from config file
-        client = MCPClient.from_config_file(
-            os.path.join(os.path.dirname(__file__), "browser_mcp.json")
-        )
+    # Create LLM
+    llm = ChatOpenAI(model="gpt-4o")
+    # Alternative models:
+    # llm = ChatAnthropic(model="claude-3-5-sonnet-20240620")
+    # llm = ChatGroq(model="llama3-8b-8192")
 
-        # Create LLM
-        llm = ChatOpenAI(model="gpt-4o")
-        # Alternative models:
-        # llm = ChatAnthropic(model="claude-3-5-sonnet-20240620")
-        # llm = ChatGroq(model="llama3-8b-8192")
+    # Create agent with the client
+    agent = MCPAgent(llm=llm, client=client, max_steps=30)
 
-        # Create agent with the client
-        agent = MCPAgent(llm=llm, client=client, max_steps=30)
+    # Run the query
+    result = await agent.run(
+        "Find the best restaurant in San Francisco USING GOOGLE SEARCH",
+        max_steps=30,
+    )
+    print(f"\nResult: {result}")
 
-        # Run the query
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### Airbnb Search
+
+```python
+import asyncio
+import os
+from dotenv import load_dotenv
+from langchain_anthropic import ChatAnthropic
+from mcp_use import MCPAgent, MCPClient
+
+async def run_airbnb_example():
+    # Load environment variables
+    load_dotenv()
+
+    # Create MCPClient with Airbnb configuration
+    client = MCPClient.from_config_file(
+        os.path.join(os.path.dirname(__file__), "airbnb_mcp.json")
+    )
+
+    # Create LLM - you can choose between different models
+    llm = ChatAnthropic(model="claude-3-5-sonnet-20240620")
+
+    # Create agent with the client
+    agent = MCPAgent(llm=llm, client=client, max_steps=30)
+
+    try:
+        # Run a query to search for accommodations
         result = await agent.run(
-            "Find the best restaurant in San Francisco USING GOOGLE SEARCH",
+            "Find me a nice place to stay in Barcelona for 2 adults "
+            "for a week in August. I prefer places with a pool and "
+            "good reviews. Show me the top 3 options.",
             max_steps=30,
         )
         print(f"\nResult: {result}")
+    finally:
+        # Ensure we clean up resources properly
+        if client.sessions:
+            await client.close_all_sessions()
 
-    if __name__ == "__main__":
-        asyncio.run(main())
-    ```
+if __name__ == "__main__":
+    asyncio.run(run_airbnb_example())
+```
 
-*   **Airbnb Search:**
+### Blender 3D Creation
 
-    ```python
-    import asyncio
-    import os
-    from dotenv import load_dotenv
-    from langchain_anthropic import ChatAnthropic
-    from mcp_use import MCPAgent, MCPClient
+```python
+import asyncio
+from dotenv import load_dotenv
+from langchain_anthropic import ChatAnthropic
+from mcp_use import MCPAgent, MCPClient
 
-    async def run_airbnb_example():
-        # Load environment variables
-        load_dotenv()
+async def run_blender_example():
+    # Load environment variables
+    load_dotenv()
 
-        # Create MCPClient with Airbnb configuration
-        client = MCPClient.from_config_file(
-            os.path.join(os.path.dirname(__file__), "airbnb_mcp.json")
+    # Create MCPClient with Blender MCP configuration
+    config = {"mcpServers": {"blender": {"command": "uvx", "args": ["blender-mcp"]}}}
+    client = MCPClient.from_dict(config)
+
+    # Create LLM
+    llm = ChatAnthropic(model="claude-3-5-sonnet-20240620")
+
+    # Create agent with the client
+    agent = MCPAgent(llm=llm, client=client, max_steps=30)
+
+    try:
+        # Run the query
+        result = await agent.run(
+            "Create an inflatable cube with soft material and a plane as ground.",
+            max_steps=30,
         )
+        print(f"\nResult: {result}")
+    finally:
+        # Ensure we clean up resources properly
+        if client.sessions:
+            await client.close_all_sessions()
 
-        # Create LLM - you can choose between different models
-        llm = ChatAnthropic(model="claude-3-5-sonnet-20240620")
-
-        # Create agent with the client
-        agent = MCPAgent(llm=llm, client=client, max_steps=30)
-
-        try:
-            # Run a query to search for accommodations
-            result = await agent.run(
-                "Find me a nice place to stay in Barcelona for 2 adults "
-                "for a week in August. I prefer places with a pool and "
-                "good reviews. Show me the top 3 options.",
-                max_steps=30,
-            )
-            print(f"\nResult: {result}")
-        finally:
-            # Ensure we clean up resources properly
-            if client.sessions:
-                await client.close_all_sessions()
-
-    if __name__ == "__main__":
-        asyncio.run(run_airbnb_example())
-    ```
-
-*   **Blender 3D Creation:**
-
-    ```python
-    import asyncio
-    from dotenv import load_dotenv
-    from langchain_anthropic import ChatAnthropic
-    from mcp_use import MCPAgent, MCPClient
-
-    async def run_blender_example():
-        # Load environment variables
-        load_dotenv()
-
-        # Create MCPClient with Blender MCP configuration
-        config = {"mcpServers": {"blender": {"command": "uvx", "args": ["blender-mcp"]}}}
-        client = MCPClient.from_dict(config)
-
-        # Create LLM
-        llm = ChatAnthropic(model="claude-3-5-sonnet-20240620")
-
-        # Create agent with the client
-        agent = MCPAgent(llm=llm, client=client, max_steps=30)
-
-        try:
-            # Run the query
-            result = await agent.run(
-                "Create an inflatable cube with soft material and a plane as ground.",
-                max_steps=30,
-            )
-            print(f"\nResult: {result}")
-        finally:
-            # Ensure we clean up resources properly
-            if client.sessions:
-                await client.close_all_sessions()
-
-    if __name__ == "__main__":
-        asyncio.run(run_blender_example())
-    ```
+if __name__ == "__main__":
+    asyncio.run(run_blender_example())
+```
 
 ## Configuration Support
 
-*   **HTTP Connection:** Easily connect to MCP servers over HTTP.
+### HTTP Connection Example
 
-    ```python
-    import asyncio
-    import os
-    from dotenv import load_dotenv
-    from langchain_openai import ChatOpenAI
-    from mcp_use import MCPAgent, MCPClient
+```python
+import asyncio
+import os
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
+from mcp_use import MCPAgent, MCPClient
 
-    async def main():
-        """Run the example using a configuration file."""
-        # Load environment variables
-        load_dotenv()
-
-        config = {
-            "mcpServers": {
-                "http": {
-                    "url": "http://localhost:8931/sse"
-                }
-            }
-        }
-
-        # Create MCPClient from config file
-        client = MCPClient.from_dict(config)
-
-        # Create LLM
-        llm = ChatOpenAI(model="gpt-4o")
-
-        # Create agent with the client
-        agent = MCPAgent(llm=llm, client=client, max_steps=30)
-
-        # Run the query
-        result = await agent.run(
-            "Find the best restaurant in San Francisco USING GOOGLE SEARCH",
-            max_steps=30,
-        )
-        print(f"\nResult: {result}")
-
-    if __name__ == "__main__":
-        # Run the appropriate example
-        asyncio.run(main())
-    ```
-
-*   **Multi-Server Support:** Leverage multiple MCP servers simultaneously.
-
-    *   **Configuration Example:**
-
-        ```json
-        {
-          "mcpServers": {
-            "airbnb": {
-              "command": "npx",
-              "args": ["-y", "@openbnb/mcp-server-airbnb", "--ignore-robots-txt"]
-            },
-            "playwright": {
-              "command": "npx",
-              "args": ["@playwright/mcp@latest"],
-              "env": {
-                "DISPLAY": ":1"
-              }
-            }
-          }
-        }
-        ```
-
-    *   **Usage:**
-
-        ```python
-        # Example: Manually selecting a server for a specific task
-        result = await agent.run(
-            "Search for Airbnb listings in Barcelona",
-            server_name="airbnb" # Explicitly use the airbnb server
-        )
-
-        result_google = await agent.run(
-            "Find restaurants near the first result using Google Search",
-            server_name="playwright" # Explicitly use the playwright server
-        )
-        ```
-    *   **Dynamic Server Selection:**  Use the Server Manager for intelligent server selection.
-
-        ```python
-        import asyncio
-        from mcp_use import MCPClient, MCPAgent
-        from langchain_anthropic import ChatAnthropic
-
-        async def main():
-            # Create client with multiple servers
-            client = MCPClient.from_config_file("multi_server_config.json")
-
-            # Create agent with the client
-            agent = MCPAgent(
-                llm=ChatAnthropic(model="claude-3-5-sonnet-20240620"),
-                client=client,
-                use_server_manager=True  # Enable the Server Manager
-            )
-
-            try:
-                # Run a query that uses tools from multiple servers
-                result = await agent.run(
-                    "Search for a nice place to stay in Barcelona on Airbnb, "
-                    "then use Google to find nearby restaurants and attractions."
-                )
-                print(result)
-            finally:
-                # Clean up all sessions
-                await client.close_all_sessions()
-
-        if __name__ == "__main__":
-            asyncio.run(main())
-        ```
-
-*   **Tool Access Control:** Restrict tool access for security.
-
-    ```python
-    import asyncio
-    from mcp_use import MCPAgent, MCPClient
-    from langchain_openai import ChatOpenAI
-
-    async def main():
-        # Create client
-        client = MCPClient.from_config_file("config.json")
-
-        # Create agent with restricted tools
-        agent = MCPAgent(
-            llm=ChatOpenAI(model="gpt-4"),
-            client=client,
-            disallowed_tools=["file_system", "network"]  # Restrict potentially dangerous tools
-        )
-
-        # Run a query with restricted tool access
-        result = await agent.run(
-            "Find the best restaurant in San Francisco"
-        )
-        print(result)
-
-        # Clean up
-        await client.close_all_sessions()
-
-    if __name__ == "__main__":
-        asyncio.run(main())
-    ```
-
-*   **Sandboxed Execution:**  Run MCP servers in a secure, isolated environment with E2B.
-
-    ```python
-    import asyncio
-    import os
-    from dotenv import load_dotenv
-    from langchain_openai import ChatOpenAI
-    from mcp_use import MCPAgent, MCPClient
-    from mcp_use.types.sandbox import SandboxOptions
-
-    async def main():
-        # Load environment variables (needs E2B_API_KEY)
-        load_dotenv()
-
-        # Define MCP server configuration
-        server_config = {
-            "mcpServers": {
-                "everything": {
-                    "command": "npx",
-                    "args": ["-y", "@modelcontextprotocol/server-everything"],
-                }
-            }
-        }
-
-        # Define sandbox options
-        sandbox_options: SandboxOptions = {
-            "api_key": os.getenv("E2B_API_KEY"),  # API key can also be provided directly
-            "sandbox_template_id": "base",  # Use base template
-        }
-
-        # Create client with sandboxed mode enabled
-        client = MCPClient(
-            config=server_config,
-            sandbox=True,
-            sandbox_options=sandbox_options,
-
-        )
-
-        # Create agent with the sandboxed client
-        llm = ChatOpenAI(model="gpt-4o")
-        agent = MCPAgent(llm=llm, client=client)
-
-        # Run your agent
-        result = await agent.run("Use the command line tools to help me add 1+1")
-        print(result)
-
-        # Clean up
-        await client.close_all_sessions()
-
-    if __name__ == "__main__":
-        asyncio.run(main())
-    ```
-
-*   **Direct Tool Calls (Without LLM):**
-
-    ```python
-    import asyncio
-    from mcp_use import MCPClient
-
-    async def call_tool_example():
-        config = {
-            "mcpServers": {
-                "everything": {
-                    "command": "npx",
-                    "args": ["-y", "@modelcontextprotocol/server-everything"],
-                }
-            }
-        }
-
-        client = MCPClient.from_dict(config)
-
-        try:
-            await client.create_all_sessions()
-            session = client.get_session("everything")
-
-            # Call tool directly
-            result = await session.call_tool(
-                name="add",
-                arguments={"a": 1, "b": 2}
-            )
-
-            print(f"Result: {result.content[0].text}")  # Output: 3
-
-        finally:
-            await client.close_all_sessions()
-
-    if __name__ == "__main__":
-        asyncio.run(call_tool_example())
-    ```
-
-*   **Build a Custom Agent:**
-
-    ```python
-    import asyncio
-    from langchain_openai import ChatOpenAI
-    from mcp_use.client import MCPClient
-    from mcp_use.adapters.langchain_adapter import LangChainAdapter
-    from dotenv import load_dotenv
-
+async def main():
+    """Run the example using a configuration file."""
+    # Load environment variables
     load_dotenv()
 
-    async def main():
-        # Initialize MCP client
-        client = MCPClient.from_config_file("examples/browser_mcp.json")
-        llm = ChatOpenAI(model="gpt-4o")
+    config = {
+        "mcpServers": {
+            "http": {
+                "url": "http://localhost:8931/sse"
+            }
+        }
+    }
 
-        # Create adapter instance
-        adapter = LangChainAdapter()
-        # Get LangChain tools with a single line
-        tools = await adapter.create_tools(client)
+    # Create MCPClient from config file
+    client = MCPClient.from_dict(config)
 
-        # Create a custom LangChain agent
-        llm_with_tools = llm.bind_tools(tools)
-        result = await llm_with_tools.ainvoke("What tools do you have available ? ")
+    # Create LLM
+    llm = ChatOpenAI(model="gpt-4o")
+
+    # Create agent with the client
+    agent = MCPAgent(llm=llm, client=client, max_steps=30)
+
+    # Run the query
+    result = await agent.run(
+        "Find the best restaurant in San Francisco USING GOOGLE SEARCH",
+        max_steps=30,
+    )
+    print(f"\nResult: {result}")
+
+if __name__ == "__main__":
+    # Run the appropriate example
+    asyncio.run(main())
+```
+
+### Multi-Server Support
+
+Configure multiple servers in your configuration file:
+
+```json
+{
+  "mcpServers": {
+    "airbnb": {
+      "command": "npx",
+      "args": ["-y", "@openbnb/mcp-server-airbnb", "--ignore-robots-txt"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"],
+      "env": {
+        "DISPLAY": ":1"
+      }
+    }
+  }
+}
+```
+
+#### Usage
+
+```python
+# Example: Manually selecting a server for a specific task
+result = await agent.run(
+    "Search for Airbnb listings in Barcelona",
+    server_name="airbnb" # Explicitly use the airbnb server
+)
+
+result_google = await agent.run(
+    "Find restaurants near the first result using Google Search",
+    server_name="playwright" # Explicitly use the playwright server
+)
+```
+
+### Dynamic Server Selection (Server Manager)
+
+Enable the Server Manager by setting `use_server_manager=True` during `MCPAgent` initialization for enhanced efficiency.
+
+```python
+import asyncio
+from mcp_use import MCPClient, MCPAgent
+from langchain_anthropic import ChatAnthropic
+
+async def main():
+    # Create client with multiple servers
+    client = MCPClient.from_config_file("multi_server_config.json")
+
+    # Create agent with the client
+    agent = MCPAgent(
+        llm=ChatAnthropic(model="claude-3-5-sonnet-20240620"),
+        client=client,
+        use_server_manager=True  # Enable the Server Manager
+    )
+
+    try:
+        # Run a query that uses tools from multiple servers
+        result = await agent.run(
+            "Search for a nice place to stay in Barcelona on Airbnb, "
+            "then use Google to find nearby restaurants and attractions."
+        )
         print(result)
+    finally:
+        # Clean up all sessions
+        await client.close_all_sessions()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### Tool Access Control
+
+```python
+import asyncio
+from mcp_use import MCPAgent, MCPClient
+from langchain_openai import ChatOpenAI
+
+async def main():
+    # Create client
+    client = MCPClient.from_config_file("config.json")
+
+    # Create agent with restricted tools
+    agent = MCPAgent(
+        llm=ChatOpenAI(model="gpt-4"),
+        client=client,
+        disallowed_tools=["file_system", "network"]  # Restrict potentially dangerous tools
+    )
+
+    # Run a query with restricted tool access
+    result = await agent.run(
+        "Find the best restaurant in San Francisco"
+    )
+    print(result)
+
+    # Clean up
+    await client.close_all_sessions()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### Sandboxed Execution
+
+Run MCP servers in a sandboxed environment using E2B.
+
+#### Installation
+
+```bash
+# Install mcp-use with E2B support
+pip install "mcp-use[e2b]"
+
+# Or install the dependency directly
+pip install e2b-code-interpreter
+```
+
+#### Configuration
+
+```python
+import asyncio
+import os
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
+from mcp_use import MCPAgent, MCPClient
+from mcp_use.types.sandbox import SandboxOptions
+
+async def main():
+    # Load environment variables (needs E2B_API_KEY)
+    load_dotenv()
+
+    # Define MCP server configuration
+    server_config = {
+        "mcpServers": {
+            "everything": {
+                "command": "npx",
+                "args": ["-y", "@modelcontextprotocol/server-everything"],
+            }
+        }
+    }
+
+    # Define sandbox options
+    sandbox_options: SandboxOptions = {
+        "api_key": os.getenv("E2B_API_KEY"),  # API key can also be provided directly
+        "sandbox_template_id": "base",  # Use base template
+    }
+
+    # Create client with sandboxed mode enabled
+    client = MCPClient(
+        config=server_config,
+        sandbox=True,
+        sandbox_options=sandbox_options,
+
+    )
+
+    # Create agent with the sandboxed client
+    llm = ChatOpenAI(model="gpt-4o")
+    agent = MCPAgent(llm=llm, client=client)
+
+    # Run your agent
+    result = await agent.run("Use the command line tools to help me add 1+1")
+    print(result)
+
+    # Clean up
+    await client.close_all_sessions()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+#### Sandbox Options
+
+| Option                 | Description                                                                              | Default               |
+| ---------------------- | ---------------------------------------------------------------------------------------- | --------------------- |
+| `api_key`              | E2B API key. Required - can be provided directly or via E2B_API_KEY environment variable | None                  |
+| `sandbox_template_id`  | Template ID for the sandbox environment                                                  | "base"                |
+| `supergateway_command` | Command to run supergateway                                                              | "npx -y supergateway" |
+
+### Direct Tool Calls (Without LLM)
+
+```python
+import asyncio
+from mcp_use import MCPClient
+
+async def call_tool_example():
+    config = {
+        "mcpServers": {
+            "everything": {
+                "command": "npx",
+                "args": ["-y", "@modelcontextprotocol/server-everything"],
+            }
+        }
+    }
+
+    client = MCPClient.from_dict(config)
+
+    try:
+        await client.create_all_sessions()
+        session = client.get_session("everything")
+
+        # Call tool directly
+        result = await session.call_tool(
+            name="add",
+            arguments={"a": 1, "b": 2}
+        )
+
+        print(f"Result: {result.content[0].text}")  # Output: 3
+
+    finally:
+        await client.close_all_sessions()
+
+if __name__ == "__main__":
+    asyncio.run(call_tool_example())
+```
+
+See the complete example: [examples/direct_tool_call.py](examples/direct_tool_call.py)
+
+### Build a Custom Agent:
+
+```python
+import asyncio
+from langchain_openai import ChatOpenAI
+from mcp_use.client import MCPClient
+from mcp_use.adapters.langchain_adapter import LangChainAdapter
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
-    if __name__ == "__main__":
-        asyncio.run(main())
-    ```
+async def main():
+    # Initialize MCP client
+    client = MCPClient.from_config_file("examples/browser_mcp.json")
+    llm = ChatOpenAI(model="gpt-4o")
+
+    # Create adapter instance
+    adapter = LangChainAdapter()
+    # Get LangChain tools with a single line
+    tools = await adapter.create_tools(client)
+
+    # Create a custom LangChain agent
+    llm_with_tools = llm.bind_tools(tools)
+    result = await llm_with_tools.ainvoke("What tools do you have available ? ")
+    print(result)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
 
 ## Debugging
 
-MCP-Use offers robust debugging capabilities:
+*   **Enabling Debug Mode:**
 
-*   **Environment Variable:** Use `DEBUG=1` (INFO) or `DEBUG=2` (DEBUG) to control logging verbosity.
-*   **Programmatic Debugging:** Use `mcp_use.set_debug()` in your code.
-*   **Agent Verbosity:**  Set `verbose=True` in `MCPAgent` for agent-specific debug output.
+    *   **Environment Variable:** `DEBUG=1` (INFO) or `DEBUG=2` (DEBUG).
+    *   **Programmatically:** `mcp_use.set_debug(1)` (INFO) or `mcp_use.set_debug(2)` (DEBUG).
+    *   **Agent-Specific Verbosity:** Set `verbose=True` in `MCPAgent`.
 
 ## Star History
 
@@ -548,15 +597,19 @@ MCP-Use offers robust debugging capabilities:
 
 ## Contributing
 
-We welcome contributions!  Please review [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions!  See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## [GitHub Repository](https://github.com/mcp-use/mcp-use)
+## Contributors
 
-<br>
+Thanks to all our amazing contributors!
 
-<!-- gh-dependents-info-used-by-start -->
+<a href="https://github.com/mcp-use/mcp-use/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mcp-use/mcp-use" />
+</a>
 
 ## Top Starred Dependents
+
+<!-- gh-dependents-info-used-by-start -->
 
 <table>
   <tr>
@@ -611,7 +664,7 @@ We welcome contributions!  Please review [CONTRIBUTING.md](CONTRIBUTING.md) for 
 
 *   Python 3.11+
 *   MCP implementation (e.g., Playwright MCP)
-*   LangChain and relevant LLM libraries (e.g., OpenAI, Anthropic).
+*   LangChain and model libraries (OpenAI, Anthropic, etc.)
 
 ## License
 

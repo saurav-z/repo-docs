@@ -1,36 +1,42 @@
-# Calibre: The Ultimate E-book Manager for All Your Reading Needs
+# Calibre: Your All-in-One Ebook Management Solution
 
-**Tired of juggling multiple e-book formats and struggling to organize your digital library?** Calibre is a powerful, open-source e-book manager that simplifies e-book viewing, conversion, editing, and cataloging.
+**Calibre is a powerful, cross-platform ebook manager that simplifies every aspect of your digital reading experience.** ([View the original repository](https://github.com/kovidgoyal/calibre))
 
-[<img align="left" src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" height="200" width="200"/>](https://github.com/kovidgoyal/calibre)
+<img align="left" src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" height="200" width="200"/>
 
 ## Key Features:
 
-*   **Comprehensive E-book Management:** View, convert, edit, and catalog e-books in all major formats.
-*   **Cross-Platform Compatibility:** Works seamlessly on Linux, Windows, and macOS.
-*   **Device Synchronization:** Connects with your e-book reader devices.
-*   **Metadata Retrieval:** Automatically fetches book metadata from the internet.
-*   **News & Magazine Conversion:** Downloads and converts newspapers and magazines into e-books.
+*   **Comprehensive Ebook Management:** Organize, view, convert, and edit ebooks in all major formats (e.g., EPUB, MOBI, PDF).
+*   **Multi-Platform Support:** Works seamlessly on Windows, macOS, and Linux.
+*   **Ereader Device Compatibility:** Connect and manage ebooks on your ebook reader devices.
+*   **Metadata Retrieval:** Automatically fetches metadata and covers for your ebooks from the internet.
+*   **News and Magazine Conversion:** Download and convert news sources into ebooks for easy offline reading.
 
-## Learn More
+[![Build Status](https://github.com/kovidgoyal/calibre/workflows/CI/badge.svg)](https://github.com/kovidgoyal/calibre/actions?query=workflow%3ACI)
 
-*   **About Calibre:** [calibre About page](https://calibre-ebook.com/about)
-*   **Screenshots:** [Screenshots page](https://calibre-ebook.com/demo)
-*   **User Manual:** [User Manual](https://manual.calibre-ebook.com)
+## Explore Calibre:
 
-## Development & Contributing
+*   **Screenshots:** [Calibre Demo Page](https://calibre-ebook.com/demo)
+*   **User Manual:** [Calibre User Manual](https://manual.calibre-ebook.com)
+*   **About Calibre:** [Calibre About Page](https://calibre-ebook.com/about)
 
-*   **Development Environment:** [Setting up a development environment for calibre](https://manual.calibre-ebook.com/develop.html)
-*   **Source Code:** [Tarball of the source code](https://calibre-ebook.com/dist/src)
-*   **Bug Reports & Feature Requests:** [Launchpad](https://bugs.launchpad.net/calibre)
-*   **Donate:** [Donate to support calibre development](https://calibre-ebook.com/donate)
+## Development
 
-## Building Calibre
+*   **Setting up a development environment for calibre:** [Calibre Development Guide](https://manual.calibre-ebook.com/develop.html).
+*   **Source Code:** [Calibre Source Code Tarball](https://calibre-ebook.com/dist/src)
 
-*   **Build Instructions:** [Build instructions](bypy/README.rst) for building binaries and installers.
+## Reporting Bugs & Feature Requests
 
-## Package Availability
+Please report bugs and suggest features via the [Calibre bug tracker on Launchpad](https://bugs.launchpad.net/calibre).
+
+## Support Calibre Development
+
+Calibre is a community-driven project. Consider supporting its development by [Donating](https://calibre-ebook.com/donate).
+
+## Building Calibre Binaries
+
+Instructions on how to build Calibre binaries and installers can be found in the [Build Instructions](bypy/README.rst).
+
+## Calibre Package Versions
 
 [![Packaging Status](https://repology.org/badge/vertical-allrepos/calibre.svg?columns=3&header=calibre)](https://repology.org/project/calibre/versions)
-
-**Original Repository:** [View the original repository on GitHub](https://github.com/kovidgoyal/calibre)

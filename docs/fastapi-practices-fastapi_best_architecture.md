@@ -1,10 +1,10 @@
 <div align="center">
-  <img alt="FastAPI Best Architecture Logo" width="320" src="https://wu-clan.github.io/picx-images-hosting/logo/fba.png">
-</div>
+
+<img alt="The logo includes the abstract combination of the three letters FBA, forming a lightning bolt that seems to spread out from the ground" width="320" src="https://wu-clan.github.io/picx-images-hosting/logo/fba.png">
 
 # FastAPI Best Architecture: Build Robust Backend Solutions
 
-**Design and build enterprise-level backends with ease using FastAPI Best Architecture.**
+This project provides a robust and scalable backend architecture built with FastAPI, designed for enterprise-level applications.  Check out the original repo [here](https://github.com/fastapi-practices/fastapi_best_architecture).
 
 [![GitHub](https://img.shields.io/github/license/fastapi-practices/fastapi_best_architecture)](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
@@ -19,32 +19,36 @@
 ![Discord](https://img.shields.io/discord/1185035164577972344)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/fastapi-practices/fastapi_best_architecture)
 
+</div>
+
 ## Key Features
 
-*   **Pseudo 3-Tier Architecture:** Implement a clear separation of concerns for maintainable and scalable code.
-*   **FastAPI Integration:** Leverage the speed and efficiency of FastAPI for building APIs.
-*   **Database Support:**  Designed to work with MySQL and PostgreSQL.
-*   **Data Validation:**  Utilizes Pydantic for robust data validation and type hinting.
-*   **Modern Tools:** Integrated with tools like Ruff and uv for enhanced development.
-*   **Docker Support:**  Easily containerize and deploy your application.
-*   **Well-Documented:** Comprehensive [official documentation](https://fastapi-practices.github.io/fastapi_best_architecture_docs/) to get you started.
+*   **Pseudo 3-Tier Architecture:** A well-structured design for maintainability and scalability.
+*   **FastAPI Framework:** Leveraging the speed and efficiency of FastAPI.
+*   **Database Support:** Ready to work with MySQL and PostgreSQL.
+*   **Data Validation:** Utilizing Pydantic for robust data validation.
+*   **Modern Tools:** Integrating tools like Ruff and uv for code quality and dependency management.
+*   **Docker Support:** Simplified deployment with Docker.
 
 ## Architecture Overview
 
-This project uses a pseudo 3-tier architecture to structure the backend:
+This project employs a "pseudo 3-tier architecture" to structure the application, mapping common concepts to FastAPI:
 
-| Workflow        | Java          | FastAPI Best Architecture |
-|-----------------|---------------|---------------------------|
-| View            | Controller    | API                       |
-| Data Transmit   | DTO           | Schema                    |
-| Business Logic  | Service + Impl| Service                   |
-| Data Access     | DAO / Mapper  | CRUD                      |
-| Model           | Model / Entity| Model                     |
+| Workflow       | Java           | `fastapi_best_architecture` |
+|----------------|----------------|---------------------------|
+| View           | Controller     | API                       |
+| Data transmit  | DTO            | Schema                    |
+| Business logic | Service + impl | Service                   |
+| Data access    | DAO / Mapper   | CRUD                      |
+| Model          | Model / Entity | Model                     |
 
-## Get Involved
+## Documentation
 
-*   **Official Documentation:** Find detailed information in the [official documentation](https://fastapi-practices.github.io/fastapi_best_architecture_docs/).
-*   **Contribute:**  Join the community and help improve the project:  [Contributors](https://github.com/fastapi-practices/fastapi_best_architecture/graphs/contributors)
+For in-depth information and usage examples, please refer to the [official documentation](https://fastapi-practices.github.io/fastapi_best_architecture_docs/).
+
+## Contributing
+
+[Link to Contributors Image](https://github.com/fastapi-practices/fastapi_best_architecture/graphs/contributors)
 
 ## Special Thanks
 
@@ -55,18 +59,16 @@ This project uses a pseudo 3-tier architecture to structure the backend:
 *   [Ruff](https://beta.ruff.rs/docs/)
 *   ...
 
-## Community
+## Get Involved
 
 *   [Discord](https://wu-clan.github.io/homepage/)
 
-## Support Us
+## Support the Project
 
-If you find this project helpful, consider supporting us: [:coffee: Sponsor :coffee:](https://wu-clan.github.io/sponsor/)
+If you find this project helpful, consider supporting the developers: [:coffee: Sponsor :coffee:](https://wu-clan.github.io/sponsor/)
 
 ## License
 
-This project is licensed under the [MIT](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE) license.
+This project is licensed under the [MIT License](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE).
 
 [![Stargazers over time](https://starchart.cc/fastapi-practices/fastapi_best_architecture.svg?variant=adaptive)](https://starchart.cc/fastapi-practices/fastapi_best_architecture)
-
-**[View the source code on GitHub](https://github.com/fastapi-practices/fastapi_best_architecture)**

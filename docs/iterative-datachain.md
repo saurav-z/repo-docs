@@ -1,6 +1,11 @@
-# DataChain: The Python-Powered AI Data Warehouse for Unstructured Data
+<div align="center">
+  <img src="docs/assets/datachain.svg" alt="DataChain Logo" width="100"/>
+  <h1>DataChain: Your Python-Powered AI Data Warehouse</h1>
+</div>
 
-**DataChain** empowers you to transform, analyze, and version unstructured data like images, audio, video, text, and PDFs with ease. Visit the [DataChain GitHub Repository](https://github.com/iterative/datachain) for more information.
+**DataChain is a powerful Python library designed for transforming, analyzing, and versioning unstructured data, such as images, audio, video, text, and PDFs, enabling you to build efficient AI data pipelines.**
+
+[Go to the original repository](https://github.com/iterative/datachain)
 
 [![PyPI](https://img.shields.io/pypi/v/datachain.svg)](https://pypi.org/project/datachain/)
 [![Python Version](https://img.shields.io/pypi/pyversions/datachain)](https://pypi.org/project/datachain)
@@ -11,43 +16,39 @@
 ## Key Features
 
 *   **Effortless Data Versioning:**
-    *   Version unstructured data without data duplication.
-    *   Supports various storage locations: S3, GCP, Azure, and local file systems.
-    *   Handles various data types: images, video, text, PDFs, JSONs, CSVs, parquet, and more.
-    *   Unites files and metadata into versioned columnar datasets.
+    *   Version unstructured data without data duplication, supporting S3, GCP, Azure, and local file systems.
+    *   Handle multimodal data: images, video, text, PDFs, JSONs, CSVs, parquet, and more.
+    *   Unite files and metadata into persistent, versioned, columnar datasets.
 
-*   **Pythonic Data Handling:**
-    *   Works seamlessly with Python objects and fields: float scores, strings, matrixes, LLM response objects.
-    *   Run Python code on terabytes-sized datasets, with built-in parallelization and memory efficiency.
-    *   No need for SQL or Spark.
+*   **Pythonic Data Workflows:**
+    *   Operate on Python objects and object fields such as float scores, strings, matrixes, and LLM response objects.
+    *   Run Python code on large-scale datasets with built-in parallelization.
+    *   No SQL or Spark required.
 
 *   **Advanced Data Enrichment and Processing:**
-    *   Integrates local AI models and LLM APIs for metadata generation.
-    *   Offers advanced filtering, joining, and grouping capabilities by metadata.
-    *   Enables search through vector embeddings.
-    *   Provides high-performance vectorized operations on Python objects (sum, count, avg, etc.).
-    *   Seamlessly integrates with Pytorch and Tensorflow, and allows data export back to storage.
+    *   Generate metadata using local AI models and LLM APIs.
+    *   Filter, join, and group datasets by metadata and search by vector embeddings.
+    *   Vectorized operations for high-performance data analysis on Python objects.
+    *   Integrate with Pytorch and Tensorflow and export datasets back to storage.
 
 ## Use Cases
 
-1.  **ETL (Extract, Transform, Load):** Pythonic framework for data transformation and enrichment, including applying models.
-2.  **Analytics:** Analyze data using a dataframe-like API and vectorized engine for large-scale analytics.
-3.  **Versioning:** Version data without moving or copying data. Ideal for large datasets like image or video buckets.
-4.  **Incremental Processing:** Utilize delta processing and retry features for efficient data pipelines.
+*   **ETL (Extract, Transform, Load):** Build Pythonic pipelines for transforming and enriching unstructured data, including applying models like LLMs.
+*   **Analytics:** Analyze data efficiently with a table-like API and a vectorized engine for large-scale datasets.
+*   **Versioning:** Efficiently version unstructured data in cloud storage (e.g., thousands or millions of images).
+*   **Incremental Processing:** Utilize delta and retry features for efficient data processing, including processing new or changed data, and reprocessing records with errors.
 
 ## Getting Started
 
-Install DataChain with pip:
+Install DataChain:
 
 ```bash
 pip install datachain
 ```
 
-Explore the [Quick Start](https://docs.datachain.ai/quick-start) and [Docs](https://docs.datachain.ai/) for detailed information.
+Explore the [Quick Start](https://docs.datachain.ai/quick-start) and the full [Docs](https://docs.datachain.ai/) to get started and learn more.
 
-## Examples
-
-### Download Subset of Files Based on Metadata
+## Example: Download Subset of Files Based on Metadata
 
 ```python
 import datachain as dc
@@ -63,7 +64,7 @@ likely_cats = annotated.filter((dc.Column("meta.inference.confidence") > 0.93) \
 likely_cats.to_storage("high-confidence-cats/", signal="file")
 ```
 
-### Incremental Processing with Error Handling
+## Example: Incremental Processing with Error Handling
 
 ```python
 import datachain as dc
@@ -103,7 +104,7 @@ chain = (
 )
 ```
 
-### LLM-Based Text File Evaluation
+## Example: LLM based text-file evaluation
 
 ```shell
 $ pip install mistralai # Requires version >=1.0.0
@@ -141,18 +142,22 @@ print(f"{successful_chain.count()} files were exported")
 
 ## Community and Support
 
-*   [Documentation](https://docs.datachain.ai/)
+*   [Docs](https://docs.datachain.ai/)
 *   [File an issue](https://github.com/iterative/datachain/issues)
 *   [Discord Chat](https://dvc.org/chat)
 *   [Email](mailto:support@dvc.org)
 *   [Twitter](https://twitter.com/DVCorg)
 
+## Contributing
+
+Contributions are welcome! Refer to the [Contributor Guide](https://docs.datachain.ai/contributing) for more information.
+
 ## DataChain Studio Platform
 
-`DataChain Studio` is a proprietary solution for teams, offering:
+`DataChain Studio` is a proprietary solution for teams that offers:
 
-*   Centralized dataset registry
-*   Data Lineage
-*   UI for Multimodal Data
-*   Scalable Compute
-*   Access control
+*   **Centralized dataset registry** to manage data, code, and dependencies.
+*   **Data Lineage** for data sources and derivative datasets.
+*   **UI for Multimodal Data** like images, videos, and PDFs.
+*   **Scalable Compute** to handle large datasets and in-house AI model inference.
+*   **Access control** including SSO and team-based collaboration.

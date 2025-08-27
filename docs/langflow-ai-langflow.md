@@ -1,6 +1,8 @@
 <!-- markdownlint-disable MD030 -->
 
-![Langflow logo](./docs/static/img/langflow-logo-color-black-solid.svg)
+# Langflow: Build and Deploy AI Workflows Visually
+
+**Langflow empowers developers to visually build, test, and deploy powerful AI agents and workflows with ease.** ([View on GitHub](https://github.com/langflow-ai/langflow))
 
 [![Release Notes](https://img.shields.io/github/release/langflow-ai/langflow?style=flat-square)](https://github.com/langflow-ai/langflow/releases)
 [![PyPI - License](https://img.shields.io/badge/license-MIT-orange)](https://opensource.org/licenses/MIT)
@@ -15,55 +17,52 @@
 > [!CAUTION]
 > Users must update to Langflow >= 1.3 to protect against [CVE-2025-3248](https://nvd.nist.gov/vuln/detail/CVE-2025-3248).
 
-# Langflow: Build AI Workflows Visually and Deploy with Ease
-
-Langflow empowers developers to visually build, test, and deploy powerful AI agents and workflows, simplifying the creation of intelligent applications. ([See the original repo](https://github.com/langflow-ai/langflow))
+Langflow offers a comprehensive solution for building and deploying AI-powered agents and workflows, providing both a visual authoring experience and built-in API and MCP servers. This allows you to integrate your workflows into any application built on any framework or stack. Langflow supports all major LLMs, vector databases, and a growing library of AI tools, making it an all-in-one solution.
 
 ## Key Features
 
-*   **Visual Workflow Builder:** Drag-and-drop interface for rapid prototyping and iteration of AI workflows.
-*   **Customization with Source Code:** Access and modify any component using Python for advanced control.
-*   **Interactive Playground:** Test and refine your workflows in real-time with step-by-step debugging.
-*   **Multi-Agent Orchestration:** Easily manage and orchestrate multiple AI agents with conversation management and retrieval capabilities.
-*   **API Deployment:** Deploy your workflows as APIs for seamless integration into any application.
-*   **MCP Server Deployment:** Turn your workflows into tools accessible by MCP clients.
-*   **Comprehensive Observability:** Integrations with tools like LangSmith, LangFuse, and others for monitoring and analysis.
-*   **Enterprise-Grade Ready:** Designed with security and scalability in mind.
+*   **Visual Builder:** Drag-and-drop interface for rapid prototyping and iteration.
+*   **Source Code Access:** Customize any component using Python for complete control.
+*   **Interactive Playground:** Test and refine your flows in real-time with step-by-step control.
+*   **Multi-Agent Orchestration:** Manage complex conversations and retrieval processes.
+*   **API Deployment:** Deploy your workflows as APIs or export as JSON for Python applications.
+*   **MCP Server Deployment:** Turn your flows into tools for MCP clients.
+*   **Observability:** Integrate with LangSmith, LangFuse, and other monitoring tools.
+*   **Enterprise-Ready:** Designed with security and scalability in mind.
 
-## Quickstart Guide
+## Getting Started
 
-Get started with Langflow in just a few steps:
+Langflow requires [Python 3.10 to 3.13](https://www.python.org/downloads/release/python-3100/) and [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
-1.  **Prerequisites:** Ensure you have [Python 3.10 to 3.13](https://www.python.org/downloads/release/python-3100/) and [uv](https://docs.astral.sh/uv/getting-started/installation/) installed.
-2.  **Install Langflow:**
+1.  **Install:**
 
-    ```bash
+    ```shell
     uv pip install langflow -U
     ```
 
-3.  **Run Langflow:**
+2.  **Run:**
 
-    ```bash
+    ```shell
     uv run langflow run
     ```
 
-4.  **Access Langflow:** Open your web browser and navigate to `http://127.0.0.1:7860`.
+3.  **Access:** Open Langflow in your browser at `http://127.0.0.1:7860`.
 
-For detailed installation instructions, including Docker and Desktop options, please refer to the [Langflow documentation](https://docs.langflow.org/get-started-installation).
+For comprehensive installation instructions, including Docker and Desktop options, see the [Langflow documentation](https://docs.langflow.org/get-started-installation).
 
 ## Deployment Options
 
-Langflow is an open-source tool that you can deploy to various cloud platforms. For a guide on deploying Langflow using Docker, see the [Docker deployment guide](https://docs.langflow.org/deployment-docker).
+Langflow is open-source and can be deployed on major cloud platforms. For Docker deployment instructions, refer to the [Docker deployment guide](https://docs.langflow.org/deployment-docker).
 
 ## Stay Updated
 
-Star Langflow on GitHub to receive instant updates on new releases and features.
+Star Langflow on GitHub to receive notifications about new releases and updates.
 
 ![Star Langflow](https://github.com/user-attachments/assets/03168b17-a11d-4b2a-b0f7-c1cce69e5a2c)
 
 ## Contribute
 
-We welcome contributions from developers of all skill levels.  Review our [contributing guidelines](./CONTRIBUTING.md) to get involved and help improve Langflow.
+We encourage contributions from all developers! Review our [contributing guidelines](./CONTRIBUTING.md) to get started.
 
 ---
 

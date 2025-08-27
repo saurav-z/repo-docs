@@ -1,36 +1,34 @@
-# Skywork UniPic: Unleashing the Power of Unified Multimodal AI
+# Skywork UniPic: Unified Multimodal Models for Advanced Image AI
 
-**Experience the future of image understanding, generation, and editing with Skywork UniPic, a groundbreaking unified multimodal model.** Explore the official repository for the model weights and implementations at the [original repository](https://github.com/SkyworkAI/UniPic).
+**Unleash the power of unified multimodal AI with Skywork UniPic, revolutionizing image understanding, generation, and editing.** This repository provides access to state-of-the-art models and implementations.
 
----
+[<img src="UniPic-2/assets/imgs/teaser.png" alt="Skywork UniPic2 Teaser" width="90%">](https://github.com/SkyworkAI/UniPic)
 
-<div align="center">
-  <img src="UniPic-2/assets/imgs/teaser.png" alt="Skywork UniPic2 Teaser" width="90%">
-</div>
+## Overview
 
-## Key Highlights of UniPic
+Welcome to the Skywork-UniPic repository!  This repository provides access to model weights and official implementations of unified multimodal models, designed for cutting-edge image AI. UniPic offers two distinct modeling paradigms:
 
-UniPic offers a powerful suite of features, revolutionizing how we interact with images:
+*   **UniPic-1.0:** A 1.5B parameter model employing **Unified Autoregressive Modeling** for a single transformer that handles both perception and synthesis tasks.
+*   **UniPic-2.0 Series:** Utilizing **Efficient Architectures** with **Diffusion Post-Training**, these variants (including *SD3.5M-Kontext* and *MetaQuery*) excel in text-to-image generation, fine-grained image editing, and multimodal reasoning.
 
-*   **Text-to-Image Generation:** Transform natural language prompts into stunning, high-fidelity images.
-*   **Advanced Image Editing:** Seamlessly perform inpainting, outpainting, and precise object manipulation.
-*   **Robust Image Understanding:** Benefit from strong perception capabilities for diverse visual tasks.
-*   **Efficient Architecture:** Experience optimal performance and enhanced deployability thanks to our optimized architecture.
-*   **Unified Modeling:** Leverages a single transformer model, streamlining both perception and synthesis tasks (UniPic-1).
-*   **Diffusion Post-Training (UniPic-2):** Achieve state-of-the-art results with efficient architectures and Diffusion Post-Training
+## Key Features of UniPic
 
-## Model Versions
-
-*   **UniPic-1.0:** A 1.5B parameter model leveraging unified autoregressive modeling.
-*   **UniPic-2.0 Series:** Explore the SD3.5M-Kontext and MetaQuery variants, built on efficient architectures with diffusion post-training.
+*   **Text-to-Image Generation:** Create high-fidelity images from natural language descriptions.
+*   **Image Editing:** Perform seamless inpainting, outpainting, and object manipulation.
+*   **Image Understanding:** Achieve robust perception capabilities for various visual tasks.
+*   **Efficient Architecture:** Experience optimized performance, balanced for accuracy and deployability.
 
 ## Latest Updates
 
-| Date       | Update |
-|------------|--------|
-| **2025-08-13** | Released **UniPic-2** — Unified Model Weights with Diffusion-based Post-Training <br> [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/README.md) [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Collection-orange)](https://huggingface.co/collections/Skywork/skywork-unipic2-6899b9e1b038b24674d996fd) [![PDF Report](https://img.shields.io/badge/PDF-Report-green)]( https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/assets/pdf/UNIPIC2.pdf) |
-| **2025-07-30** | Released **UniPic-1** — Autoregressive unified modeling from scratch <br> [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/SkyworkAI/UniPic2/tree/main/UniPic-1) [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Collection-orange)](https://huggingface.co/collections/Skywork/skywork-unipic-6888c0789cdb82457b2acf32) [![arXiv](https://img.shields.io/badge/arXiv-2508.03320-b31b1b?logo=arxiv)](https://www.arxiv.org/abs/2508.03320)|
+| Date       | Update                                                                                                                               |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| 2025-08-13 | Released **UniPic-2** — Unified Model Weights with Diffusion-based Post-Training                                                          |
+|            | [[GitHub Repo](https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/README.md)] [[HuggingFace Collection](https://huggingface.co/collections/Skywork/skywork-unipic2-6899b9e1b038b24674d996fd)] [[PDF Report]( https://github.com/SkyworkAI/UniPic/blob/main/UniPic-2/assets/pdf/UNIPIC2.pdf)] |
+| 2025-07-30 | Released **UniPic-1** — Autoregressive unified modeling from scratch                                                                    |
+|            | [[GitHub Repo](https://github.com/SkyworkAI/UniPic2/tree/main/UniPic-1)] [[HuggingFace Collection](https://huggingface.co/collections/Skywork/skywork-unipic-6888c0789cdb82457b2acf32)] [[arXiv](https://www.arxiv.org/abs/2508.03320)]         |
 
 ## License
 
 This project is licensed under the **MIT License**.  See the [LICENSE](LICENSE) file for details.
+
+**[Visit the original repository on GitHub](https://github.com/SkyworkAI/UniPic)**

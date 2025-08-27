@@ -31,21 +31,22 @@ English | [中文](readme_files/zh-cn#readme)
 
 </div>
 
-# Gradio: Build Machine Learning Web Apps with Ease
+# Gradio: Build AI Web Apps and ML Demos in Minutes
 
-**Gradio is the open-source Python library that lets you rapidly build and share beautiful, user-friendly web applications and demos for your machine learning models and data science projects.**
+Gradio is the open-source Python library that empowers you to rapidly create user-friendly web interfaces and shareable demos for your machine learning models, APIs, and Python functions, with *no* frontend experience required.  [Visit the Gradio Repository on GitHub](https://github.com/gradio-app/gradio).
 
-[View the original repository on GitHub](https://github.com/gradio-app/gradio)
+## Key Features
 
-**Key Features:**
+*   **Rapid Prototyping:** Quickly turn your Python functions and models into interactive demos with minimal code.
+*   **Shareable Demos:** Easily share your demos with a shareable link or embed them on websites, eliminating the need for web hosting.
+*   **Interactive Components:** Utilize a wide range of pre-built UI components like text boxes, sliders, image viewers, and more, designed for machine learning applications.
+*   **Customization:** Leverage `gr.Blocks` to create custom layouts and data flows for complex interactions.
+*   **Chatbot Creation:**  Build chatbot interfaces easily with the `gr.ChatInterface` class.
+*   **Ecosystem Support:** Integrates seamlessly with the Hugging Face ecosystem and offers Python and JavaScript clients for programmatic access.
+*   **In-Browser Development:** Write and edit Gradio apps directly in your browser with Gradio-Lite.
+*   **No-Code Solution**: Build Gradio apps without writing any code with Gradio Sketch.
 
-*   **Rapid Prototyping:** Build interactive demos and web apps for your ML models in minutes, not months, using just a few lines of Python.
-*   **No Frontend Expertise Required:** Eliminate the need for JavaScript, CSS, or web hosting knowledge.
-*   **Easy Sharing:** Share your demos with a public URL in seconds for global accessibility.
-*   **Versatile Components:** Utilize over 30 pre-built Gradio components to handle various data types like images, text, audio, and more.
-*   **Customization Options:** Leverage `gr.Blocks` for complete control over layout and data flow and `gr.ChatInterface` for streamlined chatbot creation.
-*   **Hot Reloading & Vibe Mode:** Develop faster with automatic reloading and a chat interface for app editing.
-*   **Complete Ecosystem:** Explore the extended Gradio ecosystem with Python and JavaScript clients for programmatic access, browser-based execution via Gradio-Lite, and Hugging Face Spaces for hosting.
+<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/gradio-guides/gif-version.gif" style="padding-bottom: 10px">
 
 ## Installation
 
@@ -58,11 +59,11 @@ pip install --upgrade gradio
 ```
 
 > [!TIP]
- > It is best to install Gradio in a virtual environment. Detailed installation instructions for all common operating systems <a href="https://www.gradio.app/main/guides/installing-gradio-in-a-virtual-environment">are provided here</a>.
+> It is best to install Gradio in a virtual environment. Detailed installation instructions for all common operating systems <a href="https://www.gradio.app/main/guides/installing-gradio-in-a-virtual-environment">are provided here</a>.
 
-## Building Your First Demo
+## Getting Started
 
-Create a Gradio app quickly:
+Here's how to build your first Gradio app:
 
 ```python
 import gradio as gr
@@ -79,24 +80,26 @@ demo = gr.Interface(
 demo.launch()
 ```
 
+Run this code (e.g., `python app.py`) and your demo will be accessible in your browser at `http://localhost:7860`.
+
 > [!TIP]
- > We shorten the imported name from <code>gradio</code> to <code>gr</code>. This is a widely adopted convention for better readability of code. 
+> When developing locally, you can run your Gradio app in <strong>hot reload mode</strong>, which automatically reloads the Gradio app whenever you make changes to the file. To do this, simply type in <code>gradio</code> before the name of the file instead of <code>python</code>. In the example above, you would type: `gradio app.py` in your terminal. You can also enable <strong>vibe mode</strong> by using the <code>--vibe</code> flag, e.g. <code>gradio --vibe app.py</code>, which provides an in-browser chat that can be used to write or edit your Gradio app using natural language. Learn more in the <a href="https://www.gradio.app/guides/developing-faster-with-reload-mode">Hot Reloading Guide</a>.
 
-Run this code and access your demo in a browser.
+## Core Classes
 
-![`hello_world_4` demo](demo/hello_world_4/screenshot.gif)
+### `gr.Interface`
+This class is the foundation for building simple demos. It takes your function, input components, and output components to create a UI.
 
-## Understanding the `Interface` Class
+### `gr.Blocks`
 
-The `gr.Interface` class creates demos for machine learning models:
+For more advanced layouts and custom interactions, use `gr.Blocks`. This class gives you greater control over UI design and data flow.
 
-*   `fn`:  The Python function to wrap with a UI.
-*   `inputs`: The Gradio component(s) for input.
-*   `outputs`: The Gradio component(s) for output.
+### `gr.ChatInterface`
+Create chatbot interfaces quickly using this dedicated class.
 
 ## Sharing Your Demo
 
-Share your demo with the `share=True` parameter in `launch()`:
+Share your demo with the world by adding `share=True` to the `launch()` method:
 
 ```python
 import gradio as gr
@@ -109,33 +112,29 @@ demo = gr.Interface(fn=greet, inputs="textbox", outputs="textbox")
 demo.launch(share=True)  # Share your demo with just 1 extra parameter 🚀
 ```
 
-This generates a public URL for your demo, enabling worldwide access.  Read more on [sharing your Gradio application](https://www.gradio.app/guides/sharing-your-app).
+This generates a public URL (e.g., `https://a23dsf231adb.gradio.live`) for your demo.
 
-## An Overview of Gradio
+## The Gradio Ecosystem
 
-Besides `Interface`, Gradio includes:
+Gradio includes a variety of tools to suit your needs:
 
-*   **Custom Demos with `gr.Blocks`:** For building web apps with customized layouts, data flows, and interactions, like the [Automatic1111 Web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui). Learn more on [building with Blocks](https://www.gradio.app/guides/blocks-and-event-listeners).
-*   **Chatbots with `gr.ChatInterface`:** For creating chatbot UIs. You can jump straight to [our dedicated guide on `gr.ChatInterface`](https://www.gradio.app/guides/creating-a-chatbot-fast).
-*   **Gradio Ecosystem:** Gradio extends to a comprehensive ecosystem:
-    *   [Gradio Python Client](https://www.gradio.app/guides/getting-started-with-the-python-client) (`gradio_client`): Query Gradio apps programmatically in Python.
-    *   [Gradio JavaScript Client](https://www.gradio.app/guides/getting-started-with-the-js-client) (`@gradio/client`): Query Gradio apps programmatically in JavaScript.
-    *   [Gradio-Lite](https://www.gradio.app/guides/gradio-lite) (`@gradio/lite`): Write Gradio apps in Python that run entirely in the browser.
-    *   [Hugging Face Spaces](https://huggingface.co/spaces): Host Gradio applications.
+*   **Gradio Python Client** (`gradio_client`): Programmatically query Gradio apps in Python.
+*   **Gradio JavaScript Client** (`@gradio/client`): Programmatically query Gradio apps in JavaScript.
+*   **Gradio-Lite** (`@gradio/lite`): Write Gradio apps that run entirely in the browser (no server required!).
+*   **Hugging Face Spaces**: Host your Gradio applications for free.
 
 ## Next Steps
 
-Explore the Gradio Guides for a step-by-step learning experience: [let's dive deeper into the Interface class](https://www.gradio.app/guides/the-interface-class).
-
-Access the [technical API documentation](https://www.gradio.app/docs/) for specifics.
+*   Explore the [Gradio Guides](https://www.gradio.app/guides/) for tutorials and examples.
+*   Consult the [API Documentation](https://www.gradio.app/docs/) for detailed information.
 
 ## Gradio Sketch
+You can also build Gradio applications without writing any code. Simply type `gradio sketch` into your terminal to open up an editor that lets you define and modify Gradio components, adjust their layouts, add events, all through a web editor. Or [use this hosted version of Gradio Sketch, running on Hugging Face Spaces](https://huggingface.co/spaces/aliabid94/Sketch).
 
-Build Gradio apps without writing code using the `gradio sketch` command, or use the [hosted version of Gradio Sketch, running on Hugging Face Spaces](https://huggingface.co/spaces/aliabid94/Sketch).
+## Get in Touch
 
-## Questions?
-
-For bug reports and feature requests, use the [GitHub issues](https://github.com/gradio-app/gradio/issues/new/choose).  For general questions, join our [Discord server](https://discord.com/invite/feTf9x3ZSB).
+*   Report bugs and request features on [GitHub](https://github.com/gradio-app/gradio/issues/new/choose).
+*   Join the conversation on our [Discord server](https://discord.com/invite/feTf9x3ZSB).
 
 If you like Gradio, please leave us a ⭐ on GitHub!
 
@@ -156,11 +155,9 @@ Gradio is built on top of many wonderful open-source libraries!
 
 ## License
 
-Gradio is licensed under the Apache License 2.0 (see [LICENSE](LICENSE)).
+Gradio is licensed under the Apache License 2.0 found in the [LICENSE](LICENSE) file in the root directory of this repository.
 
 ## Citation
-
-Cite the paper _[Gradio: Hassle-Free Sharing and Testing of ML Models in the Wild](https://arxiv.org/abs/1906.02569), ICML HILL 2019_:
 
 ```
 @article{abid2019gradio,
