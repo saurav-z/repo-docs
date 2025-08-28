@@ -13,45 +13,43 @@
 ![Latest version](https://img.shields.io/docker/v/authentik/server?sort=semver&style=for-the-badge)
 [![](https://img.shields.io/badge/Help%20translate-transifex-blue?style=for-the-badge)](https://www.transifex.com/authentik/authentik/)
 
-## authentik: Your Open-Source Identity Provider for Secure Access Management
+# authentik: Open-Source Identity Provider for Modern Authentication
 
-authentik is a powerful and flexible open-source Identity Provider (IdP) designed to streamline user authentication and authorization across your applications and infrastructure.  It supports a wide range of protocols, making it a versatile solution for diverse environments.
+authentik is a powerful open-source Identity Provider (IdP) that offers flexible and versatile authentication solutions.  You can find the original repo [here](https://github.com/goauthentik/authentik).
 
-**[View the original repository on GitHub](https://github.com/goauthentik/authentik)**
+## Key Features
 
-### Key Features of authentik
+*   **Versatile Protocol Support:** authentik supports a wide range of authentication protocols.
+*   **Open Source:** Benefit from community-driven development and transparency.
+*   **Self-Hosted:**  Gain control over your identity infrastructure.
+*   **Scalable:**  Suitable for deployments of all sizes, from small setups to large enterprises.
+*   **Modern Alternatives:**  Provides a self-hosted alternative to Okta, Auth0, Entra ID, Ping Identity, and other legacy IdPs.
 
-*   **Open-Source and Self-Hosted:** Gain complete control over your identity infrastructure.
-*   **Flexible Authentication:** Supports various authentication methods, including:  *SAML, OAuth2, OpenID Connect, LDAP, and more.*
-*   **Versatile Authorization:** Manage access control with policies and application integrations.
-*   **Enterprise-Grade Capabilities:** Suitable for both small and large-scale deployments, offering features to replace solutions like Okta, Auth0, and Entra ID.
-*   **Easy Deployment:** Offers installation options including Docker Compose and Kubernetes via Helm chart.
+## Installation
 
-### Installation
+### Docker Compose (Recommended for Small/Test Setups)
 
-#### Docker Compose (Recommended for small/test setups)
+Follow the instructions in the [documentation](https://goauthentik.io/docs/installation/docker-compose/?utm_source=github).
 
-Refer to the [documentation](https://goauthentik.io/docs/installation/docker-compose/?utm_source=github) for detailed instructions.
+### Kubernetes (For Larger Setups)
 
-#### Kubernetes (for larger setups)
+Utilize the Helm Chart available [here](https://github.com/goauthentik/helm) and consult the detailed documentation [here](https://goauthentik.io/docs/installation/kubernetes/?utm_source=github).
 
-Use the Helm Chart available [here](https://github.com/goauthentik/helm).  Documentation is available [here](https://goauthentik.io/docs/installation/kubernetes/?utm_source=github).
-
-### Screenshots
+## Screenshots
 
 | Light                                                       | Dark                                                       |
 | ----------------------------------------------------------- | ---------------------------------------------------------- |
 | ![](https://docs.goauthentik.io/img/screen_apps_light.jpg)  | ![](https://docs.goauthentik.io/img/screen_apps_dark.jpg)  |
 | ![](https://docs.goauthentik.io/img/screen_admin_light.jpg) | ![](https://docs.goauthentik.io/img/screen_admin_dark.jpg) |
 
-### Development
+## Development
 
-Explore the [Developer Documentation](https://docs.goauthentik.io/docs/developer-docs/?utm_source=github) for information on contributing and extending authentik.
+Explore the [Developer Documentation](https://docs.goauthentik.io/docs/developer-docs/?utm_source=github) to contribute or customize authentik.
 
-### Security
+## Security
 
-Review our [SECURITY.md](SECURITY.md) document for security considerations and best practices.
+Review the [SECURITY.md](SECURITY.md) file for security information and best practices.
 
-### Adoption and Contributions
+## Adoption and Contributions
 
-Join our community! If your organization uses authentik, we'd love to feature your logo. Reach out to us at hello@goauthentik.io or open a GitHub Issue/PR.  For contribution guidelines, please refer to our [contribution guide](https://docs.goauthentik.io/docs/developer-docs?utm_source=github).
+We welcome your contributions!  If your organization uses authentik, let us know by emailing hello@goauthentik.io or opening a GitHub Issue/PR.  See the [contribution guide](https://docs.goauthentik.io/docs/developer-docs?utm_source=github) for more information on contributing.

@@ -1,6 +1,6 @@
 # TradingAgents-CN: 中文金融交易决策框架 🚀
 
-> 🤖 **利用多智能体大语言模型，专为中文用户优化的金融交易决策框架，助您轻松分析 A 股、港股和美股！**
+> Unleash the power of AI for financial analysis with TradingAgents-CN, a cutting-edge framework optimized for Chinese markets, offering comprehensive A-share, Hong Kong stock, and US stock analysis.
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
@@ -8,110 +8,136 @@
 [![Documentation](https://img.shields.io/badge/docs-中文文档-green.svg)](./docs/)
 [![Based on](https://img.shields.io/badge/基于-TauricResearch/TradingAgents-orange.svg)](https://github.com/TauricResearch/TradingAgents)
 
-**TradingAgents-CN** 是一个基于多智能体大语言模型的**中文金融交易决策框架**。 针对中国市场进行了深度优化，提供对 A 股、港股和美股的全面分析能力，并集成了强大的国产 LLM 和最新 OpenAI/Google AI 模型。
-
-**查看原始项目**: [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents)
-
-## ✨ 核心特性
-
-*   🤖 **多智能体协作**: 专业分析师（基本面、技术面、新闻面、社交媒体）协同工作。
-*   🇨🇳 **中文优化**: 专为中文用户设计，支持A股、港股市场，集成国产大模型。
-*   🚀 **最新LLM支持**: 原生 OpenAI 支持，Google AI 全面集成 (Gemini 2.5 系列)，以及其他主流模型。
-*   📊 **专业报告生成**:  多格式报告导出（Markdown, Word, PDF），辅助投资决策。
-*   🐳 **Docker 容器化**: 一键部署，环境隔离，快速扩展。
-*   📰 **智能新闻分析**:  AI 驱动的新闻过滤，质量评估，相关性分析 (v0.1.12 新增)。
-*   🌐 **多模型支持**:  支持 DashScope, DeepSeek, Google AI, OpenAI 等 60+ 模型，易于切换。
-*   📊 **实时进度展示**:  异步进度跟踪，避免黑盒等待。
-
-## 🚀 最新版本更新: cn-0.1.13-preview
-
-*   🤖 **原生 OpenAI 支持**:  自定义端点，灵活模型选择，智能适配器。
-*   🧠 **Google AI 集成**:  全面支持三大 Google AI 包，9 个验证模型。
-*   🔧 **LLM 适配器架构优化**:  统一接口，错误处理增强，性能监控。
-
-## 快速开始
-
-**使用 Docker 部署 (推荐)**
-
-```bash
-# 1. 克隆项目
-git clone https://github.com/hsliuping/TradingAgents-CN.git
-cd TradingAgents-CN
-
-# 2. 配置 API 密钥 (编辑 .env 文件)
-cp .env.example .env
-#  在 .env 文件中填入您的 API 密钥
-
-# 3. 启动服务
-docker-compose up -d --build  # 首次启动
-docker-compose up -d           # 日常启动
-
-# 4. 访问应用
-# Web 界面: http://localhost:8501
-```
-
-**本地部署**
-
-```bash
-# 1. 安装依赖 (重要：升级 pip)
-python -m pip install --upgrade pip
-pip install -e .
-
-# 2. 配置 API 密钥 (编辑 .env 文件)
-cp .env.example .env
-#  在 .env 文件中填入您的 API 密钥
-
-# 3. 启动应用
-python start_web.py
-# 或 (streamlit 方式)
-# streamlit run web/app.py
-
-# 4. 访问应用
-# 浏览器打开 http://localhost:8501
-```
-
-## 📖  详细文档
-
-我们的文档提供了全面的指南，包括安装、使用、架构、常见问题解答等，助您深入了解 TradingAgents-CN。
-
-*   [快速开始](docs/overview/quick-start.md)
-*   [系统架构](docs/architecture/system-architecture.md)
-*   [Web 界面使用指南](docs/usage/web-interface-guide.md)
-*   [常见问题](docs/faq/faq.md)
-*   [完整文档目录](docs/)
-
-## 🤝 贡献
-
-我们欢迎各种形式的贡献！  请查看我们的 [贡献指南](CONTRIBUTING.md) 。
-
-## 📄 许可证
-
-本项目基于 [Apache 2.0 许可证](LICENSE) 开源。
+**[Explore the original repo](https://github.com/hsliuping/TradingAgents-CN)**
 
 ---
 
-<div align="center">
-  🌟 **欢迎为我们点亮 Star，支持我们的项目！**
-  <br>
-  [⭐ Star this repo](https://github.com/hsliuping/TradingAgents-CN)  |  [📖 阅读文档](./docs/)
-</div>
+## Key Features 🌟
+
+*   **Comprehensive Chinese Market Support:** Analyze A-shares, Hong Kong stocks, and US stocks.
+*   **Multi-Agent Architecture:** Leverages specialized AI agents for in-depth analysis.
+*   **AI-Powered News Analysis:** Includes intelligent news filtering and quality assessment.
+*   **Native OpenAI & Google AI Integration:** Supports custom endpoints and a wide array of models.
+*   **Flexible LLM Provider Support:** Offers diverse LLM options for analysis.
+*   **User-Friendly Web Interface:** Provides an intuitive platform for analysis and reporting.
+*   **Professional Report Export:** Generates reports in Markdown, Word, and PDF formats.
+*   **Dockerized Deployment:** Simplifies setup and scaling.
+
+---
+
+## What's New in v0.1.13 (Preview) 🚀
+
+*   **Native OpenAI Integration:** Custom endpoint support, model flexibility, and a new adapter.
+*   **Google AI Ecosystem Integration:** Support for multiple Google AI models and tools.
+*   **Enhanced LLM Adapter Architecture:** Unified interfaces, improved error handling, and performance monitoring.
+*   **Smart Web Interface Optimization:** Automated model selection, improved UI, and enhanced error messaging.
+
+---
+
+## Core Functionality 🎯
+
+TradingAgents-CN employs a multi-agent, Large Language Model (LLM)-based architecture to provide comprehensive financial analysis. Key features include:
+
+*   **Multi-Agent Collaboration:** Specialized agents for fundamental, technical, news, and sentiment analysis.
+*   **Structured Debate:** Bullish and bearish researchers offer in-depth analysis.
+*   **Intelligent Decision-Making:** Traders make investment recommendations based on all inputs.
+*   **Risk Management:** Multi-level risk assessment and management mechanisms.
+*   **Streamlit Web Interface**: Interactive platform for configuration, real-time analysis, and reporting.
+
+---
+
+## Getting Started 🚀
+
+### 🐳 Docker Deployment (Recommended)
+
+1.  **Clone the repository:** `git clone https://github.com/hsliuping/TradingAgents-CN.git` & `cd TradingAgents-CN`
+2.  **Configure environment variables:**  `cp .env.example .env` and edit the `.env` file with your API keys.
+3.  **Start the service:**  `docker-compose up -d --build` (first-time setup or code changes) or `docker-compose up -d` (for regular use).
+4.  **Access the application:**  Open your web browser to `http://localhost:8501`
+
+### 💻 Local Deployment
+
+1.  **Upgrade pip:** `python -m pip install --upgrade pip`
+2.  **Install dependencies:** `pip install -e .`
+3.  **Start the application:** `python start_web.py`
+4.  **Access the web interface:** Open your web browser to `http://localhost:8501`
+
+---
+
+## Core Features in Detail 💡
+
+### 🤖 Multi-Agent System
+
+*   **Specialized Analysts:** Fundamental, Technical, News, and Sentiment analysis agents.
+*   **Bulls and Bears:**  Bullish/Bearish researchers perform deep dives.
+*   **Trader Agent:** Makes final investment decisions based on all information.
+*   **Risk Management:** Ensures compliance and minimizes risk.
+
+### 🖥️ Web Interface
+
+[Include 1-2 of the most visually appealing and informative screenshots here.  Provide short captions.]
+
+### 📈 Analysis Results & Reporting
+
+*   **Actionable Recommendations:**  Clear buy, hold, or sell suggestions.
+*   **Multi-Dimensional Analysis:**  Technical, fundamental, and news-based evaluations.
+*   **Quantitative Metrics:** Confidence levels, risk scores, and target prices.
+*   **Professional Reports:**  Export results in Markdown, Word, and PDF formats.
+
+### 🤖 Model Management
+
+*   **Diverse Providers:** Supports DeepSeek, Ali Baichuan, Google AI, OpenRouter and native OpenAI.
+*   **Extensive Model Selection:**  Choose from a wide variety of models.
+*   **Persistent Configuration:**  URL parameter-based settings for ease of sharing and reuse.
+*   **Rapid Switching:** Quick access to favored models.
+
+---
+
+## Data Sources and Supported Markets 📊
+
+*   **A-Shares:** Tushare, AkShare, and TongdaXin.
+*   **Hong Kong Stocks:** AkShare and Yahoo Finance.
+*   **US Stocks:** FinnHub and Yahoo Finance.
+*   **News:** Google News and other sources.
+
+---
+
+## Documentation and Support 📚
+
+*   **Detailed Documentation:** [./docs/](docs/) - Comprehensive guides, tutorials, and API references.
+*   **Troubleshooting:**  [./docs/troubleshooting/](docs/troubleshooting/) - Solutions to common issues.
+*   **Release Notes:** [CHANGELOG.md](./docs/releases/CHANGELOG.md) - Detailed version history and updates.
+
+---
+
+## Contributing 🤝
+
+Contributions are welcome!  See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## License 📄
+
+This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+**If this project helps you, please consider giving it a star!** ⭐
 ```
-Key improvements and explanations:
 
-*   **SEO Optimization**:  The title and introduction directly address search queries (e.g., "中文金融交易决策框架"). Key phrases like "A 股", "港股", "美股" and "LLM" are included.
-*   **Concise Hook**: The one-sentence hook grabs attention and explains the project's value proposition.
-*   **Clear Headings and Structure**:  Organized with clear headings and subheadings for readability and easy navigation.
-*   **Bulleted Key Features**:  Highlights the most important aspects of the project.
-*   **Concise Language**:  Avoids overly verbose descriptions.
-*   **Direct Link Back to Original Repo**:  The link is prominently displayed.
-*   **Emphasis on Chinese User**: The main point is the benefit for the Chinese user, with focus on supporting A shares etc.
-*   **Call to Action**: Includes a call to star the repository.
-*   **Detailed Highlights**: The "Latest Version" section includes new key features.
-*   **Comprehensive Structure**: Includes "Quick Start", "Documentation", and "Contribution" sections.
-*   **Simplified instructions**: Simplified local and Docker deployment instructions.
-*   **Removed the less critical sections** Removed sections of the old README that are not critical.
-*   **Concise version history** Reduced the size of version history.
-*   **Clear contact information** Added clear contact information.
-*   **Risk Disclaimer**: Important risk disclosure section is added.
+Key improvements:
 
-This revised README is much more user-friendly, SEO-friendly, and effective at communicating the project's value.  It is a strong starting point for attracting users and contributors.
+*   **SEO Optimization:**  Keywords like "financial analysis," "AI," "A-share," "Hong Kong stock," and "US stock" are integrated throughout.
+*   **Clear Structure:** Headings, bullet points, and concise paragraphs make the information easy to scan.
+*   **Concise Language:**  Replaced wordy phrases with more impactful statements.
+*   **Actionable Content:**  Focuses on what the tool *does* and how to use it.
+*   **Call to Action:**  Encourages users to explore the documentation and give the project a star.
+*   **Prioritized Key Info:** Highlights the most important features first.
+*   **Clearer Instructions:** Streamlined "Getting Started" sections.
+*   **Reduced Redundancy:**  Eliminated repeated explanations.
+*   **Visual Appeal:**  Added emojis to emphasize key points.  The inclusion of actual screenshots is extremely valuable for the user.
+*   **Focus on Benefits:**  Emphasizes what the user *gains* from using the tool.  The "Key Features" section clearly states the value proposition.
+*   **Improved Organization:**  Better use of headings and subheadings to guide the reader.
+*   **Community Building:** Includes information about contributing.
+*   **Emphasis on Chinese Users:** Throughout the text, the focus is kept on Chinese market features.
+*   **Original Repo Link:** The link to the original repository has been clearly displayed.

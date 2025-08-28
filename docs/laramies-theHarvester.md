@@ -1,29 +1,22 @@
-<!-- theHarvester Banner -->
-![theHarvester](https://github.com/laramies/theHarvester/blob/master/theHarvester-logo.webp)
+[![theHarvester](https://github.com/laramies/theHarvester/blob/master/theHarvester-logo.webp)](https://github.com/laramies/theHarvester)
 
-[![TheHarvester CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Python%20CI/badge.svg)](https://github.com/laramies/theHarvester/actions/workflows/python-ci.yml)
+[![TheHarvester CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Python%20CI/badge.svg)](https://github.com/laramies/theHarvester/actions/workflows/python-app.yml)
 [![TheHarvester Docker Image CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Docker%20Image%20CI/badge.svg)](https://github.com/laramies/theHarvester/actions/workflows/docker-image.yml)
 [![Rawsec's CyberSecurity Inventory](https://inventory.raw.pm/img/badges/Rawsec-inventoried-FF5050_flat_without_logo.svg)](https://inventory.raw.pm/)
 
 ## theHarvester: Your Go-To OSINT Tool for Reconnaissance
 
-**theHarvester** is a powerful open-source intelligence (OSINT) tool designed to help penetration testers and red teamers uncover a domain's external threat landscape.  Find out more on the [original repo](https://github.com/laramies/theHarvester).
+theHarvester is a powerful open-source intelligence (OSINT) gathering tool designed to automate the reconnaissance phase of your security assessments.  It is a crucial tool for ethical hackers and penetration testers, allowing them to uncover valuable information about a target's online presence.
 
-### Key Features
+**Key Features:**
 
-*   **Comprehensive Information Gathering:** Collects valuable information for reconnaissance.
-*   **Multiple Data Sources:** Leverages numerous public resources for data extraction.
-*   **Identifies:**
-    *   Subdomains
-    *   Emails
-    *   IP Addresses
-    *   URLs
-    *   Employee Names
-*   **Active & Passive Modules:** Includes both passive (searching public sources) and active (direct querying) modules.
-*   **Simple to Use:**  Easy to install and run.
-*   **Flexible:** Can be integrated into various security assessments.
+*   **Automated OSINT Collection:**  Quickly gather information from a multitude of public sources.
+*   **Comprehensive Data Gathering:**  Extracts names, emails, IPs, subdomains, and URLs.
+*   **Versatile Source Integration:**  Utilizes a wide range of search engines, APIs, and public resources.
+*   **Red Team & Penetration Testing Focus:**  Aimed at helping security professionals assess a domain's external threat landscape.
+*   **Easy-to-Use Interface:** Simple to set up and run.
 
-### Installation
+## Installation and Setup
 
 **Prerequisites:**
 
@@ -31,20 +24,18 @@
 
 **Installation Steps:**
 
-1.  **Install `uv` (Recommended for faster dependency management):**
+1.  **Install `uv` (optional but recommended for dependency management):**
 
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
-
 2.  **Clone the Repository:**
 
     ```bash
     git clone https://github.com/laramies/theHarvester
     cd theHarvester
     ```
-
-3.  **Install Dependencies and Create a Virtual Environment:**
+3.  **Install Dependencies and Create a Virtual Environment (using `uv`):**
 
     ```bash
     uv sync
@@ -58,26 +49,25 @@
 
 ### Development
 
-**Development Dependencies:**
-
+**Development Dependencies**
 ```bash
 uv sync --extra dev
 ```
-
-**Running Tests:**
-
+**Running tests**
 ```bash
 uv run pytest
 ```
-
-**Linting and Formatting:**
-
+**Linting and formatting**
 ```bash
 uv run ruff check
+```
+```bash
 uv run ruff format
 ```
 
-### Passive Modules
+## Passive Modules
+
+theHarvester leverages numerous passive modules to gather intelligence from various sources:
 
 *   baidu: Baidu search engine (https://www.baidu.com)
 *   bevigil: CloudSEK BeVigil scans mobile application for OSINT assets (https://bevigil.com/osint-api)
@@ -120,14 +110,14 @@ uv run ruff format
 *   yahoo: Yahoo search engine (https://www.yahoo.com)
 *   zoomeye: China's version of Shodan (https://www.zoomeye.org)
 
-### Active Modules
+## Active Modules
 
 *   DNS brute force: dictionary brute force enumeration
 *   Screenshots: Take screenshots of subdomains that were found
 
-### Modules Requiring API Keys
+## Modules Requiring API Keys
 
-**Note:** Documentation for setting up API keys is available at [theHarvester Wiki](https://github.com/laramies/theHarvester/wiki/Installation#api-keys).
+Some modules require API keys.  See the [Installation Wiki](https://github.com/laramies/theHarvester/wiki/Installation#api-keys) for details on setting up API keys.
 
 *   bevigil - 50 free queries/month, 1k queries/month $50
 *   brave - Free plan available, Pro plans for higher limits
@@ -137,7 +127,7 @@ uv run ruff format
 *   criminalip - 100 free queries/month, 700k/month $59
 *   dehashed - 500 credts $15, 5k credits $150
 *   dnsdumpster - 50 free querries/day, $49
-*   fullhunt - 50 free queries, 200 queries $29/month, 500 queries $59/month
+*   fullhunt - 50 free queries, 200 queries $29/month, 500 queries $59/month 
 *   github-code
 *   haveibeenpwned - 10 email searches/min $4.50, 50 email searches/min $22
 *   hunter - 50 credits/month free, 12k credits/yr $34
@@ -157,19 +147,37 @@ uv run ruff format
 *   whoisxml - 2k queries $50, 5k queries $105
 *   zoomeye - 5 results/day free, 30/results/day $190/yr
 
-### Community & Support
+## Get Involved and Support
 
-*   [![Twitter Follow](https://img.shields.io/twitter/follow/laramies.svg?style=social&label=Follow)](https://twitter.com/laramies) Christian Martorella @laramies - cmartorella@edge-security.com
-*   [![Twitter Follow](https://img.shields.io/twitter/follow/NotoriousRebel1.svg?style=social&label=Follow)](https://twitter.com/NotoriousRebel1) Matthew Brown @NotoriousRebel1
-*   [![Twitter Follow](https://img.shields.io/twitter/follow/jay_townsend1.svg?style=social&label=Follow)](https://twitter.com/jay_townsend1) Jay "L1ghtn1ng" Townsend @jay_townsend1
+*   **Contact:**
 
-### Contributors
+    *   Christian Martorella @laramies  - [cmartorella@edge-security.com](mailto:cmartorella@edge-security.com)
+    *   Matthew Brown @NotoriousRebel1
+    *   Jay "L1ghtn1ng" Townsend @jay_townsend1
 
-*   [![Twitter Follow](https://img.shields.io/twitter/follow/NotoriousRebel1.svg?style=social&label=Follow)](https://twitter.com/NotoriousRebel1) Matthew Brown @NotoriousRebel1
-*   [![Twitter Follow](https://img.shields.io/twitter/follow/jay_townsend1.svg?style=social&label=Follow)](https://twitter.com/jay_townsend1) Jay "L1ghtn1ng" Townsend @jay_townsend1
-*   [![Twitter Follow](https://img.shields.io/twitter/follow/discoverscripts.svg?style=social&label=Follow)](https://twitter.com/discoverscripts) Lee Baird @discoverscripts
+*   **Main Contributors:**
+    *   Matthew Brown @NotoriousRebel1
+    *   Jay "L1ghtn1ng" Townsend @jay_townsend1
+    *   Lee Baird @discoverscripts
 
-### Acknowledgements
+## Acknowledgements
+
+Thanks to the contributions and support from:
 
 *   John Matherly - Shodan project
-*   Ahmed Aboul Ela - subdomain names dictionaries (big and small)
+*   Ahmed Aboul Ela - subdomain names dictionaries
+```
+
+Key improvements and SEO considerations:
+
+*   **Clear Title and Hook:**  The title is optimized with the keywords "OSINT" and "Reconnaissance." The first sentence is a strong hook that grabs attention and clearly states the tool's purpose.
+*   **Keyword-Rich Description:** Uses relevant keywords like "OSINT," "reconnaissance," "penetration testing," "ethical hacking," "subdomains," "emails," "IPs," etc.
+*   **Structured Headings:**  Uses `H2` and `H3` headings to organize the content, making it easier to read and scan, and improving SEO by signaling content hierarchy.
+*   **Bulleted Key Features:**  Highlights the core benefits of the tool, making it easy for users to understand its value.
+*   **Complete Installation Guide:**  A detailed, step-by-step installation guide is included, making it accessible to new users.  The use of `uv` is noted.
+*   **Comprehensive Module List:**  The list of passive modules has been retained, showcasing the tool's capabilities.
+*   **API Key Section:** Includes information about modules that require API keys.
+*   **Contact Information & Acknowledgments:** Maintains the original contact and contributor information to foster community.
+*   **GitHub Link:**  Ensures users can easily navigate to the original repository.
+*   **Clear Call to Action:** Includes calls to action such as "Get Involved and Support", which is helpful.
+*   **Improved Readability:**  The formatting and layout are more user-friendly.

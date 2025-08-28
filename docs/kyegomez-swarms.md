@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-  <em>Unlock the power of collaborative AI with Swarms, the enterprise-grade multi-agent orchestration framework.</em>
+  <em>The Enterprise-Grade Production-Ready Multi-Agent Orchestration Framework </em>
 </p>
 
 <p align="center">
@@ -120,47 +120,18 @@
   </a>
 </p>
 
+## Swarms: Build and Deploy Production-Ready Multi-Agent Systems
 
-## Swarms: Enterprise-Grade Multi-Agent Orchestration
+**Swarms** is an enterprise-grade, production-ready multi-agent orchestration framework that empowers developers to build, deploy, and scale sophisticated AI-powered systems with ease.  Explore the original repository [here](https://github.com/kyegomez/swarms).
 
-**Swarms is an open-source framework for building and deploying production-ready multi-agent systems, empowering you to automate complex tasks and unlock new levels of efficiency.**  Explore the [Swarms GitHub Repository](https://github.com/kyegomez/swarms) for more details.
+## Key Features
 
-**Key Features:**
-
-*   **Multi-Agent Orchestration:** Build complex workflows with agents that collaborate and interact.
-    *   Hierarchical Agent Swarms
-    *   Parallel Processing Pipelines
-    *   Sequential Workflow Orchestration
-    *   Graph-Based Agent Networks
-    *   Dynamic Agent Composition
-    *   Agent Registry Management
-*   **Enterprise-Grade Architecture:** Designed for scalability, reliability, and ease of integration.
-    *   Production-Ready Infrastructure
-    *   High Availability Systems
-    *   Modular Microservices Design
-    *   Comprehensive Observability
-    *   Backwards Compatibility
-*   **Developer Experience:** Simplified development with intuitive APIs, comprehensive documentation, and community support.
-    *   Intuitive Enterprise API
-    *   Comprehensive Documentation
-    *   Active Enterprise Community
-    *   CLI & SDK Tools
-    *   IDE Integration Support
-    *   Code Generation Templates
-*   **Enterprise Integration**: Seamlessly integrates with existing systems and various model providers.
-    *   Multi-Model Provider Support
-    *   Custom Agent Development Framework
-    *   Extensive Enterprise Tool Library
-    *   Multiple Memory Systems
-    *   Backwards Compatibility with LangChain, AutoGen, CrewAI
-    *   Standardized API Interfaces
-*   **Enterprise Scalability**: Designed for high-throughput and resource-efficient multi-agent processing.
-    *   Concurrent Multi-Agent Processing
-    *   Intelligent Resource Management
-    *   Load Balancing & Auto-Scaling
-    *   Horizontal Scaling Capabilities
-    *   Performance Optimization
-    *   Capacity Planning Tools
+*   **🤖 Multi-Agent Orchestration:** Design and deploy complex workflows using a variety of pre-built architectures, including Sequential, Concurrent, and Graph workflows.
+*   **🏢 Enterprise Architecture:** Benefit from a production-ready infrastructure with high availability, modular design, and comprehensive observability for reliable deployments.
+*   **🔄 Enterprise Integration:** Integrate seamlessly with existing systems, with support for multi-model providers, custom agent development, and extensive enterprise tool libraries.
+*   **📈 Enterprise Scalability:** Leverage concurrent multi-agent processing, intelligent resource management, and horizontal scaling capabilities for high-throughput performance.
+*   **🛠️ Developer Experience:** Accelerate development cycles with an intuitive API, comprehensive documentation, and an active community.
+*   **🤖 AutoSwarmBuilder**: Automatically generate specialized agents and workflows based on your task descriptions.
 
 ## Installation
 
@@ -226,7 +197,7 @@ ANTHROPIC_API_KEY=""
 GROQ_API_KEY=""
 ```
 
-## Getting Started
+## Core Concepts and Examples
 
 ### 🤖 Your First Agent
 
@@ -276,7 +247,7 @@ print(final_post)
 
 ```
 
------
+## Advanced Features
 
 ### 🤖 AutoSwarmBuilder: Autonomous Agent Generation
 
@@ -318,8 +289,6 @@ The `AutoSwarmBuilder` provides:
 
 This feature is perfect for rapid prototyping, complex task decomposition, and creating specialized agent teams without manual configuration.
 
------
-
 ## 🏗️ Multi-Agent Architectures For Production Deployments
 
 `swarms` provides a variety of powerful, pre-built multi-agent architectures enabling you to orchestrate agents in various ways. Choose the right structure for your specific problem to build efficient and reliable production systems.
@@ -336,8 +305,6 @@ This feature is perfect for rapid prototyping, complex task decomposition, and c
 | **[HierarchicalSwarm](https://docs.swarms.world/en/latest/swarms/structs/hiearchical_swarm/)** | Orchestrates agents with a director who creates plans and distributes tasks to specialized worker agents. | Complex project management, team coordination, and hierarchical decision-making with feedback loops. |
 | **[HeavySwarm](https://docs.swarms.world/en/latest/swarms/structs/heavy_swarm/)** | Implements a five-phase workflow with specialized agents (Research, Analysis, Alternatives, Verification) for comprehensive task analysis. | Complex research and analysis tasks, financial analysis, strategic planning, and comprehensive reporting. |
 | **[SwarmRouter](https://docs.swarms.world/en/latest/swarms/structs/swarm_router/)** | A universal orchestrator that provides a single interface to run any type of swarm with dynamic selection. | Simplifying complex workflows, switching between swarm strategies, and unified multi-agent management. |
-
------
 
 ### SequentialWorkflow
 
@@ -368,8 +335,6 @@ final_post = workflow.run("The history and future of artificial intelligence")
 print(final_post)
 ```
 
------
-
 ### ConcurrentWorkflow
 
 A `ConcurrentWorkflow` runs multiple agents simultaneously, allowing for parallel execution of tasks. This architecture drastically reduces execution time for tasks that can be performed in parallel, making it ideal for high-throughput scenarios where agents work on similar tasks concurrently.
@@ -386,7 +351,7 @@ market_analyst = Agent(
 )
 
 financial_analyst = Agent(
-    agent_name="Financial-Analyst",
+    agent_name="Financial-Analyst", 
     system_prompt="Provide financial analysis and recommendations on the given topic.",
     model_name="gpt-4o-mini",
     max_loops=1,
@@ -395,7 +360,7 @@ financial_analyst = Agent(
 risk_analyst = Agent(
     agent_name="Risk-Analyst",
     system_prompt="Assess risks and provide risk management strategies for the given topic.",
-    model_name="gpt-4o-mini",
+    model_name="gpt-4o-mini", 
     max_loops=1,
 )
 
@@ -412,8 +377,6 @@ results = concurrent_workflow.run(
 
 print(results)
 ```
-
----
 
 ### AgentRearrange
 
@@ -441,40 +404,6 @@ rearrange_system = AgentRearrange(
 outputs = rearrange_system.run("Analyze the impact of AI on modern cinema.")
 print(outputs)
 ```
-
-<!--
-### GraphWorkflow
-
-`GraphWorkflow` orchestrates tasks using a Directed Acyclic Graph (DAG), allowing you to manage complex dependencies where some tasks must wait for others to complete.
-
-**Description:** Essential for building sophisticated pipelines, like in software development or complex project management, where task order and dependencies are critical.
-
-```python
-from swarms import Agent, GraphWorkflow, Node, Edge, NodeType
-
-# Define agents and a simple python function as nodes
-code_generator = Agent(agent_name="CodeGenerator", system_prompt="Write Python code for the given task.", model_name="gpt-4o-mini")
-code_tester = Agent(agent_name="CodeTester", system_prompt="Test the given Python code and find bugs.", model_name="gpt-4o-mini")
-
-# Create nodes for the graph
-node1 = Node(id="generator", agent=code_generator)
-node2 = Node(id="tester", agent=code_tester)
-
-# Create the graph and define the dependency
-graph = GraphWorkflow()
-graph.add_nodes([node1, node2])
-graph.add_edge(Edge(source="generator", target="tester")) # Tester runs after generator
-
-# Set entry and end points
-graph.set_entry_points(["generator"])
-graph.set_end_points(["tester"])
-
-# Run the graph workflow
-results = graph.run("Create a function that calculates the factorial of a number.")
-print(results)
-``` -->
-
-----
 
 ### SwarmRouter: The Universal Swarm Orchestrator
 
@@ -530,8 +459,6 @@ print(f"Final Aggregated Output:\n{aggregated_output}\n")
 
 The `SwarmRouter` is a powerful tool for simplifying multi-agent orchestration. It provides a consistent and flexible way to deploy different collaborative strategies, allowing you to build more sophisticated applications with less code.
 
--------
-
 ### MixtureOfAgents (MoA)
 
 The `MixtureOfAgents` architecture processes tasks by feeding them to multiple "expert" agents in parallel. Their diverse outputs are then synthesized by an aggregator agent to produce a final, high-quality result. [Learn more here](https://docs.swarms.world/en/latest/swarms/examples/moa_example/)
@@ -562,8 +489,6 @@ recommendation = moa_swarm.run("Should we invest in NVIDIA stock right now?")
 print(recommendation)
 ```
 
-----
-
 ### GroupChat
 
 `GroupChat` creates a conversational environment where multiple agents can interact, discuss, and collaboratively solve a problem. You can define the speaking order or let it be determined dynamically. This architecture is ideal for tasks that benefit from debate and multi-perspective reasoning, such as contract negotiation, brainstorming, or complex decision-making.
@@ -591,8 +516,6 @@ for message in conversation_history:
     print(f"[{message['agent_name']}]: {message['content']}")
 ```
 
-----
-
 ### HierarchicalSwarm
 
 `HierarchicalSwarm` implements a director-worker pattern where a central director agent creates comprehensive plans and distributes specific tasks to specialized worker agents. The director evaluates results and can issue new orders in feedback loops, making it ideal for complex project management and team coordination scenarios.
@@ -608,7 +531,7 @@ content_strategist = Agent(
 )
 
 creative_director = Agent(
-    agent_name="Creative-Director",
+    agent_name="Creative-Director", 
     system_prompt="You are a creative director. Develop compelling advertising concepts, visual directions, and campaign creativity.",
     model_name="gpt-4o-mini"
 )
@@ -651,8 +574,6 @@ The `HierarchicalSwarm` excels at:
 -   **Quality Control**: Director provides feedback and refinement loops
 -   **Scalable Workflows**: Easy to add new specialized agents as needed
 
----
-
 ### HeavySwarm
 
 `HeavySwarm` implements a sophisticated 5-phase workflow inspired by X.AI's Grok heavy implementation. It uses specialized agents (Research, Analysis, Alternatives, Verification) to provide comprehensive task analysis through intelligent question generation, parallel execution, and synthesis. This architecture excels at complex research and analysis tasks requiring thorough investigation and multiple perspectives.
@@ -694,8 +615,32 @@ The `HeavySwarm` provides:
 
 This architecture is perfect for financial analysis, strategic planning, research reports, and any task requiring deep, multi-faceted analysis. [Learn more about HeavySwarm](https://docs.swarms.world/en/latest/swarms/structs/heavy_swarm/)
 
----
-
 ## Documentation
 
-Documentation is located here at: [docs.swarms.world](https://docs.swarms.
+Comprehensive documentation is available at: [docs.swarms.world](https://docs.swarms.world)
+
+## Examples
+
+Explore comprehensive examples and tutorials to learn how to use Swarms effectively.
+
+### Basic Examples
+
+| Example | Description | Link |
+|---------|-------------|------|
+| Basic Agent | Simple agent setup and usage | [Basic Agent](https://docs.swarms.world/en/latest/swarms/examples/basic_agent/) |
+| Agent with Tools | Using agents with various tools | [Agent with Tools](https://docs.swarms.world/en/latest/swarms/examples/agent_with_tools/) |
+| Agent with Structured Outputs | Working with structured data outputs | [Structured Outputs](https://docs.swarms.world/en/latest/swarms/examples/agent_structured_outputs/) |
+| Agent with MCP Integration | Model Context Protocol integration | [MCP Integration](https://docs.swarms.world/en/latest/swarms/examples/agent_with_mcp/) |
+| Vision Processing | Agents with image processing capabilities | [Vision Processing](https://docs.swarms.world/en/latest/swarms/examples/vision_processing/) |
+| Multiple Images | Working with multiple images | [Multiple Images](https://docs.swarms.world/en/latest/swarms/examples/multiple_images/) |
+| Vision and Tools | Combining vision with tool usage | [Vision and Tools](https://docs.swarms.world/en/latest/swarms/examples/vision_tools/) |
+| Agent Streaming | Real-time agent output streaming | [Agent Streaming](https://docs.swarms.world/en/latest/examples/agent_stream/) |
+| Agent Output Types | Different output formats and types | [Output Types](https://docs.swarms.world/en/latest/swarms/examples/agent_output_types/) |
+| Gradio Chat Interface | Building interactive chat interfaces | [Gradio UI](https://docs.swarms.world/en/latest/swarms/ui/main/) |
+
+### Model Provider Examples
+
+| Provider | Description | Link |
+|----------|-------------|------|
+| Model Providers Overview | Complete guide to supported models | [Model Providers](https://docs.swarms.world/en/latest/swarms/examples/model_providers/) |
+| OpenAI | OpenAI model

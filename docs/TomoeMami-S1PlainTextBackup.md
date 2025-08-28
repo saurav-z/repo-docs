@@ -1,36 +1,45 @@
-# S1 Forum Plain Text Backup: Preserving Stage1st Forum Discussions
+# S1 Forum Plain Text Backup: Preserve Your Favorite Discussions
 
-This repository provides plain text backups of high-activity threads from the Stage1st (S1) forum, ensuring important discussions are preserved for posterity.  You can find the original repository here: [https://github.com/TomoeMami/S1PlainTextBackup](https://github.com/TomoeMami/S1PlainTextBackup)
+Preserve and search your favorite Stage1st (S1) forum threads with this comprehensive plain text backup repository.  [View the original repository](https://github.com/TomoeMami/S1PlainTextBackup).
 
 ## Key Features
 
-*   **Comprehensive Backups:**  Preserves high-activity S1 forum threads as plain text files.
-*   **Frequent Updates:** Backups are created for new threads exceeding a certain threshold of replies.
-*   **Archival System:**  Older threads are archived to ensure long-term accessibility.
-*   **Searchable Content:**  Text files allow for easy searching and content retrieval.
-*   **Supported Formatting:** Preserves basic formatting elements including:
-    *   **Bold Text**
+*   **Comprehensive Backups:**  Regularly archives high-activity S1 forum threads in plain text format.
+*   **Searchable Content:** Easily search within the plain text files to find specific discussions and information.
+*   **File Organization:**  Threads are archived in files of approximately 1500 posts for efficient management.
+*   **Short-Term and Long-Term Storage:** Recent threads (3 days) are stored in the main repository; older threads are archived.
+*   **Supported Formatting:** Preserves key formatting elements for readability:
+    *   Bold text
     *   Links
     *   Images (jpg, jpeg, png, gif, tif, webp)
     *   Ratings/Scores
 
-## Archive Organization
+## Archiving Strategy
 
-Historical archives are available for various years:
+This repository focuses on backing up active S1 forum threads.
 
-*   [2020-2021](https://github.com/TomoeMami/S1PlainTextArchive2021)
-*   [2022](https://github.com/TomoeMami/S1PlainTextArchive2022)
-*   [2023](https://github.com/TomoeMami/S1PlainTextArchive2023)
-*   [2024](https://github.com/TomoeMami/S1PlainTextArchive2024)
-*   [2025-Present](https://github.com/TomoeMami/S1PlainTextArchive2025)
+*   **Selection Criteria:** Backups are created for new threads that receive over 1 page of replies within the first 24 hours.
+*   **Retention:**
+    *   Threads remain in the main repository for 3 days.
+    *   After 3 days of inactivity, threads are moved to the historical archives.
+*   **File Size:**  Each text file is limited to approximately 1MB (roughly 50 pages) to ensure proper rendering on GitHub.
 
-## Important Notes
+## Historical Archives
 
-*   **File Size Limits:** Files are split into smaller units (approximately 1500 posts per file, or 50 pages) to ensure compatibility with GitHub's rendering capabilities (under 1MB per file).
-*   **Local Backups:** For local, image-rich backups, consider using the [S1Downloader](https://github.com/shuangluoxss/Stage1st-downloader) tool.
-*   **COVID-19 Threads:** Backups of the COVID-19 specific forum threads come from [https://gitlab.com/memory-s1/virus](https://gitlab.com/memory-s1/virus).
+Access older S1 forum threads via the following archive repositories:
+
+| Archive |  |  |
+|---|---|---|
+| [2020-2021](https://github.com/TomoeMami/S1PlainTextArchive2021) |  |  |
+| [2022](https://github.com/TomoeMami/S1PlainTextArchive2022) | [2023](https://github.com/TomoeMami/S1PlainTextArchive2023) | [2024](https://github.com/TomoeMami/S1PlainTextArchive2024) |
+| [2025-Present](https://github.com/TomoeMami/S1PlainTextArchive2025) |  |  |
+
+## Additional Resources
+
+*   **Local Backup Tool:** For complete local backups with images, consider using [S1Downloader](https://github.com/shuangluoxss/Stage1st-downloader).
+*   **COVID-19 Thread Archives:** Special backups of the COVID-19 related threads are available at [https://gitlab.com/memory-s1/virus](https://gitlab.com/memory-s1/virus).
 
 ## Update Log
 
-*   **February 15, 2024:**  Adjusted collection criteria to threads exceeding 40 replies (1 page) within 24 hours, with a 14-day cache.
-*   **February 3, 2024:**  Modified collection criteria to threads exceeding 40 replies (1 page) within 12 hours, with a 7-day cache.
+*   **2024-02-15:** Changed to collect threads with more than 40 replies (1 page) within 24 hours, with a 3-day expiry.  Cache duration increased to 14 days.
+*   **2024-02-03:** Changed to collect threads with more than 40 replies (1 page) within 12 hours, with a 1-day expiry.  Cache duration decreased to 7 days.

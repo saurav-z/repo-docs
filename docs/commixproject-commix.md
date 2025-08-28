@@ -11,50 +11,49 @@
 
 # Commix: Automated Command Injection Exploitation Tool
 
-**Commix**, short for "Command Injection Exploiter," is a powerful open-source penetration testing tool designed to identify and exploit command injection vulnerabilities. Developed by [Anastasios Stasinopoulos](https://github.com/stasinopoulos) ([@ancst](https://x.com/ancst)), Commix helps security professionals and ethical hackers test the security of web applications against command injection attacks.  [View the original repository here](https://github.com/commixproject/commix).
+**Commix**, short for "command injection exploiter," is a powerful open-source penetration testing tool designed to automate the detection and exploitation of command injection vulnerabilities, making it an essential tool for cybersecurity professionals.  Find out more and contribute on the [Commix GitHub Repository](https://github.com/commixproject/commix).
 
 ![Screenshot](https://commixproject.com/images/background.png)
-Explore more features through the [collection of screenshots](https://github.com/commixproject/commix/wiki/Screenshots) on the wiki.
 
 ## Key Features
 
-*   **Automated Detection:** Automatically identifies command injection vulnerabilities in web applications.
-*   **Exploitation Capabilities:** Exploits detected vulnerabilities to execute system commands.
-*   **Open Source:** Freely available and open-source, allowing for community contributions and transparency.
-*   **Cross-Platform Compatibility:** Runs on various platforms, making it versatile for different testing environments.
-*   **Detailed Reporting:** Provides comprehensive reports on detected vulnerabilities and exploitation results.
-*   **Filters Bypass:** Includes techniques to bypass web application filters.
+*   **Automated Vulnerability Detection:**  Commix automates the process of identifying command injection vulnerabilities.
+*   **Exploitation Capabilities:**  Exploits detected vulnerabilities to test for command execution.
+*   **Open Source and Free:** Commix is freely available under the GPLv3 license.
+*   **Cross-Platform Compatibility:**  Can be run on any platform with Python.
+*   **Comprehensive Documentation:**  Includes detailed documentation and usage examples.
 
 ## Installation
 
-To install Commix, clone the official Git repository:
+To install Commix, clone the repository:
 
 ```bash
 git clone https://github.com/commixproject/commix.git commix
 ```
 
-Alternatively, download the latest [tarball](https://github.com/commixproject/commix/tarball/master) or [zipball](https://github.com/commixproject/commix/zipball/master).
+Alternatively, you can download the latest [tarball](https://github.com/commixproject/commix/tarball/master) or [zipball](https://github.com/commixproject/commix/zipball/master).
 
-*Note:  **Python** (version **2.6**, **2.7** or **3.x**) is required to run Commix.*
+*__Note:__ **[Python](http://www.python.org/download/)** (version **2.6**, **2.7** or **3.x**) is required for running commix.*
 
 ## Usage
 
-To get a list of all options and switches, use:
+Get started by listing options and switches:
 
 ```bash
 python commix.py -h
 ```
 
-For an overview of Commix's options, switches, and basic usage examples, consult the following wiki pages:
+For more in-depth usage instructions, refer to the following resources:
 
-*   [Usage](https://github.com/commixproject/commix/wiki/Usage)
-*   [Usage Examples](https://github.com/commixproject/commix/wiki/Usage-Examples)
-*   [Filters Bypasses](https://github.com/commixproject/commix/wiki/Filters-Bypasses)
+*   **Usage:** [https://github.com/commixproject/commix/wiki/Usage](https://github.com/commixproject/commix/wiki/Usage)
+*   **Usage Examples:** [https://github.com/commixproject/commix/wiki/Usage-Examples](https://github.com/commixproject/commix/wiki/Usage-Examples)
+*   **Filters Bypasses:** [https://github.com/commixproject/commix/wiki/Filters-Bypasses](https://github.com/commixproject/commix/wiki/Filters-Bypasses)
 
-## Resources
+## Additional Resources
 
 *   **User's manual:** [https://github.com/commixproject/commix/wiki](https://github.com/commixproject/commix/wiki)
 *   **Issues tracker:** [https://github.com/commixproject/commix/issues](https://github.com/commixproject/commix/issues)
+*   **Screenshots:**  [https://github.com/commixproject/commix/wiki/Screenshots](https://github.com/commixproject/commix/wiki/Screenshots)
 
 ## Translations
 

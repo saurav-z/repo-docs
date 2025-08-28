@@ -5,6 +5,10 @@
   </picture>
 </div>
 
+# Authlib: The Comprehensive Python Library for OAuth and OpenID Connect
+
+**Authlib** is the go-to Python library for building robust and secure OAuth and OpenID Connect clients and servers, simplifying authentication and authorization processes. ([Original Repo](https://github.com/authlib/authlib))
+
 [![Build Status](https://github.com/authlib/authlib/workflows/tests/badge.svg)](https://github.com/authlib/authlib/actions)
 [![PyPI version](https://img.shields.io/pypi/v/authlib.svg)](https://pypi.org/project/authlib)
 [![conda-forge version](https://img.shields.io/conda/v/conda-forge/authlib.svg?label=conda-forge&colorB=0090ff)](https://anaconda.org/conda-forge/authlib)
@@ -12,19 +16,14 @@
 [![Code Coverage](https://codecov.io/gh/authlib/authlib/graph/badge.svg?token=OWTdxAIsPI)](https://codecov.io/gh/authlib/authlib)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=authlib_authlib&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=authlib_authlib)
 
-## Authlib: Your Comprehensive Python Library for OAuth and OpenID Connect
+## Key Features:
 
-Authlib is a powerful and versatile Python library that simplifies the implementation of OAuth and OpenID Connect protocols, providing robust support for both client and server-side applications.
-
-**[Visit the Authlib Repository on GitHub](https://github.com/authlib/authlib)**
-
-**Key Features:**
-
-*   **Complete Protocol Support:** Implements OAuth 1.0, OAuth 2.0, and OpenID Connect 1.0, adhering to industry standards and specifications.
-*   **JWS, JWK, JWA, JWT Support:** Includes comprehensive support for JSON Web Signature (JWS), JSON Web Key (JWK), JSON Web Algorithm (JWA), and JSON Web Token (JWT) standards for secure authentication and authorization.
-*   **Client Integrations:** Seamlessly connect to third-party OAuth providers using built-in client integrations for Requests, HTTPX, Flask, Django, Starlette, and FastAPI.
-*   **Server-Side Provider Development:** Build your own OAuth 1.0, OAuth 2.0, and OpenID Connect providers with ease using frameworks like Flask and Django.
-*   **Python 3.9+ Compatible:** Built for modern Python development.
+*   **Comprehensive Protocol Support:** Implements OAuth 1.0, OAuth 2.0, OpenID Connect 1.0, and related RFCs.
+*   **JWS, JWK, JWA, JWT Support:** Includes robust support for JSON Web Signature (JWS), JSON Web Key (JWK), JSON Web Algorithms (JWA), and JSON Web Token (JWT).
+*   **Built-in Client Integrations:** Offers seamless integration with popular Python frameworks like Requests, HTTPX, Flask, Django, Starlette, and FastAPI.
+*   **Server Implementation:** Allows you to build your own OAuth and OpenID Connect providers for Flask and Django.
+*   **Spec-Compliant:** Adheres to the latest specifications for secure and reliable authentication and authorization.
+*   **Python 3.9+ Compatible:** Designed to work with the latest Python versions.
 
 ## Migrations
 
@@ -57,7 +56,7 @@ Authlib will deprecate `authlib.jose` module, please read:
 5.  Twitter: <https://twitter.com/authlib>
 6.  StackOverflow: <https://stackoverflow.com/questions/tagged/authlib>
 7.  Other Repositories: <https://github.com/authlib>
-8.  Subscribe Tidelift: [https://tidelift.com/subscription/pkg/pypi-authlib](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links)
+8.  Subscribe Tidelift: [https://tidelift.com/subscription/pkg/pypi-authlib](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links).
 
 ## Security Reporting
 
@@ -83,15 +82,3 @@ Any project, open or closed source, can use the BSD license.
 If your company needs commercial support, you can purchase a commercial license at
 [Authlib Plans](https://authlib.org/plans). You can find more information at
 <https://authlib.org/support>.
-```
-
-Key improvements and explanations:
-
-*   **SEO-Optimized Title:** The primary heading is now a clear and concise title with keywords: "Authlib: Your Comprehensive Python Library for OAuth and OpenID Connect"
-*   **One-Sentence Hook:**  The opening sentence provides an immediate understanding of the library's purpose and value.
-*   **Clear Headings:**  Used more informative headings for better readability and SEO.
-*   **Bulleted Key Features:**  Uses bullet points to highlight the core functionalities, making it easy for users to scan and understand the library's capabilities.  Keywords are incorporated here for SEO.
-*   **Concise Language:** Unnecessary words and phrases have been removed to improve clarity.
-*   **Direct Link to GitHub:** The link is prominently displayed so users can easily find the repository.
-*   **Revised the feature section**, replacing the list of specifications with the summary in the bullet points.
-*   **Removed redundant details and simplified formatting**, making the README more focused and user-friendly.

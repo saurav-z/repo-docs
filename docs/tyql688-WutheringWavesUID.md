@@ -1,53 +1,58 @@
-# Wuthering Waves UID Bot Plugin: Enhance Your Wuthering Waves Experience
-
-Enhance your Wuthering Waves gameplay with the **Wuthering Waves UID bot plugin**, a versatile tool designed to integrate seamlessly with your favorite chat platforms.  This plugin brings in-game data and functionality directly to you, keeping you connected to the world of Wuthering Waves.  Learn more and contribute at the [original repository](https://github.com/tyql688/WutheringWavesUID).
+# WutheringWavesUID
 
 <p align="center">
   <a href="https://github.com/tyql688/WutheringWavesUID"><img src="https://s2.loli.net/2024/10/08/ku3pLJBPoGjfQWq.png" width="256" height="256" alt="WutheringWavesUID"></a>
-</p>
+<h1 align = "center">WutheringWavesUID 2.0</h1>
+<h4 align = "center">🚧支持OneBot(QQ)、QQ频道、微信、开黑啦、Telegram的全功能鸣潮Bot插件🚧</h4>
+<div align = "center">
+        <a href="https://docs.sayu-bot.com/" target="_blank">安装文档</a> &nbsp; · &nbsp;
+        <a href="https://docs.sayu-bot.com/PluginsHelp/WutheringWavesUID.html" target="_blank">指令列表</a> &nbsp; · &nbsp;
+        <a href="https://docs.sayu-bot.com/常见问题/">常见问题</a>
+</div>
 
-## Key Features:
+## 丨安装提醒
 
-*   **Cross-Platform Compatibility:** Works with OneBot (QQ), QQ Channels, WeChat, Kaihei La, and Telegram.
-*   **Easy Installation:**  Integrates as an extension of the [gsuid_core](https://github.com/Genshin-bots/gsuid_core) and is easily installed via a bot command.
-*   **Resource Download:** Includes a command to download all necessary resources, ensuring a smooth experience.
-*   **International Server Support:** Supports image recognition for international servers via Discord integration ([moonshadow1976/WutheringWavesUID](https://github.com/moonshadow1976/WutheringWavesUID)).
-*   **Bot Framework Support:** Compatible with NoneBot2, HoshinoBot, ZeroBot, and YunzaiBot.
-*   **Community Driven:** Actively developed with new features being added frequently.
+> **注意：该插件为[早柚核心(gsuid_core)](https://github.com/Genshin-bots/gsuid_core)
+的扩展，具体安装方式可参考[GenshinUID](https://github.com/KimigaiiWuyi/GenshinUID)**
+>
+> **如果已经是最新版本的`gsuid_core`, 可以直接对bot发送`core安装插件WutheringWavesUID`，然后重启core以应用安装**
+>
+>
+> 如使用命令缺失素材可尝试使用命令`ww下载全部资源`
+>
+> [补充文档地址](https://wiki.wavesuid.top/)
+> 
+> 国际服用户可以基于 `Discord` 图片识别使用 `WutheringWavesUID` -> [传送门](https://github.com/moonshadow1976/WutheringWavesUID)
+>
+> 支持NoneBot2 & HoshinoBot & ZeroBot & YunzaiBot的鸣潮Bot插件
+>
+> 🚧插件目前还在施工中，功能快速迭代中...🚧
+>
+>
+> ✨如果需要添加其他鸣潮相关功能欢迎在issues中提出✨
+>
 
-## Installation and Usage
+## 丨反馈渠道
 
-**Important:** This plugin extends the functionality of the `gsuid_core`. To install, you can send the command `core安装插件WutheringWavesUID` to your bot and then restart the core.
+- QQ群号：[76436110](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=hmB3ejtTx6cIDHegsLM91jd1Rn97eGAe&authKey=HqcnRdI0S98dUBcpHxwjWv72LYpUYE%2BSXVOEjiuBrAZbepCHPzP86szZFhxeiQkG&noverify=0&group_code=76436110)
 
-For missing resources, use the command `ww下载全部资源`.
+## 丨其他
 
-*   [Installation Documentation](https://docs.sayu-bot.com/)
-*   [Command List](https://docs.sayu-bot.com/PluginsHelp/WutheringWavesUID.html)
-*   [FAQ](https://docs.sayu-bot.com/常见问题/)
-*   [Supplemental Documentation](https://wiki.wavesuid.top/)
++ 本项目仅供学习使用，请勿用于商业用途
++ [GPL-3.0 License](https://github.com/tyql688/WutheringWavesUID/blob/master/LICENSE)
 
-## Feedback and Support
+## 致谢
 
-*   Join the QQ group for support and discussion: [76436110](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=hmB3ejtTx6cIDHegsLM91jd1Rn97eGAe&authKey=HqcnRdI0S98dUBcpHxwjWv72LYpUYE%2BSXVOEjiuBrAZbepCHPzP86szZFhxeiQkG&noverify=0&group_code=76436110)
-
-## Legal
-
-*   This project is for learning purposes only and should not be used for commercial activities.
-*   Licensed under [GPL-3.0 License](https://github.com/tyql688/WutheringWavesUID/blob/master/LICENSE).
-
-## Acknowledgements
-
-Special thanks to the following contributors and resources:
-
-*   [Wuyi无疑](https://github.com/KimigaiiWuyi) for the design of the plugin.
-*   [鸣潮声骸评分工具](http://asfaz.cn/mingchao/rule.html)
-*   [waves-plugin](https://github.com/erzaozi/waves-plugin)
-*   [Yunzai-Kuro-Plugin](https://github.com/TomyJan/Yunzai-Kuro-Plugin)
-*   [Kuro-API-Collection](https://github.com/TomyJan/Kuro-API-Collection)
-*   And the following guide creators:
-    *   [Moealkyne](https://www.taptap.cn/user/533395803)
-    *   [小沐XMu](https://www.kurobbs.com/person-center?id=10450567)
-    *   [金铃子攻略组](https://space.bilibili.com/487275027)
-    *   [結星](https://www.kurobbs.com/person-center?id=10015697)
-    *   [小羊早睡不遭罪](https://space.bilibili.com/37331716)
-    *   [吃我无痕](https://space.bilibili.com/347744)
+- 特别鸣谢 [Wuyi无疑](https://github.com/KimigaiiWuyi) 为 WutheringWavesUID 作出的巨大贡献！本插件的设计图均出自 Wuyi无疑
+  之手！！！
+- [鸣潮声骸评分工具](http://asfaz.cn/mingchao/rule.html) 鸣潮声骸评分工具
+- [waves-plugin](https://github.com/erzaozi/waves-plugin) Yunzai 鸣潮游戏数据查询插件
+- [Yunzai-Kuro-Plugin](https://github.com/TomyJan/Yunzai-Kuro-Plugin) Yunzai 库洛插件
+- [Kuro-API-Collection](https://github.com/TomyJan/Kuro-API-Collection) 库街区 API 文档
+- 特别鸣谢以下攻略作者
+  - [Moealkyne](https://www.taptap.cn/user/533395803)
+  - [小沐XMu](https://www.kurobbs.com/person-center?id=10450567)
+  - [金铃子攻略组](https://space.bilibili.com/487275027)
+  - [結星](https://www.kurobbs.com/person-center?id=10015697)
+  - [小羊早睡不遭罪](https://space.bilibili.com/37331716)
+  - [吃我无痕](https://space.bilibili.com/347744)

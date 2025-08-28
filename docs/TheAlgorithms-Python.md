@@ -1,48 +1,63 @@
 <div align="center">
   <a href="https://github.com/TheAlgorithms/">
-    <img src="https://raw.githubusercontent.com/TheAlgorithms/website/1cd824df116b27029f17c2d1b42d81731f28a920/public/logo.svg" height="100" alt="The Algorithms Python Logo">
+    <img src="https://raw.githubusercontent.com/TheAlgorithms/website/1cd824df116b27029f17c2d1b42d81731f28a920/public/logo.svg" height="100" alt="The Algorithms Logo">
   </a>
-  <h1>The Algorithms - Python</h1>
+  <h1><a href="https://github.com/TheAlgorithms/">The Algorithms - Python</a></h1>
 </div>
 
-**Learn and explore fundamental algorithms with ease using Python!** This repository provides Python implementations of various algorithms, perfect for educational purposes and understanding core computer science concepts.
+**Explore a comprehensive collection of algorithms implemented in Python for educational purposes and practical learning.**  This repository provides a valuable resource for anyone looking to understand and implement various algorithms.
 
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod&style=flat-square)](https://gitpod.io/#https://github.com/TheAlgorithms/Python)
-[![Contributions Welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/TheAlgorithms/Python/blob/master/CONTRIBUTING.md)
-[![Repo Size](https://img.shields.io/github/repo-size/TheAlgorithms/Python.svg?label=Repo%20size&style=flat-square)](https://github.com/TheAlgorithms/Python)
-[![Discord Chat](https://img.shields.io/discord/808045925556682782.svg?logo=discord&colorB=7289DA&style=flat-square)](https://the-algorithms.com/discord)
-[![Gitter Chat](https://img.shields.io/badge/Chat-Gitter-ff69b4.svg?label=Chat&logo=gitter&style=flat-square)](https://gitter.im/TheAlgorithms/community)
-<br>
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/TheAlgorithms/Python/build.yml?branch=master&label=CI&logo=github&style=flat-square)](https://github.com/TheAlgorithms/Python/actions)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square)](https://github.com/pre-commit/pre-commit)
-[![Code Style: ruff](https://img.shields.io/static/v1?label=code%20style&message=ruff&color=black&style=flat-square)](https://docs.astral.sh/ruff/formatter/)
+<!-- Badges -->
+<div align="center">
+  <a href="https://gitpod.io/#https://github.com/TheAlgorithms/Python">
+    <img src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod&style=flat-square" height="20" alt="Gitpod Ready-to-Code">
+  </a>
+  <a href="https://github.com/TheAlgorithms/Python/blob/master/CONTRIBUTING.md">
+    <img src="https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square" height="20" alt="Contributions Welcome">
+  </a>
+  <img src="https://img.shields.io/github/repo-size/TheAlgorithms/Python.svg?label=Repo%20size&style=flat-square" height="20" alt="Repository Size">
+  <a href="https://the-algorithms.com/discord">
+    <img src="https://img.shields.io/discord/808045925556682782.svg?logo=discord&colorB=7289DA&style=flat-square" height="20" alt="Discord chat">
+  </a>
+  <a href="https://gitter.im/TheAlgorithms/community">
+    <img src="https://img.shields.io/badge/Chat-Gitter-ff69b4.svg?label=Chat&logo=gitter&style=flat-square" height="20" alt="Gitter chat">
+  </a>
+  <br>
+  <a href="https://github.com/TheAlgorithms/Python/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/TheAlgorithms/Python/build.yml?branch=master&label=CI&logo=github&style=flat-square" height="20" alt="GitHub Workflow Status">
+  </a>
+  <a href="https://github.com/pre-commit/pre-commit">
+    <img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square" height="20" alt="pre-commit">
+  </a>
+  <a href="https://docs.astral.sh/ruff/formatter/">
+    <img src="https://img.shields.io/static/v1?label=code%20style&message=ruff&color=black&style=flat-square" height="20" alt="code style: black">
+  </a>
+</div>
 
 ## Key Features
 
-*   **Comprehensive Coverage:** Implementations of numerous algorithms across various domains.
-*   **Educational Focus:** Designed for learning and understanding algorithm concepts.
-*   **Python Implementation:** Clear and concise Python code for easy comprehension.
-*   **Open Source:**  Contribute and collaborate on algorithm implementations.
-*   **Community Support:**  Engage with other learners and contributors on Discord and Gitter.
+*   **Extensive Algorithm Implementations:** A vast collection of algorithms across various domains, implemented in Python.
+*   **Educational Resource:** Ideal for learning and understanding how algorithms work.
+*   **Community Driven:**  A welcoming community for collaboration and knowledge sharing.
+*   **Easy to Contribute:**  Welcoming contributions from the community to expand the collection.
+
+## Important Note
+
+The implementations in this repository are designed for educational purposes. They might not be as optimized as implementations in the Python standard library. Use them at your discretion.
 
 ## Getting Started
 
-Explore the implementations and contribute to the project!  For guidelines on contributing, please read our [Contribution Guidelines](CONTRIBUTING.md).
+To get started, review our [Contribution Guidelines](CONTRIBUTING.md) if you plan to contribute.
 
-## Community Channels
+## Community
 
-Connect with other users and get help with any questions! Join us on:
+Connect with us and get help through our community channels:
 
 *   [Discord](https://the-algorithms.com/discord)
 *   [Gitter](https://gitter.im/TheAlgorithms/community)
 
-## Algorithm Directory
+## Explore the Algorithms
 
-Browse through the available algorithms easily using the [directory](DIRECTORY.md).
+Browse the implemented algorithms in our [directory](DIRECTORY.md) for easier navigation.
 
-## Learn More
-
-Visit the original repository on GitHub: [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python)
-
----
-***Disclaimer:** Implementations are for learning purposes and may not be as optimized as standard library implementations. Use them at your discretion.*
+[Back to the Original Repository](https://github.com/TheAlgorithms/Python)

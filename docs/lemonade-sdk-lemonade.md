@@ -1,19 +1,19 @@
-# Lemonade: Run Local LLMs with GPU and NPU Acceleration
+# 🍋 Lemonade: Run LLMs Locally with GPU and NPU Acceleration
 
-[Lemonade](https://github.com/lemonade-sdk/lemonade) empowers you to run Large Language Models (LLMs) locally with optimized performance, leveraging your GPU and NPU hardware for blazing-fast inference.
+**Supercharge your local LLM performance with Lemonade, the open-source server engineered for speed and efficiency.** ([See the original repo](https://github.com/lemonade-sdk/lemonade))
 
-[![Discord](https://img.shields.io/badge/Discord-7289DA?logo=discord&logoColor=white)](https://discord.gg/5xXzkMu8Zk)
+[![Discord](https://img.shields.io/discord/1175085518182716456?label=Discord&logo=discord&logoColor=white)](https://discord.gg/5xXzkMu8Zk)
 [![Tests](https://github.com/lemonade-sdk/lemonade/actions/workflows/test_lemonade.yml/badge.svg)](https://github.com/lemonade-sdk/lemonade/actions/workflows/test_lemonade.yml)
 [![Windows 11](https://img.shields.io/badge/Windows-11-0078D6?logo=windows&logoColor=white)](docs/README.md#installation)
-[![Ubuntu 24.04 & 25.04](https://img.shields.io/badge/Ubuntu-24.04%20%7C%2025.04-E95420?logo=ubuntu&logoColor=white)](https://lemonade-server.ai/#linux)
+[![Ubuntu 24.04 | 25.04](https://img.shields.io/badge/Ubuntu-24.04%20%7C%2025.04-E95420?logo=ubuntu&logoColor=white)](https://lemonade-server.ai/#linux)
 [![Python 3.10-3.13](https://img.shields.io/badge/Python-3.10--3.13-blue?logo=python&logoColor=white)](docs/README.md#installation)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/lemonade-sdk/lemonade/blob/main/docs/contribute.md)
 [![Latest Release](https://img.shields.io/github/v/release/lemonade-sdk/lemonade?include_prereleases)](https://github.com/lemonade-sdk/lemonade/releases/latest)
 [![GitHub Downloads](https://img.shields.io/github/downloads/lemonade-sdk/lemonade/total.svg)](https://tooomm.github.io/github-release-stats/?username=lemonade-sdk&repository=lemonade)
-[![GitHub Issues](https://img.shields.io/github/issues/lemonade-sdk/lemonade)](https://github.com/lemonade-sdk/lemonade/issues)
-[![License](https://img.shields.io/badge/License-Apache-yellow.svg)](https://github.com/lemonade-sdk/lemonade/blob/main/LICENSE)
-[![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Star History](https://img.shields.io/badge/Star%20History-View-brightgreen)](https://star-history.com/#lemonade-sdk/lemonade)
+[![GitHub issues](https://img.shields.io/github/issues/lemonade-sdk/lemonade)](https://github.com/lemonade-sdk/lemonade/issues)
+[![License: Apache](https://img.shields.io/badge/License-Apache-yellow.svg)](https://github.com/lemonade-sdk/lemonade/blob/main/LICENSE)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Star History Chart](https://img.shields.io/badge/Star%20History-View-brightgreen)](https://star-history.com/#lemonade-sdk/lemonade)
 
 <p align="center">
   <img src="https://github.com/lemonade-sdk/assets/blob/main/docs/banner.png?raw=true" alt="Lemonade Banner" />
@@ -25,19 +25,26 @@
   <a href="https://discord.gg/5xXzkMu8Zk">Discord</a>
 </div>
 
-Lemonade provides a powerful and flexible platform for running LLMs locally, offering optimized performance through GPU and NPU acceleration.  Startups like Styrk AI, research teams like Hazy Research at Stanford, and companies like AMD use Lemonade to run LLMs.
+Lemonade empowers you to run large language models (LLMs) locally with exceptional performance, leveraging the power of your GPU and NPU. Built with state-of-the-art inference engines, Lemonade is the preferred choice for startups, research teams, and large enterprises looking to optimize their LLM deployments.
 
-## Key Features
+**Key Features:**
 
-*   **GPU and NPU Acceleration:**  Leverage your hardware for faster LLM inference.
-*   **OpenAI Compatibility:** Seamlessly integrate with your favorite OpenAI-compatible applications.
-*   **Model Management:** Easily download, manage, and switch between various LLM models.
-*   **Cross-Platform Support:** Runs on Windows and Linux, with Python support.
-*   **Built-in Chat Interface:** Start interacting with your LLMs immediately.
-*   **Flexible Integration:** Use the Lemonade API and CLI for custom integrations.
-*   **Open Source:**  Committed to open source and actively welcoming contributions.
+*   **GPU and NPU Acceleration:** Maximize performance on your hardware.
+*   **Easy Integration:** Compatible with OpenAI-compatible client libraries.
+*   **Model Manager:** Simplify model downloads and management.
+*   **Multiple Engine Support:** Seamlessly switch between different inference engines (OGA, llamacpp, HF) at runtime.
+*   **Built-in Chat Interface:** Start chatting with your models immediately.
+*   **OpenAI API Compatibility:** Works with popular OpenAI-compatible applications.
 
-## Getting Started: Quick Steps
+**Used by:**
+
+*   [Styrk AI](https://styrk.ai/styrk-ai-and-amd-guardrails-for-your-on-device-ai-revolution/)
+*   [Hazy Research at Stanford](https://www.amd.com/en/developer/resources/technical-articles/2025/minions--on-device-and-cloud-language-model-collaboration-on-ryz.html)
+*   [AMD](https://www.amd.com/en/developer/resources/technical-articles/unlocking-a-wave-of-llm-apps-on-ryzen-ai-through-lemonade-server.html)
+
+## Getting Started
+
+Follow these simple steps to get up and running:
 
 <div align="center">
 
@@ -47,9 +54,9 @@ Lemonade provides a powerful and flexible platform for running LLMs locally, off
 |Install using a [GUI](https://github.com/lemonade-sdk/lemonade/releases/latest/download/Lemonade_Server_Installer.exe) (Windows only), [pip](https://lemonade-server.ai/install_options.html), or [from source](https://lemonade-server.ai/install_options.html). |Use the [Model Manager](#model-library) to install models|A built-in chat interface is available!|
 </div>
 
-### Integrate with Popular Apps
+### Seamlessly Integrate with Your Favorite Tools
 
-Use Lemonade with your preferred OpenAI-compatible apps!
+Lemonade is compatible with numerous OpenAI-compatible applications.  Get started today with your favorite LLM tools:
 
 <p align="center">
   <a href="https://lemonade-server.ai/docs/server/apps/open-webui/" title="Open WebUI" target="_blank"><img src="https://raw.githubusercontent.com/lemonade-sdk/assets/refs/heads/main/partner_logos/openwebui.jpg" alt="Open WebUI" width="60" /></a>&nbsp;&nbsp;<a href="https://lemonade-server.ai/docs/server/apps/continue/" title="Continue" target="_blank"><img src="https://raw.githubusercontent.com/lemonade-sdk/assets/refs/heads/main/partner_logos/continue_dev.png" alt="Continue" width="60" /></a>&nbsp;&nbsp;<a href="https://github.com/amd/gaia" title="Gaia" target="_blank"><img src="https://raw.githubusercontent.com/lemonade-sdk/assets/refs/heads/main/partner_logos/gaia.ico" alt="Gaia" width="60" /></a>&nbsp;&nbsp;<a href="https://lemonade-server.ai/docs/server/apps/anythingLLM/" title="AnythingLLM" target="_blank"><img src="https://raw.githubusercontent.com/lemonade-sdk/assets/refs/heads/main/partner_logos/anything_llm.png" alt="AnythingLLM" width="60" /></a>&nbsp;&nbsp;<a href="https://lemonade-server.ai/docs/server/apps/ai-dev-gallery/" title="AI Dev Gallery" target="_blank"><img src="https://raw.githubusercontent.com/lemonade-sdk/assets/refs/heads/main/partner_logos/ai_dev_gallery.webp" alt="AI Dev Gallery" width="60" /></a>&nbsp;&nbsp;<a href="https://lemonade-server.ai/docs/server/apps/lm-eval/" title="LM-Eval" target="_blank"><img src="https://raw.githubusercontent.com/lemonade-sdk/assets/refs/heads/main/partner_logos/lm_eval.png" alt="LM-Eval" width="60" /></a>&nbsp;&nbsp;<a href="https://lemonade-server.ai/docs/server/apps/codeGPT/" title="CodeGPT" target="_blank"><img src="https://raw.githubusercontent.com/lemonade-sdk/assets/refs/heads/main/partner_logos/codegpt.jpg" alt="CodeGPT" width="60" /></a>&nbsp;&nbsp;<a href="https://github.com/lemonade-sdk/lemonade/blob/main/docs/server/apps/ai-toolkit.md" title="AI Toolkit" target="_blank"><img src="https://raw.githubusercontent.com/lemonade-sdk/assets/refs/heads/main/partner_logos/ai_toolkit.png" alt="AI Toolkit" width="60" /></a>
@@ -58,23 +65,25 @@ Use Lemonade with your preferred OpenAI-compatible apps!
 > [!TIP]
 > Want your app featured here? Let's do it! Shoot us a message on [Discord](https://discord.gg/5xXzkMu8Zk), [create an issue](https://github.com/lemonade-sdk/lemonade/issues), or [email](lemonade@amd.com).
 
-## Using the CLI
+## Command Line Interface (CLI)
 
-To get started with the CLI:
+Quickly run and manage your LLMs using the Lemonade CLI.
 
-```
+To run and chat with Gemma 3:
+
+```bash
 lemonade-server run Gemma-3-4b-it-GGUF
 ```
 
-To install models before running:
+To install models ahead of time, use the `pull` command:
 
-```
+```bash
 lemonade-server pull Gemma-3-4b-it-GGUF
 ```
 
-See all available models:
+To check all models available, use the `list` command:
 
-```
+```bash
 lemonade-server list
 ```
 
@@ -84,9 +93,9 @@ lemonade-server list
 
 ## Model Library
 
-Lemonade supports GGUF and ONNX models.  Detailed information is available in the [Supported Configuration](#supported-configurations) section. Find all built-in models [here](https://lemonade-server.ai/docs/server/server_models/).
+Lemonade supports both GGUF and ONNX models, offering flexibility in your model selection. Find out more details in the [Supported Configuration](#supported-configurations) section. Browse the list of built-in models [here](https://lemonade-server.ai/docs/server/server_models/).
 
-Use the [Model Manager](http://localhost:8000/#model-management) (requires server to be running) to import custom GGUF and ONNX models from Hugging Face.
+Easily import custom GGUF and ONNX models from Hugging Face using our [Model Manager](http://localhost:8000/#model-management) (requires server to be running).
 
 <p align="center">
   <img src="https://github.com/lemonade-sdk/assets/blob/main/docs/model_manager.png?raw=true" alt="Model Manager" width="650" />
@@ -94,7 +103,7 @@ Use the [Model Manager](http://localhost:8000/#model-management) (requires serve
 
 ## Supported Configurations
 
-Lemonade offers various configuration options, easily changeable at runtime.  Learn more [here](./docs/README.md#software-and-hardware-overview).
+Lemonade is designed to work with a wide range of configurations, enabling you to switch between them at runtime easily. Learn more about it [here](./docs/README.md#software-and-hardware-overview).
 
 | Hardware | Engine: OGA | Engine: llamacpp | Engine: HF | Windows | Linux |
 |----------|-------------|------------------|------------|---------|-------|
@@ -137,13 +146,8 @@ Lemonade offers various configuration options, easily changeable at runtime.  Le
 
 ## Integrate with Your Application
 
-Use OpenAI-compatible client libraries by setting the base URL to `http://localhost:8000/api/v1`.
+Seamlessly integrate Lemonade Server into your application using any OpenAI-compatible client library, configured to use `http://localhost:8000/api/v1` as the base URL.  Here's how in Python:
 
-| Python | C++ | Java | C# | Node.js | Go | Ruby | Rust | PHP |
-|--------|-----|------|----|---------|----|-------|------|-----|
-| [openai-python](https://github.com/openai/openai-python) | [openai-cpp](https://github.com/olrea/openai-cpp) | [openai-java](https://github.com/openai/openai-java) | [openai-dotnet](https://github.com/openai/openai-dotnet) | [openai-node](https://github.com/openai/openai-node) | [go-openai](https://github.com/sashabaranov/go-openai) | [ruby-openai](https://github.com/alexrudall/ruby-openai) | [async-openai](https://github.com/64bit/async-openai) | [openai-php](https://github.com/openai-php/client) |
-
-### Python Client Example
 ```python
 from openai import OpenAI
 
@@ -165,35 +169,51 @@ completion = client.chat.completions.create(
 print(completion.choices[0].message.content)
 ```
 
-For detailed instructions, see the [Integration Guide](./docs/server/server_integration.md).
+Find detailed integration instructions in the [Integration Guide](./docs/server/server_integration.md).
 
-## Beyond an LLM Server
+## Beyond the Server: The Lemonade SDK
 
-The [Lemonade SDK](./docs/README.md) provides:
+The Lemonade SDK goes beyond a simple LLM server, offering these key components:
 
-*   🐍 **[Lemonade API](./docs/lemonade_api.md)**: A Python API for seamless LLM integration.
-*   🖥️ **[Lemonade CLI](./docs/dev_cli/README.md)**: Use the CLI to test LLMs, benchmark performance, and profile memory usage.
+*   🐍 **[Lemonade API](./docs/lemonade_api.md)**: A high-level Python API for direct integration of Lemonade LLMs into Python applications.
+*   🖥️ **[Lemonade CLI](./docs/dev_cli/README.md)**:  The `lemonade` CLI allows you to test, benchmark, and profile LLMs (ONNX, GGUF, SafeTensors) to characterize your models on your hardware.
 
-## Frequently Asked Questions
+## Frequently Asked Questions (FAQ)
 
-Find answers to your questions in our [FAQ Guide](./docs/faq.md).
+Find answers to common questions in our [FAQ Guide](./docs/faq.md).
 
-## Contribute
+## Contributing
 
-We welcome contributions! Review our [contribution guide](./docs/contribute.md) and find beginner-friendly issues tagged with "Good First Issue."
+We welcome contributions!  Please review our [contribution guide](./docs/contribute.md) to get started.
+
+Find beginner-friendly issues tagged "Good First Issue" to start contributing:
 
 <a href="https://github.com/lemonade-sdk/lemonade/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">
   <img src="https://img.shields.io/badge/🍋Lemonade-Good%20First%20Issue-yellowgreen?colorA=38b000&colorB=cccccc" alt="Good First Issue" />
 </a>
 
-## Maintainers
+## Project Maintainers
 
-This project is sponsored by AMD and maintained by @danielholanda, @jeremyfowers, @ramkrishna, and @vgodsoe. Reach out via [issue](https://github.com/lemonade-sdk/lemonade/issues), email (lemonade@amd.com), or Discord.
+Lemonade is proudly sponsored by AMD and maintained by @danielholanda @jeremyfowers @ramkrishna @vgodsoe.  Contact us by:
+
+*   Filing an [issue](https://github.com/lemonade-sdk/lemonade/issues)
+*   Emailing [lemonade@amd.com](mailto:lemonade@amd.com)
+*   Joining our [Discord](https://discord.gg/5xXzkMu8Zk)
 
 ## License and Attribution
 
-*   Built with Python for the open source community.
-*   Uses tools from ggml/llama.cpp, OnnxRuntime GenAI, Hugging Face Hub, OpenAI API, and more.
-*   Accelerated by mentorship from the OCV Catalyst program.
+This project is:
+
+*   [Built with Python](https://www.amd.com/en/developer/resources/technical-articles/2025/rethinking-local-ai-lemonade-servers-python-advantage.html) for the open-source community.
+*   Powered by great tools from:
+    *   [ggml/llama.cpp](https://github.com/ggml-org/llama.cpp)
+    *   [OnnxRuntime GenAI](https://github.com/microsoft/onnxruntime-genai)
+    *   [Hugging Face Hub](https://github.com/huggingface/huggingface_hub)
+    *   [OpenAI API](https://github.com/openai/openai-python)
+    *   and more...
+*   Accelerated by the OCV Catalyst program.
 *   Licensed under the [Apache 2.0 License](https://github.com/lemonade-sdk/lemonade/blob/main/LICENSE).
-    *   Portions of the project are licensed as described in [NOTICE.md](./NOTICE.md).
+    *   Parts of the project are licensed as described in [NOTICE.md](./NOTICE.md).
+
+<!--This file was originally licensed under Apache 2.0. It has been modified.
+Modifications Copyright (c) 2025 AMD-->

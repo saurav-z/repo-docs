@@ -19,67 +19,68 @@
 
 </div>
 
-## Tracecat: Automate Security and IT Workflows with Open Source
+## Tracecat: Automate Security & IT Workflows with Open Source Power
 
-Tracecat is a modern, open-source platform that empowers security and IT engineers to automate their workflows with ease.  [Explore the Tracecat GitHub repository](https://github.com/TracecatHQ/tracecat).
+Tracecat is a modern, open-source platform designed to streamline security and IT response engineering, offering a powerful way to automate your workflows.  [Explore Tracecat on GitHub](https://github.com/TracecatHQ/tracecat).
 
 **Key Features:**
 
-*   **YAML-Based Templates:** Define integrations and workflows using simple, human-readable YAML templates.
-*   **No-Code UI:** Build and manage workflows through an intuitive, no-code user interface.
-*   **Built-in Lookup Tables & Case Management:** Streamline investigations and incident response with built-in features.
-*   **Scalable & Reliable Orchestration:** Powered by Temporal for robust and scalable workflow execution.
-*   **Open Cyber Security Schema (OCSF) Alignment:** Templates leverage OCSF for standardized data representation.
+*   **YAML-Based Templates:** Define integrations and workflows with simple, YAML-based templates for easy configuration.
+*   **No-Code UI:** Leverage a user-friendly, no-code UI for intuitive workflow creation and management.
+*   **Built-in Lookup Tables & Case Management:**  Enhance investigations and incident response with integrated lookup tables and case management capabilities.
+*   **Scalable Orchestration:** Powered by Temporal for reliable, scalable, and resilient workflow execution.
+*   **Open Cyber Security Schema (OCSF) Alignment:** Standardize data and improve interoperability through alignment with the OCSF ontology.
 
 ![Tracecat workflow](/img/workflow.png)
 
 ## Getting Started
 
-> [!IMPORTANT]
-> Tracecat is in active development. Expect breaking changes with releases. Review the release [changelog](https://github.com/TracecatHQ/tracecat/releases) before updating.
+Tracecat is in active development, and breaking changes may occur with releases. Always review the [changelog](https://github.com/TracecatHQ/tracecat/releases) before updating.
 
-### Run Tracecat Locally
+### Run Locally
 
-Deploy a local Tracecat stack using Docker Compose.  Detailed instructions are available [here](https://docs.tracecat.com/self-hosting/deployment-options/docker-compose).
+1.  **Docker Compose:** Deploy a local Tracecat stack quickly using Docker Compose. Detailed instructions are available [here](https://docs.tracecat.com/self-hosting/deployment-options/docker-compose).
 
-### Run Tracecat on AWS Fargate (Advanced)
+### Run on Cloud Platforms
 
-Deploy a production-ready Tracecat stack on AWS Fargate using Terraform.  See full instructions [here](https://docs.tracecat.com/self-hosting/deployment-options/aws-ecs).
+1.  **AWS Fargate (Advanced):** Deploy a production-ready Tracecat stack on AWS Fargate using Terraform.  Instructions can be found [here](https://docs.tracecat.com/self-hosting/deployment-options/aws-ecs).
+2.  **Kubernetes (Coming Soon):**  Stay tuned for Kubernetes deployment options.
 
-### Run Tracecat on Kubernetes
-
-Coming soon!
-
-## Community
-
-Join the Tracecat community! Get your questions answered, share feedback, and propose new integrations on the [Tracecat Community Discord](https://discord.gg/H4XZwsYzY4).
-
-## Tracecat Registry: Integration and Response-as-Code Templates
+## Tracecat Registry: Integration Templates
 
 ![Tracecat Action template](img/action-template.svg)
 
-The Tracecat Registry is your source for pre-built integration and response-as-code templates.  These templates are organized using Tracecat's ontology of common capabilities (e.g., `list_alerts`, `list_cases`, `list_users`).  Template inputs are normalized to fit the [Open Cyber Security Schema (OCSF)](https://schema.ocsf.io/) whenever possible.
+The Tracecat Registry offers a collection of integration and response-as-code templates, organized by common capabilities for streamlined security and IT operations.
 
-**Examples:**
+**Key Features:**
 
-*   Explore use cases and ideas in our [Tracecat Registry documentation](https://docs.tracecat.com/tracecat-registry/).
-*   Browse existing open-source templates in our [repository](https://github.com/TracecatHQ/tracecat/tree/main/packages/tracecat-registry/tracecat_registry/templates).
+*   **Action-Oriented Templates:**  Templates are organized around a core set of action capabilities (e.g., `list_alerts`, `list_cases`).
+*   **OCSF Data Alignment:** Input parameters are normalized to the Open Cyber Security Schema (OCSF) ontology where possible for improved data standardization.
+
+**Explore the Registry:**
+
+*   **Use Cases and Ideas:** Visit our documentation for use cases and inspiration.
+*   **Open Source Templates:**  Explore existing open-source templates within our [GitHub repo](https://github.com/TracecatHQ/tracecat/tree/main/packages/tracecat-registry/tracecat_registry/templates).
 
 ## Open Source vs. Enterprise
 
-This repository is available under the AGPL-3.0 license, excluding the `ee` directory which contains paid enterprise features. The Enterprise Edition provides advanced functionality, and requires a Tracecat Enterprise license.
+This repository is licensed under the AGPL-3.0 license (excluding the `ee` directory, which contains paid enterprise features).
 
-For information on Tracecat's Enterprise self-hosted and managed Cloud offerings, visit [our website](https://tracecat.com) or [book a meeting](https://cal.com/team/tracecat).
+The Enterprise Edition provides advanced features, developed with specific R&D investments. You can enable the Enterprise Edition directly within the platform's settings.
+
+Interested in Tracecat's Enterprise self-hosted or managed Cloud offering? Visit [tracecat.com](https://tracecat.com) or [book a meeting](https://cal.com/team/tracecat).
 
 ## Security
 
-Tracecat prioritizes security with features like SSO, audit logs, and IaC deployments (Terraform, Kubernetes/Helm) that are always free and available.  We are working on a comprehensive security document; for immediate security inquiries, reach out on [Discord](https://discord.gg/H4XZwsYzY4).
+Tracecat prioritizes security with features like SSO, audit logs, and Infrastructure-as-Code (IaaC) deployments (Terraform, Kubernetes/Helm), all available for free.  We're actively developing a comprehensive threat model, security features, and hardening recommendations. For immediate security-related questions, please connect with us on [Discord](https://discord.gg/H4XZwsYzY4).
 
-Report security issues to [security@tracecat.com](mailto:founders+security@tracecat.com) with "tracecat" in the subject line.
+Report any security issues to [security@tracecat.com](mailto:founders+security@tracecat.com), including `tracecat` in the subject line.
 
-## Contributors
+## Community & Contributing
 
-We extend our sincere gratitude to all our contributors for their invaluable contributions of code, integrations, and support.  Open source thrives because of your dedication. ❤️
+Join the Tracecat community!  Share questions, feedback, and integration ideas on the [Tracecat Community Discord](https://discord.gg/H4XZwsYzY4).
+
+We appreciate our amazing contributors! ❤️  Thank you for your code, integrations, and support.
 
 <a href="https://github.com/TracecatHQ/tracecat/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=TracecatHQ/tracecat" />

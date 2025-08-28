@@ -4,7 +4,7 @@
   </a>
 
 <h1 align="center">
-  <img src="https://statics.memtensor.com.cn/logo/memos_color_m.png" alt="MemOS Logo" width="50"/> MemOS 1.0: Stellar - The Future of LLM Memory <img src="https://img.shields.io/badge/status-Preview-blue" alt="Preview Badge"/>
+  <img src="https://statics.memtensor.com.cn/logo/memos_color_m.png" alt="MemOS Logo" width="50"/> MemOS 1.0: Stellar - The AI Operating System for Large Language Models  <img src="https://img.shields.io/badge/status-Preview-blue" alt="Preview Badge"/>
 </h1>
 
   <p>
@@ -47,45 +47,40 @@
 
 ## MemOS: Revolutionizing LLMs with Long-Term Memory
 
-MemOS is a groundbreaking operating system designed to empower Large Language Models (LLMs) with persistent and efficient memory capabilities, enabling more intelligent and contextually aware interactions.  Visit the [original repository on GitHub](https://github.com/MemTensor/MemOS) to learn more and contribute.
+MemOS empowers Large Language Models with long-term memory capabilities, enabling more context-aware, consistent, and personalized interactions.  Visit the [MemOS GitHub Repository](https://github.com/MemTensor/MemOS) to explore the source code and contribute!
 
-## Key Features
+### Key Features
 
-*   **Memory-Augmented Generation (MAG):** A unified API for seamless integration of memory operations, enhancing LLMs with contextual memory retrieval for superior chat and reasoning.
-*   **Modular Memory Architecture (MemCube):** A flexible and extensible architecture that allows for easy management and integration of various memory types.
-*   **Multiple Memory Types:**
-    *   **Textual Memory:** Efficient storage and retrieval of both structured and unstructured text data.
-    *   **Activation Memory:** KVCacheMemory implementation to accelerate LLM inference and context reuse.
-    *   **Parametric Memory:** Storage for model adaptation parameters like LoRA weights.
-*   **Extensibility:** Customizable memory modules, data sources, and LLM integrations to tailor MemOS to your specific needs.
+*   **🧠 Memory-Augmented Generation (MAG):** Unified API for seamless memory integration, enhancing LLMs with contextual retrieval.
+*   **📦 Modular Memory Architecture (MemCube):** Flexible and extensible architecture for easy integration of various memory types.
+*   **💾 Diverse Memory Types:**
+    *   Textual Memory for storing and retrieving knowledge.
+    *   Activation Memory (KVCacheMemory) for fast LLM inference.
+    *   Parametric Memory for storing model adaptation parameters (e.g., LoRA weights).
+*   **🔌 Extensible Design:** Easily extendable with custom modules, data sources, and LLM integrations.
 
-## Performance Benchmarks
+### 📈 Performance Benchmarks
 
-MemOS demonstrates significant performance improvements over baseline memory solutions across several reasoning tasks.
+MemOS significantly improves performance over baseline memory solutions.
 
-| Model           | Avg. Score | Multi-Hop | Open Domain | Single-Hop | Temporal Reasoning |
-| --------------- | ---------- | --------- | ----------- | ---------- | ------------------ |
-| **OpenAI**      | 0.5275     | 0.6028    | 0.3299      | 0.6183     | 0.2825             |
-| **MemOS**       | **0.7331** | **0.6430** | **0.5521**  | **0.7844** | **0.7321**         |
-| **Improvement** | **+38.98%** | **+6.67%** | **+67.35%** | **+26.86%** | **+159.15%**        |
+| Model       | Avg. Score | Multi-Hop | Open Domain | Single-Hop | Temporal Reasoning |
+|-------------|------------|-----------|-------------|------------|---------------------|
+| **OpenAI**  | 0.5275     | 0.6028    | 0.3299      | 0.6183     | 0.2825              |
+| **MemOS**   | **0.7331** | **0.6430** | **0.5521**   | **0.7844** | **0.7321**          |
+| **Improvement** | **+38.98%** | **+6.67%** | **+67.35%** | **+26.86%** | **+159.15%**       |
 
 > 💡 **Temporal reasoning accuracy improved by 159% compared to the OpenAI baseline.**
 
-### End-to-End Evaluation on LOCOMO
-
-> [!NOTE]
-> Comparison of LLM Judge Scores across five major tasks in the LOCOMO benchmark. Each bar shows the mean evaluation score judged by LLMs for a given method-task pair, with standard deviation as error bars. MemOS-0630 consistently outperforms baseline methods (LangMem, Zep, OpenAI, Mem0) across all task types, especially in multi-hop and temporal reasoning scenarios.
+### LOCOMO End-to-End Evaluation
 
 <img src="https://statics.memtensor.com.cn/memos/score_all_end2end.jpg" alt="END2END SCORE">
+*MemOS consistently outperforms baseline methods across all task types, particularly in multi-hop and temporal reasoning.*
 
-## Getting Started
+## 🚀 Getting Started
 
-Quick examples showcasing the core functionality of MemOS.
+Demonstrates the creation, loading, access, and saving of a `MemCube` and the usage of `MOS` (Memory Operating System).
 
-### Using MemCube
-
-Here's how to create and manage a `MemCube`:
-
+**Example: MemCube**
 ```python
 from memos.mem_cube.general import GeneralMemCube
 
@@ -104,14 +99,11 @@ for item in mem_cube.act_mem.get_all():
 # Save the MemCube to a new directory
 mem_cube.dump("tmp/mem_cube")
 ```
-
-### Using the Memory Operating System (MOS)
-
-The MOS layer manages multiple MemCubes and provides a unified API.
-
+**Example: MOS**
 ```python
 from memos.configs.mem_os import MOSConfig
 from memos.mem_os.main import MOS
+
 
 # init MOS
 mos_config = MOSConfig.from_json_file("examples/data/config/simple_memos_config.json")
@@ -139,11 +131,11 @@ retrieved_memories = memory.search(query="What do you like?", user_id=user_id)
 print(f"text_memories: {retrieved_memories['text_mem']}")
 ```
 
-For more detailed examples, explore the [`examples`](./examples) directory.
+Explore the [`examples`](./examples) directory for more details.
 
-## Installation
+## 📦 Installation
 
-### Install with pip
+### Install using pip
 
 ```bash
 pip install MemoryOS
@@ -151,7 +143,7 @@ pip install MemoryOS
 
 ### Optional Dependencies
 
-Install feature-specific dependencies using the following:
+Install optional dependencies based on features needed:
 
 | Feature               | Package Name              |
 | --------------------- | ------------------------- |
@@ -159,7 +151,7 @@ Install feature-specific dependencies using the following:
 | Memory Reader         | `MemoryOS[mem-reader]`    |
 | Memory Scheduler      | `MemoryOS[mem-scheduler]` |
 
-Examples:
+Example installation commands:
 
 ```bash
 pip install MemoryOS[tree-mem]
@@ -172,39 +164,31 @@ pip install MemoryOS[tree-mem,mem-reader,mem-scheduler]
 
 #### Ollama Support
 
-Install Ollama CLI:
-
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
 #### Transformers Support
 
-Ensure PyTorch is installed (CUDA recommended for GPU acceleration):  [PyTorch](https://pytorch.org/get-started/locally/)
+Ensure PyTorch is installed, CUDA recommended.
 
 #### Download Examples
-
-Download example code, data, and configurations:
 
 ```bash
 memos download_examples
 ```
 
-## Community & Support
+## 💬 Community & Support
 
-Connect with the MemOS community:
-
-*   **GitHub Issues:** Report issues and request features: [GitHub Issues](https://github.com/MemTensor/MemOS/issues)
-*   **GitHub Pull Requests:** Contribute code improvements: [GitHub Pull Requests](https://github.com/MemTensor/MemOS/pulls)
-*   **GitHub Discussions:** Ask questions and share ideas: [GitHub Discussions](https://github.com/MemTensor/MemOS/discussions)
-*   **Discord:** Join our Discord Server: [Discord Server](https://discord.gg/Txbx3gebZR)
-*   **WeChat:** Scan the QR code:
+*   **GitHub Issues:** Report bugs and request features [here](https://github.com/MemTensor/MemOS/issues).
+*   **GitHub Pull Requests:** Contribute code [here](https://github.com/MemTensor/MemOS/pulls).
+*   **GitHub Discussions:** Share ideas [here](https://github.com/MemTensor/MemOS/discussions).
+*   **Discord:** Join our [Discord Server](https://discord.gg/Txbx3gebZR).
+*   **WeChat:** Scan the QR code to join our WeChat group.
 
 <img src="https://statics.memtensor.com.cn/memos/qr-code.png" alt="QR Code" width="600">
 
-## Citation
-
-Cite MemOS in your research:
+## 📜 Citation
 
 ```bibtex
 @article{li2025memos_long,
@@ -237,24 +221,22 @@ url = {https://global-sci.com/article/91443/memory3-language-modeling-with-expli
 }
 ```
 
-## Contributing
+## 🙌 Contributing
 
-We welcome contributions! See the [contribution guidelines](https://memos-docs.openmem.net/contribution/overview).
+See the [contribution guidelines](https://memos-docs.openmem.net/contribution/overview) to get started.
 
-## License
+## 📄 License
 
 MemOS is licensed under the [Apache 2.0 License](./LICENSE).
 
-## News
+## 📰 News
 
-Stay updated with MemOS developments:
-
-*   **2025-08-07** - 🎉 *MemOS v1.0.0 (MemCube Release)*: First MemCube with word game demo, LongMemEval evaluation, BochaAISearchRetriever integration, NebulaGraph support, enhanced search capabilities, and official Playground launch.
-*   **2025-07-29** – 🎉 *MemOS v0.2.2 (Nebula Update)*: Internet search+Nebula DB integration, refactored memory scheduler, KV Cache stress tests, MemCube Cookbook release (CN/EN), and 4b/1.7b/0.6b memory ops models.
-*   **2025-07-21** – 🎉 *MemOS v0.2.1 (Neo Release)*: Lightweight Neo version with plaintext+KV Cache functionality, Docker/multi-tenant support, MCP expansion, and new Cookbook/Mud game examples.
+*   **2025-08-07** - 🎉 *MemOS v1.0.0 (MemCube Release)*: Features, demo, integration, and Playground launch.
+*   **2025-07-29** – 🎉 *MemOS v0.2.2 (Nebula Update)*: Search integration, scheduler refactor, and more.
+*   **2025-07-21** – 🎉 *MemOS v0.2.1 (Neo Release)*: Lightweight Neo version and multi-tenant support.
 *   **2025-07-11** – 🎉 *MemOS v0.2.0 (Cross-Platform)*: Added doc search/bilingual UI, MemReader-4B (local deploy), full Win/Mac/Linux support, and playground end-to-end connection.
-*   **2025-07-07** – 🎉 *MemOS 1.0 (Stellar) Preview Release*: A SOTA Memory OS for LLMs is now open-sourced.
-*   **2025-07-04** – 🎉 *MemOS Paper Released*: [MemOS: A Memory OS for AI System](https://arxiv.org/abs/2507.03724) was published on arXiv.
-*   **2025-05-28** – 🎉 *Short Paper Uploaded*: [MemOS: An Operating System for Memory-Augmented Generation (MAG) in Large Language Models](https://arxiv.org/abs/2505.22101) was published on arXiv.
-*   **2024-07-04** – 🎉 *Memory3 Model Released at WAIC 2024*: The new memory-layered architecture model was unveiled at the 2024 World Artificial Intelligence Conference.
+*   **2025-07-07** – 🎉 *MemOS 1.0 (Stellar) Preview Release*: SOTA Memory OS for LLMs open-sourced.
+*   **2025-07-04** – 🎉 *MemOS Paper Released*: [MemOS: A Memory OS for AI System](https://arxiv.org/abs/2507.03724) published on arXiv.
+*   **2025-05-28** – 🎉 *Short Paper Uploaded*: [MemOS: An Operating System for Memory-Augmented Generation (MAG) in Large Language Models](https://arxiv.org/abs/2505.22101) published on arXiv.
+*   **2024-07-04** – 🎉 *Memory3 Model Released at WAIC 2024*: New memory-layered architecture model unveiled.
 *   **2024-07-01** – 🎉 *Memory3 Paper Released*: [Memory3: Language Modeling with Explicit Memory](https://arxiv.org/abs/2407.01178) introduces the new approach to structured memory in LLMs.
