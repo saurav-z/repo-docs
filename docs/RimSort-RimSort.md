@@ -1,60 +1,39 @@
+# RimSort: The Ultimate Mod Manager for RimWorld
+
+**Tired of mod conflicts and struggling to manage your RimWorld mods?** RimSort is a free, open-source, and multi-platform mod manager designed to streamline your RimWorld modding experience.
+
 <p align="center">
-    <h1 align="center">RimSort: The Ultimate Mod Manager for RimWorld</h1>
-    <p align="center">Tired of wrestling with your RimWorld mod list? **RimSort is a free, open-source, multi-platform mod manager designed to streamline your RimWorld experience.**
-    <br>
-    Built with reliability and community input at its core, RimSort empowers you to effortlessly manage your mods across Windows, macOS, and Linux.
-    </p>
-    <p align="center"><strong><a href="https://github.com/RimSort/RimSort/releases">Download RimSort</a> | <a href="https://rimsort.github.io/RimSort/">Wiki</a> | <a href="https://discord.gg/aV7g69JmR2">Discord</a></strong> </p>
-    <br><br><br>
+    <img src="./docs/rimsort_preview.png" alt="RimSort Preview" />
 </p>
 
-![RimSort Preview](./docs/rimsort_preview.png)
+**Key Features:**
 
-## Key Features of RimSort
+*   **Cross-Platform Compatibility:**  Works seamlessly on Windows, macOS, and Linux.
+*   **Reliable & Community-Driven:** Built from the ground up for stability and actively maintained by the community.
+*   **User-Friendly Interface:**  Designed for ease of use, making mod management a breeze.
+*   **Open Source:**  Contribute to the project and help improve RimSort.
 
-RimSort offers a comprehensive suite of features to enhance your RimWorld modding experience:
+## Installation
 
-*   **Multi-Platform Support:** Runs seamlessly on Windows, macOS, and Linux.
-*   **User-Friendly Interface:** Designed for ease of use, making mod management a breeze.
-*   **Community-Driven:** Built and improved with the help of the RimWorld community.
-*   **Reliable Performance:** Engineered for stability and dependable mod loading.
-*   **Open Source:**  Contribute to the project and tailor it to your needs.
+Get started with RimSort by downloading the latest release from the [Releases](https://github.com/RimSort/RimSort/releases) page. Choose the appropriate package for your operating system.
 
-## Getting Started with RimSort
+*   **Windows & Linux:** Unzip the downloaded file and run the `RimSort` executable.
+*   **macOS:** Select the correct release based on your CPU (Intel or Apple Silicon). You might need to follow specific instructions found on the [wiki](https://rimsort.github.io/RimSort/user-guide/downloading-and-installing#macos) to bypass Gatekeeper.
 
-Ready to take control of your RimWorld mods? Here's how to install RimSort:
+For detailed installation instructions, refer to the [wiki](https://rimsort.github.io/RimSort/).
 
-1.  **Download:** Visit the [RimSort Releases](https://github.com/RimSort/RimSort/releases) page and download the latest release for your operating system.
-2.  **Installation:**
-    *   **Windows & Linux:** Unzip the downloaded file and run the `RimSort` executable.
-    *   **macOS:** Download the appropriate release for your CPU (i386 for Intel, ARM for Apple Silicon).  You may need to follow the [special macOS instructions](https://rimsort.github.io/RimSort/user-guide/downloading-and-installing#macos) to bypass Gatekeeper errors.
-3.  **Detailed Instructions:** For more in-depth installation guidance, refer to the [RimSort Wiki](https://rimsort.github.io/RimSort/).
+## Contributing & Getting Help
 
-## Contribute to RimSort
+We encourage contributions from the community!
 
-We welcome contributions from the community!
+*   **Report Bugs & Suggest Features:**  Submit issues and feature requests in the [Issues](https://github.com/RimSort/RimSort/issues) section.
+*   **Contribute to Development:**  Learn how to build RimSort and submit pull requests by consulting the [wiki](https://rimsort.github.io/RimSort/).
+*   **Translation:** Help translate RimSort into your language by following the [Translation Guidelines](https://rimsort.github.io/RimSort/development-guide/translation-guidelines).
 
-*   **Report Bugs and Suggest Features:**  Create an issue in the [Issues](https://github.com/RimSort/RimSort/issues) section.
-*   **Build RimSort:**  Follow the instructions in the [RimSort Wiki](https://rimsort.github.io/RimSort/) to build the application yourself.
-*   **Translate RimSort:** Help us make RimSort available in your language by following our [Translation Guidelines](https://rimsort.github.io/RimSort/development-guide/translation-guidelines).
+## FAQ & Support
 
-## FAQ and Troubleshooting
+Before reporting an issue, please consult the comprehensive [wiki](https://rimsort.github.io/RimSort/) for solutions.
 
-Before reporting an issue, please consult the [RimSort Wiki](https://rimsort.github.io/RimSort/) for potential solutions.
+[![Join us on Discord](https://github-production-user-asset-6210df.s3.amazonaws.com/2766946/248529301-486f4f8c-fed5-4fe1-832f-6461b7ce3a55.png)](https://discord.gg/aV7g69JmR2)
 
-[![Join us on Discord](https://github-production-user-asset-6210df.s3.amazonaws.com/2766946/248529301-486f4f8c-fed5-4fe1-832f-6461b7ce3a55.png)][Discord]
-
-**Find the original repository here: [RimSort on GitHub](https://github.com/RimSort/RimSort)**
-```
-
-Key improvements and SEO considerations:
-
-*   **Compelling Hook:** Starts with a problem and offers a solution, immediately grabbing the reader's attention.
-*   **Keyword Optimization:** Includes relevant keywords like "RimWorld," "mod manager," "open source," and platform names.
-*   **Clear Headings:** Uses semantic headings (H1, H2) for better organization and SEO.
-*   **Bulleted Key Features:**  Highlights key selling points in an easily digestible format.
-*   **Strong Call to Action:** Encourages downloads and community participation.
-*   **Internal and External Linking:** Uses links throughout to improve navigation and SEO.
-*   **Concise Language:**  Streamlines the text for readability.
-*   **SEO-friendly Title:** The title is clear, concise and includes the project name and a key benefit.
-*   **Includes the Original Repo Link:** Ensures proper attribution and directs users to the source.
+**[Back to the Repository](https://github.com/RimSort/RimSort)**

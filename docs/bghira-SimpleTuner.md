@@ -1,21 +1,31 @@
-# SimpleTuner: Simplify Your Image Generation Model Training 🚀
+# SimpleTuner: Effortless AI Model Training for Everyone 🚀
 
-**SimpleTuner** empowers you to easily train various image generation models, offering a straightforward approach for both beginners and experienced users. Check out the original repository [here](https://github.com/bghira/SimpleTuner).
+**SimpleTuner empowers you to easily train and fine-tune cutting-edge AI models, from Stable Diffusion to HiDream, with a focus on simplicity and accessibility.**
 
-> **Important:** No data is sent to third parties unless you explicitly enable features like `report_to`, `push_to_hub`, or webhooks, which require manual configuration.
+[View the original repository on GitHub](https://github.com/bghira/SimpleTuner)
+
+> ℹ️ **Privacy Focused:** SimpleTuner prioritizes your privacy. No data is shared with third parties unless you explicitly enable features like `report_to`, `push_to_hub`, or webhooks, which require manual configuration.
 
 ## Key Features
 
-*   **User-Friendly Design:** Prioritizes simplicity and ease of understanding.
-*   **Versatile:** Supports a wide range of image quantities, from small datasets to large collections.
-*   **Cutting-Edge:** Integrates proven and effective features.
-*   **Multi-GPU Training:** Accelerate your training process.
-*   **Advanced Techniques:** Includes token-wise dropout, aspect bucketing, and masked loss training.
-*   **Memory Optimization:** Features like caching and quantisation to reduce VRAM usage.
-*   **Model Support:** Compatible with HiDream, Flux.1, Wan Video, LTX Video, PixArt Sigma, NVLabs Sana, Stable Diffusion 3, Kwai Kolors, Lumina2, Cosmos2 Predict (Image), and Qwen-Image.
-*   **Integration with Hugging Face Hub:** Seamless model uploads and auto-generated model cards.
-*   **S3 Storage Support:** Train directly from S3-compatible storage providers.
-*   **Webhook Support:** Get real-time training updates to Discord.
+*   **Simplified Training:** Intuitive design with sensible defaults, reducing the need for complex configurations.
+*   **Versatile Compatibility:** Supports a wide range of image and video quantities, from small datasets to massive collections.
+*   **Cutting-Edge Models:** Integrates support for the latest and most effective AI models, including:
+    *   HiDream
+    *   Flux.1
+    *   Wan 2.1 Video
+    *   LTX Video
+    *   PixArt Sigma
+    *   NVLabs Sana
+    *   Stable Diffusion 3
+    *   Kwai Kolors
+    *   Lumina2
+    *   Cosmos2 Predict (Image)
+    *   Qwen-Image
+*   **Performance Optimization:** Features like aspect bucketing, caching, and memory-efficient training techniques (e.g., DeepSpeed integration, quantization) to maximize speed and minimize hardware requirements.
+*   **Flexible Training Options:** Supports LoRA, LyCORIS, full finetuning, ControlNet training, Mixture of Experts, and more.
+*   **Integration with Hugging Face Hub:** Seamless model uploading and automated model card generation for easy sharing.
+*   **Community Support:** Join our community on [Discord](https://discord.gg/CVzhX7ZA) (Terminus Research Group) for help and discussions.
 
 ## Table of Contents
 
@@ -23,18 +33,6 @@
 *   [Tutorial](#tutorial)
 *   [Features](#features)
 *   [Supported Models](#supported-models)
-    *   [HiDream](#hidream)
-    *   [Flux.1](#flux1)
-    *   [Wan Video](#wan-video)
-    *   [LTX Video](#ltx-video)
-    *   [PixArt Sigma](#pixart-sigma)
-    *   [NVLabs Sana](#nvlabs-sana)
-    *   [Stable Diffusion 3](#stable-diffusion-3)
-    *   [Kwai Kolors](#kwai-kolors)
-    *   [Lumina2](#lumina2)
-    *   [Cosmos2 Predict (Image)](#cosmos2-predict-image)
-    *   [Qwen-Image](#qwen-image)
-    *   [Legacy Stable Diffusion](#legacy-stable-diffusion-models)
 *   [Hardware Requirements](#hardware-requirements)
 *   [Toolkit](#toolkit)
 *   [Setup](#setup)
@@ -42,94 +40,53 @@
 
 ## Design Philosophy
 
-*   **Simplicity:** Focus on providing sensible defaults for easy use.
-*   **Versatility:** Built to handle diverse dataset sizes effectively.
-*   **Innovation:** Includes only proven, impactful features.
+*   **Simplicity:** Focus on good defaults for ease of use.
+*   **Versatility:** Handles datasets of varying sizes.
+*   **Cutting-Edge:** Integrates proven and effective features.
 
 ## Tutorial
 
-Refer to the [tutorial](/TUTORIAL.md) for detailed guidance, or use the [Quick Start](/documentation/QUICKSTART.md) guide for a fast setup.
+Start your training journey by exploring the [tutorial](/TUTORIAL.md), which provides vital information.
 
-For memory optimization, see the [DeepSpeed document](/documentation/DEEPSPEED.md).
-For distributed training, see [this guide](/documentation/DISTRIBUTED.md).
+*   **Quick Start:** For a rapid introduction, see the [Quick Start](/documentation/QUICKSTART.md) guide.
+*   **DeepSpeed:** Learn how to use 🤗Accelerate to configure Microsoft's DeepSpeed for optimizer state offload. ([DeepSpeed document](/documentation/DEEPSPEED.md))
+*   **Multi-node Training:** Optimize for multi-node training using the guide located [here](/documentation/DISTRIBUTED.md).
 
 ## Supported Models
 
-Provides extensive support for many models.
-
-*   **HiDream:** [See Features](#features)
-*   **Flux.1:** [See Features](#features)
-*   **Wan Video:** [See Features](#features)
-*   **LTX Video:** [See Features](#features)
-*   **PixArt Sigma:** [See Features](#features)
-*   **NVLabs Sana:** [See Features](#features)
-*   **Stable Diffusion 3:** [See Features](#features)
-*   **Kwai Kolors:** [See Features](#features)
-*   **Lumina2:** [See Features](#features)
-*   **Cosmos2 Predict (Image):** [See Features](#features)
-*   **Qwen-Image:** [See Features](#features)
-*   **Legacy Stable Diffusion:** [See Features](#features)
+*   [HiDream](#hidream)
+*   [Flux.1](#flux1)
+*   [Wan Video](#wan-video)
+*   [LTX Video](#ltx-video)
+*   [PixArt Sigma](#pixart-sigma)
+*   [NVLabs Sana](#nvlabs-sana)
+*   [Stable Diffusion 3](#stable-diffusion-3)
+*   [Kwai Kolors](#kwai-kolors)
+*   [Lumina2](#lumina2)
+*   [Cosmos2 Predict (Image)](#cosmos2-predict-image)
+*   [Qwen-Image](#qwen-image)
+*   [Legacy Stable Diffusion models](#legacy-stable-diffusion-models)
 
 ## Hardware Requirements
 
-General guidelines and model-specific requirements are listed.
+The hardware requirements vary depending on the model and training settings. See each model's section for details.
 
-### NVIDIA
-
-Generally, any 3080 or higher is a good starting point.
-
-### AMD
-
-LoRA and full-rank tuning are verified on a 7900 XTX 24GB and MI300X.  Performance may be lower due to the lack of `xformers`.
-
-### Apple
-
-LoRA and full-rank tuning are tested to work on an M3 Max with 128G memory.
-*   24GB or greater is recommended.
-*   Monitor Pytorch issues for MPS.
-
-### HiDream [dev, full]
-
-*   A100-80G (Full tune with DeepSpeed)
-*   A100-40G (LoRA, LoKr)
-*   3090 24G (LoRA, LoKr)
-
-### Flux.1 [dev, schnell]
-
-*   A100-80G (Full tune with DeepSpeed)
-*   A100-40G (LoRA, LoKr)
-*   3090 24G (LoRA, LoKr)
-*   4060 Ti 16G, 4070 Ti 16G, 3080 16G (int8, LoRA, LoKr)
-*   4070 Super 12G, 3080 10G, 3060 12GB (nf4, LoRA, LoKr)
-
-### Auraflow
-
-*   A100-80G (Full tune with DeepSpeed)
-*   A100-40G (LoRA, LoKr)
-*   3090 24G (LoRA, LoKr)
-*   4060 Ti 16G, 4070 Ti 16G, 3080 16G (int8, LoRA, LoKr)
-*   4070 Super 12G, 3080 10G, 3060 12GB (nf4, LoRA, LoKr)
-
-### SDXL, 1024px
-
-*   A100-80G (EMA, large batches, LoRA @ insane batch sizes)
-*   A6000-48G (EMA@768px, no EMA@1024px, LoRA @ high batch sizes)
-*   A100-40G (EMA@1024px, EMA@768px, EMA@512px, LoRA @ high batch sizes)
-*   4090-24G (EMA@1024px, batch size 1-4, LoRA @ medium-high batch sizes)
-*   4080-12G (LoRA @ low-medium batch sizes)
-
-### Stable Diffusion 2.x, 768px
-
-*   16G or better
+### General Notes
+*   **NVIDIA:** Generally, anything from a 3080 and up should work well.
+*   **AMD:** Supports LoRA and full-rank tuning (tested on 7900 XTX 24GB and MI300X). May use more memory due to the lack of `xformers`.
+*   **Apple:** Tested on M3 Max with 128GB memory. Requires 24GB+ due to lack of memory-efficient attention.
+*   See each model's section for more detailed requirements.
 
 ## Toolkit
 
-Learn about the SimpleTuner toolkit in the [toolkit documentation](/toolkit/README.md).
+For more information about the associated toolkit distributed with SimpleTuner, refer to [the toolkit documentation](/toolkit/README.md).
 
 ## Setup
 
-Follow the detailed setup instructions in the [installation documentation](/INSTALL.md).
+Detailed setup instructions are available in the [installation documentation](/INSTALL.md).
 
 ## Troubleshooting
 
-Enable debug logging by setting `export SIMPLETUNER_LOG_LEVEL=DEBUG` in your environment.  For performance analysis, use `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`. A comprehensive list of options is available in the [OPTIONS.md](/OPTIONS.md) file.
+Enable debug logs for more details by adding `export SIMPLETUNER_LOG_LEVEL=DEBUG` to your environment (`config/config.env`).
+For performance analysis, set `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`.
+Consult [OPTIONS.md](/OPTIONS.md) for a comprehensive list of available options.

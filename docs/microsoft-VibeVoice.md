@@ -6,6 +6,7 @@
 [![Technical Report](https://img.shields.io/badge/Technical-Report-red?logo=adobeacrobatreader)](https://arxiv.org/pdf/2508.19205)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/microsoft/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb)
 [![Live Playground](https://img.shields.io/badge/Live-Playground-green?logo=gradio)](https://aka.ms/VibeVoice-Demo)
+[![Colab](https://img.shields.io/badge/Run-Colab-orange?logo=googlecolab)](https://colab.research.google.com/github/microsoft/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb)
 
 </div>
 <!-- <div align="center">
@@ -30,12 +31,14 @@ The model can synthesize speech up to **90 minutes** long with up to **4 distinc
 
 ### 🔥 News
 
-- **[2025-08-26] 🎉 We Opensource the [VibeVoice-7B-Preview](https://huggingface.co/WestZhang/VibeVoice-Large-pt) model weights!**
+- **[2025-08-26] 🎉 We Open Source the [VibeVoice-7B-Preview](https://huggingface.co/WestZhang/VibeVoice-Large-pt) model weights!**
+- **[2025-08-28] 🎉 We provide a [Colab](https://colab.research.google.com/github/microsoft/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb) script for easy access to our model. Due to GPU memory limitations, only VibeVoice-1.5B is supported.**
 
 ### 📋 TODO
 
 - [ ] Merge models into official Hugging Face repository
 - [ ] Release example training code and documentation
+- [ ] VibePod:  End-to-end solution that creates podcasts from documents, webpages, or even a simple topic.
 
 ### 🎵 Demo Examples
 
@@ -83,7 +86,7 @@ https://github.com/user-attachments/assets/a357c4b6-9768-495c-a576-1618f6275727
 
 For more examples, see the [Project Page](https://microsoft.github.io/VibeVoice).
 
-Try your own samples at [Colab](https://colab.research.google.com/github/microsoft/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb) or [Demo](https://aka.ms/VibeVoice-Demo).
+Try it on [Colab](https://colab.research.google.com/github/microsoft/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb) or [Demo](https://aka.ms/VibeVoice-Demo).
 
 
 
@@ -123,6 +126,9 @@ We observed users may encounter occasional instability when synthesizing Chinese
 
 - Using English punctuation even for Chinese text, preferably only commas and periods.
 - Using the 7B model variant, which is considerably more stable.
+- If you found the generated voice speak too fast. Please try to chunk your text with multiple speaker turns with same speaker label.
+
+We'd like to thank [PsiPi](https://huggingface.co/PsiPi) for sharing an interesting way for emotion control. Detials can be found via [discussion12](https://huggingface.co/microsoft/VibeVoice-1.5B/discussions/12).
 
 ### Usage 1: Launch Gradio demo
 ```bash
@@ -155,7 +161,7 @@ python demo/inference_from_file.py --model_path WestZhang/VibeVoice-Large-pt --t
 Here are a few things we've noticed:
 *   If the voice prompt you use contains background music, the generated speech is more likely to have it as well. (The 7B model is quite stable and effective at this—give it a try on the demo!)
 *   If the voice prompt is clean (no BGM), but the input text includes introductory words or phrases like "Welcome to," "Hello," or "However," background music might still appear.
-*   Spekaer voice related, using "Alice" results in random BGM than others.
+*   Speaker voice related, using "Alice" results in random BGM than others.
 *   In other scenarios, the 7B model is more stable and has a lower probability of generating unexpected background music.
 
 In fact, we intentionally decided not to denoise our training data because we think it's an interesting feature for BGM to show up at just the right moment. You can think of it as a little easter egg we left for you.
@@ -169,8 +175,12 @@ In fact, we intentionally decided not to denoise our training data because we th
 #### Q5: Some Chinese pronunciation errors.
 **A:** The volume of Chinese data in our training set is significantly smaller than the English data. Additionally, certain special characters (e.g., Chinese quotation marks) may occasionally cause pronunciation issues.
 
+#### Q6: Instability of cross-lingual transfer.
+**A:** The model does exhibit strong cross-lingual transfer capabilities, including the preservation of accents, but its performance can be unstable. This is an emergent ability of the model that we have not specifically optimized. It's possible that a satisfactory result can be achieved through repeated sampling.
+
 ## Risks and limitations
 
+While efforts have been made to optimize it through various techniques, it may still produce outputs that are unexpected, biased, or inaccurate. VibeVoice inherits any biases, errors, or omissions produced by its base model (specifically, Qwen2.5 1.5b in this release).
 Potential for Deepfakes and Disinformation: High-quality synthetic speech can be misused to create convincing fake audio content for impersonation, fraud, or spreading disinformation. Users must ensure transcripts are reliable, check content accuracy, and avoid using generated content in misleading ways. Users are expected to use the generated content and to deploy the models in a lawful manner, in full compliance with all applicable laws and regulations in the relevant jurisdictions. It is best practice to disclose the use of AI when sharing AI-generated content.
 
 English and Chinese only: Transcripts in languages other than English or Chinese may result in unexpected audio outputs.

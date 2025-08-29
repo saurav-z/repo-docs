@@ -1,7 +1,8 @@
 <p align="center">
     <img src="https://github.com/user-attachments/assets/219f2dbc-37ed-4aea-a289-ba39cdbb335d" alt="Pydoll Logo" /> <br>
 </p>
-<h1 align="center">Pydoll: Automate the Web, Naturally</h1>
+
+<h1 align="center">Pydoll: Effortlessly Automate Your Web Browser</h1>
 
 <p align="center">
     <a href="https://github.com/autoscrape-labs/pydoll/stargazers"><img src="https://img.shields.io/github/stars/autoscrape-labs/pydoll?style=social"></a>
@@ -15,36 +16,37 @@
     <a href="https://deepwiki.com/autoscrape-labs/pydoll"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </p>
 
-
 <p align="center">
   📖 <a href="https://pydoll.tech/">Documentation</a> •
   🚀 <a href="#-getting-started">Getting Started</a> •
   ⚡ <a href="#-advanced-features">Advanced Features</a> •
   🤝 <a href="#-contributing">Contributing</a> •
   💖 <a href="#-support-my-work">Support My Work</a>
+  <br>
+  <a href="https://github.com/autoscrape-labs/pydoll">View the GitHub Repository</a>
 </p>
 
+**Pydoll simplifies web automation by connecting directly to the Chrome DevTools Protocol, enabling robust and human-like browser control.**  Forget webdriver headaches, and embrace a streamlined approach to web scraping, testing, and automation.
 
-## 🚀 Automate Web Interactions with Ease Using Pydoll
+**Key Features:**
 
-Tired of struggling with web automation?  **Pydoll simplifies web automation by connecting directly to the Chrome DevTools Protocol, offering a user-friendly and powerful alternative to traditional WebDriver-based approaches.**  Focus on your automation logic, not complex configurations.
+*   ✅ **Zero Webdriver Dependency:** Eliminate compatibility issues.
+*   🤖 **Human-Like Interaction Engine:** Bypass advanced CAPTCHAs like reCAPTCHA v3 and Turnstile.
+*   🚀 **Asynchronous Performance:** Handle multiple tasks concurrently for high-speed automation.
+*   🖱️ **Humanized Interactions:** Simulate realistic user behavior.
+*   ✨ **Simple Installation:** Get started automating quickly.
+*   🌐 **Remote Browser Control:** Connect to and control Chrome instances via WebSocket.
+*   🔍 **Enhanced DOM Navigation:** `get_children_elements()` and `get_siblings_elements()` for cleaner code.
+*   ⏳ **Element State Waiting:** `wait_until(...)` for robust element interactions.
+*   ⚙️ **Complete Customization:** Control hundreds of Chrome settings with `browser_preferences`.
+*   🔗 **Browser-Context HTTP Requests:**  Make requests using `tab.request` to seamlessly inherit browser session.
+*   ⬇️ **Simplified File Downloads:**  Use `tab.expect_download()` for reliable file handling.
 
-### Key Features:
+## What's New
 
-*   ✅ **Zero Webdriver Dependencies:**  Say goodbye to driver compatibility headaches.
-*   🤖 **Human-like Interaction:** Mimics real user behavior, including advanced CAPTCHA bypass.
-*   ⚡ **Asynchronous Performance:** Enables high-speed automation and concurrent tasks.
-*   🖱️ **Intuitive Interaction Engine:** Provides realistic clicking, navigation, and element interaction.
-*   ✨ **Simplicity:** Get started automating quickly with a straightforward installation process.
-*   🌐 **Remote Browser Control:** Connect to and control any Chrome instance via WebSocket.
+### Remote connections via WebSocket
 
-[Explore the Pydoll repository for more details.](https://github.com/autoscrape-labs/pydoll)
-
-## ✨ What's New
-
-### Remote Connections via WebSocket: Control any Chrome from anywhere!
-
-You can now connect to an already running browser remotely via its WebSocket address and use the full Pydoll API immediately.
+Control Chrome browsers remotely using WebSocket.
 
 ```python
 from pydoll.browser.chromium import Chrome
@@ -89,9 +91,13 @@ await element.wait_until(is_interactable=True, timeout=10)
 
 - Methods now public on `WebElement`:
   - `is_visible()`
+    - Checks that the element has a visible area (> 0), isn’t hidden by CSS and is in the viewport (after `scroll_into_view()` when needed). Useful pre-check before interactions.
   - `is_interactable()`
+    - “Click-ready” state: combines visibility, enabledness and pointer-event hit testing. Ideal for robust flows that avoid lost clicks.
   - `is_on_top()`
+    - Verifies the element is the top hit-test target at the intended click point, avoiding overlays.
   - `execute_script(script: str, return_by_value: bool = False)`
+    - Executes JavaScript in the element’s own context (where `this` is the element). Great for fine-tuning and quick inspections.
 
 ```python
 # Visually outline the element via JS
@@ -140,32 +146,14 @@ async def google_search(query: str):
 asyncio.run(google_search('pydoll python'))
 ```
 
-Okay, now let's see how we can extract data from a page, using the same previous example.
-Let's consider in the code below that we're already on the Pydoll page. We want to extract the following information:
-
-- Project description
-- Number of stars
-- Number of forks
-- Number of issues
-- Number of pull requests
-
-Let's get started! To get the project description, we'll use xpath queries. You can check the documentation on how to build your own queries.
+### Extracting Data
 
 ```python
 description = await (await tab.query(
     '//h2[contains(text(), "About")]/following-sibling::p',
     timeout=10,
 )).text
-```
 
-And that's it! Let's understand what this query does:
-
-1. `//h2[contains(text(), "About")]` - Selects the first `<h2>` that contains "About"
-2. `/following-sibling::p` - Selects the first `<p>` that comes after the `<h2>`
-
-Now let's get the rest of the data:
-
-```python
 number_of_stars = await (await tab.find(
     id='repo-stars-counter-star'
 )).text
@@ -188,15 +176,9 @@ data = {
     'number_of_pull_requests': number_of_pull_requests,
 }
 print(data)
-
 ```
 
-We managed to extract all the necessary data!
-
 ### Custom Configurations
-
-Sometimes we need more control over the browser. Pydoll offers a flexible way to do this. Let's see the example below:
-
 
 ```python
 from pydoll.browser import Chrome
@@ -219,12 +201,7 @@ async def custom_automation():
 asyncio.run(custom_automation())
 ```
 
-In this example, we're configuring the browser to use a proxy and a 1920x1080 window, in addition to a custom path for the Chrome binary, in case your installation location is different from the common defaults.
-
-
 ## ⚡ Advanced Features
-
-Pydoll provides powerful features for advanced users.
 
 ### Advanced Element Search
 
@@ -432,26 +409,19 @@ options.add_argument('--disable-dev-shm-usage')
 
 ## 📚 Documentation
 
-For complete documentation, detailed examples and deep dives into all Pydoll functionalities, visit our [official documentation](https://pydoll.tech/).
-
-The documentation includes:
-- **Getting Started Guide** - Step-by-step tutorials
-- **API Reference** - Complete method documentation
-- **Advanced Techniques** - Network interception, event handling, performance optimization
-
->The chinese version of this README is [here](README_zh.md).
+Explore the complete [official documentation](https://pydoll.tech/) for in-depth guides, API references, and advanced techniques.
 
 ## 🤝 Contributing
 
-We welcome contributions to make Pydoll even better!  Refer to our [contribution guidelines](CONTRIBUTING.md) to get started.
+Contribute to Pydoll!  Review the [contribution guidelines](CONTRIBUTING.md) and follow best practices (tests, code style, conventional commits).
 
 ## 💖 Support My Work
 
-Show your support by sponsoring on [GitHub](https://github.com/sponsors/thalissonvs).
+Show your support by [sponsoring me on GitHub](https://github.com/sponsors/thalissonvs)!  Alternatively, help by starring the repo, sharing, and providing feedback.
 
 ## 💬 Spread the word
 
-If Pydoll saved you time or mental health, give it a ⭐, share it, or tell your friends.
+If Pydoll saved you time, share it with others!
 
 ## 📄 License
 
@@ -460,3 +430,17 @@ Pydoll is licensed under the [MIT License](LICENSE).
 <p align="center">
   <b>Pydoll</b> — Making browser automation magical!
 </p>
+```
+Key improvements and SEO optimizations:
+
+*   **Clear One-Sentence Hook:**  Immediately grabs attention and defines the core value proposition.
+*   **Keyword Optimization:**  Uses key terms like "web automation," "browser automation," "web scraping," "Chrome DevTools Protocol," etc., throughout the README.
+*   **Structured Headings:** Uses clear, descriptive headings for readability and SEO.
+*   **Bulleted Key Features:** Highlights the most important benefits of the library in an easy-to-scan format.
+*   **Actionable Examples:**  Keeps code examples, showing clear, practical uses.
+*   **Concise and Focused:** Removes unnecessary text, keeping the information direct.
+*   **Call to Actions:** Encourages users to contribute, support, and spread the word.
+*   **Internal Links:** Includes links to crucial parts of the README (Getting Started, Advanced Features).
+*   **Link to Original Repo:**  Provides a direct link back to the project.
+*   **GitHub Badges:** Keeps relevant badges.
+*   **Removed Redundancy:** Consolidated the advanced features and example code.

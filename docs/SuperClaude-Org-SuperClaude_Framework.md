@@ -1,65 +1,42 @@
-# SuperClaude Framework: Transform Claude Code into a Structured Development Platform
+# SuperClaude Framework: Transform Your Claude Code into a Powerful Development Platform
 
-Supercharge your Claude code and unlock its full potential with the SuperClaude Framework, a powerful platform for structured development and AI-driven workflows. ([View on GitHub](https://github.com/SuperClaude-Org/SuperClaude_Framework))
+Supercharge your Claude code with SuperClaude, a meta-programming framework that unlocks structured development, workflow automation, and intelligent agents.  [Explore the SuperClaude Framework on GitHub](https://github.com/SuperClaude-Org/SuperClaude_Framework).
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-4.0.8-blue" alt="Version">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome">
-</p>
-
-<p align="center">
-  <a href="https://superclaude.netlify.app/">
-    <img src="https://img.shields.io/badge/🌐_Visit_Website-blue" alt="Website">
-  </a>
-  <a href="https://pypi.org/project/SuperClaude/">
-    <img src="https://img.shields.io/pypi/v/SuperClaude.svg?" alt="PyPI">
-  </a>
-  <a href="https://www.npmjs.com/package/@bifrost_inc/superclaude">
-    <img src="https://img.shields.io/npm/v/@bifrost_inc/superclaude.svg" alt="npm">
-  </a>
-</p>
-
-<p align="center">
-  <a href="#quick-installation">Quick Start</a> •
-  <a href="#support-the-project">Support</a> •
-  <a href="#whats-new-in-v4">Features</a> •
-  <a href="#documentation">Docs</a> •
-  <a href="#contributing">Contributing</a>
-</p>
-
----
+[![Version](https://img.shields.io/badge/version-4.0.8-blue)](https://github.com/SuperClaude-Org/SuperClaude_Framework)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/main/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/SuperClaude-Org/SuperClaude_Framework/pulls)
+[![Website](https://img.shields.io/badge/%F0%9F%8C%90_Visit_Website-blue)](https://superclaude.netlify.app/)
+[![PyPI](https://img.shields.io/pypi/v/SuperClaude.svg?)](https://pypi.org/project/SuperClaude/)
+[![npm](https://img.shields.io/npm/v/@bifrost_inc/superclaude.svg)](https://www.npmjs.com/package/@bifrost_inc/superclaude)
+[![English](https://img.shields.io/badge/%F0%9F%87%BA%F0%9F%87%B8_English-blue)](https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/main/README.md)
+[![中文](https://img.shields.io/badge/%F0%9F%87%A8%F0%9F%87%B3_中文-red)](https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/main/README-zh.md)
+[![日本語](https://img.shields.io/badge/%F0%9F%87%AF%F0%9F%87%B5_日本語-green)](https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/main/README-ja.md)
 
 ## Key Features
 
-*   **AI-Powered Development:** Leverage intelligent agents and behavioral modes to accelerate your workflow.
-*   **Structured Command System:**  Utilize a comprehensive set of slash commands for streamlined development tasks.
-*   **Modular Architecture:** Integrate with multiple MCP servers for extended capabilities.
-*   **Optimized Performance:** Enjoy a reduced framework footprint, enabling longer conversations and complex operations.
-*   **Extensive Documentation:** Access complete documentation to guide you every step of the way.
-
----
+*   **Intelligent Agents:** Leverage 14 specialized agents with domain expertise.
+*   **Slash Commands:**  Utilize 21 commands for a complete development lifecycle.
+*   **Behavioral Modes:** Adapt to different contexts with 5 versatile modes.
+*   **MCP Server Integration:** Integrate with 6 powerful servers for advanced functionality.
+*   **Optimized Performance:** Experience a smaller framework footprint with greater context capacity.
+*   **Comprehensive Documentation:**  Benefit from a complete rewrite with real-world examples.
 
 ## Framework Statistics
 
-| Commands | Agents | Modes | MCP Servers |
-|:--------:|:------:|:-----:|:-----------:|
-| 21       | 14     | 5     | 6           |
+| Commands      | Agents      | Modes       | MCP Servers |
+| :------------ | :---------- | :---------- | :---------- |
+| **21**        | **14**      | **5**       | **6**       |
 | Slash Commands | Specialized AI | Behavioral | Integrations |
-
----
 
 ## Quick Installation
 
 Choose the installation method that best suits your environment:
 
-### Installation Methods
-
-| Method      | Command                                                         | Best For                                      |
-| :---------- | :-------------------------------------------------------------- | :-------------------------------------------- |
-| **🐍 pipx**   | `pipx install SuperClaude && pipx upgrade SuperClaude && SuperClaude install` | **✅ Recommended** - Linux/macOS              |
-| **📦 pip**    | `pip install SuperClaude && pip upgrade SuperClaude && SuperClaude install` | Traditional Python environments             |
-| **🌐 npm**    | `npm install -g @bifrost_inc/superclaude && superclaude install` | Cross-platform, Node.js users               |
+| Method        | Command                                                      | Best For                    |
+| :------------ | :----------------------------------------------------------- | :-------------------------- |
+| **🐍 pipx**     | `pipx install SuperClaude && pipx upgrade SuperClaude && SuperClaude install` | ✅ Recommended - Linux/macOS |
+| **📦 pip**      | `pip install SuperClaude && pip upgrade SuperClaude && SuperClaude install`  | Traditional Python environments |
+| **🌐 npm**      | `npm install -g @bifrost_inc/superclaude && superclaude install`     | Cross-platform, Node.js users |
 
 <details>
 <summary><b>⚠️ IMPORTANT: Upgrading from SuperClaude V3</b></summary>
@@ -100,11 +77,9 @@ pip install --break-system-packages SuperClaude
 ```
 </details>
 
----
-
 ## Support the Project
 
-> Support SuperClaude and contribute to the development and maintenance of the framework!
+Support SuperClaude's development and maintenance:
 
 <table>
 <tr>
@@ -137,179 +112,67 @@ pip install --break-system-packages SuperClaude
 
 ### Your Support Enables:
 
-| Item                    | Cost/Impact                        |
-| :---------------------- | :--------------------------------- |
-| 🔬 **Claude Max Testing** | $100/month for validation & testing |
-| ⚡ **Feature Development** | New capabilities & improvements     |
-| 📚 **Documentation**     | Comprehensive guides & examples     |
-| 🤝 **Community Support**  | Quick issue responses & help        |
-| 🔧 **MCP Integration**    | Testing new server connections    |
-| 🌐 **Infrastructure**   | Hosting & deployment costs        |
-
----
+| Item                      | Cost/Impact                      |
+| :------------------------ | :------------------------------- |
+| 🔬 **Claude Max Testing**   | $100/month for validation & testing  |
+| ⚡ **Feature Development** | New capabilities & improvements |
+| 📚 **Documentation**       | Comprehensive guides & examples  |
+| 🤝 **Community Support**   | Quick issue responses & help    |
+| 🔧 **MCP Integration**     | Testing new server connections   |
+| 🌐 **Infrastructure**      | Hosting & deployment costs       |
 
 ## What's New in V4
 
-> Version 4 brings significant improvements based on community feedback and real-world usage patterns.
+Explore the latest enhancements in SuperClaude V4:
 
-<table>
-<tr>
-<td width="50%">
-
-### 🤖 Smarter Agent System
-**14 specialized agents** with domain expertise:
-- Security engineer catches real vulnerabilities
-- Frontend architect understands UI patterns
-- Automatic coordination based on context
-- Domain-specific expertise on demand
-
-</td>
-<td width="50%">
-
-### 📝 Improved Namespace
-**`/sc:` prefix** for all commands:
-- No conflicts with custom commands
-- 21 commands covering full lifecycle
-- From brainstorming to deployment
-- Clean, organized command structure
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🔧 MCP Server Integration
-**6 powerful servers** working together:
-- **Context7** → Up-to-date documentation
-- **Sequential** → Complex analysis
-- **Magic** → UI component generation
-- **Playwright** → Browser testing
-- **Morphllm** → Bulk transformations
-- **Serena** → Session persistence
-
-</td>
-<td width="50%">
-
-### 🎯 Behavioral Modes
-**5 adaptive modes** for different contexts:
-- **Brainstorming** → Asks right questions
-- **Orchestration** → Efficient tool coordination
-- **Token-Efficiency** → 30-50% context savings
-- **Task Management** → Systematic organization
-- **Introspection** → Meta-cognitive analysis
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### ⚡ Optimized Performance
-**Smaller framework, bigger projects:**
-- Reduced framework footprint
-- More context for your code
-- Longer conversations possible
-- Complex operations enabled
-
-</td>
-<td width="50%">
-
-### 📚 Documentation Overhaul
-**Complete rewrite** for developers:
-- Real examples & use cases
-- Common pitfalls documented
-- Practical workflows included
-- Better navigation structure
-
-</td>
-</tr>
-</table>
-
----
+*   **Smarter Agent System:** 14 specialized agents for domain-specific expertise.
+*   **Improved Namespace:** `/sc:` prefix for all commands.
+*   **MCP Server Integration:** 6 powerful servers working together for advanced tasks.
+*   **Behavioral Modes:** 5 adaptive modes for different development contexts.
+*   **Optimized Performance:** Reduced framework footprint for enhanced capacity.
+*   **Documentation Overhaul:** Complete rewrite with real examples and practical workflows.
 
 ## Documentation
 
-### Complete Guide to SuperClaude
+Comprehensive documentation to guide you through SuperClaude:
 
-<table>
-<tr>
-<th align="center">🚀 Getting Started</th>
-<th align="center">📖 User Guides</th>
-<th align="center">🛠️ Developer Resources</th>
-<th align="center">📋 Reference</th>
-</tr>
-<tr>
-<td valign="top">
+### Getting Started
 
-- 📝 [**Quick Start Guide**](Docs/Getting-Started/quick-start.md)  
-  *Get up and running fast*
+*   📝 [**Quick Start Guide**](Docs/Getting-Started/quick-start.md)
+*   💾 [**Installation Guide**](Docs/Getting-Started/installation.md)
 
-- 💾 [**Installation Guide**](Docs/Getting-Started/installation.md)  
-  *Detailed setup instructions*
+### User Guides
 
-</td>
-<td valign="top">
+*   🎯 [**Commands Reference**](Docs/User-Guide/commands.md)
+*   🤖 [**Agents Guide**](Docs/User-Guide/agents.md)
+*   🎨 [**Behavioral Modes**](Docs/User-Guide/modes.md)
+*   🚩 [**Flags Guide**](Docs/User-Guide/flags.md)
+*   🔧 [**MCP Servers**](Docs/User-Guide/mcp-servers.md)
+*   💼 [**Session Management**](Docs/User-Guide/session-management.md)
 
-- 🎯 [**Commands Reference**](Docs/User-Guide/commands.md)  
-  *All 21 slash commands*
+### Developer Resources
 
-- 🤖 [**Agents Guide**](Docs/User-Guide/agents.md)  
-  *14 specialized agents*
+*   🏗️ [**Technical Architecture**](Docs/Developer-Guide/technical-architecture.md)
+*   💻 [**Contributing Code**](Docs/Developer-Guide/contributing-code.md)
+*   🧪 [**Testing & Debugging**](Docs/Developer-Guide/testing-debugging.md)
 
-- 🎨 [**Behavioral Modes**](Docs/User-Guide/modes.md)  
-  *5 adaptive modes*
+### Reference
 
-- 🚩 [**Flags Guide**](Docs/User-Guide/flags.md)  
-  *Control behaviors*
-
-- 🔧 [**MCP Servers**](Docs/User-Guide/mcp-servers.md)  
-  *6 server integrations*
-
-- 💼 [**Session Management**](Docs/User-Guide/session-management.md)  
-  *Save & restore state*
-
-</td>
-<td valign="top">
-
-- 🏗️ [**Technical Architecture**](Docs/Developer-Guide/technical-architecture.md)  
-  *System design details*
-
-- 💻 [**Contributing Code**](Docs/Developer-Guide/contributing-code.md)  
-  *Development workflow*
-
-- 🧪 [**Testing & Debugging**](Docs/Developer-Guide/testing-debugging.md)  
-  *Quality assurance*
-
-</td>
-<td valign="top">
-
-- ✨ [**Best Practices**](Docs/Reference/quick-start-practices.md)  
-  *Pro tips & patterns*
-
-- 📓 [**Examples Cookbook**](Docs/Reference/examples-cookbook.md)  
-  *Real-world recipes*
-
-- 🔍 [**Troubleshooting**](Docs/Reference/troubleshooting.md)  
-  *Common issues & fixes*
-
-</td>
-</tr>
-</table>
-
----
+*   ✨ [**Best Practices**](Docs/Reference/quick-start-practices.md)
+*   📓 [**Examples Cookbook**](Docs/Reference/examples-cookbook.md)
+*   🔍 [**Troubleshooting**](Docs/Reference/troubleshooting.md)
 
 ## Contributing
 
-### Join the SuperClaude Community
+Join the SuperClaude community and contribute to its growth:
 
-We welcome contributions of all kinds! Here's how you can help:
-
-| Priority | Area        | Description                    |
-| :-------- | :---------- | :----------------------------- |
-| 📝 **High**  | Documentation | Improve guides, add examples, fix typos |
-| 🔧 **High**  | MCP Integration  | Add server configs, test integrations   |
-| 🎯 **Medium** | Workflows      | Create command patterns & recipes |
-| 🧪 **Medium** | Testing        | Add tests, validate features    |
-| 🌐 **Low**   | i18n          | Translate docs to other languages |
+| Priority | Area          | Description                       |
+| :------- | :------------ | :-------------------------------- |
+| 📝 **High**   | Documentation   | Improve guides, add examples, fix typos |
+| 🔧 **High**   | MCP Integration | Add server configs, test integrations |
+| 🎯 **Medium** | Workflows     | Create command patterns & recipes  |
+| 🧪 **Medium** | Testing       | Add tests, validate features       |
+| 🌐 **Low**    | i18n          | Translate docs to other languages |
 
 <p align="center">
   <a href="CONTRIBUTING.md">
@@ -320,19 +183,15 @@ We welcome contributions of all kinds! Here's how you can help:
   </a>
 </p>
 
----
-
 ## License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg?" alt="MIT License">
 </p>
 
----
-
-## ⭐ Star History
+## Star History
 
 <a href="https://www.star-history.com/#SuperClaude-Org/SuperClaude_Framework&Timeline">
  <picture>
@@ -344,12 +203,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-### 🚀 Built with passion by the SuperClaude community
+### Built with passion by the SuperClaude community
 
-<p align="center">
-  <sub>Made with ❤️ for developers who push boundaries</sub>
-</p>
-
-<p align="center">
-  <a href="#-superclaude-framework">Back to Top ↑</a>
-</p>
+<sub>Made with ❤️ for developers who push boundaries</sub>

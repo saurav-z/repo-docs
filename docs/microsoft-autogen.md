@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <div align="center">
 <img src="https://microsoft.github.io/autogen/0.2/img/ag.svg" alt="AutoGen Logo" width="100">
 
@@ -6,30 +8,28 @@
 [![Discord](https://img.shields.io/badge/discord-chat-green?logo=discord)](https://aka.ms/autogen-discord)
 [![Documentation](https://img.shields.io/badge/Documentation-AutoGen-blue?logo=read-the-docs)](https://microsoft.github.io/autogen/)
 [![Blog](https://img.shields.io/badge/Blog-AutoGen-blue?logo=blogger)](https://devblogs.microsoft.com/autogen/)
+
 </div>
 
-# AutoGen: Build Powerful Multi-Agent AI Applications
+# AutoGen
 
-**AutoGen is a versatile framework empowering developers to create, experiment with, and deploy cutting-edge multi-agent AI applications.** ([View the original repo](https://github.com/microsoft/autogen))
-
-## Key Features
-
-*   **Multi-Agent Orchestration:** Easily design and manage complex interactions between multiple AI agents.
-*   **Extensible Architecture:** A modular design with Core, AgentChat, and Extension APIs provides flexibility for customization.
-*   **Developer Tools:** Leverage AutoGen Studio (no-code GUI) and AutoGen Bench (benchmarking) for rapid prototyping and evaluation.
-*   **Language Agnostic**: Supports both Python and .NET development.
-*   **Open Ecosystem**: Join a thriving community and contribute to a project with a solid foundation.
+**AutoGen** is a framework for creating multi-agent AI applications that can act autonomously or work alongside humans.
 
 ## Installation
 
 AutoGen requires **Python 3.10 or later**.
 
 ```bash
+# Install AgentChat and OpenAI client from Extensions
 pip install -U "autogen-agentchat" "autogen-ext[openai]"
-pip install -U "autogenstudio" # Install AutoGen Studio for no-code GUI
 ```
 
-For upgrading from AutoGen v0.2, please refer to the [Migration Guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/migration-guide.html).
+The current stable version can be found in the [releases](https://github.com/microsoft/autogen/releases). If you are upgrading from AutoGen v0.2, please refer to the [Migration Guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/migration-guide.html) for detailed instructions on how to update your code and configurations.
+
+```bash
+# Install AutoGen Studio for no-code GUI
+pip install -U "autogenstudio"
+```
 
 ## Quickstart
 
@@ -151,27 +151,34 @@ Use AutoGen Studio to prototype and run multi-agent workflows without writing co
 autogenstudio ui --port 8080 --appdir ./my-app
 ```
 
-## Why Choose AutoGen?
+## Why Use AutoGen?
 
-AutoGen provides a comprehensive ecosystem for building and deploying sophisticated AI agents, simplifying multi-agent workflow development.
+<div align="center">
+  <img src="autogen-landing.jpg" alt="AutoGen Landing" width="500">
+</div>
 
-The framework's layered design, encompassing Core, AgentChat, and Extensions APIs, offers flexibility at various levels of abstraction.
-*   **Core API:** Implements message passing, event-driven agents, and local and distributed runtime. Includes cross-language support for .NET and Python.
-*   **AgentChat API:** Simplifies rapid prototyping with an opinionated API that supports common multi-agent patterns.
-*   **Extensions API:** Provides first- and third-party extensions for expanding framework capabilities, including specific LLM clients (e.g., OpenAI) and code execution features.
+The AutoGen ecosystem provides everything you need to create AI agents, especially multi-agent workflows -- framework, developer tools, and applications.
 
-AutoGen offers essential developer tools:
+The _framework_ uses a layered and extensible design. Layers have clearly divided responsibilities and build on top of layers below. This design enables you to use the framework at different levels of abstraction, from high-level APIs to low-level components.
+
+- [Core API](./python/packages/autogen-core/) implements message passing, event-driven agents, and local and distributed runtime for flexibility and power. It also support cross-language support for .NET and Python.
+- [AgentChat API](./python/packages/autogen-agentchat/) implements a simpler but opinionated API for rapid prototyping. This API is built on top of the Core API and is closest to what users of v0.2 are familiar with and supports common multi-agent patterns such as two-agent chat or group chats.
+- [Extensions API](./python/packages/autogen-ext/) enables first- and third-party extensions continuously expanding framework capabilities. It support specific implementation of LLM clients (e.g., OpenAI, AzureOpenAI), and capabilities such as code execution.
+
+The ecosystem also supports two essential _developer tools_:
 
 <div align="center">
   <img src="https://media.githubusercontent.com/media/microsoft/autogen/refs/heads/main/python/packages/autogen-studio/docs/ags_screen.png" alt="AutoGen Studio Screenshot" width="500">
 </div>
 
-*   **AutoGen Studio:** A no-code GUI for building multi-agent applications.
-*   **AutoGen Bench:** A benchmarking suite for evaluating agent performance.
+- [AutoGen Studio](./python/packages/autogen-studio/) provides a no-code GUI for building multi-agent applications.
+- [AutoGen Bench](./python/packages/agbench/) provides a benchmarking suite for evaluating agent performance.
 
-Applications like [Magentic-One](./python/packages/magentic-one-cli/) demonstrate the power of AutoGen, showcasing its ability to handle complex tasks with web browsing, code execution, and file management.
+You can use the AutoGen framework and developer tools to create applications for your domain. For example, [Magentic-One](./python/packages/magentic-one-cli/) is a state-of-the-art multi-agent team built using AgentChat API and Extensions API that can handle a variety of tasks that require web browsing, code execution, and file handling.
 
-## Getting Started
+With AutoGen you get to join and contribute to a thriving ecosystem. We host weekly office hours and talks with maintainers and community. We also have a [Discord server](https://aka.ms/autogen-discord) for real-time chat, GitHub Discussions for Q&A, and a blog for tutorials and updates.
+
+## Where to go next?
 
 <div align="center">
 
@@ -185,30 +192,29 @@ Applications like [Magentic-One](./python/packages/magentic-one-cli/) demonstrat
 
 </div>
 
-## Contribution & Community
+Interested in contributing? See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started. We welcome contributions of all kinds, including bug fixes, new features, and documentation improvements. Join our community and help us make AutoGen better!
 
-We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines. Join our community on [Discord](https://aka.ms/autogen-discord) and [GitHub Discussions](https://github.com/microsoft/autogen/discussions).  Stay updated through our [blog](https://devblogs.microsoft.com/autogen/).
+Have questions? Check out our [Frequently Asked Questions (FAQ)](./FAQ.md) for answers to common queries. If you don't find what you're looking for, feel free to ask in our [GitHub Discussions](https://github.com/microsoft/autogen/discussions) or join our [Discord server](https://aka.ms/autogen-discord) for real-time support. You can also read our [blog](https://devblogs.microsoft.com/autogen/) for updates.
 
 ## Legal Notices
 
-(Include the Legal Notices Section from the original README here)
+Microsoft and any contributors grant you a license to the Microsoft documentation and other content
+in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
+see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
+[LICENSE-CODE](LICENSE-CODE) file.
+
+Microsoft, Windows, Microsoft Azure, and/or other Microsoft products and services referenced in the documentation
+may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
+The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
+Microsoft's general trademark guidelines can be found at <http://go.microsoft.com/fwlink/?LinkID=254653>.
+
+Privacy information can be found at <https://go.microsoft.com/fwlink/?LinkId=521839>
+
+Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
+or trademarks, whether by implication, estoppel, or otherwise.
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
   <a href="#readme-top" style="text-decoration: none; color: blue; font-weight: bold;">
     ↑ Back to Top ↑
   </a>
 </p>
-```
-Key improvements and SEO considerations:
-
-*   **Headline Optimization:** Changed the main headline to incorporate a strong keyword ("Multi-Agent AI Applications").
-*   **One-Sentence Hook:** Added a concise, compelling opening sentence that immediately describes AutoGen's core value.
-*   **Keyword Integration:** Used relevant keywords throughout the text (e.g., "multi-agent AI," "AI agents," "framework," "developer tools").
-*   **Clear Headings and Structure:** Enhanced the readability and organization of the README with clear headings and bullet points for key features.
-*   **Emphasis on Benefits:** Highlighted the advantages of using AutoGen, such as multi-agent orchestration, and the available tools.
-*   **Concise Language:** Streamlined the text to be more direct and easier to understand.
-*   **Internal Linking:** Added links to key sections within the README (e.g., "Why Choose AutoGen?").
-*   **Call to Action:** Encouraged community involvement with the contribution and community section.
-*   **SEO-Friendly Formatting:** Used Markdown for headings, lists, and bolding to improve search engine indexing.
-*   **Clean Code Blocks:** Improved code formatting and presentation.
-*   **Included all of the original README content.**

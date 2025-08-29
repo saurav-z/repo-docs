@@ -1,29 +1,33 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif"/>
-  <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
 </p>
 
-## HelloGitHub: Discover Awesome Open Source Projects!
+<p align="center">
+  <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
+  <a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
+    <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
+</p>
 
-**HelloGitHub** is your gateway to the exciting world of open-source, curating interesting and beginner-friendly projects on GitHub.
+# HelloGitHub: Discover Fun and Beginner-Friendly Open Source Projects
 
-[Check out the original repository](https://github.com/521xueweihan/HelloGitHub)
+**HelloGitHub** is your monthly guide to discovering the most interesting and accessible open-source projects on GitHub, helping you dive into the world of open source with ease.  [Explore the original repository](https://github.com/521xueweihan/HelloGitHub).
 
-### Key Features:
+## Key Features
 
-*   **Monthly Updates:** Fresh content is released every month (on the 28th), ensuring you always have something new to explore.
-*   **Beginner-Friendly Focus:** Discover projects perfect for newcomers to open source, making it easy to get involved.
-*   **Diverse Content:** Enjoy a variety of projects, including:
-    *   Interesting open-source projects
+*   **Curated Open Source Projects:** Explore a hand-picked selection of fun and easy-to-understand open-source projects.
+*   **Monthly Updates:** New projects are released every month, on the 28th, ensuring a continuous stream of fresh content.
+*   **Diverse Content:**  Features a variety of project types, including:
+    *   Interesting and beginner-friendly open-source projects
     *   Open-source books
     *   Practical projects
     *   Enterprise-level projects
-*   **Learn and Grow:**  Get introduced to the world of open source and find the fun in it!
-*   **Multiple Platforms:** Get the best reading experience via the [official website](https://hellogithub.com/) or the [HelloGitHub WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png)
+*   **Learn and Contribute:** Offers a platform to get involved in open source, with opportunities to contribute and recommend projects.
+*   **Community and Support:**  Connect with the community through WeChat and Weibo.
 
-### Content Archives
-
-Explore past issues and discover a wealth of open-source projects:
+## Contents
+Find the easiest way to read from the [official website](https://hellogithub.com/) or [HelloGitHub Official WeChat Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png)
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -36,13 +40,11 @@ Explore past issues and discover a wealth of open-source projects:
 | [第 85 期](/content/HelloGitHub85.md) | [第 84 期](/content/HelloGitHub84.md) | [第 83 期](/content/HelloGitHub83.md) | [第 82 期](/content/HelloGitHub82.md) | [第 81 期](/content/HelloGitHub81.md) |
 | [第 80 期](/content/HelloGitHub80.md) | [第 79 期](/content/HelloGitHub79.md) | [第 78 期](/content/HelloGitHub78.md) | [第 77 期](/content/HelloGitHub77.md) | [第 76 期](/content/HelloGitHub76.md) |
 
-### Contribute
+## Contribute
 
-Interested in contributing?  You can [recommend or self-recommend](https://hellogithub.com/periodical) projects, or become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) to HelloGitHub!
+Feel free to [recommend or self-recommend](https://hellogithub.com/periodical) projects to become a contributor, more info in [contributors](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md)
 
-### Sponsors
-
-Thank you to our sponsors for supporting the growth of open source!
+## Sponsors
 
 <table>
   <thead>
@@ -78,6 +80,6 @@ Thank you to our sponsors for supporting the growth of open source!
   </thead>
 </table>
 
-### License
+## License
 
-This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact <a href="mailto:595666367@qq.com">595666367@qq.com</a> if you have any questions.
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact me at <a href="mailto:595666367@qq.com">595666367@qq.com</a>

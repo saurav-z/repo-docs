@@ -1,15 +1,17 @@
-# Kitten TTS: Unleash High-Quality Text-to-Speech with Lightweight Efficiency 😻
+# Kitten TTS: Generate Realistic Speech on Any Device (No GPU Needed!)
 
-Looking for a text-to-speech solution that delivers impressive audio quality without the need for heavy hardware? **Kitten TTS** is an open-source, ultra-lightweight text-to-speech model perfect for diverse applications.  (See the original repository [here](https://github.com/KittenML/KittenTTS)).
+Kitten TTS is a revolutionary open-source text-to-speech (TTS) model, enabling high-quality voice synthesis with exceptional efficiency.
 
-## Key Features
+[View the Kitten TTS Repository on GitHub](https://github.com/KittenML/KittenTTS)
 
-*   **Ultra-Lightweight Design:** Model size under 25MB, enabling easy deployment on a wide range of devices.
-*   **CPU-Optimized:** Runs smoothly without a GPU, ensuring accessibility on nearly any hardware.
-*   **High-Quality Voices:** Choose from several premium voice options for diverse speech synthesis needs.
-*   **Fast Inference:** Optimized for real-time speech generation, making it ideal for interactive applications.
+## Key Features:
 
-## Getting Started: Quick Installation & Usage
+*   **Ultra-Lightweight:** Download and run the model with a size under 25MB.
+*   **CPU-Optimized:** Runs seamlessly on any device, without the need for a GPU.
+*   **High-Quality Voices:** Enjoy several premium voice options for diverse speech generation.
+*   **Fast Inference:** Optimized for real-time speech synthesis and quick audio generation.
+
+## Quick Start: Get Started with Kitten TTS
 
 ### Installation
 
@@ -34,16 +36,17 @@ sf.write('output.wav', audio, 24000)
 
 ## System Requirements
 
-Kitten TTS is designed to be incredibly versatile and works on virtually any device.
+Kitten TTS is designed to work on virtually any device without any specific hardware requirements.
 
-## Roadmap & Future Developments
+## Current Development Status & Roadmap
 
-*   [x] Release a preview model
-*   [ ] Release the fully trained model weights
-*   [ ] Release mobile SDK
-*   [ ] Release web version
+*   **Developer Preview:** The model is currently in developer preview.
+*   **Future Development:**
+    *   Release fully trained model weights
+    *   Release a mobile SDK
+    *   Release a web version
 
-## Stay Connected
+## Get Involved & Stay Updated
 
 *   [Join our Discord](https://discord.com/invite/VJ86W4SURW)
 *   [For custom support - fill this form ](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)

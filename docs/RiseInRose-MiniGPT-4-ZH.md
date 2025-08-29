@@ -1,100 +1,86 @@
-# MiniGPT-4: Unlock Visual Language Understanding with Advanced Large Language Models
+# MiniGPT-4: Unleash the Power of Visual Language Understanding with Large Language Models
 
-**MiniGPT-4 revolutionizes how we understand images by seamlessly integrating visual and textual information, enabling powerful new applications.**  Developed by Deyao Zhu, Jun Chen, Xiaoqian Shen, Xiang Li, and Mohamed Elhoseiny from King Abdullah University of Science and Technology, this project leverages cutting-edge large language models to provide enhanced visual language understanding.
+**MiniGPT-4 enables you to have in-depth conversations about images by combining a visual encoder with the powerful Vicuna language model.** Developed by Deyao Zhu, Jun Chen, Xiaoqian Shen, Xiang Li, and Mohamed Elhoseiny, this project from King Abdullah University of Science and Technology (KAUST) offers a novel approach to understanding and interacting with visual information.  [Check out the original repository](https://github.com/RiseInRose/MiniGPT-4-ZH).
 
-[Link to Original Repo:](https://github.com/RiseInRose/MiniGPT-4-ZH)
+## Key Features:
 
-**Key Features:**
+*   **Advanced Visual Language Understanding:** Leverages a frozen visual encoder (from BLIP-2) and the powerful Vicuna LLM to understand and generate text descriptions and dialogues about images.
+*   **Two-Stage Training:**  Employs a two-stage training process: a pre-training phase with 5 million image-text pairs, followed by a fine-tuning stage on a high-quality, curated dataset, significantly improving the model's generation capabilities and usability.
+*   **Enhanced Usability:** MiniGPT-4 is designed for ease of use, with the fine-tuning phase making it more reliable and user-friendly.
+*   **Open-Source & Accessible:** Built upon open-source projects like BLIP-2, Lavis, and Vicuna, facilitating access and community contribution.
+*   **Efficient Fine-Tuning:** The second stage of fine-tuning is computationally efficient, requiring only a single A100 GPU for approximately 7 minutes.
 
-*   **Enhanced Visual Language Understanding:** MiniGPT-4 excels at bridging the gap between images and text, offering a deeper understanding of visual content.
-*   **Two-Stage Training:** Employs a two-stage training process for optimal performance, including a pre-training phase with 5 million image-text pairs and a fine-tuning phase with a high-quality, curated dataset.
-*   **Integration of BLIP-2 and Vicuna:** Leverages BLIP-2 for visual encoding and the powerful Vicuna LLM for robust language generation.
-*   **High-Quality Data Generation:** Employs a novel method to generate high-quality image-text pairs using the model and ChatGPT, leading to improved performance.
-*   **Open-Source and Accessible:** This project is built on open-source libraries and offers a user-friendly interface, including a Colab notebook and a Hugging Face Space demo.
+## Quick Start:
 
-## Quick Start
+### Online Demo
+Experience MiniGPT-4 firsthand!  Interact with the model and explore its capabilities:
+[![demo](figs/online_demo.png)](https://minigpt-4.github.io)
 
-### 1. Environment Setup
+### Installation and Usage (Simplified)
 
-*   Clone the repository:
-    ```bash
-    git clone https://github.com/Vision-CAIR/MiniGPT-4.git
-    cd MiniGPT-4
-    ```
-*   Create and activate a Python environment:
-    ```bash
-    conda env create -f environment.yml
-    conda activate minigpt4
-    ```
+**1. Set Up Your Environment:**
 
-### 2. Prepare Vicuna Weights
+   *   Clone the repository:
+      ```bash
+      git clone https://github.com/Vision-CAIR/MiniGPT-4.git
+      cd MiniGPT-4
+      ```
+   *   Create and activate a Conda environment:
+      ```bash
+      conda env create -f environment.yml
+      conda activate minigpt4
+      ```
 
-*   **Download Weights:**  (Refer to the original README for detailed instructions on acquiring the Vicuna-13B delta weights and the original LLaMA-13B weights.)
+**2. Prepare the Vicuna Weights:**
 
-### 3. Prepare MiniGPT-4 Checkpoints
+   *  **Option 1 (Recommended):** The provided documentation gives instructions on how to download and convert the Vicuna-13B weights and is more comprehensive.
+   *  **Option 2:** Refer to the original documentation for the full details.
 
-*   **Download Checkpoints:** Download pre-trained checkpoints aligned with your chosen Vicuna version (13B or 7B) from the provided links.
+**3. Prepare the MiniGPT-4 Checkpoint:**
+    * Download pre-trained checkpoints.
+    * For Vicuna 13B: [Download Link](https://drive.google.com/file/d/1a4zLvaiDBr-36pasffmgpvH5P7CKmpze/view?usp=share_link)
+    * For Vicuna 7B: [Download Link](https://drive.google.com/file/d/1RY9jV0dyqLX-o38LrumkKRh6Jtaop58R/view?usp=sharing)
 
-    *   Checkpoints aligned with Vicuna 13B: [Download](https://drive.google.com/file/d/1a4zLvaiDBr-36pasffmgpvH5P7CKmpze/view?usp=share_link)
-    *   Checkpoints aligned with Vicuna 7B: [Download](https://drive.google.com/file/d/1RY9jV0dyqLX-o38LrumkKRh6Jtaop58R/view?usp=sharing)
+**4. Run the Demo:**
 
-### 4. Launch the Demo
+   *   Execute the demo script:
+      ```bash
+      python demo.py --cfg-path eval_configs/minigpt4_eval.yaml  --gpu-id 0
+      ```
 
-*   Run the demo locally:
+**Important Notes:**
 
-    ```bash
-    python demo.py --cfg-path eval_configs/minigpt4_eval.yaml --gpu-id 0
-    ```
+*   The original repository includes detailed instructions regarding weight preparation and potential troubleshooting (e.g. issues with windows deployment).
+*   Model clipping is mentioned but not suggested unless you are experience.
+*   Modify the configuration file to run on less resources.
 
-## Resources
+## Training:
 
-*   **Online Demo:** [Click here](https://minigpt-4.github.io) to interact with MiniGPT-4 directly.
+MiniGPT-4 is trained in two stages.
+*   **Stage 1: Pretraining**:  Uses image-text pairs to align the visual and language models. Instructions for dataset preparation and the training command are available in the original README.  A pre-trained checkpoint is available for download.
+*   **Stage 2: Fine-tuning**:  Uses a smaller, high-quality dataset in a dialogue format to further align MiniGPT-4, improving generation quality and usability. Instructions are provided.
 
-*   **Project Page:** [Visit the project page](https://minigpt-4.github.io) for more examples and details.
+## Community & Resources:
 
-*   **Hugging Face Spaces:**
-    *   [Demo on Hugging Face Spaces](https://huggingface.co/spaces/Vision-CAIR/minigpt4)
-    *   [MiniGPT-4 Model on Hugging Face](https://huggingface.co/Vision-CAIR/MiniGPT-4)
+*   **Project Page:** [https://minigpt-4.github.io](https://minigpt-4.github.io)
+*   **Paper:** [![Paper-PDF-red](https://img.shields.io/badge/Paper-PDF-red)](MiniGPT_4.pdf)
+*   **Hugging Face Spaces:**  [![Hugging Face-Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/Vision-CAIR/minigpt4)
+*   **Hugging Face Model:** [![Hugging Face-Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/Vision-CAIR/MiniGPT-4)
+*   **Colab:** [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1OK4kYsZphwt5DXchKkzMBjYF6jnkqh4R?usp=sharing)
+*   **YouTube Demo:** [![YouTube](https://badges.aleen42.com/src/youtube.svg)](https://www.youtube.com/watch?v=__tftoxpBAw&feature=youtu.be)
 
-*   **Colab Notebook:** [Get started with a Colab notebook](https://colab.research.google.com/drive/1OK4kYsZphwt5DXchKkzMBjYF6jnkqh4R?usp=sharing)
+##  Citation:
 
-*   **YouTube Video:** [Watch the MiniGPT-4 introduction](https://www.youtube.com/watch?v=__tftoxpBAw&feature=youtu.be)
+If you use MiniGPT-4 in your research, please cite the following:
 
-## Training
-
-MiniGPT-4's training involves two key alignment stages:
-
-**1. Stage 1: Pre-training**
-
-*   Utilize a dataset of image-text pairs from Laion and CC datasets to align vision and language models.  (See dataset/README\_1\_STAGE.md for dataset preparation instructions).
-*   Run the training command:
-
-    ```bash
-    torchrun --nproc-per-node NUM_GPU train.py --cfg-path train_configs/minigpt4_stage1_pretrain.yaml
-    ```
-
-*   First-stage checkpoints are available [here](https://drive.google.com/file/d/1u9FRRBB3VovP1HxCAlpD9Lw4t4P6-Yq8/view?usp=share_link).
-
-**2. Stage 2: Fine-tuning**
-
-*   Use a curated dataset of image-text pairs in a dialogue format for further alignment. (See dataset/README\_2\_STAGE.md for dataset preparation instructions).
-*   Specify the path to the Stage 1 checkpoint in `train_configs/minigpt4_stage2_finetune.yaml`.
-*   Run the training command:
-
-    ```bash
-    torchrun --nproc-per-node NUM_GPU train.py --cfg-path train_configs/minigpt4_stage2_finetune.yaml
-    ```
-
-## Acknowledgements
-
-*   BLIP2
-*   Lavis
-*   Vicuna
+```bibtex
+@misc{zhu2022minigpt4,
+      title={MiniGPT-4: Enhancing Vision-language Understanding with Advanced Large Language Models}, 
+      author={Deyao Zhu and Jun Chen and Xiaoqian Shen and xiang Li and Mohamed Elhoseiny},
+      year={2023},
+}
+```
 
 ## License
 
-This project is licensed under the [BSD 3-Clause License](LICENSE.md). Many parts of the code are based on [Lavis](https://github.com/salesforce/LAVIS) licensed under the [BSD 3-Clause](LICENSE_Lavis.md).
-
-## Community
-
-[Join the AI commercial application exchange group](insert WeChat QR code image) and the knowledge planet (insert a WeChat QR code image)
+This project is licensed under the [BSD 3-Clause License](LICENSE.md). Code based on Lavis uses the [BSD 3-Clause License](LICENSE_Lavis.md).

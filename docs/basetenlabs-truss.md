@@ -1,15 +1,31 @@
-# Truss: Deploy AI/ML Models with Ease
+# Truss: The Simplest Way to Deploy and Serve Your AI/ML Models in Production
 
-**Truss simplifies the process of deploying and serving your machine learning models in production, offering a streamlined experience for developers.** ([Original Repo](https://github.com/basetenlabs/truss))
+**[View the original repository on GitHub](https://github.com/basetenlabs/truss)**
 
-## Key Features
+Truss simplifies the process of deploying and serving your machine learning models, enabling you to move from development to production quickly and efficiently.
 
-*   **Write Once, Run Anywhere:** Package your model code, dependencies, and weights in a consistent environment for seamless deployment across different platforms.
-*   **Fast Developer Loop:** Iterate quickly with a live reload server, enabling rapid testing and feedback without complex Docker or Kubernetes configurations.
-*   **Framework Agnostic:** Truss supports a wide range of Python ML frameworks, including `transformers`, `diffusers`, `PyTorch`, `TensorFlow`, `TensorRT`, and `Triton`.
-*   **Pre-built Examples:** Get started quickly with examples for popular models like Llama 2, Stable Diffusion XL, and Whisper.
+[![PyPI version](https://badge.fury.io/py/truss.svg)](https://badge.fury.io/truss)
+[![ci_status](https://github.com/basetenlabs/truss/actions/workflows/release.yml/badge.svg)](https://github.com/basetenlabs/truss/actions/workflows/release.yml)
 
-## Getting Started
+## Key Features of Truss
+
+*   **Write Once, Run Anywhere:** Package your model code, weights, and dependencies into a consistent environment that behaves the same in development and production.
+*   **Rapid Development Cycle:** Benefit from a fast feedback loop with a live reload server, eliminating the need for complex Docker and Kubernetes configurations.
+*   **Framework Agnostic:** Truss supports models built with any Python framework, including `transformers`, `diffusers`, `PyTorch`, `TensorFlow`, `TensorRT`, and `Triton`.
+*   **Easy Deployment:** Deploy your models to Baseten and other platforms (like AWS SageMaker in the future) with a simple command.
+*   **Simplified Model Serving:** Focus on your model logic, not infrastructure, with a streamlined model serving environment.
+
+## Popular Model Examples with Truss
+
+Get started quickly with pre-configured Truss examples for popular models:
+
+*   🦙 [Llama 2](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-7b-chat) (7B, 13B, and 70B)
+*   🎨 [Stable Diffusion XL](https://github.com/basetenlabs/truss-examples/tree/main/stable-diffusion/stable-diffusion-xl-1.0)
+*   🗣 [Whisper](https://github.com/basetenlabs/truss-examples/tree/main/whisper/whisper-truss)
+
+And explore [dozens more examples](https://github.com/basetenlabs/truss-examples/) to fit a variety of use cases.
+
+## Getting Started with Truss
 
 ### Installation
 
@@ -19,9 +35,7 @@ Install Truss using pip:
 pip install --upgrade truss
 ```
 
-### Quickstart: Text Classification
-
-This example demonstrates how to deploy a text classification pipeline using the `transformers` library.
+### Quickstart: Text Classification Example
 
 1.  **Create a Truss:**
 
@@ -29,17 +43,13 @@ This example demonstrates how to deploy a text classification pipeline using the
     truss init text-classification
     ```
 
-    Name your Truss (e.g., "Text classification").
-
-2.  **Navigate to the Directory:**
+    Give your Truss a name, such as "Text classification".
+2.  **Navigate to the New Directory:**
 
     ```bash
     cd text-classification
     ```
-
-3.  **Implement the Model (`model/model.py`):**
-
-    Create a `Model` class with `load()` and `predict()` methods:
+3.  **Implement Your Model (`model/model.py`):**  Define a `Model` class with `load()` (loads the model) and `predict()` (handles inference) methods.  For example:
 
     ```python
     from transformers import pipeline
@@ -55,9 +65,7 @@ This example demonstrates how to deploy a text classification pipeline using the
             return self._model(model_input)
     ```
 
-4.  **Add Model Dependencies (`config.yaml`):**
-
-    In `config.yaml`, add the following under the `requirements` section:
+4.  **Add Dependencies (`config.yaml`):**  Specify your model's dependencies.  For the text classification example, modify `config.yaml`:
 
     ```yaml
     requirements:
@@ -67,35 +75,34 @@ This example demonstrates how to deploy a text classification pipeline using the
 
 ## Deployment
 
-Truss integrates with Baseten for production model serving. Other remotes, like AWS SageMaker, are planned.
+Truss is backed by [Baseten](https://baseten.co), which provides the infrastructure for running ML models in production.
 
-1.  **Get a Baseten API Key:**  Sign up for a free account at [Baseten](https://app.baseten.co/signup/) and obtain your API key from [your account settings](https://app.baseten.co/settings/account/api_keys).
+### Get Your Baseten API Key
 
-2.  **Push Your Model:**
+Sign up for a [Baseten account](https://app.baseten.co/signup/) and obtain your API key from [your account settings](https://app.baseten.co/settings/account/api_keys).
 
-    ```bash
-    truss push
-    ```
+### Deploy Your Model
 
-    Monitor your model deployment on the [Baseten model dashboard](https://app.baseten.co/models/).
+Deploy your model to Baseten with:
 
-3.  **Invoke the Model:**
+```bash
+truss push
+```
 
-    ```bash
-    truss predict -d '"Truss is awesome!"'
-    ```
+Monitor your deployment in your [Baseten model dashboard](https://app.baseten.co/models/).
 
-    **Response:**
+### Invoke the Model
 
-    ```json
-    [
-      {
-        "label": "POSITIVE",
-        "score": 0.999873161315918
-      }
-    ]
-    ```
+Once deployed, test your model from the terminal:
 
-## Contributing
+```bash
+truss predict -d '"Truss is awesome!"'
+```
 
-We welcome contributions!  See our [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).
+## Truss Contributors
+
+Truss is built in collaboration with ML engineers worldwide and backed by Baseten.
+
+## Contribute
+
+We welcome contributions!  Please review our [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).

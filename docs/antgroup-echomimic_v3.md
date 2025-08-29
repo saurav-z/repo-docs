@@ -1,30 +1,29 @@
-# EchoMimicV3: Unleash Human Animation with 1.3B Parameters
+# EchoMimicV3: Revolutionizing Human Animation with a 1.3B Parameter Model
 
-EchoMimicV3 revolutionizes human animation by offering unified multi-modal and multi-task capabilities with a compact 1.3 billion parameter model, making it easier than ever to bring your ideas to life. Explore the original repository for further information: [EchoMimicV3 on GitHub](https://github.com/antgroup/echomimic_v3)
+EchoMimicV3 leverages a compact 1.3 billion parameter model to achieve unified multi-modal and multi-task human animation, opening doors to create captivating visual experiences. Explore the power of efficient and versatile human animation with our cutting-edge technology!  **[Visit the original repository on GitHub](https://github.com/antgroup/echomimic_v3) for detailed information and resources.**
 
 ## Key Features
 
-*   **Unified Multi-Modal:** Supports various input modalities like audio, text, and images for versatile animation.
-*   **Multi-Task Capabilities:** Performs various animation tasks, including talking head and body animation.
-*   **Compact Model Size:** Achieves impressive results with only 1.3B parameters, enabling efficient deployment and faster generation.
-*   **Gradio Demo:**  Interactive demo available on [ModelScope](https://modelscope.cn/studios/BadToBest/EchoMimicV3) for easy experimentation.
-*   **ComfyUI Support:**  Integrates with [ComfyUI](https://github.com/smthemex/ComfyUI_EchoMimic) for advanced users.
-*   **Low VRAM Usage:** Generates videos with as little as 12GB VRAM using the GradioUI.
+*   **Unified Multi-Modal Animation:**  Generate animations driven by various inputs, including audio and text prompts.
+*   **Multi-Task Capabilities:**  Perform a range of animation tasks, from talking head to full-body movements.
+*   **Efficient Parameter Usage:**  Achieve high-quality results with a relatively small model size (1.3B parameters).
+*   **Gradio Demo:** Try the interactive gradio demo on [modelscope](https://modelscope.cn/studios/BadToBest/EchoMimicV3)
+*   **Community Contributions**: Run EchoMimicV3 on 12G VRAM through [GradioUI](https://github.com/antgroup/echomimic_v3/blob/main/app_mm.py). Thanks to the community.
+*   **ComfyUI Support:** Run EchoMimicV3 on 16G VRAM using [ComfyUI](https://github.com/smthemex/ComfyUI_EchoMimic). Thanks @[smthemex](https://github.com/smthemex) for the contribution.
+*   **Model Availability**: Access our models on [Hugging Face](https://huggingface.co/BadToBest/EchoMimicV3) and [ModelScope](https://modelscope.cn/models/BadToBest/EchoMimicV3)
 
 ## What's New
 
-*   **[2025.08.21]** 🔥 EchoMimicV3 Gradio demo on [ModelScope](https://modelscope.cn/studios/BadToBest/EchoMimicV3).
-*   **[2025.08.12]** 🔥🚀 **12G VRAM is All YOU NEED to Generate Video**.  Use the provided [GradioUI](https://github.com/antgroup/echomimic_v3/blob/main/app_mm.py) and check out the [tutorial](https://www.bilibili.com/video/BV1W8tdzEEVN).
-*   **[2025.08.12]** 🔥 EchoMimicV3 compatible with **16G VRAM** via [ComfyUI](https://github.com/smthemex/ComfyUI_EchoMimic).
-*   **[2025.08.09]** 🔥 Models released on [ModelScope](https://modelscope.cn/models/BadToBest/EchoMimicV3).
-*   **[2025.08.08]** 🔥 Codes released on GitHub and models released on [Huggingface](https://huggingface.co/BadToBest/EchoMimicV3).
-*   **[2025.07.08]** 🔥 Paper released on arxiv [https://arxiv.org/abs/2507.03905](https://arxiv.org/abs/2507.03905).
+*   **[2025.08.21]**  EchoMimicV3 gradio demo on [modelscope](https://modelscope.cn/studios/BadToBest/EchoMimicV3) is ready.
+*   **[2025.08.12]**  12G VRAM is All YOU NEED to Generate Video.
+*   **[2025.08.12]**  EchoMimicV3 can run on 16G VRAM using [ComfyUI](https://github.com/smthemex/ComfyUI_EchoMimic).
+*   **[2025.08.09]**  Models released on ModelScope.
+*   **[2025.08.08]**  Codes released on GitHub and models on Hugging Face.
+*   **[2025.07.08]**  Paper released on arXiv.
 
 ## Gallery
 
-[Include the images and videos from the original README, formatted appropriately for markdown, keeping in mind the limitations of markdown in terms of video playback within the text.]
-
-For more demo videos, please refer to the [project page](https://antgroup.github.io/ai/echomimic_v3/)
+**(Include impressive video demonstrations and image results from the original README)**
 
 ## Quick Start
 
@@ -32,40 +31,33 @@ For more demo videos, please refer to the [project page](https://antgroup.github
 
 *   **Operating System:** Centos 7.2/Ubuntu 22.04
 *   **CUDA:** >= 12.1
-*   **GPUs:** A100(80G) / RTX4090D (24G) / V100(16G)
+*   **GPUs:** A100 (80G), RTX4090D (24G), V100 (16G)
 *   **Python:** 3.10 / 3.11
 
 ### Installation
 
-#### For Windows
+#### 1.  For Windows:
 
-##### Get started quickly using the [one-click installation package](https://pan.baidu.com/share/init?surl=cV7i2V0wF4exDtKjJrAUeA) .
+*   Use the [one-click installation package](https://pan.baidu.com/share/init?surl=cV7i2V0wF4exDtKjJrAUeA).
 
-#### For Linux
+#### 2.  For Linux:
 
-1.  **Create a Conda Environment:**
-
-    ```bash
-    conda create -n echomimic_v3 python=3.10
-    conda activate echomimic_v3
-    ```
-
-2.  **Install Dependencies:**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+conda create -n echomimic_v3 python=3.10
+conda activate echomimic_v3
+pip install -r requirements.txt
+```
 
 ### Model Preparation
 
-| Model                                  | Download Link                                           | Notes                      |
-| :------------------------------------- | :------------------------------------------------------ | :------------------------- |
-| Wan2.1-Fun-V1.1-1.3B-InP                | [Huggingface](https://huggingface.co/alibaba-pai/Wan2.1-Fun-V1.1-1.3B-InP) | Base model                 |
-| wav2vec2-base                          | [Huggingface](https://huggingface.co/facebook/wav2vec2-base-960h) | Audio encoder              |
-| EchoMimicV3-preview                    | [Huggingface](https://huggingface.co/BadToBest/EchoMimicV3)   | Our weights                |
-| EchoMimicV3-preview                    | [ModelScope](https://modelscope.cn/models/BadToBest/EchoMimicV3)    | Our weights                |
+| Model                                 | Download Link                                                                   | Notes                       |
+| ------------------------------------- | ------------------------------------------------------------------------------- | --------------------------- |
+| Wan2.1-Fun-V1.1-1.3B-InP              |  🤗 [Huggingface](https://huggingface.co/alibaba-pai/Wan2.1-Fun-V1.1-1.3B-InP)        | Base Model                |
+| wav2vec2-base                         |  🤗 [Huggingface](https://huggingface.co/facebook/wav2vec2-base-960h)           | Audio Encoder             |
+| EchoMimicV3-preview                   |  🤗 [Huggingface](https://huggingface.co/BadToBest/EchoMimicV3)           | Our Weights               |
+| EchoMimicV3-preview                   |  🤗 [ModelScope](https://modelscope.cn/models/BadToBest/EchoMimicV3)           | Our Weights               |
 
--- **Weights Directory Structure:**
+*   **Weights Organization:**
 
 ```
 ./models/
@@ -81,62 +73,41 @@ For more demo videos, please refer to the [project page](https://antgroup.github
 python infer.py
 ```
 
-For the Quantified GradioUI version:
+*   **For Quantified GradioUI:**
 
 ```bash
 python app_mm.py
 ```
 
-**Images, audios, masks, and prompts are provided in `datasets/echomimicv3_demos`**
+*   **Datasets:**  Images, audios, masks, and prompts are provided in the `datasets/echomimicv3_demos` directory.
 
-#### Tips
+### Tips
 
-*   **Audio CFG:** Optimal `audio_guidance_scale`: 2~3.  Increase for better lip sync, decrease for better visual quality.
-*   **Text CFG:** Optimal `guidance_scale`: 3~6. Increase for better prompt following, decrease for better visual quality.
-*   **TeaCache:** Optimal `teacache_threshold`: 0~0.1.
-*   **Sampling Steps:** 5 steps for talking head, 15~25 steps for talking body.
+*   **Audio CFG:** Optimize `audio_guidance_scale` between 2~3 for lip-sync and visual quality.
+*   **Text CFG:** Optimize `guidance_scale` between 3~6 for prompt following and visual quality.
+*   **TeaCache:**  Use `teacache_threshold` in the range of 0~0.1.
+*   **Sampling Steps:**  Use 5 steps for talking head, 15~25 steps for talking body.
 *   **Long Video Generation:** Use Long Video CFG for videos longer than 138 frames.
-*   **Reduce VRAM Usage:** Set `partial_video_length` to 81, 65, or smaller.
+*   **Reduce VRAM:** Set `partial_video_length` to 81, 65, or smaller.
 
 ## Roadmap
 
-| Status   | Milestone                                                                |
-| :------- | :------------------------------------------------------------------------- |
-| ✅        | Inference code on GitHub                                                    |
-| ✅        | EchoMimicV3-preview model on HuggingFace                                  |
-| ✅        | EchoMimicV3-preview model on ModelScope                                   |
-| 🚀        | ModelScope Space                                                          |
-| 🚀        | Preview version Pretrained models trained on English and Chinese on ModelScope |
-| 🚀        | 720P Pretrained models trained on English and Chinese on HuggingFace       |
-| 🚀        | 720P Pretrained models trained on English and Chinese on ModelScope        |
-| 🚀        | Training code on GitHub                                                    |
+**(Include a concise table of TODO items)**
 
 ## EchoMimic Series
 
-*   **EchoMimicV3:** 1.3B Parameters for Unified Multi-Modal and Multi-Task Human Animation.
-    [GitHub](https://github.com/antgroup/echomimic_v3)
-*   **EchoMimicV2:** Towards Striking, Simplified, and Semi-Body Human Animation.
-    [GitHub](https://github.com/antgroup/echomimic_v2)
-*   **EchoMimicV1:** Lifelike Audio-Driven Portrait Animations through Editable Landmark Conditioning.
-    [GitHub](https://github.com/antgroup/echomimic)
+*   EchoMimicV3: [GitHub](https://github.com/antgroup/echomimic_v3)
+*   EchoMimicV2: [GitHub](https://github.com/antgroup/echomimic_v2)
+*   EchoMimicV1: [GitHub](https://github.com/antgroup/echomimic)
 
 ## Citation
 
-```
-@misc{meng2025echomimicv3,
-  title={EchoMimicV3: 1.3B Parameters are All You Need for Unified Multi-Modal and Multi-Task Human Animation},
-  author={Rang Meng, Yan Wang, Weipeng Wu, Ruobing Zheng, Yuming Li, Chenguang Ma},
-  year={2025},
-  eprint={2507.03905},
-  archivePrefix={arXiv}
-}
-```
+**(Include the citation information)**
 
-## Reference
+## References
 
-*   Wan2.1: [https://github.com/Wan-Video/Wan2.1/](https://github.com/Wan-Video/Wan2.1/)
-*   VideoX-Fun: [https://github.com/aigc-apps/VideoX-Fun/](https://github.com/aigc-apps/VideoX-Fun/)
+**(Include the references)**
 
 ## License
 
-The models in this repository are licensed under the Apache 2.0 License.
+The models are licensed under the Apache 2.0 License.

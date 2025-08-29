@@ -1,18 +1,29 @@
-# 🐍 Comprehensive Python Cheatsheet 🔗
+# Comprehensive Python Cheatsheet 🔗
 
-**Get a comprehensive Python reference in a single, easy-to-use resource.  This cheatsheet offers quick access to essential Python concepts, syntax, and libraries. Download the [text file](https://raw.githubusercontent.com/gto76/python-cheatsheet/main/README.md), fork it on [GitHub](https://github.com/gto76/python-cheatsheet), or check out the [FAQ](https://github.com/gto76/python-cheatsheet/wiki/Frequently-Asked-Questions).**
+**Master Python with this comprehensive cheatsheet, your go-to resource for quick code lookups and efficient Python programming.**
 
-*   **Collections:** Lists, Dictionaries, Sets, Tuples, Ranges, Enumerates, Iterators, and Generators
-*   **Types:** Types, Strings, Regular Expressions, Format, Numbers, Combinatorics, and Datetime.
-*   **Syntax:** Functions, Inline, Imports, Decorators, Classes, Duck Types, Enums, and Exceptions.
-*   **System:** Exit, Print, Input, Command Line Arguments, Open, Paths, and OS Commands.
-*   **Data:** JSON, Pickle, CSV, SQLite, Bytes, Struct, Array, Memory View, and Deque.
-*   **Advanced:** Operator, Match Statement, Logging, Introspection, Threading, and Coroutines.
-*   **Libraries:** Progress Bar, Plot, Table, Console App, GUI, Scraping, Web App, and Profiling.
-*   **Multimedia:** NumPy, Image, Animation, Audio, Synthesizer, Pygame, Pandas, and Plotly.
+This cheatsheet provides a concise overview of Python's core features, from fundamental data structures to advanced libraries. Whether you're a beginner or an experienced developer, this guide will help you write better, more efficient Python code.
 
-## Main 🔗
+**Key Features:**
 
+*   **Organized Categories:** Explore sections dedicated to Collections, Types, Syntax, System, Data, Advanced topics, Libraries, and Multimedia.
+*   **Concise Code Examples:** Find clear, easy-to-understand code snippets for each concept.
+*   **Practical Use Cases:** Learn how to apply Python features in real-world scenarios.
+*   **SEO-Optimized:** Find information about Python by keywords.
+*   **Complete Reference:** A comprehensive overview of the Python language.
+
+**Download the full cheatsheet here: [GitHub Repository](https://github.com/gto76/python-cheatsheet)**
+
+**1. Collections:**
+**2. Types:**
+**3. Syntax:**
+**4. System:**
+**5. Data:**
+**6. Advanced:**
+**7. Libraries:**
+**8. Multimedia:**
+
+## Main
 ```python
 if __name__ == '__main__':      # Skips next line if file was imported.
     main()                      # Runs `def main(): ...` function.
@@ -99,8 +110,7 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 {k: v for k, v in <dict>.items() if k in keys}  # Filters the dictionary by specified keys.
 ```
 
-### Counter 🔗
-
+### Counter
 ```python
 >>> from collections import Counter
 >>> counter = Counter(['blue', 'blue', 'blue', 'red', 'red'])
@@ -135,11 +145,9 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 <set>.discard(<el>)                             # Doesn't raise an error.
 ```
 
-### Frozen Set 🔗
-
+### Frozen Set
 *   **Is immutable and hashable.**
 *   **That means it can be used as a key in a dictionary or as an element in a set.**
-
 ```python
 <frozenset> = frozenset(<collection>)
 ```
@@ -147,17 +155,14 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 ## Tuple 🔗
 
 **Tuple is an immutable and hashable list.**
-
 ```python
 <tuple> = ()                               # Empty tuple.
 <tuple> = (<el>,)                          # Or: <el>,
 <tuple> = (<el_1>, <el_2> [, ...])         # Or: <el_1>, <el_2> [, ...]
 ```
 
-### Named Tuple 🔗
-
+### Named Tuple
 **Tuple's subclass with named elements.**
-
 ```python
 >>> from collections import namedtuple
 >>> Point = namedtuple('Point', 'x y')
@@ -171,7 +176,6 @@ Point(x=1, y=2)
 ## Range 🔗
 
 **Immutable and hashable sequence of integers.**
-
 ```python
 <range> = range(stop)                      # I.e. range(to_exclusive).
 <range> = range(start, stop)               # I.e. range(from_inclusive, to_exclusive).
@@ -201,8 +205,7 @@ for i, el in enumerate(<coll>, start=0):   # Returns next element and its index 
 <list> = list(<iter>)                      # Returns a list of iterator's remaining elements.
 ```
 
-### Itertools 🔗
-
+### Itertools
 ```python
 import itertools as it
 ```
@@ -258,13 +261,11 @@ def count(start, step):
 ```
 
 #### Some types do not have built-in names, so they must be imported:
-
 ```python
 from types import FunctionType, MethodType, LambdaType, GeneratorType, ModuleType
 ```
 
-### Abstract Base Classes 🔗
-
+### Abstract Base Classes
 **Each abstract base class specifies a set of virtual subclasses. These classes are then recognized by isinstance() and issubclass() as subclasses of the ABC, although they are really not. ABC can also manually decide whether or not a specific class is its virtual subclass, usually based on which methods the class has implemented. For instance, Iterable ABC looks for method iter(), while Collection ABC looks for iter(), contains() and len().**
 
 ```python
@@ -338,8 +339,7 @@ True
 *   **Use `'unicodedata.normalize("NFC", <str>)'` on strings like `'Motörhead'` before comparing them to other strings, because `'ö'` can be stored as one or two characters.**
 *   **`'NFC'` converts such characters to a single character, while `'NFD'` converts them to two.**
 
-### Property Methods 🔗
-
+### Property Methods
 ```python
 <bool> = <str>.isdecimal()                   # Checks for [0-9]. Also [०-९] and [٠-٩].
 <bool> = <str>.isdigit()                     # Checks for [²³¹…] and isdecimal().
@@ -370,8 +370,7 @@ import re
 *   **Argument `'flags=re.DOTALL'` makes `'.'` also accept the `'\n'` (besides all other chars).**
 *   **`'re.compile(<regex>)'` returns a Pattern object with methods sub(), findall(), etc.**
 
-### Match Object 🔗
-
+### Match Object
 ```python
 <str>   = <Match>.group()                         # Returns the whole match. Also group(0).
 <str>   = <Match>.group(1)                        # Returns part inside the first brackets.
@@ -380,8 +379,7 @@ import re
 <int>   = <Match>.end()                           # Returns its exclusive end index.
 ```
 
-### Special Sequences 🔗
-
+### Special Sequences
 ```python
 '\d' == '[0-9]'                                   # Also [०-९…]. Matches a decimal character.
 '\w' == '[a-zA-Z0-9_]'                            # Also [ª²³…]. Matches an alphanumeric or _.
@@ -393,14 +391,13 @@ import re
 
 ## Format 🔗
 
-```perl
+```python
 <str> = f'{<el_1>}, {<el_2>}'            # Curly braces can also contain expressions.
 <str> = '{}, {}'.format(<el_1>, <el_2>)  # Same as '{0}, {a}'.format(<el_1>, a=<el_2>).
 <str> = '%s, %s' % (<el_1>, <el_2>)      # Redundant and inferior C-style formatting.
 ```
 
-### Example 🔗
-
+### Example
 ```python
 >>> Person = collections.namedtuple('Person', 'name height')
 >>> person = Person('Jean-Luc', 187)
@@ -408,8 +405,7 @@ import re
 'Jean-Luc is 1.87 meters tall.'
 ```
 
-### General Options 🔗
-
+### General Options
 ```python
 {<el>:<10}                               # '<el>      '
 {<el>:^10}                               # '   <el>   '
@@ -423,8 +419,7 @@ import re
 *   **Adding `'='` to the expression prepends it to the output: `f'{1+1=}'` returns `'1+1=2'`.**
 *   **Adding `'!r'` to the expression converts object to string by calling its [repr()](#class) method.**
 
-### Strings 🔗
-
+### Strings
 ```python
 {'abcde':10}                             # 'abcde     '
 {'abcde':10.3}                           # 'abc       '
@@ -432,8 +427,7 @@ import re
 {'abcde'!r:10}                           # "'abcde'   "
 ```
 
-### Numbers 🔗
-
+### Numbers
 ```python
 {123456:10}                              # '    123456'
 {123456:10,}                             # '   123,456'
@@ -444,8 +438,7 @@ import re
 {-123456: }                              # '-123456'
 ```
 
-### Floats 🔗
-
+### Floats
 ```python
 {1.23456:10.3}                           # '      1.23'
 {1.23456:10.3f}                          # '     1.235'
@@ -454,7 +447,6 @@ import re
 ```
 
 #### Comparison of presentation types:
-
 ```text
 +--------------+----------------+----------------+----------------+----------------+
 |              |    {<float>}   |   {<float>:f}  |   {<float>:e}  |   {<float>:%}  |
@@ -487,8 +479,7 @@ import re
 *   **When both rounding up and rounding down are possible, the one that returns result with even last digit is chosen. That makes `'{6.5:.0f}'` a `'6'` and `'{7.5:.0f}'` an `'8'`.**
 *   **This rule only effects numbers that can be represented exactly by a float (`.5`, `.25`, …).**
 
-### Ints 🔗
-
+### Ints
 ```python
 {90:c}                                   # 'Z'. Unicode character with value 90.
 {90:b}                                   # '1011010'. Binary representation of the int.
@@ -511,8 +502,7 @@ import re
 *   **Precision of decimal operations is set with: `'decimal.getcontext().prec = <int>'`.**
 *   **Bools can be used anywhere ints can, because bool is a subclass of int: `'True + 1 == 2'`.**
 
-### Built-in Functions 🔗
-
+### Built-in Functions
 ```python
 <num> = pow(<num>, <num>)                      # E.g. `pow(2, 3) == 2 ** 3 == 8`.
 <num> = abs(<num>)                             # E.g. `abs(complex(3, 4)) == 5`.
@@ -521,8 +511,7 @@ import re
 <num> = sum(<collection>)                      # Also math.prod(<collection>).
 ```
 
-### Math 🔗
-
+### Math
 ```python
 from math import floor, ceil, trunc            # They convert floats into integers.
 from math import pi, inf, nan, isnan           # `inf * 0` and `nan + 1` return nan.
@@ -531,15 +520,13 @@ from math import sin, cos, tan                 # Also: asin, acos, degrees, radi
 from math import log, log10, log2              # Log accepts base as second argument.
 ```
 
-### Statistics 🔗
-
+### Statistics
 ```python
 from statistics import mean, median, mode      # Mode returns the most common item.
 from statistics import variance, stdev         # Also: pvariance, pstdev, quantiles.
 ```
 
-### Random 🔗
-
+### Random
 ```python
 from random import random, randint, uniform    # Also: gauss, choice, shuffle, seed.
 ```
@@ -552,16 +539,14 @@ from random import random, randint, uniform    # Also: gauss, choice, shuffle, s
 shuffle(<list>)                                # Works on all mutable sequences.
 ```
 
-### Hexadecimal Numbers 🔗
-
+### Hexadecimal Numbers
 ```python
 <int> = 0x<hex>                                # E.g. `0xFF == 255`. Also 0b<bin>.
 <int> = int('±<hex>', 16)                      # Also int('±0x<hex>/±0b<bin>', 0).
 <str> = hex(<int>)                             # Returns '[-]0x<hex>'. Also bin().
 ```
 
-### Bitwise Operators 🔗
-
+### Bitwise Operators
 ```python
 <int> = <int> & <int>                          # E.g. `0b1100 & 0b1010 == 0b1000`.
 <int> = <int> | <int>                          # E.g. `0b1100 | 0b1010 == 0b1110`.
@@ -609,4 +594,9 @@ import zoneinfo, dateutil.tz
 
 ```python
 <D>  = date(year, month, day)               # Only accepts valid dates from 1 to 9999 AD.
-<T>  = time(hour=0, minute=0, second=0)     # Also: `microsecond=0, tzinfo=None, fold=0
+<T>  = time(hour=0, minute=0, second=0)     # Also: `microsecond=0, tzinfo=None, fold=0`.
+<DT> = datetime(year, month, day, hour=0)   # Also: `minute=0, second=0, microsecond=0, …`.
+<TD> = timedelta(weeks=0, days=0, hours=0)  # Also: `minutes=0, seconds=0, microseconds=0`.
+```
+
+*   **Times and datetimes that have defined timezone are called aware and ones that don't, naive. If time or datetime object is naive, it is presumed to be in the system

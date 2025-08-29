@@ -1,6 +1,6 @@
-# DataChain: The Python-Powered AI Data Warehouse for Unstructured Data
+# DataChain: Your Python-Powered AI Data Warehouse for Unstructured Data
 
-**DataChain empowers you to transform, analyze, and version unstructured data like images, audio, video, text, and PDFs with ease.** [(View on GitHub)](https://github.com/iterative/datachain)
+**DataChain** transforms and analyzes unstructured data like images, audio, video, text, and PDFs, making it easier to build AI-powered applications. Learn more on [GitHub](https://github.com/iterative/datachain).
 
 [![PyPI](https://img.shields.io/pypi/v/datachain.svg)](https://pypi.org/project/datachain/)
 [![Python Version](https://img.shields.io/pypi/pyversions/datachain)](https://pypi.org/project/datachain)
@@ -8,45 +8,42 @@
 [![Tests](https://github.com/iterative/datachain/actions/workflows/tests.yml/badge.svg)](https://github.com/iterative/datachain/actions/workflows/tests.yml)
 [![DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/iterative/datachain)
 
-## Key Features
+## Key Features:
 
-*   **Version Control for Unstructured Data:**
-    *   Version your data without copying or moving files.
-    *   Supports a wide range of data types: images, videos, text, PDFs, and more.
-    *   Unites files and metadata into persistent, versioned, and columnar datasets.
-*   **Pythonic Interface:**
-    *   Work with Python objects and their fields directly.
-    *   Process data efficiently at scale using built-in parallelization.
-    *   No SQL or Spark knowledge needed.
-*   **Powerful Data Transformation & Analytics:**
-    *   Enrich data with metadata from local AI models or LLM APIs.
-    *   Filter, join, and group datasets by metadata.
-    *   Perform high-performance vectorized operations on Python objects.
-    *   Integrate with PyTorch and TensorFlow.
-*   **Incremental Processing:**
-    *   Efficiently process only new or changed files (delta processing).
-    *   Automatically reprocess files with errors (retry processing).
+*   **Versioned Multimodal Data:**
+    *   Version unstructured data without data duplication.
+    *   Supports images, video, text, PDFs, JSONs, CSVs, parquet, and more.
+    *   Unites files and metadata into persistent, versioned, columnar datasets.
+
+*   **Pythonic and User-Friendly:**
+    *   Operate on Python objects and object fields (float scores, strings, matrixes).
+    *   Run Python code on terabyte-scale datasets with built-in parallelization and memory efficiency.
+    *   No SQL or Spark is required.
+
+*   **Data Enrichment and Processing:**
+    *   Generate metadata using local AI models and LLM APIs.
+    *   Filter, join, and group datasets by metadata; search by vector embeddings.
+    *   High-performance vectorized operations (sum, count, avg, etc.) on Python objects.
+    *   Integrate with Pytorch and Tensorflow, or export data back into storage.
 
 ## Use Cases
 
-1.  **ETL:** Pythonic framework for transforming and enriching unstructured data, applying models like LLMs.
-2.  **Analytics:** Analyze your data at scale with a DataFrame-like API and vectorized engine.
-3.  **Versioning:** Version unstructured data without data duplication.
-4.  **Incremental Processing:** Utilize Delta and Retry features for efficient data pipelines.
+*   **ETL:** Pythonic framework for describing and running unstructured data transformations and enrichments.
+*   **Analytics:** DataChain datasets offer dataframe-like APIs for large-scale analytics.
+*   **Versioning:** Version unstructured data without moving or creating data copies.
+*   **Incremental Processing:** Efficient processing workflows with delta and retry features.
 
 ## Getting Started
 
-Get started quickly with DataChain:
+Install DataChain using pip:
 
 ```bash
 pip install datachain
 ```
 
-Explore the [Quick Start](https://docs.datachain.ai/quick-start) and [Docs](https://docs.datachain.ai/) for comprehensive guides and tutorials.
+For detailed documentation and quick start guides, please visit the [DataChain Documentation](https://docs.datachain.ai/).
 
-## Examples
-
-### Download Subset of Files Based on Metadata
+## Example: Downloading a Subset of Files Based on Metadata
 
 ```python
 import datachain as dc
@@ -57,12 +54,12 @@ images = dc.read_storage("gs://datachain-demo/dogs-and-cats/*jpg", anon=True)
 images_id = images.map(id=lambda file: file.path.split('.')[-2])
 annotated = images_id.merge(meta, on="id", right_on="meta.id")
 
-likely_cats = annotated.filter((dc.Column("meta.inference.confidence") > 0.93) \
+likely_cats = annotated.filter((dc.Column("meta.inference.confidence") > 0.93)
                                & (dc.Column("meta.inference.class_") == "cat"))
 likely_cats.to_storage("high-confidence-cats/", signal="file")
 ```
 
-### Incremental Processing with Error Handling
+## Example: Incremental Processing with Error Handling
 
 ```python
 import datachain as dc
@@ -106,7 +103,12 @@ chain = (
 )
 ```
 
-### LLM based text-file evaluation
+## Example: LLM-Based Text File Evaluation
+
+```shell
+$ pip install mistralai # Requires version >=1.0.0
+$ export MISTRAL_API_KEY=_your_key_
+```
 
 ```python
 import os
@@ -116,19 +118,19 @@ import datachain as dc
 PROMPT = "Was this dialog successful? Answer in a single word: Success or Failure."
 
 def eval_dialogue(file: dc.File) -> bool:
-    client = Mistral(api_key = os.environ["MISTRAL_API_KEY"])
-    response = client.chat.complete(
-        model="open-mixtral-8x22b",
-        messages=[{"role": "system", "content": PROMPT},
-                    {"role": "user", "content": file.read()}])
-    result = response.choices[0].message.content
-    return result.lower().startswith("success")
+     client = Mistral(api_key = os.environ["MISTRAL_API_KEY"])
+     response = client.chat.complete(
+         model="open-mixtral-8x22b",
+         messages=[{"role": "system", "content": PROMPT},
+                   {"role": "user", "content": file.read()}])
+     result = response.choices[0].message.content
+     return result.lower().startswith("success")
 
 chain = (
-    dc.read_storage("gs://datachain-demo/chatbot-KiT/", column="file", anon=True)
-    .settings(parallel=4, cache=True)
-    .map(is_success=eval_dialogue)
-    .save("mistral_files")
+   dc.read_storage("gs://datachain-demo/chatbot-KiT/", column="file", anon=True)
+   .settings(parallel=4, cache=True)
+   .map(is_success=eval_dialogue)
+   .save("mistral_files")
 )
 
 successful_chain = chain.filter(dc.Column("is_success") == True)
@@ -139,22 +141,22 @@ print(f"{successful_chain.count()} files were exported")
 
 ## Community and Support
 
-*   [Documentation](https://docs.datachain.ai/)
+*   [Docs](https://docs.datachain.ai/)
 *   [File an issue](https://github.com/iterative/datachain/issues)
 *   [Discord Chat](https://dvc.org/chat)
 *   [Email](mailto:support@dvc.org)
 *   [Twitter](https://twitter.com/DVCorg)
 
-## DataChain Studio Platform
-
-`DataChain Studio` is a proprietary solution for teams that offers:
-
-*   **Centralized dataset registry** to manage data, code and dependencies in one place.
-*   **Data Lineage** for data sources as well as derivative dataset.
-*   **UI for Multimodal Data** like images, videos, and PDFs.
-*   **Scalable Compute** to handle large datasets (100M+ files) and in-house AI model inference.
-*   **Access control** including SSO and team-based collaboration.
-
 ## Contributing
 
-We welcome contributions! See the [Contributor Guide](https://docs.datachain.ai/contributing) to learn more.
+We welcome contributions! Please see the [Contributor Guide](https://docs.datachain.ai/contributing) for more information.
+
+## DataChain Studio Platform
+
+[DataChain Studio](https://studio.datachain.ai/) is a proprietary solution for teams, offering:
+
+*   Centralized dataset registry.
+*   Data Lineage.
+*   UI for Multimodal Data.
+*   Scalable Compute.
+*   Access control.

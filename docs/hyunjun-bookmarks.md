@@ -1,145 +1,141 @@
-# Comprehensive Knowledge Repository: Your Go-To Source for Diverse Topics
+# Comprehensive Bookmark Collection: Your Go-To Resource for Diverse Topics
 
-This repository serves as a comprehensive and well-organized collection of bookmarks, providing valuable resources across a wide spectrum of subjects, from technology and programming to lifestyle and personal development.  For more details, visit the original repository: [https://github.com/hyunjun/bookmarks](https://github.com/hyunjun/bookmarks)
+This repository offers a meticulously curated collection of bookmarks spanning a wide range of subjects, from programming and data science to lifestyle and personal development. (Original repository available at: [https://github.com/hyunjun/bookmarks](https://github.com/hyunjun/bookmarks))
 
-## Key Features
+## Key Features:
 
-*   **Extensive Topic Coverage:** Explore a vast library of bookmarks spanning numerous categories, ensuring you can find resources relevant to your interests.
-*   **Well-Organized Structure:** The bookmarks are neatly categorized, allowing for easy navigation and quick access to the information you need.
-*   **Diverse Subject Areas:** Discover resources related to technology, data science, programming languages, and much more.
-*   **Programming Resources:** Dive deep into programming with dedicated sections on various languages, including Python, JavaScript, Java, and more.
-*   **Data Science & Machine Learning:** Explore resources on data science, including AI, machine learning, deep learning, and related technologies.
-*   **Cloud Computing:** Find bookmarks related to cloud platforms such as AWS, Azure, and Google Cloud Platform.
-*   **Personal Development:** Discover bookmarks related to various topics such as self-control, speaking, and writing.
+*   **Extensive Coverage:** Explore bookmarks categorized into numerous subjects, including:
+    *   **Lifestyle & Personal Development:** Topics like art, business, finance, health, travel, writing, and more.
+    *   **Programming & Technology:** Covering programming languages, data science, cloud computing, and software development.
+*   **Organized Structure:**  Bookmarks are neatly organized by topic for easy navigation and quick access to the information you need.
+*   **Updated Regularly:** This collection is constantly refined and expanded to provide you with the most relevant and up-to-date resources.
 
-## Categories Overview
-
-Here's a breakdown of the categories covered within this repository:
+## Categories Covered:
 
 ### Miscellaneous
-
-*   Jeju
-*   Animal
-*   App
-*   Art
-*   Baby
-*   Book
-*   Business
-*   Drama
-*   Economy
-*   Education
-*   English
-*   Finance
-*   Food
-*   Game
-*   Health
-*   History
-*   House
-*   Life
-*   Nomad & Remote
-*   Math
-    *   Statistics
-*   Media
-*   Myth
-*   People
-*   Philosophy
-*   Politics
-*   Presentation
-    *   Dev Small Talk
-    *   Speed
-*   Product
-*   Psychology
-*   Religion
-*   Robot
-*   Self Control
-*   Science
-*   Shopping
-*   Speaking
-*   Sports
-*   Travel
-*   Writing
+*   [Miscellaneous](miscellaneous.md)
+    *   [제주도](jeju.md)
+    *   [animal](animal.md)
+    *   [app](app.md)
+    *   [art](art.md)
+    *   [baby](baby.md)
+    *   [book](book.md)
+    *   [business](business.md)
+    *   [drama](drama.md)
+    *   [economy](economy.md)
+    *   [education](education.md)
+    *   [english](english.md)
+    *   [finance](finance.md)
+    *   [food](food.md)
+    *   [game](game.md)
+    *   [health](health.md)
+    *   [history](history.md)
+    *   [house](house.md)
+    *   [life](life.md)
+    *   [nomad & remote](nomad.md)
+    *   [math](math.md)
+        *   [statistics](statistics.md)
+    *   [media](media.md)
+    *   [myth](myth.md)
+    *   [people](people.md)
+    *   [philosophy](philosophy.md)
+    *   [politics](politics.md)
+    *   [presentation](presentation.md)
+        *   [dev small talk](presentation/dev_small_talk.md)
+        *   [speed](presentation/speed.md)
+    *   [product](product.md)
+    *   [psychology](psychology.md)
+    *   [religion](religion.md)
+    *   [robot](robot.md)
+    *   [self control](self_control.md)
+    *   [science](science.md)
+    *   [shopping](shopping.md)
+    *   [speaking](speaking.md)
+    *   [sports](sports.md)
+    *   [travel](travel.md)
+    *   [writing](writing.md)
 
 ### Programming
-
-*   Algorithm
-*   Anomaly Detection
-*   Apache
-    *   Hbase
-    *   Spark
-*   Bitcoin
-*   Cloud
-    *   AWS
-    *   Azure
-    *   Google Cloud Platform (GCP)
-*   Coursera
-*   Data Science
-    *   Artificial Intelligence
-    *   Data
-    *   Data Visualization
-    *   Deep Learning
-    *   Keras
-    *   Machine Learning
-    *   NLP
-    *   Pytorch
-    *   Tensorflow
-    *   Vision
-*   Docker
-*   Editor
-    *   Emacs
-    *   Vim
-*   Elasticsearch & Lucene
-*   Game
-*   GIS
-*   Git
-*   Graph
-*   Hadoop
-*   Hardware
-*   Interview
-*   JSON
-*   Linux
-*   Mobile
-    *   Android
-    *   Flutter
-    *   iOS
-*   Monitoring
-*   NoSQL
-    *   Hbase
-    *   Redis
-*   Open Source
-*   Programmer
-*   Programming
-    *   Concurrency
-    *   Data Oriented Design (DOD)
-    *   Functional Programming
-    *   Logging
-    *   Network
-    *   Object Oriented Programming (OOP)
-    *   Regular Expression
-*   Programming Books
-*   Programming Language
-    *   Bash
-    *   C
-    *   Clojure
-    *   C++
-    *   C#
-    *   Elixir
-    *   Erlang
-    *   Go
-    *   Haskell
-    *   Java
-    *   JavaScript
-    *   Julia
-    *   Kotlin
-    *   Lisp
-    *   .NET
-    *   OCaml
-    *   PHP
-    *   Python
-    *   R
-    *   Ruby
-    *   Rust
-    *   Scala
-*   SQL
-*   SVN
-*   Time Series
-*   Web
+*   [programming](programming.md)
+    *   [algorithm](algorithm.md)
+    *   [anomaly detection](anomaly_detection.md)
+    *   [apache](apache.md)
+        *   [hbase](hbase.md)
+        *   [spark](spark.md)
+    *   [bitcoin](bitcoin.md)
+    *   Cloud
+        *   [aws](aws.md)
+        *   [azure](azure.md)
+        *   [google cloud platform gcp](gcp.md)
+    *   [Coursera](coursera.md)
+    *   [data science](data_science.md)
+        *   [artificial intelligence](artificial_intelligence.md)
+        *   [data](data.md)
+        *   [data visualization](data_visualization.md)
+        *   [deep learning](deep_learning.md)
+        *   [keras](keras.md)
+        *   [machine learning](machine_learning.md)
+        *   [NLP](nlp.md)
+        *   [pytorch](pytorch.md)
+        *   [tensorflow](tensorflow.md)
+        *   [vision](vision.md)
+    *   [docker](docker.md)
+    *   editor
+        *   [emacs](emacs.md)
+        *   [vim](vim.md)
+    *   [elasticsearch & lucene](elasticsearch_lucene.md)
+    *   [game](game.md)
+    *   [gis](gis.md)
+    *   [git](git.md)
+    *   [graph](graph.md)
+    *   [hadoop](hadoop.md)
+    *   [hardware](hardware.md)
+    *   [interview](interview.md)
+    *   [json](json.md)
+    *   [linux](linux.md)
+    *   Mobile
+        *   [android](android.md)
+        *   [Flutter](flutter.md)
+        *   [iOS](ios.md)
+    *   [monitoring](monitoring.md)
+    *   [NoSQL](nosql.md)
+        *   [hbase](hbase.md)
+        *   [redis](redis.md)
+    *   [open source](open_source.md)
+    *   [programmer](programmer.md)
+    *   [programming](programming.md)
+        *   [concurrency](concurrency.md)
+        *   [data oriented design](dod.md)
+        *   [functional programming](functional_programming.md)
+        *   [logging](logging.md)
+        *   [network](network.md)
+        *   [object oriented programming](oop.md)
+        *   [regular expression](regular_expression.md)
+    *   [programming books](programming_books.md)
+    *   [programming language](programming_language.md)
+        *   [bash](bash.md)
+        *   [c](c.md)
+        *   [clojure](clojure.md)
+        *   [c++](cpp.md)
+        *   [c#](csharp.md)
+        *   [elixir](elixir.md)
+        *   [erlang](erlang.md)
+        *   [go](go.md)
+        *   [haskell](haskell.md)
+        *   [java](java.md)
+        *   [javascript](javascript.md)
+        *   [julia](julia.md)
+        *   [kotlin](kotlin.md)
+        *   [lisp](lisp.md)
+        *   [.net](dotnet.md)
+        *   [ocaml](ocaml.md)
+        *   [php](php.md)
+        *   [python](python.md)
+        *   [R](r.md)
+        *   [ruby](ruby.md)
+        *   [rust](rust.md)
+        *   [scala](scala.md)
+    *   [sql](sql.md)
+    *   [svn](svn.md)
+    *   [time series](time_series.md)
+    *   [web](web.md)

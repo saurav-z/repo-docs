@@ -1,6 +1,6 @@
-# MonkeyOCR: Unlock Document Structure with AI-Powered Parsing
+# MonkeyOCR: Effortlessly Parse Documents with Unmatched Accuracy and Speed (🚀 New MonkeyOCR-pro-1.2B!)
 
-**Transform documents into structured data with MonkeyOCR, a cutting-edge solution that excels at document parsing using a Structure-Recognition-Relation (SRR) triplet paradigm. [See the original repository](https://github.com/Yuliang-Liu/MonkeyOCR) for more details.**
+**MonkeyOCR** empowers you to unlock the structure within your documents using a cutting-edge Structure-Recognition-Relation (SRR) triplet paradigm, surpassing the capabilities of traditional, multi-tool approaches and large multimodal models.  [Explore the original repository on GitHub](https://github.com/Yuliang-Liu/MonkeyOCR).
 
 [![arXiv](https://img.shields.io/badge/Arxiv-MonkeyOCR-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2506.05218)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace%20Weights-black.svg?logo=HuggingFace)](https://huggingface.co/echo840/MonkeyOCR)
@@ -11,50 +11,92 @@
 
 ## Key Features
 
-*   **SRR Paradigm:** Simplifies document parsing, avoiding complex multi-tool pipelines.
-*   **Superior Performance:** MonkeyOCR-pro-1.2B outperforms other models on key benchmarks.
-    *   7.4% improvement on Chinese documents compared to MonkeyOCR-3B.
-    *   Up to 36% speed improvement over MonkeyOCR-pro-3B.
-    *   Outperforms Nanonets-OCR-3B by 7.3% on olmOCR-Bench.
-    *   Achieves top results on OmniDocBench, even surpassing closed-source and extra-large open-source VLMs.
-*   **Speed and Efficiency:** Optimized for fast inference across various GPU configurations.
-*   **Easy to Use:** Includes a user-friendly Gradio demo and FastAPI service for seamless integration.
-*   **Open Source & Community Driven:**  Supported by a dedicated community, offering flexibility and customization.
+*   **SRR Paradigm:** Streamlines document parsing by recognizing document structure, content, and relationships.
+*   **Superior Performance:** MonkeyOCR-pro-1.2B surpasses the accuracy of MonkeyOCR-3B while offering enhanced speed.
+*   **Blazing Fast:** Achieve up to a 36% speed improvement with MonkeyOCR-pro-1.2B.
+*   **Top-Tier Results:** Outperforms other OCR models in accuracy and speed.
+*   **Optimized for Diverse Documents:** Effectively parses English and Chinese documents, from financial reports to academic papers.
+*   **Easy Deployment:**  Quickly get started with local installation, Docker, and FastAPI.
 
 ## What's New
 
-*   **2025.07.10:**  🚀 Released [MonkeyOCR-pro-1.2B](https://huggingface.co/echo840/MonkeyOCR-pro-1.2B), a faster, leaner model with improved accuracy and efficiency.
-*   **2025.06.12:**  🚀 Trending on [Hugging Face](https://huggingface.co/models?sort=trending).
-*   **2025.06.05:**  🚀 Released [MonkeyOCR](https://huggingface.co/echo840/MonkeyOCR), supporting English and Chinese document parsing.
+*   **[2025.07.10]** 🚀 MonkeyOCR-pro-1.2B released. Faster, leaner, and more accurate than previous versions!
+*   **[2025.06.12]** 🚀  Trending on Hugging Face!
+*   **[2025.06.05]** 🚀  MonkeyOCR English and Chinese documents parsing model released.
+
+## Performance Highlights
+
+MonkeyOCR demonstrates remarkable performance, surpassing various other tools and models:
+
+*   **MonkeyOCR-pro-1.2B** outshines MonkeyOCR-3B by 7.4% in Chinese document parsing.
+*   MonkeyOCR-pro-1.2B provides about a 36% speed increase over MonkeyOCR-pro-3B while maintaining a drop of just about 1.6% in performance.
+*   On the olmOCR-Bench, MonkeyOCR-pro-1.2B surpasses Nanonets-OCR-3B by 7.3%.
+*   Achieves the best overall performance on both English and Chinese documents on OmniDocBench, surpassing even closed-source and extra-large open-source VLMs, such as Gemini 2.0-Flash, Gemini 2.5-Pro, Qwen2.5-VL-72B, GPT-4o, and InternVL3-78B.
+
+### Performance Comparison
+
+[Insert the Image Here (Replace with relevant image from original README, e.g., comparing MonkeyOCR with closed-source and extra large open-source VLMs.)]
+
+## Inference Speed
+
+Performance varies depending on the GPU used. The following tables show the inference speed for different models and GPU configurations.
+
+### Inference Speed (Pages/s) on Different GPUs
+
+**Inference Speed**
+| Model          | GPU   | 50 Pages | 100 Pages | 300 Pages | 500 Pages | 1000 Pages |
+| -------------- | ----- | -------- | --------- | --------- | --------- | ---------- |
+| MonkeyOCR-pro-3B | 3090  | 0.492    | 0.484     | 0.497     | 0.492     | 0.496      |
+|                | A6000 | 0.585    | 0.587     | 0.609     | 0.598     | 0.608      |
+|                | H800  | 0.923    | 0.768     | 0.897     | 0.930     | 0.891      |
+|                | 4090  | 0.972    | 0.969     | 1.006     | 0.986     | 1.006      |
+| MonkeyOCR-pro-1.2B | 3090  | 0.615    | 0.660     | 0.677     | 0.687     | 0.683      |
+|                | A6000 | 0.709    | 0.786     | 0.825     | 0.829     | 0.825      |
+|                | H800  | 0.965    | 1.082     | 1.101     | 1.145     | 1.015      |
+|                | 4090  | 1.194    | 1.314     | 1.436     | 1.442     | 1.434      |
+
+### VLM OCR Speed (Pages/s) on Different GPUs
+
+**VLM OCR Speed**
+| Model          | GPU   | 50 Pages | 100 Pages | 300 Pages | 500 Pages | 1000 Pages |
+| -------------- | ----- | -------- | --------- | --------- | --------- | ---------- |
+| MonkeyOCR-pro-3B | 3090  | 0.705    | 0.680     | 0.711     | 0.700     | 0.724      |
+|                | A6000 | 0.885    | 0.860     | 0.915     | 0.892     | 0.934      |
+|                | H800  | 1.371    | 1.135     | 1.339     | 1.433     | 1.509      |
+|                | 4090  | 1.321    | 1.300     | 1.384     | 1.343     | 1.410      |
+| MonkeyOCR-pro-1.2B | 3090  | 0.919    | 1.086     | 1.166     | 1.182     | 1.199      |
+|                | A6000 | 1.177    | 1.361     | 1.506     | 1.525     | 1.569      |
+|                | H800  | 1.466    | 1.719     | 1.763     | 1.875     | 1.650      |
+|                | 4090  | 1.759    | 1.987     | 2.260     | 2.345     | 2.415      |
+
+## Supported Hardware
+
+MonkeyOCR has been successfully tested on a variety of GPUs, including the 3090, 4090, A6000, H800, and A100.  It also supports the 4060 (8GB of VRAM) for quantized 3B and 1.2B models.
 
 ## Quick Start
 
-Follow these steps to quickly set up and run MonkeyOCR:
+### 1. Install MonkeyOCR
 
-### 1.  Install MonkeyOCR
+Follow the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda_pp.md#install-with-cuda-support).
 
-Refer to the [installation guide](https://github.com/Yuliang-Liu/MonkeyOCR/blob/main/docs/install_cuda_pp.md#install-with-cuda-support) for detailed instructions.
+### 2. Download Model Weights
 
-### 2.  Download Model Weights
+```bash
+pip install huggingface_hub
 
-Choose your preferred method:
+python tools/download_model.py -n MonkeyOCR-pro-3B  # or MonkeyOCR
+```
+Alternatively, download from ModelScope:
 
-*   **Hugging Face:**
+```bash
+pip install modelscope
 
-    ```bash
-    pip install huggingface_hub
-    python tools/download_model.py -n MonkeyOCR-pro-3B  # or MonkeyOCR
-    ```
-*   **ModelScope:**
+python tools/download_model.py -t modelscope -n MonkeyOCR-pro-3B  # or MonkeyOCR
+```
 
-    ```bash
-    pip install modelscope
-    python tools/download_model.py -t modelscope -n MonkeyOCR-pro-3B  # or MonkeyOCR
-    ```
+### 3. Inference
 
-### 3.  Inference
-
-Run the `parse.py` script with your input file or directory:
+Use the following commands to parse files:
 
 ```bash
 # Replace input_path with the path to a PDF or image or directory
@@ -113,16 +155,11 @@ python parse.py input.pdf --pred-abandon            # Enable predicting abandon 
 <details>
 <summary><b>Output Results</b></summary>
 
-MonkeyOCR mainly generates three types of output files:
+MonkeyOCR produces these outputs:
 
-1.  **Processed Markdown File** (`your.md`): The final parsed document content in markdown format, containing text, formulas, tables, and other structured elements.
-2.  **Layout Results** (`your_layout.pdf`): The layout results drawed on origin PDF.
-3.  **Intermediate Block Results** (`your_middle.json`): A JSON file containing detailed information about all detected blocks, including:
-    *   Block coordinates and positions
-    *   Block content and type information
-    *   Relationship information between blocks
-
-These files provide both the final formatted output and detailed intermediate results for further analysis or processing.
+1.  **Processed Markdown File** (`your.md`): Parsed document content in Markdown.
+2.  **Layout Results** (`your_layout.pdf`): Results drawn on original PDF.
+3.  **Intermediate Block Results** (`your_middle.json`): Detailed information about all detected blocks.
 
 </details>
 
@@ -131,105 +168,56 @@ These files provide both the final formatted output and detailed intermediate re
 ```bash
 python demo/demo_gradio.py
 ```
-
-Access the demo at http://localhost:7860.
+Access the demo at:  http://localhost:7860
 
 ### 5. Fast API
 
 ```bash
 uvicorn api.main:app --port 8000
 ```
+Access API docs at: http://localhost:8000/docs
 
-Explore the API documentation at http://localhost:8000/docs.
-
-> [!TIP]
-> To improve API concurrency performance, consider configuring the inference backend as `lmdeploy_queue` or `vllm_queue`.
+>   [!TIP]
+>   Configure the inference backend as `lmdeploy_queue` or `vllm_queue` to improve API concurrency performance.
 
 ## Docker Deployment
 
-### 1. Navigate to the `docker` directory:
-
-   ```bash
-   cd docker
-   ```
-
-### 2. Prerequisite:
-
-Ensure NVIDIA GPU support is available in Docker (via `nvidia-docker2`).
-If GPU support is not enabled, run the following to set up the environment:
-
-   ```bash
-   bash env.sh
-   ```
-
-### 3. Build the Docker image:
-
-   ```bash
-   docker compose build monkeyocr
-   ```
-
-> [!IMPORTANT]
->
-> If your GPU is from the 20/30/40-series, V100, L20/L40 or similar, please build the patched Docker image for LMDeploy compatibility:
->
-> ```bash
-> docker compose build monkeyocr-fix
-> ```
->
-> Otherwise, you may encounter the following error: `triton.runtime.errors.OutOfResources: out of resource: shared memory`
-
-### 4. Run the container with the Gradio demo (accessible on port 7860):
-
-   ```bash
-   docker compose up monkeyocr-demo
-   ```
-
-   Alternatively, start an interactive development environment:
-
-   ```bash
-   docker compose run --rm monkeyocr-dev
-   ```
-
-### 5. Run the FastAPI service (accessible on port 7861):
-   ```bash
-   docker compose up monkeyocr-api
-   ```
-   Once the API service is running, you can access the API documentation at http://localhost:7861/docs to explore available endpoints.
+1.  `cd docker`
+2.  `bash env.sh` (If GPU support not enabled)
+3.  `docker compose build monkeyocr`
+    >   [!IMPORTANT]
+    >   If your GPU is from the 20/30/40-series, V100, L20/L40 or similar, build the patched Docker image with: `docker compose build monkeyocr-fix`
+4.  `docker compose up monkeyocr-demo`  (Gradio demo, port 7860)
+    or `docker compose run --rm monkeyocr-dev` (interactive development)
+5.  `docker compose up monkeyocr-api` (FastAPI, port 7861)
 
 ## Windows Support
 
-See the [windows support guide](docs/windows_support.md) for details.
+See the [windows support guide](docs/windows_support.md)
 
 ## Quantization
 
-This model can be quantized using AWQ. Follow the instructions in the [quantization guide](docs/Quantization.md).
+Quantize with AWQ following the [quantization guide](docs/Quantization.md).
 
 ## Benchmark Results
 
-[Detailed benchmark results comparing MonkeyOCR's performance against other models are available in the original README.](https://github.com/Yuliang-Liu/MonkeyOCR#benchmark-results)
+### End-to-End Evaluation Results
 
-## Demo Visualization
+[Insert the table here:  "1. The end-to-end evaluation results of different tasks."]
 
-[Explore the live demo](http://vlrlabmonkey.xyz:7685) to experience MonkeyOCR's capabilities.
+### End-to-end text recognition performance across 9 PDF page types
 
-### Support Diverse Chinese and English PDF Types
+[Insert the table here:  "2. The end-to-end text recognition performance across 9 PDF page types."]
 
-<p align="center">
-  <img src="asserts/Visualization.GIF?raw=true" width="600"/>
-</p>
+### The evaluation results of olmOCR-bench
 
-### Example for formula document
-<img src="https://v1.ax1x.com/2025/06/10/7jVLgB.jpg" alt="7jVLgB.jpg" border="0" />
+[Insert the table here: "3. The evaluation results of olmOCR-bench."]
 
-### Example for table document
-<img src="https://v1.ax1x.com/2025/06/11/7jcOaa.png" alt="7jcOaa.png" border="0" />
+## Demo
 
-### Example for newspaper
-<img src="https://v1.ax1x.com/2025/06/11/7jcP5V.png" alt="7jcP5V.png" border="0" />
+[Provide the link to the online demo:  http://vlrlabmonkey.xyz:7685]
 
-### Example for financial report
-<img src="https://v1.ax1x.com/2025/06/11/7jc10I.png" alt="7jc10I.png" border="0" />
-<img src="https://v1.ax1x.com/2025/06/11/7jcRCL.png" alt="7jcRCL.png" border="0" />
+[Insert images (Example for formula document, table document, newspaper, financial report.)]
 
 ## Citing MonkeyOCR
 
@@ -247,13 +235,15 @@ This model can be quantized using AWQ. Follow the instructions in the [quantizat
 
 ## Acknowledgments
 
-We extend our gratitude to the contributors and creators of [the listed libraries, datasets, and models](https://github.com/Yuliang-Liu/MonkeyOCR#acknowledgments).
+[List of acknowledgments]
 
 ## Limitations
 
-*   Limited support for photographed text, handwritten content, Traditional Chinese characters, and multilingual text.
-*   Demo performance may be affected during periods of high traffic.
+*   Limited support for photographed text, handwritten content, Traditional Chinese characters, or multilingual text (planned for future releases).
+*   Demo deployment on a single GPU may cause "application is busy" issues during high traffic.
+*   Demo processing time includes overhead.
+*   Inference speeds for MonkeyOCR, MinerU, and Qwen2.5 VL-7B measured on an H800 GPU.
 
 ## Copyright
 
-Our model is intended for academic research and non-commercial use only. Contact us at xbai@hust.edu.cn or ylliu@hust.edu.cn for inquiries about commercial use or for faster/stronger model versions.
+This model is intended for academic research and non-commercial use only.  For inquiries about faster (smaller) or stronger models, contact xbai@hust.edu.cn or ylliu@hust.edu.cn.

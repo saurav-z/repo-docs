@@ -1,63 +1,63 @@
 [![Metaflow Logo](https://user-images.githubusercontent.com/763451/89453116-96a57e00-d713-11ea-9fa6-82b29d4d6eff.png)](https://github.com/Netflix/metaflow)
 
-# Metaflow: Build, Manage, and Scale Your AI/ML Systems
+# Metaflow: Build and Manage AI/ML Systems with Ease
 
-Metaflow, originally developed at Netflix, is a human-centric framework designed to empower data scientists and engineers to build and manage robust, production-ready AI and ML systems, streamlining the entire development lifecycle. **[Explore the original Metaflow repository](https://github.com/Netflix/metaflow).**
+**Metaflow is a human-centric framework, originally created at Netflix, that empowers data scientists and engineers to build, manage, and scale real-world AI and ML systems efficiently.**  This framework simplifies the entire machine learning lifecycle, from rapid prototyping to reliable production deployments.
 
-Metaflow simplifies the complexities of the AI/ML workflow, from rapid prototyping to scalable production deployments, enabling teams of all sizes to iterate quickly and deliver powerful systems efficiently.  It is now supported by [Outerbounds](https://outerbounds.com) and used by companies like Amazon, Doordash, and Netflix.
+[Explore the original Metaflow repository](https://github.com/Netflix/metaflow)
 
-## Key Features
+Developed at Netflix and now supported by Outerbounds, Metaflow boosts productivity for teams working on diverse projects, from statistical analysis to advanced deep learning.  It streamlines the AI/ML workflow by unifying code, data, and compute.
 
-*   **Rapid Prototyping and Experimentation:**
-    *   Develop and test locally with ease.
-    *   Seamlessly integrate with notebooks.
-    *   Built-in support for experiment tracking, versioning, and visualization.
-*   **Scalable and Reliable Execution:**
-    *   Horizontally and vertically scale workloads on your cloud (CPUs and GPUs).
-    *   Fast data access for efficient processing.
-    *   Handles both embarrassingly parallel and gang-scheduled compute workloads.
-    *   Resilient design with built-in failure handling.
-*   **Production-Ready Deployment:**
-    *   Effortless dependency management.
-    *   One-click deployment to highly available production orchestrators.
-    *   Support for reactive orchestration.
+Metaflow powers thousands of AI and ML projects across various companies, including Amazon, DoorDash, Dyson, Goldman Sachs, and more. At Netflix alone, it supports over 3,000 projects, executes hundreds of millions of data-intensive compute jobs, and manages petabytes of data and models for hundreds of users.
 
-## From Prototype to Production: A Simplified Workflow
+## Key Features of Metaflow:
 
-Metaflow's user-friendly Python API streamlines the AI/ML lifecycle:
+*   **Rapid Prototyping & Experimentation:**
+    *   Pythonic API for quick development and testing.
+    *   Seamless notebook integration.
+    *   Built-in experiment tracking, versioning, and visualization.
+*   **Scalable Compute & Data Access:**
+    *   Effortlessly scale across cloud infrastructure using CPUs and GPUs.
+    *   Fast data access for efficient processing of large datasets.
+    *   Supports both embarrassingly parallel and gang-scheduled workloads.
+*   **Simplified Deployment & Management:**
+    *   Easy dependency management.
+    *   One-click deployment to production-grade workflow orchestrators.
+    *   Reactive orchestration support.
 
-![Metaflow Workflow Diagram](docs/prototype-to-prod.png)
+## From Prototype to Production:
+![Metaflow Workflow](https://github.com/Netflix/metaflow/blob/main/docs/prototype-to-prod.png?raw=true)
+
+Metaflow provides a simple and friendly pythonic API that covers the foundational needs of AI and ML systems.
 
 ## Getting Started
 
 ### Installation
-
-Install Metaflow using pip:
+Install Metaflow using `pip`:
 
 ```bash
 pip install metaflow
 ```
 
-Alternatively, using conda-forge:
+Or, using `conda`:
 
 ```bash
 conda install -c conda-forge metaflow
 ```
 
-### Learn More
+Get started quickly with the [Metaflow sandbox](https://outerbounds.com/sandbox) or follow the [tutorial](https://docs.metaflow.org/getting-started/tutorials) to create and run your first Metaflow flow.
 
-*   **Tutorial:** Get started quickly with our [tutorial](https://docs.metaflow.org/getting-started/tutorials).
-*   **How Metaflow Works:** Understand the fundamentals at [How Metaflow works](https://docs.metaflow.org/metaflow/basics).
-*   **Additional Resources:** Explore more features at [Additional resources](https://docs.metaflow.org/introduction/metaflow-resources).
-*   **Metaflow Sandbox:** Run and explore Metaflow in seconds with [Metaflow sandbox](https://outerbounds.com/sandbox)
+### Resources
 
-### Deploying Infrastructure
+*   [How Metaflow works](https://docs.metaflow.org/metaflow/basics)
+*   [Additional resources](https://docs.metaflow.org/introduction/metaflow-resources)
 
-To fully leverage Metaflow's scalability, configure it for your cloud environment using this [guide](https://outerbounds.com/engineering/welcome/).
+## Deploying Infrastructure in Your Cloud
+![Multi-cloud Deployment](https://github.com/Netflix/metaflow/blob/main/docs/multicloud.png?raw=true)
 
-![Multi-cloud Diagram](docs/multicloud.png)
+Follow this [guide](https://outerbounds.com/engineering/welcome/) to configure Metaflow and the infrastructure for scaling to external clusters and production-grade orchestration.
 
-## Community and Contribution
+## Get Involved
 
-*   **Join the Community:** Connect with us on our [Slack community](http://slack.outerbounds.co/)!
-*   **Contribute:** We welcome contributions! See our [contribution guide](https://docs.metaflow.org/introduction/contributing-to-metaflow) for details.
+*   Join the [Slack community](http://slack.outerbounds.co/)
+*   Learn about [contributing](https://docs.metaflow.org/introduction/contributing-to-metaflow) to the project.
