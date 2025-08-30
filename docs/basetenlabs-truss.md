@@ -1,31 +1,19 @@
-# Truss: The Simplest Way to Deploy and Serve Your AI/ML Models in Production
+# Truss: The Easiest Way to Deploy and Serve Your Machine Learning Models
 
-**[View the original repository on GitHub](https://github.com/basetenlabs/truss)**
-
-Truss simplifies the process of deploying and serving your machine learning models, enabling you to move from development to production quickly and efficiently.
+**Truss** ([See original repo](https://github.com/basetenlabs/truss)) is a powerful and user-friendly framework designed to streamline the deployment and serving of your AI/ML models in production. 
 
 [![PyPI version](https://badge.fury.io/py/truss.svg)](https://badge.fury.io/truss)
 [![ci_status](https://github.com/basetenlabs/truss/actions/workflows/release.yml/badge.svg)](https://github.com/basetenlabs/truss/actions/workflows/release.yml)
 
-## Key Features of Truss
+## Key Features of Truss:
 
-*   **Write Once, Run Anywhere:** Package your model code, weights, and dependencies into a consistent environment that behaves the same in development and production.
-*   **Rapid Development Cycle:** Benefit from a fast feedback loop with a live reload server, eliminating the need for complex Docker and Kubernetes configurations.
-*   **Framework Agnostic:** Truss supports models built with any Python framework, including `transformers`, `diffusers`, `PyTorch`, `TensorFlow`, `TensorRT`, and `Triton`.
-*   **Easy Deployment:** Deploy your models to Baseten and other platforms (like AWS SageMaker in the future) with a simple command.
-*   **Simplified Model Serving:** Focus on your model logic, not infrastructure, with a streamlined model serving environment.
+*   **Simplified Deployment:** Package your model code, dependencies, and weights into a standardized format for easy deployment.
+*   **Write Once, Run Anywhere:** Develop and test your model locally with the same environment it will use in production.
+*   **Fast Iteration:** Benefit from a live reload server for rapid feedback during development, eliminating the need for complex Docker or Kubernetes configurations.
+*   **Framework Agnostic:** Seamlessly supports models built with any Python framework, including `transformers`, `diffusers`, `PyTorch`, `TensorFlow`, `TensorRT`, and `Triton`.
+*   **Easy Integration:** Quickly deploy and manage models on various platforms, including Baseten (with AWS SageMaker support coming soon).
 
-## Popular Model Examples with Truss
-
-Get started quickly with pre-configured Truss examples for popular models:
-
-*   🦙 [Llama 2](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-7b-chat) (7B, 13B, and 70B)
-*   🎨 [Stable Diffusion XL](https://github.com/basetenlabs/truss-examples/tree/main/stable-diffusion/stable-diffusion-xl-1.0)
-*   🗣 [Whisper](https://github.com/basetenlabs/truss-examples/tree/main/whisper/whisper-truss)
-
-And explore [dozens more examples](https://github.com/basetenlabs/truss-examples/) to fit a variety of use cases.
-
-## Getting Started with Truss
+## Get Started with Truss:
 
 ### Installation
 
@@ -35,22 +23,21 @@ Install Truss using pip:
 pip install --upgrade truss
 ```
 
-### Quickstart: Text Classification Example
+### Quickstart Example: Text Classification
+
+This quickstart demonstrates how to package a text classification pipeline from the Hugging Face `transformers` library.
 
 1.  **Create a Truss:**
-
     ```bash
     truss init text-classification
     ```
 
-    Give your Truss a name, such as "Text classification".
 2.  **Navigate to the New Directory:**
-
     ```bash
     cd text-classification
     ```
-3.  **Implement Your Model (`model/model.py`):**  Define a `Model` class with `load()` (loads the model) and `predict()` (handles inference) methods.  For example:
 
+3.  **Implement the Model (`model/model.py`):**
     ```python
     from transformers import pipeline
 
@@ -65,44 +52,35 @@ pip install --upgrade truss
             return self._model(model_input)
     ```
 
-4.  **Add Dependencies (`config.yaml`):**  Specify your model's dependencies.  For the text classification example, modify `config.yaml`:
-
+4.  **Add Model Dependencies (`config.yaml`):**
     ```yaml
     requirements:
       - torch==2.0.1
       - transformers==4.30.0
     ```
 
-## Deployment
+### Deployment using Baseten:
 
-Truss is backed by [Baseten](https://baseten.co), which provides the infrastructure for running ML models in production.
+1.  **Get a Baseten API Key:**  Sign up for a free account at [Baseten](https://app.baseten.co/signup/) and obtain your API key from [your account settings](https://app.baseten.co/settings/account/api_keys).
+2.  **Deploy Your Model:**
+    ```bash
+    truss push
+    ```
+3.  **Invoke the Model:**
+    ```bash
+    truss predict -d '"Truss is awesome!"'
+    ```
 
-### Get Your Baseten API Key
+## Example Models
 
-Sign up for a [Baseten account](https://app.baseten.co/signup/) and obtain your API key from [your account settings](https://app.baseten.co/settings/account/api_keys).
+Truss supports various popular models. Here are a few examples:
 
-### Deploy Your Model
+*   🦙 [Llama 2 7B](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-7b-chat) ([13B](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-13b-chat)) ([70B](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-70b-chat))
+*   🎨 [Stable Diffusion XL](https://github.com/basetenlabs/truss-examples/tree/main/stable-diffusion/stable-diffusion-xl-1.0)
+*   🗣 [Whisper](https://github.com/basetenlabs/truss-examples/tree/main/whisper/whisper-truss)
 
-Deploy your model to Baseten with:
-
-```bash
-truss push
-```
-
-Monitor your deployment in your [Baseten model dashboard](https://app.baseten.co/models/).
-
-### Invoke the Model
-
-Once deployed, test your model from the terminal:
-
-```bash
-truss predict -d '"Truss is awesome!"'
-```
-
-## Truss Contributors
-
-Truss is built in collaboration with ML engineers worldwide and backed by Baseten.
+And [dozens more examples](https://github.com/basetenlabs/truss-examples/).
 
 ## Contribute
 
-We welcome contributions!  Please review our [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).
+Truss is an open-source project backed by Baseten and built in collaboration with the ML community.  We welcome contributions! Please refer to our [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).

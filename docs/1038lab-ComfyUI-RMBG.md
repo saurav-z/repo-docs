@@ -1,98 +1,144 @@
-# ComfyUI-RMBG: Effortlessly Remove Backgrounds and Segment Images with Advanced AI
+# Enhance Your Images with ComfyUI-RMBG: AI-Powered Background Removal & Segmentation
 
-**Enhance your image editing workflow with ComfyUI-RMBG, a powerful custom node offering cutting-edge background removal, object segmentation, and AI-powered image manipulation.**  [Explore the original repo!](https://github.com/1038lab/ComfyUI-RMBG)
+**ComfyUI-RMBG** is a powerful ComfyUI custom node designed for advanced image background removal, object segmentation, and precise manipulation of visual elements. [Check out the original repository here](https://github.com/1038lab/ComfyUI-RMBG).
 
 ## Key Features
 
-*   **Advanced Background Removal:**
-    *   Utilizes models like RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, and SDMatte for precise background removal.
-    *   Offers multiple background options: transparent, black, white, green, blue, and red.
-    *   Supports batch processing for efficient workflow.
-*   **Text-Prompted Object Segmentation:**
-    *   Segment objects using text prompts (tag-style or natural language) with SAM and GroundingDINO models.
-    *   Fine-tune results with adjustable threshold, mask blur, and offset.
-*   **SAM2 Segmentation:**
-    *   Leverages the latest SAM2 models (Tiny, Small, Base+, and Large) for high-quality, text-driven segmentation.
-    *   Automatic model download and manual placement options for flexibility.
-*   **Face, Clothes, and Fashion Segmentation:**
-    *   Dedicated nodes for specialized segmentation of facial features, clothing items, and fashion accessories.
-    *   Multiple category selection for combined segmentation.
-*   **Enhanced Image Tools:**
-    *   Includes nodes for image combining, stitching, and mask manipulation for comprehensive image editing.
-*   **Improved Edge Detection & Performance Optimization:**
-    *   Offers enhanced edge detection and detail preservation for sharper results.
-    *   Provides options to optimize performance and memory usage.
-    *   Includes a new feature for real-time background replacement and enhanced edge detection for improved accuracy.
-*   **User-Friendly Interface:**
-    *   Easy integration within ComfyUI, with intuitive controls.
-    *   Clear guidance and troubleshooting steps to help you get started.
+*   **Versatile Background Removal:** Remove backgrounds with precision using a variety of models including RMBG-2.0, INSPYRENET, BEN, and BEN2.
+*   **Advanced Object Segmentation:** Segment objects using text prompts, supporting both tag-style and natural language inputs.
+*   **Cutting-Edge SAM2 Integration:** Utilize the latest SAM2 models for highly accurate, text-prompted segmentation.
+*   **Real-time Background Replacement:** Seamlessly replace backgrounds with custom colors or images.
+*   **Enhanced Edge Detection:** Achieve improved accuracy with sophisticated edge detection.
+*   **Face, Clothes, and Fashion Segmentation:** Specialized nodes for precise segmentation of faces, clothing items, and fashion elements.
+*   **High Resolution Support:** Process images up to 2048x2048 resolution with select models.
+*   **Flexible Masking Tools:** Utilize a variety of masking tools including MaskOverlay, ObjectRemover, ImageMaskResize, Mask Enhancer, Mask Combiner, and Mask Extractor for advanced image manipulation.
+*   **Internationalization (i18n) Support:** Support for multiple languages, with dynamic language switching.
 
-## Recent Updates
+## Latest Updates
 
-*   **v2.9.0 (2025/08/18):** Added `SDMatte Matting` node.
-*   **v2.8.0 (2025/08/11):** Added `SAM2Segment` node for text-prompted segmentation with the latest Facebook Research SAM2 technology, and Enhanced color widget support across all nodes.
-*   **v2.7.1 (2025/08/06):** Enhanced LoadImage into three distinct nodes and Completely redesigned ImageStitch node compatible with ComfyUI's native functionality.
-*   **v2.6.0 (2025/07/15):** Added `Kontext Refence latent Mask` node.
-*   **(See full update history in the original README)**
+*   **v2.9.0** - Added `SDMatte Matting` node
+*   **v2.8.0** - Added `SAM2Segment` node and Enhanced color widget support across all nodes
+*   **v2.7.1** - Enhanced LoadImage and completely redesigned ImageStitch node
+*   **v2.6.0** - Added `Kontext Refence latent Mask` node
+*   **v2.5.2** - Bug fixes and enhancements
+*   **v2.5.1** - Minor updates and fixes
+*   **v2.5.0** - Added new nodes including `MaskOverlay`, `ObjectRemover`, `ImageMaskResize` and added BiRefNet and batch image support
+*   **v2.4.0** - Added CropObject, ImageCompare, ColorInput nodes and new Segment V2
+*   **v2.3.2** - Minor bug fixes
+*   **v2.3.1** - Minor bug fixes
+*   **v2.3.0** - Added new nodes: IC-LoRA Concat, Image Crop and resizing options for Load Image
+*   **v2.2.1** - Bug fixes and enhancements
+*   **v2.2.0** - Added new nodes: Image Combiner, Image Stitch, Image/Mask Converter, Mask Enhancer, Mask Combiner, and Mask Extractor. Fixed compatibility issues with transformers v4.49+
+*   **v2.1.1** - Enhanced compatibility with Transformers
+*   **v2.1.0** - Integrated internationalization (i18n) support for multiple languages
+*   **v2.0.0** - Added Image and Mask Tools improved functionality. Enhanced code structure and documentation for better usability.
+*   **v1.9.3** - Clean up the code and fix the issue
+*   **v1.9.2** - with Fast Foreground Color Estimation
+*   **v1.9.1** - Changed repository for model management to the new repository and Reorganized models files structure for better maintainability.
+*   **v1.9.0** - with BiRefNet model improvements
+*   **v1.8.0** - with new BiRefNet-HR model
+*   **v1.7.0** - with new BEN2 model
+*   **v1.6.0** - with new Face Segment custom node
+*   **v1.5.0** - with new Fashion and accessories Segment custom node
+*   **v1.4.0** - with new Clothes Segment node
+*   **v1.3.2** - with background handling
+*   **v1.3.1** - with bug fixes
+*   **v1.3.0** - with new Segment node
+*   **v1.2.2** - Bug fixes and enhancements
+*   **v1.2.1** - Minor enhancements
+*   **v1.2.0** - Improvements and bug fixes
+*   **v1.1.0** - ComfyUI-RMBG update
+  
 
 ## Installation
 
-**Choose your preferred installation method:**
+Choose your preferred installation method:
 
-1.  **ComfyUI-Manager:** Install directly from the ComfyUI Manager.
-2.  **Clone from GitHub:** Clone the repository into your ComfyUI `custom_nodes` folder.
-3.  **Comfy CLI:** Use `comfy node install ComfyUI-RMBG` if you have `comfy-cli` installed.
+1.  **ComfyUI Manager:** Search for `ComfyUI-RMBG` in the ComfyUI Manager and install. Then install requirements.txt in the ComfyUI-RMBG folder.
+2.  **Clone Repository:**
+    ```bash
+    cd ComfyUI/custom_nodes
+    git clone https://github.com/1038lab/ComfyUI-RMBG
+    ```
+    Then install requirements.txt in the ComfyUI-RMBG folder.
+3.  **Comfy CLI:**
+    ```bash
+    comfy node install ComfyUI-RMBG
+    ```
+    Then install requirements.txt in the ComfyUI-RMBG folder.
 
-**Important:** After installation, install the required Python packages by running the following command within the `ComfyUI-RMBG` folder:
+    ```bash
+    ./ComfyUI/python_embeded/python -m pip install -r requirements.txt
+    ```
 
-```bash
-./ComfyUI/python_embeded/python -m pip install -r requirements.txt
-```
-
-## Model Download
+## Model Downloads
 
 *   Models are automatically downloaded upon first use.
-*   If you have network restrictions or prefer manual downloads, access the models from the following repositories:
-    *   RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SAM, SAM2, GroundingDINO, Clothes Segment, Fashion Segment, SDMatte. (See [original README](https://github.com/1038lab/ComfyUI-RMBG) for specific links.)
+*   Manual download options are provided for each model family (RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SAM, SAM2, GroundingDINO, SDMatte, Clothes Segment, Fashion Segment) from Hugging Face.  Detailed download instructions and links are in the original README.
 
 ## Usage
 
-1.  **Load the Nodes:** Access the nodes from the `🧪AILab/🧽RMBG` category.
-2.  **Connect Your Image:**  Connect an image to the input.
-3.  **Select Options & Models:** Choose from the available models and configure the node's parameters.
-4.  **Generate Output:**  Receive the processed image (with the selected background) and a mask.
+### RMBG Node
 
-### RMBG Node Parameters
-  - `sensitivity`: Controls the background removal sensitivity (0.0-1.0)
-  - `process_res`: Processing resolution (512-2048, step 128)
-  - `mask_blur`: Blur amount for the mask (0-64)
-  - `mask_offset`: Adjust mask edges (-20 to 20)
-  - `background`: Choose output background color
-  - `invert_output`: Flip mask and image output
-  - `optimize`: Toggle model optimization
+1.  Load the `RMBG (Remove Background)` node from the `🧪AILab/🧽RMBG` category.
+2.  Connect your input image.
+3.  Select a model from the dropdown.
+4.  Adjust parameters as needed (see Tips below).
+5.  Get image and mask outputs.
+
+### Optional Settings :bulb: Tips
+
+| Optional Settings       | :memo: Description                                                           | :bulb: Tips                                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **Sensitivity**         | Adjusts mask detection strength. Higher values for stricter detection.       | Default: 0.5.  Adjust based on image complexity; more complex images may need higher sensitivity. |
+| **Processing Resolution** | Controls image processing resolution, affecting detail and memory usage. | Choose between 256-2048, default is 1024.  Higher res = better detail, more memory. |
+| **Mask Blur**           | Controls mask edge blurring, reducing jaggedness.                             | Default: 0.  Try 1-5 for smoother edges.                                                      |
+| **Mask Offset**         | Expands/shrinks mask boundary. Positive expands, negative shrinks.              | Default: 0.  Fine-tune between -10 and 10 based on image.                                      |
+| **Background**          | Choose output background color | Alpha (transparent background) Black, White, Green, Blue, Red |
+| **Invert Output**      | Flip mask and image output | Invert both image and mask output |
+| **Refine Foreground** | Use Fast Foreground Color Estimation to optimize transparent background | Enable for better edge quality and transparency handling |
+| **Performance Optimization** | Properly setting options can enhance performance when processing multiple images. | If memory allows, consider increasing `process_res` and `mask_blur` values for better results, but be mindful of memory usage. |
 
 ### Segment Node
-*   Load `Segment (RMBG)` node from the `🧪AILab/🧽RMBG` category
-*   Connect an image to the input
-*   Enter text prompt (tag-style or natural language)
-*   Select SAM and GroundingDINO models
-*   Adjust parameters as needed:
-   - Threshold: 0.25-0.35 for broad detection, 0.45-0.55 for precision
-   - Mask blur and offset for edge refinement
-   - Background color options
+
+1.  Load `Segment (RMBG)` from `🧪AILab/🧽RMBG`.
+2.  Connect an image.
+3.  Enter a text prompt (tag-style or natural language).
+4.  Select SAM or GroundingDINO models.
+5.  Adjust parameters: Threshold, Mask blur, offset, and Background color.
+
+## About Models
+
+*   **RMBG-2.0**: BRIA AI, BiRefNet architecture, high accuracy, precise edge detection.
+*   **INSPYRENET**: Human portrait segmentation, fast processing.
+*   **BEN**: Balance of speed and accuracy for various scenes.
+*   **BEN2**: Improved accuracy and speed.
+*   **BIREFNET Models:** General purpose, portrait, matting, and HR models.
+*   **SAM**: Powerful object detection and segmentation.
+*   **SAM2**: Latest segmentation models (Tiny, Small, Base+, Large) for text-prompted segmentation.
+*   **GroundingDINO**: Text-prompted object detection and segmentation.
+*   **SDMatte:** Stable Diffusion Matte models for high-quality matting.
+*   **Clothes Segment**: Clothes segmentation with 18 different categories.
+*   **Fashion Segment**: Fashion segmentation.
+
+## Requirements
+
+*   ComfyUI
+*   Python 3.10+
+*   Required packages (automatically installed) are listed.
 
 ## Troubleshooting
-  - Check that the files are installed properly, or that your network is not blocking the connection
-  - Ensure image outputs are connected and upstream nodes ran successfully
+
+*   See the original README for troubleshooting tips.
 
 ## Credits
-*   See original [README](https://github.com/1038lab/ComfyUI-RMBG) for model authors and contributors.
-*   Created by: [AILab](https://github.com/1038lab)
+
+*   See the original README for credits.
 
 ## Star History
-[Insert Star History Chart Here -  You can use the code provided in the original README to generate and display the chart]
 
-**Give this repo a star if it helps you!**
+[![Star History](https://api.star-history.com/svg?repos=1038lab/comfyui-rmbg&type=Date)](https://star-history.com/#1038lab/comfyui-rmbg&Date)
 
 ## License
+
 GPL-3.0 License

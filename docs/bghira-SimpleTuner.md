@@ -1,36 +1,50 @@
-# SimpleTuner: Effortless AI Model Training for Everyone 🚀
+# SimpleTuner: Train Diffusion Models with Ease 💹
 
-**SimpleTuner empowers you to easily train and fine-tune cutting-edge AI models, from Stable Diffusion to HiDream, with a focus on simplicity and accessibility.**
+**SimpleTuner is a streamlined toolkit designed to simplify and accelerate the training of various diffusion models, empowering you to create high-quality AI-generated content.** ([Original Repo](https://github.com/bghira/SimpleTuner))
 
-[View the original repository on GitHub](https://github.com/bghira/SimpleTuner)
+> ℹ️ No data is sent to third parties except through opt-in flags (`report_to`, `push_to_hub`) or manually configured webhooks.
 
-> ℹ️ **Privacy Focused:** SimpleTuner prioritizes your privacy. No data is shared with third parties unless you explicitly enable features like `report_to`, `push_to_hub`, or webhooks, which require manual configuration.
+**Key Features:**
 
-## Key Features
+*   **Simplified Training:** Focuses on ease of use with sensible defaults, reducing the need for extensive configuration.
+*   **Versatile:** Supports a wide range of image/video quantities, from small datasets to massive collections.
+*   **Cutting-Edge Technology:** Integrates proven techniques for optimal performance, avoiding unnecessary complexity.
+*   **Multi-GPU Training:**  Leverages multiple GPUs for faster training.
+*   **Advanced Techniques:**
+    *   New token-wise dropout techniques (TREAD) for optimized performance.
+    *   Caching for faster training and reduced memory consumption.
+    *   Aspect ratio handling for diverse image/video sizes.
+    *   LoRA/LyCORIS and full u-net training options.
+    *   DeepSpeed integration for memory-constrained systems.
+    *   Quantized training for reduced VRAM usage (NF4/INT8/FP8).
+    *   EMA (Exponential Moving Average) for stability and reduced overfitting.
+    *   Training from S3-compatible storage.
+    *   ControlNet training for various models.
+    *   Mixture of Experts (MoE) support.
+    *   Masked loss training.
+    *   Prior regularization support.
+    *   Webhook support for progress updates.
+    *   Hugging Face Hub integration for easy model sharing.
 
-*   **Simplified Training:** Intuitive design with sensible defaults, reducing the need for complex configurations.
-*   **Versatile Compatibility:** Supports a wide range of image and video quantities, from small datasets to massive collections.
-*   **Cutting-Edge Models:** Integrates support for the latest and most effective AI models, including:
-    *   HiDream
-    *   Flux.1
-    *   Wan 2.1 Video
-    *   LTX Video
-    *   PixArt Sigma
-    *   NVLabs Sana
-    *   Stable Diffusion 3
-    *   Kwai Kolors
-    *   Lumina2
-    *   Cosmos2 Predict (Image)
-    *   Qwen-Image
-*   **Performance Optimization:** Features like aspect bucketing, caching, and memory-efficient training techniques (e.g., DeepSpeed integration, quantization) to maximize speed and minimize hardware requirements.
-*   **Flexible Training Options:** Supports LoRA, LyCORIS, full finetuning, ControlNet training, Mixture of Experts, and more.
-*   **Integration with Hugging Face Hub:** Seamless model uploading and automated model card generation for easy sharing.
-*   **Community Support:** Join our community on [Discord](https://discord.gg/CVzhX7ZA) (Terminus Research Group) for help and discussions.
+**Supported Models:**
+
+*   HiDream
+*   Flux.1
+*   Wan Video
+*   LTX Video
+*   PixArt Sigma
+*   NVLabs Sana
+*   Stable Diffusion 3
+*   Kwai Kolors
+*   Lumina2
+*   Cosmos2 Predict (Image)
+*   Qwen-Image
+*   Legacy Stable Diffusion (SD 1.5 & 2.x)
 
 ## Table of Contents
 
 *   [Design Philosophy](#design-philosophy)
-*   [Tutorial](#tutorial)
+*   [Tutorials](#tutorial)
 *   [Features](#features)
 *   [Supported Models](#supported-models)
 *   [Hardware Requirements](#hardware-requirements)
@@ -40,46 +54,27 @@
 
 ## Design Philosophy
 
-*   **Simplicity:** Focus on good defaults for ease of use.
-*   **Versatility:** Handles datasets of varying sizes.
-*   **Cutting-Edge:** Integrates proven and effective features.
+*   **Simplicity:** Easy-to-use with good default settings.
+*   **Versatility:** Handles diverse image/video quantities.
+*   **Cutting-Edge:** Integrates proven features.
 
-## Tutorial
+## Tutorials
 
-Start your training journey by exploring the [tutorial](/TUTORIAL.md), which provides vital information.
-
-*   **Quick Start:** For a rapid introduction, see the [Quick Start](/documentation/QUICKSTART.md) guide.
-*   **DeepSpeed:** Learn how to use 🤗Accelerate to configure Microsoft's DeepSpeed for optimizer state offload. ([DeepSpeed document](/documentation/DEEPSPEED.md))
-*   **Multi-node Training:** Optimize for multi-node training using the guide located [here](/documentation/DISTRIBUTED.md).
-
-## Supported Models
-
-*   [HiDream](#hidream)
-*   [Flux.1](#flux1)
-*   [Wan Video](#wan-video)
-*   [LTX Video](#ltx-video)
-*   [PixArt Sigma](#pixart-sigma)
-*   [NVLabs Sana](#nvlabs-sana)
-*   [Stable Diffusion 3](#stable-diffusion-3)
-*   [Kwai Kolors](#kwai-kolors)
-*   [Lumina2](#lumina2)
-*   [Cosmos2 Predict (Image)](#cosmos2-predict-image)
-*   [Qwen-Image](#qwen-image)
-*   [Legacy Stable Diffusion models](#legacy-stable-diffusion-models)
+*   Explore the complete [Tutorial](/TUTORIAL.md) to begin, containing vital information.
+*   Start quickly with the [Quick Start](/documentation/QUICKSTART.md) guide.
+*   Optimize for memory-constrained systems using [DeepSpeed](/documentation/DEEPSPEED.md).
+*   Set up multi-node distributed training via [this guide](/documentation/DISTRIBUTED.md).
 
 ## Hardware Requirements
 
-The hardware requirements vary depending on the model and training settings. See each model's section for details.
-
-### General Notes
-*   **NVIDIA:** Generally, anything from a 3080 and up should work well.
-*   **AMD:** Supports LoRA and full-rank tuning (tested on 7900 XTX 24GB and MI300X). May use more memory due to the lack of `xformers`.
-*   **Apple:** Tested on M3 Max with 128GB memory. Requires 24GB+ due to lack of memory-efficient attention.
-*   See each model's section for more detailed requirements.
+*   **NVIDIA:**  Generally, 3080 and up.
+*   **AMD:** LoRA and full-rank tuning are verified on a 7900 XTX 24GB and MI300X. (More memory usage than Nvidia)
+*   **Apple:** Requires 24GB+ M-series hardware due to memory usage, tested on M3 Max (128GB).
+*   **Specific Models:** Hardware recommendations are provided for each [supported model](#supported-models).
 
 ## Toolkit
 
-For more information about the associated toolkit distributed with SimpleTuner, refer to [the toolkit documentation](/toolkit/README.md).
+Refer to the [toolkit documentation](/toolkit/README.md) for more information.
 
 ## Setup
 
@@ -87,6 +82,4 @@ Detailed setup instructions are available in the [installation documentation](/I
 
 ## Troubleshooting
 
-Enable debug logs for more details by adding `export SIMPLETUNER_LOG_LEVEL=DEBUG` to your environment (`config/config.env`).
-For performance analysis, set `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`.
-Consult [OPTIONS.md](/OPTIONS.md) for a comprehensive list of available options.
+Enable debug logs with `export SIMPLETUNER_LOG_LEVEL=DEBUG` in your environment file (`config/config.env`). For performance analysis use `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`.  A comprehensive list of options is available in [this documentation](/OPTIONS.md).

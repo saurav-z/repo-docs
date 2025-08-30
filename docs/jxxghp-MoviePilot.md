@@ -1,4 +1,4 @@
-# MoviePilot: Your Automation Hub for Movies and Media Management
+# MoviePilot: Your All-in-One Automation Solution for Media Management
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 [![GitHub forks](https://img.shields.io/github/forks/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
@@ -9,51 +9,57 @@
 [![Docker Pulls V2](https://img.shields.io/docker/pulls/jxxghp/moviepilot-v2?style=for-the-badge)](https://hub.docker.com/r/jxxghp/moviepilot-v2)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20Synology-blue?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 
-MoviePilot is a streamlined and user-friendly application designed to automate your movie and media management tasks, built upon core automation principles. This project is based on parts of [NAStool](https://github.com/NAStool/nas-tools) to simplify features and provide easy extensibility.
+MoviePilot is a powerful and user-friendly application designed to streamline and automate your media management needs. This project, inspired by NAStool, focuses on core automation tasks, offering a more streamlined and extensible solution.  **[Check out the original project on GitHub](https://github.com/jxxghp/MoviePilot)!**
 
 ## Key Features
 
-*   **Frontend & Backend Separation:** Utilizes a modern architecture with FastAPI (backend) and Vue3 (frontend) for a responsive and efficient user experience.
-*   **Focus on Core Automation:** Simplifies features and settings, with sensible defaults for ease of use.
-*   **User-Friendly Interface:** Offers a redesigned, more intuitive, and aesthetically pleasing user interface.
-*   **Cross-Platform Support:** Compatible with Windows, Linux, and Synology systems.
+*   **Modern Architecture:** Built with a front-end and back-end separation using FastApi and Vue3, enabling better maintainability and scalability.
+*   **Simplified Configuration:** Focuses on essential features, with many settings defaulting to optimal values for ease of use.
+*   **Enhanced User Interface:** Features a redesigned, intuitive, and visually appealing user interface for a superior user experience.
+*   **Docker Support:**  Ready to use with Docker.
+*   **Plugin Architecture:**  Extensible via plugin support.
 
 ## Installation and Usage
 
+Comprehensive guides are available on the official Wiki: [https://wiki.movie-pilot.org](https://wiki.movie-pilot.org)
+
+## Development
+
 ### Prerequisites
+
 *   Python 3.12
-*   Node.js v20.12.1
+*   Node JS v20.12.1
 
-### Steps:
+### Setup Instructions
 
-1.  **Clone the Main Project:**
+1.  **Clone the Main Repository:**
     ```shell
     git clone https://github.com/jxxghp/MoviePilot
     ```
-
-2.  **Clone the Resources Project and Copy Libraries:**  Clone `MoviePilot-Resources` and copy the appropriate platform and version-specific libraries (`.so`/`.pyd`/`.bin`) from the `resources` directory into the `app/helper` directory.
+2.  **Clone the Resources Repository:**  Fetch platform-specific libraries.
     ```shell
     git clone https://github.com/jxxghp/MoviePilot-Resources
     ```
-
-3.  **Install Backend Dependencies and Run Backend:**
-    *   Navigate to the `app` directory.
+    Copy the necessary `.so`/`.pyd`/`.bin` files from the `resources` directory (corresponding to your platform and version) to the `app/helper` directory within the main project.
+3.  **Install Backend Dependencies:**
     ```shell
+    cd app
     pip install -r requirements.txt
     python3 main.py
     ```
-    The backend will start on port 3001 by default.  API documentation is available at `http://localhost:3001/docs`.
-
-4.  **Clone and Run Frontend Project:**
+    The backend service will start on port `3001` by default. Access the API documentation at `http://localhost:3001/docs`.
+4.  **Clone the Frontend Repository:**
     ```shell
     git clone https://github.com/jxxghp/MoviePilot-Frontend
+    ```
+5.  **Install Frontend Dependencies and Run:**
+    ```shell
     cd MoviePilot-Frontend
     yarn
     yarn dev
     ```
     Access the frontend at `http://localhost:5173`.
-
-5.  **Plugin Development:** Refer to the [Plugin Development Guide](https://wiki.movie-pilot.org/zh/plugindev) to create custom plugins in the `app/plugins` directory.
+6.  **Plugin Development:**  Follow the [plugin development guide](https://wiki.movie-pilot.org/zh/plugindev) to create your plugins in the `app/plugins` directory.
 
 ## Related Projects
 
@@ -63,28 +69,15 @@ MoviePilot is a streamlined and user-friendly application designed to automate y
 *   [MoviePilot-Server](https://github.com/jxxghp/MoviePilot-Server)
 *   [MoviePilot-Wiki](https://github.com/jxxghp/MoviePilot-Wiki)
 
-## Important Notices
+## Disclaimer
 
-*   **Disclaimer:** This software is intended for learning and personal use only. Do not use it for commercial purposes or any illegal activities. Users are solely responsible for their actions.
-*   **Open Source:** The source code is open.  Modifying and redistributing the code (e.g., by removing restrictions) carries risks and responsibilities that rest solely with the modifier.  Do not circumvent or modify the user authentication mechanism.
-*   **No Donations:** The project does not accept donations or offer paid services. Please be aware of potential scams.
-
-## Contribution
-
-Feel free to contribute!
+*   This software is intended for learning and personal use only. Commercial use and distribution are strictly prohibited.
+*   The developers are not responsible for any misuse of the software or any illegal activities performed using this software.
+*   The code is open-source. Users are responsible for any modifications to the code and any consequences arising from such modifications. It is not recommended to circumvent or alter the user authentication mechanism.
+*   The project does not accept donations and does not provide any paid services. Please be cautious and avoid any misleading offers.
 
 ## Contributors
 
 <a href="https://github.com/jxxghp/MoviePilot/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=jxxghp/MoviePilot" />
 </a>
-
-## Additional Notes for SEO Optimization:
-
-*   **Keywords:**  Include relevant keywords throughout the README, such as "movie automation," "media management," "NAS," "FastAPI," "Vue3," and platform names (Windows, Linux, Synology).
-*   **Headings:** Use clear and descriptive headings to organize information.
-*   **Concise Language:** Keep sentences and paragraphs concise and easy to understand.
-*   **Links:** Provide links to the original repository and related projects to improve discoverability.
-*   **Alt Text:** Ensure images have descriptive alt text.
-*   **Up-to-Date:** Regularly update the README to reflect project changes and new features.
-*   **Docker:** Highlight docker support

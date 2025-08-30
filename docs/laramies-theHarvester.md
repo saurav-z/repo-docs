@@ -1,163 +1,175 @@
 [![theHarvester](https://github.com/laramies/theHarvester/blob/master/theHarvester-logo.webp)](https://github.com/laramies/theHarvester)
 
-[![TheHarvester CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Python%20CI/badge.svg)]
-[![TheHarvester Docker Image CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Docker%20Image%20CI/badge.svg)]
+[![TheHarvester CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Python%20CI/badge.svg)](https://github.com/laramies/theHarvester/actions/workflows/python-package.yml)
+[![TheHarvester Docker Image CI](https://github.com/laramies/theHarvester/workflows/TheHarvester%20Docker%20Image%20CI/badge.svg)](https://github.com/laramies/theHarvester/actions/workflows/docker-image.yml)
 [![Rawsec's CyberSecurity Inventory](https://inventory.raw.pm/img/badges/Rawsec-inventoried-FF5050_flat_without_logo.svg)](https://inventory.raw.pm/)
 
-# theHarvester: OSINT Reconnaissance Tool
+# theHarvester: OSINT Gathering Tool
 
-**theHarvester is a powerful open-source intelligence (OSINT) gathering tool designed for penetration testers and security researchers to uncover a target's attack surface.** ([See the original repository](https://github.com/laramies/theHarvester))
+**theHarvester is an essential open-source intelligence (OSINT) tool for penetration testers and security professionals, designed to uncover a domain's external threat landscape.** This powerful tool gathers valuable information like emails, subdomains, and more from various public sources.
 
-## Key Features
+[Visit the original repository on GitHub](https://github.com/laramies/theHarvester)
 
-*   **Comprehensive Information Gathering:** Collects valuable information including:
-    *   Subdomains
-    *   Emails
-    *   IP addresses
-    *   URLs
-    *   Employee names
-*   **Multiple Data Sources:** Leverages various public resources for data collection:
-    *   Search engines (Google, DuckDuckGo, etc.)
-    *   Social media platforms
-    *   API integrations
-    *   And more!
-*   **Passive & Active Modules:** Includes passive modules to gather information without direct interaction with the target and active modules for DNS brute-forcing and screenshot capturing.
-*   **API Key Support:** Seamless integration with services requiring API keys for enhanced data gathering.
+## Key Features:
+
+*   **Comprehensive Data Gathering:** Collects names, emails, IPs, subdomains, and URLs.
+*   **Multiple Public Resources:** Leverages a wide array of sources for information gathering.
+*   **Passive Modules:**  Provides information without actively interacting with the target, reducing the risk of detection.
+*   **Active Modules:** Includes DNS brute force and screenshot capabilities.
+*   **API Integration:** Integrates with services requiring API keys for enhanced data collection.
 
 ## Installation and Setup
 
 ### Prerequisites
-* Python 3.12 or higher.
 
-### Installation Steps:
-1.  **Install `uv`:**
+*   Python 3.12 or higher.
+
+### Installation Steps
+
+1.  **Install uv:**
+
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
+
 2.  **Clone the Repository:**
+
     ```bash
     git clone https://github.com/laramies/theHarvester
     cd theHarvester
     ```
-3.  **Install Dependencies (using uv):**
+
+3.  **Install Dependencies and Create Virtual Environment:**
+
     ```bash
     uv sync
     ```
+
 4.  **Run theHarvester:**
+
     ```bash
     uv run theHarvester
     ```
 
 ## Development
 
-To contribute to the project:
+To install development dependencies:
 
-### Install Development Dependencies
 ```bash
 uv sync --extra dev
 ```
 
-### Run Tests:
+To run tests:
+
 ```bash
 uv run pytest
 ```
 
-### Run Linting and Formatting:
+To run linting and formatting:
+
 ```bash
 uv run ruff check
+```
+
+```bash
 uv run ruff format
 ```
 
-## Modules
-### Passive Modules:
-*   [Baidu](https://www.baidu.com)
-*   [Bevilgil](https://bevigil.com/osint-api)
-*   [Brave](https://api-dashboard.search.brave.com)
-*   [Bufferoverun](https://tls.bufferover.run)
-*   [Builtwith](https://builtwith.com)
-*   [Censys](https://censys.io)
-*   [Certspotter](https://sslmate.com/certspotter)
-*   [Criminalip](https://www.criminalip.io)
-*   [Crtsh](https://crt.sh)
-*   [Dehashed](https://dehashed.com)
-*   [Dnsdumpster](https://dnsdumpster.com)
-*   [Duckduckgo](https://duckduckgo.com)
-*   [Fullhunt](https://fullhunt.io)
-*   [Github-code](https://www.github.com)
-*   [Hackertarget](https://hackertarget.com)
-*   [Haveibeenpwned](https://haveibeenpwned.com)
-*   [Hunter](https://hunter.io)
-*   [Hunterhow](https://hunter.how)
-*   [Intelx](https://intelx.io)
-*   [Leaklookup](https://leak-lookup.com)
-*   [Netlas](https://app.netlas.io)
-*   [Onyhe](https://www.onyphe.io)
-*   [Otx](https://otx.alienvault.com)
-*   [Pentesttools](https://pentest-tools.com)
-*   [Projectdiscovery](https://chaos.projectdiscovery.io)
-*   [Rapiddns](https://rapiddns.io)
-*   [Rocketreach](https://rocketreach.co)
-*   [Securityscorecard](https://securityscorecard.com)
-*   [Securitytrails](https://securitytrails.com)
-*   [Shodan](https://shodan.io)
-*   [Subdomaincenter](https://www.subdomain.center)
-*   [Subdomainfinderc99](https://subdomainfinder.c99.nl)
-*   [Threatminer](https://www.threatminer.org)
-*   [Tomba](https://tomba.io)
-*   [Urlscan](https://urlscan.io)
-*   [Venacus](https://venacus.com)
-*   [Virustotal](https://www.virustotal.com)
-*   [Whoisxml](https://subdomains.whoisxmlapi.com/api/pricing)
-*   [Yahoo](https://www.yahoo.com)
-*   [Zoomeye](https://www.zoomeye.org)
+## Passive Modules
 
-### Active Modules
-*   DNS Brute Force
-*   Screenshots
+theHarvester utilizes a variety of passive modules to gather intelligence:
 
-### Modules that require an API Key:
-*   API key setup documentation: [API Key Setup](https://github.com/laramies/theHarvester/wiki/Installation#api-keys)
+*   baidu: Baidu search engine
+*   bevigil: CloudSEK BeVigil scans mobile application for OSINT assets
+*   brave: Brave search engine
+*   bufferoverun: Fast domain name lookups for TLS certificates in IPv4 space
+*   builtwith: Find out what websites are built with
+*   censys: Uses certificates searches to enumerate subdomains and gather emails
+*   certspotter: Cert Spotter monitors Certificate Transparency logs
+*   criminalip: Specialized Cyber Threat Intelligence (CTI) search engine
+*   crtsh: Comodo Certificate search
+*   dehashed: Take your data security to the next level
+*   dnsdumpster: Domain research tool that can discover hosts related to a domain
+*   duckduckgo: DuckDuckGo search engine
+*   fullhunt: Next-generation attack surface security platform
+*   github-code: GitHub code search engine
+*   hackertarget: Online vulnerability scanners and network intelligence to help organizations
+*   haveibeenpwned: Check if your email address is in a data breach
+*   hunter: Hunter search engine
+*   hunterhow: Internet search engines for security researchers
+*   intelx: Intelx search engine
+*   leaklookup: Data breach search engine
+*   netlas: A Shodan or Censys competitor
+*   onyphe: Cyber defense search engine
+*   otx: AlienVault open threat exchange
+*   pentesttools: Cloud-based toolkit for offensive security testing
+*   projecdiscovery: Actively collects and maintains internet-wide assets data, to enhance research and analyse changes around DNS for better insights
+*   rapiddns: DNS query tool which make querying subdomains or sites of a same IP easy
+*   rocketreach: Access real-time verified personal/professional emails, phone numbers, and social media links
+*   securityscorecard: helps TPRM and SOC teams detect, prioritize, and remediate vendor risk across their entire supplier ecosystem at scale
+*   securityTrails: Security Trails search engine, the world's largest repository of historical DNS data
+*   -s, --shodan: Shodan search engine
+*   subdomaincenter: A subdomain finder tool used to find subdomains of a given domain
+*   subdomainfinderc99: A subdomain finder is a tool used to find the subdomains of a given domain
+*   threatminer: Data mining for threat intelligence
+*   tomba: Tomba search engine
+*   urlscan: A sandbox for the web that is a URL and website scanner
+*   venacus: Venacus search engine
+*   virustotal: Domain search
+*   whoisxml: Subdomain search
+*   yahoo: Yahoo search engine
+*   zoomeye: China's version of Shodan
 
-## API Key Pricing:
-*   **BeVigil:** 50 free queries/month, 1k queries/month $50
-*   **Brave:** Free plan available, Pro plans for higher limits
-*   **Bufferoverun:** 100 free queries/month, 10k/month $25
-*   **Builtwith:** 50 free queries ever, $2950/yr
-*   **Censys:** 500 credits $100
-*   **Criminalip:** 100 free queries/month, 700k/month $59
-*   **Dehashed:** 500 credts $15, 5k credits $150
-*   **Dnsdumpster:** 50 free querries/day, $49
-*   **Fullhunt:** 50 free queries, 200 queries $29/month, 500 queries $59/month
-*   **Github-code**
-*   **Haveibeenpwned:** 10 email searches/min $4.50, 50 email searches/min $22
-*   **Hunter:** 50 credits/month free, 12k credits/yr $34
-*   **Hunterhow:** 10k free API results per 30 days, 50k API results per 30 days $10
-*   **Intelx**
-*   **Leaklookup:** 20 credits $10, 50 credits $20, 140 credits $50, 300 credits $100
-*   **Netlas:** 50 free requests/day, 1k requests $49, 10k requests $249
-*   **Onyhe:** 10M results/month $587
-*   **Pentesttools:** 5 assets netsec $95/month, 5 assets webnetsec $140/month
-*   **Projectdiscovery:** requires work email. Free monthly discovery and vulnerability scans on sign-up email domain, enterprise $
-*   **Rocketreach:** 100 email lookups/month $48, 250 email lookups/month $108
-*   **Securityscorecard**
-*   **SecurityTrails:** 50 free queries/month, 20k queries/month $500
-*   **Shodan:** Freelancer $69 month, Small Business $359 month
-*   **Tomba:** 25 searches/month free, 1k searches/month $39, 5k searches/month $89
-*   **Venacus:** 1 search/day free, 10 searches/day $12, 30 searches/day $36
-*   **Whoisxml:** 2k queries $50, 5k queries $105
-*   **Zoomeye:** 5 results/day free, 30/results/day $190/yr
+## Active Modules
 
-## Get Involved
-*   **Report Issues and Suggest Improvements:**
-    *   [Twitter](https://twitter.com/laramies): Christian Martorella @laramies
-    *   [cmartorella@edge-security.com](cmartorella@edge-security.com)
-    *   [Twitter](https://twitter.com/NotoriousRebel1): Matthew Brown @NotoriousRebel1
-    *   [Twitter](https://twitter.com/jay_townsend1): Jay "L1ghtn1ng" Townsend @jay_townsend1
-*   **Main Contributors:**
-    *   [Twitter](https://twitter.com/NotoriousRebel1) Matthew Brown @NotoriousRebel1
-    *   [Twitter](https://twitter.com/jay_townsend1) Jay "L1ghtn1ng" Townsend @jay_townsend1
-    *   [Twitter](https://twitter.com/discoverscripts) Lee Baird @discoverscripts
+*   DNS brute force: Dictionary brute force enumeration
+*   Screenshots: Take screenshots of subdomains that were found
+
+## Modules Requiring API Keys
+
+Documentation for setting up API keys is available at:  [https://github.com/laramies/theHarvester/wiki/Installation#api-keys](https://github.com/laramies/theHarvester/wiki/Installation#api-keys)
+
+*   bevigil
+*   brave
+*   bufferoverun
+*   builtwith
+*   censys
+*   criminalip
+*   dehashed
+*   dnsdumpster
+*   fullhunt
+*   github-code
+*   haveibeenpwned
+*   hunter
+*   hunterhow
+*   intelx
+*   leaklookup
+*   netlas
+*   onyphe
+*   pentesttools
+*   projecdiscovery
+*   rocketreach
+*   securityscorecard
+*   securityTrails
+*   shodan
+*   tomba
+*   venacus
+*   whoisxml
+*   zoomeye
+
+## Contact and Contributions
+
+*   **Christian Martorella (@laramies):**  [Twitter](https://twitter.com/laramies) cmartorella@edge-security.com
+*   **Matthew Brown (@NotoriousRebel1):** [Twitter](https://twitter.com/NotoriousRebel1)
+*   **Jay "L1ghtn1ng" Townsend (@jay_townsend1):** [Twitter](https://twitter.com/jay_townsend1)
+
+**Main Contributors:**
+
+*   Matthew Brown (@NotoriousRebel1)
+*   Jay "L1ghtn1ng" Townsend (@jay_townsend1)
+*   Lee Baird (@discoverscripts)
 
 ## Acknowledgements
+
 *   John Matherly - Shodan project
-*   Ahmed Aboul Ela - subdomain names dictionaries (big and small)
+*   Ahmed Aboul Ela - subdomain names dictionaries

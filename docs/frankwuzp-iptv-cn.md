@@ -1,70 +1,56 @@
-# IPTV-CN: Watch Chinese TV Channels with Jellyfin (Updated & Optimized)
+# IPTV CN: Stream Chinese TV Channels with Jellyfin
 
-**Tired of missing your favorite Chinese TV shows?** IPTV-CN provides up-to-date IPTV resources, specifically optimized for use with Jellyfin, enabling you to easily stream Chinese TV channels. ([View the Original Repo](https://github.com/frankwuzp/iptv-cn))
+**Easily access and stream live Chinese TV channels directly within your Jellyfin media server.** ([View on GitHub](https://github.com/frankwuzp/iptv-cn))
 
-[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/frankwuzp/iptv-cn/main?style=flat-square)](https://github.com/frankwuzp/iptv-cn)
-[![GitHub repo size](https://img.shields.io/github/repo-size/frankwuzp/iptv-cn?style=flat-square)](https://github.com/frankwuzp/iptv-cn)
-[![jsdelivr](https://data.jsdelivr.com/v1/package/gh/frankwuzp/iptv-cn/badge)](https://www.jsdelivr.com/package/gh/frankwuzp/iptv-cn)
-[![GitHub watchers](https://img.shields.io/github/watchers/frankwuzp/iptv-cn?style=social)](https://github.com/frankwuzp/iptv-cn)
-
+This repository provides up-to-date IPTV resources, specifically curated for Jellyfin users, focusing on reliable Chinese TV streams.
 
 ## Key Features:
 
-*   **Reliable IPTV Resources:** Access tested and working IPTV streams for Chinese TV channels.
-*   **Jellyfin Compatibility:** Optimized for seamless integration with your Jellyfin media server.
-*   **Automatic EPG Updates:**  Enjoy regularly updated Electronic Program Guides (EPGs) for accurate scheduling.
-*   **Multiple Stream Sources:** Choose from different stream sources, including ones optimized for mainland China users, and mobile providers.
-*   **Easy Setup:** Simple instructions for integrating channels and EPGs into your Jellyfin setup.
+*   **Reliable IPTV Resources:** Provides `.m3u` playlists with working IPTV channels, tested and optimized for Jellyfin.
+*   **Optimized for Mainland China:** Includes CDN links for faster streaming and improved performance within China.
+*   **Automatic EPG Updates:**  The `guide.xml` file is automatically updated daily at 1 AM and 6 AM to ensure accurate TV listings.
+*   **Multiple Channel Source Options:** Includes channels from both generic and CMCC sources, offering diverse viewing choices.
+*   **Easy Integration with Jellyfin:** Provides clear instructions and links for integrating the IPTV resources into your Jellyfin setup.
 
-## Available IPTV Streams:
+## Resources and Usage:
 
-The following `.m3u` files provide the channel listings:
+### M3U Playlist Files:
 
-*   `tv-ipv4-cn`: General-purpose IPTV list for channels across China.
-*   `tv-ipv4-cmcc`:  Updated Mobile Channels (tested and working).
-*   `tv-ipv4-old`: Legacy channels from the original source ([BurningC4/Chinese-IPTV](https://github.com/BurningC4/Chinese-IPTV)), may experience issues.
+These files contain the channel lists that you can use in your Jellyfin setup.
 
-### Accessing Channel Lists:
+*   `tv-ipv4-cn`:  Generic Chinese channels.
+*   `tv-ipv4-cmcc`: Chinese channels from CMCC source. (Recommended for improved reliability).
+*   `tv-ipv4-old`: (Legacy) Contains older channel resources (some may be outdated).
 
-You can access the channel lists via the following methods:
+#### Accessing the M3U Files:
 
-*   **GitHub Raw:**
-    `https://raw.githubusercontent.com/frankwuzp/iptv-cn/main/tv-ipv4-cmcc.m3u` (Example, replace with your desired file name)
+You can use the following URLs in your Jellyfin TV Live settings (choose one):
 
-*   **jsDelivr CDN (Recommended for Mainland China Users - Faster CDN):**
-    `https://cdn.jsdelivr.net/gh/frankwuzp/iptv-cn@latest/tv-ipv4-cmcc.m3u` (Example, replace with your desired file name)
+*   **GitHub:**  `https://raw.githubusercontent.com/frankwuzp/iptv-cn/main/tv-ipv4-cmcc.m3u`
+*   **jsDelivr CDN (Recommended for Mainland China):** `https://cdn.jsdelivr.net/gh/frankwuzp/iptv-cn@latest/tv-ipv4-cmcc.m3u`
 
-**To use these with Jellyfin:**
+### Electronic Program Guide (EPG) Files:
 
-1.  Save the desired `.m3u` file from the provided links or copy the URL.
-2.  In your Jellyfin settings, navigate to "Live TV" -> "TV Channels" and add a new channel source.
-3.  Paste the URL of the `.m3u` file into the "URL" field.
-    ![jellyfin-setting](./image/jellyfin-settings.jpg)
+EPG files provide TV listings information for your channels.
 
-## Electronic Program Guide (EPG)
+*   `guide.xml`: Automatically updated daily, provides program information.
 
-EPG data provides program schedules for each channel, helping you plan your viewing.
+#### Accessing the EPG File:
 
-### Available EPG Sources (Choose one):
+You can use the following URLs in your Jellyfin TV Live settings (choose one):
 
-*   **Mysterious Source:**
-    `http://epg.51zmt.top:8000/e.xml`
+*   **GitHub:**  `https://raw.githubusercontent.com/frankwuzp/iptv-cn/main/guide.xml`
+*   **jsDelivr CDN (Recommended for Mainland China):**  `https://cdn.jsdelivr.net/gh/frankwuzp/iptv-cn@latest/guide.xml`
+*   **External Source:** `http://epg.51zmt.top:8000/e.xml`
+*   **iptv-org:** `https://iptv-org.github.io/epg/guides/cn/tv.cctv.com.epg.xml`
 
-*   **GitHub Raw:**
-    `https://raw.githubusercontent.com/frankwuzp/iptv-cn/main/guide.xml`
+### Integrating with Jellyfin:
 
-*   **jsDelivr CDN (Optimized for Mainland Users):**
-    `https://cdn.jsdelivr.net/gh/frankwuzp/iptv-cn@latest/guide.xml`
-
-*   **iptv-org:**
-    `https://iptv-org.github.io/epg/guides/cn/tv.cctv.com.epg.xml`
-
-**To use with Jellyfin:**
-
-1.  Copy the URL of your chosen EPG source.
-2.  In your Jellyfin settings, under "Live TV" -> "Guide Providers", add a new guide provider.
-3.  Paste the URL into the "URL" field.
-    ![jellyfin-epg](./image/jellyfin-epg.jpg)
+1.  Go to your Jellyfin server settings.
+2.  Navigate to "Live TV" -> "Manage Providers".
+3.  Add a new provider using one of the M3U playlist URLs provided above.
+4.  Add a new EPG source using one of the XML file URLs provided above.
+5.  Save your settings.
 
 ## References:
 
@@ -75,12 +61,10 @@ EPG data provides program schedules for each channel, helping you plan your view
 *   [国内高清直播live - TV001](http://www.tv001.vip/forum.php?mod=viewthread&tid=3)
 *   [广东移动某河全套 - 恩山无线论坛](https://www.right.com.cn/forum/thread-6809023-1-1.html)
 
-**Thank you to the open-source community for making this possible! 🎉**
+## Changelog:
 
-## Changelog
-
-*   **211126:** Marked unusable stream sources; added working mobile signal sources.
-*   **211123:** Fixed EPG update issues and added an additional EPG source.
-*   **211122:** Introduced `guide.xml` for EPG (updated daily at 1 AM and 6 AM).
-*   **211122:** Separated channel lists by region (general and Guangdong).
-*   **211121:** Initial release.
+*   **211126:** Updated channel sources and added CMCC channels; marked some outdated sources.
+*   **211123:** Resolved EPG update issues; added a new EPG source.
+*   **211122:** Implemented automatic EPG updates; introduced `guide.xml`
+*   **211122:** Separated channel lists into generic and province-specific versions.
+*   **211121:** Initial commit.

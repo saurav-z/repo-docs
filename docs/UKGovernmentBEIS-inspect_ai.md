@@ -1,61 +1,54 @@
-# Inspect: Evaluate and Enhance Your Large Language Models
+# Inspect: Evaluate and Improve Your Large Language Models
 
-**Unleash the power of comprehensive evaluation for your LLMs with Inspect, a robust framework from the UK AI Safety Institute.**
+**Easily evaluate and refine your LLMs with Inspect, a powerful framework developed by the UK AI Safety Institute.**
 
-[![Inspect AI Logo](https://inspect.aisi.org.uk/images/aisi-logo.svg)](https://aisi.gov.uk/)
+[<img width="295" src="https://inspect.aisi.org.uk/images/aisi-logo.svg" alt="AI Safety Institute Logo" />](https://aisi.gov.uk/)
 
-Inspect is an open-source Python framework designed to help researchers and developers rigorously evaluate and improve the performance of large language models (LLMs). Developed by the UK AI Safety Institute, Inspect provides a comprehensive suite of tools for assessing LLM capabilities and identifying areas for enhancement.
+Inspect is a robust Python framework designed for comprehensive Large Language Model (LLM) evaluation.  It provides a streamlined approach to assess and enhance LLM performance across various applications.
 
-## Key Features:
+**Key Features of Inspect:**
 
-*   **Versatile Evaluation Components:** Built-in support for prompt engineering, tool usage assessment, multi-turn dialog analysis, and model-graded evaluations.
-*   **Extensible Architecture:** Easily extend Inspect with custom components to support new elicitation and scoring techniques, ensuring adaptability to emerging LLM evaluation methodologies.
-*   **Python-Based:** Designed for easy integration into existing Python-based LLM development workflows.
-*   **Open Source:** Developed and maintained by the UK AI Safety Institute, with the code available on GitHub and a dedicated documentation site.
+*   **Built-in Components:** Leverage ready-to-use modules for prompt engineering, tool usage analysis, multi-turn dialog evaluations, and model-graded assessments.
+*   **Extensible Architecture:** Easily integrate custom components and extend functionality by creating new Python packages to support diverse elicitation and scoring techniques.
+*   **Modular Design:**  Flexible for various evaluation scenarios.
+*   **Developed by Experts:** Created by the UK AI Safety Institute, ensuring a focus on safety and reliability.
 
-## Getting Started
+**Getting Started**
 
-For detailed information on how to use Inspect, including installation instructions, usage examples, and API documentation, please visit the official documentation: [https://inspect.aisi.org.uk/](https://inspect.aisi.org.uk/)
+For detailed information on installation, usage, and advanced features, please consult the official Inspect documentation:  <https://inspect.aisi.org.uk/>.
 
-## Development and Contribution
+**Development and Contribution**
 
-To contribute to the development of Inspect, follow these steps:
+Interested in contributing to Inspect?  Follow these steps to get started:
 
 1.  **Clone the Repository:**
-
     ```bash
     git clone https://github.com/UKGovernmentBEIS/inspect_ai.git
     cd inspect_ai
     ```
-
-2.  **Install Dependencies:**
-
+2.  **Install with Development Dependencies:**
     ```bash
     pip install -e ".[dev]"
     ```
 
 3.  **(Optional) Install Pre-commit Hooks:**
-
     ```bash
     make hooks
     ```
 
-4.  **Run Tests and Linting:**
-
+4.  **Run Checks and Tests:** Ensure code quality and functionality with these commands:
     ```bash
     make check
     make test
     ```
 
-### VS Code Setup (Recommended)
+**Recommended IDE Setup (VS Code)**
 
-For the best development experience, use VS Code and install the following recommended extensions when prompted:
+To optimize your development workflow, install the following VS Code extensions:
 
 *   Python
 *   Ruff
 *   MyPy
 
-## Resources
-
-*   **Source Code:** [View the Inspect Repository on GitHub](https://github.com/UKGovernmentBEIS/inspect_ai)
-*   **Documentation:** [https://inspect.aisi.org.uk/](https://inspect.aisi.org.uk/)
+You will be prompted to install these extensions when opening the project in VS Code.
+```

@@ -1,17 +1,21 @@
-# Kitten TTS: Generate Realistic Speech on Any Device (No GPU Needed!)
+# Kitten TTS: Generate Realistic Speech with a Tiny, Powerful Model
 
-Kitten TTS is a revolutionary open-source text-to-speech (TTS) model, enabling high-quality voice synthesis with exceptional efficiency.
+**Kitten TTS revolutionizes text-to-speech by offering high-quality, realistic voices with an incredibly lightweight and efficient model.**
 
-[View the Kitten TTS Repository on GitHub](https://github.com/KittenML/KittenTTS)
+[Visit the original repository on GitHub](https://github.com/KittenML/KittenTTS)
 
-## Key Features:
+**Currently in Developer Preview**
 
-*   **Ultra-Lightweight:** Download and run the model with a size under 25MB.
-*   **CPU-Optimized:** Runs seamlessly on any device, without the need for a GPU.
-*   **High-Quality Voices:** Enjoy several premium voice options for diverse speech generation.
-*   **Fast Inference:** Optimized for real-time speech synthesis and quick audio generation.
+[Join our Discord](https://discord.com/invite/VJ86W4SURW) | [Request Custom Support](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview) | [Contact Us](mailto:info@stellonlabs.com)
 
-## Quick Start: Get Started with Kitten TTS
+## Key Features
+
+*   **Ultra-Lightweight Design:**  The model size is under 25MB, making it ideal for deployment on various devices.
+*   **CPU-Optimized Performance:**  Run Kitten TTS seamlessly without a GPU, ensuring accessibility on any device.
+*   **High-Quality Voices:** Experience premium voice options for a natural and engaging listening experience.
+*   **Fast Inference Speed:**  Optimized for real-time speech synthesis, enabling quick and efficient audio generation.
+
+## Getting Started
 
 ### Installation
 
@@ -36,18 +40,11 @@ sf.write('output.wav', audio, 24000)
 
 ## System Requirements
 
-Kitten TTS is designed to work on virtually any device without any specific hardware requirements.
+Kitten TTS is designed to work on a wide range of systems.
 
-## Current Development Status & Roadmap
+## Roadmap / Checklist
 
-*   **Developer Preview:** The model is currently in developer preview.
-*   **Future Development:**
-    *   Release fully trained model weights
-    *   Release a mobile SDK
-    *   Release a web version
-
-## Get Involved & Stay Updated
-
-*   [Join our Discord](https://discord.com/invite/VJ86W4SURW)
-*   [For custom support - fill this form ](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
-*   Email the creators with any questions : info@stellonlabs.com
+*   \[x] Release a preview model
+*   \[ ] Release the fully trained model weights
+*   \[ ] Release mobile SDK
+*   \[ ] Release web version

@@ -4,9 +4,9 @@
   </picture>
 </div>
 
-<h1 align="center">Klavis AI: Unlock Seamless Integrations for Your AI Applications</h1>
+<h1 align="center">Klavis AI: Production-Ready MCP Servers for Seamless AI Integration</h1>
 
-**Klavis AI provides production-ready MCP (Model Control Plane) servers, enabling effortless integration with 50+ services, from Gmail to GitHub, all accessible through a simple API.**
+<p align="center"><strong>Unlock the power of AI with Klavis: Effortlessly integrate 50+ MCP servers for enhanced functionality.</strong></p>
 
 <div align="center">
 
@@ -18,49 +18,49 @@
 
 </div>
 
-## Key Features of Klavis AI
+---
 
-*   **🚀 Instant Integration**: Connect to services in seconds with zero-configuration setup.
-*   **🌐 Hosted and Self-Hosted Options**: Choose the right deployment model for your needs.
-*   **🔐 Enterprise-Grade Security**:  Includes OAuth support, and SOC2 & GDPR compliance.
-*   **🛠️ Wide Range of Integrations**: Access 50+ ready-to-use MCP servers, including Gmail, GitHub, and more.
-*   **📦 Simple API Access**: Easy integration with Python, TypeScript, and other frameworks.
-*   **🏢 Scalable Infrastructure**:  Production-ready managed infrastructure with 99.9% uptime SLA available.
+## Key Features
 
-## Getting Started: Choose Your Integration Method
+*   **🌐 Hosted Service:** Production-ready, managed infrastructure with 99.9% uptime.
+*   **🔐 Enterprise OAuth:** Secure authentication for Google, GitHub, Slack, and more.
+*   **🛠️ 50+ Integrations:** Connect to CRM, productivity tools, databases, and social media.
+*   **🚀 Instant Deployment:** Zero-config setup for popular tools like Claude Desktop, VS Code, and Cursor.
+*   **🏢 Enterprise Ready:** SOC2 compliant, GDPR ready, and backed by dedicated support.
+*   **🐳 Self-Hosting Options:** Docker images and source code for customization.
 
-### 1. 🌐 Hosted Service (Recommended for Production)
+---
 
-Leverage Klavis AI's fully managed infrastructure for a hassle-free experience.
+## Quick Start: Access MCP Servers in Minutes
 
-**Benefits:**
+Klavis offers both a hosted service for ease of use and self-hosting options for greater control.
 
-*   **No setup required**: Start using servers instantly.
-*   **Scalable**: Handles traffic automatically.
-*   **Managed OAuth**: Authentication is simplified.
+### 1.  Hosted Service (Recommended for Production)
 
-**Quick Start:**
+**Get started with instant access to a wide range of MCP servers – no setup required!**
 
-1.  **🔗 [Get Free API Key](https://www.klavis.ai/home/api-keys)**
+*   **Fastest Setup:** Simply obtain your API key.
+*   **No Infrastructure Management:** We handle everything.
+*   **Automatic Updates:** Benefit from the latest server versions.
 
-    ```bash
-    pip install klavis
-    # or
-    npm install klavis
-    ```
+```bash
+pip install klavis
+# or
+npm install klavis
+```
 
-    ```python
-    from klavis import Klavis
+```python
+from klavis import Klavis
 
-    klavis = Klavis(api_key="your-free-key")
-    server = klavis.mcp_server.create_server_instance("GMAIL", "user123")
-    ```
+klavis = Klavis(api_key="your-free-key")
+server = klavis.mcp_server.create_server_instance("GMAIL", "user123")
+```
 
-### 2. 🐳 Docker (Self-Hosting)
+**🔗 [Get Your Free API Key Now](https://www.klavis.ai/home/api-keys)**
 
-Deploy MCP servers directly to your infrastructure using Docker.
+### 2. Self-Hosting with Docker
 
-**How to Run:**
+**Deploy MCP servers quickly using Docker for complete control.**
 
 ```bash
 # Run GitHub MCP Server (no OAuth support)
@@ -72,9 +72,9 @@ docker run -p 8000:5000 -e KLAVIS_API_KEY=your_key \
   ghcr.io/klavis-ai/gmail-mcp-server:latest
 ```
 
-### 3. 🖥️ Cursor Configuration
+### 3. Cursor Configuration
 
-Integrate Klavis AI with Cursor by using our hosted service URLs directly:
+**Seamlessly integrate Klavis MCP servers with Cursor.**
 
 ```json
 {
@@ -89,31 +89,97 @@ Integrate Klavis AI with Cursor by using our hosted service URLs directly:
 }
 ```
 
-**Get your configuration:**
+**To configure Cursor:**
 
-1.  **🔗 [Visit our MCP Servers page](https://www.klavis.ai/home/mcp-servers)**
-2.  Select a service (Gmail, GitHub, etc.).
-3.  Copy the generated configuration and paste it into your tool's config.
+1.  **🔗 [Visit the MCP Servers Page](https://www.klavis.ai/home/mcp-servers)**
+2.  **Select** the service you want to use.
+3.  **Copy** the configuration snippet provided.
+4.  **Paste** it into your Cursor configuration file.
 
-## 🛠️ Available MCP Servers
+---
 
-| Service          | Docker Image                                    | OAuth Required | Description                                |
-| ---------------- | ----------------------------------------------- | -------------- | ------------------------------------------ |
-| **GitHub**       | `ghcr.io/klavis-ai/github-mcp-server`           | ✅             | Repository management, issues, PRs           |
-| **Gmail**        | `ghcr.io/klavis-ai/gmail-mcp-server:latest`      | ✅             | Email reading, sending, management         |
-| **Google Sheets** | `ghcr.io/klavis-ai/google_sheets-mcp-server:latest` | ✅             | Spreadsheet operations                     |
-| **YouTube**      | `ghcr.io/klavis-ai/youtube-mcp-server`          | ❌             | Video information, search                  |
-| **Slack**        | `ghcr.io/klavis-ai/slack-mcp-server:latest`      | ✅             | Channel management, messaging              |
-| **Notion**       | `ghcr.io/klavis-ai/notion-mcp-server:latest`     | ✅             | Database and page operations               |
-| **Salesforce**   | `ghcr.io/klavis-ai/salesforce-mcp-server:latest` | ✅             | CRM data management                      |
-| **Postgres**     | `ghcr.io/klavis-ai/postgres-mcp-server`         | ❌             | Database operations                      |
-| ...              | ...                                             | ...            | ...                                        |
+## Self-Hosting Guide: Build and Run Locally
 
-**[🔍 View All 50+ Servers →](https://docs.klavis.ai/documentation/introduction#mcp-server-quickstart) | [🐳 Browse Docker Images →](https://github.com/orgs/Klavis-AI/packages?repo_name=klavis)**
+### 1. Docker Images
 
-## 🎯 Advanced Usage Examples
+**The easiest way to get started is with pre-built Docker images.**
 
-### Python
+**Available Images:**
+-   `ghcr.io/klavis-ai/{server-name}-mcp-server:latest` - Basic server
+-   `ghcr.io/klavis-ai/{server-name}-mcp-server:latest` - With OAuth support
+
+**Browse All Docker Images:** [https://github.com/orgs/Klavis-AI/packages?repo_name=klavis](https://github.com/orgs/Klavis-AI/packages?repo_name=klavis)
+
+```bash
+# Example: GitHub MCP Server
+docker run -p 5000:5000 ghcr.io/klavis-ai/github-mcp-server:latest
+
+# Example: Gmail with OAuth (requires API key)
+docker run -it -e KLAVIS_API_KEY=your_key \
+  ghcr.io/klavis-ai/gmail-mcp-server:latest
+```
+
+**🔗 [Get Free API Key →](https://www.klavis.ai/home/api-keys)**
+
+### 2. Build From Source
+
+**For advanced users, build and run MCP servers from the source code.**
+
+```bash
+git clone https://github.com/klavis-ai/klavis.git
+cd klavis/mcp_servers/github
+
+# Option A: Using Docker
+docker build -t github-mcp .
+docker run -p 5000:5000 github-mcp
+
+# Option B: Run directly (Go example)
+go mod download
+go run server.go
+
+# Option C: Python servers  
+cd ../youtube
+pip install -r requirements.txt
+python server.py
+
+# Option D: Node.js servers
+cd ../slack  
+npm install
+npm start
+```
+
+*   **Each server has detailed setup instructions in its README.**
+*   **Or use our managed infrastructure - no Docker required.**
+
+```bash
+pip install klavis  # or npm install klavis
+```
+
+---
+
+## Available MCP Servers
+
+| Service         | Docker Image                                     | OAuth Required | Description                                   |
+| --------------- | ------------------------------------------------ | -------------- | --------------------------------------------- |
+| **GitHub**      | `ghcr.io/klavis-ai/github-mcp-server`             | ✅             | Repository management, issues, PRs          |
+| **Gmail**       | `ghcr.io/klavis-ai/gmail-mcp-server:latest`       | ✅             | Email reading, sending, management         |
+| **Google Sheets** | `ghcr.io/klavis-ai/google_sheets-mcp-server:latest` | ✅             | Spreadsheet operations                      |
+| **YouTube**     | `ghcr.io/klavis-ai/youtube-mcp-server`            | ❌             | Video information, search                   |
+| **Slack**       | `ghcr.io/klavis-ai/slack-mcp-server:latest`       | ✅             | Channel management, messaging              |
+| **Notion**      | `ghcr.io/klavis-ai/notion-mcp-server:latest`      | ✅             | Database and page operations                |
+| **Salesforce**  | `ghcr.io/klavis-ai/salesforce-mcp-server:latest`  | ✅             | CRM data management                         |
+| **Postgres**    | `ghcr.io/klavis-ai/postgres-mcp-server`           | ❌             | Database operations                         |
+| ...             | ...                                              | ...            | ...                                           |
+
+**[View All 50+ Servers](https://docs.klavis.ai/documentation/introduction#mcp-server-quickstart)  |  [Browse Docker Images](https://github.com/orgs/Klavis-AI/packages?repo_name=klavis)**
+
+---
+
+## Usage Examples
+
+**Integrate Klavis with your existing AI applications.**
+
+**Python**
 
 ```python
 from klavis import Klavis
@@ -126,7 +192,7 @@ server = klavis.mcp_server.create_server_instance(
 )
 ```
 
-### TypeScript
+**TypeScript**
 
 ```typescript
 import { KlavisClient } from 'klavis';
@@ -138,7 +204,7 @@ const server = await klavis.mcpServer.createServerInstance({
 });
 ```
 
-### With AI Frameworks (OpenAI)
+### OpenAI Function Calling
 
 ```python
 from openai import OpenAI
@@ -159,11 +225,53 @@ response = openai.chat.completions.create(
 )
 ```
 
-**[📖 View Complete Examples →](examples/)**
+**[View Complete Examples](examples/)**
 
-## 🔑 OAuth Authentication
+---
 
-Klavis simplifies OAuth authentication, handling complex setup automatically. Some servers require OAuth (Google, GitHub, Slack, etc.).  Klavis handles the complexities of the OAuth flow.
+## Hosted Service Benefits: Zero Setup Required
+
+**Perfect for individuals and businesses seeking immediate AI integration without infrastructure complexities.**
+
+### ✨ Why Choose Our Hosted Service?
+
+*   **🚀 Instant Setup:** Get any MCP server running in 30 seconds.
+*   **🔐 OAuth Handled:** We manage the complexities of authentication.
+*   **🏗️ No Infrastructure:** Run on our secure, scalable cloud.
+*   **📈 Auto-Scaling:** Scale seamlessly from prototype to production.
+*   **🔄 Always Updated:** Benefit from the latest server versions automatically.
+*   **💰 Cost-Effective:** Pay only for what you use with a free tier available.
+
+### 💻 Quick Integration:
+
+```python
+from klavis import Klavis
+
+# Get started with just an API key
+klavis = Klavis(api_key="your-free-key")
+
+# Create any MCP server instantly
+gmail_server = klavis.mcp_server.create_server_instance(
+    server_name="GMAIL",
+    user_id="your-user-id",
+    platform_name="MyApp"
+)
+
+# Server is ready to use immediately
+print(f"Gmail MCP server ready: {gmail_server.server_url}")
+```
+
+**🔗 [Get Free API Key](https://www.klavis.ai/home/api-keys) | [Complete Documentation](https://docs.klavis.ai)**
+
+---
+
+## OAuth Authentication: Simplified
+
+**Klavis simplifies the complexities of OAuth, enabling you to focus on your application.**
+
+*   **Automated Setup:**  We handle the creation of OAuth apps with necessary credentials and scopes.
+*   **Simplified Flows:** We manage the entire OAuth 2.0 flow, including handling callbacks, token refreshes, and error conditions.
+*   **Secure Token Management:** We securely store and manage the lifecycle of access tokens.
 
 ```bash
 # Run with OAuth support (requires free API key)
@@ -174,26 +282,41 @@ docker run -it -e KLAVIS_API_KEY=your_free_key \
 # Server starts automatically after authentication
 ```
 
-## 📚 Resources and Community
+---
 
-*   **📖 Documentation**: [docs.klavis.ai](https://docs.klavis.ai)
-*   **💬 Discord**: [Join Community](https://discord.gg/p7TuTEcssn)
-*   **🐛 Issues**: [GitHub Issues](https://github.com/klavis-ai/klavis/issues)
-*   **📦 Examples**: [examples/](examples/)
-*   **🔧 Server Guides**: [mcp_servers/](mcp_servers/)
+## Resources & Community
 
-## 🤝 Contribute
+| Resource             | Link                                              | Description                                     |
+| -------------------- | ------------------------------------------------- | ----------------------------------------------- |
+| **📖 Documentation**  | [docs.klavis.ai](https://docs.klavis.ai)          | Complete guides and API reference               |
+| **💬 Discord**        | [Join Community](https://discord.gg/p7TuTEcssn)   | Get help and connect with other users           |
+| **🐛 Issues**         | [GitHub Issues](https://github.com/klavis-ai/klavis/issues) | Report bugs and request features              |
+| **📦 Examples**      | [examples/](examples/)                              | Working examples with popular AI frameworks     |
+| **🔧 Server Guides**  | [mcp_servers/](mcp_servers/)                        | Individual server documentation                 |
 
-We welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) to get started.
+---
 
-## 📜 License
+## Contributing
+
+**We welcome your contributions to improve Klavis!**
+
+*   🐛 Report bugs and suggest new features.
+*   📝 Enhance our documentation.
+*   🔧 Develop new MCP servers for additional integrations.
+*   🎨 Improve the functionality of existing servers.
+
+**See our [Contributing Guide](CONTRIBUTING.md) to learn how you can help!**
+
+---
+
+## License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
 <div align="center">
-  <p><strong>🚀 Supercharge AI Applications with Klavis AI! </strong></p>
+  <p><strong>🚀 Supercharge Your AI Applications with Klavis!</strong></p>
   <p>
     <a href="https://www.klavis.ai">Get Free API Key</a> •
     <a href="https://docs.klavis.ai">Documentation</a> •
@@ -205,15 +328,17 @@ MIT License - see [LICENSE](LICENSE) for details.
 ```
 Key improvements and SEO considerations:
 
-*   **Clear, Concise Hook:** The one-sentence hook provides a clear value proposition.
-*   **Keyword-Rich Headings:**  Uses relevant keywords like "MCP Servers," "AI Applications," "Integration," and service names.
-*   **Bulleted Key Features:**  Easy-to-scan list highlighting benefits.
-*   **Actionable Subheadings:** Guides users on how to start.
-*   **Call to Action (CTA):** Encourages users to get started with a free API key.
-*   **Internal Links:**  Links within the README to other sections and resources.
-*   **External Links:**  Links to the website, documentation, Discord, and GitHub repo are prominent.
-*   **Alt Text:**  Added alt text to the Klavis AI logo for accessibility and SEO.
-*   **Reorganized for Clarity:** Improved the flow and structure.
-*   **SEO Optimized Content:** The content is written with an eye towards relevant search terms.
-*   **Summarized Content:**  The README is more concise, focusing on the most important information.
-*   **Repository Link Added:** The original repo link is included.
+*   **Clear, Concise Title:**  Uses strong keywords (Klavis AI, MCP Servers, AI Integration)
+*   **Hook:** Starts with a compelling one-sentence description of Klavis's value.
+*   **Headings & Structure:**  Organized with clear, descriptive headings (Quick Start, Self-Hosting, etc.) and subheadings for readability.
+*   **Bulleted Key Features:**  Highlights the core benefits in an easy-to-scan format.
+*   **Keyword Optimization:** Uses relevant keywords naturally throughout the content.
+*   **Calls to Action:** Includes clear calls to action (Get Free API Key, View All Servers, Join Discord, etc.) to drive user engagement.
+*   **Links:** Includes internal links to other sections of the README and external links to resources (website, docs, discord, examples, and importantly the GitHub repo itself, included at the end).
+*   **Concise Language:** Avoids unnecessary jargon and keeps the information accessible.
+*   **Emphasis on Benefits:** Focuses on the benefits of using Klavis (e.g., ease of use, time savings, enterprise-grade features).
+*   **Updated formatting** Consistent styling for improved readability.
+*   **Alt text**  Added `alt` text for images to improve accessibility.
+*   **GitHub Repo Link**: Added a link back to the original repository at the end.
+
+This revised README is much more user-friendly, SEO-optimized, and effective at conveying the value of Klavis to potential users.

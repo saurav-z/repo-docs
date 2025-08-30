@@ -1,31 +1,37 @@
-# Radicale: Your Simple & Powerful CalDAV and CardDAV Server
+# Radicale: Simple & Powerful CalDAV and CardDAV Server
 
-**Effortlessly manage your calendars and contacts with Radicale, a lightweight and user-friendly server.**  ([View the original repository](https://github.com/Kozea/Radicale))
+**Easily share calendars, to-do lists, and contacts with Radicale, a lightweight and user-friendly server solution.**
 
-## What is Radicale?
+**(Original Repository: [https://github.com/Kozea/Radicale](https://github.com/Kozea/Radicale))**
 
-Radicale is a free and open-source CalDAV (calendars, to-do lists) and CardDAV (contacts) server designed for simplicity and ease of use. It's perfect for individuals and small teams seeking a reliable and straightforward solution for syncing their calendar and contact data.
+## Key Features of Radicale
 
-## Key Features
+Radicale offers a streamlined solution for managing your calendar and contact data. Here's what makes it stand out:
 
-*   **Easy Setup:** Get up and running quickly with minimal configuration.
-*   **CalDAV & CardDAV Support:** Seamlessly share calendars, to-do lists, and contact lists.
-*   **Wide Client Compatibility:** Works with numerous CalDAV and CardDAV clients.
-*   **HTTP Access:**  Access your data via standard HTTP.
-*   **Secure Connections:**  Secure your data with TLS encryption.
-*   **Authentication:** Control access to your calendars and contacts.
-*   **File-Based Storage:** Data is stored on the file system in a simple folder structure, promoting data portability.
-*   **Plugin Extensibility:** Enhance Radicale's functionality with plugins.
-*   **Open Source & Licensed:**  GPLv3-licensed, ensuring freedom and community contribution.
-*   **Supports:** Events, todos, journal entries and business cards
+*   **CalDAV and CardDAV Support:** Shares calendars, to-do lists, and contact lists through standard protocols.
+*   **Comprehensive Data Support:** Handles events, todos, journal entries, and business cards.
+*   **Easy Setup & Configuration:** Works out-of-the-box with minimal setup.
+*   **Access Control:** Limit access to your data with authentication.
+*   **Secure Connections:** Supports TLS for encrypted communication.
+*   **Client Compatibility:** Works seamlessly with a wide range of CalDAV and CardDAV clients.
+*   **File-Based Storage:** Stores data on the file system using a simple folder structure.
+*   **Extensible with Plugins:** Customize and extend Radicale's functionality with plugins.
+*   **Free and Open Source:** Licensed under GPLv3.
 
-## Getting Started & Resources
+## Getting Started
 
-*   **Official Documentation:** [Radicale Master Documentation](https://radicale.org/master.html)
-*   **Radicale Wiki:** [https://github.com/Kozea/Radicale/wiki](https://github.com/Kozea/Radicale/wiki)
-*   **Report Issues:** [https://github.com/Kozea/Radicale/issues](https://github.com/Kozea/Radicale/issues)
-*   **Discussions:** [https://github.com/Kozea/Radicale/discussions](https://github.com/Kozea/Radicale/discussions)
-*   **Reporting Issues Guidelines:** [Radicale Wiki / Reporting Issues](https://github.com/Kozea/Radicale/wiki/01-%E2%80%90-Reporting-Issues)
+For in-depth information, refer to the following resources:
+
+*   **Documentation:** [Radicale master Documentation](https://radicale.org/master.html)
+*   **Wiki:** [Radicale Wiki](https://github.com/Kozea/Radicale/wiki)
+*   **Issue Tracking:** [Radicale Issues](https://github.com/Kozea/Radicale/issues)
+*   **Discussions:** [Radicale Discussions](https://github.com/Kozea/Radicale/discussions)
+
+## Reporting Issues
+
+Before reporting an issue, please consult:
+
+*   [Radicale Wiki / Reporting Issues](https://github.com/Kozea/Radicale/wiki/01-‐-Reporting-Issues)
 
 [![Test](https://github.com/Kozea/Radicale/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/Kozea/Radicale/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/github/Kozea/Radicale/badge.svg?branch=master)](https://coveralls.io/github/Kozea/Radicale?branch=master)
