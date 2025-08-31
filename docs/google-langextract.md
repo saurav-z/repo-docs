@@ -4,79 +4,54 @@
   </a>
 </p>
 
-# LangExtract: Effortlessly Extract Structured Information from Unstructured Text
+# LangExtract: Effortlessly Extract Structured Data from Unstructured Text with LLMs
 
-**LangExtract is a powerful Python library that leverages Large Language Models (LLMs) to extract structured data from free-form text, making it easy to transform your unstructured documents into actionable insights.**
+**Unleash the power of Large Language Models to transform raw text into structured, actionable insights, making information extraction easy and efficient.**
 
 [![PyPI version](https://img.shields.io/pypi/v/langextract.svg)](https://pypi.org/project/langextract/)
 [![GitHub stars](https://img.shields.io/github/stars/google/langextract.svg?style=social&label=Star)](https://github.com/google/langextract)
 ![Tests](https://github.com/google/langextract/actions/workflows/ci.yaml/badge.svg)
 
-## Key Features:
+## Key Features
 
-*   ✅ **Precise Source Grounding:** Pinpoints the exact location of extracted information within the source text for easy verification.
-*   ✅ **Reliable Structured Outputs:** Guarantees consistent output schemas with few-shot examples, producing robust and structured results.
-*   ✅ **Optimized for Long Documents:** Handles large documents efficiently with chunking, parallel processing, and multiple passes.
-*   ✅ **Interactive Visualization:** Generates self-contained HTML files for immediate review of extracted entities in their context.
-*   ✅ **Flexible LLM Support:** Compatible with various LLMs, including cloud-based models (Gemini) and local open-source models (Ollama).
-*   ✅ **Domain Agnostic:** Define extraction tasks for any domain using simple examples, adapting to your specific needs.
-*   ✅ **Leverages LLM Knowledge:** Utilizes LLM world knowledge through precise prompts and few-shot examples.  *Accuracy depends on the LLM, task complexity, prompt clarity, and example quality.*
+*   ✅ **Precise & Grounded Extractions:** Every extracted piece of information is linked to its exact source text, ensuring traceability.
+*   ✅ **Robust Structured Outputs:** Leverage the power of few-shot examples to enforce a consistent output schema and generate reliable results, supported by models like Gemini.
+*   ✅ **Optimized for Long Documents:** Tackle large documents efficiently with text chunking, parallel processing, and multiple passes for superior recall.
+*   ✅ **Interactive Visualization:** Instantly visualize and review extracted entities within their original context using a self-contained HTML file.
+*   ✅ **Flexible LLM Support:** Supports a range of models, including Google Gemini, OpenAI, and local open-source models via Ollama.
+*   ✅ **Domain Agnostic:** Define extraction tasks for any domain using just a few examples, adapting without model fine-tuning.
+*   ✅ **Leverages LLM World Knowledge:** Influence extractions by fine-tuning prompts to incorporate LLM world knowledge.
 
 ## Table of Contents
 
--   [Introduction](#introduction)
--   [Why LangExtract?](#why-langextract)
 -   [Quick Start](#quick-start)
 -   [Installation](#installation)
--   [API Key Setup for Cloud Models](#api-key-setup-for-cloud-models)
+-   [API Key Setup](#api-key-setup-for-cloud-models)
 -   [Adding Custom Model Providers](#adding-custom-model-providers)
--   [Using OpenAI Models](#using-openai-models)
--   [Using Local LLMs with Ollama](#using-local-llms-with-ollama)
--   [More Examples](#more-examples)
-    -   [*Romeo and Juliet* Full Text Extraction](#romeo-and-juliet-full-text-extraction)
-    -   [Medication Extraction](#medication-extraction)
-    -   [Radiology Report Structuring: RadExtract](#radiology-report-structuring-radextract)
+-   [Examples](#more-examples)
 -   [Community Providers](#community-providers)
 -   [Contributing](#contributing)
 -   [Testing](#testing)
 -   [Development](#development)
 -   [Disclaimer](#disclaimer)
 
-## Introduction
-
-LangExtract is a Python library designed to extract structured information from unstructured text documents. It employs LLMs to identify and organize key details based on user-defined instructions, ensuring the extracted data aligns with the original source material.
-
-## Why LangExtract?
-
-1.  **Precise Source Grounding:** Maps every extraction to its exact location in the source text, enabling visual highlighting for easy traceability and verification.
-2.  **Reliable Structured Outputs:** Enforces a consistent output schema based on your few-shot examples, leveraging controlled generation in supported models like Gemini to guarantee robust, structured results.
-3.  **Optimized for Long Documents:** Overcomes the "needle-in-a-haystack" challenge of large document extraction by using an optimized strategy of text chunking, parallel processing, and multiple passes for higher recall.
-4.  **Interactive Visualization:** Instantly generates a self-contained, interactive HTML file to visualize and review thousands of extracted entities in their original context.
-5.  **Flexible LLM Support:** Supports your preferred models, from cloud-based LLMs like the Google Gemini family to local open-source models via the built-in Ollama interface.
-6.  **Adaptable to Any Domain:** Define extraction tasks for any domain using just a few examples. LangExtract adapts to your needs without requiring any model fine-tuning.
-7.  **Leverages LLM World Knowledge:** Utilize precise prompt wording and few-shot examples to influence how the extraction task may utilize LLM knowledge. The accuracy of any inferred information and its adherence to the task specification are contingent upon the selected LLM, the complexity of the task, the clarity of the prompt instructions, and the nature of the prompt examples.
-
 ## Quick Start
 
-> **Note:** Using cloud-hosted models like Gemini requires an API key. See the [API Key Setup](#api-key-setup-for-cloud-models) section for instructions on how to get and configure your key.
-
-Extract structured information with just a few lines of code.
+Effortlessly extract structured information with just a few lines of code.
 
 ### 1. Define Your Extraction Task
 
-First, create a prompt that clearly describes what you want to extract. Then, provide a high-quality example to guide the model.
+Create a prompt and high-quality example(s).
 
 ```python
 import langextract as lx
 import textwrap
 
-# 1. Define the prompt and extraction rules
 prompt = textwrap.dedent("""\
     Extract characters, emotions, and relationships in order of appearance.
     Use exact text for extractions. Do not paraphrase or overlap entities.
     Provide meaningful attributes for each entity to add context.""")
 
-# 2. Provide a high-quality example to guide the model
 examples = [
     lx.data.ExampleData(
         text="ROMEO. But soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
@@ -103,13 +78,11 @@ examples = [
 
 ### 2. Run the Extraction
 
-Provide your input text and the prompt materials to the `lx.extract` function.
+Provide your input text and prompt materials to the `lx.extract` function.
 
 ```python
-# The input text to be processed
 input_text = "Lady Juliet gazed longingly at the stars, her heart aching for Romeo"
 
-# Run the extraction
 result = lx.extract(
     text_or_documents=input_text,
     prompt_description=prompt,
@@ -118,19 +91,16 @@ result = lx.extract(
 )
 ```
 
-> **Model Selection**: `gemini-2.5-flash` is the recommended default, offering an excellent balance of speed, cost, and quality. For highly complex tasks requiring deeper reasoning, `gemini-2.5-pro` may provide superior results. For large-scale or production use, a Tier 2 Gemini quota is suggested to increase throughput and avoid rate limits. See the [rate-limit documentation](https://ai.google.dev/gemini-api/docs/rate-limits#tier-2) for details.
+> **Model Selection**: `gemini-2.5-flash` is the recommended default. For complex tasks, `gemini-2.5-pro` may be preferable.  For larger production use, a Tier 2 Gemini quota is suggested. See the [rate-limit documentation](https://ai.google.dev/gemini-api/docs/rate-limits#tier-2)
 >
-> **Model Lifecycle**: Note that Gemini models have a lifecycle with defined retirement dates. Users should consult the [official model version documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions) to stay informed about the latest stable and legacy versions.
+> **Model Lifecycle**: Consult the [official model version documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions) to stay informed about the latest stable and legacy versions.
 
 ### 3. Visualize the Results
 
-The extractions can be saved to a `.jsonl` file, a popular format for working with language model data. LangExtract can then generate an interactive HTML visualization from this file to review the entities in context.
+The extractions can be saved to a `.jsonl` file and visualized in an interactive HTML file.
 
 ```python
-# Save the results to a JSONL file
 lx.io.save_annotated_documents([result], output_name="extraction_results.jsonl", output_dir=".")
-
-# Generate the visualization from the file
 html_content = lx.visualize("extraction_results.jsonl")
 with open("visualization.html", "w") as f:
     if hasattr(html_content, 'data'):
@@ -143,26 +113,25 @@ This creates an animated and interactive HTML file:
 
 ![Romeo and Juliet Basic Visualization ](https://raw.githubusercontent.com/google/langextract/main/docs/_static/romeo_juliet_basic.gif)
 
-> **Note on LLM Knowledge Utilization:** This example demonstrates extractions that stay close to the text evidence - extracting "longing" for Lady Juliet's emotional state and identifying "yearning" from "gazed longingly at the stars." The task could be modified to generate attributes that draw more heavily from the LLM's world knowledge (e.g., adding `"identity": "Capulet family daughter"` or `"literary_context": "tragic heroine"`). The balance between text-evidence and knowledge-inference is controlled by your prompt instructions and example attributes.
+> **Note on LLM Knowledge Utilization:** This example demonstrates extractions that stay close to the text evidence. The task could be modified to generate attributes that draw more heavily from the LLM's world knowledge. The balance between text-evidence and knowledge-inference is controlled by your prompt instructions and example attributes.
 
 ### Scaling to Longer Documents
 
 For larger texts, you can process entire documents directly from URLs with parallel processing and enhanced sensitivity:
 
 ```python
-# Process Romeo & Juliet directly from Project Gutenberg
 result = lx.extract(
     text_or_documents="https://www.gutenberg.org/files/1513/1513-0.txt",
     prompt_description=prompt,
     examples=examples,
     model_id="gemini-2.5-flash",
-    extraction_passes=3,    # Improves recall through multiple passes
-    max_workers=20,         # Parallel processing for speed
-    max_char_buffer=1000    # Smaller contexts for better accuracy
+    extraction_passes=3,
+    max_workers=20,
+    max_char_buffer=1000
 )
 ```
 
-This approach can extract hundreds of entities from full novels while maintaining high accuracy. The interactive visualization seamlessly handles large result sets, making it easy to explore hundreds of entities from the output JSONL file. **[See the full *Romeo and Juliet* extraction example →](https://github.com/google/langextract/blob/main/docs/examples/longer_text_example.md)** for detailed results and performance insights.
+The interactive visualization seamlessly handles large result sets. **[See the full *Romeo and Juliet* extraction example →](https://github.com/google/langextract/blob/main/docs/examples/longer_text_example.md)**
 
 ## Installation
 
@@ -172,56 +141,23 @@ This approach can extract hundreds of entities from full novels while maintainin
 pip install langextract
 ```
 
-*Recommended for most users. For isolated environments, consider using a virtual environment:*
-
-```bash
-python -m venv langextract_env
-source langextract_env/bin/activate  # On Windows: langextract_env\Scripts\activate
-pip install langextract
-```
-
 ### From Source
-
-LangExtract uses modern Python packaging with `pyproject.toml` for dependency management:
-
-*Installing with `-e` puts the package in development mode, allowing you to modify the code without reinstalling.*
-
 
 ```bash
 git clone https://github.com/google/langextract.git
 cd langextract
-
-# For basic installation:
 pip install -e .
-
-# For development (includes linting tools):
-pip install -e ".[dev]"
-
-# For testing (includes pytest):
-pip install -e ".[test]"
 ```
 
-### Docker
+## API Key Setup
 
-```bash
-docker build -t langextract .
-docker run --rm -e LANGEXTRACT_API_KEY="your-api-key" langextract python your_script.py
-```
-
-## API Key Setup for Cloud Models
-
-When using LangExtract with cloud-hosted models (like Gemini or OpenAI), you'll need to
-set up an API key. On-device models don't require an API key. For developers
-using local LLMs, LangExtract offers built-in support for Ollama and can be
-extended to other third-party APIs by updating the inference endpoints.
+Set your API key for cloud-hosted models (e.g., Gemini, OpenAI).
 
 ### API Key Sources
 
-Get API keys from:
-
-*   [AI Studio](https://aistudio.google.com/app/apikey) for Gemini models
-*   [Vertex AI](https://cloud.google.com/vertex-ai/generative-ai/docs/sdks/overview) for enterprise use
-*   [OpenAI Platform](https://platform.openai.com/api-keys) for OpenAI models
+*   [AI Studio](https://aistudio.google.com/app/apikey) (Gemini)
+*   [Vertex AI](https://cloud.google.com/vertex-ai/generative-ai/docs/sdks/overview) (Enterprise)
+*   [OpenAI Platform](https://platform.openai.com/api-keys) (OpenAI)
 
 ### Setting up API key in your environment
 
@@ -233,33 +169,14 @@ export LANGEXTRACT_API_KEY="your-api-key-here"
 
 **Option 2: .env File (Recommended)**
 
-Add your API key to a `.env` file:
-
 ```bash
-# Add API key to .env file
 cat >> .env << 'EOF'
 LANGEXTRACT_API_KEY=your-api-key-here
 EOF
-
-# Keep your API key secure
 echo '.env' >> .gitignore
 ```
 
-In your Python code:
-```python
-import langextract as lx
-
-result = lx.extract(
-    text_or_documents=input_text,
-    prompt_description="Extract information...",
-    examples=[...],
-    model_id="gemini-2.5-flash"
-)
-```
-
-**Option 3: Direct API Key (Not Recommended for Production)**
-
-You can also provide the API key directly in your code, though this is not recommended for production use:
+**Option 3: Direct API Key (Testing Only)**
 
 ```python
 result = lx.extract(
@@ -267,13 +184,11 @@ result = lx.extract(
     prompt_description="Extract information...",
     examples=[...],
     model_id="gemini-2.5-flash",
-    api_key="your-api-key-here"  # Only use this for testing/development
+    api_key="your-api-key-here"
 )
 ```
 
 **Option 4: Vertex AI (Service Accounts)**
-
-Use [Vertex AI](https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform) for authentication with service accounts:
 
 ```python
 result = lx.extract(
@@ -284,164 +199,76 @@ result = lx.extract(
     language_model_params={
         "vertexai": True,
         "project": "your-project-id",
-        "location": "global"  # or regional endpoint
+        "location": "global"
     }
 )
 ```
 
 ## Adding Custom Model Providers
 
-LangExtract supports custom LLM providers via a lightweight plugin system. You can add support for new models without changing core code.
+Extend LangExtract's capabilities with custom LLM providers using a plugin system. See the [Provider System Documentation](langextract/providers/README.md).
 
-- Add new model support independently of the core library
-- Distribute your provider as a separate Python package
-- Keep custom dependencies isolated
-- Override or extend built-in providers via priority-based resolution
-
-See the detailed guide in [Provider System Documentation](langextract/providers/README.md) to learn how to:
-
-- Register a provider with `@registry.register(...)`
-- Publish an entry point for discovery
-- Optionally provide a schema with `get_schema_class()` for structured output
-- Integrate with the factory via `create_model(...)`
-
-## Using OpenAI Models
-
-LangExtract supports OpenAI models (requires optional dependency: `pip install langextract[openai]`):
-
-```python
-import langextract as lx
-
-result = lx.extract(
-    text_or_documents=input_text,
-    prompt_description=prompt,
-    examples=examples,
-    model_id="gpt-4o",  # Automatically selects OpenAI provider
-    api_key=os.environ.get('OPENAI_API_KEY'),
-    fence_output=True,
-    use_schema_constraints=False
-)
-```
-
-Note: OpenAI models require `fence_output=True` and `use_schema_constraints=False` because LangExtract doesn't implement schema constraints for OpenAI yet.
-
-## Using Local LLMs with Ollama
-LangExtract supports local inference using Ollama, allowing you to run models without API keys:
-
-```python
-import langextract as lx
-
-result = lx.extract(
-    text_or_documents=input_text,
-    prompt_description=prompt,
-    examples=examples,
-    model_id="gemma2:2b",  # Automatically selects Ollama provider
-    model_url="http://localhost:11434",
-    fence_output=False,
-    use_schema_constraints=False
-)
-```
-
-**Quick setup:** Install Ollama from [ollama.com](https://ollama.com/), run `ollama pull gemma2:2b`, then `ollama serve`.
-
-For detailed installation, Docker setup, and examples, see [`examples/ollama/`](examples/ollama/).
-
-## More Examples
-
-Additional examples of LangExtract in action:
+## Examples
 
 ### *Romeo and Juliet* Full Text Extraction
 
-LangExtract can process complete documents directly from URLs. This example demonstrates extraction from the full text of *Romeo and Juliet* from Project Gutenberg (147,843 characters), showing parallel processing, sequential extraction passes, and performance optimization for long document processing.
+Extract structured data from the full text of *Romeo and Juliet* (Project Gutenberg).
 
 **[View *Romeo and Juliet* Full Text Example →](https://github.com/google/langextract/blob/main/docs/examples/longer_text_example.md)**
 
 ### Medication Extraction
 
-> **Disclaimer:** This demonstration is for illustrative purposes of LangExtract's baseline capability only. It does not represent a finished or approved product, is not intended to diagnose or suggest treatment of any disease or condition, and should not be used for medical advice.
-
-LangExtract excels at extracting structured medical information from clinical text. These examples demonstrate both basic entity recognition (medication names, dosages, routes) and relationship extraction (connecting medications to their attributes), showing LangExtract's effectiveness for healthcare applications.
+Extract medical information from clinical text.
 
 **[View Medication Examples →](https://github.com/google/langextract/blob/main/docs/examples/medication_examples.md)**
 
 ### Radiology Report Structuring: RadExtract
 
-Explore RadExtract, a live interactive demo on HuggingFace Spaces that shows how LangExtract can automatically structure radiology reports. Try it directly in your browser with no setup required.
+An interactive demo on HuggingFace Spaces for structuring radiology reports.
 
 **[View RadExtract Demo →](https://huggingface.co/spaces/google/radextract)**
 
 ## Community Providers
 
-Extend LangExtract with custom model providers! Check out our [Community Provider Plugins](COMMUNITY_PROVIDERS.md) registry to discover providers created by the community or add your own.
-
-For detailed instructions on creating a provider plugin, see the [Custom Provider Plugin Example](examples/custom_provider_plugin/).
+Explore and contribute to community-built plugins.  See the [Community Provider Plugins](COMMUNITY_PROVIDERS.md).
 
 ## Contributing
 
-Contributions are welcome! See [CONTRIBUTING.md](https://github.com/google/langextract/blob/main/CONTRIBUTING.md) to get started
-with development, testing, and pull requests. You must sign a
-[Contributor License Agreement](https://cla.developers.google.com/about)
-before submitting patches.
+Contributions are welcome!  See [CONTRIBUTING.md](https://github.com/google/langextract/blob/main/CONTRIBUTING.md) for guidelines.
 
 ## Testing
 
-To run tests locally from the source:
-
 ```bash
-# Clone the repository
-git clone https://github.com/google/langextract.git
-cd langextract
-
-# Install with test dependencies
 pip install -e ".[test]"
-
-# Run all tests
 pytest tests
 ```
 
-Or reproduce the full CI matrix locally with tox:
-
 ```bash
-tox  # runs pylint + pytest on Python 3.10 and 3.11
+tox  # runs pylint + pytest
 ```
 
-### Ollama Integration Testing
-
-If you have Ollama installed locally, you can run integration tests:
-
 ```bash
-# Test Ollama integration (requires Ollama running with gemma2:2b model)
-tox -e ollama-integration
+tox -e ollama-integration  # Ollama integration test
 ```
-
-This test will automatically detect if Ollama is available and run real inference tests.
 
 ## Development
 
 ### Code Formatting
 
-This project uses automated formatting tools to maintain consistent code style:
-
 ```bash
-# Auto-format all code
 ./autoformat.sh
-
-# Or run formatters separately
 isort langextract tests --profile google --line-length 80
 pyink langextract tests --config pyproject.toml
 ```
 
 ### Pre-commit Hooks
 
-For automatic formatting checks:
 ```bash
-pre-commit install  # One-time setup
-pre-commit run --all-files  # Manual run
+pre-commit install
+pre-commit run --all-files
 ```
 
 ### Linting
-
-Run linting before submitting PRs:
 
 ```bash
 pylint --rcfile=.pylintrc langextract tests
@@ -451,11 +278,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full development guidelines.
 
 ## Disclaimer
 
-This is not an officially supported Google product. If you use
-LangExtract in production or publications, please cite accordingly and
-acknowledge usage. Use is subject to the [Apache 2.0 License](https://github.com/google/langextract/blob/main/LICENSE).
-For health-related applications, use of LangExtract is also subject to the
-[Health AI Developer Foundations Terms of Use](https://developers.google.com/health-ai-developer-foundations/terms).
+This is not an officially supported Google product. Use is subject to the [Apache 2.0 License](https://github.com/google/langextract/blob/main/LICENSE). For health-related applications, usage is also subject to the [Health AI Developer Foundations Terms of Use](https://developers.google.com/health-ai-developer-foundations/terms).
 
 ---
 

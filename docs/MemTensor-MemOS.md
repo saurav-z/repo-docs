@@ -45,23 +45,21 @@
 
 <img src="https://statics.memtensor.com.cn/memos/sota_score.jpg" alt="SOTA SCORE">
 
-**MemOS (Memory Operating System) empowers Large Language Models with robust long-term memory, enabling unprecedented context awareness and performance.**
+MemOS is a cutting-edge operating system that equips Large Language Models (LLMs) with advanced memory capabilities, enabling more intelligent and context-aware interactions; [check out the source code here](https://github.com/MemTensor/MemOS).
 
-*   **[View the MemOS Repository on GitHub](https://github.com/MemTensor/MemOS)**
+## Key Features of MemOS
 
-## Key Features
-
-*   **Memory-Augmented Generation (MAG):** A unified API for seamless integration of memory operations, enhancing LLM interactions with contextual memory retrieval.
-*   **Modular Memory Architecture (MemCube):** Flexible design for easy integration and management of diverse memory types.
+*   **Memory-Augmented Generation (MAG):** Unified API for memory operations, seamlessly integrating with LLMs to enhance chat and reasoning by retrieving contextual information.
+*   **Modular Memory Architecture (MemCube):** Flexible and modular architecture for easy integration and management of different memory types, promoting extensibility.
 *   **Multiple Memory Types:**
-    *   **Textual Memory:** Stores and retrieves unstructured/structured text knowledge.
-    *   **Activation Memory:** KVCacheMemory to accelerate LLM inference and context reuse.
-    *   **Parametric Memory:** Stores model adaptation parameters (e.g., LoRA weights).
-*   **Extensible:** Easily expand and customize memory modules, data sources, and LLM integrations.
+    *   **Textual Memory:** Store and retrieve unstructured or structured text knowledge.
+    *   **Activation Memory:** Accelerate LLM inference and context reuse with key-value caches (`KVCacheMemory`).
+    *   **Parametric Memory:** Store model adaptation parameters, such as LoRA weights.
+*   **Extensible Design:** Easily extend and customize memory modules, data sources, and LLM integrations to fit your needs.
 
-## Performance Benchmarks
+## Performance Benchmarks: Unlocking LLM Potential
 
-MemOS demonstrates significant performance improvements over baseline memory solutions.
+MemOS significantly outperforms baseline memory solutions in reasoning tasks.  See the detailed end-to-end evaluation on LOCOMO, consistently outperforming baseline methods.
 
 | Model       | Avg. Score | Multi-Hop | Open Domain | Single-Hop | Temporal Reasoning |
 |-------------|------------|-----------|-------------|------------|---------------------|
@@ -69,20 +67,11 @@ MemOS demonstrates significant performance improvements over baseline memory sol
 | **MemOS**   | **0.7331** | **0.6430** | **0.5521**   | **0.7844** | **0.7321**          |
 | **Improvement** | **+38.98%** | **+6.67%** | **+67.35%** | **+26.86%** | **+159.15%**       |
 
->   **Temporal reasoning accuracy improved by 159% compared to the OpenAI baseline.**
-
-### End-to-End Evaluation on LOCOMO
-
->   [!NOTE]
->   Comparison of LLM Judge Scores across five major tasks in the LOCOMO benchmark. MemOS-0630 consistently outperforms baseline methods (LangMem, Zep, OpenAI, Mem0) across all task types, especially in multi-hop and temporal reasoning scenarios.
-
-<img src="https://statics.memtensor.com.cn/memos/score_all_end2end.jpg" alt="END2END SCORE">
+> **Temporal reasoning accuracy improved by 159% compared to the OpenAI baseline.**
 
 ## Getting Started
 
-### Examples
-
-Here's a quick example of how to create a **`MemCube`**, load it from a directory, access its memories, and save it.
+Here's a quick example demonstrating how to initialize and save a `MemCube`:
 
 ```python
 from memos.mem_cube.general import GeneralMemCube
@@ -103,7 +92,7 @@ for item in mem_cube.act_mem.get_all():
 mem_cube.dump("tmp/mem_cube")
 ```
 
-What about **`MOS`** (Memory Operating System)? It's a higher-level orchestration layer that manages multiple MemCubes and provides a unified API for memory operations. Here's a quick example of how to use MOS:
+Here is an example of using MOS (Memory Operating System):
 
 ```python
 from memos.configs.mem_os import MOSConfig
@@ -136,7 +125,7 @@ retrieved_memories = memory.search(query="What do you like?", user_id=user_id)
 print(f"text_memories: {retrieved_memories['text_mem']}")
 ```
 
-For more detailed examples, please check out the [`examples`](./examples) directory.
+Detailed examples are available in the [`examples`](./examples) directory.
 
 ## Installation
 
@@ -148,22 +137,13 @@ pip install MemoryOS
 
 ### Optional Dependencies
 
-MemOS offers optional dependency groups:
+Install optional dependencies based on your needs:
 
 | Feature               | Package Name              |
 | --------------------- | ------------------------- |
 | Tree Memory           | `MemoryOS[tree-mem]`      |
 | Memory Reader         | `MemoryOS[mem-reader]`    |
 | Memory Scheduler      | `MemoryOS[mem-scheduler]` |
-
-Install optional dependencies:
-
-```bash
-pip install MemoryOS[tree-mem]
-pip install MemoryOS[tree-mem,mem-reader]
-pip install MemoryOS[mem-scheduler]
-pip install MemoryOS[tree-mem,mem-reader,mem-scheduler]
-```
 
 ### External Dependencies
 
@@ -175,7 +155,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 #### Transformers Support
 
-Ensure [PyTorch](https://pytorch.org/get-started/locally/) is installed (CUDA for GPU acceleration).
+Ensure [PyTorch](https://pytorch.org/get-started/locally/) is installed (CUDA recommended).
 
 #### Download Examples
 
@@ -185,11 +165,11 @@ memos download_examples
 
 ## Community & Support
 
-*   **GitHub Issues:** Report bugs or request features.
-*   **GitHub Pull Requests:** Contribute code improvements.
-*   **GitHub Discussions:** Ask questions and share ideas.
-*   **Discord:** Join our Discord Server.
-*   **WeChat:** Scan the QR code.
+*   **GitHub Issues:** Report bugs or request features in our [GitHub Issues](https://github.com/MemTensor/MemOS/issues).
+*   **GitHub Pull Requests:** Contribute code improvements via [Pull Requests](https://github.com/MemTensor/MemOS/pulls).
+*   **GitHub Discussions:** Participate in [GitHub Discussions](https://github.com/MemTensor/MemOS/discussions).
+*   **Discord:** Join our [Discord Server](https://discord.gg/Txbx3gebZR).
+*   **WeChat:** Scan the QR code to join our WeChat group.
 
 <img src="https://statics.memtensor.com.cn/memos/qr-code.png" alt="QR Code" width="600">
 
@@ -228,11 +208,11 @@ url = {https://global-sci.com/article/91443/memory3-language-modeling-with-expli
 
 ## Contributing
 
-*   Read the [contribution guidelines](https://memos-docs.openmem.net/contribution/overview).
+Read our [contribution guidelines](https://memos-docs.openmem.net/contribution/overview) to learn how to contribute.
 
 ## License
 
-*   Apache 2.0 License
+MemOS is licensed under the [Apache 2.0 License](./LICENSE).
 
 ## News
 

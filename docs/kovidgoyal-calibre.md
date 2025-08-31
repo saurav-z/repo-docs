@@ -1,28 +1,41 @@
-# Calibre: Your All-in-One E-book Management Solution
+# Calibre: Your Ultimate E-book Management Solution
 
-**Calibre is the ultimate free and open-source e-book manager, offering a comprehensive suite of tools to view, convert, edit, and catalog your digital library.**
+**Tired of juggling multiple e-book formats and devices?** Calibre is a powerful, open-source e-book manager that simplifies all aspects of your digital reading experience. [Explore the original Calibre repository](https://github.com/kovidgoyal/calibre) for the latest updates.
 
-[View the original repository on GitHub](https://github.com/kovidgoyal/calibre)
+<img align="left" src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" height="200" width="200" alt="Calibre logo"/>
 
-<img align="left" src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" height="200" width="200"/>
+## Key Features:
 
-## Key Features of Calibre
+*   **Comprehensive E-book Management:** View, convert, edit, and catalog your e-books effortlessly.
+*   **Multi-Format Support:** Compatible with all major e-book formats.
+*   **Device Synchronization:** Seamlessly sync your e-books with a wide range of e-reader devices.
+*   **Metadata Retrieval:** Automatically fetch metadata for your books from the internet.
+*   **News and Content Delivery:** Download newspapers and convert them into e-books for convenient reading.
+*   **Cross-Platform Compatibility:** Runs seamlessly on Linux, Windows, and macOS.
 
-*   **Comprehensive E-book Format Support:**  View, convert, and edit e-books in all major formats.
-*   **E-reader Device Compatibility:** Seamlessly connect and manage your e-reader devices.
-*   **Metadata Management:** Automatically fetch and organize book metadata from the internet.
-*   **News & Content Conversion:** Download newspapers and convert them into e-books for easy reading.
-*   **Cross-Platform Compatibility:** Works flawlessly on Linux, Windows, and macOS.
+## Screenshots & Demo
+
+See Calibre in action: [Calibre Screenshots](https://calibre-ebook.com/demo)
+
+## Getting Started
+
+*   **User Manual:** Learn how to use Calibre effectively with the comprehensive [User Manual](https://manual.calibre-ebook.com).
+*   **Download Source Code:** Get the source code for the current Calibre release from [here](https://calibre-ebook.com/dist/src).
+
+## Development & Contributing
+
+*   **Setting up a development environment:** Instructions can be found [here](https://manual.calibre-ebook.com/develop.html).
+*   **Bug Reporting & Feature Requests:** Report issues and suggest new features via the [Calibre bug tracker on Launchpad](https://bugs.launchpad.net/calibre).
+*   **Contributing:** Help improve Calibre by [donating to support its development](https://calibre-ebook.com/donate).
+
+## Building Calibre
+
+*   **Build Instructions:** Learn how to build Calibre binaries and installers for all supported platforms with the [Build instructions](bypy/README.rst).
+
+## Packaging Status
+
+[![Packaging Status](https://repology.org/badge/vertical-allrepos/calibre.svg?columns=3&header=calibre)](https://repology.org/project/calibre/versions)
+
+## Build Status
 
 [![Build Status](https://github.com/kovidgoyal/calibre/workflows/CI/badge.svg)](https://github.com/kovidgoyal/calibre/actions?query=workflow%3ACI)
-
-## Additional Resources
-
-*   **Screenshots:** [Calibre Demo](https://calibre-ebook.com/demo)
-*   **User Manual:** [calibre User Manual](https://manual.calibre-ebook.com)
-*   **Development:** [Setting up a development environment for calibre](https://manual.calibre-ebook.com/develop.html)
-*   **Source Code:** [calibre Source Code](https://calibre-ebook.com/dist/src)
-*   **Bug Reporting & Feature Requests:** [Launchpad](https://bugs.launchpad.net/calibre)
-*   **Donate to Support Development:** [Donate](https://calibre-ebook.com/donate)
-*   **Build Instructions:** [Build instructions](bypy/README.rst)
-*   **Packaging Status:** [![Packaging Status](https://repology.org/badge/vertical-allrepos/calibre.svg?columns=3&header=calibre)](https://repology.org/project/calibre/versions)

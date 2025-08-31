@@ -4,21 +4,22 @@
   </a>
 </p>
 
-## Sentry: The Leading Debugging Platform for Modern Software Development
+## Sentry: The Debugging Platform That Answers Your Questions
 
-Sentry is the essential platform for developers to detect, diagnose, and resolve errors in their applications, ensuring a smoother user experience.
+Sentry empowers developers to detect, diagnose, and resolve software issues faster than ever.
 
-**[Explore the original Sentry repository on GitHub](https://github.com/getsentry/sentry)**
+**[View the original repository on GitHub](https://github.com/getsentry/sentry)**
 
-### Key Features of Sentry
+### Key Features of Sentry:
 
-*   **Error Tracking & Monitoring:** Identify and track critical errors in real-time across your applications.
-*   **Detailed Issue Context:** Get comprehensive information about each issue, including the stack trace, user context, and environment details.
-*   **Performance Monitoring:** Monitor the performance of your applications, identify bottlenecks, and optimize user experience.
-*   **Code-Level Insights:** Understand exactly where the issue originated within your codebase.
-*   **User Session Replays:** Watch recordings of user sessions to understand how users interact with your application, helping you to reproduce and diagnose errors.
-*   **Uptime Monitoring:** Stay on top of your application's availability with uptime monitoring and alerts.
-*   **Integrations:** Integrate with popular tools and platforms like Slack, Jira, and more.
+*   **Error Tracking:** Automatically capture and report errors in real-time.
+*   **Performance Monitoring:** Identify and optimize performance bottlenecks.
+*   **Code Level Context:** Get detailed stack traces, context, and related data for rapid debugging.
+*   **User Replays:** Understand the user experience by replaying sessions to see what led to an issue.
+*   **Issue Grouping:** Automatically groups similar errors for efficient triage.
+*   **Customizable Alerts:** Set up notifications for critical issues and performance degradation.
+*   **Integration with Popular Tools:** Seamlessly integrates with your existing workflows and tools.
+*   **Supports a Wide Range of Languages & Frameworks:** See the SDKs below.
 
 <p align="center">
   <img src="https://github.com/getsentry/sentry/raw/master/.github/screenshots/issue-details.png" width="270" />
@@ -33,8 +34,6 @@ Sentry is the essential platform for developers to detect, diagnose, and resolve
 </p>
 
 ### Official Sentry SDKs
-
-Sentry offers SDKs for a wide range of languages and platforms, making it easy to integrate error tracking and performance monitoring into your projects.
 
 *   [JavaScript](https://github.com/getsentry/sentry-javascript)
 *   [Electron](https://github.com/getsentry/sentry-electron/)
@@ -67,13 +66,3 @@ Sentry offers SDKs for a wide range of languages and platforms, making it easy t
 *   [Bug Tracker](https://github.com/getsentry/sentry/issues)
 *   [Code](https://github.com/getsentry/sentry)
 *   [Transifex](https://www.transifex.com/getsentry/sentry/) (Translate Sentry!)
-```
-Key improvements and SEO considerations:
-
-*   **Compelling Hook:** The one-sentence hook immediately grabs the reader's attention and highlights the core benefit.
-*   **Clear Headings:**  Organized the content with clear, SEO-friendly headings and subheadings (e.g., "Key Features of Sentry", "Official Sentry SDKs").
-*   **Keyword Optimization:** Incorporated relevant keywords like "debugging platform," "error tracking," "performance monitoring," and language/framework names naturally within the text.
-*   **Bulleted Key Features:**  Made it easy for users to quickly scan and understand the main functionalities.
-*   **Concise Summary:** Provided a brief but informative overview of Sentry.
-*   **Link Back to Original:** Included a prominent link back to the original GitHub repository.
-*   **Alt Text:** Added alt text for images.

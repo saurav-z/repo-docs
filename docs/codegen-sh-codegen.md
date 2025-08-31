@@ -1,10 +1,10 @@
 <p align="center">
   <a href="https://docs.codegen.com">
-    <img src="https://i.imgur.com/6RF9W0z.jpeg" alt="Codegen Logo"/>
+    <img src="https://i.imgur.com/6RF9W0z.jpeg" alt="Codegen Logo" />
   </a>
 </p>
 
-<h1 align="center">Codegen: Your AI-Powered Software Engineer</h1>
+<h1 align="center">Codegen: The AI Software Engineer That Automates Your Coding Tasks</h1>
 
 <div align="center">
 
@@ -18,19 +18,19 @@
 
 <br />
 
-**Codegen empowers you to automate software development tasks with the power of AI, acting as your always-on, intelligent software engineer.** This Python SDK provides a programmatic interface to the Codegen platform, allowing you to integrate AI-driven code generation and automation directly into your workflows.
+Codegen empowers developers with an AI-powered software engineer, automating tasks and accelerating development workflows.  **[Explore the original repository on GitHub](https://github.com/codegen-sh/codegen)**
 
-## Key Features
+## Key Features of the Codegen SDK
 
-*   **AI-Powered Code Generation:** Leverage advanced AI models to generate code, implement new features, and more, based on natural language prompts.
-*   **API Integration:** Seamlessly integrate Codegen into your existing development tools and workflows using the Python SDK.
-*   **Status Tracking:** Monitor the progress of your code generation tasks with clear status updates.
-*   **Versatile Output:** Receive results that include code, summaries, links, and more, tailored to your specifications.
-*   **Multi-Platform Interaction:** Interact with your AI engineer through various channels, including API, Slack, Linear, GitHub, and the Codegen website.
+*   **Automated Code Generation:** Generate code based on natural language prompts.
+*   **Task Management:**  Manage and track code generation tasks with status updates.
+*   **Flexible Integration:** Integrate with your existing development workflow through API access.
+*   **Multi-Platform Support:**  Interact with your AI engineer via API, Slack, Linear, GitHub, or the website.
+*   **Easy Installation:** Simple installation using pip or uv.
 
-## Quick Start
+## Getting Started with Codegen
 
-Here's how to get started with the Codegen SDK:
+The Codegen SDK provides a programmatic interface to the code agents provided by [Codegen](https://codegen.com). Here's a quick example:
 
 ```python
 from codegen.agents.agent import Agent
@@ -59,9 +59,9 @@ if task.status == "completed":
     print(task.result)  # Result often contains code, summaries, or links
 ```
 
-## Installation
+### Installation
 
-Install the Codegen SDK using pip or uv:
+Install the SDK using pip or uv:
 
 ```bash
 pip install codegen
@@ -69,26 +69,22 @@ pip install codegen
 uv pip install codegen
 ```
 
-## Getting Started
+### Configuration
 
-1.  **Sign up:** Get started at [codegen.com](https://codegen.com).
-2.  **Get your API token:** Obtain your API token from [codegen.com/token](https://codegen.com/token).
+1.  **Sign Up:** Get started at [codegen.com](https://codegen.com).
+2.  **API Token:** Obtain your API token at [codegen.com/token](https://codegen.com/token).
 
 ## Resources
 
 *   [Documentation](https://docs.codegen.com)
-*   [Getting Started Guide](https://docs.codegen.com/introduction/getting-started)
+*   [Getting Started](https://docs.codegen.com/introduction/getting-started)
 *   [Contributing Guide](CONTRIBUTING.md)
 *   [Contact Us](https://codegen.com/contact)
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on setting up your development environment and submitting pull requests.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on setting up the development environment and submitting your contributions.
 
 ## Enterprise Solutions
 
 For information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
-
-## Learn More
-
-Discover the full capabilities of Codegen and how it can transform your development workflow.  Explore the original repository on [GitHub](https://github.com/codegen-sh/codegen).

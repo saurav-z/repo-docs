@@ -1,11 +1,10 @@
 <div align="center">
-<img alt="FastAPI Best Architecture Logo" width="320" src="https://wu-clan.github.io/picx-images-hosting/logo/fba.png">
+  <img alt="FastAPI Best Architecture Logo" width="320" src="https://wu-clan.github.io/picx-images-hosting/logo/fba.png">
+</div>
 
-# FastAPI Best Architecture: Build Robust Backend Solutions
+# FastAPI Best Architecture: Build Robust Backend Systems with Python
 
-This repository offers a production-ready backend architecture built with FastAPI, designed for enterprise-level applications.  
-
-[View the original repository on GitHub](https://github.com/fastapi-practices/fastapi_best_architecture)
+**Looking for a production-ready, enterprise-level backend architecture solution with FastAPI?** This project provides a robust, well-structured foundation for building scalable and maintainable APIs using Python and FastAPI.  [View the original repository on GitHub](https://github.com/fastapi-practices/fastapi_best_architecture).
 
 [![GitHub](https://img.shields.io/github/license/fastapi-practices/fastapi_best_architecture)](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
@@ -20,36 +19,34 @@ This repository offers a production-ready backend architecture built with FastAP
 ![Discord](https://img.shields.io/discord/1185035164577972344)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/fastapi-practices/fastapi_best_architecture)
 
-</div>
-
 ## Key Features
 
-*   **Pseudo 3-Tier Architecture:**  Employs a well-structured design pattern, providing a clear separation of concerns.
-*   **Modern Tech Stack:**  Leverages FastAPI, Pydantic, SQLAlchemy, and other cutting-edge technologies.
-*   **Database Support:**  Offers support for both MySQL and PostgreSQL.
-*   **Production-Ready:**  Designed for building scalable and maintainable backend systems.
-*   **Code Quality:**  Includes Ruff for linting and code quality checks.
-*   **Dockerized:**  Provides Docker configuration for easy deployment.
+*   **Pseudo 3-Tier Architecture:**  A clear, well-defined structure for organizing your application logic, inspired by 3-tier architecture principles.
+*   **FastAPI Integration:** Leverages the power and speed of FastAPI for building high-performance APIs.
+*   **Data Modeling:** Utilizes SQLAlchemy and Pydantic for robust data modeling and validation.
+*   **Database Support:** Supports popular databases including MySQL and PostgreSQL.
+*   **Modern Tooling:** Integrates with Ruff and `uv` for linting, formatting, and dependency management.
+*   **Docker Support:** Provides Docker configuration for easy deployment and containerization.
 
 ## Architecture Overview
 
-This project implements a "pseudo 3-tier" architecture to structure your FastAPI backend.  This approach provides a clear mapping of responsibilities, similar to traditional 3-tier architectures.
+This project adopts a "pseudo 3-tier" architecture to provide a clear separation of concerns:
 
-| Component         | Description                                  |
-|-------------------|----------------------------------------------|
-| **API (View)**    | Handles incoming requests and routing.        |
-| **Schema (DTO)**   | Defines data transfer objects (DTOs).        |
-| **Service**       | Contains business logic.                       |
-| **CRUD**          | Data access layer using SQLAlchemy.         |
-| **Model**         | Represents database entities.                |
+| Workflow        |  Component              | Description                                               |
+|-----------------|-------------------------|-----------------------------------------------------------|
+| View            | API                     | Handles incoming requests and returns responses.         |
+| Data Transfer   | Schema                  | Defines the structure and validation of data payloads.   |
+| Business Logic  | Service                 | Contains the core business logic and operations.         |
+| Data Access     | CRUD                    | Manages database interactions (Create, Read, Update, Delete). |
+| Model           | Model                   | Represents the data structure in the database.          |
 
-## Documentation & Support
+## Documentation
 
-Find more detailed information in the [official documentation](https://fastapi-practices.github.io/fastapi_best_architecture_docs/).
+Explore the complete project documentation for detailed information and usage instructions:  [Official Documentation](https://fastapi-practices.github.io/fastapi_best_architecture_docs/)
 
-## Contributing
+##  Contributing
 
-We welcome contributions!
+We welcome contributions!  See the project's contribution guidelines for more information.
 
 <a href="https://github.com/fastapi-practices/fastapi_best_architecture/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=fastapi-practices/fastapi_best_architecture"/>
@@ -64,13 +61,13 @@ We welcome contributions!
 *   [Ruff](https://beta.ruff.rs/docs/)
 *   ...
 
-## Community
+## Get Involved
 
 *   [Discord](https://wu-clan.github.io/homepage/)
 
-## Sponsor
+## Support the Project
 
-Support the project: [:coffee: Sponsor :coffee:](https://wu-clan.github.io/sponsor/)
+If you find this project helpful, consider supporting us with a coffee! [:coffee: Sponsor :coffee:](https://wu-clan.github.io/sponsor/)
 
 ## License
 

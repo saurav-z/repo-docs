@@ -1,7 +1,4 @@
-<div align="center">
-  <img src="assets/logo.png" alt="LLaMA Factory Logo" width="400">
-  <h1>LLaMA Factory: Fine-tune any large language model with ease.</h1>
-</div>
+![LLaMA Factory](assets/logo.png)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=social)](https://github.com/hiyouga/LLaMA-Factory/stargazers)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hiyouga/LLaMA-Factory)](https://github.com/hiyouga/LLaMA-Factory/commits/main)
@@ -32,7 +29,7 @@
 
 ----
 
-### Fine-tune 100+ large language models with zero-code, using the [CLI](#quickstart) and [Web UI](#fine-tuning-with-llama-board-gui-powered-by-gradio)
+### Easily fine-tune 100+ large language models with zero-code [CLI](#quickstart) and [Web UI](#fine-tuning-with-llama-board-gui-powered-by-gradio)
 
 ![GitHub Trend](https://trendshift.io/api/badge/repositories/4535)
 
@@ -42,25 +39,39 @@
 
 \[ English | [中文](README_zh.md) \]
 
-**Effortlessly Fine-tune LLMs with LLaMA Factory: Your gateway to customized language models.**
+**Fine-tuning a large language model can be easy as...**
 
-<img src="https://github.com/user-attachments/assets/3991a3a8-4276-4d30-9cab-4cb0c4b9b99e" alt="Demo of LLaMA Factory" width="800">
+https://github.com/user-attachments/assets/3991a3a8-4276-4d30-9cab-4cb0c4b9b99e
 
-**Quick Links:**
+Choose your path:
 
-*   [Documentation (WIP)](https://llamafactory.readthedocs.io/en/latest/)
-*   [Documentation (AMD GPU)](https://rocm.docs.amd.com/projects/ai-developer-hub/en/latest/notebooks/fine_tune/llama_factory_llama3.html)
-*   [Colab (free)](https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing)
-*   [Local machine](#getting-started)
-*   [PAI-DSW (free trial)](https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory)
-*   [Alaya NeW (cloud GPU deal)](https://docs.alayanew.com/docs/documents/useGuide/LLaMAFactory/mutiple/?utm_source=LLaMA-Factory)
+- **Documentation (WIP)**: https://llamafactory.readthedocs.io/en/latest/
+- **Documentation (AMD GPU)**: https://rocm.docs.amd.com/projects/ai-developer-hub/en/latest/notebooks/fine_tune/llama_factory_llama3.html
+- **Colab (free)**: https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing
+- **Local machine**: Please refer to [usage](#getting-started)
+- **PAI-DSW (free trial)**: https://gallery.pai-ml.com/#/preview/deepLearning/nlp/llama_factory
+- **Alaya NeW (cloud GPU deal)**: https://docs.alayanew.com/docs/documents/useGuide/LLaMAFactory/mutiple/?utm_source=LLaMA-Factory
 
 > [!NOTE]
 > Except for the above links, all other websites are unauthorized third-party websites. Please carefully use them.
 
-## Table of Contents
+## [LLaMA Factory: Your One-Stop Solution for Fine-Tuning Large Language Models](https://github.com/hiyouga/LLaMA-Factory)
 
-*   [Key Features](#features)
+LLaMA Factory simplifies the fine-tuning process for over 100 large language models, empowering users to customize and optimize models with ease.
+
+**Key Features:**
+
+*   **Extensive Model Support:**  Fine-tune models like LLaMA, Mistral, Qwen, DeepSeek, and many more.
+*   **Versatile Training Approaches:**  Supports continuous pre-training, supervised fine-tuning, reward modeling, PPO, DPO, KTO, ORPO, and more.
+*   **Efficient Optimization Techniques:**  Leverages 16-bit full-tuning, freeze-tuning, LoRA, QLoRA, and advanced algorithms like GaLore, BAdam, APOLLO, and PiSSA for scalability and performance.
+*   **Practical Enhancements:**  Integrates FlashAttention-2, Unsloth, Liger Kernel, RoPE scaling, NEFTune, and rsLoRA for improved training and inference.
+*   **Wide-Ranging Applications:**  Adaptable for multi-turn dialogue, tool use, image understanding, and more.
+*   **Comprehensive Monitoring:**  Integrates with LlamaBoard, TensorBoard, Wandb, MLflow, and SwanLab for experiment tracking and visualization.
+*   **Faster Inference:**  Supports OpenAI-style API, Gradio UI and CLI with [vLLM worker](https://github.com/vllm-project/vllm) or [SGLang worker](https://github.com/sgl-project/sglang).
+
+### Table of Contents
+
+*   [Features](#features)
 *   [Blogs](#blogs)
 *   [Changelog](#changelog)
 *   [Supported Models](#supported-models)
@@ -83,16 +94,16 @@
 *   [Citation](#citation)
 *   [Acknowledgement](#acknowledgement)
 
-## Key Features
+## Features
 
-*   **Broad Model Support:** Fine-tune LLaMA, Mistral, Qwen, and 100+ other LLMs.
-*   **Comprehensive Training Methods:** Utilize pre-training, supervised fine-tuning, reward modeling, and more.
-*   **Efficient Training Techniques:**  Leverage  LoRA, QLoRA, and other advanced optimization methods.
-*   **Advanced Algorithms:** Implement cutting-edge algorithms like GaLore, BAdam, and APOLLO.
-*   **Practical Optimizations:** Incorporate FlashAttention-2, Unsloth, and other performance enhancements.
-*   **Multimodal & Multi-Turn Tasks:** Handle diverse tasks, including dialogue, image understanding, and tool usage.
-*   **Monitoring & Experimentation:** Track progress with LlamaBoard, TensorBoard, and Wandb.
-*   **Fast Inference:** Benefit from OpenAI-style API, Gradio UI, and vLLM/SGLang integration for speedy deployments.
+*   **Various models**: LLaMA, LLaVA, Mistral, Mixtral-MoE, Qwen, Qwen2-VL, DeepSeek, Yi, Gemma, ChatGLM, Phi, etc.
+*   **Integrated methods**: (Continuous) pre-training, (multimodal) supervised fine-tuning, reward modeling, PPO, DPO, KTO, ORPO, etc.
+*   **Scalable resources**: 16-bit full-tuning, freeze-tuning, LoRA and 2/3/4/5/6/8-bit QLoRA via AQLM/AWQ/GPTQ/LLM.int8/HQQ/EETQ.
+*   **Advanced algorithms**: [GaLore](https://github.com/jiaweizzhao/GaLore), [BAdam](https://github.com/Ledzy/BAdam), [APOLLO](https://github.com/zhuhanqing/APOLLO), [Adam-mini](https://github.com/zyushun/Adam-mini), [Muon](https://github.com/KellerJordan/Muon), [OFT](https://github.com/huggingface/peft/tree/main/src/peft/tuners/oft), DoRA, LongLoRA, LLaMA Pro, Mixture-of-Depths, LoRA+, LoftQ and PiSSA.
+*   **Practical tricks**: [FlashAttention-2](https://github.com/Dao-AILab/flash-attention), [Unsloth](https://github.com/unslothai/unsloth), [Liger Kernel](https://github.com/linkedin/Liger-Kernel), RoPE scaling, NEFTune and rsLoRA.
+*   **Wide tasks**: Multi-turn dialogue, tool using, image understanding, visual grounding, video recognition, audio understanding, etc.
+*   **Experiment monitors**: LlamaBoard, TensorBoard, Wandb, MLflow, [SwanLab](https://github.com/SwanHubX/SwanLab), etc.
+*   **Faster inference**: OpenAI-style API, Gradio UI and CLI with [vLLM worker](https://github.com/vllm-project/vllm) or [SGLang worker](https://github.com/sgl-project/sglang).
 
 ### Day-N Support for Fine-Tuning Cutting-Edge Models
 
@@ -268,18 +279,4 @@
 | [Command R](https://huggingface.co/CohereForAI)                   | 35B/104B                         | cohere              |
 | [DeepSeek (Code/MoE)](https://huggingface.co/deepseek-ai)         | 7B/16B/67B/236B                  | deepseek            |
 | [DeepSeek 2.5/3](https://huggingface.co/deepseek-ai)              | 236B/671B                        | deepseek3           |
-| [DeepSeek R1 (Distill)](https://huggingface.co/deepseek-ai)       | 1.5B/7B/8B/14B/32B/70B/671B      | deepseekr1          |
-| [Falcon](https://huggingface.co/tiiuae)                           | 7B/11B/40B/180B                  | falcon              |
-| [Falcon-H1](https://huggingface.co/tiiuae)                        | 0.5B/1.5B/3B/7B/34B              | falcon_h1           |
-| [Gemma/Gemma 2/CodeGemma](https://huggingface.co/google)          | 2B/7B/9B/27B                     | gemma/gemma2        |
-| [Gemma 3/Gemma 3n](https://huggingface.co/google)                 | 270M/1B/4B/6B/8B/12B/27B         | gemma3/gemma3n      |
-| [GLM-4/GLM-4-0414/GLM-Z1](https://huggingface.co/zai-org)         | 9B/32B                           | glm4/glmz1          |
-| [GLM-4.1V](https://huggingface.co/zai-org)                        | 9B                               | glm4v               |
-| [GLM-4.5/GLM-4.5V](https://huggingface.co/zai-org)*               | 106B/355B                        | glm4_moe/glm4v_moe  |
-| [GPT-2](https://huggingface.co/openai-community)                  | 0.1B/0.4B/0.8B/1.5B              | -                   |
-| [GPT-OSS](https://huggingface.co/openai)                          | 20B/120B                         | gpt                 |
-| [Granite 3.0-3.3](https://huggingface.co/ibm-granite)             | 1B/2B/3B/8B                      | granite3            |
-| [Granite 4](https://huggingface.co/ibm-granite)                   | 7B                               | granite4            |
-| [Hunyuan](https://huggingface.co/tencent/)                        | 7B                               | hunyuan             |
-| [Index](https://huggingface.co/IndexTeam)                         | 1.9B                             | index               |
-| [InternLM 2-3](https://huggingface.
+| [DeepSeek R1 (Distill)](https://huggingface.co/deepseek-ai)       | 1.5B/7B/8B/14B/32

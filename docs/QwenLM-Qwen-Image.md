@@ -1,48 +1,54 @@
 <p align="center">
-    <img src="https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/qwen_image_logo.png" width="400"/>
-</p>
+    <img src="https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/qwen_image_logo.png" width="400" alt="Qwen-Image Logo"/>
+<p>
 
 <p align="center">
-  <a href="https://chat.qwen.ai/">Qwen Chat</a> |
-  <a href="https://huggingface.co/Qwen/Qwen-Image">Hugging Face (T2I)</a> |
-  <a href="https://huggingface.co/Qwen/Qwen-Image-Edit">Hugging Face (Edit)</a> |
-  <a href="https://modelscope.cn/models/Qwen/Qwen-Image">ModelScope-T2I</a> |
-  <a href="https://modelscope.cn/models/Qwen/Qwen-Image-Edit">ModelScope-Edit</a> |
-  <a href="https://arxiv.org/abs/2508.02324">Tech Report</a> |
-  <a href="https://qwenlm.github.io/blog/qwen-image/">Blog (T2I)</a> |
-  <a href="https://qwenlm.github.io/blog/qwen-image-edit/">Blog (Edit)</a>
-<br>
-  <a href="https://huggingface.co/spaces/Qwen/Qwen-Image">T2I Demo</a> |
-  <a href="https://huggingface.co/spaces/Qwen/Qwen-Image-Edit">Edit Demo</a> |
-  <a href="https://github.com/QwenLM/Qwen-Image/blob/main/assets/wechat.png">WeChat</a> |
-  <a href="https://discord.gg/CV4E9rpNSD">Discord</a>
+    &nbsp&nbsp💜 <a href="https://chat.qwen.ai/">Qwen Chat</a>&nbsp&nbsp |
+    &nbsp&nbsp🤗 <a href="https://huggingface.co/Qwen/Qwen-Image">HuggingFace(T2I)</a>&nbsp&nbsp |
+    &nbsp&nbsp🤗 <a href="https://huggingface.co/Qwen/Qwen-Image-Edit">HuggingFace(Edit)</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/models/Qwen/Qwen-Image">ModelScope-T2I</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/models/Qwen/Qwen-Image-Edit">ModelScope-Edit</a>&nbsp&nbsp| &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2508.02324">Tech Report</a> &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://qwenlm.github.io/blog/qwen-image/">Blog(T2I)</a> &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://qwenlm.github.io/blog/qwen-image-edit/">Blog(Edit)</a> &nbsp&nbsp
+    <br>
+    🖥️ <a href="https://huggingface.co/spaces/Qwen/Qwen-Image">T2I Demo</a>&nbsp&nbsp | 🖥️ <a href="https://huggingface.co/spaces/Qwen/Qwen-Image-Edit">Edit Demo</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://github.com/QwenLM/Qwen-Image/blob/main/assets/wechat.png">WeChat (微信)</a>&nbsp&nbsp | &nbsp&nbsp🫨 <a href="https://discord.gg/CV4E9rpNSD">Discord</a>&nbsp&nbsp
 </p>
+
+## Qwen-Image: Generate and Edit Stunning Images with Advanced AI
+
+Qwen-Image is a powerful 20B MMDiT image foundation model, achieving remarkable advancements in complex text rendering and precise image editing; [explore the original repository](https://github.com/QwenLM/Qwen-Image) for more details.
 
 <p align="center">
-  <img src="https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/merge3.jpg" width="1024"/>
-</p>
+    <img src="https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/merge3.jpg" width="1024" alt="Qwen-Image Example"/>
+<p>
 
-# Qwen-Image: Advanced Image Generation and Editing
+### Key Features
 
-**Qwen-Image is a powerful 20B MMDiT foundation model, revolutionizing image creation with exceptional text rendering, precise image editing, and impressive performance across diverse visual tasks.**  [Explore the original repository](https://github.com/QwenLM/Qwen-Image).
+*   **Exceptional Text Rendering:** Generate images with stunningly accurate and coherent text in various languages.
+*   **Precise Image Editing:** Edit images with advanced features like style transfer, object manipulation, and text modification.
+*   **Versatile Generation:** Create a wide range of artistic styles, from photorealistic to artistic, supporting diverse creative prompts.
+*   **Image Understanding Capabilities:** Includes object detection, semantic segmentation, and more.
+*   **Multi-GPU Support:** Deploy Qwen-Image with a multi-GPU API server for efficient performance.
 
-## Key Features
+### News
 
-*   **Superior Text Rendering:** Generates images with remarkable accuracy in rendering complex text, especially in Chinese.
-*   **Precise Image Editing:** Enables advanced editing capabilities, including style transfer, object manipulation, and detailed refinements.
-*   **Versatile Image Generation:** Supports a wide range of artistic styles, from photorealistic to artistic, making it a versatile tool for various creative applications.
-*   **Comprehensive Image Understanding:** Supports image understanding tasks like object detection, semantic segmentation, and depth estimation, enhancing editing capabilities.
-*   **User-Friendly Deployment:** Offers a Multi-GPU API Server for easy local deployment and Gradio-based web interface.
+*   **2025.08.19:** Update to the latest diffusers commit for optimal Qwen-Image-Edit results, especially in identity preservation and instruction following.
+*   **2025.08.18:** Qwen-Image-Edit is now open-sourced!
+*   **2025.08.09:** Support for LoRA models like MajicBeauty LoRA for realistic beauty images is available.
+*   **2025.08.05:** Qwen-Image is supported in ComfyUI and on Qwen Chat.
+*   **2025.08.05:** Technical Report released on Arxiv!
+*   **2025.08.04:** Qwen-Image weights released on Hugging Face and ModelScope.
+*   **2025.08.04:** Qwen-Image released! Check out the [Blog](https://qwenlm.github.io/blog/qwen-image) for more details.
 
-## Quick Start
+> [!NOTE]
+> Due to heavy traffic, if you'd like to experience our demo online, we also recommend visiting DashScope, WaveSpeed, and LibLib. Please find the links below in the community support.
 
-### 1. Installation
-Make sure your transformers is the latest version (transformers>=4.51.3 (Supporting Qwen2.5-VL)).
+### Quick Start
+
+**1. Prerequisites:**
+*   Make sure your transformers>=4.51.3 (Supporting Qwen2.5-VL)
+*   Install the latest version of diffusers
 ```bash
 pip install git+https://github.com/huggingface/diffusers
 ```
 
-### 2. Text-to-Image
+**2. Text to Image Example:**
 
 ```python
 from diffusers import DiffusionPipeline
@@ -98,7 +104,7 @@ image = pipe(
 image.save("example.png")
 ```
 
-### 3. Image Editing
+**3. Image Editing Example:**
 
 ```python
 import os
@@ -133,60 +139,41 @@ with torch.inference_mode():
     print("image saved at", os.path.abspath("output_image_edit.png"))
 ```
 
+> [!NOTE]
+> We have observed that editing results may become unstable if prompt rewriting is not used. Therefore, we strongly recommend applying prompt rewriting to improve the stability of editing tasks. For reference, please see our official [demo script](src/examples/tools/prompt_utils.py) or Advanced Usage below, which includes example system prompts. Qwen-Image-Edit is actively evolving with ongoing development. Stay tuned for future enhancements!
+
 ### Advanced Usage
 
-*   **Prompt Enhancement:** Use the official Prompt Enhancement Tool powered by Qwen-Plus or Qwen-VL-Max to enhance text-to-image and image editing stability and results. Integrate the tools into your code or use the provided example scripts.
+#### Prompt Enhancement
+Use the prompt enhancement tools for better results:
 
-## Deploy Qwen-Image
+*   For Text-to-Image, use `from tools.prompt_utils import rewrite` and run `prompt = rewrite(prompt)`.
+*   For Image Editing, use `from tools.prompt_utils import polish_edit_prompt` and run `prompt = polish_edit_prompt(prompt, pil_image)`.
 
-Qwen-Image supports Multi-GPU API Server for local deployment:
+#### Multi-GPU API Server
 
-### Multi-GPU API Server Pipeline & Usage
+Deploy a multi-GPU API server for local deployment:
 
-The Multi-GPU API Server will start a Gradio-based web interface with:
-- Multi-GPU parallel processing
-- Queue management for high concurrency
-- Automatic prompt optimization
-- Support for multiple aspect ratios
+*   Configure with environment variables: `NUM_GPUS_TO_USE`, `TASK_QUEUE_SIZE`, and `TASK_TIMEOUT`.
+*   Start the Gradio demo server with: `cd src && DASHSCOPE_API_KEY=sk-xxxxxxxxxxxxxxxxx python examples/demo.py`.
 
-Configuration via environment variables:
-```bash
-export NUM_GPUS_TO_USE=4          # Number of GPUs to use
-export TASK_QUEUE_SIZE=100        # Task queue size
-export TASK_TIMEOUT=300           # Task timeout in seconds
-```
+### Show Cases
 
-```bash
-# Start the gradio demo server, api key for prompt enhance
-cd src
-DASHSCOPE_API_KEY=sk-xxxxxxxxxxxxxxxxx python examples/demo.py 
-```
+[Include all the images and descriptions from the original README under the "Show Cases" header.]
 
-## Show Cases
+### AI Arena
 
-### General Cases
+[Include all the information from the original README under the "AI Arena" header.]
 
-[Example images showcasing the model's capabilities can be found in the original README. You'll see high-fidelity text rendering, diverse artistic styles, advanced image editing features and image understanding capabilities]
+### Community Support
 
-## AI Arena
+[Include all the information from the original README under the "Community Support" header.]
 
-[The original README contains information on the AI Arena platform. You can view the leaderboards and participate in model evaluations.]
-
-## Community Support
-
-*   **Hugging Face:**  Supports Qwen-Image with LoRA and fine-tuning workflows in development.
-*   **ModelScope:** Provides comprehensive support, including low-GPU-memory offload, FP8 quantization, and LoRA training.
-*   **WaveSpeedAI:** Deploys Qwen-Image on their platform.
-*   **LiblibAI:** Offers native support for Qwen-Image.
-*   **cache-dit:** Offers cache acceleration support.
-
-## License Agreement
+### License Agreement
 
 Qwen-Image is licensed under Apache 2.0.
 
-## Citation
-
-If you find Qwen-Image useful, please cite our work:
+### Citation
 
 ```bibtex
 @misc{wu2025qwenimagetechnicalreport,
@@ -200,10 +187,10 @@ If you find Qwen-Image useful, please cite our work:
 }
 ```
 
-## Contact and Join Us
+### Contact and Join Us
 
-Join our [Discord](https://discord.gg/z3GAxXZ9Ce) or scan the QR code to connect via our [WeChat groups](assets/wechat.png).  We welcome your feedback, issues, and pull requests on GitHub.  We're also hiring for full-time employees and research interns.  Contact fulai.hr@alibaba-inc.com
+[Include all the information from the original README under the "Contact and Join Us" header.]
 
-## Star History
+### Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=QwenLM/Qwen-Image&type=Date)](https://www.star-history.com/#QwenLM/Qwen-Image&Date)

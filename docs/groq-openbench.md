@@ -1,30 +1,30 @@
-# OpenBench: Unleash the Power of LLM Benchmarking 🚀
+# OpenBench: The Ultimate LLM Evaluation Toolkit 🚀
 
-**OpenBench is a provider-agnostic, open-source evaluation infrastructure designed to standardize and simplify the benchmarking of Large Language Models (LLMs).**  Evaluate your models across a wide range of tasks and providers with ease!  [Check out the original repo](https://github.com/groq/openbench).
+**Quickly benchmark any language model across various providers and tasks.** OpenBench provides a standardized, open-source infrastructure for evaluating LLMs, empowering researchers and developers to rigorously assess model performance. **[Explore the OpenBench Repository](https://github.com/groq/openbench)**
 
 [![PyPI version](https://badge.fury.io/py/openbench.svg)](https://badge.fury.io/py/openbench)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-**Key Features:**
+## Key Features:
 
-*   **Broad Provider Support:** Works seamlessly with 30+ model providers, including Groq, OpenAI, Anthropic, Google, and local models via Ollama and Hugging Face.
-*   **Extensive Benchmark Suite:** Evaluate across 35+ benchmarks covering knowledge, math, reasoning, coding, science, and more.
-*   **Simple CLI:** Intuitive command-line interface for easy model evaluation and result analysis.
-*   **Extensible:** Easily add new benchmarks and customize evaluations to fit your needs.
-*   **Local Evaluation Support:** Run private benchmarks while preserving data privacy.
-*   **Hugging Face Integration:** Push evaluation results directly to Hugging Face Datasets for sharing and analysis.
+*   **Provider-Agnostic:** Seamlessly works with 30+ model providers, including Groq, OpenAI, Anthropic, Google, and local models.
+*   **Extensive Benchmark Suite:** Evaluate models across 35+ benchmarks, covering knowledge, math, reasoning, coding, and more.
+*   **Simple & Powerful CLI:** Easily run evaluations, view results, and add custom benchmarks with an intuitive command-line interface.
+*   **Local Evaluation Support:** Preserve privacy with support for running private benchmarks.
+*   **Hugging Face Integration:** Push results to Hugging Face Datasets for sharing and further analysis.
+*   **Extensible Architecture:** Easily add new benchmarks and integrate new model providers.
 
-## What's New? (v0.3.0 Highlights)
+## What's New in v0.3.0
 
-*   **Expanded Provider Support:** Added support for AI21, Baseten, Cerebras, Cohere, Crusoe, DeepInfra, Friendli, Hugging Face, Hyperbolic, Lambda, MiniMax, Moonshot, Nebius, Nous, Novita, Parasail, Reka, SambaNova, and more.
-*   **New Benchmarks:** Introduction of the DROP (reading comprehension) benchmark, with experimental benchmarks available via the `--alpha` flag.
-*   **CLI Enhancements:** Features such as the `openbench` alias, `-M`/`-T` flags for model/task arguments, and a `--debug` mode for eval-retry.
-*   **Developer Tools:** Improved GitHub Actions integration and Inspect AI extension support.
+*   **Expanded Provider Support:** Added support for AI21, Baseten, Cerebras, Cohere, Crusoe, DeepInfra, Friendli, Hugging Face, Hyperbolic, Lambda, MiniMax, Moonshot, Nebius, Nous, Novita, Parasail, Reka, SambaNova and more.
+*   **New Benchmarks:** Integrated DROP (reading comprehension) and other experimental benchmarks available with the `--alpha` flag.
+*   **CLI Enhancements:** Includes an `openbench` alias, `-M`/`-T` flags for model/task arguments, and `--debug` mode for evaluation retries.
+*   **Developer Tools:** GitHub Actions integration and Inspect AI extension support.
 
-## Quick Start: Evaluate a Model in 60 Seconds!
+## Get Started in 60 Seconds!
 
-Get up and running quickly with the `uv` package manager.
+**Prerequisite**: [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 ```bash
 # Create a virtual environment and install OpenBench (30 seconds)
@@ -42,11 +42,9 @@ bench eval mmlu --model groq/llama-3.3-70b-versatile --limit 10
 bench view
 ```
 
-## Model Provider Support
+## Diverse Provider Support
 
-OpenBench integrates with a wide array of LLM providers, allowing you to benchmark your models with ease.
-
-### Example Usage
+OpenBench offers broad compatibility with various LLM providers.
 
 ```bash
 # Groq (blazing fast!)
@@ -67,12 +65,12 @@ bench eval musr --model ollama/llama3.1:70b
 # Hugging Face Inference Providers
 bench eval mmlu --model huggingface/gpt-oss-120b:groq
 
-# 30+ providers supported
+# 30+ providers supported - see full list below
 ```
 
-### Supported Providers and API Keys
+## Supported Providers and Configuration
 
-Set the appropriate API key environment variable to get started:
+OpenBench supports a wide array of model providers through Inspect AI. Set the appropriate API key environment variable to get started:
 
 | Provider              | Environment Variable   | Example Model String             |
 | --------------------- | ---------------------- | -------------------------------- |
@@ -108,9 +106,12 @@ Set the appropriate API key environment variable to get started:
 | **Vercel AI Gateway** | `AI_GATEWAY_API_KEY`   | `vercel/creator-name/model-name` |
 | **vLLM**              | None (local)           | `vllm/model-name`                |
 
-## Available Benchmarks
+## Comprehensive Benchmarks
 
-OpenBench offers a comprehensive set of benchmarks to evaluate your LLMs across diverse domains.  Use `bench list` to see the most up-to-date listing.
+OpenBench offers a variety of benchmarks to assess model capabilities. Use `bench list` to view the latest offerings.
+
+> [!NOTE]
+> Benchmark names are case-sensitive in the CLI.
 
 | Category          | Benchmarks                                                                                                                                                                                                                                                                 |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -122,9 +123,9 @@ OpenBench offers a comprehensive set of benchmarks to evaluate your LLMs across 
 | **Healthcare**    | HealthBench (open-ended healthcare eval), HealthBench_hard (challenging variant), HealthBench_consensus (consensus variant)                                                                                                                                                |
 | **Cybersecurity** | CTI-Bench (complete cyber threat intelligence suite), CTI-Bench ATE (MITRE ATT&CK technique extraction), CTI-Bench MCQ (knowledge questions on CTI standards and best practices), CTI-Bench RCM (CVE to CWE vulnerability mapping), CTI-Bench VSP (CVSS score calculation) |
 
-## Configuration
+## Configuration Options
 
-Configure OpenBench with these environment variables:
+Configure your environment for optimal performance.
 
 ```bash
 # Set your API keys
@@ -136,9 +137,9 @@ export OPENAI_API_KEY=your_key  # Optional
 export BENCH_MODEL=groq/llama-3.1-70b
 ```
 
-## Command-Line Interface (CLI)
+## Commands and Options
 
-OpenBench features a user-friendly CLI for easy interaction.  Run `bench --help` for a complete list.
+Run `bench --help` for detailed command and option descriptions.
 
 | Command                  | Description                                        |
 | ------------------------ | -------------------------------------------------- |
@@ -171,13 +172,33 @@ OpenBench features a user-friendly CLI for easy interaction.  Run `bench --help`
 | `--json`             | None                     | `False`         | Output results in JSON format                                    |
 | `--hub-repo`         | `BENCH_HUB_REPO`         | `None`          | Push results to a Hugging Face Hub dataset                       |
 
-## Building Custom Evaluations
+## Grader Information
 
-OpenBench is built on [Inspect AI](https://inspect.aisi.org.uk/), offering a powerful framework for custom evaluations.  Create your own evaluations with Inspect AI and integrate them into OpenBench using `bench eval <path>`.
+Some benchmarks utilize a grader model for scoring. This requires the `OPENAI_API_KEY` environment variable to be set.
+
+```bash
+export OPENAI_API_KEY=your_openai_key
+```
+
+The following benchmarks use a grader model:
+
+| Benchmark          | Default Grader Model        |
+| ------------------ | --------------------------- |
+| `simpleqa`         | `openai/gpt-4.1-2025-04-14` |
+| `hle`              | `openai/o3-mini-2025-01-31` |
+| `hle_text`         | `openai/o3-mini-2025-01-31` |
+| `browsecomp`       | `openai/gpt-4.1-2025-04-14` |
+| `healthbench`      | `openai/gpt-4.1-2025-04-14` |
+| `math`             | `openai/gpt-4-turbo-preview` |
+| `math_500`         | `openai/gpt-4-turbo-preview` |
+
+## Building Your Own Evals
+
+Leveraging [Inspect AI](https://inspect.aisi.org.uk/), create and integrate custom evaluations effortlessly. Use `bench eval <path>` to execute your private benchmarks.
 
 ## Exporting Logs to Hugging Face
 
-Share your results and facilitate further analysis by exporting your logs to a Hugging Face Hub dataset.
+Share and analyze your results by exporting logs to a Hugging Face Hub dataset.
 
 ```bash
 export HF_TOKEN=<your-huggingface-token>
@@ -189,23 +210,37 @@ bench eval mmlu --model groq/llama-3.3-70b-versatile --limit 10 --hub-repo <your
 
 ### How does OpenBench differ from Inspect AI?
 
-OpenBench is a curated benchmark library built *on top of* Inspect AI, offering ready-to-use benchmarks, utilities, and a streamlined CLI.
+OpenBench provides:
+
+*   **Reference implementations** of 20+ major benchmarks with consistent interfaces
+*   **Shared utilities** for common patterns (math scoring, multi-language support, etc.)
+*   **Curated scorers** that work across different eval types
+*   **CLI tooling** optimized for running standardized benchmarks
 
 ### Why not just use Inspect AI, lm-evaluation-harness, or lighteval?
 
-OpenBench prioritizes shared components, clean implementations, and a simplified developer experience, focusing on ease of use and maintainability.
+OpenBench focuses on:
+
+*   **Shared components**: Common scorers, solvers, and datasets across benchmarks reduce code duplication
+*   **Clean implementations**: Each eval is written for readability and reliability
+*   **Developer experience**: Simple CLI, consistent patterns, easy to extend
 
 ### How can I run `bench` outside of the `uv` environment?
 
-Run `uv run pip install -e .` after setup to make `bench` available globally.
+```bash
+uv run pip install -e .
+```
 
 ### I'm running into an issue when downloading a dataset from HuggingFace - how do I fix it?
 
-Set the environment variable `HF_TOKEN="<HUGGINGFACE_TOKEN>"` to resolve "gated" errors.
+```bash
+HF_TOKEN="<HUGGINGFACE_TOKEN>"
+```
+The full HuggingFace documentation can be found [on the HuggingFace docs on Authentication](https://huggingface.co/docs/hub/en/datasets-polars-auth).
 
 ## Development
 
-Get started with development:
+Clone the repository and set up your environment.
 
 ```bash
 # Clone the repo
@@ -223,24 +258,31 @@ pre-commit install
 pytest
 ```
 
+⚠️ **IMPORTANT**: Run `pre-commit install` after setup.
+
 ## Contributing
 
-Contribute to OpenBench!  See the [Contributing Guide](CONTRIBUTING.md) for instructions.
+Contribute to OpenBench! See the [Contributing Guide](CONTRIBUTING.md) for details on:
+
+-   Setting up the development environment
+-   Adding new benchmarks and model providers
+-   Code style and testing requirements
+-   Submitting issues and pull requests
+
+Quick links:
 
 -   [Report a bug](https://github.com/groq/openbench/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml)
 -   [Request a feature](https://github.com/groq/openbench/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml)
 
 ## Reproducibility Statement
 
-OpenBench strives to reproduce benchmark results faithfully. However, numerical discrepancies are expected due to variations in model prompts, quantization, and other factors.
+OpenBench prioritizes faithful implementations, while acknowledging potential numerical discrepancies compared to external sources.
 
 ## Acknowledgments
 
-This project is made possible by:
-
-*   **[Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai)**
-*   **[EleutherAI's lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)**
-*   **[Hugging Face's lighteval](https://github.com/huggingface/lighteval)**
+*   [Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai)
+*   [EleutherAI's lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)
+*   [Hugging Face's lighteval](https://github.com/huggingface/lighteval)
 
 ## Citation
 

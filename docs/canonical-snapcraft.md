@@ -1,87 +1,63 @@
 <img src="https://dashboard.snapcraft.io/site_media/appmedia/2018/04/Snapcraft-logo-bird.png" alt="Snapcraft logo" style="height: 128px; display: block">
 
-# Snapcraft: Build, Package, and Distribute Your Software with Ease
+# Snapcraft: Package and Distribute Your Software for Any Linux Distribution
 
-**Snapcraft** is the powerful command-line tool that simplifies packaging and distributing software across various Linux distributions and IoT devices.  [Learn more on GitHub](https://github.com/canonical/snapcraft).
-
-[![Snapcraft][snapcraft-badge]][snapcraft-site]
-[![Documentation Status][rtd-badge]][rtd-latest]
-[![Spread tests][gha-spread-badge]][gha-spread]
-[![Codecov Status][codecov-badge]][codecov-status]
-[![Ruff status][ruff-badge]][ruff-site]
+**Snapcraft** is the powerful command-line tool that simplifies software packaging and distribution across all major Linux distributions and IoT devices. Visit the [Snapcraft GitHub Repository](https://github.com/canonical/snapcraft) to learn more.
 
 ## Key Features
 
-*   **Cross-Distribution Compatibility:** Package your software once and deploy it on all major Linux distributions.
-*   **Dependency Management:**  Snapcraft bundles all necessary libraries and dependencies within the snap, eliminating compatibility issues.
-*   **Easy Project File:** Uses a simple `snapcraft.yaml` file for defining your build and runtime configurations.
-*   **Simplified Packaging:** Streamline your build process with intuitive commands like `snapcraft init`, `snapcraft pack`, `snapcraft register`, and `snapcraft upload`.
-*   **Supports IoT Devices:** Package applications specifically for IoT platforms.
-*   **Integration with Snap Store:** Easily publish and manage your snaps on public and private app stores, including the Snap Store.
+*   **Universal Packaging:** Package your applications once and deploy them on any Linux distribution.
+*   **Dependency Management:** Automatically bundles all necessary libraries and dependencies within the snap.
+*   **Architecture Support:** Supports a wide range of architectures.
+*   **Easy to Use:** Simple `snapcraft.yaml` configuration file for easy integration into your existing projects.
+*   **App Store Integration:** Seamlessly publish your snaps to public and private app stores, including the Snap Store.
 
-## Getting Started
+## Get Started Quickly
 
-### Installation
+Creating your first snap is easy. 
 
-Snapcraft is available on all major Linux distributions, Windows, and macOS.
-
-Install on snap-ready systems using the command line:
-
-```bash
-sudo snap install snapcraft --classic
-```
-
-Or, install as a traditional package on many popular Linux repositories.
-
-For complete installation, you need an additional Linux container tool.
-
-### Basic Usage
-
-1.  **Initialize:** Create a `snapcraft.yaml` file in your project root:
-
+1.  **Initialize your project:**
     ```bash
     snapcraft init
     ```
-
-2.  **Configure:** Add your project's build and runtime details to the `snapcraft.yaml` file.
-3.  **Build:** Package your project into a snap:
-
+2.  **Define your build and runtime details in `snapcraft.yaml`.**
+3.  **Build your snap:**
     ```bash
     snapcraft pack
     ```
-
-4.  **Publish:** Register and upload your snap to the Snap Store or other app stores:
-
+4.  **Publish your app to the Snap Store (optional):**
     ```bash
     snapcraft register
     snapcraft upload
     ```
 
-## Resources
+[Craft your first snap](https://documentation.ubuntu.com/snapcraft/stable/tutorials/craft-a-snap) to get a hands-on introduction.
 
-*   **Documentation:**  [Snapcraft Documentation](https://documentation.ubuntu.com/snapcraft/stable) provides comprehensive guides and tutorials.
-*   **Tutorial:** [Crafting Your First Snap](https://documentation.ubuntu.com/snapcraft/stable/tutorials/craft-a-snap)
-*   **Community Forum:** [Snapcraft Forum](https://forum.snapcraft.io) for discussions and support.
-*   **Matrix Channel:** [Snapcraft Matrix channel](https://matrix.to/#/#snapcraft:ubuntu.com) for real-time chat.
-*   **Issue Tracking:** Report issues on the [GitHub repository](https://github.com/canonical/snapcraft/issues).
+## Installation
+
+Snapcraft is available on Linux, Windows, and macOS.
+
+*   **Snap-ready Systems:**
+    ```bash
+    sudo snap install snapcraft --classic
+    ```
+*   **Traditional Package:**
+    Snapcraft can also be installed as a traditional package on many popular Linux repositories.
+    The documentation covers how to [set up Snapcraft](https://documentation.ubuntu.com/snapcraft/stable/how-to/setup/set-up-snapcraft).
+
+## Documentation and Support
+
+*   Comprehensive [Snapcraft documentation](https://documentation.ubuntu.com/snapcraft/stable) provides detailed guidance.
+*   Engage with the [Snapcraft Forum](https://forum.snapcraft.io) and [Snapcraft Matrix channel](https://matrix.to/#/#snapcraft:ubuntu.com) for community support.
+*   Report issues on the [GitHub repository](https://github.com/canonical/snapcraft/issues).
 
 ## Contribute
 
-Snapcraft is an open-source project, and contributions are welcome!  Review the [contribution guide](CONTRIBUTING.md) and join the community.
+Snapcraft is an open-source project and welcomes contributions.
+Get started with the [contribution guide](CONTRIBUTING.md).
 
 ## License
 
 Snapcraft is released under the [GPL-3.0 license](LICENSE).
 
 © 2015-2025 Canonical Ltd.
-
-[snapcraft-badge]: https://snapcraft.io/snapcraft/badge.svg
-[snapcraft-site]: https://snapcraft.io/snapcraft
-[rtd-badge]: https://readthedocs.com/projects/canonical-snapcraft/badge/?version=latest
-[rtd-latest]: https://documentation.ubuntu.com/snapcraft/latest/?badge=latest
-[gha-spread-badge]: https://github.com/canonical/snapcraft/actions/workflows/spread-scheduled.yaml/badge.svg?branch=main
-[gha-spread]: https://github.com/canonical/snapcraft/actions/workflows/spread-scheduled.yaml
-[ruff-badge]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json
-[ruff-site]: https://github.com/astral-sh/ruff
-[codecov-badge]: https://codecov.io/github/canonical/snapcraft/coverage.svg?branch=master
-[codecov-status]: https://codecov.io/github/canonical/snapcraft?branch=master

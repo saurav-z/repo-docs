@@ -1,31 +1,35 @@
+<!--  Frappe Framework - Low-Code Web Framework for Rapid Application Development -->
 <div align="center" markdown="1">
     <img src=".github/framework-logo-new.svg" width="80" height="80"/>
-    <h1>Frappe Framework: Low-Code Web Development for Real-World Applications</h1>
+    <h1>Frappe Framework: Build Powerful Web Apps with Ease</h1>
 </div>
 
 <div align="center">
     <a target="_blank" href="LICENSE" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-success.svg"></a>
     <a href="https://codecov.io/gh/frappe/frappe"><img src="https://codecov.io/gh/frappe/frappe/branch/develop/graph/badge.svg?token=XoTa679hIj"/></a>
-    <br>
-    <a href="https://frappe.io/framework">Website</a> | <a href="https://docs.frappe.io/framework">Documentation</a> | <a href="https://github.com/frappe/frappe">Original Repository</a>
 </div>
 <div align="center">
     <img src=".github/hero-image.png" alt="Hero Image" />
 </div>
+<div align="center">
+    <a href="https://frappe.io/framework">Website</a>
+    -
+    <a href="https://docs.frappe.io/framework">Documentation</a>
+</div>
 
-## Frappe Framework: Build Powerful Web Apps with Ease
+## Frappe Framework: The Low-Code Solution for Web App Development
 
-Frappe Framework is a full-stack, low-code web application framework, built with Python and JavaScript, designed to streamline web application development.  It's ideal for building complex, data-driven applications.
+**Frappe Framework** is a full-stack, low-code web application framework built with Python and JavaScript, perfect for building robust, real-world applications quickly and efficiently. Designed for rapid development, it provides a comprehensive suite of features to streamline your development process.  Explore the original repository on [GitHub](https://github.com/frappe/frappe).
 
-### Key Features
+### Key Features:
 
-*   **Full-Stack Development:**  Develop both front-end and back-end applications with a single framework, using Python and JavaScript.
-*   **Low-Code Approach:**  Reduce development time with built-in features and a focus on metadata-driven design.
-*   **Built-in Admin Interface:** Get a customizable admin dashboard to manage your application data.
-*   **Role-Based Permissions:**  Control access and permissions with a comprehensive user and role management system.
-*   **REST API Generation:** Automatically generates RESTful APIs for all your models, enabling easy integration.
-*   **Customizable Forms and Views:** Create dynamic forms and views with server-side scripting and client-side JavaScript.
-*   **Report Builder:** Create custom reports without the need for extensive coding.
+*   **Full-Stack Framework:** Develop both front-end and back-end components seamlessly within a single framework.
+*   **Low-Code Development:**  Reduce development time with pre-built components and features.
+*   **Built-in Admin Interface:**  Manage application data effortlessly with a customizable admin dashboard.
+*   **Role-Based Permissions:** Implement robust security with granular user and role management.
+*   **REST API:** Automatically generates RESTful APIs for easy integration with other systems.
+*   **Customizable Forms and Views:** Design flexible forms and views using server-side scripting and client-side JavaScript.
+*   **Report Builder:** Create custom reports without writing code, empowering users to analyze data effectively.
 
 <details>
 <summary>Screenshots</summary>
@@ -39,7 +43,7 @@ Frappe Framework is a full-stack, low-code web application framework, built with
 
 ### Production Setup
 
-*   **Frappe Cloud:** Consider [Frappe Cloud](https://frappecloud.com/) for a managed hosting solution.
+*   **Frappe Cloud:** Consider [Frappe Cloud](https://frappecloud.com) for hassle-free hosting, which handles installation, upgrades, and maintenance.
 
     <div>
         <a href="https://frappecloud.com/" target="_blank">
@@ -49,60 +53,61 @@ Frappe Framework is a full-stack, low-code web application framework, built with
             </picture>
         </a>
     </div>
-*   **Self-Hosting:**  For self-hosting, see the installation instructions below.
 
 ### Self Hosting
 
 #### Docker
 
-1.  **Prerequisites:** Install Docker, Docker Compose, and Git.
-2.  **Run:**
+**Prerequisites:** Docker, Docker Compose, Git.
 
+1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/frappe/frappe_docker
     cd frappe_docker
+    ```
+
+2.  **Run with Docker Compose:**
+    ```bash
     docker compose -f pwd.yml up -d
     ```
 
-    Your site should be accessible at `http://localhost:8080`.  Use the default login credentials:
-    *   Username: `Administrator`
-    *   Password: `admin`
+    Your site should be accessible at `http://localhost:8080`.
+    Use "Administrator" / "admin" to login.
 
-#### ARM based Docker Setup
-
-See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM based docker setup.
+    For ARM-based Docker setup, refer to the [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) documentation.
 
 ## Development Setup
 
-### Manual Install
+### Manual Installation
+The installation instructions for bench are available in the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) documentation.
 
-1.  Follow the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) to set up bench.
-
+1.  **Setup bench:** by following the [Installation Steps](https://docs.frappe.io/framework/user/en/installation)
+2.  **Start the Server:**
     ```bash
     bench start
     ```
-2.  In a separate terminal window:
-
+3.  **In a separate terminal create a new site:**
     ```bash
     bench new-site frappe.localhost
     ```
+4.  Open `http://frappe.localhost:8000/app` in your browser to see the running app.
 
-3.  Access your application at `http://frappe.localhost:8000/app`.
+## Resources and Community
 
-## Resources & Community
+*   **Frappe School:** [Frappe School](https://frappe.school) - Learn Frappe Framework and ERPNext from the various courses by the maintainers or from the community.
+*   **Documentation:** [Official documentation](https://docs.frappe.io/framework)
+*   **Discussion Forum:** [Discussion Forum](https://discuss.frappe.io/)
+*   **Tutorials:** [buildwithhussain.com](https://buildwithhussain.com) - Watch Frappe Framework being used in the wild to build world-class web apps.
 
-*   [Frappe School](https://frappe.school) - Learn Frappe Framework and ERPNext.
-*   [Official Documentation](https://docs.frappe.io/framework) - Extensive documentation.
-*   [Discussion Forum](https://discuss.frappe.io/) - Engage with the community.
-*   [buildwithhussain.com](https://buildwithhussain.com) - Watch real-world app building.
+## Contributing
 
-## Contribute
+*   **Issue Guidelines:** [Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)
+*   **Report Security Vulnerabilities:** [Report Security Vulnerabilities](https://frappe.io/security)
+*   **Pull Request Requirements:** [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
+*   **Translations:** [Translations](https://crowdin.com/project/frappe)
 
-*   [Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)
-*   [Report Security Vulnerabilities](https://frappe.io/security)
-*   [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
-*   [Translations](https://crowdin.com/project/frappe)
-
+<br>
+<br>
 <div align="center">
     <a href="https://frappe.io" target="_blank">
         <picture>
@@ -111,17 +116,3 @@ See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#t
         </picture>
     </a>
 </div>
-```
-Key improvements and SEO considerations:
-
-*   **Clear Headline & Hook:** A concise and engaging opening that immediately clarifies what Frappe Framework is.
-*   **Keyword Integration:**  Uses relevant keywords like "low-code," "web framework," "Python," "JavaScript," and "full-stack" throughout the description.
-*   **Structure:** Uses headings, subheadings, and bullet points for readability and SEO benefit.
-*   **Concise Feature Descriptions:** Briefly highlights key features to grab attention.
-*   **Call to Action (Implicit):** Encourages users to explore the documentation and community.
-*   **Links:** Provides links to the original repository, website, documentation, and other resources.
-*   **Alt Text:** Ensures all images include descriptive `alt` text for accessibility and SEO.
-*   **Emphasis on Benefits:** Focuses on the benefits of using Frappe Framework (e.g., reduced development time, ease of building applications).
-*   **Improved Flow & Readability:**  Reorganized the content to be more user-friendly.
-*   **Focus on Main Points:** Condensed the information while retaining the most important details.
-*   **Concise Installation Instructions:** Simplified the "Getting Started" section.

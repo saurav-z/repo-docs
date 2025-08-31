@@ -1,95 +1,95 @@
 <div align="center">
   <img src="./docs/assets/images/logo.png" alt="Pruna AI Logo" width=400>
   <img src="./docs/assets/images/element.png" alt="Element" width=10>
-  **Supercharge your AI models: make them faster, cheaper, smaller, and greener with Pruna!**
+  **Supercharge your AI models: Make them faster, cheaper, smaller, and greener with Pruna!**
   <img src="./docs/assets/images/element.png" alt="Element" width=10>
-  <br>
-  <a href="https://github.com/PrunaAI/pruna"><img src="https://img.shields.io/badge/View_on_GitHub-blue?style=for-the-badge" alt="View on GitHub"></a>
-  <br>
-  <br>
-  [![Documentation](https://img.shields.io/badge/Pruna_documentation-purple?style=for-the-badge)][documentation]
-  <br>
-  ![GitHub License](https://img.shields.io/github/license/prunaai/pruna?style=flat-square)
-  ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/prunaai/pruna/build.yaml?style=flat-square)
-  ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/prunaai/pruna/tests.yaml?label=tests&style=flat-square)
-  ![GitHub Release](https://img.shields.io/github/v/release/prunaai/pruna?style=flat-square)
-  ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/PrunaAI/pruna?style=flat-square)
-  ![PyPI - Downloads](https://img.shields.io/pypi/dm/pruna?style=flat-square)
-  ![Codacy](https://app.codacy.com/project/badge/Grade/092392ec4be846928a7c5978b6afe060)
-  [![Website](https://img.shields.io/badge/Pruna.ai-purple?style=flat-square)][website]
-  [![X (formerly Twitter) URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Fx.com%2FPrunaAI)][x]
-  [![Devto](https://img.io/badge/dev-to-black?style=flat-square)][devto]
-  [![Reddit](https://img.shields.io/badge/Follow-r%2FPrunaAI-orange?style=social)][reddit]
-  [![Discord](https://img.shields.io/badge/Discord-join_us-purple?style=flat-square)][discord]
-  [![Huggingface](https://img.shields.io/badge/Huggingface-models-yellow?style=flat-square)][huggingface]
-  [![Replicate](https://img.shields.io/badge/replicate-black?style=flat-square)][replicate]
-  <br>
-  <img src="./docs/assets/images/triple_line.png" alt="Pruna AI Logo" width=600, height=30>
-</div>
-## Optimize Your AI Models with Pruna
 
-Pruna is a powerful model optimization framework designed for developers, enabling you to significantly improve the performance, efficiency, and sustainability of your AI models. Using a simple, intuitive API, Pruna helps you make your models faster, smaller, cheaper to run, and more environmentally friendly.
+<br>
+
+[![Documentation](https://img.shields.io/badge/Pruna_documentation-purple?style=for-the-badge)][documentation]
+
+<br>
+
+![GitHub License](https://img.shields.io/github/license/prunaai/pruna?style=flat-square)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/prunaai/pruna/build.yaml?style=flat-square)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/prunaai/pruna/tests.yaml?label=tests&style=flat-square)
+![GitHub Release](https://img.shields.io/github/v/release/prunaai/pruna?style=flat-square)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/PrunaAI/pruna?style=flat-square)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/pruna?style=flat-square)
+![Codacy](https://app.codacy.com/project/badge/Grade/092392ec4be846928a7c5978b6afe060)
+
+[![Website](https://img.shields.io/badge/Pruna.ai-purple?style=flat-square)][website]
+[![X (formerly Twitter) URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Fx.com%2FPrunaAI)][x]
+[![Devto](https://img.shields.io/badge/dev-to-black?style=flat-square)][devto]
+[![Reddit](https://img.shields.io/badge/Follow-r%2FPrunaAI-orange?style=social)][reddit]
+[![Discord](https://img.shields.io/badge/Discord-join_us-purple?style=flat-square)][discord]
+[![Huggingface](https://img.shields.io/badge/Huggingface-models-yellow?style=flat-square)][huggingface]
+[![Replicate](https://img.shields.io/badge/replicate-black?style=flat-square)][replicate]
+
+<br>
+
+<img src="./docs/assets/images/triple_line.png" alt="Pruna AI Logo" width=600, height=30>
+</div>
+
+## **Pruna: AI Model Optimization Framework**
+
+Pruna is an open-source framework designed to optimize AI models, empowering developers to achieve significant improvements in speed, efficiency, and resource utilization with minimal code changes.  **[Check out the original repo](https://github.com/PrunaAI/pruna)**
 
 **Key Features:**
 
-*   **Speed:** Accelerate inference times using advanced optimization techniques.
-*   **Size Reduction:** Reduce model size without sacrificing quality.
+*   **Speed:** Accelerate inference times.
+*   **Size Reduction:** Reduce model size while maintaining quality.
 *   **Cost Savings:** Lower computational expenses and resource demands.
-*   **Environmental Impact:** Reduce energy consumption and minimize your carbon footprint.
+*   **Environmental Impact:** Decrease energy consumption and promote greener AI.
 
-Pruna supports various model types, including LLMs, Diffusion and Flow Matching Models, Vision Transformers, Speech Recognition Models, and more.
+Pruna supports various model types, including LLMs, Diffusion Models, Vision Transformers, and more.  It offers a range of optimization techniques.
 
 <img align="left" width="40" src="docs/assets/images/highlight.png" alt="Pruna Pro"/>
 
-For advanced optimization features and priority support, consider [Pruna Pro](https://docs.pruna.ai/en/stable/docs_pruna_pro/user_manual/pruna_pro.html), our enterprise solution.
-
+For advanced optimization features, our `OptimizationAgent`, and priority support consider [Pruna Pro](https://docs.pruna.ai/en/stable/docs_pruna_pro/user_manual/pruna_pro.html).
 <br clear="left"/>
 
 ## Installation
 
-Pruna is compatible with Linux, MacOS, and Windows. Ensure you have:
+Pruna is compatible with Linux, MacOS, and Windows.  Ensure you have Python 3.9+ and optionally, the [CUDA toolkit](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/) for GPU support.
 
-*   Python 3.9 or higher
-*   Optional: [CUDA toolkit](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/) for GPU support
+**Installation Options:**
 
-**Install using pip:**
+1.  **Using pip:**
 
-```bash
-pip install pruna
-```
+    ```bash
+    pip install pruna
+    ```
 
-**Install from source:**
+2.  **From source:**
 
-```bash
-git clone https://github.com/pruna-ai/pruna.git
-cd pruna
-pip install -e .
-```
+    ```bash
+    git clone https://github.com/pruna-ai/pruna.git
+    cd pruna
+    pip install -e .
+    ```
 
 ## Quick Start
 
-Optimize your models with just a few lines of code.
+Optimize your models effortlessly with Pruna:
 
 ```python
 from diffusers import StableDiffusionPipeline
+base_model = StableDiffusionPipeline.from_pretrained("stable-diffusion-v1-5/stable-diffusion-v1-5")
 from pruna import smash, SmashConfig
 
-# Load a pre-trained model
-base_model = StableDiffusionPipeline.from_pretrained("stable-diffusion-v1-5/stable-diffusion-v1-5")
-
-# Configure and smash your model
+# Configure your optimization
 smash_config = SmashConfig()
 smash_config["cacher"] = "deepcache"
 smash_config["compiler"] = "stable_fast"
+
+# Apply Pruna's magic
 smashed_model = smash(model=base_model, smash_config=smash_config)
 
 # Use the optimized model
 smashed_model("An image of a cute prune.").images[0]
-```
 
-Measure your model's performance using the evaluation interface:
-
-```python
+# Evaluate model performance
 from pruna.evaluation.task import Task
 from pruna.evaluation.evaluation_agent import EvaluationAgent
 from pruna.data.pruna_datamodule import PrunaDataModule
@@ -101,30 +101,33 @@ eval_agent = EvaluationAgent(task)
 eval_agent.evaluate(smashed_model)
 ```
 
-For comprehensive examples and algorithm details, explore our [documentation][documentation].
+Refer to the [documentation][documentation] for detailed algorithm explanations and tutorials.
 
-## Pruna Pro: Enterprise-Level Optimization
+## Pruna Pro
 
-Pruna Pro provides enhanced features. Here are performance improvements for common diffusion pipelines:
+Pruna Pro offers advanced optimization capabilities. Here are some benchmarks:
 
 ### Stable Diffusion XL
-*   **Optimization:** Auto Caching + DeepCache + torch.compile + HQQ 8-bit quantization
-*   **Results:** 9% latency reduction, model size reduced from 8.8GB to 6.7GB.
-*   [SDXL Benchmark](<./docs/assets/plots/benchmark_sdxl.svg>)
+
+Combining Auto Caching with DeepCache and torch.compile to reduce inference latency by 9% and using HQQ 8-bit quantization to reduce model size from 8.8GB to 6.7GB.
+
+<img src="./docs/assets/plots/benchmark_sdxl.svg" alt="SDXL Benchmark"/>
 
 ### FLUX [dev]
-*   **Optimization:** Auto Caching + TeaCache + Stable Fast + HQQ 8-bit quantization
-*   **Results:** 13% latency reduction, model size reduced from 33GB to 23GB.
-*   [FLUX Benchmark](<./docs/assets/plots/benchmark_flux.svg>)
+
+Using Auto Caching with TeaCache and Stable Fast to reduce the latency by an additional 13% and using HQQ 8-bit reduced the size of FLUX from 33GB to 23GB.
+
+<img src="./docs/assets/plots/benchmark_flux.svg" alt="FLUX [dev] Benchmark"/>
 
 ### HunyuanVideo
-*   **Optimization:** Auto Caching + TeaCache + HQQ 8-bit quantization
-*   **Results:** Model size reduced from 41GB to 29GB.
-*   [HunyuanVideo Benchmark](<./docs/assets/plots/benchmark_hunyuan.svg>)
+
+Applying HQQ 8-bit quantization to the model reduced the size from 41GB to 29GB.
+
+<img src="./docs/assets/plots/benchmark_hunyuan.svg" alt="HunyuanVideo Benchmark"/>
 
 ## Algorithm Overview
 
-Pruna offers a range of optimization algorithms. Detailed descriptions are in the [documentation](https://docs.pruna.ai/en/stable/).
+Explore Pruna's optimization methods:
 
 | Technique    | Description                                                                                   | Speed | Memory | Quality |
 |--------------|-----------------------------------------------------------------------------------------------|:-----:|:------:|:-------:|
@@ -143,21 +146,25 @@ Pruna offers a range of optimization algorithms. Detailed descriptions are in th
 ✅ (improves), ➖ (approx. the same), ❌ (worsens)
 
 <br><br>
-<p align="center"><img src="./docs/assets/images/single_line.png" alt="Pruna AI Logo" width=600, height=30></img></p>
+
+<p align="center"><img src="./docs/assets/images/single_line.png" alt="Pruna AI Logo" width=600, height=30>
+</p>
+
+<br>
 
 ## FAQ and Troubleshooting
 
-If you have questions, consult our [documentation][documentation], [FAQs][docs-faq], and existing issues. For further assistance, join our [Discord][discord], attend our [Office Hours][docs-office-hours], or open a GitHub issue.
+Find answers in the [documentation][documentation], [FAQs][docs-faq], or by opening an issue on GitHub or on [Discord][discord].
 
 ## Contributors
 
-Pruna is developed by the Pruna AI team and contributors.  Join us! [Contribute to the repository][docs-contributing].
+Pruna is developed by the Pruna AI team and community contributors. [Contribute to the repository][docs-contributing]!
 
 [![Contributors](https://contrib.rocks/image?repo=PrunaAI/pruna)](https://github.com/PrunaAI/pruna/graphs/contributors)
 
 ## Citation
 
-If you use Pruna in your research, please cite:
+If you use Pruna in your research, cite the project:
 
 ```
 @misc{pruna,
@@ -167,6 +174,12 @@ If you use Pruna in your research, please cite:
     url={https://www.pruna.ai/}
 }
 ```
+
+<br>
+
+<p align="center"><img src="./docs/assets/images/triple_line.png" alt="Pruna AI Logo" width=600, height=30>
+</p>
+
 [discord]: https://discord.gg/JFQmtFKCjd
 [reddit]: https://www.reddit.com/r/PrunaAI/
 [x]: https://x.com/PrunaAI

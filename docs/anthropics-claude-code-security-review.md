@@ -1,19 +1,19 @@
-# Enhance Your Code Security with AI-Powered Reviews
+# Enhance Your Code Security with AI-Powered Reviews using Claude Code
 
-**Proactively identify and address security vulnerabilities in your code with the Anthropic Claude Code Security Review GitHub Action.**  [Learn more at the original repo](https://github.com/anthropics/claude-code-security-review).
+**Automatically detect security vulnerabilities in your code with the power of Anthropic's Claude, integrating seamlessly into your GitHub workflow.** [Explore the original repo](https://github.com/anthropics/claude-code-security-review).
 
 ## Key Features
 
-*   **AI-Powered Analysis:** Leverages Anthropic's Claude Code for deep semantic understanding and vulnerability detection.
-*   **Diff-Aware Scanning:** Analyzes only changed files within pull requests for efficient reviews.
-*   **Automated PR Comments:**  Provides direct feedback on pull requests, highlighting security findings.
-*   **Contextual Understanding:** Goes beyond pattern matching to understand the code's purpose and potential risks.
-*   **Language Agnostic:** Works with code written in any programming language.
-*   **Reduced Noise:** Advanced false positive filtering minimizes distractions, focusing on critical vulnerabilities.
+*   🛡️ **AI-Powered Analysis:** Leverages Claude's advanced reasoning for deep semantic understanding of your code.
+*   🔍 **Diff-Aware Scanning:** Focuses on the changed files within pull requests for efficient analysis.
+*   💬 **PR Comments:** Automatically posts security findings directly as comments within your pull requests.
+*   🧠 **Contextual Understanding:** Goes beyond basic pattern matching to grasp the underlying semantics of your code.
+*   🌐 **Language Agnostic:** Works with a wide range of programming languages.
+*   🚫 **False Positive Filtering:** Advanced filtering to reduce noise and highlight the most critical vulnerabilities.
 
-## Getting Started
+## Quick Start - Integrating with GitHub Actions
 
-Integrate the Claude Code Security Review into your workflow by adding the following snippet to your repository's `.github/workflows/security.yml`:
+To integrate the Claude Code Security Reviewer into your repository, add the following snippet to your `.github/workflows/security.yml` file:
 
 ```yaml
 name: Security Review
@@ -40,96 +40,95 @@ jobs:
           claude-api-key: ${{ secrets.CLAUDE_API_KEY }}
 ```
 
-## Configuration Options
+### Configuration Options
 
-### Action Inputs
+You can customize the behavior of the action using the following inputs:
 
-| Input                       | Description                                                                                                                            | Default                         | Required |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | -------- |
-| `claude-api-key`            | Your Anthropic Claude API key.  *Note:* The key must be enabled for both the Claude API and Claude Code usage.                                    | None                            | Yes      |
-| `comment-pr`                | Whether to comment on PRs with findings.                                                                                              | `true`                          | No       |
-| `upload-results`            | Whether to upload results as artifacts.                                                                                                 | `true`                          | No       |
-| `exclude-directories`       | Comma-separated list of directories to exclude from scanning.                                                                           | None                            | No       |
-| `claude-model`              | Claude [model name](https://docs.anthropic.com/en/docs/about-claude/models/overview#model-names) to use. Defaults to Opus 4.1.                      | `claude-opus-4-1-20250805` | No       |
-| `claudecode-timeout`        | Timeout for ClaudeCode analysis in minutes.                                                                                             | `20`                            | No       |
-| `run-every-commit`          | Run ClaudeCode on every commit (skips cache check). *Warning:* May increase false positives on PRs with many commits.                        | `false`                         | No       |
-| `false-positive-filtering-instructions` | Path to custom false positive filtering instructions text file.                                                           | None                            | No       |
-| `custom-security-scan-instructions`      | Path to custom security scan instructions text file to append to audit prompt.                                           | None                            | No       |
+*   `claude-api-key`: (Required) Your Anthropic Claude API key, enabled for both the Claude API and Claude Code usage.
+*   `comment-pr`: (Optional, default: `true`) Whether to comment on PRs with findings.
+*   `upload-results`: (Optional, default: `true`) Whether to upload results as artifacts.
+*   `exclude-directories`: (Optional) Comma-separated list of directories to exclude from scanning.
+*   `claude-model`: (Optional, default: `claude-opus-4-1-20250805`) Claude model name to use.
+*   `claudecode-timeout`: (Optional, default: `20`) Timeout for ClaudeCode analysis in minutes.
+*   `run-every-commit`: (Optional, default: `false`) Run ClaudeCode on every commit.
+*   `false-positive-filtering-instructions`: (Optional) Path to custom false positive filtering instructions text file.
+*   `custom-security-scan-instructions`: (Optional) Path to custom security scan instructions text file to append to audit prompt.
 
 ### Action Outputs
 
-| Output           | Description                                        |
-| ---------------- | -------------------------------------------------- |
-| `findings-count` | Total number of security findings.                 |
-| `results-file`   | Path to the results JSON file.                    |
+*   `findings-count`: The total number of security findings.
+*   `results-file`: The path to the results JSON file.
 
 ## How It Works
 
-1.  **Pull Request Analysis:** Analyzes the changes in the pull request.
-2.  **Contextual Review:** Claude Code examines the code changes in context.
-3.  **Finding Generation:** Identifies security issues with explanations, severity ratings, and remediation guidance.
-4.  **False Positive Filtering:** Advanced filtering removes low-impact or false positive prone findings.
+1.  **PR Analysis:** When a pull request is opened, Claude analyzes the diff to understand the code changes.
+2.  **Contextual Review:** Claude examines the changes in context, considering their purpose and potential security implications.
+3.  **Finding Generation:** Security issues are identified with detailed explanations, severity ratings, and remediation guidance.
+4.  **False Positive Filtering:** Advanced filtering removes low-impact and false positive prone findings.
 5.  **PR Comments:** Findings are posted as review comments on the specific lines of code.
 
 ## Security Analysis Capabilities
 
-### Types of Vulnerabilities Detected
+### Vulnerabilities Detected
 
-*   Injection Attacks (SQL, Command, LDAP, XPath, NoSQL, XXE)
-*   Authentication & Authorization (Broken authentication, privilege escalation, insecure direct object references, bypass logic, session flaws)
-*   Data Exposure (Hardcoded secrets, sensitive data logging, information disclosure, PII handling violations)
-*   Cryptographic Issues (Weak algorithms, improper key management, insecure random number generation)
-*   Input Validation (Missing validation, improper sanitization, buffer overflows)
-*   Business Logic Flaws (Race conditions, TOCTOU)
-*   Configuration Security (Insecure defaults, missing security headers, permissive CORS)
-*   Supply Chain (Vulnerable dependencies, typosquatting risks)
-*   Code Execution (RCE via deserialization, pickle injection, eval injection)
+The Claude Code Security Reviewer can identify a broad range of security vulnerabilities, including:
+
+*   Injection Attacks (SQLi, Command Injection, etc.)
+*   Authentication & Authorization Flaws
+*   Data Exposure and PII Handling Issues
+*   Cryptographic Vulnerabilities
+*   Input Validation Errors
+*   Business Logic Flaws
+*   Configuration Security Issues
+*   Supply Chain Risks
+*   Code Execution Risks (RCE, etc.)
 *   Cross-Site Scripting (XSS)
 
-### False Positive Filtering
+### False Positive Filtering Details
 
-The tool automatically excludes a variety of low-impact and false positive prone findings, including:
-- Denial of Service vulnerabilities
-- Rate limiting concerns
-- Memory/CPU exhaustion issues
-- Generic input validation without proven impact
-- Open redirect vulnerabilities
+The tool automatically filters a variety of low-impact and false positive prone findings to focus on high-impact vulnerabilities:
+* Denial of Service vulnerabilities
+* Rate limiting concerns
+* Memory/CPU exhaustion issues
+* Generic input validation without proven impact
+* Open redirect vulnerabilities
 
-Customize filtering as needed for your security needs.
+The false positive filtering can also be tuned as needed for a given project's security goals.
 
 ### Benefits Over Traditional SAST
 
-*   **Contextual Understanding:** Understands code semantics and intent.
-*   **Lower False Positives:** AI-powered analysis reduces noise.
-*   **Detailed Explanations:** Provides clear explanations of vulnerabilities and solutions.
-*   **Adaptive Learning:** Customizable to meet your organization's specific security requirements.
+*   **Contextual Understanding:** Understands code semantics and intent, not just patterns
+*   **Lower False Positives:** AI-powered analysis reduces noise by understanding when code is actually vulnerable
+*   **Detailed Explanations:** Provides clear explanations of why something is a vulnerability and how to fix it
+*   **Adaptive Learning:** Can be customized with organization-specific security requirements
 
 ## Claude Code Integration: `/security-review` Command
 
-Use the `/security-review` command directly within Claude Code for instant security analysis of your code.
+Use the `/security-review` [slash command](https://docs.anthropic.com/en/docs/claude-code/slash-commands) in your Claude Code development environment for a comprehensive security review of your pending changes.
 
 ### Customizing the Command
 
-Customize the security review by editing the `security-review.md` file in your project's `.claude/commands/` folder.
+Customize the `/security-review` command by copying and editing the [`security-review.md`](https://github.com/anthropics/claude-code-security-review/blob/main/.claude/commands/security-review.md?plain=1) file in your project's `.claude/commands/` folder.
 
 ## Custom Scanning Configuration
 
-Customize scanning and false positive filtering instructions by following the documentation in the [`docs/`](docs/) folder.
+Configure custom scanning and false positive filtering instructions; see the [`docs/`](docs/) folder for details.
 
 ## Testing
 
-Run the test suite:
+Run the test suite using:
 
 ```bash
 cd claude-code-security-review
+# Run all tests
 pytest claudecode -v
 ```
 
 ## Support
 
-*   Open an issue in this repository.
-*   Check the [GitHub Actions logs](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/viewing-workflow-run-history) for debugging.
+*   Open an issue in this repository
+*   Check the [GitHub Actions logs](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/viewing-workflow-run-history)
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

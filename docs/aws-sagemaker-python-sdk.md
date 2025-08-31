@@ -1,55 +1,37 @@
 <div align="center">
-  <a href="https://github.com/aws/sagemaker-python-sdk">
-    <img src="https://github.com/aws/sagemaker-python-sdk/raw/master/branding/icon/sagemaker-banner.png" alt="SageMaker" width="300">
-  </a>
-  <h1>SageMaker Python SDK: Train, Deploy, and Manage Machine Learning Models</h1>
-  <p><em>Simplify your machine learning workflow with the official SageMaker Python SDK.</em></p>
-  <p>
-    <a href="https://pypi.org/project/sagemaker">
-      <img src="https://img.shields.io/pypi/v/sagemaker.svg" alt="Latest Version">
-    </a>
-    <a href="https://anaconda.org/conda-forge/sagemaker-python-sdk">
-      <img src="https://img.shields.io/conda/vn/conda-forge/sagemaker-python-sdk.svg" alt="Conda-Forge Version">
-    </a>
-    <a href="https://pypi.python.org/pypi/sagemaker">
-      <img src="https://img.shields.io/pypi/pyversions/sagemaker.svg" alt="Supported Python Versions">
-    </a>
-    <a href="https://github.com/python/black">
-      <img src="https://img.shields.io/badge/code_style-black-000000.svg" alt="Code style: black">
-    </a>
-    <a href="https://sagemaker.readthedocs.io/en/stable/">
-      <img src="https://readthedocs.org/projects/sagemaker/badge/?version=stable" alt="Documentation Status">
-    </a>
-    <a href="https://github.com/aws/sagemaker-python-sdk/actions/workflows/codebuild-ci-health.yml">
-      <img src="https://github.com/aws/sagemaker-python-sdk/actions/workflows/codebuild-ci-health.yml/badge.svg" alt="CI Health">
-    </a>
-  </p>
+  <img src="https://github.com/aws/sagemaker-python-sdk/raw/master/branding/icon/sagemaker-banner.png" alt="SageMaker" height="100">
 </div>
 
-## Overview
+# SageMaker Python SDK: Train and Deploy Machine Learning Models
 
-The SageMaker Python SDK is an open-source library that simplifies building, training, and deploying machine learning models on Amazon SageMaker. This SDK provides a user-friendly interface to leverage the power of SageMaker for your machine learning projects, including supporting the training and deployment of models using popular frameworks and algorithms.
+**Easily train and deploy your machine learning models on Amazon SageMaker with the flexible and powerful SageMaker Python SDK.**  [Explore the original repository](https://github.com/aws/sagemaker-python-sdk)
 
-**Key Features:**
+## Key Features
 
-*   **Framework Support:** Train and deploy models using popular deep learning frameworks like Apache MXNet and TensorFlow.
-*   **Built-in Algorithms:** Utilize Amazon's scalable, pre-built machine learning algorithms optimized for SageMaker and GPU training.
-*   **Custom Algorithm Support:** Easily train and host models with your own algorithms packaged in SageMaker-compatible Docker containers.
-*   **SparkML Integration:** Deploy and predict with SparkML models using MLeap for seamless integration.
-*   **Comprehensive Functionality:** Includes features for automatic model tuning, batch transform, model monitoring, and more.
-*   **Simplified Workflow:** Streamline your machine learning lifecycle from development to deployment with Pythonic interfaces.
+*   **Framework Support:** Train models using popular deep learning frameworks like Apache MXNet and TensorFlow.
+*   **Built-in Algorithms:** Leverage scalable Amazon algorithms optimized for SageMaker and GPU training.
+*   **Custom Algorithms:**  Train and deploy models using your own algorithms built into SageMaker compatible Docker containers.
+*   **Model Deployment:** Simplify model deployment with easy-to-use APIs.
+*   **SparkML Serving:** Deploy and perform predictions against SparkML models serialized with the MLeap library.
+*   **Comprehensive Documentation:** Detailed documentation and API reference available at [Read the Docs](https://sagemaker.readthedocs.io/en/stable/).
+*   **Integration with Common Tools:**  Works seamlessly with tools like Apache Airflow and supports model monitoring and debugging.
+*   **Automatic Model Tuning:** Optimize your model performance with SageMaker's automatic model tuning capabilities.
 
-## Getting Started
+## Core Functionality
 
-### Installing the SageMaker Python SDK
+The SageMaker Python SDK simplifies the process of building, training, and deploying machine learning models on Amazon SageMaker. It provides a high-level interface for interacting with SageMaker services, allowing you to:
 
-Install the latest version of the SageMaker Python SDK using `pip`:
+*   **Train Models:**  Utilize pre-built algorithms or bring your own custom training code.
+*   **Deploy Models:**  Easily deploy your trained models to production environments.
+*   **Manage Resources:**  Create, manage, and monitor SageMaker resources such as training jobs, endpoints, and models.
+
+## Installation
 
 ```bash
-pip install sagemaker==<Latest version from https://pypi.org/project/sagemaker/>
+pip install sagemaker==<Latest version from pyPI from https://pypi.org/project/sagemaker/>
 ```
 
-Or, install from source:
+or install from source:
 
 ```bash
 git clone https://github.com/aws/sagemaker-python-sdk.git
@@ -57,83 +39,41 @@ cd sagemaker-python-sdk
 pip install .
 ```
 
-### Supported Platforms and Versions
+## Supported Environments
 
-*   **Supported Operating Systems:** Unix/Linux and Mac.
-*   **Supported Python Versions:**
-    *   Python 3.9
-    *   Python 3.10
-    *   Python 3.11
-    *   Python 3.12
-
-## AWS Permissions
-
-Amazon SageMaker requires specific permissions to perform operations on your behalf within your AWS account.  Consult the [AWS Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html) for detailed information.
+*   **Operating Systems:** Unix/Linux, Mac
+*   **Python Versions:**  3.9, 3.10, 3.11, 3.12
 
 ## Telemetry
 
-The `sagemaker` library includes telemetry to help improve the SDK. To opt-out, set the `TelemetryOptOut` parameter to `true` in the SDK defaults configuration.  See the [SageMaker Python SDK documentation](https://sagemaker.readthedocs.io/en/stable/overview.html#configuring-and-using-defaults-with-the-sagemaker-python-sdk) for instructions.
+The SDK collects telemetry data to improve the user experience. You can opt-out by setting the `TelemetryOptOut` parameter to `true`.  See [Configuring and using defaults with the SageMaker Python SDK](https://sagemaker.readthedocs.io/en/stable/overview.html#configuring-and-using-defaults-with-the-sagemaker-python-sdk) for instructions.
 
-## SparkML Serving
+## AWS Permissions
 
-You can use the SageMaker Python SDK to perform predictions against a SparkML Model hosted in SageMaker. Serialize your SparkML model with the MLeap library.
+Ensure your IAM role has the necessary permissions as documented in the [AWS Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html). Consider granting permission for `iam:GetRole` if you're using an IAM role with a path.
 
-Example:
+## Licensing
 
-```python
-sparkml_model = SparkMLModel(model_data='s3://path/to/model.tar.gz', env={'SAGEMAKER_SPARKML_SCHEMA': schema})
-model_name = 'sparkml-model'
-endpoint_name = 'sparkml-endpoint'
-predictor = sparkml_model.deploy(initial_instance_count=1, instance_type='ml.c4.xlarge', endpoint_name=endpoint_name)
-```
+The SageMaker Python SDK is licensed under the Apache 2.0 License.  See [http://aws.amazon.com/apache2.0/](http://aws.amazon.com/apache2.0/) for details.
 
 ## Testing
 
-To run the tests, install testing dependencies:
+*   **Unit Tests:** Run unit tests with tox:  `tox tests/unit`
+*   **Integration Tests:**  Run integration tests:  `tox -- tests/integ` (or use filtering options)
 
-```bash
-pip install --upgrade .[test]
+## Documentation
+
+Complete documentation, including API references and usage examples, is available on [Read the Docs](https://sagemaker.readthedocs.io/en/stable/).
+
+## Example: Deploying a SparkML Model
+
+Deploy a SparkML model serialized with MLeap:
+
+```python
+sparkml_model = SparkMLModel(model_data='s3://path/to/model.tar.gz', env={'SAGEMAKER_SPARKML_SCHEMA': schema})
+predictor = sparkml_model.deploy(initial_instance_count=1, instance_type='ml.c4.xlarge', endpoint_name='sparkml-endpoint')
+payload = 'field_1,field_2,field_3,field_4,field_5'
+predictor.predict(payload)
 ```
 
-or, if you're using Zsh:
-```bash
-pip install --upgrade .\[test\]
-```
-
-### Unit Tests
-
-Run unit tests with `tox`:
-
-```bash
-tox tests/unit
-```
-
-### Integration Tests
-
-To run integration tests, configure AWS credentials and an IAM role named `SageMakerRole`.
-
-Run all integration tests:
-
-```bash
-tox -- tests/integ
-```
-
-Or, run integration tests in parallel:
-
-```bash
-tox -- -n auto tests/integ
-```
-
-## Building Documentation
-
-Build the Sphinx documentation:
-
-1.  Install dependencies, see the `doc/requirements.txt` file for details.
-2.  Navigate to the `doc` directory and run `make html`.
-3.  View the docs in `doc/_build/html`.
-
-## License
-
-This SDK is licensed under the Apache 2.0 License.  See the full license at [http://aws.amazon.com/apache2.0/](http://aws.amazon.com/apache2.0/)
-
-**[View the SageMaker Python SDK Repository on GitHub](https://github.com/aws/sagemaker-python-sdk)**
+For more detailed information, please see [SageMaker SparkML Serving Container](https://github.com/aws/sagemaker-sparkml-serving-container).
