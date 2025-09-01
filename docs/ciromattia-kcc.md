@@ -1,55 +1,51 @@
 <img src="header.jpg" alt="Header Image" width="400">
 
-# Kindle Comic Converter (KCC): The Ultimate Comic and Manga Optimization Tool for E-readers
+# Kindle Comic Converter (KCC): Optimize Comics & Manga for E-readers
 
-**Tired of poorly formatted comics on your e-reader?** Kindle Comic Converter (KCC) is your solution! Optimize your favorite comics and manga for a seamless reading experience on e-ink devices like Kindle, Kobo, ReMarkable, and more. [Visit the KCC GitHub Repository](https://github.com/ciromattia/kcc) to download and start converting today!
+**Transform your comic and manga collection for optimal reading on e-ink devices with Kindle Comic Converter (KCC)** - a powerful and user-friendly tool that ensures your favorite stories look their best on Kindle, Kobo, ReMarkable, and other e-readers. Visit the [KCC GitHub Repository](https://github.com/ciromattia/kcc) for the latest releases and updates.
 
 ## Key Features:
 
-*   **Wide Format Support:** Convert from JPG/PNG/GIF images, archives (ZIP, CBR, etc.), and PDFs.
-*   **Multiple Output Formats:** Generate optimized files in MOBI/AZW3, EPUB, KEPUB, CBZ, and PDF formats.
-*   **E-ink Screen Optimization:** Tailored image processing for optimal viewing on e-ink screens, enhancing contrast and readability.
-*   **Device-Specific Profiles:** Choose profiles for your e-reader (Kindle, Kobo, reMarkable, etc.) for perfect resolution and formatting.
-*   **Full-Screen Display:** Enjoy comics without unnecessary margins, maximizing the reading area.
-*   **Manga Support:** Correct right-to-left reading order and page splitting.
-*   **reMarkable PDF Conversion:** Direct PDF output optimized for reMarkable devices.
-*   **File Size Reduction:** Reduce file sizes significantly without sacrificing quality, improving storage and performance.
-*   **GUI and CLI:** User-friendly GUI for easy drag-and-drop conversion, and a CLI for advanced users.
+*   **Broad Format Support:** Converts JPG, PNG, GIF, WebP images, archives (CBZ, CBR, CB7, 7Z, ZIP, RAR), and PDFs into optimized formats.
+*   **E-reader Compatibility:** Generates output for MOBI/AZW3, EPUB, KEPUB, CBZ, and PDF formats, catering to a wide range of devices.
+*   **reMarkable PDF Optimization:**  Automatically defaults to PDF output when using a reMarkable profile, for best compatibility.
+*   **Image Processing:** Includes advanced image processing options to enhance contrast, reduce file size, and optimize for e-ink screens.
+*   **Full-Screen Display:**  Ensures pages display in fullscreen without margins, maximizing the reading experience.
+*   **Manga Support:**  Handles right-to-left reading and page splitting for manga.
+*   **User-Friendly Interface:**  Features an intuitive drag-and-drop interface for easy file conversion.
 
-## What KCC Does:
+## Why Use KCC?
 
-KCC addresses common issues found in e-reader comic formats:
+KCC goes beyond simple format conversion. It addresses common formatting issues found even in official Kindle Store comics, such as:
 
-*   **Optimizes Contrast:** Enhances black levels for better visibility and reduced eye strain.
-*   **Removes Margins:** Maximizes the screen real estate by removing unnecessary white space.
-*   **Supports Full Resolution:** Utilizes the full potential of your device's screen resolution.
-*   **Corrects Page Order:** Ensures proper page turns for manga and right-to-left reading.
-*   **Aligns Spreads:** Corrects the alignment of two-page spreads in landscape mode.
+*   Faded black levels, reducing contrast.
+*   Unnecessary margins.
+*   Incorrect page turn direction for manga.
+*   Misaligned two-page spreads.
 
-## Getting Started:
-
-1.  **Download:**  Grab the latest release from the [KCC Releases Page](https://github.com/ciromattia/kcc/releases).
-2.  **Choose Your Device Profile:** Select your e-reader model for optimized settings.
-3.  **Drag and Drop:** Add your comic files or folders.
-4.  **Adjust Settings:** Fine-tune the conversion options (tooltips provide detailed explanations).
-5.  **Convert:** Click "Convert" to generate the optimized output.
-6.  **Transfer:** Drag and drop the output files to your device via USB.
-
-##  Resources & Support
-
-*   **Frequently Asked Questions (FAQ):** Get answers to common questions in the [FAQ section of the original README](https://github.com/ciromattia/kcc#faq).
-*   **Installation & Usage:** Find detailed instructions on the [KCC Wiki](https://github.com/ciromattia/kcc/wiki/).
-*   **Report Issues:**  Submit bug reports or feature requests [here](https://github.com/ciromattia/kcc/issues/new).
-*   **Community:**  Discuss usage, provide feedback, and get help on the [MobileRead Forums](http://www.mobileread.com/forums/showthread.php?t=207461).
-
-## Contribute & Support:
-
-*   **Contribute:** Help improve KCC by forking the repository and submitting pull requests.
-*   **Donate:**  Support the developers via PayPal and Bitcoin (links in the original README).
+This results in a superior reading experience, improved battery life, faster page turns, and reduced storage requirements, especially on devices with limited resources.
 
 ## Downloads
-*   **Latest Releases:**  https://github.com/ciromattia/kcc/releases
 
-## Related Projects
-*   **Amazon USB File Transfer app:** https://www.amazon.com/gp/help/customer/display.html/ref=hp_Connect_USB_MTP?nodeId=TCUBEdEkbIhK07ysFu
-*   **Kindle Previewer:** https://www.amazon.com/Kindle-Previewer/b?ie=UTF8&node=21381691011
+Access the latest releases, including Windows, macOS, and command-line versions, via the [KCC Releases Page](https://github.com/ciromattia/kcc/releases).
+
+##  Frequently Asked Questions (FAQ)
+
+*   **What Output Format Should I Use?** MOBI is recommended for Kindles. CBZ works well for Kindle DX and Koreader, while KEPUB is best for Kobo.
+*   **How to Get the Converted Book onto My Kindle/Kobo?** Drag and drop the generated MOBI/KEPUB files into the documents folder on your device via USB.
+*   **MacOS Users?** For 2022+ Kindles, you may need to use the Amazon USB File Manager for Mac, or download the official MTP [Amazon USB File Transfer app](https://www.amazon.com/gp/help/customer/display.html/ref=hp_Connect_USB_MTP?nodeId=TCUBEdEkbIhK07ysFu).
+
+## Contribute and Get Help
+
+*   **Report Issues:**  File technical problems [here](https://github.com/ciromattia/kcc/issues/new).
+*   **General Discussions:**  Ask questions, share feedback, and discuss usage on the [MobileRead Forums](http://www.mobileread.com/forums/showthread.php?t=207461).
+*   **Contribute:** Fork the repository and submit pull requests to improve KCC.
+
+## Donate
+
+Support the development of KCC by donating to the authors:
+
+*   Ciro Mattia Gonano (PayPal):  [![Donate PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D8WNYNPBGDAS2)
+*   Paweł Jastrzębski (PayPal): [![Donate PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YTTJ4LK2JDHPS)
+    (Bitcoin): [![Donate Bitcoin](https://img.shields.io/badge/Donate-Bitcoin-green.svg)](https://jastrzeb.ski/donate/)
+*   Alex Xu (Ko-fi): [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q41BW8HS)

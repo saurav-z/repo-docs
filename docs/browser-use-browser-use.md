@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./static/browser-use-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./static/browser-use.png">
-  <img alt="Shows a black Browser Use Logo in light color mode and a white one in dark color mode." src="./static/browser-use.png"  width="full">
+  <img alt="Browser Use Logo" src="./static/browser-use.png"  width="full">
 </picture>
 
 <h1 align="center">Browser Use: Automate Your Browser with AI 🤖</h1>
@@ -14,16 +14,18 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
 [![Weave Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fapp.workweave.ai%2Fapi%2Frepository%2Fbadge%2Forg_T5Pvn3UBswTHIsN1dWS3voPg%2F881458615&labelColor=#EC6341)](https://app.workweave.ai/reports/repository/org_T5Pvn3UBswTHIsN1dWS3voPg/881458615)
 
-**Browser Use empowers you to control your web browser with AI, automating tasks and streamlining your workflow.**
+**Browser Use empowers you to control your web browser using natural language, allowing for unprecedented automation and efficiency.**
 
 ## Key Features
 
-*   **AI-Powered Automation:** Control your browser using natural language prompts.
-*   **Cloud Integration:** Utilize the [cloud](https://cloud.browser-use.com) for faster and stealth-enabled automation.
-*   **Python Library:** Easily integrate browser automation into your Python projects.
-*   **Model Context Protocol (MCP) Support:** Integrate with Claude Desktop and other MCP-compatible clients.
-*   **Robust Agent Tasks:** Automated testing to ensure your agents are reliable.
-*   **Extensive Documentation:** Comprehensive documentation for easy setup and customization.
+*   **AI-Powered Automation:** Control your browser using simple, natural language prompts.
+*   **Cloud Integration:** Utilize the [Browser Use Cloud](https://cloud.browser-use.com) for fast, scalable, and stealth-enabled browser automation, skipping the setup.
+*   **Model Context Protocol (MCP) Support:** Integrate with Claude Desktop and other MCP-compatible clients for enhanced capabilities.
+*   **Extensive Examples:** Explore a variety of [demos](#demos) and use cases to get started.
+*   **Robust Testing:** Ensure your agents' reliability with automated CI task validation.
+*   **Community & Support:** Join the [Discord](https://link.browser-use.com/discord) for help and show off your projects.
+*   **Open Source:** Contribute to the project and shape the future of browser automation.
+*   **MCP Integration:** Integrate with Claude Desktop and other MCP-compatible clients.
 
 ## Quick Start
 
@@ -33,13 +35,13 @@ Install Browser Use using pip:
 pip install browser-use
 ```
 
-If you don't already have Chrome or Chromium installed, install Chromium with playwright's install shortcut:
+**(Optional) Install Chromium using Playwright:**
 
 ```bash
 uvx playwright install chromium --with-deps --no-shell
 ```
 
-Here's a simple example to get you started:
+**Spin up your agent:**
 
 ```python
 import asyncio
@@ -57,34 +59,38 @@ async def main():
 asyncio.run(main())
 ```
 
-Remember to add your API keys for the desired provider to your `.env` file.  For detailed instructions and customization options, refer to the [documentation 📕](https://docs.browser-use.com).
+**Add your API keys to your .env file:**
+
+```bash
+OPENAI_API_KEY=
+```
+
+For detailed setup and configuration, explore the [documentation](https://docs.browser-use.com).
 
 ## Demos
 
-Explore practical use cases and examples of Browser Use in action:
+Explore these example use cases to see Browser Use in action:
 
-*   **Automated Grocery Shopping:** Add grocery items to your cart and check out.
+*   **Shopping Automation:** Automate grocery shopping (see video)
     [![AI Did My Groceries](https://github.com/user-attachments/assets/a0ffd23d-9a11-4368-8893-b092703abc14)](https://www.youtube.com/watch?v=L2Ya9PYNns8)
-*   **LinkedIn to Salesforce Integration:** Add your latest LinkedIn follower to your leads in Salesforce.
+*   **LinkedIn to Salesforce Integration:** Automatically add leads.
     ![LinkedIn to Salesforce](https://github.com/user-attachments/assets/50d6e691-b66b-4077-a46c-49e9d4707e07)
-*   **Automated Job Application:** Find and apply for ML jobs.
+*   **Job Application Automation:** Find and apply for jobs based on your CV.
     https://github.com/user-attachments/assets/171fb4d6-0355-46f2-863e-edb04a828d04
-*   **Document Creation:** Write a letter in Google Docs and save it as a PDF.
+*   **Document Creation:** Generate documents in Google Docs.
     ![Letter to Papa](https://github.com/user-attachments/assets/242ade3e-15bc-41c2-988f-cbc5415a66aa)
-*   **Data Extraction:** Look up models on Hugging Face and save the top 5 to a file.
+*   **File Management:** Search and download models from Hugging Face.
     https://github.com/user-attachments/assets/de73ee39-432c-4b97-b4e8-939fd7f323b3
 
-## More Examples
+For even more examples, explore the [examples](examples) folder and the [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repository.
 
-Discover more examples and inspiration in the [examples](examples) folder and our [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repository, or join the [Discord](https://link.browser-use.com/discord) to showcase your projects.
+## MCP Integration
 
-## Model Context Protocol (MCP) Integration
-
-Browser Use seamlessly integrates with the Model Context Protocol (MCP), enhancing compatibility with tools like Claude Desktop.
+Browser Use supports the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), extending its capabilities:
 
 ### Use as MCP Server with Claude Desktop
 
-Configure Claude Desktop to use Browser Use as an MCP server:
+Integrate with Claude Desktop by configuring it to use Browser Use:
 
 ```json
 {
@@ -102,7 +108,7 @@ Configure Claude Desktop to use Browser Use as an MCP server:
 
 ### Connect External MCP Servers to Browser-Use Agent
 
-Extend the capabilities of your Browser Use agents by connecting to multiple external MCP servers:
+Extend Browser Use agents with external MCP servers:
 
 ```python
 import asyncio
@@ -151,55 +157,63 @@ async def main():
 asyncio.run(main())
 ```
 
-Refer to the [MCP documentation](https://docs.browser-use.com/customize/mcp-server) for advanced usage.
+Refer to the [MCP documentation](https://docs.browser-use.com/customize/mcp-server) for further details.
 
 ## Vision
 
-We envision a future where you can effortlessly control your computer with natural language.
+Our vision is to empower users to control their computers through natural language.
 
 ## Roadmap
 
-We're constantly improving Browser Use.  Here's what we're working on:
+We are continuously improving Browser Use. Here's a glimpse of our ongoing development:
 
-*   **Agent:**
-    *   Make the agent 3x faster.
-    *   Reduce token consumption (system prompt, DOM state).
-*   **DOM Extraction:**
-    *   Enable interaction with all UI elements.
-    *   Improve state representation for UI elements.
-*   **Workflows:**
-    *   Let users record workflows for later re-execution.
-*   **User Experience:**
-    *   Create templates for common use cases (tutorials, job applications, etc.).
-*   **Parallelization:**
-    *   Enable parallel execution of similar tasks.
+### Agent
+*   [ ] Make agent 3x faster
+*   [ ] Reduce token consumption (system prompt, DOM state)
+
+### DOM Extraction
+
+*   [ ] Enable interaction with all UI elements
+*   [ ] Improve state representation for UI elements so that any LLM can understand what's on the page
+
+### Workflows
+
+*   [ ] Let user record a workflow - which we can rerun with browser-use as a fallback
+
+### User Experience
+
+*   [ ] Create various templates for tutorial execution, job application, QA testing, social media, etc. which users can just copy & paste.
+
+### Parallelization
+
+*   [ ] Human work is sequential. The real power of a browser agent comes into reality if we can parallelize similar tasks. For example, if you want to find contact information for 100 companies, this can all be done in parallel and reported back to a main agent, which processes the results and kicks off parallel subtasks again.
 
 ## Contributing
 
-We welcome contributions!  Report bugs and suggest features by opening issues.  Contribute to the docs in the `/docs` folder.
+We welcome contributions! Please feel free to open issues for bugs or feature requests.  For documentation contributions, check out the `/docs` folder.
 
-## 🧪 How to Make Your Agents Robust?
+## 🧪 Robust Agent Testing
 
-Ensure the reliability of your agents by adding your tasks to our CI:
+Ensure your agents' reliability:
 
-*   **Add a YAML file:** Place your YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for instructions).
-*   **Automatic validation:** Your task will be automatically executed and evaluated with every update.
+*   **Create Task:** Add a YAML file in `tests/agent_tasks/` (see [`README`](tests/agent_tasks/README.md) for details).
+*   **Automated Validation:** Your task will be automatically tested on every update.
 
 ## Local Setup
 
-To learn more about setting up the library for local development, check out the [local setup 📕](https://docs.browser-use.com/development/local-setup).
+Learn more about the project with the [local setup guide](https://docs.browser-use.com/development/local-setup).
 
-**Important:** `main` is the active development branch. For production, use a [versioned release](https://github.com/browser-use/browser-use/releases).
+**Important:** `main` is the development branch. For stable use, install a [versioned release](https://github.com/browser-use/browser-use/releases).
 
 ---
 
 ## Swag
 
-Show off your support with Browser Use swag! Visit our [Merch store](https://browsermerch.com). Generous contributors may receive free swag!
+Show off your Browser Use pride! Check out the [Merch store](https://browsermerch.com). Good contributors receive free swag. 👀
 
 ## Citation
 
-If you use Browser Use, please cite our work:
+If you use Browser Use in your research, please cite us:
 
 ```bibtex
 @software{browser_use2024,
@@ -221,19 +235,3 @@ If you use Browser Use, please cite our work:
 <div align="center">
 Made with ❤️ in Zurich and San Francisco
  </div>
-```
-
-Key changes and improvements:
-
-*   **SEO Optimization:**  Added a strong, keyword-rich one-sentence hook at the beginning. Used descriptive headings and subheadings.  Incorporated relevant keywords throughout (e.g., "AI," "browser automation," "Python," "MCP").
-*   **Concise and Clear:**  Streamlined explanations and removed redundant information.
-*   **Bulleted Key Features:**  Made the core functionality instantly understandable.
-*   **Call to Action:**  Encourages users to try the cloud version.
-*   **Improved Structure:**  Organized the content for readability with clear sections and consistent formatting.
-*   **Added Repository Link:**  Ensured a direct link back to the original repo is present.
-*   **Removed Unnecessary Information:** Removed "Quick Start" section and used a more appropriate Python code snippet.
-*   **Enhanced Code Snippets:**  Improved readability and added clear instructions.
-*   **Emphasis on Benefits:** Highlighted the advantages of the project.
-*   **Revised Roadmap:**  Improved the clarity and conciseness of the roadmap.
-*   **Clearer Contribution Guidelines:** Enhanced the instructions for contributing to the project.
-*   **More Informative Examples:** Focused on the core benefits of the examples to provide more value for the user.

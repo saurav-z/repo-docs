@@ -1,37 +1,32 @@
 <div align="center">
-
-<p align="center">
-  <img src="assets/logo2.jpg" alt="InfiniteTalk" width="440"/>
-</p>
-
+  <img src="assets/logo2.jpg" alt="InfiniteTalk Logo" width="440"/>
 </div>
 
-# InfiniteTalk: Generate Unlimited Talking Videos from Audio
+# InfiniteTalk: Generate Unlimited Talking Videos with Audio!
 
-**InfiniteTalk** revolutionizes video generation by enabling the creation of unlimited-length talking videos driven by audio, offering realistic lip synchronization and expressive movements. Dive into a new era of video dubbing and creation!  Check out the original repo:  [https://github.com/MeiGen-AI/InfiniteTalk](https://github.com/MeiGen-AI/InfiniteTalk)
+InfiniteTalk is a cutting-edge audio-driven video generation framework that allows you to create high-quality, talking videos from either existing videos or single images.  [Check out the original repo](https://github.com/MeiGen-AI/InfiniteTalk) for the full code and details.
 
 ## Key Features
 
-*   💬 **Sparse-Frame Video Dubbing**: Achieve highly accurate lip synchronization along with aligned head movements, body posture, and facial expressions.
-*   ⏱️ **Infinite-Length Generation**: Produce videos of unlimited duration, opening up new possibilities for content creation.
-*   ✨ **Enhanced Stability**: Experience reduced hand/body distortions compared to previous methods like MultiTalk.
-*   🚀 **Superior Lip Accuracy**: Obtain more precise lip synchronization than previous models, leading to more realistic results.
-*   🖼️ **Image-to-Video**: Transform a single image and audio track into a dynamic, talking video.
+*   💬 **Sparse-frame Video Dubbing:** Synchronizes lips, head movements, body posture, and facial expressions to match the audio.
+*   ⏱️ **Infinite-Length Generation:** Generate videos of unlimited duration.
+*   ✨ **Improved Stability:** Reduces distortions compared to other models.
+*   🚀 **Superior Lip Synchronization:** Achieves highly accurate lip-sync.
+*   🖼️ **Image-to-Video Capability:**  Transform a single image into a talking video.
 
-## Latest Updates
+##  Latest News
 
-*   **August 19, 2025**: Release of the [Technique-Report](https://arxiv.org/abs/2508.14033), model weights, and code. Gradio and ComfyUI support now available.
-*   **August 19, 2025**: Launch of the [project page](https://meigen-ai.github.io/InfiniteTalk/).
+*   **August 19, 2025:** Release of the [Technique-Report](https://arxiv.org/abs/2508.14033), weights, and code, including Gradio and ComfyUI integration.
+*   **August 19, 2025:** Project page launched: [https://meigen-ai.github.io/InfiniteTalk/](https://meigen-ai.github.io/InfiniteTalk/)
 
-## Community Contributions
+##  Community Works
 
-*   **Wan2GP**: Integration by [deepbeepmeep](https://github.com/deepbeepmeep) for low VRAM optimization and video editing features.
-*   **ComfyUI**: Support provided by [kijai](https://github.com/kijai).
+*   **Wan2GP Integration:**  [deepbeepmeep](https://github.com/deepbeepmeep) has integrated InfiniteTalk into Wan2GP for low VRAM optimization and advanced video editing options.
+*   **ComfyUI Support:** Thanks to [kijai](https://github.com/kijai) for the ComfyUI support.
 
-## Demo Videos
+## Video Demos
 
-### Video-to-video
-*(HQ videos can be found on [Google Drive](https://drive.google.com/drive/folders/1BNrH6GJZ2Wt5gBuNLmfXZ6kpqb9xFPjU?usp=sharing))*
+### Video-to-Video
 
 <table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
   <tr>
@@ -50,7 +45,7 @@
   </tr>
 </table>
 
-### Image-to-video
+### Image-to-Video
 
 <table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
   <tr>
@@ -89,31 +84,28 @@
 
 ### 🛠️ Installation
 
-1.  **Create a Conda Environment:**
+**Follow these steps to get started:**
+
+1.  **Create and activate a conda environment & Install necessary packages (PyTorch, xformers, and dependencies)**
+
     ```bash
     conda create -n multitalk python=3.10
     conda activate multitalk
     pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
     pip install -U xformers==0.0.28 --index-url https://download.pytorch.org/whl/cu121
-    ```
-
-2.  **Flash-Attention Installation:**
-    ```bash
     pip install misaki[en]
-    pip install ninja
-    pip install psutil
+    pip install ninja 
+    pip install psutil 
     pip install packaging
     pip install wheel
     pip install flash_attn==2.7.4.post1
-    ```
-
-3.  **Install Dependencies:**
-    ```bash
     pip install -r requirements.txt
     conda install -c conda-forge librosa
+    conda install -c conda-forge ffmpeg
     ```
 
-4.  **FFmpeg Installation:**
+2.  **(Optional) FFmpeg Installation (if not already installed):**
+
     ```bash
     conda install -c conda-forge ffmpeg
     ```
@@ -124,15 +116,8 @@
 
 ### 🧱 Model Preparation
 
-1.  **Download Models:**
+1.  **Download the required models using `huggingface-cli`:**
 
-    | Model                         | Download Link                                                                                                  | Notes                   |
-    | ----------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------- |
-    | Wan2.1-I2V-14B-480P           | [Hugging Face](https://huggingface.co/Wan-AI/Wan2.1-I2V-14B-480P)                                                  | Base Model              |
-    | chinese-wav2vec2-base         | [Hugging Face](https://huggingface.co/TencentGameMate/chinese-wav2vec2-base)                                    | Audio Encoder           |
-    | MeiGen-InfiniteTalk           | [Hugging Face](https://huggingface.co/MeiGen-AI/InfiniteTalk)                                                     | Audio Condition Weights |
-
-    Download models using huggingface-cli:
     ```bash
     huggingface-cli download Wan-AI/Wan2.1-I2V-14B-480P --local-dir ./weights/Wan2.1-I2V-14B-480P
     huggingface-cli download TencentGameMate/chinese-wav2vec2-base --local-dir ./weights/chinese-wav2vec2-base
@@ -142,14 +127,27 @@
 
 ### 🔑 Quick Inference
 
-#### Important Parameters for Optimal Results:
-*   **Audio CFG:**  For optimal lip synchronization, set between 3-5.
-*   **FusionX LoRA:** While providing faster inference and higher quality, can cause color shift over extended durations and reduce ID preservation.
-*   **Video-to-Video Generation:** Supports infinite-length generation. Mimics camera movement but may not be identical to the original. SDEdit improves camera movement but can introduce color shifts (best for short clips).
-*   **Image-to-Video Generation:** Generates good results from a single image for up to 1 minute. Color shifts can become more pronounced beyond this. Consider using a script to [convert image to video](https://github.com/MeiGen-AI/InfiniteTalk/blob/main/tools/convert_img_to_video.py) for extended generation.
-*   **Quantization Model:** For systems with insufficient memory, use the quantization model to reduce memory usage.
+**Key parameters for optimal results:**
+
+*   **Lip Synchronization:** Adjust `audio_cfg` between 3-5.
+*   **FusionX LoRA:** For faster and higher quality,  but be aware it may cause color shift over longer videos.
+*   **Video-to-Video (V2V):** Generates an unlimited length video. Use SDEdit for improved camera movement accuracy.
+*   **Image-to-Video (I2V):** Works well up to 1 minute.  For videos longer than 1 minute, consider using the image to video conversion tool provided.
+
+**Usage Guide**
+*   `--mode streaming`:  Generates a longer video.
+*   `--mode clip`:  Generates a short video with a single chunk.
+*   `--use_teacache`: Use TeaCache for inference speed.
+*   `--size infinitetalk-480`:  Generates a 480P video.
+*   `--size infinitetalk-720`: Generates a 720P video.
+*   `--use_apg`:  Run with APG.
+*   `--teacache_thresh`: TeaCache acceleration coefficient.
+*   `—-sample_text_guide_scale`:  Optimal value is 5.0 (without LoRA), 1.0 (with LoRA).
+*   `—-sample_audio_guide_scale`:  Optimal value is 4.0 (without LoRA), 2.0 (with LoRA).
+*   `--max_frame_num`:  The max length of the video generated (default is 40 seconds / 1000 frames)
 
 #### 1. Single GPU Inference
+
 ```bash
 python generate_infinitetalk.py \
     --ckpt_dir weights/Wan2.1-I2V-14B-480P \
@@ -162,8 +160,8 @@ python generate_infinitetalk.py \
     --motion_frame 9 \
     --save_file infinitetalk_res
 ```
+#### 2. 720P Inference
 
-#### 2. Run with 720P
 ```bash
 python generate_infinitetalk.py \
     --ckpt_dir weights/Wan2.1-I2V-14B-480P \
@@ -177,7 +175,8 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_720p
 ```
 
-#### 3. Run with very low VRAM
+#### 3. Low VRAM Inference
+
 ```bash
 python generate_infinitetalk.py \
     --ckpt_dir weights/Wan2.1-I2V-14B-480P \
@@ -193,6 +192,7 @@ python generate_infinitetalk.py \
 ```
 
 #### 4. Multi-GPU Inference
+
 ```bash
 GPU_NUM=8
 torchrun --nproc_per_node=$GPU_NUM --standalone generate_infinitetalk.py \
@@ -209,7 +209,8 @@ torchrun --nproc_per_node=$GPU_NUM --standalone generate_infinitetalk.py \
     --save_file infinitetalk_res_multigpu
 ```
 
-#### 5. Multi-Person animation
+#### 5. Multi-Person Animation
+
 ```bash
 python generate_infinitetalk.py \
     --ckpt_dir weights/Wan2.1-I2V-14B-480P \
@@ -224,7 +225,8 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_multiperson
 ```
 
-#### 6. Run with FusioniX or Lightx2v
+#### 6. Inference with FusioniX/Lightx2v LoRA
+
 ```bash
 python generate_infinitetalk.py \
     --ckpt_dir weights/Wan2.1-I2V-14B-480P \
@@ -244,7 +246,8 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_lora
 ```
 
-#### 7. Run with the quantization model
+#### 7. Quantization Model Inference
+
 ```bash
 python generate_infinitetalk.py \
     --ckpt_dir weights/Wan2.1-I2V-14B-480P \
@@ -262,13 +265,14 @@ python generate_infinitetalk.py \
 ```
 
 #### 8. Run with Gradio
+
 ```bash
 python app.py \
     --ckpt_dir weights/Wan2.1-I2V-14B-480P \
     --wav2vec_dir 'weights/chinese-wav2vec2-base' \
     --infinitetalk_dir weights/InfiniteTalk/single/infinitetalk.safetensors \
     --num_persistent_param_in_dit 0 \
-    --motion_frame 9
+    --motion_frame 9 
 ```
 or
 ```bash
@@ -277,23 +281,23 @@ python app.py \
     --wav2vec_dir 'weights/chinese-wav2vec2-base' \
     --infinitetalk_dir weights/InfiniteTalk/multi/infinitetalk.safetensors \
     --num_persistent_param_in_dit 0 \
-    --motion_frame 9
+    --motion_frame 9 
 ```
 
 ## 📚 Citation
 
 ```
 @misc{yang2025infinitetalkaudiodrivenvideogeneration,
-      title={InfiniteTalk: Audio-driven Video Generation for Sparse-Frame Video Dubbing},
+      title={InfiniteTalk: Audio-driven Video Generation for Sparse-Frame Video Dubbing}, 
       author={Shaoshu Yang and Zhe Kong and Feng Gao and Meng Cheng and Xiangyu Liu and Yong Zhang and Zhuoliang Kang and Wenhan Luo and Xunliang Cai and Ran He and Xiaoming Wei},
       year={2025},
       eprint={2508.14033},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2508.14033},
+      url={https://arxiv.org/abs/2508.14033}, 
 }
 ```
 
 ## 📜 License
 
-The models are licensed under the Apache 2.0 License.  You are responsible for your use, ensuring compliance with all applicable laws. You must not use the models in a way that violates any laws, harms individuals, or spreads harmful content.
+The models are licensed under the Apache 2.0 License. You are responsible for your usage of the models and must comply with the license terms, including not generating any content that violates applicable laws or promotes harm.

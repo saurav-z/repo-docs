@@ -1,6 +1,6 @@
-# Wrapt: The Python Decorator and Wrapping Library
+# wrapt: Powerful Python Decorators, Wrappers & Monkey Patching
 
-**Wrapt** is your go-to Python module for building robust and reliable decorators, wrappers, and monkey patching solutions, providing enhanced introspection and thread-safety.
+**Enhance your Python code with robust and versatile decorators and wrappers using the `wrapt` module.**
 
 [![PyPI](https://img.shields.io/pypi/v/wrapt.svg?logo=python&cacheSeconds=3600)](https://pypi.python.org/pypi/wrapt)
 [![Documentation](https://img.shields.io/badge/docs-wrapt.readthedocs.io-blue.svg)](https://wrapt.readthedocs.io/)
@@ -8,26 +8,24 @@
 
 ## Key Features
 
-*   **Universal Decorators:** Apply decorators to functions, methods, classmethods, staticmethods, and classes seamlessly.
-*   **Transparent Object Proxies:** Leverage advanced wrapping techniques for complex scenarios.
-*   **Safe Monkey Patching:** Modify runtime behavior with confidence using dedicated utilities.
-*   **Optimized Performance:** Benefit from a C extension for speed, with a Python fallback for portability.
-*   **Comprehensive Introspection:** Preserve signatures, annotations, and other critical metadata.
-*   **Thread-Safe Implementation:** Ensure stability in concurrent environments.
+*   **Universal Decorators:** Works seamlessly with functions, methods (including classmethods and staticmethods), and classes.
+*   **Transparent Object Proxies:** Provides advanced wrapping capabilities for sophisticated scenarios.
+*   **Safe Monkey Patching Utilities:**  Modify Python code at runtime with confidence.
+*   **Optimized Performance:**  Utilizes a C extension for speed, with a pure Python fallback.
+*   **Introspection Preservation:**  Maintains function signatures, annotations, and other critical introspection data.
+*   **Thread-Safe Implementations:** Ensures your decorators are safe to use in multi-threaded environments.
 
-## Why Choose Wrapt?
+## Overview
 
-Unlike basic decorator implementations, Wrapt is designed for *correctness*. It goes beyond `functools.wraps()` to ensure your decorators behave predictably across diverse use cases, preserving essential Python features.
+The `wrapt` module provides a comprehensive solution for creating decorators, wrappers, and facilitating monkey patching in Python.  Built for correctness and flexibility, `wrapt` goes beyond standard decorator implementations to ensure compatibility across a wide range of Python use cases. Its design prioritizes preserving introspectability, function signatures, and type checking, making your decorators more reliable and predictable.
 
 ## Installation
-
-Install Wrapt easily using pip:
 
 ```bash
 pip install wrapt
 ```
 
-## Quick Start Examples
+## Quick Start
 
 ### Basic Decorator
 
@@ -88,9 +86,9 @@ def universal(wrapped, instance, args, kwargs):
 
 ## Documentation
 
-For in-depth information, advanced examples, and detailed usage instructions, explore the official documentation:
+Detailed documentation, examples, and advanced usage patterns are available at:
 
-*   **[wrapt.readthedocs.io](https://wrapt.readthedocs.io/)**
+**[wrapt.readthedocs.io](https://wrapt.readthedocs.io/)**
 
 ## Supported Python Versions
 
@@ -100,25 +98,49 @@ For in-depth information, advanced examples, and detailed usage instructions, ex
 
 ## Contributing
 
-Contributions are welcome!  Please use the [GitHub issue tracker](https://github.com/GrahamDumpleton/wrapt/issues/) to discuss potential changes, report bugs, or ask questions.
+Contributions are welcome!  Please use the [GitHub issue tracker](https://github.com/GrahamDumpleton/wrapt/issues/) to discuss changes, report bugs, or ask questions.
 
-## Testing
+**Note:** `wrapt` is a mature project.  Focus is on maintaining compatibility with current Python versions.
 
-See [TESTING.md](TESTING.md) for details on running tests.
+### Testing
+
+See [TESTING.md](TESTING.md) for information on running tests.
 
 ## License
 
-Wrapt is licensed under the BSD License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the BSD License - see the [LICENSE](LICENSE) file for details.
 
-## Resources
+## Links
 
-*   **Documentation:** [wrapt.readthedocs.io](https://wrapt.readthedocs.io/)
-*   **PyPI:** [https://pypi.python.org/pypi/wrapt](https://pypi.python.org/pypi/wrapt)
-*   **GitHub Issues:** [https://github.com/GrahamDumpleton/wrapt/issues/](https://github.com/GrahamDumpleton/wrapt/issues/)
-*   **Changelog:** [https://wrapt.readthedocs.io/en/latest/changes.html](https://wrapt.readthedocs.io/en/latest/changes.html)
-*   **Original Repository:** [https://github.com/GrahamDumpleton/wrapt](https://github.com/GrahamDumpleton/wrapt)
+*   **Documentation**: https://wrapt.readthedocs.io/
+*   **PyPI**: https://pypi.python.org/pypi/wrapt
+*   **Issues**: https://github.com/GrahamDumpleton/wrapt/issues/
+*   **Changelog**: https://wrapt.readthedocs.io/en/latest/changes.html
+*   **GitHub Repository**: [https://github.com/GrahamDumpleton/wrapt](https://github.com/GrahamDumpleton/wrapt)
 
 ## Related Blog Posts
 
-Explore a series of blog posts that delve into the design and implementation of Wrapt:
-(Links to blog posts from original README.)
+*   [How you implemented your Python decorator is wrong](blog/01-how-you-implemented-your-python-decorator-is-wrong.md)
+*   [The interaction between decorators and descriptors](blog/02-the-interaction-between-decorators-and-descriptors.md)
+*   [Implementing a factory for creating decorators](blog/03-implementing-a-factory-for-creating-decorators.md)
+*   [Implementing a universal decorator](blog/04-implementing-a-universal-decorator.md)
+*   [Decorators which accept arguments](blog/05-decorators-which-accept-arguments.md)
+*   [Maintaining decorator state using a class](blog/06-maintaining-decorator-state-using-a-class.md)
+*   [The missing synchronized decorator](blog/07-the-missing-synchronized-decorator.md)
+*   [The synchronized decorator as context manager](blog/08-the-synchronized-decorator-as-context-manager.md)
+*   [Performance overhead of using decorators](blog/09-performance-overhead-of-using-decorators.md)
+*   [Performance overhead when applying decorators to methods](blog/10-performance-overhead-when-applying-decorators-to-methods.md)
+*   [Safely applying monkey patches in Python](blog/11-safely-applying-monkey-patches-in-python.md)
+*   [Using wrapt to support testing of software](blog/12-using-wrapt-to-support-testing-of-software.md)
+*   [Ordering issues when monkey patching in Python](blog/13-ordering-issues-when-monkey-patching-in-python.md)
+*   [Automatic patching of Python applications](blog/14-automatic-patching-of-python-applications.md)
+```
+
+Key improvements:
+
+*   **SEO Optimization:**  Added keywords like "Python Decorators", "Wrappers", and "Monkey Patching" in headings and descriptions.
+*   **Hook:** Added a compelling one-sentence introduction.
+*   **Structure:** Organized with clear headings and bullet points for readability.
+*   **Conciseness:** Condensed information while retaining key details.
+*   **Emphasis:** Highlighted key features for quick understanding.
+*   **Links:** Included a direct link back to the GitHub repository.

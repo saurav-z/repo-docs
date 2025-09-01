@@ -1,67 +1,51 @@
-# CS Rankings: Your Comprehensive Guide to Top Computer Science Schools
+# CS Rankings: A Data-Driven Ranking of Top Computer Science Schools
 
-**CS Rankings offers a data-driven, metrics-based approach to ranking computer science schools, focusing on research output at top conferences.**  [Explore the original repository on GitHub](https://github.com/emeryberger/CSrankings).
+**Tired of rankings based on surveys?** CS Rankings provides a data-driven, metric-based approach to ranking computer science schools, focusing on faculty research publications in top conferences. 
+Check out the original repository for more information: [https://github.com/emeryberger/CSrankings](https://github.com/emeryberger/CSrankings)
 
 ## Key Features:
 
-*   **Metrics-Based Ranking:** Unlike survey-based rankings, CS Rankings uses publication counts at highly selective computer science conferences to identify leading institutions and faculty.
-*   **Data-Driven Methodology:**  The ranking is based on objective metrics, making it less susceptible to manipulation.
-*   **Quarterly Updates:**  The rankings are updated quarterly to reflect the latest research output.
-*   **Contribution Welcome:**  The project welcomes contributions to add or modify affiliations.  See the [CONTRIBUTING.md](CONTRIBUTING.md) file for details.
-*   **Open Source and Transparent:** The code and data are available for anyone to use and inspect.
+*   **Metric-Based Rankings:** Utilizes the number of publications by faculty in the most selective computer science conferences.
+*   **Avoids Manipulation:** Designed to be difficult to game, unlike citation-based or survey-based rankings.
+*   **Open-Source:** All code and data used to build the website are available.
+*   **Community-Driven:**  Contributions are welcome for adding or modifying affiliations.
+*   **Comprehensive Data:** Leverages data from DBLP.org to provide a broad overview of research output.
 
-## How It Works
+## How CS Rankings Works
 
-CS Rankings analyzes publications by faculty at the most selective computer science conferences. The goal is to provide a transparent and objective view of research activity. The data is sourced from DBLP.org.
+This ranking system focuses on the research output of computer science faculty. It measures the number of publications at the most selective conferences in various computer science areas. This method aims to provide a more objective and less easily manipulated ranking compared to traditional survey-based approaches.
 
-## Contribute to the Project
+## Contributing
 
-You can contribute to the CS Rankings project. See the README for instructions on contributing.
+### Adding or Modifying Affiliations
 
-## Getting Started
+To contribute to the project, please:
 
-### Running Locally
+1.  Review the `CONTRIBUTING.md` file for detailed instructions.
+2.  All data is stored in `csrankings-[a-z].csv` files, with entries alphabetized by first name.
+3.  Submit pull requests. Updates are processed quarterly.
 
-To run the site locally, you'll need to:
+## Running Locally
 
-1.  Download the DBLP data: `make update-dblp` (requires ~19GB memory).
-2.  Build the databases: `make`
-3.  Run a local web server (e.g., `python3 -m http.server`)
-4.  Access the site: `http://0.0.0.0:8000`
+To run the site locally, you will need to:
 
-### Required Dependencies
-Install the necessary packages:
-``apt-get install libxml2-utils npm python-lxml basex; npm install -g typescript google-closure-compiler``
+1.  Download the DBLP data: ``make update-dblp`` (requires ~19GiB of memory).
+2.  Rebuild the databases: ``make``.
+3.  Run a local web server (e.g., ``python3 -m http.server``) and connect to [http://0.0.0.0:8000](http://0.0.0.0:8000).
+4.  Install the necessary dependencies as listed in the original README.
 
-## Shallow Clone for Quick Contributions
+### Quick Contribution with a Shallow Clone
 
 For quick contributions without a full clone, use a shallow clone:
 
-1.  Fork the CSrankings repo.
-2.  Clone your fork: `git clone --depth 1 https://github.com/yourusername/CSrankings`
-3.  Make changes on a branch, push them, and create a pull request.
+1.  Fork the CSrankings repository.
+2.  Clone your fork with depth 1: `git clone --depth 1 https://github.com/yourusername/CSrankings`
+3.  Make changes on a branch, push, and create a pull request.
+
 ## Acknowledgements
-This site was developed primarily by and is maintained by [Emery Berger](https://emeryberger.com). It incorporates extensive feedback
-from too many folks to mention here, including many contributors who
-have helped to add and maintain faculty affiliations, home pages, and
-so on.
 
-This site was initially based on code and
-data collected by [Swarat
-Chaudhuri](https://www.cs.utexas.edu/~swarat/) (UT-Austin), though
-it has evolved considerably since its inception. The
-original faculty affiliation dataset was constructed by [Papoutsaki et
-al.](http://cs.brown.edu/people/alexpap/faculty_dataset.html); since
-then, it has been extensively cleaned and updated by numerous
-contributors. A previous ranking
-also used DBLP and Brown's dataset for [ranking theoretical computer
-science](https://projects.csail.mit.edu/dnd/ranking/.).
-
-This site uses information from [DBLP.org](http://dblp.org) which is made
-available under the ODC Attribution License.
+Developed primarily by [Emery Berger](https://emeryberger.com) and based on work by Swarat Chaudhuri and Papoutsaki et al.  This project utilizes data from [DBLP.org](http://dblp.org).
 
 ## License
 
-CSRankings is covered by the [Creative Commons
-Attribution-NonCommercial-NoDerivatives 4.0 International
-License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+This project is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).

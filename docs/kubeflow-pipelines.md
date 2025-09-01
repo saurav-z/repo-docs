@@ -1,74 +1,49 @@
 # Kubeflow Pipelines: Build, Deploy, and Manage ML Workflows on Kubernetes
 
-**Kubeflow Pipelines empowers you to build, deploy, and manage end-to-end machine learning (ML) workflows on Kubernetes, making your ML lifecycle simple, portable, and scalable.** ([View the original repo](https://github.com/kubeflow/pipelines))
+**Simplify and accelerate your machine learning lifecycle with Kubeflow Pipelines, the powerful platform for building, deploying, and managing end-to-end ML workflows on Kubernetes.**
+
+[View the original repository on GitHub](https://github.com/kubeflow/pipelines)
 
 ## Key Features
 
-*   **End-to-End Orchestration:** Simplify and automate your ML pipeline orchestration.
-*   **Experimentation:** Easily explore different ideas and techniques with built-in experiment management.
-*   **Reusability:** Build upon existing components and pipelines for rapid development and deployment.
-*   **Kubernetes Native:** Designed to run seamlessly on Kubernetes, leveraging its scalability and portability.
-*   **Component Library:** Offers a rich set of pre-built components and integrations.
-*   **Open Source:** Benefit from an active community and open-source development.
+*   **End-to-End Orchestration:** Orchestrate complex ML workflows, from data ingestion to model deployment, with ease.
+*   **Simplified Experimentation:** Easily experiment with different ML techniques, track results, and manage your ML trials.
+*   **Reusable Components:** Build reusable pipeline components to accelerate development and reduce code duplication.
+*   **Scalability:** Leverage the power of Kubernetes to scale your ML pipelines to meet your growing needs.
 
 ## Overview
 
-Kubeflow Pipelines is a crucial component of the [Kubeflow](https://www.kubeflow.org/) ecosystem, a dedicated toolkit for simplifying the deployment of ML workflows on Kubernetes. Kubeflow Pipelines enables the creation of reusable end-to-end ML workflows using the Kubeflow Pipelines SDK.
+Kubeflow Pipelines is a core component of Kubeflow, a machine learning (ML) toolkit designed to simplify and streamline deployments of ML workflows on Kubernetes. It enables you to create reusable, end-to-end ML workflows using the Kubeflow Pipelines SDK. This allows data scientists and ML engineers to automate and manage their ML pipelines, improving efficiency and reproducibility.
 
 ## Installation
 
-Kubeflow Pipelines offers flexible installation options:
+Kubeflow Pipelines can be installed as part of the [Kubeflow Platform](https://www.kubeflow.org/docs/started/installing-kubeflow/#kubeflow-platform) or as a standalone service.
 
-*   **Kubeflow Platform:** Install as part of the comprehensive [Kubeflow Platform](https://www.kubeflow.org/docs/started/installing-kubeflow/#kubeflow-platform).
-*   **Standalone Service:** Deploy [Kubeflow Pipelines](https://www.kubeflow.org/docs/components/pipelines/operator-guides/installation/) as a standalone service.
+*   Kubeflow Pipelines now defaults to using the [Emissary Executor](https://www.kubeflow.org/docs/components/pipelines/legacy-v1/installation/choose-executor/#emissary-executor), which is container runtime agnostic.
 
-**Important Note:** From Kubeflow Pipelines 1.8, Emissary Executor is the default executor.  It's container runtime agnostic.
+## Documentation
 
-### Dependencies Compatibility Matrix
-
-| Dependency     | Versions    |
-| -------------- | ----------  |
-| Argo Workflows | v3.5, v3.6  |
-| MySQL          | v8          |
-
-## Documentation & Resources
-
-*   **Getting Started:** [Kubeflow Pipelines overview](https://www.kubeflow.org/docs/components/pipelines/overview/)
-*   **SDK Usage:** [Kubeflow Pipelines SDK documentation](https://kubeflow-pipelines.readthedocs.io/en/stable/)
-*   **API Reference:** [Kubeflow Pipelines API doc](https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/)
-*   **Python SDK Reference:** [Python SDK reference docs](https://kubeflow-pipelines.readthedocs.io/en/stable/)
+*   [Kubeflow Pipelines Overview](https://www.kubeflow.org/docs/components/pipelines/overview/)
+*   [Kubeflow Pipelines SDK](https://kubeflow-pipelines.readthedocs.io/en/stable/)
+*   [Pipelines API Reference](https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/)
+*   [Python SDK Reference Docs](https://kubeflow-pipelines.readthedocs.io/en/stable/)
 
 ## Community
 
-*   **Community Meeting:** Every other Wednesday, 10-11 AM (PST).
+*   **Community Meetings:** Every other Wednesday, 10-11 AM (PST)
     *   [Calendar Invite](https://calendar.google.com/event?action=TEMPLATE&tmeid=NTdoNG5uMDBtcnJlYmdlOWt1c2lkY25jdmlfMjAxOTExMTNUMTgwMDAwWiBqZXNzaWV6aHVAZ29vZ2xlLmNvbQ&tmsrc=jessiezhu%40google.com&scp=ALL)
     *   [Direct Meeting Link](https://zoom.us/j/92607298595?pwd%3DVlKLUbiguGkbT9oKbaoDmCxrhbRop7.1&sa=D&source=calendar&ust=1736264977415448&usg=AOvVaw1EIkjFsKy0d4yQPptIJS3x)
     *   [Meeting notes](http://bit.ly/kfp-meeting-notes)
-*   **Slack:**  Join the #kubeflow-pipelines channel on the Cloud Native Computing Foundation Slack workspace.  Find details at [https://www.kubeflow.org/docs/about/community/#kubeflow-slack-channels](https://www.kubeflow.org/docs/about/community/#kubeflow-slack-channels)
-
-## Deep Wiki (AI-Generated)
-
-Explore AI-powered documentation for this project at [DeepWiki](https://deepwiki.com/kubeflow/pipelines).
-
-> :warning:  Please note that this is AI-generated and may contain inaccuracies.
+*   **Slack:** Find us in the #kubeflow-pipelines channel on the Cloud Native Computing Foundation Slack workspace ([https://www.kubeflow.org/docs/about/community/#kubeflow-slack-channels](https://www.kubeflow.org/docs/about/community/#kubeflow-slack-channels))
 
 ## Contributing
 
-We welcome contributions!  Please review the [How to Contribute](./CONTRIBUTING.md) guidelines.  For building and deploying Kubeflow Pipelines from source, see the [developer guide](./developer_guide.md).
+Contribute to Kubeflow Pipelines by reviewing the guidelines in [How to Contribute](./CONTRIBUTING.md). Learn how to build and deploy Kubeflow Pipelines from source code using the [developer guide](./developer_guide.md).
 
 ## Architecture
 
-Detailed information on the Kubeflow Pipelines architecture can be found in [Architecture.md](docs/Architecture.md).
-
-## Blog Posts
-
-*   [From Raw Data to Model Serving: A Blueprint for the AI/ML Lifecycle with Kubeflow](https://blog.kubeflow.org/fraud-detection-e2e/) (By [Helber Belmiro](https://github.com/hbelmiro))
-*   [Getting started with Kubeflow Pipelines](https://cloud.google.com/blog/products/ai-machine-learning/getting-started-kubeflow-pipelines) (By Amy Unruh)
-*   How to create and deploy a Kubeflow Machine Learning Pipeline (By Lak Lakshmanan)
-    *   [Part 1: How to create and deploy a Kubeflow Machine Learning Pipeline](https://medium.com/data-science/how-to-create-and-deploy-a-kubeflow-machine-learning-pipeline-part-1-efea7a4b650f)
-    *   [Part 2: How to deploy Jupyter notebooks as components of a Kubeflow ML pipeline](https://medium.com/data-science/how-to-deploy-jupyter-notebooks-as-components-of-a-kubeflow-ml-pipeline-part-2-b1df77f4e5b3)
-    *   [Part 3: How to carry out CI/CD in Machine Learning (“MLOps”) using Kubeflow ML pipelines](https://medium.com/google-cloud/how-to-carry-out-ci-cd-in-machine-learning-mlops-using-kubeflow-ml-pipelines-part-3-bdaf68082112)
+Learn about the KFP architecture: [Architecture.md](docs/Architecture.md)
 
 ## Acknowledgments
 
-Kubeflow Pipelines leverages [Argo Workflows](https://github.com/argoproj/argo-workflows). We are grateful to the Argo community for their support.
+Kubeflow Pipelines utilizes [Argo Workflows](https://github.com/argoproj/argo-workflows) for orchestrating Kubernetes resources.

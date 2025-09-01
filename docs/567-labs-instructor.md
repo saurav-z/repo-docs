@@ -1,8 +1,8 @@
-# Instructor: Effortlessly Extract Structured Data from LLMs
+# Instructor: Effortless Structured Outputs from LLMs 🚀
 
-**Simplify your LLM integrations and get reliable JSON outputs with Instructor, built on Pydantic for seamless validation and type safety.**  (See the original repo: [https://github.com/567-labs/instructor](https://github.com/567-labs/instructor))
+**Get reliable, validated JSON and structured data from any Large Language Model (LLM) with Instructor, simplifying your AI application development.**
 
-Instructor empowers you to extract structured data from any language model with ease, handling complex tasks like JSON parsing, validation, retries, and streaming.
+[View the original repository on GitHub](https://github.com/567-labs/instructor)
 
 [![PyPI](https://img.shields.io/pypi/v/instructor?style=flat-square)](https://pypi.org/project/instructor/)
 [![Downloads](https://img.shields.io/pypi/dm/instructor?style=flat-square)](https://pypi.org/project/instructor/)
@@ -10,35 +10,32 @@ Instructor empowers you to extract structured data from any language model with 
 [![Discord](https://img.shields.io/discord/1192334452110659664?style=flat-square)](https://discord.gg/bD9YE9JArw)
 [![Twitter](https://img.shields.io/twitter/follow/jxnlco?style=flat-square)](https://twitter.com/jxnlco)
 
-## Key Features of Instructor
+## Key Features
 
-*   ✅ **Simplified Extraction:** Define your desired data structure with Pydantic models and let Instructor handle the rest.
-*   ✅ **Automatic Validation:** Ensures data integrity with built-in validation based on your Pydantic models.
-*   ✅ **Intelligent Retries:** Automatically retries failed extractions, improving reliability.
-*   ✅ **Streaming Support:** Stream partial objects as they're generated for real-time data processing.
-*   ✅ **Nested Object Support:** Easily extract complex, nested data structures.
-*   ✅ **Cross-Provider Compatibility:** Works seamlessly with major LLM providers like OpenAI, Anthropic, Google, and local models (Ollama).
-*   ✅ **Production-Ready:** Used by thousands of developers and companies, including teams at OpenAI, Google, Microsoft, and AWS.
+*   **Simplified Extraction:** Easily define data models and extract structured information without complex JSON parsing or error handling.
+*   **Automatic Validation:** Leverages Pydantic for robust data validation, type safety, and IDE support.
+*   **Provider Agnostic:** Works seamlessly with leading LLM providers, including OpenAI, Anthropic, Google, and local models like Ollama.
+*   **Automatic Retries:** Handles failed extractions with automatic retries, ensuring data integrity.
+*   **Streaming Support:** Stream partial objects in real-time as they are generated for improved user experience.
+*   **Nested Objects Support:** Effortlessly extracts complex, nested data structures with minimal effort.
 
-## The Problem Instructor Solves
+## The Problem: Complex Data Extraction from LLMs
 
-Extracting structured data from LLMs can be a complex and error-prone process, often involving:
+Extracting structured data from LLMs can be a complex and error-prone process, typically involving:
 
-*   Writing complex JSON schemas
-*   Handling validation errors
-*   Implementing retry logic
-*   Parsing unstructured responses
-*   Adapting to different provider APIs
+1.  Writing intricate JSON schemas.
+2.  Dealing with validation errors.
+3.  Implementing retries for failed extractions.
+4.  Parsing unstructured responses.
+5.  Adapting to different provider APIs.
 
-**Instructor streamlines this process with a single, intuitive interface:**
+## The Solution: Instructor
 
-<table>
-<tr>
-<td><b>Without Instructor</b></td>
-<td><b>With Instructor</b></td>
-</tr>
-<tr>
-<td>
+Instructor simplifies this process with a clean and intuitive interface, handling all the complexities behind the scenes.
+
+### Example: The Instructor difference
+
+**Without Instructor:**
 
 ```python
 response = openai.chat.completions.create(
@@ -71,8 +68,7 @@ if "name" not in user_data:
     pass
 ```
 
-</td>
-<td>
+**With Instructor:**
 
 ```python
 client = instructor.from_provider("openai/gpt-4")
@@ -85,113 +81,24 @@ user = client.chat.completions.create(
 # That's it! user is validated and typed
 ```
 
-</td>
-</tr>
-</table>
+## Installation
 
-## Getting Started: Install and Use
-
-### Installation
-
-Install Instructor in seconds using pip:
+Install Instructor in seconds:
 
 ```bash
 pip install instructor
 ```
 
-Or use your preferred package manager:
+Or using your preferred package manager:
+
 ```bash
 uv add instructor
 poetry add instructor
 ```
 
-### Basic Extraction Example
-
-Define your data model and extract data effortlessly:
-
-```python
-from pydantic import BaseModel
-import instructor
-
-client = instructor.from_provider("openai/gpt-4o-mini")
-
-class Product(BaseModel):
-    name: str
-    price: float
-    in_stock: bool
-
-product = client.chat.completions.create(
-    response_model=Product,
-    messages=[{"role": "user", "content": "iPhone 15 Pro, $999, available now"}],
-)
-
-print(product)
-# Product(name='iPhone 15 Pro', price=999.0, in_stock=True)
-```
-
-## Powerful Features for Production
-
-*   **Automatic Retries:** Instructor automatically retries failed validations:
-
-    ```python
-    from pydantic import BaseModel, field_validator
-
-    class User(BaseModel):
-        name: str
-        age: int
-
-        @field_validator('age')
-        def validate_age(cls, v):
-            if v < 0:
-                raise ValueError('Age must be positive')
-            return v
-
-    user = client.chat.completions.create(
-        response_model=User,
-        messages=[{"role": "user", "content": "..."}],
-        max_retries=3,
-    )
-    ```
-*   **Streaming Support:**  Stream partial objects as they're generated:
-
-    ```python
-    from instructor import Partial
-
-    for partial_user in client.chat.completions.create(
-        response_model=Partial[User],
-        messages=[{"role": "user", "content": "..."}],
-        stream=True,
-    ):
-        print(partial_user)
-        # User(name=None, age=None)
-        # User(name="John", age=None)
-        # User(name="John", age=25)
-    ```
-
-*   **Nested Objects:** Extract complex, nested data structures:
-
-    ```python
-    from typing import List
-
-    class Address(BaseModel):
-        street: str
-        city: str
-        country: str
-
-    class User(BaseModel):
-        name: str
-        age: int
-        addresses: List[Address]
-
-    user = client.chat.completions.create(
-        response_model=User,
-        messages=[{"role": "user", "content": "..."}],
-    )
-    ```
-
 ## Provider Compatibility
 
-Instructor works with a wide range of LLM providers:
+Use the same code with various LLM providers, streamlining your development process:
 
 ```python
 # OpenAI
@@ -206,56 +113,159 @@ client = instructor.from_provider("google/gemini-pro")
 # Ollama (local)
 client = instructor.from_provider("ollama/llama3.2")
 
-# With API keys directly
+# With API keys directly (no environment variables needed)
 client = instructor.from_provider("openai/gpt-4o", api_key="sk-...")
 client = instructor.from_provider("anthropic/claude-3-5-sonnet", api_key="sk-ant-...")
 client = instructor.from_provider("groq/llama-3.1-8b-instant", api_key="gsk_...")
 
+# All use the same API!
 user = client.chat.completions.create(
     response_model=User,
     messages=[{"role": "user", "content": "..."}],
 )
 ```
 
-## Used in Production By: Proven Results
+## Production-Ready Features
 
-Trusted by over 100,000 developers and companies:
+### Automatic Retries
 
-*   **3M+ Monthly Downloads**
-*   **10K+ GitHub Stars**
-*   **1000+ Community Contributors**
+Instructor automatically retries when validation fails:
 
-Instructor is used by teams at OpenAI, Google, Microsoft, AWS, and many YC startups.
+```python
+from pydantic import BaseModel, field_validator
 
-## Multi-Language Support
+
+class User(BaseModel):
+    name: str
+    age: int
+
+    @field_validator('age')
+    def validate_age(cls, v):
+        if v < 0:
+            raise ValueError('Age must be positive')
+        return v
+
+
+# Instructor automatically retries when validation fails
+user = client.chat.completions.create(
+    response_model=User,
+    messages=[{"role": "user", "content": "..."}],
+    max_retries=3,
+)
+```
+
+### Streaming Support
+
+Stream partial objects as they're generated:
+
+```python
+from instructor import Partial
+
+for partial_user in client.chat.completions.create(
+    response_model=Partial[User],
+    messages=[{"role": "user", "content": "..."}],
+    stream=True,
+):
+    print(partial_user)
+    # User(name=None, age=None)
+    # User(name="John", age=None)
+    # User(name="John", age=25)
+```
+
+### Nested Objects
+
+Extract complex, nested data structures:
+
+```python
+from typing import List
+
+
+class Address(BaseModel):
+    street: str
+    city: str
+    country: str
+
+
+class User(BaseModel):
+    name: str
+    age: int
+    addresses: List[Address]
+
+
+# Instructor handles nested objects automatically
+user = client.chat.completions.create(
+    response_model=User,
+    messages=[{"role": "user", "content": "..."}],
+)
+```
+
+## Used in Production
+
+Instructor is trusted by over **100,000 developers** and companies building AI applications, with:
+
+*   **3M+ monthly downloads**
+*   **10K+ GitHub stars**
+*   **1000+ community contributors**
+
+Companies using Instructor include teams at OpenAI, Google, Microsoft, AWS, and many YC startups.
+
+## Get Started
+
+### Basic Extraction
+
+Extract structured data from any text:
+
+```python
+from pydantic import BaseModel
+import instructor
+
+client = instructor.from_provider("openai/gpt-4o-mini")
+
+
+class Product(BaseModel):
+    name: str
+    price: float
+    in_stock: bool
+
+
+product = client.chat.completions.create(
+    response_model=Product,
+    messages=[{"role": "user", "content": "iPhone 15 Pro, $999, available now"}],
+)
+
+print(product)
+# Product(name='iPhone 15 Pro', price=999.0, in_stock=True)
+```
+
+### Multiple Languages
 
 Instructor's simple API is available in many languages:
 
-*   [Python](https://python.useinstructor.com) - The Original
+*   [Python](https://python.useinstructor.com) - The original
 *   [TypeScript](https://js.useinstructor.com) - Full TypeScript support
 *   [Ruby](https://ruby.useinstructor.com) - Ruby implementation
 *   [Go](https://go.useinstructor.com) - Go implementation
 *   [Elixir](https://hex.pm/packages/instructor) - Elixir implementation
 *   [Rust](https://rust.useinstructor.com) - Rust implementation
 
-## Learn More
+### Learn More
 
 *   [Documentation](https://python.useinstructor.com) - Comprehensive guides
 *   [Examples](https://python.useinstructor.com/examples/) - Copy-paste recipes
 *   [Blog](https://python.useinstructor.com/blog/) - Tutorials and best practices
 *   [Discord](https://discord.gg/bD9YE9JArw) - Get help from the community
 
-## Instructor vs. Alternatives
+## Why Use Instructor?
 
-**Why choose Instructor?**
+**vs Raw JSON mode**: Instructor provides automatic validation, retries, streaming, and nested object support. No manual schema writing.
 
-*   **vs Raw JSON mode:**  Instructor offers automatic validation, retries, streaming, and nested object support. Eliminates the need for manual schema writing.
-*   **vs LangChain/LlamaIndex:** Instructor focuses on structured extraction, providing a lighter, faster, and easier-to-debug solution.
-*   **vs Custom Solutions:**  Instructor is battle-tested, handling edge cases and saving you valuable development time.
+**vs LangChain/LlamaIndex**: Instructor is focused on one thing - structured extraction. It's lighter, faster, and easier to debug.
 
-## Contribute
+**vs Custom solutions**: Battle-tested by thousands of developers. Handles edge cases you haven't thought of yet.
 
-We welcome contributions! Explore our [good first issues](https://github.com/instructor-ai/instructor/labels/good%20first%20issue) to get started.
+## Contributing
+
+Contributions are welcome! Check out our [good first issues](https://github.com/instructor-ai/instructor/labels/good%20first%20issue) to get started.
 
 ## License
 

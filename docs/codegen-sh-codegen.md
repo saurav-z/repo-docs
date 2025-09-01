@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Codegen: The AI Software Engineer That Automates Your Coding Tasks</h1>
+<h1 align="center">Codegen SDK: Unleash the Power of AI-Powered Software Engineering</h1>
 
 <div align="center">
 
@@ -18,50 +18,24 @@
 
 <br />
 
-Codegen empowers developers with an AI-powered software engineer, automating tasks and accelerating development workflows.  **[Explore the original repository on GitHub](https://github.com/codegen-sh/codegen)**
+**Tired of tedious coding tasks? The Codegen SDK empowers developers to automate code generation and software engineering workflows using powerful AI agents.**
 
-## Key Features of the Codegen SDK
+This SDK provides a programmatic interface to interact with the AI-powered code agents offered by [Codegen](https://codegen.com), allowing you to integrate AI code generation into your development pipeline.
+
+## Key Features
 
 *   **Automated Code Generation:** Generate code based on natural language prompts.
-*   **Task Management:**  Manage and track code generation tasks with status updates.
-*   **Flexible Integration:** Integrate with your existing development workflow through API access.
-*   **Multi-Platform Support:**  Interact with your AI engineer via API, Slack, Linear, GitHub, or the website.
-*   **Easy Installation:** Simple installation using pip or uv.
+*   **AI-Powered Agents:** Leverage intelligent agents to handle complex software engineering tasks.
+*   **Easy Integration:** Integrate AI code generation seamlessly into your existing workflows.
+*   **Status Tracking:** Monitor the progress of your code generation tasks.
+*   **Versatile Results:** Receive code, summaries, and links as results.
+*   **Flexible Deployment:** Run agents via API or integrate with platforms like Slack, Linear, and GitHub.
 
-## Getting Started with Codegen
-
-The Codegen SDK provides a programmatic interface to the code agents provided by [Codegen](https://codegen.com). Here's a quick example:
-
-```python
-from codegen.agents.agent import Agent
-
-# Initialize the Agent with your organization ID and API token
-agent = Agent(
-    org_id="YOUR_ORG_ID",  # Find this at codegen.com/token
-    token="YOUR_API_TOKEN",  # Get this from codegen.com/token
-    # base_url="https://codegen-sh-rest-api.modal.run",  # Optional - defaults to production
-)
-
-# Run an agent with a prompt
-task = agent.run(prompt="Implement a new feature to sort users by last login.")
-
-# Check the initial status
-print(task.status)
-
-# Refresh the task to get updated status (tasks can take time)
-task.refresh()
-
-# Check the updated status
-print(task.status)
-
-# Once task is complete, you can access the result
-if task.status == "completed":
-    print(task.result)  # Result often contains code, summaries, or links
-```
+## Getting Started
 
 ### Installation
 
-Install the SDK using pip or uv:
+Install the Codegen SDK using pip or uv:
 
 ```bash
 pip install codegen
@@ -69,22 +43,54 @@ pip install codegen
 uv pip install codegen
 ```
 
-### Configuration
+### Usage
 
-1.  **Sign Up:** Get started at [codegen.com](https://codegen.com).
-2.  **API Token:** Obtain your API token at [codegen.com/token](https://codegen.com/token).
+1.  **Get your API Token:** Obtain your organization ID and API token from [codegen.com/token](https://codegen.com/token).
+2.  **Initialize the Agent:**
+
+    ```python
+    from codegen.agents.agent import Agent
+
+    # Initialize the Agent with your organization ID and API token
+    agent = Agent(
+        org_id="YOUR_ORG_ID",  # Find this at codegen.com/token
+        token="YOUR_API_TOKEN",  # Get this from codegen.com/token
+        # base_url="https://codegen-sh-rest-api.modal.run",  # Optional - defaults to production
+    )
+
+    # Run an agent with a prompt
+    task = agent.run(prompt="Implement a new feature to sort users by last login.")
+
+    # Check the initial status
+    print(task.status)
+
+    # Refresh the task to get updated status (tasks can take time)
+    task.refresh()
+
+    # Check the updated status
+    print(task.status)
+
+    # Once task is complete, you can access the result
+    if task.status == "completed":
+        print(task.result)  # Result often contains code, summaries, or links
+    ```
 
 ## Resources
 
-*   [Documentation](https://docs.codegen.com)
-*   [Getting Started](https://docs.codegen.com/introduction/getting-started)
-*   [Contributing Guide](CONTRIBUTING.md)
-*   [Contact Us](https://codegen.com/contact)
+*   **Documentation:** [docs.codegen.com](https://docs.codegen.com)
+*   **Getting Started:** [docs.codegen.com/introduction/getting-started](https://docs.codegen.com/introduction/getting-started)
+*   **Community:** [Join our Slack Community](https://community.codegen.com)
+*   **Codegen Website:** [codegen.com](https://codegen.com)
+*   **API Token:** [codegen.com/token](https://codegen.com/token)
+*   **Original Repository:** [https://github.com/codegen-sh/codegen](https://github.com/codegen-sh/codegen)
+*   **Contributing Guide:** [CONTRIBUTING.md](CONTRIBUTING.md)
+*   **Contact Us:** [codegen.com/contact](https://codegen.com/contact)
+*   **Request a Demo:** [codegen.com/request-demo](https://codegen.com/request-demo)
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on setting up the development environment and submitting your contributions.
+We welcome contributions!  Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on setting up your development environment and submitting pull requests.
 
-## Enterprise Solutions
+## Enterprise
 
-For information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
+For information on enterprise engagements and custom solutions, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).

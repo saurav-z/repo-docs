@@ -4,30 +4,30 @@ Daily curated docs from popular GitHub repos:
 
 | Repo | ⭐ Stars | Summary |
 |------|--------|---------|
-| [EbookFoundation/free-programming-books](docs/EbookFoundation-free-programming-books.md) | 361114 | # Free Programming Books: Your Gateway to Free Learning Resources |
+| [EbookFoundation/free-programming-books](docs/EbookFoundation-free-programming-books.md) | 361114 | # Free Programming Books: Your Gateway to Accessible Learning |
 | [public-apis/public-apis](docs/public-apis-public-apis.md) | 353523 | # Try Public APIs for free |
-| [donnemartin/system-design-primer](docs/donnemartin-system-design-primer.md) | 308609 | # System Design Primer: Your Comprehensive Guide to Building Scalable Systems |
+| [donnemartin/system-design-primer](docs/donnemartin-system-design-primer.md) | 308609 | # System Design Primer: Your Guide to Building Scalable Systems  |
 | [vinta/awesome-python](docs/vinta-awesome-python.md) | 247958 | # Awesome Python [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f3 |
 | [TheAlgorithms/Python](docs/TheAlgorithms-Python.md) | 202069 | <div align="center"> |
-| [Significant-Gravitas/AutoGPT](docs/Significant-Gravitas-AutoGPT.md) | 176439 | # AutoGPT: Automate Anything with Autonomous AI Agents |
-| [AUTOMATIC1111/stable-diffusion-webui](docs/AUTOMATIC1111-stable-diffusion-webui.md) | 153924 | # Stable Diffusion Web UI: Unleash Your Creative Vision with AI Art Generation |
-| [huggingface/transformers](docs/huggingface-transformers.md) | 146097 | <picture> |
+| [Significant-Gravitas/AutoGPT](docs/Significant-Gravitas-AutoGPT.md) | 176439 | # AutoGPT: Unleash the Power of AI Automation  |
+| [AUTOMATIC1111/stable-diffusion-webui](docs/AUTOMATIC1111-stable-diffusion-webui.md) | 153924 | # Stable Diffusion Web UI: Unleash Your Creativity with AI-Powered Image Generat |
+| [huggingface/transformers](docs/huggingface-transformers.md) | 146097 | <p align="center"> |
 | [ytdl-org/youtube-dl](docs/ytdl-org-youtube-dl.md) | 136229 | [![Build Status](https://github.com/ytdl-org/youtube-dl/workflows/CI/badge.svg)] |
 | [521xueweihan/HelloGitHub](docs/521xueweihan-HelloGitHub.md) | 119238 | <p align="center"> |
 | [yt-dlp/yt-dlp](docs/yt-dlp-yt-dlp.md) | 118053 | <!-- MANPAGE: BEGIN EXCLUDED SECTION --> |
 | [langflow-ai/langflow](docs/langflow-ai-langflow.md) | 104019 | <!-- markdownlint-disable MD030 --> |
 | [pytorch/pytorch](docs/pytorch-pytorch.md) | 91056 | ![PyTorch Logo](https://github.com/pytorch/pytorch/blob/9708fcf92db88b80b9010c68 |
 | [comfyanonymous/ComfyUI](docs/comfyanonymous-ComfyUI.md) | 85511 | <div align="center"> |
-| [home-assistant/core](docs/home-assistant-core.md) | 80026 | # Home Assistant: Open Source Home Automation for Local Control & Privacy |
+| [home-assistant/core](docs/home-assistant-core.md) | 80026 | # Home Assistant: Your Open Source Home Automation Hub |
 | [ansible/ansible](docs/ansible-ansible.md) | 65706 | [![PyPI version](https://img.shields.io/pypi/v/ansible-core.svg)](https://pypi.o |
 | [xtekky/gpt4free](docs/xtekky-gpt4free.md) | 64890 | <p align="center"> |
 | [browser-use/browser-use](docs/browser-use-browser-use.md) | 64689 | <picture> |
-| [Alvin9999/new-pac](docs/Alvin9999-new-pac.md) | 64342 | Okay, here's an improved and SEO-optimized README, summarizing the original info |
+| [Alvin9999/new-pac](docs/Alvin9999-new-pac.md) | 64342 | Okay, here's an improved and SEO-optimized README for the "new-pac" project, inc |
 | [localstack/localstack](docs/localstack-localstack.md) | 59405 | <p align="center"> |
-| [All-Hands-AI/OpenHands](docs/All-Hands-AI-OpenHands.md) | 59371 | # OpenHands: AI-Powered Software Development Agents |
+| [All-Hands-AI/OpenHands](docs/All-Hands-AI-OpenHands.md) | 59371 | <div align="center"> |
 | [modelcontextprotocol/servers](docs/modelcontextprotocol-servers.md) | 56754 | # Model Context Protocol servers |
-| [commaai/openpilot](docs/commaai-openpilot.md) | 54247 | # openpilot: Open Source Driver Assistance System |
-| [hiyouga/LLaMA-Factory](docs/hiyouga-LLaMA-Factory.md) | 53581 | ![LLaMA Factory](assets/logo.png) |
+| [commaai/openpilot](docs/commaai-openpilot.md) | 54247 | # openpilot: Drive Smarter, Safer with Open Source Autonomous Driving |
+| [hiyouga/LLaMA-Factory](docs/hiyouga-LLaMA-Factory.md) | 53581 | # LLaMA Factory: Fine-tune 100+ LLMs with Ease |
 | [vllm-project/vllm](docs/vllm-project-vllm.md) | 50842 | <!-- markdownlint-disable MD001 MD041 --> |
 | [microsoft/autogen](docs/microsoft-autogen.md) | 46643 | <a name="readme-top"></a> |
 | [ultralytics/ultralytics](docs/ultralytics-ultralytics.md) | 44850 | <div align="center"> |
@@ -37,24 +37,24 @@ Daily curated docs from popular GitHub repos:
 | [getsentry/sentry](docs/getsentry-sentry.md) | 41469 | <p align="center"> |
 | [mingrammer/diagrams](docs/mingrammer-diagrams.md) | 41377 | ![diagrams logo](assets/img/diagrams.png) |
 | [streamlit/streamlit](docs/streamlit-streamlit.md) | 40834 | <br> |
-| [apache/airflow](docs/apache-airflow.md) | 40738 | # Apache Airflow: Automate, Schedule, and Monitor Workflows |
-| [freqtrade/freqtrade](docs/freqtrade-freqtrade.md) | 40242 | # Freqtrade: The Free and Open-Source Crypto Trading Bot |
-| [gradio-app/gradio](docs/gradio-app-gradio.md) | 39593 | <div align="center"> |
+| [apache/airflow](docs/apache-airflow.md) | 40738 | # Apache Airflow: Orchestrate Your Workflows with Code |
+| [freqtrade/freqtrade](docs/freqtrade-freqtrade.md) | 40242 | # Freqtrade: Your Open-Source Crypto Trading Bot |
+| [gradio-app/gradio](docs/gradio-app-gradio.md) | 39593 | <!-- DO NOT EDIT THIS FILE DIRECTLY. INSTEAD EDIT THE `readme_template.md` OR `g |
 | [ray-project/ray](docs/ray-project-ray.md) | 38113 | .. image:: https://github.com/ray-project/ray/raw/master/doc/source/images/ray_h |
-| [gto76/python-cheatsheet](docs/gto76-python-cheatsheet.md) | 37413 | # Python Cheatsheet: Your Comprehensive Guide 🔗 |
+| [gto76/python-cheatsheet](docs/gto76-python-cheatsheet.md) | 37413 | # Python Cheat Sheet: A Comprehensive Guide 🔗 |
 | [crewAIInc/crewAI](docs/crewAIInc-crewAI.md) | 34028 | <p align="center"> |
 | [ManimCommunity/manim](docs/ManimCommunity-manim.md) | 33843 | <p align="center"> |
 | [jax-ml/jax](docs/jax-ml-jax.md) | 32632 | <div align="center"> |
 | [khoj-ai/khoj](docs/khoj-ai-khoj.md) | 30510 | <p align="center"> |
 | [paperless-ngx/paperless-ngx](docs/paperless-ngx-paperless-ngx.md) | 29624 | [![ci](https://github.com/paperless-ngx/paperless-ngx/workflows/ci/badge.svg)](h |
-| [huggingface/diffusers](docs/huggingface-diffusers.md) | 29576 | # 🤗 Diffusers: Generate Images, Audio, and More with State-of-the-Art Diffusion  |
+| [huggingface/diffusers](docs/huggingface-diffusers.md) | 29576 | # 🤗 Diffusers: Generate Images, Audio, and More with Diffusion Models |
 | [tinygrad/tinygrad](docs/tinygrad-tinygrad.md) | 29492 | <div align="center"> |
 | [PostHog/posthog](docs/PostHog-posthog.md) | 27443 | <p align="center"> |
-| [celery/celery](docs/celery-celery.md) | 27087 | [![Celery Banner](https://docs.celeryq.dev/en/latest/_images/celery-banner-small |
-| [frappe/erpnext](docs/frappe-erpnext.md) | 25964 | # ERPNext: Open-Source ERP for Businesses of All Sizes |
+| [celery/celery](docs/celery-celery.md) | 27087 | <!-- ALL-IN-ONE SEO META DESCRIPTION --> |
+| [frappe/erpnext](docs/frappe-erpnext.md) | 25964 | # ERPNext: The Open-Source ERP That Empowers Your Business |
 | [BerriAI/litellm](docs/BerriAI-litellm.md) | 24649 | <h1 align="center"> |
 | [zulip/zulip](docs/zulip-zulip.md) | 23103 | # Zulip overview |
-| [kovidgoyal/calibre](docs/kovidgoyal-calibre.md) | 22197 | # Calibre: Your Ultimate E-book Management Solution |
+| [kovidgoyal/calibre](docs/kovidgoyal-calibre.md) | 22197 | # Calibre: The Ultimate Free eBook Management Solution |
 | [timqian/chinese-independent-blogs](docs/timqian-chinese-independent-blogs.md) | 22090 | # 中文独立博客列表 |
 | [matplotlib/matplotlib](docs/matplotlib-matplotlib.md) | 21470 | [![PyPi](https://img.shields.io/pypi/v/matplotlib)](https://pypi.org/project/mat |
 | [mlflow/mlflow](docs/mlflow-mlflow.md) | 21075 | <h1 align="center" style="border-bottom: none"> |
@@ -77,40 +77,40 @@ Daily curated docs from popular GitHub repos:
 | [scipy/scipy](docs/scipy-scipy.md) | 13827 | .. image:: https://raw.githubusercontent.com/scipy/scipy/main/doc/source/_static |
 | [flet-dev/flet](docs/flet-dev-flet.md) | 13775 | <p align="center"> |
 | [Skyvern-AI/skyvern](docs/Skyvern-AI-skyvern.md) | 13746 | <h1 align="center"> |
-| [laramies/theHarvester](docs/laramies-theHarvester.md) | 13221 | # theHarvester: Your OSINT Toolkit for Reconnaissance |
+| [laramies/theHarvester](docs/laramies-theHarvester.md) | 13221 | <!-- Improved README.md for theHarvester --> |
 | [zauberzeug/nicegui](docs/zauberzeug-nicegui.md) | 13203 | <a href="https://nicegui.io/#about"> |
 | [camel-ai/camel](docs/camel-ai-camel.md) | 13113 | <div align="center"> |
 | [onyx-dot-app/onyx](docs/onyx-dot-app-onyx.md) | 13093 | <!-- ONYX_METADATA={"link": "https://github.com/onyx-dot-app/onyx/blob/main/READ |
 | [openai/openai-agents-python](docs/openai-openai-agents-python.md) | 13018 | # OpenAI Agents SDK |
 | [pytest-dev/pytest](docs/pytest-dev-pytest.md) | 12947 | .. image:: https://github.com/pytest-dev/pytest/raw/main/doc/en/img/pytest_logo_ |
-| [comet-ml/opik](docs/comet-ml-opik.md) | 12700 | <!-- ALL-IN-ONE PLATFORM --> |
-| [langbot-app/LangBot](docs/langbot-app-LangBot.md) | 12588 | # LangBot: Build Your Own AI Chatbot Platform |
+| [comet-ml/opik](docs/comet-ml-opik.md) | 12700 | <!-- |
+| [langbot-app/LangBot](docs/langbot-app-LangBot.md) | 12588 | <p align="center"> |
 | [optuna/optuna](docs/optuna-optuna.md) | 12396 | <div align="center"><img src="https://raw.githubusercontent.com/optuna/optuna/ma |
 | [mlfoundations/open_clip](docs/mlfoundations-open_clip.md) | 12218 | # OpenCLIP |
-| [567-labs/instructor](docs/567-labs-instructor.md) | 10869 | # Instructor: Effortlessly Extract Structured Data from LLMs |
-| [google/adk-python](docs/google-adk-python.md) | 10524 | # Agent Development Kit (ADK): Build Powerful AI Agents with Python |
+| [567-labs/instructor](docs/567-labs-instructor.md) | 10869 | # Instructor: Effortless Structured Outputs from LLMs 🚀 |
+| [google/adk-python](docs/google-adk-python.md) | 10524 | <!-- Agent Development Kit (ADK) - Build, Evaluate, & Deploy AI Agents --> |
 | [cupy/cupy](docs/cupy-cupy.md) | 10439 | <div align="center"> |
 | [newren/git-filter-repo](docs/newren-git-filter-repo.md) | 10252 | git filter-repo is a versatile tool for rewriting history, which includes |
 | [volcengine/verl](docs/volcengine-verl.md) | 10123 | <div align="center"> |
-| [cython/cython](docs/cython-cython.md) | 10111 | # Cython: Optimize Python Performance with C Speed |
+| [cython/cython](docs/cython-cython.md) | 10111 | # Cython: Write C Extensions for Python with Ease |
 | [axolotl-ai-cloud/axolotl](docs/axolotl-ai-cloud-axolotl.md) | 9905 | <p align="center"> |
 | [pypa/pip](docs/pypa-pip.md) | 9858 | pip - The Python Package Installer |
 | [confident-ai/deepeval](docs/confident-ai-deepeval.md) | 9721 | <p align="center"> |
 | [voxel51/fiftyone](docs/voxel51-fiftyone.md) | 9664 | <div align="center"> |
 | [mealie-recipes/mealie](docs/mealie-recipes-mealie.md) | 9547 | [![Latest Release][latest-release-shield]][latest-release-url] |
 | [nautechsystems/nautilus_trader](docs/nautechsystems-nautilus_trader.md) | 9506 | # <img src="https://github.com/nautechsystems/nautilus_trader/raw/develop/assets |
-| [Netflix/metaflow](docs/Netflix-metaflow.md) | 9370 | ![Metaflow_Logo_Horizontal_FullColor_Ribbon_Dark_RGB](https://user-images.github |
-| [SuperClaude-Org/SuperClaude_Framework](docs/SuperClaude-Org-SuperClaude_Framework.md) | 9226 | # 🚀 SuperClaude Framework: Transform Your Claude Code into a Powerful Developmen |
+| [Netflix/metaflow](docs/Netflix-metaflow.md) | 9370 | [![Metaflow Logo](https://user-images.githubusercontent.com/763451/89453116-96a5 |
+| [SuperClaude-Org/SuperClaude_Framework](docs/SuperClaude-Org-SuperClaude_Framework.md) | 9226 | # SuperClaude Framework: Transform Your Code with AI 🚀 |
 | [sktime/sktime](docs/sktime-sktime.md) | 9150 |  |
 | [xaoyaoo/PyWxDump](docs/xaoyaoo-PyWxDump.md) | 9100 | [![中文](https://img.shields.io/badge/README-中文-494cad.svg)](https://github.com/xa |
 | [sqlfluff/sqlfluff](docs/sqlfluff-sqlfluff.md) | 9038 | ![SQLFluff](https://raw.githubusercontent.com/sqlfluff/sqlfluff/main/images/sqlf |
-| [jxxghp/MoviePilot](docs/jxxghp-MoviePilot.md) | 9022 | # MoviePilot: Automate Your Movie and Media Workflow |
+| [jxxghp/MoviePilot](docs/jxxghp-MoviePilot.md) | 9022 | # MoviePilot: Your All-in-One Movie Automation Hub |
 | [xonsh/xonsh](docs/xonsh-xonsh.md) | 8909 | xonsh |
-| [arrow-py/arrow](docs/arrow-py-arrow.md) | 8899 | # Arrow: Date and Time Made Easy for Python |
+| [arrow-py/arrow](docs/arrow-py-arrow.md) | 8899 | # Arrow: Effortless Date and Time Handling in Python |
 | [sissbruecker/linkding](docs/sissbruecker-linkding.md) | 8889 | <div align="center"> |
-| [frappe/frappe](docs/frappe-frappe.md) | 8629 | <!--  Frappe Framework - Low-Code Web Framework for Rapid Application Developmen |
+| [frappe/frappe](docs/frappe-frappe.md) | 8629 | <div align="center" markdown="1"> |
 | [qodo-ai/pr-agent](docs/qodo-ai-pr-agent.md) | 8514 | <div align="center"> |
-| [dyang886/Game-Cheats-Manager](docs/dyang886-Game-Cheats-Manager.md) | 8462 | # Game Cheats Manager: Your Ultimate Trainer Management Solution |
+| [dyang886/Game-Cheats-Manager](docs/dyang886-Game-Cheats-Manager.md) | 8462 | # Game Cheats Manager: Your Ultimate Game Trainer Hub 🎮 |
 | [icloud-photos-downloader/icloud_photos_downloader](docs/icloud-photos-downloader-icloud_photos_downloader.md) | 8422 | # Download Your iCloud Photos Easily with iCloud Photos Downloader |
 | [saulpw/visidata](docs/saulpw-visidata.md) | 8391 | # VisiData v3.2 |
 | [oumi-ai/oumi](docs/oumi-ai-oumi.md) | 8332 | ![Oumi Logo](https://github.com/oumi-ai/oumi/raw/main/docs/_static/logo/header_l |
@@ -120,63 +120,63 @@ Daily curated docs from popular GitHub repos:
 | [meta-llama/llama-stack](docs/meta-llama-llama-stack.md) | 7886 | # Llama Stack |
 | [openedx/edx-platform](docs/openedx-edx-platform.md) | 7834 | Open edX Platform |
 | [LibrePhotos/librephotos](docs/LibrePhotos-librephotos.md) | 7742 | [![Discord](https://img.shields.io/discord/784619049208250388?style=plastic)][di |
-| [KittenML/KittenTTS](docs/KittenML-KittenTTS.md) | 7643 | # Kitten TTS: Realistic Text-to-Speech for Everyone 🗣️ |
-| [lancedb/lancedb](docs/lancedb-lancedb.md) | 7349 | # LanceDB: The Open-Source Multimodal AI Lakehouse for Blazing-Fast Vector Searc |
+| [KittenML/KittenTTS](docs/KittenML-KittenTTS.md) | 7643 | # Kitten TTS: Realistic Text-to-Speech for Everyone |
+| [lancedb/lancedb](docs/lancedb-lancedb.md) | 7349 | <a href="https://cloud.lancedb.com" target="_blank"> |
 | [sphinx-doc/sphinx](docs/sphinx-doc-sphinx.md) | 7285 | ======== |
 | [stamparm/maltrail](docs/stamparm-maltrail.md) | 7102 | ![Maltrail](https://i.imgur.com/3xjInOD.png) |
 | [lastmile-ai/mcp-agent](docs/lastmile-ai-mcp-agent.md) | 6935 | <p align="center"> |
 | [nonebot/nonebot2](docs/nonebot-nonebot2.md) | 6882 | <!-- markdownlint-disable MD033 MD041 --> |
 | [microsoft/RD-Agent](docs/microsoft-RD-Agent.md) | 6693 | <h4 align="center"> |
-| [coleam00/context-engineering-intro](docs/coleam00-context-engineering-intro.md) | 6490 | # Context Engineering: Build AI Applications with Confidence ([GitHub Repo](http |
-| [MODSetter/SurfSense](docs/MODSetter-SurfSense.md) | 6434 | [![Discord](https://img.shields.io/discord/1359368468260192417?logo=discord)](ht |
-| [crestalnetwork/intentkit](docs/crestalnetwork-intentkit.md) | 6422 | # IntentKit: Build Autonomous AI Agents with Ease |
+| [coleam00/context-engineering-intro](docs/coleam00-context-engineering-intro.md) | 6490 | # Context Engineering: Revolutionize AI Coding with Comprehensive Context |
+| [MODSetter/SurfSense](docs/MODSetter-SurfSense.md) | 6434 | <!-- Improved README for SurfSense --> |
+| [crestalnetwork/intentkit](docs/crestalnetwork-intentkit.md) | 6422 | # IntentKit: Build and Manage Intelligent AI Agents |
 | [feast-dev/feast](docs/feast-dev-feast.md) | 6217 | <p align="center"> |
 | [traceloop/openllmetry](docs/traceloop-openllmetry.md) | 6193 | <p align="center"> |
 | [awslabs/mcp](docs/awslabs-mcp.md) | 6111 | # Supercharge Your AWS Development with AWS MCP Servers |
-| [TagStudioDev/TagStudio](docs/TagStudioDev-TagStudio.md) | 6106 | # TagStudio: Organize Your Files with Freedom and Flexibility |
+| [TagStudioDev/TagStudio](docs/TagStudioDev-TagStudio.md) | 6106 | # TagStudio: Organize Your Files with Powerful Tagging (and Freedom!) |
 | [oppia/oppia](docs/oppia-oppia.md) | 6105 | # [Oppia](https://www.oppia.org) [![Full-stack tests](https://github.com/oppia/o |
 | [CTFd/CTFd](docs/CTFd-CTFd.md) | 6086 | # CTFd: The Open-Source Capture The Flag Platform |
 | [simular-ai/Agent-S](docs/simular-ai-Agent-S.md) | 5697 | <h1 align="center"> |
 | [openstack/openstack](docs/openstack-openstack.md) | 5639 | OpenStack |
 | [pylint-dev/pylint](docs/pylint-dev-pylint.md) | 5529 | `Pylint`_ |
-| [commixproject/commix](docs/commixproject-commix.md) | 5367 | <p align="left"> |
+| [commixproject/commix](docs/commixproject-commix.md) | 5367 | <p align="center"> |
 | [linkedin/Liger-Kernel](docs/linkedin-Liger-Kernel.md) | 5325 | <a name="readme-top"></a> |
 | [mcp-use/mcp-use](docs/mcp-use-mcp-use.md) | 5291 | <div align="center"> |
-| [WeblateOrg/weblate](docs/WeblateOrg-weblate.md) | 5211 | <!-- Weblate Logo --> |
+| [WeblateOrg/weblate](docs/WeblateOrg-weblate.md) | 5211 | <div align="center"> |
 | [autoscrape-labs/pydoll](docs/autoscrape-labs-pydoll.md) | 5171 | <p align="center"> |
-| [Azure/Azure-Sentinel](docs/Azure-Azure-Sentinel.md) | 5165 | # Microsoft Sentinel and Microsoft 365 Defender: Your One-Stop Shop for Security |
-| [inventree/InvenTree](docs/inventree-InvenTree.md) | 5136 | <!-- Header with Logo and Project Title --> |
-| [beeware/toga](docs/beeware-toga.md) | 5086 | # Toga: Build Native GUI Applications in Python |
+| [Azure/Azure-Sentinel](docs/Azure-Azure-Sentinel.md) | 5165 | # Enhance Your Security Posture with Microsoft Sentinel and Microsoft 365 Defend |
+| [inventree/InvenTree](docs/inventree-InvenTree.md) | 5136 | <!-- InvenTree Logo --> |
+| [beeware/toga](docs/beeware-toga.md) | 5086 | # Toga: Build Native GUI Applications with Python |
 | [Azure/azure-sdk-for-python](docs/Azure-azure-sdk-for-python.md) | 4980 | # Azure SDK for Python: Simplify Cloud Development |
 | [kyegomez/swarms](docs/kyegomez-swarms.md) | 4976 | <div align="center"> |
 | [authlib/authlib](docs/authlib-authlib.md) | 4933 | <div align="center"> |
 | [marqo-ai/marqo](docs/marqo-ai-marqo.md) | 4895 | <p align="center"> |
 | [spack/spack](docs/spack-spack.md) | 4730 | <div align="left"> |
-| [funstory-ai/BabelDOC](docs/funstory-ai-BabelDOC.md) | 4684 | # BabelDOC: Effortlessly Translate Scientific PDFs 🚀 |
+| [funstory-ai/BabelDOC](docs/funstory-ai-BabelDOC.md) | 4684 | --- |
 | [quantumlib/Cirq](docs/quantumlib-Cirq.md) | 4655 | <!-- H1 title omitted because our logo acts as the title. --> |
 | [AgentOps-AI/agentops](docs/AgentOps-AI-agentops.md) | 4637 | <div align="center"> |
 | [kserve/kserve](docs/kserve-kserve.md) | 4492 | # KServe: Production-Ready Model Serving on Kubernetes |
-| [OWASP/Nettacker](docs/OWASP-Nettacker.md) | 4440 | # OWASP Nettacker: Automated Penetration Testing and Information Gathering Frame |
-| [audreyfeldroy/cookiecutter-pypackage](docs/audreyfeldroy-cookiecutter-pypackage.md) | 4439 | # Create Production-Ready Python Packages Quickly with Cookiecutter PyPackage |
+| [OWASP/Nettacker](docs/OWASP-Nettacker.md) | 4440 | # OWASP Nettacker: Automated Penetration Testing and Information Gathering |
+| [audreyfeldroy/cookiecutter-pypackage](docs/audreyfeldroy-cookiecutter-pypackage.md) | 4439 | # Cookiecutter PyPackage: Jumpstart Your Python Package Development |
 | [isaac-sim/IsaacLab](docs/isaac-sim-IsaacLab.md) | 4312 | ![Isaac Lab](docs/source/_static/isaaclab.jpg) |
 | [Azure/azure-cli](docs/Azure-azure-cli.md) | 4299 | # Azure CLI: Manage Your Azure Resources from the Command Line |
 | [yihong0618/running_page](docs/yihong0618-running_page.md) | 4153 | ## Note |
-| [Breakthrough/PySceneDetect](docs/Breakthrough-PySceneDetect.md) | 4144 | ![PySceneDetect](https://raw.githubusercontent.com/Breakthrough/PySceneDetect/ma |
-| [ag2ai/faststream](docs/ag2ai-faststream.md) | 4122 | # FastStream: Effortlessly Integrate Event Streams in Your Microservices |
+| [Breakthrough/PySceneDetect](docs/Breakthrough-PySceneDetect.md) | 4144 | [![PySceneDetect](https://raw.githubusercontent.com/Breakthrough/PySceneDetect/m |
+| [ag2ai/faststream](docs/ag2ai-faststream.md) | 4122 | # FastStream: Effortless Event Stream Integration for Microservices |
 | [bytedance/trae-agent](docs/bytedance-trae-agent.md) | 4091 | # Trae Agent: Your AI-Powered Software Engineering Assistant |
-| [Open-LLM-VTuber/Open-LLM-VTuber](docs/Open-LLM-VTuber-Open-LLM-VTuber.md) | 4062 | <div align="center"> |
+| [Open-LLM-VTuber/Open-LLM-VTuber](docs/Open-LLM-VTuber-Open-LLM-VTuber.md) | 4062 | <picture> |
 | [vbskycn/iptv](docs/vbskycn-iptv.md) | 4024 | --- |
 | [zeromq/pyzmq](docs/zeromq-pyzmq.md) | 3944 | # PyZMQ: Python bindings for ØMQ |
-| [Kozea/Radicale](docs/Kozea-Radicale.md) | 3932 | # Radicale: Your Simple & Powerful CalDAV/CardDAV Server |
+| [Kozea/Radicale](docs/Kozea-Radicale.md) | 3932 | # Radicale: The Simple and Powerful CalDAV and CardDAV Server |
 | [ciromattia/kcc](docs/ciromattia-kcc.md) | 3883 | <img src="header.jpg" alt="Header Image" width="400"> |
 | [kubeflow/pipelines](docs/kubeflow-pipelines.md) | 3882 | # Kubeflow Pipelines: Build, Deploy, and Manage ML Workflows on Kubernetes |
 | [lexiforest/curl_cffi](docs/lexiforest-curl_cffi.md) | 3878 | # curl_cffi |
 | [Kiln-AI/Kiln](docs/Kiln-AI-Kiln.md) | 3859 | <p align="center"> |
-| [codelion/openevolve](docs/codelion-openevolve.md) | 3673 | # OpenEvolve: Unleash Autonomous Code Optimization with LLMs |
+| [codelion/openevolve](docs/codelion-openevolve.md) | 3673 | # OpenEvolve: The Open-Source Evolutionary Coding Agent |
 | [Klavis-AI/klavis](docs/Klavis-AI-klavis.md) | 3648 | <div align="center"> |
 | [pantsbuild/pants](docs/pantsbuild-pants.md) | 3536 | # Pants Build System |
-| [canonical/cloud-init](docs/canonical-cloud-init.md) | 3394 | # cloud-init: Automate Cloud Instance Initialization (Industry Standard) |
-| [Yuliang-Liu/MonkeyOCR](docs/Yuliang-Liu-MonkeyOCR.md) | 3294 | # MonkeyOCR: Extracting Insights from Documents with AI |
+| [canonical/cloud-init](docs/canonical-cloud-init.md) | 3394 | # Cloud-init: Automate Cloud Instance Initialization |
+| [Yuliang-Liu/MonkeyOCR](docs/Yuliang-Liu-MonkeyOCR.md) | 3294 | html |
 | [ag2ai/ag2](docs/ag2ai-ag2.md) | 3251 | <p align="center"> |
 | [rio-labs/rio](docs/rio-labs-rio.md) | 3233 | ![Rio Readme 4](https://github.com/user-attachments/assets/a28ad729-0668-4810-bf |
 | [pyvista/pyvista](docs/pyvista-pyvista.md) | 3208 | ####### |
@@ -187,65 +187,66 @@ Daily curated docs from popular GitHub repos:
 | [NEKOparapa/AiNiee](docs/NEKOparapa-AiNiee.md) | 3043 | <div align="center"> |
 | [morphik-org/morphik-core](docs/morphik-org-morphik-core.md) | 3010 | <p align="center"> |
 | [pytorch/executorch](docs/pytorch-executorch.md) | 3002 | <div align="center"> |
-| [beeware/briefcase](docs/beeware-briefcase.md) | 2999 | <img src="https://beeware.org/project/briefcase/briefcase.png" width="72" alt="l |
+| [beeware/briefcase](docs/beeware-briefcase.md) | 2999 | [<img src="https://beeware.org/project/briefcase/briefcase.png" width="72" alt=" |
 | [zhaochenyang20/Awesome-ML-SYS-Tutorial](docs/zhaochenyang20-Awesome-ML-SYS-Tutorial.md) | 2964 | # Awesome-ML-SYS-Tutorial |
 | [pytorch/rl](docs/pytorch-rl.md) | 2905 | [![Unit-tests](https://github.com/pytorch/rl/actions/workflows/test-linux.yml/ba |
-| [emeryberger/CSrankings](docs/emeryberger-CSrankings.md) | 2893 | # CS Rankings: Your Comprehensive Guide to Top Computer Science Schools |
-| [Pycord-Development/pycord](docs/Pycord-Development-pycord.md) | 2856 | # Pycord: The Modern Python Library for Discord Bots |
+| [emeryberger/CSrankings](docs/emeryberger-CSrankings.md) | 2893 | # CS Rankings: A Data-Driven Ranking of Top Computer Science Schools |
+| [Pycord-Development/pycord](docs/Pycord-Development-pycord.md) | 2856 | [![Pycord](https://raw.githubusercontent.com/Pycord-Development/pycord/master/py |
 | [EvolvingLMMs-Lab/lmms-eval](docs/EvolvingLMMs-Lab-lmms-eval.md) | 2815 | <p align="center" width="70%"> |
-| [ML-GSAI/LLaDA](docs/ML-GSAI-LLaDA.md) | 2811 | # LLaDA: Revolutionizing Language Modeling with Diffusion Models |
+| [ML-GSAI/LLaDA](docs/ML-GSAI-LLaDA.md) | 2811 | # LLaDA: Large Language Diffusion Models - Unleashing the Power of Diffusion for |
 | [willccbb/verifiers](docs/willccbb-verifiers.md) | 2797 | <div align="center"> |
 | [frappe/hrms](docs/frappe-hrms.md) | 2744 | <div align="center"> |
-| [blackorbird/APT_REPORT](docs/blackorbird-APT_REPORT.md) | 2657 | # APT Report & Cyber Threat Intelligence Collection |
-| [langchain-ai/deepagents](docs/langchain-ai-deepagents.md) | 2644 | # 🧠 Deep Agents: Build Powerful AI Agents for Complex Tasks |
-| [Maciek-roboblog/Claude-Code-Usage-Monitor](docs/Maciek-roboblog-Claude-Code-Usage-Monitor.md) | 2638 | # 🚀 Claude Code Usage Monitor: Real-time AI Token Tracking & Analytics |
+| [blackorbird/APT_REPORT](docs/blackorbird-APT_REPORT.md) | 2657 | # APT_REPORT: Your One-Stop Resource for Advanced Persistent Threat Intelligence |
+| [langchain-ai/deepagents](docs/langchain-ai-deepagents.md) | 2644 | # Deep Agents: Build Powerful, Autonomous LLM Applications |
+| [Maciek-roboblog/Claude-Code-Usage-Monitor](docs/Maciek-roboblog-Claude-Code-Usage-Monitor.md) | 2638 | # 🚀 Claude Code Usage Monitor: Real-time Token Tracking & AI-Powered Predictions |
 | [pytorch/xla](docs/pytorch-xla.md) | 2637 | # PyTorch/XLA |
-| [iterative/datachain](docs/iterative-datachain.md) | 2614 | # DataChain: Build AI-Powered Data Pipelines for Unstructured Data |
-| [RUC-NLPIR/FlashRAG](docs/RUC-NLPIR-FlashRAG.md) | 2586 | # FlashRAG: Your Toolkit for Efficient Retrieval-Augmented Generation (RAG) Rese |
-| [NVIDIA/TransformerEngine](docs/NVIDIA-TransformerEngine.md) | 2573 | [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https:/ |
-| [dingyufei615/ai-goofish-monitor](docs/dingyufei615-ai-goofish-monitor.md) | 2572 | # AI-Powered Goofish Monitor: Smartly Track & Analyze Xianyu (Goofish) Listings  |
-| [bookwyrm-social/bookwyrm](docs/bookwyrm-social-bookwyrm.md) | 2484 | # BookWyrm: Your Social Network for Books |
-| [hwchase17/deepagents](docs/hwchase17-deepagents.md) | 2480 | # 🧠 Deep Agents: Unleash Advanced AI Capabilities |
+| [iterative/datachain](docs/iterative-datachain.md) | 2614 | # DataChain: The Python-Powered AI Data Warehouse for Unstructured Data |
+| [RUC-NLPIR/FlashRAG](docs/RUC-NLPIR-FlashRAG.md) | 2586 | # ⚡ FlashRAG: The Ultimate Python Toolkit for RAG Research ⚡ |
+| [NVIDIA/TransformerEngine](docs/NVIDIA-TransformerEngine.md) | 2573 | # Transformer Engine: Accelerate Transformer Models with FP8 Precision |
+| [dingyufei615/ai-goofish-monitor](docs/dingyufei615-ai-goofish-monitor.md) | 2572 | # AI-Powered Goofish (闲鱼) Smart Monitor: Your AI Assistant for Finding Deals |
+| [bookwyrm-social/bookwyrm](docs/bookwyrm-social-bookwyrm.md) | 2484 | # BookWyrm: Your Social Network for Books & Reading |
+| [hwchase17/deepagents](docs/hwchase17-deepagents.md) | 2480 | # 🧠🤖 Deep Agents: Build Powerful AI Agents with Ease |
 | [commaai/opendbc](docs/commaai-opendbc.md) | 2438 | <div align="center"> |
-| [bghira/SimpleTuner](docs/bghira-SimpleTuner.md) | 2432 | # SimpleTuner: Train Cutting-Edge Diffusion Models with Ease |
+| [bghira/SimpleTuner](docs/bghira-SimpleTuner.md) | 2432 | # SimpleTuner: Train Cutting-Edge AI Models with Ease 🚀 |
 | [stanford-crfm/helm](docs/stanford-crfm-helm.md) | 2429 | # Holistic Evaluation of Language Models (HELM) |
 | [michaelfeil/infinity](docs/michaelfeil-infinity.md) | 2399 |  |
 | [python-gitlab/python-gitlab](docs/python-gitlab-python-gitlab.md) | 2373 | python-gitlab |
 | [xingpingcn/enhanced-FaaS-in-China](docs/xingpingcn-enhanced-FaaS-in-China.md) | 2368 | # enhanced-FaaS-in-China |
-| [griptape-ai/griptape](docs/griptape-ai-griptape.md) | 2349 | ![Griptape](https://assets-global.website-files.com/65d658559223871198e78bca/65f |
-| [Wan-Video/Wan2.2](docs/Wan-Video-Wan2.2.md) | 2329 | # Wan2.2: Unleash the Power of Advanced Video Generation |
+| [griptape-ai/griptape](docs/griptape-ai-griptape.md) | 2349 | # Griptape: Build Powerful AI Applications with Ease |
+| [Wan-Video/Wan2.2](docs/Wan-Video-Wan2.2.md) | 2329 | # Wan2.2: Unleashing Cinematic Video Generation with Open-Source AI |
 | [nvaccess/nvda](docs/nvaccess-nvda.md) | 2323 | # NVDA |
 | [pytorch/ao](docs/pytorch-ao.md) | 2250 | <div align="center"> |
 | [SwanHubX/SwanLab](docs/SwanHubX-SwanLab.md) | 2178 | <div align="center"> |
-| [aws/sagemaker-python-sdk](docs/aws-sagemaker-python-sdk.md) | 2170 | <div align="center"> |
-| [GrahamDumpleton/wrapt](docs/GrahamDumpleton-wrapt.md) | 2164 | # Wrapt: The Python Decorator and Wrapping Library |
+| [aws/sagemaker-python-sdk](docs/aws-sagemaker-python-sdk.md) | 2170 | <!-- Banner Image --> |
+| [GrahamDumpleton/wrapt](docs/GrahamDumpleton-wrapt.md) | 2164 | # wrapt: Powerful Python Decorators, Wrappers & Monkey Patching |
 | [meltano/meltano](docs/meltano-meltano.md) | 2153 | <div align="center"> |
-| [anthropics/claude-code-security-review](docs/anthropics-claude-code-security-review.md) | 2147 | # Enhance Your Code Security with AI-Powered Reviews using Claude Code |
-| [fatihak/InkyPi](docs/fatihak-InkyPi.md) | 2103 | # InkyPi: Your Customizable E-Ink Display |
+| [anthropics/claude-code-security-review](docs/anthropics-claude-code-security-review.md) | 2147 | # Enhance Your Code Security with AI-Powered Analysis: Claude Code Security Revi |
+| [fatihak/InkyPi](docs/fatihak-InkyPi.md) | 2103 | # InkyPi: Your Customizable E-Ink Dashboard  |
 | [speaches-ai/speaches](docs/speaches-ai-speaches.md) | 2058 | > [!NOTE] |
-| [harvard-edge/cs249r_book](docs/harvard-edge-cs249r_book.md) | 2052 | # Machine Learning Systems: Build Real-World AI |
+| [harvard-edge/cs249r_book](docs/harvard-edge-cs249r_book.md) | 2052 | # Machine Learning Systems: Build Real-World AI Systems |
 | [pypa/cibuildwheel](docs/pypa-cibuildwheel.md) | 2030 | cibuildwheel |
 | [strands-agents/sdk-python](docs/strands-agents-sdk-python.md) | 2016 | <div align="center"> |
 | [mavlink/mavlink](docs/mavlink-mavlink.md) | 1961 | [![Build Status](https://github.com/mavlink/mavlink/workflows/Test%20and%20deplo |
-| [GoogleCloudPlatform/PerfKitBenchmarker](docs/GoogleCloudPlatform-PerfKitBenchmarker.md) | 1956 | # PerfKit Benchmarker: Cloud Performance Benchmarking Made Easy |
+| [GoogleCloudPlatform/PerfKitBenchmarker](docs/GoogleCloudPlatform-PerfKitBenchmarker.md) | 1956 | # PerfKit Benchmarker: The Ultimate Cloud Benchmarking Tool |
 | [google/osv.dev](docs/google-osv.dev.md) | 1922 | <picture> |
+| [Cloud-CV/EvalAI](docs/Cloud-CV-EvalAI.md) | 1915 | <p align="center"><img width="65%" src="docs/source/_static/img/evalai_logo.png" |
 | [microsoft/VibeVoice](docs/microsoft-VibeVoice.md) | 1913 | <div align="center"> |
 | [testcontainers/testcontainers-python](docs/testcontainers-testcontainers-python.md) | 1912 | [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v |
-| [AI-Hypercomputer/maxtext](docs/AI-Hypercomputer-maxtext.md) | 1858 | # MaxText: High-Performance, Scalable LLM Training and Inference |
+| [AI-Hypercomputer/maxtext](docs/AI-Hypercomputer-maxtext.md) | 1858 | # MaxText: High-Performance, Open-Source LLMs with Jax |
 | [qutip/qutip](docs/qutip-qutip.md) | 1856 | QuTiP: Quantum Toolbox in Python |
 | [zai-org/GLM-4.5](docs/zai-org-GLM-4.5.md) | 1848 | # GLM-4.5 |
 | [opengaming/osgameclones](docs/opengaming-osgameclones.md) | 1800 | # Open Source Game Clones |
 | [rednote-hilab/dots.ocr](docs/rednote-hilab-dots.ocr.md) | 1787 | <div align="center"> |
 | [AgentOps-AI/tokencost](docs/AgentOps-AI-tokencost.md) | 1785 | <p align="center"> |
 | [openlit/openlit](docs/openlit-openlit.md) | 1768 | <div align="center"> |
-| [apache/burr](docs/apache-burr.md) | 1739 | # Burr: Build and Monitor Stateful AI Applications (LLMs, Chatbots, & More) |
+| [apache/burr](docs/apache-burr.md) | 1739 | # Burr: Build and Manage Stateful AI Applications with Ease |
 | [alandtse/alexa_media_player](docs/alandtse-alexa_media_player.md) | 1734 | [![Validate](https://github.com/alandtse/alexa_media_player/actions/workflows/va |
-| [NotJoeMartinez/yt-fts](docs/NotJoeMartinez-yt-fts.md) | 1730 | # yt-fts: Search YouTube Channels with Ease 🔎 |
+| [NotJoeMartinez/yt-fts](docs/NotJoeMartinez-yt-fts.md) | 1730 | html |
 | [vacanza/holidays](docs/vacanza-holidays.md) | 1695 | # Holidays |
 | [QwenLM/Qwen-Image](docs/QwenLM-Qwen-Image.md) | 1674 | <p align="center"> |
-| [hsliuping/TradingAgents-CN](docs/hsliuping-TradingAgents-CN.md) | 1663 | # TradingAgents-CN: 中文金融交易决策框架，解锁 A 股投资新视野! |
+| [hsliuping/TradingAgents-CN](docs/hsliuping-TradingAgents-CN.md) | 1663 | # TradingAgents-CN: 中文金融交易AI框架 - 🚀 开启您的智能交易之旅 |
 | [quantumlib/OpenFermion](docs/quantumlib-OpenFermion.md) | 1610 | .. image:: https://raw.githubusercontent.com/quantumlib/OpenFermion/refs/heads/m |
-| [davidkimai/Context-Engineering](docs/davidkimai-Context-Engineering.md) | 1562 | # Context Engineering: Master the Art and Science of Context Design (🚀 Explore t |
+| [davidkimai/Context-Engineering](docs/davidkimai-Context-Engineering.md) | 1562 | # Context Engineering: Master the Art of Information in LLMs |
 | [nix-community/NUR](docs/nix-community-NUR.md) | 1536 | <div id="top"></div> |
 | [pytest-dev/pytest-asyncio](docs/pytest-dev-pytest-asyncio.md) | 1534 | pytest-asyncio |
 | [snap-stanford/Biomni](docs/snap-stanford-Biomni.md) | 1515 | <p align="center"> |
@@ -253,54 +254,55 @@ Daily curated docs from popular GitHub repos:
 | [saturday06/VRM-Addon-for-Blender](docs/saturday06-VRM-Addon-for-Blender.md) | 1467 | <a name="en" /> |
 | [scanapi/scanapi](docs/scanapi-scanapi.md) | 1423 | ![](https://github.com/scanapi/design/raw/main/images/github-hero-dark.png) |
 | [MemTensor/MemOS](docs/MemTensor-MemOS.md) | 1388 | <div align="center"> |
-| [Lightning-AI/lightning-thunder](docs/Lightning-AI-lightning-thunder.md) | 1384 | <!-- PROJECT LOGO --> |
+| [Lightning-AI/lightning-thunder](docs/Lightning-AI-lightning-thunder.md) | 1384 | <div align="center"> |
 | [tdrussell/diffusion-pipe](docs/tdrussell-diffusion-pipe.md) | 1370 | # diffusion-pipe |
 | [substrait-io/substrait](docs/substrait-io-substrait.md) | 1365 | # Substrait |
 | [xdavidhu/awesome-google-vrp-writeups](docs/xdavidhu-awesome-google-vrp-writeups.md) | 1336 | # Awesome Google VRP Writeups |
 | [RoboVerseOrg/RoboVerse](docs/RoboVerseOrg-RoboVerse.md) | 1319 | <p align="center"> |
-| [RoboTwin-Platform/RoboTwin](docs/RoboTwin-Platform-RoboTwin.md) | 1260 | # RoboTwin: The Ultimate Benchmark for Bimanual Robotic Manipulation |
+| [RoboTwin-Platform/RoboTwin](docs/RoboTwin-Platform-RoboTwin.md) | 1260 | # RoboTwin: Revolutionizing Bimanual Robotic Manipulation (Latest Version: 2.0) |
 | [dbt-labs/metricflow](docs/dbt-labs-metricflow.md) | 1238 | <p align="center"> |
-| [1038lab/ComfyUI-RMBG](docs/1038lab-ComfyUI-RMBG.md) | 1233 | # ComfyUI-RMBG: Advanced Background Removal and Segmentation for ComfyUI |
+| [1038lab/ComfyUI-RMBG](docs/1038lab-ComfyUI-RMBG.md) | 1233 | # ComfyUI-RMBG: Effortlessly Remove Backgrounds and Segment Images in ComfyUI |
 | [canonical/snapcraft](docs/canonical-snapcraft.md) | 1225 | <img src="https://dashboard.snapcraft.io/site_media/appmedia/2018/04/Snapcraft-l |
-| [UKGovernmentBEIS/inspect_ai](docs/UKGovernmentBEIS-inspect_ai.md) | 1224 | # Inspect: Evaluate and Secure Large Language Models |
-| [NevaMind-AI/memU](docs/NevaMind-AI-memU.md) | 1207 | <div align="center"> |
+| [UKGovernmentBEIS/inspect_ai](docs/UKGovernmentBEIS-inspect_ai.md) | 1224 | # Inspect: Evaluate and Enhance Your Large Language Models |
+| [NevaMind-AI/memU](docs/NevaMind-AI-memU.md) | 1207 | <!-- Improved README for MemU - Optimized for SEO --> |
 | [fastapi-practices/fastapi_best_architecture](docs/fastapi-practices-fastapi_best_architecture.md) | 1206 | <div align="center"> |
 | [run-llama/notebookllama](docs/run-llama-notebookllama.md) | 1149 | # NotebookLlaMa🦙 |
-| [Tencent-Hunyuan/HunyuanWorld-1.0](docs/Tencent-Hunyuan-HunyuanWorld-1.0.md) | 1146 | # HunyuanWorld 1.0: Generate Immersive 3D Worlds from Text or Images |
-| [brennercruvinel/CCPlugins](docs/brennercruvinel-CCPlugins.md) | 1134 | # CCPlugins: Supercharge Your Claude Code CLI with AI-Powered Developer Workflow |
+| [Tencent-Hunyuan/HunyuanWorld-1.0](docs/Tencent-Hunyuan-HunyuanWorld-1.0.md) | 1146 | # HunyuanWorld 1.0: Create Interactive 3D Worlds from Text and Images |
+| [brennercruvinel/CCPlugins](docs/brennercruvinel-CCPlugins.md) | 1134 | # CCPlugins: Supercharge Your Claude Code CLI for Faster, Smarter Development |
 | [aws/deep-learning-containers](docs/aws-deep-learning-containers.md) | 1093 | # AWS Deep Learning Containers: Optimized Docker Images for Machine Learning |
 | [omnara-ai/omnara](docs/omnara-ai-omnara.md) | 1084 | # Omnara - Mission Control for Your AI Agents 🚀 |
 | [Vector-Wangel/XLeRobot](docs/Vector-Wangel-XLeRobot.md) | 1080 | # XLeRobot: Affordable Open-Source Dual-Arm Mobile Robot for Embodied AI |
-| [ZhiXuanWang/cf-speed-dns](docs/ZhiXuanWang-cf-speed-dns.md) | 1078 | # Optimize Your Cloudflare CDN Performance with cf-speed-dns |
-| [ShivamSarodia/ShivyC](docs/ShivamSarodia-ShivyC.md) | 1062 | # ShivyC: A C Compiler Written in Python |
+| [ZhiXuanWang/cf-speed-dns](docs/ZhiXuanWang-cf-speed-dns.md) | 1078 | # Optimize Your Cloudflare CDN with cf-speed-dns |
+| [ShivamSarodia/ShivyC](docs/ShivamSarodia-ShivyC.md) | 1062 | # ShivyC: A C Compiler Built in Python |
 | [ycdxsb/PocOrExp_in_Github](docs/ycdxsb-PocOrExp_in_Github.md) | 1055 | <h1 align="center">PocOrExp in Github</h1> |
 | [OpenPipe/ART](docs/OpenPipe-ART.md) | 1052 | <div align="center"> |
 | [vllm-project/vllm-ascend](docs/vllm-project-vllm-ascend.md) | 1041 | <p align="center"> |
-| [basetenlabs/truss](docs/basetenlabs-truss.md) | 1036 | # Truss: The Simplest Way to Deploy and Serve Your AI/ML Models |
-| [cms-dev/cms](docs/cms-dev-cms.md) | 977 | # Contest Management System (CMS): Powering Programming Competitions |
-| [calibrain/calibre-web-automated-book-downloader](docs/calibrain-calibre-web-automated-book-downloader.md) | 973 | # 📚 Automate Your eBook Library: Calibre-Web-Automated Book Downloader |
+| [basetenlabs/truss](docs/basetenlabs-truss.md) | 1036 | # Truss: Deploy and Serve Your AI/ML Models with Ease |
+| [cms-dev/cms](docs/cms-dev-cms.md) | 977 | # CMS: The Ultimate Contest Management System |
+| [calibrain/calibre-web-automated-book-downloader](docs/calibrain-calibre-web-automated-book-downloader.md) | 973 | # Automate Your eBook Library: Calibre-Web-Automated Book Downloader |
 | [sopel-irc/sopel](docs/sopel-irc-sopel.md) | 964 | ======= |
 | [lemonade-sdk/lemonade](docs/lemonade-sdk-lemonade.md) | 957 | ## 🍋 Lemonade: Local LLM Serving with GPU and NPU acceleration |
-| [hyunjun/bookmarks](docs/hyunjun-bookmarks.md) | 950 | # Comprehensive Bookmarks for Various Topics |
+| [hyunjun/bookmarks](docs/hyunjun-bookmarks.md) | 950 | # Comprehensive Bookmarks for Knowledge Discovery |
 | [python-semantic-release/python-semantic-release](docs/python-semantic-release-python-semantic-release.md) | 935 | Python Semantic Release |
 | [miracle2k/webassets](docs/miracle2k-webassets.md) | 929 | Asset management application for Python web development - use it to |
+| [anthropics/claude-code-sdk-python](docs/anthropics-claude-code-sdk-python.md) | 915 | # Unlock the Power of Claude Code with the Python SDK |
 | [translate/translate](docs/translate-translate.md) | 906 | Translate Toolkit |
 | [yyfz/Pi3](docs/yyfz-Pi3.md) | 881 | <h1 align="center">🌌 <em>&pi;³</em>: Scalable Permutation-Equivariant Visual Geo |
-| [AcademySoftwareFoundation/OpenCue](docs/AcademySoftwareFoundation-OpenCue.md) | 865 | # OpenCue: The Open-Source Render Management System for VFX and Animation |
+| [AcademySoftwareFoundation/OpenCue](docs/AcademySoftwareFoundation-OpenCue.md) | 865 | # OpenCue: The Open-Source Render Management System for VFX & Animation |
 | [onestardao/WFGY](docs/onestardao-WFGY.md) | 864 | > ⭐🚀 One man · Cold start · 70 days · 800 stars ⭐   |
-| [RiseInRose/MiniGPT-4-ZH](docs/RiseInRose-MiniGPT-4-ZH.md) | 859 | # MiniGPT-4: Unleash Visual Language Understanding with Advanced LLMs |
+| [RiseInRose/MiniGPT-4-ZH](docs/RiseInRose-MiniGPT-4-ZH.md) | 859 | # MiniGPT-4: Unleashing Visual Language Understanding with Advanced LLMs |
 | [shane-mason/FieldStation42](docs/shane-mason-FieldStation42.md) | 851 | # FieldStation42 |
 | [nv-tlabs/vipe](docs/nv-tlabs-vipe.md) | 831 | # ViPE: Video Pose Engine for Geometric 3D Perception |
 | [PrunaAI/pruna](docs/PrunaAI-pruna.md) | 829 | <div align="center"> |
-| [GenericMappingTools/pygmt](docs/GenericMappingTools-pygmt.md) | 814 | # PyGMT: Create Stunning Geospatial Maps with Python |
-| [ilanschnell/bitarray](docs/ilanschnell-bitarray.md) | 757 | # bitarray: Efficient Arrays of Booleans in Python |
-| [StanfordVL/BEHAVIOR-1K](docs/StanfordVL-BEHAVIOR-1K.md) | 739 | # BEHAVIOR-1K: Embodied AI for Everyday Activities |
-| [SomeOddCodeGuy/WilmerAI](docs/SomeOddCodeGuy-WilmerAI.md) | 731 | # WilmerAI: Expertly Routing Language Models for Complex Workflows |
-| [gdsfactory/gdsfactory](docs/gdsfactory-gdsfactory.md) | 729 | # GDSFactory: Design, Simulate, and Fabricate Chips with Python |
-| [LuckyOne7777/ChatGPT-Micro-Cap-Experiment](docs/LuckyOne7777-ChatGPT-Micro-Cap-Experiment.md) | 674 | # ChatGPT Micro-Cap Experiment: Can AI Beat the Market? |
+| [GenericMappingTools/pygmt](docs/GenericMappingTools-pygmt.md) | 814 | # PyGMT: Create Stunning Maps and Geospatial Visualizations with Python |
+| [ilanschnell/bitarray](docs/ilanschnell-bitarray.md) | 757 | # bitarray: High-Performance Boolean Arrays in Python |
+| [StanfordVL/BEHAVIOR-1K](docs/StanfordVL-BEHAVIOR-1K.md) | 739 | # BEHAVIOR-1K: Revolutionizing Embodied AI with 1,000 Everyday Activities |
+| [SomeOddCodeGuy/WilmerAI](docs/SomeOddCodeGuy-WilmerAI.md) | 731 | # WilmerAI: Your Intelligent LLM Workflow Orchestrator |
+| [gdsfactory/gdsfactory](docs/gdsfactory-gdsfactory.md) | 729 | # GDSFactory: Design Chips with Python - Photonic, Analog, Quantum, and More |
+| [LuckyOne7777/ChatGPT-Micro-Cap-Experiment](docs/LuckyOne7777-ChatGPT-Micro-Cap-Experiment.md) | 674 | # ChatGPT Micro-Cap Trading Experiment: Can AI Beat the Market? |
 | [minitap-ai/mobile-use](docs/minitap-ai-mobile-use.md) | 669 | # mobile-use: automate your phone with natural language |
-| [jupyter-server/enterprise_gateway](docs/jupyter-server-enterprise_gateway.md) | 650 | # Jupyter Enterprise Gateway: Unleash the Power of Remote Kernels |
-| [ZZZSimulator/ZSim](docs/ZZZSimulator-ZSim.md) | 633 | # ZSim: Zenless Zone Zero Damage Calculator & Battle Simulator |
+| [jupyter-server/enterprise_gateway](docs/jupyter-server-enterprise_gateway.md) | 650 | # Jupyter Enterprise Gateway: Enable Remote Kernel Access for Jupyter Notebooks |
+| [ZZZSimulator/ZSim](docs/ZZZSimulator-ZSim.md) | 633 | # ZSim: Zenless Zone Zero Battle Simulator & Damage Calculator |
 | [mother-of-all-self-hosting/mash-playbook](docs/mother-of-all-self-hosting-mash-playbook.md) | 632 | [![Support room on Matrix](https://img.shields.io/matrix/mash-playbook:devture.c |
 | [stanford-crfm/levanter](docs/stanford-crfm-levanter.md) | 626 | # Levanter |
 | [anthugeist/synapse-trading-bot](docs/anthugeist-synapse-trading-bot.md) | 625 |  |
@@ -308,39 +310,42 @@ Daily curated docs from popular GitHub repos:
 | [pact-foundation/pact-python](docs/pact-foundation-pact-python.md) | 617 | # Pact Python |
 | [RimSort/RimSort](docs/RimSort-RimSort.md) | 615 | <p align="center"> |
 | [pingcap/docs](docs/pingcap-docs.md) | 615 | # TiDB Documentation |
-| [Tencent/Youtu-agent](docs/Tencent-Youtu-agent.md) | 609 | # 🤖 Youtu-agent: Build Powerful Agents with Open-Source Models |
+| [Tencent/Youtu-agent](docs/Tencent-Youtu-agent.md) | 609 | # Youtu-agent: Build Powerful Agents with Open-Source Models |
 | [inclusionAI/AWorld](docs/inclusionAI-AWorld.md) | 595 | <div align="center"> |
-| [SkyworkAI/UniPic](docs/SkyworkAI-UniPic.md) | 583 | # Skywork UniPic: Unified Multimodal AI for Image Creation & Understanding |
-| [lablup/backend.ai](docs/lablup-backend.ai.md) | 577 | # Backend.AI: Your All-in-One Containerized Computing Platform |
-| [HybridRobotics/whole_body_tracking](docs/HybridRobotics-whole_body_tracking.md) | 573 | # BeyondMimic: Train and Deploy Dynamic Humanoid Motion Tracking with State-of-t |
+| [SkyworkAI/UniPic](docs/SkyworkAI-UniPic.md) | 583 | # UniPic: Revolutionizing Image Understanding and Generation with Unified Multim |
+| [lablup/backend.ai](docs/lablup-backend.ai.md) | 577 | # Backend.AI: Container-Based Computing for Modern Workloads |
+| [HybridRobotics/whole_body_tracking](docs/HybridRobotics-whole_body_tracking.md) | 573 | # BeyondMimic: Train Dynamic Motion Tracking with State-of-the-Art Quality |
 | [sun-guannan/CapCutAPI](docs/sun-guannan-CapCutAPI.md) | 571 |  |
+| [usestrix/strix](docs/usestrix-strix.md) | 566 | <div align="center"> |
 | [MeiGen-AI/InfiniteTalk](docs/MeiGen-AI-InfiniteTalk.md) | 562 | <div align="center"> |
 | [xXJSONDeruloXx/decky-lossless-scaling-vk](docs/xXJSONDeruloXx-decky-lossless-scaling-vk.md) | 552 | # decky-lsfg-vk |
 | [jd-opensource/OxyGent](docs/jd-opensource-OxyGent.md) | 535 | <!-- Copyright 2022 JD Co. |
 | [NVlabs/Long-RL](docs/NVlabs-Long-RL.md) | 514 | <p align="center" width="100%"> |
-| [jelmer/xandikos](docs/jelmer-xandikos.md) | 511 | # Xandikos: Your Lightweight, Git-Backed CalDAV/CardDAV Server |
+| [jelmer/xandikos](docs/jelmer-xandikos.md) | 511 | <!-- SEO-optimized README for Xandikos --> |
 | [phishdestroy/destroylist](docs/phishdestroy-destroylist.md) | 506 | # <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animat |
-| [amchii/tg-signer](docs/amchii-tg-signer.md) | 502 | # tg-signer: Automate Your Telegram Tasks |
-| [Bush2021/chrome_installer](docs/Bush2021-chrome_installer.md) | 492 | # Download Google Chrome Offline Installers |
-| [Charcoal-SE/SmokeDetector](docs/Charcoal-SE-SmokeDetector.md) | 487 | # SmokeDetector: Real-Time Spam Detection for Stack Exchange |
+| [amchii/tg-signer](docs/amchii-tg-signer.md) | 502 | # tg-signer: Automate Your Telegram Tasks with Python |
+| [Bush2021/chrome_installer](docs/Bush2021-chrome_installer.md) | 492 | # Google Chrome Offline Installers: Download Stable, Beta, Dev, and Canary Build |
+| [Charcoal-SE/SmokeDetector](docs/Charcoal-SE-SmokeDetector.md) | 487 | # SmokeDetector: Real-time Spam Detection for Stack Exchange |
 | [pypa/auditwheel](docs/pypa-auditwheel.md) | 487 | auditwheel |
 | [WeChatCV/Stand-In](docs/WeChatCV-Stand-In.md) | 486 | <div align="center"> |
 | [codegen-sh/codegen](docs/codegen-sh-codegen.md) | 485 | <p align="center"> |
-| [TomoeMami/S1PlainTextBackup](docs/TomoeMami-S1PlainTextBackup.md) | 484 | # S1 Forum Plain Text Backup: Preserving Stage1st Forum Threads |
+| [TomoeMami/S1PlainTextBackup](docs/TomoeMami-S1PlainTextBackup.md) | 484 | # S1 Forum Plain Text Backup - Preserving Stage1st Discussions  |
 | [eitchtee/WYGIWYH](docs/eitchtee-WYGIWYH.md) | 461 | <h1 align="center"> |
 | [zhinianboke/xianyu-auto-reply](docs/zhinianboke-xianyu-auto-reply.md) | 449 | # 🐟 闲鱼自动回复系统 |
-| [SkyworkAI/Matrix-3D](docs/SkyworkAI-Matrix-3D.md) | 446 | # Matrix-3D: Generate Interactive 3D Worlds from Text and Images  |
-| [ByteDance-Seed/m3-agent](docs/ByteDance-Seed-m3-agent.md) | 436 | <div align="left"> |
+| [SkyworkAI/Matrix-3D](docs/SkyworkAI-Matrix-3D.md) | 446 | # Matrix-3D: Generate and Explore Omnidirectional 3D Worlds |
+| [ByteDance-Seed/m3-agent](docs/ByteDance-Seed-m3-agent.md) | 436 | <div align=left> |
+| [kruskal-labs/toolfront](docs/kruskal-labs-toolfront.md) | 405 | <p align="center"> |
 | [frappe/press](docs/frappe-press.md) | 404 | <div align="center" markdown="1"> |
 | [groq/openbench](docs/groq-openbench.md) | 401 | # OpenBench: The Ultimate LLM Evaluation Toolkit 🚀 |
+| [xdslproject/xdsl](docs/xdslproject-xdsl.md) | 394 | <!-- markdownlint-disable-next-line MD041 --> |
 | [Francis-Rings/StableAvatar](docs/Francis-Rings-StableAvatar.md) | 386 | # StableAvatar: Generate Infinite-Length Audio-Driven Avatar Videos |
 | [Chengsong-Huang/R-Zero](docs/Chengsong-Huang-R-Zero.md) | 384 | # R-Zero: Self-Evolving Reasoning LLM from Zero Data |
-| [Dao-AILab/quack](docs/Dao-AILab-quack.md) | 381 | # QuACK: Accelerate Your AI with CuTe Kernels 🦆 |
+| [Dao-AILab/quack](docs/Dao-AILab-quack.md) | 381 | # 🦆 QuACK: Accelerate Your AI with CuTe Kernels 🦆 |
 | [pwncollege/dojo](docs/pwncollege-dojo.md) | 379 | # DOJO |
 | [tyql688/WutheringWavesUID](docs/tyql688-WutheringWavesUID.md) | 379 | # WutheringWavesUID |
-| [Chen-zexi/vllm-cli](docs/Chen-zexi-vllm-cli.md) | 363 | # vLLM CLI: Command-Line Interface for Serving Large Language Models |
+| [Chen-zexi/vllm-cli](docs/Chen-zexi-vllm-cli.md) | 363 | # vLLM CLI: Effortlessly Serve Large Language Models (LLMs) |
 | [nextcloud/appstore](docs/nextcloud-appstore.md) | 345 | <!-- |
-| [chatgpt-helper-tech/airport-access](docs/chatgpt-helper-tech-airport-access.md) | 311 | # 🚀 2025 机场推荐指南：解锁全球网络，畅享自由上网 |
+| [chatgpt-helper-tech/airport-access](docs/chatgpt-helper-tech-airport-access.md) | 311 | # 🚀 2025 机场推荐指南：解锁全球网络，畅享自由上网体验 |
 | [antgroup/echomimic_v3](docs/antgroup-echomimic_v3.md) | 310 | # EchoMimicV3: Revolutionizing Human Animation with 1.3B Parameters |
 | [FinStep-AI/ContestTrade](docs/FinStep-AI-ContestTrade.md) | 306 | <p align="center"> |
-| [frankwuzp/iptv-cn](docs/frankwuzp-iptv-cn.md) | 306 | # IPTV CN: Free Live TV for Jellyfin in China (and Guangdong) |
+| [frankwuzp/iptv-cn](docs/frankwuzp-iptv-cn.md) | 306 | # IPTV-CN: Free Chinese IPTV Resources for Jellyfin |

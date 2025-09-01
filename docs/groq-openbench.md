@@ -1,76 +1,51 @@
 # OpenBench: The Ultimate LLM Evaluation Toolkit 🚀
 
-**Quickly benchmark any language model across various providers and tasks.** OpenBench provides a standardized, open-source infrastructure for evaluating LLMs, empowering researchers and developers to rigorously assess model performance. **[Explore the OpenBench Repository](https://github.com/groq/openbench)**
+**Unlock the power of comprehensive LLM benchmarking with OpenBench, a provider-agnostic, open-source evaluation infrastructure.** Easily compare and evaluate language models across 35+ benchmarks with support for 30+ providers including Groq, OpenAI, Anthropic, and more! [Explore OpenBench on GitHub](https://github.com/groq/openbench).
 
 [![PyPI version](https://badge.fury.io/py/openbench.svg)](https://badge.fury.io/py/openbench)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-## Key Features:
+## Key Features
 
-*   **Provider-Agnostic:** Seamlessly works with 30+ model providers, including Groq, OpenAI, Anthropic, Google, and local models.
-*   **Extensive Benchmark Suite:** Evaluate models across 35+ benchmarks, covering knowledge, math, reasoning, coding, and more.
-*   **Simple & Powerful CLI:** Easily run evaluations, view results, and add custom benchmarks with an intuitive command-line interface.
-*   **Local Evaluation Support:** Preserve privacy with support for running private benchmarks.
-*   **Hugging Face Integration:** Push results to Hugging Face Datasets for sharing and further analysis.
-*   **Extensible Architecture:** Easily add new benchmarks and integrate new model providers.
+*   **Provider-Agnostic:** Works seamlessly with 30+ model providers (Groq, OpenAI, Anthropic, and many more) through Inspect AI.
+*   **Comprehensive Benchmarks:** Access 35+ standardized benchmarks spanning knowledge, reasoning, coding, math, and more (MMLU, HumanEval, GPQA, etc.).
+*   **Simple CLI:** Easy-to-use command-line interface for listing, describing, and running evaluations.
+*   **Local Eval Support:**  Run private evaluations built with Inspect AI with `bench eval <path>`.
+*   **Extensible:** Easily add new benchmarks and metrics.
+*   **Hugging Face Integration:** Push results directly to Hugging Face datasets for sharing and analysis.
 
 ## What's New in v0.3.0
 
-*   **Expanded Provider Support:** Added support for AI21, Baseten, Cerebras, Cohere, Crusoe, DeepInfra, Friendli, Hugging Face, Hyperbolic, Lambda, MiniMax, Moonshot, Nebius, Nous, Novita, Parasail, Reka, SambaNova and more.
-*   **New Benchmarks:** Integrated DROP (reading comprehension) and other experimental benchmarks available with the `--alpha` flag.
-*   **CLI Enhancements:** Includes an `openbench` alias, `-M`/`-T` flags for model/task arguments, and `--debug` mode for evaluation retries.
-*   **Developer Tools:** GitHub Actions integration and Inspect AI extension support.
+*   **Expanded Provider Support:** AI21, Baseten, Cerebras, Cohere, Crusoe, DeepInfra, Friendli, Hugging Face, Hyperbolic, Lambda, MiniMax, Moonshot, Nebius, Nous, Novita, Parasail, Reka, SambaNova and more.
+*   **New Benchmarks:** DROP (reading comprehension), with experimental benchmarks available via the `--alpha` flag.
+*   **CLI Enhancements:** `openbench` alias, `-M`/`-T` flags for model/task arguments, `--debug` mode for retry.
+*   **Developer Tools:** GitHub Actions integration, Inspect AI extension support.
 
-## Get Started in 60 Seconds!
+## Quick Start: Evaluate a Model in 60 Seconds
 
-**Prerequisite**: [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
+Get started with these easy steps:
 
-```bash
-# Create a virtual environment and install OpenBench (30 seconds)
-uv venv
-source .venv/bin/activate
-uv pip install openbench
+1.  **Install (30 seconds):**
+    ```bash
+    uv venv
+    source .venv/bin/activate
+    uv pip install openbench
+    ```
+2.  **Set API Key:**  (Example for Groq)
+    ```bash
+    export GROQ_API_KEY=your_key  # Or OPENAI_API_KEY, ANTHROPIC_API_KEY, etc.
+    ```
+3.  **Run Your First Eval (30 seconds):**
+    ```bash
+    bench eval mmlu --model groq/llama-3.3-70b-versatile --limit 10
+    ```
 
-# Set your API key (any provider!)
-export GROQ_API_KEY=your_key  # or OPENAI_API_KEY, ANTHROPIC_API_KEY, etc.
+    Check results in `./logs/` or with the interactive UI using `bench view`.  That's it! 🎉
 
-# Run your first eval (30 seconds)
-bench eval mmlu --model groq/llama-3.3-70b-versatile --limit 10
+## Model Provider Support
 
-# That's it! 🎉 Check results in ./logs/ or view them in an interactive UI:
-bench view
-```
-
-## Diverse Provider Support
-
-OpenBench offers broad compatibility with various LLM providers.
-
-```bash
-# Groq (blazing fast!)
-bench eval gpqa_diamond --model groq/meta-llama/llama-4-maverick-17b-128e-instruct
-
-# OpenAI
-bench eval humaneval --model openai/o3-2025-04-16
-
-# Anthropic
-bench eval simpleqa --model anthropic/claude-sonnet-4-20250514
-
-# Google
-bench eval mmlu --model google/gemini-2.5-pro
-
-# Local models with Ollama
-bench eval musr --model ollama/llama3.1:70b
-
-# Hugging Face Inference Providers
-bench eval mmlu --model huggingface/gpt-oss-120b:groq
-
-# 30+ providers supported - see full list below
-```
-
-## Supported Providers and Configuration
-
-OpenBench supports a wide array of model providers through Inspect AI. Set the appropriate API key environment variable to get started:
+OpenBench supports a vast array of model providers. Ensure you set the correct environment variable for your chosen provider:
 
 | Provider              | Environment Variable   | Example Model String             |
 | --------------------- | ---------------------- | -------------------------------- |
@@ -106,9 +81,9 @@ OpenBench supports a wide array of model providers through Inspect AI. Set the a
 | **Vercel AI Gateway** | `AI_GATEWAY_API_KEY`   | `vercel/creator-name/model-name` |
 | **vLLM**              | None (local)           | `vllm/model-name`                |
 
-## Comprehensive Benchmarks
+## Available Benchmarks
 
-OpenBench offers a variety of benchmarks to assess model capabilities. Use `bench list` to view the latest offerings.
+OpenBench offers a wide selection of benchmarks to evaluate different aspects of LLM performance.
 
 > [!NOTE]
 > Benchmark names are case-sensitive in the CLI.
@@ -123,9 +98,9 @@ OpenBench offers a variety of benchmarks to assess model capabilities. Use `benc
 | **Healthcare**    | HealthBench (open-ended healthcare eval), HealthBench_hard (challenging variant), HealthBench_consensus (consensus variant)                                                                                                                                                |
 | **Cybersecurity** | CTI-Bench (complete cyber threat intelligence suite), CTI-Bench ATE (MITRE ATT&CK technique extraction), CTI-Bench MCQ (knowledge questions on CTI standards and best practices), CTI-Bench RCM (CVE to CWE vulnerability mapping), CTI-Bench VSP (CVSS score calculation) |
 
-## Configuration Options
+## Configuration
 
-Configure your environment for optimal performance.
+Configure OpenBench with your API keys and set a default model to streamline your evaluations.
 
 ```bash
 # Set your API keys
@@ -134,12 +109,12 @@ export HF_TOKEN=your_key
 export OPENAI_API_KEY=your_key  # Optional
 
 # Set default model
-export BENCH_MODEL=groq/llama-3.1-70b
+export BENCH_MODEL=groq/openai/gpt-oss-20b
 ```
 
 ## Commands and Options
 
-Run `bench --help` for detailed command and option descriptions.
+Explore the powerful `bench` CLI for all your evaluation needs.  Run `bench --help` for a full list.
 
 | Command                  | Description                                        |
 | ------------------------ | -------------------------------------------------- |
@@ -156,7 +131,7 @@ Run `bench --help` for detailed command and option descriptions.
 | -------------------- | ------------------------ | --------------- | ---------------------------------------------------------------- |
 | `-M <args>`          | None                     | None            | Pass model-specific arguments (e.g., `-M reasoning_effort=high`) |
 | `-T <args>`          | None                     | None            | Pass task-specific arguments to the benchmark                    |
-| `--model`            | `BENCH_MODEL`            | None (required) | Model(s) to evaluate                                             |
+| `--model`            | `BENCH_MODEL`            | `groq/openai/gpt-oss-20b` | Model(s) to evaluate                                             |
 | `--epochs`           | `BENCH_EPOCHS`           | `1`             | Number of epochs to run each evaluation                          |
 | `--max-connections`  | `BENCH_MAX_CONNECTIONS`  | `10`            | Maximum parallel requests to model                               |
 | `--temperature`      | `BENCH_TEMPERATURE`      | `0.6`           | Model temperature                                                |
@@ -170,77 +145,72 @@ Run `bench --help` for detailed command and option descriptions.
 | `--display`          | `BENCH_DISPLAY`          | `None`          | Display type (full/conversation/rich/plain/none)                 |
 | `--reasoning-effort` | `BENCH_REASONING_EFFORT` | `None`          | Reasoning effort level (low/medium/high)                         |
 | `--json`             | None                     | `False`         | Output results in JSON format                                    |
+| `--log-format`       | `BENCH_LOG_FORMAT`       | `eval`          | Output logging format (eval/json)                                |
 | `--hub-repo`         | `BENCH_HUB_REPO`         | `None`          | Push results to a Hugging Face Hub dataset                       |
 
 ## Grader Information
 
-Some benchmarks utilize a grader model for scoring. This requires the `OPENAI_API_KEY` environment variable to be set.
+Certain benchmarks utilize a grader model for scoring.  Ensure you have your OpenAI API key configured to run these:
 
 ```bash
 export OPENAI_API_KEY=your_openai_key
 ```
 
-The following benchmarks use a grader model:
+The following benchmarks leverage a grader:
 
-| Benchmark          | Default Grader Model        |
-| ------------------ | --------------------------- |
-| `simpleqa`         | `openai/gpt-4.1-2025-04-14` |
-| `hle`              | `openai/o3-mini-2025-01-31` |
-| `hle_text`         | `openai/o3-mini-2025-01-31` |
-| `browsecomp`       | `openai/gpt-4.1-2025-04-14` |
-| `healthbench`      | `openai/gpt-4.1-2025-04-14` |
-| `math`             | `openai/gpt-4-turbo-preview` |
-| `math_500`         | `openai/gpt-4-turbo-preview` |
+| Benchmark | Default Grader Model |
+| :--- | :--- |
+| `simpleqa` | `openai/gpt-4.1-2025-04-14` |
+| `hle` | `openai/o3-mini-2025-01-31` |
+| `hle_text` | `openai/o3-mini-2025-01-31` |
+| `browsecomp` | `openai/gpt-4.1-2025-04-14` |
+| `healthbench` | `openai/gpt-4.1-2025-04-14` |
+| `math` | `openai/gpt-4-turbo-preview` |
+| `math_500` | `openai/gpt-4-turbo-preview` |
 
-## Building Your Own Evals
+## Building Your Own Evaluations
 
-Leveraging [Inspect AI](https://inspect.aisi.org.uk/), create and integrate custom evaluations effortlessly. Use `bench eval <path>` to execute your private benchmarks.
+OpenBench is built on [Inspect AI](https://inspect.aisi.org.uk/). Leverage Inspect AI to create custom evaluations and then integrate them seamlessly into OpenBench: `bench eval <path>`.
 
 ## Exporting Logs to Hugging Face
 
-Share and analyze your results by exporting logs to a Hugging Face Hub dataset.
+Share your results with the community by pushing logs directly to a Hugging Face Hub dataset.
 
 ```bash
 export HF_TOKEN=<your-huggingface-token>
-
 bench eval mmlu --model groq/llama-3.3-70b-versatile --limit 10 --hub-repo <your-username>/openbench-logs
 ```
 
-## FAQ
+This will export results to the Hub dataset with the name `openbench-logs`.
 
-### How does OpenBench differ from Inspect AI?
+## Frequently Asked Questions (FAQ)
 
-OpenBench provides:
+**Q: How does OpenBench differ from Inspect AI?**
 
-*   **Reference implementations** of 20+ major benchmarks with consistent interfaces
-*   **Shared utilities** for common patterns (math scoring, multi-language support, etc.)
-*   **Curated scorers** that work across different eval types
-*   **CLI tooling** optimized for running standardized benchmarks
+*   OpenBench provides:
+    *   Reference implementations of 20+ benchmarks with a consistent interface.
+    *   Shared utilities for common patterns.
+    *   Curated scorers that work across different eval types.
+    *   CLI tooling optimized for standardized benchmarking.
 
-### Why not just use Inspect AI, lm-evaluation-harness, or lighteval?
+**Q: Why not use Inspect AI, lm-evaluation-harness, or lighteval?**
 
-OpenBench focuses on:
+*   OpenBench focuses on:
+    *   Shared components for reduced code duplication.
+    *   Clean, readable implementations.
+    *   Developer experience with a simple CLI and easy extensibility.
 
-*   **Shared components**: Common scorers, solvers, and datasets across benchmarks reduce code duplication
-*   **Clean implementations**: Each eval is written for readability and reliability
-*   **Developer experience**: Simple CLI, consistent patterns, easy to extend
+**Q: How do I run `bench` outside of the `uv` environment?**
 
-### How can I run `bench` outside of the `uv` environment?
+*   Run `uv run pip install -e .`
 
-```bash
-uv run pip install -e .
-```
+**Q: I'm getting errors downloading datasets from Hugging Face, how do I fix this?**
 
-### I'm running into an issue when downloading a dataset from HuggingFace - how do I fix it?
-
-```bash
-HF_TOKEN="<HUGGINGFACE_TOKEN>"
-```
-The full HuggingFace documentation can be found [on the HuggingFace docs on Authentication](https://huggingface.co/docs/hub/en/datasets-polars-auth).
+*   Set the `HF_TOKEN` environment variable with your Hugging Face token.
 
 ## Development
 
-Clone the repository and set up your environment.
+Get started with OpenBench development.
 
 ```bash
 # Clone the repo
@@ -258,29 +228,22 @@ pre-commit install
 pytest
 ```
 
-⚠️ **IMPORTANT**: Run `pre-commit install` after setup.
+**Important:**  Ensure `pre-commit install` is run after setup.  CI will fail otherwise.
 
 ## Contributing
 
-Contribute to OpenBench! See the [Contributing Guide](CONTRIBUTING.md) for details on:
+We welcome your contributions.  See our [Contributing Guide](CONTRIBUTING.md) for setup, adding benchmarks, code style, and submitting pull requests.
 
--   Setting up the development environment
--   Adding new benchmarks and model providers
--   Code style and testing requirements
--   Submitting issues and pull requests
-
-Quick links:
-
--   [Report a bug](https://github.com/groq/openbench/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml)
--   [Request a feature](https://github.com/groq/openbench/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml)
+*   [Report a bug](https://github.com/groq/openbench/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml)
+*   [Request a feature](https://github.com/groq/openbench/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml)
 
 ## Reproducibility Statement
 
-OpenBench prioritizes faithful implementations, while acknowledging potential numerical discrepancies compared to external sources.
+OpenBench aims for faithful implementations. However, slight score discrepancies may occur due to differences in model prompts, quantization, or inference approaches.  Compare OpenBench results with OpenBench results; using the same OpenBench version is crucial.  We welcome improvements!
 
 ## Acknowledgments
 
-*   [Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai)
+*   [Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai) - Evaluation framework
 *   [EleutherAI's lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)
 *   [Hugging Face's lighteval](https://github.com/huggingface/lighteval)
 

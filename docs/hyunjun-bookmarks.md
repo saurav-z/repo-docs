@@ -1,42 +1,143 @@
-# Comprehensive Bookmarks for Various Topics
+# Comprehensive Bookmarks for Knowledge Discovery
 
-This repository, a comprehensive collection of bookmarks, serves as your go-to resource for a wide array of subjects, from programming to personal development and beyond.  For the original source, visit the [Hyunjun's Bookmarks repository](https://github.com/hyunjun/bookmarks).
+This repository ([original repo](https://github.com/hyunjun/bookmarks)) serves as a curated collection of bookmarks, categorized for easy access and exploration of diverse topics.
 
-## Key Features
+## Key Features:
 
-*   **Broad Coverage:**  Bookmarks span diverse topics, including technology, lifestyle, education, and more.
-*   **Organized Structure:**  Categorized into logical sections for easy navigation and efficient information retrieval.
-*   **Programming Resources:**  Extensive collection of links related to various programming languages, technologies, and concepts.
-*   **Data Science Focus:** Dedicated sections for data science, machine learning, and related fields.
-*   **Continuous Updates:**  The content is continuously updated and expanded to provide the most current and relevant information.
+*   **Extensive Categorization:** Bookmarks are organized into thematic categories, including:
+    *   **Miscellaneous:** Covering a wide range of interests like travel, culture, and lifestyle.
+    *   **Programming:**  Featuring resources for various programming languages, frameworks, and development practices.
+    *   **Data Science:** Focused on data analysis, machine learning, and related technologies.
+*   **In-Depth Subcategories:** Each major category is further divided into subcategories for granular searching.
+*   **Regularly Updated:** The bookmark collection is continuously updated to reflect the latest trends and resources.
+*   **Easy Navigation:** Simple Markdown files allow for quick browsing and easy access to links.
 
-## Content Categories
+## Categories & Subcategories:
 
 **Miscellaneous:**
 
-*   Travel (Jeju, etc.)
-*   Arts & Culture
-*   Business & Finance
-*   Education & Languages (English, etc.)
-*   Lifestyle (Food, Health, Life, Nomad, etc.)
-*   Media & Entertainment
-*   Philosophy & Psychology
-*   Politics & Current Affairs
-*   Presentations & Communication
-*   Product & Shopping
-*   Science & Technology
-*   Writing & Self-Improvement
+*   제주도 (Jeju)
+*   Animal
+*   App
+*   Art
+*   Baby
+*   Book
+*   Business
+*   Drama
+*   Economy
+*   Education
+*   English
+*   Finance
+*   Food
+*   Game
+*   Health
+*   History
+*   House
+*   Life
+*   Nomad & Remote
+*   Math
+    *   Statistics
+*   Media
+*   Myth
+*   People
+*   Philosophy
+*   Politics
+*   Presentation
+    *   Dev Small Talk
+    *   Speed
+*   Product
+*   Psychology
+*   Religion
+*   Robot
+*   Self Control
+*   Science
+*   Shopping
+*   Speaking
+*   Sports
+*   Travel
+*   Writing
 
 **Programming:**
 
-*   Algorithms & Data Structures
-*   Cloud Computing (AWS, Azure, GCP)
-*   Data Science (AI, ML, Deep Learning, NLP)
-*   Databases (SQL, NoSQL, Redis, HBase)
-*   DevOps & Infrastructure (Docker, Git, Linux, Monitoring)
-*   Editors (Emacs, Vim)
-*   Game Development
-*   Programming Languages (Python, Java, C++, Go, JavaScript, Rust, and many more)
-*   Web Development
-
-This README provides a general overview of the bookmarks collection; dive into the directory structure to explore specific areas of interest!
+*   Algorithm
+*   Anomaly Detection
+*   Apache
+    *   HBase
+    *   Spark
+*   Bitcoin
+*   Cloud
+    *   AWS
+    *   Azure
+    *   Google Cloud Platform (GCP)
+*   Coursera
+*   Data Science
+    *   Artificial Intelligence
+    *   Data
+    *   Data Visualization
+    *   Deep Learning
+    *   Keras
+    *   Machine Learning
+    *   NLP
+    *   PyTorch
+    *   TensorFlow
+    *   Vision
+*   Docker
+*   Editor
+    *   Emacs
+    *   Vim
+*   Elasticsearch & Lucene
+*   Game
+*   GIS
+*   Git
+*   Graph
+*   Hadoop
+*   Hardware
+*   Interview
+*   JSON
+*   Linux
+*   Mobile
+    *   Android
+    *   Flutter
+    *   iOS
+*   Monitoring
+*   NoSQL
+    *   HBase
+    *   Redis
+*   Open Source
+*   Programmer
+*   Programming
+    *   Concurrency
+    *   Data Oriented Design (DOD)
+    *   Functional Programming
+    *   Logging
+    *   Network
+    *   Object Oriented Programming (OOP)
+    *   Regular Expression
+*   Programming Books
+*   Programming Language
+    *   Bash
+    *   C
+    *   Clojure
+    *   C++
+    *   C#
+    *   Elixir
+    *   Erlang
+    *   Go
+    *   Haskell
+    *   Java
+    *   JavaScript
+    *   Julia
+    *   Kotlin
+    *   Lisp
+    *   .NET
+    *   OCaml
+    *   PHP
+    *   Python
+    *   R
+    *   Ruby
+    *   Rust
+    *   Scala
+*   SQL
+*   SVN
+*   Time Series
+*   Web

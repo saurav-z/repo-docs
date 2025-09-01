@@ -19,19 +19,35 @@
 <a href="https://agentops.ai/?tokencost">🖇️ AgentOps</a>
 </p>
 
-# Tokencost: Accurately Calculate LLM Costs and Track Token Usage
+# Tokencost: Calculate LLM Costs with Ease
 
-**Easily estimate the cost of your LLM prompts and completions with Tokencost, a Python library for precise token counting and price estimation.**  [Check out the original repository](https://github.com/AgentOps-AI/tokencost).
+**Quickly and accurately estimate the cost of your Large Language Model (LLM) prompts and completions with Tokencost!**
 
-## Key Features:
+*   **LLM Cost Tracking:**  Stay up-to-date with the latest pricing from major LLM providers.
+*   **Precise Token Counting:**  Accurately count prompt and completion tokens using [Tiktoken](https://github.com/openai/tiktoken) before making API requests.
+*   **Simple Integration:** Get the cost of a prompt or completion with a single function call.
 
-*   **Accurate Token Counting:** Utilize Tiktoken for precise tokenization of prompts and completions, ensuring accurate cost calculations.
-*   **LLM Price Tracking:** Stay up-to-date with the latest pricing from major LLM providers, including OpenAI and Anthropic.
-*   **Easy Integration:** Calculate prompt and completion costs with a single function call.
-*   **Supports Message and String Prompts:** Flexible input formats to match your application's needs.
+[Explore the Tokencost Repository](https://github.com/AgentOps-AI/tokencost)
 
-## Example Usage:
+## Key Features
 
+*   **Token Counting:** Provides functions to count tokens in strings and message formats, ensuring accurate cost estimations.
+*   **Cost Calculation:** Functions to calculate the estimated cost for both prompts and completions, simplifying the pricing process.
+*   **Easy to Use:** Simple and intuitive API for seamless integration into your LLM applications.
+*   **Up-to-Date Pricing:**  Maintains an up-to-date cost table, reflecting the latest pricing changes from various LLM providers.
+*   **Supports Multiple Models:** Works with various LLM models, including those from OpenAI and Anthropic.
+
+## Installation
+
+Install Tokencost directly from PyPI:
+
+```bash
+pip install tokencost
+```
+
+## Usage Examples
+
+### Calculating Cost
 ```python
 from tokencost import calculate_prompt_cost, calculate_completion_cost
 
@@ -45,21 +61,7 @@ completion_cost = calculate_completion_cost(completion, model)
 print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
 # 0.0000135 + 0.000014 = 0.0000275
 ```
-
-## Installation
-
-### Recommended: PyPI
-
-```bash
-pip install tokencost
-```
-
-## Usage
-
-### Cost Estimates
-
-Calculate the cost of prompts and completions from OpenAI requests
-
+### Using With OpenAI
 ```python
 from openai import OpenAI
 from tokencost import calculate_prompt_cost, calculate_completion_cost
@@ -80,13 +82,11 @@ completion_cost = calculate_completion_cost(completion, model)
 print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
 # 0.0000180 + 0.000010 = 0.0000280
 ```
-
-**Calculating cost using string prompts instead of messages:**
-
+### Using String Prompts
 ```python
 from tokencost import calculate_prompt_cost
 
-prompt_string = "Hello world"
+prompt_string = "Hello world" 
 response = "How may I assist you today?"
 model= "gpt-3.5-turbo"
 
@@ -94,7 +94,6 @@ prompt_cost = calculate_prompt_cost(prompt_string, model)
 print(f"Cost: ${prompt_cost}")
 # Cost: $3e-06
 ```
-
 ### Counting Tokens
 
 ```python
@@ -108,16 +107,17 @@ print(count_message_tokens(message_prompt, model="gpt-3.5-turbo"))
 # Alternatively, counting tokens in string prompts
 print(count_string_tokens(prompt="Hello world", model="gpt-3.5-turbo"))
 # 2
+
 ```
 
-## How Tokens Are Counted
+## How Tokens are Counted
 
-Tokencost leverages [Tiktoken](https://github.com/openai/tiktoken), OpenAI's official tokenizer, for accurate tokenization of strings and ChatML messages. It handles token counting for various models and message formats. For Anthropic models above version 3 (Sonnet 3.5, Haiku 3.5, and Opus 3), the [Anthropic beta token counting API](https://docs.anthropic.com/claude/docs/beta-api-for-counting-tokens) is utilized to ensure accurate token counts. For older Claude models, Tiktoken with the cl100k\_base encoding is used.
+Tokencost uses [Tiktoken](https://github.com/openai/tiktoken) to tokenize strings and messages, providing accurate token counts.  For Anthropic models above version 3, we use the [Anthropic beta token counting API](https://docs.anthropic.com/claude/docs/beta-api-for-counting-tokens) for precise counts.
 
-## Current Pricing Table
+## Current Cost Table (USD)
 
-Pricing units are denominated in USD.  All prices can be located [here](pricing_table.md).
-
+All prices can be found [here](pricing_table.md).
+```
 <!-- PRICING_TABLE_START -->
 
 | Model Name                                                            | Prompt Cost (USD) per 1M tokens   | Completion Cost (USD) per 1M tokens   | Max Prompt Tokens   |   Max Output Tokens |
@@ -281,4 +281,3 @@ Pricing units are denominated in USD.  All prices can be located [here](pricing_
 | groq/gemma2-9b-it                                                     | $0.2                              | $0.2                                  | 8,192               |      8192           |
 | groq/llama3-groq-70b-8192-tool-use-preview                            | $0.89                             | $0.89                                 | 8,192               |      8192           |
 | groq/llama3-groq-8b-8192-tool-use-preview                             | $0.19                             | $0.19                                 | 8,192               |      8192           |
-| cerebras/llama3.1-8b                                                  | $0.1                              | $0                                    | 128,000             |

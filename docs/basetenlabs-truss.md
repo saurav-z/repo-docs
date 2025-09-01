@@ -1,19 +1,18 @@
-# Truss: The Simplest Way to Deploy and Serve Your AI/ML Models
+# Truss: Deploy and Serve Your AI/ML Models with Ease
 
-**Effortlessly deploy and manage your machine learning models in production with Truss, the open-source framework that simplifies model serving.** ([Original Repo](https://github.com/basetenlabs/truss))
+**Truss is the easiest way to deploy and serve your machine learning models in production, providing a streamlined experience from development to deployment.**
 
-[![PyPI version](https://badge.fury.io/py/truss.svg)](https://badge.fury.io/truss)
-[![ci_status](https://github.com/basetenlabs/truss/actions/workflows/release.yml/badge.svg)](https://github.com/basetenlabs/truss/actions/workflows/release.yml)
+Learn more about Truss on [GitHub](https://github.com/basetenlabs/truss).
 
-## Key Features of Truss
+## Key Features
 
-*   **Write Once, Run Anywhere:** Package your model code, weights, and dependencies into a portable Truss that behaves consistently across development and production environments.
-*   **Rapid Development Cycle:** Benefit from a fast developer loop with a live reload server, eliminating the need for complex Docker and Kubernetes configurations.
-*   **Broad Framework Support:** Truss seamlessly integrates with all major Python ML frameworks, including `transformers`, `diffusers`, `PyTorch`, `TensorFlow`, `TensorRT`, and `Triton`.
-*   **Simplified Deployment:** Deploy your models to various platforms with ease, starting with Baseten, and soon expanding to include AWS SageMaker.
-*   **Pre-Built Examples:** Get started quickly with ready-to-use Truss examples for popular models like Llama 2, Stable Diffusion XL, and Whisper.
+*   **Write Once, Run Anywhere:** Package your model code, weights, and dependencies into a self-contained unit that behaves the same in development and production.
+*   **Fast Development Cycle:** Utilize a live reload server for rapid feedback and skip complex Docker and Kubernetes configurations.
+*   **Framework Agnostic:** Supports models built with any Python-based ML framework, including TensorFlow, PyTorch, Transformers, and more.
+*   **Simplified Deployment:**  Easily deploy your models to Baseten (with AWS SageMaker coming soon) using a simple command.
+*   **Production-Ready:** Designed for scalability and reliability in production environments.
 
-## Getting Started with Truss
+## Getting Started
 
 ### Installation
 
@@ -23,23 +22,27 @@ Install Truss using pip:
 pip install --upgrade truss
 ```
 
-### Quickstart: Deploy a Text Classification Model
+### Quickstart: Text Classification Example
 
-This quickstart demonstrates how to package and deploy a text classification pipeline using the open-source `transformers` library.
+This quickstart demonstrates how to package and deploy a text classification model using the Hugging Face `transformers` library.
 
 1.  **Create a Truss:**
+
     ```bash
     truss init text-classification
     ```
-    Name your Truss, e.g., "Text classification".
 
-2.  **Navigate to the Truss directory:**
+    Provide a name when prompted, such as "Text classification."
+
+2.  **Navigate to the New Directory:**
+
     ```bash
     cd text-classification
     ```
 
-3.  **Implement the Model:**
-    In `model/model.py`, define a `Model` class with `load()` (model loading) and `predict()` (inference) methods:
+3.  **Implement the Model (`model/model.py`):**
+
+    Create a `Model` class with `load()` (model loading) and `predict()` (inference) methods.
 
     ```python
     from transformers import pipeline
@@ -55,8 +58,9 @@ This quickstart demonstrates how to package and deploy a text classification pip
             return self._model(model_input)
     ```
 
-4.  **Add Model Dependencies:**
-    Specify dependencies (e.g., Transformers and PyTorch) in `config.yaml`:
+4.  **Add Model Dependencies (`config.yaml`):**
+
+    Specify the required libraries (e.g., `transformers`, `torch`) in the `config.yaml` file under the `requirements` section.
 
     ```yaml
     requirements:
@@ -66,37 +70,36 @@ This quickstart demonstrates how to package and deploy a text classification pip
 
 ## Deployment
 
-Truss simplifies model deployment through Baseten.
+### Baseten Deployment
 
-1.  **Get an API Key:**
-    Obtain a [Baseten API key](https://app.baseten.co/settings/account/api_keys) (sign up [here](https://app.baseten.co/signup/) if you don't have an account).
+1.  **Get a Baseten API Key:**  Sign up for a Baseten account and obtain your API key.
 
-2.  **Deploy Your Model:**
+2.  **Push Your Model:**
+
     ```bash
     truss push
     ```
-    Follow the prompts, providing your Baseten API key. Monitor deployment from [your Baseten model dashboard](https://app.baseten.co/models/).
+
+    Follow the prompts to deploy your model to Baseten.
 
 3.  **Invoke the Model:**
-    After deployment, test your model:
+
+    After deployment, invoke your model using:
 
     ```bash
     truss predict -d '"Truss is awesome!"'
     ```
-    You should receive a JSON response indicating a positive sentiment.
+
+    You will receive a JSON response with the model's predictions.
 
 ## Examples
-
-Explore pre-built Trusses for popular models:
 
 *   🦙 [Llama 2 7B](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-7b-chat) ([13B](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-13b-chat)) ([70B](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-70b-chat))
 *   🎨 [Stable Diffusion XL](https://github.com/basetenlabs/truss-examples/tree/main/stable-diffusion/stable-diffusion-xl-1.0)
 *   🗣 [Whisper](https://github.com/basetenlabs/truss-examples/tree/main/whisper/whisper-truss)
 
-And [dozens more examples](https://github.com/basetenlabs/truss-examples/).
+and [dozens more examples](https://github.com/basetenlabs/truss-examples/).
 
-## Contribute
+## Contributing
 
-Truss welcomes contributions! Review the [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).
-
-**Thanks to our contributors:** [Stephan Auerhahn](https://github.com/palp) @ [stability.ai](https://stability.ai/) and [Daniel Sarfati](https://github.com/dsarfati) @ [Salad Technologies](https://salad.com/)
+We welcome contributions!  See our [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).

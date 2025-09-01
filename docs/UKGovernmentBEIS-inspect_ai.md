@@ -1,23 +1,22 @@
-# Inspect: Evaluate and Secure Large Language Models
+# Inspect: Evaluate and Enhance Your Large Language Models
 
-**Safeguard your AI: Inspect, a framework developed by the UK AI Safety Institute, empowers you to rigorously evaluate and secure your large language models (LLMs).**
+**Unleash the power of thorough evaluation with Inspect, a robust framework designed to help you understand and improve your large language models (LLMs).** (See the original repository on GitHub: [UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai)).
 
-[<img width="295" src="https://inspect.aisi.org.uk/images/aisi-logo.svg" alt="UK AI Safety Institute Logo" />](https://aisi.gov.uk/)
+[<img width="295" src="https://inspect.aisi.org.uk/images/aisi-logo.svg" alt="AI Security Institute Logo" />](https://aisi.gov.uk/)
 
-This repository contains the source code for **Inspect**, a powerful and flexible framework for comprehensive large language model (LLM) evaluation.  Inspect provides the tools you need to understand and improve the performance, safety, and reliability of your AI systems.
+Developed by the [UK AI Security Institute](https://aisi.gov.uk/), Inspect provides a comprehensive suite of tools for rigorously testing and refining your LLMs.
 
-## Key Features of Inspect
+## Key Features of Inspect:
 
-*   **Built-in Components:** Leverage pre-built modules for essential LLM evaluation tasks.
-*   **Prompt Engineering:** Design and refine prompts to effectively elicit responses from your LLMs.
-*   **Tool Usage:**  Evaluate how well LLMs utilize external tools and resources.
-*   **Multi-turn Dialog:**  Assess LLM performance in complex, conversational scenarios.
-*   **Model-Graded Evaluations:**  Automatically assess LLM outputs against various criteria.
-*   **Extensible Architecture:** Easily integrate custom evaluation techniques and extend Inspect's capabilities.
+*   **Prompt Engineering Capabilities:** Design and optimize prompts for effective LLM interaction.
+*   **Tool Usage Support:** Integrate and evaluate LLMs that leverage external tools.
+*   **Multi-Turn Dialog Evaluation:** Assess LLM performance in complex, multi-turn conversations.
+*   **Model-Graded Evaluations:** Utilize robust evaluation methods to gauge model performance.
+*   **Extensible Architecture:** Easily extend Inspect with custom components and support new elicitation and scoring techniques through Python packages.
 
 ## Getting Started
 
-Explore the official documentation for detailed instructions and tutorials: [https://inspect.aisi.org.uk/](https://inspect.aisi.org.uk/)
+For detailed information on how to use Inspect, please refer to the comprehensive documentation available at <https://inspect.aisi.org.uk/>.
 
 ## Development and Contribution
 
@@ -28,15 +27,15 @@ To contribute to the development of Inspect, follow these steps:
     git clone https://github.com/UKGovernmentBEIS/inspect_ai.git
     cd inspect_ai
     ```
-2.  **Install with Development Dependencies:**
+2.  **Install Dependencies:**
     ```bash
     pip install -e ".[dev]"
     ```
-3.  **(Optional) Install Pre-commit Hooks:**
+3.  **(Optional) Install Pre-Commit Hooks:**
     ```bash
     make hooks
     ```
-4.  **Run Linting, Formatting, and Tests:**
+4.  **Run Checks and Tests:**
     ```bash
     make check
     make test
@@ -44,12 +43,10 @@ To contribute to the development of Inspect, follow these steps:
 
 ### Recommended Development Environment
 
-For an optimal development experience, we recommend using Visual Studio Code (VS Code) with the following extensions:
+If you're using VS Code, we recommend installing the following extensions for optimal development:
 
 *   Python
 *   Ruff
 *   MyPy
 
-VS Code will prompt you to install these extensions when you open the project.
-
-**[View the original repository on GitHub](https://github.com/UKGovernmentBEIS/inspect_ai)**
+You'll be prompted to install these extensions when you open the project in VS Code.

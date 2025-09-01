@@ -1,65 +1,50 @@
-# Cython: Optimize Python Performance with C Speed
+# Cython: Write C Extensions for Python with Ease
 
-**Supercharge your Python code with Cython, the powerful compiler that bridges the gap between Python's ease of use and C's raw performance.**
+**Cython empowers you to write blazing-fast C extensions for Python as easily as you write Python itself.**  Learn more at the [Cython GitHub repository](https://github.com/cython/cython).
 
-[![PyPI Downloads](https://img.shields.io/pypi/dm/Cython.svg)](https://pypistats.org/packages/cython)
+## Key Features
 
-Cython is a powerful tool for optimizing Python code. It translates Python code into highly efficient C/C++ code, allowing you to achieve significant speed improvements for computationally intensive tasks.  It excels at wrapping external C libraries and creating fast C modules.
-
-## Key Features:
-
-*   **Performance Boost:**  Significantly accelerates Python code execution by compiling to C.
-*   **C/C++ Integration:** Seamlessly integrates with C and C++ code, allowing you to call C functions and declare C types for fine-grained control.
-*   **Optimized Compilation:**  Provides extensive features for manual tuning and optimization, generating highly efficient C code.
-*   **Python Compatibility:** Supports almost all Python language features, ensuring broad compatibility.
-*   **Cross-Platform:**  Generates C code that can be compiled on various platforms.
-*   **Large Ecosystem:**  Benefit from a mature project with thousands of libraries and tools.
-*   **Mature & Stable:**  Over two decades of development, bug fixing, and static code optimizations.
-*   **CPython Compatibility:** Full runtime compatibility with all still-in-use and future versions of CPython.
+*   **Performance Boost:** Translate Python code into highly efficient C/C++ code, significantly speeding up your applications.
+*   **C/C++ Integration:** Seamlessly call C functions and declare C types within your Python code for fine-grained control and optimization.
+*   **Versatile Applications:** Ideal for wrapping external C libraries and creating fast C modules to accelerate Python code execution.
+*   **Broad Compatibility:** Fully compatible with CPython and offers support for other C-API implementations, including PyPy and Pyston.
+*   **Mature & Reliable:** Benefit from two decades of development, bug fixes, and static code optimizations.
+*   **Large Community:** Leverage a vast user base with thousands of libraries, packages, and tools built with Cython.
 
 ## Installation
 
-If you have a C compiler installed, install Cython with a single command:
+If you have a C compiler, install Cython with:
 
 ```bash
 pip install Cython
 ```
 
-Otherwise, see the [installation page](https://docs.cython.org/en/latest/src/quickstart/install.html) for more detailed instructions.
+For detailed installation instructions, see the [installation page](https://docs.cython.org/en/latest/src/quickstart/install.html) in the documentation.
 
 ## License
 
 Cython is licensed under the permissive **Apache License**.
 
-See [LICENSE.txt](https://github.com/cython/cython/blob/master/LICENSE.txt) for details.
+See the full license in `LICENSE.txt <https://github.com/cython/cython/blob/master/LICENSE.txt>`.
 
 ## Contributing
 
-Interested in contributing to the Cython project?  Find out how to get started by visiting the [contributing guide](https://github.com/cython/cython/blob/master/docs/CONTRIBUTING.rst).
+Contribute to the Cython project! Find helpful resources to get started in the [CONTRIBUTING guide](https://github.com/cython/cython/blob/master/docs/CONTRIBUTING.rst).
 
-## Differences to Other Python Compilers
+## Differences from Other Python Compilers
 
-Cython provides advantages over other Python compilers, including:
+Cython distinguishes itself from other Python compilers through:
 
-*   Fast, efficient, and highly compliant support for almost all Python language features.
-*   Full runtime compatibility with CPython.
-*   "Generate once, compile everywhere" C code generation for reproducible performance results and testing.
-*   Seamless integration with C/C++ code.
-*   Broad support for manual optimization and tuning down to the C level.
-*   A large user base with thousands of libraries, packages, and tools.
-*   More than two decades of bug fixing and static code optimizations.
+*   **High language compliance** and support for dynamic features and introspection.
+*   **"Generate once, compile everywhere"** C code generation for reproducible performance and testing.
+*   **C compile-time adaptation** to the target platform and Python version.
+*   **Seamless integration with C/C++ code.**
+*   **Extensive support for manual optimization** and tuning at the C level.
 
-## Get Started
+The following are similar projects:
 
-*   **Official Website:** [https://cython.org/](https://cython.org/)
-*   **Documentation:** [https://docs.cython.org/](https://docs.cython.org/)
-*   **GitHub Repository:** [https://github.com/cython/cython](https://github.com/cython/cython)
-*   **Wiki:** [https://github.com/cython/cython/wiki](https://github.com/cython/cython/wiki)
-
-## Support the Project
-
-Support the Cython project by visiting [Github Sponsors](https://github.com/users/scoder/sponsorship) or [Tidelift](https://tidelift.com/subscription/pkg/pypi-cython).
-
----
-
-*This README is maintained by a community member and is based on the information provided in the original Cython repository.  For the most up-to-date information, please refer to the official [Cython repository](https://github.com/cython/cython).*
+*   `PyPy <https://www.pypy.org/>`_
+*   `Numba <http://numba.pydata.org/>`_
+*   `Pythran <https://pythran.readthedocs.io/>`_
+*   `mypyc <https://mypyc.readthedocs.io/>`_
+*   `Nuitka <https://nuitka.net/>`_
