@@ -1,59 +1,69 @@
-# Freqtrade: Your Open-Source Crypto Trading Bot
+# Freqtrade: Your Open-Source Crypto Trading Bot 🚀
 
-Freqtrade is a powerful, free, and open-source crypto trading bot that empowers you to automate your trading strategies and navigate the volatile world of cryptocurrencies, giving you an edge in the market. **[Check out the original repo](https://github.com/freqtrade/freqtrade).**
+**Automate your cryptocurrency trading strategies with Freqtrade, a powerful and customizable open-source bot.** ([Back to Original Repo](https://github.com/freqtrade/freqtrade))
 
 [![Freqtrade CI](https://github.com/freqtrade/freqtrade/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/freqtrade/freqtrade/actions/)
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.04864/status.svg)](https://doi.org/10.21105/joss.04864)
 [![Coverage Status](https://coveralls.io/repos/github/freqtrade/freqtrade/badge.svg?branch=develop&service=github)](https://coveralls.io/github/freqtrade/freqtrade?branch=develop)
 [![Documentation](https://readthedocs.org/projects/freqtrade/badge/)](https://www.freqtrade.io)
 
+Freqtrade empowers you to build and automate your crypto trading strategies, offering a range of features from backtesting to machine learning-powered optimization. This bot provides a solid foundation for both beginners and experienced traders to explore the world of algorithmic trading.
+
 ## Key Features
 
-*   **Automated Trading:** Execute trading strategies 24/7, optimizing for profit.
-*   **Backtesting & Optimization:** Test your strategies with backtesting, and refine them using machine learning.
-*   **Machine Learning Integration:** Enhance your trading strategies with adaptive prediction modeling via FreqAI.
-*   **Wide Exchange Support:** Compatible with major crypto exchanges, including Binance, OKX, and Bybit.
-*   **User-Friendly Interface:** Manage your bot with a built-in WebUI or Telegram integration.
-*   **Flexible Strategy Development:** Design and test your own trading strategies using Python.
-*   **Risk Management:** Includes features like dry-run mode, profit/loss display, and performance reporting to help manage your trades.
-*   **Community Driven:** Benefit from a vibrant community and comprehensive documentation.
+*   **Python-Based:** Built on Python 3.11+, offering flexibility and cross-platform compatibility (Windows, macOS, Linux).
+*   **Exchange Support:** Compatible with a wide array of major cryptocurrency exchanges (Binance, Bybit, OKX, and many more).
+*   **Backtesting & Optimization:** Test your strategies with backtesting tools and optimize them using machine learning and FreqAI.
+*   **Dry-Run Mode:** Simulate trading without risking real capital.
+*   **WebUI & Telegram Integration:** Manage your bot through a built-in web interface and Telegram commands.
+*   **Data Analysis:** Utilize tools for plotting, performance reporting, and profit/loss tracking in fiat currency.
+*   **Adaptive Prediction Modeling:** Leverage FreqAI to build smart strategies that self-train to the market via adaptive machine learning methods.
 
 ## Disclaimer
 
-This software is for educational purposes only. Always start by running a trading bot in Dry-run and do not engage money before you understand how it works and what profit/loss you should expect.
+This software is intended for educational and experimental purposes. Always start with dry-run mode and thoroughly understand the bot's functionality before using it with real funds.  The authors and affiliates are not responsible for your trading outcomes.
+We strongly recommend you to have coding and Python knowledge. Do not hesitate to read the source code and understand the mechanism of this bot.
 
 ## Supported Exchanges
 
-Freqtrade supports a wide range of exchanges, with new integrations being continuously added.  Please refer to the [exchange specific notes](docs/exchanges.md) for setup details.
+Freqtrade supports a variety of cryptocurrency exchanges. For exchange-specific configuration and notes, please consult the [exchange-specific notes](docs/exchanges.md).
 
-*   Binance
-*   Bitmart
-*   BingX
-*   Bybit
-*   Gate.io
-*   HTX
-*   Hyperliquid (DEX)
-*   Kraken
-*   OKX
-*   MyOKX (OKX EEA)
-*   [and many others](https://github.com/ccxt/ccxt/)
+*   [Binance](https://www.binance.com/)
+*   [Bitmart](https://bitmart.com/)
+*   [BingX](https://bingx.com/invite/0EM9RX)
+*   [Bybit](https://bybit.com/)
+*   [Gate.io](https://www.gate.io/ref/6266643)
+*   [HTX](https://www.htx.com/)
+*   [Hyperliquid](https://hyperliquid.xyz/) (A decentralized exchange, or DEX)
+*   [Kraken](https://kraken.com/)
+*   [OKX](https://okx.com/)
+*   [MyOKX](https://okx.com/) (OKX EEA)
+*   [potentially many others](https://github.com/ccxt/ccxt/). _(We cannot guarantee they will work)_
 
 ### Supported Futures Exchanges (experimental)
 
-*   Binance
-*   Gate.io
-*   Hyperliquid (DEX)
-*   OKX
-*   Bybit
+*   [Binance](https://www.binance.com/)
+*   [Gate.io](https://www.gate.io/ref/6266643)
+*   [Hyperliquid](https://hyperliquid.xyz/) (A decentralized exchange, or DEX)
+*   [OKX](https://okx.com/)
+*   [Bybit](https://bybit.com/)
+
+Please make sure to read the [exchange specific notes](docs/exchanges.md), as well as the [trading with leverage](docs/leverage.md) documentation before diving in.
+
+### Community-Tested Exchanges
+
+Exchanges confirmed working by the community:
+
+*   [Bitvavo](https://bitvavo.com/)
+*   [Kucoin](https://www.kucoin.com/)
 
 ## Documentation
 
-The complete documentation can be found on the [freqtrade website](https://www.freqtrade.io).
+Comprehensive documentation is available on the [Freqtrade website](https://www.freqtrade.io), guiding you through setup, usage, and advanced features.
 
 ## Quick Start
 
-Get started quickly with the [Docker Quickstart documentation](https://www.freqtrade.io/en/stable/docker_quickstart/).
-For native installation, see the [Installation documentation page](https://www.freqtrade.io/en/stable/installation/).
+Get up and running quickly with the [Docker Quickstart documentation](https://www.freqtrade.io/en/stable/docker_quickstart/). For other installation methods, see the [Installation documentation page](https://www.freqtrade.io/en/stable/installation/).
 
 ## Basic Usage
 
@@ -109,9 +119,9 @@ options:
   -V, --version         show program's version number and exit
 ```
 
-### Telegram RPC commands
+### Telegram RPC Commands
 
-Telegram is not mandatory. However, this is a great way to control your bot. More details and the full command list on the [documentation](https://www.freqtrade.io/en/latest/telegram-usage/)
+Control your bot seamlessly with Telegram. See the [documentation](https://www.freqtrade.io/en/latest/telegram-usage/) for a full command list.
 
 -   `/start`: Starts the trader.
 -   `/stop`: Stops the trader.
@@ -130,55 +140,58 @@ Telegram is not mandatory. However, this is a great way to control your bot. Mor
 
 ## Development Branches
 
-The project is structured with two main branches:
-
-*   `develop`: The branch for new features, which may include breaking changes.
-*   `stable`: The branch for the latest stable release.
+*   `develop`:  The main development branch, which may contain new features and breaking changes.
+*   `stable`: The latest stable release branch.
+*   `feat/*`: Feature branches, actively under development.
 
 ## Support
 
 ### Help / Discord
 
-For any questions or to engage with the community, join the Freqtrade [discord server](https://discord.gg/p7nuUNVfP7).
+Join the Freqtrade [Discord server](https://discord.gg/p7nuUNVfP7) for community support and discussions.
 
-### Bugs / Issues
+### [Bugs / Issues](https://github.com/freqtrade/freqtrade/issues?q=is%3Aissue)
 
-Report bugs and issues on the [issue tracker](https://github.com/freqtrade/freqtrade/issues?q=is%3Aissue).
-Always follow the template guide and maintain github's [community policy](https://docs.github.com/en/site-policy/github-terms/github-community-code-of-conduct).
+Report bugs in the [issue tracker](https://github.com/freqtrade/freqtrade/issues?q=is%3Aissue).  If the issue hasn't been reported, please
+[create a new issue](https://github.com/freqtrade/freqtrade/issues/new/choose) and
+ensure you follow the template guide so that the team can assist you as
+quickly as possible.
 
-### Feature Requests
+For every [issue](https://github.com/freqtrade/freqtrade/issues/new/choose) created, kindly follow up and mark satisfaction or reminder to close issue when equilibrium ground is reached.
 
-Suggest new features on the [feature requests](https://github.com/freqtrade/freqtrade/labels/enhancement).
-If it hasn't been requested, please
-[create a new request](https://github.com/freqtrade/freqtrade/issues/new/choose)
-and ensure you follow the template guide so that it does not get lost
-in the bug reports.
+--Maintain github's [community policy](https://docs.github.com/en/site-policy/github-terms/github-community-code-of-conduct)--
 
-### Pull Requests
+### [Feature Requests](https://github.com/freqtrade/freqtrade/labels/enhancement)
 
-Contribute by submitting pull requests to the `develop` branch.
-Read the [Contributing document](https://github.com/freqtrade/freqtrade/blob/develop/CONTRIBUTING.md) to understand the requirements.
-Explore issues labeled [good first issue](https://github.com/freqtrade/freqtrade/labels/good%20first%20issue) to get familiar with the codebase.
+Share your ideas for bot improvements. Search for existing requests first, then [create a new request](https://github.com/freqtrade/freqtrade/issues/new/choose), following the template.
 
-**Note:**  Before starting significant feature work, open an issue describing your plans or discuss them on the [discord](https://discord.gg/p7nuUNVfP7).
+### [Pull Requests](https://github.com/freqtrade/freqtrade/pulls)
 
-**Important:**  Always create your PR against the `develop` branch, not `stable`.
+Contribute to Freqtrade with your pull requests!
+
+Read the [Contributing document](https://github.com/freqtrade/freqtrade/blob/develop/CONTRIBUTING.md) before submitting your PRs.
+
+Issues labeled [good first issue](https://github.com/freqtrade/freqtrade/labels/good%20first%20issue) can be good first contributions, and will help get you familiar with the codebase.
+
+**Note:** Open an issue to discuss major new features on the [Discord](https://discord.gg/p7nuUNVfP7) (#dev channel) before you start working on them.
+
+**Important:**  Always create your PR against the `develop` branch.
 
 ## Requirements
 
-### Up-to-date Clock
+### Up-to-Date Clock
 
-Ensure your system clock is accurate and synchronized frequently to an NTP server.
+An accurate, frequently synchronized clock is critical for exchange communication.
 
 ### Minimum Hardware
 
-*   Minimal (advised): 2GB RAM, 1GB disk space, 2vCPU
+*   Minimal (advised) system requirements: 2GB RAM, 1GB disk space, 2vCPU
 
 ### Software
 
-*   Python >= 3.11
-*   pip
-*   git
-*   TA-Lib
-*   virtualenv (Recommended)
-*   Docker (Recommended)
+*   [Python >= 3.11](http://docs.python-guide.org/en/latest/starting/installation/)
+*   [pip](https://pip.pypa.io/en/stable/installing/)
+*   [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+*   [TA-Lib](https://ta-lib.github.io/ta-lib-python/)
+*   [virtualenv](https://virtualenv.pypa.io/en/stable/installation.html) (Recommended)
+*   [Docker](https://www.docker.com/products/docker) (Recommended)

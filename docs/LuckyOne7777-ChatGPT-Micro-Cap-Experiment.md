@@ -1,81 +1,71 @@
-# ChatGPT Micro-Cap Trading Experiment: Can AI Beat the Market?
+# ChatGPT Micro-Cap Experiment: Can AI Outperform the Market?
 
-**Can a large language model like ChatGPT actually make smart trading decisions and generate alpha in the stock market?** This repository details a real-world, six-month experiment where ChatGPT manages a live micro-cap portfolio.
-
-[View the original repository on GitHub](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment)
-
-## Key Features:
-
-*   **AI-Powered Trading:** Leverages ChatGPT-4 to make real-time trading decisions.
-*   **Live Portfolio Tracking:** Tracks a real-money micro-cap portfolio, updated daily.
-*   **Performance Analysis:** Detailed performance metrics, including P&L, equity, and trade history, with comparisons to market benchmarks.
-*   **Automated Stop-Loss:** Implements strict stop-loss rules for risk management.
-*   **Transparency:** Provides complete trading data, research summaries, and methodology documentation.
-*   **Open Source:** Use the project as a blueprint for your own AI trading experiments.
+**Explore a live trading experiment where ChatGPT manages a micro-cap portfolio with real money, aiming to generate alpha through AI-driven stock picks.**  [View the original repository here.](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment)
 
 ## Project Overview
 
-This project is a bold experiment to assess the potential of AI in financial markets. Using an initial investment of just $100, the project aims to determine if ChatGPT can generate alpha (or at least make smart trading decisions) using real-time data and strict risk management principles.
+This project documents a six-month live trading experiment designed to assess the effectiveness of large language models, specifically ChatGPT, in making real-time trading decisions within the micro-cap stock market. Using a real-money portfolio, this experiment aims to answer the critical question: Can AI generate alpha (or at least make smart trading decisions) using real-time data?
 
-### Daily Trading Process:
+## Key Features
 
-1.  **Data Input:** Provides ChatGPT with up-to-date trading data on portfolio stocks.
-2.  **Decision Making:** ChatGPT analyzes data and makes trading recommendations.
-3.  **Execution:** Trades are executed with stop-loss orders in place.
-4.  **Weekly Research:** ChatGPT uses deep research to reevaluate its account.
-5.  **Performance Tracking:** Performance data is tracked and published weekly.
+*   **AI-Powered Trading:** Leverages ChatGPT-4 to generate stock trading signals.
+*   **Real-Time Data Integration:** Uses live market data for informed decision-making.
+*   **Automated Portfolio Management:** Includes stop-loss rules, and daily trading updates.
+*   **Comprehensive Performance Tracking:** Detailed daily performance data, including P&L, total equity, and trade history, are tracked.
+*   **Transparent Reporting:** Weekly performance reports and research summaries.
+*   **Open-Source & Replicable:** Includes scripts, prompts, and templates to allow others to start their own experiments.
 
 ## Repository Structure
 
-*   **`trading_script.py`**: Main trading engine for portfolio management and stop-loss automation.
-*   **`Scripts and CSV Files/`**:  Contains the portfolio and trade data, updated daily.
-*   **`Start Your Own/`**: Template files and guides for starting your own AI trading experiment.
-*   **`Weekly Deep Research (MD|PDF)/`**:  Summaries and performance reports, allowing deep dives into the reasoning behind trades.
-*   **`Experiment Details/`**: Detailed documentation, methodology, prompts, and a Q&A section.
+*   **`trading_script.py`:** The core trading engine that manages the portfolio and implements stop-loss automation.
+*   **`Scripts and CSV Files/`:** Contains the experiment's portfolio data, updated daily.
+*   **`Start Your Own/`:** Provides template files and guidance for replicating the experiment.
+*   **`Weekly Deep Research (MD|PDF)/`:** Contains research summaries and performance reports.
+*   **`Experiment Details/`:** Includes documentation, the methodology, prompts used, and a Q&A section.
+
+## How It Works
+
+Each trading day, the AI is provided with trading data for the stocks in its portfolio. Strict stop-loss rules are applied to manage risk. The AI reevaluates its account using deep research on a weekly basis.
 
 ## Current Performance
 
-<!-- To update performance chart: 
-     1. Replace the image file with updated results
-     2. Update the dates and description below
-     3. Update the "Last Updated" date -->
+**Last Updated:** August 29th, 2025
 
-**Last Updated:** August 2025
+![Latest Performance Results](Results.png)
 
-![Latest Performance Results](%286-30%20-%208-15%29%20Results.png)
-
-**Current Status:** Portfolio is outperforming the S&P 500 benchmark
+**Current Status:** Portfolio is outperforming the S&P 500 benchmark.
 
 *Performance data is updated after each trading day. See the CSV files in `Scripts and CSV Files/` for detailed daily tracking.*
 
-## Technical Details
+## Why This Matters
 
-### Core Technologies:
+As AI becomes increasingly integrated across industries, this project provides valuable insights into the potential of AI-driven financial management. It offers a transparent, data-driven exploration of AI's capabilities in the financial market.
 
-*   **Python:** Core scripting and automation.
-*   **pandas + yFinance:** Market data fetching and analysis.
-*   **Matplotlib:** Performance visualization and charting.
-*   **ChatGPT-4:** AI-powered trading decision engine.
+## Technology Stack
 
-### Key Features & Functionality:
+**Core Technologies:**
 
-*   **Robust Data Sources:** Utilizes Yahoo Finance for primary data, with Stooq as a fallback for reliability.
-*   **Automated Stop-Loss:** Includes automatic position management with configurable stop-losses to minimize risk.
-*   **Interactive Trading:** Supports Market-on-Open (MOO) and limit orders for flexible trading.
-*   **Backtesting Support:**  Includes an ASOF_DATE override for historical analysis.
-*   **Performance Analytics:** Implements CAPM analysis, Sharpe/Sortino ratios, and drawdown metrics.
-*   **Trade Logging:** Provides complete transparency with detailed execution logs.
+*   **Python:** For core scripting and automation.
+*   **pandas + yFinance:** For market data fetching and analysis.
+*   **Matplotlib:** For performance visualization and charting.
+*   **ChatGPT-4:** The AI-powered trading decision engine.
 
-### System Requirements:
+**Key Features:**
 
-*   Python 3.7+
-*   Internet connection for market data.
-*   Approximately 10MB of storage for CSV data files.
+*   **Robust Data Sources:** Uses Yahoo Finance as the primary data source with Stooq as a fallback.
+*   **Automated Stop-Loss:** Automatically manages positions with configurable stop-loss.
+*   **Interactive Trading:** Supports Market-on-Open (MOO) and limit orders.
+*   **Backtesting Support:** Provides an ASOF\_DATE override for historical analysis.
+*   **Performance Analytics:** Includes CAPM analysis, Sharpe/Sortino ratios, and drawdown metrics.
+*   **Trade Logging:** Maintains complete transparency with detailed execution logs.
 
-## Follow the Experiment
+## Getting Started
 
-The experiment runs from June 2025 to December 2025.  Portfolio CSV files are updated daily.
+Follow the experiment's progress on the author's blog for weekly updates: [A.I Controls Stock Account](https://nathanbsmith729.substack.com)
 
-Updates are posted weekly on the author's blog: [Link to Blog](https://nathanbsmith729.substack.com).
+If you feel inspired to do something similar, feel free to use this as a blueprint.
 
-**Contact:** nathanbsmith.business@gmail.com
+**[View the original repository here.](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment)**
+
+**Contact:**
+For feature requests or advice, please contact nathanbsmith.business@gmail.com.

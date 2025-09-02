@@ -1,152 +1,101 @@
 <div align="center">
-  <img src="assets/logo2.jpg" alt="InfiniteTalk Logo" width="440"/>
+
+<p align="center">
+  <img src="assets/logo2.jpg" alt="InfinteTalk" width="440"/>
+</p>
+
+# InfiniteTalk: Generate Unlimited Talking Videos with Audio
+
+InfiniteTalk revolutionizes video creation by generating high-quality talking videos from audio, enabling realistic lip synchronization and expression alignment; [Check out the original repo](https://github.com/MeiGen-AI/InfiniteTalk).
+
 </div>
-
-# InfiniteTalk: Generate Unlimited Talking Videos with Audio!
-
-InfiniteTalk is a cutting-edge audio-driven video generation framework that allows you to create high-quality, talking videos from either existing videos or single images.  [Check out the original repo](https://github.com/MeiGen-AI/InfiniteTalk) for the full code and details.
 
 ## Key Features
 
-*   💬 **Sparse-frame Video Dubbing:** Synchronizes lips, head movements, body posture, and facial expressions to match the audio.
-*   ⏱️ **Infinite-Length Generation:** Generate videos of unlimited duration.
-*   ✨ **Improved Stability:** Reduces distortions compared to other models.
-*   🚀 **Superior Lip Synchronization:** Achieves highly accurate lip-sync.
-*   🖼️ **Image-to-Video Capability:**  Transform a single image into a talking video.
+*   💬 **Sparse-Frame Video Dubbing:** Synchronizes not only lips but also head movements, body posture, and facial expressions with the audio.
+*   ⏱️ **Infinite-Length Generation:** Supports the creation of videos with unlimited duration.
+*   ✨ **Enhanced Stability:** Produces videos with reduced hand/body distortions compared to other models.
+*   🚀 **Superior Lip Accuracy:** Achieves improved lip synchronization, resulting in more realistic video output.
+*   🖼️ **Image-to-Video Support**: Generate talking videos from a single image and audio input.
 
-##  Latest News
+## Latest News
 
-*   **August 19, 2025:** Release of the [Technique-Report](https://arxiv.org/abs/2508.14033), weights, and code, including Gradio and ComfyUI integration.
-*   **August 19, 2025:** Project page launched: [https://meigen-ai.github.io/InfiniteTalk/](https://meigen-ai.github.io/InfiniteTalk/)
+*   **August 19, 2025:** Release of the [Technique-Report](https://arxiv.org/abs/2508.14033), weights, and code. Gradio and [ComfyUI](https://github.com/MeiGen-AI/InfiniteTalk/tree/comfyui) branches have been released.
+*   **August 19, 2025:** Project page released: [Project Page](https://meigen-ai.github.io/InfiniteTalk/)
 
-##  Community Works
+## Community Works
 
-*   **Wan2GP Integration:**  [deepbeepmeep](https://github.com/deepbeepmeep) has integrated InfiniteTalk into Wan2GP for low VRAM optimization and advanced video editing options.
-*   **ComfyUI Support:** Thanks to [kijai](https://github.com/kijai) for the ComfyUI support.
+*   **Wan2GP:** Integration in [Wan2GP](https://github.com/deepbeepmeep/Wan2GP) by [deepbeepmeep](https://github.com/deepbeepmeep), offering optimization for low VRAM, and multiple video editing features.
+*   **ComfyUI:** ComfyUI support from [kijai](https://github.com/kijai) via [ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
 
 ## Video Demos
 
-### Video-to-Video
+### Video-to-video (HQ videos can be found on [Google Drive](https://drive.google.com/drive/folders/1BNrH6GJZ2Wt5gBuNLmfXZ6kpqb9xFPjU?usp=sharing))
 
-<table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
-  <tr>
-      <td>
-          <video src="https://github.com/user-attachments/assets/04f15986-8de7-4bb4-8cde-7f7f38244f9f" width="320" controls loop></video>
-      </td>
-       <td>
-          <video src="https://github.com/user-attachments/assets/1500f72e-a096-42e5-8b44-f887fa8ae7cb" width="320" controls loop></video>
-     </td>
-     <td>
-          <video src="https://github.com/user-attachments/assets/28f484c2-87dc-4828-a9e7-cb963da92d14" width="320" controls loop></video>
-     </td>
-     <td>
-          <video src="https://github.com/user-attachments/assets/665fabe4-3e24-4008-a0a2-a66e2e57c38b" width="320" controls loop></video>
-     </td>
-  </tr>
-</table>
+| Video 1                                                          | Video 2                                                          | Video 3                                                          | Video 4                                                          |
+| :-------------------------------------------------------------- | :-------------------------------------------------------------- | :-------------------------------------------------------------- | :-------------------------------------------------------------- |
+| <video src="https://github.com/user-attachments/assets/04f15986-8de7-4bb4-8cde-7f7f38244f9f" width="320" controls loop></video> | <video src="https://github.com/user-attachments/assets/1500f72e-a096-42e5-8b44-f887fa8ae7cb" width="320" controls loop></video> | <video src="https://github.com/user-attachments/assets/28f484c2-87dc-4828-a9e7-cb963da92d14" width="320" controls loop></video> | <video src="https://github.com/user-attachments/assets/665fabe4-3e24-4008-a0a2-a66e2e57c38b" width="320" controls loop></video> |
 
-### Image-to-Video
+### Image-to-video
 
-<table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
-  <tr>
-      <td>
-          <video src="https://github.com/user-attachments/assets/7e4a4dad-9666-4896-8684-2acb36aead59" width="320" controls loop></video>
-      </td>
-      <td>
-          <video src="https://github.com/user-attachments/assets/bd6da665-f34d-4634-ae94-b4978f92ad3a" width="320" controls loop></video>
-      </td>
-       <td>
-          <video src="https://github.com/user-attachments/assets/510e2648-82db-4648-aaf3-6542303dbe22" width="320" controls loop></video>
-     </td>
-     <td>
-          <video src="https://github.com/user-attachments/assets/27bb087b-866a-4300-8a03-3bbb4ce3ddf9" width="320" controls loop></video>
-     </td>
-     
-  </tr>
-  <tr>
-      <td>
-          <video src="https://github.com/user-attachments/assets/3263c5e1-9f98-4b9b-8688-b3e497460a76" width="320" controls loop></video>
-      </td>
-      <td>
-          <video src="https://github.com/user-attachments/assets/5ff3607f-90ec-4eee-b964-9d5ee3028005" width="320" controls loop></video>
-      </td>
-       <td>
-          <video src="https://github.com/user-attachments/assets/e504417b-c8c7-4cf0-9afa-da0f3cbf3726" width="320" controls loop></video>
-     </td>
-     <td>
-          <video src="https://github.com/user-attachments/assets/56aac91e-c51f-4d44-b80d-7d115e94ead7" width="320" controls loop></video>
-     </td>
-     
-  </tr>
-</table>
+| Video 1                                                          | Video 2                                                          | Video 3                                                          | Video 4                                                          |
+| :-------------------------------------------------------------- | :-------------------------------------------------------------- | :-------------------------------------------------------------- | :-------------------------------------------------------------- |
+| <video src="https://github.com/user-attachments/assets/7e4a4dad-9666-4896-8684-2acb36aead59" width="320" controls loop></video> | <video src="https://github.com/user-attachments/assets/bd6da665-f34d-4634-ae94-b4978f92ad3a" width="320" controls loop></video> | <video src="https://github.com/user-attachments/assets/510e2648-82db-4648-aaf3-6542303dbe22" width="320" controls loop></video> | <video src="https://github.com/user-attachments/assets/27bb087b-866a-4300-8a03-3bbb4ce3ddf9" width="320" controls loop></video> |
+| <video src="https://github.com/user-attachments/assets/3263c5e1-9f98-4b9b-8688-b3e497460a76" width="320" controls loop></video> | <video src="https://github.com/user-attachments/assets/5ff3607f-90ec-4eee-b964-9d5ee3028005" width="320" controls loop></video> | <video src="https://github.com/user-attachments/assets/e504417b-c8c7-4cf0-9afa-da0f3cbf3726" width="320" controls loop></video> | <video src="https://github.com/user-attachments/assets/56aac91e-c51f-4d44-b80d-7d115e94ead7" width="320" controls loop></video> |
 
 ## Quick Start
 
 ### 🛠️ Installation
 
-**Follow these steps to get started:**
+#### 1. Create a Conda Environment and Install Dependencies:
 
-1.  **Create and activate a conda environment & Install necessary packages (PyTorch, xformers, and dependencies)**
+```bash
+conda create -n infinitetalk python=3.10
+conda activate infinitetalk
+pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
+pip install -U xformers==0.0.28 --index-url https://download.pytorch.org/whl/cu121
+pip install misaki[en] ninja psutil packaging wheel flash_attn==2.7.4.post1
+pip install -r requirements.txt
+conda install -c conda-forge librosa
+conda install -c conda-forge ffmpeg
+```
 
-    ```bash
-    conda create -n multitalk python=3.10
-    conda activate multitalk
-    pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
-    pip install -U xformers==0.0.28 --index-url https://download.pytorch.org/whl/cu121
-    pip install misaki[en]
-    pip install ninja 
-    pip install psutil 
-    pip install packaging
-    pip install wheel
-    pip install flash_attn==2.7.4.post1
-    pip install -r requirements.txt
-    conda install -c conda-forge librosa
-    conda install -c conda-forge ffmpeg
-    ```
+#### 2. FFmpeg Installation (Alternative):
 
-2.  **(Optional) FFmpeg Installation (if not already installed):**
-
-    ```bash
-    conda install -c conda-forge ffmpeg
-    ```
-    or
-    ```bash
-    sudo yum install ffmpeg ffmpeg-devel
-    ```
+```bash
+sudo yum install ffmpeg ffmpeg-devel
+```
 
 ### 🧱 Model Preparation
 
-1.  **Download the required models using `huggingface-cli`:**
+#### 1. Download Models
 
-    ```bash
-    huggingface-cli download Wan-AI/Wan2.1-I2V-14B-480P --local-dir ./weights/Wan2.1-I2V-14B-480P
-    huggingface-cli download TencentGameMate/chinese-wav2vec2-base --local-dir ./weights/chinese-wav2vec2-base
-    huggingface-cli download TencentGameMate/chinese-wav2vec2-base model.safetensors --revision refs/pr/1 --local-dir ./weights/chinese-wav2vec2-base
-    huggingface-cli download MeiGen-AI/InfiniteTalk --local-dir ./weights/InfiniteTalk
-    ```
+| Model Name                      | Download Link                                                                                                | Notes                         |
+| :------------------------------ | :----------------------------------------------------------------------------------------------------------- | :---------------------------- |
+| Wan2.1-I2V-14B-480P             | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.1-I2V-14B-480P)                                                | Base Model                    |
+| chinese-wav2vec2-base         | 🤗 [Huggingface](https://huggingface.co/TencentGameMate/chinese-wav2vec2-base)                                       | Audio Encoder                 |
+| MeiGen-InfiniteTalk             | 🤗 [Huggingface](https://huggingface.co/MeiGen-AI/InfiniteTalk)                                                    | Audio Condition Weights       |
+
+#### 2. Download Models using huggingface-cli:
+
+```bash
+huggingface-cli download Wan-AI/Wan2.1-I2V-14B-480P --local-dir ./weights/Wan2.1-I2V-14B-480P
+huggingface-cli download TencentGameMate/chinese-wav2vec2-base --local-dir ./weights/chinese-wav2vec2-base
+huggingface-cli download TencentGameMate/chinese-wav2vec2-base model.safetensors --revision refs/pr/1 --local-dir ./weights/chinese-wav2vec2-base
+huggingface-cli download MeiGen-AI/InfiniteTalk --local-dir ./weights/InfiniteTalk
+```
 
 ### 🔑 Quick Inference
 
-**Key parameters for optimal results:**
+*   **Lip Synchronization Accuracy:** Adjust `Audio CFG` (3–5 optimal). Higher values improve lip sync.
+*   **FusionX LoRA:** Faster inference, but can cause color shifts.
+*   **V2V Generation:** For unlimited-length. Mimics original camera movement. Consider using SDEdit for improved camera accuracy (but it may introduce color shifts).
+*   **I2V Generation:** Great results for up to 1 minute from a single image.  Consider using a script to convert the image to a video, especially for long clips: [Convert Image to Video Script](https://github.com/MeiGen-AI/InfiniteTalk/blob/main/tools/convert_img_to_video.py).
+*   **Quantization Model:** For reduced memory usage, if experiencing out-of-memory issues.
 
-*   **Lip Synchronization:** Adjust `audio_cfg` between 3-5.
-*   **FusionX LoRA:** For faster and higher quality,  but be aware it may cause color shift over longer videos.
-*   **Video-to-Video (V2V):** Generates an unlimited length video. Use SDEdit for improved camera movement accuracy.
-*   **Image-to-Video (I2V):** Works well up to 1 minute.  For videos longer than 1 minute, consider using the image to video conversion tool provided.
+#### 1. Run Inference
 
-**Usage Guide**
-*   `--mode streaming`:  Generates a longer video.
-*   `--mode clip`:  Generates a short video with a single chunk.
-*   `--use_teacache`: Use TeaCache for inference speed.
-*   `--size infinitetalk-480`:  Generates a 480P video.
-*   `--size infinitetalk-720`: Generates a 720P video.
-*   `--use_apg`:  Run with APG.
-*   `--teacache_thresh`: TeaCache acceleration coefficient.
-*   `—-sample_text_guide_scale`:  Optimal value is 5.0 (without LoRA), 1.0 (with LoRA).
-*   `—-sample_audio_guide_scale`:  Optimal value is 4.0 (without LoRA), 2.0 (with LoRA).
-*   `--max_frame_num`:  The max length of the video generated (default is 40 seconds / 1000 frames)
-
-#### 1. Single GPU Inference
+##### 1) Single GPU
 
 ```bash
 python generate_infinitetalk.py \
@@ -160,7 +109,8 @@ python generate_infinitetalk.py \
     --motion_frame 9 \
     --save_file infinitetalk_res
 ```
-#### 2. 720P Inference
+
+##### 2) 720P
 
 ```bash
 python generate_infinitetalk.py \
@@ -175,7 +125,7 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_720p
 ```
 
-#### 3. Low VRAM Inference
+##### 3) Low VRAM
 
 ```bash
 python generate_infinitetalk.py \
@@ -191,7 +141,7 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_lowvram
 ```
 
-#### 4. Multi-GPU Inference
+##### 4) Multi-GPU
 
 ```bash
 GPU_NUM=8
@@ -209,7 +159,7 @@ torchrun --nproc_per_node=$GPU_NUM --standalone generate_infinitetalk.py \
     --save_file infinitetalk_res_multigpu
 ```
 
-#### 5. Multi-Person Animation
+##### 5) Multi-Person Animation
 
 ```bash
 python generate_infinitetalk.py \
@@ -225,7 +175,10 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_multiperson
 ```
 
-#### 6. Inference with FusioniX/Lightx2v LoRA
+#### 2. FusioniX or Lightx2v (Requires only 4-8 Steps)
+
+*   [FusioniX LoRA](https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX/blob/main/FusionX_LoRa/Wan2.1_I2V_14B_FusionX_LoRA.safetensors) (8 steps)
+*   [lightx2v](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank32.safetensors) (4 steps)
 
 ```bash
 python generate_infinitetalk.py \
@@ -246,7 +199,7 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_lora
 ```
 
-#### 7. Quantization Model Inference
+#### 3. Quantization Model (Single GPU)
 
 ```bash
 python generate_infinitetalk.py \
@@ -264,7 +217,7 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_quant
 ```
 
-#### 8. Run with Gradio
+#### 4. Gradio Demo
 
 ```bash
 python app.py \
@@ -272,32 +225,34 @@ python app.py \
     --wav2vec_dir 'weights/chinese-wav2vec2-base' \
     --infinitetalk_dir weights/InfiniteTalk/single/infinitetalk.safetensors \
     --num_persistent_param_in_dit 0 \
-    --motion_frame 9 
+    --motion_frame 9
 ```
+
 or
+
 ```bash
 python app.py \
     --ckpt_dir weights/Wan2.1-I2V-14B-480P \
     --wav2vec_dir 'weights/chinese-wav2vec2-base' \
     --infinitetalk_dir weights/InfiniteTalk/multi/infinitetalk.safetensors \
     --num_persistent_param_in_dit 0 \
-    --motion_frame 9 
+    --motion_frame 9
 ```
 
-## 📚 Citation
+## Citation
 
-```
+```bibtex
 @misc{yang2025infinitetalkaudiodrivenvideogeneration,
-      title={InfiniteTalk: Audio-driven Video Generation for Sparse-Frame Video Dubbing}, 
+      title={InfiniteTalk: Audio-driven Video Generation for Sparse-Frame Video Dubbing},
       author={Shaoshu Yang and Zhe Kong and Feng Gao and Meng Cheng and Xiangyu Liu and Yong Zhang and Zhuoliang Kang and Wenhan Luo and Xunliang Cai and Ran He and Xiaoming Wei},
       year={2025},
       eprint={2508.14033},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2508.14033}, 
+      url={https://arxiv.org/abs/2508.14033},
 }
 ```
 
-## 📜 License
+## License
 
-The models are licensed under the Apache 2.0 License. You are responsible for your usage of the models and must comply with the license terms, including not generating any content that violates applicable laws or promotes harm.
+This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for details.

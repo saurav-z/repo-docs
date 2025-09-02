@@ -1,87 +1,94 @@
-# SimpleTuner: Train Cutting-Edge AI Models with Ease 🚀
+# SimpleTuner: Unleash Your Creative Vision with AI Image Generation
 
-**SimpleTuner** simplifies the process of training advanced AI models, providing a user-friendly experience with a focus on clarity and versatility. Learn more and contribute on [GitHub](https://github.com/bghira/SimpleTuner).
+**SimpleTuner** simplifies AI image generation, offering a streamlined and accessible way to train and fine-tune various diffusion models, allowing you to create stunning visuals with ease.  [Explore the original repository here](https://github.com/bghira/SimpleTuner).
 
-*   **Community-Driven:** Open-source project with active community on [Discord](https://discord.gg/CVzhX7ZA).
+> ℹ️  SimpleTuner prioritizes user privacy; no data is sent to third parties unless you explicitly enable options like `report_to`, `push_to_hub`, or manually configured webhooks.
 
-## Key Features
+**Key Features:**
 
-*   **Simplified Training:** Easy-to-understand code for a streamlined training experience.
-*   **Versatile Support:** Handles diverse image and video datasets, from small to massive collections.
-*   **Cutting-Edge Techniques:** Integrates proven methods like LoRA, LyCORIS, and ControlNet for superior results.
-*   **Multi-GPU Support:** Train models faster with multi-GPU configurations.
-*   **Memory Optimization:** Features like caching and DeepSpeed integration to reduce memory consumption.
-*   **Wide Model Compatibility:** Supports various models, including SDXL, Stable Diffusion 3, Flux.1, HiDream, PixArt Sigma, and more.
-*   **Flexible Hardware Support:** Compatible with NVIDIA, AMD, and Apple silicon hardware.
-*   **Extensive Documentation:** Detailed guides and quickstarts for easy onboarding.
-*   **Hugging Face Integration:** Seamless model upload and dataset loading from the Hugging Face Hub.
+*   **User-Friendly Design:** Focused on simplicity with sensible defaults for ease of use.
+*   **Versatile Training:** Supports a wide range of image quantities, from small datasets to extensive collections.
+*   **Cutting-Edge Technologies:** Integrates proven features to optimize your training process.
+*   **Multi-Model Support:** Extensive compatibility for popular models like SDXL, Stable Diffusion 3, and more.
+*   **Hardware Optimization:** Supports low-VRAM training with quantisation techniques and DeepSpeed integration.
+*   **Advanced Training Techniques:** Includes support for LoRA, LyCORIS, ControlNet, Mixture of Experts, and more for fine-grained control.
+*   **Integration with Hugging Face Hub:** Easily upload and share your trained models.
+*   **Webhook Support:** Integrate with services like Discord to monitor progress.
+*   **Support for HiDream, Flux.1, Wan Video, LTX Video, PixArt Sigma, NVLabs Sana, Stable Diffusion 3, Kwai Kolors, Lumina2, Cosmos2 Predict (Image) and Qwen-Image models**
 
 ## Table of Contents
 
-*   [Design Philosophy](#design-philosophy)
-*   [Tutorial](#tutorial)
-*   [Features](#features)
-    *   [HiDream](#hidream)
-    *   [Flux.1](#flux-1)
-    *   [Wan Video](#wan-video)
-    *   [LTX Video](#ltx-video)
-    *   [PixArt Sigma](#pixart-sigma)
-    *   [NVLabs Sana](#nvlabs-sana)
-    *   [Stable Diffusion 3](#stable-diffusion-3)
-    *   [Kwai Kolors](#kwai-kolors)
-    *   [Lumina2](#lumina2)
-    *   [Cosmos2 Predict (Image)](#cosmos2-predict-image)
-    *   [Qwen-Image](#qwen-image)
-    *   [Legacy Stable Diffusion models](#legacy-stable-diffusion-models)
-*   [Hardware Requirements](#hardware-requirements)
-*   [Toolkit](#toolkit)
-*   [Setup](#setup)
-*   [Troubleshooting](#troubleshooting)
+-   [Design Philosophy](#design-philosophy)
+-   [Tutorial](#tutorial)
+-   [Features](#features)
+    -   [Flux](#flux1)
+    -   [Wan 2.1 Video](#wan-video)
+    -   [LTX Video](#ltx-video)
+    -   [PixArt Sigma](#pixart-sigma)
+    -   [NVLabs Sana](#nvlabs-sana)
+    -   [Stable Diffusion 2.0/2.1](#stable-diffusion-20--21)
+    -   [Stable Diffusion 3.0](#stable-diffusion-3)
+    -   [Kwai Kolors](#kwai-kolors)
+    -   [Lumina2](#lumina2)
+-   [Hardware Requirements](#hardware-requirements)
+    -   [Flux](#flux1-dev-schnell)
+    -   [SDXL](#sdxl-1024px)
+    -   [Stable Diffusion (Legacy)](#stable-diffusion-2x-768px)
+-   [Scripts](#scripts)
+-   [Toolkit](#toolkit)
+-   [Setup](#setup)
+-   [Troubleshooting](#troubleshooting)
 
 ## Design Philosophy
 
-*   **Simplicity:** Prioritizing ease of use with sensible default settings.
-*   **Versatility:** Designed to handle a wide range of datasets and image/video sizes.
-*   **Cutting-Edge:** Only incorporates well-tested features for optimal performance.
+*   **Simplicity:** Focuses on good default settings, reducing the need for extensive configuration.
+*   **Versatility:** Designed to handle diverse datasets and training scenarios.
+*   **Cutting-Edge Features:** Only includes effective, proven features.
 
 ## Tutorial
 
-Explore the [tutorial](/TUTORIAL.md) and [Quick Start](/documentation/QUICKSTART.md) to get started. For memory-constrained systems, see the [DeepSpeed documentation](/documentation/DEEPSPEED.md). Explore guides for [multi-node training](/documentation/DISTRIBUTED.md) as well.
+Before beginning, please read the [tutorial](/TUTORIAL.md) for essential information.
+
+For a quick start, consult the [Quick Start](/documentation/QUICKSTART.md) guide.
+
+To optimize memory usage, see the [DeepSpeed document](/documentation/DEEPSPEED.md).
+
+For multi-node training, this [guide](/documentation/DISTRIBUTED.md) will help configure multi-node training.
 
 ---
 
 ## Features
 
 *   Multi-GPU training
-*   New token-wise dropout techniques like [TREAD](/documentation/TREAD.md) for speeding up Wan 2.1/2.2 and Flux training, including Kontext
-*   Image, video, and caption features (embeds) are cached to the hard drive in advance, so that training runs faster and with less memory consumption
-*   Aspect bucketing: support for a variety of image/video sizes and aspect ratios, enabling widescreen and portrait training.
+*   New token-wise dropout techniques like [TREAD](/documentation/TREAD.md)
+*   Caching for faster training and reduced memory consumption.
+*   Aspect bucketing for various image/video sizes and aspect ratios.
 *   Refiner LoRA or full u-net training for SDXL
-*   Most models are trainable on a 24G GPU, or even down to 16G at lower base resolutions.
-    *   LoRA/LyCORIS training for PixArt, SDXL, SD3, and SD 2.x that uses less than 16G VRAM
-*   DeepSpeed integration allowing for [training SDXL's full u-net on 12G of VRAM](/documentation/DEEPSPEED.md), albeit very slowly.
-*   Quantised NF4/INT8/FP8 LoRA training, using low-precision base model to reduce VRAM consumption.
-*   Optional EMA (Exponential moving average) weight network to counteract model overfitting and improve training stability.
-*   Train directly from an S3-compatible storage provider, eliminating the requirement for expensive local storage. (Tested with Cloudflare R2 and Wasabi S3)
-*   For SDXL, SD 1.x/2.x, and Flux, full or LoRA based [ControlNet model training](/documentation/CONTROLNET.md) (not ControlLite)
-*   Training [Mixture of Experts](/documentation/MIXTURE_OF_EXPERTS.md) for lightweight, high-quality diffusion models
-*   [Masked loss training](/documentation/DREAMBOOTH.md#masked-loss) for superior convergence and reduced overfitting on any model
-*   Strong [prior regularisation](/documentation/DATALOADER.md#is_regularisation_data) training support for LyCORIS models
-*   Webhook support for updating eg. Discord channels with your training progress, validations, and errors
-*   Integration with the [Hugging Face Hub](https://huggingface.co) for seamless model upload and nice automatically-generated model cards.
+*   Train most models on 24G or even 16G GPUs
+    *   LoRA/LyCORIS training for PixArt, SDXL, SD3, and SD 2.x uses less than 16G VRAM
+*   DeepSpeed integration allows for [training SDXL's full u-net on 12G of VRAM](/documentation/DEEPSPEED.md).
+*   Quantised NF4/INT8/FP8 LoRA training.
+*   Optional EMA (Exponential moving average) for model stability.
+*   Training directly from S3-compatible storage.
+*   For SDXL, SD 1.x/2.x, and Flux, full or LoRA based [ControlNet model training](/documentation/CONTROLNET.md)
+*   Training [Mixture of Experts](/documentation/MIXTURE_OF_EXPERTS.md)
+*   [Masked loss training](/documentation/DREAMBOOTH.md#masked-loss)
+*   Strong [prior regularisation](/documentation/DATALOADER.md#is_regularisation_data) support for LyCORIS models
+*   Webhook support for notifications.
+*   Integration with the [Hugging Face Hub](https://huggingface.co).
     *   Use the [datasets library](/documentation/data_presets/preset_subjects200k.md) ([more info](/documentation/HUGGINGFACE_DATASETS.md)) to load compatible datasets directly from the hub
 
 ### HiDream
 
 Full training support for HiDream is included:
 
-- Custom ControlNet implementation for training via full-rank, LoRA or Lycoris
-- Memory-efficient training for NVIDIA GPUs (AMD support is planned)
-- Dev and Full both functioning and trainable. Fast is untested.
-- Optional MoEGate loss augmentation
-- Lycoris or full tuning via DeepSpeed ZeRO on a single GPU
-- Quantise the base model using `--base_model_precision` to `int8-quanto` or `fp8-quanto` for major memory savings
-- Quantise Llama LLM using `--text_encoder_4_precision` set to `int4-quanto` or `int8-quanto` to run on 24G cards.
+*   Custom ControlNet implementation for training via full-rank, LoRA or Lycoris
+*   Memory-efficient training for NVIDIA GPUs (AMD support is planned)
+*   Dev and Full both functioning and trainable. Fast is untested.
+*   Optional MoEGate loss augmentation
+*   Lycoris or full tuning via DeepSpeed ZeRO on a single GPU
+*   Quantise the base model using `--base_model_precision` to `int8-quanto` or `fp8-quanto` for major memory savings
+*   Quantise Llama LLM using `--text_encoder_4_precision` set to `int4-quanto` or `int8-quanto` to run on 24G cards.
 
 See [hardware requirements](#hidream) or the [quickstart guide](/documentation/quickstart/HIDREAM.md).
 
@@ -89,15 +96,15 @@ See [hardware requirements](#hidream) or the [quickstart guide](/documentation/q
 
 Full training support for Flux.1 is included:
 
-- Double the training speed of Flux.1 with the new `--fuse_qkv_projections` option, taking advantage of Flash Attention 3 on Hopper systems
-- ControlNet training via full-rank, LoRA or Lycoris
-- Instruct fine-tuning for the Kontext \[dev] editing model implementation generously provided by [Runware](https://runware.ai).
-- Classifier-free guidance training
-    - Leave it disabled and preserve the dev model's distillation qualities
-    - Or, reintroduce CFG to the model and improve its creativity at the cost of inference speed and training time.
-- (optional) T5 attention masked training for superior fine details and generalisation capabilities
-- LoRA or full tuning via DeepSpeed ZeRO on a single GPU
-- Quantise the base model using `--base_model_precision` to `int8-quanto` or `fp8-torchao` for major memory savings
+*   Double the training speed of Flux.1 with the new `--fuse_qkv_projections` option, taking advantage of Flash Attention 3 on Hopper systems
+*   ControlNet training via full-rank, LoRA or Lycoris
+*   Instruct fine-tuning for the Kontext \[dev] editing model implementation generously provided by [Runware](https://runware.ai).
+*   Classifier-free guidance training
+    *   Leave it disabled and preserve the dev model's distillation qualities
+    *   Or, reintroduce CFG to the model and improve its creativity at the cost of inference speed and training time.
+*   (optional) T5 attention masked training for superior fine details and generalisation capabilities
+*   LoRA or full tuning via DeepSpeed ZeRO on a single GPU
+*   Quantise the base model using `--base_model_precision` to `int8-quanto` or `fp8-torchao` for major memory savings
 
 See [hardware requirements](#flux1-dev-schnell) or the [quickstart guide](/documentation/quickstart/FLUX.md).
 
@@ -105,12 +112,12 @@ See [hardware requirements](#flux1-dev-schnell) or the [quickstart guide](/docum
 
 SimpleTuner has preliminary training integration for Wan 2.1 which has a 14B and 1.3B type, both of which work.
 
-- Text to Video training is supported.
-- Image to Video training is not yet supported.
-- Text encoder training is not supported.
-- VAE training is not supported.
-- LyCORIS, PEFT, and full tuning all work as expected
-- ControlNet training is not yet supported
+*   Text to Video training is supported.
+*   Image to Video training is not yet supported.
+*   Text encoder training is not supported.
+*   VAE training is not supported.
+*   LyCORIS, PEFT, and full tuning all work as expected
+*   ControlNet training is not yet supported
 
 See the [Wan Video Quickstart](/documentation/quickstart/WAN.md) guide to start training.
 
@@ -118,10 +125,10 @@ See the [Wan Video Quickstart](/documentation/quickstart/WAN.md) guide to start 
 
 SimpleTuner has preliminary training integration for LTX Video, efficiently training on less than 16G.
 
-- Text encoder training is not supported
-- VAE training is not supported
-- LyCORIS, PEFT, and full tuning all work as expected
-- ControlNet training is not yet supported
+*   Text encoder training is not supported
+*   VAE training is not supported
+*   LyCORIS, PEFT, and full tuning all work as expected
+*   ControlNet training is not yet supported
 
 See the [LTX Video Quickstart](/documentation/quickstart/LTXVIDEO.md) guide to start training.
 
@@ -129,10 +136,10 @@ See the [LTX Video Quickstart](/documentation/quickstart/LTXVIDEO.md) guide to s
 
 SimpleTuner has extensive training integration with PixArt Sigma - both the 600M & 900M models load without modification.
 
-- Text encoder training is not supported
-- LyCORIS and full tuning both work as expected
-- ControlNet training is supported for full and PEFT LoRA training
-- [Two-stage PixArt](https://huggingface.co/ptx0/pixart-900m-1024-ft-v0.7-stage1) training support (see: [MIXTURE_OF_EXPERTS](/documentation/MIXTURE_OF_EXPERTS.md))
+*   Text encoder training is not supported
+*   LyCORIS and full tuning both work as expected
+*   ControlNet training is supported for full and PEFT LoRA training
+*   [Two-stage PixArt](https://huggingface.co/ptx0/pixart-900m-1024-ft-v0.7-stage1) training support (see: [MIXTURE_OF_EXPERTS](/documentation/MIXTURE_OF_EXPERTS.md))
 
 See the [PixArt Quickstart](/documentation/quickstart/SIGMA.md) guide to start training.
 
@@ -142,19 +149,19 @@ SimpleTuner has extensive training integration with NVLabs Sana.
 
 This is a lightweight, fun, and fast model that makes getting into model training highly accessible to a wider audience.
 
-- LyCORIS and full tuning both work as expected.
-- Text encoder training is not supported.
-- PEFT Standard LoRA is not supported.
-- ControlNet training is not yet supported
+*   LyCORIS and full tuning both work as expected.
+*   Text encoder training is not supported.
+*   PEFT Standard LoRA is not supported.
+*   ControlNet training is not yet supported
 
 See the [NVLabs Sana Quickstart](/documentation/quickstart/SANA.md) guide to start training.
 
 ### Stable Diffusion 3
 
-- LoRA and full finetuning are supported as usual.
-- ControlNet training via full-rank, PEFT LoRA, or Lycoris
-- Certain features such as segmented timestep selection and Compel long prompt weighting are not yet supported.
-- Parameters have been optimised to get the best results, validated through from-scratch training of SD3 models
+*   LoRA and full finetuning are supported as usual.
+*   ControlNet training via full-rank, PEFT LoRA, or Lycoris
+*   Certain features such as segmented timestep selection and Compel long prompt weighting are not yet supported.
+*   Parameters have been optimised to get the best results, validated through from-scratch training of SD3 models
 
 See the [Stable Diffusion 3 Quickstart](/documentation/quickstart/SD3.md) to get going.
 
@@ -169,8 +176,8 @@ Kolors support is almost as deep as SDXL, minus ControlNet training support.
 
 A 2B parameter flow-matching model that uses the 16ch Flux VAE.
 
-- LoRA, Lycoris, and full finetuning are supported
-- ControlNet training is not yet supported
+*   LoRA, Lycoris, and full finetuning are supported
+*   ControlNet training is not yet supported
 
 A [Lumina2 Quickstart](/documentation/quickstart/LUMINA2.md) is available with example configurations.
 
@@ -178,9 +185,9 @@ A [Lumina2 Quickstart](/documentation/quickstart/LUMINA2.md) is available with e
 
 A 2B / 14B parameter model that can do video as well as text-to-image.
 
-- Currently, only the text-to-image variant is supported.
-- Lycoris or full-rank tuning are supported, but PEFT LoRAs are currently not.
-- ControlNet training is not yet supported.
+*   Currently, only the text-to-image variant is supported.
+*   Lycoris or full-rank tuning are supported, but PEFT LoRAs are currently not.
+*   ControlNet training is not yet supported.
 
 A [Cosmos2 Predict Quickstart](/documentation/quickstart/COSMOS2IMAGE.md) is available with full example configuration and dataset.
 
@@ -188,8 +195,8 @@ A [Cosmos2 Predict Quickstart](/documentation/quickstart/COSMOS2IMAGE.md) is ava
 
 A **massive** 20B MMDiT that can do text-to-image.
 
-- Lycoris, LoRA, and full-rank training are all supported, with full-rank training requiring H200 or better with DeepSpeed
-- ControlNet training is not yet supported.
+*   Lycoris, LoRA, and full-rank training are all supported, with full-rank training requiring H200 or better with DeepSpeed
+*   ControlNet training is not yet supported.
 
 A [Qwen Image Quickstart](/documentation/quickstart/QWEN_IMAGE.md) is available with example configuration and dataset, as well as general training/configuration tips.
 
@@ -258,19 +265,18 @@ Kontext requires a bit beefier compute and memory allocation; a 4090 will go fro
 
 - 16G or better
 
-
 ## Toolkit
 
-For more information about the associated toolkit distributed with SimpleTuner, refer to [the toolkit documentation](/toolkit/README.md).
+See the [toolkit documentation](/toolkit/README.md) for more details.
 
 ## Setup
 
-Detailed setup information is available in the [installation documentation](/INSTALL.md).
+Detailed setup instructions are in the [installation documentation](/INSTALL.md).
 
 ## Troubleshooting
 
-Enable debug logs for a more detailed insight by adding `export SIMPLETUNER_LOG_LEVEL=DEBUG` to your environment (`config/config.env`) file.
+Enable debug logs with `export SIMPLETUNER_LOG_LEVEL=DEBUG` (in your environment file, e.g., `config/config.env`).
 
-For performance analysis of the training loop, setting `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG` will have timestamps that highlight any issues in your configuration.
+For training loop performance analysis, use `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`.
 
-For a comprehensive list of options available, consult [this documentation](/OPTIONS.md).
+For a comprehensive list of options, see [this documentation](/OPTIONS.md).

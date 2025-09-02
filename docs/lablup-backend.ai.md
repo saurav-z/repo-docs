@@ -1,35 +1,56 @@
-# Backend.AI: Container-Based Computing for Modern Workloads
+# Backend.AI: Unleash the Power of Containerized Computing
 
-**Backend.AI is a powerful platform designed to streamline and accelerate your compute-intensive tasks by leveraging containerization and diverse hardware acceleration.**  [Explore the original repository](https://github.com/lablup/backend.ai)
+Backend.AI is a versatile platform that simplifies the deployment and management of computing clusters, offering a streamlined environment for your machine learning and data science workloads. **[Get started with Backend.AI on GitHub](https://github.com/lablup/backend.ai)**
 
 ## Key Features
 
-*   **Containerized Computing:** Run your workloads in isolated, containerized environments for consistent and reproducible results.
-*   **Framework & Language Support:** Hosts popular computing/ML frameworks and diverse programming languages.
-*   **Heterogeneous Accelerator Support:**  Integrates with CUDA GPU, ROCm GPU, Rebellions, FuriosaAI, HyperAccel, Google TPU, Graphcore IPU and other NPUs for optimized performance.
-*   **Resource Management:** Allocates and isolates computing resources for multi-tenant sessions, on-demand or in batches.
-*   **Flexible Job Scheduling:** Customizable job schedulers with "Sokovan" orchestrator.
-*   **API Access:** Exposes all functions through REST and GraphQL APIs, providing flexible integration options.
-*   **Client SDKs:** Comprehensive SDKs in Python, Java, JavaScript, and PHP.
-*   **Secure Access:** Provides secure websocket tunneling into compute sessions with Jupyter, web-based terminal, SSH, and VSCode support.
-*   **Storage Abstraction:** Offers a vfolder abstraction layer over network storage for easy data management.
-*   **Extensible:**  Supports plugins for accelerators, monitoring, and more.
+*   **Containerized Computing:** Leverages Docker containers for reproducible and isolated computing environments.
+*   **Broad Framework Support:** Hosts popular computing and ML frameworks, including TensorFlow, PyTorch, and more.
+*   **Multi-Language Support:** Supports diverse programming languages such as Python, R, and Julia.
+*   **Heterogeneous Accelerator Support:** Integrates with various accelerators like CUDA GPUs, ROCm GPUs, and NPUs, enabling accelerated computing.
+*   **Resource Management:** Allocates and isolates computing resources for multi-tenant computation sessions.
+*   **REST & GraphQL APIs:** Provides comprehensive APIs for seamless integration and automation.
+*   **Job Scheduling:** Offers customizable job schedulers with its orchestrator "Sokovan."
+*   **Secure Access:** Provides secure access to computation sessions through Jupyter, web-based terminals, SSH, and VSCode.
+*   **Flexible Storage:** Supports virtual folders (vfolders) for seamless integration with various storage solutions (e.g., NFS/SMB).
+*   **Client SDKs:** Easily integrate with backend.ai via Python, Java, Javascript, and PHP (under preparation) SDKs.
+*   **Extensible with Plugins:** Supports plugins for accelerators, monitoring, and other custom functionalities.
 
 ## Core Components
 
-*   **Manager:** The cluster control-plane, routing API requests and managing cluster resources.
-*   **Agent:**  Per-node controller managing instances and launching/destroying containers.
-*   **Storage Proxy:** Provides a unified interface for various network storage devices.
-*   **Webserver:**  Hosts the web UI for end-users and basic administration.
-*   **Kernels:**  Container images providing computing environment recipes.
-*   **Jail:** ptrace-based system call filtering for secure sandboxing.
-*   **Hook:**  Set of libc overrides for resource control.
+*   **Manager:** The central control plane that manages cluster resources, schedules jobs, and routes API requests.
+*   **Agent:** Runs on each compute node, manages container lifecycles, and interacts with the Manager.
+*   **Storage Proxy:** Abstracts and manages storage operations, providing a unified interface to various storage backends.
+*   **Webserver:** Hosts the web UI for user interaction and administration.
+*   **Kernels:** Computing environment recipes to build container images.
+*   **Jail:** A programmable sandbox for security.
+*   **Hook:** A set of libc overrides for resource control.
+*   **Client SDKs:** Libraries for Python, Java, Javascript, and PHP (under preparation).
 
 ## Getting Started
 
-*   **Single-node Development:**  Use the `scripts/install-dev.sh` script after cloning the repository.
-*   **Multi-node Tests & Production:** Consult the documentation ([http://docs.backend.ai](http://docs.backend.ai))
+### Installation for Single-node Development
 
-## Licensing
+Run `scripts/install-dev.sh` after cloning this repository. This script sets up a development environment with required dependencies, including Docker.
 
-Backend.AI server-side components are licensed under LGPLv3, and the client SDKs are distributed under the MIT license.  For commercial consulting and licensing inquiries, please contact contact-at-lablup-com.
+### Installation for Multi-node Tests & Production
+
+Consult [our documentation](http://docs.backend.ai) for community-supported materials. Contact the sales team (contact@lablup.com) for professional paid support and deployment options.
+
+## Plugin Ecosystem
+
+*   `backendai_accelerator_v21`: Accelerator plugins (CUDA, ROCm, and more).
+*   `backendai_monitor_stats_v10`: Statistics collection via Datadog API.
+*   `backendai_monitor_error_v10`: Exception collection via Sentry API.
+
+## Version Compatibility
+
+Provides a table that shows compatible versions of Backend.AI, Python, and Pantsbuild.
+
+## Build Packages
+
+Build Python wheels (.whl) and SCIE (Self-Contained Installable Executables) packages using the scripts.
+
+## License
+
+Refer to the [LICENSE file](https://github.com/lablup/backend.ai/blob/main/LICENSE) for licensing details.

@@ -17,101 +17,89 @@
 
 ---
 
-## ToolFront: Unlock AI's Full Potential with Effortless Data Retrieval
+## ToolFront: Effortlessly Retrieve Data for AI Applications
 
-**ToolFront** is a powerful Python library that simplifies data retrieval for AI applications, providing unmatched control, precision, and speed.  Access databases, APIs, and documents with ease, leveraging the power of leading AI models.  Explore the source code on [GitHub](https://github.com/kruskal-labs/toolfront).
+ToolFront empowers you to seamlessly access and integrate data from databases, APIs, and documents directly into your AI workflows.  [Explore the ToolFront repository on GitHub](https://github.com/kruskal-labs/toolfront).
 
 **Key Features:**
 
-*   **Seamless Integration:** Connect to various data sources, including databases, APIs (OpenAPI/Swagger compatible), and documents.
-*   **AI Model Agnostic:**  Works with a wide range of AI models from providers like OpenAI, Anthropic, Google, xAI, and others.
-*   **Structured Output:**  Retrieve data in the format you need, including strings, lists, and structured Pydantic objects, ensuring easy integration with your applications.
-*   **Rapid Development:**  Reduce development time with intuitive APIs and streamlined data retrieval workflows.
-*   **Flexible and Extensible:** Supports various databases, APIs, and document formats.
+*   **Versatile Data Sources:** Connect to databases (Postgres, Snowflake, and more), APIs (OpenAPI-compatible), and documents (PDFs, etc.).
+*   **AI Model Agnostic:**  Integrates with leading AI model providers like OpenAI, Anthropic, Google, and xAI.
+*   **Structured Output:**  Receive data in a structured format (e.g., JSON, Pydantic models) for easy use in your AI applications.
+*   **Unmatched Control & Precision:**  Fine-tune data retrieval with context and specific instructions.
+*   **Rapid Deployment:**  Simple installation with `pip` and straightforward integration into your projects.
 
 ---
 
-**Installation**
+## Quickstart: Installation
 
-Install ToolFront using `pip`:
+Install ToolFront using pip:
 
 ```bash
 pip install toolfront
 ```
 
-For specific database support, install with extras, e.g., `pip install "toolfront[postgres]"`.  See the [documentation](http://docs.toolfront.ai/) for a full list of supported databases.
+For specific database support, install the relevant extras (e.g., `pip install "toolfront[postgres]"`).  See the [documentation](http://docs.toolfront.ai/) for a full list.
 
 ---
 
-**Examples:**
+## Examples
 
-*   **Text-to-SQL with ChatGPT:**
+### Database Integration (Text-to-SQL)
 
-    ```python
-    from toolfront import Database
+```python
+from toolfront import Database
 
-    db = Database("postgres://user:pass@localhost:5432/mydb", model="openai:gpt-4o")
+db = Database("postgres://user:pass@localhost:5432/mydb", model="openai:gpt-4o")
 
-    context = "We're an e-commerce company. Sales data is in the `cust_orders` table."
+context = "We're an e-commerce company. Sales data is in the `cust_orders` table."
 
-    answer = db.ask("What's our best-selling product?", context=context)
-    # >>> "Wireless Headphones Pro"
-    ```
-*   **API Retrieval with Claude:**
+# Returns a string
+answer = db.ask("What's our best-selling product?", context=context)
+# >>> "Wireless Headphones Pro"
+```
 
-    ```python
-    from toolfront import API
+### API Interaction
 
-    api = API("http://localhost:8000/openapi.json", model="anthropic:claude-3-5-sonnet")
+```python
+from toolfront import API
 
-    answer: list[int] = api.ask("Get the last 5 order IDs for user_id=42")
-    # >>> [1001, 998, 987, 976, 965]
-    ```
+api = API("http://localhost:8000/openapi.json", model="anthropic:claude-3-5-sonnet")
 
-*   **Document Information Extraction with Gemini:**
+# Returns a list of integers
+answer: list[int] = api.ask("Get the last 5 order IDs for user_id=42")
+# >>> [1001, 998, 987, 976, 965]
+```
 
-    ```python
-    from toolfront import Document
-    from pydantic import BaseModel, Field
+### Document Processing
 
-    class CompanyReport(BaseModel):
-        company_name: str = Field(..., description="Name of the company")
-        revenue: int | float = Field(..., description="Annual revenue in USD")
-        is_profitable: bool = Field(..., description="Whether the company is profitable")
+```python
+from toolfront import Document
+from pydantic import BaseModel, Field
 
-    doc = Document("/path/annual_report.pdf", model="google:gemini-pro")
+class CompanyReport(BaseModel):
+    company_name: str = Field(..., description="Name of the company")
+    revenue: int | float = Field(..., description="Annual revenue in USD")
+    is_profitable: bool = Field(..., description="Whether the company is profitable")
 
-    answer: CompanyReport = doc.ask("Extract the key company information from this report")
-    # >>> CompanyReport(company_name="TechCorp Inc.", revenue=2500000, is_profitable=True)
-    ```
+doc = Document("/path/annual_report.pdf", model="google:gemini-pro")
 
-*   **Snowflake MCP Server (Example Configuration):**
-
-    ```json
-    {
-      "mcpServers": {
-        "toolfront": {
-          "command": "uvx",
-          "args": [
-            "toolfront[snowflake]", 
-            "snowflake://user:pass@account/warehouse/database"
-          ]
-        }
-      }
-    }
-    ```
+# Returns a structured Pydantic object
+answer: CompanyReport = doc.ask("Extract the key company information from this report")
+# >>> CompanyReport(company_name="TechCorp Inc.", revenue=2500000, is_profitable=True)
+```
 
 ---
 
-**Community & Resources**
+## Community & Resources
 
 *   **Documentation:** [docs.toolfront.ai](http://docs.toolfront.ai/)
-*   **Discord:** Join our [community server](https://discord.gg/rRyM7zkZTf) for real-time help and discussions
-*   **X (Twitter):** Follow us [@toolfront](https://x.com/toolfront) for updates and news
+*   **Discord:** Join our [community server](https://discord.gg/rRyM7zkZTf)
+*   **X (Twitter):** Follow us [@toolfront](https://x.com/toolfront)
 *   **GitHub Issues:** Report bugs or request features on [GitHub Issues](https://github.com/kruskal-labs/toolfront/issues)
 
 ---
 
-**License**
+## License
 
-This project is licensed under the MIT license.
+This project is licensed under the MIT License.

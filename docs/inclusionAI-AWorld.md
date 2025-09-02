@@ -1,58 +1,95 @@
-<div align="center">
+# AWorld: The Premier Agent Runtime for Self-Improving AI 
 
-# AWorld: The Agent Runtime for Self-Improvement
+**AWorld empowers you to build intelligent AI agents that learn and evolve, leading to cutting-edge advancements in AI.** ([Original Repo](https://github.com/inclusionAI/AWorld))
 
-</div>
+## Key Features
 
-<h4 align="center">
-
-*Unlock the next generation of AI with AWorld: where agents evolve through continuous self-improvement.*
-
-[![Twitter Follow][twitter-image]][twitter-url]
-[![WeChat QR Code][wechat-image]][wechat-url]
-[![Discord][discord-image]][discord-url]
-[![License: MIT][license-image]][license-url]
-[![DeepWiki][deepwiki-image]][deepwiki-url]
-
-</h4>
-
-<h4 align="center">
-
-[中文版](./README_zh.md) |
-[Quickstart](#️-quickstart) |
-[Architecture](#️-architecture-design-principles) |
-[Applications](#-applications) |
-[Contributing](#contributing) |
-[Appendix](#appendix-web-client-usage)
-
-</h4>
+*   🚀 **Self-Improvement:** Agents continuously evolve through their own experiences.
+*   🧩 **Plug-and-Play:** Easily integrate complex modules with robust protocols.
+*   ☁️ **Cloud-Native:** Train smarter agents with scalable infrastructure.
+*   🤖 **Multi-Agent Systems (MAS):** Build and orchestrate complex agent societies.
+*   🧠 **Intelligence Amplification:**  Generate high-quality feedback and training data.
 
 ---
-![AWorld Banner](./readme_assets/heading_banner.png)
+![](./readme_assets/heading_banner.png)
 
-**AWorld (Agent World)** is a cutting-edge framework designed to empower AI agents with the ability to continuously improve themselves. By synthesizing their own knowledge and experiences, agents built with AWorld can achieve remarkable levels of autonomy and performance.
+**AWorld (Agent World)** is a next-generation framework designed for agent self-improvement at scale. It enables AI agents to continuously evolve by synthesizing their own knowledge and experiences. This core capability is powered by:
 
-**Key Features:**
+1.  **Multi-Agent Systems (MAS)**: Build complex, interacting agent societies using our plug-and-play protocols and robust context management.
 
-*   ✅ **Multi-Agent Systems (MAS):** Build sophisticated, interacting agent societies using plug-and-play protocols and robust context management.
-*   ✅ **Intelligence Amplification:** Generate high-quality feedback and diverse synthetic training data to fuel individual agent evolution.
-*   ✅ **Cloud-Native Scalability:** Leverage the power of cloud-native architecture to train smarter agents and achieve unparalleled self-improvement.
+2.  **Intelligence Beyond a Single Model**: Generates high-quality feedback and diverse synthetic training data that fuel individual agent evolution.
 
-AWorld allows you to rapidly develop tool-using agents, orchestrate intricate multi-agent systems, efficiently train agents, and synthesize data crucial for continuous agent evolution.
+3.  **Cloud-Native for Diversity & Scale**: Delivers the high concurrency and scalability for training smarter agents and achieving self-improvement.
+
+AWorld empowers you to rapidly build individual tool-using agents, orchestrate sophisticated multi-agent systems, train agents effectively, and synthesize the high-quality data required for continuous agent evolution – all converging towards autonomous self-improvement.
 
 ---
 
-## Key Achievements & Benchmarks
+## Collective Intelligence Achievements 🚀
 
-**Pushing the Boundaries of AI with Collective Intelligence!** 🚀
+Demonstrating collective intelligence across diverse domains. Join us in the ongoing projects!
 
-| Category      | Achievement                       | Performance                           | Key Innovation                          | Date       |
-| :------------ | :-------------------------------- | :------------------------------------ | :--------------------------------------- | :--------- |
-| 🤖 Agent      | GAIA Benchmark Excellence         | Pass@1: **67.89**, Pass@3: **83.49** (109 tasks)  [![Code][Code]](./examples/gaia/README_GUARD.md) | Multi-agent system stability & orchestration [![Paper][Paper]](https://arxiv.org/abs/2508.09889) | 2025/08/06 |
-| 🧠 Reasoning | IMO 2025 Problem Solving           | 5/6 problems solved in 6 hours  [![Code][Code]](examples/imo/README.md)        | Multi-agent collaboration beats solo models         | 2025/07/25 |
+<table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+  <thead>
+    <tr>
+      <th style="width: 30%; text-align: left; border-bottom: 2px solid #ddd; padding: 8px;">Category</th>
+      <th style="width: 20%; text-align: left; border-bottom: 2px solid #ddd; padding: 8px;">Achievement</th>
+      <th style="width: 20%; text-align: left; border-bottom: 2px solid #ddd; padding: 8px;">Performance</th>
+      <th style="width: 25%; text-align: left; border-bottom: 2px solid #ddd; padding: 8px;">Key Innovation</th>
+      <th style="width: 5%; text-align: left; border-bottom: 2px solid #ddd; padding: 8px;">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 8px; vertical-align: top;">🤖 Agent</td>
+      <td style="padding: 8px; vertical-align: top;">
+        <strong>GAIA Benchmark <br>Excellence</strong>
+        <br>
+        <a href="https://huggingface.co/spaces/gaia-benchmark/leaderboard" target="_blank" style="text-decoration: none;">
+          <img src="https://img.shields.io/badge/GAIA-Leaderboard-blue" alt="GAIA">
+        </a>
+      </td>
+      <td style="padding: 8px; vertical-align: top;">
+        Pass@1: <strong>67.89</strong> <br>
+        Pass@3: <strong>83.49</strong>
+        <br> (109 tasks)
+        <a href="./examples/gaia/README_GUARD.md" target="_blank" style="text-decoration: none;">
+          <img src="https://img.shields.io/badge/Code-README-green" alt="Code">
+        </a>
+      </td>
+      <td style="padding: 8px; vertical-align: top;">
+        Multi-agent system <br>stability & orchestration
+        <br>
+        <a href="https://arxiv.org/abs/2508.09889" target="_blank" style="text-decoration: none;">
+          <img src="https://img.shields.io/badge/Paper-arXiv-red" alt="Paper">
+        </a>
+      </td>
+      <td style="padding: 8px; vertical-align: top;">2025/08/06</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; vertical-align: top;">🧠 Reasoning</td>
+      <td style="padding: 8px; vertical-align: top;">
+        <strong>IMO 2025 <br>Problem Solving</strong>
+        <br>
+        <a href="https://www.imo-official.org/year_info.aspx?year=2025" target="_blank" style="text-decoration: none;">
+          <img src="https://img.shields.io/badge/IMO-2025-blue" alt="IMO">
+        </a>
+      </td>
+      <td style="padding: 8px; vertical-align: top;">
+        <strong>5/6</strong> problems <br>solved in 6 hours
+        <br>
+        <a href="examples/imo/README.md" target="_blank" style="text-decoration: none;">
+          <img src="https://img.shields.io/badge/Code-README-green" alt="Code">
+        </a>
+      </td>
+      <td style="padding: 8px; vertical-align: top;">Multi-agent collaboration <br>beats solo models</td>
+      <td style="padding: 8px; vertical-align: top;">2025/07/25</td>
+    </tr>
+  </tbody>
+</table>
 
 <details>
-<summary style="font-size: 1.2em;font-weight: bold;"> 🌏 View Ongoing Projects </summary>
+<summary style="font-size: 1.2em;font-weight: bold;"> 🌏 View ongoing projects </summary>
 
 <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
   <thead>
@@ -89,66 +126,64 @@ AWorld allows you to rapidly develop tool-using agents, orchestrate intricate mu
 
 ---
 
-## 🚀 Quickstart
+## 🏃‍♀️ Quickstart
 
-AWorld offers a streamlined quickstart to get you building:
+### Prerequisites
 
-### 1. Prerequisites
+> [!TIP]
+> Python>=3.11
 
 ```bash
-# Requires Python 3.11+
 git clone https://github.com/inclusionAI/AWorld && cd AWorld
 python setup.py install
 ```
 
-### 2. Hello World Examples
+### Hello World Examples
 
-Start building with `Agent` and `Runners`:
+**Single Agent:**
 
 ```python
 import os
-
 from aworld.agents.llm_agent import Agent
 from aworld.runner import Runners
 
 summarizer = Agent(
-    name="Summary Agent",
+    name="Summary Agent", 
     system_prompt="You specialize at summarizing.",
 )
 
 result = Runners.sync_run(
-    input="Tell me a succint history about the universe",
+    input="Tell me a succint history about the universe", 
     agent=summarizer,
 )
 ```
 
-Or construct agent teams with `Swarm`:
+**Multi-Agent (Swarm):**
 
 ```python
 import os
-
 from aworld.agents.llm_agent import Agent
 from aworld.runner import Runners
 from aworld.core.agent.swarm import Swarm
 
 researcher = Agent(
-    name="Research Agent",
+    name="Research Agent", 
     system_prompt="You specialize at researching.",
 )
 summarizer = Agent(
-    name="Summary Agent",
+    name="Summary Agent", 
     system_prompt="You specialize at summarizing.",
 )
 # Create agent team with collaborative workflow
 team = Swarm(researcher, summarizer)
 
 result = Runners.sync_run(
-    input="Tell me a complete history about the universe",
+    input="Tell me a complete history about the universe", 
     swarm=team,
 )
 ```
 
-### 3. Running Your Agents
+**Run:**
 
 ```bash
 # Set LLM credentials
@@ -187,12 +222,12 @@ openrouter_conf = AgentConfig(
 )
 
 researcher = Agent(
-    name="Research Agent",
+    name="Research Agent", 
     conf=gpt_conf,
     system_prompt="You specialize at researching.",
 )
 summarizer = Agent(
-    name="Summary Agent",
+    name="Summary Agent", 
     conf=openrouter_conf,
     system_prompt="You specialize at summarizing.",
 )
@@ -200,7 +235,7 @@ summarizer = Agent(
 team = Swarm(researcher, summarizer)
 
 result = Runners.sync_run(
-    input="Tell me a complete history about the universe",
+    input="Tell me a complete history about the universe", 
     swarm=team,
 )
 ```
@@ -308,11 +343,11 @@ We present a classic topology: `Leader-Executor`.
 ```python
 """
 Leader-Executor topology:
- ┌───── plan ───┐
+ ┌───── plan ───┐     
 exec1         exec2
 
-Each agent communicates with a single supervisor agent,
-well recognized as Leader-Executor topology,
+Each agent communicates with a single supervisor agent, 
+well recognized as Leader-Executor topology, 
 also referred to as a team topology in Aworld.
 """
 from aworld.agents.llm_agent import Agent
@@ -331,8 +366,6 @@ swarm = HandoffSwarm((plan, exec1), (plan, exec2))
 
 </details>
 
----
-
 ## 🏗️ Architecture Design Principles
 
 AWorld provides a comprehensive environment that supports a diverse array of applications, such as `Product Prototype Verification`, `Foundational Model Training`, and the design of `Multi-Agent Systems (MAS)` through meta-learning.
@@ -341,33 +374,32 @@ This framework is engineered to be highly adaptable, enabling researchers and de
 
 ### Concepts & Framework
 
-| Concept               | Description                                                                                               |
-| :-------------------- | :-------------------------------------------------------------------------------------------------------- |
-| [`agent`](./aworld/core/agent/base.py)  | Define classes for agents, descriptions, output parsing, and multi-agent collaboration (swarm) logic.  |
-| [`runner`](./aworld/runners) | Manage the execution loop for agents in environments, handling episode rollouts and training workflows.  |
-| [`task`](./aworld/core/task.py)    | Encapsulate environment objectives, tools, and termination conditions for agent interactions. |
-| [`swarm`](./aworld/core/agent/swarm.py) | Manage multi-agent coordination and emergent behaviors through decentralized policies.           |
-| [`sandbox`](./aworld/sandbox)   | Controlled runtime for rapid prototyping and validation of agent behaviors.                       |
-| [`tools`](./aworld/tools)      | Framework for defining, adapting, and executing tools for agent-environment interaction.              |
-| [`context`](./aworld/core/context)   | Comprehensive context management system, for state tracking, prompt optimization, etc.     |
-| [`memory`](./aworld/memory)    | Extensible memory system: short-term, long-term, summarization, embeddings, retrieval.            |
-| [`trace`](./aworld/trace)      | Observability framework: distributed tracing, context propagation, span management.                |
+| Concepts | Description |
+| :-------------------------------------- | ------------ |
+| [`agent`](./aworld/core/agent/base.py)  | Define the foundational classes, descriptions, output parsing, and multi-agent collaboration (swarm) logic for defining, managing, and orchestrating agents in the AWorld system. |
+| [`runner`](./aworld/runners)            | Contains runner classes that manage the execution loop for agents in environments, handling episode rollouts and parallel training/evaluation workflows.   |
+| [`task`](./aworld/core/task.py)         | Define the base Task class that encapsulates environment objectives, necessary tools, and termination conditions for agent interactions.  |
+| [`swarm`](./aworld/core/agent/swarm.py) | Implement the SwarmAgent class managing multi-agent coordination and emergent group behaviors through decentralized policies. |
+| [`sandbox`](./aworld/sandbox)           | Provide a controlled runtime with configurable scenarios for rapid prototyping and validation of agent behaviors. |
+| [`tools`](./aworld/tools)               | Offer a flexible framework for defining, adapting, and executing tools for agent-environment interaction in the AWorld system. |
+| [`context`](./aworld/core/context)      | Feature a comprehensive context management system for AWorld agents, enabling complete state tracking, configuration management, prompt optimization, multi-task state handling, and dynamic prompt templating throughout the agent lifecycle.  |
+| [`memory`](./aworld/memory)             | Implement an extensible memory system for agents, supporting short-term and long-term memory, summarization, retrieval, embeddings, and integration.|
+| [`trace`](./aworld/trace)               | Feature an observable tracing framework for AWorld, enabling distributed tracing, context propagation, span management, and integration with popular frameworks and protocols to monitor and analyze agent, tool, and task execution.|
 
-> 💡 Explore diverse AWorld applications in the [examples](./examples/) directory.
+> 💡 Check the [examples](./examples/) directory to explore diverse AWorld applications.
 
 ### Characteristics
 
-| Agent Construction          | Topology Orchestration | Environment                   |
-| :---------------------------- | :--------------------- | :----------------------------- |
-| ✅ Integrated MCP services  | ✅ Encapsulated runtime | ✅ Runtime state management    |
-| ✅ Multi-model providers    | ✅ Flexible MAS patterns | ✅ High-concurrency support    |
-| ✅ Customization options    | ✅ Clear state tracing  | ✅ Distributed training        |
+| Agent Construction         | Topology Orchestration      | Environment                    |
+|:---------------------------|:----------------------------|:-------------------------------|
+| ✅ Integrated MCP services | ✅ Encapsulated runtime  | ✅ Runtime state management  |
+| ✅ Multi-model providers   | ✅ Flexible MAS patterns | ✅ High-concurrency support  |
+| ✅ Customization options   | ✅ Clear state tracing   | ✅ Distributed training      |
 
 ### Forward Process Design
-
 ![](readme_assets/runtime.jpg)
 
-See the [`tutorial`](./examples/BFCL/README.md) for a forward illustration to collect BFCL forward trajectories.
+Here is a forward illustration to collect BFCL forward trajectories: [`tutorial`](./examples/BFCL/README.md).
 
 ### Backward Process Design
 
@@ -404,8 +436,6 @@ git apply 0001-feat-add-agent-training-support-with-aworld-server.patch
 ```
 </details>
 
----
-
 ## 🧩 Applications
 
 AWorld allows you to construct **agents** and **multi-agent systems** with ease.
@@ -416,10 +446,10 @@ AWorld aims to reach the limitations of models and continuously push intelligenc
 
 The following is a list of successful proposal (with open-source models, technical reports, and code):
 
-| Category       | Runtime                                                      | <div style="width:400px">Performance</div>                             | <div style="width:100px;">Key Information</div>                       |
-| :------------- | :----------------------------------------------------------- | :--------------------------------------------------------------------- | :------------------------------------------------------------------ |
-| **Tool Use**   | Function call runtime construction [`tutorial`][funreason-model-url] | Competitive on BFCL benchmark  <br> ![Agent Framework](readme_assets/bfclv2_leaderboard.png) | ![Dataset][huggingface-dataset-image] <br> [![Model][huggingface-model-image]][funreason-model-url] <br> [![Paper][arxiv-image]][funreason-paper-url] <br> ![Blog][blog-image] <br> [![Code][github-code-image]][funreason-code-url] |
-| **Deep Search** | Search runtime to be released                               | SOTA on HotpotQA benchmark  <br> ![Agent Framework](readme_assets/hotpotqa_benchmark.png)    | [![Dataset][huggingface-dataset-image]][deepsearch-dataset-url] <br> [![Model][huggingface-model-image]][deepsearch-model-url] <br> [![Paper][arxiv-image]][deepsearch-paper-url] <br> [![Code][github-code-image]][deepsearch-code-url]      |
+| Category | Runtime | <div style="width:400px">Performance</div> | <div style="width:100px;">Key Information</div> |
+| --------------- | --------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------- |
+| **Tool Use**    | Function call runtime construction [`tutorial`][funreason-model-url] | Competitive on BFCL benchmark  <br> ![Agent Framework](readme_assets/bfclv2_leaderboard.png) | ![Dataset][huggingface-dataset-image] <br> [![Model][huggingface-model-image]][funreason-model-url] <br> [![Paper][arxiv-image]][funreason-paper-url] <br> ![Blog][blog-image] <br> [![Code][github-code-image]][funreason-code-url] |
+| **Deep Search** | Search runtime to be released           | SOTA on HotpotQA benchmark  <br> ![Agent Framework](readme_assets/hotpotqa_benchmark.png)    | [![Dataset][huggingface-dataset-image]][deepsearch-dataset-url] <br> [![Model][huggingface-model-image]][deepsearch-model-url] <br> [![Paper][arxiv-image]][deepsearch-paper-url] <br> [![Code][github-code-image]][deepsearch-code-url]      |
 
 ### Multi-Agent Systems for Applications
 
@@ -427,20 +457,18 @@ AWorld's plug-and-play MAS architecture enables **real-world web application dev
 
 Build production-ready systems that handle complex tasks through:
 
-*   **Code generation & execution**
-*   **Browser automation & tool use**
-*   **Multimodal understanding & generation**
-*   And many more to emerge!
+-   **Code generation & execution**
+-   **Browser automation & tool use**
+-   **Multimodal understanding & generation**
+-   And many more to emerge!
 
 See [Appendix: Web Client Usage](#appendix-web-client-usage) for GAIA implementation examples.
 
----
+## Contributing
 
-## 🤝 Contributing
+We warmly welcome developers to join us in building and improving AWorld! Whether you're interested in enhancing the framework, fixing bugs, or adding new features, your contributions are valuable to us.
 
-We welcome contributions! Help us build and improve AWorld.
-
-For academic citations or to contact us, use this BibTeX entry:
+For academic citations or wish to contact us, please use the following BibTeX entry:
 
 ```bibtex
 @software{aworld2025,
@@ -454,18 +482,13 @@ For academic citations or to contact us, use this BibTeX entry:
 }
 ```
 
-## 📈 Star History
+## Star History
+![](https://api.star-history.com/svg?repos=inclusionAI/AWorld&type=Date)
 
-[![Star History](https://api.star-history.com/svg?repos=inclusionAI/AWorld&type=Date)](https://star-history.com/#inclusionAI/AWorld)
-
-## 🌐 Appendix: Web Client Usage
-
+## Appendix: Web Client Usage
 ![GAIA Agent Runtime Demo](readme_assets/gaia_demo.gif)
 
-Follow these steps to build your web-based agent:
-
 Your project structure should look like this:
-
 ```text
 agent-project-root-dir/
     agent_deploy/
@@ -483,7 +506,7 @@ mkdir -p agent_deploy/my_first_agent
 
 #### Step 1: Define Your Agent
 
-Create your first agent in `agent_deploy/my_first_agent`:
+Create your first agnet in `agent_deploy/my_first_agent`:
 
 `__init__.py`: Create empty `__ini__.py` file.
 
@@ -555,7 +578,7 @@ class AWorldAgent(BaseAWorldAgent):
 
         # Extract user input
         user_input = prompt or (request.messages[-1].content if request else "")
-
+        
         # Create and execute task
         task = Task(
             input=user_input,
@@ -584,7 +607,6 @@ export LLM_BASE_URL="https://api.openai.com/v1"  # Optional for OpenAI
 ```
 
 Launch Your Agent:
-
 ```shell
 # Option 1: Launch with Web UI
 aworld web
@@ -598,7 +620,6 @@ aworld api
 Success! Your agent is now running and ready to chat!
 
 ---
-
 <!-- resource section start -->
 <!-- image links -->
 [arxiv-image]: https://img.shields.io/badge/Paper-arXiv-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white

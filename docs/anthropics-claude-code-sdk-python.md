@@ -1,19 +1,18 @@
-# Unlock the Power of Claude Code with the Python SDK
+# Claude Code SDK for Python: Interact with Claude Code Easily
 
-**Effortlessly interact with Claude Code, Anthropic's powerful AI coding assistant, using the official Python SDK.**  This library simplifies the integration of Claude Code into your Python projects, enabling you to build innovative applications with AI-powered code generation and manipulation.  Find the original repository [here](https://github.com/anthropics/claude-code-sdk-python).
+**Unlock the power of Claude Code within your Python applications with this intuitive and efficient SDK.** You can find the original repository [here](https://github.com/anthropics/claude-code-sdk-python).
 
-## Key Features:
+## Key Features
 
-*   **Seamless Integration:** Pythonic SDK for interacting with Claude Code.
-*   **Asynchronous Querying:**  Leverages `asyncio` for non-blocking communication.
-*   **Flexible Options:**  Configure Claude Code behavior with various options, including system prompts, tool usage, and working directory.
-*   **Comprehensive Error Handling:**  Robust error handling for common issues like CLI installation and process failures.
-*   **Streamlined Tool Usage:**  Easily integrate and manage tools within your Claude Code interactions.
-*   **Type Safety:**  Well-defined types for messages and content blocks.
+*   **Simple Integration:** Easily integrate with the Claude Code API within your Python projects.
+*   **Asynchronous Operations:** Leverages `asyncio` for non-blocking, efficient interactions.
+*   **Flexible Configuration:** Customize your interactions with `ClaudeCodeOptions` for prompts, tool usage, and more.
+*   **Comprehensive Error Handling:** Robust error handling to manage potential issues during communication.
+*   **Type-Safe Design:** Built with type hints for improved code readability and maintainability.
 
 ## Installation
 
-Get started quickly by installing the SDK using `pip`:
+Get started quickly by installing the SDK using pip:
 
 ```bash
 pip install claude-code-sdk
@@ -23,11 +22,11 @@ pip install claude-code-sdk
 
 *   Python 3.10+
 *   Node.js
-*   Claude Code: `npm install -g @anthropic-ai/claude-code`
+*   Claude Code: Install the Claude Code CLI globally: `npm install -g @anthropic-ai/claude-code`
 
 ## Quick Start
 
-Here's how to get up and running with a simple query:
+Here's how to make your first query:
 
 ```python
 import anyio
@@ -40,11 +39,11 @@ async def main():
 anyio.run(main)
 ```
 
-## Usage Guide
+## Usage
 
 ### Basic Query
 
-Interact with Claude Code using simple prompts and process the responses.
+Send simple prompts to Claude Code:
 
 ```python
 from claude_code_sdk import query, ClaudeCodeOptions, AssistantMessage, TextBlock
@@ -68,7 +67,7 @@ async for message in query(prompt="Tell me a joke", options=options):
 
 ### Using Tools
 
-Leverage Claude Code's tool capabilities for more advanced tasks, like file manipulation and command execution.
+Interact with tools like "Read", "Write", and "Bash":
 
 ```python
 options = ClaudeCodeOptions(
@@ -77,7 +76,7 @@ options = ClaudeCodeOptions(
 )
 
 async for message in query(
-    prompt="Create a hello.py file", 
+    prompt="Create a hello.py file",
     options=options
 ):
     # Process tool use and results
@@ -86,7 +85,7 @@ async for message in query(
 
 ### Working Directory
 
-Set a specific working directory for your Claude Code interactions.
+Set a specific working directory for your Claude Code interactions:
 
 ```python
 from pathlib import Path
@@ -100,28 +99,28 @@ options = ClaudeCodeOptions(
 
 ### `query(prompt, options=None)`
 
-The primary function for querying Claude Code.
+The core asynchronous function for interacting with Claude Code.
 
 **Parameters:**
 
-*   `prompt` (str): Your query to send to Claude Code.
-*   `options` (ClaudeCodeOptions):  Optional configuration settings.
+*   `prompt` (str): The text prompt to send to Claude Code.
+*   `options` (ClaudeCodeOptions): Optional configuration settings.
 
-**Returns:** `AsyncIterator[Message]` - An asynchronous stream of response messages.
+**Returns:** `AsyncIterator[Message]` - A stream of response messages.
 
 ### Types
 
-Explore the available data types for a deeper understanding:
+The SDK defines several types to facilitate structured interactions. Explore these in the source code:
 
-*   `ClaudeCodeOptions` - Configuration settings.
-*   `AssistantMessage`, `UserMessage`, `SystemMessage`, `ResultMessage` - Message types.
-*   `TextBlock`, `ToolUseBlock`, `ToolResultBlock` - Content blocks.
+*   `ClaudeCodeOptions`: Configuration options.
+*   `AssistantMessage`, `UserMessage`, `SystemMessage`, `ResultMessage`: Message types.
+*   `TextBlock`, `ToolUseBlock`, `ToolResultBlock`: Content blocks.
 
-Refer to [src/claude_code_sdk/types.py](src/claude_code_sdk/types.py) for comprehensive type definitions.
+*   **Source code**: [src/claude_code_sdk/types.py](src/claude_code_sdk/types.py)
 
 ## Error Handling
 
-Implement robust error handling to gracefully manage potential issues.
+Handle potential errors gracefully:
 
 ```python
 from claude_code_sdk import (
@@ -143,19 +142,17 @@ except CLIJSONDecodeError as e:
     print(f"Failed to parse response: {e}")
 ```
 
-For a complete list of error types, see [src/claude_code_sdk/_errors.py](src/claude_code_sdk/_errors.py).
+*   **Error types**: [src/claude_code_sdk/\_errors.py](src/claude_code_sdk/_errors.py)
 
 ## Available Tools
 
-Learn more about the available tools to extend Claude Code's capabilities:
-
-*   See the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/settings#tools-available-to-claude) for a complete list.
+Refer to the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/settings#tools-available-to-claude) for a comprehensive list of supported tools.
 
 ## Examples
 
-Find complete working examples to accelerate your development:
+See a working example for a complete demo:
 
-*   See [examples/quick_start.py](examples/quick_start.py).
+*   **Example Code**: [examples/quick\_start.py](examples/quick_start.py)
 
 ## License
 

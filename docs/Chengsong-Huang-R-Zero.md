@@ -1,129 +1,111 @@
-# R-Zero: Self-Evolving Reasoning LLM from Zero Data
+# R-Zero: Evolve Your LLM Reasoning Skills with Zero Data 🚀
 
-**R-Zero revolutionizes how Large Language Models learn to reason by enabling them to autonomously improve without any initial training data.** ([Original Repo](https://github.com/Chengsong-Huang/R-Zero))
+**R-Zero revolutionizes how Large Language Models (LLMs) learn to reason by enabling them to improve autonomously, starting from scratch and without any external datasets.** Explore the code and contribute on [GitHub](https://github.com/Chengsong-Huang/R-Zero).
 
-R-Zero empowers LLMs to learn and evolve their reasoning capabilities, starting from scratch without the need for curated datasets. This innovative framework leverages a self-evolving process to significantly enhance reasoning performance.
+## Key Features
 
-## Key Features:
-
-*   **Autonomous Learning:** Starts with a base model and requires *no* pre-existing datasets or labeled examples.
-*   **Co-Evolutionary Architecture:** Features a "Challenger" and "Solver" dynamic, creating a tailored and adaptive learning curriculum.
-*   **Proven Performance Gains:** Achieves significant improvements on various reasoning benchmarks.
-*   **Strong Generalization:** Reasoning skills learned in specific domains effectively transfer to general reasoning tasks.
-*   **Model Agnostic:** Consistently boosts the performance of diverse backbone LLMs.
-
-## Updates
-* [2025-8-27] Analysis on iteration scaling and one model taking on two roles added.
-* [2025-8-25] Code updated for smoother training (using stopit).
-* [2025-8-8] R-Zero recognized as `#2 Paper of the day` on [huggingface daily paper](https://huggingface.co/papers/2508.05004).
-* [2025-8-7] Paper and code released.
+*   ✅ **Autonomous Learning:** No pre-existing tasks or human-labeled data needed.
+*   🔄 **Co-Evolutionary Loop:** A Challenger-Solver dynamic creates a targeted, adaptive curriculum.
+*   📈 **Performance Boosts:** Achieves significant improvements on reasoning benchmarks.
+*   🌍 **Strong Generalization:** Reasoning skills transfer across different domains.
+*   ⚙️ **Model-Agnostic:** Enhances the performance of various LLM architectures.
 
 ## Overview
 
-R-Zero employs a unique co-evolutionary loop between two instances of the same base model:
+<img src="./figs/abstract.png" alt="R-Zero Overview" width="600">
 
-1.  **Challenger:** Probes the Solver for weaknesses by generating challenging problems.
-2.  **Solver:** Continuously improves by solving the tasks presented by the Challenger.
+Training powerful reasoning models typically demands vast, hand-curated datasets, which can be costly and challenging to scale. R-Zero offers a novel approach: a self-evolving framework that empowers LLMs to enhance their reasoning abilities independently, requiring no pre-existing tasks or labels.
 
-This self-contained cycle uses techniques like majority voting for pseudo-labels and relative policy optimization.
+R-Zero establishes a dynamic co-evolutionary loop between two instances of the same base model:
+
+*   **Challenger:** Probes the Solver for weaknesses, generating challenging problems.
+*   **Solver:** Continuously improves by solving the tasks posed by the Challenger.
+
+This process constructs a tailored, adaptive curriculum, where the Challenger learns to ask more effective questions and the Solver hones its answering skills. This self-contained cycle utilizes techniques like majority voting for pseudo-labels and relative policy optimization to guide learning.
 
 ## Quickstart Guide
 
-Follow these steps to get started:
+Get up and running with R-Zero in a few simple steps:
 
-### 1. Configure Environment and Prepare Directories
+### 1. Configure Environment
 
 ```bash
 git clone https://github.com/Chengsong-Huang/R-Zero.git
-
 cd R-Zero
-
 pip install -r requirements.txt
-
 export STORAGE_PATH="/path/to/your/storage"
 export HUGGINGFACENAME="yourhuggingfacename"
-
-mkdir -p \
-  "$STORAGE_PATH/evaluation" \
-  "$STORAGE_PATH/models" \
-  "$STORAGE_PATH/generated_question" \
-  "$STORAGE_PATH/temp_results"
+mkdir -p "$STORAGE_PATH/evaluation" "$STORAGE_PATH/models" "$STORAGE_PATH/generated_question" "$STORAGE_PATH/temp_results"
 ```
 
-### 2. Add API Keys
+### 2. Set API Keys
 
-Add your API keys for Hugging Face and WandB (for logging) in `tokens.json`, and your OpenAI GPT API key in `evaluation/results_recheck.py`.
+Add your API keys to:
+
+*   `tokens.json`: Hugging Face and WandB API keys.
+*   `evaluation/results_recheck.py`: OpenAI GPT API key.
 
 ### 3. Run Experiments
 
-Run the following script to replicate experimental results:
+Replicate our experimental results using a single script:
 
 ```bash
 # Format: bash scripts/main.sh [Base_Model_Name] [Abbreviation]
-# Example:
 bash scripts/main.sh Qwen/Qwen3-4B-Base qwen3-4b
 ```
 
-## Results
+## Impressive Results
 
-| Model Name | Overall AVG | MATH AVG | SuperGPQA | MMLU-Pro | BBEH |
-|:---|:---:|:---:|:---:|:---:|:---:|
-| ***Qwen3-4B-Base*** | | | | | |
-| &emsp;Base Model | 27.10 | 42.58 | 20.88 | 37.38 | 7.57 |
-| &emsp;Base Challenger | 30.83 | 44.36 | 24.77 | 47.59 | 6.59 |
-| &emsp;R-Zero (Iter 1) | 34.27 | 48.06 | **27.92** | 51.69 | 9.42 |
-| &emsp;R-Zero (Iter 2) | **34.92** | 48.44 | 27.72 | **53.75** | 9.76 |
-| &emsp;R-Zero (Iter 3) | 34.64 | **49.07** | 27.55 | 51.53 | **10.42** |
-| ***Qwen3-8B-Base*** | | | | | |
-| &emsp;Base Model | 34.49 | 49.18 | 28.33 | 51.80 | 8.63 |
-| &emsp;Base Challenger | 36.43 | 51.87 | 30.12 | 54.14 | 9.60 |
-| &emsp;R-Zero (Iter 1) | 37.93 | 53.39 | 31.26 | 57.17 | 9.91 |
-| &emsp;R-Zero (Iter 2) | 38.45 | 53.84 | **31.58** | 58.20 | 10.20 |
-| &emsp;R-Zero (Iter 3) | **38.73** | **54.69** | 31.38 | **58.23** | **10.60** |
-| ***OctoThinker-3B*** | | | | | |
-| &emsp;Base Model | 12.27 | 26.64 | 10.09 | 10.87 | 1.46 |
-| &emsp;Base Challenger | 14.41 | 27.51 | 11.19 | 14.53 | **4.40** |
-| &emsp;R-Zero (Iter 1) | 14.93 | 27.76 | 12.21 | 15.72 | 4.05 |
-| &emsp;R-Zero (Iter 2) | 15.11 | 28.20 | 12.43 | 16.08 | 3.74 |
-| &emsp;R-Zero (Iter 3) | **15.67** | **29.32** | **12.44** | **16.71** | 4.20 |
-| ***OctoThinker-8B*** | | | | | |
-| &emsp;Base Model | 16.81 | 32.11 | 13.26 | 20.21 | 1.64 |
-| &emsp;Base Challenger | 25.08 | 36.41 | 16.99 | 41.46 | 5.46 |
-| &emsp;R-Zero (Iter 1) | 26.44 | 37.80 | 19.15 | **42.05** | 6.77 |
-| &emsp;R-Zero (Iter 2) | 26.77 | 38.23 | 19.27 | 41.34 | **8.25** |
-| &emsp;R-Zero (Iter 3) | **26.88** | **38.52** | **19.82** | 40.92 | **8.25** |
+R-Zero consistently enhances performance across various benchmarks.
 
-## FAQ for Developers
+| Model Name       | Overall AVG | MATH AVG | SuperGPQA | MMLU-Pro | BBEH  |
+| :--------------- | :----------: | :------: | :-------: | :------: | :---: |
+| ***Qwen3-4B-Base*** |      ...     |   ...    |    ...    |   ...    |  ...  |
+|  &emsp;Base Model |    27.10     |  42.58   |   20.88   |  37.38   | 7.57  |
+|  &emsp;R-Zero (Iter 3) |    **34.64**     |  **49.07**   |   27.55   |  **51.53**   | **10.42**  |
+| ***Qwen3-8B-Base*** |      ...     |   ...    |    ...    |   ...    |  ...  |
+| &emsp;R-Zero (Iter 3) |  **38.73**   |  **54.69**   |  31.38   |  **58.23**  | **10.60** |
+| ***OctoThinker-3B***|      ...     |   ...    |    ...    |   ...    |  ...  |
+| &emsp;R-Zero (Iter 3) |  **15.67**   |  **29.32**   |  **12.44**   |  **16.71**  |  4.20 |
+| ***OctoThinker-8B***|      ...     |   ...    |    ...    |   ...    |  ...  |
+| &emsp;R-Zero (Iter 3) |   **26.88**   |  **38.52**   |   **19.82**   |  40.92   |  **8.25** |
 
-**Q: What is the hardware setup?**
+## Frequently Asked Questions
 
-**A:** Experiments were conducted on an 8-GPU server, using models suitable for a single GPU (4B or 8B). Adapt code for larger models or different hardware.
+### Hardware Setup?
 
-**Q: What if I encounter environment configuration issues?**
+All experiments were conducted on an 8-GPU server using models that can run on a single GPU. If you need to run experiments under different conditions, such as with larger models or different hardware, you will need to modify the code accordingly.
 
-**A:**  Refer to [EasyR1](https://github.com/hiyouga/EasyR1/tree/main) for setup guidance or use their Docker environment.
+### Environment Configuration Issues?
 
-**Q: Where are the training logs and checkpoints saved?**
+Refer to [EasyR1](https://github.com/hiyouga/EasyR1/tree/main) and consider their Docker environment as a reference.
 
-**A:** Generated data, including logs, datasets, and model checkpoints, are saved in the `STORAGE_PATH` directory and also sent to Hugging Face via `HUGGINGFACENAME`.
+### Saving Training Logs and Checkpoints?
 
-**Q: What if the code gets stuck during questioner training?**
+The `STORAGE_PATH` environment variable specifies where all data, including logs, datasets, and model checkpoints, will be saved. Also dataset will be sent to huggingface via `HUGGINGFACENAME`.
 
-**A:**  This may be due to a bug in `math_verify`. Restart training from the last saved checkpoint.
+### Code Gets Stuck?
+
+Restart training from the last saved checkpoint if you encounter issues during the questioner training process.
 
 ## Acknowledgements
 
-R-Zero is built upon the work of [**EasyR1**](https://github.com/hiyouga/EasyR1/tree/main) and referenced [**General-Reasoner**](https://github.com/TIGER-AI-Lab/General-Reasoner) for evaluation.
+This work builds upon the foundation laid by [**EasyR1**](https://github.com/hiyouga/EasyR1/tree/main) and references the evaluation work from [**General-Reasoner**](https://github.com/TIGER-AI-Lab/General-Reasoner).
 
 ## Citation
 
 ```
 @article{huang2025rzeroselfevolvingreasoningllm,
-      title={R-Zero: Self-Evolving Reasoning LLM from Zero Data}, 
+      title={R-Zero: Self-Evolving Reasoning LLM from Zero Data},
       author={Chengsong Huang and Wenhao Yu and Xiaoyang Wang and Hongming Zhang and Zongxia Li and Ruosen Li and Jiaxin Huang and Haitao Mi and Dong Yu},
       year={2025},
       eprint={2508.05004},
       archivePrefix={arXiv},
       primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2508.05004}, 
+      url={https://arxiv.org/abs/2508.05004},
 }
+```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Chengsong-Huang/R-Zero&type=Date)](https://star-history.com/#Chengsong-Huang/R-Zero&Date)

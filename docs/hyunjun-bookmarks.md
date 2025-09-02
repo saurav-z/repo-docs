@@ -1,143 +1,18 @@
-# Comprehensive Bookmarks for Knowledge Discovery
+# Comprehensive Bookmark Collection: Your Go-To Resource for Diverse Topics
 
-This repository ([original repo](https://github.com/hyunjun/bookmarks)) serves as a curated collection of bookmarks, categorized for easy access and exploration of diverse topics.
+This repository is a curated collection of bookmarks, serving as a valuable resource for a wide range of interests from general knowledge to specialized programming topics.  View the original repository [here](https://github.com/hyunjun/bookmarks).
 
 ## Key Features:
 
-*   **Extensive Categorization:** Bookmarks are organized into thematic categories, including:
-    *   **Miscellaneous:** Covering a wide range of interests like travel, culture, and lifestyle.
-    *   **Programming:**  Featuring resources for various programming languages, frameworks, and development practices.
-    *   **Data Science:** Focused on data analysis, machine learning, and related technologies.
-*   **In-Depth Subcategories:** Each major category is further divided into subcategories for granular searching.
-*   **Regularly Updated:** The bookmark collection is continuously updated to reflect the latest trends and resources.
-*   **Easy Navigation:** Simple Markdown files allow for quick browsing and easy access to links.
+*   **Extensive Coverage:** Browse a broad spectrum of categories, including:
+    *   **General Interest:**  Art, Books, Business, Food, Health, Travel, and more!
+    *   **Programming:**  Explore subjects like Algorithms, Data Science, Cloud Computing, and various programming languages.
+*   **Organized Structure:**  Bookmarks are meticulously organized into clear categories and subcategories for easy navigation and quick access to information.
+*   **Programming Language Deep Dive:** Learn various programming languages like Python, Java, Javascript, and more, with dedicated sections to explore each one.
+*   **Data Science and Machine Learning Focus:** Includes extensive resources on Data Science, Machine Learning, Deep Learning, and relevant tools and frameworks.
+*   **Cloud Computing Resources:** Access links and references for popular cloud platforms like AWS, Azure, and Google Cloud Platform (GCP).
 
-## Categories & Subcategories:
+##  Categories:
 
-**Miscellaneous:**
-
-*   제주도 (Jeju)
-*   Animal
-*   App
-*   Art
-*   Baby
-*   Book
-*   Business
-*   Drama
-*   Economy
-*   Education
-*   English
-*   Finance
-*   Food
-*   Game
-*   Health
-*   History
-*   House
-*   Life
-*   Nomad & Remote
-*   Math
-    *   Statistics
-*   Media
-*   Myth
-*   People
-*   Philosophy
-*   Politics
-*   Presentation
-    *   Dev Small Talk
-    *   Speed
-*   Product
-*   Psychology
-*   Religion
-*   Robot
-*   Self Control
-*   Science
-*   Shopping
-*   Speaking
-*   Sports
-*   Travel
-*   Writing
-
-**Programming:**
-
-*   Algorithm
-*   Anomaly Detection
-*   Apache
-    *   HBase
-    *   Spark
-*   Bitcoin
-*   Cloud
-    *   AWS
-    *   Azure
-    *   Google Cloud Platform (GCP)
-*   Coursera
-*   Data Science
-    *   Artificial Intelligence
-    *   Data
-    *   Data Visualization
-    *   Deep Learning
-    *   Keras
-    *   Machine Learning
-    *   NLP
-    *   PyTorch
-    *   TensorFlow
-    *   Vision
-*   Docker
-*   Editor
-    *   Emacs
-    *   Vim
-*   Elasticsearch & Lucene
-*   Game
-*   GIS
-*   Git
-*   Graph
-*   Hadoop
-*   Hardware
-*   Interview
-*   JSON
-*   Linux
-*   Mobile
-    *   Android
-    *   Flutter
-    *   iOS
-*   Monitoring
-*   NoSQL
-    *   HBase
-    *   Redis
-*   Open Source
-*   Programmer
-*   Programming
-    *   Concurrency
-    *   Data Oriented Design (DOD)
-    *   Functional Programming
-    *   Logging
-    *   Network
-    *   Object Oriented Programming (OOP)
-    *   Regular Expression
-*   Programming Books
-*   Programming Language
-    *   Bash
-    *   C
-    *   Clojure
-    *   C++
-    *   C#
-    *   Elixir
-    *   Erlang
-    *   Go
-    *   Haskell
-    *   Java
-    *   JavaScript
-    *   Julia
-    *   Kotlin
-    *   Lisp
-    *   .NET
-    *   OCaml
-    *   PHP
-    *   Python
-    *   R
-    *   Ruby
-    *   Rust
-    *   Scala
-*   SQL
-*   SVN
-*   Time Series
-*   Web
+*   **Miscellaneous:** Covers a wide range of topics from Jeju Island to Psychology.
+*   **Programming:** Your go-to source for programming languages, concepts, and technologies.

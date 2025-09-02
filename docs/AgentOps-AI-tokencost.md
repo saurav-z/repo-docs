@@ -19,35 +19,28 @@
 <a href="https://agentops.ai/?tokencost">🖇️ AgentOps</a>
 </p>
 
-# Tokencost: Calculate LLM Costs with Ease
+# Tokencost: Accurate LLM Cost Calculation
 
-**Quickly and accurately estimate the cost of your Large Language Model (LLM) prompts and completions with Tokencost!**
+**Effortlessly estimate the cost of your LLM prompts and completions with Tokencost, a Python library for precise token counting and pricing.**  Get started with [Tokencost on GitHub](https://github.com/AgentOps-AI/tokencost).
 
-*   **LLM Cost Tracking:**  Stay up-to-date with the latest pricing from major LLM providers.
-*   **Precise Token Counting:**  Accurately count prompt and completion tokens using [Tiktoken](https://github.com/openai/tiktoken) before making API requests.
-*   **Simple Integration:** Get the cost of a prompt or completion with a single function call.
+**Key Features:**
 
-[Explore the Tokencost Repository](https://github.com/AgentOps-AI/tokencost)
-
-## Key Features
-
-*   **Token Counting:** Provides functions to count tokens in strings and message formats, ensuring accurate cost estimations.
-*   **Cost Calculation:** Functions to calculate the estimated cost for both prompts and completions, simplifying the pricing process.
-*   **Easy to Use:** Simple and intuitive API for seamless integration into your LLM applications.
-*   **Up-to-Date Pricing:**  Maintains an up-to-date cost table, reflecting the latest pricing changes from various LLM providers.
-*   **Supports Multiple Models:** Works with various LLM models, including those from OpenAI and Anthropic.
+*   🎯 **Precise Token Counting:**  Uses Tiktoken and Anthropic's API (for Claude models) for accurate token calculation.
+*   💰 **LLM Price Tracking:** Keeps track of the latest pricing changes from major LLM providers.
+*   🚀 **Easy Integration:** Calculate prompt and completion costs with a single function call.
 
 ## Installation
-
-Install Tokencost directly from PyPI:
 
 ```bash
 pip install tokencost
 ```
 
-## Usage Examples
+## Usage
 
-### Calculating Cost
+### Cost Estimation
+
+Calculate the cost of prompts and completions for your LLM applications.
+
 ```python
 from tokencost import calculate_prompt_cost, calculate_completion_cost
 
@@ -61,28 +54,11 @@ completion_cost = calculate_completion_cost(completion, model)
 print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
 # 0.0000135 + 0.000014 = 0.0000275
 ```
-### Using With OpenAI
-```python
-from openai import OpenAI
-from tokencost import calculate_prompt_cost, calculate_completion_cost
 
-client = OpenAI()
-model = "gpt-3.5-turbo"
-prompt = [{ "role": "user", "content": "Say this is a test"}]
-
-chat_completion = client.chat.completions.create(
-    messages=prompt, model=model
-)
-
-completion = chat_completion.choices[0].message.content
-# "This is a test."
-
-prompt_cost = calculate_prompt_cost(prompt, model)
-completion_cost = calculate_completion_cost(completion, model)
-print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
-# 0.0000180 + 0.000010 = 0.0000280
-```
 ### Using String Prompts
+
+You can also calculate costs using string prompts:
+
 ```python
 from tokencost import calculate_prompt_cost
 
@@ -94,7 +70,10 @@ prompt_cost = calculate_prompt_cost(prompt_string, model)
 print(f"Cost: ${prompt_cost}")
 # Cost: $3e-06
 ```
-### Counting Tokens
+
+### Token Counting
+
+Count tokens in your prompts easily.
 
 ```python
 from tokencost import count_message_tokens, count_string_tokens
@@ -107,18 +86,17 @@ print(count_message_tokens(message_prompt, model="gpt-3.5-turbo"))
 # Alternatively, counting tokens in string prompts
 print(count_string_tokens(prompt="Hello world", model="gpt-3.5-turbo"))
 # 2
-
 ```
 
 ## How Tokens are Counted
 
-Tokencost uses [Tiktoken](https://github.com/openai/tiktoken) to tokenize strings and messages, providing accurate token counts.  For Anthropic models above version 3, we use the [Anthropic beta token counting API](https://docs.anthropic.com/claude/docs/beta-api-for-counting-tokens) for precise counts.
+Tokencost leverages [Tiktoken](https://github.com/openai/tiktoken), OpenAI's official tokenizer, for most models, and the Anthropic beta token counting API for accurate token counts for Claude models above version 3. This ensures accurate tokenization of both raw strings and message formats, including those with formatting and role specifications.
 
-## Current Cost Table (USD)
+## LLM Cost Table
 
-All prices can be found [here](pricing_table.md).
-```
-<!-- PRICING_TABLE_START -->
+Below is a table that represents the costs of many different models, including models that are available from OpenAI.
+
+**Note:**  *All prices are denominated in USD and are current as of the date of this document. However, these prices are subject to change by the LLM providers.* Refer to [pricing_table.md](pricing_table.md) for the latest updates.
 
 | Model Name                                                            | Prompt Cost (USD) per 1M tokens   | Completion Cost (USD) per 1M tokens   | Max Prompt Tokens   |   Max Output Tokens |
 |:----------------------------------------------------------------------|:----------------------------------|:--------------------------------------|:--------------------|--------------------:|
@@ -281,3 +259,9 @@ All prices can be found [here](pricing_table.md).
 | groq/gemma2-9b-it                                                     | $0.2                              | $0.2                                  | 8,192               |      8192           |
 | groq/llama3-groq-70b-8192-tool-use-preview                            | $0.89                             | $0.89                                 | 8,192               |      8192           |
 | groq/llama3-groq-8b-8192-tool-use-preview                             | $0.19                             | $0.19                                 | 8,192               |      8192           |
+| cerebras/llama3.1-8b                                                  | $0.1                              | $0.1                                  | 128,000             |    128000           |
+| cerebras/llama3.1-70b                                                 | $0.6                              | $0.6                                  | 128,000             |    128000           |
+| friendliai/mixtral-8x7b-instruct-v0-1                                 | $0.4                              | $0.4                                  | 32,768              |     32768           |
+| friendliai/meta-llama-3-8b-instruct                                   | $0.1                              | $0.1                                  | 8,192               |      8192           |
+| friendliai/meta-llama-3-70b-instruct                                  | $0.8                              | $0.8                                  | 8,192               |      8192           |
+| claude-instant-1.2                                                    | $0.16                             | $0.55                                 | 100,00

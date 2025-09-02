@@ -1,128 +1,109 @@
-# CCPlugins: Supercharge Your Claude Code CLI for Faster, Smarter Development
+# CCPlugins: Supercharge Your Claude Code CLI Workflow (🚀 Automate Boring Stuff)
 
-**Stop wasting time on repetitive tasks and start coding!** CCPlugins is a powerful collection of professional commands for the Claude Code CLI, designed to save you hours each week by automating essential development workflows. [Explore CCPlugins on GitHub](https://github.com/brennercruvinel/CCPlugins).
+Tired of repetitive coding tasks? **CCPlugins** is a suite of professional commands designed to extend the power of Claude Code CLI, saving developers 2-3 hours per week on everyday development chores.  [Explore the original repository here](https://github.com/brennercruvinel/CCPlugins).
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)]
-[![Version](https://img.shields.io/badge/version-2.5.2-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
-[![Claude Code CLI](https://img.shields.io/badge/for-Claude%20Code%20CLI-purple.svg)](https://docs.anthropic.com/en/docs/claude-code)
-[![Tested on](https://img.shields.io/badge/tested%20on-Opus%204%20%26%20Sonnet%204-orange.svg)](https://claude.ai)
-[![Also works with](https://img.shields.io/badge/also%20works%20with-Kimi%20K2-1783ff.svg)](https://github.com/MoonshotAI/Kimi-K2)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
+## Key Features:
 
-## Key Features
-
-*   **Automated Workflows:** Streamline your development with pre-built commands for common tasks.
-*   **Time Savings:** Save an estimated 4-5 hours per week by automating code quality, security, and more.
-*   **Intelligent Analysis:** Leverage Claude's capabilities for comprehensive code review, vulnerability detection, and architecture analysis.
-*   **Enhanced Validation & Refinement:** Ensure complete and correct outcomes through built-in validation phases.
-*   **Seamless Integration:**  Easy installation and integration with your existing Claude Code CLI setup.
-
-## Core Capabilities
-
-*   **Development Workflow:**
-    *   `/cleanproject`: Remove debug artifacts safely
-    *   `/commit`: Smart, conventional commits
-    *   `/format`: Auto-detect and format code
-    *   `/scaffold feature-name`: Generate complete features from templates
-    *   `/test`: Run tests with intelligent failure analysis
-    *   `/implement url/path/feature`: Import code from any source
-    *   `/refactor`: Intelligent code restructuring
-*   **Code Quality & Security:**
-    *   `/review`: Multi-agent code analysis
-    *   `/security-scan`: Vulnerability analysis
-    *   `/predict-issues`: Proactive issue detection
-    *   `/remove-comments`: Clean comments
-    *   `/fix-imports`: Repair broken imports
-    *   `/find-todos`: Locate development tasks
-    *   `/create-todos`: Add contextual TODOs
-    *   `/fix-todos`: Intelligently fix TODOs
-*   **Advanced Analysis:**
-    *   `/understand`: Project architecture analysis
-    *   `/explain-like-senior`: Senior-level code explanations
-    *   `/contributing`: Contribution readiness analysis
-    *   `/make-it-pretty`: Improve readability
-*   **Session & Project Management:**
-    *   `/session-start`: Begin documented sessions
-    *   `/session-end`: Summarize and preserve context
-    *   `/docs`: Smart documentation management
-    *   `/todos-to-issues`: Convert TODOs to GitHub issues
-    *   `/undo`: Safe rollback
-    *   **Validation Phases**: `/refactor validate`, `/implement validate`
+*   🛠️ **Automated Development Workflows:** Streamline your coding process with commands for cleaning projects, smart commits, code formatting, scaffolding features, running tests, and code refactoring.
+*   🛡️ **Enhanced Code Quality & Security:**  Ensure robust code with commands for code reviews, security scanning, proactive issue prediction, and improved code readability.
+*   🔍 **Advanced Analysis & Session Management:**  Gain deeper insights with commands to understand project architecture, senior-level code explanations, and robust session management.
+*   💡 **Validation & Refinement:** Complex commands now include validation phases, ensuring completeness and correctness in your code changes.
+*   🤖 **Multi-Agent Architecture:** Leverages sub-agents for specialized tasks like security analysis, performance optimization, and code quality assessments.
 
 ## Installation
 
-### Quick Install (Mac/Linux):
+**Quick Installation:**
 
-```bash
-curl -sSL https://raw.githubusercontent.com/brennercruvinel/CCPlugins/main/install.sh | bash
-```
+*   **Mac/Linux:**
+    ```bash
+    curl -sSL https://raw.githubusercontent.com/brennercruvinel/CCPlugins/main/install.sh | bash
+    ```
 
-### Quick Install (Windows/Cross-platform):
+*   **Windows/Cross-platform:**
+    ```bash
+    python install.py
+    ```
 
-```bash
-python install.py
-```
-
-### Manual Install:
-
+**Manual Installation:**
 ```bash
 git clone https://github.com/brennercruvinel/CCPlugins.git
 cd CCPlugins
 python install.py
 ```
 
-### Uninstall
+**Uninstallation:**
+*   **Mac/Linux:**
+    ```bash
+    ./uninstall.sh
+    ```
+*   **Windows/Cross-platform:**
+    ```bash
+    python uninstall.py
+    ```
 
-```bash
-# Mac/Linux
-./uninstall.sh
+## Commands
 
-# Windows/Cross-platform
-python uninstall.py
-```
+CCPlugins provides a rich set of commands to enhance your Claude Code CLI experience:
 
-## How It Works
+### Development Workflow
 
-CCPlugins enhances Claude Code CLI by:
+*   `/cleanproject`: Remove debug artifacts with git safety
+*   `/commit`: Smart conventional commits with analysis
+*   `/format`: Auto-detect and apply project formatter
+*   `/scaffold feature-name`: Generate complete features from patterns
+*   `/test`: Run tests with intelligent failure analysis
+*   `/implement url/path/feature`: Import and adapt code from any source with validation phase
+*   `/refactor`: Intelligent code restructuring with validation & de-para mapping
 
-*   **Intelligent Instructions:** First-person language activates Claude's collaborative reasoning.
-*   **Native Tool Integration:** Uses Claude Code CLI's built-in tools for efficiency.
-*   **Safety-First Design:** Includes git checkpoints and rollback capabilities.
-*   **Framework-Agnostic:** Works across different programming languages and frameworks.
+### Code Quality & Security
 
-## Real-World Example: `/cleanproject`
+*   `/review`: Multi-agent analysis (security, performance, quality, architecture)
+*   `/security-scan`: Vulnerability analysis with extended thinking & remediation tracking
+*   `/predict-issues`: Proactive problem detection with timeline estimates
+*   `/remove-comments`: Clean obvious comments, preserve valuable docs
+*   `/fix-imports`: Repair broken imports after refactoring
+*   `/find-todos`: Locate and organize development tasks
+*   `/create-todos`: Add contextual TODO comments based on analysis results
+*   `/fix-todos`: Intelligently implement TODO fixes with context
 
-**Before:**
+### Advanced Analysis
 
+*   `/understand`: Analyze entire project architecture and patterns
+*   `/explain-like-senior`: Senior-level code explanations with context
+*   `/contributing`: Complete contribution readiness analysis
+*   `/make-it-pretty`: Improve readability without functional changes
+
+### Session & Project Management
+
+*   `/session-start`: Begin documented sessions with CLAUDE.md integration
+*   `/session-end`: Summarize and preserve session context
+*   `/docs`: Smart documentation management and updates
+*   `/todos-to-issues`: Convert code TODOs to GitHub issues
+*   `/undo`: Safe rollback with git checkpoint restore
+
+## Example
+(Simplified for brevity)
+
+**Before `/cleanproject`:**
 ```
 src/
 ├── UserService.js
 ├── UserService.test.js
 ├── UserService_backup.js    # Old version
-├── debug.log               # Debug output
-├── test_temp.js           # Temporary test
-└── notes.txt              # Dev notes
+└── debug.log               # Debug output
 ```
 
-**After:**
-
+**After `/cleanproject`:**
 ```
 src/
 ├── UserService.js          # Clean production code
 └── UserService.test.js     # Actual tests preserved
 ```
 
-## Requirements
+## Learn More
 
-*   Claude Code CLI
-*   Python 3.6+ (for installer)
-*   Git (for version control commands)
+*   [Contributing](CONTRIBUTING.md): Help improve CCPlugins.
+*   [License](LICENSE): MIT License.
+---
 
-## Contributing
-
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.
-*Built by a developer tired of typing "please act like a senior engineer" in every conversation.*
+**Note:** This documentation has been updated to accurately represent CCPlugins' features as of August 2, 2025.

@@ -1,8 +1,6 @@
-# Jupyter Enterprise Gateway: Enable Remote Kernel Access for Jupyter Notebooks
+# Jupyter Enterprise Gateway: Unleash the Power of Remote Kernels for Jupyter Notebooks
 
-**[GitHub Repository](https://github.com/jupyter-server/enterprise_gateway)** | **[Documentation](https://jupyter-enterprise-gateway.readthedocs.io/)**
-
-Jupyter Enterprise Gateway empowers your Jupyter Notebook environment by enabling the launching of remote kernels in a distributed cluster.
+**Jupyter Enterprise Gateway** ([GitHub Repository](https://github.com/jupyter-server/enterprise_gateway)) empowers your Jupyter Notebooks to harness the computational power of distributed clusters, enabling seamless access to remote kernels for enhanced data science and machine learning workflows.
 
 [![Actions Status](https://github.com/jupyter-server/enterprise_gateway/workflows/Builds/badge.svg)](https://github.com/jupyter-server/enterprise_gateway/actions)
 [![PyPI version](https://badge.fury.io/py/jupyter-enterprise-gateway.svg)](https://badge.fury.io/py/jupyter-enterprise-gateway)
@@ -10,36 +8,36 @@ Jupyter Enterprise Gateway empowers your Jupyter Notebook environment by enablin
 [![Documentation Status](https://readthedocs.org/projects/jupyter-enterprise-gateway/badge/?version=latest)](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/?badge=latest)
 [![Google Group](https://img.shields.io/badge/google-group-blue.svg)](https://groups.google.com/forum/#!forum/jupyter)
 
-Key features of Jupyter Enterprise Gateway include:
+## Key Features
 
-*   **Remote Kernel Support:** Launches kernels in a distributed cluster, including Apache Spark managed by YARN, IBM Spectrum Conductor, Kubernetes, and Docker Swarm.
-*   **Out-of-the-Box Kernel Support:** Provides support for Python (using IPython kernel), R (using IRkernel), and Scala (using Apache Toree kernel).
-*   **Flexible Kernel Deployment:** Supports launching kernels locally, on specific cluster nodes (round-robin), or through resource managers.
-*   **Secure Communication:** Ensures secure communication between the client, Enterprise Gateway server, and kernels.
-*   **Multi-Tenant Capabilities:** Allows for a shared environment with isolated kernels.
-*   **Persistent Kernel Sessions:** Maintains kernel sessions for continuous operation.
-*   **Extensible Framework:** Allows for the configuration of other resource managers and environments beyond the defaults.
+*   **Remote Kernel Launching:** Launch kernels on distributed clusters like Apache Spark managed by YARN, IBM Spectrum Conductor, Kubernetes, and Docker Swarm.
+*   **Broad Kernel Support:** Supports popular kernels out-of-the-box:
+    *   Python (IPython kernel)
+    *   R (IRkernel)
+    *   Scala (Apache Toree kernel)
+*   **Flexible Deployment Options:** Launch kernels locally or on specific cluster nodes using a round-robin algorithm or through a resource manager.
+*   **Secure Communication:** Ensures secure communication from the client through the Enterprise Gateway server to the kernels.
+*   **Multi-tenant Capabilities:** Supports multi-tenant environments for efficient resource utilization.
+*   **Persistent Kernel Sessions:** Maintains kernel sessions for uninterrupted workflows.
+*   **Extensible Framework:** Easily configurable to support other resource managers via Enterprise Gateway's extensible framework.
+*   **Profile Management:** Associate profiles with kernel configurations for specific users (see [Project Roadmap](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/roadmap.html)).
+
+## Technical Overview
+
+Jupyter Enterprise Gateway acts as a web server that provides headless access to Jupyter kernels within an enterprise. It mirrors features of Jupyter Kernel Gateway's [jupyter-websocket mode](https://jupyter-kernel-gateway.readthedocs.io/en/latest/websocket-mode.html) while expanding on capabilities for remote kernel management.  For a detailed understanding, refer to the [System Architecture page](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/system-architecture.html).
 
 ![Deployment Diagram](https://github.com/jupyter-server/enterprise_gateway/blob/main/docs/source/images/deployment.png?raw=true)
 
 ## Installation
 
-Install Jupyter Enterprise Gateway using pip:
+Install Jupyter Enterprise Gateway easily using `pip`:
 
 ```bash
 pip install --upgrade jupyter_enterprise_gateway
 ```
 
-Refer to the [Users Guide](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/users/index.html) for detailed installation instructions. See [configuration options within the Operators Guide](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/operators/index.html#configuring-enterprise-gateway) for more information.
-
-## Technical Overview
-
-Jupyter Enterprise Gateway provides a headless web server for accessing Jupyter kernels within an enterprise. It offers feature parity with Kernel Gateway's [jupyter-websocket mode](https://jupyter-kernel-gateway.readthedocs.io/en/latest/websocket-mode.html).
-
-## System Architecture
-
-Learn more about the system architecture, including remote kernel, process proxy, and launcher frameworks, on the [System Architecture page](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/system-architecture.html).
+For detailed installation instructions and configuration options, please consult the [Users Guide](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/users/index.html) and the [Operators Guide](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/operators/index.html#configuring-enterprise-gateway).
 
 ## Contributing
 
-Contribute to Jupyter Enterprise Gateway by following the guidelines on the [Contribution page](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/contrib.html). Also, check out the [roadmap](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/roadmap.html) for future project plans. Set up a development environment using the [dev install instructions](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/devinstall.html).
+We welcome contributions! Learn how to contribute to Jupyter Enterprise Gateway, set up your development environment, and review the project roadmap on the [Contribution page](https://jupyter-enterprise-gateway.readthedocs.io/en/latest/contributors/contrib.html).

@@ -1,73 +1,56 @@
 <picture>
     <source srcset="docs/images/osv_logo_dark-full.svg"  media="(prefers-color-scheme: dark)">
     <!-- markdown-link-check-disable-next-line -->
-    <img src="docs/images/osv_logo_light-full.svg">
+    <img src="docs/images/osv_logo_light-full.svg" alt="OSV Logo">
 </picture>
+
+---
 
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/google/osv.dev/badge)](https://scorecard.dev/viewer/?uri=github.com/google/osv.dev)
 
-# OSV: The Open Source Vulnerability Database and Scanner
+# OSV: Open Source Vulnerability Database
 
-**OSV (Open Source Vulnerability) is a comprehensive database and a suite of tools designed to help you identify and mitigate vulnerabilities in your open-source dependencies.** This repository houses the infrastructure powering the OSV platform, providing vital resources for software security.
-
-[Visit the official OSV repository on GitHub](https://github.com/google/osv.dev)
+**OSV is a comprehensive, open-source database and API for vulnerability information, helping developers identify and remediate security threats in their open-source dependencies.**  Explore the power of OSV to enhance your software security posture.
 
 ## Key Features
 
-*   **Comprehensive Vulnerability Database:** Access a curated, up-to-date database of known vulnerabilities affecting open-source software.
-*   **Dependency Scanning:** Utilize the OSV scanner to identify vulnerable dependencies in your projects.
-*   **API Access:** Integrate OSV data and functionality into your own tools and workflows through the OSV API.
-*   **Web UI:** Explore vulnerabilities and project information through the user-friendly OSV web interface.
-*   **Data Dumps:** Access data dumps for offline analysis and integration into security tools.
+*   **Comprehensive Vulnerability Database:**  Access a centralized repository of known vulnerabilities affecting open-source software.
+*   **API Access:** Integrate OSV data directly into your security tools and workflows through a robust API.
+*   **Dependency Scanning:**  Utilize the provided scanner to identify vulnerabilities in your project's dependencies, supporting various lockfiles, SBOMs, and Git repositories.  See the [OSV Scanner](https://github.com/google/osv-scanner) repository.
+*   **Web UI:**  Easily explore the OSV database and view vulnerability details through a user-friendly web interface at <https://osv.dev>.
+*   **Data Dumps:** Access OSV vulnerability data through downloadable data dumps for offline analysis and integration.
 
-## Core Components of the OSV Platform
+## Key Components of This Repository
 
-This repository contains the essential components that power the OSV platform, including:
+This repository houses the code and infrastructure that powers the OSV project, including:
 
-*   **API Server:** The OSV API server, providing access to vulnerability data.
-*   **Web UI Backend:** The backend infrastructure for the OSV website.
-*   **Data Processing Workers:** Workers for tasks like bisection and impact analysis.
-*   **Indexer:** The component responsible for determining the versions affected by vulnerabilities.
-*   **Documentation:** Comprehensive documentation to help you get started.
-*   **Vulnerability Feed Converters:** Tools for converting vulnerability data from various sources (e.g., NVD, Debian, Alpine).
-
-## Key Directories
-
-| Directory       | Description                                                                     |
-|-----------------|---------------------------------------------------------------------------------|
-| `deployment/`   | Terraform & Cloud Deploy configuration files.                                  |
-| `docker/`       | Docker files for CI, deployment, and worker images.                             |
-| `docs/`         | Jekyll files for the OSV documentation site.                                    |
-| `gcp/api`       | OSV API server files and Protobuf definitions.                                  |
-| `gcp/datastore` | Datastore configuration files.                                                |
-| `gcp/functions` | Cloud Functions for PyPI vulnerability publishing.                                |
-| `gcp/indexer`   | The version determination indexer.                                                 |
-| `gcp/website`   | Backend of the OSV web interface.                                          |
-| `gcp/workers/`  | Workers for bisection, impact analysis, and data processing.                       |
-| `osv/`          | The core OSV Python library.                                                    |
-| `tools/`        | Development scripts and tools.                                                 |
-| `vulnfeeds/`    | Go module for NVD CVE conversion and other feed converters.                      |
+*   **Deployment:** Terraform and Cloud Deploy configurations for infrastructure management.
+*   **API Server:** Backend services for the OSV API.
+*   **Data Indexing:**  Tools for indexing and organizing vulnerability information.
+*   **Web Interface:**  The backend code for the OSV website.
+*   **Worker Services:** Background processes for tasks like bisection and impact analysis.
+*   **Core Libraries:**  The OSV Python library with core functionality.
 
 ## Getting Started
 
-To build locally, make sure you initialize all submodules using:
+*   **Documentation:**  Dive deeper into the OSV project with comprehensive documentation available [here](https://google.github.io/osv.dev).
+*   **API Documentation:**  Learn how to leverage the OSV API [here](https://google.github.io/osv.dev/api/).
+*   **Data Dumps:** Access vulnerability data dumps from a GCS bucket at `gs://osv-vulnerabilities`. For more information, check out the [data documentation](https://google.github.io/osv.dev/data/#data-dumps).
+*   **Submodules:** For local building, run `git submodule update --init --recursive`.
 
-```bash
-git submodule update --init --recursive
-```
+## Contribute to OSV
 
-## Contribute
+We welcome contributions to improve the OSV project. Learn more about contributing:
 
-We welcome contributions! Learn more about contributing code, data, and documentation through the links below:
-*   [Contributing Code](CONTRIBUTING.md#contributing-code)
-*   [Contributing Data](CONTRIBUTING.md#contributing-data)
-*   [Contributing Documentation](CONTRIBUTING.md#contributing-documentation)
+*   **Code:**  [CONTRIBUTING.md#contributing-code](CONTRIBUTING.md#contributing-code)
+*   **Data:**  [CONTRIBUTING.md#contributing-data](CONTRIBUTING.md#contributing-data)
+*   **Documentation:** [CONTRIBUTING.md#contributing-documentation](CONTRIBUTING.md#contributing-documentation)
+*   **Mailing List:**  Join the discussion at [OSV Discuss](https://groups.google.com/g/osv-discuss).
+*   **Open an Issue:**  Have questions or suggestions?  [Open an issue](https://github.com/google/osv.dev/issues).
 
-Join the conversation on our [mailing list](https://groups.google.com/g/osv-discuss) or [open an issue](https://github.com/google/osv.dev/issues) if you have a question or suggestion.
+## Third-Party Tools & Integrations
 
-## Third-Party Tools and Integrations
-
-A wide range of community-built tools and integrations leverage the OSV database. Please note that these tools are not supported or endorsed by the core OSV maintainers. For guidance, please consult the [OpenSSF's Concise Guide for Evaluating Open Source Software](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software). Some popular third-party tools include:
+OSV is supported by a vibrant community. Here are some third-party tools and integrations that use OSV data:
 
 *   [Cortex XSOAR](https://github.com/demisto/content)
 *   [dep-scan](https://github.com/AppThreat/dep-scan)
@@ -77,3 +60,7 @@ A wide range of community-built tools and integrations leverage the OSV database
 *   [pip-audit](https://github.com/pypa/pip-audit)
 *   [Renovate](https://github.com/renovatebot/renovate)
 *   [Trivy](https://github.com/aquasecurity/trivy)
+
+---
+
+**Visit the [OSV GitHub Repository](https://github.com/google/osv.dev) for more information and to get involved!**
