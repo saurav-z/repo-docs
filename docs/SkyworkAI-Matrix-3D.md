@@ -1,120 +1,121 @@
-# Matrix-3D: Generate Interactive 3D Worlds from Text and Images
+# Matrix-3D: Generate Explorable 3D Worlds from Text and Images
 
-Matrix-3D empowers users to explore expansive, 360-degree 3D worlds generated from simple text descriptions or images. 
+**Create immersive, 360-degree explorable 3D worlds with Matrix-3D, transforming your ideas into interactive experiences!**
+
+[![](https://img.shields.io/badge/GitHub-SkyworkAI/Matrix--3D-blue?style=flat&logo=github)](https://github.com/SkyworkAI/Matrix-3D)
 
 <div align="center">
-  <img src="./asset/logo.PNG" alt="Matrix-3D Logo" width="800" style="margin-bottom: 5px;"/>  
+  <img src="./asset/logo.PNG" alt="Matrix-3D Logo" width="600" style="margin-bottom: 5px;"/>  
 </div>
 
 <div align="center">
-    <a href="https://matrix-3d.github.io/">
-        <img src="https://img.shields.io/badge/📄-Project_Page-orange" alt="Project Page">
-    </a>
-    <a href="https://huggingface.co/Skywork/Matrix-3D">
-        <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-blue?style=flat" alt="Hugging Face Model">
-    </a>
-    <img src="https://img.shields.io/badge/version-v0.1.0-green" alt="Version">
-    <a href="https://arxiv.org/pdf/2508.08086">
-        <img src="https://img.shields.io/badge/arXiv-Report-b31b1b?style=flat&logo=arxiv&logoColor=white" alt="arXiv Report">
-    </a>
+  <a href="https://matrix-3d.github.io/"><img src="https://img.shields.io/badge/📄-Project_Page-orange" alt="Project Page"></a>
+  <a href="https://huggingface.co/Skywork/Matrix-3D"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-blue?style=flat" alt="Hugging Face Model"></a>
+  <a href="https://arxiv.org/pdf/2508.08086"><img src="https://img.shields.io/badge/arXiv-Report-b31b1b?style=flat&logo=arxiv&logoColor=white" alt="Technical Report"></a>
+  <img src="https://img.shields.io/badge/version-v0.1.0-green" alt="Version">
 </div>
-
-**[Explore the original repo](https://github.com/SkyworkAI/Matrix-3D) for the full code and details.**
 
 ## Key Features:
 
-*   **Omnidirectional Exploration:** Generate complete 360-degree explorable scenes.
-*   **Text & Image Input:** Create worlds from text prompts or input images.
-*   **Customizable Trajectories:** Define your own camera paths for unique experiences.
-*   **High-Quality & Diverse Scenes:** Leverage advanced 3D data and video model priors.
-*   **Speed & Detail Options:** Choose between rapid or detailed 3D reconstruction methods.
-*   **Low VRAM Mode:** Includes a script for running with 19G VRAM.
+*   **360° Scene Generation:** Create expansive, omnidirectional scenes for complete exploration.
+*   **Text and Image Input:** Generate 3D worlds from text prompts or input images.
+*   **Customizable Trajectories:** Define your own camera paths for unique video experiences.
+*   **High-Quality Results:** Leverage advanced models for diverse and detailed 3D scene generation.
+*   **Speed-Quality Balance:** Choose between rapid or detailed 3D reconstruction methods.
+*   **Low VRAM Option:** Run the video generation process with as little as 12GB of VRAM, a more accessible option!
+*   **5B Model**: Utilize our new, fast, and efficient 5B model to generate videos!
 
-## Recent Updates:
+## What's New:
 
-*   **August 29, 2025:** [Gradio Demo](https://github.com/SkyworkAI/Matrix-3D/tree/main?tab=readme-ov-file#%EF%B8%8F-gradio-demo) available for easy visualization.
-*   **August 25, 2025:**  [Script](#lowvram) provided to run generation with limited VRAM (19G).
-*   **August 12, 2025:** Code, technical report, and project page released!
+*   **September 02, 2025:** Released a 5B model with low VRAM usage (12GB).
+*   **August 29, 2025:** Launched a Gradio demo for easy visualization.
+*   **August 25, 2025:** Provided a script to run the generation process with 19GB VRAM.
+*   **August 12, 2025:** Publicly released the code, technical report, and project page.
 
-## Visual Examples
+## Visual Examples:
 
 ### Image-to-Scene Generation
 
-| Image                                                                                                                                                                                          | Panoramic Video                                                                                           | 3D Scene                                                                                      |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------- |
-| <img src="asset/i2p/i2p_2.png" style="width: 200px; border-radius: 6px;"><br>                                                                                                        | <img src="asset/i2p/i2p_2.gif" height="150" width="300">                                                 | <img src="asset/i2p/i2p_2_3D.gif" height="150">                                                    |
-| <img src="asset/i2p/i2p_1.png" style="width: 200px; border-radius: 6px;"><br> | <img src="asset/i2p/i2p_1.gif"  height="150" width="300">                                         | <img src="asset/i2p/i2p_1_3D.gif" height="150">                                                      |
+| Image                                                                                                                                                                     | Panoramic Video                                                                   | 3D Scene                                                                          |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| <img src="asset/i2p/i2p_2.png" style="width: 200px; border-radius: 6px;"><br>                                                                                             | <img src="asset/i2p/i2p_2.gif" height="150" width="300">                            | <img src="asset/i2p/i2p_2_3D.gif" height="150">                                   |
+| <img src="asset/i2p/i2p_1.png" style="width: 200px; border-radius: 6px;"><br>                                                                                             | <img src="asset/i2p/i2p_1.gif" height="150" width="300">                            | <img src="asset/i2p/i2p_1_3D.gif" height="150">                                   |
 
 ### Text-to-Scene Generation
 
-| Text                                                                                                                                                                                              | Panoramic Video                                                                                                  | 3D Scene                                                                                             |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------- |
-| <th width="200" style="font-family: 'Palatino', 'Georgia', serif; font-size: 1.3em; color: transparent; background: linear-gradient(45deg, #a8edea 0%, #fed6e3 50%, #a8edea 100%); -webkit-background-clip: text; background-clip: text; text-shadow: 0 0 5px rgba(168,237,234,0.3), 0 0 10px rgba(254,214,227,0.3); padding: 15px; border: 1px solid rgba(168,237,234,0.5); border-radius: 8px; background-color: rgba(10,20,30,0.7); position: relative; overflow: hidden;"><div style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; background: radial-gradient(circle at 20% 30%, rgba(254,214,227,0.1) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(168,237,234,0.1) 0%, transparent 40%); z-index: -1;"></div>A floating island with a waterfall</th> | <img src="asset/t2p/t2p_1.gif" height="150" width="300">                                                         | <img src="asset/t2p/t2p_1_3D.gif" height="150">                                                            |
-| <th width="200" style="font-family: 'Palatino', 'Georgia', serif; font-size: 1.3em; color: transparent; background: linear-gradient(45deg, #a8edea 0%, #fed6e3 50%, #a8edea 100%); -webkit-background-clip: text; background-clip: text; text-shadow: 0 0 5px rgba(168,237,234,0.3), 0 0 10px rgba(254,214,227,0.3); padding: 15px; border: 1px solid rgba(168,237,234,0.5); border-radius: 8px; background-color: rgba(10,20,30,0.7); position: relative; overflow: hidden;"><div style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; background: radial-gradient(circle at 20% 30%, rgba(254,214,227,0.1) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(168,237,234,0.1) 0%, transparent 40%); z-index: -1;"></div>an impressionistic winter landscape</th> | <img src="asset/t2p/t2p_2.gif" height="150"  width="300" >                                                         | <img src="asset/t2p/t2p_2_3D.gif" height="150">                                                             |
+| Text                                                                                                                                                                      | Panoramic Video                                                                   | 3D Scene                                                                          |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| <div style="padding: 15px; border: 1px solid rgba(168,237,234,0.5); border-radius: 8px; background-color: rgba(10,20,30,0.7); position: relative; overflow: hidden;">  <div style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; background: radial-gradient(circle at 20% 30%, rgba(254,214,227,0.1) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(168,237,234,0.1) 0%, transparent 40%); z-index: -1;"></div>A floating island with a waterfall</div> | <img src="asset/t2p/t2p_1.gif" height="150" width="300">                            | <img src="asset/t2p/t2p_1_3D.gif" height="150">                                   |
+| <div style="padding: 15px; border: 1px solid rgba(168,237,234,0.5); border-radius: 8px; background-color: rgba(10,20,30,0.7); position: relative; overflow: hidden;">  <div style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; background: radial-gradient(circle at 20% 30%, rgba(254,214,227,0.1) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(168,237,234,0.1) 0%, transparent 40%); z-index: -1;"></div>an impressionistic winter landscape</div> | <img src="asset/t2p/t2p_2.gif" height="150" width="300">                            | <img src="asset/t2p/t2p_2_3D.gif" height="150">                                   |
 
-**Related Project:**  Explore real-time interactive world models with [Matrix-Game 2.0](https://github.com/SkyworkAI/Matrix-Game/tree/main/Matrix-Game-2).
+## Installation:
 
-## Installation
+1.  **Clone the repository:**
 
-Tested on Linux with NVIDIA GPU.
+    ```bash
+    git clone --recursive https://github.com/SkyworkAI/Matrix-3D.git
+    cd Matrix-3D
+    ```
 
-```bash
-# Clone the repository 
-git clone --recursive https://github.com/SkyworkAI/Matrix-3D.git
-cd Matrix-3D
+2.  **Create and activate a Conda environment:**
 
-# Create a new conda environment
-conda create -n matrix3d python=3.10
-conda activate matrix3d
+    ```bash
+    conda create -n matrix3d python=3.10
+    conda activate matrix3d
+    ```
 
-# Install torch and torchvision (with GPU support, we use CUDA 12.4 Version)
-pip install torch==2.7.0 torchvision==0.22.0
+3.  **Install PyTorch and torchvision (with CUDA support):**
 
-#Run installation script
-chmod +x install.sh
-./install.sh
-```
+    ```bash
+    pip install torch==2.7.0 torchvision==0.22.0
+    ```
 
-## GPU VRAM Requirements
+4.  **Run the installation script:**
 
-| Model Name                 | VRAM (Approximate) |
-| :--------------------------: | :----------------: |
-| PanoVideoGen-480p w.o. vram management | ~40g |
-| PanoVideoGen-720p w.o. vram management | ~60g |
-| PanoVideoGen-720p-5b w.o. vram management | ~19g |
-| PanoVideoGen-480p w. vram management  | ~15g |
-| PanoVideoGen-720p w. vram management  | ~19g |
-| PanoVideoGen-720p-5b w. vram management | ~12g |
+    ```bash
+    chmod +x install.sh
+    ./install.sh
+    ```
 
-## Pretrained Models
+## Pretrained Models:
 
-Download models from Hugging Face:
+| Model Name           | Description                       | Download                                         |
+| :------------------- | :-------------------------------- | :--------------------------------------------- |
+| Text2PanoImage       | Text-to-Panoramic Image           | [Link](https://huggingface.co/Skywork/Matrix-3D) |
+| PanoVideoGen-480p    | Panoramic Video Generation (480p) | [Link](https://huggingface.co/Skywork/Matrix-3D) |
+| PanoVideoGen-720p    | Panoramic Video Generation (720p) | [Link](https://huggingface.co/Skywork/Matrix-3D) |
+| PanoVideoGen-720p-5B | Panoramic Video Generation (720p, 5B)  | [Link](https://huggingface.co/Skywork/Matrix-3D) |
+| PanoLRM-480p         | Panoramic LRM (480p)             | [Link](https://huggingface.co/Skywork/Matrix-3D) |
 
-| Model Name          | Description            | Download Link                                                                                                                      |
-| :-------------------: | :---------------------: | :----------------------------------------------------------------------------------------------------------------------------------: |
-| Text2PanoImage      | Text to Panoramic Image | [Link](https://huggingface.co/Skywork/Matrix-3D)                                                                                  |
-| PanoVideoGen-480p   | 480p Video Generation | [Link](https://huggingface.co/Skywork/Matrix-3D)                                                                                  |
-| PanoVideoGen-720p   | 720p Video Generation | [Link](https://huggingface.co/Skywork/Matrix-3D)                                                                                  |
-| PanoVideoGen-720p-5b | 5B Video Generation   | [Link](https://huggingface.co/Skywork/Matrix-3D)                                                                                  |
-| PanoLRM-480p        | 3D Scene Reconstruction| [Link](https://huggingface.co/Skywork/Matrix-3D)                                                                                  |
+## GPU VRAM Requirements:
 
-## Usage
+| Model Name          | VRAM            | VRAM with Low-VRAM Mode |
+| :------------------ | :-------------- | :----------------------- |
+| Text2PanoImage      | \~16GB          | -                        |
+| PanoVideoGen-480p   | \~40GB          | \~15GB                   |
+| PanoVideoGen-720p   | \~60GB          | \~19GB                   |
+| PanoVideoGen-720p-5B| \~19GB          | \~12GB                   |
+| PanoLRM-480p        | \~80GB          | -                        |
 
-*   **Download Checkpoints:**
+**Note:**  PanoLRM inference is optional and uses significant VRAM. Use the optimization-based reconstruction method for a lighter footprint (approx. 10GB VRAM).
 
-```bash
-python code/download_checkpoints.py
-```
+## Usage:
 
-*   **One-Command 3D World Generation:**
+1.  **Download Checkpoints:**
 
-```bash
-./generate.sh
-```
+    ```bash
+    python code/download_checkpoints.py
+    ```
 
-*   **Step-by-Step Generation:**
+2.  **One-Command 3D World Generation:**
 
-    1.  **Text/Image to Panorama Image:**
+    ```bash
+    ./generate.sh
+    ```
+
+3.  **Step-by-Step Generation:**
+
+    *   **Step 1: Text/Image to Panorama Image:**
 
         *   From Text:
 
@@ -134,9 +135,14 @@ python code/download_checkpoints.py
                 --output_path="./output/example1"
             ```
 
-            Organize your own panorama images with a `pano_img.jpg` and `prompt.txt` in a directory.
+            Ensure your input image and prompt are saved in the following structure:
+            ```
+            ./output/example1
+            └─ pano_img.jpg
+            └─ prompt.txt
+            ```
 
-    2.  **Generate Panoramic Video:**
+    *   **Step 2: Generate Panoramic Video:**
 
         ```bash
         VISIBLE_GPU_NUM=1
@@ -145,31 +151,26 @@ python code/download_checkpoints.py
           --resolution=720
         ```
 
-        Adjust `--resolution` to 480 or 720.  Increase `VISIBLE_GPU_NUM` for multi-GPU processing.
-
-        *   <span id="lowvram">**Low VRAM Mode:**</span>
-
+        *   **Low VRAM Mode:** (For devices with limited VRAM):
             ```bash
             VISIBLE_GPU_NUM=1
             torchrun --nproc_per_node ${VISIBLE_GPU_NUM} code/panoramic_image_to_video.py \
               --inout_dir="./output/example1"  \
               --resolution=720 \
-              --enable_vram_management
+              --enable_vram_management # enable this to allow model to run on devices with 19G vram.
             ```
-
-        *   <span id="5b">**5b Model:**</span>
-
+        *   **5B Model:** (For faster generation and lower VRAM usage):
             ```bash
             VISIBLE_GPU_NUM=1
             torchrun --nproc_per_node ${VISIBLE_GPU_NUM} code/panoramic_image_to_video.py \
               --inout_dir="./output/example1"  \
               --resolution=720 \
-              --use_5b_model
+              --use_5b_model # enable this to generate video with light-weight 5B model.
             ```
 
-    3.  **Extract 3D Scene:**
+    *   **Step 3: Extract 3D Scene:**
 
-        *   Optimization-Based Reconstruction:
+        *   Optimization-based reconstruction:
 
             ```bash
              python code/panoramic_video_to_3DScene.py \
@@ -177,7 +178,7 @@ python code/download_checkpoints.py
                 --resolution=720
             ```
 
-        *   Feed-Forward Reconstruction:
+        *   Feed-forward reconstruction:
 
             ```bash
             python code/panoramic_video_480p_to_3DScene_lrm.py \
@@ -186,29 +187,40 @@ python code/download_checkpoints.py
             --out_path='./output/example2'
             ```
 
-## Create Your Own Scenes:
+## Create Your Own:
 
-| Movement Mode          | Trajectory                                   | Panoramic Video                                                      | 3D Scene                                                        |
-| :----------------------: | :-------------------------------------------: | :-------------------------------------------------------------------: | :--------------------------------------------------------------: |
-| S-curve Travel             | <img src="asset/movement/s.PNG"  height="120"  width="120"  > | <img src="asset/movement/s.gif" height="150"  width="300">  | <img src="asset/movement/s_3D.gif" height="150">            |
-| Forward on the Right   | <img src="asset/movement/forward.PNG"  height="120"  width="120" > | <img src="asset/movement/forward.gif" height="150" width="300">   | <img src="asset/movement/forward_3D.gif" height="150">   |
+### Movement Modes & Trajectories:
 
-Use `--movement_mode` in `code/panoramic_image_to_video.py` to select from: `Straight Travel`, `S-curve Travel`, or `Forward on the Right`.  Provide custom camera trajectories in .json format via `--json_path YOUR_TRAJECTORY_FILE.json`.  Generate trajectories using `code/generate_example_camera.py` and review the sample file (`./data/test_cameras/test_cam_front.json`).
+| Movement Mode       | Trajectory                                 | Panoramic Video                                      | 3D Scene                                               |
+| :------------------ | :----------------------------------------- | :--------------------------------------------------- | :----------------------------------------------------- |
+| S-curve Travel      | <img src="asset/movement/s.PNG"  height="120"  width="120"  > | <img src="asset/movement/s.gif" height="150"  width="300">    | <img src="asset/movement/s_3D.gif" height="150" >    |
+| Forward on the Right| <img src="asset/movement/forward.PNG"  height="120"  width="120" > | <img src="asset/movement/forward.gif" height="150" width="300"> | <img src="asset/movement/forward_3D.gif" height="150"> |
 
-## Gradio Demo
+*   **Movement Modes:**  `Straight Travel`, `S-curve Travel`, and `Forward on the Right`.  Configure with `--movement_mode` in `code/panoramic_image_to_video.py`.
+*   **Custom Camera Trajectory:**  Provide your own camera path in `.json` format.
 
-Run the interactive demo:
+    ```bash
+    VISIBLE_GPU_NUM=1
+    torchrun --nproc_per_node ${VISIBLE_GPU_NUM} code/panoramic_image_to_video.py \
+      --inout_dir="./output/example1"  \
+      --resolution=720
+      --json_path YOUR_TRAJECTORY_FILE.json
+    ```
+    Refer to `./data/test_cameras/test_cam_front.json` for the correct camera matrix format (world-to-camera in OpenCV format).  Use `code/generate_example_camera.py` to generate your own camera trajectory files.
+
+## Gradio Demo:
+
+Run the Gradio demo for easy visualization:
 
 ```bash
 python code/matrix.py --max_gpus=1
 ```
 
-*   Single GPU (`--max_gpus=1`): Text-video-3D generation. Requires at least 62 GB memory.
-*   Multiple GPUs (`--max_gpus=N, N≥2`): Supports text-video-3D and image-video-3D workflows.  Adjust GPU allocation as needed.
+*   **GPU Configuration:**
+    *   `--max_gpus=1`: Supports text-video-3D generation (requires a GPU with at least 62GB of memory).
+    *   `--max_gpus=N, N≥2`: Supports both text-video-3D and image-video-3D generation workflows.  Allocate GPUs based on your hardware.
 
-## Citation
-
-If you find this project useful, please cite:
+## Citation:
 
 ```bibtex
 @article{yang2025matrix3d,
@@ -219,11 +231,9 @@ If you find this project useful, please cite:
 }
 ```
 
----
+## Acknowledgements:
 
-## Acknowledgements
-
-This project is built upon the following:
+This project builds upon the following resources:
 
 *   [FLUX.1](https://huggingface.co/black-forest-labs/FLUX.1-dev)
 *   [Wan2.1](https://github.com/Wan-Video/Wan2.1)
@@ -234,6 +244,6 @@ This project is built upon the following:
 *   [StableSR](https://github.com/IceClear/StableSR)
 *   [VEnhancer](https://github.com/Vchitect/VEnhancer)
 
-## Contact
+## Contact:
 
-For questions or feature requests, please [open an issue](https://github.com/SkyworkAI/Matrix-3D/issues).
+For questions or feature requests, please open an issue on GitHub.

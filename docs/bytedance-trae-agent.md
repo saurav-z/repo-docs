@@ -1,6 +1,6 @@
-# Trae Agent: Revolutionizing Software Engineering with AI
+# Trae Agent: Your AI Companion for Streamlined Software Engineering
 
-**Trae Agent is an LLM-powered agent designed to automate and simplify software engineering tasks, offering a powerful CLI interface for efficient development.**
+**Trae Agent** is an innovative LLM-based agent designed to automate and simplify software engineering tasks, offering a powerful CLI with support for diverse LLM providers and advanced features. ([Original Repo](https://github.com/bytedance/trae-agent))
 
 [![arXiv:2507.23370](https://img.shields.io/badge/TechReport-arXiv%3A2507.23370-b31a1b)](https://arxiv.org/abs/2507.23370)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -10,17 +10,14 @@
 
 ## Key Features
 
-*   **Multi-LLM Support:** Integrates with OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, and Google Gemini.
-*   **Rich Tool Ecosystem:**  Offers file editing, bash execution, sequential thinking, and more for comprehensive task management.
-*   **Interactive Mode:** Provides a conversational interface for iterative development and real-time feedback.
-*   **Trajectory Recording:** Detailed logging of all agent actions for robust debugging, analysis, and performance optimization.
-*   **Flexible Configuration:** YAML-based configuration with environment variable support for ease of use.
-*   **Easy Installation:** Simple pip-based installation for quick setup and deployment.
-*   **Lakeview Summarization:** Concise summarization of agent steps.
-
-##  Why Choose Trae Agent?
-
-Trae Agent's **research-friendly design** with its modular architecture and extensive tools make it an ideal platform for researchers and developers. Its focus on transparency and flexibility allows for easy modification, extension, and analysis.
+*   **Multi-LLM Support**: Seamlessly integrates with leading LLM providers including OpenAI, Anthropic, Google Gemini, OpenRouter, Doubao, and Ollama.
+*   **Rich Tool Ecosystem**: Equipped with a versatile suite of tools for file editing, bash execution, sequential thinking, and more, empowering you to tackle complex tasks.
+*   **Interactive Mode**: Engage in conversational development and iterative refinement through a user-friendly interactive interface.
+*   **Trajectory Recording**: Detailed logging of all agent actions enables robust debugging and comprehensive analysis of your workflows.
+*   **Flexible Configuration**: Utilize YAML-based configuration with environment variable support for easy customization and management.
+*   **Easy Installation**: Simple and straightforward pip-based installation process for quick setup.
+*   **Lakeview**: Provides short and concise summarisation for agent steps
+*   **Research-Friendly Design**: The open architecture is designed to be modified, extended, and analyzed, making it ideal for studying AI agent architectures, conducting ablation studies, and developing novel agent capabilities.
 
 ## Installation
 
@@ -48,54 +45,54 @@ source .venv/bin/activate
     cp trae_config.yaml.example trae_config.yaml
     ```
 
-2.  Edit `trae_config.yaml` with your API credentials and preferences.  Example:
+2.  Edit `trae_config.yaml` with your API credentials and preferences.  See the example below and refer to the original README for detailed information.
 
-    ```yaml
-    agents:
-      trae_agent:
-        enable_lakeview: true
-        model: trae_agent_model  # the model configuration name for Trae Agent
-        max_steps: 200  # max number of agent steps
-        tools:  # tools used with Trae Agent
-          - bash
-          - str_replace_based_edit_tool
-          - sequentialthinking
-          - task_done
+```yaml
+agents:
+  trae_agent:
+    enable_lakeview: true
+    model: trae_agent_model  # the model configuration name for Trae Agent
+    max_steps: 200  # max number of agent steps
+    tools:  # tools used with Trae Agent
+      - bash
+      - str_replace_based_edit_tool
+      - sequentialthinking
+      - task_done
 
-    model_providers:  # model providers configuration
-      anthropic:
-        api_key: your_anthropic_api_key
-        provider: anthropic
-      openai:
-        api_key: your_openai_api_key
-        provider: openai
+model_providers:  # model providers configuration
+  anthropic:
+    api_key: your_anthropic_api_key
+    provider: anthropic
+  openai:
+    api_key: your_openai_api_key
+    provider: openai
 
-    models:
-      trae_agent_model:
-        model_provider: anthropic
-        model: claude-sonnet-4-20250514
-        max_tokens: 4096
-        temperature: 0.5
-    ```
+models:
+  trae_agent_model:
+    model_provider: anthropic
+    model: claude-sonnet-4-20250514
+    max_tokens: 4096
+    temperature: 0.5
+```
 
-    **Note:** The `trae_config.yaml` file is ignored by git to protect your API keys.
+**Note:** The `trae_config.yaml` file is ignored by git to protect your API keys.
 
 ### Using Base URL
 
-In some cases, you might need to use a custom URL for the API.  Add the `base_url` field after `provider`:
+In some cases, you need to use a custom URL for the API. Just add the `base_url` field after `provider`, taking the following config as an example:
 
 ```yaml
 openai:
-    api_key: your_openai_api_key
+    api_key: your_openrouter_api_key
     provider: openai
     base_url: https://openrouter.ai/api/v1
 ```
 
-**Note:** Use spaces only for formatting. Tabs are not allowed.
+**Note:** For field formatting, use spaces only. Tabs (\t) are not allowed.
 
 ### Environment Variables (Alternative)
 
-Configure API keys using environment variables:
+You can also configure API keys using environment variables and store them in the .env file:
 
 ```bash
 export OPENAI_API_KEY="your-openai-api-key"
@@ -112,7 +109,7 @@ export DOUBAO_BASE_URL="https://ark.cn-beijing.volces.com/api/v3/"
 
 ### MCP Services (Optional)
 
-Enable Model Context Protocol (MCP) services by adding an `mcp_servers` section to your configuration.
+To enable Model Context Protocol (MCP) services, add an `mcp_servers` section to your configuration:
 
 ```yaml
 mcp_servers:
@@ -124,7 +121,7 @@ mcp_servers:
 
 **Configuration Priority:** Command-line arguments > Configuration file > Environment variables > Default values
 
-**Legacy JSON Configuration:** See [docs/legacy_config.md](docs/legacy_config.md) for the older JSON format. YAML is recommended.
+**Legacy JSON Configuration:** If using the older JSON format, see [docs/legacy_config.md](docs/legacy_config.md). We recommend migrating to YAML.
 
 ## Usage
 
@@ -180,25 +177,51 @@ trae-cli run "Update API endpoints" --must-patch
 trae-cli interactive --provider openai --model gpt-4o --max-steps 30
 ```
 
+## Docker Mode Commands
+
+### Preparation
+
+**Important**: You need to download a directory "_interal" from [Google Drive](https://drive.google.com/file/d/164ivShb7VrjhO7S_159dIqskZeABryok/view?usp=drive_link) and unzip it into
+trae-agent/trae_agent/dist/dist_tools. This is used to execute agent tools in Docker containers.
+
+### Usage
+
+```bash
+# Specify a Docker image to run the task in a new container
+trae-cli run "Add tests for utils module" --docker-image python:3.11
+
+# Attach to an existing Docker container by ID
+trae-cli run "Update API endpoints" --docker-container-id 91998a56056c
+
+# Specify an absolute path to a Dockerfile to build an environment
+trae-cli run "Debug authentication" --dockerfile-path test_workspace/Dockerfile
+
+# Specify a path to a local Docker image file (tar archive) to load
+trae-cli run "Fix the bug in main.py" --docker-image-file test_workspace/trae_agent_custom.tar
+
+# Remove the Docker container after finishing the task (keep default)
+trae-cli run "Add tests for utils module" --docker-image python:3.11 --docker-keep false
+```
+
 ### Interactive Mode Commands
 
-In interactive mode:
+In interactive mode, you can use:
 
-*   Type a task description to execute it.
-*   `status` - Show agent information.
-*   `help` - Show available commands.
-*   `clear` - Clear the screen.
-*   `exit` or `quit` - End the session.
+*   Type any task description to execute it
+*   `status` - Show agent information
+*   `help` - Show available commands
+*   `clear` - Clear the screen
+*   `exit` or `quit` - End the session
 
 ## Advanced Features
 
 ### Available Tools
 
-Trae Agent provides a toolkit for software engineering tasks, including file editing, bash execution, structured thinking, and task completion. For detailed information, see [docs/tools.md](docs/tools.md).
+Trae Agent provides a comprehensive toolkit for software engineering tasks including file editing, bash execution, structured thinking, and task completion. For detailed information about all available tools and their capabilities, see [docs/tools.md](docs/tools.md).
 
 ### Trajectory Recording
 
-Trae Agent automatically records execution trajectories for debugging and analysis.
+Trae Agent automatically records detailed execution trajectories for debugging and analysis:
 
 ```bash
 # Auto-generated trajectory file
@@ -215,16 +238,18 @@ Trajectory files contain LLM interactions, agent steps, tool usage, and executio
 
 ### Contributing
 
-Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+For contribution guidelines, please refer to [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### Troubleshooting
 
 **Import Errors:**
+
 ```bash
 PYTHONPATH=. trae-cli run "your task"
 ```
 
 **API Key Issues:**
+
 ```bash
 # Verify API keys
 echo $OPENAI_API_KEY
@@ -232,11 +257,13 @@ trae-cli show-config
 ```
 
 **Command Not Found:**
+
 ```bash
 uv run trae-cli run "your task"
 ```
 
 **Permission Errors:**
+
 ```bash
 chmod +x /path/to/your/project
 ```
@@ -262,5 +289,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 We thank Anthropic for building the [anthropic-quickstart](https://github.com/anthropics/anthropic-quickstarts) project that served as a valuable reference for the tool ecosystem.
-
-[Back to Top](https://github.com/bytedance/trae-agent)

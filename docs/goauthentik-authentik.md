@@ -13,45 +13,48 @@
 ![Latest version](https://img.shields.io/docker/v/authentik/server?sort=semver&style=for-the-badge)
 [![](https://img.shields.io/badge/Help%20translate-transifex-blue?style=for-the-badge)](https://www.transifex.com/authentik/authentik/)
 
-# authentik: Open-Source Identity and Access Management (IAM)
+## Authentik: The Open-Source Identity Provider for Modern SSO
 
-**authentik is a flexible and versatile open-source Identity Provider, offering a robust solution for modern authentication and authorization needs.**  [View the source on GitHub](https://github.com/goauthentik/authentik).
+Authentik is a powerful, open-source Identity Provider (IdP) solution designed to streamline Single Sign-On (SSO) and identity management for modern applications.  [View the original repository](https://github.com/goauthentik/authentik).
 
-## Key Features
+### Key Features
 
-*   **Open-Source:** Benefit from the transparency and community-driven development of an open-source project.
-*   **Flexible:** Designed with a focus on adaptability to fit diverse environments and use cases.
-*   **Versatile Protocol Support:** Offers support for a wide range of protocols, including OAuth2/OpenID Connect, SAML, LDAP, and more.
-*   **Self-Hosted IAM:** A viable self-hosted alternative to solutions like Okta, Auth0, and Entra ID, especially for larger deployments (check out our [enterprise offer](https://goauthentik.io/pricing)).
-*   **Modern User Experience:** Provides a user-friendly interface for both administrators and end-users.
-*   **Kubernetes Support:** Easily deploy and manage authentik within your Kubernetes environment using a Helm chart.
-*   **Docker Compose Installation:** Simple setup for testing and smaller deployments using Docker Compose.
+*   **Comprehensive Protocol Support:**  Offers robust support for industry-standard protocols including SAML, OAuth2/OIDC, LDAP, and RADIUS, ensuring broad compatibility.
+*   **Self-Hosting Focused:**  Built from the ground up for self-hosting, making it suitable for deployments ranging from small labs to large production clusters.
+*   **Enterprise-Grade Capabilities:** Provides an [enterprise offering](https://goauthentik.io/pricing) designed to replace existing IdPs like Okta, Auth0, and others, offering robust identity management for large organizations.
+*   **Flexible Deployment Options:** Supports various installation methods including Docker Compose, Kubernetes (Helm Chart), AWS CloudFormation, and DigitalOcean Marketplace for easy setup.
+*   **Open Source and Community-Driven:** Benefit from the transparency and collaborative nature of open-source development, with active community support and contributions.
 
-## Installation
+### Installation
 
-### Docker Compose (Recommended for Testing)
+Choose the installation method that best suits your needs:
 
-Refer to the [documentation](https://goauthentik.io/docs/installation/docker-compose/?utm_source=github) for detailed instructions on setting up authentik using Docker Compose.
+*   **Docker Compose:** Recommended for small-scale and testing environments.  See the [documentation](https://docs.goauthentik.io/docs/install-config/install/docker-compose/).
+*   **Kubernetes (Helm Chart):**  Recommended for larger setups.  See the [documentation](https://docs.goauthentik.io/docs/install-config/install/kubernetes/) and the Helm chart [repository](https://github.com/goauthentik/helm).
+*   **AWS CloudFormation:** Deploy on AWS using official templates. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/aws/).
+*   **DigitalOcean Marketplace:** One-click deployment via the official Marketplace app. See the [app listing](https://marketplace.digitalocean.com/apps/authentik).
 
-### Kubernetes
-
-For larger setups, install using our Helm Chart, documented [here](https://goauthentik.io/docs/installation/kubernetes/?utm_source=github).
-
-## Screenshots
+### Screenshots
 
 | Light                                                       | Dark                                                       |
 | ----------------------------------------------------------- | ---------------------------------------------------------- |
 | ![](https://docs.goauthentik.io/img/screen_apps_light.jpg)  | ![](https://docs.goauthentik.io/img/screen_apps_dark.jpg)  |
 | ![](https://docs.goauthentik.io/img/screen_admin_light.jpg) | ![](https://docs.goauthentik.io/img/screen_admin_dark.jpg) |
 
-## Development
+### Development and Contributions
 
-Explore the [Developer Documentation](https://docs.goauthentik.io/docs/developer-docs/?utm_source=github) for guidance on contributing to authentik.
+Explore the [Developer Documentation](https://docs.goauthentik.io/docs/developer-docs/) to learn how to set up local build environments, test contributions, and understand the contribution process.
 
-## Security
+### Security
 
-Review our [SECURITY.md](SECURITY.md) for security best practices and vulnerability reporting information.
+Refer to [SECURITY.md](SECURITY.md) for security-related information.
 
-## Adoption and Contributions
+### Adoption
 
-Does your organization use authentik? We'd love to feature your logo! Contact us at hello@goauthentik.io or open a GitHub Issue/PR.  Learn more about contributing to authentik by visiting our [contribution guide](https://docs.goauthentik.io/docs/developer-docs?utm_source=github).
+Have you adopted authentik?  We would love to hear your story!  Reach out to us at [hello@goauthentik.io](mailto:hello@goauthentik.io) or open a GitHub Issue/PR to share your experience and potentially feature your logo.
+
+### License
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?style=for-the-badge)](website/LICENSE)
+[![authentik EE License](https://img.shields.io/badge/License-EE-orange?style=for-the-badge)](authentik/enterprise/LICENSE)

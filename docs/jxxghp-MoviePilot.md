@@ -1,6 +1,4 @@
-# MoviePilot: The Ultimate Automation Solution for Media Management
-
-MoviePilot is a powerful and user-friendly application designed to automate and simplify your media management tasks, built upon the foundation of NAS tools.  ([See the original repository](https://github.com/jxxghp/MoviePilot))
+# MoviePilot: Your All-in-One Automation Hub for Media Management
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 [![GitHub forks](https://img.shields.io/github/forks/jxxghp/MoviePilot?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
@@ -11,16 +9,22 @@ MoviePilot is a powerful and user-friendly application designed to automate and 
 [![Docker Pulls V2](https://img.shields.io/docker/pulls/jxxghp/moviepilot-v2?style=for-the-badge)](https://hub.docker.com/r/jxxghp/moviepilot-v2)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20Synology-blue?style=for-the-badge)](https://github.com/jxxghp/MoviePilot)
 
+MoviePilot is a streamlined and user-friendly solution for automating your media management workflows, built with a focus on simplicity and extensibility. This project is based on [NAStool](https://github.com/NAStool/nas-tools) but has been redesigned to provide a more focused and maintainable automation experience.
+
+**Important Note:**  This project is intended for educational and personal use only. Please refrain from promoting or distributing this project on any domestic Chinese platforms.
+
+*   **[View the original repository on GitHub](https://github.com/jxxghp/MoviePilot)**
+
 ## Key Features
 
-*   **Modern Architecture:**  Built with a frontend-backend separation using FastAPI and Vue3 for a streamlined and responsive user experience.
-*   **Focus on Core Automation:**  Prioritizes essential features and simplifies settings, reducing complexity and improving usability.
-*   **Intuitive User Interface:**  Features a redesigned and aesthetically pleasing user interface for easier navigation and control.
-*   **Extensible:** Designed for ease of expansion, providing opportunities for custom plugins and functionalities.
+*   **Frontend/Backend Separation:** Built with FastAPI (backend) and Vue3 (frontend) for a clear separation of concerns.
+*   **Simplified Configuration:** Designed for ease of use with streamlined settings and sensible defaults.
+*   **Modern User Interface:** Features a redesigned and intuitive user interface for an improved user experience.
+*   **Extensible via Plugins:** Easily expand functionality with a plugin system.
 
 ## Installation and Usage
 
-Refer to the official wiki for detailed installation and usage instructions: [https://wiki.movie-pilot.org](https://wiki.movie-pilot.org)
+Detailed installation and usage instructions are available on the official Wiki: [https://wiki.movie-pilot.org](https://wiki.movie-pilot.org)
 
 ## Development
 
@@ -29,42 +33,36 @@ Refer to the official wiki for detailed installation and usage instructions: [ht
 *   Python 3.12
 *   Node.js v20.12.1
 
-### Getting Started
+### Development Setup
 
-1.  **Clone the Main Project:**
+1.  **Clone the Main Repository:**
     ```shell
     git clone https://github.com/jxxghp/MoviePilot
     ```
-
-2.  **Clone Resources Project:**
+2.  **Clone the Resources Repository:**
     ```shell
     git clone https://github.com/jxxghp/MoviePilot-Resources
     ```
-    *   Copy the necessary platform-specific libraries (`.so`, `.pyd`, `.bin`) from the `MoviePilot-Resources/resources` directory to the `app/helper` directory within the main project.
-
+    *   Copy the platform-specific library files (`.so`, `.pyd`, `.bin`) from the `MoviePilot-Resources/resources` directory to the `app/helper` directory within the main project.
 3.  **Install Backend Dependencies:**
     ```shell
-    cd <MoviePilot project directory>
+    cd MoviePilot/
     pip install -r requirements.txt
     python3 main.py
     ```
-    *   The backend will run on port `3001` by default.  Access the API documentation at `http://localhost:3001/docs`.
-
-4.  **Clone Frontend Project:**
+    The backend service will run on `http://localhost:3001` (API Documentation: `http://localhost:3001/docs`).
+4.  **Clone the Frontend Repository:**
     ```shell
     git clone https://github.com/jxxghp/MoviePilot-Frontend
     ```
-
 5.  **Install Frontend Dependencies and Run:**
     ```shell
-    cd <MoviePilot-Frontend project directory>
+    cd MoviePilot-Frontend/
     yarn
     yarn dev
     ```
-    *   Access the frontend at `http://localhost:5173`.
-
-6.  **Plugin Development:**
-    *   Develop custom plugins within the `app/plugins` directory.  Refer to the [plugin development guide](https://wiki.movie-pilot.org/zh/plugindev) for details.
+    Access the frontend at `http://localhost:5173`.
+6.  **Plugin Development:**  Refer to the [plugin development guide](https://wiki.movie-pilot.org/zh/plugindev) to create plugins in the `app/plugins` directory.
 
 ## Related Projects
 
@@ -76,10 +74,11 @@ Refer to the official wiki for detailed installation and usage instructions: [ht
 
 ## Disclaimer
 
-*   This software is for learning and exchange purposes only.
-*   It is not for commercial use.
-*   The developers are not responsible for user actions or any illegal activities.
-*   This project does not accept donations and does not offer any paid services.
+*   This software is intended for learning and personal use only.
+*   It is not intended for commercial use or illegal activities. Users are solely responsible for their actions.
+*   The project is open-source. Modifications that circumvent limitations or restrictions are discouraged.
+*   Contributions are welcome.
+*   This project does not accept donations and does not provide paid services.
 
 ## Contributors
 

@@ -1,113 +1,72 @@
-# WilmerAI: Context-Aware Semantic Prompt Routing for Advanced AI Workflows
+# WilmerAI: Revolutionizing LLM Inference with Contextual Routing
 
-**Unlock the power of advanced AI orchestration by enabling sophisticated context-aware routing and complex task management with WilmerAI.**
+**Unlock advanced semantic prompt routing and orchestrate complex tasks with WilmerAI, your gateway to next-generation language model interactions. [Visit the GitHub Repository](https://github.com/SomeOddCodeGuy/WilmerAI)**
 
-[Link to Original Repo: https://github.com/SomeOddCodeGuy/WilmerAI](https://github.com/SomeOddCodeGuy/WilmerAI)
-
-## Overview
-
-WilmerAI is a powerful application designed for advanced semantic prompt routing and complex task orchestration.  It excels at understanding the full context of a conversation, making it ideal for building intelligent and responsive AI assistants and workflows. This project is under active development, focusing on node-based workflows for enhanced AI task management.
+WilmerAI is a powerful application designed to transform how you interact with language models. It excels in advanced semantic prompt routing and complex task orchestration, offering a more intelligent and versatile approach compared to traditional LLM applications.
 
 ## Key Features
 
-*   **Advanced Contextual Routing**:  WilmerAI analyzes the **entire conversation history** to understand the intent behind user queries, ensuring accurate routing to specialized workflows.
-    *   **Prompt Routing**: Selects the appropriate workflow based on the initial prompt (e.g., "Coding," "Factual," "Creative").
-    *   **In-Workflow Routing**: Offers conditional logic ("if/then") within workflows, allowing dynamic next steps based on node outputs.
+*   **Advanced Contextual Routing:**
+    *   Analyzes the entire conversation history to understand the *true* intent behind a query.
+    *   Routes prompts to specialized workflows (e.g., coding, factual, creative) based on context, not just keywords.
+    *   Provides conditional "if/then" logic within workflows, allowing dynamic process control.
 
-*   **Core: Node-Based Workflow Engine**:  WilmerAI utilizes a workflow engine built upon JSON-defined steps ("nodes") allowing for complex, chained-thought processes. This core architecture enables sophisticated task management.
+*   **Node-Based Workflow Engine:**
+    *   At the heart of WilmerAI, enabling structured and efficient processing of requests.
+    *   Uses JSON-defined workflows, composed of interconnected "nodes" that each perform a specific task.
+    *   Orchestrates multiple LLMs, external tools, and custom scripts within a single workflow, with outputs passed between nodes.
 
-*   **Multi-LLM & Multi-Tool Orchestration**:  Each node within a workflow can connect to different LLMs or external tools, facilitating the orchestration of multiple models for optimal results. This flexibility enables tailored solutions for diverse tasks.
+*   **Multi-LLM & Multi-Tool Orchestration:**
+    *   Each node can call on different LLM endpoints or execute external tools.
+    *   Facilitates the use of the *best* model for each part of a task, boosting overall results.
+    *   Allows you to leverage all of your resources for any given single prompt.
 
-*   **Modular & Reusable Workflows**:  Build self-contained workflows for common tasks, which can be executed as reusable nodes within larger workflows, simplifying the design of complex agents.
+*   **Modular & Reusable Workflows:**
+    *   Create self-contained workflows for common tasks.
+    *   Execute workflows as reusable nodes in larger, more complex workflows.
+    *   Simplify the design of complex agent applications.
 
-*   **Stateful Conversation Memory**:  Maintains context through a three-part memory system: a chronological summary file, a rolling summary of the conversation, and a vector database for Retrieval-Augmented Generation (RAG), providing detailed information for long conversations and accurate routing.
+*   **Stateful Conversation Memory:**
+    *   Keeps track of conversations and improves contextual awareness and routing accuracy.
+    *   Chronological summary file, a continuously updated "rolling summary", and vector database for RAG.
 
-*   **Adaptable API Gateway**:  Exposes OpenAI- and Ollama-compatible API endpoints, enabling seamless integration with existing front-end applications and tools without modifications.
+*   **Adaptable API Gateway:**
+    *   Exposes OpenAI and Ollama-compatible API endpoints.
+    *   Connects seamlessly with existing front-end applications and tools.
 
-*   **Flexible Backend Connectors**:  Connects to various LLM backends, including OpenAI, Ollama, and KoboldCpp, using configurable endpoints, API types, and generation presets.
+*   **Flexible Backend Connectors:**
+    *   Connects to various LLM backends (OpenAI, Ollama, KoboldCpp).
+    *   Uses a simple but powerful configuration system of Endpoints, API Types, and Presets.
 
-*   **MCP Server Tool Integration with MCPO**:  Experimental support for MCP server tool calling, provided by iSevenDays, to enhance workflows with tool use capabilities.
-    [More info](Public/modules/README_MCP_TOOLS.md)
-
-## How it Works
-
-WilmerAI uses a node-based workflow engine to direct and manage prompts. It offers various routing and workflow options allowing users to connect to multiple LLMs and external tools.
-
-## Workflow Examples
-
-[Insert images from the original README.  Try to format them better than the original README, if possible.]
-
-*   **Example 1: Simple Assistant Routing**
-*   **Example 2: Prompt Routing Example**
-*   **Example 3: Group Chat to Different LLMs**
-*   **Example 4: Coding Workflow Example**
+*   **MCP Server Tool Integration using MCPO:**
+    *   Experimental support for MCP server tool calling using MCPO.
+    *   Enables tool use mid-workflow, expanding task capabilities.
+    *   Thanks to [iSevenDays](https://github.com/iSevenDays) for their contributions.
 
 ## Getting Started
 
-### Installation
+WilmerAI requires Python and offers easy setup through:
 
-1.  **Install Required Packages:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-2.  **Run the server:**
-    ```bash
-    python server.py
-    ```
+*   **Option 1: Using Provided Scripts:** Run .bat (Windows) or .sh (macOS) files.
+*   **Option 2: Manual Installation:** Install dependencies with `pip install -r requirements.txt` and run `python server.py`.
 
-### Key Configuration
+### Quick-ish Setup
 
-1.  **Endpoints:** Configure your LLM connections in `Public/Configs/Endpoints`.
-2.  **Users:** Select or create a user in `Public/Configs/Users/_current-user.json`.
+1.  **Configure Endpoints:** Set up LLM API connections in the "Public/Configs/Endpoints" directory.
+2.  **Choose a User:** Define your settings in `Public/Configs/Users/_current-user.json`.
 
-## API Endpoints
+Refer to the full [README](https://github.com/SomeOddCodeGuy/WilmerAI) for detailed instructions.
 
-*   OpenAI Compatible v1/completions (*requires [Wilmer Prompt Template](Public/Configs/PromptTemplates/wilmerai.json)*)
-*   OpenAI Compatible chat/completions
-*   Ollama Compatible api/generate (*requires [Wilmer Prompt Template](Public/Configs/PromptTemplates/wilmerai.json)*)
-*   Ollama Compatible api/chat
+## Example Applications
 
-##  Connect Your Existing Tools
-
-Connect easily to WilmerAI through existing front ends using its API Endpoints!
-
-## Documentation
-
-*   [User Documentation](Docs/_User_Documentation/README.md)
-*   [Developer Documentation](Docs/Developer_Docs/README.md)
-
-## Maintainer's Note
-
-WilmerAI is an ongoing project, primarily developed during off-hours. Updates and bug fixes may take time. Your understanding and patience are greatly appreciated!
-
-##  Disclaimer
-
-This is a personal project under heavy development and is provided "as-is" without warranty.
+*   Semantic Routing
+*   Workflow Orchestration
+*   Multi-LLM Interactions
 
 ## Contact
 
-For inquiries and feedback:  WilmerAI.Project@gmail.com
+For feedback, requests, or support, reach out to WilmerAI.Project@gmail.com.
 
-## Third-Party Libraries and Licensing
+## License & Third-Party Libraries
 
-(Refer to the original README section on Third Party Libraries)
-
-## License
-
-(Refer to the original README section on Wilmer License and Copyright)
-```
-
-Key improvements and SEO considerations:
-
-*   **Clear Hook:** A single sentence that grabs attention and highlights a key benefit.
-*   **Keyword Optimization:** Used relevant keywords (e.g., "semantic prompt routing," "AI workflows," "LLM orchestration").
-*   **Headings and Structure:**  Organized content with clear headings and subheadings for readability.
-*   **Bulleted Lists:** Easy-to-scan bullet points for key features and benefits.
-*   **Concise Language:** Avoided unnecessary words and focused on clarity.
-*   **Calls to Action (Implied):** Encourages the reader to "Unlock," "Build" or "Use"
-*   **Link to Original Repo:**  Clearly provided and repeated.
-*   **Contact Information:**  Included for engagement.
-*   **Maintenance:** Added the important note to highlight that the project is under development.
-*   **Concise Summary:** Removed redundancies.
-*   **Corrected some of the Markdown formatting. Removed some of the less useful sections.
-*   **Encouragement to insert images.**
+WilmerAI is licensed under the GNU General Public License. It utilizes several third-party libraries listed in the original README and licensed accordingly.

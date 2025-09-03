@@ -1,10 +1,12 @@
 <div align="center" markdown="1">
-    <img src="https://frappe.io/files/Group%202%20(1).png" alt="Press logo" width="80"/>
-    <h1>Press: Open-Source Cloud Hosting for the Frappe Stack</h1>
+
+<img src="https://frappe.io/files/Group%202%20(1).png" alt="Press logo" width="80"/>
+<h1>Press: The Open-Source Cloud Hosting Solution for Frappe</h1>
+
 </div>
 
 <div align="center">
-    <img width="889" alt="Managed press" src="https://github.com/user-attachments/assets/2675e828-d5ed-4527-a038-7742a5cfa3db" />
+	<img width="889" alt="Managed press" src="https://github.com/user-attachments/assets/2675e828-d5ed-4527-a038-7742a5cfa3db" />
 </div>
 <br />
 <div align="center">
@@ -13,16 +15,18 @@
 	<a href="https://docs.frappe.io/cloud/">Documentation</a>
 </div>
 
-Press is a 100% open-source cloud hosting solution, empowering you to easily deploy and manage your Frappe applications.  **Built on the Frappe stack, Press provides a powerful, flexible, and user-friendly platform for your cloud hosting needs.**
+**Press** is a robust, open-source cloud hosting platform specifically designed to streamline and optimize the deployment and management of Frappe-based applications.  (*[Click here to explore the original repository](https://github.com/frappe/press)*)
 
-## Key Features of Press
+## Key Features & Benefits of Press
 
-*   **Simplified Multitenancy:** Easily host multiple sites on a single platform, ensuring independent updates and minimal downtime.
-*   **Intuitive Dashboard:** Manage apps, servers, sites, billing, backups, and updates from a centralized interface for streamlined control.
-*   **Granular Permissions:** Manage roles and resources efficiently with granular access controls.
-*   **Automated Management:**  Benefit from automated backups, real-time monitoring, role-based access, and easy scaling.
-*   **Integrated Billing:**  Automated billing supports subscriptions, multiple payment methods, wallet credits, and ERP integration.
-*   **Application Marketplace:** Developers can list applications with flexible pricing models ensuring compatibility checks, and a streamlined system for sales and payouts.
+Press offers a comprehensive suite of features designed for effortless Frappe application hosting.
+
+*   **Simplified Multi-Tenancy:** Easily manage multiple sites on a single platform, enabling independent app versioning and minimal downtime.
+*   **Intuitive Dashboard:** A centralized interface for managing apps, servers, sites, billing, backups, and updates.
+*   **Granular Permissions:** Role-based access control for secure and efficient team management.
+*   **Automated Management:** Streamlined site management with automated backups, real-time monitoring, and easy scaling.
+*   **Integrated Billing:** Supports daily/monthly subscriptions, flexible payment methods, and ERP integration.
+*   **App Marketplace:** Facilitates app listing with flexible pricing models and compatibility checks.
 
 <details>
   <summary>Screenshots</summary>
@@ -34,21 +38,24 @@ Press is a 100% open-source cloud hosting solution, empowering you to easily dep
 
 </details>
 
-## Under the Hood
+## Technologies Under the Hood
 
-Press leverages the following technologies:
+Press leverages powerful technologies for robust cloud hosting:
 
-*   **Frappe Framework:** A full-stack web application framework (Python & Javascript).
-*   **Frappe UI:** A Vue-based UI library for modern interfaces.
-*   **Agent:** A Flask app for communication with sites and benches.
-*   **Docker:** Containerization for streamlined deployment.
-*   **Ansible:** IT automation for system configuration and management.
+*   **Frappe Framework:** A full-stack web application framework.
+*   **Frappe UI:** A Vue-based UI library.
+*   **Agent:** A flask app designed to work along with Press.
+*   **Docker:** Containerization for efficient deployment.
+*   **Ansible:** Automation for system configuration and management.
 
 ## Getting Started
 
-Self-host or set up Press locally using the [Local Development Environment Setup Guide](https://docs.frappe.io/cloud/local-fc-setup) or watch this [YouTube video](https://www.youtube.com/watch?v=Xb9QHnUrIEk).
+To self-host or set up Press locally, refer to:
 
-## Connect with the Community
+*   [Local Development Environment Setup Guide](https://docs.frappe.io/cloud/local-fc-setup)
+*   [YouTube Video](https://www.youtube.com/watch?v=Xb9QHnUrIEk)
+
+## Connect and Learn
 
 *   [Telegram Public Group](https://t.me/frappecloud)
 *   [Discuss Forum](https://discuss.frappe.io/c/frappe-cloud/77)
@@ -64,5 +71,3 @@ Self-host or set up Press locally using the [Local Development Environment Setup
 		</picture>
 	</a>
 </div>
-
-[Learn more about Press on GitHub](https://github.com/frappe/press)

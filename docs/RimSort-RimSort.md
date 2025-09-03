@@ -1,39 +1,38 @@
-# RimSort: The Ultimate Mod Manager for RimWorld
+# RimSort: Your Ultimate Mod Manager for RimWorld
 
-**Tired of struggling with your RimWorld mod setup?** RimSort is a free, open-source, and multi-platform mod manager designed to make managing your RimWorld mods a breeze.
+Tired of mod conflicts and struggling to organize your RimWorld experience? **RimSort is a free, open-source, and multi-platform mod manager designed to streamline your RimWorld modding journey.** (Original repo: [https://github.com/RimSort/RimSort](https://github.com/RimSort/RimSort))
 
-[View the original repository on GitHub](https://github.com/RimSort/RimSort)
-
-![RimSort Preview](./docs/rimsort_preview.png)
+[![RimSort Preview](./docs/rimsort_preview.png)](https://github.com/RimSort/RimSort)
 
 ## Key Features
 
-*   **Multi-Platform Support:** Works seamlessly on Windows, macOS, and Linux.
-*   **User-Friendly Interface:** Designed for ease of use, even for complex mod setups.
-*   **Community-Driven:** Built and maintained with community contributions.
-*   **Reliable Performance:** Optimized for a smooth and stable RimWorld modding experience.
-*   **Regular Updates:** Continuously improved with new features and bug fixes.
+*   **Cross-Platform Support:** Works seamlessly on Windows, macOS, and Linux.
+*   **Open Source & Community Driven:** Built for reliability and maintained by the community.
+*   **User-Friendly Interface:** Designed for ease of use.
+*   **Regular Updates:** Continuously improved and updated to support the latest versions of RimWorld and its mods.
 
 ## Installation
 
-Get started with RimSort by following these simple steps:
+To get started with RimSort, follow these simple steps:
 
-1.  **Download:** Visit the [Releases](https://github.com/RimSort/RimSort/releases) page and download the latest version for your operating system.
+1.  **Download:** Visit the [Releases](https://github.com/RimSort/RimSort/releases) page and download the latest zipped release for your operating system.
 2.  **Extract:**
+
     *   **Windows/Linux:** Unzip the downloaded file and run the `RimSort` executable.
-    *   **macOS:**  Download the correct release based on your CPU type (i386 for Intel, ARM for Apple silicon). You may need to consult the [wiki](https://rimsort.github.io/RimSort/user-guide/downloading-and-installing#macos) for macOS-specific installation instructions to bypass Gatekeeper errors.
-3.  **Detailed Instructions:** For more detailed instructions, consult the [Wiki](https://rimsort.github.io/RimSort/).
+    *   **macOS:** Download the appropriate release based on your CPU (i386 for Intel, ARM for Apple M1/M2). You may need to follow special instructions in the [wiki](https://rimsort.github.io/RimSort/user-guide/downloading-and-installing#macos) to bypass Gatekeeper errors.
 
-## Contributing
+3.  **Detailed Instructions:** For more in-depth guidance, consult the [RimSort Wiki](https://rimsort.github.io/RimSort/).
 
-Your contributions are welcome!
+## Contribute and Get Involved
 
-*   **Report Bugs & Request Features:**  Submit issues in the [Issues](https://github.com/RimSort/RimSort/issues) section of this repository.
-*   **Build RimSort:** Detailed instructions for building RimSort yourself and guidelines for pull requests can be found in the [Wiki](https://rimsort.github.io/RimSort/).
-*   **Translate:** Help make RimSort accessible to more players by contributing translations. Check the [Translation Guidelines](https://rimsort.github.io/RimSort/development-guide/translation-guidelines) for details.
+RimSort thrives on community contributions!
 
-## FAQ and Support
+*   **Report Bugs and Suggest Features:**  Help improve RimSort by submitting bug reports and feature requests in the [Issues](https://github.com/RimSort/RimSort/issues) section of this repository.
+*   **Contribute Code:**  Consult the [wiki](https://rimsort.github.io/RimSort/) for instructions on building RimSort and guidelines for submitting pull requests.
+*   **Translate RimSort:** Help make RimSort accessible to everyone! Review the [Translation Guidelines](https://rimsort.github.io/RimSort/development-guide/translation-guidelines) for detailed instructions on contributing translations in your language.
 
-Before reporting an issue, please check the [Wiki](https://rimsort.github.io/RimSort/) for solutions.
+## Frequently Asked Questions & Support
+
+Before seeking help, please check the comprehensive [RimSort Wiki](https://rimsort.github.io/RimSort/) for solutions to common issues.
 
 [![Join us on Discord](https://github-production-user-asset-6210df.s3.amazonaws.com/2766946/248529301-486f4f8c-fed5-4fe1-832f-6461b7ce3a55.png)](https://discord.gg/aV7g69JmR2)

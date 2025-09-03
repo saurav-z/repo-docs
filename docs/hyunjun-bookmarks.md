@@ -1,18 +1,140 @@
-# Comprehensive Bookmark Collection: Your Go-To Resource for Diverse Topics
+# Comprehensive Bookmarks: Your Guide to Knowledge & Resources
 
-This repository is a curated collection of bookmarks, serving as a valuable resource for a wide range of interests from general knowledge to specialized programming topics.  View the original repository [here](https://github.com/hyunjun/bookmarks).
+This repository, available at [hyunjun/bookmarks](https://github.com/hyunjun/bookmarks), offers a meticulously curated collection of bookmarks spanning diverse topics, from everyday life to advanced programming concepts.
 
 ## Key Features:
 
-*   **Extensive Coverage:** Browse a broad spectrum of categories, including:
-    *   **General Interest:**  Art, Books, Business, Food, Health, Travel, and more!
-    *   **Programming:**  Explore subjects like Algorithms, Data Science, Cloud Computing, and various programming languages.
-*   **Organized Structure:**  Bookmarks are meticulously organized into clear categories and subcategories for easy navigation and quick access to information.
-*   **Programming Language Deep Dive:** Learn various programming languages like Python, Java, Javascript, and more, with dedicated sections to explore each one.
-*   **Data Science and Machine Learning Focus:** Includes extensive resources on Data Science, Machine Learning, Deep Learning, and relevant tools and frameworks.
-*   **Cloud Computing Resources:** Access links and references for popular cloud platforms like AWS, Azure, and Google Cloud Platform (GCP).
+*   **Extensive Categorization:** Bookmarks are organized into broad categories such as "miscellaneous" and "programming", ensuring easy navigation and discovery.
+*   **Diverse Subject Matter:** Explore a wide range of topics including:
+    *   **Life & Interests:** covering areas like travel, art, food, and self-improvement.
+    *   **Technology & Programming:** encompassing data science, cloud computing, programming languages, and software development tools.
+*   **Detailed Sub-Categories:**  Drill down into specific areas of interest with sub-categories like "data science" which includes machine learning, deep learning, and data visualization.
+*   **Constantly Updated:** The repository is actively maintained, providing access to fresh and relevant resources.
 
-##  Categories:
+## Categories Overview:
 
-*   **Miscellaneous:** Covers a wide range of topics from Jeju Island to Psychology.
-*   **Programming:** Your go-to source for programming languages, concepts, and technologies.
+### Miscellaneous
+*   Jeju
+*   Animal
+*   App
+*   Art
+*   Baby
+*   Book
+*   Business
+*   Drama
+*   Economy
+*   Education
+*   English
+*   Finance
+*   Food
+*   Game
+*   Health
+*   History
+*   House
+*   Life
+*   Nomad & Remote
+*   Math
+    *   Statistics
+*   Media
+*   Myth
+*   People
+*   Philosophy
+*   Politics
+*   Presentation
+    *   Dev Small Talk
+    *   Speed
+*   Product
+*   Psychology
+*   Religion
+*   Robot
+*   Self Control
+*   Science
+*   Shopping
+*   Speaking
+*   Sports
+*   Travel
+*   Writing
+
+### Programming
+*   Algorithm
+*   Anomaly Detection
+*   Apache
+    *   HBase
+    *   Spark
+*   Bitcoin
+*   Cloud
+    *   AWS
+    *   Azure
+    *   Google Cloud Platform (GCP)
+*   Coursera
+*   Data Science
+    *   Artificial Intelligence
+    *   Data
+    *   Data Visualization
+    *   Deep Learning
+    *   Keras
+    *   Machine Learning
+    *   NLP
+    *   Pytorch
+    *   Tensorflow
+    *   Vision
+*   Docker
+*   Editor
+    *   Emacs
+    *   Vim
+*   Elasticsearch & Lucene
+*   Game
+*   GIS
+*   Git
+*   Graph
+*   Hadoop
+*   Hardware
+*   Interview
+*   JSON
+*   Linux
+*   Mobile
+    *   Android
+    *   Flutter
+    *   iOS
+*   Monitoring
+*   NoSQL
+    *   HBase
+    *   Redis
+*   Open Source
+*   Programmer
+*   Programming
+    *   Concurrency
+    *   Data Oriented Design (DOD)
+    *   Functional Programming
+    *   Logging
+    *   Network
+    *   Object Oriented Programming (OOP)
+    *   Regular Expression
+*   Programming Books
+*   Programming Language
+    *   Bash
+    *   C
+    *   Clojure
+    *   C++
+    *   C#
+    *   Elixir
+    *   Erlang
+    *   Go
+    *   Haskell
+    *   Java
+    *   JavaScript
+    *   Julia
+    *   Kotlin
+    *   Lisp
+    *   .NET
+    *   OCaml
+    *   PHP
+    *   Python
+    *   R
+    *   Ruby
+    *   Rust
+    *   Scala
+*   SQL
+*   SVN
+*   Time Series
+*   Web

@@ -1,107 +1,87 @@
-# Wan2.2: Unleashing Advanced Video Generation with Open-Source Models
+# Wan2.2: Unleash Cinematic Video Generation with Open-Source AI 
 
-**Wan2.2** is a groundbreaking open-source project that advances video generation, allowing users to create stunning and realistic videos from text, images, and audio. Explore the cutting-edge capabilities of [Wan2.2](https://github.com/Wan-Video/Wan2.2) and revolutionize your creative workflow.
+**Wan2.2** is a cutting-edge, open-source video generation model, offering state-of-the-art performance and innovative features for creating stunning cinematic videos.  Explore the advancements and possibilities at the [original repository](https://github.com/Wan-Video/Wan2.2).
 
-*   **Key Features:**
+**Key Features:**
 
-    *   ✅ **Mixture-of-Experts (MoE) Architecture:** Leverages a sophisticated MoE design for enhanced model capacity and efficient inference, resulting in higher-quality videos.
-    *   ✅ **Cinematic-Level Aesthetics:** Incorporates curated aesthetic data and fine-grained control over lighting, composition, and color grading for professional-quality results.
-    *   ✅ **Enhanced Motion Generation:** Trained on a substantially larger dataset, enabling more complex and dynamic motion generation across various scenarios.
-    *   ✅ **Efficient High-Definition Hybrid TI2V:** Offers a high-compression 5B model (TI2V-5B) supporting 720P video generation at 24fps, compatible with consumer-grade GPUs.
-    *   ✅ **Text-to-Video (T2V), Image-to-Video (I2V), Text-Image-to-Video (TI2V), and Speech-to-Video (S2V) Support:** Versatile models for creating videos from multiple input modalities.
-*   [Learn More](https://github.com/Wan-Video/Wan2.2)
+*   🎬 **MoE Architecture:** Leverages a Mixture-of-Experts (MoE) architecture to enhance model capacity and maintain computational efficiency.
+*   🎨 **Cinematic Aesthetics:** Trained on meticulously curated aesthetic data to enable precise control over lighting, composition, and color for professional-grade video generation.
+*   🚀 **Advanced Generation:** Enhanced training data significantly boosts the model's ability to generate complex motions, semantics, and aesthetics.
+*   💡 **Efficient High-Definition:** Open-sources a 5B model (TI2V-5B) that supports text-to-video and image-to-video generation at 720P and 24fps.
 
-## Core Capabilities
+## Key Highlights
 
-Wan2.2 represents a significant advancement in video generation, offering a range of innovative features and capabilities:
+*   **Wan2.2-S2V-14B:** Introducing a new audio-driven cinematic video generation model, including inference code, model weights, and technical reports. Try it out on wan.video, ModelScope Gradio, or HuggingFace Gradio!
+*   **Integration with Popular Platforms:** Available on Hugging Face, ModelScope, and integrated into ComfyUI and Diffusers for easy access and use.
 
-### 1. Mixture-of-Experts (MoE) Architecture
-
-*   **Enhanced Efficiency:** Employs a MoE architecture to increase model parameters while maintaining manageable inference costs.
-*   **Specialized Experts:** The model uses a two-expert design tailored to the denoising process of diffusion models: a high-noise expert focuses on overall layout and a low-noise expert refines video details.
-*   **Dynamic Activation:** Transitions between experts dynamically based on the signal-to-noise ratio (SNR) during the denoising steps.
-
-### 2. High-Definition Hybrid TI2V
-
-*   **Efficient Deployment:** Provides a 5B model (TI2V-5B) supported by a high-compression Wan2.2-VAE.
-*   **Fast Generation:** Capable of generating 720P videos at 24fps, making it one of the fastest models available.
-*   **Unified Framework:** Supports both text-to-video and image-to-video tasks within a single model.
-
-### 3. Training Data and Performance
-
-*   **Expanded Dataset:** Trained on a significantly larger dataset compared to Wan2.1.
-*   **Superior Performance:** Achieves top performance compared to leading closed-source commercial models.
-
-## Getting Started
+## Run Wan2.2
 
 ### Installation
 
 1.  **Clone the Repository:**
-
     ```bash
     git clone https://github.com/Wan-Video/Wan2.2.git
     cd Wan2.2
     ```
 
 2.  **Install Dependencies:**
-
     ```bash
-    # Ensure torch >= 2.4.0
-    # If the installation of `flash_attn` fails, try installing the other packages first and install `flash_attn` last
     pip install -r requirements.txt
     ```
 
 ### Model Download
 
-Download the necessary models from Hugging Face or ModelScope:
+| Model                | Download Links                                                                                                                                    | Description                                                                                                                               |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| T2V-A14B    | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B)    🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-T2V-A14B)    | Text-to-Video MoE model, supports 480P & 720P                                                                                |
+| I2V-A14B    | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B)    🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-I2V-A14B)    | Image-to-Video MoE model, supports 480P & 720P                                                                                |
+| TI2V-5B     | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B)     🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-TI2V-5B)     | High-compression VAE, T2V+I2V, supports 720P                                                                               |
+| S2V-14B     | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-S2V-14B)     🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-S2V-14B)     | Speech-to-Video model, supports 480P & 720P                                                                               |
 
-| Models              | Download Links                                                                                                                              | Description |
-|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| T2V-A14B    | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B)    🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-T2V-A14B)    | Text-to-Video MoE model, supports 480P & 720P |
-| I2V-A14B    | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B)    🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-I2V-A14B)    | Image-to-Video MoE model, supports 480P & 720P |
-| TI2V-5B     | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B)     🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-TI2V-5B)     | High-compression VAE, T2V+I2V, supports 720P |
-| S2V-14B     | 🤗 [Huggingface](https://huggingface.co/Wan-AI/Wan2.2-S2V-14B)     🤖 [ModelScope](https://modelscope.cn/models/Wan-AI/Wan2.2-S2V-14B)     | Speech-to-Video model, supports 480P & 720P |
+#### Download using huggingface-cli:
+``` sh
+pip install "huggingface_hub[cli]"
+huggingface-cli download Wan-AI/Wan2.2-T2V-A14B --local-dir ./Wan2.2-T2V-A14B
+```
 
-*   **Hugging Face CLI Example:**
+#### Download models using modelscope-cli:
+``` sh
+pip install modelscope
+modelscope download Wan-AI/Wan2.2-T2V-A14B --local_dir ./Wan2.2-T2V-A14B
+```
 
+### Generation Examples
+*   **Text-to-Video**
     ```bash
-    pip install "huggingface_hub[cli]"
-    huggingface-cli download Wan-AI/Wan2.2-T2V-A14B --local-dir ./Wan2.2-T2V-A14B
+    python generate.py  --task t2v-A14B --size 1280*720 --ckpt_dir ./Wan2.2-T2V-A14B --offload_model True --convert_model_dtype --prompt "Two anthropomorphic cats in comfy boxing gear and bright gloves fight intensely on a spotlighted stage."
+    ```
+*   **Image-to-Video**
+    ```bash
+    python generate.py --task i2v-A14B --size 1280*720 --ckpt_dir ./Wan2.2-I2V-A14B --offload_model True --convert_model_dtype --image examples/i2v_input.JPG --prompt "Summer beach vacation style, a white cat wearing sunglasses sits on a surfboard. The fluffy-furred feline gazes directly at the camera with a relaxed expression. Blurred beach scenery forms the background featuring crystal-clear waters, distant green hills, and a blue sky dotted with white clouds. The cat assumes a naturally relaxed posture, as if savoring the sea breeze and warm sunlight. A close-up shot highlights the feline's intricate details and the refreshing atmosphere of the seaside."
+    ```
+*   **Text-Image-to-Video**
+    ```bash
+    python generate.py --task ti2v-5B --size 1280*704 --ckpt_dir ./Wan2.2-TI2V-5B --offload_model True --convert_model_dtype --t5_cpu --image examples/i2v_input.JPG --prompt "Summer beach vacation style, a white cat wearing sunglasses sits on a surfboard. The fluffy-furred feline gazes directly at the camera with a relaxed expression. Blurred beach scenery forms the background featuring crystal-clear waters, distant green hills, and a blue sky dotted with white clouds. The cat assumes a naturally relaxed posture, as if savoring the sea breeze and warm sunlight. A close-up shot highlights the feline's intricate details and the refreshing atmosphere of the seaside."
+    ```
+*   **Speech-to-Video**
+    ```bash
+    python generate.py  --task s2v-14B --size 1024*704 --ckpt_dir ./Wan2.2-S2V-14B/ --offload_model True --convert_model_dtype --prompt "Summer beach vacation style, a white cat wearing sunglasses sits on a surfboard."  --image "examples/i2v_input.JPG" --audio "examples/talk.wav"
     ```
 
-*   **ModelScope CLI Example:**
+### Computational Efficiency
+The computational efficiency of Wan2.2 models varies across different GPUs. Check the table below for estimated times.
 
-    ```bash
-    pip install modelscope
-    modelscope download Wan-AI/Wan2.2-T2V-A14B --local_dir ./Wan2.2-T2V-A14B
-    ```
+<div align="center">
+    <img src="assets/comp_effic.png" alt="" style="width: 80%;" />
+</div>
 
-### Running the Models
+## Key Innovations of Wan2.2
 
-Detailed instructions are provided in the original README for running text-to-video, image-to-video, text-image-to-video, and speech-to-video generations. This includes:
+*   **Mixture-of-Experts (MoE) Architecture:** Optimized for the denoising process in diffusion models, enhancing model capacity while maintaining low computational cost.
+*   **Efficient High-Definition Hybrid TI2V:** Offers a 5B model capable of high-quality 720P video generation, ideal for both research and practical applications.
+*   **Advanced Training Data:** Expansive datasets significantly improve the model's ability to create complex motions and detailed aesthetics.
 
-*   Single-GPU and Multi-GPU inference options using FSDP + DeepSpeed Ulysses.
-*   Prompt extension using Dashscope API or local Qwen models.
-*   Examples for various generation tasks.
-
-## Community Works and Integration
-
-Wan2.2 has been integrated into various platforms and projects:
-
-*   **ComfyUI Integration:** Available for enhanced user experience
-*   **Diffusers Integration:** Supported for versatile use cases
-*   **Third-Party Projects:** Check the original README for community projects like DiffSynth-Studio and Kijai's ComfyUI WanVideoWrapper.
-
-## Additional Information
-
-### Todo List
-
-*   Ongoing development, including further ComfyUI and Diffusers integration.
-*   For the latest updates on the project's development, check the original README.
-
-### Citation
-
-If you find this project useful, please cite our work:
+## Citation
 
 ```
 @article{wan2025,
@@ -112,17 +92,14 @@ If you find this project useful, please cite our work:
 }
 ```
 
-### License
+## License
 
-Wan2.2 is released under the Apache 2.0 License. Please review the [LICENSE.txt](LICENSE.txt) for complete details on usage and limitations.
+Wan2.2 is licensed under the Apache 2.0 License.
 
-### Acknowledgements
+## Acknowledgements
 
-The project acknowledges the open-source contributions from projects such as SD3, Qwen, umt5-xxl, diffusers, and HuggingFace.
+Thank you to the contributors of SD3, Qwen, umt5-xxl, diffusers, and HuggingFace.
 
-### Contact Us
+## Contact
 
-*   **Discord:** [Discord](https://discord.gg/AKNgpMK4Yj)
-*   **WeChat:** [WeChat](https://gw.alicdn.com/imgextra/i2/O1CN01tqjWFi1ByuyehkTSB_!!6000000000015-0-tps-611-1279.jpg)
-
-By leveraging its advanced features and models, **Wan2.2** gives users the tools to generate stunning, high-quality videos, paving the way for new creative possibilities.
+Join the [Discord](https://discord.gg/AKNgpMK4Yj) or [WeChat groups](https://gw.alicdn.com/imgextra/i2/O1CN01tqjWFi1ByuyehkTSB_!!6000000000015-0-tps-611-1279.jpg) for inquiries and support!

@@ -1,63 +1,61 @@
-# iCloud Photos Downloader: Download and Back Up Your iCloud Photos (and More!)
+# iCloud Photos Downloader: Securely Download Your iCloud Photos
 
-Tired of being locked into iCloud? **iCloud Photos Downloader** is a versatile command-line tool that empowers you to securely download and manage your entire iCloud photo library on your own terms. [See the original repo](https://github.com/icloud-photos-downloader/icloud_photos_downloader)
+**Easily and reliably back up your precious memories by downloading your iCloud photos to your computer with iCloud Photos Downloader.**
 
 [![Quality Checks](https://github.com/icloud-photos-downloader/icloud_photos_downloader/workflows/Quality%20Checks/badge.svg)](https://github.com/icloud-photos-downloader/icloud_photos_downloader/actions/workflows/quality-checks.yml)
 [![Build and Package](https://github.com/icloud-photos-downloader/icloud_photos_downloader/workflows/Produce%20Artifacts/badge.svg)](https://github.com/icloud-photos-downloader/icloud_photos_downloader/actions/workflows/produce-artifacts.yml)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+[View the project on GitHub](https://github.com/icloud-photos-downloader/icloud_photos_downloader)
+
 ## Key Features
 
 *   **Cross-Platform Compatibility:** Works seamlessly on Linux, Windows, and macOS.
-*   **Multiple Download Modes:** Choose from Copy, Sync (with automatic deletion of local files), and Move (download and delete from iCloud).
-*   **Comprehensive Media Support:** Downloads Live Photos (image and video), RAW images (including RAW+JPEG), and more.
-*   **Intelligent Handling:** Includes automatic de-duplication of photos with the same names and metadata updates.
-*   **Continuous Monitoring:** Option to monitor iCloud for changes continuously, with customizable intervals.
-*   **Flexible Operation:** Supports one-time downloads and incremental updates for efficient backups.
-*   **Multiple Installation Options:** Available as an executable, or via package managers like Docker, PyPI, AUR, and npm.
-*   **Metadata Preservation:** Preserves and updates photo metadata (EXIF).
+*   **Multiple Installation Options:** Available as an executable, and through package managers (Docker, PyPI, AUR, npm) for easy setup and updates.
+*   **Flexible Download Modes:** Choose from Copy, Sync, or Move to manage your photo downloads.
+*   **Live Photo & RAW Support:** Downloads both image and video components of Live Photos, and supports RAW images (including RAW+JPEG).
+*   **Automatic Deduplication:** Prevents downloading duplicate photos with the same name.
+*   **Continuous Monitoring:**  Option to watch for iCloud changes and automatically download new photos.
+*   **Metadata Preservation:**  Option to update photo EXIF data.
+*   **Optimized for Incremental Downloads:** Features options for efficient downloads (`--until-found` and `--recent`).
 
 ## iCloud Prerequisites
 
-Before using iCloud Photos Downloader, ensure your iCloud account is configured:
+Before using iCloud Photos Downloader, ensure the following settings are configured in your iCloud account:
 
-*   **Enable Web Access:** On your iPhone/iPad, enable `Settings > Apple ID > iCloud > Access iCloud Data on the Web`.
-*   **Disable Advanced Data Protection:** On your iPhone/iPad disable `Settings > Apple ID > iCloud > Advanced Data Protection`.
+*   **Enable Access iCloud Data on the Web:** Enable this setting on your iPhone/iPad: `Settings > Apple ID > iCloud > Access iCloud Data on the Web`.
+*   **Disable Advanced Data Protection:**  Disable this setting on your iPhone/iPad: `Settings > Apple ID > iCloud > Advanced Data Protection`.
 
-## Installation
+## Installation & Usage
 
 You can install and run `icloudpd` in several ways:
 
-1.  **Download Executable:** Download the pre-built executable for your platform from the GitHub [Releases](https://github.com/icloud-photos-downloader/icloud_photos_downloader/releases/tag/v1.32.2) page.
-2.  **Package Managers:** Utilize package managers like [Docker](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html#docker), [PyPI](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html#pypi), [AUR](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html#aur), or [npm](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html#npm) for easy installation and updates.
-3.  **Build from Source:** Build and run the tool directly from the source code.
+1.  **Download Executable:** Download the executable for your platform from the GitHub [Releases](https://github.com/icloud-photos-downloader/icloud_photos_downloader/releases/tag/v1.32.2) page and run it.
+2.  **Package Managers:** Use package managers like Docker, PyPI, AUR, or npm. See the [Documentation](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html) for instructions.
+3.  **Build from Source:** Build and run the tool from the source code.
 
-For detailed installation instructions, please refer to the [Documentation](https://icloud-photos-downloader.github.io/icloud_photos_downloader/install.html).
+### Basic Usage
 
-## Usage
-
-To automatically back up your iCloud photos:
+To automatically download and synchronize your iCloud photo collection to a local directory:
 
 ```bash
-icloudpd --directory /data --username my@email.address --watch-with-interval 3600
+icloudpd --directory /path/to/your/photos --username your@email.com --watch-with-interval 3600
 ```
 
-> **Important:**  The executable name is `icloudpd`, not `icloud`.
->
-> **Tip:** Customize the synchronization behavior using command-line parameters. Run `icloudpd --help` to see the full list.
+### Authentication
 
-To authorize your session:
+You can also independently create and authorize a session for secure access.
 
 ```bash
-icloudpd --username my@email.address --password my_password --auth-only
+icloudpd --username your@email.com --password your_password --auth-only
 ```
 
-> **Tip:** This can also check the session status.
+**Important Note:**  The executable is called `icloudpd`, not `icloud`.
 
 ## Experimental Mode
 
-Test out new features before they are fully implemented. Learn more [here](EXPERIMENTAL.md).
+Test out new features before they graduate into the main package!  See [EXPERIMENTAL.md](EXPERIMENTAL.md) for details.
 
 ## Contribute
 
-Your contributions are welcome! Review the [contributing guidelines](CONTRIBUTING.md) to get involved.
+We welcome contributions!  Check out the [contributing guidelines](CONTRIBUTING.md) to get involved.

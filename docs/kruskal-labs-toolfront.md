@@ -17,21 +17,20 @@
 
 ---
 
-## ToolFront: Effortlessly Retrieve Data for AI Applications
+## ToolFront: Unlock Seamless Data Retrieval for AI Applications
 
-ToolFront empowers you to seamlessly access and integrate data from databases, APIs, and documents directly into your AI workflows.  [Explore the ToolFront repository on GitHub](https://github.com/kruskal-labs/toolfront).
+**ToolFront** empowers developers to effortlessly retrieve data from various sources, enabling powerful AI-driven applications. [Explore the ToolFront repository](https://github.com/kruskal-labs/toolfront) to get started.
 
-**Key Features:**
+### Key Features:
 
-*   **Versatile Data Sources:** Connect to databases (Postgres, Snowflake, and more), APIs (OpenAPI-compatible), and documents (PDFs, etc.).
-*   **AI Model Agnostic:**  Integrates with leading AI model providers like OpenAI, Anthropic, Google, and xAI.
-*   **Structured Output:**  Receive data in a structured format (e.g., JSON, Pydantic models) for easy use in your AI applications.
-*   **Unmatched Control & Precision:**  Fine-tune data retrieval with context and specific instructions.
-*   **Rapid Deployment:**  Simple installation with `pip` and straightforward integration into your projects.
+*   **Unified Interface:** Access data from databases, APIs, and documents with a consistent and intuitive API.
+*   **AI-Powered Data Extraction:** Leverage the power of AI models (OpenAI, Anthropic, Google, and more) for intelligent data retrieval and transformation.
+*   **Unmatched Control & Precision:** Fine-tune your data queries and extraction processes for optimal results.
+*   **Fast Performance:**  Built for speed and efficiency, allowing for rapid data retrieval.
+*   **Extensive Integrations:**  Supports a wide range of databases, APIs (OpenAPI/Swagger compatible), and document formats.
+*   **Flexible Deployment:** Easily deploy ToolFront with tools like Snowflake and more.
 
----
-
-## Quickstart: Installation
+### Installation
 
 Install ToolFront using pip:
 
@@ -39,13 +38,13 @@ Install ToolFront using pip:
 pip install toolfront
 ```
 
-For specific database support, install the relevant extras (e.g., `pip install "toolfront[postgres]"`).  See the [documentation](http://docs.toolfront.ai/) for a full list.
+For database support, install the necessary extras, for example: `pip install "toolfront[postgres]"`
 
----
+### Example Usage
 
-## Examples
+ToolFront offers a straightforward approach to data retrieval.  Here are a few examples:
 
-### Database Integration (Text-to-SQL)
+#### 1. Database Interaction (Text-to-SQL with OpenAI)
 
 ```python
 from toolfront import Database
@@ -59,7 +58,7 @@ answer = db.ask("What's our best-selling product?", context=context)
 # >>> "Wireless Headphones Pro"
 ```
 
-### API Interaction
+#### 2. API Retrieval (with Claude)
 
 ```python
 from toolfront import API
@@ -71,7 +70,7 @@ answer: list[int] = api.ask("Get the last 5 order IDs for user_id=42")
 # >>> [1001, 998, 987, 976, 965]
 ```
 
-### Document Processing
+#### 3. Document Information Extraction (with Gemini)
 
 ```python
 from toolfront import Document
@@ -89,17 +88,32 @@ answer: CompanyReport = doc.ask("Extract the key company information from this r
 # >>> CompanyReport(company_name="TechCorp Inc.", revenue=2500000, is_profitable=True)
 ```
 
----
+### Deploying with Snowflake (Example)
 
-## Community & Resources
+```json
+{
+  "mcpServers": {
+    "toolfront": {
+      "command": "uvx",
+      "args": [
+        "toolfront[snowflake]", 
+        "snowflake://user:pass@account/warehouse/database"
+      ]
+    }
+  }
+}
+```
 
-*   **Documentation:** [docs.toolfront.ai](http://docs.toolfront.ai/)
-*   **Discord:** Join our [community server](https://discord.gg/rRyM7zkZTf)
-*   **X (Twitter):** Follow us [@toolfront](https://x.com/toolfront)
-*   **GitHub Issues:** Report bugs or request features on [GitHub Issues](https://github.com/kruskal-labs/toolfront/issues)
+### Documentation
 
----
+For detailed information, examples, and advanced usage, please refer to the official [ToolFront Documentation](http://docs.toolfront.ai/).
 
-## License
+### Community & Contributing
 
-This project is licensed under the MIT License.
+*   **Discord:** Join our [Discord server](https://discord.gg/rRyM7zkZTf) for support and discussions.
+*   **X (Twitter):** Follow us on [@toolfront](https://x.com/toolfront) for updates.
+*   **GitHub Issues:** Report bugs and suggest features on our [GitHub Issues](https://github.com/kruskal-labs/toolfront/issues).
+
+### License
+
+ToolFront is licensed under the [MIT License](https://github.com/kruskal-labs/toolfront/blob/main/LICENSE).
