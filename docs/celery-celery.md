@@ -1,99 +1,142 @@
-# Celery: Distributed Task Queue for Python
+<div align="center">
+  <img src="https://docs.celeryq.dev/en/latest/_images/celery-banner-small.png" alt="Celery Banner" width="600">
+  <br>
+  <a href="https://github.com/celery/celery"><b>Celery: Distributed Task Queue for Python</b></a>
+  <br>
+  <a href="https://pypi.org/project/celery/">
+    <img src="https://img.shields.io/pypi/v/celery.svg" alt="PyPI">
+  </a>
+  <a href="https://github.com/celery/celery/actions/workflows/python-package.yml">
+    <img src="https://github.com/celery/celery/actions/workflows/python-package.yml/badge.svg" alt="Build Status">
+  </a>
+  <a href="https://codecov.io/github/celery/celery?branch=main">
+    <img src="https://codecov.io/github/celery/celery/coverage.svg?branch=main" alt="Coverage">
+  </a>
+  <a href="https://opensource.org/licenses/BSD-3-Clause">
+    <img src="https://img.shields.io/pypi/l/celery.svg" alt="License">
+  </a>
+  <a href="https://pypi.org/project/celery/">
+      <img src="https://img.shields.io/pypi/wheel/celery.svg" alt="Wheel">
+  </a>
+  <a href="https://go.semgrep.dev/home">
+      <img src="https://img.shields.io/badge/semgrep-security-green.svg" alt="Semgrep Security">
+  </a>
+  <a href="https://pypi.org/project/celery/">
+      <img src="https://img.shields.io/pypi/pyversions/celery.svg" alt="Python Versions">
+  </a>
+  <a href="https://pypi.org/project/celery/">
+      <img src="https://img.shields.io/pypi/implementation/celery.svg" alt="Python Implementations">
+  </a>
+  <a href="https://pepy.tech/project/celery">
+      <img src="https://pepy.tech/badge/celery" alt="Downloads">
+  </a>
+</div>
 
-**Celery is a powerful and easy-to-use distributed task queue that helps you manage asynchronous tasks in your Python applications.** Explore Celery's [GitHub repository](https://github.com/celery/celery) for the latest updates and contributions.
+## Celery: Simplify Asynchronous Tasks in Python
 
-## Key Features
+Celery is a powerful and easy-to-use distributed task queue that allows you to execute tasks asynchronously, manage jobs, and build scalable applications. This lets you defer processing, schedule tasks, and handle background operations efficiently, so your web app stays responsive.
 
-*   **Simple to Use:**  Easy setup and maintenance, with no configuration files needed.
-*   **Highly Available:**  Automatic retries and support for high-availability brokers.
-*   **Fast:**  Processes millions of tasks per minute with low latency.
-*   **Flexible:** Extensible with custom implementations for almost every part.
-*   **Message Transports:** RabbitMQ, Redis, Amazon SQS, Google Pub/Sub and more.
-*   **Concurrency:** Prefork, Eventlet, gevent, and single-threaded options.
-*   **Result Stores:** Supports various options including AMQP, Redis, memcached, SQLAlchemy, and cloud storage solutions like Amazon S3 and Google Cloud Storage.
-*   **Serialization:**  Supports pickle, json, yaml, and msgpack, with compression and cryptographic signing options.
+**Key Features:**
 
-## What is a Task Queue?
+*   **Simple to Use**:  Easy setup with minimal configuration and a friendly community.
+*   **Highly Available**:  Automatically retries in case of connection failures, with broker support for high availability.
+*   **Fast Performance**:  Processes millions of tasks per minute with low latency.
+*   **Flexible and Extensible**: Customize almost every aspect of Celery to fit your needs.
+*   **Multiple Message Transports**: Supports RabbitMQ, Redis, Amazon SQS, Google Pub/Sub, and more.
+*   **Multiple Concurrency Models**: Supports prefork, eventlet, gevent, and single-threaded (solo).
+*   **Multiple Result Stores**: Supports AMQP, Redis, memcached, SQLAlchemy, Django ORM, Apache Cassandra, IronCache, Elasticsearch, Google Cloud Storage, and more.
+*   **Serialization**:  Uses pickle, json, yaml, msgpack. Includes zlib, bzip2 compression and cryptographic message signing.
 
-Task queues enable you to distribute work across threads or machines. Celery uses a message broker to manage tasks, allowing your application to:
+**Get Started**
 
-1.  A client adds a task to the queue.
-2.  The broker delivers it to a worker.
+*   [First steps with Celery](https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html)
+*   [Next steps](https://docs.celeryq.dev/en/stable/getting-started/next-steps.html)
 
-This architecture supports high availability and horizontal scaling with multiple workers and brokers.
+**What is a Task Queue?**
+Task queues are used to distribute work across threads or machines. Celery communicates via messages using a broker to mediate between clients and workers. This enables high availability and horizontal scaling.
 
-## Supported Python Versions
-
-Celery 5.5.x supports:
+**Requirements**
 
 *   Python (3.8, 3.9, 3.10, 3.11, 3.12, 3.13)
 *   PyPy3.9+ (v7.3.12+)
 
-For older Python versions, use older Celery versions as specified in the original documentation.
+**Sponsors**
 
-## Get Started
+*   **Blacksmith**
+    <br>
+    <a href="https://blacksmith.sh/">
+        <img src="./docs/images/blacksmith-logo-white-on-black.svg" alt="Blacksmith logo" width="240">
+    </a>
+*   **CloudAMQP**
+    <br>
+    <a href="https://www.cloudamqp.com/">
+        <img src="./docs/images/cloudamqp-logo-lightbg.svg" alt="CloudAMQP logo" width="240">
+    </a>
+*   **Upstash**
+    <br>
+    <a href="http://upstash.com/?code=celery">
+        <img src="https://upstash.com/logo/upstash-dark-bg.svg" alt="Upstash logo" width="200">
+    </a>
+*   **Dragonfly**
+    <br>
+    <a href="https://www.dragonflydb.io/">
+        <img src="https://github.com/celery/celery/raw/main/docs/images/dragonfly.svg" alt="Dragonfly logo" width="150">
+    </a>
 
-Begin your Celery journey with the following resources:
+**For enterprise**
 
-*   [First steps with Celery](https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html) - Learn the bare minimum to get started.
-*   [Next steps](https://docs.celeryq.dev/en/stable/getting-started/next-steps.html) - A more comprehensive overview of features.
+Available as part of the Tidelift Subscription.
+[Learn more.](https://tidelift.com/subscription/pkg/pypi-celery?utm_source=pypi-celery&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
-## Framework Integration
-
-Celery integrates seamlessly with popular web frameworks:
-
-| Framework       | Integration Package |
-| --------------- | ------------------- |
-| Django          | Not needed          |
-| Pyramid         | pyramid\_celery      |
-| Pylons          | celery-pylons       |
-| Flask           | Not needed          |
-| web2py          | web2py-celery       |
-| Tornado         | tornado-celery      |
-| FastAPI         | Not needed          |
-
-## Installation
-
-Install Celery using pip:
+**Installation**
 
 ```bash
 pip install -U Celery
 ```
 
-### Bundles
-Use bundles to install Celery with specific dependencies for features, e.g., for Redis support:
-
+Or using bundles:
 ```bash
 pip install "celery[redis]"
 ```
+**Framework Integration**
 
-Available bundles:
+Celery is easy to integrate with web frameworks.
 
-*   Serializers (auth, msgpack, yaml)
-*   Concurrency (eventlet, gevent)
-*   Transports and Backends (amqp, redis, sqs, tblib, memcache, pymemcache, cassandra, azureblockblob, s3, gcs, couchbase, arangodb, elasticsearch, riak, cosmosdbsql, zookeeper, sqlalchemy, pyro, slmq, consul, django, gcpubsub)
+| Framework       | Integration  |
+| --------------- | ------------ |
+| Django          | not needed   |
+| Pyramid         | pyramid_celery |
+| Pylons          | celery-pylons  |
+| Flask           | not needed   |
+| web2py          | web2py-celery |
+| Tornado         | tornado-celery |
+| FastAPI         | not needed   |
 
-## Resources
+**Documentation**
+Find the latest documentation at [Read The Docs](https://docs.celeryq.dev/en/latest/)
 
-*   **Documentation:** [Latest Documentation](https://docs.celeryq.dev/en/latest/)
-*   **Contributing:**  See the [Contributing to Celery](https://docs.celeryq.dev/en/stable/contributing.html) guide.
-*   **Issue Tracker:** [GitHub Issues](https://github.com/celery/celery/issues/)
-*   **Wiki:** [GitHub Wiki](https://github.com/celery/celery/wiki)
+**Get Help**
 
-## Community & Support
+*   [Mailing List](https://groups.google.com/group/celery-users/)
+*   [IRC](https://libera.chat/) - Channel #celery on Libera Chat
+*   [Bug Tracker](https://github.com/celery/celery/issues/)
+*   [Wiki](https://github.com/celery/celery/wiki)
 
-*   **Mailing List:** [celery-users](https://groups.google.com/group/celery-users/)
-*   **IRC:** `#celery` on Libera Chat ([Libera Chat](https://libera.chat/))
+**Credits**
 
-## Sponsors
+*   [Contributors](https://github.com/celery/celery/graphs/contributors)
+    <br>
+    <img src="https://opencollective.com/celery/contributors.svg?width=890&button=false" alt="Contributors">
+*   [Backers](https://opencollective.com/celery#backers)
+    <br>
+    <img src="https://opencollective.com/celery/backers.svg?width=890" alt="Backers">
 
-Celery is supported by amazing sponsors! Special thanks to:
-*   **Open Collective:**  [Open Collective](https://opencollective.com/celery)
-*   **Blacksmith:** [Blacksmith](https://blacksmith.sh/)
-*   **CloudAMQP:** [CloudAMQP](https://www.cloudamqp.com/)
-*   **Upstash:** [Upstash](http://upstash.com/?code=celery)
-*   **Dragonfly:** [Dragonfly](https://www.dragonflydb.io/)
+*   [Become a backer](https://opencollective.com/celery#backer)
+    <br>
+    <img src="https://opencollective.com/celery/backers/badge.svg" alt="Backers on Open Collective">
 
-## License
+**License**
 
-Celery is licensed under the [New BSD License](https://opensource.org/licenses/BSD-3-Clause).  See the `LICENSE` file for details.
+Licensed under the [New BSD License](https://opensource.org/licenses/BSD-3-Clause).
+
+**Find the original repo [here](https://github.com/celery/celery).**

@@ -1,24 +1,25 @@
-# tg-signer: Automate Telegram Tasks with Python 🤖
+# Automate Your Telegram Tasks with tg-signer
 
-**Automate your Telegram interactions with tg-signer, a powerful Python tool for daily check-ins, message monitoring, and automated responses.**  [View the original repo on GitHub](https://github.com/amchii/tg-signer).
+**Effortlessly automate your Telegram interactions with tg-signer, a powerful Python tool for daily check-ins, message monitoring, and automated responses. [View the original repository on GitHub](https://github.com/amchii/tg-signer)**
 
-## Key Features:
+## Key Features
 
-*   ✅ **Automated Check-ins:** Schedule and automate daily Telegram check-ins with customizable timings and error margins.
-*   💬 **Message Monitoring & Response:** Monitor personal chats, groups, and channels, with automated forwarding and replies based on customizable rules.
-*   ⌨️ **Keyboard Interactions:** Automatically interact with Telegram's in-app keyboards based on text input or AI-powered image recognition.
-*   🖼️ **AI-Powered Actions:** Integrate AI for image recognition and response to calculation questions.
-*   🔄 **Flexible Action Flows:** Define complex action flows with multiple steps, including sending text, clicking buttons, and AI-based interactions.
-*   🚀 **Multi-Account Support:** Run tasks across multiple Telegram accounts simultaneously.
-*   🕰️ **Scheduled Messages:** Configure and manage Telegram's built-in scheduled message feature.
-*   🌐 **Proxy Support:** Configure proxy settings using environment variables or command-line options.
-*   📦 **Docker Support:** Easily deploy with provided Dockerfile and documentation.
+*   **Automated Check-ins:** Schedule daily check-ins with customizable timing and random error offsets.
+*   **Keyboard Interaction:** Automate actions by clicking keyboard buttons based on configured text.
+*   **AI-Powered Image Recognition:** Leverage AI for image recognition and automated keyboard interactions.
+*   **Message Monitoring & Response:** Monitor personal chats, groups, and channels; forward messages; and set up automated replies.
+*   **Action Flow Execution:** Configure action sequences to execute complex tasks.
+*   **Flexible Configuration:** Easily configure proxy settings, account names, working directories, and session management.
+*   **Docker Support:** Build and run the application using Docker.
+*   **Multi-Account Management:** Run multiple accounts concurrently using a single configuration.
+*   **Scheduled Messages:** Configure Telegram's built-in scheduling for automated message sending.
+*   **Message Forwarding:** Forward messages to external destinations via UDP and HTTP.
 
-## Installation
+## Getting Started
 
-**Prerequisites:** Python 3.9 or higher
+### Installation
 
-Install using pip:
+Requires Python 3.9 or higher.
 
 ```bash
 pip install -U tg-signer
@@ -32,131 +33,154 @@ pip install "tg-signer[speedup]"
 
 ### Docker
 
-Build a Docker image using the provided `Dockerfile` in the `docker` directory (refer to the `docker/README.md` for details).
+Build your own image using the provided [Dockerfile](./docker) and read the [README](./docker/README.md) in the `docker` directory.
 
-## Usage
+### Usage
+
+Use the command-line interface to manage your Telegram automation.
 
 ```
 Usage: tg-signer [OPTIONS] COMMAND [ARGS]...
 
-  使用<子命令> --help查看使用说明
+  Use <subcommand> --help for usage instructions.
 
-子命令别名:
+Subcommand aliases:
   run_once -> run-once
   send_text -> send-text
 
 Options:
   -l, --log-level [debug|info|warn|error]
-                                  日志等级, `debug`, `info`, `warn`, `error`
+                                  Log level, `debug`, `info`, `warn`, `error`
                                   [default: info]
-  --log-file PATH                 日志文件路径, 可以是相对路径  [default: tg-signer.log]
-  -p, --proxy TEXT                代理地址, 例如: socks5://127.0.0.1:1080,
-                                  会覆盖环境变量`TG_PROXY`的值  [env var: TG_PROXY]
-  --session_dir PATH              存储TG Sessions的目录, 可以是相对路径  [default: .]
-  -a, --account TEXT              自定义账号名称，对应session文件名为<account>.session  [env
-                                  var: TG_ACCOUNT; default: my_account]
-  -w, --workdir PATH              tg-signer工作目录，用于存储配置和签到记录等  [default:
-                                  .signer]
-  --session-string TEXT           Telegram Session String,
-                                  会覆盖环境变量`TG_SESSION_STRING`的值  [env var:
-                                  TG_SESSION_STRING]
-  --in-memory                     是否将session存储在内存中，默认为False，存储在文件
+  --log-file PATH                 Log file path, can be a relative path
+                                  [default: tg-signer.log]
+  -p, --proxy TEXT                Proxy address, e.g.: socks5://127.0.0.1:1080,
+                                  overrides the environment variable
+                                  `TG_PROXY`  [env var: TG_PROXY]
+  --session_dir PATH              Directory to store TG Sessions, can be a
+                                  relative path  [default: .]
+  -a, --account TEXT              Custom account name, corresponding session
+                                  file name is <account>.session  [env var:
+                                  TG_ACCOUNT; default: my_account]
+  -w, --workdir PATH              tg-signer working directory, used to store
+                                  configuration and check-in records, etc.
+                                  [default: .signer]
+  --session-string TEXT           Telegram Session String, overrides the
+                                  environment variable `TG_SESSION_STRING`
+                                  [env var: TG_SESSION_STRING]
+  --in-memory                     Whether to store the session in memory,
+                                  default is False, store in file
   --help                          Show this message and exit.
 
 Commands:
-  export                  导出配置，默认为输出到终端。
-  import                  导入配置，默认为从终端读取。
-  list                    列出已有配置
-  list-members            查询聊天（群或频道）的成员, 频道需要管理员权限
-  list-schedule-messages  显示已配置的定时消息
-  login                   登录账号（用于获取session）
-  logout                  登出账号并删除session文件
-  monitor                 配置和运行监控
-  multi-run               使用一套配置同时运行多个账号
-  reconfig                重新配置
-  run                     根据任务配置运行签到
-  run-once                运行一次签到任务，即使该签到任务今日已执行过
-  schedule-messages       批量配置Telegram自带的定时发送消息功能
-  send-text               发送一次消息, 请确保当前会话已经"见过"该`chat_id`
+  export                  Export configuration, defaults to output to the
+                          terminal.
+  import                  Import configuration, defaults to reading from the
+                          terminal.
+  list                    List existing configurations
+  list-members            Query members of a chat (group or channel), channel
+                          requires administrator privileges
+  list-schedule-messages  Display scheduled messages
+  login                   Login to account (used to get session)
+  logout                  Logout account and delete the session file
+  monitor                 Configure and run monitoring
+  multi-run               Run multiple accounts with one set of configurations
+  reconfig                Reconfigure
+  run                     Run check-in based on task configuration
+  run-once                Run a check-in task once, even if the check-in task
+                          has been executed today
+  schedule-messages       Configure Telegram's built-in scheduled message
+                          feature in batches
+  send-text               Send a message once, make sure the current session
+                          has "seen" the `chat_id`
   version                 Show version
 ```
 
-### Examples:
+#### Examples
 
-*   **Run a check-in task:**
+```bash
+tg-signer run
+tg-signer run my_sign  # Run the 'my_sign' task directly without asking
+tg-signer run-once my_sign  # Run the 'my_sign' task once
+tg-signer send-text 8671234001 /test  # Send '/test' to chat_id 8671234001
+tg-signer send-text -- -10006758812 浇水  # Use '--' for negative chat IDs
+tg-signer send-text --delete-after 1 8671234001 /test  # Send '/test' and delete after 1 second
+tg-signer list-members --chat_id -1001680975844 --admin  # List channel admins
+tg-signer schedule-messages --crontab '0 0 * * *' --next-times 10 -- -1001680975844 你好  # Schedule messages for 10 days at 0:00
+tg-signer monitor run  # Configure message monitoring and auto-reply
+tg-signer multi-run -a account_a -a account_b same_task  # Run 'same_task' with 'account_a' and 'account_b'
+```
 
-    ```bash
-    tg-signer run
-    tg-signer run my_sign  # Run a specific task
-    tg-signer run-once my_sign # Run a task once
-    ```
+### Configure Proxy (if needed)
 
-*   **Send a text message:**
+`tg-signer` does not read the system proxy. Configure the proxy using the `TG_PROXY` environment variable or the `--proxy` command-line option.
 
-    ```bash
-    tg-signer send-text 8671234001 /test  # Send to a specific chat ID
-    ```
+```bash
+export TG_PROXY=socks5://127.0.0.1:7890
+```
 
-*   **List members of a chat:**
+### Login
 
-    ```bash
-    tg-signer list-members --chat_id -1001680975844 --admin  # List admins of a channel
-    ```
+```bash
+tg-signer login
+```
 
-*   **Configure and run message monitoring:**
+Follow the prompts to enter your phone number and verification code. This will log you in and fetch your recent chats. Ensure the chat you want to interact with is in the list.
 
-    ```bash
-    tg-signer monitor run
-    ```
+### Send a Message
 
-*   **Run tasks across multiple accounts:**
+```bash
+tg-signer send-text 8671234001 hello  # Sends 'hello' to chat_id 8671234001
+```
 
-    ```bash
-    tg-signer multi-run -a account_a -a account_b same_task
-    ```
+### Run a Check-in Task
 
-### Configuration
+```bash
+tg-signer run
+```
 
-*   **Proxy:** Configure proxy settings using the `TG_PROXY` environment variable or the `--proxy` command-line option.
-    ```bash
-    export TG_PROXY=socks5://127.0.0.1:7890
-    ```
-*   **Login:** Use `tg-signer login` to authenticate your Telegram account.
-*   **Sign-in Task Configuration:**  `tg-signer run`, follow the prompts to set up the following actions:
+Or run a predefined task:
 
-    *   Send Text
-    *   Send Dice Emoji
-    *   Click Keyboard Buttons
-    *   Select Options via Image Recognition
-    *   Answer Calculation Questions
+```bash
+tg-signer run linuxdo
+```
 
-*   **Monitor Task Configuration:** `tg-signer monitor run my_monitor`, you can set up various triggers for monitoring messages:
-    *   `chat id`, `user id`. username must be prefixed with `@`.
-    *   Match Rules: `exact`, `contains`, `regex`, `all`
-    *   Default Text
-    *   Text Extraction from Messages
-    *   Ignore messages from self
+Follow the prompts to configure the task.
 
-## Data Storage
+#### Example:
 
-Configurations and data are stored in the `.signer` directory:
+(The example is truncated. Please refer to the original README for the full configuration process)
+
+### Configure and Run Monitoring
+
+```bash
+tg-signer monitor run my_monitor
+```
+
+Follow the prompts to configure the monitoring task.
+
+#### Example:
+
+(The example is truncated. Please refer to the original README for the full configuration process.)
+
+### Version Change Log
+
+(The version change log is truncated. Please refer to the original README for the full version change log.)
+
+### Configuration and Data Storage Location
+
+Data and configuration are stored in the `.signer` directory. Here's the typical file structure:
 
 ```
 .signer
-├── latest_chats.json  # 获取的最近对话
-├── me.json  # 个人信息
-├── monitors  # 监控
-│   ├── my_monitor  # 监控任务名
-│       └── config.json  # 监控配置
-└── signs  # 签到任务
-    └── linuxdo  # 签到任务名
-        ├── config.json  # 签到配置
-        └── sign_record.json  # 签到记录
+├── latest_chats.json  # Recent chats
+├── me.json  # Personal information
+├── monitors  # Monitoring tasks
+│   ├── my_monitor  # Monitor task name
+│   │   └── config.json  # Monitor configuration
+└── signs  # Sign-in tasks
+    └── linuxdo  # Sign-in task name
+        ├── config.json  # Sign-in configuration
+        └── sign_record.json  # Sign-in record
 
 3 directories, 4 files
-```
-
-## Version History
-See the original repo for version change logs.
-
----

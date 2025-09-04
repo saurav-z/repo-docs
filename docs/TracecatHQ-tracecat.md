@@ -6,8 +6,8 @@
 
 <div align="center">
 
-![Commits](https://img.shields.io/github/commit-activity/m/TracecatHQ/tracecat?style=for-the-badge&logo=github)
-![License](https://img.shields.io/badge/License-AGPL%203.0-blue?style=for-the-badge&logo=agpl)
+[![Commits](https://img.shields.io/github/commit-activity/m/TracecatHQ/tracecat?style=for-the-badge&logo=github)](https://github.com/TracecatHQ/tracecat)
+[![License](https://img.shields.io/badge/License-AGPL%203.0-blue?style=for-the-badge&logo=agpl)](https://github.com/TracecatHQ/tracecat/blob/main/LICENSE)
 [![Discord](https://img.shields.io/discord/1212548097624903681.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/H4XZwsYzY4)
 
 </div>
@@ -19,17 +19,17 @@
 
 </div>
 
-# Tracecat: Automate Security & IT Response with Open Source
+## Tracecat: Automate Security & IT Workflows with Open Source
 
-Tracecat is a powerful, open-source platform designed to streamline security and IT response workflows.  Check out the [original repo](https://github.com/TracecatHQ/tracecat) for more details!
+Tracecat is an open-source workflow automation platform designed to streamline security and IT operations. ([Back to the top](https://github.com/TracecatHQ/tracecat))
 
 **Key Features:**
 
-*   **YAML-based Templates:** Easily define integrations with simple YAML templates for rapid workflow creation.
-*   **No-Code UI:** Build and manage workflows visually using an intuitive, user-friendly interface.
-*   **Built-in Lookup Tables & Case Management:** Simplify data management and incident tracking.
-*   **Scalable & Reliable Orchestration:** Powered by Temporal for robust, scalable workflow execution.
-*   **Open Cyber Security Schema (OCSF) Compatibility:** Templates are normalized with OCSF for improved interoperability.
+*   **YAML-Based Templates:** Quickly build and deploy integrations with simple YAML configurations.
+*   **No-Code UI:** Easily create and manage workflows through an intuitive user interface.
+*   **Built-in Lookup Tables & Case Management:**  Manage and organize data effectively within your workflows.
+*   **Scalable & Reliable:** Orchestrated using Temporal for robust performance and scalability.
+*   **Open Cyber Security Schema (OCSF) Compliance:** Template inputs are normalized to fit the OCSF ontology where possible.
 
 ![Tracecat workflow](/img/workflow.png)
 
@@ -40,46 +40,44 @@ Tracecat is a powerful, open-source platform designed to streamline security and
 
 ### Run Tracecat Locally
 
-Deploy a local Tracecat stack using Docker Compose. Detailed instructions are available [here](https://docs.tracecat.com/self-hosting/deployment-options/docker-compose).
+Deploy a local Tracecat stack using Docker Compose.  Find detailed instructions [here](https://docs.tracecat.com/self-hosting/deployment-options/docker-compose).
 
 ### Run Tracecat on AWS Fargate
 
-**For advanced users:** Deploy a production-ready Tracecat stack on AWS Fargate using Terraform. View full instructions [here](https://docs.tracecat.com/self-hosting/deployment-options/aws-ecs).
+**For advanced users:** Deploy a production-ready Tracecat stack on AWS Fargate using Terraform. Detailed instructions are available [here](https://docs.tracecat.com/self-hosting/deployment-options/aws-ecs).
 
 ### Run Tracecat on Kubernetes
 
 Coming soon.
 
-## Community
-
-Join the Tracecat community!  Get your questions answered, provide feedback, and share integration ideas in the [Tracecat Community Discord](https://discord.gg/H4XZwsYzY4).
-
-## Tracecat Registry: Integration & Response-as-Code Templates
+## Tracecat Registry: Integration Templates
 
 ![Tracecat Action template](img/action-template.svg)
 
-The Tracecat Registry provides a curated collection of integration and response-as-code templates to accelerate your security and IT automation efforts. Response actions are organized using Tracecat's ontology of common capabilities (e.g. `list_alerts`, `list_cases`, `list_users`).
+The Tracecat Registry provides a library of pre-built templates to simplify your security and IT automation tasks. Response actions are organized based on a common ontology of capabilities (e.g., `list_alerts`, `list_cases`, `list_users`).
 
-**Examples:**
+*   **Examples:**  Explore use cases and ideas within our documentation.
+*   **Open Source Templates:**  Browse and use existing open-source templates in our [repository](https://github.com/TracecatHQ/tracecat/tree/main/packages/tracecat-registry/tracecat_registry/templates).
 
-Explore various use cases and get inspired by visiting our documentation on [Tracecat Registry](https://docs.tracecat.com/).
-See existing open source templates in [our repo](https://github.com/TracecatHQ/tracecat/tree/main/packages/tracecat-registry/tracecat_registry/templates).
+## Community
+
+Join the Tracecat community to ask questions, share feedback, and collaborate on new integration ideas.  Connect with us on the [Tracecat Community Discord](https://discord.gg/H4XZwsYzY4).
 
 ## Open Source vs. Enterprise
 
-This repository is available under the AGPL-3.0 license, with the exception of the `ee` directory, which contains paid enterprise features requiring a Tracecat Enterprise license. The Enterprise Edition offers advanced features requiring specific investments in research and development. You can enable the Enterprise Edition directly in the platform settings.
+This repository is licensed under AGPL-3.0, except for the `ee` directory, which contains features requiring a Tracecat Enterprise license. The Enterprise Edition offers advanced capabilities with dedicated research and development.  You can enable the Enterprise Edition directly within the platform's settings.
 
-*For information on Tracecat's Enterprise self-hosted or managed Cloud offerings, visit [our website](https://tracecat.com) or [book a meeting with us](https://cal.com/team/tracecat).*
+*   Interested in Tracecat's Enterprise self-hosted or managed cloud offerings?  Visit our [website](https://tracecat.com) or [book a meeting](https://cal.com/team/tracecat).
 
 ## Security
 
-Tracecat prioritizes security with features like SSO, audit logs, and Infrastructure as Code (IaaC) deployments (Terraform, Kubernetes / Helm), which are always free and available. We're actively working on a comprehensive document outlining Tracecat's threat model, security features, and hardening recommendations. For immediate security-related questions, reach out to us on [Discord](https://discord.gg/H4XZwsYzY4).
+Tracecat prioritizes security.  SSO, audit logs, and infrastructure-as-code deployments (Terraform, Kubernetes/Helm) are free and available.  We are building a comprehensive threat model, security features, and hardening recommendations. For immediate answers, reach out on [Discord](https://discord.gg/H4XZwsYzY4).
 
 Report any security issues to [security@tracecat.com](mailto:founders+security@tracecat.com) with `tracecat` in the subject line.
 
 ## Contributors
 
-Thank you to our amazing contributors for code, integrations, and support!  Open source thrives because of you. ❤️
+Thank you to all our contributors for their code, integrations, and support!
 
 <a href="https://github.com/TracecatHQ/tracecat/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=TracecatHQ/tracecat" />
@@ -93,17 +91,3 @@ Thank you to our amazing contributors for code, integrations, and support!  Open
   <sub>**`Tracecat`** is distributed under [**AGPL-3.0**](https://github.com/TracecatHQ/tracecat/blob/main/LICENSE)</sub>
 
 </div>
-```
-Key improvements and explanations:
-
-*   **SEO-Optimized Title:**  Uses "Tracecat" and emphasizes the core function: "Automate Security & IT Response".
-*   **Concise Hook:** Starts with a strong one-sentence introduction highlighting the main value proposition.
-*   **Clear Headings:** Uses Markdown headings for better organization and readability.
-*   **Bulleted Key Features:**  Highlights the most important features in an easy-to-scan format.  This makes it easy for users to quickly grasp what the project does.
-*   **Improved Community Callout:** The community section is more engaging.
-*   **More Descriptive Section Titles:** Changed "Open Source vs Enterprise" to a clearer name.
-*   **Emphasis on Security:** Highlights the importance of security and provides clear instructions on reporting issues.
-*   **Contributor Section:** Includes a visual contributor graph, boosting engagement and recognition.
-*   **Consistent Formatting:** Uses consistent formatting throughout for better readability.
-*   **Link to Original Repo:**  Includes the link at the beginning for easy access.
-*   **Call to action:**  Encourages users to read docs, join discord, etc.

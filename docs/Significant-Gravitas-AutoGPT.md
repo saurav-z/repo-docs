@@ -1,6 +1,6 @@
-# AutoGPT: Build, Deploy, and Run AI Agents
+# AutoGPT: Automate Your World with AI Agents
 
-**Unlock the power of autonomous AI with AutoGPT, the platform that empowers you to create, deploy, and manage intelligent agents that automate complex tasks.** Check out the original repo here:  [https://github.com/Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)
+**Unleash the power of AI with AutoGPT, a platform that empowers you to build, deploy, and manage intelligent AI agents for unparalleled automation.** ([Back to the original repo](https://github.com/Significant-Gravitas/AutoGPT))
 
 [![Discord Follow](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fautogpt%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=total%20members&logo=discord&logoColor=white&color=7289da)](https://discord.gg/autogpt) &ensp;
 [![Twitter Follow](https://img.shields.io/twitter/follow/Auto_GPT?style=social)](https://twitter.com/Auto_GPT) &ensp;
@@ -17,136 +17,119 @@
 
 ## Key Features:
 
-*   **AI Agent Creation:** Design and customize AI agents with an intuitive, low-code interface.
-*   **Workflow Automation:** Build, modify, and optimize automation workflows easily.
-*   **Deployment Control:** Manage the lifecycle of your agents from testing to production.
-*   **Pre-Built Agents:** Access a library of ready-to-use agents for immediate deployment.
-*   **Agent Interaction:** Run and interact with agents through a user-friendly interface.
+*   **AI Agent Creation:** Design and configure custom AI agents tailored to your specific needs.
+*   **Workflow Automation:** Build, modify, and optimize automation workflows with an intuitive interface.
+*   **Agent Management:** Deploy, test, and manage the lifecycle of your AI agents with ease.
+*   **Pre-built Agent Library:** Access a library of ready-to-use agents for immediate deployment.
+*   **Agent Interaction:** Seamlessly run and interact with your agents through a user-friendly interface.
 *   **Performance Monitoring:** Track agent performance and gain insights for continuous improvement.
+*   **Self-Hosting Option:** Download and self-host for free, or join the waitlist for the cloud-hosted beta.
 
 ## Hosting Options
 
-*   **Self-Host:** Download and host AutoGPT for free.
-*   **Cloud-Hosted Beta:** [Join the Waitlist](https://bit.ly/3ZDijAI) for the cloud-hosted beta (Closed Beta - Public release Coming Soon!).
+*   Download to self-host (Free!)
+*   [Join the Waitlist](https://bit.ly/3ZDijAI) for the cloud-hosted beta (Closed Beta - Public release Coming Soon!)
 
-## Self-Hosting AutoGPT
+## Self-Hosting: Get Started Quickly
 
 > [!NOTE]
-> Setting up and hosting the AutoGPT Platform yourself is a technical process. 
-> If you'd rather something that just works, we recommend [joining the waitlist](https://bit.ly/3ZDijAI) for the cloud-hosted beta.
+> Self-hosting AutoGPT requires technical expertise. We recommend joining the [cloud-hosted beta waitlist](https://bit.ly/3ZDijAI) for a simpler experience.
 
 ### System Requirements
 
-#### Hardware Requirements
+**Hardware:**
+
 *   CPU: 4+ cores recommended
 *   RAM: Minimum 8GB, 16GB recommended
 *   Storage: At least 10GB of free space
 
-#### Software Requirements
-*   Operating Systems:
-    *   Linux (Ubuntu 20.04 or newer recommended)
-    *   macOS (10.15 or newer)
-    *   Windows 10/11 with WSL2
-*   Required Software (with minimum versions):
-    *   Docker Engine (20.10.0 or newer)
-    *   Docker Compose (2.0.0 or newer)
-    *   Git (2.30 or newer)
-    *   Node.js (16.x or newer)
-    *   npm (8.x or newer)
-    *   VSCode (1.60 or newer) or any modern code editor
+**Software:**
 
-#### Network Requirements
+*   Operating Systems: Linux (Ubuntu 20.04 or newer recommended), macOS (10.15 or newer), Windows 10/11 with WSL2
+*   Required Software (with minimum versions): Docker Engine (20.10.0 or newer), Docker Compose (2.0.0 or newer), Git (2.30 or newer), Node.js (16.x or newer), npm (8.x or newer), VSCode (1.60 or newer) or any modern code editor
+
+**Network:**
+
 *   Stable internet connection
 *   Access to required ports (will be configured in Docker)
 *   Ability to make outbound HTTPS connections
 
 ### Setup Instructions
 
-👉 [Follow the official self-hosting guide here](https://docs.agpt.co/platform/getting-started/)
+For detailed, up-to-date instructions, please refer to the official documentation: [https://docs.agpt.co/platform/getting-started/](https://docs.agpt.co/platform/getting-started/)
 
 This tutorial assumes you have Docker, VSCode, git and npm installed.
 
 ---
 
-#### ⚡ Quick Setup with One-Line Script (Recommended for Local Hosting)
+### ⚡ One-Line Quick Setup (Recommended)
 
-Skip the manual steps and get started in minutes using our automatic setup script.
+Simplify the setup process with our automatic script.
 
 For macOS/Linux:
-```
+
+```bash
 curl -fsSL https://setup.agpt.co/install.sh -o install.sh && bash install.sh
 ```
 
 For Windows (PowerShell):
-```
+
+```powershell
 powershell -c "iwr https://setup.agpt.co/install.bat -o install.bat; ./install.bat"
 ```
 
-This will install dependencies, configure Docker, and launch your local instance — all in one go.
+## AutoGPT Platform Components
 
 ### 🧱 AutoGPT Frontend
 
-The AutoGPT frontend is where users interact with our powerful AI automation platform. It offers multiple ways to engage with and leverage our AI agents. This is the interface where you'll bring your AI automation ideas to life:
+The user interface for interacting with and leveraging AI agents.
 
 *   **Agent Builder:** Customize agents with a low-code interface.
-*   **Workflow Management:** Build, modify, and optimize workflows.
-*   **Deployment Controls:** Manage agent lifecycles.
-*   **Ready-to-Use Agents:** Deploy pre-configured agents.
-*   **Agent Interaction:** Run and interact with agents.
-*   **Monitoring and Analytics:** Track performance and improve automation.
+*   **Workflow Management:** Easily build and optimize automation workflows.
+*   **Deployment Controls:** Manage the entire agent lifecycle.
+*   **Ready-to-Use Agents:** Deploy pre-configured agents instantly.
+*   **Agent Interaction:** Run and interact with agents through a user-friendly interface.
+*   **Monitoring and Analytics:** Track agent performance.
 
-[Read this guide](https://docs.agpt.co/platform/new_blocks/) to learn how to build your own custom blocks.
+[Learn more about building custom blocks](https://docs.agpt.co/platform/new_blocks/)
 
 ### 💽 AutoGPT Server
 
-The AutoGPT Server is the powerhouse of our platform This is where your agents run. Once deployed, agents can be triggered by external sources and can operate continuously. It contains all the essential components that make AutoGPT run smoothly.
+The engine that powers your AI agents.
 
-*   **Source Code:** The core logic driving agents.
+*   **Source Code:** The core logic for agents and automation.
 *   **Infrastructure:** Robust systems for reliable performance.
-*   **Marketplace:** Find and deploy pre-built agents.
+*   **Marketplace:** Access a wide range of pre-built agents.
 
-### 🐙 Example Agents
+## 🐙 Example Agents
 
-Here are two examples of what you can do with AutoGPT:
+*   **Generate Viral Videos:** Create short-form videos from trending topics.
+*   **Identify Top Quotes from Videos:** Transcribe videos, identify impactful quotes, and automatically publish social media posts.
 
-1.  **Generate Viral Videos from Trending Topics:**
-    *   Reads Reddit topics.
-    *   Identifies trending topics.
-    *   Creates short-form videos.
+## 🛡️ Licensing
 
-2.  **Identify Top Quotes from Videos for Social Media:**
-    *   Subscribes to your YouTube channel.
-    *   Transcribes new videos.
-    *   Identifies impactful quotes.
-    *   Generates summaries and social media posts.
+*   **Polyform Shield License:** (`autogpt_platform` folder)
+*   **MIT License:** (All other parts of the repository)
 
 ---
 
-### **License Overview:**
-
-🛡️ **Polyform Shield License:**
-All code and content within the `autogpt_platform` folder is licensed under the Polyform Shield License. This new project is our in-developlemt platform for building, deploying and managing agents.</br>_[Read more about this effort](https://agpt.co/blog/introducing-the-autogpt-platform)_
-
-🦉 **MIT License:**
-All other portions of the AutoGPT repository (i.e., everything outside the `autogpt_platform` folder) are licensed under the MIT License. This includes the original stand-alone AutoGPT Agent, along with projects such as [Forge](https://github.com/Significant-Gravitas/AutoGPT/tree/master/classic/forge), [agbenchmark](https://github.com/Significant-Gravitas/AutoGPT/tree/master/classic/benchmark) and the [AutoGPT Classic GUI](https://github.com/Significant-Gravitas/AutoGPT/tree/master/classic/frontend).</br>We also publish additional work under the MIT Licence in other repositories, such as [GravitasML](https://github.com/Significant-Gravitas/gravitasml) which is developed for and used in the AutoGPT Platform. See also our MIT Licenced [Code Ability](https://github.com/Significant-Gravitas/AutoGPT-Code-Ability) project.
-
----
 ### Mission
-Our mission is to provide the tools, so that you can focus on what matters:
 
-- 🏗️ **Building** - Lay the foundation for something amazing.
-- 🧪 **Testing** - Fine-tune your agent to perfection.
-- 🤝 **Delegating** - Let AI work for you, and have your ideas come to life.
+*   **Building:** Lay the foundation for something amazing.
+*   **Testing:** Fine-tune your agent to perfection.
+*   **Delegating:** Let AI work for you, and have your ideas come to life.
 
-Be part of the revolution! **AutoGPT** is here to stay, at the forefront of AI innovation.
+Be part of the AI revolution!
 
 **📖 [Documentation](https://docs.agpt.co)**
 &ensp;|&ensp;
 **🚀 [Contributing](CONTRIBUTING.md)**
 
 ---
+
 ## 🤖 AutoGPT Classic
-> Below is information about the classic version of AutoGPT.
+
+Information about the classic version of AutoGPT.
 
 **🛠️ [Build your own Agent - Quickstart](classic/FORGE-QUICKSTART.md)**
 
@@ -212,7 +195,7 @@ To report a bug or request a feature, create a [GitHub Issue](https://github.com
 
 ### 🔄 Agent Protocol
 
-To maintain a uniform standard and ensure seamless compatibility with many current and future applications, AutoGPT employs the [agent protocol](https://agentprotocol.ai/) standard by the AI Engineer Foundation. This standardizes the communication pathways from your agent to the frontend and benchmark.
+AutoGPT adheres to the [agent protocol](https://agentprotocol.ai/) by the AI Engineer Foundation for seamless compatibility.
 
 ---
 

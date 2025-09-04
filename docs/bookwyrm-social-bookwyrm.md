@@ -1,6 +1,8 @@
-# BookWyrm: A Social Network for Book Lovers
+# BookWyrm: A Social Network for Book Lovers 
 
-**BookWyrm is a decentralized social network that helps you connect with friends, track your reading, and discuss books in a federated and privacy-focused environment.** ([Original Repository](https://github.com/bookwyrm-social/bookwyrm))
+**BookWyrm is a decentralized social network that empowers book enthusiasts to connect, share reviews, and discover new reads.**  Discover the power of a social network built by bookworms, for bookworms.
+
+[View the original repository on GitHub](https://github.com/bookwyrm-social/bookwyrm)
 
 [![GitHub Release](https://img.shields.io/github/release/bookwyrm-social/bookwyrm.svg?colorB=58839b)](https://github.com/bookwyrm-social/bookwyrm/releases)
 [![Run Python Tests](https://github.com/bookwyrm-social/bookwyrm/actions/workflows/django-tests.yml/badge.svg)](https://github.com/bookwyrm-social/bookwyrm/actions/workflows/django-tests.yml)
@@ -8,37 +10,45 @@
 
 ## Key Features
 
-*   **Social Reading:** Share reviews, quotes, and reading updates with others.
-*   **Reading Tracking:** Organize your reading list and keep track of what you've read.
-*   **Federation:** Connect with users on other BookWyrm instances and ActivityPub-compatible platforms like Mastodon and Pleroma.
-*   **Decentralized Communities:** Join or create your own instance for a focused book club or community.
-*   **Privacy and Moderation:** Control your visibility and choose which instances you federate with.
+*   **Social Reading:** Share book reviews, discuss your current reads, and engage in conversations with fellow bookworms.
+*   **Reading Tracking:** Keep a record of the books you've read, are currently reading, and want to read in the future.
+*   **Federated Network:** Connect with users on other BookWyrm instances and ActivityPub-compatible platforms like Mastodon and Pleroma, fostering a decentralized reading community.
+*   **Privacy & Moderation:** Enjoy control over your posts' visibility and the instances you choose to connect with, promoting a safe and tailored social experience.
+*   **Discover New Books:** Build a collaborative database of books and authors through federation.
 
-## Learn More
+## Why BookWyrm?
 
-*   **Project Homepage:** [https://joinbookwyrm.com/](https://joinbookwyrm.com/)
-*   **Support:** [https://patreon.com/bookwyrm](https://patreon.com/bookwyrm)
-*   **Documentation:** [https://docs.joinbookwyrm.com/](https://docs.joinbookwyrm.com/)
-*   **Mastodon:** [![Mastodon Follow](https://img.shields.io/mastodon/follow/000146121?domain=https%3A%2F%2Ftech.lgbt&style=social)](https://tech.lgbt/@bookwyrm)
-
-## About BookWyrm
-
-BookWyrm is a social platform designed for book lovers to connect, share, and discover new reads. It's built on the principles of federation, allowing for a decentralized network of communities, each with its own focus and moderation.  It's not designed as a primary book data source but does facilitate cataloging to some degree.
+BookWyrm is more than just a social network; it's a platform for building small, trusted communities centered around the joy of reading. Unlike monolithic platforms, BookWyrm allows you to create or join instances focused on specific interests or groups, offering autonomy and control over your social experience.
 
 ## Federation Explained
 
-BookWyrm uses [ActivityPub](http://activitypub.rocks/) to connect with other instances. This means you can follow friends on other BookWyrm servers or interact with users on platforms like Mastodon. This federation creates a network of independent communities, empowering users with control over their social experience.
+BookWyrm utilizes the ActivityPub protocol to connect with other platforms. This allows you to:
+
+*   Interact with users on other BookWyrm instances.
+*   Share and view reviews and discussions across different servers.
+*   Connect with users on other ActivityPub services like Mastodon.
+
+Developers can find more information on BookWyrm's implementation in [`FEDERATION.md`](https://github.com/bookwyrm-social/bookwyrm/blob/main/FEDERATION.md).
 
 ## Tech Stack
 
-*   **Backend:** Django, PostgreSQL, ActivityPub, Celery, Redis
-*   **Frontend:** Django templates, Bulma.io, Vanilla JavaScript
-*   **Deployment:** Docker, docker-compose, Gunicorn, Flower, Nginx
+BookWyrm is built using a modern tech stack:
 
-## Setting up BookWyrm
+*   **Backend:** Django, PostgreSQL, ActivityPub, Celery, Redis.
+*   **Frontend:** Django templates, Bulma.io, Vanilla JavaScript.
+*   **Deployment:** Docker, docker-compose, Gunicorn, Flower, Nginx.
 
-Find detailed setup instructions in the [documentation website](https://docs.joinbookwyrm.com/), with guides for both [developer environments](https://docs.joinbookwyrm.com/install-dev.html) and [production](https://docs.joinbookwyrm.com/install-prod.html).
+## Get Started with BookWyrm
 
-## Contributing
+Visit the [documentation website](https://docs.joinbookwyrm.com/) for detailed instructions on setting up BookWyrm in a [developer environment](https://docs.joinbookwyrm.com/install-dev.html) or [production](https://docs.joinbookwyrm.com/install-prod.html).
 
-Join the BookWyrm community and contribute to its growth! Learn how at [CONTRIBUTING.md](https://github.com/bookwyrm-social/bookwyrm/blob/main/CONTRIBUTING.md).
+## Contribute to BookWyrm
+
+We welcome contributions from everyone! Learn how you can contribute to the project at [CONTRIBUTING.md](https://github.com/bookwyrm-social/bookwyrm/blob/main/CONTRIBUTING.md).
+
+## Links
+
+*   [Project homepage](https://joinbookwyrm.com/)
+*   [Support](https://patreon.com/bookwyrm)
+*   [Documentation](https://docs.joinbookwyrm.com/)
+*   [Mastodon](https://tech.lgbt/@bookwyrm)

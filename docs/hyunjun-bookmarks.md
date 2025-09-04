@@ -1,140 +1,84 @@
-# Comprehensive Bookmarks: Your Guide to Knowledge & Resources
+# Comprehensive Bookmarks for Diverse Topics
 
-This repository, available at [hyunjun/bookmarks](https://github.com/hyunjun/bookmarks), offers a meticulously curated collection of bookmarks spanning diverse topics, from everyday life to advanced programming concepts.
+This repository, a treasure trove of curated links and resources, offers a vast collection of bookmarks spanning a wide range of subjects from personal development to programming, perfect for anyone looking to expand their knowledge and stay informed.  View the original repository [here](https://github.com/hyunjun/bookmarks).
 
 ## Key Features:
 
-*   **Extensive Categorization:** Bookmarks are organized into broad categories such as "miscellaneous" and "programming", ensuring easy navigation and discovery.
-*   **Diverse Subject Matter:** Explore a wide range of topics including:
-    *   **Life & Interests:** covering areas like travel, art, food, and self-improvement.
-    *   **Technology & Programming:** encompassing data science, cloud computing, programming languages, and software development tools.
-*   **Detailed Sub-Categories:**  Drill down into specific areas of interest with sub-categories like "data science" which includes machine learning, deep learning, and data visualization.
-*   **Constantly Updated:** The repository is actively maintained, providing access to fresh and relevant resources.
+*   **Extensive Category Coverage:**  Bookmarks are organized into easily navigable categories including:
+    *   **Miscellaneous:** Covering topics such as travel, art, business, and more.
+    *   **Programming:** A deep dive into various programming languages, frameworks, and technologies.
+*   **Organized Structure:**  Well-structured Markdown files allow for easy browsing and quick access to relevant resources.
+*   **Constantly Updated:**  The repository is regularly updated, ensuring you have access to the latest and most relevant information.
 
-## Categories Overview:
+##  Topics Covered:
 
 ### Miscellaneous
-*   Jeju
+*   제주도 (Jeju Island)
 *   Animal
-*   App
+*   App Development
 *   Art
-*   Baby
-*   Book
-*   Business
-*   Drama
-*   Economy
-*   Education
-*   English
-*   Finance
-*   Food
-*   Game
-*   Health
-*   History
-*   House
-*   Life
-*   Nomad & Remote
-*   Math
-    *   Statistics
-*   Media
-*   Myth
-*   People
-*   Philosophy
-*   Politics
-*   Presentation
-    *   Dev Small Talk
-    *   Speed
-*   Product
-*   Psychology
-*   Religion
-*   Robot
-*   Self Control
-*   Science
-*   Shopping
-*   Speaking
-*   Sports
-*   Travel
-*   Writing
+*   Baby & Parenting
+*   Books
+*   Business & Entrepreneurship
+*   Drama & Entertainment
+*   Economics & Finance
+*   Education & Learning
+*   English Language
+*   Finance & Investing
+*   Food & Cooking
+*   Gaming
+*   Health & Wellness
+*   History & Culture
+*   House & Home
+*   Life & Personal Development
+*   Nomad & Remote Work
+*   Math & Statistics
+*   Media & Journalism
+*   Mythology & Folklore
+*   People & Society
+*   Philosophy & Thought
+*   Politics & Government
+*   Presentation & Public Speaking
+*   Product Management
+*   Psychology & Mental Health
+*   Religion & Spirituality
+*   Robotics & Automation
+*   Self-Control & Productivity
+*   Science & Technology
+*   Shopping & E-commerce
+*   Speaking & Communication
+*   Sports & Recreation
+*   Travel & Tourism
+*   Writing & Content Creation
 
 ### Programming
-*   Algorithm
+*   Algorithm & Data Structures
 *   Anomaly Detection
-*   Apache
-    *   HBase
-    *   Spark
-*   Bitcoin
-*   Cloud
-    *   AWS
-    *   Azure
-    *   Google Cloud Platform (GCP)
-*   Coursera
-*   Data Science
-    *   Artificial Intelligence
-    *   Data
-    *   Data Visualization
-    *   Deep Learning
-    *   Keras
-    *   Machine Learning
-    *   NLP
-    *   Pytorch
-    *   Tensorflow
-    *   Vision
-*   Docker
-*   Editor
-    *   Emacs
-    *   Vim
+*   Apache Technologies (Hadoop, Spark, HBase)
+*   Bitcoin & Cryptocurrency
+*   Cloud Computing (AWS, Azure, GCP)
+*   Coursera Courses
+*   Data Science & Machine Learning (AI, Data Visualization, Deep Learning, Keras, ML, NLP, PyTorch, TensorFlow, Vision)
+*   Docker & Containerization
+*   Editors (Emacs, Vim)
 *   Elasticsearch & Lucene
-*   Game
-*   GIS
-*   Git
-*   Graph
-*   Hadoop
-*   Hardware
-*   Interview
+*   Game Development
+*   GIS & Geographic Information Systems
+*   Git & Version Control
+*   Graph Databases
+*   Hadoop Ecosystem
+*   Hardware & Computer Architecture
+*   Interview Preparation
 *   JSON
-*   Linux
-*   Mobile
-    *   Android
-    *   Flutter
-    *   iOS
-*   Monitoring
-*   NoSQL
-    *   HBase
-    *   Redis
-*   Open Source
-*   Programmer
-*   Programming
-    *   Concurrency
-    *   Data Oriented Design (DOD)
-    *   Functional Programming
-    *   Logging
-    *   Network
-    *   Object Oriented Programming (OOP)
-    *   Regular Expression
+*   Linux & Operating Systems
+*   Mobile Development (Android, Flutter, iOS)
+*   Monitoring & Observability
+*   NoSQL Databases (HBase, Redis)
+*   Open Source Development
+*   Programming & Software Development
 *   Programming Books
-*   Programming Language
-    *   Bash
-    *   C
-    *   Clojure
-    *   C++
-    *   C#
-    *   Elixir
-    *   Erlang
-    *   Go
-    *   Haskell
-    *   Java
-    *   JavaScript
-    *   Julia
-    *   Kotlin
-    *   Lisp
-    *   .NET
-    *   OCaml
-    *   PHP
-    *   Python
-    *   R
-    *   Ruby
-    *   Rust
-    *   Scala
-*   SQL
-*   SVN
-*   Time Series
-*   Web
+*   Programming Languages (Bash, C, C++, C#, Clojure, Elixir, Erlang, Go, Haskell, Java, JavaScript, Julia, Kotlin, Lisp, .NET, OCaml, PHP, Python, R, Ruby, Rust, Scala)
+*   SQL & Relational Databases
+*   Subversion (SVN)
+*   Time Series Databases
+*   Web Development

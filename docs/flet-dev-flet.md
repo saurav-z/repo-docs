@@ -26,39 +26,21 @@
 
 ---
 
-# Flet: Build Cross-Platform Apps in Python with Flutter
+## Flet: Build Stunning Multi-Platform Apps with Python and Flutter
 
-**Create stunning web, desktop, and mobile applications quickly and easily using Python and the power of Flutter.**
+**Flet empowers developers to build beautiful and interactive web, desktop, and mobile applications entirely in Python.**  [See the original repository](https://github.com/flet-dev/flet).
 
-## Key Features
+### Key Features:
 
-*   **Develop with Python:** Build apps using your favorite language, no frontend experience needed.
-*   **Cross-Platform Deployment:** Target web, desktop (Windows, macOS, Linux), iOS, Android, and PWA from a single codebase.
-*   **Flutter-Powered UI:** Get a professional and modern look and feel with Flutter's UI toolkit.
-*   **Simplified Architecture:** Develop stateful apps in a single Python file, simplifying your architecture compared to traditional web app development.
-*   **Batteries Included:**  Flet provides a built-in web server and desktop clients, so you can start building immediately.
-*   **Rapid Development:** Prototype and build interactive apps in minutes.
+*   **Rapid Development:** Quickly turn your ideas into functional apps in minutes.
+*   **Simplified Architecture:**  Build stateful, multi-user, real-time Single-Page Applications (SPAs) without complex frontend/backend separation.
+*   **Batteries Included:**  Get started immediately with a built-in web server and desktop clients – no complex tooling required.
+*   **Powered by Flutter:** Leverage the power of Flutter for professional-looking UIs that can be delivered to any platform.
+*   **Cross-Platform Deployment:**  Package your app for Windows, macOS, Linux, iOS, Android, web (dynamic/static), and PWAs.
 
-## Simple Architecture
+### Example: Counter App
 
-Unlike traditional web development with its complex frontend, backend, and database interactions, Flet allows you to write a monolithic, stateful app in Python, resulting in a multi-user, real-time SPA.
-
-## Built with Flutter
-
-Flet's user interface is powered by [Flutter](https://flutter.dev/), a UI toolkit by Google. This means your applications will look and behave consistently across all platforms. Flet simplifies the Flutter model, providing ready-to-use "controls" built from smaller "widgets" with an imperative programming model.
-
-## Platform Support
-
-Package your Flet app as:
-
-*   Standalone desktop app (Windows, macOS, and Linux)
-*   Mobile app (iOS and Android)
-*   Dynamic/static Web app
-*   Progressive Web App ([PWA](https://web.dev/what-are-pwas/))
-
-## Get Started with Flet: Counter App Example
-
-Here's a simple "Counter" app showcasing Flet's ease of use:
+Here's a simple "Counter" app built with Flet:
 
 ```python title="counter.py"
 import flet as ft
@@ -91,33 +73,33 @@ def main(page: ft.Page):
 ft.run(main)
 ```
 
-### Installation
-
-Install Flet using pip:
+**Installation:**
 
 ```bash
 pip install 'flet[all]'
 ```
 
-### Run the App
-
-Run the `counter.py` script:
+**Running the app:**
 
 ```bash
 flet run counter.py
 ```
 
+This will open the app in a native OS window.
+
 <p align="center">
     <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/macos.png" width="45%" />
 </p>
 
-To run the same app as a web app, update the last line in your script to:
+**Web App:**
+
+To run the same app as a web app, modify the last line in your script to:
 
 ```python
 ft.run(main, view=flet.AppView.WEB_BROWSER)
 ```
 
-Alternatively, you can use the `--web` flag when running the `flet run` command:
+Or, use the `--web` flag:
 
 ```bash
 flet run --web counter.py
@@ -127,14 +109,14 @@ flet run --web counter.py
     <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/safari.png" width="60%" />
 </p>
 
-## Learn More
+### Learn More:
 
 *   [Website](https://flet.dev)
 *   [Documentation](https://docs.flet.dev)
 *   [Roadmap](https://flet.dev/roadmap)
 *   [Apps Gallery](https://docs.flet.dev/gallery)
 
-## Community
+### Community
 
 *   [Discussions](https://github.com/flet-dev/flet/discussions)
 *   [Discord](https://discord.gg/dzWXP8SHG8)
@@ -142,18 +124,6 @@ flet run --web counter.py
 *   [Bluesky](https://bsky.app/profile/fletdev.bsky.social)
 *   [Email us](mailto:hello@flet.dev)
 
-## Contributing
+### Contributing
 
-Contribute to Flet! Check out the [contribution guide](https://docs.flet.dev/contributing).
-
-[Back to the top](#flet-build-cross-platform-apps-in-python-with-flutter) | [Original Repository](https://github.com/flet-dev/flet)
-```
-Key changes and improvements:
-
-*   **SEO Optimization:** Added an SEO-friendly title, a concise introduction that is also the hook, and used relevant keywords like "cross-platform," "Python," and "Flutter."
-*   **Clear Headings:** Used clear and descriptive headings (like "Key Features," "Get Started") to improve readability and organization.
-*   **Bulleted Key Features:**  Highlights the core benefits and features of Flet in an easy-to-scan format.
-*   **Concise Language:** Simplified language to make it more accessible and easier to understand.
-*   **Call to Action:** Added a direct call to action in the "Get Started" section.
-*   **Links:** Added a link back to the original repository at the end and included the original links where possible.
-*   **Summarization:** Streamlined the content while retaining essential information.
+*   [Contribution Guide](https://docs.flet.dev/contributing)

@@ -1,91 +1,60 @@
 # Machine Learning Systems: Principles and Practices
 
-**Master the art of building and deploying real-world AI systems with this open-source textbook, originally developed at Harvard University.** ([View Original Repo](https://github.com/harvard-edge/cs249r_book))
+**Master the art of building real-world AI systems with this open-source textbook.**
 
-<div align="center">
+[![Build](https://img.shields.io/github/actions/workflow/status/harvard-edge/cs249r_book/validate-dev.yml?branch=dev&label=Build&logo=githubactions&cacheSeconds=300)](https://github.com/harvard-edge/cs249r_book/actions/workflows/validate-dev.yml)
+[![Last Commit](https://img.shields.io/github/last-commit/harvard-edge/cs249r_book/dev?label=Last%20Commit&logo=git&cacheSeconds=300)](https://github.com/harvard-edge/cs249r_book/commits/dev)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmlsysbook.ai&label=Website&logo=readthedocs)](https://mlsysbook.ai)
+[![Ecosystem](https://img.shields.io/website?url=https%3A%2F%2Fmlsysbook.org&label=Ecosystem&logo=internet-explorer)](https://mlsysbook.org)
+[![Paper](https://img.shields.io/badge/Paper-MLSysBook.AI%20Overview-blue?logo=academia)](LINK_TO_PAPER)
+[![Funding](https://img.shields.io/badge/Fund%20Us-Open%20Collective-blue.svg?logo=open-collective)](https://opencollective.com/mlsysbook)
+[![License](https://img.shields.io/badge/License-CC--BY--NC--SA%204.0-blue.svg)](https://github.com/harvard-edge/cs249r_book/blob/dev/LICENSE)
+[![Powered by Netlify](https://img.shields.io/badge/Powered%20by-Netlify-00C7B7?logo=netlify&logoColor=white)](https://www.netlify.com)
 
-<!-- Badges Section -->
-<p align="center">
-  <a href="https://github.com/harvard-edge/cs249r_book/actions/workflows/validate-dev.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/harvard-edge/cs249r_book/validate-dev.yml?branch=dev&label=Build&logo=githubactions&cacheSeconds=300" alt="Build Status">
-  </a>
-  <a href="https://github.com/harvard-edge/cs249r_book/commits/dev">
-    <img src="https://img.shields.io/github/last-commit/harvard-edge/cs249r_book/dev?label=Last%20Commit&logo=git&cacheSeconds=300" alt="Last Commit">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://mlsysbook.ai">
-    <img src="https://img.shields.io/website?url=https%3A%2F%2Fmlsysbook.ai&label=Website&logo=readthedocs" alt="Website">
-  </a>
-  <a href="https://mlsysbook.org">
-    <img src="https://img.shields.io/website?url=https%3A%2F%2Fmlsysbook.org&label=Ecosystem&logo=internet-explorer" alt="Ecosystem">
-  </a>
-  <a href="LINK_TO_PAPER">
-    <img src="https://img.shields.io/badge/Paper-MLSysBook.AI%20Overview-blue?logo=academia" alt="Paper">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://opencollective.com/mlsysbook">
-    <img src="https://img.shields.io/badge/Fund%20Us-Open%20Collective-blue.svg?logo=open-collective" alt="Funding">
-  </a>
-  <a href="https://github.com/harvard-edge/cs249r_book/blob/dev/LICENSE">
-    <img src="https://img.shields.io/badge/License-CC--BY--NC--SA%204.0-blue.svg" alt="License">
-  </a>
-  <a href="https://www.netlify.com">
-    <img src="https://img.shields.io/badge/Powered%20by-Netlify-00C7B7?logo=netlify&logoColor=white" alt="Powered by Netlify">
-  </a>
-</p>
-
-<p align="center">
-  **[📖 Read Online](https://mlsysbook.ai)** •
-  **[💾 Download PDF](https://mlsysbook.ai/pdf)** •
-  **[💾 Download ePub](https://mlsysbook.ai/epub)** •
-  **[🌐 Explore Ecosystem](https://mlsysbook.org)**
-</p>
+**[📖 Read Online](https://mlsysbook.ai)** •
+**[💾 Download PDF](https://mlsysbook.ai/pdf)** •
+**[💾 Download ePub](https://mlsysbook.ai/epub)** •
+**[🌐 Explore Ecosystem](https://mlsysbook.org)**
 
 📚 **Hardcopy edition coming 2026 via MIT Press!**
 
-</div>
+---
+
+## About Machine Learning Systems
+
+This is an **open-source textbook** designed to empower you with the knowledge and skills to build and deploy AI systems, from edge devices to cloud infrastructure. Originally developed as Harvard University's CS249r course by [Prof. Vijay Janapa Reddi](https://github.com/profvjreddi/homepage), this resource is now used by universities and learners globally.
+
+### Core Principles
+
+*   **Practical Focus:** Learn by doing with hands-on labs and real-world examples.
+*   **Comprehensive Coverage:**  Master the entire ML systems lifecycle, not just model training.
+*   **Open & Accessible:** Free to use, modify, and share under a Creative Commons license.
+
+### Key Benefits
+
+*   **Demystify AI Systems:** Understand the complexities of building production-ready AI.
+*   **Career Advancement:** Equip yourself with in-demand skills for the future of AI.
+*   **Community-Driven:** Join a global network of learners and contributors.
 
 ---
 
-## About the Book
+## What You'll Learn: Building AI Systems
 
-This open-source textbook, born from Harvard's CS249r course, equips you with the knowledge to build and deploy AI systems from edge devices to the cloud.
+This book guides you beyond model training to master the full spectrum of Machine Learning Systems Engineering.
 
-*   Developed by [Prof. Vijay Janapa Reddi](https://github.com/profvjreddi/homepage).
-*   Used by universities and students globally.
-
-> **Mission:** Democratize AI systems education, empowering learners one chapter and lab at a time.
-
-### The Problem It Solves
-
-*"The critical bottleneck for AI isn't the algorithms, it's the engineers who can build scalable and sustainable systems to safely harness that intelligence."*
-
-**— Vijay Janapa Reddi**
+*   **System Design:** Learn how to architect scalable, maintainable ML systems.
+*   **Data Engineering:**  Build robust pipelines for data collection, labeling, and processing.
+*   **Model Deployment:** Get production-ready by deploying models from prototype to product.
+*   **MLOps & Monitoring:**  Build reliable and continuously operating systems.
+*   **Edge AI:** Deploy ML models efficiently on resource-constrained devices (mobile, embedded, IoT).
 
 ---
 
-## Key Features: What You'll Learn
-
-Go beyond training models and master the full stack of real-world ML systems.
-
-*   **System Design:** Build scalable and maintainable ML architectures.
-*   **Data Engineering:** Create robust pipelines for data collection, labeling, and processing.
-*   **Model Deployment:** Take ML systems from prototypes to production.
-*   **MLOps & Monitoring:** Implement reliable and continuously operating systems.
-*   **Edge AI:** Deploy resource-efficient AI on mobile, embedded, and IoT devices.
-
----
-
-## Support This Work
-
-<div align="center">
+## Support and Contribute
 
 ### Show Your Support
-**Star this repository** to help us demonstrate the value of open AI education to funders and institutions.
+
+Help us to demonstrate the value of open AI education to funders and institutions.
 
 [![Stars](https://img.shields.io/github/stars/harvard-edge/cs249r_book?style=for-the-badge&logo=github&color=gold)](https://github.com/harvard-edge/cs249r_book/stargazers)
 
@@ -93,29 +62,26 @@ Go beyond training models and master the full stack of real-world ML systems.
 
 [**⭐ Star Now**](https://github.com/harvard-edge/cs249r_book) — *takes 2 seconds!*
 
-### Fund the Mission (New!)
-We've graduated this project from Harvard to enable global access and expand AI systems education worldwide. Please help us support educators globally, especially in the Global South, by providing TinyML kits for students, funding workshops, and sustaining our open-source infrastructure.
+### Fund the Mission
+
+Help us support educators globally, especially in the Global South, by providing TinyML kits for students, funding workshops, and sustaining our open-source infrastructure.
 
 [![Open Collective](https://img.shields.io/badge/💝%20Support%20AI%20Education-Open%20Collective-blue.svg?style=for-the-badge)](https://opencollective.com/mlsysbook)
 
 *From $15/month to sponsor a learner to $250 for workshops — every contribution democratizes AI education.*
 
-</div>
+---
+
+## 🌐 Resources & Community
+
+*   📚 **Main Site:** Complete learning platform at [mlsysbook.org](https://mlsysbook.org)
+*   🔥 **TinyTorch:** Educational ML framework at [mlsysbook.org/tinytorch](https://mlsysbook.org/tinytorch)
+*   💬 **Discussions:** Ask questions and share insights on [GitHub Discussions](https://github.com/harvard-edge/cs249r_book/discussions)
+*   👥 **Community:** Join our global learning community on [mlsysbook.org/community](https://mlsysbook.org/community)
 
 ---
 
-## 🌐 Community & Resources
-
-| Resource                     | Description                                    |
-| :--------------------------- | :--------------------------------------------- |
-| [📚 **Main Site**](https://mlsysbook.org) | Complete learning platform                   |
-| [🔥 **TinyTorch**](https://mlsysbook.org/tinytorch) | Educational ML framework                     |
-| [💬 **Discussions**](https://github.com/harvard-edge/cs249r_book/discussions) | Ask questions, share insights              |
-| [👥 **Community**](https://mlsysbook.org/community) | Join our global learning community           |
-
----
-
-## 🎯 Target Audiences
+## 🎯  Target Audiences
 
 ### 🎓 Students
 
@@ -133,7 +99,7 @@ We've graduated this project from Harvard to enable global access and expand AI 
 
 *   [🤝 Contribution guide](docs/contribute.md)
 *   [⚡ Development setup](#development)
-*   [💬 Join discussions](https://github.com/harvard-edge/cs249r_book/discussions)
+*   💬 [Join discussions](https://github.com/harvard-edge/cs249r_book/discussions)
 
 ---
 
@@ -170,7 +136,7 @@ cd cs249r_book
 
 ## 🤝 Contributing
 
-We welcome contributions from the global community! Here's how you can help:
+We welcome contributions from the global community!
 
 ### Ways to Contribute
 
@@ -184,10 +150,10 @@ We welcome contributions from the global community! Here's how you can help:
 
 All contributions benefit from automated quality assurance:
 
-*   ✅ **Pre-commit validation:** Automatic cleanup and checks
-*   📋 **Content review:** Formatting and style validation
-*   🧪 **Testing:** Build and link verification
-*   👥 **Peer review:** Community feedback
+*   ✅ **Pre-commit validation:** Automatic cleanup and checks.
+*   📋 **Content review:** Formatting and style validation.
+*   🧪 **Testing:** Build and link verification.
+*   👥 **Peer review:** Community feedback.
 
 [**Start Contributing →**](docs/contribute.md)
 
@@ -206,8 +172,8 @@ The **Book Binder** is our lightning-fast development CLI for streamlined buildi
 
 # Complete book building
 ./binder build                        # Build complete website (HTML)
-./binder pdf                        # Build complete PDF
-./binder epub                       # Build complete EPUB
+./binder pdf                          # Build complete PDF
+./binder epub                         # Build complete EPUB
 
 # Management
 ./binder clean                        # Clean artifacts
@@ -345,7 +311,7 @@ This work is licensed under **Creative Commons Attribution–NonCommercial–Sha
 
 ## 🙏 Contributors
 
-Thanks to all the wonderful contributors!
+Thank you to these contributors for making this resource better for everyone.
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -430,3 +396,5 @@ Thanks to all the wonderful contributors!
       <td align="center" valign="top" width="20%"><a href="https://github.com/Gjain234"><img src="https://avatars.githubusercontent.com/Gjain234?s=100" width="100px;" alt="Gauri Jain"/><br /><sub><b>Gauri Jain</b></sub></a><br /></td>
     </tr>
     <tr>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/harvard-edge/cs249r_book/graphs/contributors"><img src="https://www.gravatar.com/avatar/468ef35acc69f3266efd700992daa369?d=identicon&s=100?s=100" width="100px;" alt="Fatima Shah"/><br /><sub><b>Fatima Shah</b></sub></a><br /></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/serco425"><img src="https://avatars.github

@@ -1,72 +1,66 @@
-# WilmerAI: Revolutionizing LLM Inference with Contextual Routing
+# WilmerAI: The Advanced Semantic Prompt Router and Workflow Engine
 
-**Unlock advanced semantic prompt routing and orchestrate complex tasks with WilmerAI, your gateway to next-generation language model interactions. [Visit the GitHub Repository](https://github.com/SomeOddCodeGuy/WilmerAI)**
+**Unlock the power of context and multi-LLM orchestration with WilmerAI, a cutting-edge application for advanced semantic prompt routing and complex task orchestration.**
 
-WilmerAI is a powerful application designed to transform how you interact with language models. It excels in advanced semantic prompt routing and complex task orchestration, offering a more intelligent and versatile approach compared to traditional LLM applications.
+[View the original repository](https://github.com/SomeOddCodeGuy/WilmerAI)
 
 ## Key Features
 
-*   **Advanced Contextual Routing:**
-    *   Analyzes the entire conversation history to understand the *true* intent behind a query.
-    *   Routes prompts to specialized workflows (e.g., coding, factual, creative) based on context, not just keywords.
-    *   Provides conditional "if/then" logic within workflows, allowing dynamic process control.
+*   **Advanced Contextual Routing:** Directs user requests based on the entire conversation history, not just the latest message, for superior understanding of intent.  This is achieved through a prompt router that intelligently selects specialized workflows based on context, and by the use of in-workflow routing that allows conditional "if/then" logic, allowing a process to dynamically choose its next step based on the output of a previous node.
 
-*   **Node-Based Workflow Engine:**
-    *   At the heart of WilmerAI, enabling structured and efficient processing of requests.
-    *   Uses JSON-defined workflows, composed of interconnected "nodes" that each perform a specific task.
-    *   Orchestrates multiple LLMs, external tools, and custom scripts within a single workflow, with outputs passed between nodes.
+*   **Node-Based Workflow Engine:**  At the core of WilmerAI is a powerful workflow engine, driven by JSON-defined sequences of steps (nodes). Each node executes specific tasks, and their outputs fuel subsequent steps, enabling sophisticated, chained-thought processes.
 
-*   **Multi-LLM & Multi-Tool Orchestration:**
-    *   Each node can call on different LLM endpoints or execute external tools.
-    *   Facilitates the use of the *best* model for each part of a task, boosting overall results.
-    *   Allows you to leverage all of your resources for any given single prompt.
+*   **Multi-LLM & Multi-Tool Orchestration:**  Workflows can leverage a variety of LLMs and external tools. This means you can connect your own or proprietary LLMs to run on a single prompt, with the potential for a single prompt to utilize 5+ computers, including proprietary APIs, depending on how you build your workflow.
 
-*   **Modular & Reusable Workflows:**
-    *   Create self-contained workflows for common tasks.
-    *   Execute workflows as reusable nodes in larger, more complex workflows.
-    *   Simplify the design of complex agent applications.
+*   **Modular & Reusable Workflows:** Build self-contained workflows for common tasks, then integrate them as reusable nodes within larger, complex workflows, simplifying the development of sophisticated AI agents.
 
-*   **Stateful Conversation Memory:**
-    *   Keeps track of conversations and improves contextual awareness and routing accuracy.
-    *   Chronological summary file, a continuously updated "rolling summary", and vector database for RAG.
+*   **Stateful Conversation Memory:**  WilmerAI maintains comprehensive conversation memory via a chronological summary file, a continually updated "rolling summary" and a searchable vector database for enhanced context and Retrieval-Augmented Generation (RAG).
 
-*   **Adaptable API Gateway:**
-    *   Exposes OpenAI and Ollama-compatible API endpoints.
-    *   Connects seamlessly with existing front-end applications and tools.
+*   **Adaptable API Gateway:** Seamlessly integrate your existing applications with OpenAI- and Ollama-compatible API endpoints.
 
-*   **Flexible Backend Connectors:**
-    *   Connects to various LLM backends (OpenAI, Ollama, KoboldCpp).
-    *   Uses a simple but powerful configuration system of Endpoints, API Types, and Presets.
+*   **Flexible Backend Connectors:**  Connect to a range of LLM backends (OpenAI, Ollama, KoboldCpp) through a flexible configuration system based on Endpoints, API Types, and Presets.
 
-*   **MCP Server Tool Integration using MCPO:**
-    *   Experimental support for MCP server tool calling using MCPO.
-    *   Enables tool use mid-workflow, expanding task capabilities.
-    *   Thanks to [iSevenDays](https://github.com/iSevenDays) for their contributions.
+*   **MCPO Server Tool Integration:** Experimental support for MCP server tool calling using MCPO, allowing tool use mid-workflow. Big thank you to [iSevenDays](https://github.com/iSevenDays) for the amazing work on this feature. More info can be found in the [ReadMe](Public/modules/README_MCP_TOOLS.md)
+
+## How it Works
+
+WilmerAI's architecture revolves around its core workflow engine and advanced routing capabilities. When a user submits a prompt, the system analyzes the context, including the full conversation history, to determine the most appropriate workflow to execute. These workflows are constructed using a node-based system, where each node performs a specific task, such as calling an LLM, running a script, or interacting with an external tool.
+
+This flexible framework enables complex, multi-step processes that can leverage multiple LLMs, enhance the quality of responses, and provide users with powerful and customizable AI interactions.
 
 ## Getting Started
 
-WilmerAI requires Python and offers easy setup through:
+1.  **Installation:** Follow the easy steps to install the program using the provided scripts (.bat for Windows, .sh for macOS, or manual installation with pip).
+2.  **Configuration:** Explore the Public directory's JSON configuration files.
+3.  **Endpoint Setup:** Configure your LLM endpoints in the `Endpoints` folder.
+4.  **User Selection:** Choose your preferred user template in the `Users` folder and set it as the current user.
+5.  **Launch:** Run WilmerAI, connect your application via the API endpoints, and begin experiencing advanced prompt routing and task orchestration.
 
-*   **Option 1: Using Provided Scripts:** Run .bat (Windows) or .sh (macOS) files.
-*   **Option 2: Manual Installation:** Install dependencies with `pip install -r requirements.txt` and run `python server.py`.
+## User Documentation
 
-### Quick-ish Setup
-
-1.  **Configure Endpoints:** Set up LLM API connections in the "Public/Configs/Endpoints" directory.
-2.  **Choose a User:** Define your settings in `Public/Configs/Users/_current-user.json`.
-
-Refer to the full [README](https://github.com/SomeOddCodeGuy/WilmerAI) for detailed instructions.
-
-## Example Applications
-
-*   Semantic Routing
-*   Workflow Orchestration
-*   Multi-LLM Interactions
+*   Detailed user instructions can be found in [/Docs/_User_Documentation/](/Docs/_User_Documentation/README.md)
+## Developer Documentation
+*   In-depth developer documentation can be found in [/Docs/Developer_Docs/](/Docs/Developer_Docs/README.md)
 
 ## Contact
 
-For feedback, requests, or support, reach out to WilmerAI.Project@gmail.com.
+For any questions or feedback, please reach out to WilmerAI.Project@gmail.com
 
-## License & Third-Party Libraries
+## License
+    WilmerAI
+    Copyright (C) 2025 Christopher Smith
 
-WilmerAI is licensed under the GNU General Public License. It utilizes several third-party libraries listed in the original README and licensed accordingly.
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+---

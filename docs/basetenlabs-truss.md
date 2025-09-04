@@ -1,29 +1,23 @@
-# Truss: The Easiest Way to Deploy and Serve Your Machine Learning Models
+# Truss: The Easiest Way to Deploy and Serve Your ML Models
 
-**(Original repository: [https://github.com/basetenlabs/truss](https://github.com/basetenlabs/truss))**
+**Truss simplifies the process of deploying and managing your machine learning models in production, making it easy to get your models live quickly.**  [Explore the original repository](https://github.com/basetenlabs/truss).
 
-Truss simplifies the process of deploying and serving your AI/ML models in production, enabling you to go from development to deployment faster than ever.
-
-**Key Features:**
+## Key Features of Truss
 
 *   **Write Once, Run Anywhere:** Package your model code, weights, and dependencies for consistent behavior across development and production environments.
-*   **Rapid Development Cycle:** Leverage a live reload server for quick feedback and skip complex Docker and Kubernetes configurations.
-*   **Framework Agnostic:** Truss supports models built with any Python framework, including `transformers`, `diffusers`, `PyTorch`, `TensorFlow`, `TensorRT`, and `Triton`.
-*   **Easy Deployment:** Seamlessly deploy your models to Baseten, with more platforms coming soon.
+*   **Fast Development Loop:** Benefit from a live reload server for rapid iteration and skip complex Docker and Kubernetes configurations.
+*   **Broad Framework Support:** Truss seamlessly supports models built with any Python framework, including `transformers`, `diffusers`, `PyTorch`, `TensorFlow`, `TensorRT`, and `Triton`.
+*   **Production-Ready Deployment:** Easily deploy your models to Baseten and soon to other platforms like AWS SageMaker.
 
-**Explore Truss Examples:**
+## Example Models Available as Trusses
 
-See pre-built Trusses for popular models to get started quickly:
-
-*   🦙 [Llama 2 7B, 13B, and 70B](https://github.com/basetenlabs/truss-examples/tree/main/llama)
+*   🦙 [Llama 2 7B](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-7b-chat) ([13B](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-13b-chat)) ([70B](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-70b-chat))
 *   🎨 [Stable Diffusion XL](https://github.com/basetenlabs/truss-examples/tree/main/stable-diffusion/stable-diffusion-xl-1.0)
 *   🗣 [Whisper](https://github.com/basetenlabs/truss-examples/tree/main/whisper/whisper-truss)
 
-... and [dozens more examples](https://github.com/basetenlabs/truss-examples/).
+and [dozens more examples](https://github.com/basetenlabs/truss-examples/).
 
-**Getting Started**
-
-**Installation:**
+## Installation
 
 Install Truss using pip:
 
@@ -31,88 +25,104 @@ Install Truss using pip:
 pip install --upgrade truss
 ```
 
-**Quickstart: Text Classification Example**
+## Quickstart: Deploy a Text Classification Model
 
-1.  **Create a Truss:**
+This quickstart will guide you through deploying a text classification pipeline from the open-source [`transformers` package](https://github.com/huggingface/transformers).
 
-    ```bash
-    truss init text-classification
-    ```
+### Create a Truss
 
-    Follow the prompts to name your Truss.
+Create a new Truss project using the following command:
 
-2.  **Navigate to the directory:**
+```bash
+truss init text-classification
+```
 
-    ```bash
-    cd text-classification
-    ```
+Follow the prompts, such as naming your Truss `Text classification`.
 
-3.  **Implement your Model:**
+Navigate into the newly created directory:
 
-    Edit `model/model.py` to define a `Model` class with `load()` and `predict()` methods:
+```bash
+cd text-classification
+```
 
-    ```python
-    from transformers import pipeline
+### Implement the Model
 
-    class Model:
-        def __init__(self, **kwargs):
-            self._model = None
+The core of a Truss lies within two essential files: `model/model.py` and `config.yaml`.  The `model/model.py` file defines a `Model` class, providing an interface between your ML model and the serving environment.
 
-        def load(self):
-            self._model = pipeline("text-classification")
+Implement two key methods within the `Model` class:
 
-        def predict(self, model_input):
-            return self._model(model_input)
-    ```
+*   `load()`: Loads the model when the server starts or is updated.
+*   `predict()`: Handles model inference for each request.
 
-4.  **Add Model Dependencies:**
+Here's an example `model/model.py`:
 
-    In `config.yaml`, update the `requirements` section:
+```python
+from transformers import pipeline
 
-    ```yaml
-    requirements:
-      - torch==2.0.1
-      - transformers==4.30.0
-    ```
+class Model:
+    def __init__(self, **kwargs):
+        self._model = None
 
-**Deployment**
+    def load(self):
+        self._model = pipeline("text-classification")
 
-Truss is currently supported by Baseten.
+    def predict(self, model_input):
+        return self._model(model_input)
+```
 
-1.  **Get a Baseten API Key:**
-    Sign up for a Baseten account at [https://app.baseten.co/signup/](https://app.baseten.co/signup/) and obtain your API key from [https://app.baseten.co/settings/account/api_keys](https://app.baseten.co/settings/account/api_keys).
+### Configure Dependencies
 
-2.  **Deploy your Model:**
+The `config.yaml` file is crucial for configuring the model serving environment. Specify required dependencies in the `requirements` section.
 
-    ```bash
-    truss push
-    ```
+In `config.yaml`, modify the `requirements` section as follows:
 
-    Monitor your model's deployment on [your Baseten dashboard](https://app.baseten.co/models/).
+```yaml
+requirements:
+  - torch==2.0.1
+  - transformers==4.30.0
+```
 
-3.  **Invoke Your Model:**
+## Deployment
 
-    After deployment, test your model from the terminal:
+Truss is designed for easy deployment, currently supporting Baseten, and soon to be available on other platforms.
 
-    ```bash
-    truss predict -d '"Truss is awesome!"'
-    ```
+### Get a Baseten API Key
 
-    **Response:**
+To deploy to Baseten, you'll need a [Baseten API key](https://app.baseten.co/settings/account/api_keys).  If you don't have an account, you can [sign up for free](https://app.baseten.co/signup/).
 
-    ```json
-    [
-      {
-        "label": "POSITIVE",
-        "score": 0.999873161315918
-      }
-    ]
-    ```
+### Deploy with `truss push`
 
-**Contributing**
+Deploy your model to Baseten using the following command and providing your API key when prompted:
 
-Truss is a community-driven project. We welcome contributions! Please refer to our [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).
+```bash
+truss push
+```
 
-**Acknowledgements**
+Monitor the deployment progress on [your Baseten model dashboard](https://app.baseten.co/models/).
+
+### Invoke the Model
+
+After deployment, test your model from the terminal:
+
+**Invocation**
+
+```bash
+truss predict -d '"Truss is awesome!"'
+```
+
+**Response**
+
+```json
+[
+  {
+    "label": "POSITIVE",
+    "score": 0.999873161315918
+  }
+]
+```
+
+## Contributing
+
+Truss is backed by Baseten and built with contributions from the community.  We welcome contributions; please consult our [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).
 
 Special thanks to [Stephan Auerhahn](https://github.com/palp) @ [stability.ai](https://stability.ai/) and [Daniel Sarfati](https://github.com/dsarfati) @ [Salad Technologies](https://salad.com/) for their contributions.

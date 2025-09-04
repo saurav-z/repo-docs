@@ -1,28 +1,23 @@
-Okay, here's an improved and SEO-optimized README for the `inspect_ai` project, incorporating the requested elements:
+Here's an improved and SEO-optimized README for the Inspect framework, incorporating your requirements:
 
-# Inspect: Evaluate & Enhance Your Large Language Models (LLMs)
+# **Inspect: Evaluate & Enhance Large Language Models**
 
-**Inspect, a framework from the UK AI Safety Institute, empowers you to rigorously evaluate and refine your Large Language Models.**  (Link to original repo:  [https://github.com/UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai))
+[<img width="295" src="https://inspect.aisi.org.uk/images/aisi-logo.svg" alt="UK AI Security Institute Logo" />](https://aisi.gov.uk/)
 
-[![Inspect Logo](https://inspect.aisi.org.uk/images/aisi-logo.svg)](https://aisi.gov.uk/)
+Inspect, developed by the [UK AI Safety Institute](https://aisi.gov.uk/), is your comprehensive framework for rigorously evaluating and improving the performance of Large Language Models (LLMs).
 
-## Key Features of Inspect
+## **Key Features of Inspect:**
 
-Inspect offers a comprehensive suite of tools for evaluating and improving LLMs:
+*   **Comprehensive Evaluation:** Assess LLMs using prompt engineering, tool usage, multi-turn dialog, and model-graded evaluations.
+*   **Built-in Components:** Leverage pre-built tools and functionalities for a streamlined evaluation process.
+*   **Extensible Architecture:** Easily integrate custom elicitation and scoring techniques through Python packages.
+*   **[See the full documentation here.](https://inspect.aisi.org.uk/)**
 
-*   **Prompt Engineering:** Design and optimize prompts to elicit desired behaviors from your models.
-*   **Tool Usage:** Evaluate how well your LLMs utilize external tools and APIs.
-*   **Multi-Turn Dialogue:** Analyze and assess LLMs' performance in complex, conversational scenarios.
-*   **Model-Graded Evaluations:** Leverage advanced evaluation techniques to automatically assess LLM outputs.
-*   **Extensible Architecture:** Easily extend Inspect with custom components and integrations for new elicitation and scoring methodologies through Python packages.
+## **Getting Started**
 
-## Getting Started with Inspect
+### **Installation**
 
-The best place to start with Inspect is the official documentation: [https://inspect.aisi.org.uk/](https://inspect.aisi.org.uk/)
-
-## Development Setup
-
-To contribute to or customize Inspect, follow these steps:
+To begin using Inspect for your LLM evaluation needs, follow these steps:
 
 1.  **Clone the Repository:**
 
@@ -37,32 +32,31 @@ To contribute to or customize Inspect, follow these steps:
     pip install -e ".[dev]"
     ```
 
-3.  **(Optional) Install Pre-commit Hooks:**
+### **Development & Contribution**
+
+For those interested in contributing or developing Inspect, here's how to set up your environment:
+
+1.  **Install Pre-Commit Hooks (Optional):**
 
     ```bash
     make hooks
     ```
 
-4.  **Run Linting, Formatting, and Tests:**
+2.  **Run Checks and Tests:**
 
     ```bash
     make check
     make test
     ```
 
-5.  **(Recommended) VS Code Extensions:**
+### **VS Code Setup (Recommended)**
 
-    Ensure you have the recommended VS Code extensions installed for optimal development: Python, Ruff, and MyPy.  VS Code will prompt you to install these upon opening the project.
+For an optimal development experience, we recommend using VS Code with the following extensions installed:
 
----
+*   Python
+*   Ruff
+*   MyPy
 
-**SEO and Readability Enhancements:**
+You will be prompted to install these extensions when you open the project in VS Code.
 
-*   **Clear Title:**  The title is more descriptive and includes relevant keywords ("Large Language Models," "LLMs," "Evaluation").
-*   **Concise Hook:** The opening sentence immediately grabs the reader's attention.
-*   **Bulleted Key Features:**  This format is easy to scan and highlights the core capabilities.  Each feature is clearly explained.
-*   **Development Instructions:**  The setup guide is broken down into clear steps, making it easy for new contributors to follow.
-*   **Keywords:**  The document incorporates important keywords like "LLM evaluation," "prompt engineering," and "AI safety."
-*   **Call to Action:** The "Getting Started" section directs users to the documentation.
-*   **Links:**  The provided link to the original repo makes it easy to find the source code.
-*   **Formatting:** The use of headings and whitespace improves readability.
+**[View the original Inspect repository on GitHub](https://github.com/UKGovernmentBEIS/inspect_ai).**

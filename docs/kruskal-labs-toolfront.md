@@ -17,34 +17,19 @@
 
 ---
 
-## ToolFront: Unlock Seamless Data Retrieval for AI Applications
+**Documentation: [docs.toolfront.ai](http://docs.toolfront.ai/)**
 
-**ToolFront** empowers developers to effortlessly retrieve data from various sources, enabling powerful AI-driven applications. [Explore the ToolFront repository](https://github.com/kruskal-labs/toolfront) to get started.
+---
 
-### Key Features:
+## Installation
 
-*   **Unified Interface:** Access data from databases, APIs, and documents with a consistent and intuitive API.
-*   **AI-Powered Data Extraction:** Leverage the power of AI models (OpenAI, Anthropic, Google, and more) for intelligent data retrieval and transformation.
-*   **Unmatched Control & Precision:** Fine-tune your data queries and extraction processes for optimal results.
-*   **Fast Performance:**  Built for speed and efficiency, allowing for rapid data retrieval.
-*   **Extensive Integrations:**  Supports a wide range of databases, APIs (OpenAPI/Swagger compatible), and document formats.
-*   **Flexible Deployment:** Easily deploy ToolFront with tools like Snowflake and more.
-
-### Installation
-
-Install ToolFront using pip:
+Install with `pip` or your favorite PyPI package manager.
 
 ```bash
 pip install toolfront
 ```
 
-For database support, install the necessary extras, for example: `pip install "toolfront[postgres]"`
-
-### Example Usage
-
-ToolFront offers a straightforward approach to data retrieval.  Here are a few examples:
-
-#### 1. Database Interaction (Text-to-SQL with OpenAI)
+## Example 1: Text2SQL with ChatGPT
 
 ```python
 from toolfront import Database
@@ -58,7 +43,9 @@ answer = db.ask("What's our best-selling product?", context=context)
 # >>> "Wireless Headphones Pro"
 ```
 
-#### 2. API Retrieval (with Claude)
+> **Note**: For databases, install with PyPI extras, e.g.: `pip install "toolfront[postgres]"`. See the [documentation](http://docs.toolfront.ai/) for the complete list of 10+ databases.
+
+## Example 2: API retrieval with Claude
 
 ```python
 from toolfront import API
@@ -70,7 +57,10 @@ answer: list[int] = api.ask("Get the last 5 order IDs for user_id=42")
 # >>> [1001, 998, 987, 976, 965]
 ```
 
-#### 3. Document Information Extraction (with Gemini)
+> **Note**: ToolFront supports any API with an OpenAPI (formerly Swagger) specification. Most common APIs like Slack, Discord, and GitHub have OpenAPI specs. See the [documentation](http://docs.toolfront.ai/) for more details.
+
+
+## Example 3: Document information extraction with Gemini
 
 ```python
 from toolfront import Document
@@ -88,7 +78,10 @@ answer: CompanyReport = doc.ask("Extract the key company information from this r
 # >>> CompanyReport(company_name="TechCorp Inc.", revenue=2500000, is_profitable=True)
 ```
 
-### Deploying with Snowflake (Example)
+> **Note**: ToolFront supports OpenAI, Anthropic, Google, xAI, and 14+ AI model providers. See the [documentation](http://docs.toolfront.ai/) for the complete list.
+
+
+## Example 4: Snowflake MCP Server
 
 ```json
 {
@@ -104,16 +97,12 @@ answer: CompanyReport = doc.ask("Extract the key company information from this r
 }
 ```
 
-### Documentation
+## Community & Contributing
 
-For detailed information, examples, and advanced usage, please refer to the official [ToolFront Documentation](http://docs.toolfront.ai/).
+- **Discord**: Join our [community server](https://discord.gg/rRyM7zkZTf) for real-time help and discussions
+- **X**: Follow us [@toolfront](https://x.com/toolfront) for updates and news
+- **Issues**: Report bugs or request features on [GitHub Issues](https://github.com/kruskal-labs/toolfront/issues)
 
-### Community & Contributing
+## License
 
-*   **Discord:** Join our [Discord server](https://discord.gg/rRyM7zkZTf) for support and discussions.
-*   **X (Twitter):** Follow us on [@toolfront](https://x.com/toolfront) for updates.
-*   **GitHub Issues:** Report bugs and suggest features on our [GitHub Issues](https://github.com/kruskal-labs/toolfront/issues).
-
-### License
-
-ToolFront is licensed under the [MIT License](https://github.com/kruskal-labs/toolfront/blob/main/LICENSE).
+This project is licensed under the terms of the MIT license.

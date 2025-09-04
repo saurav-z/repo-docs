@@ -1,77 +1,58 @@
-<!-- Banner Image -->
-<img width="6200" height="1294" alt="Flash Sparse Attention" src="https://github.com/user-attachments/assets/6dccb3a7-735b-4e99-bff9-3c9a31d85649" />
-
 <div align="center">
-
-[![arxiv](https://img.shields.io/badge/arXiv-2508.18224-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2508.18224)
-
+  <img src="https://github.com/user-attachments/assets/6dccb3a7-735b-4e99-bff9-3c9a31d85649" alt="Flash Sparse Attention" width="6200" height="1294">
 </div>
 
-# Flash Sparse Attention (FSA): Accelerating Large Language Models with Optimized Sparse Attention
+<div align="center">
+  <a href="https://arxiv.org/abs/2508.18224">
+    <img src="https://img.shields.io/badge/arXiv-2508.18224-b31b1b.svg?style=flat-square" alt="arXiv">
+  </a>
+</div>
 
-**Flash Sparse Attention (FSA) offers a novel kernel design to dramatically improve the efficiency of Native Sparse Attention (NSA), making it faster and more accessible for training and inference on modern GPUs.** Explore the cutting-edge techniques used to optimize the sparse attention mechanism, crucial for high-performance LLMs.
+# Flash Sparse Attention: Accelerating Native Sparse Attention for LLMs
 
-**[View the original repository on GitHub](https://github.com/Relaxed-System-Lab/Flash-Sparse-Attention)**
+**Flash Sparse Attention (FSA) provides an optimized, high-performance implementation of Native Sparse Attention (NSA), enabling faster and more efficient training and inference for large language models on modern GPUs.** ([Original Repo](https://github.com/Relaxed-System-Lab/Flash-Sparse-Attention))
 
-**Key Features:**
+## Key Features
 
-*   **Optimized NSA Implementation:** FSA provides an efficient, Triton-based implementation for Native Sparse Attention, enhancing performance, especially for smaller GQA group sizes.
-*   **Significant Speedup:** Achieve substantial performance gains by reducing kernel-level memory access and computations compared to traditional NSA.
-*   **Compatibility:** FSA is well-tested and compatible with NVIDIA Ampere and Hopper GPUs, and supports `fp16` and `bf16` data types.
-*   **Versatile GQA Support:** FSA supports various Grouped-Query Attention (GQA) group sizes, from 1 to 16, making it suitable for state-of-the-art LLMs.
-*   **Easy Integration:**  Instantiate the `FlashSparseAttention` module and easily integrate FSA into your LLM training pipeline with minimal modifications.
+*   **Optimized NSA Implementation:** FSA significantly improves the performance of NSA, a natively trainable sparse attention technique.
+*   **Triton-Based Kernels:** Leverages Triton for efficient kernel implementations, particularly for GQA group sizes less than 8.
+*   **Broad GPU Support:**  Well-tested on NVIDIA Ampere and Hopper GPUs (A100, H100, H200, etc.)
+*   **Data Type Flexibility:** Supports both fp16 and bf16 data types.
+*   **Versatile:** Works with varied GQA group sizes (1-16) and supports both training and inference (prefill).
+*   **Comprehensive Benchmarking:** Includes scripts for detailed performance and correctness comparisons.
 
-## What's New
+## News
 
-*   **[Upcoming]**: 🚀 Online profiling module for seamless transitions between NSA and FSA.
-*   **[August 2025]**: 💥 [Arxiv paper](https://www.arxiv.org/abs/2508.18224) released.
-*   **[August 2025]**: 🎈 Beta version of one-step decoding available in [`fsa_preview`](fsa_preview).
-*   **[August 2025]**: 🎉 Open-sourced `Flash-Sparse-Attention`, optimized for NSA.
+*   **[Upcoming]**: 🚀 Online profiling module, seamlessly transitions between NSA and FSA.
+*   **[2025-08]**: 💥 [Arxiv paper](https://www.arxiv.org/abs/2508.18224) released.
+*   **[2025-08]**: 🎈 Beta version of one-step decoding released in [`fsa_preview`](fsa_preview).
+*   **[2025-08]**: 🎉 Open sourced `Flash-Sparse-Attention`.
 
-## Method: Unveiling the FSA Kernel Design
+## Method
 
-FSA optimizes the NSA selected attention module by exchanging the kernel loop order to boost performance. This innovative approach splits the computation into three main kernels:
-
-1.  **Main Kernel:** Batches query tokens that attend to the same key-value block, storing partial results to a buffer.
-2.  **Reduction Kernel:** Accumulates attention results for each query token.
-3.  **Online Softmax Kernel:** Handles online softmax statistics computation.
-
-This design dramatically reduces unnecessary memory access and computations related to padded data, avoiding `atomic` additions.
-
-**Visual Comparison:** The computational process of NSA (left) and FSA main kernel (right) are compared in the following image.
+FSA optimizes the NSA selected attention module by rearranging kernel loop order and decoupling the computation into three main kernels: a kernel for batching query tokens, a reduction kernel, and an online softmax kernel. This approach reduces unnecessary memory access and computations, especially when dealing with padding in GQA scenarios.
 
 <img width="8817" height="3669" alt="NSA_FSA_cmop" src="https://github.com/user-attachments/assets/12250042-3c5d-40f3-82c3-d0ca443c4c45" />
 
-## Advantages of FSA
+## Advantages
 
-🚀 **Superior Performance:** FSA's key advantage is significantly reduced kernel-level memory access and computations.
+FSA boosts speed by significantly reducing kernel-level memory access and computations.
 
-<img width="4320" height="2592" alt="GQA_comp" src="https://github.com/user-attachments/assets/8cd7d3c2-4b8b-4e9b-bce9-ce9b792fe" />
-
-## Features and Compatibility
-
-FSA provides an optimized kernel implementation for the NSA selected attention module.
-
-**Key Capabilities:**
-
-*   **Hardware Support:** NVIDIA Ampere or Hopper GPUs (e.g., A100 SXM, H20, H100 PCIe, H100 NVL, H100 SXM, H200 SXM)
-*   **Data Types:** `fp16` and `bf16`
-*   **Head Dimension:**  Head dimensions less than or equal to 256 are supported across query, key, and value.
-*   **GQA Support:** Flexible GQA group sizes, ranging from 1 to 16.
-*   **Use Cases:** Training and inference (prefill).
+<img width="4320" height="2592" alt="GQA_comp" src="https://github.com/user-attachments/assets/8cd7d3c2-4b8b-4e9b-bce9-ce290cb792fe" />
 
 ## Installation
 
-Ensure you have the required dependencies:
+**Requirements:**
 
-*   [PyTorch](https://pytorch.org/) >= 2.4
-*   [Triton](https://github.com/openai/triton) >=3.0
-*   [transformers](https://github.com/huggingface/transformers) >=4.45.0
-*   [datasets](https://github.com/huggingface/datasets) >=3.3.0
-*   [accelerate](https://github.com/huggingface/accelerate) >= 1.9.0
-*   [flash-attn](https://github.com/Dao-AILab/flash-attention) ==2.6.3
+*   PyTorch >= 2.4
+*   Triton >=3.0
+*   transformers >=4.45.0
+*   datasets >=3.3.0
+*   accelerate >= 1.9.0
+*   flash-attn ==2.6.3
 
-Install the dependencies with:
+**Install with:**
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -79,8 +60,6 @@ pip install -r requirements.txt
 ## Usage
 
 ### Instantiate FSA Module
-
-Use the provided `FlashSparseAttention` class:
 
 ```python
 import torch
@@ -132,46 +111,34 @@ loss = (y * torch.randn_like(y)).sum(-1).mean()
 loss.backward()
 ```
 
-Under the hood, the [``FSATopkSparseAttention``](fsa/ops/FSA_topk_sparse_attention.py) class is called, providing the optimized kernels that accelerate the NSA selected attention module.
+### Train with FSA
 
-### Training with FSA
-
-Integrating FSA into your training process is straightforward. Simply replace the attention module and compute `cu_seqlens`. An example is available in [`SparseLlamaAttention`](test/train.py).
+Integrating FSA into your training pipeline involves instantiating the `FlashSparseAttention` module and computing `cu_seqlens`. See [`SparseLlamaAttention`](test/train.py) for an example.
 
 ## Evaluation
 
 ### Benchmark FSA Module
 
-Run detailed benchmarks using the commands in [`scripts/run_unit_test.sh`](scripts/run_unit_test.sh). Benchmarking includes:
-
-*   Correctness comparison (forward and backward pass).
-*   Performance comparison.
-*   Memory usage comparison.
+Use the commands in [`scripts/run_unit_test.sh`] to compare the performance, correctness, and memory usage of the FSA module.
 
 ### Benchmark FSA Selected Attention Module
 
-Benchmark the optimized NSA selected attention module using the commands in [`scripts/run_unit_test_sel_attn.sh`](scripts/run_unit_test_sel_attn.sh).
+Benchmark the optimized NSA selected attention module using the commands in [`scripts/run_unit_test_sel_attn.sh`].
 
 > [!Tip]
-> Experiment with different `gqa`, `seqlen`, `block_size`, and `topk` arguments in the scripts to gain a comprehensive understanding of FSA's performance on your hardware.  Benchmarking the FSA selected attention module typically offers a higher speedup.
+> Experiment with different `gqa`, `seqlen`, `block_size`, and `topk` values in the scripts for comprehensive benchmarking on your hardware. Benchmarking the FSA selected attention module typically yields the greatest speedups.
 
-## Performance Results
+## Performance
 
 ### Kernel Performance
 
-> Performance comparisons of Triton-based FSA, NSA, and Full Attention kernels under various configurations. The tuple ($64$, $16$) / ($128$, $8$) represents the block size $B_K$ and top-k value $Topk$, respectively. For FSA and NSA, the execution latency includes compressed, selected, and sliding attention; for Full Attention, the execution latency is the Flash Attention kernel execution latency.
-
 <img width="4366" height="3057" alt="kernel_perf" src="https://github.com/user-attachments/assets/d1e5868e-ff4c-452f-9810-89495b7ec233" />
 
-### End-to-End Performance
-
-> End-to-end training (right) and prefill (left) latency of state-of-the-art LLMs with FSA, NSA, or Full Attention.
+### End-to-end Performance
 
 <img width="6165" height="3093" alt="e2e_githubpic" src="https://github.com/user-attachments/assets/bb2628b3-2f2a-49fe-8b29-e63027ae043d" />
 
 ## Citation
-
-If you find this project useful, please cite:
 
 ```
 @article{yan2025flashsparseattentionalternative,
@@ -184,5 +151,5 @@ If you find this project useful, please cite:
 
 ## Acknowledgments
 
-*   **NSA Paper**: [Native Sparse Attention](https://arxiv.org/abs/2502.11089)
-*   **NSA Reference Implementation**: [Native Sparse Attention Triton](https://github.com/XunhaoLai/native-sparse-attention-triton)
+*   NSA paper: [Native Sparse Attention](https://arxiv.org/abs/2502.11089)
+*   NSA reference implementation: [Native Sparse Attention Triton](https://github.com/XunhaoLai/native-sparse-attention-triton)
