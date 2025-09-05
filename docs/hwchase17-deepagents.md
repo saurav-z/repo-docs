@@ -1,22 +1,18 @@
-# 🧠 Deep Agents: Build Powerful, Intelligent Agents with Ease
+# 🧠 Deep Agents: Unleash the Power of Advanced AI Agents
 
-**Create advanced agents capable of complex reasoning and problem-solving with the `deepagents` Python package.** 
-
-[View the original repo on GitHub](https://github.com/hwchase17/deepagents)
-
-`deepagents` provides a flexible framework for constructing "deep agents" that can tackle intricate tasks through planning, sub-agents, and access to tools. It empowers developers to move beyond simple agent architectures, enabling more sophisticated and effective AI solutions.
+**Tired of shallow AI agents that fail on complex tasks?** Deep Agents offers a powerful Python package to create sophisticated AI agents capable of planning, utilizing tools, and handling intricate workflows.  Built on the principles of architectures like "Claude Code", Deep Agents enables you to build intelligent agents that excel at tasks requiring deep reasoning and execution.  [Explore the Deep Agents repository on GitHub](https://github.com/hwchase17/deepagents) for more details.
 
 ## Key Features
 
-*   **Simplified Deep Agent Creation:** Easily build agents using pre-built components and customizable configurations.
-*   **Planning Tool:** Includes a built-in planning tool to guide the agent's actions and maintain focus on long-term goals.
-*   **Virtual File System:** Offers a mock file system for agents to manage files and data without affecting the underlying system.
-*   **Sub-Agents:** Supports the creation and integration of sub-agents for specialized tasks and context isolation.
-*   **Human-in-the-Loop:** Integrates human approval for tool execution through the `interrupt_config` parameter.
-*   **Built-in Tools:** Includes a default set of tools. `write_todos`, `write_file`, `read_file`, `ls`, and `edit_file`.
-*   **Asynchronous Support:**  Provides `async_create_deep_agent` for use with asynchronous tools.
-*   **MCP Integration:** Supports the use of MCP tools with the Langchain MCP Adapter.
-*   **Configurable Agents**: Allows you to create agents that can be built via a config passed in.
+*   **Flexible Tool Integration:** Easily integrate any function or LangChain `@tool` objects for your agent's capabilities.
+*   **Customizable Instructions:** Tailor the agent's behavior with specific instructions to guide its reasoning and actions.
+*   **Sub-Agent Support:**  Enable context isolation and specialized task handling with sub-agents. Define their roles, tools, and instructions for efficient task decomposition.
+*   **Built-in File System Tools:** Utilize pre-built tools for file manipulation (read, write, list, edit) within a virtual file system.
+*   **Human-in-the-Loop:** Incorporate human review and approval for tool executions with comprehensive control over interaction options like accept, edit, and respond.
+*   **Async Support:**  Leverage asynchronous tools for increased efficiency, supported by `async_create_deep_agent`.
+*   **MCP Compatibility:** Integrated support for MCP tools through the Langchain MCP Adapter library.
+*   **Configurable Agent:** Build and deploy fully configurable agents for dynamic control and management.
+*   **Built-in Planning:** Includes a basic todo-based planning tool.
 
 ## Installation
 
@@ -71,24 +67,32 @@ agent = create_deep_agent(
 result = agent.invoke({"messages": [{"role": "user", "content": "what is langgraph?"}]})
 ```
 
-**See the full example at [examples/research/research_agent.py](examples/research/research_agent.py)**.
+## Dive Deeper
+
+Explore the [examples/research/research_agent.py](examples/research/research_agent.py) to see a more complex application.  Deep Agents are built using LangGraph, allowing seamless integration with LangGraph's features like streaming, human-in-the-loop, memory, and studio.
 
 ## Customization Options
 
-*   **Tools:** Provide a list of functions or LangChain `@tool` objects.
-*   **Instructions:** Customize the prompt to guide agent behavior.
-*   **Sub-Agents:** Define sub-agents for specialized tasks.
-*   **Model:** Specify a LangChain model object.
-*   **Built-in Tools:** Control which built-in tools are accessible.
+*   **`tools` (Required):**  A list of functions or LangChain `@tool` objects the agent uses.
+*   **`instructions` (Required):** The instructions that shape the agent's core behavior and prompt the model for action.
+*   **`subagents` (Optional):** Define specialized sub-agents with their own tasks.
+*   **`model` (Optional):**  Customize the Large Language Model used by the agent.  Defaults to `claude-sonnet-4-20250514`.
+*   **`builtin_tools` (Optional):**  Specify which built-in tools the agent should have access to, providing fine-grained control over capabilities.
+*   **`interrupt_config` (Optional):** Customize how human-in-the-loop interrupts work.
 
-## Further Details
+## Built-in Components
 
-*   **Deep Agent Components**: Learn more about System prompts, Planning Tools, File System Tools, Sub Agents, Human-in-the-Loop and Built-In Tools in the documentation.
+*   **System Prompt:**  A comprehensive, built-in prompt based on Claude Code's approach, providing detailed instructions and guidance.  This can be further customized.
+*   **Planning Tool:** A built-in, Todo-based planning tool to guide task execution.
+*   **File System Tools:** A suite of virtual file system tools (ls, edit_file, read_file, write_file) for persistent data storage.
+*   **Sub Agents:** Built-in support for calling sub-agents, including a general-purpose subagent and the ability to define custom sub-agents.
+*   **Built-in Tools:**  Includes `write_todos`, `write_file`, `read_file`, `ls`, and `edit_file` by default.
+*   **Human-in-the-Loop:** Supports manual tool calls via `interrupt_config` allowing you to have fine-grained control over the tool execution
 
 ## Roadmap
 
 *   Allow users to customize full system prompt
-*   Code cleanliness (type hinting, docstrings, formatting)
+*   Code cleanliness (type hinting, docstrings, formating)
 *   Allow for more of a robust virtual filesystem
 *   Create an example of a deep coding agent built on top of this
 *   Benchmark the example of [deep research agent](examples/research/research_agent.py)

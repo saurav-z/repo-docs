@@ -1,39 +1,56 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif"/>
+  <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
 </p>
+
+# HelloGitHub: Discover Exciting and Beginner-Friendly Open Source Projects
+
+**HelloGitHub** is your gateway to the exciting world of open-source, curating a collection of interesting and accessible projects perfect for newcomers.  Explore the fun and ease of open source!
+
+[Go to the original repo](https://github.com/521xueweihan/HelloGitHub)
 
 <p align="center">
-  <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+  <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
+  <a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
+  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
+    <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
 </p>
 
-## HelloGitHub: Discover Exciting Open Source Projects
+## Key Features
 
-**HelloGitHub** is your gateway to the fascinating world of open-source projects, helping you find engaging and beginner-friendly projects to explore.
+*   **Curated Open Source Projects:** Discover hand-picked, interesting, and beginner-friendly open-source projects.
+*   **Monthly Updates:**  New projects are released monthly (on the 28th) in a convenient periodical format.
+*   **Diverse Content:** Explore a range of project types, including practical examples, and enterprise-level projects.
+*   **Learn and Grow:** Quickly grasp the charm of open source and find projects to get excited about.
 
-[Visit the original repository on GitHub](https://github.com/521xueweihan/HelloGitHub)
+## What's Included
 
-### Key Features:
+*   **Interesting Open Source Projects**
+*   **Open Source Books**
+*   **Practical Projects**
+*   **Enterprise-Level Projects**
 
-*   **Curated Open Source Projects:** Discover interesting and approachable open-source projects perfect for learning and inspiration.
-*   **Monthly Updates:** New projects are released monthly, ensuring fresh content and keeping you up-to-date with the latest trends.
-*   **Diverse Content:** Explore a variety of project types, including:
-    *   Interesting projects
-    *   Beginner-friendly projects
-    *   Open-source books
-    *   Practical projects
-    *   Enterprise-level projects
-*   **Enhance Your GitHub Skills:** HelloGitHub helps you quickly grasp the essence of open source and encourages active participation.
-*   **Community Driven:**  You can recommend or self-nominate projects to become a contributor!
+## Latest Issues
 
-### Content
+Get the best reading experience via the [official website](https://hellogithub.com/) or the [HelloGitHub WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
 
-Find the latest issues and explore past issues to discover new projects.
-*   [View the latest issue (e.g., HelloGitHub113)](/content/HelloGitHub113.md)
-*   ... (List of other issues) ...
+| :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
+| ------- | ----- | ------------ | ------ | --------- |
+| [Issue 113](/content/HelloGitHub113.md) | [Issue 112](/content/HelloGitHub112.md) | [Issue 111](/content/HelloGitHub111.md) |
+| [Issue 110](/content/HelloGitHub110.md) | [Issue 109](/content/HelloGitHub109.md) | [Issue 108](/content/HelloGitHub108.md) | [Issue 107](/content/HelloGitHub107.md) | [Issue 106](/content/HelloGitHub106.md) |
+| [Issue 105](/content/HelloGitHub105.md) | [Issue 104](/content/HelloGitHub104.md) | [Issue 103](/content/HelloGitHub103.md) | [Issue 102](/content/HelloGitHub102.md) | [Issue 101](/content/HelloGitHub101.md) |
+| [Issue 100](/content/HelloGitHub100.md) | [Issue 99](/content/HelloGitHub99.md) | [Issue 98](/content/HelloGitHub98.md) | [Issue 97](/content/HelloGitHub97.md) | [Issue 96](/content/HelloGitHub96.md) |
+| [Issue 95](/content/HelloGitHub95.md) | [Issue 94](/content/HelloGitHub94.md) | [Issue 93](/content/HelloGitHub93.md) | [Issue 92](/content/HelloGitHub92.md) | [Issue 91](/content/HelloGitHub91.md) |
+| [Issue 90](/content/HelloGitHub90.md) | [Issue 89](/content/HelloGitHub89.md) | [Issue 88](/content/HelloGitHub88.md) | [Issue 87](/content/HelloGitHub87.md) | [Issue 86](/content/HelloGitHub86.md) |
+| [Issue 85](/content/HelloGitHub85.md) | [Issue 84](/content/HelloGitHub84.md) | [Issue 83](/content/HelloGitHub83.md) | [Issue 82](/content/HelloGitHub82.md) | [Issue 81](/content/HelloGitHub81.md) |
+| [Issue 80](/content/HelloGitHub80.md) | [Issue 79](/content/HelloGitHub79.md) | [Issue 78](/content/HelloGitHub78.md) | [Issue 77](/content/HelloGitHub77.md) | [Issue 76](/content/HelloGitHub76.md) |
 
-### Sponsors
+## Contribute
 
-Thank you to our sponsors!
+Welcome to [recommend or self-recommend](https://hellogithub.com/periodical) projects and become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
+
+## Sponsors
 
 <table>
   <thead>
@@ -69,6 +86,6 @@ Thank you to our sponsors!
   </thead>
 </table>
 
-### License
+## License
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact me at <a href="mailto:595666367@qq.com">595666367@qq.com</a>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  [Contact Us](mailto:595666367@qq.com)

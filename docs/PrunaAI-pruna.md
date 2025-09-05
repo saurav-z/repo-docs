@@ -1,10 +1,10 @@
 <div align="center">
-  <img src="./docs/assets/images/logo.png" alt="Pruna AI Logo" width=400>
-  <img src="./docs/assets/images/element.png" alt="Element" width=10>
-  **Supercharge your AI models with Pruna: Making them faster, cheaper, and greener!**
-  <img src="./docs/assets/images/element.png" alt="Element" width=10>
-  <br>
-</div>
+
+<img src="./docs/assets/images/logo.png" alt="Pruna AI Logo" width=400></img>
+
+  <img src="./docs/assets/images/element.png" alt="Element" width=10></img>
+  **Supercharge your AI models with Pruna: Faster, Cheaper, Smaller, Greener!**
+  <img src="./docs/assets/images/element.png" alt="Element" width=10></img>
 
 <br>
 
@@ -22,7 +22,7 @@
 
 [![Website](https://img.shields.io/badge/Pruna.ai-purple?style=flat-square)][website]
 [![X (formerly Twitter) URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Fx.com%2FPrunaAI)][x]
-[![Devto](https://img.shields.io/badge/dev-to-black?style=flat-square)][devto]
+[![Devto](https://img.shields/badge/dev-to-black?style=flat-square)][devto]
 [![Reddit](https://img.shields.io/badge/Follow-r%2FPrunaAI-orange?style=social)][reddit]
 [![Discord](https://img.shields.io/badge/Discord-join_us-purple?style=flat-square)][discord]
 [![Huggingface](https://img.shields.io/badge/Huggingface-models-yellow?style=flat-square)][huggingface]
@@ -30,136 +30,123 @@
 
 <br>
 
-<img src="./docs/assets/images/triple_line.png" alt="Pruna AI Logo" width=600, height=30>
+<img src="./docs/assets/images/triple_line.png" alt="Pruna AI Logo" width=600, height=30></img>
 
-## About Pruna
+</div>
 
-Pruna is a cutting-edge model optimization framework designed to help developers achieve superior performance and efficiency with their AI models.  Leveraging a suite of powerful compression techniques, Pruna empowers you to dramatically improve your models' speed, reduce their size, lower computational costs, and minimize their environmental impact.
+## **Pruna: Optimize Your AI Models for Peak Performance**
 
-**Key Features:**
+Pruna is a powerful model optimization framework designed to help developers build AI models that are faster, more efficient, and less resource-intensive. Leveraging a suite of cutting-edge compression techniques, Pruna empowers you to optimize your AI models with minimal effort.  **[Visit the Pruna GitHub repository](https://github.com/PrunaAI/pruna) to get started.**
 
-*   **Faster Inference:** Accelerate model inference times.
-*   **Smaller Model Sizes:** Reduce model size without sacrificing quality.
-*   **Reduced Costs:** Lower computational expenses and resource demands.
-*   **Greener AI:** Decrease energy consumption and environmental footprint.
-*   **User-Friendly:** Optimized for ease of use, requiring minimal code changes.
-*   **Broad Compatibility:** Supports various model types, including LLMs, Diffusion Models, Vision Transformers, and Speech Recognition Models.
+### **Key Features**
 
-[Visit our GitHub repository for the source code.](https://github.com/PrunaAI/pruna)
+*   **🚀 Faster Inference:** Accelerate model execution with advanced optimization algorithms.
+*   **💾 Smaller Model Sizes:** Reduce model footprint without compromising performance.
+*   **💰 Lower Costs:** Minimize computational expenses and resource requirements.
+*   **🌱 Greener AI:** Decrease energy consumption and environmental impact.
+*   **🛠️ Comprehensive Toolkit:** Includes caching, quantization, pruning, distillation, and compilation techniques.
+*   **🌐 Broad Model Support:** Compatible with a wide range of models including LLMs, Diffusion Models, Vision Transformers, and more.
+*   **💻 Easy Integration:** Optimize models with just a few lines of code.
 
-## Installation
+## **Installation**
 
-Pruna is available for Linux, MacOS, and Windows.
+Pruna can be installed on Linux, macOS, and Windows.
 
 **Prerequisites:**
 
 *   Python 3.9 or higher
-*   Optional: [CUDA toolkit](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/) for GPU acceleration
+*   Optional: CUDA toolkit for GPU support
 
 **Installation Options:**
 
-1.  **Install via pip:**
-
+1.  **Using pip:**
     ```bash
     pip install pruna
     ```
 
-2.  **Install from source:**
-
+2.  **From Source:**
     ```bash
     git clone https://github.com/pruna-ai/pruna.git
     cd pruna
     pip install -e .
     ```
 
-## Quick Start
+## **Quick Start**
 
-Get started with Pruna in just a few lines of code.
+Optimize your models in a few simple steps:
 
 ```python
 from diffusers import StableDiffusionPipeline
 from pruna import smash, SmashConfig
 
-# Load a pre-trained model
+# 1. Load a pre-trained model
 base_model = StableDiffusionPipeline.from_pretrained("stable-diffusion-v1-5/stable-diffusion-v1-5")
 
-# Configure and smash your model
+# 2. Configure the optimization process
 smash_config = SmashConfig()
 smash_config["cacher"] = "deepcache"
 smash_config["compiler"] = "stable_fast"
+
+# 3. Smash your model!
 smashed_model = smash(model=base_model, smash_config=smash_config)
 
-# Use the optimized model
+# 4. Use the optimized model
 smashed_model("An image of a cute prune.").images[0]
-
-# Evaluate performance (Optional)
-from pruna.evaluation.task import Task
-from pruna.evaluation.evaluation_agent import EvaluationAgent
-from pruna.data.pruna_datamodule import PrunaDataModule
-
-datamodule = PrunaDataModule.from_string("LAION256")
-datamodule.limit_datasets(10)
-task = Task("image_generation_quality", datamodule=datamodule)
-eval_agent = EvaluationAgent(task)
-eval_agent.evaluate(smashed_model)
 ```
 
-Explore all supported [algorithms][docs-algorithms] and detailed [tutorials][documentation].
+For detailed examples and more advanced configurations, see the [Pruna documentation][documentation].
 
-## Pruna Pro
+## **Pruna Pro: Unleash the Full Potential**
 
-Unlock advanced optimization features with Pruna Pro, our enterprise solution.  Benefit from enhanced features, the `OptimizationAgent`, priority support, and more.
+For advanced features and even greater optimization, explore [Pruna Pro](https://docs.pruna.ai/en/stable/docs_pruna_pro/user_manual/pruna_pro.html), our enterprise solution. Pruna Pro includes:
 
-### Benchmarks
+*   Advanced Optimization Features
+*   OptimizationAgent
+*   Priority Support
+*   ...and more!
 
-We tested popular diffusers pipelines with Pruna Pro to see how much smaller and faster they can be made.
+### **Benchmark Examples with Pruna Pro**
 
-#### Stable Diffusion XL
+Here's how Pruna Pro boosts performance on popular models:
 
-| Feature            | Before  | After       | Improvement         |
-|--------------------|---------|-------------|---------------------|
-| Algorithm          | N/A     | Auto Caching with DeepCache  | N/A                 |
-| Model Size         | 8.8GB   | 6.7GB       | Model size reduced  |
-| Inference Latency | N/A     | 9%          | Additional Speed  |
+**Stable Diffusion XL:**
+
+*   Combination of Auto Caching, [DeepCache](https://github.com/horseee/DeepCache), and `torch.compile`.
+*   Uses [HQQ](https://github.com/mobiusml/hqq) 8-bit quantization to reduce the size of the model from 8.8GB to 6.7GB.
 
 <img src="./docs/assets/plots/benchmark_sdxl.svg" alt="SDXL Benchmark"/>
 
-#### FLUX [dev]
+**FLUX [dev]:**
 
-| Feature            | Before  | After        | Improvement         |
-|--------------------|---------|--------------|---------------------|
-| Algorithm          | N/A     | Auto Caching with TeaCache   | N/A                 |
-| Model Size         | 33GB    | 23GB         | Model size reduced  |
-| Inference Latency  | N/A     | 13%          | Additional Speed  |
+*   Combines Auto Caching with [TeaCache](https://github.com/ali-vilab/TeaCache).
+*   Uses [Stable Fast](https://github.com/chengzeyi/stable-fast) and [HQQ](https://github.com/mobiusml/hqq) 8-bit quantization to reduce the size of FLUX from 33GB to 23GB.
 
 <img src="./docs/assets/plots/benchmark_flux.svg" alt="FLUX [dev] Benchmark"/>
 
-#### HunyuanVideo
+**HunyuanVideo:**
 
-| Feature            | Before  | After        | Improvement         |
-|--------------------|---------|--------------|---------------------|
-| Algorithm          | N/A     | Auto Caching with TeaCache  | N/A                 |
-| Model Size         | 41GB    | 29GB         | Model size reduced  |
+*   Combines Auto Caching with [TeaCache](https://github.com/ali-vilab/TeaCache).
+*   Applying [HQQ](https://github.com/mobiusml/hqq) 8-bit quantization to the model reduced the size from 41GB to 29GB.
 
 <img src="./docs/assets/plots/benchmark_hunyuan.svg" alt="HunyuanVideo Benchmark"/>
 
-## Algorithm Overview
+## **Algorithm Overview**
 
-Pruna offers a wide range of optimization algorithms.
+Pruna offers a variety of optimization algorithms. See the [documentation][documentation] for detailed descriptions.
 
-| Technique       | Description                                                                                   | Speed | Memory | Quality |
-| --------------- | ----------------------------------------------------------------------------------------------- | :---: | :----: | :-----: |
-| `batcher`       | Groups inputs for simultaneous processing, improving efficiency.                              |  ✅   |   ❌   |   ➖   |
-| `cacher`        | Stores intermediate computations to speed up subsequent operations.                            |  ✅   |   ➖   |   ➖   |
-| `compiler`      | Optimizes the model with instructions for specific hardware.                                 |  ✅   |   ➖   |   ➖   |
-| `distiller`     | Trains a smaller model to mimic a larger one.                                                |  ✅   |   ✅   |   ❌   |
-| `quantizer`     | Reduces precision of weights and activations, lowering memory requirements.                  |  ✅   |   ✅   |   ❌   |
-| `pruner`        | Removes redundant connections and neurons, creating a more efficient network.                |  ✅   |   ✅   |   ❌   |
-| `recoverer`     | Restores the performance of a model after compression.                                       |  ➖   |   ➖   |   ✅   |
-| `factorizer`    | Factorization batches several small matrix multiplications into one large fused operation. | ✅  | ➖ | ➖ |
-| `enhancer`      | Enhances the model output by applying post-processing algorithms such as denoising or upscaling. |  ❌   |   ➖   |   ✅   |
-| `distributer`   | Distributes the inference, the model or certain calculations across multiple devices. | ✅ | ❌ | ➖ |
-| `kernel`        | Kernels are specialized GPU routines that speed up parts of the computation.  | ✅ | ➖ | ➖ |
+| Technique     | Description                                                                                     | Speed | Memory | Quality |
+| ------------- | ----------------------------------------------------------------------------------------------- |:-----:|:------:|:-------:|
+| `batcher`     | Groups inputs together to be processed simultaneously, improving computational efficiency.          | ✅    | ❌     | ➖      |
+| `cacher`      | Stores intermediate results of computations to speed up subsequent operations.                  | ✅    | ➖     | ➖      |
+| `compiler`    | Optimizes the model with instructions for specific hardware.                                    | ✅    | ➖     | ➖      |
+| `distiller`   | Trains a smaller model to mimic a larger model.                                                | ✅    | ✅     | ❌      |
+| `quantizer`   | Reduces the precision of weights and activations, lowering memory requirements.                 | ✅    | ✅     | ❌      |
+| `pruner`      | Removes less important connections and neurons.                                                 | ✅    | ✅     | ❌      |
+| `recoverer`   | Restores the performance of a model after compression.                                          | ➖    | ➖     | ✅      |
+| `factorizer`  | Batches several small matrix multiplications into one large fused operation.                    | ✅    | ➖     | ➖      |
+| `enhancer`    | Enhances the model output by applying post-processing algorithms such as denoising or upscaling. | ❌    | ➖     | ✅      |
+| `distributer` | Distributes the inference, the model or certain calculations across multiple devices.           | ✅    | ❌     | ➖      |
+| `kernel`      | Specialized GPU routines that speed up parts of the computation.                                | ✅    | ➖     | ➖      |
 
 ✅ (improves), ➖ (approx. the same), ❌ (worsens)
 
@@ -169,19 +156,19 @@ Pruna offers a wide range of optimization algorithms.
 
 <br>
 
-## FAQ and Troubleshooting
+## **FAQ and Troubleshooting**
 
-Find answers in our [documentation][documentation], [FAQs][docs-faq], or existing issues. For further assistance, contact the Pruna community on [Discord][discord], join our [Office Hours][docs-office-hours], or open an issue on GitHub.
+Find answers to common questions and troubleshooting tips in the [documentation][documentation], [FAQs][docs-faq], or existing issues.  Need help? Join the [Discord][discord], attend [Office Hours][docs-office-hours], or open an issue on GitHub.
 
-## Contributors
+## **Contribute**
 
-Made with 💜 by the Pruna AI team and our contributors. [Contribute to the repository][docs-contributing]!
+Help build Pruna! The project welcomes contributions from the community. Become part of the Pruna family.
 
 [![Contributors](https://contrib.rocks/image?repo=PrunaAI/pruna)](https://github.com/PrunaAI/pruna/graphs/contributors)
 
-## Citation
+## **Citation**
 
-If you use Pruna in your research, cite the project:
+If you use Pruna in your research, please cite the project:
 
 ```
 @misc{pruna,

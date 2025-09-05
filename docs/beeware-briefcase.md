@@ -1,44 +1,47 @@
-[<img src="https://beeware.org/project/briefcase/briefcase.png" width="72" alt="logo" />](https://beeware.org/briefcase)
+[<img src="https://beeware.org/project/briefcase/briefcase.png" width="72" alt="Briefcase Logo" />](https://beeware.org/briefcase)
 
-# Briefcase: Turn Your Python Code into Native Apps 
+# Briefcase: Turn Your Python Code into Native Apps
+
+**Briefcase empowers Python developers to easily package and deploy their projects as native applications for various platforms.**
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
 [![PyPI Version](https://img.shields.io/pypi/v/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
-[![Maturity](https://img.shields.io/pypi/status/briefcase.svg)](https://pypi.org/pypi/briefcase)
+[![Maturity](https://img.shields.io/pypi/status/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
 [![BSD License](https://img.shields.io/pypi/l/briefcase.svg)](https://github.com/beeware/briefcase/blob/main/LICENSE)
 [![Build Status](https://github.com/beeware/briefcase/workflows/CI/badge.svg?branch=main)](https://github.com/beeware/briefcase/actions)
 [![Discord server](https://img.shields.io/discord/836455665257021440?label=Discord%20Chat&logo=discord&style=plastic)](https://beeware.org/bee/chat/)
 
-Briefcase is a powerful tool that lets you package your Python projects into standalone, native applications for various platforms. [View the original repository](https://github.com/beeware/briefcase).
-
 ## Key Features
 
-*   **Cross-Platform Compatibility:** Package your Python applications for:
+*   **Cross-Platform Deployment:** Package your Python projects for multiple operating systems.
+*   **Supported Platforms:**
     *   macOS
     *   Windows
     *   Linux
     *   iOS (iPhone/iPad)
     *   Android
     *   Web
-*   **Future-Proofing:** Support for AppleTV, watchOS, and wearOS deployments is planned.
-*   **Easy to Use:** Simplify the process of converting your Python code into native apps.
+*   **Future Platform Support:** Planned support for AppleTV, watchOS, and wearOS.
 
 ## Getting Started
 
 Install Briefcase with a single command:
 
 ```bash
-$ python -m pip install briefcase
+python -m pip install briefcase
 ```
 
-For a comprehensive guide to using Briefcase, check out the [BeeWare tutorial](https://docs.beeware.org), which provides a step-by-step introduction to creating and packaging a new application.
+For a comprehensive guide to using Briefcase, explore the [BeeWare tutorial](https://docs.beeware.org), which demonstrates how to create and package a new application.
 
-## Support the Project
+## Financial Support
 
-The BeeWare project is sustained by the generous support of its community. Consider supporting the project through:
+The BeeWare project thrives thanks to the generous support of financial members, including:
 
-*   Financial Membership: Join [Anaconda Inc.](https://anaconda.com/) and other valued members.
-*   Individual Contributions: Support the project by becoming a financial member!
+[![Anaconda logo](https://beeware.org/community/members/anaconda/anaconda-large.png)](https://anaconda.com/)
+
+Anaconda Inc. - Advancing AI through open source.
+
+Individual contributions are also welcome; please consider becoming a financial member via [this link](https://beeware.org/community/members/).
 
 ## Documentation
 
@@ -46,17 +49,19 @@ Comprehensive documentation for Briefcase is available on [Read The Docs](https:
 
 ## Community & Support
 
-Connect with the Briefcase and BeeWare community:
+Join the BeeWare community and connect with fellow users and developers:
 
 *   **Mastodon:** [@beeware@fosstodon.org](https://fosstodon.org/@beeware)
 *   **Discord:** [BeeWare Discord Chat](https://beeware.org/bee/chat/)
-*   **GitHub Discussions:** [Briefcase Discussions](https://github.com/beeware/briefcase/discussions)
+*   **GitHub Discussions:** [Briefcase GitHub Discussions](https://github.com/beeware/briefcase/discussions)
 
-We adhere to the [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/) to ensure a welcoming and respectful environment.
+We are committed to a welcoming and respectful community as outlined in our [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/).
 
 ## Contributing
 
-Help improve Briefcase!
+If you encounter any issues or wish to contribute to Briefcase, please:
 
-*   **Report Issues:** [Log issues on GitHub](https://github.com/beeware/briefcase/issues).
-*   **Contribute Code:** Learn how to contribute by reviewing the [contribution guide](https://briefcase.readthedocs.io/en/latest/how_to/contribute/index.html).
+*   **Report Bugs:** [Log issues on GitHub](https://github.com/beeware/briefcase/issues).
+*   **Contribute Code:**  Review the [contribution guide](https://briefcase.readthedocs.io/en/latest/how_to/contribute/index.html) for setting up a development environment and contributing to Briefcase's development.
+
+**[View the original repository on GitHub](https://github.com/beeware/briefcase)**

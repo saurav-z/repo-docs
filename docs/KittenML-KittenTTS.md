@@ -1,17 +1,15 @@
-# KittenTTS: Realistic Text-to-Speech for Everyone 😻
+# KittenTTS: The Lightweight, High-Quality Text-to-Speech Model (😻)
 
-**Tired of bulky and resource-intensive text-to-speech (TTS) models?** KittenTTS offers a groundbreaking, lightweight, and high-quality TTS solution that's perfect for any project. (See the original repo [here](https://github.com/KittenML/KittenTTS).)
+**Bring your text to life with KittenTTS, an open-source, ultra-lightweight text-to-speech model that delivers realistic voice synthesis without the need for a GPU.**  ([Original Repository](https://github.com/KittenML/KittenTTS))
 
-## Key Features
+## Key Features:
 
-*   **Ultra-Lightweight:** Model size under 25MB for easy deployment.
-*   **CPU-Optimized:** Runs smoothly on any device, no GPU required.
-*   **High-Quality Voices:** Experience natural-sounding speech with various premium voice options.
-*   **Fast Inference:** Optimized for real-time speech synthesis and rapid generation.
+*   **Ultra-Lightweight:** Model size under 25MB, perfect for deployment on resource-constrained devices.
+*   **CPU-Optimized:**  Runs seamlessly on any device without requiring a GPU.
+*   **High-Quality Voices:**  Choose from several premium voice options to match your needs.
+*   **Fast Inference:** Optimized for real-time speech synthesis, enabling quick audio generation.
 
-## Quick Start
-
-Get started with KittenTTS in minutes!
+## Getting Started
 
 ### Installation
 
@@ -38,15 +36,15 @@ sf.write('output.wav', audio, 24000)
 
 KittenTTS is designed to work on virtually any system.
 
-## Roadmap
+##  Future Development
 
-*   \[x] Release a preview model
-*   \[ ] Release the fully trained model weights
-*   \[ ] Release a mobile SDK
-*   \[ ] Release a web version
+*   [x] Release a preview model
+*   [ ] Release the fully trained model weights
+*   [ ] Release mobile SDK
+*   [ ] Release web version
 
 ## Get Involved
 
-*   [Join our Discord](https://discord.com/invite/VJ86W4SURW)
-*   [For custom support - fill this form ](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
-*   Email us with any questions: [info@stellonlabs.com](mailto:info@stellonlabs.com)
+*   **Join the Community:** [Join our Discord](https://discord.com/invite/VJ86W4SURW)
+*   **Custom Support:** [Fill out this form](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
+*   **Contact Us:** Email the creators with any questions: info@stellonlabs.com

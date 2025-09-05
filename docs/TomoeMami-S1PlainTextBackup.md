@@ -1,37 +1,44 @@
-# S1 Plain Text Backup: Preserving Stage1st Forum Threads
+# S1 Forum Plain Text Backup - Preserving Stage1st Forum History
 
-**Tired of losing valuable forum discussions?** This repository offers plain text backups of high-activity threads from the Stage1st (S1) forum, ensuring you can access and search important discussions. ([View the original repository](https://github.com/TomoeMami/S1PlainTextBackup))
+**Preserve and access your favorite Stage1st (S1) forum threads with this plain text backup, offering a searchable and archivable history.**
+
+[View the original repository on GitHub](https://github.com/TomoeMami/S1PlainTextBackup)
 
 ## Key Features
 
-*   **Comprehensive Backups:**  Stores plain text backups of active S1 forum threads, primarily those with high engagement.
-*   **Regular Updates:**  Backups are generated for threads exceeding a certain activity threshold (e.g., high number of replies within a specific timeframe).
-*   **Archival System:**  Threads that become less active are moved to historical archives, ensuring long-term accessibility.  Historical archives are organized by year.
-*   **Searchable Content:** Plain text format allows for easy searching and indexing.
-*   **Supported Formatting:** Preserves basic formatting elements for readability.
+*   **Comprehensive Backup:** Stores plain text backups of active S1 forum threads.
+*   **Regular Updates:** Focuses on new threads with activity, ensuring a current snapshot of the forum.
+*   **Searchable Content:** Plain text format allows for easy searching and content discovery.
+*   **Archive Structure:** Threads are organized into files with approximately 1500 posts per file, making navigation and retrieval easier.
+*   **Format Support:** Preserves basic formatting to enhance readability:
+    *   Bold text
+    *   Hyperlinks
+    *   Image support (jpg, jpeg, png, gif, tif, webp)
+    *   Ratings
 
-    *   **Bold text**
-    *   **Links**
-    *   **Images** (Supports common formats: JPG, JPEG, PNG, GIF, TIFF, WebP)
-    *   **Ratings/Scores**
+## How It Works
 
-## Archive Structure
+This repository automatically backs up new threads from the Stage1st forum. Specifically, it collects threads that meet the following criteria:
 
-The project archives historical threads. You can explore the archives for past years:
+*   Threads must have more than 40 replies (1 page) within the first 24 hours.
+*   Backups are stored for 14 days.
+*   After 3 days without replies, the backup will be moved to the appropriate historical archive.
 
-*   [2020-2021](https://github.com/TomoeMami/S1PlainTextArchive2021)
-*   [2022](https://github.com/TomoeMami/S1PlainTextArchive2022)
-*   [2023](https://github.com/TomoeMami/S1PlainTextArchive2023)
-*   [2024](https://github.com/TomoeMami/S1PlainTextArchive2024)
-*   [2025 - Present](https://github.com/TomoeMami/S1PlainTextArchive2025)
+## Historical Archives
+
+Access historical backups by year:
+
+| [2020-2021](https://github.com/TomoeMami/S1PlainTextArchive2021) |
+| [2022](https://github.com/TomoeMami/S1PlainTextArchive2022) | [2023](https://github.com/TomoeMami/S1PlainTextArchive2023) | [2024](https://github.com/TomoeMami/S1PlainTextArchive2024) |
+| [2025-Present](https://github.com/TomoeMami/S1PlainTextArchive2025) |
 
 ## Important Notes
 
-*   **File Size Limits:** To ensure compatibility with GitHub rendering, individual files are kept under 1MB, typically covering approximately 50 pages of a thread.
-*   **Local Backup Tool:** For comprehensive image and attachment backups, consider using [S1Downloader](https://github.com/shuangluoxss/Stage1st-downloader).
-*   **COVID-19 Thread Archives:**  Backups of COVID-19 related threads are available at:  [https://gitlab.com/memory-s1/virus](https://gitlab.com/memory-s1/virus)
+*   **File Size:** To ensure proper rendering on GitHub, individual files are limited to 1MB and are split into multiple files with a maximum of 50 pages.
+*   **Local Downloads:** For a complete local backup with images, consider using the [S1Downloader](https://github.com/shuangluoxss/Stage1st-downloader) tool.
+*   **COVID-19 Thread Backups:** Backups for the COVID-19-related threads (three and four) are sourced from [https://gitlab.com/memory-s1/virus](https://gitlab.com/memory-s1/virus).
 
-## Recent Updates
+## Changelog
 
-*   **February 15, 2024:** Collection criteria adjusted to include threads with over 40 replies (1 page) within 24 hours, with a 14-day cache.
-*   **February 3, 2024:**  Collection criteria adjusted to include threads with over 40 replies (1 page) within 12 hours, with a 7-day cache.
+*   **February 15, 2024:** Adjusted collection criteria to include threads with over 40 replies (1 page) within 24 hours. Increased the cache to 14 days.
+*   **February 3, 2024:** Modified collection to include threads with over 40 replies (1 page) within 12 hours. Reduced the cache to 7 days.

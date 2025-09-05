@@ -1,23 +1,29 @@
-Here's an improved and SEO-optimized README for the Inspect framework, incorporating your requirements:
+Here's an improved and SEO-optimized README, incorporating your requests:
 
-# **Inspect: Evaluate & Enhance Large Language Models**
+# Inspect: Evaluate and Enhance Large Language Models (LLMs)
 
-[<img width="295" src="https://inspect.aisi.org.uk/images/aisi-logo.svg" alt="UK AI Security Institute Logo" />](https://aisi.gov.uk/)
+**Safeguard your LLMs with Inspect, a powerful framework developed by the UK AI Safety Institute for rigorous evaluation and analysis.** [(View the original repository)](https://github.com/UKGovernmentBEIS/inspect_ai)
 
-Inspect, developed by the [UK AI Safety Institute](https://aisi.gov.uk/), is your comprehensive framework for rigorously evaluating and improving the performance of Large Language Models (LLMs).
+[<img width="295" src="https://inspect.aisi.org.uk/images/aisi-logo.svg" alt="Inspect Logo" />](https://aisi.gov.uk/)
 
-## **Key Features of Inspect:**
+Inspect empowers researchers and developers to thoroughly assess and improve the performance, safety, and reliability of their large language models.
 
-*   **Comprehensive Evaluation:** Assess LLMs using prompt engineering, tool usage, multi-turn dialog, and model-graded evaluations.
-*   **Built-in Components:** Leverage pre-built tools and functionalities for a streamlined evaluation process.
-*   **Extensible Architecture:** Easily integrate custom elicitation and scoring techniques through Python packages.
-*   **[See the full documentation here.](https://inspect.aisi.org.uk/)**
+## Key Features of Inspect:
 
-## **Getting Started**
+*   **Comprehensive Evaluation:** Provides a robust framework for assessing LLM performance across various metrics.
+*   **Prompt Engineering Capabilities:**  Includes tools to design, experiment with, and optimize prompts for effective LLM interaction.
+*   **Tool Usage Analysis:**  Offers features to evaluate how well LLMs utilize external tools and resources.
+*   **Multi-Turn Dialog Support:** Facilitates evaluation of LLMs in complex, multi-turn conversational scenarios.
+*   **Model-Graded Evaluations:** Enables in-depth analysis through model-based scoring and assessment.
+*   **Extensible Architecture:** Easily extend Inspect's functionality with custom components and integrations.
 
-### **Installation**
+## Getting Started with Inspect
 
-To begin using Inspect for your LLM evaluation needs, follow these steps:
+For detailed information on how to use Inspect, please see the comprehensive documentation:  <https://inspect.aisi.org.uk/>
+
+## Development and Contribution
+
+### Setting up the Development Environment:
 
 1.  **Clone the Repository:**
 
@@ -32,31 +38,27 @@ To begin using Inspect for your LLM evaluation needs, follow these steps:
     pip install -e ".[dev]"
     ```
 
-### **Development & Contribution**
+### Optional Setup:
 
-For those interested in contributing or developing Inspect, here's how to set up your environment:
-
-1.  **Install Pre-Commit Hooks (Optional):**
+*   **Install Pre-commit Hooks:**
 
     ```bash
     make hooks
     ```
 
-2.  **Run Checks and Tests:**
+*   **Run Code Checks and Tests:**
 
     ```bash
     make check
     make test
     ```
 
-### **VS Code Setup (Recommended)**
+### Recommended VS Code Extensions
 
-For an optimal development experience, we recommend using VS Code with the following extensions installed:
+For optimal development, consider installing these VS Code extensions:
 
 *   Python
 *   Ruff
 *   MyPy
 
-You will be prompted to install these extensions when you open the project in VS Code.
-
-**[View the original Inspect repository on GitHub](https://github.com/UKGovernmentBEIS/inspect_ai).**
+You will be prompted to install these when you open the project in VS Code.

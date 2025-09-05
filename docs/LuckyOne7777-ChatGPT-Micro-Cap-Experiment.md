@@ -1,33 +1,38 @@
-# ChatGPT Micro-Cap Experiment: Can AI Beat the Market?
+# ChatGPT Micro-Cap Stock Trading Experiment: Can AI Beat the Market?
 
-Explore a fascinating experiment where ChatGPT, an advanced language model, manages a real-money micro-cap portfolio. This project tests the potential of AI in financial trading, offering insights into algorithmic trading strategies. For more details, visit the original repository: [ChatGPT-Micro-Cap-Experiment](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment).
-
-## Project Overview
-
-This repository documents a 6-month live trading experiment using ChatGPT to manage a portfolio of micro-cap stocks. The project aims to answer the question: Can powerful language models like ChatGPT generate alpha using real-time market data? The experiment uses a live trading strategy with a starting capital of $100.
+**Discover how an AI, ChatGPT, attempts to outperform the market with a real-money micro-cap stock portfolio in this fascinating live trading experiment.**  This project provides the code, documentation, and performance tracking for a unique application of artificial intelligence in finance.  See the original repository: [https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment)
 
 ## Key Features
 
-*   **AI-Powered Trading:** Leverage ChatGPT-4 for making trading decisions.
-*   **Automated Portfolio Management:** Implements stop-loss orders and portfolio management.
-*   **Daily Performance Tracking:** Monitors and documents daily Profit and Loss (PnL), equity, and trade history.
-*   **Detailed Research and Reporting:** Includes weekly deep research summaries and performance reports.
-*   **Transparent Data & Logging:** Maintains comprehensive trade logs and data for full transparency.
-*   **Performance Visualization:** Utilizes Matplotlib to visualize performance metrics compared to market benchmarks.
-*   **Backtesting Support:** ASOF\_DATE override for historical analysis.
-*   **Performance Analytics:** CAPM analysis, Sharpe/Sortino ratios, drawdown metrics.
-*   **Robust Data Sources:** Yahoo Finance and Stooq for reliable market data.
-*   **Interactive Trading:** Market-on-Open (MOO) and limit order support.
+*   **AI-Powered Trading:** Leverage the power of ChatGPT for real-time stock trading decisions.
+*   **Real-World Experiment:** Test the hypothesis that an AI can generate alpha in the stock market, with a live portfolio.
+*   **Automated Trading Engine:**  A `python` based trading engine handles portfolio management and stop-loss orders.
+*   **Performance Tracking:** Daily profit/loss, equity, and trade history are all tracked and available.
+*   **Performance Visualization:**  Utilizes `Matplotlib` to create comparison graphs vs. standard market indexes.
+*   **Comprehensive Research:** Access weekly research reports and performance analysis to understand decision-making and results.
+*   **Transparency and Data:** Access to all core code, data, and trading logs to enable learning and improvement.
+*   **Open Source for Learning:** Use the provided code and experiment documentation to build your own AI trading system.
+
+## Project Overview
+
+This project documents a six-month live trading experiment where ChatGPT manages a portfolio of micro-cap stocks.  The experiment aims to answer a fundamental question: **Can large language models, like ChatGPT, make effective trading decisions using real-time market data?**
+
+### How It Works
+
+*   ChatGPT is provided with trading data on the stocks in its portfolio each day.
+*   Strict stop-loss rules are implemented to manage risk.
+*   Deep research is conducted weekly to re-evaluate the portfolio.
+*   Performance data is tracked and published on the [author's blog](https://nathanbsmith729.substack.com).
 
 ## Repository Structure
 
-*   **`trading_script.py`**: Main trading engine with portfolio management and stop-loss automation.
-*   **`Scripts and CSV Files/`**: Contains the portfolio data, updated daily.
-*   **`Start Your Own/`**: Provides template files and a guide for starting your own experiment.
-*   **`Weekly Deep Research (MD|PDF)/`**: Includes research summaries and performance reports.
-*   **`Experiment Details/`**: Contains documentation, methodology, prompts, and Q&A.
+*   **`trading_script.py`**: The core trading engine for portfolio management and stop-loss automation.
+*   **`Scripts and CSV Files/`**: Contains daily portfolio data for tracking.
+*   **`Start Your Own/`**: Template files and guides to start your own AI trading experiment.
+*   **`Weekly Deep Research (MD|PDF)/`**:  Research summaries and performance reports.
+*   **`Experiment Details/`**: Documentation, methodology, prompts, and Q&A.
 
-## Current Performance
+## Performance & Results
 
 **Last Updated:** August 29th, 2025
 
@@ -37,25 +42,21 @@ This repository documents a 6-month live trading experiment using ChatGPT to man
 
 *Performance data is updated after each trading day. See the CSV files in `Scripts and CSV Files/` for detailed daily tracking.*
 
-## Tech Stack
+## Technologies Used
 
-*   **Programming Language:** Python 3.11+
-*   **Data Analysis:** pandas, yFinance
+*   **Programming Language:** Python
+*   **Data Analysis:** pandas + yFinance
 *   **Visualization:** Matplotlib
 *   **AI Engine:** ChatGPT-4
 
-## Getting Started
+## Get Started
 
-Explore the detailed guide to start your own experiment: [Starting Your Own](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Start%20Your%20Own/README.md)
+Want to follow along?
 
-## Follow Along
-
-The experiment runs from June 2025 to December 2025.
-
-Updates are posted weekly on my blog, more coming soon!
-
-Blog: [A.I Controls Stock Account](https://nathanbsmith729.substack.com)
+*   The experiment runs from June 2025 to December 2025.  
+*   Daily portfolio updates are available in the CSV files.
+*   Weekly updates on the author's blog: [A.I Controls Stock Account](https://nathanbsmith729.substack.com)
 
 ## Contact
 
-For feature requests or advice, please contact: **nathanbsmith.business@gmail.com**
+Have questions or feature requests?  Reach out here: **nathanbsmith.business@gmail.com**

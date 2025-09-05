@@ -1,183 +1,82 @@
-# AWS MCP Servers: Supercharge Your Cloud Development with AI-Powered Tools
+<!--
+  SPDX-License-Identifier: Apache-2.0
+-->
 
-**Leverage AI to accelerate your AWS development workflows!** This repository provides a suite of specialized Model Context Protocol (MCP) servers designed to seamlessly integrate with your AI-powered coding assistants, providing them with deep AWS knowledge and capabilities. Learn more and contribute at the [original repo](https://github.com/awslabs/mcp).
+# AWS MCP Servers: Supercharge Your AI-Powered Development with AWS
 
-## Key Features:
+**Enhance your AI-driven development experience with AWS MCP Servers, providing seamless integration and intelligent context for building, deploying, and managing cloud-native applications.**  [View the original repository on GitHub](https://github.com/awslabs/mcp)
 
-*   **AI-Enhanced Cloud Development:** Seamlessly integrate with your favorite AI coding assistants (e.g., Amazon Q Developer CLI, Cline, Cursor, Windsurf) to supercharge your AWS development.
-*   **Up-to-Date AWS Knowledge:** Access the latest AWS documentation, API references, and best practices directly within your AI tools.
-*   **Workflow Automation:** Convert common AWS workflows into tools that AI assistants can execute with greater accuracy and efficiency.
-*   **Contextual Intelligence:** Provide AI assistants with in-depth domain knowledge about specific AWS services.
-*   **Quick Installation:** One-click install options for popular coding assistant environments.
-*   **Broad Server Selection:** Servers available for various AWS services, from EC2 to DynamoDB.
+**Key Features:**
 
-## Available AWS MCP Servers
+*   **Improved AI Output Quality:** Provide relevant AWS documentation and best practices directly in the AI's context to reduce hallucinations, provide more accurate information and generate more precise code.
+*   **Up-to-Date Documentation Access:** Stay current with the latest AWS releases, APIs, and SDKs by accessing real-time documentation within your AI tools.
+*   **Workflow Automation:** Convert common AWS workflows into tools, enabling AI assistants to perform complex tasks with increased accuracy and efficiency.
+*   **Specialized Domain Knowledge:** Leverage deep, contextual knowledge of AWS services, leading to more helpful and accurate responses for cloud development tasks.
+*   **Seamless Integration:** Integrate with your preferred AI tools and IDEs through the open Model Context Protocol (MCP).
 
-Explore a diverse range of servers catering to various AWS development needs. Easily install these servers within your preferred AI-powered coding assistant.
+**Important Notice: Server Sent Events (SSE) Support Removal**
+
+On May 26th, 2025, Server Sent Events (SSE) support was removed from all MCP servers in their latest major versions. Please refer to [the Model Context Protocol specification's backward compatibility guidelines](https://modelcontextprotocol.io/specification/2025-03-26/basic/transports#backwards-compatibility) for more details.
+
+### Available MCP Servers: Quick Installation
+
+Get started quickly with one-click installation buttons for popular MCP clients. Click the buttons below to install servers directly in Cursor or VS Code:
 
 ### 🚀 Getting Started with AWS
 
-| Server Name                        | Description                                                                                                                                                                                    |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [AWS API MCP Server](src/aws-api-mcp-server)  | Start here for general AWS interactions! Comprehensive AWS API support with command validation, security controls, and access to all AWS services. Perfect for managing infrastructure, exploring resources, and executing AWS operations through natural language. |
-| [AWS Knowledge MCP Server](src/aws-knowledge-mcp-server) | Provides access to the latest AWS docs, API references, What's New Posts, Getting Started information, Builder Center, Blog posts, Architectural references, and Well-Architected guidance.                                                                                                 |
+For general AWS interactions and comprehensive API support, we recommend starting with:
+
+| Server Name | Description | Install |
+|-------------|-------------|---------|
+| [AWS API MCP Server](src/aws-api-mcp-server) | Start here for general AWS interactions! Comprehensive AWS API support with command validation, security controls, and access to all AWS services. Perfect for managing infrastructure, exploring resources, and executing AWS operations through natural language. | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.aws-api-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMuYXdzLWFwaS1tY3Atc2VydmVyQGxhdGVzdCIsImVudiI6eyJBV1NfUkVHSU9OIjoidXMtZWFzdC0xIn0sImRpc2FibGVkIjpmYWxzZSwiYXV0b0FwcHJvdmUiOltdfQ%3D%3D)<br/>[![Install VS Code](https://img.shields.io/badge/Install-VS_Code-FF9900?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=AWS%20API%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.aws-api-mcp-server%40latest%22%5D%2C%22env%22%3A%7B%22AWS_REGION%22%3A%22us-east-1%22%7D%2C%22type%22%3A%22stdio%22%7D) |
+| [AWS Knowledge MCP Server](src/aws-knowledge-mcp-server) | A remote, fully-managed MCP server hosted by AWS that provides access to the latest AWS docs, API references, What's New Posts, Getting Started information, Builder Center, Blog posts, Architectural references, and Well-Architected guidance. | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.aws-knowledge-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMuYXdzLWtub3dsZWRnZS1tY3Atc2VydmVyQGxhdGVzdCIsImVudiI6eyJBV1NfUFJPRklMRSI6InlvdXItYXdzLXByb2ZpbGUiLCJBV1NfUkVHSU9OIjoidXMtZWFzdC0xIiwiRkFTVE1DUF9MT0dfTEVWRUwiOiJFUlJPUiJ9LCJkaXNhYmxlZCI6ZmFsc2UsImF1dG9BcHByb3ZlIjpbXX0%3D)<br/>[![Install VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=AWS%20Knowledge%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.aws-knowledge-mcp-server%40latest%22%5D%2C%22env%22%3A%7B%22AWS_PROFILE%22%3A%22your-aws-profile%22%2C%22AWS_REGION%22%3A%22us-east-1%22%2C%22FASTMCP_LOG_LEVEL%22%3A%22ERROR%22%7D%2C%22disabled%22%3Afalse%2C%22autoApprove%22%3A%5B%5D%7D) |
 
 ### Browse by What You're Building
 
-**Real-time access to official AWS documentation**
+#### 📚 Real-time access to official AWS documentation
 
-| Server Name | Description |
-|-------------|-------------|
-| [AWS Knowledge MCP Server](src/aws-knowledge-mcp-server)  | A remote, fully-managed MCP server hosted by AWS that provides access to the latest AWS docs, API references, What's New Posts, Getting Started information, Builder Center, Blog posts, Architectural references, and Well-Architected guidance.  |
-| [AWS Documentation MCP Server](src/aws-documentation-mcp-server) | Get latest AWS docs and API references |
+| Server Name | Description | Install |
+|-------------|-------------|---------|
+| [AWS Knowledge MCP Server](src/aws-knowledge-mcp-server) | A remote, fully-managed MCP server hosted by AWS that provides access to the latest AWS docs, API references, What's New Posts, Getting Started information, Builder Center, Blog posts, Architectural references, and Well-Architected guidance. | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.aws-knowledge-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMuYXdzLWtub3dsZWRnZS1tY3Atc2VydmVyQGxhdGVzdCIsImVudiI6eyJBV1NfUFJPRklMRSI6InlvdXItYXdzLXByb2ZpbGUiLCJBV1NfUkVHSU9OIjoidXMtZWFzdC0xIiwiRkFTVE1DUF9MT0dfTEVWRUwiOiJFUlJPUiJ9LCJkaXNhYmxlZCI6ZmFsc2UsImF1dG9BcHByb3ZlIjpbXX0%3D)<br/>[![Install VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=AWS%20Knowledge%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.aws-knowledge-mcp-server%40latest%22%5D%2C%22env%22%3A%7B%22AWS_PROFILE%22%3A%22your-aws-profile%22%2C%22AWS_REGION%22%3A%22us-east-1%22%2C%22FASTMCP_LOG_LEVEL%22%3A%22ERROR%22%7D%2C%22disabled%22%3Afalse%2C%22autoApprove%22%3A%5B%5D%7D) |
+| [AWS Documentation MCP Server](src/aws-documentation-mcp-server) | Get latest AWS docs and API references | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.aws-documentation-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMuYXdzLWRvY3VtZW50YXRpb24tbWNwLXNlcnZlckBsYXRlc3QiLCJlbnYiOnsiRkFTVE1DUF9MT0dfTEVWRUwiOiJFUlJPUiIsIkFXU19ET0NVTUVOVEFUSU9OX1BBUlRJVElPTiI6ImF3cyJ9LCJkaXNhYmxlZCI6ZmFsc2UsImF1dG9BcHByb3ZlIjpbXX0%3D) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=AWS%20Documentation%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.aws-documentation-mcp-server%40latest%22%5D%2C%22env%22%3A%7B%22FASTMCP_LOG_LEVEL%22%3A%22ERROR%22%2C%22AWS_DOCUMENTATION_PARTITION%22%3A%22aws%22%7D%2C%22disabled%22%3Afalse%2C%22autoApprove%22%3A%5B%5D%7D) |
+
 
 ### 🏗️ Infrastructure & Deployment
 
 Build, deploy, and manage cloud infrastructure with Infrastructure as Code best practices.
 
-| Server Name | Description |
-|-------------|-------------|
-| [AWS Cloud Control API MCP Server](src/ccapi-mcp-server)  | Direct AWS resource management with security scanning and best practices |
-| [AWS CDK MCP Server](src/cdk-mcp-server)  | AWS CDK development with security compliance and best practices |
-| [AWS Terraform MCP Server](src/terraform-mcp-server)  | Terraform workflows with integrated security scanning |
-| [AWS CloudFormation MCP Server](src/cfn-mcp-server)  | Direct CloudFormation resource management via Cloud Control API |
+| Server Name | Description | Install |
+|-------------|-------------|---------|
+| [AWS Cloud Control API MCP Server](src/ccapi-mcp-server) | Direct AWS resource management with security scanning and best practices | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.ccapi-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMuY2NhcGktbWNwLXNlcnZlckBsYXRlc3QiLCJlbnYiOnsiQVdTX1BST0ZJTEUiOiJ5b3VyLWF3cy1wcm9maWxlIiwiQVdTX1JFR0lPTiI6InVzLWVhc3QtMSIsIkZBU1RNQ1BfTE9HX0xFVkVMIjoiRVJST1IifSwiZGlzYWJsZWQiOmZhbHNlLCJhdXRvQXBwcm92ZSI6W119) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=AWS%20Cloud%20Control%20API%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.ccapi-mcp-server%40latest%22%5D%2C%22env%22%3A%7B%22AWS_PROFILE%22%3A%22your-aws-profile%22%2C%22AWS_REGION%22%3A%22us-east-1%22%2C%22FASTMCP_LOG_LEVEL%22%3A%22ERROR%22%7D%2C%22disabled%22%3Afalse%2C%22autoApprove%22%3A%5B%5D%7D) |
+| [AWS CDK MCP Server](src/cdk-mcp-server) | AWS CDK development with security compliance and best practices | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.cdk-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMuY2RrLW1jcC1zZXJ2ZXJAbGF0ZXN0IiwiZW52Ijp7IkZBU1RNQ1BfTE9HX0xFVkVMIjoiRVJST1IifSwiZGlzYWJsZWQiOmZhbHNlLCJhdXRvQXBwcm92ZSI6W119) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=CDK%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.cdk-mcp-server%40latest%22%5D%2C%22env%22%3A%7B%22FASTMCP_LOG_LEVEL%22%3A%22ERROR%22%7D%2C%22disabled%22%3Afalse%2C%22autoApprove%22%3A%5B%5D%7D) |
+| [AWS Terraform MCP Server](src/terraform-mcp-server) | Terraform workflows with integrated security scanning | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.terraform-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMudGVycmFmb3JtLW1jcC1zZXJ2ZXJAbGF0ZXN0IiwiZW52Ijp7IkZBU1RNQ1BfTE9HX0xFVkVMIjoiRVJST1IifSwiZGlzYWJsZWQiOmZhbHNlLCJhdXRvQXBwcm92ZSI6W119) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=Terraform%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.terraform-mcp-server%40latest%22%5D%2C%22env%22%3A%7B%22FASTMCP_LOG_LEVEL%22%3A%22ERROR%22%7D%2C%22disabled%22%3Afalse%2C%22autoApprove%22%3A%5B%5D%7D) |
+| [AWS CloudFormation MCP Server](src/cfn-mcp-server) | Direct CloudFormation resource management via Cloud Control API | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.cfn-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMuY2ZuLW1jcC1zZXJ2ZXJAbGF0ZXN0IiwiZW52Ijp7IkFXU19QUk9GSUxFIjoieW91ci1uYW1lZC1wcm9maWxlIn0sImRpc2FibGVkIjpmYWxzZSwiYXV0b0FwcHJvdmUiOltdfQ%3D%3D) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=CloudFormation%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.cfn-mcp-server%40latest%22%5D%2C%22env%22%3A%7B%22AWS_PROFILE%22%3A%22your-named-profile%22%7D%2C%22disabled%22%3Afalse%2C%22autoApprove%22%3A%5B%5D%7D) |
 
 #### Container Platforms
 
-| Server Name | Description |
-|-------------|-------------|
-| [Amazon EKS MCP Server](src/eks-mcp-server) | Kubernetes cluster management and application deployment |
-| [Amazon ECS MCP Server](src/ecs-mcp-server) | Container orchestration and ECS application deployment |
-| [Finch MCP Server](src/finch-mcp-server) | Local container building with ECR integration |
+| Server Name | Description | Install |
+|-------------|-------------|---------|
+| [Amazon EKS MCP Server](src/eks-mcp-server) | Kubernetes cluster management and application deployment | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.eks-mcp-server&config=eyJhdXRvQXBwcm92ZSI6W10sImRpc2FibGVkIjpmYWxzZSwiY29tbWFuZCI6InV2eCBhd3NsYWJzLmVrcy1tY3Atc2VydmVyQGxhdGVzdCAtLWFsbG93LXdyaXRlIC0tYWxsb3ctc2Vuc2l0aXZlLWRhdGEtYWNjZXNzIiwiZW52Ijp7IkZBU1RNQ1BfTE9HX0xFVkVMIjoiRVJST1IifSwidHJhbnNwb3J0VHlwZSI6InN0ZGlvIn0%3D) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=EKS%20MCP%20Server&config=%7B%22autoApprove%22%3A%5B%5D%2C%22disabled%22%3Afalse%2C%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.eks-mcp-server%40latest%22%2C%22--allow-write%22%2C%22--allow-sensitive-data-access%22%5D%2C%22env%22%3A%7B%22FASTMCP_LOG_LEVEL%22%3A%22ERROR%22%7D%2C%22transportType%22%3A%22stdio%22%7D) |
+| [Amazon ECS MCP Server](src/ecs-mcp-server) | Container orchestration and ECS application deployment | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.ecs-mcp-server&config=eyJjb21tYW5kIjoidXZ4IC0tZnJvbSBhd3NsYWJzLWVjcy1tY3Atc2VydmVyIGVjcy1tY3Atc2VydmVyIiwiZW52Ijp7IkFXU19QUk9GSUxFIjoieW91ci1hd3MtcHJvZmlsZSIsIkFXU19SRUdJT04iOiJ5b3VyLWF3cy1yZWdpb24iLCJGQVNUTUNQX0xPR19MRVZFTCI6IkVSUk9SIiwiRkFTVE1DUF9MT0dfRklMRSI6Ii9wYXRoL3RvL2Vjcy1tY3Atc2VydmVyLmxvZyIsIkFMTE9XX1dSSVRFIjoiZmFsc2UiLCJBTExPV19TRU5TSVRJVkVfREFUQSI6ImZhbHNlIn19) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=ECS%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22--from%22%2C%22awslabs-ecs-mcp-server%22%2C%22ecs-mcp-server%22%5D%2C%22env%22%3A%7B%22AWS_PROFILE%22%3A%22your-aws-profile%22%2C%22AWS_REGION%22%3A%22your-aws-region%22%2C%22FASTMCP_LOG_LEVEL%22%3A%22ERROR%22%2C%22FASTMCP_LOG_FILE%22%3A%22%2Fpath%2Fto%2Fecs-mcp-server.log%22%2C%22ALLOW_WRITE%22%3A%22false%22%2C%22ALLOW_SENSITIVE_DATA%22%3A%22false%22%7D%7D) |
+| [Finch MCP Server](src/finch-mcp-server) | Local container building with ECR integration | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.finch-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMuZmluY2gtbWNwLXNlcnZlckBsYXRlc3QiLCJlbnYiOnsiQVdTX1BST0ZJTEUiOiJkZWZhdWx0IiwiQVdTX1JFR0lPTiI6InVzLXdlc3QtMiIsIkZBU1RNQ1BfTE9HX0xFVkVMIjoiSU5GTyJ9LCJ0cmFuc3BvcnRUeXBlIjoic3RkaW8iLCJkaXNhYmxlZCI6ZmFsc2UsImF1dG9BcHByb3ZlIjpbXX0%3D) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=Finch%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.finch-mcp-server%40latest%22%5D%2C%22env%22%3A%7B%22AWS_PROFILE%22%3A%22default%22%2C%22AWS_REGION%22%3A%22us-west-2%22%2C%22FASTMCP_LOG_LEVEL%22%3A%22INFO%22%7D%2C%22transportType%22%3A%22stdio%22%2C%22disabled%22%3Afalse%2C%22autoApprove%22%3A%5B%5D%7D) |
 
 #### Serverless & Functions
 
-| Server Name | Description |
-|-------------|-------------|
-| [AWS Serverless MCP Server](src/aws-serverless-mcp-server) | Complete serverless application lifecycle with SAM CLI |
-| [AWS Lambda Tool MCP Server](src/lambda-tool-mcp-server) | Execute Lambda functions as AI tools for private resource access |
+| Server Name | Description | Install |
+|-------------|-------------|---------|
+| [AWS Serverless MCP Server](src/aws-serverless-mcp-server) | Complete serverless application lifecycle with SAM CLI | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.aws-serverless-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMuYXdzLXNlcnZlcmxlc3MtbWNwLXNlcnZlckBsYXRlc3QgLS1hbGxvdy13cml0ZSAtLWFsbG93LXNlbnNpdGl2ZS1kYXRhLWFjY2VzcyIsImVudiI6eyJBV1NfUFJPRklMRSI6InlvdXItYXdzLXByb2ZpbGUiLCJBV1NfUkVHSU9OIjoidXMtZWFzdC0xIn0sImRpc2FibGVkIjpmYWxzZSwiYXV0b0FwcHJvdmUiOltdfQ%3D%3D) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=AWS%20Serverless%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.aws-serverless-mcp-server%40latest%22%2C%22--allow-write%22%2C%22--allow-sensitive-data-access%22%5D%2C%22env%22%3A%7B%22AWS_PROFILE%22%3A%22your-aws-profile%22%2C%22AWS_REGION%22%3A%22us-east-1%22%7D%2C%22disabled%22%3Afalse%2C%22autoApprove%22%3A%5B%5D%7D) |
+| [AWS Lambda Tool MCP Server](src/lambda-tool-mcp-server) | Execute Lambda functions as AI tools for private resource access | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.lambda-tool-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMubGFtYmRhLXRvb2wtbWNwLXNlcnZlckBsYXRlc3QiLCJlbnYiOnsiQVdTX1BST0ZJTEUiOiJ5b3VyLWF3cy1wcm9maWxlIiwiQVdTX1JFR0lPTiI6InVzLWVhc3QtMSIsIkZVTkNUSU9OX1BSRUZJWCI6InlvdXItZnVuY3Rpb24tcHJlZml4IiwiRlVOQ1RJT05fTElTVCI6InlvdXItZmlyc3QtZnVuY3Rpb24sIHlvdXItc2Vjb25kLWZ1bmN0aW9uIiwiRlVOQ1RJT05fVEFHX0tFWSI6InlvdXItdGFnLWtleSIsIkZVTkNUSU9OX1RBR19WQUxVRSI6InlvdXItdGFnLXZhbHVlIiwiRlVOQ1RJT05fSU5QVVRfU0NIRU1BX0FSTl9UQUdfS0VZIjoieW91ci1mdW5jdGlvbi10YWctZm9yLWlucHV0LXNjaGVtYSJ9fQ%3D%3D) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=AWS%20Lambda%20Tool%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.lambda-tool-mcp-server%40latest%22%5D%2C%22env%22%3A%7B%22AWS_PROFILE%22%3A%22your-aws-profile%22%2C%22AWS_REGION%22%3A%22us-east-1%22%2C%22FUNCTION_PREFIX%22%3A%22your-function-prefix%22%2C%22FUNCTION_LIST%22%3A%22your-first-function%2C%20your-second-function%22%2C%22FUNCTION_TAG_KEY%22%3A%22your-tag-key%22%2C%22FUNCTION_TAG_VALUE%22%3A%22your-tag-value%22%2C%22FUNCTION_INPUT_SCHEMA_ARN_TAG_KEY%22%3A%22your-function-tag-for-input-schema%22%7D%7D) |
+
 
 #### Support
 
-| Server Name | Description |
-|-------------|-------------|
-| [AWS Support MCP Server](src/aws-support-mcp-server) | Help users create and manage AWS Support cases |
+| Server Name | Description | Install |
+|-------------|-------------|---------|
+| [AWS Support MCP Server](src/aws-support-mcp-server) | Help users create and manage AWS Support cases | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs_support_mcp_server&config=eyJjb21tYW5kIjoidXZ4IC1tIGF3c2xhYnMuYXdzLXN1cHBvcnQtbWNwLXNlcnZlckBsYXRlc3QgLS1kZWJ1ZyAtLWxvZy1maWxlIC4vbG9ncy9tY3Bfc3VwcG9ydF9zZXJ2ZXIubG9nIiwiZW52Ijp7IkFXU19QUk9GSUxFIjoieW91ci1hd3MtcHJvZmlsZSJ9fQ%3D%3D) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=AWS%20Support%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22-m%22%2C%22awslabs.aws-support-mcp-server%40latest%22%2C%22--debug%22%2C%22--log-file%22%2C%22.%2Flogs%2Fmcp_support_server.log%22%5D%2C%22env%22%3A%7B%22AWS_PROFILE%22%3A%22your-aws-profile%22%7D%7D) |
 
 ### 🤖 AI & Machine Learning
-
 Enhance AI applications with knowledge retrieval, content generation, and ML capabilities
 
-| Server Name | Description |
-|-------------|-------------|
-| [Amazon Bedrock Knowledge Bases Retrieval MCP Server ](src/bedrock-kb-retrieval-mcp-server) | Query enterprise knowledge bases with citation support |
-| [Amazon Kendra Index MCP Server](src/amazon-kendra-index-mcp-server) | Enterprise search and RAG enhancement |
-| [Amazon Q Business MCP Server](src/amazon-qbusiness-anonymous-mcp-server) | AI assistant for your ingested content with anonymous access |
-| [Amazon Q Index MCP Server](src/amazon-qindex-mcp-server) | Data accessors to search through enterprise's Q index |
-| [Nova Canvas MCP Server](src/nova-canvas-mcp-server) | AI image generation using Amazon Nova Canvas |
-| [Amazon Rekognition MCP Server (deprecated)](src/amazon-rekognition-mcp-server) | Analyze images using computer vision capabilities |
-| [AWS Bedrock Data Automation MCP Server](src/aws-bedrock-data-automation-mcp-server) | Analyze documents, images, videos, and audio files |
-| [AWS Bedrock Custom Model Import MCP Server](src/aws-bedrock-custom-model-import-mcp-server) | Manage custom models in Bedrock for on-demand inference |
-
-### 📊 Data & Analytics
-
-Work with databases, caching systems, and data processing workflows.
-
-#### SQL & NoSQL Databases
-
-| Server Name | Description |
-|-------------|-------------|
-| [Amazon DynamoDB MCP Server](src/dynamodb-mcp-server) | Complete DynamoDB operations and table management |
-| [Amazon Aurora PostgreSQL MCP Server](src/postgres-mcp-server) | PostgreSQL database operations via RDS Data API |
-| [Amazon Aurora MySQL MCP Server](src/mysql-mcp-server) | MySQL database operations via RDS Data API |
-| [Amazon Aurora DSQL MCP Server](src/aurora-dsql-mcp-server) | Distributed SQL with PostgreSQL compatibility |
-| [Amazon DocumentDB MCP Server](src/documentdb-mcp-server) | MongoDB-compatible document database operations |
-| [Amazon Neptune MCP Server](src/amazon-neptune-mcp-server) | Graph database queries with openCypher and Gremlin |
-| [Amazon Keyspaces MCP Server](src/amazon-keyspaces-mcp-server) | Apache Cassandra-compatible operations |
-| [Amazon Timestream for InfluxDB MCP Server](src/timestream-for-influxdb-mcp-server) | Time-series database operations and InfluxDB compatibility |
-| [Amazon MSK MCP Server](src/aws-msk-mcp-server) | Managed Kafka cluster operations and streaming |
-| [AWS S3 Tables MCP Server](src/s3-tables-mcp-server) | Manage S3 Tables for optimized analytics |
-| [Amazon Redshift MCP Server](src/redshift-mcp-server) | Data warehouse operations and analytics queries |
-
-##### Search & Analytics
-
--   **[Amazon OpenSearch MCP Server](https://github.com/opensearch-project/opensearch-mcp-server-py)** - OpenSearch powered search, Analytics, and Observability
-
-#### Backend API Providers
-
-| Server Name | Description |
-|-------------|-------------|
-| [AWS AppSync MCP Server](src/aws-appsync-mcp-server) | Manage and Interact with application backends powered by AWS AppSync |
-
-#### Caching & Performance
-
-| Server Name | Description |
-|-------------|-------------|
-| [Amazon ElastiCache MCP Server](src/elasticache-mcp-server) | Complete ElastiCache control plane operations |
-| [Amazon ElastiCache / MemoryDB for Valkey MCP Server](src/valkey-mcp-server) | Advanced data structures and caching with Valkey |
-| [Amazon ElastiCache for Memcached MCP Server](src/memcached-mcp-server) | High-speed caching with Memcached protocol |
-
-### 🛠️ Developer Tools & Support
-
-Accelerate development with code analysis, documentation, and testing utilities.
-
-| Server Name | Description |
-|-------------|-------------|
-| [AWS IAM MCP Server](src/iam-mcp-server) | Comprehensive IAM user, role, group, and policy management with security best practices |
-| [Git Repo Research MCP Server](src/git-repo-research-mcp-server) | Semantic code search and repository analysis |
-| [Code Documentation Generator MCP Server](src/code-doc-gen-mcp-server) | Automated documentation from code analysis |
-| [AWS Diagram MCP Server](src/aws-diagram-mcp-server) | Generate architecture diagrams and technical illustrations |
-| [Frontend MCP Server](src/frontend-mcp-server) | React and modern web development guidance |
-| [Synthetic Data MCP Server](src/syntheticdata-mcp-server) | Generate realistic test data for development and ML |
-| [OpenAPI MCP Server](src/openapi-mcp-server) | Dynamic API integration through OpenAPI specifications |
-
-### 📡 Integration & Messaging
-
-Connect systems with messaging, workflows, and location services.
-
-| Server Name | Description |
-|-------------|-------------|
-| [Amazon SNS / SQS MCP Server](src/amazon-sns-sqs-mcp-server) | Event-driven messaging and queue management |
-| [Amazon MQ MCP Server](src/amazon-mq-mcp-server) | Message broker management for RabbitMQ and ActiveMQ |
-| [AWS MSK MCP Server](src/aws-msk-mcp-server) | Managed Kafka cluster operations and streaming |
-| [AWS Step Functions Tool MCP Server](src/stepfunctions-tool-mcp-server) | Execute complex workflows and business processes |
-| [Amazon Location Service MCP Server](src/aws-location-mcp-server) | Place search, geocoding, and route optimization |
-| [OpenAPI MCP Server](src/openapi-mcp-server) | Dynamic API integration through OpenAPI specifications |
-
-### 💰 Cost & Operations
-
-Monitor, optimize, and manage your AWS infrastructure and costs.
-
-| Server Name | Description |
-|-------------|-------------|
-| [AWS Pricing MCP Server](src/aws-pricing-mcp-server) | AWS service pricing and cost estimates |
-| [AWS Cost Explorer MCP Server](src/cost-explorer-mcp-server) | Detailed cost analysis and reporting |
-| [Amazon CloudWatch MCP Server](src/cloudwatch-mcp-server) | Metrics, Alarms, and Logs analysis and operational troubleshooting |
-| [Amazon CloudWatch Logs MCP Server (deprecated)](src/cloudwatch-logs-mcp-server) | CloudWatch Logs analysis and monitoring |
-| [AWS Managed Prometheus MCP Server](src/prometheus-mcp-server) | Prometheus-compatible operations |
-| [AWS Billing and Cost Management MCP Server](src/billing-cost-management-mcp-server/) | Billing and cost management |
-
-### 🧬 Healthcare & Lifesciences
-
-Interact with AWS HealthAI services.
-
-| Server Name | Description |
-|-------------|-------------|
-| [AWS HealthOmics MCP Server](src/aws-healthomics-mcp-server) | Generate, run, debug and optimize lifescience workflows |
-| [AWS HealthLake MCP Server](src/healthlake-mcp-server) | Create, manage, search, and optimize FHIR healthcare data workflows with comprehensive AWS HealthLake integration, featuring automated resource discovery, advanced search capabilities, patient record management, and seamless import/export operations. |
-
----
-
-## Installation and Setup
-
-Follow the instructions in each server's README.md file.
-
-## Additional Information
-
-*   [Developer Guide](DEVELOPER_GUIDE.md)
-*   [Design Guidelines](DESIGN_GUIDELINES.md)
-*   [Contributing Guide](CONTRIBUTING.md)
-*   [Vibe coding guide](VIBE_CODING_TIPS_TRICKS.md)
-
-## License
-
-This project is licensed under the Apache-2.0 License.
+| Server Name | Description | Install |
+|-------------|-------------|---------|
+| [Amazon Bedrock Knowledge Bases Retrieval MCP Server ](src/bedrock-kb-retrieval-mcp-server) | Query enterprise knowledge bases with citation support | [![Install](https://img.shields.io/badge/Install-Cursor-blue?style=flat-square&logo=cursor)](https://cursor.com/en/install-mcp?name=awslabs.bedrock-kb-retrieval-mcp-server&config=eyJjb21tYW5kIjoidXZ4IGF3c2xhYnMuYmVkcm9jay1rYi1yZXRyaWV2YWwtbWNwLXNlcnZlckBsYXRlc3QiLCJlbnYiOnsiQVdTX1BST0ZJTEUiOiJ5b3VyLXByb2ZpbGUtbmFtZSIsIkFXU19SRUdJT04iOiJ1cy1lYXN0LTEiLCJGQVNUTUNQX0xPR19MRVZFTCI6IkVSUk9SIiwiS0JfSU5DTFVTSU9OX1RBR19LRVkiOiJvcHRpb25hbC10YWcta2V5LXRvLWZpbHRlci1rYnMiLCJCRURST0NLX0tCX1JFUkFOS0lOR19FTkFCTEVEIjoiZmFsc2UifSwiZGlzYWJsZWQiOmZhbHNlLCJhdXRvQXBwcm92ZSI6W119) <br/>[![Install on VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=Bedrock%20KB%20Retrieval%20MCP%20Server&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22awslabs.bedrock-kb-retrieval-mcp-server%40latest%22%5D%2C%22env%22%3A%7B%22AWS_PROFILE%22%3A%22your-profile-name%22%2C%22AWS_REGION%22%3A%22us-east-1%22%2C%22FASTMCP_LOG_LEVEL%22%3A%22ERROR%22%2C%22KB_INCLUSION_TAG_KEY%22%3A%22optional-tag-key-to-filter-kbs%22%2C%22BEDROCK_KB_RERANKING_ENABLED%22%3A%22false%22%7D%2C%22disabled%22%3Afalse%2C%22autoApprove%

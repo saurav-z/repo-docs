@@ -1,9 +1,3 @@
-<!--
-Copyright (c) ONNX Project Contributors
-
-SPDX-License-Identifier: Apache-2.0
--->
-
 <p align="center"><img width="40%" src="https://github.com/onnx/onnx/raw/main/docs/onnx-horizontal-color.png" /></p>
 
 [![PyPI - Version](https://img.shields.io/pypi/v/onnx.svg)](https://pypi.org/project/onnx)
@@ -14,123 +8,110 @@ SPDX-License-Identifier: Apache-2.0
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-[Open Neural Network Exchange (ONNX)](https://onnx.ai) is an open ecosystem that empowers AI developers
-to choose the right tools as their project evolves. ONNX provides an open source format for AI models, both deep learning and traditional ML. It defines an extensible computation graph model, as well as definitions of built-in operators and standard
-data types. Currently we focus on the capabilities needed for inferencing (scoring).
+# ONNX: Open Neural Network Exchange
 
-ONNX is [widely supported](http://onnx.ai/supported-tools) and can be found in many frameworks, tools, and hardware. Enabling interoperability between different frameworks and streamlining the path from research to production helps increase the speed of innovation in the AI community. We invite the community to join us and further evolve ONNX.
+**ONNX is an open standard for representing machine learning models, enabling interoperability between various AI frameworks and streamlining the path from research to production.** Learn more and contribute on the [original repository](https://github.com/onnx/onnx).
 
-# Use ONNX
+## Key Features:
 
-* [Documentation of ONNX Python Package](https://onnx.ai/onnx/)
-* [Tutorials for creating ONNX models](https://github.com/onnx/tutorials)
-* [Pre-trained ONNX models](https://github.com/onnx/models)
+*   **Open Ecosystem:** Empowers AI developers to choose the right tools.
+*   **Model Interoperability:** Facilitates seamless transfer of models between different frameworks (e.g., PyTorch, TensorFlow, etc.).
+*   **Standardized Format:** Provides an open-source format for AI models, including deep learning and traditional ML.
+*   **Extensible Computation Graph:** Defines a flexible model structure.
+*   **Built-in Operators:** Offers definitions for a wide range of operators and standard data types.
+*   **Focus on Inference:** Primarily geared towards supporting model inference (scoring) capabilities.
+*   **Widely Supported:** Compatible with numerous frameworks, tools, and hardware.
 
-# Learn about the ONNX spec
+## Getting Started
 
-* [Overview](https://github.com/onnx/onnx/blob/main/docs/Overview.md)
-* [ONNX intermediate representation spec](https://github.com/onnx/onnx/blob/main/docs/IR.md)
-* [Versioning principles of the spec](https://github.com/onnx/onnx/blob/main/docs/Versioning.md)
-* [Operators documentation](https://github.com/onnx/onnx/blob/main/docs/Operators.md)
-* [Operators documentation](https://onnx.ai/onnx/operators/index.html) (latest release)
-* [Python API Overview](https://github.com/onnx/onnx/blob/main/docs/PythonAPIOverview.md)
+### Use ONNX
 
-# Programming utilities for working with ONNX Graphs
+*   [Documentation of ONNX Python Package](https://onnx.ai/onnx/)
+*   [Tutorials for creating ONNX models](https://github.com/onnx/tutorials)
+*   [Pre-trained ONNX models](https://github.com/onnx/models)
 
-* [Shape and Type Inference](https://github.com/onnx/onnx/blob/main/docs/ShapeInference.md)
-* [Graph Optimization](https://github.com/onnx/optimizer)
-* [Opset Version Conversion](https://github.com/onnx/onnx/blob/main/docs/docsgen/source/api/version_converter.md)
+### Learn about the ONNX Spec
 
-# Contribute
+*   [Overview](https://github.com/onnx/onnx/blob/main/docs/Overview.md)
+*   [ONNX intermediate representation spec](https://github.com/onnx/onnx/blob/main/docs/IR.md)
+*   [Versioning principles of the spec](https://github.com/onnx/onnx/blob/main/docs/Versioning.md)
+*   [Operators documentation](https://github.com/onnx/onnx/blob/main/docs/Operators.md)
+*   [Operators documentation](https://onnx.ai/onnx/operators/index.html) (latest release)
+*   [Python API Overview](https://github.com/onnx/onnx/blob/main/docs/PythonAPIOverview.md)
 
-ONNX is a community project and the open governance model is described [here](https://github.com/onnx/onnx/blob/main/community/readme.md). We encourage you to join the effort and contribute feedback, ideas, and code. You can participate in the [Special Interest Groups](https://github.com/onnx/onnx/blob/main/community/sigs.md) and [Working Groups](https://github.com/onnx/onnx/blob/main/community/working-groups.md) to shape the future of ONNX.
+### Programming Utilities for Working with ONNX Graphs
 
-Check out our [contribution guide](https://github.com/onnx/onnx/blob/main/CONTRIBUTING.md) to get started.
+*   [Shape and Type Inference](https://github.com/onnx/onnx/blob/main/docs/ShapeInference.md)
+*   [Graph Optimization](https://github.com/onnx/optimizer)
+*   [Opset Version Conversion](https://github.com/onnx/onnx/blob/main/docs/docsgen/source/api/version_converter.md)
 
-If you think some operator should be added to ONNX specification, please read
-[this document](https://github.com/onnx/onnx/blob/main/docs/AddNewOp.md).
+## Contribute
 
-# Community meetings
+ONNX thrives on community contributions. Join us to shape the future of AI!
 
-The schedules of the regular meetings of the Steering Committee, the working groups and the SIGs can be found [here](https://onnx.ai/calendar)
+*   [Contribution Guide](https://github.com/onnx/onnx/blob/main/CONTRIBUTING.md)
+*   [Special Interest Groups (SIGs)](https://github.com/onnx/onnx/blob/main/community/sigs.md)
+*   [Working Groups](https://github.com/onnx/onnx/blob/main/community/working-groups.md)
+*   [Add a New Operator](https://github.com/onnx/onnx/blob/main/docs/AddNewOp.md)
 
-Community Meetups are held at least once a year. Content from previous community meetups are at:
+## Community
 
-* 2020.04.09 <https://lf-aidata.atlassian.net/wiki/spaces/DL/pages/14091402/LF+AI+Day+-ONNX+Community+Virtual+Meetup+-+Silicon+Valley+-+2020+April+9>
-* 2020.10.14 <https://lf-aidata.atlassian.net/wiki/spaces/DL/pages/14092138/LF+AI+Day+-+ONNX+Community+Workshop+-+2020+October+14>
-* 2021.03.24 <https://lf-aidata.atlassian.net/wiki/spaces/DL/pages/14092424/Instructions+for+Event+Hosts+-+LF+AI+Data+Day+-+ONNX+Virtual+Community+Meetup+-+March+2021>
-* 2021.10.21 <https://lf-aidata.atlassian.net/wiki/spaces/DL/pages/14093194/LF+AI+Data+Day+ONNX+Community+Virtual+Meetup+-+October+2021>
-* 2022.06.24 <https://lf-aidata.atlassian.net/wiki/spaces/DL/pages/14093969/ONNX+Community+Day+-+2022+June+24>
-* 2023.06.28 <https://lf-aidata.atlassian.net/wiki/spaces/DL/pages/14094507/ONNX+Community+Day+2023+-+June+28>
+*   [Community Meetings Calendar](https://onnx.ai/calendar)
+*   [Previous Community Meetup Content](https://lf-aidata.atlassian.net/wiki/spaces/DL/pages/14091402/LF+AI+Day+-ONNX+Community+Virtual+Meetup+-+Silicon+Valley+-+2020+April+9)
+    *   and other meetups from 2020, 2021, 2022, and 2023 (links provided in original README)
+*   [Issues](https://github.com/onnx/onnx/issues)
+*   [Slack](https://lfaifoundation.slack.com/) (Join:  [https://join.slack.com/t/lfaifoundation/shared_invite/zt-o65errpw-gMTbwNr7FnNbVXNVFkmyNA](https://join.slack.com/t/lfaifoundation/shared_invite/zt-o65errpw-gMTbwNr7FnNbVXNVFkmyNA))
+*   [Facebook](https://www.facebook.com/onnxai/)
+*   [Twitter/X](https://twitter.com/onnxai)
 
+## Roadmap
 
+*   [Roadmap](https://github.com/onnx/steering-committee/tree/main/roadmap)
 
-# Discuss
+## Installation
 
-We encourage you to open [Issues](https://github.com/onnx/onnx/issues), or use [Slack](https://lfaifoundation.slack.com/) (If you have not joined yet, please use this [link](https://join.slack.com/t/lfaifoundation/shared_invite/zt-o65errpw-gMTbwNr7FnNbVXNVFkmyNA) to join the group) for more real-time discussion.
+Install the ONNX Python package using pip:
 
-# Follow Us
+```bash
+pip install onnx
+```
+or for optional reference implementation dependencies:
 
-Stay up to date with the latest ONNX news. [[Facebook](https://www.facebook.com/onnxai/)] [[Twitter/X](https://twitter.com/onnxai)]
-
-# Roadmap
-
-A roadmap process takes place every year. More details can be found [here](https://github.com/onnx/steering-committee/tree/main/roadmap)
-
-# Installation
-
-ONNX released packages are published in PyPi.
-
-```sh
-pip install onnx # or pip install onnx[reference] for optional reference implementation dependencies
+```bash
+pip install onnx[reference]
 ```
 
-[ONNX weekly packages](https://pypi.org/project/onnx-weekly/) are published in PyPI to enable experimentation and early testing.
+*   [ONNX weekly packages](https://pypi.org/project/onnx-weekly/)
+*   [Detailed Install Instructions](https://github.com/onnx/onnx/blob/main/INSTALL.md)
 
-Detailed install instructions, including Common Build Options and Common Errors can be found [here](https://github.com/onnx/onnx/blob/main/INSTALL.md)
+## Testing
 
-# Testing
+Run tests using pytest after installing it:
 
-ONNX uses [pytest](https://docs.pytest.org) as test driver. In order to run tests, you will first need to install `pytest`:
-
-```sh
+```bash
 pip install pytest
-```
-
-After installing pytest, use the following command to run tests.
-
-```sh
 pytest
 ```
 
-# Development
+## Development
 
-Check out the [contributor guide](https://github.com/onnx/onnx/blob/main/CONTRIBUTING.md) for instructions.
+*   [Contributor Guide](https://github.com/onnx/onnx/blob/main/CONTRIBUTING.md)
 
-# Reproducible Builds (Linux)
+## Reproducible Builds (Linux)
 
-This project provides reproducible builds for Linux.
+ONNX provides reproducible builds for Linux, ensuring identical binary outputs from the same source code.
 
-A *reproducible build* means that the same source code will always produce identical binary outputs, no matter who builds it or where it is built.
+*   [SOURCE_DATE_EPOCH](https://reproducible-builds.org/docs/source-date-epoch/)
 
-To achieve this, we use the [`SOURCE_DATE_EPOCH`](https://reproducible-builds.org/docs/source-date-epoch/) standard. This ensures that build timestamps and other time-dependent information are fixed, making the output bit-for-bit identical across different environments.
+## License
 
-### Why this matters
-- **Transparency**: Anyone can verify that the distributed binaries were created from the published source code.
-- **Security**: Prevents tampering or hidden changes in the build process.
-- **Trust**: Users can be confident that the binaries they download are exactly what the maintainers intended.
+*   [Apache License v2.0](LICENSE)
 
-If you prefer, you can use the prebuilt reproducible binaries instead of building from source yourself.
+## Trademark
 
-# License
+*   [Trademarks](https://trademarks.justia.com/877/25/onnx-87725026.html)
+*   [Trademark Usage](https://www.linuxfoundation.org/legal/trademark-usage)
 
-[Apache License v2.0](LICENSE)
+## Code of Conduct
 
-# Trademark
-Checkout [https://trademarks.justia.com](https://trademarks.justia.com/877/25/onnx-87725026.html) for the trademark.
-
-[General rules of the Linux Foundation on Trademark usage](https://www.linuxfoundation.org/legal/trademark-usage)
-
-# Code of Conduct
-
-[ONNX Open Source Code of Conduct](https://onnx.ai/codeofconduct.html)
+*   [ONNX Open Source Code of Conduct](https://onnx.ai/codeofconduct.html)

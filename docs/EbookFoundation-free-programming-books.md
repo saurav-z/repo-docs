@@ -1,35 +1,30 @@
-# Free Programming Books: Your Ultimate Resource for Learning to Code
+# Free Programming Books: Your Ultimate Guide to Free Learning Resources
 
-This comprehensive list provides a vast collection of free programming books, courses, and interactive resources in multiple languages, making learning accessible to everyone.  ([Back to original repo](https://github.com/EbookFoundation/free-programming-books))
+This repository is a comprehensive, multilingual collection of free programming books, courses, and interactive resources, empowering you to learn to code without breaking the bank.
 
-**Key Features:**
+**[Explore the collection on GitHub](https://github.com/EbookFoundation/free-programming-books)**
 
-*   **Extensive Collection:** Access a massive library of free programming books, courses, and interactive tutorials.
-*   **Multi-Language Support:** Learn in your preferred language with resources available in many languages.
-*   **Organized by Category:** Browse resources categorized by programming language, subject, and resource type (books, courses, cheat sheets, podcasts, etc.).
-*   **Community-Driven:**  A collaborative project maintained by the Free Ebook Foundation, constantly updated with new resources.
-*   **Dynamic Search:** Quickly find what you need with a dedicated search tool: [https://ebookfoundation.github.io/free-programming-books-search/](https://ebookfoundation.github.io/free-programming-books-search/)
+*   **Key Features:**
+    *   **Massive Resource Library:**  Thousands of free books, courses, cheat sheets, and interactive tutorials.
+    *   **Multilingual Support:** Resources available in numerous languages, from English and Spanish to Chinese and Russian.
+    *   **Organized by Topic & Language:**  Easily find resources relevant to your interests and preferred language.
+    *   **Active Community:**  A thriving open-source project with contributions from around the world.
+    *   **Regularly Updated:**  The list is constantly updated with new resources.
+    *   **Dynamic Search:**  A dedicated search site to quickly find the perfect learning materials.
 
-## Getting Started
+##  Get Started:
+*   **Search the list:**  [Dynamic Search](https://ebookfoundation.github.io/free-programming-books-search/)
+*   **Browse the website:** [Static Site](https://ebookfoundation.github.io/free-programming-books/)
+*   **Contribute:** Help improve the resource and add new materials by reading [CONTRIBUTING](docs/CONTRIBUTING.md)
+*   **Find Issues:** Check out the [good first issues](https://github.com/EbookFoundation/free-programming-books/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) and [help wanted issues](https://github.com/EbookFoundation/free-programming-books/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
 
-Explore the curated lists of resources for various programming languages, subjects, and formats.
-
-*   **Search the List:** Use the search bar on the live website to find specific books or authors.
-*   **Browse by Category:** Discover resources organized by programming language, subject, and resource type.
-*   **Contribute:**  Help improve the project by adding new resources, fixing errors, or translating content.
-
-## Resources
+##  Explore the Resources:
 
 ### Books
 
 *   [English, By Programming Language](books/free-programming-books-langs.md)
 *   [English, By Subject](books/free-programming-books-subjects.md)
-*   **Other Languages:**  Access books in a wide range of languages, including:
-    *   Arabic
-    *   Chinese
-    *   French
-    *   Spanish
-    *   ...and many more!
+*   **Other Languages** (Arabic, Chinese, French, German, Spanish, etc. - see full list in original README).
 
 ### Cheat Sheets
 
@@ -37,11 +32,11 @@ Explore the curated lists of resources for various programming languages, subjec
 
 ### Free Online Courses
 
-*   English, French, German, Spanish, Italian, and many more.
+*   (Arabic, Chinese, English, French, German, Spanish, etc. - see full list in original README)
 
 ### Interactive Programming Resources
 
-*   English, German, Chinese, Japanese, and Russian.
+*   (Chinese, English, German, and more - see original README)
 
 ### Problem Sets and Competitive Programming
 
@@ -49,43 +44,24 @@ Explore the curated lists of resources for various programming languages, subjec
 
 ### Podcast - Screencast
 
-*   English, German, French, Spanish, Portuguese, and more.
+*   (Arabic, Chinese, English, French, German, Spanish, etc. - see full list in original README)
 
 ### Programming Playgrounds
 
-*   English, German, and Chinese.
+*   (Chinese, English, German - see original README)
 
-## Contributing
+## How to Share
 
-We welcome contributions!  Please read the [CONTRIBUTING](docs/CONTRIBUTING.md) guide.  If you're new to GitHub, check out [HOWTO](docs/HOWTO.md).  Abide by the [Code of Conduct](docs/CODE_OF_CONDUCT.md).
+*   Share on Facebook, LinkedIn, Mastodon, Telegram, and X (Twitter)
 
-*   [Issues](https://github.com/EbookFoundation/free-programming-books/issues)
-*   [Good First Issues](https://github.com/EbookFoundation/free-programming-books/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
-*   [Help Wanted Issues](https://github.com/EbookFoundation/free-programming-books/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
-*   [Pull Requests](https://github.com/EbookFoundation/free-programming-books/pulls)
-*   [Merged Pull Requests](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Apr+is%3Amerged)
-*   [Help Wanted Pull Requests](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+## Contribute
 
-## How To Share
-
-Share this valuable resource with your network:
-
-*   Share on Facebook
-*   Share on LinkedIn
-*   Share on Mastodon/Fediverse
-*   Share on Telegram
-*   Share on 𝕏 (Twitter)
+We welcome contributions! Please review [CONTRIBUTING](docs/CONTRIBUTING.md) and [Code of Conduct](docs/CODE_OF_CONDUCT.md) before submitting a pull request.
 
 ## Translations
 
-Help make this resource even more accessible by contributing translations.
-
-*   English
-    *   [Code of Conduct](docs/CODE_OF_CONDUCT.md)
-    *   [Contributing](docs/CONTRIBUTING.md)
-    *   [How-to](docs/HOWTO.md)
-*   ... *[More languages](docs/README.md#translations)* ...
+*   (See list in original README)
 
 ## License
 
-This project is licensed under the [CC BY License](LICENSE).
+*   All files are licensed under the [CC BY 4.0 License](LICENSE).

@@ -1,40 +1,35 @@
-# CSrankings: The Definitive Ranking of Top Computer Science Schools
+# CSrankings: The Premier Computer Science School Ranking Website
 
-Tired of rankings based solely on surveys? CSrankings provides a **metrics-based and data-driven ranking** of computer science departments, using publication records in top conferences.
+**CSrankings provides a data-driven, metric-based ranking of top computer science schools, offering a transparent and objective assessment of research excellence.** ([Original Repository](https://github.com/emeryberger/CSrankings))
 
-[Visit the original repository on GitHub](https://github.com/emeryberger/CSrankings)
+## Key Features
 
-**Key Features:**
+*   **Metrics-Based Approach:** Unlike rankings based on surveys, CSrankings relies on objective metrics, specifically, the number of publications by faculty at the most selective computer science conferences.
+*   **Difficult-to-Game Methodology:** The focus on publication counts in highly selective conferences makes the ranking resistant to manipulation and gaming.
+*   **Comprehensive Data:** CSrankings incorporates data from DBLP.org and a dataset developed by Papoutsaki et al., providing a rich and extensive dataset for analysis.
+*   **Open Source:** Contribute to and improve the ranking by contributing to the data and code.
+*   **Community Driven:** Maintained and improved with help from many contributors who help add and maintain faculty affiliations and more.
 
-*   **Metrics-Based Ranking:** Leverages publication counts in highly selective computer science conferences.
-*   **Objective and Data-Driven:** Avoids subjective survey-based methodologies, focusing on quantifiable research output.
-*   **Difficult to Game:** Designed to be resistant to manipulation, unlike citation-based approaches.
-*   **Comprehensive Data:**  Based on data from DBLP and updated on a quarterly basis.
-*   **Community Driven:** Open-source with contributions from the computer science community.
+## Contributing
 
-**How CSrankings Works:**
+### How to Contribute
+*   **Quarterly Updates:** Updates are processed quarterly.
+*   **File-Based Contributions:** Data is stored in `csrankings-[a-z].csv` files, organized alphabetically by first name.
+*   **Shallow Cloning:** You can use shallow clones for easier contribution.
+*   Read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
-CSrankings evaluates institutions and faculty based on their publication records in leading computer science conferences. This approach prioritizes research output over subjective assessments, offering a transparent and objective view of research performance.
+### Running Locally
 
-**Contributing:**
+*   Install Dependencies: libxml2-utils, npm, typescript, closure-compiler, python-lxml, pypy, and basex.
+*   Clone the repository.
+*   Run `make update-dblp` to download DBLP data (requires ~19GB memory).
+*   Run `make` to rebuild databases.
+*   Test with a local web server (e.g., `python3 -m http.server`) and access at `http://0.0.0.0:8000`.
 
-Help improve the accuracy of CSrankings!  You can contribute by:
+## Acknowledgements
 
-*   Adding or modifying faculty affiliations (updates processed quarterly)
-*   Submitting pull requests with your updates directly via GitHub (after reviewing the [CONTRIBUTING.md](CONTRIBUTING.md) guidelines)
+CSrankings was primarily developed and is maintained by [Emery Berger](https://emeryberger.com). It is based on code and data initially collected by [Swarat Chaudhuri](https://www.cs.utexas.edu/~swarat/), and the original faculty affiliation dataset was constructed by [Papoutsaki et al.](http://cs.brown.edu/people/alexpap/faculty_dataset.html).
 
-**Getting Started (for local setup):**
-
-1.  Clone the repository and download the DBLP data: `make update-dblp`
-2.  Build the databases: `make`
-3.  Run a local web server (e.g., `python3 -m http.server`) and access the site at `http://0.0.0.0:8000`.
-
-   **Dependencies:**  You'll also need to install the required dependencies, as detailed in the original README.
-
-**Acknowledgments:**
-
-CSrankings was developed primarily by [Emery Berger](https://emeryberger.com). It builds upon the work of Swarat Chaudhuri (UT-Austin), Papoutsaki et al., and utilizes data from DBLP.org (ODC Attribution License).
-
-**License:**
+## License
 
 CSrankings is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).

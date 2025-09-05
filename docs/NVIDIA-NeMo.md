@@ -1,86 +1,73 @@
-<!-- Project Badges - SEO Optimization -->
-[![Project Status: Active](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+<!-- Project Badges -->
+[![Project Status: Active -- The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Documentation](https://readthedocs.com/projects/nvidia-nemo/badge/?version=main)](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/)
 [![CodeQL](https://github.com/nvidia/nemo/actions/workflows/codeql.yml/badge.svg?branch=main&event=push)](https://github.com/nvidia/nemo/actions/workflows/codeql.yml)
-[![License](https://img.shields.io/badge/License-Apache%202.0-brightgreen.svg)](https://github.com/NVIDIA/NeMo/blob/master/LICENSE)
+[![NeMo core license and license for collections in this repo](https://img.shields.io/badge/License-Apache%202.0-brightgreen.svg)](https://github.com/NVIDIA/NeMo/blob/master/LICENSE)
 [![Release version](https://badge.fury.io/py/nemo-toolkit.svg)](https://badge.fury.io/py/nemo-toolkit)
 [![Python version](https://img.shields.io/pypi/pyversions/nemo-toolkit.svg)](https://badge.fury.io/py/nemo-toolkit)
-[![PyPi downloads](https://static.pepy.tech/personalized-badge/nemo-toolkit?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/nemo-toolkit)
+[![PyPi total downloads](https://static.pepy.tech/personalized-badge/nemo-toolkit?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/nemo-toolkit)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-# NVIDIA NeMo: Your Toolkit for Building and Deploying State-of-the-Art Generative AI Models
+# NVIDIA NeMo: Unleash the Power of Generative AI for LLMs, ASR, and More
 
-[NVIDIA NeMo](https://github.com/NVIDIA/NeMo) is a powerful, cloud-native framework designed for researchers and developers to efficiently create, customize, and deploy large language models (LLMs), multimodal models (MMs), and other AI applications.
+[Explore the NVIDIA NeMo Framework on GitHub](https://github.com/NVIDIA/NeMo) to build, customize, and deploy state-of-the-art generative AI models with ease.
 
-## Key Features
+## **Key Features**
 
-*   **Comprehensive AI Domains:** Supports LLMs, MMs, Automatic Speech Recognition (ASR), Text-to-Speech (TTS), and Computer Vision (CV).
-*   **Scalable Training:** Enables training of models on thousands of GPUs with cutting-edge distributed training techniques like Tensor Parallelism, Pipeline Parallelism, and FSDP.
-*   **Modular Architecture:** Built with PyTorch Lightning's modular abstractions for easier customization and experimentation.
-*   **Pre-trained Models:** Access to a wide range of pre-trained models from Hugging Face and NVIDIA NGC, allowing for quick experimentation and deployment.
-*   **Deployment & Optimization:** Integrates with NVIDIA Riva for optimizing ASR and TTS models, and NeMo Microservices for LLM and MM deployment.
-*   **Advanced Techniques:** Supports state-of-the-art methods like SteerLM, DPO, and RLHF for LLM alignment, and PEFT techniques such as LoRA and Adapters.
-*   **Flexible Configuration:** Transitioning to Python-based configuration for greater flexibility and control.
-*   **Cosmos Integration:**  Support for training and customizing NVIDIA Cosmos world foundation models for physical AI tasks.
+*   **Large Language Models (LLMs):** Develop and fine-tune powerful LLMs.
+*   **Multimodal Models (MMs):** Explore models that combine various data types (text, images, etc.).
+*   **Automatic Speech Recognition (ASR):** Build and deploy high-accuracy speech recognition systems.
+*   **Text-to-Speech (TTS):** Create realistic and expressive synthetic speech.
+*   **Computer Vision (CV):** Develop and customize computer vision models.
+*   **Modular and Scalable:** Built with PyTorch Lightning for modularity and seamless scaling across thousands of GPUs.
+*   **Optimized Training:** Leverages techniques like Tensor Parallelism, Pipeline Parallelism, and FP8 for efficient training.
+*   **Hugging Face Integration:** Supports pre-training and fine-tuning of Hugging Face models.
+*   **Comprehensive Documentation:** Extensive documentation and tutorials for getting started.
 
-## What's New
+## **What's New**
 
-*   **NeMo 2.0:**  Focuses on modularity, ease of use, and scalability with Python-based configuration and integration with NeMo-Run for large-scale experiments.
-*   **Hugging Face Integration:**  Day-0 support for Hugging Face models, including AutoModelForCausalLM and AutoModelForImageTextToText.
-*   **Blackwell Support:**  Added Blackwell support with performance benchmarks.
-*   **New Model Support:**  Expanded model support including Llama 4, Flux, Llama Nemotron, Hyena & Evo2, Qwen2-VL, Qwen2.5, Gemma3, Qwen3-30B&32B.
+*   **NVIDIA NeMo 2.0:** Features include a Python-based configuration, modular abstractions, and streamlined scalability, optimized to run on the latest NVIDIA hardware.
+*   **Hugging Face Integration:** Enhanced support for pretraining and finetuning Hugging Face models, including AutoModelForCausalLM and AutoModelForImageTextToText.
+*   **Cosmos Support:** Training and customization for NVIDIA Cosmos world foundation models for creating realistic synthetic videos of environments.
+*   **Model Updates:** Support for new models like Llama 4, Flux, Llama Nemotron, Hyena, Qwen2-VL, Qwen2.5, Gemma3, Qwen3-30B&32B, and more.
+*   **Performance Benchmarks:** Performance benchmarks and optimizations for latest NVIDIA hardware.
 
-## Getting Started
+## **Introduction**
 
-*   **Installation:**  Choose from Conda/Pip, NGC PyTorch container, or NGC NeMo container based on your needs.  See the [installation instructions](#install-nemo-framework) for details.
-*   **Tutorials:** Explore tutorials on [Google Colab](https://colab.research.google.com) or with the [NGC NeMo Framework Container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo).
-*   **User Guide:** Detailed information and guidance is located in the [NeMo Framework User Guide](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/).
+The NVIDIA NeMo Framework is a cloud-native, flexible framework for researchers and PyTorch developers. It simplifies the creation, customization, and deployment of generative AI models across various domains. Leverage existing code and pre-trained model checkpoints to accelerate your AI development.  The framework is well-suited for Large Language Models (LLMs), Multimodal Models (MMs), Automatic Speech Recognition (ASR), Text-to-Speech (TTS), and Computer Vision (CV).
 
-## Key Technologies
+## **Getting Started**
 
-*   Large Language Models (LLMs)
-*   Multimodal Models (MMs)
-*   Automatic Speech Recognition (ASR)
-*   Text to Speech (TTS)
-*   Computer Vision (CV)
-*   PyTorch Lightning
-*   NVIDIA Transformer Engine
-*   NVIDIA Megatron Core
-*   NVIDIA Riva
-*   NVIDIA NeMo Microservices
+1.  **Install:** Follow the instructions in the [Install NeMo Framework](#install-nemo-framework) section.
+2.  **Explore Pre-trained Models:** Find pre-trained models on [Hugging Face Hub](https://huggingface.co/models?library=nemo&sort=downloads&search=nvidia) and [NVIDIA NGC](https://catalog.ngc.nvidia.com/models?query=nemo&orderBy=weightPopularDESC).
+3.  **Tutorials and Examples:** Run tutorials on [Google Colab](https://colab.research.google.com) or with the [NGC NeMo Framework Container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo). Explore [example scripts](https://github.com/NVIDIA/NeMo/tree/main/examples) for advanced training.
 
-## Requirements
+## **Installation**
+
+Choose the installation method that best suits your needs:
+
+*   **Conda / Pip:** Recommended for ASR and TTS, for exploring NeMo on any supported platform. See the [Conda / Pip](#conda--pip) section.
+*   **NGC PyTorch Container:** Install from source within a highly optimized container. See the [NGC PyTorch container](#ngc-pytorch-container) section.
+*   **NGC NeMo Container:** Pre-built and optimized for performance. See the [NGC NeMo container](#ngc-nemo-container) section.
+
+### **Requirements**
 
 *   Python 3.10 or above
 *   PyTorch 2.5 or above
-*   NVIDIA GPU (for model training)
+*   NVIDIA GPU (for training)
 
-## Developer Documentation
+## **Developer Documentation**
 
-[NeMo Framework User Guide](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/)
+For detailed technical information, see the [NeMo Framework User Guide](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/).
 
-## Contribute
+## **Contribute**
 
-Contributions are welcome! See [CONTRIBUTING.md](https://github.com/NVIDIA/NeMo/blob/stable/CONTRIBUTING.md) for details.
+Contributions are welcome! See [CONTRIBUTING.md](https://github.com/NVIDIA/NeMo/blob/stable/CONTRIBUTING.md) for guidelines.
 
-## License
+## **License**
 
-Licensed under the [Apache License 2.0](https://github.com/NVIDIA/NeMo?tab=Apache-2.0-1-ov-file).
+NVIDIA NeMo is licensed under the [Apache License 2.0](https://github.com/NVIDIA/NeMo?tab=Apache-2.0-1-ov-file).
 
 ---
 
-**Original Repository:** [https://github.com/NVIDIA/NeMo](https://github.com/NVIDIA/NeMo)
-```
-Key improvements and SEO considerations:
-
-*   **Clear, Concise Hook:**  A single, strong sentence to immediately convey the core value proposition.
-*   **Keyword Optimization:**  Strategically placed keywords like "Large Language Models," "Multimodal Models," "Automatic Speech Recognition," etc., which users commonly search for.
-*   **Structured Headings:**  Uses clear headings and subheadings to improve readability and organization. This also helps search engines understand the content.
-*   **Bulleted Key Features:**  Highlights the most important aspects of the framework in an easy-to-scan format.
-*   **SEO-Friendly Badges:**  Includes the project status and other badges, incorporating alt text and links, which are good for SEO.
-*   **Concise Summaries:**  Condenses information from the original README to make it easier to understand at a glance.
-*   **Internal Linking:**  Links to other resources within the README itself, such as the Installation and Key Technologies sections, which helps with SEO and user navigation.
-*   **External Linking:**  Provides links to the original repository, documentation, contributing guidelines, publications, and blogs, making it useful for both humans and search engines.
-*   **Up-to-Date Information:** Includes recent announcements to keep the README current.
-*   **Clear Call to Action:** Guides users on how to get started, including installation, tutorials, and user guides.
-*   **Complete and Self-Contained:** Provides all the important information a user needs to know, without forcing them to click through multiple links to find basic details.
+_This README provides a high-level overview. For detailed information, tutorials, and examples, please refer to the official documentation and the NVIDIA NeMo repository._

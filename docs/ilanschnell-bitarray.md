@@ -1,36 +1,46 @@
 # bitarray: Efficient Arrays of Booleans
 
-**Optimize your memory usage and speed up your boolean operations with bitarray, a Python library for efficient arrays of booleans.**  ([View on GitHub](https://github.com/ilanschnell/bitarray))
+**bitarray is a Python library that provides a memory-efficient and feature-rich way to work with arrays of booleans, offering performance comparable to low-level languages.** ([Original Repository](https://github.com/ilanschnell/bitarray))
 
 ## Key Features
 
-*   **Endianness Control:** Specify bit-endianness (little or big) for each bitarray object.
-*   **Sequence Type Support:** Leverage list-like functionality including slicing, concatenation, and the `in` operator.
-*   **Bitwise Operations:** Utilize standard bitwise operators (`~`, `&`, `|`, `^`, `<<`, `>>`, and in-place versions).
-*   **Prefix Code Encoding/Decoding:**  Fast methods for encoding and decoding variable bit length prefix codes, like Huffman codes.
-*   **Buffer Protocol:** Full support for the buffer protocol, enabling interaction with other binary data formats.
-*   **Data Conversion:** Easily pack/unpack bitarrays to/from other formats such as `numpy.ndarray`.
-*   **Immutability:** Use `frozenbitarray` objects for hashable, immutable arrays.
-*   **Utility Module:** Includes `bitarray.util` for hex conversion, random bitarray generation, Huffman code creation, and more.
-*   **Extensive Testing:** Rigorously tested with a comprehensive suite of over 600 unit tests.
+*   **Bit-Endianness Control:** Choose between big-endian and little-endian representations for each bitarray object.
+*   **Sequence Operations:** Supports slicing (including assignment and deletion), `+`, `*`, `+=`, `*=`, `in` operator, and `len()`.
+*   **Bitwise Operations:** Includes `~`, `&`, `|`, `^`, `<<`, `>>` and in-place versions (`&=`, `|=`, `^=`, `<<=`, `>>=`).
+*   **Prefix Code Encoding/Decoding:** Fast methods for encoding and decoding variable bit length prefix codes, useful for data compression and more.
+*   **Buffer Protocol Support:** Allows import and export of buffers, including interaction with memory-mapped files and other binary formats like NumPy.
+*   **Data Conversion:** Offers methods for packing and unpacking to/from other binary data formats (e.g. NumPy arrays).
+*   **Pickling & Freezing:** Supports pickling and unpickling of bitarray objects, as well as immutable `frozenbitarray` objects that can be used as dictionary keys.
+*   **Additional Utilities:**
+    *   Conversion to and from hexadecimal strings
+    *   Generating random bitarrays
+    *   Pretty printing of bitarrays
+    *   Conversion to and from integers
+    *   Creating Huffman codes
+    *   Compression of sparse bitarrays
+    *   Serialization/Deserialization
+    *   Various count functions
+    *   And other helpful functions in the `bitarray.util` module
+*   **Extensive Testing:**  A comprehensive test suite with over 600 unit tests ensures reliability.
+*   **Type Hinting:**  Supports type hinting for improved code readability and maintainability.
+*   **Sequential search**
+*   **Bitarray indexing**
 
 ## Installation
 
-Install bitarray easily using pip:
+Install `bitarray` using pip:
 
 ```bash
 pip install bitarray
 ```
 
-Verify the installation with the included test suite:
+Verify the installation by running the test suite:
 
 ```bash
 python -c 'import bitarray; bitarray.test()'
 ```
 
 ## Usage
-
-Bitarray objects behave similarly to Python lists but are optimized for storing boolean values efficiently, with each bitarray element representing a single bit.
 
 ```python
 from bitarray import bitarray
@@ -46,13 +56,34 @@ lst = [1, 0, False, True, True]
 a = bitarray(lst)
 print(a)  # Output: bitarray('10011')
 
-# Slice assignment and deletion
-a = bitarray(50)
-a.setall(0)
-a[11:37:3] = 9 * bitarray('1')
-print(a)
+# Indexing
+print(a[2])  # Output: 0
+print(a[2:4]) # Output: bitarray('01')
+
+# Slice assignment
+a[2:4] = bitarray('11')
+print(a)  # Output: bitarray('10111')
+
+# Bitwise operations
+b = bitarray('111001011')
+result = a & b
+print(result) # Output: bitarray('101000001')
+
 ```
+
+## Documentation
+
+*   [Bitarray indexing](https://github.com/ilanschnell/bitarray/blob/master/doc/indexing.rst)
+*   [Bit-endianness](https://github.com/ilanschnell/bitarray/blob/master/doc/endianness.rst)
+*   [Buffer protocol](https://github.com/ilanschnell/bitarray/blob/master/doc/buffer.rst)
+*   [Bitarray representations](https://github.com/ilanschnell/bitarray/blob/master/doc/represent.rst)
+*   [Canonical Huffman Coding](https://github.com/ilanschnell/bitarray/blob/master/doc/canonical.rst)
+*   [Compression of sparse bitarrays](https://github.com/ilanschnell/bitarray/blob/master/doc/sparse_compression.rst)
+*   [Variable length bitarray format](https://github.com/ilanschnell/bitarray/blob/master/doc/variable_length.rst)
+*   [Random Bitarrays](https://github.com/ilanschnell/bitarray/blob/master/doc/random_p.rst)
+*   [Bitarray 3 transition](https://github.com/ilanschnell/bitarray/blob/master/doc/bitarray3.rst)
 
 ## Reference
 
-Comprehensive documentation of `bitarray` features, methods and utility functions can be found in the original [README](https://github.com/ilanschnell/bitarray/blob/master/README.md).
+*   [Change Log](https://github.com/ilanschnell/bitarray/blob/master/doc/changelog.rst)
+*   API Reference is included in the original README.
