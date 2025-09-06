@@ -2,132 +2,132 @@
 
   <h1>
     <img src="assets/Stand-In.png" width="85" alt="Logo" valign="middle">
-    Stand-In: Lightweight Identity Control for Video Generation
+    Stand-In: Effortlessly Preserve Identity in Your Videos
   </h1>
 
-  <h3>Effortlessly preserve identities in your videos with Stand-In, a plug-and-play solution.</h3>
+  <h3>A Lightweight and Plug-and-Play Identity Control for Video Generation</h3>
 
-  [![arXiv](https://img.shields.io/badge/arXiv-2508.07901-b31b1b)](https://arxiv.org/abs/2508.07901)
-  [![Project Page](https://img.shields.io/badge/Project_Page-Link-green)](https://www.stand-in.tech)
-  [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-orange)](https://huggingface.co/BowenXue/Stand-In)
-
-  [View the original repository](https://github.com/WeChatCV/Stand-In)
+[![arXiv](https://img.shields.io/badge/arXiv-2508.07901-b31b1b)](https://arxiv.org/abs/2508.07901)
+[![Project Page](https://img.shields.io/badge/Project_Page-Link-green)](https://www.stand-in.tech)
+[![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-orange)](https://huggingface.co/BowenXue/Stand-In)
 
 </div>
 
-<img width="5333" height="2983" alt="Image" src="https://github.com/user-attachments/assets/2fe1e505-bcf7-4eb6-8628-f23e70020966" />
+[**Explore the full potential of Stand-In and revolutionize your video creation!**](https://github.com/WeChatCV/Stand-In)
 
 ---
 
-## Key Features
+## ✨ Key Features of Stand-In
 
-*   ✅ **Lightweight & Efficient:** Achieves state-of-the-art identity preservation with only 1% additional trainable parameters compared to the base video generation model.
-*   ✅ **High-Fidelity Results:** Delivers outstanding identity consistency without sacrificing video generation quality.
-*   ✅ **Plug-and-Play Integration:** Seamlessly integrates with existing text-to-video (T2V) models, making it easy to use.
-*   ✅ **Extensible & Versatile:** Compatible with community models like LoRA and supports various downstream video tasks, including face swapping, and pose-guided generation.
+*   **Minimal Overhead:** Trains with only 1% additional parameters, minimizing resource usage.
+*   **Exceptional Fidelity:** Achieves state-of-the-art results in both Face Similarity and Naturalness, preserving identity beautifully.
+*   **Easy Integration:** "Plug-and-Play" design makes it simple to add to your existing Text-to-Video (T2V) workflows.
+*   **Versatile Applications:** Supports a wide range of tasks, including:
+    *   Text-to-Video Generation
+    *   Non-Human Subject-Preserving Video Generation
+    *   Video Stylization with LoRA
+    *   Video Face Swapping
+    *   Pose-Guided Video Generation (with VACE)
 
 ---
 
-## What's New
+## 🚀 Recent Updates
 
-*   **[2025.08.18]** Compatibility with VACE released. Added pose control and other control methods such as depth maps.
+*   **[2025.08.18]** Released a version compatible with VACE, enabling pose control and other control methods while maintaining identity.
 *   **[2025.08.16]** Updated the experimental face swapping feature.
-*   **[2025.08.13]** Official Stand-In preprocessing ComfyUI node released: [https://github.com/WeChatCV/Stand-In\_Preprocessor\_ComfyUI](https://github.com/WeChatCV/Stand-In_Preprocessor_ComfyUI).
-*   **[2025.08.12]** Released Stand-In v1.0 (153M parameters).
+*   **[2025.08.13]** Released the official Stand-In preprocessing ComfyUI node.
+*   **[2025.08.12]** Launched Stand-In v1.0 (153M parameters), with open-sourced weights and inference code.
 
 ---
 
-## Showcase: See Stand-In in Action!
+## 🌟 Showcase: See Stand-In in Action!
 
 ### Identity-Preserving Text-to-Video Generation
 
-| Reference Image | Prompt                                                                                                                                                                                                                                                                                                         | Generated Video                                                                                                                                                                               |
-| :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](<https://github.com/user-attachments/assets/86ce50d7-8ccb-45bf-9538-aea7f167a541>) | "In a corridor where the walls ripple like water, a woman reaches out to touch the flowing surface, causing circles of ripples to spread. The camera moves from a medium shot to a close-up, capturing her curious expression as she sees her distorted reflection." | ![](<https://github.com/user-attachments/assets/c3c80bbf-a1cc-46a1-b47b-1b28bcad34a3>)                                                                                                  |
-| ![](<https://github.com/user-attachments/assets/de10285e-7983-42bb-8534-80ac02210172>) | "A young man dressed in traditional attire draws the long sword from his waist and begins to wield it. The blade flashes with light as he moves—his eyes sharp, his actions swift and powerful, with his flowing robes dancing in the wind."                     | ![](<https://github.com/user-attachments/assets/1532c701-ef01-47be-86da-d33c8c6894ab>)                                                                                                  |
+| Reference Image | Prompt | Generated Video |
+| :---: | :---: | :---: |
+|![Image](https://github.com/user-attachments/assets/86ce50d7-8ccb-45bf-9538-aea7f167a541)| "In a corridor where the walls ripple like water, a woman reaches out to touch the flowing surface, causing circles of ripples to spread. The camera moves from a medium shot to a close-up, capturing her curious expression as she sees her distorted reflection." |![Image](https://github.com/user-attachments/assets/c3c80bbf-a1cc-46a1-b47b-1b28bcad34a3) |
+|![Image](https://github.com/user-attachments/assets/de10285e-7983-42bb-8534-80ac02210172)| "A young man dressed in traditional attire draws the long sword from his waist and begins to wield it. The blade flashes with light as he moves—his eyes sharp, his actions swift and powerful, with his flowing robes dancing in the wind." |![Image](https://github.com/user-attachments/assets/1532c701-ef01-47be-86da-d33c8c6894ab)|
 
 ---
 
 ### Non-Human Subjects-Preserving Video Generation
 
-| Reference Image                                                                                                 | Prompt                                                                                                                                   | Generated Video                                                                                                                                                                       |
-| :-------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img width="415" height="415" alt="Image" src="https://github.com/user-attachments/assets/b929444d-d724-4cf9-b422-be82b380ff78" /> | "A chibi-style boy speeding on a skateboard, holding a detective novel in one hand. The background features city streets, with trees, streetlights, and billboards along the roads." | ![](<https://github.com/user-attachments/assets/a7239232-77bc-478b-a0d9-ecc77db97aa5>)                                                                                                  |
+| Reference Image | Prompt | Generated Video |
+| :---: | :---: | :---: |
+|<img width="415" height="415" alt="Image" src="https://github.com/user-attachments/assets/b929444d-d724-4cf9-b422-be82b380ff78" />|"A chibi-style boy speeding on a skateboard, holding a detective novel in one hand. The background features city streets, with trees, streetlights, and billboards along the roads."|![Image](https://github.com/user-attachments/assets/a7239232-77bc-478b-a0d9-ecc77db97aa5) |
 
 ---
 
 ### Identity-Preserving Stylized Video Generation
 
-| Reference Image                                                                                                 | LoRA           | Generated Video                                                                                                                                                                  |
-| :-------------------------------------------------------------------------------------------------------------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](<https://github.com/user-attachments/assets/9c0687f9-e465-4bc5-bc62-8ac46d5f38b1>) | Ghibli LoRA    | ![](<https://github.com/user-attachments/assets/c6ca1858-de39-4fff-825a-26e6d04e695f>)                                                                                                  |
-
+| Reference Image | LoRA | Generated Video |
+| :---: | :---: | :---: |
+|![Image](https://github.com/user-attachments/assets/9c0687f9-e465-4bc5-bc62-8ac46d5f38b1)|Ghibli LoRA|![Image](https://github.com/user-attachments/assets/c6ca1858-de39-4fff-825a-26e6d04e695f)|
 ---
 
 ### Video Face Swapping
 
-| Reference Video                                                                                                 | Identity                                                                                                 | Generated Video                                                                                                                                                                |
-| :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](<https://github.com/user-attachments/assets/33370ac7-364a-4f97-8ba9-14e1009cd701>) | <img width="415" height="415" alt="Image" src="https://github.com/user-attachments/assets/d2cd8da0-7aa0-4ee4-a61d-b52718c33756" /> | ![](<https://github.com/user-attachments/assets/0db8aedd-411f-414a-9227-88f4e4050b50>)                                                                                                 |
+| Reference Video | Identity | Generated Video |
+| :---: | :---: | :---: |
+|![Image](https://github.com/user-attachments/assets/33370ac7-364a-4f97-8ba9-14e1009cd701)|<img width="415" height="415" alt="Image" src="https://github.com/user-attachments/assets/d2cd8da0-7aa0-4ee4-a61d-b52718c33756" />|![Image](https://github.com/user-attachments/assets/0db8aedd-411f-414a-9227-88f4e4050b50)|
 
 ---
 
 ### Pose-Guided Video Generation (With VACE)
 
-| Reference Pose                                                                                                | First Frame                                                                                               | Generated Video                                                                                                                                                               |
-| :------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](<https://github.com/user-attachments/assets/5df5eec8-b71c-4270-8a78-906a488f9a94>) | <img width="719" height="415" alt="Image" src="https://github.com/user-attachments/assets/1c2a69e1-e530-4164-848b-e7ea85a99763" /> | ![](<https://github.com/user-attachments/assets/1c8a54da-01d6-43c1-a5fd-cab0c9e32c44>)                                                                                                 |
+| Reference Pose | First Frame | Generated Video |
+| :---: | :---: | :---: |
+|![Image](https://github.com/user-attachments/assets/5df5eec8-b71c-4270-8a78-906a488f9a94)|<img width="719" height="415" alt="Image" src="https://github.com/user-attachments/assets/1c2a69e1-e530-4164-848b-e7ea85a99763" />|![Image](https://github.com/user-attachments/assets/1c8a54da-01d6-43c1-a5fd-cab0c9e32c44)|
 
 ---
 
-For more examples and results, visit the project website: [https://www.Stand-In.tech](https://www.Stand-In.tech)
+### For more results, please visit [https://stand-in-video.github.io/](https://www.Stand-In.tech)
 
 ---
 
-## Getting Started
+## 🛠️ Getting Started
 
-### 1.  Environment Setup
+### 1. Environment Setup
 
 ```bash
-# Clone the project repository
+# Clone the repository
 git clone https://github.com/WeChatCV/Stand-In.git
 cd Stand-In
 
-# Create and activate Conda environment
+# Create and activate a Conda environment
 conda create -n Stand-In python=3.11 -y
 conda activate Stand-In
 
 # Install dependencies
 pip install -r requirements.txt
 
-# (Optional) Install Flash Attention for faster inference
-# Note: Make sure your GPU and CUDA version are compatible with Flash Attention
+# (Optional) Install Flash Attention for faster inference.  Ensure compatibility with your GPU and CUDA version.
 pip install flash-attn --no-build-isolation
 ```
 
 ### 2. Model Download
 
-Automate your setup with our convenient download script:
+Download the necessary models using the provided script:
 
 ```bash
 python download_models.py
 ```
 
-This script will automatically download:
-
+This script automatically downloads:
 *   `wan2.1-T2V-14B` (base text-to-video model)
 *   `antelopev2` (face recognition model)
 *   `Stand-In` (our Stand-In model)
 
-> **Note:** If you have the `wan2.1-T2V-14B model` locally, modify the `download_model.py` script to skip that download and place the model in the `checkpoints/wan2.1-T2V-14B` directory.
+>   **Note:** If you have the base model already, you can manually adjust the `download_model.py` script to skip downloading and place the model in the `checkpoints/wan2.1-T2V-14B` directory.
 
 ---
 
-## Usage Guide
+## 🎬 Usage: Inference and Beyond
 
 ### Standard Inference
 
-Generate videos with identity preservation using the `infer.py` script.
+Use `infer.py` for basic identity-preserving text-to-video generation.
 
 ```bash
 python infer.py \
@@ -136,12 +136,13 @@ python infer.py \
     --output "test/output/lecun.mp4"
 ```
 
-*   **Prompting Tip:** For consistent facial features, use prompts like *"a man"* or *"a woman"* without adding details about appearance.  Prompts support English and Chinese. The prompt is intended for generating frontal, medium-to-close-up videos.
-*   **Input Image:**  Use high-resolution frontal face images for the best results. Our preprocessing handles different resolutions and file types.
+**Prompting Tips:** To preserve facial features, use general terms like *"a man"* or *"a woman"* without further appearance descriptions. Prompts support both English and Chinese. Focus prompts on generating frontal, medium-to-close-up videos.
+
+**Input Image Recommendation:** Use a high-resolution, frontal face image for the best results. Our built-in preprocessing handles various resolutions and file types.
 
 ### Inference with Community LoRA
 
-Load community LoRA models with `infer_with_lora.py`.
+Load community LoRA models with `infer_with_lora.py`:
 
 ```bash
 python infer_with_lora.py \
@@ -152,11 +153,11 @@ python infer_with_lora.py \
     --lora_scale 1.0
 ```
 
-We recommend trying the Ghibli LoRA: [https://civitai.com/models/1404755/studio-ghibli-wan21-t2v-14b](https://civitai.com/models/1404755/studio-ghibli-wan21-t2v-14b)
+We recommend using the stylization LoRA: [https://civitai.com/models/1404755/studio-ghibli-wan21-t2v-14b](https://civitai.com/models/1404755/studio-ghibli-wan21-t2v-14b)
 
 ### Video Face Swapping
 
-Experiment with face swapping using the `infer_face_swap.py` script.
+Experiment with video face swapping using `infer_face_swap.py`:
 
 ```bash
 python infer_face_swap.py \
@@ -166,10 +167,9 @@ python infer_face_swap.py \
     --denoising_strength 0.85
 ```
 
-**Note:** Face swapping is experimental due to limitations with Wan2.1.
+**Important Face Swap Notes:**  Face swapping is experimental due to limitations in the base model.
 
-*   Adjust `--denoising_strength` for optimal face and background blending.
-*   Use `--force_background_consistency` with caution, as it may introduce artifacts.
+Adjust `denoising_strength` to control background and face area changes. Higher values redraw the background more, enhancing face naturalness, but may introduce artifacts. Lower values preserve the background but can lead to overfitting in the face area.  Consider `--force_background_consistency` cautiously; it can cause contour issues.
 
 ### Infer with VACE
 Use the `infer_with_vace.py` script to perform identity-preserving video generation with Stand-In, compatible with VACE.
@@ -195,22 +195,20 @@ Using both Stand-In and VACE together is more challenging than using Stand-In al
 
 ---
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
-This project utilizes and builds upon the following open-source projects:
+We are deeply grateful to the following open-source projects:
 
 *   [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) (training/inference framework)
 *   [Wan2.1](https://github.com/Wan-Video/Wan2.1) (base video generation model)
 
-We are immensely grateful to the creators and contributors of these projects.
-
-Special thanks to [Binxin Yang](https://binxinyang.github.io/) for their contributions to the dataset.
+A special thank you to [Binxin Yang](https://binxinyang.github.io/) for their contribution to the dataset.
 
 ---
 
-## Citation
+## 📚 Citation
 
-If you find our work helpful, please cite our paper:
+If our work has helped your research, please cite us:
 
 ```bibtex
 @article{xue2025standin,
@@ -223,7 +221,6 @@ If you find our work helpful, please cite our paper:
 
 ---
 
-## Get in Touch
+## 💬 Get in Touch
 
-For any questions or suggestions, please open an issue on [GitHub](https://github.com/WeChatCV/Stand-In/issues).
-We value your feedback!
+For any questions or suggestions, please open an issue on [GitHub](https://github.com/WeChatCV/Stand-In/issues).  We value your feedback!

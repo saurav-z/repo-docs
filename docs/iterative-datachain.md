@@ -1,43 +1,43 @@
-# DataChain: Unleash the Power of Your Unstructured Data
+# DataChain: AI-Powered Data Warehouse for Unstructured Data
 
-**DataChain is a Python-based AI-data warehouse designed to transform, analyze, and version unstructured data like images, audio, video, text, and PDFs at scale.** [Visit the DataChain GitHub Repository](https://github.com/iterative/datachain)
-
-[![PyPI](https://img.shields.io/pypi/v/datachain.svg)](https://pypi.org/project/datachain/)
-[![Python Version](https://img.shields.io/pypi/pyversions/datachain)](https://pypi.org/project/datachain)
-[![Codecov](https://codecov.io/gh/iterative/datachain/graph/badge.svg?token=byliXGGyGB)](https://codecov.io/gh/iterative/datachain)
-[![Tests](https://github.com/iterative/datachain/actions/workflows/tests.yml/badge.svg)](https://github.com/iterative/datachain/actions/workflows/tests.yml)
-[![DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/iterative/datachain)
+**DataChain is a Python-based data warehouse designed for transforming, analyzing, and versioning unstructured data, such as images, audio, videos, text, and PDFs.** [Check out the original repo](https://github.com/iterative/datachain).
 
 ## Key Features
 
-*   **Multimodal Data Support:** Process and version images, videos, text, PDFs, JSONs, CSVs, and parquet files.
-*   **Version Control for Unstructured Data:** Manage unstructured data without data duplication, using references to storage like S3, GCP, Azure, and local file systems.
-*   **Python-First Development:** Utilize a Python-friendly framework with dataframe-like APIs, vectorized engine, and built-in parallelization.
-*   **Efficient Data Processing:** Includes delta processing (process only new/changed files) and retry processing (automatically reprocess records with errors).
-*   **Metadata Enrichment and Analytics:** Generate, filter, join, and group datasets by metadata.  Perform high-performance vectorized operations.
-*   **LLM Integration:** Seamlessly integrates with Large Language Models (LLMs) for text analysis, and other AI-driven data enrichments.
-
-## Use Cases
-
-*   **ETL (Extract, Transform, Load):** Build Pythonic pipelines for transforming and enriching unstructured data.
-*   **Analytics:** Perform analytics on data at scale using a dataframe-like API.
-*   **Data Versioning:** Manage versions of your data without moving or copying files.
-*   **Incremental Processing:** Efficiently process new and changed data with built-in delta and retry features.
+*   **Multimodal Data Support:**
+    *   Version unstructured data without data duplication, working with references to various storage options (S3, GCP, Azure, local).
+    *   Supports images, videos, text, PDFs, JSONs, CSVs, parquet, and more.
+    *   Unites files and metadata into persistent, versioned, columnar datasets.
+*   **Pythonic Framework:**
+    *   Operate on Python objects and their fields (float scores, strings, matrices, LLM response objects).
+    *   Run Python code on large datasets with built-in parallelization and memory-efficient computing; no SQL or Spark needed.
+*   **Data Enrichment and Processing:**
+    *   Generate metadata using local AI models and LLM APIs.
+    *   Filter, join, and group datasets by metadata; search by vector embeddings.
+    *   High-performance vectorized operations on Python objects (sum, count, avg, etc.).
+    *   Seamlessly integrate with PyTorch and TensorFlow, or export data back into storage.
+*   **ETL Capabilities:**
+    *   Pythonic framework for describing and running unstructured data transformations and enrichments.
+    *   Apply models to data, including LLMs.
+*   **Analytics and Versioning:**
+    *   DataChain dataset is a table that combines all the information about data objects in one place.
+    *   Provides dataframe-like API and vectorized engine to do analytics on these tables at scale.
+    *   No data moving or copying is needed, making it ideal for large datasets.
+    *   Supports incremental processing with delta and retry features.
 
 ## Getting Started
 
-1.  **Installation:**
+*   **Installation:**
 
     ```bash
     pip install datachain
     ```
 
-2.  **Quick Start and Documentation:**
+*   **Quick Start:**  Visit the [Quick Start Guide](https://docs.datachain.ai/quick-start) and [Documentation](https://docs.datachain.ai/) to begin using DataChain.
 
-    *   [Quick Start](https://docs.datachain.ai/quick-start)
-    *   [Documentation](https://docs.datachain.ai/)
+## Examples
 
-## Example: Download Subset of Files Based on Metadata
+### Downloading a Subset of Files Based on Metadata
 
 ```python
 import datachain as dc
@@ -53,7 +53,7 @@ likely_cats = annotated.filter((dc.Column("meta.inference.confidence") > 0.93) \
 likely_cats.to_storage("high-confidence-cats/", signal="file")
 ```
 
-## Example: Incremental Processing with Error Handling
+### Incremental Processing with Error Handling
 
 ```python
 import datachain as dc
@@ -97,14 +97,7 @@ chain = (
 )
 ```
 
-## Example: LLM based text-file evaluation
-
-```shell
-$ pip install mistralai # Requires version >=1.0.0
-$ export MISTRAL_API_KEY=_your_key_
-```
-
-Python code:
+### LLM-Based Text File Evaluation
 
 ```python
 import os
@@ -135,14 +128,9 @@ successful_chain.to_storage("./output_mistral")
 print(f"{successful_chain.count()} files were exported")
 ```
 
-With the instruction above, the Mistral model considers 31/50 files to hold the successful dialogues:
+## Contributing
 
-```shell
-$ ls output_mistral/datachain-demo/chatbot-KiT/
-1.txt  15.txt 18.txt 2.txt  22.txt 25.txt 28.txt 33.txt 37.txt 4.txt  41.txt ...
-$ ls output_mistral/datachain-demo/chatbot-KiT/ | wc -l
-31
-```
+Contributions are welcome! Review the [Contributor Guide](https://docs.datachain.ai/contributing) for more information.
 
 ## Community and Support
 
@@ -154,10 +142,10 @@ $ ls output_mistral/datachain-demo/chatbot-KiT/ | wc -l
 
 ## DataChain Studio Platform
 
-`DataChain Studio` is a proprietary solution for teams that offers:
+[DataChain Studio](https://studio.datachain.ai/) is a proprietary solution that offers:
 
-*   **Centralized dataset registry** to manage data, code and dependencies in one place.
-*   **Data Lineage** for data sources as well as derivative dataset.
-*   **UI for Multimodal Data** like images, videos, and PDFs.
-*   **Scalable Compute** to handle large datasets (100M+ files) and in-house AI model inference.
-*   **Access control** including SSO and team based collaboration.
+*   Centralized dataset registry for managing data, code, and dependencies.
+*   Data lineage for data sources and derivative datasets.
+*   UI for Multimodal Data (images, videos, PDFs).
+*   Scalable Compute to handle large datasets (100M+ files) and in-house AI model inference.
+*   Access control, including SSO and team-based collaboration.

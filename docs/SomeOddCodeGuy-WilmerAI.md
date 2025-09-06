@@ -1,66 +1,102 @@
-# WilmerAI: Expert Semantic Prompt Routing and Orchestration
+# WilmerAI: Expert Semantic Prompt Routing & Workflow Orchestration
 
-**Unlock advanced AI capabilities with WilmerAI, a node-based workflow engine that understands context and orchestrates multiple LLMs to deliver powerful, multi-step responses.  [View the original repository](https://github.com/SomeOddCodeGuy/WilmerAI)**
+**Unlock advanced, context-aware AI interactions with WilmerAI, a node-based workflow engine for sophisticated prompt routing and multi-LLM orchestration.** ([Original Repo](https://github.com/SomeOddCodeGuy/WilmerAI))
 
-## Key Features
+## Key Features:
 
-*   **Advanced Contextual Routing:**
-    *   Analyzes entire conversation history for precise intent understanding, surpassing single-keyword routing.
-    *   Includes a **Prompt Router** that selects specialized workflows and **In-Workflow Routing** for dynamic decision-making, all based on the conversation's context.
+*   **Advanced Contextual Routing:** Understands the full context of a conversation, not just the last message, for superior routing and intent recognition.
+*   **Node-Based Workflow Engine:** Powers complex, multi-step processes using JSON-defined workflows.  Each node can trigger LLMs, external tools, scripts, and other workflows.
+*   **Multi-LLM & Multi-Tool Orchestration:** Orchestrates the optimal LLM and tools for each step of a task, enabling a customized and powerful AI solution.
+*   **Modular & Reusable Workflows:** Build and reuse self-contained workflows for common tasks to streamline complex agent design.
+*   **Stateful Conversation Memory:**  Leverages a multi-part memory system for effective long-conversation context (chronological summary, rolling summary, and vector database).
+*   **Adaptable API Gateway:** Provides OpenAI and Ollama-compatible API endpoints for easy integration with existing front-end applications.
+*   **Flexible Backend Connectors:** Connects to various LLM backends, including OpenAI, Ollama, and KoboldCpp, with a simple configuration.
+*   **Tool Integration:** Support for MCP Server Tool Calling using MCPO, allowing tool use mid-workflow. (Big thank you to [iSevenDays](https://github.com/iSevenDays))
 
-*   **Node-Based Workflow Engine:**
-    *   Core of WilmerAI, processing requests through JSON-defined workflows (sequences of steps).
-    *   Each "node" executes a specific task, with outputs feeding into subsequent nodes, enabling intricate, chained processes.
+## Why Use WilmerAI?
 
-*   **Multi-LLM & Multi-Tool Orchestration:**
-    *   Each workflow node connects to a different LLM endpoint or external tool.
-    *   Optimize tasks by assigning specialized models for each step, leveraging the strengths of various LLMs.
+WilmerAI goes beyond simple keyword-based routing, providing a powerful framework for orchestrating complex AI tasks. It enables you to:
 
-*   **Modular & Reusable Workflows:**
-    *   Construct self-contained workflows for common tasks.
-    *   Integrate workflows as nodes within larger workflows, simplifying complex agent design.
+*   **Build semi-autonomous AI assistants** that excel at iterative problem-solving.
+*   **Leverage distributed LLMs** by connecting to a wide range of language models and services.
+*   **Customize your AI interactions** with fully flexible workflows that go beyond what's currently available.
 
-*   **Stateful Conversation Memory:**
-    *   Employs a three-part memory system: chronological summary, rolling chat summary, and searchable vector database for effective context management.
+## Example Workflows - Visualized
 
-*   **Adaptable API Gateway:**
-    *   Exposes OpenAI and Ollama-compatible API endpoints for easy integration with existing front-ends.
+*(Click on images to view the animated GIFs)*
 
-*   **Flexible Backend Connectors:**
-    *   Connects to various LLM backends, including OpenAI, Ollama, and KoboldCpp, through customizable endpoints, API types, and presets.
-
-*   **MCP Server Tool Integration using MCPO:** Supports MCPO server tool calling, for use with iSevenDays's MCP tool-calling feature, allowing tool use mid-workflow.
-
----
-
-## Power of Workflows:
-
-*   **Dynamic LLM Control:** Orchestrate various LLMs within a single call, as seen with the ability to call the Offline Wikipedia API
-*   **Iterative Enhancement:** Refine responses through iterative LLM interactions for improved performance.
-*   **Distributed LLMs:** Leverage multiple machines and APIs for powerful and scalable workflows.
+*   **No-RAG vs RAG:**
+    ![No-RAG vs RAG](Docs/Gifs/Search-Gif.gif)
+*   **Simple Assistant Workflow:**
+    ![Single Assistant Routing to Multiple LLMs](Docs/Examples/Images/Wilmer-Assistant-Workflow-Example.jpg)
+*   **Prompt Routing Example:**
+    ![Prompt Routing Example](Docs/Examples/Images/Wilmer-Categorization-Workflow-Example.png)
+*   **Group Chat to Different LLMs:**
+    ![Groupchat to Different LLMs](Docs/Examples/Images/Wilmer-Groupchat-Workflow-Example.png)
+*   **Coding Workflow Example:**
+    ![Oversimplified Example Coding Workflow](Docs/Examples/Images/Wilmer-Simple-Coding-Workflow-Example.jpg)
 
 ## Getting Started
 
-### Quick Setup
+### 1. Installation
 
-1.  **Install Dependencies:** Ensure Python is installed and install dependencies using `pip install -r requirements.txt`.
-2.  **Run the Server:** Execute the server script using `python server.py` or the provided `.bat` or `.sh` files.
-3.  **Configure Endpoints:** Set up your LLM endpoints in the `Public/Configs/Endpoints` directory.
-4.  **Choose a User:** Select a pre-made user configuration from `Public/Configs/Users/_current-user.json` or run with the `--User` argument.
+1.  **Install Dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+2.  **Run the Server:**
+    ```bash
+    python server.py
+    ```
+    Or, use the provided `.bat` (Windows) or `.sh` (macOS) scripts.
 
-For detailed instructions, see the [User Documentation](/Docs/_User_Documentation/README.md) and [Developer Documentation](/Docs/Developer_Docs/README.md).
+### 2. Configuration:
 
----
+1.  **Endpoints:** Configure your LLM API endpoints in the `Public/Configs/Endpoints` directory.  Example endpoints are provided in the `_example-endpoints` folder.
+2.  **User:** Select the user profile you want to use in `Public/Configs/Users/_current-user.json`. Choose from provided templates for easy setup.
 
-## Maintainer's Note
-  *   As the project is undergoing active development, please be aware that pull requests modifying the Middleware modules are not accepted at this time. However, any changes to the iSevenDays's new MCP tool-calling feature, or adding new custom users or prompt templates within the Public directory are still welcome.
+**Find pre-made user configurations in `Public/Configs/Users/` to quickly get started.**
+
+## Connecting to WilmerAI
+
+WilmerAI exposes OpenAI and Ollama-compatible APIs:
+
+*   OpenAI v1/completions (*requires [Wilmer Prompt Template](Public/Configs/PromptTemplates/wilmerai.json)*)
+*   OpenAI chat/completions
+*   Ollama api/generate (*requires [Wilmer Prompt Template](Public/Configs/PromptTemplates/wilmerai.json)*)
+*   Ollama api/chat
+
+WilmerAI can connect to:
+
+*   OpenAI Compatible v1/completions
+*   OpenAI Compatible chat/completions
+*   Ollama Compatible api/generate
+*   Ollama Compatible api/chat
+*   KoboldCpp Compatible api/v1/generate (*non-streaming generate*)
+*   KoboldCpp Compatible /api/extra/generate/stream (*streaming generate*)
+
+### Connecting in SillyTavern
+
+*   **Text Completion:** Connect as OpenAI Compatible v1/Completions or Ollama api/generate (use WilmerAI prompt template).
+*   **Chat Completions (Not Recommended):** Configure in SillyTavern and in your Wilmer user settings.
+
+### Connecting in Open WebUI
+
+Connect to Wilmer as if it were an Ollama instance.
+
+## Important Notes
+
+*   **Token Usage:**  WilmerAI does not track or report token usage. Monitor this yourself through your LLM API dashboards.
+*   **LLM Dependency:** The quality of WilmerAI's outputs depends heavily on the quality of the connected LLMs and the prompt template you use.
+*   **Current Development:**  The project is under active development.  Refer to the maintainer's notes in the original README for current development and future plans.
 
 ## Contact
 
-For questions, feedback, or collaboration, please reach out to:
+*   WilmerAI.Project@gmail.com
 
-WilmerAI.Project@gmail.com
+## Additional Information
 
----
-
-**[View the original repository](https://github.com/SomeOddCodeGuy/WilmerAI)**
+*   **User Documentation:** /Docs/\_User\_Documentation/README.md
+*   **Developer Documentation:** /Docs/Developer\_Docs/README.md
+*   **Third Party Libraries:**  Detailed license information is in the README of the ThirdParty-Licenses folder.
+*   **License:**  GNU General Public License v3.

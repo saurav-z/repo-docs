@@ -1,6 +1,6 @@
-# CCPlugins: Supercharge Your Claude Code CLI Workflow (Get Started Today!)
+# CCPlugins: Supercharge Your Claude Code CLI Workflow
 
-**Tired of repetitive tasks and boilerplate code?** CCPlugins is your solution! This powerful set of professional commands instantly boosts your productivity by automating common development tasks within the Claude Code CLI. [Check out the CCPlugins GitHub repository for more details.](https://github.com/brennercruvinel/CCPlugins)
+**Tired of repetitive coding tasks? CCPlugins offers professional commands for the Claude Code CLI, saving you hours each week.** Explore how to automate your development workflow with [CCPlugins](https://github.com/brennercruvinel/CCPlugins), the ultimate tool to streamline your coding experience.
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)](https://github.com/brennercruvinel/CCPlugins)
 [![Version](https://img.shields.io/badge/version-2.5.2-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
@@ -11,12 +11,11 @@
 
 ## Key Features:
 
-*   **Automated Workflows:** Streamline your development with pre-built commands for common tasks.
-*   **Code Quality & Security:** Improve code quality and identify vulnerabilities with ease.
-*   **Intelligent Analysis:** Leverage advanced analysis for refactoring, security, and more.
-*   **Smart Validation & Refinement:** Ensure completeness and accuracy with built-in validation.
-*   **Enhanced Performance:** Save time with optimized commands and intelligent caching.
-*   **Session Management:** Improve your efficiency with documentation & tracking commands.
+*   **Automated Development:** Simplify tasks like code formatting, testing, and project cleanup.
+*   **Code Quality & Security:** Enhance your codebase with vulnerability scans, review tools, and proactive issue detection.
+*   **Smart Code Analysis:** Understand project architecture and patterns with advanced analysis features.
+*   **Enhanced Workflow:** Session management, documentation updates, and efficient TODO management.
+*   **Time-Saving:** Save an estimated **4-5 hours per week** with professional-grade analysis and automation.
 
 ## Installation
 
@@ -52,29 +51,93 @@ python install.py
 python uninstall.py
 ```
 
-## Commands (Examples)
+## Commands
 
-*   `/cleanproject`: Remove debug artifacts safely.
-*   `/commit`: Create smart, conventional commits.
-*   `/format`: Auto-detect and apply project formatting.
-*   `/refactor`: Restructure code intelligently.
-*   `/security-scan`: Perform vulnerability analysis.
+CCPlugins provides a comprehensive suite of commands to streamline your development process:
+
+### 🚀 Development Workflow
+
+*   `/cleanproject`: Remove debug artifacts safely with Git.
+*   `/commit`: Create smart, conventional commits with analysis.
+*   `/format`: Automatically detect and apply project formatting.
+*   `/scaffold feature-name`: Generate complete features from predefined patterns.
 *   `/test`: Run tests with intelligent failure analysis.
-*   `/implement`: Adapt code from any source with validation.
+*   `/implement url/path/feature`: Import and adapt code from various sources with a validation phase.
+*   `/refactor`: Restructure code intelligently with validation and de-para mapping.
 
-(See full list in original README)
+### 🛡️ Code Quality & Security
 
-## How it Works
+*   `/review`: Utilize multi-agent analysis for security, performance, quality, and architecture.
+*   `/security-scan`: Perform vulnerability analysis with detailed remediation tracking.
+*   `/predict-issues`: Proactively detect potential problems and provide timeline estimates.
+*   `/remove-comments`: Clean obvious comments, preserve valuable documentation.
+*   `/fix-imports`: Repair broken imports after refactoring.
+*   `/find-todos`: Locate and organize development tasks.
+*   `/create-todos`: Add context-aware TODO comments based on analysis results.
+*   `/fix-todos`: Intelligently implement TODO fixes with context.
 
-CCPlugins extends Claude Code CLI with custom commands that perform complex development tasks. These commands use Claude's capabilities to analyze your code, plan execution, and ensure safety.
+### 🔍 Advanced Analysis
 
-## Security & Git Instructions
+*   `/understand`: Analyze the entire project architecture and identify patterns.
+*   `/explain-like-senior`: Get senior-level code explanations with context.
+*   `/contributing`: Complete contribution readiness analysis.
+*   `/make-it-pretty`: Improve readability without modifying functionality.
 
-CCPlugins commands are designed to NEVER add "Co-authored-by", include "Generated with Claude Code" or AI signatures, modify git configs or credentials, or add AI attribution to commits/issues.
+### 📋 Session & Project Management
 
-##  Real World Example
+*   `/session-start`: Begin documented sessions with CLAUDE.md integration.
+*   `/session-end`: Summarize and preserve session context.
+*   `/docs`: Smart documentation management and updates.
+*   `/todos-to-issues`: Convert code TODOs to GitHub issues.
+*   `/undo`: Safely roll back changes with Git checkpoint restore.
 
-(Same as in original README)
+## Advanced Features
+
+### Validation & Refinement
+
+Commands like `/refactor` and `/implement` now incorporate validation phases to ensure complete and accurate code transformations:
+
+```bash
+/refactor validate  # Verify and validate transformations
+/implement validate # Check integration completeness
+```
+
+### Extended Thinking
+
+Advanced analysis for complex scenarios with deeper insight.
+
+*   Refactoring: Deep architectural analysis for large-scale changes.
+*   Security: Sophisticated vulnerability detection with chain analysis.
+
+### Pragmatic Command Integration
+
+Seamless workflow suggestions without unnecessary automation:
+
+*   Suggestions to run `/test` after significant changes.
+*   Recommendation to use `/commit` at strategic checkpoints.
+*   Preserves user control, no automatic execution.
+
+## Real-World Example
+
+**Before `/cleanproject`:**
+
+```
+src/
+├── UserService.js
+├── UserService.test.js
+├── UserService_backup.js    # Old version
+├── debug.log               # Debug output
+├── test_temp.js           # Temporary test
+└── notes.txt              # Dev notes
+```
+
+**After `/cleanproject`:**
+
+```
+src/
+├── UserService.js          # Clean production code
+└── UserService.test.js     # Actual tests preserved
+```
 
 ## Requirements
 
@@ -82,9 +145,9 @@ CCPlugins commands are designed to NEVER add "Co-authored-by", include "Generate
 *   Python 3.6+ (for installer)
 *   Git (for version control commands)
 
-## Contributing
+## Contribute
 
-We welcome contributions!  See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions! Check out [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 

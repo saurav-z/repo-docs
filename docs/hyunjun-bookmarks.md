@@ -1,145 +1,90 @@
-# Comprehensive Bookmarks for Diverse Topics
+# Comprehensive Bookmarks Repository
 
-This repository, originally created by [hyunjun](https://github.com/hyunjun/bookmarks), serves as a valuable collection of curated links and resources covering a wide range of subjects, from technology to lifestyle.
+This repository offers a curated collection of bookmarks spanning a wide range of topics, providing valuable resources for learning and exploration. (See the original repository [here](https://github.com/hyunjun/bookmarks).)
 
 ## Key Features:
 
-*   **Extensive Categorization:** Organized into major categories like "miscellaneous" and "programming," offering easy navigation.
-*   **In-depth Subtopics:** Each category further branches into specific topics for detailed exploration.
-*   **Programming Resources:** A dedicated section for programming with resources on languages, data science, and web development.
-*   **Diverse Subject Matter:** Includes topics like finance, travel, art, and more, catering to a broad audience.
-*   **Constantly Updated:** The repository is likely to be continuously updated, adding fresh resources.
+*   **Extensive Topic Coverage:**  Bookmarks are organized into two main categories: *Miscellaneous* and *Programming*, covering a diverse set of subjects.
+*   **Well-Organized Structure:** The bookmarks are structured with clear markdown files for easy navigation and access.
+*   **Programming Focus:** Includes extensive resources for various programming languages, data science, and software development concepts.
+*   **Continuous Updates:** The bookmark collection is likely to be updated regularly with new and relevant content.
 
-## Content Overview:
+## Content Breakdown:
 
-**Miscellaneous:**
+The repository contains bookmarks on the following topics:
 
-*   [제주도](jeju.md) (Jeju Island)
-*   [animal](animal.md)
-*   [app](app.md)
-*   [art](art.md)
-*   [baby](baby.md)
-*   [book](book.md)
-*   [business](business.md)
-*   [drama](drama.md)
-*   [economy](economy.md)
-*   [education](education.md)
-*   [english](english.md)
-*   [finance](finance.md)
-*   [food](food.md)
-*   [game](game.md)
-*   [health](health.md)
-*   [history](history.md)
-*   [house](house.md)
-*   [life](life.md)
-*   [nomad & remote](nomad.md)
-*   [math](math.md)
-    *   [statistics](statistics.md)
-*   [media](media.md)
-*   [myth](myth.md)
-*   [people](people.md)
-*   [philosophy](philosophy.md)
-*   [politics](politics.md)
-*   [presentation](presentation.md)
-    *   [dev small talk](presentation/dev_small_talk.md)
-    *   [speed](presentation/speed.md)
-*   [product](product.md)
-*   [psychology](psychology.md)
-*   [religion](religion.md)
-*   [robot](robot.md)
-*   [self control](self_control.md)
-*   [science](science.md)
-*   [shopping](shopping.md)
-*   [speaking](speaking.md)
-*   [sports](sports.md)
-*   [travel](travel.md)
-*   [writing](writing.md)
+### Miscellaneous
 
-**Programming:**
+*   제주도 (Jeju Island)
+*   Animal
+*   App
+*   Art
+*   Baby
+*   Book
+*   Business
+*   Drama
+*   Economy
+*   Education
+*   English
+*   Finance
+*   Food
+*   Game
+*   Health
+*   History
+*   House
+*   Life
+*   Nomad & Remote
+*   Math (and Statistics)
+*   Media
+*   Myth
+*   People
+*   Philosophy
+*   Politics
+*   Presentation (including "dev small talk" and "speed")
+*   Product
+*   Psychology
+*   Religion
+*   Robot
+*   Self Control
+*   Science
+*   Shopping
+*   Speaking
+*   Sports
+*   Travel
+*   Writing
 
-*   [algorithm](algorithm.md)
-*   [anomaly detection](anomaly_detection.md)
-*   [apache](apache.md)
-    *   [hbase](hbase.md)
-    *   [spark](spark.md)
-*   [bitcoin](bitcoin.md)
-*   Cloud
-    *   [aws](aws.md)
-    *   [azure](azure.md)
-    *   [google cloud platform gcp](gcp.md)
-*   [Coursera](coursera.md)
-*   [data science](data_science.md)
-    *   [artificial intelligence](artificial_intelligence.md)
-    *   [data](data.md)
-    *   [data visualization](data_visualization.md)
-    *   [deep learning](deep_learning.md)
-    *   [keras](keras.md)
-    *   [machine learning](machine_learning.md)
-    *   [NLP](nlp.md)
-    *   [pytorch](pytorch.md)
-    *   [tensorflow](tensorflow.md)
-    *   [vision](vision.md)
-*   [docker](docker.md)
-*   editor
-    *   [emacs](emacs.md)
-    *   [vim](vim.md)
-*   [elasticsearch & lucene](elasticsearch_lucene.md)
-*   [game](game.md)
-*   [gis](gis.md)
-*   [git](git.md)
-*   [graph](graph.md)
-*   [hadoop](hadoop.md)
-*   [hardware](hardware.md)
-*   [interview](interview.md)
-*   [json](json.md)
-*   [linux](linux.md)
-*   Mobile
-    *   [android](android.md)
-    *   [Flutter](flutter.md)
-    *   [iOS](ios.md)
-*   [monitoring](monitoring.md)
-*   [NoSQL](nosql.md)
-    *   [hbase](hbase.md)
-    *   [redis](redis.md)
-*   [open source](open_source.md)
-*   [programmer](programmer.md)
-*   [programming](programming.md)
-    *   [concurrency](concurrency.md)
-    *   [data oriented design](dod.md)
-    *   [functional programming](functional_programming.md)
-    *   [logging](logging.md)
-    *   [network](network.md)
-    *   [object oriented programming](oop.md)
-    *   [regular expression](regular_expression.md)
-*   [programming books](programming_books.md)
-*   [programming language](programming_language.md)
-    *   [bash](bash.md)
-    *   [c](c.md)
-    *   [clojure](clojure.md)
-    *   [c++](cpp.md)
-    *   [c#](csharp.md)
-    *   [elixir](elixir.md)
-    *   [erlang](erlang.md)
-    *   [go](go.md)
-    *   [haskell](haskell.md)
-    *   [java](java.md)
-    *   [javascript](javascript.md)
-    *   [julia](julia.md)
-    *   [kotlin](kotlin.md)
-    *   [lisp](lisp.md)
-    *   [.net](dotnet.md)
-    *   [ocaml](ocaml.md)
-    *   [php](php.md)
-    *   [python](python.md)
-    *   [R](r.md)
-    *   [ruby](ruby.md)
-    *   [rust](rust.md)
-    *   [scala](scala.md)
-*   [sql](sql.md)
-*   [svn](svn.md)
-*   [time series](time_series.md)
-*   [web](web.md)
+### Programming
 
----
+*   Algorithm
+*   Anomaly Detection
+*   Apache (including HBase and Spark)
+*   Bitcoin
+*   Cloud (AWS, Azure, Google Cloud Platform (GCP))
+*   Coursera
+*   Data Science (including Artificial Intelligence, Data, Data Visualization, Deep Learning, Keras, Machine Learning, NLP, PyTorch, TensorFlow, and Vision)
+*   Docker
+*   Editor (Emacs, Vim)
+*   Elasticsearch & Lucene
+*   Game
+*   GIS
+*   Git
+*   Graph
+*   Hadoop
+*   Hardware
+*   Interview
+*   JSON
+*   Linux
+*   Mobile (Android, Flutter, iOS)
+*   Monitoring
+*   NoSQL (HBase, Redis)
+*   Open Source
+*   Programmer
+*   Programming (including Concurrency, Data Oriented Design (DOD), Functional Programming, Logging, Network, Object Oriented Programming (OOP), and Regular Expression)
+*   Programming Books
+*   Programming Language (Bash, C, Clojure, C++, C#, Elixir, Erlang, Go, Haskell, Java, JavaScript, Julia, Kotlin, Lisp, .NET, OCaml, PHP, Python, R, Ruby, Rust, Scala)
+*   SQL
+*   SVN
+*   Time Series
+*   Web
 
-**Explore the original repository for the most up-to-date information: [hyunjun/bookmarks](https://github.com/hyunjun/bookmarks).**
+This well-organized repository serves as a valuable resource for anyone looking to expand their knowledge on a wide variety of subjects!

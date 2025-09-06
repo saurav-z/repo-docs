@@ -4,9 +4,9 @@
   <img src="./assets/logo.png" width="120" height="120" alt="LightRAG Logo" style="border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);">
 </div>
 
-# LightRAG: Unlock the Power of Advanced Retrieval-Augmented Generation 🚀
+# LightRAG: Revolutionizing Retrieval-Augmented Generation (RAG) 🚀
 
-LightRAG is a simple yet powerful framework for Retrieval-Augmented Generation (RAG), enabling faster and more efficient access to information. **[Explore the original LightRAG repository here](https://github.com/HKUDS/LightRAG)**.
+**LightRAG empowers you to build fast and efficient Retrieval-Augmented Generation (RAG) systems, offering advanced features and flexible storage options.** ([See the original repo](https://github.com/HKUDS/LightRAG))
 
 <div align="center">
     <a href="https://trendshift.io/repositories/13043" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13043" alt="HKUDS%2FLightRAG | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
@@ -50,37 +50,22 @@ LightRAG is a simple yet powerful framework for Retrieval-Augmented Generation (
 
 ---
 
-## Key Features of LightRAG
+## Key Features
 
-*   **Fast & Efficient RAG**: Optimized for speed and performance in Retrieval-Augmented Generation.
-*   **Flexible Storage Options**: Supports various storage backends for vectors, graphs, and more, including:
-    *   JsonKVStorage
-    *   PGKVStorage      Postgres
-    *   RedisKVStorage   Redis
-    *   MongoKVStorage   MongoDB
-    *   NetworkXStorage      NetworkX (default)
-    *   Neo4JStorage         Neo4J
-    *   PGGraphStorage       PostgreSQL with AGE plugin
-    *   MemgraphStorage.     Memgraph
-    *   NanoVectorDBStorage         NanoVector (default)
-    *   PGVectorStorage             Postgres
-    *   MilvusVectorDBStorage       Milvus
-    *   FaissVectorDBStorage        Faiss
-    *   QdrantVectorDBStorage       Qdrant
-    *   MongoVectorDBStorage        MongoDB
-    *   JsonDocStatusStorage        JsonFile (default)
-    *   PGDocStatusStorage          Postgres
-    *   MongoDocStatusStorage       MongoDB
-*   **Advanced Knowledge Graph Capabilities:** Create, edit, and delete entities and relationships, with full support for data consistency and merging entities
-*   **Multimodal Document Processing**: Seamlessly integrates with [RAG-Anything](https://github.com/HKUDS/RAG-Anything) for processing text, images, tables, and formulas.
-*   **Comprehensive Data Export**: Export your knowledge graph data in CSV, Excel, Markdown, and text formats.
-*   **Token Usage Tracking**: Monitor and manage LLM token consumption.
-*   **Integration with Hugging Face and Ollama:** Utilize models hosted on Hugging Face and Ollama, in addition to OpenAI models.
-*   **Flexible Query Options**: Supports local, global, hybrid, and mix query modes.
+*   **Simple & Fast RAG:** Designed for ease of use and efficient performance.
+*   **Flexible Storage Options:** Support for various storage backends including:
+    *   JSON, PostgreSQL, Redis, MongoDB, Neo4j, and Memgraph.
+    *   Vector databases: NanoVectorDB, PGVector, Milvus, Faiss, Qdrant, MongoVectorDB
+*   **Entity and Relation Management:** Create, edit, and delete entities and relationships within your knowledge graph.
+*   **Multimodal Document Processing:** Seamless integration with [RAG-Anything](https://github.com/HKUDS/RAG-Anything) for processing PDFs, images, Office documents, tables, and formulas.
+*   **Advanced Querying:** Supports hybrid, local, global, and mix modes for retrieval.
+*   **Token Usage Tracking:** Monitor and manage token consumption.
+*   **Data Export:** Export your knowledge graph data in multiple formats.
+*   **Modular Design:**  Easy integration of custom LLMs, embedding models, and rerankers.
 
 ---
 
-## News & Updates
+## News
 
 *   [X] [2025.06.16]🎯📢Our team has released [RAG-Anything](https://github.com/HKUDS/RAG-Anything) an All-in-One Multimodal RAG System for seamless text, image, table, and equation processing.
 *   [X] [2025.06.05]🎯📢LightRAG now supports comprehensive multimodal data handling through [RAG-Anything](https://github.com/HKUDS/RAG-Anything) integration, enabling seamless document parsing and RAG capabilities across diverse formats including PDFs, images, Office documents, tables, and formulas. Please refer to the new [multimodal section](https://github.com/HKUDS/LightRAG/?tab=readme-ov-file#multimodal-document-processing-rag-anything-integration) for details.
@@ -112,6 +97,8 @@ LightRAG is a simple yet powerful framework for Retrieval-Augmented Generation (
 *Figure 2: LightRAG Retrieval and Querying Flowchart - Img Caption : [Source](https://learnopencv.com/lightrag/)*
 
 </details>
+
+---
 
 ## Installation
 
@@ -211,7 +198,7 @@ For a streaming response implementation example, please see `examples/lightrag_o
 
 **Note 2**: Only `lightrag_openai_demo.py` and `lightrag_openai_compatible_demo.py` are officially supported sample codes. Other sample files are community contributions that haven't undergone full testing and optimization.
 
-## Programing with LightRAG Core
+## Programming with LightRAG Core
 
 > ⚠️ **If you would like to integrate LightRAG into your project, we recommend utilizing the REST API provided by the LightRAG Server**. LightRAG Core is typically intended for embedded applications or for researchers who wish to conduct studies and evaluations.
 
@@ -552,4 +539,24 @@ rag = LightRAG(
 
 * **Low RAM GPUs**
 
-In order to run this experiment on low RAM GPU you should select small model and tune context window (increasing context increase memory consumption). For example, running this ollama example on repurposed mining GPU with 6Gb of RAM required to set context size to 26k while using `gemma2:2b`. It was able to find 197 entities
+In order to run this experiment on low RAM GPU you should select small model and tune context window (increasing context increase memory consumption). For example, running this ollama example on repurposed mining GPU with 6Gb of RAM required to set context size to 26k while using `gemma2:2b`. It was able to find 197 entities and 19 relations on `book.txt`.
+
+</details>
+<details>
+<summary> <b>LlamaIndex</b> </summary>
+
+LightRAG supports integration with LlamaIndex (`llm/llama_index_impl.py`):
+
+- Integrates with OpenAI and other providers through LlamaIndex
+- See [LlamaIndex Documentation](lightrag/llm/Readme.md) for detailed setup and examples
+
+**Example Usage**
+
+```python
+# Using LlamaIndex with direct OpenAI access
+import asyncio
+from lightrag import LightRAG
+from lightrag.llm.llama_index_impl import llama_index_complete_if_cache, llama_index_embed
+from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.llms.openai import OpenAI
+from lightrag.kg.

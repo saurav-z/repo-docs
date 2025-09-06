@@ -1,40 +1,48 @@
-# Calibre: Your Ultimate E-book Management Solution
-
-**Tired of juggling multiple e-book formats and devices?** Calibre is a powerful, open-source e-book manager that simplifies your digital reading life. ([Original Repository](https://github.com/kovidgoyal/calibre))
+# calibre
 
 <img align="left" src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" height="200" width="200"/>
 
-## Key Features:
+calibre is an e-book manager. It can view, convert, edit and catalog e-books 
+in all of the major e-book formats. It can also talk to e-book reader 
+devices. It can go out to the internet and fetch metadata for your books. 
+It can download newspapers and convert them into e-books for convenient 
+reading. It is cross platform, running on Linux, Windows and macOS.
 
-*   **Comprehensive E-book Management:** View, convert, edit, and catalog your e-books with ease.
-*   **Format Support:** Works with all major e-book formats, ensuring compatibility across devices.
-*   **Device Sync:** Seamlessly connects and syncs with your e-book reader devices.
-*   **Metadata Retrieval:** Automatically fetches and organizes metadata for your books from the internet.
-*   **News Delivery:** Downloads newspapers and converts them into e-books for convenient offline reading.
-*   **Cross-Platform Compatibility:** Runs smoothly on Linux, Windows, and macOS.
+For more information, see the [calibre About page](https://calibre-ebook.com/about).
 
-## Learn More
+[![Build Status](https://github.com/kovidgoyal/calibre/workflows/CI/badge.svg)](https://github.com/kovidgoyal/calibre/actions?query=workflow%3ACI)
 
-*   **About Calibre:** Explore the history and purpose of Calibre on the [Calibre About page](https://calibre-ebook.com/about).
-*   **User Manual:** Get detailed instructions and tips in the [User Manual](https://manual.calibre-ebook.com).
-*   **Screenshots:** See Calibre in action on the [Screenshots page](https://calibre-ebook.com/demo).
+## Screenshots  
 
-## Development & Community
+[Screenshots page](https://calibre-ebook.com/demo)
 
-*   **Development Environment:** Set up your development environment with instructions in the [User Manual](https://manual.calibre-ebook.com/develop.html).
-*   **Source Code:** Access the [source code](https://calibre-ebook.com/dist/src) for the current Calibre release.
-*   **Bug Reporting & Feature Requests:**  Report issues and suggest new features in the [Calibre bug tracker on Launchpad](https://bugs.launchpad.net/calibre). (GitHub is for code hosting and pull requests only.)
+## Usage
 
-## Support Calibre's Development
+See the [User Manual](https://manual.calibre-ebook.com).
 
-calibre is a community-driven project. [Donate to support calibre development](https://calibre-ebook.com/donate)
+## Development
 
-## Building Calibre
+[Setting up a development environment for calibre](https://manual.calibre-ebook.com/develop.html).
 
-*   **Build Instructions:** Learn how to build Calibre binaries and installers for all supported platforms via the [Build instructions](bypy/README.rst)
+A [tarball of the source code](https://calibre-ebook.com/dist/src) for the 
+current calibre release.
 
-## Package Versions
+## Bugs
+
+Bug reports and feature requests should be made in the calibre bug tracker at [Launchpad](https://bugs.launchpad.net/calibre).
+GitHub is only used for code hosting and pull requests.
+
+## Support calibre
+
+calibre is a result of the efforts of many volunteers from all over the world.
+If you find it useful, please consider contributing to support its development.
+[Donate to support calibre development](https://calibre-ebook.com/donate).
+
+## Building calibre binaries
+
+See [Build instructions](bypy/README.rst) for instructions on how to build the
+calibre binaries and installers for all the platforms calibre supports.
+
+## calibre package versions in various repositories
 
 [![Packaging Status](https://repology.org/badge/vertical-allrepos/calibre.svg?columns=3&header=calibre)](https://repology.org/project/calibre/versions)
-
----

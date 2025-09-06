@@ -26,21 +26,23 @@
 
 ---
 
-# Flet: Build Beautiful, Multi-Platform Apps in Python with Flutter
+## Flet: Build Multi-Platform Apps with Python and Flutter
 
-Flet is a revolutionary framework empowering Python developers to craft stunning web, desktop, and mobile applications without complex frontend code.  ([See the original repository](https://github.com/flet-dev/flet))
+**Create stunning web, desktop, and mobile applications with Python and the power of Flutter using Flet!**
 
-## Key Features
+Flet allows you to build cross-platform apps with Python, without the need for frontend development experience. This framework simplifies the process, allowing you to focus on building interactive and engaging applications.
 
-*   **Rapid Development:**  Go from idea to a fully functional app in minutes, perfect for internal tools, prototypes, and more.
-*   **Simplified Architecture:** Build stateful, multi-user, real-time Single-Page Applications (SPAs) with a Python-only codebase. No need for complex JavaScript, REST APIs, or database setups.
-*   **Batteries Included:**  Get started immediately with your favorite IDE or text editor.  Flet includes a built-in web server and desktop clients, eliminating the need for extensive SDKs or dependencies.
-*   **Powered by Flutter:** Leverage the power of Flutter for a polished, professional UI that renders beautifully on any platform.
-*   **Multi-Platform Deployment:** Deploy your app as a standalone desktop application (Windows, macOS, Linux), mobile app (iOS, Android), or as a web app (dynamic/static) or Progressive Web App (PWA).
+### Key Features
 
-## Flet App Example
+*   **Rapid Development:**  Go from idea to a functional app in minutes, perfect for internal tools, prototypes, and more.
+*   **Simplified Architecture:** Build stateful applications with Python alone; no complex JavaScript frontends or REST APIs needed.
+*   **Batteries Included:**  Get started with just your favorite IDE or text editor; Flet handles the web server, asset hosting, and desktop clients.
+*   **Flutter Powered:** Benefit from Flutter's professional UI capabilities, ensuring your app looks and performs great across all platforms.
+*   **Multi-Platform Deployment:** Deploy your app as a standalone desktop app (Windows, macOS, Linux), mobile app (iOS, Android), web app, or PWA.
 
-Here's a simple "Counter" app demonstrating Flet's ease of use:
+### Flet App Example: Counter App
+
+Here's a simple "Counter" app to demonstrate Flet's ease of use:
 
 ```python title="counter.py"
 import flet as ft
@@ -73,40 +75,47 @@ def main(page: ft.Page):
 ft.run(main)
 ```
 
-**To run the app:**
+**To run this example:**
 
 1.  **Install Flet:**
-
-```bash
-pip install 'flet[all]'
-```
-
+    ```bash
+    pip install 'flet[all]'
+    ```
 2.  **Run the app:**
+    ```bash
+    flet run counter.py
+    ```
 
-```bash
-flet run counter.py
-```
+    This opens a native OS window.
 
-This will launch a native OS window.  To run as a web app:
+<p align="center">
+    <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/macos.png" width="45%" />
+</p>
+
+**To run the same app as a web app:**
+Update the last line in your script:
 
 ```python
 ft.run(main, view=flet.AppView.WEB_BROWSER)
 ```
 
-or use the `--web` flag:
+Or use the `--web` flag:
 
 ```bash
 flet run --web counter.py
 ```
 
-## Learn More
+<p align="center">
+    <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/safari.png" width="60%" />
+</p>
+
+### Get Started
 
 *   [Website](https://flet.dev)
 *   [Documentation](https://docs.flet.dev)
-*   [Roadmap](https://flet.dev/roadmap)
 *   [Apps Gallery](https://docs.flet.dev/gallery)
 
-## Community
+### Community
 
 *   [Discussions](https://github.com/flet-dev/flet/discussions)
 *   [Discord](https://discord.gg/dzWXP8SHG8)
@@ -114,16 +123,21 @@ flet run --web counter.py
 *   [Bluesky](https://bsky.app/profile/fletdev.bsky.social)
 *   [Email us](mailto:hello@flet.dev)
 
-## Contributing
+### Contribute
 
-Help make Flet even better!  Check out the [contribution guide](https://docs.flet.dev/contributing).
+Help improve Flet! Check out the [contribution guide](https://docs.flet.dev/contributing).
+
+---
+
+[Back to the original repository](https://github.com/flet-dev/flet)
 ```
-Key improvements:
+Key improvements and SEO optimizations:
 
-*   **SEO Optimization:**  Added a clear, keyword-rich title ("Flet: Build Beautiful, Multi-Platform Apps in Python with Flutter") and a compelling one-sentence hook.
-*   **Clear Headings:** Organized the README with descriptive headings (Key Features, Flet App Example, Learn More, Community, Contributing).
-*   **Bulleted Features:** Uses bullet points for readability and emphasizes key advantages.
-*   **Concise Summarization:** Condensed the original text while retaining essential information.
-*   **Focus on Benefits:** Highlights what users *get* from Flet (rapid development, simplified architecture, multi-platform deployment).
-*   **Link to Original Repo:** Includes a prominent link back to the original GitHub repository.
-*   **Improved Code Formatting:** Improved the formatting of code blocks.
+*   **Clear, concise introduction:** The opening sentence uses strong keywords and a compelling hook.
+*   **Keyword Optimization:** The title and throughout the document use keywords like "Python," "Flutter," "cross-platform," "web," "desktop," and "mobile apps."
+*   **Bulleted Feature List:**  Provides a scannable overview of Flet's benefits.
+*   **Well-structured headings:** Improves readability and SEO.
+*   **Clear Code Example:**  Provides a working example to demonstrate Flet's ease of use.
+*   **Call to action:** Guides users to learn more and contribute.
+*   **Concise language:** Removes unnecessary wording.
+*   **Link to the Original Repo:**  Added a final link back to the original GitHub repository, as requested.

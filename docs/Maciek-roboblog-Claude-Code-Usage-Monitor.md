@@ -1,113 +1,183 @@
-# 📊 Claude Code Usage Monitor: Real-Time Token Tracking & AI-Powered Insights
+# Claude Code Usage Monitor: Track, Analyze, and Optimize Your Claude AI Token Usage
 
-**Stay in control of your Claude AI usage!** The Claude Code Usage Monitor provides real-time, beautiful terminal monitoring with advanced analytics, machine learning-based predictions, and a user-friendly Rich UI. 
-[Check out the project on GitHub!](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor)
+**Are you tired of guessing how much you're spending on Claude AI?** Claude Code Usage Monitor is your real-time terminal companion, providing in-depth token tracking, intelligent predictions, and cost analysis. Stay in control of your AI usage and optimize your workflow!
 
----
+[![PyPI Version](https://img.shields.io/pypi/v/claude-monitor.svg)](https://pypi.org/project/claude-monitor/)
+[![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)](https://python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![codecov](https://codecov.io/gh/Maciek-roboblog/Claude-Code-Usage-Monitor/branch/main/graph/badge.svg)](https://codecov.io/gh/Maciek-roboblog/Claude-Code-Usage-Monitor)
+
+![Claude Token Monitor Screenshot](https://raw.githubusercontent.com/Maciek-roboblog/Claude-Code-Usage-Monitor/main/doc/scnew.png)
+
+[**View the source on GitHub**](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor)
 
 ## Key Features
 
-*   **✨ Real-time Monitoring:** Track token consumption, burn rate, and costs with configurable refresh rates.
-*   **🔮 AI-Powered Predictions:** Get intelligent session limit detection and cost projections using Machine Learning.
-*   **📊 Advanced Rich UI:** Enjoy a beautiful, color-coded interface with progress bars, tables, and WCAG-compliant contrast.
-*   **🤖 Smart Auto-Detection:** Automatic plan switching and custom limit discovery.
-*   **🚀 Comprehensive Plan Support:** Monitor usage for Pro, Max5, Max20, and a custom P90-based plan.
+*   **Real-Time Monitoring:** Track token usage, burn rate, and cost with configurable refresh rates.
+*   **ML-Powered Predictions:** Get intelligent session limit detection and P90 percentile calculations.
+*   **Advanced UI:** Experience a beautiful, color-coded terminal UI with WCAG-compliant contrast.
+*   **Smart Auto-Detection:** Automatic plan switching with custom limit discovery to maximize efficiency.
+*   **Cost Analytics:** Model-specific pricing and cache token calculations.
 
----
+## Table of Contents
+
+*   [Installation](#installation)
+    *   [Recommended: Installation with `uv`](#recommended-installation-with-uv)
+    *   [Installation with `pip`](#installation-with-pip)
+    *   [Other Package Managers](#other-package-managers)
+*   [Usage](#usage)
+    *   [Basic Usage](#basic-usage)
+    *   [Configuration Options](#configuration-options)
+    *   [Available Plans](#available-plans)
+*   [What's New in v3.0.0](#whats-new-in-v300)
+*   [Development Installation](#development-installation)
+*   [Troubleshooting](#troubleshooting)
+*   [Contact](#contact)
+*   [License](#license)
+*   [Contributors](#contributors)
+*   [Acknowledgments](#acknowledgments)
 
 ## Installation
 
-Choose the installation method that suits your needs:
+### Recommended: Installation with `uv`
 
-*   **⭐ Recommended: uv (Modern Installation)**
+`uv` is the fastest and easiest way to install and use the monitor.
 
-    `uv tool install claude-monitor`
-    `claude-monitor` (or use short aliases like `cmonitor`, `ccmonitor`, or `ccm`)
+```bash
+# Install uv (if you don't have it)
+# On Linux/macOS:
+curl -LsSf https://astral.sh/uv/install.sh | sh
+# On Windows:
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
-    *uv* offers isolated environments automatically, removing potential conflicts, simplifies updates, and supports all platforms. See [uv installation instructions](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor#first-time-uv-users) if you haven't installed it yet.
+# Install claude-monitor from PyPI
+uv tool install claude-monitor
 
-*   **📦 pip**
+# Run
+claude-monitor
+```
 
-    `pip install claude-monitor`
+### Installation with `pip`
 
-    Then, run the monitor:
-    `claude-monitor` (or use short aliases)
+```bash
+pip install claude-monitor
 
-    *Make sure* your PATH includes `~/.local/bin` if the `claude-monitor` command isn't found (see the original README for instructions).
+# If claude-monitor command is not found, add ~/.local/bin to PATH:
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc  # or restart your terminal
 
-*   **🛠️ Other Package Managers:**  Support for pipx, conda/mamba is also available.
+# Run
+claude-monitor
+```
 
----
+### Other Package Managers
+
+*   **pipx:** `pipx install claude-monitor`
+*   **conda/mamba:** `pip install claude-monitor` (within your conda environment)
 
 ## Usage
 
-*   **Get Help:**
-    `claude-monitor --help`  (Shows all available command-line parameters.)
+### Basic Usage
 
-*   **Basic Usage:**
+```bash
+# Run with default settings (Custom plan)
+claude-monitor
+```
 
-    Just run:
-    `claude-monitor`
+### Configuration Options
 
-*   **Configuration Options:**
+*   `--plan`:  `pro`, `max5`, `max20`, or `custom` (default).
+*   `--custom-limit-tokens`:  Token limit for the custom plan.
+*   `--view`:  `realtime` (default), `daily`, or `monthly`.
+*   `--timezone`:  Timezone (e.g., `UTC`, `America/New_York`).  Auto-detected by default.
+*   `--time-format`:  `12h`, `24h`, or `auto`.
+*   `--theme`:  `light`, `dark`, `classic`, or `auto`.
+*   `--refresh-rate`: Refresh rate in seconds (1-60).
+*   `--refresh-per-second`: Display refresh rate in Hz (0.1-20.0).
+*   `--reset-hour`:  Daily reset hour (0-23).
+*   `--log-level`: `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`.
+*   `--log-file`: Log file path.
+*   `--debug`: Enable debug logging.
+*   `--clear`: Clear saved configuration.
 
-    | Option          | Description                                    | Default   |
-    | --------------- | ---------------------------------------------- | --------- |
-    | `--plan`        | Plan type: pro, max5, max20, or custom         | custom    |
-    | `--view`        | View type: realtime, daily, monthly             | realtime  |
-    | `--timezone`    | Timezone (e.g., UTC, America/New_York)         | auto      |
-    | `--time-format` | Time format: 12h, 24h, or auto                 | auto      |
-    | `--theme`       | Display theme: light, dark, classic, or auto | auto      |
-    | `--refresh-rate`| Data refresh rate in seconds (1-60)         | 10        |
+**Example Usage:**
 
-    You can save your preferred settings. Example:
-    `claude-monitor --plan pro --theme dark --timezone "America/New_York"`
+```bash
+# Monitor with pro plan and dark theme
+claude-monitor --plan pro --theme dark
 
-    Subsequent runs:
-    `claude-monitor --plan pro` (restores saved preferences)
-    `claude-monitor --clear` (clears saved preferences)
+#  Set custom reset time
+claude-monitor --reset-hour 3
 
----
+# Clear settings
+claude-monitor --clear
+```
 
-## Default Custom Plan
+### Available Plans
 
-The **Custom plan** (the default) is tailored for Claude Code 5-hour sessions and monitors:
+| Plan        | Token Limit | Cost Limit       | Best For                         |
+| ----------- | ----------- | ---------------- | -------------------------------- |
+| **custom**  | P90-based   | (default) $50.00 | Intelligent limit detection      |
+| **pro**     | ~19,000     | $18.00           | Claude Pro subscription          |
+| **max5**    | ~88,000     | $35.00           | Claude Max5 subscription         |
+| **max20**   | ~220,000    | $140.00          | Claude Max20 subscription        |
 
-*   **Token usage**
-*   **Messages usage**
-*   **Cost usage**
+## What's New in v3.0.0
 
-It adapts to your usage patterns, analyzing the last 8 days of sessions to calculate personalized limits, ensuring accurate predictions and warnings.
+*   **Complete Architecture Rewrite**: Modular design, SRP compliance, Pydantic validation, advanced error handling.
+*   **Enhanced Functionality**: ML-based limit detection using 90th percentile calculations, updated plan limits, cost analytics, and a rich terminal UI.
+*   **New CLI Options**: Fine-grained control over refresh rates, time format, logging, and saved settings.
+*   **Breaking Changes**: Package name changed, default plan updated, Python 3.9+ required.
 
----
+## Development Installation
 
-## v3.0.0 - What's New
+For contributing or development:
 
-*   **Complete Architecture Rewrite:** Modular design, Pydantic-based configuration, comprehensive testing.
-*   **P90 Analysis:** Machine learning-based limit detection using 90th percentile calculations.
-*   **Updated Plan Limits:** Pro (19,000 tokens), Max5 (88,000 tokens), Max20 (220,000 tokens)
-*   **Rich UI Enhancements:** Customizable display refresh rates.
+```bash
+# Clone the repository
+git clone https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor.git
+cd Claude-Code-Usage-Monitor
 
----
+# Install in development mode
+pip install -e .
 
-## Contributing
+# Run
+python -m claude_monitor
+```
 
-We welcome contributions! Check out our [Contributing Guide](CONTRIBUTING.md) for details.
+## Troubleshooting
 
----
+See detailed troubleshooting steps in the [Troubleshooting](#troubleshooting) section above.
 
 ## Contact
 
-**📧 Email:** [maciek@roboblog.eu](mailto:maciek@roboblog.eu)
+For questions, suggestions, or collaboration:
+
+*   **Email**: [maciek@roboblog.eu](mailto:maciek@roboblog.eu)
+
+## License
+
+[MIT License](LICENSE)
+
+## Contributors
+
+*   [@adawalli](https://github.com/adawalli)
+*   [@taylorwilsdon](https://github.com/taylorwilsdon)
+*   [@moneroexamples](https://github.com/moneroexamples)
+
+## Acknowledgments
+
+Thanks to our supporters!
+
+*   **Ed** - *Buy Me Coffee Supporter*
 
 ---
-```
-Key improvements in this version:
 
-*   **SEO Optimization:**  Added a one-sentence hook. Improved the structure of headers and descriptions. Included key search terms like "Claude AI", "token tracking", and "real-time monitoring".
-*   **Concise and Clear:** Simplified the language and focused on the most important information for users.
-*   **Emphasis on Key Features:** Highlighted the most valuable features using bullet points.
-*   **Installation Guidance:**  Prioritized the *uv* installation method as the easiest and most recommended and clearly explained the alternatives.
-*   **Simplified Usage Section:**  Provided simple examples and a clear table of options.
-*   **Call to Action:** Included a "Check out the project on GitHub!" link at the top.
-*   **Removed unnecessary information:** Removed redundant information and some of the less important original information.
+<div align="center">
+
+**⭐ Star this repo if you find it useful! ⭐**
+
+[Report Bug](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor/issues) • [Request Feature](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor/issues) • [Contribute](CONTRIBUTING.md)
+
+</div>

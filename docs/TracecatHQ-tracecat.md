@@ -6,8 +6,8 @@
 
 <div align="center">
 
-[![Commits](https://img.shields.io/github/commit-activity/m/TracecatHQ/tracecat?style=for-the-badge&logo=github)](https://github.com/TracecatHQ/tracecat)
-[![License](https://img.shields.io/badge/License-AGPL%203.0-blue?style=for-the-badge&logo=agpl)](https://github.com/TracecatHQ/tracecat/blob/main/LICENSE)
+![Commits](https://img.shields.io/github/commit-activity/m/TracecatHQ/tracecat?style=for-the-badge&logo=github)
+![License](https://img.shields.io/badge/License-AGPL%203.0-blue?style=for-the-badge&logo=agpl)
 [![Discord](https://img.shields.io/discord/1212548097624903681.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/H4XZwsYzY4)
 
 </div>
@@ -19,17 +19,19 @@
 
 </div>
 
-## Tracecat: Automate Security & IT Workflows with Open Source Power
+## Tracecat: Automate Security and IT Workflows with Open Source Power
 
-Tracecat is an open-source platform that empowers security and IT teams to automate complex workflows with ease.  [View the original repository](https://github.com/TracecatHQ/tracecat).
+Tracecat is a modern, open-source platform empowering security and IT engineers to automate their workflows using simple YAML-based templates and a no-code UI. **[Check out the Tracecat repository](https://github.com/TracecatHQ/tracecat)!**
 
-**Key Features:**
+### Key Features:
 
-*   **YAML-Based Templates:**  Define integrations and workflows using simple, easy-to-understand YAML files.
-*   **No-Code UI:**  Build and manage workflows visually with our intuitive user interface.
-*   **Built-in Lookup Tables:** Streamline data management and enhance workflow logic with integrated lookup tables.
-*   **Case Management:**  Organize and track incidents efficiently with built-in case management features.
-*   **Reliable Orchestration:** Powered by Temporal for scalability and dependable performance.
+*   **Workflow Automation:** Design and execute complex workflows using YAML templates.
+*   **No-Code UI:** Easily manage and monitor your workflows with a user-friendly interface.
+*   **Built-in Lookup Tables & Case Management:** Simplify data management and incident response.
+*   **Scalable & Reliable:** Built on Temporal for robust performance and scalability.
+*   **Open Source:** Leverage the power of open-source for security and IT automation.
+*   **Tracecat Registry:** Utilize the collection of integration and response-as-code templates.
+*   **Open Cyber Security Schema (OCSF) Integration:** Inputs are normalized where possible.
 
 ![Tracecat workflow](/img/workflow.png)
 
@@ -40,11 +42,11 @@ Tracecat is an open-source platform that empowers security and IT teams to autom
 
 ### Run Tracecat Locally
 
-Deploy a local Tracecat stack using Docker Compose.  Full instructions are available [here](https://docs.tracecat.com/self-hosting/deployment-options/docker-compose).
+Deploy a local Tracecat stack using Docker Compose. View full instructions [here](https://docs.tracecat.com/self-hosting/deployment-options/docker-compose).
 
-### Run Tracecat on AWS Fargate (Advanced)
+### Run Tracecat on AWS Fargate
 
-Deploy a production-ready Tracecat stack on AWS Fargate using Terraform. See instructions [here](https://docs.tracecat.com/self-hosting/deployment-options/aws-ecs).
+**For advanced users:** deploy a production-ready Tracecat stack on AWS Fargate using Terraform. View full instructions [here](https://docs.tracecat.com/self-hosting/deployment-options/aws-ecs).
 
 ### Run Tracecat on Kubernetes
 
@@ -52,37 +54,37 @@ Coming soon.
 
 ## Community
 
-Join the Tracecat community for questions, feedback, and new integration ideas!  Connect with us on the [Tracecat Community Discord](https://discord.gg/H4XZwsYzY4).
+Join the Tracecat community to ask questions, provide feedback, and share integration ideas.
 
-## Tracecat Registry: Integration Templates
+*   [Tracecat Community Discord](https://discord.gg/H4XZwsYzY4)
+
+## Tracecat Registry: Response-as-Code Templates
 
 ![Tracecat Action template](img/action-template.svg)
 
-The Tracecat Registry offers a library of pre-built integration and response-as-code templates to kickstart your automation.
+Tracecat Registry provides a curated collection of integration and response-as-code templates. Response actions are organized using Tracecat's ontology of common capabilities (e.g., `list_alerts`, `list_cases`, `list_users`).
 
-*   **Action Ontology:** Actions are organized by common capabilities (e.g., `list_alerts`, `list_cases`).
-*   **OCSF Compliance:** Template inputs are normalized to fit the [Open Cyber Security Schema (OCSF)](https://schema.ocsf.io/) where applicable.
-
-**Examples & Templates**
-
-Explore use cases and ideas in our documentation.
-Browse open-source templates in [our repo](https://github.com/TracecatHQ/tracecat/tree/main/packages/tracecat-registry/tracecat_registry/templates).
+*   [Tracecat Registry Documentation](https://docs.tracecat.com/self-hosting/deployment-options/docker-compose)
+*   [Open Source Templates](https://github.com/TracecatHQ/tracecat/tree/main/packages/tracecat-registry/tracecat_registry/templates)
 
 ## Open Source vs. Enterprise
 
-This repository is licensed under AGPL-3.0, with the exception of the `ee` directory, which contains paid enterprise features.  The Enterprise Edition offers advanced capabilities requiring dedicated development.  Enable the Enterprise Edition directly in the platform's settings.
+This repository is licensed under AGPL-3.0, with the `ee` directory containing paid enterprise features.
 
-For information on Tracecat's Enterprise self-hosted or managed Cloud offerings, visit [our website](https://tracecat.com) or [book a meeting](https://cal.com/team/tracecat).
+*   Learn more about [Tracecat's Enterprise self-hosted or managed Cloud offering](https://tracecat.com) or [book a meeting with us](https://cal.com/team/tracecat).
 
 ## Security
 
-SSO, audit logs, and Infrastructure-as-Code deployments (Terraform, Kubernetes/Helm) are free and always available.  We are developing a comprehensive security guide, including threat models and hardening recommendations. For immediate security questions, reach out on [Discord](https://discord.gg/H4XZwsYzY4).
+Tracecat is committed to security.
 
-Report security issues to [security@tracecat.com](mailto:founders+security@tracecat.com) with `tracecat` in the subject.
+*   SSO, audit logs, and Infrastructure as Code (IaaC) deployments (Terraform, Kubernetes/Helm) are always free and available.
+*   Comprehensive information on Tracecat's threat model, security features, and hardening recommendations is coming soon.
+*   For immediate security questions, reach out on [Discord](https://discord.gg/H4XZwsYzY4).
+*   Report security issues to [security@tracecat.com](mailto:founders+security@tracecat.com) with `tracecat` in the subject line.
 
 ## Contributors
 
-Thank you to our amazing contributors for their code, integrations, and support.
+Thank you to all our contributors!
 
 <a href="https://github.com/TracecatHQ/tracecat/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=TracecatHQ/tracecat" />
@@ -97,17 +99,15 @@ Thank you to our amazing contributors for their code, integrations, and support.
 
 </div>
 ```
-Key improvements and SEO considerations:
+Key changes and improvements:
 
-*   **Clear Headline:**  The main headline immediately grabs attention.
-*   **Concise Hook:** The opening sentence is compelling and describes what the project *does*.
-*   **Keyword Integration:**  Keywords like "security automation", "IT workflow", "open source" are used.
-*   **Bulleted Features:** Uses bullet points to highlight key selling points for easy skimming.
-*   **Strong Call to Action:**  Links to the documentation and community are prominent.
-*   **SEO-Friendly Formatting:**  Uses headings, bold text, and other formatting elements for readability.
-*   **Relevant Links:**  Provides easy access to important resources.
-*   **Community Engagement:** Directs users to the Discord.
-*   **Contributor Image:** Displays the contributor list, increasing engagement and helping SEO.
-*   **License Information:**  Keeps the important license information and is easily accessible.
-*   **Rephrased and Improved Content:** Clarified existing content to be more concise and easier to digest.
-*   **Removed Redundancy:** Consolidated some of the information.
+*   **SEO Optimization:**  Added a concise, keyword-rich headline, a descriptive summary and added keywords like "security," "IT automation," "workflows," "open source," "response-as-code."
+*   **One-Sentence Hook:** A compelling first sentence.
+*   **Clear Headings:** Used headings for better readability and SEO.
+*   **Bulleted Key Features:**  Made the key features stand out.
+*   **Conciseness:**  Removed redundant information.
+*   **Community Links:**  Made community links more prominent.
+*   **Call to Action:**  Encouraged users to check out the repo.
+*   **Emphasis on Open Source:**  Highlighted the open-source nature of the project.
+*   **Improved Formatting:** Improved formatting for readability.
+*   **Links:**  Added links to important pages.

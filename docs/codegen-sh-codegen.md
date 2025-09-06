@@ -1,10 +1,10 @@
-<p align="center">
+<div align="center">
   <a href="https://docs.codegen.com">
     <img src="https://i.imgur.com/6RF9W0z.jpeg" alt="Codegen Logo" />
   </a>
-</p>
+</div>
 
-<h1 align="center">Codegen: Unleash the Power of AI-Powered Code Generation</h1>
+<h1 align="center">Codegen: Your AI Software Engineer</h1>
 
 <div align="center">
 
@@ -16,18 +16,16 @@
 
 </div>
 
-<br />
-
-**Codegen empowers you to automate your software development workflow with cutting-edge AI, acting as your tireless software engineering companion.** The Codegen SDK provides a simple yet powerful programmatic interface to interact with Codegen's AI-powered code generation agents, allowing you to integrate intelligent code assistance directly into your projects.  [See the original repository](https://github.com/codegen-sh/codegen).
+**Codegen empowers you to automate your software development workflow by leveraging the power of AI.**  This SDK provides a programmatic interface for interacting with the Codegen platform, allowing you to easily integrate AI-powered code generation, feature implementation, and more into your projects.  Visit the [original repo](https://github.com/codegen-sh/codegen) for more details.
 
 ## Key Features
 
-*   **AI-Powered Code Generation:** Leverage advanced AI to generate code based on your specifications.
-*   **Seamless Integration:** Easily integrate Codegen's AI agents into your existing development workflow.
-*   **Multi-Platform Support:** Interact with your AI engineer via API, Slack, Linear, GitHub, or the Codegen website.
-*   **Simple API:** A clean and intuitive Python API makes it easy to start generating code.
-*   **Status Tracking:** Monitor the progress of your code generation tasks.
-*   **Enterprise Ready:**  Available for enterprise deployments, contact us for more information.
+*   **AI-Powered Code Generation:** Automate the creation of code from natural language prompts.
+*   **Feature Implementation:**  Delegate tasks such as implementing new features directly to the AI agent.
+*   **Seamless Integration:**  Integrate the Codegen AI engineer with your existing projects via API.
+*   **Flexible Deployment:** Use agents via API or via integrations with Slack, Linear, GitHub, and the Codegen website.
+*   **Easy to Use SDK:** A Python SDK is provided for simple integration and control.
+*   **Status Tracking:**  Monitor the progress of your tasks and retrieve results upon completion.
 
 ## Getting Started
 
@@ -39,9 +37,7 @@ pip install codegen
 uv pip install codegen
 ```
 
-Then, get your API token and organization ID at [codegen.com/token](https://codegen.com/token).
-
-Here's a quick example of how to use the SDK:
+Next, get your API token and organization ID from the Codegen website.  Then, you can start using the SDK:
 
 ```python
 from codegen.agents.agent import Agent
@@ -73,25 +69,14 @@ if task.status == "completed":
 ## Resources
 
 *   [Documentation](https://docs.codegen.com)
-*   [Getting Started Guide](https://docs.codegen.com/introduction/getting-started)
+*   [Getting Started](https://docs.codegen.com/introduction/getting-started)
 *   [Contributing Guide](CONTRIBUTING.md)
 *   [Contact Us](https://codegen.com/contact)
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up the development environment and submit your contributions.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up the development environment and submit contributions.
 
 ## Enterprise
 
-For more information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
-```
-Key improvements and SEO considerations:
-
-*   **Clear Hook:**  The opening sentence is designed to grab attention and clearly state the core benefit.
-*   **SEO-Friendly Title:**  Includes keywords like "Code Generation" and "AI-Powered" to improve search visibility.
-*   **Bulleted Key Features:** Makes it easy to quickly understand the main advantages of using Codegen.
-*   **Concise and Readable:**  The text is more streamlined and easier to scan.
-*   **Stronger Calls to Action:** Encourages users to explore the documentation and contribute.
-*   **Alt Text for Image:** Added `alt` text to the image tag for accessibility.
-*   **Structured Headings:** Uses `h1` and `h2` tags for better organization and SEO.
-*   **Link to the original repo**: Added a link back to the original repository.
+For information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).

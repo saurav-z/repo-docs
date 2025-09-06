@@ -1,99 +1,72 @@
 <img src="header.jpg" alt="Header Image" width="400">
 
-# Kindle Comic Converter (KCC)
+# Kindle Comic Converter (KCC): Optimize Comics & Manga for E-readers
 
-**Optimize your comics and manga for e-readers with Kindle Comic Converter, the ultimate tool for enjoying your favorite graphic novels on devices like Kindle, Kobo, and reMarkable.** [Visit the original repository](https://github.com/ciromattia/kcc)
-
-[![GitHub release](https://img.shields.io/github/release/ciromattia/kcc.svg)](https://github.com/ciromattia/kcc/releases)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ciromattia/kcc/docker-publish.yml?label=docker%20build)](https://github.com/ciromattia/kcc/pkgs/container/kcc)
-[![Github All Releases](https://img.shields.io/github/downloads/ciromattia/kcc/total.svg)](https://github.com/ciromattia/kcc/releases)
+**Tired of poorly formatted comics on your e-reader?** Kindle Comic Converter (KCC) is your go-to solution for converting comics and manga into optimized formats for e-ink devices like Kindle, Kobo, and reMarkable, ensuring a seamless and visually appealing reading experience.  [**Visit the KCC Repo for Downloads & More!**](https://github.com/ciromattia/kcc)
 
 ## Key Features:
 
-*   **Wide Format Support:** Converts JPG, PNG, GIF, WebP, CBZ, CBR, CB7, PDF, and ZIP archives.
-*   **Optimized Output:** Generates MOBI/AZW3, EPUB, KEPUB, CBZ, and PDF files optimized for e-ink displays.
-*   **Device Profiles:** Pre-configured profiles for popular e-readers (Kindle, Kobo, reMarkable, and more) for optimal settings.
-*   **Image Processing:** Enhance image quality with options like gamma correction, cropping, and resolution scaling to reduce file size.
-*   **Manga Support:** Includes manga-style reading direction and page splitting.
-*   **reMarkable PDF Conversion:** Direct PDF output for reMarkable devices for optimal compatibility.
-*   **Easy to Use:** Simple drag-and-drop interface for file importing and conversion.
-*   **Customization:** Fine-tune settings with tooltips that explain each option.
+*   **Wide Format Support:** Converts JPG/PNG/GIF image files (in folders, archives, or PDFs) into MOBI/AZW3, EPUB, KEPUB, CBZ, and PDF formats.
+*   **reMarkable PDF Conversion:**  Directly converts to PDF for optimal compatibility with reMarkable devices.
+*   **E-ink Optimization:** Applies crucial image processing steps for e-ink screens, improving contrast, reducing file size, and enhancing battery life.
+*   **Full-Screen & Fixed Layouts:** Ensures pages display in fullscreen with proper fixed layout support for a perfect reading experience.
+*   **Batch Processing:** Easily convert multiple files or entire folders with drag-and-drop simplicity.
+*   **GUI & CLI Options:**  Use the intuitive graphical user interface or the command-line interface (for power users) for flexible conversion control.
+*   **Advanced Settings:** Fine-tune image processing with options for gamma correction, cropping, and more.
+*   **Resolves Common Issues:** Fixes problems like faded blacks, incorrect margins, and page turn issues common on e-readers.
+*   **Supports DRM-free PDFs:** Converts high-quality, print-quality DRM-free PDFs.
 
-## What KCC Does:
+## What's New:
 
-KCC addresses common issues found in e-reader comic and manga formatting, such as faded blacks, unnecessary margins, and incorrect page layouts. It helps you achieve:
+*   **PDF Output for reMarkable:**  Directly convert your comics to PDF, which is automatically selected when you pick a reMarkable profile.
 
-*   **Improved Readability:** Ensure crisp, clear images on e-ink screens.
-*   **Reduced File Size:** Save storage space on your device.
-*   **Faster Page Turns:** Enjoy a smoother reading experience.
-*   **Full Screen Display:** Maximize your reading area.
+## Why Use KCC?
 
-## New Features and Improvements:
+KCC addresses common formatting issues that can detract from your reading experience:
 
-*   PDF output is now supported for direct conversion to reMarkable devices!
-*   Supports Kodansha/Humble Bundle print quality DRM-free PDFs.
+*   **Faded Black Levels:** Ensures optimal contrast for comfortable reading.
+*   **Unnecessary Margins:** Maximizes screen space.
+*   **Incorrect Page Turns & Alignment:** Delivers a smooth manga/comic experience.
+*   **Device-Specific Optimization:**  Downscales images to your device's resolution for improved performance and reduced file size (saving space & battery).
 
-## Download and Installation:
+## Downloads & Installation
 
-*   **Downloads:** Find the latest releases at [https://github.com/ciromattia/kcc/releases](https://github.com/ciromattia/kcc/releases)
-    *   **Windows:** Download `KCC_\*.\*.\*.exe`
-    *   **macOS (Apple Silicon):** Download `kcc_macos_arm_\*.\*.\*.dmg`
-    *   **macOS (Intel):** Download `kcc_macos_i386_\*.\*.\*.dmg`
-*   Refer to the wiki for: [https://github.com/ciromattia/kcc/wiki/Installation](https://github.com/ciromattia/kcc/wiki/Installation)
+Download the latest release from the [KCC Releases Page](https://github.com/ciromattia/kcc/releases). Choose the appropriate file for your operating system:
 
-## FAQ
+*   `KCC_*.exe` (Windows)
+*   `kcc_macos_arm_*.dmg` (Mac with Apple Silicon)
+*   `kcc_macos_i386_*.dmg` (Mac with Intel chip)
 
-*   **Calibre:** KCC is designed to be used as a standalone program.
-*   **Output Formats:** MOBI for Kindles, CBZ for Kindle DX, KEPUB for Kobo.
-*   **File Transfer:** Drag and drop the output files to your device's documents folder via USB.
-*   **Right-to-Left (RTL) Mode:** Affects CBZ output.
-*   **Colors Inverted?:** Disable Kindle dark mode.
-*   **Kindle Scribe/2022+ Kindle on macOS:** Use the official Amazon USB File Transfer app.
-*   **AZW3 instead of MOBI?:** The `.mobi` file generated by KCC is a dual filetype, it's both MOBI and AZW3. The file extension is `.mobi` for compatibility reasons.
+Refer to the [Installation Wiki](https://github.com/ciromattia/kcc/wiki/Installation) for Flatpak, Docker, and AppImage installation instructions.
 
-## Prerequisites
+## FAQ (Quick Answers)
 
-*   **KindleGen:** For MOBI conversion, install Kindle Previewer ([https://www.amazon.com/Kindle-Previewer/b?ie=UTF8&node=21381691011](https://www.amazon.com/Kindle-Previewer/b?ie=UTF8&node=21381691011)).
-*   **7-Zip:** (Optional, but recommended) Install for faster conversions.
+*   **Should I use Calibre?** No. Calibre can break fixed layout formats.
+*   **Output Format?** MOBI for Kindles, CBZ for Kindle DX/Koreader, KEPUB for Kobo.
+*   **How to Transfer?** Drag and drop the output files onto your device via USB.
+*   **RTL not working?** Right-to-left mode only affects CBZ output.
+*   **Colors Inverted?** Disable Kindle dark mode.
+*   **Kindle Scribe/2024+ macOS Issue?** Use Amazon's USB File Transfer app.
 
-## CLI Usage
+## Contributions & Support
 
-For advanced users, command-line interfaces `kcc-c2e.py` and `kcc-c2p.py` are available with options for customization.
+*   **Issues/Feedback:**  Post on the [MobileRead Forums](http://www.mobileread.com/forums/showthread.php?t=207461) or [file an issue](https://github.com/ciromattia/kcc/issues/new).
+*   **Contribute:** Fork the repository and submit pull requests.
+*   **Donate:** Support the project via PayPal, Bitcoin, or Ko-fi (links in original README).
 
-## Profiles
+## Credits
 
-KCC comes with built-in profiles for many popular devices for easy setup. Some examples include:
+**KCC** is brought to you by:
 
-*   Kindle (K1, K2, K34, K57, K810, KDX, KPW, KV, KPW34, KPW5, KO, KS)
-*   Kobo (KoMT, KoG, KoGHD, KoA, KoAHD, KoAH2O, KoAO, KoN, KoC, KoCC, KoL, KoLC, KoF, KoS, KoE)
-*   reMarkable (Rmk1, Rmk2, RmkPP)
+*   Ciro Mattia Gonano
+*   Paweł Jastrzębski
+*   Darodi
+*   Alex Xu
 
-## Support and Contributions:
+and relies on contributions from various open-source projects, including scripts from K. Hendricks, Alex Yatskov, and Nikolay Verin.
 
-*   **General Questions:** [Mobileread Forum](http://www.mobileread.com/forums/showthread.php?t=207461)
-*   **Bug Reports/Feature Requests:** [GitHub Issues](https://github.com/ciromattia/kcc/issues/new)
-*   **Donations:** [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D8WNYNPBGDAS2), [Bitcoin](https://jastrzeb.ski/donate/), [Ko-Fi](https://ko-fi.com/Q5Q41BW8HS)
-*   **Commissions/Inquiries:** kindle.comic.converter@gmail.com
-*   **Contribute:** See the [installation instructions](https://github.com/ciromattia/kcc#install-from-source)
+## Privacy
+**KCC** initiates internet connections for version checks and (on Windows and macOS) automatic error reporting.
 
-## Credits:
-
-Developed by Ciro Mattia Gonano, Paweł Jastrzębski, Darodi, and Alex Xu.
-
-Includes scripts from Dc5e, K. Hendricks, Alex Yatskov, and Nikolay Verin.
-
-## Sample Files:
-
-Preview the output quality:  [https://www.mediafire.com/folder/ixh40veo6hrc5/kcc_samples](https://www.mediafire.com/folder/ixh40veo6hrc5/kcc_samples)
-
-## Privacy:
-
-KCC checks for updates during startup and has automatic reporting on Windows and macOS.
-
-## License:
-
-Released under the ISC LICENSE; see [LICENSE.txt](./LICENSE.txt) for details.
-
-## Verification
-
-Impact-Site-Verification: ffe48fc7-4f0c-40fd-bd2e-59f4d7205180
+## License
+**KCC** is released under the ISC LICENSE; see [LICENSE.txt](./LICENSE.txt) for further details.

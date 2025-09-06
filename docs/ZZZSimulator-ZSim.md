@@ -1,76 +1,86 @@
-# ZSim: Zenless Zone Zero (ZZZ) Battle Simulator and Damage Calculator
+# ZSim: Zenless Zone Zero Battle Simulator & Damage Calculator
 
-**Optimize your team composition in Zenless Zone Zero with ZSim, the automated battle simulator and damage calculator!** ([Original Repository](https://github.com/ZZZSimulator/ZSim))
+**Maximize your team's damage output in Zenless Zone Zero with ZSim, a powerful, automated battle simulator and damage calculator!**  Check out the [original repository](https://github.com/ZZZSimulator/ZSim) for the source code.
 
-<img src="./docs/img/横板logo成图.png" alt="ZSim Logo" width="400">
+## Key Features
 
-ZSim is your go-to tool for analyzing team damage in Zenless Zone Zero (ZZZ), the action game from Hoyoverse.  It automatically simulates battles, eliminating the need for manual skill sequences. Simply equip your agents, select an Action Priority List (APL), and run the simulation.
-
-## Key Features:
-
-*   **Automated Battle Simulation:**  Focus on team building, not micromanagement.
-*   **Comprehensive Damage Calculation:**  Analyze total team damage with weapon and equipment considerations.
-*   **Visual Reporting:**  Understand your team's performance with interactive charts and detailed tables.
-*   **Agent Customization:**  Edit agent equipment to tailor your team strategy.
-*   **APL Integration:**  Customize character actions with APL code.
+*   **Automated Battle Simulation:** Automatically simulates battles based on your team composition and chosen action priority lists (APLs).
+*   **Precise Damage Calculation:** Calculate total damage output, considering character equipment and weapon characteristics.
+*   **User-Friendly Interface:** Easily edit agent equipment, select APLs, and run simulations through a simple interface.
+*   **Visual Results:** Generate comprehensive reports in visual charts and tables for detailed analysis.
+*   **Detailed Character Breakdown:** Provides damage information for each character, allowing for in-depth analysis.
+*   **Flexible APL Editing:** Customize and modify APL code to fine-tune your team's performance.
 
 ## Installation
 
-### Prerequisites:
-*   **UV Package Manager:** Install UV using one of the following methods. UV is a package manager that is needed to run this project.
+### Prerequisites
 
-```bash
-# Using pip if you have python installed:
-pip install uv
-```
-
-```bash
-# On macOS or Linux:
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-```bash
-# On Windows11 24H2 or later:
-winget install --id=astral-sh.uv  -e
-```
-
-```bash
-# On lower version of Windows:
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
-
-*For detailed UV installation instructions, consult the official documentation: [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)*
-
-### ZSim Installation and Running
-
-1.  **Clone or Download:** Get the latest source code from the [release page](https://github.com/ZZZSimulator/ZSim/releases) or clone the repository using Git:
+*   **Python:** Ensure you have Python installed on your system.
+*   **UV Package Manager:** This project uses the [UV package manager](https://docs.astral.sh/uv/getting-started/installation/) for managing dependencies.  Install it using the following commands:
 
     ```bash
-    git clone https://github.com/ZZZSimulator/ZSim.git
-    cd ZSim
+    # Using pip if you have python installed:
+    pip install uv
     ```
 
-2.  **Install Dependencies and Run:**  Navigate to the project directory in your terminal and run:
+    ```bash
+    # On macOS or Linux:
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
 
     ```bash
-    uv sync
+    # On Windows 11 24H2 or later:
+    winget install --id=astral-sh.uv  -e
+    ```
+
+    ```bash
+    # On lower version of Windows:
+    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
+
+### Installation Steps
+
+1.  **Clone the Repository:** Download the source code using `git clone` or download it from the [Releases](https://github.com/ZZZSimulator/ZSim/releases).
+2.  **Navigate to the Project Directory:** Open a terminal or command prompt and navigate to the project directory.
+3.  **Install Dependencies:**  Run `uv sync` in the project directory.
+4.  **Run the ZSim Application:**
+
+    ```bash
     uv run zsim run
+    ```
+
+    Or, for the FastAPI backend and Electron App:
+    ```bash
+    # For WebUI develop
+    uv run zsim run 
+    # For FastAPI backend
+    uv run zsim api
+
+    # For Electron App development, also install Node.js dependencies
+    cd electron-app
+    pnpm install
+    ```
+
+    For the Electron App (production build):
+    ```bash
+    cd electron-app
+    pnpm build
     ```
 
 ## Development
 
-ZSim's development involves several key components:
+### Key Components
 
-*   **Simulation Engine:** Core battle logic in `zsim/simulator/`.
-*   **Web API:** FastAPI-based REST API in `zsim/api_src/`.
-*   **Web UI:** Streamlit-based interface (`webui.py`) and a new Vue.js + Electron desktop application (`electron-app/`).
-*   **CLI:** Command-line interface via `zsim/run.py`.
-*   **Database:** SQLite-based storage for character and enemy data.
-*   **Electron App:** Desktop application built with Vue.js and Electron, communicating with the FastAPI backend.
+*   **Simulation Engine:** Core logic in `zsim/simulator/`
+*   **Web API:** FastAPI-based REST API in `zsim/api_src/`
+*   **Web UI:** Streamlit-based interface in `zsim/webui.py` and new Vue.js + Electron desktop application in `electron-app/`
+*   **CLI:** Command-line interface via `zsim/run.py`
+*   **Database:** SQLite-based storage
+*   **Electron App:** Desktop application built with Vue.js and Electron
 
 ### Build System
 
-ZSim uses a comprehensive Make-based build system for managing development, building, and release processes.
+The project uses a Make-based build system for managing the development, building, and release processes.
 
 #### Available Make Targets
 
@@ -87,21 +97,6 @@ make check              # Check dependencies
 
 # Utilities
 make help                # Display help information
-```
-
-### Setup and Installation
-```bash
-# Install UV package manager first
-uv sync
-
-# For WebUI develop
-uv run zsim run 
-# For FastAPI backend
-uv run zsim api
-
-# For Electron App development, also install Node.js dependencies
-cd electron-app
-pnpm install
 ```
 
 ### Running the Application
@@ -134,12 +129,10 @@ pnpm build
 
 ### Testing Structure
 
-ZSim uses a pytest-based testing structure with the following organization:
-
-*   **Unit Tests:** In the `tests/` directory.
-*   **API Tests:** In the `tests/api/` directory.
-*   **Fixtures:** Defined in `tests/conftest.py`.
-*   **Framework:** Uses pytest with asyncio support.
+*   Unit tests in `tests/`
+*   API tests in `tests/api/`
+*   Fixtures defined in `tests/conftest.py`
+*   Uses pytest with asyncio support
 
 ```bash
 # Run the tests
@@ -148,22 +141,18 @@ uv run pytest
 uv run pytest -v --cov=zsim --cov-report=html
 ```
 
-## TODO List
-
-See the [develop guide](https://github.com/ZZZSimulator/ZSim/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97-Develop-Guide) for detailed development tasks.
-
 ## Environment Variables
 
 ### FastAPI Backend
 
-*   `ZSIM_DISABLE_ROUTES` - Disable API routes (default: enabled)
-*   `ZSIM_IPC_MODE` - Inter-Process Communication mode: "auto", "uds", or "http" (default: "auto")
+*   `ZSIM_DISABLE_ROUTES` - Set to "1" to disable API routes (default: enabled)
+*   `ZSIM_IPC_MODE` - IPC communication mode: "auto", "uds", or "http" (default: "auto")
 *   `ZSIM_UDS_PATH` - UDS socket file path when using UDS mode (default: "/tmp/zsim_api.sock")
 *   `ZSIM_API_PORT` - API server port, set to 0 for automatic port selection (default: 0)
 *   `ZSIM_API_HOST` - API server host address (default: "127.0.0.1")
 
 ### IPC Mode Behavior
 
-*   **auto:** Uses UDS on Unix-like OS and HTTP on Windows.
-*   **uds:** Uses Unix Domain Socket for local communication (Unix-like OS only).
-*   **http:** Uses HTTP/TCP for communication (default mode).
+*   **auto**: Uses uds on Unix-like OS and http on Windows.
+*   **uds**: Uses Unix Domain Socket for local communication (Unix-like only).
+*   **http**: Uses HTTP/TCP for communication (default mode).

@@ -1,6 +1,6 @@
-# TagStudio: Effortlessly Organize Your Files with a Powerful, Tag-Based System
+# TagStudio: Organize Your Files Your Way
 
-[Original Repo](https://github.com/TagStudioDev/TagStudio)
+**Tired of endless file chaos? TagStudio offers a user-focused document management system that puts you in control.** ([Original Repo](https://github.com/TagStudioDev/TagStudio))
 
 [![Translation](https://hosted.weblate.org/widget/tagstudio/strings/svg-badge.svg)](https://hosted.weblate.org/projects/tagstudio/strings/)
 [![PyTest](https://github.com/TagStudioDev/TagStudio/actions/workflows/pytest.yaml/badge.svg)](https://github.com/TagStudioDev/TagStudio/actions/workflows/pytest.yaml)
@@ -12,7 +12,7 @@
   <img width="60%" src="docs/assets/github_header.png">
 </p>
 
-Tired of endless file searches? **TagStudio offers a user-focused document management system that revolutionizes how you organize, search, and rediscover your files with a flexible, tag-based approach.** Unlike traditional methods, TagStudio avoids proprietary formats and complex file structures, giving you complete control. Explore the documentation at [docs.tagstud.io](https://docs.tagstud.io)!
+TagStudio is a powerful, open-format application for organizing photos and files with a tag-based system, giving you unparalleled freedom and flexibility.  It avoids proprietary formats, cumbersome sidecar files, and drastic changes to your existing file structure.  **Explore the features, documentation, and more at [docs.tagstud.io](https://docs.tagstud.io)!**
 
 > [!NOTE]
 > Thank you for being patient as we've migrated our database backend from JSON to SQL! The previous warnings about the main branch being experimental and unsupported have now been removed, and any pre-existing library save files created with official TagStudio releases are able to be opened and migrated with the new v9.5+ releases!
@@ -33,50 +33,63 @@ Tired of endless file searches? **TagStudio offers a user-focused document manag
   <i>TagStudio Alpha v9.5.0 running on macOS Sequoia.</i>
 </p>
 
-## Key Features:
+## Key Features
 
-*   **Flexible Tagging:** Organize files with custom tags, tag inheritance ("taggable tags"), and tag groups.
-*   **Custom Metadata:** Add detailed metadata like names, descriptions, and notes to your files.
-*   **Powerful Search:** Find files quickly using tags, file paths, types, and boolean operators.
-*   **File Management:** Preview and open various file types directly within TagStudio; delete files via the trash/recycle bin.
-*   **Non-Destructive:** TagStudio manages metadata without altering your original file structure.
-*   **Cross-Platform:**  Available for Windows, macOS, and Linux.
+*   **Flexible Tagging:** Create custom tags with names, colors, aliases, and parent tags for powerful organization, including tag inheritance and grouping.
+*   **Custom Metadata:** Add metadata fields like Name, Author, Description, and Notes to your files for comprehensive data management.
+*   **Advanced Search:** Easily find files using tags, file paths, types, and media types with boolean operators and glob syntax.
+*   **File Entry Management:** View previews of nearly all file types, open files directly, and delete files from your library and drive.
+*   **Non-Destructive:** TagStudio never moves or alters your files (except when explicitly deleting files), preserving your file structure and workflow.
 
-## Goals:
+## Goals
 
-*   Develop a portable, private, extensible, open-format, and feature-rich file organization system.
-*   Provide advanced organizational methods like tag inheritance and composition-based tags.
-*   Ensure resilience against file modifications outside the program.
-*   Support a wide range of users and large libraries.
-*   Create a visually appealing and user-friendly interface.
+*   To achieve a portable, private, extensible, open-format, and feature-rich system of organizing and rediscovering files.
+*   To provide powerful methods for organization, notably the concept of tag inheritance, or "taggable tags" _(and in the near future, the combination of composition-based tags)._
+*   To create an implementation of such a system that is resilient against a user’s actions outside the program (modifying, moving, or renaming files) while also not burdening the user with mandatory sidecar files or requiring them to change their existing file structures and workflows.
+*   To support a wide range of users spanning across different platforms, multi-user setups, and those with large (several terabyte) libraries.
+*   To make the dang thing look nice, too. It’s 2025, not 1995.
 
-## Priorities:
+## Priorities
 
-1.  **The Concept:** Prioritizing the core idea and metadata management system.
-2.  **The System:** Focus on interoperability between different frontends and platforms.
-3.  **The Application:** TagStudio as the primary implementation of the system.
-4.  (The name)
+1. **The concept.** Even if TagStudio as an application fails, I’d hope that the idea lives on in a superior project. The [goals](#goals) outlined above don’t reference TagStudio once - _TagStudio_ is what references the _goals._
+2. **The system.** Frontends and implementations can vary, as they should. The core underlying metadata management system is what should be interoperable between different frontends, programs, and operating systems. A standard implementation for this should settle as development continues. This opens up the doors for improved and varied clients, integration with third-party applications, and more.
+3. **The application.** If nothing else, TagStudio the application serves as the first (and so far only) implementation for this system of metadata management. This has the responsibility of doing the idea justice and showing just what’s possible when it comes to user file management.
+4. (The name.) I think it’s fine for an app or client, but it doesn’t really make sense for a system or standard. I suppose this will evolve with time...
 
-## Contributing:
+## Contributing
 
-Contributions are welcome! Please review the [contribution guidelines](/CONTRIBUTING.md) to get started.  Translations are hosted by [Weblate](https://weblate.org/en/).
+Help improve TagStudio! See the [contribution guidelines](/CONTRIBUTING.md) for details.
 
-## Installation:
+Translation hosting generously provided by [Weblate](https://weblate.org/en/). Check out our [project page](https://hosted.weblate.org/projects/tagstudio/) to help translate TagStudio!
 
-Download the latest release for your system from the [Releases](https://github.com/TagStudioDev/TagStudio/releases) page. Detailed installation instructions are available at [docs.tagstud.io/install/](https://docs.tagstud.io/install/).  For video thumbnails and playback, you'll also need [FFmpeg](https://ffmpeg.org/download.html) installed.
+## Installation
 
+Download the latest release for your system from the [Releases](https://github.com/TagStudioDev/TagStudio/releases) page. Builds are available for **Windows**, **macOS** _(Apple Silicon & Intel)_, and **Linux**. Portable releases are also available.
+
+For detailed instructions, installation help, and instructions for developing for TagStudio, please see the "[Installation](https://docs.tagstud.io/install/)" page on our documentation website.
+
+<!-- prettier-ignore -->
 > [!CAUTION]
-> **Only download TagStudio from the official GitHub [Releases](https://github.com/TagStudioDev/TagStudio/releases) page. Unofficial distributions are not supported.**
+> **We do not currently publish TagStudio to any package managers. Any TagStudio distributions outside of the GitHub [Releases](https://github.com/TagStudioDev/TagStudio/releases) page are _unofficial_ and not maintained by us.**
+>
+> Installation support will not be given to users installing from unofficial sources. Use these versions at your own risk!
 
-## Usage:
+### Third-Party Dependencies
+
+For video thumbnails and playback, you'll also need [FFmpeg](https://ffmpeg.org/download.html) installed on your system. If you encounter any issues with this, please reference our [FFmpeg Help](/docs/help/ffmpeg.md) guide.
+
+## Usage
 
 ### Creating/Opening a Library
-Start by creating a new library or opening an existing one using File -> Open/Create Library from the menu bar. TagStudio will automatically create a new library from the chosen directory if one does not already exist. Upon creating a new library, TagStudio will automatically scan your folders for files and add those to your library (no files are moved during this process!).
+
+With TagStudio opened, start by creating a new library or opening an existing one using File -> Open/Create Library from the menu bar. TagStudio will automatically create a new library from the chosen directory if one does not already exist. Upon creating a new library, TagStudio will automatically scan your folders for files and add those to your library (no files are moved during this process!).
 
 ### Refreshing the Library
+
 Libraries under 10,000 files automatically scan for new or modified files when opened. In order to refresh the library manually, select "Refresh Directories" under the File menu.
 
 ### Adding Tags to File Entries
+
 Access the "Add Tag" search box by either clicking on the "Add Tag" button at the bottom of the right sidebar, accessing the "Add Tags to Selected" option from the File menu, or by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd>.
 
 From here you can search for existing tags or create a new one if the one you're looking for doesn't exist. Click the "+" button next to any tags you want to to the currently selected file entries. To quickly add the top result, press the <kbd>Enter</kbd>/<kbd>Return</kbd> key to add the the topmost tag and reset the tag search. Press <kbd>Enter</kbd>/<kbd>Return</kbd> once more to close the dialog box. By using this method, you can quickly add various tags in quick succession just by using the keyboard!
@@ -84,6 +97,7 @@ From here you can search for existing tags or create a new one if the one you're
 To remove a tag from a file entry, hover over the tag in the preview panel and click on the "-" icon that appears.
 
 ### Adding Metadata to File Entries
+
 To add a metadata field to a file entry, start by clicking the "Add Field" button at the bottom of the preview panel. From the dropdown menu, select the type of metadata field you’d like to add to the entry
 
 ### Editing Metadata Fields
@@ -159,7 +173,7 @@ Import JSON sidecar data generated by [gallery-dl](https://github.com/mikf/galle
 
 See instructions in the "[Creating Development Environment](/CONTRIBUTING.md/#creating-a-development-environment)" section from the [contribution documentation](/CONTRIBUTING.md).
 
-## FAQ:
+## FAQ
 
 ### What State Is the Project Currently In?
 

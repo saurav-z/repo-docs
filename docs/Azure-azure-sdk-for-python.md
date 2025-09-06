@@ -1,56 +1,59 @@
-# Azure SDK for Python: Simplify Cloud Development
+# Azure SDK for Python: Build Powerful Python Applications on Azure
 
-**Get started with the Azure SDK for Python and build robust, scalable applications that seamlessly integrate with Microsoft Azure services.** ([View the Original Repository](https://github.com/Azure/azure-sdk-for-python))
+**Get started with the Azure SDK for Python and seamlessly integrate your Python applications with Microsoft Azure services.** ([Original Repo](https://github.com/Azure/azure-sdk-for-python))
 
-The Azure SDK for Python provides a comprehensive set of libraries for interacting with Azure services, simplifying cloud development and accelerating your projects.
+## Key Features
 
-**Key Features:**
-
-*   **Comprehensive Service Coverage:** Access a wide range of Azure services, including compute, storage, databases, networking, and more.
-*   **Modern Design:** Utilize libraries built with the latest Azure SDK Design Guidelines, ensuring consistency and ease of use.
-*   **Enhanced Authentication:** Leverage the intuitive Azure Identity library for secure and streamlined authentication.
-*   **Shared Core Functionality:** Benefit from shared features like retries, logging, transport protocols, and authentication protocols in the `azure-core` library.
-*   **Well-Defined Guidelines:** Follow the Azure SDK Design Guidelines for Python to create production-ready code.
-*   **Up-to-date packages:** Regularly updated with GA and preview releases to support the latest Azure services and features.
+*   **Comprehensive Service Coverage:** Access a wide range of Azure services, including storage, compute, networking, databases, and more.
+*   **Simplified Development:** Utilize well-documented, user-friendly Python libraries that align with the [Azure SDK Design Guidelines for Python](https://azure.github.io/azure-sdk/python/guidelines/).
+*   **Latest Releases & Production-Ready Libraries:** Explore both new and previous versions of client and management libraries, with clear distinctions for GA (Generally Available) and preview releases, ensuring stability and access to the latest features.
+*   **Consistent Design:** Benefit from core shared functionalities like retries, logging, transport protocols, and authentication, found in the `azure-core` library.
+*   **Flexible Authentication:** Integrate easily with Azure Active Directory, managed identities, and other authentication methods.
+*   **Management Libraries:** Provision and manage Azure resources, including the intuitive Azure Identity library, an HTTP Pipeline with custom policies, error-handling, distributed tracing, and much more.
 
 ## Getting Started
 
-Easily integrate specific Azure services into your Python applications by using separate libraries. Each service library has its own `README.md` or `README.rst` file that contains information to get you started.
-
-### Prerequisites
-
-The client libraries support Python 3.9 and later.  See the [Azure SDK for Python version support policy](https://github.com/Azure/azure-sdk-for-python/wiki/Azure-SDKs-Python-version-support-policy) for details.
+*   **Choose your service:** Select the specific Azure service you need (e.g., Blob Storage, Cosmos DB).
+*   **Install the library:** Install the corresponding Python package for that service using `pip`.  Service-specific `README.md` files in the `/sdk` directory provide detailed instructions.
+*   **Follow the documentation:** Consult the official [Azure SDK for Python documentation](https://aka.ms/python-docs) for in-depth guides, code samples, and API references.
 
 ## Available Packages
 
-The Azure SDK for Python offers a range of packages categorized for different needs:
+Libraries are categorized for client and management use, with distinctions between new and previous releases.  Find the most up-to-date package lists:
 
-*   **Client - New Releases:** (GA and Preview) New packages for using and consuming existing Azure resources.  Find the [latest list](https://azure.github.io/azure-sdk/releases/latest/index.html#python).
-*   **Client - Previous Versions:** Stable, production-ready versions for wider service coverage.
-*   **Management - New Releases:** Management libraries that follow the [Azure SDK Design Guidelines for Python](https://azure.github.io/azure-sdk/python/guidelines/) for provisioning and managing resources. Find the [latest list](https://azure.github.io/azure-sdk/releases/latest/mgmt/python.html).
-*   **Management - Previous Versions:** Management libraries for provisioning and managing resources, identified by `azure-mgmt-` namespaces.
+*   **Client - New Releases:** [Latest packages](https://azure.github.io/azure-sdk/releases/latest/index.html#python)
+*   **Client - Previous Versions:** Stable, production-ready versions.
+*   **Management - New Releases:** [Latest packages](https://azure.github.io/azure-sdk/releases/latest/mgmt/python.html)
+*   **Management - Previous Versions:** Provision and manage Azure resources. Complete list [here](https://azure.github.io/azure-sdk/releases/latest/all/python.html). Management libraries are identified by namespaces that start with `azure-mgmt-`, e.g. `azure-mgmt-compute`
+
+## Prerequisites
+
+*   Python 3.9 or later is required.
 
 ## Need Help?
 
-*   **Documentation:** Explore detailed documentation at [Azure SDK for Python documentation](https://aka.ms/python-docs).
-*   **Issues:** Report issues via [GitHub Issues](https://github.com/Azure/azure-sdk-for-python/issues).
-*   **Community:** Search [previous questions](https://stackoverflow.com/questions/tagged/azure+python) or ask new ones on StackOverflow using the `azure` and `python` tags.
+*   **Documentation:** [Azure SDK for Python documentation](https://aka.ms/python-docs)
+*   **Issues:** File an issue via [GitHub Issues](https://github.com/Azure/azure-sdk-for-python/issues)
+*   **Community:** Search or ask questions on StackOverflow using `azure` and `python` tags.
 
-## Data Collection
+## Data Collection & Telemetry
 
-The Azure SDK for Python collects telemetry data to improve its products and services. You can learn more about data collection and usage in the [Microsoft privacy statement](https://go.microsoft.com/fwlink/?LinkID=824704) and the [Telemetry Guidelines](https://azure.github.io/azure-sdk/general_azurecore.html#telemetry-policy).
+The Azure SDK for Python collects telemetry data to improve the service. Users can disable telemetry. Instructions are in the original README, duplicated below.
 
 ### Telemetry Configuration
 
-Telemetry collection is enabled by default. You can opt out by disabling it during client construction.
+Telemetry collection is on by default.
 
-**Example:**
+To opt out, you can disable telemetry at client construction. Define a `NoUserAgentPolicy` class that is a subclass of `UserAgentPolicy` with an `on_request` method that does nothing. Then pass instance of this class as kwargs `user_agent_policy=NoUserAgentPolicy()` during client creation. This will disable telemetry for all methods in the client. Do this for every new client.
+
+The example below uses the `azure-storage-blob` package. In your code, you can replace `azure-storage-blob` with the package you are using.
 
 ```python
 import os
 from azure.identity import ManagedIdentityCredential
 from azure.storage.blob import BlobServiceClient
 from azure.core.pipeline.policies import UserAgentPolicy
+
 
 # Create your credential you want to use
 mi_credential = ManagedIdentityCredential()
@@ -65,14 +68,15 @@ class NoUserAgentPolicy(UserAgentPolicy):
 # Create the BlobServiceClient object
 blob_service_client = BlobServiceClient(account_url, credential=mi_credential, user_agent_policy=NoUserAgentPolicy())
 
-container_client = blob_service_client.get_container_client(container=<container_name>)
+container_client = blob_service_client.get_container_client(container=<container_name>) 
 # TODO: do something with the container client like download blob to a file
 ```
 
-## Reporting Security Issues
+## Security
 
-Report security issues privately to the Microsoft Security Response Center (MSRC) at <secure@microsoft.com>.  Get more information in the [Security TechCenter](https://www.microsoft.com/msrc/faqs-report-an-issue).
+*   Report security issues and bugs privately to the Microsoft Security Response Center (MSRC):  <secure@microsoft.com>.
 
 ## Contributing
 
-Contributions are welcome! Review the [contributing guide](https://github.com/Azure/azure-sdk-for-python/blob/main/CONTRIBUTING.md) for details.  All contributions require agreement to a Contributor License Agreement (CLA).  This project follows the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+*   See the [contributing guide](https://github.com/Azure/azure-sdk-for-python/blob/main/CONTRIBUTING.md) for details on contributing.
+*   This project uses the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).

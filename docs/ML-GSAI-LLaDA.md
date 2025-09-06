@@ -1,59 +1,62 @@
-# LLaDA: Large Language Diffusion Models - Revolutionizing Language Generation
+# LLaDA: Large Language Diffusion Models
 
-**LLaDA introduces a novel approach to language modeling, leveraging diffusion models to achieve state-of-the-art performance and challenging the dominance of autoregressive models.** Explore LLaDA's capabilities at [https://github.com/ML-GSAI/LLaDA](https://github.com/ML-GSAI/LLaDA).
+**LLaDA revolutionizes language modeling with a novel diffusion-based approach, offering performance that rivals LLaMA3 8B.** Explore the power of LLaDA and unlock new possibilities in natural language processing. For more details, see the original repository: [https://github.com/ML-GSAI/LLaDA](https://github.com/ML-GSAI/LLaDA).
 
-## Key Features
+## Key Features:
 
-*   **Diffusion-Based Language Modeling:** LLaDA utilizes a diffusion model architecture, offering a fresh perspective on language generation compared to traditional autoregressive models.
-*   **Competitive Performance:**  LLaDA demonstrates performance that rivals that of LLaMA3 8B models.
-*   **Openly Available Models:**  Access pre-trained models, including [LLaDA-8B-Base](https://huggingface.co/GSAI-ML/LLaDA-8B-Base) and [LLaDA-8B-Instruct](https://huggingface.co/GSAI-ML/LLaDA-8B-Instruct), on Hugging Face.
-*   **Evaluation Framework:** Evaluation code based on the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) is provided.
-*   **Inference and Demo:**  Easy-to-use inference scripts and a Gradio demo ([Hugging Face Demo](https://huggingface.co/spaces/multimodalart/LLaDA)) are available for interaction and experimentation.
-*   **Guidance for Training:** While pre-training data and the training framework are not provided, the repository includes guidance for pre-training and supervised fine-tuning (SFT) processes, including details in `GUIDELINES.md`.
-*   **Detailed Documentation:** The repository contains FAQs, guidelines, and a paper ([arXiv](https://arxiv.org/abs/2502.09992)) for the model and its development.
-*   **Recent Updates:**
-    *   **LLaDA 1.5:** Incorporates VRPO to reduce gradient variance.
-    *   **LLaDA-V:**  A competitive diffusion-based vision-language model.
+*   **State-of-the-Art Performance:** LLaDA (8B scale) achieves performance comparable to LLaMA3 8B.
+*   **Diffusion-Based Architecture:** Explores a new approach to language modeling, offering unique advantages.
+*   **Open-Source Models:** Access LLaDA-8B-Base and LLaDA-8B-Instruct models on Hugging Face.
+*   **Inference Code & Demos:** Includes example inference scripts and a Gradio demo for easy experimentation.
+*   **Evaluation Code:** Evaluation code based on the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) is available for the LLaDA-Base model.
+*   **Comprehensive Documentation:** Guidelines, FAQ, and insights into the LLaDA model.
 
-## Getting Started
+## What's New:
 
-### Installation
+*   **LLaDA 1.5:** Incorporates VRPO for improved gradient variance and preference alignment.
+*   **LLaDA-V:** A competitive diffusion-based vision-language model that outperforms other diffusion MLLMs.
+*   **Evaluation Code:** Evaluation code based on the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) for the LLaDA-Base model.
 
-To use LLaDA models, install the necessary libraries:
+## Quick Start
+
+### 1. Installation:
 
 ```bash
 pip install transformers==4.38.2 gradio
 ```
 
-### Inference
+### 2. Inference:
 
-Load and use the LLaDA models using the provided code snippets.  Example code is provided in the original README.
+```python
+from transformers import AutoModel, AutoTokenizer
+import torch # Import torch
 
-## Resources
+tokenizer = AutoTokenizer.from_pretrained('GSAI-ML/LLaDA-8B-Base', trust_remote_code=True)
+model = AutoModel.from_pretrained('GSAI-ML/LLaDA-8B-Base', trust_remote_code=True, torch_dtype=torch.bfloat16)
 
-*   **Hugging Face Models:**
-    *   [LLaDA-8B-Base](https://huggingface.co/GSAI-ML/LLaDA-8B-Base)
-    *   [LLaDA-8B-Instruct](https://huggingface.co/GSAI-ML/LLaDA-8B-Instruct)
-*   **Gradio Demo:** [Hugging Face Demo](https://huggingface.co/spaces/multimodalart/LLaDA)
+#Example
+input_text = "Translate this to French: Hello, how are you?"
+input_ids = tokenizer(input_text, return_tensors="pt").to(model.device)
+
+with torch.no_grad():
+    outputs = model.generate(**input_ids, max_length=50)
+
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+### 3. Run Demo:
+
+```bash
+python app.py
+```
+
+## Further Exploration:
+
 *   **Paper:** [arXiv:2502.09992](https://arxiv.org/abs/2502.09992)
-*   **Evaluation Code:** Evaluation code based on the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) is provided.
-*   **Guidelines:**  [GUIDELINES.md](GUIDELINES.md)
-
-## Frequently Asked Questions (FAQ)
-
-A comprehensive FAQ section is included in the original README, which offers insight into LLaDA's architecture, training, and performance.  Key topics covered include:
-*   Training LLaDA
-*   Differences between LLaDA and BERT
-*   LLaDA's relationship with the Transformer architecture
-*   Sampling efficiency
-*   Training stability
-*   Reasoning process
-*   Answering "Who are you?"
-*   Development Journey
-  
-## Discussion
-
-Engage with the LLaDA community and stay updated by scanning the WeChat QR code provided in the original README.
+*   **Hugging Face:** [LLaDA-8B-Base](https://huggingface.co/GSAI-ML/LLaDA-8B-Base) and [LLaDA-8B-Instruct](https://huggingface.co/GSAI-ML/LLaDA-8B-Instruct)
+*   **Gradio Demo:** [LLaDA Demo](https://huggingface.co/spaces/multimodalart/LLaDA)
+*   **Guidelines:** [GUIDELINES.md](GUIDELINES.md)
+*   **Evaluation Details:** [EVAL.md](EVAL.md)
 
 ## Citation
 

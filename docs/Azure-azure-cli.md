@@ -1,70 +1,57 @@
 # Azure CLI: Manage Your Azure Resources with Ease
 
-**Simplify cloud management with the Azure CLI, a powerful, cross-platform command-line interface for interacting with Microsoft Azure, enabling you to build, manage, and deploy Azure resources.** [Explore the Azure CLI on GitHub](https://github.com/Azure/azure-cli).
+**The Azure CLI is a powerful, cross-platform command-line interface (CLI) for managing and interacting with your Azure cloud resources.**  [Learn more on GitHub](https://github.com/Azure/azure-cli).
 
-## Key Features:
+[![Python](https://img.shields.io/pypi/pyversions/azure-cli.svg?maxAge=2592000)](https://pypi.python.org/pypi/azure-cli)
+[![Build Status](https://dev.azure.com/azure-sdk/public/_apis/build/status/cli/Azure.azure-cli?branchName=dev)](https://dev.azure.com/azure-sdk/public/_build/latest?definitionId=246&branchName=dev)
+[![Slack](https://img.shields.io/badge/Slack-azurecli.slack.com-blue.svg)](https://azurecli.slack.com)
 
-*   **Cross-Platform Compatibility:** Works seamlessly across Windows, macOS, and Linux.
-*   **Comprehensive Coverage:** Supports a wide array of Azure services.
-*   **Intuitive Command Structure:** Uses a straightforward `az [group] [subgroup] [command] {parameters}` syntax.
-*   **Tab Completion:** Enhance your productivity with tab completion for commands and parameters.
-*   **Flexible Output:** Control output formatting with options like JSON, table, or TSV.
-*   **Powerful Querying:** Use JMESPath queries for customized output (`--query` parameter).
-*   **Scripting-Friendly:** Provides exit codes for scripting and automation.
-*   **REST API Access:** Directly interact with Azure REST APIs using the `az rest` command.
-*   **VS Code Integration:** Use the Azure CLI Tools extension for VS Code for enhanced command authoring and execution.
+**Key Features:**
 
-## Getting Started
+*   **Cross-Platform:** Available on Windows, macOS, and Linux.
+*   **Comprehensive:**  Supports a vast array of Azure services.
+*   **Scriptable:**  Automate your Azure tasks with ease.
+*   **Tab Completion:**  Saves time and reduces errors with command completion.
+*   **Flexible Output:**  Customize output with `--query` and JMESPath for precise data retrieval, supporting formats like JSON, table, or tsv.
+*   **IntelliSense Support:**  Boost productivity with the Azure CLI Tools Visual Studio Code extension, offering IntelliSense, snippets, and more.
 
-*   **Installation:**  Follow the comprehensive [install guide](https://learn.microsoft.com/cli/azure/install-azure-cli) for detailed installation instructions.
-*   **Quick Start:** Get up and running quickly with the ["get started" guide](https://learn.microsoft.com/cli/azure/get-started-with-az-cli2).
-*   **Command Help:** Use the `-h` parameter to get help for any command (e.g., `az storage -h`, `az vm create -h`).
+**Getting Started:**
 
-## Highlights:
+*   **Installation:**  Follow the [installation guide](https://learn.microsoft.com/cli/azure/install-azure-cli) for detailed instructions.  Troubleshooting tips are available at [install troubleshooting](https://github.com/Azure/azure-cli/blob/dev/doc/install_troubleshooting.md).
+*   **Usage:**  Use the following command structure:
+    ```bash
+    $ az [ group ] [ subgroup ] [ command ] {parameters}
+    ```
+*   **Help:** Get help with the `-h` parameter (e.g., `az storage -h` or `az vm create -h`).
+*   **Get Started Guide:**  Find in-depth instructions on the [get started guide](https://learn.microsoft.com/cli/azure/get-started-with-az-cli2).
 
-*   **Tab Completion:** Speed up command entry with tab completion.
-*   **Querying:** Use the `--query` parameter and JMESPath to customize your output.
-*   **Exit Codes:** Utilize exit codes for successful and unsuccessful operations.
+**Highlights & Advanced Usage:**
 
-## Common Scenarios & Effective Usage
+*   **Tab Completion:** Quickly find the groups, commands and parameters with the tab key.
+*   **Query:** Use the `--query` parameter with [JMESPath](http://jmespath.org/) to filter and format results.
+*   **Exit Codes:** Understand exit codes for scripting: 0 (success), 1 (generic error), 2 (parser error), 3 (missing resource).
+*   **Effective Use:** Explore scenarios like output formatting, passing values between commands, async operations, and more using [Tips for using Azure CLI effectively](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively).
 
-*   **Output Formatting:** Customize output with JSON, table, or TSV formats.
-*   **Command Chaining:** Pass values between commands for efficient workflows.
-*   **Asynchronous Operations:** Manage async operations effectively.
-*   **Resource Management:** Utilize the `az resource` commands for managing resources.
-*   **REST API Integration:** Use `az rest` to interact with Azure REST APIs.
-*   **Proxy Support:** Work seamlessly behind a proxy.
-*   **Concurrent builds:** Configure concurrent builds as needed.
-*   **[Tips for using Azure CLI effectively](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively)**
+**More Resources:**
 
-## Further Resources
+*   **Samples:** Explore more examples in the [GitHub samples repo](http://github.com/Azure/azure-cli-samples) and [Microsoft Learn](https://learn.microsoft.com/cli/azure/overview).
+*   **Visual Studio Code Extension:** Enhance your experience with the [Azure CLI Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli) for IntelliSense, snippets, and more.
 
-*   **Samples and Snippets:** Explore numerous usage examples in the [GitHub samples repo](http://github.com/Azure/azure-cli-samples) and the [Microsoft Learn documentation](https://learn.microsoft.com/cli/azure/overview).
-*   **Azure CLI Tools for Visual Studio Code:** Enhance your workflow with the [Azure CLI Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli) extension.
+**Developer Information:**
 
-## Developer Installation and Builds
+*   **Developer Installation:**
+    *   [Docker](#docker)
+    *   [Edge Builds](#edge-builds)
+    *   [Developer Setup](#developer-setup)
+*   **Contribute:**  See the [Microsoft Open Source Guidelines](https://opensource.microsoft.com/collaborate) for contribution guidelines.
+*   **Code of Conduct:** This project follows the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). Contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any questions.
 
-*   **Docker:** Utilize preconfigured Docker images for the Azure CLI.  See [Docker tags](https://mcr.microsoft.com/v2/azure-cli/tags/list).
-*   **Edge Builds:** Access the latest builds from the `dev` branch. See below for links to install:
-    *   MSI: https://aka.ms/InstallAzureCliWindowsEdge
-    *   Homebrew Formula: https://aka.ms/InstallAzureCliHomebrewEdge
-    *   Ubuntu Bionic Deb: https://aka.ms/InstallAzureCliBionicEdge
-    *   Ubuntu Focal Deb: https://aka.ms/InstallAzureCliFocalEdge
-    *   Ubuntu Jammy Deb: https://aka.ms/InstallAzureCliJammyEdge
-    *   RPM el8: https://aka.ms/InstallAzureCliRpmEl8Edge
-*   **Builds from Specific Commits:** Get builds of arbitrary commits or pull requests. See: [Try new features before release](doc/try_new_features_before_release.md)
-*   **Developer Setup:**
-    *   [Configuring Your Machine](https://github.com/Azure/azure-cli/blob/dev/doc/configuring_your_machine.md)
-    *   [Authoring Command Modules](https://github.com/Azure/azure-cli/tree/dev/doc/authoring_command_modules)
-    *   [Code Generation](https://github.com/Azure/aaz-dev-tools)
+**Feedback and Support:**
 
-## Contribute
+*   **Report Issues:**  File issues in the [GitHub Issues](https://github.com/Azure/azure-cli/issues) section.
+*   **Provide Feedback:** Use the `az feedback` command from the command line.
+*   \[Microsoft internal] Contact the developer team via azpycli@microsoft.com.
 
-*   **Report Issues:**  Report bugs in the [Issues](https://github.com/Azure/azure-cli/issues) section.
-*   **Provide Feedback:** Use the `az feedback` command to provide feedback.
-*   **Contribute Code:** Follow the instructions in [Microsoft Open Source Guidelines](https://opensource.microsoft.com/collaborate) and adhere to the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-*   **Contact:** Contact the developer team via azpycli@microsoft.com for any further assistance.
+**Data Collection and Telemetry:**
 
-## Data Collection & Telemetry
-
-Telemetry collection is on by default. To opt out, run `az config set core.collect_telemetry=no`. For more details, review the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=824704).
+*   The Azure CLI collects telemetry data by default. To opt out, run `az config set core.collect_telemetry=no`. More information is available in the help documentation and the [Microsoft privacy statement](https://go.microsoft.com/fwlink/?LinkID=824704).

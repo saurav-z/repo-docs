@@ -1,90 +1,143 @@
-[![Celery Banner](https://docs.celeryq.dev/en/latest/_images/celery-banner-small.png)](https://github.com/celery/celery)
+<!-- Banner Image - SEO Friendly -->
+<p align="center">
+  <a href="https://github.com/celery/celery">
+    <img src="https://docs.celeryq.dev/en/latest/_images/celery-banner-small.png" alt="Celery Banner" width="100%">
+  </a>
+</p>
 
-# Celery: Distributed Task Queue for Python
+<!-- Badges - Keep for quick info -->
+[![Build Status](https://github.com/celery/celery/actions/workflows/python-package.yml/badge.svg)](https://github.com/celery/celery/actions/workflows/python-package.yml)
+[![Coverage Status](https://codecov.io/github/celery/celery/coverage.svg?branch=main)](https://codecov.io/github/celery/celery?branch=main)
+[![License](https://img.shields.io/pypi/l/celery.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![Wheel](https://img.shields.io/pypi/wheel/celery.svg)](https://pypi.org/project/celery/)
+[![Semgrep Security](https://img.shields.io/badge/semgrep-security-green.svg)](https://go.semgrep.dev/home)
+[![Python Versions](https://img.shields.io/pypi/pyversions/celery.svg)](https://pypi.org/project/celery/)
+[![Python Implementations](https://img.shields.io/pypi/implementation/celery.svg)](https://pypi.org/project/celery/)
+[![Open Collective Backers](https://opencollective.com/celery/backers/badge.svg)](https://opencollective.com/celery#backers)
+[![Open Collective Sponsors](https://opencollective.com/celery/sponsors/badge.svg)](https://opencollective.com/celery#sponsors)
+[![Downloads](https://pepy.tech/badge/celery)](https://pepy.tech/project/celery)
+[![DeepWiki](https://devin.ai/assets/deepwiki-badge.png)](https://deepwiki.com/celery/celery)
 
-**Celery is a powerful, easy-to-use, and flexible distributed task queue that allows you to run tasks asynchronously in Python.**
+# Celery: Distributed Task Queue for Python - Asynchronous Task Processing Made Easy
 
-[Original Repository](https://github.com/celery/celery) | [Documentation](https://docs.celeryq.dev/en/stable/index.html) | [PyPI](https://pypi.org/project/celery/)
+Celery is a robust, distributed task queue that helps you handle asynchronous tasks in Python with ease, enabling scalability and efficiency. ([Original Repo](https://github.com/celery/celery))
 
-## Key Features
+**Key Features:**
 
-*   **Simple & Easy to Use:**  Celery is designed for ease of use and requires minimal configuration.
-*   **High Availability:**  Built-in retry mechanisms and broker support ensure reliability.
-*   **Fast Performance:**  Processes millions of tasks per minute with low latency.
-*   **Flexible & Extensible:**  Customize almost every aspect, including pools, serializers, and transports.
-*   **Multiple Message Transports:** Supports RabbitMQ, Redis, Amazon SQS, Google Pub/Sub, and more.
-*   **Concurrency Support:** Offers prefork, Eventlet, gevent, and single-threaded (solo) concurrency models.
-*   **Multiple Result Stores:** Compatible with AMQP, Redis, memcached, SQLAlchemy, and cloud storage solutions.
-*   **Serialization Support:** Supports *pickle*, *json*, *yaml*, *msgpack*, and compression options.
-*   **Framework Integration:** Seamless integration with popular Python web frameworks like Django, Flask, and Pyramid.
+*   **Simplicity:** Easy to use and maintain, requiring no configuration files.
+*   **High Availability:** Automatic retries for robust task execution.
+*   **Speed:** Processes millions of tasks per minute.
+*   **Flexibility:** Extensible and customizable, with support for many options.
 
-## What is a Task Queue?
+**Core Functionality:**
 
-Task queues are used to distribute work across threads or machines. Celery uses message brokers to handle communication between clients and workers.
+*   **Task Distribution:** Distributes work across threads or machines.
+*   **Message-Driven:** Uses a message broker for communication between clients and workers.
+*   **Scalability:** Supports multiple workers and brokers for high availability and horizontal scaling.
+*   **Language Interoperability:** Protocol can be implemented in any language.
 
-## Who is using Celery?
+**Supported Features:**
 
-Celery is used by many different businesses and organizations. Here are some of the businesses that are using Celery:
-
-*   CloudAMQP ([CloudAMQP is a RabbitMQ as a service provider](https://www.cloudamqp.com/))
-*   Upstash ([Upstash offers a serverless Redis database service](http://upstash.com/?code=celery))
-*   Dragonfly ([Dragonfly is a drop-in Redis replacement that cuts costs and boosts performance](https://www.dragonflydb.io/))
-*   Blacksmith ([Blacksmith powers Celery](https://blacksmith.sh/))
+*   **Message Transports:** RabbitMQ, Redis, Amazon SQS, Google Pub/Sub.
+*   **Concurrency:** Prefork, Eventlet, gevent, single threaded (``solo``).
+*   **Result Stores:** AMQP, Redis, memcached, SQLAlchemy, Django ORM, Apache Cassandra, IronCache, Elasticsearch, Google Cloud Storage.
+*   **Serialization:** pickle, json, yaml, msgpack with zlib, bzip2 compression and Cryptographic message signing.
 
 ## Getting Started
 
-If you're new to Celery, explore these tutorials:
+To quickly get started with Celery, refer to the following tutorials:
 
 *   [First steps with Celery](https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html)
 *   [Next steps](https://docs.celeryq.dev/en/stable/getting-started/next-steps.html)
 
+## Framework Integration
+
+Celery seamlessly integrates with popular web frameworks:
+
+*   Django (no integration package needed)
+*   Pyramid (pyramid_celery)
+*   Pylons (celery-pylons)
+*   Flask (no integration package needed)
+*   web2py (web2py-celery)
+*   Tornado (tornado-celery)
+*   FastAPI (no integration package needed)
+
 ## Installation
 
-Install Celery using pip:
+Install Celery using `pip`:
 
 ```bash
-pip install -U celery
+pip install -U Celery
 ```
 
-## Bundles
+You can also install optional bundles for specific features:
 
-Celery includes bundles to simplify installation with specific dependencies:
+*   `celery[auth]`
+*   `celery[msgpack]`
+*   `celery[yaml]`
+*   `celery[eventlet]`
+*   `celery[gevent]`
+*   `celery[amqp]`
+*   `celery[redis]`
+*   `celery[sqs]`
+*   `celery[tblib]`
+*   `celery[memcache]`
+*   `celery[pymemcache]`
+*   `celery[cassandra]`
+*   `celery[azureblockblob]`
+*   `celery[s3]`
+*   `celery[gcs]`
+*   `celery[couchbase]`
+*   `celery[arangodb]`
+*   `celery[elasticsearch]`
+*   `celery[riak]`
+*   `celery[cosmosdbsql]`
+*   `celery[zookeeper]`
+*   `celery[sqlalchemy]`
+*   `celery[pyro]`
+*   `celery[slmq]`
+*   `celery[consul]`
+*   `celery[django]`
+*   `celery[gcpubsub]`
 
-*   **Serializers:**  `[auth]`, `[msgpack]`, `[yaml]`
-*   **Concurrency:** `[eventlet]`, `[gevent]`
-*   **Transports and Backends:**  `[amqp]`, `[redis]`, `[sqs]`, `[tblib]`, `[memcache]`,  `[pymemcache]`, `[cassandra]`, `[azureblockblob]`, `[s3]`, `[gcs]`, `[couchbase]`, `[arangodb]`, `[elasticsearch]`, `[riak]`, `[cosmosdbsql]`, `[zookeeper]`, `[sqlalchemy]`, `[pyro]`, `[slmq]`, `[consul]`, `[django]`, `[gcpubsub]`
-
-Install bundles like this:
+### Downloading and installing from source
 
 ```bash
-pip install "celery[redis]"
+$ pip install -U Celery
 ```
 
-## Version Compatibility
+```bash
+$ tar xvfz celery-0.0.0.tar.gz
+$ cd celery-0.0.0
+$ python setup.py build
+# python setup.py install
+```
 
-*   **Python 3.8+:** Celery 5.5.x
-*   **Python 3.7:** Celery 5.2 or earlier.
-*   **Python 3.6:** Celery 5.1 or earlier.
-*   **Python 2.7:** Celery 4.x series.
-*   **Python 2.6:** Celery series 3.1 or earlier.
-*   **Python 2.5:** Celery series 3.0 or earlier.
-*   **Python 2.4:** Celery series 2.2 or earlier.
-
-## Getting Help
+## Community and Support
 
 *   **Mailing List:** [celery-users](https://groups.google.com/group/celery-users/)
-*   **IRC:** `#celery` on Libera Chat
-*   **Bug Tracker:** [GitHub Issues](https://github.com/celery/celery/issues/)
+*   **IRC:** #celery on Libera Chat
+*   **Issue Tracker:** [GitHub Issues](https://github.com/celery/celery/issues/)
+*   **Wiki:** [GitHub Wiki](https://github.com/celery/celery/wiki)
 
 ## Contributing
 
-We welcome contributions! See the [Contributing to Celery](https://docs.celeryq.dev/en/stable/contributing.html) guide.
+We welcome contributions!  Development happens at GitHub: https://github.com/celery/celery. Read the [Contributing to Celery](https://docs.celeryq.dev/en/stable/contributing.html) section in the documentation.
 
-## Support & Sponsorship
+## Sponsors
 
-*   **Open Collective:**  [https://opencollective.com/celery](https://opencollective.com/celery)
-*   **Tidelift:** [Learn more. <https://tidelift.com/subscription/pkg/pypi-celery?utm_source=pypi-celery&utm_medium=referral&utm_campaign=enterprise&utm_term=repo>`_]
+Celery is supported by the community.
+
+*   **Open Collective:** [Become a backer](https://opencollective.com/celery#backer)
+    [![Open Collective Backers](https://opencollective.com/celery/backers.svg?width=890)](https://opencollective.com/celery#backers)
+
+*   **Sponsors:**
+
+    *   Blacksmith: [Blacksmith](https://blacksmith.sh/)
+    *   CloudAMQP: [CloudAMQP](https://www.cloudamqp.com/)
+    *   Upstash: [Upstash](http://upstash.com/?code=celery)
+    *   Dragonfly: [Dragonfly](https://www.dragonflydb.io/)
 
 ## License
 
-Celery is licensed under the [New BSD License](https://opensource.org/licenses/BSD-3-Clause).
+This project is licensed under the [New BSD License](https://opensource.org/licenses/BSD-3-Clause).

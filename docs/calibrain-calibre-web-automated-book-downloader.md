@@ -1,22 +1,19 @@
-# 📚 Automate Your eBook Downloads with Calibre-Web Book Downloader
+# Download Books with Ease: Calibre-Web Automated Book Downloader
 
-Simplify your eBook acquisition process with the **Calibre-Web Automated Book Downloader**, a user-friendly web interface designed to seamlessly integrate with [Calibre-Web-Automated](https://github.com/calibrain/calibre-web-automated). 
+**Effortlessly search, request, and download books for your Calibre library with this intuitive web interface.**  [View the project on GitHub](https://github.com/calibrain/calibre-web-automated-book-downloader).
 
-## ✨ Key Features
+## Key Features
 
-*   🌐 **Intuitive Web Interface:** Easily search and request book downloads.
-*   🔄 **Automated Downloads:** Books are automatically downloaded to your specified ingest folder.
-*   🔌 **Calibre-Web Integration:** Designed to work perfectly with Calibre-Web-Automated.
-*   📖 **Format Support:** Download books in various formats (epub, mobi, azw3, fb2, djvu, cbz, cbr).
-*   🛡️ **Cloudflare Bypass:** Includes Cloudflare bypass capabilities for reliable downloads.
-*   🐳 **Docker Deployment:** Easy setup with Docker.
-*   🧅 **Tor Integration:** Provides a Tor variant for enhanced privacy and network bypass.
-*   🌉 **External Cloudflare Resolver:** Integrates with external services like FlareSolverr for advanced Cloudflare bypass.
+*   **🌐 User-Friendly Web Interface:** A clean and intuitive interface makes finding and requesting books a breeze.
+*   **🔄 Automated Downloads:**  Books are automatically downloaded to your specified ingest folder, ready for Calibre.
+*   **🔌 Seamless Calibre-Web Integration:** Designed to work perfectly with [Calibre-Web-Automated](https://github.com/crocodilestick/Calibre-Web-Automated).
+*   **📖 Extensive Format Support:** Download books in popular formats like epub, mobi, azw3, fb2, djvu, cbz, and cbr.
+*   **🛡️ Cloudflare Bypass:** Reliable downloads even with Cloudflare protection.
+*   **🐳 Docker-Based Deployment:**  Easy setup and management with Docker.
+*   **🧅 Tor Variant:** Option to route all traffic through the Tor network for enhanced privacy.
+*   **🚀 External Cloudflare Resolver Variant:** Integrates with external Cloudflare resolvers for improved reliability.
 
-## 🖼️ Screenshots
-*(Placeholder for screenshots)*
-
-## 🚀 Quick Start
+## Getting Started
 
 ### Prerequisites
 
@@ -24,9 +21,9 @@ Simplify your eBook acquisition process with the **Calibre-Web Automated Book Do
 *   Docker Compose
 *   A running instance of [Calibre-Web-Automated](https://github.com/crocodilestick/Calibre-Web-Automated) (recommended)
 
-### Installation
+### Installation (Docker Compose)
 
-1.  **Get the Docker Compose file:**
+1.  **Get the `docker-compose.yml` file:**
 
     ```bash
     curl -O https://raw.githubusercontent.com/calibrain/calibre-web-automated-book-downloader/refs/heads/main/docker-compose.yml
@@ -38,15 +35,13 @@ Simplify your eBook acquisition process with the **Calibre-Web Automated Book Do
     docker compose up -d
     ```
 
-3.  **Access the web interface:**  `http://localhost:8084`
+3.  **Access the web interface:**  `http://localhost:8084` (Adjust port if necessary)
 
-## ⚙️ Configuration
+## Configuration
 
-### Environment Variables
+Customize the application's behavior with environment variables.
 
-Configure your book downloads with these environment variables:
-
-#### Application Settings
+### Application Settings
 
 | Variable          | Description             | Default Value      |
 | ----------------- | ----------------------- | ------------------ |
@@ -61,10 +56,11 @@ Configure your book downloads with these environment variables:
 | `ENABLE_LOGGING`  | Enable log file         | `true`             |
 | `LOG_LEVEL`       | Log level to use        | `info`             |
 
-*   **Authentication:** Set `CWA_DB_PATH` to point to Calibre-Web's `app.db` to enable authentication.
-*   **Logging:** Logs are stored in `/var/log/cwa-book-downloader` if logging is enabled. Available log levels: `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`.
+*   **Authentication:** To enable authentication, set `CWA_DB_PATH` to point to Calibre-Web's `app.db`.
+*   **Logging:** Logs are located at `/var/log/cwa-book-downloader`. Available log levels: `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`.
+*   **Timezone:** Automatically set in Tor mode.
 
-#### Download Settings
+### Download Settings
 
 | Variable               | Description                                               | Default Value                     |
 | ---------------------- | --------------------------------------------------------- | --------------------------------- |
@@ -77,19 +73,19 @@ Configure your book downloads with these environment variables:
 | `USE_BOOK_TITLE`       | Use book title as filename instead of ID                  | `false`                           |
 | `PRIORITIZE_WELIB`     | When downloading, download from WELIB first instead of AA | `false`                           |
 
-*   **Multiple Languages:** Set `BOOK_LANGUAGE` to a comma-separated list (e.g., `en,fr,ru`).
+*   **Multiple Languages:**  Set `BOOK_LANGUAGE` with comma-separated values (e.g., `en,fr,ru`).
 
-#### AA (Anna's Archive) Settings
+### Anna's Archive (AA) Settings
 
 | Variable               | Description                                               | Default Value                     |
 | ---------------------- | --------------------------------------------------------- | --------------------------------- |
 | `AA_BASE_URL`          | Base URL of Annas-Archive (could be changed for a proxy)  | `https://annas-archive.org`       |
 | `USE_CF_BYPASS`        | Disable CF bypass and use alternative links instead       | `true`                            |
 
-*   **AA Donator Key:** Enter your key in `AA_DONATOR_KEY` for faster downloads.
-*   **Cloudflare Bypass:** Disable bypass by setting `USE_CF_BYPASS` to `false`.
+*   **Donator Key:**  Use your key in `AA_DONATOR_KEY` for faster downloads.
+*   **Cloudflare Bypass:** Disable to use alternative download hosts.
 
-#### Network Settings
+### Network Settings
 
 | Variable               | Description                     | Default Value           |
 | ---------------------- | ------------------------------- | ----------------------- |
@@ -99,16 +95,16 @@ Configure your book downloads with these environment variables:
 | `CUSTOM_DNS`           | Custom DNS IP                   | ``                      |
 | `USE_DOH`              | Use DNS over HTTPS              | `false`                 |
 
-*   **Proxy Configuration:** Use `HTTP_PROXY` and `HTTPS_PROXY` for proxy settings (with or without authentication).
-*   **Custom DNS:** Set `CUSTOM_DNS` to a comma-separated list of DNS server IPs or use preset providers like `google`, `quad9`, `cloudflare`, or `opendns`.
+*   **Proxy Configuration:**  Specify `HTTP_PROXY` and `HTTPS_PROXY` with authentication if needed.
+*   **Custom DNS:** Set `CUSTOM_DNS` to a comma-separated list of IP addresses or use a preset option (`google`, `quad9`, `cloudflare`, `opendns`). Consider using Cloudflare to bypass ISP blocks.  Use `USE_DOH=true` with a supported DNS provider for DNS over HTTPS.
 
-#### Custom Configuration
+### Custom Configuration
 
 | Variable               | Description                                                 | Default Value           |
 | ---------------------- | ----------------------------------------------------------- | ----------------------- |
 | `CUSTOM_SCRIPT`        | Path to an executable script that tuns after each download  | ``                      |
 
-*   **Custom Script:** Set `CUSTOM_SCRIPT` to execute a script after each download.  The script receives the downloaded file path as an argument.
+*   **Custom Script:** Define a script to run after each download for custom processing, like format conversion.  The script receives the downloaded file path as an argument.
 
 ### Volume Configuration
 
@@ -118,15 +114,16 @@ volumes:
   - /cwa/config/path/app.db:/auth/app.db:ro
 ```
 
-*   **Note:**  For CIFS shares, include **nobrl** in your fstab mount line to avoid "database locked" errors.
+*   **Ingest Folder:**  Mount your Calibre-Web-Automated ingest folder.
+*   **CIFS Shares:**  Add `nobrl` to your fstab mount options for CIFS shares.
 
 ## Variants
 
 ### 🧅 Tor Variant
 
-For enhanced privacy, use the Tor variant to route all traffic through the Tor network.
+For enhanced privacy, use the Tor-specific Docker Compose file.
 
-1.  **Get the Tor docker-compose file:**
+1.  **Get the `docker-compose.tor.yml` file:**
 
     ```bash
     curl -O https://raw.githubusercontent.com/calibrain/calibre-web-automated-book-downloader/refs/heads/main/docker-compose.tor.yml
@@ -138,13 +135,11 @@ For enhanced privacy, use the Tor variant to route all traffic through the Tor n
     docker compose -f docker-compose.tor.yml up -d
     ```
 
-*   **Important:** Requires `NET_ADMIN` and `NET_RAW` Docker capabilities.  Timezone is based on Tor exit node IP.  Network settings (DNS, DoH, proxies) are ignored.
+*   **Important:**  Requires `NET_ADMIN` and `NET_RAW` Docker capabilities. Timezone is automatically set. Custom network settings are ignored.
 
-### 🌉 External Cloudflare Resolver Variant
+### 🚀 External Cloudflare Resolver Variant
 
-Integrate with external Cloudflare resolvers like FlareSolverr for improved reliability.
-
-#### Configuration
+Integrate with external Cloudflare resolvers (e.g., FlareSolverr) for improved reliability.
 
 | Variable               | Description                                                 | Default Value           |
 | ---------------------- | ----------------------------------------------------------- | ----------------------- |
@@ -152,7 +147,7 @@ Integrate with external Cloudflare resolvers like FlareSolverr for improved reli
 | `EXT_BYPASSER_PATH`    | API path for the resolver (usually `/v1`)                   | `/v1`                   |
 | `EXT_BYPASSER_TIMEOUT` | Timeout for page loading (in milliseconds)                  | `60000`                 |
 
-1.  **Get the extbp docker-compose file:**
+1.  **Get the `docker-compose.extbp.yml` file:**
 
     ```bash
     curl -O https://raw.githubusercontent.com/calibrain/calibre-web-automated-book-downloader/refs/heads/main/docker-compose.extbp.yml
@@ -164,39 +159,38 @@ Integrate with external Cloudflare resolvers like FlareSolverr for improved reli
     docker compose -f docker-compose.extbp.yml up -d
     ```
 
-*   **Compatibility:** Works with resolvers using the FlareSolverr API schema.
-*   **Enable:** Set `USE_CF_BYPASS` to true.
+*   Requires `USE_CF_BYPASS=true`.
 
-## 🏗️ Architecture
+## Architecture
 
-*   The application consists of a single service: `calibre-web-automated-bookdownloader`
+The application consists of a single service: `calibre-web-automated-bookdownloader`.
 
-## 🏥 Health Monitoring
+## Health Monitoring
 
-*   Built-in health checks monitor web interface, download service, and Cloudflare bypass.
+Built-in health checks monitor web interface availability, download service status, and Cloudflare bypass service connection. Checks run every 30 seconds.
 
-## 📝 Logging
+## Logging
 
-*   Logs are available in the container at `/var/logs/cwa-book-downloader.log` and via Docker logs.
+Logs are available in the container at `/var/logs/cwa-book-downloader.log` and via `docker logs`.
 
-## 🤝 Contributing
+## Contribute
 
-*   Contributions are welcome!  Submit pull requests.
+Contributions are welcome! Submit a Pull Request.
 
-## 📄 License
+## License
 
-*   This project is licensed under the MIT License - see the [LICENSE](LICENSE) file.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## ⚠️ Important Disclaimers
 
 ### Copyright Notice
 
-*   This tool is designed for **legal and ethical use only**.  Users are responsible for complying with copyright laws and intellectual property rights.
+**This tool is for legitimate use only.**  Users are responsible for copyright compliance and intellectual property rights.
 
 ### Duplicate Downloads Warning
 
-*   The current version **does not prevent duplicate downloads.**  Be careful when requesting books.
+The current version *does not* check for existing files or books in your Calibre database.  Be cautious to avoid duplicates.
 
-## 💬 Support
+## Support
 
-*   For issues or questions, please [file an issue](https://github.com/calibrain/calibre-web-automated-book-downloader/issues) on the GitHub repository.
+For issues or questions, please file an issue on the GitHub repository.

@@ -1,85 +1,112 @@
-# OxyGent: Build Production-Ready Intelligent Systems with Ease
+<!-- Copyright 2022 JD Co.
 
-**OxyGent empowers developers to build and deploy advanced, production-ready intelligent systems quickly and efficiently.** [Explore the OxyGent Repository](https://github.com/jd-opensource/OxyGent)
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this project except in compliance with the License.
+You may obtain a copy of the License at
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/jd-opensource/OxyGent/pulls)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://github.com/jd-opensource/OxyGent/blob/v4/LICENSE)
-[![PyPI version](https://img.shields.io/pypi/v/oxygent.svg?logo=pypi&logoColor=white)](https://pypi.org/project/oxygent/)
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
 
 [English](./README.md) | [中文](./README_zh.md)
 
-[<img src="https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/banner.jpg" width="100%" alt="OxyGent Banner">](http://oxygent.jd.com)
 
-## Key Features
+<p align="center">
+  <a href="https://github.com/jd-opensource/OxyGent/pulls">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
+  </a>
+  <a href="https://github.com/jd-opensource/OxyGent/blob/v4/LICENSE">
+    <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="license"/>
+  </a>
+  <a href="https://pypi.org/project/oxygent/">
+    <img src="https://img.shields.io/pypi/v/oxygent.svg?logo=pypi&logoColor=white" alt="pip"/>
+  </a>
 
-*   🚀 **Efficient Development:** Build, deploy, and evolve AI teams rapidly with a modular, multi-agent framework. Standardized components enable rapid assembly and hot-swapping.
-*   🤝 **Intelligent Collaboration:** Agents collaborate with dynamic planning, decompose tasks, and adapt to real-time changes, ensuring auditability.
-*   🕸️ **Elastic Architecture:** Supports diverse agent topologies and simplifies performance optimization across distributed systems.
-*   🔁 **Continuous Evolution:** Built-in evaluation engines generate training data, enabling agents to continuously improve.
-*   📈 **Scalability:** Distributed scheduler allows for linear cost growth, delivering exponential gains in collaborative intelligence.
+<html>
+    <h2 align="center">
+      <img src="https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/banner.jpg" width="1256"/>
+    </h2>
+    <h3 align="center">
+      An advanced Python framework that empowers developers to quickly build production-ready intelligent systems. 
+    </h3>
+    <h3 align="center">
+      Visit our website:
+      <a href="http://oxygent.jd.com">OxyGent</a>
+    </h3>
+</html>
 
-## What is OxyGent?
+## 1. Project Overview
+**OxyGent** is an open-source framework that unifies tools, models, and agents into modular Oxy. Empowering developers with transparent, end-to-end pipelines, OxyGent makes building, running, and evolving multi-agent systems seamless and infinitely extensible.
 
-OxyGent is an open-source framework designed to streamline the creation of sophisticated AI systems. It unifies tools, models, and agents into modular Oxy components, providing end-to-end pipelines for building, running, and evolving multi-agent systems. With OxyGent, developers can focus on business logic, enterprises can replace siloed AI systems, and users can experience seamless teamwork from an intelligent agent ecosystem.
+## 2. Core Features
+🏎️ **Efficient Development**
+- OxyGent is a modular multi-agent framework that lets you build, deploy, and evolve AI teams with unprecedented efficiency. Its standardized Oxy components snap together like LEGO bricks, enabling rapid assembly of agents while supporting hot-swapping and cross-scenario reuse - all through clean Python interfaces without messy configs.
 
-## Performance
+🤝 **Intelligent Collaboration**
+- The framework supercharges collaboration with dynamic planning paradigms, where agents intelligently decompose tasks, negotiate solutions, and adapt to changes in real-time. Unlike rigid workflow systems, OxyGent's agents handle emergent challenges naturally while maintaining full auditability of every decision.
 
-OxyGent demonstrates competitive performance in the [GAIA](https://huggingface.co/spaces/gaia-benchmark/leaderboard) benchmark.
+🕸️ **Elastic Architecture**
+- Under the hood, an elastic architecture supports any agent topology- from simple ReAct to complex hybrid planning patterns. Automated dependency mapping and visual debugging tools make it easy to optimize performance across distributed systems.
 
-[<img src="https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/points.png" width="50%" alt="Performance Graph">](https://huggingface.co/spaces/gaia-benchmark/leaderboard)
+🔁 **Continuous Evolution**
+- Every interaction becomes a learning opportunity - thanks to built-in evaluation engines that auto-generate training data. Your agents continuously improve through knowledge feedback loops while maintaining full transparency.
 
-## Core Classes
+📈 **Scalability**
+- Scaling follows Metcalfe's Law- OxyGent's distributed scheduler enables linear cost growth while delivering exponential gains in collaborative intelligence. The system effortlessly handles domain-wide optimization and real-time decision making at any scale.
 
-[<img src="https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/structure.png" width="75%" alt="Core Classes Structure">](http://oxygent.jd.com/docs/)
+The latest version of OxyGent (July 15, 2025) in the [GAIA](https://huggingface.co/spaces/gaia-benchmark/leaderboard) get 59.14 points, and current top opensource system OWL gets 60.8 points.
 
-## Quick Start
+![](https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/points.png)
 
-Follow these steps to get started with OxyGent:
+## 3. Framework Core Classes
+![](https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/structure.png)
 
-### Step 1: Set up your Python environment
-- **Option 1: Conda**
+## 4. Feature Highlight
+**For Developers**: Focus on business logic without reinventing the wheel.
 
-  ```bash
-  conda create -n oxy_env python==3.10
-  conda activate oxy_env
-  ```
+**For Enterprises**: Replace siloed AI systems with a unified framework, reducing communication overhead.
 
-- **Option 2: uv**
+**For Users**: Experience seamless teamwork from an intelligent agent ecosystem.
 
-  ```bash
-  curl -LsSf https://astral.sh/uv/install.sh | sh
-  uv python install 3.10
-  uv venv .venv --python 3.10
-  source .venv/bin/activate
-  ```
-
-### Step 2: Install the OxyGent package
-- **Option 1: Conda**
-
-  ```bash
-  pip install oxygent
-  ```
-
-- **Option 2: uv**
-
-  ```bash
-  uv pip install oxygent
-  ```
-
-- **Option 3: Development Environment**
-
-  ```bash
-  git clone https://github.com/jd-opensource/OxyGent.git
-  cd OxyGent
-  pip install -r requirements.txt # or uv
-  brew install coreutils # (May be necessary)
-  ```
-
+## 5. Quick Start
+### Step 1: Create and activate a python environment
+- Method 1: conda
+   ```bash
+   conda create -n oxy_env python==3.10
+   conda activate oxy_env
+   ```
+- Method 2: uv
+   ```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   uv python install 3.10 
+   uv venv .venv --python 3.10
+   source .venv/bin/activate
+   ```
+### Step 2: Install the required python package
+- Method 1: conda
+   ```bash
+   pip install oxygent
+   ```
+- Method 2: uv
+   ```bash
+   uv pip install oxygent
+   ```
+- Method 3: set develop environment
+   ```bash
+   git clone https://github.com/jd-opensource/OxyGent.git
+   cd OxyGent
+   pip install -r requirements.txt # or in uv
+   brew install coreutils # maybe essential
+   ```
 ### Step 3: Node.js Environment (if using MCP)
 - Download and install **[Node.js](https://nodejs.org)**
 
-### Step 4: Example Script (demo.py)
-
+### Step 4: Write a sample python script
+- demo.py
    ```python
    import os
    from oxygent import MAS, Config, oxy, preset_tools
@@ -130,66 +157,62 @@ Follow these steps to get started with OxyGent:
    ```
 
 ### Step 5: Set Environment Variables
-- **Option 1: Terminal**
-  ```bash
-  export DEFAULT_LLM_API_KEY="your_api_key"
-  export DEFAULT_LLM_BASE_URL="your_base_url"
-  export DEFAULT_LLM_MODEL_NAME="your_model_name"
-  ```
+- Method 1: Declare in terminal
+   ```bash
+   export DEFAULT_LLM_API_KEY="your_api_key"
+   export DEFAULT_LLM_BASE_URL="your_base_url"
+   export DEFAULT_LLM_MODEL_NAME="your_model_name"  
+   ```
+- Method 2: Create a .env file
+   ```bash
+   DEFAULT_LLM_API_KEY="your_api_key"
+   DEFAULT_LLM_BASE_URL="your_base_url"
+   DEFAULT_LLM_MODEL_NAME="your_model_name"
+   ```
+### Step 6: Run the example
+- Start the multi-agent system
+   ```bash
+   python demo.py
+   ```
+### Step 7: View the output
+- ![](https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/vision.png)
 
-- **Option 2: .env file**
-  ```bash
-  DEFAULT_LLM_API_KEY="your_api_key"
-  DEFAULT_LLM_BASE_URL="your_base_url"
-  DEFAULT_LLM_MODEL_NAME="your_model_name"
-  ```
+## 6. Contributing
+There are several ways you can contribute to OxyGent:
 
-### Step 6: Run the Example
-```bash
-python demo.py
-```
+1. Reporting Issues (Bugs & Errors)
+2. Suggesting Enhancements
+3. Improving Documentation
+    - Fork the repository
+    - Add your view in document
+    - Send your pull request
+4. Writing Code
+    - Fork the repository
+    - Create a new branch
+    - Add your feature or improvement
+    - Send your pull request
 
-### Step 7: View the Output
+We appreciate all kinds of contributions! 🎉🎉🎉
+If you have problems about development, please check our document: * **[Document](http://oxygent.jd.com/docs/)**
 
-[<img src="https://storage.jd.com/ai-gateway-routing/prod_data/oxygent_github_images/vision.png" width="50%" alt="Example Output">](http://oxygent.jd.com/docs/)
+## 7. Community & Support
+If you encounter any issues along the way, you are welcomed to submit reproducible steps and log snippets in the project's Issues area, or contact the OxyGent Core team directly via your internal Slack.
 
-## Contributing
-
-We welcome contributions!  Here's how you can help:
-
-1.  Report Issues (Bugs & Errors)
-2.  Suggest Enhancements
-3.  Improve Documentation:
-    *   Fork the repository.
-    *   Add your view in document.
-    *   Send your pull request.
-4.  Write Code:
-    *   Fork the repository.
-    *   Create a new branch.
-    *   Add your feature or improvement.
-    *   Send your pull request.
-
-For development-related questions, check the [documentation](http://oxygent.jd.com/docs/).
-
-## Community & Support
-
-Submit reproducible steps and log snippets in the project's Issues area. Contact the OxyGent Core team via your internal Slack.
+Welcome to contact us:
 
 <div align="center">
   <img src="https://pfst.cf2.poecdn.net/base/image/b1e96084336a823af7835f4fe418ff49da6379570f0c32898de1ffe50304d564?w=1760&h=2085&pmaid=425510216" alt="contact" width="50%" height="50%">
 </div>
 
-## About the Contributors
 
-Thank you to all the [contributors](https://github.com/jd-opensource/OxyGent/graphs/contributors)!
-
+## 8. About the Contributors
+Thanks to all the following [developers](https://github.com/jd-opensource/OxyGent/graphs/contributors) who have contributed to OxyGent.
 <a href="https://github.com/jd-opensource/OxyGent/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=jd-opensource/OxyGent" />
 </a>
 
-## License
-
+## 9. License
 [Apache License]( ./LICENSE.md)
 
-#### OxyGent is provided by Oxygen JD.com
+#### OxyGent is provided by Oxygen JD.com 
 #### Thanks for your Contributions!
