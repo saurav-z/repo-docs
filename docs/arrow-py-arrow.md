@@ -1,70 +1,60 @@
-# Arrow: Effortless Date and Time Manipulation in Python
+# Arrow: Python's Human-Friendly Date & Time Library
 
-**Simplify your Python date and time operations with Arrow, a user-friendly library that makes working with dates, times, and timestamps a breeze.**  Explore the original repository on [GitHub](https://github.com/arrow-py/arrow).
+Tired of struggling with dates and times in Python? [Arrow](https://github.com/arrow-py/arrow) simplifies date and time manipulation, making your code cleaner and more readable.
 
-## Key Features
+[![Build Status](https://github.com/arrow-py/arrow/workflows/tests/badge.svg?branch=master)](https://github.com/arrow-py/arrow/actions?query=workflow%3Atests+branch%3Amaster)
+[![Coverage](https://codecov.io/gh/arrow-py/arrow/branch/master/graph/badge.svg)](https://codecov.io/gh/arrow-py/arrow)
+[![PyPI Version](https://img.shields.io/pypi/v/arrow.svg)](https://pypi.python.org/pypi/arrow)
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/arrow.svg)](https://pypi.python.org/pypi/arrow)
+[![License](https://img.shields.io/pypi/l/arrow.svg)](https://pypi.python.org/pypi/arrow)
+[![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-*   **Intuitive DateTime Replacement:**  A fully-implemented, drop-in replacement for Python's built-in `datetime` module.
-*   **Python 3.8+ Compatibility:** Supports modern Python versions.
-*   **Timezone Awareness:** Timezone-aware and UTC by default for accurate time handling.
-*   **Simplified Creation:** Easy-to-use methods for creating dates and times from various inputs.
-*   **Flexible Time Shifting:** The `shift` method supports relative offsets, including weeks.
-*   **Automatic Formatting & Parsing:** Automatically formats and parses strings for ease of use.
-*   **ISO 8601 Support:** Comprehensive support for the ISO 8601 standard.
-*   **Timezone Conversion:** Seamlessly convert between timezones.
-*   **Integration with Existing Libraries:** Supports `dateutil`, `pytz`, and `ZoneInfo` tzinfo objects.
-*   **Time Span Generation:** Generates time spans, ranges, floors, and ceilings.
-*   **Human-Friendly Dates:** Humanize dates and times with locale support.
-*   **Extensible:** Extend Arrow for custom types.
-*   **Type Hinting:** Full support for PEP 484-style type hints.
+## Key Features:
+
+*   **Intuitive API:** Easily create, manipulate, and format dates and times.
+*   **Timezone Awareness:** Works with timezones and UTC by default.
+*   **ISO 8601 Support:** Seamlessly parse and format ISO 8601 strings.
+*   **Relative Offsets:** Use the `shift` method for intuitive time manipulation (e.g., shifting by weeks, days, etc.).
+*   **Humanization:**  Convert dates and times to human-readable strings (e.g., "an hour ago").
+*   **Time Span Generation:**  Generate time spans, ranges, floors, and ceilings.
+*   **Localization:** Supports multiple locales for humanization.
+*   **Python 3.8+ Support:**  Compatible with the latest Python versions.
+*   **Type Hints:** Fully supports PEP 484-style type hints.
 
 ## Why Use Arrow?
 
-Arrow addresses the usability shortcomings of Python's built-in datetime modules:
-
-*   Reduces the need to import multiple modules (datetime, time, calendar, dateutil, etc.)
-*   Simplifies working with multiple types (date, time, datetime, timedelta, etc.)
-*   Streamlines timezone and timestamp conversions.
-*   Prioritizes timezone awareness by default.
-*   Adds functionality like ISO 8601 parsing, timespans, and humanization.
+Arrow addresses the usability issues present in Python's built-in `datetime` module and related libraries, providing a more streamlined and user-friendly experience. Avoid the complexity of multiple modules and types with Arrow's simplified approach.
 
 ## Quick Start
 
-### Installation
-
-Install Arrow using `pip`:
+### Installation:
 
 ```bash
 pip install -U arrow
 ```
 
-### Example Usage
+### Example Usage:
 
 ```python
 import arrow
 
-# Create an Arrow object from an ISO 8601 string
-arrow.get('2013-05-11T21:23:58.970460+07:00')  # <Arrow [2013-05-11T21:23:58.970460+07:00]>
+# Create an Arrow object
+now = arrow.now()
+print(now) # <Arrow [2024-02-29T10:30:00.123456+00:00]>
 
-# Get the current UTC time
-utc = arrow.utcnow()  # <Arrow [2024-10-27T10:30:00.000000+00:00]>
+# Shift time
+past = now.shift(days=-7)
+print(past) # <Arrow [2024-02-22T10:30:00.123456+00:00]>
 
-# Shift the time
-utc = utc.shift(hours=-1)  # <Arrow [2024-10-27T09:30:00.000000+00:00]>
-
-# Convert to a different timezone
-local = utc.to('US/Pacific')  # <Arrow [2024-10-27T02:30:00.000000-07:00]>
-
-# Get the timestamp
-local.timestamp()  # 1708195800.0
+# Convert to another timezone
+pacific_time = now.to('US/Pacific')
+print(pacific_time) # <Arrow [2024-02-29T02:30:00.123456-08:00]>
 
 # Format the date/time
-local.format()  # '2024-10-27 02:30:00 -07:00'
-local.format('YYYY-MM-DD HH:mm:ss ZZ')  # '2024-10-27 02:30:00 -07:00'
+print(pacific_time.format('YYYY-MM-DD HH:mm:ss ZZ')) # 2024-02-29 02:30:00 -08:00
 
-# Humanize the time
-local.humanize()  # '7 hours ago'
-local.humanize(locale='ko-kr')  # '7시간 전'
+# Humanize
+print(past.humanize()) # a week ago
 ```
 
 ## Documentation
@@ -73,14 +63,8 @@ For detailed information, visit the official documentation at [arrow.readthedocs
 
 ## Contributing
 
-Contributions are welcome!  Start by:
-
-1.  Reviewing existing [issues](https://github.com/arrow-py/arrow/issues).
-2.  Forking the repository.
-3.  Making your changes, and adding relevant tests.
-4.  Run tests and linting (`tox && tox -e lint,docs` or `make build39 && make test && make lint`).
-5.  Submit a pull request.
+Contributions are welcome! Please see the original repo's README for details on contributing code and localizations.
 
 ## Support Arrow
 
-Support the project through [Open Collective](https://opencollective.com/arrow).
+Consider supporting the project through the [Open Collective](https://opencollective.com/arrow) to help ensure its continued development.

@@ -1,9 +1,9 @@
 <div align="center" markdown="1">
 
 <img src="https://frappe.io/files/Group%202%20(1).png" alt="Press logo" width="80"/>
-<h1>Press</h1>
+<h1>Press: Open-Source Cloud Hosting for the Frappe Stack</h1>
 
-**Full Service Cloud Hosting For The Frappe Stack - Powers Frappe Cloud**
+**Powering Frappe Cloud, Press provides a complete cloud hosting solution for Frappe applications, simplifying deployment and management.**
 
 [![codecov](https://codecov.io/gh/frappe/press/branch/master/graph/badge.svg?token=0puvH0jUx9)](https://codecov.io/gh/frappe/press)
 [![unittests](https://github.com/frappe/press/actions/workflows/main.yaml/badge.svg)](https://github.com/frappe/press/actions/workflows/main.yaml)
@@ -20,18 +20,18 @@
 	<a href="https://docs.frappe.io/cloud/">Documentation</a>
 </div>
 
-## Press: Open-Source Cloud Hosting for Frappe Applications
+## What is Press?
 
-**Press simplifies cloud hosting for Frappe applications, offering a robust, open-source solution for developers and businesses.** ([View on GitHub](https://github.com/frappe/press))
+Press is a 100% open-source cloud hosting platform designed specifically for the Frappe stack. It streamlines the deployment, management, and scaling of Frappe applications, offering a robust and flexible solution for developers and businesses alike.  It's the engine behind Frappe Cloud, offering a self-serve cloud platform with complete control over your hosting experience.
 
 ### Key Features
 
-*   **Multitenancy Made Easy**:  Host multiple Frappe sites on a single platform, with independent app versions, updates, and minimal downtime.
-*   **Intuitive Dashboard**:  A centralized dashboard for managing apps, servers, sites, billing, backups, and updates, providing real-time insights and streamlined control.
-*   **Granular Permissions**:  Role-based access control to manage team members and resources efficiently.
-*   **Simplified Site Management**: Automated backups, real-time monitoring, role-based access, and easy scaling for optimal Frappe environment management.
-*   **Integrated Billing**: Automated billing with support for subscriptions, various payment methods, and ERP integration.
-*   **Built-in Marketplace**:  Enable developers to list and sell Frappe apps with flexible pricing models, compatibility checks, and automated payouts.
+*   **Simplified Multi-tenancy:** Easily host multiple Frappe sites on a single platform, with independent app versions and minimal downtime.
+*   **Comprehensive Dashboard:** Manage apps, servers, sites, billing, backups, and updates from a centralized, user-friendly interface.
+*   **Granular Permissions:**  Control access with role-based permissions, ensuring secure and efficient team management.
+*   **Automated Management:** Benefit from automated backups, real-time monitoring, and easy scaling for your Frappe environments.
+*   **Integrated Billing:** Support daily or monthly subscriptions, various payment methods, and ERP integration.
+*   **App Marketplace:**  Enable developers to list apps, with built-in compatibility checks and streamlined sales and payouts.
 
 <details>
   <summary>Screenshots</summary>
@@ -43,25 +43,29 @@
 
 </details>
 
-### Technologies Under the Hood
+## Under the Hood
 
-Press is built upon a modern and efficient tech stack.
+Press leverages the following technologies:
 
-*   **Frappe Framework**: A full-stack web application framework written in Python and Javascript.
-*   **Frappe UI**: A Vue-based UI library.
-*   **Agent**: A flask app designed to work along with Press.
-*   **Docker**: Containerization for easy deployment and scalability.
-*   **Ansible**: Automation for system configuration and management.
+*   [**Frappe Framework**](https://github.com/frappe/frappe): A full-stack web application framework written in Python and Javascript.
+*   [**Frappe UI**](https://github.com/frappe/frappe-ui): A Vue-based UI library.
+*   [**Agent**](https://github.com/frappe/agent): A Flask app for communication with sites and benches.
+*   [**Docker**](https://www.docker.com): Containerization for application deployment.
+*   [**Ansible**](https://www.ansible.com): IT automation for configuration and management.
 
 ## Getting Started
 
-To self-host or set up Press locally, follow the instructions in the [Local Development Environment Setup Guide](https://docs.frappe.io/cloud/local-fc-setup) or watch the [YouTube video](https://www.youtube.com/watch?v=Xb9QHnUrIEk).
+To set up Press, follow the steps in the [Local Development Environment Setup Guide](https://docs.frappe.io/cloud/local-fc-setup) or watch [this YouTube video](https://www.youtube.com/watch?v=Xb9QHnUrIEk).
 
-## Connect and Learn
+## Learn More and Connect
 
 *   [Telegram Public Group](https://t.me/frappecloud)
 *   [Discuss Forum](https://discuss.frappe.io/c/frappe-cloud/77)
 *   [Documentation](https://docs.frappe.io/cloud)
+
+##  Contribute & Explore
+
+Learn more about Press and contribute to the project on GitHub: [https://github.com/frappe/press](https://github.com/frappe/press)
 
 <br/>
 <br/>

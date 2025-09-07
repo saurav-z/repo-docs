@@ -1,19 +1,18 @@
-# Claude Code Python SDK: Build Powerful AI-Powered Code Generation & Analysis Applications
+# Claude Code SDK for Python: Build Powerful AI-Powered Code Interactions
 
-**Unlock the potential of AI-driven coding with the Claude Code Python SDK!** This SDK allows you to seamlessly integrate the power of Claude Code into your Python applications, enabling code generation, analysis, and more. Access the original repository [here](https://github.com/anthropics/claude-code-sdk-python).
+**Harness the power of Claude Code directly within your Python applications with the official Claude Code SDK for Python!**  This SDK provides seamless integration, allowing you to easily interact with Claude Code's advanced code generation and manipulation capabilities.  Explore the official [Claude Code SDK documentation](https://docs.anthropic.com/en/docs/claude-code/sdk) for in-depth information and examples. [View the original repository on GitHub](https://github.com/anthropics/claude-code-sdk-python).
 
 ## Key Features
 
-*   **Easy Integration:** Simple installation and a straightforward `query()` function makes it easy to get started.
-*   **Asynchronous Streaming:** Receive real-time responses with asynchronous message streaming.
-*   **Flexible Configuration:** Customize Claude Code's behavior with `ClaudeCodeOptions`, including system prompts, maximum turns, and more.
-*   **Tool Support:** Leverage Claude Code's powerful tools for reading, writing, and executing code (Bash).
-*   **Error Handling:** Robust error handling to manage potential issues during interaction with Claude Code.
-*   **Comprehensive Documentation:** Full type definitions and examples to help you build quickly.
+*   **Simplified Integration:** Easily integrate Claude Code into your Python projects.
+*   **Asynchronous Queries:** Utilize `async` and `await` for efficient, non-blocking interactions.
+*   **Customizable Options:** Control Claude Code's behavior with options like system prompts and tool usage.
+*   **Tool Support:**  Leverage Claude Code's powerful tools for file manipulation, code execution, and more.
+*   **Comprehensive Error Handling:**  Robust error handling for a stable and reliable experience.
 
 ## Installation
 
-Get started quickly by installing the SDK via pip:
+Get started quickly by installing the SDK using `pip`:
 
 ```bash
 pip install claude-code-sdk
@@ -23,11 +22,11 @@ pip install claude-code-sdk
 
 *   Python 3.10+
 *   Node.js
-*   Claude Code CLI: `npm install -g @anthropic-ai/claude-code`
+*   Claude Code CLI:  `npm install -g @anthropic-ai/claude-code`
 
-## Quick Start
+## Quick Start Guide
 
-Here's how to start a basic interaction with Claude Code:
+Here's a simple example to get you started:
 
 ```python
 import anyio
@@ -40,11 +39,11 @@ async def main():
 anyio.run(main)
 ```
 
-## Usage
+## Usage Examples
 
-### Basic Query
+### Basic Queries
 
-Initiate interactions with Claude Code:
+Send simple prompts and receive Claude Code's responses:
 
 ```python
 from claude_code_sdk import query, ClaudeCodeOptions, AssistantMessage, TextBlock
@@ -66,9 +65,9 @@ async for message in query(prompt="Tell me a joke", options=options):
     print(message)
 ```
 
-### Using Tools
+### Working with Tools
 
-Enable Claude Code to use tools for more advanced functionality:
+Enable and utilize Claude Code's tools to automate tasks:
 
 ```python
 options = ClaudeCodeOptions(
@@ -77,16 +76,16 @@ options = ClaudeCodeOptions(
 )
 
 async for message in query(
-    prompt="Create a hello.py file", 
+    prompt="Create a hello.py file",
     options=options
 ):
     # Process tool use and results
     pass
 ```
 
-### Working Directory
+### Setting the Working Directory
 
-Specify a working directory for file operations:
+Specify the working directory for Claude Code:
 
 ```python
 from pathlib import Path
@@ -104,22 +103,22 @@ The core asynchronous function for interacting with Claude Code.
 
 **Parameters:**
 
-*   `prompt` (str): The input prompt for Claude Code.
-*   `options` (ClaudeCodeOptions, optional): Configuration settings. Defaults to `None`.
+*   `prompt` (str):  The prompt you provide to Claude Code.
+*   `options` (ClaudeCodeOptions, optional):  Configuration settings for your query.
 
-**Returns:** `AsyncIterator[Message]` - A stream of response messages.
+**Returns:**  `AsyncIterator[Message]` - A stream of messages from Claude Code.
 
 ### Types
 
-For detailed type definitions: See [src/claude\_code\_sdk/types.py](src/claude_code_sdk/types.py)
+Detailed type definitions are available in `src/claude_code_sdk/types.py`:
 
-*   `ClaudeCodeOptions` - Configuration settings
-*   `AssistantMessage`, `UserMessage`, `SystemMessage`, `ResultMessage` - Message types
-*   `TextBlock`, `ToolUseBlock`, `ToolResultBlock` - Content blocks
+*   `ClaudeCodeOptions`
+*   `AssistantMessage`, `UserMessage`, `SystemMessage`, `ResultMessage`
+*   `TextBlock`, `ToolUseBlock`, `ToolResultBlock`
 
 ## Error Handling
 
-Handle potential errors gracefully:
+Implement robust error handling to manage potential issues:
 
 ```python
 from claude_code_sdk import (
@@ -141,15 +140,15 @@ except CLIJSONDecodeError as e:
     print(f"Failed to parse response: {e}")
 ```
 
-For a complete list of error types, see [src/claude\_code\_sdk/\_errors.py](src/claude_code_sdk/_errors.py).
+See `src/claude_code_sdk/_errors.py` for a complete list of error types.
 
 ## Available Tools
 
-Explore the range of tools available to Claude Code to extend its capabilities.  See the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/settings#tools-available-to-claude) for details.
+Refer to the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/settings#tools-available-to-claude) for a comprehensive list of available tools.
 
 ## Examples
 
-For a complete working example, refer to the [examples/quick\_start.py](examples/quick_start.py) file.
+Explore a complete working example in  `examples/quick_start.py`.
 
 ## License
 

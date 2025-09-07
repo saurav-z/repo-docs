@@ -1,10 +1,10 @@
-<div align="center">
+<p align="center">
   <a href="https://docs.codegen.com">
     <img src="https://i.imgur.com/6RF9W0z.jpeg" alt="Codegen Logo" />
   </a>
-</div>
+</p>
 
-<h1 align="center">Codegen: Your AI Software Engineer</h1>
+<h1 align="center">Codegen: The AI-Powered Software Engineering Assistant</h1>
 
 <div align="center">
 
@@ -16,28 +16,22 @@
 
 </div>
 
-**Codegen empowers you to automate your software development workflow by leveraging the power of AI.**  This SDK provides a programmatic interface for interacting with the Codegen platform, allowing you to easily integrate AI-powered code generation, feature implementation, and more into your projects.  Visit the [original repo](https://github.com/codegen-sh/codegen) for more details.
+<br />
 
-## Key Features
+**Codegen empowers developers with an AI-driven SDK, automating code generation and software engineering tasks, so you can ship faster.** This Python SDK provides a programmatic interface to the powerful code agents offered by [Codegen](https://codegen.com).
 
-*   **AI-Powered Code Generation:** Automate the creation of code from natural language prompts.
-*   **Feature Implementation:**  Delegate tasks such as implementing new features directly to the AI agent.
-*   **Seamless Integration:**  Integrate the Codegen AI engineer with your existing projects via API.
-*   **Flexible Deployment:** Use agents via API or via integrations with Slack, Linear, GitHub, and the Codegen website.
-*   **Easy to Use SDK:** A Python SDK is provided for simple integration and control.
-*   **Status Tracking:**  Monitor the progress of your tasks and retrieve results upon completion.
+## Key Features of the Codegen SDK
 
-## Getting Started
+*   **Automated Code Generation:** Generate code based on natural language prompts, significantly accelerating development.
+*   **API-Driven Interaction:** Interact with your AI engineer directly through an intuitive API.
+*   **Task Management:** Monitor the status of your code generation tasks and access results seamlessly.
+*   **Integration with Popular Platforms:** Integrate Codegen with your workflow through Slack, Linear, GitHub, and more.
+*   **Flexible Deployment:** Configure the SDK with your organization ID, API token, and optional base URL for deployment flexibility.
+*   **Comprehensive Documentation:** Access detailed documentation to guide you through setup and usage.
 
-Install the Codegen SDK using pip or uv:
+## Quick Start: Get Started with Codegen
 
-```bash
-pip install codegen
-# or
-uv pip install codegen
-```
-
-Next, get your API token and organization ID from the Codegen website.  Then, you can start using the SDK:
+Here's how to get started with the Codegen SDK:
 
 ```python
 from codegen.agents.agent import Agent
@@ -66,17 +60,29 @@ if task.status == "completed":
     print(task.result)  # Result often contains code, summaries, or links
 ```
 
+## Installation
+
+Install the Codegen SDK using pip or uv:
+
+```bash
+pip install codegen
+# or
+uv pip install codegen
+```
+
 ## Resources
 
-*   [Documentation](https://docs.codegen.com)
-*   [Getting Started](https://docs.codegen.com/introduction/getting-started)
-*   [Contributing Guide](CONTRIBUTING.md)
+*   [Official Documentation](https://docs.codegen.com)
+*   [Getting Started Guide](https://docs.codegen.com/introduction/getting-started)
+*   [Codegen Website](https://codegen.com)
 *   [Contact Us](https://codegen.com/contact)
+*   [Contributing Guide](CONTRIBUTING.md)
+*   [Original Repository](https://github.com/codegen-sh/codegen)
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up the development environment and submit contributions.
+We welcome contributions! Please review our [Contributing Guide](CONTRIBUTING.md) for instructions on setting up your development environment and submitting contributions.
 
-## Enterprise
+## Enterprise Solutions
 
-For information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
+For more information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).

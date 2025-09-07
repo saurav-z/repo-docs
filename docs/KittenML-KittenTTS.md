@@ -1,27 +1,23 @@
-# Kitten TTS: The Lightweight, High-Quality Text-to-Speech Model 🎤
+# Kitten TTS: Realistic Text-to-Speech for Everyone
 
-**Generate realistic, expressive speech with Kitten TTS, a compact and efficient text-to-speech model designed for ease of use.** (Learn more at the [original repository](https://github.com/KittenML/KittenTTS).)
+**Experience high-quality, realistic voice synthesis with Kitten TTS, a lightweight and accessible open-source text-to-speech model.** For more details, visit the original repository: [KittenML/KittenTTS](https://github.com/KittenML/KittenTTS)
 
-## Key Features of Kitten TTS
+## Key Features
 
-*   **Ultra-Lightweight Design:** The model size is less than 25MB, perfect for deployment on various devices.
-*   **CPU-Optimized Performance:** Runs efficiently on any device without requiring a GPU.
-*   **High-Quality Voice Options:** Access a selection of premium voice options for diverse applications.
-*   **Fast Inference Speed:** Optimized for real-time speech synthesis, ensuring a seamless user experience.
+*   **Ultra-Lightweight:** Model size under 25MB for easy deployment.
+*   **CPU-Optimized:** Runs efficiently on any device without requiring a GPU.
+*   **High-Quality Voices:** Access to a range of premium voice options.
+*   **Fast Inference:** Optimized for real-time speech synthesis.
 
-## Getting Started with Kitten TTS
+## Getting Started
 
 ### Installation
-
-Install the Kitten TTS package using pip:
 
 ```bash
 pip install https://github.com/KittenML/KittenTTS/releases/download/0.1/kittentts-0.1.0-py3-none-any.whl
 ```
 
 ### Basic Usage
-
-Here's how to generate speech using Kitten TTS:
 
 ```python
 from kittentts import KittenTTS
@@ -38,17 +34,11 @@ sf.write('output.wav', audio, 24000)
 
 ## System Requirements
 
-Kitten TTS is designed to work on any device.
+Kitten TTS is designed to work on virtually any system.
 
-## Get Involved
+## Future Development
 
-*   [Join our Discord](https://discord.com/invite/VJ86W4SURW) for community support and updates.
-*   [Contact us for custom support](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview).
-*   Email us with any questions: info@stellonlabs.com
-
-## Roadmap / Future Development
-
-*   [x] Release a preview model
-*   [ ] Release the fully trained model weights
-*   [ ] Release mobile SDK
-*   [ ] Release web version
+*   Release a preview model
+*   Release the fully trained model weights
+*   Release mobile SDK
+*   Release web version

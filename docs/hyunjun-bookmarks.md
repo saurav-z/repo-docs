@@ -1,90 +1,50 @@
-# Comprehensive Bookmarks Repository
+# Comprehensive Bookmarks: A Curated Collection for Learning and Exploration
 
-This repository offers a curated collection of bookmarks spanning a wide range of topics, providing valuable resources for learning and exploration. (See the original repository [here](https://github.com/hyunjun/bookmarks).)
+This repository ([original repo](https://github.com/hyunjun/bookmarks)) serves as a meticulously organized collection of bookmarks, categorized across various topics for easy access and enhanced learning.
 
 ## Key Features:
 
-*   **Extensive Topic Coverage:**  Bookmarks are organized into two main categories: *Miscellaneous* and *Programming*, covering a diverse set of subjects.
-*   **Well-Organized Structure:** The bookmarks are structured with clear markdown files for easy navigation and access.
-*   **Programming Focus:** Includes extensive resources for various programming languages, data science, and software development concepts.
-*   **Continuous Updates:** The bookmark collection is likely to be updated regularly with new and relevant content.
+*   **Diverse Topic Coverage:** Explore a wide range of subjects, from programming and data science to personal development and travel.
+*   **Well-Organized Structure:** Categories and subcategories ensure efficient browsing and discovery.
+*   **Regularly Updated:**  The collection is continuously maintained and expanded to provide the most relevant and up-to-date resources.
 
-## Content Breakdown:
+## Categories:
 
-The repository contains bookmarks on the following topics:
+Here's a breakdown of the major categories and some notable subtopics:
 
 ### Miscellaneous
 
-*   제주도 (Jeju Island)
-*   Animal
-*   App
+*   Jeju Island
 *   Art
-*   Baby
-*   Book
+*   Books
 *   Business
 *   Drama
-*   Economy
-*   Education
-*   English
 *   Finance
 *   Food
-*   Game
 *   Health
 *   History
-*   House
 *   Life
-*   Nomad & Remote
-*   Math (and Statistics)
+*   Math
 *   Media
-*   Myth
-*   People
 *   Philosophy
 *   Politics
-*   Presentation (including "dev small talk" and "speed")
-*   Product
 *   Psychology
-*   Religion
-*   Robot
-*   Self Control
-*   Science
-*   Shopping
-*   Speaking
-*   Sports
 *   Travel
 *   Writing
 
 ### Programming
 
-*   Algorithm
-*   Anomaly Detection
-*   Apache (including HBase and Spark)
-*   Bitcoin
-*   Cloud (AWS, Azure, Google Cloud Platform (GCP))
-*   Coursera
-*   Data Science (including Artificial Intelligence, Data, Data Visualization, Deep Learning, Keras, Machine Learning, NLP, PyTorch, TensorFlow, and Vision)
+*   Algorithms
+*   Cloud (AWS, Azure, GCP)
+*   Data Science (AI, Machine Learning, Deep Learning, NLP)
 *   Docker
-*   Editor (Emacs, Vim)
-*   Elasticsearch & Lucene
-*   Game
-*   GIS
+*   Editors (Emacs, Vim)
 *   Git
-*   Graph
-*   Hadoop
-*   Hardware
-*   Interview
-*   JSON
 *   Linux
 *   Mobile (Android, Flutter, iOS)
-*   Monitoring
-*   NoSQL (HBase, Redis)
-*   Open Source
-*   Programmer
-*   Programming (including Concurrency, Data Oriented Design (DOD), Functional Programming, Logging, Network, Object Oriented Programming (OOP), and Regular Expression)
-*   Programming Books
-*   Programming Language (Bash, C, Clojure, C++, C#, Elixir, Erlang, Go, Haskell, Java, JavaScript, Julia, Kotlin, Lisp, .NET, OCaml, PHP, Python, R, Ruby, Rust, Scala)
+*   NoSQL (Redis)
+*   Programming Languages (Python, Java, JavaScript, Go, Rust, and many more)
 *   SQL
-*   SVN
-*   Time Series
-*   Web
+*   Web Development
 
-This well-organized repository serves as a valuable resource for anyone looking to expand their knowledge on a wide variety of subjects!
+This is a starting point for a wide-ranging set of bookmarks, and is intended to be used as a convenient repository to learn from and explore.

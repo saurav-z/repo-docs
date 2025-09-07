@@ -1,29 +1,30 @@
-<p align="left">
-  <img alt="CommixProject" src="https://commixproject.com/images/logo.png" height="120" />
-  <p align="left">
-    <a href="https://github.com/commixproject/commix/actions/workflows/builds.yml"><img alt="Builds Tests" src="https://github.com/commixproject/commix/actions/workflows/builds.yml/badge.svg"></a>
-    <a href="http://www.python.org/download/"><img alt="Python 2.6|2.7|3.x" src="https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg"></a>
-    <a href="https://github.com/commixproject/commix/blob/master/LICENSE.txt"><img alt="GPLv3 License" src="https://img.shields.io/badge/license-GPLv3-red.svg"></a>
-    <a href="https://github.com/commixproject/commix/issues?q=is%3Aissue+is%3Aclosed"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/commixproject/commix.svg?colorB=ff0000"></a>
-    <a href="https://x.com/commixproject"><img alt="X" src="https://img.shields.io/badge/x-@commixproject-blue.svg"></a>
-  </p>
+<p align="center">
+  <img alt="Commix Logo" src="https://commixproject.com/images/logo.png" height="120" />
 </p>
 
-# Commix: Automated Command Injection Exploitation Tool
+<p align="center">
+    <a href="https://github.com/commixproject/commix/actions/workflows/builds.yml"><img alt="Build Status" src="https://github.com/commixproject/commix/actions/workflows/builds.yml/badge.svg"></a>
+    <a href="http://www.python.org/download/"><img alt="Python Versions" src="https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg"></a>
+    <a href="https://github.com/commixproject/commix/blob/master/LICENSE.txt"><img alt="License" src="https://img.shields.io/badge/license-GPLv3-red.svg"></a>
+    <a href="https://github.com/commixproject/commix/issues?q=is%3Aissue+is%3Aclosed"><img alt="Closed Issues" src="https://img.shields.io/github/issues-closed-raw/commixproject/commix.svg?colorB=ff0000"></a>
+    <a href="https://x.com/commixproject"><img alt="X (Twitter)" src="https://img.shields.io/badge/x-@commixproject-blue.svg"></a>
+</p>
 
-**Commix** (short for **Comm**and **I**njection e**x**ploiter) is a powerful open-source penetration testing tool designed to automatically detect and exploit command injection vulnerabilities. ([See the original repo](https://github.com/commixproject/commix))
+## Commix: Automate Command Injection Exploitation
 
-![Screenshot](https://commixproject.com/images/background.png)
+**Commix** (short for **Comm**and **I**njection e**X**ploiter) is a powerful, open-source penetration testing tool that automates the detection and exploitation of command injection vulnerabilities, allowing security professionals to identify and mitigate risks effectively.  [Explore the Commix GitHub Repository](https://github.com/commixproject/commix).
 
-Explore the [screenshot collection](https://github.com/commixproject/commix/wiki/Screenshots) on the wiki to see Commix in action.
+![Commix Screenshot](https://commixproject.com/images/background.png)
 
-## Key Features:
+Key Features:
 
-*   **Automated Vulnerability Detection:** Identifies command injection flaws in web applications.
-*   **Exploitation Capabilities:** Executes commands on vulnerable systems to assess impact.
+*   **Automated Vulnerability Detection:**  Quickly identifies command injection vulnerabilities.
+*   **Exploitation Capabilities:**  Allows for the exploitation of identified vulnerabilities.
 *   **Open Source:** Freely available for use and modification under the GPLv3 license.
-*   **Cross-Platform Compatibility:** Works on various operating systems where Python is installed.
-*   **Extensive Documentation:** Comprehensive wiki resources to help you get started.
+*   **Cross-Platform:** Can be run on any platform where Python is installed.
+*   **Active Community:**  Benefit from community support and contributions.
+
+For visual examples, check out the [collection of screenshots](https://github.com/commixproject/commix/wiki/Screenshots) on the wiki.
 
 ## Installation
 
@@ -35,42 +36,30 @@ $ git clone https://github.com/commixproject/commix.git commix
 
 Alternatively, download the latest [tarball](https://github.com/commixproject/commix/tarball/master) or [zipball](https://github.com/commixproject/commix/zipball/master).
 
-*Note: Requires **[Python](http://www.python.org/download/)** (version **2.6**, **2.7** or **3.x**).*
+*   **Note:** Python (version 2.6, 2.7 or 3.x) is required.
 
 ## Usage
 
-View all the available options and switches with:
+View all options and switches:
 
 ```bash
 $ python commix.py -h
 ```
 
-Consult the following wiki pages for detailed guidance on using Commix:
+For detailed usage, examples, and filter bypasses, consult the following resources:
 
-*   [Usage](https://github.com/commixproject/commix/wiki/Usage)
-*   [Usage Examples](https://github.com/commixproject/commix/wiki/Usage-Examples)
-*   [Filters Bypasses](https://github.com/commixproject/commix/wiki/Filters-Bypasses)
+*   **Usage:** [Commix Wiki - Usage](https://github.com/commixproject/commix/wiki/Usage)
+*   **Usage Examples:** [Commix Wiki - Usage Examples](https://github.com/commixproject/commix/wiki/Usage-Examples)
+*   **Filters Bypasses:** [Commix Wiki - Filters Bypasses](https://github.com/commixproject/commix/wiki/Filters-Bypasses)
 
-## Important Links
+## Resources
 
-*   **User Manual:** [https://github.com/commixproject/commix/wiki](https://github.com/commixproject/commix/wiki)
-*   **Issue Tracker:** [https://github.com/commixproject/commix/issues](https://github.com/commixproject/commix/issues)
+*   **User Manual:** [Commix Wiki](https://github.com/commixproject/commix/wiki)
+*   **Issue Tracker:** [Commix Issues](https://github.com/commixproject/commix/issues)
 
 ## Translations
 
-*   [Farsi(Persian)](https://github.com/commixproject/commix/blob/master/doc/translations/README-fa-FA.md)
+*   [Farsi (Persian)](https://github.com/commixproject/commix/blob/master/doc/translations/README-fa-FA.md)
 *   [Greek](https://github.com/commixproject/commix/blob/master/doc/translations/README-gr-GR.md)
 *   [Indonesian](https://github.com/commixproject/commix/blob/master/doc/translations/README-idn-IDN.md)
 *   [Turkish](https://github.com/commixproject/commix/blob/master/doc/translations/README-tr-TR.md)
-```
-Key improvements and explanations:
-
-*   **SEO-Friendly Title:**  The main heading includes "Commix" and a clear description to attract search traffic related to command injection and penetration testing.
-*   **One-Sentence Hook:**  Starts with a concise sentence summarizing what Commix *is*.
-*   **Bulleted Key Features:** This format allows users to quickly grasp the tool's capabilities.  Keywords like "Automated," "Exploitation," "Open Source," and "Cross-Platform" are included to boost SEO.
-*   **Installation & Usage Reorganized:**  Kept the original content but streamlined for readability.
-*   **Clear Calls to Action:**  Encourages exploration of the wiki and provides direct links.
-*   **Author and License Mentions:**  Kept the existing author and license information.
-*   **Added Original Repo Link:**  To clearly give credit.
-*   **Markdown Formatting:** Uses Markdown for clean formatting, making it easier to read and maintain.  Includes bolding for emphasis.
-*   **Keyword Optimization:** Strategically uses relevant keywords like "command injection," "penetration testing," and "vulnerability detection" throughout the document.

@@ -1,55 +1,52 @@
-# cloud-init: Automate Cloud Instance Initialization
+# Cloud-init: Automate Cloud Instance Initialization
 
-**Cloud-init is the leading cross-platform tool for automating cloud instance initialization across all major cloud providers and environments.**
+Cloud-init is the leading open-source tool for automating the initialization of cloud instances across all major platforms. (See the original repo here: [https://github.com/canonical/cloud-init](https://github.com/canonical/cloud-init))
 
-[![Unit Tests](https://github.com/canonical/cloud-init/actions/workflows/unit.yml/badge.svg?branch=main)](https://github.com/canonical/cloud-init/actions/workflows/unit.yml)
-[![Integration Tests](https://github.com/canonical/cloud-init/actions/workflows/integration.yml/badge.svg?branch=main)](https://github.com/canonical/cloud-init/actions/workflows/integration.yml)
-[![Documentation](https://github.com/canonical/cloud-init/actions/workflows/check_format.yml/badge.svg?branch=main)](https://github.com/canonical/cloud-init/actions/workflows/check_format.yml)
+![Unit Tests](https://github.com/canonical/cloud-init/actions/workflows/unit.yml/badge.svg?branch=main)
+![Integration Tests](https://github.com/canonical/cloud-init/actions/workflows/integration.yml/badge.svg?branch=main)
+![Documentation](https://github.com/canonical/cloud-init/actions/workflows/check_format.yml/badge.svg?branch=main)
 
-## Key Features of cloud-init
+## Key Features of Cloud-init
 
-*   **Cross-Platform Compatibility:** Works seamlessly across diverse cloud providers, private cloud infrastructure, and bare-metal installations.
-*   **Automated Instance Initialization:**  Automatically configures cloud instances during boot based on cloud metadata.
-*   **Metadata & Data Handling:** Reads and processes cloud metadata, along with optional user and vendor data for comprehensive system setup.
-*   **Network & Storage Configuration:** Automates the setup of network interfaces, storage devices, and other essential system components.
-*   **SSH Key Management:**  Simplifies SSH access by configuring SSH keys for secure access.
-*   **Broad OS Support:** Supports the majority of Linux and Unix distributions.
+*   **Cross-Platform Compatibility:** Works seamlessly across all major public cloud providers, private cloud infrastructure, and bare-metal installations.
+*   **Automated Configuration:** Automatically configures network settings, storage devices, SSH access keys, and other system aspects.
+*   **Metadata Driven:** Reads and processes cloud metadata to initialize instances based on the specific cloud environment.
+*   **User and Vendor Data Processing:** Parses and executes user-provided and vendor-provided data for advanced customization.
+*   **Industry Standard:** The *industry standard* multi-distribution method for cross-platform cloud instance initialization.
 
-## How cloud-init Works
+## How Cloud-init Works
 
-cloud-init initializes cloud instances by:
+Cloud-init initializes cloud instances from a disk image and the following data:
 
-1.  **Booting from Disk Image:** Starts with a base disk image.
-2.  **Reading Instance Data:** Accesses cloud metadata, optional user data, and vendor data.
-3.  **Cloud Identification:** Detects the cloud environment.
-4.  **System Configuration:** Configures the system based on metadata, including network settings, storage setup, SSH keys, and more.
-5.  **User and Vendor Data Processing:** Parses and executes any provided user or vendor data for custom configuration.
+*   Cloud metadata
+*   User data (optional)
+*   Vendor data (optional)
 
-## Getting Started
+During boot, cloud-init identifies the cloud environment, reads the provided metadata, and initializes the system accordingly. It then processes any optional user or vendor data.
 
-*   **User Documentation:** [User Documentation](https://docs.cloud-init.io/en/latest/)
-*   **Join the Community:**
-    *   [``#cloud-init`` channel on Matrix](https://matrix.to/#/#cloud-init:ubuntu.com)
-    *   [GitHub Discussions](https://github.com/canonical/cloud-init/discussions)
-    *   [Report Bugs on GitHub Issues](https://github.com/canonical/cloud-init/issues)
+## Getting Started and Support
 
-## Supported Clouds & Distributions
+*   **Documentation:** Comprehensive [user documentation](https://docs.cloud-init.io/en/latest/).
+*   **Community Support:**
+    *   Join the [``#cloud-init`` channel on Matrix](https://matrix.to/#/#cloud-init:ubuntu.com) for real-time discussions.
+    *   Follow announcements and ask questions on [GitHub Discussions](https://github.com/canonical/cloud-init/discussions).
+    *   Report bugs and issues on [GitHub Issues](https://github.com/canonical/cloud-init/issues).
 
-Cloud-init supports a wide range of [clouds](https://docs.cloud-init.io/en/latest/reference/datasources.html#datasources_supported) and [Linux/Unix OSes](https://docs.cloud-init.io/en/latest/reference/distros.html). If your distribution or cloud is not supported, contact your distribution maintainers.
+## Cloud and Distribution Support
 
-## Contributing to cloud-init
+Cloud-init supports a wide range of [clouds](https://docs.cloud-init.io/en/latest/reference/datasources.html#datasources_supported) and [Linux / Unix OSes](https://docs.cloud-init.io/en/latest/reference/distros.html). If your distribution or cloud is not supported, please contact your distribution to request support.
 
-Interested in contributing? Check out the [contributing](https://docs.cloud-init.io/en/latest/development/index.html) document.
+## Contributing to Cloud-init
+
+Learn how to contribute by reviewing the [contributing](https://docs.cloud-init.io/en/latest/development/index.html) document, which outlines the steps necessary to develop, test, and submit code.
 
 ## Daily Builds
+
+Stay up-to-date with the latest features and bug fixes through daily builds:
 
 *   **Ubuntu:** [Daily PPAs](https://code.launchpad.net/~cloud-init-dev/+archive/ubuntu/daily)
 *   **CentOS:** [COPR build repos](https://copr.fedorainfracloud.org/coprs/g/cloud-init/cloud-init-dev/)
 
-## Build/Packaging Information
+## Build and Packaging Information
 
-Refer to the [packages](packages) directory for build and packaging implementations.
-
----
-
-**[View the original cloud-init repository on GitHub](https://github.com/canonical/cloud-init)**
+For reference build/packaging implementations, refer to [packages](packages).
