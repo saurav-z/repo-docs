@@ -1,41 +1,37 @@
-# Contest Management System (CMS): Run and Organize Programming Contests with Ease
+# CMS: The Open-Source Contest Management System for Programming Competitions
 
-Tired of complicated contest setups? CMS is a powerful, distributed system designed to simplify the running and organization of programming contests, offering flexibility and scalability for diverse event types. Learn more and contribute on the original [CMS GitHub repository](https://github.com/cms-dev/cms).
+**CMS is a powerful and flexible distributed system designed to manage and streamline programming contests of all types.** (Check out the original repository: [https://github.com/cms-dev/cms](https://github.com/cms-dev/cms))
 
 [![Build Status](https://github.com/cms-dev/cms/actions/workflows/main.yml/badge.svg)](https://github.com/cms-dev/cms/actions)
 [![Codecov](https://codecov.io/gh/cms-dev/cms/branch/main/graph/badge.svg)](https://codecov.io/gh/cms-dev/cms)
 [![Get support on Telegram](https://img.shields.io/badge/Questions%3F-Join%20the%20Telegram%20group!-%2326A5E4?style=flat&logo=telegram)](https://t.me/contestms)
 [![Translation status](https://hosted.weblate.org/widget/cms/svg-badge.svg)](https://hosted.weblate.org/engage/cms/)
 
-## Key Features
+[🌍 Help translate CMS in your language using Weblate!](https://hosted.weblate.org/engage/cms/)
 
-*   **Versatile Contest Support:** Designed to handle a wide range of contest types, tasks, and scoring systems.
-*   **Distributed System:** Built for scalability and resilience, allowing for smooth operation even with large numbers of participants.
-*   **Open Source:**  Contribute to the project and help improve CMS.
-*   **Used Globally:**  Proven and tested in both official and unofficial programming contests.
+## Key Features of CMS
+
+*   **Highly Customizable:** CMS is built to handle a wide variety of contest types, tasks, and scoring systems.
+*   **Distributed Architecture:** Designed for scalability and reliability, allowing you to run contests with many participants.
+*   **Open Source:**  Contribute to the ongoing development and customization of CMS to fit your needs.
+*   **Used Globally:** Proven and tested in both official and unofficial programming competitions, including the International Olympiad in Informatics (IOI).
+*   **Active Community:** Get support and connect with other users on Telegram, mailing lists, and Google Groups.
+
+## Why Choose CMS?
+
+CMS provides a robust and versatile platform for managing programming contests, whether you're organizing a local competition or a large international event. Its flexibility allows you to adapt it to your specific requirements, making it an ideal choice for various contest formats.
 
 ## Getting Started
 
-### Download
+*   **Download:** Get the latest stable version at [http://cms-dev.github.io/](http://cms-dev.github.io/).
+*   **Documentation:**  Learn how to install and use CMS by reading the comprehensive documentation at [https://cms.readthedocs.org/](https://cms.readthedocs.org/).
 
-For end-users, download the latest stable version directly from the [CMS Homepage](http://cms-dev.github.io/).
+## Support and Community
 
-### Documentation
-
-Comprehensive documentation is available at [https://cms.readthedocs.org/](https://cms.readthedocs.org/) to guide you through installation and usage.
-
-### Support and Community
-
-*   **Telegram:** Get quick answers and connect with other users in the [Telegram group](https://t.me/contestms).
-*   **Support Mailing List:**  Ask questions and discuss issues on the [support mailing list](contestms-support@googlegroups.com).  Archives are available on [Google Groups](https://groups.google.com/forum/#!forum/contestms-support).
-*   **Bug Reports:** Report any bugs or issues on [GitHub](https://github.com/cms-dev/cms/issues) following the issue template.  Please use the support channels for general help requests.
-*   **Announcements:** Stay updated on new releases and important news by subscribing to the [announcements mailing list](contestms-announce@googlegroups.com) on [Google Groups](https://groups.google.com/forum/#!forum/contestms-announce).
-*   **Development Discussions:** Join the development discussion on [Google Groups](https://groups.google.com/forum/#!forum/contestms-discuss) for developer related questions.
-
-### Log Files
-
-For troubleshooting assistance, provide relevant log files located in `/var/local/log/cms/`.
+*   **Telegram:** Get quick answers to your questions in the [Telegram chat](https://t.me/contestms).
+*   **Mailing Lists:**  Join the support mailing list: <contestms-support@googlegroups.com> or the development mailing list: <contestms-discuss@googlegroups.com>.  Announcements are sent to: <contestms-announce@googlegroups.com>
+*   **Issue Tracking:**  Report bugs and suggest improvements via [GitHub Issues](https://github.com/cms-dev/cms/issues).
 
 ## Testimonials
 
-See a list of contests and events that have successfully utilized CMS on the [testimonials page](http://cms-dev.github.io/testimonials.html).  Contact the CMS team if you used CMS for a contest and want to have your event listed.
+See how CMS has been used in competitions worldwide: [http://cms-dev.github.io/testimonials.html](http://cms-dev.github.io/testimonials.html)

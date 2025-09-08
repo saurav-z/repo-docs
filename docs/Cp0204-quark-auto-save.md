@@ -1,61 +1,68 @@
 <div align="center">
-  <img src="img/icon.png" alt="quark-logo" width="100">
-  <h1>Quark Auto-Save: Automate Your Quark Network Disk</h1>
-  <p>Effortlessly automate Quark network disk tasks like auto-saving, renaming, and media library refreshing, saving you time and effort.  </p>
 
-  [![Wiki][wiki-image]][wiki-url]
-  [![GitHub Release][gitHub-releases-image]][github-url]
-  [![Docker Pulls][docker-pulls-image]][docker-url]
-  [![Docker Image Size][docker-image-size-image]][docker-url]
+![quark-logo](img/icon.png)
 
-  [wiki-image]: https://img.shields.io/badge/wiki-Documents-green?logo=github
-  [gitHub-releases-image]: https://img.shields.io/github/v/release/Cp0204/quark-auto-save?logo=github
-  [docker-pulls-image]: https://img.shields.io/docker/pulls/cp0204/quark-auto-save?logo=docker&&logoColor=white
-  [docker-image-size-image]: https://img.shields.io/docker/image-size/cp0204/quark-auto-save?logo=docker&&logoColor=white
-  [github-url]: https://github.com/Cp0204/quark-auto-save
-  [docker-url]: https://hub.docker.com/r/cp0204/quark-auto-save
-  [wiki-url]: https://github.com/Cp0204/quark-auto-save/wiki
-
-  <img src="img/run_log.png" alt="Run Log">
 </div>
 
+# Quark Auto-Save: Automate Your Quark Drive
+
+**Tired of manually saving files to your Quark Drive?**  Quark Auto-Save is your all-in-one solution for automating Quark Drive tasks like auto-saving, renaming, and refreshing your media library.  You can find the original repo [here](https://github.com/Cp0204/quark-auto-save).
+
+[![GitHub Release](https://img.shields.io/github/v/release/Cp0204/quark-auto-save?logo=github)](https://github.com/Cp0204/quark-auto-save)
+[![Docker Pulls](https://img.shields.io/docker/pulls/cp0204/quark-auto-save?logo=docker&&logoColor=white)](https://hub.docker.com/r/cp0204/quark-auto-save)
+[![Docker Image Size](https://img.shields.io/docker/image-size/cp0204/quark-auto-save?logo=docker&&logoColor=white)](https://hub.docker.com/r/cp0204/quark-auto-save)
+[![Wiki](https://img.shields.io/badge/wiki-Documents-green?logo=github)](https://github.com/Cp0204/quark-auto-save/wiki)
+
+![run_log](img/run_log.png)
+
 > [!CAUTION]
-> ⚠️ **Important:** Avoid excessively frequent scheduled runs to prevent account risks and unnecessary server load.
+> ⛔️⛔️⛔️ **Important:** Avoid excessive scheduling to prevent account risks and server strain.
 
 > [!NOTE]
-> The developer is not customer support. Please consult the Wiki and Issues before asking questions.
+> The developer is not customer service. Refer to the Wiki and Issues for solutions before asking for help.
 
 ## Key Features
 
-*   ✅ **Automated Quark Disk Tasks:** Automate Quark network disk tasks, including auto-saving, renaming, media library refreshing, and push notifications.
-*   ✅ **Docker Deployment & WebUI:** Easy setup with Docker and a user-friendly WebUI for configuration.
-*   ✅ **Share Link Management:**  Handles subdirectories, skips expired links, supports links with extraction codes, and intelligent resource search.
-*   ✅ **File Management:** Creates target directories, skips already saved files, file name filtering with regular expressions, and renaming options.
-*   ✅ **Task Management:** Supports multiple tasks with expiration dates and weekday-specific execution.
-*   ✅ **Media Library Integration:**  Integrates with Emby to search and refresh media libraries automatically. Extensible with custom plugin modules.
-*   ✅ **Additional Features:** Daily check-in for storage space, supports multiple notification channels, and multi-account support.
+*   **Automated Saving:**  Automatically transfers files from share links to your Quark Drive.
+*   **WebUI Configuration:** Easy setup and management via a user-friendly web interface (Docker).
+*   **Smart File Handling:**
+    *   Skips already saved files.
+    *   Supports regex filtering for file selection.
+    *   Renames files after saving using customizable regex rules.
+    *   Option to ignore file extensions.
+*   **Flexible Task Management:**
+    *   Supports multiple tasks.
+    *   Set task expiration dates.
+    *   Schedule tasks for specific days of the week.
+*   **Media Library Integration:**
+    *   Searches and refreshes Emby media libraries based on task names.
+    *   Modular plugin system for custom media library integration.
+*   **Additional Features:**
+    *   Daily check-in for free storage.
+    *   Multiple notification channels.
+    *   Support for multiple accounts (saves from the first account).
 
-## Getting Started
+## Deployment
 
 ### Docker Deployment
 
-Deploy with Docker for a WebUI based management.
+Docker deployment offers a WebUI for managing configurations.  
 
 ```shell
 docker run -d \
   --name quark-auto-save \
-  -p 5005:5005 \ # Port mapping, change the one before ":"
+  -p 5005:5005 \ # Port mapping
   -e WEBUI_USERNAME=admin \
   -e WEBUI_PASSWORD=admin123 \
-  -v ./quark-auto-save/config:/app/config \ # Persistent configuration
-  -v ./quark-auto-save/media:/media \ # Optional for alist_strm_gen
+  -v ./quark-auto-save/config:/app/config \ # Configuration persistence
+  -v ./quark-auto-save/media:/media \ # Optional, for alist_strm_gen strm usage
   --network bridge \
   --restart unless-stopped \
   cp0204/quark-auto-save:latest
   # registry.cn-shenzhen.aliyuncs.com/cp0204/quark-auto-save:latest # China mirror
 ```
 
-docker-compose.yml
+**docker-compose.yml**
 
 ```yaml
 name: quark-auto-save
@@ -77,14 +84,14 @@ services:
 
 Access the WebUI at: `http://yourhost:5005`
 
-| Environment Variable  | Default    | Description                         |
-| --------------------- | ---------- | ----------------------------------- |
-| `WEBUI_USERNAME`    | `admin`    | Admin username                      |
-| `WEBUI_PASSWORD`    | `admin123` | Admin password                      |
-| `PORT`              | `5005`     | WebUI Port                          |
-| `PLUGIN_FLAGS`      |            | Disable plugins using flags (e.g.,  `-emby,-aria2`) |
+| Environment Variable | Default     | Description                                 |
+| -------------------- | ----------- | ------------------------------------------- |
+| `WEBUI_USERNAME`     | `admin`     | WebUI username                              |
+| `WEBUI_PASSWORD`     | `admin123`  | WebUI password                              |
+| `PORT`               | `5005`      | WebUI port                                  |
+| `PLUGIN_FLAGS`       |             | Disable plugins (e.g., `-emby,-aria2`)      |
 
-#### Update with Watchtower
+#### One-Click Update
 
 ```shell
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower -cR quark-auto-save
@@ -94,53 +101,55 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtow
 <summary>WebUI Preview</summary>
 
 ![screenshot_webui](img/screenshot_webui-1.png)
+
 ![screenshot_webui](img/screenshot_webui-2.png)
 
 </details>
 
-## Configuration & Usage
+## Usage
 
 ### Regular Expression Examples
 
-| Pattern                                | Replace                 | Result                                                                               |
-| -------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------ |
-| `.*`                                   |                         | Save all files without renaming                                                      |
-| `\.mp4$`                               |                         | Save all files with the `.mp4` extension                                             |
-| `^【电影TT】花好月圆(\d+)\.(mp4\|mkv)` | `\1.\2`                 | 【电影TT】花好月圆01.mp4 → 01.mp4<br>【电影TT】花好月圆02.mkv → 02.mkv             |
-| `^(\d+)\.mp4`                          | `S02E\1.mp4`            | 01.mp4 → S02E01.mp4<br>02.mp4 → S02E02.mp4                                          |
-| `$TV`                                  |                         | [Magic Matching](#magic-matching) for episodes                                     |
-| `^(\d+)\.mp4`                          | `{TASKNAME}.S02E\1.mp4` | 01.mp4 → TaskName.S02E01.mp4                                                         |
+| Pattern                                | Replace                 | Result                                                                       |
+| -------------------------------------- | ----------------------- | ---------------------------------------------------------------------------- |
+| `.*`                                   |                         | Save all files without renaming.                                              |
+| `\.mp4$`                               |                         | Save all `.mp4` files.                                                      |
+| `^【电影TT】花好月圆(\d+)\.(mp4\|mkv)` | `\1.\2`                 | 【电影TT】花好月圆01.mp4 → 01.mp4<br>【电影TT】花好月圆02.mkv → 02.mkv     |
+| `^(\d+)\.mp4`                          | `S02E\1.mp4`            | 01.mp4 → S02E01.mp4<br>02.mp4 → S02E02.mp4                                 |
+| `$TV`                                  |                         | [Magic matching](#magic-matching) TV show files.                              |
+| `^(\d+)\.mp4`                          | `{TASKNAME}.S02E\1.mp4` | 01.mp4 → TaskName.S02E01.mp4                                                   |
 
-More regex information: [Regex Tutorial](https://github.com/Cp0204/quark-auto-save/wiki/正则处理教程)
+More regex details:  [Regex Tutorial](https://github.com/Cp0204/quark-auto-save/wiki/正则处理教程)
 
 > [!TIP]
-> **Magic Matching and Variables:** In regex processing, the "magic matching" mode starts with a `$` and is left empty in replace, it will be automatically replaced.  From v0.6.0, "magic variables" wrapped with `{}` can be used for more renaming.
+>
+> **Magic Matching and Magic Variables:**  Use "magic matching" (regex starting with `$`) and "magic variables" (e.g., `{TASKNAME}`) for advanced renaming.
+>
+> See [Magic Matching and Magic Variables](https://github.com/Cp0204/quark-auto-save/wiki/魔法匹配和魔法变量)
 
-For more details, refer to [Magic Matching and Variables](https://github.com/Cp0204/quark-auto-save/wiki/魔法匹配和魔法变量)
+### Refreshing Media Libraries
 
-### Media Library Refresh
+Configure plugins to automatically refresh your media library after saving files. [Plugin Configuration Guide](https://github.com/Cp0204/quark-auto-save/wiki/插件配置)
 
-When new files are saved, it can trigger functions like media library refresh.  See: [Plugin Configuration](https://github.com/Cp0204/quark-auto-save/wiki/插件配置)
-
-Media library modules are integrated via plugins.  See: [Plugin Development Guide](https://github.com/Cp0204/quark-auto-save/tree/main/plugins).
+For custom integration, explore the [plugin development guide](https://github.com/Cp0204/quark-auto-save/tree/main/plugins).
 
 ### Additional Tips
 
-Consult the Wiki for more tips: [Usage Tips](https://github.com/Cp0204/quark-auto-save/wiki/使用技巧集锦)
+Find more usage tips in the Wiki:  [Usage Tips](https://github.com/Cp0204/quark-auto-save/wiki/使用技巧集锦)
 
-## Support
+## Donations
 
-If you found this project useful, consider a small donation. Thank you!
+If you find this project helpful, you can offer a small donation.
 
 ![WeChatPay](https://cdn.jsdelivr.net/gh/Cp0204/Cp0204@main/img/wechat_pay_qrcode.png)
 
 ## Disclaimer
 
-This project is for personal use and to improve network disk efficiency through automation.
+This project is for personal use and aims to automate Quark Drive tasks.
 
-The program does not engage in any cracking behavior. It merely encapsulates existing APIs from Quark, and all data comes from the official Quark API. The author is not responsible for the content on the network disk nor for the impact of any changes in the official Quark APIs. Please use at your own discretion.
+The program does not involve any cracking and uses the official Quark API. I am not responsible for content or API changes. Use at your own discretion.
 
-Open source for learning and communication only, is not for profit or for commercial use, and is strictly prohibited for illegal purposes.
+The project is open-source for learning and sharing. It is not for commercial use, nor is it authorized for commercial use. Illegal use is strictly prohibited.
 
 ## Sponsor
 

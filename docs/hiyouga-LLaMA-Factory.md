@@ -1,6 +1,10 @@
-<div align="center">
-  <img src="assets/logo.png" alt="# LLaMA Factory Logo" width="300">
-</div>
+[![LLaMA Factory](assets/logo.png)](https://github.com/hiyouga/LLaMA-Factory)
+
+# LLaMA Factory: Fine-tune Any Large Language Model with Ease
+
+**Effortlessly fine-tune over 100+ Large Language Models with LLaMA Factory, a versatile and efficient toolkit.  Empowering you to train and deploy cutting-edge LLMs with zero-code CLI, web UI, and more!**  [Explore the original repository](https://github.com/hiyouga/LLaMA-Factory).
+
+---
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=social)](https://github.com/hiyouga/LLaMA-Factory/stargazers)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hiyouga/LLaMA-Factory)](https://github.com/hiyouga/LLaMA-Factory/commits/main)
@@ -32,10 +36,6 @@
 
 ----
 
-### LLaMA Factory: Unleash the Power of LLMs by fine-tuning 100+ large language models with ease using zero-code tools.
-
-![GitHub Trend](https://trendshift.io/api/badge/repositories/4535)
-
 </div>
 
 👋 Join our [WeChat](assets/wechat.jpg), [NPU](assets/wechat_npu.jpg), [Lab4AI](assets/wechat_lab4ai.jpg), [LLaMA Factory Online](assets/wechat_online.jpg) user group.
@@ -62,7 +62,7 @@ Choose your path:
 
 ## Table of Contents
 
-- [**Key Features**](#key-features)
+- [Key Features](#key-features)
 - [Blogs](#blogs)
 - [Changelog](#changelog)
 - [Supported Models](#supported-models)
@@ -86,18 +86,16 @@ Choose your path:
 - [Citation](#citation)
 - [Acknowledgement](#acknowledgement)
 
-## <a name="key-features"></a>Key Features of LLaMA Factory
+## Key Features
 
-LLaMA Factory simplifies the process of fine-tuning large language models (LLMs), offering a comprehensive toolkit for researchers and developers. Here's a breakdown of its key capabilities:
-
-*   **Extensive Model Support**:  Supports a wide variety of LLMs, including LLaMA, Mistral, Qwen, and many more. ([See Supported Models](#supported-models))
-*   **Versatile Training Methods**: Enables various training approaches like pre-training, supervised fine-tuning, reward modeling, and reinforcement learning. ([See Supported Training Approaches](#supported-training-approaches))
-*   **Efficient Training**: Offers a range of techniques for efficient training, including full-tuning, freeze-tuning, LoRA, QLoRA, and more, optimizing resource usage.
-*   **Advanced Algorithms**: Integrates cutting-edge algorithms like GaLore, BAdam, and APOLLO to improve model performance and training efficiency.
-*   **Practical Enhancements**: Includes features like FlashAttention-2 and RoPE scaling for faster training and extended context lengths.
-*   **Broad Application Support**:  Designed for a wide range of tasks, from multi-turn dialogue to image understanding and tool usage.
-*   **Experiment Tracking**: Provides integration with experiment monitoring tools such as LlamaBoard, TensorBoard, Wandb, and SwanLab.
-*   **Faster Inference**: Supports fast inference with OpenAI-style API, Gradio UI, and CLI using vLLM or SGLang.
+*   **Wide Model Support:** Fine-tune LLaMA, Mistral, Qwen, DeepSeek, Gemma, and many more LLMs.
+*   **Versatile Training Methods:** Utilize (Continuous) pre-training, (multimodal) supervised fine-tuning, reward modeling, PPO, DPO, KTO, ORPO, and SimPO.
+*   **Efficient Training:** Explore 16-bit full-tuning, freeze-tuning, LoRA, and various quantization techniques (QLoRA, etc.) for resource optimization.
+*   **Advanced Algorithms:** Leverage cutting-edge techniques like GaLore, BAdam, APOLLO, and more to enhance performance.
+*   **Practical Enhancements:** Benefit from optimizations such as FlashAttention-2, Unsloth, and Liger Kernel for faster training.
+*   **Broad Application:** Tackle tasks like multi-turn dialogue, tool usage, image understanding, and more.
+*   **Comprehensive Monitoring:** Track experiments with LlamaBoard, TensorBoard, Wandb, MLflow, and SwanLab.
+*   **Fast Inference:** Deploy your models with an OpenAI-style API, Gradio UI, and CLI using vLLM or SGLang for optimized performance.
 
 ### Day-N Support for Fine-Tuning Cutting-Edge Models
 
@@ -281,4 +279,4 @@ LLaMA Factory simplifies the process of fine-tuning large language models (LLMs)
 | [GLM-4/GLM-4-0414/GLM-Z1](https://huggingface.co/zai-org)         | 9B/32B                           | glm4/glmz1          |
 | [GLM-4.1V](https://huggingface.co/zai-org)                        | 9B                               | glm4v               |
 | [GLM-4.5/GLM-4.5V](https://huggingface.co/zai-org)*               | 106B/355B                        | glm4_moe/glm4v_moe  |
-| [GPT-2](https://huggingface.
+| [GPT-2](https://huggingface.co/openai-community)                  | 0.1B/0.4B/0.8B/1.5B              | -

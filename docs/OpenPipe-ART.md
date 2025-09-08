@@ -1,32 +1,37 @@
 <div align="center">
-    <a href="https://art.openpipe.ai"><picture>
-        <img alt="ART logo" src="https://github.com/openpipe/art/raw/main/assets/ART_logo.png" width="160px">
-    </picture></a>
-    <p align="center">
-        <h1>Agent Reinforcement Trainer (ART)</h1>
-    </p>
+
+<a href="https://art.openpipe.ai"><picture>
+<img alt="ART logo" src="https://github.com/openpipe/art/raw/main/assets/ART_logo.png" width="160px">
+</picture></a>
+
+<p align="center">
+  <h1>Agent Reinforcement Trainer (ART): Train LLM Agents with Ease</h1>
+</p>
+
 </div>
 
-## Train LLM Agents with Reinforcement Learning (RL)
+**ART empowers you to build and train advanced AI agents for real-world tasks using reinforcement learning, allowing your LLMs to learn from experience.**  ([View on GitHub](https://github.com/OpenPipe/ART))
 
-**ART (Agent Reinforcement Trainer)** is an open-source framework designed to empower you to train multi-step agents, enabling LLMs to learn from experience and excel at real-world tasks.
+## Key Features
 
-*   **[Explore the ART Repository](https://github.com/OpenPipe/ART)**
-*   **[View Documentation](https://art.openpipe.ai)**
+*   **Zero-Shot Reward Engineering:**  Leverage **RULER** (Relative Universal LLM-Elicited Rewards) to automatically score agent trajectories using an LLM-as-judge, eliminating the need for hand-crafted reward functions.
+*   **Simplified Development:** Significantly accelerates the development process by eliminating the need for complex reward function engineering.
+*   **General-Purpose Applicability:** Works seamlessly across various tasks without requiring task-specific modifications.
+*   **Enhanced Performance:**  Achieves performance comparable to or surpassing hand-crafted rewards in numerous benchmarks.
+*   **Easy Integration:**  Provides a simple drop-in replacement for manual reward functions.
+*   **Open-Source & Customizable:** An open-source RL framework built with intelligent defaults. Customize training parameters and inference engine configurations to meet specific needs.
+*   **Flexible Training:**  Train agents from any client machine with Python. Easily run the ART client and let the ART server deploy to an ephemeral GPU-enabled environment, or run on a local GPU.
 
-### Key Features
+## RULER: Zero-Shot Agent Rewards - The Future of Reward Engineering
 
-*   **Zero-Shot Reward Engineering:** Leverage RULER (Relative Universal LLM-Elicited Rewards) to eliminate the need for manual reward functions, accelerating development by 2-3x.
-*   **General-Purpose:** ART works across various tasks without modification, making it versatile for diverse applications.
-*   **High Performance:** Achieve results that match or exceed those of hand-crafted reward systems in many benchmarks.
-*   **Easy Integration:** Seamlessly integrate ART into your existing projects as a drop-in replacement for manual reward functions.
-*   **Open-Source and Customizable:** Benefit from an open-source framework with intelligent defaults and the flexibility to configure training parameters.
-*   **Train from Anywhere:** Run the ART client on your laptop and let the ART server kick off an ephemeral GPU-enabled environment, or run on a local GPU.
-*   **Integrations:** W&B, Langfuse, and OpenPipe provide flexible observability and **simplify debugging**.
+**RULER** revolutionizes agent training by removing the need for manual reward functions.  Define your task with a system prompt, and RULER does the rest, **requiring no labeled data, expert feedback, or reward engineering**.
 
-## Zero-Shot Reward with RULER
+**Key Benefits of RULER:**
 
-**RULER** (Relative Universal LLM-Elicited Rewards) revolutionizes agent training by using an LLM as a judge to automatically score agent trajectories. This eliminates the need for hand-crafted reward functions, saving time and effort.
+*   **Faster Development:** 2-3x faster development by skipping reward function engineering.
+*   **Universal Applicability:** Works seamlessly across any task without modification.
+*   **Strong Performance:** Matches or exceeds hand-crafted rewards in 3/4 benchmarks.
+*   **Easy Integration:** Drop-in replacement for manual reward functions.
 
 ```python
 # Before: Hours of reward engineering
@@ -40,13 +45,13 @@ judged_group = await ruler_score_group(group, "openai/o3")
 
 [📖 Learn more about RULER →](https://art.openpipe.ai/fundamentals/ruler)
 
-## ART Overview
+## ART: An Overview
 
-ART is an open-source RL framework that improves agent reliability by allowing LLMs to **learn from experience**. ART provides an ergonomic harness for integrating GRPO into any python application.
+ART is an open-source Reinforcement Learning (RL) framework that enhances agent reliability by allowing Large Language Models (LLMs) to **learn from experience**. ART provides an ergonomic harness for integrating GRPO into any Python application.  Check out the [docs](https://art.openpipe.ai) to learn more.
 
-## Quickstart with Notebooks
+## 📒 Example Notebooks: Train Agents on Diverse Tasks
 
-Get started with ART using these example notebooks, demonstrating agent training across various tasks:
+Explore our notebooks to get hands-on experience training agents across a variety of tasks.
 
 | Agent Task          | Example Notebook                                                                                                                       | Description                                         | Comparative Performance                                                                                                                                                                                                     |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -59,9 +64,9 @@ Get started with ART using these example notebooks, demonstrating agent training
 | **Codenames**       | [🏋️ Train agent](https://colab.research.google.com/github/openpipe/art-notebooks/blob/main/examples/codenames/Codenames_RL.ipynb)      | Qwen 2.5 3B learns to play Codenames                | <img src="https://github.com/openpipe/art/raw/main/assets/benchmarks/codenames/win_rate_over_time.png" height="72"> [benchmarks](https://github.com/OpenPipe/art-notebooks/blob/main/examples/codenames/Codenames_RL.ipynb) |
 | **AutoRL [RULER]**  | [🏋️ Train agent](https://colab.research.google.com/github/openpipe/art-notebooks/blob/main/examples/auto_rl.ipynb)                     | Train Qwen 2.5 7B to master any task                | [Link coming soon]                                                                                                                                                                                                          |
 
-## 📰 ART News & Updates
+## 📰 Stay Updated with ART News
 
-Stay updated with the latest developments in ART and agent training:
+Stay informed about our latest research, integrations, and updates on building state-of-the-art AI agents.
 
 *   🗞️ **[ART now integrates seamlessly with LangGraph](https://art.openpipe.ai/integrations/langgraph-integration)** - Train your LangGraph agents with reinforcement learning for smarter multi-step reasoning and improved tool usage.
 *   🗞️ **[MCP•RL: Teach Your Model to Master Any MCP Server](https://x.com/corbtt/status/1953171838382817625)** - Automatically train models to effectively use MCP server tools through reinforcement learning.
@@ -74,13 +79,14 @@ Stay updated with the latest developments in ART and agent training:
 
 ## Why Choose ART?
 
-*   **Simplified RL Integration:** ART provides convenient wrappers for introducing RL training into existing applications, abstracting the training server into a modular service.
-*   **Flexible Training:** Train from anywhere, whether on your local machine or using GPU-enabled environments.
-*   **Customization and Observability:** Benefit from integrations with platforms like W&B, Langfuse, and OpenPipe, offering flexible observability and simplified debugging.
+*   **Simplified RL Integration:** Convenient wrappers for integrating RL training into existing applications. ART abstracts the training server into a modular service.
+*   **Flexible Training Environment:** Train from anywhere! Run the ART client on your laptop, and let the ART server kick off an ephemeral GPU-enabled environment, or run on a local GPU.
+*   **Enhanced Observability:** Integrations with platforms like W&B, Langfuse, and OpenPipe provide flexible observability and simplify debugging.
+*   **Intelligent Defaults & Customization:** ART is customizable with intelligent defaults. Configure training parameters and inference engine configurations to meet specific needs.
 
 ## Installation
 
-Install ART with a simple pip command:
+Get started by installing the `openpipe-art` package:
 
 ```bash
 pip install openpipe-art
@@ -88,32 +94,35 @@ pip install openpipe-art
 
 ## 🤖 ART•E Agent: Real-World Example
 
-Explore the practical application of ART by examining the [ART•E Agent](https://openpipe.ai/blog/art-e-mail-agent), which demonstrates how to train Qwen 2.5 14B to outperform o3 in email retrieval.
+Explore the capabilities of ART by checking out the [ART•E Agent](https://openpipe.ai/blog/art-e-mail-agent) blog post, which details the training of a Qwen 2.5 14B agent that outperforms o3 in email retrieval.
 
 <img src="https://github.com/openpipe/art/raw/main/assets/ART_E_graphs.png" width="700">
 
-## 🔁 Training Loop Explained
+## 🔁 Understanding the Training Loop
 
-ART's architecture divides functionality between a **client** and a **server**.
+ART operates with a client-server architecture. The client interacts with your code, and the server handles the training.
 
-**1. Inference**
+1.  **Inference:**
     1.  Your code uses the ART client to perform an agentic workflow.
-    2.  Completion requests are routed to the ART server.
-    3.  Each system, user, and assistant message is stored in a Trajectory.
-    4.  When a rollout finishes, your code assigns a reward to its Trajectory.
+    2.  Completion requests are routed to the ART server, which runs the model's latest LoRA in vLLM.
+    3.  Each `system`, `user`, and `assistant` message is stored in a Trajectory.
+    4.  When a rollout finishes, your code assigns a `reward` to its Trajectory.
 
-**2. Training**
-    1.  Trajectories are grouped and sent to the server.
-    2.  The server trains your model using GRPO, saving the LoRA.
-    3.  Inference is unblocked and the loop resumes at step 1.
+2.  **Training:**
+    1.  When each rollout has finished, Trajectories are grouped and sent to the server. Inference is blocked while training executes.
+    2.  The server trains your model using GRPO, initializing from the latest checkpoint (or an empty LoRA on the first iteration).
+    3.  The server saves the newly trained LoRA to a local directory and loads it into vLLM.
+    4.  Inference is unblocked and the loop resumes at step 1.
+
+This training loop continues until a specified number of iterations are complete.
 
 ## 🧩 Supported Models
 
-ART supports most vLLM/HuggingFace-transformers compatible causal language models. Please let us know if you encounter any issues on [Discord](https://discord.gg/zbBHRUpwf4) or [GitHub](https://github.com/openpipe/art/issues).
+ART is designed to work with most vLLM/HuggingFace-transformers compatible causal language models, as supported by [Unsloth](https://docs.unsloth.ai/get-started/all-our-models).
 
-## 🤝 Contributing
+## 🤝 Contribute
 
-We welcome contributions! See our [CONTRIBUTING.md](https://github.com/openpipe/art/blob/main/CONTRIBUTING.md) file for details.
+ART is under active development. We welcome contributions!  See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## 📖 Citation
 
@@ -130,11 +139,11 @@ We welcome contributions! See our [CONTRIBUTING.md](https://github.com/openpipe/
 
 ## ⚖️ License
 
-This project is available under the [Apache-2.0 License](LICENSE).
+This repository's source code is available under the [Apache-2.0 License](LICENSE).
 
-## 🙏 Credits
+## 🙏 Acknowledgements
 
-ART is built upon the work of several open-source projects, including:
+ART leverages the work of many open-source projects and individuals. We're particularly grateful to the contributors of the following projects:
 
 *   [Unsloth](https://github.com/unslothai/unsloth)
 *   [vLLM](https://github.com/vllm-project/vllm)
@@ -142,4 +151,4 @@ ART is built upon the work of several open-source projects, including:
 *   [torchtune](https://github.com/pytorch/torchtune)
 *   [SkyPilot](https://github.com/skypilot-org/skypilot)
 
-Thank you to our partners for their valuable contributions.
+A special thanks to our partners who helped us test ART!

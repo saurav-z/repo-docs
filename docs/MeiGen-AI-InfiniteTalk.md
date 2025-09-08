@@ -1,42 +1,49 @@
 <div align="center">
-
-<p align="center">
-  <img src="assets/logo2.jpg" alt="InfinteTalk" width="440"/>
-</p>
-
-<h1>InfiniteTalk: Audio-driven Video Generation for Sparse-Frame Video Dubbing</h1>
-
+    <a href="https://github.com/MeiGen-AI/InfiniteTalk">
+        <img src="assets/logo2.jpg" alt="InfiniteTalk Logo" width="440"/>
+    </a>
 </div>
 
-> **Bring your videos to life with InfiniteTalk!**  This innovative model generates unlimited-length talking videos from audio, offering precise lip synchronization and realistic expression.
+# InfiniteTalk: Generate Engaging Talking Videos from Audio
 
-[Original Repo](https://github.com/MeiGen-AI/InfiniteTalk)
+**InfiniteTalk** is a cutting-edge, audio-driven video generation framework that brings your audio to life by creating stunning talking videos. [Explore the original repository](https://github.com/MeiGen-AI/InfiniteTalk) to learn more.
 
-**Key Features:**
+[Shaoshu Yang*](https://scholar.google.com/citations?user=JrdZbTsAAAAJ&hl=en) · [Zhe Kong*](https://scholar.google.com/citations?user=4X3yLwsAAAAJ&hl=zh-CN) · [Feng Gao*](https://scholar.google.com/citations?user=lFkCeoYAAAAJ) · [Meng Cheng*]() · [Xiangyu Liu*]() · [Yong Zhang](https://yzhang2016.github.io/)<sup>&#9993;</sup> · [Zhuoliang Kang](https://scholar.google.com/citations?user=W1ZXjMkAAAAJ&hl=en)
 
-*   💬 **Sparse-Frame Video Dubbing:** Synchronizes lips, head movements, body posture, and facial expressions with the audio.
-*   ⏱️ **Infinite-Length Generation:** Creates videos of unlimited duration.
-*   ✨ **Enhanced Stability:**  Reduces hand/body distortions compared to previous models.
-*   🚀 **Superior Lip Accuracy:** Achieves highly accurate lip synchronization.
-*   🖼️ **Image-to-Video:**  Generates engaging videos from a single image and audio input.
+[Wenhan Luo](https://whluo.github.io/) · [Xunliang Cai](https://openreview.net/profile?id=~Xunliang_Cai1) · [Ran He](https://scholar.google.com/citations?user=ayrg9AUAAAAJ&hl=en)· [Xiaoming Wei](https://scholar.google.com/citations?user=JXV5yrZxj5MC&hl=zh-CN) 
+
+<sup>*</sup>Equal Contribution
+<sup>&#9993;</sup>Corresponding Authors
+
+<a href='https://meigen-ai.github.io/InfiniteTalk/'><img src='https://img.shields.io/badge/Project-Page-green'></a>
+<a href='https://arxiv.org/abs/2508.14033'><img src='https://img.shields.io/badge/Technique-Report-red'></a>
+<a href='https://huggingface.co/MeiGen-AI/InfiniteTalk'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue'></a>
+
+## Key Features
+
+*   💬 **Sparse-Frame Video Dubbing**: Accurately synchronizes lips, head movements, body posture, and facial expressions with the provided audio.
+*   ⏱️ **Infinite-Length Generation**: Generate videos of unlimited duration, offering flexibility for various applications.
+*   ✨ **Improved Stability**: Reduces hand and body distortions compared to previous models, ensuring a more realistic result.
+*   🚀 **Superior Lip Accuracy**: Achieves state-of-the-art lip synchronization for a more natural and engaging viewing experience.
+*   🖼️ **Image-to-Video**: Transforms a single image and audio into an expressive video, providing a versatile workflow.
 
 <p align="center">
   <img src="assets/pipeline.png">
 </p>
 
-##  ✨ What's New
+## What's New
 
-*   **August 19, 2025:** Release of the [Technical Report](https://arxiv.org/abs/2508.14033), model weights, and code.  Gradio and ComfyUI ([ComfyUI](https://github.com/MeiGen-AI/InfiniteTalk/tree/comfyui)) branches are available.
-*   **August 19, 2025:**  Project Page released.
+*   **August 19, 2025**: Release of the [Technical Report](https://arxiv.org/abs/2508.14033), weights, and code for **InfiniteTalk**. Gradio and ComfyUI support has been released.
+*   **August 19, 2025**: Launch of the [Project Page](https://meigen-ai.github.io/InfiniteTalk/) for **InfiniteTalk**.
 
-##  🌐 Community Integrations
+## Community Contributions
 
-*   **Wan2GP:**  Thanks to [deepbeepmeep](https://github.com/deepbeepmeep) for integrating InfiniteTalk into Wan2GP, offering low VRAM optimization and various video editing features.
-*   **ComfyUI:** Thanks to [kijai](https://github.com/kijai) for providing ComfyUI support.
+*   [Wan2GP](https://github.com/deepbeepmeep/Wan2GP/): Integration of InfiniteTalk by [deepbeepmeep](https://github.com/deepbeepmeep), optimized for low VRAM and includes video editing options and support for other models (MMaudio, Qwen Image Edit, etc.).
+*   [ComfyUI](https://github.com/kijai/ComfyUI-WanVideoWrapper): ComfyUI support provided by [kijai](https://github.com/kijai).
 
-##  🔥 Video Demos
+## Example Videos
 
-### Video-to-video (HQ videos can be found on [Google Drive](https://drive.google.com/drive/folders/1BNrH6GJZ2Wt5gBuNLmfXZ6kpqb9xFPjU?usp=sharing) )
+### Video-to-Video
 
 <table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
   <tr>
@@ -55,7 +62,7 @@
   </tr>
 </table>
 
-### Image-to-video
+### Image-to-Video
 
 <table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
   <tr>
@@ -75,7 +82,7 @@
   </tr>
   <tr>
       <td>
-          <video src="https://github.com/user-attachments/assets/3263c5e2-9f98-4b9b-8688-b3e497460a76" width="320" controls loop></video>
+          <video src="https://github.com/user-attachments/assets/3263c5e1-9f98-4b9b-8688-b3e497460a76" width="320" controls loop></video>
       </td>
       <td>
           <video src="https://github.com/user-attachments/assets/5ff3607f-90ec-4eee-b964-9d5ee3028005" width="320" controls loop></video>
@@ -90,21 +97,21 @@
   </tr>
 </table>
 
-##  🚀 Quick Start
+## Quick Start
 
 ### 🛠️ Installation
 
-1.  **Create a Conda environment and install PyTorch and xFormers:**
-
+1.  **Create a Conda environment:**
     ```bash
     conda create -n multitalk python=3.10
     conda activate multitalk
+    ```
+2.  **Install PyTorch and xformers:**
+    ```bash
     pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
     pip install -U xformers==0.0.28 --index-url https://download.pytorch.org/whl/cu121
     ```
-
-2.  **Install Flash Attention:**
-
+3.  **Install Flash-Attention:**
     ```bash
     pip install misaki[en]
     pip install ninja 
@@ -113,16 +120,12 @@
     pip install wheel
     pip install flash_attn==2.7.4.post1
     ```
-
-3.  **Install other Dependencies:**
-
+4.  **Install other dependencies:**
     ```bash
     pip install -r requirements.txt
     conda install -c conda-forge librosa
     ```
-
-4.  **Install FFmpeg:**
-
+5.  **Install FFmpeg:**
     ```bash
     conda install -c conda-forge ffmpeg
     ```
@@ -135,8 +138,11 @@
 
 1.  **Download Models:**
 
-    Use `huggingface-cli` to download the required models:
+    *   **Wan2.1-I2V-14B-480P**: 🤗 [Hugging Face](https://huggingface.co/Wan-AI/Wan2.1-I2V-14B-480P)
+    *   **chinese-wav2vec2-base**: 🤗 [Hugging Face](https://huggingface.co/TencentGameMate/chinese-wav2vec2-base)
+    *   **MeiGen-InfiniteTalk**: 🤗 [Hugging Face](https://huggingface.co/MeiGen-AI/InfiniteTalk)
 
+    Download models using huggingface-cli:
     ```bash
     huggingface-cli download Wan-AI/Wan2.1-I2V-14B-480P --local-dir ./weights/Wan2.1-I2V-14B-480P
     huggingface-cli download TencentGameMate/chinese-wav2vec2-base --local-dir ./weights/chinese-wav2vec2-base
@@ -144,28 +150,17 @@
     huggingface-cli download MeiGen-AI/InfiniteTalk --local-dir ./weights/InfiniteTalk
     ```
 
-    | Model                                      | Download Link                                                                                      | Notes                |
-    | :----------------------------------------- | :------------------------------------------------------------------------------------------------- | :------------------- |
-    | Wan2.1-I2V-14B-480P                        | 🤗 [Hugging Face](https://huggingface.co/Wan-AI/Wan2.1-I2V-14B-480P)                               | Base model           |
-    | chinese-wav2vec2-base                      | 🤗 [Hugging Face](https://huggingface.co/TencentGameMate/chinese-wav2vec2-base)                      | Audio encoder        |
-    | MeiGen-InfiniteTalk                        | 🤗 [Hugging Face](https://huggingface.co/MeiGen-AI/InfiniteTalk)                                    | Audio condition weights |
-
 ### 🔑 Quick Inference
 
-*   **Important Parameters:**
-    *   `--mode streaming`:  For long video generation.
-    *   `--mode clip`:  For short video generation with a single chunk.
-    *   `--use_teacache`:  Use TeaCache for acceleration.
-    *   `--size infinitetalk-480` or `--size infinitetalk-720`: Select video resolution (480P or 720P).
-    *   `--use_apg`:  Use APG.
-    *   `--teacache_thresh`:  Coefficient for TeaCache acceleration.
-    *   `--sample_text_guide_scale`:  Optimal value is 5 without LoRA, 1 with LoRA.
-    *   `--sample_audio_guide_scale`: Optimal value is 4 without LoRA, 2 with LoRA.
-    *   `--max_frame_num`:  Maximum video frame length (default: 1000 frames/40 seconds).
+*   **Lip Synchronization Accuracy:** Audio CFG works optimally between 3–5. Increase the audio CFG value for better synchronization.
+*   **FusionX:** FusionX LoRA can improve the speed and quality of the inference but can cause color shifts and reduce ID preservation.
+*   **V2V Generation:** V2V generation will mimic the original video's camera movement though not identically. Using SDEdit improves camera movement accuracy.
+*   **I2V Generation:** Produces good results from a single image for up to 1 minute. Using image to video conversion for the long video.
+*   **Quantization model:** Use the quantization model if you run out of memory
 
-####  1. Basic Inference
+#### 1. Inference
 
-#####  1) Single GPU
+##### 1) Run with single GPU
 
 ```bash
 python generate_infinitetalk.py \
@@ -180,7 +175,7 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res
 ```
 
-#####  2) 720P
+##### 2) Run with 720P
 
 ```bash
 python generate_infinitetalk.py \
@@ -195,7 +190,7 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_720p
 ```
 
-#####  3) Low VRAM
+##### 3) Run with very low VRAM
 
 ```bash
 python generate_infinitetalk.py \
@@ -211,7 +206,7 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_lowvram
 ```
 
-#####  4) Multi-GPU
+##### 4) Multi-GPU inference
 
 ```bash
 GPU_NUM=8
@@ -229,7 +224,7 @@ torchrun --nproc_per_node=$GPU_NUM --standalone generate_infinitetalk.py \
     --save_file infinitetalk_res_multigpu
 ```
 
-#####  5) Multi-Person Animation
+##### 5) Multi-Person animation
 
 ```bash
 python generate_infinitetalk.py \
@@ -245,7 +240,7 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_multiperson
 ```
 
-####  2. Inference with FusioniX or lightx2v LoRA
+#### 2. Run with FusioniX or Lightx2v (Require only 4~8 steps)
 
 ```bash
 python generate_infinitetalk.py \
@@ -266,7 +261,7 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_lora
 ```
 
-####  3. Inference with Quantization Model
+#### 3. Run with the quantization model (Only support run with single gpu)
 
 ```bash
 python generate_infinitetalk.py \
@@ -284,7 +279,7 @@ python generate_infinitetalk.py \
     --save_file infinitetalk_res_quant
 ```
 
-####  4. Run with Gradio
+#### 4. Run with Gradio
 
 ```bash
 python app.py \
@@ -292,7 +287,7 @@ python app.py \
     --wav2vec_dir 'weights/chinese-wav2vec2-base' \
     --infinitetalk_dir weights/InfiniteTalk/single/infinitetalk.safetensors \
     --num_persistent_param_in_dit 0 \
-    --motion_frame 9
+    --motion_frame 9 
 ```
 or
 ```bash
@@ -301,10 +296,12 @@ python app.py \
     --wav2vec_dir 'weights/chinese-wav2vec2-base' \
     --infinitetalk_dir weights/InfiniteTalk/multi/infinitetalk.safetensors \
     --num_persistent_param_in_dit 0 \
-    --motion_frame 9
+    --motion_frame 9 
 ```
 
-## 📚 Citation
+## Citation
+
+If you use InfiniteTalk in your research, please cite our work:
 
 ```
 @misc{yang2025infinitetalkaudiodrivenvideogeneration,
@@ -318,6 +315,6 @@ python app.py \
 }
 ```
 
-## 📜 License
+## License
 
-InfiniteTalk is licensed under the Apache 2.0 License.
+This project is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).

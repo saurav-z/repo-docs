@@ -1,52 +1,40 @@
-<p align="center"><img src= "https://github.com/1Panel-dev/maxkb/assets/52996290/c06949962-0eed-40d8-b369-322bf2a380bf" alt="MaxKB" width="300" /></p>
+<p align="center"><img src= "https://github.com/1Panel-dev/maxkb/assets/52996290/c0694996-0eed-40d8-b369-322bf2a380bf" alt="MaxKB" width="300" /></p>
 
-<h1 align="center">MaxKB: Build Powerful Enterprise-Grade AI Agents with Ease</h1>
+<h1 align="center">MaxKB: Build Enterprise-Grade AI Agents with Ease</h1>
 
-<p align="center">MaxKB is an open-source platform empowering you to build and deploy intelligent agents for a variety of enterprise applications.</p>
+MaxKB empowers businesses to build intelligent agents for enhanced customer service, internal knowledge management, and more. (See the original repository: [1Panel-dev/MaxKB](https://github.com/1Panel-dev/MaxKB)).
 
 <p align="center">
   <a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text"><img src="https://img.shields.io/github/license/1Panel-dev/maxkb?color=%231890FF" alt="License: GPL v3"></a>
   <a href="https://github.com/1Panel-dev/maxkb/releases/latest"><img src="https://img.shields.io/github/v/release/1Panel-dev/maxkb" alt="Latest release"></a>
   <a href="https://github.com/1Panel-dev/maxkb"><img src="https://img.shields.io/github/stars/1Panel-dev/maxkb?color=%231890FF&style=flat-square" alt="Stars"></a>
-  <a href="https://hub.docker.com/r/1panel/maxkb"><img src="https://img.shields.io/docker/pulls/1panel/maxkb?label=downloads" alt="Downloads"></a><br/>
+  <a href="https://hub.docker.com/r/1panel/maxkb"><img src="https://img.shields.io/docker/pulls/1panel/maxkb?label=downloads" alt="Download"></a><br/>
   [<a href="/README_CN.md">中文(简体)</a>] | [<a href="/README.md">English</a>]
 </p>
-
 <hr/>
 
 ## Key Features
 
-MaxKB provides a comprehensive platform for building and deploying AI agents, offering the following key features:
+*   **RAG Pipeline:** Easily ingest documents (upload or crawl), with automatic text splitting and vectorization to improve LLM accuracy and reduce hallucinations.
+*   **Agentic Workflow:**  A powerful workflow engine, function library, and MCP tool-use capabilities for automating complex tasks.
+*   **Seamless Integration:**  Integrate with existing business systems quickly, without extensive coding, to add intelligent Q&A capabilities.
+*   **Model-Agnostic:** Compatible with a wide range of large language models, including private (e.g., DeepSeek, Llama, Qwen) and public models (e.g., OpenAI, Claude, Gemini).
+*   **Multi Modal:** Native support for input and output of text, images, audio, and video, making interactions richer and more engaging.
 
-*   **RAG Pipeline:** Streamlines the process of integrating Retrieval-Augmented Generation (RAG) pipelines by supporting document uploading, automated text splitting, and vectorization. This enhances the accuracy and reliability of large language models (LLMs) and provides superior Q&A experiences.
-*   **Agentic Workflow:** Features a powerful workflow engine, function library, and MCP tool-use capabilities. This allows for the orchestration of complex AI processes to meet diverse business needs.
-*   **Seamless Integration:** Enables zero-coding integration with third-party business systems. Quickly equip existing systems with intelligent Q&A capabilities to boost user satisfaction.
-*   **Model-Agnostic:** Supports various LLMs, including private models (e.g., DeepSeek, Llama, Qwen) and public models (e.g., OpenAI, Claude, Gemini).
-*   **Multi-Modal Support:** Native support for text, image, audio, and video input and output, enriching the interaction capabilities of your agents.
+## Quick Start with Docker
 
-## Use Cases
-
-MaxKB is widely used in many scenarios, including:
-
-*   Intelligent Customer Service
-*   Corporate Internal Knowledge Bases
-*   Academic Research
-*   Education
-
-## Quick Start
-
-Get started with MaxKB using Docker:
+Get up and running quickly with Docker:
 
 ```bash
 docker run -d --name=maxkb --restart=always -p 8080:8080 -v ~/.maxkb:/opt/maxkb 1panel/maxkb
 ```
 
-Access the MaxKB web interface at `http://your_server_ip:8080` using the following default credentials:
+Access the MaxKB web interface at `http://your_server_ip:8080` with the following default credentials:
 
-*   username: admin
-*   password: MaxKB@123..
+*   username: `admin`
+*   password: `MaxKB@123..`
 
-**Note for Chinese Users:** If you encounter issues pulling the Docker image, please refer to the [offline installation documentation](https://maxkb.cn/docs/v2/installation/offline_installtion/).
+**Note for Chinese Users:** If you encounter Docker image pull failures, please refer to the [offline installation documentation](https://maxkb.cn/docs/v2/installation/offline_installtion/) for installation instructions.
 
 ## Screenshots
 
@@ -74,21 +62,4 @@ Access the MaxKB web interface at `http://your_server_ip:8080` using the followi
 
 ## License
 
-Licensed under the GNU General Public License version 3 (GPLv3).  See the [LICENSE](https://www.gnu.org/licenses/gpl-3.0.html) for details.
-
-**[Explore MaxKB on GitHub](https://github.com/1Panel-dev/MaxKB)**
-```
-
-Key improvements and explanations:
-
-*   **SEO-Friendly Title & Hook:**  The title is more descriptive and includes relevant keywords ("Enterprise-Grade AI Agents," "Open-source platform"). The hook is concise and focuses on the core value proposition.
-*   **Clear Headings:**  Uses `<h1>`, `<h2>` and `<h3>` tags to structure the content, making it easy to read and improving SEO.
-*   **Bulleted Key Features:** Emphasizes the main benefits of MaxKB, making it easy for users to quickly understand the platform's capabilities.
-*   **Concise Descriptions:**  Streamlines the descriptions of features and use cases.
-*   **Actionable Quick Start:**  The Docker command is included directly.
-*   **Call to Action:**  Encourages the user to explore the project.
-*   **Combined Similar Sections:** The "Quick Start" and the Chinese Docker image instructions are included within the same section for better readability.
-*   **Removed Redundancy:** Removed the introduction paragraph that had already been mentioned in the hook.
-*   **Links:** Added a link to the project's GitHub page, and a link to the original repo.
-*   **Code Formatting:** The code block now uses consistent formatting.
-*   **Clearer Language**: Minor improvements to the language used in the document.
+Licensed under The GNU General Public License version 3 (GPLv3). See the [LICENSE](https://www.gnu.org/licenses/gpl-3.0.html) file for more details.

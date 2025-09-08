@@ -1,122 +1,118 @@
-<div align="center">
-  <a href="https://www.skyvern.com">
-    <img src="fern/images/skyvern_logo_blackbg.png" alt="Skyvern Logo" width="200">
-  </a>
-  <h1>Skyvern: Automate Browser Workflows with AI</h1>
-  <p><strong>Harness the power of Large Language Models (LLMs) and Computer Vision to automate complex browser-based tasks.</strong></p>
-  <p>
-    <a href="https://www.skyvern.com/"><img src="https://img.shields.io/badge/Website-blue?logo=googlechrome&logoColor=black" alt="Website"></a>
-    <a href="https://docs.skyvern.com/"><img src="https://img.shields.io/badge/Docs-yellow?logo=gitbook&logoColor=black" alt="Documentation"></a>
-    <a href="https://discord.gg/fG2XXEuQX3"><img src="https://img.shields.io/discord/1212486326352617534?logo=discord&label=discord" alt="Discord"></a>
-    <a href="https://github.com/skyvern-ai/skyvern"><img src="https://img.shields.io/github/stars/skyvern-ai/skyvern" alt="GitHub Stars"></a>
-    <a href="https://github.com/Skyvern-AI/skyvern/blob/main/LICENSE"><img src="https://img.shields.io/github/license/skyvern-ai/skyvern" alt="License"></a>
-    <a href="https://twitter.com/skyvernai"><img src="https://img.shields.io/twitter/follow/skyvernai?style=social" alt="Twitter"></a>
-    <a href="https://www.linkedin.com/company/95726232"><img src="https://img.shields.io/badge/Follow%20 on%20LinkedIn-8A2BE2?logo=linkedin" alt="LinkedIn"></a>
-  </p>
-</div>
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="fern/images/skyvern_logo.png"/>
+    <img height="120" src="fern/images/skyvern_logo_blackbg.png" alt="Skyvern Logo"/>
+  </picture>
+  <br />
+  Skyvern: Automate Your Browser Workflows with AI 🐉
+</h1>
 
-[Skyvern](https://github.com/Skyvern-AI/skyvern) empowers you to automate repetitive browser tasks with ease, using the latest advancements in AI.  Replace brittle automation solutions and unlock efficiency with Skyvern.
+<p align="center">
+  <a href="https://www.skyvern.com/"><img src="https://img.shields.io/badge/Website-blue?logo=googlechrome&logoColor=black" alt="Website"/></a>
+  <a href="https://docs.skyvern.com/"><img src="https://img.shields.io/badge/Docs-yellow?logo=gitbook&logoColor=black" alt="Documentation"/></a>
+  <a href="https://discord.gg/fG2XXEuQX3"><img src="https://img.shields.io/discord/1212486326352617534?logo=discord&label=discord" alt="Discord"/></a>
+  <a href="https://github.com/skyvern-ai/skyvern"><img src="https://img.shields.io/github/stars/skyvern-ai/skyvern" alt="GitHub Stars"/></a>
+  <a href="https://github.com/Skyvern-AI/skyvern/blob/main/LICENSE"><img src="https://img.shields.io/github/license/skyvern-ai/skyvern" alt="License"/></a>
+  <a href="https://twitter.com/skyvernai"><img src="https://img.shields.io/twitter/follow/skyvernai?style=social" alt="Twitter"/></a>
+  <a href="https://www.linkedin.com/company/95726232"><img src="https://img.shields.io/badge/Follow%20on%20LinkedIn-8A2BE2?logo=linkedin" alt="LinkedIn"/></a>
+</p>
 
-## Key Features:
+<p align="center">
+  Effortlessly automate browser-based tasks with Skyvern, utilizing Large Language Models (LLMs) and computer vision to navigate and interact with websites as a human would. <a href="https://github.com/Skyvern-AI/skyvern">Learn More</a>
+</p>
 
-*   🌐 **Automated Web Navigation:** Navigate complex websites and interactions using LLMs and computer vision, no custom code needed.
-*   ⚙️ **Workflow Automation:** Create and chain multiple tasks together for complex automation, supporting loops, data extraction, and more.
-*   👁️ **Visual Understanding:** Operates effectively on websites it has never seen before by mapping visual elements and actions.
-*   🛡️ **Resilient Automation:** Resistant to website layout changes; no reliance on fragile selectors like XPaths.
-*   📊 **Data Extraction & Form Filling:** Extract structured data and fill forms seamlessly.
-*   🔑 **Authentication Support:** Supports multiple authentication methods including 2FA (TOTP), for automating tasks behind logins, and password manager integration.
-*   💻 **Easy Integration:** Integrates with tools like Zapier, Make.com, and N8N, and supports the Model Context Protocol (MCP).
-*   ☁️ **Skyvern Cloud:** Try out the managed cloud version of Skyvern at [app.skyvern.com](https://app.skyvern.com)
+<p align="center">
+  <img src="fern/images/geico_shu_recording_cropped.gif" alt="Skyvern Demo"/>
+</p>
+
+## Key Features
+
+*   **Intelligent Automation:** Leverage LLMs and computer vision to interact with websites, adapting to layout changes.
+*   **Workflow Automation:** Chain multiple tasks together for complex automated processes.
+*   **Data Extraction:** Easily extract structured data from web pages.
+*   **Form Filling:** Automate form submissions on any website.
+*   **2FA Support:** Securely automate tasks with 2FA (TOTP, email, SMS)
+*   **Livestreaming:** See Skyvern's actions in real-time with browser viewport streaming.
+*   **Integration:** Supports Zapier, Make.com, and N8N.
 
 ## Quickstart
 
-### 1. Install Skyvern
+### Installation
 
 ```bash
 pip install skyvern
 ```
 
-### 2. Run Skyvern
-
-```bash
-skyvern quickstart
-```
-
-### 3. Run Task
-
-#### UI (Recommended)
+### Run the UI
 
 ```bash
 skyvern run all
 ```
 
-Access the UI at [http://localhost:8080](http://localhost:8080) to run and monitor tasks.
+Visit [http://localhost:8080](http://localhost:8080) in your browser to run tasks via the UI.
 
-#### Code
+## How Skyvern Works
 
-```python
-from skyvern import Skyvern
+Skyvern uses a swarm of AI agents that are powered by a multimodal LLM and a Playwright browser to comprehend a website, and plan and execute its actions.
 
-skyvern = Skyvern()
-task = await skyvern.run_task(prompt="Find the top post on hackernews today")
-print(task)
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="fern/images/skyvern_2_0_system_diagram.png" />
+  <img src="fern/images/skyvern_2_0_system_diagram.png" alt="Skyvern System Diagram"/>
+</picture>
 
-For more comprehensive instructions, please see the [Skyvern Documentation](https://docs.skyvern.com).
+Skyvern offers:
 
-## How It Works
+*   Website Agnosticism
+*   Resistance to Layout Changes
+*   Scalable Workflow Automation
+*   LLM-Powered Reasoning
 
-Skyvern leverages a swarm of intelligent agents, inspired by projects like BabyAGI and AutoGPT, and enhanced with browser automation via [Playwright](https://playwright.dev/). This architecture enables Skyvern to understand and interact with websites, regardless of their specific structure.  Skyvern also has the ability to reason through complex interactions, such as extracting data or making intelligent decisions on form filling, etc.
-For a technical deep dive, see our report [here](https://blog.skyvern.com/skyvern-2-0-state-of-the-art-web-navigation-with-85-8-on-webvoyager-eval/).
-
-<p align="center">
-  <img src="fern/images/skyvern_2_0_system_diagram.png" alt="Skyvern Architecture Diagram">
-</p>
-
-## Demo
-
-https://github.com/user-attachments/assets/5cab4668-e8e2-4982-8551-aab05ff73a7f
+Find the detailed technical report [here](https://blog.skyvern.com/skyvern-2-0-state-of-the-art-web-navigation-with-85-8-on-webvoyager-eval/).
 
 ## Performance & Evaluation
 
-Skyvern achieves industry-leading results on the [WebBench benchmark](webbench.ai), demonstrating superior performance in both read and write tasks.
+Skyvern has SOTA performance on the [WebBench benchmark](webbench.ai) with a 64.4% accuracy. The technical report + evaluation can be found [here](https://blog.skyvern.com/web-bench-a-new-way-to-compare-ai-browser-agents/)
 
 <p align="center">
-  <img src="fern/images/performance/webbench_overall.png" alt="WebBench Overall Performance">
+  <img src="fern/images/performance/webbench_overall.png"/>
 </p>
 
+## Performance on WRITE tasks (eg filling out forms, logging in, downloading files, etc)
+
+Skyvern is the best performing agent on WRITE tasks (eg filling out forms, logging in, downloading files, etc), which is primarily used for RPA (Robotic Process Automation) adjacent tasks.
+
 <p align="center">
-  <img src="fern/images/performance/webbench_write.png" alt="WebBench Write Task Performance">
+  <img src="fern/images/performance/webbench_write.png"/>
 </p>
 
 ## Advanced Usage
 
-### Control Your Own Browser (Chrome)
+### Control Your Own Browser
 
-*   Just with Python Code:
+1.  **With Python Code:**
+    ```python
+    from skyvern import Skyvern
 
-```python
-from skyvern import Skyvern
+    browser_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"  # Example path for Mac
+    skyvern = Skyvern(
+        base_url="http://localhost:8000",
+        api_key="YOUR_API_KEY",
+        browser_path=browser_path,
+    )
+    task = await skyvern.run_task(
+        prompt="Find the top post on hackernews today",
+    )
+    ```
 
-browser_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-skyvern = Skyvern(
-    base_url="http://localhost:8000",
-    api_key="YOUR_API_KEY",
-    browser_path=browser_path,
-)
-task = await skyvern.run_task(
-    prompt="Find the top post on hackernews today",
-)
-```
+2.  **With Skyvern Service:**
+    Add the following to your `.env` file:
+    ```bash
+    CHROME_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    BROWSER_TYPE=cdp-connect
+    ```
+    Restart the Skyvern service `skyvern run all` and run the task via UI or code.
 
-*   With Skyvern Service (via .env file configuration):
-
-```bash
-CHROME_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-BROWSER_TYPE=cdp-connect
-```
-
-### Run Skyvern with Any Remote Browser
+### Run with Any Remote Browser
 
 ```python
 from skyvern import Skyvern
@@ -127,7 +123,7 @@ task = await skyvern.run_task(
 )
 ```
 
-### Get Consistent Output Schema from Your Run
+### Get Consistent Output Schema
 
 ```python
 from skyvern import Skyvern
@@ -155,101 +151,119 @@ task = await skyvern.run_task(
 )
 ```
 
-### Helpful Commands to Debug Issues
+### Debugging Commands
 
 ```bash
-skyvern run server     # Launch the Skyvern Server Separately
-skyvern run ui         # Launch the Skyvern UI
-skyvern status         # Check the Skyvern service status
-skyvern stop all       # Stop the Skyvern service
-skyvern stop ui        # Stop the Skyvern UI
-skyvern stop server    # Stop the Skyvern Server Separately
+# Launch the Skyvern Server Separately*
+skyvern run server
+
+# Launch the Skyvern UI
+skyvern run ui
+
+# Check status of the Skyvern service
+skyvern status
+
+# Stop the Skyvern service
+skyvern stop all
+
+# Stop the Skyvern UI
+skyvern stop ui
+
+# Stop the Skyvern Server Separately
+skyvern stop server
 ```
 
 ## Docker Compose Setup
 
-Follow these steps to set up Skyvern using Docker Compose.
-[... Docker Instructions Here...]
+Follow the steps to set up Skyvern with Docker Compose.
 
 ## Skyvern Features
 
 ### Skyvern Tasks
 
-Tasks are the core building blocks in Skyvern. Each task is a single request to Skyvern.
+Each task is a request to Skyvern, to automate a goal.
 
-<p align="center">
-  <img src="fern/images/skyvern_2_0_screenshot.png" alt="Skyvern Task Interface">
-</p>
+Tasks use: `url`, `prompt`, `data schema`, `error codes`.
 
 ### Skyvern Workflows
 
-Workflows allow you to chain tasks together to form cohesive units of work.
+Chaining tasks for more complex automation (e.g., download invoices).
 
-<p align="center">
-  <img src="fern/images/invoice_downloading_workflow_example.png" alt="Workflow Example">
-</p>
+Features include:
 
-### Live Streaming
+1.  Navigation
+2.  Action
+3.  Data Extraction
+4.  Loops
+5.  File parsing
+6.  Uploading files to block storage
+7.  Sending emails
+8.  Text Prompts
+9.  Tasks (general)
+10. (Coming soon) Conditionals
+11. (Coming soon) Custom Code Block
 
-Skyvern streams the browser viewport to allow you to watch Skyvern take action on the web.
+### Livestreaming
+
+Watch the browser viewport live.
 
 ### Form Filling
 
-Skyvern can fill out form inputs on websites.
+Automated form completion.
 
 ### Data Extraction
 
-Skyvern extracts data from websites.
+Extract structured data using a defined schema.
 
 ### File Downloading
 
-Skyvern downloads files from websites and uploads them to block storage (if configured).
+Download files, automatically upload them to block storage, and access them via the UI.
 
 ### Authentication
 
-Skyvern supports different authentication methods.
+Support for various authentication methods.
 
-<p align="center">
-  <img src="fern/images/secure_password_task_example.png" alt="Authentication Example">
-</p>
+*   **2FA Support (TOTP)**
+    *   QR-based 2FA
+    *   Email-based 2FA
+    *   SMS-based 2FA
+
+*   **Password Manager Integrations**
+    *   Bitwarden
+
+    [Read more](https://docs.skyvern.com/credentials/totp).
 
 ## Real-World Examples
 
-Discover how Skyvern is being used in production:
-
 *   Invoice Downloading
 *   Job Application Automation
-*   Materials Procurement
+*   Materials Procurement Automation
 *   Government Website Navigation
 *   Contact Form Filling
 *   Insurance Quote Retrieval
 
-[...Insert Image and Link for each Example here...]
+[See Skyvern in action](https://app.skyvern.com/tasks/create/job_application).
 
 ## Documentation
 
-Find detailed information in our [Documentation](https://docs.skyvern.com). For questions or issues, contact us via [email](mailto:founders@skyvern.com) or [Discord](https://discord.gg/fG2XXEuQX3).
+Extensive documentation is available on our [docs page](https://docs.skyvern.com).
 
 ## Supported LLMs
 
-[...Insert Table of Supported LLMs and Configuration Options Here...]
+See the table detailing supported LLMs and environment variables.
 
 ## Feature Roadmap
 
-[...List Feature Roadmap Here...]
+The planned roadmap for the coming months.
 
 ## Contributing
 
-We welcome your contributions! Refer to the [contribution guide](CONTRIBUTING.md) and ["Help Wanted" issues](https://github.com/skyvern-ai/skyvern/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) to get involved.
+Contributions are welcome!  See the [contribution guide](CONTRIBUTING.md) and ["Help Wanted" issues](https://github.com/skyvern-ai/skyvern/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22).
 
 ## Telemetry
 
-Skyvern collects basic usage statistics.  To opt out, set `SKYVERN_TELEMETRY=false` in your environment.
+Skyvern collects basic usage statistics. To opt-out, set `SKYVERN_TELEMETRY=false`.
 
 ## License
 
-Skyvern's core logic is licensed under the [AGPL-3.0 License](LICENSE).
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Skyvern-AI/skyvern&type=Date)](https://star-history.com/#Skyvern-AI/skyvern&Date)
+Licensed under the [AGPL-3.0 License](LICENSE).

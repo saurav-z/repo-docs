@@ -1,178 +1,131 @@
 # AWS Deep Learning Containers: Optimized Docker Images for Machine Learning
 
-**Accelerate your machine learning workflows with AWS Deep Learning Containers (DLCs), pre-built Docker images optimized for training and serving models.** ([Original Repo](https://github.com/aws/deep-learning-containers))
+**Accelerate your machine learning projects with AWS Deep Learning Containers, pre-built and optimized Docker images for popular deep learning frameworks.**
 
-## Key Features:
+[Link to Original Repo: AWS Deep Learning Containers](https://github.com/aws/deep-learning-containers)
 
-*   **Pre-built and Optimized:** Benefit from pre-configured environments with popular deep learning frameworks and libraries.
-*   **Framework Support:**  Includes TensorFlow, TensorFlow 2, PyTorch, and MXNet.
-*   **Hardware Acceleration:** Optimized for both CPU (with Intel MKL) and GPU (with Nvidia CUDA) instances.
-*   **Integration:** Seamlessly integrates with Amazon SageMaker, Amazon EC2, Amazon ECS, and Amazon EKS.
-*   **Available in ECR:** Easily access and deploy images from the Amazon Elastic Container Registry (ECR).
+**Key Features:**
 
-## Contents
-
-*   [Getting Started](#getting-started)
-*   [Building your Image](#building-your-image)
-*   [Upgrading the framework version](#upgrading-the-framework-version)
-*   [Adding artifacts to your build context](#adding-artifacts-to-your-build-context)
-*   [Adding a package](#adding-a-package)
-*   [Running Tests Locally](#running-tests-locally)
+*   **Pre-built and Optimized:** Ready-to-use Docker images with TensorFlow, TensorFlow 2, PyTorch, and MXNet, pre-configured with necessary libraries like Nvidia CUDA (for GPU instances) and Intel MKL (for CPU instances).
+*   **Amazon ECR Availability:** Easily accessible and deployable from the Amazon Elastic Container Registry (Amazon ECR).
+*   **SageMaker Integration:** Seamlessly integrated as the default framework for Amazon SageMaker jobs (training, inference, transforms, etc.).
+*   **EC2, ECS, and EKS Compatibility:** Tested and validated for use with Amazon EC2, Amazon ECS, and Amazon EKS.
+*   **Framework Support:** TensorFlow, TensorFlow 2, PyTorch, and MXNet.
 
 ## Getting Started
 
-This section provides instructions on how to set up your environment to build and test the DLCs on Amazon SageMaker, EC2, ECS, and EKS. This example focuses on building an MXNet GPU python3 training container.
+This section provides instructions on how to build and test the DLCs on various platforms (Amazon SageMaker, EC2, ECS, and EKS). The following instructions will guide you through building a MXNet GPU python3 training container:
 
-1.  **Prerequisites:**
-    *   An AWS account and configured AWS CLI access (IAM user or IAM role). Recommended IAM permissions: AmazonEC2ContainerRegistryFullAccess, AmazonEC2FullAccess, AmazonEKSClusterPolicy, AmazonEKSServicePolicy, AmazonEKSServiceRolePolicy, AWSServiceRoleForAmazonEKSNodegroup, AmazonSageMakerFullAccess, and AmazonS3FullAccess.
-    *   An ECR repository (e.g., "beta-mxnet-training" in us-west-2).
-    *   Docker installed and configured.
-2.  **Setup:**
-    *   Clone the repository and set environment variables:
-        ```bash
-        export ACCOUNT_ID=<YOUR_ACCOUNT_ID>
-        export REGION=us-west-2
-        export REPOSITORY_NAME=beta-mxnet-training
-        ```
-    *   Login to ECR:
-        ```bash
-        aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com
-        ```
-    *   Create and activate a virtual environment, then install requirements:
-        ```bash
-        python3 -m venv dlc
-        source dlc/bin/activate
-        pip install -r src/requirements.txt
-        ```
-    *   Perform initial setup for MXNet:
-        ```bash
-        bash src/setup.sh mxnet
-        ```
+**Prerequisites:**
 
-## Building your Image
+*   An AWS account with appropriate permissions (see [Getting Started](#getting-started) in the original README for specific IAM policy recommendations).
+*   Docker installed on your system.
 
-The image build process leverages `buildspec.yml` files, which specify the Dockerfile locations.
+**Setup:**
 
-1.  **Build All Images:** Build all Dockerfiles specified in the `buildspec.yml` file:
-    ```bash
+1.  **Configure AWS CLI:**  Set up your AWS CLI to access your account.
+2.  **Create ECR Repository:** Create an ECR repository (e.g., "beta-mxnet-training") in your preferred region (e.g., us-west-2).
+3.  **Clone the Repository:** Clone the AWS Deep Learning Containers repository.
+4.  **Set Environment Variables:**  Set environment variables for your account ID, region, and repository name.
+    ```shell
+    export ACCOUNT_ID=<YOUR_ACCOUNT_ID>
+    export REGION=us-west-2
+    export REPOSITORY_NAME=beta-mxnet-training
+    ```
+5.  **Login to ECR:** Login to ECR using the AWS CLI.
+    ```shell
+    aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com
+    ```
+6.  **Create and Activate Virtual Environment:** Create a virtual environment and install dependencies.
+    ```shell
+    python3 -m venv dlc
+    source dlc/bin/activate
+    pip install -r src/requirements.txt
+    ```
+7.  **Initial Setup:** Run the initial setup script.
+    ```shell
+    bash src/setup.sh mxnet
+    ```
+
+## Building Your Image
+
+Build your Docker images using the provided build scripts. The paths to the Dockerfiles follow a specific pattern and are defined in the `buildspec.yml` files located in the framework directories.
+
+1.  **Build All Images:** Build all images specified in the `buildspec.yml` file using the following command:
+    ```shell
     python src/main.py --buildspec mxnet/training/buildspec.yml --framework mxnet
     ```
-2.  **Build Specific Images:** Build a single image by specifying image type, device type, and Python version:
-    ```bash
+2.  **Build a Single Image:** Build a specific image by specifying image type, device type, and Python version.
+    ```shell
     python src/main.py --buildspec mxnet/training/buildspec.yml \
                        --framework mxnet \
                        --image_types training \
                        --device_types cpu \
                        --py_versions py3
     ```
-3.  **Arguments:** Use comma-separated lists for `--image_types`, `--device_types`, and `--py_versions`.  Valid values are:
-    *   `--image_types`: `training`, `inference`
-    *   `--device_types`: `cpu`, `gpu`
-    *   `--py_versions`: `py2`, `py3`
-
-## Upgrading the framework version
-
-1.  **Modify buildspec.yml:** Update the framework version in the corresponding `buildspec.yml` file.  For example, to upgrade MXNet to version 1.7.0, change the `version` key in `mxnet/training/buildspec.yml`.
-2.  **Dockerfile Location:** Ensure the Dockerfile for the new version exists at the expected path (e.g., `mxnet/docker/1.7.0/py3/Dockerfile.gpu`).
-3.  **Build the Container:** Follow the instructions in "Building your Image" to build the updated container.
-
-## Adding artifacts to your build context
-
-1.  **Add Artifacts in buildspec.yml:** Add the artifact in the framework buildspec file under the context key:
-   ```yaml
-    # mxnet/training/buildspec.yml
-     19 context:
-     20   README.xyz: *<---- Object name (Can be anything)*
-     21     source: README-context.rst *<--- Path for the file to be copied*
-     22     target: README.rst *<--- Name for the object in** the build context*
-   ```
-2.  **Training/Inference Context:** If needed add it under `training_context` or `inference_context`.
-3.  **Individual Container Context:** Add it under the `context` key for that particular image.
-4.  **Build the Container:** Follow the instructions in "Building your Image" to build the updated container.
-
-## Adding a package
-
-1.  **Modify Dockerfile:**  Add the package installation command to the Dockerfile. For example, to add `octopush` to the MXNet 1.6.0 py3 GPU image:
-    ```dockerfile
-    139 RUN ${PIP} install --no-cache --upgrade \
-    140     keras-mxnet==2.2.4.2 \
-    ...........................
-    160     awscli \
-    161     octopush
+3.  **Arguments:** The `--image_types`, `--device_types`, and `--py_versions` arguments accept comma-separated lists:
     ```
-2.  **Build the Container:** Follow the instructions in "Building your Image" to build the updated container.
+    --image_types <training/inference>
+    --device_types <cpu/gpu>
+    --py_versions <py2/py3>
+    ```
+
+## Upgrading the Framework Version
+
+To upgrade the framework version:
+
+1.  **Modify `buildspec.yml`:**  Update the `version` key in the relevant `buildspec.yml` file.
+2.  **Docker File Location:** Ensure the Dockerfile for the new version exists at the correct path (e.g., `mxnet/docker/1.7.0/py3/Dockerfile.gpu`).
+3.  **Build the Container:** Build the container using the instructions above.
+
+## Adding Artifacts to Your Build Context
+
+Include additional files in your build context using the `context` key in the `buildspec.yml` file:
+
+1.  **Add Files to Context:** In your `buildspec.yml`, add the context of the files under the `context` key
+2.  **Image Level Context:** Context can be defined for all images, specific images or image types.
+
+## Adding a Package
+
+To add a package to your image, modify the Dockerfile:
+
+1.  **Modify Dockerfile:** Add the `RUN ${PIP} install` command with the package name.
+2.  **Build the Container:** Build the container using the instructions above.
 
 ## Running Tests Locally
 
-Before running tests, make sure you have the images you want to test locally.
+Run tests locally to validate your changes.
 
-1.  **Setup:** Navigate to the cloned `deep-learning-containers/` directory and install requirements:
-    ```bash
+1.  **Prerequisites:** Ensure you have the images to test locally (pull them from ECR), install the required dependencies.
+    ```shell
+    cd deep-learning-containers/
     pip install -r src/requirements.txt
     pip install -r test/requirements.txt
     ```
-2.  **Environment Variables:**  Set `DLC_IMAGES` (space-separated list of ECR URIs), `PYTHONPATH` (absolute path to `src/`), and  `CODEBUILD_RESOLVED_SOURCE_VERSION` (unique identifier).
-    ```bash
+
+2.  **Set Environment Variables:** Set environment variables including the paths to the images to test.
+    ```shell
     export DLC_IMAGES="$ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com/pr-pytorch-training:training-gpu-py3 $ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com/pr-mxnet-training:training-gpu-py3"
     export PYTHONPATH=$(pwd)/src
     export CODEBUILD_RESOLVED_SOURCE_VERSION="my-unique-test"
     ```
-3.  **Navigate to Test Directory:** Change directory to `test/dlc_tests`.
-4.  **Run Tests:**
-    *   **EC2:**  `pytest -s -rA ec2/ -n=auto`
-    *   **ECS:**  `pytest -s -rA ecs/ -n=auto`
-    *   **EKS:** `cd ../ && export TEST_TYPE=eks && python test/testrunner.py`
-    *   **Specific Test File:** `pytest -s ecs/mxnet/training/test_ecs_mxnet_training.py`
-    *   **Specific Test Function:** `pytest -s ecs/mxnet/training/test_ecs_mxnet_training.py::test_ecs_mxnet_training_dgl_cpu`
-5.  **SageMaker Local Tests:**
-    *   Launch an EC2 instance with a Deep Learning AMI.
-    *   Clone the repo and checkout your branch.
-    *   Login to the ECR repo.
-    *   Navigate to the appropriate directory (e.g., `test/sagemaker_tests/mxnet/training/`).
-    *   Install requirements: `pip3 install -r requirements.txt`
-    *   Run:
-        ```bash
-        python3 -m pytest -v integration/local --region us-west-2 \
-        --docker-base-name ${aws_account_id}.dkr.ecr.us-west-2.amazonaws.com/mxnet-inference \
-        --tag 1.6.0-cpu-py36-ubuntu18.04 --framework-version 1.6.0 --processor cpu \
-        --py-version 3
-        ```
-        or, for TensorFlow inference:
-        ```bash
-        python3 -m  pytest -v integration/local \
-        --docker-base-name ${aws_account_id}.dkr.ecr.us-west-2.amazonaws.com/tensorflow-inference \
-        --tag 1.15.2-cpu-py36-ubuntu16.04 --framework-version 1.15.2 --processor cpu
-        ```
-6.  **SageMaker Remote Tests:**
-    *   Create an IAM role named "SageMakerRole" with  `AmazonSageMakerFullAccess` permissions.
-    *   Navigate to the appropriate test directory.
-    *   Install requirements.
-    *   Run:
-        ```bash
-        pytest integration/sagemaker/test_mnist.py \
-        --region us-west-2 --docker-base-name mxnet-training \
-        --tag training-gpu-py3-1.6.0 --framework-version 1.6.0 --aws-id {aws_id} \
-        --instance-type ml.g5.12xlarge
-        ```
-       or, for TensorFlow inference:
-       ```bash
-       python3 -m pytest test/integration/sagemaker/test_tfs. --registry {aws_account_id} \
-       --region us-west-2  --repo tensorflow-inference --instance-types ml.c5.18xlarge \
-       --tag 1.15.2-py3-cpu-build --versions 1.15.2
-       ```
-7.  **SageMaker Benchmark Tests:**
-    *   Create `sm_benchmark_env_settings.config` with:
-        ```bash
-        export DLC_IMAGES="<image_uri_1-you-want-to-benchmark-test>"
-        export BUILD_CONTEXT=PR
-        export TEST_TYPE=benchmark-sagemaker
-        export CODEBUILD_RESOLVED_SOURCE_VERSION=$USER
-        export REGION=us-west-2
-        ```
-    *   `source sm_benchmark_env_settings.config`
-    *   Run: `pip install -r requirements.txt && python test/testrunner.py`
-    *   Or, for a specific framework:
-        ```bash
-        cd test/dlc_tests
-        pytest benchmark/sagemaker/<framework-name>/<image-type>/test_*.py
-        ```
+3.  **Navigate to Test Directory:** Change your directory into the test folder.
+    ```shell
+    cd test/dlc_tests
+    ```
+4.  **Run Tests:** Run tests using `pytest`.  Use the commands below to run tests in EC2, ECS, EKS, SageMaker.
+    ```shell
+    # EC2
+    pytest -s -rA ec2/ -n=auto
+    # ECS
+    pytest -s -rA ecs/ -n=auto
+
+    #EKS
+    cd ../
+    export TEST_TYPE=eks
+    python test/testrunner.py
+    ```
+5.  **Running Specific Tests:**  Specify test files or functions to run specific tests.
+
+## SageMaker Testing
+Follow the commands in the original README to run specific SageMaker local and remote tests with Pytest.

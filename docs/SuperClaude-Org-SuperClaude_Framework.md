@@ -1,35 +1,62 @@
-# SuperClaude Framework: Revolutionize Your Claude Code Development 🚀
+# SuperClaude Framework: Revolutionizing Claude Code Development
 
-**SuperClaude empowers developers to transform Claude code into a structured, powerful, and efficient development platform.**  ([See the original repository](https://github.com/SuperClaude-Org/SuperClaude_Framework))
+**Supercharge your Claude code with the SuperClaude Framework, transforming it into a structured, powerful development platform for streamlined workflows.**  [View the original repository on GitHub](https://github.com/SuperClaude-Org/SuperClaude_Framework)
 
----
+<p align="center">
+  <img src="https://img.shields.io/badge/version-4.0.9-blue" alt="Version">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome">
+</p>
 
-## Key Features of SuperClaude
+<p align="center">
+  <a href="https://superclaude.netlify.app/">
+    <img src="https://img.shields.io/badge/🌐_Visit_Website-blue" alt="Website">
+  </a>
+  <a href="https://pypi.org/project/SuperClaude/">
+    <img src="https://img.shields.io/pypi/v/SuperClaude.svg?" alt="PyPI">
+  </a>
+  <a href="https://www.npmjs.com/package/@bifrost_inc/superclaude">
+    <img src="https://img.shields.io/npm/v/@bifrost_inc/superclaude.svg" alt="npm">
+  </a>
+</p>
 
-*   **AI-Powered Agents:** Harness the power of 14 specialized AI agents with domain expertise, including security engineers and frontend architects.
-*   **Enhanced Command Structure:** Utilize a unified `/sc:` prefix for all commands, offering 22 commands for a complete development lifecycle from brainstorming to deployment.
-*   **Integrated MCP Servers:** Leverage 6 powerful servers, such as Context7 for documentation and Magic for UI component generation, for streamlined workflows.
-*   **Adaptive Behavioral Modes:** Choose from 6 adaptive modes like Brainstorming and Orchestration to optimize your workflow for various tasks.
-*   **Optimized Performance:** Experience a reduced framework footprint, enabling longer conversations and more complex operations.
-*   **Comprehensive Documentation:** Benefit from a complete documentation rewrite, including real-world examples, practical workflows, and improved navigation.
+<p align="center">
+  <a href="README.md">
+    <img src="https://img.shields.io/badge/🇺🇸_English-blue" alt="English">
+  </a>
+  <a href="README-zh.md">
+    <img src="https://img.shields.io/badge/🇨🇳_中文-red" alt="中文">
+  </a>
+  <a href="README-ja.md">
+    <img src="https://img.shields.io/badge/🇯🇵_日本語-green" alt="日本語">
+  </a>
+</p>
 
----
+## Key Features
 
-## Installation
+*   **Structured Development Platform:** Transforms Claude code into a structured development environment.
+*   **Intelligent Agents:** Features 14 specialized AI agents for various development tasks.
+*   **Command-Line Tools:** Offers 22 powerful slash commands for a complete development lifecycle.
+*   **Behavioral Modes:** Includes 6 adaptive modes for different development contexts.
+*   **MCP Server Integration:** Leverages 6 powerful server integrations for enhanced functionality.
+*   **Streamlined Workflows:** Automates workflows and improves efficiency with powerful tools.
+*   **Comprehensive Documentation:** Features extensive guides, examples, and troubleshooting resources.
+*   **Open Source and Community Driven:** Welcomes contributions and supports a thriving community.
 
-SuperClaude can be easily installed using various methods:
+## Quick Installation
 
-### Installation Methods
+Choose your preferred installation method:
 
-*   **pipx (Recommended):** `pipx install SuperClaude && pipx upgrade SuperClaude && SuperClaude install` - Ideal for Linux/macOS users.
-*   **pip:** `pip install SuperClaude && pip upgrade SuperClaude && SuperClaude install` - Standard Python environments.
-*   **npm:** `npm install -g @bifrost_inc/superclaude && superclaude install` - Cross-platform, Node.js users.
+| Method    | Command                                                                    | Best For                               |
+| --------- | -------------------------------------------------------------------------- | -------------------------------------- |
+| **pipx**  | `pipx install SuperClaude && pipx upgrade SuperClaude && SuperClaude install` | **✅ Recommended** - Linux/macOS        |
+| **pip**   | `pip install SuperClaude && pip upgrade SuperClaude && SuperClaude install` | Traditional Python environments        |
+| **npm**   | `npm install -g @bifrost_inc/superclaude && superclaude install`          | Cross-platform, Node.js users          |
 
----
+<details>
+<summary><b>⚠️ IMPORTANT: Upgrading from SuperClaude V3</b></summary>
 
-## Important: Upgrading from SuperClaude V3
-
-**If upgrading from SuperClaude V3, uninstall it before installing V4**:
+**If you have SuperClaude V3 installed, you SHOULD uninstall it before installing V4:**
 
 ```bash
 # Uninstall V3 first
@@ -40,97 +67,101 @@ Remove all related files and directories :
 pipx install SuperClaude && pipx upgrade SuperClaude && SuperClaude install
 ```
 
-**What gets preserved during upgrade:**
+**✅ What gets preserved during upgrade:**
+- ✓ Your custom slash commands (outside `commands/sc/`)
+- ✓ Your custom content in `CLAUDE.md` 
+- ✓ Claude Code's `.claude.json`, `.credentials.json`, `settings.json` and `settings.local.json`
+- ✓ Any custom agents and files you've added
 
-*   ✓ Your custom slash commands (outside `commands/sc/`)
-*   ✓ Your custom content in `CLAUDE.md`
-*   ✓ Claude Code's `.claude.json`, `.credentials.json`, `settings.json` and `settings.local.json`
-*   ✓ Any custom agents and files you've added
+**⚠️ Note:** Other SuperClaude-related `.json` files from V3 may cause conflicts and should be removed.
 
----
+</details>
 
-## Support the Project
+<details>
+<summary><b>💡 Troubleshooting PEP 668 Errors</b></summary>
 
-Your support helps maintain and improve SuperClaude:
+```bash
+# Option 1: Use pipx (Recommended)
+pipx install SuperClaude
 
-*   **Ko-fi:** [Support on Ko-fi](https://ko-fi.com/superclaude) - One-time contributions.
-*   **Patreon:** [Become a Patron](https://patreon.com/superclaude) - Monthly support.
-*   **GitHub Sponsors:** [GitHub Sponsor](https://github.com/sponsors/SuperClaude-Org) - Flexible tiers.
+# Option 2: User installation
+pip install --user SuperClaude
 
----
+# Option 3: Force installation (use with caution)
+pip install --break-system-packages SuperClaude
+```
+</details>
+
+## What's New in V4
+
+*   **Smarter Agent System:** 14 specialized agents with domain expertise.
+*   **Improved Namespace:** `/sc:` prefix for all commands for cleaner organization.
+*   **MCP Server Integration:** 6 powerful servers for enhanced functionality.
+*   **Behavioral Modes:** 6 adaptive modes for diverse development needs.
+*   **Optimized Performance:** Reduced footprint for larger projects and longer conversations.
+*   **Documentation Overhaul:** Comprehensive rewrite with practical examples and workflows.
 
 ## Documentation
 
-Comprehensive documentation is available to help you get started:
+Find detailed guides and references to get you started:
 
 ### Getting Started
 
-*   [Quick Start Guide](Docs/Getting-Started/quick-start.md)
-*   [Installation Guide](Docs/Getting-Started/installation.md)
+*   📝 [Quick Start Guide](Docs/Getting-Started/quick-start.md)
+*   💾 [Installation Guide](Docs/Getting-Started/installation.md)
 
 ### User Guides
 
-*   [Commands Reference](Docs/User-Guide/commands.md)
-*   [Agents Guide](Docs/User-Guide/agents.md)
-*   [Behavioral Modes](Docs/User-Guide/modes.md)
-*   [Flags Guide](Docs/User-Guide/flags.md)
-*   [MCP Servers](Docs/User-Guide/mcp-servers.md)
-*   [Session Management](Docs/User-Guide/session-management.md)
+*   🎯 [Commands Reference](Docs/User-Guide/commands.md)
+*   🤖 [Agents Guide](Docs/User-Guide/agents.md)
+*   🎨 [Behavioral Modes](Docs/User-Guide/modes.md)
+*   🚩 [Flags Guide](Docs/User-Guide/flags.md)
+*   🔧 [MCP Servers](Docs/User-Guide/mcp-servers.md)
+*   💼 [Session Management](Docs/User-Guide/session-management.md)
 
 ### Developer Resources
 
-*   [Technical Architecture](Docs/Developer-Guide/technical-architecture.md)
-*   [Contributing Code](Docs/Developer-Guide/contributing-code.md)
-*   [Testing & Debugging](Docs/Developer-Guide/testing-debugging.md)
+*   🏗️ [Technical Architecture](Docs/Developer-Guide/technical-architecture.md)
+*   💻 [Contributing Code](Docs/Developer-Guide/contributing-code.md)
+*   🧪 [Testing & Debugging](Docs/Developer-Guide/testing-debugging.md)
 
 ### Reference
 
-*   [Best Practices](Docs/Reference/quick-start-practices.md)
-*   [Examples Cookbook](Docs/Reference/examples-cookbook.md)
-*   [Troubleshooting](Docs/Reference/troubleshooting.md)
+*   ✨ [Best Practices](Docs/Reference/quick-start-practices.md)
+*   📓 [Examples Cookbook](Docs/Reference/examples-cookbook.md)
+*   🔍 [Troubleshooting](Docs/Reference/troubleshooting.md)
 
----
+## Support the Project
 
-## Contribute
+[Insert support information and options here, but rephrase the tone]
 
-Help build the SuperClaude community:
+SuperClaude is a community-driven project that requires ongoing maintenance and development.  If you find value in SuperClaude, please consider supporting the project. Your contributions help cover operational costs and facilitate continuous improvement.
 
-*   **Documentation:** Improve guides, add examples, and fix typos.
-*   **MCP Integration:** Add server configurations and test integrations.
-*   **Workflows:** Create command patterns and recipes.
-*   **Testing:** Add tests and validate features.
-*   **i18n:** Translate docs to other languages.
+Support options include:
 
-*   [Contributing Guide](CONTRIBUTING.md)
-*   [View All Contributors](https://github.com/SuperClaude-Org/SuperClaude_Framework/graphs/contributors)
+*   ☕ **Ko-fi:** [Ko-fi link](https://ko-fi.com/superclaude) (one-time contributions)
+*   🎯 **Patreon:** [Patreon link](https://patreon.com/superclaude) (monthly support)
+*   💜 **GitHub Sponsors:** [GitHub Sponsors link](https://github.com/sponsors/SuperClaude-Org) (flexible tiers)
 
----
+## Contributing
+
+Contribute to SuperClaude and help improve the project!
+
+| Priority | Area          | Description                                      |
+| :------- | :------------ | :----------------------------------------------- |
+| 📝 High   | Documentation | Improve guides, add examples, fix typos          |
+| 🔧 High   | MCP Integration | Add server configs, test integrations          |
+| 🎯 Medium | Workflows     | Create command patterns & recipes             |
+| 🧪 Medium | Testing       | Add tests, validate features                    |
+| 🌐 Low    | i18n          | Translate docs to other languages                |
+
+*   📖 [Contributing Guide](CONTRIBUTING.md)
+*   👥 [View All Contributors](https://github.com/SuperClaude-Org/SuperClaude_Framework/graphs/contributors)
 
 ## License
 
-This project is licensed under the MIT License.  See the [LICENSE](LICENSE) file for details.
-
----
+This project is licensed under the [MIT License](LICENSE).
 
 ## Star History
 
-<a href="https://www.star-history.com/#SuperClaude-Org/SuperClaude_Framework&Timeline">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=SuperClaude-Org/SuperClaude_Framework&type=Timeline&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=SuperClaude-Org/SuperClaude_Framework&type=Timeline" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=SuperClaude-Org/SuperClaude_Framework&type=Timeline" />
- </picture>
-</a>
-```
-Key improvements and SEO considerations:
-
-*   **Concise Hook:** A compelling one-sentence opener.
-*   **Clear Headings:** Improved structure for readability.
-*   **Keyword Optimization:** Used relevant keywords like "Claude code," "development platform," "AI agents," etc.
-*   **Bulleted Lists:** Easy-to-scan key features.
-*   **Stronger Call to Action:** Encourages contribution and support.
-*   **Internal Linking:** Promotes navigation within the README.
-*   **External Linking:** Maintains links to the original repo and support channels.
-*   **Focus on Benefits:** Highlights *what* the framework *does* for the user.
-*   **Concise Language:** Streamlined and improved wording throughout.
-*   **Table Formatting:** Replaced many divs with Markdown tables for better readability and accessibility.
+[Insert Star History chart here]

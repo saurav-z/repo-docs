@@ -1,10 +1,12 @@
-<p align="center"><img width="65%" src="docs/source/_static/img/evalai_logo.png"/></p>
+<p align="center">
+  <img width="65%" src="docs/source/_static/img/evalai_logo.png" alt="EvalAI Logo"/>
+</p>
 
-# EvalAI: The Open-Source Platform for AI Algorithm Evaluation and Benchmarking
+# EvalAI: The Open-Source Platform for AI and Machine Learning Evaluation
 
-**EvalAI** is your all-in-one solution for evaluating and comparing machine learning and AI algorithms, fostering collaboration and accelerating innovation.  Find the original repository [here](https://github.com/Cloud-CV/EvalAI).
+**EvalAI is a powerful, open-source platform designed to streamline the evaluation and comparison of machine learning (ML) and artificial intelligence (AI) algorithms at scale, offering a centralized hub for AI challenge participation and collaboration.** ([See the original repository](https://github.com/Cloud-CV/EvalAI))
 
-[![Join the chat on Slack](https://img.shields.io/badge/Join%20Slack-Chat-blue?logo=slack)](https://join.slack.com/t/cloudcv-community/shared_invite/zt-3252n6or8-e0QuZKIZFLB0zXtQ6XgxfA)
+[![Join Slack](https://img.shields.io/badge/Join%20Slack-Chat-blue?logo=slack)](https://join.slack.com/t/cloudcv-community/shared_invite/zt-3252n6or8-e0QuZKIZFLB0zXtQ6XgxfA)
 [![Build Status](https://travis-ci.org/Cloud-CV/EvalAI.svg?branch=master)](https://travis-ci.org/Cloud-CV/EvalAI)
 [![Coverage](https://img.shields.io/codecov/c/github/Cloud-CV/EvalAI?label=Coverage&style=flat-square)](https://codecov.io/gh/Cloud-CV/EvalAI)
 [![Backend Coverage](https://img.shields.io/codecov/c/github/Cloud-CV/EvalAI?flag=backend&label=Backend&style=flat-square)](https://codecov.io/gh/Cloud-CV/EvalAI?flag=backend)
@@ -16,51 +18,53 @@
 [![Open Collective](https://opencollective.com/evalai/sponsors/badge.svg)](https://opencollective.com/evalai#sponsors)
 [![Twitter Follow](https://img.shields.io/twitter/follow/eval_ai?style=social)](https://twitter.com/eval_ai)
 
-## Key Features
+EvalAI simplifies the process of comparing AI algorithms by providing a centralized platform for challenges, leaderboards, and standardized evaluation, ensuring reliable and accurate results.
 
-*   **Custom Evaluation Protocols:** Define flexible evaluation phases, dataset splits, and leaderboards tailored to your specific needs.
-*   **Remote Evaluation:** Leverage dedicated compute resources for large-scale challenges, allowing you to scale your evaluation infrastructure seamlessly.
-*   **Environment-Based Evaluation:** Utilize Docker containers to safely evaluate submissions within defined environments, ensuring reproducibility.
-*   **CLI Support:** Enhance your workflow with the evalai-cli, providing command-line access and simplifying platform interaction.
-*   **Portability:** Built on open-source technologies like Docker, Django, Node.js, and PostgreSQL, EvalAI ensures scalability and platform independence.
-*   **Faster Evaluation:** Optimize evaluation speed through techniques like worker node pre-warming, challenge code importing, and dataset chunking, reducing evaluation time significantly.
+## Key Features of EvalAI:
 
-## Why Use EvalAI?
+*   **Customizable Evaluation Protocols:** Define multiple evaluation phases, dataset splits, and use any programming language, with public and private leaderboards.
+*   **Remote Evaluation:** Leverage specialized compute capabilities for large-scale challenges with easy integration of custom worker nodes.
+*   **Dockerized Evaluation:** Submit your AI agent's code as Docker images, allowing for consistent and reproducible evaluation in isolated environments.
+*   **CLI Support:** Enhance platform accessibility with the `evalai-cli` for command-line interaction.
+*   **Scalability & Portability:** Built with open-source technologies (Docker, Django, Node.js, PostgreSQL) for easy deployment and scalability.
+*   **Faster Evaluation:** Optimized performance through worker node warm-up, challenge code import, in-memory dataset preloading and parallel evaluation using dataset chunking, reducing evaluation time.
 
-EvalAI simplifies the process of evaluating and comparing AI algorithms by providing a centralized platform. This enables researchers to:
+## Goal
 
-*   **Reproduce Results:** Easily reproduce results from research papers.
-*   **Perform Reliable Analysis:** Conduct accurate and reliable quantitative analyses.
-*   **Benchmark Progress:** Contribute to and track advancements in the field of AI.
+Our ultimate goal is to establish a centralized platform for hosting, participating in, and collaborating on AI challenges globally, contributing to significant progress in AI benchmarking.
 
-## Installation
+## Installation Instructions
 
-Getting EvalAI up and running locally is straightforward:
+Get started with EvalAI quickly using Docker:
 
-1.  **Prerequisites:** Install [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
-2.  **Get the Source Code:**
+1.  **Install Docker and Docker Compose:** Ensure you have [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/) installed on your machine.
+2.  **Clone the Repository:**
     ```bash
     git clone https://github.com/Cloud-CV/EvalAI.git evalai && cd evalai
     ```
-3.  **Build and Run:**
+3.  **Build and Run Containers:**
     ```bash
     docker-compose up --build
     ```
-    (To include worker services, use `docker-compose --profile worker up --build`.)
-4.  **Access EvalAI:** Open your web browser and navigate to <http://127.0.0.1:8888>. Default users:
-    *   **SUPERUSER:** `admin` / `password`
-    *   **HOST:** `host` / `password`
-    *   **PARTICIPANT:** `participant` / `password`
+    *   For worker services: `docker-compose --profile worker up --build`
+    *   For statsd-exporter: `docker-compose --profile statsd up --build`
+    *   For both optional services: `docker-compose --profile worker --profile statsd up --build`
 
-If you encounter any issues, consult the [common errors during installation](https://evalai.readthedocs.io/en/latest/faq(developers).html#common-errors-during-installation) page.
+4.  **Access EvalAI:** Open your web browser and navigate to <http://127.0.0.1:8888>. Default user credentials are provided in the original README.
 
-## Contributing to EvalAI
+*   **SUPERUSER:** username: `admin` password: `password`
+*   **HOST USER:** username: `host` password: `password`
+*   **PARTICIPANT USER:** username: `participant` password: `password`
 
-We welcome contributions!  Please refer to our [contribution guidelines](https://github.com/Cloud-CV/EvalAI/blob/master/.github/CONTRIBUTING.md).
+For troubleshooting, refer to the [common errors during installation](https://evalai.readthedocs.io/en/latest/faq(developers).html#common-errors-during-installation) documentation.
+
+## Documentation Setup for Contributions
+
+Refer to `docs/README.md` within the repository for detailed instructions on setting up the documentation builder if you wish to contribute.
 
 ## Citing EvalAI
 
-If you use EvalAI for hosting challenges, please cite the following technical report:
+If you use EvalAI, please cite the following:
 
 ```
 @article{EvalAI,
@@ -72,6 +76,7 @@ If you use EvalAI for hosting challenges, please cite the following technical re
     volume  =  arXiv:1902.03570
 }
 ```
+
 <p>
     <a href="http://learningsys.org/sosp19/assets/papers/23_CameraReadySubmission_EvalAI_SOSP_2019%20(8)%20(1).pdf" target="_blank"><img src="docs/source/_static/img/evalai-paper.jpg"/></a>
 </p>
@@ -80,9 +85,13 @@ If you use EvalAI for hosting challenges, please cite the following technical re
 
 EvalAI is maintained by [Rishabh Jain](https://rishabhjain.xyz/), [Gunjan Chhablani](https://gchhablani.github.io/), and [Dhruv Batra](https://www.cc.gatech.edu/~dbatra/).
 
+## Contribution Guidelines
+
+Contribute to EvalAI by following the [contribution guidelines](https://github.com/Cloud-CV/EvalAI/blob/master/.github/CONTRIBUTING.md).
+
 ## Contributors
 
 [//]: contributor-faces
+(List of contributors - see original README)
 
 ```
-(Contributor faces here)

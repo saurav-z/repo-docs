@@ -1,95 +1,109 @@
-# All the Places: Your Open-Source Solution for POI Data Extraction
+# All the Places: Extracting Point of Interest (POI) Data with Web Scraping
 
-**All the Places** is a powerful project that leverages web scraping to extract valuable Point of Interest (POI) data from websites, providing a structured and accessible dataset.  
+**All the Places is a powerful web scraping project designed to gather Point of Interest (POI) data from websites, providing a valuable resource for developers and data enthusiasts.**  Access the original project on GitHub: [https://github.com/alltheplaces/alltheplaces](https://github.com/alltheplaces/alltheplaces).
 
-[View the source code on GitHub](https://github.com/alltheplaces/alltheplaces)
+## Key Features:
 
-## Key Features
-
-*   **POI Data Extraction:** Scrapes websites to gather Point of Interest (POI) data, such as store locations.
-*   **Scrapy Framework:** Utilizes the robust Scrapy framework for efficient and scalable web scraping.
+*   **POI Data Extraction:** Scrapes websites with "store location" pages to extract comprehensive POI data.
+*   **Scrapy Framework:** Utilizes the robust [Scrapy](https://scrapy.org/) web scraping framework for efficient data retrieval.
 *   **Standardized Data Format:** Outputs data in a consistent format for easy integration and use.
-*   **Open Source:** Contribute to and customize the project to meet your specific needs.
-*   **Regular Updates:** Data is regularly updated and published.
-*   **Community Driven:** Connect and collaborate with other contributors through GitHub and other communication channels.
+*   **Modular Design:** Employs individual Scrapy spiders for each website, allowing for maintainability and scalability.
+*   **Open Source & Open Data:**  Data generated is released under [Creative Commons’ CC-0 waiver](https://creativecommons.org/publicdomain/zero/1.0/) and the software is licensed under the [MIT license](https://github.com/alltheplaces/alltheplaces/blob/master/LICENSE).
 
 ## Getting Started
 
 ### Development Setup
 
-Follow these steps to set up your development environment.
+Follow the instructions below for setting up your development environment based on your operating system.
 
-#### Prerequisites
-
-*   Python 3.x
-*   Git
-
-#### Installation using `uv` (Recommended)
+#### Ubuntu
 
 1.  Install `uv`:
 
-    *   **Ubuntu:**
-        ```bash
-        curl -LsSf https://astral.sh/uv/install.sh | sh
-        source $HOME/.local/bin/env
-        ```
-    *   **macOS (using Homebrew):**
-        ```bash
-        brew install uv
-        ```
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    source $HOME/.local/bin/env
+    ```
 
 2.  Clone the repository:
+
     ```bash
     git clone git@github.com:alltheplaces/alltheplaces.git
     ```
 
-3.  Navigate to the project directory:
+3.  Install project dependencies:
+
     ```bash
     cd alltheplaces
-    ```
-
-4.  Install dependencies:
-    ```bash
     uv sync
     ```
 
-5.  Verify installation:
+4.  Test the installation:
+
     ```bash
     uv run scrapy
     ```
-    If the command runs without errors, your installation is successful.
+
+#### macOS
+
+1.  Install `uv`:
+
+    ```bash
+    brew install uv
+    ```
+
+2.  Clone the repository:
+
+    ```bash
+    git clone git@github.com:alltheplaces/alltheplaces.git
+    ```
+
+3.  Install project dependencies:
+
+    ```bash
+    cd alltheplaces
+    uv sync
+    ```
+
+4.  Test the installation:
+
+    ```bash
+    uv run scrapy
+    ```
 
 #### Codespaces
 
-You can use GitHub Codespaces for a cloud-based development environment:
+Easily set up a cloud-based development environment using GitHub Codespaces:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alltheplaces/alltheplaces)
 
 #### Docker
 
-You can also run the project using Docker:
+Use Docker for a containerized development environment:
 
 1.  Clone the repository:
+
     ```bash
     git clone git@github.com:alltheplaces/alltheplaces.git
     ```
 
 2.  Build the Docker image:
+
     ```bash
     cd alltheplaces
     docker build -t alltheplaces .
     ```
 
 3.  Run the Docker container:
+
     ```bash
     docker run --rm -it alltheplaces
     ```
 
-## Contributing
+### Contributing Code
 
-We welcome contributions!
+Contribute to the project by creating spiders and helping to improve the data extraction process.  Please review the following guides:
 
-### Guide to Contributing
 *   [What should I call my spider?](docs/SPIDER_NAMING.md)
 *   [Using Wikidata and the Name Suggestion Index](docs/WIKIDATA.md)
 *   [Sitemaps make finding POI pages easier](docs/SITEMAP.md)
@@ -97,16 +111,11 @@ We welcome contributions!
 *   [What is expected in a pull request?](docs/PULL_REQUEST.md)
 *   [What we do behind the scenes](docs/PIPELINES.md)
 
-## Weekly Run
+### Weekly Run & Data Publication
 
-The output of the project is published regularly on the website [alltheplaces.xyz](https://www.alltheplaces.xyz/). To avoid overwhelming websites, only run the necessary spiders.
+The project's output is published regularly on [alltheplaces.xyz](https://www.alltheplaces.xyz/).
 
-## Contact
+## Contact Us
 
-*   **Issues:** Report issues or ask questions via the GitHub [issue tracker](https://github.com/alltheplaces/alltheplaces/issues).
-*   **Community:** Many contributors are available on the [OSM US Slack](https://slack.openstreetmap.us/) in the [#alltheplaces](https://osmus.slack.com/archives/C07EY4Y3M6F) channel.
-
-## License
-
-*   **Data:** The data generated by this project is available under the [Creative Commons’ CC-0 waiver](https://creativecommons.org/publicdomain/zero/1.0/).
-*   **Software:** The spider software (this repository) is licensed under the [MIT license](https://github.com/alltheplaces/alltheplaces/blob/master/LICENSE).
+*   **Issue Tracker:**  For communication, please use the project's [GitHub issue tracker](https://github.com/alltheplaces/alltheplaces/issues).
+*   **OSM US Slack:** Many contributors are present in the [#alltheplaces](https://osmus.slack.com/archives/C07EY4Y3M6F) channel on [OSM US Slack](https://slack.openstreetmap.us/).

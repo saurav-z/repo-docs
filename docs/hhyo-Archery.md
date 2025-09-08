@@ -1,8 +1,6 @@
 <div align="center">
 
-# Archery: SQL Audit and Query Platform
-
-**Archery is a powerful SQL audit and query platform designed to streamline database management and improve data security.**
+# Archery: Your Comprehensive SQL Audit and Query Platform
 
 [![Django CI](https://github.com/hhyo/Archery/actions/workflows/django.yml/badge.svg)](https://github.com/hhyo/Archery/actions/workflows/django.yml)
 [![Release](https://img.shields.io/github/release/hhyo/archery.svg)](https://github.com/hhyo/archery/releases/)
@@ -16,55 +14,54 @@
 
 [Documentation](https://archerydms.com/) | [FAQ](https://github.com/hhyo/archery/wiki/FAQ) | [Releases](https://github.com/hhyo/archery/releases/)
 
-![](https://github.com/hhyo/Archery/wiki/images/dashboard.png)
-
 </div>
+
+Archery is a powerful open-source platform designed for auditing SQL queries, managing databases, and improving overall database performance. **Simplify your database management workflow with Archery!**  For more information, see the original repository: [https://github.com/hhyo/Archery](https://github.com/hhyo/Archery).
 
 ## Key Features
 
-*   **Comprehensive Database Support:**  Supports a wide range of databases including MySQL, MsSQL, Redis, PgSQL, Oracle, MongoDB, Phoenix, ODPS, ClickHouse, Cassandra, and Doris.
-*   **SQL Auditing:** Review and approve SQL queries before execution to enhance data security.
-*   **SQL Querying:** Execute and manage SQL queries with ease.
-*   **Data Backup and Recovery:**  Facilitates data backup and recovery operations.
-*   **Data Dictionary:** Provides access to data dictionaries for various databases.
-*   **Slow Query Log Analysis:** Analyze and optimize database performance with slow query log support.
-*   **Session Management:** Offers robust session management capabilities.
-*   **User and Parameter Management:**  Manage users, roles, and database parameters efficiently.
-*   **Data Archiving:** Supports data archiving for long-term data storage.
+*   **SQL Auditing:** Review and analyze SQL queries to ensure security and optimize performance.
+*   **Query Execution:** Execute SQL queries against various supported database systems.
+*   **Database Management:**  Provides tools for managing and interacting with your databases.
+*   **Data Dictionary:** View and manage database schema information.
+*   **Performance Monitoring:** Access slow query logs for performance troubleshooting.
+*   **User Management:** Control user access and permissions within the platform.
+*   **Database Support:** Extensive support for multiple database types.
+*   **Data Archiving:** Archive data for long-term storage and compliance.
 
-## Supported Databases (Feature Matrix)
+## Database Support
 
-| Database      | Query | Audit | Execute | Backup | Data Dictionary | Slow Log | Session Mgmt | User Mgmt | Parameter Mgmt | Data Archiving |
-|---------------|-------|-------|---------|--------|-----------------|----------|--------------|-------------|----------------|----------------|
-| MySQL         | √     | √     | √       | √      | √               | √        | √            | √           | √              | √              |
-| MsSQL         | √     | ×     | √       | ×      | √               | ×        | ×            | ×           | ×              | ×              |
-| Redis         | √     | ×     | √       | ×      | ×               | ×        | ×            | ×           | ×              | ×              |
-| PgSQL         | √     | ×     | √       | ×      | ×               | ×        | ×            | ×           | ×              | ×              |
-| Oracle        | √     | √     | √       | √      | √               | ×        | √            | ×           | ×              | ×              |
-| MongoDB       | √     | √     | √       | ×      | ×               | ×        | √            | √           | ×              | ×              |
-| Phoenix       | √     | ×     | √       | ×      | ×               | ×        | ×            | ×           | ×              | ×              |
-| ODPS          | √     | ×     | ×       | ×      | ×               | ×        | ×            | ×           | ×              | ×              |
-| ClickHouse    | √     | √     | √       | ×      | ×               | ×        | ×            | ×           | ×              | ×              |
-| Cassandra     | √     | ×     | √       | ×      | ×               | ×        | ×            | ×           | ×              | ×              |
-| Doris         | √     | ×     | √       | ×      | ×               | ×        | ×            | ×           | ×              | ×              |
+| Database        | Query | Audit | Execute | Backup | Data Dictionary | Slow Log | Session Management | Account Management | Parameter Management | Data Archiving |
+|-----------------|-------|-------|---------|--------|-----------------|----------|--------------------|--------------------|----------------------|----------------|
+| MySQL           | √     | √     | √       | √      | √               | √        | √                  | √                  | √                    | √              |
+| MsSQL           | √     | ×     | √       | ×      | √               | ×        | ×                  | ×                  | ×                    | ×              |
+| Redis           | √     | ×     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                    | ×              |
+| PgSQL           | √     | ×     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                    | ×              |
+| Oracle          | √     | √     | √       | √      | √               | ×        | √                  | ×                  | ×                    | ×              |
+| MongoDB         | √     | √     | √       | ×      | ×               | ×        | √                  | √                  | ×                    | ×              |
+| Phoenix         | √     | ×     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                    | ×              |
+| ODPS            | √     | ×     | ×       | ×      | ×               | ×        | ×                  | ×                  | ×                    | ×              |
+| ClickHouse      | √     | √     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                    | ×              |
+| Cassandra       | √     | ×     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                    | ×              |
+| Doris           | √     | ×     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                    | ×              |
 
 ## Quick Start
 
 ### System Experience
 
-*   **Online Demo:** [https://demo.archerydms.com](https://demo.archerydms.com)
+Try out Archery directly: [Online Demo](https://demo.archerydms.com)
 
-    | Account  | Password |
-    | -------- | -------- |
-    | archer   | archer   |
+| Account | Password |
+| ------- | -------- |
+| archer  | archer   |
 
 ### Docker
 
-*   Refer to the [Docker Wiki](https://github.com/hhyo/archery/wiki/docker) for instructions.
+Refer to the documentation for Docker setup:  [Docker Instructions](https://github.com/hhyo/archery/wiki/docker)
 
 ## Manual Installation
 
-*   [Deployment Instructions](https://github.com/hhyo/archery/wiki/manual)
+Detailed installation instructions: [Deployment Guide](https://github.com/hhyo/archery/wiki/manual)
 
 ## Running Tests
 
@@ -74,94 +71,88 @@ python manage.py test -v 3
 
 ## Dependencies
 
-### Frameworks
-
+### Framework
 *   [Django](https://github.com/django/django)
 *   [Bootstrap](https://github.com/twbs/bootstrap)
 *   [jQuery](https://github.com/jquery/jquery)
 
 ### Frontend Components
+*   [metisMenu](https://github.com/onokumus/metismenu)
+*   [sb-admin-2](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2)
+*   [ace](https://github.com/ajaxorg/ace)
+*   [sql-formatter](https://github.com/zeroturnaround/sql-formatter)
+*   [bootstrap-table](https://github.com/wenzhixin/bootstrap-table)
+*   [bootstrap-editable](https://github.com/vitalets/x-editable)
+*   [bootstrap-select](https://github.com/snapappointments/bootstrap-select)
+*   [bootstrap-fileinput](https://github.com/kartik-v/bootstrap-fileinput)
+*   [bootstrap-datetimepicker](https://github.com/smalot/bootstrap-datetimepicker)
+*   [daterangepicker](https://github.com/dangrossman/daterangepicker)
+*   [bootstrap-switch](https://github.com/Bttstrp/bootstrap-switch)
+*   [marked](https://github.com/markedjs/marked)
 
-*   Menu: [metisMenu](https://github.com/onokumus/metismenu)
-*   Theme: [sb-admin-2](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2)
-*   Editor: [ace](https://github.com/ajaxorg/ace)
-*   SQL Formatting: [sql-formatter](https://github.com/zeroturnaround/sql-formatter)
-*   Table: [bootstrap-table](https://github.com/wenzhixin/bootstrap-table)
-*   Table Editing: [bootstrap-editable](https://github.com/vitalets/x-editable)
-*   Dropdown: [bootstrap-select](https://github.com/snapappointments/bootstrap-select)
-*   File Upload: [bootstrap-fileinput](https://github.com/kartik-v/bootstrap-fileinput)
-*   Date/Time Picker: [bootstrap-datetimepicker](https://github.com/smalot/bootstrap-datetimepicker)
-*   Date Range Picker: [daterangepicker](https://github.com/dangrossman/daterangepicker)
-*   Switch: [bootstrap-switch](https://github.com/Bttstrp/bootstrap-switch)
-*   Markdown Display: [marked](https://github.com/markedjs/marked)
-
-### Server-Side Components
-
-*   Task Queue: [django-q](https://github.com/Koed00/django-q)
-*   MySQL Connector: [mysqlclient-python](https://github.com/PyMySQL/mysqlclient-python)
-*   MsSQL Connector: [pyodbc](https://github.com/mkleehammer/pyodbc)
-*   Redis Connector: [redis-py](https://github.com/andymccurdy/redis-py)
-*   PostgreSQL Connector: [psycopg2](https://github.com/psycopg/psycopg2)
-*   Oracle Connector: [cx_Oracle](https://github.com/oracle/python-cx_Oracle)
-*   MongoDB Connector: [pymongo](https://github.com/mongodb/mongo-python-driver)
-*   Phoenix Connector: [phoenixdb](https://github.com/lalinsky/python-phoenixdb)
-*   ODPS Connector: [pyodps](https://github.com/aliyun/aliyun-odps-python-sdk)
-*   ClickHouse Connector: [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver)
-*   SQL Parsing: [sqlparse](https://github.com/andialbrecht/sqlparse)
-*   MySQL Binlog: [python-mysql-replication](https://github.com/noplay/python-mysql-replication)
-*   LDAP: [django-auth-ldap](https://github.com/django-auth-ldap/django-auth-ldap)
-*   Serialization: [simplejson](https://github.com/simplejson/simplejson)
-*   Date/Time Utilities: [python-dateutil](https://github.com/paxan/python-dateutil)
+### Backend Dependencies
+*   [django-q](https://github.com/Koed00/django-q)
+*   [mysqlclient-python](https://github.com/PyMySQL/mysqlclient-python)
+*   [pyodbc](https://github.com/mkleehammer/pyodbc)
+*   [redis-py](https://github.com/andymccurdy/redis-py)
+*   [psycopg2](https://github.com/psycopg/psycopg2)
+*   [cx_Oracle](https://github.com/oracle/python-cx_Oracle)
+*   [pymongo](https://github.com/mongodb/mongo-python-driver)
+*   [phoenixdb](https://github.com/lalinsky/python-phoenixdb)
+*   [pyodps](https://github.com/aliyun/aliyun-odps-python-sdk)
+*   [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver)
+*   [sqlparse](https://github.com/andialbrecht/sqlparse)
+*   [python-mysql-replication](https://github.com/noplay/python-mysql-replication)
+*   [django-auth-ldap](https://github.com/django-auth-ldap/django-auth-ldap)
+*   [simplejson](https://github.com/simplejson/simplejson)
+*   [python-dateutil](https://github.com/paxan/python-dateutil)
 
 ### Feature Dependencies
-
-*   Visualization: [pyecharts](https://github.com/pyecharts/pyecharts)
-*   MySQL Audit/Execute/Backup: [goInception](https://github.com/hanchuanchuan/goInception) | [inception](https://github.com/hhyo/inception)
-*   MySQL Index Optimization: [SQLAdvisor](https://github.com/Meituan-Dianping/SQLAdvisor)
-*   SQL Optimization/Compression: [SOAR](https://github.com/XiaoMi/soar)
-*   My2SQL: [my2sql](https://github.com/liuhr/my2sql)
-*   Table Structure Sync: [SchemaSync](https://github.com/hhyo/SchemaSync)
-*   Slow Log Analysis: [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html) | [aquila_v2](https://github.com/thinkdb/aquila_v2)
-*   Large Table DDL: [gh-ost](https://github.com/github/gh-ost) | [pt-online-schema-change](https://www.percona.com/doc/percona-toolkit/3.0/pt-online-schema-change.html)
-*   MyBatis XML Parsing: [mybatis-mapper2sql](https://github.com/hhyo/mybatis-mapper2sql)
-*   RDS Management: [aliyun-openapi-python-sdk](https://github.com/aliyun/aliyun-openapi-python-sdk)
-*   Data Encryption: [django-mirage-field](https://github.com/luojilab/django-mirage-field)
+*   [pyecharts](https://github.com/pyecharts/pyecharts)
+*   [goInception](https://github.com/hanchuanchuan/goInception)|[inception](https://github.com/hhyo/inception)
+*   [SQLAdvisor](https://github.com/Meituan-Dianping/SQLAdvisor)
+*   [SOAR](https://github.com/XiaoMi/soar)
+*   [my2sql](https://github.com/liuhr/my2sql)
+*   [SchemaSync](https://github.com/hhyo/SchemaSync)
+*   [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html)|[aquila_v2](https://github.com/thinkdb/aquila_v2)
+*   [gh-ost](https://github.com/github/gh-ost)|[pt-online-schema-change](https://www.percona.com/doc/percona-toolkit/3.0/pt-online-schema-change.html)
+*   [mybatis-mapper2sql](https://github.com/hhyo/mybatis-mapper2sql)
+*   [aliyun-openapi-python-sdk](https://github.com/aliyun/aliyun-openapi-python-sdk)
+*   [django-mirage-field](https://github.com/luojilab/django-mirage-field)
 
 ## Contributing
 
-Explore the development plan and dependencies to identify areas for contribution.  Submit PRs or respond to corresponding issues. Your contributions to Archery are appreciated.
+We welcome contributions! Review the project's development plan and dependencies, claim issues, submit pull requests, or contribute in any way you can.
 
-Contribution methods include, but are not limited to:
+Contributions include, but aren't limited to:
+*   [Wiki Documentation](https://github.com/hhyo/Archery/wiki)
+*   Bug fixes
+*   New features
+*   Code optimization
+*   Test case enhancements
 
-*   [Wiki Documentation](https://github.com/hhyo/Archery/wiki) (Open for editing)
-*   Bug Fixes
-*   New Feature Submissions
-*   Code Optimization
-*   Test Case Improvements
+## Feedback and Community
 
-## Feedback & Discussions
-
-*   **Use Cases, Feature Requests, Questions:** [Discussions](https://github.com/hhyo/Archery/discussions)
-*   **Bug Reports:** [Issues](https://github.com/hhyo/archery/issues)
+*   For usage questions and feature requests: [Discussions](https://github.com/hhyo/Archery/discussions)
+*   To report bugs: [Issues](https://github.com/hhyo/archery/issues)
 
 ## Acknowledgements
 
-*   [archer](https://github.com/jly8866/archer): Archery is built upon the foundation of the archer project.
-*   [goInception](https://github.com/hanchuanchuan/goInception): A MySQL operations tool with audit, execution, backup, and rollback generation capabilities.
-*   [JetBrains Open Source](https://www.jetbrains.com/zh-cn/opensource/?from=archery) for providing free IDE licenses for the project.
+*   [archer](https://github.com/jly8866/archer): Archery is built upon archer.
+*   [goInception](https://github.com/hanchuanchuan/goInception): A MySQL operation tool that includes auditing, execution, backup, and rollback statement generation.
+*   [JetBrains Open Source](https://www.jetbrains.com/zh-cn/opensource/?from=archery): Provides free IDE licenses.
   [<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" width="200"/>](https://www.jetbrains.com/opensource/)
 
-##  [Back to the Archery Repository](https://github.com/hhyo/Archery)
 ```
-
 Key improvements and SEO considerations:
 
-*   **Clear, Concise Hook:** The opening sentence is a concise and benefit-driven description, great for drawing in users.
-*   **Keyword-Rich Headings:** Uses relevant keywords like "SQL Audit," "Query Platform," and database names.
-*   **Feature-Focused Structure:** The use of bullet points makes the key benefits easily scannable.
-*   **Database-Specific Focus:** The "Supported Databases" section is very useful.
-*   **Call to Action:** Directs users to the repo for more information at the bottom, instead of just a link in the beginning, which is the primary goal of the README.
-*   **Well-Organized and Readable:** The structure is improved for readability.
-*   **Clear Sectioning:**  Uses headings and subheadings to organize the document.
-*   **Included full Dependency list** (helpful to users)
-*   **Complete Feature Table**
+*   **Clear Title & Hook:**  The title is concise and the hook is designed to attract searchers.
+*   **Keywords:**  Uses relevant keywords like "SQL audit," "query platform," "database management," and database types.
+*   **Headings:** Uses clear headings (H2s) to structure the information, making it easy to read and improving SEO.
+*   **Bulleted Lists:**  Uses bullet points for key features, making them scannable and easy to understand.
+*   **Concise Language:** The text is streamlined and avoids unnecessary jargon.
+*   **Links:** Includes links to documentation, FAQs, and the original repository (crucial).
+*   **Database Support Table:** This is very important, allowing users to see database support immediately.
+*   **Call to Action:**  Provides clear instructions for how to try out and use the platform.
+*   **Community and Contribution sections:** Clear ways to contribute and get support, encouraging user engagement.
+*   **Acknowledgements:**  Gives credit where it's due.

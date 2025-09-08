@@ -6,42 +6,40 @@
 
 # LibrePhotos: Your Self-Hosted, Open-Source Photo Management Solution
 
-Tired of proprietary photo storage? **LibrePhotos** offers a powerful, open-source alternative for organizing, sharing, and enjoying your photos and videos. ([View on GitHub](https://github.com/LibrePhotos/librephotos))
+Tired of proprietary photo storage? **LibrePhotos** offers a feature-rich, open-source alternative for managing and sharing your precious memories.  Visit the original repository on [GitHub](https://github.com/LibrePhotos/librephotos).
 
-[<img src="https://github.com/LibrePhotos/librephotos/blob/dev/screenshots/mockups_main_fhd.png?raw=true" alt="LibrePhotos Interface" width="700">](https://github.com/LibrePhotos/librephotos)
-<sub>Mockup designed by rawpixel.com / Freepik</sub>
+## Key Features
 
-## Key Features:
+*   **Comprehensive Media Support:** Supports photos (including RAW formats) and videos.
+*   **Intelligent Organization:** Offers a timeline view, automatic album generation based on events, and metadata-based search.
+*   **Advanced Image Analysis:** Leverages face recognition, object/scene detection, and semantic image search to help you find photos faster.
+*   **Multi-User Support:** Allows multiple users to manage and share their photo libraries.
+*   **Reverse Geocoding:** Automatically adds location data to your photos.
 
-*   📸 **Comprehensive Media Support:** Handles photos, including RAW formats, and videos.
-*   🗓️ **Timeline View:** Easily browse your memories chronologically.
-*   📂 **Automated Organization:** Scans your file system and generates albums based on events.
-*   🧑‍🤝‍🧑 **Multi-User Support:** Share and manage your photos with others.
-*   🤖 **Intelligent Features:** Includes face recognition, object/scene detection, and semantic image search.
-*   📍 **Geotagging & Mapping:** Reverse geocoding and location-based organization.
-*   🔍 **Metadata Search:** Powerful search capabilities using image metadata.
+## Demo
 
-## Installation & Getting Started
+*   **Stable Demo:** [https://demo1.librephotos.com/](https://demo1.librephotos.com/) - User: `demo`, Password: `demo1234`
+*   **Development Demo:** [https://demo2.librephotos.com/](https://demo2.librephotos.com/) - User: `demo`, Password: `demo1234`
 
-Detailed installation instructions are available in the [LibrePhotos documentation](https://docs.librephotos.com/docs/installation/standard-install).
+## Installation
 
-*   **Demo:** Experience LibrePhotos firsthand:
-    *   **Stable Demo:** [https://demo1.librephotos.com/](https://demo1.librephotos.com/) (demo/demo1234)
-    *   **Development Demo:** [https://demo2.librephotos.com/](https://demo2.librephotos.com/) (demo/demo1234)
+Get started with LibrePhotos by following the step-by-step instructions in our [documentation](https://docs.librephotos.com/docs/installation/standard-install).
 
-## How You Can Help
+## How to Contribute
 
-*   ⭐ **Star** the repository on GitHub!
-*   🚀 **Develop:** Contribute to the project. Get started by following [this guide](https://docs.librephotos.com/docs/development/dev-install).
-*   🗒️ **Document:** Improve the documentation through pull requests [here](https://github.com/LibrePhotos/librephotos.docs).
-*   🧪 **Test:** Help find bugs using the ```dev``` tag and report any issues.
-*   🧑‍🤝‍🧑 **Spread the Word:** Share LibrePhotos with others.
-*   🌐 **Translate:** Make LibrePhotos accessible to more people via [weblate](https://hosted.weblate.org/engage/librephotos/).
-*   💸 **Donate:** Support the project's development [here](https://github.com/sponsors/derneuere).
+Help build a better LibrePhotos!
+
+*   ⭐ **Star** the repository to show your support!
+*   🚀 **Develop:** Contribute code following [this guide](https://docs.librephotos.com/docs/development/dev-install).
+*   🗒️ **Documentation:** Improve documentation through pull requests [here](https://github.com/LibrePhotos/librephotos.docs)
+*   🧪 **Testing:** Help find bugs by using the ```dev``` tag and reporting issues.
+*   🧑‍🤝‍🧑 **Outreach:** Spread the word about LibrePhotos.
+*   🌐 **Translations:** Make LibrePhotos accessible to more people with [weblate](https://hosted.weblate.org/engage/librephotos/).
+*   💸 [**Donate**](https://github.com/sponsors/derneuere) to support the developers.
 
 ## Technologies Used
 
-LibrePhotos leverages several powerful open-source libraries and services:
+LibrePhotos utilizes the following technologies:
 
 *   **Image Conversion:** [ImageMagick](https://github.com/ImageMagick/ImageMagick)
 *   **Video Conversion:** [FFmpeg](https://github.com/FFmpeg/FFmpeg)
@@ -50,20 +48,6 @@ LibrePhotos leverages several powerful open-source libraries and services:
 *   **Face Classification/Clusterization:** [scikit-learn](https://scikit-learn.org/) and [hdbscan](https://github.com/scikit-learn-contrib/hdbscan)
 *   **Image Captioning:** [im2txt](https://github.com/HughKu/Im2txt)
 *   **Scene Classification:** [places365](http://places.csail.mit.edu/)
-*   **Reverse Geocoding:** [Mapbox](https://www.mapbox.com/) (API key required)
+*   **Reverse Geocoding:** [geopy](https://github.com/geopy/geopy)
 
 [discord]: https://discord.gg/xwRvtSDGWb
-```
-Key improvements and SEO considerations:
-
-*   **Clear Hook:** Starts with a compelling one-sentence introduction.
-*   **Keyword Optimization:** Includes relevant keywords like "self-hosted," "open-source," "photo management," "photo organization," "video management."
-*   **Subheadings:** Uses clear and concise subheadings for readability.
-*   **Bulleted Lists:** Emphasizes key features and benefits with bullet points.
-*   **Call to Action:** Encourages users to view the demo and get involved.
-*   **Internal Links:** Links to documentation and other relevant resources.
-*   **External Links:** Includes links to all tools used in the project for reference.
-*   **Concise Language:** Avoids unnecessary jargon.
-*   **Image Optimization:** Added an image to the top.
-*   **GitHub Link:** Provides a direct link back to the GitHub repository.
-*   **Width Adjustment**: Adjusted the width of the image for a better presentation.
