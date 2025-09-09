@@ -1,64 +1,38 @@
-# EasyR1: The Premier Framework for Efficient and Scalable Reinforcement Learning of Multimodal Models
+# EasyR1: Supercharge Your RL Training with a High-Performance Framework
 
-[EasyR1](https://github.com/hiyouga/EasyR1) is a cutting-edge, open-source framework for training multimodal Reinforcement Learning (RL) models, offering unparalleled efficiency and scalability. Leveraging advanced techniques like HybridEngine and vLLM's SPMD mode, EasyR1 empowers researchers and developers to train large language and vision-language models with ease.
+EasyR1 is a cutting-edge, scalable, and efficient Reinforcement Learning (RL) training framework designed for multi-modality models, offering a streamlined approach to RL development; [view the original repo](https://github.com/hiyouga/EasyR1).
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/EasyR1)](https://github.com/hiyouga/EasyR1/stargazers)
 [![Twitter](https://img.shields.io/twitter/follow/llamafactory_ai)](https://twitter.com/llamafactory_ai)
 
-*   **Used by [Amazon Web Services](https://aws.amazon.com/cn/blogs/china/building-llm-model-hub-based-on-llamafactory-and-easyr1/)**
+**Key Features:**
 
-## Key Features
+*   **Supported Models:**
+    *   Llama3, Qwen2, Qwen2.5, and Qwen3 language models.
+    *   Qwen2 and Qwen2.5-VL vision language models.
+    *   DeepSeek-R1 distill models.
+*   **Supported Algorithms:** GRPO, DAPO, Reinforce++, ReMax, and RLOO.
+*   **Flexible Datasets:** Supports any text or vision-text dataset in a specified format.
+*   **Efficient Training:** Features padding-free training, checkpoint resuming, and comprehensive tracking with Wandb, SwanLab, Mlflow, and Tensorboard.
+*   **Scalable Architecture:** Leverages the power of **[HybirdEngine](https://arxiv.org/abs/2409.19256)** and **[vLLM](https://github.com/vllm-project/vllm)**'s SPMD mode.
 
-*   **Model Support:**
-    *   Llama3, Qwen2, Qwen2.5, and Qwen3 language models
-    *   Qwen2 and Qwen2.5-VL vision-language models
-    *   DeepSeek-R1 distill models
-*   **Algorithms:**
-    *   GRPO, DAPO, Reinforce++, ReMax, and RLOO
-*   **Dataset Compatibility:** Supports any text or vision-text dataset in a specific format.
-*   **Training Enhancements:** Padding-free training, checkpoint resuming, and comprehensive tracking with Wandb, SwanLab, MLflow, and Tensorboard.
-*   **Multi-Node Support:**  Enables training of large models across multiple GPUs.
-*   **Community Contributions:**  Extensive list of related projects using EasyR1.
+**Used By:** [Amazon Web Services](https://aws.amazon.com/cn/blogs/china/building-llm-model-hub-based-on-llamafactory-and-easyr1/)
 
 ## Getting Started
 
-### Requirements
-
-*   Python 3.9+
-*   transformers>=4.51.0
-*   flash-attn>=2.4.3
-*   vllm>=0.8.3
-
-**Pre-built Docker Image (Recommended):**
+### Installation
 
 ```bash
-docker pull hiyouga/verl:ngc-th2.7.1-cu12.6-vllm0.10.0
-docker run -it --ipc=host --gpus=all hiyouga/verl:ngc-th2.7.1-cu12.6-vllm0.10.0
+git clone https://github.com/hiyouga/EasyR1.git
+cd EasyR1
+pip install -e .
 ```
 
-**Alternative: Apptainer**
+### Run a Quick Example
 
-```bash
-apptainer pull easyr1.sif docker://hiyouga/verl:ngc-th2.7.1-cu12.6-vllm0.10.0
-apptainer shell --nv --cleanenv --bind /mnt/your_dir:/mnt/your_dir easyr1.sif
-```
+Train a Qwen2.5-VL model on the Geometry3K dataset in just three steps:
 
-### Hardware Requirements (Estimated)
-
-See the original README for the detailed hardware requirements table.  BF16 training is enabled with `worker.actor.fsdp.torch_dtype=bf16` and `worker.actor.optim.strategy=adamw_bf16`.
-
-### Tutorial: Training Qwen2.5-VL GRPO
-
-Follow these steps to train a Qwen2.5-VL model using the GRPO algorithm on the Geometry3K dataset:
-
-1.  **Installation:**
-
-    ```bash
-    git clone https://github.com/hiyouga/EasyR1.git
-    cd EasyR1
-    pip install -e .
-    ```
-
+1.  **Installation:** (See above)
 2.  **GRPO Training:**
 
     ```bash
@@ -71,13 +45,44 @@ Follow these steps to train a Qwen2.5-VL model using the GRPO algorithm on the G
     python3 scripts/model_merger.py --local_dir checkpoints/easy_r1/exp_name/global_step_1/actor
     ```
 
-    **Tips:**
-    *   Use `export HF_ENDPOINT=https://hf-mirror.com` for Hugging Face connection issues.
-    *   Use `bash examples/qwen2_5_vl_7b_geo3k_swanlab.sh` for SwanLab logging.
+### Environment Setup
 
-## Custom Datasets
+**Recommended:** Use the [pre-built Docker image](https://hub.docker.com/r/hiyouga/verl):
 
-EasyR1 supports a variety of datasets. Refer to example datasets for format guidance.
+```bash
+docker pull hiyouga/verl:ngc-th2.7.1-cu12.6-vllm0.10.0
+docker run -it --ipc=host --gpus=all hiyouga/verl:ngc-th2.7.1-cu12.6-vllm0.10.0
+```
+
+**Alternative:** Apptainer (if Docker is not supported):
+
+```bash
+apptainer pull easyr1.sif docker://hiyouga/verl:ngc-th2.7.1-cu12.6-vllm0.10.0
+apptainer shell --nv --cleanenv --bind /mnt/your_dir:/mnt/your_dir easyr1.sif
+```
+
+**Software Requirements:**
+
+*   Python 3.9+
+*   transformers>=4.51.0
+*   flash-attn>=2.4.3
+*   vllm>=0.8.3
+
+### Hardware Requirements
+
+*Estimated GPU Memory:*
+
+| Method                   | Bits |  1.5B  |   3B   |   7B   |   32B   |   72B   |
+| ------------------------ | ---- | ------ | ------ | ------ | ------- | ------- |
+| GRPO Full Fine-Tuning    |  AMP | 2\*24GB | 4\*40GB | 8\*40GB | 16\*80GB | 32\*80GB |
+| GRPO Full Fine-Tuning    | BF16 | 1\*24GB | 1\*40GB | 4\*40GB |  8\*80GB | 16\*80GB |
+
+> \[!NOTE]
+> Enable bf16 training using `worker.actor.fsdp.torch_dtype=bf16` and `worker.actor.optim.strategy=adamw_bf16`.
+
+## Custom Dataset
+
+Prepare your dataset in a format compatible with the example datasets:
 
 *   Text dataset: [hiyouga/math12k](https://huggingface.co/datasets/hiyouga/math12k)
 *   Image-text dataset: [hiyouga/geometry3k](https://huggingface.co/datasets/hiyouga/geometry3k)
@@ -86,63 +91,50 @@ EasyR1 supports a variety of datasets. Refer to example datasets for format guid
 
 ## Multi-Node Training
 
-EasyR1 is designed for large-scale training.
-
-1.  Start Ray head node:
+1.  **Start Head Node:**
 
     ```bash
     ray start --head --port=6379 --dashboard-host=0.0.0.0
     ```
 
-2.  Start Ray worker nodes, connecting to the head node:
+2.  **Start Worker Nodes:**
 
     ```bash
     ray start --address=<head_node_ip>:6379
     ```
 
-3.  Check the Ray resource pool.
-4.  Run the training script on the Ray head node.
+3.  **Check Ray Status:**
+
+    ```bash
+    ray status
+    ```
+
+4.  **Run Training Script (on Head Node):**
 
     ```bash
     bash examples/qwen2_5_vl_7b_geo3k_grpo.sh
     ```
 
-For detailed instructions on multi-node training, refer to the [veRL's official documentation](https://verl.readthedocs.io/en/latest/start/multinode.html).
+## Other Baselines
 
-## Related Projects
+*   CLEVR-70k-Counting
+*   GeoQA-8k
 
-EasyR1 has been leveraged by many other projects in the field, including the following:
+## Performance Baselines
 
-*   MMR1
-*   Vision-R1
-*   Seg-Zero
-*   MetaSpatial
-*   Temporal-R1
-*   NoisyRollout
-*   GUI-R1
-*   R1-Track
-*   VisionReasoner
-*   MM-UPT
-*   RL-with-Cold-Start
-*   ViGoRL
-*   Revisual-R1
-*   SophiaVL-R1
-*   Vision-Matters
-*   VTool-R1
-*   Long-RL
+See [baselines.md](assets/baselines.md).
 
-## Known Bugs & TODO
+## Awesome Projects Using EasyR1
 
-*   Support LoRA (high priority).
-*   Support ulysses parallelism for VLMs (middle priority).
-*   Support more VLM architectures.
-*   Vision language models are not compatible with ulysses parallelism yet.
+*   **MMR1**: Advancing the Frontiers of Multimodal Reasoning. [[code]](https://github.com/LengSicong/MMR1)
+*   **Vision-R1**: Incentivizing Reasoning Capability in Multimodal Large Language Models. [[code]](https://github.com/Osilly/Vision-R1) [[arxiv]](https://arxiv.org/abs/2503.06749)
+*   ... (and many more, see the original README for full list with links)
 
-### FAQs and Troubleshooting
+## Frequently Asked Questions (FAQs)
 
-*   **ValueError: Image features and image tokens do not match:** Increase `data.max_prompt_length` or reduce `data.max_pixels`.
+*   **ValueError: Image features and image tokens do not match:**  Increase `data.max_prompt_length` or decrease `data.max_pixels`.
 *   **RuntimeError: CUDA Error: out of memory:** Reduce `worker.rollout.gpu_memory_utilization` and enable `worker.actor.offload.offload_params`.
-*   **RuntimeError: 0 active drivers ([]). There should only be one.:** Uninstall `deepspeed` from the current python environment.
+*   **RuntimeError: 0 active drivers ([]). There should only be one.:**  Uninstall `deepspeed`.
 
 ## Citation
 
@@ -162,3 +154,13 @@ EasyR1 has been leveraged by many other projects in the field, including the fol
   year    = {2024},
   journal = {arXiv preprint arXiv: 2409.19256}
 }
+```
+
+## TODO
+
+*   Support LoRA.
+*   Support ulysses parallelism for VLMs.
+*   Support more VLM architectures.
+
+> \[!NOTE]
+> Supervised fine-tuning and inference scripts are not provided in this project. Consider using [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory).

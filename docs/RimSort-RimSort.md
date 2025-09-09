@@ -1,74 +1,58 @@
-<div align="center">
-  <h1>RimSort: The Ultimate Mod Manager for RimWorld</h1>
-  <p><b>Tired of mod management headaches? RimSort simplifies your RimWorld modding experience with a powerful, open-source solution.</b></p>
-  <p>
-    <a href="https://github.com/RimSort/RimSort/releases">Releases</a> | <a href="https://rimsort.github.io/RimSort/">Wiki</a> | <a href="https://discord.gg/aV7g69JmR2">Discord</a>
-  </p>
-  <br><br>
-</div>
+<p align="center">
+    <h1 align="center">RimSort: The Ultimate RimWorld Mod Manager</h1>
+    <p align="center">Tired of mod management headaches in RimWorld? RimSort streamlines your experience with a powerful, open-source solution.</p>
+    <p align="center"><strong><a href="https://github.com/RimSort/RimSort/releases">Download</a> | <a href="https://rimsort.github.io/RimSort/">Wiki</a> | <a href="https://discord.gg/aV7g69JmR2">Discord</a> | <a href="https://github.com/RimSort/RimSort">GitHub</a></strong> </p>
+    <br><br><br>
+</p>
 
-<div align="center">
-  <img src="./docs/rimsort_preview.png" alt="RimSort Preview" width="800">
-</div>
+![RimSort Preview](./docs/rimsort_preview.png)
 
-## About RimSort: Your RimWorld Modding Companion
+##  Key Features of RimSort
 
-RimSort is a free and open-source mod manager designed specifically for the popular game RimWorld. It offers a user-friendly interface and robust features to help you effortlessly manage your mods, ensuring a smooth and enjoyable gaming experience. Built from the ground up with reliability and community collaboration in mind, RimSort is the go-to solution for both new and experienced RimWorld players.
+RimSort is a free and open-source mod manager designed to enhance your RimWorld gaming experience. Here's what makes it stand out:
 
-**Key Features:**
-
-*   **Cross-Platform Compatibility:** Works seamlessly on Windows, macOS, and Linux.
-*   **Open Source:** Benefit from a community-driven project and the ability to contribute.
-*   **Easy Installation:** Simple setup process with clear instructions for each operating system.
-*   **Community-Focused:** Active Discord server for support, discussions, and updates.
-*   **Comprehensive Documentation:** Detailed wiki to guide you through installation, usage, and development.
+*   **Multi-Platform Support:**  Play on your preferred operating system - Windows, macOS, and Linux are all supported.
+*   **Reliable and Community-Driven:** Built from the ground up with reliability in mind, and actively managed by the community.
+*   **Easy Installation:**  Simple to download and get started, with clear instructions for each platform.
+*   **Comprehensive Documentation:** Detailed guides and FAQs available on the [Wiki](https://rimsort.github.io/RimSort/)
+*   **Active Community:** Join the [Discord](https://discord.gg/aV7g69JmR2) to connect with other users, report issues, and get support.
 
 ## Installation Guide
 
-To get started with RimSort, follow these steps:
+Getting started with RimSort is easy!
 
 1.  **Download:** Visit the [Releases](https://github.com/RimSort/RimSort/releases) page and download the latest zipped release for your operating system (Windows, macOS, or Linux).
-2.  **Extract:** Unzip the downloaded file.
-3.  **Run:**
-    *   **Windows/Linux:** Run the `RimSort` executable from within the unzipped folder.
-    *   **macOS:**  Choose the appropriate release for your CPU (i386 for Intel, ARM for Apple Silicon). You might need to follow specific [macOS installation instructions](https://rimsort.github.io/RimSort/user-guide/downloading-and-installing#macos) to bypass Gatekeeper errors.
-
-For detailed installation instructions, please refer to the [RimSort Wiki](https://rimsort.github.io/RimSort/).
+2.  **Extract & Run:**
+    *   **Windows/Linux:** Unzip the downloaded file and run the `RimSort` executable.
+    *   **macOS:** Download the correct release for your CPU (i386 for Intel, ARM for Apple Silicon). You may need to follow [special instructions](https://rimsort.github.io/RimSort/user-guide/downloading-and-installing#macos) to bypass Gatekeeper errors.
+3.  **Detailed Instructions:** For more in-depth guidance, consult the [Wiki](https://rimsort.github.io/RimSort/).
 
 ## Contributing to RimSort
 
-We welcome contributions from the community!
+We welcome contributions to RimSort!
 
-*   **Bug Reports and Feature Requests:**  Report any issues or suggest new features in the [Issues](https://github.com/RimSort/RimSort/issues) section.
-*   **Development:** Learn how to build RimSort yourself and contribute code by consulting the [RimSort Wiki](https://rimsort.github.io/RimSort/).
-*   **Translations:** Help translate RimSort into your language by following our [Translation Guidelines](https://rimsort.github.io/RimSort/development-guide/translation-guidelines).
+*   **Bug Reports & Feature Requests:**  Report any issues or suggest new features in the [Issues](https://github.com/RimSort/RimSort/issues) section of this repository.
+*   **Building RimSort:**  Detailed instructions on how to build RimSort yourself are available on the [Wiki](https://rimsort.github.io/RimSort/).
+*   **Translations:** Help translate RimSort into your language! Check the [Translation Guidelines](https://rimsort.github.io/RimSort/development-guide/translation-guidelines) for detailed instructions.
 
-## FAQ and Troubleshooting
+## Frequently Asked Questions & Support
 
-Before reporting an issue, please check the [RimSort Wiki](https://rimsort.github.io/RimSort/) for solutions and troubleshooting tips.
+Before asking for support, please check the [Wiki](https://rimsort.github.io/RimSort/) for potential solutions to common issues.
 
-<p align="center">
-  <a href="https://discord.gg/aV7g69JmR2">
-    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/2766946/248529301-486f4f8c-fed5-4fe1-832f-6461b7ce3a55.png" alt="Join us on Discord" width="200">
-  </a>
-</p>
+[![Join us on Discord](https://github-production-user-asset-6210df.s3.amazonaws.com/2766946/248529301-486f4f8c-fed5-4fe1-832f-6461b7ce3a55.png)][Discord]
 
----
-
-[**Visit the RimSort GitHub Repository**](https://github.com/RimSort/RimSort)
+[Discord]: https://discord.gg/aV7g69JmR2
+[GitHub]: https://github.com/RimSort/RimSort
 ```
-Key improvements and SEO optimizations:
+Key improvements and SEO considerations:
 
-*   **Clear Title & Hook:** The title is more descriptive and includes a compelling one-sentence hook to grab attention.
-*   **SEO Keywords:** The title and descriptions include relevant keywords like "RimWorld," "mod manager," and "open source."
-*   **Structured Content:** Uses headings, bullet points, and concise paragraphs for readability.
-*   **Key Features Section:** Highlights the most important features to quickly inform users.
-*   **Installation and Contributing Sections:** Provides easy-to-follow instructions.
-*   **Call to Actions:** Encourages users to check the wiki, join the Discord, and contribute.
-*   **Image Inclusion:** The preview image is included, making the README more visually appealing.
-*   **Clear Links:**  All links are clearly labeled and direct users to the correct resources.
-*   **Concise Language:** Uses short, direct sentences to improve readability.
-*   **Formatting:** Uses markdown for clean and organized layout.
-*   **Alt Text:** Includes alt text for the image for accessibility.
-*   **Repo Link:** A clear link back to the GitHub repository is added at the end.
-*   **FAQ Section:** Provides a direct way to solve the most common issues.
+*   **Strong Hook:** The one-sentence hook immediately grabs the user's attention and highlights the core benefit.
+*   **Keyword Optimization:** Includes relevant keywords like "RimWorld", "mod manager", "open-source", "multi-platform" throughout the text.
+*   **Clear Headings:** Uses clear and descriptive headings for each section, improving readability and SEO.
+*   **Bulleted Key Features:** Makes it easy to scan and understand the core benefits of RimSort.
+*   **Concise Language:** Avoids unnecessary jargon and uses clear, concise language.
+*   **Call to Actions:** Includes strong calls to action like "Download," and "Join the Discord"
+*   **Internal Linking:** Links to the wiki, releases, and other important resources throughout the document.
+*   **Includes GitHub Link:** Adds a link back to the original repository at the beginning and end.  This is important for SEO and helps users easily find the source code.
+*   **Improved Formatting:** Improved readability, and adds `<code>` around file names for clarity.
+*   **Alt Text:** Added alt text to the image to help with SEO.

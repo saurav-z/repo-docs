@@ -1,55 +1,48 @@
-# Robot Framework Browser Library: Automate Web Testing with Ease
+# Robot Framework Browser Library
 
-🤖 Elevate your web automation with the Robot Framework Browser library, powered by Playwright, offering speed, reliability, and in-depth visibility.  [Check it out on GitHub](https://github.com/MarketSquare/robotframework-browser)
+Automate your web browser testing with the power of Playwright and Robot Framework.  This library provides a robust and reliable solution for modern web automation, offering speed, reliability, and clear visibility into your testing processes.  Visit the [Robot Framework Browser Library GitHub repository](https://github.com/MarketSquare/robotframework-browser) for more information.
 
-**Key Features:**
+## Key Features
 
-*   🚀 **Blazing Fast:** Experience rapid automation through Playwright.
-*   ✅ **Rock-Solid Reliability:**  Ensure dependable test execution.
-*   🔬 **Enhanced Visibility:** Gain deep insights into your test runs.
-*   ⚙️ **Ergonomic Selectors:**  Use intuitive CSS, XPath, and text selectors.
-*   🔌 **JavaScript Extension:**  Extend functionality with custom JavaScript.
-*   📱 **Device Emulation:** Test on various devices using device descriptors.
-*   📡 **HTTP Request Handling:** Send and parse HTTP requests and responses.
-*   🚦 **Asynchronous Operations:**  Handle asynchronous requests and responses.
-*   📦 **Built-in Transformers:** Convert deprecated keywords automatically (e.g., `Wait Until Network Is Idle` to `Wait For Load State`).
+*   **Cross-Browser Support:** Test across Chromium, Firefox, and WebKit.
+*   **Ergonomic Selectors:**  Simplify element selection with intuitive syntax, supporting chaining of text, CSS, and XPath selectors.
+*   **JavaScript Integration:** Extend functionality with custom JavaScript code execution within the browser.
+*   **Asynchronous Operations:**  Easily handle asynchronous tasks like waiting for HTTP requests and responses.
+*   **Device Emulation:** Test on different devices with device descriptor support.
+*   **HTTP Request Handling:**  Send and parse HTTP requests directly from your tests.
+*   **Parallel Test Execution:**  Run tests concurrently using Pabot for faster execution.
+*   **Authentication Support:** Re-use authentication credentials using `Save Storage State` functionality.
+*   **Robotidy Integration:** Includes an optional dependency with Robotidy, to transform deprecated keywords.
 
 ## Installation
 
-1.  **Prerequisites:** Ensure you have Python 3.9 or newer and Node.js (versions 20 and 22 LTS supported) installed.  Download from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
-2.  **Update Pip:**  `pip install -U pip`
-3.  **Install Library:**  `pip install robotframework-browser`
-4.  **Initialize Node Dependencies:**  `rfbrowser init`  (or `python -m Browser.entry init` if `rfbrowser` is not found).
+1.  **Prerequisites:** Ensure you have Python 3.9 or newer and Node.js (versions 20 and 22 LTS recommended) installed.
+2.  **Update pip:** `pip install -U pip`
+3.  **Install Library:** `pip install robotframework-browser`
+4.  **Initialize Node Dependencies:** Run `rfbrowser init`
 
-    *   By default, the library installs Chromium, Firefox, and WebKit browsers.
-    *   Use `rfbrowser init --skip-browsers` to skip browser binary installation, but you'll be responsible for their installation.
-    *   Specify browsers to install:  `rfbrowser init firefox chromium`.
+    *   If `rfbrowser` is not found, try `python -m Browser.entry init`
+    *   You can skip browser binaries installation by using `rfbrowser init --skip-browsers`.
+    *   You can install specific browsers with `rfbrowser init firefox chromium`.
 
-## Installation with transformer
+## Installation with Robotidy
 
-Starting from release 18.3.0 Browser library has optional dependency with
-[Robotidy](https://robotidy.readthedocs.io/en/stable/). Install library with Robotidy, run install with:
-`pip install robotframework-browser[tidy]`. Starting from 18.3.0 release, library will provide external
-Robotidy [transformer](https://robotidy.readthedocs.io/en/stable/external_transformers.html). Transformer provided
-by Browser library can be run with command: `rfbrowser transform --transformer-name /path/to/tests`. Example:
-`rfbrowser transform --wait-until-network-is-idle /path/to/tests` would transform deprecated `Wait Until Network Is Idle`
-keyword to `Wait For Load State` keyword. To see full list of transformers provided by Browser library, run
-command: `rfbrowser transform --help`.
+To install with Robotidy, use `pip install robotframework-browser[tidy]`. Use the transformer with the command: `rfbrowser transform --transformer-name /path/to/tests`.  See all transformers by running the command: `rfbrowser transform --help`.
 
-## Updating
+## Update Instructions
 
 1.  `pip install -U robotframework-browser`
 2.  `rfbrowser clean-node`
 3.  `rfbrowser init`
 
-## Uninstalling
+## Uninstall Instructions
 
 1.  `rfbrowser clean-node`
 2.  `pip uninstall robotframework-browser`
 
 ## Examples
 
-**Robot Framework:**
+**Robot Framework Example:**
 
 ```robotframework
 *** Settings ***
@@ -61,7 +54,7 @@ Example Test
     Get Text    h1    contains    Playwright
 ```
 
-**Python:**
+**Python Example:**
 
 ```python
 import Browser
@@ -71,82 +64,11 @@ assert 'Playwright' in browser.get_text("h1")
 browser.close_browser()
 ```
 
-**JavaScript Extension:**
-
-```javascript
-async function myGoToKeyword(url, page, logger) {
-    logger("Going to " + url)
-    return await page.goto(url);
-}
-myGoToKeyword.rfdoc = "This is my own go to keyword";
-exports.__esModule = true;
-exports.myGoToKeyword = myGoToKeyword;
-```
-
-```robotframework
-*** Settings ***
-Library   Browser  jsextension=${CURDIR}/mymodule.js
-
-*** Test Cases ***
-Example Test
-   New Page
-   myGoToKeyword   https://www.robotframework.org
-```
-**Ergonomic Selector Syntax:**
-```robotframework
-# Select element containing text "Login" with text selector strategy
-# and select it's parent `input` element with xpath
-Click    "Login" >> xpath=../input
-# Select element with CSS strategy and select button in it with text strategy
-Click    div.dialog >> "Ok"
-```
-**Evaluate in browser page:**
-```robotframework
-New Page   ${LOGIN_URL}
-${ref}=    Get Element    h1
-Get Property    ${ref}    innerText    ==    Login Page
-Evaluate JavaScript    ${ref}    (elem) => elem.innerText = "abc"
-Get Property    ${ref}    innerText    ==    abc
-```
-**Asynchronously waiting for HTTP requests and responses:**
-```robotframework
-# The button with id `delayed_request` fires a delayed request. We use a promise to capture it.
-${promise}=    Promise To    Wait For Response    matcher=    timeout=3s
-Click    \#delayed_request
-${body}=    Wait For    ${promise}
-```
-**Device Descriptors:**
-```robotframework
-${device}=  Get Device  iPhone X
-New Context  &{device}
-New Page
-Get Viewport Size  # returns { "width": 375, "height": 812 }
-```
-**Sending HTTP requests and parsing their responses:**
-```robotframework
-${response}=    HTTP    /api/post    POST    {"name": "John"}
-Should Be Equal    ${response.status}    ${200}
-```
-
-**More Examples:** Explore comprehensive examples in the [example](https://github.com/MarketSquare/robotframework-browser/tree/main/docs/examples/babelES2015) directory, and contribute your own at [robotframework-browser-extensions](https://github.com/MarketSquare/robotframework-browser-extensions).
-
-## Parallel Testing with Pabot
-
-*   Use `pabot` to run tests in parallel.
-*   Avoid using `--testlevelsplit` for smaller tests to reduce overhead.
-*   Share RF Browser node processes with `ROBOT_FRAMEWORK_BROWSER_NODE_PORT` environment variable.
-*   Clean up processes afterwards.
-
-## Re-using Authentication Credentials
-
-*   Use `Save Storage State` with local storage or cookies.  See example at [https://marketsquare.github.io/robotframework-browser/Browser.html#Save%20Storage%20State](https://marketsquare.github.io/robotframework-browser/Browser.html#Save%20Storage%20State)
-
 ## Development
 
-Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for development guidelines.
+Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for instructions on contributing to the project.
 
 ## Core Team
-
 *   Mikko Korpela
 *   Tatu Aalto
 *   Janne Härkönen (Alumnus)
@@ -155,4 +77,4 @@ Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for development guidelines.
 
 ## Contributors
 
-Thank you to all [187+ contributors](https://github.com/MarketSquare/robotframework-browser/graphs/contributors) who have made this project possible!
+This project is community driven and supported by [Robocorp](https://robocorp.com/) through [Robot Framework Foundation](https://robotframework.org/foundation/). (See the full list of contributors in the original README)

@@ -1,6 +1,6 @@
 <div align="center" markdown="1">
     <img src=".github/framework-logo-new.svg" width="80" height="80"/>
-    <h1>Frappe Framework</h1>
+    <h1>Frappe Framework: Low-Code Web Development Powerhouse</h1>
 </div>
 
 <div align="center">
@@ -16,19 +16,19 @@
     <a href="https://docs.frappe.io/framework">Documentation</a>
 </div>
 
-## Frappe Framework: Build Powerful Web Applications with Ease
+## Build Powerful Web Applications Faster with Frappe Framework
 
-**Frappe Framework** is a robust, low-code web framework built with Python and JavaScript, designed to streamline the development of real-world applications.
+Frappe Framework is a full-stack, low-code web application framework built with Python and JavaScript, offering a rapid development environment for real-world applications. Inspired by the semantic web, Frappe allows developers to focus on *what* applications do, not just *how* they look. Explore the framework and build complex, scalable applications with ease. Learn more at the [original Frappe Framework repository](https://github.com/frappe/frappe).
 
-### Key Features
+### Key Features & Benefits
 
-*   **Full-Stack Framework:** Develop complete web applications with both front-end and back-end capabilities using a single framework.
-*   **Built-in Admin Interface:** Quickly manage your application data with a customizable, pre-built admin dashboard.
-*   **Role-Based Permissions:** Secure your application with a comprehensive user and role management system.
-*   **REST API:** Automatically generate RESTful APIs for seamless integration with other systems.
-*   **Customizable Forms and Views:** Tailor forms and views to your specific needs using server-side scripting and client-side JavaScript.
-*   **Report Builder:** Empower users with a powerful reporting tool to create custom reports without coding.
-*   **Semantic Web Approach:** Build more consistent and extensible apps based on the underlying system's semantics, not just user interactions.
+*   **Full-Stack Development:** Develop both front-end and back-end using a unified framework, streamlining the development process.
+*   **Rapid Application Development (RAD):** Pre-built admin interface and automatic features accelerate development.
+*   **Built-in Admin Interface:** Easily manage application data with a customizable admin dashboard, saving time and effort.
+*   **Role-Based Permissions:** Implement robust security with comprehensive user and role management for access control.
+*   **REST API:** Automatically generate RESTful APIs for seamless integration with other systems and services.
+*   **Customizable Forms & Views:** Tailor forms and views to your specific needs using server-side scripting and client-side JavaScript.
+*   **Report Builder:** Empower users to create custom reports without coding, enabling data-driven decision-making.
 
 <details>
 <summary>Screenshots</summary>
@@ -38,11 +38,11 @@
 ![Role Permission Manager](.github/fw-rpm.png)
 </details>
 
-## Production Setup
+## Deployment & Hosting Options
 
-### Managed Hosting
+### Managed Hosting: Frappe Cloud
 
-Experience hassle-free Frappe application hosting with [Frappe Cloud](https://frappecloud.com), a user-friendly platform for open-source deployments.
+Experience hassle-free Frappe application hosting with [Frappe Cloud](https://frappecloud.com). It takes care of installation, setup, upgrades, monitoring, maintenance, and support.
 
 <div>
     <a href="https://frappecloud.com/" target="_blank">
@@ -53,60 +53,57 @@ Experience hassle-free Frappe application hosting with [Frappe Cloud](https://fr
     </a>
 </div>
 
-### Self Hosting
+### Self-Hosting
 
 #### Docker
 
-**Prerequisites:** docker, docker-compose, git. Refer to [Docker Documentation](https://docs.docker.com) for setup details.
+Prerequisites: docker, docker-compose, git. Refer [Docker Documentation](https://docs.docker.com) for more details on Docker setup.
 
-**Installation:**
+Run following commands:
 
-```bash
+```
 git clone https://github.com/frappe/frappe_docker
 cd frappe_docker
 docker compose -f pwd.yml up -d
 ```
 
-After a few minutes, access your site at `localhost:8080`. Use the default credentials:
+After a couple of minutes, site should be accessible on your localhost port: 8080. Use below default login credentials to access the site.
+- Username: Administrator
+- Password: admin
 
-*   **Username:** Administrator
-*   **Password:** admin
-
-See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM-based Docker setup.
+See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#to-run-on-arm64-architecture-follow-this-instructions) for ARM based docker setup.
 
 ## Development Setup
 
 ### Manual Install
 
-The easiest way: our install script for bench installs dependencies like MariaDB. See [bench](https://github.com/frappe/bench) for details.
+The Easy Way: our install script for bench will install all dependencies (e.g. MariaDB). See https://github.com/frappe/bench for more details.
 
-New passwords will be created for Frappe "Administrator", MariaDB root, and the frappe user (the script displays the passwords and saves them to `~/frappe_passwords.txt`).
+New passwords will be created for the Frappe "Administrator" user, the MariaDB root user, and the frappe user (the script displays the passwords and saves them to ~/frappe_passwords.txt).
 
-### Local Setup
+### Local
 
-Follow these steps to set up the repository locally:
+To setup the repository locally follow the steps mentioned below:
 
-1.  Set up bench by following the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) and start the server:
+1. Setup bench by following the [Installation Steps](https://docs.frappe.io/framework/user/en/installation) and start the server
+   ```
+   bench start
+   ```
 
-    ```bash
-    bench start
-    ```
+2. In a separate terminal window, run the following commands:
+   ```
+   # Create a new site
+   bench new-site frappe.localhost
+   ```
 
-2.  In a separate terminal:
+3. Open the URL `http://frappe.localhost:8000/app` in your browser, you should see the app running
 
-    ```bash
-    # Create a new site
-    bench new-site frappe.localhost
-    ```
+## Learn & Engage with the Frappe Community
 
-3.  Open `http://frappe.localhost:8000/app` in your browser.
-
-## Learning and Community
-
-*   [Frappe School](https://frappe.school) - Courses on Frappe Framework and ERPNext.
-*   [Official documentation](https://docs.frappe.io/framework) - Comprehensive framework documentation.
-*   [Discussion Forum](https://discuss.frappe.io/) - Connect with the Frappe community.
-*   [buildwithhussain.com](https://buildwithhussain.com) - See Frappe Framework in action.
+*   [Frappe School](https://frappe.school) - Online courses to learn Frappe Framework and ERPNext.
+*   [Official Documentation](https://docs.frappe.io/framework) - Comprehensive documentation for Frappe Framework.
+*   [Discussion Forum](https://discuss.frappe.io/) - Engage with the Frappe community.
+*   [buildwithhussain.com](https://buildwithhussain.com) - Real-world examples and tutorials on Frappe Framework.
 
 ## Contributing
 
@@ -114,8 +111,6 @@ Follow these steps to set up the repository locally:
 *   [Report Security Vulnerabilities](https://frappe.io/security)
 *   [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
 *   [Translations](https://crowdin.com/project/frappe)
-
-**[Explore the Frappe Framework on GitHub](https://github.com/frappe/frappe)**
 
 <br>
 <br>
@@ -127,16 +122,3 @@ Follow these steps to set up the repository locally:
         </picture>
     </a>
 </div>
-```
-
-Key improvements and explanations:
-
-*   **SEO Optimization:**  Keywords like "web framework," "Python," "JavaScript," "low-code," and relevant features are integrated naturally. The title and headings are also optimized.
-*   **Clear Hook:** The opening sentence immediately highlights the value proposition: "Build Powerful Web Applications with Ease."
-*   **Organized Structure:**  Uses clear headings and subheadings for readability and easier navigation.
-*   **Bulleted Key Features:** Makes the main benefits easy to scan.
-*   **Concise Language:**  Removed unnecessary words and streamlined descriptions.
-*   **Call to Action:** Includes a direct link back to the original repository.
-*   **Improved Formatting:**  Uses consistent formatting (code blocks, bolding, etc.) for better presentation.
-*   **Removed Redundancy:** Combined some similar information.
-*   **Emphasis on Value:**  Focuses on what the framework *does* (build apps) and *how* it benefits the user (with ease).

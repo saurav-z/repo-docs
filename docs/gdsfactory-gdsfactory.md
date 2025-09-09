@@ -1,10 +1,6 @@
-<!-- Improved README.md for GDSFactory -->
+# GDSFactory: Design, Simulate, and Fabricate Chips with Python
 
-# GDSFactory: Design & Fabricate Chips (Photonics, Analog, Quantum, MEMS) with Python
-
-**GDSFactory empowers engineers and researchers to design, simulate, and fabricate chips with an intuitive Python interface, unlocking the future of hardware design.**
-
-[View the original repository on GitHub](https://github.com/gdsfactory/gdsfactory)
+**GDSFactory empowers you to design, simulate, and fabricate cutting-edge chips (Photonics, Analog, Quantum, MEMS) using the power of Python.** ([Original Repo](https://github.com/gdsfactory/gdsfactory))
 
 [![docs](https://github.com/gdsfactory/gdsfactory/actions/workflows/pages.yml/badge.svg)](https://gdsfactory.github.io/gdsfactory/)
 [![PyPI](https://img.shields.io/pypi/v/gdsfactory)](https://pypi.org/project/gdsfactory/)
@@ -16,26 +12,25 @@
 
 ## Key Features
 
-*   **Intuitive Python Interface:** Design components and layouts using Python code.
-*   **Multi-Disciplinary Support:**  Design chips for photonics, analog circuits, quantum computing, and MEMS.
-*   **Automated Design Flow:** Streamlined design, simulation, verification (DRC, LVS), and validation.
-*   **Open-Source & Extensible:** Benefit from a growing community and easily add custom components.
-*   **CAD File Generation:** Create industry-standard GDSII, OASIS, STL, and GERBER files.
-*   **Simulation Integration:** Seamlessly integrates with popular simulation tools.
-*   **Foundry-Ready:** Support for various PDKs (Process Design Kits), with both open and NDA-required options.
-*   **Fast Performance:** Leveraging the KLayout C++ library for efficient handling of large designs.
+*   **Python-Based Design:** Define parametric components using Python code, enabling efficient and reproducible designs.
+*   **Comprehensive Design Flow:** Provides a full end-to-end flow from design to fabrication.
+*   **Multi-Format Output:** Generates industry-standard CAD files (GDSII, OASIS, STL, GERBER) for fabrication.
+*   **Built-in Simulation Interfaces:** Seamlessly integrates with leading simulation tools, streamlining your workflow.
+*   **Verification & Validation:** Includes DRC, DFM, and LVS capabilities for robust design verification.
+*   **Open-Source PDKs:** Access a growing library of open-source Process Design Kits (PDKs) for various foundries.
+*   **Extensible and Flexible:** Easily add new components, customize functionality, and adapt to your specific needs.
+*   **Fast Performance:** Built on the KLayout C++ library for superior speed, especially with large designs.
 
-## Core Functionality
+## Why Choose GDSFactory?
 
-GDSFactory offers a comprehensive end-to-end design flow:
-
-*   **Design (Layout, Simulation, Optimization):** Define parametric cell functions in Python to generate components. Test component settings, ports, and geometry to avoid unwanted regressions, and capture design intent in a schematic.
-*   **Verify (DRC, DFM, LVS):** Run simulations directly from the layout using our simulation interfaces, removing the need to redraw your components in simulation tools. Conduct component and circuit simulations, study design for manufacturing. Ensure complex layouts match their design intent through Layout Versus Schematic verification (LVS) and are DRC clean.
-*   **Validate:** Define layout and test protocols simultaneously for automated chip analysis post-fabrication. This allows you to extract essential component parameters, and build data pipelines from raw data to structured data to monitor chip performance.
+*   **Accelerate Your Design:** Design chips with Python and generate the CAD files you need.
+*   **Open-Source Advantage:** Benefit from a thriving open-source community, continuous improvements, and transparency.
+*   **Efficiency and Flexibility:** GDSFactory is designed for efficiency and flexibility, allowing you to streamline your design process.
+*   **Integration with Tools:** Easy to use with all major simulation tools, simplifying the workflow.
 
 ## Quick Start
 
-Get started with GDSFactory in minutes:
+Get started in minutes:
 
 ```bash
 pip install gdsfactory_install
@@ -70,7 +65,7 @@ c.show()
 
 ## Open-Source PDKs (No NDA Required)
 
-Access a range of open-source PDKs:
+Access a range of publicly available PDKs:
 
 *   [GlobalFoundries 180nm MCU CMOS PDK](https://gdsfactory.github.io/gf180/)
 *   [ANT / SiEPIC Ebeam UBC PDK](https://gdsfactory.github.io/ubc)
@@ -81,7 +76,8 @@ Access a range of open-source PDKs:
 
 ## Foundry PDKs (NDA Required)
 
-GDSFactory+ subscribers have access to advanced PDKs. Sign up at [GDSFactory.com](https://gdsfactory.com/).
+For access to the following PDKs, a **GDSFactory+** subscription is required. Visit [GDSFactory.com](https://gdsfactory.com/) to sign up.
+
 Available PDKs under NDA:
 
 *   AIM Photonics
@@ -99,63 +95,19 @@ Available PDKs under NDA:
 
 ## GDSFactory+
 
-**GDSFactory+** offers a user-friendly Graphical User Interface (GUI) on top of GDSFactory, powered by VSCode, for:
+**GDSFactory+** offers a Graphical User Interface (GUI) built on top of GDSFactory and VSCode, providing:
 
 *   Foundry PDK access
 *   Schematic capture
-*   Device and circuit simulations
+*   Device and circuit Simulations
 *   Design verification (DRC, LVS)
 *   Data analytics
 
-## Why Choose GDSFactory?
-
-*   **Speed and Efficiency:**  Benefit from fast performance optimized using the KLayout C++ library.
-*   **Open and Collaborative:** Participate in a vibrant open-source community.
-*   **Flexibility and Control:**  Customize your design flow with Python scripting.
-*   **End-to-End Solution:**  From design to fabrication, GDSFactory provides a complete workflow.
-
-## Benchmarks
-
-GDSFactory delivers significant performance gains compared to other tools:
-
-| Benchmark      |  gdspy  | GDSFactory | Gain |
-| :------------- | :-----: | :--------: | :--: |
-| 10k_rectangles | 80.2 ms |  4.87 ms   | 16.5 |
-| boolean-offset | 187 μs  |  44.7 μs   | 4.19 |
-| bounding_box   | 36.7 ms |   170 μs   | 216  |
-| flatten        | 465 μs  |  8.17 μs   | 56.9 |
-| read_gds       | 2.68 ms |   94 μs    | 28.5 |
-
 ## Community
 
-Join our growing community and connect with other users and developers:
+Join our growing community for support and collaboration:
 
 *   [GitHub Discussions](https://github.com/gdsfactory/gdsfactory/discussions)
 *   [Google Group](https://groups.google.com/g/gdsfactory)
 *   [LinkedIn](https://www.linkedin.com/company/gdsfactory)
 *   [Slack community channel](https://join.slack.com/t/gdsfactory-community/shared_invite/zt-3aoygv7cg-r5BH6yvL4YlHfY8~UXp0Wg)
-
-## Resources
-
-*   [Documentation](https://gdsfactory.github.io/gdsfactory/)
-*   [![Video Tutorials](https://img.shields.io/badge/youtube-Video_Tutorials-red.svg?logo=youtube)](https://www.youtube.com/@gdsfactory/playlists)
-*   [PIC training](https://gdsfactory.github.io/gdsfactory-photonics-training/)
-*   Online course [UBCx: Silicon Photonics Design, Fabrication and Data Analysis](https://www.edx.org/learn/engineering/university-of-british-columbia-silicon-photonics-design-fabrication-and-data-ana)
-
-## Who's Using GDSFactory?
-
-Join the hundreds of organizations using GDSFactory for their chip design needs:
-
-![logos](https://i.imgur.com/VzLNMH1.png)
-
-(Include quotes from users here - consider formatting them as blockquotes.)
-
-## Contributors
-
-We are grateful for all contributions to this project.  Join us in making GDSFactory even better!
-
-![contributors](https://i.imgur.com/0AuMHZE.png)
-
-## Stargazers
-
-[![Stargazers over time](https://starchart.cc/gdsfactory/gdsfactory.svg)](https://starchart.cc/gdsfactory/gdsfactory)

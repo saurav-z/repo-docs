@@ -5,47 +5,52 @@
 
 </div>
 
-# Judgeval: Empower Your Self-Learning Agents with Data and Evaluations
+# Judgeval: Open-Source Tooling for Self-Learning Agents
 
-**Judgeval provides open-source tooling to supercharge autonomous agents by capturing environment data and enabling robust evaluation, leading to continuous learning and improvement.**
+**Supercharge your autonomous agents with real-time environment data and robust evaluation tools, enabling continuous learning and performance optimization.**
 
-[**GitHub Repository**](https://github.com/JudgmentLabs/judgeval) | [Docs](https://docs.judgmentlabs.ai/) | [Judgment Cloud](https://app.judgmentlabs.ai/register) | [Self-Host](https://docs.judgmentlabs.ai/documentation/self-hosting/get-started) | [Landing Page](https://judgmentlabs.ai/)
+[**Get Started with Judgeval**](https://github.com/JudgmentLabs/judgeval)
 
-[Demo](https://www.youtube.com/watch?v=1S4LixpVbcc) | [Bug Reports](https://github.com/JudgmentLabs/judgeval/issues) | [Changelog](https://docs.judgmentlabs.ai/changelog/2025-04-21)
+## Key Features:
 
-We're hiring! Join us in our mission to enable self-learning agents by providing the data and signals needed for monitoring and post-training.
+*   ✅ **Comprehensive Evaluation:** Build custom evaluators using LLMs, manual labeling, or code, connecting with our metric-tracking infrastructure.
+*   📡 **Proactive Monitoring:** Receive Slack alerts for agent failures and integrate custom hooks to address regressions.
+*   📊 **Data-Driven Datasets:** Export agent-environment interactions and test cases to datasets for scaled analysis and optimization.
+*   🏢 **Self-Hosting:** Deploy Judgeval on your own infrastructure with full control over your data and backend.
 
-[![X](https://img.shields.io/badge/-X/Twitter-000?logo=x&logoColor=white)](https://x.com/JudgmentLabs)
-[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn%20-0A66C2?logo=linkedin-white&logoColor=fff)](https://www.linkedin.com/company/judgmentlabs)
-[![Discord](https://img.shields.io/badge/-Discord-5865F2?logo=discord&logoColor=white)](https://discord.gg/tGVFf8UBUY)
+---
 
-<img src="assets/product_shot.png" alt="Judgment Platform" width="800" />
+## 🎬 See Judgeval in Action
 
-## Key Features
+**(1) Multi-Agent System with complete observability:** (1) A multi-agent system spawns agents to research topics on the internet. (2) With just **3 lines of code**, Judgeval captures all environment responses across all agent tool calls for monitoring. (3) After completion, (4) export all interaction data to enable further environment-specific learning and optimization.
 
-*   **Evaluation:** Build custom evaluators using LLM-as-a-judge, manual labeling, or code-based methods, integrated with our metric-tracking infrastructure.
-    *   **Benefits:** Unit-testing, A/B testing, and online guardrails.
-    <p align="center"><img src="assets/test.png" alt="Evaluation metrics" width="800"/></p>
+<table style="width: 100%; max-width: 800px; table-layout: fixed;">
+<tr>
+<td align="center" style="padding: 8px; width: 50%;">
+  <img src="assets/agent.gif" alt="Agent Demo" style="width: 100%; max-width: 350px; height: auto;" />
+  <br><strong>🤖 Agents Running</strong>
+</td>
+<td align="center" style="padding: 8px; width: 50%;">
+  <img src="assets/trace.gif" alt="Capturing Environment Data Demo" style="width: 100%; max-width: 350px; height: auto;" />
+  <br><strong>📊 Capturing Environment Data </strong>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 8px; width: 50%;">
+  <img src="assets/document.gif" alt="Agent Completed Demo" style="width: 100%; max-width: 350px; height: auto;" />
+  <br><strong>✅ Agents Completed Running</strong>
+</td>
+<td align="center" style="padding: 8px; width: 50%;">
+  <img src="assets/data.gif" alt="Data Export Demo" style="width: 100%; max-width: 350px; height: auto;" />
+  <br><strong>📤 Exporting Agent Environment Data</strong>
+</td>
+</tr>
 
-*   **Monitoring:** Receive Slack alerts for agent failures and utilize custom hooks to address regressions.
-    *   **Benefits:** Early detection of degradation and visualization of performance trends.
-    <p align="center"><img src="assets/errors.png" alt="Monitoring Dashboard" width="1200"/></p>
+</table>
 
-*   **Datasets:** Export agent interactions and test cases to datasets for analysis and optimization. Easily move data to/from Parquet, S3, etc.
-    *   **Benefits:**  Agent environment data for optimization and scalable analysis.
-    <p align="center"><img src="assets/datasets_preview_screenshot.png" alt="Dataset management" width="1200"/></p>
+---
 
-## Judgeval in Action
-
-Observe how Judgeval enhances a multi-agent system:
-
-**[Multi-Agent System](https://github.com/JudgmentLabs/judgment-cookbook/tree/main/cookbooks/agents/multi-agent) with complete observability:**
-
-| Agents Running                                                                                                    | Capturing Environment Data                                                                                             | Agents Completed Running                                                                                                 | Exporting Agent Environment Data                                                                                              |
-| :---------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------- |
-| <img src="assets/agent.gif" alt="Agent Demo" style="width: 100%; max-width: 350px; height: auto;" />           | <img src="assets/trace.gif" alt="Capturing Environment Data Demo" style="width: 100%; max-width: 350px; height: auto;" /> | <img src="assets/document.gif" alt="Agent Completed Demo" style="width: 100%; max-width: 350px; height: auto;" />      | <img src="assets/data.gif" alt="Data Export Demo" style="width: 100%; max-width: 350px; height: auto;" />               |
-
-## Installation
+## 🛠️ Installation
 
 Install the Judgeval SDK using pip:
 
@@ -53,50 +58,92 @@ Install the Judgeval SDK using pip:
 pip install judgeval
 ```
 
-Set your API key and organization ID:
+Set your environment variables to connect to the [Judgment Platform](https://app.judgmentlabs.ai/register):
 
 ```bash
 export JUDGMENT_API_KEY=...
 export JUDGMENT_ORG_ID=...
 ```
 
-**Don't have an account? [Create one](https://app.judgmentlabs.ai/register) on the Judgment Platform!**
+**Don't have an account? [Create one now](https://app.judgmentlabs.ai/register)!**
 
-## Self-Hosting
+---
 
-Take control of your data and infrastructure: Judgeval offers comprehensive self-hosting capabilities.
+## ✨ Features in Depth
 
-### Key Benefits:
-*   Deploy Judgment on your own AWS account
-*   Store data in your Supabase instance
-*   Access Judgment through your custom domain
+### 🧪 Evals
+Build custom evaluators on top of your agents. Judgeval supports LLM-as-a-judge, manual labeling, and code-based evaluators that connect with our metric-tracking infrastructure.
+
+**Useful for:**
+*   ⚠️ Unit-testing
+*   🔬 A/B testing
+*   🛡️ Online guardrails
+
+<p align="center"><img src="assets/test.png" alt="Evaluation metrics" width="800"/></p>
+
+### 📡 Monitoring
+Get Slack alerts for agent failures in production. Add custom hooks to address production regressions.
+
+**Useful for:**
+*   📉 Identifying degradation early
+*   📈 Visualizing performance trends across agent versions and time
+
+<p align="center"><img src="assets/errors.png" alt="Monitoring Dashboard" width="1200"/></p>
+
+### 📊 Datasets
+Export environment interactions and test cases to datasets for scaled analysis and optimization. Move datasets to/from Parquet, S3, etc.
+
+Run evals on datasets as unit tests or to A/B test different agent configurations, enabling continuous learning from production interactions.
+
+**Useful for:**
+*   🗃️ Agent environment interaction data for optimization
+*   🔄 Scaled analysis for A/B tests
+
+<p align="center"><img src="assets/datasets_preview_screenshot.png" alt="Dataset management" width="1200"/></p>
+
+---
+
+## 🏢 Self-Hosting
+
+Take full control of your agent evaluation and data by self-hosting Judgeval.
+
+### Key Advantages:
+
+*   Deploy on your own AWS account
+*   Store data in your own Supabase instance
+*   Access through your custom domain
 
 ### Getting Started:
 
-1.  Refer to our [self-hosting documentation](https://docs.judgmentlabs.ai/documentation/self-hosting/get-started) for instructions.
-2.  Use the [Judgment CLI](https://docs.judgmentlabs.ai/documentation/developer-tools/judgment-cli/installation) to deploy your self-hosted environment.
-3.  Ensure the `JUDGMENT_API_URL` environment variable points to your self-hosted backend.
+1.  Follow our detailed [self-hosting documentation](https://docs.judgmentlabs.ai/documentation/self-hosting/get-started) for setup instructions.
+2.  Use the [Judgment CLI](https://docs.judgmentlabs.ai/documentation/developer-tools/judgment-cli/installation) to deploy your environment.
+3.  Set the `JUDGMENT_API_URL` environment variable to your self-hosted backend endpoint.
 
-## Cookbooks
+---
 
-Explore example use cases and recipes in our [cookbooks](https://github.com/JudgmentLabs/judgment-cookbook). We welcome your contributions!
+## 📚 Cookbooks & Resources
 
-## Development with Cursor
+*   **Cookbooks:** Explore practical examples and use cases in our [Judgment Cookbook](https://github.com/JudgmentLabs/judgment-cookbook).
+*   **Documentation:** [Comprehensive Documentation](https://docs.judgmentlabs.ai/) for Judgeval.
 
-Enhance your coding workflow with Cursor by integrating Judgeval's features.  Access the rules file and integrate it into your codebase for effective development.
-Refer to the official [documentation](https://docs.judgmentlabs.ai/documentation/developer-tools/cursor/cursor-rules) for more information.
+---
 
-## Contribute
+## 💻 Development with Cursor
 
-We welcome contributions!
+Enhance your development workflow with Cursor by integrating Judgeval features. Refer to the [official documentation](https://docs.judgmentlabs.ai/documentation/developer-tools/cursor/cursor-rules) for access to the rules file and more information on integrating this rules file with your codebase.
 
-*   Submit [bug reports](https://github.com/JudgmentLabs/judgeval/issues) and [feature requests](https://github.com/JudgmentLabs/judgeval/issues)
-*   Suggest [Pull Requests](https://github.com/JudgmentLabs/judgeval/pulls) to improve the documentation.
-*   Share your work with the community!
+---
+
+## ⭐ Support & Community
+
+*   **Star us on GitHub:** Show your support by starring the repository!
+*   **Join the Discussion:** Connect with the community on [Discord](https://discord.gg/tGVFf8UBUY).
+*   **Report Issues:**  Submit [bug reports](https://github.com/JudgmentLabs/judgeval/issues) and [feature requests](https://github.com/JudgmentLabs/judgeval/issues).
+*   **Contribute:** Help us improve Judgeval by contributing through [Pull Requests](https://github.com/JudgmentLabs/judgeval/pulls).
 
 <!-- Contributors collage -->
 [![Contributors](https://contributors-img.web.app/image?repo=JudgmentLabs/judgeval)](https://github.com/JudgmentLabs/judgeval/graphs/contributors)
 
 ---
 
-Judgeval is created and maintained by [Judgment Labs](https://judgmentlabs.ai/).
+**Made with ❤️ by [Judgment Labs](https://judgmentlabs.ai/).**

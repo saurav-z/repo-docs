@@ -1,105 +1,93 @@
-# Enhance Your Images with Advanced Background Removal and Segmentation: ComfyUI-RMBG
+# Remove Backgrounds and Segment Images with Ease using ComfyUI-RMBG
 
-Tired of clunky background removal? **ComfyUI-RMBG** offers a powerful suite of tools within ComfyUI for precise image editing. ([View on GitHub](https://github.com/1038lab/ComfyUI-RMBG))
+Effortlessly remove backgrounds, segment objects, and refine images within ComfyUI using advanced models with [ComfyUI-RMBG](https://github.com/1038lab/ComfyUI-RMBG).
 
-## Key Features:
+**Key Features:**
 
-*   **Advanced Background Removal:** Utilizes models like RMBG-2.0, INSPYRENET, BEN, BEN2, and BiRefNet for superior background removal.
-*   **Precise Object Segmentation:** Enables segmentation of objects, faces, clothing, and fashion elements using models such as SAM, SAM2, and GroundingDINO.
-*   **Real-time Background Replacement:** Seamlessly replace backgrounds for instant visual transformations.
-*   **Enhanced Edge Detection:** Improve accuracy with superior edge detection capabilities.
-*   **Versatile Model Support:** Offers a wide range of models, including SDMatte, for various image processing needs.
-*   **SAM2 Segmentation:** Uses latest SAM2 models to perform segmentation, with easy model downloads.
-*   **Multiple Output Options:** Produces both processed images and masks for advanced control.
+*   **Background Removal (RMBG Node):**
+    *   Multiple models: RMBG-2.0, INSPYRENET, BEN, BEN2, SDMatte.
+    *   Flexible background options (transparent, color).
+    *   Batch processing support for efficient workflow.
+    *   Fast Foreground Color Estimation to optimize transparent background
+*   **Object Segmentation (Segment Node):**
+    *   Text-prompted object detection using SAM2 and GroundingDINO.
+    *   Support for tag-style and natural language prompts.
+    *   Precise segmentation with adjustable parameters.
+*   **Advanced Segmentation:**
+    *   Face segmentation for facial feature extraction.
+    *   Fashion and clothes segmentation with 18 different categories.
+    *   Image/Mask Converter and Image/Mask Enhancer Nodes
+*   **Real-time Background Replacement and Enhanced Edge Detection**
 
-## Latest Updates:
+## Updates
 
-*   **v2.9.0:** Added `SDMatte Matting` node. ([update.md](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v290-20250818))
-*   **v2.8.0:** Added `SAM2Segment` node for text-prompted segmentation, enhanced color widget support. ([update.md](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v280-20250811))
-*   **v2.7.1:** Improved image loading, redesigned ImageStitch node, background color fixes. ([update.md](https://github.com/1038lab/ComfyUI-RMBG/blob/main/update.md#v271-20250806))
+*   **Recent Updates:** Stay informed with the latest features and improvements.
+    *   **v2.9.0 (2025/08/18):** Added `SDMatte Matting` node
+    *   **v2.8.0 (2025/08/11):** Added `SAM2Segment` node for text-prompted segmentation with the latest Facebook Research SAM2 technology.
 
-(See full list of updates with screenshots in the original README.)
+    *(See full update history in the [original README](https://github.com/1038lab/ComfyUI-RMBG))*
 
-## Installation:
+## Installation
 
-### Method 1: ComfyUI Manager
+Choose your preferred method:
 
-1.  Search for `Comfyui-RMBG` in the ComfyUI Manager.
-2.  Install `requirements.txt` after installation.
+1.  **ComfyUI Manager:** Search and install "ComfyUI-RMBG" directly within ComfyUI.
+2.  **Clone:**
+    ```bash
+    cd ComfyUI/custom_nodes
+    git clone https://github.com/1038lab/ComfyUI-RMBG
+    cd ComfyUI-RMBG
+    ./ComfyUI/python_embeded/python -m pip install -r requirements.txt
+    ```
+3.  **Comfy CLI:** `comfy node install ComfyUI-RMBG`
+    ```bash
+    cd ComfyUI-RMBG
+    ./ComfyUI/python_embeded/python -m pip install -r requirements.txt
+    ```
 
-### Method 2: Manual Clone
+    *(Ensure you install `requirements.txt` after installation)*
 
-1.  Navigate to your ComfyUI `custom_nodes` directory: `cd ComfyUI/custom_nodes`
-2.  Clone the repository: `git clone https://github.com/1038lab/ComfyUI-RMBG`
-3.  Install dependencies within the ComfyUI environment: `./ComfyUI/python_embeded/python -m pip install -r requirements.txt`
+## Model Downloads
 
-### Method 3: Comfy CLI
+Models are automatically downloaded to `ComfyUI/models/RMBG/` or `ComfyUI/models/SAM/` and `ComfyUI/models/sam2/` and `ComfyUI/models/grounding-dino/` the first time a node uses them. If you have network restrictions, manually download the models from the provided links in the original README.
 
-1.  Install `comfy-cli`: `pip install comfy-cli`
-2.  Install ComfyUI if you don't have it installed: `comfy install`
-3.  Install ComfyUI-RMBG: `comfy node install ComfyUI-RMBG`
-4.  Install dependencies: `./ComfyUI/python_embeded/python -m pip install -r requirements.txt`
+## Usage
 
-### Model Downloads:
+1.  Load the `RMBG (Remove Background)` or `Segment (RMBG)` node from the `🧪AILab/🧽RMBG` category.
+2.  Connect an image to the input.
+3.  Select a model (RMBG Node) or enter a text prompt (Segment Node).
+4.  Adjust parameters (sensitivity, resolution, blur, etc.) as needed.
+5.  View the processed image and mask outputs.
 
-*   Models download automatically on first use. If not, manually download models from the provided links (see original README for details) and place them in the respective `ComfyUI/models/RMBG/` or `ComfyUI/models/SAM` directories.
+### RMBG Node:
 
-## Usage:
+*   **Parameters**: sensitivity, process_res, mask_blur, mask_offset, background, invert_output, optimize
+*   **Basic Usage**: Load the `RMBG (Remove Background)` node, connect an image, select a model and parameters.
 
-### RMBG Node
+### Segment Node:
 
-1.  Load the `RMBG (Remove Background)` node from the `🧪AILab/🧽RMBG` category.
-2.  Connect an image input.
-3.  Select a model from the dropdown menu.
-4.  Adjust parameters (optional, see below)
-5.  Get two outputs: Processed Image and Mask.
+*   **Basic Usage**: Load `Segment (RMBG)` node, connect an image, enter text prompt (tag-style or natural language), select SAM and GroundingDINO models.
 
-### Segment Node
+## Troubleshooting
 
-1.  Load the `Segment (RMBG)` node from the `🧪AILab/🧽RMBG` category.
-2.  Connect an image input.
-3.  Enter a text prompt (tag-style or natural language).
-4.  Select SAM or GroundingDINO models.
-5.  Adjust parameters as needed (threshold, mask blur, offset, background color).
+*   **Missing `models/sam2`:** Delete `%USERPROFILE%\.cache\huggingface\token` and `%USERPROFILE%\.huggingface\token` and rerun.
+*   **"Required input is missing: images":**  Ensure image outputs are connected and upstream nodes ran successfully.
 
-### Optional Settings and Tips
+## Credits
 
-**[See the original README for detailed optional settings and tips.]**
+*   [AILab](https://github.com/1038lab)
 
-## About Models:
-
-**[See the original README for details on the models (RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SAM, SAM2, GroundingDINO).]**
-
-## Requirements:
-
-*   ComfyUI
-*   Python 3.10+
-*   Automatically installed packages include:
-    *   huggingface-hub>=0.19.0
-    *   transparent-background>=1.1.2
-    *   segment-anything>=1.0
-    *   groundingdino-py>=0.4.0
-    *   opencv-python>=4.7.0
-    *   onnxruntime>=1.15.0
-    *   onnxruntime-gpu>=1.15.0
-    *   protobuf>=3.20.2,<6.0.0
-    *   hydra-core>=1.3.0
-    *   omegaconf>=2.3.0
-    *   iopath>=0.1.9
-*   **SDMatte models:** Auto-download to `models/RMBG/SDMatte/`. Manual placement is also possible.  (See original README)
-
-## Troubleshooting:
-
-**[See the original README for troubleshooting tips.]**
-
-## Credits:
-
-*   **[Links to model sources and creators are listed in the original README.]**
-*   Created by: [AILab](https://github.com/1038lab)
+**(Refer to original README for a complete list of credits.)**
 
 ## Star History
 
-**[See the original README for the Star History chart.]**
+<a href="https://www.star-history.com/#1038lab/comfyui-rmbg&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=1038lab/comfyui-rmbg&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=1038lab/comfyui-rmbg&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=1038lab/comfyui-rmbg&type=Date" />
+ </picture>
+</a>
 
 ## License
 

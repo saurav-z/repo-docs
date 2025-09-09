@@ -1,38 +1,38 @@
-# BEHAVIOR-1K: Embodied AI for Everyday Activities
+# BEHAVIOR-1K: Embodied AI for Everyday Life
 
-[![BEHAVIOR-1K](docs/assets/readme_splash_logo.png)](https://github.com/StanfordVL/BEHAVIOR-1K)
+[![BEHAVIOR-1K](./docs/assets/readme_splash_logo.png)](https://github.com/StanfordVL/BEHAVIOR-1K)
 
-**BEHAVIOR-1K is a groundbreaking benchmark for embodied AI, challenging agents to master 1,000 real-world household tasks like cooking and cleaning.** This comprehensive simulation environment provides everything needed to train and evaluate AI agents on complex, human-centric activities.  Explore the official website for more details: [https://behavior.stanford.edu/](https://behavior.stanford.edu/)
+**Tackle the complexities of daily life with BEHAVIOR-1K, a comprehensive simulation benchmark designed to train and evaluate embodied AI agents on 1,000 realistic household activities.**  This benchmark, sourced from real-world human behavior data, provides a robust platform for advancing AI in tasks like cleaning, cooking, and organization.
 
-**[View the original repository on GitHub](https://github.com/StanfordVL/BEHAVIOR-1K)**
+**[Explore the BEHAVIOR-1K website for in-depth information!](https://behavior.stanford.edu/)**
 
-## Key Features
+## Key Features of BEHAVIOR-1K
 
-*   **1,000 Everyday Activities:** Train and evaluate agents on a vast range of household tasks.
-*   **Human-Centered Design:** Activities are based on real-world time-use surveys and preference studies.
-*   **Realistic Simulation:** Leverage the OmniGibson physics simulator for accurate and engaging environments.
-*   **Modular Installation:** Customize your installation with only the necessary components.
-*   **Comprehensive Support:** Includes BDDL for task specification and JoyLo for teleoperation.
+*   **Extensive Task Coverage:** Train agents on a diverse set of 1,000 everyday household activities, representing a wide range of real-world scenarios.
+*   **Human-Centered Design:**  Tasks are selected from human time-use surveys and preference studies, ensuring relevance and realism.
+*   **Realistic Simulation:**  Utilizes the OmniGibson physics simulator to provide a high-fidelity environment for agent training and evaluation.
+*   **Modular Installation:**  Install only the components you need, optimizing your setup for specific tasks.
+*   **Flexible Deployment:**  Supports both Linux and Windows environments for broad accessibility.
 
-## Installation
+## Installation Guide
 
-Get started with BEHAVIOR-1K by following the installation instructions below. The provided scripts streamline the setup process, handling dependencies and component installation.
+Get started with BEHAVIOR-1K by following the steps below. The installation script simplifies the process, handling dependencies and environment setup.
 
 ### System Requirements
 
-*   **OS:** Linux (Ubuntu 20.04+) or Windows 10+
+*   **Operating System:** Linux (Ubuntu 20.04+) or Windows 10+
 *   **RAM:** 32GB+ recommended
 *   **VRAM:** 8GB+
 *   **GPU:** NVIDIA RTX 2080+
 
-### Quick Start
+### Quick Start Installation (Recommended)
 
-For most users, the latest stable release is recommended.
+Install the latest stable release (v3.7.0) with all components:
 
-**Linux:**
+#### Linux
 
 ```bash
-# Clone the latest stable release (recommended)
+# Clone the repository
 git clone -b v3.7.0 https://github.com/StanfordVL/BEHAVIOR-1K.git
 cd BEHAVIOR-1K
 
@@ -40,10 +40,10 @@ cd BEHAVIOR-1K
 ./setup.sh --new-env --omnigibson --bddl --joylo --dataset
 ```
 
-**Windows:**
+#### Windows
 
 ```powershell
-# Clone the latest stable release (recommended)
+# Clone the repository
 git clone -b v3.7.0 https://github.com/StanfordVL/BEHAVIOR-1K.git
 cd BEHAVIOR-1K
 
@@ -51,71 +51,63 @@ cd BEHAVIOR-1K
 .\setup.ps1 -NewEnv -OmniGibson -BDDL -JoyLo -Dataset
 ```
 
-> **Development Branch**:  For the latest features (potentially unstable), clone the `main` branch instead.
-
-> **Note**: Windows users should run PowerShell as Administrator and may need to set the execution policy: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+**Note:** For the latest development features, clone the `main` branch instead.
 
 ### Installation Options
 
-Customize your installation using the following components and options:
+The setup script offers several options for customizing your installation:
 
 #### Available Components
 
-| Component        | Flag           | Description                                        |
-| ---------------- | -------------- | -------------------------------------------------- |
-| OmniGibson       | `--omnigibson` | Core physics simulator and robotics environment |
-| BDDL             | `--bddl`       | Behavior Domain Definition Language for task specification |
-| JoyLo            | `--joylo`      | JoyLo interface for robot teleoperation            |
+| Component         | Flag          | Description                                               |
+|-------------------|---------------|-----------------------------------------------------------|
+| OmniGibson        | `--omnigibson`| Core physics simulator and robotics environment           |
+| BDDL              | `--bddl`      | Behavior Domain Definition Language for task specification  |
+| JoyLo             | `--joylo`     | JoyLo interface for robot teleoperation                   |
 
 #### Additional Options
 
-| Option                    | Flag                    | Description                                                                      |
-| ------------------------- | ----------------------- | -------------------------------------------------------------------------------- |
-| New Environment           | `--new-env`             | Create a new conda environment named `behavior` (requires conda)                 |
-| Datasets                  | `--dataset`             | Download BEHAVIOR datasets (requires `--omnigibson`)                            |
-| Primitives                | `--primitives`          | Install OmniGibson with action primitives support                                 |
-| Evaluation                | `--eval`                | Install evaluation support for OmniGibson                                         |
-| Development Dependencies  | `--dev`                 | Install development dependencies                                                 |
-| CUDA Version              | `--cuda-version X.X`    | Specify CUDA version (default: 12.4)                                            |
-| No Conda Confirmation     | `--confirm-no-conda`    | Skip confirmation prompt when not in a conda environment                          |
-| Accept Conda TOS          | `--accept-conda-tos`    | Automatically accept Anaconda Terms of Service                                    |
-| Accept NVIDIA EULA        | `--accept-nvidia-eula`  | Automatically accept NVIDIA Isaac Sim End User License Agreement                  |
-| Accept Dataset License    | `--accept-dataset-tos`  | Automatically accept BEHAVIOR Data Bundle License Agreement                       |
+| Option                      | Flag                      | Description                                                                 |
+|-----------------------------|---------------------------|-----------------------------------------------------------------------------|
+| New Environment             | `--new-env`               | Create a new conda environment named `behavior` (requires conda)            |
+| Datasets                    | `--dataset`               | Download BEHAVIOR datasets (requires `--omnigibson`)                       |
+| Primitives                  | `--primitives`            | Install OmniGibson with action primitives support                             |
+| Evaluation                  | `--eval`                  | Install evaluation support for OmniGibson                                   |
+| Development Dependencies    | `--dev`                   | Install development dependencies                                           |
+| CUDA Version                | `--cuda-version X.X`      | Specify CUDA version (default: 12.4)                                        |
+| No Conda Confirmation       | `--confirm-no-conda`      | Skip confirmation prompt when not in a conda environment                      |
+| Accept Conda TOS           | `--accept-conda-tos`      | Automatically accept Anaconda Terms of Service                                |
+| Accept NVIDIA EULA         | `--accept-nvidia-eula`    | Automatically accept NVIDIA Isaac Sim End User License Agreement            |
+| Accept Dataset License     | `--accept-dataset-tos`    | Automatically accept BEHAVIOR Data Bundle License Agreement                 |
 
 ### Installation without Conda
 
-To use your existing Python environment (system Python, venv, etc.), exclude the `--new-env` flag:
+If you prefer to use your existing Python environment, omit the `--new-env` flag:
 
-**Linux:**
+#### Linux
 
 ```bash
 ./setup.sh --omnigibson --bddl --joylo --dataset
 ```
 
-**Windows:**
+#### Windows
 
 ```powershell
 .\setup.ps1 -OmniGibson -BDDL -JoyLo -Dataset
 ```
 
-If not in a conda environment, the script will prompt for confirmation.  To skip the prompt (useful for CI/CD):
+###  Automated Installation (CI/CD)
 
-```bash
-./setup.sh --omnigibson --bddl --joylo --dataset --confirm-no-conda
-```
-
-### Automated Installation and License Acceptance
-
-For automated installations (e.g., CI/CD environments), accept all necessary terms and conditions:
+To avoid prompts in automated environments, use the following flags:
 
 ```bash
 ./setup.sh --new-env --omnigibson --bddl --joylo --dataset \
            --accept-conda-tos --accept-nvidia-eula --accept-dataset-tos
 ```
 
-###  Help and Options
+### Get Help
 
-View all available installation options:
+To see all available options:
 
 ```bash
 ./setup.sh --help
@@ -131,3 +123,7 @@ View all available installation options:
     year    = {2024}
 }
 ```
+
+---
+
+**[Back to the BEHAVIOR-1K Repository](https://github.com/StanfordVL/BEHAVIOR-1K)**

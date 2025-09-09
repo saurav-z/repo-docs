@@ -1,6 +1,6 @@
-# TagStudio: Organize Your Files with Freedom and Flexibility
+# TagStudio: Organize Your Files with Powerful Tagging and Metadata
 
-**Tired of proprietary file management?** TagStudio offers a user-focused, tag-based system to organize your photos and files without altering your existing file structure. [Check out the original repository](https://github.com/TagStudioDev/TagStudio) for more details.
+**Tired of disorganized files? TagStudio is a user-focused document management system that puts you in control.** [Explore TagStudio on GitHub](https://github.com/TagStudioDev/TagStudio).
 
 [![Translation](https://hosted.weblate.org/widget/tagstudio/strings/svg-badge.svg)](https://hosted.weblate.org/projects/tagstudio/strings/)
 [![PyTest](https://github.com/TagStudioDev/TagStudio/actions/workflows/pytest.yaml/badge.svg)](https://github.com/TagStudioDev/TagStudio/actions/workflows/pytest.yaml)
@@ -12,19 +12,13 @@
   <img width="60%" src="docs/assets/github_header.png" alt="TagStudio Header">
 </p>
 
-**Read the documentation and more at [docs.tagstud.io](https://docs.tagstud.io)!**
+TagStudio offers a flexible, tag-based system for organizing photos and files, avoiding proprietary formats and intrusive file structure changes.  **Learn more about TagStudio and its features at [docs.tagstud.io](https://docs.tagstud.io)!**
 
 > [!NOTE]
-> Thank you for being patient as we've migrated our database backend from JSON to SQL! The previous warnings about the main branch being experimental and unsupported have now been removed, and any pre-existing library save files created with official TagStudio releases are able to be opened and migrated with the new v9.5+ releases!
+> Thank you for your patience as we've migrated our database backend from JSON to SQL!
 
 > [!IMPORTANT]
-> This project is still in an early state. There are many missing optimizations and QoL features, as well as the presence of general quirks and occasional jankiness. Making frequent backups of your library save data is **always** important, regardless of what state the program is in.
->
-> With this in mind, TagStudio will _NOT:_
->
-> -   Touch, move, or mess with your files in any way _(unless explicitly using the "Delete File(s)" feature, which is locked behind a confirmation dialog)_.
-> -   Ask you to recreate your tags or libraries after new releases. It's our highest priority to ensure that your data safely and smoothly transfers over to newer versions.
-> -   Cause you to suddenly be able to recall your 10 trillion downloaded images that you probably haven't even seen firsthand before. You're in control here, and even tools out there that use machine learning still needed to be verified by human eyes before being deemed accurate.
+> This project is still in an early state. Making frequent backups of your library save data is **always** important.
 
 <p align="center">
   <img width="80%" src="docs/assets/screenshot.png" alt="TagStudio Screenshot">
@@ -35,54 +29,97 @@
 
 ## Key Features
 
-*   **Tag-Based Organization:**  Create and apply custom tags, parent tags, and aliases to organize your files effectively.
-*   **Custom Metadata:** Add and manage metadata, including names, descriptions, and notes, for each file.
-*   **Powerful Search:** Quickly find files using tags, file paths, file types, and media types with boolean operators.
-*   **File Previews:** Preview various image, video, text, audio, and more file types directly within the application.
-*   **Cross-Platform Support:** Available for Windows, macOS (Apple Silicon & Intel), and Linux.
+*   **Flexible Tagging:** Create custom tags with names, aliases, colors, and parent tags for powerful organization.
+*   **Metadata Management:** Add and edit metadata like titles, descriptions, and notes to your files.
+*   **Advanced Search:** Find files quickly using tag, path, file type, and media type searches with boolean operators and advanced syntax.
+*   **File Preview:** Preview image files, videos, documents, and more directly within TagStudio.
+*   **Non-Destructive:**  TagStudio *never* modifies your original files unless you explicitly choose to delete them.
+
+## Table of Contents
+
+*   [Goals](#goals)
+*   [Priorities](#priorities)
+*   [Current Features](#current-features)
+*   [Contributing](#contributing)
+*   [Installation](#installation)
+*   [Usage](#usage)
+*   [FAQ](#faq)
 
 ## Goals
 
-*   Portable, private, extensible, open-format, and feature-rich file organization.
-*   Powerful methods for organization, notably the concept of tag inheritance, or "taggable tags" _(and in the near future, the combination of composition-based tags)._
-*   Resilient against user actions outside the program.
-*   Support for a wide range of users across different platforms, multi-user setups, and those with large (several terabyte) libraries.
+*   To achieve a portable, private, extensible, open-format, and feature-rich system of organizing and rediscovering files.
+*   To provide powerful methods for organization, notably the concept of tag inheritance, or "taggable tags" _(and in the near future, the combination of composition-based tags)._
+*   To create an implementation of such a system that is resilient against a user’s actions outside the program (modifying, moving, or renaming files) while also not burdening the user with mandatory sidecar files or requiring them to change their existing file structures and workflows.
+*   To support a wide range of users spanning across different platforms, multi-user setups, and those with large (several terabyte) libraries.
 *   To make the dang thing look nice, too. It’s 2025, not 1995.
 
 ## Priorities
 
-1.  **The concept:** To create a system of metadata management.
-2.  **The system:** Establish a standard implementation for metadata management.
-3.  **The application:** TagStudio is the first implementation for this system of metadata management.
+1.  **The Concept:** The core idea of TagStudio is paramount.
+2.  **The System:**  The underlying metadata management system should be interoperable.
+3.  **The Application:** TagStudio itself serves as a primary implementation of this system.
 4.  (The name.) I think it’s fine for an app or client, but it doesn’t really make sense for a system or standard. I suppose this will evolve with time...
 
 ## Contributing
 
-Contribute to the project!  See the [contribution guidelines](/CONTRIBUTING.md) for more information.
+Contribute to TagStudio! See the [contribution guidelines](/CONTRIBUTING.md) for more information.
 
-Translation hosting generously provided by [Weblate](https://weblate.org/en/). Check out our [project page](https://hosted.weblate.org/projects/tagstudio/) to help translate TagStudio!
+Help translate TagStudio on [Weblate](https://hosted.weblate.org/projects/tagstudio/).
+
+## Current Features
+
+### Libraries
+
+*   Create and manage libraries centered around a system directory.
+*   Manage unlinked files using the "Fix Unlinked Entries" option.
+
+### Tagging + Custom Metadata
+
+*   Add custom tags to your library entries
+*   Add metadata to your library entries, including:
+    *   Name, Author, Artist (Single-Line Text Fields)
+    *   Description, Notes (Multiline Text Fields)
+*   Create rich tags composed of a name, color, a list of aliases, and a list of "parent tags" - these being tags in which these tags inherit values from.
+*   Copy and paste tags and fields across file entries
+*   Automatically organize tags into groups based on parent tags marked as "categories"
+*   Generate tags from your existing folder structure with the "Folders to Tags" macro (NOTE: these tags do NOT sync with folders after they are created)
+
+### Search
+
+*   Search based on tags, file path, file types, and media types.
+*   Use boolean operators and parenthesis to create detailed search queries.
+*   Use special search conditions (`special:untagged` and `special:empty`) to find file entries without tags or fields, respectively
+
+### File Entries
+
+*   Preview most file types.
+*   Open files or file locations with context menu options.
+*   Move files to trash/recycle bin.
+
+> [!NOTE]
+> For more information, consult the [FAQ](#faq) and the [documentation](https://docs.tagstud.io/)!
 
 ## Installation
 
-Download the latest release from the [Releases](https://github.com/TagStudioDev/TagStudio/releases) page. TagStudio has builds for **Windows**, **macOS** _(Apple Silicon & Intel)_, and **Linux**. We also offer portable releases for Windows and Linux which are self-contained and easier to move around.
+Download the latest release from the [Releases](https://github.com/TagStudioDev/TagStudio/releases) page.
 
-For detailed instructions, installation help, and instructions for developing for TagStudio, please see the "[Installation](https://docs.tagstud.io/install/)" page on our documentation website.
+Available for **Windows**, **macOS** _(Apple Silicon & Intel)_, and **Linux**.  Also offers portable releases.
+
+See the "[Installation](https://docs.tagstud.io/install/)" page on our documentation website for detailed instructions.
 
 <!-- prettier-ignore -->
 > [!CAUTION]
-> **We do not currently publish TagStudio to any package managers. Any TagStudio distributions outside of the GitHub [Releases](https://github.com/TagStudioDev/TagStudio/releases) page are _unofficial_ and not maintained by us.**
->
-> Installation support will not be given to users installing from unofficial sources. Use these versions at your own risk!
+> **Only download from the GitHub [Releases](https://github.com/TagStudioDev/TagStudio/releases) page. Unofficial distributions are unsupported.**
 
 ### Third-Party Dependencies
 
-For video thumbnails and playback, you'll also need [FFmpeg](https://ffmpeg.org/download.html) installed on your system. If you encounter any issues with this, please reference our [FFmpeg Help](/docs/help/ffmpeg.md) guide.
+Install [FFmpeg](https://ffmpeg.org/download.html) for video thumbnails and playback.  See our [FFmpeg Help](/docs/help/ffmpeg.md) guide.
 
 ## Usage
 
 ### Creating/Opening a Library
 
-With TagStudio opened, start by creating a new library or opening an existing one using File -> Open/Create Library from the menu bar. TagStudio will automatically create a new library from the chosen directory if one does not already exist. Upon creating a new library, TagStudio will automatically scan your folders for files and add those to your library (no files are moved during this process!).
+Use `File -> Open/Create Library`. TagStudio automatically scans the chosen directory.
 
 ### Refreshing the Library
 
@@ -132,17 +169,17 @@ To edit a tag, click on it inside the preview panel or right-click the tag and s
 
 ### Relinking Moved Files
 
-Inevitably some of the files inside your library will be renamed, moved, or deleted. If a file has been renamed or moved, TagStudio will display the thumbnail as a red broken chain link. To relink moved files or delete these entries, select the "Manage Unlinked Entries" option under the Tools menu. Click the "Refresh" button to scan your library for unlinked entries. Once complete, you can attempt to "Search & Relink" any unlinked file entries to their respective files, or "Delete Unlinked Entries" in the event the original files have been deleted and you no longer wish to keep their entries inside your library.
+Use the "Manage Unlinked Entries" option under the Tools menu to relink or delete moved files.
 
 > [!WARNING]
-> There is currently no method to relink entries to files that have been renamed - only moved or deleted. This is a high priority for future releases.
+> Relinking entries to renamed files is not yet supported.
 
 > [!WARNING]
 > If multiple matches for a moved file are found (matches are currently defined as files with a matching filename as the original), TagStudio will currently ignore the match groups. Adding a GUI for manual selection, as well as smarter automated relinking, are high priorities for future versions.
 
 ### Saving the Library
 
-As of version 9.5, libraries are saved automatically as you go. To save a backup of your library, select File -> Save Library Backup from the menu bar.
+Libraries are saved automatically. Backups can be created using `File -> Save Library Backup`.
 
 ### Half-Implemented Features
 

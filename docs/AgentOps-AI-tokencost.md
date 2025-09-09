@@ -20,43 +20,50 @@
 </p>
 
 
-# Tokencost: Accurate LLM Cost Calculation for AI Applications
+# TokenCost: Effortlessly Calculate LLM Costs for Your AI Projects
 
-**Effortlessly track and estimate the cost of your Large Language Model (LLM) API usage with Tokencost, a Python library for precise token counting and price estimation.**  Check out the original repo [here](https://github.com/AgentOps-AI/tokencost).
+**TokenCost** is your go-to Python library for accurately calculating and estimating the costs of using Large Language Model (LLM) APIs, empowering developers to optimize their AI applications. [Check out the original repo](https://github.com/AgentOps-AI/tokencost).
 
-**Key Features:**
+## Key Features
 
-*   **LLM Price Tracking:** Stay up-to-date with the latest pricing changes from major LLM providers.
-*   **Accurate Token Counting:** Get precise token counts for prompts and completions using the official OpenAI tokenizer and the Anthropic beta token counting API when possible.
-*   **Easy Integration:** Calculate prompt and completion costs with simple, easy-to-use functions.
+*   🚀 **LLM Cost Tracking:** Stay up-to-date with the latest pricing and model updates from major LLM providers.
+*   🔢 **Precise Token Counting:**  Accurately count tokens in prompts and completions using OpenAI's Tiktoken library and the Anthropic beta token counting API.
+*   💡 **Simplified Integration:** Easily integrate cost and token calculations into your AI agent or LLM applications with simple, intuitive functions.
 
-## Quickstart
-
-### Installation
+## Installation
 
 ```bash
 pip install tokencost
 ```
 
-### Core Functionality
+## Usage
 
-*   **Cost Estimation:** Easily calculate the cost of prompts and completions.
+### Calculating Cost Estimates
+
+Easily calculate the cost of prompts and completions from OpenAI requests.
 
 ```python
+from openai import OpenAI
 from tokencost import calculate_prompt_cost, calculate_completion_cost
 
+client = OpenAI()
 model = "gpt-3.5-turbo"
-prompt = [{ "role": "user", "content": "Hello world"}]
-completion = "How may I assist you today?"
+prompt = [{ "role": "user", "content": "Say this is a test"}]
+
+chat_completion = client.chat.completions.create(
+    messages=prompt, model=model
+)
+
+completion = chat_completion.choices[0].message.content
+# "This is a test."
 
 prompt_cost = calculate_prompt_cost(prompt, model)
 completion_cost = calculate_completion_cost(completion, model)
-
 print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
-# 0.0000135 + 0.000014 = 0.0000275
+# 0.0000180 + 0.000010 = 0.0000280
 ```
 
-*   **Calculating costs with string prompts:**
+### Calculate cost using string prompts
 
 ```python
 from tokencost import calculate_prompt_cost
@@ -70,7 +77,9 @@ print(f"Cost: ${prompt_cost}")
 # Cost: $3e-06
 ```
 
-*   **Token Counting:** Count the number of tokens in your prompts and strings.
+### Counting Tokens
+
+Quickly count tokens in message lists or string prompts.
 
 ```python
 from tokencost import count_message_tokens, count_string_tokens
@@ -83,15 +92,16 @@ print(count_message_tokens(message_prompt, model="gpt-3.5-turbo"))
 # Alternatively, counting tokens in string prompts
 print(count_string_tokens(prompt="Hello world", model="gpt-3.5-turbo"))
 # 2
+
 ```
 
 ## How Tokens are Counted
 
-Tokencost utilizes [Tiktoken](https://github.com/openai/tiktoken), OpenAI's official tokenizer, for string and ChatML message tokenization. It accounts for formatting tokens and roles within messages. For Anthropic models (Sonnet 3.5, Haiku 3.5, and Opus 3) uses the [Anthropic beta token counting API](https://docs.anthropic.com/claude/docs/beta-api-for-counting-tokens) to ensure accurate counts, with Tiktoken used as an approximation for older Claude models.
+TokenCost leverages [Tiktoken](https://github.com/openai/tiktoken) for tokenization, OpenAI's official tokenizer, for accurate counts of strings and ChatML messages. For Anthropic models above version 3, the [Anthropic beta token counting API](https://docs.anthropic.com/claude/docs/beta-api-for-counting-tokens) is utilized for precision.  Older Claude models approximate using Tiktoken with the cl100k\_base encoding.
 
-## Pricing Table
+## Cost Table
 
-**Note:** *All units are in USD.* See full pricing table [here](pricing_table.md).
+This table provides a summary of LLM model costs in USD.  For the most up-to-date pricing, refer to the  [pricing\_table.md](pricing_table.md) file in the repository.
 
 | Model Name                                                            | Prompt Cost (USD) per 1M tokens   | Completion Cost (USD) per 1M tokens   | Max Prompt Tokens   |   Max Output Tokens |
 |:----------------------------------------------------------------------|:----------------------------------|:--------------------------------------|:--------------------|--------------------:|
@@ -258,5 +268,4 @@ Tokencost utilizes [Tiktoken](https://github.com/openai/tiktoken), OpenAI's offi
 | cerebras/llama3.1-70b                                                 | $0.6                              | $0.6                                  | 128,000             |    128000           |
 | friendliai/mixtral-8x7b-instruct-v0-1                                 | $0.4                              | $0.4                                  | 32,768              |     32768           |
 | friendliai/meta-llama-3-8b-instruct                                   | $0.1                              | $0.1                                  | 8,192               |      8192           |
-| friendliai/meta-llama-3-70b-instruct                                  | $0.8                              | $0.8                                  | 8,192               |      8192           |
-| claude-instant-1.2                                                    | $0.16                             | $0
+| friendliai/meta-llama
