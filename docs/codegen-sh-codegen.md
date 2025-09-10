@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Codegen SDK: Automate Your Software Development with AI</h1>
+<h1 align="center">Codegen: Your AI-Powered Software Engineer</h1>
 
 <div align="center">
 
@@ -13,95 +13,88 @@
 [![Slack Community](https://img.shields.io/badge/Slack-Join-4A154B?logo=slack&style=flat-square)](https://community.codegen.com)
 [![License](https://img.shields.io/badge/Code%20License-Apache%202.0-gray?&color=gray)](https://github.com/codegen-sh/codegen-sdk/tree/develop?tab=Apache-2.0-1-ov-file)
 [![Follow on X](https://img.shields.io/twitter/follow/codegen?style=social)](https://x.com/codegen)
+[Link to Original Repo](https://github.com/codegen-sh/codegen)
 
 </div>
 
 <br />
 
-**Tired of tedious coding tasks? The Codegen SDK empowers you to leverage AI-powered software engineering, automating development and boosting productivity.**
+**Codegen empowers developers to automate software engineering tasks with its powerful AI agents, helping you build, test, and deploy code faster than ever before.**
 
 ## Key Features
 
-*   **AI-Powered Code Generation:** Generate code from prompts, specifications, and more.
-*   **Automated Feature Implementation:**  Delegate feature development to AI agents.
-*   **Seamless Integration:**  Easily integrate with your existing workflows via a Python SDK.
-*   **Status Monitoring:**  Track the progress of your tasks and receive updates.
-*   **Versatile Output:**  Get code, summaries, and other valuable outputs from AI agents.
-*   **Flexible Interaction:** Interact with your AI engineer through API, Slack, Linear, Github or via our website.
+*   **AI-Powered Code Generation:** Leverage AI to generate code based on natural language prompts.
+*   **Automated Tasks:** Automate tasks like code implementation, testing, and debugging.
+*   **API Integration:** Integrate Codegen's AI agents directly into your development workflow through a programmatic interface.
+*   **Multi-Platform Support:** Interact with your AI engineer via API, Slack, Linear, GitHub, or the Codegen website.
+*   **Easy Installation:** Simple installation via pip or uv.
+*   **Enterprise Solutions:** Tailored solutions for large-scale software development projects.
 
 ## Getting Started
 
-The Codegen SDK provides a programmatic interface to the code agents offered by [Codegen](https://codegen.com).  Quickly automate your software development tasks and see your productivity soar.
+1.  **Installation:**
 
-### Installation
+    ```bash
+    pip install codegen
+    # or
+    uv pip install codegen
+    ```
 
-Install the Codegen SDK using pip or uv:
+2.  **Get your API credentials:** Sign up at [codegen.com](https://codegen.com) and obtain your API token from [codegen.com/token](https://codegen.com/token).
 
-```bash
-pip install codegen
-# or
-uv pip install codegen
-```
+3.  **Example Usage:**
 
-### Usage Example
+    ```python
+    from codegen.agents.agent import Agent
 
-Here's how to get started using the Codegen SDK:
+    # Initialize the Agent with your organization ID and API token
+    agent = Agent(
+        org_id="YOUR_ORG_ID",  # Find this at codegen.com/token
+        token="YOUR_API_TOKEN",  # Get this from codegen.com/token
+        # base_url="https://codegen-sh-rest-api.modal.run",  # Optional - defaults to production
+    )
 
-```python
-from codegen.agents.agent import Agent
+    # Run an agent with a prompt
+    task = agent.run(prompt="Implement a new feature to sort users by last login.")
 
-# Initialize the Agent with your organization ID and API token
-agent = Agent(
-    org_id="YOUR_ORG_ID",  # Find this at codegen.com/token
-    token="YOUR_API_TOKEN",  # Get this from codegen.com/token
-    # base_url="https://codegen-sh-rest-api.modal.run",  # Optional - defaults to production
-)
+    # Check the initial status
+    print(task.status)
 
-# Run an agent with a prompt
-task = agent.run(prompt="Implement a new feature to sort users by last login.")
+    # Refresh the task to get updated status (tasks can take time)
+    task.refresh()
 
-# Check the initial status
-print(task.status)
+    # Check the updated status
+    print(task.status)
 
-# Refresh the task to get updated status (tasks can take time)
-task.refresh()
-
-# Check the updated status
-print(task.status)
-
-# Once task is complete, you can access the result
-if task.status == "completed":
-    print(task.result)  # Result often contains code, summaries, or links
-```
+    # Once task is complete, you can access the result
+    if task.status == "completed":
+        print(task.result)  # Result often contains code, summaries, or links
+    ```
 
 ## Resources
 
-*   [Codegen Documentation](https://docs.codegen.com)
+*   [Documentation](https://docs.codegen.com)
 *   [Getting Started Guide](https://docs.codegen.com/introduction/getting-started)
-*   [Codegen Website](https://codegen.com)
-*   [Get Your API Token](https://codegen.com/token)
+*   [Contributing Guide](CONTRIBUTING.md)
 *   [Contact Us](https://codegen.com/contact)
 
 ## Contributing
 
-We welcome contributions!  Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on setting up your development environment and submitting changes.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up your development environment and submit contributions.
 
 ## Enterprise Solutions
 
-Looking for advanced features and support? For information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
-
----
-
-**[Visit the original repository on GitHub](https://github.com/codegen-sh/codegen)**
+Looking for a customized solution for your enterprise?  [Contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo) to learn more.
 ```
 Key improvements and SEO considerations:
 
-*   **Strong Headline:**  Uses a compelling headline with primary keywords ("Codegen SDK," "Automate," "Software Development," "AI").
-*   **One-Sentence Hook:** Grabs attention and clearly states the value proposition.
-*   **Key Feature Section:** Uses bullet points for easy readability and highlights core functionalities.
-*   **Clear "Getting Started" Section:** Provides installation and a practical usage example.
-*   **Keyword Optimization:** Uses relevant keywords throughout the README (e.g., "AI," "code generation," "automation").
-*   **Calls to Action:** Encourages users to explore resources and contribute.
-*   **Organization and Formatting:**  Uses headings, subheadings, and spacing for improved readability and clarity.
-*   **Included Alt Text:** Image alt text is included.
-*   **Link Back to Original Repo:** Adds a clear link back to the original repository at the end for users to find the source code.
+*   **Clear Headline:** Replaced the marketing headline with a descriptive and SEO-friendly one, "Codegen: Your AI-Powered Software Engineer."
+*   **One-Sentence Hook:** Added a concise, engaging introductory sentence to immediately inform the user about the product's value.
+*   **Keyword Optimization:**  Incorporated relevant keywords like "AI," "code generation," "software engineer," "automation," and "API" to improve search visibility.
+*   **Bulleted Key Features:** Presented the key features in a concise, easily scannable bulleted list. This helps users quickly understand the value proposition.
+*   **Structured Format:**  Organized the content with clear headings and subheadings for improved readability and SEO.
+*   **Call to Action:** The "Getting Started" section includes clear instructions on how to install the SDK and get started.
+*   **Resource Links:** Reorganized and improved the resource links.
+*   **Emphasis on Benefits:** The key features are framed to highlight the benefits (e.g., "Automated Tasks" instead of "Task Automation").
+*   **Link back to original repo**: Added a link back to the original repo.
+*   **Alt Text for Image:** Added `alt="Codegen Logo"` to the image tag for better accessibility and SEO.

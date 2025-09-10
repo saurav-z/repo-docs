@@ -1,6 +1,6 @@
-# Supercharge Your Development with CCPlugins: AI-Powered Commands for Claude Code CLI
+# Supercharge Your Development with CCPlugins: The Ultimate Claude Code CLI Toolkit
 
-**Tired of repetitive coding tasks and AI-induced over-engineering?** CCPlugins is a set of professional commands for Claude Code CLI that automate and optimize your development workflow, saving you valuable time and effort.  [Explore the original repository on GitHub](https://github.com/brennercruvinel/CCPlugins).
+**Tired of repetitive coding tasks? CCPlugins provides 24 professional commands to automate your development workflow and save you hours each week.  🚀**
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)](https://github.com/brennercruvinel/CCPlugins)
 [![Version](https://img.shields.io/badge/version-2.5.2-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
@@ -9,31 +9,34 @@
 [![Also works with](https://img.shields.io/badge/also%20works%20with-Kimi%20K2-1783ff.svg)](https://github.com/MoonshotAI/Kimi-K2)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
 
-## Key Features
+## Key Features:
 
-*   **Automated Workflows:** Streamline common development tasks like code formatting, testing, and refactoring.
-*   **Enhanced Code Quality:** Improve code security and maintainability with built-in analysis and remediation commands.
-*   **Time Savings:**  Reduce repetitive tasks and boost productivity, saving you potentially hours per week.
-*   **Optimized for Claude Code CLI:** Leverage the power of AI for code generation, review, and improvement.
-*   **Safe and Reliable:** Features include git integration with checkpoints, rollback capabilities, and no AI attribution.
+*   **Automated Workflows**: Streamline your development process with commands for code cleaning, formatting, testing, and more.
+*   **Enhanced Code Quality**: Improve code maintainability, security, and performance through intelligent analysis and automated fixes.
+*   **Time Savings**: Save an estimated 4-5 hours per week by automating repetitive tasks and simplifying complex processes.
+*   **Comprehensive Toolkit**: Includes 24 professional commands optimized for Claude Code CLI, covering all aspects of development, from code generation to project management.
+*   **Seamless Integration**: Easily integrate CCPlugins into your existing CI/CD pipelines and development workflows.
+*   **User-Friendly**: Easy to install and use, with clear feedback and results provided by each command.
+*   **Validation & Refinement**: Complex commands have built-in validation and refinement phases to ensure completeness.
+*   **Multi-Agent Architecture**: Leverages specialized sub-agents for security analysis, performance optimization, and architecture review.
 
-## Getting Started
+## Installation:
 
-### Installation
+### Quick Install
 
-**Quick Install (Mac/Linux):**
+**Mac/Linux:**
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/brennercruvinel/CCPlugins/main/install.sh | bash
 ```
 
-**Quick Install (Windows/Cross-platform):**
+**Windows/Cross-platform:**
 
 ```bash
 python install.py
 ```
 
-**Manual Install**
+### Manual Install
 
 ```bash
 git clone https://github.com/brennercruvinel/CCPlugins.git
@@ -51,121 +54,77 @@ python install.py
 python uninstall.py
 ```
 
-## Command Overview
+## Commands:
 
-*   **/cleanproject:** Remove debug artifacts with git safety
-*   **/commit:** Smart conventional commits with analysis
-*   **/format:** Auto-detect and apply project formatter
-*   **/scaffold feature-name:** Generate complete features from patterns
-*   **/test:** Run tests with intelligent failure analysis
-*   **/implement url/path/feature:** Import and adapt code with validation phase
-*   **/refactor:** Code restructuring with validation & de-para mapping
-*   **/review:** Multi-agent analysis (security, performance, quality, architecture)
-*   **/security-scan:** Vulnerability analysis with extended thinking & remediation
-*   **/predict-issues:** Proactive problem detection with timeline estimates
-*   **/remove-comments:** Clean obvious comments, preserve valuable docs
-*   **/fix-imports:** Repair broken imports after refactoring
-*   **/find-todos:** Locate and organize development tasks
-*   **/create-todos:** Add contextual TODO comments based on analysis results
-*   **/fix-todos:** Intelligently implement TODO fixes with context
-*   **/understand:** Analyze entire project architecture and patterns
-*   **/explain-like-senior:** Senior-level code explanations with context
-*   **/contributing:** Complete contribution readiness analysis
-*   **/make-it-pretty:** Improve readability without functional changes
-*   **/session-start:** Begin documented sessions with CLAUDE.md integration
-*   **/session-end:** Summarize and preserve session context
-*   **/docs:** Smart documentation management and updates
-*   **/todos-to-issues:** Convert code TODOs to GitHub issues
-*   **/undo:** Safe rollback with git checkpoint restore
+### 🚀 Development Workflow
 
-## Enhanced Features
+*   `/cleanproject`: Remove debug artifacts with git safety
+*   `/commit`: Smart conventional commits with analysis
+*   `/format`: Auto-detect and apply project formatter
+*   `/scaffold feature-name`: Generate complete features from patterns
+*   `/test`: Run tests with intelligent failure analysis
+*   `/implement url/path/feature`: Import and adapt code from any source with validation phase
+*   `/refactor`: Intelligent code restructuring with validation & de-para mapping
 
-### Validation and Refinement
+### 🛡️ Code Quality & Security
 
-Complex commands now include validation phases to ensure completeness:
+*   `/review`: Multi-agent analysis (security, performance, quality, architecture)
+*   `/security-scan`: Vulnerability analysis with extended thinking & remediation tracking
+*   `/predict-issues`: Proactive problem detection with timeline estimates
+*   `/remove-comments`: Clean obvious comments, preserve valuable docs
+*   `/fix-imports`: Repair broken imports after refactoring
+*   `/find-todos`: Locate and organize development tasks
+*   `/create-todos`: Add contextual TODO comments based on analysis results
+*   `/fix-todos`: Intelligently implement TODO fixes with context
 
-*   `/refactor validate` - Verify 100% migration.
-*   `/implement validate` - Check integration completeness, find loose ends.
+### 🔍 Advanced Analysis
 
-### Extended Thinking
+*   `/understand`: Analyze entire project architecture and patterns
+*   `/explain-like-senior`: Senior-level code explanations with context
+*   `/contributing`: Complete contribution readiness analysis
+*   `/make-it-pretty`: Improve readability without functional changes
 
-Advanced analysis for complex scenarios:
+### 📋 Session & Project Management
 
-*   **Refactoring:** Deep architectural analysis for large-scale changes
-*   **Security:** Sophisticated vulnerability detection with chain analysis
+*   `/session-start`: Begin documented sessions with CLAUDE.md integration
+*   `/session-end`: Summarize and preserve session context
+*   `/docs`: Smart documentation management and updates
+*   `/todos-to-issues`: Convert code TODOs to GitHub issues
+*   `/undo`: Safe rollback with git checkpoint restore
 
-### Pragmatic Command Integration
-
-Natural workflow suggestions without over-engineering:
-
-*   Suggests `/test` after major changes
-*   Recommends `/commit` at logical checkpoints
-*   Maintains user control, no automatic execution
-
-## How It Works
-
-CCPlugins extends Claude Code CLI by providing a curated set of commands that leverage AI for automated tasks. The system is designed for safety, incorporating git checkpoints before any potentially destructive operation. Commands have validation phases to ensure complete, high quality results.
-
-## Technical Architecture
-
-### Core Components
-
-*   **Intelligent Instructions**: First-person conversational design activates Claude's collaborative reasoning
-*   **Native Tool Integration**: Integration with Claude Code CLI’s native tools like grep, glob, read, and write.
-*   **Safety-First Design**: Automatic Git checkpoints before destructive operations
-*   **Universal Compatibility**: Framework-agnostic with intelligent auto-detection
-
-### Advanced Features
-
-*   **Session Continuity**: Persisting state across multiple sessions for continuity
-*   **Multi-Agent Architecture**: Orchestrating specialized sub-agents for various analysis types.
-*   **Performance Optimizations**: Smart caching and incremental processing to improve efficiency
+For detailed command descriptions and usage, refer to the [original repo](https://github.com/brennercruvinel/CCPlugins).
 
 ## Performance Metrics
 
-| Task                    | Manual Time      | With CCPlugins     | Time Saved      |
-| :---------------------- | :--------------- | :----------------- | :-------------- |
-| Security analysis       | 45-60 min        | 3-5 min            | ~50 min         |
-| Architecture review     | 30-45 min        | 5-8 min            | ~35 min         |
-| Feature scaffolding     | 25-40 min        | 2-3 min            | ~30 min         |
-| Git commits             | 5-10 min         | 30 sec             | ~9 min          |
-| Code cleanup            | 20-30 min        | 1 min              | ~25 min         |
-| Import fixing           | 15-25 min        | 1-2 min            | ~20 min         |
-| Code review             | 20-30 min        | 2-4 min            | ~20 min         |
-| Issue prediction        | 60+ min          | 5-10 min           | ~50 min         |
-| TODO resolution         | 30-45 min        | 3-5 min            | ~35 min         |
-| Code adaptation         | 40-60 min        | 3-5 min            | ~45 min         |
-| **Total Savings** | **4-5 hours per week** |  |  |
+| Task              | Manual Time   | With CCPlugins | Time Saved |
+|-------------------|---------------|----------------|------------|
+| Security analysis | 45-60 min     | 3-5 min        | ~50 min    |
+| Architecture review | 30-45 min     | 5-8 min        | ~35 min    |
+| Feature scaffolding | 25-40 min     | 2-3 min        | ~30 min    |
+| Git commits         | 5-10 min      | 30 sec         | ~9 min     |
+| Code cleanup       | 20-30 min     | 1 min          | ~25 min    |
+| Import fixing       | 15-25 min     | 1-2 min        | ~20 min    |
+| Code review        | 20-30 min     | 2-4 min        | ~20 min    |
+| Issue prediction  | 60+ min       | 5-10 min       | ~50 min    |
+| TODO resolution    | 30-45 min     | 3-5 min        | ~35 min    |
+| Code adaptation   | 40-60 min     | 3-5 min        | ~45 min    |
 
-## Requirements
+**Total: 4-5 hours saved per week with professional-grade analysis**
+
+## Requirements:
 
 *   Claude Code CLI
 *   Python 3.6+ (for installer)
 *   Git (for version control commands)
 
-## Security & Git Instructions
+## Contributing:
 
-All commands that interact with git include security instructions to prevent AI attribution:
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-**Commands with git protection:**
-- `/commit`, `/scaffold`, `/make-it-pretty`, `/cleanproject`, `/fix-imports`, `/review`, `/security-scan`
-- `/contributing`, `/todos-to-issues`, `/predict-issues`, `/find-todos`, `/create-todos`, `/fix-todos`
+## License:
 
-These commands will NEVER:
-- Add "Co-authored-by" or AI signatures
-- Include "Generated with Claude Code" messages
-- Modify git config or credentials
-- Add AI attribution to commits/issues
-
-You can modify these instructions in individual command files if needed.
-
-## Contributing
-
-We welcome contributions!  See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License - see [LICENSE](LICENSE) file for details.
+*Built by a developer tired of typing "please act like a senior engineer" in every conversation.*
 
 ---
 

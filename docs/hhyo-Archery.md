@@ -1,6 +1,8 @@
+<div align="center">
+
 # Archery: Your Centralized SQL Audit and Query Platform
 
-Archery is an open-source SQL auditing and query platform designed to streamline database management and improve data security.  [Explore the original repository](https://github.com/hhyo/Archery).
+Archery is a powerful and versatile SQL audit and query platform designed to streamline database management. [View the original repository on GitHub](https://github.com/hhyo/Archery).
 
 [![Django CI](https://github.com/hhyo/Archery/actions/workflows/django.yml/badge.svg)](https://github.com/hhyo/Archery/actions/workflows/django.yml)
 [![Release](https://img.shields.io/github/release/hhyo/archery.svg)](https://github.com/hhyo/archery/releases/)
@@ -16,9 +18,11 @@ Archery is an open-source SQL auditing and query platform designed to streamline
 
 ![](https://github.com/hhyo/Archery/wiki/images/dashboard.png)
 
+</div>
+
 ## Key Features
 
-*   **Database Support:**
+*   **Comprehensive Database Support:**
     *   MySQL
     *   MsSQL
     *   Redis
@@ -31,39 +35,51 @@ Archery is an open-source SQL auditing and query platform designed to streamline
     *   Cassandra
     *   Doris
 *   **Core Functionality:**
-    *   SQL Querying
-    *   SQL Auditing
-    *   SQL Execution
-    *   Database Backup
+    *   SQL Query Execution
+    *   SQL Audit and Review
+    *   Data Backup and Restore
     *   Data Dictionary
     *   Slow Query Log Analysis
     *   Session Management
-    *   User Account Management
+    *   User and Account Management
     *   Parameter Management
     *   Data Archiving
+
+### Feature Matrix
+
+| Database    | Query | Audit | Execute | Backup | Data Dictionary | Slow Log | Session Management | Account Management | Parameter Management | Data Archiving |
+| ----------- | ----- | ----- | ------- | ------ | --------------- | -------- | ------------------ | ------------------ | ------------------ | -------------- |
+| MySQL       | √     | √     | √       | √      | √               | √        | √                  | √                  | √                  | √              |
+| MsSQL       | √     | ×     | √       | ×      | √               | ×        | ×                  | ×                  | ×                  | ×              |
+| Redis       | √     | ×     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                  | ×              |
+| PgSQL       | √     | ×     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                  | ×              |
+| Oracle      | √     | √     | √       | √      | √               | ×        | √                  | ×                  | ×                  | ×              |
+| MongoDB     | √     | √     | √       | ×      | ×               | ×        | √                  | √                  | ×                  | ×              |
+| Phoenix     | √     | ×     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                  | ×              |
+| ODPS        | √     | ×     | ×       | ×      | ×               | ×        | ×                  | ×                  | ×                  | ×              |
+| ClickHouse  | √     | √     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                  | ×              |
+| Cassandra   | √     | ×     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                  | ×              |
+| Doris       | √     | ×     | √       | ×      | ×               | ×        | ×                  | ×                  | ×                  | ×              |
 
 ## Quick Start
 
 ### System Demo
 
-Try out a live demo to experience Archery's capabilities firsthand.
+[Online Demo](https://demo.archerydms.com)
 
-*   **Demo URL:** [Online Demo](https://demo.archerydms.com)
-*   **Login Credentials:**
-    *   Username: `archer`
-    *   Password: `archer`
+| Account  | Password |
+| -------- | -------- |
+| archer   | archer   |
 
 ### Docker
 
-See the Docker documentation for easy deployment:  [Docker Instructions](https://github.com/hhyo/archery/wiki/docker)
+See the [Docker documentation](https://github.com/hhyo/archery/wiki/docker).
 
 ## Manual Installation
 
-Detailed installation instructions are available: [Manual Installation Guide](https://github.com/hhyo/archery/wiki/manual)
+[Deployment Instructions](https://github.com/hhyo/archery/wiki/manual)
 
 ## Running Tests
-
-Execute the test suite:
 
 ```bash
 python manage.py test -v 3
@@ -72,89 +88,79 @@ python manage.py test -v 3
 ## Dependencies
 
 ### Frameworks
+
 *   [Django](https://github.com/django/django)
 *   [Bootstrap](https://github.com/twbs/bootstrap)
 *   [jQuery](https://github.com/jquery/jquery)
+
 ### Frontend Components
-*   [metisMenu](https://github.com/onokumus/metismenu)
-*   [sb-admin-2](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2)
-*   [ace](https://github.com/ajaxorg/ace)
-*   [sql-formatter](https://github.com/zeroturnaround/sql-formatter)
-*   [bootstrap-table](https://github.com/wenzhixin/bootstrap-table)
-*   [bootstrap-editable](https://github.com/vitalets/x-editable)
-*   [bootstrap-select](https://github.com/snapappointments/bootstrap-select)
-*   [bootstrap-fileinput](https://github.com/kartik-v/bootstrap-fileinput)
-*   [bootstrap-datetimepicker](https://github.com/smalot/bootstrap-datetimepicker)
-*   [daterangepicker](https://github.com/dangrossman/daterangepicker)
-*   [bootstrap-switch](https://github.com/Bttstrp/bootstrap-switch)
-*   [marked](https://github.com/markedjs/marked)
 
-### Backend Dependencies and Connectors
-*   [django-q](https://github.com/Koed00/django-q)
-*   [mysqlclient-python](https://github.com/PyMySQL/mysqlclient-python)
-*   [pyodbc](https://github.com/mkleehammer/pyodbc)
-*   [redis-py](https://github.com/andymccurdy/redis-py)
-*   [psycopg2](https://github.com/psycopg/psycopg2)
-*   [cx_Oracle](https://github.com/oracle/python-cx_Oracle)
-*   [pymongo](https://github.com/mongodb/mongo-python-driver)
-*   [phoenixdb](https://github.com/lalinsky/python-phoenixdb)
-*   [pyodps](https://github.com/aliyun/aliyun-odps-python-sdk)
-*   [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver)
-*   [sqlparse](https://github.com/andialbrecht/sqlparse)
-*   [python-mysql-replication](https://github.com/noplay/python-mysql-replication)
-*   [django-auth-ldap](https://github.com/django-auth-ldap/django-auth-ldap)
-*   [simplejson](https://github.com/simplejson/simplejson)
-*   [python-dateutil](https://github.com/paxan/python-dateutil)
+*   Menu: [metisMenu](https://github.com/onokumus/metismenu)
+*   Theme: [sb-admin-2](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2)
+*   Editor: [ace](https://github.com/ajaxorg/ace)
+*   SQL Formatting: [sql-formatter](https://github.com/zeroturnaround/sql-formatter)
+*   Tables: [bootstrap-table](https://github.com/wenzhixin/bootstrap-table)
+*   Table Editing: [bootstrap-editable](https://github.com/vitalets/x-editable)
+*   Dropdown: [bootstrap-select](https://github.com/snapappointments/bootstrap-select)
+*   File Upload: [bootstrap-fileinput](https://github.com/kartik-v/bootstrap-fileinput)
+*   Date/Time Picker: [bootstrap-datetimepicker](https://github.com/smalot/bootstrap-datetimepicker)
+*   Date Range Picker: [daterangepicker](https://github.com/dangrossman/daterangepicker)
+*   Switches: [bootstrap-switch](https://github.com/Bttstrp/bootstrap-switch)
+*   Markdown Display: [marked](https://github.com/markedjs/marked)
 
-### Feature-Specific Dependencies
-*   [pyecharts](https://github.com/pyecharts/pyecharts)
-*   [goInception](https://github.com/hanchuanchuan/goInception)
-*   [inception](https://github.com/hhyo/inception)
-*   [SQLAdvisor](https://github.com/Meituan-Dianping/SQLAdvisor)
-*   [SOAR](https://github.com/XiaoMi/soar)
-*   [my2sql](https://github.com/liuhr/my2sql)
-*   [SchemaSync](https://github.com/hhyo/SchemaSync)
-*   [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html)
-*   [aquila_v2](https://github.com/thinkdb/aquila_v2)
-*   [gh-ost](https://github.com/github/gh-ost)
-*   [pt-online-schema-change](https://www.percona.com/doc/percona-toolkit/3.0/pt-online-schema-change.html)
-*   [mybatis-mapper2sql](https://github.com/hhyo/mybatis-mapper2sql)
-*   [aliyun-openapi-python-sdk](https://github.com/aliyun/aliyun-openapi-python-sdk)
-*   [django-mirage-field](https://github.com/luojilab/django-mirage-field)
+### Backend Dependencies
+
+*   Queue Tasks: [django-q](https://github.com/Koed00/django-q)
+*   MySQL Connector: [mysqlclient-python](https://github.com/PyMySQL/mysqlclient-python)
+*   MsSQL Connector: [pyodbc](https://github.com/mkleehammer/pyodbc)
+*   Redis Connector: [redis-py](https://github.com/andymccurdy/redis-py)
+*   PostgreSQL Connector: [psycopg2](https://github.com/psycopg/psycopg2)
+*   Oracle Connector: [cx_Oracle](https://github.com/oracle/python-cx_Oracle)
+*   MongoDB Connector: [pymongo](https://github.com/mongodb/mongo-python-driver)
+*   Phoenix Connector: [phoenixdb](https://github.com/lalinsky/python-phoenixdb)
+*   ODPS Connector: [pyodps](https://github.com/aliyun/aliyun-odps-python-sdk)
+*   ClickHouse Connector: [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver)
+*   SQL Parsing: [sqlparse](https://github.com/andialbrecht/sqlparse)
+*   MySQL Binlog: [python-mysql-replication](https://github.com/noplay/python-mysql-replication)
+*   LDAP: [django-auth-ldap](https://github.com/django-auth-ldap/django-auth-ldap)
+*   Serialization: [simplejson](https://github.com/simplejson/simplejson)
+*   Date/Time Handling: [python-dateutil](https://github.com/paxan/python-dateutil)
+
+### Functionality Dependencies
+
+*   Visualization: [pyecharts](https://github.com/pyecharts/pyecharts)
+*   MySQL Audit/Execution: [goInception](https://github.com/hanchuanchuan/goInception) | [inception](https://github.com/hhyo/inception)
+*   MySQL Index Optimization: [SQLAdvisor](https://github.com/Meituan-Dianping/SQLAdvisor)
+*   SQL Optimization: [SOAR](https://github.com/XiaoMi/soar)
+*   My2SQL: [my2sql](https://github.com/liuhr/my2sql)
+*   Table Schema Sync: [SchemaSync](https://github.com/hhyo/SchemaSync)
+*   Slow Log Analysis: [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html) | [aquila\_v2](https://github.com/thinkdb/aquila_v2)
+*   Large Table DDL: [gh-ost](https://github.com/github/gh-ost) | [pt-online-schema-change](https://www.percona.com/doc/percona-toolkit/3.0/pt-online-schema-change.html)
+*   MyBatis XML Parsing: [mybatis-mapper2sql](https://github.com/hhyo/mybatis-mapper2sql)
+*   RDS Management: [aliyun-openapi-python-sdk](https://github.com/aliyun/aliyun-openapi-python-sdk)
+*   Data Encryption: [django-mirage-field](https://github.com/luojilab/django-mirage-field)
 
 ## Contributing
 
-Contribute to Archery by:
+Review the project's development plan and dependency list, claim issues, submit pull requests, or contribute in other ways.
 
-*   Adding to the [Wiki documentation](https://github.com/hhyo/Archery/wiki)
-*   Fixing bugs
-*   Adding new features
-*   Optimizing code
-*   Improving test cases
+Ways to contribute:
 
-## Community & Support
+*   [Wiki Documentation](https://github.com/hhyo/Archery/wiki) (Open for editing)
+*   Bug Fixes
+*   New Feature Submissions
+*   Code Optimization
+*   Test Case Improvements
 
-*   **Discussions:** [Discussions](https://github.com/hhyo/Archery/discussions) for usage questions and feature requests.
-*   **Bug Reports:** [Issues](https://github.com/hhyo/archery/issues) for reporting and tracking bugs.
+## Feedback and Discussions
+
+*   Usage questions and feature requests: [Discussions](https://github.com/hhyo/Archery/discussions)
+*   Bug Reports: [Issues](https://github.com/hhyo/archery/issues)
 
 ## Acknowledgements
 
-*   [archer](https://github.com/jly8866/archer): Archery is based on archer.
-*   [goInception](https://github.com/hanchuanchuan/goInception): A MySQL operation tool.
-*   [JetBrains Open Source](https://www.jetbrains.com/zh-cn/opensource/?from=archery) provides free IDE licenses.  
-    [<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" width="200"/>](https://www.jetbrains.com/opensource/)
-```
-Key improvements and explanations:
+*   [archer](https://github.com/jly8866/archer): Archery is built based on the second development of archer.
+*   [goInception](https://github.com/hanchuanchuan/goInception): MySQL operation and maintenance tool that integrates audit, execution, backup, and rollback statement generation.
+*   [JetBrains Open Source](https://www.jetbrains.com/zh-cn/opensource/?from=archery) provides free IDE licenses for the project.
 
-*   **SEO Optimization:**  Keywords like "SQL Audit", "Query Platform", "Database Management" are included in the title and description.
-*   **Clear Structure:**  Uses clear headings (H2) and bullet points for readability and scannability. This is good for both humans and search engines.
-*   **Concise Summary:** The one-sentence hook clearly describes the project's primary function.
-*   **Focus on Benefits:**  Highlights the benefits of using Archery (streamlining management, improving security) to attract potential users.
-*   **Call to Action:** Includes a clear "Explore the original repository" link at the top.
-*   **Complete Information:** The original content is preserved and organized.
-*   **Maintainability:**  The structure is easy to update as the project evolves.
-*   **Relevant Links:** All important links (documentation, demo, etc.) are easily accessible.
-*   **Clear Login Credentials:**  Login details for the demo are clearly displayed.
-*   **Community Focus:** Encourages contributions and provides guidance on how to do so.
-
-This revised README is significantly more user-friendly and is also more likely to be found by those searching for database management and SQL auditing tools.
+  [<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" width="200"/>](https://www.jetbrains.com/opensource/)

@@ -2,17 +2,17 @@
 
 # ComfyUI: Unleash Your AI Creativity with a Visual Workflow Engine
 
-**ComfyUI is the ultimate visual AI engine, empowering you to create and execute advanced Stable Diffusion pipelines with an intuitive node-based interface.** Explore the power of AI image generation with this versatile and modular application.
+**ComfyUI is a powerful and modular visual AI engine, empowering users to design and execute advanced Stable Diffusion pipelines with an intuitive node-based interface.  Check out the original repo: [comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI)**
 
 [![Website][website-shield]][website-url]
-[![Dynamic JSON Badge][discord-shield]][discord-url]
+[![Discord][discord-shield]][discord-url]
 [![Twitter][twitter-shield]][twitter-url]
 [![Matrix][matrix-shield]][matrix-url]
 <br>
-[![][github-release-shield]][github-release-link]
-[![][github-release-date-shield]][github-release-link]
-[![][github-downloads-shield]][github-downloads-link]
-[![][github-downloads-latest-shield]][github-downloads-link]
+[![Github Release][github-release-shield]][github-release-link]
+[![Github Release Date][github-release-date-shield]][github-release-link]
+[![Github Downloads][github-downloads-shield]][github-downloads-link]
+[![Github Latest Downloads][github-downloads-latest-shield]][github-downloads-link]
 
 [matrix-shield]: https://img.shields.io/badge/Matrix-000000?style=flat&logo=matrix&logoColor=white
 [matrix-url]: https://app.element.io/#/room/%23comfyui_space%3Amatrix.org
@@ -34,81 +34,82 @@
 ![ComfyUI Screenshot](https://github.com/user-attachments/assets/7ccaf2c1-9b72-41ae-9a89-5688c94b7abe)
 </div>
 
+
 ## Key Features of ComfyUI:
 
-*   **Node-Based Interface:**  Design and execute complex Stable Diffusion workflows visually without coding.
-*   **Extensive Model Support:** Compatible with a vast array of image, video, audio, and 3D models, including:
-    *   SD1.x, SD2.x (and [unCLIP](https://comfyanonymous.github.io/ComfyUI_examples/unclip/))
-    *   SDXL, SDXL Turbo
+*   **Node-Based Workflow:** Design complex Stable Diffusion pipelines without coding using an intuitive node-based, graph/flowchart interface.
+*   **Wide Model Support:**
+    *   SD1.x, SD2.x, and unCLIP
+    *   SDXL and SDXL Turbo
     *   Stable Cascade
     *   SD3 and SD3.5
     *   Pixart Alpha and Sigma
-    *   And many more, with dedicated examples for each!
-*   **Comprehensive Workflow Capabilities:**
-    *   Asynchronous Queue system for efficient processing.
-    *   Smart memory management, allowing use on GPUs with limited VRAM.
-    *   Supports CPU fallback mode if no GPU is available.
-    *   Loads ckpt, safetensors, embeddings, LoRAs, and Hypernetworks.
-    *   Full workflow loading and saving (JSON, PNG, WebP, FLAC).
-    *   Advanced features: Hires fix, inpainting, ControlNet, and more.
-*   **Easy to Get Started:** Available as a [Desktop Application](https://www.comfy.org/download), [Windows Portable Package](#installing), and through [Manual Install](#manual-install-windows-linux) for various OS.
-*   **Optimized for Performance:** Only re-executes the parts of the workflow that change.
-*   **Rich Ecosystem:** Access to various examples and community-created workflows through the [Examples page](https://comfyanonymous.github.io/ComfyUI_examples/).
-*   **Flexible & Offline-Friendly:** Works fully offline; only downloads are user-initiated.
-*   **API Integration:** Optional API nodes allow using paid models.
-*   **Customization:** Easily set search paths for models via the [Config file](extra_model_paths.yaml.example).
+    *   AuraFlow
+    *   HunyuanDiT
+    *   Flux
+    *   Lumina Image 2.0
+    *   HiDream
+    *   Qwen Image
+    *   Omnigen 2, Flux Kontext, HiDream E1.1, Qwen Image Edit
+    *   Stable Video Diffusion, Mochi, LTX-Video, Hunyuan Video, Wan 2.1, Wan 2.2
+    *   Stable Audio, ACE Step
+    *   Hunyuan3D 2.0
+*   **Optimized Performance:** Asynchronous queue system, optimized execution, and smart memory management for efficient operation.
+*   **Broad Hardware Compatibility:** Supports various GPUs (NVIDIA, AMD, Intel, Apple Silicon, Ascend), and can run on CPU (`--cpu` option).
+*   **Flexible Model Loading:** Supports ckpt, safetensors, and other model formats.
+*   **Advanced Features:**
+    *   Embeddings/Textual Inversion
+    *   Loras (regular, locon, and loha)
+    *   Hypernetworks
+    *   Workflow Loading (PNG, WebP, FLAC)
+    *   Workflow Saving/Loading (JSON)
+    *   Hires Fix, Area Composition, Inpainting, ControlNet, T2I-Adapter, Upscale Models, GLIGEN, Model Merging, LCM models and Loras, Latent previews with TAESD
+    *   Offline Operation: No external downloads unless desired.
+    *   Config file for custom model paths.
+*   **Extensive Examples:** Explore what's possible with [example workflows](https://comfyanonymous.github.io/ComfyUI_examples/).
 
-## Getting Started
+## Get Started
 
-Choose the best installation method for you:
+### [Desktop Application](https://www.comfy.org/download)
+- The easiest way to get started.
+- Available on Windows & macOS.
 
-*   **[Desktop Application](https://www.comfy.org/download)**: Easiest option, available for Windows & macOS.
-*   **[Windows Portable Package](#installing)**: Get the latest updates, fully portable.
-*   **[Manual Install](#manual-install-windows-linux)**: For all operating systems and GPU types (NVIDIA, AMD, Intel, Apple Silicon, Ascend, Cambricon, Iluvatar).
+### [Windows Portable Package](#installing)
+- Get the latest commits and completely portable.
+- Available on Windows.
 
-## Explore ComfyUI Examples
+### [Manual Install](#manual-install-windows-linux)
+Supports all operating systems and GPU types (NVIDIA, AMD, Intel, Apple Silicon, Ascend).
 
-Discover what's possible with ComfyUI by exploring a wide range of workflows at the [Examples page](https://comfyanonymous.github.io/ComfyUI_examples/).
+## [Examples](https://comfyanonymous.github.io/ComfyUI_examples/)
+See what ComfyUI can do with the [example workflows](https://comfyanonymous.github.io/ComfyUI_examples/).
 
 ## Release Process
-
-ComfyUI follows a weekly release cycle.  The project has three interconnected repositories:
-
-1.  **[ComfyUI Core](https://github.com/comfyanonymous/ComfyUI)**:  Releases stable versions.
-2.  **[ComfyUI Desktop](https://github.com/Comfy-Org/desktop)**:  Builds releases using the latest core.
-3.  **[ComfyUI Frontend](https://github.com/Comfy-Org/ComfyUI_frontend)**:  Hosts the frontend, with updates merged into the core.
+(See Original README for specifics)
 
 ## Shortcuts
-... (Keep the shortcuts table here)
+(See Original README for specifics)
 
-## Installing
+# Installing
+(See Original README for specifics)
 
-### Windows Portable
-... (Keep the Windows Portable instructions here)
+# Running
+(See Original README for specifics)
 
-### [comfy-cli](https://docs.comfy.org/comfy-cli/getting-started)
-... (Keep the comfy-cli instructions here)
-
-### Manual Install (Windows, Linux)
-... (Keep the Manual Install instructions here)
-
-## Running
-... (Keep the Running instructions here)
-
-## Notes
-... (Keep the Notes section here)
+# Notes
+(See Original README for specifics)
 
 ## How to show high-quality previews?
-... (Keep the High-Quality Previews instructions here)
+(See Original README for specifics)
 
 ## How to use TLS/SSL?
-... (Keep the TLS/SSL instructions here)
+(See Original README for specifics)
 
 ## Support and dev channel
-... (Keep the Support and dev channel information here)
+(See Original README for specifics)
 
 ## Frontend Development
-... (Keep the Frontend Development information here)
+(See Original README for specifics)
 
-## QA
-... (Keep the QA section here)
+# QA
+(See Original README for specifics)

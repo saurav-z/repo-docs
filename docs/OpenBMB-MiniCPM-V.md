@@ -1,136 +1,124 @@
 <div align="center">
 
-<img src="./assets/minicpm_v_and_minicpm_o_title.png" width="500em" alt="MiniCPM-V & MiniCPM-o">
+<img src="./assets/minicpm_v_and_minicpm_o_title.png" width="500em" ></img> 
 
 </div>
 
-# MiniCPM-V and MiniCPM-o: Powerful Multimodal LLMs for On-Device Understanding
+# MiniCPM-V & MiniCPM-o: Cutting-Edge Multimodal AI for On-Device Applications
 
-**Unlock cutting-edge multimodal capabilities on your phone with MiniCPM-V and MiniCPM-o, offering state-of-the-art performance for single image, multi-image, high-FPS video, and audio understanding.**  [Explore the original repository](https://github.com/OpenBMB/MiniCPM-V).
+**MiniCPM-V and MiniCPM-o** are efficient, state-of-the-art multimodal large language models (MLLMs) designed for powerful AI experiences on your phone and other end-side devices. Offering exceptional vision, speech, and multimodal capabilities, these models empower users with high-quality text and speech outputs.
 
----
+[**View the original repository on GitHub**](https://github.com/OpenBMB/MiniCPM-V)
 
-**Key Features & Highlights:**
+**Key Features of MiniCPM-V & MiniCPM-o:**
 
-*   **Exceptional Performance:** MiniCPM models consistently achieve top scores on leading benchmarks, *outperforming* many larger, proprietary models. MiniCPM-V 4.5 is at GPT-4o level and MiniCPM-o 2.6 is at GPT-4o level.
+*   **Exceptional Performance:** Achieve GPT-4o-level performance on on-device multimodal tasks.
+*   **Multimodal Input:** Supports images, videos, text, and audio.
+*   **End-to-End Capability:** MiniCPM-o offers end-to-end capabilities including speech generation and speech conversation.
+*   **Efficient Deployment:** Designed for efficient, on-device deployment, offering high-FPS and long video understanding.
+*   **Flexible Usage:** Supported by llama.cpp, Ollama, and vLLM.
+*   **Comprehensive Toolkit**: Leverage the MiniCPM-V & o Cookbook for easy deployment.
 
-*   **On-Device Efficiency:** Designed for efficient deployment on mobile devices, enabling real-time multimodal processing on your phone or tablet.
+## MiniCPM-V 4.5:  The Most Capable Open-Source MLLM
 
-*   **Versatile Input Support:** Process images, videos, text, and audio as inputs, enabling a wide range of applications.
-
-*   **High-FPS & Long Video Understanding:** The MiniCPM-V series now supports efficient high-FPS and long video understanding with a new unified 3D-Resampler.
-
-*   **Multimodal Live Streaming:** MiniCPM-o 2.6 supports multimodal live streaming, including video and audio streams.
-
-*   **Multilingual Support:** Supports multilingual capabilities in over 30 languages.
-
-*   **Easy Integration:** Supports popular frameworks like llama.cpp, Ollama, and vLLM, and can be integrated in iOS/web demo.
-
----
-
-## MiniCPM-V 4.5
-
-The latest and most capable model in the MiniCPM-V series. Built on Qwen3-8B and SigLIP2-400M with a total of 8B parameters.
-
-**Key Improvements:**
-
-*   **Vision-Language Leader:** Surpasses GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B on vision-language capabilities.
-*   **Efficient Video Processing:** Achieves a 96x compression rate for video tokens.
-*   **Controllable Thinking Modes:** Supports both fast and deep thinking modes.
-*   **Enhanced OCR and Document Parsing:** Leading performance on OCRBench, and leading performance on PDF document parsing on OmniDocBench.
-*   **Trustworthy and Multilingual:** Features trustworthy behaviors and supports multilingual capabilities.
-
-### Key Techniques
-
-*   **Unified 3D-Resampler for High-density Video Compression**
-*   **Pre-training: Unified Learning for OCR and Knowledge from Documents**
-*   **Post-training: Hybrid Fast/Deep Thinking with Multimodal RL.**
-
-## MiniCPM-o 2.6
-
-The most capable model in the MiniCPM-o series, excelling in vision, speech, and multimodal live streaming. Built in an end-to-end fashion based on SigLip-400M, Whisper-medium-300M, ChatTTS-200M, and Qwen2.5-7B with a total of 8B parameters.
+MiniCPM-V 4.5 is the latest and most capable model in the MiniCPM-V series. Built on Qwen3-8B and SigLIP2-400M with a total of 8B parameters, it surpasses other existing models in vision-language capabilities, making it the most performant MLLM under 30B parameters.
 
 **Key Highlights:**
 
-*   **Vision and Audio Leader:** Achieves GPT-4o level performance for vision, speech, and multimodal live streaming on end-side devices.
-*   **Bilingual Real-time Speech Conversation:** Supports bilingual real-time speech conversation with configurable voices.
-*   **Multimodal Live Streaming Capability:** It can accept continuous video and audio streams and support real-time speech interaction.
-*   **Superior Efficiency:** State-of-the-art token density for faster inference and lower memory usage.
-*   **Key Techniques:**
-    *   End-to-end Omni-modal Architecture
-    *   Omni-modal Live Streaming Mechanism
-    *   Configurable Speech Modeling Design
+*   **Unrivaled Vision-Language Ability:** Performs better than GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B in vision-language capabilities.
+*   **High-Performance Video Understanding:** Featuring efficient high-FPS (up to 10FPS) and long video understanding (up to 96x compression rate for video tokens).
+*   **Versatile Capabilities:** The model supports Controllable hybrid fast/deep thinking, strong OCR, document parsing and multilingual support.
+*   **Ease of Use:** Compatible with various frameworks including llama.cpp, Ollama, vLLM, and SGLang. Offers quantized model formats (int4, GGUF, AWQ) and supports fine-tuning.
+*   **Online Demo:**  [Try out the online demo](http://101.126.42.235:30910/)
+
+## MiniCPM-o 2.6:  GPT-4o Level Speech and Multimodal Live Streaming
+
+MiniCPM-o 2.6 is the most capable model in the MiniCPM-o series. It's built in an end-to-end fashion based on SigLip-400M, Whisper-medium-300M, ChatTTS-200M, and Qwen2.5-7B with a total of 8B parameters. It exhibits a significant performance improvement over MiniCPM-V 2.6, and introduces new features for real-time speech conversation and multimodal live streaming.
+
+**Key Highlights:**
+
+*   **GPT-4o-Level Performance:** Performs similar to GPT-4o-202405.
+*   **Exceptional Speech Capability:** Supports bilingual real-time speech conversation with configurable voices and provides voice cloning.
+*   **State-of-the-art Multimodal Live Streaming:** Accepts continuous video and audio streams.
+*   **Superior Efficiency:**  Supports multimodal live streaming on devices like iPads.
+*   **Online Demo:**  [Try out the online demo](https://minicpm-omni-webdemo-us.modelbest.cn/)
 
 ## MiniCPM-V & o Cookbook
 
-Dive into ready-to-deploy solutions for the MiniCPM-V and MiniCPM-o series with our comprehensive cookbook.
+The MiniCPM-V & o Cookbook provides:
+- Easy Usage Documentation
+- Broad User Spectrum
+- Versatile Deployment Scenarios
 
-**Key Features:**
+Access the cookbook here: [MiniCPM-V & o Cookbook](https://github.com/OpenSQZ/MiniCPM-V-CookBook)
 
-*   Easy Usage Documentation
-*   Broad User Spectrum
-*   Versatile Deployment Scenarios
+## Demos: Experience MiniCPM-V & MiniCPM-o
 
-## Inference
+*   [MiniCPM-o 2.6 Online Demo](https://minicpm-omni-webdemo-us.modelbest.cn/)
+*   [MiniCPM-V 2.6 Online Demo](http://120.92.209.146:8887/)
+*   [MiniCPM-Llama3-V 2.5 Online Demo](https://huggingface.co/spaces/openbmb/MiniCPM-Llama3-V-2_5)
+*   [MiniCPM-V 2.0 Online Demo](https://huggingface.co/spaces/openbmb/MiniCPM-V-2)
 
-*   **Model Zoo:** Access various model versions for different hardware and use cases.
+## Inference: Run the Models
 
-*   **Multi-turn Conversation:** Enables conversational interactions with images and videos.
+*   **Model Zoo:** Access the latest models and quantized versions.
+*   **Multi-turn Conversation:**  Demonstration code for multi-turn interactions, including with images, video, and audio.
+*   **Efficient Inference:** Instructions for using llama.cpp, Ollama, and vLLM for efficient inference.
 
-*   **Efficient Inference:** Supports llama.cpp, Ollama, and vLLM for optimal performance on various devices.
-
-*   **Audio Understanding:** Addressed ASR, speaker analysis, general audio captioning, and sound scene tagging.
-
-## Fine-tuning
+## Fine-tuning: Customize for Your Needs
 
 *   **Simple Fine-tuning:** Easy fine-tuning with Hugging Face.
-*   **With Align-Anything:** Fine-tuning MiniCPM-o 2.6 by PKU-Alignment Team (both vision and audio, SFT and DPO)
-*   **With LLaMA-Factory:** Fine-tuning MiniCPM-o 2.6 and MiniCPM-V 2.6 with the LLaMA-Factory framework.
-*   **With the SWIFT Framework:** Fine-tuning MiniCPM-V series
+*   **Advanced Frameworks:** Support for fine-tuning with Align-Anything, LLaMA-Factory, and SWIFT.
 
-## Awesome Work
+## Awesome Projects Using MiniCPM-V & MiniCPM-o
 
-*   [text-extract-api](https://github.com/CatchTheTornado/text-extract-api)
-*   [comfyui_LLM_party](https://github.com/heshengtao/comfyui_LLM_party)
-*   [Ollama-OCR](https://github.com/imanoop7/Ollama-OCR)
-*   [comfyui-mixlab-nodes](https://github.com/MixLabPro/comfyui-mixlab-nodes)
-*   [OpenAvatarChat](https://github.com/HumanAIGC-Engineering/OpenAvatarChat)
-*   [pensieve](https://github.com/arkohut/pensieve)
-*   [paperless-gpt](https://github.com/icereed/paperless-gpt)
-*   [Neuro](https://github.com/kimjammer/Neuro)
+Explore projects built on MiniCPM-V and MiniCPM-o, including OCR APIs, ComfyUI integrations, and more.
 
 ## FAQs
 
-Find answers to common questions in the [FAQs](./docs/faqs.md) section.
+Find answers to common questions in our [FAQs](./docs/faqs.md).
 
 ## Limitations
 
-See the [limitations section](#limitations) for details.
+See the limitations of these models at the [Limitations Section](#limitations).
 
 ## Model License
 
-*   Apache-2.0
-
-*   MiniCPM Model License
+This project is released under the [Apache-2.0](https://github.com/OpenBMB/MiniCPM/blob/main/LICENSE) License.
+Please adhere to [MiniCPM Model License.md](https://github.com/OpenBMB/MiniCPM/blob/main/MiniCPM%20Model%20License.md).
+Free for academic research, and free for commercial use after a registration.
 
 ## Statement
 
-See the [Statement](#statement) section for details.
+The use of the MiniCPM-o/V models is at your own risk.
+See the [Statement Section](#statement) for more information.
 
 ## Institutions
 
-*   THUNLP
-*   ModelBest
+This project is developed by:
 
-## 🌟 Star History
+*   [THUNLP](https://nlp.csai.tsinghua.edu.cn/)
+*   [ModelBest](https://modelbest.cn/)
 
-[Include Star History Image (e.g., using a service like api.star-history.com as shown in the original)]
+## Star History
+
+```html
+<table align="center">
+    <p align="center">
+      <img src="assets/star-history-25-09-02.png"/>
+    </p>
+</table>
+```
 
 ## Key Techniques and Other Multimodal Projects
+
+Explore the key techniques and related projects from our team:
 
 [VisCPM](https://github.com/OpenBMB/VisCPM/tree/main) | [RLPR](https://github.com/OpenBMB/RLPR) | [RLHF-V](https://github.com/RLHF-V/RLHF-V) | [LLaVA-UHD](https://github.com/thunlp/LLaVA-UHD) | [RLAIF-V](https://github.com/RLHF-V/RLAIF-V)
 
 ## Citation
+
+Cite our research if you find our models/code/paper helpful:
 
 ```bib
 @article{yao2024minicpm,

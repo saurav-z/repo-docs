@@ -1,10 +1,7 @@
-# FastDeploy: Supercharge Your LLM and VLM Deployment with Production-Ready Solutions
-
-**FastDeploy** is your go-to toolkit for effortlessly deploying Large Language Models (LLMs) and Visual Language Models (VLMs) built on PaddlePaddle, offering production-ready deployment solutions with cutting-edge acceleration technologies. ([Original Repo](https://github.com/PaddlePaddle/FastDeploy))
-
 <p align="center">
   <a href="https://github.com/PaddlePaddle/FastDeploy/releases"><img src="https://github.com/user-attachments/assets/42b0039f-39e3-4279-afda-6d1865dfbffb" width="500"></a>
 </p>
+
 <p align="center">
     <a href=""><img src="https://img.shields.io/badge/python-3.10-aff.svg"></a>
     <a href=""><img src="https://img.shields.io/badge/os-linux-pink.svg"></a>
@@ -12,7 +9,6 @@
     <a href="https://github.com/PaddlePaddle/FastDeploy/commits"><img src="https://img.shields.io/github/commit-activity/m/PaddlePaddle/FastDeploy?color=3af"></a>
     <a href="https://github.com/PaddlePaddle/FastDeploy/issues"><img src="https://img.shields.io/github/issues/PaddlePaddle/FastDeploy?color=9cc"></a>
     <a href="https://github.com/PaddlePaddle/FastDeploy/stargazers"><img src="https://img.shields.io/github/stars/PaddlePaddle/FastDeploy?color=ccf"></a>
-
 </p>
 
 <p align="center">
@@ -22,22 +18,30 @@
     <a href="https://paddlepaddle.github.io/FastDeploy/get_started/quick_start"><b> Quick Start </b></a>
     |
     <a href="https://paddlepaddle.github.io/FastDeploy/supported_models/"><b> Supported Models </b></a>
-
 </p>
+
+# FastDeploy: Deploy LLMs and VLMs with Lightning Speed and Efficiency
+
+**FastDeploy** is a powerful, open-source toolkit designed for fast and efficient inference and deployment of large language models (LLMs) and visual language models (VLMs).  Get started at the [FastDeploy GitHub repository](https://github.com/PaddlePaddle/FastDeploy)!
 
 ## Key Features
 
-*   **Optimized Performance:** Achieve high throughput and low latency with advanced acceleration techniques and optimized KV Cache handling.
-*   **Comprehensive Hardware Support:** Deploy on NVIDIA GPUs, Kunlunxin XPUs, Hygon DCUs, Ascend NPUs, Iluvatar GPUs, Enflame GCUs, and MetaX GPUs.
-*   **Model Compatibility:** Supports a wide range of quantization formats including W8A16, W8A8, W4A16, W4A8, W2A16, and FP8, as well as models from HuggingFace.
-*   **Production-Ready Deployment:** Benefit from features like load-balanced PD disaggregation, OpenAI API server and vLLM compatibility, and advanced acceleration techniques like speculative decoding.
+*   **Production-Ready Deployment:** Ready-to-use solutions for LLM and VLM deployment.
+*   **Optimized Performance:**
+    *   🚀 **Load-Balanced PD Disaggregation:**  Maximizes resource utilization with context caching and dynamic instance role switching.
+    *   🔄 **Unified KV Cache Transmission:** Efficient NVLink/RDMA-aware transport library.
+    *   ⏩ **Advanced Acceleration Techniques:** Supports speculative decoding, Multi-Token Prediction (MTP) and Chunked Prefill.
+*   **Wide Compatibility:**
+    *   🤝 **OpenAI API Server and vLLM Compatibility:** Deploy with a vLLM interface.
+    *   🧮 **Comprehensive Quantization:** Supports a variety of quantization formats including W8A16, W8A8, W4A16, W4A8, W2A16, and FP8.
+*   **Multi-Hardware Support:**  Runs on NVIDIA GPUs, Kunlunxin XPUs, Hygon DCUs, Ascend NPUs, Iluvatar GPUs, Enflame GCUs, MetaX GPUs and more.
 
 ## News
 
-*   **[2025-09] 🔥 FastDeploy v2.2 is newly released!** Compatibility with models in the HuggingFace ecosystem, further optimized performance, and newly adds support for [baidu/ERNIE-21B-A3B-Thinking](https://huggingface.co/baidu/ERNIE-4.5-21B-A3B-Thinking)!
-*   **[2025-08] 🔥 Released FastDeploy v2.1:** A brand-new KV Cache scheduling strategy has been introduced, and expanded support for PD separation and CUDA Graph across more models. Enhanced hardware support has been added for platforms like Kunlun and Hygon, along with comprehensive optimizations to improve the performance of both the service and inference engine.
-*   **[2025-07] The FastDeploy 2.0 Inference Deployment Challenge is now live!** Complete the inference deployment task for the ERNIE 4.5 series open-source models to win official FastDeploy 2.0 merch and generous prizes! 🎁 You're welcome to try it out and share your feedback! 📌[Sign up here](https://www.wjx.top/vm/meSsp3L.aspx#) 📌[Event details](https://github.com/PaddlePaddle/FastDeploy/discussions/2728)
-*   **[2025-06] 🔥 Released FastDeploy v2.0:** Supports inference and deployment for ERNIE 4.5. Furthermore, we open-source an industrial-grade PD disaggregation with context caching, dynamic role switching for effective resource utilization to further enhance inference performance for MoE models.
+*   **[2025-09] 🔥 FastDeploy v2.2 is newly released!** Offering HuggingFace ecosystem compatibility, enhanced performance, and support for baidu/ERNIE-21B-A3B-Thinking!
+*   **[2025-08] 🔥 Released FastDeploy v2.1:** New KV Cache scheduling, expanded PD separation and CUDA Graph support, and optimized hardware support for platforms like Kunlun and Hygon.
+*   **[2025-07]** FastDeploy 2.0 Inference Deployment Challenge is live! Win prizes by deploying ERNIE 4.5 series models. [Sign up](https://www.wjx.top/vm/meSsp3L.aspx#) & [event details](https://github.com/PaddlePaddle/FastDeploy/discussions/2728).
+*   **[2025-06] 🔥 Released FastDeploy v2.0:** Supports inference and deployment for ERNIE 4.5, featuring an industrial-grade PD disaggregation solution.
 
 ## Requirements
 
@@ -46,7 +50,7 @@
 
 ## Installation
 
-FastDeploy supports inference deployment on **NVIDIA GPUs**, **Kunlunxin XPUs**, **Iluvatar GPUs**, **Enflame GCUs**, **Hygon DCUs** and other hardware. For detailed installation instructions:
+Install FastDeploy on various hardware platforms:
 
 *   [NVIDIA GPU](./docs/get_started/installation/nvidia_gpu.md)
 *   [Kunlunxin XPU](./docs/get_started/installation/kunlunxin_xpu.md)
@@ -55,11 +59,11 @@ FastDeploy supports inference deployment on **NVIDIA GPUs**, **Kunlunxin XPUs**,
 *   [Hygon DCU](./docs/get_started/installation/hygon_dcu.md)
 *   [MetaX GPU](./docs/get_started/installation/metax_gpu.md)
 
-**Note:** We are actively working on expanding hardware support. Additional hardware platforms including Ascend NPU are currently under development and testing. Stay tuned for updates!
+**Note:**  Support for Ascend NPU and other hardware is under development.
 
 ## Get Started
 
-Explore FastDeploy with these resources:
+Quickly deploy your models with these guides:
 
 *   [10-Minutes Quick Deployment](./docs/get_started/quick_start.md)
 *   [ERNIE-4.5 Large Language Model Deployment](./docs/get_started/ernie-4.5.md)
@@ -82,4 +86,4 @@ Explore FastDeploy with these resources:
 
 ## Acknowledgement
 
-FastDeploy is licensed under the [Apache-2.0 open-source license](./LICENSE). During development, portions of [vLLM](https://github.com/vllm-project/vllm) code were referenced and incorporated to maintain interface compatibility, for which we express our gratitude.
+FastDeploy is licensed under the [Apache-2.0 open-source license](./LICENSE).  We are grateful to the [vLLM](https://github.com/vllm-project/vllm) project, whose code was referenced and incorporated for interface compatibility.

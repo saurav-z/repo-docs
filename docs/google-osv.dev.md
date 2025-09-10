@@ -4,50 +4,74 @@
     <img src="docs/images/osv_logo_light-full.svg">
 </picture>
 
----
-
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/google/osv.dev/badge)](https://scorecard.dev/viewer/?uri=github.com/google/osv.dev)
 
 # OSV: Open Source Vulnerability Database
 
-**OSV (Open Source Vulnerability) is a comprehensive, open-source database and API designed to track and provide information about vulnerabilities in open-source software.** This repository ([https://github.com/google/osv.dev](https://github.com/google/osv.dev)) contains the code that powers the OSV platform.
+**OSV is a comprehensive, open-source vulnerability database designed to improve the security of open-source software.**
 
-## Key Features
+[View the original repository on GitHub](https://github.com/google/osv.dev)
 
-*   **Centralized Vulnerability Database:** A single source of truth for open-source vulnerability information.
-*   **API Access:** Allows programmatic access to vulnerability data for integration with other tools.
-*   **Vulnerability Scanning Tools:**  Integrates with the [OSV Scanner](https://github.com/google/osv-scanner) to scan dependencies and identify vulnerabilities.
-*   **Web UI:**  A user-friendly web interface ([https://osv.dev](https://osv.dev)) to browse and search for vulnerabilities.
-*   **Data Dumps:** Provides data dumps for offline analysis and integration into various systems, available from a GCS bucket.
+## Key Features of OSV
 
-## Core Components of the OSV Platform
+*   **Comprehensive Vulnerability Data:** A curated database of vulnerabilities affecting open-source projects.
+*   **Efficient Scanning & Detection:**  The OSV scanner tool identifies vulnerabilities in your project dependencies.
+*   **API Access:** Access the OSV database through a well-defined API for easy integration.
+*   **Data Dumps:** Access data dumps from a Google Cloud Storage bucket for offline analysis.
+*   **Web UI:**  A user-friendly web interface for browsing and exploring vulnerabilities at <https://osv.dev>.
+*   **Community-Driven:** Contributions and suggestions are welcome to improve the database.
 
-This repository houses the essential components that comprise the OSV platform, including:
+##  Explore the OSV Ecosystem
 
-*   **API Server:** The OSV API server, handling requests and serving vulnerability data.
-*   **Web Interface Backend:** The backend code for the OSV web interface.
-*   **Data Indexing:** Processes vulnerability information and prepares it for efficient searching and retrieval.
-*   **Data Processing Workers:** Background workers for bisection, impact analysis, importing data, and database maintenance.
-*   **Core OSV Library:**  A Python library providing essential functions for vulnerability handling and data manipulation.
-*   **Vulnerability Feed Conversion:** Modules for converting vulnerability feeds from various sources (e.g., NVD, Debian).
+### Documentation
+Comprehensive documentation is available at [https://google.github.io/osv.dev](https://google.github.io/osv.dev). API documentation is available at [https://google.github.io/osv.dev/api/](https://google.github.io/osv.dev/api/).
 
-## Getting Started
+### Data Dumps
+Access data dumps from a GCS bucket at `gs://osv-vulnerabilities`. For more information, check out [our documentation](https://google.github.io/osv.dev/data/#data-dumps).
 
-To get started, you'll need to check out the submodules:
+### Web UI
+The OSV web UI is deployed at <https://osv.dev>.
 
-```bash
-git submodule update --init --recursive
-```
+### OSV Scanner
+The OSV scanner is a Go-based tool that checks your project dependencies against the OSV database for known vulnerabilities via the OSV API.
 
-Detailed documentation is available at [https://google.github.io/osv.dev](https://google.github.io/osv.dev). API documentation can be found at [https://google.github.io/osv.dev/api/](https://google.github.io/osv.dev/api/).
+The scanner is located in its [own repository](https://github.com/google/osv-scanner).
+
+## This Repository: Project Structure
+
+This repository contains the code and configuration for running the OSV project on Google Cloud Platform (GCP). Key directories include:
+
+*   `bindings/`: Language bindings for the OSV API (currently Go only)
+*   `deployment/`: Terraform & Cloud Deploy config files.
+*   `docker/`: CI and deployment Docker files.
+*   `docs/`: Documentation files.
+*   `gcp/api`: OSV API server files.
+*   `gcp/datastore`: Datastore index file.
+*   `gcp/functions`: Cloud Function for publishing PyPI vulnerabilities.
+*   `gcp/indexer`: Version indexing functionality.
+*   `gcp/website`: The backend of the osv.dev web interface.
+*   `gcp/workers/`: Background worker processes.
+*   `osv/`: The core OSV Python library.
+*   `tools/`: Utility scripts for development.
+*   `vulnfeeds/`: Go module for vulnerability data conversion.
+
+To build locally, ensure you run: `git submodule update --init --recursive`
 
 ## Contributing
 
-We welcome contributions from the community!  Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for details on contributing code, data, and documentation.  You can also join the [mailing list](https://groups.google.com/g/osv-discuss) and [open an issue](https://github.com/google/osv.dev/issues) with any questions or suggestions.
+We welcome contributions!
+
+*   **Code:** Learn more about [code contributions](CONTRIBUTING.md#contributing-code).
+*   **Data:** Learn more about [data contributions](CONTRIBUTING.md#contributing-data).
+*   **Documentation:** Learn more about [documentation contributions](CONTRIBUTING.md#contributing-documentation).
+
+Join the discussion on the [mailing list](https://groups.google.com/g/osv-discuss).
+
+For questions or suggestions, please [open an issue](https://github.com/google/osv.dev/issues).
 
 ## Third-Party Tools and Integrations
 
-OSV is supported by a number of third-party tools and integrations.  Note these are community-built and not officially endorsed by the OSV project:
+The following are community-built tools, not supported or endorsed by OSV, but that integrate with OSV:
 
 *   [Cortex XSOAR](https://github.com/demisto/content)
 *   [dep-scan](https://github.com/AppThreat/dep-scan)

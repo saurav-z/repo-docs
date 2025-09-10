@@ -1,16 +1,20 @@
-# Free Programming Books: Your Ultimate Resource for Learning to Code
+# Free Programming Books: Your Gateway to Free Learning Resources
 
-**Access a vast, curated collection of free programming books, courses, and interactive tutorials to kickstart your coding journey.**
+**Unlock a world of knowledge with this comprehensive, community-driven repository offering a vast collection of free programming books, courses, and more in multiple languages!**
 
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[Go to the original repository](https://github.com/EbookFoundation/free-programming-books)
+
+<div align="center" markdown="1">
+
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)&#160;
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)&#160;
 [![Hacktoberfest 2023 stats](https://img.shields.io/github/hacktoberfest/2023/EbookFoundation/free-programming-books?label=Hacktoberfest+2023)](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Apr+is%3Amerged+created%3A2023-10-01..2023-10-31)
 
-*   **Dynamic Search:** Find resources quickly with our search tool: [https://ebookfoundation.github.io/free-programming-books-search/](https://ebookfoundation.github.io/free-programming-books-search/)
-*   **Easy-to-Read Website:** Browse the list easily on our website: [https://ebookfoundation.github.io/free-programming-books/](https://ebookfoundation.github.io/free-programming-books/).
-*   **Search:** Easily search for books or authors directly using the search form below:
+</div>
 
-<div align="center">
+*   **Searchable Resource:** Easily find what you need with the dynamic search site: [https://ebookfoundation.github.io/free-programming-books-search/](https://ebookfoundation.github.io/free-programming-books-search/).
+
+<div align="center" markdown="1">
   <form action="https://ebookfoundation.github.io/free-programming-books-search">
     <input type="text" id="fpbSearch" name="search" required placeholder="Search Book or Author"/>
     <label for="submit"> </label>
@@ -18,57 +22,22 @@
   </form>
 </div>
 
-## What is Free Programming Books?
+## Key Features:
 
-This repository is a comprehensive collection of free learning resources for programmers, originating from a [StackOverflow question](https://web.archive.org/web/20140606191453/http://stackoverflow.com/questions/194812/list-of-freely-available-programming-books/392926) and now hosted on GitHub. It's one of the most popular repositories on GitHub, maintained by the [Free Ebook Foundation](https://ebookfoundation.org), a non-profit organization dedicated to promoting free educational materials.
+*   **Massive Library:** Access a huge collection of free programming books, courses, cheat sheets, and more.
+*   **Multilingual Support:** Resources available in numerous languages, including English, Spanish, French, Chinese, and many more.
+*   **Organized Categories:** Resources are categorized by programming language, subject, and resource type for easy browsing.
+*   **Active Community:** Benefit from a collaborative effort, with contributions from developers worldwide.
+*   **Dynamic Search:** Quickly find specific resources using the integrated search functionality.
+*   **Open Source:** Contribute to the project and help expand its valuable collection.
 
-*   **Extensive Resource List:**  A massive collection of books, courses, and tutorials.
-*   **Multi-Language Support:** Resources available in numerous languages.
-*   **Community Driven:**  Actively maintained and improved through community contributions.
-
-[Visit the original repository on GitHub](https://github.com/EbookFoundation/free-programming-books) to contribute and learn more!
-
-## How to Contribute
-
-Help us improve this resource!  We welcome contributions from everyone.
-
-*   Read the [CONTRIBUTING](docs/CONTRIBUTING.md) guidelines.
-*   Familiarize yourself with the [Code of Conduct](docs/CODE_OF_CONDUCT.md).
-
-Check out these links to find issues you can help with:
-
-<div align="center" markdown="1">
-
-[![GitHub repo Issues](https://img.shields.io/github/issues/EbookFoundation/free-programming-books?style=flat&logo=github&logoColor=red&label=Issues)](https://github.com/EbookFoundation/free-programming-books/issues)&#160;
-[![GitHub repo Good Issues for newbies](https://img.shields.io/github/issues/EbookFoundation/free-programming-books/good%20first%20issue?style=flat&logo=github&logoColor=green&label=Good%20First%20issues)](https://github.com/EbookFoundation/free-programming-books/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)&#160;
-[![GitHub Help Wanted issues](https://img.shields.io/github/issues/EbookFoundation/free-programming-books/help%20wanted?style=flat&logo=github&logoColor=b545d1&label=%22Help%20Wanted%22%20issues)](https://github.com/EbookFoundation/free-programming-books/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)    
-[![GitHub repo PRs](https://img.shields.io/github/issues-pr/EbookFoundation/free-programming-books?style=flat&logo=github&logoColor=orange&label=PRs)](https://github.com/EbookFoundation/free-programming-books/pulls)&#160;
-[![GitHub repo Merged PRs](https://img.shields.io/github/issues-search/EbookFoundation/free-programming-books?style=flat&logo=github&logoColor=green&label=Merged%20PRs&query=is%3Amerged)](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Apr+is%3Amerged)&#160;
-[![GitHub Help Wanted PRs](https://img.shields.io/github/issues-pr/EbookFoundation/free-programming-books/help%20wanted?style=flat&logo=github&logoColor=b545d1&label=%22Help%20Wanted%22%20PRs)](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
-
-</div>
-
-## Share the Knowledge!
-
-<div align="left" markdown="1">
-<a href="https://www.facebook.com/share.php?u=https%3A%2F%2Fgithub.com%2FEbookFoundation%2Ffree-programming-books&p[images][0]=&p[title]=Free%20Programming%20Books&p[summary]=">Share on Facebook</a><br>
-<a href="http://www.linkedin.com/shareArticle?mini=true&url=https://github.com/EbookFoundation/free-programming-books&title=Free%20Programming%20Books&summary=&source=">Share on LinkedIn</a><br>
-<a href="https://toot.kytta.dev/?mini=true&url=https://github.com/EbookFoundation/free-programming-books&title=Free%20Programming%20Books&summary=&source=">Share on Mastodon/Fediverse</a><br>    
-<a href="https://t.me/share/url?url=https://github.com/EbookFoundation/free-programming-books">Share on Telegram</a><br>
-<a href="https://twitter.com/intent/tweet?text=https://github.com/EbookFoundation/free-programming-books%0AFree%20Programming%20Books">Share on 𝕏 (Twitter)</a><br>
-</div>
-
-## Resource Categories
-
-Explore a wide array of resources, categorized for easy browsing:
+## Explore the Resources:
 
 ### Books
 
 *   [English, By Programming Language](books/free-programming-books-langs.md)
 *   [English, By Subject](books/free-programming-books-subjects.md)
-
-#### Other Languages
-... (Language list - See original) ...
+*   **Other Languages:** (Arabic, Armenian, Azerbaijani, Bengali, Bulgarian, Burmese, Chinese, Czech, Catalan, Danish, Dutch, Estonian, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Latvian, Malayalam, Norwegian, Persian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Spanish, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Vietnamese)
 
 ### Cheat Sheets
 
@@ -76,49 +45,49 @@ Explore a wide array of resources, categorized for easy browsing:
 
 ### Free Online Courses
 
-... (Course list - See original) ...
+*   **(Arabic, Bengali, Bulgarian, Burmese, Chinese, English, Finnish, French, German, Greek, Hebrew, Hindi, Indonesian, Italian, Japanese, Kannada, Kazakh, Khmer, Korean, Malayalam, Marathi, Nepali, Norwegian, Persian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Sinhala, Spanish, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, Vietnamese)**
 
 ### Interactive Programming Resources
 
-... (Interactive Programming Resources list - See original) ...
+*   (Chinese, English, German, Japanese, Russian)
 
 ### Problem Sets and Competitive Programming
 
-... (Problem Sets and Competitive Programming list - See original) ...
+*   [Problem Sets](more/problem-sets-competitive-programming.md)
 
 ### Podcast - Screencast
 
-... (Podcast - Screencast list - See original) ...
+*   **(Arabic, Burmese, Chinese, Czech, Dutch, English, Finnish, French, German, Hebrew, Indonesian, Persian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Sinhala, Spanish, Swedish, Turkish, Ukrainian)**
 
 ### Programming Playgrounds
 
-... (Programming Playgrounds list - See original) ...
+*   (Chinese, English, German)
+
+## Contributing
+
+We welcome contributions!  Please read the [CONTRIBUTING](docs/CONTRIBUTING.md) guidelines.
+
+**Get Involved:**
+*   [Issues](https://github.com/EbookFoundation/free-programming-books/issues)
+*   [Good First Issues](https://github.com/EbookFoundation/free-programming-books/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+*   [Help Wanted Issues](https://github.com/EbookFoundation/free-programming-books/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+*   [Pull Requests](https://github.com/EbookFoundation/free-programming-books/pulls)
+*   [Merged Pull Requests](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Apr+is%3Amerged)
+*   [Help Wanted PRs](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+
+## Sharing
+
+Share this valuable resource:
+*   [Facebook](https://www.facebook.com/share.php?u=https%3A%2F%2Fgithub.com%2FEbookFoundation%2Ffree-programming-books&p[images][0]=&p[title]=Free%20Programming%20Books&p[summary]=)
+*   [LinkedIn](http://www.linkedin.com/shareArticle?mini=true&url=https://github.com/EbookFoundation/free-programming-books&title=Free%20Programming%20Books&summary=&source=)
+*   [Mastodon/Fediverse](https://toot.kytta.dev/?mini=true&url=https://github.com/EbookFoundation/free-programming-books&title=Free%20Programming%20Books&summary=&source=)
+*   [Telegram](https://t.me/share/url?url=https://github.com/EbookFoundation/free-programming-books)
+*   [Twitter/X](https://twitter.com/intent/tweet?text=https://github.com/EbookFoundation/free-programming-books%0AFree%20Programming%20Books)
 
 ## Translations
 
-Help expand the reach of this project by contributing translations of the documentation.
-
-*   English
-    *   [Code of Conduct](docs/CODE_OF_CONDUCT.md)
-    *   [Contributing](docs/CONTRIBUTING.md)
-    *   [How-to](docs/HOWTO.md)
-*   ... *[More languages](docs/README.md#translations)* ...
+Find translated documents or contribute to new ones [here](docs/README.md#translations).
 
 ## License
 
 This project is licensed under the [CC BY License](LICENSE).
-```
-Key improvements and SEO enhancements:
-
-*   **Concise Hook:** Starts with a strong, one-sentence hook to grab attention.
-*   **Clear Headings:** Uses descriptive headings to structure the information.
-*   **Keyword Optimization:**  Includes relevant keywords like "free programming books," "learn to code," "programming resources" throughout the text.
-*   **Bulleted Key Features:** Highlights the main benefits of the repository.
-*   **Actionable CTAs:** Encourages users to contribute and share.
-*   **Search Optimization:** Includes the search tool directly in the README, and calls out the benefit of search.
-*   **Contextual Links:** The link to the original repo is given at the end of the What is Free Programming Books section to ensure that the SEO optimized version is not confused for the main repo.
-*   **Streamlined Content:**  Removed redundant information and focused on the most important aspects.
-*   **Improved Readability:** Uses more accessible language and formatting.
-*   **Added Description of the Repository:** A small section was created to help the SEO for the overall project.
-
-This improved README is more user-friendly and provides better SEO for the project, ensuring it is easily discoverable by those seeking free programming resources.

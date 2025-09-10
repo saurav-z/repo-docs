@@ -5,39 +5,38 @@
     Stand-In: Lightweight Identity Control for Video Generation
   </h1>
 
-  <p><b>Effortlessly generate videos that preserve the identity of your subjects with Stand-In, the plug-and-play solution.</b></p>
+  <h3>Effortlessly create videos while preserving the identity of the subject, with just 1% extra parameters!</h3>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2508.07901-b31b1b)](https://arxiv.org/abs/2508.07901)
 [![Project Page](https://img.shields.io/badge/Project_Page-Link-green)](https://www.stand-in.tech)
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-orange)](https://huggingface.co/BowenXue/Stand-In)
-
 </div>
 
-<img width="5333" height="2983" alt="Stand-In Video Generation Example" src="https://github.com/user-attachments/assets/2fe1e505-bcf7-4eb6-8628-f23e70020966" />
-
-[Link to Original Repository: https://github.com/WeChatCV/Stand-In](https://github.com/WeChatCV/Stand-In)
+[**Check out the original repository here!**](https://github.com/WeChatCV/Stand-In)
 
 ---
 
 ## Overview
 
-**Stand-In** is a cutting-edge framework designed for **identity-preserving video generation**, offering a streamlined, plug-and-play solution.  By training only a fraction of the parameters (approximately 1%) of the base video generation model, Stand-In achieves state-of-the-art results in both face similarity and naturalness, surpassing methods that require full-parameter training. It seamlessly integrates into various video generation tasks, including subject-driven, pose-controlled, and stylized video creation, as well as face swapping.
+**Stand-In** is a revolutionary, plug-and-play framework designed to provide robust identity control for video generation.  By training only a minimal number of parameters, approximately **1%** of the base model, Stand-In achieves state-of-the-art results in both Face Similarity and Naturalness, surpassing methods that require full parameter training.  Stand-In seamlessly integrates with various video generation tasks, including subject-driven generation, pose-controlled generation, video stylization, and face swapping.
 
-## Key Features
+<img width="5333" height="2983" alt="Image" src="https://github.com/user-attachments/assets/2fe1e505-bcf7-4eb6-8628-f23e70020966" />
 
-*   ✅ **Efficient Training:** Requires training only 1% of the base model parameters.
-*   ✅ **High Fidelity:** Achieves outstanding identity consistency while maintaining video generation quality.
-*   ✅ **Plug-and-Play Integration:** Easily integrates into existing Text-to-Video (T2V) models.
-*   ✅ **Extensible:** Compatible with community models (e.g., LoRA) and supports a wide range of downstream video tasks.
+## ✨ Key Features
 
-## What's New
+*   **Minimal Parameter Training:** Achieves outstanding results with only 1% of the base model's parameters.
+*   **Superior Fidelity:** Maintains exceptional identity consistency without compromising video quality.
+*   **Easy Integration:**  Plug-and-play functionality makes it simple to integrate with existing text-to-video (T2V) models.
+*   **Broad Compatibility:** Works seamlessly with community models (LoRA) and supports various downstream video tasks.
 
-*   **[2025.08.18]** Released VACE compatibility, enabling simultaneous pose control and identity preservation.
-*   **[2025.08.16]** Updated experimental face swapping feature.
-*   **[2025.08.13]** Official Stand-In preprocessing ComfyUI node released:  [https://github.com/WeChatCV/Stand-In_Preprocessor_ComfyUI](https://github.com/WeChatCV/Stand-In_Preprocessor_ComfyUI)
-*   **[2025.08.12]**  Stand-In v1.0 (153M parameters) released, with open-sourced Wan2.1-14B-T2V-adapted weights and inference code.
+## 🚀 What's New
 
-## Showcase
+*   **[2025.08.18]**  VACE compatibility released!  Explore pose control and other control methods like depth maps, all while maintaining identity.
+*   **[2025.08.16]**  Experimental face swapping feature updated!
+*   **[2025.08.13]** Official Stand-In preprocessing ComfyUI node released: [https://github.com/WeChatCV/Stand-In_Preprocessor_ComfyUI](https://github.com/WeChatCV/Stand-In_Preprocessor_ComfyUI)
+*   **[2025.08.12]**  Stand-In v1.0 (153M parameters) released, along with open-sourced Wan2.1-14B-T2V-adapted weights and inference code.
+
+## 🌟 Showcase: See Stand-In in Action
 
 ### Identity-Preserving Text-to-Video Generation
 
@@ -47,7 +46,8 @@
 |![Image](https://github.com/user-attachments/assets/de10285e-7983-42bb-8534-80ac02210172)| "A young man dressed in traditional attire draws the long sword from his waist and begins to wield it. The blade flashes with light as he moves—his eyes sharp, his actions swift and powerful, with his flowing robes dancing in the wind." |![Image](https://github.com/user-attachments/assets/1532c701-ef01-47be-86da-d33c8c6894ab)|
 
 ---
-### Non-Human Subjects-Preserving Video Generation
+
+### Non-Human Subject-Preserving Video Generation
 
 | Reference Image | Prompt | Generated Video |
 | :---: | :---: | :---: |
@@ -60,7 +60,6 @@
 | Reference Image | LoRA | Generated Video |
 | :---: | :---: | :---: |
 |![Image](https://github.com/user-attachments/assets/9c0687f9-e465-4bc5-bc62-8ac46d5f38b1)|Ghibli LoRA|![Image](https://github.com/user-attachments/assets/c6ca1858-de39-4fff-825a-26e6d04e695f)|
-
 ---
 
 ### Video Face Swapping
@@ -78,15 +77,17 @@
 |![Image](https://github.com/user-attachments/assets/5df5eec8-b71c-4270-8a78-906a488f9a94)|<img width="719" height="415" alt="Image" src="https://github.com/user-attachments/assets/1c2a69e1-e530-4164-848b-e7ea85a99763" />|![Image](https://github.com/user-attachments/assets/1c8a54da-01d6-43c1-a5fd-cab0c9e32c44)|
 
 ---
-### Explore More
 
-For a comprehensive view of Stand-In's capabilities, visit: [https://stand-in-video.github.io/](https://www.Stand-In.tech)
+### Explore More!
 
-## Getting Started
+For more impressive examples, visit our project page at [https://www.Stand-In.tech](https://www.stand-in-video.github.io/)
+
+## 🛠️ Getting Started
 
 ### 1. Environment Setup
+
 ```bash
-# Clone the project repository
+# Clone the repository
 git clone https://github.com/WeChatCV/Stand-In.git
 cd Stand-In
 
@@ -97,29 +98,32 @@ conda activate Stand-In
 # Install dependencies
 pip install -r requirements.txt
 
-# (Optional) Install Flash Attention for faster inference
-# Note: Make sure your GPU and CUDA version are compatible with Flash Attention
+# (Optional) Install Flash Attention (recommended for faster inference)
+# Note: Ensure your GPU and CUDA version are compatible.
 pip install flash-attn --no-build-isolation
 ```
 
 ### 2. Model Download
-Use the provided script to automatically download the required models:
+
+Use the provided script to automatically download all required model weights:
+
 ```bash
 python download_models.py
 ```
-This script will download:
+
+This script downloads:
 
 *   `wan2.1-T2V-14B` (base text-to-video model)
 *   `antelopev2` (face recognition model)
-*   `Stand-In` (Stand-In model)
+*   `Stand-In` (our Stand-In model)
 
-> **Note:** If you have the `wan2.1-T2V-14B` model locally, modify the `download_model.py` script to comment out the download code and place your model in the `checkpoints/wan2.1-T2V-14B` directory.
+>   **Note:**  If you have the `wan2.1-T2V-14B` model locally, you can modify the `download_models.py` script to skip the download and place the model in the `checkpoints/wan2.1-T2V-14B` directory.
 
-## Usage
+## 💻 Usage
 
 ### Standard Inference
 
-Run `infer.py` for identity-preserving text-to-video generation.
+Generate identity-preserving videos using the `infer.py` script:
 
 ```bash
 python infer.py \
@@ -128,13 +132,12 @@ python infer.py \
     --output "test/output/lecun.mp4"
 ```
 
-**Prompting Tips:**  To avoid altering facial features, use prompts like "a man" or "a woman."  Prompts support both Chinese and English. Designed for frontal, medium-to-close-up videos.
-
-**Input Image Recommendations:**  Use high-resolution, frontal face images for optimal results. The built-in preprocessing pipeline handles resolution and file extensions.
+*   **Prompt Tip:**  For consistent facial features, use simple prompts like *"a man"* or *"a woman"*.  Supports both English and Chinese.
+*   **Input Image:** A high-resolution, frontal face image is recommended for optimal results.  Our preprocessing pipeline handles various resolutions and file types.
 
 ### Inference with Community LoRA
 
-Load community LoRA models with `infer_with_lora.py`:
+Load community LoRA models alongside Stand-In using the `infer_with_lora.py` script:
 
 ```bash
 python infer_with_lora.py \
@@ -147,9 +150,9 @@ python infer_with_lora.py \
 
 We recommend this stylization LoRA: [https://civitai.com/models/1404755/studio-ghibli-wan21-t2v-14b](https://civitai.com/models/1404755/studio-ghibli-wan21-t2v-14b)
 
-### Video Face Swapping
+### Video Face Swapping (Experimental)
 
-Use `infer_face_swap.py` for video face swapping:
+Experiment with face swapping using the `infer_face_swap.py` script:
 
 ```bash
 python infer_face_swap.py \
@@ -159,13 +162,11 @@ python infer_face_swap.py \
     --denoising_strength 0.85
 ```
 
-**Note:**  Face swapping is experimental due to the lack of inpainting in Wan2.1.
-
-Adjust `denoising_strength` to balance background redrawing and face naturalness.  For complete background consistency, enable `--force_background_consistency` and experiment with `denoising_strength` to mitigate potential contour issues.
+*   **Note:** Face swapping is experimental. Adjust `--denoising_strength` to control the balance between background consistency and face naturalness.
 
 ### Infer with VACE
 
-Use `infer_with_vace.py` for identity-preserving video generation with VACE:
+Generate videos with pose control using VACE and Stand-In via the `infer_with_vace.py` script:
 
 ```bash
 python infer_with_vace.py \
@@ -178,28 +179,24 @@ python infer_with_vace.py \
     --vace_scale 0.8
 ```
 
-Download VACE weights from the VACE repository or specify their path in the `vace_path` parameter.
+*   Download the VACE weights from their repository and specify the path in the `vace_path` parameter.
+*   Preprocess your input control video using VACE's preprocessing tool.  `reference_video` and `reference_image` are both optional.
+*   Adjust the `vace_scale` to balance motion and identity preservation.
 
-```bash
-python download_models.py --vace
-```
+## 🤝 Acknowledgements
 
-Preprocess the input control video using VACE's preprocessing tool. Adjust `vace_scale` to balance motion and identity preservation.  Reduce the weight to 0.5 when only `ip_image` and `reference_video` are provided.  For any issues, please raise them in the issue tracker.
-
-## Acknowledgements
-
-This project utilizes the following open-source resources:
+This project is built upon the following excellent open-source projects:
 
 *   [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) (training/inference framework)
 *   [Wan2.1](https://github.com/Wan-Video/Wan2.1) (base video generation model)
 
-We thank the authors and contributors of these projects.
+We are grateful to the authors and contributors of these projects.
 
-We also acknowledge [Binxin Yang](https://binxinyang.github.io/) for the original dataset.
+Special thanks to [Binxin Yang](https://binxinyang.github.io/) for collecting the dataset's original material.
 
-## Citation
+## ✏️ Citation
 
-If you use Stand-In in your research, please cite our paper:
+If you find our work useful, please cite our paper:
 
 ```bibtex
 @article{xue2025standin,
@@ -210,6 +207,6 @@ If you use Stand-In in your research, please cite our paper:
 }
 ```
 
-## Contact
+## 📬 Contact
 
-For questions and suggestions, please use the [GitHub Issues](https://github.com/WeChatCV/Stand-In/issues) . We appreciate your feedback!
+For any questions or suggestions, please open an [Issue](https://github.com/WeChatCV/Stand-In/issues) on GitHub.  We welcome your feedback!

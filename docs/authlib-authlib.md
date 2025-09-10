@@ -9,7 +9,7 @@
 
 # Authlib: The Ultimate Python Library for OAuth and OpenID Connect
 
-**Authlib is a comprehensive Python library, simplifying the implementation of OAuth and OpenID Connect clients and providers, and incorporating JWS, JWK, JWA, and JWT functionalities.**  [Visit the original repo on GitHub](https://github.com/authlib/authlib)
+Authlib is your go-to Python library for building robust and secure authentication and authorization solutions, empowering you to implement OAuth and OpenID Connect servers and clients with ease. ([See the original repo](https://github.com/authlib/authlib))
 
 [![Build Status](https://github.com/authlib/authlib/workflows/tests/badge.svg)](https://github.com/authlib/authlib/actions)
 [![PyPI version](https://img.shields.io/pypi/v/authlib.svg)](https://pypi.org/project/authlib)
@@ -18,28 +18,24 @@
 [![Code Coverage](https://codecov.io/gh/authlib/authlib/graph/badge.svg?token=OWTdxAIsPI)](https://codecov.io/gh/authlib/authlib)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=authlib_authlib&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=authlib_authlib)
 
-Authlib is compatible with Python 3.9+.
-
 ## Key Features
 
-Authlib provides robust support for building both clients and providers, compliant with industry standards:
+Authlib provides a comprehensive set of tools for handling authentication and authorization, including:
 
-*   **Comprehensive Protocol Support:**
-    *   OAuth 1.0 & 2.0, including all major RFCs
-    *   OpenID Connect 1.0, including core, discovery, and dynamic client registration
-    *   Javascript Object Signing and Encryption (JOSE) standards (JWS, JWE, JWK, JWT)
-
-*   **Built-in Client Integrations:** Easily connect to third-party OAuth providers using:
+*   **OAuth 1.0 and 2.0 Support:** Implement both OAuth 1.0 (RFC5849) and OAuth 2.0 (RFC6749, RFC6750, RFC7009, RFC7523, RFC7591, RFC7592, RFC7636, RFC7662, RFC8414, RFC8628, RFC9068, RFC9101, RFC9207)  specifications.
+*   **OpenID Connect 1.0:** Comprehensive support for OpenID Connect 1.0 Core, Discovery, and Dynamic Client Registration.
+*   **JSON Web Token (JWT) and JOSE:** Includes JWS, JWK, JWA, and JWT for secure data exchange, covering RFC7515, RFC7516, RFC7517, RFC7518, RFC7519, RFC7638, RFC8037
+*   **Client Integrations:** Seamless integration with popular Python web frameworks and libraries:
     *   Requests
-    *   HTTPX (Async)
+    *   HTTPX
     *   Flask
     *   Django
     *   Starlette
     *   FastAPI
-
-*   **Provider Implementations:** Build your own OAuth/OpenID Connect providers with:
+*   **Provider Implementations:**  Build custom OAuth and OpenID Connect providers for:
     *   Flask
     *   Django
+*   **Security-Focused:**  Built with security best practices in mind to protect your applications.
 
 ## Migrations
 
@@ -65,14 +61,14 @@ Authlib will deprecate `authlib.jose` module, please read:
 
 ## Useful Links
 
-1.  Homepage: <https://authlib.org/>
-2.  Documentation: <https://docs.authlib.org/>
-3.  Purchase Commercial License: <https://authlib.org/plans>
-4.  Blog: <https://blog.authlib.org/>
-5.  Twitter: <https://twitter.com/authlib>
-6.  StackOverflow: <https://stackoverflow.com/questions/tagged/authlib>
-7.  Other Repositories: <https://github.com/authlib>
-8.  Subscribe Tidelift: [https://tidelift.com/subscription/pkg/pypi-authlib](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links)
+*   **Homepage:** <https://authlib.org/>
+*   **Documentation:** <https://docs.authlib.org/>
+*   **Commercial License:** <https://authlib.org/plans>
+*   **Blog:** <https://blog.authlib.org/>
+*   **Twitter:** <https://twitter.com/authlib>
+*   **StackOverflow:** <https://stackoverflow.com/questions/tagged/authlib>
+*   **Other Repositories:** <https://github.com/authlib>
+*   **Tidelift Subscription:** [https://tidelift.com/subscription/pkg/pypi-authlib](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links).
 
 ## Security Reporting
 

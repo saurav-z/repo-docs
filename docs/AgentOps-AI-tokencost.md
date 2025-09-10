@@ -19,51 +19,48 @@
 <a href="https://agentops.ai/?tokencost">🖇️ AgentOps</a>
 </p>
 
+# Tokencost: Calculate LLM Costs with Ease
 
-# TokenCost: Effortlessly Calculate LLM Costs for Your AI Projects
+**Effortlessly estimate the cost of your Large Language Model (LLM) interactions with Tokencost, a Python library for accurate token counting and price estimation.**  [Check out the original repository](https://github.com/AgentOps-AI/tokencost).
 
-**TokenCost** is your go-to Python library for accurately calculating and estimating the costs of using Large Language Model (LLM) APIs, empowering developers to optimize their AI applications. [Check out the original repo](https://github.com/AgentOps-AI/tokencost).
+Key Features:
 
-## Key Features
-
-*   🚀 **LLM Cost Tracking:** Stay up-to-date with the latest pricing and model updates from major LLM providers.
-*   🔢 **Precise Token Counting:**  Accurately count tokens in prompts and completions using OpenAI's Tiktoken library and the Anthropic beta token counting API.
-*   💡 **Simplified Integration:** Easily integrate cost and token calculations into your AI agent or LLM applications with simple, intuitive functions.
+*   **Accurate Token Counting:** Uses Tiktoken, OpenAI's official tokenizer, and the Anthropic beta token counting API for precise tokenization.
+*   **Real-time Price Tracking:** Keeps you updated on the latest pricing for major LLM providers, including OpenAI and Anthropic.
+*   **Simple Integration:** Calculate the cost of prompts and completions with easy-to-use functions.
+*   **Supports Various Models:**  Calculates token counts and costs for many popular LLM providers.
 
 ## Installation
+
+Install Tokencost using pip:
 
 ```bash
 pip install tokencost
 ```
 
-## Usage
+## Getting Started
 
-### Calculating Cost Estimates
+### Cost Estimation
 
-Easily calculate the cost of prompts and completions from OpenAI requests.
+Quickly determine the cost of your prompts and completions:
 
 ```python
-from openai import OpenAI
 from tokencost import calculate_prompt_cost, calculate_completion_cost
 
-client = OpenAI()
 model = "gpt-3.5-turbo"
-prompt = [{ "role": "user", "content": "Say this is a test"}]
-
-chat_completion = client.chat.completions.create(
-    messages=prompt, model=model
-)
-
-completion = chat_completion.choices[0].message.content
-# "This is a test."
+prompt = [{ "role": "user", "content": "Hello world"}]
+completion = "How may I assist you today?"
 
 prompt_cost = calculate_prompt_cost(prompt, model)
 completion_cost = calculate_completion_cost(completion, model)
+
 print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
-# 0.0000180 + 0.000010 = 0.0000280
+# 0.0000135 + 0.000014 = 0.0000275
 ```
 
-### Calculate cost using string prompts
+### String Prompts
+
+Calculate costs using simple string prompts:
 
 ```python
 from tokencost import calculate_prompt_cost
@@ -77,31 +74,35 @@ print(f"Cost: ${prompt_cost}")
 # Cost: $3e-06
 ```
 
-### Counting Tokens
+### Token Counting
 
-Quickly count tokens in message lists or string prompts.
+Count tokens in both message-based prompts and string prompts:
 
 ```python
 from tokencost import count_message_tokens, count_string_tokens
 
 message_prompt = [{ "role": "user", "content": "Hello world"}]
+model = "gpt-3.5-turbo"
 # Counting tokens in prompts formatted as message lists
-print(count_message_tokens(message_prompt, model="gpt-3.5-turbo"))
+print(count_message_tokens(message_prompt, model=model))
 # 9
 
 # Alternatively, counting tokens in string prompts
-print(count_string_tokens(prompt="Hello world", model="gpt-3.5-turbo"))
+print(count_string_tokens(prompt="Hello world", model=model))
 # 2
-
 ```
 
 ## How Tokens are Counted
 
-TokenCost leverages [Tiktoken](https://github.com/openai/tiktoken) for tokenization, OpenAI's official tokenizer, for accurate counts of strings and ChatML messages. For Anthropic models above version 3, the [Anthropic beta token counting API](https://docs.anthropic.com/claude/docs/beta-api-for-counting-tokens) is utilized for precision.  Older Claude models approximate using Tiktoken with the cl100k\_base encoding.
+Tokencost leverages [Tiktoken](https://github.com/openai/tiktoken) for accurate tokenization of strings and ChatML messages. This accounts for formatting and roles. For Anthropic models above version 3, the [Anthropic beta token counting API](https://docs.anthropic.com/claude/docs/beta-api-for-counting-tokens) is used for accurate token counts; older Claude models are approximated using Tiktoken.
 
-## Cost Table
+## LLM Pricing Table
 
-This table provides a summary of LLM model costs in USD.  For the most up-to-date pricing, refer to the  [pricing\_table.md](pricing_table.md) file in the repository.
+Find up-to-date pricing information for various LLM models:
+
+**View the full pricing table [here](pricing_table.md).**
+
+*Note: Units are in USD.*
 
 | Model Name                                                            | Prompt Cost (USD) per 1M tokens   | Completion Cost (USD) per 1M tokens   | Max Prompt Tokens   |   Max Output Tokens |
 |:----------------------------------------------------------------------|:----------------------------------|:--------------------------------------|:--------------------|--------------------:|
@@ -268,4 +269,5 @@ This table provides a summary of LLM model costs in USD.  For the most up-to-dat
 | cerebras/llama3.1-70b                                                 | $0.6                              | $0.6                                  | 128,000             |    128000           |
 | friendliai/mixtral-8x7b-instruct-v0-1                                 | $0.4                              | $0.4                                  | 32,768              |     32768           |
 | friendliai/meta-llama-3-8b-instruct                                   | $0.1                              | $0.1                                  | 8,192               |      8192           |
-| friendliai/meta-llama
+| friendliai/meta-llama-3-70b-instruct                                  | $0.8                              | $0.8                                  | 8,192               |      8192           |
+| claude-

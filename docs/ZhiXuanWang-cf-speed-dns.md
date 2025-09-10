@@ -1,55 +1,45 @@
-## Optimize Your Cloudflare CDN Speed with cf-speed-dns
+# Optimize Your Cloudflare Performance with cf-speed-dns
 
-Tired of slow website loading times? **cf-speed-dns helps you automatically find and use the fastest Cloudflare IPs for optimal performance.** (See the original repo [here](https://github.com/ZhiXuanWang/cf-speed-dns).)
+**Tired of slow Cloudflare speeds?**  [cf-speed-dns](https://github.com/ZhiXuanWang/cf-speed-dns) automatically finds and updates your DNS records with the fastest Cloudflare IP addresses, ensuring optimal performance for your website.
 
-### Key Features:
+## Key Features:
 
-*   **Real-time Cloudflare IP Optimization:**  Identifies and provides the best-performing Cloudflare IPs based on latency and speed.
-*   **Optimized IP Lists:** Access lists of top-performing IPs for immediate use, including:
-    *   [https://ip.164746.xyz](https://ip.164746.xyz) (Updated IP list)
-    *   [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html) (Top IPs - Default)
-    *   [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html) (Top 10 IPs)
-*   **Automated DNS Updates:** Integrates with DNSPOD and DNSCF to automatically update your DNS records with the optimal Cloudflare IPs. (Requires configuration, see below).
-*   **PUSHPLUS Notification:**  Receive notifications via PUSHPLUS to stay informed about IP updates. (Requires configuration, see below).
+*   **Real-time Optimized IPs:**  Continuously identifies and updates your DNS with the best-performing Cloudflare IP addresses.
+*   **Multiple IP Selection Options:** Choose from a variety of IP lists, including top IPs and top 10 IPs.
+*   **DNSPOD Integration:**  Automatically updates your DNS records on DNSPOD with the selected optimal IPs. Configuration via GitHub Actions.
+*   **DNSCF Integration:**  Automatically updates your DNS records on Cloudflare with the selected optimal IPs. Configuration via GitHub Actions.
+*   **PUSHPLUS Notifications:** Get notified about IP updates and other important events.
+*   **Easy-to-Use API:** Access the latest optimized IP addresses through a simple API endpoint.
 
-### Configuration for Automated DNS Updates:
+## API Endpoints:
 
-You can configure cf-speed-dns to automatically update your DNS records with the optimal Cloudflare IPs using either DNSPOD or DNSCF.
+*   **Top IPs:** `https://ip.164746.xyz/ipTop.html` (Returns the top performing IPs)
+*   **Top 10 IPs:** `https://ip.164746.xyz/ipTop10.html`
 
-**DNSPOD Configuration (Fork the project):**
+**Example API Request:**
 
-1.  In your forked repository's Actions secrets and variables, add the following:
-    *   `DOMAIN`: Your domain name (e.g., `164746.xyz`)
-    *   `SUB_DOMAIN`:  Your subdomain (e.g., `dns`)
-    *   `SECRETID`: Your DNSPOD Secret ID.
-    *   `SECRETKEY`: Your DNSPOD Secret Key.
-    *   `PUSHPLUS_TOKEN`: Your PUSHPLUS token for notifications.
-
-**DNSCF Configuration (Fork the project):**
-
-1.  In your forked repository's Actions secrets and variables, add the following:
-    *   `CF_API_TOKEN`: Your Cloudflare API Token.
-    *   `CF_ZONE_ID`:  Your Cloudflare Zone ID.
-    *   `CF_DNS_NAME`: Your DNS record name (e.g., `dns.164746.xyz`).
-    *   `PUSHPLUS_TOKEN`: Your PUSHPLUS token for notifications.
-
-### API Request Example:
-
-```javascript
+```bash
 curl 'https://ip.164746.xyz/ipTop.html'
 ```
 
-### API Response Example:
+**Example API Response:**
 
-```javascript
+```
 104.16.204.6,104.18.103.125
 ```
 
-### Acknowledgements:
+## Configuration (DNSPOD & DNSCF - via GitHub Actions)
+
+*   **Fork this project** to get started.
+*   Configure secrets and variables in your GitHub Actions settings:
+    *   **DNSPOD:** `DOMAIN`, `SUB_DOMAIN`, `SECRETID`, `SECRETKEY`, `PUSHPLUS_TOKEN`
+    *   **DNSCF:** `CF_API_TOKEN`, `CF_ZONE_ID`, `CF_DNS_NAME`, `PUSHPLUS_TOKEN`
+
+## Acknowledgements
 
 *   [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
 *   [ddgth](https://github.com/ddgth/cf2dns)
 
-### Powered by DartNode
+## Powered by
 
 [![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")

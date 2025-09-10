@@ -1,6 +1,18 @@
-# 🤗 Diffusers: Generate Images, Audio, and More with State-of-the-Art Diffusion Models
+<!---
+Copyright 2022 - The HuggingFace Team. All rights reserved.
 
-**Unleash the power of AI to create stunning visuals, audio, and even 3D structures with Hugging Face 🤗 Diffusers, your go-to library for diffusion models.**  ([Back to Original Repo](https://github.com/huggingface/diffusers))
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
 <p align="center">
     <br>
@@ -15,41 +27,39 @@
     <a href="https://twitter.com/diffuserslib"><img alt="X account" src="https://img.shields.io/twitter/url/https/twitter.com/diffuserslib.svg?style=social&label=Follow%20%40diffuserslib"></a>
 </p>
 
-🤗 Diffusers is a powerful and versatile library providing a modular toolkit for working with diffusion models.  It's designed for both:
+🤗 Diffusers is the go-to library for state-of-the-art pretrained diffusion models for generating images, audio, and even 3D structures of molecules. Whether you're looking for a simple inference solution or training your own diffusion models, 🤗 Diffusers is a modular toolbox that supports both. Our library is designed with a focus on [usability over performance](https://huggingface.co/docs/diffusers/conceptual/philosophy#usability-over-performance), [simple over easy](https://huggingface.co/docs/diffusers/conceptual/philosophy#simple-over-easy), and [customizability over abstractions](https://huggingface.co/docs/diffusers/conceptual/philosophy#tweakable-contributorfriendly-over-abstraction).
 
-*   **Ease of Use:**  Quickly generate outputs with ready-to-use pipelines.
-*   **Customization:**  Build your own diffusion systems by combining interchangeable components.
+🤗 Diffusers offers three core components:
 
-**Key Features:**
-
-*   **Pre-trained Diffusion Pipelines:**  Generate images, audio, and more with just a few lines of code.  Browse the [Hub](https://huggingface.co/models?library=diffusers&sort=downloads) for thousands of pre-trained models.
-*   **Flexible Noise Schedulers:** Experiment with different schedulers for varying diffusion speeds and output quality.
-*   **Modular Building Blocks:** Utilize pre-trained models as interchangeable components to create custom end-to-end diffusion systems.
-*   **Focus on Usability and Customization:**  Designed with a focus on simplicity, tweakability and contributor friendliness.
+- State-of-the-art [diffusion pipelines](https://huggingface.co/docs/diffusers/api/pipelines/overview) that can be run in inference with just a few lines of code.
+- Interchangeable noise [schedulers](https://huggingface.co/docs/diffusers/api/schedulers/overview) for different diffusion speeds and output quality.
+- Pretrained [models](https://huggingface.co/docs/diffusers/api/models/overview) that can be used as building blocks, and combined with schedulers, for creating your own end-to-end diffusion systems.
 
 ## Installation
 
-Install 🤗 Diffusers in a virtual environment using pip or conda. Ensure you have PyTorch installed; refer to the [PyTorch documentation](https://pytorch.org/get-started/locally/) for details.
+We recommend installing 🤗 Diffusers in a virtual environment from PyPI or Conda. For more details about installing [PyTorch](https://pytorch.org/get-started/locally/), please refer to their official documentation.
 
 ### PyTorch
+
+With `pip` (official package):
 
 ```bash
 pip install --upgrade diffusers[torch]
 ```
 
-### Conda
+With `conda` (maintained by the community):
 
 ```sh
 conda install -c conda-forge diffusers
 ```
 
-### Apple Silicon (M1/M2)
+### Apple Silicon (M1/M2) support
 
-Refer to the [How to use Stable Diffusion in Apple Silicon](https://huggingface.co/docs/diffusers/optimization/mps) guide for optimal performance.
+Please refer to the [How to use Stable Diffusion in Apple Silicon](https://huggingface.co/docs/diffusers/optimization/mps) guide.
 
 ## Quickstart
 
-Get started generating outputs immediately!
+Generating outputs is super easy with 🤗 Diffusers. To generate an image from text, use the `from_pretrained` method to load any pretrained diffusion model (browse the [Hub](https://huggingface.co/models?library=diffusers&sort=downloads) for 30,000+ checkpoints):
 
 ```python
 from diffusers import DiffusionPipeline
@@ -60,7 +70,7 @@ pipeline.to("cuda")
 pipeline("An image of a squirrel in Picasso style").images[0]
 ```
 
-Or build your own custom diffusion system:
+You can also dig into the models and schedulers toolbox to build your own diffusion system:
 
 ```python
 from diffusers import DDPMScheduler, UNet2DModel
@@ -87,71 +97,125 @@ image = Image.fromarray((image * 255).round().astype("uint8"))
 image
 ```
 
-Explore the [Quickstart](https://huggingface.co/docs/diffusers/quicktour) to start your diffusion journey!
+Check out the [Quickstart](https://huggingface.co/docs/diffusers/quicktour) to launch your diffusion journey today!
 
-## Documentation Highlights
+## How to navigate the documentation
 
-| **Topic**                               | **Learn About**                                                                                                                               |
-| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Tutorial](https://huggingface.co/docs/diffusers/tutorials/tutorial_overview)                                     | Learn to use models and schedulers to build your own diffusion systems, and train your own diffusion models.                     |
-| [Loading](https://huggingface.co/docs/diffusers/using-diffusers/loading) | Discover how to load and configure pipelines, models, and schedulers, including how to use different schedulers.                       |
-| [Pipelines for inference](https://huggingface.co/docs/diffusers/using-diffusers/overview_techniques)             | Explore pipelines for inference, batched generation, output control, and contributing your own pipeline.                        |
-| [Optimization](https://huggingface.co/docs/diffusers/optimization/fp16) | Find guides to optimize your diffusion model for speed and reduced memory consumption.                                               |
-| [Training](https://huggingface.co/docs/diffusers/training/overview)     | Learn to train a diffusion model for various tasks using different training techniques.                                                |
-
+| **Documentation**                                                   | **What can I learn?**                                                                                                                                                                           |
+|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Tutorial](https://huggingface.co/docs/diffusers/tutorials/tutorial_overview)                                                            | A basic crash course for learning how to use the library's most important features like using models and schedulers to build your own diffusion system, and training your own diffusion model.  |
+| [Loading](https://huggingface.co/docs/diffusers/using-diffusers/loading)                                                             | Guides for how to load and configure all the components (pipelines, models, and schedulers) of the library, as well as how to use different schedulers.                                         |
+| [Pipelines for inference](https://huggingface.co/docs/diffusers/using-diffusers/overview_techniques)                                             | Guides for how to use pipelines for different inference tasks, batched generation, controlling generated outputs and randomness, and how to contribute a pipeline to the library.               |
+| [Optimization](https://huggingface.co/docs/diffusers/optimization/fp16)                                                        | Guides for how to optimize your diffusion model to run faster and consume less memory.                                                                                                          |
+| [Training](https://huggingface.co/docs/diffusers/training/overview) | Guides for how to train a diffusion model for different tasks with different training techniques.                                                                                               |
 ## Contribution
 
-We welcome contributions!  See the [Contribution guide](https://github.com/huggingface/diffusers/blob/main/CONTRIBUTING.md) and the [issues](https://github.com/huggingface/diffusers/issues) to get involved.
+We ❤️  contributions from the open-source community!
+If you want to contribute to this library, please check out our [Contribution guide](https://github.com/huggingface/diffusers/blob/main/CONTRIBUTING.md).
+You can look out for [issues](https://github.com/huggingface/diffusers/issues) you'd like to tackle to contribute to the library.
+- See [Good first issues](https://github.com/huggingface/diffusers/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) for general opportunities to contribute
+- See [New model/pipeline](https://github.com/huggingface/diffusers/issues?q=is%3Aopen+is%3Aissue+label%3A%22New+pipeline%2Fmodel%22) to contribute exciting new diffusion models / diffusion pipelines
+- See [New scheduler](https://github.com/huggingface/diffusers/issues?q=is%3Aopen+is%3Aissue+label%3A%22New+scheduler%22)
 
-*   [Good first issues](https://github.com/huggingface/diffusers/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
-*   [New model/pipeline](https://github.com/huggingface/diffusers/issues?q=is%3Aopen+is%3Aissue+label%3A%22New+pipeline%2Fmodel%22)
-*   [New scheduler](https://github.com/huggingface/diffusers/issues?q=is%3Aopen+is%3Aissue+label%3A%22New+scheduler%22)
+Also, say 👋 in our public Discord channel <a href="https://discord.gg/G7tWnz98XR"><img alt="Join us on Discord" src="https://img.shields.io/discord/823813159592001537?color=5865F2&logo=discord&logoColor=white"></a>. We discuss the hottest trends about diffusion models, help each other with contributions, personal projects or just hang out ☕.
 
-Join our Discord community: <a href="https://discord.gg/G7tWnz98XR"><img alt="Join us on Discord" src="https://img.shields.io/discord/823813159592001537?color=5865F2&logo=discord&logoColor=white"></a>
 
 ## Popular Tasks & Pipelines
 
-| Task                   | Pipeline                                                                                           | 🤗 Hub                                                                                       |
-| ---------------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Unconditional Image Generation  | [DDPM](https://huggingface.co/docs/diffusers/api/pipelines/ddpm)                                    | [google/ddpm-ema-church-256](https://huggingface.co/google/ddpm-ema-church-256)                    |
-| Text-to-Image          | [Stable Diffusion Text-to-Image](https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/text2img)       | [stable-diffusion-v1-5/stable-diffusion-v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5) |
-| Text-to-Image          | [unCLIP](https://huggingface.co/docs/diffusers/api/pipelines/unclip)                                    | [kakaobrain/karlo-v1-alpha](https://huggingface.co/kakaobrain/karlo-v1-alpha)                    |
-| Text-to-Image          | [DeepFloyd IF](https://huggingface.co/docs/diffusers/api/pipelines/deepfloyd_if)                               | [DeepFloyd/IF-I-XL-v1.0](https://huggingface.co/DeepFloyd/IF-I-XL-v1.0)                             |
-| Text-to-Image          | [Kandinsky](https://huggingface.co/docs/diffusers/api/pipelines/kandinsky)                               | [kandinsky-community/kandinsky-2-2-decoder](https://huggingface.co/kandinsky-community/kandinsky-2-2-decoder) |
-| Text-guided Image-to-Image | [ControlNet](https://huggingface.co/docs/diffusers/api/pipelines/controlnet)                                  | [lllyasviel/sd-controlnet-canny](https://huggingface.co/lllyasviel/sd-controlnet-canny)               |
-| Text-guided Image-to-Image | [InstructPix2Pix](https://huggingface.co/docs/diffusers/api/pipelines/pix2pix)                              | [timbrooks/instruct-pix2pix](https://huggingface.co/timbrooks/instruct-pix2pix)                 |
-| Text-guided Image-to-Image | [Stable Diffusion Image-to-Image](https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/img2img) | [stable-diffusion-v1-5/stable-diffusion-v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5) |
-| Text-guided Image Inpainting | [Stable Diffusion Inpainting](https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/inpaint) | [runwayml/stable-diffusion-inpainting](https://huggingface.co/runwayml/stable-diffusion-inpainting) |
-| Image Variation        | [Stable Diffusion Image Variation](https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/image_variation)     | [lambdalabs/sd-image-variations-diffusers](https://huggingface.co/lambdalabs/sd-image-variations-diffusers)     |
-| Super Resolution       | [Stable Diffusion Upscale](https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/upscale)           | [stabilityai/stable-diffusion-x4-upscaler](https://huggingface.co/stabilityai/stable-diffusion-x4-upscaler)     |
-| Super Resolution       | [Stable Diffusion Latent Upscale](https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/latent_upscale)  | [stabilityai/sd-x2-latent-upscaler](https://huggingface.co/stabilityai/sd-x2-latent-upscaler)      |
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Pipeline</th>
+    <th>🤗 Hub</th>
+  </tr>
+  <tr style="border-top: 2px solid black">
+    <td>Unconditional Image Generation</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/ddpm"> DDPM </a></td>
+    <td><a href="https://huggingface.co/google/ddpm-ema-church-256"> google/ddpm-ema-church-256 </a></td>
+  </tr>
+  <tr style="border-top: 2px solid black">
+    <td>Text-to-Image</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/text2img">Stable Diffusion Text-to-Image</a></td>
+      <td><a href="https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5"> stable-diffusion-v1-5/stable-diffusion-v1-5 </a></td>
+  </tr>
+  <tr>
+    <td>Text-to-Image</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/unclip">unCLIP</a></td>
+      <td><a href="https://huggingface.co/kakaobrain/karlo-v1-alpha"> kakaobrain/karlo-v1-alpha </a></td>
+  </tr>
+  <tr>
+    <td>Text-to-Image</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/deepfloyd_if">DeepFloyd IF</a></td>
+      <td><a href="https://huggingface.co/DeepFloyd/IF-I-XL-v1.0"> DeepFloyd/IF-I-XL-v1.0 </a></td>
+  </tr>
+  <tr>
+    <td>Text-to-Image</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/kandinsky">Kandinsky</a></td>
+      <td><a href="https://huggingface.co/kandinsky-community/kandinsky-2-2-decoder"> kandinsky-community/kandinsky-2-2-decoder </a></td>
+  </tr>
+  <tr style="border-top: 2px solid black">
+    <td>Text-guided Image-to-Image</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/controlnet">ControlNet</a></td>
+      <td><a href="https://huggingface.co/lllyasviel/sd-controlnet-canny"> lllyasviel/sd-controlnet-canny </a></td>
+  </tr>
+  <tr>
+    <td>Text-guided Image-to-Image</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/pix2pix">InstructPix2Pix</a></td>
+      <td><a href="https://huggingface.co/timbrooks/instruct-pix2pix"> timbrooks/instruct-pix2pix </a></td>
+  </tr>
+  <tr>
+    <td>Text-guided Image-to-Image</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/img2img">Stable Diffusion Image-to-Image</a></td>
+      <td><a href="https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5"> stable-diffusion-v1-5/stable-diffusion-v1-5 </a></td>
+  </tr>
+  <tr style="border-top: 2px solid black">
+    <td>Text-guided Image Inpainting</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/inpaint">Stable Diffusion Inpainting</a></td>
+      <td><a href="https://huggingface.co/runwayml/stable-diffusion-inpainting"> runwayml/stable-diffusion-inpainting </a></td>
+  </tr>
+  <tr style="border-top: 2px solid black">
+    <td>Image Variation</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/image_variation">Stable Diffusion Image Variation</a></td>
+      <td><a href="https://huggingface.co/lambdalabs/sd-image-variations-diffusers"> lambdalabs/sd-image-variations-diffusers </a></td>
+  </tr>
+  <tr style="border-top: 2px solid black">
+    <td>Super Resolution</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/upscale">Stable Diffusion Upscale</a></td>
+      <td><a href="https://huggingface.co/stabilityai/stable-diffusion-x4-upscaler"> stabilityai/stable-diffusion-x4-upscaler </a></td>
+  </tr>
+  <tr>
+    <td>Super Resolution</td>
+    <td><a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/latent_upscale">Stable Diffusion Latent Upscale</a></td>
+      <td><a href="https://huggingface.co/stabilityai/sd-x2-latent-upscaler"> stabilityai/sd-x2-latent-upscaler </a></td>
+  </tr>
+</table>
 
-## Libraries Using 🧨 Diffusers
+## Popular libraries using 🧨 Diffusers
 
-*   [Microsoft/TaskMatrix](https://github.com/microsoft/TaskMatrix)
-*   [invoke-ai/InvokeAI](https://github.com/invoke-ai/InvokeAI)
-*   [InstantID/InstantID](https://github.com/InstantID/InstantID)
-*   [apple/ml-stable-diffusion](https://github.com/apple/ml-stable-diffusion)
-*   [Sanster/lama-cleaner](https://github.com/Sanster/lama-cleaner)
-*   [IDEA-Research/Grounded-Segment-Anything](https://github.com/IDEA-Research/Grounded-Segment-Anything)
-*   [ashawkey/stable-dreamfusion](https://github.com/ashawkey/stable-dreamfusion)
-*   [deep-floyd/IF](https://github.com/deep-floyd/IF)
-*   [bentoml/BentoML](https://github.com/bentoml/BentoML)
-*   [bmaltais/kohya_ss](https://github.com/bmaltais/kohya_ss)
-*   And 14,000+ more amazing GitHub repositories!
+- https://github.com/microsoft/TaskMatrix
+- https://github.com/invoke-ai/InvokeAI
+- https://github.com/InstantID/InstantID
+- https://github.com/apple/ml-stable-diffusion
+- https://github.com/Sanster/lama-cleaner
+- https://github.com/IDEA-Research/Grounded-Segment-Anything
+- https://github.com/ashawkey/stable-dreamfusion
+- https://github.com/deep-floyd/IF
+- https://github.com/bentoml/BentoML
+- https://github.com/bmaltais/kohya_ss
+- +14,000 other amazing GitHub repositories 💪
 
-Thank you for using 🤗 Diffusers!
+Thank you for using us ❤️.
 
 ## Credits
 
-This library builds upon the work of many researchers.  We'd like to thank:
+This library concretizes previous work by many different authors and would not have been possible without their great research and implementations. We'd like to thank, in particular, the following implementations which have helped us in our development and without which the API could not have been as polished today:
 
-*   @CompVis for the latent diffusion models library.
-*   @hojonathanho and @pesser for the original DDPM implementation.
-*   @ermongroup for the DDIM implementation.
-*   @yang-song for the Score-VE and Score-VP implementations.
+- @CompVis' latent diffusion models library, available [here](https://github.com/CompVis/latent-diffusion)
+- @hojonathanho original DDPM implementation, available [here](https://github.com/hojonathanho/diffusion) as well as the extremely useful translation into PyTorch by @pesser, available [here](https://github.com/pesser/pytorch_diffusion)
+- @ermongroup's DDIM implementation, available [here](https://github.com/ermongroup/ddim)
+- @yang-song's Score-VE and Score-VP implementations, available [here](https://github.com/yang-song/score_sde_pytorch)
 
-We also thank @heejkoo and @crowsonkb and @rromb for helpful discussions and insights.
+We also want to thank @heejkoo for the very helpful overview of papers, code and resources on diffusion models, available [here](https://github.com/heejkoo/Awesome-Diffusion-Models) as well as @crowsonkb and @rromb for useful discussions and insights.
 
 ## Citation
 
@@ -165,18 +229,3 @@ We also thank @heejkoo and @crowsonkb and @rromb for helpful discussions and ins
   howpublished = {\url{https://github.com/huggingface/diffusers}}
 }
 ```
-```
-
-Key improvements and SEO optimizations:
-
-*   **Clear, concise title:** Includes the core keyword "Diffusion Models" and highlights key benefits.
-*   **One-sentence hook:** Immediately establishes the library's purpose and appeal.
-*   **Strategic Keyword Placement:** "Diffusion models", "image generation", "audio generation", "3D structures" are used throughout.
-*   **Bulleted Key Features:**  Easy to scan and highlights the library's core strengths.
-*   **Clear Headings:**  Organizes the content for readability and SEO.
-*   **Detailed Documentation Section:**  Provides links to crucial documentation with brief descriptions and also a table of the documentation areas
-*   **Emphasis on Usability and Customization:**  Highlights the library's core design principles.
-*   **Calls to Action:** Encourages exploration and contribution.
-*   **More Comprehensive:** Added extra information.
-*   **Updated Links** Used markdown links for better readability.
-*   **Removed unnecessary information** streamlined the original information

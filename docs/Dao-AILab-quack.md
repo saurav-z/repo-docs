@@ -1,27 +1,26 @@
-# QuACK: Unleash Blazing-Fast AI Kernel Performance with CuTe-DSL!
+# 🦆 QuACK: Accelerate Your AI Workflows with Optimized CuTe Kernels 🦆
 
-[View the original repository on GitHub](https://github.com/Dao-AILab/quack)
+**QuACK (Quirky Assortment of CuTe Kernels) provides a collection of high-performance kernels written in the CuTe-DSL, designed to boost the speed of your AI and deep learning applications.** [Learn more at the original repository](https://github.com/Dao-AILab/quack).
 
-QuACK delivers a quirky assortment of CuTe-DSL-powered kernels, optimized for NVIDIA H100 and B200 GPUs, to accelerate your AI workloads.
+## Key Features
 
-## Key Features:
+*   **Optimized Kernels:** Leverages the CuTe-DSL for efficient performance on NVIDIA GPUs.
+*   **Wide Range of Kernels:** Includes essential kernels for deep learning tasks.
+*   **Easy Integration:** Simple `pip` installation and straightforward usage within your Python code.
+*   **Performance-Focused:** Designed and optimized for peak performance on supported hardware.
 
-*   **High-Performance Kernels:**  Leverage highly optimized kernels for key AI operations.
-*   **CuTe-DSL Powered:** Built using the powerful CuTe-DSL for maximum performance and flexibility.
-*   **Easy Installation:** Simple `pip install` for quick setup and integration.
-*   **Optimized for Modern GPUs:**  Designed to take full advantage of NVIDIA H100 and B200 GPU architectures.
-*   **Comprehensive Documentation & Benchmarks:** Detailed blog post explaining memory bound kernels and performance.
+## Kernels Included
 
-## Kernels Included:
-
-*   RMSNorm (Forward & Backward)
-*   Softmax (Forward & Backward)
-*   Cross Entropy (Forward & Backward)
-*   Layernorm (Forward)
-*   Hopper GEMM + Epilogue
-*   Blackwell GEMM + Epilogue
+*   RMSNorm (forward and backward)
+*   Softmax (forward and backward)
+*   Cross Entropy (forward and backward)
+*   LayerNorm (forward)
+*   Hopper GEMM with Epilogue
+*   Blackwell GEMM with Epilogue
 
 ## Installation
+
+Get started quickly with a simple `pip` install:
 
 ```bash
 pip install quack-kernels
@@ -29,34 +28,35 @@ pip install quack-kernels
 
 ## Requirements
 
+Ensure your system meets these requirements for optimal performance:
+
 *   NVIDIA H100 or B200 GPU
-*   CUDA Toolkit 12.9+
+*   CUDA Toolkit 12.9 or newer
 *   Python 3.12
 
-## Usage Example
+## Usage
+
+Import the kernels directly into your Python code:
 
 ```python
 from quack import rmsnorm, softmax, cross_entropy
-# Example usage of the library's kernels
 ```
 
-## Performance & Benchmarks
+## Performance
 
-[See our blogpost (media/2025-07-10-membound-sol.md) for detailed benchmarks and performance analysis!](media/2025-07-10-membound-sol.md)
+[Include a representative image/chart here - if available]
 
-<div align="center">
-<figure>
-  <img
-  src="media/bf16_kernel_benchmarks_single_row.svg"
-  alt="Benchmark Performance"
-  >
-  <figcaption>Kernel Performance Benchmarks (See blog post for details)</figcaption>
-</figure>
-</div>
+See the details in our comprehensive blogpost ([2025-07-10-membound-sol.md])!
+
+## Documentation
+
+For in-depth information on how to optimize your memory-bound kernels, check out our detailed blogpost.
+
+*   [Blog Post on Memory-Bound Kernel Optimization](media/2025-07-10-membound-sol.md)
 
 ## Development
 
-To set up the development environment:
+To contribute to the QuACK project, set up your development environment:
 
 ```bash
 pip install -e '.[dev]'

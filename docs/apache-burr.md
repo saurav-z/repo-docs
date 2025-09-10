@@ -1,102 +1,69 @@
-# Burr: Build, Monitor, and Scale Stateful AI Applications
+# Burr: Build and Monitor Stateful AI Applications
 
-Burr simplifies the creation of intelligent applications like chatbots and agents with its flexible state machine approach. [See the original repo](https://github.com/apache/burr)
+Burr empowers developers to build robust, stateful AI applications with simple Python building blocks, offering a powerful solution for managing complex workflows and decisions.  [Visit the original repository](https://github.com/apache/burr).
 
-<div>
-  <!-- Badges -->
-  [![Discord](https://img.shields.io/badge/Join-Burr_Discord-7289DA?logo=discord)](https://discord.gg/6Zy2DwP4f3)
-  [![Downloads](https://static.pepy.tech/badge/burr/month)](https://pepy.tech/project/burr)
-  ![PyPI Downloads](https://static.pepy.tech/badge/burr)
-  [![GitHub Last Commit](https://img.shields.io/github/last-commit/dagworks-inc/burr)](https://github.com/dagworks-inc/burr/pulse)
-  [![X](https://img.shields.io/badge/follow-%40burr_framework-1DA1F2?logo=x&style=social)](https://twitter.com/burr_framework)
-  <a target="_blank" href="https://linkedin.com/showcase/dagworks-inc" style="background:none">
-    <img src="https://img.shields.io/badge/DAGWorks-Follow-purple.svg?logo=linkedin" />
-  </a>
-  <a href="https://twitter.com/burr_framework" target="_blank">
-    <img src="https://img.shields.io/badge/burr_framework-Follow-purple.svg?logo=X"/>
-  </a>
-  <a href="https://twitter.com/dagworks" target="_blank">
-    <img src="https://img.shields.io/badge/DAGWorks-Follow-purple.svg?logo=X"/>
-  </a>
-</div>
+[![Discord](https://img.shields.io/badge/Join-Burr_Discord-7289DA?logo=discord)](https://discord.gg/6Zy2DwP4f3)
+[![Downloads](https://static.pepy.tech/badge/burr/month)](https://pepy.tech/project/burr)
+![PyPI Downloads](https://static.pepy.tech/badge/burr)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/dagworks-inc/burr)](https://github.com/dagworks-inc/burr/pulse)
+[![X](https://img.shields.io/badge/follow-%40burr_framework-1DA1F2?logo=x&style=social)](https://twitter.com/burr_framework)
+<a target="_blank" href="https://linkedin.com/showcase/dagworks-inc" style="background:none">
+  <img src="https://img.shields.io/badge/DAGWorks-Follow-purple.svg?logo=linkedin" />
+</a>
+<a href="https://twitter.com/burr_framework" target="_blank">
+  <img src="https://img.shields.io/badge/burr_framework-Follow-purple.svg?logo=X"/>
+</a>
+<a href="https://twitter.com/dagworks" target="_blank">
+  <img src="https://img.shields.io/badge/DAGWorks-Follow-purple.svg?logo=X"/>
+</a>
 
 ## Key Features
 
-*   **State Machine Foundation:** Structure your AI applications as state machines, offering clear control flow and management.
-*   **Real-time Monitoring & Tracing:** A built-in UI provides real-time insights, debugging, and telemetry for your application.
-*   **Flexible Integrations:** Easily integrate with LLMs, data stores, and other third-party services, vendors and frameworks.
-*   **Python-First Approach:** Develop with a simple, dependency-free core Python library.
-*   **Idempotent Workflows:** Design applications that are self-persisting and maintain their state, even after interruptions.
+*   **State Machine Framework:**  Express your application logic as state machines, perfect for managing complex flows and decisions.
+*   **Real-time UI:**  A built-in UI provides real-time monitoring, tracing, and debugging capabilities for your applications.
+*   **Framework Agnostic:** Burr seamlessly integrates with your preferred LLMs, frameworks, and tools.
+*   **Pluggable Persistence:** Save and load application state with flexible storage options.
+*   **Versatile Use Cases:** Suitable for chatbots, agents, simulations, and other stateful AI applications.
 
-## Getting Started
+## Quick Start
 
-Install Burr using pip:
+Get up and running with Burr in minutes:
 
-```bash
-pip install "burr[start]"
-```
+1.  **Install:** `pip install "burr[start]"`
+2.  **Run the UI:** `burr`  (This opens the telemetry UI with sample data and a demo chatbot)
+3.  **Explore Examples:**  Clone the repository and run a sample app:
+    ```bash
+    git clone https://github.com/dagworks-inc/burr && cd burr/examples/hello-world-counter
+    python application.py
+    ```
 
-Then launch the UI:
-
-```bash
-burr
-```
-
-Explore the UI, including the demo chatbot. The examples will help you get started.
-
-*   Quick Start Guide: [https://burr.dagworks.io/getting\_started/simple-example/](https://burr.dagworks.io/getting_started/simple-example/)
-*   Documentation: [https://burr.dagworks.io/](https://burr.dagworks.io/)
-*   Demo Video: [https://www.loom.com/share/a10f163428b942fea55db1a84b1140d8?sid=1512863b-f533-4a42-a2f3-95b13deb07c9](https://www.loom.com/share/a10f163428b942fea55db1a84b1140d8?sid=1512863b-f533-4a42-a2f3-95b13deb07c9)
+    See the [getting started guide](https://burr.dagworks.io/getting_started/simple-example/) for detailed instructions.
 
 ## How Burr Works
 
-Burr enables stateful application development by allowing you to represent your application as a state machine. This structured approach aids in:
+Burr simplifies building stateful applications by allowing you to define your workflow as a state machine. This provides clarity and control over complex processes, including:
 
-*   Managing state effectively
-*   Tracking complex decision-making processes
-*   Incorporating user feedback seamlessly
-*   Creating self-persisting workflows
+*   **Simple Python Functions:** Define actions using Python functions.
+*   **State Management:** Easily manage and track application state.
+*   **Transitions:** Define the flow between actions using transitions.
+*   **Extensive Integrations:** Integrate with LLMs, databases, and telemetry providers.
 
-**Example Code Snippet:**
+See the core API example in the original README.
 
-```python
-from burr.core import action, State, ApplicationBuilder
+## What Can You Build with Burr?
 
-@action(reads=[], writes=["prompt", "chat_history"])
-def human_input(state: State, prompt: str) -> State:
-    chat_item = {"role" : "user", "content" : prompt}
-    return state.update(prompt=prompt).append(chat_history=chat_item)
-
-@action(reads=["chat_history"], writes=["response", "chat_history"])
-def ai_response(state: State) -> State:
-    response = _query_llm(state["chat_history"])
-    chat_item = {"role" : "system", "content" : response}
-    return state.update(response=content).append(chat_history=chat_item)
-
-app = (
-    ApplicationBuilder()
-    .with_actions(human_input, ai_response)
-    .with_transitions(
-        ("human_input", "ai_response"),
-        ("ai_response", "human_input")
-    ).with_state(chat_history=[])
-    .with_entrypoint("human_input")
-    .build()
-)
-*_, state = app.run(halt_after=["ai_response"], inputs={"prompt": "Who was Aaron Burr, sir?"})
-print("answer:", app.state["response"])
-```
-
-## Use Cases
-
-Burr is well-suited for building a range of AI-powered applications, including:
+Burr is designed for a broad range of applications, including:
 
 *   Chatbots (GPT-like, RAG-based)
-*   LLM-based adventure games
+*   LLM-powered games
 *   Email assistants
-*   Simulations and hyperparameter tuning
+*   Simulations
+*   Hyperparameter tuning
+*   And much more!
 
-## Comparison
+## Comparison with Other Frameworks
+
+Burr's unique approach offers advantages compared to other popular frameworks:
 
 | Criteria                                          | Burr | Langgraph | temporal | Langchain | Superagent | Hamilton |
 | ------------------------------------------------- | :--: | :-------: | :------: | :-------: | :--------: | :------: |
@@ -109,45 +76,37 @@ Burr is well-suited for building a range of AI-powered applications, including:
 
 ## Roadmap
 
-Burr is continuously evolving with exciting new features, including:
+Burr is constantly evolving!  Future developments include:
 
-1.  FastAPI integration and hosted deployment.
-2.  Improvements in the core library and integrations.
-3.  Tooling for hosted execution of state machines.
-4.  Additional storage integrations.
+*   FastAPI Integration and Hosted Deployment
+*   Core library enhancements (retry, exception handling)
+*   More integrations with popular frameworks (LCEL, LLamaIndex, Hamilton, etc...)
+*   Tooling for hosted state machine execution
+*   Additional storage integrations
 
-Learn more about upcoming features and sign up for the waitlist for Burr Cloud [here](https://forms.gle/w9u2QKcPrztApRedA).
+Stay updated on the Burr Cloud waitlist: [Sign up here](https://forms.gle/w9u2QKcPrztApRedA)
 
 ## Contributing
 
-We welcome contributions! See the [developer docs](https://burr.dagworks.io/contributing) to get started.
-
-## Community
-
-*   Join the Burr Discord: [https://discord.gg/6Zy2DwP4f3](https://discord.gg/6Zy2DwP4f3)
+Contributions are welcome!  See the [developer docs](https://burr.dagworks.io/contributing) to get started.
 
 ## Testimonials
 
-*   Read what users are saying about Burr's impact:
-
-    *   Ashish Ghosh, CTO, Peanut Robotics
-    *   Reddit User cyan2k, LocalLlama, Subreddit
-    *   Ishita, Founder, Watto.ai
-    *   Matthew Rideout, Staff Software Engineer, Paxton AI
-    *   Rinat Gareev, Senior Solutions Architect, Provectus
-    *   Hadi Nayebi, Co-founder, CognitiveGraphs
-    *   Aditya K., DS Architect, TaskHuman
+Read what users are saying about Burr (as in the original README).
 
 ## Contributors
 
-*   Elijah ben Izzy
-*   Stefan Krawczyk
-*   Joseph Booth
-*   Nandani Thakur
-*   Thierry Jean
-*   Hamza Farhan
-*   Abdul Rafay
-*   Margaret Lange
-*   Luke Chadwick
-*   Evans
-*   Sasmitha Manathunga
+*   [Elijah ben Izzy](https://github.com/elijahbenizzy)
+*   [Stefan Krawczyk](https://github.com/skrawcz)
+*   [Joseph Booth](https://github.com/jombooth)
+*   [Nandani Thakur](https://github.com/NandaniThakur)
+*   [Thierry Jean](https://github.com/zilto)
+*   [Hamza Farhan](https://github.com/HamzaFarhan)
+*   [Abdul Rafay](https://github.com/proftorch)
+*   [Margaret Lange](https://github.com/margaretlange)
+
+### Bug hunters/special mentions
+
+*   [Luke Chadwick](https://github.com/vertis)
+*   [Evans](https://github.com/sudoevans)
+*   [Sasmitha Manathunga](https://github.com/mmz-001)

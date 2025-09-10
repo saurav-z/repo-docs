@@ -2,49 +2,49 @@
   <img src="https://github.com/1Panel-dev/maxkb/assets/52996290/c0694996-0eed-40d8-b369-322bf2a380bf" alt="MaxKB" width="300" />
 </p>
 
-<h1 align="center">MaxKB: Your Open-Source Platform for Enterprise-Grade AI Agents</h1>
+<h1 align="center">MaxKB: Build Powerful Enterprise AI Agents with Ease</h1>
 
-MaxKB empowers you to build cutting-edge, intelligent AI agents for a variety of enterprise applications.  ([View the original repository](https://github.com/1Panel-dev/MaxKB))
+MaxKB is an open-source platform empowering developers to create intelligent agents for various business applications, offering robust features for RAG pipelines, agentic workflows, and seamless integration.  Learn more and contribute on [the original GitHub repository](https://github.com/1Panel-dev/MaxKB).
 
 <p align="center">
-  <a href="https://trendshift.io/repositories/9113" target="_blank"><img src="https://trendshift.io/api/badge/repositories/9113" alt="1Panel-dev%2FMaxKB | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+  <a href="https://trendshift.io/repositories/9113" target="_blank">
+    <img src="https://trendshift.io/api/badge/repositories/9113" alt="1Panel-dev%2FMaxKB | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+  </a>
 </p>
 
 <p align="center">
   <a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text"><img src="https://img.shields.io/github/license/1Panel-dev/maxkb?color=%231890FF" alt="License: GPL v3"></a>
   <a href="https://github.com/1Panel-dev/maxkb/releases/latest"><img src="https://img.shields.io/github/v/release/1Panel-dev/maxkb" alt="Latest release"></a>
   <a href="https://github.com/1Panel-dev/maxkb"><img src="https://img.shields.io/github/stars/1Panel-dev/maxkb?color=%231890FF&style=flat-square" alt="Stars"></a>
-  <a href="https://hub.docker.com/r/1panel/maxkb"><img src="https://img.shields.io/docker/pulls/1panel/maxkb?label=downloads" alt="Download"></a><br/>
+  <a href="https://hub.docker.com/r/1panel/maxkb"><img src="https://img.shields.io/docker/pulls/1panel/maxkb?label=downloads" alt="Download"></a>
+  <br/>
   [<a href="/README_CN.md">中文(简体)</a>] | [<a href="/README.md">English</a>]
 </p>
+
 <hr/>
 
 ## Key Features
 
-MaxKB is designed to provide a robust and flexible platform for building intelligent agents. Key features include:
+*   **RAG Pipeline for Enhanced Accuracy:**  Upload documents, automatically split and vectorize text, and reduce hallucinations for superior question-answering experiences.
+*   **Agentic Workflow Engine:** Utilize a powerful workflow engine, function library, and MCP tool-use for orchestrating AI processes in complex scenarios.
+*   **Seamless Integration:** Quickly integrate MaxKB into existing third-party systems with minimal coding, adding intelligent Q&A capabilities.
+*   **Model-Agnostic Support:** Compatible with a wide range of large language models, including private models (DeepSeek, Llama, Qwen) and public models (OpenAI, Claude, Gemini).
+*   **Multimodal Capabilities:** Native support for processing and generating text, images, audio, and video.
 
-*   **Advanced RAG Pipelines:**  Seamlessly integrate Retrieval-Augmented Generation (RAG) pipelines by direct document uploads or web crawling, with automated text splitting, and vectorization for superior Q&A experiences.
-*   **Agentic Workflow Engine:** Orchestrate complex AI processes with a powerful workflow engine, function library, and MCP tool-use capabilities.
-*   **Rapid Integration:** Quickly equip existing systems with intelligent Q&A capabilities through zero-coding integration, enhancing user satisfaction.
-*   **Model Agnostic:** Supports various Large Language Models (LLMs), including private models (DeepSeek, Llama, Qwen, etc.) and public models (OpenAI, Claude, Gemini, etc.).
-*   **Multi-Modal Support:**  Native support for text, image, audio, and video input and output, enabling richer interactions.
+## Quick Start with Docker
 
-## Getting Started
-
-### Quick Start with Docker
-
-Get up and running quickly with the following Docker command:
+Get started with MaxKB in seconds using Docker:
 
 ```bash
 docker run -d --name=maxkb --restart=always -p 8080:8080 -v ~/.maxkb:/opt/maxkb 1panel/maxkb
 ```
 
-Access the MaxKB web interface at `http://your_server_ip:8080` using the default credentials:
+Access the MaxKB web interface at `http://your_server_ip:8080` using the following default credentials:
 
-*   **Username:** admin
-*   **Password:** MaxKB@123..
+*   Username: `admin`
+*   Password: `MaxKB@123..`
 
-**Note for Chinese Users:**  If you encounter issues pulling the Docker image, please refer to the [offline installation documentation](https://maxkb.cn/docs/v2/installation/offline_installtion/).
+For Chinese users experiencing Docker image pull failures, please refer to the [offline installation documentation](https://maxkb.cn/docs/v2/installation/offline_installtion/).
 
 ## Screenshots
 
@@ -61,8 +61,6 @@ Access the MaxKB web interface at `http://your_server_ip:8080` using the default
 
 ## Technical Stack
 
-MaxKB is built using a modern technology stack:
-
 *   **Frontend:** [Vue.js](https://vuejs.org/)
 *   **Backend:** [Python / Django](https://www.djangoproject.com/)
 *   **LLM Framework:** [LangChain](https://www.langchain.com/)
@@ -74,18 +72,4 @@ MaxKB is built using a modern technology stack:
 
 ## License
 
-MaxKB is licensed under the [GNU General Public License version 3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html).
-```
-Key improvements and SEO considerations:
-
-*   **Clear Title and Hook:**  The title directly states the product and its value proposition. The opening sentence is a concise hook.
-*   **Keywords:**  Includes relevant keywords throughout the text, such as "open-source," "AI agents," "enterprise-grade," "RAG pipelines," "LLMs," "workflow engine," etc.  These are crucial for search engine visibility.
-*   **Headings and Structure:**  Uses clear headings and subheadings to improve readability and organization.  This also helps search engines understand the content.
-*   **Bulleted Lists:**  Highlights key features with bullet points, making them easy to scan and understand.
-*   **Action-Oriented Language:**  Uses phrases like "Empowers you," "Get up and running," and "Quickly equip" to encourage user action.
-*   **Concise Descriptions:** Keeps descriptions of features brief and to the point.
-*   **Links to Relevant Resources:** Includes links to the project's documentation, and licenses, enhancing the user experience and potentially improving SEO.
-*   **Alt Text:**  Ensures all images have descriptive alt text, which is critical for accessibility and can also help with SEO.
-*   **Simplified Quick Start:** Provides a straightforward and easy-to-copy Docker command.
-*   **Clear Call to Action:**  Encourages the reader to visit the web interface after deployment.
-*   **Removed Chinese Language in the Title:** Maintained a consistent language choice for readability, and moved the localized text to a supporting section.
+Licensed under The GNU General Public License version 3 (GPLv3). You can find the full license at:  <https://www.gnu.org/licenses/gpl-3.0.html>

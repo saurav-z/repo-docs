@@ -1,28 +1,28 @@
-# OWASP Nettacker: Your Automated Security Testing and Information Gathering Toolkit
+# OWASP Nettacker: Your Automated Penetration Testing and Information Gathering Framework
 
-**OWASP Nettacker is an open-source penetration testing framework that empowers security professionals and ethical hackers to discover vulnerabilities and assess network security posture efficiently.**
+**OWASP Nettacker is a powerful, open-source framework designed to help cybersecurity professionals and ethical hackers efficiently assess network security.**
 
-[Go to the original repo](https://github.com/OWASP/Nettacker)
+[Go to the original repository](https://github.com/OWASP/Nettacker)
 
 ## Key Features
 
-*   **Modular Architecture:** Customize your scans with modular components for tasks like port scanning, vulnerability detection, and credential brute-forcing.
-*   **Multi-Protocol & Multithreaded Scanning:**  Supports various protocols (HTTP/HTTPS, FTP, SSH, etc.) and utilizes multithreading for faster scans.
-*   **Comprehensive Reporting:** Generate reports in various formats (HTML, JSON, CSV, text) for easy analysis.
-*   **Database & Drift Detection:**  Track scan results over time to detect changes and identify new vulnerabilities or assets.
-*   **CLI, REST API & Web UI:** Provides multiple interfaces for flexible use and integration.
-*   **Evasion Techniques:** Employ configurable delays, proxy support, and user-agent randomization to bypass detection.
-*   **Flexible Target Input:**  Accepts single IPs, IP ranges, CIDR blocks, domain names, and URLs.
+*   **Modular Architecture:** Execute specific tasks (port scanning, vulnerability checks, etc.) with modular components for control.
+*   **Multi-Protocol & Multithreaded Scanning:** Supports HTTP/HTTPS, FTP, SSH, SMB, SMTP, and more; scans in parallel for speed.
+*   **Comprehensive Reporting:** Generate reports in HTML, JSON, CSV, and plain text formats.
+*   **Built-in Database & Drift Detection:** Store scan results for comparison and identification of changes over time.
+*   **CLI, REST API & Web UI:** Offers both programmatic integration and a user-friendly web interface for defining scans and viewing results.
+*   **Evasion Techniques:** Utilize configurable delays, proxy support, and randomized user-agents to avoid detection.
+*   **Flexible Target Specifications:** Accepts single IPs, IP ranges, CIDR blocks, domains, and URLs, with support for loading targets from files.
 
 ## Use Cases
 
-*   **Penetration Testing:** Automate reconnaissance, service discovery, and vulnerability scanning.
-*   **Reconnaissance & Vulnerability Assessment:** Map hosts, identify open ports and services, and perform credential brute-forcing.
-*   **Attack Surface Mapping:**  Quickly discover exposed hosts, subdomains, and services.
-*   **Bug Bounty Recon:**  Automate common reconnaissance tasks.
-*   **Network Vulnerability Scanning:**  Efficiently scan networks using a modular, multithreaded approach.
-*   **Shadow IT & Asset Discovery:** Uncover forgotten or unmanaged assets.
-*   **CI/CD & Compliance Monitoring:** Integrate Nettacker into pipelines to track changes and vulnerabilities.
+*   **Penetration Testing:** Automate reconnaissance and vulnerability assessments.
+*   **Reconnaissance & Vulnerability Assessment:** Discover hosts, open ports, services, and vulnerabilities.
+*   **Attack Surface Mapping:** Identify exposed assets, ports, and services rapidly.
+*   **Bug Bounty Reconnaissance:** Automate subdomain enumeration and vulnerability checks.
+*   **Network Vulnerability Scanning:** Perform efficient assessments across networks.
+*   **Shadow IT & Asset Discovery:** Uncover unmanaged assets and changes over time.
+*   **CI/CD & Compliance Monitoring:** Integrate for infrastructure change tracking and vulnerability detection.
 
 ## Quick Start (Docker)
 
@@ -44,36 +44,28 @@ $ docker run owasp/nettacker --help
 ```bash
 $ docker-compose up
 ```
-* Use the API Key displayed in the CLI to login to the Web GUI
-* Web GUI is accessible from your (https://localhost:5000) or https://nettacker-api.z3r0d4y.com:5000/ (pointed to your localhost)
-* The local database is `.nettacker/data/nettacker.db` (sqlite).
-* Default results path is `.nettacker/data/results`
-* `docker-compose` will share your nettacker folder, so you will not lose any data after `docker-compose down`
-* To see the API key in you can also run `docker logs nettacker_nettacker`.
-* More details and install without docker https://nettacker.readthedocs.io/en/latest/Installation
 
-## Resources
+*   Use the API Key displayed in the CLI to login to the Web GUI.
+*   Web GUI is accessible from your (https://localhost:5000) or https://nettacker-api.z3r0d4y.com:5000/ (pointed to your localhost)
+*   The local database is `.nettacker/data/nettacker.db` (sqlite).
+*   Default results path is `.nettacker/data/results`
+*   `docker-compose` will share your nettacker folder, so you will not lose any data after `docker-compose down`
+*   To see the API key in you can also run `docker logs nettacker_nettacker`.
+*   More details and install without docker https://nettacker.readthedocs.io/en/latest/Installation
 
-*   **Project Home Page:** [OWASP Nettacker](https://owasp.org/nettacker)
-*   **Documentation:** [Nettacker Documentation](https://nettacker.readthedocs.io)
-*   **Slack:** [#project-nettacker](https://owasp.slack.com/archives/CQZGG24FQ)
-*   **Installation:** [Installation Guide](https://nettacker.readthedocs.io/en/latest/Installation)
-*   **Usage:** [Usage Guide](https://nettacker.readthedocs.io/en/latest/Usage)
-*   **Docker Image:** [Docker Hub](https://hub.docker.com/r/owasp/nettacker)
+## Important Notes
 
-## Contribute & Support
+*   **Disclaimer:** Use this software responsibly and ethically. Do not target systems without permission.
+*   See [ADOPTERS.md](ADOPTERS.md) to see who is using OWASP Nettacker.
+*   OWASP Nettacker is a [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com) Project.
 
-OWASP Nettacker is an open-source project driven by community contributions.  Join us in making Nettacker even better!
+## Contribution & Support
 
-*   **Contributors:** Thanks to all our awesome contributors!
-*   **Adopters:** See [ADOPTERS.md](ADOPTERS.md) to find organizations who use Nettacker!  Please submit a PR to add your organization.
-*   **Donate:** [OWASP Donate](https://owasp.org/donate/?reponame=www-project-nettacker&title=OWASP+Nettacker)
+OWASP Nettacker is an open-source project, built on the principles of collaboration and shared knowledge. Thank you to all of our contributors! 
 
-## Google Summer of Code (GSoC) Project
+[![Awesome Contributors](https://contrib.rocks/image?repo=OWASP/Nettacker)](https://github.com/OWASP/Nettacker/graphs/contributors)
 
-OWASP Nettacker is participating in the Google Summer of Code Initiative. Thanks to the Google Summer of Code Initiative and all the students who contributed to this project during their summer breaks.
-<a href="https://summerofcode.withgoogle.com"><img src="https://betanews.com/wp-content/uploads/2016/03/vertical-GSoC-logo.jpg" width="200"></img></a>
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/OWASP/Nettacker.svg)](https://starchart.cc/OWASP/Nettacker)
+*   **Documentation:** [https://nettacker.readthedocs.io](https://nettacker.readthedocs.io)
+*   **Slack:** [#project-nettacker](https://owasp.slack.com/archives/CQZGG24FQ) on https://owasp.slack.com
+*   **GitHub repo:** [https://github.com/OWASP/Nettacker](https://github.com/OWASP/Nettacker)
+*   **Donate:** [https://owasp.org/donate/?reponame=www-project-nettacker&title=OWASP+Nettacker](https://owasp.org/donate/?reponame=www-project-nettacker&title=OWASP+Nettacker)

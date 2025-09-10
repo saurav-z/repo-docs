@@ -26,23 +26,21 @@
 
 ---
 
-## Flet: Build Multi-Platform Apps with Python and Flutter
+## Flet: Build Beautiful, Multi-Platform Apps in Python
 
-**Create stunning web, desktop, and mobile applications in Python quickly and easily with Flet.**
-
-Flet is a powerful framework that empowers Python developers to build user interfaces for web, desktop, and mobile applications without any prior frontend experience.
+**Develop stunning web, desktop, and mobile applications with Flet using the familiar Python language, no frontend experience required.**  [Visit the original repository](https://github.com/flet-dev/flet).
 
 ### Key Features:
 
-*   ⚡️ **Rapid Development:** Go from idea to a working app in minutes, ideal for internal tools, prototypes, and more.
-*   📐 **Simplified Architecture:** Develop stateful, multi-user, real-time Single-Page Applications (SPAs) with Python only, eliminating complex frontend/backend separation.
-*   🔋 **Batteries Included:** Start coding immediately with Flet, no need for complex SDKs or dependencies. It includes a built-in web server and desktop clients.
-*   📱 **Powered by Flutter:** Build professional-looking UIs with Flutter, ensuring a consistent experience across all platforms. Flet simplifies Flutter's model with easy-to-use controls.
-*   🌍 **Multi-Platform Deployment:** Package your app for Windows, macOS, Linux, iOS, Android, web apps (dynamic/static), and Progressive Web Apps (PWAs).
+*   **Rapid Development:** Go from idea to a functional app in minutes, ideal for internal tools, prototypes, and more.
+*   **Simplified Architecture:** Build stateful, multi-user, real-time Single-Page Applications (SPAs) with just Python. No complex backend or frontend setup.
+*   **Batteries Included:**  Get started with your favorite IDE – Flet handles the web server, asset hosting, and desktop clients. No need for complex SDKs or dependencies.
+*   **Powered by Flutter:**  Create professional-looking UIs with Flutter, delivering consistent experiences across all platforms. Flet simplifies Flutter's "widgets" into easy-to-use "controls."
+*   **Multi-Platform Deployment:** Deploy your app as a standalone desktop app (Windows, macOS, Linux), mobile app (iOS, Android), web app, or Progressive Web App (PWA).
 
-## Flet App Example: Counter
+### Flet App Example: "Counter"
 
-Here's a simple "Counter" app example:
+Here's a simple example to showcase Flet's ease of use:
 
 ```python title="counter.py"
 import flet as ft
@@ -75,32 +73,41 @@ def main(page: ft.Page):
 ft.run(main)
 ```
 
-To run the app:
+**Installation:**
 
-1.  Install Flet: `pip install 'flet[all]'`
-2.  Run the app: `flet run counter.py`
+```bash
+pip install 'flet[all]'
+```
+
+**Running the app:**
+
+```bash
+flet run counter.py
+```
+This will open the app in a native OS window.
+
+**Running as a web app:**
+```python
+ft.run(main, view=flet.AppView.WEB_BROWSER)
+```
+or
+```bash
+flet run --web counter.py
+```
 
 <p align="center">
     <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/macos.png" width="45%" />
-</p>
-
-To run as a web app:
-
-*   Modify the last line: `ft.run(main, view=flet.AppView.WEB_BROWSER)`
-*   Or, use the `--web` flag: `flet run --web counter.py`
-
-<p align="center">
     <img src="https://docs.flet-docs.pages.dev/assets/getting-started/counter-app/safari.png" width="60%" />
 </p>
 
-## Get Started
+### Learn More:
 
-*   **[Flet Website](https://flet.dev)**
-*   **[Flet Documentation](https://docs.flet.dev)**
-*   **[Flet Roadmap](https://flet.dev/roadmap)**
-*   **[Flet Apps Gallery](https://docs.flet.dev/gallery)**
+*   [Website](https://flet.dev)
+*   [Documentation](https://docs.flet.dev)
+*   [Roadmap](https://flet.dev/roadmap)
+*   [Apps Gallery](https://docs.flet.dev/gallery)
 
-## Community
+### Community:
 
 *   [Discussions](https://github.com/flet-dev/flet/discussions)
 *   [Discord](https://discord.gg/dzWXP8SHG8)
@@ -108,8 +115,6 @@ To run as a web app:
 *   [Bluesky](https://bsky.app/profile/fletdev.bsky.social)
 *   [Email us](mailto:hello@flet.dev)
 
-## Contributing
+### Contributing:
 
-Contribute to Flet's development: [Contribution Guide](https://docs.flet.dev/contributing).
-
-**[Visit the Flet Repository on GitHub](https://github.com/flet-dev/flet)**
+*   [Contribution Guide](https://docs.flet.dev/contributing)

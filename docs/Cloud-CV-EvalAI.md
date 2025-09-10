@@ -1,60 +1,71 @@
-<p align="center">
-  <img width="65%" src="docs/source/_static/img/evalai_logo.png" alt="EvalAI Logo"/>
-</p>
+<p align="center"><img width="65%" src="docs/source/_static/img/evalai_logo.png"/></p>
 
----
+# EvalAI: Your Open-Source Platform for AI Challenge Evaluation
 
-# EvalAI: The Open-Source Platform for AI/ML Algorithm Evaluation
+**EvalAI is the ultimate open-source platform designed to revolutionize the way you evaluate and compare your machine learning and AI algorithms.**  
 
-**EvalAI is the leading open-source platform designed to help researchers, developers, and challenge organizers to evaluate and compare machine learning (ML) and artificial intelligence (AI) algorithms at scale.**  [Explore the EvalAI repository](https://github.com/Cloud-CV/EvalAI)
+[Check out the EvalAI repository on GitHub](https://github.com/Cloud-CV/EvalAI)
 
 ## Key Features
 
-*   **Customizable Evaluation:** Define your own evaluation protocols with multiple phases, dataset splits, and support for any programming language.
-*   **Remote Evaluation:** Leverage the power of remote clusters for compute-intensive challenges.
-*   **Dockerized Evaluation:** Submit and evaluate your code within isolated Docker containers, ensuring reproducibility.
-*   **Command-Line Interface (CLI):**  Interact with EvalAI directly from your terminal using the `evalai-cli` tool.
-*   **Scalability and Portability:** Built with open-source technologies like Docker, Django, and PostgreSQL for flexible deployment.
-*   **Optimized Performance:** Experience faster evaluation times through techniques like worker node warm-up and dataset chunking.
+*   **Custom Evaluation Protocols:**  Create an unlimited number of evaluation phases and dataset splits, compatible with any programming language, and organize results on both public and private leaderboards.
+*   **Remote Evaluation:**  Leverage specialized compute resources for large-scale challenges, enabling organizers to add their own worker nodes for processing submissions.
+*   **Environment-Based Evaluation:** Participants can submit their code as Docker images, which are then evaluated against test environments on the EvalAI server.
+*   **CLI Support:** The `evalai-cli` extends the EvalAI web application's functionality to your command line, making the platform more accessible.
+*   **Portability & Scalability:**  Built with scalability in mind, EvalAI uses open-source technologies like Docker, Django, Node.js, and PostgreSQL.
+*   **Faster Evaluation:**  Optimized with worker node warm-up and dataset chunking for significantly reduced evaluation times.
 
 ## Goal
 
-EvalAI aims to be the central platform for hosting, participating in, and collaborating on AI challenges worldwide, accelerating progress in the field.
+EvalAI aims to be a centralized platform for hosting, participating in, and collaborating on AI challenges globally, accelerating progress in the field of AI benchmarking.
 
 ## Installation
 
-Get up and running with EvalAI using Docker:
+Getting started with EvalAI is simple using Docker:
 
-1.  **Install Docker and Docker Compose:** Follow the instructions for your operating system ([Docker Install](https://docs.docker.com/install/), [Docker Compose Install](https://docs.docker.com/compose/install/)).
-2.  **Clone the Repository:**
+1.  **Install Docker and Docker Compose:** Ensure you have [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/) installed on your machine.
+2.  **Get the Source Code:** Clone the EvalAI repository:
 
     ```bash
     git clone https://github.com/Cloud-CV/EvalAI.git evalai && cd evalai
     ```
-3.  **Build and Run:**
+3.  **Build and Run Containers:** Start the required services:
 
     ```bash
     docker-compose up --build
     ```
 
-    *   For worker services: `docker-compose --profile worker up --build`
-    *   For statsd-exporter: `docker-compose --profile statsd up --build`
-    *   For both optional services: `docker-compose --profile worker --profile statsd up --build`
-4.  **Access EvalAI:** Open your web browser and go to <http://127.0.0.1:8888>.
+    For worker services, use:
 
-    *   **Superuser:** `admin` / `password`
-    *   **Host User:** `host` / `password`
-    *   **Participant User:** `participant` / `password`
+    ```bash
+    docker-compose --profile worker up --build
+    ```
+    For statsd-exporter, use:
+    ```bash
+    docker-compose --profile statsd up --build
+    ```
 
-    If you encounter any issues, consult the [common errors documentation](https://evalai.readthedocs.io/en/latest/faq(developers).html#common-errors-during-installation).
+    To start both optional services, use:
 
-## Documentation
+    ```bash
+    docker-compose --profile worker --profile statsd up --build
+    ```
+4.  **Access EvalAI:** Open your web browser and go to `http://127.0.0.1:8888`.
 
-*   For EvalAI Documentation setup, refer to the docs specific setup instructions in `docs/README.md`.
+    Use the following default user accounts:
+
+    *   **SUPERUSER:** username: `admin`, password: `password`
+    *   **HOST USER:** username: `host`, password: `password`
+    *   **PARTICIPANT USER:** username: `participant`, password: `password`
+5.  **Troubleshooting:** Consult the [common errors during installation](https://evalai.readthedocs.io/en/latest/faq(developers).html#common-errors-during-installation) page for assistance.
+
+## Documentation Setup
+
+If you are looking to contribute to the EvalAI Documentation, setup the docs builder locally by referring to the `docs/README.md`.
 
 ## Citing EvalAI
 
-If you use EvalAI for hosting challenges, please cite this technical report:
+If you are using EvalAI for hosting challenges, please cite the following technical report:
 
 ```
 @article{EvalAI,
@@ -66,28 +77,19 @@ If you use EvalAI for hosting challenges, please cite this technical report:
     volume  =  arXiv:1902.03570
 }
 ```
-
 <p>
-  <a href="http://learningsys.org/sosp19/assets/papers/23_CameraReadySubmission_EvalAI_SOSP_2019%20(8)%20(1).pdf" target="_blank"><img src="docs/source/_static/img/evalai-paper.jpg" alt="EvalAI Paper"/></a>
+    <a href="http://learningsys.org/sosp19/assets/papers/23_CameraReadySubmission_EvalAI_SOSP_2019%20(8)%20(1).pdf" target="_blank"><img src="docs/source/_static/img/evalai-paper.jpg"/></a>
 </p>
 
 ## Team
 
-EvalAI is maintained by Rishabh Jain, Gunjan Chhablani, and Dhruv Batra.
-
-### Past Contributors
-
-Deshraj Yadav, Ram Ramrakhya, Akash Jain, Taranjeet Singh, Shiv Baran Singh, Harsh Agarwal, Prithvijit Chattopadhyay, and Devi Parikh.
+EvalAI is maintained by Rishabh Jain, Gunjan Chhablani and Dhruv Batra.
 
 ## Contribution Guidelines
 
-Interested in contributing?  Review the [contribution guidelines](https://github.com/Cloud-CV/EvalAI/blob/master/.github/CONTRIBUTING.md).
+Learn how to contribute to EvalAI by following the [contribution guidelines](https://github.com/Cloud-CV/EvalAI/blob/master/.github/CONTRIBUTING.md).
 
 ## Contributors
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+[//]: contributor-faces
+<a href="https://github.com/RishabhJain2018" target="_blank"><img src="https://avatars.githubusercontent.com/u/12206047?v=4" title="RishabhJain2018" width="50" height="50"></a> <a href="https://github.com/deshraj" target="_blank"><img src="https://avatars.githubusercontent.com/u/2945708?v=4" title="deshraj" width="50" height="50"></a> <a href="https://github.com/Ram81" target="_blank"><img src="https://avatars.githubusercontent.com/u/16323427?v=4" title="Ram81" width="50" height="50"></a> <a href="https://github.com/gchhablani" target="_blank"><img src="https://avatars.githubusercontent.com/u/29076344?v=4" title="gchhablani" width="50" height="50"></a> <a href="https://github.com/taranjeet" target="_blank"><img src="https://avatars.githubusercontent.com/u/4302268?v=4" title="taranjeet" width="50" height="50"></a> <a href="https://github.com/Sanji515" target="_blank"><img src="https://avatars.githubusercontent.com/u/32524438?v=4" title="Sanji515" width="50" height="50"></a> <a href="https://github.com/aka-jain" target="_blank"><img src="https://avatars.githubusercontent.com/u/11537940?v=4" title="aka-jain" width="50" height="50"></a> <a href="https://github.com/gautamjajoo" target="_blank"><img src="https://avatars.githubusercontent.com/u/24366008?v=4" title="gautamjajoo" width="50" height="50"></a> <a href="https://github.com/Kajol-Kumari" target="_blank"><img src="https://avatars.githubusercontent.com/u/44888949?v=4" title="Kajol-Kumari" width="50" height="50"></a> <a href="https://github.com/Suryansh5545" target="_blank"><img src="https://avatars.githubusercontent.com/u/34577232?v=4" title="Suryansh5545" width="50" height="50"></a> <a href="https://github.com/Ayukha" target="_blank"><img src="https://avatars.githubusercontent.com/u/19167324?v=4" title="Ayukha" width="50" height="50"></a> <a href="https://github.com/spyshiv" target="_blank"><img src="https://avatars.githubusercontent.com/u/7015220?v=4" title="spyshiv" width="50" height="50"></a> <a href="https://github.com/Arun-Jain" target="_blank"><img src="https://avatars.githubusercontent.com/u/16155501?v=4" title="Arun-Jain" width="50" height="50"></a> <a href="https://github.com/krtkvrm" target="_blank"><img src="https://avatars.githubusercontent.com/u/3920286?v=4" title="krtkvrm" width="50" height="50"></a> <a href="https://github.com/KhalidRmb" target="_blank"><img src="https://avatars.githubusercontent.com/u/31621523?v=4" title="KhalidRmb" width="50" height="50"></a> <a href="https://github.com/guyandtheworld" target="_blank"><img src="https://avatars.githubusercontent.com/u/20072816?v=4" title="guyandtheworld" width="50" height="50"></a> <a href="https://github.com/burnerlee" target="_blank"><img src="https://avatars.githubusercontent.com/u/55936223?v=4" title="burnerlee" width="50" height="50"></a> <a href="https://github.com/muddlebee" target="_blank"><img src="https://avatars.githubusercontent.com/u/8139783?v=4" title="muddlebee" width="50" height="50"></a> <a href="https://github.com/Akshat453" target="_blank"><img src="https://avatars.githubusercontent.com/u/158801446?v=4" title="Akshat453" width="50" height="50"></a> <a href="https://github.com/AyushR1" target="_blank"><img src="https://avatars.githubusercontent.com/u/22369791?v=4" title="AyushR1" width="50" height="50"></a> <a href="https://github.com/sanketbansal" target="_blank"><img src="https://avatars.githubusercontent.com/u/17106489?v=4" title="sanketbansal" width="50" height="50"></a> <a href="https://github.com/savish28" target="_blank"><img src="https://avatars.githubusercontent.com/u/32800267?v=4" title="savish28" width="50" height="50"></a> <a href="https://github.com/aditi-dsi" target="_blank"><img src="https://avatars.githubusercontent.com/u/123075271?v=4" title="aditi-dsi" width="50" height="50"></a> <a href="https://github.com/Alabhya268" target="_blank"><img src="https://avatars.githubusercontent.com/u/57143358?v=4" title="Alabhya268" width="50" height="50"></a> <a href="https://github.com/dependabot[bot]" target="_blank"><img src="https://avatars.githubusercontent.com/in/29110?v=4" title="dependabot[bot]" width="50" height="50"></a> <a href="https://github.com/live-wire" target="_blank"><img src="https://avatars.githubusercontent.com/u/6399428?v=4" title="live-wire" width="50" height="50"></a> <a href="https://github.com/gauthamzz" target="_blank"><img src="https://avatars.githubusercontent.com/u/12110844?v=4" title="gauthamzz" width="50" height="50"></a> <a href="https://github.com/HargovindArora" target="_blank"><img src="https://avatars.githubusercontent.com/u/22341493?v=4" title="HargovindArora" width="50" height="50"></a> <a href="https://github.com/dexter1691" target="_blank"><img src="https://avatars.githubusercontent.com/u/2039548?v=4" title="dexter1691" width="50" height="50"></a> <a href="https://github.com/akanshajain231999" target="_blank"><img src="https://avatars.githubusercontent.com/u/48309147?v=4" title="akanshajain231999" width="50" height="50"></a> <a href="https://github.com/harshithdwivedi" target="_blank"><img src="https://avatars.githubusercontent.com/u/47669588?v=4" title="harshithdwivedi" width="50" height="50"></a> <a href="https://github.com/nikochiko" target="_blank"><img src="https://avatars.githubusercontent.com/u/37668193?v=4" title="nikochiko" width="50" height="50"></a> <a href="https://github.com/Zahed-Riyaz" target="_blank"><img src="https://avatars.githubusercontent.com/u/188900716?v=4" title="Zahed-Riyaz" width="50" height="50"></a> <a href="https://github.com/jayaike" target="_blank"><img src="https://avatars.githubusercontent.com/u/35180217?v=4" title="jayaike" width="50" height="50"></a> <a href="https://github.com/hkmatsumoto" target="_blank"><img src="https://avatars.githubusercontent.com/u/57856193?v=4" title="hkmatsumoto" width="50" height="50"></a> <a href="https://github.com/TheArchitect19" target="_blank"><img src="https://avatars.githubusercontent.com/u/91387353?v=4" title="TheArchitect19" width="50" height="50"></a> <a href="https://github.com/matthew-so" target="_blank"><img src="https://avatars.githubusercontent.com/u/42504035?v=4" title="matthew-so" width="50" height="50"></a> <a href="https://github.com/xamfy" target="_blank"><img src="https://avatars.githubusercontent.com/u/19357995?v=4" title="xamfy" width="50" height="50"></a> <a href="https://github.com/ShauryaAg" target="_blank"><img src="https://avatars.githubusercontent.com/u/31778302?v=4" title="ShauryaAg" width="50" height="50"></a> <a href="https://github.com/DXGatech" target="_blank"><img src="https://avatars.githubusercontent.com/u/28953079?v=4" title="DXGatech" width="50" height="50"></a> <a href="https://github.com/drepram" target="_blank"><img src="https://avatars.githubusercontent.com/u/34530026?v=4" title="drepram" width="50" height="50"></a> <a href="https://github.com/yadavankit" target="_blank"><img src="https://avatars.githubusercontent.com/u/8945824?v=4" title="yadavankit" width="50" height="50"></a> <a href="https://github.com/sachinmukherjee" target="_blank"><img src="https://avatars.githubusercontent.com/u/19318218?v=4" title="sachinmukherjee" width="50" height="50"></a> <a href="https://github.com/kurianbenoy" target="_blank"><img src="https://avatars.githubusercontent.com/u/24592806?v=4" title="kurianbenoy" width="50" height="50"></a> <a href="https://github.com/mayank-agarwal-96" target="_blank"><img src="https://avatars.githubusercontent.com/u/11095642?v=4" title="mayank-agarwal-96" width="50" height="50"></a> <a href="https://github.com/codervivek" target="_blank"><img src="https://avatars.githubusercontent.com/u/26835119?v=4" title="codervivek" width="50" height="50"></a> <a href="https://github.com/yashdusing" target="_blank"><img src="https://avatars.githubusercontent.com/u/19976688?v=4" title="yashdusing" width="50" height="50"></a> <a href="https://github.com/jayantsa" target="_blank"><img src="https://avatars.githubusercontent.com/u/10354780?v=4" title="jayantsa" width="50" height="50"></a> <a href="https://github.com/vinceli1004" target="_blank"><img src="https://avatars.githubusercontent.com/u/39491501?v=4" title="vinceli1004" width="50" height="50"></a> <a href="https://github.com/pavan-simplr" target="_blank"><img src="https://avatars.githubusercontent.com/u/66268853?v=4" title="pavan-simplr" width="50" height="50"></a> <a href="https://github.com/varunagrawal" target="_blank"><img src="https://avatars.githubusercontent.com/u/975964?v=4" title="varunagrawal" width="50" height="50"></a> <a href="https://github.com/ParthS007" target="_blank"><img src="https://avatars.githubusercontent.com/u/24358501?v=4" title="ParthS007" width="50" height="50"></a> <a href="https://github.com/tendstofortytwo" target="_blank"><img src="https://avatars.githubusercontent.com/u/5107795?v=4" title="tendstofortytwo" width="50" height="50"></a> <a href="https://github.com/geekayush" target="_blank"><img src="https://avatars.githubusercontent.com/u/22499864?v=4" title="geekayush" width="50" height="50"></a> <a href="https://github.com/itaditya" target="_blank"><img src="https://avatars.githubusercontent.com/u/15871340?v=4" title="itaditya" width="50" height="50"></a> <a href="https://github.com/lazyperson1020" target="_blank"><img src="https://avatars.githubusercontent.com/u/117618223?v=4" title="lazyperson1020" width="50" height="50"></a> <a href="https://github.com/dhruvbatra" target="_blank"><img src="https://avatars.githubusercontent.com/u/2941091?v=4" title="dhruvbatra" width="50" height="50"></a> <a href="https://github.com/viditjain08" target="_blank"><img src="https://avatars.githubusercontent.com/u/5248993?v=4" title="viditjain08" width="50" height="50"></a> <a href="https://github.com/souravsingh" target="_blank"><img src="https://avatars.githubusercontent.com/u/4314261?v=4" title="souravsingh" width="50" height="50"></a> <a href="https://github.com/Curious72" target="_blank"><img src="https://avatars.githubusercontent.com/u/8409274?v=4" title="Curious72" width="50" height="50"></a> <a href="https://github.com/sarthak212" target="_blank"><img src="https://avatars.githubusercontent.com/u/33999269?v=4" title="sarthak212" width="50" height="50"></a> <a href="https://github.com/priyapahwa" target="_blank"><img src="https://avatars.githubusercontent.com/u/77075449?v=4" title="priyapahwa" width="50" height="50"></a> <a href="https://github.com/parth-verma" target="_blank"><img src="https://avatars.githubusercontent.com/u/22412980?v=4" title="parth-verma" width="50" height="50"></a> <a href="https://github.com/nagpalm7" target="_blank"><img src="https://avatars.githubusercontent.com/u/32512296?v=4" title="nagpalm7" width="50" height="50"></a> <a href="https://github.com/tawAsh1" target="_blank"><img src="https://avatars.githubusercontent.com/u/7100187?v=4" title="tawAsh1" width="50" height="50"></a> <a href="https://github.com/cwiggs" target="_blank"><img src="https://avatars.githubusercontent.com/u/5607419?v=4" title="cwiggs" width="50" height="50"></a> <a href="https://github.com/AnshulBasia" target="_blank"><img src="https://avatars.githubusercontent.com/u/12856392?v=4" title="AnshulBasia" width="50" height="50"></a> <a href="https://github.com/afif-fahim" target="_blank"><img src="https://avatars.githubusercontent.com/u/33936462?v=4" title="afif-fahim" width="50" height="50"></a> <a href="https://github.com/aayusharora" target="_blank"><img src="https://avatars.githubusercontent.com/u/12194719?v=4" title="aayusharora" width="50" height="50"></a> <a href="https://github.com/sanyamdogra" target="_blank"><img src="https://avatars.githubusercontent.com/u/33497630?v=4" title="sanyamdogra" width="50" height="50"></a> <a href="https://github.com/sayamkanwar" target="_blank"><img src="https://avatars.githubusercontent.com/u/10847009?v=4" title="sayamkanwar" width="50" height="50"></a> <a href="https://github.com/shakeelsamsu" target="_blank"><img src="https://avatars.githubusercontent.com/u/16440459?v=4" title="shakeelsamsu" width="50" height="50"></a> <a href="https://github.com/shiv6146" target="_blank"><img src="https://avatars.githubusercontent.com/u/5592146?v=4" title="shiv6146" width="50" height="50"></a> <a href="https://github.com/skbly7" target="_blank"><img src="https://avatars.githubusercontent.com/u/3490586?v=4" title="skbly7" width="50" height="50"></a> <a href="https://github.com/tashachin" target="_blank"><img src="https://avatars.githubusercontent.com/u/27714199?v=4" title="tashachin" width="50" height="50"></a> <a href="https://github.com/gitter-badger" target="_blank"><img src="https://avatars.githubusercontent.com/u/8518239?v=4" title="gitter-badger" width="50" height="50"></a> <a href="https://github.com/TriveniBhat" target="_blank"><img src="https://avatars.githubusercontent.com/u/49990128?v=4" title="TriveniBhat" width="50" height="50"></a> <a href="https://github.com/virajprabhu" target="_blank"><img src="https://avatars.githubusercontent.com/u/8670301?v=4" title="virajprabhu" width="50" height="50"></a> <a href="https://github.com/vladan-jovicic" target="_blank"><img src="https://avatars.githubusercontent.com/u/8584694?v=4" title="vladan-jovicic" width="50" height="50"></a> <a href="https://github.com/Samyak-Jayaram" target="_blank"><img src="https://avatars.githubusercontent.com/u/120107046?v=4" title="Samyak-Jayaram" width="50" height="50"></a> <a href="https://github.com/rlee80" target="_blank"><img src="https://avatars.githubusercontent.com/u/46196529?v=4" title="rlee80" width="50" height="50"></a> <a href="https://github.com/Ru28" target="_blank"><img src="https://avatars.githubusercontent.com/u/54779977?v=4" title="Ru28" width="50" height="50"></a> <a href="https://github.com/rshrc" target="_blank"><img src="https://avatars.githubusercontent.com/u/28453217?v=4" title="rshrc" width="50" height="50"></a> <a href="https://github.com/Rishav09" target="_blank"><img src="https://avatars.githubusercontent.com/u/11032253?v=4" title="Rishav09" width="50" height="50"></a> <a href="https://github.com/pushkalkatara" target="_blank"><img src="https://avatars.githubusercontent.com/u/21266230?v=4" title="pushkalkatara" width="50" height="50"></a> <a href="https://github.com/PrasadCodesML" target="_blank"><img src="https://avatars.githubusercontent.com/u/113229283?v=4" title="PrasadCodesML" width="50" height="50"></a> <a href="https://github.com/prajwalgatti" target="_blank"><img src="https://avatars.githubusercontent.com/u/31077225?v=4" title="prajwalgatti" width="50" height="50"></a> <a href="https://github.com/jordanjfang" target="_blank"><img src="https://avatars.githubusercontent.com/u/19521127?v=4" title="jordanjfang" width="50" height="50"></a> <a href="https://github.com/GauravJain98" target="_blank"><img src="https://avatars.githubusercontent.com/u/19913130?v=4" title="GauravJain98" width="50" height="50"></a> <a href="https://github.com/yaskh" target="_blank"><img src="https://avatars.githubusercontent.com/u/41568177?v=4" title="yaskh" width="50" height="50"></a> <a href="https://github.com/WncFht" target="_blank"><img src="https://avatars.githubusercontent.com/u/63136734?v=4" title="WncFht" width="50" height="50"></a> <a href="https://github.com/weakit" target="_blank"><img src="https://avatars.githubusercontent.com/u/34541656?v=4" title="weakit" width="50" height="50"></a> <a href="https://github.com/thanos-pakou" target="_blank"><img src="https://avatars.githubusercontent.com/u/32770912?v=4" title="thanos-pakou" width="50" height="50"></a> <a href="https://github.com/rohitjha941" target="_blank"><img src="https://avatars.githubusercontent.com/u/33960527?v=4" title="rohitjha941" width="50" height="50"></a> <a href="https://github.com/praisejabraham" target="_blank"><img src="https://avatars.githubusercontent.com/u/31045180?v=4" title="praisejabraham" width="50" height="50"></a> <a href="https://github.com/newbazz" target="_blank"><img src="https://avatars.githubusercontent.com/u/25884863?v=4" title="newbazz" width="50" height="50"></a> <a href="https://github.com/mrMarce" target="_blank"><img src="https://avatars.githubusercontent.com/u/16017319?v=4" title="mrMarce" width="50" height="50"></a> <a href="https://github.com/lenixlobo" target="_blank"><img src="https://avatars.githubusercontent.com/u/20311706?v=4" title="lenixlobo" width="50" height="50"></a> <a href="https://github.com/jakecarr" target="_blank"><img src="https://avatars.githubusercontent.com/u/5979143?v=4" title="jakecarr" width="50" height="50"></a> <a href="https://github.com/ilyasd3" target="_blank"><img src="https://avatars.githubusercontent.com/u/77646344?v=4" title="ilyasd3" width="50" height="50"></a>
