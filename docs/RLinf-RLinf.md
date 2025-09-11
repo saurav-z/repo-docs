@@ -3,50 +3,53 @@
 </div>
 
 <div align="center">
-<a href="https://huggingface.co/RLinf"><img src="https://img.shields.io/badge/HuggingFace-yellow?logo=huggingface&logoColor=white" alt="Hugging Face"></a>
-<a href="https://rlinf.readthedocs.io/en/latest/"><img src="https://img.shields.io/badge/Documentation-Purple?color=8A2BE2&logo=readthedocs"></a>
-<a href="https://deepwiki.com/RLinf/RLinf"><img src="https://img.shields.io/badge/Ask%20DeepWiki-1DA1F2?logo=databricks&logoColor=white&color=00ADEF" alt="Ask DeepWiki"></a>
-<a href="https://github.com/RLinf/misc/blob/main/pic/wechat.jpeg?raw=true"><img src="https://img.shields.io/badge/微信-green?logo=wechat&amp"></a>
+  <a href="https://huggingface.co/RLinf"><img src="https://img.shields.io/badge/HuggingFace-yellow?logo=huggingface&logoColor=white" alt="Hugging Face"></a>
+  <a href="https://rlinf.readthedocs.io/en/latest/"><img src="https://img.shields.io/badge/Documentation-Purple?color=8A2BE2&logo=readthedocs"></a>
+  <a href="https://deepwiki.com/RLinf/RLinf"><img src="https://img.shields.io/badge/Ask%20DeepWiki-1DA1F2?logo=databricks&logoColor=white&color=00ADEF" alt="Ask DeepWiki"></a>
+  <a href="https://github.com/RLinf/misc/blob/main/pic/wechat.jpeg?raw=true"><img src="https://img.shields.io/badge/微信-green?logo=wechat&amp"></a>
 </div>
 
-# RLinf: The Open-Source Reinforcement Learning Infrastructure for Agentic AI
+<h1 align="center">
+  RLinf: Revolutionizing Reinforcement Learning for Agentic AI
+</h1>
 
-**RLinf is a cutting-edge, open-source infrastructure designed to revolutionize post-training of foundation models through reinforcement learning, boosting performance and scalability for your AI projects.**  
+RLinf is a cutting-edge open-source infrastructure designed to accelerate the development of agentic AI through reinforcement learning.  This flexible and scalable framework, with "inf" standing for Infrastructure and Infinite possibilities, provides a robust foundation for training and deploying advanced AI agents.  **Check out the original repo here: [RLinf on GitHub](https://github.com/RLinf/RLinf).**
 
-[View the original repository on GitHub](https://github.com/RLinf/RLinf)
+## Key Features of RLinf:
 
-## Key Features & Benefits
-
-*   **Macro-to-Micro Flow (M2Flow) Paradigm:** Decouples logical workflow construction from physical execution, enabling flexible and efficient training.
-*   **Flexible Execution Modes:** Choose the best configuration for your needs:
-    *   Collocated Mode: Shares all GPUs across workers.
-    *   Disaggregated Mode: Enables fine-grained pipelining.
-    *   Hybrid Mode: Combines collocated and disaggregated modes for optimal performance.
-*   **Automatic Scheduling:**  Dynamically selects the most suitable execution mode based on your workload, eliminating the need for manual resource allocation.
-*   **Embodied Agent Support:** Integrates with popular Vision-Language-Action (VLA) models and simulators:
-    *   Supports OpenVLA, OpenVLA-OFT, and π₀ models.
-    *   Compatible with simulators like ManiSkill3 and LIBERO.
+*   **Macro-to-Micro Flow (M2Flow):** A novel paradigm that decouples logical workflow construction from physical communication and scheduling for improved efficiency and programmability.
+*   **Flexible Execution Modes:**
+    *   **Collocated mode:** Shares all GPUs for simplicity.
+    *   **Disaggregated mode:** Enables fine-grained pipelining.
+    *   **Hybrid mode:** Combines both collocated and disaggregated modes for optimal performance.
+*   **Auto-scheduling Strategy:** Automatically selects the best execution mode based on workload, eliminating manual resource allocation.
+*   **Embodied Agent Support:**
+    *   Fast adaptation for models like OpenVLA, OpenVLA-OFT, and π₀.
+    *   Supports mainstream CPU & GPU-based simulators like ManiSkill3 and LIBERO.
     *   Enables RL fine-tuning of the π₀ model family.
-*   **High-Performance Training:**
-    *   Hybrid mode with fine-grained pipelining boosts throughput by over 120%.
-    *   Automatic Online Scaling improves efficiency by 20-40% while preserving RL algorithm on-policy behavior.
-*   **Versatile Integration:**
-    *   **FSDP + Hugging Face:** Perfect for rapid prototyping and adapting to new models and algorithms.
-    *   **Megatron + SGLang:** Optimized for large-scale training, delivering maximum efficiency for expert users with demanding workloads.
-*   **Adaptive Communication:** Utilizes an asynchronous communication channel for efficient data transfer.
-*   **Built-in RL Methods:**  Supports popular reinforcement learning algorithms including PPO, GRPO, DAPO, and Reinforce++.
+*   **High Performance:**
+    *   Hybrid mode with fine-grained pipelining yields a **120%+** throughput improvement.
+    *   Automatic Online Scaling Strategy dynamically adjusts resources, improving efficiency by 20–40%.
+*   **User-Friendly & Adaptable:**
+    *   Multiple Backend Integrations: FSDP + Hugging Face for rapid prototyping and Megatron + SGLang for large-scale training.
+    *   Adaptive communication through an asynchronous communication channel.
+    *   Built-in support for popular RL methods (PPO, GRPO, DAPO, Reinforce++, and more).
+
+## What's New
+
+*   **RLinf is open-sourced!** The formal v0.1 will be released soon.
+*   The paper [RLinf: Flexible and Efficient Large-scale Reinforcement Learning via Macro-to-Micro Flow Transformation]() will also be released accordingly.
+*   (2025/08)
 
 ## Roadmap
 
 ### System-Level Enhancements
-
 *   [ ] Support for heterogeneous GPUs
 *   [ ] Support for asynchronous pipeline execution
 *   [ ] Support for Mixture of Experts (MoE)
 *   [ ] Support for vLLM inference backend
 
 ### Application-Level Extensions
-
 *   [ ] Support for Vision-Language Models (VLMs) training
 *   [ ] Support for deep searcher agent training
 *   [ ] Support for multi-agent training
@@ -57,7 +60,7 @@
 
 ## Getting Started
 
-Comprehensive documentation and tutorials are available to get you started quickly: [RLinf Documentation](https://rlinf.readthedocs.io/en/latest/)
+Comprehensive documentation is available [**Here**](https://rlinf.readthedocs.io/en/latest/).
 
 **Quickstart Guides:**
 
@@ -105,11 +108,11 @@ Comprehensive documentation and tutorials are available to get you started quick
 
 ## Contribution Guidelines
 
-We welcome contributions!  Please review the [contribution guide](https://rlinf.readthedocs.io/en/latest/index.html#contribution-guidelines) before contributing.
+Contributions to RLinf are welcome! Please review the [contribution guide](https://rlinf.readthedocs.io/en/latest/index.html#contribution-guidelines) before submitting.
 
 ## Citation and Acknowledgement
 
-If you find **RLinf** useful, please cite the GitHub repository:
+If you use **RLinf** in your research, please cite the GitHub repository:
 
 ```bibtex
 @misc{RLinf_repo,
@@ -123,22 +126,12 @@ If you find **RLinf** useful, please cite the GitHub repository:
 **Paper**: A full paper describing RLinf will be released by **September 20, 2025**. We will update this section with the official citation and BibTeX when they become available.
 
 **Acknowledgements**
-RLinf has been inspired by, and benefits from, the ideas and tooling of the broader open-source community.
-In particular, we would like to thank the teams and contributors behind VeRL, AReaL, Megatron-LM, SGLang, and PyTorch Fully Sharded Data Parallel (FSDP), and if we have inadvertently missed your project or contribution, please open an issue or a pull request so we can properly credit you.
+
+RLinf draws inspiration and benefits from the open-source community.  We appreciate the teams and contributors behind VeRL, AReaL, Megatron-LM, SGLang, and PyTorch Fully Sharded Data Parallel (FSDP).  If we've overlooked your contribution, please create an issue or pull request.
 
 **Contact:**
-We welcome applications from Postdocs, PhD/Master's students, and interns. Join us in shaping the future of RL infrastructure and embodied AI!
-- Chao Yu: zoeyuchao@gmail.com
-- Yu Wang: yu-wang@tsinghua.edu.cn
-```
-Key improvements and optimizations:
 
-*   **SEO-Friendly Headings:** Uses clear, keyword-rich headings like "Key Features & Benefits" and "Getting Started."
-*   **Concise Hook:** The one-sentence hook is placed at the beginning to grab attention and succinctly explain the project's purpose.
-*   **Bulleted Key Features:** Uses bullet points for readability and easy scanning.  Key features are highlighted.
-*   **Keyword Optimization:**  Includes keywords such as "Reinforcement Learning," "Agentic AI," "Foundation Models," "Open Source," and names of models and frameworks to improve search visibility.
-*   **Clear Formatting:**  Improved formatting for readability, including bolding and consistent use of lists.
-*   **Call to Action:** Encourages the user to view the original repository.
-*   **Complete and Organized:** Presents the original README's information in a more organized, scannable, and informative way.
-*   **Roadmap Inclusion:** Includes the roadmap section, which gives a sense of future development.
-*   **Contact Information:** Includes Contact information at the end.
+We encourage applications from Postdocs, PhD/Master's students, and interns.  Join us in shaping the future of RL infrastructure and embodied AI!
+
+*   Chao Yu: zoeyuchao@gmail.com
+*   Yu Wang: yu-wang@tsinghua.edu.cn

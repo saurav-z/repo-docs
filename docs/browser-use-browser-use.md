@@ -4,7 +4,7 @@
   <img alt="Shows a black Browser Use Logo in light color mode and a white one in dark color mode." src="./static/browser-use.png"  width="full">
 </picture>
 
-<h1 align="center">Browser Use: Automate Your Browser with AI 🤖</h1>
+<h1 align="center">Browser Use: Unleash AI to Automate Your Web</h1>
 
 [![GitHub stars](https://img.shields.io/github/stars/gregpr07/browser-use?style=social)](https://github.com/gregpr07/browser-use/stargazers)
 [![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)
@@ -24,58 +24,81 @@
 [Русский](https://www.readme-i18n.com/browser-use/browser-use?lang=ru) | 
 [中文](https://www.readme-i18n.com/browser-use/browser-use?lang=zh)
 
-**Browser Use empowers you to control your web browser with natural language, unlocking powerful automation possibilities.**  [Learn more about Browser Use](https://github.com/browser-use/browser-use).
+✨ **Browser Use empowers you to control your browser with simple prompts, automating tasks and workflows with the power of AI.**  Explore the future of web automation!  See the original repository [here](https://github.com/browser-use/browser-use).
+
+🌤️  Skip the setup and try our **[cloud](https://cloud.browser-use.com)** for faster, scalable, stealth-enabled browser automation!
 
 ## Key Features
 
-*   **AI-Powered Automation:** Control your browser with simple text commands.
-*   **Easy Setup:** Get started quickly with a simple Python installation.
-*   **Cloud Integration:** Utilize the cloud platform for faster, scalable automation.
-*   **Model Context Protocol (MCP) Support:** Integrates with Claude Desktop and other MCP-compatible clients.
-*   **Extensive Examples:** Explore a range of use cases from shopping to job applications.
-*   **Open Source and Community Driven:** Active development with community contributions welcomed.
+*   **AI-Powered Automation:** Control your browser using natural language prompts.
+*   **Versatile Use Cases:** Automate tasks like web scraping, form filling, and more.
+*   **Easy Integration:** Integrate with popular tools and platforms.
+*   **Cloud-Ready:** Access a scalable cloud solution for browser automation.
+*   **Open Source:** Contribute to an open-source project.
+
+## 🎉 OSS Twitter Hackathon
+
+We just hit **69,000 GitHub ⭐**!
+To celebrate, we're launching **#nicehack69** — a Twitter-first hackathon with a **$6,900 prize pool**. Dream big and show us the future of browser-use agents that go beyond demos!
+
+**Deadline: September 10, 2025**
+
+**[🚀 Join the hackathon →](https://github.com/browser-use/nicehack69)**
+
+<div align="center">
+<a href="https://github.com/browser-use/nicehack69">
+<img src="./static/NiceHack69.png" alt="NiceHack69 Hackathon" width="600"/>
+</a>
+</div>
+
+> **🚀 Use the latest version!** 
+> 
+> We ship every day improvements for **speed**, **accuracy**, and **UX**. 
+> ```bash
+> pip install --upgrade browser-use
+> ```
 
 ## Quickstart
 
-Install with pip:
+Get started automating your browser in minutes.
 
-```bash
-pip install browser-use
-```
+**Prerequisites:** Python 3.11+
 
-Or, install Chromium:
+1.  **Install Browser Use:**
+    ```bash
+    pip install browser-use
+    ```
 
-```bash
-uvx playwright install chromium --with-deps --no-shell
-```
+2.  **(Optional) Install Chromium:** If you don't have Chrome or Chromium, install Chromium using Playwright:
+    ```bash
+    uvx playwright install chromium --with-deps --no-shell
+    ```
 
-Run a basic agent:
+3.  **Create an Agent:**
+    ```python
+    import asyncio
+    from dotenv import load_dotenv
+    load_dotenv()
+    from browser_use import Agent, ChatOpenAI
 
-```python
-import asyncio
-from dotenv import load_dotenv
-load_dotenv()
-from browser_use import Agent, ChatOpenAI
+    async def main():
+        agent = Agent(
+            task="Find the number of stars of the browser-use repo",
+            llm=ChatOpenAI(model="gpt-4.1-mini"),
+        )
+        await agent.run()
 
-async def main():
-    agent = Agent(
-        task="Find the number of stars of the browser-use repo",
-        llm=ChatOpenAI(model="gpt-4.1-mini"),
-    )
-    await agent.run()
+    asyncio.run(main())
+    ```
 
-asyncio.run(main())
-```
+4.  **Set API Keys:** Add your API keys (e.g., OpenAI) to a `.env` file:
+    ```bash
+    OPENAI_API_KEY=YOUR_API_KEY
+    ```
 
-Remember to add your API keys to your `.env` file:
+5.  **Explore the [Documentation](https://docs.browser-use.com):** Learn about advanced configurations, models, and more.
 
-```bash
-OPENAI_API_KEY=
-```
-
-For detailed configuration, explore the [documentation 📕](https://docs.browser-use.com).
-
-## Demos & Use Cases
+## Demos - See AI in Action
 
 <br/><br/>
 
@@ -109,9 +132,11 @@ https://github.com/user-attachments/assets/de73ee39-432c-4b97-b4e8-939fd7f323b3
 
 <br/><br/>
 
-## Cloud Platform
+## More Examples & Resources
 
-<p> 🌤️ Want to skip the setup? Use our <b>[cloud](https://cloud.browser-use.com)</b> for faster, scalable, stealth-enabled browser automation! </p>
+*   Explore more examples in the [examples](examples) folder.
+*   Join the [Discord](https://link.browser-use.com/discord) to share your projects.
+*   Get inspired by our [`awesome-prompts`](https://github.com/browser-use/awesome-prompts) repo.
 
 ## MCP Integration
 
@@ -135,7 +160,11 @@ Add browser-use to your Claude Desktop configuration:
 }
 ```
 
+This gives Claude Desktop access to browser automation tools for web scraping, form filling, and more.
+
 ### Connect External MCP Servers to Browser-Use Agent
+
+Browser-use agents can connect to multiple external MCP servers to extend their capabilities:
 
 ```python
 import asyncio
@@ -186,7 +215,11 @@ asyncio.run(main())
 
 See the [MCP documentation](https://docs.browser-use.com/customize/mcp-server) for more details.
 
-## Roadmap
+## Vision: The Future of Web Interaction
+
+Tell your computer what to do, and it gets it done.
+
+## Roadmap - What's Next?
 
 ### Agent
 
@@ -210,58 +243,35 @@ See the [MCP documentation](https://docs.browser-use.com/customize/mcp-server) f
 
 *   [ ] Human work is sequential. The real power of a browser agent comes into reality if we can parallelize similar tasks. For example, if you want to find contact information for 100 companies, this can all be done in parallel and reported back to a main agent, which processes the results and kicks off parallel subtasks again.
 
-## 🎉 OSS Twitter Hackathon
-
-We just hit **69,000 GitHub ⭐**!
-To celebrate, we're launching **#nicehack69** — a Twitter-first hackathon with a **$6,900 prize pool**. Dream big and show us the future of browser-use agents that go beyond demos!
-
-**Deadline: September 10, 2025**
-
-**[🚀 Join the hackathon →](https://github.com/browser-use/nicehack69)**
-
-<div align="center">
-<a href="https://github.com/browser-use/nicehack69">
-<img src="./static/NiceHack69.png" alt="NiceHack69 Hackathon" width="600"/>
-</a>
-</div>
-
-
-> **🚀 Use the latest version!** 
-> 
-> We ship every day improvements for **speed**, **accuracy**, and **UX**. 
-> ```bash
-> pip install --upgrade browser-use
-> ```
-
-
 ## Contributing
 
-We welcome contributions! Please open issues for bugs or feature requests. Contribute to the docs in the `/docs` folder.
+We welcome contributions!
 
-## 🧪 How to make your agents robust?
+*   Open issues for bugs or feature requests.
+*   Contribute to the docs in the `/docs` folder.
 
-We offer to run your tasks in our CI—automatically, on every update!
+## 🧪 Robust Task Validation
 
--   **Add your task:** Add a YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for details).
--   **Automatic validation:** Every time we push updates, your task will be run by the agent and evaluated using your criteria.
+Run your tasks in our CI to ensure they work on every update!
+
+*   **Add Your Task:** Create a YAML file in `tests/agent_tasks/` (see the [`README there`](tests/agent_tasks/README.md) for details).
+*   **Automatic Validation:** Your task will be run and evaluated with every update.
 
 ## Local Setup
 
-Learn more about local setup in the [documentation 📕](https://docs.browser-use.com/development/local-setup).
+For detailed setup instructions, see the [local setup 📕](https://docs.browser-use.com/development/local-setup).
 
-## Release Notes
-
-`main` is the primary development branch. For production stability, install a [versioned release](https://github.com/browser-use/browser-use/releases).
+**Important:** `main` is the primary development branch. Use a stable [versioned release](https://github.com/browser-use/browser-use/releases) for production.
 
 ---
 
 ## Swag
 
-Show off your Browser-use swag! Visit our [Merch store](https://browsermerch.com).  Good contributors get free swag 👀.
+Show off your Browser-use pride! Check out our [Merch store](https://browsermerch.com). Good contributors can get free swag 👀.
 
 ## Citation
 
-If you use Browser Use, cite as:
+If you use Browser Use in your research or project, please cite:
 
 ```bibtex
 @software{browser_use2024,
@@ -283,15 +293,3 @@ If you use Browser Use, cite as:
 <div align="center">
 Made with ❤️ in Zurich and San Francisco
  </div>
-```
-
-Key changes and improvements:
-
-*   **SEO Optimization:** Focused on keywords like "AI browser automation," "browser control," and "web automation."
-*   **Clearer Structure:** Used headings and bullet points for readability and scannability.
-*   **Strong Hook:**  Immediately highlights the core value proposition.
-*   **Concise Summarization:**  Reduced redundancy while retaining key information.
-*   **Call to Actions:** Encourage users to explore documentation, the cloud platform, and the hackathon.
-*   **Improved Formatting:**  Enhanced the overall visual appeal with consistent markdown.
-*   **Emphasis on Key Features:** Highlighting the core value proposition of the project.
-*   **Added Cloud Platform:** Enhanced the cloud platform usage.

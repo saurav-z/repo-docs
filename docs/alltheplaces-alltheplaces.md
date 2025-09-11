@@ -1,128 +1,90 @@
-# All the Places: Extracting Point of Interest (POI) Data with Web Scraping
+# All the Places: Scrape & Collect Point of Interest (POI) Data
 
-**All the Places is a powerful web scraping project designed to gather and standardize Point of Interest (POI) data from various websites.**  This project leverages the `scrapy` framework to extract POI information and provides a consistent data format.
+**All the Places is a Python-based project leveraging web scraping to gather and standardize Point of Interest (POI) data from various websites.**
 
-➡️  **[Visit the original All the Places repository on GitHub](https://github.com/alltheplaces/alltheplaces)**
+[Go to the original repository](https://github.com/alltheplaces/alltheplaces)
 
-## Key Features:
+## Key Features
 
-*   **Web Scraping for POI Data:** Extracts location information from websites with store location pages.
-*   **`scrapy` Framework:** Utilizes the popular Python-based `scrapy` web scraping framework for efficient data extraction.
-*   **Standardized Data Format:**  Publishes results in a consistent and structured format.
-*   **Modular Spiders:** Employs individual `scrapy` spiders for specific sites, facilitating maintainability and scalability.
-*   **Weekly Updates:** The project is run weekly, and output is published to [alltheplaces.xyz](https://www.alltheplaces.xyz/).
-*   **Open Source and Open Data:** The spider software is licensed under the MIT license, and the data generated is released under Creative Commons' CC-0 waiver.
+*   **Web Scraping Powerhouse:** Uses [Scrapy](https://scrapy.org/), a robust Python web scraping framework, to extract POI data.
+*   **Standardized Data Format:**  Publishes results in a consistent, easy-to-use format ([DATA\_FORMAT.md](DATA_FORMAT.md)).
+*   **Open Data:** Generated data is released under [Creative Commons’ CC-0 waiver](https://creativecommons.org/publicdomain/zero/1.0/).
+*   **Community Driven:** Active project with guides for contributing code and a welcoming community.
+*   **Regular Updates:** Weekly data runs and output published on [alltheplaces.xyz](https://www.alltheplaces.xyz/).
 
 ## Getting Started
 
 ### Development Setup
 
-Follow the instructions below to set up your development environment. Please note that Windows users may need to follow the instructions on the [scrapy docs](https://docs.scrapy.org/en/latest/intro/install.html#windows) for the most up-to-date information.
+Follow these steps to set up your development environment:
 
-#### Ubuntu
+**1. Install `uv` (Recommended for dependency management):**
 
-These instructions were tested with Ubuntu 24.04 LTS on 2024-02-21.
+   *   **Ubuntu:**
+        ```bash
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        source $HOME/.local/bin/env
+        ```
+   *   **macOS:**
+        ```bash
+        brew install uv
+        ```
+   *   **Windows:**  Follow the [Scrapy installation instructions](https://docs.scrapy.org/en/latest/intro/install.html#windows) if needed.
 
-1.  Install `uv`:
+**2. Clone the Repository:**
 
-    ```bash
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    source $HOME/.local/bin/env
-    ```
+   ```bash
+   git clone git@github.com:alltheplaces/alltheplaces.git
+   cd alltheplaces
+   ```
 
-2.  Clone the repository:
+**3. Install Dependencies:**
 
-    ```bash
-    git clone git@github.com:alltheplaces/alltheplaces.git
-    ```
+   ```bash
+   uv sync  # Use 'uv sync' for efficient dependency management
+   ```
 
-3.  Install dependencies using `uv`:
+**4. Verify Installation:**
 
-    ```bash
-    cd alltheplaces
-    uv sync
-    ```
+   ```bash
+   uv run scrapy
+   ```
 
-4.  Verify installation:
+   If this command runs without errors, your installation is successful.
 
-    ```bash
-    uv run scrapy
-    ```
+### Alternative Development Environments
 
-#### macOS
+*   **GitHub Codespaces:** Click the button below to launch a pre-configured cloud-based development environment:
 
-These instructions were tested with macOS 15.3.2 on 2025-04-01.
+    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alltheplaces/alltheplaces)
 
-1.  Install `uv`:
+*   **Docker:**
+    1.  Build the Docker image:
+        ```bash
+        docker build -t alltheplaces .
+        ```
+    2.  Run the Docker container:
+        ```bash
+        docker run --rm -it alltheplaces
+        ```
 
-    ```bash
-    brew install uv
-    ```
+## Contributing Code
 
-2.  Clone the repository:
+We welcome contributions!  Here are resources to help you get started:
 
-    ```bash
-    git clone git@github.com:alltheplaces/alltheplaces.git
-    ```
-
-3.  Install dependencies using `uv`:
-
-    ```bash
-    cd alltheplaces
-    uv sync
-    ```
-
-4.  Verify installation:
-
-    ```bash
-    uv run scrapy
-    ```
-
-#### Codespaces
-
-Develop in a cloud-based environment using GitHub Codespaces:
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alltheplaces/alltheplaces)
-
-#### Docker
-
-Utilize Docker for containerized development:
-
-1.  Clone the repository:
-
-    ```bash
-    git clone git@github.com:alltheplaces/alltheplaces.git
-    ```
-
-2.  Build the Docker image:
-
-    ```bash
-    cd alltheplaces
-    docker build -t alltheplaces .
-    ```
-
-3.  Run the Docker container:
-
-    ```bash
-    docker run --rm -it alltheplaces
-    ```
-
-### Contributing Code
-
-Contribute to the project by developing spiders and improving data extraction.  We provide guides to help you:
-
-*   [Spider Naming](docs/SPIDER_NAMING.md)
+*   [What should I call my spider?](docs/SPIDER_NAMING.md)
 *   [Using Wikidata and the Name Suggestion Index](docs/WIKIDATA.md)
-*   [Sitemaps](docs/SITEMAP.md)
-*   [Extracting data from structured data](docs/STRUCTURED_DATA.md)
-*   [Pull Request guidelines](docs/PULL_REQUEST.md)
-*   [Project Pipelines](docs/PIPELINES.md)
+*   [Sitemaps make finding POI pages easier](docs/SITEMAP.md)
+*   [Data from many POI pages can be extracted without writing code](docs/STRUCTURED_DATA.md)
+*   [What is expected in a pull request?](docs/PULL_REQUEST.md)
+*   [What we do behind the scenes](docs/PIPELINES.md)
 
 ## Contact Us
 
-For communication and contributions, use the GitHub [issue tracker](https://github.com/alltheplaces/alltheplaces/issues).  Contributors are also on the [OSM US Slack](https://slack.openstreetmap.us/) in the [#alltheplaces](https://osmus.slack.com/archives/C07EY4Y3M6F) channel.
+*   **GitHub Issues:**  Report bugs, suggest features, and discuss the project using the [issue tracker](https://github.com/alltheplaces/alltheplaces/issues).
+*   **OSM US Slack:**  Join the conversation in the [#alltheplaces](https://osmus.slack.com/archives/C07EY4Y3M6F) channel on [OSM US Slack](https://slack.openstreetmap.us/).
 
 ## License
 
-*   **Data:**  Released under [Creative Commons’ CC-0 waiver](https://creativecommons.org/publicdomain/zero/1.0/) and published on [alltheplaces.xyz](https://alltheplaces.xyz/).
-*   **Spider Software:** Licensed under the [MIT license](https://github.com/alltheplaces/alltheplaces/blob/master/LICENSE).
+*   **Data:**  Released under [Creative Commons’ CC-0 waiver](https://creativecommons.org/publicdomain/zero/1.0/).
+*   **Code:**  Licensed under the [MIT license](https://github.com/alltheplaces/alltheplaces/blob/master/LICENSE).

@@ -1,18 +1,19 @@
-# Claude Code SDK for Python: Interact with Claude Code in Your Python Applications
+# Claude Code SDK for Python: Build Powerful Applications with Anthropic's Code Model
 
-**Unlock the power of Claude Code directly within your Python projects with the Claude Code SDK!**  This Python SDK simplifies interacting with the powerful Claude Code model, enabling you to seamlessly integrate advanced code generation and analysis capabilities into your applications. [Explore the original repository](https://github.com/anthropics/claude-code-sdk-python).
+**Unleash the power of Claude Code directly within your Python applications using the official Python SDK.**  [Explore the original repository](https://github.com/anthropics/claude-code-sdk-python).
 
-## Key Features
+## Key Features:
 
-*   **Easy Integration:**  Simple installation and quick start guide get you up and running fast.
-*   **Asynchronous Operations:** Built for asynchronous operations using `async` and `await` for non-blocking interaction.
-*   **Flexible Configuration:** Customize your interactions with options like system prompts and maximum turns.
-*   **Tool Support:** Enables the use of tools like `Read`, `Write`, and `Bash` within your prompts, expanding the model's capabilities.
-*   **In-Process MCP Servers:**  Significantly simplifies tool integration with built-in SDK MCP servers, eliminating subprocess management.
+*   **Seamless Integration:** Easily interact with Claude Code's code generation capabilities.
+*   **Asynchronous Querying:** Leverage `async` and `await` for non-blocking operations.
+*   **Tool Support:** Integrate Claude Code with external tools for extended functionality.
+*   **In-Process MCP Servers:** Run MCP servers directly within your Python application for improved performance and simpler deployment.
+*   **Comprehensive Error Handling:** Robust error handling for a stable application.
+*   **Type Safety:** Leveraging types for better code quality.
 
 ## Installation
 
-Install the SDK using `pip`:
+Get started by installing the SDK using `pip`:
 
 ```bash
 pip install claude-code-sdk
@@ -22,11 +23,11 @@ pip install claude-code-sdk
 
 *   Python 3.10+
 *   Node.js
-*   Claude Code:  `npm install -g @anthropic-ai/claude-code`
+*   Claude Code CLI: `npm install -g @anthropic-ai/claude-code`
 
 ## Quick Start
 
-Get started querying Claude Code with a few lines of code:
+Here's how to get up and running quickly:
 
 ```python
 import anyio
@@ -41,9 +42,9 @@ anyio.run(main)
 
 ## Usage
 
-### Basic Querying
+### Basic Query
 
-Send simple prompts and receive responses:
+Send simple prompts to Claude Code.
 
 ```python
 from claude_code_sdk import query, ClaudeCodeOptions, AssistantMessage, TextBlock
@@ -65,9 +66,9 @@ async for message in query(prompt="Tell me a joke", options=options):
     print(message)
 ```
 
-### Utilizing Tools
+### Using Tools
 
-Leverage Claude Code's tool capabilities:
+Enable Claude Code to interact with tools.
 
 ```python
 options = ClaudeCodeOptions(
@@ -76,16 +77,16 @@ options = ClaudeCodeOptions(
 )
 
 async for message in query(
-    prompt="Create a hello.py file", 
+    prompt="Create a hello.py file",
     options=options
 ):
     # Process tool use and results
     pass
 ```
 
-### Setting the Working Directory
+### Working Directory
 
-Configure the working directory for your interactions:
+Specify a working directory for Claude Code.
 
 ```python
 from pathlib import Path
@@ -95,9 +96,9 @@ options = ClaudeCodeOptions(
 )
 ```
 
-### In-Process SDK MCP Servers (Advanced)
+### SDK MCP Servers (In-Process)
 
-The SDK allows creating and using MCP servers within your Python code, offering advantages like reduced overhead and simpler deployments.
+Reduce overhead by running MCP servers directly within your Python application.
 
 #### Creating a Simple Tool
 
@@ -129,17 +130,15 @@ async for message in query(prompt="Greet Alice", options=options):
     print(message)
 ```
 
-#### Benefits of In-Process Servers
+#### Benefits Over External MCP Servers
 
-*   No subprocess management
-*   Better performance
-*   Simpler deployment
-*   Easier debugging
-*   Type safety
+*   **No subprocess management** - Runs in the same process as your application
+*   **Better performance** - No IPC overhead for tool calls
+*   **Simpler deployment** - Single Python process instead of multiple
+*   **Easier debugging** - All code runs in the same process
+*   **Type safety** - Direct Python function calls with type hints
 
 #### Migration from External Servers
-
-Easily switch from external to SDK MCP servers:
 
 ```python
 # BEFORE: External MCP server (separate process)
@@ -168,7 +167,7 @@ options = ClaudeCodeOptions(
 
 #### Mixed Server Support
 
-Combine SDK and external MCP servers:
+Combine in-process and external MCP servers for maximum flexibility.
 
 ```python
 options = ClaudeCodeOptions(
@@ -186,26 +185,26 @@ options = ClaudeCodeOptions(
 
 ### `query(prompt, options=None)`
 
-The core function for interacting with Claude Code.
+The primary function for interacting with Claude Code.
 
 **Parameters:**
 
-*   `prompt` (str): The text prompt to send to Claude Code.
-*   `options` (ClaudeCodeOptions, *optional*): Configuration settings for the query.
+*   `prompt` (str): The text prompt for Claude Code.
+*   `options` (ClaudeCodeOptions): Optional configuration settings.
 
-**Returns:**  `AsyncIterator[Message]`: An asynchronous iterator that yields response messages as they are received.
+**Returns:** AsyncIterator[Message] - A stream of messages from Claude Code.
 
 ### Types
 
-Explore the available types for configuration and message handling: See [src/claude_code_sdk/types.py](src/claude_code_sdk/types.py) for complete type definitions:
+Explore the complete type definitions in `src/claude_code_sdk/types.py`, including:
 
-*   `ClaudeCodeOptions` - Configuration options
-*   `AssistantMessage`, `UserMessage`, `SystemMessage`, `ResultMessage` - Message types
-*   `TextBlock`, `ToolUseBlock`, `ToolResultBlock` - Content blocks
+*   `ClaudeCodeOptions`: Configuration options.
+*   `AssistantMessage`, `UserMessage`, `SystemMessage`, `ResultMessage`: Message types.
+*   `TextBlock`, `ToolUseBlock`, `ToolResultBlock`: Content blocks.
 
 ## Error Handling
 
-Implement robust error handling to manage potential issues:
+Implement robust error handling to manage potential issues.
 
 ```python
 from claude_code_sdk import (
@@ -227,15 +226,15 @@ except CLIJSONDecodeError as e:
     print(f"Failed to parse response: {e}")
 ```
 
-See [src/claude_code_sdk/_errors.py](src/claude_code_sdk/_errors.py) for a complete list of error types.
+See `src/claude_code_sdk/_errors.py` for a complete list of error types.
 
 ## Available Tools
 
-Refer to the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/settings#tools-available-to-claude) for a comprehensive list of tools supported by the Claude Code model.
+Refer to the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/settings#tools-available-to-claude) for a list of available tools.
 
 ## Examples
 
-Find a complete working example to help you get started: [examples/quick_start.py](examples/quick_start.py).
+Find complete working examples in `examples/quick_start.py`.
 
 ## License
 

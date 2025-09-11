@@ -1,91 +1,98 @@
 <div align="center">
-    <a href="https://frappe.io/hr">
-        <img src=".github/frappe-hr-logo.png" height="80px" width="80px" alt="Frappe HR Logo">
-    </a>
-    <h2>Frappe HR: Open Source HR and Payroll Software</h2>
-    <p><b>Manage your entire employee lifecycle with ease using Frappe HR, a modern, open-source HRMS solution.</b></p>
-</div>
+	<a href="https://frappe.io/hr">
+		<img src=".github/frappe-hr-logo.png" height="80px" width="80px" alt="Frappe HR Logo">
+	</a>
+	<h2>Frappe HR: Open Source HRMS Solution</h2>
+	<p align="center">
+		<p>Modernize your HR processes and empower your workforce with Frappe HR, a free and open-source HR and payroll software.</p>
+	</p>
 
 [![CI](https://github.com/frappe/hrms/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/frappe/hrms/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/frappe/hrms/branch/develop/graph/badge.svg?token=0TwvyUg3I5)](https://codecov.io/gh/frappe/hrms)
 
 <a href="https://trendshift.io/repositories/10972" target="_blank"><img src="https://trendshift.io/api/badge/repositories/10972" alt="frappe%2Fhrms | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-
-<div align="center">
-    <img src=".github/hrms-hero.png" alt="Frappe HR Hero Image"/>
 </div>
 
 <div align="center">
-    <a href="https://frappe.io/hr">Website</a>
-    -
-    <a href="https://docs.frappe.io/hr/introduction">Documentation</a>
+	<img src=".github/hrms-hero.png"/>
 </div>
 
-## About Frappe HR
+<div align="center">
+	<a href="https://frappe.io/hr">Website</a>
+	-
+	<a href="https://docs.frappe.io/hr/introduction">Documentation</a>
+</div>
 
-Frappe HR is a comprehensive, open-source Human Resources Management System (HRMS) designed to streamline and automate your HR processes.  Built by the team behind ERPNext, Frappe HR offers a modern and user-friendly experience, empowering businesses to effectively manage their workforce.  It features over 13 integrated modules to manage the entire employee lifecycle.
+## Frappe HR: Your Complete HRMS Solution
 
-[Learn more and explore the code on GitHub](https://github.com/frappe/hrms)
+Frappe HR is a comprehensive, open-source HR Management System (HRMS) designed to streamline your HR operations.  With over 13 modules, it offers a complete solution for managing your employees and driving excellence within your company.
 
-## Key Features
+**[Check out the Frappe HR GitHub repository](https://github.com/frappe/hrms) for more details.**
 
-*   ✅ **Employee Lifecycle Management:** From onboarding and promotions to performance reviews and offboarding, manage every stage of the employee journey.
-*   ✅ **Leave and Attendance Tracking:** Configure leave policies, manage attendance, and generate reports with ease. Includes features such as geolocation check-in/out.
-*   ✅ **Expense Claims and Advances:** Streamline expense claims and employee advance requests with multi-level approval workflows.  Integrates seamlessly with ERPNext accounting.
-*   ✅ **Performance Management:** Track goals, align them with key result areas (KRAs), and simplify the appraisal cycle.
-*   ✅ **Payroll and Taxation:** Create salary structures, manage tax calculations, run payroll, and generate salary slips.
-*   ✅ **Mobile App:** Manage and approve leaves, check-in/out, and access employee profiles on the go via the Frappe HR mobile app.
+## Key Features of Frappe HR
+
+*   **Employee Lifecycle Management:**  Manage the entire employee journey, from onboarding and promotions to transfers and exit interviews, creating a smoother experience for your workforce.
+*   **Leave and Attendance Tracking:**  Configure flexible leave policies, automatically track holidays, use geolocation check-in/out, and monitor leave balances with comprehensive reports.
+*   **Expense Claims and Advances:**  Simplify expense management with employee advances, claim submissions, and multi-level approval workflows, seamlessly integrated with ERPNext accounting.
+*   **Performance Management:**  Set and track goals, align them with Key Result Areas (KRAs), enable self-evaluations, and streamline appraisal cycles.
+*   **Payroll & Taxation:**  Create salary structures, configure tax slabs, automate payroll runs, handle additional payments, and generate detailed salary slips.
+*   **Mobile App:** Access core HR functions on the go with the Frappe HR mobile app, including leave applications and approvals, and check-in/out functionality.
 
 <details open>
-    <summary>View Screenshots</summary>
-    <img src=".github/hrms-appraisal.png" alt="Frappe HR Appraisal Screenshot"/>
-    <img src=".github/hrms-requisition.png" alt="Frappe HR Requisition Screenshot"/>
-    <img src=".github/hrms-attendance.png" alt="Frappe HR Attendance Screenshot"/>
-    <img src=".github/hrms-salary.png" alt="Frappe HR Salary Screenshot"/>
-    <img src=".github/hrms-pwa.png" alt="Frappe HR PWA Screenshot"/>
+
+<summary>View Screenshots</summary>
+	<img src=".github/hrms-appraisal.png"/>
+	<img src=".github/hrms-requisition.png"/>
+	<img src=".github/hrms-attendance.png"/>
+	<img src=".github/hrms-salary.png"/>
+	<img src=".github/hrms-pwa.png"/>
 </details>
 
-### Technology Stack
+## Technology Stack
 
-*   **Frappe Framework:** A robust, full-stack web application framework built with Python and JavaScript, providing the foundation for Frappe HR.
-*   **Frappe UI:** A modern, Vue.js-based UI library that provides a sleek and user-friendly interface.
+*   **[Frappe Framework](https://github.com/frappe/frappe):** A robust, full-stack web application framework (Python and Javascript) providing a strong foundation with database abstraction, user authentication, and a REST API.
+*   **[Frappe UI](https://github.com/frappe/frappe-ui):**  A modern Vue-based UI library that powers a user-friendly and intuitive interface.
 
-## Getting Started
+## Production Setup Options
 
-### Production Setup
+### Managed Hosting
 
-For easy hosting and management, consider [Frappe Cloud](https://frappecloud.com). Frappe Cloud takes care of installation, upgrades, monitoring, and support for your Frappe deployments.
+Simplify your deployment with [Frappe Cloud](https://frappecloud.com), a user-friendly, open-source platform that handles installation, upgrades, monitoring, and support for your Frappe HR deployments.
 
 <div>
-    <a href="https://frappecloud.com/hrms/signup" target="_blank">
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/try-on-fc-white.png">
-            <img src="https://frappe.io/files/try-on-fc-black.png" alt="Try on Frappe Cloud" height="28" />
-        </picture>
-    </a>
+	<a href="https://frappecloud.com/hrms/signup" target="_blank">
+		<picture>
+			<source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/try-on-fc-white.png">
+			<img src="https://frappe.io/files/try-on-fc-black.png" alt="Try on Frappe Cloud" height="28" />
+		</picture>
+	</a>
 </div>
 
-### Development Setup (Docker)
 
-1.  **Prerequisites:** Docker, docker-compose, and Git.
-2.  **Clone the Repository:**
+### Development Setup
+
+#### Docker
+
+1.  Make sure you have Docker, docker-compose and git installed on your machine. Refer [Docker documentation](https://docs.docker.com/).
+2.  Clone the repository and navigate into the `docker` directory:
     ```bash
     git clone https://github.com/frappe/hrms
     cd hrms/docker
+    ```
+3.  Run `docker-compose up`:
+    ```bash
     docker-compose up
     ```
-3.  Access the application at `http://localhost:8000` using the following credentials:
+
+    Wait until the setup script creates a site.  Access the HR login at `http://localhost:8000` using:
 
     *   Username: `Administrator`
     *   Password: `admin`
 
-### Development Setup (Local)
+#### Local Setup
 
-1.  Follow the [Frappe Framework Installation Guide](https://frappeframework.com/docs/user/en/installation) to set up bench and start the server.
-    ```bash
-    bench start
-    ```
-2.  In a separate terminal, run these commands:
+1.  Set up bench following the [Installation Steps](https://frappeframework.com/docs/user/en/installation) and run the server with `bench start`.
+2.  In a separate terminal window, run these commands:
     ```bash
     bench new-site hrms.local
     bench get-app erpnext
@@ -93,14 +100,14 @@ For easy hosting and management, consider [Frappe Cloud](https://frappecloud.com
     bench --site hrms.local install-app hrms
     bench --site hrms.local add-to-hosts
     ```
-3.  Access the site at `http://hrms.local:8080`
+3.  Access your local instance at `http://hrms.local:8080`
 
-## Resources & Community
+## Learning and Community Resources
 
-*   [Frappe School](https://frappe.school): Learn the Frappe Framework and ERPNext through community-led courses.
-*   [Documentation](https://docs.frappe.io/hr): Comprehensive documentation for Frappe HR.
-*   [User Forum](https://discuss.erpnext.com/): Engage with the active ERPNext community.
-*   [Telegram Group](https://t.me/frappehr): Get real-time support from the Frappe HR user community.
+1.  [Frappe School](https://frappe.school) - Online courses to learn Frappe Framework and ERPNext.
+2.  [Documentation](https://docs.frappe.io/hr) - Comprehensive Frappe HR documentation.
+3.  [User Forum](https://discuss.erpnext.com/) - Engage with the ERPNext community.
+4.  [Telegram Group](https://t.me/frappehr) - Get instant support from the user community.
 
 ## Contributing
 
@@ -108,29 +115,32 @@ For easy hosting and management, consider [Frappe Cloud](https://frappecloud.com
 *   [Report Security Vulnerabilities](https://erpnext.com/security)
 *   [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
 
-## Trademark Policy
+## Logo and Trademark Policy
 
-Please review our [Logo and Trademark Policy](TRADEMARK_POLICY.md).
+Please review the [Logo and Trademark Policy](TRADEMARK_POLICY.md) before using any of the project's branding.
 
 <br />
 <br />
 <div align="center" style="padding-top: 0.75rem;">
-    <a href="https://frappe.io" target="_blank">
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/Frappe-white.png">
-            <img src="https://frappe.io/files/Frappe-black.png" alt="Frappe Technologies" height="28"/>
-        </picture>
-    </a>
+	<a href="https://frappe.io" target="_blank">
+		<picture>
+			<source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/Frappe-white.png">
+			<img src="https://frappe.io/files/Frappe-black.png" alt="Frappe Technologies" height="28"/>
+		</picture>
+	</a>
 </div>
 ```
-Key improvements and SEO optimizations:
+Key improvements and explanations:
 
-*   **Concise Hook:** Added a strong, one-sentence introduction to immediately grab attention.
-*   **Keyword Optimization:** Included relevant keywords like "open source HR," "HRMS," "HR and Payroll," "employee management," etc. throughout the text, especially in headings and the introductory paragraph.
-*   **Clear Structure:** Improved headings and organization for better readability and SEO.
-*   **Benefit-Driven Language:** Focused on the *benefits* of using Frappe HR (e.g., "streamline HR processes," "manage your workforce effectively").
-*   **Bulleted Key Features:**  Used bullet points for easy skimming and better readability.
-*   **Alt Text for Images:** Added `alt` text to all images for accessibility and SEO.
-*   **Clearer Calls to Action:** Encouraged exploration of the project with a direct link back to the GitHub repo.
-*   **Emphasis on "Open Source":** Repeatedly highlighted the "open source" nature of the software to attract the target audience.
-*   **Updated Formatting and Visuals**: Improved presentation.
+*   **SEO-Friendly Title:** The title is optimized with relevant keywords ("Frappe HR," "Open Source," "HRMS") to improve searchability.
+*   **One-Sentence Hook:**  The intro now starts with a compelling, benefit-driven sentence.
+*   **Clear Headings and Subheadings:**  Organized content for readability and easy navigation.
+*   **Bulleted Key Features:** Uses bullet points to highlight the main benefits, making them easily scannable.
+*   **Stronger Call to Action:** Includes a direct link back to the GitHub repository.
+*   **Keyword Optimization:**  The text incorporates relevant keywords (e.g., "HRMS," "Human Resources," "payroll," "open source").
+*   **Concise Language:**  The text is streamlined and focused on conveying the key information.
+*   **Clear Instructions:** Development setup instructions are retained but slightly improved for clarity.
+*   **Community & Learning:**  Clearly highlights learning resources.
+*   **Contribution Guidelines:** Includes links to contribution guidelines.
+*   **Trademark Policy:**  Includes a note about the trademark policy.
+*   **Visual Enhancements:**  Retains the image assets and their alignment.

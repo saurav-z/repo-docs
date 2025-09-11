@@ -1,57 +1,59 @@
-<p align="center">
+<p align="left">
   <img alt="CommixProject" src="https://commixproject.com/images/logo.png" height="120" />
+  <p align="left">
+    <a href="https://github.com/commixproject/commix/actions/workflows/builds.yml"><img alt="Builds Tests" src="https://github.com/commixproject/commix/actions/workflows/builds.yml/badge.svg"></a>
+    <a href="http://www.python.org/download/"><img alt="Python 2.6|2.7|3.x" src="https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg"></a>
+    <a href="https://github.com/commixproject/commix/blob/master/LICENSE.txt"><img alt="GPLv3 License" src="https://img.shields.io/badge/license-GPLv3-red.svg"></a>
+    <a href="https://github.com/commixproject/commix/issues?q=is%3Aissue+is%3Aclosed"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/commixproject/commix.svg?colorB=ff0000"></a>
+    <a href="https://x.com/commixproject"><img alt="X" src="https://img.shields.io/badge/x-@commixproject-blue.svg"></a>
+  </p>
 </p>
 
-[![Build Status](https://github.com/commixproject/commix/actions/workflows/builds.yml/badge.svg)](https://github.com/commixproject/commix/actions/workflows/builds.yml)
-[![Python Versions](https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg)](http://www.python.org/download/)
-[![License](https://img.shields.io/badge/license-GPLv3-red.svg)](https://github.com/commixproject/commix/blob/master/LICENSE.txt)
-[![Closed Issues](https://img.shields.io/github/issues-closed-raw/commixproject/commix.svg?colorB=ff0000)](https://github.com/commixproject/commix/issues?q=is%3Aissue+is%3Aclosed)
-[![X (Twitter)](https://img.shields.io/badge/x-@commixproject-blue.svg)](https://x.com/commixproject)
+# Commix: Automate Command Injection Exploitation
 
-# Commix: Automated Command Injection Exploitation Tool
+**Commix** is an open-source penetration testing tool designed to identify and exploit command injection vulnerabilities, helping security professionals assess web application security. (**[Commix GitHub Repo](https://github.com/commixproject/commix)**)
 
-Commix, short for Command Injection Exploiter, is a powerful open-source penetration testing tool designed to automate the detection and exploitation of command injection vulnerabilities.  [Check out the Commix project on GitHub](https://github.com/commixproject/commix) for more details.
+![Screenshot](https://commixproject.com/images/background.png)
 
 ## Key Features
 
-*   **Automated Exploitation:** Detects and exploits command injection vulnerabilities automatically.
-*   **Open Source:** Freely available and modifiable under the GPLv3 license.
-*   **Cross-Platform Compatibility:** Works on various platforms that support Python.
-*   **Extensive Documentation:**  Comprehensive user manual, usage examples, and filter bypass techniques are available.
-*   **Active Community:**  Benefit from community support and contributions.
+*   **Automated Detection:**  Quickly identifies command injection flaws in web applications.
+*   **Exploitation Capabilities:**  Exploits identified vulnerabilities to demonstrate command execution.
+*   **Open Source:**  A community-driven project allowing for contributions and continuous improvement.
+*   **Cross-Platform:**  Runs on any platform with Python installed.
+*   **Comprehensive Documentation:**  Includes a user manual, usage examples, and filter bypass techniques.
+*   **Community Support:**  Offers an active issue tracker and social media presence for assistance and updates.
 
-## What is Command Injection?
+## Installation
 
-Command injection is a web security vulnerability that allows attackers to execute arbitrary commands on a server's operating system.  Commix helps security professionals and ethical hackers identify and mitigate this critical risk.
-
-## Getting Started
-
-### Installation
-
-Clone the repository to get started:
+To get started with Commix, clone the repository using Git:
 
 ```bash
 git clone https://github.com/commixproject/commix.git commix
 ```
 
-**Note:** Requires [Python](http://www.python.org/download/) version 2.6, 2.7, or 3.x.
+Alternatively, download the latest [tarball](https://github.com/commixproject/commix/tarball/master) or [zipball](https://github.com/commixproject/commix/zipball/master).
 
-### Usage
+**Note:** Ensure you have **Python** (version **2.6**, **2.7**, or **3.x**) installed.
 
-To see all available options and switches, use:
+## Usage
+
+Access Commix's options and switches using:
 
 ```bash
 python commix.py -h
 ```
 
-For detailed instructions and examples, consult the following resources:
+For detailed usage instructions and examples, consult the following resources:
 
-*   [User's Manual](https://github.com/commixproject/commix/wiki)
+*   [Usage](https://github.com/commixproject/commix/wiki/Usage)
 *   [Usage Examples](https://github.com/commixproject/commix/wiki/Usage-Examples)
 *   [Filters Bypasses](https://github.com/commixproject/commix/wiki/Filters-Bypasses)
 
-## Screenshots
-Check out screenshots showcasing the functionality of Commix: [Screenshots](https://github.com/commixproject/commix/wiki/Screenshots)
+## Resources
+
+*   **User Manual:** [https://github.com/commixproject/commix/wiki](https://github.com/commixproject/commix/wiki)
+*   **Issues Tracker:** [https://github.com/commixproject/commix/issues](https://github.com/commixproject/commix/issues)
 
 ## Translations
 
@@ -59,9 +61,3 @@ Check out screenshots showcasing the functionality of Commix: [Screenshots](http
 *   [Greek](https://github.com/commixproject/commix/blob/master/doc/translations/README-gr-GR.md)
 *   [Indonesian](https://github.com/commixproject/commix/blob/master/doc/translations/README-idn-IDN.md)
 *   [Turkish](https://github.com/commixproject/commix/blob/master/doc/translations/README-tr-TR.md)
-
-## Contributing
-If you're interested in contributing, check out the [Commix GitHub Repository](https://github.com/commixproject/commix).  
-
-## Author
-Developed by [Anastasios Stasinopoulos](https://github.com/stasinopoulos) ([@ancst](https://x.com/ancst)).

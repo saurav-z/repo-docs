@@ -1,10 +1,8 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/cupy/cupy/main/docs/image/cupy_logo_1000px.png" width="400" alt="CuPy Logo">
-</div>
+<div align="center"><img src="https://raw.githubusercontent.com/cupy/cupy/main/docs/image/cupy_logo_1000px.png" width="400"/></div>
 
-# CuPy: Accelerate Your Python Code with GPU-Powered NumPy and SciPy
+# CuPy: Accelerate Your Python Code with GPU Power
 
-**CuPy** is a powerful NumPy and SciPy compatible array library that harnesses the power of GPUs for blazing-fast numerical computations in Python.  Leverage the parallel processing capabilities of NVIDIA CUDA or AMD ROCm platforms to accelerate your scientific computing and data analysis workflows.  [Find out more at the original repo](https://github.com/cupy/cupy).
+**CuPy is a powerful, NumPy-compatible array library that leverages the power of GPUs to speed up your Python-based scientific and machine learning computations.**  [See the original repo](https://github.com/cupy/cupy).
 
 [![PyPI](https://img.shields.io/pypi/v/cupy)](https://pypi.python.org/pypi/cupy)
 [![Conda](https://img.shields.io/badge/conda--forge-cupy-blue)](https://anaconda.org/conda-forge/cupy)
@@ -13,69 +11,59 @@
 [![Twitter](https://img.shields.io/twitter/follow/CuPy_Team?label=%40CuPy_Team)](https://twitter.com/CuPy_Team)
 [![Medium](https://img.shields.io/badge/Medium-CuPy-teal)](https://medium.com/cupy-team)
 
-[**Website**](https://cupy.dev/)
-| [**Install**](https://docs.cupy.dev/en/stable/install.html)
-| [**Tutorial**](https://docs.cupy.dev/en/stable/user_guide/basic.html)
-| [**Examples**](https://github.com/cupy/cupy/tree/main/examples)
-| [**Documentation**](https://docs.cupy.dev/en/stable/)
-| [**API Reference**](https://docs.cupy.dev/en/stable/reference/)
-| [**Forum**](https://groups.google.com/forum/#!forum/cupy)
+**Key Features:**
 
-## Key Features of CuPy
-
-*   **NumPy/SciPy Compatibility:** Seamlessly run your existing NumPy and SciPy code on GPUs with minimal code changes.
-*   **GPU Acceleration:** Dramatically speed up your computations by leveraging the parallel processing power of NVIDIA CUDA and AMD ROCm GPUs.
-*   **Drop-in Replacement:** Easily replace NumPy/SciPy imports with `import cupy as cp`.
-*   **CUDA Integration:** Access low-level CUDA features for advanced customization, including RawKernels, Streams, and CUDA Runtime APIs.
-*   **Comprehensive Documentation:** Extensive documentation, tutorials, and examples to help you get started quickly.
+*   **NumPy Compatibility:**  CuPy offers a familiar API, making it a drop-in replacement for NumPy in many cases.
+*   **GPU Acceleration:** Execute your NumPy/SciPy code on NVIDIA CUDA or AMD ROCm platforms for significant performance gains.
+*   **CUDA/ROCm Integration:**  Access low-level CUDA/ROCm features, including RawKernels, Streams, and CUDA Runtime APIs, for advanced control and optimization.
+*   **Easy to Use:** Seamlessly integrate with existing Python code with minimal changes.
+*   **Wide Compatibility:** Supports various CUDA and ROCm versions.
 
 ```python
 import cupy as cp
 x = cp.arange(6).reshape(2, 3).astype('f')
 print(x)
-# Output: array([[ 0.,  1.,  2.],
-#                [ 3.,  4.,  5.]], dtype=float32)
+# array([[ 0.,  1.,  2.],
+#        [ 3.,  4.,  5.]], dtype=float32)
 print(x.sum(axis=1))
-# Output: array([  3.,  12.], dtype=float32)
+# array([  3.,  12.], dtype=float32)
 ```
 
 ## Installation
 
 ### Pip
 
-Install pre-built binary packages (wheels) for Linux and Windows using pip.
-
-**Choose the appropriate package based on your CUDA version.**
+Install pre-built binary packages for a seamless setup.
 
 | Platform              | Architecture      | Command                                                       |
 | --------------------- | ----------------- | ------------------------------------------------------------- |
-| CUDA 11.x (11.2+)     | x86\_64 / aarch64  | `pip install cupy-cuda11x`                                    |
-| CUDA 12.x             | x86\_64 / aarch64  | `pip install cupy-cuda12x`                                    |
-| CUDA 13.x             | x86\_64 / aarch64  | `pip install cupy-cuda13x`                                    |
-| ROCm 4.3 (*[experimental](https://docs.cupy.dev/en/latest/install.html#using-cupy-on-amd-gpu-experimental)*)          | x86\_64            | `pip install cupy-rocm-4-3`                                   |
-| ROCm 5.0 (*[experimental](https://docs.cupy.dev/en/latest/install.html#using-cupy-on-amd-gpu-experimental)*)          | x86\_64            | `pip install cupy-rocm-5-0`                                   |
+| CUDA 11.x (11.2+)     | x86_64 / aarch64  | `pip install cupy-cuda11x`                                    |
+| CUDA 12.x             | x86_64 / aarch64  | `pip install cupy-cuda12x`                                    |
+| CUDA 13.x             | x86_64 / aarch64  | `pip install cupy-cuda13x`                                    |
+| ROCm 4.3 (*[experimental](https://docs.cupy.dev/en/latest/install.html#using-cupy-on-amd-gpu-experimental)*)          | x86_64            | `pip install cupy-rocm-4-3`                                   |
+| ROCm 5.0 (*[experimental](https://docs.cupy.dev/en/latest/install.html#using-cupy-on-amd-gpu-experimental)*)          | x86_64            | `pip install cupy-rocm-5-0`                                   |
 
-> [!NOTE]
-> To install pre-releases, append `--pre -U -f https://pip.cupy.dev/pre` (e.g., `pip install cupy-cuda11x --pre -U -f https://pip.cupy.dev/pre`).
+> [!NOTE]\
+> Install pre-releases using `--pre -U -f https://pip.cupy.dev/pre` (e.g., `pip install cupy-cuda11x --pre -U -f https://pip.cupy.dev/pre`).
 
 ### Conda
 
-Install CuPy using conda-forge for Linux and Windows.
+Install using Conda-Forge for easy package management.
 
 | Platform              | Architecture                | Command                                                       |
 | --------------------- | --------------------------- | ------------------------------------------------------------- |
-| CUDA                  | x86\_64 / aarch64 / ppc64le  | `conda install -c conda-forge cupy`                           |
+| CUDA                  | x86_64 / aarch64 / ppc64le  | `conda install -c conda-forge cupy`                           |
 
-For a slim installation (without CUDA dependencies), use: `conda install -c conda-forge cupy-core`.
+For a minimal install (without CUDA dependencies): `conda install -c conda-forge cupy-core`.
 
-To specify a CUDA version (e.g., 12.0): `conda install -c conda-forge cupy cuda-version=12.0`.
+Specify CUDA versions using `cuda-version`: `conda install -c conda-forge cupy cuda-version=12.0`.
 
-> [!NOTE]
-> Report any issues with conda-forge installations to [cupy-feedstock](https://github.com/conda-forge/cupy-feedstock/issues).
+> [!NOTE]\
+> Report issues with conda-forge installation to [cupy-feedstock](https://github.com/conda-forge/cupy-feedstock/issues).
 
 ### Docker
 
-Run CuPy container images using the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/overview.html).
+Use the NVIDIA Container Toolkit to run CuPy container images.
 
 ```bash
 docker run --gpus all -it cupy/cupy

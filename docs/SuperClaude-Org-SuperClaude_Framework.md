@@ -1,103 +1,34 @@
-# SuperClaude Framework: Transform Claude Code into a Powerful Development Platform
+# SuperClaude Framework: Revolutionize Your Claude Code Development 
 
-**Supercharge your development workflow with SuperClaude, a meta-programming framework that unlocks the full potential of Claude code.**  [Explore the original repository](https://github.com/SuperClaude-Org/SuperClaude_Framework).
-
-[![Version](https://img.shields.io/badge/version-4.0.9-blue)](https://github.com/SuperClaude-Org/SuperClaude_Framework)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/main/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/SuperClaude-Org/SuperClaude_Framework/pulls)
-[![Website](https://img.shields.io/badge/%F0%9F%8C%90_Visit_Website-blue)](https://superclaude.netlify.app/)
-[![PyPI](https://img.shields.io/pypi/v/SuperClaude.svg?)](https://pypi.org/project/SuperClaude/)
-[![npm](https://img.shields.io/npm/v/@bifrost_inc/superclaude.svg)](https://www.npmjs.com/package/@bifrost_inc/superclaude)
-[![English](https://img.shields.io/badge/%F0%9F%87%BA%F0%9F%87%B8_English-blue)](https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/main/README.md)
-[![中文](https://img.shields.io/badge/%F0%9F%87%A8%F0%9F%87%B3_中文-red)](https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/main/README-zh.md)
-[![日本語](https://img.shields.io/badge/%F0%9F%8A%AC_日本語-green)](https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/main/README-ja.md)
+**Transform your Claude code into a structured, powerful development platform with SuperClaude, the meta-programming framework that streamlines workflow automation and unlocks the full potential of your AI-powered projects. ([See the Original Repo](https://github.com/SuperClaude-Org/SuperClaude_Framework))**
 
 ---
 
 ## Key Features
 
-*   **Extensive Command Set:** Execute with 23 slash commands, streamlining your development process.
-*   **Intelligent Agents:** Leverage 14 specialized AI agents for domain-specific expertise and automation.
-*   **Adaptive Behavioral Modes:** Choose from 6 modes, tailored to different tasks like brainstorming and task management.
-*   **Powerful MCP Server Integration:** Seamlessly integrates with 6 servers for advanced functionalities, including documentation retrieval and browser testing.
-*   **Optimized Performance:** Reduced framework footprint for more efficient context handling.
-*   **Comprehensive Documentation:**  Benefit from a complete rewrite of documentation, with real-world examples.
+*   **Intelligent Agents:** Leverage 14 specialized AI agents for domain-specific expertise, including security, UI design, and more.
+*   **Enhanced Command Structure:** Utilize the `/sc:` prefix for 23 organized commands, simplifying tasks from brainstorming to deployment.
+*   **MCP Server Integration:** Access 6 powerful server integrations, like Context7, Sequential, and Magic, for advanced capabilities.
+*   **Adaptive Behavioral Modes:** Switch between 6 modes, such as Brainstorming, Business Panel, and Task Management, to optimize workflows.
+*   **Optimized Performance:** Enjoy a smaller framework footprint, enabling longer conversations and complex operations.
+*   **Comprehensive Documentation:** Benefit from a complete documentation overhaul with real examples, practical workflows, and improved navigation.
 
 ---
 
 ## Quick Installation
 
-Choose your preferred method:
+SuperClaude offers multiple installation methods to fit your environment.
 
-*   **pipx (Recommended):** `pipx install SuperClaude && pipx upgrade SuperClaude && SuperClaude install`
-*   **pip:** `pip install SuperClaude && pip upgrade SuperClaude && SuperClaude install`
-*   **npm:** `npm install -g @bifrost_inc/superclaude && superclaude install`
-
----
-
-<details>
-<summary><b>Important: Upgrading from SuperClaude V3</b></summary>
-
-**If you have SuperClaude V3 installed, you SHOULD uninstall it before installing V4:**
-
-```bash
-# Uninstall V3 first
-Remove all related files and directories :
-*.md *.json and commands/
-
-# Then install V4
-pipx install SuperClaude && pipx upgrade SuperClaude && SuperClaude install
-```
-
-**✅ What gets preserved during upgrade:**
-- ✓ Your custom slash commands (outside `commands/sc/`)
-- ✓ Your custom content in `CLAUDE.md`
-- ✓ Claude Code's `.claude.json`, `.credentials.json`, `settings.json` and `settings.local.json`
-- ✓ Any custom agents and files you've added
-
-**⚠️ Note:** Other SuperClaude-related `.json` files from V3 may cause conflicts and should be removed.
-
-</details>
-
-<details>
-<summary><b>💡 Troubleshooting PEP 668 Errors</b></summary>
-
-```bash
-# Option 1: Use pipx (Recommended)
-pipx install SuperClaude
-
-# Option 2: User installation
-pip install --user SuperClaude
-
-# Option 3: Force installation (use with caution)
-pip install --break-system-packages SuperClaude
-```
-</details>
-
----
-
-## Support the Project
-
-Your support helps maintain and grow SuperClaude. Consider contributing via:
-
-*   **Ko-fi:** [One-time contributions](https://ko-fi.com/superclaude)
-*   **Patreon:** [Monthly support](https://patreon.com/superclaude)
-*   **GitHub Sponsors:** [Flexible tiers](https://github.com/sponsors/SuperClaude-Org)
-
-Your support enables:
-* Claude Max Testing
-* Feature Development
-* Comprehensive Documentation
-* Community Support
-* MCP Integration
-* Infrastructure
+*   **pipx (Recommended):** `pipx install SuperClaude && pipx upgrade SuperClaude && SuperClaude install` (for Linux/macOS)
+*   **pip:** `pip install SuperClaude && pip upgrade SuperClaude && SuperClaude install` (for traditional Python environments)
+*   **npm:** `npm install -g @bifrost_inc/superclaude && superclaude install` (for cross-platform Node.js users)
 
 ---
 
 ## What's New in V4
 
 *   **Smarter Agent System:** 14 specialized agents with domain expertise.
-*   **Improved Namespace:** `/sc:` prefix for streamlined command execution.
+*   **Improved Namespace:** `/sc:` prefix for all commands.
 *   **MCP Server Integration:** 6 powerful servers working together.
 *   **Behavioral Modes:** 6 adaptive modes for different contexts.
 *   **Optimized Performance:** Smaller framework, bigger projects.
@@ -107,41 +38,41 @@ Your support enables:
 
 ## Documentation
 
-Access comprehensive guides and resources:
+Explore comprehensive guides, user manuals, and developer resources to get the most out of SuperClaude.
 
-*   **Getting Started:** Quick Start Guide, Installation Guide
-*   **User Guides:** Commands Reference, Agents Guide, Behavioral Modes, Flags Guide, MCP Servers, Session Management
-*   **Developer Resources:** Technical Architecture, Contributing Code, Testing & Debugging
-*   **Reference:** Examples Cookbook, Troubleshooting
+*   **Quick Start:** Get up and running fast.
+*   **Commands Reference:**  Explore all 23 slash commands.
+*   **Agents Guide:** Learn about the 14 specialized agents.
+*   **User Guides:** Master Behavioral Modes, Flags, MCP Servers, and Session Management.
+*   **Developer Resources:** Explore Technical Architecture, Contributing Code, and Testing & Debugging.
+*   **Reference:**  Find Examples Cookbook and Troubleshooting guides.
+
+---
+
+## Support the Project
+
+Your support helps maintain and develop SuperClaude. Consider contributing:
+
+*   **Ko-fi:** One-time contributions.
+*   **Patreon:** Monthly support.
+*   **GitHub Sponsors:** Flexible tiers.
+
+Your support enables: Claude Max Testing, Feature Development, Documentation, Community Support, MCP Integration, and Infrastructure.
 
 ---
 
 ## Contributing
 
-Join the SuperClaude community!  We welcome contributions in:
+Contribute to SuperClaude and help improve it!
 
-*   Documentation
-*   MCP Integration
-*   Workflows
-*   Testing
-*   i18n
-
-[Read the Contributing Guide](CONTRIBUTING.md) | [View All Contributors](https://github.com/SuperClaude-Org/SuperClaude_Framework/graphs/contributors)
+*   **Documentation:** Improve guides, add examples, and fix typos.
+*   **MCP Integration:** Add server configurations and test integrations.
+*   **Workflows:** Create command patterns & recipes.
+*   **Testing:** Add tests and validate features.
+*   **i18n:** Translate docs to other languages.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License.
-
----
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=SuperClaude-Org/SuperClaude_Framework&type=Timeline)](https://www.star-history.com/#SuperClaude-Org/SuperClaude_Framework&Timeline)
-
----
-
-### Built with passion by the SuperClaude community
-
-<sub>Made with ❤️ for developers who push boundaries</sub>
+SuperClaude is licensed under the MIT License.  See the [LICENSE](LICENSE) file for details.

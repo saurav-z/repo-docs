@@ -5,12 +5,6 @@
   <img alt="Authlib" src="docs/_static/light-logo.svg" height="68" />
 </picture>
 
-</div>
-
-# Authlib: The Ultimate Python Library for OAuth and OpenID Connect
-
-Authlib is your go-to Python library for building robust and secure authentication and authorization solutions, empowering you to implement OAuth and OpenID Connect servers and clients with ease. ([See the original repo](https://github.com/authlib/authlib))
-
 [![Build Status](https://github.com/authlib/authlib/workflows/tests/badge.svg)](https://github.com/authlib/authlib/actions)
 [![PyPI version](https://img.shields.io/pypi/v/authlib.svg)](https://pypi.org/project/authlib)
 [![conda-forge version](https://img.shields.io/conda/v/conda-forge/authlib.svg?label=conda-forge&colorB=0090ff)](https://anaconda.org/conda-forge/authlib)
@@ -18,79 +12,49 @@ Authlib is your go-to Python library for building robust and secure authenticati
 [![Code Coverage](https://codecov.io/gh/authlib/authlib/graph/badge.svg?token=OWTdxAIsPI)](https://codecov.io/gh/authlib/authlib)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=authlib_authlib&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=authlib_authlib)
 
-## Key Features
+</div>
 
-Authlib provides a comprehensive set of tools for handling authentication and authorization, including:
+# Authlib: Build Secure OAuth and OpenID Connect Applications in Python
 
-*   **OAuth 1.0 and 2.0 Support:** Implement both OAuth 1.0 (RFC5849) and OAuth 2.0 (RFC6749, RFC6750, RFC7009, RFC7523, RFC7591, RFC7592, RFC7636, RFC7662, RFC8414, RFC8628, RFC9068, RFC9101, RFC9207)  specifications.
-*   **OpenID Connect 1.0:** Comprehensive support for OpenID Connect 1.0 Core, Discovery, and Dynamic Client Registration.
-*   **JSON Web Token (JWT) and JOSE:** Includes JWS, JWK, JWA, and JWT for secure data exchange, covering RFC7515, RFC7516, RFC7517, RFC7518, RFC7519, RFC7638, RFC8037
-*   **Client Integrations:** Seamless integration with popular Python web frameworks and libraries:
-    *   Requests
-    *   HTTPX
-    *   Flask
-    *   Django
-    *   Starlette
-    *   FastAPI
-*   **Provider Implementations:**  Build custom OAuth and OpenID Connect providers for:
-    *   Flask
-    *   Django
-*   **Security-Focused:**  Built with security best practices in mind to protect your applications.
+**Authlib** is the go-to Python library for securely implementing OAuth and OpenID Connect protocols, offering robust tools for both client and server-side applications. ([See the original repository](https://github.com/authlib/authlib))
 
-## Migrations
+**Key Features:**
 
-Authlib will deprecate `authlib.jose` module, please read:
+*   **Comprehensive Protocol Support:**
+    *   OAuth 1.0 and 2.0 (Authorization Framework)
+    *   OpenID Connect 1.0
+    *   JSON Web Signature (JWS), Encryption (JWE), and Key (JWK)
+    *   JSON Web Token (JWT)
+*   **Built-in Client Integrations:**
+    *   Requests Library:  OAuth 1.0/2.0, OpenID Connect
+    *   HTTPX Library: Asynchronous OAuth 1.0/2.0 and OpenID Connect
+    *   Framework Support:  Flask, Django, Starlette, and FastAPI OAuth Clients
+*   **Provider Implementations:**
+    *   Flask: OAuth 1.0/2.0 and OpenID Connect providers
+    *   Django: OAuth 1.0/2.0 and OpenID Connect providers
+*   **Security-Focused:** Provides robust cryptographic primitives and follows industry best practices for secure authentication and authorization.
+*   **Spec-Compliant:**  Adheres strictly to the latest OAuth and OpenID Connect specifications.
+*   **Python 3.9+ Compatible**
 
-- [Migrating from `authlib.jose` to `joserfc`](https://jose.authlib.org/en/dev/migrations/authlib/)
-
-## Sponsors
-
-<table>
-<tr>
-<td><img align="middle" width="48" src="https://cdn.auth0.com/website/website/favicons/auth0-favicon.svg"></td>
-<td>If you want to quickly add secure token-based authentication to Python projects, feel free to check Auth0's Python SDK and free plan at <a href="https://auth0.com/overview?utm_source=GHsponsor&utm_medium=GHsponsor&utm_campaign=authlib&utm_content=auth">auth0.com/overview</a>.</td>
-</tr>
-<tr>
-<td><img align="middle" width="48" src="https://typlog.com/assets/icon-white.svg"></td>
-<td>A blogging and podcast hosting platform with minimal design but powerful features. Host your blog and Podcast with <a href="https://typlog.com/">Typlog.com</a>.
-</td>
-</tr>
-</table>
-
-[**Fund Authlib to access additional features**](https://docs.authlib.org/en/latest/community/funding.html)
-
-## Useful Links
+**Important Links:**
 
 *   **Homepage:** <https://authlib.org/>
 *   **Documentation:** <https://docs.authlib.org/>
-*   **Commercial License:** <https://authlib.org/plans>
+*   **Commercial License and Support:** <https://authlib.org/plans>
 *   **Blog:** <https://blog.authlib.org/>
 *   **Twitter:** <https://twitter.com/authlib>
 *   **StackOverflow:** <https://stackoverflow.com/questions/tagged/authlib>
 *   **Other Repositories:** <https://github.com/authlib>
-*   **Tidelift Subscription:** [https://tidelift.com/subscription/pkg/pypi-authlib](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links).
+*   **Tidelift Subscription:** [https://tidelift.com/subscription/pkg/pypi-authlib](https://tidelift.com/subscription/pkg/pypi-authlib?utm_source=pypi-authlib&utm_medium=referral&utm_campaign=links)
 
-## Security Reporting
+**Security Reporting:**
 
-If you found security bugs, please do not send a public issue or patch.
-You can send me email at <me@lepture.com>. Attachment with patch is welcome.
-My PGP Key fingerprint is:
-
+If you discover any security vulnerabilities, please report them directly via email to <me@lepture.com>, including a patch if possible. My PGP key fingerprint is:
 ```
 72F8 E895 A70C EBDF 4F2A DFE0 7E55 E3E0 118B 2B4C
 ```
+Alternatively, you can use the [Tidelift security contact](https://tidelift.com/security) for coordinated disclosure.
 
-Or, you can use the [Tidelift security contact](https://tidelift.com/security).
-Tidelift will coordinate the fix and disclosure.
+**License:**
 
-## License
-
-Authlib offers two licenses:
-
-1.  BSD LICENSE
-2.  COMMERCIAL-LICENSE
-
-Any project, open or closed source, can use the BSD license.
-If your company needs commercial support, you can purchase a commercial license at
-[Authlib Plans](https://authlib.org/plans). You can find more information at
-<https://authlib.org/support>.
+Authlib is available under the BSD License, suitable for both open-source and closed-source projects.  Commercial licenses are available for projects requiring additional support and features.

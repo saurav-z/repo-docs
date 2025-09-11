@@ -20,8 +20,10 @@ Full documentation is available [here](https://verifiers.readthedocs.io/en/lates
 
 We recommend using `verifiers` with along [uv](https://docs.astral.sh/uv/getting-started/installation/) for dependency management in your own project:
 ```bash
+# install uv (first time only)
 curl -LsSf https://astral.sh/uv/install.sh | sh
-uv init # create a fresh project
+# create a fresh project -- 3.11 + 3.12 supported
+uv init && uv venv --python 3.12 
 source .venv/bin/activate
 ```
 
@@ -46,7 +48,14 @@ To install `verifiers` from source for core library development, do:
 ```bash
 git clone https://github.com/willccbb/verifiers.git
 cd verifiers
+
+# for CPU-only dev:
+uv sync --extra dev
+
+# or, for trainer dev:
 uv sync --all-extras && uv pip install flash-attn --no-build-isolation
+
+# install pre-commit hooks
 uv run pre-commit install
 ```
 
@@ -82,7 +91,7 @@ To run a quick evaluation of your Environment with an API-based model, do:
 vf-eval vf-environment-name # vf-eval -h for config options; defaults to gpt-4.1-mini, 5 prompts, 3 rollouts for each
 ```
 
-The core elements of Environments in are:
+The core elements of Environments are:
 - Datasets: a Hugging Face `Dataset` with a `prompt` column for inputs, and optionally `answer (str)` or `info (dict)` columns for evaluation (both can be omitted for environments that evaluate based solely on completion quality)
 - Rollout logic: interactions between models and the environment (e.g. `env_response` + `is_completed` for any `MultiTurnEnv`)
 - Rubrics: an encapsulation for one or more reward functions

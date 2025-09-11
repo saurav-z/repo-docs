@@ -1,46 +1,91 @@
-# Azure CLI: Manage Your Azure Resources from the Command Line
+# Azure CLI: Manage Azure Resources with the Command Line
 
-**Simplify Azure cloud management with the Azure CLI, a powerful, cross-platform command-line tool for interacting with your Azure services.**  ([Back to Original Repo](https://github.com/Azure/azure-cli))
+**Unlock the power of Azure with the Azure CLI, a cross-platform command-line tool for managing and interacting with your Azure resources.** ([Original Repository](https://github.com/Azure/azure-cli))
 
 ## Key Features
 
-*   **Cross-Platform Compatibility:** Works seamlessly on Windows, macOS, and Linux.
-*   **Comprehensive Azure Service Support:** Manage a vast array of Azure services, including virtual machines, storage, networking, and more.
-*   **Intuitive Command Structure:** Easy-to-learn `az [group] [subgroup] [command] {parameters}` syntax.
-*   **Tab Completion:** Enhance productivity with tab completion for commands, groups, and parameters.
-*   **Powerful Querying with JMESPath:** Customize output and extract specific data using the `--query` parameter and JMESPath.
-*   **Scripting-Friendly Exit Codes:**  Leverage standardized exit codes for automation and scripting.
-*   **VS Code Integration:** Enhance your workflow with the Azure CLI Tools extension for Visual Studio Code, including IntelliSense, snippets, and integrated terminal support.
-*   **Flexible Output Formatting:** Supports JSON, table, and TSV output formats to suit your needs.
+*   **Cross-Platform Compatibility:** Works on Windows, macOS, and Linux.
+*   **Resource Management:** Easily create, manage, and delete Azure resources like virtual machines, storage accounts, and more.
+*   **Command-Line Efficiency:** Automate tasks and script complex workflows with concise commands.
+*   **Interactive Experience:** Explore resources and options with tab completion and helpful documentation.
+*   **Flexible Output:** Customize results with JSON, table, or tsv formats, and query results using JMESPath.
+*   **Extensible Functionality:** Integrate with Visual Studio Code for enhanced command authoring and execution.
+*   **Telemetry and Configuration:** Customize the level of telemetry.
 
-## Getting Started
+## Installation
 
-*   **Installation:**  Follow the detailed installation instructions in the [install guide](https://learn.microsoft.com/cli/azure/install-azure-cli). Troubleshoot common issues with the [install troubleshooting](https://github.com/Azure/azure-cli/blob/dev/doc/install_troubleshooting.md).
-*   **Cloud Shell:** Get started quickly with the Azure CLI using [Azure Cloud Shell](https://portal.azure.com/#cloudshell).
-*   **Basic Usage:**
-    *   Use `az [group] [subgroup] [command] {parameters}` for command execution.
-    *   Get help with the `-h` parameter (e.g., `az storage -h`).
-    *   Explore more examples in the [GitHub samples repo](http://github.com/Azure/azure-cli-samples) or [https://learn.microsoft.com/cli/azure/overview](https://learn.microsoft.com/cli/azure/overview).
-    *   Learn how to use the CLI effectively in the guide [Tips for using Azure CLI effectively](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively).
+Detailed installation instructions are available in the [Azure CLI install guide](https://learn.microsoft.com/cli/azure/install-azure-cli).
 
-## Developer Installation and Contribution
+## Usage
 
-*   **Developer Installation:**
-    *   **Docker:** Preconfigured Docker image available. See [Docker tags](https://mcr.microsoft.com/v2/azure-cli/tags/list)
-    *   **Edge Builds:** Access the latest builds from the `dev` branch for testing and early access.  See links in the original README to install the latest edge builds.
-    *   **Get builds of arbitrary commit or PR**  See: [Try new features before release](doc/try_new_features_before_release.md)
-    *   **Developer Setup:**
-        *   Configure your machine by following the instructions in [Configuring Your Machine](https://github.com/Azure/azure-cli/blob/dev/doc/configuring_your_machine.md)
-        *   Learn about authoring command modules in [Authoring Command Modules](https://github.com/Azure/azure-cli/tree/dev/doc/authoring_command_modules)
-        *   Use Code Generation [Code Generation](https://github.com/Azure/aaz-dev-tools)
-*   **Contribute Code:** Review the [Microsoft Open Source Guidelines](https://opensource.microsoft.com/collaborate) and adhere to the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+Use the `az` command followed by resource group, subgroup, and command: `az [ group ] [ subgroup ] [ command ] {parameters}`
 
-## Data Collection and Telemetry
+**Example:**
 
-The Azure CLI collects telemetry data to improve its services.  You can disable telemetry by running `az config set core.collect_telemetry=no`.  See the [privacy statement](https://go.microsoft.com/fwlink/?LinkID=824704) for more information.
+```bash
+$ az vm create -g MyResourceGroup -n MyVM --image UbuntuLTS
+```
 
-## Reporting Issues and Feedback
+For help, use the `-h` parameter:
 
-*   Report bugs in the [Issues](https://github.com/Azure/azure-cli/issues) section of the GitHub repo.
-*   Provide command-line feedback using the `az feedback` command.
-*   \[Microsoft Internal] Contact the developer team via azpycli@microsoft.com.
+```bash
+$ az storage -h
+$ az vm create -h
+```
+
+## Highlights & Benefits
+
+*   **Tab Completion:** Save time and avoid errors with tab completion for commands and parameters.
+*   **Querying Output:** Use the `--query` parameter and JMESPath to filter and format command output, extracting specific data.
+*   **Exit Codes:** Script effectively with standard exit codes for success (0) and various error scenarios (1, 2, 3).
+
+## Common Scenarios and Effective Use
+
+Find tips for efficient usage in the [Tips for using Azure CLI effectively](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively).
+
+*   Output formatting (json, table, or tsv)
+*   Pass values from one command to another
+*   Async operations
+*   Generic update arguments
+*   Generic resource commands - `az resource`
+*   REST API command - `az rest`
+*   Quoting issues
+*   Work behind a proxy
+*   Concurrent builds
+
+## More Examples
+
+Explore more usage examples in the [GitHub samples repo](http://github.com/Azure/azure-cli-samples) or the [Azure CLI overview](https://learn.microsoft.com/cli/azure/overview).
+
+## Visual Studio Code Integration
+
+Enhance your CLI experience with the [Azure CLI Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli) extension for Visual Studio Code.
+*   IntelliSense for Commands
+*   Snippets for Commands
+*   Run Commands in the Terminal
+*   Show Documentation on Hover
+
+## Telemetry
+
+The Azure CLI collects usage data to improve the tool. You can opt-out by running: `az config set core.collect_telemetry=no`
+
+## Reporting Issues and Providing Feedback
+
+Report bugs and provide feedback via:
+
+*   [GitHub Issues](https://github.com/Azure/azure-cli/issues)
+*   `az feedback` command in the CLI
+
+## Developer Information
+
+### Developer Installation
+
+*   [Docker](#docker)
+*   [Edge Builds](#edge-builds)
+*   [Developer Setup](#developer-setup)
+
+### Contribute Code
+
+Learn more about contributing by following the instructions provided in [Microsoft Open Source Guidelines](https://opensource.microsoft.com/collaborate).
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).

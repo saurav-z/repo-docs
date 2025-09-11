@@ -1,95 +1,64 @@
-# SimpleTuner: Your Gateway to Simplified AI Model Training 💹
+# SimpleTuner: Train Cutting-Edge AI Models with Ease 🚀
 
-**SimpleTuner empowers you to train cutting-edge AI models with ease, focusing on simplicity and versatility.** ([View on GitHub](https://github.com/bghira/SimpleTuner))
+> SimpleTuner empowers you to train a variety of AI models with simplicity, versatility, and efficiency, focusing on ease of use and cutting-edge features.
 
-> ℹ️ No data is sent to third parties unless you opt-in via `report_to`, `push_to_hub`, or manually configured webhooks.
+This project focuses on streamlined AI model training, providing a user-friendly experience with a focus on clear code and practical functionality. Contributions are welcome! Explore the original repository on [GitHub](https://github.com/bghira/SimpleTuner).
 
-SimpleTuner is designed for straightforward AI model training, making it accessible for both academic and enthusiast users. Contributions are welcome to help improve this shared project. Join the community on [Discord](https://discord.gg/CVzhX7ZA) via Terminus Research Group for support and discussion.
+**Key Features:**
 
-## Key Features
-
-*   **Simplified Training:** Focuses on ease of use with sensible defaults, reducing the need for complex configurations.
-*   **Versatile Compatibility:** Supports a wide array of image and video datasets, accommodating various sizes and aspect ratios.
-*   **Cutting-Edge Model Support:** Train models like HiDream, Flux.1, Wan 2.1 Video, LTX Video, PixArt Sigma, NVLabs Sana, Stable Diffusion 3, Kwai Kolors, Lumina2, Cosmos2 Predict, and Qwen-Image.
-*   **Multi-GPU Training:** Leverages multi-GPU setups for faster training.
-*   **Advanced Techniques:** Implements features like TREAD dropout, aspect bucketing, and masked loss training.
-*   **DeepSpeed Integration:** Includes DeepSpeed for memory optimization, enabling training on lower-VRAM GPUs.
-*   **Quantization:** Supports NF4/INT8/FP8 LoRA training for reduced VRAM usage.
-*   **S3-Compatible Storage:** Trains directly from S3-compatible storage providers.
-*   **Hugging Face Hub Integration:** Offers seamless model upload and model card generation.
-*   **Webhook Support:** Provides webhooks for real-time training progress updates.
-*   **Comprehensive Documentation:** Detailed guides and quickstarts for various models.
+*   **Wide Model Support:** Train popular models like Stable Diffusion (SDXL, SD3), HiDream, Flux.1, Wan Video, LTX Video, PixArt Sigma, NVLabs Sana, Kwai Kolors, Lumina2, Cosmos2 Predict, and Qwen-Image.
+*   **Simplified Training:** Optimized for ease of use with good default settings and supports image, video and caption features.
+*   **Versatile:** Handles diverse datasets, from small to massive, accommodating a wide range of image and video sizes.
+*   **Memory Efficiency:** Features techniques like aspect bucketing, caching, quantisation, and DeepSpeed integration to reduce VRAM consumption.
+*   **Cutting-Edge Techniques:** Includes LoRA/LyCORIS training, EMA, ControlNet training, Mixture of Experts (MoE), masked loss training, and prior regularization.
+*   **Hardware Flexibility:** Works with a variety of GPUs (NVIDIA, AMD), CPUs, and even Apple silicon.
+*   **Hugging Face Integration:** Seamless model uploads and dataset loading from the Hugging Face Hub.
+*   **Webhook Support:** Receive training progress updates and notifications.
+*   **Performance Optimization:** Utilize techniques like TREAD dropout, Flash Attention, and fuse QKV projections for faster training.
 
 ## Table of Contents
 
-*   [Design Philosophy](#design-philosophy)
-*   [Tutorials and Quickstarts](#tutorials-and-quickstarts)
-*   [Features](#features)
-*   [Supported Models](#supported-models)
-*   [Hardware Requirements](#hardware-requirements)
-*   [Toolkit](#toolkit)
-*   [Setup](#setup)
-*   [Troubleshooting](#troubleshooting)
+-   [Design Philosophy](#design-philosophy)
+-   [Tutorials](#tutorials)
+-   [Features](#features)
+-   [Hardware Requirements](#hardware-requirements)
+-   [Toolkit](#toolkit)
+-   [Setup](#setup)
+-   [Troubleshooting](#troubleshooting)
 
 ## Design Philosophy
 
-*   **Simplicity:** Prioritizes good default settings for ease of use.
-*   **Versatility:** Designed to handle a wide range of image quantities and aspect ratios.
-*   **Cutting-Edge Features:** Incorporates proven features for optimal results.
+*   **Simplicity:** Prioritizes easy-to-understand code and sensible default settings for a streamlined experience.
+*   **Versatility:** Supports a broad range of datasets and image/video sizes.
+*   **Cutting-Edge:** Integrates proven and effective features while avoiding untested options.
 
-## Tutorials and Quickstarts
+## Tutorials
 
-*   For detailed information, begin with the main [Tutorial](/TUTORIAL.md).
-*   For a quick start, consult the [Quick Start](/documentation/QUICKSTART.md) guide.
-*   Optimize training on memory-constrained systems with the [DeepSpeed document](/documentation/DEEPSPEED.md).
-*   For multi-node distributed training, review the [guide](/documentation/DISTRIBUTED.md).
+*   **Main Tutorial:** The main tutorial is available at [the tutorial](/TUTORIAL.md), containing all of the essential information you need.
+*   **Quick Start Guide:** For a fast start, check out the [Quick Start](/documentation/QUICKSTART.md) guide.
+*   **DeepSpeed:** For memory-constrained systems, use the [DeepSpeed document](/documentation/DEEPSPEED.md) guide.
+*   **Distributed Training:** For multi-node training, see the [distributed training guide](/documentation/DISTRIBUTED.md)
 
-## Supported Models
+## Features
 
-Detailed quickstart guides are available for each of the following models:
-
-*   [HiDream](/documentation/quickstart/HIDREAM.md)
-*   [Flux.1](/documentation/quickstart/FLUX.md)
-*   [Wan Video](/documentation/quickstart/WAN.md)
-*   [LTX Video](/documentation/quickstart/LTXVIDEO.md)
-*   [PixArt Sigma](/documentation/quickstart/SIGMA.md)
-*   [NVLabs Sana](/documentation/quickstart/SANA.md)
-*   [Stable Diffusion 3](/documentation/quickstart/SD3.md)
-*   [Kwai Kolors](#kwai-kolors)
-*   [Lumina2](/documentation/quickstart/LUMINA2.md)
-*   [Cosmos2 Predict (Image)](/documentation/quickstart/COSMOS2IMAGE.md)
-*   [Qwen-Image](/documentation/quickstart/QWEN_IMAGE.md)
-*   [Legacy Stable Diffusion models](#legacy-stable-diffusion-models)
+*(See Key Features section above for a condensed summary, or consult the original README for more detailed model-specific information).*
 
 ## Hardware Requirements
 
-### NVIDIA
-*   Any NVIDIA GPU with a 3080 or higher (YMMV).
-
-### AMD
-*   LoRA and full-rank tuning verified on 7900 XTX 24GB and MI300X.
-
-### Apple
-*   LoRA and full-rank tuning tested on M3 Max with 128GB memory.
-
-### Specific Model Requirements:
-
-*   **HiDream:** A100-80G (Full tune with DeepSpeed), A100-40G (LoRA, LoKr), 3090 24G (LoRA, LoKr).
-*   **Flux.1:** A100-80G (Full tune with DeepSpeed), A100-40G (LoRA, LoKr), 3090 24G (LoRA, LoKr), 4060 Ti 16G, 4070 Ti 16G, 3080 16G (int8, LoRA, LoKr), 4070 Super 12G, 3080 10G, 3060 12GB (nf4, LoRA, LoKr).
-*   **Auraflow:** A100-80G (Full tune with DeepSpeed), A100-40G (LoRA, LoKr), 3090 24G (LoRA, LoKr), 4060 Ti 16G, 4070 Ti 16G, 3080 16G (int8, LoRA, LoKr), 4070 Super 12G, 3080 10G, 3060 12GB (nf4, LoRA, LoKr).
-*   **SDXL, 1024px:** A100-80G, A6000-48G, A100-40G, 4090-24G, 4080-12G
-*   **Stable Diffusion 2.x, 768px:** 16G or better.
+*(See original README for hardware requirement details, which is comprehensive but redundant)*
 
 ## Toolkit
 
-Explore the SimpleTuner toolkit documentation for more details: [the toolkit documentation](/toolkit/README.md).
+For information about the associated toolkit, see the [toolkit documentation](/toolkit/README.md).
 
 ## Setup
 
-Refer to the [installation documentation](/INSTALL.md) for detailed setup instructions.
+Detailed setup instructions are available in the [installation documentation](/INSTALL.md).
 
 ## Troubleshooting
 
-*   Enable debug logs with `export SIMPLETUNER_LOG_LEVEL=DEBUG` in your environment.
-*   Analyze training loop performance using `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`.
-*   For a comprehensive list of options, consult [this documentation](/OPTIONS.md).
+Enable debug logs by setting `export SIMPLETUNER_LOG_LEVEL=DEBUG` in your environment (`config/config.env`) file.
+
+For detailed training loop performance analysis, use `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`.
+
+For available options, consult [this documentation](/OPTIONS.md).

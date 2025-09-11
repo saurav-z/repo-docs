@@ -1,59 +1,64 @@
-# ChatGPT Micro-Cap Stock Trading Experiment: Can AI Beat the Market?
+# ChatGPT Micro-Cap Experiment: Can AI Beat the Market?
 
-**(Explore the live trading experiment that pits ChatGPT against the micro-cap market, hosted on [GitHub](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment).)**
+This repository documents a real-world experiment using ChatGPT to manage a micro-cap stock portfolio, testing the potential of AI in financial trading. [(Original Repo)](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment)
 
-This repository documents a real-world, six-month trading experiment using ChatGPT to manage a micro-cap stock portfolio, starting with just $100. The goal? To test if advanced AI can generate alpha in the stock market.
+## Project Overview
+
+This project explores the application of large language models (LLMs) like ChatGPT in algorithmic trading. The experiment involves a live trading portfolio managed by ChatGPT, with a starting capital of $100, and real-time market data.  The goal is to determine if AI can generate alpha and make effective trading decisions.
 
 ## Key Features
 
-*   **Automated Trading:** Real-time trading script using Python to execute trades based on ChatGPT's recommendations.
-*   **Portfolio Management:**  Includes stop-loss automation and portfolio management tools.
-*   **AI-Powered Decisions:** Leverages ChatGPT-4 for stock selection and trading strategies.
-*   **Performance Tracking:** Detailed daily performance data, including PnL, equity, and trade history, available in CSV files.
-*   **Comprehensive Research:** Weekly deep research reports and performance analysis to track the AI's decisions.
-*   **Transparent Data:**  Clear, accessible logs of trades, and market data.
-*   **Open Source & Collaborative:**  The project welcomes contributions from the community.
+*   **AI-Powered Trading:** Leverages ChatGPT to analyze market data and make trading decisions.
+*   **Live Trading Scripts:** Python scripts automate trading, portfolio management, and stop-loss implementation.
+*   **Performance Tracking:** Daily profit and loss (PnL), equity, and trade history are tracked in CSV files.
+*   **Detailed Analysis:** Includes performance visualization tools using Matplotlib for comparing results with market benchmarks.
+*   **Transparency:** Auto-saved trade logs and detailed research summaries.
 
 ## Repository Structure
 
-*   **`trading_script.py`**: Main trading engine with portfolio management and stop-loss automation.
-*   **`Scripts and CSV Files/`**: Contains the portfolio data, updated daily with the latest performance.
-*   **`Start Your Own/`**: Resources to help you start your own experiment.
-*   **`Weekly Deep Research (MD|PDF)/`**: Includes summaries, performance reports, and research.
-*   **`Experiment Details/`**: Documentation, methodology, prompts, and Q&A.
+*   **`trading_script.py`**: Core trading engine, manages the portfolio and stop-loss orders.
+*   **`Scripts and CSV Files/`**: Contains the experiment's daily portfolio updates and performance data.
+*   **`Start Your Own/`**: Provides templates and guides to help you start your own AI trading experiment.
+*   **`Weekly Deep Research (MD|PDF)/`**: Weekly research summaries and performance reports, along with prompts and methodology.
+*   **`Experiment Details/`**: Documentation including methodology, prompts, Q&A, and disclaimer.
 
-## How It Works
+## Tech Stack
 
-Each trading day, ChatGPT receives market data and is tasked with making trading decisions. The system incorporates strict stop-loss rules. Weekly, ChatGPT uses deep research to re-evaluate its account. Performance data is tracked and published weekly.
+*   **Python**: Core programming language.
+*   **pandas + yFinance**: For market data acquisition and analysis.
+*   **Matplotlib**: Used for visualizing portfolio performance.
+*   **ChatGPT-4**: AI engine making the trading decisions.
 
-## Technologies Used
+## Why This Matters
 
-*   **Programming Language:** Python (3.11+)
-*   **Market Data:** pandas, yFinance
-*   **Visualization:** Matplotlib
-*   **AI Engine:** ChatGPT-4
-*   **Core Functionality:** Automated stop-loss, market-on-open and limit order support, backtesting, performance analytics, and trade logging.
+This project offers a transparent and data-driven analysis of whether AI can effectively manage a real-money investment portfolio, providing insights into the future of finance and AI.
+
+## Get Started
+
+To learn how to start your own experiment, refer to the start guide: [Starting Your Own](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Start%20Your%20Own/README.md)
 
 ## Current Performance
 
-**(See the latest performance results in the `Results.png` image within the repository.)**
+**[Insert current performance chart image here]**
+
+**Status**: Portfolio is outperforming the S&P 500 benchmark (Updated Daily).
 
 *Performance data is updated after each trading day. See the CSV files in `Scripts and CSV Files/` for detailed daily tracking.*
 
-## Join the Experiment
+## Follow Along
 
-The experiment runs from June 2025 to December 2025.
+The experiment runs from June 2025 to December 2025.  
+Updates are posted weekly on my blog, more coming soon!
 
-Stay updated on the project’s progress and learn more about the methodologies on the author's blog: [A.I Controls Stock Account](https://nathanbsmith729.substack.com)
+Blog: [A.I Controls Stock Account](https://nathanbsmith729.substack.com)
 
 ## Contribute
 
-This project is community-driven and welcomes contributions.  Feel free to:
-
-*   **Report Issues:**  Submit bugs or suggest improvements.
-*   **Submit Pull Requests:**  Contribute code and improvements.
-*   **Collaborate:**  High-value contributors may be invited as maintainers.
+Contributions are welcome!
+*   **Issues:** Report bugs or suggest improvements.
+*   **Pull Requests:** Submit code contributions.
+*   **Collaboration:** High-value contributors may be invited as maintainers/admins to help shape the project’s future.
 
 ## Contact
 
-For feature requests or advice, please reach out to:  nathanbsmith.business@gmail.com
+For feature requests or any advice, please reach out here: **nathanbsmith.business@gmail.com**

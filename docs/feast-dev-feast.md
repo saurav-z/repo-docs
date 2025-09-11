@@ -15,53 +15,43 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue)](https://github.com/feast-dev/feast/blob/master/LICENSE)
 [![GitHub Release](https://img.shields.io/github/v/release/feast-dev/feast.svg?style=flat&sort=semver&color=blue)](https://github.com/feast-dev/feast/releases)
 
-## Revolutionize Your Machine Learning Pipelines with Feast
+## Feast: The Open Source Feature Store for Machine Learning
 
-Feast is an open-source feature store designed to streamline the management and serving of features for machine learning, enabling consistent and reliable data delivery for both training and real-time predictions.  Explore the [Feast repository](https://github.com/feast-dev/feast) for more information and to get involved!
+Feast is an open-source feature store that helps you manage and serve features for your machine learning models, enabling faster model development and consistent feature availability.  Check out the [original repo](https://github.com/feast-dev/feast) for more details.
 
-## Key Features
+**Key Features:**
 
-*   **Unified Feature Access:** Consistently access features for training and serving through offline and online stores.
-*   **Data Leakage Prevention:** Generate point-in-time correct feature sets to avoid data leakage and ensure accurate model training.
-*   **Decoupled Infrastructure:** Abstract data storage from feature retrieval, ensuring model portability across various environments.
-*   **Scalable & Reliable:** Designed to handle large datasets and provide low-latency access to features for online predictions.
-
-## Architecture
-
-![](https://raw.githubusercontent.com/feast-dev/feast/master/docs/assets/feast_marchitecture.png)
-
-For detailed deployment options, including Snowflake/GCP/AWS, see [here](https://docs.feast.dev/how-to-guides/feast-snowflake-gcp-aws).
+*   **Consistent Feature Availability:** Manage offline and online stores for training and serving models.
+*   **Data Leakage Prevention:** Generate point-in-time correct feature sets to avoid data leakage.
+*   **Decoupled Infrastructure:** Abstract feature storage from retrieval, improving model portability.
+*   **Flexible Deployment:**  Supports various offline and online stores, including Snowflake, BigQuery, Redis, and more.
+*   **Feature Engineering Capabilities:** Includes on-demand transformations and streaming transformations.
 
 ## Getting Started
 
 ### 1. Install Feast
-
-```bash
+```commandline
 pip install feast
 ```
 
-### 2. Create a Feature Repository
-
-```bash
+### 2. Initialize a Feature Repository
+```commandline
 feast init my_feature_repo
 cd my_feature_repo/feature_repo
 ```
 
-### 3. Register Feature Definitions & Set Up
-
-```bash
+### 3. Register Feature Definitions and Set Up the Feature Store
+```commandline
 feast apply
 ```
 
 ### 4. Explore the Web UI (Experimental)
-
-![Web UI](https://raw.githubusercontent.com/feast-dev/feast/master/ui/sample.png)
-```bash
+```commandline
 feast ui
 ```
+![Web UI](https://raw.githubusercontent.com/feast-dev/feast/master/ui/sample.png)
 
 ### 5. Build a Training Dataset
-
 ```python
 from feast import FeatureStore
 import pandas as pd
@@ -103,8 +93,7 @@ print(training_df.head())
 ```
 
 ### 6. Load Feature Values into Your Online Store
-
-```bash
+```commandline
 CURRENT_TIME=$(date -u +"%Y-%m-%dT%H:%M:%S")
 feast materialize-incremental $CURRENT_TIME
 ```
@@ -113,8 +102,7 @@ feast materialize-incremental $CURRENT_TIME
 Materializing feature view driver_hourly_stats from 2021-04-14 to 2021-04-15 done!
 ```
 
-### 7. Read Online Features at Low Latency
-
+### 7. Read Online Features with Low Latency
 ```python
 from pprint import pprint
 from feast import FeatureStore
@@ -144,50 +132,64 @@ pprint(feature_vector)
 }
 ```
 
+## Architecture
+
+![](https://raw.githubusercontent.com/feast-dev/feast/master/docs/assets/feast_marchitecture.png)
+
 ## Functionality and Roadmap
+
+Feast is constantly evolving!  Here's a look at current and planned features:
 
 *   **Natural Language Processing**
     *   [x] Vector Search (Alpha release)
-    *   [ ] [Enhanced Feature Server and SDK for native support for NLP](https://github.com/feast-dev/feast/issues/4964)
+    *   [ ] Enhanced Feature Server and SDK for native support for NLP
 *   **Data Sources**
-    *   [x] Snowflake, Redshift, BigQuery, Parquet file, Azure Synapse + Azure SQL, Hive, Postgres, Spark, Couchbase, Kafka / Kinesis sources
+    *   [x] Snowflake, Redshift, BigQuery, Parquet, Azure Synapse + Azure SQL, Hive (community plugin), Postgres (contrib plugin), Spark (contrib plugin), Couchbase (contrib plugin)
+    *   [x] Kafka / Kinesis sources (via push support into the online store)
 *   **Offline Stores**
-    *   [x] Snowflake, Redshift, BigQuery, Azure Synapse + Azure SQL, Hive, Postgres, Trino, Spark, Couchbase, In-memory / Pandas, Custom offline store support
+    *   [x] Snowflake, Redshift, BigQuery, Azure Synapse + Azure SQL (contrib plugin), Hive (community plugin), Postgres (contrib plugin), Trino (contrib plugin), Spark (contrib plugin), Couchbase (contrib plugin), In-memory / Pandas, Custom offline store support
 *   **Online Stores**
-    *   [x] Snowflake, DynamoDB, Redis, Datastore, Bigtable, SQLite, Dragonfly, IKV - Inlined Key Value Store, Azure Cache for Redis, Postgres, Cassandra / AstraDB, ScyllaDB, Couchbase, Custom online store support
+    *   [x] Snowflake, DynamoDB, Redis, Datastore, Bigtable, SQLite, Dragonfly, IKV - Inlined Key Value Store, Azure Cache for Redis (community plugin), Postgres (contrib plugin), Cassandra / AstraDB (contrib plugin), ScyllaDB (contrib plugin), Couchbase (contrib plugin), Custom online store support
 *   **Feature Engineering**
     *   [x] On-demand Transformations (On Read) (Beta release)
     *   [x] Streaming Transformations (Alpha release)
     *   [ ] Batch transformation (In progress)
     *   [x] On-demand Transformations (On Write) (Beta release)
 *   **Streaming**
-    *   [x] Custom streaming ingestion job support, Push based streaming data ingestion to online store/offline store
+    *   [x] Custom streaming ingestion job support
+    *   [x] Push based streaming data ingestion to online store
+    *   [x] Push based streaming data ingestion to offline store
 *   **Deployments**
     *   [x] AWS Lambda (Alpha release)
     *   [x] Kubernetes
 *   **Feature Serving**
-    *   [x] Python Client
-    *   [x] Python feature server, Feast Operator (alpha), Java feature server (alpha), Go feature server (alpha), Offline Feature Server (alpha), Registry server (alpha)
+    *   [x] Python Client, Python feature server, Feast Operator (alpha), Java feature server (alpha), Go feature server (alpha), Offline Feature Server (alpha), Registry server (alpha)
 *   **Data Quality Management**
     *   [x] Data profiling and validation (Great Expectations)
 *   **Feature Discovery and Governance**
-    *   [x] Python SDK/CLI for browsing feature registry, Model-centric feature tracking, Amundsen integration, DataHub integration, Feast Web UI (Beta release), Feast Lineage Explorer
+    *   [x] Python SDK for browsing feature registry
+    *   [x] CLI for browsing feature registry
+    *   [x] Model-centric feature tracking (feature services)
+    *   [x] Amundsen integration
+    *   [x] DataHub integration
+    *   [x] Feast Web UI (Beta release)
+    *   [ ] Feast Lineage Explorer
 
 ## Important Resources
 
 *   [Documentation](https://docs.feast.dev/)
-*   [Quickstart](https://docs.feast.dev/getting-started/quickstart)
-*   [Tutorials](https://docs.feast.dev/tutorials/tutorials-overview)
-*   [Examples](https://github.com/feast-dev/feast/tree/master/examples)
-*   [Running Feast with Snowflake/GCP/AWS](https://docs.feast.dev/how-to-guides/feast-snowflake-gcp-aws)
-*   [Change Log](https://github.com/feast-dev/feast/blob/master/CHANGELOG.md)
+    *   [Quickstart](https://docs.feast.dev/getting-started/quickstart)
+    *   [Tutorials](https://docs.feast.dev/tutorials/tutorials-overview)
+    *   [Examples](https://github.com/feast-dev/feast/tree/master/examples)
+    *   [Running Feast with Snowflake/GCP/AWS](https://docs.feast.dev/how-to-guides/feast-snowflake-gcp-aws)
+    *   [Change Log](https://github.com/feast-dev/feast/blob/master/CHANGELOG.md)
 
 ## Contributing
 
-Feast is an open-source project actively seeking contributions.
+Feast thrives on community contributions.  Please review the following guides:
 
-*   [Contribution Process](https://docs.feast.dev/project/contributing)
-*   [Development Guide](https://docs.feast.dev/project/development-guide)
+*   [Contribution Process for Feast](https://docs.feast.dev/project/contributing)
+*   [Development Guide for Feast](https://docs.feast.dev/project/development-guide)
 *   [Development Guide for the Main Feast Repository](./CONTRIBUTING.md)
 
 ## GitHub Star History
@@ -204,7 +206,7 @@ Feast is an open-source project actively seeking contributions.
 
 ## Contributors
 
-Thank you to these amazing contributors:
+A big thank you to all the amazing contributors!
 
 <a href="https://github.com/feast-dev/feast/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=feast-dev/feast" />

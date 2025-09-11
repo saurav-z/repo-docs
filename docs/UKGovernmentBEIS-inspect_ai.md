@@ -1,31 +1,23 @@
-# Inspect: The Framework for Robust Large Language Model Evaluation (by UK AI Security Institute)
+# Inspect: Evaluate and Enhance Large Language Models (LLMs)
 
-**Enhance your AI model assessments with Inspect, the comprehensive framework from the UK AI Security Institute, designed for rigorous and reliable evaluation.**  [Visit the original repository](https://github.com/UKGovernmentBEIS/inspect_ai)
+**Tired of guesswork in AI?** Inspect, a powerful framework from the UK AI Safety Institute, empowers you to rigorously evaluate and refine your large language models.
 
-<br/>
-<a href="https://aisi.gov.uk/"><img width="295" src="https://inspect.aisi.org.uk/images/aisi-logo.svg" alt="UK AI Security Institute Logo" /></a>
-<br/>
+[![Inspect Logo](https://inspect.aisi.org.uk/images/aisi-logo.svg)](https://aisi.gov.uk/)
 
-## Key Features of Inspect
+Inspect offers a robust suite of tools for comprehensive LLM assessment. This framework allows you to:
 
-Inspect offers a powerful suite of features to streamline your large language model (LLM) evaluation processes:
+*   **Streamline Evaluation:** Leverage built-in components for prompt engineering, tool usage analysis, and multi-turn dialog assessments.
+*   **Graded Evaluations:** Implement model-graded evaluations to gain deeper insights.
+*   **Extendable Functionality:** Easily integrate new elicitation and scoring techniques through Python package extensions.
+*   **Open-Source:** Built by the UK AI Safety Institute to support responsible AI development.
 
-*   **Built-in Components:** Leverage pre-built functionalities for efficient prompt engineering, tool usage analysis, and multi-turn dialog assessments.
-*   **Model Graded Evaluations:** Accurately assess model performance with robust grading capabilities.
-*   **Extensible Architecture:** Easily integrate new elicitation and scoring techniques by developing extensions through Python packages.
-*   **Developed by AI Experts:** Built and maintained by the UK AI Security Institute.
+**Get Started with Inspect**
 
-## Getting Started with Inspect
+Explore the comprehensive documentation and user guides at [https://inspect.aisi.org.uk/](https://inspect.aisi.org.uk/).
 
-Dive into the world of LLM evaluation with these simple steps:
+**Contributing and Development**
 
-1.  **Explore the Documentation:**  Detailed instructions and guides can be found at [https://inspect.aisi.org.uk/](https://inspect.aisi.org.uk/).
-
-## Development & Contribution
-
-This section guides developers on how to contribute to the Inspect project:
-
-### Setting up Your Development Environment
+To contribute to Inspect or develop your own extensions:
 
 1.  **Clone the Repository:**
 
@@ -33,45 +25,28 @@ This section guides developers on how to contribute to the Inspect project:
     git clone https://github.com/UKGovernmentBEIS/inspect_ai.git
     cd inspect_ai
     ```
+
 2.  **Install with Development Dependencies:**
 
     ```bash
     pip install -e ".[dev]"
     ```
-3.  **(Optional) Install Pre-commit Hooks:**
+
+3.  **(Optional) Install Pre-Commit Hooks:**
 
     ```bash
     make hooks
     ```
 
-### Code Quality and Testing
-
-Ensure code quality and functionality with these commands:
-
-*   **Linting, Formatting, and Tests:**
+4.  **Run Checks and Tests:**
 
     ```bash
     make check
     make test
     ```
 
-### VS Code Integration
+**Recommended Development Environment:**
 
-For an enhanced development experience with VS Code:
+For optimal development experience, we recommend using VS Code with the following extensions installed: Python, Ruff, and MyPy. You will be prompted to install these when you open the project in VS Code.
 
-*   **Recommended Extensions:**  Install the Python, Ruff, and MyPy extensions. VS Code will prompt you to install these when you open the project.
-
----
-```
-
-Key improvements and SEO considerations:
-
-*   **Clear Headline:**  Uses keywords like "Large Language Model Evaluation," "Framework," and incorporates the organization name for improved searchability.
-*   **Compelling Hook:** Starts with a strong opening sentence that highlights the value proposition of the framework.
-*   **Bulleted Key Features:**  Clearly outlines the core capabilities of Inspect, using concise and descriptive bullet points.
-*   **Keyword Optimization:** Includes relevant keywords like "LLM," "AI Model Assessment," "Prompt Engineering," and "Evaluation" throughout.
-*   **Clear Call to Action:**  Directs users to the documentation for further exploration.
-*   **Concise Instructions:** Simplified and well-organized setup and development instructions.
-*   **Developer Focus:** Maintains the original intent of providing clear setup instructions for developers.
-*   **SEO-Friendly Formatting:** Uses markdown headings and formatting for readability and search engine optimization.
-*   **Alt Text:** Added alt text to the logo image for accessibility and SEO.
+**[View the original repository on GitHub](https://github.com/UKGovernmentBEIS/inspect_ai)**

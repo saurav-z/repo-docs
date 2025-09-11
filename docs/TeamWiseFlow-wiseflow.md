@@ -1,104 +1,112 @@
-# Wiseflow: Your AI-Powered Information Navigator 🚀
+# Wiseflow: Your AI-Powered Chief Information Officer 🚀
 
-**Tired of information overload? Wiseflow, your AI Chief Intelligence Officer, cuts through the noise and uncovers the valuable insights you need from a sea of data, all powered by cutting-edge AI.** [Explore the original repository on GitHub](https://github.com/TeamWiseFlow/wiseflow).
-
-**[English](README_EN.md) | [日本語](README_JP.md) | [한국어](README_KR.md) | [Deutsch](README_DE.md) | [Français](README_FR.md) | [العربية](README_AR.md)**
+**Uncover the insights you need from a flood of information using Wiseflow, an AI-powered tool designed to filter the noise and deliver the most relevant information to you. [Explore Wiseflow on GitHub](https://github.com/TeamWiseFlow/wiseflow)**
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/TeamWiseFlow/wiseflow)
 
-## Key Features:
+Wiseflow helps you cut through the clutter of the internet to discover the information that matters most to you.
 
-*   **Wide Search Focus:** Unlike "deep search" tools, Wiseflow excels at broad information gathering for industry intelligence, background checks, and lead generation.
-*   **Multi-Source Data Extraction:**  Gather insights from web pages, social media (Weibo, Kuaishou), RSS feeds, and search engines (Bing, GitHub, Arxiv, and eBay).
-*   **AI-Driven Information Filtering:**  Intelligently extracts and highlights the most relevant information based on your specified focus points.
-*   **Customizable Extraction:** Create custom forms within the PocketBase interface for precise information extraction based on your needs.
-*   **Enhanced Search with AI:**  Leverage AI to analyze information from social media and find creator profiles.
-*   **Competitive Pricing:** Enjoy 90% off OpenAI models (via AiHubMix).
-*   **Open Source & Commercial Friendly:**  Use the open-source version for free, or contact the project for commercial partnerships.
+## Key Features
 
-## What Sets Wiseflow Apart?
+*   **Customizable Search Sources:** Tailor your information gathering with support for Bing, GitHub, arXiv, and eBay, using native platform APIs.
+*   **Role-Based AI Analysis:**  Guide the AI with specific roles and objectives for more focused and insightful information extraction.
+*   **Customizable Extraction Modes:** Create and configure custom forms within Pocketbase to extract specific data points based on your needs.
+*   **Social Media Content Discovery:**  Identify relevant content and creators on social platforms, helping you find potential clients, partners, or investors.
+*   **Wide Search Focus:** Unlike "deep search" tools, Wiseflow excels at broad information gathering across various sources, perfect for industry intelligence and background research.
+*   **Multi-Platform Data Acquisition:** Access information from websites, social media (Weibo, Kuaishou), RSS feeds, and more.
+*   **User-Friendly Interface:** Designed for ease of use, Wiseflow requires no manual Xpath configuration, making it accessible to everyone.
+*   **Ongoing Development:** Benefit from continuous improvements and high stability.
 
-*   **Comprehensive Data Sources:**  Access information across various web platforms, social media, and search engines.
-*   **Intelligent Information Filtering:** Processes HTML and focuses on extracting relevant data with a 14B parameter model.
-*   **User-Friendly Interface:** Designed for ease of use, eliminating the need for complex coding or manual Xpath inputs.
-*   **Continuous Improvement:** Stay up-to-date with new features, enhanced stability, and optimized efficiency through regular updates.
-*   **More Than Just a Crawler:** Expanding capabilities beyond simple web scraping.
+## 💰 Discounted OpenAI Models
 
-## Wiseflow 4.1: What's New?
+Get 10% off on all OpenAI models within the Wiseflow application through the AiHubMix service.  For details, see the [aihubmix branch README](https://github.com/TeamWiseFlow/wiseflow/blob/aihubmix/README.md)
 
-*   **Custom Search Sources:** Configure specific search engines (Bing, GitHub, Arxiv, eBay) for targeted data acquisition.
-    <img src="docs/select_search_source.gif" alt="search_source" width="360">
-*   **AI-Driven Perspective:**  Set roles and objectives for AI analysis to gain specific insights.  (See the [task1](test/reports/report_v4x_llm/task1) for case studies)
-*   **Enhanced Social Media Search:** Easily discover content creators related to your search query.
-    <img src="docs/find_person_by_wiseflow.png" alt="find_person_by_wiseflow" width="720">
+## 🆕 What's New in Wiseflow 4.1?
 
-**For the latest updates, see the [CHANGELOG](CHANGELOG.md).**
+This version introduces exciting new features:
 
-## Quick Start: Get Up and Running in 3 Steps
+*   **Enhanced Search:** Explore diverse search sources including Bing, Github, Arxiv, and Ebay.
+*   **AI-Driven Insights:** Define roles and objectives for AI analysis, unlocking valuable perspectives.
+*   **Custom Extraction:** Create your own forms for precise data extraction.
+*   **Social Media Support:** Find creators using your focus points.
 
-**Windows users, please download the git bash tool beforehand. [Git Bash Download](https://git-scm.com/downloads/win)**
+**For a complete list of updates, see the [CHANGELOG](CHANGELOG.md).**
 
-### 1. Download and Install
+## 🚀 Getting Started Quickly
+
+**Follow these three easy steps to begin using Wiseflow:**
+
+**Windows users should install Git Bash before proceeding. [Download Git Bash](https://git-scm.com/downloads/win)**
+
+### 1.  Download and Install
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 git clone https://github.com/TeamWiseFlow/wiseflow.git
 ```
+This installs uv.
 
-### 2. Configure Your Environment
+Then, download the appropriate PocketBase program from the [PocketBase Docs](https://pocketbase.io/docs/) and place it in the [.pb](./pb/) directory.
 
-*   Create a `.env` file in the root directory, using `env_sample` as a template.
-*   Set the following parameters:
+You can also use `install_pocketbase.sh` (for MacOS/Linux) or `install_pocketbase.ps1` (for Windows).
 
-    *   `LLM_API_KEY=""`  (Your LLM service API key)
-    *   `LLM_API_BASE="https://api.siliconflow.cn/v1"` (Your LLM service API endpoint - consider SiliconFlow, [referral link](https://cloud.siliconflow.cn/i/WNLYbBpi) to receive a bonus)
-    *   `PRIMARY_MODEL=Qwen/Qwen3-14B` (Recommended model)
-    *   `VL_MODEL=Pro/Qwen/Qwen2.5-VL-7B-Instruct` (Optional Visual Language Model, highly recommended)
+### 2.  Configure the .env File
 
-### 3. Launch Wiseflow
+Create a `.env` file in the Wiseflow project root directory by referring to `env_sample` and filling in your settings.
+
+For version 4.x, you only need these parameters:
+
+-   `LLM_API_KEY=""`
+-   `LLM_API_BASE="https://api.siliconflow.cn/v1"`
+-   `PRIMARY_MODEL=Qwen/Qwen3-14B`
+-   `VL_MODEL=Pro/Qwen/Qwen2.5-VL-7B-Instruct`
+
+### 3.  Run Wiseflow
 
 ```bash
 cd wiseflow
-uv venv # only execute the first time
+uv venv # Run only the first time
 source .venv/bin/activate  # Linux/macOS
 # Or on Windows:
 # .venv\Scripts\activate
-uv sync # only execute the first time
-python -m playwright install --with-deps chromium # only execute the first time
-chmod +x run.sh # only execute the first time
+uv sync # Run only the first time
+python -m playwright install --with-deps chromium # Run only the first time
+chmod +x run.sh # Run only the first time
 ./run.sh
 ```
 
-For detailed usage instructions, refer to [docs/manual/manual.md](./docs/manual/manual.md)
+For detailed usage instructions, see the [manual](docs/manual/manual.md).
 
-## Integrate Your Data:
+## 📚 Using Wiseflow Data in Your Applications
 
-Wiseflow stores data in PocketBase. Use PocketBase's Go/Javascript/Python SDKs to access and integrate the scraped data into your applications.
+All scraped data is stored in PocketBase, allowing you to directly interact with the database. PocketBase has SDKs for Go, Javascript, and Python.
 
-Explore and share your secondary development cases at: [wiseflow_plus](https://github.com/TeamWiseFlow/wiseflow_plus)
+Share and promote your applications at: [https://github.com/TeamWiseFlow/wiseflow_plus](https://github.com/TeamWiseFlow/wiseflow_plus)
 
-## License
+## 🛡️ License
 
-Wiseflow is released under the [Apache2.0](LICENSE) license.
+Wiseflow is licensed under the [Apache2.0](LICENSE).
 
-## Contact
+For commercial collaboration, please contact **Email: zm.zhao@foxmail.com**
 
-For questions or suggestions, please open an [issue](https://github.com/TeamWiseFlow/wiseflow/issues).
+## 📬 Contact
 
-## Acknowledgements
+For questions or suggestions, please submit an [issue](https://github.com/TeamWiseFlow/wiseflow/issues).
 
-Wiseflow is built upon these excellent open-source projects:
+## 🤝 Open Source Projects
 
-*   Crawl4ai (Open-source LLM Friendly Web Crawler & Scraper) https://github.com/unclecode/crawl4ai
-*   MediaCrawler (xhs/dy/wb/ks/bilibili/zhihu crawler) https://github.com/NanmiCoder/MediaCrawler
-*   NoDriver (Providing a blazing fast framework for web automation, webscraping, bots and any other creative ideas...) https://github.com/ultrafunkamsterdam/nodriver
-*   Pocketbase (Open Source realtime backend in 1 file) https://github.com/pocketbase/pocketbase
-*   Feedparser (Parse feeds in Python) https://github.com/kurtmckee/feedparser
-*   SearXNG (a free internet metasearch engine which aggregates results from various search services and databases) https://github.com/searxng/searxng
+Wiseflow builds upon the following open-source projects:
+
+*   Crawl4ai https://github.com/unclecode/crawl4ai
+*   MediaCrawler https://github.com/NanmiCoder/MediaCrawler
+*   NoDriver https://github.com/ultrafunkamsterdam/nodriver
+*   Pocketbase https://github.com/pocketbase/pocketbase
+*   Feedparser https://github.com/kurtmckee/feedparser
+*   SearXNG https://github.com/searxng/searxng
 
 ## Citation
 
-If you use Wiseflow in your work, please cite it as:
+Please cite the following if you use Wiseflow:
 
 ```
 Author：Wiseflow Team
@@ -106,6 +114,6 @@ https://github.com/TeamWiseFlow/wiseflow
 Licensed under Apache2.0
 ```
 
-## Resources
+## 友情链接
 
 [<img src="docs/logos/SiliconFlow.png" alt="siliconflow" width="360">](https://siliconflow.com/)
