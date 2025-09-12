@@ -1,31 +1,36 @@
-<div align="center"><img src="https://raw.githubusercontent.com/cupy/cupy/main/docs/image/cupy_logo_1000px.png" width="400"/></div>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/cupy/cupy/main/docs/image/cupy_logo_1000px.png" width="400" alt="CuPy Logo"/>
+</div>
 
-# CuPy: Accelerate Your Python Code with GPU Power
+# CuPy: Accelerate Your Python with GPU-Powered NumPy & SciPy
 
-**CuPy is a powerful, NumPy-compatible array library that leverages the power of GPUs to speed up your Python-based scientific and machine learning computations.**  [See the original repo](https://github.com/cupy/cupy).
+**CuPy brings the familiar NumPy and SciPy experience to your NVIDIA CUDA and AMD ROCm GPUs, dramatically accelerating your scientific computing workflows.** [Explore the CuPy Repository](https://github.com/cupy/cupy)
 
 [![PyPI](https://img.shields.io/pypi/v/cupy)](https://pypi.python.org/pypi/cupy)
 [![Conda](https://img.shields.io/badge/conda--forge-cupy-blue)](https://anaconda.org/conda-forge/cupy)
-[![GitHub license](https://img.shields.io/github/license/cupy/cupy)](https://github.com/cupy/cupy)
+[![GitHub License](https://img.shields.io/github/license/cupy/cupy)](https://github.com/cupy/cupy)
 [![Matrix](https://img.shields.io/matrix/cupy_community:gitter.im?server_fqdn=matrix.org)](https://gitter.im/cupy/community)
 [![Twitter](https://img.shields.io/twitter/follow/CuPy_Team?label=%40CuPy_Team)](https://twitter.com/CuPy_Team)
 [![Medium](https://img.shields.io/badge/Medium-CuPy-teal)](https://medium.com/cupy-team)
 
-**Key Features:**
+[**Website**](https://cupy.dev/) | [**Install**](https://docs.cupy.dev/en/stable/install.html) | [**Tutorial**](https://docs.cupy.dev/en/stable/user_guide/basic.html) | [**Examples**](https://github.com/cupy/cupy/tree/main/examples) | [**Documentation**](https://docs.cupy.dev/en/stable/) | [**API Reference**](https://docs.cupy.dev/en/stable/reference/) | [**Forum**](https://groups.google.com/forum/#!forum/cupy)
 
-*   **NumPy Compatibility:**  CuPy offers a familiar API, making it a drop-in replacement for NumPy in many cases.
-*   **GPU Acceleration:** Execute your NumPy/SciPy code on NVIDIA CUDA or AMD ROCm platforms for significant performance gains.
-*   **CUDA/ROCm Integration:**  Access low-level CUDA/ROCm features, including RawKernels, Streams, and CUDA Runtime APIs, for advanced control and optimization.
-*   **Easy to Use:** Seamlessly integrate with existing Python code with minimal changes.
-*   **Wide Compatibility:** Supports various CUDA and ROCm versions.
+## Key Features
+
+*   **NumPy & SciPy Compatibility:**  CuPy is designed as a drop-in replacement for NumPy and SciPy, so you can use your existing code with minimal changes.
+*   **GPU Acceleration:** Leverage the power of NVIDIA CUDA and AMD ROCm GPUs for significant performance gains in numerical computation.
+*   **Seamless Integration:**  Easily move your NumPy/SciPy code to the GPU.
+*   **Low-Level CUDA Access:** Provides access to low-level CUDA features like RawKernels, Streams, and CUDA Runtime APIs for advanced control and optimization.
 
 ```python
 import cupy as cp
 x = cp.arange(6).reshape(2, 3).astype('f')
 print(x)
+# Output:
 # array([[ 0.,  1.,  2.],
 #        [ 3.,  4.,  5.]], dtype=float32)
 print(x.sum(axis=1))
+# Output:
 # array([  3.,  12.], dtype=float32)
 ```
 
@@ -33,7 +38,7 @@ print(x.sum(axis=1))
 
 ### Pip
 
-Install pre-built binary packages for a seamless setup.
+Install CuPy using `pip` for various CUDA and ROCm platforms. Binary wheels are available for Linux and Windows on [PyPI](https://pypi.org/org/cupy/).
 
 | Platform              | Architecture      | Command                                                       |
 | --------------------- | ----------------- | ------------------------------------------------------------- |
@@ -43,27 +48,25 @@ Install pre-built binary packages for a seamless setup.
 | ROCm 4.3 (*[experimental](https://docs.cupy.dev/en/latest/install.html#using-cupy-on-amd-gpu-experimental)*)          | x86_64            | `pip install cupy-rocm-4-3`                                   |
 | ROCm 5.0 (*[experimental](https://docs.cupy.dev/en/latest/install.html#using-cupy-on-amd-gpu-experimental)*)          | x86_64            | `pip install cupy-rocm-5-0`                                   |
 
-> [!NOTE]\
-> Install pre-releases using `--pre -U -f https://pip.cupy.dev/pre` (e.g., `pip install cupy-cuda11x --pre -U -f https://pip.cupy.dev/pre`).
+> **Note:** To install pre-releases, use `pip install cupy-cuda11x --pre -U -f https://pip.cupy.dev/pre` (replace `cupy-cuda11x` with the appropriate package).
 
 ### Conda
 
-Install using Conda-Forge for easy package management.
+Install CuPy using `conda` for Linux and Windows on [Conda-Forge](https://anaconda.org/conda-forge/cupy).
 
 | Platform              | Architecture                | Command                                                       |
 | --------------------- | --------------------------- | ------------------------------------------------------------- |
 | CUDA                  | x86_64 / aarch64 / ppc64le  | `conda install -c conda-forge cupy`                           |
 
-For a minimal install (without CUDA dependencies): `conda install -c conda-forge cupy-core`.
+For slim installations without CUDA dependencies: `conda install -c conda-forge cupy-core`.
 
-Specify CUDA versions using `cuda-version`: `conda install -c conda-forge cupy cuda-version=12.0`.
+Specify a CUDA version (e.g., 12.0) with: `conda install -c conda-forge cupy cuda-version=12.0`.
 
-> [!NOTE]\
-> Report issues with conda-forge installation to [cupy-feedstock](https://github.com/conda-forge/cupy-feedstock/issues).
+> **Note:** Report issues with `conda-forge` installations to [cupy-feedstock](https://github.com/conda-forge/cupy-feedstock/issues).
 
 ### Docker
 
-Use the NVIDIA Container Toolkit to run CuPy container images.
+Run CuPy using the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/overview.html) and [CuPy container images](https://hub.docker.com/r/cupy/cupy).
 
 ```bash
 docker run --gpus all -it cupy/cupy
@@ -84,7 +87,7 @@ docker run --gpus all -it cupy/cupy
 
 MIT License (see `LICENSE` file).
 
-CuPy is designed based on NumPy's API and SciPy's API (see `docs/source/license.rst` file).
+CuPy is based on NumPy's and SciPy's APIs (see `docs/source/license.rst` file).
 
 CuPy is developed and maintained by [Preferred Networks](https://www.preferred.jp/en/) and [community contributors](https://github.com/cupy/cupy/graphs/contributors).
 
@@ -103,4 +106,3 @@ Ryosuke Okuta, Yuya Unno, Daisuke Nishino, Shohei Hido and Crissman Loomis.
   year         = "2017",
   url          = "http://learningsys.org/nips17/assets/papers/paper_16.pdf"
 }
-```

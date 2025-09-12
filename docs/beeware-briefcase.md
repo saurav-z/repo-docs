@@ -1,8 +1,8 @@
-<img src="https://beeware.org/project/briefcase/briefcase.png" width="72" alt="Briefcase Logo" />
+<img src="https://beeware.org/project/briefcase/briefcase.png" width="72" alt="logo" />
 
 # Briefcase: Turn Your Python Code into Native Apps
 
-Briefcase is a powerful tool that allows you to effortlessly package your Python projects into native applications for various platforms. ([View the original repository](https://github.com/beeware/briefcase))
+**Briefcase empowers Python developers to easily convert their projects into standalone, native applications for various platforms.** (Check out the original repo: [https://github.com/beeware/briefcase](https://github.com/beeware/briefcase))
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
 [![PyPI Version](https://img.shields.io/pypi/v/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
@@ -13,28 +13,37 @@ Briefcase is a powerful tool that allows you to effortlessly package your Python
 
 ## Key Features
 
-*   **Cross-Platform Compatibility:** Package your Python projects for Mac, Windows, Linux, iOS (iPhone/iPad), Android, and the Web.
-*   **Simplified Packaging:** Converts your Python code into standalone native applications with ease.
-*   **Community Driven:** Part of the BeeWare project, fostering a welcoming and supportive community.
-*   **Active Development:** Ongoing support and plans for AppleTV, watchOS, and wearOS deployments.
+*   **Cross-Platform Compatibility:** Package your Python projects for multiple operating systems.
+*   **Native Application Generation:** Creates standalone native applications.
+*   **Supported Platforms:**
+    *   macOS
+    *   Windows
+    *   Linux
+    *   iOS (iPhone/iPad)
+    *   Android
+    *   Web
+*   **Planned Support:** AppleTV, watchOS, and wearOS deployments are in development.
 
 ## Getting Started
 
-Install Briefcase using pip:
+Install Briefcase quickly using pip:
 
 ```bash
 $ python -m pip install briefcase
 ```
 
-For a comprehensive guide, explore the [BeeWare tutorial](https://docs.beeware.org) to learn how to create and package a new application with Briefcase.
+For a comprehensive guide on using Briefcase, explore the [BeeWare tutorial](https://docs.beeware.org). This tutorial helps you create and package a new application with Briefcase.
 
 ## Financial Support
 
-The BeeWare project thrives on community support.  Consider becoming a financial member.
+The BeeWare project thrives on the support of its community. Consider becoming a financial member to support the development of Briefcase and other BeeWare tools.
 
 [![Anaconda logo](https://beeware.org/community/members/anaconda/anaconda-large.png)](https://anaconda.com/)
 
 Anaconda Inc. - Advancing AI through open source.
+
+Plus individual contributions from [users like
+you](https://beeware.org/community/members/).
 
 ## Documentation
 
@@ -42,16 +51,16 @@ Find detailed documentation on [Read The Docs](https://briefcase.readthedocs.io)
 
 ## Community & Support
 
-Connect with the Briefcase and BeeWare community:
+Join the BeeWare community and connect with other developers:
 
 *   [@beeware@fosstodon.org on Mastodon](https://fosstodon.org/@beeware)
 *   [Discord](https://beeware.org/bee/chat/)
 *   Briefcase [GitHub Discussions forum](https://github.com/beeware/briefcase/discussions)
 
-Review the [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/).
+We maintain a welcoming and respectful community following the [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/).
 
 ## Contributing
 
-Report issues on [GitHub](https://github.com/beeware/briefcase/issues).
+Report any issues on [GitHub](https://github.com/beeware/briefcase/issues).
 
-Learn how to contribute to Briefcase development in the [contribution guide](https://briefcase.readthedocs.io/en/latest/how_to/contribute/index.html).
+Contribute to Briefcase's development by following the instructions in our [contribution guide](https://briefcase.readthedocs.io/en/latest/how_to/contribute/index.html).

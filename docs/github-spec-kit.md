@@ -5,124 +5,111 @@
 </div>
 
 <p align="center">
-    <strong>An effort to allow organizations to focus on product scenarios rather than writing undifferentiated code with the help of Spec-Driven Development.</strong>
+    <strong>Revolutionize your software development with Spec Kit, enabling you to focus on product scenarios rather than boilerplate code through Spec-Driven Development.  <a href="https://github.com/github/spec-kit">Check out the original repo!</a></strong>
 </p>
 
 [![Release](https://github.com/github/spec-kit/actions/workflows/release.yml/badge.svg)](https://github.com/github/spec-kit/actions/workflows/release.yml)
 
 ---
 
+## Key Features
+
+*   **Spec-Driven Development:** Implement specifications as executable code, accelerating development.
+*   **Intent-Driven Development:** Define *what* to build before focusing on *how*.
+*   **AI-Powered Workflow:** Leverage AI agents to interpret specifications, generate code, and automate tasks.
+*   **Multi-Phase Development:** Support for 0-to-1 (greenfield), creative exploration, and iterative enhancement (brownfield) projects.
+*   **Technology Agnostic:** Build applications with various tech stacks, languages, and frameworks.
+
 ## Table of Contents
 
-- [🤔 What is Spec-Driven Development?](#-what-is-spec-driven-development)
-- [⚡ Get started](#-get-started)
-- [📚 Core philosophy](#-core-philosophy)
-- [🌟 Development phases](#-development-phases)
-- [🎯 Experimental goals](#-experimental-goals)
-- [🔧 Prerequisites](#-prerequisites)
-- [📖 Learn more](#-learn-more)
-- [📋 Detailed process](#-detailed-process)
-- [🔍 Troubleshooting](#-troubleshooting)
-- [👥 Maintainers](#-maintainers)
-- [💬 Support](#-support)
-- [🙏 Acknowledgements](#-acknowledgements)
-- [📄 License](#-license)
+-   [🤔 What is Spec-Driven Development?](#-what-is-spec-driven-development)
+-   [⚡ Get Started](#-get-started)
+-   [📚 Core Philosophy](#-core-philosophy)
+-   [🌟 Development Phases](#-development-phases)
+-   [🎯 Experimental Goals](#-experimental-goals)
+-   [🔧 Prerequisites](#-prerequisites)
+-   [📖 Learn More](#-learn-more)
+-   [📋 Detailed Process](#-detailed-process)
+-   [🔍 Troubleshooting](#-troubleshooting)
+-   [👥 Maintainers](#-maintainers)
+-   [💬 Support](#-support)
+-   [🙏 Acknowledgements](#-acknowledgements)
+-   [📄 License](#-license)
 
 ## 🤔 What is Spec-Driven Development?
 
-Spec-Driven Development **flips the script** on traditional software development. For decades, code has been king — specifications were just scaffolding we built and discarded once the "real work" of coding began. Spec-Driven Development changes this: **specifications become executable**, directly generating working implementations rather than just guiding them.
+Spec-Driven Development **transforms software creation**. Instead of code dictating the process, executable specifications drive the implementation, enabling faster development and greater focus on user needs. Specifications become the foundation, leading to working implementations.
 
-## ⚡ Get started
+## ⚡ Get Started
 
 ### 1. Install Specify
 
-Initialize your project depending on the coding agent you're using:
+Initialize your project:
 
 ```bash
 uvx --from git+https://github.com/github/spec-kit.git specify init <PROJECT_NAME>
 ```
 
-### 2. Create the spec
+### 2. Create the Spec
 
-Use the `/specify` command to describe what you want to build. Focus on the **what** and **why**, not the tech stack.
+Use the `/specify` command to define your project:
 
 ```bash
 /specify Build an application that can help me organize my photos in separate photo albums. Albums are grouped by date and can be re-organized by dragging and dropping on the main page. Albums are never in other nested albums. Within each album, photos are previewed in a tile-like interface.
 ```
 
-### 3. Create a technical implementation plan
+### 3. Plan the Implementation
 
-Use the `/plan` command to provide your tech stack and architecture choices.
+Use the `/plan` command to outline your tech stack:
 
 ```bash
 /plan The application uses Vite with minimal number of libraries. Use vanilla HTML, CSS, and JavaScript as much as possible. Images are not uploaded anywhere and metadata is stored in a local SQLite database.
 ```
 
-### 4. Break down and implement
+### 4. Implement and Iterate
 
-Use `/tasks` to create an actionable task list, then ask your agent to implement the feature.
+Use `/tasks` to generate a task list. See our [comprehensive guide](./spec-driven.md) for detailed instructions.
 
-For detailed step-by-step instructions, see our [comprehensive guide](./spec-driven.md).
+## 📚 Core Philosophy
 
-## 📚 Core philosophy
+Spec-Driven Development emphasizes:
 
-Spec-Driven Development is a structured process that emphasizes:
+*   **Intent-Driven Development:** Prioritize *what* needs building over *how*.
+*   **Rich Specification Creation:** Utilize guiding principles and structure.
+*   **Multi-Step Refinement:** Foster incremental generation, not one-shot code generation.
+*   **AI Integration:** Leverage advanced AI for interpretation and automation.
 
-- **Intent-driven development** where specifications define the "_what_" before the "_how_"
-- **Rich specification creation** using guardrails and organizational principles
-- **Multi-step refinement** rather than one-shot code generation from prompts
-- **Heavy reliance** on advanced AI model capabilities for specification interpretation
+## 🌟 Development Phases
 
-## 🌟 Development phases
+| Phase                    | Focus                    | Key Activities                                      |
+| ------------------------ | ------------------------ | --------------------------------------------------- |
+| **0-to-1 Development**   | Generate from scratch    | Requirements, specs, implementation plans, build     |
+| **Creative Exploration** | Parallel implementations | Explore diverse solutions, tech stacks, UX patterns |
+| **Iterative Enhancement** | Brownfield modernization | Add features, modernize legacy systems, adapt       |
 
-| Phase | Focus | Key Activities |
-|-------|-------|----------------|
-| **0-to-1 Development** ("Greenfield") | Generate from scratch | <ul><li>Start with high-level requirements</li><li>Generate specifications</li><li>Plan implementation steps</li><li>Build production-ready applications</li></ul> |
-| **Creative Exploration** | Parallel implementations | <ul><li>Explore diverse solutions</li><li>Support multiple technology stacks & architectures</li><li>Experiment with UX patterns</li></ul> |
-| **Iterative Enhancement** ("Brownfield") | Brownfield modernization | <ul><li>Add features iteratively</li><li>Modernize legacy systems</li><li>Adapt processes</li></ul> |
+## 🎯 Experimental Goals
 
-## 🎯 Experimental goals
-
-Our research and experimentation focus on:
-
-### Technology independence
-
-- Create applications using diverse technology stacks
-- Validate the hypothesis that Spec-Driven Development is a process not tied to specific technologies, programming languages, or frameworks
-
-### Enterprise constraints
-
-- Demonstrate mission-critical application development
-- Incorporate organizational constraints (cloud providers, tech stacks, engineering practices)
-- Support enterprise design systems and compliance requirements
-
-### User-centric development
-
-- Build applications for different user cohorts and preferences
-- Support various development approaches (from vibe-coding to AI-native development)
-
-### Creative & iterative processes
-
-- Validate the concept of parallel implementation exploration
-- Provide robust iterative feature development workflows
-- Extend processes to handle upgrades and modernization tasks
+*   **Technology Independence:** Support diverse stacks and frameworks.
+*   **Enterprise Constraints:** Accommodate organizational and compliance requirements.
+*   **User-Centric Development:** Build applications for different user needs.
+*   **Creative & Iterative Processes:** Enable parallel exploration and iterative development.
 
 ## 🔧 Prerequisites
 
-- **Linux/macOS** (or WSL2 on Windows)
-- AI coding agent: [Claude Code](https://www.anthropic.com/claude-code), [GitHub Copilot](https://code.visualstudio.com/), or [Gemini CLI](https://github.com/google-gemini/gemini-cli)
-- [uv](https://docs.astral.sh/uv/) for package management
-- [Python 3.11+](https://www.python.org/downloads/)
-- [Git](https://git-scm.com/downloads)
+*   **Operating System:** Linux/macOS (or WSL2 on Windows)
+*   **AI Coding Agent:** [Claude Code](https://www.anthropic.com/claude-code), [GitHub Copilot](https://code.visualstudio.com/), or [Gemini CLI](https://github.com/google-gemini/gemini-cli)
+*   **Package Manager:** [uv](https://docs.astral.sh/uv/)
+*   **Python:** 3.11+
+*   **Git:** [Git](https://git-scm.com/downloads)
 
-## 📖 Learn more
+## 📖 Learn More
 
-- **[Complete Spec-Driven Development Methodology](./spec-driven.md)** - Deep dive into the full process
-- **[Detailed Walkthrough](#-detailed-process)** - Step-by-step implementation guide
+*   **[Complete Spec-Driven Development Methodology](./spec-driven.md)** - Dive deep into the full process.
+*   **[Detailed Walkthrough](#-detailed-process)** - Follow a step-by-step implementation guide.
 
 ---
 
-## 📋 Detailed process
+## 📋 Detailed Process
 
 <details>
 <summary>Click to expand the detailed step-by-step walkthrough</summary>
@@ -366,8 +353,8 @@ rm gcm-linux_amd64.2.6.1.deb
 
 ## 👥 Maintainers
 
-- Den Delimarsky ([@localden](https://github.com/localden))
-- John Lam ([@jflam](https://github.com/jflam))
+*   Den Delimarsky ([@localden](https://github.com/localden))
+*   John Lam ([@jflam](https://github.com/jflam))
 
 ## 💬 Support
 
@@ -375,8 +362,8 @@ For support, please open a [GitHub issue](https://github.com/github/spec-kit/iss
 
 ## 🙏 Acknowledgements
 
-This project is heavily influenced by and based on the work and research of [John Lam](https://github.com/jflam).
+This project is inspired by and based on the work of [John Lam](https://github.com/jflam).
 
 ## 📄 License
 
-This project is licensed under the terms of the MIT open source license. Please refer to the [LICENSE](./LICENSE) file for the full terms.
+This project is licensed under the MIT open source license. See the [LICENSE](./LICENSE) file for full terms.

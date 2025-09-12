@@ -1,49 +1,63 @@
 <img src="header.jpg" alt="Header Image" width="400">
 
-# Kindle Comic Converter (KCC): The Ultimate Comic & Manga Optimizer for E-readers
+# Kindle Comic Converter (KCC): Optimize Your Comics and Manga for E-readers
 
-**Tired of poorly formatted comics on your e-reader?** Kindle Comic Converter (KCC) is your solution! This powerful tool transforms your manga and comics into optimized formats, providing a superior reading experience on your Kindle, Kobo, reMarkable, and other e-ink devices.  [**Check out the original repo for the latest updates and downloads!**](https://github.com/ciromattia/kcc)
+**Tired of poorly formatted comics on your e-reader? Kindle Comic Converter (KCC) transforms your black & white comics and manga into stunning, full-screen, and optimized formats for Kindle, Kobo, reMarkable, and other e-ink devices.**  ([View the original repository](https://github.com/ciromattia/kcc))
 
-## Key Features
+[![GitHub release](https://img.shields.io/github/release/ciromattia/kcc.svg)](https://github.com/ciromattia/kcc/releases)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ciromattia/kcc/docker-publish.yml?label=docker%20build)](https://github.com/ciromattia/kcc/pkgs/container/kcc)
+[![Github All Releases](https://img.shields.io/github/downloads/ciromattia/kcc/total.svg)](https://github.com/ciromattia/kcc/releases)
 
-*   **Wide Format Support:** Converts JPG, PNG, GIF, WebP, CBZ, CBR, CB7, 7Z, PDF files and folders into MOBI/AZW3, EPUB, KEPUB, CBZ, and PDF formats.
-*   **E-ink Optimization:** Tailored image processing for optimal viewing on e-ink screens, including black level adjustment, margin removal, and resolution downscaling.
-*   **Device-Specific Profiles:**  Select from pre-defined profiles for various e-reader models (Kindle, Kobo, reMarkable) to ensure perfect formatting.  Custom profile options are also available.
-*   **Manga Support:**  Correctly handles right-to-left reading and page splitting for manga.
-*   **reMarkable PDF Output:**  Directly convert your comics to PDF for optimal compatibility with reMarkable devices.
-*   **GUI and Command-Line Interface:**  User-friendly GUI with tooltips for easy conversions. A CLI is available for advanced users.
-*   **Batch Processing:**  Easily convert multiple files and folders at once.
-*   **Quality Control:**  Addresses common formatting issues like faded blacks, unnecessary margins, incorrect page turn direction, and misaligned spreads.
-*   **Image Processing:**  Options to upscale, stretch, crop and correct images.
-*   **Regular Updates:** Stay up-to-date with new features and device support.
+## Key Features:
 
-## What's New
+*   **Broad Format Support:** Converts JPG/PNG/GIF images (in folders, archives, or PDFs) into MOBI/AZW3, EPUB, KEPUB, CBZ, and PDF formats.
+*   **reMarkable PDF Output:** Automatically defaults to PDF for reMarkable devices for optimal compatibility.
+*   **E-ink Optimization:**  Applies essential image processing for optimal viewing on e-ink screens, enhancing contrast and readability.
+*   **Device-Specific Downscaling:**  Downscales images to your device's resolution, minimizing file size while preserving visual quality and improving battery life.
+*   **Fixes Common Formatting Issues:** Addresses issues like faded blacks, unnecessary margins, incorrect page turns, and misaligned spreads.
+*   **User-Friendly GUI:**  A simple drag-and-drop interface with tooltips for easy setup and conversion.
+*   **Command-Line Interface (CLI):** For advanced users, offering more control over the conversion process.
+*   **Wide Device Compatibility:** Supports a variety of Kindle, Kobo, and other e-reader devices.
 
-*   **PDF Output for reMarkable:** Optimized PDF output for the best reading experience on reMarkable devices.
+## What's New:
 
-## Get Started
+*   **PDF output** now available for direct conversion to reMarkable devices!
+*   Support for a wide range of e-readers, including Kindle Scribe, Kobo Clara Colour, and more.
 
-1.  **Download:**  Find the latest releases at [https://github.com/ciromattia/kcc/releases](https://github.com/ciromattia/kcc/releases) and download the appropriate executable or installation file for your operating system.
-2.  **Install:** Follow the instructions for your platform (Windows, macOS).  You may need to right-click and open the macOS application to bypass security warnings.
-3.  **Import:** Drag and drop your comic files or folders into the KCC window.
-4.  **Configure:** Select your e-reader profile and customize settings.  Tooltips provide detailed explanations for each option.
-5.  **Convert:** Click the "Convert" button to create your optimized files.
-6.  **Transfer:** Drag and drop the converted files to your e-reader's documents folder via USB.
+## Downloads and Installation:
 
-## Troubleshooting & Support
+*   **Download the latest release from:** [https://github.com/ciromattia/kcc/releases](https://github.com/ciromattia/kcc/releases)
+    *   Choose the appropriate file for your operating system:
+        *   `KCC_\*.\*.\*.exe` (Windows)
+        *   `kcc_macos_arm_\*.\*.\*.dmg` (macOS with Apple Silicon)
+        *   `kcc_macos_i386_\*.\*.\*.dmg` (older macOS with Intel)
+*   Detailed installation instructions are available in the [wiki](https://github.com/ciromattia/kcc/wiki/Installation).
 
-*   **FAQ:** Find answers to common questions and troubleshooting tips in the FAQ section of the original README.
-*   **Wiki:**  Explore the detailed installation instructions and additional information on the [KCC Wiki](https://github.com/ciromattia/kcc/wiki/).
-*   **Issues:**  Report technical issues or suggest new features on the [GitHub Issues page](https://github.com/ciromattia/kcc/issues/new).
-*   **Community:** Join the conversation and get support on the [Mobileread Forum](http://www.mobileread.com/forums/showthread.php?t=207461).
+## Additional Resources:
 
-## Donations
+*   **YouTube Tutorial:** [https://www.youtube.com/watch?v=IR2Fhcm9658](https://www.youtube.com/watch?v=IR2Fhcm9658)
+*   **Frequently Asked Questions (FAQ):**  Refer to the original README for a comprehensive FAQ covering usage, output formats, and troubleshooting.
+*   **Wiki:** [https://github.com/ciromattia/kcc/wiki/](https://github.com/ciromattia/kcc/wiki/)
+*   **Issues/Feature Requests:** [https://github.com/ciromattia/kcc/issues/new](https://github.com/ciromattia/kcc/issues/new)
+*   **Support Forum (Mobileread):** [http://www.mobileread.com/forums/showthread.php?t=207461](http://www.mobileread.com/forums/showthread.php?t=207461)
 
-If you find KCC valuable, consider supporting the developers:
+## Donations:
 
-*   **Alex Xu:**  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q41BW8HS)
-*   **Past Contributors:** Ciro Mattia Gonano and Paweł Jastrzębski (See the original README for PayPal and Bitcoin links)
+Support the ongoing development of KCC:
+*   Ciro Mattia Gonano
+  *   [![Donate PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D8WNYNPBGDAS2)
+*   Paweł Jastrzębski
+  *   [![Donate PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YTTJ4LK2JDHPS)
+  *   [![Donate Bitcoin](https://img.shields.io/badge/Donate-Bitcoin-green.svg)](https://jastrzeb.ski/donate/)
+*   Alex Xu
+  *   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q41BW8HS)
 
-## Sponsors
+## Sponsorship:
 
-*   Free code signing on Windows is provided by [SignPath.io](https://about.signpath.io/), certificate by [SignPath Foundation](https://signpath.org/)
+*   Free code signing on Windows provided by [SignPath.io](https://about.signpath.io/), certificate by [SignPath Foundation](https://signpath.org/)
+
+## Important Notes:
+
+*   KCC is not affiliated with Amazon's Kindle Comic Creator.
+*   For detailed usage instructions, troubleshooting, and more information, please consult the [wiki](https://github.com/ciromattia/kcc/wiki/).
+*   The software is released under the ISC LICENSE; see [LICENSE.txt](./LICENSE.txt) for further details.

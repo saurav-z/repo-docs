@@ -4,9 +4,9 @@
   <img src="./assets/logo.png" width="120" height="120" alt="LightRAG Logo" style="border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);">
 </div>
 
-# 🚀 LightRAG: Unleash the Power of Retrieval-Augmented Generation
+# 🚀 LightRAG: Revolutionizing RAG with Speed and Simplicity
 
-**LightRAG** is a simple yet powerful RAG framework designed for speed and efficiency, providing a robust solution for building intelligent and responsive applications.  [Explore the LightRAG repository](https://github.com/HKUDS/LightRAG) to get started!
+LightRAG is a powerful and efficient Retrieval-Augmented Generation (RAG) framework designed for simple and fast knowledge retrieval and generation. **[Explore the LightRAG Repository](https://github.com/HKUDS/LightRAG)**
 
 <div align="center">
     <a href="https://trendshift.io/repositories/13043" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13043" alt="HKUDS%2FLightRAG | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
@@ -52,38 +52,45 @@
 
 ## Key Features
 
-*   **🚀 Simple and Fast:** Designed for efficient Retrieval-Augmented Generation.
-*   **🌐 Versatile Storage Options:** Supports various storage backends including JSON, Postgres, Redis, MongoDB, Neo4j and others for document, vector, and graph data.
-*   **🧠 Intelligent Retrieval:**  Implements hybrid search and supports knowledge graph integration for more comprehensive results.
-*   **🔄 Flexible Query Modes:** Offers local, global, hybrid, and naive query modes to tailor retrieval strategies.
-*   **🧩 Modular Design:** Easy to integrate with different LLMs (OpenAI, Hugging Face, Ollama, LlamaIndex) and embedding models.
-*   **💾  Data Management:** Supports document insertion, entity and relation creation/editing/deletion, and data export.
-*   **🌐 Multimodal Processing:** Integrates with RAG-Anything for handling text, images, tables, and formulas.
-*   **📊 Token Usage Tracking:** Provides a TokenTracker tool for monitoring and managing token consumption.
-*   **🌟 Comprehensive Graph Visualization:** Features a knowledge graph visualization tool within LightRAG Server.
-*   **🌱 Easy Installation:** Simple setup via PyPI or source, with Docker Compose support.
+*   **Simplicity and Speed:** LightRAG is designed for ease of use and optimized performance.
+*   **Flexible Storage Options:** Supports various storage backends, including:
+    *   JsonKVStorage, PGKVStorage, RedisKVStorage, MongoKVStorage
+    *   NanoVectorDBStorage, PGVectorStorage, MilvusVectorDBStorage, ChromaVectorDBStorage, FaissVectorDBStorage, MongoVectorDBStorage, QdrantVectorDBStorage
+    *   NetworkXStorage, Neo4JStorage, PGGraphStorage, AGEStorage
+    *   JsonDocStatusStorage, PGDocStatusStorage, MongoDocStatusStorage
+*   **Advanced Querying:**  Offers "local", "global", "hybrid", "naive", and "mix" query modes for versatile retrieval strategies.
+*   **Multimodal RAG with RAG-Anything:** Integrates seamlessly with [RAG-Anything](https://github.com/HKUDS/RAG-Anything) for handling text, images, tables, and formulas.
+*   **Knowledge Graph Management:** Includes entity and relation creation, editing, and deletion capabilities.
+*   **Comprehensive Deletion:**  Allows deletion by document ID, entities, and relations.
+*   **Entity Merging:** Supports merging entities and their relationships.
+*   **Token Usage Tracking:**  Provides a `TokenTracker` tool for monitoring and managing token consumption.
+*   **Data Export:** Offers data export in various formats (CSV, Excel, Markdown, Text).
+*   **LLM and Embedding Flexibility:**  Supports OpenAI-like APIs, Hugging Face models, and Ollama models.
+*   **Citation Functionality:** Provides file path integration for source attribution.
+*   **Graph Visualization:**  Offers a comprehensive knowledge graph visualization feature through LightRAG Server.
 
 ---
+
 ## News
 
-*   [X] \[2025.06.16]🎯📢Our team has released \[RAG-Anything](https://github.com/HKUDS/RAG-Anything) an All-in-One Multimodal RAG System for seamless text, image, table, and equation processing.
-*   [X] \[2025.06.05]🎯📢LightRAG now supports comprehensive multimodal data handling through \[RAG-Anything](https://github.com/HKUDS/RAG-Anything) integration, enabling seamless document parsing and RAG capabilities across diverse formats including PDFs, images, Office documents, tables, and formulas. Please refer to the new \[multimodal section](https://github.com/HKUDS/LightRAG/?tab=readme-ov-file#multimodal-document-processing-rag-anything-integration) for details.
-*   [X] \[2025.03.18]🎯📢LightRAG now supports citation functionality, enabling proper source attribution.
-*   [X] \[2025.02.05]🎯📢Our team has released \[VideoRAG](https://github.com/HKUDS/VideoRAG) understanding extremely long-context videos.
-*   [X] \[2025.01.13]🎯📢Our team has released \[MiniRAG](https://github.com/HKUDS/MiniRAG) making RAG simpler with small models.
-*   [X] \[2025.01.06]🎯📢You can now \[use PostgreSQL for Storage](#using-postgresql-for-storage).
-*   [X] \[2024.12.31]🎯📢LightRAG now supports \[deletion by document ID](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
-*   [X] \[2024.11.25]🎯📢LightRAG now supports seamless integration of \[custom knowledge graphs](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#insert-custom-kg), empowering users to enhance the system with their own domain expertise.
-*   [X] \[2024.11.19]🎯📢A comprehensive guide to LightRAG is now available on \[LearnOpenCV](https://learnopencv.com/lightrag). Many thanks to the blog author.
-*   [X] \[2024.11.11]🎯📢LightRAG now supports \[deleting entities by their names](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
-*   [X] \[2024.11.09]🎯📢Introducing the \[LightRAG Gui](https://lightrag-gui.streamlit.app), which allows you to insert, query, visualize, and download LightRAG knowledge.
-*   [X] \[2024.11.04]🎯📢You can now \[use Neo4J for Storage](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#using-neo4j-for-storage).
-*   [X] \[2024.10.29]🎯📢LightRAG now supports multiple file types, including PDF, DOC, PPT, and CSV via `textract`.
-*   [X] \[2024.10.20]🎯📢We've added a new feature to LightRAG: Graph Visualization.
-*   [X] \[2024.10.18]🎯📢We've added a link to a \[LightRAG Introduction Video](https://youtu.be/oageL-1I0GE). Thanks to the author!
-*   [X] \[2024.10.17]🎯📢We have created a \[Discord channel](https://discord.gg/yF2MmDJyGJ)! Welcome to join for sharing and discussions! 🎉🎉
-*   [X] \[2024.10.16]🎯📢LightRAG now supports \[Ollama models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
-*   [X] \[2024.10.15]🎯📢LightRAG now supports \[Hugging Face models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
+*   [X] [2025.06.16]🎯📢Our team has released [RAG-Anything](https://github.com/HKUDS/RAG-Anything) an All-in-One Multimodal RAG System for seamless text, image, table, and equation processing.
+*   [X] [2025.06.05]🎯📢LightRAG now supports comprehensive multimodal data handling through [RAG-Anything](https://github.com/HKUDS/RAG-Anything) integration, enabling seamless document parsing and RAG capabilities across diverse formats including PDFs, images, Office documents, tables, and formulas. Please refer to the new [multimodal section](https://github.com/HKUDS/LightRAG/?tab=readme-ov-file#multimodal-document-processing-rag-anything-integration) for details.
+*   [X] [2025.03.18]🎯📢LightRAG now supports citation functionality, enabling proper source attribution.
+*   [X] [2025.02.05]🎯📢Our team has released [VideoRAG](https://github.com/HKUDS/VideoRAG) understanding extremely long-context videos.
+*   [X] [2025.01.13]🎯📢Our team has released [MiniRAG](https://github.com/HKUDS/MiniRAG) making RAG simpler with small models.
+*   [X] [2025.01.06]🎯📢You can now [use PostgreSQL for Storage](#using-postgresql-for-storage).
+*   [X] [2024.12.31]🎯📢LightRAG now supports [deletion by document ID](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
+*   [X] [2024.11.25]🎯📢LightRAG now supports seamless integration of [custom knowledge graphs](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#insert-custom-kg), empowering users to enhance the system with their own domain expertise.
+*   [X] [2024.11.19]🎯📢A comprehensive guide to LightRAG is now available on [LearnOpenCV](https://learnopencv.com/lightrag). Many thanks to the blog author.
+*   [X] [2024.11.11]🎯📢LightRAG now supports [deleting entities by their names](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
+*   [X] [2024.11.09]🎯📢Introducing the [LightRAG Gui](https://lightrag-gui.streamlit.app), which allows you to insert, query, visualize, and download LightRAG knowledge.
+*   [X] [2024.11.04]🎯📢You can now [use Neo4J for Storage](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#using-neo4j-for-storage).
+*   [X] [2024.10.29]🎯📢LightRAG now supports multiple file types, including PDF, DOC, PPT, and CSV via `textract`.
+*   [X] [2024.10.20]🎯📢We've added a new feature to LightRAG: Graph Visualization.
+*   [X] [2024.10.18]🎯📢We've added a link to a [LightRAG Introduction Video](https://youtu.be/oageL-1I0GE). Thanks to the author!
+*   [X] [2024.10.17]🎯📢We have created a [Discord channel](https://discord.gg/yF2MmDJyGJ)! Welcome to join for sharing and discussions! 🎉🎉
+*   [X] [2024.10.16]🎯📢LightRAG now supports [Ollama models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
+*   [X] [2024.10.15]🎯📢LightRAG now supports [Hugging Face models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
 
 <details>
   <summary style="font-size: 1.4em; font-weight: bold; cursor: pointer; display: list-item;">
@@ -103,7 +110,7 @@
 
 The LightRAG Server is designed to provide Web UI and API support. The Web UI facilitates document indexing, knowledge graph exploration, and a simple RAG query interface. LightRAG Server also provide an Ollama compatible interfaces, aiming to emulate LightRAG as an Ollama chat model. This allows AI chat bot, such as Open WebUI, to access LightRAG easily.
 
-*   Install from PyPI
+* Install from PyPI
 
 ```bash
 pip install "lightrag-hku[api]"
@@ -111,7 +118,7 @@ cp env.example .env
 lightrag-server
 ```
 
-*   Installation from Source
+* Installation from Source
 
 ```bash
 git clone https://github.com/HKUDS/LightRAG.git
@@ -123,7 +130,7 @@ cp env.example .env
 lightrag-server
 ```
 
-*   Launching the LightRAG Server with Docker Compose
+* Launching the LightRAG Server with Docker Compose
 
 ```
 git clone https://github.com/HKUDS/LightRAG.git
@@ -133,18 +140,18 @@ cp env.example .env
 docker compose up
 ```
 
->   Historical versions of LightRAG docker images can be found here: \[LightRAG Docker Images](https://github.com/HKUDS/LightRAG/pkgs/container/lightrag)
+> Historical versions of LightRAG docker images can be found here: [LightRAG Docker Images]( https://github.com/HKUDS/LightRAG/pkgs/container/lightrag)
 
 ### Install  LightRAG Core
 
-*   Install from source (Recommend)
+* Install from source (Recommend)
 
 ```bash
 cd LightRAG
 pip install -e .
 ```
 
-*   Install from PyPI
+* Install from PyPI
 
 ```bash
 pip install lightrag-hku
@@ -172,11 +179,11 @@ LightRAG's demands on the capabilities of Large Language Models (LLMs) are signi
 
 ### Quick Start for LightRAG Server
 
-*   For more information about LightRAG Server, please refer to \[LightRAG Server](./lightrag/api/README.md).
+*   For more information about LightRAG Server, please refer to [LightRAG Server](./lightrag/api/README.md).
 
 ### Quick Start for LightRAG core
 
-To get started with LightRAG core, refer to the sample codes available in the `examples` folder. Additionally, a \[video demo](https://www.youtube.com/watch?v=g21royNJ4fw) demonstration is provided to guide you through the local setup process. If you already possess an OpenAI API key, you can run the demo right away:
+To get started with LightRAG core, refer to the sample codes available in the `examples` folder. Additionally, a [video demo](https://www.youtube.com/watch?v=g21royNJ4fw) demonstration is provided to guide you through the local setup process. If you already possess an OpenAI API key, you can run the demo right away:
 
 ```bash
 ### you should run the demo code with project folder
@@ -197,7 +204,7 @@ For a streaming response implementation example, please see `examples/lightrag_o
 
 ## Programing with LightRAG Core
 
->   ⚠️ **If you would like to integrate LightRAG into your project, we recommend utilizing the REST API provided by the LightRAG Server**. LightRAG Core is typically intended for embedded applications or for researchers who wish to conduct studies and evaluations.
+> ⚠️ **If you would like to integrate LightRAG into your project, we recommend utilizing the REST API provided by the LightRAG Server**. LightRAG Core is typically intended for embedded applications or for researchers who wish to conduct studies and evaluations.
 
 ### ⚠️ Important: Initialization Requirements
 
@@ -262,9 +269,9 @@ if __name__ == "__main__":
 
 Important notes for the above snippet:
 
--   Export your OPENAI\_API\_KEY environment variable before running the script.
--   This program uses the default storage settings for LightRAG, so all data will be persisted to WORKING\_DIR/rag\_storage.
--   This program demonstrates only the simplest way to initialize a LightRAG object: Injecting the embedding and LLM functions, and initializing storage and pipeline status after creating the LightRAG object.
+*   Export your OPENAI_API_KEY environment variable before running the script.
+*   This program uses the default storage settings for LightRAG, so all data will be persisted to WORKING_DIR/rag_storage.
+*   This program demonstrates only the simplest way to initialize a LightRAG object: Injecting the embedding and LLM functions, and initializing storage and pipeline status after creating the LightRAG object.
 
 ### LightRAG init parameters
 
@@ -273,35 +280,35 @@ A full list of LightRAG init parameters:
 <details>
 <summary> Parameters </summary>
 
-| **Parameter**         | **Type**    | **Explanation**                                                                                                                                                                                | **Default**                                     |
-| --------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| **working\_dir**      | `str`       | Directory where the cache will be stored                                                                                                                                                   | `lightrag_cache+timestamp`                      |
-| **workspace**         | str         | Workspace name for data isolation between different LightRAG Instances                                                                                                                       |                                                 |
-| **kv\_storage**       | `str`       | Storage type for documents and text chunks. Supported types: `JsonKVStorage`,`PGKVStorage`,`RedisKVStorage`,`MongoKVStorage`                                                              | `JsonKVStorage`                                 |
-| **vector\_storage**   | `str`       | Storage type for embedding vectors. Supported types: `NanoVectorDBStorage`,`PGVectorStorage`,`MilvusVectorDBStorage`,`ChromaVectorDBStorage`,`FaissVectorDBStorage`,`MongoVectorDBStorage`,`QdrantVectorDBStorage` | `NanoVectorDBStorage`                         |
-| **graph\_storage**    | `str`       | Storage type for graph edges and nodes. Supported types: `NetworkXStorage`,`Neo4JStorage`,`PGGraphStorage`,`AGEStorage`                                                                     | `NetworkXStorage`                               |
-| **doc\_status\_storage** | `str`       | Storage type for documents process status. Supported types: `JsonDocStatusStorage`,`PGDocStatusStorage`,`MongoDocStatusStorage`                                                               | `JsonDocStatusStorage`                          |
-| **chunk\_token\_size** | `int`       | Maximum token size per chunk when splitting documents                                                                                                                                       | `1200`                                          |
-| **chunk\_overlap\_token\_size** | `int`  | Overlap token size between two chunks when splitting documents                                                                                                                             | `100`                                           |
-| **tokenizer**         | `Tokenizer` | The function used to convert text into tokens (numbers) and back using .encode() and .decode() functions following `TokenizerInterface` protocol. If you don't specify one, it will use the default Tiktoken tokenizer. | `TiktokenTokenizer`                             |
-| **tiktoken\_model\_name** | `str`    | If you're using the default Tiktoken tokenizer, this is the name of the specific Tiktoken model to use. This setting is ignored if you provide your own tokenizer.                             | `gpt-4o-mini`                                   |
-| **entity\_extract\_max\_gleaning** | `int` | Number of loops in the entity extraction process, appending history messages                                                                                                         | `1`                                             |
-| **node\_embedding\_algorithm** | `str` | Algorithm for node embedding (currently not used)                                                                                                                                        | `node2vec`                                      |
-| **node2vec\_params**    | `dict`      | Parameters for node embedding                                                                                                                                                               | `{"dimensions": 1536,"num_walks": 10,"walk_length": 40,"window_size": 2,"iterations": 3,"random_seed": 3,}` |
-| **embedding\_func**   | `EmbeddingFunc` | Function to generate embedding vectors from text                                                                                                                                              | `openai_embed`                                  |
-| **embedding\_batch\_num** | `int`    | Maximum batch size for embedding processes (multiple texts sent per batch)                                                                                                                  | `32`                                            |
-| **embedding\_func\_max\_async** | `int` | Maximum number of concurrent asynchronous embedding processes                                                                                                                           | `16`                                            |
-| **llm\_model\_func**    | `callable`  | Function for LLM generation                                                                                                                                                                 | `gpt_4o_mini_complete`                          |
-| **llm\_model\_name**    | `str`       | LLM model name for generation                                                                                                                                                               | `meta-llama/Llama-3.2-1B-Instruct`               |
-| **summary\_context\_size** | `int`    | Maximum tokens send to LLM to generate summaries for entity relation merging                                                                                                              | `10000`（configured by env var SUMMARY_CONTEXT_SIZE) |
-| **summary\_max\_tokens** | `int`      | Maximum token size for entity/relation description                                                                                                                                            | `500`（configured by env var SUMMARY_MAX_TOKENS) |
-| **llm\_model\_max\_async** | `int`    | Maximum number of concurrent asynchronous LLM processes                                                                                                                                     | `4`（default value changed by env var MAX_ASYNC) |
-| **llm\_model\_kwargs**    | `dict`      | Additional parameters for LLM generation                                                                                                                                                      |                                                 |
-| **vector\_db\_storage\_cls\_kwargs** | `dict` | Additional parameters for vector database, like setting the threshold for nodes and relations retrieval                                                                          | cosine\_better\_than\_threshold: 0.2（default value changed by env var COSINE_THRESHOLD) |
-| **enable\_llm\_cache**    | `bool`      | If `TRUE`, stores LLM results in cache; repeated prompts return cached responses                                                                                                         | `TRUE`                                          |
-| **enable\_llm\_cache\_for\_entity\_extract** | `bool` | If `TRUE`, stores LLM results in cache for entity extraction; Good for beginners to debug your application                                                                      | `TRUE`                                          |
-| **addon\_params**       | `dict`      | Additional parameters, e.g., `{"language": "Simplified Chinese", "entity_types": ["organization", "person", "location", "event"]}`: sets example limit, entiy/relation extraction output language | language: English`                              |
-| **embedding\_cache\_config** | `dict` | Configuration for question-answer caching. Contains three parameters: `enabled`: Boolean value to enable/disable cache lookup functionality. When enabled, the system will check cached responses before generating new answers. `similarity_threshold`: Float value (0-1), similarity threshold. When a new question's similarity with a cached question exceeds this threshold, the cached answer will be returned directly without calling the LLM. `use_llm_check`: Boolean value to enable/disable LLM similarity verification. When enabled, LLM will be used as a secondary check to verify the similarity between questions before returning cached answers. | Default: `{"enabled": False, "similarity_threshold": 0.95, "use_llm_check": False}` |
+| **Parameter** | **Type** | **Explanation** | **Default** |
+|--------------|----------|-----------------|-------------|
+| **working_dir** | `str` | Directory where the cache will be stored | `lightrag_cache+timestamp` |
+| **workspace** | str | Workspace name for data isolation between different LightRAG Instances |  |
+| **kv_storage** | `str` | Storage type for documents and text chunks. Supported types: `JsonKVStorage`,`PGKVStorage`,`RedisKVStorage`,`MongoKVStorage` | `JsonKVStorage` |
+| **vector_storage** | `str` | Storage type for embedding vectors. Supported types: `NanoVectorDBStorage`,`PGVectorStorage`,`MilvusVectorDBStorage`,`ChromaVectorDBStorage`,`FaissVectorDBStorage`,`MongoVectorDBStorage`,`QdrantVectorDBStorage` | `NanoVectorDBStorage` |
+| **graph_storage** | `str` | Storage type for graph edges and nodes. Supported types: `NetworkXStorage`,`Neo4JStorage`,`PGGraphStorage`,`AGEStorage` | `NetworkXStorage` |
+| **doc_status_storage** | `str` | Storage type for documents process status. Supported types: `JsonDocStatusStorage`,`PGDocStatusStorage`,`MongoDocStatusStorage` | `JsonDocStatusStorage` |
+| **chunk_token_size** | `int` | Maximum token size per chunk when splitting documents | `1200` |
+| **chunk_overlap_token_size** | `int` | Overlap token size between two chunks when splitting documents | `100` |
+| **tokenizer** | `Tokenizer` | The function used to convert text into tokens (numbers) and back using .encode() and .decode() functions following `TokenizerInterface` protocol. If you don't specify one, it will use the default Tiktoken tokenizer. | `TiktokenTokenizer` |
+| **tiktoken_model_name** | `str` | If you're using the default Tiktoken tokenizer, this is the name of the specific Tiktoken model to use. This setting is ignored if you provide your own tokenizer. | `gpt-4o-mini` |
+| **entity_extract_max_gleaning** | `int` | Number of loops in the entity extraction process, appending history messages | `1` |
+| **node_embedding_algorithm** | `str` | Algorithm for node embedding (currently not used) | `node2vec` |
+| **node2vec_params** | `dict` | Parameters for node embedding | `{"dimensions": 1536,"num_walks": 10,"walk_length": 40,"window_size": 2,"iterations": 3,"random_seed": 3,}` |
+| **embedding_func** | `EmbeddingFunc` | Function to generate embedding vectors from text | `openai_embed` |
+| **embedding_batch_num** | `int` | Maximum batch size for embedding processes (multiple texts sent per batch) | `32` |
+| **embedding_func_max_async** | `int` | Maximum number of concurrent asynchronous embedding processes | `16` |
+| **llm_model_func** | `callable` | Function for LLM generation | `gpt_4o_mini_complete` |
+| **llm_model_name** | `str` | LLM model name for generation | `meta-llama/Llama-3.2-1B-Instruct` |
+| **summary_context_size** | `int` | Maximum tokens send to LLM to generate summaries for entity relation merging | `10000`（configured by env var SUMMARY_CONTEXT_SIZE) |
+| **summary_max_tokens** | `int` | Maximum token size for entity/relation description | `500`（configured by env var SUMMARY_MAX_TOKENS) |
+| **llm_model_max_async** | `int` | Maximum number of concurrent asynchronous LLM processes | `4`（default value changed by env var MAX_ASYNC) |
+| **llm_model_kwargs** | `dict` | Additional parameters for LLM generation | |
+| **vector_db_storage_cls_kwargs** | `dict` | Additional parameters for vector database, like setting the threshold for nodes and relations retrieval | cosine_better_than_threshold: 0.2（default value changed by env var COSINE_THRESHOLD) |
+| **enable_llm_cache** | `bool` | If `TRUE`, stores LLM results in cache; repeated prompts return cached responses | `TRUE` |
+| **enable_llm_cache_for_entity_extract** | `bool` | If `TRUE`, stores LLM results in cache for entity extraction; Good for beginners to debug your application | `TRUE` |
+| **addon_params** | `dict` | Additional parameters, e.g., `{"language": "Simplified Chinese", "entity_types": ["organization", "person", "location", "event"]}`: sets example limit, entiy/relation extraction output language | language: English` |
+| **embedding_cache_config** | `dict` | Configuration for question-answer caching. Contains three parameters: `enabled`: Boolean value to enable/disable cache lookup functionality. When enabled, the system will check cached responses before generating new answers. `similarity_threshold`: Float value (0-1), similarity threshold. When a new question's similarity with a cached question exceeds this threshold, the cached answer will be returned directly without calling the LLM. `use_llm_check`: Boolean value to enable/disable LLM similarity verification. When enabled, LLM will be used as a secondary check to verify the similarity between questions before returning cached answers. | Default: `{"enabled": False, "similarity_threshold": 0.95, "use_llm_check": False}` |
 
 </details>
 
@@ -380,7 +387,7 @@ class QueryParam:
     """
 ```
 
->   default value of Top\_k can be change by environment  variables  TOP\_K.
+> default value of Top\_k can be change by environment  variables  TOP_K.
 
 ### LLM and Embedding Injection
 
@@ -489,43 +496,51 @@ In order for LightRAG to work context should be at least 32k tokens. By default 
 
 *   **Increasing the `num_ctx` parameter in Modelfile**
 
-    1.  Pull the model:
+1.  Pull the model:
 
-        ```bash
-        ollama pull qwen2
-        ```
+```bash
+ollama pull qwen2
+```
 
-    2.  Display the model file:
+2.  Display the model file:
 
-        ```bash
-        ollama show --modelfile qwen2 > Modelfile
-        ```
+```bash
+ollama show --modelfile qwen2 > Modelfile
+```
 
-    3.  Edit the Modelfile by adding the following line:
+3.  Edit the Modelfile by adding the following line:
 
-        ```bash
-        PARAMETER num_ctx 32768
-        ```
+```bash
+PARAMETER num_ctx 32768
+```
 
-    4.  Create the modified model:
+4.  Create the modified model:
 
-        ```bash
-        ollama create -f Modelfile qwen2m
-        ```
+```bash
+ollama create -f Modelfile qwen2m
+```
 
 *   **Setup `num_ctx` via Ollama API**
 
-    Tiy can use `llm_model_kwargs` param to configure ollama:
+Tiy can use `llm_model_kwargs` param to configure ollama:
 
-    ```python
-    rag = LightRAG(
-        working_dir=WORKING_DIR,
-        llm_model_func=ollama_model_complete,  # Use Ollama model for text generation
-        llm_model_name='your_model_name', # Your model name
-        llm_model_kwargs={"options": {"num_ctx": 32768}},
-        # Use Ollama embedding function
-        embedding_func=EmbeddingFunc(
-            embedding_dim=768,
-            func=lambda texts: ollama_embed(
-                texts,
-                embed_model="nomic-embed-text
+```python
+rag = LightRAG(
+    working_dir=WORKING_DIR,
+    llm_model_func=ollama_model_complete,  # Use Ollama model for text generation
+    llm_model_name='your_model_name', # Your model name
+    llm_model_kwargs={"options": {"num_ctx": 32768}},
+    # Use Ollama embedding function
+    embedding_func=EmbeddingFunc(
+        embedding_dim=768,
+        func=lambda texts: ollama_embed(
+            texts,
+            embed_model="nomic-embed-text"
+        )
+    ),
+)
+```
+
+*   **Low RAM GPUs**
+
+In order to run this experiment on low RAM GPU you should select small model and tune context window (increasing context increase memory consumption). For example, running this ollama example on repurposed mining GPU with 6Gb of RAM required to set context size to 26k while using `gemma2:2b`. It was able to find 1

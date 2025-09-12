@@ -1,14 +1,9 @@
-<p align="center">
-  <img src="https://github.com/1Panel-dev/maxkb/assets/52996290/c0694996-0eed-40d8-b369-322bf2a380bf" alt="MaxKB" width="300" />
-</p>
+<p align="center"><img src= "https://github.com/1Panel-dev/maxkb/assets/52996290/c0694996-0eed-40d8-b369-322bf2a380bf" alt="MaxKB" width="300" /></p>
 
-<h1 align="center">MaxKB: Open-Source Platform for Enterprise-Grade AI Agents</h1>
+<h1 align="center">MaxKB: Build Powerful Enterprise-Grade AI Agents</h1>
 
-**MaxKB empowers you to build powerful AI agents for intelligent automation and enhanced knowledge management, all with an open-source platform.**
+<p align="center">Unlock the potential of your data with MaxKB, an open-source platform designed for building intelligent, enterprise-ready AI agents.</p>
 
-<p align="center">
-  <a href="https://trendshift.io/repositories/9113" target="_blank"><img src="https://trendshift.io/api/badge/repositories/9113" alt="1Panel-dev%2FMaxKB | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-</p>
 <p align="center">
   <a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text"><img src="https://img.shields.io/github/license/1Panel-dev/maxkb?color=%231890FF" alt="License: GPL v3"></a>
   <a href="https://github.com/1Panel-dev/maxkb/releases/latest"><img src="https://img.shields.io/github/v/release/1Panel-dev/maxkb" alt="Latest release"></a>
@@ -16,28 +11,34 @@
   <a href="https://hub.docker.com/r/1panel/maxkb"><img src="https://img.shields.io/docker/pulls/1panel/maxkb?label=downloads" alt="Downloads"></a><br/>
   [<a href="/README_CN.md">中文(简体)</a>] | [<a href="/README.md">English</a>]
 </p>
+
 <hr/>
+
+**MaxKB (Max Knowledge Brain)** is an open-source platform that empowers you to create advanced AI agents for enterprise applications. It combines Retrieval-Augmented Generation (RAG) pipelines with robust workflows and powerful tool-use capabilities.  Perfect for intelligent customer service, corporate knowledge bases, research, and education.  Find the original repository [here](https://github.com/1Panel-dev/MaxKB).
 
 ## Key Features
 
-MaxKB provides a comprehensive platform for building and deploying AI agents tailored for enterprise use cases. Here's what makes MaxKB stand out:
+*   **RAG Pipeline:**
+    *   Directly upload documents or automatically crawl online resources.
+    *   Automatic text splitting and vectorization for enhanced accuracy.
+    *   Reduce hallucinations in large language models (LLMs).
+*   **Agentic Workflow:**
+    *   A powerful workflow engine for orchestrating AI processes.
+    *   Extensive function library and MCP tool-use support.
+    *   Enable complex business scenario automation.
+*   **Seamless Integration:**
+    *   Rapid, zero-coding integration with third-party systems.
+    *   Quickly add intelligent Q&A capabilities to existing platforms.
+    *   Improve user satisfaction with enhanced interactions.
+*   **Model Agnostic:**
+    *   Supports a wide range of LLMs, including private and public models.
+    *   Compatible with models like DeepSeek, Llama, Qwen, OpenAI, Claude, and Gemini.
+*   **Multi-Modal Support:**
+    *   Native support for text, image, audio, and video input and output.
 
-*   **RAG Pipeline Integration:** Seamlessly integrates Retrieval-Augmented Generation (RAG) pipelines, supporting direct document uploads and web crawling. Features automated text splitting and vectorization to minimize large language model (LLM) hallucinations for superior Q&A experiences.
-*   **Agentic Workflow Engine:** Equipped with a robust workflow engine, function libraries, and Multi-tool use (MCP) capabilities, enabling orchestration of complex AI processes to meet diverse business requirements.
-*   **Easy Integration:** Zero-code integration with third-party business systems, quickly equipping existing systems with intelligent Q&A capabilities to boost user satisfaction.
-*   **Model Agnostic Support:** Supports various LLMs, including private models (e.g., DeepSeek, Llama, Qwen) and public models (e.g., OpenAI, Claude, Gemini), offering flexibility in model selection.
-*   **Multimodal Support:** Native support for text, image, audio, and video inputs and outputs, enriching interaction capabilities.
+## Quick Start (Docker)
 
-## Use Cases
-
-*   **Intelligent Customer Service:** Automate and improve customer interactions.
-*   **Corporate Internal Knowledge Bases:** Create intelligent internal search and knowledge retrieval systems.
-*   **Academic Research:** Facilitate research with advanced AI tools.
-*   **Education:** Develop AI-powered educational applications.
-
-## Quick Start with Docker
-
-Get started with MaxKB quickly using Docker:
+Get started with MaxKB using Docker:
 
 ```bash
 docker run -d --name=maxkb --restart=always -p 8080:8080 -v ~/.maxkb:/opt/maxkb 1panel/maxkb
@@ -45,10 +46,10 @@ docker run -d --name=maxkb --restart=always -p 8080:8080 -v ~/.maxkb:/opt/maxkb 
 
 Access the MaxKB web interface at `http://your_server_ip:8080` using the following default credentials:
 
-*   **Username:** admin
-*   **Password:** MaxKB@123..
+*   Username: `admin`
+*   Password: `MaxKB@123..`
 
-**Chinese users** experiencing Docker image pull issues can refer to the [offline installation documentation](https://maxkb.cn/docs/v2/installation/offline_installtion/) for alternative installation methods.
+*For Chinese users facing Docker image pull issues, please refer to the [offline installation documentation](https://maxkb.cn/docs/v2/installation/offline_installtion/).*
 
 ## Screenshots
 
@@ -65,10 +66,10 @@ Access the MaxKB web interface at `http://your_server_ip:8080` using the followi
 
 ## Technical Stack
 
-*   **Frontend:** [Vue.js](https://vuejs.org/)
-*   **Backend:** [Python / Django](https://www.djangoproject.com/)
-*   **LLM Framework:** [LangChain](https://www.langchain.com/)
-*   **Database:** [PostgreSQL + pgvector](https://www.postgresql.org/)
+*   Frontend: [Vue.js](https://vuejs.org/)
+*   Backend: [Python / Django](https://www.djangoproject.com/)
+*   LLM Framework: [LangChain](https://www.langchain.com/)
+*   Database: [PostgreSQL + pgvector](https://www.postgresql.org/)
 
 ## Star History
 
@@ -76,6 +77,8 @@ Access the MaxKB web interface at `http://your_server_ip:8080` using the followi
 
 ## License
 
-MaxKB is licensed under the [GNU General Public License version 3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html).
+Licensed under The GNU General Public License version 3 (GPLv3).  You can find the license at:
 
-[Visit the MaxKB GitHub Repository](https://github.com/1Panel-dev/MaxKB)
+<https://www.gnu.org/licenses/gpl-3.0.html>
+
+---

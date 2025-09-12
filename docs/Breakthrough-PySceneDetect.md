@@ -1,119 +1,64 @@
-<!-- PySceneDetect Logo -->
-![PySceneDetect](https://raw.githubusercontent.com/Breakthrough/PySceneDetect/main/website/pages/img/pyscenedetect_logo_small.png)
-
 # PySceneDetect: Powerful Video Cut Detection and Analysis
 
-Detect scene changes and analyze video content effortlessly with PySceneDetect, a versatile Python tool.  ([See the original repo](https://github.com/Breakthrough/PySceneDetect))
+[![PySceneDetect Logo](https://raw.githubusercontent.com/Breakthrough/PySceneDetect/main/website/pages/img/pyscenedetect_logo_small.png)](https://github.com/Breakthrough/PySceneDetect)
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/Breakthrough/PySceneDetect/build.yml)](https://github.com/Breakthrough/PySceneDetect/actions)
-[![PyPI Status](https://img.shields.io/pypi/status/scenedetect.svg)](https://pypi.python.org/pypi/scenedetect/)
-[![PyPI Version](https://img.shields.io/pypi/v/scenedetect?color=blue)](https://pypi.python.org/pypi/scenedetect/)
-[![PyPI License](https://img.shields.io/pypi/l/scenedetect.svg)](https://scenedetect.com/copyright/)
+**PySceneDetect** is a robust and versatile Python library designed for automatic scene detection in videos, offering a suite of tools for video analysis and processing.
 
-**Latest Release:** v0.6.7 (August 24, 2025)
+[View the original repository on GitHub](https://github.com/Breakthrough/PySceneDetect)
 
-## Key Features
+**Key Features:**
 
-*   **Scene Detection:** Automatically identify scene changes in videos using various detection algorithms.
-*   **Video Splitting:**  Split videos into individual scenes, supporting ffmpeg and mkvmerge.
-*   **Frame Extraction:** Save key frames from each detected scene.
-*   **Python API:** Integrate scene detection seamlessly into your Python workflows.
-*   **Command-Line Interface (CLI):** Easy-to-use CLI for quick video analysis and processing.
-*   **Adaptive Detection:** Handles fast camera movement effectively.
-*   **Fade Detection:**  Detects fade-in and fade-out events.
-*   **Highly Configurable:** Customize detection algorithms and output formats.
-*   **Benchmark:** Detailed performance evaluation of different detection methods.
+*   **Accurate Scene Detection:** Uses advanced algorithms to identify scene changes (cuts, fades, dissolves) in videos.
+*   **Command-Line Interface (CLI):** Provides a simple and efficient CLI for easy video processing and analysis.
+*   **Python API:** Offers a flexible Python API for seamless integration into custom workflows and applications.
+*   **Multiple Detection Algorithms:** Supports various detection methods, including content-aware detection, adaptive detection, and threshold-based detection.
+*   **Video Splitting:** Integrates with `ffmpeg` (and `mkvmerge`) to automatically split videos into individual scenes.
+*   **Frame Extraction:** Allows saving of key frames from scene changes for visual analysis.
+*   **Highly Configurable:**  Offers extensive configuration options to tailor scene detection to specific video content and requirements.
+*   **Comprehensive Documentation:** Includes thorough documentation covering the application and Python API.
 
-## Quick Install
-
-Install PySceneDetect with optional OpenCV support:
+**Quick Install:**
 
 ```bash
 pip install scenedetect[opencv] --upgrade
 ```
 
-Requires `ffmpeg` or `mkvmerge` for video splitting. Windows users can find pre-built installers on the [download page](https://scenedetect.com/download/).
+*Requires ffmpeg/mkvmerge for video splitting support. Windows builds (MSI installer/portable ZIP) can be found on [the download page](https://scenedetect.com/download/).*
 
-## Quick Start - Command Line
+**Getting Started:**
 
-Split a video into scenes using `ffmpeg`:
+**Command Line Example (Split video):**
 
 ```bash
 scenedetect -i video.mp4 split-video
 ```
 
-Save images from each cut:
-
-```bash
-scenedetect -i video.mp4 save-images
-```
-
-Skip the first 10 seconds of the video:
-
-```bash
-scenedetect -i video.mp4 time -s 10s
-```
-
-Explore more CLI examples in the [documentation](https://www.scenedetect.com/docs/latest/cli.html).
-
-## Quick Start - Python API
-
-Detect scenes in a video using the Python API:
+**Python API Example (Detect scenes):**
 
 ```python
 from scenedetect import detect, ContentDetector
 scene_list = detect('my_video.mp4', ContentDetector())
 ```
 
-`scene_list` contains the start and end times of each detected scene.  You can iterate through the scenes:
+**Resources:**
 
-```python
-from scenedetect import detect, ContentDetector
-scene_list = detect('my_video.mp4', ContentDetector())
-for i, scene in enumerate(scene_list):
-    print('    Scene %2d: Start %s / Frame %d, End %s / Frame %d' % (
-        i+1,
-        scene[0].get_timecode(), scene[0].frame_num,
-        scene[1].get_timecode(), scene[1].frame_num,))
-```
-
-Split the video into scenes:
-
-```python
-from scenedetect import detect, ContentDetector, split_video_ffmpeg
-scene_list = detect('my_video.mp4', ContentDetector())
-split_video_ffmpeg('my_video.mp4', scene_list)
-```
-
-For more advanced API usage, see the [documentation](https://www.scenedetect.com/docs/latest/api.html).
-
-## Benchmarks
-
-Evaluate the performance of different detectors in terms of accuracy and speed.  See the [benchmark report](benchmark/README.md) for details.
-
-## Documentation and Resources
-
-*   [Documentation](https://www.scenedetect.com/docs/) (Application and Python API)
-*   [CLI Example](https://www.scenedetect.com/cli/)
-*   [Config File](https://www.scenedetect.com/docs/0.6.4/cli/config_file.html)
+*   **Website:** [scenedetect.com](https://www.scenedetect.com)
+*   **Documentation:** [scenedetect.com/docs/](https://www.scenedetect.com/docs/)
+*   **CLI Quickstart:** [scenedetect.com/cli/](https://www.scenedetect.com/cli/)
 *   **Discord:** https://discord.gg/H83HbJngk7
+*   **Benchmark Report:** [benchmark/README.md](benchmark/README.md)
 
-## Contributing & Support
+**Help & Contributing:**
 
-Report bugs, request features, and contribute to the project via the [Issue Tracker](https://github.com/Breakthrough/PySceneDetect/issues).
-Pull requests are welcome!  PySceneDetect is BSD 3-Clause licensed.
+*   **Issue Tracker:** [GitHub Issues](https://github.com/Breakthrough/PySceneDetect/issues)
+*   **Pull Requests:** Welcome and encouraged!
+*   **Discord Server:**  https://discord.gg/H83HbJngk7
+*   **Website:** [http://www.bcastell.com/about/](http://www.bcastell.com/about/)
 
-For help, join the [Discord Server](https://discord.gg/H83HbJngk7), submit an issue [on GitHub](https://github.com/Breakthrough/PySceneDetect/issues), or contact the author via [the website](http://www.bcastell.com/about/).
-
-## Code Signing
-
-This program uses free code signing provided by [SignPath.io](https://signpath.io?utm_source=foundation&utm_medium=github&utm_campaign=PySceneDetect), and a free code signing certificate by the [SignPath Foundation](https://signpath.org?utm_source=foundation&utm_medium=github&utm_campaign=PySceneDetect).
-
-## License
+**License:**
 
 BSD-3-Clause; see [`LICENSE`](LICENSE) and [`THIRD-PARTY.md`](THIRD-PARTY.md) for details.
 
-----------------------------------------------------------
+**Code Signing:**
 
-Copyright (C) 2014-2024 Brandon Castellano.
-All rights reserved.
+This program uses free code signing provided by [SignPath.io](https://signpath.io?utm_source=foundation&utm_medium=github&utm_campaign=PySceneDetect), and a free code signing certificate by the [SignPath Foundation](https://signpath.org?utm_source=foundation&utm_medium=github&utm_campaign=PySceneDetect)

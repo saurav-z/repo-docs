@@ -1,22 +1,22 @@
-# yt-fts: Supercharge Your YouTube Research with Full-Text Search
+# yt-fts: Unleash the Power of YouTube Video Search
 
-**Quickly search and analyze YouTube video transcripts using a powerful command-line tool.** ([View on GitHub](https://github.com/NotJoeMartinez/yt-fts))
+Tired of endless scrolling? **yt-fts** is a powerful command-line tool that lets you full-text search YouTube video transcripts, turning the vast library of YouTube content into an easily searchable database.  [Check out the original repo](https://github.com/NotJoeMartinez/yt-fts).
 
-[![yt-fts Demo](https://github.com/NotJoeMartinez/yt-fts/assets/39905973/6ffd8962-d060-490f-9e73-9ab179402f14)](https://github.com/NotJoeMartinez/yt-fts/assets/39905973/6ffd8962-d060-490f-9e73-9ab179402f14)
+[![yt-fts Demo](https://github.com/NotJoeMartinez/yt-fts/assets/39905973/6ffd8962-d060-490f-9e73-9ab179402f14)](https://github.com/NotJoeMartinez/yt-fts)
 
 **Key Features:**
 
-*   **Full-Text Search:**  Find specific keywords and phrases within YouTube video transcripts.
-*   **Semantic Search:** Leverage AI-powered semantic search using OpenAI or Gemini embeddings for more relevant results.
-*   **Time-Stamped Results:** Get direct links to the exact moments in videos where your search terms appear.
-*   **Channel & Playlist Support:** Download and search transcripts from entire channels or playlists.
-*   **LLM Integration:**  Use LLMs to engage in a chat bot and get question-specific results for a channel.
-*   **Video Summarization:** Generate concise summaries of YouTube video transcripts.
-*   **Advanced Search Syntax:** Utilize SQLite's Enhanced Query Syntax for complex searches (AND, OR, wildcards).
-*   **Flexible Export Options:** Export search results to CSV and transcripts to TXT or VTT formats.
-*   **Easy Installation:** Simple `pip install yt-fts` installation.
+*   **Full-Text Search:** Quickly find specific keywords or phrases within YouTube video transcripts using the command line.
+*   **Semantic Search:** Leverage the power of AI with OpenAI or Gemini embeddings to understand the context of your search queries.
+*   **Time-Stamped Results:** Get precise timestamps for each search result, linking directly to the relevant video segments.
+*   **Flexible Data Management:** Download, update, list, and delete YouTube channel data with ease.
+*   **Advanced Search Syntax:** Utilize SQLite's Enhanced Query Syntax for powerful search capabilities.
+*   **LLM Integration:** Interact with a chatbot using search results as context.
+*   **Video Summarization:** Generate concise summaries of YouTube videos directly from their transcripts.
 
-## Installation
+## Getting Started
+
+### Installation
 
 Install `yt-fts` using pip:
 
@@ -26,74 +26,65 @@ pip install yt-fts
 
 ## Commands
 
-### `download`
+### Download
 
-Download subtitles for a channel or playlist.
+Download video transcripts for a channel or playlist and store them in the local database.
 
 ```bash
 yt-fts download --jobs 5 "https://www.youtube.com/@3blue1brown"
-yt-fts download --cookies-from-browser firefox "https://www.youtube.com/@3blue1brown"
-
-# Download playlist
-yt-fts download --playlist "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
 ```
 
 **Options:**
 
-*   `-p, --playlist`: Download all videos from a playlist
-*   `-l, --language`: Language of the subtitles to download (default: en)
-*   `-j, --jobs`: Number of parallel download jobs (default: 8, recommended: 4-16)
-*   `--cookies-from-browser`: Browser to extract cookies from (chrome, firefox, etc.)
+*   `-p, --playlist`: Download all videos from a playlist.
+*   `-l, --language`: Specify the subtitle language (default: `en`).
+*   `-j, --jobs`: Set the number of parallel download jobs (default: `8`, recommended: `4-16`).
+*   `--cookies-from-browser`: Use cookies from your browser (e.g., `firefox`) to handle potential sign-in requests.
 
-### `diagnose`
+### Diagnose
 
-Diagnose and troubleshoot download issues.
+Diagnose and troubleshoot potential download issues.
 
 ```bash
 yt-fts diagnose
-yt-fts diagnose --test-url "https://www.youtube.com/watch?v=dQw4w9WgXcQ" --cookies-from-browser firefox
 ```
 
 **Options:**
 
-*   `-u, --test-url`: URL to test with (default: https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-*   `--cookies-from-browser`: Browser to extract cookies from
-*   `-j, --jobs`: Number of parallel download jobs to test with (default: 8)
+*   `-u, --test-url`: Test a specific video URL.
+*   `--cookies-from-browser`: Use cookies from your browser.
+*   `-j, --jobs`: Set the number of parallel download jobs.
 
-### `list`
+### List
 
-List saved channels, videos, and transcripts.
+List stored channels, videos, and transcripts.
 
 ```bash
 yt-fts list
-yt-fts list --channel "3Blue1Brown"
-yt-fts list --transcript "dQw4w9WgXcQ"
-yt-fts list --library
 ```
 
 **Options:**
 
-*   `-t, --transcript`: Show transcript for a video
-*   `-c, --channel`: Show list of videos for a channel
-*   `-l, --library`: Show list of channels in library
+*   `-t, --transcript`: Show the transcript for a specific video.
+*   `-c, --channel`: Show a list of videos for a specific channel.
+*   `-l, --library`: Show a list of all channels in the library.
 
-### `update`
+### Update
 
-Update subtitles for existing channels in your library.
+Update the transcripts for existing channels in your library.
 
 ```bash
-yt-fts update
 yt-fts update --channel "3Blue1Brown" --jobs 5
 ```
 
 **Options:**
 
-*   `-c, --channel`: The name or id of the channel to update
-*   `-l, --language`: Language of the subtitles to download (default: en)
-*   `-j, --jobs`: Number of parallel download jobs (default: 8)
-*   `--cookies-from-browser`: Browser to extract cookies from
+*   `-c, --channel`: The name or ID of the channel to update.
+*   `-l, --language`: Specify the subtitle language (default: `en`).
+*   `-j, --jobs`: Set the number of parallel download jobs.
+*   `--cookies-from-browser`: Use cookies from your browser.
 
-### `delete`
+### Delete
 
 Delete a channel and all its associated data.
 
@@ -103,85 +94,85 @@ yt-fts delete --channel "3Blue1Brown"
 
 **Options:**
 
-*   `-c, --channel`: The name or id of the channel to delete (required)
+*   `-c, --channel`: The name or ID of the channel to delete (required).
 
-### `export`
+### Export
 
-Export transcripts for a channel.
+Export transcripts to local files.
 
 ```bash
 yt-fts export --channel "3Blue1Brown" --format txt
-yt-fts export --channel "3Blue1Brown" --format vtt
 ```
 
 **Options:**
 
-*   `-c, --channel`: The name or id of the channel to export transcripts for (required)
-*   `-f, --format`: The format to export transcripts to. Supported formats: txt, vtt (default: txt)
+*   `-c, --channel`: The name or ID of the channel to export transcripts for (required).
+*   `-f, --format`: The format to export transcripts to (txt, vtt; default: txt).
 
-### `search` (Full Text Search)
+### Search
 
-Perform a full-text search within your saved channels.
+Full-text search within saved transcripts.
 
 ```bash
-yt-fts search "[search query]"
-yt-fts search "[search query]" --channel "[channel name or id]"
-yt-fts search "[search query]" --video-id "[video id]"
-yt-fts search "[search query]" --limit "[number of results]" --channel "[channel name or id]"
-yt-fts search "[search query]" --export --channel "[channel name or id]"
+yt-fts search "keyword or phrase" --channel "channel name or id"
 ```
 
 **Options:**
 
-*   `-c, --channel`: The name or id of the channel to search in
-*   `-v, --video-id`: The id of the video to search in
-*   `-l, --limit`: Number of results to return (default: 10)
-*   `-e, --export`: Export search results to a CSV file
+*   `-c, --channel`: Search within a specific channel.
+*   `-v, --video-id`: Search within a specific video.
+*   `-l, --limit`: Limit the number of results.
+*   `-e, --export`: Export results to a CSV file.
 
-**Advanced Search Syntax:** Utilize SQLite's [Enhanced Query Syntax](https://www.sqlite.org/fts3.html#full_text_index_queries) for complex queries (e.g., "knife AND Malibu", "rea\* kni\* Mali\*").
+**Advanced Search Syntax:**
 
-### `embeddings`
-
-Generate embeddings for semantic search, requires an OpenAI or Gemini API key.
+Use [SQLite's Enhanced Query Syntax](https://www.sqlite.org/fts3.html#full_text_index_queries) for advanced search options, including AND, OR, and wildcard searches.
 
 ```bash
-# Set your API key:
+yt-fts search "knife AND Malibu" --channel "The Tim Dillon Show"
+yt-fts search "rea* kni* Mali*" --channel "The Tim Dillon Show"
+```
+
+### Semantic Search and RAG
+
+Enable semantic search for more intelligent results by leveraging AI embeddings.
+
+1.  **Set your API Key:** Set either `OPENAI_API_KEY` or `GEMINI_API_KEY` environment variables, or use the `--api-key` flag with the commands.
+
+```bash
 # export OPENAI_API_KEY="[yourOpenAIKey]"
-# or
-# export GEMINI_API_KEY="[yourGeminiKey]"
-
 yt-fts embeddings --channel "3Blue1Brown"
-yt-fts embeddings --interval 60 --channel "3Blue1Brown"
 ```
 
-**Options:**
-
-*   `-c, --channel`: The name or id of the channel to generate embeddings for
-*   `--api-key`: API key (if not provided, reads from OPENAI_API_KEY or GEMINI_API_KEY environment variable)
-*   `-i, --interval`: Interval in seconds to split the transcripts into chunks (default: 30)
-
-### `vsearch` (Semantic Search)
-
-Perform semantic search using OpenAI or Gemini embeddings.
+2.  **Run the Embeddings command**
 
 ```bash
-yt-fts vsearch "[search query]" --channel "[channel name or id]"
-yt-fts vsearch "[search query]" --video-id "[video id]"
-yt-fts vsearch "[search query]" --limit "[number of results]" --channel "[channel name or id]"
-yt-fts vsearch "[search query]" --export --channel "[channel name or id]"
+yt-fts embeddings --channel "3Blue1Brown"
+```
+
+*   `-c, --channel`: The name or ID of the channel to generate embeddings for.
+*   `--api-key`: API key (if not provided, reads from OPENAI_API_KEY or GEMINI_API_KEY environment variable).
+*   `-i, --interval`: Interval in seconds to split the transcripts into chunks (default: 30).
+
+### Vsearch (Semantic Search)
+
+Perform semantic (vector) searches based on your embeddings.
+
+```bash
+yt-fts vsearch "relevant topic" --channel "3Blue1Brown"
 ```
 
 **Options:**
 
-*   `-c, --channel`: The name or id of the channel to search in
-*   `-v, --video-id`: The id of the video to search in
-*   `-l, --limit`: Number of results to return (default: 10)
-*   `-e, --export`: Export search results to a CSV file
-*   `--api-key`: API key (if not provided, reads from OPENAI_API_KEY or GEMINI_API_KEY environment variable)
+*   `-c, --channel`: Search within a specific channel.
+*   `-v, --video-id`: Search within a specific video.
+*   `-l, --limit`: Limit the number of results.
+*   `-e, --export`: Export results to a CSV file.
+*   `--api-key`: API key (if not provided, reads from OPENAI_API_KEY or GEMINI_API_KEY environment variable).
 
-### `llm` (Chat Bot)
+### LLM (Chat Bot)
 
-Engage in a conversational search session with a channel. Requires semantic search to be enabled.
+Interact with a chatbot, using the semantic search results of your initial prompt as context to answer questions.
 
 ```bash
 yt-fts llm --channel "3Blue1Brown" "How does back propagation work?"
@@ -189,60 +180,53 @@ yt-fts llm --channel "3Blue1Brown" "How does back propagation work?"
 
 **Options:**
 
-*   `-c, --channel`: The name or id of the channel to use (required)
-*   `--api-key`: API key (if not provided, reads from OPENAI_API_KEY or GEMINI_API_KEY environment variable)
+*   `-c, --channel`: The name or ID of the channel to use (required).
+*   `--api-key`: API key (if not provided, reads from OPENAI_API_KEY or GEMINI_API_KEY environment variable).
 
-### `summarize`
+### Summarize
 
-Summarize a YouTube video transcript.
+Summarize YouTube video transcripts.
 
 ```bash
 yt-fts summarize "https://www.youtube.com/watch?v=9-Jl0dxWQs8"
-yt-fts summarize "9-Jl0dxWQs8"
-yt-fts summarize --model "gpt-3.5-turbo" "9-Jl0dxWQs8"
 ```
 
 **Options:**
 
-*   `--model, -m`: Model to use in summary
-*   `--api-key`: API key (if not provided, reads from OPENAI_API_KEY or GEMINI_API_KEY environment variable)
+*   `--model, -m`: Model to use for summarization.
+*   `--api-key`: API key (if not provided, reads from OPENAI_API_KEY or GEMINI_API_KEY environment variable).
 
-### `config`
+### Config
 
-Show configuration settings.
+Display configuration settings, including database and chroma paths.
 
 ```bash
 yt-fts config
 ```
 
-## How To
+## Example Usage
 
-**Export Search Results:**
+*   **Export search results:**
 
-Use the `--export` flag with `search` or `vsearch` to export results to a CSV file.
+    ```bash
+    yt-fts search "life in the big city" --export
+    yt-fts vsearch "existing in large metropolaten center" --export
+    ```
 
-```bash
-yt-fts search "life in the big city" --export
-yt-fts vsearch "existing in large metropolaten center" --export
-```
+*   **Delete a channel:**
 
-**Delete a Channel:**
+    ```bash
+    yt-fts delete --channel "3Blue1Brown"
+    ```
 
-Use the `delete` command.
+*   **Update a channel:**
 
-```bash
-yt-fts delete --channel "3Blue1Brown"
-```
+    ```bash
+    yt-fts update --channel "3Blue1Brown"
+    ```
 
-**Update a Channel:**
+*   **Export a channel's transcript:**
 
-Use the `update` command.
-
-```bash
-yt-fts update --channel "3Blue1Brown"
-```
-
-**Export all of a channel's transcript:**
-
-```bash
-yt-fts export --channel "[id/name]" --format "[vtt/txt]"
+    ```bash
+    yt-fts export --channel "[id/name]" --format "[vtt/txt]"
+    ```

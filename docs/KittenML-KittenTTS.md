@@ -1,17 +1,13 @@
-# KittenTTS: Realistic Text-to-Speech, Lightweight & Open Source
+# Kitten TTS: Realistic Text-to-Speech (TTS) for Everyone
 
-**Transform text into lifelike speech with KittenTTS, a cutting-edge, open-source text-to-speech model designed for unparalleled quality and efficiency.**
+**Bring your text to life with Kitten TTS, a lightweight, open-source text-to-speech model that delivers high-quality voice synthesis with minimal resources.** (See the original repository [here](https://github.com/KittenML/KittenTTS).)
 
-**[View the original repository on GitHub](https://github.com/KittenML/KittenTTS)**
+## Key Features
 
-KittenTTS offers a revolutionary approach to text-to-speech, providing high-quality voice synthesis in a compact, CPU-optimized package.
-
-## Key Features:
-
-*   **Ultra-Lightweight:** Model size under 25MB, perfect for resource-constrained environments.
-*   **CPU-Optimized:** Runs efficiently without a GPU, making it accessible on any device.
-*   **High-Quality Voices:** Enjoy a selection of premium voice options for diverse applications.
-*   **Fast Inference:** Optimized for real-time speech synthesis, delivering immediate results.
+*   **Ultra-Lightweight:** Model size is under 25MB, making it ideal for deployment on various devices.
+*   **CPU-Optimized:** Runs efficiently without a GPU, enabling accessibility on a wide range of hardware.
+*   **High-Quality Voices:** Offers several premium voice options for diverse and engaging audio output.
+*   **Fast Inference:** Optimized for real-time speech synthesis, providing a seamless user experience.
 
 ## Getting Started: Quick Installation & Usage
 
@@ -29,7 +25,7 @@ m = KittenTTS("KittenML/kitten-tts-nano-0.2")
 
 audio = m.generate("This high quality TTS model works without a GPU", voice='expr-voice-2-f' )
 
-# available_voices : [  'expr-voice-2-m', 'expr-voice-2-f', 'expr-voice-3-m', 'expr-voice-3-f',  'expr-voice-4-m', 'expr-voice-4-f', 'expr-voice-5-m', 'expr-voice-5-f' ]
+# Available voices: ['expr-voice-2-m', 'expr-voice-2-f', 'expr-voice-3-m', 'expr-voice-3-f', 'expr-voice-4-m', 'expr-voice-4-f', 'expr-voice-5-m', 'expr-voice-5-f']
 
 # Save the audio
 import soundfile as sf
@@ -38,7 +34,7 @@ sf.write('output.wav', audio, 24000)
 
 ## System Requirements
 
-KittenTTS is designed to run virtually everywhere, requiring minimal system resources.
+Kitten TTS is designed to be highly compatible and works on virtually any system.
 
 ## Future Development Roadmap
 
@@ -47,8 +43,8 @@ KittenTTS is designed to run virtually everywhere, requiring minimal system reso
 *   [ ] Release mobile SDK
 *   [ ] Release web version
 
-## Join the Community
+## Support & Community
 
-*   **[Join our Discord](https://discord.com/invite/VJ86W4SURW)**
-*   **For custom support - fill this form:** [Custom Support Form](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
-*   **Email the creators with any questions:** info@stellonlabs.com
+*   Join our Discord community: [Discord Link](https://discord.com/invite/VJ86W4SURW)
+*   For custom support, please fill out this form: [Support Form](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
+*   Contact the creators: info@stellonlabs.com

@@ -1,9 +1,9 @@
 <div align="center">
 
-# SkyRL: The Full-Stack RL Library for Training LLMs for Real-World Tasks
+# SkyRL: Train LLMs for Complex Tasks with a Full-Stack Reinforcement Learning Library
 
-[![🌐 NovaSky](https://img.shields.io/badge/-Visit%20Website-5865F2?style=for-the-badge)](https://novasky-ai.github.io/)
-[![Github](https://img.shields.io/badge/SkyRL-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/NovaSky-AI/SkyRL)
+[![🌐 NovaSky Website](https://img.shields.io/badge/-Visit%20Website-5865F2?style=for-the-badge)](https://novasky-ai.github.io/)
+[![GitHub](https://img.shields.io/badge/SkyRL-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/NovaSky-AI/SkyRL)
 [![Twitter](https://img.shields.io/badge/NovaSky-white?style=for-the-badge&logo=X&logoColor=000&color=000&labelColor=white)](https://x.com/NovaSkyAI)
 [![Hugging Face Collection](https://img.shields.io/badge/NovaSky-fcd022?style=for-the-badge&logo=huggingface&logoColor=000&labelColor)](https://huggingface.co/NovaSky-AI)
 [![Discord](https://img.shields.io/badge/NovaSky-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/cJF2JUaaAN)
@@ -11,32 +11,33 @@
 
 </div>
 
-SkyRL empowers researchers and developers to build and train advanced reinforcement learning (RL) agents for Large Language Models (LLMs) capable of handling real-world, long-horizon tasks.
+**SkyRL empowers researchers and developers to build and train advanced Large Language Models (LLMs) for complex, real-world tasks using a comprehensive, modular Reinforcement Learning (RL) framework.** This library provides the tools you need to train long-horizon agents capable of interacting with real-world environments.
 
 ## Key Features
 
-*   **Modular Architecture:** SkyRL is designed with a modular approach, allowing for flexibility and customization in your RL projects.
-*   **`skyagent`**:  Our agent layer for training long-horizon, real-world agents, including code for [SkyRL-v0](https://novasky-ai.notion.site/skyrl-v0).
-*   **`skyrl-train`**: A modular, performant training framework for RL, offering a robust foundation for your RL training needs.
-*   **`skyrl-gym`**:  A Gymnasium of tool-use environments, including math, coding, search, and SQL environments built on the Gymnasium API.
-*   **Focus on Long-Horizon Tasks:** Optimized for training agents to solve complex, multi-turn tasks in real-world environments.
-*   **Performance and Scalability:** Designed for efficient training and scaling of RL models.
+*   **Modular Architecture:** SkyRL is designed with modularity in mind, enabling easy customization and experimentation with different components.
+
+*   **`skyagent`**:  Provides an agent layer for training long-horizon, real-world agents, including code for [SkyRL-v0](https://novasky-ai.notion.site/skyrl-v0).
+
+*   **`skyrl-train`**:  A high-performance, modular training framework for RL, ideal for scaling your projects.
+
+*   **`skyrl-gym`**:  A comprehensive Gymnasium of tool-use environments, including math, coding, search and SQL environments, providing a versatile platform for LLM agent training and evaluation.
 
 ## Getting Started
 
-Ready to dive in? Check out these resources:
+Ready to get started? Jump into the action with these quick links:
 
-*   **[Development Guide](https://skyrl.readthedocs.io/en/latest/getting-started/development.html):** Learn how to develop with SkyRL.
-*   **`skyrl-train`:** Start using, modifying, or building on top of the SkyRL training stack. See our [quickstart docs](https://skyrl.readthedocs.io/en/latest/index.html).
-*   **`skyrl-gym`:** Integrate your own tasks using the familiar Gymnasium API.
-*   **`skyagent`:** Optimize and scale pipelines for multi-turn tool use LLMs on long-horizon, real-environment tasks.
+*   **Development Guide:**  Explore our [Development Guide](https://skyrl.readthedocs.io/en/latest/getting-started/development.html) for a smooth onboarding experience.
+*   **Model Training:** Utilize `skyrl-train` for your model training needs. Explore our [quickstart docs](https://skyrl.readthedocs.io/en/latest/index.html) for immediate impact.
+*   **Environment Building:** Leverage `skyrl-gym` to build environments within the familiar Gymnasium API.
+*   **Agentic Pipelines:** Leverage `skyagent` for optimizing and scaling pipelines for multi-turn tool use LLMs on long-horizon, real-environment tasks.
 
 ## News
 
-*   **June 26, 2025:** Released SkyRL-v0.1: A highly-modular, performant RL training framework. [[Blog](https://novasky-ai.notion.site/skyrl-v01)]
-*   **June 26, 2025:** Released SkyRL-Gym: A library of RL environments for LLMs implemented with the Gymnasium API. [[Blog](https://novasky-ai.notion.site/skyrl-v01)]
-*   **May 20, 2025:** Released SkyRL-SQL: a multi-turn RL training pipeline for Text-to-SQL, with SkyRL-SQL-7B — a model trained on just 653 samples that outperforms both GPT-4o and o4-mini!
-*   **May 06, 2025:** Released SkyRL-v0: our open RL training pipeline for multi-turn tool use LLMs, optimized for long-horizon, real-environment tasks like SWE-Bench!
+*   **[2025/06/26]** 🎉 SkyRL-v0.1 Released: A highly-modular, performant RL training framework.  [[Blog](https://novasky-ai.notion.site/skyrl-v01)]
+*   **[2025/06/26]** 🎉 SkyRL-Gym Released: A library of RL environments for LLMs implemented with the Gymnasium API. [[Blog](https://novasky-ai.notion.site/skyrl-v01)]
+*   **[2025/05/20]** 🎉 SkyRL-SQL Released: A multi-turn RL training pipeline for Text-to-SQL, with SkyRL-SQL-7B exceeding GPT-4o and o4-mini performance!
+*   **[2025/05/06]** 🎉 SkyRL-v0 Released: Our open RL training pipeline for multi-turn tool use LLMs, optimized for long-horizon, real-environment tasks.
 
 ## Links
 
@@ -44,15 +45,15 @@ Ready to dive in? Check out these resources:
 *   📜 [SkyRL-SQL Blog Post](https://novasky-ai.notion.site/skyrl-sql)
 *   📜 [SkyRL-v0 Blog Post](https://novasky-ai.notion.site/skyrl-v0)
 
-## Acknowledgement
+## Acknowledgements
 
-This work is done at [**Berkeley Sky Computing Lab**](https://sky.cs.berkeley.edu/) in collaboration with [**Anyscale**](https://www.anyscale.com/), with generous compute support from [**Anyscale**](https://www.anyscale.com/), [**Databricks**](https://www.databricks.com/), [**NVIDIA**](https://developer.nvidia.com/brev), [**Lambda Labs**](https://lambdalabs.com/service/gpu-cloud?srsltid=AfmBOop5FnmEFTkavVtdZDsLWvHWNg6peXtat-OXJ9MW5GMNsk756PE5), and [**AMD**](https://www.amd.com/en.html).
+This work is done at [**Berkeley Sky Computing Lab**](https://sky.cs.berkeley.edu/) in collaboration with [**Anyscale**](https://www.anyscale.com/), with generous compute support from [**Anyscale**](https://www.anyscale.com/), [**Databricks**](https://www.databricks.com/), [**NVIDIA**](https://developer.nvidia.com/brev), [**Lambda Labs**](https://lambdalabs.com/service/gpu-cloud?srsltid=AfmBOop5FnmEFTkavVtdZDsLWvHWNg6peXtat-OXJ9MW5GMNsk756PE5), and [**AMD**](https://www.amd.com/en.html).
 
 We adopt many lessons and code from several great projects such as [veRL](https://github.com/volcengine/verl), [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF), [Search-R1](https://github.com/PeterGriffinJin/Search-R1), [OpenReasonerZero](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero), and [NeMo-RL](https://github.com/NVIDIA-NeMo/RL). We appreciate each of these teams and their contributions to open-source research!
 
 ## Citation
 
-If you find the work in this repository helpful, please consider citing:
+If you use this library, please cite our work using the following BibTex entries:
 
 ```bibtex
 @misc{cao2025skyrl,
@@ -79,16 +80,20 @@ If you find the work in this repository helpful, please consider citing:
 }
 ```
 
-[**Back to Top**](https://github.com/NovaSky-AI/SkyRL)
-```
-Key improvements and explanations:
+---
 
-*   **SEO-Optimized Title and Description:**  The title and first sentence now include relevant keywords like "Full-Stack RL," "LLMs," and "Real-World Tasks," increasing search engine visibility.
-*   **Clear Headings:**  Uses headings for better readability and organization.
-*   **Bulleted Key Features:**  Highlights the most important features with bullet points for easy scanning.
-*   **Concise Summary:**  Provides a quick overview of the library's purpose and benefits.
-*   **Call to Action:** Encourages users to explore resources.
-*   **Internal Links:** Added internal links for quicker navigation.
-*   **Cleaned Up Presentation:** Used markdown formatting for consistent look.
-*   **Back to Top Link:** Added a link back to the top of the README for easy navigation.
-*   **Keyword Density:** The use of relevant terms ("RL," "LLM," "training," "agents," etc.) is balanced throughout the document to improve search ranking without being excessive.
+[Back to Top](#skyrl-train-llms-for-complex-tasks-with-a-full-stack-reinforcement-learning-library)
+```
+
+Key improvements and SEO considerations:
+
+*   **Clear Title & Hook:**  The title is more descriptive, and the first sentence acts as a clear hook, explaining what SkyRL does.
+*   **Keyword Optimization:**  Keywords like "Reinforcement Learning," "LLMs," "Large Language Models," and "RL framework" are used naturally throughout the text.
+*   **Structured Headings:**  Uses clear headings and subheadings for readability and SEO.
+*   **Bulleted Key Features:**  Provides a concise overview of the core functionalities.
+*   **Concise Summaries:**  Replaces lengthy paragraphs with brief summaries of each component.
+*   **Call to Action:** The "Getting Started" section encourages user engagement.
+*   **Internal Linking:** Links to relevant documentation within the README and to the original repository.
+*   **"Back to Top" Link:** Added to the bottom for easy navigation.
+*   **Overall Readability:** Enhanced formatting and spacing.
+*   **Focus on User Benefits:** Highlights *what* SkyRL allows users to do, rather than just *what it is*.
