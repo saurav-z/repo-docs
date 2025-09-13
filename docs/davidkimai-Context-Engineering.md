@@ -1,40 +1,42 @@
-# Context Engineering: Unlock the Full Potential of LLMs
+# Context Engineering: Unlock the Power of LLMs by Mastering the Context Window
 
-**Tired of basic prompts? Dive into Context Engineering, the art and science of crafting the perfect information payload to guide Large Language Models (LLMs) to peak performance.** Explore the cutting edge of LLM interaction, and learn how to optimize the entire context window to create powerful, intelligent systems.  [Explore the original repository here](https://github.com/davidkimai/Context-Engineering).
+**Context Engineering is the practice of orchestrating the complete information payload delivered to a Large Language Model (LLM) at inference time to achieve optimal results.** This repository provides a first-principles approach to context design, optimization, and advanced techniques. Explore practical examples and insights to elevate your work beyond prompt engineering and unlock the true potential of LLMs.
+
+[![Star History Chart](https://api.star-history.com/svg?repos=davidkimai/Context-Engineering&type=Date)](https://www.star-history.com/#davidkimai/Context-Engineering&Date)
+
+[View the original repository on GitHub](https://github.com/davidkimai/Context-Engineering)
 
 ## Key Features
 
-*   **Comprehensive Approach:** A first-principles guide to move beyond prompt engineering and master context design, orchestration, and optimization.
-*   **Biological Metaphor:** Understand the progression from atoms (single prompts) to complex neural systems, employing a conceptual structure.
-*   **Hands-on Learning:**  Includes practical examples, runnable code, and visual aids to solidify understanding.
-*   **Cutting-Edge Research:** Incorporates the latest findings from leading AI research (ICML, IBM, NeurIPS, etc.) to keep you at the forefront.
-*   **Community Focused:** Join the vibrant community to contribute, collaborate, and learn together.
+*   **Comprehensive Learning Path:** A structured approach covering foundations, system implementation, integration, and advanced concepts.
+*   **First-Principles Approach:** Learn from the ground up, focusing on fundamental principles and biological metaphors for understanding.
+*   **Practical Examples:**  Hands-on guides, code samples, and real-world project implementations to solidify your understanding.
+*   **Visualizations:** Benefit from diagrams and visual aids to simplify complex concepts and promote intuitive learning.
+*   **Community Driven:** Join the community and contribute to the continuous development of context engineering techniques.
+*   **Deep Dive into Research:** Comprehensive survey and summaries of cutting-edge research papers in context engineering, covering the latest advancements and findings.
 
-## What is Context Engineering?
+## Core Concepts Covered
 
-Context Engineering is a rapidly evolving discipline that moves beyond prompt engineering, focusing on how to structure and enrich the entire context window of an LLM to improve performance.
+*   **Token Budget Optimization:** Maximize efficiency and reduce costs by carefully managing token usage.
+*   **Few-Shot Learning:** Leverage the power of examples to guide and instruct LLMs effectively.
+*   **Memory Systems:** Implement stateful interactions and maintain context across multiple turns.
+*   **Retrieval Augmentation:** Enhance accuracy by incorporating relevant external knowledge.
+*   **Control Flow:** Break down complex tasks into manageable steps using modular design.
+*   **Context Pruning:** Improve performance by removing irrelevant information from the context window.
+*   **Metrics & Evaluation:**  Learn to measure and optimize context engineering strategies.
+*   **Cognitive Tools & Prompt Programming:** Build custom tools and templates.
+*   **Neural Field Theory:** Model context as a dynamic neural field.
+*   **Symbolic Mechanisms:** Explore architectures enabling higher-order reasoning.
+*   **Quantum Semantics:** Design context systems leveraging superpositional techniques
 
-> "Context is not just the single prompt users send to an LLM. Context is the complete information payload provided to a LLM at inference time, encompassing all structured informational components that the model needs to plausibly accomplish a given task." – [Definition from A Systematic Analysis of Over 1400 Research Papers](https://arxiv.org/pdf/2507.13334)
+## Getting Started Quickly
 
-## Core Concepts
+1.  **Explore the Foundations:** Begin by reading `00_foundations/01_atoms_prompting.md` (5 minutes).
+2.  **Run a Minimal Example:** Experiment with a working example using `10_guides_zero_to_hero/01_min_prompt.py`.
+3.  **Explore Templates:** Customize by copying and pasting from `20_templates/minimal_context.yaml`.
+4.  **Dive into an Implementation:** Review a full implementation in `30_examples/00_toy_chatbot/`.
 
-The repository provides a roadmap to mastering the following:
-
-*   **Token Budget:**  Optimize token usage to reduce cost and improve speed.
-*   **Few-Shot Learning:** Use examples to boost LLM understanding and performance.
-*   **Memory Systems:** Implement stateful interactions for coherent conversations and complex tasks.
-*   **Retrieval Augmentation:**  Provide context by fetching relevant documents.
-*   **Control Flow:** Organize complex tasks into manageable steps.
-*   **Context Pruning:**  Refine context by removing irrelevant information.
-*   **Metrics & Evaluation:**  Measure the impact of context design choices.
-*   **Cognitive Tools & Prompt Programming:** Learn to build custom tools and templates.
-*   **Neural Field Theory:** Use the context as a dynamic neural field to facilitate iterative context updating.
-*   **Symbolic Mechanisms:** Build smarter systems using symbolic architectures.
-*   **Quantum Semantics:** Design context systems leveraging superpositional techniques.
-
-## Learning Path
-
-The learning path is structured to guide you through the core concepts:
+## Learning Path Structure
 
 ```
 ┌─────────────────┐     ┌──────────────────┐     ┌────────────────┐
@@ -65,24 +67,31 @@ The learning path is structured to guide you through the core concepts:
                          └─────────────────────┘
 ```
 
-## Research-Driven Insights
+## Research Highlights & Key Insights
 
-This repository highlights the latest research, including:
+This repository synthesizes and operationalizes cutting-edge research findings in context engineering, drawing insights from leading institutions such as ICML, IBM, NeurIPS, and more.
 
-*   [MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents - Singapore-MIT June 2025](https://www.arxiv.org/pdf/2506.15841)
-*   [Eliciting Reasoning in Language Models with Cognitive Tools - IBM Zurich June 2025](https://www.arxiv.org/pdf/2506.12115)
-*   [Emergent Symbolic Mechanisms Support Abstract Reasoning in Large Language Models - ICML Princeton June 18, 2025](https://openreview.net/forum?id=y1SnRPDWx4)
+### Memory + Reasoning: MEM1
 
-## How to Get Started
+*   MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents
+*   By merging memory and reasoning, agents become more efficient, and can handle longer tasks.
+*   Instead of piling up endless context, MEM1 compresses each interaction into a compact “internal state.”
 
-1.  **Foundations:** Start by reading `00_foundations/01_atoms_prompting.md` (5 min).
-2.  **Hands-on:** Run `10_guides_zero_to_hero/01_min_prompt.py` (Jupyter Notebook).
-3.  **Templates:** Explore `20_templates/minimal_context.yaml`.
-4.  **Examples:** Review `30_examples/00_toy_chatbot/` for a complete implementation.
+### Cognitive Tools
+
+*   Eliciting Reasoning in Language Models with Cognitive Tools (IBM Zurich)
+*   "Cognitive tools" break down problems using modular prompt templates.
+*   Instead of relying on a single, big prompt, the model calls specialized prompt templates.
+
+### Emergent Symbols
+
+*   Emergent Symbolic Mechanisms Support Abstract Reasoning in Large Language Models (ICML Princeton)
+*   LLMs develop inner symbolic logic circuits.
+*   Large language models create internal, flexible representations that let them generalize to new problems and analogies.
 
 ## Contributing
 
-Contributions are welcome! See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details.
+We welcome contributions!  Review [`CONTRIBUTING.md`](.github/CONTRIBUTING.md) for details.
 
 ## License
 
@@ -101,6 +110,7 @@ Contributions are welcome! See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for de
 ```
 
 ## Acknowledgements
+> I've been looking forward to this being conceptualized and formalized as there wasn't a prior established field. Prompt engineering receives quite the stigma and doesn't quite cover what most researchers and I do.
 
-*   [Andrej Karpathy](https://x.com/karpathy/status/1937902205765607626) for inspiring the name and concept.
-*   The open source community.
+- [Andrej Karpathy](https://x.com/karpathy/status/1937902205765607626) for coining "context engineering" and inspiring this repo 
+- All contributors and the open source community

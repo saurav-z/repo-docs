@@ -13,25 +13,25 @@
 ![Latest version](https://img.shields.io/docker/v/authentik/server?sort=semver&style=for-the-badge)
 [![](https://img.shields.io/badge/Help%20translate-transifex-blue?style=for-the-badge)](https://www.transifex.com/authentik/authentik/)
 
-# authentik: Open-Source Identity Provider (IdP) for Secure SSO
+# authentik: Open-Source Identity Provider (IdP) for Modern SSO
 
-authentik is a powerful, open-source Identity Provider (IdP) that provides secure Single Sign-On (SSO) for modern applications, ideal for self-hosting and replacing existing IdPs like Okta, Auth0, and Entra ID. Check out the [original repo](https://github.com/goauthentik/authentik) for the full details.
+authentik is a powerful, open-source Identity Provider (IdP) that simplifies modern Single Sign-On (SSO) for organizations of all sizes, offering secure access management and streamlined user authentication.  [Explore the authentik project on GitHub](https://github.com/goauthentik/authentik).
 
 ## Key Features
 
-*   **Comprehensive Protocol Support:** Offers robust support for SAML, OAuth2/OIDC, LDAP, and RADIUS, ensuring compatibility with a wide range of applications.
-*   **Self-Hosting Flexibility:** Designed for easy self-hosting, accommodating setups from small labs to large production clusters.
-*   **Enterprise-Grade Capabilities:** The enterprise offering provides advanced features for organizations seeking robust, large-scale identity management.
-*   **Multiple Deployment Options:** Supports Docker Compose, Kubernetes (Helm Chart), AWS CloudFormation, and DigitalOcean Marketplace for flexible installation.
+*   **Comprehensive Protocol Support:** Supports industry-standard protocols including SAML, OAuth2/OIDC, LDAP, and RADIUS, providing flexibility and broad compatibility.
+*   **Self-Hosting Capabilities:** Designed for self-hosting, allowing for complete control over your identity infrastructure, ideal for various environments from small labs to large production clusters.
+*   **Enterprise-Grade Solution:**  Offers an [enterprise offering](https://goauthentik.io/pricing) for robust, large-scale identity management, capable of replacing existing IdPs like Okta, Auth0, Entra ID, and Ping Identity.
+*   **Flexible Deployment Options:** Provides multiple installation methods including Docker Compose, Kubernetes (Helm Chart), AWS CloudFormation, and DigitalOcean Marketplace for easy setup and scaling.
 
 ## Installation
 
 Choose the installation method that best suits your needs:
 
-*   **Docker Compose:** Recommended for small setups and testing.  Refer to the [documentation](https://docs.goauthentik.io/docs/install-config/install/docker-compose/).
-*   **Kubernetes (Helm Chart):** Recommended for larger deployments. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/kubernetes/) and the Helm chart [repository](https://github.com/goauthentik/helm).
-*   **AWS CloudFormation:** Deploy on AWS using official templates.  Consult the [documentation](https://docs.goauthentik.io/docs/install-config/install/aws/).
-*   **DigitalOcean Marketplace:**  One-click deployment is available via the official Marketplace app. See the [app listing](https://marketplace.digitalocean.com/apps/authentik).
+*   **Docker Compose:** Recommended for small/test setups. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/docker-compose/).
+*   **Kubernetes (Helm Chart):** Recommended for larger setups. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/kubernetes/) and the Helm chart [repository](https://github.com/goauthentik/helm).
+*   **AWS CloudFormation:** Deploy on AWS using our official templates. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/aws/).
+*   **DigitalOcean Marketplace:** One-click deployment via the official Marketplace app. See the [app listing](https://marketplace.digitalocean.com/apps/authentik).
 
 ## Screenshots
 
@@ -42,29 +42,18 @@ Choose the installation method that best suits your needs:
 
 ## Development and Contributions
 
-For information on setting up local build environments, testing your contributions, and our contribution process, see the [Developer Documentation](https://docs.goauthentik.io/docs/developer-docs/).
+Contribute to the project! See the [Developer Documentation](https://docs.goauthentik.io/docs/developer-docs/) for information about setting up local build environments, testing your contributions, and our contribution process.
 
 ## Security
 
-Review our security practices in [SECURITY.md](SECURITY.md).
+See the [SECURITY.md](SECURITY.md) file for details about security considerations.
 
 ## Adoption
 
-If you are using authentik, we'd love to hear your story. Share your experience and potentially feature your logo! Email us at [hello@goauthentik.io](mailto:hello@goauthentik.io) or open a GitHub Issue/PR.
+We'd love to hear your story and feature your logo! If you are using authentik, email us at [hello@goauthentik.io](mailto:hello@goauthentik.io) or open a GitHub Issue/PR!
 
 ## License
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?style=for-the-badge)](website/LICENSE)
 [![authentik EE License](https://img.shields.io/badge/License-EE-orange?style=for-the-badge)](authentik/enterprise/LICENSE)
-```
-Key improvements and SEO considerations:
-
-*   **Clear Headline:**  Uses a clear, concise headline.
-*   **Hook:** A single-sentence opening to capture attention, emphasizing the core value proposition.
-*   **Keywords:** Includes relevant keywords like "Identity Provider," "IdP," "SSO," "SAML," "OAuth2," "self-hosting," "open-source," and names of competitors like Okta, Auth0, and Entra ID.
-*   **Bulleted Key Features:**  Highlights the most important features in an easy-to-scan format.
-*   **Installation Section:**  Organized with clear headings and links.
-*   **Concise Language:**  Avoids unnecessary jargon.
-*   **Call to Action (Adoption):**  Encourages community engagement.
-*   **Link Back to Original Repo:**  Clearly states where to find more details.

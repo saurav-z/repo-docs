@@ -1,6 +1,6 @@
-# CCPlugins: Supercharge Your Claude Code CLI with Enterprise-Grade Development Workflows
+# CCPlugins: Supercharge Your Claude Code CLI with Professional Development Workflows
 
-**Tired of repetitive coding tasks?** CCPlugins extends Claude Code CLI with professional commands, saving developers hours each week. [Explore CCPlugins on GitHub](https://github.com/brennercruvinel/CCPlugins)
+**Tired of repetitive tasks and over-engineered code?** CCPlugins is a suite of curated commands designed to automate your Claude Code CLI and save you valuable development time. ([Original Repo](https://github.com/brennercruvinel/CCPlugins))
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)](https://github.com/brennercruvinel/CCPlugins)
 [![Version](https://img.shields.io/badge/version-2.5.2-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
@@ -9,23 +9,25 @@
 [![Also works with](https://img.shields.io/badge/also%20works%20with-Kimi%20K2-1783ff.svg)](https://github.com/MoonshotAI/Kimi-K2)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
 
-## Key Features:
+## Key Features
 
-*   **Automated Development Workflow:** Streamline your coding process with commands like `/cleanproject`, `/commit`, `/format`, `/scaffold`, `/test`, `/implement`, and `/refactor`.
-*   **Enhanced Code Quality & Security:** Proactively identify and resolve issues with commands like `/review`, `/security-scan`, `/predict-issues`, `/remove-comments`, `/fix-imports`, `/find-todos`, `/create-todos`, and `/fix-todos`.
-*   **Advanced Analysis:** Gain deeper insights into your codebase using commands like `/understand`, `/explain-like-senior`, `/contributing`, and `/make-it-pretty`.
-*   **Project & Session Management:**  Improve workflow efficiency with commands like `/session-start`, `/session-end`, `/docs`, `/todos-to-issues`, and `/undo`.
-*   **Validation & Refinement:** Ensure the quality and completeness of complex commands with validation phases built-in.
-*   **Real-World Benefits:**  Save 4-5 hours per week on professional-grade analysis.
+*   **Automated Workflows:** Streamline common development tasks like code formatting, testing, and commit creation.
+*   **Code Quality & Security:** Enhance code quality with built-in security scanning, code reviews, and intelligent issue prediction.
+*   **Advanced Analysis:** Analyze your entire project architecture and patterns.
+*   **Validation & Refinement:** Complex commands with validation phases to ensure completeness.
+*   **Time-Saving Efficiency:** Save up to 5 hours per week by automating tedious tasks.
+*   **Session Management:** Keep track of your sessions.
 
 ## Installation
 
 ### Quick Install
+
 **Mac/Linux:**
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/brennercruvinel/CCPlugins/main/install.sh | bash
 ```
+
 **Windows/Cross-platform:**
 
 ```bash
@@ -54,75 +56,52 @@ python uninstall.py
 
 ### 🚀 Development Workflow
 
-*   `/cleanproject` - Remove debug artifacts with git safety
-*   `/commit` - Smart conventional commits with analysis
-*   `/format` - Auto-detect and apply project formatter
-*   `/scaffold feature-name` - Generate complete features from patterns
-*   `/test` - Run tests with intelligent failure analysis
-*   `/implement url/path/feature` - Import and adapt code with validation
-*   `/refactor` - Intelligent code restructuring with validation
+```bash
+/cleanproject                    # Remove debug artifacts with git safety
+/commit                          # Smart conventional commits with analysis
+/format                          # Auto-detect and apply project formatter
+/scaffold feature-name           # Generate complete features from patterns
+/test                            # Run tests with intelligent failure analysis
+/implement url/path/feature      # Import and adapt code from any source with validation phase
+/refactor                        # Intelligent code restructuring with validation & de-para mapping
+```
 
 ### 🛡️ Code Quality & Security
 
-*   `/review` - Multi-agent analysis (security, performance, quality, architecture)
-*   `/security-scan` - Vulnerability analysis with extended thinking & remediation tracking
-*   `/predict-issues` - Proactive problem detection with timeline estimates
-*   `/remove-comments` - Clean obvious comments, preserve valuable docs
-*   `/fix-imports` - Repair broken imports after refactoring
-*   `/find-todos` - Locate and organize development tasks
-*   `/create-todos` - Add contextual TODO comments
-*   `/fix-todos` - Intelligently implement TODO fixes
+```bash
+/review                # Multi-agent analysis (security, performance, quality, architecture)
+/security-scan         # Vulnerability analysis with extended thinking & remediation tracking
+/predict-issues        # Proactive problem detection with timeline estimates
+/remove-comments       # Clean obvious comments, preserve valuable docs
+/fix-imports           # Repair broken imports after refactoring
+/find-todos            # Locate and organize development tasks
+/create-todos          # Add contextual TODO comments based on analysis results
+/fix-todos             # Intelligently implement TODO fixes with context
+```
 
 ### 🔍 Advanced Analysis
 
-*   `/understand` - Analyze entire project architecture and patterns
-*   `/explain-like-senior` - Senior-level code explanations with context
-*   `/contributing` - Complete contribution readiness analysis
-*   `/make-it-pretty` - Improve readability without functional changes
+```bash
+/understand            # Analyze entire project architecture and patterns
+/explain-like-senior   # Senior-level code explanations with context
+/contributing          # Complete contribution readiness analysis
+/make-it-pretty        # Improve readability without functional changes
+```
 
 ### 📋 Session & Project Management
 
-*   `/session-start` - Begin documented sessions with CLAUDE.md integration
-*   `/session-end` - Summarize and preserve session context
-*   `/docs` - Smart documentation management and updates
-*   `/todos-to-issues` - Convert code TODOs to GitHub issues
-*   `/undo` - Safe rollback with git checkpoint restore
+```bash
+/session-start         # Begin documented sessions with CLAUDE.md integration
+/session-end           # Summarize and preserve session context
+/docs                  # Smart documentation management and updates
+/todos-to-issues       # Convert code TODOs to GitHub issues
+/undo                  # Safe rollback with git checkpoint restore
+```
 
-##  How It Works
+## Advanced Usage
 
-CCPlugins enhances Claude Code CLI by providing intelligent commands that automate repetitive development tasks. This is achieved through:
-
-*   **Intelligent Instructions:** First-person language and context-aware adaptations.
-*   **Native Tool Integration:** Leveraging Claude Code CLI's native capabilities.
-*   **Safety-First Design:** Automatic git checkpoints before destructive operations.
-*   **Framework Agnostic:** Works with any programming language or stack.
-
-##  Requirements
-
-*   Claude Code CLI
-*   Python 3.6+ (for installer)
-*   Git (for version control commands)
-
-##  Advanced Usage
-
-*   **Creating Custom Commands:**  Create your own commands by adding markdown files to `~/.claude/commands/`.
-*   **Using Arguments:** Commands support arguments via `$ARGUMENTS`.
-*   **CI/CD Integration:** Integrate commands into automated workflows.
-*   **Manual Workflow Integration:** Integrate within development routines.
-
-## Security & Git Instructions
-
-All commands that interact with git include security instructions to prevent AI attribution.
-
-## Contributing
-
-We welcome contributions that help developers save time. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+See the original repo for complete details on [Advanced Usage](https://github.com/brennercruvinel/CCPlugins#advanced-usage), and [Contributing Guidelines](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md).
 
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
-*Built by a developer tired of typing "please act like a senior engineer" in every conversation.*
-
----
-
-**Last Updated:** August 2, 2025 (Based on Anthropic Claude Code CLI documentation v2025.08.01)

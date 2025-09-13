@@ -1,102 +1,107 @@
 <div align="center">
 
-# ⚡️ Flash Linear Attention: Fast, Efficient, and Platform-Agnostic Linear Attention Implementations
+# ⚡️ Flash Linear Attention: Accelerating Sequence Modeling with Triton ⚡️
 
-[![Hugging Face Models](https://img.shields.io/badge/-Models-gray.svg?logo=huggingface&style=flat-square)](https://huggingface.co/fla-hub)  [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/vDaJTmKNcS)
+**Supercharge your sequence models with Flash Linear Attention, offering efficient, platform-agnostic implementations of cutting-edge linear attention mechanisms.**
+
+[![hf_model](https://img.shields.io/badge/-Models-gray.svg?logo=huggingface&style=flat-square)](https://huggingface.co/fla-hub)  [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/vDaJTmKNcS)
 
 </div>
 
-**Flash Linear Attention (FLA) provides a collection of optimized, Triton-based implementations for state-of-the-art linear attention models, enabling faster and more efficient processing of sequential data.**
+This repository provides a collection of high-performance Triton-based implementations for state-of-the-art linear attention models. Our focus is on efficiency and flexibility, enabling faster training and inference for large language models and other sequence-based tasks.  All implementations are written purely in PyTorch and Triton, ensuring platform agnosticism across NVIDIA, AMD, and Intel architectures.  We welcome contributions - see our [original repo](https://github.com/fla-org/flash-linear-attention) for details on how to get involved!
 
-*   [**Key Features**](#key-features)
-*   [**Models**](#models)
-*   [**Installation**](#installation)
-*   [**Usage**](#usage)
-    *   [Token Mixing](#token-mixing)
-    *   [Fused Modules](#fused-modules)
-    *   [Generation](#generation)
-    *   [Hybrid Models](#hybrid-models)
-*   [**Training**](#training)
-*   [**Evaluation**](#evaluation)
-*   [**Benchmarks**](#benchmarks)
-*   [**Citation**](#citation)
-*   [**Star History**](#star-history)
-*   [**Acknowledgments**](#acknowledgments)
-*   [**Contribute**](https://github.com/fla-org/flash-linear-attention)
+## Key Features:
 
-## Key Features
+*   **Platform-Agnostic Performance:** Optimized Triton kernels for superior performance on diverse hardware.
+*   **Cutting-Edge Models:** Implementations of RetNet, GLA, Mamba, RWKV, and many more.
+*   **Fused Modules:** Accelerate training with fused layers like Rotary Embedding, LayerNorm, and Cross Entropy.
+*   **Hybrid Model Support:** Easily integrate standard attention layers into linear attention architectures.
+*   **Hugging Face Compatibility:** Seamless integration with Hugging Face Transformers for easy use and evaluation.
+*   **Flexible Training Framework:** Integrated with [🔥 `flame`](https://github.com/fla-org/flame) for efficient model training.
 
-*   **Platform-Agnostic:** Pure PyTorch and Triton implementations, supporting NVIDIA, AMD, and Intel GPUs.
-*   **Optimized Kernels:** Utilize Triton for efficient and performant linear attention operations.
-*   **Comprehensive Model Support:** Includes implementations for RetNet, GLA, Mamba, RWKV, and many other cutting-edge linear attention architectures, with more added regularly.
-*   **Fused Modules:** Pre-built modules for Rotary Embeddings, Norm Layers, and Cross Entropy for faster training.
-*   **Flexible Hybrid Models:** Easily combine standard and linear attention layers.
-*   **Integration with Hugging Face Transformers:** Seamlessly use and evaluate FLA models with the Hugging Face ecosystem.
+## Updates
+
+Stay informed on the latest developments:
+
+*   **[2025 Updates - See Full News Section Below]**
+    *   **[2025-09]** Integrated GDN into Qwen3-Next.
+    *   **[2025-08]** Added Log-Linear Attention implementation, MoM implementation.
+    *   **[2025-07]** Added MLA implementation, PaTH Attention implementation.
+    *   **[2025-06]** Added MesaNet and Comba implementations.
+    *   **[2025-05]** Added Rodimus&ast; implementation.
+    *   **[2025-04]** Added DeltaProduct and FoX implementations.
+    *   **[2025-03]** Initializer range rolled back to default value.
+    *   **[2025-02]** Added NSA implementations.
+    *   **[2025-01]** Migrating to `torchtitan`-based training framework. Added RWKV7 implementations.
+    *   **[2024-12]** Integrated `flash-bidirectional-attention` to `fla-org`. Added Gated DeltaNet implementation. Officially support kernels with variable-length inputs.
+    *   **[2024-11]** Inputs switched to seq-first format. Flexible training for hybrid models.
+    *   **[2024-10]** 🔥 Announcing `flame`, a minimal and scalable framework for training `fla` models.
+    *   **[2024-09]** Fused linear and cross-entropy layer. Added GSA implementation.
+    *   **[2024-05]** Added DeltaNet implementation. Launched `fla` v0.1.
+    *   **[2023-12]** Launched `fla`.
 
 ## Models
 
-FLA supports a wide variety of linear attention models. Model implementations are listed below and roughly sorted by the timeline of their appearance in FLA.
+This table lists the models currently supported, roughly sorted by integration timeline:
 
-| Year | Venue   | Model                | Paper                                                                                                                                         | Code                                                                                            |                                                                                                       |
-| :--- | :------ | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------: |
-| 2023 |         | RetNet               | [Retentive network: a successor to transformer for large language models](https://arxiv.org/abs/2307.08621)                                   | [official](https://github.com/microsoft/torchscale/tree/main)                                   | [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/multiscale_retention.py) |
-| 2024 | ICML    | GLA                  | [Gated Linear Attention Transformers with Hardware-Efficient Training](https://arxiv.org/abs/2312.06635)                                      | [official](https://github.com/berlino/gated_linear_attention)                                   |         [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/gla.py)          |
-| 2024 | ICML    | Based                | [Simple linear attention language models balance the recall-throughput tradeoff](https://arxiv.org/abs/2402.18668)                            | [official](https://github.com/HazyResearch/based)                                               |        [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/based.py)         |
-| 2024 | ACL     | Rebased              | [Linear Transformers with Learnable Kernel Functions are Better In-Context Models](https://arxiv.org/abs/2402.10644)                          | [official](https://github.com/corl-team/rebased/)                                               |       [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/rebased.py)        |
-| 2024 | NeurIPS | DeltaNet             | [Parallelizing Linear Transformers with Delta Rule  over Sequence Length](https://arxiv.org/abs/2406.06484)                                   | [official](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/delta_net.py) |      [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/delta_net.py)       |
-| 2022 | ACL     | ABC                  | [ABC: Attention with Bounded-memory Control](https://arxiv.org/abs/2110.02488)                                                                |                                                                                                 |         [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/abc.py)          |
-| 2023 | NeurIPS | HGRN                 | [Hierarchically Gated Recurrent Neural Network for Sequence Modeling](https://openreview.net/forum?id=P1TCHxJwLB)                             | [official](https://github.com/OpenNLPLab/HGRN)                                                  |         [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/hgrn.py)         |
-| 2024 | COLM    | HGRN2                | [HGRN2: Gated Linear RNNs with State Expansion](https://arxiv.org/abs/2404.07904)                                                             | [official](https://github.com/OpenNLPLab/HGRN2)                                                 |        [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/hgrn2.py)         |
-| 2024 | COLM    | RWKV6                | [Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence](https://arxiv.org/abs/2404.05892)                                    | [official](https://github.com/RWKV/RWKV-LM)                                                     |        [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/rwkv6.py)         |
-| 2024 |         | LightNet             | [You Only Scan Once: Efficient Multi-dimension Sequential Modeling with LightNet](https://arxiv.org/abs/2405.21022)                           | [official](https://github.com/OpenNLPLab/LightNet)                                              |       [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/lightnet.py)       |
-| 2025 | ICLR    | Samba                | [Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling](https://arxiv.org/abs/2406.07522)                 | [official](https://github.com/microsoft/Samba)                                                  |          [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/models/samba)          |
-| 2024 | ICML    | Mamba2               | [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](https://arxiv.org/abs/2405.21060) | [official](https://github.com/state-spaces/mamba)                                               |         [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/models/mamba2)          |
-| 2024 | NeurIPS | GSA                  | [Gated Slot Attention for Efficient Linear-Time Sequence Modeling](https://arxiv.org/abs/2409.07146)                                          | [official](https://github.com/fla-org/flash-linear-attention/tree/main/fla/models/gsa)          |           [fla](https://github.com/fla-org/flash-linear-attention/tree/main/fla/models/gsa)           |
-| 2025 | ICLR    | Gated DeltaNet       | [Gated Delta Networks: Improving Mamba2 with Delta Rule](https://arxiv.org/abs/2412.06464)                                                    | [official](https://github.com/NVlabs/GatedDeltaNet)                                             |      [fla](https://github.com/fla-org/flash-linear-attention/tree/main/fla/ops/gated_delta_rule)      |
-| 2025 |         | RWKV7                | [RWKV-7 "Goose" with Expressive Dynamic State Evolution](https://arxiv.org/abs/2503.14456)                                                    | [official](https://github.com/BlinkDL/RWKV-LM/tree/main/RWKV-v7)                                |           [fla](https://github.com/fla-org/flash-linear-attention/tree/main/fla/ops/rwkv7)            |
-| 2025 |         | NSA                  | [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](https://arxiv.org/abs/2502.11089)                         |                                                                                                 |            [fla](https://github.com/fla-org/flash-linear-attention/tree/main/fla/ops/nsa)             |
-| 2025 | ICLR    | FoX                  | [Forgetting Transformer: Softmax Attention with a Forget Gate](https://arxiv.org/abs/2503.02130)                                              | [official](https://github.com/zhixuan-lin/forgetting-transformer)                               |      [fla](https://github.com/fla-org/flash-linear-attention/tree/main/fla/ops/forgetting_attn)       |
-| 2025 |         | DeltaProduct         | [DeltaProduct: Improving State-Tracking in Linear RNNs via Householder Products](https://arxiv.org/abs/2502.10297)                            |                                                                                                 |  [fla](https://github.com/fla-org/flash-linear-attention/tree/main/fla/layers/gated_deltaproduct.py)  |
-| 2025 | ICLR    | Rodimus&ast;         | [Rodimus*: Breaking the Accuracy-Efficiency Trade-Off with Efficient Attentions](https://arxiv.org/abs/2410.06577)                            | [official](https://github.com/codefuse-ai/rodimus)                                              |       [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/rodimus.py)        |
-| 2025 |         | MesaNet              | [MesaNet: Sequence Modeling by Locally Optimal Test-Time Training](https://arxiv.org/abs/2506.05233)                                          |                                                                                                 |       [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/mesa_net.py)       |
-| 2025 |         | Comba                | [Comba: Improving Bilinear RNNs with Closed-loop Control](https://arxiv.org/abs/2506.02475)                                                   | [official](https://github.com/AwesomeSeq/Comba-triton)                                          |        [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/comba.py)         |
-| 2025 |         | PaTH                 | [PaTH Attention: Position Encoding via Accumulating Householder Transformations](https://arxiv.org/abs/2505.16381)                            |                                                                                                 |      [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/path_attn.py)       |
-| 2025 |         | MoM                  | [MoM: Linear Sequence Modeling with Mixture-of-Memories](https://arxiv.org/abs/2502.13685)                                                    | [official](https://github.com/OpenSparseLLMs/MoM)                                               |         [fla](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/mom.py)          |
-| 2025 |         | Log-Linear Attention | [Log-Linear Attention](https://arxiv.org/abs/2506.04761)                                                                                      | [official](https://github.com/HanGuo97/log-linear-attention)                                    |      [fla](https://github.com/fla-org/flash-linear-attention/tree/main/fla/ops/log_linear_attn)       |
+| Year | Venue   | Model                | Paper                                                                                                                                         | Code                                                                                            |
+| :--- | :------ | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
+| 2023 |         | RetNet               | [Retentive network: a successor to transformer for large language models](https://arxiv.org/abs/2307.08621)                                   | [official](https://github.com/microsoft/torchscale/tree/main)                                   |
+| 2024 | ICML    | GLA                  | [Gated Linear Attention Transformers with Hardware-Efficient Training](https://arxiv.org/abs/2312.06635)                                      | [official](https://github.com/berlino/gated_linear_attention)                                   |
+| 2024 | ICML    | Based                | [Simple linear attention language models balance the recall-throughput tradeoff](https://arxiv.org/abs/2402.18668)                            | [official](https://github.com/HazyResearch/based)                                               |
+| 2024 | ACL     | Rebased              | [Linear Transformers with Learnable Kernel Functions are Better In-Context Models](https://arxiv.org/abs/2402.10644)                          | [official](https://github.com/corl-team/rebased/)                                               |
+| 2024 | NeurIPS | DeltaNet             | [Parallelizing Linear Transformers with Delta Rule  over Sequence Length](https://arxiv.org/abs/2406.06484)                                   | [official](https://github.com/fla-org/flash-linear-attention/blob/main/fla/layers/delta_net.py) |
+| 2022 | ACL     | ABC                  | [ABC: Attention with Bounded-memory Control](https://arxiv.org/abs/2110.02488)                                                                |                                                                                                 |
+| 2023 | NeurIPS | HGRN                 | [Hierarchically Gated Recurrent Neural Network for Sequence Modeling](https://openreview.net/forum?id=P1TCHxJwLB)                             | [official](https://github.com/OpenNLPLab/HGRN)                                                  |
+| 2024 | COLM    | HGRN2                | [HGRN2: Gated Linear RNNs with State Expansion](https://arxiv.org/abs/2404.07904)                                                             | [official](https://github.com/OpenNLPLab/HGRN2)                                                 |
+| 2024 | COLM    | RWKV6                | [Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence](https://arxiv.org/abs/2404.05892)                                    | [official](https://github.com/RWKV/RWKV-LM)                                                     |
+| 2024 |         | LightNet             | [You Only Scan Once: Efficient Multi-dimension Sequential Modeling with LightNet](https://arxiv.org/abs/2405.21022)                           | [official](https://github.com/OpenNLPLab/LightNet)                                              |
+| 2025 | ICLR    | Samba                | [Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling](https://arxiv.org/abs/2406.07522)                 | [official](https://github.com/microsoft/Samba)                                                  |
+| 2024 | ICML    | Mamba2               | [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](https://arxiv.org/abs/2405.21060) | [official](https://github.com/state-spaces/mamba)                                               |
+| 2024 | NeurIPS | GSA                  | [Gated Slot Attention for Efficient Linear-Time Sequence Modeling](https://arxiv.org/abs/2409.07146)                                          | [official](https://github.com/fla-org/flash-linear-attention/tree/main/fla/models/gsa)          |
+| 2025 | ICLR    | Gated DeltaNet       | [Gated Delta Networks: Improving Mamba2 with Delta Rule](https://arxiv.org/abs/2412.06464)                                                    | [official](https://github.com/NVlabs/GatedDeltaNet)                                             |
+| 2025 |         | RWKV7                | [RWKV-7 "Goose" with Expressive Dynamic State Evolution](https://arxiv.org/abs/2503.14456)                                                    | [official](https://github.com/BlinkDL/RWKV-LM/tree/main/RWKV-v7)                                |
+| 2025 |         | NSA                  | [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](https://arxiv.org/abs/2502.11089)                         |                                                                                                 |
+| 2025 | ICLR    | FoX                  | [Forgetting Transformer: Softmax Attention with a Forget Gate](https://arxiv.org/abs/2503.02130)                                              | [official](https://github.com/zhixuan-lin/forgetting-transformer)                               |
+| 2025 |         | DeltaProduct         | [DeltaProduct: Improving State-Tracking in Linear RNNs via Householder Products](https://arxiv.org/abs/2502.10297)                            |                                                                                                 |
+| 2025 | ICLR    | Rodimus&ast;         | [Rodimus*: Breaking the Accuracy-Efficiency Trade-Off with Efficient Attentions](https://arxiv.org/abs/2410.06577)                            | [official](https://github.com/codefuse-ai/rodimus)                                              |
+| 2025 |         | MesaNet              | [MesaNet: Sequence Modeling by Locally Optimal Test-Time Training](https://arxiv.org/abs/2506.05233)                                          |                                                                                                 |
+| 2025 |         | Comba                | [Comba: Improving Bilinear RNNs with Closed-loop Control](https://arxiv.org/abs/2506.02475)                                                   | [official](https://github.com/AwesomeSeq/Comba-triton)                                          |
+| 2025 |         | PaTH                 | [PaTH Attention: Position Encoding via Accumulating Householder Transformations](https://arxiv.org/abs/2505.16381)                            |                                                                                                 |
+| 2025 |         | MoM                  | [MoM: Linear Sequence Modeling with Mixture-of-Memories](https://arxiv.org/abs/2502.13685)                                                    | [official](https://github.com/OpenSparseLLMs/MoM)                                               |
+| 2025 |         | Log-Linear Attention | [Log-Linear Attention](https://arxiv.org/abs/2506.04761)                                                                                      | [official](https://github.com/HanGuo97/log-linear-attention)                                    |
 
 ## Installation
 
-Ensure you have the necessary dependencies before installing FLA. The provided CI workflows in this repo may be useful for verifying your environment.
-
-**Requirements:**
+Ensure you have the following dependencies installed:
 
 *   [PyTorch](https://pytorch.org/) >= 2.5
-*   [Triton](https://github.com/openai/triton) >=3.0 (or nightly version)
+*   [Triton](https://github.com/openai/triton) >=3.0 (or nightly version, see [FAQs](FAQs.md))
 *   [einops](https://einops.rocks/)
 *   [transformers](https://github.com/huggingface/transformers) >=4.45.0
 *   [datasets](https://github.com/huggingface/datasets) >=3.3.0
 *   [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d) >=1.4.0
 
-**Install with pip:**
+Install `flash-linear-attention` using pip:
 
 ```bash
 pip install flash-linear-attention
 ```
 
-**Install from source for the latest features:**
+To get the latest features and updates, install from source:
 
 ```bash
 pip uninstall flash-linear-attention && pip install -U git+https://github.com/fla-org/flash-linear-attention
 ```
 
-**Manage with submodules (for development):**
+For managing with submodules:
 
 ```bash
 git submodule add https://github.com/fla-org/flash-linear-attention.git 3rdparty/flash-linear-attention
 ln -s 3rdparty/flash-linear-attention/fla fla
 ```
 
-**If using `triton-nightly` and an older `torch` version:**
+If using `triton-nightly` and pre-version `torch`, use:
 
 ```bash
 pip install einops ninja datasets transformers numpy
@@ -107,7 +112,7 @@ pip uninstall flash-linear-attention && pip install -U --no-use-pep517 git+https
 
 ### Token Mixing
 
-Integrate linear attention layers into your models using `fla.layers`. Replace standard multihead attention with FLA implementations:
+Use the provided linear attention layers in `fla.layers` to replace standard attention layers.
 
 ```python
 import torch
@@ -120,7 +125,7 @@ y, *_ = retnet(x)
 print(y.shape)  # Output: torch.Size([32, 2048, 1024])
 ```
 
-For integration with 🤗 Transformers:
+Example of initializing a GLA model from Hugging Face:
 
 ```python
 from fla.models import GLAConfig
@@ -131,21 +136,21 @@ model = AutoModelForCausalLM.from_config(config)
 
 ### Fused Modules
 
-Utilize optimized modules in `fla.modules` for faster training:
+Enhance performance with fused modules:
 
 *   `Rotary Embedding`
-*   `RMSNorm`, `LayerNorm`, `GroupNorm` and their Linear variants
-*   `Norm Layers with Gating` (RMSNorm, LayerNorm, GroupNorm with sigmoid/swish gating)
+*   `RMSNorm`, `LayerNorm`, `GroupNorm` and their linear variants.
+*   `Norm Layers with Gating`
 *   `Cross Entropy`
-*   `Linear Cross Entropy` (fused linear layer and CE, may affect precision, see [Important] note below)
+*   `Linear Cross Entropy`
 *   `Linear KL Divergence`
 
-> **[!IMPORTANT]**
-> The fused `Linear Cross Entropy` is memory efficient but may impact numerical precision.  Disable it in model configuration if encountering instability.
+> [!IMPORTANT]
+> The `fuse_linear_cross_entropy` configuration option controls the use of fused linear cross-entropy loss. This is disabled by default due to potential precision trade-offs.
 
 ### Generation
 
-Generate text with your pretrained FLA models using the 🤗 text generation APIs:
+Generate text after pretraining, using the 🤗 text generation APIs:
 
 ```python
 import fla
@@ -163,7 +168,9 @@ Pretrained models are available on [`fla-hub`](https://huggingface.co/fla-hub).
 
 ### Hybrid Models
 
-Combine linear and standard attention with the `attn` argument in the model config:
+Incorporate standard attention layers into linear attention models using the `attn` argument in the model configuration.
+
+Example:
 
 ```python
 from fla.models import SambaConfig
@@ -180,62 +187,75 @@ config.attn = {
 model = AutoModelForCausalLM.from_config(config)
 ```
 
+No changes are needed for generation with hybrid models.
+
 ## Training
 
-Train FLA models efficiently using the `flame` framework, a minimal framework built on top of `torchtitan`:
-
-*   See the [GLA example](https://github.com/fla-org/flash-linear-attention/blob/main/examples/training.md) for details.
+Use the [🔥 `flame`](https://github.com/fla-org/flame) framework for efficient training. See the [GLA example](https://github.com/fla-org/flash-linear-attention/blob/main/examples/training.md) for details.
 
 ## Evaluation
 
-Evaluate FLA models using the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) library:
+Evaluate models with the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) library.
 
-1.  Install `lm_eval` following their instructions.
-2.  Run evaluation (example):
+1.  Install `lm_eval`.
+2.  Run evaluation:
 
-    ```bash
-    MODEL='fla-hub/gla-1.3B-100B'
-    python -m evals.harness --model hf \
-        --model_args pretrained=$MODEL,dtype=bfloat16 \
-        --tasks wikitext,lambada_openai,piqa,hellaswag,winogrande,arc_easy,arc_challenge,boolq,sciq,copa,openbookqa \
-        --batch_size 64 \
-        --num_fewshot 0 \
-        --device cuda \
-        --show_config
-    ```
-3.  Multi-GPU evaluation with 🤗 `accelerate`:
+```bash
+$ MODEL='fla-hub/gla-1.3B-100B'
+$ python -m evals.harness --model hf \
+    --model_args pretrained=$MODEL,dtype=bfloat16 \
+    --tasks wikitext,lambada_openai,piqa,hellaswag,winogrande,arc_easy,arc_challenge,boolq,sciq,copa,openbookqa \
+    --batch_size 64 \
+    --num_fewshot 0 \
+    --device cuda \
+    --show_config
+```
 
-    ```bash
-    MODEL='fla-hub/gla-1.3B-100B'
-    accelerate launch -m evals.harness --model hf  \
-        --model_args pretrained=$MODEL,dtype=bfloat16,trust_remote_code=True  \
-        --tasks wikitext,lambada_openai,piqa,hellaswag,winogrande,arc_easy,arc_challenge,boolq,sciq,copa,openbookqa \
-        --batch_size 64  \
-        --num_fewshot 0  \
-        --device cuda  \
-        --show_config  \
-        --trust_remote_code
-    ```
-4.  RULER benchmark suite evaluation (for long-context tasks):
+Use accelerate for multi-GPU evaluation:
 
-    ```bash
-    pip install lm_eval["ruler"]
-    accelerate launch -m evals.harness \
-        --output_path $OUTPUT \
-        --tasks niah_single_1,niah_single_2,niah_single_3,niah_multikey_1,niah_multikey_2,niah_multikey_3,niah_multiquery,niah_multivalue,ruler_vt,ruler_cwe,ruler_fwe,ruler_qa_hotpot,ruler_qa_squad \
-        --model_args pretrained=$MODEL,dtype=bfloat16,max_length=32768,trust_remote_code=True \
-        --metadata='{"max_seq_lengths":[4096,8192,16384,32768]}' \
-        --batch_size 2 \
-        --show_config  \
-        --trust_remote_code
-    ```
+```bash
+$ MODEL='fla-hub/gla-1.3B-100B'
+$ accelerate launch -m evals.harness --model hf  \
+    --model_args pretrained=$MODEL,dtype=bfloat16,trust_remote_code=True  \
+    --tasks wikitext,lambada_openai,piqa,hellaswag,winogrande,arc_easy,arc_challenge,boolq,sciq,copa,openbookqa \
+    --batch_size 64  \
+    --num_fewshot 0  \
+    --device cuda  \
+    --show_config  \
+    --trust_remote_code
+```
+
+Evaluate on the RULER benchmark:
+
+```bash
+# Install lm-evaluation-harness
+git clone --depth 1 https://github.com/EleutherAI/lm-evaluation-harness
+cd lm-evaluation-harness
+pip install -e .
+# Install ruler dependencies
+pip install lm_eval["ruler"]
+# Run evaluation
+$ accelerate launch -m evals.harness \
+    --output_path $OUTPUT \
+    --tasks niah_single_1,niah_single_2,niah_single_3,niah_multikey_1,niah_multikey_2,niah_multikey_3,niah_multiquery,niah_multivalue,ruler_vt,ruler_cwe,ruler_fwe,ruler_qa_hotpot,ruler_qa_squad \
+    --model_args pretrained=$MODEL,dtype=bfloat16,max_length=32768,trust_remote_code=True \
+    --metadata='{"max_seq_lengths":[4096,8192,16384,32768]}' \
+    --batch_size 2 \
+    --show_config  \
+    --trust_remote_code
+```
+
+> [!Tip]
+> Load library tasks with: `from lm_eval.tasks import TaskManager; TaskManager().initialize_tasks()`
 
 ## Benchmarks
 
-Performance comparison of FLA's Triton-based RetNet implementation against CUDA-based FlashAttention2 (H100 80GB GPU, batch size 8, 32 heads, head dimension 128):
+Triton-based RetNet implementation vs. FlashAttention2 performance (H100 80GB):
 
-```text
-# Example Benchmark Output (truncated)
+```
+# Example output - detailed results in the README
+# You might have to install `fla` to enable its import via `pip install -e .`
+$ python benchmark_retention.py
 Performance:
          T  chunk_fwd  parallel_fwd  flash_fwd  chunk_fwdbwd  parallel_fwdbwd  flash_fwdbwd
 0    128.0   0.264032      0.243536   0.083488      1.301856         1.166784      0.320704
@@ -248,11 +268,9 @@ Performance:
 7  16384.0   1.748512     14.489664  13.710080     10.191552       153.093765     54.336864
 ```
 
-<div align="center">
-  <img width="500" alt="image" src="https://github.com/user-attachments/assets/c2607015-63af-43d1-90d1-ad5fe1670a03">
-</div>
-
 ## Citation
+
+Please cite our work if you use this repository:
 
 ```bib
 @software{yang2024fla,
@@ -305,8 +323,4 @@ Performance:
 
 ## Acknowledgments
 
-We appreciate the CI server resources provided by [Bitdeer](https://www.bitdeer.com/) that support our infrastructure.
-
-## Contribute
-
-We welcome contributions!  Please refer to the [README](https://github.com/fla-org/flash-linear-attention) for details on how to contribute to this project.
+We thank [Bitdeer](https://www.bitdeer.com/) for providing CI server resources.

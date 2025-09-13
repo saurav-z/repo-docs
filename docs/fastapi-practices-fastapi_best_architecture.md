@@ -1,12 +1,13 @@
 <div align="center">
-<img alt="FastAPI Best Architecture Logo" width="320" src="https://wu-clan.github.io/picx-images-hosting/logo/fba.png">
+  <img alt="FastAPI Best Architecture Logo" width="320" src="https://wu-clan.github.io/picx-images-hosting/logo/fba.png">
+</div>
 
-# FastAPI Best Architecture: Build Robust Backend Solutions with Python
+# FastAPI Best Architecture: Build Robust Backend Solutions
 
-Empower your backend development with **FastAPI Best Architecture**, a comprehensive solution designed for building enterprise-level applications.  Check out the original repository [here](https://github.com/fastapi-practices/fastapi_best_architecture).
+**Empower your backend development with a well-structured and scalable architecture for FastAPI applications, meticulously designed for enterprise-level projects.** ([View the original repository](https://github.com/fastapi-practices/fastapi_best_architecture))
 
-[![GitHub License](https://img.shields.io/github/license/fastapi-practices/fastapi_best_architecture)](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE)
-[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
+[![GitHub](https://img.shields.io/github/license/fastapi-practices/fastapi_best_architecture)](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-%2300758f)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16.0%2B-%23336791)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0-%23778877)
@@ -17,63 +18,57 @@ Empower your backend development with **FastAPI Best Architecture**, a comprehen
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?logo=discord&logoColor=white)](https://discord.com/invite/yNN3wTbVAC)
 ![Discord](https://img.shields.io/discord/1185035164577972344)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/fastapi-practices/fastapi_best_architecture)
-</div>
 
 ## Key Features
 
-*   **Pseudo 3-Tier Architecture:**  Employs a well-defined structure for a clean and maintainable codebase.
-*   **FastAPI Framework:** Leverages the speed and efficiency of FastAPI for building APIs.
-*   **Data Validation:**  Uses Pydantic for robust data validation and type safety.
-*   **Database Support:** Compatible with MySQL and PostgreSQL.
-*   **ORM Integration:** Built with SQLAlchemy for streamlined database interactions.
-*   **Modern Tooling:** Includes Ruff and uv for linting, formatting and dependency management.
-*   **Dockerized:** Includes a Dockerfile for containerization and easy deployment.
+*   **Pseudo 3-Tier Architecture:**  Implements a clear separation of concerns (API, Data Transfer Objects (DTOs), Service, CRUD, Model) for enhanced code organization and maintainability.
+*   **Modern Technologies:** Leverages industry-leading tools like FastAPI, Pydantic, SQLAlchemy, and Docker for a cutting-edge development experience.
+*   **Database Support:** Designed to work seamlessly with MySQL and PostgreSQL databases.
+*   **Robust Tooling:** Includes Ruff and uv for code quality and dependency management.
 
-## Architecture Overview
+## Architecture Overview: Pseudo 3-Tier Structure
 
-This project implements a "pseudo 3-tier" architecture, inspired by patterns observed in other frameworks, but adapted for FastAPI. This approach promotes code organization and maintainability, as detailed in the following table:
+This project adopts a "pseudo 3-tier" architecture, providing a familiar structure for developers:
 
-| Workflow       | Equivalent in Java | FastAPI Best Architecture |
-|----------------|-------------------|---------------------------|
-| View           | Controller        | API                       |
-| Data Transfer  | DTO               | Schema                    |
-| Business Logic | Service + Impl    | Service                   |
-| Data Access    | DAO / Mapper      | CRUD                      |
-| Model          | Model / Entity    | Model                     |
+| Workflow       | Concept             |
+|----------------|---------------------|
+| View           | API                 |
+| Data Transfer  | Schema              |
+| Business Logic | Service             |
+| Data Access    | CRUD                |
+| Model          | Model               |
 
 ## Documentation
 
-For comprehensive details and usage instructions, refer to the [official documentation](https://fastapi-practices.github.io/fastapi_best_architecture_docs/).
+Explore the project's comprehensive [official documentation](https://fastapi-practices.github.io/fastapi_best_architecture_docs/) for detailed insights.
 
-## Contributing
-
-We welcome contributions!  See the project's contributor graph:
+## Contributors
 
 <a href="https://github.com/fastapi-practices/fastapi_best_architecture/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=fastapi-practices/fastapi_best_architecture"/>
 </a>
 
-## Special Thanks
+## Acknowledgements
 
-We extend our gratitude to the following projects:
+We extend our gratitude to the following open-source projects:
 
 *   [FastAPI](https://fastapi.tiangolo.com/)
 *   [Pydantic](https://docs.pydantic.dev/latest/)
 *   [SQLAlchemy](https://docs.sqlalchemy.org/en/20/)
 *   [Casbin](https://casbin.org/zh/)
 *   [Ruff](https://beta.ruff.rs/docs/)
-*   ... (and other dependencies)
+*   ...
 
 ## Get Involved
 
-*   **Discord:** [Join our Discord Server](https://wu-clan.github.io/homepage/)
+*   [Discord](https://wu-clan.github.io/homepage/)
 
-## Support Us
+## Support the Project
 
 If you find this project helpful, consider supporting us: [:coffee: Sponsor :coffee:](https://wu-clan.github.io/sponsor/)
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE).
+This project is licensed under the [MIT](https://github.com/fastapi-practices/fastapi_best_architecture/blob/master/LICENSE) license.
 
 [![Stargazers over time](https://starchart.cc/fastapi-practices/fastapi_best_architecture.svg?variant=adaptive)](https://starchart.cc/fastapi-practices/fastapi_best_architecture)

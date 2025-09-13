@@ -1,88 +1,106 @@
-# VibeVoice ComfyUI: Effortlessly Generate High-Quality Text-to-Speech in ComfyUI
+# VibeVoice ComfyUI Nodes: Unleash High-Quality AI Voice Synthesis in Your Workflows
 
-Bring the power of Microsoft's VibeVoice directly into your ComfyUI workflows with this comprehensive and user-friendly integration.  Explore cutting-edge voice synthesis features like single and multi-speaker generation, voice cloning, and advanced control over your audio output.  Get started now by visiting the [original repository](https://github.com/Enemyx-net/VibeVoice-ComfyUI) for the latest updates and more information.
+**Elevate your ComfyUI creations with the power of Microsoft's VibeVoice, offering stunningly realistic text-to-speech capabilities with single and multi-speaker support, voice cloning, and advanced control.**
+
+[Link to Original Repo: https://github.com/Enemyx-net/VibeVoice-ComfyUI]
 
 ## Key Features
 
-*   🎤 **Single Speaker TTS:** Generate natural-sounding speech with optional voice cloning capabilities.
-*   👥 **Multi-Speaker Conversations:** Create dynamic dialogues with support for up to 4 distinct voices.
-*   🔊 **Voice Cloning:** Easily clone voices from audio samples to personalize your creations.
-*   📝 **Text File Loading:** Import scripts effortlessly from text files directly into your workflow.
-*   ⚙️ **Flexible Configuration:** Fine-tune your output with controls for temperature, sampling, and guidance scale.
-*   🚀 **Model Options:** Choose from three optimized VibeVoice model variants for performance and quality: VibeVoice-1.5B, VibeVoice-Large, and VibeVoice-Large-Quant-4Bit.
-*   ⚡ **Performance Optimization:** Select attention mechanisms, adjust diffusion steps, and manage memory for optimal performance on your hardware.
-*   🍎 **Apple Silicon Support:** Native GPU acceleration on M1/M2/M3 Macs via MPS for faster generation.
-*   💾 **4-Bit Quantization:** Reduce memory usage while maintaining high-quality audio with the VibeVoice-Large-Quant-4Bit model.
-*   ⏸️ **Custom Pause Tags:** Insert silences into your generated speech with custom duration control.
+*   🎤 **Single Speaker TTS:** Generate natural speech with optional voice cloning.
+*   🗣️ **Multi-Speaker Conversations:** Create dynamic dialogues with up to 4 distinct voices.
+*   🔊 **Voice Cloning:** Clone voices from audio samples for personalized audio.
+*   📝 **Text File Loading:** Import scripts easily from text files.
+*   🧱 **Automatic Text Chunking:** Seamlessly handles long texts for uninterrupted audio.
+*   ⏱️ **Custom Pause Tags:** Fine-tune pacing with `[pause]` and `[pause:ms]` tags (wrapper feature).
+*   🔗 **Node Chaining:** Connect multiple VibeVoice nodes for intricate workflows.
+*   🛑 **Interruption Support:** Cancel operations before or between generations.
+*   🚀 **Model Options:** Choose between VibeVoice-1.5B (fastest), VibeVoice-Large (best quality), and VibeVoice-Large-Quant-4Bit (balanced).
+*   ⚙️ **Flexible Configuration:** Customize temperature, sampling, guidance scale, and more.
+*   ⚡ **Performance Optimization:** Select attention mechanisms, adjust diffusion steps, and manage memory for efficiency.
+*   🍎 **Apple Silicon Support:** Harness native GPU acceleration on M1/M2/M3 Macs via MPS.
+*   💾 **4-Bit Quantization:** Reduce memory usage with minimal quality loss.
+*   📦 **Self-Contained:** No external dependencies, embedded VibeVoice code.
+*   💻 **Cross-Platform:** Works on Windows, Linux, and macOS.
 
-## Getting Started
+## Video Demo
 
-### Installation
+[![VibeVoice ComfyUI Wrapper Demo](https://img.youtube.com/vi/fIBMepIBKhI/maxresdefault.jpg)](https://www.youtube.com/watch?v=fIBMepIBKhI)
+**Click to watch the demo video**
 
-1.  **Automatic Installation (Recommended):**
-    *   Navigate to your ComfyUI custom nodes directory: `cd ComfyUI/custom_nodes`
-    *   Clone the repository: `git clone https://github.com/Enemyx-net/VibeVoice-ComfyUI`
-    *   Restart ComfyUI: The nodes will automatically install the necessary requirements upon first use.
+## Installation
+
+### Automatic Installation (Recommended)
+
+1.  Navigate to your ComfyUI custom nodes folder:
+    ```bash
+    cd ComfyUI/custom_nodes
+    ```
+
+2.  Clone the VibeVoice ComfyUI repository:
+    ```bash
+    git clone https://github.com/Enemyx-net/VibeVoice-ComfyUI
+    ```
+
+3.  Restart ComfyUI. Required dependencies will automatically install on first use.
 
 ## Available Nodes
 
 ### 1. VibeVoice Load Text From File
 
-*   **Description:** Loads text content from files, such as .txt files, located in ComfyUI's input, output, or temp directories.
-*   **Output:** Text string for subsequent TTS nodes.
+*   **Description:** Loads text content from files in ComfyUI's input/output/temp directories.
+*   **Supported Formats:** `.txt`
+*   **Output:** Text string for TTS nodes.
 
 ### 2. VibeVoice Single Speaker
 
-*   **Description:** Transforms text into speech using a single voice.
-*   **Input:** Direct text or text sourced from the Load Text node.
+*   **Description:** Generates speech from text using a single voice.
+*   **Text Input:** Direct text or connection from Load Text node.
 *   **Models:** VibeVoice-1.5B, VibeVoice-Large, or VibeVoice-Large-Quant-4Bit.
-*   **Voice Cloning:** Supports audio input for cloning voices.
+*   **Voice Cloning:** Optional audio input for voice cloning.
 *   **Parameters:**
-    *   `text`: The input text to convert to speech.
-    *   `model`: Select from VibeVoice-1.5B, VibeVoice-Large, or VibeVoice-Large-Quant-4Bit.
-    *   `attention_type`: Choose your attention type (auto, eager, sdpa, flash\_attention\_2 or sage)
-    *   `free_memory_after_generate`: Frees VRAM after generation (default: True).
-    *   `diffusion_steps`: Controls the number of denoising steps (5-100, default: 20).
-    *   `seed`: Sets the random seed for reproducible results (default: 42).
-    *   `cfg_scale`: Guidance scale for classifier-free generation (1.0-2.0, default: 1.3).
-    *   `use_sampling`: Enables or disables deterministic generation (default: False).
-*   **Optional Parameters:**
-    *   `voice_to_clone`: Input an audio file for voice cloning.
-    *   `temperature`: Adjust the sampling temperature (0.1-2.0, default: 0.95).
-    *   `top_p`: Use the nucleus sampling parameter (0.1-1.0, default: 0.95).
-    *   `max_words_per_chunk`: Sets the maximum number of words per chunk (100-500, default: 250).
+    *   `text`: Input text.
+    *   `model`: Select a model.
+    *   `attention_type`: auto, eager, sdpa, flash\_attention\_2 or sage (default: auto).
+    *   `free_memory_after_generate`: Free VRAM after generation (default: True).
+    *   `diffusion_steps`: Number of denoising steps (5-100, default: 20).
+    *   `seed`: Random seed (default: 42).
+    *   `cfg_scale`: Classifier-free guidance (1.0-2.0, default: 1.3).
+    *   `use_sampling`: Enable/disable deterministic generation (default: False).
+    *   `voice_to_clone`: Audio input for voice cloning (optional).
+    *   `temperature`: Sampling temperature (0.1-2.0, default: 0.95) (optional).
+    *   `top_p`: Nucleus sampling parameter (0.1-1.0, default: 0.95) (optional).
+    *   `max_words_per_chunk`: Maximum words per chunk for long texts (100-500, default: 250) (optional).
 
 ### 3. VibeVoice Multiple Speakers
 
-*   **Description:** Enables multi-speaker conversations with distinct voices.
-*   **Speaker Format:** Use the `[N]:` notation, where N is a number between 1 and 4 to specify your speaker.
-*   **Voice Assignment:** Supports audio inputs for cloning voices for each speaker.
-*   **Recommended Model:** VibeVoice-Large for higher-quality multi-speaker results.
+*   **Description:** Generates multi-speaker conversations with distinct voices.
+*   **Speaker Format:** Use `[N]:` notation where N is 1-4.
+*   **Voice Assignment:** Optional voice samples for each speaker.
+*   **Recommended Model:** VibeVoice-Large for superior multi-speaker quality.
 *   **Parameters:**
-    *   `text`: The input text with speaker labels.
-    *   `model`: Select from VibeVoice-1.5B, VibeVoice-Large, or VibeVoice-Large-Quant-4Bit.
-    *   `attention_type`: Choose your attention type (auto, eager, sdpa, flash\_attention\_2 or sage)
-    *   `free_memory_after_generate`: Frees VRAM after generation (default: True).
-    *   `diffusion_steps`: Adjust the number of denoising steps (5-100, default: 20).
-    *   `seed`: Sets the random seed for reproducible results (default: 42).
-    *   `cfg_scale`: Sets guidance scale for classifier-free generation (1.0-2.0, default: 1.3).
-    *   `use_sampling`: Enables or disables deterministic generation (default: False).
-*   **Optional Parameters:**
-    *   `speaker1_voice` to `speaker4_voice`: Input audio files for cloning voices for each speaker.
-    *   `temperature`: Adjust the sampling temperature (0.1-2.0, default: 0.95).
-    *   `top_p`: Sets the nucleus sampling parameter (0.1-1.0, default: 0.95).
+    *   `text`: Input text with speaker labels.
+    *   `model`: Select a model.
+    *   `attention_type`: auto, eager, sdpa, flash\_attention\_2 or sage (default: auto).
+    *   `free_memory_after_generate`: Free VRAM after generation (default: True).
+    *   `diffusion_steps`: Number of denoising steps (5-100, default: 20).
+    *   `seed`: Random seed (default: 42).
+    *   `cfg_scale`: Classifier-free guidance (1.0-2.0, default: 1.3).
+    *   `use_sampling`: Enable/disable deterministic generation (default: False).
+    *   `speaker1_voice` to `speaker4_voice`: Audio inputs for voice cloning (optional).
+    *   `temperature`: Sampling temperature (0.1-2.0, default: 0.95) (optional).
+    *   `top_p`: Nucleus sampling parameter (0.1-1.0, default: 0.95) (optional).
 
 ### 4. VibeVoice Free Memory
 
-*   **Description:** Manually releases loaded VibeVoice models from memory.
-*   **Input:** `audio` - Connect the audio output to trigger the memory cleanup.
-*   **Output:** `audio` - Passes the audio input through unchanged.
-*   **Use Case:** Insert between nodes to free VRAM/RAM at specific workflow points.
+*   **Description:** Manually frees VibeVoice models from memory.
+*   **Input:** `audio` - Connect audio output to trigger memory cleanup.
+*   **Output:** `audio` - Passes through the input audio unchanged.
+*   **Use Case:** Insert between nodes to free VRAM/RAM at specific points.
 *   **Example:** `[VibeVoice Node] → [Free Memory] → [Save Audio]`
 
 ## Multi-Speaker Text Format
 
-Structure your text using the `[N]:` notation to create multi-speaker dialogues:
+Format your text with `[N]:` notation for multi-speaker generation:
 
 ```
 [1]: Hello, how are you today?
@@ -92,83 +110,80 @@ Structure your text using the `[N]:` notation to create multi-speaker dialogues:
 [2]: Not at all, welcome!
 ```
 
-**Important Considerations:**
-
-*   Use `[1]:`, `[2]:`, `[3]:`, and `[4]:` to label speakers.
-*   A maximum of 4 speakers are supported.
-*   The system automatically detects the number of speakers.
+*   Use `[1]:`, `[2]:`, `[3]:`, `[4]:` for speaker labels.
+*   Supports a maximum of 4 speakers.
+*   The system automatically detects the number of speakers from the text.
 *   Each speaker can have an optional voice sample for cloning.
 
 ## Model Information
 
 ### VibeVoice-1.5B
 
-*   **Size:** Approximately 5GB download.
-*   **Speed:** Fast inference.
-*   **Quality:** Suitable for single speakers.
-*   **Use Case:** Ideal for quick prototyping and single-voice projects.
+*   **Size:** ~5GB download.
+*   **Speed:** Faster inference.
+*   **Quality:** Good for single speaker.
+*   **Use Case:** Quick prototyping, single voices.
 
 ### VibeVoice-Large
 
-*   **Size:** Approximately 17GB download.
-*   **Speed:** Slower inference, but optimized.
-*   **Quality:** Provides the best available quality.
-*   **Use Case:** Best for high-quality productions and multi-speaker conversations.
-*   **Note:** This is the latest official release from Microsoft.
+*   **Size:** ~17GB download.
+*   **Speed:** Slower inference but optimized.
+*   **Quality:** Best available quality.
+*   **Use Case:** Highest quality production, multi-speaker conversations.
+*   **Note:** Latest official release from Microsoft.
 
 ### VibeVoice-Large-Quant-4Bit
 
-*   **Size:** Approximately 7GB download.
+*   **Size:** ~7GB download.
 *   **Speed:** Balanced inference.
 *   **Quality:** Good quality.
-*   **Use Case:** Suitable for good quality production while conserving VRAM, including multi-speaker conversations.
+*   **Use Case:** Good quality production with less VRAM, multi-speaker conversations.
 *   **Note:** Quantized by DevParker.
 
-Models are automatically downloaded on first use and are cached in the `ComfyUI/models/vibevoice/` directory.
+Models are automatically downloaded on first use and cached in `ComfyUI/models/vibevoice/`.
 
 ## Generation Modes
 
 ### Deterministic Mode (Default)
 
 *   `use_sampling = False`
-*   Guarantees consistent, stable output.
-*   Recommended for production applications.
+*   Produces consistent, stable output.
+*   Recommended for production.
 
 ### Sampling Mode
 
 *   `use_sampling = True`
-*   Offers more variation in the output.
-*   Uses the `temperature` and `top_p` parameters.
-*   Suited for creative exploration.
+*   More variation in output.
+*   Uses temperature and top\_p parameters.
+*   Ideal for creative exploration.
 
 ## Voice Cloning
 
 To clone a voice:
 
-1.  Connect an audio node to the `voice_to_clone` input (for single-speaker generation).
-2.  Or, connect audio to `speaker1_voice`, `speaker2_voice`, etc. (for multi-speaker generation).
-3.  The model will attempt to match the voice characteristics.
+1.  Connect an audio node to the `voice_to_clone` input (single speaker) or `speaker1_voice`, `speaker2_voice`, etc. (multi-speaker).
+2.  The model will attempt to match the voice characteristics.
 
-**Requirements for Voice Samples:**
+**Voice Sample Requirements:**
 
-*   Clear audio with minimal background noise is essential.
-*   Provide a minimum of 3–10 seconds of audio. It is recommended to provide at least 30 seconds for better quality.
-*   Audio samples are automatically resampled to 24kHz.
+*   Clear audio with minimal background noise.
+*   Minimum 3–10 seconds, with at least 30 seconds recommended.
+*   Automatically resampled to 24kHz.
 
 ## Pause Tags Support
 
 ### Overview
 
-The VibeVoice wrapper includes a custom pause tag feature to enable more control over the pacing of your generated speech. **This feature is not a standard Microsoft VibeVoice function**. It's an original implementation that allows you to insert silences between text segments to better control speech pacing.
+The VibeVoice wrapper includes a custom pause tag feature.  **This is an original implementation of our wrapper** to give you precise control over the speech pacing.
 
 **Available from version 1.3.0**
 
 ### Usage
 
-Use two types of pause tags in your text to insert silences:
+Use two types of pause tags in your text:
 
 *   `[pause]` - Inserts a 1-second silence (default).
-*   `[pause:ms]` - Inserts a custom duration in milliseconds (e.g., `[pause:2000]` for 2 seconds).
+*   `[pause:ms]` - Inserts a custom duration silence in milliseconds (e.g., `[pause:2000]` for 2 seconds).
 
 ### Examples
 
@@ -188,7 +203,7 @@ Welcome to our presentation. [pause] Today we'll explore artificial intelligence
 
 ### Important Notes
 
-⚠️ **Context Limitation Warning:**
+⚠️ **Context Limitation Warning**:
 
 > **Note: The pause forces the text to be split into chunks. This may worsen the model's ability to understand the context. The model's context is represented ONLY by its own chunk.**
 
@@ -196,8 +211,8 @@ This means:
 
 *   Text before a pause and text after a pause are processed separately.
 *   The model cannot see across pause boundaries when generating speech.
-*   This may affect the prosody and intonation consistency.
-*   Use pauses sparingly for the best results.
+*   This may affect prosody and intonation consistency.
+*   Use pauses sparingly for best results.
 
 ### How It Works
 
@@ -209,67 +224,64 @@ This means:
 ### Best Practices
 
 *   Use pauses at natural breaking points (end of sentences, paragraphs).
-*   Avoid pauses in the middle of phrases where context is important.
-*   Test different pause durations to find what sounds the most natural.
+*   Avoid pauses in the middle of phrases where context is crucial.
+*   Test different pause durations for the most natural sound.
 
 ## Tips for Best Results
 
 1.  **Text Preparation:**
-    *   Use appropriate punctuation for natural pauses.
-    *   Break longer texts into paragraphs.
-    *   For multi-speaker dialogues, ensure clear speaker transitions.
-    *   Utilize pause tags sparingly to preserve context continuity.
-
+    *   Use proper punctuation.
+    *   Break long texts into paragraphs.
+    *   For multi-speaker, ensure clear speaker transitions.
+    *   Use pause tags judiciously.
 2.  **Model Selection:**
-    *   Use the 1.5B model for quicker single-speaker tasks (fastest, requires ~8GB VRAM).
-    *   Use the Large model for the best quality and multi-speaker support (~16GB VRAM).
-    *   Use the Large-Quant-4Bit model for good quality and to reduce VRAM usage (~7GB VRAM).
-
+    *   Use 1.5B for quick single-speaker tasks.
+    *   Use Large for best quality and multi-speaker.
+    *   Use Large-Quant-4Bit for good quality with low VRAM.
 3.  **Seed Management:**
-    *   The default seed (42) often yields excellent results.
-    *   Save the seeds that produce the best voice characteristics for consistency.
-    *   Experiment with random seeds if the default seed does not produce satisfactory results.
-
+    *   Default seed (42) works well.
+    *   Save good seeds for consistent character voices.
+    *   Try random seeds.
 4.  **Performance:**
-    *   Initial runs require downloading models (ranging from 5-17GB).
-    *   Subsequent runs will utilize cached models.
-    *   A GPU is recommended for faster inference.
+    *   First run downloads models (5-17GB).
+    *   Subsequent runs use cached models.
+    *   GPU recommended.
 
 ## System Requirements
 
 ### Hardware
 
-*   **Minimum:** 8GB VRAM (for VibeVoice-1.5B)
-*   **Recommended:** 17GB+ VRAM (for VibeVoice-Large)
-*   **RAM:** 16GB+ system memory
+*   **Minimum:** 8GB VRAM for VibeVoice-1.5B.
+*   **Recommended:** 17GB+ VRAM for VibeVoice-Large.
+*   **RAM:** 16GB+ system memory.
 
 ### Software
 
-*   Python 3.8+
-*   PyTorch 2.0+
-*   CUDA 11.8+ (for GPU acceleration)
-*   Transformers 4.51.3+
-*   ComfyUI (latest version)
+*   Python 3.8+.
+*   PyTorch 2.0+.
+*   CUDA 11.8+ (for GPU acceleration).
+*   Transformers 4.51.3+.
+*   ComfyUI (latest version).
 
 ## Troubleshooting
 
 ### Installation Issues
 
-*   Verify that you are using ComfyUI's designated Python environment.
-*   Attempt a manual installation if the automatic method fails.
-*   Restart ComfyUI after the installation process is complete.
+*   Ensure you are using ComfyUI's Python environment.
+*   Try manual installation if automatic fails.
+*   Restart ComfyUI after installation.
 
 ### Generation Issues
 
-*   If the voices sound unstable, try using deterministic mode.
-*   For multi-speaker conversations, confirm the correct format, using `[N]:`.
-*   Ensure speaker numbers are sequential (e.g., 1, 2, 3, not 1, 3, 5).
+*   If voices sound unstable, try deterministic mode.
+*   For multi-speaker, verify correct `[N]:` format.
+*   Check that speaker numbers are sequential.
 
 ### Memory Issues
 
-*   The Large model requires approximately 16GB VRAM.
-*   Use the 1.5B model for systems with lower VRAM.
-*   Models utilize bfloat16 precision to optimize memory usage.
+*   Large models require ~16GB VRAM.
+*   Use the 1.5B model for lower VRAM systems.
+*   Models use bfloat16 precision.
 
 ## Examples
 
@@ -303,31 +315,27 @@ use_sampling: False
 
 ## Performance Benchmarks
 
-| Model                    | VRAM Usage | Context Length | Max Audio Duration |
-| ------------------------- | ---------- | -------------- | ------------------ |
-| VibeVoice-1.5B            | ~8GB       | 64K tokens     | ~90 minutes        |
-| VibeVoice-Large           | ~17GB      | 32K tokens     | ~45 minutes        |
-| VibeVoice-Large-Quant-4Bit | ~7GB       | 32K tokens     | ~45 minutes        |
+| Model                  | VRAM Usage | Context Length | Max Audio Duration |
+|------------------------|------------|----------------|-------------------|
+| VibeVoice-1.5B         | ~8GB        | 64K tokens     | ~90 minutes       |
+| VibeVoice-Large        | ~17GB       | 32K tokens     | ~45 minutes       |
+| VibeVoice-Large-Quant-4Bit | ~7GB        | 32K tokens     | ~45 minutes       |
 
 ## Known Limitations
 
-*   Supports a maximum of 4 speakers in multi-speaker mode.
-*   Optimal results with English and Chinese text.
-*   Some seeds may result in unstable output.
-*   The generation of background music cannot be controlled directly.
+*   Maximum 4 speakers in multi-speaker mode.
+*   Works best with English and Chinese text.
+*   Some seeds may produce unstable output.
+*   Background music generation cannot be directly controlled.
 
 ## License
 
-This ComfyUI wrapper is released under the MIT License. Please consult the LICENSE file for specific details.
+This ComfyUI wrapper is released under the MIT License. See the LICENSE file for details.
 
-**Note:** The VibeVoice model itself is subject to Microsoft's licensing terms:
+**Note**: The VibeVoice model is subject to Microsoft's licensing terms:
 
-*   VibeVoice is intended for research purposes only.
-*   Refer to Microsoft's VibeVoice repository for comprehensive details on the model license.
-
-## Links
-
-*   [Original VibeVoice Repository](https://github.com/microsoft/VibeVoice) - Official Microsoft VibeVoice repository (currently unavailable)
+*   VibeVoice is for research purposes only.
+*   Check Microsoft's VibeVoice repository for full model license details.
 
 ## Credits
 
@@ -337,32 +345,32 @@ This ComfyUI wrapper is released under the MIT License. Please consult the LICEN
 
 ## Support
 
-For any issues or questions, please:
+For issues or questions:
 
-1.  Review the Troubleshooting section above.
-2.  Examine the ComfyUI logs for any error messages.
-3.  Ensure that VibeVoice is correctly installed.
-4.  If the problem persists, open an issue with detailed error information.
+1.  Check the troubleshooting section.
+2.  Review ComfyUI logs.
+3.  Ensure VibeVoice is properly installed.
+4.  Open an issue with detailed information.
 
 ## Contributing
 
 Contributions are welcome! Please:
 
-1.  Thoroughly test any changes.
-2.  Adhere to the existing code style.
-3.  Update the documentation as needed.
-4.  Submit pull requests with clear and comprehensive descriptions.
+1.  Test changes thoroughly.
+2.  Follow the existing code style.
+3.  Update documentation.
+4.  Submit pull requests with clear descriptions.
 
 ## Changelog
 
 ### Version 1.3.0
 
 *   Added custom pause tag support for speech pacing control.
-    *   Added the new `[pause]` tag to insert a 1-second silence (default).
-    *   Added the new `[pause:ms]` tag to insert a custom duration in milliseconds (e.g., `[pause:2000]` for 2 seconds).
+    *   New `[pause]` tag for 1-second silence (default).
+    *   New `[pause:ms]` tag for custom duration in milliseconds (e.g., `[pause:2000]` for 2 seconds).
     *   Works with both Single Speaker and Multiple Speakers nodes.
-    *   Automatically splits text at pause points while maintaining voice consistency.
-    *   Note: This feature is part of the wrapper and not a standard Microsoft VibeVoice feature.
+    *   Automatically splits text at pause points.
+    *   Note: This is a wrapper feature.
 
 ### Version 1.2.5
 
@@ -370,23 +378,23 @@ Contributions are welcome! Please:
 
 ### Version 1.2.4
 
-*   Added automatic text chunking for long texts in the Single Speaker node.
-    *   The Single Speaker node automatically splits texts longer than 250 words to prevent audio acceleration issues.
-    *   Added a new optional parameter `max_words_per_chunk` (range: 100-500 words, default: 250).
-    *   Maintains consistent voice characteristics across all chunks using the same seed.
-    *   Seamlessly concatenates audio chunks for smooth, natural output.
+*   Added automatic text chunking for long texts in Single Speaker node.
+    *   Single Speaker node now automatically splits texts longer than 250 words.
+    *   New optional parameter `max_words_per_chunk` (range: 100-500 words, default: 250).
+    *   Maintains consistent voice characteristics.
+    *   Seamlessly concatenates audio chunks.
 
 ### Version 1.2.3
 
 *   Added SageAttention support for inference speedup.
-    *   New attention option "sage" using quantized attention (INT8/FP8) for faster generation.
-    *   Requires: NVIDIA GPU with CUDA and the sageattention library installed.
+    *   New attention option "sage" using quantized attention (INT8/FP8).
+    *   Requirements: NVIDIA GPU with CUDA and sageattention library installation.
 
 ### Version 1.2.2
 
 *   Added 4-bit quantized model support.
     *   New model in menu: `VibeVoice-Large-Quant-4Bit` using ~7GB VRAM instead of ~17GB.
-    *   Requires: NVIDIA GPU with CUDA and the bitsandbytes library installed.
+    *   Requirements: NVIDIA GPU with CUDA and bitsandbytes library installed.
 
 ### Version 1.2.1
 
@@ -394,85 +402,85 @@ Contributions are welcome! Please:
 
 ### Version 1.2.0
 
-*   MPS Support for Apple Silicon:
-    *   Added GPU acceleration support for Mac with Apple Silicon (M1/M2/M3).
-    *   Automatically detects and uses the MPS backend when available, providing significant performance improvements over CPU.
+*   MPS Support for Apple Silicon.
+    *   Added GPU acceleration for Mac with Apple Silicon (M1/M2/M3).
+    *   Automatically detects and uses MPS, providing significant performance improvements.
 
 ### Version 1.1.1
 
-*   Universal Transformers Compatibility:
-    *   Implemented an adaptive system that automatically adjusts to different transformers versions.
+*   Universal Transformers Compatibility.
+    *   Implemented adaptive system to different transformers versions.
     *   Guaranteed compatibility from v4.51.3 onwards.
-    *   Auto-detects and adapts to API changes between versions.
+    *   Auto-detects and adapts to API changes.
 
 ### Version 1.1.0
 
-*   Updated the URL for downloading the VibeVoice-Large model.
-*   Removed the VibeVoice-Large-Preview deprecated model.
+*   Updated the URL for downloading the VibeVoice-Large model
+*   Removed VibeVoice-Large-Preview deprecated model
 
 ### Version 1.0.9
 
 *   Embedded VibeVoice code directly into the wrapper.
-    *   Added a `vvembed` folder containing the complete VibeVoice code (MIT licensed).
+    *   Added vvembed folder containing the complete VibeVoice code (MIT licensed).
     *   No longer requires external VibeVoice installation.
     *   Ensures continued functionality for all users.
 
 ### Version 1.0.8
 
-*   BFloat16 Compatibility Fix.
+*   BFloat16 Compatibility Fix
     *   Fixed tensor type compatibility issues with audio processing nodes.
-    *   Input audio tensors are now converted from BFloat16 to Float32 for numpy compatibility.
-    *   Output audio tensors are explicitly converted to Float32 to ensure compatibility with downstream nodes.
-    *   Resolves "Got unsupported ScalarType BFloat16" errors when using voice cloning or saving audio.
+    *   Input audio tensors are now converted from BFloat16 to Float32 for numpy compatibility
+    *   Output audio tensors are explicitly converted to Float32 to ensure compatibility with downstream nodes
+    *   Resolves "Got unsupported ScalarType BFloat16" errors when using voice cloning or saving audio
 
 ### Version 1.0.7
 
-*   Added an interruption handler to detect the user's cancel request.
+*   Added interruption handler to detect user's cancel request
 *   Bug fixing
 
 ### Version 1.0.6
 
-*   Fixed a bug that prevented VibeVoice nodes from receiving audio directly from another VibeVoice node.
+*   Fixed a bug that prevented VibeVoice nodes from receiving audio directly from another VibeVoice node
 
 ### Version 1.0.5
 
-*   Added support for Microsoft's official VibeVoice-Large model (stable release).
+*   Added support for Microsoft's official VibeVoice-Large model (stable release)
 
 ### Version 1.0.4
 
-*   Improved tokenizer dependency handling.
+*   Improved tokenizer dependency handling
 
 ### Version 1.0.3
 
-*   Added the `attention_type` parameter to both Single Speaker and Multi Speaker nodes for performance optimization.
-    *   `auto` (default): Automatic selection of the best implementation.
-    *   `eager`: Standard implementation without optimizations.
-    *   `sdpa`: PyTorch's optimized Scaled Dot Product Attention.
-    *   `flash_attention_2`: Flash Attention 2 for maximum performance (requires a compatible GPU).
-*   Added the `diffusion_steps` parameter to control the generation quality vs. speed trade-off.
-    *   Default: 20 (VibeVoice default).
-    *   Higher values: Better quality, longer generation time.
-    *   Lower values: Faster generation, potentially lower quality.
+*   Added `attention_type` parameter to both Single Speaker and Multi Speaker nodes for performance optimization.
+    *   auto (default): Automatic selection of best implementation
+    *   eager: Standard implementation without optimizations
+    *   sdpa: PyTorch's optimized Scaled Dot Product Attention
+    *   flash_attention_2: Flash Attention 2 for maximum performance (requires compatible GPU)
+*   Added `diffusion_steps` parameter to control generation quality vs speed trade-off
+    *   Default: 20 (VibeVoice default)
+    *   Higher values: Better quality, longer generation time
+    *   Lower values: Faster generation, potentially lower quality
 
 ### Version 1.0.2
 
-*   Added the `free_memory_after_generate` toggle to both Single Speaker and Multi Speaker nodes.
-*   Added a new dedicated "Free Memory Node" for manual memory management in workflows.
-*   Improved VRAM/RAM usage optimization.
-*   Enhanced stability for long generation sessions.
-*   Users can now choose between automatic or manual memory management.
+*   Added `free_memory_after_generate` toggle to both Single Speaker and Multi Speaker nodes
+*   New dedicated "Free Memory Node" for manual memory management in workflows
+*   Improved VRAM/RAM usage optimization
+*   Enhanced stability for long generation sessions
+*   Users can now choose between automatic or manual memory management
 
 ### Version 1.0.1
 
-*   Fixed an issue with line breaks in speaker text (both single and multi-speaker nodes).
-*   Line breaks within individual speaker text are now automatically removed before generation.
-*   Improved text formatting handling for all generation modes.
+*   Fixed issue with line breaks in speaker text (both single and multi-speaker nodes)
+*   Line breaks within individual speaker text are now automatically removed before generation
+*   Improved text formatting handling for all generation modes
 
 ### Version 1.0.0
 
 *   Initial release
-    *   Single speaker node with voice cloning.
-    *   Multi-speaker node with automatic speaker detection.
-    *   Text file loading from ComfyUI directories.
-    *   Deterministic and sampling generation modes.
-    *   Support for VibeVoice 1.5B and Large models.
+*   Single speaker node with voice cloning
+*   Multi-speaker node with automatic speaker detection
+*   Text file loading from ComfyUI directories
+*   Deterministic and sampling generation modes
+*   Support for VibeVoice 1.5B and Large models

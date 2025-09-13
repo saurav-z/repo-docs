@@ -1,122 +1,108 @@
 <div align="center">
-  <img src="figs/logo.png" width="260" alt="SimpleVLA-RL Logo"/>
+
+<img src="figs/logo.png" width="260" alt="SimpleVLA-RL Logo"/>
+
+## 🚀 SimpleVLA-RL: Revolutionizing Vision-Language-Action (VLA) Model Training with Reinforcement Learning
+
+[![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.09674) [![Github](https://img.shields.io/badge/SimpleVLA--RL-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PRIME-RL/SimpleVLA-RL) [![Hugging Face Collection](https://img.shields.io/badge/Models-fcd022?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/collections/Haozhan72/simplevla-rl-6833311430cd9df52aeb1f86) [![Twitter](https://img.shields.io/badge/Twitter-%23000000.svg?style=for-the-badge&logo=x&logoColor=white)](https://x.com/stingning/status/1927770654385860804) [![WeChat](https://img.shields.io/badge/WeChat--Group-07C160?style=for-the-badge&logo=wechat&logoColor=white)](figs/wechat-group.png)
+
 </div>
 
-# SimpleVLA-RL: Revolutionizing Vision-Language-Action (VLA) Learning with Reinforcement Learning
+**SimpleVLA-RL leverages simple 0/1 rewards to unlock effective online Reinforcement Learning (RL) for Vision-Language-Action (VLA) models, achieving state-of-the-art results with data efficiency.**  This repository provides the code and resources for training VLA models using a novel RL approach. For more details, see our paper [here](https://arxiv.org/abs/2509.09674) and explore the original repository: [https://github.com/PRIME-RL/SimpleVLA-RL](https://github.com/PRIME-RL/SimpleVLA-RL).
 
-**Unlock the potential of VLA models with SimpleVLA-RL, a straightforward yet powerful reinforcement learning framework, achieving state-of-the-art performance in complex tasks.  <a href="https://github.com/PRIME-RL/SimpleVLA-RL">Explore the code!</a>**
+<div align="center">
+<img src="figs/teaser.png" alt="Overview of SimpleVLA-RL" width="90%" />
 
-[![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.09674)
-[![Github](https://img.shields.io/badge/SimpleVLA--RL-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PRIME-RL/SimpleVLA-RL)
-[![Hugging Face Collection](https://img.shields.io/badge/Models-fcd022?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/collections/Haozhan72/simplevla-rl-6833311430cd9df52aeb1f86)
-[![Twitter](https://img.shields.io/badge/Twitter-%23000000.svg?style=for-the-badge&logo=x&logoColor=white)](https://x.com/stingning/status/1927770654385860804)
-
----
+Overview of **SimpleVLA-RL**. SimpleVLA-RL is an efficient RL framework for VLA that improves long-horizon planning under data scarcity, outperforms SFT in simulation and real-world tasks, reveals a “pushcut” new-action phenomenon, and strengthens spatial/object/goal generalization.
+</div>
 
 ## Key Features
 
-*   **Simple and Effective RL:** Leverages outcome-level 0/1 rewards directly from simulation environments to train VLA models.
-*   **State-of-the-Art Performance:** Achieves exceptional results on the LIBERO benchmark, surpassing existing methods.
-*   **Data Efficiency:** Significantly improves performance with limited training data, demonstrating robust learning even from a single trajectory.
-*   **Generalization:** Enhances spatial, object, and goal generalization capabilities of VLA models.
-*   **Open-Source & Accessible:** Provides easily reproducible code and pre-trained models.
+*   **Efficient RL Framework:** Enables effective online RL for VLA models using simple 0/1 rewards.
+*   **Improved Data Efficiency:**  Outperforms Supervised Fine-Tuning (SFT) with significantly fewer training examples.
+*   **State-of-the-Art Performance:** Achieves new state-of-the-art results on the LIBERO benchmark.
+*   **Enhanced Generalization:** Improves spatial, object, and goal generalization capabilities.
+*   **"Pushcut" Phenomenon:** Reveals a novel action phenomenon in VLA models.
 
----
+## 🎉 News
 
-<div align="center">
-<img src="figs/teaser.png" alt="Overview of SimpleVLA-RL." width="90%" />
-</div>
+*   **[2025-09-12]** Paper Release: Check out the SimpleVLA-RL paper on arXiv: [https://arxiv.org/abs/2509.09674](https://arxiv.org/abs/2509.09674).
+*   **[2025-05-27]** Code Release:  The code for SimpleVLA-RL is now available.
 
-## News
+## 📖 Overview
 
-*   **[2025-09-12]**  Paper release!  Check out the SimpleVLA-RL paper on [arXiv](https://arxiv.org/abs/2509.09674).
-*   **[2025-05-27]**  Code is now available!
-
----
-
-## Overview
-
-SimpleVLA-RL introduces a novel approach to online Reinforcement Learning (RL) for Vision-Language-Action (VLA) models.  This framework leverages the simplicity of 0/1 rewards derived directly from simulation environments.
+SimpleVLA-RL presents a streamlined approach to online Reinforcement Learning (RL) for Vision-Language-Action (VLA) models. It uses only outcome-level 0/1 rule-based reward signals directly from simulation environments, offering a simple yet powerful method to train VLA models.
 
 <div align="center">
-<img src="figs/simplevla-rl.png" alt="Overview of SimpleVLA-RL." width="90%" />
+<img src="figs/simplevla-rl.png" alt="Overview of SimpleVLA-RL" width="90%" />
 </div>
 
----
+## 📃 Main Results
 
-## Main Results
-
-SimpleVLA-RL demonstrates significant performance gains when evaluated on LIBERO using OpenVLA-OFT. It achieves **97.6 points** on LIBERO-Long, setting a new state-of-the-art.  Moreover, with just one trajectory for cold-start SFT, SimpleVLA-RL boosts OpenVLA-OFT performance from 17.3 to 91.7, an impressive **74.4-point (430.1%)** improvement.
+SimpleVLA-RL significantly boosts the performance of OpenVLA-OFT on the LIBERO benchmark. It achieves a score of **97.6 points** on LIBERO-Long, setting a new standard. Notably, starting from a cold-start SFT with just one trajectory per task, SimpleVLA-RL elevates OpenVLA-OFT performance from 17.3 to 91.7, a remarkable **74.4-point (430.1%) improvement**.
 
 <div align="center">
-<img src="figs/main.png" alt="Main Results of SimpleVLA-RL." width="60%" />
+<img src="figs/main.png" alt="Main Results of SimpleVLA-RL" width="90%" />
 </div>
 
----
+## ✨ Getting Started
 
-## Getting Started
+### 1. Environment Setup
 
-This section guides you through setting up the environment, preparing the SFT model, and running RL training and evaluation.
+SimpleVLA-RL builds upon [veRL](https://verl.readthedocs.io/en/latest/start/install.html). Follow these steps to set up the environment, including the Vision-Language-Action (VLA) model:
 
-1.  **Set Up the Environment:**
+*   **Install veRL:** Follow the official veRL installation guide [here](https://verl.readthedocs.io/en/latest/start/install.html).
+*   **Install OpenVLA-OFT:**  Set up OpenVLA-OFT according to the instructions in the [OpenVLA-OFT repository](https://github.com/moojink/openvla-oft).
 
-    *   Install the veRL environment following the official [veRL installation guide](https://verl.readthedocs.io/en/latest/start/install.html).
-    *   Install OpenVLA-OFT following the instructions in the [OpenVLA-OFT](https://github.com/moojink/openvla-oft) repository.
+### 2. Prepare the SFT Model
 
-2.  **Prepare the SFT Model:**
+You will need a Supervised Fine-Tuning (SFT) VLA model. Options include:
 
-    *   Download pre-trained SFT models from the [SimpleVLA-RL Collection](https://huggingface.co/collections/Haozhan72/simplevla-rl-6833311430cd9df52aeb1f86). Available models:
-        *   `libero-10 traj1 SFT`
-        *   `libero-10 trajall SFT`
-    *   Alternatively, download models from [OpenVLA](https://huggingface.co/openvla).
-    *   Fine-tune other models as needed.
+*   **OpenVLA-OFT SFT Models:** Download from the [SimpleVLA-RL Collection](https://huggingface.co/collections/Haozhan72/simplevla-rl-6833311430cd9df52aeb1f86). Available models:  
+    *   `libero-10 traj1 SFT`
+    *   `libero-10 trajall SFT`
+*   **OpenVLA SFT Models:**  Download from [here](https://huggingface.co/openvla).
+*   **Other Models:** You may need to fine-tune these yourself.
 
-3.  **Train with SimpleVLA-RL:**
+### 3. Training with SimpleVLA-RL
 
-    *   **Configure Settings:**
+Before running the training script:
 
-        *   Replace the `WANDB_API_KEY` field in `SimpleVLA-RL/align.json` with your WandB API key.
-        *   Modify variables in `examples/run_openvla_oft_rl.sh`:
-            *   `WANDB_API_KEY`: Your WandB API key.
-            *   `EXPERIMENT_NAME`: Experiment name.
-            *   `SFT_MODEL_PATH`: Path to your SFT model.
-            *   `CKPT_PATH`: Path to save checkpoints.
-            *   `DATASET_NAME`: e.g., `libero_10`, `libero_90`, etc.
-            *   `ALIGN_PATH`: Path to `SimpleVLA-RL/align.json`.
-            *   `NUM_GPUS`: GPUs per node (e.g., `8`).
-            *   `NUM_NODES`: Number of nodes (e.g., `1`).
+*   **Set WandB API Key:** Update the `WANDB_API_KEY` in `SimpleVLA-RL/align.json` with your API key.
+*   **Modify Key Variables:** Adjust these variables in `examples/run_openvla_oft_rl.sh`:
+    *   `WANDB_API_KEY`: Your WandB API key.
+    *   `EXPERIMENT_NAME`: The experiment name.
+    *   `SFT_MODEL_PATH`: Path to your SFT model.
+    *   `CKPT_PATH`: Checkpoint save path.
+    *   `DATASET_NAME`: Dataset options (e.g., `libero_10`).
+    *   `ALIGN_PATH`: Path to `SimpleVLA-RL/align.json`.
+    *   `NUM_GPUS`: GPUs per node.
+    *   `NUM_NODES`: Number of nodes.
 
-    *   **Run RL Training:** Execute the following command:
+    > [!NOTE]
+    > - Tested configurations: Single-node (`NUM_NODES=1`, `NUM_GPUS=8`) and multi-node (`NUM_NODES=2`, `NUM_GPUS=8`) setups.
+    > - Driver version: `470.161.03`, CUDA version: `12.4`.
 
-        ```bash
-        bash examples/run_openvla_oft_rl.sh
-        ```
+*   **Run RL Training:** Use the following command:
 
-4.  **Run Evaluation:**
+    ```bash
+    bash examples/run_openvla_oft_rl.sh
+    ```
 
-    *   Set `trainer.val_only=True` in `examples/run_openvla_oft_rl.sh`.
-    *   Run the same script:
+### 4. Evaluation
 
-        ```bash
-        bash examples/run_openvla_oft_rl.sh
-        ```
+To evaluate, set `trainer.val_only=True` in `examples/run_openvla_oft_rl.sh` and run the same script.
 
----
+## 🌻 Acknowledgement
 
-## Acknowledgement
+SimpleVLA-RL is developed based on [veRL](https://github.com/volcengine/verl), [OpenVLA-OFT](https://github.com/moojink/openvla-oft), and [PRIME](https://github.com/PRIME-RL/PRIME). We appreciate their contributions!
 
-We build upon the foundations of [veRL](https://github.com/volcengine/verl), [OpenVLA-OFT](https://github.com/moojink/openvla-oft), and [PRIME](https://github.com/PRIME-RL/PRIME). We are grateful for their significant contributions!
-
----
-
-## Contact
+## 📨 Contact
 
 *   Haozhan Li: zhan72426@gmail.com
 *   Ning Ding: dingning@mail.tsinghua.edu.cn
 
----
-
-## TODO
+## 📝 TODO
 
 *   **Models:**
     *   ✅ Support OpenVLA and OpenVLA-OFT
@@ -125,9 +111,9 @@ We build upon the foundations of [veRL](https://github.com/volcengine/verl), [Op
     *   ✅ Support LIBERO benchmark
     *   ⏳ Support RoboTwin benchmark
 
----
+## 🎈 Citation
 
-## Citation
+If SimpleVLA-RL is helpful, cite us:
 
 ```bibtex
 @article{li2025simplevla,

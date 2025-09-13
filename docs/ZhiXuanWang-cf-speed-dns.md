@@ -1,40 +1,53 @@
-# Optimize Your Cloudflare CDN Performance with cf-speed-dns
+# Optimize Your Cloudflare CDN with cf-speed-dns
 
-**Tired of slow website loading times?** This project, [cf-speed-dns](https://github.com/ZhiXuanWang/cf-speed-dns), helps you automatically find and utilize the fastest Cloudflare CDN IP addresses for optimal speed and performance.
+**Instantly boost your website's performance by utilizing the fastest Cloudflare CDN IPs with cf-speed-dns!** [See the original project on GitHub](https://github.com/ZhiXuanWang/cf-speed-dns).
 
 ## Key Features:
 
-*   **Real-time Cloudflare IP Optimization:** Automatically identifies and updates the best-performing Cloudflare IP addresses every 5 minutes.
-*   **Optimized IP Lists:** Access pre-sorted lists of the fastest IPs via readily available interfaces:
-    *   Main List: [https://ip.164746.xyz](https://ip.164746.xyz)
-    *   Top IPs (Default): [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html)
-    *   Top 10 IPs: [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html)
-*   **Automated DNS Updates:** Integrates with DNSPOD and DNSCF for automatic domain resolution updates using the best Cloudflare IPs (fork the project and configure via GitHub Actions).
-    *   **DNSPOD Integration:** Configure with `DOMAIN`, `SUB_DOMAIN`, `SECRETID`, `SECRETKEY`, and (optional) `PUSHPLUS_TOKEN`.
-    *   **DNSCF Integration:** Configure with `CF_API_TOKEN`, `CF_ZONE_ID`, `CF_DNS_NAME`, and (optional) `PUSHPLUS_TOKEN`.
-*   **Push Notification Integration:** Receive notifications about updates and status via PUSHPLUS ([https://www.pushplus.plus/push1.html](https://www.pushplus.plus/push1.html)).
+*   **Optimized Cloudflare IP Selection:** Automatically identifies and provides the fastest Cloudflare CDN IPs.
+*   **Real-Time IP List Updates:**  Access a constantly updated list of optimized IPs. (Hosted at: [https://ip.164746.xyz](https://ip.164746.xyz))
+*   **Top IP Interfaces:** Quickly access the top-performing IPs.
+    *   Top Interface (Default): [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html)
+    *   Top 10 Interface: [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html)
+*   **DNSPOD & DNSCF Integration:** Easily integrate with DNSPOD and DNSCF for real-time domain name resolution updates. Requires setting up Actions secrets and variables (see below).
+*   **PUSHPLUS Notification Support:**  Receive notifications via PUSHPLUS. ([https://www.pushplus.plus/push1.html](https://www.pushplus.plus/push1.html))
 
-## API Endpoint:
+## Configuration for Domain Name Resolution
 
-Access the top Cloudflare IPs with a simple API call:
+To enable domain name resolution updates, you'll need to fork this project and configure the following environment variables within GitHub Actions:
+
+*   **DNSPOD Configuration (using Actions secrets and variables):**
+    *   `DOMAIN`: Your domain name (e.g., `164746.xyz`)
+    *   `SUB_DOMAIN`: Your subdomain (e.g., `dns`)
+    *   `SECRETID`: Your DNSPOD Secret ID
+    *   `SECRETKEY`: Your DNSPOD Secret Key
+    *   `PUSHPLUS_TOKEN` (Optional): Your PUSHPLUS token for notifications.
+
+*   **DNSCF Configuration (using Actions secrets and variables):**
+    *   `CF_API_TOKEN`: Your Cloudflare API Token
+    *   `CF_ZONE_ID`: Your Cloudflare Zone ID
+    *   `CF_DNS_NAME`: Your DNS record name (e.g., `dns.164746.xyz`)
+    *   `PUSHPLUS_TOKEN` (Optional): Your PUSHPLUS token for notifications.
+
+## API Endpoint
+
+Get the top performing IPs:
 
 ```bash
 curl 'https://ip.164746.xyz/ipTop.html'
 ```
 
-## API Response Example:
+## API Response Example
 
 ```
 104.16.204.6,104.18.103.125
 ```
 
-## Acknowledgements:
-
-This project leverages the work of:
+## Acknowledgements
 
 *   [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
 *   [ddgth](https://github.com/ddgth/cf2dns)
 
-## Support and Infrastructure:
+## Support & Hosting
 
 [![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")

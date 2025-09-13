@@ -1,21 +1,14 @@
-# Free Programming Books: Your Gateway to Coding Knowledge 📚
+# Free Programming Books: Your Gateway to Learning Code
 
-**Unlock your coding potential with this comprehensive, community-driven list of free programming books, courses, and resources, available in multiple languages.**  [Explore the original repository](https://github.com/EbookFoundation/free-programming-books) for a wealth of learning materials!
+**Access a vast, collaborative, and multilingual collection of free programming resources to learn coding, from books to courses, all in one convenient place. Check out the original repository [here](https://github.com/EbookFoundation/free-programming-books).**
 
 ## Key Features
 
-*   **Extensive Collection:** Access a vast library of free learning resources, including books, courses, cheat sheets, and more.
-*   **Multi-Language Support:**  Resources available in numerous languages, catering to a global audience of learners.
-*   **Community-Driven:**  A collaborative project, constantly updated and improved by contributors from around the world.
-*   **Easy Search:** Quickly find what you need using the dynamic search site or browse the static website for convenient access.
-*   **Actively Maintained:**  Regular updates and improvements ensure the resources remain relevant and accessible.
-*   **Support Open Source:** Maintained by the [Free Ebook Foundation](https://ebookfoundation.org), a not-for-profit dedicated to promoting free ebook access.
-
-## Getting Started
-
-*   **Search:** Find specific books or authors using the dedicated search tool:  [https://ebookfoundation.github.io/free-programming-books-search/](https://ebookfoundation.github.io/free-programming-books-search/)
-
-*   **Browse the Website:** Easily access the complete list via the user-friendly website: [https://ebookfoundation.github.io/free-programming-books/](https://ebookfoundation.github.io/free-programming-books/)
+*   **Comprehensive Resource Library:** Discover a massive collection of free programming books, courses, cheat sheets, podcasts, and interactive tutorials.
+*   **Multilingual Support:** Learn in your preferred language with resources available in dozens of languages, catering to a global audience.
+*   **Organized by Category:** Browse resources easily by programming language, subject, and format for a streamlined learning experience.
+*   **Actively Maintained:** Benefit from a community-driven project that's constantly updated with new and relevant resources.
+*   **Community Driven:** Contribute and help improve the project by following the [CONTRIBUTING](docs/CONTRIBUTING.md) guidelines.
 
 ## Resources
 
@@ -26,8 +19,7 @@
 
 #### Other Languages
 
-*   [Arabic / al arabiya / العربية](books/free-programming-books-ar.md)
-*   ... and many more (see complete list in original README)
+*   [List of Books in Various Languages](books/README.md)
 
 ### Cheat Sheets
 
@@ -35,16 +27,11 @@
 
 ### Free Online Courses
 
-*   [Arabic / al arabiya / العربية](courses/free-courses-ar.md)
-*   ... and many more (see complete list in original README)
+*   [List of Courses in Various Languages](courses/README.md)
 
 ### Interactive Programming Resources
 
-*   [Chinese / 中文](more/free-programming-interactive-tutorials-zh.md)
-*   [English](more/free-programming-interactive-tutorials-en.md)
-*   [German / Deutsch](more/free-programming-interactive-tutorials-de.md)
-*   [Japanese / 日本語](more/free-programming-interactive-tutorials-ja.md)
-*   [Russian / Русский язык](more/free-programming-interactive-tutorials-ru.md)
+*   [List of Interactive Resources in Various Languages](more/README.md)
 
 ### Problem Sets and Competitive Programming
 
@@ -52,47 +39,17 @@
 
 ### Podcast - Screencast
 
-*   [Arabic / al Arabiya / العربية](casts/free-podcasts-screencasts-ar.md)
-*   ... and many more (see complete list in original README)
+*   [List of Podcasts and Screencasts in Various Languages](casts/README.md)
 
 ### Programming Playgrounds
 
-*   [Chinese / 中文](more/free-programming-playgrounds-zh.md)
-*   [English](more/free-programming-playgrounds.md)
-*   [German / Deutsch](more/free-programming-playgrounds-de.md)
+*   [List of Programming Playgrounds in Various Languages](more/README.md)
 
-## Contribute & Get Involved
+## Contribute
 
-This project thrives on community contributions!
-
-*   **How to Contribute:** Read the [CONTRIBUTING](docs/CONTRIBUTING.md) guidelines.
-*   **New to GitHub?** Start with [HOWTO](docs/HOWTO.md).
-*   **Explore Issues:** Check out [Issues](https://github.com/EbookFoundation/free-programming-books/issues) to see how you can help.
-*   **Find "Good First Issues":** Look for issues labeled as "[Good First Issues](https://github.com/EbookFoundation/free-programming-books/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)".
-*   **Help Wanted:** Search for  "[Help Wanted](https://github.com/EbookFoundation/free-programming-books/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)" issues to offer your assistance.
-*   **Code of Conduct:** Please adhere to the [Code of Conduct](docs/CODE_OF_CONDUCT.md).
-
-## Sharing is Caring
-
-Help spread the word!
-
-*   Share on Facebook: <a href="https://www.facebook.com/share.php?u=https%3A%2F%2Fgithub.com%2FEbookFoundation%2Ffree-programming-books&p[images][0]=&p[title]=Free%20Programming%20Books&p[summary]=">Share on Facebook</a>
-*   Share on LinkedIn: <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://github.com/EbookFoundation/free-programming-books&title=Free%20Programming%20Books&summary=&source=">Share on LinkedIn</a>
-*   Share on Mastodon/Fediverse: <a href="https://toot.kytta.dev/?mini=true&url=https://github.com/EbookFoundation/free-programming-books&title=Free%20Programming%20Books&summary=&source=">Share on Mastodon/Fediverse</a>
-*   Share on Telegram: <a href="https://t.me/share/url?url=https://github.com/EbookFoundation/free-programming-books">Share on Telegram</a>
-*   Share on 𝕏 (Twitter): <a href="https://twitter.com/intent/tweet?text=https://github.com/EbookFoundation/free-programming-books%0AFree%20Programming%20Books">Share on 𝕏 (Twitter)</a>
-
-## Translations
-
-Find translated versions of key documents:
-
-*   English
-    *   [Code of Conduct](docs/CODE_OF_CONDUCT.md)
-    *   [Contributing](docs/CONTRIBUTING.md)
-    *   [How-to](docs/HOWTO.md)
-*   ... *[More languages](docs/README.md#translations)* ...
-
-Interested in contributing a translation? [Contribute a translation](docs/CONTRIBUTING.md#help-out-by-contributing-a-translation)!
+*   **Contribute to the project by opening an issue, submitting a pull request, or translating content.**
+*   For detailed instructions, see the [CONTRIBUTING](docs/CONTRIBUTING.md) guide.
+*   See [CONTRIBUTING](docs/CONTRIBUTING.md#help-out-by-contributing-a-translation) for translation contributions
 
 ## License
 

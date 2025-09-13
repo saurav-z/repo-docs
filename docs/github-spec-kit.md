@@ -1,11 +1,11 @@
 <div align="center">
-    <img src="./media/logo_small.webp"/>
+    <img src="./media/logo_small.webp" alt="Spec Kit Logo"/>
     <h1>🌱 Spec Kit</h1>
-    <h3><em>Build high-quality software faster.</em></h3>
+    <h3><em>Build High-Quality Software Faster with AI-Powered Spec-Driven Development.</em></h3>
 </div>
 
 <p align="center">
-    <strong>Revolutionize your software development with Spec Kit, enabling you to focus on product scenarios rather than boilerplate code through Spec-Driven Development.  <a href="https://github.com/github/spec-kit">Check out the original repo!</a></strong>
+    <b>Stop writing boilerplate code and start building with intention!</b> Spec Kit empowers you to focus on *what* to build, not just *how*.
 </p>
 
 [![Release](https://github.com/github/spec-kit/actions/workflows/release.yml/badge.svg)](https://github.com/github/spec-kit/actions/workflows/release.yml)
@@ -14,98 +14,145 @@
 
 ## Key Features
 
-*   **Spec-Driven Development:** Implement specifications as executable code, accelerating development.
-*   **Intent-Driven Development:** Define *what* to build before focusing on *how*.
-*   **AI-Powered Workflow:** Leverage AI agents to interpret specifications, generate code, and automate tasks.
-*   **Multi-Phase Development:** Support for 0-to-1 (greenfield), creative exploration, and iterative enhancement (brownfield) projects.
-*   **Technology Agnostic:** Build applications with various tech stacks, languages, and frameworks.
+*   **Spec-Driven Development:** Transform specifications into executable code.
+*   **AI-Powered:** Leverages AI agents like Claude Code, Gemini, Copilot, and Cursor.
+*   **Intent-Focused:** Define "what" to build before deciding "how."
+*   **Multi-Step Refinement:** Refine specifications for higher-quality outputs.
+*   **Flexible Development:** Supports various technology stacks and architectures.
+*   **Iterative Enhancement:** Streamline the addition of new features and modernization.
 
-## Table of Contents
+## Core Philosophy
 
--   [🤔 What is Spec-Driven Development?](#-what-is-spec-driven-development)
--   [⚡ Get Started](#-get-started)
--   [📚 Core Philosophy](#-core-philosophy)
--   [🌟 Development Phases](#-development-phases)
--   [🎯 Experimental Goals](#-experimental-goals)
--   [🔧 Prerequisites](#-prerequisites)
--   [📖 Learn More](#-learn-more)
--   [📋 Detailed Process](#-detailed-process)
--   [🔍 Troubleshooting](#-troubleshooting)
--   [👥 Maintainers](#-maintainers)
--   [💬 Support](#-support)
--   [🙏 Acknowledgements](#-acknowledgements)
--   [📄 License](#-license)
+Spec-Driven Development is a structured process that emphasizes:
 
-## 🤔 What is Spec-Driven Development?
+*   **Intent-driven development:** Define the "what" before the "how."
+*   **Rich specification creation:** Utilize guardrails and organizational principles.
+*   **Multi-step refinement:** Move beyond one-shot code generation.
+*   **Leveraging AI models:** Harness the power of advanced AI for specification interpretation.
 
-Spec-Driven Development **transforms software creation**. Instead of code dictating the process, executable specifications drive the implementation, enabling faster development and greater focus on user needs. Specifications become the foundation, leading to working implementations.
+## 🚀 Get Started
 
-## ⚡ Get Started
+1.  **Install Spec Kit:** Follow the steps below to initialize your project, depending on your coding agent.
 
-### 1. Install Specify
+    ```bash
+    uvx --from git+https://github.com/github/spec-kit.git specify init <PROJECT_NAME>
+    ```
 
-Initialize your project:
+2.  **Define Your Spec:** Use the `/specify` command to describe your desired functionality, focusing on *what* needs to be built.
+
+    ```bash
+    /specify Build an application that can help me organize my photos in separate photo albums. Albums are grouped by date and can be re-organized by dragging and dropping on the main page. Albums are never in other nested albums. Within each album, photos are previewed in a tile-like interface.
+    ```
+
+3.  **Plan Your Implementation:** Use the `/plan` command to outline your tech stack and architectural choices.
+
+    ```bash
+    /plan The application uses Vite with minimal number of libraries. Use vanilla HTML, CSS, and JavaScript as much as possible. Images are not uploaded anywhere and metadata is stored in a local SQLite database.
+    ```
+
+4.  **Break Down and Implement:** Use `/tasks` to generate actionable task lists, then ask your AI agent to implement the feature.
+    For a complete walkthrough, explore the complete [Spec-Driven Development Methodology](./spec-driven.md).
+
+## 🔧 Specify CLI Reference
+
+The `specify` command supports these helpful options:
+
+### Commands
+
+| Command     | Description                                                    |
+|-------------|----------------------------------------------------------------|
+| `init`      | Initialize a new Specify project from the latest template      |
+| `check`     | Check for installed tools (`git`, `claude`, `gemini`, `code`/`code-insiders`, `cursor-agent`) |
+
+### `specify init` Arguments & Options
+
+| Argument/Option        | Type     | Description                                                                  |
+|------------------------|----------|------------------------------------------------------------------------------|
+| `<project-name>`       | Argument | Name for your new project directory (optional if using `--here`)            |
+| `--ai`                 | Option   | AI assistant to use: `claude`, `gemini`, `copilot`, or `cursor`             |
+| `--script`             | Option   | Script variant to use: `sh` (bash/zsh) or `ps` (PowerShell)                 |
+| `--ignore-agent-tools` | Flag     | Skip checks for AI agent tools like Claude Code                             |
+| `--no-git`             | Flag     | Skip git repository initialization                                          |
+| `--here`               | Flag     | Initialize project in the current directory instead of creating a new one   |
+| `--skip-tls`           | Flag     | Skip SSL/TLS verification (not recommended)                                 |
+| `--debug`              | Flag     | Enable detailed debug output for troubleshooting                            |
+
+### Examples
 
 ```bash
-uvx --from git+https://github.com/github/spec-kit.git specify init <PROJECT_NAME>
+# Basic project initialization
+specify init my-project
+
+# Initialize with specific AI assistant
+specify init my-project --ai claude
+
+# Initialize with Cursor support
+specify init my-project --ai cursor
+
+# Initialize with PowerShell scripts (Windows/cross-platform)
+specify init my-project --ai copilot --script ps
+
+# Initialize in current directory
+specify init --here --ai copilot
+
+# Skip git initialization
+specify init my-project --ai gemini --no-git
+
+# Enable debug output for troubleshooting
+specify init my-project --ai claude --debug
+
+# Check system requirements
+specify check
 ```
 
-### 2. Create the Spec
+## ⚙️ Development Phases
 
-Use the `/specify` command to define your project:
+Spec Kit supports different development phases to meet your needs:
 
-```bash
-/specify Build an application that can help me organize my photos in separate photo albums. Albums are grouped by date and can be re-organized by dragging and dropping on the main page. Albums are never in other nested albums. Within each album, photos are previewed in a tile-like interface.
-```
-
-### 3. Plan the Implementation
-
-Use the `/plan` command to outline your tech stack:
-
-```bash
-/plan The application uses Vite with minimal number of libraries. Use vanilla HTML, CSS, and JavaScript as much as possible. Images are not uploaded anywhere and metadata is stored in a local SQLite database.
-```
-
-### 4. Implement and Iterate
-
-Use `/tasks` to generate a task list. See our [comprehensive guide](./spec-driven.md) for detailed instructions.
-
-## 📚 Core Philosophy
-
-Spec-Driven Development emphasizes:
-
-*   **Intent-Driven Development:** Prioritize *what* needs building over *how*.
-*   **Rich Specification Creation:** Utilize guiding principles and structure.
-*   **Multi-Step Refinement:** Foster incremental generation, not one-shot code generation.
-*   **AI Integration:** Leverage advanced AI for interpretation and automation.
-
-## 🌟 Development Phases
-
-| Phase                    | Focus                    | Key Activities                                      |
-| ------------------------ | ------------------------ | --------------------------------------------------- |
-| **0-to-1 Development**   | Generate from scratch    | Requirements, specs, implementation plans, build     |
-| **Creative Exploration** | Parallel implementations | Explore diverse solutions, tech stacks, UX patterns |
-| **Iterative Enhancement** | Brownfield modernization | Add features, modernize legacy systems, adapt       |
+| Phase | Focus | Key Activities |
+|-------|-------|----------------|
+| **0-to-1 Development** ("Greenfield") | Generate from scratch | <ul><li>Start with high-level requirements</li><li>Generate specifications</li><li>Plan implementation steps</li><li>Build production-ready applications</li></ul> |
+| **Creative Exploration** | Parallel implementations | <ul><li>Explore diverse solutions</li><li>Support multiple technology stacks & architectures</li><li>Experiment with UX patterns</li></ul> |
+| **Iterative Enhancement** ("Brownfield") | Brownfield modernization | <ul><li>Add features iteratively</li><li>Modernize legacy systems</li><li>Adapt processes</li></ul> |
 
 ## 🎯 Experimental Goals
 
-*   **Technology Independence:** Support diverse stacks and frameworks.
-*   **Enterprise Constraints:** Accommodate organizational and compliance requirements.
-*   **User-Centric Development:** Build applications for different user needs.
-*   **Creative & Iterative Processes:** Enable parallel exploration and iterative development.
+Spec Kit is designed for:
+
+### Technology independence
+
+-   Creating apps with various tech stacks.
+-   Validating that Spec-Driven Development isn't tied to specific languages, frameworks, or tools.
+
+### Enterprise constraints
+
+-   Developing mission-critical applications.
+-   Incorporating organizational constraints (cloud providers, tech stacks, and engineering practices).
+-   Supporting enterprise design systems and compliance needs.
+
+### User-centric development
+
+-   Building applications for different user groups and preferences.
+-   Supporting various development approaches (from traditional methods to AI-native development).
+
+### Creative & iterative processes
+
+-   Validating parallel implementation exploration.
+-   Providing robust iterative feature development workflows.
+-   Extending processes to manage upgrades and modernization.
 
 ## 🔧 Prerequisites
 
-*   **Operating System:** Linux/macOS (or WSL2 on Windows)
-*   **AI Coding Agent:** [Claude Code](https://www.anthropic.com/claude-code), [GitHub Copilot](https://code.visualstudio.com/), or [Gemini CLI](https://github.com/google-gemini/gemini-cli)
-*   **Package Manager:** [uv](https://docs.astral.sh/uv/)
-*   **Python:** 3.11+
-*   **Git:** [Git](https://git-scm.com/downloads)
+-   **Linux/macOS** (or WSL2 on Windows)
+-   AI coding agent: [Claude Code](https://www.anthropic.com/claude-code), [GitHub Copilot](https://code.visualstudio.com/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or [Cursor](https://cursor.sh/)
+-   [uv](https://docs.astral.sh/uv/) for package management
+-   [Python 3.11+](https://www.python.org/downloads/)
+-   [Git](https://git-scm.com/downloads)
 
 ## 📖 Learn More
 
-*   **[Complete Spec-Driven Development Methodology](./spec-driven.md)** - Dive deep into the full process.
-*   **[Detailed Walkthrough](#-detailed-process)** - Follow a step-by-step implementation guide.
+*   **[Complete Spec-Driven Development Methodology](./spec-driven.md)** - Deep dive into the full process
+*   **[Detailed Walkthrough](#-detailed-process)** - Step-by-step implementation guide
 
 ---
 
@@ -201,7 +248,6 @@ At this stage, your project folder contents should resemble the following:
 │	 └── 001-create-taskify
 │	     └── spec.md
 └── templates
-    ├── CLAUDE-template.md
     ├── plan-template.md
     ├── spec-template.md
     └── tasks-template.md
@@ -353,17 +399,17 @@ rm gcm-linux_amd64.2.6.1.deb
 
 ## 👥 Maintainers
 
-*   Den Delimarsky ([@localden](https://github.com/localden))
-*   John Lam ([@jflam](https://github.com/jflam))
+-   Den Delimarsky ([@localden](https://github.com/localden))
+-   John Lam ([@jflam](https://github.com/jflam))
 
 ## 💬 Support
 
-For support, please open a [GitHub issue](https://github.com/github/spec-kit/issues/new). We welcome bug reports, feature requests, and questions about using Spec-Driven Development.
+For support, please open a [GitHub issue](https://github.com/github/spec-kit/issues/new) in the [original repository](https://github.com/github/spec-kit). We welcome bug reports, feature requests, and questions about using Spec-Driven Development.
 
 ## 🙏 Acknowledgements
 
-This project is inspired by and based on the work of [John Lam](https://github.com/jflam).
+This project is heavily influenced by and based on the work and research of [John Lam](https://github.com/jflam).
 
 ## 📄 License
 
-This project is licensed under the MIT open source license. See the [LICENSE](./LICENSE) file for full terms.
+This project is licensed under the terms of the MIT open source license. Please refer to the [LICENSE](./LICENSE) file for the full terms.

@@ -1,6 +1,6 @@
 # Instructor: Effortlessly Extract Structured Data from LLMs
 
-**Simplify your LLM integrations and get reliable, structured JSON outputs with Instructor, the Python library built on Pydantic.**  You can find the original repository [here](https://github.com/567-labs/instructor).
+**Simplify LLM interactions and get reliable, validated JSON with Instructor, built on Pydantic.**  Visit the original repository [here](https://github.com/567-labs/instructor).
 
 [![PyPI](https://img.shields.io/pypi/v/instructor?style=flat-square)](https://pypi.org/project/instructor/)
 [![Downloads](https://img.shields.io/pypi/dm/instructor?style=flat-square)](https://pypi.org/project/instructor/)
@@ -10,24 +10,29 @@
 
 ## Key Features
 
-*   ✅ **Simplified JSON Extraction:** Define Pydantic models and get structured data without complex JSON parsing.
-*   ✅ **Automatic Validation:** Built-in validation using Pydantic ensures data integrity.
-*   ✅ **Provider Agnostic:** Works seamlessly with OpenAI, Anthropic, Google, Ollama, and more.
-*   ✅ **Automatic Retries:** Handles validation errors with intelligent retries.
-*   ✅ **Streaming Support:**  Stream partial objects as they're generated for faster results.
-*   ✅ **Nested Objects:** Effortlessly extract complex, nested data structures.
+*   **Simplified Extraction:** Define Pydantic models and get structured data without JSON parsing.
+*   **Automatic Validation:** Built-in validation using Pydantic ensures data integrity.
+*   **Automatic Retries:** Handles extraction failures and retries automatically.
+*   **Streaming Support:** Stream partial objects as they're generated.
+*   **Nested Object Support:** Easily extract complex, nested data structures.
+*   **Cross-Provider Compatibility:** Works seamlessly with major LLM providers (OpenAI, Anthropic, Google, Ollama, etc.).
+*   **IDE Support:** Leverage Pydantic for type safety and IDE autocompletion.
 
-## Why Choose Instructor?
+## The Problem Instructor Solves
 
-Instructor streamlines the process of extracting structured data from LLMs, saving you time and effort.
+Extracting structured data from LLMs traditionally involves:
 
-| **Challenge**               | **Solution with Instructor**                                                              |
-| --------------------------- | ----------------------------------------------------------------------------------------- |
-| Complex JSON Schema Writing | Simple Pydantic Model Definition                                                             |
-| Validation Errors           | Automatic validation and retries                                                        |
-| Manual Retries              | Instructor handles retries automatically                                                      |
-| Unstructured Response Parsing | Returns validated Python objects                                                           |
-| Provider API Differences    | Consistent API across all major providers                                                |
+1.  Writing and maintaining complex JSON schemas.
+2.  Handling validation errors.
+3.  Implementing retry logic.
+4.  Parsing unstructured responses.
+5.  Adapting to different provider APIs.
+
+**Instructor streamlines this process with a simple interface.**
+
+| Without Instructor                                                                                                                                                                                 | With Instructor                                                                                                                                                                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ```python<br>response = openai.chat.completions.create(<br>    model="gpt-4",<br>    messages=[{"role": "user", "content": "..."}],<br>    tools=[<br>        {<br>            "type": "function",<br>            "function": {<br>                "name": "extract_user",<br>                "parameters": {<br>                    "type": "object",<br>                    "properties": {<br>                        "name": {"type": "string"},<br>                        "age": {"type": "integer"},<br>                    },<br>                },<br>            },<br>        }<br>    ],<br>)<br><br># Parse response<br>tool_call = response.choices[0].message.tool_calls[0]<br>user_data = json.loads(tool_call.function.arguments)<br><br># Validate manually<br>if "name" not in user_data:<br>    # Handle error...<br>    pass<br>``` | ```python<br>client = instructor.from_provider("openai/gpt-4")<br><br>user = client.chat.completions.create(<br>    response_model=User,<br>    messages=[{"role": "user", "content": "..."}],<br>)<br><br># That's it! user is validated and typed<br>``` |
 
 ## Installation
 
@@ -37,42 +42,16 @@ Install Instructor in seconds using pip:
 pip install instructor
 ```
 
-Or use your preferred package manager:
+Or with your preferred package manager:
 
 ```bash
 uv add instructor
 poetry add instructor
 ```
 
-## Getting Started
+## Supported LLM Providers
 
-### Basic Extraction
-
-Easily extract structured data from text:
-
-```python
-from pydantic import BaseModel
-import instructor
-
-client = instructor.from_provider("openai/gpt-4o-mini")
-
-class Product(BaseModel):
-    name: str
-    price: float
-    in_stock: bool
-
-product = client.chat.completions.create(
-    response_model=Product,
-    messages=[{"role": "user", "content": "iPhone 15 Pro, $999, available now"}],
-)
-
-print(product)
-# Product(name='iPhone 15 Pro', price=999.0, in_stock=True)
-```
-
-## Works with All Major LLM Providers
-
-Use the same code across different LLM providers:
+Instructor offers a unified API across major LLM providers:
 
 ```python
 # OpenAI
@@ -103,7 +82,7 @@ user = client.chat.completions.create(
 
 ### Automatic Retries
 
-Instructor automatically retries when validation fails:
+Instructor automatically retries failed extractions based on validation errors:
 
 ```python
 from pydantic import BaseModel, field_validator
@@ -128,7 +107,7 @@ user = client.chat.completions.create(
 
 ### Streaming Support
 
-Stream partial objects as they are generated:
+Stream partial object responses as they are generated:
 
 ```python
 from instructor import Partial
@@ -146,7 +125,7 @@ for partial_user in client.chat.completions.create(
 
 ### Nested Objects
 
-Easily extract complex, nested data structures:
+Effortlessly extract complex, nested data structures:
 
 ```python
 from typing import List
@@ -170,34 +149,73 @@ user = client.chat.completions.create(
 
 ## Trusted by Thousands
 
-Instructor is a battle-tested library used by:
+Instructor is a proven solution, trusted by over 100,000 developers and companies.
 
 *   **3M+ Monthly Downloads**
 *   **10K+ GitHub Stars**
 *   **1000+ Community Contributors**
 
-## Learn More
+Used by teams at OpenAI, Google, Microsoft, AWS, and many YC startups.
+
+## Getting Started
+
+### Basic Extraction
+
+Easily extract structured data from any text:
+
+```python
+from pydantic import BaseModel
+import instructor
+
+client = instructor.from_provider("openai/gpt-4o-mini")
+
+class Product(BaseModel):
+    name: str
+    price: float
+    in_stock: bool
+
+product = client.chat.completions.create(
+    response_model=Product,
+    messages=[{"role": "user", "content": "iPhone 15 Pro, $999, available now"}],
+)
+
+print(product)
+# Product(name='iPhone 15 Pro', price=999.0, in_stock=True)
+```
+
+### Multilingual Support
+
+Instructor's simple API is available in multiple languages:
+
+*   [Python](https://python.useinstructor.com) - The original
+*   [TypeScript](https://js.useinstructor.com) - Full TypeScript support
+*   [Ruby](https://ruby.useinstructor.com) - Ruby implementation
+*   [Go](https://go.useinstructor.com) - Go implementation
+*   [Elixir](https://hex.pm/packages/instructor) - Elixir implementation
+*   [Rust](https://rust.useinstructor.com) - Rust implementation
+
+### Learn More
 
 *   [Documentation](https://python.useinstructor.com) - Comprehensive guides
 *   [Examples](https://python.useinstructor.com/examples/) - Copy-paste recipes
 *   [Blog](https://python.useinstructor.com/blog/) - Tutorials and best practices
 *   [Discord](https://discord.gg/bD9YE9JArw) - Get help from the community
 
-## Why Instructor?
+## Why Choose Instructor?
 
-Instructor offers significant advantages over alternative solutions:
+**Compared to raw JSON mode:** Instructor provides automatic validation, retries, streaming, and nested object support, eliminating manual schema writing.
 
-*   **Raw JSON mode**:  Provides automatic validation, retries, streaming, and nested object support. No manual schema writing.
-*   **LangChain/LlamaIndex**: Instructor is focused on one thing - structured extraction. It's lighter, faster, and easier to debug.
-*   **Custom solutions**: Battle-tested by thousands of developers. Handles edge cases you haven't thought of yet.
+**Compared to LangChain/LlamaIndex:** Instructor focuses on structured extraction, offering a lighter, faster, and more debuggable solution.
+
+**Compared to Custom Solutions:** Instructor is battle-tested by thousands of developers and handles edge cases effectively.
 
 ## Contributing
 
-We welcome contributions! Check out our [good first issues](https://github.com/instructor-ai/instructor/labels/good%20first%20issue) to get started.
+Contributions are welcome! Check out the [good first issues](https://github.com/instructor-ai/instructor/labels/good%20first%20issue) to get started.
 
 ## License
 
-MIT License - see [LICENSE](https://github.com/instructor-ai/instructor/blob/main/LICENSE) for details.
+MIT License - See [LICENSE](https://github.com/instructor-ai/instructor/blob/main/LICENSE) for details.
 
 ---
 
