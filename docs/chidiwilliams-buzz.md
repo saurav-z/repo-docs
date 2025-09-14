@@ -1,43 +1,54 @@
 # Buzz: Offline Audio Transcription and Translation Powered by Whisper
 
-**Effortlessly transcribe and translate audio files on your computer with Buzz, a powerful application built on OpenAI's Whisper technology.** [Get the original code here](https://github.com/chidiwilliams/buzz).
+**Effortlessly transcribe and translate audio on your computer with Buzz, leveraging the power of OpenAI's Whisper.**
 
-[![MIT License](https://img.shields.io/badge/license-MIT-green)](https://github.com/chidiwilliams/buzz)
-[![CI](https://github.com/chidiwilliams/buzz/actions/workflows/ci.yml/badge.svg)](https://github.com/chidiwilliams/buzz/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/github/chidiwilliams/buzz/branch/main/graph/badge.svg?token=YJSB8S2VEP)](https://codecov.io/github/chidiwilliams/buzz)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/chidiwilliams/buzz)
-[![Github all releases](https://img.shields.io/github/downloads/chidiwilliams/buzz/total.svg)](https://GitHub.com/chidiwilliams/buzz/releases/)
+[View the original repository on GitHub](https://github.com/chidiwilliams/buzz)
 
-## Key Features:
+**Key Features:**
 
-*   **Offline Transcription:** Transcribe audio files without an internet connection.
-*   **Multi-Language Support:** Powered by Whisper to transcribe and translate many languages.
-*   **Cross-Platform:** Available for macOS, Windows, and Linux.
-*   **Easy Installation:** Install via PyPI, brew, winget, Flatpak, or Snap.
-*   **GPU Acceleration (Optional):**  Utilize your NVIDIA GPU for faster transcription (PyPI installation).
-*   **Mac App Store Version:** Experience a native macOS version with enhanced features.
+*   **Offline Transcription & Translation:** Process audio without an internet connection using OpenAI's Whisper.
+*   **Multi-Platform Support:** Available for macOS, Windows, and Linux (Flatpak & Snap).
+*   **Multiple Installation Options:**  Install via PyPI, Homebrew, Winget, Flatpak, or Snap for flexibility.
+*   **GPU Acceleration (PyPI):**  Utilize NVIDIA GPUs for faster processing on Windows.
+*   **Mac App Store Version:** Experience an enhanced, native macOS version of Buzz on the [Mac App Store](https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&itsct=apps_box_badge&itscg=30200) with improved features like audio playback, transcript editing, and drag-and-drop import.
+*   **Regular Updates:**  Stay up-to-date with the latest features and bug fixes by exploring the FAQ for the development version.
 
-## Why Choose Buzz?
+**Installation:**
 
-Buzz offers a convenient and private solution for audio transcription and translation. With its offline capabilities, you can process audio files anywhere, without worrying about data privacy or internet connectivity.
+Choose your preferred installation method:
 
-## Installation
+### **PyPI**
 
-Choose your operating system below:
+1.  Install [ffmpeg](https://www.ffmpeg.org/download.html).
+2.  Install Buzz:
+    ```shell
+    pip install buzz-captions
+    python -m buzz
+    ```
+3. **GPU Support for PyPI (Windows)**
 
-### macOS
+```
+pip3 install -U torch==2.7.1+cu128 torchaudio==2.7.1+cu128 --index-url https://download.pytorch.org/whl/cu128
+pip3 install nvidia-cublas-cu12==12.8.3.14 nvidia-cuda-cupti-cu12==12.8.57 nvidia-cuda-nvrtc-cu12==12.8.61 nvidia-cuda-runtime-cu12==12.8.57 nvidia-cudnn-cu12==9.7.1.26 nvidia-cufft-cu12==11.3.3.41 nvidia-curand-cu12==10.3.9.55 nvidia-cusolver-cu12==11.7.2.55 nvidia-cusparse-cu12==12.5.4.2 nvidia-cusparselt-cu12==0.6.3 nvidia-nvjitlink-cu12==12.8.61 nvidia-nvtx-cu12==12.8.55 --extra-index-url https://pypi.ngc.nvidia.com
+```
 
-*   **Homebrew:** `brew install --cask buzz`
-*   **Download:** Download the `.dmg` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
+### **macOS**
 
-### Windows
+*   **Homebrew:**
+    ```shell
+    brew install --cask buzz
+    ```
+*   **Direct Download:** Download the `.dmg` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
 
-*   **Winget:** `winget install ChidiWilliams.Buzz`
-*   **Download:** Download and run the `.exe` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
-    *   *Note: App is not signed; you may get a warning.  Select "More info" -> "Run anyway."*
-*   **GPU Support (PyPI):**  Follow the instructions in the original README to enable GPU acceleration.
+### **Windows**
 
-### Linux
+*   **Direct Download:** Download and run the `.exe` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest). You may need to select `More info` -> `Run anyway` due to the app not being signed.
+*   **Winget:**
+    ```shell
+    winget install ChidiWilliams.Buzz
+    ```
+
+### **Linux**
 
 *   **Flatpak:**
     ```shell
@@ -50,34 +61,10 @@ Choose your operating system below:
     sudo snap connect buzz:password-manager-service
     ```
 
-### PyPI
+**[Documentation](https://chidiwilliams.github.io/buzz/)**
 
-1.  Install [ffmpeg](https://www.ffmpeg.org/download.html)
-2.  Install Buzz:
-    ```shell
-    pip install buzz-captions
-    python -m buzz
-    ```
-    *   **GPU Support:** (follow original README for installation)
+**[Buzz Captions on the Mac App Store](https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&itsct=apps_box_badge&itscg=30200)**
 
-## Screenshots
+**Screenshots:**
 
-[Include the existing screenshots here]
-
-## Additional Resources
-*   [Documentation](https://chidiwilliams.github.io/buzz/)
-*   [Buzz Captions on the Mac App Store](https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&itsct=apps_box_badge&itscg=30200)
-*   [FAQ](https://chidiwilliams.github.io/buzz/docs/faq#9-where-can-i-get-latest-development-version)
-```
-
-Key improvements and SEO optimizations:
-
-*   **Clear Headline:** Includes the primary keywords: "Audio Transcription," "Translation," and "Whisper."
-*   **One-Sentence Hook:** Catches attention immediately.
-*   **Keyword Optimization:**  Uses relevant keywords throughout (e.g., "offline," "transcribe," "translate," "cross-platform").
-*   **Bulleted Key Features:** Highlights the main benefits, making the information easy to scan.
-*   **Installation Instructions:** Clearly separates installation instructions by operating system, with links to important tools.
-*   **Call to Action:**  Suggests to download the Mac App Store version.
-*   **Links to Resources:**  Provides direct links to documentation and the app store.
-*   **Concise Language:**  Removes unnecessary words to improve readability.
-*   **Clean Formatting:**  Uses Markdown effectively for better presentation.
+*(Screenshot gallery would be included here)*

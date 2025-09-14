@@ -1,25 +1,28 @@
-Here's an improved and SEO-optimized README for the Inspect framework, incorporating the requested elements:
+# Inspect: Evaluate Large Language Models with Ease (Official Framework)
 
-# **Inspect: Evaluating Large Language Models with Precision**
+<p align="center">
+    <a href="https://aisi.gov.uk/">
+        <img src="https://inspect.aisi.org.uk/images/aisi-logo.svg" alt="UK AI Security Institute Logo" width="295"/>
+    </a>
+</p>
 
-[<img width="295" src="https://inspect.aisi.org.uk/images/aisi-logo.svg" alt="UK AI Security Institute Logo" />](https://aisi.gov.uk/)
+**Inspect, developed by the UK AI Security Institute, is your go-to framework for comprehensive evaluation of Large Language Models (LLMs).**
 
-Developed by the [UK AI Security Institute](https://aisi.gov.uk/), Inspect is your go-to framework for rigorously evaluating and analyzing the performance of large language models (LLMs).
+This powerful Python-based framework allows you to rigorously assess LLMs, providing a flexible and extensible platform for your evaluation needs.
 
-## **Key Features of Inspect:**
+## Key Features:
 
-*   **Comprehensive Evaluation Capabilities:** Assess LLMs using a variety of methods including prompt engineering, tool usage analysis, and multi-turn dialog evaluation.
-*   **Built-in Components:** Leverage pre-built modules for common evaluation tasks, simplifying your workflow.
-*   **Extensible Architecture:** Easily integrate custom elicitation and scoring techniques with Inspect's flexible design through Python packages.
-*   **Focus on Security:** Developed by the AI Security Institute, with security considerations at the core.
+*   **Built-in Components:** Access pre-built modules for prompt engineering, tool usage, multi-turn dialogue analysis, and model-graded evaluations.
+*   **Extensible Architecture:** Easily integrate custom components and extensions to support new elicitation and scoring techniques.
+*   **Official Framework:** Backed by the UK AI Security Institute, ensuring quality and relevance for cutting-edge AI evaluation.
 
-## **Getting Started:**
+## Getting Started
 
-For detailed information on how to use Inspect and explore its functionalities, please refer to the comprehensive documentation available at: <https://inspect.aisi.org.uk/>
+For detailed instructions on using Inspect, including documentation and tutorials, please visit the official documentation at: <https://inspect.aisi.org.uk/>
 
-## **Development and Contribution:**
+## Development & Contribution
 
-If you're interested in contributing to Inspect or want to extend its capabilities, follow these steps to set up your development environment:
+To contribute to the development of Inspect, follow these steps:
 
 1.  **Clone the Repository:**
 
@@ -29,29 +32,24 @@ If you're interested in contributing to Inspect or want to extend its capabiliti
     ```
 
 2.  **Install Dependencies:**
+
     ```bash
     pip install -e ".[dev]"
     ```
 
-3.  **(Optional) Install Pre-commit Hooks:**
+3.  **(Optional) Install Pre-Commit Hooks:**
+
     ```bash
     make hooks
     ```
 
-4.  **Run Checks and Tests:**
+4.  **Run Quality Checks:**
+
     ```bash
     make check
     make test
     ```
 
-### **Recommended IDE Setup (VS Code):**
-
-For optimal development, we recommend using Visual Studio Code with the following extensions installed:
-
-*   Python
-*   Ruff
-*   MyPy
-
-You will be prompted to install these extensions when you open the project in VS Code.
+5.  **Recommended VS Code Extensions:** Python, Ruff, and MyPy.
 
 **Original Repository:** [https://github.com/UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai)

@@ -1,73 +1,69 @@
-[![Discord](https://img.shields.io/discord/784619049208250388?style=plastic)][discord] [![Website](https://img.shields.io/website?down_color=lightgrey&down_message=offline&style=plastic&up_color=blue&up_message=online&url=https%3A%2F%2Flibrephotos.com)](https://librephotos.com/)
-[![Read the docs](https://img.shields.io/static/v1?label=Read&message=the%20docs&color=blue&style=plastic)](https://docs.librephotos.com/) [![GitHub contributors](https://img.shields.io/github/contributors/librephotos/librephotos?style=plastic)](https://github.com/LibrePhotos/librephotos/graphs/contributors)
+[![Discord](https://img.shields.io/discord/784619049208250388?style=plastic)][discord]
+[![Website](https://img.shields.io/website?down_color=lightgrey&down_message=offline&style=plastic&up_color=blue&up_message=online&url=https%3A%2F%2Flibrephotos.com)](https://librephotos.com/)
+[![Read the docs](https://img.shields.io/static/v1?label=Read&message=the%20docs&color=blue&style=plastic)](https://docs.librephotos.com/)
+[![GitHub contributors](https://img.shields.io/github/contributors/librephotos/librephotos?style=plastic)](https://github.com/LibrePhotos/librephotos/graphs/contributors)
 <a href="https://hosted.weblate.org/engage/librephotos/">
 <img src="https://hosted.weblate.org/widgets/librephotos/-/librephotos-frontend/svg-badge.svg" alt="Translation status" />
 </a>
 
 # LibrePhotos: Your Self-Hosted, Open-Source Photo Management Solution
 
-Tired of relying on cloud services for your photos? **LibrePhotos** is a powerful, open-source solution that empowers you to manage, organize, and share your photos and videos privately.  [Explore the LibrePhotos GitHub Repository](https://github.com/LibrePhotos/librephotos)
+Tired of relying on proprietary photo services?  **LibrePhotos** is a powerful, open-source solution that lets you take control of your photo library with advanced features and complete privacy.  [Explore the original repository on GitHub](https://github.com/LibrePhotos/librephotos).
 
-<img src="https://github.com/LibrePhotos/librephotos/blob/dev/screenshots/mockups_main_fhd.png?raw=true" alt="LibrePhotos Screenshot" width="800"/>
-<sub>Mockup designed by rawpixel.com / Freepik</sub>
+## Key Features:
 
-## Key Features
+*   **Comprehensive Media Support:**  Handles photos of all types, including RAW files, and videos.
+*   **Organized Viewing:** Enjoy your photos with a timeline view and automatically generated albums.
+*   **Intelligent Search:** Utilize face recognition, object/scene detection, and semantic image search for easy photo finding.
+*   **Multi-User Support:** Share your photo library with others while maintaining individual privacy.
+*   **Automated Organization:** Scan your file system, generate albums based on events and utilize reverse geocoding.
+*   **Advanced Recognition:**  Face recognition and classification plus scene detection using advanced AI.
 
-*   **Comprehensive Media Support:** Handles photos (including RAW files) and videos.
-*   **Intelligent Organization:** Timeline view, event-based album generation (e.g., "Thursday in Berlin").
-*   **Advanced Search:** Semantic image search, search by metadata.
-*   **Facial Recognition:** Face detection and classification for easy people tagging.
-*   **Scene & Object Detection:** Automatically categorize your photos.
-*   **Geotagging:** Reverse geocoding to map your photos' locations.
-*   **Multi-User Support:**  Share and collaborate with others.
+## Key Technologies Used:
 
-## Demo
-
-*   **Stable Demo:** [https://demo1.librephotos.com/](https://demo1.librephotos.com/)  (User: `demo`, Password: `demo1234`)
-*   **Development Demo:** [https://demo2.librephotos.com/](https://demo2.librephotos.com/)  (User: `demo`, Password: `demo1234`)
-
-## Getting Started
-
-Comprehensive installation instructions can be found in the [LibrePhotos documentation](https://docs.librephotos.com/docs/installation/standard-install).
-
-## How to Contribute
-
-We welcome contributions from the community!  Here's how you can help:
-
-*   ⭐ **Star** the repository on GitHub!
-*   🚀 **Development:** Follow the [development guide](https://docs.librephotos.com/docs/development/dev-install) to get started coding in under 30 minutes.
-*   🗒️ **Documentation:** Improve the documentation by submitting pull requests [here](https://github.com/LibrePhotos/librephotos.docs).
-*   🧪 **Testing:** Help find bugs by using the `dev` tag and reporting issues.
-*   🧑‍🤝‍🧑 **Outreach:** Spread the word about LibrePhotos.
-*   🌐 **Translations:** Make LibrePhotos accessible to more users with [Weblate](https://hosted.weblate.org/engage/librephotos/).
-*   💸 **Donate:** Support the project's developers through [GitHub Sponsors](https://github.com/sponsors/derneuere).
-
-## Technologies Used
-
-LibrePhotos leverages several powerful technologies:
+LibrePhotos leverages several powerful open-source tools:
 
 *   **Image Conversion:** [ImageMagick](https://github.com/ImageMagick/ImageMagick)
 *   **Video Conversion:** [FFmpeg](https://github.com/FFmpeg/FFmpeg)
-*   **Exif Support:** [ExifTool](https://github.com/exiftool/exiftool)
-*   **Face Detection:** [face_recognition](https://github.com/ageitgey/face_recognition)
-*   **Face Classification/Clustering:** [scikit-learn](https://scikit-learn.org/) and [hdbscan](https://github.com/scikit-learn-contrib/hdbscan)
+*   **Metadata Handling:** [ExifTool](https://github.com/exiftool/exiftool)
+*   **Face Recognition:** [face_recognition](https://github.com/ageitgey/face_recognition)
+*   **Face Clustering:** [scikit-learn](https://scikit-learn.org/) and [hdbscan](https://github.com/scikit-learn-contrib/hdbscan)
 *   **Image Captioning:** [im2txt](https://github.com/HughKu/Im2txt)
 *   **Scene Classification:** [places365](http://places.csail.mit.edu/)
 *   **Reverse Geocoding:** [geopy](https://github.com/geopy/geopy)
 
+## Demo and Community
+
+*   **Stable Demo:**  https://demo1.librephotos.com/ (User: `demo`, Password: `demo1234`)
+*   **Development Demo:**  https://demo2.librephotos.com/ (User: `demo`, Password: `demo1234`)
+*   **Join the Community:**  [Discord][discord]
+
+## Installation
+
+Detailed installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install).
+
+## Get Involved and Contribute
+
+*   ⭐ **Star** the repository to show your support!
+*   🚀 **Developing:** Get started in less than 30 minutes by following [this guide](https://docs.librephotos.com/docs/development/dev-install).
+*   🗒️ **Documentation:** Improve the documentation by submitting a pull request [here](https://github.com/LibrePhotos/librephotos.docs)
+*   🧪 **Testing:** Help find bugs by using the ```dev``` tag and opening issues.
+*   🧑‍🤝‍🧑 **Outreach:** Spread the word about LibrePhotos!
+*   🌐 **Translations:**  Make LibrePhotos accessible to more people with [weblate](https://hosted.weblate.org/engage/librephotos/).
+*   💸 [**Donate**](https://github.com/sponsors/derneuere) to support the developers.
+
 [discord]: https://discord.gg/xwRvtSDGWb
 ```
-Key improvements and SEO considerations:
+Key improvements and SEO optimizations:
 
-*   **Concise Headline:**  The title is now a clear and descriptive heading.
-*   **SEO-Friendly Hook:** A one-sentence hook immediately grabs attention and highlights a key benefit (privacy and control).
-*   **Keyword Optimization:**  The summary naturally incorporates keywords like "self-hosted," "open-source," "photo management," "organize," and "share."
-*   **Clear Feature List:** Key features are presented in a bulleted list for easy readability.
-*   **Strong Call to Action:** The link back to the GitHub repository is prominently placed.
-*   **Improved Structure:**  The use of headings and subheadings creates a logical flow.
-*   **Demo Links:** Demo links are preserved and highlighted.
-*   **Contribution Section:** Clearly outlines how users can contribute.
-*   **Technology Section:** Provides insight into the tools powering LibrePhotos.
-*   **Alt Text:** Added alt text to the image for SEO and accessibility.
-*   **Summarized and concise:**  Reduces redundant information.
-*   **Image Width:** Specifies the width of the image so it renders well.
+*   **Clear, concise title:**  "LibrePhotos: Your Self-Hosted, Open-Source Photo Management Solution" immediately conveys the purpose and benefits.
+*   **Strong introductory hook:**  Addresses a pain point and promises a solution.
+*   **Keyword-rich description:**  Includes terms like "self-hosted," "open-source," "photo management," "photo library," "face recognition," and "semantic image search."
+*   **Bulleted key features:**  Easy to scan and highlights the main selling points.
+*   **Clear headings:** Structure with headings for readability.
+*   **Emphasis on open-source and privacy:**  Highlights key benefits.
+*   **Call to action:**  Encourages users to explore the original repo.
+*   **Includes links to original repo and documentation, as well as installation guides.**
+*   **Improved phrasing** for clarity.
+*   **Expanded "Get Involved" section**: Added more detailed information about how to contribute.
+*   **Includes key technologies** as a way to help people find the repo and search the technology that they use.

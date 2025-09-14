@@ -1,101 +1,113 @@
-# Boto3: The AWS SDK for Python
+# Boto3: The AWS SDK for Python - Simplify AWS Cloud Development
 
-**Effortlessly interact with Amazon Web Services using Python with the powerful and versatile Boto3 SDK.**
+**Boto3** is the official Amazon Web Services (AWS) SDK for Python, empowering developers to seamlessly integrate and manage AWS services like S3, EC2, and more. [View the source on GitHub](https://github.com/boto/boto3).
 
-[View the Original Repository on GitHub](https://github.com/boto/boto3)
+[![Version](http://img.shields.io/pypi/v/boto3.svg?style=flat)](https://pypi.python.org/pypi/boto3/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/boto3.svg?style=flat)](https://pypi.python.org/pypi/boto3/)
+[![License](http://img.shields.io/pypi/l/boto3.svg?style=flat)](https://github.com/boto/boto3/blob/develop/LICENSE)
 
 ## Key Features
 
-*   **Comprehensive AWS Service Support:** Access and manage a wide range of AWS services, including Amazon S3, Amazon EC2, and many more.
-*   **Simplified API:** Write clean, concise, and readable Python code to interact with AWS services.
-*   **Object-Oriented Interface:**  Utilize intuitive object-oriented programming for managing AWS resources.
-*   **Easy Credential Management:** Configure and manage your AWS credentials securely.
-*   **Active Community & Support:** Benefit from a large and active community, along with comprehensive documentation and support resources.
+*   **Comprehensive AWS Service Support:** Access a vast array of AWS services directly from your Python applications.
+*   **Simplified AWS Integration:** Interact with AWS resources using intuitive and Pythonic APIs.
+*   **Easy Credential Management:** Supports various authentication methods, including environment variables, configuration files, and IAM roles.
+*   **Well-Documented:** Benefit from extensive documentation and examples to quickly learn and implement AWS services.
+*   **Maintained by AWS:** Receive ongoing support, updates, and new feature releases from Amazon Web Services.
 
 ## Getting Started
 
 ### Prerequisites
 
-*   A supported version of Python is installed.
+*   A supported version of Python installed (check the shields above).
 
 ### Installation
 
-1.  **Set up a virtual environment** (recommended):
+1.  **Set up a virtual environment:**
 
     ```bash
-    $ python -m venv .venv
-    $ . .venv/bin/activate
+    python -m venv .venv
+    . .venv/bin/activate
     ```
 
 2.  **Install Boto3 using pip:**
 
     ```bash
-    $ python -m pip install boto3
+    python -m pip install boto3
     ```
 
-### Using Boto3
+    Alternatively, you can install from source:
 
-1.  **Configure Credentials:**  Set up your AWS credentials.  You can do this by either setting up the following in a `~/.aws/credentials` file:
-   ```ini
-   [default]
-   aws_access_key_id = YOUR_KEY
-   aws_secret_access_key = YOUR_SECRET
-   ```
-   
-    or setting the credentials using environment variables
-   
-   Other credential configuration methods can be found [here](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html).
+    ```bash
+    git clone https://github.com/boto/boto3.git
+    cd boto3
+    python -m pip install -r requirements.txt
+    python -m pip install -e .
+    ```
 
-2.  **Set a Default Region:**  Configure the default AWS region in a `~/.aws/config` file:
+### Configuration
+
+1.  **Configure your AWS credentials:**  (e.g., in `~/.aws/credentials`)
+
+    ```ini
+    [default]
+    aws_access_key_id = YOUR_KEY
+    aws_secret_access_key = YOUR_SECRET
+    ```
+
+2.  **Set a default region:** (e.g., in `~/.aws/config`)
 
     ```ini
     [default]
     region=us-east-1
     ```
 
-3.  **Import and Use:**  Start interacting with AWS services in your Python code:
+    More credential configuration methods can be found [here](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html).
 
-    ```python
-    import boto3
-    s3 = boto3.resource('s3')
-    for bucket in s3.buckets.all():
-        print(bucket.name)
-    ```
+### Example Usage
+
+```python
+import boto3
+s3 = boto3.resource('s3')
+for bucket in s3.buckets.all():
+    print(bucket.name)
+```
 
 ## Running Tests
 
-Use `tox` to run tests across all supported Python versions:
+You can run tests using `tox`:
 
 ```bash
-$ tox
+tox
 ```
 
-You can also run tests with `pytest`:
+Run individual tests or specify `pytest` options:
 
 ```bash
-$ pytest tests/unit
+tox -- unit/test_session.py
+tox -e py26,py33 -- integration/
+pytest tests/unit
 ```
 
 ## Getting Help
 
-*   **Stack Overflow:**  Ask questions and find answers tagged with `boto3` ([https://stackoverflow.com/questions/tagged/boto3](https://stackoverflow.com/questions/tagged/boto3)).
-*   **AWS Support:**  Open a support ticket with [AWS Support](https://console.aws.amazon.com/support/home#/).
-*   **GitHub Issues:**  Report bugs and request features on [GitHub](https://github.com/boto/boto3/issues/new).
+*   Ask a question on [Stack Overflow](https://stackoverflow.com/) and tag it with `boto3`.
+*   Open a support ticket with [AWS Support](https://console.aws.amazon.com/support/home#/).
+*   Report potential bugs by [opening an issue](https://github.com/boto/boto3/issues/new).
 
 ## Contributing
 
-We welcome contributions!  Please review the `CONTRIBUTING` document ([https://github.com/boto/boto3/blob/develop/CONTRIBUTING.rst](https://github.com/boto/boto3/blob/develop/CONTRIBUTING.rst)) before submitting pull requests or issues.
+We welcome your contributions! Please review the [CONTRIBUTING](https://github.com/boto/boto3/blob/develop/CONTRIBUTING.rst) document before submitting any issues or pull requests.
 
 ## Maintenance and Support
 
-Boto3 is currently in the full support phase. For more information on SDK version support, see the:
+Boto3 was made generally available on 06/22/2015 and is currently in the full support phase.
+For information about maintenance and support for SDK major versions, see the following in the AWS SDKs and Tools Shared Configuration and Credentials Reference Guide:
 
 *   [AWS SDKs and Tools Maintenance Policy](https://docs.aws.amazon.com/sdkref/latest/guide/maint-policy.html)
 *   [AWS SDKs and Tools Version Support Matrix](https://docs.aws.amazon.com/sdkref/latest/guide/version-support-matrix.html)
 
-## Additional Resources
+## More Resources
 
 *   [NOTICE](https://github.com/boto/boto3/blob/develop/NOTICE)
 *   [Changelog](https://github.com/boto/boto3/blob/develop/CHANGELOG.rst)
 *   [License](https://github.com/boto/boto3/blob/develop/LICENSE)
-*   [Boto3 Documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)

@@ -4,72 +4,71 @@
   </picture>
 </div>
 
-<h1 align="center">Klavis AI: Seamlessly Integrate AI with Your Favorite Tools</h1>
+<h1 align="center">Klavis AI: Production-Ready MCP Servers for Seamless AI Integration</h1>
 
-**Klavis AI provides production-ready MCP (Model Control Protocol) servers, offering self-hosted and hosted solutions with enterprise-grade features for effortless AI integration.**
+**Integrate AI with ease! Klavis AI provides self-hosted and hosted MCP (Message Control Protocol) servers for connecting your AI applications to various services like Gmail, GitHub, and more.**
 
 <div align="center">
-
-[![Documentation](https://img.shields.io/badge/Documentation-📖-green)](https://docs.klavis.ai)
-[![Website](https://img.shields.io/badge/Website-🌐-purple)](https://www.klavis.ai)
-[![Discord](https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white)](https://discord.gg/p7TuTEcssn)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Docker Images](https://img.shields.io/badge/Docker-ghcr.io-blue?logo=docker)](https://github.com/orgs/klavis-ai/packages)
-
+  <a href="https://docs.klavis.ai"><img src="https://img.shields.io/badge/Documentation-📖-green" alt="Documentation"></a>
+  <a href="https://www.klavis.ai"><img src="https://img.shields.io/badge/Website-🌐-purple" alt="Website"></a>
+  <a href="https://discord.gg/p7TuTEcssn"><img src="https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License"></a>
+  <a href="https://github.com/orgs/klavis-ai/packages"><img src="https://img.shields.io/badge/Docker-ghcr.io-blue?logo=docker" alt="Docker Images"></a>
 </div>
 
-## Key Features of Klavis AI
+## Key Features
 
-*   ✅ **Self-Hosted Solutions:** Deploy MCP servers using Docker for full control.
-*   🌐 **Hosted MCP Service:** Production-ready infrastructure with 99.9% uptime and instant setup.
-*   🔐 **Enterprise OAuth:** Secure authentication for services like Google, GitHub, and Slack.
-*   🛠️ **50+ Integrations:** Connect to CRMs, productivity tools, databases, and social media.
-*   🚀 **Instant Deployment:** Easily integrate with Claude Desktop, VS Code, Cursor, and more.
-*   🏢 **Enterprise-Ready:** SOC2 compliant and GDPR ready.
+*   ✅ **Hosted MCP Service:** Production-ready infrastructure with a 99.9% uptime SLA and automatic scaling.
+*   🐳 **Self-Hosting Options:** Run MCP servers using Docker or build from source for complete control.
+*   🔑 **Enterprise OAuth:** Secure and seamless authentication for services like Google, GitHub, and Slack.
+*   ⚙️ **50+ Integrations:** Connect to a wide range of services, including CRM, productivity tools, databases, and social media.
+*   🚀 **Instant Deployment:** Quick setup for popular AI tools like Claude Desktop, VS Code, and Cursor.
+*   🛡️ **Enterprise-Ready:** SOC2 compliant, GDPR ready, and backed by dedicated support.
+*   📖 **Open Source:** Customize and extend Klavis AI with access to full source code.
 
-## Quick Start: Run an MCP Server in Seconds
+## 🚀 Quick Start: Run any MCP Server in Seconds!
 
-Get up and running with Klavis AI using Docker or our hosted service.
+Choose your preferred method:
 
 ### 🐳 Self-Hosting with Docker
 
-**Perfect for developers needing control & customization.**
-
-1.  **Get a Free API Key (if using OAuth):** [Get Free API Key →](https://www.klavis.ai/home/api-keys)
-2.  **Run a GitHub MCP Server (Example):**
+1.  **Get Free API Key:** [https://www.klavis.ai/home/api-keys](https://www.klavis.ai/home/api-keys)
+2.  **Run a server:**
 
     ```bash
-    # With OAuth Support (Requires API Key)
+    # Example: Run Github MCP Server (requires API Key)
     docker pull ghcr.io/klavis-ai/github-mcp-server:latest
     docker run -p 5000:5000 -e KLAVIS_API_KEY=$KLAVIS_API_KEY \
       ghcr.io/klavis-ai/github-mcp-server:latest
+    ```
 
-    # Or Run GitHub MCP Server (Manual token)
+    ```bash
+    # Or run GitHub MCP Server (manually add token)
     docker pull ghcr.io/klavis-ai/github-mcp-server:latest
     docker run -p 5000:5000 -e AUTH_DATA='{"access_token":"ghp_your_github_token_here"}' \
       ghcr.io/klavis-ai/github-mcp-server:latest
     ```
 
-**Note:**  MCP servers run on port 5000, exposing the MCP protocol at the `/mcp` path.
+    The MCP server runs on port 5000 and exposes the MCP protocol at the `/mcp` path.
 
-**Example in Cursor:**
+    **Example in Cursor:**
 
-```json
-{
-  "mcpServers": {
-    "github": {
-      "url": "http://localhost:5000/mcp/"
+    ```json
+    {
+      "mcpServers": {
+        "github": {
+          "url": "http://localhost:5000/mcp/"
+        }
+      }
     }
-  }
-}
-```
+    ```
 
-### 🌐 Hosted Service (Recommended for Production)
+### 🌐 Using Hosted Service (Recommended for Production)
 
-**Experience the power of Klavis AI with zero setup.**
+Get started without any setup.
 
-1.  **Get a Free API Key:** [Get Free API Key →](https://www.klavis.ai/home/api-keys)
-2.  **Install the Klavis SDK:**
+1.  **Get Free API Key:** [https://www.klavis.ai/home/api-keys](https://www.klavis.ai/home/api-keys)
+2.  **Install the Klavis library:**
 
     ```bash
     pip install klavis
@@ -77,7 +76,7 @@ Get up and running with Klavis AI using Docker or our hosted service.
     npm install klavis
     ```
 
-3.  **Use the SDK:**
+3.  **Use the Klavis library:**
 
     ```python
     from klavis import Klavis
@@ -86,68 +85,54 @@ Get up and running with Klavis AI using Docker or our hosted service.
     server = klavis.mcp_server.create_server_instance("GMAIL", "user123")
     ```
 
-**Example in Cursor:**
+    **Example in Cursor:**
 
-```json
-{
-  "mcpServers": {
-    "klavis-gmail": {
-      "url": "https://gmail-mcp-server.klavis.ai/mcp/?instance_id=your-instance"
-    },
-    "klavis-github": {
-      "url": "https://github-mcp-server.klavis.ai/mcp/?instance_id=your-instance"
+    ```json
+    {
+      "mcpServers": {
+        "klavis-gmail": {
+          "url": "https://gmail-mcp-server.klavis.ai/mcp/?instance_id=your-instance"
+        },
+        "klavis-github": {
+          "url": "https://github-mcp-server.klavis.ai/mcp/?instance_id=your-instance"
+        }
+      }
     }
-  }
-}
-```
+    ```
 
-**Get your personalized configuration:**
+    **Get your personalized configuration in three steps:**
 
-1.  **Visit:** [MCP Servers Page](https://www.klavis.ai/home/mcp-servers)
-2.  **Select a service** (Gmail, GitHub, etc.)
-3.  **Copy the generated configuration**
-4.  **Paste** into your AI tool (e.g., Claude Desktop) - Done!
+    1.  **Visit our MCP Servers page:** [https://www.klavis.ai/home/mcp-servers](https://www.klavis.ai/home/mcp-servers)
+    2.  **Select your desired service** (e.g., Gmail, GitHub, Slack).
+    3.  **Copy the generated configuration** and paste it into your tool's configuration.
 
-## Enterprise-Grade MCP Infrastructure
+## 🎯 Self Hosting Instructions
 
-*   **Hosted Service:** Reliable, managed infrastructure with 99.9% uptime.
-*   **Enterprise OAuth:** Simplified authentication for popular services.
-*   **Extensive Integrations:** Support for 50+ services to supercharge your AI workflow.
-*   **Rapid Deployment:** Integrate with your AI tools instantly, no configuration needed.
-*   **Enterprise Ready:** Meets SOC2 and GDPR compliance standards.
-*   **Open Source Foundation:** Complete source code for customization.
-
-## 🎯 Self-Hosting Instructions in Detail
-
-### 1.  🐳 Docker Images (Easiest Approach)
-
-**Ideal for quickly trying MCP servers and integrating with tools.**
+### 1. 🐳 Docker Images (Fastest Way to Start)
 
 **Available Images:**
 
-*   `ghcr.io/klavis-ai/{server-name}-mcp-server:latest` (OAuth support)
-*   `ghcr.io/klavis-ai/{server-name}-mcp-server:commit-id` (Specific commit builds)
+*   `ghcr.io/klavis-ai/{server-name}-mcp-server:latest` - Server with OAuth support
+*   `ghcr.io/klavis-ai/{server-name}-mcp-server:commit-id` - Server builld by selected commit ID
 
-**Browse All Images:** [Browse Docker Images](https://github.com/orgs/Klavis-AI/packages?repo_name=klavis)
-
-**Examples:**
+[**🔍 Browse All Docker Images →**](https://github.com/orgs/Klavis-AI/packages?repo_name=klavis)
 
 ```bash
-# GitHub MCP Server
+# Example: GitHub MCP Server
 docker pull ghcr.io/klavis-ai/github-mcp-server:latest
 docker run -p 5000:5000 ghcr.io/klavis-ai/github-mcp-server:latest
 
-# Gmail with OAuth (requires API key)
+# Example: Gmail with OAuth (requires API key)
 docker pull ghcr.io/klavis-ai/gmail-mcp-server:latest
 docker run -it -e KLAVIS_API_KEY=$KLAVIS_API_KEY \
   ghcr.io/klavis-ai/gmail-mcp-server:latest
 ```
 
-**Get your API Key:** [Get Free API Key](https://www.klavis.ai/home/api-keys)
+[**🔗 Get Free API Key →**](https://www.klavis.ai/home/api-keys)
 
-### 2.  🏗️ Build from Source (For Advanced Users)
+### 2. 🏗️ Build from Source
 
-Customize and run servers locally:
+Clone and run any MCP server locally (with or without Docker):
 
 ```bash
 git clone https://github.com/klavis-ai/klavis.git
@@ -172,36 +157,36 @@ npm install
 npm start
 ```
 
-**Note:** Each server includes detailed setup instructions in its README.
+Each server includes detailed setup instructions in its individual README.
 
-**Or, use our managed service (no Docker needed):**
+Use our managed infrastructure - no Docker required:
 
 ```bash
 pip install klavis  # or npm install klavis
 ```
 
-## 🛠️ Available MCP Servers - Wide Range of Integrations
+## 🛠️ Available MCP Servers
 
-| Service      | Docker Image                             | OAuth Required | Description                               |
-|--------------|------------------------------------------|----------------|-------------------------------------------|
-| **GitHub**   | `ghcr.io/klavis-ai/github-mcp-server`     | ✅             | Repository, issues, PRs                   |
-| **Gmail**    | `ghcr.io/klavis-ai/gmail-mcp-server:latest`   | ✅             | Email reading, sending, management       |
-| **Google Sheets** | `ghcr.io/klavis-ai/google_sheets-mcp-server:latest` | ✅             | Spreadsheet operations                   |
-| **YouTube**  | `ghcr.io/klavis-ai/youtube-mcp-server`    | ❌             | Video information, search                 |
-| **Slack**    | `ghcr.io/klavis-ai/slack-mcp-server:latest`    | ✅             | Channel management, messaging           |
-| **Notion**   | `ghcr.io/klavis-ai/notion-mcp-server:latest`   | ✅             | Database and page operations           |
-| **Salesforce** | `ghcr.io/klavis-ai/salesforce-mcp-server:latest` | ✅             | CRM data management                    |
-| **Postgres** | `ghcr.io/klavis-ai/postgres-mcp-server`   | ❌             | Database operations                      |
-| ...          | ...                                      | ...            | ...                                       |
+| Service         | Docker Image                                    | OAuth Required | Description                                 |
+|-----------------|-------------------------------------------------|----------------|---------------------------------------------|
+| **GitHub**      | `ghcr.io/klavis-ai/github-mcp-server`           | ✅              | Repository management, issues, PRs        |
+| **Gmail**       | `ghcr.io/klavis-ai/gmail-mcp-server:latest`     | ✅              | Email reading, sending, management          |
+| **Google Sheets** | `ghcr.io/klavis-ai/google_sheets-mcp-server:latest` | ✅              | Spreadsheet operations                      |
+| **YouTube**     | `ghcr.io/klavis-ai/youtube-mcp-server`          | ❌              | Video information, search                 |
+| **Slack**       | `ghcr.io/klavis-ai/slack-mcp-server:latest`     | ✅              | Channel management, messaging             |
+| **Notion**      | `ghcr.io/klavis-ai/notion-mcp-server:latest`    | ✅              | Database and page operations                |
+| **Salesforce**  | `ghcr.io/klavis-ai/salesforce-mcp-server:latest` | ✅              | CRM data management                       |
+| **Postgres**    | `ghcr.io/klavis-ai/postgres-mcp-server`         | ❌              | Database operations                       |
+| ...             | ...                                             | ...            | ...                                         |
 
-**Explore More Servers:**
+And more!
+[**🔍 View All 50+ Servers →**](https://docs.klavis.ai/documentation/introduction#mcp-server-quickstart) | [**🐳 Browse Docker Images →**](https://github.com/orgs/Klavis-AI/packages?repo_name=klavis)
 
-*   [View All 50+ Servers](https://docs.klavis.ai/documentation/introduction#mcp-server-quickstart)
-*   [Browse Docker Images](https://github.com/orgs/Klavis-AI/packages?repo_name=klavis)
+## 💡 Usage Examples
 
-## 💡 Example Usage - Integrate with AI Frameworks
+For existing MCP implementations:
 
-### Python
+**Python**
 
 ```python
 from klavis import Klavis
@@ -213,7 +198,7 @@ server = klavis.mcp_server.create_server_instance(
 )
 ```
 
-### TypeScript
+**TypeScript**
 
 ```typescript
 import { KlavisClient } from 'klavis';
@@ -225,7 +210,9 @@ const server = await klavis.mcpServer.createServerInstance({
 });
 ```
 
-### With AI Frameworks: OpenAI Function Calling
+### With AI Frameworks
+
+**OpenAI Function Calling**
 
 ```python
 from openai import OpenAI
@@ -246,47 +233,44 @@ response = openai.chat.completions.create(
 )
 ```
 
-[**📖 Complete Examples**](examples/)
+[**📖 View Complete Examples →**](examples/)
 
-## 🌐 Hosted MCP Service - Zero Setup Needed
+## 🌐 Hosted MCP Service - Zero Setup Required
 
-**Simplify your AI integration with our managed service.**
+**Perfect for individuals and businesses who want instant access without infrastructure complexity:**
 
-### ✨ **Benefits of the Hosted Service:**
+### ✨ **Why Choose Our Hosted Service:**
 
-*   🚀 **Instant Setup**: Get any MCP server running in 30 seconds.
-*   🔐 **OAuth Simplified**: Handles complex authentication for you.
-*   🏗️ **No Infrastructure:**  Runs on our secure, scalable cloud.
-*   📈 **Auto-Scaling:**  Seamlessly scale from prototype to production.
-*   🔄 **Always Updated**:  Get the latest server versions automatically.
-*   💰 **Cost-Effective:**  Pay-as-you-go, with a free tier available.
+*   🚀 **Instant Setup**: Get any MCP server running in 30 seconds
+*   🔐 **OAuth Handled**: No complex authentication setup required
+*   🏗️ **No Infrastructure**: Everything runs on our secure, scalable cloud
+*   📈 **Auto-Scaling**: From prototype to production seamlessly
+*   🔄 **Always Updated**: Latest MCP server versions automatically
+*   💰 **Cost-Effective**: Pay only for what you use, free tier available
 
 ### 💻 **Quick Integration:**
 
 ```python
 from klavis import Klavis
 
-# Start with an API key
+# Get started with just an API key
 klavis = Klavis(api_key="Your-Klavis-API-Key")
 
-# Create an MCP server instantly
+# Create any MCP server instantly
 gmail_server = klavis.mcp_server.create_server_instance(
     server_name="GMAIL",
     user_id="your-user-id"
 )
 
-# Server ready to use immediately
+# Server is ready to use immediately
 print(f"Gmail MCP server ready: {gmail_server.server_url}")
 ```
 
-**Get Started:**
+**🔗 [Get Free API Key →](https://www.klavis.ai/home/api-keys)** | **📖 [Complete Documentation →](https://docs.klavis.ai)**
 
-*   [Get Free API Key](https://www.klavis.ai/home/api-keys)
-*   [Complete Documentation](https://docs.klavis.ai)
+## 🔐 OAuth Authentication (For OAuth-Enabled Servers)
 
-## 🔐 OAuth Authentication - Simplified
-
-**Easily integrate services requiring OAuth authentication (Google, GitHub, Slack).**
+Some servers require OAuth authentication (Google, GitHub, Slack, etc.).
 
 ```bash
 # Run with OAuth support (requires free API key)
@@ -298,41 +282,41 @@ docker run -it -e KLAVIS_API_KEY=$KLAVIS_API_KEY \
 # Server starts automatically after authentication
 ```
 
-**Why OAuth can be complex:**
+**Why OAuth needs additional implementation?**
 
-*   🔧 **Complex Setup:** Requires creating OAuth apps with specific redirect URLs, scopes, and credentials.
-*   📝 **Implementation Overhead:** Requires callback handling, token refresh, and secure storage.
-*   🔑 **Credential Management:** Managing multiple OAuth app secrets across different services.
-*   🔄 **Token Lifecycle:** Handling token expiration, refresh, and error cases.
+*   🔧 **Complex Setup**: Each service requires creating OAuth apps with specific redirect URLs, scopes, and credentials
+*   📝 **Implementation Overhead**: OAuth 2.0 flow requires callback handling, token refresh, and secure storage
+*   🔑 **Credential Management**: Managing multiple OAuth app secrets across different services
+*   🔄 **Token Lifecycle**: Handling token expiration, refresh, and error cases
 
-**Klavis AI simplifies OAuth by handling the complexity.**
+Our OAuth wrapper simplifies this by handling all the complex OAuth implementation details, so you can focus on using the MCP servers directly.
 
-**Alternative (Advanced Users):** You can implement OAuth manually.  See individual server READMEs.
+**Alternative**: For advanced users, you can implement OAuth yourself by creating apps with each service provider. Check individual server READMEs for technical details.
 
-## 📚 Resources and Community
+## 📚 Resources & Community
 
-| Resource             | Link                                                        | Description                                   |
-|----------------------|-------------------------------------------------------------|-----------------------------------------------|
-| **📖 Documentation**  | [docs.klavis.ai](https://docs.klavis.ai)                   | Complete guides and API reference            |
-| **💬 Discord**       | [Join Community](https://discord.gg/p7TuTEcssn)            | Get help and connect with other users       |
-| **🐛 Issues**        | [GitHub Issues](https://github.com/klavis-ai/klavis/issues) | Report bugs and request features             |
-| **📦 Examples**      | [examples/](examples/)                                       | Working examples with AI frameworks         |
-| **🔧 Server Guides** | [mcp_servers/](mcp_servers/)                                 | Individual server documentation              |
+| Resource             | Link                                               | Description                                     |
+|----------------------|----------------------------------------------------|-------------------------------------------------|
+| **📖 Documentation**  | [docs.klavis.ai](https://docs.klavis.ai)           | Complete guides and API reference               |
+| **💬 Discord**       | [Join Community](https://discord.gg/p7TuTEcssn)   | Get help and connect with users                 |
+| **🐛 Issues**         | [GitHub Issues](https://github.com/klavis-ai/klavis/issues) | Report bugs and request features                |
+| **📦 Examples**       | [examples/](examples/)                              | Working examples with popular AI frameworks      |
+| **🔧 Server Guides** | [mcp_servers/](mcp_servers/)                      | Individual server documentation                  |
 
 ## 🤝 Contributing
 
-We welcome your contributions!
+We welcome contributions! To get involved:
 
-*   🐛 Report bugs or suggest features.
-*   📝 Improve documentation.
-*   🔧 Build new MCP servers.
-*   🎨 Enhance existing servers.
+*   🐛 Report bugs or request features
+*   📝 Improve documentation
+*   🔧 Build new MCP servers
+*   🎨 Enhance existing servers
 
-Get started by reviewing our [Contributing Guide](CONTRIBUTING.md)!
+Check out our [Contributing Guide](CONTRIBUTING.md) to learn more!
 
 ## 📜 License
 
-MIT License - See [LICENSE](LICENSE) for details.
+MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
@@ -342,6 +326,26 @@ MIT License - See [LICENSE](LICENSE) for details.
     <a href="https://www.klavis.ai">Get Free API Key</a> •
     <a href="https://docs.klavis.ai">Documentation</a> •
     <a href="https://discord.gg/p7TuTEcssn">Discord</a> •
-    <a href="examples/">Examples</a>
+    <a href="examples/">Examples</a> •
+    <a href="https://github.com/Klavis-AI/klavis">GitHub Repository</a>
   </p>
 </div>
+```
+Key changes and improvements:
+
+*   **Stronger Hook:** Replaced the generic opening with a more benefit-driven hook: "Integrate AI with ease! Klavis AI provides self-hosted and hosted MCP (Message Control Protocol) servers for connecting your AI applications to various services like Gmail, GitHub, and more." This is much more effective for grabbing attention.
+*   **SEO Optimization:**  Added keywords like "MCP servers," "AI integration," and specific services (Gmail, GitHub) throughout the text.
+*   **Clear Headings and Structure:**  Organized the content with clear headings and subheadings for easy readability and scannability (crucial for SEO and user experience).
+*   **Bulleted Key Features:**  Used bullet points to highlight the main benefits and features of Klavis AI, making them easy to digest.
+*   **Concise Language:** Streamlined the text to be more direct and easier to understand.
+*   **Actionable Quick Start:** Provided clear and concise instructions for both Docker and hosted service options. The API key link is included to encourage immediate use.
+*   **Call to Actions:**  Included "Get Free API Key" links throughout to drive conversions.
+*   **Comprehensive Resource Section:**  Provides direct links to documentation, Discord, and other useful resources.
+*   **GitHub Repository Link:**  Added a direct link back to the original GitHub repository at the end to increase discoverability and engagement.
+*   **Improved Formatting:**  Used bolding and other formatting to emphasize key information.
+*   **Alt Text:**  Added alt text to images for better accessibility and SEO.
+*   **Added Summary for hosted and self-hosting, in Quick Start**
+*   **Removed Duplicates:** consolidated information where needed.
+*   **Added Descriptions:** for Docker Images table.
+
+This revised README is significantly more effective at attracting users, conveying the value of Klavis AI, and encouraging adoption.  It's also much better optimized for search engines.

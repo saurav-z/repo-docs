@@ -1,119 +1,59 @@
-# Azure CLI: Manage Azure Resources from the Command Line
+# Azure CLI: Your Command-Line Interface for Effortless Azure Management
 
-**The Azure CLI is a cross-platform command-line experience that provides powerful tools to manage your Azure resources.** ([Back to Original Repo](https://github.com/Azure/azure-cli))
+**Manage your Azure resources with ease using the Azure CLI, a powerful and versatile command-line tool.**  [Check out the original repository](https://github.com/Azure/azure-cli).
 
-## Key Features
+**Key Features:**
 
-*   **Cross-Platform:** Works on Windows, macOS, and Linux.
-*   **Resource Management:** Create, manage, and configure Azure services with ease.
-*   **Tab Completion:** Streamline your workflow with command, group, and parameter completion.
-*   **Powerful Querying:** Use JMESPath for customized output with the `--query` parameter.
-*   **Scripting Friendly:** Standardized exit codes for reliable automation.
-*   **Output Formatting:** Supports JSON, table, and TSV formats for versatile data presentation.
-*   **REST API Access:**  Interact directly with Azure REST APIs using `az rest`.
-*   **Visual Studio Code Integration:**  Use the Azure CLI Tools extension for IntelliSense, snippets, and integrated terminal access.
+*   **Multi-Platform Compatibility:** Run the Azure CLI on Windows, macOS, and Linux.
+*   **Intuitive Command Structure:**  Use the `az` command followed by resource groups, subgroups, and commands for clear and concise operation.
+*   **Interactive Help:** Get help with commands and parameters using the `-h` flag (e.g., `az vm create -h`).
+*   **Tab Completion:** Improve efficiency with tab completion for groups, commands, and parameters.
+*   **Flexible Output Formatting:** Customize your output using `--query` and JMESPath for tailored results.  Supports JSON, table, and TSV formats.
+*   **Exit Codes for Scripting:** Use exit codes for easy scripting and automation.
+*   **VS Code Integration:**  Leverage the Azure CLI Tools extension in Visual Studio Code for IntelliSense, snippets, and in-editor command execution.
 
-## Installation
+## Getting Started
 
-Refer to the [install guide](https://learn.microsoft.com/cli/azure/install-azure-cli) for detailed instructions.  Troubleshooting tips are available in the [install troubleshooting](https://github.com/Azure/azure-cli/blob/dev/doc/install_troubleshooting.md) document.
+**Installation:** Refer to the [installation guide](https://learn.microsoft.com/cli/azure/install-azure-cli) for detailed instructions. Troubleshooting tips are available at [install troubleshooting](https://github.com/Azure/azure-cli/blob/dev/doc/install_troubleshooting.md).
 
-## Usage
-
-```bash
-$ az [group] [subgroup] [command] {parameters}
-```
-
-### Getting Started
-
-For a comprehensive guide, see the ["get started" guide](https://learn.microsoft.com/cli/azure/get-started-with-az-cli2).
-
-Get help using the `-h` parameter:
+**Basic Usage:**  Use the following format for commands:
 
 ```bash
-$ az storage -h
-$ az vm create -h
+$ az [ group ] [ subgroup ] [ command ] {parameters}
 ```
 
-### Highlights
-
-The Azure CLI offers many features to help you manage your Azure resources, like tab completion and powerful querying.
-
-#### Tab Completion
+**Example:**
 
 ```bash
-$ az vm show -g [tab][tab]  # Example
+$ az storage account create --name myaccount --resource-group myresourcegroup --location westus
 ```
 
-#### Query
+**Learn More:** Explore the ["get started" guide](https://learn.microsoft.com/cli/azure/get-started-with-az-cli2) for in-depth instructions.
 
-Customize your output with the `--query` parameter and JMESPath:
+## Advanced Usage and Tips
 
-```bash
-$ az vm list --query "[?provisioningState=='Succeeded'].{ name: name, os: storageProfile.osDisk.osType }"
-```
+*   **Output Formatting:**  Control output formats (JSON, table, tsv).
+*   **Command Chaining:** Pass values between commands.
+*   **Asynchronous Operations:** Manage long-running tasks.
+*   **Generic Update Arguments:** Use update arguments for resource management.
+*   **Generic Resource Commands:** Leverage `az resource` for broad resource control.
+*   **REST API Command:** Utilize `az rest` for direct API interaction.
+*   **Work Behind a Proxy:** Configure the CLI for proxy environments.
+*   **Concurrent Builds:** Optimize builds for efficiency.
 
-#### Exit Codes
+## Additional Resources
 
-| Exit Code | Scenario                                        |
-| --------- | ----------------------------------------------- |
-| 0         | Command ran successfully.                       |
-| 1         | Generic error, server error, CLI validation failed |
-| 2         | Parser error, check input.                      |
-| 3         | Missing ARM resource.                           |
+*   **Samples and Snippets:** [GitHub samples repo](http://github.com/Azure/azure-cli-samples) and [Microsoft Learn](https://learn.microsoft.com/cli/azure/overview).
+*   **Visual Studio Code Extension:**  Install [Azure CLI Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli) for enhanced development.
 
-### Common Scenarios
+## Developer Information
 
-Learn how to use the Azure CLI effectively: [Tips for using Azure CLI effectively](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively).
+**Telemetry:**  Telemetry collection is enabled by default.  You can disable it with `az config set core.collect_telemetry=no`.
 
-## More Samples and Snippets
+**Reporting Issues:**  Report bugs via the [GitHub Issues](https://github.com/Azure/azure-cli/issues) section.
 
-*   Explore more usage examples in the [GitHub samples repo](http://github.com/Azure/azure-cli-samples) and on [Microsoft Learn](https://learn.microsoft.com/cli/azure/overview).
+**Feedback:**  Provide feedback from the command line with the `az feedback` command.
 
-## Visual Studio Code Integration
+**Developer Setup:** Instructions for setting up a development environment: [Configuring Your Machine](https://github.com/Azure/azure-cli/blob/dev/doc/configuring_your_machine.md).
 
-The [Azure CLI Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli) extension enhances your VS Code experience with features like IntelliSense and integrated terminal execution.
-
-## Data Collection
-
-The software collects information. You can opt-out with: `az config set core.collect_telemetry=no`.  See our [privacy statement](https://go.microsoft.com/fwlink/?LinkID=824704).
-
-## Reporting Issues and Feedback
-
-Report bugs in the [Issues](https://github.com/Azure/azure-cli/issues) section.  Provide feedback via the `az feedback` command.
-
-## Developer Installation
-
-### Docker
-
-```bash
-$ docker run -u $(id -u):$(id -g) -v ${HOME}:/home/az -e HOME=/home/az --rm -it mcr.microsoft.com/azure-cli:<version>
-```
-
-### Edge Builds
-
-Get the latest builds:
-
-| Package          | Link                                       |
-| :--------------- | :------------------------------------------- |
-| MSI              | https://aka.ms/InstallAzureCliWindowsEdge  |
-| Homebrew Formula | https://aka.ms/InstallAzureCliHomebrewEdge |
-| Ubuntu Bionic Deb | https://aka.ms/InstallAzureCliBionicEdge   |
-| Ubuntu Focal Deb  | https://aka.ms/InstallAzureCliFocalEdge    |
-| Ubuntu Jammy Deb  | https://aka.ms/InstallAzureCliJammyEdge    |
-| RPM el8          | https://aka.ms/InstallAzureCliRpmEl8Edge   |
-
-### Get builds of arbitrary commit or PR
-
-See: [Try new features before release](doc/try_new_features_before_release.md)
-
-## Developer Setup
-
-See:
-
-*   [Configuring Your Machine](https://github.com/Azure/azure-cli/blob/dev/doc/configuring_your_machine.md)
-*   [Authoring Command Modules](https://github.com/Azure/azure-cli/tree/dev/doc/authoring_command_modules)
-*   [Code Generation](https://github.com/Azure/aaz-dev-tools)
-
-## Contribute Code
-
-See the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) and [Microsoft Open Source Guidelines](https://opensource.microsoft.com/collaborate).
+**Contribute:** [Microsoft Open Source Guidelines](https://opensource.microsoft.com/collaborate).

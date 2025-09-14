@@ -1,91 +1,99 @@
-[![Falcon Logo](https://raw.githubusercontent.com/falconry/falcon/master/logo/banner.jpg)](https://falconframework.org/)
+<div align="center">
+  <a href="https://falconframework.org/" target="_blank">
+    <img src="https://raw.githubusercontent.com/falconry/falcon/master/logo/banner.jpg" alt="Falcon Logo" width="100%">
+  </a>
+</div>
 
-# Falcon: Build Lightning-Fast APIs with Python
+[![Build Status](https://github.com/falconry/falcon/actions/workflows/tests.yaml/badge.svg)](https://github.com/falconry/falcon/actions/workflows/tests.yaml)
+[![Docs](https://readthedocs.org/projects/falcon/badge/?version=stable)](https://falcon.readthedocs.io/en/stable/?badge=stable)
+[![codecov.io](https://codecov.io/gh/falconry/falcon/branch/master/graphs/badge.svg)](https://codecov.io/gh/falconry/falcon)
+[![PyPI package](https://badge.fury.io/py/falcon.svg)](https://pypi.org/project/falcon/)
+[![Python versions](https://img.shields.io/pypi/pyversions/falcon.svg)](https://pypi.org/project/falcon/)
 
-[Falcon](https://github.com/falconry/falcon) is a high-performance, minimalist ASGI/WSGI framework, engineered for building robust and scalable REST APIs and microservices.
+## Falcon: Build blazing-fast REST APIs and microservices with this minimalist Python framework.
+
+[View the original repository on GitHub](https://github.com/falconry/falcon)
+
+**Falcon** is a high-performance Python web framework designed for building robust and scalable REST APIs and microservices. It prioritizes speed, reliability, and a clean design, making it ideal for demanding applications.
 
 **Key Features:**
 
-*   **ASGI and WSGI Support:** Compatible with both ASGI and WSGI servers, offering flexibility in deployment.
-*   **Native Asyncio Support:** Harness the power of asynchronous programming for improved performance.
-*   **Minimal Dependencies:**  Reduces attack surface and dependencies, and avoids unnecessary abstractions.
-*   **RESTful Design:**  Embraces the REST architectural style with a clean and focused design.
-*   **Reliable and Debuggable:** Stable interfaces, rigorous testing, and a focus on clear code.
-*   **Fast:** Delivers superior performance compared to other Python frameworks, and is well-optimized.
-*   **Flexible:** Provides freedom to customize and fine-tune your implementation.
-*   **CPython 3.9+ and PyPy 3.9+ support:** Supports the latest Python versions.
+*   **ASGI, WSGI, and WebSocket Support:**  Works seamlessly with both ASGI and WSGI servers, providing flexibility for deployment.
+*   **Native `asyncio` Support:** Leverage asynchronous programming for improved performance and concurrency.
+*   **Minimalist Design:** Avoids unnecessary abstractions, giving you fine-grained control over your API.
+*   **RESTful Architecture:** Built with the REST architectural style in mind, promoting clean and maintainable code.
+*   **High Performance:** Optimized code base for maximum throughput, significantly faster than other popular Python frameworks.
+*   **Flexible:**  Provides the tools you need while leaving implementation details to you.
+*   **Comprehensive Documentation:** Easy to understand and use with well-documented features.
+*   **Thorough Testing:**  Includes WSGI/ASGI helpers and mocks for snappy testing.
+*   **Wide Compatibility:** Supports CPython 3.9+ and PyPy 3.9+.
 
-**Quick Links:**
+### Quick Links
 
-*   [Documentation](https://falcon.readthedocs.io/en/stable/) (FAQ, Getting Help, Reference)
+*   [Read the Docs](https://falcon.readthedocs.io/en/stable)
+    ([FAQ](https://falcon.readthedocs.io/en/stable/user/faq.html) -
+    [Getting Help](https://falcon.readthedocs.io/en/stable/community/help.html) -
+    [Reference](https://falcon.readthedocs.io/en/stable/api/index.html))
 *   [Falcon Add-ons and Complementary Packages](https://github.com/falconry/falcon/wiki)
 *   [Articles, Talks, and Podcasts](https://github.com/falconry/falcon/wiki/Articles,-Talks-and-Podcasts)
-*   [Falcon Users @ Gitter](https://gitter.im/falconry/user)
-*   [Falcon Contributors @ Gitter](https://gitter.im/falconry/dev)
+*   [Falcon Users Gitter Channel](https://gitter.im/falconry/user)
+*   [Falcon Developers Gitter Channel](https://gitter.im/falconry/dev)
 
-**What People Are Saying:**
+### What People Are Saying
 
-(Quotes from original README)
+(Quotes from the original README)
 
-**How is Falcon Different?**
+### How is Falcon Different?
 
-(Key points from original README, condensed and reformatted for SEO)
+Falcon is designed to support the demanding needs of large-scale microservices and responsive app backends. It provides bare-metal performance, reliability, and flexibility.
 
-*   **Reliable:** Falcon prioritizes backwards compatibility, rigorous testing, and minimal dependencies to ensure stability and prevent breaking changes.
-*   **Debuggable:**  Falcon's design eschews "magic," making it easier to understand code and debug issues in large-scale deployments.
-*   **Fast:** Falcon delivers exceptional performance, often surpassing other Python frameworks like Django and Flask.
-*   **Flexible:**  Falcon empowers developers with control over implementation details, promoting customization and deeper understanding of the application.
+**Reliable:** Falcon avoids breaking changes. The code is rigorously tested and maintains 100% coverage. It has no dependencies outside the standard library.
 
-**Who's Using Falcon?**
+**Debuggable:** Easy to understand and debug with clear logic paths and minimal "magic".
 
-(List of companies from the original README)
+**Fast:** Falcon turns around requests significantly faster than other popular Python frameworks like Django and Flask.
 
-*   7ideas
-*   Cronitor
-*   EMC
-*   Hurricane Electric
-*   Leadpages
-*   OpenStack
-*   Rackspace
-*   Shiftgig
-*   tempfil.es
-*   Opera Software
+**Flexible:** Falcon gives you control over implementation details. It allows for customization and innovation.
 
-**Community**
+### Who's Using Falcon?
 
-(Community section from the original README)
+(List of organizations from original README)
 
-**Installation**
+### Support Falcon Development
 
-(Installation instructions from original README, with subheadings for PyPy and CPython)
+Has Falcon helped you make an awesome app?  Show your support today!
 
-**Dependencies**
+<a href="https://falconframework.org/#sectionSupportFalconDevelopment" target="_blank">Learn how to support Falcon development</a>
 
-Falcon has no dependencies outside the standard library.
+<a href="https://www.govcert.lu/" target="_blank"><img src="https://falconframework.org/assets/govcert.png" alt="CERT Gouvernemental Luxembourg" height="60px"></a>
+<a href="https://sentry.io" target="_blank"><img src="https://falconframework.org/assets/sentry-dark.svg" alt="Sentry" height="60px"></a>
 
-**WSGI Server**
+### Installation
 
-(Instructions for installing a WSGI server, gunicorn or uWSGI, from the original README)
+(Installation instructions from original README -  PyPy and CPython)
 
-**ASGI Server**
+### Dependencies
 
-(Instructions for installing an ASGI server, uvicorn, from the original README)
+Falcon has no external dependencies.
 
-**Source Code**
+### WSGI Server
 
-(Source code section from the original README)
+(Instructions from the original README)
 
-**Getting Started**
+### ASGI Server
 
-(WSGI Example from the original README, including instructions for running)
+(Instructions from the original README)
 
-**Contributing**
+### Source Code
 
-(Contribution instructions from original README)
+[Falcon lives on GitHub](https://github.com/falconry/falcon).
 
-**Legal**
+(Installation instructions from original README - Cloning, Installing, and Testing)
 
-(Legal information from original README)
+### Contributing
 
----
-|Build status| |Docs| |codecov.io| |PyPI package| |Python versions|
+(Contributing guidelines from the original README)
+
+### Legal
+
+(Legal information from the original README)

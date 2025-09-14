@@ -1,64 +1,62 @@
-<!-- Improved & SEO-Optimized README -->
-<div align="center">
-  <h1>ChatMock: Access GPT-5 and More via Your ChatGPT Plan</h1>
-  <p><b>Unlock the power of advanced AI models using your existing ChatGPT Plus/Pro account with an OpenAI-compatible API.</b></p>
-  <p>
-    <a href="https://github.com/RayBytes/ChatMock">
-      <img src="https://img.shields.io/github/stars/RayBytes/ChatMock?style=social" alt="GitHub Stars"/>
-    </a>
-  </p>
-  <br>
-</div>
+# ChatMock: Access GPT-5 & More via Your ChatGPT Account
 
-## Key Features of ChatMock
+**Unlock the power of GPT-5 and other OpenAI models using your existing ChatGPT Plus/Pro subscription, without needing an API key.** [Check out the original repository!](https://github.com/RayBytes/ChatMock)
 
-ChatMock transforms your paid ChatGPT account into a versatile AI development tool by creating a local OpenAI/Ollama-compatible API. Here’s what you can do:
+ChatMock allows you to leverage your paid ChatGPT account to access OpenAI models through a local server, providing an OpenAI/Ollama-compatible API. Use your existing ChatGPT login to access GPT-5 and other advanced models from your code or alternative chat interfaces.
 
-*   ✅ **Access GPT-5 & Beyond:** Utilize advanced models like GPT-5 and others directly through your ChatGPT subscription.
-*   ✅ **OpenAI Compatibility:** Use standard OpenAI API calls and libraries.
-*   ✅ **Ollama Compatibility:** Supports Ollama API for flexible model access.
-*   ✅ **No API Key Required:** Authenticates via your ChatGPT login, eliminating the need for API keys.
-*   ✅ **Tool Calling & Vision Support:** Leverages advanced features.
-*   ✅ **Thinking Summaries:** Includes thinking summary support for insightful responses.
+## Key Features
+
+*   **GPT-5 and More:** Access cutting-edge OpenAI models, including GPT-5, without needing an API key.
+*   **OpenAI/Ollama Compatibility:**  Use ChatMock with any tool or application that supports the OpenAI API, and now includes Ollama!
+*   **Easy Setup:**  Get started quickly with GUI applications for macOS, a command-line interface via Homebrew, or a simple Python setup.
+*   **No API Key Required:** Uses your existing, paid ChatGPT account.
+*   **Supports Advanced Features:** Includes tool calling, vision/image understanding, and thinking summaries.
+*   **Customizable Reasoning:** Adjust the reasoning effort and summary style for optimal performance.
 
 ## Getting Started
 
-### Mac Users
+### macOS Users
 
 #### GUI Application
 
-Download and run the user-friendly GUI app from the [GitHub releases](https://github.com/RayBytes/ChatMock/releases).
+Download the user-friendly GUI app from the [GitHub releases](https://github.com/RayBytes/ChatMock/releases).
 
-> **Note:** You may need to run a terminal command the first time you launch the app due to macOS security:
+> **Note:**  If you encounter issues opening the app, you may need to run:
+>
 > ```bash
 > xattr -dr com.apple.quarantine /Applications/ChatMock.app
 > ```
-> *[Learn more.](https://github.com/deskflow/deskflow/wiki/Running-on-macOS)*
+>
+> *[More info here.](https://github.com/deskflow/deskflow/wiki/Running-on-macOS)*
 
 #### Command Line (Homebrew)
 
-Alternatively, install ChatMock using Homebrew:
+Install ChatMock as a command-line tool using [Homebrew](https://brew.sh/):
 
 ```bash
 brew tap RayBytes/chatmock
 brew install chatmock
 ```
 
-### Python (Command Line)
+### Python
 
-For Python users, follow these steps:
+For a Python-based setup:
 
-1.  Clone or download the repository, then navigate into the project directory.
-2.  Sign in to your ChatGPT account:
+1.  Clone or download the repository and navigate into the project directory.
+2.  Sign in with your ChatGPT account:
+
     ```bash
     python chatmock.py login
     ```
-    Verify the login with: `python chatmock.py info`.
+
+    Verify login with: `python chatmock.py info`
 3.  Start the local server:
+
     ```bash
     python chatmock.py serve
     ```
-    Use the server's address and port (default: `http://127.0.0.1:8000`) as your `baseURL`.  Remember to include `/v1/` for OpenAI compatibility.
+
+    The server runs by default at `http://127.0.0.1:8000`. Remember to include `/v1/` when using it as an OpenAI endpoint. (e.g., `http://127.0.0.1:8000/v1`)
 
 ## Examples
 
@@ -92,37 +90,33 @@ curl http://127.0.0.1:8000/v1/chat/completions \
   }'
 ```
 
-## Supported Features
-
-*   Tool Calling
-*   Vision/Image Understanding
-*   Thinking Summaries
-
-## Configuration & Customization
-
-### Thinking Effort
-
-Control the model's "thinking" effort with `--reasoning-effort` (minimal, low, medium, high). Default: `medium`.  Set at server start or override in API requests.
-
-### Thinking Summaries
-
-Customize the format of reasoning summaries using `--reasoning-summary` (auto, concise, detailed, none).
-
-### Other Customization Options
-Additional settings can be adjusted to fine-tune the model's behavior.
-For a comprehensive list, see `python chatmock.py serve --h`.
-
-## Important Notes
-
-*   Requires a paid ChatGPT account.
-*   Rate limits may be lower than the official ChatGPT app.
-*   This project is not affiliated with OpenAI. Use responsibly.
-*   Context size is larger than in the standard ChatGPT app.
-
 ## Supported Models
 
 *   `gpt-5`
 *   `codex-mini`
+
+## Customization
+
+### Reasoning Effort
+
+*   `--reasoning-effort` (minimal, low, medium, high)
+
+### Reasoning Summaries
+
+*   `--reasoning-summary` (auto, concise, detailed, none)
+
+**For the fastest responses, try `--reasoning-effort low` and `--reasoning-summary none`.**
+
+**All parameters and choices can be viewed by running `python chatmock.py serve --h`**
+
+**To customize the behavior of the thinking summaries, set `--reasoning-compat` to `legacy` to set the reasoning tag instead of being returned in the actual response text.**
+
+## Notes & Limitations
+
+*   Requires an active, paid ChatGPT account.
+*   Expect potentially lower rate limits than the ChatGPT app.
+*   Some context length may be used for internal instructions.
+*   Use responsibly and at your own risk. This project is not affiliated with OpenAI.
 
 ## Future Development
 
@@ -132,7 +126,3 @@ For a comprehensive list, see `python chatmock.py serve --h`.
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=RayBytes/ChatMock&type=Timeline)](https://www.star-history.com/#RayBytes/ChatMock&Timeline)
-
----
-
-**[Visit the original repository on GitHub](https://github.com/RayBytes/ChatMock) for more details and to contribute.**

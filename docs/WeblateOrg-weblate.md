@@ -1,43 +1,41 @@
-# Weblate: Continuous Localization for a Global Audience
+[![Weblate Logo](https://s.weblate.org/cdn/Logo-Darktext-borders.png)](https://weblate.org/)
 
-**Weblate empowers developers to effortlessly translate their projects into multiple languages, fostering global reach and accessibility.** ([View the original repository](https://github.com/WeblateOrg/weblate))
+# Weblate: Your Complete Solution for Continuous Localization
 
-[Image of Weblate Logo](https://s.weblate.org/cdn/Logo-Darktext-borders.png)
+**Weblate is a powerful, web-based continuous localization system that empowers over 2500 projects and companies worldwide to effortlessly manage their translation workflows.**
 
-Weblate is a free and open-source, web-based continuous localization system used by over 2500 projects and companies in over 165 countries. Whether you're a solo developer or part of a large organization, Weblate simplifies the translation process, making it easier to reach a global audience.
+[Visit the original repository on GitHub](https://github.com/WeblateOrg/weblate)
 
-## Key Features
+## Key Features:
 
-*   **Web-Based Interface:**  Provides an intuitive web interface for translators to contribute directly.
-*   **Continuous Localization:**  Streamlines the translation workflow with automated processes.
-*   **Supports Numerous Formats:** Compatible with a wide range of translation file formats.
-*   **Integration with VCS:** Integrates with popular Version Control Systems (VCS) like Git.
-*   **User-Friendly:** Designed for both developers and translators.
-*   **Free and Open Source:**  Available under the GNU General Public License.
-*   **Hosted Service Available:** Consider the hosted Weblate service at `weblate.org`_.
+*   **Web-Based Interface:** Accessible from any web browser, simplifying collaboration and management.
+*   **Continuous Localization:** Streamlines translation processes for faster releases.
+*   **Used by Thousands:** Trusted by over 2500 libre projects and companies.
+*   **Global Reach:** Deployed in more than 165 countries.
+*   **Free and Open Source:**  Weblate is free software, promoting transparency and community contributions.
+*   **Integration:**  Integrates with version control systems (Git, etc.) and popular file formats.
+*   **Hosted Solution Available:**  Easily get started with the hosted service at [weblate.org](https://weblate.org/).
 
 ## Support
 
-Weblate offers optional professional support and cloud hosting. Learn more at [https://weblate.org/hosting/](https://weblate.org/hosting/).
+Weblate offers optional professional support and cloud hosting. Learn more at [weblate.org/hosting/](https://weblate.org/hosting/).
 
 ## Documentation
 
-Comprehensive documentation is available in the `docs` directory of the source code and online at [https://docs.weblate.org/](https://docs.weblate.org/).
+Comprehensive documentation is available in the `docs` directory of the source code, or online at [https://docs.weblate.org/](https://docs.weblate.org/).
 
 ## Installation
 
-Detailed installation instructions can be found at [https://docs.weblate.org/en/latest/admin/install.html](https://docs.weblate.org/en/latest/admin/install.html).
+Detailed installation instructions are available at [https://docs.weblate.org/en/latest/admin/install.html](https://docs.weblate.org/en/latest/admin/install.html).
 
-## Reporting Issues & Feature Requests
+## Reporting Issues and Feature Requests
 
-Please report any issues or submit feature requests via: [https://github.com/WeblateOrg/weblate/issues](https://github.com/WeblateOrg/weblate/issues).
+Please report bugs and suggest new features through the issue tracker on GitHub: [https://github.com/WeblateOrg/weblate/issues](https://github.com/WeblateOrg/weblate/issues).
 
-## Live Chat
+## Community Chat
 
-Get real-time support and discuss Weblate with the community on Libera.Chat IRC network in the ``#weblate`` channel. Access it via [https://web.libera.chat/#weblate](https://web.libera.chat/#weblate) or your preferred IRC client.
+Join the Weblate community for live chat on the Libera.Chat IRC network in the `#weblate` channel (accessible via [https://web.libera.chat/#weblate](https://web.libera.chat/#weblate) or your preferred IRC client).
 
 ## License
 
-Weblate is licensed under the GNU General Public License, version 3.  See the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.html) for more details.
-
-Copyright © Michal Čihař michal@weblate.org
+Weblate is licensed under the GNU General Public License, version 3 (GPLv3).  See the `GNU General Public License <https://www.gnu.org/licenses/gpl-3.0.html>`_ for details.

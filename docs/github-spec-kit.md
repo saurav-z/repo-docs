@@ -1,61 +1,73 @@
 <div align="center">
-    <img src="./media/logo_small.webp" alt="Spec Kit Logo"/>
+    <img src="./media/logo_small.webp"/>
     <h1>🌱 Spec Kit</h1>
-    <h3><em>Build High-Quality Software Faster with AI-Powered Spec-Driven Development.</em></h3>
+    <h3><em>Build high-quality software faster.</em></h3>
 </div>
 
 <p align="center">
-    <b>Stop writing boilerplate code and start building with intention!</b> Spec Kit empowers you to focus on *what* to build, not just *how*.
+    <strong>An effort to allow organizations to focus on product scenarios rather than writing undifferentiated code with the help of Spec-Driven Development.</strong>
 </p>
 
 [![Release](https://github.com/github/spec-kit/actions/workflows/release.yml/badge.svg)](https://github.com/github/spec-kit/actions/workflows/release.yml)
 
 ---
 
-## Key Features
+## Table of Contents
 
-*   **Spec-Driven Development:** Transform specifications into executable code.
-*   **AI-Powered:** Leverages AI agents like Claude Code, Gemini, Copilot, and Cursor.
-*   **Intent-Focused:** Define "what" to build before deciding "how."
-*   **Multi-Step Refinement:** Refine specifications for higher-quality outputs.
-*   **Flexible Development:** Supports various technology stacks and architectures.
-*   **Iterative Enhancement:** Streamline the addition of new features and modernization.
+- [🤔 What is Spec-Driven Development?](#-what-is-spec-driven-development)
+- [⚡ Get started](#-get-started)
+- [🔧 Specify CLI Reference](#-specify-cli-reference)
+- [📚 Core philosophy](#-core-philosophy)
+- [🌟 Development phases](#-development-phases)
+- [🎯 Experimental goals](#-experimental-goals)
+- [🔧 Prerequisites](#-prerequisites)
+- [📖 Learn more](#-learn-more)
+- [📋 Detailed process](#-detailed-process)
+- [🔍 Troubleshooting](#-troubleshooting)
+- [👥 Maintainers](#-maintainers)
+- [💬 Support](#-support)
+- [🙏 Acknowledgements](#-acknowledgements)
+- [📄 License](#-license)
 
-## Core Philosophy
+## 🤔 What is Spec-Driven Development?
 
-Spec-Driven Development is a structured process that emphasizes:
+Spec-Driven Development **flips the script** on traditional software development. For decades, code has been king — specifications were just scaffolding we built and discarded once the "real work" of coding began. Spec-Driven Development changes this: **specifications become executable**, directly generating working implementations rather than just guiding them.
 
-*   **Intent-driven development:** Define the "what" before the "how."
-*   **Rich specification creation:** Utilize guardrails and organizational principles.
-*   **Multi-step refinement:** Move beyond one-shot code generation.
-*   **Leveraging AI models:** Harness the power of advanced AI for specification interpretation.
+## ⚡ Get started
 
-## 🚀 Get Started
+### 1. Install Specify
 
-1.  **Install Spec Kit:** Follow the steps below to initialize your project, depending on your coding agent.
+Initialize your project depending on the coding agent you're using:
 
-    ```bash
-    uvx --from git+https://github.com/github/spec-kit.git specify init <PROJECT_NAME>
-    ```
+```bash
+uvx --from git+https://github.com/github/spec-kit.git specify init <PROJECT_NAME>
+```
 
-2.  **Define Your Spec:** Use the `/specify` command to describe your desired functionality, focusing on *what* needs to be built.
+### 2. Create the spec
 
-    ```bash
-    /specify Build an application that can help me organize my photos in separate photo albums. Albums are grouped by date and can be re-organized by dragging and dropping on the main page. Albums are never in other nested albums. Within each album, photos are previewed in a tile-like interface.
-    ```
+Use the **`/specify`** command to describe what you want to build. Focus on the **what** and **why**, not the tech stack.
 
-3.  **Plan Your Implementation:** Use the `/plan` command to outline your tech stack and architectural choices.
+```bash
+/specify Build an application that can help me organize my photos in separate photo albums. Albums are grouped by date and can be re-organized by dragging and dropping on the main page. Albums are never in other nested albums. Within each album, photos are previewed in a tile-like interface.
+```
 
-    ```bash
-    /plan The application uses Vite with minimal number of libraries. Use vanilla HTML, CSS, and JavaScript as much as possible. Images are not uploaded anywhere and metadata is stored in a local SQLite database.
-    ```
+### 3. Create a technical implementation plan
 
-4.  **Break Down and Implement:** Use `/tasks` to generate actionable task lists, then ask your AI agent to implement the feature.
-    For a complete walkthrough, explore the complete [Spec-Driven Development Methodology](./spec-driven.md).
+Use the **`/plan`** command to provide your tech stack and architecture choices.
+
+```bash
+/plan The application uses Vite with minimal number of libraries. Use vanilla HTML, CSS, and JavaScript as much as possible. Images are not uploaded anywhere and metadata is stored in a local SQLite database.
+```
+
+### 4. Break down and implement
+
+Use **`/tasks`** to create an actionable task list, then ask your agent to implement the feature.
+
+For detailed step-by-step instructions, see our [comprehensive guide](./spec-driven.md).
 
 ## 🔧 Specify CLI Reference
 
-The `specify` command supports these helpful options:
+The `specify` command supports the following options:
 
 ### Commands
 
@@ -105,9 +117,16 @@ specify init my-project --ai claude --debug
 specify check
 ```
 
-## ⚙️ Development Phases
+## 📚 Core philosophy
 
-Spec Kit supports different development phases to meet your needs:
+Spec-Driven Development is a structured process that emphasizes:
+
+- **Intent-driven development** where specifications define the "_what_" before the "_how_"
+- **Rich specification creation** using guardrails and organizational principles
+- **Multi-step refinement** rather than one-shot code generation from prompts
+- **Heavy reliance** on advanced AI model capabilities for specification interpretation
+
+## 🌟 Development phases
 
 | Phase | Focus | Key Activities |
 |-------|-------|----------------|
@@ -115,48 +134,48 @@ Spec Kit supports different development phases to meet your needs:
 | **Creative Exploration** | Parallel implementations | <ul><li>Explore diverse solutions</li><li>Support multiple technology stacks & architectures</li><li>Experiment with UX patterns</li></ul> |
 | **Iterative Enhancement** ("Brownfield") | Brownfield modernization | <ul><li>Add features iteratively</li><li>Modernize legacy systems</li><li>Adapt processes</li></ul> |
 
-## 🎯 Experimental Goals
+## 🎯 Experimental goals
 
-Spec Kit is designed for:
+Our research and experimentation focus on:
 
 ### Technology independence
 
--   Creating apps with various tech stacks.
--   Validating that Spec-Driven Development isn't tied to specific languages, frameworks, or tools.
+- Create applications using diverse technology stacks
+- Validate the hypothesis that Spec-Driven Development is a process not tied to specific technologies, programming languages, or frameworks
 
 ### Enterprise constraints
 
--   Developing mission-critical applications.
--   Incorporating organizational constraints (cloud providers, tech stacks, and engineering practices).
--   Supporting enterprise design systems and compliance needs.
+- Demonstrate mission-critical application development
+- Incorporate organizational constraints (cloud providers, tech stacks, engineering practices)
+- Support enterprise design systems and compliance requirements
 
 ### User-centric development
 
--   Building applications for different user groups and preferences.
--   Supporting various development approaches (from traditional methods to AI-native development).
+- Build applications for different user cohorts and preferences
+- Support various development approaches (from vibe-coding to AI-native development)
 
 ### Creative & iterative processes
 
--   Validating parallel implementation exploration.
--   Providing robust iterative feature development workflows.
--   Extending processes to manage upgrades and modernization.
+- Validate the concept of parallel implementation exploration
+- Provide robust iterative feature development workflows
+- Extend processes to handle upgrades and modernization tasks
 
 ## 🔧 Prerequisites
 
--   **Linux/macOS** (or WSL2 on Windows)
--   AI coding agent: [Claude Code](https://www.anthropic.com/claude-code), [GitHub Copilot](https://code.visualstudio.com/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or [Cursor](https://cursor.sh/)
--   [uv](https://docs.astral.sh/uv/) for package management
--   [Python 3.11+](https://www.python.org/downloads/)
--   [Git](https://git-scm.com/downloads)
+- **Linux/macOS** (or WSL2 on Windows)
+- AI coding agent: [Claude Code](https://www.anthropic.com/claude-code), [GitHub Copilot](https://code.visualstudio.com/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or [Cursor](https://cursor.sh/)
+- [uv](https://docs.astral.sh/uv/) for package management
+- [Python 3.11+](https://www.python.org/downloads/)
+- [Git](https://git-scm.com/downloads)
 
-## 📖 Learn More
+## 📖 Learn more
 
-*   **[Complete Spec-Driven Development Methodology](./spec-driven.md)** - Deep dive into the full process
-*   **[Detailed Walkthrough](#-detailed-process)** - Step-by-step implementation guide
+- **[Complete Spec-Driven Development Methodology](./spec-driven.md)** - Deep dive into the full process
+- **[Detailed Walkthrough](#-detailed-process)** - Step-by-step implementation guide
 
 ---
 
-## 📋 Detailed Process
+## 📋 Detailed process
 
 <details>
 <summary>Click to expand the detailed step-by-step walkthrough</summary>
@@ -399,12 +418,12 @@ rm gcm-linux_amd64.2.6.1.deb
 
 ## 👥 Maintainers
 
--   Den Delimarsky ([@localden](https://github.com/localden))
--   John Lam ([@jflam](https://github.com/jflam))
+- Den Delimarsky ([@localden](https://github.com/localden))
+- John Lam ([@jflam](https://github.com/jflam))
 
 ## 💬 Support
 
-For support, please open a [GitHub issue](https://github.com/github/spec-kit/issues/new) in the [original repository](https://github.com/github/spec-kit). We welcome bug reports, feature requests, and questions about using Spec-Driven Development.
+For support, please open a [GitHub issue](https://github.com/github/spec-kit/issues/new). We welcome bug reports, feature requests, and questions about using Spec-Driven Development.
 
 ## 🙏 Acknowledgements
 

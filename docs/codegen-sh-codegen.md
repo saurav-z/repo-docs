@@ -1,36 +1,44 @@
-<p align="center">
+<div align="center">
   <a href="https://docs.codegen.com">
     <img src="https://i.imgur.com/6RF9W0z.jpeg" alt="Codegen Logo" />
   </a>
-</p>
+</div>
 
 <h1 align="center">Codegen: Your AI-Powered Software Engineering Assistant</h1>
 
 <div align="center">
-
-[![PyPI](https://img.shields.io/badge/PyPi-codegen-gray?style=flat-square&color=blue)](https://pypi.org/project/codegen/)
-[![Documentation](https://img.shields.io/badge/Docs-docs.codegen.com-purple?style=flat-square)](https://docs.codegen.com)
-[![Slack Community](https://img.shields.io/badge/Slack-Join-4A154B?logo=slack&style=flat-square)](https://community.codegen.com)
-[![License](https://img.shields.io/badge/Code%20License-Apache%202.0-gray?&color=gray)](https://github.com/codegen-sh/codegen-sdk/tree/develop?tab=Apache-2.0-1-ov-file)
-[![Follow on X](https://img.shields.io/twitter/follow/codegen?style=social)](https://x.com/codegen)
-
+  <a href="https://pypi.org/project/codegen/">
+    <img src="https://img.shields.io/badge/PyPi-codegen-gray?style=flat-square&color=blue" alt="PyPI">
+  </a>
+  <a href="https://docs.codegen.com">
+    <img src="https://img.shields.io/badge/Docs-docs.codegen.com-purple?style=flat-square" alt="Documentation">
+  </a>
+  <a href="https://community.codegen.com">
+    <img src="https://img.shields.io/badge/Slack-Join-4A154B?logo=slack&style=flat-square" alt="Slack Community">
+  </a>
+  <a href="https://github.com/codegen-sh/codegen-sdk/tree/develop?tab=Apache-2.0-1-ov-file">
+    <img src="https://img.shields.io/badge/Code%20License-Apache%202.0-gray?&color=gray" alt="License">
+  </a>
+  <a href="https://x.com/codegen">
+    <img src="https://img.shields.io/twitter/follow/codegen?style=social" alt="Follow on X">
+  </a>
 </div>
 
 <br />
 
-**Codegen's SDK empowers developers to harness the power of AI to automate and accelerate the software development lifecycle.**  This allows you to quickly implement features, debug code, and more.  Visit the [Codegen GitHub repository](https://github.com/codegen-sh/codegen) for the latest updates and to contribute.
+**Tired of repetitive coding tasks? Codegen's SDK lets you harness the power of AI to automate software development and boost your productivity.** This Python SDK provides a programmatic interface to the powerful code agents available from [Codegen](https://codegen.com), offering a seamless way to integrate AI-driven coding assistance into your workflow.
 
 ## Key Features
 
-*   **AI-Powered Code Generation:** Automate code creation, modification, and debugging tasks.
-*   **Programmatic Interface:** Interact with Codegen's AI agents directly through an easy-to-use Python SDK.
-*   **Flexible Integration:** Integrate with existing development workflows via API access.
-*   **Real-time Status Updates:** Monitor the progress of your tasks.
-*   **Multiple Platform Support:** Interact with your AI engineer via API, Slack, Linear, Github, and on the website.
+*   **AI-Powered Code Generation:** Generate code, implement new features, and solve coding problems with the help of AI.
+*   **Easy Integration:** Simple Python SDK for effortless integration into your existing projects.
+*   **Flexible Usage:** Interact with your AI engineer through APIs, Slack, Linear, GitHub, or the Codegen website.
+*   **Status Tracking:** Monitor the progress of your tasks and access results upon completion.
+*   **Enterprise Ready:** Contact us for enterprise solutions and demos.
 
 ## Getting Started
 
-Install the Codegen SDK and start automating your development tasks.
+First, install the Codegen SDK:
 
 ```bash
 pip install codegen
@@ -38,9 +46,9 @@ pip install codegen
 uv pip install codegen
 ```
 
-Then, obtain your API token and organization ID from [codegen.com/token](https://codegen.com/token).
+Then, obtain your API token from [codegen.com/token](https://codegen.com/token) and your organization ID.
 
-**Example Usage:**
+Here's a basic example of how to use the SDK:
 
 ```python
 from codegen.agents.agent import Agent
@@ -72,17 +80,18 @@ if task.status == "completed":
 ## Resources
 
 *   [Documentation](https://docs.codegen.com)
-*   [Getting Started](https://docs.codegen.com/introduction/getting-started)
-*   [Codegen Website](https://codegen.com)
-*   [API Token](https://codegen.com/token)
-*   [Contributing](CONTRIBUTING.md)
+*   [Getting Started Guide](https://docs.codegen.com/introduction/getting-started)
+*   [Contributing Guide](CONTRIBUTING.md)
 *   [Contact Us](https://codegen.com/contact)
-*   [Request a Demo](https://codegen.com/request-demo)
 
 ## Contributing
 
-Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up the development environment and submit contributions.
+We welcome contributions! Please refer to our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up your development environment and submit contributions.
 
-## Enterprise
+## Enterprise Solutions
 
-For more information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
+For more information on enterprise engagements or to request a demo, please [contact us](https://codegen.com/contact).
+
+---
+
+**[Visit the Codegen GitHub Repository](https://github.com/codegen-sh/codegen) for more details and to contribute to the project.**

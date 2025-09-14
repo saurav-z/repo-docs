@@ -1,35 +1,65 @@
-# Robot Framework Browser Library: Automate Your Web Tests with Ease
+# Robot Framework Browser Library: Automate Your Web with Playwright
 
-[Robot Framework Browser](https://github.com/MarketSquare/robotframework-browser) is a powerful, open-source library that simplifies web automation testing using the Robot Framework. Leveraging the capabilities of Playwright, this library empowers you to create fast, reliable, and highly visible browser automation tests.
+**Supercharge your Robot Framework tests with the power of Playwright, providing speed, reliability, and unmatched visibility into your web automation.** [Explore the original repository](https://github.com/MarketSquare/robotframework-browser).
 
-## Key Features
+[![Version](https://img.shields.io/pypi/v/robotframework-browser.svg)](https://pypi.python.org/pypi/robotframework-browser)
+[![Actions Status](https://github.com/MarketSquare/robotframework-browser/workflows/Continuous%20integration/badge.svg)](https://github.com/MarketSquare/robotframework-browser/actions)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-*   **Fast & Reliable Automation:** Built on Playwright for blazing-fast test execution and robust performance.
-*   **Comprehensive Keyword Library:** Offers a rich set of keywords for interacting with web pages, including element selection, navigation, and data validation.
-*   **JavaScript Integration:**  Easily extend your tests with custom JavaScript code for advanced scenarios.
-*   **Ergonomic Selectors:** Simplify element targeting with an intuitive selector syntax, supporting chaining of text, CSS, and XPath selectors.
-*   **Asynchronous Operations:** Supports asynchronous waiting for HTTP requests and responses, enabling testing of complex web applications.
-*   **Device Emulation:**  Test your web applications on different devices using built-in device descriptors.
-*   **HTTP Request Handling:** Send and parse HTTP requests directly from your tests, perfect for API testing and data validation.
-*   **Docker Support:** Easily set up and run your tests within Docker containers.
-*   **Robotidy Integration:** (Optional) Enhance code quality and maintainability with the Robotidy transformer.
+## Key Features:
+
+*   **Fast and Reliable Automation:** Leverage Playwright for swift and dependable browser interaction.
+*   **Comprehensive Keyword Library:** Access a rich set of keywords for diverse testing needs.
+*   **Versatile Selector Syntax:** Utilize a user-friendly selector syntax, including chaining of `text`, `css`, and `xpath` selectors.
+*   **JavaScript Extension:** Extend functionality with custom JavaScript code execution within the browser.
+*   **Asynchronous Operations:** Support for asynchronous waiting for HTTP requests and responses.
+*   **Device Emulation:** Easily test on different devices using device descriptors.
+*   **HTTP Request Handling:** Send and parse HTTP requests and responses for comprehensive testing.
+*   **Robotidy Integration:** Integrate with Robotidy for enhanced code formatting and transformation.
 
 ## Installation
 
-Follow these steps to get started:
+**Prerequisites:**
 
-1.  **Prerequisites:** Ensure you have Python 3.9 or newer and Node.js (version 20 or 22 LTS) installed.
-2.  **Update Pip:** `pip install -U pip` (to ensure the latest version).
-3.  **Install the Library:** `pip install robotframework-browser`
-4.  **Initialize Node Dependencies:** Run `rfbrowser init` to install the necessary node dependencies. If `rfbrowser` is not found, try `python -m Browser.entry init`.
+*   Python 3.9 or newer
+*   Node.js (LTS versions 20 and 22 are supported) - Install from [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
-    *   By default, Chromium, Firefox, and WebKit browsers are installed. You can skip this with `rfbrowser init --skip-browsers` or specify particular browsers e.g. `rfbrowser init firefox`.
-    *   Alternatively, leverage the pre-built [Docker images](https://github.com/MarketSquare/robotframework-browser/pkgs/container/robotframework-browser%2Frfbrowser-stable) - see [docker/README.md](https://github.com/MarketSquare/robotframework-browser/blob/main/docker/README.md) for instructions.
-5.  **(Optional) Install Robotidy:** For integration with Robotidy, use `pip install robotframework-browser[tidy]`.
+**Installation Steps:**
+
+1.  **Update pip:** `pip install -U pip`
+2.  **Install the library:** `pip install robotframework-browser`
+3.  **Initialize node dependencies:** `rfbrowser init`  (if `rfbrowser` is not found, try `python -m Browser.entry init`)
+
+    *   By default, Chromium, Firefox, and WebKit browsers are installed. This can add a significant installation size (+700MB).
+    *   Use `rfbrowser init --skip-browsers` to skip browser binary installation (you are responsible for their installation).
+    *   Specify browser binaries to install only selected browsers: `rfbrowser init firefox chromium`
+
+Or use the [docker images](https://github.com/MarketSquare/robotframework-browser/pkgs/container/robotframework-browser%2Frfbrowser-stable). Documented at [docker/README.md](https://github.com/MarketSquare/robotframework-browser/blob/main/docker/README.md).
+
+### Install with transformer
+
+Install library with Robotidy, run install with:
+`pip install robotframework-browser[tidy]`. Starting from 18.3.0 release, library will provide external
+Robotidy [transformer](https://robotidy.readthedocs.io/en/stable/external_transformers.html). Transformer provided
+by Browser library can be run with command: `rfbrowser transform --transformer-name /path/to/tests`. Example:
+`rfbrowser transform --wait-until-network-is-idle /path/to/tests` would transform deprecated `Wait Until Network Is Idle`
+keyword to `Wait For Load State` keyword. To see full list of transformers provided by Browser library, run
+command: `rfbrowser transform --help`.
+
+## Update Instructions
+
+1.  Update from commandline: `pip install -U robotframework-browser`
+2.  Clean old node side dependencies and browser binaries: `rfbrowser clean-node`
+3.  Install the node dependencies for the newly installed version: `rfbrowser init`
+
+## Uninstall Instructions
+
+1.  Clean old node side dependencies and browser binaries: `rfbrowser clean-node`
+2.  Uninstall with pip: `pip uninstall robotframework-browser`
 
 ## Examples
 
-### Basic Test Case
+### Robot Framework
 
 ```robotframework
 *** Settings ***
@@ -41,7 +71,7 @@ Example Test
     Get Text    h1    contains    Playwright
 ```
 
-### Extending with Python
+### Python
 
 ```python
 import Browser
@@ -51,7 +81,7 @@ assert 'Playwright' in browser.get_text("h1")
 browser.close_browser()
 ```
 
-### Extending with JavaScript
+### JavaScript Extension
 
 ```javascript
 async function myGoToKeyword(url, page, logger) {
@@ -73,21 +103,26 @@ Example Test
    myGoToKeyword   https://www.robotframework.org
 ```
 
-## Additional Resources
+[See more examples](https://github.com/MarketSquare/robotframework-browser/tree/main/docs/examples/babelES2015). Explore [robotframework-browser-extensions](https://github.com/MarketSquare/robotframework-browser-extensions) to share and use pre-built extensions.
 
-*   **Keyword Documentation:** [Detailed keyword documentation](https://marketsquare.github.io/robotframework-browser/Browser.html).
-*   **Web Page:** [Official project website](https://robotframework-browser.org/).
-*   **Example Extensions:** [robotframework-browser-extensions](https://github.com/MarketSquare/robotframework-browser-extensions).
+### Parallel Test Execution
+
+Leverage Pabot for parallel test execution.  Use the `ROBOT_FRAMEWORK_BROWSER_NODE_PORT` environment variable to share node processes, which can help with performance.
 
 ## Development
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development instructions.
 
+## Core Team
+
+*   Mikko Korpela
+*   Tatu Aalto
+*   Janne Härkönen (Alumnus)
+*   Kerkko Pelttari
+*   René Rohner
+
 ## Contributors
 
-This project thrives thanks to the contributions of a vibrant community.
-Special thanks to [Robocorp](https://robocorp.com/) through [Robot Framework Foundation](https://robotframework.org/foundation/) for their support.
+This project thrives thanks to its community!  ([See the full list of contributors](https://github.com/MarketSquare/robotframework-browser/graphs/contributors).)
 
-[List of Contributors with badges - original README]
-
----
+Supported by [Robocorp](https://robocorp.com/) through [Robot Framework Foundation](https://robotframework.org/foundation/).

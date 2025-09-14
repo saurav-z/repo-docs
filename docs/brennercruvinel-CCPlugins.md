@@ -1,6 +1,6 @@
-# CCPlugins: Supercharge Your Claude Code CLI with Professional Development Workflows
+# CCPlugins: Supercharge Your Claude Code CLI Workflow
 
-**Tired of repetitive tasks and over-engineered code?** CCPlugins is a suite of curated commands designed to automate your Claude Code CLI and save you valuable development time. ([Original Repo](https://github.com/brennercruvinel/CCPlugins))
+**Automate repetitive development tasks and save valuable time with CCPlugins, a curated collection of 24 professional commands designed to enhance your Claude Code CLI experience.** [View the Original Repo](https://github.com/brennercruvinel/CCPlugins)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)](https://github.com/brennercruvinel/CCPlugins)
 [![Version](https://img.shields.io/badge/version-2.5.2-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
@@ -9,99 +9,97 @@
 [![Also works with](https://img.shields.io/badge/also%20works%20with-Kimi%20K2-1783ff.svg)](https://github.com/MoonshotAI/Kimi-K2)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
 
-## Key Features
+Tired of manually debugging and refactoring? CCPlugins offers intelligent commands for Claude Code CLI that revolutionize your development workflow.
 
-*   **Automated Workflows:** Streamline common development tasks like code formatting, testing, and commit creation.
-*   **Code Quality & Security:** Enhance code quality with built-in security scanning, code reviews, and intelligent issue prediction.
-*   **Advanced Analysis:** Analyze your entire project architecture and patterns.
-*   **Validation & Refinement:** Complex commands with validation phases to ensure completeness.
-*   **Time-Saving Efficiency:** Save up to 5 hours per week by automating tedious tasks.
-*   **Session Management:** Keep track of your sessions.
+**Key Features:**
 
-## Installation
+*   **🚀 Streamlined Workflow:** Automate code formatting, testing, and feature scaffolding.
+*   **🛡️ Enhanced Code Quality:** Perform security scans, identify issues, and maintain clean code.
+*   **🔍 Advanced Analysis:** Get senior-level code explanations, architectural insights, and more.
+*   **💻 Simplified Management:** Manage sessions, handle documentation, and convert TODOs into issues.
+*   **⏱️ Time-Saving Efficiency:** Reduce repetitive tasks and free up valuable development time.
 
-### Quick Install
+**Installation:**
 
-**Mac/Linux:**
+*   **Quick Install (Mac/Linux):**
+    ```bash
+    curl -sSL https://raw.githubusercontent.com/brennercruvinel/CCPlugins/main/install.sh | bash
+    ```
+*   **Quick Install (Windows/Cross-platform):**
+    ```bash
+    python install.py
+    ```
+*   **Manual Install:**
+    ```bash
+    git clone https://github.com/brennercruvinel/CCPlugins.git
+    cd CCPlugins
+    python install.py
+    ```
+*   **Uninstall:** Follow the instructions given in the original README
 
-```bash
-curl -sSL https://raw.githubusercontent.com/brennercruvinel/CCPlugins/main/install.sh | bash
-```
+**Commands:**
 
-**Windows/Cross-platform:**
+CCPlugins offers a range of commands to address various development needs.
 
-```bash
-python install.py
-```
+*   **Development Workflow:**
+    *   `/cleanproject`
+    *   `/commit`
+    *   `/format`
+    *   `/scaffold feature-name`
+    *   `/test`
+    *   `/implement url/path/feature`
+    *   `/refactor`
+*   **Code Quality & Security:**
+    *   `/review`
+    *   `/security-scan`
+    *   `/predict-issues`
+    *   `/remove-comments`
+    *   `/fix-imports`
+    *   `/find-todos`
+    *   `/create-todos`
+    *   `/fix-todos`
+*   **Advanced Analysis:**
+    *   `/understand`
+    *   `/explain-like-senior`
+    *   `/contributing`
+    *   `/make-it-pretty`
+*   **Session & Project Management:**
+    *   `/session-start`
+    *   `/session-end`
+    *   `/docs`
+    *   `/todos-to-issues`
+    *   `/undo`
 
-### Manual Install
+**Enhanced Features:**
 
-```bash
-git clone https://github.com/brennercruvinel/CCPlugins.git
-cd CCPlugins
-python install.py
-```
+*   **Validation & Refinement:** Commands include validation phases to ensure comprehensive results.
+*   **Extended Thinking:** Advanced analysis capabilities for complex scenarios.
+*   **Pragmatic Command Integration:** Suggests commands and suggests commands and maintains user control.
 
-### Uninstall
+**How It Works:**
 
-```bash
-# Mac/Linux
-./uninstall.sh
+CCPlugins transforms Claude Code CLI into an intelligent development assistant. Key components include:
 
-# Windows/Cross-platform
-python uninstall.py
-```
+*   Intelligent Instructions
+*   Native Tool Integration
+*   Safety-First Design
+*   Universal Compatibility
 
-## Commands
+**Requirements:**
 
-### 🚀 Development Workflow
+*   Claude Code CLI
+*   Python 3.6+ (for installer)
+*   Git (for version control commands)
 
-```bash
-/cleanproject                    # Remove debug artifacts with git safety
-/commit                          # Smart conventional commits with analysis
-/format                          # Auto-detect and apply project formatter
-/scaffold feature-name           # Generate complete features from patterns
-/test                            # Run tests with intelligent failure analysis
-/implement url/path/feature      # Import and adapt code from any source with validation phase
-/refactor                        # Intelligent code restructuring with validation & de-para mapping
-```
+**Contribute:**
 
-### 🛡️ Code Quality & Security
+Help improve CCPlugins by contributing! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-```bash
-/review                # Multi-agent analysis (security, performance, quality, architecture)
-/security-scan         # Vulnerability analysis with extended thinking & remediation tracking
-/predict-issues        # Proactive problem detection with timeline estimates
-/remove-comments       # Clean obvious comments, preserve valuable docs
-/fix-imports           # Repair broken imports after refactoring
-/find-todos            # Locate and organize development tasks
-/create-todos          # Add contextual TODO comments based on analysis results
-/fix-todos             # Intelligently implement TODO fixes with context
-```
-
-### 🔍 Advanced Analysis
-
-```bash
-/understand            # Analyze entire project architecture and patterns
-/explain-like-senior   # Senior-level code explanations with context
-/contributing          # Complete contribution readiness analysis
-/make-it-pretty        # Improve readability without functional changes
-```
-
-### 📋 Session & Project Management
-
-```bash
-/session-start         # Begin documented sessions with CLAUDE.md integration
-/session-end           # Summarize and preserve session context
-/docs                  # Smart documentation management and updates
-/todos-to-issues       # Convert code TODOs to GitHub issues
-/undo                  # Safe rollback with git checkpoint restore
-```
-
-## Advanced Usage
-
-See the original repo for complete details on [Advanced Usage](https://github.com/brennercruvinel/CCPlugins#advanced-usage), and [Contributing Guidelines](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md).
-
-## License
+**License:**
 
 MIT License - see [LICENSE](LICENSE) file for details.
+*Built by a developer tired of typing "please act like a senior engineer" in every conversation.*
+
+---
+
+**Last Updated:** August 2, 2025 (Based on Anthropic Claude Code CLI documentation v2025.08.01)
