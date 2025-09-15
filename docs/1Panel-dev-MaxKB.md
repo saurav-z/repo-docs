@@ -1,31 +1,28 @@
-<p align="center">
-  <img src="https://github.com/1Panel-dev/maxkb/assets/52996290/c0694996-0eed-40d8-b369-322bf2a380bf" alt="MaxKB" width="300">
-</p>
+<p align="center"><img src= "https://github.com/1Panel-dev/maxkb/assets/52996290/c0694996-0eed-40d8-b369-322bf2a380bf" alt="MaxKB" width="300" /></p>
 
-<h1 align="center">MaxKB: Build Powerful Enterprise-Grade AI Agents with Ease</h1>
+<h1 align="center">MaxKB: Build Powerful Enterprise AI Agents with Ease</h1>
+
+**MaxKB is an open-source platform that empowers you to build and deploy sophisticated, enterprise-grade AI agents.** ([Back to Original Repo](https://github.com/1Panel-dev/MaxKB))
 
 <p align="center">
-  <a href="https://trendshift.io/repositories/9113" target="_blank"><img src="https://trendshift.io/api/badge/repositories/9113" alt="1Panel-dev%2FMaxKB | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
   <a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text"><img src="https://img.shields.io/github/license/1Panel-dev/maxkb?color=%231890FF" alt="License: GPL v3"></a>
   <a href="https://github.com/1Panel-dev/maxkb/releases/latest"><img src="https://img.shields.io/github/v/release/1Panel-dev/maxkb" alt="Latest release"></a>
-  <a href="https://github.com/1Panel-dev/maxkb"><img src="https://img.shields.io/github/stars/1Panel-dev/maxkb?color=%231890FF&style=flat-square" alt="Stars"></a>
-  <a href="https://hub.docker.com/r/1panel/maxkb"><img src="https://img.shields.io/docker/pulls/1panel/maxkb?label=downloads" alt="Downloads"></a><br/>
+  <a href="https://github.com/1Panel-dev/maxkb"><img src="https://img.shields.io/github/stars/1Panel-dev/maxkb?color=%231890FF&style=flat-square" alt="Stars"></a>    
+  <a href="https://hub.docker.com/r/1panel/maxkb"><img src="https://img.shields.io/docker/pulls/1panel/maxkb?label=downloads" alt="Download"></a><br/>
   [<a href="/README_CN.md">中文(简体)</a>] | [<a href="/README.md">English</a>]
 </p>
 
-<hr>
+---
 
-**MaxKB** is an open-source platform empowering you to build and deploy sophisticated, enterprise-ready AI agents.  It simplifies the creation of intelligent systems for various applications, from customer service to internal knowledge management.
+## Key Features
 
-## Key Features:
+*   **RAG Pipeline:** Streamlines the creation of Retrieval-Augmented Generation (RAG) pipelines. Supports direct document uploads and web crawling with automatic text splitting and vectorization, leading to improved question-answering accuracy.
+*   **Agentic Workflow Engine:** Provides a robust workflow engine, function library, and MCP tool-use capabilities, allowing for orchestration of complex AI processes for diverse business needs.
+*   **Seamless Integration:** Enables rapid, zero-code integration with third-party systems, allowing you to quickly add intelligent Q&A capabilities to existing platforms and enhance user satisfaction.
+*   **Model Agnostic:** Compatible with a wide range of large language models (LLMs), including both private models (e.g., DeepSeek, Llama, Qwen) and public models (e.g., OpenAI, Claude, Gemini).
+*   **Multi-Modal Support:** Native support for processing and generating text, images, audio, and video, allowing for rich and interactive AI experiences.
 
-*   **RAG Pipeline:** Effortlessly upload documents or automatically crawl online content.  Includes built-in features for text splitting and vectorization, ensuring higher accuracy and reduced hallucinations in large language models.
-*   **Agentic Workflow:** Leverage a powerful workflow engine, function library, and MCP tool use to orchestrate complex AI processes, streamlining tasks and enhancing productivity.
-*   **Seamless Integration:**  Quickly integrate MaxKB with your existing systems without extensive coding, adding intelligent Q&A capabilities and improving user satisfaction.
-*   **Model Agnostic:**  Supports a wide variety of Large Language Models (LLMs), including private models (DeepSeek, Llama, Qwen, etc.) and public models (OpenAI, Claude, Gemini, etc.), providing flexibility and choice.
-*   **Multi-Modal Support:**  Handle diverse input and output formats including text, images, audio, and video, enabling rich and engaging AI interactions.
-
-## Quick Start
+## Quick Start with Docker
 
 Get up and running quickly with MaxKB using Docker:
 
@@ -33,12 +30,12 @@ Get up and running quickly with MaxKB using Docker:
 docker run -d --name=maxkb --restart=always -p 8080:8080 -v ~/.maxkb:/opt/maxkb 1panel/maxkb
 ```
 
-Access the MaxKB web interface at `http://your_server_ip:8080` using the following default credentials:
+Access the MaxKB web interface at `http://your_server_ip:8080` using the default admin credentials:
 
-*   **Username:** admin
-*   **Password:** MaxKB@123..
+*   username: `admin`
+*   password: `MaxKB@123..`
 
-*For Chinese users encountering Docker image pull issues, please refer to the [offline installation documentation](https://maxkb.cn/docs/v2/installation/offline_installtion/) for alternative installation methods.*
+**Note for Chinese users:**  If you encounter Docker image pull failures, please refer to the [offline installation documentation](https://maxkb.cn/docs/v2/installation/offline_installtion/) for alternative installation methods.
 
 ## Screenshots
 
@@ -66,6 +63,6 @@ Access the MaxKB web interface at `http://your_server_ip:8080` using the followi
 
 ## License
 
-MaxKB is licensed under the [GNU General Public License version 3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html).
+Licensed under The GNU General Public License version 3 (GPLv3). You can find the full license text at:
 
-For more details, please visit the [original repository](https://github.com/1Panel-dev/MaxKB).
+<https://www.gnu.org/licenses/gpl-3.0.html>

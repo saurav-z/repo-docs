@@ -2,9 +2,9 @@
 <img src="https://i.postimg.cc/KvkLzbF9/WX20241212-014400-2x.png">
 </p>
 
-# lmms-eval: Evaluate and Accelerate Large Multimodal Models
+# LMMs-Eval: Comprehensive Evaluation Suite for Large Multimodal Models
 
-**Easily benchmark and improve your Large Multimodal Models with `lmms-eval`, a comprehensive evaluation suite.**
+**Easily benchmark and accelerate the development of your Large Multimodal Models with LMMs-Eval!**
 
 [![PyPI](https://img.shields.io/pypi/v/lmms-eval)](https://pypi.org/project/lmms-eval)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/lmms-eval)
@@ -12,71 +12,46 @@
 [![issue resolution](https://img.shields.io/github/issues-closed-raw/EvolvingLMMs-Lab/lmms-eval)](https://github.com/EvolvingLMMs-Lab/lmms-eval/issues)
 [![open issues](https://img.shields.io/github/issues-raw/EvolvingLMMs-Lab/lmms-eval)](https://github.com/EvolvingLMMs-Lab/lmms-eval/issues)
 
-**[View the original repository on GitHub](https://github.com/EvolvingLMMs-Lab/lmms-eval)**
+LMMs-Eval provides a robust and efficient framework for evaluating and comparing Large Multimodal Models (LMMs).  This suite supports a wide range of tasks across text, image, video, and audio, offering a centralized platform for assessing model performance and driving innovation in multimodal AI.  Explore the cutting-edge capabilities and stay up-to-date with the latest advancements in LMM evaluation!
+
+🏠 [LMMs-Lab Homepage](https://www.lmms-lab.com/) | 🤗 [Huggingface Datasets](https://huggingface.co/lmms-lab) | <a href="https://emoji.gg/emoji/1684-discord-thread"><img src="https://cdn3.emoji.gg/emojis/1684-discord-thread.png" width="14px" height="14px" alt="Discord_Thread"></a> [discord/lmms-eval](https://discord.gg/zdkwKUqrPy)
+
+📖 [Supported Tasks (100+)](https://github.com/EvolvingLMMs-Lab/lmms-eval/blob/main/docs/current_tasks.md) | 🌟 [Supported Models (30+)](https://github.com/EvolvingLMMs-Lab/lmms-eval/tree/main/lmms_eval/models) | 📚 [Documentation](docs/README.md)
+
+**Key Features:**
+
+*   **Comprehensive Task Coverage:** Evaluate LMMs across a diverse set of tasks, including text, image, video, and audio understanding.
+*   **Wide Model Support:**  Compatibility with a growing library of over 30+ LMMs, including popular models.
+*   **Accelerated Evaluation:** Integrated support for frameworks like `vLLM` and OpenAI API compatibility for faster model evaluation.
+*   **Reproducibility:** Offers scripts and detailed environment setup for reproducing results, facilitating rigorous research.
+*   **Extensible:**  Easily add support for new models and datasets, tailoring the evaluation process to specific research needs.
+*   **Active Community:** Benefit from ongoing development, updates, and community support via GitHub issues and Discord.
 
 ---
 
-## Key Features of lmms-eval:
+## Recent Updates and Announcements
 
-*   **Extensive Task Support:** Evaluate LMMs across text, image, video, and audio tasks (100+ supported).
-*   **Wide Model Compatibility:** Supports over 30 popular LMMs, with continuous updates.
-*   **Accelerated Evaluation:** Integrated with `vllm` and `openai_compatible` for efficient evaluation.
-*   **Reproducibility Focus:**  Provides environment setup scripts and result checking for reliable results.
-*   **Customization:** Easily add custom models and datasets to fit your needs.
-*   **Active Community:**  Benefit from ongoing development and contributions from a dedicated community.
+*   **[2025-07]** 🚀🚀 Released `lmms-eval-0.4` with major updates and improvements; see [release notes](https://github.com/EvolvingLMMs-Lab/lmms-eval/blob/main/docs/lmms-eval-0.4.md). Discuss model evaluation results in [discussion](https://github.com/EvolvingLMMs-Lab/lmms-eval/discussions/779).
+*   **[2025-07]** 🎉🎉  Support for the [PhyX](https://phyx-bench.github.io/) benchmark, focused on physics-grounded reasoning in visual scenarios.
+*   **[2025-06]** 🎉🎉  Support for the [VideoMathQA](https://mbzuai-oryx.github.io/VideoMathQA) benchmark, evaluating mathematical reasoning in educational videos.
+*   **[2025-04]** 🚀🚀  Integration and evaluation support for the compact audio model [Aero-1-Audio](https://www.lmms-lab.com/posts/aero_audio/), including batched evaluations.
+*   **[2025-02]** 🚀🚀  Integration of `vllm` and `openai_compatible`, enabling accelerated evaluation for both multimodal and language models.
 
-## What is lmms-eval?
+*(See original README for a complete list of announcements)*
 
-`lmms-eval` is an evaluation framework designed to streamline the benchmarking of Large Multimodal Models (LMMs). Building on the successful design of [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness), `lmms-eval` provides a centralized platform for evaluating the performance of LMMs on a wide range of tasks. It simplifies the process of assessing and comparing different models, accelerating research and development in the field of multimodal AI. This project is being actively developed by the [EvolvingLMMs-Lab](https://www.lmms-lab.com/).
+---
 
-## Recent Updates & Announcements:
-
-*   **[2025-07]** 🚀🚀  `lmms-eval-0.4` Released!  Major update with new features and improvements. See the [release notes](https://github.com/EvolvingLMMs-Lab/lmms-eval/blob/main/docs/lmms-eval-0.4.md).
-*   **[2025-07]** 🎉🎉  Support for the [PhyX](https://phyx-bench.github.io/) benchmark for physics-grounded reasoning.
-*   **[2025-06]** 🎉🎉 Support for the [VideoMathQA](https://mbzuai-oryx.github.io/VideoMathQA) benchmark for mathematical reasoning in videos.
-*   **[2025-04]** 🚀🚀  Evaluation support for [Aero-1-Audio](https://www.lmms-lab.com/posts/aero_audio/), featuring batched evaluations.
-*   **[2025-02]** 🚀🚀  Integration of `vllm` for accelerated evaluation and `openai_compatible` for API-based models.
-
-<details>
-<summary>See more updates</summary>
-
-*   [2025-01] 🎓🎓 [Video-MMMU: Evaluating Knowledge Acquisition from Multi-Discipline Professional Videos](https://arxiv.org/abs/2501.13826).
-*   [2024-12] 🎉🎉 [MME-Survey: A Comprehensive Survey on Evaluation of Multimodal LLMs](https://arxiv.org/pdf/2411.15296).
-*   [2024-11] 🔈🔊 Audio Evaluations support.
-*   [2024-10] 🎉🎉 New tasks: [NaturalBench](https://huggingface.co/datasets/BaiqiL/NaturalBench), [TemporalBench](https://huggingface.co/datasets/microsoft/TemporalBench).
-*   [2024-10] 🎉🎉 New tasks: [VDC](https://rese1f.github.io/aurora-web/), [MovieChat-1K](https://rese1f.github.io/MovieChat/), and [Vinoground](https://vinoground.github.io/).
-*   [2024-09] 🎉🎉 New tasks: [MMSearch](https://mmsearch.github.io/) and [MME-RealWorld](https://mme-realworld.github.io/).
-*   [2024-09] ⚙️️️️ Upgrade to `0.2.3` with more tasks and features.
-*   [2024-08] 🎉🎉 New models: [LLaVA-OneVision](https://huggingface.co/papers/2408.03326), [Mantis](https://github.com/EvolvingLMMs-Lab/lmms-eval/pull/162). new tasks [MVBench](https://huggingface.co/datasets/OpenGVLab/MVBench), [LongVideoBench](https://github.com/EvolvingLMMs-Lab/lmms-eval/pull/117), [MMStar](https://github.com/EvolvingLMMs-Lab/lmms-eval/pull/158).
-*   [2024-07] 👨‍💻👨‍💻 Upgrade to `0.2.1`.
-*   [2024-07] 🎉🎉 [technical report](https://arxiv.org/abs/2407.12772) and [LiveBench](https://huggingface.co/spaces/lmms-lab/LiveBench)!
-*   [2024-06] 🎬🎬 Support for video evaluations across tasks and models.
-*   [2024-03] 📝📝 First version of `lmms-eval`.
-</details>
-
-## Installation:
+## Installation
 
 ### Using uv (Recommended)
-
-Use `uv` for consistent package management:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 git clone https://github.com/EvolvingLMMs-Lab/lmms-eval
 cd lmms-eval
-uv sync  # Install dependencies
-```
-
-Run commands with:
-
-```bash
-uv run python -m lmms_eval --help
-```
-
-Add dependencies with:
-
-```bash
-uv add <package>
+uv sync  # This creates/updates your environment from uv.lock
+uv run python -m lmms_eval --help  # Run any command with uv run
+uv add <package>  # Updates both pyproject.toml and uv.lock
 ```
 
 ### Alternative Installation
@@ -89,24 +64,32 @@ uv pip install git+https://github.com/EvolvingLMMs-Lab/lmms-eval.git
 ```
 
 <details>
-<summary>Reproducing LLaVA-1.5 Results</summary>
-
-See the [environment install script](miscs/repr_scripts.sh) and [torch environment info](miscs/repr_torch_envs.txt) to reproduce LLaVA-1.5's results.
+<summary>Reproducing LLaVA-1.5's Results</summary>
+You can check the [environment install script](miscs/repr_scripts.sh) and [torch environment info](miscs/repr_torch_envs.txt) to **reproduce LLaVA-1.5's paper results**. We found torch/cuda versions difference would cause small variations in the results, we provide the [results check](miscs/llava_result_check.md) with different environments.
 </details>
 
-```bash
-conda install openjdk=8 # if needed
+If you want to test on caption dataset such as `coco`, `refcoco`, and `nocaps`, you will need to have `java==1.8.0` to let pycocoeval api to work. If you don't have it, you can install by using conda
 ```
+conda install openjdk=8
+```
+you can then check your java version by `java -version`
 
 <details>
-<summary>Evaluation Results</summary>
+<summary>Comprehensive Evaluation Results of LLaVA Family Models</summary>
+<br>
 
-Access detailed results of the LLaVA series models on different datasets:
+As demonstrated by the extensive table below, we aim to provide detailed information for readers to understand the datasets included in lmms-eval and some specific details about these datasets (we remain grateful for any corrections readers may have during our evaluation process).
 
-*   [Google Sheet](https://docs.google.com/spreadsheets/d/1a5ImfdKATDI8T7Cwh6eH-bEsnQFzanFraFUgcS9KHWc/edit?usp=sharing)
-*   [Raw Data](https://docs.google.com/spreadsheets/d/1AvaEmuG4csSmXaHjgu4ei1KBMmNNW8wflOD_kkTDdv8/edit?usp=sharing)
+We provide a Google Sheet for the detailed results of the LLaVA series models on different datasets. You can access the sheet [here](https://docs.google.com/spreadsheets/d/1a5ImfdKATDI8T7Cwh6eH-bEsnQFzanFraFUgcS9KHWc/edit?usp=sharing). It's a live sheet, and we are updating it with new results.
+
+<p align="center" width="100%">
+<img src="https://i.postimg.cc/jdw497NS/WX20240307-162526-2x.png"  width="100%" height="80%">
+</p>
+
+We also provide the raw data exported from Weights & Biases for the detailed results of the LLaVA series models on different datasets. You can access the raw data [here](https://docs.google.com/spreadsheets/d/1AvaEmuG4csSmXaHjgu4ei1KBMmNNW8wflOD_kkTDdv8/edit?usp=sharing).
 
 </details>
+<br>
 
 If you want to test [VILA](https://github.com/NVlabs/VILA), you should install the following dependencies:
 
@@ -114,75 +97,27 @@ If you want to test [VILA](https://github.com/NVlabs/VILA), you should install t
 pip install s2wrapper@git+https://github.com/bfshi/scaling_on_scales
 ```
 
-## Usage Examples:
+## Usage Examples
 
-> More examples can be found in [examples/models](examples/models)
-
-**Evaluate OpenAI-Compatible Model:**
+*(See original README for examples of running specific models)*
 
 ```bash
+# Evaluation of OpenAI-Compatible Model
 bash examples/models/openai_compatible.sh
-bash examples/models/xai_grok.sh
-```
 
-**Evaluate vLLM:**
-
-```bash
+# Evaluation of vLLM
 bash examples/models/vllm_qwen2vl.sh
+
+# ... (other examples)
 ```
 
-**Evaluate LLaVA-OneVision:**
-
-```bash
-bash examples/models/llava_onevision.sh
-```
-
-**Evaluate LLaMA-3.2-Vision:**
-
-```bash
-bash examples/models/llama_vision.sh
-```
-
-**Evaluate Qwen2-VL:**
-
-```bash
-bash examples/models/qwen2_vl.sh
-bash examples/models/qwen2_5_vl.sh
-```
-
-**Evaluate LLaVA on MME:**
-
-```bash
-bash examples/models/llava_next.sh
-```
-
-**Evaluate with tensor parallel for bigger model (llava-next-72b)**
-
-```bash
-bash examples/models/tensor_parallel.sh
-```
-
-**Evaluate with SGLang for bigger model (llava-next-72b)**
-
-```bash
-bash examples/models/sglang.sh
-```
-
-**Evaluate with vLLM for bigger model (llava-next-72b)**
-
-```bash
-bash examples/models/vllm_qwen2vl.sh
-```
-
-**More Parameters**
+**For more usage and parameters:**
 
 ```bash
 python3 -m lmms_eval --help
 ```
 
-## Environment Variables:
-
-Set these before running evaluations (required for some tasks):
+**Environment Variables:**
 
 ```bash
 export OPENAI_API_KEY="<YOUR_API_KEY>"
@@ -194,22 +129,22 @@ export REKA_API_KEY="<YOUR_API_KEY>"
 # ANTHROPIC_API_KEY,DASHSCOPE_API_KEY etc.
 ```
 
-## Common Issues and Solutions:
+**Common Environment Issues**
+*(See original README for common environment issues and solutions)*
 
-```bash
-python3 -m pip install httpx==0.23.3;
-python3 -m pip install protobuf==3.20;
-python3 -m pip install numpy==1.26;
-python3 -m pip install sentencepiece;
-```
+## Adding Custom Models and Datasets
 
-## Adding Custom Models and Datasets:
-
-Refer to our [documentation](docs/README.md).
+Refer to the [documentation](docs/README.md) for instructions on adding your own models and datasets.
 
 ## Acknowledgements
 
-`lmms-eval` is a fork of [lm-eval-harness](https://github.com/EleutherAI/lm-evaluation-harness).
+LMMs-Eval is inspired by and built upon the [lm-eval-harness](https://github.com/EleutherAI/lm-evaluation-harness) project.  We encourage you to consult the [lm-eval-harness documentation](https://github.com/EleutherAI/lm-evaluation-harness/tree/main/docs) for more information.
+
+---
+
+**(Changes from original API are listed in the original README)**
+
+---
 
 ## Citations
 

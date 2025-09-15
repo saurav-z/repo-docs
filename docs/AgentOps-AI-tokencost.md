@@ -19,82 +19,268 @@
 <a href="https://agentops.ai/?tokencost">🖇️ AgentOps</a>
 </p>
 
-# Tokencost: Calculate LLM Costs and Token Counts for AI Applications
+# Tokencost: Accurate LLM Cost Estimation for Your AI Applications
 
-**Accurately estimate the cost of your Large Language Model (LLM) API calls with Tokencost, your go-to Python library for token counting and pricing.**  [Check out the original repo](https://github.com/AgentOps-AI/tokencost)
+**Calculate and track the costs of your Large Language Model (LLM) usage with ease using Tokencost!**  This Python library empowers developers to estimate the cost of prompts and completions, crucial for building and managing cost-effective AI applications and agents.  ([View the Repository](https://github.com/AgentOps-AI/tokencost))
 
-**Key Features:**
+Key features include:
 
-*   ✅ **Accurate Token Counting:** Utilizes Tiktoken, OpenAI's official tokenizer, and Anthropic's token counting API for precise token calculations.
-*   ✅ **Real-Time Pricing:** Stay up-to-date with the latest pricing from major LLM providers.
-*   ✅ **Simplified Integration:** Easily calculate the cost of prompts and completions with simple functions.
-*   ✅ **Supports Various Models:** Works seamlessly with OpenAI and Anthropic models, with comprehensive pricing data for many other models.
-
-## Core Functionality
-
-*   **Calculate Prompt and Completion Costs:**
-    ```python
-    from tokencost import calculate_prompt_cost, calculate_completion_cost
-
-    model = "gpt-3.5-turbo"
-    prompt = [{"role": "user", "content": "Hello world"}]
-    completion = "How may I assist you today?"
-
-    prompt_cost = calculate_prompt_cost(prompt, model)
-    completion_cost = calculate_completion_cost(completion, model)
-
-    print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
-    # Example Output: 0.0000135 + 0.000014 = 0.0000275
-    ```
-*   **Calculate Cost using string prompts instead of message lists:**
-    ```python
-    from tokencost import calculate_prompt_cost
-
-    prompt_string = "Hello world" 
-    response = "How may I assist you today?"
-    model= "gpt-3.5-turbo"
-
-    prompt_cost = calculate_prompt_cost(prompt_string, model)
-    print(f"Cost: ${prompt_cost}")
-    # Cost: $3e-06
-    ```
-*   **Count Tokens:**
-    ```python
-    from tokencost import count_message_tokens, count_string_tokens
-
-    message_prompt = [{"role": "user", "content": "Hello world"}]
-    # Counting tokens in prompts formatted as message lists
-    print(count_message_tokens(message_prompt, model="gpt-3.5-turbo"))
-    # 9
-
-    # Alternatively, counting tokens in string prompts
-    print(count_string_tokens(prompt="Hello world", model="gpt-3.5-turbo"))
-    # 2
-    ```
+*   **Accurate Token Counting:** Leverage Tiktoken, OpenAI's official tokenizer, and the Anthropic token counting API to accurately count tokens for various LLM providers.
+*   **LLM Provider Support:** Track the costs of LLM usage from major providers, including OpenAI, Anthropic and others.
+*   **Price Tracking & Updates:** Tokencost helps you stay up-to-date on the latest price changes of the LLM models.
+*   **Simple Integration:** Easily calculate the cost of a prompt or completion with a single function call, and quickly get the cost of a prompt or completion.
 
 ## Installation
 
-Install Tokencost using pip:
+Install `tokencost` using pip:
 
 ```bash
 pip install tokencost
 ```
 
-## Token Counting Logic
+## Usage
 
-Tokencost employs Tiktoken for tokenization of strings and ChatML messages, accurately reflecting the token counts used by OpenAI. For Anthropic models above version 3 (e.g., Sonnet 3.5, Haiku 3.5, and Opus 3), the library utilizes the Anthropic beta token counting API to guarantee precise token counts. For older Claude models, an approximation is calculated using Tiktoken with cl100k\_base encoding.
+### Calculating Cost & Counting Tokens
+
+Quickly estimate the costs of prompts and completions.
+
+```python
+from tokencost import calculate_prompt_cost, calculate_completion_cost, count_message_tokens, count_string_tokens
+
+model = "gpt-3.5-turbo"
+prompt = [{ "role": "user", "content": "Hello world"}]
+completion = "How may I assist you today?"
+
+prompt_cost = calculate_prompt_cost(prompt, model)
+completion_cost = calculate_completion_cost(completion, model)
+
+print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
+# 0.0000135 + 0.000014 = 0.0000275
+```
+
+**Calculating cost using string prompts instead of messages:**
+```python
+from tokencost import calculate_prompt_cost
+
+prompt_string = "Hello world" 
+response = "How may I assist you today?"
+model= "gpt-3.5-turbo"
+
+prompt_cost = calculate_prompt_cost(prompt_string, model)
+print(f"Cost: ${prompt_cost}")
+# Cost: $3e-06
+```
+
+**Counting Tokens:**
+
+```python
+from tokencost import count_message_tokens, count_string_tokens
+
+message_prompt = [{ "role": "user", "content": "Hello world"}]
+# Counting tokens in prompts formatted as message lists
+print(count_message_tokens(message_prompt, model="gpt-3.5-turbo"))
+# 9
+
+# Alternatively, counting tokens in string prompts
+print(count_string_tokens(prompt="Hello world", model="gpt-3.5-turbo"))
+# 2
+```
+
+### Example Usage: Cost with OpenAI API
+
+Integrate `tokencost` with the OpenAI API to calculate the cost of your chat completions.
+
+```python
+from openai import OpenAI
+from tokencost import calculate_prompt_cost, calculate_completion_cost
+
+client = OpenAI()
+model = "gpt-3.5-turbo"
+prompt = [{ "role": "user", "content": "Say this is a test"}]
+
+chat_completion = client.chat.completions.create(
+    messages=prompt, model=model
+)
+
+completion = chat_completion.choices[0].message.content
+# "This is a test."
+
+prompt_cost = calculate_prompt_cost(prompt, model)
+completion_cost = calculate_completion_cost(completion, model)
+print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
+# 0.0000180 + 0.000010 = 0.0000280
+```
+
+## How Tokens are Counted
+
+Tokencost uses [Tiktoken](https://github.com/openai/tiktoken), OpenAI's official tokenizer, for most models, and utilizes the [Anthropic beta token counting API](https://docs.anthropic.com/claude/docs/beta-api-for-counting-tokens) for Claude models (above version 3).
 
 ## LLM Pricing Table
 
-Detailed pricing information is available [here](pricing_table.md). This table includes:
+Find the current pricing information for different LLM models:
 
-*   Model Name
-*   Prompt Cost (USD) per 1M tokens
-*   Completion Cost (USD) per 1M tokens
-*   Maximum Prompt Tokens
-*   Maximum Output Tokens
+**[Pricing Table](pricing_table.md)**
 
-*(Pricing table will be here - included a placeholder)*
-
-## Further exploration
-  Building AI agents? Check out [AgentOps](https://agentops.ai/?tokencost)
+```
+| Model Name                                                            | Prompt Cost (USD) per 1M tokens   | Completion Cost (USD) per 1M tokens   | Max Prompt Tokens   |   Max Output Tokens |
+|:----------------------------------------------------------------------|:----------------------------------|:--------------------------------------|:--------------------|--------------------:|
+| gpt-4                                                                 | $30                               | $60                                   | 8192                |      4096           |
+| gpt-4o                                                                | $2.5                              | $10                                   | 128,000             |     16384           |
+| gpt-4o-audio-preview                                                  | $2.5                              | $10                                   | 128,000             |     16384           |
+| gpt-4o-audio-preview-2024-10-01                                       | $2.5                              | $10                                   | 128,000             |     16384           |
+| gpt-4o-mini                                                           | $0.15                             | $0.6                                  | 128,000             |     16384           |
+| gpt-4o-mini-2024-07-18                                                | $0.15                             | $0.6                                  | 128,000             |     16384           |
+| o1-mini                                                               | $1.1                              | $4.4                                  | 128,000             |     65536           |
+| o1-mini-2024-09-12                                                    | $3                                | $12                                   | 128,000             |     65536           |
+| o1-preview                                                            | $15                               | $60                                   | 128,000             |     32768           |
+| o1-preview-2024-09-12                                                 | $15                               | $60                                   | 128,000             |     32768           |
+| chatgpt-4o-latest                                                     | $5                                | $15                                   | 128,000             |      4096           |
+| gpt-4o-2024-05-13                                                     | $5                                | $15                                   | 128,000             |      4096           |
+| gpt-4o-2024-08-06                                                     | $2.5                              | $10                                   | 128,000             |     16384           |
+| gpt-4-turbo-preview                                                   | $10                               | $30                                   | 128,000             |      4096           |
+| gpt-4-0314                                                            | $30                               | $60                                   | 8,192               |      4096           |
+| gpt-4-0613                                                            | $30                               | $60                                   | 8,192               |      4096           |
+| gpt-4-32k                                                             | $60                               | $120                                  | 32,768              |      4096           |
+| gpt-4-32k-0314                                                        | $60                               | $120                                  | 32,768              |      4096           |
+| gpt-4-32k-0613                                                        | $60                               | $120                                  | 32,768              |      4096           |
+| gpt-4-turbo                                                           | $10                               | $30                                   | 128,000             |      4096           |
+| gpt-4-turbo-2024-04-09                                                | $10                               | $30                                   | 128,000             |      4096           |
+| gpt-4-1106-preview                                                    | $10                               | $30                                   | 128,000             |      4096           |
+| gpt-4-0125-preview                                                    | $10                               | $30                                   | 128,000             |      4096           |
+| gpt-4-vision-preview                                                  | $10                               | $30                                   | 128,000             |      4096           |
+| gpt-4-1106-vision-preview                                             | $10                               | $30                                   | 128,000             |      4096           |
+| gpt-3.5-turbo                                                         | $1.5                              | $2                                    | 16,385              |      4096           |
+| gpt-3.5-turbo-0301                                                    | $1.5                              | $2                                    | 4,097               |      4096           |
+| gpt-3.5-turbo-0613                                                    | $1.5                              | $2                                    | 4,097               |      4096           |
+| gpt-3.5-turbo-1106                                                    | $1                                | $2                                    | 16,385              |      4096           |
+| gpt-3.5-turbo-0125                                                    | $0.5                              | $1.5                                  | 16,385              |      4096           |
+| gpt-3.5-turbo-16k                                                     | $3                                | $4                                    | 16,385              |      4096           |
+| gpt-3.5-turbo-16k-0613                                                | $3                                | $4                                    | 16,385              |      4096           |
+| ft:gpt-3.5-turbo                                                      | $3                                | $6                                    | 16,385              |      4096           |
+| ft:gpt-3.5-turbo-0125                                                 | $3                                | $6                                    | 16,385              |      4096           |
+| ft:gpt-3.5-turbo-1106                                                 | $3                                | $6                                    | 16,385              |      4096           |
+| ft:gpt-3.5-turbo-0613                                                 | $3                                | $6                                    | 4,096               |      4096           |
+| ft:gpt-4-0613                                                         | $30                               | $60                                   | 8,192               |      4096           |
+| ft:gpt-4o-2024-08-06                                                  | $3.75                             | $15                                   | 128,000             |     16384           |
+| ft:gpt-4o-mini-2024-07-18                                             | $0.3                              | $1.2                                  | 128,000             |     16384           |
+| ft:davinci-002                                                        | $2                                | $2                                    | 16,384              |      4096           |
+| ft:babbage-002                                                        | $0.4                              | $0.4                                  | 16,384              |      4096           |
+| text-embedding-3-large                                                | $0.13                             | $0                                    | 8,191               |       nan           |
+| text-embedding-3-small                                                | $0.02                             | $0                                    | 8,191               |       nan           |
+| text-embedding-ada-002                                                | $0.1                              | $0                                    | 8,191               |       nan           |
+| text-embedding-ada-002-v2                                             | $0.1                              | $0                                    | 8,191               |       nan           |
+| text-moderation-stable                                                | $0                                | $0                                    | 32,768              |         0           |
+| text-moderation-007                                                   | $0                                | $0                                    | 32,768              |         0           |
+| text-moderation-latest                                                | $0                                | $0                                    | 32,768              |         0           |
+| 256-x-256/dall-e-2                                                    | --                                | --                                    | nan                 |       nan           |
+| 512-x-512/dall-e-2                                                    | --                                | --                                    | nan                 |       nan           |
+| 1024-x-1024/dall-e-2                                                  | --                                | --                                    | nan                 |       nan           |
+| hd/1024-x-1792/dall-e-3                                               | --                                | --                                    | nan                 |       nan           |
+| hd/1792-x-1024/dall-e-3                                               | --                                | --                                    | nan                 |       nan           |
+| hd/1024-x-1024/dall-e-3                                               | --                                | --                                    | nan                 |       nan           |
+| standard/1024-x-1792/dall-e-3                                         | --                                | --                                    | nan                 |       nan           |
+| standard/1792-x-1024/dall-e-3                                         | --                                | --                                    | nan                 |       nan           |
+| standard/1024-x-1024/dall-e-3                                         | --                                | --                                    | nan                 |       nan           |
+| whisper-1                                                             | --                                | --                                    | nan                 |       nan           |
+| tts-1                                                                 | --                                | --                                    | nan                 |       nan           |
+| tts-1-hd                                                              | --                                | --                                    | nan                 |       nan           |
+| azure/tts-1                                                           | --                                | --                                    | nan                 |       nan           |
+| azure/tts-1-hd                                                        | --                                | --                                    | nan                 |       nan           |
+| azure/whisper-1                                                       | --                                | --                                    | nan                 |       nan           |
+| azure/o1-mini                                                         | $1.21                             | $4.84                                 | 128,000             |     65536           |
+| azure/o1-mini-2024-09-12                                              | $1.1                              | $4.4                                  | 128,000             |     65536           |
+| azure/o1-preview                                                      | $15                               | $60                                   | 128,000             |     32768           |
+| azure/o1-preview-2024-09-12                                           | $15                               | $60                                   | 128,000             |     32768           |
+| azure/gpt-4o                                                          | $2.5                              | $10                                   | 128,000             |     16384           |
+| azure/gpt-4o-2024-08-06                                               | $2.5                              | $10                                   | 128,000             |     16384           |
+| azure/gpt-4o-2024-05-13                                               | $5                                | $15                                   | 128,000             |      4096           |
+| azure/global-standard/gpt-4o-2024-08-06                               | $2.5                              | $10                                   | 128,000             |     16384           |
+| azure/global-standard/gpt-4o-mini                                     | $0.15                             | $0.6                                  | 128,000             |     16384           |
+| azure/gpt-4o-mini                                                     | $0.16                             | $0.66                                 | 128,000             |     16384           |
+| azure/gpt-4-turbo-2024-04-09                                          | $10                               | $30                                   | 128,000             |      4096           |
+| azure/gpt-4-0125-preview                                              | $10                               | $30                                   | 128,000             |      4096           |
+| azure/gpt-4-1106-preview                                              | $10                               | $30                                   | 128,000             |      4096           |
+| azure/gpt-4-0613                                                      | $30                               | $60                                   | 8,192               |      4096           |
+| azure/gpt-4-32k-0613                                                  | $60                               | $120                                  | 32,768              |      4096           |
+| azure/gpt-4-32k                                                       | $60                               | $120                                  | 32,768              |      4096           |
+| azure/gpt-4                                                           | $30                               | $60                                   | 8,192               |      4096           |
+| azure/gpt-4-turbo                                                     | $10                               | $30                                   | 128,000             |      4096           |
+| azure/gpt-4-turbo-vision-preview                                      | $10                               | $30                                   | 128,000             |      4096           |
+| azure/gpt-35-turbo-16k-0613                                           | $3                                | $4                                    | 16,385              |      4096           |
+| azure/gpt-35-turbo-1106                                               | $1                                | $2                                    | 16,384              |      4096           |
+| azure/gpt-35-turbo-0613                                               | $1.5                              | $2                                    | 4,097               |      4096           |
+| azure/gpt-35-turbo-0301                                               | $0.2                              | $2                                    | 4,097               |      4096           |
+| azure/gpt-35-turbo-0125                                               | $0.5                              | $1.5                                  | 16,384              |      4096           |
+| azure/gpt-35-turbo-16k                                                | $3                                | $4                                    | 16,385              |      4096           |
+| azure/gpt-35-turbo                                                    | $0.5                              | $1.5                                  | 4,097               |      4096           |
+| azure/gpt-3.5-turbo-instruct-0914                                     | $1.5                              | $2                                    | 4,097               |       nan           |
+| azure/gpt-35-turbo-instruct                                           | $1.5                              | $2                                    | 4,097               |       nan           |
+| azure/gpt-35-turbo-instruct-0914                                      | $1.5                              | $2                                    | 4,097               |       nan           |
+| azure/mistral-large-latest                                            | $8                                | $24                                   | 32,000              |       nan           |
+| azure/mistral-large-2402                                              | $8                                | $24                                   | 32,000              |       nan           |
+| azure/command-r-plus                                                  | $3                                | $15                                   | 128,000             |      4096           |
+| azure/ada                                                             | $0.1                              | $0                                    | 8,191               |       nan           |
+| azure/text-embedding-ada-002                                          | $0.1                              | $0                                    | 8,191               |       nan           |
+| azure/text-embedding-3-large                                          | $0.13                             | $0                                    | 8,191               |       nan           |
+| azure/text-embedding-3-small                                          | $0.02                             | $0                                    | 8,191               |       nan           |
+| azure/standard/1024-x-1024/dall-e-3                                   | --                                | $0                                    | nan                 |       nan           |
+| azure/hd/1024-x-1024/dall-e-3                                         | --                                | $0                                    | nan                 |       nan           |
+| azure/standard/1024-x-1792/dall-e-3                                   | --                                | $0                                    | nan                 |       nan           |
+| azure/standard/1792-x-1024/dall-e-3                                   | --                                | $0                                    | nan                 |       nan           |
+| azure/hd/1024-x-1792/dall-e-3                                         | --                                | $0                                    | nan                 |       nan           |
+| azure/hd/1792-x-1024/dall-e-3                                         | --                                | $0                                    | nan                 |       nan           |
+| azure/standard/1024-x-1024/dall-e-2                                   | --                                | $0                                    | nan                 |       nan           |
+| azure_ai/jamba-instruct                                               | $0.5                              | $0.7                                  | 70,000              |      4096           |
+| azure_ai/mistral-large                                                | $4                                | $12                                   | 32,000              |      8191           |
+| azure_ai/mistral-small                                                | $1                                | $3                                    | 32,000              |      8191           |
+| azure_ai/Meta-Llama-3-70B-Instruct                                    | $1.1                              | $0.37                                 | 8,192               |      2048           |
+| azure_ai/Meta-Llama-3.1-8B-Instruct                                   | $0.3                              | $0.61                                 | 128,000             |      2048           |
+| azure_ai/Meta-Llama-3.1-70B-Instruct                                  | $2.68                             | $3.54                                 | 128,000             |      2048           |
+| azure_ai/Meta-Llama-3.1-405B-Instruct                                 | $5.33                             | $16                                   | 128,000             |      2048           |
+| azure_ai/cohere-rerank-v3-multilingual                                | $0                                | $0                                    | 4,096               |      4096           |
+| azure_ai/cohere-rerank-v3-english                                     | $0                                | $0                                    | 4,096               |      4096           |
+| azure_ai/Cohere-embed-v3-english                                      | $0.1                              | $0                                    | 512                 |       nan           |
+| azure_ai/Cohere-embed-v3-multilingual                                 | $0.1                              | $0                                    | 512                 |       nan           |
+| babbage-002                                                           | $0.4                              | $0.4                                  | 16,384              |      4096           |
+| davinci-002                                                           | $2                                | $2                                    | 16,384              |      4096           |
+| gpt-3.5-turbo-instruct                                                | $1.5                              | $2                                    | 8,192               |      4096           |
+| gpt-3.5-turbo-instruct-0914                                           | $1.5                              | $2                                    | 8,192               |      4097           |
+| claude-instant-1                                                      | $1.63                             | $5.51                                 | 100,000             |      8191           |
+| mistral/mistral-tiny                                                  | $0.25                             | $0.25                                 | 32,000              |      8191           |
+| mistral/mistral-small                                                 | $0.1                              | $0.3                                  | 32,000              |      8191           |
+| mistral/mistral-small-latest                                          | $0.1                              | $0.3                                  | 32,000              |      8191           |
+| mistral/mistral-medium                                                | $2.7                              | $8.1                                  | 32,000              |      8191           |
+| mistral/mistral-medium-latest                                         | $0.4                              | $2                                    | 131,072             |      8191           |
+| mistral/mistral-medium-2312                                           | $2.7                              | $8.1                                  | 32,000              |      8191           |
+| mistral/mistral-large-latest                                          | $2                                | $6                                    | 128,000             |    128000           |
+| mistral/mistral-large-2402                                            | $4                                | $12                                   | 32,000              |      8191           |
+| mistral/mistral-large-2407                                            | $3                                | $9                                    | 128,000             |    128000           |
+| mistral/pixtral-12b-2409                                              | $0.15                             | $0.15                                 | 128,000             |    128000           |
+| mistral/open-mistral-7b                                               | $0.25                             | $0.25                                 | 32,000              |      8191           |
+| mistral/open-mixtral-8x7b                                             | $0.7                              | $0.7                                  | 32,000              |      8191           |
+| mistral/open-mixtral-8x22b                                            | $2                                | $6                                    | 65,336              |      8191           |
+| mistral/codestral-latest                                              | $1                                | $3                                    | 32,000              |      8191           |
+| mistral/codestral-2405                                                | $1                                | $3                                    | 32,000              |      8191           |
+| mistral/open-mistral-nemo                                             | $0.3                              | $0.3                                  | 128,000             |    128000           |
+| mistral/open-mistral-nemo-2407                                        | $0.3                              | $0.3                                  | 128,000             |    128000           |
+| mistral/open-codestral-mamba                                          | $0.25                             | $0.25                                 | 256,000             |    256000           |
+| mistral/codestral-mamba-latest                                        | $0.25                             | $0.25                                 | 256,000             |    256000           |
+| mistral/mistral-embed                                                 | $0.1                              | --                                    | 8,192               |       nan           |
+| deepseek-chat                                                         | $0.14                             | $0.28                                 | 128,000             |      4096           |
+| codestral/codestral-latest                                            | $0                                | $0                                    | 32,000              |      8191           |
+| codestral/codestral-2405                                              | $0                                | $0                                    | 32,000              |      8191           |
+| text-completion-codestral/codestral-latest                            | $0                                | $0                                    | 32,000              |      8191           |
+| text-completion-codestral/codestral-2405                              | $0                                | $0                                    | 32,000              |      8191           |
+| deepseek-coder                                                        | $0.14                             | $0.28                                 | 128,000             |      4096           |
+| groq/llama2-70b-4096                                                  | $0.7                              | $0.8                                  | 4,096               |      4096           |
+| groq/llama3-8b-8192                                                   | $0.05                             | $0.08                                 | 8,192               |      8192           |
+| groq/llama3-70b-8192                                                  | $0.59                             | $0.79                                 | 8,192               |      8192           |
+| groq/llama-3.1-8b-instant                                             | $0.05                             | $0.08                                 | 128,000             |      8192           |
+| groq/llama-3.1-70b-versatile                                          | $0.59                             | $0.79                                 | 8,192               |      8192           |
+| groq/llama-3.1-405b-reasoning                                         | $0.59                             | $0.79                                 | 8,192               |      8192           |
+| groq/mixtral-8x7b-32768                                               | $0.24                             | $0.24                                 | 32,768              |     32768           |
+| groq/gemma-7b-it                                                      | $0.07                             | $0.07                                 | 8,192               |      8192           |
+| groq/gemma2-9b-it                                                     | $0.2                              | $0.2                                  | 8,192               |      8192           |
+| groq/llama3-groq-70b-8192-tool-use-preview                            | $0.89                             | $0.89                                 | 8,192               |      8192           |
+| groq/llama3-groq-8b-8192-tool-use-preview                             | $0.19                             | $0.19                                 | 8,192               |      8192           |
+| cerebras/llama3.1-

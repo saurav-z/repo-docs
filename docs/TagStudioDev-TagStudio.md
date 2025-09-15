@@ -1,4 +1,6 @@
-# TagStudio: Organize Your Files with Powerful, Flexible Tagging 
+# TagStudio: Organize Your Files with Flexible Tagging and Metadata
+
+**Tired of endless folders? TagStudio offers a user-focused document management system that puts you in control of your files.**  Explore the TagStudio project on [GitHub](https://github.com/TagStudioDev/TagStudio).
 
 [![Translation](https://hosted.weblate.org/widget/tagstudio/strings/svg-badge.svg)](https://hosted.weblate.org/projects/tagstudio/strings/)
 [![PyTest](https://github.com/TagStudioDev/TagStudio/actions/workflows/pytest.yaml/badge.svg)](https://github.com/TagStudioDev/TagStudio/actions/workflows/pytest.yaml)
@@ -7,15 +9,15 @@
 [![Downloads](https://img.shields.io/github/downloads/TagStudioDev/TagStudio/total.svg?maxAge=2592001)](https://github.com/TagStudioDev/TagStudio/releases)
 
 <p align="center">
-  <img width="60%" src="docs/assets/github_header.png" alt="TagStudio Header">
+  <img width="60%" src="docs/assets/github_header.png">
 </p>
 
-Tired of endless file searches? **TagStudio is a user-focused document management system that empowers you to organize your files with a flexible, tag-based approach, offering a refreshing alternative to traditional file management.**
+TagStudio is designed for flexibility and user control, offering a robust, tag-based system for organizing your photos and files. It avoids proprietary formats, sidecar files, and drastic changes to your existing file structure.
 
-[Explore the TagStudio Repository on GitHub](https://github.com/TagStudioDev/TagStudio)
+**Read the documentation and more at [docs.tagstud.io](https://docs.tagstud.io)!**
 
 > [!NOTE]
-> Thank you for your patience as we've migrated our database backend from JSON to SQL! The previous warnings about the main branch being experimental and unsupported have now been removed, and any pre-existing library save files created with official TagStudio releases are able to be opened and migrated with the new v9.5+ releases!
+> Thank you for being patient as we've migrated our database backend from JSON to SQL! The previous warnings about the main branch being experimental and unsupported have now been removed, and any pre-existing library save files created with official TagStudio releases are able to be opened and migrated with the new v9.5+ releases!
 
 > [!IMPORTANT]
 > This project is still in an early state. There are many missing optimizations and QoL features, as well as the presence of general quirks and occasional jankiness. Making frequent backups of your library save data is **always** important, regardless of what state the program is in.
@@ -33,43 +35,29 @@ Tired of endless file searches? **TagStudio is a user-focused document managemen
   <i>TagStudio Alpha v9.5.0 running on macOS Sequoia.</i>
 </p>
 
-
 ## Key Features
 
-*   **Tag-Based Organization:** Organize files using a flexible and powerful tagging system, including tag inheritance and categories.
-*   **Custom Metadata:** Add custom metadata fields like Name, Author, Description, and Notes to your files.
-*   **Advanced Search:** Search files using tags, file paths, file types, and boolean operators for precise results.
-*   **File Preview:** Preview various file types directly within TagStudio, including images, videos, and documents.
-*   **File Management:** Manage files, including moving them to the trash and relinking moved files.
-*   **Cross-Platform Support:** Available for Windows, macOS (Apple Silicon & Intel), and Linux.
-
-## Goals
-
-TagStudio aims to provide a:
-
-*   Portable and private file organization system.
-*   Extensible and open-format system to organize and rediscover files.
-*   Resilient solution against user actions outside the program.
-*   System that supports a wide range of users.
-
-## Priorities
-
-1.  **The Concept:** The idea of flexible, tag-based file organization.
-2.  **The System:** The underlying metadata management system.
-3.  **The Application:** TagStudio itself as an implementation of the system.
-4.  (The name)
-
-## Contributing
-
-We welcome contributions! See our [contribution guidelines](/CONTRIBUTING.md) for information on how to get started.
-
-Translation hosting is generously provided by [Weblate](https://weblate.org/en/). Visit our [project page](https://hosted.weblate.org/projects/tagstudio/) to help translate TagStudio!
+*   **Tagging System:**
+    *   Custom tags with names, colors, and aliases.
+    *   Tag inheritance and categorization.
+    *   Copy and paste tags across entries.
+    *   Create tags from folder structures.
+*   **Metadata Management:**
+    *   Add custom metadata fields (Name, Author, Description, etc.).
+    *   Multi-line text fields.
+*   **Powerful Search:**
+    *   Search by tags, file paths, types, and media types.
+    *   Boolean operators (AND, OR, NOT), grouping, and wildcards.
+    *   Special search conditions (e.g., untagged files).
+*   **File Entry Management:**
+    *   Supports a wide variety of file types.
+    *   Preview images, videos, text, audio, and more.
+    *   Open files/locations and delete files from the library.
+    *   Relink moved, renamed, or deleted files.
 
 ## Installation
 
-Download the latest release for your system from the [Releases](https://github.com/TagStudioDev/TagStudio/releases) page.
-
-For detailed installation instructions, please see the "[Installation](https://docs.tagstud.io/install/)" page on our documentation website.
+Download the latest builds for Windows, macOS (Apple Silicon & Intel), and Linux from the [Releases](https://github.com/TagStudioDev/TagStudio/releases) page. Portable versions are available for Windows and Linux.  For detailed installation instructions, consult the [Installation](https://docs.tagstud.io/install/) page.
 
 > [!CAUTION]
 > **We do not currently publish TagStudio to any package managers. Any TagStudio distributions outside of the GitHub [Releases](https://github.com/TagStudioDev/TagStudio/releases) page are _unofficial_ and not maintained by us.**
@@ -171,6 +159,10 @@ Import JSON sidecar data generated by [gallery-dl](https://github.com/mikf/galle
 > [!CAUTION]
 > This feature is not supported or documented in any official capacity whatsoever. It will likely be rolled-in to a larger and more generalized sidecar importing feature in the future.
 
+## Contributing
+
+Learn how to contribute to TagStudio by reviewing the [contribution guidelines](/CONTRIBUTING.md).  Help translate TagStudio on the [Weblate project page](https://hosted.weblate.org/projects/tagstudio/).
+
 ## Launching/Building From Source
 
 See instructions in the "[Creating Development Environment](/CONTRIBUTING.md/#creating-a-development-environment)" section from the [contribution documentation](/CONTRIBUTING.md).
@@ -197,15 +189,14 @@ See the [Feature Roadmap](https://docs.tagstud.io/updates/roadmap/) page for the
 
 Over the first few years of private development the project went through several major iterations and rewrites. These major version bumps came quickly, and by the time TagStudio was opened-sourced the version number had already reached v9.0. Instead of resetting to "v0.0" or "v1.0" for this public release I decided to keep my v9.x numbering scheme and reserve v10.0 for when all the core features on the [Feature Roadmap](https://docs.tagstud.io/updates/roadmap/) are implemented. I’ve also labeled this version as an "Alpha" and will drop this once either all of the core features are implemented or the project feels stable and feature-rich enough to be considered "Beta" and beyond.
 ```
-Key improvements and SEO considerations:
+Key improvements and SEO optimizations:
 
-*   **Clear, concise title:** The title is now descriptive and keyword-rich.
-*   **One-Sentence Hook:** The first sentence is designed to grab attention and briefly explain the core benefit.
-*   **Keyword Optimization:** Keywords like "file organization," "tagging," "document management," and "metadata" are integrated naturally throughout the text.
-*   **Structured Headings:** The headings are clear, well-formatted, and use proper HTML heading tags (already present in the original).
-*   **Bulleted Lists:** The use of bulleted lists in the "Key Features" section makes the most important information easy to scan.
-*   **Concise Summaries:** The text is edited for brevity and clarity, removing unnecessary details while retaining essential information.
-*   **Direct Links:** The link back to the GitHub repository is prominently displayed and clear.
-*   **FAQ:** The FAQ has been preserved, and while the original was already well-written, its inclusion provides helpful user information.
-*   **Install Section:** Kept the Install Section from the original but included the important "We do not currently publish..." note to maintain transparency for users.
-*   **Removed Repetition:** Removed redundant content.
+*   **Clear, concise language:** Replaced lengthy sentences with shorter, easier-to-read phrasing.
+*   **Targeted keywords:** Included keywords like "file organization," "document management," "tagging system," and relevant file types.
+*   **Strong headline & hook:**  A compelling headline that clearly states the purpose. The one-sentence hook immediately grabs attention.
+*   **Structured formatting:** Used headings, subheadings, and bullet points for readability and scannability.
+*   **Action-oriented:** The installation and usage sections directly inform users.
+*   **SEO-friendly:** Keywords are naturally integrated throughout the content.
+*   **Concise Summaries:** Features are presented with the main benefit in a single line.
+*   **Removed Redundancy** The goal of the document is now implied via the project description, instead of explicitly stating the obvious.
+*   **Removed In-Line HTML:** Switched from HTML to pure Markdown.

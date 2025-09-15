@@ -1,88 +1,111 @@
-# PerfKit Benchmarker: The Open Source Standard for Cloud Performance Benchmarking
+# PerfKit Benchmarker: Standardized Cloud Benchmarking and Performance Analysis
 
-**Ready to compare cloud offerings and optimize your infrastructure?** PerfKit Benchmarker provides a standardized, automated framework for measuring and comparing the performance of various cloud platforms. Explore the original repository: [https://github.com/GoogleCloudPlatform/PerfKitBenchmarker](https://github.com/GoogleCloudPlatform/PerfKitBenchmarker).
+**Measure and compare cloud performance with PerfKit Benchmarker, an open-source tool that automates the process of benchmarking cloud offerings.** Explore the power of standardized benchmarks to drive informed decisions about cloud infrastructure. ([Original Repository](https://github.com/GoogleCloudPlatform/PerfKitBenchmarker))
 
-## Key Features:
+**Key Features:**
 
-*   **Automated Benchmarking:** Easily run a wide range of popular benchmarks on various cloud providers with minimal user interaction.
-*   **Cloud Agnostic:** Supports benchmarking across major cloud providers like Google Cloud, AWS, Azure, and others.
-*   **Standardized Results:** Uses consistent settings for benchmarks to ensure fair comparisons across different cloud services.
-*   **Flexible Configuration:** Allows for advanced customization with configuration files and overrides for tailored testing.
-*   **Extensible:** Easily add new benchmarks, support for additional cloud providers, and custom features.
-*   **Licensing Compliance:**  Ensures you accept the licenses of each benchmark before execution, providing transparency and control.
+*   **Automated Benchmarking:** Easily deploy and run a comprehensive suite of benchmarks on various cloud providers.
+*   **Vendor-Neutral:** Designed to provide consistent and reliable benchmark results across different cloud platforms.
+*   **Wide Range of Benchmarks:** Includes popular benchmarks for CPU, storage, networking, and database performance.
+*   **Customizable:** Offers flexible configuration options to tailor benchmarks to specific needs and workloads.
+*   **Reporting and Analysis:** Provides tools to collect, analyze, and visualize benchmark results for easy comparison.
+*   **Extensible:** Extend and customize benchmarks through an extensive ecosystem.
 
-## Getting Started:
+## Getting Started
 
-1.  **Prerequisites:**
+### Installation and Setup
 
-    *   A cloud provider account for each platform you plan to benchmark (AWS, GCP, Azure, etc.).
-    *   Python 3.11 or later.
-    *   `pip` for managing Python packages.
-
-2.  **Set Up a Virtual Environment:**
+1.  **Python 3 & Virtual Environment**: Ensure Python 3.11+ is installed and create a virtual environment for PKB:
 
     ```bash
     python3 -m venv $HOME/my_virtualenv
     source $HOME/my_virtualenv/bin/activate
     ```
 
-3.  **Install PerfKit Benchmarker:**
-
-    *   Clone the repository:
-        ```bash
-        git clone https://github.com/GoogleCloudPlatform/PerfKitBenchmarker.git
-        ```
-    *   Install dependencies:
-        ```bash
-        cd PerfKitBenchmarker
-        pip3 install -r requirements.txt
-        ```
-        *You may need to install provider-specific requirements. For example:*
-        ```bash
-        cd perfkitbenchmarker/providers/aws
-        pip3 install -r requirements.txt
-        ```
-
-4.  **Run a Benchmark:**
+2.  **Clone the Repository**:
 
     ```bash
-    ./pkb.py --cloud=<cloud_provider> --benchmarks=<benchmark_name> --machine_type=<machine_type>
+    $ cd $HOME
+    $ git clone https://github.com/GoogleCloudPlatform/PerfKitBenchmarker.git
     ```
-    *   Replace `<cloud_provider>` (e.g., GCP, AWS, Azure).
-    *   Replace `<benchmark_name>` (e.g., iperf, netperf).
-    *   Replace `<machine_type>` with the desired instance type.
 
-    *Example: Run iperf on GCP*
+3.  **Install Dependencies**:
+
+    ```bash
+    $ pip3 install -r $HOME/PerfKitBenchmarker/requirements.txt
+    ```
+    *Install Provider Specific Dependencies*: For AWS, for instance:
+    ```bash
+    $ cd $HOME/PerfKitBenchmarker/perfkitbenchmarker/providers/aws
+    $ pip3 install -r requirements.txt
+    ```
+
+### Running Benchmarks
+
+#### Example Runs:
+*   **GCP:**
     ```bash
     ./pkb.py --project=<GCP project ID> --benchmarks=iperf --machine_type=f1-micro
     ```
 
-## Advanced Usage:
+*   **AWS:**
+    ```bash
+    cd PerfKitBenchmarker
+    ./pkb.py --cloud=AWS --benchmarks=iperf --machine_type=t2.micro
+    ```
 
-*   **Benchmarking on Windows:** Run Windows benchmarks by using the `--os_type=windows` flag.
-*   **Juju Integration:** Leverage Juju for automated deployment and management with the `--os_type=juju` flag.
-*   **Preprovisioned Data:** Learn how to upload data to Cloud Storage and configure your benchmarks accordingly.
-*   **Configuration Files:** Use YAML configuration files for complex setups and customizations.
-*   **Static Machines:** Run benchmarks on local or non-provisioned machines using configuration files to describe the target machines.
-*   **Elasticsearch Integration:** Publish your benchmark results to an Elasticsearch server for easy analysis.  Install `elasticsearch`: `pip install elasticsearch`.
-*   **InfluxDB Integration:**  Publish your benchmark results to an InfluxDB server.
+*   **Azure:**
+    ```bash
+    ./pkb.py --cloud=Azure --machine_type=Standard_A0 --benchmarks=iperf
+    ```
 
-## Additional Resources:
+*   **DigitalOcean:**
+    ```bash
+    ./pkb.py --cloud=DigitalOcean --machine_type=16gb --benchmarks=iperf
+    ```
 
-*   [Wiki](https://github.com/GoogleCloudPlatform/PerfKitBenchmarker/wiki) for detailed information, FAQs, and design documents.
-*   [Contributing Guide](https://github.com/GoogleCloudPlatform/PerfKitBenchmarker/blob/master/CONTRIBUTING.md) for contributing to the project.
-*   [Open Issues](https://github.com/GoogleCloudPlatform/PerfKitBenchmarker/issues) for discussions and feature requests.
+*   **Other Providers**  (IBMCloud, AliCloud, OpenStack, CloudStack, Rackspace, ProfitBricks, Kubernetes, Mesos, and Rackspace)  can also be specified.
 
-**Start benchmarking today and gain valuable insights into your cloud infrastructure!**
-```
-Key improvements and optimizations:
+### Key Flags
 
-*   **SEO-Friendly Title:**  Includes the key phrase "Cloud Performance Benchmarking" in the title.
-*   **Concise Hook:**  Provides a clear and compelling first sentence.
-*   **Clear Headings:** Uses H1, H2, and H3 tags for improved readability and SEO.
-*   **Bulleted Key Features:**  Highlights the most important features in an easy-to-scan format.
-*   **Actionable Getting Started Guide:** Includes clear, step-by-step instructions for setup and running a basic benchmark.
-*   **Advanced Usage Section:** Covers important features, such as running on different operating systems and integrating with third-party services.
-*   **Links to Key Resources:** Provides easy access to the Wiki, contributing guide, and issue tracker.
-*   **Call to Action:** Encourages users to start benchmarking.
-*   **Concise and Organized Content:** Streamlines the information for better readability.
+| Flag                | Description                                              |
+| ------------------- | -------------------------------------------------------- |
+| `--benchmarks`      | Comma-separated list of benchmarks to run.              |
+| `--cloud`           | The cloud provider (GCP, AWS, Azure, etc.).           |
+| `--machine_type`    | The machine type to provision.                          |
+| `--zones`           | Override the default zone.                               |
+| `--data_disk_type`  | The type of data disk to use.                            |
+| `--helpmatch`       | See all flags related to specific benchmarks             |
+
+### Preprovisioned Data
+
+*   Some benchmarks require preprovisioned data; such as Google Cloud Storage for GCP and AWS S3 for AWS
+*   Utilize `gsutil cp` and `aws s3 cp` for data transfers.
+*   The `--gcp_preprovisioned_data_bucket` and `--aws_preprovisioned_data_bucket` flags are used.
+
+## Configuration and Configuration Overrides
+
+*   Benchmarks use YAML configuration files.
+*   Override settings via `--benchmark_config_file` or `--config_override`.
+*   Use static machines with `static_vms` configuration.
+
+## Advanced
+
+*   **Running without Cloud Provisioning**: Configure static machines with IP address and SSH key.
+*   **Specifying Flags in Configuration Files**: Use the `flags` key in config files to set defaults.
+
+## Publishers
+
+*   **Elasticsearch Publisher**: Configure with `--es_uri`, `--es_index`, and `--es_type`.
+*   **InfluxDB Publisher**: Configure with `--influx_uri` and `--influx_db_name`.
+
+## Extending PerfKit Benchmarker
+
+*   Refer to the [CONTRIBUTING.md](https://github.com/GoogleCloudPlatform/PerfKitBenchmarker/blob/master/CONTRIBUTING.md) for contribution guidelines.
+*   The [wiki](https://github.com/GoogleCloudPlatform/PerfKitBenchmarker/wiki) provides further documentation.
+*   Add new benchmarks, package/OS type support, or providers.
+*   Open an [issue](https://github.com/GoogleCloudPlatform/PerfKitBenchmarker/issues) to request missing documentation or to contribute.
+
+## Integration Testing
+
+*   Run integration tests with `tox -e integration` after configuring cloud provider SDKs.

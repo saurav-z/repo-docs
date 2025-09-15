@@ -9,60 +9,52 @@
   </p>
 </p>
 
-# Commix: Automated Command Injection Exploitation Tool
+# Commix: Automated Command Injection Exploitation
 
-**Commix** ([**comm**]and [**i**]njection e[**x**]ploiter) is a powerful open-source penetration testing tool designed to detect and exploit command injection vulnerabilities automatically.  [Visit the original repository](https://github.com/commixproject/commix) for more details.
+**Commix** is a powerful open-source penetration testing tool designed to detect and exploit command injection vulnerabilities in web applications. ([See the original repo](https://github.com/commixproject/commix))
 
 ![Screenshot](https://commixproject.com/images/background.png)
 
+Explore the [screenshots](https://github.com/commixproject/commix/wiki/Screenshots) demonstrating Commix's capabilities.
+
 ## Key Features
 
-*   **Automated Vulnerability Detection:**  Quickly identifies command injection flaws.
-*   **Exploitation Capabilities:**  Allows penetration testers to exploit these vulnerabilities.
-*   **Open Source:** Freely available and customizable for security professionals.
-*   **Cross-Platform Compatibility:** Runs on various operating systems.
-*   **Detailed Reporting:** Provides comprehensive results for analysis.
+*   **Automated Vulnerability Detection:**  Quickly identifies potential command injection flaws.
+*   **Exploitation Automation:**  Automates the exploitation of command injection vulnerabilities.
+*   **Open Source:**  Freely available and customizable under the GPLv3 license.
+*   **Cross-Platform Compatibility:** Works on any platform where Python is supported.
+*   **Extensive Documentation:**  Comprehensive [wiki](https://github.com/commixproject/commix/wiki) with usage examples and bypass techniques.
 
 ## Installation
 
-Install Commix easily using Git:
+To get started with Commix, clone the official Git repository:
 
 ```bash
-$ git clone https://github.com/commixproject/commix.git commix
+git clone https://github.com/commixproject/commix.git commix
 ```
 
 Alternatively, download the latest [tarball](https://github.com/commixproject/commix/tarball/master) or [zipball](https://github.com/commixproject/commix/zipball/master).
 
-**Prerequisites:** **Python** (version **2.6**, **2.7**, or **3.x**) is required.
+**Note:** Ensure you have **[Python](http://www.python.org/download/)** (version **2.6**, **2.7** or **3.x**) installed.
 
 ## Usage
 
 Get help with:
 
 ```bash
-$ python commix.py -h
+python commix.py -h
 ```
 
-For comprehensive information on available options and usage examples, consult the [Usage](https://github.com/commixproject/commix/wiki/Usage), [Usage Examples](https://github.com/commixproject/commix/wiki/Usage-Examples), and [Filters Bypasses](https://github.com/commixproject/commix/wiki/Filters-Bypasses) wiki pages.
+For more information on how to use commix, check the following wiki pages: [usage](https://github.com/commixproject/commix/wiki/Usage), [usage examples](https://github.com/commixproject/commix/wiki/Usage-Examples) and [filters bypasses](https://github.com/commixproject/commix/wiki/Filters-Bypasses).
 
-## Additional Resources
+## Resources
 
 *   **User's Manual:** [Commix Wiki](https://github.com/commixproject/commix/wiki)
 *   **Issue Tracker:** [GitHub Issues](https://github.com/commixproject/commix/issues)
 
 ## Translations
 
-*   [Farsi (Persian)](https://github.com/commixproject/commix/blob/master/doc/translations/README-fa-FA.md)
+*   [Farsi(Persian)](https://github.com/commixproject/commix/blob/master/doc/translations/README-fa-FA.md)
 *   [Greek](https://github.com/commixproject/commix/blob/master/doc/translations/README-gr-GR.md)
 *   [Indonesian](https://github.com/commixproject/commix/blob/master/doc/translations/README-idn-IDN.md)
 *   [Turkish](https://github.com/commixproject/commix/blob/master/doc/translations/README-tr-TR.md)
-```
-Key improvements and SEO optimizations:
-
-*   **Clear Title and Hook:**  The title and one-sentence hook immediately establish what Commix is and what it does.  Keywords like "command injection," "penetration testing," and "exploitation" are included.
-*   **Keywords Throughout:** Used relevant keywords naturally throughout the document to improve search engine rankings.
-*   **Bulleted Key Features:**  Emphasizes the core benefits of using Commix.
-*   **Concise and Focused:**  Removed some redundant information and streamlined the text.
-*   **Formatted Headings:** Improved readability and structure.
-*   **Links:** Added a link back to the original repository.
-*   **SEO:** Optimized for search by using relevant keywords in headings and content.

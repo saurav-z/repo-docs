@@ -1,53 +1,73 @@
-# Stable Diffusion Web UI: Unleash Your Creativity with AI-Powered Image Generation
+# Stable Diffusion WebUI: Unleash Your Creativity with AI-Powered Image Generation
 
-**Generate stunning images from text prompts with Stable Diffusion Web UI, a user-friendly web interface built with Gradio.** ([Original Repo](https://github.com/AUTOMATIC1111/stable-diffusion-webui))
+**Create stunning images from text prompts using the power of Stable Diffusion with this user-friendly web interface.** ([See the original repo](https://github.com/AUTOMATIC1111/stable-diffusion-webui))
 
 ## Key Features:
 
-*   **Intuitive Interface:** Easy-to-use web interface for generating images.
-*   **Text-to-Image & Image-to-Image:** Generate images from text descriptions or modify existing images.
-*   **Advanced Features:** Outpainting, inpainting, color sketches, prompt matrix, and more.
-*   **Prompt Engineering:** Fine-tune image generation with attention mechanisms, negative prompts, and styles.
-*   **Upscaling & Enhancement:** Integrated tools like GFPGAN, CodeFormer, and RealESRGAN for improved image quality.
-*   **Customization:** Support for textual inversion, hypernetworks, LoRAs, and custom scripts.
-*   **Batch Processing:** Process multiple images at once.
-*   **Community-Driven:** Extensive support for extensions and community contributions.
-*   **Cross-platform Support:** Works on Windows, Linux, and macOS.
-*   **Ongoing Development:**  Actively updated with new features and improvements.
+*   **Versatile Image Generation:** Generate images from text prompts (txt2img) or modify existing images (img2img) with a wide range of options.
+*   **One-Click Installation:** Easily install and run the web UI with a convenient script. (Requires Python and Git)
+*   **Advanced Features:**
+    *   **Outpainting and Inpainting:** Extend and modify images beyond their original boundaries.
+    *   **Prompting Enhancements:** Fine-tune image generation with attention mechanisms (e.g., `((tuxedo))`), negative prompts, and style saving.
+    *   **Upscaling Tools:** Enhance image resolution using advanced upscaling models like GFPGAN, CodeFormer, RealESRGAN, and more.
+    *   **X/Y/Z Plot:** Generate image variations using different parameters.
+    *   **Textual Inversion:** Train and use custom embeddings for personalized image generation.
+    *   **Custom Scripts and Extensions:** Extend the functionality with community-created scripts and extensions.
+*   **User-Friendly Interface:**
+    *   **Real-time Preview:** View live image generation progress.
+    *   **Generation Parameters:** Save and restore generation parameters for consistent results.
+    *   **Interactive Elements:** Utilize mouseover hints, settings pages, and a progress bar.
+*   **Performance Optimization:** Support for 4GB+ video cards, and optional xformers for increased speed.
+*   **Integration with Cutting-Edge Models:** Includes support for Stable Diffusion 2.0, Alt-Diffusion, and more.
+*   **Additional Tools:**
+    *   CLIP interrogator.
+    *   Checkpoint Merger
+    *   Batch Processing
+    *   Highres Fix
 
-## Installation
+## Installation and Running
 
-Detailed installation instructions are available in the project's [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki). Here's a quick overview:
+Detailed installation instructions are available for various platforms, including:
 
-### Prerequisites
+*   **Nvidia GPUs (Recommended)**
+*   **AMD GPUs**
+*   **Intel CPUs and GPUs**
+*   **Apple Silicon**
+*   **Ascend NPUs**
 
-*   Python 3.10.6 (required)
-*   Git
-*   GPU (Nvidia recommended) - check wiki for alternatives for AMD and Intel.
+Instructions are also provided for using online services (e.g., Google Colab).
 
-### Windows Installation (Automatic)
+**For Windows (NVidia GPUs):**
+
+1.  Download `sd.webui.zip` from [v1.0.0-pre](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases/tag/v1.0.0-pre)
+2.  Run `update.bat`.
+3.  Run `run.bat`.
+
+**For Automatic Installation on Windows:**
 
 1.  Install Python 3.10.6 and Git.
-2.  Download the repository (using Git or by downloading and extracting the zip).
+2.  Clone the repository: `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git`.
 3.  Run `webui-user.bat`.
 
-### Linux Installation
+**For Automatic Installation on Linux:**
 
-1.  Install dependencies (see wiki for details).
-2.  Run the `webui.sh` script.
+1.  Install dependencies (Debian-based: `sudo apt install wget git python3 python3-venv libgl1 libglib2.0-0`).
+2.  Navigate to your desired installation directory and run: `wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh`. Or clone the repo.
+3.  Run `webui.sh`.
+4.  Configure options using `webui-user.sh`.
 
-### macOS Installation
-
-Refer to the instructions on the wiki.
+**For installation on Apple Silicon**, please follow instructions at [Installation on Apple Silicon](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon).
 
 ## Contributing
 
-Contribute to the project by following the [Contributing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing) guidelines.
+Contribute to the project by following the guidelines: [Contributing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing)
 
-## Documentation & Resources
+## Documentation
 
-The complete documentation is available in the [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki).
+Refer to the comprehensive documentation available on the project's [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki).
+
+For search engine indexing of the wiki, see the [crawlable wiki](https://github-wiki-see.page/m/AUTOMATIC1111/stable-diffusion-webui/wiki).
 
 ## Credits
 
-The project acknowledges and credits the creators and contributors of the underlying technologies and libraries used, including Stable Diffusion, k-diffusion, and others (see the original README for a complete list).
+A list of credits is in the original README in the Credits section.

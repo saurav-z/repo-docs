@@ -1,13 +1,13 @@
 # Massive Text Embedding Benchmark (MTEB)
 
-**Evaluate and compare text embedding models with ease using the Massive Text Embedding Benchmark.  [Explore the MTEB repo](https://github.com/embeddings-benchmark/mteb).**
+**Evaluate and compare text embedding models effectively with MTEB, a comprehensive benchmark for sentence and text embeddings.**  [Check out the original repository!](https://github.com/embeddings-benchmark/mteb)
 
 <p align="center">
     <a href="https://github.com/embeddings-benchmark/mteb/releases">
         <img alt="GitHub release" src="https://img.shields.io/github/release/embeddings-benchmark/mteb.svg">
     </a>
     <a href="https://arxiv.org/abs/2210.07316">
-        <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2305.14251-b31b1b.svg">
+        <img alt="GitHub release" src="https://img.shields.io/badge/arXiv-2305.14251-b31b1b.svg">
     </a>
     <a href="https://github.com/embeddings-benchmark/mteb/blob/master/LICENSE">
         <img alt="License" src="https://img.shields.io/github/license/embeddings-benchmark/mteb.svg?color=green">
@@ -31,13 +31,13 @@
     <a href="https://huggingface.co/spaces/mteb/leaderboard"><img style="float: middle; padding: 10px 10px 10px 10px;" width="60" height="55" src="./docs/images/hf_logo.png" /></a>
 </h3>
 
-## Key Features
+## Key Features:
 
-*   **Comprehensive Benchmarking:** Evaluate text embedding models across a wide range of tasks and datasets.
+*   **Extensive Task Coverage:** Evaluate models across diverse tasks, including semantic textual similarity, classification, retrieval, and more.
 *   **Easy Integration:** Seamlessly integrate with popular libraries like Sentence Transformers.
-*   **Flexible Usage:** Utilize both a Python API and command-line interface (CLI).
-*   **Leaderboard & Analysis:** Access a public leaderboard and tools for result analysis.
-*   **Extensible:** Easily add custom tasks, datasets, and models.
+*   **Flexible Usage:** Utilize a straightforward API or CLI for evaluation.
+*   **Leaderboard:** Access an interactive leaderboard to compare model performance.
+*   **Reproducibility:** Create reproducible workflows.
 
 ## Installation
 
@@ -45,10 +45,9 @@
 pip install mteb
 ```
 
-## Example Usage
+## Quick Start
 
-### Using a script
-
+### Example using Python Script
 ```python
 import mteb
 from sentence_transformers import SentenceTransformer
@@ -62,7 +61,7 @@ evaluation = mteb.MTEB(tasks=tasks)
 results = evaluation.run(model, output_folder=f"results/{model_name}")
 ```
 
-### Using the CLI
+### Example using CLI
 
 ```bash
 mteb available_tasks # list _all_ available tasks
@@ -74,7 +73,7 @@ mteb run -m sentence-transformers/all-MiniLM-L6-v2 \
 # if nothing is specified default to saving the results in the results/{model_name} folder
 ```
 
-Note that using multiple GPUs in parallel can be done by just having a custom encode function that distributes the inputs to multiple GPUs like e.g. [here](https://github.com/microsoft/unilm/blob/b60c741f746877293bb85eed6806736fc8fa0ffd/e5/mteb_eval.py#L60) or [here](https://github.com/ContextualAI/gritlm/blob/09d8630f0c95ac6a456354bcb6f964d7b9b6a609/gritlm/gritlm.py#L75). See [custom models](docs/usage/usage.md#using-a-custom-model) for more information.
+*Note:*  Using multiple GPUs in parallel can be done with a custom `encode` function (examples in the original README). See [custom models](docs/usage/usage.md#using-a-custom-model) for more information.
 
 ## Usage Documentation
 

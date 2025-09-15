@@ -1,59 +1,82 @@
-# Azure CLI: Your Command-Line Interface for Effortless Azure Management
+# Azure CLI: Command-Line Interface for Azure Management
 
-**Manage your Azure resources with ease using the Azure CLI, a powerful and versatile command-line tool.**  [Check out the original repository](https://github.com/Azure/azure-cli).
+**Simplify and automate your Azure cloud management tasks with the powerful and versatile Microsoft Azure CLI, your cross-platform command-line interface for interacting with Azure.**  ([Back to Original Repo](https://github.com/Azure/azure-cli))
+
+The Azure CLI is a comprehensive command-line tool that allows you to manage and configure Azure resources directly from your terminal.
 
 **Key Features:**
 
-*   **Multi-Platform Compatibility:** Run the Azure CLI on Windows, macOS, and Linux.
-*   **Intuitive Command Structure:**  Use the `az` command followed by resource groups, subgroups, and commands for clear and concise operation.
-*   **Interactive Help:** Get help with commands and parameters using the `-h` flag (e.g., `az vm create -h`).
-*   **Tab Completion:** Improve efficiency with tab completion for groups, commands, and parameters.
-*   **Flexible Output Formatting:** Customize your output using `--query` and JMESPath for tailored results.  Supports JSON, table, and TSV formats.
-*   **Exit Codes for Scripting:** Use exit codes for easy scripting and automation.
-*   **VS Code Integration:**  Leverage the Azure CLI Tools extension in Visual Studio Code for IntelliSense, snippets, and in-editor command execution.
+*   **Cross-Platform:** Works seamlessly on Windows, macOS, and Linux.
+*   **Resource Management:**  Create, manage, and configure all your Azure services (VMs, Storage, Networking, etc.) from the command line.
+*   **Scripting & Automation:**  Easily integrate the Azure CLI into your scripts for automated cloud management.
+*   **Tab Completion:**  Save time and reduce errors with tab completion for commands and parameters.
+*   **Query Capabilities:**  Use JMESPath queries to customize output and extract specific data.
+*   **Output Formatting:**  Choose from various output formats (JSON, table, TSV) to suit your needs.
+*   **VS Code Integration:**  Enhance your development workflow with the Azure CLI Tools extension for Visual Studio Code, providing IntelliSense, snippets, and more.
+*   **REST API Access:** Utilize `az rest` to directly interact with the Azure REST APIs.
+*   **Edge Builds:** Access cutting-edge features and updates with edge builds.
 
-## Getting Started
+**Installation & Usage:**
 
-**Installation:** Refer to the [installation guide](https://learn.microsoft.com/cli/azure/install-azure-cli) for detailed instructions. Troubleshooting tips are available at [install troubleshooting](https://github.com/Azure/azure-cli/blob/dev/doc/install_troubleshooting.md).
+*   **Installation:**  Refer to the detailed [install guide](https://learn.microsoft.com/cli/azure/install-azure-cli) for instructions.
+*   **Common Issues:** Find solutions to common installation problems at [install troubleshooting](https://github.com/Azure/azure-cli/blob/dev/doc/install_troubleshooting.md).
+*   **Basic Syntax:** Use the following format: `$ az [group] [subgroup] [command] {parameters}`
+*   **Get Started:**  Explore the [get started guide](https://learn.microsoft.com/cli/azure/get-started-with-az-cli2) for an in-depth introduction.
+*   **Help:** Access help information with the `-h` parameter (e.g., `$ az storage -h`, `$ az vm create -h`).
 
-**Basic Usage:**  Use the following format for commands:
+**Developer Installation:**
 
-```bash
-$ az [ group ] [ subgroup ] [ command ] {parameters}
-```
+*   **Docker:**
+    *   We maintain a Docker image preconfigured with the Azure CLI. See our [Docker tags](https://mcr.microsoft.com/v2/azure-cli/tags/list) for available versions.
+    *   `$ docker run -u $(id -u):$(id -g) -v ${HOME}:/home/az -e HOME=/home/az --rm -it mcr.microsoft.com/azure-cli:<version>`
+*   **Edge Builds:** Get the latest features from the `dev` branch.
+    *   MSI: https://aka.ms/InstallAzureCliWindowsEdge
+    *   Homebrew Formula: https://aka.ms/InstallAzureCliHomebrewEdge
+    *   Ubuntu Bionic Deb: https://aka.ms/InstallAzureCliBionicEdge
+    *   Ubuntu Focal Deb: https://aka.ms/InstallAzureCliFocalEdge
+    *   Ubuntu Jammy Deb: https://aka.ms/InstallAzureCliJammyEdge
+    *   RPM el8: https://aka.ms/InstallAzureCliRpmEl8Edge
+    *   More details are in the original readme.
+*   **Get builds of arbitrary commit or PR:** [Try new features before release](doc/try_new_features_before_release.md)
 
-**Example:**
+**Examples & Usage:**
 
-```bash
-$ az storage account create --name myaccount --resource-group myresourcegroup --location westus
-```
+*   **Tab Completion:**
+    ```bash
+    # looking up resource group and name
+    $ az vm show -g [tab][tab]
+    AccountingGroup   RGOne  WebPropertiesRG
 
-**Learn More:** Explore the ["get started" guide](https://learn.microsoft.com/cli/azure/get-started-with-az-cli2) for in-depth instructions.
+    $ az vm show -g WebPropertiesRG -n [tab][tab]
+    StoreVM  Bizlogic
 
-## Advanced Usage and Tips
+    $ az vm show -g WebPropertiesRG -n Bizlogic
+    ```
+*   **Query:**
+    ```bash
+    $ az vm list --query "[?provisioningState=='Succeeded'].{ name: name, os: storageProfile.osDisk.osType }"
+    Name                    Os
+    ----------------------  -------
+    storevm                 Linux
+    bizlogic                Linux
+    demo32111vm             Windows
+    dcos-master-39DB807E-0  Linux
+    ```
 
-*   **Output Formatting:**  Control output formats (JSON, table, tsv).
-*   **Command Chaining:** Pass values between commands.
-*   **Asynchronous Operations:** Manage long-running tasks.
-*   **Generic Update Arguments:** Use update arguments for resource management.
-*   **Generic Resource Commands:** Leverage `az resource` for broad resource control.
-*   **REST API Command:** Utilize `az rest` for direct API interaction.
-*   **Work Behind a Proxy:** Configure the CLI for proxy environments.
-*   **Concurrent Builds:** Optimize builds for efficiency.
+**More Information:**
 
-## Additional Resources
+*   **Common Scenarios:**  Explore effective usage scenarios: [Tips for using Azure CLI effectively](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively).
+*   **Samples:**  Find more examples and snippets at our [GitHub samples repo](http://github.com/Azure/azure-cli-samples) or [https://learn.microsoft.com/cli/azure/overview](https://learn.microsoft.com/cli/azure/overview).
+*   **VS Code Extension:** [Azure CLI Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli)
 
-*   **Samples and Snippets:** [GitHub samples repo](http://github.com/Azure/azure-cli-samples) and [Microsoft Learn](https://learn.microsoft.com/cli/azure/overview).
-*   **Visual Studio Code Extension:**  Install [Azure CLI Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli) for enhanced development.
+**Data Collection & Telemetry:**
 
-## Developer Information
+*   **Telemetry:**  The software collects usage data. You can opt-out using `az config set core.collect_telemetry=no`.
+*   **Privacy:**  See the Microsoft privacy statement: https://go.microsoft.com/fwlink/?LinkID=824704.
 
-**Telemetry:**  Telemetry collection is enabled by default.  You can disable it with `az config set core.collect_telemetry=no`.
+**Feedback & Contributing:**
 
-**Reporting Issues:**  Report bugs via the [GitHub Issues](https://github.com/Azure/azure-cli/issues) section.
-
-**Feedback:**  Provide feedback from the command line with the `az feedback` command.
-
-**Developer Setup:** Instructions for setting up a development environment: [Configuring Your Machine](https://github.com/Azure/azure-cli/blob/dev/doc/configuring_your_machine.md).
-
-**Contribute:** [Microsoft Open Source Guidelines](https://opensource.microsoft.com/collaborate).
+*   **Report Issues:** File issues in the [GitHub Issues](https://github.com/Azure/azure-cli/issues) section.
+*   **Feedback:**  Use the `az feedback` command from the command line.
+*   **Contribution:**  Follow the [Microsoft Open Source Guidelines](https://opensource.microsoft.com/collaborate) for contributing.
+*   **Code of Conduct:**  This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).

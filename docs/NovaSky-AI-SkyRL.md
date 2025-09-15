@@ -1,6 +1,6 @@
 <div align="center">
 
-# SkyRL: Unleash the Power of Reinforcement Learning for LLMs
+# SkyRL: Supercharge Your LLMs with Modular Reinforcement Learning
 
 [![🌐 NovaSky](https://img.shields.io/badge/-Visit%20Website-5865F2?style=for-the-badge)](https://novasky-ai.github.io/)
 [![Github](https://img.shields.io/badge/SkyRL-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/NovaSky-AI/SkyRL)
@@ -11,29 +11,31 @@
 
 </div>
 
-**SkyRL is a full-stack, modular Reinforcement Learning (RL) library designed to empower developers to train and deploy intelligent agents for Large Language Models (LLMs).**  ([Original Repository](https://github.com/NovaSky-AI/SkyRL))
+SkyRL is a comprehensive, full-stack reinforcement learning (RL) library designed to empower large language models (LLMs) for complex, real-world tasks.
 
-## Key Features:
+**[Visit the original repository on GitHub](https://github.com/NovaSky-AI/SkyRL)**
 
-*   **`skyrl-train`**: A modular and performant training framework for RL, built for efficiency and scalability.
-*   **`skyrl-gym`**: A comprehensive suite of RL environments built on the Gymnasium API, including environments for math, coding, search, and SQL tasks.
-*   **`skyagent`**: Agent layer for training long-horizon, real-world agents, optimized for multi-turn tool use LLMs.
+## Key Features
+
+*   **skyagent:** Train long-horizon, real-world agents with our agent layer.  Includes code for [SkyRL-v0](https://novasky-ai.notion.site/skyrl-v0).
+*   **skyrl-train:** A modular and performant training framework for RL, perfect for experimentation and production.
+*   **skyrl-gym:** A rich suite of tool-use environments built on the Gymnasium API, including math, coding, search, and SQL tasks.
 
 ## Getting Started
 
-Explore SkyRL and start building your RL agents!
+SkyRL offers a flexible and modular approach to RL for LLMs, with different entry points for different use cases:
 
-*   **Development:**  Check out our [Development Guide](https://skyrl.readthedocs.io/en/latest/getting-started/development.html) in our docs.
-*   **Model Training:** Use the `skyrl-train` framework. See our [quickstart docs](https://skyrl.readthedocs.io/en/latest/index.html) for initial setup and use.
-*   **Environment Building:** Integrate your tasks using the `skyrl-gym` environment.
-*   **Agentic Pipelines:** Utilize `skyagent` for pipeline optimization and scaling for multi-turn tool use LLMs.
+*   **Development:** Explore the [Development Guide](https://skyrl.readthedocs.io/en/latest/getting-started/development.html) for in-depth information on contributing to SkyRL.
+*   **Model Training:** Dive into `skyrl-train` to train your own RL models.  Consult the [quickstart docs](https://skyrl.readthedocs.io/en/latest/index.html) to get started.
+*   **Environment Building:** Integrate your task into the Gymnasium API with `skyrl-gym`.
+*   **Agentic Pipelines:** Utilize `skyagent` to optimize and scale pipelines for multi-turn tool-use LLMs tackling long-horizon, real-environment tasks.
 
 ## News
 
-*   **[2025/06/26]** 🎉 Released SkyRL-v0.1: Highly-modular, performant RL training framework. [[Blog](https://novasky-ai.notion.site/skyrl-v01)]
-*   **[2025/06/26]** 🎉 Released SkyRL-Gym: A library of RL environments for LLMs using the Gymnasium API. [[Blog](https://novasky-ai.notion.site/skyrl-v01)]
-*   **[2025/05/20]** 🎉 Released SkyRL-SQL: Multi-turn RL training pipeline for Text-to-SQL, including SkyRL-SQL-7B, which outperforms GPT-4o and o4-mini with only 653 samples!
-*   **[2025/05/06]** 🎉 Released SkyRL-v0: Open RL training pipeline for multi-turn tool use LLMs, optimized for long-horizon tasks like SWE-Bench.
+*   **[2025/06/26]** 🎉 Released SkyRL-v0.1: A highly-modular, performant RL training framework. [[Blog](https://novasky-ai.notion.site/skyrl-v01)]
+*   **[2025/06/26]** 🎉 Released SkyRL-Gym: A library of RL environments for LLMs implemented with the Gymnasium API. [[Blog](https://novasky-ai.notion.site/skyrl-v01)]
+*   **[2025/05/20]** 🎉 Released SkyRL-SQL: a multi-turn RL training pipeline for Text-to-SQL, along with SkyRL-SQL-7B — a model trained on just 653 samples that outperforms both GPT-4o and o4-mini!
+*   **[2025/05/06]** 🎉 Released SkyRL-v0: our open RL training pipeline for multi-turn tool use LLMs, optimized for long-horizon, real-environment tasks like SWE-Bench!
 
 ## Links
 
@@ -41,15 +43,15 @@ Explore SkyRL and start building your RL agents!
 *   📜 [SkyRL-SQL Blog Post](https://novasky-ai.notion.site/skyrl-sql)
 *   📜 [SkyRL-v0 Blog Post](https://novasky-ai.notion.site/skyrl-v0)
 
-## Acknowledgement
+## Acknowledgements
 
-This project is a collaboration between the [**Berkeley Sky Computing Lab**](https://sky.cs.berkeley.edu/) and [**Anyscale**](https://www.anyscale.com/), with generous support from [**Anyscale**](https://www.anyscale.com/), [**Databricks**](https://www.databricks.com/), [**NVIDIA**](https://developer.nvidia.com/brev), [**Lambda Labs**](https://lambdalabs.com/service/gpu-cloud?srsltid=AfmBOop5FnmEFTkavVtdZDsLWvHWNg6peXtat-OXJ9MW5GMNsk756PE5), and [**AMD**](https://www.amd.com/en.html).
+This project is developed at the [**Berkeley Sky Computing Lab**](https://sky.cs.berkeley.edu/) in collaboration with [**Anyscale**](https://www.anyscale.com/), with generous compute support from [**Anyscale**](https://www.anyscale.com/), [**Databricks**](https://www.databricks.com/), [**NVIDIA**](https://developer.nvidia.com/brev), [**Lambda Labs**](https://lambdalabs.com/service/gpu-cloud?srsltid=AfmBOop5FnmEFTkavVtdZDsLWvHWNg6peXtat-OXJ9MW5GMNsk756PE5), and [**AMD**](https://www.amd.com/en.html).
 
-We would also like to acknowledge the contributions from the following projects: [veRL](https://github.com/volcengine/verl), [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF), [Search-R1](https://github.com/PeterGriffinJin/Search-R1), [OpenReasonerZero](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero), and [NeMo-RL](https://github.com/NVIDIA-NeMo/RL).
+We build on the shoulders of giants, adopting lessons and code from projects like [veRL](https://github.com/volcengine/verl), [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF), [Search-R1](https://github.com/PeterGriffinJin/Search-R1), [OpenReasonerZero](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero), and [NeMo-RL](https://github.com/NVIDIA-NeMo/RL).
 
 ## Citation
 
-If you use this work, please cite it as:
+If you utilize SkyRL in your research, please cite the following:
 
 ```bibtex
 @misc{cao2025skyrl,
@@ -74,3 +76,4 @@ If you use this work, please cite it as:
       year={2025},
       note={Notion Blog}
 }
+```

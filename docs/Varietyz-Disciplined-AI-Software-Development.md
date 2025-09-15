@@ -1,80 +1,179 @@
-# Disciplined AI Software Development: Build Robust AI-Powered Software with Structure 
+<div align="center">
 
-This methodology provides a structured, collaborative approach to AI-driven software development, minimizing code bloat, architectural drift, and debugging time.  For more details, visit the original repository:  [Disciplined-AI-Software-Development](https://github.com/Varietyz/Disciplined-AI-Software-Development)
+<img src="https://banes-lab.com/assets/images/banes_lab/700px_Main_Animated.gif" width="70" />
 
-Key Features:
+**Disciplined AI Software Development: A Structured Approach for AI-Driven Projects**
 
-*   **Structured Workflow:**  A four-stage process with defined constraints and validation steps, ensuring consistent architecture.
-*   **Context Management:** Employs file size limits (≤150 lines) and focused tasks to prevent AI from handling multiple concerns simultaneously.
-*   **Data-Driven Decisions:** Leverages benchmarking and performance data for optimization, moving away from subjective assessments.
-*   **Systematic Constraints:** Implements architectural checkpoints, file size limits, and dependency gates to promote consistent behavior.
-*   **Collaborative Planning:**  Facilitates collaboration between you and the AI to define scope, identify dependencies, and structure phases.
-*   **Automated Quality Assurance:** Includes tools for performance regression detection, architectural principle validation, and dependency boundary verification.
-*   **Project Extraction Tool:** Uses a project extraction tool for structured snapshots of your codebase for easy sharing and architectural compliance.
+[Original Repository](https://github.com/Varietyz/Disciplined-AI-Software-Development) | © 2025 by Jay Baleine | Licensed under CC BY-SA 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" width="16" height="16"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" width="16" height="16"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" width="16" height="16">
 
-## Methodology Overview
-
-This methodology tackles common challenges in AI-assisted software development by establishing a structured, collaborative approach. It emphasizes upfront planning and systematic constraints to reduce debugging time and ensure code quality.
-
-### The Core Problem
-
-Traditional AI development often suffers from:
-
-*   Unstructured and monolithic code
-*   Architectural inconsistencies across sessions
-*   Context dilution and output drift
-*   Increased debugging time
-
-### The Solution: A Four-Stage Approach
-
-The methodology mitigates these issues through four iterative stages. Each stage incorporates systematic constraints, validation checkpoints, and leverages empirical data:
-
-1.  **AI Configuration:** Set up the AI model with `AI-PREFERENCES.XML` to establish behavioral constraints.
-2.  **Collaborative Planning:** Share `METHODOLOGY.XML` to jointly define scope, identify components, and plan phases.
-3.  **Systematic Implementation:** Implement components systematically, with file size limits (≤150 lines) and focused objectives.
-4.  **Data-Driven Iteration:**  Use benchmarking data to inform optimization decisions, improving performance.
-
-## Example Projects
-
-The methodology has been successfully applied to diverse projects, including:
-
-*   **[Discord Bot Template](https://github.com/Varietyz/discord-js-bot-template)**:  A production-ready bot foundation with plugin architecture and security features.
-*   **[PhiCode Runtime](https://github.com/Varietyz/phicode-runtime)**: A programming language runtime engine with transpilation and caching capabilities.
-*   **[PhiPipe](https://github.com/Varietyz/PhiPipe)**: A CI/CD regression detection system for statistical analysis and integration.
-
-## Getting Started
-
-1.  **Configure AI:** Use `AI-PREFERENCES.XML` as custom instructions.
-2.  **Collaborate:** Share `METHODOLOGY.XML` to structure your project.
-3.  **Plan:** Work together to define phases and tasks.
-4.  **Implement:** Follow the systematic implementation process, phase by phase.
-
-### Implementation Steps
-
-*   **Setup**: Follow the configurations steps as mentioned in the README.
-*   **Execution**: Work through phases sequentially, implementing one component per interaction.
-*   **Quality Assurance**: Use the performance regression detection, architecture principles validation and file size compliance checking.
-
-For detailed information on the prompt formats, refer to the `prompt_formats` directory in the repository.
-
-## Tools & Resources
-
-*   **Project Extraction Tool:** Use the included `project_extract.py` script to generate structured project snapshots.
-*   **Q&A Documentation:**  Explore detailed Q&A for different AI models in the [questions\_answers/](questions_answers/) directory.
-*   **Learning the Ropes**: Share core and persona documents such as  `CORE-PERSONA-FRAMEWORK.json`, `GUIDE-PERSONA.json`, `AI-PREFERENCES.XML`, and `METHODOLOGY.XML` with your AI model.
-
-## Frequently Asked Questions
-
-*   **Origin & Development:**  Addresses the issues and inspirations that led to the methodology's creation.
-*   **Personal Practice:**  Provides insights into the author's adherence and experience with the methodology.
-*   **AI Development Journey:**  Details the evolution of the methodology.
-*   **Methodology Specifics:**  Explains the rationale behind the key constraints and requirements.
-*   **Practical Implementation:** Covers adaptability to different project types and advice for new users.
-
-## Workflow Visualization
-
-(See the original README for the mermaid diagram.)
+</div>
 
 ---
 
-This README provides a concise overview of the Disciplined AI Software Development methodology, highlighting its benefits and practical application. By following its principles, you can improve the quality, maintainability, and efficiency of your AI-powered software projects.
+## Disciplined AI Software Development: Conquer AI Code Complexity
+
+This methodology provides a structured, data-driven approach to AI software development, combating common issues like code bloat, architectural drift, and behavioral inconsistency, ultimately leading to more reliable and maintainable AI-powered projects.
+
+**Key Features:**
+
+*   **Structured Stages:** Four distinct stages (Configuration, Planning, Implementation, Iteration) to guide the development process.
+*   **Behavioral Consistency:** Enforces consistent collaboration patterns through persona frameworks and systematic constraints.
+*   **Architectural Discipline:** Uses file size limits and dependency gates to ensure modularity and maintainability.
+*   **Data-Driven Optimization:**  Leverages benchmarking suites for performance data, replacing guesswork with measurable outcomes.
+*   **Reduced Debugging:**  Emphasizes thorough planning and validation to minimize time spent on fixing architectural issues.
+
+### The Problem: AI-Driven Code Complexity
+
+AI systems often struggle with complex software development, leading to:
+
+*   Unstructured, poorly organized code.
+*   Code duplication across components.
+*   Inconsistent architecture over time.
+*   Output drift and context dilution.
+*   Decreased behavioral patterns with prolonged use.
+*   More debugging than planning time.
+
+### The Solution: Disciplined AI Development
+
+This methodology combats these issues by employing:
+
+*   **Systematic Constraints:** Architectural checkpoints, file size limits, and dependency gates ensure consistent behavior.
+*   **Behavioral Consistency Enforcement:** Persona systems maintain consistent collaboration patterns, preventing AI drift.
+*   **Empirical Validation:** Performance data from benchmarks replaces subjective assessments, driving informed optimization.
+
+### Four Stages for AI Software Success
+
+1.  **Stage 1: AI Behavioral Configuration**
+    *   **Configure AI Custom Instructions:** Use `AI-PREFERENCES.XML` to set behavioral constraints and identify uncertainty with ⚠️ indicators.
+    *   **Recommended: Load Persona Framework:** Select a domain-appropriate persona from `CORE-PERSONA-FRAMEWORK.json` and persona plugins (e.g., GUIDE-PERSONA, TECDOC-PERSONA, R&D-PERSONA). Create custom personas with CREATE-PERSONA-PLUGIN.json.
+    *   **Recommended: Activate Persona:** Issue the command "Simulate Persona."
+
+2.  **Stage 2: Collaborative Planning**
+    *   Share `METHODOLOGY.XML` with the AI for structured planning.
+    *   Define scope, identify components, structure phases, and generate tasks.
+    *   Output: A development plan with dependencies and modular boundaries.
+
+3.  **Stage 3: Systematic Implementation**
+    *   Work phase-by-phase, component-by-component.
+    *   Request specific components using focused objectives.
+    *   **File size constraint: ≤150 lines** to maintain focus and clarity.
+    *   **Implementation Flow:** Request component -> AI processes -> Validate -> Benchmark -> Continue.
+
+4.  **Stage 4: Data-Driven Iteration**
+    *   Utilize a benchmarking suite (built first) to gather performance data.
+    *   Provide data to the AI to inform optimization decisions.
+
+### Why This Approach Works
+
+*   **Focused Problem Solving:** AI excels at answering "Can you do A?" more reliably than multi-faceted requests.
+*   **Context Management:** Small files and bounded problems prevent context overload.
+*   **Behavioral Constraint Enforcement:** Persona systems prevent AI drift, ensuring consistent collaboration.
+*   **Empirical Validation:** Performance data replaces subjective assessments for data-driven optimization.
+*   **Systematic Constraints:** Architectural checkpoints, file size limits, and dependency gates enforce consistent behavior.
+
+### Example Projects
+
+The methodology has been successfully applied to the following projects:
+
+*   [Discord Bot Template](https://github.com/Varietyz/discord-js-bot-template)
+*   [PhiCode Runtime](https://github.com/Varietyz/phicode-runtime)
+*   [PhiPipe](https://github.com/Varietyz/PhiPipe)
+
+You can compare the methodology principles to the codebase structure to see how the approach translates to working code.
+
+### Implementation Steps
+
+*   **Note:** Adapt file formats (.xml, .json, .yaml, .md) to your use case.
+*   **XML/JSON:** Ideal for code-like structure, strong code generation.
+*   **MD:** Effective for documentation, fosters natural continuation.
+
+1.  **Setup:** Configure AI with custom instructions via `AI-PREFERENCES.XML`.
+2.  **Recommended:** Share  `CORE-PERSONA-FRAMEWORK.json` + a selected persona (from `PERSONA.json`).
+3.  **Recommended:** Issue the "Simulate Persona" command.
+4.  **Planning:** Share `METHODOLOGY.XML` for planning sessions.
+5.  **Collaboration:** Collaborate on project structure and phases.
+6.  **Execution:** Generate a systematic development plan.
+
+### Quality Assurance
+
+*   Performance regression detection
+*   Architectural principle validation
+*   Code duplication auditing
+*   File size compliance checking
+*   Dependency boundary verification
+
+### Project State Extraction Tool
+
+Utilize the included [project extraction tool](scripts/project_extract.py) for structured codebase snapshots:
+
+```bash
+python scripts/project_extract.py
+```
+
+**Configuration Options:**
+
+*   `SEPARATE_FILES = False`: Single output file (small codebases).
+*   `SEPARATE_FILES = True`: Multiple output files per directory (large codebases).
+*   `INCLUDE_PATHS`: Specify directories and files.
+*   `EXCLUDE_PATTERNS`: Exclude specific patterns.
+
+**Output:**
+
+*   Complete file content with syntax highlighting.
+*   File line counts with architectural warnings (⚠️ for 140-150 lines, ‼️ for >150).
+*   Tree structure visualization.
+*   Ready-to-share format.
+
+Use the tool for:
+*   Sharing project state with AI.
+*   Tracking architectural compliance.
+*   Creating focused development contexts.
+
+### What to Expect
+
+*   **AI Behavior:** Reduced architectural drift, consistent collaboration patterns.
+*   **Development Flow:** Systematic planning reduces debugging, focused implementation minimizes feature bloat.
+*   **Code Quality:** Architectural consistency, measurable performance, maintainable structure as projects scale.
+
+---
+
+### Learn More
+
+*   [Q&A Documentation](questions_answers/) - Insights for different LLM models.
+*   [Methodology Comprehension Analysis: Model Evaluation](questions_answers/Q-A_COMPREHENSION_ANALYSIS.md) - Full evaluation results and comparative analysis.
+
+---
+
+### Learning the Ropes
+
+*   **Getting Started:** Follow the setup steps described above.
+*   **Available Personas:** Explore the built-in persona framework and consider creating your own.
+*   **Core Documents:** Refer to `AI-PREFERENCES.XML`, `METHODOLOGY.XML`, and `README.XML`.
+*   **Ask Targeted Questions:** Guide your AI with focused inquiries.
+
+### Experimental Modifications
+
+*   **Create Project-Specific Personas:** Customize behavior using `CREATE-PERSONA-PLUGIN.json`.
+*   **Test Constraint Variations:** Experiment with file size limits and other constraints.
+*   **Analyze Outcomes:** Document changes and measure their impact.
+*   **Collaborative Refinement:** Partner with your AI to identify improvements.
+*   **Progress Indicators:** Track consistent file size compliance, behavioral adherence, and persona consistency.
+
+---
+
+### Frequently Asked Questions
+
+**(See original README for content to insert here - summarizing the questions and answers under separate headings)**
+
+---
+
+### Workflow Visualization
+
+```mermaid
+graph TD
+    A[Configure AI & Persona] --> B{Collaborative Planning}
+    B --> C{Systematic Implementation}
+    C --> D{Data-Driven Iteration}
+    D --> B
+    C --> E[Quality Assurance]
+    E --> C

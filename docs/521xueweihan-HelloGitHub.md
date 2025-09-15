@@ -3,9 +3,11 @@
   <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
 </p>
 
-## HelloGitHub: Discover Exciting and Beginner-Friendly Open Source Projects
+# HelloGitHub: Discover Awesome Open-Source Projects
 
-**HelloGitHub** is your gateway to the exciting world of open-source, curating a monthly collection of interesting and accessible projects on GitHub.
+**HelloGitHub is your gateway to the exciting world of open-source, showcasing interesting and beginner-friendly projects on GitHub.** Find new projects, learn and be inspired!
+
+[View the original repository on GitHub](https://github.com/521xueweihan/HelloGitHub)
 
 <p align="center">
   <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
@@ -15,15 +17,16 @@
     <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
 </p>
 
-### Key Features:
+## Key Features
 
-*   **Curated Selection:** Discover hand-picked, beginner-friendly open-source projects.
-*   **Monthly Updates:** New content is released monthly, on the 28th of each month.
-*   **Diverse Content:** Includes interesting open-source projects, books, practical projects, and enterprise-level projects.
-*   **Learn & Explore:** Quickly grasp the essence of open source and ignite your passion for it.
-*   **Easy Access:** [Visit the website](https://hellogithub.com/) or [follow the WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png) for a better reading experience.
+*   **Curated Project Selection:** Discover a hand-picked collection of intriguing and beginner-friendly open-source projects.
+*   **Monthly Updates:** Stay up-to-date with new and exciting projects released monthly (on the 28th).
+*   **Diverse Content:** Explore a variety of project types, including open-source books, practical projects, and enterprise-level solutions.
+*   **Easy Access:** Access the content through the [official website](https://hellogithub.com/) or the [HelloGitHub WeChat public account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
 
-### Contents
+## Content - Monthly Issues
+
+Explore past issues to discover more amazing open-source projects:
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -36,11 +39,11 @@
 | [第 85 期](/content/HelloGitHub85.md) | [第 84 期](/content/HelloGitHub84.md) | [第 83 期](/content/HelloGitHub83.md) | [第 82 期](/content/HelloGitHub82.md) | [第 81 期](/content/HelloGitHub81.md) |
 | [第 80 期](/content/HelloGitHub80.md) | [第 79 期](/content/HelloGitHub79.md) | [第 78 期](/content/HelloGitHub78.md) | [第 77 期](/content/HelloGitHub77.md) | [第 76 期](/content/HelloGitHub76.md) |
 
-### Contribute
+## Contribute
 
-You can [recommend or self-recommend](https://hellogithub.com/periodical) projects to become a **HelloGitHub** [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
+We welcome contributions!  [Recommend or nominate](https://hellogithub.com/periodical) a project or [become a contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) to help grow the community.
 
-### Sponsors
+## Sponsors
 
 <table>
   <thead>
@@ -76,10 +79,6 @@ You can [recommend or self-recommend](https://hellogithub.com/periodical) projec
   </thead>
 </table>
 
-### License
+## License
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact <a href="mailto:595666367@qq.com">me</a>.
-
----
-
-[Back to the top](https://github.com/521xueweihan/HelloGitHub)
+This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh).  Contact [595666367@qq.com](mailto:595666367@qq.com).

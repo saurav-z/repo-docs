@@ -1,154 +1,183 @@
-# AI Agent Service Toolkit: Build and Deploy Powerful AI Agents with Ease
+# AI Agent Service Toolkit: Build, Deploy, and Scale Your AI Agents
 
-**Quickly build and deploy your own AI agent services using LangGraph, FastAPI, and Streamlit with this comprehensive toolkit.  Explore the code on GitHub: [https://github.com/JoshuaC215/agent-service-toolkit](https://github.com/JoshuaC215/agent-service-toolkit)**
+**Effortlessly create and deploy AI agent services with a complete toolkit built on LangGraph, FastAPI, and Streamlit.** [Explore the Agent Service Toolkit on GitHub](https://github.com/JoshuaC215/agent-service-toolkit).
 
-This toolkit provides a complete, ready-to-use foundation for building and deploying AI agent services. It leverages the power of LangGraph for agent orchestration, FastAPI for service creation, and Streamlit for an intuitive user interface, all built with Pydantic for data structure and settings. Whether you're a beginner or an experienced developer, this toolkit simplifies the process of creating and deploying LangGraph-based projects, enabling you to focus on your agent's capabilities.
+[![build status](https://github.com/JoshuaC215/agent-service-toolkit/actions/workflows/test.yml/badge.svg)](https://github.com/JoshuaC215/agent-service-toolkit/actions/workflows/test.yml)
+[![codecov](https://codecov.io/github/JoshuaC215/agent-service-toolkit/graph/badge.svg?token=5MTJSYWD05)](https://codecov.io/github/JoshuaC215/agent-service-toolkit)
+[![Python Version](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2FJoshuaC215%2Fagent-service-toolkit%2Frefs%2Fheads%2Fmain%2Fpyproject.toml)](https://github.com/JoshuaC215/agent-service-toolkit/blob/main/pyproject.toml)
+[![GitHub License](https://img.shields.io/github/license/JoshuaC215/agent-service-toolkit)](https://github.com/JoshuaC215/agent-service-toolkit/blob/main/LICENSE)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_red.svg)](https://agent-service-toolkit.streamlit.app/)
+
+This toolkit provides a comprehensive foundation for building and deploying AI agent services. It combines the power of LangGraph, FastAPI, and Streamlit to offer a complete solution from agent definition to user interface. With this toolkit, you can quickly prototype, test, and deploy sophisticated AI agents.
 
 **[🎥 Watch a video walkthrough of the repo and app](https://www.youtube.com/watch?v=pdYVHw_YCNY)**
 
-## Key Features:
+## Key Features
 
-*   **LangGraph Agent:** Develop and customize AI agents using the latest LangGraph v0.3 features including human-in-the-loop, flow control, long-term memory, and `langgraph-supervisor`.
-*   **FastAPI Service:** Provides a robust and scalable service for your agents, supporting both streaming and non-streaming endpoints.
-*   **Advanced Streaming:** Innovative approach to support both token-based and message-based streaming.
-*   **Streamlit Interface:** A user-friendly chat interface for effortless interaction with your agents.
-*   **Multiple Agent Support:** Easily manage and deploy multiple agents within a single service, accessible via URL path. Get agent information at `/info`.
-*   **Asynchronous Design:** Built with async/await for efficient handling of concurrent requests, ensuring optimal performance.
-*   **Content Moderation:** Integrated LlamaGuard for content moderation (requires Groq API key).
-*   **RAG Agent Implementation:**  Basic RAG agent using ChromaDB - explore the [docs](docs/RAG_Assistant.md) for more information.
-*   **Feedback Mechanism:** Integrate a star-based feedback system with LangSmith for continuous improvement.
-*   **Docker Support:** Simplified development and deployment with Dockerfiles and a `docker compose` file.
-*   **Comprehensive Testing:** Includes robust unit and integration tests for reliability and quality.
+*   **LangGraph-Powered Agents:** Leverage the latest LangGraph v0.3 features, including human-in-the-loop, flow control, long-term memory, and `langgraph-supervisor`.
+*   **FastAPI Service:**  A robust FastAPI service with streaming and non-streaming endpoints for efficient agent interaction.
+*   **Advanced Streaming:**  Innovative support for both token-based and message-based streaming for real-time agent responses.
+*   **Streamlit Chat Interface:**  A user-friendly Streamlit interface provides an intuitive chat experience.
+*   **Multiple Agent Support:**  Run multiple agents in a single service, accessible by URL path, and easily see what models and agents are available.
+*   **Asynchronous Design:** Optimized for high performance with asynchronous operations for concurrent request handling.
+*   **Content Moderation:**  Integrated LlamaGuard for content moderation (requires Groq API key).
+*   **RAG Agent:**  A basic Retrieval-Augmented Generation (RAG) agent implementation using ChromaDB.  See [docs](docs/RAG_Assistant.md).
+*   **Feedback Mechanism:**  Integrates a star-based feedback system for LangSmith.
+*   **Docker Support:** Includes Dockerfiles and a docker compose file for easy development and deployment.
+*   **Comprehensive Testing:**  Ensures reliability with thorough unit and integration tests.
 
-## Getting Started: Quickstart and Setup
+## Quick Start
 
-### Try the app!
+**Try the App!** [https://agent-service-toolkit.streamlit.app/](https://agent-service-toolkit.streamlit.app/)
 
-[https://agent-service-toolkit.streamlit.app/](https://agent-service-toolkit.streamlit.app/)
+<a href="https://agent-service-toolkit.streamlit.app/"><img src="media/app_screenshot.png" width="600"></a>
 
-<img src="media/app_screenshot.png" width="600">
+### Run Directly with Python
 
-### Running the Toolkit
+```bash
+# At least one LLM API key is required
+echo 'OPENAI_API_KEY=your_openai_api_key' >> .env
 
-Follow these simple steps to get your AI agent service up and running:
+# uv is the recommended way to install agent-service-toolkit, but "pip install ." also works
+# For uv installation options, see: https://docs.astral.sh/uv/getting-started/installation/
+curl -LsSf https://astral.sh/uv/0.7.19/install.sh | sh
 
-**Prerequisites:**
+# Install dependencies. "uv sync" creates .venv automatically
+uv sync --frozen
+source .venv/bin/activate
+python src/run_service.py
 
-*   Python 3.8+
-*   An LLM API key (e.g., OpenAI, Cohere, etc.)
+# In another shell
+source .venv/bin/activate
+streamlit run src/streamlit_app.py
+```
 
-**Using `uv` (Recommended):**
+### Run with Docker
 
-1.  Set your API key(s) as an environment variable in a `.env` file:
+```bash
+echo 'OPENAI_API_KEY=your_openai_api_key' >> .env
+docker compose watch
+```
+
+## Architecture
+
+### Architecture Diagram
+
+<img src="media/agent_architecture.png" width="600">
+
+## Key Files
+
+*   `src/agents/`:  Agent definitions with various capabilities.
+*   `src/schema/`:  Defines the protocol schema.
+*   `src/core/`:  Core modules, including LLM definitions and settings.
+*   `src/service/service.py`:  The FastAPI service for serving agents.
+*   `src/client/client.py`:  A client to interact with the agent service.
+*   `src/streamlit_app.py`:  The Streamlit app for the chat interface.
+*   `tests/`:  Unit and integration tests for quality assurance.
+
+## Setup and Usage
+
+1.  **Clone the Repository:**
 
     ```bash
-    echo 'OPENAI_API_KEY=your_openai_api_key' >> .env
+    git clone https://github.com/JoshuaC215/agent-service-toolkit.git
+    cd agent-service-toolkit
     ```
 
-2.  Install uv (if not already installed - see the uv docs for options):
+2.  **Configure Environment Variables:**
 
-    ```bash
-    curl -LsSf https://astral.sh/uv/0.7.19/install.sh | sh
-    ```
+    Create a `.env` file in the root directory.  At least one LLM API key is required to run the agents.  See the [`.env.example` file](./.env.example) for a full list of available environment variables.
 
-3.  Install dependencies, create a virtual environment, and activate it:
+3.  **Run the Service:**
+
+    Follow the instructions in the "Quick Start" section above to run the service with either Python or Docker.
+
+### Additional Setup for AI Providers
+
+*   [Setting up Ollama](docs/Ollama.md)
+*   [Setting up VertexAI](docs/VertexAI.md)
+*   [Setting up RAG with ChromaDB](docs/RAG_Assistant.md)
+
+### Building or Customizing Your Own Agent
+
+1.  **Add Your Agent:** Create your agent in the `src/agents` directory by copying an existing agent file (e.g., `research_assistant.py`, `chatbot.py`).
+2.  **Register Your Agent:** Import and add your new agent to the `agents` dictionary in `src/agents/agents.py`. Your new agent will be accessible via a URL such as `/<your_agent_name>/invoke` or `/<your_agent_name>/stream`.
+3.  **Update the UI (optional):** Adjust the Streamlit interface in `src/streamlit_app.py` to match your agent's specific functionalities, tools, and interactions.
+
+### Handling Private Credential Files
+
+The `privatecredentials/` directory is provided for file-based credentials (e.g., API keys, certificates), which are excluded from Git and Docker builds for security. See [Working with File-based Credentials](docs/File_Based_Credentials.md) for more information.
+
+### Docker Setup
+
+The project includes Docker and Docker Compose support for streamlined development and deployment. Docker Compose's "watch" feature facilitates automatic updates upon code changes.
+
+**Prerequisites:**  Ensure Docker and Docker Compose are installed (version >= 2.23.0 recommended).
+
+1.  **Create `.env`:**  Copy `.env.example` to `.env` and fill in your LLM API keys and other necessary configurations.
+2.  **Build and Launch:**  Run `docker compose watch`.
+3.  **Access the App:**  Open your web browser and go to `http://localhost:8501`.
+4.  **Access the API:**  The FastAPI service API will be accessible at `http://0.0.0.0:8080`, and the OpenAPI docs can be found at `http://0.0.0.0:8080/redoc`.
+5.  **Stop the Services:**  Use `docker compose down`.
+
+## Building Other Apps on the AgentClient
+
+The toolkit provides a flexible `src/client/client.AgentClient` that can be utilized to build other applications on top of your agents. The client supports synchronous and asynchronous invocations, as well as streaming and non-streaming requests.
+
+See `src/run_client.py` for detailed examples of using `AgentClient`.
+
+## Development with LangGraph Studio
+
+The agent supports [LangGraph Studio](https://langchain-ai.github.io/langgraph/concepts/langgraph_studio/)
+
+Launch LangGraph Studio with `langgraph dev`.
+
+## Local Development Without Docker
+
+1.  **Set up environment:**
 
     ```bash
     uv sync --frozen
     source .venv/bin/activate
     ```
 
-4.  Run the FastAPI service:
+2.  **Run the FastAPI server:**
 
     ```bash
     python src/run_service.py
     ```
 
-5.  In a separate terminal, activate the virtual environment (if you're not still in it) and run the Streamlit app:
+3.  **Run the Streamlit app in a separate terminal:**
 
     ```bash
-    source .venv/bin/activate
     streamlit run src/streamlit_app.py
     ```
 
-**Using Docker (Recommended for Simplicity):**
+    Open your browser to the URL provided by Streamlit (usually `http://localhost:8501`).
 
-1.  Create a `.env` file with your API keys (see `.env.example`).
+## Projects Built With or Inspired By agent-service-toolkit
 
-    ```bash
-    cp .env.example .env
-    # Edit .env to add your API keys
-    ```
+*   **[PolyRAG](https://github.com/QuentinFuxa/PolyRAG)** - Extends agent-service-toolkit with RAG capabilities over both PostgreSQL databases and PDF documents.
+*   **[alexrisch/agent-web-kit](https://github.com/alexrisch/agent-web-kit)** - A Next.JS frontend for agent-service-toolkit
+*   **[raushan-in/dapa](https://github.com/raushan-in/dapa)** - Digital Arrest Protection App (DAPA) enables users to report financial scams and frauds efficiently via a user-friendly platform.
 
-2.  Run the application:
-
-    ```bash
-    docker compose watch
-    ```
-
-    This starts all necessary services, including the FastAPI server, Streamlit app, and a PostgreSQL database.  The `watch` command automatically updates your containers when code changes are detected.
-
-### Architecture Diagram
-
-<img src="media/agent_architecture.png" width="600">
-
-## Customization and Development
-
-### Building or Customizing Your Own Agent
-
-1.  Create your new agent in the `src/agents` directory (e.g., by copying `research_assistant.py` or `chatbot.py`).
-2.  Import and add your new agent to the `agents` dictionary in `src/agents/agents.py`.  It will be accessible via `/<your_agent_name>/invoke` or `/<your_agent_name>/stream`.
-3.  Adjust the Streamlit interface in `src/streamlit_app.py` to match your agent's capabilities.
-
-### Additional Setup
-
-*   [Setting up Ollama](docs/Ollama.md)
-*   [Setting up VertexAI](docs/VertexAI.md)
-*   [Setting up RAG with ChromaDB](docs/RAG_Assistant.md)
-*   [Working with File-based Credentials](docs/File_Based_Credentials.md)
-
-## Using the AgentClient
-
-The `src/client/client.AgentClient` provides a flexible way to interact with your agent service. It supports both synchronous and asynchronous calls, with streaming and non-streaming options. See `src/run_client.py` for example usage.
-
-```python
-from client import AgentClient
-client = AgentClient()
-
-response = client.invoke("Tell me a brief joke?")
-response.pretty_print()
-# ================================== Ai Message ==================================
-#
-# A man walked into a library and asked the librarian, "Do you have any books on Pavlov's dogs and Schrödinger's cat?"
-# The librarian replied, "It rings a bell, but I'm not sure if it's here or not."
-```
-
-## Development with LangGraph Studio
-
-This toolkit supports [LangGraph Studio](https://langchain-ai.github.io/langgraph/concepts/langgraph_studio/) for simplified agent development.  Use `langgraph dev` after adding your `.env` file and customizing the `langgraph.json` configuration.  See the [local quickstart](https://langchain-ai.github.io/langgraph/cloud/how-tos/studio/quick_start/#local-development-server) for more information.
-
-## Projects Built With/Inspired By agent-service-toolkit
-
-*   **[PolyRAG](https://github.com/QuentinFuxa/PolyRAG)** - RAG capabilities over PostgreSQL and PDF documents.
-*   **[alexrisch/agent-web-kit](https://github.com/alexrisch/agent-web-kit)** - A Next.JS frontend for agent-service-toolkit.
-*   **[raushan-in/dapa](https://github.com/raushan-in/dapa)** - Digital Arrest Protection App (DAPA) for reporting financial scams.
+**Please create a pull request or open a discussion to add any new projects that have been built using this toolkit!**
 
 ## Contributing
 
-Contributions are highly encouraged! Please submit a Pull Request or open a discussion with any new ones to be added!
+We welcome contributions! Please submit a Pull Request.
 
-**Testing:**
+### Testing
 
-1.  Ensure you're in the project root directory and have activated your virtual environment.
-
-2.  Install the development dependencies and pre-commit hooks:
+1.  Ensure you are in the project root directory and have activated your virtual environment.
+2.  Install development dependencies and pre-commit hooks:
 
     ```bash
     uv sync --frozen
     pre-commit install
     ```
 
-3.  Run the tests:
+3.  Run the tests using pytest:
 
     ```bash
     pytest
@@ -156,4 +185,4 @@ Contributions are highly encouraged! Please submit a Pull Request or open a disc
 
 ## License
 
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/JoshuaC215/agent-service-toolkit/blob/main/LICENSE) file for details.

@@ -1,62 +1,60 @@
-# ChatMock: Access GPT-5 & More via Your ChatGPT Account
+# ChatMock: Access GPT-5 and More Through Your ChatGPT Account
 
-**Unlock the power of GPT-5 and other OpenAI models using your existing ChatGPT Plus/Pro subscription, without needing an API key.** [Check out the original repository!](https://github.com/RayBytes/ChatMock)
-
-ChatMock allows you to leverage your paid ChatGPT account to access OpenAI models through a local server, providing an OpenAI/Ollama-compatible API. Use your existing ChatGPT login to access GPT-5 and other advanced models from your code or alternative chat interfaces.
+**Unlock the power of GPT-5 and other OpenAI models using your existing ChatGPT Plus/Pro subscription without the need for API keys.**  [View the original repository](https://github.com/RayBytes/ChatMock).
 
 ## Key Features
 
-*   **GPT-5 and More:** Access cutting-edge OpenAI models, including GPT-5, without needing an API key.
-*   **OpenAI/Ollama Compatibility:**  Use ChatMock with any tool or application that supports the OpenAI API, and now includes Ollama!
-*   **Easy Setup:**  Get started quickly with GUI applications for macOS, a command-line interface via Homebrew, or a simple Python setup.
-*   **No API Key Required:** Uses your existing, paid ChatGPT account.
-*   **Supports Advanced Features:** Includes tool calling, vision/image understanding, and thinking summaries.
-*   **Customizable Reasoning:** Adjust the reasoning effort and summary style for optimal performance.
+*   **GPT-5 and Model Access:** Utilize GPT-5 and other supported OpenAI models directly through your ChatGPT account.
+*   **OpenAI & Ollama Compatibility:** Emulates the OpenAI API, allowing you to use your account with existing OpenAI integrations and also provides compatibility with Ollama.
+*   **No API Key Required:** Authenticate with your ChatGPT credentials instead of needing an API key.
+*   **Tool Calling & Vision Support:** Leverages advanced functionalities like tool calling, and vision/image understanding.
+*   **Customizable Reasoning:** Control the model's "thinking effort" and the level of thinking summaries for optimized performance.
+*   **Local Server:** Runs a local server, making it easy to integrate with various applications and tools.
 
 ## Getting Started
 
-### macOS Users
+### macOS
 
-#### GUI Application
+**GUI Application:**
 
-Download the user-friendly GUI app from the [GitHub releases](https://github.com/RayBytes/ChatMock/releases).
+*   Download the GUI app from the [GitHub releases](https://github.com/RayBytes/ChatMock/releases).
+    *   **Note:** Due to security measures, you may need to run the following command in your terminal to open the app:
+        ```bash
+        xattr -dr com.apple.quarantine /Applications/ChatMock.app
+        ```
+        *[More info here.](https://github.com/deskflow/deskflow/wiki/Running-on-macOS)*
 
-> **Note:**  If you encounter issues opening the app, you may need to run:
->
-> ```bash
-> xattr -dr com.apple.quarantine /Applications/ChatMock.app
-> ```
->
-> *[More info here.](https://github.com/deskflow/deskflow/wiki/Running-on-macOS)*
+**Command Line (Homebrew):**
 
-#### Command Line (Homebrew)
-
-Install ChatMock as a command-line tool using [Homebrew](https://brew.sh/):
-
-```bash
-brew tap RayBytes/chatmock
-brew install chatmock
-```
+*   Install ChatMock using Homebrew:
+    ```bash
+    brew tap RayBytes/chatmock
+    brew install chatmock
+    ```
 
 ### Python
 
-For a Python-based setup:
+1.  **Clone the Repository:**
+    ```bash
+    git clone https://github.com/RayBytes/ChatMock.git
+    cd ChatMock
+    ```
 
-1.  Clone or download the repository and navigate into the project directory.
-2.  Sign in with your ChatGPT account:
-
+2.  **Login:** Sign in with your ChatGPT account.
     ```bash
     python chatmock.py login
     ```
+    Verify the login with:
+    ```bash
+    python chatmock.py info
+    ```
 
-    Verify login with: `python chatmock.py info`
-3.  Start the local server:
-
+3.  **Start the Server:** Launch the local server.
     ```bash
     python chatmock.py serve
     ```
 
-    The server runs by default at `http://127.0.0.1:8000`. Remember to include `/v1/` when using it as an OpenAI endpoint. (e.g., `http://127.0.0.1:8000/v1`)
+4.  **Use the API:**  Use the server address and port (http://127.0.0.1:8000 by default) as the `baseURL` in your OpenAI integrations, adding `/v1/` for OpenAI compatibility.
 
 ## Examples
 
@@ -95,33 +93,23 @@ curl http://127.0.0.1:8000/v1/chat/completions \
 *   `gpt-5`
 *   `codex-mini`
 
-## Customization
+## Customization & Configuration
 
-### Reasoning Effort
+*   **Reasoning Effort:** Control the model's thinking effort for potentially smarter answers:  `--reasoning-effort` (minimal, low, medium, high). Defaults to `medium`.
+*   **Thinking Summaries:** Customize the level of thinking summaries: `--reasoning-summary` (auto, concise, detailed, none).
 
-*   `--reasoning-effort` (minimal, low, medium, high)
+    For the fastest responses, consider `--reasoning-effort low` and `--reasoning-summary none`.
 
-### Reasoning Summaries
+    View all parameters and options with `python chatmock.py serve --h`.
 
-*   `--reasoning-summary` (auto, concise, detailed, none)
+*   **Reasoning Compatibility:** `--reasoning-compat legacy` will put reasoning in the `reasoning` tag instead of in the response text.
 
-**For the fastest responses, try `--reasoning-effort low` and `--reasoning-summary none`.**
-
-**All parameters and choices can be viewed by running `python chatmock.py serve --h`**
-
-**To customize the behavior of the thinking summaries, set `--reasoning-compat` to `legacy` to set the reasoning tag instead of being returned in the actual response text.**
-
-## Notes & Limitations
+## Important Notes
 
 *   Requires an active, paid ChatGPT account.
-*   Expect potentially lower rate limits than the ChatGPT app.
-*   Some context length may be used for internal instructions.
-*   Use responsibly and at your own risk. This project is not affiliated with OpenAI.
-
-## Future Development
-
-*   Explore more model settings.
-*   Implement analytics for usage tracking (token counting, etc.).
+*   Expect potentially lower rate limits compared to the official ChatGPT app.
+*   The context size is larger than the regular ChatGPT app.
+*   Use responsibly and at your own risk. This project is not affiliated with OpenAI and is for educational purposes.
 
 ## Star History
 

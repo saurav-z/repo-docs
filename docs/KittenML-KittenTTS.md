@@ -1,23 +1,27 @@
-# Kitten TTS: Realistic Text-to-Speech for Everyone
+# Kitten TTS: High-Quality Text-to-Speech in a Tiny Package
 
-**Kitten TTS is a cutting-edge, open-source text-to-speech model that delivers high-quality, realistic voice synthesis with a remarkably small footprint.** ([See the original repository](https://github.com/KittenML/KittenTTS))
+**Kitten TTS offers realistic, high-quality text-to-speech synthesis in an incredibly lightweight package, making it perfect for deployment on any device.** ( [Original Repository](https://github.com/KittenML/KittenTTS) )
 
-## Key Features:
+## Key Features
 
-*   **Lightweight Design:** The model is under 25MB, perfect for deployment on various devices.
+*   **Ultra-Lightweight:** The model size is less than 25MB, enabling easy deployment.
 *   **CPU-Optimized:** Runs efficiently on any device without requiring a GPU.
-*   **High-Quality Voices:** Offers a selection of premium voice options for diverse applications.
-*   **Fast Inference:** Optimized for real-time speech synthesis, ensuring a smooth user experience.
+*   **High-Quality Voices:** Choose from several premium voice options for a natural listening experience.
+*   **Fast Inference:** Optimized for real-time speech synthesis, ensuring quick generation of audio.
 
-## Getting Started:
+## Getting Started
 
 ### Installation
+
+Install Kitten TTS using pip:
 
 ```bash
 pip install https://github.com/KittenML/KittenTTS/releases/download/0.1/kittentts-0.1.0-py3-none-any.whl
 ```
 
 ### Basic Usage
+
+Here's how to generate speech from text:
 
 ```python
 from kittentts import KittenTTS
@@ -36,15 +40,15 @@ sf.write('output.wav', audio, 24000)
 
 Kitten TTS is designed to run on virtually any system.
 
+## Stay Connected
+
+*   [Join our Discord](https://discord.com/invite/VJ86W4SURW)
+*   [Request Custom Support](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
+*   Email us: info@stellonlabs.com
+
 ## Future Development
 
 *   [x] Release a preview model
 *   [ ] Release the fully trained model weights
 *   [ ] Release mobile SDK
 *   [ ] Release web version
-
-## Get Involved
-
-*   **Join our Discord:** [https://discord.com/invite/VJ86W4SURW](https://discord.com/invite/VJ86W4SURW)
-*   **Custom Support:** [Fill out this form](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
-*   **Email:** info@stellonlabs.com

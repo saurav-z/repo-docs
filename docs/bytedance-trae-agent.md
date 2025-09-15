@@ -1,6 +1,6 @@
 # Trae Agent: Your AI-Powered Software Engineering Assistant
 
-**Trae Agent** is an LLM-based agent designed to streamline your software engineering tasks, offering a powerful CLI interface for natural language interaction. Explore the full capabilities of Trae Agent on its [GitHub repository](https://github.com/bytedance/trae-agent).
+Trae Agent empowers developers with an LLM-based agent to automate and streamline software engineering tasks, making coding more efficient and less tedious.  [Visit the original repository](https://github.com/bytedance/trae-agent).
 
 [![arXiv:2507.23370](https://img.shields.io/badge/TechReport-arXiv%3A2507.23370-b31a1b)](https://arxiv.org/abs/2507.23370)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -8,22 +8,24 @@
 [![Unit Tests](https://github.com/bytedance/trae-agent/actions/workflows/unit-test.yml/badge.svg)](https://github.com/bytedance/trae-agent/actions/workflows/unit-test.yml)
 [![Discord](https://img.shields.io/discord/1320998163615846420?label=Join%20Discord&color=7289DA)](https://discord.gg/VwaQ4ZBHvC)
 
-## Key Features
+**Key Features:**
 
-*   ✅ **Multi-LLM Support:** Works with popular LLM providers including OpenAI, Anthropic, Google Gemini, and more, including local models via Ollama.
-*   ⚙️ **Rich Tool Ecosystem:** Execute complex software engineering workflows with file editing, bash commands, and more.
-*   💬 **Interactive Mode:** Engage in a conversational interface for iterative development and debugging.
-*   📊 **Detailed Trajectory Recording:** Log all agent actions for thorough debugging, analysis, and auditing.
-*   ⚙️ **Flexible Configuration:** Configure Trae Agent using YAML files with environment variable support.
-*   🚀 **Easy Installation:** Get started quickly with a simple pip-based installation.
-*   🌊 **Lakeview:** Concise summarisation for each agent step.
-*   🎯 **Research-Friendly Design:** Facilitates AI agent architecture exploration and supports ablation studies.
+*   🤖 **Multi-LLM Support:** Integrate with OpenAI, Anthropic, Google Gemini, and more.
+*   🛠️ **Rich Tool Ecosystem:** Utilize file editing, bash execution, and sequential thinking.
+*   🌊 **Lakeview:** Provides concise summaries of agent steps.
+*   🎯 **Interactive Mode:** Engage in conversational development sessions.
+*   📊 **Trajectory Recording:** Detailed logging for debugging and analysis.
+*   ⚙️ **Flexible Configuration:** Configure with YAML and environment variables.
+*   🚀 **Easy Installation:** Simple, pip-based installation process.
+*   Docker Mode: Ability to run tasks within Docker containers.
 
-## Installation
+**Trae Agent** is designed with a modular architecture, providing researchers and developers with a platform to easily modify, extend, and analyze agent behavior for studying AI agent architectures and developing novel capabilities.
+
+## 🚀 Installation
 
 ### Requirements
 
-*   UV (https://docs.astral.sh/uv/)
+*   UV ([https://docs.astral.sh/uv/](https://docs.astral.sh/uv/))
 *   API key for your chosen provider (OpenAI, Anthropic, Google Gemini, OpenRouter, etc.)
 
 ### Setup
@@ -35,12 +37,11 @@ uv sync --all-extras
 source .venv/bin/activate
 ```
 
-## Configuration
+## ⚙️ Configuration
 
 ### YAML Configuration (Recommended)
 
 1.  Copy the example configuration file:
-
     ```bash
     cp trae_config.yaml.example trae_config.yaml
     ```
@@ -90,7 +91,7 @@ openai:
 
 ### Environment Variables (Alternative)
 
-Configure API keys using environment variables:
+You can also configure API keys using environment variables and store them in the .env file:
 
 ```bash
 export OPENAI_API_KEY="your-openai-api-key"
@@ -121,7 +122,7 @@ mcp_servers:
 
 **Legacy JSON Configuration:** If using the older JSON format, see [docs/legacy_config.md](docs/legacy_config.md). We recommend migrating to YAML.
 
-## Usage
+## 📖 Usage
 
 ### Basic Commands
 
@@ -209,15 +210,15 @@ In interactive mode, you can use:
 - `clear` - Clear the screen
 - `exit` or `quit` - End the session
 
-## Advanced Features
+## 🛠️ Advanced Features
 
 ### Available Tools
 
-Trae Agent offers a comprehensive toolkit for software engineering, including file editing, bash execution, and task completion. See [docs/tools.md](docs/tools.md) for details.
+Trae Agent provides a comprehensive toolkit for software engineering tasks including file editing, bash execution, structured thinking, and task completion. For detailed information about all available tools and their capabilities, see [docs/tools.md](docs/tools.md).
 
 ### Trajectory Recording
 
-Automatically record execution trajectories:
+Trae Agent automatically records detailed execution trajectories for debugging and analysis:
 
 ```bash
 # Auto-generated trajectory file
@@ -230,22 +231,20 @@ trae-cli run "Optimize database queries" --trajectory-file optimization_debug.js
 
 Trajectory files contain LLM interactions, agent steps, tool usage, and execution metadata. For more details, see [docs/TRAJECTORY_RECORDING.md](docs/TRAJECTORY_RECORDING.md).
 
-## Development
+## 🔧 Development
 
 ### Contributing
 
-Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+For contribution guidelines, please refer to [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### Troubleshooting
 
 **Import Errors:**
-
 ```bash
 PYTHONPATH=. trae-cli run "your task"
 ```
 
 **API Key Issues:**
-
 ```bash
 # Verify API keys
 echo $OPENAI_API_KEY
@@ -253,22 +252,20 @@ trae-cli show-config
 ```
 
 **Command Not Found:**
-
 ```bash
 uv run trae-cli run "your task"
 ```
 
 **Permission Errors:**
-
 ```bash
 chmod +x /path/to/your/project
 ```
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Citation
+## ✍️ Citation
 
 ```bibtex
 @article{traeresearchteam2025traeagent,
@@ -282,6 +279,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 }
 ```
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
-We thank Anthropic for their [anthropic-quickstart](https://github.com/anthropics/anthropic-quickstarts) project.
+We thank Anthropic for building the [anthropic-quickstart](https://github.com/anthropics/anthropic-quickstarts) project that served as a valuable reference for the tool ecosystem.

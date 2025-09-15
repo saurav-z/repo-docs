@@ -1,122 +1,72 @@
-# WilmerAI: Expert Contextual Routing for LLM Workflows
+# WilmerAI: Expert Contextual Routing for LLM Applications
 
-**Unlock advanced, multi-step workflows with WilmerAI, designed to understand context and orchestrate LLMs for superior results.**
-
-[Link to Original Repo](https://github.com/SomeOddCodeGuy/WilmerAI)
+**Unlock advanced semantic understanding and orchestration capabilities for your LLM applications with WilmerAI: Where conversations are truly understood.** ([Original Repo](https://github.com/SomeOddCodeGuy/WilmerAI))
 
 ## Key Features
 
 *   **Advanced Contextual Routing:**
-    *   Analyzes the entire conversation history, not just the latest message.
-    *   Employs both prompt routing and in-workflow logic for dynamic task selection.
-    *   Enables a deep understanding of user intent for more accurate responses.
+    *   **Prompt Routing:** Analyzes the entire conversation history to select the most suitable specialized workflow (e.g., "Coding," "Factual," "Creative").
+    *   **In-Workflow Routing:** Implements conditional logic for dynamic decision-making based on node outputs.
+    *   **Context-Aware:** Makes routing decisions based on the entire conversation history, not just the latest message.
 
-*   **Node-Based Workflow Engine:**
-    *   Builds complex workflows using JSON-defined sequences of "nodes."
-    *   Each node can orchestrate different LLMs, call external tools, and execute custom scripts.
-    *   Facilitates a modular and scalable approach to complex tasks.
+*   **Core: Node-Based Workflow Engine:**
+    *   **Workflow Definition:** Processes requests through JSON-defined workflows, each a sequence of steps (nodes).
+    *   **Modular Design:** Nodes perform distinct tasks, with outputs passed as input for chained, complex processes.
 
 *   **Multi-LLM & Multi-Tool Orchestration:**
-    *   Allows you to connect and coordinate multiple LLMs within a single workflow.
-    *   Optimizes for the best model for each part of a task, enhancing accuracy.
-    *   Enables the integration of diverse LLMs, tools, and external resources.
+    *   **LLM Agnostic:** Connects to diverse LLM endpoints and external tools within each node, optimizing for specific tasks.
+    *   **Task Specialization:** Orchestrates the best model for each step—e.g., a local model for summarization, a cloud model for reasoning.
 
 *   **Modular & Reusable Workflows:**
-    *   Create self-contained workflows for common operations, simplifying overall design.
-    *   Execute reusable nodes within larger, more complex workflows.
-    *   Promotes efficiency and reduces redundancy in workflow development.
+    *   **Workflow Composability:** Builds self-contained workflows for common tasks that can be reused as nodes in larger workflows.
+    *   **Simplified Design:** Simplifies complex agent design through building blocks of workflows.
 
 *   **Stateful Conversation Memory:**
-    *   Utilizes a multi-faceted memory system for long and accurate conversations.
-    *   Includes a chronological summary file, a continuously updated rolling summary, and a vector database.
-    *   Provides the necessary context for effective routing and coherent responses.
+    *   **Comprehensive Memory:** Maintains a three-part memory system to facilitate long conversations and accurate routing.
+        *   Chronological Summary File
+        *   Rolling Summary
+        *   Vector Database for RAG
 
 *   **Adaptable API Gateway:**
-    *   Exposes OpenAI- and Ollama-compatible API endpoints.
-    *   Connects with existing front-end applications and tools seamlessly.
-    *   Simplifies integration with various LLM front-ends.
+    *   **API Compatibility:** Exposes OpenAI- and Ollama-compatible API endpoints, compatible with existing frontends.
 
 *   **Flexible Backend Connectors:**
-    *   Connects to various LLM backends, including OpenAI, Ollama, and KoboldCpp.
-    *   Employs a simple configuration system of Endpoints, API Types, and Presets.
-    *   Supports connections to diverse LLM APIs.
+    *   **LLM Agnostic:** Connects to LLM backends, including OpenAI, Ollama, and KoboldCpp, via a simple and configurable system of Endpoints, API Types and Presets.
 
-*   **MCP Server Tool Integration:**
-    *   Supports the use of MCP server tool calling via MCPO.
-    *   Offers the integration of tools mid-workflow, enhancing flexibility.
-    *   Leverages contributions from iSevenDays.
+*   **MCP Server Tool Integration using MCPO:**
+    *   **Tool Calling:** Supports MCP server tool-calling mid-workflow, allowing tool usage in between workflow nodes.
 
 ## Why Choose WilmerAI?
 
-WilmerAI goes beyond simple routing. It's a powerful workflow engine that enables you to create sophisticated, semi-autonomous AI agents. With its advanced contextual understanding, multi-LLM orchestration, and flexible API, WilmerAI empowers you to build intelligent applications that deliver superior results.
+WilmerAI provides a robust solution for developers seeking advanced semantic prompt routing and sophisticated task orchestration. Its design allows users to have granular control of the path the LLMs take. It allows multiple LLMs to work together within a single workflow, giving the user maximum use of domain knowledge and experience.
 
 ## Getting Started
 
 ### Installation
 
 1.  **Install Dependencies:** `pip install -r requirements.txt`
-2.  **Run the Server:** `python server.py` or use the provided `.bat` (Windows) or `.sh` (macOS) scripts.
+2.  **Run the Server:** `python server.py`
+
+For convenience, you can utilize the included `.bat` (Windows) and `.sh` (macOS) scripts for simplified setup.
+Use the command line arguments to customize the install location, as documented in the original README.
 
 ### Configuration
 
-1.  **Configure Endpoints:** Set up your LLM connections in the `Public/Configs/Endpoints` directory.
-2.  **Select a User:** Choose a pre-built user configuration in `Public/Configs/Users` or create your own.
+All configurations reside in the "Public" folder, containing essential JSON files. Configure endpoints and users within the `Endpoints` and `Users` directories, including specifying your chosen LLM API keys. For detailed setup instructions, review the provided documentation.
 
-## Connect with Existing Tools
+## Connect Your Front-End
 
-*   **SillyTavern:** Connect as OpenAI Compatible v1/completions or Ollama api/generate. Import the instruct template from `/Docs/SillyTavern/InstructTemplate`
-*   **Open WebUI:** Connect to WilmerAI as an Ollama instance.
+WilmerAI is designed to connect to a wide range of LLM frontend interfaces such as SillyTavern and Open WebUI. Both tools are capable of using standard OpenAI chat completion and Ollama endpoints.
 
-## Documentation
+## Resources
 
-*   User Documentation: `/Docs/_User_Documentation/README.md`
-*   Developer Documentation: `/Docs/Developer_Docs/README.md`
-
-## Important Notes
-
-*   **Token Usage:** Monitor your token usage from your LLM API dashboards, as WilmerAI does not track token consumption.
-*   **LLM Dependency:** WilmerAI's quality relies heavily on the performance of the connected LLMs.
-*   **Maintainer's Note:** This is an active personal project, with updates being made in free time.
+*   **User Documentation:** \[Docs/_User\_Documentation/README.md]
+*   **Developer Documentation:** \[Docs/Developer\_Docs/README.md]
 
 ## Contact
 
-For support, feedback, or inquiries: WilmerAI.Project@gmail.com
-
----
+Reach out with feedback or questions: WilmerAI.Project@gmail.com
 
 ## License and Copyright
 
-    WilmerAI
-    Copyright (C) 2025 Christopher Smith
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
----
-
-## Third Party Libraries
-
-WilmerAI imports five libraries within its requirements.txt, and imports the libraries via import statements; it does
-not extend or modify the source of those libraries.
-
-The libraries are:
-
-* Flask : https://github.com/pallets/flask/
-* requests: https://github.com/psf/requests/
-* scikit-learn: https://github.com/scikit-learn/scikit-learn/
-* urllib3: https://github.com/urllib3/urllib3/
-* jinja2: https://github.com/pallets/jinja
-* pillow: https://github.com/python-pillow/Pillow
-
-Further information on their licensing can be found within the README of the ThirdParty-Licenses folder, as well as the
-full text of each license and their NOTICE files, if applicable, with relevant last updated dates for each.
+WilmerAI is licensed under the GNU General Public License v3.

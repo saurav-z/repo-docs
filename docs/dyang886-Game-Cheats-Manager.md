@@ -1,14 +1,8 @@
 # Game Cheats Manager: Your Ultimate Trainer Management Solution
 
-**Tired of juggling trainers and struggling to find the right cheats for your favorite single-player games?** Game Cheats Manager is the ultimate all-in-one tool for gamers, making it easy to browse, download, and manage game trainers, so you can focus on the fun. Find the original repository here: [Game-Cheats-Manager GitHub](https://github.com/dyang886/Game-Cheats-Manager).
+**Tired of juggling trainers and struggling to keep your game enhancements organized?** Game Cheats Manager simplifies your gaming experience by providing a central hub to browse, download, and manage trainers for your favorite single-player games.  Get it now on [GitHub](https://github.com/dyang886/Game-Cheats-Manager)!
 
-[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/dyang886/Game-Cheats-Manager/total)](https://github.com/dyang886/Game-Cheats-Manager/releases/latest)
-[![GitHub Repo stars](https://img.shields.io/github/stars/dyang886/Game-Cheats-Manager?style=flat&color=ffc000)](https://github.com/dyang886/Game-Cheats-Manager/stargazers)
-[![GitHub Release](https://img.shields.io/github/v/release/dyang886/Game-Cheats-Manager?link=https%3A%2F%2Fgithub.com%2Fdyang886%2FGame-Cheats-Manager%2Freleases%2Flatest)](https://github.com/dyang886/Game-Cheats-Manager/releases/latest)
-[![GitHub License](https://img.shields.io/github/license/dyang886/Game-Cheats-Manager)](https://github.com/dyang886/Game-Cheats-Manager/blob/main/LICENSE)
-<a href="https://hellogithub.com/repository/3ca6e8e23401477282ba72d2d8932311" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=3ca6e8e23401477282ba72d2d8932311&claim_uid=UrZOap0AkvuRw7D&theme=small" alt="Featured｜HelloGitHub" /></a>
-<a href="https://discord.gg/d627qVyHEF" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Join_Discord-f0f0f0?logo=discord"></a>
-<a href="https://pd.qq.com/s/h06qbdey6" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Join_QQ-f0f0f0?logo=qq"></a>
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/dyang886/Game-Cheats-Manager/total) ![GitHub Repo stars](https://img.shields.io/github/stars/dyang886/Game-Cheats-Manager?style=flat&color=ffc000) ![GitHub Release](https://img.shields.io/github/v/release/dyang886/Game-Cheats-Manager?link=https%3A%2F%2Fgithub.com%2Fdyang886%2FGame-Cheats-Manager%2Freleases%2Flatest) ![GitHub License](https://img.shields.io/github/license/dyang886/Game-Cheats-Manager) <a href="https://hellogithub.com/repository/3ca6e8e23401477282ba72d2d8932311" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=3ca6e8e23401477282ba72d2d8932311&claim_uid=UrZOap0AkvuRw7D&theme=small" alt="Featured｜HelloGitHub" /></a> <a href="https://discord.gg/d627qVyHEF" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Join_Discord-f0f0f0?logo=discord"></a> <a href="https://pd.qq.com/s/h06qbdey6" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Join_QQ-f0f0f0?logo=qq"></a>
 
 <div align="center">
     <img src="src/assets/logo.png" alt="Game Cheats Manager logo" width="250" />
@@ -16,47 +10,36 @@
 
 ## Key Features
 
-*   **Effortless Trainer Browsing**: Easily search and browse a vast library of trainers.
-*   **One-Click Downloads**: Quickly download trainers directly within the application.
-*   **Simplified Trainer Management**: Launch and delete trainers with a simple click.
-*   **Customizable Settings**: Adjust settings such as themes, languages, auto-updates, and download locations.
-*   **Import Functionality**: Import trainers from external sources for streamlined management.
-*   **Windows Defender Whitelisting**: Easily add your trainer download path to the Windows Defender whitelist.
+*   **Effortless Trainer Browsing & Searching:** Quickly find trainers using a search bar or browse a comprehensive list of available cheats.
+*   **One-Click Trainer Launch:** Easily launch trainers directly from the application for instant in-game enhancements.
+*   **Simplified Trainer Management:** Download, delete, and manage your trainers all in one convenient location.
+*   **Automatic Updates:** Stay up-to-date with the latest trainer versions through the settings.
+*   **Customizable Settings:** Adjust themes, languages, and download paths to personalize your experience.
+*   **Import Trainers:** Import your existing trainers easily, alongside your auto-updating trainers.
+*   **Whitelist Protection:** Easily add your trainer download path to the Windows Defender whitelist for protection.
 
-## How to Use
+## Getting Started
 
-### Browsing and Launching Trainers
-1.  **Browse Trainers:** Use the search bar or scroll through the list in the left column.
-2.  **Launch Trainers:** Double-click or click the "Launch" button to start a trainer.
-3.  **Delete Trainers:** Click the "Delete" button to remove a trainer.
+### Installation
 
-### Downloading Trainers
-1.  **Search Trainers:** Enter keywords in the right column search bar and press Enter.
-2.  **Download Trainers:** Double-click the desired trainer from the search results to download it.
-3.  **Manage Download Path:** Change the download location by clicking the "..." button.
+1.  **Download the Installer:** Visit the [latest release](https://github.com/dyang886/Game-Cheats-Manager/releases) and download the Windows (64-bit) installer.
+2.  **Run the Installer:** Execute the downloaded file and follow the on-screen instructions.
+3.  **Launch the Application:** Open Game Cheats Manager from your applications folder or start menu.
 
-### Trainer Management & Options
-1.  **Trainer Management:** Access settings for each trainer source, including auto-updates and download server selection.
-2.  **Options Menu:**
-    *   **Settings**: Customize themes and languages.
-    *   **Import Trainers**: Import trainers from your file system.
-    *   **Open Trainer Download Path**: Quickly access the folder where trainers are stored.
-    *   **Add Paths to Whitelist**: Add the trainer download path to Windows Defender.
-    *   **About**: View the application version and project links.
+### Usage
 
-## Installation
+1.  **Browse Trainers:** Use the search bar or browse the trainer list in the left column. Double-click or click `Launch` to start a trainer, or click `Delete` to remove one.
+2.  **Download Trainers:** Search for trainers in the right column and press `Enter`. Double-click a match to download it. Change the download path via the `...` button.
+3.  **Trainer Management:** Access settings for trainer sources, including auto-updates and download server options.
+4.  **Options Menu:** Access settings (themes, languages), import trainers, open the download folder, add paths to the Windows Defender whitelist, and view "About" information.
 
-1.  **Download the Installer**: Get the latest release for Windows (64-bit) from the [releases page](https://github.com/dyang886/Game-Cheats-Manager/releases).
-2.  **Run the Installer**: Execute the downloaded installer and follow the on-screen instructions.
-3.  **Launch the Application**: Open Game Cheats Manager from your applications folder or start menu.
+## Support & Resources
 
-## Support and Contributions
+*   For any issues, feature requests, or to contribute, please visit the [Game Cheats Manager GitHub Repository](https://github.com/dyang886/Game-Cheats-Manager).
 
-For any issues, feature requests, or if you'd like to contribute, please visit the [GitHub repository](https://github.com/dyang886/Game-Cheats-Manager).
+## Support the Project
 
-## Funding
-
-Support the development of Game Cheats Manager:
+Consider supporting the development of Game Cheats Manager:
 
 |                            WeChat                            |                          Alipay                          |                          QQ                          |
 | :----------------------------------------------------------: | :------------------------------------------------------: | :--------------------------------------------------: |

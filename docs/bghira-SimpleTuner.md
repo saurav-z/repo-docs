@@ -1,105 +1,85 @@
-# SimpleTuner: Train Diffusion Models with Ease 🚀
+# SimpleTuner: Unleash the Power of Diffusion Model Training 🚀
 
-**SimpleTuner empowers you to easily train and fine-tune cutting-edge diffusion models, making AI art creation accessible to everyone.**  Check out the original repo [here](https://github.com/bghira/SimpleTuner).
+**SimpleTuner** simplifies diffusion model training with a focus on ease of use, providing powerful tools for training a variety of diffusion models.  Check out the original repo: [https://github.com/bghira/SimpleTuner](https://github.com/bghira/SimpleTuner)
 
-> ℹ️  SimpleTuner prioritizes user privacy, with no data sent to third parties unless you explicitly enable features like `report_to`, `push_to_hub`, or webhooks that require manual configuration.
+**Key Features:**
 
-SimpleTuner is designed for simplicity and ease of use, perfect for both beginners and experienced researchers. This toolkit provides a streamlined experience with sensible defaults, while still allowing for advanced customization. Contributions are welcome! Join our community on [Discord](https://discord.gg/CVzhX7ZA) via Terminus Research Group for support and collaboration.
+*   **Wide Model Support:** Train models like Stable Diffusion XL, SD3, Flux.1, and more.
+*   **Advanced Training Techniques:** Utilize features like TREAD, Masked Loss, SNR weighting, and Prior Regularization.
+*   **Memory Optimization:** Train large models on limited hardware with features like DeepSpeed integration, gradient checkpointing, and quantization.
+*   **Multi-GPU Training:** Leverage distributed training for faster training.
+*   **Quickstart Guides:** Get up and running fast with detailed guides for each supported model.
+*   **Cloud Training:** Train directly from cloud storage with S3 support.
+*   **Community-Focused:**  Join our community [on Discord](https://discord.gg/CVzhX7ZA).
 
-## Key Features
+## Table of Contents
 
-*   **Simplified Training:**  Focus on your creative vision, not complex setup.
-*   **Wide Model Support:**  Train on a variety of diffusion models.
-*   **Multi-GPU Training:**  Accelerate training with distributed computing.
-*   **Memory Optimization:** Train large models on more modest hardware.
-*   **Cutting-Edge Techniques:** Incorporates proven features like LoRA, Lycoris, and more.
-*   **Comprehensive Documentation:** Quickstart guides and detailed tutorials to get you up and running fast.
-*   **Cloud Storage Support**: Train directly from cloud storage services like S3
+*   [Core Training Features](#core-training-features)
+*   [Model Architecture Support](#model-architecture-support)
+*   [Advanced Training Techniques](#advanced-training-techniques)
+*   [Model-Specific Features](#model-specific-features)
+*   [Quickstart Guides](#quickstart-guides)
+*   [Hardware Requirements](#hardware-requirements)
+*   [Setup](#setup)
+*   [Troubleshooting](#troubleshooting)
 
-## Core Functionality
+## Core Training Features
 
-### Table of Contents
-
--   [Key Features](#key-features)
--   [Model Architecture Support](#model-architecture-support)
--   [Hardware Requirements](#hardware-requirements)
--   [Setup](#setup)
--   [Troubleshooting](#troubleshooting)
--   [Design Philosophy](#design-philosophy)
--   [Tutorial](#tutorial)
--   [Toolkit](#toolkit)
-
-## Design Philosophy
-
-*   **Simplicity:** Easy to use with sensible defaults, reducing the need for extensive configuration.
-*   **Versatility:** Supports a broad range of image datasets, from small to very large.
-*   **Performance:** Incorporates the latest, proven training techniques to optimize results.
-
-## Tutorial
-
-For a quick start, begin with the [Quick Start](/documentation/QUICKSTART.md) guide.
-
-*   Beginners should fully explore this README and the tutorial prior to training to understand key concepts.
-*   For memory-constrained systems: [DeepSpeed document](/documentation/DEEPSPEED.md).
-*   Multi-node distributed training: [guide](/documentation/DISTRIBUTED.md).
+*   **Multi-GPU Training:** Distribute training across multiple GPUs for faster results.
+*   **Advanced Caching:** Optimize training speed with image, video, and caption caching.
+*   **Aspect Bucketing:**  Efficiently handle images/videos with varied aspect ratios.
+*   **Memory Optimization:** Train complex models on resource-constrained hardware.
+*   **DeepSpeed Integration:** Train massive models on smaller GPUs using gradient checkpointing and optimizer state offload.
+*   **S3 Training:** Train directly from cloud storage (Cloudflare R2, Wasabi S3)
+*   **EMA Support:**  Improve training stability and enhance output quality using exponential moving average weights.
 
 ## Model Architecture Support
 
-SimpleTuner provides comprehensive training support across multiple diffusion model architectures with consistent feature availability:
+SimpleTuner supports a broad range of diffusion model architectures, offering consistent feature availability.
 
-| Model | Parameters | PEFT LoRA | Lycoris | Full-Rank | ControlNet | Quantization | Flow Matching | Text Encoders |
-|-------|------------|-----------|---------|-----------|------------|--------------|---------------|---------------|
-| **Stable Diffusion XL** | 3.5B | ✓ | ✓ | ✓ | ✓ | int8/nf4 | ✗ | CLIP-L/G |
-| **Stable Diffusion 3** | 2B-8B | ✓ | ✓ | ✓* | ✓ | int8/fp8/nf4 | ✓ | CLIP-L/G + T5-XXL |
-| **Flux.1** | 12B | ✓ | ✓ | ✓* | ✓ | int8/fp8/nf4 | ✓ | CLIP-L + T5-XXL |
-| **Auraflow** | 6.8B | ✓ | ✓ | ✓* | ✓ | int8/fp8/nf4 | ✓ | UMT5-XXL |
-| **PixArt Sigma** | 0.6B-0.9B | ✗ | ✓ | ✓ | ✓ | int8 | ✗ | T5-XXL |
-| **Sana** | 0.6B-4.8B | ✗ | ✓ | ✓ | ✗ | int8 | ✓ | Gemma2-2B |
-| **Lumina2** | 2B | ✓ | ✓ | ✓ | ✗ | int8 | ✓ | Gemma2 |
-| **Kwai Kolors** | 5B | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ | ChatGLM-6B |
-| **LTX Video** | 5B | ✓ | ✓ | ✓ | ✗ | int8/fp8 | ✓ | T5-XXL |
-| **Wan Video** | 1.3B-14B | ✓ | ✓ | ✓* | ✗ | int8 | ✓ | UMT5 |
-| **HiDream** | 17B (8.5B MoE) | ✓ | ✓ | ✓* | ✓ | int8/fp8/nf4 | ✓ | CLIP-L + T5-XXL + Llama |
-| **Cosmos2** | 2B-14B | ✗ | ✓ | ✓ | ✗ | int8 | ✓ | T5-XXL |
-| **OmniGen** | 3.8B | ✓ | ✓ | ✓ | ✗ | int8/fp8 | ✓ | T5-XXL |
-| **Qwen Image** | 20B | ✓ | ✓ | ✓* | ✗ | int8/nf4 (req.) | ✓ | T5-XXL |
-| **SD 1.x/2.x (Legacy)** | 0.9B | ✓ | ✓ | ✓ | ✓ | int8/nf4 | ✗ | CLIP-L |
+| Model                    | Parameters | PEFT LoRA | Lycoris | Full-Rank | ControlNet | Quantization | Flow Matching | Text Encoders   |
+| :----------------------- | :--------- | :-------- | :------ | :---------- | :--------- | :----------- | :------------ | :--------------- |
+| **Stable Diffusion XL**  | 3.5B       | ✓         | ✓       | ✓           | ✓          | int8/nf4     | ✗             | CLIP-L/G         |
+| **Stable Diffusion 3**   | 2B-8B      | ✓         | ✓       | ✓\*         | ✓          | int8/fp8/nf4 | ✓             | CLIP-L/G + T5-XXL |
+| **Flux.1**               | 12B        | ✓         | ✓       | ✓\*         | ✓          | int8/fp8/nf4 | ✓             | CLIP-L + T5-XXL   |
+| **Auraflow**             | 6.8B       | ✓         | ✓       | ✓\*         | ✓          | int8/fp8/nf4 | ✓             | UMT5-XXL         |
+| **PixArt Sigma**         | 0.6B-0.9B  | ✗         | ✓       | ✓           | ✓          | int8         | ✗             | T5-XXL           |
+| **Sana**                 | 0.6B-4.8B  | ✗         | ✓       | ✓           | ✗          | int8         | ✓             | Gemma2-2B        |
+| **Lumina2**              | 2B         | ✓         | ✓       | ✓           | ✗          | int8         | ✓             | Gemma2           |
+| **Kwai Kolors**          | 5B         | ✓         | ✓       | ✓           | ✗          | ✗            | ✗             | ChatGLM-6B       |
+| **LTX Video**            | 5B         | ✓         | ✓       | ✓           | ✗          | int8/fp8     | ✓             | T5-XXL           |
+| **Wan Video**            | 1.3B-14B   | ✓         | ✓       | ✓\*         | ✗          | int8         | ✓             | UMT5             |
+| **HiDream**              | 17B (8.5B) | ✓         | ✓       | ✓\*         | ✓          | int8/fp8/nf4 | ✓             | CLIP-L + T5-XXL + Llama |
+| **Cosmos2**              | 2B-14B     | ✗         | ✓       | ✓           | ✗          | int8         | ✓             | T5-XXL           |
+| **OmniGen**              | 3.8B       | ✓         | ✓       | ✓           | ✗          | int8/fp8     | ✓             | T5-XXL           |
+| **Qwen Image**           | 20B        | ✓         | ✓       | ✓\*         | ✗          | int8/nf4     | ✓             | T5-XXL           |
+| **SD 1.x/2.x (Legacy)** | 0.9B       | ✓         | ✓       | ✓           | ✓          | int8/nf4     | ✗             | CLIP-L           |
 
-*✓ = Supported, ✗ = Not supported, * = Requires DeepSpeed for full-rank training*
+*✓ = Supported, ✗ = Not supported, \* = Requires DeepSpeed for full-rank training*
 
-### Core Training Features
+## Advanced Training Techniques
 
-*   **Multi-GPU training** - Distributed training across multiple GPUs with automatic optimization
-*   **Advanced caching** - Image, video, and caption embeddings cached to disk for faster training
-*   **Aspect bucketing** - Support for varied image/video sizes and aspect ratios
-*   **Memory optimization** - Most models trainable on 24G GPU, many on 16G with optimizations
-*   **DeepSpeed integration** - Train large models on smaller GPUs with gradient checkpointing and optimizer state offload
-*   **S3 training** - Train directly from cloud storage (Cloudflare R2, Wasabi S3)
-*   **EMA support** - Exponential moving average weights for improved stability and quality
+*   **TREAD:** Token-wise dropout for transformer models.
+*   **Masked Loss Training:**  Improved convergence with segmentation/depth guidance.
+*   **Prior Regularization:** Enhanced training stability for improved character consistency.
+*   **Gradient Checkpointing:** Control memory usage/training speed.
+*   **Loss Functions:** L2, Huber, Smooth L1 with scheduling support.
+*   **SNR Weighting:**  Min-SNR gamma weighting for enhanced training dynamics.
 
-### Advanced Training Techniques
+## Model-Specific Features
 
-*   **TREAD** - Token-wise dropout for transformer models, including Kontext training
-*   **Masked loss training** - Superior convergence with segmentation/depth guidance
-*   **Prior regularization** - Enhanced training stability for character consistency
-*   **Gradient checkpointing** - Configurable intervals for memory/speed optimization
-*   **Loss functions** - L2, Huber, Smooth L1 with scheduling support
-*   **SNR weighting** - Min-SNR gamma weighting for improved training dynamics
+*   **Flux Kontext:** Edit conditioning and image-to-image for Flux models.
+*   **PixArt two-stage:** eDiff training pipeline support for PixArt Sigma.
+*   **Flow Matching Models:** Advanced scheduling with beta/uniform distributions.
+*   **HiDream MoE:** Mixture of Experts gate loss augmentation.
+*   **T5 Masked Training:** Enhanced detail for Flux and compatible models.
+*   **QKV Fusion:**  Memory and speed optimizations (Flux, Lumina2).
+*   **TREAD Integration:** Selective token routing for Wan and Flux models.
+*   **Classifier-Free Guidance:** Optional CFG reintroduction for distilled models.
 
-### Model-Specific Features
+## Quickstart Guides
 
-*   **Flux Kontext** - Edit conditioning and image-to-image training for Flux models
-*   **PixArt two-stage** - eDiff training pipeline support for PixArt Sigma
-*   **Flow matching models** - Advanced scheduling with beta/uniform distributions
-*   **HiDream MoE** - Mixture of Experts gate loss augmentation
-*   **T5 masked training** - Enhanced fine details for Flux and compatible models
-*   **QKV fusion** - Memory and speed optimizations (Flux, Lumina2)
-*   **TREAD integration** - Selective token routing for Wan and Flux models
-*   **Classifier-free guidance** - Optional CFG reintroduction for distilled models
-
-### Quickstart Guides
-
-Detailed quickstart guides are available for all supported models:
+Jumpstart your training with comprehensive guides for each supported model:
 
 *   **[Flux.1 Guide](/documentation/quickstart/FLUX.md)** - Includes Kontext editing support and QKV fusion
 *   **[Stable Diffusion 3 Guide](/documentation/quickstart/SD3.md)** - Full and LoRA training with ControlNet
@@ -130,11 +110,11 @@ Detailed quickstart guides are available for all supported models:
 *   **Medium models (2B-8B)**: 16G+ for LoRA, 40G+ for full-rank training
 *   **Small models (<2B)**: 12G+ sufficient for most training types
 
-**Note**: Quantization (int8/fp8/nf4) significantly reduces memory requirements. See individual [quickstart guides](#quickstart-guides) for model-specific requirements.
+**Note:** Quantization (int8/fp8/nf4) significantly reduces memory requirements. Refer to individual [quickstart guides](#quickstart-guides) for model-specific requirements.
 
 ## Setup
 
-SimpleTuner offers straightforward installation with pip:
+Install SimpleTuner easily using pip:
 
 ```bash
 # Base installation (CPU-only PyTorch)
@@ -150,13 +130,10 @@ pip install simpletuner[rocm]
 pip install simpletuner[apple]
 ```
 
-For manual installation or development setup, consult the [installation documentation](/documentation/INSTALL.md).
+For manual installation or development setup, see the [installation documentation](/documentation/INSTALL.md).
 
 ## Troubleshooting
 
-For detailed debug logs, set `export SIMPLETUNER_LOG_LEVEL=DEBUG` in your environment (e.g., `config/config.env`).
-To analyze training loop performance, use `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG`.
-For a comprehensive list of options, refer to the [documentation](/documentation/OPTIONS.md).
-
-## Toolkit
-The toolkit contains scripts to assist with image conversion and data preprocessing.
+*   **Enable Debug Logs:**  Get detailed insights by adding `export SIMPLETUNER_LOG_LEVEL=DEBUG` to your environment.
+*   **Performance Analysis:** Use `SIMPLETUNER_TRAINING_LOOP_LOG_LEVEL=DEBUG` to find configuration issues.
+*   **Comprehensive Options:** Explore the full range of options in [this documentation](/documentation/OPTIONS.md).
