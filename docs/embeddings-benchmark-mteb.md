@@ -1,13 +1,13 @@
 # Massive Text Embedding Benchmark (MTEB)
 
-**Evaluate and compare text embedding models effectively with MTEB, a comprehensive benchmark for sentence and text embeddings.**  [Check out the original repository!](https://github.com/embeddings-benchmark/mteb)
+**Evaluate and compare text embedding models with ease using the Massive Text Embedding Benchmark (MTEB)!**  ([Original Repository](https://github.com/embeddings-benchmark/mteb))
 
 <p align="center">
     <a href="https://github.com/embeddings-benchmark/mteb/releases">
         <img alt="GitHub release" src="https://img.shields.io/github/release/embeddings-benchmark/mteb.svg">
     </a>
-    <a href="https://arxiv.org/abs/2210.07316">
-        <img alt="GitHub release" src="https://img.shields.io/badge/arXiv-2305.14251-b31b1b.svg">
+    <a href="https://arxiv.org/abs/2305.14251">
+        <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2305.14251-b31b1b.svg">
     </a>
     <a href="https://github.com/embeddings-benchmark/mteb/blob/master/LICENSE">
         <img alt="License" src="https://img.shields.io/github/license/embeddings-benchmark/mteb.svg?color=green">
@@ -20,7 +20,7 @@
 <h4 align="center">
     <p>
         <a href="#installation">Installation</a> |
-        <a href="#usage-documentation">Usage</a> |
+        <a href="#usage">Usage</a> |
         <a href="https://huggingface.co/spaces/mteb/leaderboard">Leaderboard</a> |
         <a href="#documentation">Documentation</a> |
         <a href="#citing">Citing</a>
@@ -31,13 +31,16 @@
     <a href="https://huggingface.co/spaces/mteb/leaderboard"><img style="float: middle; padding: 10px 10px 10px 10px;" width="60" height="55" src="./docs/images/hf_logo.png" /></a>
 </h3>
 
-## Key Features:
+MTEB provides a comprehensive framework for evaluating text embedding models across a wide range of tasks and languages, offering a standardized way to compare model performance and track advancements in the field.
 
-*   **Extensive Task Coverage:** Evaluate models across diverse tasks, including semantic textual similarity, classification, retrieval, and more.
-*   **Easy Integration:** Seamlessly integrate with popular libraries like Sentence Transformers.
-*   **Flexible Usage:** Utilize a straightforward API or CLI for evaluation.
-*   **Leaderboard:** Access an interactive leaderboard to compare model performance.
-*   **Reproducibility:** Create reproducible workflows.
+**Key Features:**
+
+*   **Broad Task Coverage:**  Evaluates models on diverse tasks, including classification, retrieval, clustering, and more, spanning multiple languages.
+*   **Easy Integration:**  Simple installation and usage with Python scripts and CLI tools.
+*   **Flexible Model Support:** Works with models from `sentence-transformers` and allows for custom model implementations.
+*   **Interactive Leaderboard:**  Track model performance and compare results on the Hugging Face leaderboard.
+*   **Reproducibility:** Built-in tools and documentation for creating reproducible evaluation workflows.
+*   **Extensive Documentation:** Comprehensive documentation covering all aspects of usage, from installation to contributing.
 
 ## Installation
 
@@ -45,9 +48,9 @@
 pip install mteb
 ```
 
-## Quick Start
+## Usage
 
-### Example using Python Script
+### Evaluating a Model
 ```python
 import mteb
 from sentence_transformers import SentenceTransformer
@@ -61,8 +64,7 @@ evaluation = mteb.MTEB(tasks=tasks)
 results = evaluation.run(model, output_folder=f"results/{model_name}")
 ```
 
-### Example using CLI
-
+### Using the CLI
 ```bash
 mteb available_tasks # list _all_ available tasks
 
@@ -73,58 +75,34 @@ mteb run -m sentence-transformers/all-MiniLM-L6-v2 \
 # if nothing is specified default to saving the results in the results/{model_name} folder
 ```
 
-*Note:*  Using multiple GPUs in parallel can be done with a custom `encode` function (examples in the original README). See [custom models](docs/usage/usage.md#using-a-custom-model) for more information.
+Note that using multiple GPUs in parallel can be done by just having a custom encode function that distributes the inputs to multiple GPUs like e.g. [here](https://github.com/microsoft/unilm/blob/b60c741f746877293bb85eed6806736fc8fa0ffd/e5/mteb_eval.py#L60) or [here](https://github.com/ContextualAI/gritlm/blob/09d8630f0c95ac6a456354bcb6f964d7b9b6a609/gritlm/gritlm.py#L75). See [custom models](docs/usage/usage.md#using-a-custom-model) for more information.
 
-## Usage Documentation
+## Documentation
 
-| Section | |
-| ------- |- |
-| **General** | |
-| [Evaluating a Model](docs/usage/usage.md#evaluating-a-model) | How to evaluate a model |
-| [Evaluating on different Modalities](docs/usage/usage.md#evaluating-on-different-modalities) | How to evaluate image and image-text tasks |
-| [MIEB](docs/mieb/readme.md) | How to run the Massive Image Embedding Benchmark |
-| **Selecting Tasks** | |
-| [Selecting a benchmark](docs/usage/usage.md#selecting-a-benchmark) | How to select benchmarks |
-| [Task selection](docs/usage/usage.md#task-selection) | How to select and filter tasks |
-| [Selecting Split and Subsets](docs/usage/usage.md#selecting-evaluation-split-or-subsets) | How to select evaluation splits or subsets |
-| [Using a Custom Task](docs/usage/usage.md#using-a-custom-task) | How to evaluate on a custom task |
-| **Selecting a Model** | |
-| [Using a Pre-defined Model](docs/usage/usage.md#using-a-pre-defined-model) | How to run a pre-defined model |
-| [Using a SentenceTransformer Model](docs/usage/usage.md#using-a-sentence-transformer-model) | How to run a model loaded using sentence-transformers |
-| [Using a Custom Model](docs/usage/usage.md#using-a-custom-model) | How to run and implement a custom model |
-| **Running Evaluation** | |
-| [Passing Arguments to the model](docs/usage/usage.md#passing-in-encode-arguments) | How to pass `encode` arguments to the model |
-| [Running Cross Encoders](docs/usage/usage.md#running-cross-encoders-on-reranking) | How to run cross encoders for reranking |
-| [Running Late Interaction (ColBERT)](docs/usage/usage.md#using-late-interaction-models) | How to run late interaction models |
-| [Saving Retrieval Predictions](docs/usage/usage.md#saving-retrieval-task-predictions) | How to save prediction for later analysis |
-| [Caching Embeddings](docs/usage/usage.md#caching-embeddings-to-re-use-them) | How to cache and re-use embeddings |
-| **Leaderboard** | |
-| [Running the Leaderboard Locally](docs/usage/usage.md#running-the-leaderboard-locally) | How to run the leaderboard locally |
-| [Report Data Contamination](docs/usage/usage.md#annotate-contamination) | How to report data contamination for a model |
-| [Loading and working with Results](docs/usage/results.md) | How to load and working with the raw results from the leaderboard, including making result dataframes |
+Find detailed documentation on:
+
+*   **Evaluating a Model:** How to evaluate a model.
+*   **Evaluating on different Modalities:** How to evaluate image and image-text tasks
+*   **MIEB:** How to run the Massive Image Embedding Benchmark
+*   **Selecting Tasks:** How to select benchmarks, tasks, and evaluation splits/subsets.
+*   **Using a Custom Task:**  How to evaluate on a custom task.
+*   **Selecting a Model:**  Using pre-defined models, SentenceTransformer models, and custom models.
+*   **Running Evaluation:** Passing arguments, running cross-encoders, late interaction models, saving retrieval predictions, and caching embeddings.
+*   **Leaderboard:**  Running the leaderboard locally, reporting data contamination, and working with results.
 
 ## Overview
 
 | Overview                       |                                                                                     |
 |--------------------------------|-------------------------------------------------------------------------------------|
-| 📈 [Leaderboard]               | The interactive leaderboard of the benchmark                                        |
-| 📋 [Tasks]                     | Overview of available tasks                                                         |
-| 📐 [Benchmarks]                | Overview of available benchmarks                                                    |
+| 📈 [Leaderboard](https://huggingface.co/spaces/mteb/leaderboard)               | The interactive leaderboard of the benchmark                                        |
+| 📋 [Tasks](docs/tasks.md)                    | Overview of available tasks                                                         |
+| 📐 [Benchmarks](docs/benchmarks.md)                | Overview of available benchmarks                                                    |
 | **Contributing**               |                                                                                     |
-| 🤖 [Adding a model]            | How to submit a model to MTEB and to the leaderboard                                |
-| 👩‍🔬 [Reproducible workflows]    | How to create reproducible workflows with MTEB                                      |
-| 👩‍💻 [Adding a dataset]          | How to add a new task/dataset to MTEB                                               |
-| 👩‍💻 [Adding a benchmark]        | How to add a new benchmark to MTEB and to the leaderboard                           |
-| 🤝 [Contributing]              | How to contribute to MTEB and set it up for development                             |
-
-[Tasks]: docs/tasks.md
-[Benchmarks]: docs/benchmarks.md
-[Contributing]: CONTRIBUTING.md
-[Adding a model]: docs/adding_a_model.md
-[Adding a dataset]: docs/adding_a_dataset.md
-[Adding a benchmark]: docs/adding_a_benchmark.md
-[Leaderboard]: https://huggingface.co/spaces/mteb/leaderboard
-[Reproducible workflows]: docs/reproducible_workflow.md
+| 🤖 [Adding a model](docs/adding_a_model.md)            | How to submit a model to MTEB and to the leaderboard                                |
+| 👩‍🔬 [Reproducible workflows](docs/reproducible_workflow.md)    | How to create reproducible workflows with MTEB                                      |
+| 👩‍💻 [Adding a dataset](docs/adding_a_dataset.md)          | How to add a new task/dataset to MTEB                                               |
+| 👩‍💻 [Adding a benchmark](docs/adding_a_benchmark.md)        | How to add a new benchmark to MTEB and to the leaderboard                           |
+| 🤝 [Contributing](CONTRIBUTING.md)              | How to contribute to MTEB and set it up for development                             |
 
 ## Citing
 

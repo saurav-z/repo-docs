@@ -1,15 +1,15 @@
-# Kitten TTS: High-Quality Text-to-Speech in a Tiny Package
+# Kitten TTS: Lightweight, High-Quality Text-to-Speech (TTS)
 
-**Kitten TTS offers realistic, high-quality text-to-speech synthesis in an incredibly lightweight package, making it perfect for deployment on any device.** ( [Original Repository](https://github.com/KittenML/KittenTTS) )
+**Bring your text to life with Kitten TTS, a cutting-edge, open-source text-to-speech model that delivers realistic voices with exceptional efficiency.** [Visit the original repo](https://github.com/KittenML/KittenTTS).
 
-## Key Features
+## Key Features:
 
-*   **Ultra-Lightweight:** The model size is less than 25MB, enabling easy deployment.
-*   **CPU-Optimized:** Runs efficiently on any device without requiring a GPU.
-*   **High-Quality Voices:** Choose from several premium voice options for a natural listening experience.
-*   **Fast Inference:** Optimized for real-time speech synthesis, ensuring quick generation of audio.
+*   **Ultra-Lightweight:** The model size is under 25MB, perfect for resource-constrained environments.
+*   **CPU-Optimized:** Runs seamlessly on any device without the need for a GPU.
+*   **High-Quality Voices:** Experience a range of premium voice options for diverse applications.
+*   **Fast Inference:** Enjoy real-time speech synthesis with optimized performance.
 
-## Getting Started
+## Getting Started: Quick Installation & Usage
 
 ### Installation
 
@@ -19,9 +19,9 @@ Install Kitten TTS using pip:
 pip install https://github.com/KittenML/KittenTTS/releases/download/0.1/kittentts-0.1.0-py3-none-any.whl
 ```
 
-### Basic Usage
+### Basic Usage Example
 
-Here's how to generate speech from text:
+Generate speech from text with just a few lines of code:
 
 ```python
 from kittentts import KittenTTS
@@ -36,17 +36,17 @@ import soundfile as sf
 sf.write('output.wav', audio, 24000)
 ```
 
-## System Requirements
+## System Requirements:
 
-Kitten TTS is designed to run on virtually any system.
+Kitten TTS is designed to be versatile and runs on any device without specialized hardware.
 
-## Stay Connected
+## Stay Connected and Get Support:
 
-*   [Join our Discord](https://discord.com/invite/VJ86W4SURW)
-*   [Request Custom Support](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
-*   Email us: info@stellonlabs.com
+*   **Join our Discord:** [Discord Link](https://discord.com/invite/VJ86W4SURW)
+*   **Custom Support:** [Support Form](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
+*   **Email:** [info@stellonlabs.com](mailto:info@stellonlabs.com)
 
-## Future Development
+## Development Roadmap
 
 *   [x] Release a preview model
 *   [ ] Release the fully trained model weights

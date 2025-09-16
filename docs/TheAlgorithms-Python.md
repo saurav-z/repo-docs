@@ -1,48 +1,60 @@
-<!-- Title: -->
 <div align="center">
-  <a href="https://github.com/TheAlgorithms/Python">
+<!-- Title: -->
+  <a href="https://github.com/TheAlgorithms/">
     <img src="https://raw.githubusercontent.com/TheAlgorithms/website/1cd824df116b27029f17c2d1b42d81731f28a920/public/logo.svg" height="100" alt="The Algorithms Python Logo">
   </a>
-  <h1><a href="https://github.com/TheAlgorithms/Python">The Algorithms - Python</a></h1>
+  <h1><a href="https://github.com/TheAlgorithms/">The Algorithms - Python</a></h1>
+
+<!-- Labels: -->
+  <!-- First row: -->
+  <a href="https://gitpod.io/#https://github.com/TheAlgorithms/Python">
+    <img src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod&style=flat-square" height="20" alt="Gitpod Ready-to-Code">
+  </a>
+  <a href="https://github.com/TheAlgorithms/Python/blob/master/CONTRIBUTING.md">
+    <img src="https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square" height="20" alt="Contributions Welcome">
+  </a>
+  <img src="https://img.shields.io/github/repo-size/TheAlgorithms/Python.svg?label=Repo%20size&style=flat-square" height="20" alt="Repository Size">
+  <a href="https://the-algorithms.com/discord">
+    <img src="https://img.shields.io/discord/808045925556682782.svg?logo=discord&colorB=7289DA&style=flat-square" height="20" alt="Discord chat">
+  </a>
+  <a href="https://gitter.im/TheAlgorithms/community">
+    <img src="https://img.shields.io/badge/Chat-Gitter-ff69b4.svg?label=Chat&logo=gitter&style=flat-square" height="20" alt="Gitter chat">
+  </a>
+
+  <!-- Second row: -->
+  <br>
+  <a href="https://github.com/TheAlgorithms/Python/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/TheAlgorithms/Python/build.yml?branch=master&label=CI&logo=github&style=flat-square" height="20" alt="GitHub Workflow Status">
+  </a>
+  <a href="https://github.com/pre-commit/pre-commit">
+    <img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square" height="20" alt="pre-commit">
+  </a>
+  <a href="https://docs.astral.sh/ruff/formatter/">
+    <img src="https://img.shields.io/static/v1?label=code%20style&message=ruff&color=black&style=flat-square" height="20" alt="code style: black">
+  </a>
 </div>
 
 <!-- Short description: -->
-<p align="center"><b>Explore and learn fundamental algorithms implemented in Python for educational purposes.</b></p>
+<h3>Learn and explore fundamental computer science concepts with The Algorithms - Python, a comprehensive collection of algorithms implemented in Python.</h3>
+
+**For educational purposes only.** Implementations are for learning purposes and may be less efficient than Python's standard library. Use them at your discretion.  **[View the original repository](https://github.com/TheAlgorithms/Python).**
 
 ## Key Features
 
-*   **Comprehensive Algorithm Collection:** A vast library of algorithms covering various computer science concepts.
-*   **Educational Resource:** Designed to help you understand and learn about algorithms through practical Python implementations.
-*   **Community-Driven:** Benefit from a collaborative environment with active community channels for support and discussion.
-*   **Easy to Contribute:** Open to contributions, with clear guidelines for adding new algorithms or improving existing ones.
-
-## Why Use The Algorithms - Python?
-
-This repository provides a valuable resource for anyone looking to learn, practice, and understand algorithms. Whether you're a student, a software developer, or simply curious about computer science, this project offers a hands-on approach to learning core algorithmic concepts.
+*   **Extensive Algorithm Implementations:** Explore a vast library of algorithms across various domains.
+*   **Python-Based:** All algorithms are implemented in Python, making them accessible and easy to understand.
+*   **Educational Resource:** Perfect for learning and understanding fundamental computer science concepts.
+*   **Community Driven:** Benefit from a collaborative community and contribute your own algorithms.
+*   **Well-Documented:** Code is intended to be readable and easy to follow for educational value.
 
 ## Getting Started
 
-*   **Contribute:** Before contributing, please review the [Contribution Guidelines](CONTRIBUTING.md).
-*   **Explore:** Browse the [directory](DIRECTORY.md) for easy navigation and a better overview of the project.
+Before contributing, please review the [Contribution Guidelines](CONTRIBUTING.md).
 
-## Community and Support
+## Community Channels
 
-Join our vibrant community to ask questions, get help, and connect with other algorithm enthusiasts:
+Join our community on [Discord](https://the-algorithms.com/discord) and [Gitter](https://gitter.im/TheAlgorithms/community) to ask questions and get help.
 
-*   [Discord](https://the-algorithms.com/discord)
-*   [Gitter](https://gitter.im/TheAlgorithms/community)
+## Algorithm Directory
 
-## Additional Resources
-
-*   **Gitpod:** <a href="https://gitpod.io/#https://github.com/TheAlgorithms/Python"><img src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod&style=flat-square" height="20" alt="Gitpod Ready-to-Code"></a>
-*   **Contributions Welcome:** <a href="https://github.com/TheAlgorithms/Python/blob/master/CONTRIBUTING.md"><img src="https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square" height="20" alt="Contributions Welcome"></a>
-*   **Repository Size:** <img src="https://img.shields.io/github/repo-size/TheAlgorithms/Python.svg?label=Repo%20size&style=flat-square" height="20">
-*   **Continuous Integration:** <a href="https://github.com/TheAlgorithms/Python/actions"><img src="https://img.shields.io/github/actions/workflow/status/TheAlgorithms/Python/build.yml?branch=master&label=CI&logo=github&style=flat-square" height="20" alt="GitHub Workflow Status"></a>
-*   **Pre-commit:** <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square" height="20" alt="pre-commit"></a>
-*   **Code Style:** <a href="https://docs.astral.sh/ruff/formatter/"><img src="https://img.shields.io/static/v1?label=code%20style&message=ruff&color=black&style=flat-square" height="20" alt="code style: black"></a>
-
-## Important Note
-
-The implementations provided are for learning purposes and may not be as optimized as those in the Python standard library. Use them at your discretion.
-
-[Link back to original repo](https://github.com/TheAlgorithms/Python)
+Browse the [directory](DIRECTORY.md) for easy navigation and a better overview of the project's contents.

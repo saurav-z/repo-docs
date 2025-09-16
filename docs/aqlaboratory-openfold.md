@@ -3,33 +3,38 @@ _Figure: Comparison of OpenFold and AlphaFold2 predictions to the experimental s
 
 # OpenFold: Replicating AlphaFold 2 for Protein Structure Prediction
 
-**OpenFold is a PyTorch-based, trainable reproduction of DeepMind's groundbreaking AlphaFold 2, empowering researchers to explore and advance protein structure prediction.**
+**OpenFold offers a powerful, trainable PyTorch implementation of DeepMind's groundbreaking AlphaFold 2, enabling advancements in protein structure prediction.** 
 
-[![Documentation](https://img.shields.io/badge/documentation-openfold.readthedocs.io-blue)](https://openfold.readthedocs.io/en/latest/)
-[![GitHub](https://img.shields.io/github/stars/aqlaboratory/openfold?style=social)](https://github.com/aqlaboratory/openfold)
+[View the original repository on GitHub](https://github.com/aqlaboratory/openfold)
 
 ## Key Features
 
-*   **Faithful Reproduction:** OpenFold is built to mirror the architecture and functionality of AlphaFold 2.
-*   **Trainable Model:** Enables users to fine-tune the model with custom datasets and explore its learning mechanisms.
-*   **Open Source:** Benefit from the Apache 2.0 license, allowing for wide use and modification.
-*   **Comprehensive Documentation:** Detailed guides for installation, inference, and training are available.
+*   **Faithful Reproduction:** Built as a direct implementation of AlphaFold 2, ensuring accurate and reliable protein structure predictions.
+*   **Trainable Model:**  Offers the ability to train and customize the model, opening avenues for research and optimization.
+*   **PyTorch Implementation:** Leverages the flexibility and power of PyTorch for efficient model development and deployment.
+*   **Community-Driven:** Open to contributions and improvements from the community, fostering collaborative advancements.
 
-## Documentation & Getting Started
+## Documentation and Resources
 
-For detailed instructions on installing and using OpenFold, including model inference and training procedures, please refer to our comprehensive documentation: [openfold.readthedocs.io](https://openfold.readthedocs.io/en/latest/)
+For detailed information on installation, model inference, and training, please refer to our comprehensive documentation:
 
-## Copyright & Licensing
+*   [OpenFold Documentation](https://openfold.readthedocs.io/en/latest/)
 
-OpenFold's source code is licensed under the permissive [Apache Licence, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). Note that the pretrained parameters are licensed under the CC BY 4.0 license.
+## Copyright and Licensing
+
+*   OpenFold is licensed under the Apache License, Version 2.0.
+*   Pretrained parameters (downloaded by the installation script) are licensed under CC BY 4.0.
 
 ## Contributing
 
-We encourage community contributions! Feel free to submit issues for any problems encountered or pull requests for improvements.
+We welcome contributions! If you encounter any issues or have suggestions, please:
+
+*   [Create an issue](https://github.com/aqlaboratory/openfold/issues) to report problems.
+*   Submit pull requests to help improve OpenFold.
 
 ## Citing OpenFold
 
-If you utilize OpenFold in your research, please cite our paper:
+If you use OpenFold in your research, please cite our paper:
 
 ```bibtex
 @article {Ahdritz2022.11.20.517210,
@@ -44,6 +49,7 @@ If you utilize OpenFold in your research, please cite our paper:
 	journal = {bioRxiv}
 }
 ```
+
 If you use OpenProteinSet, please also cite:
 
 ```bibtex
@@ -57,8 +63,4 @@ If you use OpenProteinSet, please also cite:
 }
 ```
 
-When citing OpenFold, please also cite [AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) and [AlphaFold-Multimer](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v1) if applicable.
-
-## Get Involved
-
-Explore the source code, contribute, and stay up-to-date on the latest developments by visiting the [OpenFold repository](https://github.com/aqlaboratory/openfold).
+**Please also cite [AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) and [AlphaFold-Multimer](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v1) if applicable.**

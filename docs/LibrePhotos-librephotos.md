@@ -4,47 +4,46 @@
 <img src="https://hosted.weblate.org/widgets/librephotos/-/librephotos-frontend/svg-badge.svg" alt="Translation status" />
 </a>
 
-# LibrePhotos: Your Self-Hosted, Open-Source Photo Management Solution
+# LibrePhotos: Your Self-Hosted Photo Management Solution
 
-**LibrePhotos** is a powerful and feature-rich self-hosted photo management solution, offering an open-source alternative to popular cloud services.  [Learn more on GitHub](https://github.com/LibrePhotos/librephotos).
+**Tired of relying on cloud services for your photos?** LibrePhotos is a powerful, open-source photo management system that gives you complete control over your memories. ([Back to the original repo](https://github.com/LibrePhotos/librephotos))
+
+[![](https://github.com/LibrePhotos/librephotos/blob/dev/screenshots/mockups_main_fhd.png?raw=true)](https://github.com/LibrePhotos/librephotos/blob/dev/screenshots/mockups_main_fhd.png?raw=true)
+<sub>Mockup designed by rawpixel.com / Freepik</sub>
 
 ## Key Features
 
-*   **Comprehensive Media Support:**  Supports all photo types, including RAW, and videos.
-*   **Organized Timeline View:**  Easily browse your photos chronologically.
-*   **Automated Organization:** Scans your file system, generating albums based on events (e.g., "Thursday in Berlin").
-*   **Advanced Search Capabilities:** Includes face recognition, object/scene detection, semantic image search, and metadata search.
-*   **Multi-User Support:**  Allows multiple users to access and manage photos.
-*   **Reverse Geocoding:**  Maps your photos based on location data.
+*   **Comprehensive Media Support:** Handles photos (including RAW) and videos seamlessly.
+*   **Intelligent Organization:** Features a timeline view, album generation based on events, and powerful search capabilities.
+*   **Advanced AI-Powered Features:** Includes face recognition & classification, object/scene detection, and semantic image search.
+*   **Multi-User Support:** Share your photos with friends and family.
+*   **Automatic Organization:** Scans your file system to automatically organize your photos.
+*   **Metadata Support:** Search by metadata like dates, locations and more!
 
-## Why Choose LibrePhotos?
+## Demo
 
-*   **Full Control:** Own and control your photo library on your own hardware.
-*   **Open-Source & Free:** Benefit from community contributions and avoid vendor lock-in.
-*   **Advanced Features:** Enjoy features like face recognition, object detection, and smart search capabilities.
-*   **Privacy Focused:** Protect your photos by keeping them local.
+*   **Stable Demo:** [https://demo1.librephotos.com/](https://demo1.librephotos.com/) (User: `demo`, Password: `demo1234`)
+*   **Development Demo:** [https://demo2.librephotos.com/](https://demo2.librephotos.com/) (User: `demo`, Password: `demo1234`)
 
 ## Getting Started
 
-*   **Demo:** Explore a stable demo at [https://demo1.librephotos.com/](https://demo1.librephotos.com/) (User: `demo`, Password: `demo1234`). A development demo is also available at [https://demo2.librephotos.com/](https://demo2.librephotos.com/) (same credentials).
-*   **Installation:** Detailed installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install).
-*   **Development Videos:** Watch development progress on [Niaz Faridani-Rad's YouTube channel](https://www.youtube.com/channel/UCZJ2pk2BPKxwbuCV9LWDR0w)
+Comprehensive installation instructions are available in the [documentation](https://docs.librephotos.com/docs/installation/standard-install).
 
 ## How to Contribute
 
-We welcome contributions from the community!
+We welcome contributions of all kinds!
 
-*   ⭐ **Star** the repository on GitHub to show your support!
-*   🚀 **Develop:** Follow the [development guide](https://docs.librephotos.com/docs/development/dev-install) to get started in under 30 minutes.
-*   🗒️ **Documentation:** Improve the documentation by submitting a pull request [here](https://github.com/LibrePhotos/librephotos.docs)
+*   ⭐ **Star** the repository!
+*   🚀 **Development:** Follow [this guide](https://docs.librephotos.com/docs/development/dev-install) to get started in minutes.
+*   🗒️ **Documentation:** Improve the docs by submitting a pull request [here](https://github.com/LibrePhotos/librephotos.docs).
 *   🧪 **Testing:** Help find bugs by using the `dev` tag and reporting issues.
-*   🧑‍🤝‍🧑 **Outreach:**  Share LibrePhotos with others!
-*   🌐 **Translations:**  Make LibrePhotos accessible to more users with [weblate](https://hosted.weblate.org/engage/librephotos/).
-*   💸 [**Donate**](https://github.com/sponsors/derneuere) to support the developers.
+*   🧑‍🤝‍🧑 **Outreach:** Spread the word about LibrePhotos!
+*   🌐 **Translations:** Make LibrePhotos accessible to more people via [weblate](https://hosted.weblate.org/engage/librephotos/).
+*   💸 [**Donate**](https://github.com/sponsors/derneuere) to support development.
 
-## Technologies Used
+## Technology Stack
 
-LibrePhotos leverages several powerful open-source technologies:
+LibrePhotos leverages the following technologies:
 
 *   **Image Conversion:** [ImageMagick](https://github.com/ImageMagick/ImageMagick)
 *   **Video Conversion:** [FFmpeg](https://github.com/FFmpeg/FFmpeg)
@@ -56,3 +55,16 @@ LibrePhotos leverages several powerful open-source technologies:
 *   **Reverse Geocoding:** [geopy](https://github.com/geopy/geopy)
 
 [discord]: https://discord.gg/xwRvtSDGWb
+```
+Key improvements and SEO considerations:
+
+*   **Headline:** Optimized the title for search (includes the target keyword "self-hosted photo management").
+*   **Hook:** Added a concise and compelling opening sentence to grab the reader's attention.
+*   **Bulleted Key Features:**  Clearly listed the core benefits.
+*   **Sections:** Used clear headings (Installation, Contributing, Technology Stack, etc.).
+*   **Call to Action:** Encouraged users to explore the demo and contribute.
+*   **Links:** Included links to the original repo and relevant resources.
+*   **SEO Keywords:** Incorporated relevant keywords like "photo management," "self-hosted," "open-source," and feature names.
+*   **Visual Appeal:** Maintained the original images and links.
+*   **Conciseness:** Removed unnecessary information, focusing on the core message.
+*   **Formatting:**  Utilized Markdown for readability and structure.

@@ -1,247 +1,232 @@
-# Hunyuan-MT: State-of-the-Art Machine Translation Models
+# Hunyuan-MT: State-of-the-Art Open-Source Translation Models
 
-**Hunyuan-MT offers high-quality machine translation across 33 languages, including Chinese minority languages, delivering leading performance and open-source solutions.**  [Visit the Original Repository](https://github.com/Tencent-Hunyuan/Hunyuan-MT)
+**Hunyuan-MT empowers seamless multilingual communication with cutting-edge translation technology.**  Check out the original repository [here](https://github.com/Tencent-Hunyuan/Hunyuan-MT).
 
----
+<p align="center">
+ <img src="https://dscache.tencent-cloud.cn/upload/uploader/hunyuan-64b418fd052c033b228e04bc77bbc4b54fd7f5bc.png" width="400"/> <br>
+</p>
 
-## Key Features & Advantages
+## Key Features
 
-*   **Top Performance:** Achieved first place in 30 out of 31 language categories in the WMT25 competition.
-*   **Industry-Leading Models:** Hunyuan-MT-7B sets a high bar for models of its size, and Hunyuan-MT-Chimera-7B is the first open-source ensemble translation model.
-*   **Comprehensive Framework:** Implements a complete training process from pretraining to ensemble reinforcement learning, SOTA results are acheived.
-*   **Multilingual Support:** Supports mutual translation between 33 languages.
-*   **FP8 & INT4 Quantization:**  Support for models quantized with AngelSlim for reduced resource usage.
+*   🏆 **Industry-Leading Performance:** Achieved first place in 30 out of 31 language categories in the WMT25 competition.
+*   ✨ **High-Quality Translation:**  Offers superior translation quality, especially with the Hunyuan-MT-Chimera ensemble model.
+*   🌐 **Multilingual Support:** Supports mutual translation among 33 languages, including Chinese and five Chinese ethnic minority languages.
+*   🛠️ **Open-Source Ensemble Model:**  Hunyuan-MT-Chimera is the first open-source translation ensemble model in the industry.
+*   🔄 **Comprehensive Training Framework:**  Employs an advanced training framework (pretrain -> CPT -> SFT -> translation RL -> ensemble RL) for optimal results.
+*   🚀 **Model Variety:** Available models include both a base translation model and an ensemble model (Hunyuan-MT-Chimera).
 
----
+## Key Advantages
+
+*   **Hunyuan-MT-7B:**  Industry-leading performance among models of a similar size.
+*   **Hunyuan-MT-Chimera-7B:** Elevates translation quality to a new level, setting a new benchmark for open-source models.
 
 ## Quick Links
 
-*   🤗 **Hugging Face:** [Hunyuan-MT Models](https://huggingface.co/collections/tencent/hunyuan-mt-68b42f76d473f82798882597)
-*   🖥️ **Official Website:** [Tencent Hunyuan](https://hunyuan.tencent.com)
-*   🕹️ **Demo:** [Hunyuan Chat Demo](https://hunyuan.tencent.com/chat/HunyuanDefault?from=modelSquare&modelId=hunyuan-mt-7b)
-*   📄 **Technical Report:** [arXiv](https://www.arxiv.org/pdf/2509.05209)
+*   🤗 **Hugging Face:** [Hugging Face Link](https://huggingface.co/collections/tencent/hunyuan-mt-68b42f76d473f82798882597)
+*   🖥️ **Official Website:** [Official Website](https://hunyuan.tencent.com)
+*   🕹️ **Demo:** [Demo](https://hunyuan.tencent.com/chat/HunyuanDefault?from=modelSquare&modelId=hunyuan-mt-7b)
+*   📝 **Technical Report:** [Technical Report](https://www.arxiv.org/pdf/2509.05209)
 
----
+## Model Introduction
 
-## Model Details
+Hunyuan-MT encompasses both a single translation model, Hunyuan-MT-7B, and an ensemble model, Hunyuan-MT-Chimera. The Hunyuan-MT-7B model is designed for direct source-to-target language translation, while the Hunyuan-MT-Chimera model combines multiple translation outputs for enhanced accuracy. The models provide support for mutual translation across 33 languages.
 
-Hunyuan-MT provides the following models:
+## Model Links
 
-| Model Name                | Description                                      | Download                                                              |
-| ------------------------- | ------------------------------------------------ | --------------------------------------------------------------------- |
-| Hunyuan-MT-7B             | Hunyuan 7B translation model                   | [Hugging Face](https://huggingface.co/tencent/Hunyuan-MT-7B)        |
-| Hunyuan-MT-7B-fp8         | Hunyuan 7B translation model, FP8 quantized        | [Hugging Face](https://huggingface.co/tencent/Hunyuan-MT-7B-fp8)    |
-| Hunyuan-MT-Chimera-7B     | Hunyuan 7B translation ensemble model            | [Hugging Face](https://huggingface.co/tencent/Hunyuan-MT-Chimera-7B) |
-| Hunyuan-MT-Chimera-fp8    | Hunyuan 7B translation ensemble model, FP8 quantized | [Hugging Face](https://huggingface.co/tencent/Hunyuan-MT-Chimera-7B-fp8) |
+| Model Name                  | Description                                         | Download                                                                           |
+| :-------------------------- | :-------------------------------------------------- | :--------------------------------------------------------------------------------- |
+| Hunyuan-MT-7B               | Hunyuan 7B translation model                      | 🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-7B)                        |
+| Hunyuan-MT-7B-fp8           | Hunyuan 7B translation model, fp8 quant            | 🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-7B-fp8)                       |
+| Hunyuan-MT-Chimera          | Hunyuan 7B translation ensemble model            | 🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-Chimera-7B)                  |
+| Hunyuan-MT-Chimera-fp8      | Hunyuan 7B translation ensemble model, fp8 quant | 🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-Chimera-7B-fp8)             |
 
----
+## Prompts
 
-## Usage
+### Prompt Templates
 
-### Prompts
+*   **ZH<=>XX Translation:**
 
-Use the appropriate prompt template based on your translation needs:
+```
+把下面的文本翻译成<target_language>，不要额外解释。
 
-*   **ZH <-> XX Translation:**
+<source_text>
+```
 
-    ```
-    把下面的文本翻译成<target_language>，不要额外解释。
+*   **XX<=>XX Translation (Excluding ZH<=>XX):**
 
-    <source_text>
-    ```
+```
+Translate the following segment into <target_language>, without additional explanation.
 
-*   **XX <-> XX Translation (excluding ZH <-> XX):**
-
-    ```
-    Translate the following segment into <target_language>, without additional explanation.
-
-    <source_text>
-    ```
+<source_text>
+```
 
 *   **Hunyuan-MT-Chimera-7B:**
 
-    ```
-    Analyze the following multiple <target_language> translations of the <source_language> segment surrounded in triple backticks and generate a single refined <target_language> translation. Only output the refined translation, do not explain.
+```
+Analyze the following multiple <target_language> translations of the <source_language> segment surrounded in triple backticks and generate a single refined <target_language> translation. Only output the refined translation, do not explain.
 
-    The <source_language> segment:
-    ```<source_text>```
+The <source_language> segment:
+```<source_text>```
 
-    The multiple `<target_language>` translations:
-    1. ```<translated_text1>```
-    2. ```<translated_text2>```
-    3. ```<translated_text3>```
-    4. ```<translated_text4>```
-    5. ```<translated_text5>```
-    6. ```<translated_text6>```
-    ```
-
-### Quickstart with Transformers
-
-1.  **Install Transformers:**
-    ```bash
-    pip install transformers==4.56.0
-    ```
-
-2.  **Example Code:**
-
-    ```python
-    from transformers import AutoModelForCausalLM, AutoTokenizer
-
-    model_name_or_path = "tencent/Hunyuan-MT-7B"
-
-    tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-    model = AutoModelForCausalLM.from_pretrained(model_name_or_path, device_map="auto")
-    messages = [
-        {"role": "user", "content": "Translate the following segment into Chinese, without additional explanation.\n\nIt’s on the house."},
-    ]
-    tokenized_chat = tokenizer.apply_chat_template(
-        messages,
-        tokenize=True,
-        add_generation_prompt=False,
-        return_tensors="pt"
-    )
-
-    outputs = model.generate(tokenized_chat.to(model.device), max_new_tokens=2048)
-    output_text = tokenizer.decode(outputs[0])
-    ```
-
-3.  **Recommended Inference Parameters:**
-
-    ```json
-    {
-      "top_k": 20,
-      "top_p": 0.6,
-      "repetition_penalty": 1.05,
-      "temperature": 0.7
-    }
-    ```
-
----
+The multiple `<target_language>` translations:
+1. ```<translated_text1>```
+2. ```<translated_text2>```
+3. ```<translated_text3>```
+4. ```<translated_text4>```
+5. ```<translated_text5>```
+6. ```<translated_text6>```
+```
 
 ## Supported Languages
 
-| Languages           | Abbr.   | Chinese Names   |
-| ------------------- | ------- | --------------- |
-| Chinese             | zh      | 中文            |
-| English             | en      | 英语            |
-| French              | fr      | 法语            |
-| Portuguese          | pt      | 葡萄牙语        |
-| Spanish             | es      | 西班牙语        |
-| Japanese            | ja      | 日语            |
-| Turkish             | tr      | 土耳其语        |
-| Russian             | ru      | 俄语            |
-| Arabic              | ar      | 阿拉伯语        |
-| Korean              | ko      | 韩语            |
-| Thai                | th      | 泰语            |
-| Italian             | it      | 意大利语        |
-| German              | de      | 德语            |
-| Vietnamese          | vi      | 越南语          |
-| Malay               | ms      | 马来语          |
-| Indonesian          | id      | 印尼语          |
-| Filipino            | tl      | 菲律宾语        |
-| Hindi               | hi      | 印地语          |
-| Traditional Chinese | zh-Hant | 繁体中文        |
-| Polish              | pl      | 波兰语          |
-| Czech               | cs      | 捷克语          |
-| Dutch               | nl      | 荷兰语          |
-| Khmer               | km      | 高棉语          |
-| Burmese             | my      | 缅甸语          |
-| Persian             | fa      | 波斯语          |
-| Gujarati            | gu      | 古吉拉特语      |
-| Urdu                | ur      | 乌尔都语        |
-| Telugu              | te      | 泰卢固语        |
-| Marathi             | mr      | 马拉地语        |
-| Hebrew              | he      | 希伯来语        |
-| Bengali             | bn      | 孟加拉语        |
-| Tamil               | ta      | 泰米尔语        |
-| Ukrainian           | uk      | 乌克兰语        |
-| Tibetan             | bo      | 藏语            |
+| Languages         | Abbr.   | Chinese Names   |
+|-------------------|---------|-----------------|
+| Chinese           | zh      | 中文            |
+| English           | en      | 英语            |
+| French            | fr      | 法语            |
+| Portuguese        | pt      | 葡萄牙语        |
+| Spanish           | es      | 西班牙语        |
+| Japanese          | ja      | 日语            |
+| Turkish           | tr      | 土耳其语        |
+| Russian           | ru      | 俄语            |
+| Arabic            | ar      | 阿拉伯语        |
+| Korean            | ko      | 韩语            |
+| Thai              | th      | 泰语            |
+| Italian           | it      | 意大利语        |
+| German            | de      | 德语            |
+| Vietnamese        | vi      | 越南语          |
+| Malay             | ms      | 马来语          |
+| Indonesian        | id      | 印尼语          |
+| Filipino          | tl      | 菲律宾语        |
+| Hindi             | hi      | 印地语          |
+| Traditional Chinese | zh-Hant| 繁体中文        |
+| Polish            | pl      | 波兰语          |
+| Czech             | cs      | 捷克语          |
+| Dutch             | nl      | 荷兰语          |
+| Khmer             | km      | 高棉语          |
+| Burmese           | my      | 缅甸语          |
+| Persian           | fa      | 波斯语          |
+| Gujarati          | gu      | 古吉拉特语      |
+| Urdu              | ur      | 乌尔都语        |
+| Telugu            | te      | 泰卢固语        |
+| Marathi           | mr      | 马拉地语        |
+| Hebrew            | he      | 希伯来语        |
+| Bengali           | bn      | 孟加拉语        |
+| Tamil             | ta      | 泰米尔语        |
+| Ukrainian         | uk      | 乌克兰语        |
+| Tibetan           | bo      | 藏语            |
 | Kazakh            | kk      | 哈萨克语        |
-| Mongolian           | mn      | 蒙古语          |
-| Uyghur              | ug      | 维吾尔语        |
-| Cantonese           | yue     | 粤语            |
+| Mongolian         | mn      | 蒙古语          |
+| Uyghur            | ug      | 维吾尔语        |
+| Cantonese         | yue     | 粤语            |
 
----
+## Usage
 
-## Fine-tuning
+### Install
+
+```bash
+pip install transformers==4.56.0
+```
+
+### Python Example
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import os
+
+model_name_or_path = "tencent/Hunyuan-MT-7B"
+
+tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
+model = AutoModelForCausalLM.from_pretrained(model_name_or_path, device_map="auto")  # You may want to use bfloat16 and/or move to GPU here
+messages = [
+    {"role": "user", "content": "Translate the following segment into Chinese, without additional explanation.\n\nIt’s on the house."},
+]
+tokenized_chat = tokenizer.apply_chat_template(
+    messages,
+    tokenize=True,
+    add_generation_prompt=False,
+    return_tensors="pt"
+)
+
+outputs = model.generate(tokenized_chat.to(model.device), max_new_tokens=2048)
+output_text = tokenizer.decode(outputs[0])
+```
+
+### Recommended Parameters for Inference
+
+```json
+{
+  "top_k": 20,
+  "top_p": 0.6,
+  "repetition_penalty": 1.05,
+  "temperature": 0.7
+}
+```
+
+## Training
 
 ### Training Data Format
 
-*   If you need to fine-tune our Instruct model, we recommend processing the data into the following format:
+```python
+messages = [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "Why is seawater salty?" },
+    {"role": "assistant", "content": "Seawater is primarily saline due to dissolved salts and minerals. These substances come from the chemical materials in rocks and soil on the Earth's surface, which are carried into the ocean over time. When seawater evaporates, the water vapor leaves, but the salts and minerals remain, making the seawater saltier. Therefore, the salinity of seawater is determined by the amount of salts and minerals it contains."}
+]
 
-    ```python
-    messages = [
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Why is seawater salty?" },
-        {"role": "assistant", "content": "Seawater is primarily saline due to dissolved salts and minerals. These substances come from the chemical materials in rocks and soil on the Earth's surface, which are carried into the ocean over time. When seawater evaporates, the water vapor leaves, but the salts and minerals remain, making the seawater saltier. Therefore, the salinity of seawater is determined by the amount of salts and minerals it contains."}
-    ]
-
-    from transformers import AutoTokenizer
-    tokenizer = AutoTokenizer.from_pretrained("your_tokenizer_path", trust_remote_code=True)
-    train_ids = tokenizer.apply_chat_template(messages)
-    ```
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("your_tokenizer_path", trust_remote_code=True)
+train_ids = tokenizer.apply_chat_template(messages)
+```
 
 ### Train with LLaMA-Factory
 
-1.  **Prerequisites**:
-    *   Install **LLaMA-Factory** (follow the [official guide](https://github.com/hiyouga/LLaMA-Factory)).
-    *   Install **DeepSpeed** (optional, follow the [official guide](https://github.com/deepspeedai/DeepSpeed#installation)).
-    *   **Transformer Library**: Install the correct branch:
-        ```bash
-        pip install git+https://github.com/huggingface/transformers@4970b23cedaf745f963779b4eae68da281e8c6ca
-        ```
-
-2.  **Data Preparation:**
-    *   Organize your data in `json` format, and place it in the `data` directory in `LLaMA-Factory`
-    *   Define your dataset in the `data/dataset_info.json` file.
-
-3.  **Training Execution:**
-
-    *   Copy config files from the `llama_factory_support/example_configs` directory to the `example/hunyuan` directory in `LLaMA-Factory`.
+*   **Prerequisites**: Install LLaMA-Factory, DeepSpeed (optional), and the transformers library with the specified commit.
+*   **Data Preparation**:
+    *   Organize your data in the `sharegpt` format.
+    *   Define your dataset in `data/dataset_info.json`.
+*   **Training Execution**:
+    *   Copy configuration files.
     *   Modify the model path and dataset name in the configuration file `hunyuan_full.yaml`.
-    *   Execute training commands (single or multi-node).
+    *   Run the training command (single-node or multi-node).
 
----
-
-## Quantization & Compression
-
-Hunyuan-MT models are available in both FP8 and INT4 quantized versions for efficient inference, created using [AngelSlim](https://github.com/tencent/AngelSlim).
+## Quantization Compression
 
 ### FP8 Quantization
 
-Use FP8-static quantization.
-
----
+Hunyuan-MT models use FP8-static quantization to improve inference efficiency. The [AngelSlim](https://github.com/tencent/AngelSlim) tool is utilized for model compression.  FP8 quantization converts model weights and activations to an 8-bit floating-point format.
 
 ## Deployment
 
-Deploy your Hunyuan-MT models using:
+### Frameworks
 
-*   **TensorRT-LLM**
-*   **vLLM**
-*   **SGLang**
+You can deploy the model using:
+
+*   TensorRT-LLM
+*   vLLM
+*   SGLang
 
 ### TensorRT-LLM
 
-*   Provides a pre-built Docker image.
-*   Follow the instructions to pull the image, configure, and run the API server.
+*   **Docker Image:** Use pre-built Docker images.
+*   **Configuration:** Create an extra configuration file.
+*   **Start the API Server:** Use the provided command to launch the server.
 
 ### vLLM
 
-*   Supports serving the model with bfloat16, and quantized weights.
-*   Follow the instructions to install dependencies, and set environment variables.
-*   Deploy the API server
+*   **Install:** Install the transformers library.
+*   **Model Download:** Download model files (from Hugging Face or ModelScope).
+*   **API Server:** Start the API server.
+*   **Request:** Send requests to the API endpoint.
 
 ### SGLang
 
-*   Provides a pre-built Docker image.
-*   Follow the instructions to pull the image, and start the API server.
+*   **Docker Image:** Use pre-built Docker images.
+*   **Start the API Server:** Use the provided command to launch the server.
 
----
+## Citation
 
-## Citing Hunyuan-MT
-
-If you use Hunyuan-MT, please cite the following:
+If you use Hunyuan-MT in your research, please cite the following paper:
 
 ```bibtex
 @misc{hunyuan_mt,
@@ -255,8 +240,6 @@ If you use Hunyuan-MT, please cite the following:
 }
 ```
 
----
+## Contact Us
 
-## Contact
-
-For inquiries, contact our open-source team or via email: hunyuan_opensource@tencent.com.
+For inquiries, feedback, or to connect with the R&D and product teams, please contact the open-source team at hunyuan\_opensource@tencent.com.

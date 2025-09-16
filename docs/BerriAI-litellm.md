@@ -1,12 +1,27 @@
 <h1 align="center">
-    🚀 LiteLLM: Unified LLM API Access
+    🚀 LiteLLM: The Universal LLM API Client 
 </h1>
 
 <p align="center">
-    **Call all LLM APIs using the OpenAI format**, simplifying your LLM integrations with providers like Bedrock, Hugging Face, VertexAI, TogetherAI, Azure, OpenAI, Groq, and more.
+    <b>Seamlessly call any LLM API using the OpenAI format, unlocking effortless model interoperability and powerful features.</b>
     <br>
-    <a href="https://github.com/BerriAI/litellm">
-        <img src="https://img.shields.io/github/stars/BerriAI/litellm?style=social" alt="GitHub stars">
+    <a href="https://github.com/BerriAI/litellm" target="_blank">
+        <img src="https://img.shields.io/github/stars/BerriAI/litellm?style=social" alt="GitHub Stars">
+    </a>
+    <a href="https://pypi.org/project/litellm/" target="_blank">
+        <img src="https://img.shields.io/pypi/v/litellm.svg" alt="PyPI Version">
+    </a>
+    <a href="https://discord.gg/wuPM9dRgDw">
+        <img src="https://img.shields.io/discord/1071779711634403892?label=Discord&logo=discord&style=flat-square" alt="Discord">
+    </a>
+    <a href="https://wa.link/huol9n">
+        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=WhatsApp&color=success&logo=WhatsApp&style=flat-square" alt="Whatsapp">
+    </a>
+    <a href="https://www.litellm.ai/support">
+        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Slack&color=black&logo=Slack&style=flat-square" alt="Slack">
+    </a>
+    <a href="https://docs.litellm.ai/docs/">
+        <img src="https://img.shields.io/badge/Documentation-Docs-blue" alt="Docs">
     </a>
 </p>
 
@@ -17,111 +32,88 @@
     </a>
 </p>
 
-<h4 align="center">
-    <a href="https://docs.litellm.ai/docs/simple_proxy" target="_blank">LiteLLM Proxy Server (LLM Gateway)</a> |
-    <a href="https://docs.litellm.ai/docs/hosted" target="_blank"> Hosted Proxy (Preview)</a> |
-    <a href="https://docs.litellm.ai/docs/enterprise"target="_blank">Enterprise Tier</a>
-</h4>
+---
 
-<h4 align="center">
-    <a href="https://pypi.org/project/litellm/" target="_blank">
-        <img src="https://img.shields.io/pypi/v/litellm.svg" alt="PyPI Version">
-    </a>
-    <a href="https://www.ycombinator.com/companies/berriai">
-        <img src="https://img.shields.io/badge/Y%20Combinator-W23-orange?style=flat-square" alt="Y Combinator W23">
-    </a>
-    <a href="https://wa.link/huol9n">
-        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=WhatsApp&color=success&logo=WhatsApp&style=flat-square" alt="Whatsapp">
-    </a>
-    <a href="https://discord.gg/wuPM9dRgDw">
-        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
-    </a>
-    <a href="https://www.litellm.ai/support">
-        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Slack&color=black&logo=Slack&style=flat-square" alt="Slack">
-    </a>
-</h4>
+**LiteLLM** simplifies LLM integration by providing a unified API client that allows you to easily switch between different LLM providers without code changes. Build once, deploy everywhere!
 
 ## Key Features
 
-*   **Unified API Access:** Call various LLM APIs (OpenAI, Azure, Anthropic, etc.) using a single, consistent OpenAI-compatible format.
-*   **Consistent Output:** Standardized text responses always available at `['choices'][0]['message']['content']`.
-*   **Intelligent Routing:** Built-in retry/fallback logic across multiple deployments for high availability (e.g., Azure/OpenAI).
-*   **LLM Gateway (Proxy Server):** Manage costs, rate limits, and user access with the LiteLLM Proxy Server.
-*   **Async Support:** Utilize asynchronous calls for non-blocking operations.
-*   **Streaming Support:** Get real-time responses with streaming capabilities.
-*   **Observability:** Integrated logging and monitoring with support for tools like Lunary, MLflow, Langfuse, and more.
+*   **Universal API:** Call any LLM using the OpenAI format.
+*   **Consistent Output:** Get consistent responses across providers.
+*   **Intelligent Routing:** Built-in retry and fallback logic for high availability.
+*   **Cost Management:** Set budgets and rate limits with the LiteLLM Proxy Server (LLM Gateway).
+*   **Streaming Support:**  Enable streaming responses for all supported models.
+*   **Asynchronous Operations:** Benefit from asynchronous completion for improved performance.
+*   **Observability:** Seamlessly integrates with logging tools (Lunary, MLflow, Langfuse, etc.).
+*   **Comprehensive Provider Support:** Support for Bedrock, Hugging Face, VertexAI, OpenAI, Azure, Groq, and many more (see the table below).
 
-**[Get Started with LiteLLM on GitHub](https://github.com/BerriAI/litellm)**
+**[Explore the LiteLLM Docs](https://docs.litellm.ai/docs/)**
 
-## Quickstart
+## Quick Start
 
-1.  **Installation:**
+Install LiteLLM:
 
-    ```bash
-    pip install litellm
-    ```
+```bash
+pip install litellm
+```
 
-2.  **Example Usage:**
+Example Usage:
 
-    ```python
-    from litellm import completion
-    import os
+```python
+from litellm import completion
+import os
 
-    # Set your API keys as environment variables
-    os.environ["OPENAI_API_KEY"] = "your-openai-key"
-    os.environ["ANTHROPIC_API_KEY"] = "your-anthropic-key"
+# Set your API keys
+os.environ["OPENAI_API_KEY"] = "your-openai-key"
+os.environ["ANTHROPIC_API_KEY"] = "your-anthropic-key"
 
-    messages = [{"content": "Hello, how are you?","role": "user"}]
+messages = [{"content": "Hello, how are you?", "role": "user"}]
 
-    # Call OpenAI
-    response = completion(model="openai/gpt-4o", messages=messages)
+# OpenAI call
+response = completion(model="openai/gpt-4o", messages=messages)
 
-    # Call Anthropic
-    response = completion(model="anthropic/claude-sonnet-4-20250514", messages=messages)
-    print(response)
-    ```
+# Anthropic call
+response = completion(model="anthropic/claude-sonnet-4-20250514", messages=messages)
+print(response)
+```
 
-    ### Response (OpenAI Format)
+### Response (OpenAI Format)
 
-    ```json
-    {
-        "id": "chatcmpl-1214900a-6cdd-4148-b663-b5e2f642b4de",
-        "created": 1751494488,
-        "model": "claude-sonnet-4-20250514",
-        "object": "chat.completion",
-        "system_fingerprint": null,
-        "choices": [
-            {
-                "finish_reason": "stop",
-                "index": 0,
-                "message": {
-                    "content": "Hello! I'm doing well, thank you for asking. I'm here and ready to help with whatever you'd like to discuss or work on. How are you doing today?",
-                    "role": "assistant",
-                    "tool_calls": null,
-                    "function_call": null
-                }
+```json
+{
+    "id": "chatcmpl-1214900a-6cdd-4148-b663-b5e2f642b4de",
+    "created": 1751494488,
+    "model": "claude-sonnet-4-20250514",
+    "object": "chat.completion",
+    "system_fingerprint": null,
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "Hello! I'm doing well, thank you for asking. I'm here and ready to help with whatever you'd like to discuss or work on. How are you doing today?",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null
             }
-        ],
-        "usage": {
-            "completion_tokens": 39,
-            "prompt_tokens": 13,
-            "total_tokens": 52,
-            "completion_tokens_details": null,
-            "prompt_tokens_details": {
-                "audio_tokens": null,
-                "cached_tokens": 0
-            },
-            "cache_creation_input_tokens": 0,
-            "cache_read_input_tokens": 0
         }
+    ],
+    "usage": {
+        "completion_tokens": 39,
+        "prompt_tokens": 13,
+        "total_tokens": 52,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
     }
-    ```
+}
+```
 
-    Use `model=<provider_name>/<model_name>` to specify the model.  Refer to [provider docs](https://docs.litellm.ai/docs/providers) for details.
-
-## Advanced Usage
-
-### Async
+## Asynchronous Completion
 
 ```python
 from litellm import acompletion
@@ -137,7 +129,7 @@ response = asyncio.run(test_get_response())
 print(response)
 ```
 
-### Streaming
+## Streaming
 
 ```python
 from litellm import completion
@@ -150,6 +142,7 @@ response = completion('anthropic/claude-sonnet-4-20250514', messages, stream=Tru
 for part in response:
     print(part)
 ```
+
 ### Response chunk (OpenAI Format)
 
 ```json
@@ -180,15 +173,15 @@ for part in response:
 }
 ```
 
-## Logging Observability
+## Logging and Observability
 
-Integrate with logging tools like Lunary, MLflow, Langfuse, and others.
+Integrate with various logging tools:
 
 ```python
 from litellm import completion
 import os
 
-## set env variables for logging tools (when using MLflow, no API key set up is required)
+# Set environment variables for logging tools (e.g., Lunary, Helicone)
 os.environ["LUNARY_PUBLIC_KEY"] = "your-lunary-public-key"
 os.environ["HELICONE_API_KEY"] = "your-helicone-auth-key"
 os.environ["LANGFUSE_PUBLIC_KEY"] = ""
@@ -197,57 +190,51 @@ os.environ["ATHINA_API_KEY"] = "your-athina-api-key"
 
 os.environ["OPENAI_API_KEY"] = "your-openai-key"
 
-# set callbacks
-litellm.success_callback = ["lunary", "mlflow", "langfuse", "athina", "helicone"] # log input/output to lunary, langfuse, supabase, athina, helicone etc
-
-#openai call
-response = completion(model="openai/gpt-4o", messages=[{"role": "user", "content": "Hi 👋 - i'm openai"}])
+# Set callbacks
+litellm.success_callback = ["lunary", "mlflow", "langfuse", "athina", "helicone"]  # Log input/output
 ```
 
 ## LiteLLM Proxy Server (LLM Gateway)
 
-Track spend and load balance across multiple projects with the [LiteLLM Proxy Server (LLM Gateway)](https://docs.litellm.ai/docs/simple_proxy).
+The LiteLLM Proxy provides centralized management and control for your LLM interactions.
 
-*   [Hosted Proxy (Preview)](https://docs.litellm.ai/docs/hosted)
+*   [Hooks for Authentication](https://docs.litellm.ai/docs/proxy/virtual_keys#custom-auth)
+*   [Hooks for Logging](https://docs.litellm.ai/docs/proxy/logging#step-1---create-your-custom-litellm-callback-class)
+*   [Cost Tracking](https://docs.litellm.ai/docs/proxy/virtual_keys#tracking-spend)
+*   [Rate Limiting](https://docs.litellm.ai/docs/proxy/users#set-rate-limits)
 
-The proxy provides:
-
-1.  [Hooks for auth](https://docs.litellm.ai/docs/proxy/virtual_keys#custom-auth)
-2.  [Hooks for logging](https://docs.litellm.ai/docs/proxy/logging#step-1---create-your-custom-litellm-callback-class)
-3.  [Cost tracking](https://docs.litellm.ai/docs/proxy/virtual_keys#tracking-spend)
-4.  [Rate Limiting](https://docs.litellm.ai/docs/proxy/users#set-rate-limits)
-
-## 📖 Proxy Endpoints - [Swagger Docs](https://litellm-api.up.railway.app/)
+**[Hosted Proxy (Preview)](https://docs.litellm.ai/docs/hosted)**
 
 ### Quick Start Proxy - CLI
 
-```bash
+```shell
 pip install 'litellm[proxy]'
 ```
 
-### Step 1: Start litellm proxy
+### Step 1: Start LiteLLM Proxy
 
 ```shell
-$ litellm --model huggingface/bigcode/starcoder
-
-#INFO: Proxy running on http://0.0.0.0:4000
+litellm --model huggingface/bigcode/starcoder
 ```
 
-### Step 2: Make ChatCompletions Request to Proxy
+### Step 2: Make Chat Completions Request to Proxy
 
 > [!IMPORTANT]
 > 💡 [Use LiteLLM Proxy with Langchain (Python, JS), OpenAI SDK (Python, JS) Anthropic SDK, Mistral SDK, LlamaIndex, Instructor, Curl](https://docs.litellm.ai/docs/proxy/user_keys)
 
 ```python
-import openai # openai v1.0.0+
-client = openai.OpenAI(api_key="anything",base_url="http://0.0.0.0:4000") # set proxy to base_url
+import openai  # openai v1.0.0+
+client = openai.OpenAI(api_key="anything", base_url="http://0.0.0.0:4000")  # set proxy to base_url
 # request sent to model set on litellm proxy, `litellm --model`
-response = client.chat.completions.create(model="gpt-3.5-turbo", messages = [
-    {
-        "role": "user",
-        "content": "this is a test request, write a short poem"
-    }
-])
+response = client.chat.completions.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {
+            "role": "user",
+            "content": "this is a test request, write a short poem",
+        }
+    ],
+)
 
 print(response)
 ```
@@ -279,6 +266,7 @@ docker-compose up
 ```
 
 UI on `/ui` on your proxy server
+
 ![ui_3](https://github.com/BerriAI/litellm/assets/29436595/47c97d5e-b9be-4839-b28c-43d7f4f10033)
 
 Set budgets and rate limits across multiple projects
@@ -304,9 +292,7 @@ curl 'http://0.0.0.0:4000/key/generate' \
 
 ## Supported Providers
 
-Comprehensive support for a wide range of LLM providers.  See the table below for available features.
-
-| Provider                                                                            | [Completion](https://docs.litellm.ai/docs/#basic-usage) | [Streaming](https://docs.litellm.ai/docs/completion/stream#streaming-responses) | [Async Completion](https://docs.litellm.ai/docs/completion/stream#async-completion) | [Async Streaming](https://docs.litellm.ai/docs/completion/stream#async-streaming) | [Async Embedding](https://docs.litellm.ai/docs/embedding/supported_embedding) | [Async Image Generation](https://docs.litellm.ai/docs/image_generation) |
+| Provider                                                                            | Completion | Streaming | Async Completion | Async Streaming | Async Embedding | Async Image Generation |
 |-------------------------------------------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | [openai](https://docs.litellm.ai/docs/providers/openai)                             | ✅                                                       | ✅                                                                               | ✅                                                                                   | ✅                                                                                 | ✅                                                                             | ✅                                                                       |
 | [Meta - Llama API](https://docs.litellm.ai/docs/providers/meta_llama)                               | ✅                                                       | ✅                                                                               | ✅                                                                                   | ✅                                                                                 |                                                                              |                                                                        |
@@ -319,6 +305,7 @@ Comprehensive support for a wide range of LLM providers.  See the table below fo
 | [google AI Studio - gemini](https://docs.litellm.ai/docs/providers/gemini)          | ✅                                                       | ✅                                                                               | ✅                                                                                   | ✅                                                                                 |                                                                               |                                                                         |
 | [mistral ai api](https://docs.litellm.ai/docs/providers/mistral)                    | ✅                                                       | ✅                                                                               | ✅                                                                                   | ✅                                                                                 | ✅                                                                             |                                                                         |
 | [cloudflare AI Workers](https://docs.litellm.ai/docs/providers/cloudflare_workers)  | ✅                                                       | ✅                                                                               | ✅                                                                                   | ✅                                                                                 |                                                                               |                                                                         |
+| [CompactifAI](https://docs.litellm.ai/docs/providers/compactifai)                   | ✅                                                       | ✅                                                                               | ✅                                                                                   | ✅                                                                                 |                                                                               |                                                                         |
 | [cohere](https://docs.litellm.ai/docs/providers/cohere)                             | ✅                                                       | ✅                                                                               | ✅                                                                                   | ✅                                                                                 | ✅                                                                             |                                                                         |
 | [anthropic](https://docs.litellm.ai/docs/providers/anthropic)                       | ✅                                                       | ✅                                                                               | ✅                                                                                   | ✅                                                                                 |                                                                               |                                                                         |
 | [empower](https://docs.litellm.ai/docs/providers/empower)                    | ✅                                                      | ✅                                                                              | ✅                                                                                  | ✅                                                                                |
@@ -350,65 +337,39 @@ Comprehensive support for a wide range of LLM providers.  See the table below fo
 | [Heroku](https://docs.litellm.ai/docs/providers/heroku)                             | ✅                                                       | ✅                                                                               |                                                                                    |                                                                                  |                                                                              |                                                                         |
 | [OVHCloud AI Endpoints](https://docs.litellm.ai/docs/providers/ovhcloud)                             | ✅                                                       | ✅                                                                               |                                                                                    |                                                                                  |                                                                              |                                                                         |
 
-**[Explore the LiteLLM Documentation](https://docs.litellm.ai/docs/)**
+**[View Full Documentation](https://docs.litellm.ai/docs/)**
+
+---
 
 ## Contributing
 
-We welcome contributions!  See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+We welcome contributions!  Check out our [Contributing Guide](CONTRIBUTING.md) for details.
 
-### Quick Start
+## Support and Connect
 
-```bash
-git clone https://github.com/BerriAI/litellm.git
-cd litellm
-make install-dev    # Install development dependencies
-make format         # Format your code
-make lint           # Run all linting checks
-make test-unit      # Run unit tests
-make format-check   # Check formatting only
-```
+*   [Schedule a Demo](https://calendly.com/d/4mp-gd3-k5k/berriai-1-1-onboarding-litellm-hosted-version)
+*   [Join our Discord Community](https://discord.gg/wuPM9dRgDw)
+*   [Join our Slack Community](https://www.litellm.ai/support)
+*   Call us: +1 (770) 8783-106 / ‭+1 (412) 618-6238‬
+*   Email us: ishaan@berri.ai / krrish@berri.ai
 
-## Support
+---
 
-*   [Schedule Demo 👋](https://calendly.com/d/4mp-gd3-k5k/berriai-1-1-onboarding-litellm-hosted-version)
-*   [Community Discord 💭](https://discord.gg/wuPM9dRgDw)
-*   [Community Slack 💭](https://www.litellm.ai/support)
-*   Our numbers 📞 +1 (770) 8783-106 / ‭+1 (412) 618-6238‬
-*   Our emails ✉️ ishaan@berri.ai / krrish@berri.ai
+## Why We Built LiteLLM
 
-## Why did we build this
+We built LiteLLM out of necessity to simplify and streamline our own development process, as our code became increasingly complex when managing and translating calls between Azure, OpenAI, and Cohere.
 
--   We built LiteLLM because managing and translating calls between Azure, OpenAI, and Cohere became extremely complex.  It helps simplify the process of managing LLM interactions.
+---
 
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
 <a href="https://github.com/BerriAI/litellm/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=BerriAI/litellm" />
 </a>
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
-## Run in Developer mode
-
-### Services
-
-1.  Setup `.env` file in root
-2.  Run dependant services `docker-compose up db prometheus`
-
-### Backend
-
-1.  (In root) create virtual environment `python -m venv .venv`
-2.  Activate virtual environment `source .venv/bin/activate`
-3.  Install dependencies `pip install -e ".[all]"`
-4.  Start proxy backend `python3 /path/to/litellm/proxy_cli.py`
-
-### Frontend
-
-1.  Navigate to `ui/litellm-dashboard`
-2.  Install dependencies `npm install`
-3.  Run `npm run dev` to start the dashboard
+<!-- ALL-CONTRIBUTORS-LIST:END -->

@@ -1,64 +1,71 @@
-# ChatMock: Access GPT-5 and More Through Your ChatGPT Account
+<div align="center">
+  <h1>ChatMock: Access GPT-5 and Other Models with Your ChatGPT Account</h1>
+  <p><b>Unlock the power of GPT-5 and other advanced OpenAI models through your existing ChatGPT Plus/Pro subscription.</b></p>
+  <br>
+</div>
 
-**Unlock the power of GPT-5 and other OpenAI models using your existing ChatGPT Plus/Pro subscription without the need for API keys.**  [View the original repository](https://github.com/RayBytes/ChatMock).
+## Introduction
+
+ChatMock allows you to use your ChatGPT Plus/Pro account to access OpenAI models, including GPT-5, through an OpenAI-compatible API. Bypass API keys and use your existing subscription to integrate these powerful models into your code or utilize them with alternative chat interfaces.
+
+[View the original repository on GitHub](https://github.com/RayBytes/ChatMock)
 
 ## Key Features
 
-*   **GPT-5 and Model Access:** Utilize GPT-5 and other supported OpenAI models directly through your ChatGPT account.
-*   **OpenAI & Ollama Compatibility:** Emulates the OpenAI API, allowing you to use your account with existing OpenAI integrations and also provides compatibility with Ollama.
-*   **No API Key Required:** Authenticate with your ChatGPT credentials instead of needing an API key.
-*   **Tool Calling & Vision Support:** Leverages advanced functionalities like tool calling, and vision/image understanding.
-*   **Customizable Reasoning:** Control the model's "thinking effort" and the level of thinking summaries for optimized performance.
-*   **Local Server:** Runs a local server, making it easy to integrate with various applications and tools.
+*   ✅ **OpenAI API Compatibility:** Works seamlessly with OpenAI clients and applications.
+*   ✅ **No API Key Required:** Uses your authenticated ChatGPT login for access.
+*   ✅ **GPT-5 Support:** Utilize the latest and most advanced models (GPT-5).
+*   ✅ **Ollama Compatibility**: Supports Ollama endpoints.
+*   ✅ **Tool Calling:** Supports OpenAI tool calling functionality.
+*   ✅ **Vision/Image Understanding:** Enables image processing capabilities.
+*   ✅ **Customizable Thinking Effort:** Adjust model reasoning for optimal performance.
 
 ## Getting Started
 
 ### macOS
 
-**GUI Application:**
+#### GUI Application
 
-*   Download the GUI app from the [GitHub releases](https://github.com/RayBytes/ChatMock/releases).
-    *   **Note:** Due to security measures, you may need to run the following command in your terminal to open the app:
-        ```bash
-        xattr -dr com.apple.quarantine /Applications/ChatMock.app
-        ```
-        *[More info here.](https://github.com/deskflow/deskflow/wiki/Running-on-macOS)*
+Download the GUI application from the [GitHub releases](https://github.com/RayBytes/ChatMock/releases).
 
-**Command Line (Homebrew):**
+> **Note:** You may need to run the following command in your terminal to open the app:
+>
+> ```bash
+> xattr -dr com.apple.quarantine /Applications/ChatMock.app
+> ```
+>
+> *[More info here.](https://github.com/deskflow/deskflow/wiki/Running-on-macOS)*
 
-*   Install ChatMock using Homebrew:
-    ```bash
-    brew tap RayBytes/chatmock
-    brew install chatmock
-    ```
+#### Command Line (Homebrew)
+
+Install ChatMock using [Homebrew](https://brew.sh/):
+
+```bash
+brew tap RayBytes/chatmock
+brew install chatmock
+```
 
 ### Python
 
-1.  **Clone the Repository:**
+1.  **Clone the repository:**
     ```bash
     git clone https://github.com/RayBytes/ChatMock.git
     cd ChatMock
     ```
-
-2.  **Login:** Sign in with your ChatGPT account.
+2.  **Login to ChatGPT:**
     ```bash
     python chatmock.py login
     ```
-    Verify the login with:
-    ```bash
-    python chatmock.py info
-    ```
-
-3.  **Start the Server:** Launch the local server.
+    Verify with: `python chatmock.py info`
+3.  **Start the server:**
     ```bash
     python chatmock.py serve
     ```
+    The server defaults to `http://127.0.0.1:8000`.  Append `/v1/` to the base URL for OpenAI compatibility.
 
-4.  **Use the API:**  Use the server address and port (http://127.0.0.1:8000 by default) as the `baseURL` in your OpenAI integrations, adding `/v1/` for OpenAI compatibility.
+### Examples
 
-## Examples
-
-### Python
+#### Python
 
 ```python
 from openai import OpenAI
@@ -76,7 +83,7 @@ resp = client.chat.completions.create(
 print(resp.choices[0].message.content)
 ```
 
-### curl
+#### curl
 
 ```bash
 curl http://127.0.0.1:8000/v1/chat/completions \
@@ -93,23 +100,27 @@ curl http://127.0.0.1:8000/v1/chat/completions \
 *   `gpt-5`
 *   `codex-mini`
 
-## Customization & Configuration
+## Configuration
 
-*   **Reasoning Effort:** Control the model's thinking effort for potentially smarter answers:  `--reasoning-effort` (minimal, low, medium, high). Defaults to `medium`.
-*   **Thinking Summaries:** Customize the level of thinking summaries: `--reasoning-summary` (auto, concise, detailed, none).
+### Thinking Effort
 
-    For the fastest responses, consider `--reasoning-effort low` and `--reasoning-summary none`.
+*   `--reasoning-effort`: (minimal, low, medium, high)
 
-    View all parameters and options with `python chatmock.py serve --h`.
+### Thinking Summaries
 
-*   **Reasoning Compatibility:** `--reasoning-compat legacy` will put reasoning in the `reasoning` tag instead of in the response text.
+*   `--reasoning-summary`: (auto, concise, detailed, none)
 
 ## Important Notes
 
-*   Requires an active, paid ChatGPT account.
-*   Expect potentially lower rate limits compared to the official ChatGPT app.
-*   The context size is larger than the regular ChatGPT app.
-*   Use responsibly and at your own risk. This project is not affiliated with OpenAI and is for educational purposes.
+*   Requires a paid ChatGPT account.
+*   Rate limits may be lower than the official ChatGPT app.
+*   The context size is larger than in the regular ChatGPT app.
+*   Use responsibly and at your own risk. This project is not affiliated with OpenAI.
+
+## TODO
+
+*   Explore more model settings.
+*   Implement analytics (token counting, etc.).
 
 ## Star History
 

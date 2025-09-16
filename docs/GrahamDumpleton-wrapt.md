@@ -1,6 +1,6 @@
-# Wrapt: Robust Python Decorators and Wrappers for Enhanced Code
+# Wrapt: Python Decorators, Wrappers, and Monkey Patching Done Right
 
-**Wrapt** is the go-to Python module for building powerful and reliable decorators, function wrappers, and monkey patching utilities. ([View on GitHub](https://github.com/GrahamDumpleton/wrapt))
+**Enhance your Python code with robust and reliable decorators, wrappers, and monkey patching capabilities using the `wrapt` module.**  ([See the original repo](https://github.com/GrahamDumpleton/wrapt))
 
 [![PyPI](https://img.shields.io/pypi/v/wrapt.svg?logo=python&cacheSeconds=3600)](https://pypi.python.org/pypi/wrapt)
 [![Documentation](https://img.shields.io/badge/docs-wrapt.readthedocs.io-blue.svg)](https://wrapt.readthedocs.io/)
@@ -8,22 +8,26 @@
 
 ## Key Features of Wrapt
 
-*   **Universal Decorators:** Works seamlessly with functions, methods (including classmethods and staticmethods), and classes.
-*   **Transparent Object Proxies:** Provides advanced wrapping capabilities for complex scenarios.
-*   **Safe Monkey Patching:** Offers utilities for making runtime modifications without causing unintended side effects.
-*   **Optimized Performance:** Includes a C extension for speed, with a Python fallback for environments without a compiler.
-*   **Preserves Introspection:** Ensures that decorators maintain function signatures, annotations, and other crucial metadata for better code maintainability.
-*   **Thread-Safe Implementations:** Designed for reliable use in multi-threaded applications.
+*   **Universal Decorators:** Works seamlessly with functions, methods (instance, class, static), and classes.
+*   **Transparent Object Proxies:** Offers advanced wrapping solutions for complex scenarios.
+*   **Safe Monkey Patching Utilities:** Modify code at runtime without unexpected side effects.
+*   **Optimized Performance:**  Includes a C extension for speed, with a pure Python fallback.
+*   **Introspection Preservation:** Maintains function signatures, annotations, and other critical metadata.
+*   **Thread-Safe Implementation:** Ensures reliable behavior in multi-threaded environments.
+
+## Why Use Wrapt?
+
+Traditional Python decorators can be brittle and may not handle all use cases correctly. Wrapt provides a more robust and predictable solution, ensuring decorators behave as expected across various Python versions and scenarios. This leads to code that is more maintainable, easier to debug, and less prone to unexpected behavior.
 
 ## Installation
 
-Install Wrapt easily using pip:
+Get started quickly with pip:
 
 ```bash
 pip install wrapt
 ```
 
-## Quick Start Examples
+## Examples
 
 ### Basic Decorator
 
@@ -82,12 +86,11 @@ def universal(wrapped, instance, args, kwargs):
     return wrapped(*args, **kwargs)
 ```
 
-## Documentation and Resources
+## Documentation
 
-*   **Comprehensive Documentation:** [wrapt.readthedocs.io](https://wrapt.readthedocs.io/)
-*   **PyPI:** [https://pypi.python.org/pypi/wrapt](https://pypi.python.org/pypi/wrapt)
-*   **Issues:** [https://github.com/GrahamDumpleton/wrapt/issues/](https://github.com/GrahamDumpleton/wrapt/issues/)
-*   **Changelog:** [https://wrapt.readthedocs.io/en/latest/changes.html](https://wrapt.readthedocs.io/en/latest/changes.html)
+Explore comprehensive documentation, examples, and advanced usage patterns at:
+
+*   **[wrapt.readthedocs.io](https://wrapt.readthedocs.io/)**
 
 ## Supported Python Versions
 
@@ -97,10 +100,40 @@ def universal(wrapped, instance, args, kwargs):
 
 ## Contributing
 
-Contributions are welcome via the [GitHub issue tracker](https://github.com/GrahamDumpleton/wrapt/issues/).
+Contributions are welcome!  Please use the [GitHub issue tracker](https://github.com/GrahamDumpleton/wrapt/issues/) to discuss any changes, bug reports, or suggestions.
 
-Please note that the project is mature and the primary focus is to ensure compatibility with newer Python versions.
+Note: Wrapt is a mature project, focusing on maintaining compatibility and ensuring correctness with newer Python versions.
+
+### Testing
+
+See [TESTING.md](TESTING.md) for details on running tests.
 
 ## License
 
 This project is licensed under the BSD License - see the [LICENSE](LICENSE) file for details.
+
+## Links
+
+*   **Documentation**: https://wrapt.readthedocs.io/
+*   **PyPI**: https://pypi.python.org/pypi/wrapt
+*   **Issues**: https://github.com/GrahamDumpleton/wrapt/issues/
+*   **Changelog**: https://wrapt.readthedocs.io/en/latest/changes.html
+
+## Related Blog Posts
+
+Dive deeper into the design and implementation of Wrapt with these insightful blog posts:
+
+*   [How you implemented your Python decorator is wrong](blog/01-how-you-implemented-your-python-decorator-is-wrong.md)
+*   [The interaction between decorators and descriptors](blog/02-the-interaction-between-decorators-and-descriptors.md)
+*   [Implementing a factory for creating decorators](blog/03-implementing-a-factory-for-creating-decorators.md)
+*   [Implementing a universal decorator](blog/04-implementing-a-universal-decorator.md)
+*   [Decorators which accept arguments](blog/05-decorators-which-accept-arguments.md)
+*   [Maintaining decorator state using a class](blog/06-maintaining-decorator-state-using-a-class.md)
+*   [The missing synchronized decorator](blog/07-the-missing-synchronized-decorator.md)
+*   [The synchronized decorator as context manager](blog/08-the-synchronized-decorator-as-context-manager.md)
+*   [Performance overhead of using decorators](blog/09-performance-overhead-of-using-decorators.md)
+*   [Performance overhead when applying decorators to methods](blog/10-performance-overhead-when-applying-decorators-to-methods.md)
+*   [Safely applying monkey patches in Python](blog/11-safely-applying-monkey-patches-in-python.md)
+*   [Using wrapt to support testing of software](blog/12-using-wrapt-to-support-testing-of-software.md)
+*   [Ordering issues when monkey patching in Python](blog/13-ordering-issues-when-monkey-patching-in-python.md)
+*   [Automatic patching of Python applications](blog/14-automatic-patching-of-python-applications.md)

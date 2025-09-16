@@ -4,13 +4,9 @@
   <img src="./assets/logo.png" width="120" height="120" alt="LightRAG Logo" style="border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);">
 </div>
 
-# 🚀 LightRAG: Revolutionize Your Knowledge with Simple, Fast, and Powerful Retrieval-Augmented Generation
+# 🚀 LightRAG: Revolutionizing RAG with Speed and Simplicity
 
-<p align="center">
-  <a href="https://github.com/HKUDS/LightRAG">
-    <img src="https://img.shields.io/github/stars/HKUDS/LightRAG?style=social" alt="GitHub stars">
-  </a>
-</p>
+**LightRAG is an open-source framework designed to make Retrieval-Augmented Generation (RAG) faster, simpler, and more accessible.**  Enhance your LLM applications with powerful retrieval capabilities and knowledge graph integration. Explore the [LightRAG repository](https://github.com/HKUDS/LightRAG) for more details.
 
 <div align="center">
     <a href="https://trendshift.io/repositories/13043" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13043" alt="HKUDS%2FLightRAG | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
@@ -39,6 +35,9 @@
       <a href="README-zh.md"><img src="https://img.shields.io/badge/🇨🇳中文版-1a1a2e?style=for-the-badge"></a>
       <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸English-1a1a2e?style=for-the-badge"></a>
     </p>
+    <p>
+      <a href="https://pepy.tech/projects/lightrag-hku"><img src="https://static.pepy.tech/personalized-badge/lightrag-hku?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads"></a>
+    </p>
   </div>
 </div>
 
@@ -54,41 +53,39 @@
 
 ---
 
-## Key Features
+## Key Features of LightRAG
 
-*   **Fast & Efficient:** Achieve rapid retrieval and generation with LightRAG's optimized architecture.
-*   **Multimodal Support:** Seamlessly handle text, images, tables, and formulas using [RAG-Anything](https://github.com/HKUDS/RAG-Anything) integration.
-*   **Flexible Storage Options:** Choose from various storage backends including JSON, PostgreSQL, Redis, Neo4j, MongoDB, and more.
-*   **Customizable LLMs & Embeddings:** Integrate your preferred language models and embedding functions for optimal performance.
-*   **Advanced Knowledge Graph Capabilities:** Create, edit, and delete entities and relationships within your knowledge graph.
-*   **Comprehensive Deletion:** Easily delete documents, entities, and relationships with optimized processes.
-*   **Entity Merging:** Merge multiple entities into a single entity, with automatic handling of relationships.
-*   **Token Usage Tracking:** Monitor and manage token consumption for cost control and performance optimization.
-*   **Data Export:** Export your knowledge graph data in various formats (CSV, Excel, Markdown, etc.).
-*   **Graph Visualization:** The LightRAG Server offers a comprehensive knowledge graph visualization feature.
-*   **Extensive Ecosystem:** Integrates with projects like [VideoRAG](https://github.com/HKUDS/VideoRAG) and [MiniRAG](https://github.com/HKUDS/MiniRAG).
+*   **🚀 Fast and Efficient:** Optimized for speed and performance.
+*   **⚙️ Simple Integration:** Easy to set up and integrate into existing projects.
+*   **🗂️ Flexible Storage Options:** Supports various storage backends including JSON, Postgres, Neo4j, and MongoDB.
+*   **🧠 Knowledge Graph Integration:** Enables powerful knowledge graph capabilities.
+*   **🖼️ Multimodal Support (RAG-Anything):** Process text, images, tables, and formulas seamlessly with [RAG-Anything](https://github.com/HKUDS/RAG-Anything).
+*   **🔄 Entity and Relation Management:** Create, edit, and delete entities and relationships within your knowledge graph.
+*   **📚 Data Export:** Export your knowledge graph data in various formats (CSV, Excel, Markdown, etc.).
+*   **💡 Token Usage Tracking:**  Monitor and manage token consumption by large language models.
 
 ---
 
-## What's New
-- [X] [2025.06.16]🎯📢Our team has released [RAG-Anything](https://github.com/HKUDS/RAG-Anything) an All-in-One Multimodal RAG System for seamless text, image, table, and equation processing.
-- [X] [2025.06.05]🎯📢LightRAG now supports comprehensive multimodal data handling through [RAG-Anything](https://github.com/HKUDS/RAG-Anything) integration, enabling seamless document parsing and RAG capabilities across diverse formats including PDFs, images, Office documents, tables, and formulas. Please refer to the new [multimodal section](https://github.com/HKUDS/LightRAG/?tab=readme-ov-file#multimodal-document-processing-rag-anything-integration) for details.
-- [X] [2025.03.18]🎯📢LightRAG now supports citation functionality, enabling proper source attribution.
-- [X] [2025.02.05]🎯📢Our team has released [VideoRAG](https://github.com/HKUDS/VideoRAG) understanding extremely long-context videos.
-- [X] [2025.01.13]🎯📢Our team has released [MiniRAG](https://github.com/HKUDS/MiniRAG) making RAG simpler with small models.
-- [X] [2025.01.06]🎯📢You can now [use PostgreSQL for Storage](#using-postgresql-for-storage).
-- [X] [2024.12.31]🎯📢LightRAG now supports [deletion by document ID](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
-- [X] [2024.11.25]🎯📢LightRAG now supports seamless integration of [custom knowledge graphs](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#insert-custom-kg), empowering users to enhance the system with their own domain expertise.
-- [X] [2024.11.19]🎯📢A comprehensive guide to LightRAG is now available on [LearnOpenCV](https://learnopencv.com/lightrag). Many thanks to the blog author.
-- [X] [2024.11.11]🎯📢LightRAG now supports [deleting entities by their names](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
-- [X] [2024.11.09]🎯📢Introducing the [LightRAG Gui](https://lightrag-gui.streamlit.app), which allows you to insert, query, visualize, and download LightRAG knowledge.
-- [X] [2024.11.04]🎯📢You can now [use Neo4J for Storage](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#using-neo4j-for-storage).
-- [X] [2024.10.29]🎯📢LightRAG now supports multiple file types, including PDF, DOC, PPT, and CSV via `textract`.
-- [X] [2024.10.20]🎯📢We've added a new feature to LightRAG: Graph Visualization.
-- [X] [2024.10.18]🎯📢We've added a link to a [LightRAG Introduction Video](https://youtu.be/oageL-1I0GE). Thanks to the author!
-- [X] [2024.10.17]🎯📢We have created a [Discord channel](https://discord.gg/yF2MmDJyGJ)! Welcome to join for sharing and discussions! 🎉🎉
-- [X] [2024.10.16]🎯📢LightRAG now supports [Ollama models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
-- [X] [2024.10.15]🎯📢LightRAG now supports [Hugging Face models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start)!
+## News
+
+*   [2025.06.16] 🎯📢 Released [RAG-Anything](https://github.com/HKUDS/RAG-Anything), an All-in-One Multimodal RAG System.
+*   [2025.06.05] 🎯📢  Comprehensive multimodal data handling via [RAG-Anything](https://github.com/HKUDS/RAG-Anything) integration.
+*   [2025.03.18] 🎯📢  Citation functionality added.
+*   [2025.02.05] 🎯📢  Released [VideoRAG](https://github.com/HKUDS/VideoRAG) understanding extremely long-context videos.
+*   [2025.01.13] 🎯📢 Released [MiniRAG](https://github.com/HKUDS/MiniRAG) making RAG simpler with small models.
+*   [2025.01.06] 🎯📢  Support for PostgreSQL for Storage.
+*   [2024.12.31] 🎯📢 Support for [deletion by document ID](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
+*   [2024.11.25] 🎯📢  Support for [custom knowledge graphs](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#insert-custom-kg).
+*   [2024.11.19] 🎯📢 Comprehensive guide on [LearnOpenCV](https://learnopencv.com/lightrag).
+*   [2024.11.11] 🎯📢  Support for [deleting entities by their names](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#delete).
+*   [2024.11.09] 🎯📢  Introducing the [LightRAG Gui](https://lightrag-gui.streamlit.app).
+*   [2024.11.04] 🎯📢  Support for [Neo4J for Storage](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#using-neo4j-for-storage).
+*   [2024.10.29] 🎯📢  Support for multiple file types via `textract`.
+*   [2024.10.20] 🎯📢 Graph Visualization added.
+*   [2024.10.18] 🎯📢  [LightRAG Introduction Video](https://youtu.be/oageL-1I0GE).
+*   [2024.10.17] 🎯📢  Discord channel created: [Discord](https://discord.gg/yF2MmDJyGJ)!
+*   [2024.10.16] 🎯📢  Support for [Ollama models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start).
+*   [2024.10.15] 🎯📢  Support for [Hugging Face models](https://github.com/HKUDS/LightRAG?tab=readme-ov-file#quick-start).
 
 <details>
   <summary style="font-size: 1.4em; font-weight: bold; cursor: pointer; display: list-item;">
@@ -102,7 +99,6 @@
 
 </details>
 
----
 ## Installation
 
 ### Install LightRAG Server
@@ -156,11 +152,7 @@ pip install -e .
 pip install lightrag-hku
 ```
 
----
-
 ## Quick Start
-
-LightRAG empowers you to build intelligent applications with speed and simplicity.
 
 ### LLM and Technology Stack Requirements for LightRAG
 
@@ -205,9 +197,7 @@ For a streaming response implementation example, please see `examples/lightrag_o
 
 **Note 2**: Only `lightrag_openai_demo.py` and `lightrag_openai_compatible_demo.py` are officially supported sample codes. Other sample files are community contributions that haven't undergone full testing and optimization.
 
----
-
-## Programing with LightRAG Core
+## Programming with LightRAG Core
 
 > ⚠️ **If you would like to integrate LightRAG into your project, we recommend utilizing the REST API provided by the LightRAG Server**. LightRAG Core is typically intended for embedded applications or for researchers who wish to conduct studies and evaluations.
 
@@ -215,8 +205,8 @@ For a streaming response implementation example, please see `examples/lightrag_o
 
 **LightRAG requires explicit initialization before use.** You must call both `await rag.initialize_storages()` and `await initialize_pipeline_status()` after creating a LightRAG instance, otherwise you will encounter errors like:
 
--   `AttributeError: __aenter__` - if storages are not initialized
--   `KeyError: 'history_messages'` - if pipeline status is not initialized
+- `AttributeError: __aenter__` - if storages are not initialized
+- `KeyError: 'history_messages'` - if pipeline status is not initialized
 
 ### A Simple Program
 
@@ -274,9 +264,9 @@ if __name__ == "__main__":
 
 Important notes for the above snippet:
 
--   Export your OPENAI_API_KEY environment variable before running the script.
--   This program uses the default storage settings for LightRAG, so all data will be persisted to WORKING_DIR/rag_storage.
--   This program demonstrates only the simplest way to initialize a LightRAG object: Injecting the embedding and LLM functions, and initializing storage and pipeline status after creating the LightRAG object.
+- Export your OPENAI_API_KEY environment variable before running the script.
+- This program uses the default storage settings for LightRAG, so all data will be persisted to WORKING_DIR/rag_storage.
+- This program demonstrates only the simplest way to initialize a LightRAG object: Injecting the embedding and LLM functions, and initializing storage and pipeline status after creating the LightRAG object.
 
 ### LightRAG init parameters
 
@@ -446,9 +436,9 @@ async def initialize_rag():
 <details>
 <summary> <b>Using Hugging Face Models</b> </summary>
 
-*   If you want to use Hugging Face models, you only need to set LightRAG as follows:
+* If you want to use Hugging Face models, you only need to set LightRAG as follows:
 
-    See `lightrag_hf_demo.py`
+See `lightrag_hf_demo.py`
 
 ```python
 # Initialize LightRAG with Hugging Face model
@@ -495,63 +485,98 @@ rag = LightRAG(
 )
 ```
 
-*   **Increasing context size**
+* **Increasing context size**
 
-    In order for LightRAG to work context should be at least 32k tokens. By default Ollama models have context size of 8k. You can achieve this using one of two ways:
+In order for LightRAG to work context should be at least 32k tokens. By default Ollama models have context size of 8k. You can achieve this using one of two ways:
 
-    *   **Increasing the `num_ctx` parameter in Modelfile**
+* **Increasing the `num_ctx` parameter in Modelfile**
 
-        1.  Pull the model:
+1. Pull the model:
 
-            ```bash
-            ollama pull qwen2
-            ```
+```bash
+ollama pull qwen2
+```
 
-        2.  Display the model file:
+2. Display the model file:
 
-            ```bash
-            ollama show --modelfile qwen2 > Modelfile
-            ```
+```bash
+ollama show --modelfile qwen2 > Modelfile
+```
 
-        3.  Edit the Modelfile by adding the following line:
+3. Edit the Modelfile by adding the following line:
 
-            ```bash
-            PARAMETER num_ctx 32768
-            ```
+```bash
+PARAMETER num_ctx 32768
+```
 
-        4.  Create the modified model:
+4. Create the modified model:
 
-            ```bash
-            ollama create -f Modelfile qwen2m
-            ```
+```bash
+ollama create -f Modelfile qwen2m
+```
 
-    *   **Setup `num_ctx` via Ollama API**
+* **Setup `num_ctx` via Ollama API**
 
-        Tiy can use `llm_model_kwargs` param to configure ollama:
+Tiy can use `llm_model_kwargs` param to configure ollama:
 
-        ```python
-        rag = LightRAG(
-            working_dir=WORKING_DIR,
-            llm_model_func=ollama_model_complete,  # Use Ollama model for text generation
-            llm_model_name='your_model_name', # Your model name
-            llm_model_kwargs={"options": {"num_ctx": 32768}},
-            # Use Ollama embedding function
-            embedding_func=EmbeddingFunc(
-                embedding_dim=768,
-                func=lambda texts: ollama_embed(
-                    texts,
-                    embed_model="nomic-embed-text"
-                )
-            ),
+```python
+rag = LightRAG(
+    working_dir=WORKING_DIR,
+    llm_model_func=ollama_model_complete,  # Use Ollama model for text generation
+    llm_model_name='your_model_name', # Your model name
+    llm_model_kwargs={"options": {"num_ctx": 32768}},
+    # Use Ollama embedding function
+    embedding_func=EmbeddingFunc(
+        embedding_dim=768,
+        func=lambda texts: ollama_embed(
+            texts,
+            embed_model="nomic-embed-text"
         )
-        ```
+    ),
+)
+```
 
-*   **Low RAM GPUs**
+* **Low RAM GPUs**
 
-    In order to run this experiment on low RAM GPU you should select small model and tune context window (increasing context increase memory consumption). For example, running this ollama example on repurposed mining GPU with 6Gb of RAM required to set context size to 26k while using `gemma2:2b`. It was able to find 197 entities and 19 relations on `book.txt`.
+In order to run this experiment on low RAM GPU you should select small model and tune context window (increasing context increase memory consumption). For example, running this ollama example on repurposed mining GPU with 6Gb of RAM required to set context size to 26k while using `gemma2:2b`. It was able to find 197 entities and 19 relations on `book.txt`.
 
 </details>
 <details>
 <summary> <b>LlamaIndex</b> </summary>
 
-LightRAG supports integration with
+LightRAG supports integration with LlamaIndex (`llm/llama_index_impl.py`):
+
+- Integrates with OpenAI and other providers through LlamaIndex
+- See [LlamaIndex Documentation](lightrag/llm/Readme.md) for detailed setup and examples
+
+**Example Usage**
+
+```python
+# Using LlamaIndex with direct OpenAI access
+import asyncio
+from lightrag import LightRAG
+from lightrag.llm.llama_index_impl import llama_index_complete_if_cache, llama_index_embed
+from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.llms.openai import OpenAI
+from lightrag.kg.shared_storage import initialize_pipeline_status
+from lightrag.utils import setup_logger
+
+# Setup log handler for LightRAG
+setup_logger("lightrag", level="INFO")
+
+async def initialize_rag():
+    rag = LightRAG(
+        working_dir="your/path",
+        llm_model_func=llama_index_complete_if_cache,  # LlamaIndex-compatible completion function
+        embedding_func=EmbeddingFunc(    # LlamaIndex-compatible embedding function
+            embedding_dim=1536,
+            func=lambda texts: llama_index_embed(texts, embed_model=embed_model)
+        ),
+    )
+
+    await rag.initialize_storages()
+    await initialize_pipeline_status()
+
+    return rag
+
+def main():

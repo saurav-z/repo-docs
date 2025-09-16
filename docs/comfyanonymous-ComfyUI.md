@@ -1,104 +1,141 @@
 <div align="center">
 
-# ComfyUI: Unleash Your AI Creativity with Node-Based Workflows
+# ComfyUI: Unleash Your AI Artistry with a Visual Workflow Engine
 
-**ComfyUI empowers you to create stunning images, videos, and more with its flexible, node-based visual AI engine – get ready to visualize your imagination!**
+**ComfyUI is a powerful and modular visual AI engine, revolutionizing AI art generation through its intuitive node-based interface.**
 
-[![Website][website-shield]][website-url]
-[![Discord][discord-shield]][discord-url]
-[![Twitter][twitter-shield]][twitter-url]
-[![Matrix][matrix-shield]][matrix-url]
-<br>
-[![GitHub Release][github-release-shield]][github-release-link]
-[![Release Date][github-release-date-shield]][github-release-link]
-[![Downloads][github-downloads-shield]][github-downloads-link]
-[![Latest Downloads][github-downloads-latest-shield]][github-downloads-link]
+[![Website](https://img.shields.io/badge/ComfyOrg-4285F4?style=flat)][website-url]
+[![Discord](https://img.shields.io/badge/Discord-Join-green)][discord-url]
+[![Twitter](https://img.shields.io/twitter/follow/ComfyUI)][twitter-url]
+[![Matrix](https://img.shields.io/badge/Matrix-Chat-000000?style=flat&logo=matrix&logoColor=white)][matrix-url]
+[![Release](https://img.shields.io/github/v/release/comfyanonymous/ComfyUI?style=flat&sort=semver)][github-release-link]
+[![Release Date](https://img.shields.io/github/release-date/comfyanonymous/ComfyUI?style=flat)][github-release-link]
+[![Downloads](https://img.shields.io/github/downloads/comfyanonymous/ComfyUI/total?style=flat)][github-downloads-link]
+[![Latest Downloads](https://img.shields.io/github/downloads/comfyanonymous/ComfyUI/latest/total?style=flat&label=downloads%40latest)][github-downloads-link]
 
-[matrix-shield]: https://img.shields.io/badge/Matrix-000000?style=flat&logo=matrix&logoColor=white
-[matrix-url]: https://app.element.io/#/room/%23comfyui_space%3Amatrix.org
-[website-shield]: https://img.shields.io/badge/ComfyOrg-4285F4?style=flat
 [website-url]: https://www.comfy.org/
-[discord-shield]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fcomfyorg%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&logo=discord&logoColor=white&label=Discord&color=green&suffix=%20total
 [discord-url]: https://www.comfy.org/discord
-[twitter-shield]: https://img.shields.io/twitter/follow/ComfyUI
 [twitter-url]: https://x.com/ComfyUI
-
-[github-release-shield]: https://img.shields.io/github/v/release/comfyanonymous/ComfyUI?style=flat&sort=semver
+[matrix-url]: https://app.element.io/#/room/%23comfyui_space%3Amatrix.org
 [github-release-link]: https://github.com/comfyanonymous/ComfyUI/releases
-[github-release-date-shield]: https://img.shields.io/github/release-date/comfyanonymous/ComfyUI?style=flat
-[github-downloads-shield]: https://img.shields.io/github/downloads/comfyanonymous/ComfyUI/total?style=flat
-[github-downloads-latest-shield]: https://img.shields.io/github/downloads/comfyanonymous/ComfyUI/latest/total?style=flat&label=downloads%40latest
 [github-downloads-link]: https://github.com/comfyanonymous/ComfyUI/releases
 
-![ComfyUI Screenshot](https://github.com/user-attachments/assets/7ccaf2c1-9b72-41ae-9a89-5688c94b7abe)
+<img src="https://github.com/user-attachments/assets/7ccaf2c1-9b72-41ae-9a89-5688c94b7abe" alt="ComfyUI Screenshot">
+
 </div>
 
-ComfyUI is a powerful and modular visual AI engine and application that allows users to design and execute advanced Stable Diffusion pipelines. It utilizes a graph/nodes/flowchart based interface, providing a flexible and intuitive way to experiment with and create complex AI workflows. It is available on Windows, Linux, and macOS.
+ComfyUI empowers you to design and execute complex Stable Diffusion pipelines using a user-friendly graph/nodes/flowchart-based interface, offering unparalleled flexibility and control for AI image and video generation.
 
-## Key Features
+**Key Features:**
 
-*   **Node-Based Workflow:** Design complex Stable Diffusion pipelines without coding using an intuitive node-based interface.
-*   **Model Support:** Extensive support for a wide range of image, video, and audio models, including:
-    *   **Image Models:** SD1.x, SD2.x, SDXL, SDXL Turbo, Stable Cascade, SD3 and SD3.5, Pixart Alpha and Sigma, AuraFlow, HunyuanDiT, Flux, Lumina Image 2.0, HiDream, Qwen Image, and Hunyuan Image 2.1.
-    *   **Image Editing Models:** Omnigen 2, Flux Kontext, HiDream E1.1, Qwen Image Edit.
-    *   **Video Models:** Stable Video Diffusion, Mochi, LTX-Video, Hunyuan Video, Wan 2.1, and Wan 2.2.
-    *   **Audio Models:** Stable Audio and ACE Step.
-    *   **3D Models:** Hunyuan3D 2.0.
-*   **Optimized Performance:**  Features asynchronous queue system, memory optimization for low-VRAM GPUs, and only re-executes modified parts of the workflow.
-*   **Checkpoint and Model Loading:** Supports loading ckpt and safetensors files, including diffusion models, VAEs, and CLIP models.
-*   **Advanced Features:** Includes support for embeddings/textual inversions, LoRAs, Hypernetworks, area composition, inpainting, ControlNet/T2I-Adapter, and upscale models.
-*   **Workflow Management:** Load and save workflows as JSON files; load workflows from generated PNG, WebP, and FLAC files.
-*   **Offline Functionality:** Works fully offline, ensuring privacy and control over your AI workflows.
-*   **API Integration:** Optional API nodes available to use paid models from external providers via the Comfy API.
+*   **Node-Based Workflow:** Visually create and experiment with intricate Stable Diffusion workflows without coding.
+*   **Extensive Model Support:**
+    *   SD1.x, SD2.x, SDXL, SDXL Turbo, Stable Cascade, SD3 and SD3.5, Pixart Alpha and Sigma, AuraFlow, HunyuanDiT, Flux, Lumina Image 2.0, HiDream, Qwen Image, Hunyuan Image 2.1 and more.
+    *   Image Editing Models: Omnigen 2, Flux Kontext, HiDream E1.1, Qwen Image Edit.
+    *   Video Models: Stable Video Diffusion, Mochi, LTX-Video, Hunyuan Video, Wan 2.1, Wan 2.2.
+    *   Audio Models: Stable Audio, ACE Step.
+    *   3D Models: Hunyuan3D 2.0
+*   **Asynchronous Queue:** Manage and execute multiple workflows efficiently.
+*   **Memory Optimization:** Smart memory management for running large models on GPUs with limited VRAM.
+*   **CPU Support:** Run ComfyUI even without a dedicated GPU using the `--cpu` flag.
+*   **Checkpoint & Model Loading:** Load ckpt, safetensors, and various other model formats.
+*   **Advanced Techniques:** Support for Embeddings/Textual inversion, LoRAs, Hypernetworks, ControlNet, T2I-Adapter, Upscale Models, GLIGEN, Model Merging, LCM models and Loras, and more.
+*   **Workflow Handling:** Load and save workflows as PNG, WebP, FLAC, and JSON files.
+*   **Offline Functionality:** Core functionality operates fully offline.
+*   **API Integration:** Optional API nodes for accessing paid models from external providers.
+*   **Customization:** Utilize a [Config file](extra_model_paths.yaml.example) to set model search paths.
 
-For workflow examples, visit the [Examples page](https://comfyanonymous.github.io/ComfyUI_examples/).
+**Getting Started:**
 
-## Getting Started
+*   **[Desktop Application](https://www.comfy.org/download):** Simplest way to get started, available on Windows & macOS.
+*   **[Windows Portable Package](https://github.com/comfyanonymous/ComfyUI/releases):** Get the latest commits, completely portable for Windows.
+*   **[Manual Install](#manual-install-windows-linux):** Supports all operating systems and GPU types (NVIDIA, AMD, Intel, Apple Silicon, Ascend).
 
-Choose your preferred installation method:
+**Explore Examples:**
 
-*   **[Desktop Application](https://www.comfy.org/download)**: Easiest way to get started, available for Windows & macOS.
-*   **[Windows Portable Package](#installing)**: Portable and up-to-date, for Windows.
-*   **[Manual Install](#manual-install-windows-linux)**: Supports all operating systems and GPU types (NVIDIA, AMD, Intel, Apple Silicon, Ascend).
+Discover the power of ComfyUI with [example workflows](https://comfyanonymous.github.io/ComfyUI_examples/).
 
-## Installation
+**Release Process:**
 
-### [Windows Portable](https://github.com/comfyanonymous/ComfyUI/releases/latest/download/ComfyUI_windows_portable_nvidia.7z)
+ComfyUI follows a weekly release cycle with the following repositories:
 
-1.  Download the latest portable package from the releases page.
-2.  Extract the contents using 7-Zip.
-3.  Place your Stable Diffusion checkpoints/models in the `ComfyUI\models\checkpoints` directory.
-4.  Run the executable.
+1.  **[ComfyUI Core](https://github.com/comfyanonymous/ComfyUI)** - Releases new stable versions.
+2.  **[ComfyUI Desktop](https://github.com/Comfy-Org/desktop)** - Builds releases using the latest stable core version.
+3.  **[ComfyUI Frontend](https://github.com/Comfy-Org/ComfyUI_frontend)** - Hosts frontend updates.
 
-### [comfy-cli](https://docs.comfy.org/comfy-cli/getting-started)
+**Shortcuts**
 
-```bash
-pip install comfy-cli
-comfy install
-```
+See the [shortcuts section](https://github.com/comfyanonymous/ComfyUI#shortcuts) for keyboard shortcuts.
 
-### Manual Install (Windows, Linux, macOS)
+**Installation Instructions**
 
-1.  **Clone the repository:** `git clone https://github.com/comfyanonymous/ComfyUI`
-2.  **Place models:** Put your SD checkpoints (ckpt/safetensors files) in `models/checkpoints` and VAEs in `models/vae`.
-3.  **Install dependencies:** Navigate to the ComfyUI directory in your terminal and run: `pip install -r requirements.txt`
-4.  **Run ComfyUI:** Execute `python main.py`
+*   **Windows Portable:**
+    1.  Download and extract from the [releases page](https://github.com/comfyanonymous/ComfyUI/releases).
+    2.  Place model files in `ComfyUI\models\checkpoints`.
+    3.  See [config file](extra_model_paths.yaml.example) to manage models.
+*   **comfy-cli:**
 
-Follow the OS-specific instructions for GPU setup (AMD, Intel, NVIDIA, Apple Silicon, Ascend, Cambricon, Iluvatar).
+    ```bash
+    pip install comfy-cli
+    comfy install
+    ```
+*   **Manual Install (Windows, Linux):**
+    1.  Clone the repository.
+    2.  Place SD checkpoints and VAE files in the appropriate `models` directories.
+    3.  Install dependencies: `pip install -r requirements.txt`.
+    4.  Follow specific instructions for your GPU: [AMD GPUs (Linux only)](#amd-gpus-linux-only), [Intel GPUs (Windows and Linux)](#intel-gpus-windows-and-linux), [NVIDIA](#nvidia), [Apple Mac silicon](#apple-mac-silicon), [DirectML (AMD Cards on Windows)](#directml-amd-cards-on-windows), [Ascend NPUs](#ascend-npus), [Cambricon MLUs](#cambricon-mlus), [Iluvatar Corex](#iluvatar-corex)
 
-### Running
+**Running**
 
 ```bash
 python main.py
 ```
 
-## Useful Links
+See [running tips](https://github.com/comfyanonymous/ComfyUI#running) for specific GPU settings.
 
-*   **[ComfyUI Core Repository](https://github.com/comfyanonymous/ComfyUI)**
-*   **[ComfyUI Desktop Repository](https://github.com/Comfy-Org/desktop)**
-*   **[ComfyUI Frontend Repository](https://github.com/Comfy-Org/ComfyUI_frontend)**
-*   **[ComfyUI Examples](https://comfyanonymous.github.io/ComfyUI_examples/)**
-*   **[ComfyUI Wiki - GPU Recommendations](https://github.com/comfyanonymous/ComfyUI/wiki/Which-GPU-should-I-buy-for-ComfyUI)**
-*   **[ComfyUI Support and Development Channel](https://www.comfy.org/)**
+**Notes:**
 
-**[View the original repository](https://github.com/comfyanonymous/ComfyUI)**
+*   ComfyUI executes only parts of the graph that have all inputs and have been changed.
+*   Drag and drop generated images to load their workflow.
+*   Use `()` for emphasis and `{}` for dynamic prompts.
+*   Place textual inversion concepts/embeddings in the `models/embeddings` directory.
+
+**How to show high-quality previews?**
+
+Use the command line argument: ```--preview-method auto```
+
+To enable higher-quality previews with [TAESD](https://github.com/madebyollin/taesd), download the [taesd_decoder.pth, taesdxl_decoder.pth, taesd3_decoder.pth and taef1_decoder.pth](https://github.com/madebyollin/taesd/) and place them in the `models/vae_approx` folder. Once they're installed, restart ComfyUI and launch it with `--preview-method taesd` to enable high-quality previews.
+
+**How to use TLS/SSL?**
+
+Generate a self-signed certificate (not appropriate for shared/production use) and key by running the command: `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=CommonNameOrHostname"`
+
+Use `--tls-keyfile key.pem --tls-certfile cert.pem` to enable TLS/SSL.
+
+**Support and Community:**
+
+*   [Discord](https://comfy.org/discord)
+*   [Matrix space: #comfyui_space:matrix.org](https://app.element.io/#/room/%23comfyui_space%3Amatrix.org)
+*   [https://www.comfy.org/](https://www.comfy.org/)
+
+**Frontend Development**
+
+The new frontend can be found [ComfyUI Frontend repository](https://github.com/Comfy-Org/ComfyUI_frontend).
+
+To use the most up-to-date frontend version:
+
+```
+--front-end-version Comfy-Org/ComfyUI_frontend@latest
+```
+
+or for a specific version:
+
+```
+--front-end-version Comfy-Org/ComfyUI_frontend@1.2.2
+```
+
+**QA**
+
+*   [Which GPU should I buy for this?](https://github.com/comfyanonymous/ComfyUI/wiki/Which-GPU-should-I-buy-for-ComfyUI)
+
+**[Back to Top](#comfyui-unleash-your-ai-artistry-with-a-visual-workflow-engine)**

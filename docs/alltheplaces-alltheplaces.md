@@ -1,88 +1,109 @@
-# All the Places: Scrape Point of Interest (POI) Data with Python
+# All the Places: Scrape and Aggregate Point of Interest (POI) Data
 
-**All the Places** is a powerful open-source project that leverages web scraping to extract valuable Point of Interest (POI) data from various websites, providing a comprehensive resource for location-based information. ([Original Repo](https://github.com/alltheplaces/alltheplaces))
+**All the Places** is an open-source project using web scraping to gather and structure Point of Interest (POI) data from diverse online sources. Check out the [original repo](https://github.com/alltheplaces/alltheplaces).
 
 ## Key Features
 
-*   **Web Scraping for POI Data:** Extracts location data from websites with store location pages.
-*   **Scrapy Framework:** Utilizes the popular Python-based `scrapy` framework for efficient web scraping.
-*   **Standard Data Format:** Publishes results in a standardized format for easy use and integration.
-*   **Extensible Spiders:** Supports individual "spiders" for different websites, allowing for customization and scalability.
-*   **Open Source & Community Driven:** Contribute to the project and help expand the data set.
-*   **Regular Data Updates:** Data is regularly updated and published on [alltheplaces.xyz](https://www.alltheplaces.xyz/).
+*   **Data Sourcing:** Scrapes POI data from websites with store location pages.
+*   **Scrapy-Based:** Utilizes the powerful Python-based Scrapy framework for efficient web scraping.
+*   **Standardized Output:** Formats scraped data into a consistent and accessible structure.
+*   **Open Data:** Provides data under a Creative Commons CC-0 waiver, making it free to use.
+*   **Open Source:** The spider software is licensed under the MIT license.
+*   **Weekly Run:** Aggregated data is published weekly on [alltheplaces.xyz](https://www.alltheplaces.xyz/).
 
 ## Getting Started
 
+Follow these instructions to set up a development environment.
+
 ### Development Setup
 
-Follow these steps to set up your development environment:
+Choose your preferred environment: Ubuntu, macOS, GitHub Codespaces or Docker.
 
-**Prerequisites:**
+#### Ubuntu
 
-*   Python 3.7+
-*   Git
+1.  Install `uv`:
 
-**Installation using `uv` (Recommended - Ubuntu & macOS):**
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    source $HOME/.local/bin/env
+    ```
 
-1.  **Install `uv`:**
-
-    *   **Ubuntu:**
-        ```bash
-        curl -LsSf https://astral.sh/uv/install.sh | sh
-        source $HOME/.local/bin/env
-        ```
-    *   **macOS:**
-        ```bash
-        brew install uv
-        ```
-2.  **Clone the repository:**
+2.  Clone the project:
 
     ```bash
     git clone git@github.com:alltheplaces/alltheplaces.git
-    cd alltheplaces
     ```
-3.  **Install dependencies:**
+
+3.  Install dependencies:
 
     ```bash
+    cd alltheplaces
     uv sync
     ```
-4.  **Verify Installation:**
+
+4.  Test installation:
 
     ```bash
     uv run scrapy
     ```
 
-**Windows Installation:**
-*   Follow the [scrapy docs](https://docs.scrapy.org/en/latest/intro/install.html#windows) for Windows installation.
+#### macOS
 
-**Using GitHub Codespaces:**
+1.  Install `uv`:
 
-Click the button below to launch a pre-configured development environment in the cloud:
+    ```bash
+    brew install uv
+    ```
+
+2.  Clone the project:
+
+    ```bash
+    git clone git@github.com/alltheplaces/alltheplaces.git
+    ```
+
+3.  Install dependencies:
+
+    ```bash
+    cd alltheplaces
+    uv sync
+    ```
+
+4.  Test installation:
+
+    ```bash
+    uv run scrapy
+    ```
+
+#### Codespaces
+
+Use GitHub Codespaces for a cloud-based development environment:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alltheplaces/alltheplaces)
 
-**Using Docker:**
+#### Docker
 
-1.  **Clone the repository:**
+1.  Clone the project:
 
     ```bash
     git clone git@github.com:alltheplaces/alltheplaces.git
-    cd alltheplaces
     ```
-2.  **Build the Docker image:**
+
+2.  Build the Docker image:
 
     ```bash
+    cd alltheplaces
     docker build -t alltheplaces .
     ```
-3.  **Run the Docker container:**
+
+3.  Run the Docker container:
 
     ```bash
     docker run --rm -it alltheplaces
     ```
 
-### Contributing Code
+## Contributing Code
 
-We welcome contributions!  Refer to the following guides for developing spiders and contributing to the project:
+We welcome contributions! Please refer to our guides to help you develop spiders:
 
 *   [What should I call my spider?](docs/SPIDER_NAMING.md)
 *   [Using Wikidata and the Name Suggestion Index](docs/WIKIDATA.md)
@@ -91,13 +112,10 @@ We welcome contributions!  Refer to the following guides for developing spiders 
 *   [What is expected in a pull request?](docs/PULL_REQUEST.md)
 *   [What we do behind the scenes](docs/PIPELINES.md)
 
-### The Weekly Run
-
-The project's output is published weekly on [alltheplaces.xyz](https://www.alltheplaces.xyz/).
-
 ## Contact
 
-For communication, use the project's GitHub [issue tracker](https://github.com/alltheplaces/alltheplaces/issues).  Contributors are also active on the [OSM US Slack](https://slack.openstreetmap.us/) in the [#alltheplaces](https://osmus.slack.com/archives/C07EY4Y3M6F) channel.
+*   **GitHub Issues:** Use the project's [issue tracker](https://github.com/alltheplaces/alltheplaces/issues).
+*   **OSM US Slack:** Find us in the [#alltheplaces](https://osmus.slack.com/archives/C07EY4Y3M6F) channel.
 
 ## License
 

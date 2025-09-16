@@ -13,130 +13,55 @@
     </a>
 </div>
 
-# Secure Your Internet with Free, Up-to-Date VPN Configurations!
+# Get Unlimited Access: Free, Updated VPN Configs for Secure Internet Access
 
-This repository ([original repo](https://github.com/AvenCores/goida-vpn-configs)) provides a continuously updated collection of public VPN configurations for V2Ray, VLESS, Trojan, VMess, Reality, and Shadowsocks, ensuring you always have access to working VPN servers.
+Access a constantly updated collection of free VPN configurations using V2Ray, VLESS, Trojan, VMess, Reality, and Shadowsocks protocols.  Find the original repository [here](https://github.com/AvenCores/goida-vpn-configs).
 
-## Key Features:
+[![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://github.com/AvenCores/goida-vpn-configs)
+[![GPL-3.0 License](https://img.shields.io/badge/License-GPL--3.0-blue?style=for-the-badge)](./LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/AvenCores/goida-vpn-configs?style=for-the-badge)](https://github.com/AvenCores/goida-vpn-configs/issues)
+[![GitHub stars](https://img.shields.io/github/stars/AvenCores/goida-vpn-configs?style=for-the-badge)](https://github.com/AvenCores/goida-vpn-configs/stargazers)
+![GitHub forks](https://img.shields.io/github/forks/AvenCores/goida-vpn-configs?style=for-the-badge)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/AvenCores/goida-vpn-configs?style=for-the-badge)](https://github.com/AvenCores/goida-vpn-configs/pulls)
 
-*   **Automatic Updates:** Configurations are refreshed every 9 minutes using GitHub Actions.
-*   **Wide Protocol Support:** Compatible with V2Ray, VLESS, Trojan, VMess, Reality, and Shadowsocks.
-*   **Universal Compatibility:** Works with popular VPN clients like v2rayNG, NekoRay, and more.
-*   **Easy to Use:** Simply copy a link and import it into your VPN client.
-*   **Always Fresh:** The "General List of Always Relevant Configurations" section always provides up-to-date links.
+## Key Features
+
+*   **Automatic Updates:**  Configs are updated every 9 minutes using GitHub Actions, ensuring fresh and reliable connections.
+*   **Wide Compatibility:**  Works with popular VPN clients like `v2rayNG`, `NekoRay`, `Throne`, `v2rayN`, `V2Box`, `v2RayTun`, and `Hiddify`.
+*   **Multiple Protocol Support:**  Includes configurations for `V2Ray`, `VLESS`, `Trojan`, `VMess`, `Reality`, and `Shadowsocks`.
+*   **Easy Import:** Configurations are provided as simple text subscriptions for easy import into your VPN client.
+*   **QR Code Support:** QR codes are also provided for easy setup on Android TV.
 
 ## Table of Contents
 
 *   [Key Features](#key-features)
-*   [How to Get Started](#how-to-get-started)
-*   [General List of Always Relevant Configurations](#general-list-of-always-relevant-configurations)
-*   [Video Guides](#video-guides)
+*   [Quick Start](#quick-start)
+*   [How It Works](#how-it-works)
 *   [Repository Structure](#repository-structure)
 *   [Local Generator Run](#local-generator-run)
+*   [Video Guides](#video-guides)
+*   [Guide Menu](#guide-menu)
 *   [License](#license)
 *   [Support the Author](#support-the-author)
 
 ---
 
-## How to Get Started
+## Quick Start
 
-1.  Choose a link from the "[General List of Always Relevant Configurations](#general-list-of-always-relevant-configurations)" below.
-2.  Import the link into your preferred VPN client (e.g., v2rayNG, NekoRay, etc.). Refer to the video guides below for setup instructions.
-3.  Connect to a server with minimal ping time.
-
-## General List of Always Relevant Configurations
-
-*   **Recommended Lists:**  [6](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt), [22](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/22.txt), [23](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/23.txt), [24](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt), and [25](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt).
-
-1.  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt`
-2.  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/2.txt`
-3.  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/3.txt`
-4.  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/4.txt`
-5.  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/5.txt`
-6.  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt`
-7.  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/7.txt`
-8.  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/8.txt`
-9.  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/9.txt`
-10. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/10.txt`
-11. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/11.txt`
-12. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/12.txt`
-13. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/13.txt`
-14. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/14.txt`
-15. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/15.txt`
-16. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/16.txt`
-17. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/17.txt`
-18. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/18.txt`
-19. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/19.txt`
-20. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/20.txt`
-21. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/21.txt`
-22. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/22.txt`
-23. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/23.txt`
-24. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt`
-25. `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt`
-
-🔗 [Link to QR codes of always relevant configurations](https://github.com/AvenCores/goida-vpn-configs/tree/main/qr-codes)
+1.  Copy a link from the "Always Up-to-Date Config List" section below.
+2.  Import the link into your VPN client.
+3.  Select a server with low ping and connect.
 
 ---
 
-## Video Guides
+## How It Works
 
-*   **General Installation & Troubleshooting Guide:**
+*   The [`source/main.py`](source/main.py) script downloads public subscriptions from various sources.
+*   The [`frequent_update.yml`](.github/workflows/frequent_update.yml) workflow runs the script every 9 minutes using a cron job.
+*   Results are saved to the `githubmirror/` directory and pushed to this repository.
 
-    [![maxresdefault](https://github.com/user-attachments/assets/e36e2351-3b1a-4b90-87f7-cafbc74f238c)](https://youtu.be/sagz2YluM70)
-
-    > ⚠️ **Note:** Video guide is for Android, Android TV, Windows, Linux, MacOS.  Text guide below is up to date and recommended for iOS and iPadOS.
-
-    *   [YouTube](https://youtu.be/sagz2YluM70)
-    *   [Dzen](https://dzen.ru/video/watch/680d58f28c6d3504e953bd6d)
-    *   [VK Video](https://vk.com/video-200297343_456239303)
-    *   [Telegram](https://t.me/avencoreschat/56595)
-
----
-### Android Guide
-
-1.  Download v2rayNG — [Download Link](https://github.com/2dust/v2rayNG/releases/download/1.10.19/v2rayNG_1.10.19_universal.apk)
-2.  Copy links for the *Always Relevant* configurations (see list above)
-3.  In the v2rayNG app, tap the + icon and select "Import from Clipboard".
-4.  In the top right menu, select "Check group profiles", and sort by test results.
-5.  Select the server with the lowest ping, and tap the play button in the bottom right to connect.
-
----
-### Android TV Guide
-
-1.  Download v2rayNG — [Download Link](https://github.com/2dust/v2rayNG/releases/download/1.10.19/v2rayNG_1.10.19_universal.apk)
-2.  Use the QR codes for the *Always Relevant* configurations: [6](https://github.com/AvenCores/goida-vpn-configs/blob/main/qr-codes/6.png), [22](https://github.com/AvenCores/goida-vpn-configs/blob/main/qr-codes/22.png), [23](https://github.com/AvenCores/goida-vpn-configs/blob/main/qr-codes/23.png), [24](https://github.com/AvenCores/goida-vpn-configs/blob/main/qr-codes/24.png), and [25](https://github.com/AvenCores/goida-vpn-configs/blob/main/qr-codes/25.png).
-3.  Open the v2rayNG app, tap the + icon, and select "Import from QR code."
-4.  In the top right menu, select "Check group profiles", and sort by test results.
-5.  Select the server with the lowest ping, and tap the play button in the bottom right to connect.
-
----
-### Windows/Linux Guide
-
-1.  Download Throne — [Download Link](https://github.com/throneproj/Throne/releases/download/1.0.5/Throne-1.0.5-windows64.zip)
-2.  Copy the links for the *Always Relevant* configurations
-3.  Select "Add profile from clipboard"
-4.  Select all of the configurations and select "Test latency"
-5.  Select the server with the lowest "Ping", and then click run.
-
----
-### iOS/iPadOS Guide
-
-1.  Download V2Box - V2ray Client from the App Store: [App Store Link](https://apps.apple.com/ru/app/v2box-v2ray-client/id6446814690)
-2.  Copy the *Always Relevant* configuration links (see list above).
-3.  In the V2Box app, go to the "Config" tab, tap the "+" icon, and select "Add Subscription". Give it a name and paste the config link.
-4.  Once added, wait for the configuration to load, select it, and tap "Connect" in the bottom panel.
-
----
-### MacOS Guide
-
-1.  Download Hiddify: [Download Link](https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-MacOS.dmg)
-2.  Click "New Profile"
-3.  Copy the *Always Relevant* configuration links.
-4.  Tap "Add from clipboard".
-5.  Change the "Routing option" to "Indonesia" in the settings.
-6.  Select "VPN service" in the top left menu.
-7.  Turn on "VPN".
-8.  To switch servers, click the "VPN" and go to the "Proxy" tab.
+Each update creates a commit like this:
+> 🚀 Config update for Europe/Moscow timezone: HH:MM | DD.MM.YYYY
 
 ---
 
@@ -148,9 +73,11 @@ qr-codes/            — PNG versions of configs for QR import
 source/              — Python script and generator dependencies
  ├─ main.py
  └─ requirements.txt
-.github/workflows/   — CI/CD (auto-update every 9 mins)
+.github/workflows/   — CI/CD (auto-update every 9 min)
 README.md            — This file
 ```
+
+---
 
 ## Local Generator Run
 
@@ -162,16 +89,290 @@ export MY_TOKEN=<GITHUB_TOKEN>   # Token with repo permissions to push changes
 python main.py                  # Configs will appear in ../githubmirror
 ```
 
-> **Important:** Set `REPO_NAME = "<username>/<repository>"` manually in `source/main.py` if running from a fork.
+> **Important!**  In `source/main.py`, set `REPO_NAME = "<username>/<repository>"` if you're running the script from a fork.
 
 ---
 
-## License
+## Video Guides
 
-This project is licensed under the GPL-3.0 License.  See the [`LICENSE`](LICENSE) file for details.
+![maxresdefault](https://github.com/user-attachments/assets/e36e2351-3b1a-4b90-87f7-cafbc74f238c)
+
+<div align="center">
+
+> ⚠️ **Attention!** The video guide is only relevant for Android, Android TV, Windows, Linux, and MacOS. For iOS and iPadOS, refer to the text guide below.
+
+[**Watch on YouTube**](https://youtu.be/sagz2YluM70)
+
+[**Watch on Dzen**](https://dzen.ru/video/watch/680d58f28c6d3504e953bd6d)
+
+[**Watch on VK Video**](https://vk.com/video-200297343_456239303)
+
+[**Watch on Telegram**](https://t.me/avencoreschat/56595)
+
+</div>
 
 ---
 
-## Support the Author
+## Guide Menu
 
-*   **SBER**: `2202 2050 7215 4401`
+<details>
+  <summary>👩‍💻 Source Code</summary>
+  Link to the source code: [Source Code](https://github.com/AvenCores/goida-vpn-configs/tree/main/source)
+</details>
+
+---
+
+<details>
+  <summary>📋 Always Up-to-Date Config List</summary>
+  > Recommended lists: **[6](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt)**, **[22](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/22.txt)**, **[23](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/23.txt)**, **[24](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt)** and **[25](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt)**.
+
+1) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt`
+2) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/2.txt`
+3) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/3.txt`
+4) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/4.txt`
+5) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/5.txt`
+6) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt`
+7) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/7.txt`
+8) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/8.txt`
+9) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/9.txt`
+10) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/10.txt`
+11) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/11.txt`
+12) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/12.txt`
+13) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/13.txt`
+14) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/14.txt`
+15) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/15.txt`
+16) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/16.txt`
+17) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/17.txt`
+18) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/18.txt`
+19) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/19.txt`
+20) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/20.txt`
+21) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/21.txt`
+22) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/22.txt`
+23) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/23.txt`
+24) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt`
+25) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt`
+
+🔗 [QR Codes for Always Up-to-Date Configs](https://github.com/AvenCores/goida-vpn-configs/tree/main/qr-codes)
+</details>
+
+---
+
+<details>
+  <summary>📱 Android Guide</summary>
+    **1.** Download **«v2rayNG»** — [Download Link](https://github.com/2dust/v2rayNG/releases/download/1.10.19/v2rayNG_1.10.19_universal.apk)
+
+    **2.** Copy to clipboard:
+
+    - [ ] **Always Up-to-Date**
+
+    > Recommended lists: **[6](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt)**, **[22](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/22.txt)**, **[23](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/23.txt)**, **[24](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt)** and **[25](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt)**.
+
+    1) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt`
+    2) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/2.txt`
+    3) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/3.txt`
+    4) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/4.txt`
+    5) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/5.txt`
+    6) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt`
+    7) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/7.txt`
+    8) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/8.txt`
+    9) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/9.txt`
+    10) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/10.txt`
+    11) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/11.txt`
+    12) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/12.txt`
+    13) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/13.txt`
+    14) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/14.txt`
+    15) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/15.txt`
+    16) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/16.txt`
+    17) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/17.txt`
+    18) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/18.txt`
+    19) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/19.txt`
+    20) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/20.txt`
+    21) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/21.txt`
+    22) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/22.txt`
+    23) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/23.txt`
+    24) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt`
+    25) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt`
+
+    **3.** Open the **«v2rayNG»** app, tap the ➕ in the upper right corner, and select **«Import from clipboard»**.
+
+    **4.** Tap **«three dots»** in the upper right corner, and then **«Test group profiles»**. After testing, tap **«Sort by test results»** in the same menu.
+
+    **5.** Choose your preferred server, then tap the ▶️ button in the lower right corner.
+</details>
+
+---
+
+<details>
+  <summary>📺 Android TV Guide</summary>
+    **1.** Download **«v2rayNG»** — [Download Link](https://github.com/2dust/v2rayNG/releases/download/1.10.19/v2rayNG_1.10.19_universal.apk)
+
+    > Recommended **«QR Codes»**: **[6](https://github.com/AvenCores/goida-vpn-configs/blob/main/qr-codes/6.png)**, **[22](https://github.com/AvenCores/goida-vpn-configs/blob/main/qr-codes/22.png)**, **[23](https://github.com/AvenCores/goida-vpn-configs/blob/main/qr-codes/23.png)**, **[24](https://github.com/AvenCores/goida-vpn-configs/blob/main/qr-codes/24.png)** and **[25](https://github.com/AvenCores/goida-vpn-configs/blob/main/qr-codes/25.png)**.
+
+    **2.** Download the **«QR Codes»** for the always up-to-date configurations — [Link](https://github.com/AvenCores/goida-vpn-configs/tree/main/qr-codes)
+
+    **3**. Open the **«v2rayNG»** app, tap the ➕ in the upper right corner, and select **«Import from QR code»**. Then, select the image by tapping the photo icon in the upper right corner.
+
+    **4.** Tap **«three dots»** in the upper right corner, and then **«Test group profiles»**. After testing, tap **«Sort by test results»** in the same menu.
+
+    **5.** Choose your preferred server, then tap the ▶️ button in the lower right corner.
+</details>
+
+---
+
+<details>
+  <summary>⚠ If you have no internet connection when connecting to VPN in v2rayNG</summary>
+  Link to the video demonstrating the fix — [Link](https://t.me/avencoreschat/25254)
+</details>
+
+---
+
+<details>
+  <summary>⚠ If configurations do not appear when adding VPN in v2rayNG</summary>
+    **1.** Tap the **«three lines»** in the **«upper left corner»**.
+
+    **2.** Tap the **«Groups»** button.
+
+    **3.** Tap the **«circle with an arrow icon»** in the **«upper right corner»** and wait for the update to finish.
+</details>
+
+---
+
+<details>
+  <summary>⚠ Fix for "Internet connection check failed: net/http: 12X handshake timeout"</summary>
+    **1.** Press and hold the **«v2rayNG»** icon on your desktop and tap **«About app»**.
+
+    **2.** Tap the **«Stop»** button and restart **«v2rayNG»**.
+</details>
+
+---
+
+<details>
+  <summary>⚠ Fix for "Fail to detect internet connection: io: read/write closed pipe"</summary>
+    **1.** Press and hold the **«v2rayNG»** icon on your desktop and tap **«About app»**.
+
+    **2.** Tap the **«Stop»** button and restart **«v2rayNG»**.
+
+    **3.** Tap **«three dots»** in the upper right corner, and then **«Test group profiles»**. After testing, tap **«Sort by test results»** in the same menu.
+
+    **4.** Choose your preferred server, then tap the ▶️ button in the lower right corner.
+</details>
+
+---
+
+<details>
+  <summary>🔄 Updating configurations in v2rayNG</summary>
+    **1.** Tap the **«three lines icon»** in the **«upper left corner»**.
+
+    **2.** Select the **«Groups»** tab.
+
+    **3.** Tap the **«circle with an arrow icon»** in the **«upper right corner»**.
+</details>
+
+---
+
+<details>
+  <summary>🖥 Windows, Linux Guide</summary>
+    **1.** Download **«Throne»** — [Windows 10/11](https://github.com/throneproj/Throne/releases/download/1.0.5/Throne-1.0.5-windows64.zip) / [Windows 7/8/8.1](https://github.com/throneproj/Throne/releases/download/1.0.5/Throne-1.0.5-windowslegacy64.zip) / [Linux](https://github.com/throneproj/Throne/releases/download/1.0.5/Throne-1.0.5-linux-amd64.zip)
+
+    **2.** Copy to clipboard:
+
+    - [ ] **Always Up-to-Date**
+
+    > Recommended lists: **[6](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt)**, **[22](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/22.txt)**, **[23](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/23.txt)**, **[24](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt)** and **[25](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt)**.
+
+    1) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt`
+    2) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/2.txt`
+    3) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/3.txt`
+    4) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/4.txt`
+    5) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/5.txt`
+    6) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt`
+    7) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/7.txt`
+    8) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/8.txt`
+    9) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/9.txt`
+    10) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/10.txt`
+    11) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/11.txt`
+    12) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/12.txt`
+    13) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/13.txt`
+    14) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/14.txt`
+    15) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/15.txt`
+    16) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/16.txt`
+    17) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/17.txt`
+    18) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/18.txt`
+    19) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/19.txt`
+    20) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/20.txt`
+    21) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/21.txt`
+    22) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/22.txt`
+    23) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/23.txt`
+    24) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt`
+    25) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt`
+
+    **3.** Click **«Profiles»**, then **«Add profile from clipboard»**.
+
+    **4.** Select all configurations with the combination of keys **«Ctrl + A»**, click **«Profiles»** in the top menu, and then **«Latency test (ping) of the selected profile»** and wait for the test to complete (the inscription **«Latency test (ping) complete!»** will appear in the **«Logs»** tab)
+
+    **5.** Click on the column button **«Latency (ping)»**.
+
+    **6.** In the upper part of the program window, activate the **«TUN mode»** option by checking the box.
+
+    **7.** Select one of the configurations with the lowest **«Latency (ping)»**, then click **«LMB»** and **«Start»**.
+</details>
+
+---
+
+<details>
+  <summary>⚠ Fix MSVCP and VCRUNTIME error on Windows 10/11</summary>
+    **1.** Press **«Win+R»** and write **«control»**.
+
+    **2.** Select **«Programs and Features»**.
+
+    **3.** In the search field (top right), type the word **«Visual»** and remove everything related to **«Microsoft Visual»**.
+
+    **4.** Download the archive and unpack — [Link](https://cf.comss.org/download/Visual-C-Runtimes-All-in-One-Jul-2025.zip)
+
+    **5.** Run **«install_bat.all»** *as an administrator* and wait for everything to install.
+</details>
+
+---
+
+<details>
+  <summary>🔄 Updating configurations in NekoRay</summary>
+    **1.** Click the **«Settings»** button.
+
+    **2.** Select **«Groups»**.
+
+    **3.** Click the **«Update all subscriptions»** button.
+</details>
+
+---
+
+<details>
+  <summary>☎ iOS, iPadOS Guide</summary>
+    **1.** Download **«V2Box - V2ray Client»** — [Download Link](https://apps.apple.com/ru/app/v2box-v2ray-client/id6446814690)
+
+    **2.** Copy to clipboard:
+
+    - [ ] **Always Up-to-Date**
+
+    > Recommended lists: **[6](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt)**, **[22](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/22.txt)**, **[23](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/23.txt)**, **[24](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt)** and **[25](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt)**.
+
+    1) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt`
+    2) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/2.txt`
+    3) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/3.txt`
+    4) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/4.txt`
+    5) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/5.txt`
+    6) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt`
+    7) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/7.txt`
+    8) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/8.txt`
+    9) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/9.txt`
+    10) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/10.txt`
+    11) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/11.txt`
+    12) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/12.txt`
+    13) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/13.txt`
+    14) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/14.txt`
+    15) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/15.txt`
+    16) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/16.txt`
+    17) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/17.txt`
+    18) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/18.txt`
+    19) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/19.txt`
+    20) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/20.txt`
+    21) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/

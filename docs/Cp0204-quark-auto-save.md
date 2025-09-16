@@ -1,72 +1,70 @@
 <div align="center">
-  <img src="img/icon.png" alt="Quark Auto-Save Logo" width="100">
+  <img src="img/icon.png" alt="Quark Auto Save Logo" width="100">
+  <h1>Quark Auto Save: Automate Your Quark Cloud Drive Experience</h1>
+  <p>Effortlessly automate Quark Cloud Drive tasks like auto-saving, renaming, and media library refresh with this powerful and easy-to-use tool.</p>
 </div>
 
-# Quark Auto-Save: Automate Your Quark Cloud Drive Experience
+[![Wiki Documents](https://img.shields.io/badge/wiki-Documents-green?logo=github)](https://github.com/Cp0204/quark-auto-save/wiki)
+[![GitHub Release](https://img.shields.io/github/v/release/Cp0204/quark-auto-save?logo=github)](https://github.com/Cp0204/quark-auto-save)
+[![Docker Pulls](https://img.shields.io/docker/pulls/cp0204/quark-auto-save?logo=docker&logoColor=white)](https://hub.docker.com/r/cp0204/quark-auto-save)
+[![Docker Image Size](https://img.shields.io/docker/image-size/cp0204/quark-auto-save?logo=docker&logoColor=white)](https://hub.docker.com/r/cp0204/quark-auto-save)
 
-**Effortlessly automate Quark Cloud Drive tasks, from auto-saving files to organizing your media library, with this powerful and easy-to-use tool. [Visit the original repository on GitHub](https://github.com/Cp0204/quark-auto-save).**
+[**View the original repository on GitHub**](https://github.com/Cp0204/quark-auto-save)
 
-[![wiki][wiki-image]][wiki-url]
-[![github releases][gitHub-releases-image]][github-url]
-[![docker pulls][docker-pulls-image]][docker-url]
-[![docker image size][docker-image-size-image]][docker-url]
-
-[wiki-image]: https://img.shields.io/badge/wiki-Documents-green?logo=github
-[gitHub-releases-image]: https://img.shields.io/github/v/release/Cp0204/quark-auto-save?logo=github
-[docker-pulls-image]: https://img.shields.io/docker/pulls/cp0204/quark-auto-save?logo=docker&&logoColor=white
-[docker-image-size-image]: https://img.shields.io/docker/image-size/cp0204/quark-auto-save?logo=docker&&logoColor=white
-[github-url]: https://github.com/Cp0204/quark-auto-save
-[docker-url]: https://hub.docker.com/r/cp0204/quark-auto-save
-[wiki-url]: https://github.com/Cp0204/quark-auto-save/wiki
-
-![run_log](img/run_log.png)
+![Run Log](img/run_log.png)
 
 > [!CAUTION]
-> ⛔️⛔️⛔️ **Important!**  Avoid excessive automated runs.  Limit the frequency to prevent account risks and reduce strain on the Quark servers.
+> ⛔️⛔️⛔️ **Important!** Resources are not updated constantly. **Avoid frequent scheduled runs** to prevent account risks and server strain.
 
 > [!NOTE]
-> The developer does not provide direct customer support.  The Wiki and Issues sections are the primary resources for troubleshooting. Please consult them before asking questions.
+> The developer is not customer support. This is a free, open-source project. Please consult the Wiki and Issues before asking questions.
 
 ## Key Features
 
-*   **Automated Transfers:** Automatically save files from shared links to your Quark Cloud Drive.
-*   **Organized File Management:**  Organize files with custom renaming rules, skip already saved files, and filter by file extensions.
-*   **Smart Linking:** Supports subdirectories within shared links and handles password-protected shares.
-*   **Emby Integration:**  Automatically refreshes your Emby media library after new content is added (requires configuration).
-*   **Flexible Task Management:** Manage multiple tasks, set expiration dates, and schedule tasks for specific days of the week.
-*   **Daily Sign-In & Notifications:**  Automated daily sign-in to claim cloud storage and support for various notification channels.
-*   **Multi-Account Support:** Manage multiple accounts (sign-in for all, auto-save for the primary account).
-*   **Docker Deployment:** Easily deploy and manage the application via a user-friendly WebUI.
+*   **Automated Saving:** Automatically transfer files from shared links to your Quark Cloud Drive.
+*   **WebUI Management:** Configure and manage your tasks with an intuitive web interface via Docker.
+*   **Flexible File Management:**  Rename files with regular expressions, skip already saved files, and ignore file extensions.
+*   **Smart Link Handling:** Supports subdirectories in shared links and automatically handles links requiring passwords.
+*   **Media Library Integration:** Integrates with media servers like Emby for automatic media library refreshing.
+*   **Task Scheduling:**  Schedule tasks to run on specific days and set expiration dates.
+*   **Notification Support:** Receive updates through various notification channels.
+*   **Multi-Account Support:** Manage multiple accounts for increased flexibility.
+*   **Daily Sign-in:** Automate the daily sign-in process to earn free cloud storage.
+*   **Plugin Support:**  Extend functionality via plugin support.
 
-## Getting Started: Docker Deployment
+## Deployment
 
-Docker provides a simple and graphical way to configure the application.
+### Docker Deployment
+
+Docker deployment provides a user-friendly WebUI for easy configuration.
+
+**Deployment Command:**
 
 ```shell
 docker run -d \
   --name quark-auto-save \
-  -p 5005:5005 \ # Access via http://your_server_ip:5005, you can change the first port but not the second.
+  -p 5005:5005 \ # Change the port before the colon if needed; the port after the colon must remain unchanged
   -e WEBUI_USERNAME=admin \
   -e WEBUI_PASSWORD=admin123 \
-  -v ./quark-auto-save/config:/app/config \ # Required: Configuration persistence
-  -v ./quark-auto-save/media:/media \ # Optional: For strm generation with alist_strm_gen
+  -v ./quark-auto-save/config:/app/config \ # Required: Persists configurations
+  -v ./quark-auto-save/media:/media \ # Optional: For plugins like alist_strm_gen
   --network bridge \
   --restart unless-stopped \
   cp0204/quark-auto-save:latest
-  # registry.cn-shenzhen.aliyuncs.com/cp0204/quark-auto-save:latest # Domestic mirror
+  # registry.cn-shenzhen.aliyuncs.com/cp0204/quark-auto-save:latest # China Mirror Address
 ```
 
-Alternatively, use a `docker-compose.yml` file:
+**docker-compose.yml:**
 
 ```yaml
-version: "3.8"
+name: quark-auto-save
 services:
   quark-auto-save:
     image: cp0204/quark-auto-save:latest
     container_name: quark-auto-save
     network_mode: bridge
     ports:
-      - "5005:5005"
+      - 5005:5005
     restart: unless-stopped
     environment:
       WEBUI_USERNAME: "admin"
@@ -76,14 +74,14 @@ services:
       - ./quark-auto-save/media:/media
 ```
 
-Access the WebUI at:  `http://yourhost:5005`
+**Management Address:** `http://yourhost:5005`
 
-| Environment Variable | Default   | Description                                |
-| -------------------- | --------- | ------------------------------------------ |
-| `WEBUI_USERNAME`     | `admin`   | WebUI login username                       |
-| `WEBUI_PASSWORD`     | `admin123`| WebUI login password                       |
-| `PORT`               | `5005`    | WebUI port                                 |
-| `PLUGIN_FLAGS`       |           | Disable plugins (e.g., `-emby,-aria2`)     |
+| Environment Variable | Default    | Notes                                      |
+| -------------------- | ---------- | ------------------------------------------ |
+| `WEBUI_USERNAME`     | `admin`    | Admin Username                             |
+| `WEBUI_PASSWORD`     | `admin123` | Admin Password                             |
+| `PORT`               | `5005`     | WebUI Port                                 |
+| `PLUGIN_FLAGS`       |            | Disable specific plugins, e.g., `-emby,-aria2` |
 
 #### One-Click Update
 
@@ -100,70 +98,83 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtow
 
 </details>
 
-## File Renaming and Organization
-
-Use regular expressions to customize how files are renamed and organized after they are saved.
+## Usage & Configuration
 
 ### Regular Expression Examples
 
-| Pattern                                  | Replace          | Result                                                                        |
-| ---------------------------------------- | ---------------- | ----------------------------------------------------------------------------- |
-| `.*`                                     |                  | Save all files without renaming.                                               |
-| `\.mp4$`                                 |                  | Save only files with the .mp4 extension.                                      |
-| `^【电影TT】花好月圆(\d+)\.(mp4\|mkv)`    | `\1.\2`          | 【电影TT】花好月圆01.mp4 → 01.mp4<br>【电影TT】花好月圆02.mkv → 02.mkv      |
-| `^(\d+)\.mp4`                            | `S02E\1.mp4`     | 01.mp4 → S02E01.mp4<br>02.mp4 → S02E02.mp4                                 |
-| `$TV`                                     |                  | [Magic Match](#magic-match) for episode files.                                 |
-| `^(\d+)\.mp4`                            | `{TASKNAME}.S02E\1.mp4` | 01.mp4 → task_name.S02E01.mp4                                 |
+| Pattern                                | Replace                 | Result                                                                   |
+| -------------------------------------- | ----------------------- | ---------------------------------------------------------------------- |
+| `.*`                                   |                         | Save all files without any renaming.                                 |
+| `\.mp4$`                               |                         | Save only files with the `.mp4` extension.                              |
+| `^【电影TT】花好月圆(\d+)\.(mp4\|mkv)` | `\1.\2`                 | 【电影TT】花好月圆01.mp4 → 01.mp4<br>【电影TT】花好月圆02.mkv → 02.mkv |
+| `^(\d+)\.mp4`                          | `S02E\1.mp4`            | 01.mp4 → S02E01.mp4<br>02.mp4 → S02E02.mp4                             |
+| `$TV`                                  |                         | [Magic Match](#magic-match) episode file                                          |
+| `^(\d+)\.mp4`                          | `{TASKNAME}.S02E\1.mp4` | 01.mp4 → 任务名.S02E01.mp4                                             |
 
-For more regex examples: [Regex Tutorial](https://github.com/Cp0204/quark-auto-save/wiki/正则处理教程)
+More RegEx usage instructions: [RegEx Tutorial](https://github.com/Cp0204/quark-auto-save/wiki/正则处理教程)
 
 > [!TIP]
 >
-> **Magic Matching and Magic Variables:** The regex engine uses “magic matching” to simplify renaming tasks. Also supports {} "Magic Variables" since version v0.6.0.
+> **Magic Matching and Magic Variables:** Use "magic matching" with patterns starting with `$` and an empty replacement.  Since v0.6.0, you can use more flexible "magic variables" enclosed in `{}`.
 >
-> Learn more about magic matching: [Magic Match and Magic Variables](https://github.com/Cp0204/quark-auto-save/wiki/魔法匹配和魔法变量)
+> See [Magic Matching and Magic Variables](https://github.com/Cp0204/quark-auto-save/wiki/魔法匹配和魔法变量) for more details.
 
-## Integrating with Media Libraries
+### Refresh Media Library
 
-Configure plugins to trigger actions like refreshing your media library (Emby) after new files are saved.  See the [Plugin Configuration Guide](https://github.com/Cp0204/quark-auto-save/wiki/插件配置).
+Trigger actions after saving, like automatically refreshing the media library or generating .strm files.  Configuration: [Plugin Configuration](https://github.com/Cp0204/quark-auto-save/wiki/插件配置)
 
-If you wish to create your own media library plugin, check out the [plugin development guide](https://github.com/Cp0204/quark-auto-save/tree/main/plugins).
+Media library integration is plugin-based.  See [Plugin Development Guide](https://github.com/Cp0204/quark-auto-save/tree/main/plugins) if you are interested in developing plugins.
 
-## Additional Resources
+### More Tips
 
-*   **Troubleshooting and Tips:** [Tips and Tricks](https://github.com/Cp0204/quark-auto-save/wiki/使用技巧集锦)
-*   **FAQ:** [Wiki](https://github.com/Cp0204/quark-auto-save/wiki)
+See the Wiki: [Usage Tips](https://github.com/Cp0204/quark-auto-save/wiki/使用技巧集锦)
 
-## Support the Project
+## Ecosystem Projects
 
-If you find this project useful, you can show your appreciation by donating.
+Showcasing projects built around QAS, including official and third-party options.
+
+### Official Projects
+
+*   [QAS One-Click Push Assistant](https://greasyfork.org/zh-CN/scripts/533201-qas一键推送助手)
+
+    A Greasemonkey script adds a "Push to QAS" button to Quark Cloud Drive sharing pages.
+
+*   [SmartStrm](https://github.com/Cp0204/SmartStrm)
+
+    .STRM file generation tool for post-processing and integration with media libraries.
+
+### Third-Party Open Source Projects
+
+> [!TIP]
+>
+> These third-party projects are community-developed and open-source.  Assess the risks before deploying to production.
+>
+> Submit new projects via Issues.
+
+*   [nonebot-plugin-quark-autosave](https://github.com/fllesser/nonebot-plugin-quark-autosave)
+
+    QAS Telegram bot for quick management of auto-saving tasks.
+
+*   [Astrbot\_plugin\_quarksave](https://github.com/lm379/astrbot_plugin_quarksave)
+
+    AstrBot plugin that uses quark\_auto\_save to automatically transfer resources to Quark Cloud Drive.
+
+## Donations
+
+If you find this project helpful, consider donating to show your support.
 
 ![WeChatPay](https://cdn.jsdelivr.net/gh/Cp0204/Cp0204@main/img/wechat_pay_qrcode.png)
 
 ## Disclaimer
 
-This project is for personal use and automation purposes only.
+This project is for personal use and aims to improve cloud drive efficiency.
 
-It does not involve any cracking or unauthorized access to Quark's services. All data is obtained from the official Quark API.  The developer is not responsible for the content of the saved files, nor for any changes to the Quark API. Please use at your own discretion.
+The program doesn't use any cracking methods, and it relies on Quark's existing APIs. I am not responsible for the content on the drive or for any changes in the Quark API. Use at your own discretion.
 
-This is an open-source project for learning and discussion. It is not for commercial use, and any use for illegal purposes is strictly prohibited.
+Open source is for learning and communication. It is not for profit or commercial use.  Do not use it for illegal purposes.
 
 ## Sponsor
 
 CDN acceleration and security protection for this project are sponsored by Tencent EdgeOne.
 
 <a href="https://edgeone.ai/?from=github" target="_blank"><img title="Best Asian CDN, Edge, and Secure Solutions - Tencent EdgeOne" src="https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png" width="300"></a>
-```
-Key improvements and optimization notes:
-
-*   **SEO Keywords:** Incorporated relevant keywords like "Quark Cloud Drive," "auto-save," "automation," "Docker," "Emby," "file organization," and "media library."
-*   **Concise Hook:**  The one-sentence hook immediately highlights the core value proposition.
-*   **Clear Headings:**  Used H2 headings for improved readability and structure.
-*   **Bulleted Key Features:**  Features are presented in an easy-to-scan bulleted list.
-*   **Actionable Instructions:** The Docker deployment section provides copy/paste instructions.
-*   **Emphasis on Benefits:**  Highlights what users *gain* from using the software.
-*   **Improved Readability:** Added line breaks and spacing for better readability.
-*   **Clear Warnings:**  Warnings about overuse are emphasized at the beginning.
-*   **Stronger Call to Action:** Encourages users to visit the GitHub repo.
-*   **Structured Information:** Improved organization to enable faster reading.
-*   **Optimized Disclaimer:** The disclaimer is clear and concise.
