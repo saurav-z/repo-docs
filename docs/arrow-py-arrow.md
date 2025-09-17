@@ -1,28 +1,32 @@
-# Arrow: Human-Friendly Dates and Times for Python
+# Arrow: Effortless Dates and Times in Python
 
-**Simplify your Python date and time manipulations with Arrow, a powerful library designed for ease of use and readability.**  Check out the [Arrow repository on GitHub](https://github.com/arrow-py/arrow) for more details.
+**Simplify your Python date and time manipulations with Arrow, a user-friendly library for intuitive date and time handling.**  You can find the original repository [here](https://github.com/arrow-py/arrow).
 
-## Key Features
+## Key Features:
 
-Arrow offers a streamlined approach to working with dates, times, and timestamps, making your code cleaner and more efficient:
-
-*   **Intuitive API:**  Easily create, manipulate, and format dates and times.
-*   **Simplified Timezone Handling:**  Work with timezones effortlessly, with UTC as the default.
-*   **ISO 8601 Support:**  Seamlessly parse and format dates and times according to the ISO 8601 standard.
-*   **Relative Offsets & Time Span Generation:**  Use the `shift` method and generate time spans for easy time calculations, supporting weeks and more.
-*   **Human-Friendly Formatting:**  Convert timestamps into human-readable phrases with a growing list of locales.
-*   **Full Datetime Replacement:** A fully-implemented, drop-in replacement for datetime.
-*   **Python 3.8+ Compatibility:**  Works with current Python versions.
-*   **Flexible:**  Supports `dateutil`, `pytz`, and `ZoneInfo` tzinfo objects.
+*   **Drop-in Replacement:** Fully implements and enhances the datetime type.
+*   **Python 3.8+ Compatible:** Supports the latest Python versions.
+*   **Timezone Awareness:** Handles timezones and defaults to UTC.
+*   **Simplified Creation:** Easy-to-use methods for common input scenarios.
+*   **Flexible Shifting:** Shift dates and times with relative offsets, including weeks.
+*   **Automatic Formatting & Parsing:**  Intelligent string formatting and parsing.
+*   **ISO 8601 Support:** Extensive support for the ISO 8601 standard.
+*   **Timezone Conversion:** Seamlessly convert between timezones.
+*   **Dateutil, Pytz, & ZoneInfo Compatibility:** Works with popular timezone libraries.
+*   **Time Span & Range Generation:**  Create time spans, ranges, floors, and ceilings.
+*   **Humanization:**  Human-friendly date and time formatting (e.g., "an hour ago").
+*   **Extensible:**  Create your own Arrow-derived types.
+*   **Type Hinting:** Full support for PEP 484-style type hints.
 
 ## Why Use Arrow?
 
-Arrow addresses the usability shortcomings of Python's built-in datetime modules, including:
+Arrow addresses the usability issues often found when working with Python's built-in `datetime` module, including:
 
-*   **Reduced Complexity:**  Fewer modules and types to manage.
-*   **Simplified Timezone Conversions:**  Easy handling of timezone conversions.
-*   **Enhanced Functionality:**  Provides features like ISO 8601 parsing and humanization that are missing in the standard library.
-*   **Improved Usability:**  Makes common date and time operations significantly more intuitive.
+*   Reduced reliance on multiple modules (datetime, time, calendar, etc.).
+*   Simplified handling of different date and time types.
+*   Streamlined timezone conversions and timestamp operations.
+*   Improved timezone default behavior.
+*   Enhanced functionality with features like ISO 8601 parsing and humanization.
 
 ## Quick Start
 
@@ -39,45 +43,51 @@ pip install -U arrow
 ```python
 import arrow
 
-# Parse a datetime string
-dt = arrow.get('2023-10-27T10:00:00+00:00')
-print(dt)  # Output: <Arrow [2023-10-27T10:00:00+00:00]>
+# Create an Arrow object from an ISO 8601 string
+arrow.get('2013-05-11T21:23:58.970460+07:00')
+# Output: <Arrow [2013-05-11T21:23:58.970460+07:00]>
 
 # Get the current UTC time
 utc = arrow.utcnow()
-print(utc)  # Output: <Arrow [2023-10-27T10:00:00+00:00]>
+# Output: <Arrow [2013-05-11T21:23:58.970460+00:00]>
 
-# Shift the time forward one hour
-shifted = utc.shift(hours=1)
-print(shifted)  # Output: <Arrow [2023-10-27T11:00:00+00:00]>
+# Shift the time back one hour
+utc = utc.shift(hours=-1)
+# Output: <Arrow [2013-05-11T20:23:58.970460+00:00]>
 
-# Convert to a different timezone
-local = shifted.to('US/Pacific')
-print(local) # Output: <Arrow [2023-10-27T04:00:00-07:00]>
+# Convert to US/Pacific time
+local = utc.to('US/Pacific')
+# Output: <Arrow [2013-05-11T13:23:58.970460-07:00]>
+
+# Get the timestamp
+local.timestamp()
+# Output: 1368303838.970460
 
 # Format the time
-print(local.format('YYYY-MM-DD HH:mm:ss ZZ'))  # Output: 2023-10-27 04:00:00 -07:00
+local.format()
+# Output: '2013-05-11 13:23:58 -07:00'
 
-# Get a human-readable representation
-print(local.humanize())  # Output: an hour ago
+# Format with a specific pattern
+local.format('YYYY-MM-DD HH:mm:ss ZZ')
+# Output: '2013-05-11 13:23:58 -07:00'
+
+# Humanize the time
+local.humanize()
+# Output: 'an hour ago'
+
+# Humanize with a specific locale
+local.humanize(locale='ko-kr')
+# Output: '한시간 전'
 ```
 
 ## Documentation
 
-For detailed information and advanced usage, please visit [arrow.readthedocs.io](https://arrow.readthedocs.io).
+For comprehensive documentation, visit [arrow.readthedocs.io](https://arrow.readthedocs.io).
 
 ## Contributing
 
-Arrow welcomes contributions! To get involved:
-
-1.  Find an issue or feature on the [issue tracker](https://github.com/arrow-py/arrow/issues).
-2.  Fork the repository and create a branch for your changes.
-3.  Add tests to verify your code.
-4.  Run the test suite and linting checks using `tox && tox -e lint,docs` or `make build39 && make test && make lint` (replace `build39` with your Python version).
-5.  Submit a pull request.
-
-For questions, use the [discussions](https://github.com/arrow-py/arrow/discussions).
+Contributions are welcome!  Refer to the original documentation to find issues and guidelines for contribution.
 
 ## Support Arrow
 
-Support the project through [Open Collective](https://opencollective.com/arrow) to help ensure its continued development.
+Support the project through the [Open Collective](https://opencollective.com/arrow).

@@ -1,4 +1,35 @@
-> **1000⭐ unlocked — [Blur Blur Blur](https://github.com/onestardao/WFGY/blob/main/OS/BlurBlurBlur/README.md) is live. One-man cold start, one season.**
+<details>
+<summary><strong>🧭 Lost or curious? Open the WFGY Compass & ⭐ Star Unlocks</strong></summary>
+  
+### WFGY System Map
+*(One place to see everything; links open the relevant section.)*
+
+| Layer | Page | What it’s for |
+|------|------|----------------|
+| 🧠 Core | [WFGY Core 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) | The symbolic reasoning engine (math & logic)  |
+| 🧠 Core | [WFGY 1.0 Home](https://github.com/onestardao/WFGY/) | The original homepage for WFGY 1.0 — **🔴 YOU ARE HERE 🔴** |
+| 🗺️ Map | [Problem Map 1.0](https://github.com/onestardao/WFGY/tree/main/ProblemMap#readme) | 16 failure modes + fixes |
+| 🗺️ Map | [Problem Map 2.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md) | RAG-focused recovery pipeline |
+| 🗺️ Map | [Semantic Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md) | Symptom → family → exact fix |
+| 🧓 Map | [Grandma’s Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GrandmaClinic/README.md) | Plain-language stories, mapped to PM 1.0 |
+| 🏡 Onboarding | [Starter Village](https://github.com/onestardao/WFGY/blob/main/StarterVillage/README.md) | Guided tour for newcomers |
+| 🧰 App | [TXT OS](https://github.com/onestardao/WFGY/tree/main/OS#readme) | .txt semantic OS — 60-second boot |
+| 🧰 App | [Blah Blah Blah](https://github.com/onestardao/WFGY/blob/main/OS/BlahBlahBlah/README.md) | Abstract/paradox Q&A (built on TXT OS) |
+| 🧰 App | [Blur Blur Blur](https://github.com/onestardao/WFGY/blob/main/OS/BlurBlurBlur/README.md) | Text-to-image with semantic control |
+| 🧰 App | [Blow Blow Blow](https://github.com/onestardao/WFGY/blob/main/OS/BlowBlowBlow/README.md) | Reasoning game engine & memory demo |
+| 🧪 Research | [Semantic Blueprint](https://github.com/onestardao/WFGY/blob/main/SemanticBlueprint/README.md) | Modular layer structures (future) |
+| 🧪 Research | [Benchmarks](https://github.com/onestardao/WFGY/blob/main/benchmarks/benchmark-vs-gpt5/README.md) | Comparisons & how to reproduce |
+| 🧪 Research | [Value Manifest](https://github.com/onestardao/WFGY/blob/main/value_manifest/README.md) | Why this engine creates $-scale value |
+
+---
+
+> ### ⭐ Star Unlocks
+> - **1,000 ⭐ → Blur Blur Blur unlocked** ✅  
+> - **3,000 ⭐ → Blow Blow Blow unlocked** ⏳  
+
+---
+
+</details>
 
 # WFGY: Civilization Starter — The WanFaGuiYi Engine  
 ## One upload. Zero setup. [Real $1M-level](https://github.com/onestardao/WFGY/blob/main/value_manifest/README.md) reasoning begins.
@@ -50,152 +81,67 @@
 
 ---
 
-
-
 <details>
-  <summary><strong>🆕 GPT-4 + WFGY > GPT-5? Benchmark says yes (see how to rerun it yourself)</strong></summary>
+  <summary><strong>🆕 GPT-4 + WFGY > GPT-5? Benchmark says yes</strong></summary>
 
-<br>
+  <br>
 
 <img width="2299" height="1219" alt="gpt5_vs_wfgy_benchmark_20250808" src="https://github.com/user-attachments/assets/19f59128-14a5-42de-aa2b-d25c8114db10" />
 
-> This is a simulated benchmark using GPT-5 + the WFGY PDF.  
-> It doesn’t answer actual questions, but the scores closely mirror real-world tests.
+> Quick demo: WFGY turns GPT-4 into a stronger reasoner than GPT-5 baseline.  
+> Reproduce in under 30s with the PDF + prompt.  
 
-**Reproduce in 30 seconds**
-
-```text
-Use GPT-5 to benchmark GPT-4, GPT-5, GPT-4 + WFGY, and GPT-5 + WFGY  
-on the same test set with fixed seeds.  
-Score: Reasoning, Knowledge Recall, Hallucination Resistance, Multi-Step Logic, Overall (0–100).  
-Output a Markdown table and a Markdown-ready bar chart for Overall.
-````
-
-1. **Download WFGY PDF** → [WFGY PDF](https://github.com/onestardao/WFGY/blob/main/I_am_not_lizardman/WFGY_All_Principles_Return_to_One_v1.0_PSBigBig_Public.pdf)
-2. Upload the PDF to your LLM chat
-3. Paste the prompt above and run any benchmark (e.g., GSM8K, Truthful-QA, etc.)
-
-That’s it — no retraining, no jailbreaks.
-**More details, incl. side-by-side comparisons with GPT-5 (tables, prompts, raw logs):**  
-[Benchmark vs GPT-5](https://github.com/onestardao/WFGY/tree/main/benchmarks/benchmark-vs-gpt5/README.md)
-
-</details>
-
-
-<details>
-<summary><strong> 1️⃣ WFGY is a BIG project... Where should I start? (Click to expand)</strong></summary>
-
-<br>
-
-| #  | Section                                                                                                                  | Description                                                                        |
-| -- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
-| 1  | [What problems does WFGY solve?](https://github.com/onestardao/WFGY/tree/main/ProblemMap/README.md)                      | See how WFGY fixes hallucination, memory collapse, semantic failure, and more.     |
-| 2  | [Open the Global Fix Map (300+ guardrail pages)](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GlobalFixMap/README.md) | One index for providers, agents, vector DBs, embeddings, retrieval, ops, safety. Use this when you need exact, tool-specific fixes. |
-| 3  | [Download the Core PDF](https://github.com/onestardao/WFGY/blob/main/I_am_not_lizardman/WFGY_All_Principles_Return_to_One_v1.0_PSBigBig_Public.pdf) | The most important paper — 5000+ downloads. Explains the math & logic behind WFGY. |
-| 4  | [Launch TXT OS](https://github.com/onestardao/WFGY/tree/main/OS)                                                         | A semantic operating system — modular, prompt-free, open-source.                   |
-| 5  | [Try TXT-Blah Blah Blah](https://github.com/onestardao/WFGY/tree/main/OS/BlahBlahBlah)                                   | Semantic Q&A with emotional and logical depth.                                     |
-| 6  | [Try TXT-Blur Blur Blur](https://github.com/onestardao/WFGY/tree/main/OS/BlurBlurBlur)                                   | Text-to-image with semantic control.                                               |
-| 7  | [Explore the Semantic Blueprint](https://github.com/onestardao/WFGY/tree/main/SemanticBlueprint)                         | Layer/module structure powering WFGY’s future extensions.                          |
-| 8  | [Check the Hero Log](https://github.com/onestardao/WFGY/tree/main/images/logs)                                           | Verified users, bugs, and breakthroughs — real field feedback.                     |
-| 9  | [Read the Semantic Clinic Index](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md)         | Triage symptoms → families → exact fixes. A structured recovery map.               |
-| 10 | [FAQ for New Stargazers](https://github.com/onestardao/WFGY/blob/main/FAQ_for_Stargazers.md)                             | Who we are, what you can do, and where to go next.                                 |
-| 11 | [See the RAG Architecture Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md) | Full pipeline view — chunking, embeddings, vector store, prompt, logic fix.        |
-
-<br>
-
-<strong>Note:</strong> Bookmark this page — all updates, releases, and major changes will appear here.
+📎 [Benchmark vs GPT-5 →](https://github.com/onestardao/WFGY/tree/main/benchmarks/benchmark-vs-gpt5/README.md)
 
 </details>
 
 <details>
-<summary><strong>2️⃣ The WFGY Family — The Civilization Starter Project </strong></summary>
+<summary><strong>1️⃣ Where should I start?</strong></summary>
 
 <br>
 
-> The WFGY Family is part of a bigger mission:
-> ignite a new civilization layer — one built on semantic reasoning.
-> Every module below runs on the same symbolic engine, designed for language-first control.
+| Path | Purpose |
+|------|---------|
+| [Problem Map](https://github.com/onestardao/WFGY/tree/main/ProblemMap/README.md) | 16 failure modes + exact fixes |
+| [Global Fix Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GlobalFixMap/README.md) | Guardrails for providers, agents, DBs |
+| [TXT OS](https://github.com/onestardao/WFGY/tree/main/OS) | .txt semantic operating system |
+| [Hero Log](https://github.com/onestardao/WFGY/tree/main/images/logs) | Real user bugs → real fixes |
 
----
-
-### 🌍 Core Engine
-
-* [WFGY Reasoning Engine (Main Repo)](https://github.com/onestardao/WFGY) · The semantic backbone for all modules
-* [TXT OS](https://github.com/onestardao/WFGY/tree/main/OS) · The lightweight OS layer — `.txt` powered, LLM-native
-* [WFGY Core (Engine 2.0 — Now Live)](https://github.com/onestardao/WFGY/blob/main/core/README.md) · The world’s smallest, high-impact reasoning engine.
-
----
-
-### 🌍 Current Modules
-
-* [TXT: Blah Blah Blah](https://github.com/onestardao/WFGY/tree/main/OS/BlahBlahBlah) — Semantic Q&A
-  > For paradoxes, philosophy, and abstract prompts — pure reasoning, zero hallucination.
-
-* [TXT: Blur Blur Blur](https://github.com/onestardao/WFGY/tree/main/OS/BlurBlurBlur) — Image Generation
-  > No prompt tricks. Visual order within chaos. Hallucination-free realism.
-
-* [TXT: Blow Blow Blow](https://github.com/onestardao/WFGY/tree/main/OS/BlowBlowBlow) — Reasoning Games
-  > AIGC-native RPGs. Memory-aware logic. Game interaction rewires narrative paths.
-
-* [TXT: Blot Blot Blot](https://github.com/onestardao/WFGY/tree/main/OS/BlotBlotBlot) — Humanized Writing
-  > Emotional drift, sentence-level nuance, and AI detection evasion.
-
-* [TXT: Bloc Bloc Bloc](https://github.com/onestardao/WFGY/tree/main/OS/BlocBlocBloc) — Prompt Injection Firewall
-  > Semantic firewall with ΔS stability, hallucination confusion, and λ_observe gating.
-
-> All modules run natively as `.txt` apps — no install, no dependencies.
-> This is not just tooling. It’s the architecture of a new semantic layer.
-
-<br>
 </details>
 
 <details>
-<summary> <strong> 3️⃣ What AI problems does WFGY Family solve? </strong> </summary>
+<summary><strong>2️⃣ The WFGY Family</strong></summary>
 
 <br>
 
-> WFGY fixes core reasoning failures where RAG, prompts, or embeddings break down.
+> Every module runs on the same reasoning engine.  
+> Together they form the “Civilization Starter” toolkit.
 
-| Problem                              | Description                                                       |
-| ------------------------------------ | ----------------------------------------------------------------- |
-| **Hallucination & Context Drift**    | Stops retrieval failure via semantic boundaries and BBCR fallback |
-| **Long-Horizon Logic**               | Maintains reasoning continuity across complex tasks               |
-| **Chaotic or Conflicting Input**     | Uses BBMC to minimize semantic residue                            |
-| **Multi-Agent Memory Coherence**     | Keeps shared logic stable between agents                          |
-| **Knows What It Doesn’t Know**       | Detects unknown zones and avoids bluffing                         |
-| **Symbolic / Abstract Prompts**      | Anchored by ΔS=0.5 semantic structure                             |
-| **Auto-Recovery from Logic Failure** | BBCR resets logic without restarts                                |
-| **Multi-Path Logic**                 | BBPF enables divergent and creative reasoning                     |
-| **Stable Attention Control**         | BBAM stops drift and entropy collapse                             |
-| **Hallucination-Safe RAG Scaling**   | Supports 10M+ docs without semantic breakdown                     |
-| **Verifiable Semantic Memory**       | Tree architecture shows exactly how it thinks                     |
-
-> **TL;DR:** WFGY is not prompt engineering — it's a full-stack **semantic reasoning engine** built to fix what GPTs can’t:
-> logic collapse, symbolic failure, retrieval drift, and semantic ambiguity.
-
----
-
-> **Solving Problems**
-> We built WFGY to crush the root causes of reasoning failure — not patch the symptoms.
-> 📎 [See the full Problem Map](https://github.com/onestardao/WFGY/tree/main/ProblemMap/README.md)
-> 📎 [Global Fix Map — Guardrails Index](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GlobalFixMap/README.md)
-> 📎 [Semantic Clinic: AI Failure Triage](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md)
-
-> **Benchmarking GPT-5**
-> This engine isn’t theory. It’s entering open combat — benchmarked head-to-head against GPT-5.
-> 📎 [See the showdown benchmarks](https://github.com/onestardao/WFGY/tree/main/benchmarks/benchmark-vs-gpt5/README.md)
-
-> **Build from First Principles**
-> Our logic stack is open, symbolic, and composable. Want to see the engine’s core blueprint?
-> 📎 [Explore the Semantic Blueprint](https://github.com/onestardao/WFGY/tree/main/SemanticBlueprint/README.md)
-
-> **Full-Pipeline Debugging**
-> Still seeing hallucinations, black box errors, or logic collapse? You’re not alone.
-> This new visual guide maps the **entire RAG pipeline**, shows **where it fails**, and how to **fix it with WFGY’s math tools**.
-> 📎 [See the RAG Architecture & Recovery Guide](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md)
+- [TXT OS](../OS/README.md) · Semantic OS layer  
+- [Blah Blah Blah](../OS/BlahBlahBlah/README.md) · Abstract Q&A  
+- [Blur Blur Blur](../OS/BlurBlurBlur/README.md) · Text-to-image  
+- [Blow Blow Blow](../OS/BlowBlowBlow/README.md) · Reasoning games  
+- [Blot / Bloc](../OS) · Persona & firewall layers  
 
 </details>
 
+<details>
+<summary><strong>3️⃣ What problems does it solve?</strong></summary>
+
+<br>
+
+| Problem | WFGY Fix |
+|---------|----------|
+| Hallucination / Drift | Semantic boundaries + BBCR reset |
+| Fragile logic chains | BBPF multi-path reasoning |
+| Chaotic inputs | BBMC cleans semantic residue |
+| Multi-agent memory | Stable shared logic |
+| Scaling RAG | 10M+ docs without collapse |
+
+📎 [Full Problem Map →](../ProblemMap/README.md)  
+📎 [Semantic Clinic →](../ProblemMap/SemanticClinicIndex.md)
+
+</details>
 
 
 ---
@@ -1424,6 +1370,12 @@ It treats alignment as a living semantic contract — not just accuracy, but mea
 [![Blow](https://img.shields.io/badge/Blow-Game%20Logic-purple?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlowBlowBlow)
 &nbsp;
 </div>
+
+
+
+
+
+
 
 
 

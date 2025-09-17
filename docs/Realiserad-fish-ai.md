@@ -1,102 +1,239 @@
-[![fish-ai](https://img.shields.io/github/stars/Realiserad/fish-ai?style=social)](https://github.com/Realiserad/fish-ai)
 [![Time Spent](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2FRealiserad%2Fd3ec7fdeecc35aeeb315b4efba493326%2Fraw%2Ffish-ai-git-estimate.json)](https://github.com/Realiserad/fish-ai)
 [![Popularity](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2FRealiserad%2Fd3ec7fdeecc35aeeb315b4efba493326%2Fraw%2Fpopularity.json)](https://github.com/Realiserad/fish-ai)
-[![Donate Monero](https://img.shields.io/badge/Donate_XMR-grey?style=for-the-badge&logo=monero)](https://github.com/user-attachments/assets/07a2947f-6e5a-480f-990a-77204933411f)
+[![Donate XMR](https://img.shields.io/badge/Donate_XMR-grey?style=for-the-badge&logo=monero)](https://github.com/user-attachments/assets/07a2947f-6e5a-480f-990a-77204933411f)
 
-# fish-ai: Supercharge Your Fish Shell with AI-Powered Productivity
+# Fish-AI: Supercharge Your Fish Shell with AI 🚀
 
-**Tired of wrestling with the command line? `fish-ai` uses AI to make you a more productive shell user.** [Explore the fish-ai repository on GitHub](https://github.com/Realiserad/fish-ai)
+**Fish-AI is a powerful plugin that leverages the power of AI to make your Fish shell experience more efficient, intuitive, and fun.** Enhance your command-line productivity by allowing AI to transform, fix, and complete commands. [Check it out on GitHub!](https://github.com/Realiserad/fish-ai)
 
 ## Key Features:
 
-*   **Comment to Command & Vice Versa:** Effortlessly convert comments into shell commands and commands into clear explanations, eliminating the need for extensive man page searches.
-*   **Intelligent Command Correction:**  Automatically fix typos and syntax errors in your commands, saving you time and frustration.
-*   **AI-Powered Autocompletion:** Get smart suggestions for commands and options with a built-in fuzzy finder, boosting your efficiency.
-*   **Keyboard-Centric Workflow:** Utilize configurable keyboard shortcuts for all functionality, ensuring a seamless, mouse-free experience.
-*   **LLM Agnostic:** Connect to your preferred Large Language Model, including self-hosted options for maximum flexibility.
-*   **Open Source & Customizable:**  Benefit from the transparency of open-source code and tailor `fish-ai` to your exact needs.
-*   **Easy Installation & Updates:**  Install and manage with ease using [`fisher`](https://github.com/jorgebucaran/fisher).
-*   **Cross-Platform Compatibility:**  Works seamlessly on macOS and popular Linux distributions.
-*   **Non-Invasive Design:** Plays well with other plugins without telemetry or proprietary terminal requirements.
+*   **Comment-to-Command & Command-to-Comment Conversion:** Effortlessly turn comments into executable commands and vice versa with a simple keystroke.
+*   **Intelligent Command Correction:** Automatically fix typos and errors in your commands, similar to `thefuck`.
+*   **AI-Powered Autocompletion:** Get context-aware command suggestions as you type with a built-in fuzzy finder.
+*   **Customizable Keybindings:** Control the AI features with two configurable keyboard shortcuts.
+*   **LLM Flexibility:** Connect to your preferred LLM, including self-hosted options, for ultimate control.
+*   **Open Source & Auditable:** Enjoy the transparency and flexibility of open-source code (approx. 2000 lines of code).
+*   **Easy Installation & Updates:** Install and manage `fish-ai` seamlessly using `fisher`.
+*   **Compatibility:** Works well with other Fish plugins like `fzf.fish` and `tide`.
+*   **Non-Invasive:** Doesn't wrap your shell, install telemetry, or require a specific terminal emulator.
 
-## How to Install:
+## 🎥 Demo
 
-1.  **Prerequisites:** Ensure you have `git` and either [`uv`](https://github.com/astral-sh/uv), or a supported Python version with `pip` and `venv` installed.
-2.  **Install `fish-ai`:**
-    ```shell
-    fisher install realiserad/fish-ai
-    ```
-3.  **Configure your LLM:** Create a configuration file at `$XDG_CONFIG_HOME/fish-ai.ini` (or `~/.config/fish-ai.ini` if `$XDG_CONFIG_HOME` is not set) to specify your LLM provider.  Examples are provided below:
+![Demo](https://github.com/user-attachments/assets/86b61223-e568-4152-9e5e-d572b2b1385b)
 
-    *   **GitHub Models:**
-        ```ini
-        [fish-ai]
-        configuration = github
+## 🛠️ Installation
 
-        [github]
-        provider = self-hosted
-        server = https://models.inference.ai.azure.com
-        api_key = <paste GitHub PAT here>
-        model = gpt-4o-mini
-        ```
+### Prerequisites
 
-        (Generate a GitHub PAT [here](https://github.com/settings/tokens) - no specific permissions needed).
-    *   **Self-hosted (e.g., Ollama):**
-        ```ini
-        [fish-ai]
-        configuration = self-hosted
+*   Ensure you have `git` installed.
+*   Install either [`uv`](https://github.com/astral-sh/uv) or a supported version of Python with `pip` and `venv`.
 
-        [self-hosted]
-        provider = self-hosted
-        server = http://localhost:11434/v1  # Adjust port as needed
-        model = llama3.3                # Example: llama3.3
-        ```
-    *   **OpenRouter:**
-        ```ini
-        [fish-ai]
-        configuration = openrouter
+### Install `fish-ai`
 
-        [openrouter]
-        provider = self-hosted
-        server = https://openrouter.ai/api/v1
-        model = google/gemini-2.0-flash-lite-001
-        api_key = <your API key>
-        ```
-    *   **OpenAI:**
-        ```ini
-        [fish-ai]
-        configuration = openai
+```bash
+fisher install realiserad/fish-ai
+```
 
-        [openai]
-        provider = openai
-        model = gpt-4o
-        api_key = <your API key>
-        organization = <your organization>
-        ```
-    *   **Azure OpenAI, Mistral, Anthropic, Cohere, DeepSeek, Groq, Google**:  See the original README for details on setting up these providers.
-4.  **Keyring:** Use `fish_ai_put_api_key` to securely store your API keys in your system's keyring.
+### Configuration
 
-## How to Use:
+Create a configuration file (`$XDG_CONFIG_HOME/fish-ai.ini` or `~/.config/fish-ai.ini`) to specify your LLM.
 
-*   **Comment to Command:** Type a comment (starting with `#`) and press **Ctrl + P** to generate a command.
-*   **Command to Comment:** Type a command and press **Ctrl + P** to get an explanation.
-*   **Autocomplete:** Start typing a command and press **Ctrl + Space** for suggestions using [`fzf`](https://github.com/junegunn/fzf).  Refine the suggestions with **Ctrl + P** within `fzf`.
-*   **Fix Command:** If a command fails, press **Ctrl + Space** to receive potential fixes.
+#### GitHub Models
 
-## Additional Options:
+```ini
+[fish-ai]
+configuration = github
 
-*   **Customize Keybindings:** Modify the default **Ctrl + P** and **Ctrl + Space** shortcuts by setting `keymap_1` and `keymap_2` in your `fish-ai.ini` configuration using the output from `fish_key_reader`.
-*   **Language:** Change the output language (e.g., `language = Swedish`).
-*   **Temperature:** Adjust the randomness of the AI output (`temperature = 0.5`).
-*   **Completions:** Change the number of suggested completions from the LLM (`completions = 10` and `refined_completions = 5`).
-*   **History Integration:**  Enable history integration to personalize completions with `history_size = 5`. Consider using [`sponge`](https://github.com/meaningful-ooo/sponge) to remove bad commands from your history.
-*   **Pipe Preview:** Send the output of a pipe to the LLM for command completion with `preview_pipe = True`.
-*   **Progress Indicator:** Customize the progress indicator with `progress_indicator = wait...`.
+[github]
+provider = self-hosted
+server = https://models.inference.ai.azure.com
+api_key = <paste GitHub PAT here>
+model = gpt-4o-mini
+```
 
-## Data Privacy:
+*   Generate a GitHub Personal Access Token (PAT) [here](https://github.com/settings/tokens) (no permissions required).
 
-`fish-ai` transmits your OS name and the command-line buffer to the LLM. For codifying or completing commands, it sends file contents and the output of `<command> --help`.  You can control the amount of your command line history sent.  For enhanced privacy, consider a self-hosted LLM.  Sensitive information is redacted before being sent to the LLM. Redaction can be disabled with `redact = False`.
+#### Self-hosted
 
-## Development:
+```ini
+[fish-ai]
+configuration = self-hosted
 
-Contribute to `fish-ai` by reading `ARCHITECTURE.md`. Use the `devcontainer.json` with GitHub Codespaces or Visual Studio Code.  Install a local copy of `fish-ai` using `fisher install .`. Enable debug logging by setting `debug = True` in your `fish-ai.ini`.  Run tests with `pytest`. Create releases by pushing a new tag.
+[self-hosted]
+provider = self-hosted
+server = https://<your server>:<port>/v1
+model = <your model>
+api_key = <your API key>
+```
+
+*   Consider [Ollama](https://github.com/ollama/ollama) with [Llama 3.3 70B](https://ollama.com/library/llama3.3).
+
+#### OpenRouter
+
+```ini
+[fish-ai]
+configuration = openrouter
+
+[openrouter]
+provider = self-hosted
+server = https://openrouter.ai/api/v1
+model = google/gemini-2.0-flash-lite-001
+api_key = <your API key>
+```
+
+*   View available models on [OpenRouter](https://openrouter.ai/models).
+
+#### OpenAI
+
+```ini
+[fish-ai]
+configuration = openai
+
+[openai]
+provider = openai
+model = gpt-4o
+api_key = <your API key>
+organization = <your organization>
+```
+
+#### Azure OpenAI
+
+```ini
+[fish-ai]
+configuration = azure
+
+[azure]
+provider = azure
+server = https://<your instance>.openai.azure.com
+model = <your deployment name>
+api_key = <your API key>
+```
+
+#### Mistral
+
+```ini
+[fish-ai]
+configuration = mistral
+
+[mistral]
+provider = mistral
+api_key = <your API key>
+```
+
+#### Anthropic
+
+```ini
+[anthropic]
+provider = anthropic
+api_key = <your API key>
+```
+
+#### Cohere
+
+```ini
+[cohere]
+provider = cohere
+api_key = <your API key>
+```
+
+#### DeepSeek
+
+```ini
+[deepseek]
+provider = deepseek
+api_key = <your API key>
+model = deepseek-chat
+```
+
+#### Groq
+
+```ini
+[groq]
+provider = groq
+api_key = <your API key>
+```
+
+#### Google
+
+```ini
+[google]
+provider = google
+api_key = <your API key>
+```
+
+### Store API Keys Securely
+
+Use the `fish_ai_put_api_key` command to store API keys in your keyring.
+
+## 🕹️ How to Use
+
+### Comment/Command Conversion
+
+*   Type a comment (starting with `#`) and press **Ctrl + P** to get a command.
+*   Type a command and press **Ctrl + P** to get a comment explaining it.
+
+### Autocompletion
+
+*   Start typing a command/comment, then press **Ctrl + Space** to see completions in `fzf`.
+
+### Suggest Fixes
+
+*   If a command fails, press **Ctrl + Space** to get suggested fixes.
+
+## ⚙️ Advanced Configuration
+
+Modify `fish-ai.ini` for advanced settings:
+
+### Keybindings
+
+*   Customize with `keymap_1` (default: Ctrl + P) and `keymap_2` (default: Ctrl + Space). Use `fish_key_reader` to get escape sequences.
+
+### Language
+
+*   Set `language = <language>` to get command explanations in another language.
+
+### Temperature
+
+*   Adjust the randomness of responses with `temperature = <value>` (0.0 - 1.0).  Set to `None` to disable for models that do not support temperature.
+
+### Completions
+
+*   Control the number of suggestions with `completions = <number>` (default: 5) and `refined_completions = <number>` (default: 3).
+
+### History Personalization
+
+*   Enable commandline history with `history_size = <number>` (default: 0).
+
+### Preview Pipes
+
+*   Preview pipe output with `preview_pipe = True`.  (Disabled by default)
+
+### Progress Indicator
+
+*   Customize the loading indicator with `progress_indicator = <characters>`.
+
+### Switching Contexts
+
+*   Use the `fish_ai_switch_context` command to switch between configuration sections.
+
+## 🔒 Data Privacy
+
+`fish-ai` sends the OS name and command-line buffer to the LLM.  It also sends the contents of any files mentioned, and `<command> --help` when explaining commands. An excerpt of command history can also be sent.
+
+If you're concerned about data privacy, use a self-hosted LLM.
+
+### Redaction
+
+*   Sensitive info (passwords, API keys, private keys, bearer tokens) is redacted before submission.
+*   Disable redaction with `redact = False` (only if you trust the LLM provider).
+
+## 👨‍💻 Development
+
+*   Review `ARCHITECTURE.md` for development information.
+*   Use `devcontainer.json` with Codespaces or VS Code's Dev Containers extension for development.
+*   Install from a local copy using `fisher install .`.
+*   Enable debug logging with `debug = True` and optionally `log = /path/to/file`.
+*   Installation tests run automatically.
+*   Python modules are tested using `pytest`.
+*   Releases are automated via GitHub Actions.

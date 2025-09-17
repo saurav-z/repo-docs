@@ -1,68 +1,80 @@
 <div align="center">
 <img src="./static/images/DouK-Downloader.png" alt="DouK-Downloader" height="256" width="256"><br>
-<h1>DouK-Downloader: Effortlessly Download TikTok & Douyin Videos and Data!</h1>
-<p>
-  <a href="https://trendshift.io/repositories/6222" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/6222" alt="" style="width: 250px; height: 55px;" width="250" height="55"/>
-  </a>
-</p>
-<p>
-  <a href="https://github.com/JoeanAmier/TikTokDownloader">
-    <img alt="GitHub" src="https://img.shields.io/github/license/JoeanAmier/TikTokDownloader?style=flat-square">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/JoeanAmier/TikTokDownloader?style=flat-square&color=55efc4">
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/JoeanAmier/TikTokDownloader?style=flat-square&color=fda7df">
-    <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/JoeanAmier/TikTokDownloader?style=flat-square&color=a29bfe">
-    <br>
-    <img alt="Static Badge" src="https://img.shields.io/badge/Python-3.12-b8e994?style=flat-square&logo=python&labelColor=3dc1d3">
-    <img alt="GitHub release (with filter)" src="https://img.shields.io/github/v/release/JoeanAmier/TikTokDownloader?style=flat-square&color=48dbfb">
-    <img src="https://img.shields.io/badge/Sourcery-enabled-884898?style=flat-square&color=1890ff" alt="">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Docker-badc58?style=flat-square&logo=docker">
-    <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/JoeanAmier/TikTokDownloader/total?style=flat-square&color=ffdd59">
-  </a>
-</p>
+<h1>DouK-Downloader</h1>
+<p>简体中文 | <a href="README_EN.md">English</a></p>
+<a href="https://trendshift.io/repositories/6222" target="_blank"><img src="https://trendshift.io/api/badge/repositories/6222" alt="" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<br>
+<img alt="GitHub" src="https://img.shields.io/github/license/JoeanAmier/TikTokDownloader?style=flat-square">
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/JoeanAmier/TikTokDownloader?style=flat-square&color=55efc4">
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/JoeanAmier/TikTokDownloader?style=flat-square&color=fda7df">
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/JoeanAmier/TikTokDownloader?style=flat-square&color=a29bfe">
+<br>
+<img alt="Static Badge" src="https://img.shields.io/badge/Python-3.12-b8e994?style=flat-square&logo=python&labelColor=3dc1d3">
+<img alt="GitHub release (with filter)" src="https://img.shields.io/github/v/release/JoeanAmier/TikTokDownloader?style=flat-square&color=48dbfb">
+<img src="https://img.shields.io/badge/Sourcery-enabled-884898?style=flat-square&color=1890ff" alt="">
+<img alt="Static Badge" src="https://img.shields.io/badge/Docker-badc58?style=flat-square&logo=docker">
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/JoeanAmier/TikTokDownloader/total?style=flat-square&color=ffdd59">
 </div>
 
-<br>
+## DouK-Downloader: Your All-in-One TikTok and Douyin Video Downloader
 
-DouK-Downloader is your all-in-one solution for downloading and archiving videos, images, and data from TikTok and Douyin, offering a powerful and open-source tool for content creators and enthusiasts.
+Tired of watermarks and limitations? **DouK-Downloader empowers you to download your favorite TikTok and Douyin content with ease and flexibility.**  Find the original repo [here](https://github.com/JoeanAmier/TikTokDownloader).
 
-<hr>
+**Key Features:**
 
-## Key Features
+*   ✅ **Comprehensive Downloading:** Download videos, images, and more from TikTok and Douyin, including posts, likes, collections, and live streams.
+*   ✅ **High-Quality Options:** Get videos in their original quality, without watermarks.
+*   ✅ **Account & Collection Downloads:** Bulk download content from user accounts and collections.
+*   ✅ **Flexible Data Handling:** Save data in CSV, XLSX, or SQLite formats.
+*   ✅ **Proxy Support:** Use proxies for data collection.
+*   ✅ **Web UI and API (Coming Soon):**  Explore interactive and programmatic access.
+*   ✅ **Automated Features:**  Includes features like automatic file naming, skipping downloaded files, and clipboard monitoring.
+*   ✅ **Cross-Platform Support**: Works with Windows, macOS and Docker
 
-*   **Comprehensive Downloading:** Download TikTok & Douyin videos (with or without watermarks), images, and live streams.
-*   **Account Data Gathering:** Bulk download videos from user accounts, including published, liked, and collections.
-*   **Flexible Data Extraction:**  Collect data on comments, collections, user profiles, search results, and trending topics.
-*   **Multiple Input Methods:** Download by URL, account, or through clipboard monitoring.
-*   **Multiple Output Formats:** Export data in CSV, XLSX, and SQLite formats.
-*   **Web API Integration:** Supports Web API for programmatic access.
-*   **Additional Features:** Docker support, proxy support, auto-update, and more.
-
-<hr>
+<details>
+<summary>Function List</summary>
+<ul>
+<li>✅ Download Douyin/TikTok videos & images</li>
+<li>✅ Download Douyin/TikTok Live Videos</li>
+<li>✅ High Quality downloads</li>
+<li>✅ Download Douyin/TikTok account content</li>
+<li>✅ Gather detailed account data</li>
+<li>✅ Batch Downloads</li>
+<li>✅ Skip already downloaded files</li>
+<li>✅ Save data to CSV/XLSX/SQLite</li>
+<li>✅ Dynamic cover image downloads</li>
+<li>✅ Get Douyin/TikTok live stream addresses</li>
+<li>✅ Docker support</li>
+</ul>
+</details>
 
 ## 💻 Program Screenshots
 
+<p><a href="https://www.bilibili.com/video/BV1d7eAzTEFs/">Watch a demonstration on Bilibili</a>; <a href="https://youtu.be/yMU-RWl55hg">Watch a demonstration on YouTube</a></p>
+
 ### Terminal Mode
 
-![Terminal Mode](docs/screenshot/终端交互模式截图CN1.png)
+<p>It is recommended to manage accounts via configuration files. More information can be found in the <a href="https://github.com/JoeanAmier/TikTokDownloader/wiki/Documentation">documentation</a></p>
+
+![Terminal Mode Screenshot 1](docs/screenshot/终端交互模式截图CN1.png)
 *****
-![Terminal Mode](docs/screenshot/终端交互模式截图CN2.png)
+![Terminal Mode Screenshot 2](docs/screenshot/终端交互模式截图CN2.png)
 *****
-![Terminal Mode](docs/screenshot/终端交互模式截图CN3.png)
+![Terminal Mode Screenshot 3](docs/screenshot/终端交互模式截图CN3.png)
 
-### Web UI Mode
+### Web UI Mode (Under Development)
 
-> **This mode is currently under development and will be available again in the future.**
+> **This mode is currently under development.  It will be re-opened once the code has been updated!**
 
-### Web API Mode
+### Web API Interface Mode
 
-![Web API Mode](docs/screenshot/WebAPI模式截图CN1.png)
+![WebAPI Mode Screenshot 1](docs/screenshot/WebAPI模式截图CN1.png)
 *****
-![Web API Mode](docs/screenshot/WebAPI模式截图CN2.png)
+![WebAPI Mode Screenshot 2](docs/screenshot/WebAPI模式截图CN2.png)
 
-> **Access the automatically generated API documentation by running the program and visiting `http://127.0.0.1:5555/docs` or `http://127.0.0.1:5555/redoc`.**
+> **Start this mode, then visit `http://127.0.0.1:5555/docs` or `http://127.0.0.1:5555/redoc` to view the automatically generated documentation!**
 
-### API Example
+#### API Call Example Code
 
 ```python
 from httpx import post
@@ -83,142 +95,168 @@ def demo():
 demo()
 ```
 
-<hr>
-
-## 🚀 Getting Started
+## 📋 Project Information
 
 ### Quick Start
 
-*   Download the pre-built executable from the [Releases](https://github.com/JoeanAmier/TikTokDownloader/releases/latest) or [Actions](https://github.com/JoeanAmier/TikTokDownloader/actions) section.
-*   For macOS, Windows 10, and above, the executable is ready to use.
-*   For other systems, you can build the executable from source by following the **"Building Executables"** guide below.
+<p>⭐ Mac OS, Windows 10 and above users can download the compiled program from <a href="https://github.com/JoeanAmier/TikTokDownloader/releases/latest">Releases</a> or <a href="https://github.com/JoeanAmier/TikTokDownloader/actions">Actions</a>, and use it out of the box!</p>
+<p>⭐ This project includes GitHub Actions that automatically build executable files. Users can use GitHub Actions to build the latest source code into executable files at any time!</p>
+<p>⭐ For a tutorial on automatically building executable files, please refer to the <code>Guide to Building Executable Files</code> section of this document. If you need a more detailed tutorial with images, please <a href="https://mp.weixin.qq.com/s/TorfoZKkf4-x8IBNLImNuw">refer to the article</a>!</p>
+<p><strong>Note: The executable file <code>main</code> on the Mac OS platform may need to be started from the terminal command line; due to device limitations, the executable file on the Mac OS platform has not been tested and its availability cannot be guaranteed!</strong></p>
+<hr>
+<ol>
+<li><b>Run the executable file</b> or <b>Configure the environment to run</b>
+<ol><b>Run the executable file</b>
+<li>Download the executable file compressed package from <a href="https://github.com/JoeanAmier/TikTokDownloader/releases/latest">Releases</a> or Actions</li>
+<li>Unzip and open the program folder, double-click and run <code>main</code></li>
+</ol>
+<ol><b>Configure the environment to run</b>
+
+[//]: # (<li>Install a <a href="https://www.python.org/">Python</a> interpreter not lower than <code>3.12</code></li>)
+<li>Install a <code>3.12</code> version of the <a href="https://www.python.org/">Python</a> interpreter</li>
+<li>Download the latest source code or the source code released by <a href="https://github.com/JoeanAmier/TikTokDownloader/releases/latest">Releases</a> to the local</li>
+<li>Run the <code>python -m venv venv</code> command to create a virtual environment (optional)</li>
+<li>Run the <code>.\venv\Scripts\activate.ps1</code> or <code>venv\Scripts\activate</code> command to activate the virtual environment (optional)</li>
+<li>Run the <code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt</code> command to install the modules required by the program</li>
+<li>Run the <code>python .\main.py</code> or <code>python main.py</code> command to start DouK-Downloader</li>
+</ol>
+</li>
+<li>Read the DouK-Downloader disclaimer and enter the content as prompted</li>
+<li>Write Cookie information to the configuration file
+<ol><b>Read Cookie from clipboard</b>
+<li>Refer to the <a href="https://github.com/JoeanAmier/TikTokDownloader/blob/master/docs/Cookie%E8%8E%B7%E5%8F%96%E6%95%99%E7%A8%8B.md">Cookie extraction tutorial</a>, copy the required Cookie to the clipboard</li>
+<li>Select the <code>Read Cookie from clipboard</code> option, and the program will automatically read the Cookie from the clipboard and write it to the configuration file</li>
+</ol>
+<ol><b>Read Cookie from browser</b>
+<li>Select the <code>Read Cookie from browser</code> option, and enter the browser type or number as prompted</li>
+</ol>
+<ol><b><del>Scan the code to log in to get Cookie</del> (invalid)</b>
+<li><del>Select the <code>Scan the code to log in to get Cookie</code> option, the program will display a login QR code image, and use the default application to open the image</del></li>
+<li><del>Use the Douyin APP to scan the QR code and log in to the account</del></li>
+<li><del>Follow the prompts to operate, and the program will automatically write the Cookie to the configuration file</del></li>
+</ol>
+</li>
+<li>Return to the program interface, select <code>Terminal interaction mode</code> -> <code>Batch download link works (general)</code> -> <code>Manually enter the works link to be collected</code> in sequence</li>
+<li>Enter the Douyin work link to download the work file (TikTok platform needs more initial settings, see the documentation for details)</li>
+<li>For more detailed instructions, please refer to the <b><a href="https://github.com/JoeanAmier/TikTokDownloader/wiki/Documentation">project documentation</a></b></li>
+</ol>
+<p>⭐ It is recommended to use <a href="https://learn.microsoft.com/zh-cn/windows/terminal/install">Windows Terminal</a> (Windows 11 comes with a default terminal)</p>
+
+### Docker Container
+
+<ol>
+<li>Get image</li>
+<ul>
+<li>Method 1: Use the <code>Dockerfile</code> file to build the image</li>
+<li>Method 2: Use the <code>docker pull joeanamier/tiktok-downloader</code> command to pull the image</li>
+<li>Method 3: Use the <code>docker pull ghcr.io/joeanamier/tiktok-downloader</code> command to pull the image</li>
+</ul>
+<li>Create container: <code>docker run --name container name(optional) -p host port number:5555 -v tiktok_downloader_volume:/app/Volume -it &lt;image name&gt;</code>
+</li>
+<br><b>Note:</b> The <code>&lt;image name&gt;</code> here needs to be consistent with the image name you used in the first step (e.g. <code>joeanamier/tiktok-downloader</code> or <code>ghcr.io/joeanamier/tiktok-downloader</code>)
+<li>Run the container
+<ul>
+<li>Start the container: <code>docker start -i container name/container ID</code></li>
+<li>Restart the container: <code>docker restart -i container name/container ID</code></li>
+</ul>
+</li>
+</ol>
+<p>Docker containers cannot directly access the file system of the host machine, so some functions are not available, such as: <code>Read Cookie from browser</code>; if there are other function exceptions, please feedback!</p>
+<hr>
+
+## About Cookies
+
+[Click to view the Cookie tutorial](https://github.com/JoeanAmier/TikTokDownloader/blob/master/docs/Cookie%E8%8E%B7%E5%8F%96%E6%95%99%E7%A8%8B.md)
+
+> * You only need to rewrite the configuration file after the Cookie expires, not every time you run the program!
+>
+> * Cookies affect the resolution of the downloaded video files. If you cannot download video files with the highest resolution, please try to update the Cookie!
+>
+> * When the program fails to get the data, you can try to update the Cookie or use the logged-in Cookie!
 
 <hr>
 
-**Here's how to get started:**
+## Other Notes
 
-1.  **Run the Executable:** Download the release and run the `main` executable.
+<ul>
+<li>When the program prompts the user to enter, pressing Enter directly means returning to the upper menu, and entering <code>Q</code> or <code>q</code> means ending the run</li>
+<li>Since obtaining account favorite works and collection works data only returns the release date of the favorite/collection works, and does not return the operation date, the program needs to obtain all the favorite/collection works data before performing date filtering; if the number of works is large, it may take a long time; the <code>max_pages</code> parameter can be used to control the number of requests</li>
+<li>Obtaining the release work data of private accounts requires the logged-in Cookie, and the logged-in account needs to follow the private account</li>
+<li>When batch downloading account works or collection works, if the corresponding nickname or identification changes, the program will automatically update the nickname and identification in the downloaded work file name</li>
+<li>When the program downloads files, it will first download the files to a temporary folder, and then move them to the storage folder after the download is complete; the program will clear the temporary folder at the end of the run</li>
+<li><code>Batch download collection works mode</code> currently only supports downloading the collection works of the account corresponding to the currently logged-in Cookie, and does not support multiple accounts</li>
+<li>If you want the program to use a proxy to request data, you must set the <code>proxy</code> parameter in <code>settings.json</code>, otherwise the program will not use the proxy</li>
+<li>If your computer does not have a suitable program to edit JSON files, it is recommended to use <a href="https://try8.cn/tool/format/json">JSON online tool</a> to edit the configuration file content</li>
+<li>When the program requests the user to enter content or a link, please avoid the content or link entered containing line breaks, which may cause unexpected problems</li>
+<li>This project will not support the download of paid works, please do not feed back any questions about the download of paid works</li>
+<li>The Windows system needs to run the program as an administrator to read the Chromium, Chrome, and Edge browser Cookies</li>
+<li>This project has not been optimized for the case of multiple programs being opened. If you need to open multiple programs, please copy the entire project folder to avoid unexpected problems</li>
+<li>During the program run, if you need to terminate the program or <code>ffmpeg</code>, please press <code>Ctrl + C</code> to terminate the run, do not directly click the close button of the terminal window</li>
+</ul>
 
-    **OR**
-
-    **Configure and Run from Source:**
-
-    *   Install Python 3.12.
-    *   Clone or download the source code.
-    *   Create a virtual environment (optional): `python -m venv venv`.
-    *   Activate the virtual environment (optional): `.\venv\Scripts\activate.ps1` (Windows) or `venv/Scripts/activate` (Linux/macOS).
-    *   Install dependencies: `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt`.
-    *   Run the program: `python main.py`.
-2.  Accept the disclaimer.
-3.  Configure your Cookie information.
-    *   Choose to read cookies from the clipboard or browser or through the scanning of a QR code (if available).
-4.  Navigate to **Terminal Mode** -> **Batch Download Link Works (General)** -> **Manually Enter Works Links to Collect**.
-5.  Enter a TikTok or Douyin video link to begin downloading.  (TikTok platform may require extra initial setups, which are explained in the documentation).
-6.  For detailed instructions and more features, see the [Project Documentation](https://github.com/JoeanAmier/TikTokDownloader/wiki/Documentation).
-
-<hr>
-
-### Docker Usage
-
-1.  **Get the Image:**
-    *   Build from `Dockerfile`.
-    *   Pull the image: `docker pull joeanamier/tiktok-downloader` or `docker pull ghcr.io/joeanamier/tiktok-downloader`.
-2.  **Create a Container:** `docker run --name <container_name(optional)> -p <host_port>:5555 -v tiktok_downloader_volume:/app/Volume -it <image_name>`
-    **Important**: Replace `<image_name>` with the image name (e.g., `joeanamier/tiktok-downloader`).
-3.  **Run the Container:**
-    *   Start: `docker start -i <container_name/container_ID>`.
-    *   Restart: `docker restart -i <container_name/container_ID>`.
-
-<br>
-*Note: Docker may limit access to some host-specific features.*
-
-<hr>
-
-## ⚙️ Cookie Guide
-
-[Cookie Guide](https://github.com/JoeanAmier/TikTokDownloader/blob/master/docs/Cookie%E8%8E%B7%E5%8F%96%E6%95%99%E7%A8%8B.md)
-
-> *   Update cookies if they expire, as they affect video resolution.
-> *   Update your cookie if you are receiving errors.
-
-<hr>
-
-## Additional Information
-
-*   Type `Q` or `q` to quit the program.
-*   Account data can take time if the number of posts are large.
-*   Private account data collection requires a logged-in cookie and account following.
-*   File names will update to reflect changes in account names or identifiers.
-*   Downloaded files save to a temporary folder before being moved to your storage folder.
-*   To stop `ffmpeg`, or the program, press `Ctrl + C`.
-*   For multiple instances, copy the entire project folder to avoid issues.
-*   Administrator privileges are necessary on Windows to read Chromium, Chrome, and Edge browser cookies.
-
-<hr>
-
-<h2>Building Executables</h2>
+<h2>Guide to Building Executable Files</h2>
 <details>
-<summary><b>Building Executable Guide (Click to Expand)</b></summary>
+<summary><b>Guide to Building Executable Files (Click to Expand)</b></summary>
 
-This guide explains how to fork this repository and execute GitHub Actions to automatically build and package the program based on the latest source code!
+This guide will guide you to automatically complete the program building and packaging based on the latest source code by forking this repository and executing GitHub Actions!
 
 ---
 
-### Steps
+### Steps of Use
 
-#### 1. Fork This Repository
+#### 1. Fork this repository
 
-1.  Click the **Fork** button in the top right corner of the project repository.
-2.  Your forked repository address will look like: `https://github.com/your-username/this-repo`
+1.  Click the **Fork** button in the upper right corner of the project repository to fork this repository to your personal GitHub account
+2.  Your Fork repository address will be similar to: `https://github.com/your-username/this-repo`
 
 ---
 
 #### 2. Enable GitHub Actions
 
-1.  Go to your forked repository.
-2.  Click the **Settings** tab.
-3.  Click the **Actions** tab.
-4.  Click the **General** option.
-5.  Under **Actions permissions**, select **Allow all actions and reusable workflows**, then click the **Save** button.
+1.  Go to the page of your Fork repository
+2.  Click the **Settings** tab at the top
+3.  Click the **Actions** tab on the right
+4.  Click the **General** option
+5.  Under **Actions permissions**, select the **Allow all actions and reusable workflows** option, and click the **Save** button
 
 ---
 
-#### 3. Manually Trigger the Build Process
+#### 3. Manually Trigger the Packaging Process
 
-1.  Go to the **Actions** tab in your forked repository.
-2.  Find the workflow named **Build Executable**.
-3.  Click the **Run workflow** button:
-    *   Select the **master** or **develop** branch.
-    *   Click **Run workflow**.
-
----
-
-#### 4. View the Build Progress
-
-1.  On the **Actions** page, you can see the workflow runs.
-2.  Click on the run to see detailed logs about the build.
+1.  In your Fork repository, click the **Actions** tab at the top
+2.  Find the workflow named **构建可执行文件**
+3.  Click the **Run workflow** button on the right:
+    -   Select the **master** or **develop** branch
+    -   Click **Run workflow**
 
 ---
 
-#### 5. Download the Build Results
+#### 4. View the Packaging Progress
 
-1.  When the build is finished, go to the run page.
-2.  In the **Artifacts** section, find the packaged files.
-3.  Click to download and save the packaged program locally.
+1.  On the **Actions** page, you can see the workflow running record triggered
+2.  Click the running record to view the detailed logs to understand the packaging progress and status
 
 ---
 
-### Important Considerations
+#### 5. Download the Packaging Results
 
-1.  **Resource Usage:**
-    *   GitHub provides the Actions environment for free with a monthly usage limit (2000 minutes).
+1.  After the packaging is complete, enter the corresponding running record page
+2.  In the **Artifacts** section at the bottom of the page, you will see the packaged result files
+3.  Click to download and save it locally, you can get the packaged program
 
-2.  **Code Modifications:**
-    *   You can customize the build process by modifying the code in your forked repository.
-    *   Trigger the build process again after making changes.
+---
 
-3.  **Sync with Main Repository:**
-    *   To get the latest features and fixes, sync your forked repository with the main one.
+### Notes
+
+1.  **Resource Use**:
+    -   The Actions running environment is provided by GitHub for free, and ordinary users have a certain amount of free use allowance per month (2000 minutes)
+
+2.  **Code Modification**:
+    -   You can freely modify the code in the Fork repository to customize the program packaging process
+    -   After modification, re-trigger the packaging process, you will get the customized build version
+
+3.  **Keep in Sync with the Main Repository**:
+    -   If the main repository updates the code or workflow, it is recommended that you synchronize the Fork repository regularly to get the latest features and fixes
 
 ---
 
@@ -226,63 +264,57 @@ This guide explains how to fork this repository and execute GitHub Actions to au
 
 #### Q1: Why can't I trigger the workflow?
 
-A: Make sure you have enabled Actions (per the steps above).
+A: Please confirm that you have followed the steps to **Enable Actions**, otherwise GitHub will prohibit running the workflow
 
-#### Q2: What if the build fails?
+#### Q2: What if the packaging process fails?
 
 A:
 
-*   Check the logs for the reason.
-*   Make sure there are no code syntax errors.
-*   If the problem persists, open an issue on the [Issues page](https://github.com/JoeanAmier/TikTokDownloader/issues).
+-   Check the running logs to understand the cause of the failure
+-   Make sure the code has no syntax errors or dependency issues
+-   If the problem is still not solved, you can raise the issue on the [Issues page](https://github.com/JoeanAmier/TikTokDownloader/issues) of this repository
 
-#### Q3: Can I use Actions from the main repository?
+#### Q3: Can I directly use the Actions of the main repository?
 
-A:  Due to permission restrictions, you cannot directly trigger the Actions from the main repository. Use the forked repository to build instead.
+A: Due to permission restrictions, you cannot directly trigger the Actions of the main repository. Please execute the packaging process by forking the repository
 
 </details>
 
-<hr>
+## Program Updates
 
-## 🔄 Updating the Program
+<p><strong>Method 1:</strong> Download and unzip the file, and copy the old version <code>_internal\Volume</code> folder to the new version <code>_internal</code> folder.</p>
+<p><strong>Method 2:</strong> Download and unzip the file (do not run the program), copy all the files, and directly overwrite the old version files.</p>
 
-<p><strong>Option 1:</strong> Download and extract the new version, then copy the `_internal\Volume` folder from the old version into the `_internal` folder of the new version.</p>
-<p><strong>Option 2:</strong> Download and extract the new version (don't run it yet), copy all files, and overwrite the existing files in the old version.</p>
-
-<hr>
-
-## ⚠️ Disclaimer
+# ⚠️ Disclaimer
 
 <ol>
-<li>The user is solely responsible for the use of this project and assumes all associated risks. The author is not liable for any losses, liabilities, or risks arising from its use.</li>
-<li>The provided code and features are based on current knowledge and technology. The author strives to ensure the code's correctness and security but does not guarantee that it is entirely free of errors or defects.</li>
-<li>All third-party libraries, plugins, or services used in this project are subject to their original open-source or commercial licenses. Users must review and adhere to these agreements, as the author is not responsible for the stability, security, or compliance of third-party components.</li>
-<li>Users must strictly adhere to the requirements of the <a href="https://github.com/JoeanAmier/TikTokDownloader/blob/master/LICENSE">GNU General Public License v3.0</a>, and appropriately acknowledge the use of <a href="https://github.com/JoeanAmier/TikTokDownloader/blob/master/LICENSE">GNU General Public License v3.0</a> code.</li>
-<li>Users must independently research and comply with relevant laws and regulations when using this project, ensuring their use is lawful and compliant. The user bears sole responsibility for any legal liabilities and risks arising from violations of laws and regulations.</li>
-<li>Users must not use this tool for any actions that infringe upon intellectual property rights, including unauthorized downloading and distribution of copyrighted content. The developer does not participate in, support, or endorse the acquisition or distribution of any illegal content.</li>
-<li>This project does not assume responsibility for the compliance of users' data collection, storage, or transmission activities. Users must comply with relevant laws and regulations, and ensure the legitimacy of their processing activities. The user is solely responsible for any legal liabilities resulting from non-compliant operations.</li>
-<li>Under no circumstances should users associate the author, contributors, or other parties related to this project with their use of the project, or hold them liable for any losses or damages arising from the use of the project.</li>
-<li>The author does not provide paid versions of the DouK-Downloader project, nor does the author offer any commercial services related to the DouK-Downloader project.</li>
-<li>Any secondary development, modification, or compilation of the project is unrelated to the original author. The original author is not responsible for any consequences related to secondary development, and the user is solely responsible for all situations that may arise from secondary development.</li>
-<li>This project does not grant users any patent licenses. If the use of this project leads to patent disputes or infringements, the user assumes all risks and responsibilities. Users are not allowed to use this project for any commercial promotion, marketing, or re-authorization without written authorization from the author or rights holder.</li>
-<li>The author reserves the right to terminate services to any user who violates this disclaimer, and may require the destruction of obtained code and derivative works.</li>
-<li>The author reserves the right to update this disclaimer without prior notice. Continued use by the user constitutes acceptance of the revised terms.</li>
+<li>The use of this project by the user is decided by the user and the user assumes the risk. The author is not responsible for any losses, liabilities, or risks arising from the use of this project by the user.</li>
+<li>The code and functions provided by the author of this project are based on the results of existing knowledge and technology development. The author strives to ensure the correctness and security of the code according to the existing technical level, but does not guarantee that the code is completely free of errors or defects.</li>
+<li>All third-party libraries, plug-ins, or services on which this project depends each follow their original open source or commercial licenses. The user should check and abide by the corresponding agreement on their own. The author does not assume any responsibility for the stability, security, and compliance of third-party components.</li>
+<li>When using this project, the user must strictly abide by the requirements of <a href="https://github.com/JoeanAmier/TikTokDownloader/blob/master/LICENSE">GNU General Public License v3.0</a> and indicate in the appropriate place that the code of <a href="https://github.com/JoeanAmier/TikTokDownloader/blob/master/LICENSE">GNU General Public License v3.0</a> is used.</li>
+<li>When using the code and functions of this project, the user must study the relevant laws and regulations on their own and ensure that their use behavior is legal and compliant. Any legal liabilities and risks arising from the violation of laws and regulations shall be borne by the user.</li>
+<li>The user shall not use this tool to engage in any behavior that infringes intellectual property rights, including but not limited to unauthorized downloading and dissemination of content protected by copyright. The developer does not participate in, does not support, and does not recognize the acquisition or distribution of any illegal content.</li>
+<li>This project is not responsible for the compliance of data collection, storage, transmission, and other processing activities involved by the user. The user should abide by relevant laws and regulations on their own and ensure that the processing behavior is legal and proper; the legal liabilities arising from the illegal operation shall be borne by the user.</li>
+<li>The user shall not, under any circumstances, associate the author, contributors, or other relevant parties of this project with the user's use behavior, or ask them to be responsible for any losses or damages arising from the user's use of this project.</li>
+<li>The author of this project will not provide paid versions of the DouK-Downloader project, nor will it provide any commercial services related to the DouK-Downloader project.</li>
+<li>Any secondary development, modification, or compilation of the program based on this project is not related to the original author. The original author does not assume any responsibility related to the secondary development behavior or its results. The user should bear all the responsibilities for various situations that may be brought about by secondary development.</li>
+<li>This project does not grant any patent license to the user; if the use of this project leads to patent disputes or infringement, the user shall bear all risks and responsibilities on their own. Without the written authorization of the author or the right holder, the project shall not be used for any commercial promotion, promotion, or re-authorization.</li>
+<li>The author reserves the right to terminate the service to any user who violates this statement at any time and may require the user to destroy the code and derivative works that have been obtained.</li>
+<li>The author reserves the right to update this statement without prior notice, and the continued use of the user is deemed to accept the revised terms.</li>
 </ol>
-<b>Before using the code and functions of this project, please carefully consider and accept the above disclaimer. If you have any questions or disagree with the above statements, please do not use the code and functions of this project. By using the code and functions of this project, you acknowledge that you have fully understood and accepted the above disclaimer and voluntarily assume all risks and consequences of using the project.</b>
+<b>Before using the code and functions of this project, please carefully consider and accept the above disclaimer. If you have any questions or disagree with the above statement, please do not use the code and functions of this project. If you use the code and functions of this project, it is deemed that you have fully understood and accepted the above disclaimer, and voluntarily assume all risks and consequences of using this project.</b>
 
-<hr>
-
-<h1>🌟 Contribution Guidelines</h1>
-<p><strong>Contributions are welcome! Please read the following guidelines to ensure your contribution is accepted.</strong></p>
+<h1>🌟 Contribution Guide</h1>
+<p><strong>Welcome to contribute to this project! To keep the code base clean, efficient, and easy to maintain, please read the following guidelines carefully to ensure that your contribution can be accepted and integrated smoothly.</strong></p>
 <ul>
-<li>  Start by pulling the latest code from the `develop` branch to minimize conflicts and ensure your changes are based on the latest version.</li>
-<li> If your changes include unrelated features or bug fixes, create separate commits or pull requests.</li>
-<li> Submit a single feature or fix per pull request for easier review and testing.</li>
-<li> Adhere to existing code styling guidelines; use the Ruff tool to maintain code formatting.</li>
-<li> Write readable code with comments to explain your intentions.</li>
-<li> Each commit should have a descriptive and concise commit message in this format: `&lt;type&gt;: &lt;short description&gt;`</li>
-<li>  Submit pull requests to the `develop` branch.  This allows maintainers to perform additional testing and review before merging into the `master` branch.</li>
-<li> Before starting development, or if you have questions, contact the author to align your work and avoid redundant effort or invalid submissions.</li>
+<li>Before starting development, please pull the latest code from the <code>develop</code> branch and use it as the basis for modification; this will help avoid merge conflicts and ensure that your changes are based on the latest project status.</li>
+<li>If your changes involve multiple unrelated functions or issues, please divide them into multiple independent commits or pull requests.</li>
+<li>Each pull request should focus on a single function or fix as much as possible for easy code review and testing.</li>
+<li>Follow the existing code style; please make sure that your code is consistent with the existing code style in the project; it is recommended to use the Ruff tool to maintain the code format specifications.</li>
+<li>Write readable code; add appropriate comments to help others understand your intent.</li>
+<li>Each commit should contain a clear and concise commit message to describe the changes made. The commit message should follow the following format: <code>&lt;type&gt;: &lt;brief description&gt;</code></li>
+<li>When you are ready to submit a pull request, please prioritize submitting them to the <code>develop</code> branch; this is to give the maintainers a buffer for additional testing and review before the final merge into the <code>master</code> branch.</li>
+<li>It is recommended to communicate with the author before development or when encountering doubts to ensure that the development direction is consistent, and to avoid repetitive work or invalid submissions.</li>
 </ul>
 <p><strong>References:</strong></p>
 <ul>
@@ -290,12 +322,9 @@ A:  Due to permission restrictions, you cannot directly trigger the Actions from
 <li><a href="https://opensource.guide/zh-hans/how-to-contribute/">How to Contribute to Open Source</a></li>
 </ul>
 
-<hr>
-
 # ♥️ Support the Project
 
-<p>If <b>DouK-Downloader</b> has been helpful, consider giving it a <b>Star</b> ⭐ and showing your support!</p>
-
+<p>If <b>DouK-Downloader</b> is helpful to you, please consider giving it a <b>Star</b> ⭐, thank you for your support!</p>
 <table>
 <thead>
 <tr>
@@ -304,16 +333,14 @@ A:  Due to permission restrictions, you cannot directly trigger the Actions from
 </tr>
 </thead>
 <tbody><tr>
-<td align="center"><img src="./docs/微信赞助二维码.png" alt="WeChat Donation QR Code" height="200" width="200"></td>
-<td align="center"><img src="./docs/支付宝赞助二维码.png" alt="Alipay Donation QR Code" height="200" width="200"></td>
+<td align="center"><img src="./docs/微信赞助二维码.png" alt="WeChat Sponsorship QR Code" height="200" width="200"></td>
+<td align="center"><img src="./docs/支付宝赞助二维码.png" alt="Alipay Sponsorship QR Code" height="200" width="200"></td>
 </tr>
 </tbody>
 </table>
-<p>You can also donate to support the project.</p>
+<p>If you are willing, you can consider providing funding to provide additional support for <b>DouK-Downloader</b>!</p>
 
-<hr>
-
-# 💰 Project Sponsors
+# 💰 Project Sponsorship
 
 ## DartNode
 
@@ -324,74 +351,49 @@ A:  Due to permission restrictions, you cannot directly trigger the Actions from
 ## ZMTO
 
 <a href="https://www.zmto.com/"><img src="https://console.zmto.com/templates/2019/dist/images/logo_dark.svg" alt="ZMTO"></a>
-<p><a href="https://www.zmto.com/">ZMTO</a>：A cloud infrastructure provider that offers efficient solutions with reliable, cutting-edge technology and professional support. They support open source ecosystems by providing enterprise-grade VPS infrastructure to eligible open-source projects.</p>
+<p><a href="https://www.zmto.com/">ZMTO</a>: A professional cloud infrastructure provider that provides efficient solutions with reliable cutting-edge technology and professional support, and provides enterprise-level VPS infrastructure for eligible open source projects to support the sustainable development and innovation of the open source ecosystem.</p>
 
 ***
 
 ## TikHub
 
-<p><a href="https://tikhub.io/">TikHub</a>: A third-party API service provider specializing in providing APIs for various platforms.</p>
-<p>By checking in daily, users can get a small amount of free usage. You can use my <strong>referral link</strong>: <a href="https://user.tikhub.io/users/signup?referral_code=ZrdH8McC">https://user.tikhub.io/users/signup?referral_code=ZrdH8McC</a> or <strong>referral code</strong>: <code>ZrdH8McC</code>, register and top up to get a $2 credit!</p>
+<p><a href="https://tikhub.io/">TikHub</a>: A third-party API service provider, focusing on providing API for various platforms.</p>
+<p>By signing in daily, users can get a small amount of usage credit for free; you can use my <strong>recommendation link</strong>: <a href="https://user.tikhub.io/users/signup?referral_code=ZrdH8McC">https://user.tikhub.io/users/signup?referral_code=ZrdH8McC</a> or <strong>recommendation code</strong>: <code>ZrdH8McC</code>, register and recharge to get <code>$2</code> credit!</p>
 
-<hr>
-
-# ✉️ Contact
+# ✉️ Contact the Author
 
 <ul>
-<li>Email: yonglelolu@foxmail.com</li>
-<li>WeChat: Downloader_Tools</li>
-<li>WeChat Public Account: Downloader Tools</li>
-<li><b>Discord Community</b>: <a href="https://discord.com/invite/ZYtmgKud9Y">Join the Community</a></li>
-<li>QQ Group (Project Discussion): <a href="https://github.com/JoeanAmier/TikTokDownloader/blob/master/docs/QQ%E7%BE%A4%E8%81%8A%E4%BA%8C%E7%BB%B4%E7%A0%81.png">Scan to Join</a></li>
+<li>Author's email: yonglelolu@foxmail.com</li>
+<li>Author's WeChat: Downloader_Tools</li>
+<li>WeChat official account: Downloader Tools</li>
+<li><b>Discord community</b>: <a href="https://discord.com/invite/ZYtmgKud9Y">Click to join the community</a></li>
+<li>QQ Group Chat (Project Exchange): <a href="https://github.com/JoeanAmier/TikTokDownloader/blob/master/docs/QQ%E7%BE%A4%E8%81%8A%E4%BA%8C%E7%BB%B4%E7%A0%81.png">Scan the QR code to join the group chat</a></li>
 </ul>
-<p>✨ <b>My other open source projects:</b></p>
+<p>✨ <b>Other open source projects by the author:</b></p>
 <ul>
-<li><b>XHS-Downloader (XiaoHongShu, RedNote)</b>: <a href="https://github.com/JoeanAmier/XHS-Downloader">https://github.com/JoeanAmier/XHS-Downloader</a></li>
-<li><b>KS-Downloader (KuaiShou)</b>: <a href="https://github.com/JoeanAmier/KS-Downloader">https://github.com/JoeanAmier/KS-Downloader</a></li>
+<li><b>XHS-Downloader (Xiaohongshu, RedNote)</b>: <a href="https://github.com/JoeanAmier/XHS-Downloader">https://github.com/JoeanAmier/XHS-Downloader</a></li>
+<li><b>KS-Downloader (Kuaishou)</b>: <a href="https://github.com/JoeanAmier/KS-Downloader">https://github.com/JoeanAmier/KS-Downloader</a></li>
 </ul>
-
-<hr>
-
 <h1>⭐ Star Trend</h1>
 <p>
 <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=JoeanAmier/TikTokDownloader&amp;type=Timeline"/>
 </p>
 
-<hr>
-
 # 💡 Project References
 
-* https://github.com/Johnserf-Seed/f2
-* https://github.com/Johnserf-Seed/TikTokDownload
-* https://github.com/Evil0ctal/Douyin_TikTok_Download_API
-* https://github.com/NearHuiwen/TiktokDouyinCrawler
-* https://github.com/ihmily/DouyinLiveRecorder
-* https://github.com/encode/httpx/
-* https://github.com/Textualize/rich
-* https://github.com/omnilib/aiosqlite
-* https://github.com/Tinche/aiofiles
-* https://github.com/thewh1teagle/rookie
-* https://github.com/pyinstaller/pyinstaller
-* https://foss.heptapod.net/openpyxl/openpyxl
-* https://github.com/carpedm20/emoji/
-* https://github.com/lxml/lxml
-* https://ffmpeg.org/ffmpeg-all.html
-* https://www.tikwm.com/
-```
-Key improvements and SEO considerations:
-
-*   **SEO-Optimized Title:** Includes the primary keyword ("TikTok Downloader") and other relevant terms like "Douyin" and "Video Download".  The one-sentence hook is also strong.
-*   **Clear Sections with Headings:** Improves readability and organization.
-*   **Bulleted Lists:** Use of bullets to make key features and instructions easy to scan.
-*   **Concise Language:**  The description is brief and to the point.
-*   **Call to Actions:**  "Get Started," "Learn More", and "Support" are used to guide the user.
-*   **Internal Linking:** References to the project's own documentation and guides.
-*   **External Linking:** Uses descriptive anchor text for all links, improving SEO.
-*   **Updated for Clarity:** Minor grammatical and phrasing improvements.
-*   **Removed Deprecated Features:** Removed deprecated features, like QR code logins to make the project more useful.
-*   **Simplified Instructions:** Removed unnecessary instructions in the getting started section.
-*   **Reorganized Content:** Improved the flow of information.
-*   **Contribution Section:**  Encourages community involvement.
-*   **Removed Duplicate Information:**  Avoided redundancy, such as the repetition of disclaimers.
-*   **Added Star History Graph:** Added star history graph to engage users.
-*   **Sponsors & Support:** Emphasizes and expands upon ways to support the project.
+*   https://github.com/Johnserf-Seed/f2
+*   https://github.com/Johnserf-Seed/TikTokDownload
+*   https://github.com/Evil0ctal/Douyin_TikTok_Download_API
+*   https://github.com/NearHuiwen/TiktokDouyinCrawler
+*   https://github.com/ihmily/DouyinLiveRecorder
+*   https://github.com/encode/httpx/
+*   https://github.com/Textualize/rich
+*   https://github.com/omnilib/aiosqlite
+*   https://github.com/Tinche/aiofiles
+*   https://github.com/thewh1teagle/rookie
+*   https://github.com/pyinstaller/pyinstaller
+*   https://foss.heptapod.net/openpyxl/openpyxl
+*   https://github.com/carpedm20/emoji/
+*   https://github.com/lxml/lxml
+*   https://ffmpeg.org/ffmpeg-all.html
+*   https://www.tikwm.com/

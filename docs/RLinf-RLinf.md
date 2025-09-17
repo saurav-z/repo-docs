@@ -10,44 +10,44 @@
   <a href="https://github.com/RLinf/misc/blob/main/pic/wechat.jpeg?raw=true"><img src="https://img.shields.io/badge/微信-green?logo=wechat&amp"></a>
 </div>
 
-<h1 align="center">
-  RLinf: Revolutionizing Reinforcement Learning for Agentic AI
-</h1>
+# RLinf: Unleash the Power of Reinforcement Learning for Agentic AI
 
-RLinf is a cutting-edge, open-source infrastructure designed to supercharge the training of foundation models through reinforcement learning, enabling unparalleled scalability and flexibility.  
+**RLinf** is a cutting-edge, open-source infrastructure designed to revolutionize the training of post-training foundation models via reinforcement learning, offering unparalleled flexibility, scalability, and speed. [Explore the RLinf repository](https://github.com/RLinf/RLinf).
 
-**[Explore the RLinf Repository on GitHub](https://github.com/RLinf/RLinf)**
+## Key Features of RLinf
 
-## Key Features
-
-*   **Macro-to-Micro Flow (M2Flow):** A novel paradigm that decouples logical workflow construction from physical execution, enhancing programmability and efficiency.
-*   **Flexible Execution Modes:** Supports collocated, disaggregated, and hybrid modes for optimal resource utilization.
-*   **Intelligent Auto-Scheduling:** Automatically selects the best execution mode based on the training workload, eliminating manual configuration.
-*   **Embodied Agent Support:**  Seamlessly integrates with leading VLA models (OpenVLA, OpenVLA-OFT, π₀) and simulators (ManiSkill3, LIBERO).
-*   **Unrivaled Speed & Efficiency:** Achieves a **120%+** throughput improvement with fine-grained pipelining in Hybrid mode and dynamic online scaling.
-*   **Multiple Backend Integrations:** Provides rapid adaptation using FSDP + Hugging Face and maximized efficiency through Megatron + SGLang.
-*   **Built-in RL Methods:** Supports popular algorithms like PPO, GRPO, DAPO, Reinforce++, and more.
-
-## What's New
-
-*   **[2025/08] RLinf is open-sourced!** The official v0.1 release is coming soon! The paper [RLinf: Flexible and Efficient Large-scale Reinforcement Learning via Macro-to-Micro Flow Transformation]() will also be released.
+*   **Macro-to-Micro Flow (M2Flow) Paradigm:** Decouples logical workflow construction from physical communication and scheduling, enabling efficient and programmable workflow management.
+*   **Flexible Execution Modes:** Supports collocated, disaggregated, and hybrid modes for optimized resource utilization.
+*   **Automated Scheduling:** Dynamically selects the optimal execution mode based on the training workload, eliminating manual resource allocation.
+*   **Embodied Agent Support:**
+    *   Rapid adaptation support for leading VLA models ([OpenVLA](https://github.com/openvla/openvla), [OpenVLA-OFT](https://github.com/moojink/openvla-oft), and [π₀](https://github.com/Physical-Intelligence/openpi)).
+    *   Standardized RL interfaces for mainstream CPU & GPU-based simulators ([ManiSkill3](https://github.com/haosulab/ManiSkill), [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)).
+    *   Enables the first RL fine-tuning of the $\pi_0$ model family with a flow-matching action expert.
+*   **High Performance:**
+    *   Hybrid mode with fine-grained pipelining achieves **120%+** throughput improvements compared to other frameworks.
+    *   Dynamic Online Scaling Strategy increases efficiency by 20-40% while preserving the on-policy nature of RL algorithms, with GPU switching completed in seconds.
+*   **Versatile Backend Integrations:**
+    *   FSDP + Hugging Face: Ideal for rapid adaptation, fast prototyping, and easy access to new models and algorithms.
+    *   Megatron + SGLang: Optimized for large-scale training, ensuring maximum efficiency for demanding workloads.
+*   **Adaptive Communication:** Utilizes an asynchronous communication channel.
+*   **Built-in RL Methods:** Supports popular methods like [PPO](https://arxiv.org/abs/1707.06347), [GRPO](https://arxiv.org/abs/2402.03300), [DAPO](https://arxiv.org/abs/2503.14476), and [Reinforce++](https://arxiv.org/abs/2501.03262).
 
 ## Roadmap
 
 ### System-Level Enhancements
-*   [ ] Support for heterogeneous GPUs
-*   [ ] Support for asynchronous pipeline execution
-*   [ ] Support for Mixture of Experts (MoE)
-*   [ ] Support for vLLM inference backend
+- [ ] Support for heterogeneous GPUs  
+- [ ] Support for asynchronous pipeline execution  
+- [ ] Support for Mixture of Experts (MoE)  
+- [ ] Support for vLLM inference backend
 
 ### Application-Level Extensions
-*   [ ] Support for Vision-Language Models (VLMs) training
-*   [ ] Support for deep searcher agent training
-*   [ ] Support for multi-agent training
-*   [ ] Support for integration with more embodied simulators (e.g., [Meta-World](https://github.com/Farama-Foundation/Metaworld), [GENESIS](https://github.com/Genesis-Embodied-AI/Genesis))
-*   [ ] Support for more Vision Language Action models (VLAs), such as [GR00T](https://github.com/NVIDIA/Isaac-GR00T)
-*   [ ] Support for world model
-*   [ ] Support for real-world RL embodied intelligence
+- [ ] Support for Vision-Language Models (VLMs) training  
+- [ ] Support for deep searcher agent training  
+- [ ] Support for multi-agent training  
+- [ ] Support for integration with more embodied simulators (e.g., [Meta-World](https://github.com/Farama-Foundation/Metaworld), [GENESIS](https://github.com/Genesis-Embodied-AI/Genesis))  
+- [ ] Support for more Vision Language Action models (VLAs), such as [GR00T](https://github.com/NVIDIA/Isaac-GR00T)
+- [ ] Support for world model   
+- [ ] Support for real-world RL embodied intelligence
 
 ## Getting Started
 
@@ -61,7 +61,7 @@ Comprehensive documentation is available [**Here**](https://rlinf.readthedocs.io
 *   [Multi-node Training](https://rlinf.readthedocs.io/en/latest/rst_source/start/distribute.html)
 *   [Model Evaluation](https://rlinf.readthedocs.io/en/latest/rst_source/start/eval.html)
 
-**Key Design:**
+**Key Design Concepts:**
 
 *   [Unified User Interface Usage](https://rlinf.readthedocs.io/en/latest/rst_source/tutorials/user/index.html)
 *   [Flexible Execution Modes](https://rlinf.readthedocs.io/en/latest/rst_source/tutorials/mode/index.html)
@@ -92,16 +92,16 @@ Comprehensive documentation is available [**Here**](https://rlinf.readthedocs.io
 
 ## Build Status
 
-| Type               | Status                                                                                                                                 |
-| :----------------: | :------------------------------------------------------------------------------------------------------------------------------------- |
-| Reasoning RL-MATH  | [![Build Status](https://github.com/RLinf/RLinf/actions/workflows/math_e2e.yml/badge.svg)](https://github.com/RLinf/RLinf/actions/workflows/math_e2e.yml) |
-| Embodied RL-VLA    | [![Build Status](https://github.com/RLinf/RLinf/actions/workflows/embodied_e2e.yml/badge.svg)](https://github.com/RLinf/RLinf/actions/workflows/embodied_e2e.yml) |
+| Type             | Status |
+| :--------------: | :----: |
+| Reasoning RL-MATH | [![Build Status](https://github.com/RLinf/RLinf/actions/workflows/math_e2e.yml/badge.svg)](https://github.com/RLinf/RLinf/actions/workflows/math_e2e.yml) |
+| Embodied RL-VLA   | [![Build Status](https://github.com/RLinf/RLinf/actions/workflows/embodied_e2e.yml/badge.svg)](https://github.com/RLinf/RLinf/actions/workflows/embodied_e2e.yml) |
 
 ## Contribution Guidelines
 
-We welcome contributions! Please review the [contribution guide](https://rlinf.readthedocs.io/en/latest/index.html#contribution-guidelines) before contributing.
+Your contributions are welcome! Please review the [contribution guide](https://rlinf.readthedocs.io/en/latest/index.html#contribution-guidelines) before contributing.
 
-## Citation and Acknowledgements
+## Citation and Acknowledgement
 
 If you find **RLinf** helpful, please cite the GitHub repository:
 
@@ -117,24 +117,10 @@ If you find **RLinf** helpful, please cite the GitHub repository:
 **Paper**: A full paper describing RLinf will be released by **September 20, 2025**. We will update this section with the official citation and BibTeX when they become available.
 
 **Acknowledgements**
-
-RLinf is inspired by and benefits from the broader open-source community. We would like to thank the teams and contributors behind VeRL, AReaL, Megatron-LM, SGLang, and PyTorch Fully Sharded Data Parallel (FSDP). If your project or contribution is inadvertently missed, please open an issue or pull request.
+RLinf has been inspired by, and benefits from, the ideas and tooling of the broader open-source community.
+In particular, we would like to thank the teams and contributors behind VeRL, AReaL, Megatron-LM, SGLang, and PyTorch Fully Sharded Data Parallel (FSDP), and if we have inadvertently missed your project or contribution, please open an issue or a pull request so we can properly credit you.
 
 **Contact:**
-
 We welcome applications from Postdocs, PhD/Master's students, and interns. Join us in shaping the future of RL infrastructure and embodied AI!
-
--   Chao Yu: zoeyuchao@gmail.com
--   Yu Wang: yu-wang@tsinghua.edu.cn
-```
-Key improvements and SEO optimizations:
-
-*   **Compelling Hook:** "RLinf: Revolutionizing Reinforcement Learning for Agentic AI" immediately grabs attention.
-*   **SEO Keywords:** Incorporated relevant keywords like "Reinforcement Learning," "Agentic AI," "Foundation Models," and related terms throughout the headings and text.
-*   **Clear Headings:**  Organized the README with clear, descriptive headings (Key Features, What's New, Roadmap, etc.).
-*   **Bulleted Lists:** Used bullet points to highlight key features, benefits, and quickstart guides.
-*   **Concise Language:**  Phrasing is more direct and easier to read.
-*   **Call to Action:** Encourages users to explore the repository.
-*   **Enhanced Formatting:** Used bolding for emphasis and better readability.
-*   **Paper Release Highlight:**  The paper release date is emphasized.
-*   **Contact Info Prominence:** Contact information remains easily accessible.
+- Chao Yu: zoeyuchao@gmail.com
+- Yu Wang: yu-wang@tsinghua.edu.cn

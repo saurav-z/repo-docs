@@ -1,6 +1,4 @@
-# BeyondMimic: Advanced Humanoid Motion Tracking for Realistic Simulation and Deployment
-
-**BeyondMimic offers cutting-edge motion tracking for humanoid robots, providing state-of-the-art motion quality that's ready for real-world applications.** [Find the original repository here](https://github.com/HybridRobotics/whole_body_tracking).
+# BeyondMimic: Achieve State-of-the-Art Humanoid Motion Tracking for Real-World Deployment
 
 [![IsaacSim](https://img.shields.io/badge/IsaacSim-4.5.0-silver.svg)](https://docs.omniverse.nvidia.com/isaacsim/latest/overview.html)
 [![Isaac Lab](https://img.shields.io/badge/IsaacLab-2.1.0-silver)](https://isaac-sim.github.io/IsaacLab)
@@ -13,36 +11,42 @@
 [[Arxiv]](https://arxiv.org/abs/2508.08241)
 [[Video]](https://youtu.be/RS_MtKVIAzY)
 
+**BeyondMimic provides a robust framework for training and deploying high-quality humanoid motion tracking models, enabling dynamic and realistic movement in simulation and the real world.**  Find the original repo [here](https://github.com/HybridRobotics/whole_body_tracking).
+
 ## Key Features
 
-*   **Sim-to-Real Ready:** Train motion tracking models that are readily deployable in real-world scenarios.
-*   **State-of-the-Art Motion Quality:** Achieves highly dynamic and realistic humanoid motions.
-*   **Guided Diffusion-Based Controllers:**  Offers steerable test-time control using guided diffusion techniques.
-*   **LAFAN1 Dataset Compatibility:** Train motion tracking models using the widely used LAFAN1 dataset.
-*   **WandB Registry Integration:** Leverages WandB for efficient motion data management and tracking.
+*   **Sim-to-Real Readiness:** Train motion tracking models suitable for real-world deployment.
+*   **LAFAN1 Dataset Compatibility:** Train motion data from the LAFAN1 dataset, requiring no parameter tuning.
+*   **Guided Diffusion-Based Control:** Utilize advanced controllers for steerable test-time control.
+*   **WandB Registry Integration:** Seamlessly manage and load reference motions using the Weights & Biases registry.
+*   **Modular Code Structure:** Well-organized code for easy navigation and development.
 
 ## Overview
 
-BeyondMimic is a versatile humanoid control framework designed for high-fidelity motion tracking and control.  This repository focuses on the motion tracking training aspect, allowing you to generate sim-to-real ready motion. For deployment strategies, refer to the [motion_tracking_controller](https://github.com/HybridRobotics/motion_tracking_controller) repository.
+BeyondMimic is a versatile humanoid control framework that offers high-quality motion tracking, ensuring realistic movement. This repository focuses on motion tracking training, allowing you to create sim-to-real-ready motions. For deployment, refer to the [motion\_tracking\_controller](https://github.com/HybridRobotics/motion_tracking_controller).
 
 ## Installation
 
-**Prerequisites:**
+### Prerequisites
 
-*   Isaac Lab v2.1.0 (install using the [installation guide](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html), conda recommended)
+*   Isaac Lab v2.1.0 (Installation Guide: [https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html)). Use conda for Python script calls.
 *   Python 3.10
 
-**Steps:**
+### Steps
 
 1.  **Clone the Repository:**
-    ```bash
-    # Option 1: SSH
-    git clone git@github.com:HybridRobotics/whole_body_tracking.git
-    # Option 2: HTTPS
-    git clone https://github.com/HybridRobotics/whole_body_tracking.git
-    ```
+
+    *   **SSH:**
+        ```bash
+        git clone git@github.com:HybridRobotics/whole_body_tracking.git
+        ```
+    *   **HTTPS:**
+        ```bash
+        git clone https://github.com/HybridRobotics/whole_body_tracking.git
+        ```
 
 2.  **Get Robot Description Files:**
+
     ```bash
     cd whole_body_tracking
     curl -L -o unitree_description.tar.gz https://storage.googleapis.com/qiayuanl_robot_descriptions/unitree_description.tar.gz && \
@@ -51,64 +55,77 @@ BeyondMimic is a versatile humanoid control framework designed for high-fidelity
     ```
 
 3.  **Install the Library:**
+
     ```bash
     python -m pip install -e source/whole_body_tracking
     ```
 
 ## Motion Tracking
 
-This section details how to prepare and train motion tracking models.
-
 ### Motion Preprocessing & Registry Setup
 
-This process uses the WandB registry to organize and load reference motions.
+This project leverages the WandB registry for easy motion management.
 
-1.  **Gather Datasets:** Prepare reference motion datasets (respecting their original licenses).  Supported datasets include the retargeted LAFAN1 dataset, KungfuBot's Sidekicks, Christiano Ronaldo celebration from ASAP, and balance motions from HuB.
-2.  **WandB Registry Setup:**
-    *   Log in to your WandB account and access "Registry" under "Core".
+1.  **Gather Datasets:**  Use reference motion datasets (follow original licenses):
+
+    *   Unitree-retargeted LAFAN1 ([HuggingFace](https://huggingface.co/datasets/lvhaidong/LAFAN1_Retargeting_Dataset))
+    *   Sidekicks ([KungfuBot](https://kungfu-bot.github.io/))
+    *   Cristiano Ronaldo celebration ([ASAP](https://github.com/LeCAR-Lab/ASAP))
+    *   Balance motions ([HuB](https://hub-robot.github.io/))
+
+2.  **WandB Setup:**
+
+    *   Log in to your WandB account.
     *   Create a new registry collection named "Motions" with artifact type "All Types".
-3.  **Motion Conversion:** Convert retargeted motions to include maximum coordinates information (body pose, velocity, and acceleration) using forward kinematics:
+
+3.  **Convert Motions:** Convert retargeted motions to include maximum coordinate information.
+
     ```bash
     python scripts/csv_to_npz.py --input_file {motion_name}.csv --input_fps 30 --output_name {motion_name} --headless
     ```
-    This uploads the processed file to the WandB registry.
-4.  **Testing:** Verify registry functionality by replaying a motion in Isaac Sim:
+
+    This will automatically upload the processed motion file to the WandB registry.
+
+4.  **Test Registry:**
+
     ```bash
     python scripts/replay_npz.py --registry_name={your-organization}-org/wandb-registry-motions/{motion_name}
     ```
+
 5.  **Debugging:**
-    *   Set the `WANDB_ENTITY` environment variable to your organization's name.
-    *   If `/tmp` is inaccessible, adjust `csv_to_npz.py` (lines 319 & 326) to use a suitable temporary folder.
+
+    *   Set `WANDB_ENTITY` to your organization name, not your username.
+    *   If `/tmp` is inaccessible, change `csv_to_npz.py` lines 319 & 326 to an alternate temporary folder.
 
 ### Policy Training
 
-Train your motion tracking policy using the following command:
+1.  **Train Policy:**
 
-```bash
-python scripts/rsl_rl/train.py --task=Tracking-Flat-G1-v0 \
---registry_name {your-organization}-org/wandb-registry-motions/{motion_name} \
---headless --logger wandb --log_project_name {project_name} --run_name {run_name}
-```
+    ```bash
+    python scripts/rsl_rl/train.py --task=Tracking-Flat-G1-v0 \
+    --registry_name {your-organization}-org/wandb-registry-motions/{motion_name} \
+    --headless --logger wandb --log_project_name {project_name} --run_name {run_name}
+    ```
 
 ### Policy Evaluation
 
-Play the trained policy:
+1.  **Play Trained Policy:**
 
-```bash
-python scripts/rsl_rl/play.py --task=Tracking-Flat-G1-v0 --num_envs=2 --wandb_path={wandb-run-path}
-```
+    ```bash
+    python scripts/rsl_rl/play.py --task=Tracking-Flat-G1-v0 --num_envs=2 --wandb_path={wandb-run-path}
+    ```
 
-*   Locate the WandB run path in the run overview (format: `{your_organization}/{project_name}/` followed by a unique identifier). Note that `run_name` is different from `run_path`.
+    Find the `wandb_path` in the WandB run overview (e.g., `{your_organization}/{project_name}/`).
 
 ## Code Structure
 
-*   **`source/whole_body_tracking/whole_body_tracking/tasks/tracking/mdp`:**  Contains the core functions for the MDP:
-    *   `commands.py`: Computes relevant variables from motion, robot state, and errors.
-    *   `rewards.py`: Implements reward functions and smoothing.
-    *   `events.py`: Defines domain randomization.
-    *   `observations.py`:  Implements observation terms.
-    *   `terminations.py`:  Handles early terminations and timeouts.
-*   **`source/whole_body_tracking/whole_body_tracking/tasks/tracking/tracking_env_cfg.py`:**  MDP environment configuration.
-*   **`source/whole_body_tracking/whole_body_tracking/tasks/tracking/config/g1/agents/rsl_rl_ppo_cfg.py`:**  PPO hyperparameters.
-*   **`source/whole_body_tracking/whole_body_tracking/robots`:**  Robot-specific settings (armature, joint parameters, action scaling).
-*   **`scripts`:** Utility scripts for motion preprocessing, policy training, and evaluation.
+*   **`source/whole_body_tracking/whole_body_tracking/tasks/tracking/mdp`**: Core MDP functions:
+    *   `commands.py`: Computes variables from reference motion, robot state, and error.
+    *   `rewards.py`: DeepMimic reward functions.
+    *   `events.py`: Domain randomization.
+    *   `observations.py`: Observation terms.
+    *   `terminations.py`: Early terminations and timeouts.
+*   **`source/whole_body_tracking/whole_body_tracking/tasks/tracking/tracking_env_cfg.py`**: Environment (MDP) hyperparameters.
+*   **`source/whole_body_tracking/whole_body_tracking/tasks/tracking/config/g1/agents/rsl_rl_ppo_cfg.py`**: PPO hyperparameters.
+*   **`source/whole_body_tracking/whole_body_tracking/robots`**: Robot-specific settings.
+*   **`scripts`**: Utility scripts for data preprocessing, training, and evaluation.

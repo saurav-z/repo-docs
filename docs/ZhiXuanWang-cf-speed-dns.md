@@ -1,20 +1,41 @@
-# Optimize Your Cloudflare CDN with cf-speed-dns
+# Find the Fastest Cloudflare IPs with cf-speed-dns
 
-**Tired of slow Cloudflare performance?** cf-speed-dns is a powerful tool that helps you find and automatically use the fastest Cloudflare IP addresses for optimal speed and reliability.
+This tool helps you find and automatically update your Cloudflare DNS records with the fastest IPs, optimizing your website's speed and performance. ([Original Repo](https://github.com/ZhiXuanWang/cf-speed-dns))
 
-**Check out the original repo for the latest updates: [https://github.com/ZhiXuanWang/cf-speed-dns](https://github.com/ZhiXuanWang/cf-speed-dns)**
+## Key Features
 
-## Key Features of cf-speed-dns:
+*   **Real-time Cloudflare IP Optimization:** Automatically identifies and updates your Cloudflare DNS records with the fastest-performing IPs.
+*   **Optimized IP Lists:** Provides pre-generated lists of optimized Cloudflare IPs, updated every 5 minutes, for immediate use.
+*   **Multiple Interface Options:** Offers several interface options to choose from, including:
+    *   [https://ip.164746.xyz](https://ip.164746.xyz) (Main list)
+    *   [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html) (Top IPs - Default)
+    *   [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html) (Top 10 IPs)
+*   **DNSPOD & DNSCF Integration:** Supports automated DNS record updates through DNSPOD and DNSCF, using GitHub Actions.
+*   **Notification Support:** Integrates with PUSHPLUS for real-time notifications on updates.
+*   **Easy Setup:** Configuration using GitHub Actions secrets and variables.
 
-*   **Real-time Cloudflare IP Optimization:** Identifies and provides a list of the fastest Cloudflare IP addresses every 5 minutes.
-*   **Optimized IP List Access:** Access top-performing IP lists through easy-to-use interfaces:
-    *   [https://ip.164746.xyz](https://ip.164746.xyz) (Main List)
-    *   [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html) (Top IP List - Default)
-    *   [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html) (Top 10 IP List)
-*   **Automated DNS Updates:** Integrates with DNSPOD and DNSCF to automatically update your DNS records with the optimized IP addresses.
-*   **Customizable DNS Integration:** Easily configure DNS updates using GitHub Actions.
-*   **Push Notification Support:** Receive notifications via PUSHPLUS to stay informed about IP updates.
-*   **Simple API Access:** Quickly retrieve the top-performing IP addresses using a simple API endpoint.
+## How it Works
+
+cf-speed-dns uses CloudflareSpeedTest to determine the fastest Cloudflare IPs and automatically updates your DNS records. The following configuration is needed.
+
+### **DNSPOD Configuration**
+
+1.  **Fork this project.**
+2.  **Configure GitHub Actions secrets and variables:**
+    *   `DOMAIN`: Your domain (e.g., `164746.xyz`)
+    *   `SUB_DOMAIN`: Your subdomain (e.g., `dns`)
+    *   `SECRETID`: Your DNSPOD Secret ID
+    *   `SECRETKEY`: Your DNSPOD Secret Key
+    *   `PUSHPLUS_TOKEN` (Optional): Your Pushplus token for notifications.
+
+### **DNSCF Configuration**
+
+1.  **Fork this project.**
+2.  **Configure GitHub Actions secrets and variables:**
+    *   `CF_API_TOKEN`: Your Cloudflare API Token
+    *   `CF_ZONE_ID`: Your Cloudflare Zone ID
+    *   `CF_DNS_NAME`: Your DNS name (e.g., `dns.164746.xyz`)
+    *   `PUSHPLUS_TOKEN` (Optional): Your Pushplus token for notifications.
 
 ## API Endpoint
 
@@ -22,28 +43,11 @@
 curl 'https://ip.164746.xyz/ipTop.html'
 ```
 
-## API Response Example
+### API Response Example
 
 ```
 104.16.204.6,104.18.103.125
 ```
-
-## Configuration for DNS Updates
-
-To enable automatic DNS updates, you can configure the following secrets and variables within your GitHub Actions workflow:
-
-*   **DNSPOD:**
-    *   `DOMAIN`: Your domain (e.g., `164746.xyz`)
-    *   `SUB_DOMAIN`: Your subdomain (e.g., `dns`)
-    *   `SECRETID`
-    *   `SECRETKEY`
-    *   `PUSHPLUS_TOKEN` (Optional for push notifications)
-
-*   **DNSCF:**
-    *   `CF_API_TOKEN`
-    *   `CF_ZONE_ID`
-    *   `CF_DNS_NAME`: Your DNS record name (e.g., `dns.164746.xyz`)
-    *   `PUSHPLUS_TOKEN` (Optional for push notifications)
 
 ## Acknowledgements
 

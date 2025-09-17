@@ -1,62 +1,51 @@
-# Youtu-Agent: Build Powerful Autonomous Agents with Open-Source Models
+# Youtu-Agent: Build Powerful AI Agents with Open-Source Models
 
-Youtu-Agent is a flexible and high-performance framework that empowers you to build, run, and evaluate autonomous agents, achieving impressive results with open-source models. Explore the framework on its [GitHub Repository](https://github.com/Tencent/Youtu-agent).
+**Youtu-Agent is a flexible and high-performing framework designed to build, run, and evaluate autonomous agents, achieving impressive results with open-source models.** ([View on GitHub](https://github.com/Tencent/Youtu-agent))
 
-**Key Features:**
+<div align="center">
+<a href="https://tencentcloudadp.github.io/youtu-agent/"><img src=https://img.shields.io/badge/📖-Documentation-blue.svg></a>
+<a href=https://github.com/TencentCloudADP/youtu-agent><img src=https://img.shields.io/badge/GitHub-Tencent-blue.svg></a>
+<a href=https://deepwiki.com/TencentCloudADP/youtu-agent><img src=https://img.shields.io/badge/DeepWiki-Tencent-blue.svg></a>
+</div>
 
-*   ✅ **High Performance:** Achieves state-of-the-art results on benchmarks like WebWalkerQA and GAIA using open-source models (e.g., DeepSeek-V3 series)
-*   💰 **Cost-Effective:** Designed for low-cost deployment and open-source model compatibility.
-*   💡 **Practical Use Cases:** Supports data analysis, file processing, literature review, and more.
-*   ⚙️ **Flexible Architecture:** Built on openai-agents with extensive support for diverse models, tools, and frameworks.
-*   🚀 **Automation & Simplicity:** Streamlined agent creation with YAML-based configuration and automatic generation.
+<p align="center">
+| <a href="README_ZH.md"><b>中文</b></a>
+| <a href="README_JA.md"><b>日本語</b></a>
+| <a href="#-benchmark-performance"><b>🌟 Performance</b></a>
+| <a href="#-examples"><b>💡 Examples</b> </a>
+| <a href="#-features"><b>✨ Features</b> </a>
+| <a href="#-getting-started"><b>🚀 Getting Started</b> </a>
+| <a href="https://discord.gg/svwuqgUx"><b>📢 Join Community</b> </a>
+</p>
 
-## Table of Contents
+<img src="docs/assets/mascot.png" alt="Youtu-agent Logo" width="200" align="left" style="margin-right:20px;">
 
-*   [✨ Features](#-features)
-*   [🌟 Benchmark Performance](#-benchmark-performance)
-*   [💡 Examples](#-examples)
-    *   [🤖 Automatic Agent Generation](#-automatic-agent-generation)
-*   [🤔 Why Choose Youtu-Agent?](#-why-choose-youtu-agent)
-*   [🚀 Getting Started](#-getting-started)
-    *   [Setup](#setup)
-    *   [Quick Start](#quick-start)
-    *   [Explore More Examples](#explore-more-examples)
-    *   [Run Evaluations](#run-evaluations)
-*   [📖 Dive Deeper](#-dive-deeper)
-*   [🙏 Acknowledgements](#-acknowledgements)
-*   [🙌 Contributing](#-contributing)
-*   [📚 Citation](#-citation)
-*   [⭐ Star History](#-star-history)
+## Key Features
 
-## ✨ Features
+*   **Impressive Performance:** Achieves state-of-the-art results on benchmarks like WebWalkerQA (71.47%) and GAIA (72.8%, text-only), using only open-source models like DeepSeek-V3.
+*   **Cost-Effective and Open-Source Friendly:** Optimized for low-cost deployment, avoiding reliance on proprietary models.
+*   **Practical Use Cases:** Supports data analysis, file processing, literature review, and more, with new features coming soon.
+*   **Flexible Architecture:** Built upon the [openai-agents](https://github.com/openai/openai-agents-python) framework, enabling extensibility for different models and tool integrations.
+*   **Simplified Automation:** YAML-based configurations and automatic agent generation streamline the setup process.
 
-Youtu-Agent offers a modular design that prioritizes simplicity and adaptability.  Its core features include:
+## 🗞️ News
 
-*   **Built on openai-agents:** Leverages the openai-agents SDK for seamless integration with various LLM APIs and features like streaming and tracing.
-*   **Fully asynchronous:** Enables high-performance, efficient execution, especially beneficial for benchmarking.
-*   **Tracing & analysis system:** Provides in-depth analysis of tool calls and agent trajectories. (Coming soon)
-*   **YAML based configuration:** Structured and easily manageable agent configurations.
-*   **Automatic agent generation:** Generate agent configurations based on user requirements automatically.
-*   **Tool generation & optimization:** Planned for future support of tool evaluation, automated optimization, and customized tool generation.
-
-### Design Philosophy
-
-*   **Minimal design:** Keeps the framework simple and easy to use, avoiding unnecessary overhead.
-*   **Modular & configurable:** Flexible customization and easy integration of new components.
-*   **Open-source model support & low-cost:** Promotes accessibility and cost-effectiveness for various applications.
+*   **[2025-09-09]** Hosted a live sharing the design philosophy and basic usage of `Youtu-Agent`. [[video](https://www.bilibili.com/video/BV1mypqz4EvS)] [[documentation](https://doc.weixin.qq.com/doc/w3_AcMATAZtAPICNLgt3CbnxRWaYWnW4)].
+*   **[2025-09-02]** [Tencent Cloud International](https://www.tencentcloud.com/) offers new users of the DeepSeek API **3 million free tokens** (**Sep 1 – Oct 31, 2025**). [Try it out](https://www.tencentcloud.com/document/product/1255/70381) for free if you want to use DeepSeek models in `Youtu-Agent`! For enterprise agent solutions, also check out [Agent Development Platform](https://adp.tencentcloud.com) (ADP).
+*   **[2025-08-28]** Hosted a live sharing updates about DeepSeek-V3.1 and how to use it in the `Youtu-Agent` framework. [[video](https://www.bilibili.com/video/BV1XwayzrETi/)] [[documentation](https://doc.weixin.qq.com/doc/w3_AcMATAZtAPICNvcLaY5FvTOuo7MwF)].
 
 ## 🌟 Benchmark Performance
 
-Youtu-Agent excels in benchmark performance, showcasing its capabilities using open-source models and lightweight tools:
+Youtu-Agent excels on challenging benchmarks using open-source models and lightweight tools.
 
-*   **WebWalkerQA:** Achieved 71.47% accuracy with DeepSeek-V3.1.
-*   **GAIA:** Achieved 72.8% pass@1 on the text-only validation subset using DeepSeek-V3-0324.
+*   **WebWalkerQA:** Achieved 71.47% accuracy with `DeepSeek-V3.1`.
+*   **GAIA:** Achieved 72.8% pass@1 on the text-only validation subset using `DeepSeek-V3-0324`.
 
 ![WebWalkerQA](docs/assets/images/benchmark_webwalkerqa.png)
 
 ## 💡 Examples
 
-Youtu-Agent provides several ready-to-use examples demonstrating its versatility:
+Explore the capabilities of Youtu-Agent with these examples:
 
 <table>
   <tr>
@@ -69,40 +58,40 @@ Youtu-Agent provides several ready-to-use examples demonstrating its versatility
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/user-attachments/assets/60193435-b89d-47d3-8153-5799d6ff2920" 
-             poster="https://img.youtube.com/vi/r9we4m1cB6M/sddefault.jpg" 
-             controls muted preload="metadata" 
+      <video src="https://github.com/user-attachments/assets/60193435-b89d-47d3-8153-5799d6ff2920"
+             poster="https://img.youtube.com/vi/r9we4m1cB6M/sddefault.jpg"
+             controls muted preload="metadata"
              width="100%" height="300"
              style="object-fit: cover; border-radius: 8px;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/user-attachments/assets/dbb9cfc6-3963-4264-ba93-9ba21c5a579e" 
-             poster="https://img.youtube.com/vi/GdA4AapE2L4/sddefault.jpg" 
-             controls muted preload="metadata" 
+      <video src="https://github.com/user-attachments/assets/dbb9cfc6-3963-4264-ba93-9ba21c5a579e"
+             poster="https://img.youtube.com/vi/GdA4AapE2L4/sddefault.jpg"
+             controls muted preload="metadata"
              width="100%" height="300"
              style="object-fit: cover; border-radius: 8px;"></video>
     </td>
   </tr>
   <tr >
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <strong>Wide Research</strong><br>Gathers extensive information to generate a comprehensive report.
+      <strong>Wide Research</strong><br>Gathers extensive information to generate a comprehensive report, replicating the functionality of Manus.
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <strong>Paper Analysis</strong><br>Parses a given paper and compiles related literature.
+      <strong>Paper Analysis</strong><br>Parses a given paper, performs analysis, and compiles related literature to produce a final result.
     </td>
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/user-attachments/assets/6fc75814-e565-4f94-9ab5-33e3e7788e92" 
-             poster="https://img.youtube.com/vi/v3QQg0WAnPs/sddefault.jpg" 
-             controls muted preload="metadata" 
+      <video src="https://github.com/user-attachments/assets/6fc75814-e565-4f94-9ab5-33e3e7788e92"
+             poster="https://img.youtube.com/vi/v3QQg0WAnPs/sddefault.jpg"
+             controls muted preload="metadata"
              width="100%" height=300"
              style="object-fit: cover; border-radius: 8px;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/user-attachments/assets/09b24f94-30f0-4e88-9aaf-9f3bbf82e99d" 
-             poster="https://img.youtube.com/vi/vBddCjjRk00/sddefault.jpg" 
-             controls muted preload="metadata" 
+      <video src="https://github.com/user-attachments/assets/09b24f94-30f0-4e88-9aaf-9f3bbf82e99d"
+             poster="https://img.youtube.com/vi/vBddCjjRk00/sddefault.jpg"
+             controls muted preload="metadata"
              width="100%" height="300"
              style="object-fit: cover; border-radius: 8px;"></video>
     </td>
@@ -114,7 +103,7 @@ Youtu-Agent provides several ready-to-use examples demonstrating its versatility
 
 ### 🤖 Automatic Agent Generation
 
-Youtu-Agent simplifies agent creation with automatic configuration generation. Define your agent's requirements, and the framework will generate and save the configuration automatically.
+Youtu-Agent features automatic agent configuration generation.
 
 ```bash
 # Interactively clarify your requirements and auto-generate a config
@@ -132,10 +121,10 @@ python scripts/cli_chat.py --stream --config generated/xxx
   </tr>
   <tr>
     <td style="border: 1px solid black; padding:10px; vertical-align:top; width: 400px;">
-      <video src="https://github.com/user-attachments/assets/0c2ee833-507e-4141-8de4-148ff3d9f9ef" 
-             poster="https://img.youtube.com/vi/JVpHDJtKBo8/maxresdefault.jpg" 
-             controls muted preload="metadata" 
-             width="100%" height="auto" 
+      <video src="https://github.com/user-attachments/assets/0c2ee833-507e-4141-8de4-148ff3d9f9ef"
+             poster="https://img.youtube.com/vi/JVpHDJtKBo8/maxresdefault.jpg"
+             controls muted preload="metadata"
+             width="100%" height="auto"
              style="object-fit: cover; border-radius: 8px;"></video>
     </td>
   </tr>
@@ -144,79 +133,87 @@ python scripts/cli_chat.py --stream --config generated/xxx
 > [!NOTE]
 > See [documentation](https://tencentcloudadp.github.io/youtu-agent/auto_generation/) for more details.
 
+## ✨ Features
+
+![features](docs/assets/images/header.png)
+
+### Design Philosophy
+
+*   **Minimal Design:** Simple and easy to use framework.
+*   **Modular & Configurable:** Flexible customization and easy integration.
+*   **Open-Source Model & Low-Cost Support:** Promotes accessibility and cost-effectiveness.
+
+### Core Features
+
+*   **Based on openai-agents:** Leverages streaming, tracing, and agent-loop capabilities, ensuring compatibility.
+*   **Fully Asynchronous:** Enables high-performance and efficient execution.
+*   **Tracing & Analysis System:** Provides in-depth analysis of tool calls and agent trajectories. (Coming soon)
+
+### Automation
+
+*   **YAML-based configuration:** Structured and easily manageable agent configurations.
+*   **Automatic agent generation:** Based on user requirements, agent configurations can be automatically generated.
+*   **Tool generation & optimization:** Tool evaluation and automated optimization, and customized tool generation will be supported in the future.
+
+### Use Cases
+
+*   **Deep / Wide Research:** Covers common search-oriented tasks.
+*   **Webpage Generation:** Examples include generating web pages based on specific inputs.
+*   **Trajectory Collection:** Supports data collection for training and research purposes.
+
 ## 🤔 Why Choose Youtu-Agent?
 
-Youtu-Agent provides significant value to different user groups:
+### For Agents Researchers & LLM Trainers
 
-*   **For Agents Researchers & LLM Trainers:** Serves as a strong baseline for model training and ablation studies.
-*   **For Agent Application Developers:** Provides a proven scaffolding for building real-world agent applications with ease of use and modular design.
-*   **For AI & Agent Enthusiasts:** Offers practical use cases and simplicity for development and debugging.
+*   **A strong baseline:** A simple and powerful baseline for model training and ablation studies.
+*   **One-click evaluation scripts:** Streamlines the experimental process.
+
+### For Agent Application Developers
+
+*   **A proven and portable scaffolding:** Proven for building real-world applications.
+*   **Ease of Use:** Get started quickly with simple scripts and a rich set of built-in toolkits.
+*   **Modular Design:** Key components are encapsulated yet highly customizable.
+
+### For AI & Agent Enthusiasts
+
+*   **Practical Use Cases:** The `/examples` directory includes tasks like deep research report generation, data analysis, and personal file organization.
+*   **Simplicity & Debuggability:** Development and debugging is intuitive and straightforward.
+
+## 🧩 Core Concepts
+
+*   **Agent:** LLM configured with prompts, tools, and environment.
+*   **Toolkit:** Encapsulated set of tools an agent can use.
+*   **Environment:** World in which the agent operates (e.g., browser).
+*   **ContextManager:** Module for managing agent's context window.
+*   **Benchmark:** Workflow for a specific dataset, including preprocessing.
+
+Refer to our [technical documentation](https://tencentcloudadp.github.io/youtu-agent/) for details.
 
 ## 🚀 Getting Started
 
-Get up and running quickly with the following setup and quickstart guide.
-
 ### Setup
 
-**Prerequisites:** Python 3.12+ and [uv](https://github.com/astral-sh/uv) (recommended for dependency management).
+#### Source Code Deployment
 
-1.  **Clone the repository:**
+```bash
+git clone https://github.com/TencentCloudADP/youtu-agent.git
+cd youtu-agent
+uv sync  # or, `make sync`
+source ./.venv/bin/activate
+cp .env.example .env  # NOTE: You should then config the necessary API keys.
+```
 
-    ```bash
-    git clone https://github.com/TencentCloudADP/youtu-agent.git
-    cd youtu-agent
-    ```
+Fill in the required API keys in the `.env` file.
 
-2.  **Install dependencies:**
+#### Docker Deployment
 
-    ```bash
-    uv sync  # or, `make sync`
-    source ./.venv/bin/activate
-    ```
-
-3.  **Configure Environment Variables:**
-
-    ```bash
-    cp .env.example .env  # Create a .env file and fill in your API keys
-    ```
-
-    *   **DeepSeek API (Recommended):**
-
-        ```bash
-        # llm
-        # setup your LLM config , ref https://www.tencentcloud.com/document/product/1255/70381
-        UTU_LLM_TYPE=chat.completions
-        UTU_LLM_MODEL=deepseek-v3
-        UTU_LLM_BASE_URL=https://api.lkeap.cloud.tencent.com/v1
-        UTU_LLM_API_KEY=replace-with-your-api-key
-        ```
-
-    *   **OpenAI API (if using OpenAI-compatible models):**
-
-        ```bash
-        # llm requires OpenAI API format compatibility
-        # setup your LLM config , ref https://api-docs.deepseek.com/
-        UTU_LLM_TYPE=chat.completions
-        UTU_LLM_MODEL=deepseek-chat
-        UTU_LLM_BASE_URL=https://api.deepseek.com/v1
-        UTU_LLM_API_KEY=replace-to-your-api-key
-        ```
-
-    *   **Tools (Search, etc.):** Configure API keys in `.env` as needed.
-
-        ```bash
-        # tools
-        # serper api key, ref https://serper.dev/playground
-        SERPER_API_KEY=<Your Serper API Key>
-        # jina api key, ref https://jina.ai/reader
-        JINA_API_KEY=<Your Jina API Key>
-        ```
+See [`docker/README.md`](./docker/README.md).
 
 ### Quick Start
 
-Run a simple agent using a built-in configuration:
-
 ```bash
+# NOTE: You need to set `SERPER_API_KEY` and `JINA_API_KEY` in `.env` for web search access.
+# (We plan to replace these with free alternatives in the future)
 python scripts/cli_chat.py --stream --config default
 # To avoid using the search toolkit, you can run:
 python scripts/cli_chat.py --stream --config base
@@ -226,13 +223,17 @@ python scripts/cli_chat.py --stream --config base
 
 ### Explore More Examples
 
-Explore and run the provided examples:
+```bash
+# tools
+# serper api key, ref https://serper.dev/playground
+SERPER_API_KEY=<Access the URL in the comments to get the API Key>
+# jina api key, ref https://jina.ai/reader
+JINA_API_KEY=<Access the URL in the comments to get the API Key>
+```
 
 ```bash
 python examples/svg_generator/main.py
 ```
-
-For the web UI, download the frontend package, install it, and then run:
 
 ```bash
 # Download the frontend package
@@ -240,19 +241,18 @@ curl -LO https://github.com/Tencent/Youtu-agent/releases/download/frontend%2Fv0.
 
 # Install the frontend package
 uv pip install utu_agent_ui-0.2.0-py3-none-any.whl
+```
 
+```bash
 python examples/svg_generator/main_web.py
 ```
 
 ![svg_generator_ui](https://github.com/user-attachments/assets/337d327f-91ee-434e-bbcf-297dd4b26c28)
-
 ![svg_generator_result](https://github.com/user-attachments/assets/41aa7348-5f02-4daa-b5b2-225e35d21067)
 
 📖 Learn more: [Examples Documentation](https://tencentcloudadp.github.io/youtu-agent/examples)
 
 ### Run Evaluations
-
-Youtu-Agent supports benchmarking on standard datasets:
 
 ```bash
 # Prepare dataset. This script will download and process WebWalkerQA dataset, and save it to DB.
@@ -264,16 +264,15 @@ python scripts/run_eval.py --config_name ww --exp_id <your_exp_id> --dataset Web
 ```
 
 ![eval_analysis_overview](https://github.com/user-attachments/assets/4a285b9e-d096-437e-9b8e-e5bf6b1924b6)
-
 ![eval_analysis_detail](https://github.com/user-attachments/assets/4ede525a-5e16-4d88-9ebb-01a7dca3aaec)
 
 📖 Learn more: [Evaluation Documentation](https://tencentcloudadp.github.io/youtu-agent/eval)
 
 ## 📖 Dive Deeper
 
-*   📖 **[Full Documentation](https://tencentcloudadp.github.io/youtu-agent/)**
-*   🚀 **[Quickstart Guide](https://tencentcloudadp.github.io/youtu-agent/quickstart/)**
-*   ❓ **[FAQ](https://tencentcloudadp.github.io/youtu-agent/faq)**
+*   📖 **[Full Documentation](https://tencentcloudadp.github.io/youtu-agent/)**: Explore the core concepts, architecture, and advanced features.
+*   🚀 **[Quickstart Guide](https://tencentcloudadp.github.io/youtu-agent/quickstart/)**: A detailed guide to get you up and running.
+*   ❓ **[FAQ](https://tencentcloudadp.github.io/youtu-agent/faq)**: Find answers to common questions and issues.
 
 ## 🙏 Acknowledgements
 
@@ -283,7 +282,7 @@ python scripts/run_eval.py --config_name ww --exp_id <your_exp_id> --dataset Web
 
 ## 🙌 Contributing
 
-Refer to the [**Contributing Guidelines**](./CONTRIBUTING.md) for details.
+Read our [**Contributing Guidelines**](./CONTRIBUTING.md) to contribute.
 
 ## 📚 Citation
 

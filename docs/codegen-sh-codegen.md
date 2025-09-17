@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Codegen SDK: Automate Your Software Development with AI</h1>
+<h1 align="center">Codegen: Your AI-Powered Software Engineering Assistant</h1>
 
 <div align="center">
 
@@ -18,32 +18,19 @@
 
 <br />
 
-**The Codegen SDK empowers developers to harness the power of AI, automating code generation and streamlining software development.** This SDK provides a programmatic interface to interact with Codegen's powerful code agents, letting you automate tasks from feature implementation to code reviews.
+**Codegen empowers developers to automate software development tasks, boosting productivity and accelerating project timelines.** This SDK provides a programmatic interface to the powerful code agents offered by [Codegen](https://codegen.com), your AI-powered software engineering assistant.
 
-## Key Features
+## Key Features of the Codegen SDK
 
-*   **AI-Powered Code Generation:** Leverage intelligent agents to generate code based on your prompts.
-*   **Flexible Integration:** Integrate seamlessly into your existing workflows via a Python SDK.
-*   **Asynchronous Task Management:** Monitor and manage long-running tasks with status updates.
-*   **Easy Installation:** Simple installation via pip or uv.
-*   **Multi-Platform Support:** Interact with your AI engineer via API, Slack, Linear, GitHub, or our website.
-*   **Robust Documentation:** Access comprehensive documentation to get you started quickly.
+*   **AI-Powered Code Generation:** Leverage advanced AI to generate code snippets, implement features, and more.
+*   **API Access:** Interact with your AI engineer directly through a simple and intuitive API.
+*   **Task Management:** Monitor the progress of your tasks and retrieve results once complete.
+*   **Flexible Integration:** Integrate with your existing workflows and development tools.
+*   **Multi-Platform Support:** Access your AI engineer through various platforms, including Slack, Linear, GitHub, and the Codegen website.
 
 ## Getting Started
 
-Install the Codegen SDK using pip:
-
-```bash
-pip install codegen
-```
-
-or with uv:
-
-```bash
-uv pip install codegen
-```
-
-Then, initialize the agent and run your first task:
+Here's a quick example of how to get started with the Codegen SDK:
 
 ```python
 from codegen.agents.agent import Agent
@@ -72,36 +59,37 @@ if task.status == "completed":
     print(task.result)  # Result often contains code, summaries, or links
 ```
 
-Get your API token and organization ID at [codegen.com/token](https://codegen.com/token) and learn more at [codegen.com](https://codegen.com).
+### Installation
+
+Install the SDK using pip:
+
+```bash
+pip install codegen
+```
+
+or
+
+```bash
+uv pip install codegen
+```
+
+### Configuration
+
+1.  **Sign up and get an API token:** Get started at [codegen.com](https://codegen.com) and obtain your API token at [codegen.com/token](https://codegen.com/token).
 
 ## Resources
 
-*   [Documentation](https://docs.codegen.com)
-*   [Getting Started](https://docs.codegen.com/introduction/getting-started)
-*   [Contributing](CONTRIBUTING.md)
-*   [Contact Us](https://codegen.com/contact)
+*   **Documentation:** [https://docs.codegen.com](https://docs.codegen.com)
+*   **Getting Started:** [https://docs.codegen.com/introduction/getting-started](https://docs.codegen.com/introduction/getting-started)
+*   **Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md)
+*   **Contact Us:** [https://codegen.com/contact](https://codegen.com/contact)
 
 ## Contributing
 
-We welcome contributions!  Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on setting up your development environment and submitting pull requests.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up your development environment and submit pull requests.
 
-## Enterprise
+## Enterprise Solutions
 
-For information on enterprise solutions, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
+For information on enterprise engagements and custom solutions, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
 
----
-
-**[View the original repository on GitHub](https://github.com/codegen-sh/codegen)**
-```
-
-Key improvements and SEO considerations:
-
-*   **Strong Title & Hook:**  Uses a clear title and a concise one-sentence hook that immediately conveys the value proposition ("Automate Your Software Development with AI").
-*   **Keywords:** Includes relevant keywords like "AI," "code generation," "SDK," and "automation" to improve search visibility.
-*   **Clear Headings:** Uses descriptive headings and subheadings to structure the content, making it easier to read and understand.
-*   **Bulleted Key Features:**  Highlights the main benefits of the SDK using bullet points, allowing for quick scanning.
-*   **Concise Language:**  Uses clear and concise language throughout the description.
-*   **Call to Actions:** Encourages users to get started and provides clear links to resources.
-*   **Alt Text:** Added alt text to the image to improve SEO
-*   **GitHub Link:** Added a link back to the original repo at the end, as requested.
-*   **Organization:** Reorganized and streamlined the content for better readability and flow.
+**Original Repo:**  [https://github.com/codegen-sh/codegen](https://github.com/codegen-sh/codegen)

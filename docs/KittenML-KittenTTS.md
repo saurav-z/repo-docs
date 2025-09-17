@@ -1,27 +1,23 @@
-# Kitten TTS: Lightweight, High-Quality Text-to-Speech (TTS)
+# KittenTTS: Realistic Text-to-Speech with Lightweight Deployment 😻
 
-**Bring your text to life with Kitten TTS, a cutting-edge, open-source text-to-speech model that delivers realistic voices with exceptional efficiency.** [Visit the original repo](https://github.com/KittenML/KittenTTS).
+**Experience high-quality, realistic text-to-speech (TTS) synthesis with KittenTTS, an open-source model perfect for deployment on any device.**  [Visit the original repository on GitHub](https://github.com/KittenML/KittenTTS)
 
 ## Key Features:
 
-*   **Ultra-Lightweight:** The model size is under 25MB, perfect for resource-constrained environments.
-*   **CPU-Optimized:** Runs seamlessly on any device without the need for a GPU.
-*   **High-Quality Voices:** Experience a range of premium voice options for diverse applications.
-*   **Fast Inference:** Enjoy real-time speech synthesis with optimized performance.
+*   **Ultra-Lightweight:** The model size is less than 25MB, ideal for resource-constrained environments.
+*   **CPU-Optimized:** KittenTTS runs efficiently without a GPU, making it accessible on a wide range of devices.
+*   **High-Quality Voices:** Access several premium voice options for diverse and engaging audio output.
+*   **Fast Inference:** Optimized for real-time speech synthesis, ensuring a seamless user experience.
 
-## Getting Started: Quick Installation & Usage
+## Getting Started Quickly
 
 ### Installation
-
-Install Kitten TTS using pip:
 
 ```bash
 pip install https://github.com/KittenML/KittenTTS/releases/download/0.1/kittentts-0.1.0-py3-none-any.whl
 ```
 
-### Basic Usage Example
-
-Generate speech from text with just a few lines of code:
+### Basic Usage
 
 ```python
 from kittentts import KittenTTS
@@ -36,19 +32,12 @@ import soundfile as sf
 sf.write('output.wav', audio, 24000)
 ```
 
-## System Requirements:
+## System Requirements
 
-Kitten TTS is designed to be versatile and runs on any device without specialized hardware.
+KittenTTS is designed to work literally everywhere.
 
-## Stay Connected and Get Support:
+## Stay Updated
 
-*   **Join our Discord:** [Discord Link](https://discord.com/invite/VJ86W4SURW)
-*   **Custom Support:** [Support Form](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
-*   **Email:** [info@stellonlabs.com](mailto:info@stellonlabs.com)
-
-## Development Roadmap
-
-*   [x] Release a preview model
-*   [ ] Release the fully trained model weights
-*   [ ] Release mobile SDK
-*   [ ] Release web version
+*   [Join our Discord](https://discord.com/invite/VJ86W4SURW)
+*   [For custom support - fill this form](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
+*   Email us with questions: info@stellonlabs.com

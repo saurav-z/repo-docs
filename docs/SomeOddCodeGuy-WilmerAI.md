@@ -1,55 +1,44 @@
-# WilmerAI: Unlock Advanced Conversational AI with Contextual Routing and Customizable Workflows
+# WilmerAI: Advanced Semantic Prompt Routing and Task Orchestration
 
-**Tired of chatbots that misunderstand your requests? WilmerAI uses advanced routing and workflows to deliver nuanced, context-aware responses.**
-
-[![WilmerAI and Open WebUI Install on Fresh Windows 11 Desktop](https://img.youtube.com/vi/KDpbxHMXmTs/0.jpg)](https://www.youtube.com/watch?v=KDpbxHMXmTs "WilmerAI and Open WebUI Install on Fresh Windows 11 Desktop")
-
-[Visit the WilmerAI GitHub Repository](https://github.com/SomeOddCodeGuy/WilmerAI) to learn more.
+**Unlock the power of intelligent context with WilmerAI, a node-based workflow engine designed to revolutionize how language models interact with your applications.** ([Original Repo](https://github.com/SomeOddCodeGuy/WilmerAI))
 
 ## Key Features
 
-*   **Advanced Contextual Routing:**
-    *   Understands the *entire* conversation history for superior intent recognition.
-    *   Uses *Prompt Routing* to select appropriate workflows (Coding, Factual, Creative, etc.).
-    *   Employs *In-Workflow Routing* for dynamic decision-making based on node outputs.
+*   **Advanced Contextual Routing:** Analyze entire conversation histories, not just the last message, to understand user intent and select the most appropriate workflow. This is powered by:
+    *   **Prompt Routing:** Directs user requests to specialized workflows.
+    *   **In-Workflow Routing:** Provides conditional "if/then" logic for dynamic process adjustments.
 
-*   **Core: Node-Based Workflow Engine:**
-    *   Executes user requests through workflows defined in JSON files.
-    *   Nodes perform specific tasks, with outputs passed as inputs for complex processes.
-    *   Enables the creation of modular and reusable workflows.
+*   **Core: Node-Based Workflow Engine:** Define complex, multi-step processes using JSON-based workflows, where each node executes a specific task and passes its output to the next.
 
-*   **Multi-LLM & Multi-Tool Orchestration:**
-    *   Connects each workflow node to *different* LLM endpoints or external tools.
-    *   Optimizes tasks by assigning the best model for each step.
+*   **Multi-LLM & Multi-Tool Orchestration:** Seamlessly integrate different language models and external tools within a single workflow to optimize task performance.
 
-*   **Stateful Conversation Memory:**
-    *   Maintains context with a chronological summary file, rolling summary, and a searchable vector database.
+*   **Modular & Reusable Workflows:** Build self-contained workflows for common tasks and reuse them within larger, complex workflows.
 
-*   **Adaptable API Gateway:**
-    *   Exposes OpenAI- and Ollama-compatible API endpoints for seamless integration with existing applications.
+*   **Stateful Conversation Memory:** Maintains context with a chronological summary, a rolling summary, and a searchable vector database for Retrieval-Augmented Generation (RAG).
 
-*   **Flexible Backend Connectors:**
-    *   Connects to various LLM backends (OpenAI, Ollama, KoboldCpp) through configurable Endpoints, API Types, and Presets.
+*   **Adaptable API Gateway:** Connect your existing front-end applications effortlessly with OpenAI and Ollama-compatible API endpoints.
 
-*   **MCP Server Tool Integration:**
-    *   New experimental support for MCP server tool calling using MCPO.
+*   **Flexible Backend Connectors:** Easily connect to various LLM backends like OpenAI, Ollama, and KoboldCpp through a simple configuration system.
 
-## Why WilmerAI?
+*   **MCP Server Tool Integration using MCPO:** New support for MCP server tool calling using MCPO, allowing tool use mid-workflow (thanks to [iSevenDays](https://github.com/iSevenDays)). More info can be found in the [ReadMe](Public/modules/README_MCP_TOOLS.md).
 
-Built to overcome the limitations of traditional routers, WilmerAI utilizes workflows to give granular control over how LLMs complete tasks. It empowers users to experiment with prompting styles and customize categorization workflows to optimize the routing process.
+## Getting Started
 
-## Get Started
+*   **[User Documentation Setup Starting Guide](Docs/_User_Documentation/Setup/_Getting-Start_Wilmer-Api.md)**
+*   **[Setting up Wilmer with Open WebUI](Docs/_User_Documentation/Setup/Open-WebUI.md)**
+*   **[Setting up Wilmer with SillyTavern](Docs/_User_Documentation/Setup/SillyTavern.md).**
 
-*   **Setup Guides:**
-    *   [User Documents Setup Starting Guide](Docs/_User_Documentation/Setup/_Getting-Start_Wilmer-Api.md)
-    *   [Wilmer with Open WebUI](Docs/_User_Documentation/Setup/Open-WebUI.md)
-    *   [Wilmer With SillyTavern](Docs/_User_Documentation/Setup/SillyTavern.md)
-*   **API Endpoints:**
-    *   OpenAI Compatible v1/completions (requires [Wilmer Prompt Template](Public/Configs/PromptTemplates/wilmerai.json))
-    *   OpenAI Compatible chat/completions
-    *   Ollama Compatible api/generate (requires [Wilmer Prompt Template](Public/Configs/PromptTemplates/wilmerai.json))
-    *   Ollama Compatible api/chat
+## Key Benefits
+
+*   Enhance the capabilities of your existing front-end applications.
+*   Utilize a single prompt to orchestrate multiple LLMs and external tools.
+*   Easily manage and optimize your token usage.
+
+## Additional Information
+
+*   **[User Documentation](Docs/_User_Documentation/README.md)**
+*   **[Developer Documentation](Docs/Developer_Docs/README.md)**
 
 ## Contact
 
-For questions or feedback, reach out to: WilmerAI.Project@gmail.com
+For feedback, requests, or to say hello: WilmerAI.Project@gmail.com

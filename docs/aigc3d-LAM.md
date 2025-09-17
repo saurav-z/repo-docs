@@ -1,75 +1,89 @@
-# LAM: Create Realistic 3D Avatars from a Single Image in Seconds!
+# LAM: Large Avatar Model for One-Shot Animatable Gaussian Head
 
-LAM (Large Avatar Model) is a cutting-edge PyTorch implementation enabling the creation of highly realistic and animatable 3D avatars from a single image. Developed by Tongyi Lab, Alibaba Group, LAM offers unparalleled speed and cross-platform compatibility for next-generation interactive experiences. Explore the project on [GitHub](https://github.com/aigc3d/LAM).
+**Create stunning, interactive 3D avatars from a single image in seconds with LAM, a cutting-edge model from Alibaba Group!**  ([Original Repository](https://github.com/aigc3d/LAM))
+
+<p align="center">
+<img src="./assets/images/logo.jpeg" width="20%">
+</p>
+
+*   **Official PyTorch Implementation**
+*   **SIGGRAPH 2025**
+*   **Build 3D Interactive Chatting Avatar with One Image in Seconds!**
+
+[![Website](https://img.shields.io/badge/🏠-Website-blue)](https://aigc3d.github.io/projects/LAM/)
+[![arXiv Paper](https://img.shields.io/badge/📜-arXiv:2502--17796-green)](https://arxiv.org/pdf/2502.17796)
+[![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace-blue)](https://huggingface.co/spaces/3DAIGC/LAM)
+[![ModelScope](https://img.shields.io/badge/🧱-ModelScope-blue)](https://www.modelscope.cn/studios/Damo_XR_Lab/LAM_Large_Avatar_Model)
+[![Apache License](https://img.shields.io/badge/📃-Apache--2.0-929292)](https://www.apache.org/licenses/LICENSE-2.0)
+
+
+<p align="center">
+  <img src="./assets/images/teaser.jpg" width="100%">
+</p>
+
 
 ## Key Features
 
-*   **One-Shot Avatar Generation:** Generate stunning 3D avatars from a single image in mere seconds.
-*   **Real-time Animation & Rendering:** Experience super-fast cross-platform animation and rendering capabilities, optimized for any device.
-*   **Low-Latency SDK:** Integrate seamlessly with real-time interactive chatting applications.
-*   **Interactive Chatting:** Integrate with OpenAvatarChat to chat with your LAM-generated 3D digital humans.
-*   **Audio-Driven Animation:** Animate your avatar with audio input using the included Audio2Expression model.
+*   **One-Shot Avatar Generation:** Instantly create ultra-realistic 3D avatars from a single input image.
+*   **Fast Animation & Rendering:** Experience super-fast, cross-platform animation and rendering, compatible with any device.
+*   **Real-time Interaction:** Leverage the low-latency SDK for building interactive chatting avatars.
 
-## Core Highlights 🔥🔥🔥
+<div align="center">
+  <video controls src="https://github.com/user-attachments/assets/98f66655-e1c1-40a9-ab58-bdd49dafedda" width="80%">
+  </video>
+</div>
 
-*   **Ultra-realistic 3D Avatar Creation from One Image in Seconds**
-*   **Super-fast Cross-platform Animating and Rendering on Any Devices**
-*   **Low-latency SDK for Realtime Interactive Chatting Avatar**
 
-## News
+## News & Updates
 
 *   **[September 9, 2025]** Released the technical report of [PanoLAM](https://arxiv.org/pdf/2509.07552)!
 *   **[May 20, 2025]** Released the [WebGL-Render](https://github.com/aigc3d/LAM_WebRender)!
-*   **[May 10, 2025]** The [ModelScope](https://www.modelscope.cn/studios/Damo_XR_Lab/LAM_Large_Avatar_Model) Demo now supports direct export to OpenAvatarChat.
-*   **[April 30, 2025]** Released [Avatar Export Feature](tools/AVATAR_EXPORT_GUIDE.md).
-*   **[April 21, 2025]** Released WebGL Interactive Chatting Avatar SDK on [OpenAvatarChat](https://github.com/HumanAIGC-Engineering/OpenAvatarChat)
-*   **[April 19, 2025]** Released the [Audio2Expression](https://github.com/aigc3d/LAM_Audio2Expression) model.
+*   **[May 10, 2025]**  ModelScope Demo now supports exporting avatars for OpenAvatarChat.
+*   **[April 30, 2025]** Released the [Avatar Export Feature](tools/AVATAR_EXPORT_GUIDE.md) for use with OpenAvatarChat.
+*   **[April 21, 2025]** Launched the WebGL Interactive Chatting Avatar SDK on [OpenAvatarChat](https://github.com/HumanAIGC-Engineering/OpenAvatarChat).
+*   **[April 19, 2025]** Released the [Audio2Expression](https://github.com/aigc3d/LAM_Audio2Expression) model for audio-driven avatar animation.
 
-## To Do List
 
-*   \[x] Release LAM-small trained on VFHQ and Nersemble.
-*   \[x] Release Huggingface space.
-*   \[x] Release Modelscope space.
-*   \[ ] Release LAM-large trained on a self-constructed large dataset.
-*   \[x] Release WebGL Render for cross-platform animation and rendering.
-*   \[x] Release audio driven model: Audio2Expression.
-*   \[x] Release Interactive Chatting Avatar SDK with [OpenAvatarChat](https://github.com/HumanAIGC-Engineering/OpenAvatarChat), including LLM, ASR, TTS, Avatar.
-
-## Get Started
+## Getting Started
 
 ### Online Demo
 
-*   **Hugging Face Space:** [![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace_Space-blue)](https://huggingface.co/spaces/3DAIGC/LAM)
+*   **Hugging Face Space:**  [![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace_Space-blue)](https://huggingface.co/spaces/3DAIGC/LAM)
 *   **ModelScope Space:** [![ModelScope](https://img.shields.io/badge/🧱-ModelScope_Space-blue)](https://www.modelscope.cn/studios/Damo_XR_Lab/LAM_Large_Avatar_Model)
-*   **Interactive Chatting Demo:**
-    *   **Hugging Face Space:** [![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace_Space-blue)](https://huggingface.co/spaces/HumanAIGC-Engineering-Team/open-avatar-chat)
-    *   **ModelScope Space:** [![ModelScope](https://img.shields.io/badge/🧱-ModelScope_Space-blue)](https://www.modelscope.cn/studios/HumanAIGC-Engineering/open-avatar-chat)
+
+### Interactive Chatting
+
+*   **Hugging Face Space:** [![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace_Space-blue)](https://huggingface.co/spaces/HumanAIGC-Engineering-Team/open-avatar-chat)
+*   **ModelScope Space:** [![ModelScope](https://img.shields.io/badge/🧱-ModelScope_Space-blue)](https://www.modelscope.cn/studios/HumanAIGC-Engineering/open-avatar-chat)
 
 ### Environment Setup
 
-*   **One-Click Installation (Windows):**  A simplified one-click installer for Windows (Cuda 12.8) is available.
-    *   [Video](https://www.bilibili.com/video/BV13QGizqEey)
-    *   [Download Link](https://virutalbuy-public.oss-cn-hangzhou.aliyuncs.com/share/aigc3d/data/LAM/Installation/LAM-windows-one-click-install.zip)
-*   **Linux:**
-    ```bash
-    git clone https://github.com/aigc3d/LAM.git
-    cd LAM
-    # Install with Cuda 12.1
-    sh ./scripts/install/install_cu121.sh
-    # Or Install with Cuda 11.8
-    sh ./scripts/install/install_cu118.sh
-    ```
-*   **Windows:**  Refer to the [Windows Install Guide](scripts/install/WINDOWS_INSTALL.md).
+**Windows (One-Click Installation):**  [Video](https://www.bilibili.com/video/BV13QGizqEey) &nbsp; &nbsp; [Download Link](https://virutalbuy-public.oss-cn-hangzhou.aliyuncs.com/share/aigc3d/data/LAM/Installation/LAM-windows-one-click-install.zip)
+
+#### Linux:
+
+```bash
+git clone https://github.com/aigc3d/LAM.git
+cd LAM
+# Install with Cuda 12.1
+sh ./scripts/install/install_cu121.sh
+# Or Install with Cuda 11.8
+sh ./scripts/install/install_cu118.sh
+```
+
+#### Windows:
+
+Refer to the [Windows Install Guide](scripts/install/WINDOWS_INSTALL.md).
 
 ### Model Weights
 
-| Model     | Training Data          | HuggingFace   | ModelScope                             | Reconstruction Time | A100 (A & R) | XiaoMi 14 Phone (A & R) |
-| --------- | ----------------------- | ------------- | -------------------------------------- | --------------------- | -------------------------- | ----------------------- |
-| LAM-20K   | VFHQ                    | TBD           | TBD                                    | 1.4 s                 | 562.9 FPS                  | 110+ FPS                |
-| LAM-20K   | VFHQ + NeRSemble          | [Link](https://huggingface.co/3DAIGC/LAM-20K) | [Link](https://www.modelscope.cn/models/Damo_XR_Lab/LAM-20K/summary) | 1.4 s                 | 562.9 FPS                  | 110+ FPS                |
-| LAM-20K   | Our large dataset       | TBD           | TBD                                    | 1.4 s                 | 562.9 FPS                  | 110+ FPS                |
+| Model   | Training Data                  | HuggingFace | ModelScope | Reconstruction Time | A100 (A & R) | XiaoMi 14 Phone (A & R) |
+|---------|--------------------------------|-------------|------------|---------------------|--------------------------|-------------------------|
+| LAM-20K | VFHQ                          | TBD          | TBD         | 1.4 s               | 562.9FPS                 | 110+FPS                 |
+| LAM-20K | VFHQ + NeRSemble                | [Link](https://huggingface.co/3DAIGC/LAM-20K) | [Link](https://www.modelscope.cn/models/Damo_XR_Lab/LAM-20K/summary) | 1.4 s               | 562.9FPS                 | 110+FPS                 |
+| LAM-20K | Our large dataset | TBD          | TBD         | 1.4 s               | 562.9FPS                 | 110+FPS                 |
 
-(**A & R:** Animating & Rendering)
+(**A & R:** Animating & Rendering )
 
 #### HuggingFace Download
 
@@ -100,7 +114,8 @@ modelscope download "Damo_XR_Lab/LAM-20K" --local_dir "./model_zoo/lam_models/re
 python app_lam.py
 ```
 
-*   For exporting ZIP files for real-time conversations on OpenAvatarChat, follow the [Guide](tools/AVATAR_EXPORT_GUIDING.md).
+To export ZIP files for real-time conversations on OpenAvatarChat, refer to the [Guide](tools/AVATAR_EXPORT_GUIDE.md).
+
 ```bash
 python app_lam.py --blender_path /path/blender
 ```
@@ -111,24 +126,24 @@ python app_lam.py --blender_path /path/blender
 sh ./scripts/inference.sh ${CONFIG} ${MODEL_NAME} ${IMAGE_PATH_OR_FOLDER} ${MOTION_SEQ}
 ```
 
-## Acknowledgements
+### Acknowledgements
 
-This project leverages the contributions of several open-source projects:
+This project builds upon the foundations laid by the following research and open-source projects:
 
 *   [OpenLRM](https://github.com/3DTopia/OpenLRM)
 *   [GAGAvatar](https://github.com/xg-chu/GAGAvatar)
 *   [GaussianAvatars](https://github.com/ShenhanQian/GaussianAvatars)
 *   [VHAP](https://github.com/ShenhanQian/VHAP)
 
-We appreciate their excellent work and contributions.
+We extend our gratitude for their valuable contributions.
 
-## More Works
+### Related Works
 
-Explore our other projects:
+Explore our other innovative projects:
 
 *   [LHM](https://github.com/aigc3d/LHM)
 
-## Citation
+### Citation
 
 ```
 @inproceedings{he2025lam,
@@ -138,3 +153,4 @@ Explore our other projects:
   pages={1--13},
   year={2025}
 }
+```

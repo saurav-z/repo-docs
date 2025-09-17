@@ -19,19 +19,17 @@
 
 </div>
 
-# Tracecat: Automate Security and IT Workflows with Open Source
+# Tracecat: Automate Security and IT Workflows with Open Source Power
 
-**Tracecat is an open-source platform designed to automate security and IT workflows, improving incident response and overall efficiency.**  Check out the original repository [here](https://github.com/TracecatHQ/tracecat).
+Tracecat is a modern, open-source platform designed to streamline security and IT response engineering, empowering you to automate workflows with ease.  **[Check out the original repo](https://github.com/TracecatHQ/tracecat).**
 
 ## Key Features
 
-*   **YAML-Based Templates:** Easily create integrations with simple YAML templates.
-*   **No-Code UI:**  A user-friendly interface for designing and managing workflows.
-*   **Built-in Lookup Tables:** Simplify data management within your automation processes.
-*   **Case Management:**  Streamline incident handling and tracking.
-*   **Scalable Architecture:**  Powered by Temporal for reliability and performance.
-*   **Open Cyber Security Schema (OCSF) Compatibility:** Integrations designed to align with the OCSF ontology where possible.
-*   **Community-Driven:** Join our Discord and collaborate on new integrations!
+*   **YAML-Based Templates:** Define integrations and workflows using simple, YAML-based templates for easy customization.
+*   **No-Code UI:** Leverage an intuitive no-code UI to build and manage workflows without complex coding.
+*   **Built-in Lookup Tables & Case Management:** Enhance automation with built-in lookup tables and case management capabilities.
+*   **Scalable Orchestration:** Built on Temporal for robust scale and reliability, ensuring your workflows run smoothly.
+*   **Open Cyber Security Schema (OCSF) Compatibility:**  Template inputs are normalized to fit the OCSF ontology where possible.
 
 ## Getting Started
 
@@ -40,46 +38,45 @@
 
 ### Run Tracecat Locally
 
-Get started quickly with Docker Compose.  Detailed instructions are available in our [documentation](https://docs.tracecat.com/self-hosting/deployment-options/docker-compose).
+Deploy a local Tracecat stack using Docker Compose.  Detailed instructions are available [here](https://docs.tracecat.com/self-hosting/deployment-options/docker-compose).
 
 ### Run Tracecat on AWS Fargate (Advanced)
 
-Deploy a production-ready Tracecat instance on AWS Fargate using Terraform.  See the full guide [here](https://docs.tracecat.com/self-hosting/deployment-options/aws-ecs).
+Deploy a production-ready Tracecat stack on AWS Fargate using Terraform.  For advanced users, find full instructions [here](https://docs.tracecat.com/self-hosting/deployment-options/aws-ecs).
 
 ### Run Tracecat on Kubernetes
 
-Coming Soon!
+Coming soon.
 
 ## Tracecat Registry
 
 ![Tracecat Action template](img/action-template.svg)
 
-Tracecat Registry is a curated collection of integration and response-as-code templates, organized around common security and IT capabilities.
+Tracecat Registry provides a collection of integration and response-as-code templates to accelerate your automation efforts.
 
-**Key Benefits:**
-
-*   **Pre-built Integrations:** Jumpstart your automation with ready-to-use templates.
-*   **Standardized Actions:**  Templates organized by common capabilities (e.g., `list_alerts`).
-*   **OCSF Alignment:** Template inputs are normalized where possible to OCSF standards.
-
-**Explore the Registry:**
-
-*   Visit our documentation for use cases and ideas.
-*   Browse existing open source templates in our [repository](https://github.com/TracecatHQ/tracecat/tree/main/packages/tracecat-registry/tracecat_registry/templates).
+*   **Action Ontology:** Response actions are organized within Tracecat's own ontology of common capabilities (e.g., `list_alerts`, `list_cases`, `list_users`).
+*   **Template Library:** Explore use cases and find inspiration in our documentation on Tracecat Registry.
+*   **Open Source Templates:** Explore open-source templates in [our repo](https://github.com/TracecatHQ/tracecat/tree/main/packages/tracecat-registry/tracecat_registry/templates).
 
 ## Open Source vs. Enterprise
 
-Tracecat is primarily available under the AGPL-3.0 license, excluding the `ee` directory which contains enterprise features. The Enterprise Edition provides advanced capabilities and is available via a Tracecat Enterprise license.  Learn more on our [website](https://tracecat.com) or [book a meeting](https://cal.com/team/tracecat).
+This repository is available under the AGPL-3.0 license, excluding the `ee` directory, which contains paid enterprise features requiring a Tracecat Enterprise license.  The Enterprise Edition provides advanced features and functionalities.
+
+*For information on Tracecat's Enterprise self-hosted or managed Cloud offerings, please visit [our website](https://tracecat.com) or [book a meeting](https://cal.com/team/tracecat).*
 
 ## Security
 
-Tracecat is committed to providing a secure platform. We provide features like SSO and audit logs, along with support for Infrastructure as Code (IaC) deployments. For specific security inquiries, please reach out on [Discord](https://discord.gg/H4XZwsYzY4).
+Tracecat prioritizes security, offering features like SSO, audit logs, and IaC deployments (Terraform, Kubernetes/Helm).  We are working on comprehensive documentation of Tracecat's threat model, security features, and hardening recommendations.  For immediate security-related questions, reach out on [Discord](https://discord.gg/H4XZwsYzY4).
 
-**Security Reporting:** Report any security issues to [security@tracecat.com](mailto:founders+security@tracecat.com), including `tracecat` in the subject line.
+Report any security issues to [security@tracecat.com](mailto:founders+security@tracecat.com) with "tracecat" in the subject line.
 
-## Community & Contributions
+## Community & Support
 
-We appreciate the contributions of our community!  Thank you to everyone who has contributed code, integrations, and support.
+Join the Tracecat community!  Share your questions, feedback, and integration ideas on the [Tracecat Community Discord](https://discord.gg/H4XZwsYzY4).
+
+## Contributors
+
+Thank you to all the amazing contributors who are making open source a reality!
 
 <a href="https://github.com/TracecatHQ/tracecat/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=TracecatHQ/tracecat" />

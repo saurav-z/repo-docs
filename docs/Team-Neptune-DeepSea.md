@@ -1,7 +1,7 @@
-<img src="assets/banner.png" align="center" width="100%" alt="DeepSea Banner" />
+<img src="assets/banner.png" align="center" width="100%" alt="DeepSea Banner"/>
 
 <p align="center">
-    **DeepSea: The ultimate all-in-one custom firmware (CFW) package for your Nintendo Switch, unlocking a world of possibilities!**<br/>
+    **DeepSea: The ultimate all-in-one custom firmware (CFW) package, unlocking a world of possibilities for your Nintendo Switch.**  
     <a href="https://discord.gg/VkaRjYN">
         <img alt="Discord" src="https://img.shields.io/discord/703301751171973190?label=Join%20DeepSea%20on%20Discord&style=flat-square">
     </a> 
@@ -11,38 +11,38 @@
 
 ---
 
-## DeepSea: Enhance Your Nintendo Switch Experience
+## DeepSea: Unlock the Full Potential of Your Nintendo Switch
 
-DeepSea is a comprehensive CFW package designed to significantly enhance your Nintendo Switch's functionality. From game modifications to system-level tweaks, DeepSea provides a streamlined and feature-rich environment for your console.  **[Explore the original repository here](https://github.com/Team-Neptune/DeepSea).**
+DeepSea is the premier custom firmware package for the Nintendo Switch, packed with features to enhance your gaming experience.  Expand your Switch's capabilities with:
 
-### Key Features:
+**Key Features:**
 
-*   **File Management:** Seamlessly transfer files with a built-in background FTP server.
-*   **Game Installation:** Install NSP & XCI files directly from your hard drive, PC, smartphone, or via Wi-Fi.
-*   **Performance Control:** Fine-tune your Switch's performance with overclocking and underclocking options.
-*   **System Updates:** Easily update both OFW (Official Firmware) and CFW through homebrew.
-*   **Homebrew Discovery:** Browse and install new homebrew applications using the integrated app store.
-*   **Savegame Management:** Effortlessly manage your game saves.
-*   **Cheating:** Use cheat codes to enhance your gaming experience (use responsibly).
-*   **Amiibo Emulation:** Emulate Amiibo functionality.
-*   **Controller Support:** Utilize a wide variety of third-party controllers.
-*   **LAN Play:** Enjoy local multiplayer games with others on a LAN (similar to Hamachi).
-*   **Tesla Overlay:**  Access and control DeepSea's features via a convenient overlay (L1 + D-pad Down + Right Stick).
+*   **File Management:** Integrated background FTP server for easy file transfers.
+*   **Game Installation:** Install NSP and XCI files directly from your hard drive, PC, smartphone, or Wi-Fi.
+*   **Performance Tweaks:** Overclock and underclock your console for optimized performance and battery life.
+*   **Firmware Management:** Update both your Official Firmware (OFW) and Custom Firmware (CFW) directly through homebrew.
+*   **Homebrew App Store:** Discover and install new homebrew applications.
+*   **Savegame Management:** Easily manage and back up your game saves.
+*   **Cheating:** Access cheat functionality (please use responsibly).
+*   **Amiibo Emulation:** Emulate Amiibo figures for in-game rewards.
+*   **Controller Support:** Use a wide variety of 3rd party controllers.
+*   **LAN Play:** Enjoy local multiplayer with friends using LAN play (like Hamachi).
+*   **Tesla Overlay:** Conveniently control all features using the Tesla overlay (L1+DpadDown+RightStick).
 
-**For a deeper dive into DeepSea's capabilities, check out our comprehensive [wiki](https://github.com/Team-Neptune/DeepSea/wiki) with detailed guides and tutorials.**
+**For a deeper dive into DeepSea's features, explore the [DeepSea Wiki](https://github.com/Team-Neptune/DeepSea/wiki).**
 
-## Getting Started
+## Getting Started with DeepSea
 
-To begin using DeepSea:
+To begin using DeepSea, follow these simple steps:
 
-1.  **Follow the Nintendo Switch hacking guide:** Consult the guide at [https://switch.homebrew.guide](https://switch.homebrew.guide) for detailed instructions on how to hack your Switch.
-2.  **Download the Latest Release:** Obtain the latest DeepSea release from the official repository.
-3.  **SD Card Preparation:** Place the downloaded files onto your Switch's SD card.
-4.  **Payload Injection:** Launch the CFW by sending the Hekate payload to your Switch in RCM mode.
+1.  **Follow this guide to hack your Switch:** [https://switch.homebrew.guide](https://switch.homebrew.guide)
+2.  **Download the latest release:**  Find the latest release on the [DeepSea GitHub Repository](https://github.com/Team-Neptune/DeepSea).
+3.  **Copy to SD Card:** Place the downloaded files onto your SD card.
+4.  **Launch CFW:** Send the Hekate payload to your Switch in RCM mode, and launch the CFW.
 
-## Included Software Packages
+## Included Software
 
-DeepSea provides three package types, each including a specific set of features.
+DeepSea offers multiple package options, each including a comprehensive set of software.  Here's a breakdown:
 
 | Software | Advanced Package | Normal Package | Minimal Package |
 | -------- | :-------------: | :------------: | :------------: |
@@ -71,7 +71,9 @@ DeepSea provides three package types, each including a specific set of features.
 | [Tesla-Menu](https://github.com/WerWolv/Tesla-Menu) | ✅ | ✅ |  |
 | [Goldleaf](https://github.com/XorTroll/Goldleaf) | ✅ | ✅ |  |
 
-## Acknowledgements
+## Credits
 
-*   Special thanks to the former members of Team AtlasNX for laying the foundation of DeepSea.
-*   A huge thank you to all the dedicated homebrew developers whose contributions make DeepSea possible!
+*   A special thanks to the previous members of Team AtlasNX for their foundational work.
+*   A huge thank you to all the talented homebrew developers whose contributions make DeepSea possible.
+
+**[Visit the DeepSea GitHub Repository for the latest releases and updates](https://github.com/Team-Neptune/DeepSea).**

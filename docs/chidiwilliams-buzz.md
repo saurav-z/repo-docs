@@ -1,45 +1,93 @@
-# Buzz: Offline Audio Transcription and Translation
+# Buzz: Offline Audio Transcription & Translation
 
-**Buzz empowers you to transcribe and translate audio files directly on your computer, harnessing the power of OpenAI's Whisper.** ([Original Repository](https://github.com/chidiwilliams/buzz))
+**Effortlessly transcribe and translate audio on your computer with Buzz, powered by OpenAI's Whisper.**  [Learn more](https://github.com/chidiwilliams/buzz)
 
-**Key Features:**
+Buzz utilizes the power of OpenAI's Whisper to provide fast and accurate audio transcription and translation directly on your computer, eliminating the need for internet connectivity and ensuring your audio data's privacy.
 
-*   **Offline Transcription & Translation:** Process audio without an internet connection, ensuring privacy and speed.
-*   **Powered by Whisper:** Utilizing the cutting-edge open-source speech recognition model from OpenAI.
+## Key Features:
+
+*   **Offline Transcription:** Transcribe audio files without an internet connection, ensuring privacy and accessibility.
+*   **Multilingual Support:** Supports transcription and translation in numerous languages.
 *   **Cross-Platform Compatibility:** Available for macOS, Windows, and Linux.
-*   **Multiple Installation Options:** Easily install via PyPI, brew, winget, Flatpak, or Snap.
-*   **GPU Acceleration (PyPI):** Take advantage of your NVIDIA GPU for faster processing (Windows).
-*   **Mac App Store Version:** For a superior experience, explore the Mac-native version with enhanced features like audio playback, editing, and search.
-*   **Regular Updates & Active Development:** Benefit from bug fixes and the latest features by accessing development versions.
+*   **Multiple Installation Options:** Install via PyPI, brew (macOS), winget (Windows), Flatpak (Linux), or Snap (Linux).
+*   **GPU Acceleration:**  Leverages GPU for faster processing (requires setup, see installation instructions).
 
-**Installation:**
+## Installation
 
-Choose your operating system below:
+### PyPI
 
-*   **macOS:**
-    *   **Homebrew:** `brew install --cask buzz`
-    *   **Releases:** Download the `.dmg` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
-*   **Windows:**
-    *   **Winget:** `winget install ChidiWilliams.Buzz`
-    *   **Releases:** Download the `.exe` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest). (Note: App is not signed and may require you to bypass a warning.)
-    *   **GPU Support (PyPI):** For GPU support on Windows, ensure CUDA support for [torch](https://pytorch.org/get-started/locally/) and install the necessary packages.
-*   **Linux:**
-    *   **Flatpak:** `flatpak install flathub io.github.chidiwilliams.Buzz`
-    *   **Snap:** `sudo apt-get install libportaudio2 libcanberra-gtk-module libcanberra-gtk3-module; sudo snap install buzz; sudo snap connect buzz:password-manager-service`
-*   **PyPI:**
-    1.  Install [ffmpeg](https://www.ffmpeg.org/download.html).
-    2.  `pip install buzz-captions`
-    3.  `python -m buzz`
+1.  Install [ffmpeg](https://www.ffmpeg.org/download.html)
+2.  Install Buzz:
 
-**Screenshots:**
+    ```shell
+    pip install buzz-captions
+    python -m buzz
+    ```
 
-[Include screenshot images here]
+### macOS
 
-**Additional Resources:**
+*   **Homebrew:**
 
-*   [Documentation](https://chidiwilliams.github.io/buzz/)
-*   [Buzz Captions on the App Store](https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&itsct=apps_box_badge&itscg=30200)
-*   [FAQ](https://chidiwilliams.github.io/buzz/docs/faq#9-where-can-i-get-latest-development-version)
-*   [Original Repository](https://github.com/chidiwilliams/buzz)
+    ```shell
+    brew install --cask buzz
+    ```
 
-**Note:** This README offers a concise overview.  For detailed information, consult the documentation.
+*   **Download:** Download the `.dmg` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
+
+### Windows
+
+*   **Download:** Download and run the `.exe` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).  You may need to bypass a security warning.
+*   **winget:**
+
+    ```shell
+    winget install ChidiWilliams.Buzz
+    ```
+
+*   **GPU Support (PyPI):** For Nvidia GPUs, install CUDA support for [torch](https://pytorch.org/get-started/locally/).
+
+    ```
+    pip3 install -U torch==2.7.1+cu128 torchaudio==2.7.1+cu128 --index-url https://download.pytorch.org/whl/cu128
+    pip3 install nvidia-cublas-cu12==12.8.3.14 nvidia-cuda-cupti-cu12==12.8.57 nvidia-cuda-nvrtc-cu12==12.8.61 nvidia-cuda-runtime-cu12==12.8.57 nvidia-cudnn-cu12==9.7.1.26 nvidia-cufft-cu12==11.3.3.41 nvidia-curand-cu12==10.3.9.55 nvidia-cusolver-cu12==11.7.2.55 nvidia-cusparse-cu12==12.5.4.2 nvidia-cusparselt-cu12==0.6.3 nvidia-nvjitlink-cu12==12.8.61 nvidia-nvtx-cu12==12.8.55 --extra-index-url https://pypi.ngc.nvidia.com
+    ```
+
+### Linux
+
+*   **Flatpak:**
+
+    ```shell
+    flatpak install flathub io.github.chidiwilliams.Buzz
+    ```
+
+*   **Snap:**
+
+    ```shell
+    sudo apt-get install libportaudio2 libcanberra-gtk-module libcanberra-gtk3-module
+    sudo snap install buzz
+    sudo snap connect buzz:password-manager-service
+    ```
+
+## App Store Version
+
+Buzz is also available as a native macOS app with additional features, including a cleaner look, audio playback, drag-and-drop import, transcript editing, and search.
+
+<a href="https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&amp;itsct=apps_box_badge&amp;itscg=30200"><img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83&amp;releaseDate=1679529600" alt="Download on the Mac App Store" /></a>
+
+## Screenshots
+
+(Screenshots of the application are included here)
+
+## Development Version
+
+For the latest features and bug fixes, consult the [FAQ](https://chidiwilliams.github.io/buzz/docs/faq#9-where-can-i-get-latest-development-version).
+
+## Contributing
+
+Contributions are welcome! Please see the [contributing guidelines](CONTRIBUTING.md).
+
+## License
+
+Buzz is licensed under the MIT License.
+
+---
+
+**[Back to the project on GitHub](https://github.com/chidiwilliams/buzz)**

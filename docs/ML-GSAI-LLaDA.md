@@ -1,122 +1,62 @@
-# LLaDA: Pioneering Large Language Diffusion Models (LLMs)
+# LLaDA: Revolutionizing Language Modeling with Diffusion (Large Language Diffusion with Masking)
 
-**LLaDA revolutionizes language modeling with a novel masked diffusion approach, achieving performance that rivals leading autoregressive models. Learn more about LLaDA at the [original repository](https://github.com/ML-GSAI/LLaDA).**
+**Explore the future of language AI with LLaDA, an 8B-scale diffusion model that challenges the status quo, achieving performance comparable to LLaMA3.**  [Explore the LLaDA Repository](https://github.com/ML-GSAI/LLaDA)
 
-[![arXiv](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/2502.09992)
-[![Hugging Face - Base](https://img.shields.io/badge/Hugging%20Face-LLaDA_Base-FFEB3B)](https://huggingface.co/GSAI-ML/LLaDA-8B-Base)
-[![Hugging Face - Instruct](https://img.shields.io/badge/Hugging%20Face-LLaDA_Instruct-FFEB3B)](https://huggingface.co/GSAI-ML/LLaDA-8B-Instruct)
-[![Hugging Face - Demo](https://img.shields.io/badge/Hugging%20Face-Demo-blue)](https://huggingface.co/spaces/multimodalart/LLaDA)
-[![Zhihu 1](https://img.shields.io/badge/Zhihu1-%E7%9F%A5%E4%B9%8E1-blue)](https://zhuanlan.zhihu.com/p/24214732238)
-[![Zhihu 2](https://img.shields.io/badge/Zhihu2-%E7%9F%A5%E4%B9%8E2-blue)](https://www.zhihu.com/question/1908479621466396378/answer/1910672718174589774?share_code=1kreOq5gzOtnM&utm_psn=1910708245535912148&utm_source=wechat_timeline&utm_medium=social&s_r=0)
+LLaDA (Large Language Diffusion with Masking) represents a significant leap forward in language modeling, utilizing a novel diffusion-based approach.  This README provides a comprehensive overview of LLaDA, its key features, and how to get started.
 
-## Key Features
+**Key Features:**
 
-*   **State-of-the-Art Performance:** LLaDA-8B rivals LLaMA3 8B in performance with a novel masked diffusion approach.
-*   **Open-Source Models:** Access LLaDA-8B-Base and LLaDA-8B-Instruct models on Hugging Face.
-*   **Innovative Architecture:** Employs a unique masked diffusion approach, offering a fresh perspective on language modeling.
-*   **Competitive Vision-Language Model:** LLaDA-V, a diffusion-based vision-language model, outperforming other diffusion MLLMs.
-*   **Easy to Use:** Inference scripts and Gradio demo provided for easy integration and experimentation.
+*   **State-of-the-Art Performance:** LLaDA-8B models rival LLaMA3 8B in performance, demonstrating the power of diffusion models in the language domain.
+*   **Diffusion-Based Architecture:** Employs a unique masked diffusion approach, offering a fresh perspective on language modeling compared to traditional autoregressive methods.
+*   **Open-Source Availability:**  Pre-trained models, including LLaDA-8B-Base and LLaDA-8B-Instruct, are readily available for inference and experimentation on Hugging Face.
+*   **Modular Design:** The architecture is built using the Transformer framework, providing flexibility for customization and integration.
+*   **Ongoing Development:**  The project is actively developed with the introduction of new models (e.g., LLaDA-MoE-7B-A1B) and improvements, demonstrating the team's commitment to innovation.
+*   **Competitive Evaluation:** Provides evaluation code, including conditional likelihood estimation and conditional generation using `lm-evaluation-harness`.
+*   **Clear Guidelines:**  Offers guidelines and resources, including [GUIDELINES.md](GUIDELINES.md), for training and adapting LLaDA.
 
-## What's New
+## Key Highlights
 
-*   **LLaDA-MoE-7B-A1B-Base & LLaDA-MoE-7B-A1B-Instruct:** The first diffusion language models pretrained from scratch with MoE architecture.
-*   **LLaDA 1.5:** Incorporates VRPO to reduce gradient variance and enhance preference alignment.
-*   **Evaluation Code:** Evaluation code based on the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) is now available.
+*   **Model Releases:**  Explore models like LLaDA-MoE-7B-A1B, LLaDA 1.5 (with VRPO), and LLaDA-V, pushing boundaries in both language and vision-language tasks.
+*   **Interactive Demo:** Interact with the LLaDA-Instruct model via a user-friendly Gradio demo.
+*   **Detailed Documentation:** Provides comprehensive information on inference, training, and evaluation to aid in your research and development endeavors.
 
-## Introduction
+## Getting Started
 
-LLaDA (Large Language Diffusion with Masking) is a groundbreaking diffusion model with an 8B scale, trained entirely from scratch to deliver competitive performance.
+### Inference
 
-<div style="display: flex; justify-content: center; flex-wrap: wrap;">
-    <img src="./imgs/LLaDA_vs_LLaMA.svg" style="width: 45%" />
-    <img src="./imgs/LLaDA_vs_LLaMA_chat.svg" style="width: 46%" />
-</div>
+1.  **Install Dependencies:** Ensure you have the required libraries.  
+    ```bash
+    pip install transformers==4.38.2
+    ```
+2.  **Load the Model:** Utilize the `transformers` library to load the LLaDA models from Hugging Face.
 
-## Inference
+    ```python
+    from transformers import AutoModel, AutoTokenizer
+    import torch
 
-Easily run inference with the pre-trained LLaDA models. First, install `transformers==4.38.2`.
+    tokenizer = AutoTokenizer.from_pretrained('GSAI-ML/LLaDA-8B-Base', trust_remote_code=True)
+    model = AutoModel.from_pretrained('GSAI-ML/LLaDA-8B-Base', trust_remote_code=True, torch_dtype=torch.bfloat16)
+    ```
 
-```bash
-pip install transformers==4.38.2
-```
+3.  **Explore Example Scripts:** Use provided scripts for conditional likelihood evaluation (`get_log_likelihood.py`) and conditional generation (`generate.py`).
+4.  **Chat Interface:** Run `python chat.py` to engage in multi-round conversations with the LLaDA-8B-Instruct model.
 
-Then use the `transformers` library to load the model:
+### Gradio Demo
 
-```python
-from transformers import AutoModel, AutoTokenizer
-import torch
+1.  **Install Gradio:**
+    ```bash
+    pip install gradio
+    ```
+2.  **Run the Demo:** Execute `python app.py` to launch the interactive Gradio demo.
 
-tokenizer = AutoTokenizer.from_pretrained('GSAI-ML/LLaDA-8B-Base', trust_remote_code=True)
-model = AutoModel.from_pretrained('GSAI-ML/LLaDA-8B-Base', trust_remote_code=True, torch_dtype=torch.bfloat16)
-```
+## Training & Evaluation
 
-*   The `get_log_likelihood()` and `generate()` functions are available for conditional likelihood evaluation and conditional generation.
-*   You can directly run `python chat.py` to have multi-round conversations with LLaDA-8B-Instruct.
+*   **Training:**  While the training framework isn't directly provided, clear guidelines are available in [GUIDELINES.md](GUIDELINES.md) and [SMDM](https://github.com/ML-GSAI/SMDM) provides code samples.
+*   **Evaluation:** Use the provided evaluation code based on `lm-evaluation-harness`. Details are in [EVAL.md](EVAL.md) and the paper ([https://arxiv.org/abs/2502.09992](https://arxiv.org/abs/2502.09992)).
 
-Please consult the paper and [GUIDELINES.md](GUIDELINES.md) for more details.
+## Frequently Asked Questions (FAQ)
 
-## Gradio Demo
-
-Experience LLaDA through an interactive Gradio demo, thanks to [apolinário](https://github.com/apolinario)!
-
-*   Install Gradio: `pip install gradio`
-*   Run the demo: `python app.py`
-
-<div style="display: flex; justify-content: center; flex-wrap: wrap;">
-    <img src="./imgs/example_gradio.gif" style="width: 80%" />
-</div>
-
-## Training and Fine-Tuning
-
-While the training framework and data are not provided, training LLaDA is straightforward.
-
-*   Adapt your existing autoregressive model training code.
-*   Refer to [GUIDELINES.md](GUIDELINES.md) for guidance.
-*   Explore [SMDM](https://github.com/ML-GSAI/SMDM) as a reference.
-
-## Evaluation
-
-LLaDA uses conditional likelihood estimation and conditional generation for evaluation.
-
-*   See the [paper](https://arxiv.org/abs/2502.09992) for details and the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) library.
-*   Evaluation code based on the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) is available for LLaDA-Base.
-*   Refer to [EVAL.md](EVAL.md) for evaluation code usage and known bugs.
-
-## FAQ
-
-Address common questions about LLaDA.
-
-### 0. How do I train my own LLaDA?
-
-Refer to [GUIDELINES.md](GUIDELINES.md).  You can also see the [SMDM](https://github.com/ML-GSAI/SMDM) code.
-
-### 1. What is the difference between LLaDA and BERT?
-
-LLaDA is a generative model with a varied masking ratio (0 to 1), providing in-context learning and instruction-following capabilities, and ensuring Fisher consistency.
-
-### 2. What is the relationship between LLaDA and Transformer?
-
-LLaDA uses the Transformer architecture with a diffusion model for probabilistic modeling, unlike the autoregressive next-token prediction of GPT.
-
-### 3. What is the sampling efficiency of LLaDA?
-
-LLaDA's sampling speed is slower than autoregressive models.  The team will continue to optimize efficiency, believing there is significant room for improvement (e.g. Consistency model).
-
-### 4. What is the training stability of LLaDA?
-
-Training stability is discussed in Section 2.2 of the paper.
-
-### 5. Why is the final answer "72" generated earlier than the intermediate calculation step (e.g., 12 × 4 = 48) in Tab4?
-
-The mask predictor correctly predicts the reasoning process. However, the reasoning steps are masked out again during remasking, so the final answer is generated sooner.
-
-### 6. Why does LLaDA answer 'Bailing' when asked 'Who are you'?
-
-This is due to the design of the pre-training and SFT data.
-
-### 7. Our journey in developing LLaDA?
-
-LLaDA builds upon [RADD](https://arxiv.org/abs/2406.03736) and [SMDM](https://arxiv.org/abs/2410.18514) research.
+Address common questions about LLaDA, including training, model differences (e.g., BERT, Transformer), sampling efficiency, training stability, and understanding of the diffusion-based architecture.
 
 ## Citation
 
@@ -129,10 +69,6 @@ LLaDA builds upon [RADD](https://arxiv.org/abs/2406.03736) and [SMDM](https://ar
 }
 ```
 
-## Discussion
+## Discussion & Updates
 
-Join the discussion and stay updated by scanning the QR code below:
-
-<div style="display: flex; justify-content: center; flex-wrap: wrap;">
-    <img src="./imgs/QR.jpg" style="width: 50%" />
-</div>
+Stay updated on the latest developments by joining the discussion via the provided WeChat QR code.

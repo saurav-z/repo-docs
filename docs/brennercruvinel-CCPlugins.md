@@ -1,6 +1,6 @@
-# CCPlugins: Supercharge Your Claude Code CLI Productivity 🚀
+# Supercharge Your Claude Code CLI: Automate Development with CCPlugins
 
-**Tired of repetitive development tasks?** CCPlugins is a powerful suite of professional commands that automates your coding workflow, saving you hours each week.  [Check out the original repo](https://github.com/brennercruvinel/CCPlugins) for more information.
+**Tired of repetitive coding tasks?** CCPlugins is a curated set of professional commands for the Claude Code CLI, designed to save you hours each week by automating common development workflows. 🤖 [Explore CCPlugins on GitHub](https://github.com/brennercruvinel/CCPlugins)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)](https://github.com/brennercruvinel/CCPlugins)
 [![Version](https://img.shields.io/badge/version-2.5.2-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
@@ -9,31 +9,32 @@
 [![Also works with](https://img.shields.io/badge/also%20works%20with-Kimi%20K2-1783ff.svg)](https://github.com/MoonshotAI/Kimi-K2)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
 
-**Key Features:**
+## Key Features
 
-*   **Automated Workflows:** Streamline development tasks with 24+ pre-built commands.
-*   **Smart Code Analysis:** Leverage advanced analysis for security, quality, and architecture.
-*   **Validation & Refinement:** Ensure complete and accurate code transformations.
-*   **Session Management:**  Track and manage your development sessions effectively.
-*   **Git Integration:** Safe and seamless integration with version control.
-*   **Extensive Testing:** Rigorously tested on Opus 4, Sonnet 4, and compatible with Kimi K2.
-*   **Time Savings:** Save up to 5 hours per week on common development tasks.
+*   **Automated Workflows:** Streamline development with commands for code quality, security, and project management.
+*   **Intelligent Analysis:** Advanced features like security scanning, code review, and issue prediction.
+*   **Safe Execution:**  Git checkpoints and validation phases to prevent data loss.
+*   **Session Persistence:**  Maintain context across Claude sessions for seamless workflows.
+*   **Customizable & Extensible:**  Create your own commands to fit specific project needs.
 
 ## Installation
 
 ### Quick Install
 
 **Mac/Linux:**
+
 ```bash
 curl -sSL https://raw.githubusercontent.com/brennercruvinel/CCPlugins/main/install.sh | bash
 ```
 
 **Windows/Cross-platform:**
+
 ```bash
 python install.py
 ```
 
 ### Manual Install
+
 ```bash
 git clone https://github.com/brennercruvinel/CCPlugins.git
 cd CCPlugins
@@ -41,6 +42,7 @@ python install.py
 ```
 
 ### Uninstall
+
 ```bash
 # Mac/Linux
 ./uninstall.sh
@@ -49,55 +51,56 @@ python install.py
 python uninstall.py
 ```
 
-## Commands Overview
+## Commands
 
-CCPlugins offers a comprehensive suite of commands categorized for efficient workflow management.
+### Development Workflow
 
-### 🚀 Development Workflow
+```bash
+/cleanproject                    # Remove debug artifacts with git safety
+/commit                          # Smart conventional commits with analysis
+/format                          # Auto-detect and apply project formatter
+/scaffold feature-name           # Generate complete features from patterns
+/test                            # Run tests with intelligent failure analysis
+/implement url/path/feature      # Import and adapt code from any source with validation phase
+/refactor                        # Intelligent code restructuring with validation & de-para mapping
+```
 
-*   `/cleanproject`: Remove debug artifacts with git safety
-*   `/commit`: Smart conventional commits with analysis
-*   `/format`: Auto-detect and apply project formatter
-*   `/scaffold feature-name`: Generate complete features from patterns
-*   `/test`: Run tests with intelligent failure analysis
-*   `/implement url/path/feature`: Import and adapt code from any source with validation phase
-*   `/refactor`: Intelligent code restructuring with validation & de-para mapping
+### Code Quality & Security
 
-### 🛡️ Code Quality & Security
+```bash
+/review                # Multi-agent analysis (security, performance, quality, architecture)
+/security-scan         # Vulnerability analysis with extended thinking & remediation tracking
+/predict-issues        # Proactive problem detection with timeline estimates
+/remove-comments       # Clean obvious comments, preserve valuable docs
+/fix-imports           # Repair broken imports after refactoring
+/find-todos            # Locate and organize development tasks
+/create-todos          # Add contextual TODO comments based on analysis results
+/fix-todos             # Intelligently implement TODO fixes with context
+```
 
-*   `/review`: Multi-agent analysis (security, performance, quality, architecture)
-*   `/security-scan`: Vulnerability analysis with extended thinking & remediation tracking
-*   `/predict-issues`: Proactive problem detection with timeline estimates
-*   `/remove-comments`: Clean obvious comments, preserve valuable docs
-*   `/fix-imports`: Repair broken imports after refactoring
-*   `/find-todos`: Locate and organize development tasks
-*   `/create-todos`: Add contextual TODO comments based on analysis results
-*   `/fix-todos`: Intelligently implement TODO fixes with context
+### Advanced Analysis
 
-### 🔍 Advanced Analysis
+```bash
+/understand            # Analyze entire project architecture and patterns
+/explain-like-senior   # Senior-level code explanations with context
+/contributing          # Complete contribution readiness analysis
+/make-it-pretty        # Improve readability without functional changes
+```
 
-*   `/understand`: Analyze entire project architecture and patterns
-*   `/explain-like-senior`: Senior-level code explanations with context
-*   `/contributing`: Complete contribution readiness analysis
-*   `/make-it-pretty`: Improve readability without functional changes
+### Session & Project Management
 
-### 📋 Session & Project Management
-
-*   `/session-start`: Begin documented sessions with CLAUDE.md integration
-*   `/session-end`: Summarize and preserve session context
-*   `/docs`: Smart documentation management and updates
-*   `/todos-to-issues`: Convert code TODOs to GitHub issues
-*   `/undo`: Safe rollback with git checkpoint restore
-
-## Enhanced Features
-
-*   **Validation & Refinement:**  Commands like `/refactor validate` and `/implement validate` ensure code completeness.
-*   **Extended Thinking:** Advanced analysis capabilities for refactoring, security, and more.
-*   **Pragmatic Integration:**  Workflow suggestions promote seamless transitions (e.g., `/test` after refactoring).
+```bash
+/session-start         # Begin documented sessions with CLAUDE.md integration
+/session-end           # Summarize and preserve session context
+/docs                  # Smart documentation management and updates
+/todos-to-issues       # Convert code TODOs to GitHub issues
+/undo                  # Safe rollback with git checkpoint restore
+```
 
 ## Real-World Example
 
-**(Before `/cleanproject`)**
+**Before `/cleanproject`:**
+
 ```
 src/
 ├── UserService.js
@@ -108,7 +111,8 @@ src/
 └── notes.txt              # Dev notes
 ```
 
-**(After `/cleanproject`)**
+**After `/cleanproject`:**
+
 ```
 src/
 ├── UserService.js          # Clean production code
@@ -117,26 +121,29 @@ src/
 
 ## How It Works
 
-CCPlugins transforms Claude Code CLI into an intelligent development assistant:
+CCPlugins extends Claude Code CLI with intelligent commands, leveraging:
 
-1.  **Command Execution:** Developer enters a command (e.g., `/refactor`).
-2.  **Context Analysis:** CCPlugins analyzes project structure, technology stack, and state.
-3.  **Intelligent Planning:** Claude Code CLI creates an execution strategy.
-4.  **Safe Execution:** Actions are performed with automatic git checkpoints and validation.
-5.  **Clear Feedback:** Results and next steps are provided.
+*   **First-Person Conversational Design:** Activates Claude's collaborative reasoning.
+*   **Native Tool Integration:** Uses Claude Code CLI's built-in tools for efficient execution.
+*   **Safety-First Design:** Includes automatic Git checkpoints before destructive operations.
+*   **Framework Agnostic:** Adapts to your project's technology stack.
 
-### Core Components
+## Performance Metrics
 
-*   **Intelligent Instructions:** Conversational design that encourages collaborative reasoning.
-*   **Native Tool Integration:** Leveraging Claude Code CLI's internal tooling.
-*   **Safety-First Design:**  Git checkpoints and rollback capabilities.
-*   **Universal Compatibility:** Framework-agnostic and adaptable to your project.
+| Task               | Manual Time | With CCPlugins | Time Saved |
+|--------------------|-------------|----------------|------------|
+| Security analysis  | 45-60 min   | 3-5 min        | ~50 min    |
+| Architecture review | 30-45 min   | 5-8 min        | ~35 min    |
+| Feature scaffolding | 25-40 min   | 2-3 min        | ~30 min    |
+| Git commits        | 5-10 min    | 30 sec         | ~9 min     |
+| Code cleanup       | 20-30 min   | 1 min          | ~25 min    |
+| Import fixing      | 15-25 min   | 1-2 min        | ~20 min    |
+| Code review        | 20-30 min   | 2-4 min        | ~20 min    |
+| Issue prediction   | 60+ min     | 5-10 min       | ~50 min    |
+| TODO resolution    | 30-45 min   | 3-5 min        | ~35 min    |
+| Code adaptation    | 40-60 min   | 3-5 min        | ~45 min    |
 
-### Advanced Features
-
-*   **Session Continuity:** State management across sessions with commands like `/implement` and `/refactor`.
-*   **Multi-Agent Architecture:** Specialized sub-agents for security, performance, and code quality.
-*   **Performance Optimizations:** Verbosity reduction, smart caching, and parallel execution.
+**Total: 4-5 hours saved per week with professional-grade analysis**
 
 ## Requirements
 
@@ -146,7 +153,8 @@ CCPlugins transforms Claude Code CLI into an intelligent development assistant:
 
 ## Advanced Usage
 
-**Creating Custom Commands**
+### Creating Custom Commands
+
 Create your own commands by adding markdown files to `~/.claude/commands/`:
 
 ```markdown
@@ -157,7 +165,8 @@ I'll help you with your specific workflow.
 [Your instructions here]
 ```
 
-**Using Arguments**
+### Using Arguments
+
 Commands support arguments via `$ARGUMENTS`:
 
 ```bash
@@ -165,7 +174,8 @@ Commands support arguments via `$ARGUMENTS`:
 # $ARGUMENTS will contain "some-file.js"
 ```
 
-**CI/CD Integration**
+### CI/CD Integration
+
 Use commands in automated workflows:
 
 ```bash
@@ -185,7 +195,8 @@ claude "/security-scan" && claude "/create-todos" && claude "/todos-to-issues"
 claude "/find-todos" && claude "/fix-todos" && claude "/test"
 ```
 
-**Manual Workflow Integration**
+### Manual Workflow Integration
+
 Perfect for development routines:
 
 ```bash
@@ -205,17 +216,23 @@ claude "/session-end"
 
 ## Security & Git Instructions
 
-All commands that interact with git include security instructions to prevent AI attribution. These commands will never add "Co-authored-by" or AI signatures.
+All commands that interact with git include security instructions to prevent AI attribution:
 
 **Commands with git protection:**
 - `/commit`, `/scaffold`, `/make-it-pretty`, `/cleanproject`, `/fix-imports`, `/review`, `/security-scan`
 - `/contributing`, `/todos-to-issues`, `/predict-issues`, `/find-todos`, `/create-todos`, `/fix-todos`
 
+These commands will NEVER:
+- Add "Co-authored-by" or AI signatures
+- Include "Generated with Claude Code" messages
+- Modify git config or credentials
+- Add AI attribution to commits/issues
+
 You can modify these instructions in individual command files if needed.
 
 ## Contributing
 
-Contribute to CCPlugins and help other developers save time.  See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions that help developers save time. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 

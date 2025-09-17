@@ -1,77 +1,103 @@
-# Truss: The Simplest Way to Deploy and Serve Your AI/ML Models
+# Truss: The Easiest Way to Deploy Your AI/ML Models
 
-**Truss** empowers you to effortlessly package, deploy, and serve your machine learning models, streamlining the path from development to production.  Learn more and contribute at the [original repo](https://github.com/basetenlabs/truss).
+**[View the original repository](https://github.com/basetenlabs/truss)**
 
-## Key Features of Truss
+Truss simplifies the process of deploying your machine learning models, allowing you to focus on building and innovating, not infrastructure.
 
-*   **Write Once, Run Anywhere:**  Package your model code, weights, and dependencies for consistent behavior across development and production environments.
-*   **Accelerated Development:**  Benefit from a fast development loop with live reload and a batteries-included model serving environment, eliminating the need for complex Docker and Kubernetes configurations.
-*   **Framework Agnostic:**  Seamlessly deploy models built with any Python framework, including `transformers`, `diffusers`, `PyTorch`, `TensorFlow`, `TensorRT`, and `Triton`.
-*   **Simplified Deployment:**  Easily deploy your models to various platforms, starting with Baseten, and with AWS SageMaker support coming soon.
-*   **Built-in Examples:** Explore and deploy popular pre-built models for tasks such as text classification, image generation, and speech recognition.
+## Key Features:
 
-## Quickstart: Deploy a Text Classification Model
+*   **Write Once, Run Anywhere:** Package your model code, weights, and dependencies into a consistent environment for seamless deployment across development and production.
+*   **Fast Development Loop:** Leverage a live reload server for rapid feedback and iterative development, eliminating the need for complex Docker or Kubernetes configurations.
+*   **Framework Agnostic:**  Supports models built with any Python ML framework, including `transformers`, `diffusers`, `PyTorch`, `TensorFlow`, `TensorRT`, and `Triton`.
+*   **Simplified Deployment:** Deploy your models with a single command using Baseten, with support for other platforms like AWS SageMaker coming soon.
 
-Get started with Truss by packaging a text classification pipeline from the `transformers` package.
+## Ready-to-Use Examples
 
-### 1. Create a Truss
+Explore pre-built Trusses for popular models:
+
+*   🦙 [Llama 2](https://github.com/basetenlabs/truss-examples/tree/main/llama/llama-2-7b-chat) (7B, 13B, 70B)
+*   🎨 [Stable Diffusion XL](https://github.com/basetenlabs/truss-examples/tree/main/stable-diffusion/stable-diffusion-xl-1.0)
+*   🗣 [Whisper](https://github.com/basetenlabs/truss-examples/tree/main/whisper/whisper-truss)
+
+And [dozens more examples](https://github.com/basetenlabs/truss-examples/) to kickstart your projects!
+
+## Getting Started
+
+### Installation
+
+Install Truss easily with pip:
 
 ```bash
-truss init text-classification
+pip install --upgrade truss
 ```
 
-Provide a name, such as "Text classification."
+### Quickstart: Deploying a Text Classification Model
 
-### 2. Navigate to the directory:
+1.  **Create a Truss:**
+
+    ```bash
+    truss init text-classification
+    ```
+
+    Choose a name for your Truss, like "Text classification".
+2.  **Navigate to the Truss directory:**
+
+    ```bash
+    cd text-classification
+    ```
+3.  **Implement the Model (model/model.py):**
+
+    Create a `Model` class with `load()` (model initialization) and `predict()` (inference) methods.
+
+    ```python
+    from transformers import pipeline
+
+    class Model:
+        def __init__(self, **kwargs):
+            self._model = None
+
+        def load(self):
+            self._model = pipeline("text-classification")
+
+        def predict(self, model_input):
+            return self._model(model_input)
+    ```
+
+4.  **Add Dependencies (config.yaml):**
+
+    Specify your model's dependencies in `config.yaml`.  For the text classification example:
+
+    ```yaml
+    requirements:
+      - torch==2.0.1
+      - transformers==4.30.0
+    ```
+
+## Deployment with Baseten
+
+Truss integrates with Baseten for simplified model deployment.
+
+### 1. Get a Baseten API Key
+
+*   Create a free account and get your API key at [Baseten](https://app.baseten.co/signup/).
+
+### 2. Deploy Your Model
 
 ```bash
-cd text-classification
+truss push
 ```
 
-### 3. Implement the Model
+Monitor your model deployment on your [Baseten model dashboard](https://app.baseten.co/models/).
 
-Implement the `Model` class in `model/model.py`:
+### 3. Invoke Your Model
 
-```python
-from transformers import pipeline
-
-class Model:
-    def __init__(self, **kwargs):
-        self._model = None
-
-    def load(self):
-        self._model = pipeline("text-classification")
-
-    def predict(self, model_input):
-        return self._model(model_input)
-```
-
-### 4. Add Dependencies
-
-Specify dependencies in `config.yaml`:
-
-```yaml
-requirements:
-  - torch==2.0.1
-  - transformers==4.30.0
-```
-
-### 5. Deployment
-
-Use [Baseten](https://baseten.co) for deployment.
-
-*   Get a [Baseten API key](https://app.baseten.co/settings/account/api_keys) if you don't already have one.
-*   Run `truss push` to deploy your model.
-
-### 6. Invoke the Model
-
-After deployment, invoke the model from the terminal:
+After deployment, test your model from the terminal:
 
 ```bash
 truss predict -d '"Truss is awesome!"'
 ```
 
-Example Response:
+**Response:**
 
 ```json
 [
@@ -82,8 +108,6 @@ Example Response:
 ]
 ```
 
-## Truss Contributors
+## Contributing
 
-Truss is backed by Baseten and built in collaboration with ML engineers worldwide. Special thanks to [Stephan Auerhahn](https://github.com/palp) @ [stability.ai](https://stability.ai/) and [Daniel Sarfati](https://github.com/dsarfati) @ [Salad Technologies](https://salad.com/) for their contributions.
-
-We welcome contributions in accordance with our [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).
+Truss is an open-source project backed by Baseten, built with contributions from the ML community.  We welcome contributions! Please see our [contributors' guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md).
