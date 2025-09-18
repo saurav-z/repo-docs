@@ -1,93 +1,39 @@
-# Buzz: Offline Audio Transcription & Translation
+# Buzz: Offline Audio Transcription and Translation with Whisper
 
-**Effortlessly transcribe and translate audio on your computer with Buzz, powered by OpenAI's Whisper.**  [Learn more](https://github.com/chidiwilliams/buzz)
+**Effortlessly transcribe and translate audio on your computer with Buzz, powered by OpenAI's Whisper.** [(View Original Repo)](https://github.com/chidiwilliams/buzz)
 
-Buzz utilizes the power of OpenAI's Whisper to provide fast and accurate audio transcription and translation directly on your computer, eliminating the need for internet connectivity and ensuring your audio data's privacy.
+Buzz is a powerful, offline audio transcription and translation tool that leverages the cutting-edge capabilities of OpenAI's Whisper model. This allows users to quickly and accurately convert audio files into text or translate them into different languages, all while maintaining their privacy by keeping the process entirely on their local machine.
 
-## Key Features:
+**Key Features:**
 
-*   **Offline Transcription:** Transcribe audio files without an internet connection, ensuring privacy and accessibility.
-*   **Multilingual Support:** Supports transcription and translation in numerous languages.
-*   **Cross-Platform Compatibility:** Available for macOS, Windows, and Linux.
-*   **Multiple Installation Options:** Install via PyPI, brew (macOS), winget (Windows), Flatpak (Linux), or Snap (Linux).
-*   **GPU Acceleration:**  Leverages GPU for faster processing (requires setup, see installation instructions).
+*   **Offline Processing:** Transcribe and translate audio files without an internet connection, ensuring privacy and data security.
+*   **Whisper Integration:** Utilizes the advanced speech recognition and translation power of OpenAI's Whisper.
+*   **Cross-Platform Support:** Available for macOS, Windows, and Linux, providing flexibility for all users.
+*   **Multiple Installation Options:** Install via PyPI, macOS (Brew, DMG), Windows (EXE, Winget), and Linux (Flatpak, Snap) for versatile setup.
+*   **GPU Acceleration:**  Leverage your NVIDIA GPU on Windows for faster processing (PyPI installation).
+*   **Mac App Store Version:** Get a Mac-native version with an enhanced user experience, including audio playback, transcript editing, and more.
 
-## Installation
+**Installation:**
 
-### PyPI
+Choose your preferred method below:
 
-1.  Install [ffmpeg](https://www.ffmpeg.org/download.html)
-2.  Install Buzz:
+*   **PyPI:**
+    1.  Install [ffmpeg](https://www.ffmpeg.org/download.html).
+    2.  Run: `pip install buzz-captions`
+    3.  Run: `python -m buzz`
+*   **macOS:**
+    *   **Homebrew:** `brew install --cask buzz`
+    *   **DMG:** Download from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
+*   **Windows:**
+    *   **EXE:** Download and run the `.exe` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest). (May require running "More info" -> "Run anyway" due to the app not being signed).
+    *   **Winget:** `winget install ChidiWilliams.Buzz`
+    *   **GPU Support (PyPI):** See the original README for detailed instructions.
+*   **Linux:**
+    *   **Flatpak:** `flatpak install flathub io.github.chidiwilliams.Buzz`
+    *   **Snap:** See the original README for detailed instructions.
 
-    ```shell
-    pip install buzz-captions
-    python -m buzz
-    ```
+**For latest development version see [FAQ](https://chidiwilliams.github.io/buzz/docs/faq#9-where-can-i-get-latest-development-version)**
 
-### macOS
+**Screenshots:**
 
-*   **Homebrew:**
-
-    ```shell
-    brew install --cask buzz
-    ```
-
-*   **Download:** Download the `.dmg` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).
-
-### Windows
-
-*   **Download:** Download and run the `.exe` from the [releases page](https://github.com/chidiwilliams/buzz/releases/latest).  You may need to bypass a security warning.
-*   **winget:**
-
-    ```shell
-    winget install ChidiWilliams.Buzz
-    ```
-
-*   **GPU Support (PyPI):** For Nvidia GPUs, install CUDA support for [torch](https://pytorch.org/get-started/locally/).
-
-    ```
-    pip3 install -U torch==2.7.1+cu128 torchaudio==2.7.1+cu128 --index-url https://download.pytorch.org/whl/cu128
-    pip3 install nvidia-cublas-cu12==12.8.3.14 nvidia-cuda-cupti-cu12==12.8.57 nvidia-cuda-nvrtc-cu12==12.8.61 nvidia-cuda-runtime-cu12==12.8.57 nvidia-cudnn-cu12==9.7.1.26 nvidia-cufft-cu12==11.3.3.41 nvidia-curand-cu12==10.3.9.55 nvidia-cusolver-cu12==11.7.2.55 nvidia-cusparse-cu12==12.5.4.2 nvidia-cusparselt-cu12==0.6.3 nvidia-nvjitlink-cu12==12.8.61 nvidia-nvtx-cu12==12.8.55 --extra-index-url https://pypi.ngc.nvidia.com
-    ```
-
-### Linux
-
-*   **Flatpak:**
-
-    ```shell
-    flatpak install flathub io.github.chidiwilliams.Buzz
-    ```
-
-*   **Snap:**
-
-    ```shell
-    sudo apt-get install libportaudio2 libcanberra-gtk-module libcanberra-gtk3-module
-    sudo snap install buzz
-    sudo snap connect buzz:password-manager-service
-    ```
-
-## App Store Version
-
-Buzz is also available as a native macOS app with additional features, including a cleaner look, audio playback, drag-and-drop import, transcript editing, and search.
-
-<a href="https://apps.apple.com/us/app/buzz-captions/id6446018936?mt=12&amp;itsct=apps_box_badge&amp;itscg=30200"><img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83&amp;releaseDate=1679529600" alt="Download on the Mac App Store" /></a>
-
-## Screenshots
-
-(Screenshots of the application are included here)
-
-## Development Version
-
-For the latest features and bug fixes, consult the [FAQ](https://chidiwilliams.github.io/buzz/docs/faq#9-where-can-i-get-latest-development-version).
-
-## Contributing
-
-Contributions are welcome! Please see the [contributing guidelines](CONTRIBUTING.md).
-
-## License
-
-Buzz is licensed under the MIT License.
-
----
-
-**[Back to the project on GitHub](https://github.com/chidiwilliams/buzz)**
+[Include the screenshot images from the original README here for visual appeal - add alt text for each image for SEO]

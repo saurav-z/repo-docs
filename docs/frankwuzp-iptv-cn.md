@@ -1,70 +1,82 @@
-# IPTV-CN: Free Live TV Channels for Jellyfin (China)
+# iptv-cn
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/frankwuzp/iptv-cn/main?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/frankwuzp/iptv-cn?style=flat-square)
 
-**Looking to watch free live TV channels in China with Jellyfin?** IPTV-CN provides updated M3U and EPG files for a seamless viewing experience.  [View the original repository](https://github.com/frankwuzp/iptv-cn).
+[![](https://data.jsdelivr.com/v1/package/gh/frankwuzp/iptv-cn/badge)](https://www.jsdelivr.com/package/gh/frankwuzp/iptv-cn)
+![GitHub watchers](https://img.shields.io/github/watchers/frankwuzp/iptv-cn?style=social)
 
-[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/frankwuzp/iptv-cn/main?style=flat-square)](https://github.com/frankwuzp/iptv-cn)
-[![GitHub repo size](https://img.shields.io/github/repo-size/frankwuzp/iptv-cn?style=flat-square)](https://github.com/frankwuzp/iptv-cn)
-[![jsdelivr](https://data.jsdelivr.com/v1/package/gh/frankwuzp/iptv-cn/badge)](https://www.jsdelivr.com/package/gh/frankwuzp/iptv-cn)
-[![GitHub watchers](https://img.shields.io/github/watchers/frankwuzp/iptv-cn?style=social)](https://github.com/frankwuzp/iptv-cn)
 
-## Key Features:
+## 简介
 
-*   **Updated M3U Files:**  Provides the latest working IPTV channel lists, including a China-wide general list and a Mobile list.
-*   **EPG (Electronic Program Guide):** Includes a regularly updated `guide.xml` file for TV program listings.
-*   **Jellyfin Compatibility:** Designed specifically for use with Jellyfin's live TV functionality.
-*   **CDN Acceleration:** Uses jsDelivr CDN for faster access, particularly for users in mainland China.
-*   **Automated Updates:** EPG data is automatically updated daily at 1 AM and 6 AM via GitHub Actions.
+亲测 **广东** 可用的 IPTV 资源，适用于Jellyfin 的电视直播。
 
-## How to Use:
+## 如何使用
 
-This repository provides the necessary files to integrate live TV channels into your Jellyfin setup.
+### 文件说明
 
-### Files Explained:
+- `tv-ipv4-cn` => 境内通用 `m3u` 文件
 
-*   `tv-ipv4-cn.m3u`: General IPTV playlist for China (Universal).
-*   `tv-ipv4-cmcc.m3u`:  Mobile IPTV playlist (China Mobile) - Recommended.
-*   `tv-ipv4-old.m3u`: Original data from the Chinese-IPTV repo.
-*   `guide.xml`: Electronic Program Guide (EPG) data, automatically updated daily.
-*   `requirements.txt`:  Python dependencies for the `get-epg.py` script (used for generating the EPG).
+- ~~`tv-ipv4-gd` => 广东省内使用，优选 ✅~~
 
-### Setting up Channel Lists in Jellyfin:
+> 20211126 测试结果：`tv-ipv4-gd` 无法播放，请使用 `tv-ipv4-cn` 或 `tv-ipv4-cmcc`
 
-1.  **Choose a Channel List Source:**
-    *   **GitHub:**  `https://raw.githubusercontent.com/frankwuzp/iptv-cn/main/tv-ipv4-cmcc.m3u` (Recommended, most up-to-date)
-    *   **jsDelivr CDN:** `https://cdn.jsdelivr.net/gh/frankwuzp/iptv-cn@latest/tv-ipv4-cmcc.m3u` (Faster access in China)
-    *   Save the `tv-ipv4-cmcc.m3u` file from the repository.
+- `tv-ipv4-cmcc` => 211126 新增的移动信号源，亲测可用 ✅
 
-2.  **Enter the URL in Jellyfin:**  In your Jellyfin Live TV settings, enter the chosen URL (or the path to the saved file) into the M3U URL field.
+- `tv-ipv4-old` => 参考 [BurningC4](https://github.com/BurningC4/Chinese-IPTV) 的仓库，两年前的原始数据，部分可用，存在延迟和卡顿
 
-    ![jellyfin-setting](./image/jellyfin-settings.jpg)
+- `guide.xml` => 由 `get-epg.py` 抓取数据并生成，通过 Actions 每天凌晨 1 点和 6 点自动更新
 
-### Setting up the Electronic Program Guide (EPG) in Jellyfin:
+- `requirements.txt` => Python 程序 `get-epg.py` 的依赖包
+### Channel lists (以广东为例)
 
-1.  **Choose an EPG Source:**
-    *   **某神秘大神版**: `http://epg.51zmt.top:8000/e.xml` (Recommend, most up-to-date)
-    *   **GitHub:** `https://raw.githubusercontent.com/frankwuzp/iptv-cn/main/guide.xml`
-    *   **jsDelivr CDN (China-optimized):** `https://cdn.jsdelivr.net/gh/frankwuzp/iptv-cn@latest/guide.xml`
-    *   **iptv-org**: `https://iptv-org.github.io/epg/guides/cn/tv.cctv.com.epg.xml`
+- **Github**
 
-2.  **Enter the EPG URL in Jellyfin:**  In your Jellyfin Live TV settings, enter the chosen EPG URL.
+  `https://raw.githubusercontent.com/frankwuzp/iptv-cn/main/tv-ipv4-cmcc.m3u`
 
-    ![jellyfin-epg](./image/jellyfin-epg.jpg)
+- **jsDelivr CDN** (CDN 加速，大陆用户可选用)
 
-## References:
+  `https://cdn.jsdelivr.net/gh/frankwuzp/iptv-cn@latest/tv-ipv4-cmcc.m3u`
 
-*   [BurningC4/Chinese-IPTV](https://github.com/BurningC4/Chinese-IPTV)
-*   [SoPudge/kodi_iptv_epg](https://github.com/SoPudge/kodi_iptv_epg)
-*   [BurningC4/getepg](https://github.com/BurningC4/getepg)
-*   [3mile/cctv_api_get_EPG](https://github.com/3mile/cctv_api_get_EPG)
-*   [国内高清直播live - TV001](http://www.tv001.vip/forum.php?mod=viewthread&tid=3)
-*   [广东移动某河全套 - 恩山无线论坛](https://www.right.com.cn/forum/thread-6809023-1-1.html)
+可保存本仓库的 `tv-ipv4-cmcc.m3u` 文件，或将以上网址（二选一）填入 Jellyfin 的电视直播协调器：
 
-**Thanks to the Open Internet! 🎉🎉🎉**
+![jellyfin-setting](./image/jellyfin-settings.jpg)
 
-## Changelog:
+### Guide file (四选一)
 
-*   211126: Added mobile signal source.
-*   211123: Fixed EPG update issues and added a new EPG source.
-*   211122: Added EPG file (`guide.xml`) and automated daily updates.
-*   211122: Separated into general and Guangdong-specific versions.
-*   211121: Initial commit.
+- **某神秘大神版**
+
+  `http://epg.51zmt.top:8000/e.xml`
+
+- **Github**
+
+  `https://raw.githubusercontent.com/frankwuzp/iptv-cn/main/guide.xml`
+
+- **jsDelivr CDN (optimized for mainland users)**
+
+  `https://cdn.jsdelivr.net/gh/frankwuzp/iptv-cn@latest/guide.xml`
+
+- **iptv-org**
+  
+  `https://iptv-org.github.io/epg/guides/cn/tv.cctv.com.epg.xml`
+
+
+![jellyfin-epg](./image/jellyfin-epg.jpg)
+
+## Ref
+
+- [BurningC4/Chinese-IPTV](https://github.com/BurningC4/Chinese-IPTV)
+- [SoPudge/kodi_iptv_epg](https://github.com/SoPudge/kodi_iptv_epg)
+- [BurningC4/getepg](https://github.com/BurningC4/getepg)
+- [3mile/cctv_api_get_EPG](https://github.com/3mile/cctv_api_get_EPG)
+- [国内高清直播live - TV001](http://www.tv001.vip/forum.php?mod=viewthread&tid=3)
+- [广东移动某河全套 - 恩山无线论坛](https://www.right.com.cn/forum/thread-6809023-1-1.html)
+
+**感谢开放的互联网！🎉🎉🎉**
+
+## Changelog
+
+- 211126 备注不可使用的直播源，新增移动信号源
+- 211123 解决更新 epg 时不能删除旧内容的问题 & 补充一个新的 epg 源
+- 211122 新增 EPG 指南文件 `guide.xml`，并实现自动更新(每天凌晨1点、6点)
+- 211122 分为国内通用版、广东省内专用版
+- 211121 init

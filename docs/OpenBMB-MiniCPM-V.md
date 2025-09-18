@@ -1,43 +1,27 @@
 <div align="center">
-
-<img src="./assets/minicpm_v_and_minicpm_o_title.png" width="500em" ></img> 
-
-**MiniCPM-V: Unleashing GPT-4o Level Multimodal Understanding on Your Device**
-
-  <strong>[中文](./README_zh.md) |
-  English</strong>
-
+<img src="./assets/minicpm_v_and_minicpm_o_title.png" width="500em" ></img>
 </div>
 
-<p align="center">
-   <a href="https://github.com/OpenBMB/MiniCPM-V"> 🔗 **View the Original Repository** </a>
-</p>
+# MiniCPM-V: Unleash Powerful Multimodal AI on Your Device
 
-## **Introduction**
+**MiniCPM-V** is a series of efficient multimodal large language models (MLLMs) designed for powerful vision and audio understanding, enabling high-quality text outputs on your phone. [Explore the original repo](https://github.com/OpenBMB/MiniCPM-V).
 
-MiniCPM-V is a series of efficient, end-side multimodal LLMs (MLLMs) designed to bring advanced image, video, and text understanding to your phone or device. Built upon cutting-edge research, MiniCPM-V models deliver high-quality text outputs, with the latest version achieving **GPT-4o level performance**. MiniCPM-o expands this capability by also incorporating audio inputs for high-quality speech outputs.
+**Key Features:**
 
-## **Key Features**
+*   🔥 **State-of-the-Art Performance:** MiniCPM-V 4.5 outperforms GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B in vision-language tasks with only 8B parameters. MiniCPM-o 2.6 achieves GPT-4o level performance for vision, speech and multimodal live streaming on end-side devices.
+*   🎬 **High-FPS and Long Video Understanding:**  MiniCPM-V 4.5 features a new unified 3D-Resampler, enabling high-FPS (up to 10FPS) and long video understanding.
+*   ⚙️ **Controllable Hybrid Thinking:**  MiniCPM-V 4.5 supports both efficient "fast thinking" and "deep thinking" modes for optimal performance in diverse scenarios.
+*   💪 **Robust Capabilities:**  MiniCPM-V 4.5 and MiniCPM-o 2.6 offer strong OCR, document parsing, multilingual support (30+ languages), and trustworthy behaviors.
+*   🚀 **Efficient Deployment:**  Models support easy integration with llama.cpp, Ollama, vLLM and offer int4, GGUF, and AWQ quantized versions for low-resource environments.
+*   🎙 **End-to-End Speech & Real-time Streaming:** MiniCPM-o 2.6 supports bilingual real-time speech conversation with configurable voices, multimodal live streaming on end-side devices.
+*   🧑‍🍳 **Comprehensive Resources:**  Access the [MiniCPM-V & o Cookbook](https://github.com/OpenSQZ/MiniCPM-V-CookBook) for deployment and fine-tuning guidance and the [official documentation website](https://minicpm-o.readthedocs.io/en/latest/index.html) for ease of use.
 
-*   **🔥 Superior Performance**: MiniCPM-V models excel in vision-language tasks, outperforming leading open-source and even proprietary models, with MiniCPM-V 4.5 exceeding GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B on vision-language capabilities.
-*   **🎬 Advanced Video Understanding**: Experience efficient high-FPS and long video understanding capabilities through advanced techniques like unified 3D-Resampling, enabling the models to process significantly more video frames with reduced LLM computational cost.
-*   **⚙️ Controllable Reasoning**: Switch between efficient "fast thinking" and in-depth "deep thinking" modes to optimize for different user scenarios and task complexities.
-*   **💪 Strong OCR and Document Processing**: Exceptional performance in OCR (Optical Character Recognition) and document parsing, with MiniCPM-V 4.5 achieving leading performance on OCRBench.
-*   **🎙️ Enhanced Audio and Speech Capabilities**: MiniCPM-o 2.6 supports bilingual real-time speech conversation with configurable voices, voice cloning, and multimodal live streaming capabilities, delivering superior performance to previous iterations.
-*   **🚀 Optimized Deployment**: The models are designed for efficient deployment on various devices, including phones, iPads, and Macs, and are supported by popular frameworks such as llama.cpp, vLLM, Ollama, and SGLang.
-
-## **Recent Updates**
-
-*   **MiniCPM-V 4.5 Open-Sourced**: The latest version, offering state-of-the-art multimodal performance and new features, is now available.
-*   **MiniCPM-o 2.6 Open-Sourced**:  Achieves GPT-4o-level performance for vision, speech and multimodal live streaming on end-side devices.
-*   **Cookbook & Docs**:  Comprehensive guides and a documentation website are available to help you get started.
-*   **Framework Support**:  Full support for popular frameworks such as [llama.cpp](https://github.com/ggml-org/llama.cpp/pull/15575), [vLLM](https://github.com/vllm-project/vllm/pull/23586), and [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory/pull/9022).
-
-## **Contents**
+**Contents:**
 
 *   [MiniCPM-V 4.5](#minicpm-v-45)
     *   [Inference Efficiency](#inference-efficiency)
 *   [MiniCPM-o 2.6](#minicpm-o-26)
+*   [Legacy Models](#legacy-models)
 *   [MiniCPM-V & o Cookbook](#minicpm-v--o-cookbook)
 *   [Chat with Our Demo on Gradio 🤗](#chat-with-our-demo-on-gradio-)
 *   [Inference](#inference)
@@ -52,21 +36,50 @@ MiniCPM-V is a series of efficient, end-side multimodal LLMs (MLLMs) designed to
     *   [Inference on Mac](#inference-on-mac)
     *   [Efficient Inference with llama.cpp, Ollama, vLLM](#efficient-inference-with-llamacpp-ollama-vllm)
 *   [Fine-tuning](#fine-tuning)
+    *   [Simple Fine-tuning](#simple-fine-tuning)
+    *   [With Align-Anything](#with-align-anything)
+    *   [With LLaMA-Factory](#with-llama-factory)
+    *   [With the SWIFT Framework](#with-the-swift-framework)
 *   [Awesome work using MiniCPM-V & MiniCPM-o](#awesome-work-using-minicpm-v--minicpm-o)
 *   [FAQs](#faqs)
 *   [Limitations](#limitations)
+*   [Model License](#model-license)
+*   [Statement](#statement)
+*   [Institutions](#institutions)
+*   [🌟 Star History](#--star-history)
+*   [Key Techniques and Other Multimodal Projects](#key-techniques-and-other-multimodal-projects)
+*   [Citation](#citation)
 
-## **MiniCPM-V 4.5**
+## MiniCPM-V 4.5
 
-MiniCPM-V 4.5 is the latest model in the MiniCPM-V series and is built on the Qwen3-8B architecture. With 8B parameters, it is optimized for efficient and effective processing of images, videos and text.
+The latest in the MiniCPM-V series. This version is built on Qwen3-8B and SigLIP2-400M with a total of 8B parameters.
 
-### **Key Techniques**
+**Key Highlights:**
 
-*   **Unified 3D-Resampler:** Enables high-density video compression, allowing the model to process more video frames.
-*   **Unified Learning:** Improves OCR capabilities and knowledge extraction from documents.
-*   **Hybrid Fast/Deep Thinking:** Balances reasoning efficiency and problem-solving depth.
+*   **State-of-the-art Vision-Language Capability:** 8B parameters exceed GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B.
+*   **Efficient High-FPS and Long Video Understanding:**  Unified 3D-Resampler for 96x video token compression.
+*   **Controllable Hybrid Fast/Deep Thinking:** Switch between efficiency and in-depth analysis.
+*   **Strong OCR and Multilingual Support:** Advanced OCR, document processing, and 30+ language capabilities.
+*   **Easy Usage:** Available on llama.cpp, ollama, int4, GGUF, AWQ formats, SGLang and vLLM support, and provides local WebUI, iOS demo, and online web demo.
 
-### **Inference Efficiency**
+### Key Techniques
+
+* **Architechture: Unified 3D-Resampler for High-density Video Compression** MiniCPM-V 4.5 introduces a 3D-Resampler that overcomes the performance-efficiency trade-off in video understanding. By grouping and jointly compressing up to 6 consecutive video frames into just 64 tokens (the same token count used for a single image in MiniCPM-V series), MiniCPM-V 4.5 achieves a 96× compression rate for video tokens. This allows the model to process more video frames without additional LLM computational cost, enabling high-FPS video and long video understanding. The architecture supports unified encoding for images, multi-image inputs, and videos, ensuring seamless capability and knowledge transfer.
+
+* **Pre-training: Unified Learning for OCR and Knowledge from Documents.** Existing MLLMs learn OCR capability and knowledge from documents in isolated training approaches. We observe that the essential difference between these two training approaches is the visibility of the text in images. By dynamically corrupting text regions in documents with varying noise levels and asking the model to reconstruct the text, the model learns to adaptively and properly switch between accurate text recognition (when text is visible) and multimodal context-based knowledge reasoning (when text is heavily obscured). This eliminates reliance on error-prone document parsers in knowledge learning from documents, and prevents hallucinations from over-augmented OCR data, resulting in top-tier OCR and multimodal knowledge performance with minimal engineering overhead.
+
+* **Post-training: Hybrid Fast/Deep Thinking with Multimodal RL.** MiniCPM-V 4.5 offers a balanced reasoning experience through two switchable modes: fast thinking for efficient daily use and deep thinking for complex tasks. Using a new hybrid reinforcement learning method, the model jointly optimizes both modes, significantly enhancing fast-mode performance without compromising deep-mode capability. Incorporated with [RLPR](https://github.com/OpenBMB/RLPR) and [RLAIF-V](https://github.com/RLHF-V/RLAIF-V), it generalizes robust reasoning skills from broad multimodal data while effectively reducing hallucinations.
+
+### Evaluation
+
+<div align="center">
+  <img src="./assets/radar_minicpm_v45.png", width=60%>
+</div>
+<div align="center">
+<img src="./assets/minicpmv_4_5_evaluation_result.png" , width=80%>
+</div>
+
+### Inference Efficiency
 
 **OpenCompass**
 
@@ -142,8 +155,9 @@ MiniCPM-V 4.5 is the latest model in the MiniCPM-V series and is built on the Qw
 </table>
 </div>
 
+Both Video-MME and OpenCompass were evaluated using 8×A100 GPUs for inference. The reported inference time of Video-MME includes full model-side computation, and excludes the external cost of video frame extraction (dependent on specific frame extraction tools) for fair comparison.
 
-### **Examples**
+### Examples
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=Cn23FujYMMU"><img src="./assets/minicpmv4_5/MiniCPM-V 4.5-8.26_img.jpeg", width=70%></a>
@@ -163,467 +177,674 @@ MiniCPM-V 4.5 is the latest model in the MiniCPM-V series and is built on the Qw
 
 </details>
 
+We deploy MiniCPM-V 4.5 on iPad M4 with [iOS demo](https://github.com/tc-mb/MiniCPM-o-demo-iOS). The demo video is the raw screen recording without edition.
 
-## **MiniCPM-o 2.6**
+<table align="center">
+    <p align="center">
+      <img src="assets/minicpmv4_5/v45_en_handwriting.gif" width=45%/>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="assets/minicpmv4_5/v45_en_cot.gif" width=45%/>
+    </p>
+    <p align="center">
+      <img src="assets/minicpmv4_5/v45_cn_handwriting.gif" width=45%/>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="assets/minicpmv4_5/v45_cn_travel.gif" width=45%/>
+    </p>
+</table>
 
-MiniCPM-o 2.6 is a model built in an end-to-end fashion, offering leading performance in visual, speech, and multimodal live streaming. It achieves GPT-4o level performance.
+## MiniCPM-o 2.6
+
+This model excels in vision, speech, and multimodal live streaming. Built in an end-to-end fashion based on SigLip-400M, Whisper-medium-300M, ChatTTS-200M, and Qwen2.5-7B.
+
+**Key Highlights:**
+
+*   **Leading Visual Capability:** Achieves high scores on OpenCompass, and surpassing GPT-4o-202405, Gemini 1.5 Pro, and Claude 3.5 Sonnet.
+*   **State-of-the-art Speech Capability:** Supports bilingual real-time speech conversation, outperforms GPT-4o-realtime on ASR and STT, and has great performance in open-source community.
+*   **Strong Multimodal Live Streaming Capability:** Performs well on StreamingBench, and exceeds the performance of GPT-4o-202408, and Claude 3.5 Sonnet.
+*   **Superior Efficiency:** Produces far fewer tokens than most models for image processing, improving speed and memory usage.
+
+<div align="center">
+<img src="./assets/minicpm-o-26-framework-v2.png" , width=80%>
+</div>
 
 ### Evaluation
+
 <div align="center">
   <img src="./assets/radar.jpg", width=80%>
 </div>
 
-### Examples <!-- omit in toc -->
+<details>
+<summary>Click to view visual understanding results.</summary>
 
-We deploy MiniCPM-o 2.6 on end devices. The demo video is the raw-speed recording on an iPad Pro and a Web demo.
+**Image Understanding**
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=vRIMbxJzStY&t=2s"><img src="./assets/minicpmo2_6/2dot6_o_demo_video_img.png", width=70%></a>
+<table style="margin: 0px auto;">
+    <thead>
+        <tr>
+            <th align="left">Model</th>
+            <th>Size</th>
+            <th>Token Density<sup>+</sup></th>
+            <th>OpenCompass</th>
+            <th>OCRBench</th>
+            <th>MathVista mini</th>
+            <th>ChartQA</th>
+            <th>MMVet</th>
+            <th>MMStar</th>
+            <th>MME</th>
+            <th>MMB1.1 test</th>
+            <th>AI2D</th>
+            <th>MMMU val</th>
+            <th>HallusionBench</th>
+            <th>TextVQA val</th>
+            <th>DocVQA test</th>
+            <th>MathVerse mini</th>
+            <th>MathVision</th>
+            <th>MMHal Score</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+        <tr>
+            <td colspan="19" align="left"><strong>Proprietary</strong></td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">GPT-4o-20240513</td>
+            <td>-</td>
+            <td>1088</td>
+            <td><u>69.9</u></td>
+            <td>736</td>
+            <td>61.3</td>
+            <td>85.7</td>
+            <td><strong>69.1</strong></td>
+            <td>63.9</td>
+            <td>2328.7</td>
+            <td>82.2</td>
+            <td>84.6</td>
+            <td><strong>69.2</strong></td>
+            <td><strong>55.0</strong></td>
+            <td>-</td>
+            <td>92.8</td>
+            <td><strong>50.2</strong></td>
+            <td><strong>30.4</strong></td>
+            <td><u>3.6</u></td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">Claude3.5-Sonnet</td>
+            <td>-</td>
+            <td>750</td>
+            <td>67.9</td>
+            <td>788</td>
+            <td>61.6</td>
+            <td><strong>90.8</strong></td>
+            <td>66.0</td>
+            <td>62.2</td>
+            <td>1920.0</td>
+            <td>78.5</td>
+            <td>80.2</td>
+            <td><u>65.9</u></td>
+            <td>49.9</td>
+            <td>-</td>
+            <td><strong>95.2</strong></td>
+            <td>-</td>
+            <td>-</td>
+            <td>3.4</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">Gemini 1.5 Pro</td>
+            <td>-</td>
+            <td>-</td>
+            <td>64.4</td>
+            <td>754</td>
+            <td>57.7</td>
+            <td>81.3</td>
+            <td>64.0</td>
+            <td>59.1</td>
+            <td>2110.6</td>
+            <td>73.9</td>
+            <td>79.1</td>
+            <td>60.6</td>
+            <td>45.6</td>
+            <td>73.5</td>
+            <td>86.5</td>
+            <td>-</td>
+            <td>19.2</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">GPT-4o-mini-20240718</td>
+            <td>-</td>
+            <td>1088</td>
+            <td>64.1</td>
+            <td>785</td>
+            <td>52.4</td>
+            <td>-</td>
+            <td>66.9</td>
+            <td>54.8</td>
+            <td>2003.4</td>
+            <td>76.0</td>
+            <td>77.8</td>
+            <td>60.0</td>
+            <td>46.1</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>3.3</td>
+        </tr>
+        <tr>
+            <td colspan="19" align="left"><strong>Open Source</strong></td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">Cambrian-34B</td>
+            <td>34B</td>
+            <td><u>1820</u></td>
+            <td>58.3</td>
+            <td>591</td>
+            <td>50.3</td>
+            <td>75.6</td>
+            <td>53.2</td>
+            <td>54.2</td>
+            <td>2049.9</td>
+            <td>77.8</td>
+            <td>79.5</td>
+            <td>50.4</td>
+            <td>41.6</td>
+            <td>76.7</td>
+            <td>75.5</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">GLM-4V-9B</td>
+            <td>13B</td>
+            <td>784</td>
+            <td>59.1</td>
+            <td>776</td>
+            <td>51.1</td>
+            <td>-</td>
+            <td>58.0</td>
+            <td>54.8</td>
+            <td>2018.8</td>
+            <td>67.9</td>
+            <td>71.2</td>
+            <td>46.9</td>
+            <td>45.0</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">Pixtral-12B</td>
+            <td>12B</td>
+            <td>256</td>
+            <td>61.0</td>
+            <td>685</td>
+            <td>56.9</td>
+            <td>81.8</td>
+            <td>58.5</td>
+            <td>54.5</td>
+            <td>-</td>
+            <td>72.7</td>
+            <td>79.0</td>
+            <td>51.1</td>
+            <td>47.0</td>
+            <td>75.7</td>
+            <td>90.7</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">VITA-1.5</td>
+            <td>8B</td>
+            <td>784</td>
+            <td>63.3</td>
+            <td>741</td>
+            <td>66.2</td>
+            <td>-</td>
+            <td>52.7</td>
+            <td>60.2</td>
+            <td>2328.1</td>
+            <td>76.8</td>
+            <td>79.2</td>
+            <td>52.6</td>
+            <td>44.6</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">DeepSeek-VL2-27B (4B)</td>
+            <td>27B</td>
+            <td>672</td>
+            <td>66.4</td>
+            <td>809</td>
+            <td>63.9</td>
+            <td>86.0</td>
+            <td>60.0</td>
+            <td>61.9</td>
+            <td>2253.0</td>
+            <td>81.2</td>
+            <td>83.8</td>
+            <td>54.0</td>
+            <td>45.3</td>
+            <td><u>84.2</u></td>
+            <td>93.3</td>
+            <td>-</td>
+            <td>-</td>
+            <td>3.0</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">Qwen2-VL-7B</td>
+            <td>8B</td>
+            <td>784</td>
+            <td>67.1</td>
+            <td><u>866</u></td>
+            <td>58.2</td>
+            <td>83.0</td>
+            <td>62.0</td>
+            <td>60.7</td>
+            <td>2326.0</td>
+            <td>81.8</td>
+            <td>83.0</td>
+            <td>54.1</td>
+            <td>50.6</td>
+            <td><strong>84.3</strong></td>
+            <td><u>94.5</u></td>
+            <td>31.9</td>
+            <td>16.3</td>
+            <td>3.2</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">LLaVA-OneVision-72B</td>
+            <td>72B</td>
+            <td>182</td>
+            <td>68.1</td>
+            <td>741</td>
+            <td>67.5</td>
+            <td>83.7</td>
+            <td>60.6</td>
+            <td><strong>65.8</strong></td>
+            <td>2261.0</td>
+            <td><strong>85.0</strong></td>
+            <td><u>85.6</u></td>
+            <td>56.8</td>
+            <td>49.0</td>
+            <td>80.5</td>
+            <td>91.3</td>
+            <td>39.1</td>
+            <td>-</td>
+            <td>3.5</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">InternVL2.5-8B</td>
+            <td>8B</td>
+            <td>706</td>
+            <td>68.3</td>
+            <td>822</td>
+            <td><u>64.4</u></td>
+            <td>84.8</td>
+            <td>62.8</td>
+            <td>62.8</td>
+            <td>2344.0</td>
+            <td><u>83.6</u></td>
+            <td>84.5</td>
+            <td>56.0</td>
+            <td>50.1</td>
+            <td>79.1</td>
+            <td>93.0</td>
+            <td>39.5</td>
+            <td>19.7</td>
+            <td>3.4</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">MiniCPM-V 2.6</td>
+            <td>8B</td>
+            <td><strong>2822</strong></td>
+            <td>65.2</td>
+            <td>852*</td>
+            <td>60.6</td>
+            <td>79.4</td>
+            <td>60.0</td>
+            <td>57.5</td>
+            <td><u>2348.4*</u></td>
+            <td>78.0</td>
+            <td>82.1</td>
+            <td>49.8*</td>
+            <td>48.1*</td>
+            <td>80.1</td>
+            <td>90.8</td>
+            <td>25.7</td>
+            <td>18.3</td>
+            <td>3.6</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">MiniCPM-o 2.6</td>
+            <td>8B</td>
+            <td><strong>2822</strong></td>
+            <td><strong>70.2</strong></td>
+            <td><strong>897*</strong></td>
+            <td><strong>71.9*</strong></td>
+            <td><u>86.9*</u></td>
+            <td><u>67.5</u></td>
+            <td><u>64.0</u></td>
+            <td><strong>2372.0*</strong></td>
+            <td>80.5</td>
+            <td><strong>85.8</strong></td>
+            <td>50.4*</td>
+            <td><u>51.9</u></td>
+            <td>82.0</td>
+            <td>93.5</td>
+            <td><u>41.4*</u></td>
+            <td><u>23.1*</u></td>
+            <td><strong>3.8</strong></td>
+        </tr>
+    </tbody>
+</table>
 </div>
-
-<br>
-
-<div style="display: flex; flex-direction: column; align-items: center;">
-  <img src="assets/minicpmo2_6/minicpmo2_6_math_intersect.png" alt="math" style="margin-bottom: 5px;">
-  <img src="assets/minicpmo2_6/minicpmo2_6_diagram_train_NN.png" alt="diagram" style="margin-bottom: 5px;">
-  <img src="assets/minicpmo2_6/minicpmo2_6_multi-image_bike.png" alt="bike" style="margin-bottom: 5px;">
-</div>
+* We evaluate this benchmark using chain-of-thought prompting. Specifically, for MME, we used this technique only for the Cognition set.
 
 
-## **MiniCPM-V & o Cookbook**
+<sup>+</sup> Token Density: number of pixels encoded into each visual token at maximum resolution, i.e., # pixels at maximum resolution / # visual tokens.
 
-Explore comprehensive, ready-to-deploy solutions for the MiniCPM-V and MiniCPM-o models in our structured [cookbook](https://github.com/OpenSQZ/MiniCPM-V-CookBook), which empowers developers to rapidly implement multimodal AI applications with integrated vision, speech, and live-streaming capabilities.
+Note: For proprietary models, we calculate token density based on the image encoding charging strategy defined in the official API documentation, which provides an upper-bound estimation.
 
-## **Chat with Our Demo on Gradio 🤗**
-
-Try our online demos powered by Hugging Face Gradio.
-
-### Online Demo <!-- omit in toc --> 
-
-Click here to try out the online demo of [MiniCPM-o 2.6](https://minicpm-omni-webdemo-us.modelbest.cn/) | [MiniCPM-V 2.6](http://120.92.209.146:8887/) | [MiniCPM-Llama3-V 2.5](https://huggingface.co/spaces/openbmb/MiniCPM-Llama3-V-2_5) | [MiniCPM-V 2.0](https://huggingface.co/spaces/openbmb/MiniCPM-V-2).
-
-### Local WebUI Demo <!-- omit in toc --> 
-  
-You can easily build your own local WebUI demo using the following commands.
-
-Please ensure that `transformers==4.44.2` is installed, as other versions may have compatibility issues.
-
-If you are using an older version of PyTorch, you might encounter this issue `"weight_norm_fwd_first_dim_kernel" not implemented for 'BFloat16'`, Please add `self.minicpmo_model.tts.float()` during the model initialization.
-
-**For real-time voice/video call demo:**
-1. launch model server:
-```shell
-pip install -r requirements_o2.6.txt
-
-python web_demos/minicpm-o_2.6/model_server.py
-```
-
-2. launch web server:
-
-```shell
-# Make sure Node and PNPM is installed.
-sudo apt-get update
-sudo apt-get install nodejs npm
-npm install -g pnpm
-
-
-cd web_demos/minicpm-o_2.6/web_server
-# create ssl cert for https, https is required to request camera and microphone permissions.
-bash ./make_ssl_cert.sh  # output key.pem and cert.pem
-
-pnpm install  # install requirements
-pnpm run dev  # start server
-```
-Open `https://localhost:8088/` in browser and enjoy the real-time voice/video call.
-
-**For chatbot demo:**
-```shell
-pip install -r requirements_o2.6.txt
-
-python web_demos/minicpm-o_2.6/chatbot_web_demo_o2.6.py
-```
-Open `http://localhost:8000/` in browser and enjoy the vision mode chatbot.
-
-
-## **Inference**
-
-### **Model Zoo**
-
-| Model           | Device | Memory    | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Description       | Download |
-|:-----------|:--:|:-----------:|:-------------------|:---------------:|
-| MiniCPM-V 4.5| GPU | 18 GB  | The latest version, strong end-side multimodal performance for single image, multi-image and video understanding.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-V-4_5) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4_5) |
-| MiniCPM-V 4.5 gguf | CPU | 8 GB  | The gguf version, lower memory usage and faster inference.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-V-4_5-gguf) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4_5-gguf) |
-| MiniCPM-V 4.5 int4 | GPU | 9 GB  | The int4 quantized version, lower GPU memory usage.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-V-4_5-int4) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4_5-int4) |
-| MiniCPM-V 4.5 AWQ | GPU | 9 GB  | The int4 quantized version, lower GPU memory usage.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-V-4_5-AWQ) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4_5-AWQ) |
-| MiniCPM-o 2.6| GPU | 18 GB  | The latest version, achieving GPT-4o level performance for vision, speech and multimodal live streaming on end-side devices.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-o-2_6) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-o-2_6) |
-| MiniCPM-o 2.6 gguf | CPU | 8 GB  | The gguf version, lower memory usage and faster inference.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-o-2_6-gguf) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://huggingface.co/openbmb/MiniCPM-o-2_6-gguf) |
-| MiniCPM-o 2.6 int4 | GPU | 9 GB  | The int4 quantized version, lower GPU memory usage.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-o-2_6-int4) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-o-2_6-int4) |
-
-### **Multi-turn Conversation**
-
-If you wish to enable long-thinking mode, provide the argument `enable_thinking=True` to the chat function.
-
-```shell
-pip install -r requirements_o2.6.txt
-```
-
-Please refer to the following codes to run.
+**Multi-image and Video Understanding**
 
 <div align="center">
-<img src="assets/minicpmo2_6/show_demo.jpg" width="500px">
+
+<table style="margin: 0px auto;">
+    <thead>
+        <tr>
+            <th align="left">Model</th>
+            <th>Size</th>
+            <th>BLINK val</th>
+            <th>Mantis Eval</th>
+            <th>MIRB</th>
+            <th>Video-MME (wo / w subs)</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+        <tr>
+            <td colspan="6" align="left"><strong>Proprietary</strong></td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">GPT-4o-20240513</td>
+            <td>-</td>
+            <td><strong>68.0</strong></td>
+            <td>-</td>
+            <td>-</td>
+            <td><strong>71.9/77.2<strong></td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">GPT4V</td>
+            <td>-</td>
+            <td>54.6</td>
+            <td>62.7</td>
+            <td>53.1</td>
+            <td>59.9/63.3</td>
+        </tr>
+        <tr>
+            <td colspan="6" align="left"><strong>Open-source</strong></td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">VITA-1.5</td>
+            <td>8B</td>
+            <td>45.0</td>
+            <td>-</td>
+            <td>-</td>
+            <td>56.1/58.7</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">LLaVA-NeXT-Interleave 14B</td>
+            <td>14B</td>
+            <td>52.6</td>
+            <td>66.4</td>
+            <td>30.2</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">LLaVA-OneVision-72B</td>
+            <td>72B</td>
+            <td>55.4</td>
+            <td><strong>77.6</strong></td>
+            <td>-</td>
+            <td><u>66.2/69.5</u></td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">MANTIS 8B</td>
+            <td>8B</td>
+            <td>49.1</td>
+            <td>59.5</td>
+            <td>34.8</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">Qwen2-VL-7B</td>
+            <td>8B</td>
+            <td>53.2</td>
+            <td>69.6*</td>
+            <td><strong>67.6*</strong></td>
+            <td>63.3/69.0</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">InternVL2.5-8B</td>
+            <td>8B</td>
+            <td>54.8</td>
+            <td>67.7</td>
+            <td>52.5</td>
+            <td>64.2/66.9</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">MiniCPM-V 2.6</td>
+            <td>8B</td>
+            <td>53.0</td>
+            <td>69.1</td>
+            <td>53.8</td>
+            <td>60.9/63.6</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">MiniCPM-o 2.6</td>
+            <td>8B</td>
+            <td><u>56.7</u></td>
+            <td><u>71.9</u></td>
+            <td><u>58.6</u></td>
+            <td>63.9/67.9</td>
+        </tr>
+    </tbody>
+</table>
+
 </div>
-
-
-```python
-import torch
-from PIL import Image
-from transformers import AutoModel, AutoTokenizer
-
-torch.manual_seed(100)
-
-model = AutoModel.from_pretrained('openbmb/MiniCPM-V-4_5', trust_remote_code=True, # or openbmb/MiniCPM-o-2_6
-    attn_implementation='sdpa', torch_dtype=torch.bfloat16) # sdpa or flash_attention_2, no eager
-model = model.eval().cuda()
-tokenizer = AutoTokenizer.from_pretrained('openbmb/MiniCPM-V-4_5', trust_remote_code=True) # or openbmb/MiniCPM-o-2_6
-
-image = Image.open('./assets/minicpmo2_6/show_demo.jpg').convert('RGB')
-
-enable_thinking=False # If `enable_thinking=True`, the long-thinking mode is enabled.
-
-# First round chat 
-question = "What is the landform in the picture?"
-msgs = [{'role': 'user', 'content': [image, question]}]
-
-answer = model.chat(
-    msgs=msgs,
-    tokenizer=tokenizer,
-    enable_thinking=enable_thinking
-)
-print(answer)
-
-# Second round chat, pass history context of multi-turn conversation
-msgs.append({"role": "assistant", "content": [answer]})
-msgs.append({"role": "user", "content": ["What should I pay attention to when traveling here?"]})
-
-answer = model.chat(
-    msgs=msgs,
-    tokenizer=tokenizer
-)
-print(answer)
-```
-
-You will get the following output:
-
-```shell
-# round1
-The landform in the picture is karst topography. Karst landscapes are characterized by distinctive, jagged limestone hills or mountains with steep, irregular peaks and deep valleys—exactly what you see here These unique formations result from the dissolution of soluble rocks like limestone over millions of years through water erosion.
-
-This scene closely resembles the famous karst landscape of Guilin and Yangshuo in China’s Guangxi Province. The area features dramatic, pointed limestone peaks rising dramatically above serene rivers and lush green forests, creating a breathtaking and iconic natural beauty that attracts millions of visitors each year for its picturesque views.
-
-# round2
-When traveling to a karst landscape like this, here are some important tips:
-
-1. Wear comfortable shoes: The terrain can be uneven and hilly.
-2. Bring water and snacks for energy during hikes or boat rides.
-3. Protect yourself from the sun with sunscreen, hats, and sunglasses—especially since you’ll likely spend time outdoors exploring scenic spots.
-4. Respect local customs and nature regulations by not littering or disturbing wildlife.
-
-By following these guidelines, you'll have a safe and enjoyable trip while appreciating the stunning natural beauty of places such as Guilin’s karst mountains.
-```
-
-#### Chat with Multiple Images
-<details>
-<summary> Click to view Python code running MiniCPM-V-4_5 with multiple images input. </summary>
-  
-```python
-import torch
-from PIL import Image
-from transformers import AutoModel, AutoTokenizer
-
-model = AutoModel.from_pretrained('openbmb/MiniCPM-V-4_5', trust_remote_code=True,  # or openbmb/MiniCPM-o-2_6
-    attn_implementation='sdpa', torch_dtype=torch.bfloat16) # sdpa or flash_attention_2, no eager
-model = model.eval().cuda()
-tokenizer = AutoTokenizer.from_pretrained('openbmb/MiniCPM-V-4_5', trust_remote_code=True)  # or openbmb/MiniCPM-o-2_6
-
-image1 = Image.open('image1.jpg').convert('RGB')
-image2 = Image.open('image2.jpg').convert('RGB')
-question = 'Compare image 1 and image 2, tell me about the differences between image 1 and image 2.'
-
-msgs = [{'role': 'user', 'content': [image1, image2, question]}]
-
-answer = model.chat(
-    msgs=msgs,
-    tokenizer=tokenizer
-)
-print(answer)
-```
+* We evaluate officially released checkpoints by ourselves.
 </details>
 
-#### In-context Few-shot Learning
 <details>
-<summary> Click to view Python code running MiniCPM-V-4_5 with few-shot input. </summary>
+<summary>Click to view audio understanding and speech conversation results.</summary>
 
-```python
-import torch
-from PIL import Image
-from transformers import AutoModel, AutoTokenizer
+**Audio Understanding**
 
-model = AutoModel.from_pretrained('openbmb/MiniCPM-V-4_5', trust_remote_code=True,  # or openbmb/MiniCPM-o-2_6
-    attn_implementation='sdpa', torch_dtype=torch.bfloat16) # sdpa or flash_attention_2, no eager
-model = model.eval().cuda()
-tokenizer = AutoTokenizer.from_pretrained('openbmb/MiniCPM-V-4_5', trust_remote_code=True)  # or openbmb/MiniCPM-o-2_6
+<div align="center">
+<table style="margin: 0px auto;">
+    <thead>
+        <tr>
+            <th align="left">Task</th>
+            <th>Size</th>
+            <th colspan="3">ASR (zh)</th>
+            <th colspan="3">ASR (en)</th>
+            <th colspan="2">AST</th>
+            <th>Emotion</th>
+        </tr>
+        <tr>
+            <th align="left">Metric</th>
+            <td></td>
+            <th colspan="3">CER↓</th>
+            <th colspan="3">WER↓</th>
+            <th colspan="2">BLEU↑</th>
+            <th>ACC↑</th>
+        </tr>
+        <tr>
+            <th align="left">Dataset</th>
+            <td></td>
+            <th>AISHELL-1</th>
+            <th>Fleurs zh</th>
+            <th>WenetSpeech test-net</th>
+            <th>LibriSpeech test-clean</th>
+            <th>GigaSpeech</th>
+            <th>TED-LIUM</th>
+            <th>CoVoST en2zh</th>
+            <th>CoVoST zh2en</th>
+            <th>MELD emotion</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+        <tr>
+            <td colspan="11" align="left"><strong>Proprietary</strong></td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">GPT-4o-Realtime</td>
+            <td>-</td>
+            <td>7.3*</td>
+            <td><u>5.4*</u></td>
+            <td>28.9*</td>
+            <td>2.6*</td>
+            <td>12.9*</td>
+            <td>4.8*</td>
+            <td>37.1*</td>
+            <td>15.7*</td>
+            <td>33.2*</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">Gemini 1.5 Pro</td>
+            <td>-</td>
+            <td>4.5*</td>
+            <td>5.9*</td>
+            <td>14.3*</td>
+            <td>2.9*</td>
+            <td>10.6*</td>
+            <td><strong>3.0*</strong></td>
+            <td><u>47.3*</u></td>
+            <td>22.6*</td>
+            <td>48.4*</td>
+        </tr>
+        <tr>
+            <td colspan="11" align="left"><strong>Open-Source</strong></td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">Qwen2-Audio-7B</td>
+            <td>8B</td>
+            <td>-</td>
+            <td>7.5</td>
+            <td>-</td>
+            <td><strong>1.6</strong></td>
+            <td>-</td>
+            <td>-</td>
+            <td>45.2</td>
+            <td><u>24.4</u></td>
+            <td><strong>55.3</strong></td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">Qwen2-Audio-7B-Instruct</td>
+            <td>8B</td>
+            <td>2.6*</td>
+            <td>6.9*</td>
+            <td><u>10.3*</u></td>
+            <td>3.1*</td>
+            <td><u>9.7</u>*</td>
+            <td>5.9*</td>
+            <td>39.5*</td>
+            <td>22.9*</td>
+            <td>17.4*</td>
+        </tr>
+          <tr>
+            <td nowrap="nowrap" align="left">VITA-1.5</td>
+            <td>8B</td>
+            <td>2.16</td>
+            <td>-</td>
+            <td>8.4</td>
+            <td>3.4</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">GLM-4-Voice-Base</td>
+            <td>9B</td>
+            <td><u>2.5</u></td>
+            <td>-</td>
+            <td>-</td>
+            <td>2.8</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">MiniCPM-o 2.6</td>
+            <td>8B</td>
+            <td><strong>1.6</strong></td>
+            <td><strong>4.4</strong></td>
+            <td><strong>6.9</strong></td>
+            <td><u>1.7</u></td>
+            <td><strong>8.7</strong></td>
+            <td><strong>3.0</strong></td>
+            <td><strong>48.2</strong></td>
+            <td><strong>27.2</strong></td>
+            <td><u>52.4</u></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+* We evaluate officially released checkpoints by ourselves.<br><br>
 
-question = "production date" 
-image1 = Image.open('example1.jpg').convert('RGB')
-answer1 = "2023.08.04"
-image2 = Image.open('example2.jpg').convert('RGB')
-answer2 = "2007.04.24"
-image_test = Image.open('test.jpg').convert('RGB')
+**Speech Generation**
 
-msgs = [
-    {'role': 'user', 'content': [image1, question]}, {'role': 'assistant', 'content': [answer1]},
-    {'role': 'user', 'content': [image2, question]}, {'role': 'assistant', 'content': [answer2]},
-    {'role': 'user', 'content': [image_test, question]}
-]
-
-answer = model.chat(
-    msgs=msgs,
-    tokenizer=tokenizer
-)
-print(answer)
-```
-</details>
-
-#### Chat with Video
-<details>
-<summary> Click to view Python code running MiniCPM-V-4_5 by with video input and 3D-Resampler. </summary>
-
-```python
-## The 3d-resampler compresses multiple frames into 64 tokens by introducing temporal_ids. 
-# To achieve this, you need to organize your video data into two corresponding sequences: 
-#   frames: List[Image]
-#   temporal_ids: List[List[Int]].
-
-import torch
-from PIL import Image
-from transformers import AutoModel, AutoTokenizer
-from decord import VideoReader, cpu    # pip install decord
-from scipy.spatial import cKDTree
-import numpy as np
-import math
-
-model = AutoModel.from_pretrained('openbmb/MiniCPM-V-4_5', trust_remote_code=True,  # or openbmb/MiniCPM-o-2_6
-    attn_implementation='sdpa', torch_dtype=torch.bfloat16) # sdpa or flash_attention_2, no eager
-model = model.eval().cuda()
-tokenizer = AutoTokenizer.from_pretrained('openbmb/MiniCPM-V-4_5', trust_remote_code=True)  # or openbmb/MiniCPM-o-2_6
-
-MAX_NUM_FRAMES=180 # Indicates the maximum number of frames received after the videos are packed. The actual maximum number of valid frames is MAX_NUM_FRAMES * MAX_NUM_PACKING.
-MAX_NUM_PACKING=3  # indicates the maximum packing number of video frames. valid range: 1-6
-TIME_SCALE = 0.1 
-
-def map_to_nearest_scale(values, scale):
-    tree = cKDTree(np.asarray(scale)[:, None])
-    _, indices = tree.query(np.asarray(values)[:, None])
-    return np.asarray(scale)[indices]
-
-
-def group_array(arr, size):
-    return [arr[i:i+size] for i in range(0, len(arr), size)]
-
-def encode_video(video_path, choose_fps=3, force_packing=None):
-    def uniform_sample(l, n):
-        gap = len(l) / n
-        idxs = [int(i * gap + gap / 2) for i in range(n)]
-        return [l[i] for i in idxs]
-    vr = VideoReader(video_path, ctx=cpu(0))
-    fps = vr.get_avg_fps()
-    video_duration = len(vr) / fps
-        
-    if choose_fps * int(video_duration) <= MAX_NUM_FRAMES:
-        packing_nums = 1
-        choose_frames = round(min(choose_fps, round(fps)) * min(MAX_NUM_FRAMES, video_duration))
-        
-    else:
-        packing_nums = math.ceil(video_duration * choose_fps / MAX_NUM_FRAMES)
-        if packing_nums <= MAX_NUM_PACKING:
-            choose_frames = round(video_duration * choose_fps)
-        else:
-            choose_frames = round(MAX_NUM_FRAMES * MAX_NUM_PACKING)
-            packing_nums = MAX_NUM_PACKING
-
-    frame_idx = [i for i in range(0, len(vr))]      
-    frame_idx =  np.array(uniform_sample(frame_idx, choose_frames))
-
-    if force_packing:
-        packing_nums = min(force_packing, MAX_NUM_PACKING)
-    
-    print(video_path, ' duration:', video_duration)
-    print(f'get video frames={len(frame_idx)}, packing_nums={packing_nums}')
-    
-    frames = vr.get_batch(frame_idx).asnumpy()
-
-    frame_idx_ts = frame_idx / fps
-    scale = np.arange(0, video_duration, TIME_SCALE)
-
-    frame_ts_id = map_to_nearest_scale(frame_idx_ts, scale) / TIME_SCALE
-    frame_ts_id = frame_ts_id.astype(np.int32)
-
-    assert len(frames) == len(frame_ts_id)
-
-    frames = [Image.fromarray(v.astype('uint8')).convert('RGB') for v in frames]
-    frame_ts_id_group = group_array(frame_ts_id, packing_nums)
-    
-    return frames, frame_ts_id_group
-
-
-video_path="video_test.mp4"
-fps = 5 # fps for video
-force_packing = None # You can set force_packing to ensure that 3D packing is forcibly enabled; otherwise, encode_video will dynamically set the packing quantity based on the duration.
-frames, frame_ts_id_group = encode_video(video_path, fps, force_packing=force_packing)
-
-question = "Describe the video"
-msgs = [
-    {'role': 'user', 'content': frames + [question]}, 
-]
-
-
-answer = model.chat(
-    msgs=msgs,
-    tokenizer=tokenizer,
-    use_image_id=False,
-    max_slice_nums=1,
-    temporal_ids=frame_ts_id_group
-)
-print(answer)
-```
-</details>
-
-
-#### Speech and Audio Mode
-
-Model initialization
-
-```python
-import torch
-import librosa
-from transformers import AutoModel, AutoTokenizer
-
-model = AutoModel.from_pretrained('openbmb/MiniCPM-o-2_6', trust_remote_code=True,
-    attn_implementation='sdpa', torch_dtype=torch.bfloat16) # sdpa or flash_attention_2, no eager
-model = model.eval().cuda()
-tokenizer = AutoTokenizer.from_pretrained('openbmb/MiniCPM-o-2_6', trust_remote_code=True)
-
-model.init_tts()
-model.tts.float()
-```
-
-<hr/>
-
-##### Mimick <!-- omit in toc --> 
-
-`Mimick` task reflects a model's end-to-end speech modeling capability. The model takes audio input, and outputs an ASR transcription and subsequently reconstructs the original audio with high similarity. The higher the similarity between the reconstructed audio and the original audio, the stronger the model's foundational capability in end-to-end speech modeling.
-
-```python
-mimick_prompt = "Please repeat each user's speech, including voice style and speech content."
-audio_input, _ = librosa.load('./assets/input_examples/Trump_WEF_2018_10s.mp3', sr=16000, mono=True) # load the audio to be mimicked
-
-# `./assets/input_examples/fast-pace.wav`, 
-# `./assets/input_examples/chi-english-1.wav` 
-# `./assets/input_examples/exciting-emotion.wav` 
-# for different aspects of speech-centric features.
-
-msgs = [{'role': 'user', 'content': [mimick_prompt, audio_input]}]
-res = model.chat(
-    msgs=msgs,
-    tokenizer=tokenizer,
-    sampling=True,
-    max_new_tokens=128,
-    use_tts_template=True,
-    temperature=0.3,
-    generate_audio=True,
-    output_audio_path='output_mimick.wav', # save the tts result to output_audio_path
-)
-```
-
-<hr/>
-
-##### General Speech Conversation with Configurable Voices <!-- omit in toc --> 
-
-A general usage scenario of `MiniCPM-o-2.6` is role-playing a specific character based on the audio prompt. It will mimic the voice of the character to some extent and act like the character in text, including language style. In this mode, `MiniCPM-o-2.6` sounds **more natural and human-like**. Self-defined audio prompts can be used to customize the voice of the character in an end-to-end manner.
-
-
-```python
-ref_audio, _ = librosa.load('./assets/input_examples/icl_20.wav', sr=16000, mono=True) # load the reference audio
-sys_prompt = model.get_sys_prompt(ref_audio=ref_audio, mode='audio_roleplay', language='en')
-
-# round one
-user_question = {'role': 'user', 'content': [librosa.load('xxx.wav', sr=16000, mono=True)[0]]}
-msgs = [sys_prompt, user_question]
-res = model.chat(
-    msgs=msgs,
-    tokenizer=tokenizer,
-    sampling=True,
-    max_new_tokens=128,
-    use_tts_template=True,
-    generate_audio=True,
-    temperature=0.3,
-    output_audio_path='result_roleplay_round_1.wav',
-)
-
-# round two
-history = msgs.append({'role': 'assistant', 'content': res})
-user_question = {'role': 'user', 'content': [librosa.load('xxx.wav', sr=16000, mono=True)[0]]}
-msgs = history.append(user_question)
-res = model.chat(
-    msgs=msgs,
-    tokenizer=tokenizer,
-    sampling=True,
-    max_new_tokens=128,
-    use_tts_template=True,
-    generate_audio=True,
-    temperature=0.3,
-    output_audio_path='result_roleplay_round_2.wav',
-)
-print(res)
-```
-
-<hr/>
-
-##### Speech Conversation as an AI Assistant <!-- omit in toc --> 
-
-An enhanced feature of `MiniCPM-o-2.6` is to act as an AI assistant, but only with limited choice of voices. In this mode, `MiniCPM-o-2.6` is **less human-like and more like a voice assistant**. In this mode, the model is more instruction-following. For demo, you are suggested to use `assistant_female_voice`, `assistant_male_voice`, and `assistant_default_female_voice`. Other voices may work but not as stable as the default voices.
-
-*Please note that, `assistant_female_voice` and `assistant_male_voice` are more stable but sounds like robots, while `assistant_default_female_voice` is more human-alike but not stable, its voice often changes in multiple turns. We suggest you to try stable voices `assistant_female_voice` and `assistant_male_voice`.*
-
-```python
-ref_audio, _ = librosa.load('./assets/input_examples/assistant_female_voice.wav', sr=16000, mono=True) # or use `./assets/input_examples/assistant_male_voice.wav`
-sys_prompt = model.get_sys_prompt(ref_audio=ref_audio, mode='audio_assistant', language='en') 
-user_question = {'role': 'user', 'content': [librosa.load('xxx.wav', sr=16000, mono=True)[0]]} # load the user's audio question
-
-# round one
-msgs = [sys_prompt, user_question]
-res = model.chat(
-    msgs=msgs,
-    tokenizer=tokenizer,
-    sampling=True,
-    max_new_tokens=128,
-    use_tts_template=True,
-    generate_audio=True,
-    temperature=0.3,
-    output_audio_path='result_assistant_round_1.wav',
-)
-
-# round two
-history = msgs.append({'role': 'assistant', 'content': res})
-user_question = {'role': 'user', 'content': [librosa.load('xxx.wav', sr=16000, mono=True)[0]]}
-msgs = history.append(user_question)
-res = model.chat(
-    msgs=msgs,
-    tokenizer=tokenizer,
-    sampling=True,
-    max_new_tokens=128,
-    use_tts_template=True,
-    generate_audio=True,
-    temperature=0.3,
-    output_audio_path='result_assistant_round_2.wav',
-)
+<div align="center">
+<table style="margin: 0px auto;">
+    <thead>
+        <tr>
+            <th align="left">Task</th>
+            <th>Size</th>
+            <th colspan="9">SpeechQA</th>
+        </tr>
+        <tr>
+            <th align="left">Metric</th>
+            <th></th>
+            <th colspan="3">ACC↑</th>
+            <th>G-Eval (10 point)↑</th>
+            <th>Semantic ELO score↑</th>
+            <th>Acoustic ELO score↑</th>
+            <th>Overall ELO score↑</th>
+            <th>UTMOS↑</th>
+            <th>ASR-WER↓</th>
+        </tr>
+        <tr>
+            <th align="left">Dataset</th>
+            <th></th>
+            <th>Speech Llama Q.</th>
+            <th>Speech Web Q.</th>
+            <th>Speech Trivia QA</th>
+            <th>Speech AlpacaEval</th>
+            <th colspan="5">AudioArena</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+        <tr>
+            <td colspan="11" align="left"><strong>Proprietary</strong></td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap" align="left">GPT-4o-Realtime</td>
+            <td></td>
+            <td><strong>71.7</strong></td>
+            <td><strong>51.6</strong></td>
+            <td><strong>69.7</strong></td>
+            <td><strong>7.4</strong></td>
+            <td><strong>1157</strong></td>
+            <td><strong>1203</strong></td>
+            <td><strong>12

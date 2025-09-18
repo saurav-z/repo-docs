@@ -1,61 +1,88 @@
-# CSrankings: The Premier Metrics-Based Ranking of Computer Science Schools
+Computer Science Rankings
+=========================
 
-**Looking to assess top computer science programs?** CSrankings provides a data-driven, metrics-based ranking of computer science schools, relying on publication data from highly selective conferences to offer a transparent and objective view of research excellence.  This approach avoids the subjective bias often found in survey-based rankings.  Check out the [original repo](https://github.com/emeryberger/CSrankings) for more details.
+This ranking of top computer science schools is designed to identify institutions and faculty actively engaged in research across a number of areas of computer science. Unlike US News and World Report's approach, which is <a target="_blank" href="https://www.usnews.com/education/best-graduate-schools/articles/science-schools-methodology">exclusively based on surveys</a>, this ranking is entirely metrics-based. It measures the number of publications by faculty that have appeared at the most selective conferences in each area of computer science.
 
-## Key Features:
+This approach is intended to be difficult to game, since publishing in such conferences is generally difficult: contrast this with other approaches like citation-based metrics, which have been repeatedly shown to be <a target="_blank" href="https://arxiv.org/abs/1212.0638">easy</a> to <a target="_blank" href="https://evaluation.hypotheses.org/files/2010/12/pdf_IkeAntkareISSI.pdf">manipulate</a>. That said, incorporating citations in some form is a long-term goal.
 
-*   **Metrics-Driven:**  Ranks schools based on faculty publications in the most selective computer science conferences, providing a quantitative and objective assessment.
-*   **Difficult to Game:** The ranking methodology focuses on publications in top conferences, making it harder to manipulate compared to citation-based metrics.
-*   **Comprehensive Data:**  Leverages data from DBLP.org to ensure a wide and up-to-date view of research output.
-*   **Community-Driven:**  Welcomes contributions to improve the accuracy and coverage of faculty affiliations and other data (contributions are processed quarterly).
-*   **Transparent Methodology:**  The ranking's methodology is open and accessible, with an FAQ available at [https://csrankings.org/faq.html](https://csrankings.org/faq.html).
+See the <a href="https://csrankings.org/faq.html">FAQ</a> for more details.
 
-## Contributing to CSrankings
+---
 
-CSrankings thrives on community contributions.  Help us keep the data accurate and up-to-date!
+This repository contains all code and data used to build the computer science rankings website, hosted here:
+https://csrankings.org
 
-### Adding or Modifying Affiliations
+### Adding or modifying affiliations
 
-1.  **Data Files:**  Edit the `csrankings-[a-z].csv` files, organizing data by the first letter of authors' first names.
-2.  **Contribution Guidelines:**  Please read the `CONTRIBUTING.md` file in the repository for full details and instructions on how to contribute.
-3.  **Quarterly Updates:**  Note that updates are processed on a quarterly basis.  Your pull requests are welcome at any time.
+**_NOTE: Updates are now processed on a quarterly basis. You may submit pull requests at any time, but they may not be processed until the next quarter (after three months have elapsed)._**
 
-### Getting Started Locally
+**You can now edit files directly in GitHub to create pull requests.** All data is
+in the files `csrankings-[a-z].csv`, with authors listed in
+alphabetical order by their first name, organized by the initial letter. Please read <a
+href="CONTRIBUTING.md">```CONTRIBUTING.md```</a> for full details on
+how to contribute.
 
-To run CSrankings locally:
+### Trying it out at home
 
-1.  **DBLP Data:**  Run `make update-dblp` to download the DBLP data. (Requires ~19GB memory).
-2.  **Build Databases:**  Run `make`.
-3.  **Local Web Server:**  Start a local web server (e.g., `python3 -m http.server`).
-4.  **Access:**  View the site at `http://0.0.0.0:8000`.
+Because of GitHub size limits, to run this site, you will want to download the DBLP
+data by running ``make update-dblp`` (note that this will consume
+upwards of 19GiB of memory). To then rebuild the databases, just run
+``make``. You can test it by running a local web server (e.g., ``python3 -m http.server``)
+and then connecting to [http://0.0.0.0:8000](http://0.0.0.0:8000).
 
-### Prerequisites
+You will also need to install libxml2-utils (or whatever package
+includes xmllint on your distro), npm, typescript, closure-compiler, python-lxml, [pypy](https://doc.pypy.org/en/latest/install.html),
+and basex via a command line like:
 
-You will need to install the following:
+``apt-get install libxml2-utils npm python-lxml basex; npm install -g typescript google-closure-compiler``
 
-*   `libxml2-utils` (or equivalent package with `xmllint`)
-*   `npm`
-*   `typescript`
-*   `google-closure-compiler`
-*   `python-lxml`
-*   `pypy`
-*   `basex`
+### Quick contribution via a shallow clone
 
-Install these with:
-`apt-get install libxml2-utils npm python-lxml basex; npm install -g typescript google-closure-compiler`
+A full clone of the CSrankings repository is almost 2GB, and the
+`csrankings.csv` file is too large to edit via the GitHub web site. To
+contribute a change without creating a full local clone of the
+CSrankings repo, you can do a shallow clone. To do so, follow these
+steps:
 
-### Quick Contribution via a Shallow Clone
+1. Fork the CSrankings repo. If you have an existing fork, but it is
+not up to date with the main repository, this technique may not
+work. If necessary, delete and re-create your fork to get it up to
+date. (Do not delete your existing fork if it has unmerged changes you
+want to preserve!)
+1. Do a shallow clone of your fork: `git clone --depth 1
+https://github.com/yourusername/CSrankings`. This will only download
+the most recent commit, not the full git history.
+1. Make your changes on a branch, push them to your clone, and create
+a pull request on GitHub as usual.
 
-To contribute changes without a full clone:
+If you want to make another contribution and some time has passed,
+perform steps 1-3 again, creating a fresh fork and shallow clone.
 
-1.  Fork the CSrankings repo.
-2.  Do a shallow clone of your fork: `git clone --depth 1 https://github.com/yourusername/CSrankings`.
-3.  Make your changes on a branch, push to your fork, and create a pull request.
 
-## Acknowledgements
+### Acknowledgements and other rankings
 
-CSrankings was developed primarily by and is maintained by [Emery Berger](https://emeryberger.com).  It incorporates feedback from numerous contributors.  The project builds upon the work of [Swarat Chaudhuri](https://www.cs.utexas.edu/~swarat/) and the faculty affiliation dataset constructed by [Papoutsaki et al.](http://cs.brown.edu/people/alexpap/faculty_dataset.html).  Data from [DBLP.org](http://dblp.org) is used, licensed under the ODC Attribution License.
+This site was developed primarily by and is maintained by [Emery
+Berger](https://emeryberger.com). It incorporates extensive feedback
+from too many folks to mention here, including many contributors who
+have helped to add and maintain faculty affiliations, home pages, and
+so on.
 
-## License
+This site was initially based on code and
+data collected by [Swarat
+Chaudhuri](https://www.cs.utexas.edu/~swarat/) (UT-Austin), though
+it has evolved considerably since its inception. The
+original faculty affiliation dataset was constructed by [Papoutsaki et
+al.](http://cs.brown.edu/people/alexpap/faculty_dataset.html); since
+then, it has been extensively cleaned and updated by numerous
+contributors. A previous ranking
+also used DBLP and Brown's dataset for [ranking theoretical computer
+science](https://projects.csail.mit.edu/dnd/ranking/.).
 
-CSrankings is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+This site uses information from [DBLP.org](http://dblp.org) which is made
+available under the ODC Attribution License.
+
+### License
+
+CSRankings is covered by the [Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International
+License](https://creativecommons.org/licenses/by-nc-nd/4.0/).

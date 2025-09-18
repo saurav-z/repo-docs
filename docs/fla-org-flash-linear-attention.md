@@ -1,35 +1,64 @@
 <div align="center">
 
-# Flash Linear Attention: Accelerating Sequence Modeling with Efficient Implementations
+# 💥 Flash Linear Attention
 
 [![hf_model](https://img.shields.io/badge/-Models-gray.svg?logo=huggingface&style=flat-square)](https://huggingface.co/fla-hub)  [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/vDaJTmKNcS)
 
 </div>
 
-**Flash Linear Attention (FLA) offers a comprehensive collection of highly optimized, Triton-based implementations for state-of-the-art linear attention models, enabling faster and more efficient sequence modeling.** This repository provides cutting-edge performance with its platform-agnostic design, fully written in PyTorch and Triton and supporting NVIDIA, AMD, and Intel platforms.  [See the original repo](https://github.com/fla-org/flash-linear-attention).
+This repo aims at providing a collection of efficient Triton-based implementations for state-of-the-art linear attention models. **All implementations are written purely in PyTorch and Triton, making them platform-agnostic.** Currently verified platforms include NVIDIA, AMD, and Intel. **Any pull requests are welcome!**
 
-**Key Features:**
+<div align="center">
+  <img width="400" alt="image" src="https://github.com/fla-org/flash-linear-attention/assets/18402347/02ff2e26-1495-4088-b701-e72cd65ac6cf">
+</div>
 
-*   **Platform-Agnostic & Optimized:**  Leverages PyTorch and Triton for maximum compatibility and performance across various hardware.
-*   **Diverse Model Implementations:** Supports a wide range of linear attention models, including RetNet, GLA, Mamba, and more (see [Models](#models)).
-*   **Fused Modules:** Offers pre-built, optimized modules like Rotary Embeddings, LayerNorm variations, fused cross-entropy, and KL divergence for faster training.
-*   **Flexible Hybrid Models:** Seamlessly integrates standard attention layers into linear attention models for customized architectures.
-*   **Easy Integration:**  Provides clear examples for token mixing, fused modules, generation, and training.
-*   **Pre-trained Models:**  Access ready-to-use models via the [fla-hub](https://huggingface.co/fla-hub) on Hugging Face.
+* [News](#news)
+* [Models](#models)
+* [Installation](#installation)
+* [Usage](#usage)
+  * [Token Mixing](#token-mixing)
+  * [Fused Modules](#fused-modules)
+  * [Generation](#generation)
+  * [Hybrid Models](#hybrid-models)
+* [Training](#training)
+* [Evaluation](#evaluation)
+* [Benchmarks](#benchmarks)
+* [Citation](#citation)
+* [Star History](#star-history)
+* [Acknowledgments](#acknowledgments)
 
-**Key Capabilities:**
+## News
 
-*   [Installation](#installation) - Comprehensive instructions to get you up and running with FLA
-*   [Usage](#usage) - Practical examples for token mixing, fused modules, hybrid models, generation, and training.
-*   [Models](#models) - An overview of supported linear attention models.
-*   [Training](#training) - Guides you through training with our [🔥 `flame`](https://github.com/fla-org/flame) training framework.
-*   [Evaluation](#evaluation) - Instructions on how to evaluate your models.
-*   [Benchmarks](#benchmarks) - Performance comparisons with other attention mechanisms.
-*   [Citation](#citation) - How to cite our work.
+- **$\texttt{[2025-09]}$:** 🐻 Thrilled to announce that [GDN](fla/ops/gated_delta_rule) has been integrated into Qwen3-Next.
+Check out [the PR](https://github.com/huggingface/transformers/pull/40771) and [their blog post](https://qwenlm.github.io/blog/qwen3_next/) for more infos!
+- **$\texttt{[2025-08]}$:** 🌲 Add Log-Linear Attention implementation to `fla` ([paper](https://arxiv.org/abs/2506.04761)).
+- **$\texttt{[2025-08]}$:** 🎓 Add MoM implementation to `fla` ([paper](https://arxiv.org/abs/2502.13685)).
+- **$\texttt{[2025-07]}$:** 🐳 Add MLA implementation to `fla` ([paper](https://arxiv.org/abs/2405.04434)).
+- **$\texttt{[2025-07]}$:** 🛣️ Added PaTH Attention to fla ([paper](https://arxiv.org/abs/2505.16381)).
+- **$\texttt{[2025-06]}$:** 🎉 Added MesaNet to fla ([paper](https://arxiv.org/abs/2506.05233)).
+- **$\texttt{[2025-06]}$:** 🐍 Add Comba implementation to `fla` ([paper](https://arxiv.org/abs/2506.02475)).
+- **$\texttt{[2025-05]}$:** 🎉 Add Rodimus&ast; implementation to `fla` ([paper](https://arxiv.org/abs/2410.06577)).
+- **$\texttt{[2025-04]}$:** 🎉 Add DeltaProduct implementation to `fla` ([paper](https://arxiv.org/abs/2502.10297)).
+- **$\texttt{[2025-04]}$:** 🎉 Add FoX implementation to `fla` ([paper](https://arxiv.org/abs/2503.02130)).
+- **$\texttt{[2025-03]}$:** ~~We have changed the default `initializer_range` to the magic 🐳 0.006~~ The `initializer_range` was rolled back to the default value of 0.02. For actual training, we recommend trying both.
+- **$\texttt{[2025-02]}$:** 🐳 Add NSA implementations to `fla`. See kernels [here](fla/ops/nsa).
+- **$\texttt{[2025-01]}$:** 🔥 We are migrating to `torchtitan`-based training framework. Check out the [flame](https://github.com/fla-org/flame) repo for more details.
+- **$\texttt{[2025-01]}$:** 🦅 Add RWKV7 implementations (both kernels and models) to `fla`.
+- **$\texttt{[2024-12]}$:** Integrated `flash-bidirectional-attention` to `fla-org` ([repo](https://github.com/fla-org/flash-bidirectional-linear-attention))
+- **$\texttt{[2024-12]}$:** 🎉 Add Gated DeltaNet implementation to `fla` ([paper](https://arxiv.org/abs/2412.06464)).
+- **$\texttt{[2024-12]}$:** 🚀 `fla` now officially supports kernels with variable-length inputs.
+- **$\texttt{[2024-11]}$:** The inputs are now switched from head-first to seq-first format.
+- **$\texttt{[2024-11]}$:** 💥 `fla` now provides a flexible way for training hybrid models.
+- **$\texttt{[2024-10]}$:** 🔥 Announcing `flame`, a minimal and scalable framework for training `fla` models. Check out the details [here](training/README.md).
+- **$\texttt{[2024-09]}$:** `fla` now includes a fused linear and cross-entropy layer, significantly reducing memory usage during training.
+- **$\texttt{[2024-09]}$:** 🎉 Add GSA implementation to `fla` ([paper](https://arxiv.org/abs/2409.07146)).
+- **$\texttt{[2024-05]}$:** 🎉 Add DeltaNet implementation to `fla` ([paper](https://arxiv.org/abs/2102.11174)).
+- **$\texttt{[2024-05]}$:** 💥 `fla` v0.1: a variety of subquadratic kernels/layers/models integrated (RetNet/GLA/Mamba/HGRN/HGRN2/RWKV6, etc., see [Models](#models)).
+- **$\texttt{[2023-12]}$:** 💥 Launched `fla`, offering a collection of implementations for state-of-the-art linear attention models.
 
 ## Models
 
-A detailed list of implemented models is available below, sorted by the year the original paper was published.  Training mode recommendations are provided where applicable (e.g., `chunk`).
+Roughly sorted according to the timeline supported in `fla`. The recommended training mode is `chunk` when available.
 
 | Year | Venue   | Model                | Paper                                                                                                                                         | Code                                                                                            |                                                                                                       |
 | :--- | :------ | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------: |
@@ -60,96 +89,218 @@ A detailed list of implemented models is available below, sorted by the year the
 
 ## Installation
 
-Ensure you have the following dependencies installed:
+[![nvidia-4090-ci](https://github.com/fla-org/flash-linear-attention/actions/workflows/nvidia-4090.yml/badge.svg?branch=main&event=push)](https://github.com/fla-org/flash-linear-attention/actions/workflows/nvidia-4090.yml) [![nvidia-a100-ci](https://github.com/fla-org/flash-linear-attention/actions/workflows/nvidia-a100.yml/badge.svg?branch=main)](https://github.com/fla-org/flash-linear-attention/actions/workflows/nvidia-a100.yml) [![nvidia-h100-ci](https://github.com/fla-org/flash-linear-attention/actions/workflows/nvidia-h100.yml/badge.svg?branch=main&event=push)](https://github.com/fla-org/flash-linear-attention/actions/workflows/nvidia-h100.yml) [![intel-b580-ci](https://github.com/fla-org/flash-linear-attention/actions/workflows/intel-b580.yml/badge.svg?event=push)](https://github.com/fla-org/flash-linear-attention/actions/workflows/intel-b580.yml)
 
-*   [PyTorch](https://pytorch.org/) >= 2.5
-*   [Triton](https://github.com/openai/triton) >=3.0 (or nightly version, see [FAQs](FAQs.md))
-*   [einops](https://einops.rocks/)
-*   [transformers](https://github.com/huggingface/transformers) >=4.45.0
-*   [datasets](https://github.com/huggingface/datasets) >=3.3.0
+The following requirements should be satisfied
+- [PyTorch](https://pytorch.org/) >= 2.5
+- [Triton](https://github.com/openai/triton) >=3.0 (or nightly version, see [FAQs](FAQs.md))
+- [einops](https://einops.rocks/)
+- [transformers](https://github.com/huggingface/transformers) >=4.45.0
+- [datasets](https://github.com/huggingface/datasets) >=3.3.0
 
-Install FLA using pip:
+Starting from v0.3.2, the packages published on PyPI are `fla-core` and `flash-linear-attention`. The former contains all our customized kernels and only depends on PyTorch, Triton, and einops. The latter is an extension package of the former, containing `fla/layers` and `fla/models`, and depends on transformers. We also provide Triton implementations for conv1d operations, so causal-conv1d is not required.
 
-```bash
+You can install `fla` with pip:
+```sh
 pip install flash-linear-attention
 ```
 
-To install from source for the latest features, you must uninstall the existing packages first:
-
-```bash
+As `fla` is actively developed now, for the latest features and updates, an alternative way is to install the package from source. Note that installing from git uses the default mode, so you need to uninstall both `fla-core` and `flash-linear-attention` first:
+```sh
+# uninstall both packages first to ensure a successful upgrade
 pip uninstall fla-core flash-linear-attention -y && pip install -U git+https://github.com/fla-org/flash-linear-attention
 ```
+or manage `fla` with submodules
+```sh
+git submodule add https://github.com/fla-org/flash-linear-attention.git 3rdparty/flash-linear-attention
+ln -s 3rdparty/flash-linear-attention/fla fla
+```
+
+If you have installed `triton-nightly` and `torch` pre version, please use the following command:
+```sh
+pip install einops ninja datasets transformers numpy
+# uninstall both packages first to ensure a successful upgrade
+pip uninstall fla-core flash-linear-attention -y && pip install -U --no-use-pep517 git+https://github.com/fla-org/flash-linear-attention --no-deps
+```
+
 
 ## Usage
 
 ### Token Mixing
 
-Integrate linear attention layers into your models using the modules in `fla.layers`:
-
-```python
-import torch
-from fla.layers import MultiScaleRetention
-batch_size, num_heads, seq_len, hidden_size = 32, 4, 2048, 1024
-device, dtype = 'cuda:0', torch.bfloat16
-retnet = MultiScaleRetention(hidden_size=hidden_size, num_heads=num_heads).to(device=device, dtype=dtype)
-x = torch.randn(batch_size, seq_len, hidden_size).to(device=device, dtype=dtype)
-y, *_ = retnet(x)
-print(y.shape) # torch.Size([32, 2048, 1024])
+We provide ``token mixing'' linear attention layers in `fla.layers` for you to use.
+You can replace the standard multihead attention layer in your model with other linear attention layers.
+Example usage is as follows:
+```py
+>>> import torch
+>>> from fla.layers import MultiScaleRetention
+>>> batch_size, num_heads, seq_len, hidden_size = 32, 4, 2048, 1024
+>>> device, dtype = 'cuda:0', torch.bfloat16
+>>> retnet = MultiScaleRetention(hidden_size=hidden_size, num_heads=num_heads).to(device=device, dtype=dtype)
+>>> retnet
+MultiScaleRetention(
+  (q_proj): Linear(in_features=1024, out_features=1024, bias=False)
+  (k_proj): Linear(in_features=1024, out_features=1024, bias=False)
+  (v_proj): Linear(in_features=1024, out_features=2048, bias=False)
+  (g_proj): Linear(in_features=1024, out_features=2048, bias=False)
+  (o_proj): Linear(in_features=2048, out_features=1024, bias=False)
+  (g_norm_swish_gate): FusedRMSNormGated(512, eps=1e-05, activation=swish)
+  (rotary): RotaryEmbedding(dim=256, base=10000.0, interleaved=False, pos_idx_in_fp32=True)
+)
+>>> x = torch.randn(batch_size, seq_len, hidden_size).to(device=device, dtype=dtype)
+>>> y, *_ = retnet(x)
+>>> y.shape
+torch.Size([32, 2048, 1024])
 ```
 
-#### Example GLA Model from 🤗 Transformers
+We provide the implementations of models that are compatible with 🤗 Transformers library.
+Here's an example of how to initialize a GLA model from the default configs in `fla`:
 
-```python
-from fla.models import GLAConfig
-from transformers import AutoModelForCausalLM
-config = GLAConfig()
-model = AutoModelForCausalLM.from_config(config)
-print(model) # Displays model architecture
+```py
+>>> from fla.models import GLAConfig
+>>> from transformers import AutoModelForCausalLM
+>>> config = GLAConfig()
+>>> config
+GLAConfig {
+  "attn": null,
+  "attn_mode": "chunk",
+  "bos_token_id": 1,
+  "clamp_min": null,
+  "conv_size": 4,
+  "elementwise_affine": true,
+  "eos_token_id": 2,
+  "expand_k": 0.5,
+  "expand_v": 1,
+  "feature_map": null,
+  "fuse_cross_entropy": true,
+  "fuse_norm": true,
+  "fuse_swiglu": true,
+  "hidden_act": "swish",
+  "hidden_ratio": 4,
+  "hidden_size": 2048,
+  "initializer_range": 0.006,
+  "intermediate_size": null,
+  "max_position_embeddings": 2048,
+  "model_type": "gla",
+  "norm_eps": 1e-06,
+  "num_heads": 4,
+  "num_hidden_layers": 24,
+  "num_kv_heads": null,
+  "tie_word_embeddings": false,
+  "transformers_version": "4.50.1",
+  "use_cache": true,
+  "use_gk": true,
+  "use_gv": false,
+  "use_output_gate": true,
+  "use_short_conv": false,
+  "vocab_size": 32000
+}
+
+>>> AutoModelForCausalLM.from_config(config)
+GLAForCausalLM(
+  (model): GLAModel(
+    (embeddings): Embedding(32000, 2048)
+    (layers): ModuleList(
+      (0-23): 24 x GLABlock(
+        (attn_norm): RMSNorm(2048, eps=1e-06)
+        (attn): GatedLinearAttention(
+          (q_proj): Linear(in_features=2048, out_features=1024, bias=False)
+          (k_proj): Linear(in_features=2048, out_features=1024, bias=False)
+          (v_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (g_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (gk_proj): Sequential(
+            (0): Linear(in_features=2048, out_features=16, bias=False)
+            (1): Linear(in_features=16, out_features=1024, bias=True)
+          )
+          (o_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (g_norm_swish_gate): FusedRMSNormGated(512, eps=1e-06, activation=swish)
+        )
+        (mlp_norm): RMSNorm(2048, eps=1e-06)
+        (mlp): GatedMLP(
+          (gate_proj): Linear(in_features=2048, out_features=5632, bias=False)
+          (up_proj): Linear(in_features=2048, out_features=5632, bias=False)
+          (down_proj): Linear(in_features=5632, out_features=2048, bias=False)
+          (swiglu_linear): SwiGLULinear()
+        )
+      )
+    )
+    (norm): RMSNorm(2048, eps=1e-06)
+  )
+  (lm_head): Linear(in_features=2048, out_features=32000, bias=False)
+)
 ```
 
 ### Fused Modules
 
-Utilize optimized modules from `fla.modules` for enhanced efficiency:
+We offer a collection of fused modules in `fla.modules` to facilitate faster training:
 
-*   `Rotary Embedding`
-*   `RMSNorm`, `LayerNorm`
-*   `RMSNormLinear`, `LayerNormLinear`
-*   `RMSNorm with Gating`
-*   `Fused Cross Entropy`
-*   `Linear Cross Entropy`
-*   `Linear KL Divergence`
+* [`Rotary Embedding`](fla/modules/rotary.py): rotary positional embeddings as adopted by the Llama architecture, a.k.a., Transformer++.
+* [`Norm Layers`](fla/modules/layernorm.py):
+  * `RMSNorm`, `LayerNorm` and `GroupNorm`
+  * `RMSNormLinear`, `LayerNormLinear` and `GroupNormLinear` to reduce memory usage of intermediate tensors for improved memory efficiency.
+* [`Norm Layers with Gating`](fla/modules/fused_norm_gate.py): combine norm layers with element-wise sigmoid or swish gating, as used by RetNet/GLA.
+* [`Cross Entropy`](fla/modules/fused_cross_entropy.py): faster Triton implementation of cross entropy loss.
+* [`Linear Cross Entropy`](fla/modules/fused_linear_cross_entropy.py): fused linear layer and cross entropy loss to avoid the materialization of large logits tensors. Also refer to implementations by [mgmalek](https://github.com/mgmalek/efficient_cross_entropy) and [Liger-Kernel](https://github.com/linkedin/Liger-Kernel/blob/main/src/liger_kernel/ops/fused_linear_cross_entropy.py).
+* [`Linear KL Divergence`](fla/modules/fused_kl_div.py): fused linear layer and KL divergence loss in a similar vein as CE loss.
 
-Enable `fuse_linear_cross_entropy` in your model configuration to use the fused linear cross entropy (disabled by default).
+> [!IMPORTANT]
+> You can control using `fuse_linear_cross_entropy` in the model configuration to enable/disable the fused linear cross entropy loss.
+>
+> This fused implementation is more memory-efficient but may reduce numerical precision. Due to this trade-off, it is disabled by default.
+> If you enable this feature and encounter training instability (e.g., loss divergence), we recommend disabling it to see if the issue is resolved.
 
 ### Generation
 
-Generate text with pre-trained models using the 🤗 text generation API:
-
-```python
-import fla
-from transformers import AutoModelForCausalLM, AutoTokenizer
-name = 'fla-hub/gla-1.3B-100B'
-tokenizer = AutoTokenizer.from_pretrained(name)
-model = AutoModelForCausalLM.from_pretrained(name).cuda()
-input_prompt = "Power goes with permanence. Impermanence is impotence. And rotation is castration."
-input_ids = tokenizer(input_prompt, return_tensors="pt").input_ids.cuda()
-outputs = model.generate(input_ids, max_length=64)
-print(tokenizer.batch_decode(outputs, skip_special_tokens=True)[0])
+Upon successfully pretraining a model, it becomes accessible for generating text using the 🤗 text generation APIs.
+In the following, we give a generation example:
+```py
+>>> import fla
+>>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> name = 'fla-hub/gla-1.3B-100B'
+>>> tokenizer = AutoTokenizer.from_pretrained(name)
+>>> model = AutoModelForCausalLM.from_pretrained(name).cuda()
+>>> input_prompt = "Power goes with permanence. Impermanence is impotence. And rotation is castration."
+>>> input_ids = tokenizer(input_prompt, return_tensors="pt").input_ids.cuda()
+>>> outputs = model.generate(input_ids, max_length=64)
+>>> tokenizer.batch_decode(outputs, skip_special_tokens=True)[0]
 ```
 
-Pre-trained models are available on [`fla-hub`](https://huggingface.co/fla-hub).
+We also provide a simple script [here](benchmarks/benchmark_generation.py) for benchmarking the generation speed.
+Simply run it by:
+```sh
+$ python -m benchmarks.benchmark_generation \
+  --path 'fla-hub/gla-1.3B-100B' \
+  --repetition_penalty 2. \
+  --prompt="Hello everyone, I'm Songlin Yang"
+
+Prompt:
+Hello everyone, I'm Songlin Yang
+Generated:
+Hello everyone, I'm Songlin Yang.
+I am a 20 year old girl from China who is currently studying in the United States of America for my Master degree and also working as an English teacher at school here on campus since last summer (1st semester). My main goal to be able do well with this course so that we can have
+
+Prompt length: 10, generation length: 64
+Total prompt processing + decoding time: 4593ms
+```
+
+All of the pretrained models currently available can be found in [`fla-hub`](https://huggingface.co/fla-hub).
+```py
+>>> from huggingface_hub import list_models
+>>> for model in list_models(author='fla-hub'): print(model.id)
+```
 
 ### Hybrid Models
 
-Integrate standard attention layers into `fla` models using the `attn` argument in the model configuration.
+`fla` provides a flexible method to incorporate standard attention layers into existing linear attention models.
+This is easily achieved by specifying the `attn` argument in the model configuration.
 
-Example:
+For example, to create a 2-layer Samba model with interleaved Mamba and local attention layers, using a sliding window size of 2048:
 
-```python
-from fla.models import SambaConfig
-from transformers import AutoModelForCausalLM
-config = SambaConfig(num_hidden_layers=2)
-config.attn = {
+```py
+>>> from fla.models import SambaConfig
+>>> from transformers import AutoModelForCausalLM
+>>> config = SambaConfig(num_hidden_layers=2)
+>>> config.attn = {
   'layers': [1],
   'num_heads': 18,
   'num_kv_heads': 18,
@@ -157,19 +308,116 @@ config.attn = {
   'rope_theta': 10000.,
   'window_size': 2048
 }
-model = AutoModelForCausalLM.from_config(config)
-print(model)
+>>> config
+SambaConfig {
+  "attn": {
+    "layers": [
+      1
+    ],
+    "num_heads": 18,
+    "num_kv_heads": 18,
+    "qkv_bias": false,
+    "rope_theta": 10000.0,
+    "window_size": 2048
+  },
+  "bos_token_id": 1,
+  "conv_kernel": 4,
+  "eos_token_id": 2,
+  "expand": 2,
+  "fuse_cross_entropy": true,
+  "fuse_norm": true,
+  "fuse_swiglu": true,
+  "hidden_act": "swish",
+  "hidden_ratio": 4,
+  "hidden_size": 2304,
+  "initializer_range": 0.02,
+  "intermediate_size": 4608,
+  "max_position_embeddings": 2048,
+  "model_type": "samba",
+  "norm_eps": 1e-05,
+  "num_hidden_layers": 2,
+  "pad_token_id": 0,
+  "rescale_prenorm_residual": false,
+  "residual_in_fp32": false,
+  "state_size": 16,
+  "tie_word_embeddings": false,
+  "time_step_floor": 0.0001,
+  "time_step_init_scheme": "random",
+  "time_step_max": 0.1,
+  "time_step_min": 0.001,
+  "time_step_rank": 144,
+  "time_step_scale": 1.0,
+  "transformers_version": "4.50.1",
+  "use_bias": false,
+  "use_cache": true,
+  "use_conv_bias": true,
+  "vocab_size": 32000
+}
+
+>>> AutoModelForCausalLM.from_config(config)
+SambaForCausalLM(
+  (backbone): SambaModel(
+    (embeddings): Embedding(32000, 2304)
+    (layers): ModuleList(
+      (0): SambaBlock(
+        (mixer_norm): RMSNorm(2304, eps=1e-05)
+        (mixer): Mamba(
+          (conv1d): Conv1d(4608, 4608, kernel_size=(4,), stride=(1,), padding=(3,), groups=4608)
+          (in_proj): Linear(in_features=2304, out_features=9216, bias=False)
+          (x_proj): Linear(in_features=4608, out_features=176, bias=False)
+          (dt_proj): Linear(in_features=144, out_features=4608, bias=True)
+          (out_proj): Linear(in_features=4608, out_features=2304, bias=False)
+        )
+        (mlp_norm): RMSNorm(2304, eps=1e-05)
+        (mlp): GatedMLP(
+          (gate_proj): Linear(in_features=2304, out_features=6144, bias=False)
+          (up_proj): Linear(in_features=2304, out_features=6144, bias=False)
+          (down_proj): Linear(in_features=6144, out_features=2304, bias=False)
+          (swiglu_linear): SwiGLULinear()
+        )
+      )
+      (1): SambaBlock(
+        (mixer_norm): RMSNorm(2304, eps=1e-05)
+        (mixer): Attention(
+          (q_proj): Linear(in_features=2304, out_features=2304, bias=False)
+          (k_proj): Linear(in_features=2304, out_features=2304, bias=False)
+          (v_proj): Linear(in_features=2304, out_features=2304, bias=False)
+          (o_proj): Linear(in_features=2304, out_features=2304, bias=False)
+          (rotary): RotaryEmbedding(dim=128, base=10000.0, interleaved=False, pos_idx_in_fp32=True)
+        )
+        (mlp_norm): RMSNorm(2304, eps=1e-05)
+        (mlp): GatedMLP(
+          (gate_proj): Linear(in_features=2304, out_features=6144, bias=False)
+          (up_proj): Linear(in_features=2304, out_features=6144, bias=False)
+          (down_proj): Linear(in_features=6144, out_features=2304, bias=False)
+          (swiglu_linear): SwiGLULinear()
+        )
+      )
+    )
+    (norm_f): RMSNorm(2304, eps=1e-05)
+  )
+  (lm_head): Linear(in_features=2304, out_features=32000, bias=False)
+)
 ```
+
+During inference, you **DO NOT** need to revise anything for generation!
+The model will produce output as-is, without any need for additional configurations or modifications.
 
 ## Training
 
-For efficient training of `fla` models, leverage the [🔥 `flame`](https://github.com/fla-org/flame) framework built on `torchtitan`. See [the GLA example](https://github.com/fla-org/flash-linear-attention/blob/main/examples/training.md) for details.
+We provide a minimal framework called [🔥 `flame`](https://github.com/fla-org/flame) built on top of `torchtitan`, for efficient training of `fla` models.
+
+Checkout [the GLA example](https://github.com/fla-org/flash-linear-attention/blob/main/examples/training.md) for more details.
 
 ## Evaluation
 
-Evaluate models using the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) library.  Install the library using the instructions on their repo and then run:
+The [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) library allows you to easily perform (zero-shot) model evaluations.
+Follow the steps below to use this library:
 
-```bash
+1. Install `lm_eval` following [their instructions](https://github.com/EleutherAI/lm-evaluation-harness/blob/main/README.md).
+
+2. Run evaluation with:
+```sh
 $ MODEL='fla-hub/gla-1.3B-100B'
 $ python -m evals.harness --model hf \
     --model_args pretrained=$MODEL,dtype=bfloat16 \
@@ -180,25 +428,86 @@ $ python -m evals.harness --model hf \
     --show_config
 ```
 
-or use the accelerate launcher for multi-GPU evaluation.
+We've made `fla` compatible with hf-style evaluations, you can call [evals.harness](evals/harness.py) to finish the evaluations.
+Running the command above will provide the task results reported in the GLA paper.
+
+3. Multi-GPU Evaluation with Hugging Face accelerate 🚀
+
+To perform data-parallel evaluation (where each GPU loads a separate full copy of the model), we leverage the accelerate launcher as follows:
+```sh
+$ MODEL='fla-hub/gla-1.3B-100B'
+$ accelerate launch -m evals.harness --model hf  \
+    --model_args pretrained=$MODEL,dtype=bfloat16,trust_remote_code=True  \
+    --tasks wikitext,lambada_openai,piqa,hellaswag,winogrande,arc_easy,arc_challenge,boolq,sciq,copa,openbookqa \
+    --batch_size 64  \
+    --num_fewshot 0  \
+    --device cuda  \
+    --show_config  \
+    --trust_remote_code
+```
+
+4. 📏 RULER Benchmark suite
+
+The RULER benchmarks are commonly used for evaluating model performance on long-context tasks.
+You can evaluate `fla` models on RULER directly using `lm-evaluation-harness`. RULER is only available in a relatively recent version of `lm-evaluation-harness`, so make sure you have the latest version installed.
+
+```
+git clone --depth 1 https://github.com/EleutherAI/lm-evaluation-harness
+cd lm-evaluation-harness
+pip install -e .
+```
+
+
+Then, install the necessary dependencies for RULER:
+```sh
+pip install lm_eval["ruler"]
+```
+and run evaluation by (e.g., 32k contexts):
+```sh
+$ accelerate launch -m evals.harness \
+    --output_path $OUTPUT \
+    --tasks niah_single_1,niah_single_2,niah_single_3,niah_multikey_1,niah_multikey_2,niah_multikey_3,niah_multiquery,niah_multivalue,ruler_vt,ruler_cwe,ruler_fwe,ruler_qa_hotpot,ruler_qa_squad \
+    --model_args pretrained=$MODEL,dtype=bfloat16,max_length=32768,trust_remote_code=True \
+    --metadata='{"max_seq_lengths":[4096,8192,16384,32768]}' \
+    --batch_size 2 \
+    --show_config  \
+    --trust_remote_code
+```
+
+If a GPU can't load a full copy of the model, please refer to [this link](https://github.com/EleutherAI/lm-evaluation-harness?tab=readme-ov-file#multi-gpu-evaluation-with-hugging-face-accelerate) for FSDP settings.
+
+> [!Tip]
+> If you are using `lm-evaluation-harness` as an external library and can't find (almost) any tasks available, before calling `lm_eval.evaluate()` or `lm_eval.simple_evaluate()`, simply run the following to load the library's stock tasks!
+```py
+>>> from lm_eval.tasks import TaskManager; TaskManager().initialize_tasks()
+```
 
 ## Benchmarks
 
-We benchmarked our Triton-based RetNet implementation against CUDA-based FlashAttention2.  The graph below demonstrates the performance on a single H100 GPU for varying sequence lengths.
-
+We compared our Triton-based RetNet implementation with CUDA-based FlashAttention2, using a batch size of 8, 32 heads, and a head dimension of 128, across different sequence lengths.
+These tests were conducted on a single H100 80GB GPU, as illustrated in the following graph
 ```py
-#  See the benchmarking script for results.
-#  You might have to first install `fla` to enable its import via `pip install -e .`
+# you might have to first install `fla` to enable its import via `pip install -e .`
+$ python benchmark_retention.py
+Performance:
+         T  chunk_fwd  parallel_fwd  flash_fwd  chunk_fwdbwd  parallel_fwdbwd  flash_fwdbwd
+0    128.0   0.264032      0.243536   0.083488      1.301856         1.166784      0.320704
+1    256.0   0.273472      0.252848   0.094304      1.345872         1.300608      0.807936
+2    512.0   0.303600      0.278896   0.098112      1.503168         1.433184      0.857216
+3   1024.0   0.357248      0.367360   0.156528      1.773552         2.303424      1.160864
+4   2048.0   0.454624      0.605616   0.340928      2.283728         4.483360      1.955936
+5   4096.0   0.638960      1.378016   1.004992      3.374720        12.271215      4.813776
+6   8192.0   1.012352      4.201344   3.625008      5.581808        40.833618     15.023697
+7  16384.0   1.748512     14.489664  13.710080     10.191552       153.093765     54.336864
 ```
 
 <div align="center">
   <img width="500" alt="image" src="https://github.com/user-attachments/assets/c2607015-63af-43d1-90d1-ad5fe1670a03">
 </div>
 
+
 ## Citation
-
-Please cite our work if you find this repository helpful:
-
+If you find this repository helpful, please cite our work:
 ```bib
 @software{yang2024fla,
   title  = {FLA: A Triton-Based Library for Hardware-Efficient Implementations of Linear Attention Mechanism},
@@ -248,8 +557,9 @@ Please cite our work if you find this repository helpful:
 
 [![Stargazers repo roster for @fla-org/flash-linear-attention](https://bytecrank.com/nastyox/reporoster/php/stargazersSVG.php?user=fla-org&repo=flash-linear-attention)](https://github.com/fla-org/flash-linear-attention/stargazers)
 
+
 [![Star History Chart](https://api.star-history.com/svg?repos=fla-org/flash-linear-attention&type=Date)](https://star-history.com/#fla-org/flash-linear-attention&Date)
 
 ## Acknowledgments
 
-We thank [Bitdeer](https://www.bitdeer.com/) for providing CI server resources.
+We extend our gratitude to [Bitdeer](https://www.bitdeer.com/) for providing CI server resources that power our infrastructure.

@@ -1,59 +1,52 @@
-# Find the Fastest Cloudflare IPs with cf-speed-dns
+# Maximize Your Cloudflare CDN Speed with cf-speed-dns
 
-This tool helps you find and automatically update your Cloudflare DNS records with the fastest IPs, optimizing your website's speed and performance. ([Original Repo](https://github.com/ZhiXuanWang/cf-speed-dns))
+**Tired of slow website loading times?** **cf-speed-dns** automatically finds and updates your Cloudflare DNS settings with the fastest IP addresses, providing optimal performance and speed for your website.  [See the original repository here](https://github.com/ZhiXuanWang/cf-speed-dns).
 
-## Key Features
+## Key Features of cf-speed-dns:
 
-*   **Real-time Cloudflare IP Optimization:** Automatically identifies and updates your Cloudflare DNS records with the fastest-performing IPs.
-*   **Optimized IP Lists:** Provides pre-generated lists of optimized Cloudflare IPs, updated every 5 minutes, for immediate use.
-*   **Multiple Interface Options:** Offers several interface options to choose from, including:
-    *   [https://ip.164746.xyz](https://ip.164746.xyz) (Main list)
-    *   [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html) (Top IPs - Default)
-    *   [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html) (Top 10 IPs)
-*   **DNSPOD & DNSCF Integration:** Supports automated DNS record updates through DNSPOD and DNSCF, using GitHub Actions.
-*   **Notification Support:** Integrates with PUSHPLUS for real-time notifications on updates.
-*   **Easy Setup:** Configuration using GitHub Actions secrets and variables.
+*   **Real-time Cloudflare IP Optimization:** Automatically identifies and updates your DNS records with the fastest Cloudflare CDN IP addresses, ensuring the best possible website performance.
+*   **Optimized IP Lists:** Access pre-generated lists of optimized Cloudflare IPs:
+    *   [Top IPs](https://ip.164746.xyz/ipTop.html) (Default)
+    *   [Top 10 IPs](https://ip.164746.xyz/ipTop10.html)
+*   **Dynamic DNS Updates:**  Integrates with popular DNS providers for seamless updates.
+    *   DNSPOD integration via GitHub Actions.
+    *   DNSCF integration via GitHub Actions.
+*   **Customizable Notifications:** Receive notifications via PUSHPLUS to stay informed about updates.  Configure your PUSHPLUS token: [https://www.pushplus.plus/push1.html](https://www.pushplus.plus/push1.html)
+*   **Easy Integration:**  Uses GitHub Actions for automated DNS updates, making setup straightforward.
 
-## How it Works
+## How to Use the API:
 
-cf-speed-dns uses CloudflareSpeedTest to determine the fastest Cloudflare IPs and automatically updates your DNS records. The following configuration is needed.
-
-### **DNSPOD Configuration**
-
-1.  **Fork this project.**
-2.  **Configure GitHub Actions secrets and variables:**
-    *   `DOMAIN`: Your domain (e.g., `164746.xyz`)
-    *   `SUB_DOMAIN`: Your subdomain (e.g., `dns`)
-    *   `SECRETID`: Your DNSPOD Secret ID
-    *   `SECRETKEY`: Your DNSPOD Secret Key
-    *   `PUSHPLUS_TOKEN` (Optional): Your Pushplus token for notifications.
-
-### **DNSCF Configuration**
-
-1.  **Fork this project.**
-2.  **Configure GitHub Actions secrets and variables:**
-    *   `CF_API_TOKEN`: Your Cloudflare API Token
-    *   `CF_ZONE_ID`: Your Cloudflare Zone ID
-    *   `CF_DNS_NAME`: Your DNS name (e.g., `dns.164746.xyz`)
-    *   `PUSHPLUS_TOKEN` (Optional): Your Pushplus token for notifications.
-
-## API Endpoint
+Get the top optimized IP addresses using a simple `curl` request:
 
 ```bash
 curl 'https://ip.164746.xyz/ipTop.html'
 ```
 
-### API Response Example
+The API returns a comma-separated list of the fastest IPs, for example:
 
 ```
 104.16.204.6,104.18.103.125
 ```
 
+## Configuration (GitHub Actions):
+
+Configure the following secrets and variables in your GitHub Actions workflow for DNS updates:
+
+*   **DNSPOD:**
+    *   `DOMAIN`: Your domain name (e.g., `164746.xyz`)
+    *   `SUB_DOMAIN`: Your subdomain (e.g., `dns`)
+    *   `SECRETID`: Your DNSPOD Secret ID.
+    *   `SECRETKEY`: Your DNSPOD Secret Key.
+    *   `PUSHPLUS_TOKEN`: Your PUSHPLUS Token.
+*   **DNSCF:**
+    *   `CF_API_TOKEN`: Your Cloudflare API Token.
+    *   `CF_ZONE_ID`: Your Cloudflare Zone ID.
+    *   `CF_DNS_NAME`:  Your DNS record name (e.g., `dns.164746.xyz`)
+    *   `PUSHPLUS_TOKEN`: Your PUSHPLUS Token.
+
 ## Acknowledgements
 
 *   [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
 *   [ddgth](https://github.com/ddgth/cf2dns)
-
-## Advertisement
 
 [![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")

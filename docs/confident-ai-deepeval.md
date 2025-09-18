@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <h1 align="center">DeepEval: The Open-Source LLM Evaluation Framework</h1>
+    <h1 align="center">DeepEval: Effortlessly Evaluate Your LLMs</h1>
 </p>
 
 <p align="center">
@@ -53,23 +53,20 @@
     <a href="https://www.readme-i18n.com/confident-ai/deepeval?lang=zh">中文</a>
 </p>
 
+## DeepEval: The Open-Source Framework for LLM Evaluation
 
-## DeepEval: Evaluate and Test Your LLMs with Ease
+**DeepEval** is an open-source framework that simplifies LLM evaluation, testing, and debugging, enabling you to build and refine reliable LLM applications.  Check out the [DeepEval GitHub repository](https://github.com/confident-ai/deepeval) to get started!
 
-DeepEval is an open-source LLM evaluation framework, designed to help you rigorously test and improve your large language model applications.  Check out the [original repo](https://github.com/confident-ai/deepeval) for more details!
+### Key Features:
 
-**Key Features:**
-
-*   **Comprehensive Metrics:** Evaluate LLM outputs using a wide range of metrics, including G-Eval, hallucination detection, answer relevancy, RAGAS, and more.
-*   **Local Execution:**  Runs evaluation locally on your machine, giving you control over your data and infrastructure.
-*   **Flexible Integration:**  Works seamlessly with any LLM, including those built with LangChain, LlamaIndex, and custom setups.
-*   **Component-Level Evaluation:** Evaluate individual components within your LLM applications (LLM calls, retrievers, agents) using the `@observe` decorator for granular insights.
-*   **Custom Metric Creation:**  Build your own custom metrics that integrate with DeepEval's ecosystem.
-*   **Synthetic Dataset Generation:** Create synthetic datasets to test your LLMs thoroughly.
-*   **CI/CD Integration:**  Integrate DeepEval into your CI/CD pipelines for automated testing.
-*   **Red Teaming:**  Red team your LLM application for security vulnerabilities like toxicity, bias, and prompt injection attacks.
-*   **Benchmark Support:** Easily benchmark your LLM on popular benchmarks such as MMLU, HellaSwag, and HumanEval.
-*   **Confident AI Integration:** Integrates with [Confident AI](https://confident-ai.com?utm_source=GitHub) for a full LLM evaluation lifecycle, including dataset management, benchmarking, result comparison, and more.
+*   **Comprehensive Metrics:** Evaluate LLM outputs with a wide range of metrics, including G-Eval, answer relevancy, hallucination, RAG metrics, and more.
+*   **Local Execution:** All evaluations are run locally on your machine, providing data privacy and control.
+*   **Customizable:** Build and integrate your own custom metrics seamlessly.
+*   **End-to-End and Component-Level Evaluation:** Test your LLM applications at both the macro and micro levels.
+*   **CI/CD Integration:** Integrates seamlessly with any CI/CD environment.
+*   **Red Teaming:**  Test for safety vulnerabilities (e.g., toxicity, bias, SQL injection) with built-in red-teaming capabilities.
+*   **Benchmarking:** Easily benchmark your LLMs on popular benchmarks like MMLU and HumanEval.
+*   **Integration with Confident AI:** Full evaluation lifecycle support through the DeepEval platform for dataset curation, benchmarking, debugging, monitoring, and more.
 
 > [!IMPORTANT]
 > Need a place for your DeepEval testing data to live 🏡❤️? [Sign up to the DeepEval platform](https://confident-ai.com?utm_source=GitHub) to compare iterations of your LLM app, generate & share testing reports, and more.
@@ -84,54 +81,54 @@ DeepEval is an open-source LLM evaluation framework, designed to help you rigoro
 
 > 🥳 You can now share DeepEval's test results on the cloud directly on [Confident AI](https://confident-ai.com?utm_source=GitHub)'s infrastructure
 
--   Supports both end-to-end and component-level LLM evaluation.
--   Large variety of ready-to-use LLM evaluation metrics (all with explanations) powered by **ANY** LLM of your choice, statistical methods, or NLP models that runs **locally on your machine**:
-    -   G-Eval
-    -   DAG ([deep acyclic graph](https://deepeval.com/docs/metrics-dag))
-    -   **RAG metrics:**
-        -   Answer Relevancy
-        -   Faithfulness
-        -   Contextual Recall
-        -   Contextual Precision
-        -   Contextual Relevancy
-        -   RAGAS
-    -   **Agentic metrics:**
-        -   Task Completion
-        -   Tool Correctness
-    -   **Others:**
-        -   Hallucination
-        -   Summarization
-        -   Bias
-        -   Toxicity
-    -   **Conversational metrics:**
-        -   Knowledge Retention
-        -   Conversation Completeness
-        -   Conversation Relevancy
-        -   Role Adherence
-    -   etc.
--   Build your own custom metrics that are automatically integrated with DeepEval's ecosystem.
--   Generate synthetic datasets for evaluation.
--   Integrates seamlessly with **ANY** CI/CD environment.
--   [Red team your LLM application](https://deepeval.com/docs/red-teaming-introduction) for 40+ safety vulnerabilities in a few lines of code, including:
-    -   Toxicity
-    -   Bias
-    -   SQL Injection
-    -   etc., using advanced 10+ attack enhancement strategies such as prompt injections.
--   Easily benchmark **ANY** LLM on popular LLM benchmarks in [under 10 lines of code.](https://deepeval.com/docs/benchmarks-introduction?utm_source=GitHub), which includes:
-    -   MMLU
-    -   HellaSwag
-    -   DROP
-    -   BIG-Bench Hard
-    -   TruthfulQA
-    -   HumanEval
-    -   GSM8K
--   [100% integrated with Confident AI](https://confident-ai.com?utm_source=GitHub) for the full evaluation lifecycle:
-    -   Curate/annotate evaluation datasets on the cloud
-    -   Benchmark LLM app using dataset, and compare with previous iterations to experiment which models/prompts works best
-    -   Fine-tune metrics for custom results
-    -   Debug evaluation results via LLM traces
-    -   Monitor & evaluate LLM responses in product to improve datasets with real-world data
-    -   Repeat until perfection
+*   **Supports both end-to-end and component-level LLM evaluation.**
+*   **Ready-to-use LLM Evaluation Metrics** (with explanations) powered by ANY LLM of your choice, statistical methods, or NLP models that runs **locally on your machine**:
+    *   G-Eval
+    *   DAG ([deep acyclic graph](https://deepeval.com/docs/metrics-dag))
+    *   **RAG metrics:**
+        *   Answer Relevancy
+        *   Faithfulness
+        *   Contextual Recall
+        *   Contextual Precision
+        *   Contextual Relevancy
+        *   RAGAS
+    *   **Agentic metrics:**
+        *   Task Completion
+        *   Tool Correctness
+    *   **Others:**
+        *   Hallucination
+        *   Summarization
+        *   Bias
+        *   Toxicity
+    *   **Conversational metrics:**
+        *   Knowledge Retention
+        *   Conversation Completeness
+        *   Conversation Relevancy
+        *   Role Adherence
+    *   etc.
+*   **Build your own custom metrics** that are automatically integrated with DeepEval's ecosystem.
+*   **Generate synthetic datasets for evaluation.**
+*   **Integrates seamlessly with ANY CI/CD environment.**
+*   [Red team your LLM application](https://deepeval.com/docs/red-teaming-introduction) for 40+ safety vulnerabilities in a few lines of code, including:
+    *   Toxicity
+    *   Bias
+    *   SQL Injection
+    *   etc., using advanced 10+ attack enhancement strategies such as prompt injections.
+*   Easily benchmark **ANY** LLM on popular LLM benchmarks in [under 10 lines of code.](https://deepeval.com/docs/benchmarks-introduction?utm_source=GitHub), which includes:
+    *   MMLU
+    *   HellaSwag
+    *   DROP
+    *   BIG-Bench Hard
+    *   TruthfulQA
+    *   HumanEval
+    *   GSM8K
+*   [100% integrated with Confident AI](https://confident-ai.com?utm_source=GitHub) for the full evaluation lifecycle:
+    *   Curate/annotate evaluation datasets on the cloud
+    *   Benchmark LLM app using dataset, and compare with previous iterations to experiment which models/prompts works best
+    *   Fine-tune metrics for custom results
+    *   Debug evaluation results via LLM traces
+    *   Monitor & evaluate LLM responses in product to improve datasets with real-world data
+    *   Repeat until perfection
 
 > [!NOTE]
 > Confident AI is the DeepEval platform. Create an account [here.](https://app.confident-ai.com?utm_source=GitHub)
@@ -140,14 +137,14 @@ DeepEval is an open-source LLM evaluation framework, designed to help you rigoro
 
 # 🔌 Integrations
 
--   🦄 LlamaIndex, to [**unit test RAG applications in CI/CD**](https://www.deepeval.com/integrations/frameworks/llamaindex?utm_source=GitHub)
--   🤗 Hugging Face, to [**enable real-time evaluations during LLM fine-tuning**](https://www.deepeval.com/integrations/frameworks/huggingface?utm_source=GitHub)
+*   🦄 LlamaIndex, to [**unit test RAG applications in CI/CD**](https://www.deepeval.com/integrations/frameworks/llamaindex?utm_source=GitHub)
+*   🤗 Hugging Face, to [**enable real-time evaluations during LLM fine-tuning**](https://www.deepeval.com/integrations/frameworks/huggingface?utm_source=GitHub)
 
 <br />
 
 # 🚀 QuickStart
 
-Let's pretend your LLM application is a RAG based customer support chatbot; here's how DeepEval can help test what you've built.
+Test your LLM application, such as a RAG-based customer support chatbot, with DeepEval.
 
 ## Installation
 
@@ -214,10 +211,10 @@ deepeval test run test_chatbot.py
 
 **Congratulations! Your test case should have passed ✅** Let's breakdown what happened.
 
--   The variable `input` mimics a user input, and `actual_output` is a placeholder for what your application's supposed to output based on this input.
--   The variable `expected_output` represents the ideal answer for a given `input`, and [`GEval`](https://deepeval.com/docs/metrics-llm-evals) is a research-backed metric provided by `deepeval` for you to evaluate your LLM output's on any custom with human-like accuracy.
--   In this example, the metric `criteria` is correctness of the `actual_output` based on the provided `expected_output`.
--   All metric scores range from 0 - 1, which the `threshold=0.5` threshold ultimately determines if your test have passed or not.
+- The variable `input` mimics a user input, and `actual_output` is a placeholder for what your application's supposed to output based on this input.
+- The variable `expected_output` represents the ideal answer for a given `input`, and [`GEval`](https://deepeval.com/docs/metrics-llm-evals) is a research-backed metric provided by `deepeval` for you to evaluate your LLM output's on any custom with human-like accuracy.
+- In this example, the metric `criteria` is correctness of the `actual_output` based on the provided `expected_output`.
+- All metric scores range from 0 - 1, which the `threshold=0.5` threshold ultimately determines if your test have passed or not.
 
 [Read our documentation](https://deepeval.com/docs/getting-started?utm_source=GitHub) for more information on more options to run end-to-end evaluation, how to use additional metrics, create your own custom metrics, and tutorials on how to integrate with other tools like LangChain and LlamaIndex.
 
@@ -355,7 +352,6 @@ Opt out with `DEEPEVAL_DISABLE_DOTENV=1`.
 ```bash
 cp .env.example .env.local
 # then edit .env.local (ignored by git)
-```
 
 <br />
 
@@ -369,14 +365,14 @@ Please read [CONTRIBUTING.md](https://github.com/confident-ai/deepeval/blob/main
 
 Features:
 
--   \[x] Integration with Confident AI
--   \[x] Implement G-Eval
--   \[x] Implement RAG metrics
--   \[x] Implement Conversational metrics
--   \[x] Evaluation Dataset Creation
--   \[x] Red-Teaming
--   \[ ] DAG custom metrics
--   \[ ] Guardrails
+- [x] Integration with Confident AI
+- [x] Implement G-Eval
+- [x] Implement RAG metrics
+- [x] Implement Conversational metrics
+- [x] Evaluation Dataset Creation
+- [x] Red-Teaming
+- [ ] DAG custom metrics
+- [ ] Guardrails
 
 <br />
 

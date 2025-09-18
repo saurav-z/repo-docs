@@ -1,19 +1,19 @@
-# Claude Code SDK for Python: Build Powerful AI-Powered Code Assistants
+# Claude Code SDK for Python: Build Powerful AI-Powered Coding Assistants
 
-**Unlock the power of Anthropic's Claude Code with the Python SDK, enabling you to build and integrate intelligent code assistance directly into your applications.**  [Explore the original repository](https://github.com/anthropics/claude-code-sdk-python) for more details.
+**Unlock the potential of AI-powered code generation and analysis with the Claude Code SDK for Python**, enabling you to integrate Claude Code directly into your Python applications. ([Original Repo](https://github.com/anthropics/claude-code-sdk-python))
 
-**Key Features:**
+## Key Features:
 
-*   **Asynchronous Querying:** Interact with Claude Code using async functions for efficient processing.
-*   **Custom Tool Integration:** Easily define and integrate custom Python functions as tools for Claude Code to use, enhancing its capabilities.
-*   **In-Process SDK MCP Servers:** Run custom tools in the same process, improving performance, simplifying deployment, and making debugging easier.
-*   **Hooks for Control:** Implement hooks to control Claude Code's behavior at specific points, enabling deterministic processing and automated feedback.
-*   **Error Handling:** Comprehensive error handling to gracefully manage potential issues.
-*   **Type Definitions:** Access to clear type definitions for easy integration and development.
+*   **Easy Installation:** Quickly get started with a simple `pip install claude-code-sdk`.
+*   **Asynchronous Querying:** Leverage the `query()` function for straightforward, async interactions with Claude Code, receiving responses as an `AsyncIterator`.
+*   **Custom Tools:** Extend Claude Code's capabilities by defining and integrating your own Python functions as tools, running them directly within your application for enhanced performance and ease of use.
+*   **Hooks:** Implement custom logic to control Claude Code's behavior at specific stages, such as pre-tool use, enabling advanced control and deterministic processing.
+*   **Bidirectional Conversations:** Utilize the `ClaudeSDKClient` for interactive, stateful conversations with Claude Code.
+*   **Error Handling:** Robust error handling with specific exception types to manage potential issues gracefully.
+*   **Comprehensive Examples:** Explore detailed examples to accelerate your development, including a quick start guide, streaming mode implementations, and interactive IPython examples.
+*   **Types:** Ready to use types, which can be found [here](src/claude_code_sdk/types.py).
 
 ## Installation
-
-Get started quickly by installing the SDK:
 
 ```bash
 pip install claude-code-sdk
@@ -27,8 +27,6 @@ pip install claude-code-sdk
 
 ## Quick Start
 
-Get up and running with a basic example:
-
 ```python
 import anyio
 from claude_code_sdk import query
@@ -40,11 +38,9 @@ async def main():
 anyio.run(main)
 ```
 
-## Core Functionality
+## Basic Usage: query()
 
-### Basic Usage: `query()`
-
-The `query()` function allows you to send prompts to Claude Code and receive an `AsyncIterator` of response messages.  Refer to `src/claude_code_sdk/query.py` for the source code.
+The `query()` function enables easy querying of Claude Code. It returns an `AsyncIterator` of response messages.
 
 ```python
 from claude_code_sdk import query, ClaudeCodeOptions, AssistantMessage, TextBlock
@@ -68,8 +64,6 @@ async for message in query(prompt="Tell me a joke", options=options):
 
 ### Using Tools
 
-Configure and leverage Claude Code's tool capabilities:
-
 ```python
 options = ClaudeCodeOptions(
     allowed_tools=["Read", "Write", "Bash"],
@@ -86,8 +80,6 @@ async for message in query(
 
 ### Working Directory
 
-Set the working directory for Claude Code:
-
 ```python
 from pathlib import Path
 
@@ -96,15 +88,20 @@ options = ClaudeCodeOptions(
 )
 ```
 
-## Advanced Features
+## ClaudeSDKClient
 
-### `ClaudeSDKClient` for Interactive Conversations
+`ClaudeSDKClient` supports bidirectional, interactive conversations with Claude
+Code. See [src/claude_code_sdk/client.py](src/claude_code_sdk/client.py).
 
-The `ClaudeSDKClient` enables bidirectional, interactive conversations with Claude Code.  See `src/claude_code_sdk/client.py` for details.
+Unlike `query()`, `ClaudeSDKClient` additionally enables **custom tools** and **hooks**, both of which can be defined as Python functions.
 
-### Custom Tools with SDK MCP Servers
+### Custom Tools (as In-Process SDK MCP Servers)
 
-Implement custom tools as Python functions, running directly within your application for enhanced performance and simplified deployment. For an end-to-end example, see [MCP Calculator](examples/mcp_calculator.py).
+A **custom tool** is a Python function that you can offer to Claude, for Claude to invoke as needed.
+
+Custom tools are implemented in-process MCP servers that run directly within your Python application, eliminating the need for separate processes that regular MCP servers require.
+
+For an end-to-end example, see [MCP Calculator](examples/mcp_calculator.py).
 
 #### Creating a Simple Tool
 
@@ -141,17 +138,15 @@ async with ClaudeSDKClient(options=options) as client:
         print(msg)
 ```
 
-#### Benefits of SDK MCP Servers
+#### Benefits Over External MCP Servers
 
-*   No subprocess management
-*   Better performance with no IPC overhead
-*   Simpler deployment with a single process
-*   Easier debugging in the same process
-*   Type safety with direct function calls
+*   **No subprocess management** - Runs in the same process as your application
+*   **Better performance** - No IPC overhead for tool calls
+*   **Simpler deployment** - Single Python process instead of multiple
+*   **Easier debugging** - All code runs in the same process
+*   **Type safety** - Direct Python function calls with type hints
 
 #### Migration from External Servers
-
-Easily migrate from external MCP servers to in-process SDK servers:
 
 ```python
 # BEFORE: External MCP server (separate process)
@@ -180,7 +175,7 @@ options = ClaudeCodeOptions(
 
 #### Mixed Server Support
 
-Combine SDK and external MCP servers for flexible configurations:
+You can use both SDK and external MCP servers together:
 
 ```python
 options = ClaudeCodeOptions(
@@ -196,7 +191,9 @@ options = ClaudeCodeOptions(
 
 ### Hooks
 
-Use hooks to customize Claude Code's agent loop and behavior.  See the [Claude Code Hooks Reference](https://docs.anthropic.com/en/docs/claude-code/hooks) for more information.
+A **hook** is a Python function that the Claude Code *application* (*not* Claude) invokes at specific points of the Claude agent loop. Hooks can provide deterministic processing and automated feedback for Claude. Read more in [Claude Code Hooks Reference](https://docs.anthropic.com/en/docs/claude-code/hooks).
+
+For more examples, see examples/hooks.py.
 
 #### Example
 
@@ -210,7 +207,7 @@ async def check_bash_command(input_data, tool_use_id, context):
         return {}
     command = tool_input.get("command", "")
     block_patterns = ["foo.sh"]
-    for pattern in command:
+    for pattern in block_patterns:
         if pattern in command:
             return {
                 "hookSpecificOutput": {
@@ -246,14 +243,12 @@ async with ClaudeSDKClient(options=options) as client:
 
 ## Types
 
-Explore the available types in `src/claude_code_sdk/types.py`:
-*   `ClaudeCodeOptions`
-*   `AssistantMessage`, `UserMessage`, `SystemMessage`, `ResultMessage`
-*   `TextBlock`, `ToolUseBlock`, `ToolResultBlock`
+The source code for the types can be found [here](src/claude_code_sdk/types.py):
+*   `ClaudeCodeOptions` - Configuration options
+*   `AssistantMessage`, `UserMessage`, `SystemMessage`, `ResultMessage` - Message types
+*   `TextBlock`, `ToolUseBlock`, `ToolResultBlock` - Content blocks
 
 ## Error Handling
-
-Implement robust error handling:
 
 ```python
 from claude_code_sdk import (
@@ -275,18 +270,19 @@ except CLIJSONDecodeError as e:
     print(f"Failed to parse response: {e}")
 ```
 
-See `src/claude_code_sdk/_errors.py` for a complete list of error types.
+See [src/claude_code_sdk/_errors.py](src/claude_code_sdk/_errors.py) for all error types.
 
 ## Available Tools
 
-Refer to the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/settings#tools-available-to-claude) for a full list of available tools.
+Refer to the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/settings#tools-available-to-claude) for a complete list of available tools.
 
 ## Examples
 
-Explore detailed examples:
+Explore working examples to accelerate your development:
 
-*   `examples/quick_start.py`: A complete working example.
-*   `examples/streaming_mode.py`: Comprehensive examples involving `ClaudeSDKClient`.  Interactive examples are available in `examples/streaming_mode_ipython.py`.
+*   **Quick Start:** See [examples/quick_start.py](examples/quick_start.py) for a complete working example.
+*   **Streaming Mode:** Comprehensive examples involving `ClaudeSDKClient` can be found in [examples/streaming_mode.py](examples/streaming_mode.py).
+*   **Interactive IPython:** Run interactive examples in IPython from [examples/streaming_mode_ipython.py](examples/streaming_mode_ipython.py).
 
 ## License
 

@@ -2,197 +2,183 @@
   <br>
   <img alt="WYGIWYH" title="WYGIWYH" src="./.github/img/logo.png" />
   <br>
-  WYGIWYH: Take Control of Your Finances with a Simple, Powerful Tracker
+  WYGIWYH: Your Finance Tracker
   <br>
 </h1>
+
+<h4 align="center">Take control of your finances with a simple, powerful, and opinionated tracker.</h4>
 
 <p align="center">
   <a href="#why-wygiwyh">Why WYGIWYH?</a> •
   <a href="#key-features">Key Features</a> •
-  <a href="#demo">Demo</a> •
   <a href="#how-to-use">How to Use</a> •
-  <a href="#environment-variables">Environment Variables</a> •
-  <a href="#oidc-configuration">OIDC Configuration</a> •
-  <a href="#how-it-works">How it Works</a> •
-  <a href="#help-us-translate-wygiwyh">Translate</a> •
-  <a href="#caveats-and-warnings">Caveats and Warnings</a> •
+  <a href="#demo">Demo</a> •
+  <a href="#how-it-works">How It Works</a> •
+  <a href="#translate">Translate</a> •
+  <a href="#caveats-and-warnings">Caveats & Warnings</a> •
   <a href="#built-with">Built With</a> •
   <a href="https://github.com/eitchtee/WYGIWYH">View on GitHub</a>
 </p>
 
-**WYGIWYH** (_What You Get Is What You Have_) is a straightforward and feature-rich finance tracker designed for those who prefer a no-budget approach to managing their money.  It's perfect for anyone seeking a simple yet powerful way to track income, expenses, and investments.
+**WYGIWYH (What You Get Is What You Have)** is a straightforward and flexible finance tracker designed for those who prefer a no-budget approach to money management.  It simplifies finance tracking with features like multi-currency support, customizable transactions, and a built-in dollar-cost averaging tracker.
 
-[![WYGIWYH Screenshots](.github/img/monthly_view.png)](https://github.com/eitchtee/WYGIWYH)
-[![WYGIWYH Screenshots](.github/img/yearly.png)](https://github.com/eitchtee/WYGIWYH)
-[![WYGIWYH Screenshots](.github/img/networth.png)](https://github.com/eitchtee/WYGIWYH)
-[![WYGIWYH Screenshots](.github/img/calendar.png)](https://github.com/eitchtee/WYGIWYH)
-[![WYGIWYH Screenshots](.github/img/all_transactions.png)](https://github.com/eitchtee/WYGIWYH)
+<img src=".github/img/monthly_view.png" width="18%"></img> <img src=".github/img/yearly.png" width="18%"></img> <img src=".github/img/networth.png" width="18%"></img> <img src=".github/img/calendar.png" width="18%"></img> <img src=".github/img/all_transactions.png" width="18%"></img>
 
 ## Why WYGIWYH?
 
-Managing your finances shouldn't be complex. WYGIWYH (pronounced "wiggy-wih") operates on a simple principle:
+Frustrated with complex budgeting apps, WYGIWYH focuses on a simple principle: "Use what you earn this month for this month." This helps you manage your finances without the constraints of traditional budgeting.
 
-> Use what you earn this month for this month. Savings are tracked but treated as untouchable for future months.
+WYGIWYH was created to solve the following needs:
 
-This approach helps you avoid overspending while providing clear visibility into your financial health.
-
-Driven by the need for a tool that met specific requirements – including multi-currency support, no budgeting constraints, web app usability, API integration, and custom transaction rules – WYGIWYH was created.
+1.  **Multi-currency support** for tracking income and expenses in various currencies.
+2.  **No budgeting** - a focus on simplicity and tracking, not strict budgeting.
+3.  **Web app usability** with optional mobile support.
+4.  **API for automation** to integrate with other tools.
+5.  **Customizable transaction rules** to handle various financial scenarios.
 
 ## Key Features
 
-**WYGIWYH** simplifies personal finance tracking with these key features:
+WYGIWYH offers an array of features designed to simplify and streamline your personal finance tracking:
 
-*   **Unified Transaction Tracking:**  Organize all income and expenses in one place.
-*   **Multi-Account Support:** Track funds across banks, wallets, and investment accounts.
-*   **Multi-Currency Support:** Manage transactions and balances in various currencies.
-*   **Custom Currency Creation:**  Define currencies for crypto, rewards points, or other needs.
-*   **Automated Rules:** Automatically modify transactions with customizable rules.
-*   **Dollar-Cost Averaging (DCA) Tracker:**  Track recurring investments (crypto, stocks, etc.).
-*   **API Support:**  Integrate with other services for automated transaction synchronization.
+*   **Unified Transaction Tracking:**  Record all income and expenses in one place.
+*   **Multiple Account Support:**  Track money and assets across different accounts (banks, wallets, investments, etc.).
+*   **Multi-Currency Support:** Manage transactions and balances in different currencies.
+*   **Custom Currencies:** Create your own currencies for crypto, rewards points, or any other models.
+*   **Automated Rules:**  Automatically modify transactions with customizable rules.
+*   **Dollar-Cost Averaging (DCA) Tracker:**  Track recurring investments, especially for crypto and stocks.
+*   **API Support:**  Integrate with other services to automate transaction synchronization.
 
 ## Demo
 
-Experience WYGIWYH firsthand with our demo:  [wygiwyh-demo.herculino.com](https://wygiwyh-demo.herculino.com/)
+Try out WYGIWYH with a live demo.
 
-> [!NOTE]
-> Email: `demo@demo.com`
-> Password: `wygiwyhdemo`
+[wygiwyh-demo.herculino.com](https://wygiwyh-demo.herculino.com/)
+*   **Email:** `demo@demo.com`
+*   **Password:** `wygiwyhdemo`
 
-Please note that demo data is reset frequently.  Most automation features are disabled in the demo.
+**Important:**  Demo data is wiped every 24 hours or less. Automation features are disabled.
 
 ## How To Use
 
-WYGIWYH requires [Docker](https://docs.docker.com/engine/install/) and [docker-compose](https://docs.docker.com/compose/install/).
+WYGIWYH uses Docker and Docker Compose.
 
-1.  **Create a project directory:**
+1.  **Set up Docker and Docker Compose:**  Ensure you have [Docker](https://docs.docker.com/engine/install/) and [docker-compose](https://docs.docker.com/compose/install/) installed.
+2.  **Create a Project Directory (Optional):**
+
     ```bash
     mkdir WYGIWYH
     cd WYGIWYH
     ```
-2.  **Create `docker-compose.yml`:**
+3.  **Create docker-compose.yml:**
+
     ```bash
     touch docker-compose.yml
     nano docker-compose.yml
     # Paste the contents of https://github.com/eitchtee/WYGIWYH/blob/main/docker-compose.prod.yml and edit according to your needs
     ```
-3.  **Create `.env` file:**
+4.  **Configure .env:**
+
     ```bash
     touch .env
-    nano .env # or any other editor you want to use
+    nano .env
     # Paste the contents of https://github.com/eitchtee/WYGIWYH/blob/main/.env.example and edit accordingly
     ```
-4.  **Run the application:**
+5.  **Run the application:**
+
     ```bash
     docker compose up -d
     ```
-5.  **Create the first admin account:**  (Optional if `ADMIN_EMAIL` and `ADMIN_PASSWORD` are set)
+
+6.  **Create First Admin User (if environment variables for admin are not set):**
+
     ```bash
     docker compose exec -it web python manage.py createsuperuser
     ```
 
-> [!NOTE]
-> If you're using Unraid, see the [Unraid section](#unraid) and [Environment Variables](#environment-variables) for details.
-
 ### Running Locally
-
-To run WYGIWYH locally:
 
 1.  Remove `URL` from your `.env` file.
 2.  Set `HTTPS_ENABLED` to `false`.
-3.  Keep the default `DJANGO_ALLOWED_HOSTS` (localhost 127.0.0.1 [::1]).
+3.  Leave the default `DJANGO_ALLOWED_HOSTS` (localhost 127.0.0.1 [::1]).
 
-Access the application at `localhost:OUTBOUND_PORT`.
+You can now access `localhost:OUTBOUND_PORT`.
 
-> [!NOTE]
-> -   If using Tailscale or similar, add your machine's IP to `DJANGO_ALLOWED_HOSTS`.
-> -   For non-localhost IPs, add them to `DJANGO_ALLOWED_HOSTS`.
+>   **Note:**  If running behind a service like Tailscale, add your machine's IP to `DJANGO_ALLOWED_HOSTS`. Also, add the IP to `DJANGO_ALLOWED_HOSTS` if using an IP that isn't localhost.
 
 ### Latest Changes
 
-Features are added to `main` when they are ready.  To get the latest version, build from source or use the `:nightly` tag with Docker. Be aware of potential undocumented breaking changes.
-
-Find the Dockerfiles [here](https://github.com/eitchtee/WYGIWYH/tree/main/docker/prod).
+Features are added to the `main` branch when ready.  Use the `:nightly` tag for the latest version, but be aware of potential breaking changes.  All Dockerfiles are available [here](https://github.com/eitchtee/WYGIWYH/tree/main/docker/prod).
 
 ## Unraid
 
-[nwithan8](https://github.com/nwithan8) provides a Unraid template for WYGIWYH. See the [unraid_templates](https://github.com/nwithan8/unraid_templates) repo.
+WYGIWYH is available as an app in the Unraid store. You will need to provide your own PostgreSQL (version 15 or higher) database.
 
-WYGIWYH is also available in the Unraid Store. You'll need your own PostgreSQL (version 15+) database.
+To create the first user, go to the Unraid Docker UI, select the container and open the console, then enter: `python manage.py createsuperuser`.
 
-Create the first user via the Unraid UI console (click the Docker icon, select `Console`, then type `python manage.py createsuperuser`).
+### Environment Variables
 
-## Environment Variables
-
-Customize WYGIWYH with the following environment variables:
-
-| Variable                      | Type        | Default                           | Description                                                                                                                                                                                                                              |
-|-------------------------------|-------------|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DJANGO_ALLOWED_HOSTS          | string      | localhost 127.0.0.1               | Space-separated list of domains and IPs where the site is served.  [Learn more](https://docs.djangoproject.com/en/5.1/ref/settings/#allowed-hosts).                                                                                                 |
-| HTTPS_ENABLED                 | true\|false | false                             | Enables secure cookies.                                                                                                                                                                                                                              |
-| URL                           | string      | http://localhost http://127.0.0.1 | Space-separated list of trusted origins for unsafe requests (e.g., POST).  [Learn more](https://docs.djangoproject.com/en/5.1/ref/settings/#csrf-trusted-origins).                                                                 |
-| SECRET_KEY                    | string      | ""                                | A unique, unpredictable value for cryptographic signing.                                                                                                                                                                      |
-| DEBUG                         | true\|false | false                             | Enable/disable debug mode (don't use in production).                                                                                                                                                                           |
-| SQL_DATABASE                  | string      | None *required                    | Your PostgreSQL database name.                                                                                                                                                                                                       |
-| SQL_USER                      | string      | user                              | PostgreSQL username.                                                                                                                                                                                                                  |
-| SQL_PASSWORD                  | string      | password                          | PostgreSQL password.                                                                                                                                                                                                                  |
-| SQL_HOST                      | string      | localhost                         | PostgreSQL host address.                                                                                                                                                                                                                   |
-| SQL_PORT                      | string      | 5432                              | PostgreSQL port.                                                                                                                                                                                                                      |
-| SESSION_EXPIRY_TIME           | int         | 2678400 (31 days)                 | Session cookie age in seconds.                                                                                                                                                                                                                          |
-| ENABLE_SOFT_DELETE            | true\|false | false                             | Enable/disable soft deletes for transactions.                                                                                                                                                                         |
-| KEEP_DELETED_TRANSACTIONS_FOR | int         | 365                               | Time (days) to keep soft-deleted transactions (only works if `ENABLE_SOFT_DELETE` is true). 0 to keep indefinitely.                                                                                                                                                            |
-| TASK_WORKERS                  | int         | 1                                 | Number of workers for async tasks.                                                                                                                                                                                                                      |
-| DEMO                          | true\|false | false                             | Enable/disable demo mode.                                                                                                                                                                                                                 |
-| ADMIN_EMAIL                   | string      | None                              | Automatically creates an admin account with this email.  Requires `ADMIN_PASSWORD`.                                                                                                                                             |
-| ADMIN_PASSWORD                | string      | None                              | Automatically creates an admin account with this password. Requires `ADMIN_EMAIL`.                                                                                                                                             |
-| CHECK_FOR_UPDATES             | bool        | true                              | Check for and notify about new versions (checks GitHub API every 12 hours).                                                                                 |
+| Variable                      | Type        | Default                                  | Description                                                                                                                                                                                                                       |
+|-------------------------------|-------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DJANGO_ALLOWED_HOSTS          | string      | localhost 127.0.0.1                      | A list of domains/IPs the site can serve. [Learn More](https://docs.djangoproject.com/en/5.1/ref/settings/#allowed-hosts)                                                                                                      |
+| HTTPS_ENABLED                 | true\|false | false                                    | Enable secure cookies (HTTPS).                                                                                                                                                                                                    |
+| URL                           | string      | http://localhost http://127.0.0.1          | Trusted origins for unsafe requests (e.g., POST). [Learn More](https://docs.djangoproject.com/en/5.1/ref/settings/#csrf-trusted-origins)                                                                                        |
+| SECRET_KEY                    | string      | ""                                       | Cryptographic signing key. Must be unique and unpredictable.                                                                                                                                                                     |
+| DEBUG                         | true\|false | false                                    | Enable/disable debug mode (for development). **Do not use in production.**                                                                                                                                                         |
+| SQL_DATABASE                  | string      | None *required                         | The name of your PostgreSQL database.                                                                                                                                                                                             |
+| SQL_USER                      | string      | user                                     | PostgreSQL username.                                                                                                                                                                                                              |
+| SQL_PASSWORD                  | string      | password                                 | PostgreSQL password.                                                                                                                                                                                                              |
+| SQL_HOST                      | string      | localhost                                | PostgreSQL host address.                                                                                                                                                                                                          |
+| SQL_PORT                      | string      | 5432                                     | PostgreSQL port.                                                                                                                                                                                                                |
+| SESSION_EXPIRY_TIME           | int         | 2678400 (31 days)                        | Session cookie expiration time in seconds.                                                                                                                                                                                        |
+| ENABLE_SOFT_DELETE            | true\|false | false                                    | Enable soft deletion for transactions.                                                                                                                                                                                            |
+| KEEP_DELETED_TRANSACTIONS_FOR | int         | 365                                      | Days to keep soft-deleted transactions.  If 0, keep indefinitely.  Requires `ENABLE_SOFT_DELETE`.                                                                                                                                |
+| TASK_WORKERS                  | int         | 1                                        | Number of workers for async tasks.                                                                                                                                                                                                |
+| DEMO                          | true\|false | false                                    | Enable demo mode.                                                                                                                                                                                                                   |
+| ADMIN_EMAIL                   | string      | None                                     | Automatically create an admin account with this email. Requires `ADMIN_PASSWORD`.                                                                                                                                                   |
+| ADMIN_PASSWORD                | string      | None                                     | Automatically create an admin account with this password. Requires `ADMIN_EMAIL`.                                                                                                                                                |
+| CHECK_FOR_UPDATES             | bool        | true                                     | Check and notify users about new versions.  Checks GitHub API every 12 hours.                                                                                                                                                    |
 
 ## OIDC Configuration
 
-WYGIWYH supports OpenID Connect (OIDC) authentication through `django-allauth`.
-
-> [!NOTE]
-> Only OpenID Connect is currently supported.
-
-Configure OIDC using these environment variables:
+WYGIWYH supports OpenID Connect (OIDC) login via `django-allauth`.  Users can authenticate using external OIDC providers.
 
 | Variable             | Description                                                                                                                                                                                                                                            |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `OIDC_CLIENT_NAME`   | Provider name (displayed in login page).  Defaults to `OpenID Connect`.                                                                                                                                                            |
-| `OIDC_CLIENT_ID`     | Client ID from your OIDC provider.                                                                                                                                                                                                          |
-| `OIDC_CLIENT_SECRET` | Client Secret from your OIDC provider.                                                                                                                                                                                                      |
-| `OIDC_SERVER_URL`    | OIDC provider's discovery document or authorization server URL (e.g., `https://your-provider.com/auth/realms/your-realm`).  `django-allauth` discovers endpoints from here.                                                               |
-| `OIDC_ALLOW_SIGNUP`  | Allow automatic account creation on successful authentication.  Defaults to `true`.                                                                                                                                               |
+| `OIDC_CLIENT_NAME`   | The name of the provider. will be displayed in the login page. Defaults to `OpenID Connect`                                                                                                                                                            |
+| `OIDC_CLIENT_ID`     | The Client ID provided by your OIDC provider.                                                                                                                                                                                                          |
+| `OIDC_CLIENT_SECRET` | The Client Secret provided by your OIDC provider.                                                                                                                                                                                                      |
+| `OIDC_SERVER_URL`    | The base URL of your OIDC provider's discovery document or authorization server (e.g., `https://your-provider.com/auth/realms/your-realm`). `django-allauth` will use this to discover the necessary endpoints (authorization, token, userinfo, etc.). |
+| `OIDC_ALLOW_SIGNUP`  | Allow the automatic creation of inexistent accounts on a successfull authentication. Defaults to `true`.                                                                                                                                               |
 
 **Callback URL (Redirect URI):**
 
-Configure your OIDC provider with this callback URL (replace the domain with your instance's URL):
+Your OIDC provider needs a callback URL. For WYGIWYH, it's:
 
 `https://your.wygiwyh.domain/auth/oidc/<OIDC_CLIENT_NAME>/login/callback/`
-`<OIDC_CLIENT_NAME>` is the slugified name of `OIDC_CLIENT_NAME`, or `openid-connect` if not set.
+
+Replace `https://your.wygiwyh.domain` with your WYGIWYH URL. Replace `<OIDC_CLIENT_NAME>` with the slugified version of `OIDC_CLIENT_NAME`, or `openid-connect` if it's not set.
 
 ## How it Works
 
-See the [Wiki](https://github.com/eitchtee/WYGIWYH/wiki) for detailed information.
+For more details, see the [Wiki](https://github.com/eitchtee/WYGIWYH/wiki).
 
-## Help us translate WYGIWYH!
+## Translate
 
-Contribute to WYGIWYH translations:
-<a href="https://translations.herculino.com/engage/wygiwyh/">
-<img src="https://translations.herculino.com/widget/wygiwyh/open-graph.png" alt="Translation status" />
-</a>
+Help translate WYGIWYH!
 
-> [!NOTE]
-> Login with your GitHub account
+[![Translation Status](https://translations.herculino.com/widget/wygiwyh/open-graph.png)](https://translations.herculino.com/engage/wygiwyh/)
+
+>   **Note:** Login with your GitHub account.
 
 ## Caveats and Warnings
 
-*   I'm not an accountant, and some calculations may have errors. Please open an issue if you find any.
-*   Most calculations are done at runtime, which may affect performance.
-*   WYGIWYH is not a budgeting or double-entry accounting application.
+*   I am not an accountant; calculations and terms might be inaccurate.  Please report any issues.
+*   Calculations are mostly done at runtime, which can impact performance.
+*   This is not a budgeting or double-entry accounting application.
 
 ## Built With
 
-WYGIWYH is built with these open-source tools:
+WYGIWYH uses these open-source tools:
 
 *   Django
 *   HTMX

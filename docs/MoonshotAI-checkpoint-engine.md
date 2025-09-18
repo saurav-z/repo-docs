@@ -1,6 +1,6 @@
-# Checkpoint Engine: Accelerating LLM Weight Updates for Fast Inference and Reinforcement Learning
+# Checkpoint Engine: Efficient Weight Updates for LLM Inference
 
-**Checkpoint Engine enables rapid weight updates for large language models (LLMs), crucial for efficient inference and reinforcement learning, with updates for a 1 Trillion parameter model taking only 20 seconds.** Learn more about the power of Checkpoint Engine on its original repository: [MoonshotAI/checkpoint-engine](https://github.com/MoonshotAI/checkpoint-engine).
+**Speed up Large Language Model (LLM) inference with Checkpoint Engine, a lightweight middleware designed for rapid in-place weight updates, crucial for reinforcement learning and dynamic model deployments.** [View the original repository](https://github.com/MoonshotAI/checkpoint-engine).
 
 <div align="center">
   <picture>
@@ -10,100 +10,121 @@
 
 ## Key Features
 
-*   **Efficient Weight Updates:**  Designed for fast and reliable weight updates, optimizing for both synchronous (broadcast) and dynamic (P2P) scenarios.
-*   **Two Update Methods:**
-    *   **Broadcast:**  The fastest method for synchronous updates, ideal for large-scale, simultaneous weight changes across inference instances.
-    *   **P2P (Peer-to-Peer):**  Enables weight updates for dynamically added inference instances without disrupting existing workloads, using [mooncake-transfer-engine](https://github.com/kvcache-ai/Mooncake?tab=readme-ov-file#use-python-package).
-*   **Optimized Broadcast Implementation:**  Employs a three-stage pipeline (H2D, broadcast, reload) to maximize performance, with fallback to serial execution when memory is constrained.
-*   **Integration with vLLM:**  Seamlessly integrates with the vLLM inference engine, allowing quick updates to existing model weights.
-*   **Flexible Deployment:** Supports both CPU and GPU-based deployments with RDMA transfer via `mooncake-transfer-engine` for flexible updating between existing and new instances.
-*   **FP8 Quantization Support:** Offers experimental support for FP8 quantization with provided patches for vLLM.
+*   **Blazing Fast Updates:** Achieve weight updates in LLMs with up to 1 trillion parameters in just ~20 seconds across thousands of GPUs.
+*   **Optimized Broadcast:** Efficiently distribute updated weights using a three-stage pipeline (H2D, broadcast, reload) for high-performance data transfer.
+*   **Flexible P2P Updates:** Seamlessly integrate new inference instances without disrupting existing workloads using a Peer-to-Peer (P2P) approach, leveraging `mooncake-transfer-engine`.
+*   **VLLM Integration:** Designed for easy integration with vLLM and compatible with other frameworks.
+*   **FP8 Support:** Includes patches for FP8 quantization in vLLM, enabling further optimization.
+*   **Easy to Use:** Simple installation and straightforward setup for rapid deployment.
 
 ## Architecture
 
-The `ParameterServer` class forms the core of Checkpoint Engine, residing alongside inference engines and handling the weight update logic. It supports two main update implementations:
+Checkpoint Engine employs a `ParameterServer` class, co-located with inference engines, offering two primary weight update methods:
 
-*   **Broadcast:**  The default and fastest method, optimized for synchronous weight updates across multiple inference instances.
-*   **P2P:**  Facilitates weight updates for newly added instances, preventing disruption to existing workloads.
+*   **Broadcast:** Synchronously updates weights across a large number of instances for optimal speed.
+    *   The implementation uses the following 3 stages:
+        1.  H2D: Moving weights to GPU memory. These weights may come from disk or the training engine.
+        2.  broadcast: broadcast among checkpoint engine workers; the data results in a CUDA IPC buffer shared with inference engine.
+        3.  reload: inference engine decides what subset of weights to copy from the broadcasted data.
+    *   See `_update_per_bucket`.
+*   **P2P:** Allows dynamic addition of new instances without impacting existing ones. Utilizes `mooncake-transfer-engine` for efficient weight transfer.
+    *   See `_update_per_bucket_p2p`.
 
 ### Optimized Weight Broadcast
 
-The Broadcast implementation uses a three-stage approach:
+The broadcast method uses a pipelined approach to maximize performance:
 
-1.  **H2D:** Moves weights to GPU memory.
-2.  **Broadcast:** Broadcasts data among checkpoint engine workers to shared CUDA IPC buffer.
-3.  **Reload:** The inference engine chooses which weights to copy.
+<div align="center">
+  <picture>
+      <img src="figures/pipeline.png" width="80%" alt="pipeline">
+  </picture>
+</div>
 
 ## Benchmarks
 
-Checkpoint Engine demonstrates impressive performance with various LLM models and hardware configurations.  See benchmark results in the original README.
+The table below demonstrates performance across various models and hardware configurations:
+
+| Model                                | Device Info  | GatherMetas | Update (Broadcast) | Update (P2P)            |
+| :----------------------------------- | :----------- | :---------- |:-------------------| :---------------------- |
+| GLM-4.5-Air (BF16)                   | 8xH800 TP8  | 0.17s       | 3.94s (1.42GiB)    | 8.83s (4.77GiB)         |
+| Qwen3-235B-A22B-Instruct-2507 (BF16) | 8xH800 TP8  | 0.46s       | 6.75s (2.69GiB)    | 16.47s (4.05GiB)        |
+| DeepSeek-V3.1 (FP8)                  | 16xH20 TP16  | 1.44s       | 12.22s (2.38GiB)   | 25.77s (3.61GiB)        |
+| Kimi-K2-Instruct (FP8)               | 16xH20 TP16  | 1.81s       | 15.45s (2.93GiB)   | 36.24s (4.46GiB)        |
+| DeepSeek-V3.1 (FP8)                  | 256xH20 TP16 | 1.40s       | 13.88s (2.54GiB)   | 33.30s (3.86 GiB) |
+| Kimi-K2-Instruct (FP8)               | 256xH20 TP16 | 1.88s       | 21.50s (2.99GiB)   | 34.49s (4.57 GiB) |
+
+*   **Note:** Performance depends on IPC bucket size. The bucket size is shown in the table above.
 
 ## Installation
 
-Install the core package for the fastest broadcast implementation:
+Install using pip:
 
 ```bash
 pip install checkpoint-engine
 ```
 
-Install the P2P implementation with support for RDMA transfers:
+To include P2P functionality (which will install `mooncake-transfer-engine`):
 
 ```bash
 pip install 'checkpoint-engine[p2p]'
 ```
 
+If `NCCL_IB_HCA` is set, Checkpoint Engine will select network devices automatically. Otherwise, it reads all RDMA devices and tries to divide them between ranks.
+
 ## Getting Started
 
-**Prerequisites:**  H800 or H20 machine with 8 GPUs and latest vLLM installed. Requires the [/collective_rpc API endpoint](https://github.com/vllm-project/vllm/commit/f7cf5b512ee41f36613deb2471a44de5f304f70d) commit from the vLLM main branch.
+1.  **Prerequisites:**
+    *   H800 or H20 machine with 8 GPUs
+    *   Latest vLLM version. Includes [/collective_rpc API endpoint](https://github.com/vllm-project/vllm/commit/f7cf5b512ee41f36613deb2471a44de5f304f70d) commit.
+2.  **Install vLLM:**
 
-1.  **Clone and Install vLLM:**
+```bash
+cd /opt && git clone https://github.com/vllm-project/vllm && cd vllm
+uv venv --python 3.12 --seed
+source .venv/bin/activate
+VLLM_USE_PRECOMPILED=1 uv pip install --editable .
+```
 
-    ```bash
-    cd /opt && git clone https://github.com/vllm-project/vllm && cd vllm
-    uv venv --python 3.12 --seed
-    source .venv/bin/activate
-    VLLM_USE_PRECOMPILED=1 uv pip install --editable .
-    ```
+3.  **Install Checkpoint Engine:**
 
-2.  **Install Checkpoint Engine:**
+```bash
+uv pip install 'checkpoint-engine[p2p]'
+```
 
-    ```bash
-    uv pip install 'checkpoint-engine[p2p]'
-    ```
+4.  **Download a Model (Example: Qwen3-235B):**
 
-3.  **Download a Model (e.g., Qwen3-235B-A22B-Instruct-2507):**
+```bash
+hf download Qwen/Qwen3-235B-A22B-Instruct-2507 --local-dir /opt/models/Qwen/Qwen3-235B-A22B-Instruct-2507/
+```
 
-    ```bash
-    hf download Qwen/Qwen3-235B-A22B-Instruct-2507 --local-dir /opt/models/Qwen/Qwen3-235B-A22B-Instruct-2507/
-    ```
+5.  **Start vLLM (in dev mode):**
 
-4.  **Start vLLM:**
+```bash
+VLLM_SERVER_DEV_MODE=1 python3 -m vllm.entrypoints.openai.api_server --host 0.0.0.0 --port 19730 --trust-remote-code \
+    --tensor-parallel-size=8 --max-model-len 4096 --load-format dummy \
+    --served-model-name checkpoint-engine-demo --model /opt/models/Qwen/Qwen3-235B-A22B-Instruct-2507/ \
+    --worker-extension-cls checkpoint_engine.worker.VllmColocateWorkerExtension
+```
 
-    ```bash
-    VLLM_SERVER_DEV_MODE=1 python3 -m vllm.entrypoints.openai.api_server --host 0.0.0.0 --port 19730 --trust-remote-code \
-        --tensor-parallel-size=8 --max-model-len 4096 --load-format dummy \
-        --served-model-name checkpoint-engine-demo --model /opt/models/Qwen/Qwen3-235B-A22B-Instruct-2507/ \
-        --worker-extension-cls checkpoint_engine.worker.VllmColocateWorkerExtension
-    ```
+6.  **Update Weights:**
 
-5.  **Update Weights using Checkpoint Engine:**
+```bash
+torchrun --nproc-per-node 8 examples/update.py --update-method all --checkpoint-path /opt/models/Qwen/Qwen3-235B-A22B-Instruct-2507/
+```
 
-    ```bash
-    torchrun --nproc-per-node 8 examples/update.py --update-method all --checkpoint-path /opt/models/Qwen/Qwen3-235B-A22B-Instruct-2507/
-    ```
+### Reuse Weights from Existing Instances
 
-### Reusing Weights from Existing Instances
+1.  **Save Metas:** Start existing instances with `--save-metas-file global_metas.pkl` and `--sleep-time 300`.
+2.  **Load Metas:** New instances can then reuse weights by setting `--load-metas-file global_metas.pkl`.
 
-1.  Start existing instances with `--save-metas-file global_metas.pkl` and `--sleep-time 300`.
-2.  New instances can then load checkpoint data using `--load-metas-file global_metas.pkl`.
+### FP8 Quantization
 
-## FP8 Quantization
+Use the provided patch at `patches/vllm_fp8.patch` for correct FP8 weight updates.
+This patch has been tested with DeepSeek-V3.1 and Kimi-K2.
 
-Experimental support for FP8 quantization is available with patches in the `patches/vllm_fp8.patch` file. This patch is tested in DeepSeek-V3.1 and Kimi-K2.
+### Test
 
-## Testing
-
-Run a correctness test:
+Run a basic test:
 
 ```bash
 torchrun --nproc-per-node 8 tests/test_update.py
@@ -111,10 +132,10 @@ torchrun --nproc-per-node 8 tests/test_update.py
 
 ## Limitations and Future Work
 
-*   Currently tested with vLLM only (but easy to integrate with other frameworks).
-*   The three-stage pipeline is not fully implemented (potential optimization).
+*   Currently tested primarily with vLLM.
+*   The optimal three-stage pipeline is not fully implemented.
 *   The P2P update method can be further optimized.
 
 ## Acknowledgments
 
-This project leverages the vLLM interface, with thanks to [youkaichao](https://github.com/youkaichao) for insights and comments.
+This project utilizes the vLLM interface as implemented in https://github.com/vllm-project/vllm/pull/24295. Thank you to [youkaichao](https://github.com/youkaichao) for their insights.

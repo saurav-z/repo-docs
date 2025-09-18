@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Codegen: Your AI-Powered Software Engineering Assistant</h1>
+<h1 align="center">Codegen SDK: Automate Software Development with AI</h1>
 
 <div align="center">
 
@@ -18,19 +18,20 @@
 
 <br />
 
-**Codegen empowers developers to automate software development tasks, boosting productivity and accelerating project timelines.** This SDK provides a programmatic interface to the powerful code agents offered by [Codegen](https://codegen.com), your AI-powered software engineering assistant.
+**Tired of repetitive coding tasks? The Codegen SDK empowers you to build, test, and deploy software faster by harnessing the power of AI code generation.** This Python SDK provides a programmatic interface to the AI-powered code agents offered by [Codegen](https://codegen.com).  [View the original repository here](https://github.com/codegen-sh/codegen).
 
-## Key Features of the Codegen SDK
+## Key Features
 
-*   **AI-Powered Code Generation:** Leverage advanced AI to generate code snippets, implement features, and more.
-*   **API Access:** Interact with your AI engineer directly through a simple and intuitive API.
-*   **Task Management:** Monitor the progress of your tasks and retrieve results once complete.
-*   **Flexible Integration:** Integrate with your existing workflows and development tools.
-*   **Multi-Platform Support:** Access your AI engineer through various platforms, including Slack, Linear, GitHub, and the Codegen website.
+*   **AI-Powered Code Generation:** Generate code based on natural language prompts.
+*   **API Access:**  Programmatically interact with Codegen's AI agents.
+*   **Task Management:** Monitor the status of your code generation tasks.
+*   **Easy Installation:**  Install using `pip`, `pipx`, or `uv`.
+*   **Automatic Updates:**  Stay up-to-date with the built-in self-update functionality within the CLI.
+*   **Integration:**  Interact with your AI engineer via API, Slack, Linear, GitHub, or the Codegen website.
 
 ## Getting Started
 
-Here's a quick example of how to get started with the Codegen SDK:
+Here's how to get started with the Codegen SDK:
 
 ```python
 from codegen.agents.agent import Agent
@@ -59,37 +60,45 @@ if task.status == "completed":
     print(task.result)  # Result often contains code, summaries, or links
 ```
 
-### Installation
+## Installation
 
-Install the SDK using pip:
+Install the Codegen SDK using your preferred package manager:
 
 ```bash
 pip install codegen
+# or
+pipx install codegen
+# or
+uv tool install codegen
 ```
 
-or
+## Keeping Up to Date
+
+The Codegen CLI includes a convenient self-update system:
 
 ```bash
-uv pip install codegen
+# Update to the latest version
+codegen update
+
+# Check for available updates
+codegen update --check
+
+# Update to a specific version
+codegen update --version 1.2.3
 ```
 
-### Configuration
-
-1.  **Sign up and get an API token:** Get started at [codegen.com](https://codegen.com) and obtain your API token at [codegen.com/token](https://codegen.com/token).
+The CLI automatically checks for updates daily.
 
 ## Resources
 
-*   **Documentation:** [https://docs.codegen.com](https://docs.codegen.com)
-*   **Getting Started:** [https://docs.codegen.com/introduction/getting-started](https://docs.codegen.com/introduction/getting-started)
-*   **Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md)
-*   **Contact Us:** [https://codegen.com/contact](https://codegen.com/contact)
+*   [Docs](https://docs.codegen.com)
+*   [Getting Started](https://docs.codegen.com/introduction/getting-started)
+*   [Contact Us](https://codegen.com/contact)
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up your development environment and submit pull requests.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up the development environment and submit contributions.
 
-## Enterprise Solutions
+## Enterprise
 
-For information on enterprise engagements and custom solutions, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
-
-**Original Repo:**  [https://github.com/codegen-sh/codegen](https://github.com/codegen-sh/codegen)
+For more information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).

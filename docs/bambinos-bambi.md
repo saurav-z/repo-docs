@@ -5,31 +5,28 @@
 [![codecov](https://codecov.io/gh/bambinos/bambi/branch/master/graph/badge.svg?token=ZqH0KCLKAE)](https://codecov.io/gh/bambinos/bambi)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
-# Bambi: Simplified Bayesian Modeling in Python
+# Bambi: Bayesian Model Building Made Easy in Python
 
-**Bambi is a user-friendly Python library designed to simplify Bayesian model-building, especially for mixed-effects models.** ([Original Repository](https://github.com/bambinos/bambi))
+**Bambi simplifies Bayesian model building, providing an intuitive interface for fitting mixed-effects models using the power of PyMC.**  Learn more and contribute at the [Bambi GitHub repository](https://github.com/bambinos/bambi).
 
 ## Key Features
 
-*   **Intuitive Interface:** Easily define and fit Bayesian models using a high-level, declarative syntax.
-*   **Built on PyMC:** Leverages the power of the PyMC probabilistic programming framework for robust Bayesian inference.
-*   **Simplified Mixed-Effects Modeling:** Streamlines the process of building and analyzing mixed-effects models, common in social sciences.
-*   **Flexible Model Specification:** Supports a wide range of models, including linear and logistic regression.
-*   **Integration with ArviZ:** Seamlessly integrates with ArviZ for comprehensive model diagnostics, visualization, and interpretation.
-
-## Overview
-
-Bambi provides a user-friendly interface for building and analyzing Bayesian models. Built on top of PyMC, it simplifies the creation of complex models, particularly mixed-effects models, by offering a high-level syntax and a focus on ease of use.
+*   **Simplified Bayesian Modeling:** Build and fit Bayesian models with a high-level, user-friendly interface.
+*   **Built on PyMC:** Leverages the robust [PyMC](https://github.com/pymc-devs/pymc) probabilistic programming framework.
+*   **Mixed-Effects Model Ready:**  Designed for ease of use with mixed-effects models, common in social sciences.
+*   **Integration with ArviZ:** Seamlessly integrates with ArviZ for model diagnostics, visualization, and interpretation.
+*   **Flexible and Extensible:** Easily handles various model families (e.g., Gaussian, Bernoulli) and link functions.
+*   **Comprehensive Documentation:**  Access in-depth information through the [official docs](https://bambinos.github.io/bambi/index.html) and examples.
 
 ## Installation
 
-Bambi requires Python 3.11+ and can be installed using pip:
+Bambi is easy to install using pip:
 
 ```bash
 pip install bambi
 ```
 
-Alternatively, install the development version:
+Alternatively, install the latest development version:
 
 ```bash
 pip install git+https://github.com/bambinos/bambi.git
@@ -37,7 +34,7 @@ pip install git+https://github.com/bambinos/bambi.git
 
 ### Dependencies
 
-Bambi relies on the following Python libraries, which are automatically installed during the Bambi installation process:
+Bambi relies on the following libraries, which are automatically installed with Bambi:
 
 *   ArviZ
 *   formulae
@@ -47,9 +44,7 @@ Bambi relies on the following Python libraries, which are automatically installe
 
 ## Examples
 
-### Linear Regression
-
-This example demonstrates a simple fixed-effects model using the "sleepstudy" dataset:
+Here's how to get started with Bambi:
 
 ```python
 import arviz as az
@@ -57,49 +52,48 @@ import bambi as bmb
 import numpy as np
 import pandas as pd
 
-# Read in a dataset from the package content
+# Linear regression example
 data = bmb.load_data("sleepstudy")
-
-# Initialize the fixed effects only model
 model = bmb.Model('Reaction ~ Days', data)
-
-# Get model description
-print(model)
-
-# Fit the model using 1000 on each chain
 results = model.fit(draws=1000)
-
-# Key summary and diagnostic info on the model parameters
 az.summary(results)
-
-# Use ArviZ to plot the results
 az.plot_trace(results)
-```
 
-### Logistic Regression
-
-This example showcases a logistic regression model using a simulated dataset:
-
-```python
+# Logistic regression example
 data = pd.DataFrame({
     "g": np.random.choice(["Yes", "No"], size=50),
     "x1": np.random.normal(size=50),
     "x2": np.random.normal(size=50)
 })
-
 model = bmb.Model("g['Yes'] ~ x1 + x2", data, family="bernoulli")
 fitted = model.fit()
 ```
 
-## Further Resources
+For more detailed examples, including a Quickstart guide and a variety of notebooks, visit the [Bambi Examples](https://bambinos.github.io/bambi/notebooks/) page.
 
-*   **Quickstart Guide:** [Quickstart](https://github.com/bambinos/bambi#quickstart)
-*   **Examples:** Explore detailed examples and tutorials on the [Examples](https://bambinos.github.io/bambi/notebooks/) webpage.
-*   **Documentation:** Access the complete documentation on the [official docs](https://bambinos.github.io/bambi/index.html)
+## Documentation
+
+Explore the full potential of Bambi with our comprehensive [official documentation](https://bambinos.github.io/bambi/index.html).
+
+## Contributing
+
+Bambi thrives on community contributions! Check out the [Contributing](https://github.com/bambinos/bambi/blob/main/CONTRIBUTING.md) guide for how to get involved.  See the [GitHub contributor](https://github.com/bambinos/bambi/graphs/contributors) page for a list of contributors.
+
+## Donations
+
+Support the development of PyMC, a key dependency of Bambi, by [making a donation](https://numfocus.org/donate-to-pymc).
+
+## Code of Conduct
+
+Bambi is committed to a welcoming and respectful community. Please review our [Code of Conduct](https://github.com/bambinos/bambi/blob/main/CODE_OF_CONDUCT.md).
+
+## License
+
+[MIT License](https://github.com/bambinos/bambi/blob/main/LICENSE)
 
 ## Citation
 
-If you use Bambi, please cite the following paper:
+If you use Bambi in your research, please cite the following paper:
 
 ```bibtex
 @article{Capretto2022,
@@ -114,23 +108,3 @@ If you use Bambi, please cite the following paper:
  pages={1–29}
 }
 ```
-
-## Contributing
-
-Contributions to Bambi are welcome!  Please see the [Contributing](https://github.com/bambinos/bambi/blob/main/CONTRIBUTING.md) Readme for details.
-
-## Contributors
-
-See the list of contributors on the [GitHub contributor](https://github.com/bambinos/bambi/graphs/contributors) page.
-
-## Donations
-
-Support the development of PyMC, the foundation of Bambi, by [making a donation](https://numfocus.org/donate-to-pymc) to our sister project.
-
-## Code of Conduct
-
-Bambi is committed to fostering a positive and inclusive community.  See the [Code of Conduct](https://github.com/bambinos/bambi/blob/main/CODE_OF_CONDUCT.md).
-
-## License
-
-[MIT License](https://github.com/bambinos/bambi/blob/main/LICENSE)
