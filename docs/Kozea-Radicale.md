@@ -1,34 +1,27 @@
-# Radicale: Your Simple, Powerful CalDAV and CardDAV Server
+# Radicale: Simple & Powerful CalDAV & CardDAV Server
 
-**Looking for an easy-to-set-up server to manage your calendars, to-do lists, and contacts?** Radicale is the perfect solution.
+**Looking for an easy-to-use server to manage your calendars and contacts? Radicale is the solution!** This open-source software provides a straightforward way to share calendars, to-do lists, and contacts using the CalDAV and CardDAV protocols.  Learn more and contribute at the [Radicale GitHub Repository](https://github.com/Kozea/Radicale).
 
-[View the original repository on GitHub](https://github.com/Kozea/Radicale)
+## Key Features of Radicale:
+
+*   **Easy Setup & Use:** Works out-of-the-box with minimal configuration.
+*   **CalDAV & CardDAV Support:** Shares calendars, to-do lists, and contacts via standard protocols.
+*   **HTTP Access:** Provides access to your data via HTTP.
+*   **Data Storage:** Stores data on the file system using a simple folder structure.
+*   **Authentication:** Allows you to limit access to your data with authentication.
+*   **TLS Security:** Supports secure connections with TLS encryption.
+*   **Extensive Client Compatibility:** Works seamlessly with a wide range of CalDAV and CardDAV clients.
+*   **Plugin Support:** Extensible with plugins to add functionality.
+*   **Open Source:** Available under the GPLv3 license.
+*   **Supports diverse data types:** Events, todos, journal entries, and business cards.
+
+## Additional Resources:
+
+*   **Official Documentation:** [Radicale master Documentation](https://radicale.org/master.html)
+*   **Wiki:** [Radicale Wiki](https://github.com/Kozea/Radicale/wiki)
+*   **Issue Tracker:** [Radicale Issues](https://github.com/Kozea/Radicale/issues)
+*   **Discussions:** [Radicale Discussions](https://github.com/Kozea/Radicale/discussions)
+*   **Reporting Issues Guidelines:** [Radicale Wiki / Reporting Issues](https://github.com/Kozea/Radicale/wiki/01-‐-Reporting-Issues)
 
 [![Test](https://github.com/Kozea/Radicale/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/Kozea/Radicale/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/github/Kozea/Radicale/badge.svg?branch=master)](https://coveralls.io/github/Kozea/Radicale?branch=master)
-
-## Key Features of Radicale
-
-Radicale is a lightweight yet feature-rich server, offering seamless synchronization and management of your personal information.  Here's what makes Radicale stand out:
-
-*   **CalDAV and CardDAV Support:** Shares calendars and contact lists using standard protocols for broad compatibility.
-*   **Comprehensive Data Handling:** Supports events, to-dos, journal entries, and business cards, catering to diverse needs.
-*   **Easy Setup and Configuration:** Works out-of-the-box with minimal configuration required, saving you time and hassle.
-*   **Authentication and Security:** Limits access through authentication and secures connections using TLS for data privacy.
-*   **Client Compatibility:** Works flawlessly with a wide range of CalDAV and CardDAV clients.
-*   **Filesystem Storage:** Stores your data on the filesystem in a simple and accessible folder structure.
-*   **Extensible with Plugins:** Offers plugin support for enhanced functionality and customization.
-*   **Open Source:** Licensed under GPLv3, making it free to use and modify.
-
-## Resources
-
-*   **Documentation:** [Radicale master Documentation](https://radicale.org/master.html)
-*   **Wiki:** [Radicale Wiki](https://github.com/Kozea/Radicale/wiki)
-*   **Issue Tracking:** [Radicale Issues](https://github.com/Kozea/Radicale/issues)
-*   **Discussions:** [Radicale Discussions](https://github.com/Kozea/Radicale/discussions)
-
-## Reporting Issues
-
-Before reporting an issue, please consult the following resource:
-
-*   [Radicale Wiki / Reporting Issues](https://github.com/Kozea/Radicale/wiki/01-‐-Reporting-Issues)

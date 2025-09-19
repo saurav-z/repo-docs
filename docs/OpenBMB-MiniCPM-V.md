@@ -1,27 +1,55 @@
 <div align="center">
-<img src="./assets/minicpm_v_and_minicpm_o_title.png" width="500em" ></img>
+
+<img src="./assets/minicpm_v_and_minicpm_o_title.png" width="500em" ></img> 
+
 </div>
 
-# MiniCPM-V: Unleash Powerful Multimodal AI on Your Device
+# MiniCPM-V: Unleash Powerful On-Device Multimodal AI 
 
-**MiniCPM-V** is a series of efficient multimodal large language models (MLLMs) designed for powerful vision and audio understanding, enabling high-quality text outputs on your phone. [Explore the original repo](https://github.com/OpenBMB/MiniCPM-V).
+**MiniCPM-V is a series of efficient, on-device multimodal LLMs (MLLMs) that bring GPT-4o-level understanding to your phone, accepting images, videos, and text for high-quality text outputs. [Explore the original repo](https://github.com/OpenBMB/MiniCPM-V-4_5).**
+
+<br>
 
 **Key Features:**
 
-*   🔥 **State-of-the-Art Performance:** MiniCPM-V 4.5 outperforms GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B in vision-language tasks with only 8B parameters. MiniCPM-o 2.6 achieves GPT-4o level performance for vision, speech and multimodal live streaming on end-side devices.
-*   🎬 **High-FPS and Long Video Understanding:**  MiniCPM-V 4.5 features a new unified 3D-Resampler, enabling high-FPS (up to 10FPS) and long video understanding.
-*   ⚙️ **Controllable Hybrid Thinking:**  MiniCPM-V 4.5 supports both efficient "fast thinking" and "deep thinking" modes for optimal performance in diverse scenarios.
-*   💪 **Robust Capabilities:**  MiniCPM-V 4.5 and MiniCPM-o 2.6 offer strong OCR, document parsing, multilingual support (30+ languages), and trustworthy behaviors.
-*   🚀 **Efficient Deployment:**  Models support easy integration with llama.cpp, Ollama, vLLM and offer int4, GGUF, and AWQ quantized versions for low-resource environments.
-*   🎙 **End-to-End Speech & Real-time Streaming:** MiniCPM-o 2.6 supports bilingual real-time speech conversation with configurable voices, multimodal live streaming on end-side devices.
-*   🧑‍🍳 **Comprehensive Resources:**  Access the [MiniCPM-V & o Cookbook](https://github.com/OpenSQZ/MiniCPM-V-CookBook) for deployment and fine-tuning guidance and the [official documentation website](https://minicpm-o.readthedocs.io/en/latest/index.html) for ease of use.
+*   **✅ State-of-the-Art Vision-Language Capability:** MiniCPM-V 4.5 (8B parameters) outperforms GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B in vision-language tasks.
+*   **🎬 High-FPS & Long Video Understanding:** Process videos efficiently with up to a 96x compression rate for video tokens.
+*   **⚙️ Controllable Hybrid Thinking:** Offers both fast and deep thinking modes for diverse use cases.
+*   **💪 Strong OCR and Document Parsing:** Excels in OCR and document parsing tasks, including complex tables.
+*   **💫 Easy Deployment:** Supports various inference frameworks like llama.cpp, Ollama, and vLLM, plus quantization and fine-tuning options for local deployment.
+*   **🎙️ Speech and Audio Capability:** MiniCPM-o 2.6 achieves state-of-the-art speech conversation in both semantic and acoustic evaluations in the open-source community, and can also support multimodal live streaming on end-side devices such as iPads.
 
-**Contents:**
+<br>
+
+## What's New
+
+*   **MiniCPM-V 4.5:** The latest model boasting superior vision-language abilities and efficient video understanding.
+*   **MiniCPM-o 2.6:** The most capable model in the MiniCPM-o series.
+
+<br>
+
+## Core Capabilities & Advantages
+
+*   **Unmatched Performance:** Delivers cutting-edge performance in visual understanding, speech, and real-time video and audio streaming on your device.
+*   **Efficient Deployment:** Designed for on-device inference, offering fast speeds and low resource usage.
+*   **Multilingual Support:** Supports 30+ languages for diverse user bases.
+*   **User-Friendly:** Features a comprehensive cookbook and demo for easy access and customization.
+
+<br>
+
+## Get Started
+
+*   **Model Zoo:** Access a range of models optimized for various devices and memory constraints.
+*   **Multi-turn Conversation:** Engage in complex, multi-round conversations with the models.
+*   **Inference Options:** Utilize llama.cpp, Ollama, vLLM, and our Hugging Face Spaces demo for easy implementation.
+*   **Fine-tuning:** Customize models with our provided fine-tuning resources.
+*   **Deployment Guide:** Simplify deployment across many platforms, including iPhone and iPad.
+
+## Contents
 
 *   [MiniCPM-V 4.5](#minicpm-v-45)
     *   [Inference Efficiency](#inference-efficiency)
 *   [MiniCPM-o 2.6](#minicpm-o-26)
-*   [Legacy Models](#legacy-models)
 *   [MiniCPM-V & o Cookbook](#minicpm-v--o-cookbook)
 *   [Chat with Our Demo on Gradio 🤗](#chat-with-our-demo-on-gradio-)
 *   [Inference](#inference)
@@ -36,41 +64,47 @@
     *   [Inference on Mac](#inference-on-mac)
     *   [Efficient Inference with llama.cpp, Ollama, vLLM](#efficient-inference-with-llamacpp-ollama-vllm)
 *   [Fine-tuning](#fine-tuning)
-    *   [Simple Fine-tuning](#simple-fine-tuning)
-    *   [With Align-Anything](#with-align-anything)
-    *   [With LLaMA-Factory](#with-llama-factory)
-    *   [With the SWIFT Framework](#with-the-swift-framework)
 *   [Awesome work using MiniCPM-V & MiniCPM-o](#awesome-work-using-minicpm-v--minicpm-o)
 *   [FAQs](#faqs)
 *   [Limitations](#limitations)
-*   [Model License](#model-license)
-*   [Statement](#statement)
-*   [Institutions](#institutions)
-*   [🌟 Star History](#--star-history)
-*   [Key Techniques and Other Multimodal Projects](#key-techniques-and-other-multimodal-projects)
-*   [Citation](#citation)
+
+<br>
+
+**(Rest of the original README content, with minor improvements)**
 
 ## MiniCPM-V 4.5
 
-The latest in the MiniCPM-V series. This version is built on Qwen3-8B and SigLIP2-400M with a total of 8B parameters.
+**MiniCPM-V 4.5** is the latest and most capable model in the MiniCPM-V series. The model is built on Qwen3-8B and SigLIP2-400M with a total of 8B parameters. It exhibits a significant performance improvement over previous MiniCPM-V and MiniCPM-o models, and introduces new useful features. Notable features of MiniCPM-V 4.5 include:
 
-**Key Highlights:**
+- 🔥 **State-of-the-art Vision-Language Capability.**
+  MiniCPM-V 4.5 achieves an average score of 77.0 on OpenCompass, a comprehensive evaluation of 8 popular benchmarks. **With only 8B parameters, it surpasses widely used proprietary models like GPT-4o-latest, Gemini-2.0 Pro, and strong open-source models like Qwen2.5-VL 72B** for vision-language capabilities, making it the most performant MLLM under 30B parameters.
 
-*   **State-of-the-art Vision-Language Capability:** 8B parameters exceed GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B.
-*   **Efficient High-FPS and Long Video Understanding:**  Unified 3D-Resampler for 96x video token compression.
-*   **Controllable Hybrid Fast/Deep Thinking:** Switch between efficiency and in-depth analysis.
-*   **Strong OCR and Multilingual Support:** Advanced OCR, document processing, and 30+ language capabilities.
-*   **Easy Usage:** Available on llama.cpp, ollama, int4, GGUF, AWQ formats, SGLang and vLLM support, and provides local WebUI, iOS demo, and online web demo.
+- 🎬 **Efficient High-FPS and Long Video Understanding.** Powered by a new unified 3D-Resampler over images and videos, MiniCPM-V 4.5 can now achieve 96x compression rate for video tokens, where 6 448x448 video frames can be jointly compressed into 64 video tokens (normally 1,536 tokens for most MLLMs). This means that the model can perceive significantly more video frames without increasing the LLM inference cost. This brings state-of-the-art high-FPS (up to 10FPS) video understanding and long video understanding capabilities on Video-MME, LVBench, MLVU, MotionBench, FavorBench, etc., efficiently.
 
-### Key Techniques
+- ⚙️ **Controllable Hybrid Fast/Deep Thinking.** MiniCPM-V 4.5 supports both fast thinking for efficient frequent usage with competitive performance, and deep thinking for more complex problem solving. To cover efficiency and performance trade-offs in different user scenarios, this fast/deep thinking mode can be switched in a highly controlled fashion.
 
-* **Architechture: Unified 3D-Resampler for High-density Video Compression** MiniCPM-V 4.5 introduces a 3D-Resampler that overcomes the performance-efficiency trade-off in video understanding. By grouping and jointly compressing up to 6 consecutive video frames into just 64 tokens (the same token count used for a single image in MiniCPM-V series), MiniCPM-V 4.5 achieves a 96× compression rate for video tokens. This allows the model to process more video frames without additional LLM computational cost, enabling high-FPS video and long video understanding. The architecture supports unified encoding for images, multi-image inputs, and videos, ensuring seamless capability and knowledge transfer.
+- 💪 **Strong OCR, Document Parsing and Others.**
+Based on [LLaVA-UHD](https://arxiv.org/pdf/2403.11703) architecture, MiniCPM-V 4.5 can process high-resolution images with any aspect ratio and up to 1.8 million pixels (e.g., 1344x1344), using 4x fewer visual tokens than most MLLMs. The model achieves **leading performance on OCRBench, surpassing proprietary models such as GPT-4o-latest and Gemini 2.5**. It also achieves state-of-the-art performance for PDF document parsing capability on OmniDocBench among general MLLMs. Based on the latest [RLAIF-V](https://github.com/RLHF-V/RLAIF-V/) and [VisCPM](https://github.com/OpenBMB/VisCPM) techniques, it features **trustworthy behaviors**, outperforming GPT-4o-latest on MMHal-Bench, and supports **multilingual capabilities** in more than 30 languages.
 
-* **Pre-training: Unified Learning for OCR and Knowledge from Documents.** Existing MLLMs learn OCR capability and knowledge from documents in isolated training approaches. We observe that the essential difference between these two training approaches is the visibility of the text in images. By dynamically corrupting text regions in documents with varying noise levels and asking the model to reconstruct the text, the model learns to adaptively and properly switch between accurate text recognition (when text is visible) and multimodal context-based knowledge reasoning (when text is heavily obscured). This eliminates reliance on error-prone document parsers in knowledge learning from documents, and prevents hallucinations from over-augmented OCR data, resulting in top-tier OCR and multimodal knowledge performance with minimal engineering overhead.
 
-* **Post-training: Hybrid Fast/Deep Thinking with Multimodal RL.** MiniCPM-V 4.5 offers a balanced reasoning experience through two switchable modes: fast thinking for efficient daily use and deep thinking for complex tasks. Using a new hybrid reinforcement learning method, the model jointly optimizes both modes, significantly enhancing fast-mode performance without compromising deep-mode capability. Incorporated with [RLPR](https://github.com/OpenBMB/RLPR) and [RLAIF-V](https://github.com/RLHF-V/RLAIF-V), it generalizes robust reasoning skills from broad multimodal data while effectively reducing hallucinations.
+-  💫  **Easy Usage.**
+MiniCPM-V 4.5 can be easily used in various ways: (1) [llama.cpp](https://github.com/tc-mb/llama.cpp/blob/Support-MiniCPM-V-4.5/docs/multimodal/minicpmv4.5.md) and [ollama](https://github.com/tc-mb/ollama/tree/MIniCPM-V) support for efficient CPU inference on local devices, (2) [int4](https://huggingface.co/openbmb/MiniCPM-V-4_5-int4), [GGUF](https://huggingface.co/openbmb/MiniCPM-V-4_5-gguf) and [AWQ](https://github.com/tc-mb/AutoAWQ) format quantized models in 16 sizes, (3) [SGLang](https://github.com/tc-mb/sglang/tree/main) and [vLLM](#efficient-inference-with-llamacpp-ollama-vllm) support for high-throughput and memory-efficient inference, (4) fine-tuning on new domains and tasks with [Transformers](https://github.com/tc-mb/transformers/tree/main) and [LLaMA-Factory](./docs/llamafactory_train_and_infer.md), (5) quick [local WebUI demo](#chat-with-our-demo-on-gradio), (6) optimized [local iOS app](https://github.com/tc-mb/MiniCPM-o-demo-iOS) on iPhone and iPad, and (7) online web demo on [server](http://101.126.42.235:30910/). See our [Cookbook](https://github.com/OpenSQZ/MiniCPM-V-CookBook) for full usage!
 
-### Evaluation
+
+### Key Techniques <!-- omit in toc -->
+
+
+<div align="center">
+<img src="./assets/minicpm-v-4dot5-framework.png" , width=100%>
+</div>
+
+- **Architechture: Unified 3D-Resampler for High-density Video Compression.** MiniCPM-V 4.5 introduces a 3D-Resampler that overcomes the performance-efficiency trade-off in video understanding. By grouping and jointly compressing up to 6 consecutive video frames into just 64 tokens (the same token count used for a single image in MiniCPM-V series), MiniCPM-V 4.5 achieves a 96× compression rate for video tokens. This allows the model to process more video frames without additional LLM computational cost, enabling high-FPS video and long video understanding. The architecture supports unified encoding for images, multi-image inputs, and videos, ensuring seamless capability and knowledge transfer.
+
+- **Pre-training: Unified Learning for OCR and Knowledge from Documents.** Existing MLLMs learn OCR capability and knowledge from documents in isolated training approaches. We observe that the essential difference between these two training approaches is the visibility of the text in images. By dynamically corrupting text regions in documents with varying noise levels and asking the model to reconstruct the text, the model learns to adaptively and properly switch between accurate text recognition (when text is visible) and multimodal context-based knowledge reasoning (when text is heavily obscured). This eliminates reliance on error-prone document parsers in knowledge learning from documents, and prevents hallucinations from over-augmented OCR data, resulting in top-tier OCR and multimodal knowledge performance with minimal engineering overhead.
+
+- **Post-training: Hybrid Fast/Deep Thinking with Multimodal RL.** MiniCPM-V 4.5 offers a balanced reasoning experience through two switchable modes: fast thinking for efficient daily use and deep thinking for complex tasks. Using a new hybrid reinforcement learning method, the model jointly optimizes both modes, significantly enhancing fast-mode performance without compromising deep-mode capability. Incorporated with [RLPR](https://github.com/OpenBMB/RLPR) and [RLAIF-V](https://github.com/RLHF-V/RLAIF-V/), it generalizes robust reasoning skills from broad multimodal data while effectively reducing hallucinations.
+
+### Evaluation  <!-- omit in toc -->
 
 <div align="center">
   <img src="./assets/radar_minicpm_v45.png", width=60%>
@@ -79,10 +113,11 @@ The latest in the MiniCPM-V series. This version is built on Qwen3-8B and SigLIP
 <img src="./assets/minicpmv_4_5_evaluation_result.png" , width=80%>
 </div>
 
-### Inference Efficiency
+
+### Inference Efficiency 
+
 
 **OpenCompass**
-
 <div align="left">
 <table style="margin: 0px auto;">
     <thead>
@@ -157,7 +192,8 @@ The latest in the MiniCPM-V series. This version is built on Qwen3-8B and SigLIP
 
 Both Video-MME and OpenCompass were evaluated using 8×A100 GPUs for inference. The reported inference time of Video-MME includes full model-side computation, and excludes the external cost of video frame extraction (dependent on specific frame extraction tools) for fair comparison.
 
-### Examples
+
+### Examples  <!-- omit in toc -->
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=Cn23FujYMMU"><img src="./assets/minicpmv4_5/MiniCPM-V 4.5-8.26_img.jpeg", width=70%></a>
@@ -179,7 +215,7 @@ Both Video-MME and OpenCompass were evaluated using 8×A100 GPUs for inference. 
 
 We deploy MiniCPM-V 4.5 on iPad M4 with [iOS demo](https://github.com/tc-mb/MiniCPM-o-demo-iOS). The demo video is the raw screen recording without edition.
 
-<table align="center">
+<table align="center"> 
     <p align="center">
       <img src="assets/minicpmv4_5/v45_en_handwriting.gif" width=45%/>
       &nbsp;&nbsp;&nbsp;&nbsp;
@@ -194,20 +230,38 @@ We deploy MiniCPM-V 4.5 on iPad M4 with [iOS demo](https://github.com/tc-mb/Mini
 
 ## MiniCPM-o 2.6
 
-This model excels in vision, speech, and multimodal live streaming. Built in an end-to-end fashion based on SigLip-400M, Whisper-medium-300M, ChatTTS-200M, and Qwen2.5-7B.
+**MiniCPM-o 2.6** is the latest and most capable model in the MiniCPM-o series. The model is built in an end-to-end fashion based on SigLip-400M, Whisper-medium-300M, ChatTTS-200M, and Qwen2.5-7B with a total of 8B parameters. It exhibits a significant performance improvement over MiniCPM-V 2.6, and introduces new features for real-time speech conversation and multimodal live streaming. Notable features of MiniCPM-o 2.6 include:
 
-**Key Highlights:**
+- 🔥 **Leading Visual Capability.**
+  MiniCPM-o 2.6 achieves an average score of 70.2 on OpenCompass, a comprehensive evaluation of 8 popular benchmarks. **With only 8B parameters, it surpasses widely used proprietary models like GPT-4o-202405, Gemini 1.5 Pro, and Claude 3.5 Sonnet** for single image understanding. It also **outperforms GPT-4V and Claude 3.5 Sonnet** in multi-image and video understanding, and shows promising in-context learning capability.
 
-*   **Leading Visual Capability:** Achieves high scores on OpenCompass, and surpassing GPT-4o-202405, Gemini 1.5 Pro, and Claude 3.5 Sonnet.
-*   **State-of-the-art Speech Capability:** Supports bilingual real-time speech conversation, outperforms GPT-4o-realtime on ASR and STT, and has great performance in open-source community.
-*   **Strong Multimodal Live Streaming Capability:** Performs well on StreamingBench, and exceeds the performance of GPT-4o-202408, and Claude 3.5 Sonnet.
-*   **Superior Efficiency:** Produces far fewer tokens than most models for image processing, improving speed and memory usage.
+- 🎙 **State-of-the-art Speech Capability.** MiniCPM-o 2.6 supports **bilingual real-time speech conversation with configurable voices** in English and Chinese. It **outperforms GPT-4o-realtime on audio understanding tasks** such as ASR and STT translation, and shows **state-of-the-art performance on speech conversation in both semantic and acoustic evaluations in the open-source community**. It also allows for fun features such as emotion/speed/style control, end-to-end voice cloning, role play, etc.
+
+- 🎬 **Strong Multimodal Live Streaming Capability.** As a new feature, MiniCPM-o 2.6 can **accept continuous video and audio streams independent of user queries, and support real-time speech interaction**. It **outperforms GPT-4o-202408 and Claude 3.5 Sonnet and shows state-of-the-art performance in the open-source community on StreamingBench**, a comprehensive benchmark for real-time video understanding, omni-source (video & audio) understanding, and multimodal contextual understanding.
+
+- 💪 **Strong OCR Capability and Others.**
+Advancing popular visual capabilities from MiniCPM-V series, MiniCPM-o 2.6 can process images with any aspect ratio and up to 1.8 million pixels (e.g., 1344x1344). It achieves **state-of-the-art performance on OCRBench for models under 25B, surpassing proprietary models such as GPT-4o-202405**.
+  Based on the latest [RLAIF-V](https://github.com/RLHF-V/RLAIF-V/) and [VisCPM](https://github.com/OpenBMB/VisCPM) techniques, it features **trustworthy behaviors**, outperforming GPT-4o and Claude 3.5 Sonnet on MMHal-Bench, and supports **multilingual capabilities** on more than 30 languages.
+
+
+- 🚀 **Superior Efficiency.**
+  In addition to its friendly size, MiniCPM-o 2.6 also shows **state-of-the-art token density** (i.e., the number of pixels encoded into each visual token). **It produces only 640 tokens when processing a 1.8M pixel image, which is 75% fewer than most models**. This directly improves the inference speed, first-token latency, memory usage, and power consumption. As a result, MiniCPM-o 2.6 can efficiently support **multimodal live streaming** on end-side devices such as iPads.
+
+-  💫  **Easy Usage.**
+MiniCPM-o 2.6 can be easily used in various ways: (1) [llama.cpp](https://github.com/OpenBMB/llama.cpp/blob/minicpm-omni/examples/llava/README-minicpmo2.6.md) support for efficient CPU inference on local devices, (2) [int4](https://huggingface.co/openbmb/MiniCPM-o-2_6-int4) and [GGUF](https://huggingface.co/openbmb/MiniCPM-o-2_6-gguf) format quantized models in 16 sizes, (3) [vLLM](#efficient-inference-with-llamacpp-ollama-vllm) support for high-throughput and memory-efficient inference, (4) fine-tuning on new domains and tasks with [LLaMA-Factory](./docs/llamafactory_train_and_infer.md), (5) quick [local WebUI demo](#chat-with-our-demo-on-gradio), and (6) online web demo on [server](https://minicpm-omni-webdemo-us.modelbest.cn/).
+
+**Model Architecture.**
+
+- **End-to-end Omni-modal Architecture.** Different modality encoders/decoders are connected and trained in an **end-to-end** fashion to fully exploit rich multimodal knowledge. The model is trained in a fully end-to-end manner with only CE loss.
+- **Omni-modal Live Streaming Mechanism.** (1) We change the offline modality encoder/decoders into online ones for **streaming inputs/outputs.** (2) We devise a **time-division multiplexing (TDM) mechanism** for omni-modality streaming processing in the LLM backbone. It divides parallel omni-modality streams into sequential info within small periodic time slices. 
+- **Configurable Speech Modeling Design.** We devise a multimodal system prompt, including traditional text system prompt, and **a new audio system prompt to determine the assistant voice**. This enables flexible voice configurations in inference time, and also facilitates end-to-end voice cloning and description-based voice creation.
 
 <div align="center">
 <img src="./assets/minicpm-o-26-framework-v2.png" , width=80%>
 </div>
 
-### Evaluation
+
+### Evaluation  <!-- omit in toc -->
 
 <div align="center">
   <img src="./assets/radar.jpg", width=80%>
@@ -554,10 +608,11 @@ This model excels in vision, speech, and multimodal live streaming. Built in an 
 
 Note: For proprietary models, we calculate token density based on the image encoding charging strategy defined in the official API documentation, which provides an upper-bound estimation.
 
+
 **Multi-image and Video Understanding**
 
 <div align="center">
-
+ 
 <table style="margin: 0px auto;">
     <thead>
         <tr>
@@ -587,264 +642,4 @@ Note: For proprietary models, we calculate token density based on the image enco
             <td>54.6</td>
             <td>62.7</td>
             <td>53.1</td>
-            <td>59.9/63.3</td>
-        </tr>
-        <tr>
-            <td colspan="6" align="left"><strong>Open-source</strong></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">VITA-1.5</td>
-            <td>8B</td>
-            <td>45.0</td>
-            <td>-</td>
-            <td>-</td>
-            <td>56.1/58.7</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">LLaVA-NeXT-Interleave 14B</td>
-            <td>14B</td>
-            <td>52.6</td>
-            <td>66.4</td>
-            <td>30.2</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">LLaVA-OneVision-72B</td>
-            <td>72B</td>
-            <td>55.4</td>
-            <td><strong>77.6</strong></td>
-            <td>-</td>
-            <td><u>66.2/69.5</u></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MANTIS 8B</td>
-            <td>8B</td>
-            <td>49.1</td>
-            <td>59.5</td>
-            <td>34.8</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Qwen2-VL-7B</td>
-            <td>8B</td>
-            <td>53.2</td>
-            <td>69.6*</td>
-            <td><strong>67.6*</strong></td>
-            <td>63.3/69.0</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">InternVL2.5-8B</td>
-            <td>8B</td>
-            <td>54.8</td>
-            <td>67.7</td>
-            <td>52.5</td>
-            <td>64.2/66.9</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-V 2.6</td>
-            <td>8B</td>
-            <td>53.0</td>
-            <td>69.1</td>
-            <td>53.8</td>
-            <td>60.9/63.6</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-o 2.6</td>
-            <td>8B</td>
-            <td><u>56.7</u></td>
-            <td><u>71.9</u></td>
-            <td><u>58.6</u></td>
-            <td>63.9/67.9</td>
-        </tr>
-    </tbody>
-</table>
-
-</div>
-* We evaluate officially released checkpoints by ourselves.
-</details>
-
-<details>
-<summary>Click to view audio understanding and speech conversation results.</summary>
-
-**Audio Understanding**
-
-<div align="center">
-<table style="margin: 0px auto;">
-    <thead>
-        <tr>
-            <th align="left">Task</th>
-            <th>Size</th>
-            <th colspan="3">ASR (zh)</th>
-            <th colspan="3">ASR (en)</th>
-            <th colspan="2">AST</th>
-            <th>Emotion</th>
-        </tr>
-        <tr>
-            <th align="left">Metric</th>
-            <td></td>
-            <th colspan="3">CER↓</th>
-            <th colspan="3">WER↓</th>
-            <th colspan="2">BLEU↑</th>
-            <th>ACC↑</th>
-        </tr>
-        <tr>
-            <th align="left">Dataset</th>
-            <td></td>
-            <th>AISHELL-1</th>
-            <th>Fleurs zh</th>
-            <th>WenetSpeech test-net</th>
-            <th>LibriSpeech test-clean</th>
-            <th>GigaSpeech</th>
-            <th>TED-LIUM</th>
-            <th>CoVoST en2zh</th>
-            <th>CoVoST zh2en</th>
-            <th>MELD emotion</th>
-        </tr>
-    </thead>
-    <tbody align="center">
-        <tr>
-            <td colspan="11" align="left"><strong>Proprietary</strong></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">GPT-4o-Realtime</td>
-            <td>-</td>
-            <td>7.3*</td>
-            <td><u>5.4*</u></td>
-            <td>28.9*</td>
-            <td>2.6*</td>
-            <td>12.9*</td>
-            <td>4.8*</td>
-            <td>37.1*</td>
-            <td>15.7*</td>
-            <td>33.2*</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Gemini 1.5 Pro</td>
-            <td>-</td>
-            <td>4.5*</td>
-            <td>5.9*</td>
-            <td>14.3*</td>
-            <td>2.9*</td>
-            <td>10.6*</td>
-            <td><strong>3.0*</strong></td>
-            <td><u>47.3*</u></td>
-            <td>22.6*</td>
-            <td>48.4*</td>
-        </tr>
-        <tr>
-            <td colspan="11" align="left"><strong>Open-Source</strong></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Qwen2-Audio-7B</td>
-            <td>8B</td>
-            <td>-</td>
-            <td>7.5</td>
-            <td>-</td>
-            <td><strong>1.6</strong></td>
-            <td>-</td>
-            <td>-</td>
-            <td>45.2</td>
-            <td><u>24.4</u></td>
-            <td><strong>55.3</strong></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Qwen2-Audio-7B-Instruct</td>
-            <td>8B</td>
-            <td>2.6*</td>
-            <td>6.9*</td>
-            <td><u>10.3*</u></td>
-            <td>3.1*</td>
-            <td><u>9.7</u>*</td>
-            <td>5.9*</td>
-            <td>39.5*</td>
-            <td>22.9*</td>
-            <td>17.4*</td>
-        </tr>
-          <tr>
-            <td nowrap="nowrap" align="left">VITA-1.5</td>
-            <td>8B</td>
-            <td>2.16</td>
-            <td>-</td>
-            <td>8.4</td>
-            <td>3.4</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">GLM-4-Voice-Base</td>
-            <td>9B</td>
-            <td><u>2.5</u></td>
-            <td>-</td>
-            <td>-</td>
-            <td>2.8</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-o 2.6</td>
-            <td>8B</td>
-            <td><strong>1.6</strong></td>
-            <td><strong>4.4</strong></td>
-            <td><strong>6.9</strong></td>
-            <td><u>1.7</u></td>
-            <td><strong>8.7</strong></td>
-            <td><strong>3.0</strong></td>
-            <td><strong>48.2</strong></td>
-            <td><strong>27.2</strong></td>
-            <td><u>52.4</u></td>
-        </tr>
-    </tbody>
-</table>
-</div>
-* We evaluate officially released checkpoints by ourselves.<br><br>
-
-**Speech Generation**
-
-<div align="center">
-<table style="margin: 0px auto;">
-    <thead>
-        <tr>
-            <th align="left">Task</th>
-            <th>Size</th>
-            <th colspan="9">SpeechQA</th>
-        </tr>
-        <tr>
-            <th align="left">Metric</th>
-            <th></th>
-            <th colspan="3">ACC↑</th>
-            <th>G-Eval (10 point)↑</th>
-            <th>Semantic ELO score↑</th>
-            <th>Acoustic ELO score↑</th>
-            <th>Overall ELO score↑</th>
-            <th>UTMOS↑</th>
-            <th>ASR-WER↓</th>
-        </tr>
-        <tr>
-            <th align="left">Dataset</th>
-            <th></th>
-            <th>Speech Llama Q.</th>
-            <th>Speech Web Q.</th>
-            <th>Speech Trivia QA</th>
-            <th>Speech AlpacaEval</th>
-            <th colspan="5">AudioArena</th>
-        </tr>
-    </thead>
-    <tbody align="center">
-        <tr>
-            <td colspan="11" align="left"><strong>Proprietary</strong></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">GPT-4o-Realtime</td>
-            <td></td>
-            <td><strong>71.7</strong></td>
-            <td><strong>51.6</strong></td>
-            <td><strong>69.7</strong></td>
-            <td><strong>7.4</strong></td>
-            <td><strong>1157</strong></td>
-            <td><strong>1203</strong></td>
-            <td><strong>12
+            <td>59.9/63.

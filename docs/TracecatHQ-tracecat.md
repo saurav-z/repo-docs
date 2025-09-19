@@ -6,33 +6,31 @@
 
 <div align="center">
 
-[![Commits](https://img.shields.io/github/commit-activity/m/TracecatHQ/tracecat?style=for-the-badge&logo=github)](https://github.com/TracecatHQ/tracecat)
-[![License](https://img.shields.io/badge/License-AGPL%203.0-blue?style=for-the-badge&logo=agpl)](https://github.com/TracecatHQ/tracecat/blob/main/LICENSE)
+![Commits](https://img.shields.io/github/commit-activity/m/TracecatHQ/tracecat?style=for-the-badge&logo=github)
+![License](https://img.shields.io/badge/License-AGPL%203.0-blue?style=for-the-badge&logo=agpl)
 [![Discord](https://img.shields.io/discord/1212548097624903681.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/H4XZwsYzY4)
 
 </div>
 
 <div align="center">
 
-<a href="https://docs.tracecat.com"><img src="https://img.shields.io/badge/Documentation-%23000000.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1ib29rLW9wZW4iPjxwYXRoIGQ9Ik0xMiA3djE0Ii8+PHBhdGggZD0iTTMgMThhMSAxIDAgMCAxLTEtMVY0YTEgMSAwIDAgMSAxLTFoNWE0IDQgMCAwIDEgNCA0IDQgNCAwIDAgMSA0LTRoNWExIDEgMCAwIDEgMSAxdjEzYTEgMSAwIDAgMS0xIDFoLTZhMyAzIDAgMCAwLTMgMyAzIDMgMCAwIDAtMy0zeiIvPjwvc3ZnPg==&logoColor=white"></a>
+<a href="https://docs.tracecat.com"><img src="https://img.shields.io/badge/Documentation-%23000000.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1ib29rLW9wZW4iPjxwYXRoIGQ9Ik0xMiA3djE0Ii8+PHBhdGggZD0iTTMgMThhMSAxIDAgMCAxLTEtMVY0YTEgMSAwIDAgMSAxLTFoNWE0IDQgMCAwIDEgNCA0IDQgNCAwIDAgMSA0LTRoNWExIDEgMCAwIDEgMSAxdjEzYTEgMSAwIDAgMS0xMWgtNmEzIDMgMCAwIDAtMyAzIDMgMCAwIDAtMy0zeiIvPjwvc3ZnPg==&logoColor=white"></a>
 <a href="https://github.com/TracecatHQ/tracecat/tree/main/packages/tracecat-registry/tracecat_registry/templates"><img src="https://img.shields.io/badge/Templates%20Library-%23000000.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNoaWVsZCI+PHBhdGggZD0iTTIwIDEzYzAgNS0zLjUgNy41LTcuNjYgOC45NWExIDEgMCAwIDEtLjY3LS4wMUM3LjUgMjAuNSA0IDE4IDQgMTNWNmExIDEgMCAwIDEgMS0xYzIgMCA0LjUtMS4yIDYuMjQtMi43MmExLjE3IDEuMTcgMCAwIDEgMS41MiAwQzE0LjUxIDMuODEgMTcgNSAxOSA1YTEgMSAwIDAgMSAxIDF6Ii8+PC9zdmc+&logoColor=white"></a>
 
 </div>
 
-## Tracecat: Automate Security and IT Workflows with Open Source
+# Tracecat: Automate Security and IT Workflows with Ease
 
-Tracecat is a modern, open-source automation platform empowering security and IT engineers to streamline workflows using YAML-based templates.  [Explore Tracecat on GitHub](https://github.com/TracecatHQ/tracecat).
+Tracecat is an open-source workflow automation platform designed for security and IT engineers, enabling rapid incident response and efficient task management.  [Explore the Tracecat Repository](https://github.com/TracecatHQ/tracecat).
 
-### Key Features
+## Key Features
 
-*   **YAML-Based Templates:** Define workflows using simple, human-readable YAML for easy configuration and modification.
-*   **No-Code UI:**  Intuitive user interface to design and manage workflows without coding.
-*   **Built-in Lookup Tables & Case Management:**  Simplify data management and incident handling within the platform.
-*   **Scalable & Reliable Orchestration:** Powered by Temporal for robust performance and reliability.
-*   **Tracecat Registry:** A library of pre-built integration and response-as-code templates for various security and IT tasks.
-*   **Open Cyber Security Schema (OCSF) Alignment:** Templates are aligned with OCSF for standardized data handling.
-
-![Tracecat workflow](/img/workflow.png)
+*   **YAML-Based Templates:** Simplify integrations with easy-to-use, YAML-based templates.
+*   **No-Code UI:** Design and manage workflows with an intuitive, no-code user interface.
+*   **Built-in Lookup Tables & Case Management:**  Streamline incident response with integrated lookup tables and case management features.
+*   **Scalable Orchestration:** Powered by Temporal for robust, reliable, and scalable workflow execution.
+*   **Tracecat Registry:** Access a growing library of pre-built integration and response-as-code templates.
+*   **Open Cyber Security Schema (OCSF) Alignment:**  Template inputs are normalized to fit the OCSF ontology where possible.
 
 ## Getting Started
 
@@ -41,46 +39,46 @@ Tracecat is a modern, open-source automation platform empowering security and IT
 
 ### Run Tracecat Locally
 
-Get started quickly by deploying a local Tracecat stack using Docker Compose.  Comprehensive instructions are available [here](https://docs.tracecat.com/self-hosting/deployment-options/docker-compose).
+Deploy a local Tracecat stack using Docker Compose.  Detailed instructions can be found [here](https://docs.tracecat.com/self-hosting/deployment-options/docker-compose).
 
 ### Run Tracecat on AWS Fargate (Advanced)
 
-Deploy a production-ready Tracecat stack on AWS Fargate using Terraform.  Detailed instructions can be found [here](https://docs.tracecat.com/self-hosting/deployment-options/aws-ecs).
+For production-ready deployments, utilize Terraform to deploy Tracecat on AWS Fargate.  Refer to the instructions [here](https://docs.tracecat.com/self-hosting/deployment-options/aws-ecs).
 
-### Run Tracecat on Kubernetes (Coming Soon)
+### Run Tracecat on Kubernetes
 
-Kubernetes deployment options will be available soon.
+Coming soon.
 
-## Community & Support
-
-Join the Tracecat community for questions, feedback, and new integration ideas: [Tracecat Community Discord](https://discord.gg/H4XZwsYzY4).
-
-## Tracecat Registry: Pre-built Integrations and Templates
+## Tracecat Registry
 
 ![Tracecat Action template](img/action-template.svg)
 
-The Tracecat Registry offers a curated collection of integration and response-as-code templates.  These templates leverage an ontology of common capabilities (e.g., `list_alerts`, `list_cases`) and normalize inputs using the [Open Cyber Security Schema (OCSF)](https://schema.ocsf.io/) where possible.
+The Tracecat Registry provides a centralized hub for pre-built integration and response-as-code templates, organized by common capabilities (e.g., `list_alerts`, `list_cases`, `list_users`).
 
-**Explore the Registry:**
+**Examples:**
 
-*   Browse use cases and ideas in our documentation.
-*   View existing open-source templates in [our repository](https://github.com/TracecatHQ/tracecat/tree/main/packages/tracecat-registry/tracecat_registry/templates).
+*   Check out the Tracecat Registry documentation for use cases and ideas.
+*   Explore existing open-source templates in [our repository](https://github.com/TracecatHQ/tracecat/tree/main/packages/tracecat-registry/tracecat_registry/templates).
+
+## Community
+
+Join the Tracecat community for support, feedback, and to share new integration ideas: [Tracecat Community Discord](https://discord.gg/H4XZwsYzY4).
 
 ## Open Source vs. Enterprise
 
-This repository is licensed under AGPL-3.0, except for the `ee` directory, which contains enterprise-specific features requiring a Tracecat Enterprise license. The Enterprise Edition provides advanced features requiring dedicated research and development investments.
+Tracecat is available under the AGPL-3.0 license, except for the `ee` directory which contains paid enterprise features. The Enterprise Edition provides advanced functionality.
 
-*For information about Tracecat's Enterprise self-hosted or managed cloud offerings, please visit [our website](https://tracecat.com) or [book a meeting](https://cal.com/team/tracecat).*
+*If you are interested in Tracecat's Enterprise self-hosted or managed Cloud offering, check out [our website](https://tracecat.com) or [book a meeting with us](https://cal.com/team/tracecat).*
 
 ## Security
 
-SSO, audit logs, and Infrastructure-as-Code (IaaC) deployments (Terraform, Kubernetes/Helm) are always available for free. We're developing a comprehensive list of Tracecat's threat model, security features, and hardening recommendations. For immediate security questions, please contact us on [Discord](https://discord.gg/H4XZwsYzY4).
+Tracecat prioritizes security, offering features like SSO, audit logs, and IaC deployments (Terraform, Kubernetes / Helm) in the free version.  A comprehensive threat model, security features, and hardening recommendations are under development. For immediate questions, contact us on [Discord](https://discord.gg/H4XZwsYzY4).
 
-Report security issues to [security@tracecat.com](mailto:founders+security@tracecat.com) with `tracecat` in the subject line.
+Report security issues to [security@tracecat.com](mailto:founders+security@tracecat.com) with "tracecat" in the subject line.
 
 ## Contributors
 
-Thank you to all our amazing contributors for their code, integrations, and support!  Open source thrives because of your contributions. ❤️
+Thank you to our contributors for their code, integrations, and support!
 
 <a href="https://github.com/TracecatHQ/tracecat/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=TracecatHQ/tracecat" />

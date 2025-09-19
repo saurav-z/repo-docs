@@ -1,57 +1,51 @@
-# PyGMT: Pythonic Geospatial Mapping and Data Visualization
+# PyGMT: Create Stunning Maps and Geospatial Visualizations in Python
 
-**Create stunning, publication-quality maps and figures with ease using the power of the Generic Mapping Tools (GMT) directly in Python.**  [Explore the PyGMT repository on GitHub](https://github.com/GenericMappingTools/pygmt).
+**Unlock the power of the Generic Mapping Tools (GMT) with PyGMT, a user-friendly Python interface for creating publication-quality maps and analyzing geospatial data.** ([View on GitHub](https://github.com/GenericMappingTools/pygmt))
 
-[![Latest version on PyPI](https://img.shields.io/pypi/v/pygmt)](https://pypi.org/project/pygmt)
-[![Latest version on conda-forge](https://img.shields.io/conda/v/conda-forge/pygmt)](https://anaconda.org/conda-forge/pygmt)
-[![GitHub license](https://img.shields.io/github/license/GenericMappingTools/pygmt)](https://github.com/GenericMappingTools/pygmt/blob/main/LICENSE.txt)
-[![Compatible Python versions](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2FGenericMappingTools%2Fpygmt%2Frefs%2Fheads%2Fmain%2Fpyproject.toml)](https://www.pygmt.org/dev/minversions.html)
-[![Digital Object Identifier for the Zenodo archive](https://zenodo.org/badge/DOI/10.5281/3781524.svg)](https://doi.org/10.5281/zenodo.3781524)
-[![Discourse forum](https://img.shields.io/discourse/status?label=forum&server=https%3A%2F%2Fforum.generic-mapping-tools.org)](https://forum.generic-mapping-tools.org)
-[![PyOpenSci](https://tinyurl.com/y22nb8up)](https://github.com/pyOpenSci/software-submission/issues/43)
-[![Contributor Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg)](https://github.com/GenericMappingTools/.github/blob/main/CODE_OF_CONDUCT.md)
-[![GitHub Actions Tests status](https://github.com/GenericMappingTools/pygmt/actions/workflows/ci_tests.yaml/badge.svg)](https://github.com/GenericMappingTools/pygmt/actions/workflows/ci_tests.yaml)
-[![GitHub Actions GMT Dev Tests status](https://github.com/GenericMappingTools/pygmt/actions/workflows/ci_tests_dev.yaml/badge.svg)](https://github.com/GenericMappingTools/pygmt/actions/workflows/ci_tests_dev.yaml)
-[![Test coverage status](https://codecov.io/gh/GenericMappingTools/pygmt/graph/badge.svg?token=78Fu4EWstx)](https://app.codecov.io/gh/GenericMappingTools/pygmt)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![CodSpeed Performance Benchmarks](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://codspeed.io/GenericMappingTools/pygmt)
+## Key Features:
 
-<!-- doc-index-start-after -->
-
-## Key Features
-
-*   **Pythonic Interface:** Easily access the power of GMT through a user-friendly Python API.
+*   **Pythonic Interface:** Easy-to-learn and use Python API for GMT functionality.
+*   **Publication-Quality Maps:** Generate professional-grade maps and figures.
 *   **Geospatial Data Processing:** Process and visualize geospatial and geophysical data.
-*   **Publication-Quality Maps:** Create professional-looking maps and figures for publications and presentations.
-*   **Integration with the Scientific Python Ecosystem:** Compatible with NumPy arrays, Pandas DataFrames, xarray Grids, and GeoPandas GeoDataFrames for seamless data handling.
-*   **Direct GMT C API Integration:**  Utilizes ctypes for efficient access to the underlying GMT C API without system calls.
-*   **Rich Jupyter Notebook Support:**  Enjoy rich display capabilities within Jupyter notebooks.
+*   **Integration with Scientific Python Ecosystem:** Seamlessly works with NumPy, Pandas, xarray, and GeoPandas.
+*   **Direct GMT API Access:** Utilizes the GMT C API directly for performance.
+*   **Jupyter Notebook Support:** Rich display and interactive capabilities within Jupyter notebooks.
+*   **Extensive Documentation & Examples:** Comprehensive documentation, tutorials, and a gallery to get you started.
+*   **Community-Driven:** Active community with a forum and open-source contributions.
+
+## About PyGMT
+
+PyGMT is a Python library designed for geospatial data processing, analysis, and visualization. It provides a user-friendly Pythonic interface to the powerful [Generic Mapping Tools (GMT)](https://github.com/GenericMappingTools/gmt), a command-line program widely used across Earth, Ocean, and Planetary sciences, and beyond. PyGMT empowers you to create publication-ready maps and figures with ease. Explore the [3-minute overview](https://youtu.be/4iPnITXrxVU) to understand how easy it is to create powerful maps with PyGMT.
 
 ## Why Use PyGMT?
 
-PyGMT makes GMT more accessible, allowing you to quickly create beautiful maps and figures.  Explore the possibilities with the [online Binder](https://github.com/GenericMappingTools/try-gmt) or take a quick look at this [3 minute overview](https://youtu.be/4iPnITXrxVU)!
+*   **Simplified GMT Access:** PyGMT makes the complexities of GMT accessible through a Pythonic interface.
+*   **Rapid Prototyping:** Quickly create and iterate on your maps and visualizations.
+*   **Reproducible Research:** Benefit from the power of code to ensure your results are reproducible.
+*   **Publication-Ready Output:** Generate high-quality maps and figures for your publications.
+*   **Integration with Existing Workflows:** Seamlessly incorporate PyGMT into your Python-based scientific workflows.
 
 ## Getting Started
 
 ### Installation
 
-Install PyGMT quickly using [mamba](https://mamba.readthedocs.org/):
+Install PyGMT using [mamba](https://mamba.readthedocs.org/):
 
 ```bash
 mamba install --channel conda-forge pygmt
 ```
 
-Alternatively, using [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html):
+Or, using [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html):
 
 ```bash
 conda install --channel conda-forge pygmt
 ```
 
-For more comprehensive installation instructions, please refer to the [full installation guide](https://www.pygmt.org/latest/install.html).
+Refer to the [full installation instructions](https://www.pygmt.org/latest/install.html) for other installation options.
 
-### Quick Example
+### Example
 
-Here's a simple example to get you started:
+Create a beautiful map using PyGMT:
 
 ```python
 import pygmt
@@ -61,33 +55,32 @@ fig.text(position="MC", text="PyGMT", font="80p,Helvetica-Bold,red@75")
 fig.show()
 ```
 
-This code will generate a global map with colored land and water, along with the "PyGMT" text.  Explore the [Gallery](https://www.pygmt.org/latest/gallery/index.html) and [Tutorials](https://www.pygmt.org/latest/tutorials/index.html) for further examples.
+Explore the [Gallery](https://www.pygmt.org/latest/gallery/index.html) and [Tutorials](https://www.pygmt.org/latest/tutorials/index.html) for more examples.
 
-## Project Goals
+## Resources
 
-*   Make GMT more accessible to new users.
-*   Build a Pythonic API for GMT.
-*   Interface directly with the GMT C API using ctypes.
-*   Provide rich display support in Jupyter notebooks.
-*   Integrate seamlessly with the scientific Python ecosystem.
+*   **Documentation:** [Development Version](https://www.pygmt.org/dev)
+*   **Tutorials:** [Tutorials](https://www.pygmt.org/latest/tutorials)
+*   **Gallery:** [Gallery](https://www.pygmt.org/latest/gallery)
+*   **External Examples:** [External PyGMT Examples](https://www.pygmt.org/latest/external_resources.html)
+*   **YouTube Intro:** [Quick Introduction to PyGMT](https://youtu.be/4iPnITXrxVU)
 
-## Contact and Community
+## Community & Support
 
-*   **GitHub:** Most discussions happen on [GitHub](https://github.com/GenericMappingTools/pygmt).  Feel free to [open an issue](https://github.com/GenericMappingTools/pygmt/issues/new).
-*   **Discourse Forum:** Ask questions and provide comments in our [Discourse forum](https://forum.generic-mapping-tools.org/c/questions/pygmt-q-a).
+*   **Forum:** [Discourse forum](https://forum.generic-mapping-tools.org/c/questions/pygmt-q-a)
+*   **GitHub:** [Open an Issue](https://github.com/GenericMappingTools/pygmt/issues/new)
 
 ## Contributing
 
-We welcome contributions!
+We welcome contributions! Read our [Contributing Guide](https://github.com/GenericMappingTools/pygmt/blob/main/CONTRIBUTING.md) to get involved.
 
-*   Review the [Contributing Guide](https://github.com/GenericMappingTools/pygmt/blob/main/CONTRIBUTING.md) to learn how to contribute.
-*   Please adhere to our [Contributor Code of Conduct](https://github.com/GenericMappingTools/.github/blob/main/CODE_OF_CONDUCT.md).
+*   **Code of Conduct:**  Please adhere to our [Contributor Code of Conduct](https://github.com/GenericMappingTools/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ## Citing PyGMT
 
-Please cite PyGMT in your research:
+Please cite PyGMT in your publications using the following BibTeX:
 
-```
+```bibtex
 @software{
   pygmt_2025_15628725,
   author       = {Tian, Dongdong and
@@ -118,23 +111,14 @@ Please cite PyGMT in your research:
 }
 ```
 
-Also, cite the [GMT 6 paper](https://doi.org/10.1029/2019GC008515).
+Also, please cite the [GMT 6 paper](https://doi.org/10.1029/2019GC008515) if you are using PyGMT.
 
 ## License
 
-PyGMT is licensed under the [BSD 3-clause License](https://github.com/GenericMappingTools/pygmt/blob/main/LICENSE.txt).
+PyGMT is licensed under the **BSD 3-clause License**. See [LICENSE.txt](https://github.com/GenericMappingTools/pygmt/blob/main/LICENSE.txt) for details.
 
 ## Support
 
-Development is supported by NSF grants [OCE-1558403](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1558403) and [EAR-1948603](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1948602).
-
-## Related Projects
-
-*   [GMT.jl](https://github.com/GenericMappingTools/GMT.jl): A Julia wrapper for GMT.
-*   [gmtmex](https://github.com/GenericMappingTools/gmtmex): A Matlab/Octave wrapper for GMT.
-
-<!-- doc-index-end-before -->
-
-## Minimum Supported Versions
-
-See [Minimum Supported Versions](https://www.pygmt.org/dev/minversions.html) for the detailed policy and minimum supported versions.
+The development of PyGMT has been supported by NSF grants
+[OCE-1558403](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1558403) and
+[EAR-1948603](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1948602).

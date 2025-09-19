@@ -1,12 +1,12 @@
-# REAL Video Enhancer: Elevate Your Videos with AI-Powered Upscaling and Frame Interpolation
+<!-- Improved README.md -->
+# REAL Video Enhancer: Enhance Your Videos with AI
 
-**Tired of blurry videos?** REAL Video Enhancer is a powerful, cross-platform application designed to upscale and interpolate your videos, offering a significant upgrade over outdated software.  [Visit the Original Repository](https://github.com/TNTwise/REAL-Video-Enhancer)
+Tired of blurry videos? **REAL Video Enhancer** is a powerful application for upscaling and interpolating videos, breathing new life into your old footage. ([View the original repository](https://github.com/TNTwise/REAL-Video-Enhancer))
 
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FTNTwise%2FREAL-Video-enhancer%2F&countColor=%23263759)](https://github.com/TNTwise/REAL-Video-Enhancer)
-[![pypresence](https://img.shields.io/badge/using-pypresence-00bb88.svg?style=for-the-badge&logo=discord&logoWidth=20)](https://github.com/qwertyquerty/pypresence)
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FTNTwise%2FREAL-Video-enhancer%2F&countColor=%23263759)](https://github.com/TNTwise/REAL-Video-enhancer/)
 [![License](https://img.shields.io/github/license/tntwise/real-video-enhancer)](https://github.com/TNTwise/REAL-Video-Enhancer/blob/main/LICENSE)
 [![Version](https://img.shields.io/badge/Version-2.3.6-blue)](https://github.com/TNTwise/REAL-Video-Enhancer/releases)
-[![Downloads](https://img.shields.io/github/downloads/tntwise/REAL-Video-Enhancer/total.svg?label=downloads%40total)](https://github.com/TNTwise/REAL-Video-Enhancer/releases)
+[![Downloads](https://img.shields.io/github/downloads/tntwise/REAL-Video-Enhancer/total.svg?label=Downloads@Total)](https://github.com/TNTwise/REAL-Video-Enhancer/releases)
 <a href="https://discord.gg/hwGHXga8ck">
       <img src="https://img.shields.io/discord/1041502781808328704?label=Discord" alt="Discord Shield"/></a>
 <br/>
@@ -18,31 +18,30 @@
   <img src="https://github.com/TNTwise/REAL-Video-Enhancer/raw/2.0/icons/logo-v2.svg" width = "25%">
 </p>
 
-## Key Features:
+## Key Features
 
 *   **Cross-Platform Support:** Runs on Windows, Linux, and macOS.
-*   **Frame Interpolation:** Smoothly increase your video's frame rate (e.g., 24 to 48 FPS).
-*   **Video Upscaling:** Enhance video resolution for sharper visuals.
-*   **Multiple Backends:** Utilizes TensorRT, PyTorch (CUDA/ROCm), and NCNN for optimized performance.
-*   **Scene Change Detection:** Preserves sharp transitions by intelligently detecting scene changes.
-*   **Discord RPC Integration:** Displays your activity on Discord (with the Discord system package and Discord flatpak).
-*   **Real-time Preview:** See the latest rendered frame instantly.
+*   **Frame Interpolation:** Smooths video by generating in-between frames (e.g., 24fps to 48fps).
+*   **Video Upscaling:** Enhances video resolution for improved clarity.
+*   **Scene Change Detection:** Preserves sharp transitions during processing.
+*   **Preview Window:** See the latest rendered frame in real time.
+*   **Multiple Backends:** Utilizes TensorRT and NCNN for efficient performance on various GPUs.
+*   **Discord Rich Presence:** Integrates with Discord to show your processing status.
 
 ## Table of Contents
 
 *   [Introduction](#introduction)
-*   [Key Features](#key-features)
-*   [Hardware and Software Requirements](#hardware-and-software-requirements)
+*   [Features](#key-features)
+*   [Hardware/Software Requirements](#hardware-software-requirements)
 *   [Models](#models)
     *   [Interpolate Models](#interpolate-models)
     *   [Upscale Models](#upscale-models)
-    *   [Decompression Models](#decompression-models)
 *   [Backends](#backends)
 *   [FAQ](#faq)
     *   [General Application Usage](#general-application-usage)
-    *   [TensorRT Related Questions](#tensorrt-related-questions)
-    *   [ROCm Related Questions](#rocm-related-questions)
-    *   [NCNN Related Questions](#ncnn-related-questions)
+    *   [TensorRT-Related Questions](#tensorrt-related-questions)
+    *   [ROCm-Related Questions](#rocm-related-questions)
+    *   [NCNN-Related Questions](#ncnn-related-questions)
 *   [Cloning](#cloning)
 *   [Building](#building)
 *   [Colab Notebook](#colab-notebook)
@@ -51,20 +50,20 @@
     *   [Software](#software)
 *   [Star History](#star-history)
 
-## Hardware and Software Requirements
+## Hardware/Software Requirements
 
-| Requirement | Minimum | Recommended |
-|---|---|---|
+|  | Minimum | Recommended |
+|--|--|--|
 | CPU | Dual Core x64 bit | Quad Core x64 bit |
-| GPU | Vulkan 1.3 capable device | Nvidia RTX GPU (20 series and up) |
+| GPU | Vulkan 1.3 capable device | NVIDIA RTX GPU (20 series and up) |
 | VRAM | 4 GB - NCNN | 8 GB - TensorRT (Nvidia) |
 | RAM | 16 GB | 32 GB |
 | Storage | 1 GB free - NCNN | 16 GB free - TensorRT |
 | Operating System | Windows 10/11 64bit / MacOS 14+ | Any modern Linux distro (Ubuntu 22.04+) |
 
-## Models:
+## Models
 
-### Interpolate Models:
+### Interpolate Models
 
 | Model | Author | Link |
 |---|---|---|
@@ -73,7 +72,7 @@
 | GIMM | GSeanCDAT | [GIMM](https://github.com/GSeanCDAT/GIMM-VFI) |
 | IFRNet | ltkong218 | [IFRnet](https://github.com/ltkong218/IFRNet) |
 
-### Upscale Models:
+### Upscale Models
 
 | Model | Author | Link |
 |---|---|---|
@@ -84,7 +83,7 @@
 | 2x-AnimeJaNai V2 and V3 Sharp | The Database | [AnimeJanai](https://github.com/the-database/mpv-upscale-2x_animejanai) |
 | 2x-AniSD | SiroSky | [AniSD](https://github.com/Sirosky/Upscale-Hub/releases/tag/AniSD) |
 
-### Decompression Models:
+### Decompression Models
 
 | Model | Author | Link |
 |---|---|---|
@@ -104,29 +103,29 @@
 
 | Question | Answer |
 |---|---|
-| What does this program attempt to accomplish? | Fast, efficient and easily accessable video interpolation (Ex: 24->48FPS) and video upscaling (Ex: 1920->3840) |
-| Why is it failing to recognize installed backends? | REAL Video Enhancer uses PIP and portable python for inference, this can sometimes have issues installing. Please attempt reinstalling the app before creating an issue. |
+| What does this program attempt to accomplish? | Fast, efficient, and easily accessible video interpolation (Ex: 24->48FPS) and video upscaling (Ex: 1920->3840). |
+| Why is it failing to recognize installed backends? | REAL Video Enhancer uses PIP and portable python for inference, which can sometimes have installation issues. Reinstall the app before creating an issue. |
 
-### TensorRT Related Questions
-
-| Question | Answer |
-|---|---|
-| Why does it take so long to begin inference? | TensorRT uses advanced optimization at the beginning of inference based on your device, this is only done once per resolution of video inputed. |
-| Why does the optimization and inference fail? | The most common way an optimization can fail is **Limited VRAM** There is no fix to this except using CUDA or NCNN instead. |
-
-### ROCm Related Questions
+### TensorRT-Related Questions
 
 | Question | Answer |
 |---|---|
-| Why am I getting (Insert Error here)? | ROCM is buggy, please take a look at <a href="https://github.com/TNTwise/REAL-Video-Enhancer/wiki/ROCm-Help">ROCm Help</a>. |
+| Why does it take so long to begin inference? | TensorRT uses advanced optimization at the beginning of inference based on your device; this is only done once per resolution of video input. |
+| Why does the optimization and inference fail? | The most common cause is **Limited VRAM**. There is no fix except to use CUDA or NCNN instead. |
 
-### NCNN Related Questions
+### ROCm-Related Questions
 
 | Question | Answer |
 |---|---|
-| Why am I getting (Insert Vulkan Error here)? | This usually is an OOM (Out Of Memory) error, this can indicate a weak iGPU or very old GPU, I recommeding trying out the <a href="https://github.com/TNTwise/REAL-Video-Enhancer-Colab">Colab Notebook</a>  instead. |
+| Why am I getting (Insert Error here)? | ROCm is buggy, please see the [ROCm Help](https://github.com/TNTwise/REAL-Video-Enhancer/wiki/ROCm-Help). |
 
-## Cloning:
+### NCNN-Related Questions
+
+| Question | Answer |
+|---|---|
+| Why am I getting (Insert Vulkan Error here)? | This is usually an OOM (Out Of Memory) error, which can indicate a weak iGPU or a very old GPU.  Consider using the [Colab Notebook](https://github.com/TNTwise/REAL-Video-Enhancer-Colab) instead. |
+
+## Cloning
 
 ```bash
 # Nightly
@@ -136,7 +135,7 @@ git clone --recurse-submodules https://github.com/TNTwise/REAL-Video-Enhancer
 git clone --recurse-submodules https://github.com/TNTwise/REAL-Video-Enhancer --branch 2.3.6
 ```
 
-## Building:
+## Building
 
 <p>3 supported build methods: </p>
 <p> - pyinstaller (recommended for Win/Mac) <br/>
@@ -155,18 +154,18 @@ python3 build.py --build BUILD_OPTION --copy_backend
 
 [Colab Notebook](https://github.com/tntwise/REAL-Video-Enhancer-Colab)
 
-## Credits:
+## Credits
 
-### People:
+### People
 
 | Person | For | Link |
 |---|---|---|
-| NevermindNilas | Some backend and reference code and working with me on many projects | [NevermindNilas](https://github.com/NevermindNilas/) |
-| Styler00dollar | RIFE ncnn models (4.1-4.5, 4.7-4.12-lite), Sudo Shuffle Span and benchmarking | [styler00dollar](https://github.com/styler00dollar) |
-| HolyWu | TensorRT engine generation code, inference optimizations, and RIFE jagged lines fixes | [HolyWu](https://github.com/HolyWu/) |
-| Rick Astley | Amazing music | [Rick Astley](https://www.youtube.com/watch?v=dQw4w9WgXcQ) |
+| NevermindNilas | Some backend and reference code and working with me on many projects | [NevermindNilas' GitHub](https://github.com/NevermindNilas/) |
+| Styler00dollar | RIFE ncnn models (4.1-4.5, 4.7-4.12-lite), Sudo Shuffle Span and benchmarking | [Styler00dollar's GitHub](https://github.com/styler00dollar) |
+| HolyWu | TensorRT engine generation code, inference optimizations, and RIFE jagged lines fixes | [HolyWu's GitHub](https://github.com/HolyWu/) |
+| Rick Astley | Amazing music | [Rick Astley on YouTube](https://www.youtube.com/watch?v=dQw4w9WgXcQ) |
 
-### Software:
+### Software
 
 | Software Used | For | Link |
 |---|---|---|
@@ -178,7 +177,7 @@ python3 build.py --build BUILD_OPTION --copy_backend
 | rife-ncnn-vulkan | Video frame interpolation implementation using NCNN and Vulkan | [rife-ncnn-vulkan](https://github.com/nihui/rife-ncnn-vulkan) |
 | rife ncnn vulkan python | Python bindings for RIFE NCNN Vulkan implementation | [rife-ncnn-vulkan-python](https://github.com/media2x/rife-ncnn-vulkan-python) |
 | GMFSS | GMFlow based Anime VFI | [GMFSS_Fortuna](https://github.com/98mxr/GMFSS_Fortuna) |
-| GIMM | Motion Modeling Realistic VFI | [GSeanCDAT/GIMM-VFI](https://github.com/GSeanCDAT/GIMM-VFI) |
+| GIMM | Motion Modeling Realistic VFI | [GIMM](https://github.com/GSeanCDAT/GIMM-VFI) |
 | ncnn python | Python bindings for NCNN Vulkan framework | [ncnn](https://pypi.org/project/ncnn) |
 | Real-ESRGAN | Upscaling | [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) |
 | SPAN | Upscaling | [SPAN](https://github.com/hongyuanyu/SPAN) |
@@ -191,5 +190,4 @@ python3 build.py --build BUILD_OPTION --copy_backend
 | Python Standalone Builds | Backend inference using portable python, helps when porting to different platforms. | [Python Standalone Builds](https://github.com/indygreg/python-build-standalone) |
 
 ## Star History
-
 [![Star History Chart](https://api.star-history.com/svg?repos=tntwise/real-video-enhancer&type=Date)](https://star-history.com/#tntwise/real-video-enhancer&Date)

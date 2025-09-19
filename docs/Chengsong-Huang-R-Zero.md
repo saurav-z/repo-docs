@@ -1,47 +1,46 @@
-# R-Zero: Self-Evolving Reasoning for LLMs
+# R-Zero: Revolutionizing Reasoning in LLMs with Self-Evolution
 
-**R-Zero empowers Large Language Models to reason and evolve autonomously, achieving remarkable results without any initial training data.** Check out the original repo [here](https://github.com/Chengsong-Huang/R-Zero).
+**R-Zero empowers Large Language Models to learn and evolve their reasoning abilities from scratch, without any pre-existing data.** Explore the original repo [here](https://github.com/Chengsong-Huang/R-Zero).
 
 ## Key Features
 
-*   **Autonomous Learning:** R-Zero starts with a base model and learns to reason without any pre-existing datasets or labels.
-*   **Co-Evolutionary Architecture:**  A Challenger-Solver loop continuously improves the model's reasoning abilities by generating and solving increasingly complex tasks.
-*   **Proven Performance:**  Demonstrates significant performance boosts on reasoning benchmarks.
-*   **Strong Generalization:** Reasoning skills learned on specific domains transfer effectively to general reasoning tasks.
-*   **Model-Agnostic:** Compatible with various backbone LLMs, enhancing their performance.
+*   **Autonomous Learning:** R-Zero starts with zero external data, eliminating the need for curated datasets.
+*   **Co-Evolutionary Architecture:**  A "Challenger" and "Solver" co-evolve, creating an adaptive curriculum for continuous improvement.
+*   **Performance Boost:** Demonstrates significant performance gains on various reasoning benchmarks.
+*   **Strong Generalization:** Reasoning skills learned transfer effectively to general reasoning tasks.
+*   **Model-Agnostic:** Enhances performance across diverse LLM backbones.
 
-## Updates
+## What's New
 
-*   **2025-8-27:** Analysis on iteration scaling and a single model taking on dual roles.
-*   **2025-8-25:** Code updates for smoother training (by `stopit`).
-*   **2025-8-8:** R-Zero recognized as `#2 Paper of the day` on [huggingface daily paper](https://huggingface.co/papers/2508.05004).
-*   **2025-8-7:** Paper and code released.
+*   **[2025-8-27]** Added analysis on iteration scaling and one model taking on two roles.
+*   **[2025-8-25]** Updated codes for smoother training (implemented with `stopit`).
+*   **[2025-8-8]** Recognized as `#2 Paper of the day` on [Hugging Face Daily Paper](https://huggingface.co/papers/2508.05004).
+*   **[2025-8-7]**  Released the [paper](https://arxiv.org/abs/2508.05004) and associated code.
 
 ## Overview
 
-R-Zero revolutionizes LLM training by enabling self-improvement through a novel, self-contained framework.  Instead of relying on large, manually curated datasets, R-Zero utilizes a dynamic co-evolutionary loop between a **Challenger** and a **Solver**.
+[![R-Zero Architecture](./figs/abstract.png)](https://arxiv.org/abs/2508.05004)
 
-*   **Challenger:**  Probes the Solver, generating challenging problems to expose weaknesses and pushing the model to its limits.
-*   **Solver:**  Continuously improves by solving the problems posed by the Challenger.
+Training effective reasoning models often requires vast, curated datasets, which are costly and difficult to scale. R-Zero presents a novel approach, enabling LLMs to enhance their reasoning capabilities autonomously. This framework uses a unique co-evolutionary loop between two instances of the same base model:
 
-This iterative process, leveraging techniques like majority voting for pseudo-labels and relative policy optimization, creates a self-adaptive curriculum for continuous learning.
+1.  **Challenger:** Creates probing questions to identify the Solver's weaknesses, generating challenging problems that test its boundaries.
+2.  **Solver:** Continuously improves by solving tasks posed by the Challenger.
+
+This dynamic creates a self-adaptive curriculum. The Challenger learns to ask more effective questions, while the Solver learns to find better answers. This entire process is self-contained and leverages techniques like majority voting for pseudo-labels and relative policy optimization to guide learning.
 
 ## Quickstart Guide
 
-Get started with R-Zero in a few simple steps:
+Follow these steps to get started:
 
-### 1. Configure Environment and Prepare Directories
+### 1.  Environment Setup & Directory Preparation
 
 ```bash
 git clone https://github.com/Chengsong-Huang/R-Zero.git
-
-# Navigate into the new directory
 cd R-Zero
-# Install the required packages
 pip install -r requirements.txt
-# Set environment variables
-export STORAGE_PATH="/path/to/your/storage"
-export HUGGINGFACENAME="yourhuggingfacename"
+
+export STORAGE_PATH="/path/to/your/storage" #  Specify your storage path
+export HUGGINGFACENAME="yourhuggingfacename" # Specify your Hugging Face name
 
 mkdir -p \
   "$STORAGE_PATH/evaluation" \
@@ -50,27 +49,21 @@ mkdir -p \
   "$STORAGE_PATH/temp_results"
 ```
 
-### 2. Add API Keys
+### 2.  API Key Configuration
 
-*   Add your Hugging Face and WandB API keys to `tokens.json`.
-*   Add your OpenAI GPT API key to `evaluation/results_recheck.py` for evaluation.
+You'll need to add API keys for Hugging Face and WandB in `tokens.json`, and your OpenAI GPT API key for evaluation in `evaluation/results_recheck.py`.
 
 ### 3. Run the Experiments
 
-Replicate the experimental results using a single script:
+Replicate the results with a single script:
 
 ```bash
-# The script takes the base model name and an abbreviation as arguments
-# The abbreviation is used for creating a directory to save the model.
-# Format: bash scripts/main.sh [Base_Model_Name] [Abbreviation]
-
-# Example using Qwen/Qwen3-4B-Base:
-bash scripts/main.sh Qwen/Qwen3-4B-Base qwen3-4b
+# Arguments: Base Model Name, Abbreviation
+# Example: bash scripts/main.sh Qwen/Qwen3-4B-Base qwen3-4b
+bash scripts/main.sh [Base_Model_Name] [Abbreviation]
 ```
 
 ## Impressive Results
-
-R-Zero significantly improves the performance of various base models.  Here's a comparison of results, with peak performance highlighted in **bold**:
 
 | Model Name | Overall AVG | MATH AVG | SuperGPQA | MMLU-Pro | BBEH |
 |:---|:---:|:---:|:---:|:---:|:---:|
@@ -99,32 +92,20 @@ R-Zero significantly improves the performance of various base models.  Here's a 
 | &emsp;R-Zero (Iter 2) | 26.77 | 38.23 | 19.27 | 41.34 | **8.25** |
 | &emsp;R-Zero (Iter 3) | **26.88** | **38.52** | **19.82** | 40.92 | **8.25** |
 
-## FAQ for Developers
+## Frequently Asked Questions
 
-**Q: What hardware is required for the experiments?**
-
-**A:** Experiments were conducted on an 8-GPU server. Models that can run on a single GPU (e.g., 4B or 8B) are recommended. Adjustments to the code might be needed for larger models or different hardware.
-
-**Q:  What to do if you encounter environment configuration issues?**
-
-**A:**  The framework is inspired by [EasyR1](https://github.com/hiyouga/EasyR1/tree/main). Refer to their setup instructions or Docker environment for assistance.
-
-**Q:  Where are training logs and checkpoints saved?**
-
-**A:** All generated data, including logs, datasets, and model checkpoints, will be saved in the directory set by the `STORAGE_PATH` environment variable. Datasets will be sent to huggingface via `HUGGINGFACENAME`.
-
-**Q:  What if the code gets stuck during the questioner training process?**
-
-**A:** A timeout control mitigates issues related to the `math_verify` lib. Restart training from the last saved checkpoint if needed.
-<!-- >> I suddenly find there is a lib named `timeout_decorator` which can solve this problem after I complete most of the experiments...... (not sure whether it will introduce new problems.) -->
+*   **Hardware Setup:** Experiments were conducted on an 8-GPU server. Adjust code as needed for larger models or different hardware.
+*   **Environment Configuration:** Refer to the EasyR1 repository for setup instructions or use their Docker environment if you encounter issues.
+*   **Training Logs and Checkpoints:**  Saved in the directory specified by the `STORAGE_PATH` environment variable, with datasets sent to Hugging Face using `HUGGINGFACENAME`.
+*   **Code Stalling:**  Potential issue with `math_verify` lib; restart training from the latest checkpoint.
 
 ## Acknowledgements
 
-This work builds upon the foundation of [**EasyR1**](https://github.com/hiyouga/EasyR1/tree/main) and references the evaluation process from [**General-Reasoner**](https://github.com/TIGER-AI-Lab/General-Reasoner).
+This project is based on the work of [**EasyR1**](https://github.com/hiyouga/EasyR1/tree/main) and uses the evaluation process from [**General-Reasoner**](https://github.com/TIGER-AI-Lab/General-Reasoner).
 
 ## Citation
 
-If R-Zero is helpful for your work, please cite our paper:
+If this work is helpful, please consider citing:
 
 ```
 @article{huang2025rzeroselfevolvingreasoningllm,

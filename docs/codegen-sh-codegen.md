@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Codegen SDK: Automate Software Development with AI</h1>
+<h1 align="center">Codegen: Your AI-Powered Software Engineer</h1>
 
 <div align="center">
 
@@ -18,20 +18,20 @@
 
 <br />
 
-**Tired of repetitive coding tasks? The Codegen SDK empowers you to build, test, and deploy software faster by harnessing the power of AI code generation.** This Python SDK provides a programmatic interface to the AI-powered code agents offered by [Codegen](https://codegen.com).  [View the original repository here](https://github.com/codegen-sh/codegen).
+**Tired of repetitive coding tasks?  The Codegen SDK gives you programmatic access to AI-powered code generation agents, automating your software development workflow.**
 
-## Key Features
+## Key Features of the Codegen SDK:
 
-*   **AI-Powered Code Generation:** Generate code based on natural language prompts.
-*   **API Access:**  Programmatically interact with Codegen's AI agents.
-*   **Task Management:** Monitor the status of your code generation tasks.
-*   **Easy Installation:**  Install using `pip`, `pipx`, or `uv`.
-*   **Automatic Updates:**  Stay up-to-date with the built-in self-update functionality within the CLI.
-*   **Integration:**  Interact with your AI engineer via API, Slack, Linear, GitHub, or the Codegen website.
+*   **AI-Powered Code Generation:** Leverage AI agents to handle coding tasks.
+*   **Simple API Integration:** Easily integrate with your existing development tools and workflows using the Codegen SDK.
+*   **Task Management:** Monitor the status of your code generation requests.
+*   **Automated Updates:**  Keep your SDK up-to-date with built-in self-update functionality.
+*   **Multi-Platform Support:** Available via pip, pipx, and uv.
+*   **Integrations:** Interact with Codegen via API, Slack, Linear, Github, and the website.
 
-## Getting Started
+## Getting Started with Codegen
 
-Here's how to get started with the Codegen SDK:
+Here's a quick example of how to use the Codegen SDK:
 
 ```python
 from codegen.agents.agent import Agent
@@ -72,9 +72,9 @@ pipx install codegen
 uv tool install codegen
 ```
 
-## Keeping Up to Date
+## Staying Up-to-Date
 
-The Codegen CLI includes a convenient self-update system:
+Keep your Codegen CLI updated easily:
 
 ```bash
 # Update to the latest version
@@ -91,14 +91,20 @@ The CLI automatically checks for updates daily.
 
 ## Resources
 
-*   [Docs](https://docs.codegen.com)
-*   [Getting Started](https://docs.codegen.com/introduction/getting-started)
+*   [Codegen Documentation](https://docs.codegen.com)
+*   [Getting Started Guide](https://docs.codegen.com/introduction/getting-started)
+*   [Codegen Website](https://codegen.com)
+*   [Codegen API Token](https://codegen.com/token)
+*   [Contributing Guide](CONTRIBUTING.md)
 *   [Contact Us](https://codegen.com/contact)
 
-## Contributing
+## Contribute
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up the development environment and submit contributions.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on how to set up your development environment and submit contributions.
 
-## Enterprise
+## Enterprise Solutions
 
-For more information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
+For information about enterprise solutions, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
+
+---
+**[View the original repository on GitHub](https://github.com/codegen-sh/codegen)**

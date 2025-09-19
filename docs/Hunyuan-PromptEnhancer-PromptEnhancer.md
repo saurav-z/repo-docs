@@ -1,29 +1,34 @@
-# PromptEnhancer: Enhance Text-to-Image Models with Chain-of-Thought Prompt Rewriting
+# PromptEnhancer: Enhance Your Text-to-Image Prompts with Chain-of-Thought Rewriting
 
-PromptEnhancer is a powerful tool that refines text prompts to improve image generation quality by rewriting them with a chain-of-thought approach. [Explore the original repository](https://github.com/Hunyuan-PromptEnhancer/PromptEnhancer).
+**Transform your text prompts into detailed and effective instructions for image generation using PromptEnhancer, a simple yet powerful tool.**  Learn more about the project at the original repository: [PromptEnhancer](https://github.com/Hunyuan-PromptEnhancer/PromptEnhancer).
 
-**Key Features:**
+---
 
-*   **Intent Preservation:** Maintains the original meaning of prompts while restructuring them for clarity.
-*   **Structured Output:** Generates prompts in a "global–details–summary" format, improving logical consistency.
-*   **Robust Parsing:** Uses a reliable parsing system with fallback mechanisms to ensure usable output.
-*   **Configurable Parameters:** Allows you to control the generation process with parameters like temperature and top\_p.
-*   **Open-Source Models:** Offers pre-trained models, including PromptEnhancer-7B and PromptEnhancer-32B.
+<p align="center">
+  <img src="assets/teaser-1.png" alt="PromptEnhancer Teaser"/>
+</p>
+
+## Key Features
+
+*   **Intent Preservation:** Maintains the core meaning across key elements like subject, action, style, and relationships.
+*   **Structured Output:** Employs a "global-details-summary" structure for clear and organized prompts.
+*   **Robust Parsing:** Handles output effectively, prioritizing the `<answer>...</answer>` tag for optimal results and gracefully falling back to cleaner text extraction.
+*   **Configurable Inference:** Allows control over determinism and diversity through adjustable parameters like temperature and `top_p`.
+*   **Supports Chinese and English:** Process prompts in both languages.
 
 ## Overview
 
-PromptEnhancer is designed to enhance text prompts for text-to-image models. By rewriting input prompts using a chain-of-thought approach, it produces clearer, more structured, and logically consistent prompts, leading to improved image generation results. The system focuses on preserving the intent of key elements such as the subject, action, and style.
+PromptEnhancer is a utility designed to rewrite text prompts, making them more effective for image generation models. By restructuring input prompts while preserving the original intent, it produces clearer, layered, and logically consistent prompts. This ensures better performance when using text-to-image models.
 
-## What's New
+## Recent Updates
 
-*   **September 18, 2025:** Released [PromptEnhancer-32B model](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B).
-*   **September 16, 2025:** Released [T2I-Keypoints-Eval dataset](https://huggingface.co/datasets/PromptEnhancer/T2I-Keypoints-Eval).
-*   **September 07, 2025:** Released [PromptEnhancer-7B model](https://huggingface.co/tencent/HunyuanImage-2.1/tree/main/reprompt).
-*   **September 07, 2025:** Released [technical report](https://arxiv.org/abs/2509.04545).
+*   **[2025-09-16]** Released the [T2I-Keypoints-Eval dataset](https://huggingface.co/datasets/PromptEnhancer/T2I-Keypoints-Eval).
+*   **[2025-09-07]** Released the [PromptEnhancer-7B model](https://huggingface.co/tencent/HunyuanImage-2.1/tree/main/reprompt).
+*   **[2025-09-07]** Published the [technical report](https://arxiv.org/abs/2509.04545).
 
 ## Installation
 
-To get started, install the necessary dependencies:
+Install the required packages using:
 
 ```bash
 pip install -r requirements.txt
@@ -31,19 +36,15 @@ pip install -r requirements.txt
 
 ## Model Download
 
-Download the desired model:
+Download the PromptEnhancer-7B model:
 
 ```bash
-# For PromptEnhancer-7B
 huggingface-cli download tencent/HunyuanImage-2.1/reprompt --local-dir ./models/promptenhancer-7b
-
-# For PromptEnhancer-32B
-huggingface-cli download PromptEnhancer/PromptEnhancer-32B --local-dir ./models/promptenhancer-32b
 ```
 
 ## Quickstart
 
-### Using HunyuanPromptEnhancer
+Here's how to use HunyuanPromptEnhancer:
 
 ```python
 from inference.prompt_enhancer import HunyuanPromptEnhancer
@@ -65,44 +66,20 @@ new_prompt = enhancer.predict(
 print("Enhanced:", new_prompt)
 ```
 
-### Using PromptEnhancerV2
-
-```python
-from inference.prompt_enhancer_v2 import PromptEnhancerV2
-
-models_root_path = "./models/promptenhancer-32b"
-
-enhancer = PromptEnhancerV2(models_root_path=models_root_path, device_map="auto")
-
-# Enhance a prompt (Chinese or English)
-user_prompt = "韩系插画风女生头像，粉紫色短发+透明感腮红，侧光渲染。"
-new_prompt = enhancer.predict(
-    prompt_cot=user_prompt,
-    device="cuda"
-)
-
-print("Enhanced:", new_prompt)
-```
-
 ## Parameters
 
-*   `models_root_path`: The local path or repo ID for the model. Supports models with `trust_remote_code`.
-*   `device_map`: Device mapping (default `auto`).
+*   `models_root_path`:  Specify the local path or repo ID for the model. Supports `trust_remote_code` models.
+*   `device_map`:  Define the device mapping (defaults to `auto`).
 *   `predict(...)`:
-    *   `prompt_cot` (str): The input prompt to be rewritten.
-    *   `sys_prompt` (str): An optional system prompt. A default is provided for image prompt rewriting.
-    *   `temperature` (float): Enables sampling if `>0`. Use `0` for deterministic generation.
-    *   `top_p` (float): Nucleus sampling threshold (effective when sampling is enabled).
-    *   `max_new_tokens` (int): The maximum number of new tokens to generate.
-
-## TODO
-
-*   [ ] Open source AlignEvaluator model.
-*   [x] Open source PromptEnhancer-32B model.
+    *   `prompt_cot` (str):  The input prompt that you want to rewrite.
+    *   `sys_prompt` (str):  An optional system prompt. A default is provided, optimized for image prompt rewriting.
+    *   `temperature` (float): Use a value greater than `0` to enable sampling; use `0` for deterministic generation.
+    *   `top_p` (float):  Set the nucleus sampling threshold (effective when sampling).
+    *   `max_new_tokens` (int):  Set the maximum number of new tokens to generate.
 
 ## Citation
 
-If you find this project helpful, please cite it using the following BibTeX entry:
+If you use this project in your research, please cite it using:
 
 ```bibtex
 @article{promptenhancer,
@@ -115,8 +92,8 @@ If you find this project helpful, please cite it using the following BibTeX entr
 
 ## Acknowledgements
 
-This project acknowledges the contributions of the following open-source projects and communities: [Transformers](https://huggingface.co/transformers) and [HuggingFace](https://huggingface.co).
+Thanks to the contributions of open-source projects and communities like [Transformers](https://huggingface.co/transformers) and [HuggingFace](https://huggingface.co).
 
 ## Contact
 
-For questions, feedback, or to reach the R&D and product teams, please contact the open-source team at hunyuan\_opensource@tencent.com.
+For inquiries and feedback, contact the open-source team or send an email to hunyuan_opensource@tencent.com.

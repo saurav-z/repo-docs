@@ -1,23 +1,35 @@
-# Kitten TTS: Ultra-Lightweight, High-Quality Text-to-Speech
+# Kitten TTS: Realistic Text-to-Speech for Everyone 😻
 
-**Tired of bulky TTS models? Kitten TTS delivers realistic, expressive speech synthesis in a tiny package.** (Original Repo: [KittenML/KittenTTS](https://github.com/KittenML/KittenTTS))
+**Experience high-quality, realistic text-to-speech generation with Kitten TTS, a lightweight and open-source model perfect for any device.**
+
+[View the original repository on GitHub](https://github.com/KittenML/KittenTTS)
+
+[Join our Discord community](https://discord.com/invite/VJ86W4SURW)
+
+[Get custom support](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
+
+For any inquiries, please contact us at info@stellonlabs.com.
 
 ## Key Features
 
-*   **Ultra-Lightweight:**  Model size under 25MB, perfect for resource-constrained environments.
-*   **CPU-Optimized:** Runs seamlessly on any device without a GPU, making deployment easy.
-*   **High-Quality Voices:** Enjoy a selection of premium voice options for diverse expression.
-*   **Fast Inference:** Optimized for real-time speech synthesis, providing immediate results.
+*   **Ultra-Lightweight:** Model size under 25MB, ideal for resource-constrained environments.
+*   **CPU-Optimized:**  Runs seamlessly on any device without a GPU, perfect for broad accessibility.
+*   **High-Quality Voices:**  Choose from several premium voice options for engaging audio output.
+*   **Fast Inference:** Optimized for real-time speech synthesis, providing a responsive user experience.
 
-## Getting Started
+## Quick Start Guide
 
 ### Installation
+
+Easily install Kitten TTS using pip:
 
 ```bash
 pip install https://github.com/KittenML/KittenTTS/releases/download/0.1/kittentts-0.1.0-py3-none-any.whl
 ```
 
 ### Basic Usage
+
+Get started generating speech with just a few lines of code:
 
 ```python
 from kittentts import KittenTTS
@@ -34,7 +46,7 @@ sf.write('output.wav', audio, 24000)
 
 ## System Requirements
 
-Kitten TTS is designed to be highly compatible and works on virtually any system.
+Kitten TTS is designed to work "literally everywhere," requiring minimal system resources.
 
 ## Roadmap
 
@@ -42,9 +54,3 @@ Kitten TTS is designed to be highly compatible and works on virtually any system
 *   [ ] Release the fully trained model weights
 *   [ ] Release mobile SDK
 *   [ ] Release web version
-
-## Get Involved
-
-*   **Join the Community:**  [Join our Discord](https://discord.com/invite/VJ86W4SURW)
-*   **Contact Us:**  For custom support, fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
-*   **Email:**  info@stellonlabs.com

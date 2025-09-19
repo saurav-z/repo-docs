@@ -1,13 +1,11 @@
-# Massive Text Embedding Benchmark (MTEB): Evaluate and Compare Text Embedding Models
-
-**MTEB is a comprehensive benchmark designed to evaluate and compare the performance of text embedding models across a diverse range of tasks, languages, and modalities.** This open-source project provides a standardized framework for assessing and ranking models, fostering innovation in natural language processing.  [Explore the MTEB Repository](https://github.com/embeddings-benchmark/mteb).
+<h1 align="center">Massive Text Embedding Benchmark</h1>
 
 <p align="center">
     <a href="https://github.com/embeddings-benchmark/mteb/releases">
         <img alt="GitHub release" src="https://img.shields.io/github/release/embeddings-benchmark/mteb.svg">
     </a>
     <a href="https://arxiv.org/abs/2210.07316">
-        <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2305.14251-b31b1b.svg">
+        <img alt="GitHub release" src="https://img.shields.io/badge/arXiv-2305.14251-b31b1b.svg">
     </a>
     <a href="https://github.com/embeddings-benchmark/mteb/blob/master/LICENSE">
         <img alt="License" src="https://img.shields.io/github/license/embeddings-benchmark/mteb.svg?color=green">
@@ -32,21 +30,15 @@
 </h3>
 
 
-## Key Features
-
-*   **Comprehensive Evaluation:** Assess models on a broad spectrum of tasks, including semantic textual similarity, classification, and retrieval.
-*   **Extensive Language Support:** Evaluate models in various languages, including English, German, Chinese, and more.
-*   **Modular Design:** Easily integrate and evaluate different text embedding models.
-*   **Leaderboard:** Track model performance and compare results on the interactive leaderboard.
-*   **Reproducibility:** Promote reproducible research with standardized evaluation protocols.
-
 ## Installation
 
 ```bash
 pip install mteb
 ```
 
+
 ## Example Usage
+
 
 ### Using a script
 
@@ -77,7 +69,9 @@ mteb run -m sentence-transformers/all-MiniLM-L6-v2 \
 
 Note that using multiple GPUs in parallel can be done by just having a custom encode function that distributes the inputs to multiple GPUs like e.g. [here](https://github.com/microsoft/unilm/blob/b60c741f746877293bb85eed6806736fc8fa0ffd/e5/mteb_eval.py#L60) or [here](https://github.com/ContextualAI/gritlm/blob/09d8630f0c95ac6a456354bcb6f964d7b9b6a609/gritlm/gritlm.py#L75). See [custom models](docs/usage/usage.md#using-a-custom-model) for more information.
 
+
 ## Usage Documentation
+The following links to the main sections in the usage documentation.
 
 | Section | |
 | ------- |- |
@@ -104,6 +98,8 @@ Note that using multiple GPUs in parallel can be done by just having a custom en
 | [Running the Leaderboard Locally](docs/usage/usage.md#running-the-leaderboard-locally) | How to run the leaderboard locally |
 | [Report Data Contamination](docs/usage/usage.md#annotate-contamination) | How to report data contamination for a model |
 | [Loading and working with Results](docs/usage/results.md) | How to load and working with the raw results from the leaderboard, including making result dataframes |
+
+
 
 ## Overview
 
@@ -179,3 +175,4 @@ Some of these amazing publications include (ordered chronologically):
 - Kenneth Enevoldsen, Márton Kardos, Niklas Muennighoff, Kristoffer Laigaard Nielbo. "[The Scandinavian Embedding Benchmarks: Comprehensive Assessment of Multilingual and Monolingual Text Embedding](https://arxiv.org/abs/2406.02396)" arXiv 2024
 - Ali Shiraee Kasmaee, Mohammad Khodadad, Mohammad Arshi Saloot, Nick Sherck, Stephen Dokas, Hamidreza Mahyar, Soheila Samiee. "[ChemTEB: Chemical Text Embedding Benchmark, an Overview of Embedding Models Performance & Efficiency on a Specific Domain](https://arxiv.org/abs/2412.00532)" arXiv 2024
 - Chenghao Xiao, Isaac Chung, Imene Kerboua, Jamie Stirling, Xin Zhang, Márton Kardos, Roman Solomatin, Noura Al Moubayed, Kenneth Enevoldsen, Niklas Muennighoff. "[MIEB: Massive Image Embedding Benchmark](https://arxiv.org/abs/2504.10471)" arXiv 2025
+

@@ -1,24 +1,22 @@
 <div align="center">
 
-<img src="./docs/assets/images/logo.png" alt="Pruna AI Logo" width=400></img>
+<img src="./docs/assets/images/logo.png" alt="Pruna AI Logo" width=400>
 
-  <img src="./docs/assets/images/element.png" alt="Element" width=10></img>
-  **Supercharge your AI models with Pruna: Making them faster, cheaper, smaller, and greener!**
-  <img src="./docs/assets/images/element.png" alt="Element" width=10></img>
+</div>
 
-<br>
+# Pruna: Optimize Your AI Models for Speed, Efficiency, and Sustainability
+
+**Pruna is a model optimization framework designed to make AI models faster, cheaper, smaller, and greener.** 
 
 [![Documentation](https://img.shields.io/badge/Pruna_documentation-purple?style=for-the-badge)][documentation]
 
-<br>
-
-![GitHub License](https://img.shields.io/github/license/prunaai/pruna?style=flat-square)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/prunaai/pruna/build.yaml?style=flat-square)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/prunaai/pruna/tests.yaml?label=tests&style=flat-square)
-![GitHub Release](https://img.shields.io/github/v/release/prunaai/pruna?style=flat-square)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/PrunaAI/pruna?style=flat-square)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/pruna?style=flat-square)
-![Codacy](https://app.codacy.com/project/badge/Grade/092392ec4be846928a7c5978b6afe060)
+[![License](https://img.shields.io/github/license/prunaai/pruna?style=flat-square)]
+[![Build Status](https://img.shields.io/github/actions/workflow/status/prunaai/pruna/build.yaml?style=flat-square)]
+[![Tests Status](https://img.shields.io/github/actions/workflow/status/prunaai/pruna/tests.yaml?label=tests&style=flat-square)]
+[![Release](https://img.shields.io/github/v/release/prunaai/pruna?style=flat-square)]
+[![Commit Activity](https://img.shields.io/github/commit-activity/m/PrunaAI/pruna?style=flat-square)]
+[![PyPI Downloads](https://img.shields.io/pypi/dm/pruna?style=flat-square)]
+[![Codacy](https://app.codacy.com/project/badge/Grade/092392ec4be846928a7c5978b6afe060)]
 
 [![Website](https://img.shields.io/badge/Pruna.ai-purple?style=flat-square)][website]
 [![X (formerly Twitter) URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Fx.com%2FPrunaAI)][x]
@@ -30,54 +28,50 @@
 
 <br>
 
-<img src="./docs/assets/images/triple_line.png" alt="Pruna AI Logo" width=600, height=30></img>
-
-</div>
-
-## Pruna: The AI Model Optimization Framework
-
-Pruna is a powerful, easy-to-use framework designed to optimize your AI models, making them faster, smaller, cheaper, and more environmentally friendly.  **[Check out the original repository](https://github.com/PrunaAI/pruna) to get started!**
-
 ## Key Features
 
-*   **Speed up Inference:** Accelerate model performance with advanced optimization techniques.
-*   **Reduce Model Size:** Compress models while maintaining quality.
-*   **Lower Costs:** Minimize computational expenses and resource demands.
-*   **Enhance Sustainability:** Decrease energy consumption and environmental impact.
-*   **Broad Model Support:** Compatible with LLMs, Diffusion Models, Vision Transformers, Speech Recognition models, and more.
-*   **Simple Integration:** Optimize your models with just a few lines of code.
+*   **Speed up inference:** Accelerate your models with advanced optimization techniques.
+*   **Reduce model size:** Compress models without sacrificing quality.
+*   **Lower costs:** Decrease computational expenses and resource needs.
+*   **Enhance sustainability:** Minimize energy consumption and environmental impact.
+*   **Easy to Use:** Optimize models with minimal code changes.
+*   **Broad Compatibility:** Supports various model types like LLMs, Vision Transformers, and more.
 
-## Installation
+## Getting Started
 
-Pruna is compatible with Linux, macOS, and Windows.  Ensure you have Python 3.9+ and (optionally) the CUDA toolkit for GPU support.
+Pruna offers a straightforward way to optimize your models.
 
-### Install via pip
+### Installation
 
-```bash
-pip install pruna
-```
+Pruna is available for Linux, MacOS, and Windows.
 
-### Install from Source
+**Prerequisites:**
+*   Python 3.9+
+*   Optional: CUDA toolkit (for GPU support)
 
-```bash
-git clone https://github.com/pruna-ai/pruna.git
-cd pruna
-pip install -e .
-```
+**Installation Options:**
 
-## Quick Start
+1.  **Install via pip:**
+    ```bash
+    pip install pruna
+    ```
 
-Optimize your models in three simple steps!
+2.  **Install from source:**
+    ```bash
+    git clone https://github.com/pruna-ai/pruna.git
+    cd pruna
+    pip install -e .
+    ```
 
-1.  **Load your pre-trained model:**
+### Quickstart Guide
 
+1.  **Load a pre-trained model:**
     ```python
     from diffusers import StableDiffusionPipeline
     base_model = StableDiffusionPipeline.from_pretrained("stable-diffusion-v1-5/stable-diffusion-v1-5")
     ```
 
-2.  **Use Pruna's `smash` function to optimize:**
-
+2.  **Optimize with `smash`:**
     ```python
     from pruna import smash, SmashConfig
 
@@ -88,13 +82,11 @@ Optimize your models in three simple steps!
     ```
 
 3.  **Use the optimized model:**
-
     ```python
     smashed_model("An image of a cute prune.").images[0]
     ```
 
-    Evaluate performance with the evaluation interface:
-
+4.  **Evaluate the performance:**
     ```python
     from pruna.evaluation.task import Task
     from pruna.evaluation.evaluation_agent import EvaluationAgent
@@ -107,65 +99,75 @@ Optimize your models in three simple steps!
     eval_agent.evaluate(smashed_model)
     ```
 
-  For more detailed examples, explore our [documentation][documentation].
+[See the full documentation for details on supported algorithms and examples.](https://docs.pruna.ai/en/stable)
 
 ## Pruna Pro
 
-For advanced optimization capabilities, including the `OptimizationAgent` and priority support, explore [Pruna Pro](https://docs.pruna.ai/en/stable/docs_pruna_pro/user_manual/pruna_pro.html).
+Unlock advanced features and enterprise-level support with **Pruna Pro**, our premium solution.
 
-### Benchmarks
+### Benchmark results with Pruna Pro
 
-*   **Stable Diffusion XL:**  Combining Auto Caching with DeepCache, torch.compile, and HQQ 8-bit quantization.
+The following tables summarize the performance gains we achieve with Pruna Pro for the most popular diffusion models.
 
-    <img src="./docs/assets/plots/benchmark_sdxl.svg" alt="SDXL Benchmark"/>
+### Stable Diffusion XL
 
-*   **FLUX [dev]:** Comparing Auto Caching with TeaCache, Stable Fast and HQQ 8-bit quantization.
+| Optimization Type | Latency Reduction | Model Size Reduction |
+|---|---|---|
+| Auto Caching + [DeepCache](https://github.com/horseee/DeepCache) +  torch.compile | 9% | 8.8GB -> 6.7GB |
 
-    <img src="./docs/assets/plots/benchmark_flux.svg" alt="FLUX [dev] Benchmark"/>
+<img src="./docs/assets/plots/benchmark_sdxl.svg" alt="SDXL Benchmark"/>
 
-*   **HunyuanVideo:** Benchmarking Auto Caching with TeaCache and HQQ 8-bit quantization.
+### FLUX [dev]
 
-    <img src="./docs/assets/plots/benchmark_hunyuan.svg" alt="HunyuanVideo Benchmark"/>
+| Optimization Type | Latency Reduction | Model Size Reduction |
+|---|---|---|
+| Auto Caching + [TeaCache](https://github.com/ali-vilab/TeaCache) + [Stable Fast](https://github.com/chengzeyi/stable-fast) | 13% | 33GB -> 23GB |
+
+<img src="./docs/assets/plots/benchmark_flux.svg" alt="FLUX [dev] Benchmark"/>
+
+### HunyuanVideo
+
+| Optimization Type | Model Size Reduction |
+|---|---|---|
+| Auto Caching + [TeaCache](https://github.com/ali-vilab/TeaCache) | 41GB -> 29GB |
+
+<img src="./docs/assets/plots/benchmark_hunyuan.svg" alt="HunyuanVideo Benchmark"/>
 
 ## Algorithm Overview
 
-Pruna offers a wide range of optimization algorithms.  Refer to the [documentation][documentation] for detailed descriptions.
+Pruna offers a diverse set of optimization algorithms.
 
-| Technique    | Description                                                                                   | Speed | Memory | Quality |
+| Technique     | Description                                                                                   | Speed | Memory | Quality |
 |--------------|-----------------------------------------------------------------------------------------------|:-----:|:------:|:-------:|
-| `batcher`    | Groups multiple inputs together to be processed simultaneously, improving computational efficiency and reducing processing time. | ✅    | ❌     | ➖      |
-| `cacher`     | Stores intermediate results of computations to speed up subsequent operations.               | ✅    | ➖     | ➖      |
-| `compiler`   | Optimises the model with instructions for specific hardware.                                 | ✅    | ➖     | ➖      |
-| `distiller`  | Trains a smaller, simpler model to mimic a larger, more complex model.                       | ✅    | ✅     | ❌      |
-| `quantizer`  | Reduces the precision of weights and activations, lowering memory requirements.              | ✅    | ✅     | ❌      |
-| `pruner`     | Removes less important or redundant connections and neurons, resulting in a sparser, more efficient network. | ✅    | ✅     | ❌      |
-| `recoverer`  | Restores the performance of a model after compression.                                       | ➖    | ➖     | ✅      |
-| `factorizer` | Factorization batches several small matrix multiplications into one large fused operation. | ✅ | ➖ | ➖ |
-| `enhancer`   | Enhances the model output by applying post-processing algorithms such as denoising or upscaling. | ❌ | ➖ | ✅ |
-| `distributer`   | Distributes the inference, the model or certain calculations across multiple devices. | ✅ | ❌ | ➖ |
-| `kernel`   | Kernels are specialized GPU routines that speed up parts of the computation.  | ✅ | ➖ | ➖ |
+| `batcher`     | Groups multiple inputs together for simultaneous processing.                               | ✅    | ❌     | ➖      |
+| `cacher`      | Stores intermediate computation results for faster execution.               | ✅    | ➖     | ➖      |
+| `compiler`    | Optimizes the model for specific hardware.                                 | ✅    | ➖     | ➖      |
+| `distiller`   | Trains a smaller model to mimic a larger one.                       | ✅    | ✅     | ❌      |
+| `quantizer`   | Reduces precision for lower memory usage.              | ✅    | ✅     | ❌      |
+| `pruner`      | Removes unimportant connections. | ✅    | ✅     | ❌      |
+| `recoverer`   | Restores model performance after compression.                                       | ➖    | ➖     | ✅      |
+| `factorizer`  | Fuses matrix multiplications into one large operation. | ✅ | ➖ | ➖ |
+| `enhancer`    | Enhances output through post-processing. | ❌ | ➖ | ✅ |
+| `distributer` | Distributes the inference/model/calculations across multiple devices. | ✅ | ❌ | ➖ |
+| `kernel`      | Specialized GPU routines for faster computation.  | ✅ | ➖ | ➖ |
 
 ✅ (improves), ➖ (approx. the same), ❌ (worsens)
-
-<br><br>
-
-<p align="center"><img src="./docs/assets/images/single_line.png" alt="Pruna AI Logo" width=600, height=30></img></p>
 
 <br>
 
 ## FAQ and Troubleshooting
 
-Find answers to common questions and troubleshooting tips in our [documentation][documentation], [FAQs][docs-faq], or by opening an issue on GitHub.  Get support on [Discord][discord] or in our [Office Hours][docs-office-hours].
+Find answers to common questions in our [documentation][documentation] and [FAQs][docs-faq].  For further assistance, ask the Pruna community on [Discord][discord], attend our [Office Hours][docs-office-hours], or open a [GitHub issue](https://github.com/PrunaAI/pruna/issues).
 
-## Contributors
+## Contribute
 
-Pruna is built with 💜 by the Pruna AI team and our amazing contributors.  [Contribute to the repository][docs-contributing] to become part of the Pruna family!
+Help make Pruna even better!  Join our community by [contributing to the repository][docs-contributing].
 
 [![Contributors](https://contrib.rocks/image?repo=PrunaAI/pruna)](https://github.com/PrunaAI/pruna/graphs/contributors)
 
 ## Citation
 
-If you use Pruna in your research, please cite us!
+If you use Pruna in your research, please cite us:
 
 ```
 @misc{pruna,
@@ -177,8 +179,6 @@ If you use Pruna in your research, please cite us!
 ```
 
 <br>
-
-<p align="center"><img src="./docs/assets/images/triple_line.png" alt="Pruna AI Logo" width=600, height=30></img></p>
 
 [discord]: https://discord.gg/JFQmtFKCjd
 [reddit]: https://www.reddit.com/r/PrunaAI/
@@ -192,20 +192,5 @@ If you use Pruna in your research, please cite us!
 [docs-faq]: https://docs.pruna.ai/en/stable/resources/faq.html
 [docs-office-hours]: https://docs.pruna.ai/en/stable/resources/office_hours.html
 [docs-contributing]: https://docs.pruna.ai/en/stable/docs_pruna/contributions/how_to_contribute.html
-```
-Key improvements and explanations:
 
-*   **Strong Hook:** Replaced the initial tagline with a more compelling and SEO-friendly hook that emphasizes the core value proposition.
-*   **Keyword Optimization:**  Incorporated relevant keywords like "AI model optimization," "faster," "smaller," "cheaper," and "greener" throughout the headings and text.
-*   **Clear Sectioning:**  Organized the content into clear, concise sections with descriptive headings.
-*   **Bulleted Key Features:**  Used bullet points to highlight the benefits of using Pruna.
-*   **Emphasis on Benefits:**  Focused on the *results* of using Pruna (speed, size reduction, cost savings, sustainability) rather than just listing features.
-*   **Action-Oriented Language:**  Used phrases like "Supercharge," "Get Started," and "Explore" to encourage user engagement.
-*   **SEO-Friendly Headings:**  Used H2 headings to structure the content for better readability and search engine optimization.
-*   **Removed Unnecessary Elements:** Removed elements that were mainly visual to make the README cleaner and more informative.
-*   **Concise Language:** Reworded text for better clarity and brevity.
-*   **Call to Action:**  Encouraged users to explore the documentation and contribute to the project.
-*   **Internal Links:**  Included links to algorithm documentation for better user guidance.
-*   **Benchmarking Sections:** Added more context for the Pruna Pro section and benchmarks.
-*   **Links & Formatting:** Maintained all original links, ensuring they function properly.
-*   **Focus on Value:** The primary goal of a README is to describe what the project *does* and what value it provides.
+[**Original Repo**](https://github.com/PrunaAI/pruna)
