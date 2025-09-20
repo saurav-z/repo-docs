@@ -3,9 +3,8 @@
 </p>
 
 <p align="center">
-  <em>Calculate and estimate the costs of your LLM prompts.</em>
+  <em>Clientside token counting + price estimation for LLM apps and AI agents.</em>
 </p>
-
 <p align="center">
     <a href="https://pypi.org/project/tokencost/" target="_blank">
         <img alt="Python" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
@@ -20,89 +19,73 @@
 <a href="https://agentops.ai/?tokencost">🖇️ AgentOps</a>
 </p>
 
-# Tokencost: Accurate LLM Cost Calculation and Token Counting
+# Accurately Calculate LLM Costs with TokenCost 
 
-Tokencost is your go-to Python library for precise Large Language Model (LLM) cost estimation and token counting, ensuring you stay within budget while building AI applications.  [Explore the original repository](https://github.com/AgentOps-AI/tokencost).
+**Effortlessly estimate the cost of your Large Language Model (LLM) applications with Tokencost, the Python library for precise token counting and pricing.**
+
+[Check out the original repo](https://github.com/AgentOps-AI/tokencost)
 
 **Key Features:**
 
-*   **Accurate Token Counting:** Uses Tiktoken and the Anthropic beta token counting API to precisely count tokens for various LLM providers.
-*   **Real-time Pricing Updates:** Tracks and provides the latest pricing for leading LLM models, saving you time and ensuring accurate cost calculations.
-*   **Effortless Integration:** Easily estimate prompt and completion costs with a single function call.
+*   **Precise Token Counting:** Utilize Tiktoken, OpenAI's official tokenizer, for accurate token calculations of prompts and completions.
+*   **LLM Price Tracking:** Stay updated with the latest pricing for various LLM providers.
+*   **Easy Integration:** Calculate prompt and completion costs with a single function call.
 
-## Quickstart
+## Installation
 
-### Installation
+Install via PyPI:
 
 ```bash
 pip install tokencost
 ```
 
-### Usage
+## Core Functionality
 
-```python
-from tokencost import calculate_prompt_cost, calculate_completion_cost
+*   **Calculate Cost:** Easily estimate the cost of prompts and completions.
+    ```python
+    from tokencost import calculate_prompt_cost, calculate_completion_cost
 
-model = "gpt-3.5-turbo"
-prompt = [{ "role": "user", "content": "Hello world"}]
-completion = "How may I assist you today?"
+    model = "gpt-3.5-turbo"
+    prompt = [{"role": "user", "content": "Hello world"}]
+    completion = "How may I assist you today?"
 
-prompt_cost = calculate_prompt_cost(prompt, model)
-completion_cost = calculate_completion_cost(completion, model)
+    prompt_cost = calculate_prompt_cost(prompt, model)
+    completion_cost = calculate_completion_cost(completion, model)
 
-print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
-# 0.0000135 + 0.000014 = 0.0000275
-```
-### Cost Estimates
-```python
-from openai import OpenAI
+    print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
+    # 0.0000135 + 0.000014 = 0.0000275
+    ```
 
-client = OpenAI()
-model = "gpt-3.5-turbo"
-prompt = [{ "role": "user", "content": "Say this is a test"}]
+*   **Calculate Cost for String Prompts:**
+    ```python
+    from tokencost import calculate_prompt_cost
 
-chat_completion = client.chat.completions.create(
-    messages=prompt, model=model
-)
+    prompt_string = "Hello world" 
+    response = "How may I assist you today?"
+    model= "gpt-3.5-turbo"
 
-completion = chat_completion.choices[0].message.content
-# "This is a test."
+    prompt_cost = calculate_prompt_cost(prompt_string, model)
+    print(f"Cost: ${prompt_cost}")
+    # Cost: $3e-06
+    ```
 
-prompt_cost = calculate_prompt_cost(prompt, model)
-completion_cost = calculate_completion_cost(completion, model)
-print(f"{prompt_cost} + {completion_cost} = {prompt_cost + completion_cost}")
-# 0.0000180 + 0.000010 = 0.0000280
-```
-### String prompts instead of messages:
-```python
-from tokencost import calculate_prompt_cost
+*   **Token Counting:** Easily count tokens in messages and strings.
+    ```python
+    from tokencost import count_message_tokens, count_string_tokens
 
-prompt_string = "Hello world" 
-response = "How may I assist you today?"
-model= "gpt-3.5-turbo"
+    message_prompt = [{"role": "user", "content": "Hello world"}]
+    print(count_message_tokens(message_prompt, model="gpt-3.5-turbo"))
+    # 9
 
-prompt_cost = calculate_prompt_cost(prompt_string, model)
-print(f"Cost: ${prompt_cost}")
-# Cost: $3e-06
-```
-
-### Counting Tokens
-```python
-from tokencost import count_message_tokens, count_string_tokens
-
-message_prompt = [{ "role": "user", "content": "Hello world"}]
-# Counting tokens in prompts formatted as message lists
-print(count_message_tokens(message_prompt, model="gpt-3.5-turbo"))
-# 9
-
-# Alternatively, counting tokens in string prompts
-print(count_string_tokens(prompt="Hello world", model="gpt-3.5-turbo"))
-# 2
-```
+    print(count_string_tokens(prompt="Hello world", model="gpt-3.5-turbo"))
+    # 2
+    ```
 
 ## How Tokens are Counted
 
-Tokencost uses [Tiktoken](https://github.com/openai/tiktoken), OpenAI's official tokenizer, to handle raw strings and message formats. For Anthropic models above version 3, the [Anthropic beta token counting API](https://docs.anthropic.com/claude/docs/beta-api-for-counting-tokens) is used for accurate results.
+TokenCost uses [Tiktoken](https://github.com/openai/tiktoken), OpenAI's official tokenizer, to tokenize strings and ChatML messages. For Anthropic models above version 3, the [Anthropic beta token counting API](https://docs.anthropic.com/claude/docs/beta-api-for-counting-tokens) is used.
 
-## LLM Pricing Table (USD)
-Find a comprehensive breakdown of model pricing [here](pricing_table.md).  *(Note: due to character limits, the table is NOT repeated.  You can link to your markdown file)*
+## Pricing Table
+
+Find the latest pricing information [here](pricing_table.md).
+```

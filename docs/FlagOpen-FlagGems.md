@@ -1,60 +1,80 @@
 # FlagGems: Accelerate LLM Training and Inference with High-Performance Operators
 
-**Supercharge your Large Language Model (LLM) performance with FlagGems, a powerful operator library built on OpenAI Triton for blazing-fast training and inference.**  [View the original repository on GitHub](https://github.com/FlagOpen/FlagGems).
+**FlagGems is a cutting-edge operator library built on OpenAI Triton, designed to supercharge large language model (LLM) training and inference across diverse hardware platforms.**  [View the original repository on GitHub](https://github.com/FlagOpen/FlagGems)
 
-![FlagGems Overview](https://github.com/user-attachments/assets/97950fc6-62bb-4b6a-b8d5-5751c14492fa)
+![FlagGems Logo](https://github.com/user-attachments/assets/97950fc6-62bb-4b6a-b8d5-5751c14492fa)
 
-## Key Features
+## Key Features & Benefits
 
-FlagGems offers a comprehensive suite of features designed to optimize LLM performance across diverse hardware platforms:
-
-*   **Extensive Operator Library:** Provides a wide range of PyTorch-compatible operators, ensuring seamless integration with existing LLM workflows.
-*   **Optimized Performance:**  Leverages hand-optimized kernels for select operators, delivering significant speedups.
-*   **Eager Mode Ready:**  Works independently of `torch.compile`, offering flexibility in your development process.
-*   **Automatic Code Generation:**  Supports automatic pointwise operator code generation for arbitrary input types and layouts, simplifying development.
-*   **Fast Kernel Dispatching:**  Features rapid per-function runtime kernel dispatching for efficient execution.
-*   **Multi-Backend Support:**  Enables support for diverse hardware platforms, expanding compatibility.
-*   **C++ Triton Function Dispatcher:**  (Work in progress) Designed to reduce the overhead of the Python runtime and improve overall performance.
-*   **LibEntry:** Independent kernel cache management that bypasses unnecessary runtime overhead
-
-## What's New
-
-### Changelog Highlights
-
-*   **v3.0:** Support for 184 operators, including custom operators used in large model inference, and more hardware platforms, including Ascend and AIPU. Compatibility with the vLLM framework, verified with the DeepSeek model.
-*   **v2.1:** Support for an array of Tensor, neural network, basic math, and distribution operators.
-*   **v2.0:** Support for BLAS, pointwise, reduction, and fused operators.
-*   **v1.0:** Initial support for BLAS, pointwise, and reduction operators.
-
-## Supported Hardware Platforms
-
-FlagGems delivers optimized performance across a broad range of hardware:
-
-| Vendor      | State                    | float16 | float32 | bfloat16 |
-| ----------- | ------------------------ | ------- | ------- | -------- |
-| aipu        | ✅ (Partial support)     | ✅      | ✅      | ✅       |
-| ascend      | ✅ (Partial support)     | ✅      | ✅      | ✅       |
-| cambricon   | ✅                       | ✅      | ✅      | ✅       |
-| hygon       | ✅                       | ✅      | ✅      | ✅       |
-| iluvatar    | ✅                       | ✅      | ✅      | ✅       |
-| kunlunxin   | ✅                       | ✅      | ✅      | ✅       |
-| metax       | ✅                       | ✅      | ✅      | ✅       |
-| mthreads    | ✅                       | ✅      | ✅      | ✅       |
-| nvidia      | ✅                       | ✅      | ✅      | ✅       |
-| arm(cpu)    | 🚧                       |         |         |          |
-| tsingmicro  | 🚧                       |         |         |          |
-
-## Performance Boost
-
-[Insert image from ./docs/assets/speedup-20250423.png here.  Caption: FlagGems delivers significant speedups compared to PyTorch ATen library in eager mode.]
-
-## Get Started
-
-For detailed instructions on installation and usage, please refer to the [Get Started Guide](docs/get_start_with_flaggems.md).
+*   **Extensive PyTorch Compatibility:** Seamlessly integrates with existing PyTorch workflows.
+*   **Optimized Performance:** Hand-tuned performance for selected operators, achieving significant speedups.
+*   **Eager Mode Ready:** Works independently of `torch.compile`, offering flexibility.
+*   **Automatic Code Generation:** Simplifies operator development with support for various data types and layouts.
+*   **Fast Kernel Dispatch:** Efficient per-function runtime kernel dispatching for rapid execution.
+*   **Multi-Backend Support:** Enables support for a wide range of hardware platforms, including GPUs and specialized AI accelerators.
+*   **C++ Runtime:** Provides a C++ runtime option to minimize overhead and improve end-to-end performance.
 
 ## Supported Operators
 
-The library's supported operators are listed in the [Operator List](docs/operator_list.md).
+FlagGems offers a growing collection of PyTorch-compatible operators, categorized for easy navigation:
+
+*   **BLAS Operators:** `addmm`, `bmm`, `mm`, `mv`, `outer`
+*   **Pointwise Operators:** `abs`, `add`, `div`, `dropout`, `exp`, `gelu`, `mul`, `pow`, `reciprocal`, `relu`, `rsqrt`, `silu`, `sub`, `triu`, `bitwise_and`, `bitwise_not`, `bitwise_or`, `cos`, `clamp`, `eq`, `ge`, `gt`, `isinf`, `isnan`, `le`, `lt`, `ne`, `neg`, `or`, `sin`, `tanh`, `sigmoid`
+*   **Reduction Operators:** `all`, `any`, `amax`, `argmax`, `max`, `min`, `prod`, `sum`, `var_mean`, `vector_norm`, `cross_entropy_loss`, `group_norm`, `log_softmax`, `rms_norm`
+*   **Fused Operators:** `fused_add_rms_norm`, `skip_layer_norm`, `gelu_and_mul`, `silu_and_mul`, `apply_rotary_position_embedding`
+*   **Tensor Operators:** `where`, `arange`, `repeat`, `masked_fill`, `tile`, `unique`, `index_select`, `masked_select`, `ones`, `ones_like`, `zeros`, `zeros_like`, `full`, `full_like`, `flip`, `pad`
+*   **Neural Network Operator:** `embedding`
+*   **Basic Math Operators:** `allclose`, `isclose`, `isfinite`, `floor_divide`, `trunc_divide`, `maximum`, `minimum`
+*   **Distribution Operators:** `normal`, `uniform_`, `exponential_`, `multinomial`, `nonzero`, `topk`, `rand`, `randn`, `rand_like`, `randn_like`
+*   **Science Operators:** `erf`, `resolve_conj`, `resolve_neg`
+
+Refer to the [OperatorList](docs/operator_list.md) for a detailed list and future planned implementations.
+
+## Core Technologies
+
+### Multi-Backend Hardware Support
+
+FlagGems' flexible architecture supports a broad spectrum of hardware, maximizing performance across different environments.
+
+### Automatic Codegen
+
+FlagGems features an automatic code generation system, simplifying the development of both pointwise and fused operators, supporting various needs. Learn more in [pointwise_dynamic](docs/pointwise_dynamic.md).
+
+### LibEntry
+
+`LibEntry` offers independent kernel cache management, bypassing runtime components for efficiency gains. It also supports direct wrapping of `Autotuner`, `Heuristics`, and `JitFunction`, minimizing redundant operations.
+
+### C++ Runtime
+
+The C++ runtime significantly boosts end-to-end performance by mitigating Python runtime overhead.
+
+## Supported Platforms
+
+FlagGems provides optimized performance across a variety of hardware platforms:
+
+| Vendor      | State                     | float16 | float32 | bfloat16 |
+| ----------- | ------------------------- | ------- | ------- | -------- |
+| aipu        | ✅ (Partial support)      | ✅      | ✅      | ✅       |
+| ascend      | ✅ (Partial support)      | ✅      | ✅      | ✅       |
+| cambricon   | ✅                        | ✅      | ✅      | ✅       |
+| hygon       | ✅                        | ✅      | ✅      | ✅       |
+| iluvatar    | ✅                        | ✅      | ✅      | ✅       |
+| kunlunxin   | ✅                        | ✅      | ✅      | ✅       |
+| metax       | ✅                        | ✅      | ✅      | ✅       |
+| mthreads    | ✅                        | ✅      | ✅      | ✅       |
+| nvidia      | ✅                        | ✅      | ✅      | ✅       |
+| arm(cpu)    | 🚧                        |         |         |          |
+| tsingmicro  | 🚧                        |         |         |          |
+
+## Performance
+
+FlagGems delivers significant speedups compared to PyTorch ATen, particularly in eager mode.
+
+![Operator Speedup](./docs/assets/speedup-20250423.png)
+
+## Getting Started
+
+For installation and usage instructions, please refer to the [GetStart](docs/get_start_with_flaggems.md) documentation.
 
 ## Example Models
 
@@ -62,13 +82,13 @@ The library's supported operators are listed in the [Operator List](docs/operato
 *   Llama-2-7b
 *   Llava-1.5-7b
 
-## Contribute
+## Contributing
 
-We welcome contributions!  Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
+Contributions to FlagGems are welcome! Please refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
 ## Citation
 
-If you use FlagGems in your research, please cite us:
+If you use FlagGems in your research, please cite our project:
 
 ```bibtex
 @misc{flaggems2024,
@@ -80,25 +100,10 @@ If you use FlagGems in your research, please cite us:
 }
 ```
 
-## Contact Us
+## Contact
 
-For any questions or inquiries, please submit an issue or contact us at <a href="mailto:flaggems@baai.ac.cn">flaggems@baai.ac.cn</a>.
+For questions or inquiries, please submit an issue or contact us at <a href="mailto:flaggems@baai.ac.cn">flaggems@baai.ac.cn</a>.
 
 ## License
 
 FlagGems is licensed under the [Apache 2.0](./LICENSE) license.
-```
-Key improvements and SEO optimizations:
-
-*   **Clear Headline:**  A concise and keyword-rich headline immediately grabs attention.
-*   **One-Sentence Hook:** The opening sentence provides a compelling reason to use FlagGems.
-*   **Structured Headings:**  Uses clear headings to organize information logically.
-*   **Bulleted Key Features:**  Highlights the most important benefits in an easily digestible format.
-*   **Keyword Optimization:** Uses relevant keywords like "LLM," "operator library," "Triton," and "performance" throughout.
-*   **Call to Action:** Encourages users to "View the original repository on GitHub".
-*   **Changelog:** Summarized changelog for easy version comparison.
-*   **Image Placeholder:** Added a placeholder for the performance chart.
-*   **Clear Structure:**  The content is well-organized and easy to scan.
-*   **Contact Information:**  Easy access to how to contact the team with links and email
-*   **Citation:** A place to cite the project.
-*   **License:** Included the license.

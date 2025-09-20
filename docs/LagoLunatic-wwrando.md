@@ -1,31 +1,33 @@
-# The Legend of Zelda: Wind Waker Randomizer - Unleash a New Adventure!
+# Wind Waker Randomizer: Re-Experience the Classic in a Whole New Way
 
-Embark on a fresh journey through the Great Sea with the Wind Waker Randomizer, completely transforming your experience of this classic Zelda title. ([Original Repo](https://github.com/LagoLunatic/wwrando))
+Ready to rediscover *The Legend of Zelda: The Wind Waker*? The **Wind Waker Randomizer** [Check out the original repo](https://github.com/LagoLunatic/wwrando) allows you to randomize item locations, creating a fresh and unpredictable adventure every time you play.
 
 ## Key Features:
 
-*   **Item Randomization:** Every item in the game is randomized, ensuring a unique playthrough every time.
-*   **Open World from the Start:** Explore the world freely from the beginning of the game.
-*   **Streamlined Gameplay:** Experience faster sailing and text speeds, plus minimized cutscenes for a more engaging experience.
-*   **Customizable Item Location:** Tailor your experience by limiting progress items to specific location types (dungeons, caves, etc.).
-*   **Guaranteed Completion:** The randomizer ensures every seed is completable without requiring glitches.
+*   **Randomized Item Placement:** Every playthrough is unique, with items in new and unexpected locations.
+*   **Open World Gameplay:** Explore the world from the start with no restrictions.
+*   **Streamlined Experience:** Enjoy faster sailing and text speeds, and fewer cutscenes.
+*   **Guaranteed Completion:** The randomizer ensures every seed is beatable without requiring glitches.
+*   **Customizable Randomization:** Control where progress items can appear, tailoring the difficulty and experience.
 
-## Important Information:
+## Getting Started:
 
-*   **Compatibility:** The randomizer is designed for the North American GameCube version of The Legend of Zelda: The Wind Waker (MD5: d8e4d45af2032a081a0f446384e9261b).
-*   **Troubleshooting:**
-    *   **Antivirus Issues:** If the randomizer fails to launch or is flagged as malware, add an exception/exclusion in your antivirus software.
-    *   **Getting Stuck:** Consult the FAQ for assistance: [https://lagolunatic.github.io/wwrando/faq/](https://lagolunatic.github.io/wwrando/faq/) and the spoiler log. Report any bugs encountered here: [https://github.com/LagoLunatic/wwrando/issues](https://github.com/LagoLunatic/wwrando/issues).
-*   **Official Website:** Get started with detailed instructions and more: [https://lagolunatic.github.io/wwrando/](https://lagolunatic.github.io/wwrando/)
-*   **Download:** Download the latest version here: [https://github.com/LagoLunatic/wwrando/releases/latest](https://github.com/LagoLunatic/wwrando/releases/latest)
+1.  **Download:** [Download the latest version](https://github.com/LagoLunatic/wwrando/releases/latest).
+2.  **Compatibility:** The randomizer supports the North American GameCube version of *The Legend of Zelda: The Wind Waker* (MD5: d8e4d45af2032a081a0f446384e9261b). European and Japanese versions, and *Wind Waker HD* are not supported.
+3.  **Website:** For detailed instructions and FAQs, visit the [official website](https://lagolunatic.github.io/wwrando/).
+
+## Troubleshooting:
+
+*   **Antivirus Issues:** If the randomizer doesn't launch, your antivirus may be blocking it. Add an exception for the randomizer in your antivirus settings.
+*   **Getting Stuck:** Consult the [FAQ](https://lagolunatic.github.io/wwrando/faq/) on the official website. If you believe you've found a bug, please report it on [GitHub](https://github.com/LagoLunatic/wwrando/issues), including your seed's permalink.
 
 ## Join the Community:
 
-*   **Discord Server:** Connect with other players and find support: [https://discord.gg/r2963mt](https://discord.gg/r2963mt)
+*   **Discord:** Connect with other players, ask questions, and find people to play with on the [official Discord server](https://discord.gg/r2963mt).
 
 ## Credits:
 
-The Wind Waker Randomizer was created by LagoLunatic, with contributions from a talented team (listed in the original README).
+The Wind Waker Randomizer is the work of LagoLunatic, with contributions from a dedicated team (listed in the original README).
 
 ## Running from Source (Advanced Users):
 

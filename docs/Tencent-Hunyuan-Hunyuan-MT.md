@@ -1,67 +1,56 @@
-# Hunyuan-MT: State-of-the-Art Machine Translation Models
+# Hunyuan-MT: State-of-the-Art Multilingual Translation Models
 
-**Hunyuan-MT empowers seamless and high-quality translation across 33 languages, including minority languages, delivering industry-leading performance.  [Explore the models on GitHub](https://github.com/Tencent-Hunyuan/Hunyuan-MT)!**
+Hunyuan-MT is a suite of advanced multilingual translation models offering superior performance across numerous languages.  **Explore the power of high-quality translation with Hunyuan-MT!**  [See the original repository](https://github.com/Tencent-Hunyuan/Hunyuan-MT).
 
-<p align="center">
- <img src="https://dscache.tencent-cloud.cn/upload/uploader/hunyuan-64b418fd052c033b228e04bc77bbc4b54fd7f5bc.png" width="400"/> <br>
-</p>
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Hunyuan--MT-blue?style=flat-square&logo=huggingface)](https://huggingface.co/collections/tencent/hunyuan-mt-68b42f76d473f82798882597)
+[![ModelScope](https://img.shields.io/badge/ModelScope-Hunyuan--MT-green?style=flat-square&logo=data-visualization)](https://modelscope.cn/collections/Hunyuan-MT-2ca6b8e1b4934f)
+[![Official Website](https://img.shields.io/badge/Official%20Website-Hunyuan-red?style=flat-square&logo=tencent)](https://hunyuan.tencent.com)
+[![Demo](https://img.shields.io/badge/Demo-Hunyuan--MT-orange?style=flat-square)](https://hunyuan.tencent.com/chat/HunyuanDefault?from=modelSquare&modelId=hunyuan-mt-7b)
+[![GitHub](https://img.shields.io/badge/GitHub-Hunyuan--MT-gray?style=flat-square&logo=github)](https://github.com/Tencent-Hunyuan/Hunyuan-MT)
+[![Technical Report](https://img.shields.io/badge/Technical%20Report-arXiv-purple?style=flat-square&logo=arxiv)](https://www.arxiv.org/pdf/2509.05209)
 
-**Key Features:**
+## Key Features and Advantages
 
-*   **Multi-Language Support:** Translate between 33 languages, including Chinese and five Chinese ethnic minority languages.
-*   **Superior Performance:** Achieved first place in 30 out of 31 language categories at the WMT25 competition.
-*   **Ensemble Model:** Hunyuan-MT-Chimera-7B, the industry's first open-source translation ensemble model, for enhanced translation quality.
-*   **Comprehensive Training:** Utilizes a cutting-edge training framework including pretraining, continued pretraining (CPT), supervised fine-tuning (SFT), translation RL, and ensemble RL.
-*   **Model Availability:** Available on Hugging Face and ModelScope.
-*   **Quantization:** Offers FP8 and INT4 quantized models for efficient deployment.
+*   **Industry-Leading Performance:** Achieved first place in 30 out of 31 language categories in the WMT25 competition.
+*   **High-Quality Translation:** Hunyuan-MT-Chimera, the first open-source ensemble translation model, sets a new standard for translation accuracy.
+*   **Superior Model:** Hunyuan-MT-7B delivers industry-leading performance among models of comparable scale.
+*   **Comprehensive Framework:**  Employs a robust training framework (pretrain → CPT → SFT → translation RL → ensemble RL) for SOTA results.
+*   **Wide Language Support:**  Supports mutual translation among 33 languages, including five Chinese ethnic minority languages.
 
-**Quick Links:**
+## Models
 
-*   🤗 [Hugging Face](https://huggingface.co/collections/tencent/hunyuan-mt-68b42f76d473f82798882597)
-*   <img src="https://avatars.githubusercontent.com/u/109945100?s=200&v=4" width="16"/> [ModelScope](https://modelscope.cn/collections/Hunyuan-MT-2ca6b8e1b4934f)
-*   🖥️ [Official Website](https://hunyuan.tencent.com)
-*   🕹️ [Demo](https://hunyuan.tencent.com/chat/HunyuanDefault?from=modelSquare&modelId=hunyuan-mt-7b)
-*   [GitHub](https://github.com/Tencent-Hunyuan/Hunyuan-MT)
-*   [Technical Report](https://www.arxiv.org/pdf/2509.05209)
+| Model Name  | Description | Download |
+| ----------- | ----------- |-----------
+| Hunyuan-MT-7B  | Hunyuan 7B translation model |🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-7B)|
+| Hunyuan-MT-7B-fp8 | Hunyuan 7B translation model，fp8 quant    | 🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-7B-fp8)|
+| Hunyuan-MT-Chimera | Hunyuan 7B translation ensemble model    | 🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-Chimera-7B)|
+| Hunyuan-MT-Chimera-fp8 | Hunyuan 7B translation ensemble model，fp8 quant     | 🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-Chimera-7B-fp8)|
 
-## Model Overview
+## Performance
 
-Hunyuan-MT features two primary models: Hunyuan-MT-7B (translation model) and Hunyuan-MT-Chimera (ensemble model). The translation model focuses on direct source-to-target language conversion, while the ensemble model leverages multiple outputs for refined, higher-quality translations.
+<div align='center'>
+<img src="imgs/overall_performance.png" width = "80%" />
+</div>
 
-## Performance Highlights
+For detailed experimental results and analysis, please refer to our [Technical Report](https://www.arxiv.org/pdf/2509.05209).
 
-*   Refer to the [Technical Report](https://www.arxiv.org/pdf/2509.05209) for in-depth performance analyses and experimental results.
-*   [Performance Image](https://raw.githubusercontent.com/Tencent-Hunyuan/Hunyuan-MT/main/imgs/overall_performance.png)
+## Prompts
 
-## Model Details and Download Links
+### Prompt Template for ZH<=>XX Translation
+```
+把下面的文本翻译成<target_language>，不要额外解释。
 
-| Model Name             | Description                                    | Download                                                               |
-| ---------------------- | ---------------------------------------------- | ---------------------------------------------------------------------- |
-| Hunyuan-MT-7B          | Hunyuan 7B translation model                 | 🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-7B)              |
-| Hunyuan-MT-7B-fp8      | Hunyuan 7B translation model, FP8 quantized    | 🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-7B-fp8)          |
-| Hunyuan-MT-Chimera-7B  | Hunyuan 7B translation ensemble model          | 🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-Chimera-7B)      |
-| Hunyuan-MT-Chimera-fp8 | Hunyuan 7B translation ensemble model, FP8 quantized | 🤗 [Model](https://huggingface.co/tencent/Hunyuan-MT-Chimera-7B-fp8) |
+<source_text>
+```
 
-## Prompting Guidelines
+### Prompt Template for XX<=>XX Translation, excluding ZH<=>XX
+```
+Translate the following segment to <target_language>, without additional explanation.
 
-### Translation Prompts
+<source_text>
+```
 
-*   **ZH<=>XX Translation:**
-    ```
-    把下面的文本翻译成<target_language>，不要额外解释。
-
-    <source_text>
-    ```
-
-*   **XX<=>XX Translation (excluding ZH):**
-    ```
-    Translate the following segment to <target_language>, without additional explanation.
-
-    <source_text>
-    ```
-
-### Hunyuan-MT-Chimera-7B Prompt
-
+### Prompt Template for Hunyuan-MT-Chimera-7B
 ```
 Analyze the following multiple <target_language> translations of the <source_language> segment surrounded in triple backticks and generate a single refined <target_language> translation. Only output the refined translation, do not explain.
 
@@ -77,49 +66,52 @@ The multiple `<target_language>` translations:
 6. ```<translated_text6>```
 ```
 
-## Getting Started: Using with Transformers
+## Usage and Deployment
 
-1.  **Installation:** Install the `transformers` library (version 4.56.0 recommended).
-    ```bash
-    pip install transformers==4.56.0
-    ```
-    *If using an fp8 model, modify "ignored\_layers" to "ignore" in `config.json` and upgrade `compressed-tensors`.*
+### Installation
 
-2.  **Code Example:**
-    ```python
-    from transformers import AutoModelForCausalLM, AutoTokenizer
-    import os
+```shell
+pip install transformers==4.56.0
+```
 
-    model_name_or_path = "tencent/Hunyuan-MT-7B"
+*Note: If you want to load the fp8 model with transformers, you need to change the name "ignored_layers" in config.json to "ignore" and upgrade the compressed-tensors to compressed-tensors-0.11.0.*
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-    model = AutoModelForCausalLM.from_pretrained(model_name_or_path, device_map="auto")
-    messages = [
-        {"role": "user", "content": "Translate the following segment into Chinese, without additional explanation.\n\nIt’s on the house."},
-    ]
-    tokenized_chat = tokenizer.apply_chat_template(
-        messages,
-        tokenize=True,
-        add_generation_prompt=False,
-        return_tensors="pt"
-    )
+### Inference
 
-    outputs = model.generate(tokenized_chat.to(model.device), max_new_tokens=2048)
-    output_text = tokenizer.decode(outputs[0])
-    ```
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import os
 
-3.  **Inference Parameters (Recommended):**
-    ```json
-    {
-      "top_k": 20,
-      "top_p": 0.6,
-      "repetition_penalty": 1.05,
-      "temperature": 0.7
-    }
-    ```
+model_name_or_path = "tencent/Hunyuan-MT-7B"
 
-## Supported Languages
+tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
+model = AutoModelForCausalLM.from_pretrained(model_name_or_path, device_map="auto")  # You may want to use bfloat16 and/or move to GPU here
+messages = [
+    {"role": "user", "content": "Translate the following segment into Chinese, without additional explanation.\n\nIt’s on the house."},
+]
+tokenized_chat = tokenizer.apply_chat_template(
+    messages,
+    tokenize=True,
+    add_generation_prompt=False,
+    return_tensors="pt"
+)
 
+outputs = model.generate(tokenized_chat.to(model.device), max_new_tokens=2048)
+output_text = tokenizer.decode(outputs[0])
+```
+
+### Recommended Inference Parameters
+
+```json
+{
+  "top_k": 20,
+  "top_p": 0.6,
+  "repetition_penalty": 1.05,
+  "temperature": 0.7
+}
+```
+
+### Supported Languages
 | Languages         | Abbr.   | Chinese Names   |
 |-------------------|---------|-----------------|
 | Chinese           | zh      | 中文            |
@@ -148,7 +140,7 @@ The multiple `<target_language>` translations:
 | Burmese           | my      | 缅甸语          |
 | Persian           | fa      | 波斯语          |
 | Gujarati          | gu      | 古吉拉特语      |
-| Urdu              | ur      | 乌尔都语        |
+| Urdu            | ur      | 乌尔都语        |
 | Telugu            | te      | 泰卢固语        |
 | Marathi           | mr      | 马拉地语        |
 | Hebrew            | he      | 希伯来语        |
@@ -161,9 +153,8 @@ The multiple `<target_language>` translations:
 | Uyghur            | ug      | 维吾尔语        |
 | Cantonese         | yue     | 粤语            |
 
-## Training Your Own Model
-
 ### Training Data Format
+
 ```python
 messages = [
     {"role": "system", "content": "You are a helpful assistant."},
@@ -176,262 +167,30 @@ tokenizer = AutoTokenizer.from_pretrained("your_tokenizer_path", trust_remote_co
 train_ids = tokenizer.apply_chat_template(messages)
 ```
 
-### Train with LLaMA-Factory
-1.  **Prerequisites:** Ensure you have these dependencies installed:
-    *   **LLaMA-Factory:** Follow the [official installation guide](https://github.com/hiyouga/LLaMA-Factory).
-    *   **DeepSpeed** (Optional): Follow the [official installation guide](https://github.com/deepspeedai/DeepSpeed#installation).
-    *   **Transformers:** Companion branch (Hunyuan-submitted code is pending review):
-        ```bash
-        pip install git+https://github.com/huggingface/transformers@4970b23cedaf745f963779b4eae68da281e8c6ca
-        ```
+### Fine-tuning with LLaMA-Factory
 
-2.  **Data Preparation:**
-    *   Organize your data in `json` format within the `data` directory of `LLaMA-Factory`. The format is based on `sharegpt`:
-        ```json
-        [
-          {
-            "messages": [
-              {
-                "role": "system",
-                "content": "System prompt (optional)"
-              },
-              {
-                "role": "user",
-                "content": "Human instruction"
-              },
-              {
-                "role": "assistant",
-                "content": "Model response"
-              }
-            ]
-          }
-        ]
-        ```
-    *   Define your dataset in the `data/dataset_info.json` file:
-        ```json
-        "dataset_name": {
-          "file_name": "dataset.json",
-          "formatting": "sharegpt",
-          "columns": {
-            "messages": "messages"
-          },
-          "tags": {
-            "role_tag": "role",
-            "content_tag": "content",
-            "user_tag": "user",
-            "assistant_tag": "assistant",
-            "system_tag": "system"
-          }
-        }
-        ```
-
-3.  **Training Execution:**
-    *   Copy configuration files from `llama_factory_support/example_configs` to the `example/hunyuan` directory within `LLaMA-Factory`.
-    *   Modify the model path and dataset name in `hunyuan_full.yaml`. Adjust other configurations as needed:
-        ```yaml
-        ### model
-        model_name_or_path: [!!!add the model path here!!!]
-
-        ### dataset
-        dataset: [!!!add the dataset name here!!!]
-        ```
-    *   Run training commands:
-        *   **Single-node:**
-            ```bash
-            export DISABLE_VERSION_CHECK=1
-            llamafactory-cli train examples/hunyuan/hunyuan_full.yaml
-            ```
-        *   **Multi-node:** Configure `NNODES`, `NODE_RANK`, `MASTER_ADDR`, and `MASTER_PORT` for your environment. Run on each node:
-            ```bash
-            export DISABLE_VERSION_CHECK=1
-            FORCE_TORCHRUN=1 NNODES=${NNODES} NODE_RANK=${NODE_RANK} MASTER_ADDR=${MASTER_ADDR} MASTER_PORT=${MASTER_PORT} \
-            llamafactory-cli train examples/hunyuan/hunyuan_full.yaml
-            ```
+*   **Prerequisites:** [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), DeepSpeed (optional), and a compatible branch of the `transformers` library.
+*   **Data Preparation:** Prepare your data in the `sharegpt` format.
+*   **Configuration:** Modify the model path and dataset name in `hunyuan_full.yaml`.
+*   **Training:** Execute the training commands (single-node or multi-node) as specified in the original README.
 
 ## Quantization and Compression
 
-The Hunyuan-MT models support quantization using our AngelSlim tool for creating FP8 and INT4 quantized models.  [AngelSlim](https://github.com/tencent/AngelSlim) offers an accessible solution for model compression.
+Utilizing the [AngelSlim](https://github.com/tencent/AngelSlim) tool, we offer FP8 and INT4 quantized models.  These compressed models enhance inference efficiency and reduce deployment requirements.
 
 ### FP8 Quantization
 
-FP8 static quantization is used. The model weights and activations are converted to the 8-bit floating-point format. Calibration data (without training) pre-determines the quantization scale, to improve inference efficiency and reduce the deployment threshold.
-You can use [AngelSlim](https://github.com/tencent/AngelSlim) or download a pre-quantized model.
+Hunyuan-MT supports FP8-static quantization for improved inference.
 
 ## Deployment
 
-Deploy Hunyuan-MT models using: **TensorRT-LLM**, **vLLM**, or **SGLang**.
+Hunyuan-MT models can be deployed using frameworks like:
 
-### TensorRT-LLM
+*   **TensorRT-LLM:**  Pre-built Docker images are provided.  See the original README for detailed setup and usage instructions.
+*   **vLLM:** (version v0.10.0 or higher)  Follow the instructions in the original README for model download and API server setup, and instructions for quantitative deployment with Int8, Int4, and FP8 models.
+*   **SGLang:**  Pre-built Docker images are also available. Consult the original README for setup.
 
-1.  **Docker Image:** Pre-built Docker image available.
-
-    *   **Example (using tencent/Hunyuan-7B-Instruct):**
-
-        ```bash
-        docker pull docker.cnb.cool/tencent/hunyuan/hunyuan-7b:hunyuan-7b-trtllm
-        docker run --privileged --user root --name hunyuanLLM_infer --rm -it --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 --gpus=all hunyuaninfer/hunyuan-7b:hunyuan-7b-trtllm
-        ```
-
-2.  **Configuration:** Prepare the configuration file.
-
-    ```bash
-    cat >/path/to/extra-llm-api-config.yml <<EOF
-    use_cuda_graph: true
-    cuda_graph_padding_enabled: true
-    cuda_graph_batch_sizes:
-    - 1
-    - 2
-    - 4
-    - 8
-    - 16
-    - 32
-    print_iter_log: true
-    EOF
-    ```
-
-3.  **Start API Server:**
-
-    ```bash
-    trtllm-serve \
-      /path/to/HunYuan-7b \
-      --host localhost \
-      --port 8000 \
-      --backend pytorch \
-      --max_batch_size 32 \
-      --max_num_tokens 16384 \
-      --tp_size 2 \
-      --kv_cache_free_gpu_memory_fraction 0.6 \
-      --trust_remote_code \
-      --extra_llm_api_options /path/to/extra-llm-api-config.yml
-    ```
-
-### vLLM
-
-1.  **Prerequisites:** Install `transformers` (companion branch).
-
-    ```bash
-    pip install git+https://github.com/huggingface/transformers@4970b23cedaf745f963779b4eae68da281e8c6ca
-    ```
-
-    *   **Model Download:**
-        *   **Hugging Face:** Will download automatically by vLLM.
-        *   **ModelScope:** `modelscope download --model Tencent-Hunyuan/Hunyuan-7B-Instruct`
-    *   **Set Model Path:**
-        *   **Hugging Face:**
-            ```bash
-            export MODEL_PATH=tencent/Hunyuan-7B-Instruct
-            ```
-        *   **ModelScope:**
-            ```bash
-            export MODEL_PATH=/root/.cache/modelscope/hub/models/Tencent-Hunyuan/Hunyuan-7B-Instruct/
-            ```
-
-2.  **Start API Server:**
-
-    ```bash
-    python3 -m vllm.entrypoints.openai.api_server \
-        --host 0.0.0.0 \
-        --port 8000 \
-        --trust-remote-code \
-        --model ${MODEL_PATH} \
-        --tensor-parallel-size 1 \
-        --dtype bfloat16 \
-        --quantization experts_int8 \
-        --served-model-name hunyuan \
-        2>&1 | tee log_server.txt
-    ```
-
-3.  **Test Request:**
-
-    ```bash
-    curl http://0.0.0.0:8000/v1/chat/completions -H 'Content-Type: application/json' -d '{
-    "model": "hunyuan",
-    "messages": [
-        {
-            "role": "system",
-            "content": [{"type": "text", "text": "You are a helpful assistant."}]
-        },
-        {
-            "role": "user",
-            "content": [{"type": "text", "text": "请按面积大小对四大洋进行排序，并给出面积最小的洋是哪一个？直接输出结果。"}]
-        }
-    ],
-    "max_tokens": 2048,
-    "temperature":0.7,
-    "top_p": 0.6,
-    "top_k": 20,
-    "repetition_penalty": 1.05,
-    "stop_token_ids": [127960]
-    }'
-    ```
-
-4.  **Quantized Model Deployment**
-    *   **Int8 (Weight-Only):**
-
-        ```bash
-        python3 -m vllm.entrypoints.openai.api_server \
-            --host 0.0.0.0 \
-            --port 8000 \
-            --trust-remote-code \
-            --model ${MODEL_PATH} \
-            --tensor-parallel-size 1 \
-            --dtype bfloat16 \
-            --served-model-name hunyuan \
-            --quantization experts_int8 \
-            2>&1 | tee log_server.txt
-        ```
-
-    *   **Int4 (Weight-Only, GPTQ):**
-        ```bash
-        export MODEL_PATH=PATH_TO_INT4_MODEL
-        python3 -m vllm.entrypoints.openai.api_server \
-            --host 0.0.0.0 \
-            --port 8000 \
-            --trust-remote-code \
-            --model ${MODEL_PATH} \
-            --tensor-parallel-size 1 \
-            --dtype bfloat16 \
-            --served-model-name hunyuan \
-            --quantization gptq_marlin \
-            2>&1 | tee log_server.txt
-        ```
-
-    *   **FP8 (W8A8C8):**
-        ```bash
-        python3 -m vllm.entrypoints.openai.api_server \
-            --host 0.0.0.0 \
-            --port 8000 \
-            --trust-remote-code \
-            --model ${MODEL_PATH} \
-            --tensor-parallel-size 1 \
-            --dtype bfloat16 \
-            --served-model-name hunyuan \
-            --kv-cache-dtype fp8 \
-            2>&1 | tee log_server.txt
-        ```
-
-### SGLang
-
-1.  **Docker Image:**
-
-    ```bash
-    docker pull lmsysorg/sglang:latest
-    ```
-
-2.  **Start API Server:**
-
-    ```bash
-    docker run --entrypoint="python3" --gpus all \
-        --shm-size 32g \
-        -p 30000:30000 \
-        --ulimit nproc=10000 \
-        --privileged \
-        --ipc=host \
-         lmsysorg/sglang:latest \
-        -m sglang.launch_server --model-path hunyuan/huanyuan_7B --tp 4 --trust-remote-code --host 0.0.0.0 --port 30000
-    ```
-
-## Citation
+### Citing Hunyuan-MT
 
 ```bibtex
 @misc{hunyuan_mt,
@@ -447,4 +206,4 @@ Deploy Hunyuan-MT models using: **TensorRT-LLM**, **vLLM**, or **SGLang**.
 
 ## Contact Us
 
-For questions or feedback, please contact our open-source team via email: `hunyuan_opensource@tencent.com`.
+For inquiries or feedback, please contact the open-source team or email us at  [hunyuan\_opensource@tencent.com](mailto:hunyuan_opensource@tencent.com).

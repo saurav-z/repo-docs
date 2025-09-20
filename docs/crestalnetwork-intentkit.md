@@ -1,116 +1,92 @@
-# IntentKit: Build Autonomous AI Agents with Ease
+# IntentKit: Build Intelligent AI Agents for the Web3 World
 
-**Empower your projects with intelligent, autonomous agents capable of interacting with blockchains, social media, and more using IntentKit.** ([View on GitHub](https://github.com/crestalnetwork/intentkit))
+**Empower your projects with autonomous AI agents capable of blockchain interaction, social media management, and custom skill integration.**
 
-<div align="center">
-  <img src="docs/images/intentkit_banner.png" alt="IntentKit by Crestal" width="100%" />
-</div>
-<br>
+[<img src="docs/images/intentkit_banner.png" alt="IntentKit by Crestal" width="100%">](https://github.com/crestalnetwork/intentkit)
 
-IntentKit is an open-source framework designed to simplify the creation and management of AI agents. These agents can perform complex tasks autonomously, including interacting with blockchains, managing social media, and leveraging custom skills.
+IntentKit is a powerful, open-source framework designed for building and managing AI agents. These agents can perform a wide range of tasks, from interacting with EVM-compatible blockchains to managing your social media presence, and integrating with custom-built skills. Leverage IntentKit to automate complex workflows and create intelligent applications.
 
-## Key Features
+## Key Features of IntentKit
 
-*   🤖 **Multiple Agent Support:** Manage and orchestrate multiple AI agents.
-*   🔄 **Autonomous Agent Management:** Effortlessly oversee the lifecycle and actions of your agents.
-*   🔗 **Blockchain Integration:** Interact with EVM-compatible blockchains.
-*   🐦 **Social Media Integration:** Connect with platforms like Twitter and Telegram.
-*   🛠️ **Extensible Skill System:** Easily add custom skills to extend agent capabilities using LangChain tools.
-*   🔌 **MCP (WIP):** (Mention of future feature)
+*   🤖 **Multiple Agent Support:** Manage and deploy multiple AI agents simultaneously.
+*   🔄 **Autonomous Agent Management:** Orchestrate and control your agents' behavior.
+*   🔗 **Blockchain Integration:** Seamlessly interact with EVM-compatible blockchains.
+*   🐦 **Social Media Integration:** Connect and manage your presence on platforms like Twitter and Telegram.
+*   🛠️ **Extensible Skill System:** Easily add new skills and functionalities to your agents.
+*   🔌 **MCP (WIP):**  [Awaiting clarification/expansion on this feature.]
 
-## Package Manager Migration Warning
+## Architecture Overview
 
-**Important:** You must delete the `.venv` folder and run `uv sync` to create a new virtual environment after migrating to `uv` from poetry.
+[Include a simplified version of the provided architecture diagram here, or a text description if a visual is not possible.]
+
+IntentKit utilizes a modular architecture built around a core agent system, powered by LangGraph. This allows agents to process various inputs, utilize different skills, and interact with external services. Detailed architecture information can be found in the [Architecture](docs/architecture.md) section.
+
+## Getting Started
+
+### Package Manager Migration Warning
+
+Due to recent changes, you must delete the `.venv` folder and run `uv sync` to create a new virtual environment. This is a one-time requirement.
 
 ```bash
 rm -rf .venv
 uv sync
 ```
 
-## Architecture Overview
+### Development Setup
 
-```
-                                                                                    
-                                 Entrypoints                                        
-                       │                             │                              
-                       │   Twitter/Telegram & more   │                              
-                       └──────────────┬──────────────┘                              
-                                      │                                             
-  Storage:  ────┐                     │                      ┌──── Skills:          
-                │                     │                      │                      
-  Agent Config  │     ┌───────────────▼────────────────┐     │  Chain Integration   
-                │     │                                │     │                      
-  Credentials   │     │                                │     │  Wallet Management   
-                │     │           The Agent            │     │                      
-  Personality   │     │                                │     │  On-Chain Actions    
-                │     │                                │     │                      
-  Memory        │     │      Powered by LangGraph      │     │  Internet Search     
-                │     │                                │     │                      
-  Skill State   │     └────────────────────────────────┘     │  Image Processing    
-            ────┘                                            └────                  
-                                                                                    
-                                                                More and More...    
-                         ┌──────────────────────────┐                               
-                         │                          │                               
-                         │  Agent Config & Memory   │                               
-                         │                          │                               
-                         └──────────────────────────┘                               
-                                                                                    
-```
+Get up and running quickly with the detailed instructions in our [Development Guide](DEVELOPMENT.md).
 
-For a more detailed understanding, explore the [Architecture](docs/architecture.md) documentation.
+### Comprehensive Documentation
+
+Explore all the features and functionality of IntentKit with our in-depth [Documentation](docs/).
 
 ## Project Structure
 
-*   **[intentkit/](intentkit/)**: Core IntentKit package.
-    *   [abstracts/](intentkit/abstracts/): Abstract classes and interfaces.
-    *   [clients/](intentkit/clients/): Clients for external services.
-    *   [config/](intentkit/config/): System-level configurations.
-    *   [core/](intentkit/core/): Core agent system, powered by LangGraph.
-    *   [models/](intentkit/models/): Entity models using Pydantic and SQLAlchemy.
-    *   [skills/](intentkit/skills/): Extensible skills system.
-    *   [utils/](intentkit/utils/): Utility functions.
+Understand the organization of the IntentKit project to easily navigate the codebase:
 
-*   **[app/](app/)**: IntentKit app (API server, runner, and scheduler).
-    *   [admin/](app/admin/): Admin APIs, agent generators, and related functionality.
-    *   [entrypoints/](app/entrypoints/): Entrypoints for agent interaction.
-    *   [services/](app/services/): Service implementations (Telegram, Twitter, etc.).
-    *   [api.py](app/api.py): REST API server.
-    *   [autonomous.py](app/autonomous.py): Autonomous agent runner.
-    *   [checker.py](app/checker.py): Health and credit checking logic.
-    *   [readonly.py](app/readonly.py): Readonly entrypoint.
-    *   [scheduler.py](app/scheduler.py): Background task scheduler.
-    *   [singleton.py](app/singleton.py): Singleton agent manager.
-    *   [telegram.py](app/telegram.py): Telegram integration.
-    *   [twitter.py](app/twitter.py): Twitter integration.
+*   **[intentkit/](intentkit/)**: The IntentKit package (published as a pip package)
+    *   [abstracts/](intentkit/abstracts/): Abstract classes and interfaces for core and skills
+    *   [clients/](intentkit/clients/): Clients for external services
+    *   [config/](intentkit/config/): System level configurations
+    *   [core/](intentkit/core/): Core agent system, driven by LangGraph
+    *   [models/](intentkit/models/): Entity models using Pydantic and SQLAlchemy
+    *   [skills/](intentkit/skills/): Extensible skills system, based on LangChain tools
+    *   [utils/](intentkit/utils/): Utility functions
 
-*   [docs/](docs/): Documentation.
-*   [scripts/](scripts/): Operation and temporary scripts.
+*   **[app/](app/)**: The IntentKit app (API server, autonomous runner, and background scheduler)
+    *   [admin/](app/admin/): Admin APIs, agent generators, and related functionality
+    *   [entrypoints/](app/entrypoints/): Entrypoints for interacting with agents (web, Telegram, Twitter, etc.)
+    *   [services/](app/services/): Service implementations for Telegram, Twitter, etc.
+    *   [api.py](app/api.py): REST API server
+    *   [autonomous.py](app/autonomous.py): Autonomous agent runner
+    *   [checker.py](app/checker.py): Health and credit checking logic
+    *   [readonly.py](app/readonly.py): Readonly entrypoint
+    *   [scheduler.py](app/scheduler.py): Background task scheduler
+    *   [singleton.py](app/singleton.py): Singleton agent manager
+    *   [telegram.py](app/telegram.py): Telegram integration
+    *   [twitter.py](app/twitter.py): Twitter integration
+
+*   [docs/](docs/): Documentation
+*   [scripts/](scripts/): Operation and temporary scripts for management and migrations
 
 ## Agent API
 
-IntentKit provides a comprehensive REST API for programmatic access to your agents.
+**Interact with your agents programmatically through our comprehensive REST API.** Build custom applications and integrate with existing systems.
 
-**Explore the API:** [Agent API Documentation](docs/agent_api.md)
+**Explore the Agent API:** [Agent API Documentation](docs/agent_api.md)
 
-## Development
+## Contribute
 
-**Get Started:** Read the [Development Guide](DEVELOPMENT.md) to set up your environment.
-
-**Comprehensive Documentation:** Explore the [Documentation](docs/) for detailed information.
-
-## Contributing
-
-We welcome contributions! Please review the [Contributing Guidelines](CONTRIBUTING.md) before submitting pull requests.
+**We welcome contributions!**  Review our [Contributing Guidelines](CONTRIBUTING.md) to get started.
 
 ### Contribute Skills
 
-1.  Check the [Wishlist](docs/contributing/wishlist.md) for active skill requests.
-2.  Follow the [Skill Development Guide](docs/contributing/skills.md) for detailed instructions.
+*   Check the [Wishlist](docs/contributing/wishlist.md) for active requests.
+*   Review the [Skill Development Guide](docs/contributing/skills.md) for guidance.
 
 ### Developer Community
 
-Join our [Discord](https://discord.com/invite/crestal) and apply for an intentkit dev role to engage with the development team.
+Join our developer community on [Discord](https://discord.com/invite/crestal) and request the "intentkit dev" role to engage in discussions and support.
 
 ## License
 

@@ -2,7 +2,7 @@
 layout: default
 title: 最新IPTV直播源|每日更新直播源|免费电视直播源|Github开源项目
 description: 本项目免费提供最新开源的IPTV直播源,每6小时自动更新。收录国内外数千个高清直播频道源,包括央视、卫视、港澳台、海外频道。完全免费无广告,提供M3U/TXT格式,支持IPv4/IPv6双栈访问,支持EPG节目单及台标,可用于所有苹果、安卓4.0+系统的电视盒子、手机、和任何电脑等设备。
-keywords: IPTV,直播源,IPTV直播源,直播电视,电视直播,CCTV,全套卫视,全套央视,iptv,iptv直播源,ipv4直播源,IPv6直播源,免费直播源,m3u8直播源,港澳台,海外,国内,直播电视app,livetv.izbds.com,live.izbds.com,live.zbds.top,zbds.org
+keywords: IPTV,直播源,IPTV直播源,直播电视,电视直播,CCTV,全套卫视,全套央视,iptv,iptv直播源,ipv4直播源,IPv6直播源,免费直播源,m3u8直播源,港澳台,海外,国内,直播电视app
 permalink: /
 hide_edgeone: true
 ---
@@ -12,7 +12,7 @@ hide_edgeone: true
 
 <h2>🔄永久免费 完全开源 不含广告 直播源支持IPv4/IPv6双栈访问🔄</h2>
 
-<p>本项目免费提供最新开源的IPTV直播源,每6小时自动更新。收录国内外数千个高清直播频道源,包括央视、卫视、港澳台、海外频道。完全免费无广告,提供M3U/TXT格式,支持IPv4/IPv6双栈访问,支持EPG节目单及台标,可用于所有苹果、安卓4.0+系统的电视盒子、手机、和任何电脑等设备，支持各种播放器。<br><br /><span style="color: #e03e2d;"><strong>请注意:</strong></span>直播源全部来源于网络公开资源，本项目不存储任何直播源媒体的内容，所有直播源均由第三方提供，本项目不对其内容负责，不保证直播源的可用性、稳定性和合法性。为维持网站开销，页面上有些自动广告链接，上面有标注，请自行甄别。</p>
+<span style="color: #e03e2d;"><strong>请注意：</strong></span>直播源全部来源于网络公开资源，本项目不存储任何直播源媒体的内容，所有直播源均由第三方提供，本项目不对其内容负责，不保证直播源的可用性、稳定性和合法性。为维持网站开销，页面上有些自动广告链接，上面有标注，请自行甄别。
 
 <div class="badges-container">
     <img src="https://img.shields.io/github/stars/vbskycn/iptv?style=flat-square" alt="GitHub stars" />
@@ -26,7 +26,7 @@ hide_edgeone: true
 
 ---
 
-> 如不愿折腾开源项目，推荐直接下载第三方开发的软件 **直播电视**APP 使用，手机电视盒子都兼容，没有广告，完全免费。
+> 如不愿折腾开源项目，可以下载第三方开发的软件 **直播电视**APP 使用，手机电视盒子都兼容，没有广告，完全免费。
 >
 > 直播电视APP 下载地址：[https://izbds.com](https://izbds.com/aztv/)   [野草助手](https://www.yecao.net/download/)安装码：**0024**
 >
@@ -41,7 +41,7 @@ hide_edgeone: true
 
 <p><strong>IPTV4直播源</strong>由部署在服务器上的程序自动扫描验证，确保<strong>直播源</strong>的时效性和稳定性。</p>
 
-请使用国内站访问:[https://zbds.org](https://zbds.org)<!-- UPDATE_TIME_IPTV4 -->本次更新时间: 2025-09-19 12:27:13<!-- END_UPDATE_TIME_IPTV4 -->
+请使用国内站访问:[https://zbds.org/](https://zbds.org/)  <!-- UPDATE_TIME_IPTV4 -->本次更新时间: 2025-09-20 12:26:34<!-- END_UPDATE_TIME_IPTV4 -->
 
 <table>
   <colgroup>
@@ -82,7 +82,7 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 
 <p><strong>IPTV6直播源</strong>专为IPv6网络优化，由部署在服务器上的程序自动扫描验证，确保<strong>直播源</strong>的时效和稳定</p>
 
-请使用国内站访问:[https://zbds.org](https://zbds.org)<!-- UPDATE_TIME_IPTV6 -->本次更新时间: 2025-09-19 12:27:13<!-- END_UPDATE_TIME_IPTV6 -->
+请使用国内站访问:[https://zbds.org/](https://zbds.org/)  <!-- UPDATE_TIME_IPTV6 -->本次更新时间: 2025-09-20 12:26:34<!-- END_UPDATE_TIME_IPTV6 -->
 
 **近期由于不可力抗原因，大部分ipv6源都关门了，大玩家各玩各的。造成网友们不能一网通吃，请大家静待花开吧！！如有开门的大玩家，本仓库第一时间更新上来给大家分享**
 
@@ -125,7 +125,7 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 
 <h2>💽DEMO</h2>
 
-![IPTV直播源演示截图 - 展示直播源列表和播放界面](assets/demo.png "IPTV直播源演示")
+<p><img src="assets/demo.png" alt="IPTV直播源演示截图 - 展示直播源列表和播放界面" title="IPTV直播源演示" loading="lazy" decoding="async" /></p>
 
 
 
@@ -194,7 +194,7 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 
 <h2>🎁 欢迎请我喝杯饮料</h2>
 
-![微信赞赏码 - 支持项目维护者](assets/wxds.png "微信赞赏码")
+<p><img src="assets/wxds.png" alt="微信赞赏码 - 支持项目维护者" title="微信赞赏码" loading="lazy" decoding="async" /></p>
 
 
 

@@ -1,39 +1,28 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif" alt="HelloGitHub Logo"/>
-  <br>
-  <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
+  <img src="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/readme.gif"/>
+  <br>中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
 </p>
-
-<!-- Improved README - SEO Optimized -->
 
 # HelloGitHub: Discover the Best Open Source Projects on GitHub
 
-**HelloGitHub is your go-to resource for finding interesting and beginner-friendly open-source projects on GitHub, published monthly to help you discover the joy of open source.**  [Explore the original repository](https://github.com/521xueweihan/HelloGitHub).
+**HelloGitHub is your gateway to the exciting world of open-source, curating the most interesting and beginner-friendly projects on GitHub.** Explore amazing projects, learn new skills, and discover the power of open source with HelloGitHub!
 
-<p align="center">
-  <a href="https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
-  <a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
-  <a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
-  <a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
-    <a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
-</p>
-
+[![Featured｜HelloGitHub](https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=d4aae58ddbf34f0799bf3e8f965e0d70&claim_uid=8MKvZoxaWt)](https://hellogithub.com/repository/d4aae58ddbf34f0799bf3e8f965e0d70)
+<br>
+<a href="https://github.com/521xueweihan/HelloGitHub/stargazers"><img src="https://img.shields.io/github/stars/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub stars"></a>
+<a href="https://github.com/521xueweihan/HelloGitHub/issues"><img src="https://img.shields.io/github/issues/521xueweihan/HelloGitHub.svg?style=popout-square" alt="GitHub issues"></a>
+<a href="https://weibo.com/hellogithub"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA-Weibo-red.svg?style=popout-square" alt="Sina Weibo"></a>
+<a href="https://raw.githubusercontent.com/521xueweihan/img_logo/master/logo/weixin.png"><img src="https://img.shields.io/badge/Talk-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen.svg?style=popout-square" alt="WeiXin"></a>
 
 ## Key Features
 
-*   **Curated Open Source Projects:** Discover hand-picked, interesting, and beginner-friendly open-source projects.
-*   **Monthly Updates:** Stay up-to-date with new projects released monthly (on the 28th).
-*   **Diverse Content:** Explore a range of projects including:
-    *   Interesting Open Source Projects
-    *   Open Source Books
-    *   Practical Projects
-    *   Enterprise-Level Projects
-*   **Learn and Grow:** Quickly experience the charm of open source and find projects to get started with.
-*   **Easy Access:** Read the latest issues on the [official website](https://hellogithub.com/) or the [HelloGitHub WeChat Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
+*   **Curated Projects:** Discover hand-picked, interesting, and easy-to-learn open-source projects.
+*   **Monthly Updates:** Stay up-to-date with new project recommendations, released on the 28th of each month.
+*   **Diverse Content:** Explore a variety of project types, including beginner-friendly projects, open-source books, practical projects, and enterprise-level projects.
+*   **Learn & Grow:** Quickly grasp the appeal of open source and find projects to boost your learning journey.
+*   **[Official Website](https://hellogithub.com/)**: Get a better reading experience on the website or [HelloGitHub Official Account](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/weixin.png).
 
-## Content Archives
-
-Browse past issues of HelloGitHub for a wealth of open-source project recommendations.
+## Contents
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
@@ -46,13 +35,9 @@ Browse past issues of HelloGitHub for a wealth of open-source project recommenda
 | [Issue 85](/content/HelloGitHub85.md) | [Issue 84](/content/HelloGitHub84.md) | [Issue 83](/content/HelloGitHub83.md) | [Issue 82](/content/HelloGitHub82.md) | [Issue 81](/content/HelloGitHub81.md) |
 | [Issue 80](/content/HelloGitHub80.md) | [Issue 79](/content/HelloGitHub79.md) | [Issue 78](/content/HelloGitHub78.md) | [Issue 77](/content/HelloGitHub77.md) | [Issue 76](/content/HelloGitHub76.md) |
 
-## Contribute
-
-Recommend projects or become a [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md) to HelloGitHub.
+[Recommend or self-recommend](https://hellogithub.com/periodical) projects to become a **HelloGitHub** [contributor](https://github.com/521xueweihan/HelloGitHub/blob/master/content/contributors.md).
 
 ## Sponsors
-
-Thank you to our sponsors for supporting HelloGitHub!
 
 <table>
   <thead>
@@ -88,7 +73,10 @@ Thank you to our sponsors for supporting HelloGitHub!
   </thead>
 </table>
 
-
 ## License
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  Contact us at <a href="mailto:595666367@qq.com">595666367@qq.com</a>.
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width: 0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.  [Contact me](mailto:595666367@qq.com)
+
+## Contributing
+
+Want to contribute?  See the [HelloGitHub repo](https://github.com/521xueweihan/HelloGitHub) to discover more and potentially add your own project!

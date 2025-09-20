@@ -1,37 +1,56 @@
-# Cloudflare Speed DNS: Find and Use the Fastest Cloudflare IPs
+# Optimize Your Cloudflare CDN Performance with cf-speed-dns
 
-**Optimize your Cloudflare performance with cf-speed-dns, automatically finding and updating your DNS settings with the fastest Cloudflare IP addresses.**
+**Tired of slow website loading speeds?**  This tool helps you find and automatically use the fastest Cloudflare IP addresses for optimal performance.  (See the original repository [here](https://github.com/ZhiXuanWang/cf-speed-dns).)
 
-This tool helps you identify the optimal Cloudflare IP addresses for your needs, improving website speed and performance.  You can find the original repository here: [https://github.com/ZhiXuanWang/cf-speed-dns](https://github.com/ZhiXuanWang/cf-speed-dns).
+## Key Features:
 
-## Key Features
+*   **Real-time Cloudflare IP Optimization:** Automatically identifies and utilizes the fastest Cloudflare IPs.
+*   **Optimized IP Lists:**  Provides updated lists of the best-performing IPs, including top-performing IPs and top 10 lists.
+*   **DNSPOD Integration:**  Integrates with DNSPOD to automatically update your DNS records with the optimized IP addresses. (Requires configuration, see below)
+*   **DNSCF Integration:**  Integrates with Cloudflare to automatically update your DNS records with the optimized IP addresses. (Requires configuration, see below)
+*   **PUSHPLUS Notifications:**  Receive notifications via PUSHPLUS to stay informed about IP updates and performance.
+*   **Easy-to-Use API:** Simple API endpoints for accessing the top-performing IPs.
 
-*   **Real-time Cloudflare IP Selection:** Automatically identifies and updates the fastest Cloudflare IPs.
-*   **Optimized IP Lists:** Provides access to lists of the best-performing IPs:
-    *   [https://ip.164746.xyz](https://ip.164746.xyz) - Real-time updated list of optimized IPs.
-    *   [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html) - Top interface (default).
-    *   [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html) - Top 10 interface.
-*   **DNS Record Updates:** Supports automatic DNS record updates via DNSPOD and DNSCF.  This is done by forking this project and configuring GitHub Actions.
-    *   **DNSPOD Integration:** Configure with DOMAIN, SUB\_DOMAIN, SECRETID, SECRETKEY, and (optional) PUSHPLUS\_TOKEN for notifications.
-    *   **DNSCF Integration:** Configure with CF\_API\_TOKEN, CF\_ZONE\_ID, CF\_DNS\_NAME, and (optional) PUSHPLUS\_TOKEN for notifications.
-*   **PUSHPLUS Notifications:** Integrates with PUSHPLUS for customizable notifications ([https://www.pushplus.plus/push1.html](https://www.pushplus.plus/push1.html)).
+## Configuration for DNS Updates (Requires Forking the Project):
 
-## API Endpoint
+To leverage the automatic DNS update features, you'll need to fork this project and configure the following secrets in your GitHub Actions settings:
 
-```javascript
+*   **DNSPOD Integration (Choose one):**
+    *   `DOMAIN`: Your domain name (e.g., `164746.xyz`).
+    *   `SUB_DOMAIN`: Your subdomain (e.g., `dns`).
+    *   `SECRETID`: Your DNSPOD Secret ID.
+    *   `SECRETKEY`: Your DNSPOD Secret Key.
+    *   `PUSHPLUS_TOKEN`: Your PUSHPLUS notification token.
+*   **Cloudflare DNS Integration (Choose one):**
+    *   `CF_API_TOKEN`: Your Cloudflare API Token.
+    *   `CF_ZONE_ID`: Your Cloudflare Zone ID.
+    *   `CF_DNS_NAME`: Your Cloudflare DNS record name (e.g., `dns.164746.xyz`).
+    *   `PUSHPLUS_TOKEN`: Your PUSHPLUS notification token.
+
+## API Endpoints:
+
+*   **Top IPs (Default):** `https://ip.164746.xyz/ipTop.html`
+*   **Top 10 IPs:** `https://ip.164746.xyz/ipTop10.html`
+
+**Example API Request:**
+
+```bash
 curl 'https://ip.164746.xyz/ipTop.html'
 ```
 
-## API Response Example
+**Example API Response:**
 
-```javascript
+```
 104.16.204.6,104.18.103.125
 ```
 
 ## Acknowledgements
 
+This project utilizes code and inspiration from:
+
 *   [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
 *   [ddgth](https://github.com/ddgth/cf2dns)
 
-## Powered By
+## Advertising
+
 [![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")

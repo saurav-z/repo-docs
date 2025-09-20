@@ -1,111 +1,143 @@
 <div align="center">
 
-<img src="https://banes-lab.com/assets/images/banes_lab/700px_Main_Animated.gif" width="70" alt="Animated GIF of a person working on a computer" />
+<img src="https://banes-lab.com/assets/images/banes_lab/700px_Main_Animated.gif" width="70" />
 
-[![Disciplined AI Software Development Methodology](https://img.shields.io/badge/Disciplined%20AI%20Software%20Development-Methodology-blue)](https://github.com/Varietyz/Disciplined-AI-Software-Development)
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+<a href="https://github.com/Varietyz/Disciplined-AI-Software-Development">Disciplined AI Software Development Methodology</a> © 2025 by <a href="https://www.linkedin.com/in/jay-baleine/">Jay Baleine</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" width="16" height="16"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" width="16" height="16"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" width="16" height="16">
 
 </div>
 
 ---
 
-# Disciplined AI Software Development: A Structured Approach
+# Disciplined AI Software Development: Achieve Robust Code with AI Collaboration
 
-**Tame AI-driven development chaos and build robust software with this structured methodology.** This approach combats common AI development pitfalls, like code bloat and architectural drift, through systematic constraints and collaborative planning.
+This methodology offers a structured approach to AI-driven software development, designed to combat common pitfalls like code bloat and architectural drift.  [**Explore the original repository here**](https://github.com/Varietyz/Disciplined-AI-Software-Development).
 
-## Key Features
+**Key Features:**
 
-*   **Structured Planning:** Guides you to define scope, dependencies, and tasks collaboratively with the AI.
-*   **Behavioral Consistency:** Enforces consistent coding patterns through AI personas and custom instructions.
-*   **Context Management:** Utilizes file size limits to focus AI on manageable tasks and improve context retention.
-*   **Data-Driven Iteration:** Leverages benchmarking and performance data for informed optimization decisions.
-*   **Modular Design:** Promotes the creation of consistent components, making code easier to maintain and expand.
+*   **Structured Planning:**  Utilizes XML-based methodology and collaborative planning with AI to define scope, components, and dependencies.
+*   **Architectural Consistency:**  Enforces systematic constraints like file size limits (≤150 lines) and dependency boundaries for maintainable code.
+*   **Persona-Driven Collaboration:** Employs a persona framework to maintain consistent collaboration patterns, reducing AI drift.
+*   **Data-Driven Iteration:**  Emphasizes the creation of a benchmarking suite to ensure performance data-driven decisions.
+*   **Empirical Validation:** Replaces subjective assessment with measurable outcomes to validate the code generation quality.
+*   **Automated Quality Assurance:** Employs performance regression detection, architectural principle validation, code duplication auditing, and more.
 
-[**View the Original Repository**](https://github.com/Varietyz/Disciplined-AI-Software-Development)
+## Table of Contents
 
-## The Problem: AI Development Challenges
+*   [The Context Problem](#the-context-problem)
+*   [How This Works](#how-this-works)
+*   [The Four Stages](#the-four-stages)
+    *   [Stage 1: AI Behavioral Configuration](#stage-1-ai-behavioral-configuration)
+    *   [Stage 2: Collaborative Planning](#stage-2-collaborative-planning)
+    *   [Stage 3: Systematic Implementation](#stage-3-systematic-implementation)
+    *   [Stage 4: Data-Driven Iteration](#stage-4-data-driven-iteration)
+*   [Why This Approach Works](#why-this-approach-works)
+*   [Example Projects](#example-projects)
+*   [Implementation Steps](#implementation-steps)
+    *   [Setup](#setup)
+    *   [Execution](#execution)
+    *   [Quality Assurance](#quality-assurance)
+*   [Project State Extraction](#project-state-extraction)
+*   [What to Expect](#what-to-expect)
+*   [LLM Models - Q&A Documentation](#llm-models---qanda-documentation)
+*   [Learning the Ropes](#learning-the-ropes)
+    *   [Getting Started](#getting-started)
+    *   [Experimental Modification](#experimental-modification)
+*   [Frequently Asked Questions](#frequently-asked-questions)
+    *   [Origin & Development](#origin--development)
+    *   [Personal Practice](#personal-practice)
+    *   [AI Development Journey](#ai-development-journey)
+    *   [Methodology Specifics](#methodology-specifics)
+    *   [Practical Implementation](#practical-implementation)
+*   [Workflow Visualization](#workflow-visualization)
 
-AI systems often struggle with complex, multi-faceted software projects, leading to:
+## The Context Problem
 
-*   Unstructured, monolithic functions.
-*   Code duplication across components.
-*   Inconsistent architecture and design.
-*   Contextual dilution and drift.
-*   Prolonged debugging time.
+AI systems often struggle with complex software projects, leading to:
 
-## The Solution: A Four-Stage Methodology
+*   Functions lacking structure
+*   Code duplication
+*   Architectural inconsistencies
+*   Context dilution
+*   Behavioral degradation
+*   Increased debugging time
 
-This methodology uses four stages with systematic constraints, behavioral consistency enforcement, and validation checkpoints. Each stage builds on empirical data rather than assumptions.
+## How This Works
 
-**Planning saves debugging time.** Planning thoroughly upfront typically prevents days of fixing architectural issues later.
+The methodology employs four stages:
+
+1.  **AI Behavioral Configuration:** Sets constraints and establishes consistency.
+2.  **Collaborative Planning:**  Structures the project plan with AI.
+3.  **Systematic Implementation:**  Follows file size and other constraints to ensure focused development.
+4.  **Data-Driven Iteration:** Utilizes benchmarking data for informed optimization.
+
+**Planning saves debugging time.**
+
+## The Four Stages
 
 ### Stage 1: AI Behavioral Configuration
 
-Establish behavioral consistency and constraint enforcement:
+Enforce systematic behavioral consistency and constraint enforcement:
 
-1.  **Configure Custom Instructions:**
-    *   Set up [AI-PREFERENCES.XML](prompt_formats/software_development/XML/AI-PREFERENCES.XML) as custom instructions to define constraints and flagging uncertainty with `⚠️` indicators.
-
+1.  **Configure AI Custom Instructions:**
+    *   Set up [AI-PREFERENCES.XML](prompt_formats/software_development/XML/AI-PREFERENCES.XML) as custom instructions to enforce constraints and flag uncertainty.
 2.  **RECOMMENDED: Load Persona Framework:**
-    *   Upload [CORE-PERSONA-FRAMEWORK.json](persona/JSON/CORE-PERSONA-FRAMEWORK.json) and select your persona:
-    *   **[GUIDE-PERSONA.json](persona/JSON/persona_plugins/GUIDE-PERSONA.json)** - Methodology enforcement specialist.
-    *   **[TECDOC-PERSONA.json](persona/JSON/persona_plugins/TECDOC-PERSONA.json)** - Technical documentation specialist.
-    *   **[R&D-PERSONA.json](persona/JSON/persona_plugins/R&D-PERSONA.json)** - Research scientist with absolute code quality standards.
-    *   **[MURMATE-PERSONA.json](persona/JSON/persona_plugins/MURMATE-PERSONA.json)** - Visual systems specialist.
-    *   Create custom personas using [CREATE-PERSONA-PLUGIN.json](persona/JSON/CREATE-PERSONA-PLUGIN.json).
-
+    *   Upload [CORE-PERSONA-FRAMEWORK.json](persona/JSON/CORE-PERSONA-FRAMEWORK.json) and select a domain-appropriate persona:
+        *   [GUIDE-PERSONA.json](persona/JSON/persona_plugins/GUIDE-PERSONA.json) - Methodology enforcement
+        *   [TECDOC-PERSONA.json](persona/JSON/persona_plugins/TECDOC-PERSONA.json) - Technical documentation
+        *   [R&D-PERSONA.json](persona/JSON/persona_plugins/R&D-PERSONA.json) - Code quality
+        *   [MURMATE-PERSONA.json](persona/JSON/persona_plugins/MURMATE-PERSONA.json) - Visual systems
+        *   Create project-specific persona using [CREATE-PERSONA-PLUGIN.json](persona/JSON/CREATE-PERSONA-PLUGIN.json)
 3.  **RECOMMENDED: Activate Persona:**
-    *   Issue the command: "Simulate Persona"
+    *   Issue command: "Simulate Persona"
 
 ### Stage 2: Collaborative Planning
 
-Collaborate with your AI using [METHODOLOGY.XML](prompt_formats/software_development/XML/METHODOLOGY.XML) to:
+Share [METHODOLOGY.XML](prompt_formats/software_development/XML/METHODOLOGY.XML) with the AI:
 
 1.  Define project scope and completion criteria.
-2.  Identify components and their dependencies.
-3.  Structure project phases logically.
-4.  Generate tasks with measurable checkpoints.
+2.  Identify components and dependencies.
+3.  Structure phases logically.
+4.  Generate systematic tasks with checkpoints.
 
-    *Output: A development plan with dependency chains and modular boundaries.*
+Output: A development plan with modular boundaries and dependency chains.
 
 ### Stage 3: Systematic Implementation
 
-Work phase by phase, focusing on individual components: "Can you implement \[specific component]?"
+Work phase by phase, component by component, using the following flow:
 
-*   **File Size Constraint:** Keep file sizes ≤150 lines to:
-    *   Maintain a small context window for processing.
-    *   Foster focused implementation.
-    *   Simplify sharing and debugging.
+*   "Can you implement \[specific component]?"
+*   AI processes
+*   Validate
+*   Benchmark
+*   Continue
 
-*   **Implementation Flow:**
-    *   Request Component → AI Processes → Validate → Benchmark → Continue
+**File size should stay ≤150 lines.** This enforces:
+
+*   Smaller context windows
+*   Focused implementation
+*   Easier sharing and debugging
 
 ### Stage 4: Data-Driven Iteration
 
-Use a benchmarking suite (built in Stage 1) to:
+Use the benchmarking suite (built first) to provide performance data for AI-driven optimization, prioritizing empirical data over assumptions.
 
-*   Gather performance data throughout development.
-*   Feed data back to the AI to make measured optimization decisions.
+## Why This Approach Works
 
-## Why This Methodology Works
-
-*   **Focused Requests:** AI excels at answering specific questions.
-*   **Context Control:** Small files limit the scope and scope drift.
-*   **Behavioral Control:** Personas enforce consistent collaboration.
-*   **Empirical Validation:** Performance data replaces guesswork.
-*   **Systematic Constraints:** Architectural, size, and dependency checks maintain consistency.
+*   **Focused Questions:** AI handles specific requests more reliably.
+*   **Context Management:** Small files prevent cognitive overload.
+*   **Behavioral Enforcement:** Persona system maintains consistency.
+*   **Empirical Validation:** Performance data guides optimization.
+*   **Systematic Constraints:** Architectural checkpoints and size limits force consistent behavior.
 
 ## Example Projects
 
-*   **[Discord Bot Template](https://github.com/Varietyz/discord-js-bot-template)** - Production-ready bot foundation with plugin architecture, security, API management, and comprehensive testing. ([View Project Structure](example_project_structures/DISCORDJS_TEMPLATE_PROJECT.md))
-*   **[PhiCode Runtime](https://github.com/Varietyz/phicode-runtime)** - Programming language runtime engine. ([View Project Structure](example_project_structures/PHICODE_RUNTIME_PROJECT.md))
-*   **[PhiPipe](https://github.com/Varietyz/PhiPipe)** - CI/CD regression detection system. ([View Project Structure](example_project_structures/PHIPIPE_PROJECT.md))
-
-*Compare the methodology principles to the codebase structure to understand the approach.*
+*   **[Discord Bot Template](https://github.com/Varietyz/discord-js-bot-template)**: Production-ready bot with a plugin architecture, security, API management, and testing. ([View Project Structure](example_project_structures/DISCORDJS_TEMPLATE_PROJECT.md))
+*   **[PhiCode Runtime](https://github.com/Varietyz/phicode-runtime)**: Programming language runtime engine with transpilation, caching, and security validation. ([View Project Structure](example_project_structures/PHICODE_RUNTIME_PROJECT.md))
+*   **[PhiPipe](https://github.com/Varietyz/PhiPipe)**: CI/CD regression detection system with statistical analysis and GitHub integration. ([View Project Structure](example_project_structures/PHIPIPE_PROJECT.md))
 
 ## Implementation Steps
 
-*Note: .xml format is a guideline; you should experiment with different formats (e.g., .json, .yaml, .md) for different use cases.*
+*Note: .xml format is a guideline; experiment with different formats (e.g., .json, .yaml, .md) for different use cases.*
 *Each format emphasizes different domains. For example, .md prompts are effective for documentation: because the AI recognizes the structure, it tends to continue it naturally.*
 *.xml and .json provide a code-like structure. This tends to strengthen code generation while reducing unnecessary jargon, resulting in more structured outputs.*
 *Additionally, I've included some experimental prompts to illustrate differences when using less common formats or unusual practices.*
@@ -114,18 +146,18 @@ Use a benchmarking suite (built in Stage 1) to:
 ### Setup
 
 1.  Configure AI with [AI-PREFERENCES.XML](prompt_formats/software_development/XML/AI-PREFERENCES.XML) as custom instructions.
-2.  RECOMMENDED: Share [CORE-PERSONA-FRAMEWORK.json](persona/JSON/CORE-PERSONA-FRAMEWORK.json) and a selected [PERSONA.json](persona/JSON/persona_plugins). (*Could potentially be placed in custom instructions*)
+2.  RECOMMENDED: Share [CORE-PERSONA-FRAMEWORK.json](persona/JSON/CORE-PERSONA-FRAMEWORK.json) + selected [PERSONA.json](persona/JSON/persona_plugins) (*Could potentially be placed in custom instructions*).
 3.  RECOMMENDED: Issue command: "Simulate Persona".
-4.  Share [METHODOLOGY.XML](prompt_formats/software_development/XML/METHODOLOGY.XML) for planning session.
+4.  Share [METHODOLOGY.XML](prompt_formats/software_development/XML/METHODOLOGY.XML) for the planning session.
 5.  Collaborate on project structure and phases.
 6.  Generate a systematic development plan.
 
 ### Execution
 
-1.  Build the Phase 0 benchmarking infrastructure first.
+1.  Build Phase 0 benchmarking infrastructure first.
 2.  Work through phases sequentially.
 3.  Implement one component per interaction.
-4.  Run benchmarks and share results with the AI.
+4.  Run benchmarks and share results with AI.
 5.  Validate architectural compliance continuously.
 
 ### Quality Assurance
@@ -138,18 +170,20 @@ Use a benchmarking suite (built in Stage 1) to:
 
 ## Project State Extraction
 
-Use the [project extraction tool](scripts/project_extract.py) to generate structured codebase snapshots:
+Use the [project extraction tool](scripts/project_extract.py):
 
 ```bash
 python scripts/project_extract.py
 ```
 
-*   `SEPARATE_FILES = False`: Single [THE_PROJECT.md](scripts/output_example/THE_PROJECT.md) file (recommended for small codebases)
-*   `SEPARATE_FILES = True`: Multiple files per [directory](scripts/output_example/.Project_Extraction) (recommended for large codebases and focused folder work)
-*   `INCLUDE_PATHS`: Directories and files to analyze
-*   `EXCLUDE_PATTERNS`: Skip cache directories, build artifacts, and generated files
+**Configuration Options:**
 
-*Output:*
+*   `SEPARATE_FILES = False`: Single [THE_PROJECT.md](scripts/output_example/THE_PROJECT.md) file (for small codebases)
+*   `SEPARATE_FILES = True`: Multiple files per [directory](scripts/output_example/.Project_Extraction) (for large codebases)
+*   `INCLUDE_PATHS`: Directories and files to analyze
+*   `EXCLUDE_PATTERNS`: Skip cache, build artifacts, and generated files
+
+**Output:**
 
 *   Complete file contents with syntax highlighting
 *   File line counts with architectural warnings (⚠️ for 140-150 lines, ‼️ for >150 lines on code files)
@@ -158,32 +192,33 @@ python scripts/project_extract.py
 
 *[output examples can be found here](scripts/output_example)*
 
-Share project state with the AI, track compliance, and create focused development context.
+Use the tool to share a complete or partial project state with the AI system.
 
 ## What to Expect
 
-*   **AI Behavior:** Reduced architectural drift and context degradation. Persona system maintains consistency.
-*   **Development Flow:** Systematic planning reduces debugging cycles. Focused implementation minimizes feature bloat.
-*   **Code Quality:** Consistent architecture, measurable performance, and maintainable structure.
+*   **AI Behavior:** Reduced architectural drift and context degradation. The persona system maintains consistent behavior across extended sessions. Expect occasional reminders.
+*   **Development Flow:** Systematic planning reduces debugging cycles. Focused implementation minimizes feature bloat. Performance data supports optimization.
+*   **Code Quality:** Architectural consistency, measurable performance, and maintainable structure as projects scale.
 
 ---
 
-## LLM Model Evaluations - [Q&A Documentation](questions_answers/)
+## LLM Models - [Q&A Documentation](questions_answers/)
 
-Explore detailed Q&A for each AI model:
+Explore Q&A for each AI model:
 *[Grok 3](questions_answers/Q-A_GROK_3.md) , [Claude Sonnet 4](questions_answers/Q-A_CLAUDE_SONNET_4.md) , [DeepSeek-V3](questions_answers/Q-A_DEEPSEEK-V3.md) , [Gemini 2.5 Flash](questions_answers/Q-A_GEMINI_2.5_FLASH.md)*
 
-*All models answered the same questions using the methodology documents as file uploads.  This evaluation focuses on understanding the methodology and operational behavior; no code was generated.*  Full results and comparative analysis are available in [Methodology Comprehension Analysis: Model Evaluation](questions_answers/Q-A_COMPREHENSION_ANALYSIS.md).
+All models were asked the **exact same questions** using the methodology documents as file uploads. This evaluation focuses on **methodology understanding and operational behavior**, no code was generated. The Q&A documents capture responses across workflow patterns, tool usage, communication adherence, and collaborative context retention. Full evaluation results and comparative analysis are available in [Methodology Comprehension Analysis: Model Evaluation](questions_answers/Q-A_COMPREHENSION_ANALYSIS.md).
 
-*Coverage includes:*
+*🚩 Note: This analysis does not include any code generation.*
 
-*   Methodology and workflow patterns
-*   Context retention and collaborative interaction
-*   Communication adherence and AI preference compliance
-*   Project initialization and Phase 0 requirements
-*   Tool usage and technology stack compatibility
-*   Quality enforcement and violation handling
-*   User experience across different skill levels
+#### Coverage includes:
+- Methodology understanding and workflow patterns
+- Context retention and collaborative interaction
+- Communication adherence and AI preference compliance
+- Project initialization and Phase 0 requirements
+- Tool usage and technology stack compatibility
+- Quality enforcement and violation handling
+- User experience across different skill levels
 
 ---
 
@@ -218,11 +253,10 @@ Explore detailed Q&A for each AI model:
 *This current document provides human-readable formatting for documentation review. For machine parsing, use the [XML](prompt_formats/software_development/XML/README.XML) format.*
 
 **Ask targeted questions:**
-
-*   "How would Phase 0 apply to [project type]?"
-*   "What does the 150-line constraint mean for [specific component]?"
-*   "How should I structure phases for [project description]?"
-*   "Can you help decompose this project using the methodology?"
+- "How would Phase 0 apply to [project type]?"
+- "What does the 150-line constraint mean for [specific component]?"
+- "How should I structure phases for [project description]?"
+- "Can you help decompose this project using the methodology?"
 
 *This will help foster understanding of how your AI model interprets the guidelines.*
 
@@ -231,10 +265,9 @@ Explore detailed Q&A for each AI model:
 **Create Project-Specific Personas:**
 
 Share [CREATE-PERSONA-PLUGIN.json](persona/JSON/CREATE-PERSONA-PLUGIN.json) with your AI model to generate domain-specific personas from:
-
-*   Project documentation patterns
-*   Codebase architectural philosophies
-*   Domain expert behavioral frameworks
+- Project documentation patterns
+- Codebase architectural philosophies
+- Domain expert behavioral frameworks
 
 *[Read more about creating personas.](persona/README.CREATE-PERSONA.md)*
 
@@ -257,15 +290,13 @@ Share [CREATE-PERSONA-PLUGIN.json](persona/JSON/CREATE-PERSONA-PLUGIN.json) with
 *You can ask the model to analyze the current session and identify violations. Additionally, you want to know which adjustments could be beneficial for further enforcement or to detect ambiguity in the constraints.*
 
 **Collaborative refinement:**
-
 Work with your AI to identify improvements based on your context. Treat constraint changes as experiments and measure their impact on collaboration effectiveness, code quality, and development velocity.
 
 **Progress indicators:**
-
-*   Reduced specific violations over time
-*   Consistent file size compliance without reminders
-*   Sustained AI behavioral adherence through extended sessions
-*   Maintained persona consistency across development phases
+- Reduced specific violations over time
+- Consistent file size compliance without reminders
+- Sustained AI behavioral adherence through extended sessions
+- Maintained persona consistency across development phases
 
 ---
 

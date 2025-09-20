@@ -1,43 +1,31 @@
-# ASV: Benchmark Python Packages Over Time
+# Benchmark Your Python Packages Over Time with Airspeed Velocity (ASV)
 
-**ASV (airspeed velocity) allows you to benchmark Python projects and track performance changes over their lifespan, providing valuable insights for optimization and development.**
+**Airspeed Velocity (ASV) is the essential tool for tracking and analyzing the performance of your Python packages throughout their development lifecycle.**  
 
 [View the original ASV repository on GitHub](https://github.com/airspeed-velocity/asv)
 
-## Key Features
+ASV allows you to comprehensively benchmark your Python projects, providing valuable insights into performance changes over time. This allows you to identify performance regressions and optimize your code for maximum efficiency.
 
-*   **Time-Series Benchmarking:** Track performance metrics over time, revealing trends and regressions.
-*   **Interactive Web Interface:** Visualize benchmark results with an easy-to-use, interactive web frontend.
-*   **Project-Focused:** Designed to benchmark a single project, providing a clear view of its performance evolution.
-*   **Static Webserver Hosting:**  Easily host your benchmark results with a simple static webserver.
-*   **Easy Installation:**  Install ASV from PyPI using `pip install asv`.
-*   **Customizable Benchmarking:**  Create and manage your own suite of benchmarks tailored to your project.
-*   **Example Site:** See ASV in action with this example:  [`numpy-bench <https://pv.github.io/numpy-bench/>`].
+## Key Features of Airspeed Velocity:
 
-##  Why Use ASV?
+*   **Time-Based Benchmarking:** Track performance changes over time, allowing you to pinpoint when regressions occur.
+*   **Interactive Web Frontend:** Visualize benchmark results in a dynamic web interface, accessible via a simple static web server.
+*   **Suite of Benchmarks:** Designed to work with a defined set of benchmarks for a single project.
+*   **Easy to Install:**  Install ASV using pip: `pip install asv`.
+*   **Open Source:**  Licensed under the BSD three-clause license, promoting open development and use.
 
-ASV helps you understand how your Python package's performance changes over time, making it easier to identify and address performance bottlenecks and ensure consistent performance with each release. This is essential for optimizing code and improving user experience.
+## Example Usage & Documentation
 
-## Get Started
+Check out an example ASV site: [https://pv.github.io/numpy-bench/](https://pv.github.io/numpy-bench/)
 
-Install ASV using pip:
+For comprehensive information, explore the full ASV documentation: [https://asv.readthedocs.io/](https://asv.readthedocs.io/)
 
-```bash
-pip install asv
+## Show Your Support
+
+Integrate an "benchmarked by asv" badge into your project's README.md:
+
+```markdown
+[![asv](https://img.shields.io/badge/benchmarked%20by-asv-blue.svg?style=flat)](https://your-url-here/)
 ```
 
-For comprehensive documentation, visit: [ASV Documentation](https://asv.readthedocs.io/)
-
-##  Showcase Your Benchmarks with a Badge!
-
-Add a badge to your project's README to indicate that you are using ASV:
-
-[![asv](https://img.shields.io/badge/benchmarked%20by-asv-blue.svg?style=flat)](https://your-url-here/)
-
-## License
-
-ASV is licensed under the [BSD three-clause license](https://opensource.org/license/BSD-3-Clause).
-
-## Authors
-
-Michael Droettboom, Pauli Virtanen, and the asv Developers
+**Authors:** Michael Droettboom, Pauli Virtanen, asv Developers

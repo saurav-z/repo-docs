@@ -1,5 +1,7 @@
+<!-- Improved & Summarized README with SEO Optimization -->
+
 <div align="center">
-  <img src="https://github.com/InternLM/lmdeploy/assets/36994684/0cf8d00f-e86b-40ba-9b54-dc8f1bc6c8d8" width="600"/>
+  <img src="https://github.com/InternLM/lmdeploy/assets/36994684/0cf8d00f-e86b-40ba-9b54-dc8f1bc6c8d8" width="600" alt="XTuner Logo">
   <br /><br />
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/InternLM/xtuner?style=social)](https://github.com/InternLM/xtuner/stargazers)
@@ -9,82 +11,119 @@
 [![issue resolution](https://img.shields.io/github/issues-closed-raw/InternLM/xtuner)](https://github.com/InternLM/xtuner/issues)
 [![open issues](https://img.shields.io/github/issues-raw/InternLM/xtuner)](https://github.com/InternLM/xtuner/issues)
 
-👋 Join us on
-[![Static Badge](https://img.shields.io/badge/-grey?style=social&logo=wechat&label=WeChat)](https://cdn.vansin.top/internlm/xtuner.jpg)
+👋 Join the XTuner community on: [![Static Badge](https://img.shields.io/badge/-grey?style=social&logo=wechat&label=WeChat)](https://cdn.vansin.top/internlm/xtuner.jpg)
 [![Static Badge](https://img.shields.io/badge/-grey?style=social&logo=twitter&label=Twitter)](https://twitter.com/intern_lm)
 [![Static Badge](https://img.shields.io/badge/-grey?style=social&logo=discord&label=Discord)](https://discord.gg/xa29JuW87d)
 
-🔍 Explore our models on
+🔍 Explore models trained with XTuner on:
 [![Static Badge](https://img.shields.io/badge/-gery?style=social&label=🤗%20Huggingface)](https://huggingface.co/xtuner)
-[![Static Badge](https://img.shields.io/badge/-gery?style=social&label=🤖%20ModelScope)](https://www.modelscope.cn/organization/xtuner)
+[![Static Badge](https://img.shields/badge/-gery?style=social&label=🤖%20ModelScope)](https://www.modelscope.cn/organization/xtuner)
 [![Static Badge](https://img.shields.io/badge/-gery?style=social&label=🧰%20OpenXLab)](https://openxlab.org.cn/usercenter/xtuner)
 [![Static Badge](https://img.shields.io/badge/-gery?style=social&label=🧠%20WiseModel)](https://www.wisemodel.cn/organization/xtuner)
 
 English | [简体中文](README_zh-CN.md)
+
 </div>
 
-## XTuner: Fine-tune LLMs Efficiently with the Next-Generation Training Engine
+## 🚀 **XTuner: The Next-Generation Training Engine for Ultra-Large MoE Models**
 
-XTuner is a powerful and versatile toolkit designed for efficient and scalable fine-tuning of Large Language Models (LLMs), enabling researchers and developers to push the boundaries of AI.  [Visit the original repository](https://github.com/InternLM/xtuner) for more details.
+XTuner empowers researchers and developers to efficiently train and fine-tune massive Mixture-of-Experts (MoE) models, accelerating the path to cutting-edge AI.
 
-## Key Features
+## **Key Features**
 
-*   **Dropless Training:**  Train massive MoE models (up to 1T parameters) efficiently.
-    *   Scalable without complex expert parallelism.
-    *   Optimized parallelism for efficient training.
-*   **Long Sequence Support:** Train on 64k sequence lengths for 200B MoE models.
-    *   Memory-efficient design for extended sequence handling.
-    *   Full DeepSpeed Ulysses support.
-    *   Maintains stability during training.
+*   **Dropless Training:**
+    *   Scales efficiently to 200B+ parameter MoE models without complex expert parallelism.
+    *   Optimized parallelism strategies enable efficient Dropless training.
+*   **Long Sequence Support:**
+    *   Trains 200B MoE models on 64k sequence lengths with memory optimization.
+    *   Supports DeepSpeed Ulysses sequence parallelism.
+    *   Maintains stability, even with expert load imbalances.
 *   **Superior Efficiency:**
     *   Supports MoE training up to 1T parameters.
-    *   Breakthrough performance exceeding traditional 3D parallel schemes.
-    *   Optimized for Ascend A3 Supernode hardware.
-*   **Multimodal Support:** Pre-training and fine-tuning capabilities for vision-language models.
-*   **Algorithm Support**:
-    * GRPO
-    * MPO (Coming Soon)
-    * DAPO (Coming Soon)
-    * Multi-turn Agentic RL (Coming Soon)
+    *   Achieves leading FSDP training throughput.
+    *   Optimized for Ascend NPU hardware.
 
-## Roadmap
+## 🎉 **News**
 
-XTuner V1 is constantly evolving, focusing on efficiency and optimization, particularly for Ascend NPU.
+*   **\[2025/09]** XTuner V1 Released!
 
-### Training Engine Support
+## **XTuner V1: Deep Dive**
 
-| Model        | GPU(FP8) | GPU(BF16) | NPU(BF16) |
-|--------------|----------|-----------|-----------|
-| Intern S1    | ✅        | ✅         | ✅         |
-| Intern VL    | ✅        | ✅         | ✅         |
-| Qwen3 Dense  | ✅        | ✅         | ✅         |
-| Qwen3 MoE    | ✅        | ✅         | ✅         |
-| GPT OSS      | ✅        | ✅         | 🚧         |
-| Deepseek V3  | ✅        | ✅         | 🚧         |
-| KIMI K2      | ✅        | ✅         | 🚧         |
+XTuner V1 is a state-of-the-art training engine tailored for ultra-large-scale MoE models.  It addresses the limitations of traditional 3D parallel training, offering optimized solutions for modern MoE training scenarios.
 
-### Inference Engine Integration
+<div align=center>
+  <img src="https://github.com/user-attachments/assets/98519a93-1ce8-49f0-a7ab-d7968c9d67a6" style="width:90%" alt="XTuner Performance Chart">
+</div>
 
-*   ✅ LMDeploy
-*   ☐ vLLM
-*   ☐ SGLang
+## 🔥 **Roadmap & Future Development**
 
-### Data Preparation
+XTuner V1 is dedicated to improving training efficiency for pre-training, instruction fine-tuning, and reinforcement learning (RL) of ultra-large MoE models, with a special focus on Ascend NPU optimization.
 
-*   Use [GraphGen](https://github.com/open-sciencelab/GraphGen) for synthetic data generation.
+### **🚀 Training Engine: Model Support**
 
-## Contributing
+XTuner V1 provides comprehensive support for training various model architectures, including:
 
-We welcome contributions! See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for guidelines.
+| Model           | GPU(FP8) | GPU(BF16) | NPU(BF16) |
+|-----------------|-----------|-----------|-----------|
+| Intern S1       | ✅        | ✅        | ✅        |
+| Intern VL       | ✅        | ✅        | ✅        |
+| Qwen3 Dense     | ✅        | ✅        | ✅        |
+| Qwen3 MoE       | ✅        | ✅        | ✅        |
+| GPT OSS         | ✅        | ✅        | 🚧        |
+| Deepseek V3     | ✅        | ✅        | 🚧        |
+| KIMI K2         | ✅        | ✅        | 🚧        |
 
-## Acknowledgements
+### **🧠 Algorithm Development**
 
-XTuner builds upon the work of several open-source projects. We are grateful to:
+The XTuner V1 algorithm component is continuously evolving with community contributions welcome.
 
-*   **Training Engine:** Torchtitan, Deepspeed, MindSpeed, Megatron.
-*   **Reinforcement Learning:** veRL, SLIME, AReal, OpenRLHF.
+**Implemented Algorithms:**
 
-## Citation
+*   ✅ Multimodal Pre-training (Vision-Language)
+*   ✅ Multimodal Supervised Fine-tuning
+*   ✅ GRPO (Group Relative Policy Optimization)
+
+**Upcoming Algorithms:**
+
+*   🔄 MPO (Mixed Preference Optimization)
+*   🔄 DAPO (Dynamic Sampling Policy Optimization)
+*   🔄 Multi-turn Agentic RL
+
+### **⚡ Inference Engine Integration**
+
+Future plans include seamless deployment with popular inference frameworks:
+
+*   [x] LMDeploy
+*   [ ] vLLM
+*   [ ] SGLang
+
+### **Data Preparation Resources**
+
+*   You can use [GraphGen](https://github.com/open-sciencelab/GraphGen) to create synthetic data for fine-tuning.
+
+## 🤝 **Contributing**
+
+We encourage community contributions!  Please review the [CONTRIBUTING.md](.github/CONTRIBUTING.md) file for guidelines.
+
+## 🙏 **Acknowledgements**
+
+XTuner V1 development is inspired by and built upon the work of the open-source community.  We appreciate the following projects:
+
+**Training Engine:**
+
+*   [Torchtitan](https://github.com/pytorch/torchtitan)
+*   [Deepspeed](https://github.com/deepspeedai/DeepSpeed)
+*   [MindSpeed](https://gitee.com/ascend/MindSpeed)
+*   [Megatron](https://github.com/NVIDIA/Megatron-LM)
+
+**Reinforcement Learning:**
+
+*   [veRL](https://github.com/volcengine/verl)
+*   [SLIME](https://github.com/THUDM/slime)
+*   [AReal](https://github.com/inclusionAI/AReaL)
+*   [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF)
+
+## 🖊️ **Citation**
 
 ```bibtex
 @misc{2023xtuner,
@@ -95,6 +134,8 @@ XTuner builds upon the work of several open-source projects. We are grateful to:
 }
 ```
 
-## License
+## **License**
 
-This project is licensed under the [Apache License 2.0](LICENSE).
+XTuner is released under the [Apache License 2.0](LICENSE). Adhere to the licenses of any models or datasets you use.
+
+[Back to Top](#)  | [Original Repository](https://github.com/InternLM/xtuner)

@@ -1,39 +1,33 @@
 ![OpenFold Banner](imgs/of_banner.png)
 _Figure: Comparison of OpenFold and AlphaFold2 predictions to the experimental structure of PDB 7KDX, chain B._
 
-# OpenFold: Replicating AlphaFold 2 for Protein Structure Prediction
+# OpenFold: Reproducing and Extending AlphaFold 2 for Protein Structure Prediction
 
-**OpenFold is a powerful, open-source PyTorch implementation of DeepMind's AlphaFold 2, enabling researchers to explore and advance the field of protein structure prediction.**
-
-[Go to the original repository](https://github.com/aqlaboratory/openfold)
+OpenFold is a PyTorch-based, trainable reproduction of DeepMind's groundbreaking [AlphaFold 2](https://github.com/deepmind/alphafold), empowering researchers with the ability to explore and expand upon the state-of-the-art in protein structure prediction.
 
 ## Key Features
 
-*   **Faithful Reproduction:** OpenFold accurately replicates the architecture and functionality of AlphaFold 2.
-*   **Trainable Model:** Unlike the original, OpenFold allows for training and fine-tuning, offering new avenues for research.
-*   **Open Source:** Built on PyTorch, OpenFold provides researchers with accessible, customizable tools for protein structure prediction.
-*   **Detailed Documentation:** Comprehensive documentation is available at [openfold.readthedocs.io](https://openfold.readthedocs.io/en/latest/), including installation instructions, model inference, and training guides.
+*   **Faithful Reproduction:** OpenFold faithfully replicates the architecture and training procedures of AlphaFold 2.
+*   **Trainable:**  Unlike the original AlphaFold 2, OpenFold's components are fully trainable, enabling researchers to customize and adapt the model.
+*   **Open Source:**  OpenFold is open-source, promoting collaboration and advancement in the field of protein structure prediction.
+*   **Extensible:** Built with flexibility in mind, OpenFold allows researchers to experiment with different architectures, training data, and loss functions.
 
-## Why Use OpenFold?
+## Getting Started
 
-OpenFold empowers researchers to:
+*   **Documentation:** Comprehensive documentation, including installation instructions, model inference, and training guides, is available at [openfold.readthedocs.io](https://openfold.readthedocs.io/en/latest/).
+*   **Source Code:**  Explore the original repository for the latest code and updates: [https://github.com/aqlaboratory/openfold](https://github.com/aqlaboratory/openfold)
 
-*   Investigate the inner workings of AlphaFold 2.
-*   Explore new training strategies and architectures.
-*   Adapt the model to specific research needs.
+## Licensing and Copyright
 
-## Copyright and Licensing
-
-*   OpenFold is licensed under the Apache License, Version 2.0.
-*   Pretrained parameters are under the CC BY 4.0 license and are downloaded by the installation script.
+OpenFold is licensed under the Apache License, Version 2.0.  Pretrained parameters from DeepMind fall under the CC BY 4.0 license.
 
 ## Contributing
 
-We welcome contributions from the community! If you encounter any issues or have suggestions for improvement, please submit them via our issue tracker or pull requests.
+We welcome contributions from the community! If you encounter any issues or have suggestions for improvement, please feel free to create an issue or submit a pull request.
 
 ## Citing OpenFold
 
-Please cite the following paper if you use OpenFold:
+If you use OpenFold in your research, please cite the following paper:
 
 ```bibtex
 @article {Ahdritz2022.11.20.517210,
@@ -49,7 +43,7 @@ Please cite the following paper if you use OpenFold:
 }
 ```
 
-If you are using OpenProteinSet, please also cite:
+If you use OpenProteinSet, please also cite:
 
 ```bibtex
 @misc{ahdritz2023openproteinset,
@@ -61,5 +55,4 @@ If you are using OpenProteinSet, please also cite:
       primaryClass={q-bio.BM}
 }
 ```
-
-**Note:** Please cite [AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) and [AlphaFold-Multimer](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v1) if applicable in your work.
+Any work that cites OpenFold should also cite [AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) and [AlphaFold-Multimer](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v1) if applicable.

@@ -1,129 +1,66 @@
-# WilmerAI: Orchestrate LLMs with Advanced Contextual Routing and Node-Based Workflows
+# WilmerAI: Revolutionizing LLM Inference with Contextual Routing
 
-**Unlock the power of advanced language model orchestration with WilmerAI, enabling smarter conversations and complex task automation.** ([Original Repo](https://github.com/SomeOddCodeGuy/WilmerAI))
+**WilmerAI empowers you to build advanced, multi-step workflows for large language models (LLMs) by understanding conversation context and orchestrating complex tasks.** 
+
+[Go to the original repo!](https://github.com/SomeOddCodeGuy/WilmerAI)
 
 ## Key Features
 
-*   **Advanced Contextual Routing:** Directs user requests using sophisticated, context-aware logic.  WilmerAI analyzes the entire conversation history to understand user intent, not just the last message.
+*   **Contextual Prompt Routing:** Analyze entire conversation histories for precise intent understanding, routing requests to specialized workflows.
+*   **Node-Based Workflow Engine:** Build complex LLM interactions using JSON-defined workflows, each step (node) capable of orchestrating LLMs, tools, and custom scripts.
+*   **Multi-LLM & Multi-Tool Orchestration:** Seamlessly integrate diverse LLMs and external tools within a single workflow, optimizing task performance.
+*   **Modular & Reusable Workflows:** Create self-contained workflows for common tasks, facilitating streamlined design and code reuse.
+*   **Stateful Conversation Memory:** Leverage a three-part memory system (chronological summary, rolling summary, and vector database) for enhanced context and RAG.
+*   **Adaptable API Gateway:** Connect to existing front-end applications with OpenAI- and Ollama-compatible API endpoints.
+*   **Flexible Backend Connectors:** Easily connect to various LLM backends, including OpenAI, Ollama, and KoboldCpp.
+*   **MCP Server Tool Integration:** Support for MCP server tool calling using MCPO.
 
-*   **Core: Node-Based Workflow Engine:**  Build complex, multi-step processes using JSON-defined workflows. Each node can execute different LLMs, call external tools, run custom scripts, and more.
+## What is WilmerAI?
 
-*   **Multi-LLM & Multi-Tool Orchestration:**  Orchestrate the best model for each task component. Workflows can combine multiple LLMs and external tools for optimal performance.
+WilmerAI is a powerful application designed for advanced semantic prompt routing and complex task orchestration. At its core, WilmerAI is a **node-based workflow engine**. It allows users to create sophisticated chains of steps, or "nodes," defined in JSON files. Each node can orchestrate different LLMs, call external tools, run custom scripts, call other workflows, and many other things.
 
-*   **Modular & Reusable Workflows:** Create self-contained workflows for common tasks and use them as building blocks in larger, more complex workflows.
+## Getting Started
 
-*   **Stateful Conversation Memory:** Maintains long-term context with a chronological summary, a continuously updated rolling summary, and a searchable vector database for Retrieval-Augmented Generation (RAG).
+### User Documentation
 
-*   **Adaptable API Gateway:**  Exposes OpenAI- and Ollama-compatible API endpoints, enabling easy integration with existing front-end tools.
+*   [User Documentation](Docs/_User_Documentation/README.md)
 
-*   **Flexible Backend Connectors:** Connect to various LLM backends (OpenAI, Ollama, KoboldCpp) using a configurable system of Endpoints, API Types, and Presets.
+### Developer Documentation
 
-*   **MCP Server Tool Integration using MCPO:** Experimental support for MCP server tool calling using MCPO, allowing tool use mid-workflow.
+*   [Developer Documentation](Docs/Developer_Docs/README.md)
 
-## Overview
+### Quick Setup Guides
 
-WilmerAI is designed for advanced semantic prompt routing and task orchestration. It goes beyond simple keyword-based routing by analyzing the *entire conversation history* to determine user intent. The core of WilmerAI is a **node-based workflow engine**, allowing you to define complex, multi-step processes that leverage multiple LLMs, external tools, and custom scripts. This approach provides granular control over the LLM interaction process, improving performance and flexibility.
+*   [WilmerAI Setup Starting Guide](Docs/_User_Documentation/Setup/_Getting-Start_Wilmer-Api.md)
+*   [Wilmer with Open WebUI](Docs/_User_Documentation/Setup/Open-WebUI.md)
+*   [Wilmer With SillyTavern](Docs/_User_Documentation/Setup/SillyTavern.md)
 
-## Example Use Cases
-
-See how WilmerAI can be used to create complex workflows with multiple LLMs.
+## Examples
 
 ### Semi-Autonomous Workflows
 
 ![No-RAG vs RAG](Docs/Gifs/Search-Gif.gif)
-*Click the image to play gif if it doesn't start automatically*
 
-### Iterative LLM Calls To Improve Performance
+### Assistant Routing
 
-Iterate the results of an LLM call to get better results
+![Single Assistant Routing to Multiple LLMs](Docs/Examples/Images/Wilmer-Assistant-Workflow-Example.jpg)
 
-### Distributed LLMs
+### Prompt Routing
 
-Orchestrate multiple machines running LLMs to create more powerful workflows.
+![Prompt Routing Example](Docs/Examples/Images/Wilmer-Categorization-Workflow-Example.png)
 
-### Example Visuals
+### Group Chat
 
-*   **Example of A Simple Assistant Workflow Using the Prompt Router**
+![Groupchat to Different LLMs](Docs/Examples/Images/Wilmer-Groupchat-Workflow-Example.png)
 
-    ![Single Assistant Routing to Multiple LLMs](Docs/Examples/Images/Wilmer-Assistant-Workflow-Example.jpg)
+### UX Workflow
 
-*   **Example of How Routing Might Be Used**
-
-    ![Prompt Routing Example](Docs/Examples/Images/Wilmer-Categorization-Workflow-Example.png)
-
-*   **Group Chat to Different LLMs**
-
-    ![Groupchat to Different LLMs](Docs/Examples/Images/Wilmer-Groupchat-Workflow-Example.png)
-
-*   **Example of a UX Workflow Where A User Asks for a Website**
-
-    ![Oversimplified Example Coding Workflow](Docs/Examples/Images/Wilmer-Simple-Coding-Workflow-Example.jpg)
-
-## Quick Setup
-
-### Youtube Videos
-
-[![WilmerAI and Open WebUI Install on Fresh Windows 11 Desktop](https://img.youtube.com/vi/KDpbxHMXmTs/0.jpg)](https://www.youtube.com/watch?v=KDpbxHMXmTs "WilmerAI and Open WebUI Install on Fresh Windows 11 Desktop")
-
-### Guides
-
-#### WilmerAI
-
-Hop into the [User Documents Setup Starting Guide](Docs/_User_Documentation/Setup/_Getting-Start_Wilmer-Api.md) to get
-step by step rundown of how to quickly set up the API.
-
-#### Wilmer with Open WebUI
-
-[You can click here to find a written guide for setting up Wilmer with Open WebUI](Docs/_User_Documentation/Setup/Open-WebUI.md)
-
-#### Wilmer With SillyTavern
-
-[You can click here to find a written guide for setting up Wilmer with SillyTavern](Docs/_User_Documentation/Setup/SillyTavern.md).
-
-## Documentation
-
-*   [User Documentation](Docs/_User_Documentation/README.md)
-*   [Developer Documentation](Docs/Developer_Docs/README.md)
+![Oversimplified Example Coding Workflow](Docs/Examples/Images/Wilmer-Simple-Coding-Workflow-Example.jpg)
 
 ## Contact
 
-For feedback, requests, or just to say hi, you can reach me at:
+For feedback, requests, or just to say hi, you can reach the maintainer at: WilmerAI.Project@gmail.com
 
-WilmerAI.Project@gmail.com
+## License
 
-## Third-Party Libraries
-
-WilmerAI imports five libraries within its requirements.txt, and imports the libraries via import statements; it does
-not extend or modify the source of those libraries.
-
-The libraries are:
-
-*   Flask : https://github.com/pallets/flask/
-*   requests: https://github.com/psf/requests/
-*   scikit-learn: https://github.com/scikit-learn/scikit-learn/
-*   urllib3: https://github.com/urllib3/urllib3/
-*   jinja2: https://github.com/pallets/jinja
-*   pillow: https://github.com/python-pillow/Pillow
-
-Further information on their licensing can be found within the README of the ThirdParty-Licenses folder, as well as the
-full text of each license and their NOTICE files, if applicable, with relevant last updated dates for each.
-
-## Wilmer License and Copyright
-
-```
-WilmerAI
-Copyright (C) 2025 Christopher Smith
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-```
+WilmerAI is licensed under the GNU General Public License v3. See the LICENSE file for details.

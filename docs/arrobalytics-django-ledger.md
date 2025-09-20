@@ -1,38 +1,38 @@
-<!--  django ledger logo -->
-[![Django Ledger Logo](https://us-east-1.linodeobjects.com/django-ledger/logo/django-ledger-logo@2x.png)](https://github.com/arrobalytics/django-ledger)
+<!-- Django Ledger Logo -->
+![django ledger logo](https://us-east-1.linodeobjects.com/django-ledger/logo/django-ledger-logo@2x.png)
 
-# Django Ledger: Powerful Accounting for Your Django Projects
+# Django Ledger: A Powerful Django Accounting Engine
 
-Django Ledger is a robust, open-source accounting engine that seamlessly integrates with Django, empowering developers to build financially driven applications with ease.
+**Simplify complex financial tasks with Django Ledger, a robust, open-source accounting engine built for Django.**
 
-**Key Features:**
+[View the Original Repo](https://github.com/arrobalytics/django-ledger)
 
-*   ✅ **Double-Entry Accounting:** Implement accurate and reliable financial tracking.
-*   📊 **Financial Reporting:** Generate comprehensive financial statements like Income Statements, Balance Sheets, and Cash Flow Statements.
-*   🏦 **Hierarchical Chart of Accounts:** Organize your finances with a flexible and customizable chart.
-*   🧾 **Invoice and Order Management:** Handle Purchase Orders, Sales Orders, Bills, and Invoices efficiently.
-*   🔄 **Multi-Tenancy Support:** Build applications that support multiple organizations or entities.
-*   ➕ **Transactions & Journal Entries:** Manage ledgers, journal entries, and transactions.
-*   📥 **Import Capabilities:** Import data via OFX & QFX file formats.
-*   ⚙️ **Built-in UI:** Leverage Django Admin integration and a built-in Entity Management UI.
-*   📦 **Inventory Management:** Track and manage your inventory.
-*   📐 **Financial Ratios:** Get key insights with built-in financial ratio calculations.
-*   📏 **Unit of Measure Support:** Track amounts with associated units.
-*   🏦 **Bank Account Information:** Manage bank account details.
-*   🚪 **Closing Entries:** Perform closing entries with ease.
+## Key Features
+
+*   ✅ **Double-Entry Accounting:** Ensures accuracy and transparency in your financial records.
+*   ✅ **Hierarchical Chart of Accounts:** Organize your finances with a flexible and customizable chart.
+*   ✅ **Comprehensive Financial Statements:** Generate key reports including Income Statements, Balance Sheets, and Cash Flow Statements.
+*   ✅ **Transaction Management:** Supports Ledgers, Journal Entries, and Transactions for detailed tracking.
+*   ✅ **Financial Document Handling:** Includes Purchase Orders, Sales Orders, Bills, and Invoices.
+*   ✅ **Advanced Functionality:** Offers financial ratio calculations, inventory management, and unit of measure support.
+*   ✅ **Multi-Tenancy Support:** Ideal for applications managing multiple entities.
+*   ✅ **Data Import:** Integrates with OFX & QFX file formats for easy data import.
+*   ✅ **Seamless Integration:** Django Admin integration and a built-in Entity Management UI streamline operations.
 
 ## Getting Started
 
-*   [FREE Get Started Guide](https://www.djangoledger.com/get-started)
-*   [Join our Discord](https://discord.gg/c7PZcbYgrc)
-*   [Documentation](https://django-ledger.readthedocs.io/en/latest/)
-*   [QuickStart Notebook](https://github.com/arrobalytics/django-ledger/blob/develop/notebooks/QuickStart%20Notebook.ipynb)
+### Installation
 
-## Installation
+Django Ledger is designed to integrate smoothly with your existing Django project.
 
-Django Ledger is designed to work seamlessly within a Django project.  You'll need a working Django project to get started.
+1.  **Project Setup:** Ensure you have a working Django project. If you're new to Django, start with the [official Django tutorial](https://docs.djangoproject.com/en/4.2/intro/tutorial01/#creating-a-project).
+2.  **Installation Options:**
+    *   **Starter Template:** The quickest way to get started is with the zero-config Django Ledger starter template:  [django-ledger-starter](https://github.com/arrobalytics/django-ledger-starter).
+    *   **Manual Installation:** Follow these steps to add Django Ledger to an existing project.
 
-### Add django_ledger to INSTALLED_APPS in you new Django Project.
+### Adding Django Ledger to your project:
+
+1.  **Add to `INSTALLED_APPS`:**
 
 ```python
 INSTALLED_APPS = [
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-### Add Django Ledger Context Preprocessor
+2.  **Include Context Preprocessor:**
 
 ```python
 TEMPLATES = [
@@ -50,20 +50,20 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 '...',
-                'django_ledger.context.django_ledger_context'  # Add this line to a context_processors list..
+                'django_ledger.context.django_ledger_context'  # Add this line
             ],
         },
     },
 ]
 ```
 
-### Perform database migrations:
+3.  **Run Migrations:**
 
-```shell
+```bash
 python manage.py migrate
 ```
 
-*   Add URLs to your project's __urls.py__:
+4.  **Add URLs:** Add Django Ledger's URLs to your project's `urls.py`:
 
 ```python
 from django.urls import include, path
@@ -75,125 +75,114 @@ urlpatterns = [
 ]
 ```
 
-### Run your project:
+5.  **Run the Server:**
 
-```shell
+```bash
 python manage.py runserver
 ```
 
-*   Navigate to Django Ledger root view assigned in your project urlpatterns setting (
-    typically http://127.0.0.1:8000/ledger
-    if you followed this installation guide).
-*   Use your superuser credentials to login.
+6.  **Access Django Ledger:** Navigate to your project's ledger URL (usually http://127.0.0.1:8000/ledger) and log in with your superuser credentials.
 
-## Deprecated Behavior (v0.8.0+)
+## Deprecated Behavior Setting (v0.8.0+)
 
-*   **DJANGO_LEDGER_USE_DEPRECATED_BEHAVIOR**:  Set to `True` in your Django settings to temporarily enable deprecated features and legacy behaviors while transitioning.  Defaults to `False`.
+Starting with version v0.8.0, the `DJANGO_LEDGER_USE_DEPRECATED_BEHAVIOR` setting controls access to deprecated features and legacy behaviors.
+
+*   **Default:** `False` (deprecated features are disabled)
+*   To temporarily use deprecated features, set this to `True` in your Django settings while transitioning.
 
 ## Development Setup
 
-Django Ledger includes a development environment within the `dev_env/` folder.
+Here's how to set up a development environment:
 
-1.  Clone the repository:
+1.  **Clone the Repository:**
 
-```shell
+```bash
 git clone https://github.com/arrobalytics/django-ledger.git && cd django-ledger
 ```
 
-2.  Install PipEnv:
+2.  **Install PipEnv (if not already installed):**
 
-```shell
+```bash
 pip install -U pipenv
 ```
 
-3.  Create and activate the virtual environment:
+3.  **Create and Activate Virtual Environment:**
 
-```shell
+```bash
 pipenv install
 pipenv shell
 ```
 
-4.  Apply database migrations:
+4.  **Apply Migrations:**
 
-```shell
+```bash
 python manage.py migrate
 ```
 
-5.  Create a superuser:
+5.  **Create a Superuser:**
 
-```shell
+```bash
 python manage.py createsuperuser
 ```
 
-6.  Run the development server:
+6.  **Run the Development Server:**
 
-```shell
+```bash
 python manage.py runserver
 ```
 
-## Docker Development Setup
+## Development Setup using Docker
 
-1.  Navigate to your project directory.
-2.  Give executable permissions to entrypoint.sh
+1.  **Give executable permissions to entrypoint.sh**
 
-```shell
+```bash
 sudo chmod +x entrypoint.sh
 ```
-3.  Add host '0.0.0.0' into ALLOWED_HOSTS in settings.py.
 
-4.  Build the image and run the container.
+2.  **Add host '0.0.0.0' into ALLOWED_HOSTS in settings.py.**
+3.  **Build and Run Docker Compose:**
 
-```shell
+```bash
 docker compose up --build
 ```
 
-5.  Add Django Superuser by running command in seprate terminal
+4.  **Create a Superuser (in a separate terminal):**
 
-```shell
+```bash
 docker ps
-```
-
-Select container id of running container and execute following command
-
-```shell
-docker exec -it containerId /bin/sh
-```
-
-```shell
+docker exec -it <container_id> /bin/sh
 python manage.py createsuperuser
 ```
 
-6.  Navigate to http://0.0.0.0:8000/ on browser.
+5.  **Access the Application:** Browse to http://0.0.0.0:8000/
 
 ## Testing
 
-Run tests after setting up your development environment:
+Run the test suite after setting up your development environment.
 
-```shell
+```bash
 python manage.py test django_ledger
 ```
 
-## Contribute
-
-We welcome contributions!  Please review our [contribution guidelines](https://github.com/arrobalytics/django-ledger/blob/master/Contribute.md) before submitting pull requests.
-
-*   **Feature Requests/Bug Reports:** Open an issue in the repository
-*   **Software Customization & Consulting:** [Contact us](https://www.miguelsanda.com/work-with-me/) or email msanda@arrobalytics.com
-
 ## Screenshots
 
-*   ![Django Ledger Entity Dashboard](https://us-east-1.linodeobjects.com/django-ledger/public/img/django_ledger_entity_dashboard.png)
-*   ![Django Ledger Balance Sheet](https://us-east-1.linodeobjects.com/django-ledger/public/img/django_ledger_balance_sheet.png)
-*   ![Django Ledger Income Statement](https://us-east-1.linodeobjects.com/django-ledger/public/img/django_ledger_income_statement.png)
-*   ![Django Ledger Bill](https://us-east-1.linodeobjects.com/django-ledger/public/img/django_ledger_bill.png)
-*   ![Django Ledger Invoice](https://us-east-1.linodeobjects.com/django-ledger/public/img/django_ledger_invoice.png)
+<!-- Screenshots - Add alt text and captions where possible -->
+![Django Ledger Entity Dashboard](https://us-east-1.linodeobjects.com/django-ledger/public/img/django_ledger_entity_dashboard.png)
+![Django Ledger Balance Sheet](https://us-east-1.linodeobjects.com/django-ledger/public/img/django_ledger_income_statement.png)
+![Django Ledger Income Statement](https://us-east-1.linodeobjects.com/django-ledger/public/img/django_ledger_balance_sheet.png)
+![Django Ledger Bill](https://us-east-1.linodeobjects.com/django-ledger/public/img/django_ledger_bill.png)
+![Django Ledger Invoice](https://us-east-1.linodeobjects.com/django-ledger/public/img/django_ledger_invoice.png)
 
-## Financial Statements Screenshots
+## Financial Statement Reports
 
-*   ![Balance Sheet](https://django-ledger.us-east-1.linodeobjects.com/public/img/BalanceSheetStatement.png)
-*   ![Income Statement](https://django-ledger.us-east-1.linodeobjects.com/public/img/IncomeStatement.png)
-*   ![Cash Flow Statement](https://django-ledger.us-east-1.linodeobjects.com/public/img/CashFlowStatement.png)
+![Balance Sheet Report](https://django-ledger.us-east-1.linodeobjects.com/public/img/BalanceSheetStatement.png)
+![Income Statement Report](https://django-ledger.us-east-1.linodeobjects.com/public/img/IncomeStatement.png)
+![Cash Flow Statement Report](https://django-ledger.us-east-1.linodeobjects.com/public/img/CashFlowStatement.png)
 
----
+## Get Involved
 
-**[Visit the Django Ledger Repository on GitHub](https://github.com/arrobalytics/django-ledger)**
+*   **Feature Requests/Bug Reports:** [Open an issue](https://github.com/arrobalytics/django-ledger/issues)
+*   **Customization/Consulting:** [Contact Us](https://www.miguelsanda.com/work-with-me/) or email msanda@arrobalytics.com
+*   **Contribute:** See our [contribution guidelines](https://github.com/arrobalytics/django-ledger/blob/master/Contribute.md)
+
+**We welcome contributions from Python and Django developers with finance and accounting experience!**

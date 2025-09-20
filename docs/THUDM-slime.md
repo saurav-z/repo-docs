@@ -1,62 +1,58 @@
-# Slime: LLM Post-Training Framework for RL Scaling
+# SLIME: An RL Scaling Framework for LLMs
 
-**Slime** is a cutting-edge framework designed to revolutionize Large Language Model (LLM) post-training through Reinforcement Learning (RL) scaling, enabling advanced capabilities and efficient training. **[Learn more on GitHub](https://github.com/THUDM/slime)**
+**SLIME empowers efficient LLM post-training through advanced RL techniques, enabling high-performance training and flexible data generation.**  Explore the power of SLIME, a cutting-edge framework for enhancing large language models with Reinforcement Learning (RL).
+
+[View the original repository on GitHub](https://github.com/THUDM/slime)
 
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://thudm.github.io/slime/)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/THUDM/slime)
 
-## Key Features of Slime
+## Key Features
 
-*   **High-Performance Training:**  Leverages the power of Megatron and SGLang for efficient training across various modes, optimizing LLM performance.
-*   **Flexible Data Generation:** Enables the creation of tailored training datasets through custom data generation interfaces and server-based engines, promoting adaptability.
-
-## Core Capabilities
-
-Slime offers two key benefits for LLM post-training:
-
-*   **Efficient RL Scaling:** Facilitates the scaling of RL for LLMs, enabling complex training scenarios.
-*   **Enhanced Training Efficiency:** Combines Megatron and SGLang for effective training across multiple modalities.
+*   **High-Performance Training:**  Leverages Megatron and SGLang for efficient RL training across various configurations.
+*   **Flexible Data Generation:** Provides customizable data generation workflows with custom interfaces and server-based engines.
+*   **Seamless Integration:** Compatible with SGLang and Megatron-LM for simplified workflows.
+*   **Agentic RL Support:** Supporting the development of agentic capabilities, facilitating advanced RL models.
 
 ## Architecture Overview
 
-![Architecture Overview](./imgs/arch.png)
+[Image of Architecture Diagram (arch.png from original repo)]
 
-*   **Training (Megatron):**  Manages the main training process, pulls data from the Data Buffer, and synchronizes model parameters with the rollout module after each training cycle.
-*   **Rollout (SGLang + Router):** Generates new data (including rewards and verifier outputs) and stores it in the Data Buffer, enhancing data generation workflows.
-*   **Data Buffer:** Acts as a bridge, handling prompt initialization, custom data, and rollout generation methods for a seamless data flow.
+**Core Modules:**
 
-## Getting Started
+*   **training (Megatron):** Handles the primary training process, ingesting data from the Data Buffer and synchronizing parameters to the rollout module after each training step.
+*   **rollout (SGLang + router):** Generates new training data, including rewards and verifier outputs, and stores it in the Data Buffer.
+*   **data buffer:** Acts as a bridge, managing prompt initialization, custom data, and rollout generation methods.
 
-*   **Quick Start Guide:**  Access a comprehensive guide to quickly set up your environment, prepare data, launch training, and explore key code snippets.  [Quick Start Guide](./docs/en/get_started/quick_start.md)
-*   **Usage Documentation:** For complete instructions on usage and configurations, please refer to the detailed [Usage Documentation](docs/en/get_started/usage.md).
+## Quick Start
 
-##  Arguments Explained
+Get up and running quickly with SLIME!
 
-Arguments in Slime are categorized for clarity:
+*   Comprehensive Quick Start Guide:  [Quick Start Guide](./docs/en/get_started/quick_start.md) covering environment setup, data preparation, training startup, and key code analysis.
+*   Explore practical examples: [examples](examples/) showcasing various use cases.
 
-1.  **Megatron Arguments:**  Configure Megatron parameters using `PYTHONPATH`, for example: `--tensor-model-parallel-size 2`.
-2.  **SGLang Arguments:** Use SGLang arguments by prefixing them with `--sglang-`, e.g., `--sglang-mem-fraction-static`.
-3.  **Slime-Specific Arguments:** Explore Slime's unique arguments in [slime/utils/arguments.py](slime/utils/arguments.py).
+## Arguments Walk Through
 
-## Contributing & Development
+SLIME utilizes three categories of arguments for configuration:
 
-We welcome contributions from the community to improve Slime!
+1.  **Megatron Arguments:** Configure Megatron parameters via `PYTHONPATH` (e.g., `--tensor-model-parallel-size 2`).
+2.  **SGLang Arguments:** Utilize arguments for SGLang, prefixed with `--sglang-` (e.g., `--sglang-mem-fraction-static`).
+3.  **SLIME-Specific Arguments:** Refer to [slime/utils/arguments.py](slime/utils/arguments.py) for a complete list.
 
-*   **Contribution Guidelines:** Submit issues and pull requests for new features, performance enhancements, and feedback.
-*   **Code Style:** Use [pre-commit](https://pre-commit.com/) to ensure consistent code style for your contributions.
+For complete usage instructions, please refer to the [Usage Documentation](docs/en/get_started/usage.md).
+
+## Developer Guide
+
+*   **Contributions Welcome:**  We encourage suggestions, feature requests, and feedback through Issues or Pull Requests!
+*   **Code Style Consistency:**  Use [pre-commit](https://pre-commit.com/) to ensure code style consistency for your commits:
 
     ```bash
     apt install pre-commit -y
     pre-commit install
     ```
+*   **Debugging:** Refer to the [Debugging Guide](docs/en/developer_guide/debug.md) for troubleshooting tips.
 
-*   **Debugging:** Consult the [Debugging Guide](docs/en/developer_guide/debug.md) for assistance.
+## FAQ & Acknowledgements
 
-## Resources
-
-*   **FAQ & Acknowledgements:** Find answers to frequently asked questions and acknowledgements in the [Q\&A](docs/en/get_started/qa.md)
-*   **Blogs:**
-    *   Our vision: [slime: An SGLang-Native Post-Training Framework for RL Scaling](https://lmsys.org/blog/2025-07-09-slime/).
-    *   Our ideas on agentic training: [Agent-Oriented Design: An Asynchronous and Decoupled Framework for Agentic RL](https://www.notion.so/Agent-Oriented-Design-An-Asynchronous-and-Decoupled-Framework-for-Agentic-RL-2278e692d081802cbdd5d37cef76a547).
-    *   slime has served as the RL framework for GLM-4.5: [GLM-4.5: Reasoning, Coding, and Agentic Abilities](https://z.ai/blog/glm-4.5)
-*   **Special Thanks:**  SGLang, Megatron‑LM, mbridge, OpenRLHF, veRL, Pai-Megatron-Patch and others.
+*   **FAQ:** Find answers to frequently asked questions in the [Q\&A](docs/en/get_started/qa.md) section.
+*   **Acknowledgements:** Special thanks to the following projects & communities: SGLang, Megatron‑LM, mbridge, OpenRLHF, veRL, Pai-Megatron-Patch and others.
