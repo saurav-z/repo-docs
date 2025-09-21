@@ -14,36 +14,31 @@
 
 ---
 
-# ContestTrade: AI-Powered Multi-Agent Trading Framework
+# ContestTrade: Automated AI-Powered Multi-Agent Trading Framework
 
-**ContestTrade** is a cutting-edge multi-agent trading framework that leverages AI to automatically identify and capitalize on event-driven investment opportunities, offering a powerful solution for building your own AI trading team.  [Explore the original repo on GitHub](https://github.com/FinStep-AI/ContestTrade)
+**ContestTrade** revolutionizes AI-driven trading by employing a multi-agent system to automatically analyze markets and identify event-driven investment opportunities. Explore the project on [GitHub](https://github.com/FinStep-AI/ContestTrade)!
 
 ## Key Features
 
-*   **Automated Stock Selection:**  Scans the entire market and generates tradable stock lists without manual screening.
-*   **Event-Driven Focus:**  Identifies opportunities triggered by catalysts like news, announcements, and policy changes.
-*   **Customizable Agents:** Supports user-defined research preferences and strategies for flexible adaptation.
-*   **Multi-Stage Contest Mechanism:** Employs a two-stage pipeline to ensure robust and reliable investment insights.
-*   **Market Coverage:** Supports both US and other markets.
-
-## Introduction
-
-ContestTrade is a multi-agent trading framework designed for event-driven stock selection, aiming to autonomously discover, evaluate, and track valuable investment opportunities. It provides executable asset allocation recommendations without human intervention.
+*   **Autonomous Stock Selection:** Automates whole-market scanning to generate tradable stock lists without manual intervention.
+*   **Event-Driven Strategy:** Focuses on catalysts like news, announcements, and policy changes to identify impactful opportunities.
+*   **Customizable Configuration:** Allows user-defined agent preferences and strategies for adaptable investment styles.
 
 ## Framework Overview
 
-ContestTrade's workflow mirrors an investment firm's decision-making process through a structured two-stage pipeline:
-
-1.  **Data Processing Stage:** The **Data Team** receives market data from various sources. Data Analysis Agents transform raw data into structured "textual factors," evaluated through an internal contest to build an optimal "factor portfolio."
-2.  **Research and Decision-Making Stage:**  The **Research Team** receives the optimal factor portfolio. Research Agents, each with their "Trading Beliefs" and financial tools, conduct in-depth analyses and submit trading proposals. Another internal contest synthesizes these proposals into a unified asset allocation strategy.
+ContestTrade utilizes a two-stage pipeline mimicking an investment firm's decision-making process.  This design ensures robust and effective insights for trading.
 
 <p align="center">
   <img src="assets/architecture.jpg" style="width: 90%; height: auto;">
 </p>
 
+1.  **Data Processing Stage:**  The **Data Team** processes market data, with Data Analysis Agents converting raw data into structured "textual factors." An internal contest mechanism then evaluates these factors to create an optimal "factor portfolio."
+
+2.  **Research and Decision-Making Stage:** The **Research Team** receives the factor portfolio, and multiple Research Agents, each with unique "Trading Beliefs" and access to financial tools, analyze the factors and submit trading proposals. A second internal contest synthesizes these proposals into a final, reliable asset allocation strategy.
+
 ## Installation
 
-Follow these steps to get started:
+Get started with ContestTrade in a few simple steps:
 
 ```bash
 # 1. Clone the project repository
@@ -58,15 +53,15 @@ conda activate contesttrade
 pip install -r requirements.txt
 ```
 
-Alternatively, deploy using Docker:
+Alternatively, deploy with Docker:
 
-```bash
+```
 docker run -it --rm --name contest_trade -v $(pwd)/config.yaml:/ContestTrade/config.yaml finstep/contesttrade:v2.0
 ```
 
 ## Configuration
 
-Configure the necessary API keys and LLM parameters in the `config_us.yaml` file. Here's a table of required and optional keys:
+Configure ContestTrade by adding your API keys and parameters in the `config_us.yaml` file.
 
 | Key                      | Description                                | Required |
 | :----------------------- | :----------------------------------------- | :------- |
@@ -84,11 +79,11 @@ Configure the necessary API keys and LLM parameters in the `config_us.yaml` file
 | `VLM_API_KEY`            | VLM API key for visual analysis            | No       |
 | `VLM_BASE_URL`           | VLM API base URL for visual analysis       | No       |
 
-> **Note:** You must obtain LLM and VLM API keys, providing the platform, model, URL, and key.
+> Note: You need to apply for the LLM API and VLM API by yourself. Fill in the URL, API Key, and model name according to the platform and model you use.
 
-## Preference Configuration
+## Preference: Define Your Trading Beliefs
 
-Customize Research Agent "trading beliefs" in the `contest_trade/config/belief_list.json` file.  Each agent can generate up to 5 signals.
+Customize your agent's trading behavior by modifying the `contest_trade/config/belief_list.json` file. This file contains a JSON array of strings, each defining a "trading belief".
 
 **Example 1: Short-Term Event-Driven (Aggressive)**
 
@@ -117,13 +112,13 @@ Customize Research Agent "trading beliefs" in the `contest_trade/config/belief_l
 
 ## Usage
 
-Run ContestTrade using the Command Line Interface (CLI):
+Run ContestTrade from the command line:
 
 ```bash
 python -m cli.main run
 ```
 
-The CLI will guide you through market selection and report generation.
+Follow the terminal prompts to select your market and view the results:
 
 <p align="center">
   <img src="assets/contest_trade_cli_select_market.jpg" style="width: 100%; height: auto;">
@@ -145,34 +140,31 @@ The CLI will guide you through market selection and report generation.
   <img src="assets/contest_trade_cli_data_report_us.jpg" style="width: 100%; height: auto;">
 </p>
 
-> Results are saved in the `contest_trade/agents_workspace/results` directory in Markdown format.
+>  Reports are saved in the `contest_trade/agents_workspace/results` directory in Markdown format.
 
-## 🌟 Vision & Roadmap
+## Vision & Roadmap
 
-ContestTrade is dedicated to advancing AI in quantitative trading.
+The project aims to advance quantitative trading in the AGI era by building robust infrastructure, diverse agents, and a scalable trading framework.
 
 ### Roadmap
 
-**V1.1 (Finished): Framework Stability Enhancement & Core Experience Optimization**
-- [✓] The core data source module is decoupled to achieve adaptors for multiple data sources. (`data-provider` refactor)
-- [✓] Optimized CLI logging and interaction experience.
-
-**V2.0 (Finished): Market and Function Expansion**
-- [✓] Access to **US stock** market data.
-- [✓] Introduced richer factors and signal sources.
-
-**Future Plans:**
-- [ ] Support for Hong Kong stocks and other markets
-- [ ] Visual backtesting and analysis interface
-- [ ] Support for scaling up more agents
+*   **V1.1 (Completed):** Framework Stability and Core Experience Improvements.
+    *   \[✓] Decoupled data source module for multiple data source adaptors.
+    *   \[✓] Improved CLI logging and interaction.
+*   **V2.0 (Completed):** Market and Function Expansion.
+    *   \[✓]  US Stock Market Data Support.
+    *   \[✓] Enhanced factors and signal sources.
+*   **Future Plans:**
+    *   \[ ] Support for Hong Kong and other stock markets
+    *   \[ ] Visual backtesting and analysis interface
+    *   \[ ] Support for scaling up more agents
 
 ## Contributing
 
-Contribute to ContestTrade!  See the **[Contributing Guide (CONTRIBUTING.md)](CONTRIBUTING.md)**.
+Contribute to ContestTrade!  We welcome all contributions.
 
-Non-code contributions are also welcome:
-*   **Suggest features/report bugs:** [Go to Issues page](https://github.com/FinStep-AI/ContestTrade/issues)
-*   **Provide feedback:** Share your test results and user experience.
+*   **Developer Contributions:** Refer to the **[Contributing Guide (CONTRIBUTING.md)](CONTRIBUTING.md)**.
+*   **Non-Code Contributions:** Propose feature suggestions, report bugs via the [Issues page](https://github.com/FinStep-AI/ContestTrade/issues), or provide testing feedback.
 
 ## Star History
 
@@ -184,17 +176,19 @@ Non-code contributions are also welcome:
 
 ## Disclaimer
 
-**Important Disclaimer:** This project is an open-source research framework and is for academic and educational purposes only. The content is not financial advice.
+**Important Disclaimer:** This project is an open-source research framework for academic and educational purposes only.  It does not constitute investment advice.
 
 **Risk Warning:**
-*   **Market Risk:** Outputs are based on AI deductions from historical data and should not be considered investment advice.
-*   **Data Accuracy:** Data sources may have inaccuracies or delays; reliability is not guaranteed.
-*   **Model Hallucination:** AI models have limitations; we do not guarantee the accuracy, completeness, or timeliness of the information.
-*   **Liability:** Developers are not liable for losses from the use of this framework. Investing involves risk.
+*   **Market Risk:** The framework's outputs, including trading signals, are based on AI models and historical data, and should not be used as the basis for investment decisions.
+*   **Data Accuracy:**  Data sources may be subject to delays, inaccuracies, and incompleteness.
+*   **Model Limitations:** AI models, including LLMs, have limitations, including the risk of "hallucination."
+*   **Liability:**  The developers are not liable for any losses from the use or inability to use this framework. Investing involves risks.
 
 **Always understand the risks before using this framework for trading decisions.**
 
 ## Citation
+
+If you use ContestTrade in your research, please cite our paper:
 
 ```bibtex
 @misc{zhao2025contesttrade,

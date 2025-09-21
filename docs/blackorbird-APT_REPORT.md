@@ -1,122 +1,50 @@
-# APT_REPORT: Your Comprehensive Resource for Advanced Persistent Threat Intelligence
+# APT Report Collection - A Comprehensive Resource for Advanced Persistent Threats
 
-**Stay ahead of cyber threats with a curated collection of APT reports, samples, and analyses, compiled by @blackorbird.** ([Original Repository](https://github.com/blackorbird/APT_REPORT))
+**Stay informed about the latest APT (Advanced Persistent Threat) campaigns with this curated collection of reports and samples.** [View the original repository](https://github.com/blackorbird/APT_REPORT).
 
-This repository provides a valuable resource for cybersecurity professionals, researchers, and anyone interested in understanding the landscape of Advanced Persistent Threats (APTs). Discover the tactics, techniques, and procedures (TTPs) employed by various threat actors, along with relevant samples and associated malware.
+## Overview
 
-## Key Features:
+This repository, maintained by @blackorbird, provides a valuable collection of intelligence reports, malware samples, and technical analyses related to various APT groups. The focus is on providing a centralized resource for cybersecurity professionals, researchers, and anyone interested in staying ahead of emerging cyber threats.
 
-*   **Curated Reports:** Access a collection of reports from trusted sources.
-*   **Threat Actor Groups:** Dive into the activities of specific APT groups.
-*   **Malware Samples and Analysis:** Explore samples and analysis to understand the threats.
-*   **Regularly Updated:**  The repository is continuously updated with new intelligence.
+## Key Features
 
-## APT Groups & Reports
+*   **Comprehensive APT Coverage:**  Tracks and documents various APT groups, including their tactics, techniques, and procedures (TTPs).
+*   **Latest Threat Intelligence:**  Provides links to recent reports, articles, and analyses, offering up-to-date information on active campaigns.
+*   **Organized by Group & Region:** Information is categorized by APT group and geographical region to facilitate easier navigation and analysis.
+*   **Malware Samples & Technical Details:**  Includes links to reports that often contain details on malware used by APT groups, helping to understand how threats operate.
+*   **Useful for Cyber Threat Intelligence:**  Helps to track the evolution of threat actor groups
 
-This section categorizes reports by APT group, providing a quick overview of their activities and associated resources.
+## APT Groups and Campaigns Covered
 
-### APT Group: Group123
+This repository includes information on a variety of APT groups, with specific focus on:
 
-*   ▶ ScarCruft continues to evolve, introduces Bluetooth harvester (May 13, 2019) - [Securelist](https://securelist.com/scarcruft-continues-to-evolve-introduces-bluetooth-harvester/90729/)
-*   ▶ Group123 Attempts to attack 'printing paper' APT disguised as a guide to organization and conferences (May 2 , 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2287)
-*   ▶ Group123, APT attack impersonating Unification Ministry, spread malicious code to Google Drive (April 22 , 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2268)
-*   ▶ group123 APT organization, 'Operation High Expert' (April 2 , 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2226)
-*   ▶ Rocketman APT Campaign Returned to Operation Holiday Wiper (Jan 23, 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2089)
-*   ▶ 'Operation Blackbird', the mobile invasion of the ' (Dec 13, 2018) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2035)
-*   ▶ group123 'Operation Korean Sword' is underway (Nov. 16, 2018) - [blog.alyac.co.kr](https://blog.alyac.co.kr/1985)
-*   ▶ group123 Group's latest APT campaign - 'Operation Rocket Man' (Aug. 22, 2018) - [blog.alyac.co.kr](https://blog.alyac.co.kr/1853)
-*   ▶ group123, Flash Player Zero-Day (CVE-2018-4878) Attack Attention (Feb 02, 2018) - [blog.alyac.co.kr](https://blog.alyac.co.kr/1521)
-*   ▶ 'group123' group 'survey on the total number of discovery of separated families in North and South' (July 28, 2014) - [blog.alyac.co.kr](https://blog.alyac.co.kr/1767)
-*   ▶ Rocketman APT campaign, 'Operation Golden Bird' (March 20, 2013) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2205)
-*   ▶ Korea In The Crosshairs (Jan 16, 2018) - [blog.talosintelligence.com](https://blog.talosintelligence.com/2018/01/korea-in-crosshairs.html)
-*   ▶FreeMilk: A Highly Targeted Spear Phishing Campaign (Oct 5, 2017) - [unit42.paloaltonetworks.com](https://unit42.paloaltonetworks.com/unit42-freemilk-highly-targeted-spear-phishing-campaign/)
+### By Country Focus
 
-### APT Group: baby related kimsuky
+*   **Group123:** Campaigns and attacks.
+*   **Kimsuky:** Campaigns
+*   **Lazarus:** Campaigns, focusing on MAC attacks.
+*   **Konni:** Campaigns targeting various industries.
+*   **OceanLotus:** Analysis and reports on their techniques.
+*   **APT28:** Downloaders.
+*   **Turla:** PowerShell usage.
+*   **Tick:** Campaigns.
+*   **Winnti:** Recent attacks.
+*   **Jaku:** Analysis.
+*   **baby related kimsuky**
 
-*   ▶BabyShark Malware Part Two – Attacks Continue Using KimJongRAT and PCRat (April 26, 2019) - [unit42.paloaltonetworks.com](https://unit42.paloaltonetworks.com/babyshark-malware-part-two-attacks-continue-using-kimjongrat-and-pcrat/)
-*   ▶Operation Giant Baby, a giant threat (March 28, 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2223)
-*   ▶ Malicious code installed with coin purse program(Alibaba) (March 15, 2019) - [asec.ahnlab.com](https://asec.ahnlab.com/1209)
-*   ▶ New BabyShark Malware Targets U.S. National Security Think Tanks (Feb. 22, 2019) - [unit42.paloaltonetworks.com](https://unit42.paloaltonetworks.com/new-babyshark-malware-targets-u-s-national-security-think-tanks/)
-*   ▶ Korea's latest APT attack, Operation Mystery Baby Attention! (Feb 11, 2018) - [blog.alyac.co.kr](https://blog.alyac.co.kr/1963)
-*   ▶ Returned to Korea as Operation Baby Coin, APT attacker, overseas target in 2010 (Apr. 19, 2014) - [blog.alyac.co.kr](https://blog.alyac.co.kr/1640)
+### By Region Focus
 
-### APT Group: kimsuky
+*   **Middle East Asia:** Coverage of groups like Muddywater and ZooPark.
 
-*   ▶Kimsuky, Blue House Green Support / Sangchunjae Estimate - [blog.alyac.co.kr](https://blog.alyac.co.kr/2645)
-*   ▶Kimsuky, cyber security bureau Cryptographic Cases (May 28 , 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2338)
-*   ▶Kimsuky, Korea Cryptographic Exchange Event Impersonation APT Attack (May 28 , 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2336)
-*   ▶Kimsuky  'Fake striker' APT campaign aimed at Korea (May 20 , 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2315)
-*   ▶ Analysis of "Smoke Screen" in APT campaign aimed at Korea and America (April 17 , 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2243)
-*   ▶ Encrypted APT attack, Kimsuky organization's 'smoke screen' PART 2 (May 13 , 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2299)
-*   ▶ Kimsuky Organization, Operation Stealth Power Silence Operation (April 3 , 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2234)
-*   ▶ Kimsuky Organization, Watering Hole Started "Operation Low Kick"(March 21, 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2209)
+### By Industry Focus (Finance)
 
-### APT Group: Jaku
+*   **CARBANAK:**  Financial threats.
+*   **London Blue:** Attacks and evolving tactics.
+*   **Fin6:** Intrusion campaigns.
+*   **Fin7:** Global criminal operations.
 
-*   ▶ SiliVaccine: Inside North Korea’s Anti-Virus (May 1, 2018) - [research.checkpoint.com](https://research.checkpoint.com/silivaccine-a-look-inside-north-koreas-anti-virus/)
+## Contributing
 
-### APT Group: Lazarus
+Contributions to enhance this resource are welcome. If you have relevant reports, samples, or analysis that you would like to add, please consider contributing by following the instructions in the repo.
 
-*   ▶Lazarus Group Goes 'Fileless'，an implant w/ remote download & in-memory execution - [objective-see.com](https://objective-see.com/blog/blog_0x51.html)
-*   ▶LAZARUS APT TARGETS MAC USERS WITH POISONED WORD DOCUMENT - [sentinelone.com](https://www.sentinelone.com/blog/lazarus-apt-targets-mac-users-poisoned-word-document/)
-
-### APT Group: Konni
-
-*   ▶Konni's APT Group conducts attacks with Russian-North Korean trade and economic investment documents - [blog.alyac.co.kr](https://blog.alyac.co.kr/2535)
-*   ▶APT Campaign 'Konni' & 'Kimsuky' find commonality in organizations (June 10, 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2347)
-*   ▶Korean Kusa Konni Organization, Blue Sky Utilizing 'Amadey' Russia Botnet  (May 16, 2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2308)
-*   ▶The Konni APT Campaign and 'Operation Hunter Adonis' (Jan 1 ,2019) - [blog.alyac.co.kr](https://blog.alyac.co.kr/2061)
-
-### APT Group: Oceanlotus
-
-*   ▶Threat Spotlight: Ratsnif - New Network Vermin from OceanLotus (July 1, 2019) - [threatvector.cylance.com](https://threatvector.cylance.com/en_us/home/threat-spotlight-ratsnif-new-network-vermin-from-oceanlotus.html)
-*   ▶Analysis report on the attack on mobile devices by Oceanlotus (May 24, 2019) - [mp.weixin.qq.com](https://mp.weixin.qq.com/s/L-tCvLPOOMhP0ndgdqhkNQ)
-*   ▶ Oceanlotus in the first quarter of 2019 for the attack technology of China.(April 24, 2019) - [mp.weixin.qq.com](https://mp.weixin.qq.com/s/xPsEXp2J5IE7wNSMEVC24A)
-*   ▶ Deobfuscating APT32 Flow Graphs with Cutter and Radare2 (April 24, 2019) - [research.checkpoint.com](https://research.checkpoint.com/deobfuscating-apt32-flow-graphs-with-cutter-and-radare2/)
-*   ▶ OceanLotus Steganography Malware Analysis White Paper (April 2 , 2019) - [threatvector.cylance.com](https://threatvector.cylance.com/en_us/home/report-oceanlotus-apt-group-leveraging-steganography.html)
-*   ▶OceanLotus: macOS malware update(April 9 , 2019) - [welivesecurity.com](https://www.welivesecurity.com/2019/04/09/oceanlotus-macos-malware-update/)
-
-### APT Group: APT28
-
-*   ▶ CB TAU Threat Intelligence Notification: Hunting APT28 Downloaders  (April 5 , 2019) - [carbonblack.com](https://www.carbonblack.com/2019/04/05/cb-threat-intelligence-notification-hunting-apt28-downloaders/)
-
-### APT Group: Turla
-
-*   ▶ A dive into Turla PowerShell usage (May 29 , 2019) - [welivesecurity.com](https://www.welivesecurity.com/2019/05/29/turla-powershell-usage/)
-
-### APT Group: tick
-
-*   ▶ tick group new campaign, attack north korean and japan (April 1 , 2019) - [ahnlab.com](https://www.ahnlab.com/kr/site/securityinfo/secunews/secuNewsView.do?curPage=1&menu_dist=2&seq=28186)
-
-### APT Group: Winnti
-
-*   ▶ bayer-says-has-detected-contained-cyber-attack (April 5 , 2019) - [reuters.com](https://www.reuters.com/article/us-bayer-cyber/bayer-says-has-detected-contained-cyber-attack-idUSKCN1RG0NN)
-*   [tagesschau.de](https://www.tagesschau.de/inland/hackerangriff-bayer-101.html)
-
-## Middle East Asia
-
-### APT Group: Muddywater
-
-*   ▶ Recent MuddyWater-associated BlackWater campaign shows signs of new anti-detection techniques(May 20,2019) - [blog.talosintelligence.com](https://blog.talosintelligence.com/2019/05/recent-muddywater-associated-blackwater.html)
-
-### APT Group: ZooPark
-
-*   ▶ APT-C-38 attack activity revealed (May 27,2019) - [blogs.360.cn](http://blogs.360.cn/post/analysis-of-APT-C-38.html)
-
-## APT Groups for finance
-
-### APT Group: CARBANAK
-
-*   ▶ CARBANAK Week Part One: A Rare Occurrence (April 22, 2019) - [fireeye.com](https://www.fireeye.com/blog/threat-research/2019/04/carbanak-week-part-one-a-rare-occurrence.html)
-
-### APT Group: londonblue (Nigeria)
-
-*   ▶ Evolving Tactics: London Blue Starts Spoofing Target Domains (April 4 , 2019) - [agari.com](https://www.agari.com/email-security-blog/london-blue-evolving-tactics/)
-
-### APT Group: Fin6
-
-*   ▶ Pick-Six: Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware(April 5 , 2019) - [fireeye.com](https://www.fireeye.com/blog/threat-research/2019/04/pick-six-intercepting-a-fin6-intrusion.html)
-
-### APT Group: Fin7
-
-*   ▶ On the Hunt for FIN7: Pursuing an Enigmatic and Evasive Global Criminal Operation (August 01, 2018) - [fireeye.com](https://www.fireeye.com/blog/threat-research/2018/08/fin7-pursuing-an-enigmatic-and-evasive-global-criminal-operation.html)
+---

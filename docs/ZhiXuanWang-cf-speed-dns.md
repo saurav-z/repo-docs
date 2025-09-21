@@ -1,44 +1,44 @@
-# Optimize Your Cloudflare CDN Performance with cf-speed-dns
+# cf-speed-dns: Automatically Find and Utilize the Fastest Cloudflare IPs
 
-**Tired of slow website loading speeds?**  This tool helps you find and automatically use the fastest Cloudflare IP addresses for optimal performance.  (See the original repository [here](https://github.com/ZhiXuanWang/cf-speed-dns).)
+**Tired of slow website loading speeds?**  cf-speed-dns automatically identifies and updates your Cloudflare DNS with the quickest IPs, optimizing your website's performance. ([See the original repo](https://github.com/ZhiXuanWang/cf-speed-dns))
 
 ## Key Features:
 
-*   **Real-time Cloudflare IP Optimization:** Automatically identifies and utilizes the fastest Cloudflare IPs.
-*   **Optimized IP Lists:**  Provides updated lists of the best-performing IPs, including top-performing IPs and top 10 lists.
-*   **DNSPOD Integration:**  Integrates with DNSPOD to automatically update your DNS records with the optimized IP addresses. (Requires configuration, see below)
-*   **DNSCF Integration:**  Integrates with Cloudflare to automatically update your DNS records with the optimized IP addresses. (Requires configuration, see below)
-*   **PUSHPLUS Notifications:**  Receive notifications via PUSHPLUS to stay informed about IP updates and performance.
-*   **Easy-to-Use API:** Simple API endpoints for accessing the top-performing IPs.
+*   **Real-time Cloudflare IP Optimization:**  Continuously updates your DNS with the fastest Cloudflare IPs, improving website loading times.
+*   **Pre-built IP Lists:** Access pre-compiled lists of optimized IPs.
+    *   Top IPs: [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html)
+    *   Top 10 IPs: [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html)
+    *   Full List: [https://ip.164746.xyz](https://ip.164746.xyz)
+*   **DNSPOD and DNSCF Integration:**  Automated DNS updates for DNSPOD and DNSCF.  Easy configuration via GitHub Actions.
+*   **PUSHPLUS Notification Support:** Receive notifications about IP updates and potential issues via PUSHPLUS.
+*   **Simple API Access:** Easily retrieve the top Cloudflare IPs for use in other applications.
 
-## Configuration for DNS Updates (Requires Forking the Project):
+## Configuration via GitHub Actions:
 
-To leverage the automatic DNS update features, you'll need to fork this project and configure the following secrets in your GitHub Actions settings:
+Configure your DNS settings using GitHub Actions secrets and variables. The available integrations are:
 
-*   **DNSPOD Integration (Choose one):**
-    *   `DOMAIN`: Your domain name (e.g., `164746.xyz`).
-    *   `SUB_DOMAIN`: Your subdomain (e.g., `dns`).
-    *   `SECRETID`: Your DNSPOD Secret ID.
-    *   `SECRETKEY`: Your DNSPOD Secret Key.
-    *   `PUSHPLUS_TOKEN`: Your PUSHPLUS notification token.
-*   **Cloudflare DNS Integration (Choose one):**
+*   **DNSPOD:**
+    *   `DOMAIN`: Your domain name (e.g., `164746.xyz`)
+    *   `SUB_DOMAIN`: Your subdomain (e.g., `dns`)
+    *   `SECRETID`: Your DNSPOD Secret ID
+    *   `SECRETKEY`: Your DNSPOD Secret Key
+    *   `PUSHPLUS_TOKEN`: (Optional) Your PUSHPLUS token for notifications.
+
+*   **DNSCF:**
     *   `CF_API_TOKEN`: Your Cloudflare API Token.
     *   `CF_ZONE_ID`: Your Cloudflare Zone ID.
-    *   `CF_DNS_NAME`: Your Cloudflare DNS record name (e.g., `dns.164746.xyz`).
-    *   `PUSHPLUS_TOKEN`: Your PUSHPLUS notification token.
+    *   `CF_DNS_NAME`:  Your DNS record name (e.g., `dns.164746.xyz`).
+    *   `PUSHPLUS_TOKEN`: (Optional) Your PUSHPLUS token for notifications.
 
-## API Endpoints:
+## API Endpoint:
 
-*   **Top IPs (Default):** `https://ip.164746.xyz/ipTop.html`
-*   **Top 10 IPs:** `https://ip.164746.xyz/ipTop10.html`
-
-**Example API Request:**
+Get the top Cloudflare IPs:
 
 ```bash
 curl 'https://ip.164746.xyz/ipTop.html'
 ```
 
-**Example API Response:**
+### API Response Example
 
 ```
 104.16.204.6,104.18.103.125
@@ -46,11 +46,9 @@ curl 'https://ip.164746.xyz/ipTop.html'
 
 ## Acknowledgements
 
-This project utilizes code and inspiration from:
-
 *   [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
 *   [ddgth](https://github.com/ddgth/cf2dns)
 
-## Advertising
+## Supporting the Project
 
 [![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")

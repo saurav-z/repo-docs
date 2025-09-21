@@ -1,25 +1,30 @@
-# All the Places: Scrape and Aggregate Point of Interest (POI) Data
+# All the Places: Scrape & Gather Point of Interest (POI) Data
 
-**All the Places is a powerful open-source project dedicated to generating comprehensive point of interest (POI) data by scraping store location pages across the web.** (Original repo: [https://github.com/alltheplaces/alltheplaces](https://github.com/alltheplaces/alltheplaces))
+**All the Places is an open-source project that leverages web scraping to collect and standardize point-of-interest (POI) data from various websites.**
 
-This project uses `scrapy`, a popular Python-based web scraping framework, to extract POI data from websites with store locators, publishing the results in a standardized format.
+[View the project on GitHub](https://github.com/alltheplaces/alltheplaces/)
 
-## Key Features:
+## Key Features
 
-*   **Automated Web Scraping:** Leverages `scrapy` to automatically extract POI data from various websites.
-*   **Standardized Data Output:** Publishes scraped data in a consistent, easily usable format.
-*   **Extensible:** Designed to accommodate new websites and data sources through the addition of new spiders.
-*   **Open Source:**  Built on open-source principles with community contributions.
-*   **Regularly Updated Data:**  Data is published regularly to [alltheplaces.xyz](https://www.alltheplaces.xyz/).
-*   **Contribution friendly:**  Guides to help users develop and contribute spiders
+*   **Automated POI Data Extraction:** Scrapes websites with store location pages to extract valuable POI data.
+*   **Standardized Data Format:**  Outputs data in a consistent format for easy integration and use.
+*   **Built on Scrapy:** Utilizes the powerful and flexible Scrapy web scraping framework, a popular Python-based framework.
+*   **Open-Source & Community-Driven:**  Contribute to the project by writing spiders and improving data collection.
+*   **Weekly Data Updates:**  Provides regularly updated POI data, accessible through the [alltheplaces.xyz](https://www.alltheplaces.xyz/) website.
 
 ## Getting Started
 
-Follow these instructions to set up and run the project on your local machine.
+Follow these steps to set up a development environment:
 
 ### Development Setup
 
-You can set up the project on different operating systems.
+Choose your preferred method:
+
+*   **Ubuntu:** Follow the instructions below.
+*   **macOS:** Follow the instructions below.
+*   **GitHub Codespaces:** Use the pre-configured cloud-based environment.
+    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alltheplaces/alltheplaces)
+*   **Docker:** Use the Docker instructions below.
 
 #### Ubuntu
 
@@ -30,25 +35,20 @@ You can set up the project on different operating systems.
     source $HOME/.local/bin/env
     ```
 
-2.  Clone the repository:
+2.  Clone the project:
 
     ```bash
     git clone git@github.com:alltheplaces/alltheplaces.git
     ```
 
-3.  Navigate to the project directory:
+3.  Install dependencies:
 
     ```bash
     cd alltheplaces
-    ```
-
-4.  Install dependencies:
-
-    ```bash
     uv sync
     ```
 
-5.  Verify the installation:
+4.  Test the installation:
 
     ```bash
     uv run scrapy
@@ -62,42 +62,31 @@ You can set up the project on different operating systems.
     brew install uv
     ```
 
-2.  Clone the repository:
+2.  Clone the project:
 
     ```bash
     git clone git@github.com:alltheplaces/alltheplaces.git
     ```
 
-3.  Navigate to the project directory:
+3.  Install dependencies:
 
     ```bash
     cd alltheplaces
-    ```
-
-4.  Install dependencies:
-
-    ```bash
     uv sync
     ```
 
-5.  Verify the installation:
+4.  Test the installation:
 
     ```bash
     uv run scrapy
     ```
 
-#### Codespaces
-
-You can use GitHub Codespaces to run the project. This is a cloud-based development environment that is created from the project's repository and includes a pre-configured environment with all the tools you need to develop the project. To use Codespaces, click the button below:
-
-    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alltheplaces/alltheplaces)
-
 #### Docker
 
-1.  Clone the repository:
+1.  Clone the project:
 
     ```bash
-    git clone git@github.com:alltheplaces/alltheplaces.git
+    git clone git@github.com/alltheplaces/alltheplaces.git
     ```
 
 2.  Build the Docker image:
@@ -115,7 +104,7 @@ You can use GitHub Codespaces to run the project. This is a cloud-based developm
 
 ## Contributing Code
 
-Contribute to the project and improve the breadth and depth of POI data. Find information on:
+We welcome contributions!  Check out these guides to help you develop spiders:
 
 *   [What should I call my spider?](docs/SPIDER_NAMING.md)
 *   [Using Wikidata and the Name Suggestion Index](docs/WIKIDATA.md)
@@ -126,14 +115,14 @@ Contribute to the project and improve the breadth and depth of POI data. Find in
 
 ## The Weekly Run
 
-The project's data is published weekly on [alltheplaces.xyz](https://www.alltheplaces.xyz/). We encourage users not to run all spiders to avoid excessive requests to the source websites.
+The project's output is regularly published on [alltheplaces.xyz](https://www.alltheplaces.xyz/).
 
-## Contact Us
+## Contact
 
-For communication and discussions, please use the project's GitHub [issue tracker](https://github.com/alltheplaces/alltheplaces/issues). Many contributors also engage on the [#alltheplaces](https://osmus.slack.com/archives/C07EY4Y3M6F) channel on OSM US Slack.
+*   **GitHub Issues:**  Use the [issue tracker](https://github.com/alltheplaces/alltheplaces/issues) for communication.
+*   **OSM US Slack:** Join the [#alltheplaces](https://osmus.slack.com/archives/C07EY4Y3M6F) channel on OSM US Slack.
 
 ## License
 
-The data generated by our spiders is provided [on our website](https://alltheplaces.xyz/) and released under [Creative Commons’ CC-0 waiver](https://creativecommons.org/publicdomain/zero/1.0/).
-
-The [spider software that produces this data](https://github.com/alltheplaces/alltheplaces) (this repository) is licensed under the [MIT license](https://github.com/alltheplaces/alltheplaces/blob/master/LICENSE).
+*   **Data:** Released under [Creative Commons’ CC-0 waiver](https://creativecommons.org/publicdomain/zero/1.0/).
+*   **Spider Software:** Licensed under the [MIT license](https://github.com/alltheplaces/alltheplaces/blob/master/LICENSE).

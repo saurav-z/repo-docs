@@ -1,34 +1,35 @@
-# Wind Waker Randomizer: Re-Experience the Classic in a Whole New Way
+# Wind Waker Randomizer: Unleash a Fresh Adventure!
 
-Ready to rediscover *The Legend of Zelda: The Wind Waker*? The **Wind Waker Randomizer** [Check out the original repo](https://github.com/LagoLunatic/wwrando) allows you to randomize item locations, creating a fresh and unpredictable adventure every time you play.
+Dive into a whole new *Legend of Zelda: Wind Waker* experience with the Wind Waker Randomizer!  This tool completely reshapes your gameplay, offering randomized item locations, an open-world structure from the start, and enhanced gameplay features for a unique and exciting playthrough.  ([Original Repo](https://github.com/LagoLunatic/wwrando))
 
 ## Key Features:
 
-*   **Randomized Item Placement:** Every playthrough is unique, with items in new and unexpected locations.
-*   **Open World Gameplay:** Explore the world from the start with no restrictions.
-*   **Streamlined Experience:** Enjoy faster sailing and text speeds, and fewer cutscenes.
-*   **Guaranteed Completion:** The randomizer ensures every seed is beatable without requiring glitches.
-*   **Customizable Randomization:** Control where progress items can appear, tailoring the difficulty and experience.
+*   **Randomized Item Locations:** Every playthrough features a unique distribution of items, keeping you on your toes.
+*   **Open World from the Start:** Explore the Great Sea with complete freedom right from the beginning.
+*   **Enhanced Gameplay:** Enjoy faster sailing and text speeds for a more streamlined experience.
+*   **Customizable Difficulty:** Limit item locations to specific area types (dungeons, caves, etc.) to tailor your challenge.
+*   **Guaranteed Completable:** The randomizer ensures every seed is beatable without glitches.
 
 ## Getting Started:
 
-1.  **Download:** [Download the latest version](https://github.com/LagoLunatic/wwrando/releases/latest).
-2.  **Compatibility:** The randomizer supports the North American GameCube version of *The Legend of Zelda: The Wind Waker* (MD5: d8e4d45af2032a081a0f446384e9261b). European and Japanese versions, and *Wind Waker HD* are not supported.
-3.  **Website:** For detailed instructions and FAQs, visit the [official website](https://lagolunatic.github.io/wwrando/).
+1.  **Download the Randomizer:** [https://github.com/LagoLunatic/wwrando/releases/latest](https://github.com/LagoLunatic/wwrando/releases/latest)
+2.  **Important:** Make sure you have the North American GameCube version of The Wind Waker (MD5: d8e4d45af2032a081a0f446384e9261b). This is the only supported version.
+3.  **Learn More:** Visit the official website for detailed instructions: [https://lagolunatic.github.io/wwrando/](https://lagolunatic.github.io/wwrando/)
 
 ## Troubleshooting:
 
-*   **Antivirus Issues:** If the randomizer doesn't launch, your antivirus may be blocking it. Add an exception for the randomizer in your antivirus settings.
-*   **Getting Stuck:** Consult the [FAQ](https://lagolunatic.github.io/wwrando/faq/) on the official website. If you believe you've found a bug, please report it on [GitHub](https://github.com/LagoLunatic/wwrando/issues), including your seed's permalink.
+*   **Antivirus Issues:** If the randomizer fails to launch or is flagged as malware, add an exception for it in your antivirus software.
+*   **Getting Stuck:** Consult the FAQ page: [https://lagolunatic.github.io/wwrando/faq/](https://lagolunatic.github.io/wwrando/faq/) and the spoiler log. If you still encounter a bug, please report it on the [issues page](https://github.com/LagoLunatic/wwrando/issues), including the seed's permalink.
 
-## Join the Community:
+## Community & Support:
 
-*   **Discord:** Connect with other players, ask questions, and find people to play with on the [official Discord server](https://discord.gg/r2963mt).
+*   **Join the Discord:** Get help, find people to play with, and stay up-to-date on the latest news: [https://discord.gg/r2963mt](https://discord.gg/r2963mt)
 
 ## Credits:
 
-The Wind Waker Randomizer is the work of LagoLunatic, with contributions from a dedicated team (listed in the original README).
+*   LagoLunatic (Creator & Programmer)
+*   **Contributors:** Aelire, CryZe, EthanArmbrust, Fig, Gamma / SageOfMirrors, Hypatia, JarheadHME, LordNed, MelonSpeedruns, nbouteme, tanjo3, TrogWW, wooferzfg
 
 ## Running from Source (Advanced Users):
 
-Instructions for running the randomizer from source are available in the original README.
+Instructions are provided in the original README for users interested in development.

@@ -1,30 +1,34 @@
-[![Windows Compatibility](https://img.shields.io/badge/Windows-10%2C%2011-blue)](https://github.com/Emy69/CoomerDL)
-[![Downloads](https://img.shields.io/github/downloads/emy69/CoomerDL/total)](https://github.com/Emy69/CoomerDL/releases)
+<!-- Improved README for Coomer Downloader App -->
 
-# Coomer Downloader: Easily Download Images & Videos (Python App)
+![Windows Compatibility](https://img.shields.io/badge/Windows-10%2C%2011-blue)
+![Downloads](https://img.shields.io/github/downloads/emy69/CoomerDL/total)
 
-**Tired of manually saving images and videos?** Coomer Downloader is a user-friendly Python application designed to effortlessly download content from various URLs. ([See the original repo](https://github.com/Emy69/CoomerDL))
+# Coomer Downloader App: Download Images and Videos with Ease
+
+**Tired of manually downloading images and videos?** Coomer Downloader App is a user-friendly Python-based desktop application that simplifies downloading media from various URLs. Access the original repository on [GitHub](https://github.com/Emy69/CoomerDL).
 
 ---
 
 ## Key Features
 
-*   **Simplified Downloading:** Paste a URL and let the app handle the rest.
-*   **Multithreaded Downloads:** Experience faster download speeds with concurrent downloads.
-*   **Real-time Progress:** Get instant updates on download progress.
-*   **Efficient Queue Management:** Manage large download queues effectively.
-*   **Wide File Type Support:** Download a variety of media types, including images, videos, and documents.
+*   **Multithreaded Downloads:** Experience faster downloads with concurrent threads.
+*   **Real-time Progress Feedback:** Stay informed with real-time download progress updates.
+*   **Efficient Queue Management:** Effortlessly handle large download queues.
+*   **Intuitive GUI:** Simply paste a URL and let the app do the work.
+*   **Supports Multiple File Types:** Downloads a wide variety of media.
 
-    *   **Videos:** `.mp4`, `.mkv`, `.webm`, `.mov`, `.avi`, `.flv`, `.wmv`, `.m4v`
-    *   **Images:** `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.tiff`
-    *   **Documents:** `.pdf`, `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`
-    *   **Compressed:** `.zip`, `.rar`, `.7z`, `.tar`, `.gz`
+---
+
+## Supported File Types
+
+*   **Videos:** `.mp4`, `.mkv`, `.webm`, `.mov`, `.avi`, `.flv`, `.wmv`, `.m4v`
+*   **Images:** `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.tiff`
+*   **Documents:** `.pdf`, `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`
+*   **Compressed:** `.zip`, `.rar`, `.7z`, `.tar`, `.gz`
 
 ---
 
 ## Supported Websites
-
-Coomer Downloader supports downloading from these popular sites:
 
 *   [coomer.su](https://coomer.su/)
 *   [kemono.su](https://kemono.su/)
@@ -35,27 +39,25 @@ Coomer Downloader supports downloading from these popular sites:
 
 ---
 
-## Support the Project
+## Support the Developer
 
-If you find Coomer Downloader helpful, your support is greatly appreciated!
+If you find this tool helpful, please consider supporting the developer:
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00.svg?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/emy_69)
 [![Support on Patreon](https://img.shields.io/badge/Support%20on%20Patreon-FF424D.svg?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/emy69)
 
 ---
 
-## CLI Tools
+## Command-Line Tools (CLI)
 
-Explore these command-line interface (CLI) tools for alternative ways to download content:
+For users who prefer command-line interfaces, explore these related projects:
 
-*   **[Coomer CLI](https://github.com/Emy69/Coomer-cli)**: A CLI tool for downloading media from Coomer and similar sites, offering customizable options.
-*   **[Simpcity CLI](https://github.com/Emy69/SimpCityCLI)**: A CLI tool specifically designed for downloading media from Simpcity, with many of the same features as Coomer CLI.
+*   **[Coomer CLI](https://github.com/Emy69/Coomer-cli):** A powerful CLI tool for downloading media from Coomer and similar sites. Includes customizable options for file naming, download modes, rate limiting, and checksum verification.
+*   **[Simpcity CLI](https://github.com/Emy69/SimpCityCLI):** A dedicated CLI tool for downloading media from Simpcity, featuring similar functionality to Coomer CLI, tailored for the Simpcity platform.
 
 ---
 
 ## Language Support
-
-The application offers support for multiple languages:
 
 *   [Español](#)
 *   [English](#)
@@ -66,9 +68,9 @@ The application offers support for multiple languages:
 
 ---
 
-## Community
+## Join the Community
 
-Join the community and connect with other users!
+Have questions, suggestions, or just want to connect? Join the Discord server:
 
 [![Join Discord](https://img.shields.io/badge/Join-Discord-7289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ku8gSPsesh)
 
@@ -76,24 +78,21 @@ Join the community and connect with other users!
 
 ## Downloads
 
-Download the latest version from the [Releases Page](https://github.com/Emy69/CoomerDL/releases).
+*   **Latest Version:** Download the newest version from the [Releases Page](https://github.com/Emy69/CoomerDL/releases).
 
 ---
 
-## Getting Started
+## How to Use
 
-1.  **Download:** Get the latest release from the [Releases Page](https://github.com/Emy69/CoomerDL/releases).
-2.  **Run:** Launch the application.
-3.  **Paste URL:** Paste the URL of the image or video.
-4.  **Download:** Click the "Download" button.
+1.  **Launch the Application:** Open the Coomer Downloader App.
+2.  **Paste the URL:** Copy and paste the URL of the image or video.
+3.  **Click Download:** Initiate the download process and monitor the progress.
 
 ![Usage GIF](https://github.com/Emy69/CoomerDL/blob/main/resources/screenshots/0627.gif)
 
 ---
 
-## Installation Guide
-
-Follow these steps to install and run the application from the source code:
+## Installation
 
 1.  **Clone the Repository:**
 
@@ -117,4 +116,3 @@ Follow these steps to install and run the application from the source code:
 
     ```sh
     python main.py
-    ```

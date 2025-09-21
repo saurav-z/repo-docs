@@ -1,32 +1,46 @@
 # Wiseflow: Your AI-Powered Chief Intelligence Officer
 
-**Uncover crucial insights from vast information sources using large language models.** ([Original Repository](https://github.com/TeamWiseFlow/wiseflow))
+**[English](README_EN.md) | [日本語](README_JP.md) | [한국어](README_KR.md) | [Deutsch](README_DE.md) | [Français](README_FR.md) | [العربية](README_AR.md)**
 
-Wiseflow empowers you to filter the noise and extract valuable insights from massive datasets, helping you stay informed and ahead.
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/TeamWiseFlow/wiseflow)
 
-**Key Features:**
+**Wiseflow helps you cut through the noise and uncover crucial insights from the vast ocean of information, using advanced AI to gather, filter, and deliver what matters most to you.**
 
-*   **Web Scraping & Content Aggregation:** Gather information from websites, social media (Weibo, Kuaishou), RSS feeds, and search engines (Bing, GitHub, Arxiv).
-*   **AI-Driven Information Extraction:** Leverage large language models to analyze and extract relevant information based on your focus points, even from local Chrome browsers.
-*   **Customizable Search Sources:** Refine your information gathering with tailored search sources like Bing, GitHub, and Arxiv.
-*   **Role-Based Analysis:** Guide LLMs to analyze information from a specific perspective or with a defined purpose for more tailored results.
-*   **Custom Extraction Forms:** Create and apply custom forms for precise data extraction and structured results.
-*   **Social Media Creator Search:** Locate content creators and their information on social media platforms based on your focus points.
-*   **LLM Model Recommendations:** Get guidance on the best LLM models for optimal performance and cost efficiency.
-*   **Wide Search Approach:** Efficiently collect a broad range of information for tasks like industry intelligence, background checks, and lead generation, designed specifically for "wide search" scenarios.
-*   **PocketBase Integration:** All scraped data is instantly stored in PocketBase, allowing easy access and integration into your own applications.
+[Original Repository](https://github.com/TeamWiseFlow/wiseflow)
 
-## What's New in Version 4.2?
+## Key Features
 
-Wiseflow 4.2 significantly enhances web scraping capabilities by leveraging your local Chrome browser, increasing reliability and enabling features like persistent user data and script support.  Refer to the [CHANGELOG](CHANGELOG.md) for a complete list of changes.
+*   **Web Scraping:** Efficiently extracts data from various sources, including websites, social media platforms (Weibo, Kuaishou), RSS feeds, and search engines.
+*   **Customizable Search:** Configure search sources like Bing, GitHub, and arXiv to precisely target your information needs.
+*   **AI-Driven Insights:** Leverage LLMs to analyze and extract key information, enabling you to define roles and objectives for tailored analysis.
+*   **Custom Extraction:** Create custom forms to structure data extraction and find potential clients, partners, or investors via social media.
+*   **Chrome Integration:** Version 4.2 uses your local Chrome browser to enhance scraping capabilities, reduce detection, and support persistent logins.
+*   **Flexible LLM Compatibility:** Works with various LLMs compatible with the OpenAI API format, including local deployments via Ollama.
 
-## Get Started Quickly
+## What's New in Wiseflow 4.2?
 
-**Follow these three steps to begin using Wiseflow!**
+Wiseflow 4.2 enhances web scraping and offers:
 
-**Important:**  From version 4.2 onwards, you must have Google Chrome installed with the default installation path.
+*   **Local Chrome Browser Integration:** Improved scraping with your local Chrome browser.
+*   **Enhanced Search Engine Options:** Improved search engine support
+*   **Proxy Support:** Provides a complete proxy solution.
 
-**Windows users:** Download the git bash tool.  [bash download link](https://git-scm.com/downloads/win)
+## Why Choose Wiseflow?
+
+Wiseflow stands out from the crowd with its:
+
+*   **Comprehensive Source Coverage:** From web pages to social media, Wiseflow gathers data from many sources.
+*   **Intelligent HTML Processing:** LLMs analyze the content and prioritize relevant information.
+*   **Adaptive AI Approach:** LLMs are integrated throughout the data gathering process, to help stay under the radar of platform monitoring.
+*   **User-Friendly Design:** Designed for ease of use without requiring developer-level expertise.
+*   **Continuous Improvement:** High stability, efficiency, and system resource management through continuous updates.
+*   **Focus on Wide Search:** Ideal for broad information gathering, unlike the narrow focus of deep search tools.
+
+## Getting Started
+
+**Follow these three steps to start using Wiseflow:**
+
+**Important:**  You must install Google Chrome using the default installation path starting with version 4.2.
 
 ### 1. Clone the Repository & Install Dependencies
 
@@ -35,54 +49,57 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 git clone https://github.com/TeamWiseFlow/wiseflow.git
 ```
 
-Follow the instructions to install the Pocketbase program for your system from [pocketbase docs](https://pocketbase.io/docs/) to the [.pb](./pb/) folder.
+### 2. Set Up PocketBase
 
-or use install_pocketbase.sh (for MacOS/Linux) or install_pocketbase.ps1 (for Windows).
+Download the PocketBase program for your operating system from [PocketBase Docs](https://pocketbase.io/docs/) and place it in the `.pb/` directory.
 
-### 2. Configure Your Environment
+You can also use `install_pocketbase.sh` (MacOS/Linux) or `install_pocketbase.ps1` (Windows).
 
-Create a `.env` file in the root directory of the project by referencing the `env_sample` file, and fill in the necessary information.
-*   LLM_API_KEY=""
-*   LLM_API_BASE="https://api.siliconflow.cn/v1"
-*   PRIMARY_MODEL=ByteDance-Seed/Seed-OSS-36B-Instruct
-*   VL_MODEL=Pro/Qwen/Qwen2.5-VL-7B-Instruct
+### 3. Configure the .env File
 
-### 3. Run Wiseflow
+Create a `.env` file in the project root using the provided `env_sample` as a template.  Configure the following settings:
+
+```
+LLM_API_KEY="" # LLM API key (any provider with OpenAI API format; not needed for local Ollama)
+LLM_API_BASE="https://api.siliconflow.cn/v1" # LLM API endpoint (recommended: Siliconflow)
+PRIMARY_MODEL=ByteDance-Seed/Seed-OSS-36B-Instruct # Alternative: Qwen3-14B for cost-effectiveness
+VL_MODEL=Pro/Qwen/Qwen2.5-VL-7B-Instruct
+```
+
+### 4. Run Wiseflow
 
 ```bash
 cd wiseflow
-uv venv # Only needed the first time
+uv venv # Only required the first time
 source .venv/bin/activate  # Linux/macOS
 # Or on Windows:
 # .venv\Scripts\activate
-uv sync # Only needed the first time
-chmod +x run.sh # Only needed the first time
+uv sync # Only required the first time
+chmod +x run.sh # Only required the first time
 ./run.sh
 ```
 
-For detailed usage instructions, see [docs/manual/manual.md](./docs/manual/manual.md)
+Refer to [docs/manual/manual.md](./docs/manual/manual.md) for detailed usage instructions.
 
-## Integrate with Your Applications
+## Integrating with Your Applications
 
-Wiseflow's data is stored in PocketBase. You can use PocketBase's SDKs (Go/Javascript/Python) to interact with the database and access the scraped data.
+Access the scraped data in PocketBase by interacting with the database.  PocketBase offers SDKs in Go, JavaScript, and Python.
 
-Contribute and share your developments at: [wiseflow\_plus](https://github.com/TeamWiseFlow/wiseflow_plus)
+Share your applications in the [wiseflow_plus](https://github.com/TeamWiseFlow/wiseflow_plus) repository.
 
-## License
+## License & Contact
 
-The project is licensed under a new open-source license from version 4.2, please see [LICENSE](LICENSE).  For commercial collaborations, contact **Email：zm.zhao@foxmail.com**.
-
-## Contact
-
-For any questions or suggestions, please open an [issue](https://github.com/TeamWiseFlow/wiseflow/issues).
+*   **License:** [LICENSE](LICENSE)
+*   **Commercial Collaboration:**  Contact zm.zhao@foxmail.com
+*   **Issues/Suggestions:** [Issues](https://github.com/TeamWiseFlow/wiseflow/issues)
 
 ## Acknowledgements
 
-Wiseflow is built upon several excellent open-source projects.  (See original README for full list)
+Wiseflow is built on the following open-source projects: (list of projects from original README)
 
 ## Citation
 
-If you use or reference Wiseflow, please cite it as follows:
+Please cite Wiseflow if used in your projects:
 
 ```
 Author：Wiseflow Team

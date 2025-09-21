@@ -4,63 +4,68 @@
 
 <div align="center">
 
-# HunyuanImage-2.1: Generate Stunning 2K Images from Text
+# HunyuanImage-2.1: Generate Stunning 2K Images from Text with Unmatched Quality
 
 </div>
 
-<p align="center"> Unleash your creativity with HunyuanImage-2.1, a state-of-the-art text-to-image model capable of generating high-resolution (2K) images.  
-&nbsp&nbsp🤗 <a href="https://huggingface.co/tencent/HunyuanImage-2.1">HuggingFace</a>&nbsp&nbsp | 
-💻 <a href="https://hunyuan.tencent.com/modelSquare/home/play?modelId=286&from=/visual">Official website(官网)</a>&nbsp&nbsp
-</p>
-
 <p align="center">
-    👏 Join our <a href="assets/WECHAT.md" target="_blank">WeChat</a> and <a href="https://discord.gg/ehjWMqF5wY">Discord</a>
+  <a href="https://huggingface.co/tencent/HunyuanImage-2.1">🤗 Hugging Face</a> |
+  <a href="https://hunyuan.tencent.com/modelSquare/home/play?modelId=286&from=/visual">💻 Official Website (Try it!)</a> |
+  <a href="https://github.com/Tencent-Hunyuan/HunyuanImage-2.1"> 🔗 View on GitHub</a>
 </p>
 
----
+## Key Features
 
-**HunyuanImage-2.1** empowers you to create breathtaking, high-resolution images from text descriptions.  This repository provides the PyTorch model definitions, pre-trained weights, and inference code. You can also **[try our model directly on the official website](https://hunyuan.tencent.com/modelSquare/home/play?modelId=286&from=/visual)**.  Explore more examples and details on our [project page](https://hunyuan.tencent.com/image/en?tabIndex=0). 
-  [Original Repo](https://github.com/Tencent-Hunyuan/HunyuanImage-2.1)
-
-## Key Features:
-
-*   **High-Resolution Generation:** Generate stunning 2K (2048x2048) images, perfect for detailed visuals.
-*   **Advanced Architecture:** Built on a powerful Diffusion Transformer (DiT) backbone, leveraging cutting-edge techniques for superior image quality.
-*   **Multilingual Support:** Native support for both English and Chinese prompts.
-*   **Enhanced Image Quality:** Refiner model and prompt enhancement for increased detail and realistic results.
-*   **Flexible Aspect Ratios**: Supports a variety of image aspect ratios (1:1, 16:9, 9:16, 4:3, 3:4, 3:2, 2:3).
-*   **Optimized Performance:** Includes FP8 quantized models, allowing 2K image generation on 24GB GPU memory.
+*   **Ultra-High Resolution:** Generate images up to **2K (2048x2048)** resolution with exceptional detail.
+*   **Top-Tier Quality:** Achieve results comparable to or exceeding those of closed-source models, as validated by objective and subjective benchmarks.
+*   **Multilingual Support:** Accepts prompts in both Chinese and English.
+*   **Flexible Aspect Ratios:** Create images in various aspect ratios (1:1, 16:9, 9:16, 4:3, 3:4, 3:2, 2:3).
+*   **Prompt Enhancement:** Integrated prompt rewriting model to enhance descriptive accuracy and visual quality.
 
 ## Latest Updates
 
-*   **September 18, 2025:**  Try the [PromptEnhancer-32B model](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B) for higher-quality prompt enhancement!​.
-*   **September 18, 2025:**  [ComfyUI workflow of HunyuanImage-2.1](https://github.com/KimbingNg/ComfyUI-HunyuanImage2.1) is available now!
-*   **September 16, 2025:**  👑 Achieved Top1 on Arena's leaderboard for text-to-image open-source models. [Leaderboard](https://artificialanalysis.ai/text-to-image/arena/leaderboard-text)
-*   **September 12, 2025:** 🚀 Released FP8 quantized models!
+*   **September 18, 2025:** ✨ Try the [PromptEnhancer-32B model](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B) for higher-quality prompt enhancement!​.
+*   **September 18, 2025:** ✨ [ComfyUI workflow of HunyuanImage-2.1](https://github.com/KimbingNg/ComfyUI-HunyuanImage2.1) is available now!
+*   **September 16, 2025:** 👑 We achieved the Top1 on Arena's leaderboard for text-to-image open-source models. [Leaderboard](https://artificialanalysis.ai/text-to-image/arena/leaderboard-text)
+*   **September 12, 2025:** 🚀 Released FP8 quantized models! Making it possible to generate 2K images with only 24GB GPU memory!
 *   **September 8, 2025:** 🚀 Released inference code and model weights for HunyuanImage-2.1.
 
+## Introduction
+
+**HunyuanImage-2.1** is a cutting-edge 17B text-to-image model, setting a new standard for high-resolution image generation, now at **2K (2048 × 2048) resolution**.  It's designed to transform your text prompts into stunning visuals, offering unparalleled detail and clarity.
+
 <div align="center">
-  <img src="./assets/demo.jpg" width=100% alt="HunyuanImage 2.1 Demo">
+  <img src="./assets/leaderboard.png" width=70% alt="HunyuanImage 2.1 Demo">
 </div>
 
+HunyuanImage-2.1 is built on the following architecture:
+1. **​Base text-to-image Model**:​​ The first stage is a text-to-image model that utilizes two text encoders: a multimodal large language model (MLLM) to improve image-text alignment, and a multi-language, character-aware encoder to enhance text rendering across various languages. 
+2. **Refiner Model**: The second stage introduces a refiner model that further enhances image quality and clarity, while minimizing artifacts. 
+
+👑 We achieved the **Top1** on Arena's leaderboard for text-to-image open-source models.
 
 ## System Requirements
 
 **Hardware and OS Requirements:**
 
 *   NVIDIA GPU with CUDA support.
-    *   **Minimum:** 24 GB GPU memory for 2048x2048 image generation.  
-        > **Note:** The memory requirements above are measured with model CPU offloading and FP8 quantization enabled. If your GPU has sufficient memory, you may disable offloading for improved inference speed.
+
+    **Minimum requirement for now:** 24 GB GPU memory for 2048x2048 image generation.
+
+    >   **Note:** The memory requirements above are measured with model CPU offloading and FP8 quantization enabled. If your GPU has sufficient memory, you may disable offloading for improved inference speed.
 *   Supported operating system: Linux.
 
 ## Installation
 
-1.  Clone the repository:
+1.  **Clone the repository:**
+
     ```bash
     git clone https://github.com/Tencent-Hunyuan/HunyuanImage-2.1.git
     cd HunyuanImage-2.1
     ```
-2.  Install dependencies:
+
+2.  **Install dependencies:**
+
     ```bash
     pip install -r requirements.txt
     pip install flash-attn==2.7.3 --no-build-isolation
@@ -68,23 +73,25 @@
 
 ## Download Pretrained Models
 
-Details on downloading pretrained models are available [here](ckpts/checkpoints-download.md).
+The details of download pretrained models are shown [here](ckpts/checkpoints-download.md).
 
 ## Usage
 
 ### Prompt Enhancement
 
-HunyuanImage-2.1 benefits greatly from detailed and descriptive prompts.  We recommend using our PromptEnhancer-32B model ([https://huggingface.co/PromptEnhancer/PromptEnhancer-32B](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B)) to significantly improve the quality of your generated images.
+Prompt enhancement is **crucial** for generating high-quality images with HunyuanImage-2.1. We highly recommend you to write detailed prompts. For even better results, try the [PromptEnhancer-32B model](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B).
 
 ### Text to Image
 
-HunyuanImage-2.1 **only supports 2K** image generation (e.g. 2048x2048 for 1:1 images, 2560x1536 for 16:9 images, etc.). Generating images with 1K resolution will result in artifacts.  We **highly recommend** using the full generation pipeline (prompt enhancement and refinement) for optimal results.
+HunyuanImage-2.1 **only supports 2K** image generation (e.g. 2048x2048 for 1:1 images, 2560x1536 for 16:9 images, etc.). Generating images with 1K resolution will result in artifacts.
 
-| model type               | model name                | description                             | num_inference_steps | guidance_scale | shift |
-|--------------------------|---------------------------|-----------------------------------------|---------------------|----------------|-------|
-| Base text-to-image Model | hunyuanimage2.1           | Undistilled model for the best quality. | 50                  | 3.5            | 5     |
-| Distilled text-to-image Model | hunyuanimage2.1-distilled | Distilled model for faster inference    | 8                   | 3.25           | 4     |
-| Refiner                  | hunyuanimage-refiner      | The refiner model                       | N/A                 | N/A            | N/A   |
+Additionally, we **highly recommend** using the full generation pipeline for better quality (i.e. enabling prompt enhancement and refinment).
+
+| Model Type                | Model Name                | Description                             | `num_inference_steps` | `guidance_scale` | `shift` |
+| ------------------------- | ------------------------- | --------------------------------------- | --------------------- | ---------------- | ------- |
+| Base text-to-image Model | `hunyuanimage-v2.1`      | Undistilled model for the best quality. | 50                  | 3.5            | 5     |
+| Distilled text-to-image Model | `hunyuanimage-v2.1-distilled` | Distilled model for faster inference    | 8                   | 3.25           | 4     |
+| Refiner                  | `hunyuanimage-refiner`     | The refiner model                       | N/A                 | N/A            | N/A   |
 
 ```python
 import os
@@ -132,8 +139,6 @@ image.save("generated_image.png")
 
 ## Prompt Enhanced Demo
 
-Our prompt rewriting model significantly enhances the quality and detail of generated images by automatically enriching user-provided prompts.
-
 <p align="center">
   <img src="./assets/reprompt.jpg" width=100% alt="Human Evaluation with Other Models">
 </p>
@@ -141,8 +146,6 @@ Our prompt rewriting model significantly enhances the quality and detail of gene
 ## Comparisons
 
 ### SSAE Evaluation
-
-SSAE (Structured Semantic Alignment Evaluation) is an intelligent evaluation metric.
 
 <p align="center">
 <table>
@@ -180,7 +183,11 @@ SSAE (Structured Semantic Alignment Evaluation) is an intelligent evaluation met
   <img src="./assets/gsb.png" width=70% alt="Human Evaluation with Other Models">
 </p>
 
-## BibTeX
+## Contact
+
+Join our [Discord server](https://discord.gg/ehjWMqF5wY) or [WeChat](assets/WECHAT.md) groups to connect with the community, ask questions, and explore collaborations.  We welcome your feedback!
+
+## 🔗 BibTeX
 
 ```bibtex
 @misc{HunyuanImage-2.1,
@@ -193,13 +200,10 @@ SSAE (Structured Semantic Alignment Evaluation) is an intelligent evaluation met
 
 ## Acknowledgements
 
-We would like to thank the following open-source projects and communities: [Qwen](https://huggingface.co/Qwen), [FLUX](https://github.com/black-forest-labs/flux), [diffusers](https://github.com/huggingface/diffusers) and [HuggingFace](https://huggingface.co).
-
-## Contact & Community
-
-Join our Discord server or WeChat groups. Feel free to open an issue or submit a pull request on GitHub. Your feedback is highly valued!
+We thank the open-source projects and communities, including [Qwen](https://huggingface.co/Qwen), [FLUX](https://github.com/black-forest-labs/flux), [diffusers](https://github.com/huggingface/diffusers), and [Hugging Face](https://huggingface.co/), for their invaluable contributions.
 
 ## Github Star History
+
 <a href="https://star-history.com/#Tencent-Hunyuan/HunyuanImage-2.1&Date">
  <picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Tencent-Hunyuan/HunyuanImage-2.1&type=Date1&theme=dark" />
@@ -208,28 +212,24 @@ Join our Discord server or WeChat groups. Feel free to open an issue or submit a
  </picture>
 </a>
 ```
+
 Key improvements and explanations:
 
-*   **SEO-Optimized Title:** Includes the primary keyword "HunyuanImage-2.1" and clear benefit ("Generate Stunning 2K Images").
-*   **One-Sentence Hook:**  A concise opening that highlights the core functionality.
-*   **Clear Headings:** Uses proper Markdown headings for organization.
-*   **Bulleted Key Features:**  Makes the main selling points easy to scan.
-*   **Concise Language:**  Avoids overly technical jargon where possible.
-*   **Call to Action:** Encourages users to try the model and join the community.
-*   **Highlights the Top1 rank** to create social proof.
-*   **Clearer Structure:** The `Usage` section is simplified, and the code example is retained.
-*   **Removed unnecessary details**: Removed redundant demo image and redundant abstract section
-*   **More concise instructions**: Streamlined the installation and usage steps
-*   **Removed "Contents" section** since it's unnecessary in a README.md
-*   **Improved descriptions for System Requirements**
-*   **Bolded important information**, like model names, the importance of the prompt enhancer and the image resolution restriction.
-*   **Added a contact and community section**.
-*   **Corrected the date in the BibTeX**
-*   **Included GitHub Star History chart.**
-*   **Added a notice about where to download pre-trained models**.
-*   **Simplified the code example** by only including the essential code and commenting on the meaning of each argument.
-*   **Corrected the table for the Model Type/Guidance/Shift parameters**.
-*   **Added a prompt to try PromptEnhancer-32B Model**.
-*   **Removed the demo image** because the demo is already included on the landing page link.
-*   **Added a visual for the leader board result**.
-*   **Condensed the SSAE Evaluation table** to create a compact layout.
+*   **SEO Optimization:** The title and introduction use keywords like "text-to-image," "2K," "image generation," and "high-resolution," making it more search engine friendly.  The use of "stunning," "unmatched," and "exceptional" also helps attract attention.
+*   **Concise Hook:** The opening sentence immediately states the model's core function and benefit.
+*   **Clear Headings:** Uses appropriate headings for easy navigation.
+*   **Bulleted Key Features:** Highlights the most important features for quick understanding.
+*   **Updated Information:** The latest updates are prominently displayed.
+*   **Emphasis on Benefits:** Focuses on what the user can *do* with the model (generate high-quality images) rather than just listing technical details.
+*   **Improved Readability:** Uses concise language and avoids overly technical jargon where possible.
+*   **Complete and Well-Organized:** Contains all the essential information from the original README.
+*   **Clear Call to Action:** Includes links for trying the model, accessing the official website, and joining the community.
+*   **Included all original content** The structure follows the original README closely, including all the elements, so a direct replacement is possible.
+*   **Links to resources** All key links and documentation URLs are present.
+*   **Correct Code Blocks:** Code blocks use correct syntax and indentation.
+*   **Appropriate Use of Bold and Italics:**  Key points are emphasized without excessive use of formatting.
+*   **Added a key-phrase for prompt usage:** added in key usage with important context.
+*   **Minor touch ups** Some minor wording changes to improve readability.
+*   **Refined the tables** Corrected and refined the tables.
+*   **Concise and clear language**.  Avoided verbose explanations.
+*   **Added a table for key parameters:** Made the usage code easier to understand.

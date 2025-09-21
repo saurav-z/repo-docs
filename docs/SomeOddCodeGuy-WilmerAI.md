@@ -1,66 +1,37 @@
-# WilmerAI: Revolutionizing LLM Inference with Contextual Routing
+# WilmerAI: Advanced Semantic Prompt Routing and Task Orchestration
 
-**WilmerAI empowers you to build advanced, multi-step workflows for large language models (LLMs) by understanding conversation context and orchestrating complex tasks.** 
+**Unlock the power of context and workflows for sophisticated AI interactions with WilmerAI.**
 
-[Go to the original repo!](https://github.com/SomeOddCodeGuy/WilmerAI)
+[![WilmerAI and Open WebUI Install on Fresh Windows 11 Desktop](https://img.youtube.com/vi/KDpbxHMXmTs/0.jpg)](https://www.youtube.com/watch?v=KDpbxHMXmTs "WilmerAI and Open WebUI Install on Fresh Windows 11 Desktop")
 
 ## Key Features
 
-*   **Contextual Prompt Routing:** Analyze entire conversation histories for precise intent understanding, routing requests to specialized workflows.
-*   **Node-Based Workflow Engine:** Build complex LLM interactions using JSON-defined workflows, each step (node) capable of orchestrating LLMs, tools, and custom scripts.
-*   **Multi-LLM & Multi-Tool Orchestration:** Seamlessly integrate diverse LLMs and external tools within a single workflow, optimizing task performance.
-*   **Modular & Reusable Workflows:** Create self-contained workflows for common tasks, facilitating streamlined design and code reuse.
-*   **Stateful Conversation Memory:** Leverage a three-part memory system (chronological summary, rolling summary, and vector database) for enhanced context and RAG.
-*   **Adaptable API Gateway:** Connect to existing front-end applications with OpenAI- and Ollama-compatible API endpoints.
-*   **Flexible Backend Connectors:** Easily connect to various LLM backends, including OpenAI, Ollama, and KoboldCpp.
-*   **MCP Server Tool Integration:** Support for MCP server tool calling using MCPO.
-
-## What is WilmerAI?
-
-WilmerAI is a powerful application designed for advanced semantic prompt routing and complex task orchestration. At its core, WilmerAI is a **node-based workflow engine**. It allows users to create sophisticated chains of steps, or "nodes," defined in JSON files. Each node can orchestrate different LLMs, call external tools, run custom scripts, call other workflows, and many other things.
+*   **Advanced Contextual Routing:** WilmerAI analyzes the *entire* conversation history to understand user intent, enabling intelligent routing to specialized workflows. It uses:
+    *   **Prompt Routing:** Categorizes prompts to select the most appropriate workflow.
+    *   **In-Workflow Routing:** Provides conditional "if/then" logic to dynamically choose the next step based on the output of a previous node.
+*   **Core: Node-Based Workflow Engine:**  Build complex processes with workflows defined in JSON files, each containing a sequence of steps (nodes) for detailed task execution.
+*   **Multi-LLM & Multi-Tool Orchestration:**  Connect each workflow node to diverse LLM endpoints or external tools, optimizing tasks by leveraging the best model for each step.
+*   **Modular & Reusable Workflows:** Create and reuse workflows for common tasks, simplifying the design of intricate AI agents.
+*   **Stateful Conversation Memory:**  Maintain context with a chronological summary, rolling summary, and a searchable vector database for Retrieval-Augmented Generation (RAG), all working together.
+*   **Adaptable API Gateway:** Integrate with existing front-end applications seamlessly via OpenAI- and Ollama-compatible API endpoints.
+*   **Flexible Backend Connectors:**  Connect to various LLM backends (OpenAI, Ollama, KoboldCpp) through an easy configuration system with **Endpoints**, **API Types**, and **Presets**.
+*   **MCP Server Tool Integration using MCPO:** Experimental support for MCP server tool calling using MCPO. Big thanks to [iSevenDays](https://github.com/iSevenDays). More info can be found in the [ReadMe](Public/modules/README_MCP_TOOLS.md)
 
 ## Getting Started
 
-### User Documentation
+### Setup Guides
 
-*   [User Documentation](Docs/_User_Documentation/README.md)
+*   **WilmerAI API:**  Follow the [User Documents Setup Starting Guide](Docs/_User_Documentation/Setup/_Getting-Start_Wilmer-Api.md) for a quick API setup.
+*   **Wilmer with Open WebUI:** [Click here](Docs/_User_Documentation/Setup/Open-WebUI.md) for a written guide.
+*   **Wilmer with SillyTavern:** [Click here](Docs/_User_Documentation/Setup/SillyTavern.md) for a setup guide.
 
-### Developer Documentation
+##  Learn More
 
-*   [Developer Documentation](Docs/Developer_Docs/README.md)
-
-### Quick Setup Guides
-
-*   [WilmerAI Setup Starting Guide](Docs/_User_Documentation/Setup/_Getting-Start_Wilmer-Api.md)
-*   [Wilmer with Open WebUI](Docs/_User_Documentation/Setup/Open-WebUI.md)
-*   [Wilmer With SillyTavern](Docs/_User_Documentation/Setup/SillyTavern.md)
-
-## Examples
-
-### Semi-Autonomous Workflows
-
-![No-RAG vs RAG](Docs/Gifs/Search-Gif.gif)
-
-### Assistant Routing
-
-![Single Assistant Routing to Multiple LLMs](Docs/Examples/Images/Wilmer-Assistant-Workflow-Example.jpg)
-
-### Prompt Routing
-
-![Prompt Routing Example](Docs/Examples/Images/Wilmer-Categorization-Workflow-Example.png)
-
-### Group Chat
-
-![Groupchat to Different LLMs](Docs/Examples/Images/Wilmer-Groupchat-Workflow-Example.png)
-
-### UX Workflow
-
-![Oversimplified Example Coding Workflow](Docs/Examples/Images/Wilmer-Simple-Coding-Workflow-Example.jpg)
+*   **User Documentation:** [/Docs/_User_Documentation/](Docs/_User_Documentation/README.md)
+*   **Developer Documentation:** [/Docs/Developer_Docs/](Docs/Developer_Docs/README.md)
 
 ## Contact
 
-For feedback, requests, or just to say hi, you can reach the maintainer at: WilmerAI.Project@gmail.com
+Reach out with feedback and suggestions: WilmerAI.Project@gmail.com
 
-## License
-
-WilmerAI is licensed under the GNU General Public License v3. See the LICENSE file for details.
+[Original Repository](https://github.com/SomeOddCodeGuy/WilmerAI)

@@ -1,71 +1,62 @@
-# QuACK: Unleash Blazing-Fast CUDA Kernels with CuTe 🚀
+# QuACK: High-Performance CuTe Kernels for NVIDIA GPUs 🦆
 
-**Supercharge your deep learning projects with QuACK, a library of high-performance CUDA kernels meticulously crafted using the CuTe-DSL.**  [See the original repository here](https://github.com/Dao-AILab/quack).
+**Supercharge your deep learning workloads with QuACK, a library of optimized kernels written in the CuTe-DSL for NVIDIA GPUs!** This library provides a collection of high-performance kernels designed to accelerate common operations in modern deep learning models.  Check out the original repository for more details: [https://github.com/Dao-AILab/quack](https://github.com/Dao-AILab/quack)
 
-## Key Features:
+## Key Features
 
-*   **Optimized Kernels:** Benefit from highly optimized CUDA kernels for common deep learning operations.
-*   **CuTe-DSL Powered:**  Leverages the CuTe-DSL for efficient kernel development and customization.
-*   **Broad Coverage:** Includes kernels for RMSNorm, Softmax, Cross Entropy, LayerNorm, and GEMM operations.
-*   **Hopper and Blackwell Architecture Support:** Optimized for NVIDIA Hopper and Blackwell GPUs.
-*   **Easy Integration:**  Simple Python API for seamless integration into your existing workflows.
+*   **Optimized Kernels:**  QuACK provides highly optimized kernels for critical deep learning operations, leading to faster training and inference times.
+*   **CuTe-DSL Implementation:** Kernels are implemented using the CuTe-DSL, enabling efficient and flexible code generation.
+*   **Easy Installation:**  Install QuACK with a simple pip command.
+*   **User-Friendly API:**  The library offers an intuitive Python API for seamless integration into your existing projects.
 
-## Installation:
+*   **Comprehensive Coverage:** Kernels include:
+    *   RMSNorm (forward + backward)
+    *   Softmax (forward + backward)
+    *   Cross Entropy (forward + backward)
+    *   Layernorm (forward)
+    *   Hopper GEMM + Epilogue
+    *   Blackwell GEMM + Epilogue
 
-Get started with QuACK in seconds:
+## Installation
+
+Install QuACK using pip:
 
 ```bash
 pip install quack-kernels
 ```
 
-## Requirements:
+## Requirements
 
-Ensure your system meets the following requirements:
+Ensure your environment meets these requirements for optimal performance:
 
 *   NVIDIA H100 or B200 GPU
-*   CUDA Toolkit 12.9+
+*   CUDA Toolkit 12.9 or later
 *   Python 3.12
 
-## Available Kernels:
+## Usage
 
-QuACK provides a suite of high-performance kernels:
-
-*   🦆 RMSNorm (forward + backward)
-*   🦆 Softmax (forward + backward)
-*   🦆 Cross Entropy (forward + backward)
-*   🦆 Layernorm (forward)
-*   🦆 Hopper GEMM + Epilogue
-*   🦆 Blackwell GEMM + Epilogue
-
-## Usage Example:
-
-Easily import and use QuACK kernels in your Python code:
+Import and utilize the kernels directly in your Python code:
 
 ```python
 from quack import rmsnorm, softmax, cross_entropy
 ```
 
-## Performance & Benchmarks:
+## Documentation and Resources
 
-[**Read the blog post**](media/2025-07-10-membound-sol.md)  to learn how to speed up memory-bound kernels thanks to the CuTe-DSL.
+*   **Blog Post:** Dive deep into the performance optimizations and memory-bound kernel strategies with our comprehensive [blogpost](media/2025-07-10-membound-sol.md).  Learn how to maximize speed in Python using CuTe-DSL.
+*   **CuTe-DSL Documentation:** Learn more about the CuTe-DSL used to build these kernels: [CuTe-DSL Documentation](https://docs.nvidia.com/cutlass/media/docs/pythonDSL/cute_dsl_general/dsl_introduction.html)
 
-<div align="center">
-<figure>
-  <img
-  src="media/bf16_kernel_benchmarks_single_row.svg"
-  alt="QuACK Kernel Benchmarks"
-  >
-</figure>
-</div>
+## Performance
 
-## Development:
+[Image of performance benchmarks - See original README for image details and context]
 
-Contribute to QuACK by setting up your development environment:
+For detailed performance benchmarks and analysis, please refer to our [blogpost](media/2025-07-10-membound-sol.md).
+
+## Development
+
+To set up a development environment:
 
 ```bash
 pip install -e '.[dev]'
 pre-commit install
 ```
-
----
-**Keywords:** CUDA, CuTe-DSL, deep learning, machine learning, kernels, optimization, H100, B200, Hopper, Blackwell, RMSNorm, Softmax, Cross Entropy, LayerNorm, GEMM.

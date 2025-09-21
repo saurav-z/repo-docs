@@ -1,125 +1,95 @@
-<!--  Lightning Thunder: Supercharge Your PyTorch Models  -->
 <div align="center">
-
-# Lightning Thunder: Supercharge Your PyTorch Models ⚡
-
+  <img src="docs/source/_static/images/LightningThunderLightModewByline.png#gh-light-mode-only" alt="Thunder" width="400px" style="max-width: 100%;">
+  <img src="docs/source/_static/images/LightningThunderDarkModewByline.png#gh-dark-mode-only" alt="Thunder" width="400px" style="max-width: 100%;">
 </div>
 
+## Lightning Thunder: Supercharge Your PyTorch Models ⚡
+
+**Lightning Thunder** is a source-to-source compiler for PyTorch that accelerates model training and inference, making your AI models faster, more efficient, and easier to optimize. Dive in to the official [GitHub repo](https://github.com/Lightning-AI/lightning-thunder) to learn more.
+
 <div align="center">
-<img alt="Thunder" src="docs/source/_static/images/LightningThunderLightModewByline.png#gh-light-mode-only" width="400px" style="max-width: 100%;">
-<img alt="Thunder" src="docs/source/_static/images/LightningThunderDarkModewByline.png#gh-dark-mode-only" width="400px" style="max-width: 100%;">
-<br/>
-<br/>
-
-**Lightning Thunder drastically accelerates PyTorch models with a source-to-source compiler.**
-
+  <img src="docs/source/_static/images/pretrain_perf.png" alt="Thunder Performance" width="800px" style="max-width: 100%;">
 </div>
 
----
+**Key Features:**
 
-## Key Features
-
-*   **Blazing Fast Performance:** Achieve up to 81% speedup with optimized execution.
-*   **Effortless Optimization:** Easily integrate custom kernels, fusions, quantization, and distributed strategies.
-*   **Model Agnostic:** Compatible with Large Language Models (LLMs), Vision Transformers, and more.
-*   **End-User Plugins:** Benefit from out-of-the-box speed enhancements for optimal hardware utilization.
-*   **Performance Expert Toolkit:** Provides a composable framework for understanding, modifying, and optimizing AI models.
-*   **FP4/FP6/FP8 Precision:** Train and inference models with varying numerical precision for memory efficiency and speed.
-*   **Distributed Training:** Utilizes strategies like TP/PP/DP for scaling training across multiple devices.
-*   **CUDA Graphs:** Leverages CUDA Graphs to reduce CPU overhead and improve performance.
+*   🚀 **Significant Speedups:** Achieve up to 81% faster performance in LLM inference and substantial gains in training.
+*   ⚙️ **Optimized for Modern Hardware:** Leverages NVIDIA's latest hardware, including Blackwell, and supports FP4/FP6/FP8 precision.
+*   🧩 **Composable Transformations:** Build custom kernels, fusions, quantization, and distributed strategies for expert-level customization.
+*   🎯 **Out-of-the-Box Plugins:** Benefit from built-in plugins for quantization, CUDA Graphs, and distributed training (TP/PP/DP).
+*   💡 **Easy to Use:** Simple integration with PyTorch models and straightforward compilation process.
+*   🛠️ **Extensible:** Designed for performance experts to understand, modify, and optimize AI models through composable transformations.
 
 ---
 
 ## Quick Start
 
-Lightning Thunder is easy to install:
+Get started with Lightning Thunder in minutes:
 
-```bash
-pip install torch==2.6.0 torchvision==0.21 nvfuser-cu124-torch26
+1.  **Install:**
 
-pip install lightning-thunder
-```
+    ```bash
+    pip install torch==2.6.0 torchvision==0.21 nvfuser-cu124-torch26
+    pip install lightning-thunder
+    ```
 
-**For detailed installation options, including support for Blackwell and other advanced configurations, please refer to the [Installation Documentation](https://lightning.ai/docs/thunder/latest/fundamentals/installation.html).**
+    *   **Advanced Install Options:**  Explore installation options for Blackwell support, additional executors, and bleeding-edge versions in the original [README](https://github.com/Lightning-AI/lightning-thunder#quick-start).
 
-### Simple Example
+2.  **Example Usage:**
 
-Compile your PyTorch models with a single line of code to start optimizing them:
+    ```python
+    import torch
+    import torch.nn as nn
+    import thunder
 
-```python
-import thunder
-import torch.nn as nn
-import torch
+    # Define a simple model
+    model = nn.Sequential(nn.Linear(2048, 4096), nn.ReLU(), nn.Linear(4096, 64))
 
-# Define a simple model
-model = nn.Sequential(nn.Linear(2048, 4096), nn.ReLU(), nn.Linear(4096, 64))
+    # Compile the model with Thunder
+    thunder_model = thunder.compile(model)
 
-# Compile your model with Thunder
-thunder_model = thunder.compile(model)
+    # Run inference
+    x = torch.randn(64, 2048)
+    y = thunder_model(x)
 
-# Example input
-x = torch.randn(64, 2048)
-
-# Run the model
-y = thunder_model(x)
-
-# Verify results
-torch.testing.assert_close(y, model(x))
-```
-
----
+    torch.testing.assert_close(y, model(x))
+    ```
 
 ## Examples
 
-Explore practical examples to see Lightning Thunder in action:
-
-*   **Speed up LLM training:** Install LitGPT and see your model's training speed up.
-*   **Accelerate Hugging Face BERT inference:** Compile your BERT models for faster inference.
-*   **Boost Hugging Face DeepSeek R1 distill inference:**  Optimize your DeepSeek models for increased performance.
-*   **Optimize Vision Transformer Inference:** Utilize Thunder to make Vision Transformers faster
-
-For more examples, including benchmarks, see the `examples` directory in the [Lightning Thunder repository](https://github.com/Lightning-AI/lightning-thunder).
-
----
+*   **Speed up LLM Training:** Integrates with LitGPT for faster large language model training.
+*   **Accelerate Hugging Face Inference:**  Boosts inference speed for models like BERT, and DeepSeek.
+*   **Optimize Vision Transformers:** Improves performance for models like ViT.
+*   **Benchmarking HF models:** Includes example scripts to run benchmarks.
 
 ## Plugins
 
-Plugins are an essential feature for model optimization with Thunder. Use plugins to quickly apply optimization strategies to your model.
+Thunder offers powerful plugins to enhance performance:
 
-Thunder plugins include:
-
-*   **Distributed Strategies:** Scale up training with DDP, FSDP, TP
-*   **Numerical Precision:** Optimize with FP8, MXFP8
-*   **Quantization:** Reduce memory usage with quantization.
-*   **CUDA Graphs:** Reduce latency with CUDAGraphs
-*   **Debugging and profiling:** Plugins to help during development.
-
----
+*   **Distributed Strategies:**  Scale up with DDP, FSDP, and TP.
+*   **Numerical Precision Optimization:** Utilize FP8 and MXFP8 for reduced memory footprint and faster computation.
+*   **Quantization:** Employ quantization techniques for model compression and speed gains.
+*   **CUDA Graphs:** Reduce CPU overhead for lower latency.
+*   **Debugging and Profiling:**  Tools for in-depth analysis and performance tuning.
 
 ## How It Works
 
-Lightning Thunder operates in three core stages to accelerate your PyTorch models:
+Lightning Thunder accelerates PyTorch models through these key stages:
 
-1.  **Acquisition:** Interprets Python bytecode, creating a straight-line Python program.
-2.  **Transformation:** Transforms the computation trace for distribution and precision adjustments.
-3.  **Execution:** Routes parts of the trace for execution using fusion, specialized libraries, custom kernels, and PyTorch operations.
+1.  **Acquisition:** Interprets Python bytecode to produce a straight-line Python program.
+2.  **Transformation:** Transforms the computation trace for distribution and precision changes.
+3.  **Execution:** Routes parts of the trace to various executors:
 
----
+    *   Fusion (NVFuser, `torch.compile`)
+    *   Specialized Libraries (e.g., `cuDNN SDPA`, `TransformerEngine`)
+    *   Custom Triton and CUDA kernels
+    *   PyTorch eager operations
 
-## Performance
-
-Lightning Thunder delivers significant speedups.  For example, on pre-training tasks using LitGPT on H100 and B200 hardware, Thunder demonstrates substantial performance gains compared to PyTorch eager execution.
-
-<div align="center">
-<img alt="Thunder" src="docs/source/_static/images/pretrain_perf.png" width="800px" style="max-width: 100%;">
-</div>
-
----
+    <div align="center">
+      <img src="docs/source/_static/images/how_it_works.png" alt="How Thunder Works" width="800px" style="max-width: 100%;">
+    </div>
 
 ## Community
 
-Lightning Thunder is an open-source project driven by a collaborative community, with significant contributions from NVIDIA. Join us!
-
-*   💬 [Get help on Discord](https://discord.com/invite/XncpTy7DSt)
-*   📋 [License: Apache 2.0](https://github.com/Lightning-AI/litserve/blob/main/LICENSE)
-*   [View the Lightning Thunder repository on GitHub](https://github.com/Lightning-AI/lightning-thunder)
+*   💬 Get help on [Discord](https://discord.com/invite/XncpTy7DSt)
+*   📋 License: [Apache 2.0](https://github.com/Lightning-AI/litserve/blob/main/LICENSE)

@@ -21,97 +21,66 @@
 
 </p>
 
----
-
 # FastDeploy: Deploy LLMs and VLMs with Speed and Efficiency
 
-**FastDeploy empowers developers to deploy Large Language Models (LLMs) and Visual Language Models (VLMs) with optimized performance and production-ready features.** ([View the original repository](https://github.com/PaddlePaddle/FastDeploy))
+**FastDeploy** is a powerful toolkit built on PaddlePaddle, designed to streamline the inference and deployment of Large Language Models (LLMs) and Visual Language Models (VLMs), providing production-ready solutions for optimized performance. Explore the original repository on [GitHub](https://github.com/PaddlePaddle/FastDeploy) for more details.
 
-## Key Features:
+## Key Features
 
-*   **Optimized Inference:** Accelerates LLM and VLM inference with advanced techniques.
-*   **Production-Ready Deployment:** Provides out-of-the-box deployment solutions.
-*   **Load-Balanced PD Disaggregation**: Industrial-grade solution featuring context caching and dynamic instance role switching. Optimizes resource utilization while balancing SLO compliance and throughput.
-*   **Unified KV Cache Transmission:** Lightweight high-performance transport library with intelligent NVLink/RDMA selection.
-*   **OpenAI API & vLLM Compatibility:** Seamless integration with the vLLM interface for easy deployment.
-*   **Comprehensive Quantization Support:** Offers extensive quantization options (W8A16, W8A8, W4A16, W4A8, W2A16, FP8, etc.) for model size reduction and performance gains.
-*   **Advanced Acceleration Techniques:** Implements speculative decoding, Multi-Token Prediction (MTP), and Chunked Prefill for faster inference.
-*   **Multi-Hardware Support:** Runs efficiently on various hardware platforms, including NVIDIA GPUs, Kunlunxin XPUs, Hygon DCUs, Ascend NPUs, and more.
+*   **Optimized Resource Utilization:** Achieve maximum efficiency with our industrial-grade load-balanced PD Disaggregation, featuring context caching and dynamic instance role switching.
+*   **High-Performance KV Cache Transmission:** Benefit from a lightweight, high-performance transport library with intelligent NVLink/RDMA selection.
+*   **OpenAI API & vLLM Compatibility:** Deploy with ease using our out-of-the-box vLLM interface compatibility.
+*   **Extensive Quantization Support:** Utilize a wide range of quantization formats, including W8A16, W8A8, W4A16, W4A8, W2A16, and FP8, for enhanced performance.
+*   **Advanced Acceleration Techniques:** Leverage techniques like speculative decoding, Multi-Token Prediction (MTP), and Chunked Prefill.
+*   **Multi-Hardware Support:** Compatible with NVIDIA GPUs, Kunlunxin XPUs, Hygon DCUs, Ascend NPUs, Iluvatar GPUs, Enflame GCUs, MetaX GPUs, and more.
 
-## News
+## What's New
 
-*   **[2025-09] 🔥 FastDeploy v2.2 is newly released!** It now offers compatibility with models in the HuggingFace ecosystem, has further optimized performance, and newly adds support for [baidu/ERNIE-21B-A3B-Thinking](https://huggingface.co/baidu/ERNIE-4.5-21B-A3B-Thinking)!
-*   **[2025-08] 🔥 Released FastDeploy v2.1:** A brand-new KV Cache scheduling strategy has been introduced, and expanded support for PD separation and CUDA Graph across more models. Enhanced hardware support has been added for platforms like Kunlun and Hygon, along with comprehensive optimizations to improve the performance of both the service and inference engine.
-*   **[2025-07] The FastDeploy 2.0 Inference Deployment Challenge is now live!** Complete the inference deployment task for the ERNIE 4.5 series open-source models to win official FastDeploy 2.0 merch and generous prizes! 🎁 You're welcome to try it out and share your feedback! 📌[Sign up here](https://www.wjx.top/vm/meSsp3L.aspx#) 📌[Event details](https://github.com/PaddlePaddle/FastDeploy/discussions/2728)
-*   **[2025-06] 🔥 Released FastDeploy v2.0:** Supports inference and deployment for ERNIE 4.5. Furthermore, we open-source an industrial-grade PD disaggregation with context caching, dynamic role switching for effective resource utilization to further enhance inference performance for MoE models.
+*   **[2025-09] 🔥 FastDeploy v2.2:** Now offers compatibility with HuggingFace ecosystem models, further optimized performance, and supports baidu/ERNIE-4.5-21B-A3B-Thinking!
+*   **[2025-08] 🔥 FastDeploy v2.1:** Introduced a new KV Cache scheduling strategy, expanded PD separation and CUDA Graph support, and enhanced hardware support for Kunlun and Hygon.
+*   **[2025-07] Inference Deployment Challenge:** Participate in the FastDeploy 2.0 Inference Deployment Challenge for the ERNIE 4.5 series models. [Sign up here](https://www.wjx.top/vm/meSsp3L.aspx#)
 
 ## Requirements
 
 *   **Operating System:** Linux
-*   **Python:** 3.10 - 3.12
+*   **Python:** 3.10 ~ 3.12
 
 ## Installation
 
-FastDeploy supports deployment on various hardware platforms. Choose your platform:
+FastDeploy supports various hardware platforms. Detailed installation instructions are available for:
 
-*   [NVIDIA GPU](./docs/get_started/installation/nvidia_gpu.md)
-*   [Kunlunxin XPU](./docs/get_started/installation/kunlunxin_xpu.md)
-*   [Iluvatar GPU](./docs/get_started/installation/iluvatar_gpu.md)
-*   [Enflame GCU](./docs/get_started/installation/Enflame_gcu.md)
-*   [Hygon DCU](./docs/get_started/installation/hygon_dcu.md)
-*   [MetaX GPU](./docs/get_started/installation/metax_gpu.md)
+*   [NVIDIA GPU](https://paddlepaddle.github.io/FastDeploy/get_started/installation/nvidia_gpu.md)
+*   [Kunlunxin XPU](https://paddlepaddle.github.io/FastDeploy/get_started/installation/kunlunxin_xpu.md)
+*   [Iluvatar GPU](https://paddlepaddle.github.io/FastDeploy/get_started/installation/iluvatar_gpu.md)
+*   [Enflame GCU](https://paddlepaddle.github.io/FastDeploy/get_started/installation/Enflame_gcu.md)
+*   [Hygon DCU](https://paddlepaddle.github.io/FastDeploy/get_started/installation/hygon_dcu.md)
+*   [MetaX GPU](https://paddlepaddle.github.io/FastDeploy/get_started/installation/metax_gpu.md)
 
-**Note:** We are actively expanding hardware support, including Ascend NPU. Stay tuned for updates!
+**Note:** Support for additional hardware platforms, including Ascend NPU, is under development.
 
 ## Get Started
 
-Explore the documentation:
+Quickly learn how to use FastDeploy with these resources:
 
-*   [10-Minutes Quick Deployment](./docs/get_started/quick_start.md)
-*   [ERNIE-4.5 Large Language Model Deployment](./docs/get_started/ernie-4.5.md)
-*   [ERNIE-4.5-VL Multimodal Model Deployment](./docs/get_started/ernie-4.5-vl.md)
-*   [Offline Inference Development](./docs/offline_inference.md)
-*   [Online Service Deployment](./docs/online_serving/README.md)
-*   [Best Practices](./docs/best_practices/README.md)
+*   [10-Minutes Quick Deployment](https://paddlepaddle.github.io/FastDeploy/get_started/quick_start.md)
+*   [ERNIE-4.5 Large Language Model Deployment](https://paddlepaddle.github.io/FastDeploy/get_started/ernie-4.5.md)
+*   [ERNIE-4.5-VL Multimodal Model Deployment](https://paddlepaddle.github.io/FastDeploy/get_started/ernie-4.5-vl.md)
+*   [Offline Inference Development](https://paddlepaddle.github.io/FastDeploy/offline_inference.md)
+*   [Online Service Deployment](https://paddlepaddle.github.io/FastDeploy/online_serving/README.md)
+*   [Best Practices](https://paddlepaddle.github.io/FastDeploy/best_practices/README.md)
 
 ## Supported Models
 
-*   [Full Supported Models List](./docs/supported_models.md)
+*   [Full Supported Models List](https://paddlepaddle.github.io/FastDeploy/supported_models.md)
 
 ## Advanced Usage
 
-*   [Quantization](./docs/quantization/README.md)
-*   [PD Disaggregation Deployment](./docs/features/disaggregated.md)
-*   [Speculative Decoding](./docs/features/speculative_decoding.md)
-*   [Prefix Caching](./docs/features/prefix_caching.md)
-*   [Chunked Prefill](./docs/features/chunked_prefill.md)
+*   [Quantization](https://paddlepaddle.github.io/FastDeploy/quantization/README.md)
+*   [PD Disaggregation Deployment](https://paddlepaddle.github.io/FastDeploy/features/disaggregated.md)
+*   [Speculative Decoding](https://paddlepaddle.github.io/FastDeploy/features/speculative_decoding.md)
+*   [Prefix Caching](https://paddlepaddle.github.io/FastDeploy/features/prefix_caching.md)
+*   [Chunked Prefill](https://paddlepaddle.github.io/FastDeploy/features/chunked_prefill.md)
 
 ## Acknowledgement
 
-FastDeploy is licensed under the [Apache-2.0 open-source license](./LICENSE).  We acknowledge the contributions of [vLLM](https://github.com/vllm-project/vllm) and express our gratitude for their code used in maintaining interface compatibility.
-```
-Key improvements and explanations:
-
-*   **SEO Optimization:**
-    *   Included relevant keywords in the title, headings, and descriptions (e.g., "LLMs," "VLMs," "inference," "deployment").
-    *   Used clear and concise language.
-    *   Added a descriptive title and introductory sentence.
-
-*   **Structure and Readability:**
-    *   Used headings and subheadings to organize the content logically.
-    *   Employed bullet points for key features to improve scannability.
-    *   Simplified the "About" section and condensed the information.
-
-*   **Content Enhancement:**
-    *   Added a strong one-sentence hook to grab the reader's attention.
-    *   Clarified the benefits of FastDeploy (speed, efficiency, production-readiness).
-    *   Made the installation section clearer.
-    *   Improved the overall flow and readability of the README.
-
-*   **Conciseness:**
-    *   Removed redundant information.
-    *   Focused on the most important details.
-
-*   **Actionable Information:**
-    *   Provided links to the original repo and relevant documentation.
-    *   Made it easy for users to get started.
+FastDeploy is licensed under the [Apache-2.0 open-source license](./LICENSE). We gratefully acknowledge the portions of [vLLM](https://github.com/vllm-project/vllm) code that have been referenced and incorporated.

@@ -1,33 +1,36 @@
+<p align="center"><img src="https://resource-fit2cloud-com.oss-cn-hangzhou.aliyuncs.com/sqlbot/sqlbot.png" alt="SQLBot" width="300" /></p>
+
+# SQLBot: Unlock Data Insights with Conversational AI
+
+SQLBot empowers you to query your data using natural language, making data analysis accessible to everyone. [Explore the SQLBot repository on GitHub](https://github.com/dataease/SQLBot).
+
 <p align="center">
-  <img src="https://resource-fit2cloud-com.oss-cn-hangzhou.aliyuncs.com/sqlbot/sqlbot.png" alt="SQLBot" width="300" />
+  <a href="https://github.com/dataease/SQLBot/releases/latest"><img src="https://img.shields.io/github/v/release/dataease/SQLBot" alt="Latest release"></a>
+  <a href="https://github.com/dataease/SQLBot"><img src="https://img.shields.io/github/stars/dataease/SQLBot?color=%231890FF&style=flat-square" alt="Stars"></a>    
+  <a href="https://hub.docker.com/r/dataease/SQLbot"><img src="img.shields.io/docker/pulls/dataease/sqlbot?label=downloads" alt="Download"></a><br/>
+
 </p>
 
-# SQLBot: Your AI-Powered Assistant for Data Insights
+---
 
-**SQLBot revolutionizes data analysis by enabling users to ask questions in natural language and receive SQL queries and insights effortlessly.** This open-source tool leverages large language models (LLMs) and Retrieval-Augmented Generation (RAG) to provide a user-friendly and efficient way to interact with your data.
+## Key Features
 
-[Check out the original repository on GitHub!](https://github.com/dataease/SQLBot)
+*   **Text-to-SQL Conversion:** Seamlessly translate natural language questions into SQL queries using a combination of large language models (LLMs) and Retrieval-Augmented Generation (RAG).
+*   **Easy Integration:** Integrate SQLBot into your existing systems or use it with platforms like n8n, MaxKB, Dify, and Coze for enhanced data querying capabilities.
+*   **Secure and Controlled:** Implement workspace-based resource isolation and fine-grained data access control for enhanced security and compliance.
 
-## Key Features:
+## How SQLBot Works
 
-*   **Text-to-SQL Conversion:** Transforms natural language questions into accurate SQL queries using advanced LLMs and RAG.
-*   **Ease of Use:** Requires minimal setup; simply configure your data source and LLM to start querying.
-*   **Seamless Integration:** Integrates with various AI platforms, including n8n, MaxKB, Dify, and Coze, to expand your application's capabilities.
-*   **Secure and Controlled:** Offers workspace-based resource isolation and fine-grained data access control for enhanced security.
-*   **Dockerized Deployment:** Easy deployment with a single Docker command.
+SQLBot leverages advanced AI to understand your questions and translate them into SQL queries, enabling anyone to extract meaningful insights from data.
 
-## How it Works
-
-[Image of SQLBot architecture - see original README for image]
+<img width="1189" height="624" alt="system-arch" src="https://github.com/user-attachments/assets/cde40783-369e-493e-bb59-44ce43c2e7c5" />
 
 ## Getting Started
 
-### Installation
+### Installation & Deployment
 
-SQLBot is easy to deploy using Docker:
-
-1.  **Prerequisites:** Ensure you have a Linux server with Docker installed.
-2.  **Run the Installation Script:**
+1.  **Prerequisites:** A Linux server with Docker installed.
+2.  **One-Click Installation (Docker):** Run the following command:
 
     ```bash
     docker run -d \
@@ -43,58 +46,49 @@ SQLBot is easy to deploy using Docker:
       dataease/sqlbot
     ```
 
-    You can also deploy SQLBot using [1Panel](https://apps.fit2cloud.com/1panel) or via [offline installation packages](https://community.fit2cloud.com/#/products/sqlbot/downloads) for air-gapped environments.
+3.  **Alternative Installation:**
+    *   Deploy using [1Panel application store](https://apps.fit2cloud.com/1panel).
+    *   For offline environments, use the [offline installation package](https://community.fit2cloud.com/#/products/sqlbot/downloads).
 
 ### Accessing SQLBot
 
-*   **Web Interface:** Access the SQLBot interface through your web browser at `http://<your server IP>:8000/`.
+*   **Web Interface:** Open your browser and navigate to: `http://<your server IP>:8000/`
 *   **Login Credentials:**
     *   Username: `admin`
     *   Password: `SQLBot@123456`
 
 ### Contact Us
 
-Have questions or need support? Join our technical交流群.
+Join our technical community to discuss any questions you might have.
 
-[Image of contact QR code - see original README for image]
+<img width="180" height="180" alt="contact_me_qr" src="https://github.com/user-attachments/assets/2594ff29-5426-4457-b051-279855610030" />
 
-## UI Example
+## UI Demonstration
 
-[Image of SQLBot user interface - see original README for image]
+<img alt="q&a" src="https://github.com/user-attachments/assets/55526514-52f3-4cfe-98ec-08a986259280"   />
 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=dataease/sqlbot&type=Date)](https://www.star-history.com/#dataease/sqlbot&Date)
 
-## Related Projects from FIT2CLOUD
+## More Projects by Fit2Cloud
 
-*   [DataEase](https://github.com/dataease/dataease/) - Open-source BI tool
-*   [1Panel](https://github.com/1panel-dev/1panel/) - Linux server management panel
-*   [MaxKB](https://github.com/1panel-dev/MaxKB/) - Enterprise-grade intelligent platform
-*   [JumpServer](https://github.com/jumpserver/jumpserver/) - Open-source bastion host
-*   [Cordys CRM](https://github.com/1Panel-dev/CordysCRM) - Open-source AI CRM
-*   [Halo](https://github.com/halo-dev/halo/) - Open-source website builder
-*   [MeterSphere](https://github.com/metersphere/metersphere/) - Open-source continuous testing tool
+*   [DataEase](https://github.com/dataease/dataease/) - Open-source BI tool.
+*   [1Panel](https://github.com/1panel-dev/1panel/) - Linux server management panel.
+*   [MaxKB](https://github.com/1panel-dev/MaxKB/) - Enterprise-grade intelligent platform.
+*   [JumpServer](https://github.com/jumpserver/jumpserver/) - Open-source bastion host.
+*   [Cordys CRM](https://github.com/1Panel-dev/CordysCRM) - Open-source AI CRM system.
+*   [Halo](https://github.com/halo-dev/halo/) - Open-source website builder.
+*   [MeterSphere](https://github.com/metersphere/metersphere/) - Continuous testing tool.
 
 ## License
 
-SQLBot is licensed under the [FIT2CLOUD Open Source License](LICENSE), which is essentially GPLv3 with additional limitations.
+SQLBot is released under the [FIT2CLOUD Open Source License](LICENSE), a license with similar restrictions to GPLv3.
 
-You can develop derivative works based on SQLBot's source code, but you must adhere to these conditions:
+**Usage Guidelines:**
 
-*   Do not replace or modify the SQLBot logo and copyright information.
+*   You can develop based on the SQLBot source code.
+*   Do not modify the SQLBot logo or copyright information.
 *   Derivative works must comply with the GPL V3 open-source obligations.
 
-For commercial licensing inquiries, please contact support@fit2cloud.com.
-```
-Key improvements and SEO considerations:
-
-*   **Clear, Concise Title:** "SQLBot: Your AI-Powered Assistant for Data Insights" is more descriptive.
-*   **Strong Hook:** The introductory sentence immediately establishes the value proposition.
-*   **Keyword Optimization:** Uses relevant keywords like "AI-powered," "text-to-SQL," "data analysis," and "open-source."
-*   **Well-Organized Headings and Structure:** Makes the README easy to scan and understand.
-*   **Bulleted Key Features:**  Highlights the core benefits in a clear and concise manner.
-*   **Call to Action:** Encourages users to check out the original repo.
-*   **Docker Commands Formatting:**  Kept the Docker command and formatted it better.
-*   **Complete Information:** Included all essential details from the original README.
-*   **SEO Friendly:** Added relevant keywords and phrases throughout the document to improve search engine visibility.
+For commercial licensing inquiries, please contact: support@fit2cloud.com.

@@ -1,66 +1,75 @@
-# SRPO: Directly Aligning Diffusion Trajectory with Human Preference
-
-**SRPO is a novel approach to fine-tuning diffusion models that directly aligns the full diffusion trajectory with human preferences, leading to more stable and efficient training.**  ([Original Repository](https://github.com/Tencent-Hunyuan/SRPO))
-
-[![ArXiv](https://img.shields.io/badge/ArXiv-red?logo=arxiv)](https://arxiv.org/abs/2509.06942)
-[![Hugging Face Model](https://img.shields.io/badge/Model-blue?logo=huggingface)](https://huggingface.co/tencent/SRPO/)
-[![Project Page](https://img.shields.io/badge/%F0%9F%92%BB_Project-SRPO-blue)](https://tencent.github.io/srpo-project-page/)
-
-<p align="center">
+<!--  SEO-optimized README for SRPO -->
+<div align="center" style="font-family: charter;">
+  <h1>SRPO: Fine-tuning Diffusion Models with Direct Alignment for Enhanced Image Generation</h1>
+  <p><b>SRPO revolutionizes diffusion model training by directly aligning the full diffusion trajectory with human preferences, leading to superior image generation quality.</b></p>
+  <div align="center">
+    <a href='https://arxiv.org/abs/2509.06942'><img src='https://img.shields.io/badge/ArXiv-red?logo=arxiv' alt="ArXiv"></a>  &nbsp;
+    <a href='https://huggingface.co/tencent/SRPO/'><img src='https://img.shields.io/badge/Model-blue?logo=huggingface' alt="Hugging Face Model"></a> &nbsp; 
+    <a href='https://tencent.github.io/srpo-project-page/'><img src='https://img.shields.io/badge/%F0%9F%92%BB_Project-SRPO-blue' alt="Project Page"></a> &nbsp;
+  </div>
+  <div align="center">
     Xiangwei Shen<sup>1,2,3*</sup>, Zhimin Li<sup>1*</sup>, Zhantao Yang<sup>1</sup>, Shiyi Zhang<sup>3</sup>, Yingfang Zhang<sup>1</sup>, Donghao Li<sup>1</sup>, Chunyu Wang<sup>1✝</sup>, Qinglin Lu<sup>1</sup>, Yansong Tang<sup>3,✉️</sup>
-</p>
-<p align="center">
-    <sup>1</sup>Hunyuan, Tencent  <sup>2</sup>School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen  <sup>3</sup>Shenzhen International Graduate School, Tsinghua University  <sup>*</sup>Equal contribution  <sup>✝</sup>Project lead  <sup>✉️</sup>Corresponding author
-</p>
-
-![SRPO Example Image](assets/head.jpg)
+  </div>
+  <div align="center">
+    <sup>1</sup>Hunyuan, Tencent &nbsp;
+    <br>
+    <sup>2</sup>School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen &nbsp;
+    <br>
+    <sup>3</sup>Shenzhen International Graduate School, Tsinghua University &nbsp;
+    <br>
+    <sup>*</sup>Equal contribution &nbsp;
+    <sup>✝</sup>Project lead &nbsp;
+    <sup>✉️</sup>Corresponding author
+  </div>
+  <br>
+  <img src="assets/head.jpg" alt="SRPO Example Image" width="800">
+</div>
 
 ## Key Features
 
-*   ✅ **Direct Alignment for Stable Training:** Introduces a new sampling strategy that effectively restores noisy images, providing a more stable and computationally efficient optimization process.
-*   🚀 **Faster Training with Analytical Gradients:** Achieves significant performance improvements in under 10 minutes using a single image rollout and analytical gradients, with the option to train using a small dataset of real images.
-*   🛡️ **Reward Hacking Mitigation:** Improves training strategies, directly regularizing the model with negative rewards, avoiding reward hacking issues like overfitting to color or saturation preferences.
-*   🕹️ **Controllable Fine-tuning:** Enables on-the-fly adjustment of reward preferences towards styles using dynamically controllable text conditions.
+*   **Direct Alignment:** SRPO introduces a novel sampling strategy for diffusion fine-tuning, enabling the effective restoration of highly noisy images. This approach results in a more stable and computationally efficient optimization process, particularly during the initial timesteps.
+*   **Faster Training:** Achieves significant performance improvements for FLUX.1.dev in under 10 minutes of training by optimizing directly with analytical gradients, using only a single image. The training process can be accelerated further by replacing online rollouts with a small dataset of real images (fewer than 1500 images).
+*   **Reward Hacking Mitigation:** SRPO's improved training strategy directly regularizes the model using negative rewards, eliminating the need for KL divergence or a separate reward system. It achieves comparable performance across multiple reward models, resulting in improved perceptual quality without the common issues of reward hacking (e.g., overfitting to colors or oversaturation).
+*   **Controllable Fine-tuning:** Incorporates dynamically controllable text conditions, providing the ability to adjust reward preferences on the fly towards specific styles within the reward model's scope.
 
-## What's New
+## News
 
-*   **[2025.09.12]:** 🎉 Complete training code and training tips released. Discuss and ask questions in the issues! 💬✨
-*   **[2025.09.12]:** 🎉 Standard workflow available for ComfyUI.
+*   **[2025.09.12]:** 🎉 Complete training code released. Includes tips and experiences to guide your model training. Discuss and ask questions via issues! 💬✨
+*   **[2025.09.12]:** 🎉 Provides a standard workflow, ready for use in ComfyUI.
 *   **[2025.09.08]:** 🎉 Paper, checkpoint, and inference code released.
 
-## Open-Source Plan
+## Open-source Plan
 
-*   [X] Training code (Released!)
-*   [ ] Quantized version for the FLUX community (Coming soon!)
-*   [ ] Support for other models (Planned)
+*   [X] Training code is under review and will be open-sourced by the end of the week.
+*   [ ] Release a quantized version for the FLUX community.
+*   [ ] Extend support to other models.
 
 ## Installation and Dependencies
 
-1.  **Create Conda Environment:**
-    ```bash
-    conda create -n SRPO python=3.10.16 -y
-    conda activate SRPO
-    bash ./env_setup.sh
-    ```
+```bash
+conda create -n SRPO python=3.10.16 -y
+conda activate SRPO
+bash ./env_setup.sh
+```
 
-    *   💡 The environment dependencies are similar to those of DanceGRPO.
+**Note:** The environment dependencies are largely the same as DanceGRPO.
 
-## Model Download
+## Download Models
 
-1.  **Model Cards:**
+1.  **Model Cards**
 
-    | Model | Huggingface Download URL |
-    | :-----------------: | :-------------------------------------------------------------------------------------: |
-    | SRPO | [diffusion\_pytorch\_model](https://huggingface.co/tencent/SRPO/tree/main) |
+    | Model       | Hugging Face Download URL                                                                 |
+    | :---------- | :---------------------------------------------------------------------------------------: |
+    | SRPO        | [diffusion_pytorch_model](https://huggingface.co/tencent/SRPO/tree/main)                  |
 
-2.  **Download SRPO Model:**
+2.  Download `diffusion_pytorch_model.safetensors` from [Hugging Face](https://huggingface.co/tencent/SRPO)
     ```bash
     mkdir ./srpo
     huggingface-cli login
     huggingface-cli download --resume-download Tencent/SRPO diffusion_pytorch_model.safetensors --local-dir ./srpo/
     ```
 
-3.  **Download FLUX.1-dev (or use your own):**
+3.  Load your FLUX cache or use the `black-forest-labs/FLUX.1-dev` [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev)
     ```bash
     mkdir ./data/flux
     huggingface-cli login
@@ -71,8 +80,11 @@
 
 ### Using ComfyUI
 
-*   Use the provided ComfyUI workflow image or load the JSON file: [SRPO-workflow](comfyui/SRPO-workflow.json)
-    ![ComfyUI Workflow Example](comfyui/SRPO-workflow.png)
+SRPO is compatible with [ComfyUI](https://github.com/comfyanonymous/ComfyUI).
+
+*   **Workflow:** Load the [SRPO-workflow](comfyui/SRPO-workflow.json) JSON file directly into ComfyUI, or use the image file (which contains the workflow information).
+
+    <img src="comfyui/SRPO-workflow.png" alt="ComfyUI Workflow Example" width="800">
 
 ### Quick Start Inference
 
@@ -98,7 +110,9 @@ image = pipe(
 ).images[0]
 ```
 
-*   Run `vis.py` with your model path.  Replace `model_path`.
+### Inference with Cases
+
+1.  Replace `model_path` in `vis.py`.
     ```bash
     torchrun --nnodes=1 --nproc_per_node=8 \
         --node_rank 0 \
@@ -119,7 +133,7 @@ image = pipe(
     huggingface-cli download --resume-download  black-forest-labs/FLUX.1-dev --local-dir ./data/flux
     ```
 
-2.  **Reward Model (HPS-v2.1):** Download HPS-v2.1 and CLIP H-14 checkpoints from [Hugging Face](https://huggingface.co/xswu/HPSv2/tree/main) to `./hps_ckpt`.
+2.  **Reward Model:** Download the HPS-v2.1 (HPS\_v2.1\_compressed.pt) and CLIP H-14 checkpoints from [Hugging Face](https://huggingface.co/xswu/HPSv2/tree/main) to `./hps_ckpt`.
     ```bash
     mkdir ./data/hps_ckpt
     huggingface-cli login
@@ -127,7 +141,7 @@ image = pipe(
     huggingface-cli download --resume-download laion/CLIP-ViT-H-14-laion2B-s32B-b79K open_clip_pytorch_model.bin --local-dir ./data/hps_ckpt
     ```
 
-3.  **(Optional) Reward Model (PickScore):** Download PickScore checkpoint from [Hugging Face](https://huggingface.co/yuvalkirstain/PickScore_v1) to `./data/ps`.
+3.  **(Optional) Reward Model:** Download the PickScore checkpoint from [Hugging Face](https://huggingface.co/yuvalkirstain/PickScore_v1) to `./data/ps`.
     ```bash
     mkdir ./data/ps
     huggingface-cli login
@@ -147,17 +161,17 @@ cp videos2caption2.json  ./data/rl_embeddings
 
 ### Full-parameter Training
 
-*   **HPS-v2.1 Reward Model:**
+*   **HPS-v2.1:** Use HPS-v2.1 as the Reward Model.
     ```bash
     bash scripts/finetune/SRPO_training_hpsv2.sh
     ```
-*   **(Optional) PickScore Reward Model:**
+*   **(Optional) PickScore:** Use PickScore as the Reward Model.
     ```bash
     bash scripts/finetune/SRPO_training_ps.sh
     ```
-    > ⚠️ Training with PickScore may yield suboptimal results compared to HPS due to control word mismatches.
+    > ⚠️ Current control words are designed for HPS-v2.1; training with PickScore may yield suboptimal results due to this mismatch.
 
-*   **Distributed Training:**
+*   **Distributed Training:** Run distributed training with pdsh.
     ```bash
     #!/bin/bash
     echo "$NODE_IP_LIST" | tr ',' '\n' | sed 's/:8$//' | grep -v '1.1.1.1' > /tmp/pssh.hosts
@@ -167,27 +181,31 @@ cp videos2caption2.json  ./data/rl_embeddings
 
 ### Supporting Custom Models
 
-1.  Modify `preprocess_flux_embedding.py` and `latent_flux_rl_datasets.py` to pre-extract text embeddings.
-2.  Adjust `args.vis_sampling_step` to modify sigma\_schedule.
-3.  Enable VAE gradient checkpointing to reduce GPU memory usage.
-4.  If implementing outside FastVideo, disable the inversion branch first to check for reward hacking.
-5.  Pure Direct-Align works for SRPO-unsupported tasks with minimal code changes.
+1.  Modify `preprocess_flux_embedding.py` and `latent_flux_rl_datasets.py` to pre-extract text embeddings for your custom training dataset to improve efficiency.
+2.  Adjust `args.vis_sampling_step` to modify the sigma schedule. This value should typically match the model's regular inference steps.
+3.  Direct-propagation needs a significant amount of GPU memory. Use VAE gradient checkpointing before reward calculation to reduce this.
+4.  When implementing outside FastVideo, disable the inversion branch first to check for reward hacking. Its presence likely indicates an implementation error.
+5.  Pure Direct-Align works for SRPO-unsupported tasks (e.g., OCR, Image Editing) with minimal code changes.
 
 ### Hyperparameter Recommendations
 
-*   **Batch\_size:** Larger sizes generally improve quality. 32 works well for FLUX.dev.1 reinforcement.
-*   **Learning\_rate:** 1e-5 to 1e-6 is suitable for most models.
-*   **Train\_timestep:** Focus on early-to-middle diffusion stages.
-*   **Discount\_inv & Discount\_denoise:** Use provided settings for structure and color control.
+For best results, customize these settings for your model and dataset:
 
-## Acknowledgements
+1.  **Batch_size:** Larger sizes often improve quality. A batch size of 32 is recommended for Flux.dev.1 reinforcement under current settings.
+2.  **Learning_rate:** A learning rate between 1e-5 and 1e-6 is generally suitable for most models.
+3.  **Train_timestep:** Focus on early-to-middle diffusion stages. Extremely early stages (sigmas > 0.99) can cause structural distortions; late stages may encourage reward hacking based on color.
+4.  **Discount_inv & Discount_denoise:** Let discount_inv = [a, b], discount_denoise = [c, d]. Preserve structure by setting c slightly > b (avoids early layout corruption). Fix color oversaturation by setting a slightly > d (tempers aggressive tones). The current hyperparameters provide a solid baseline for most in-house models.
 
-We would like to acknowledge the following works for their contributions:
+## Acknowledgement
+
+We acknowledge the following works and their contributions:
 
 *   [FastVideo](https://github.com/hao-ai-lab/FastVideo)
 *   [DanceGRPO](https://github.com/XueZeyue/DanceGRPO)
 
 ## BibTeX
+
+If SRPO is beneficial for your research and applications, please cite it using the following BibTeX entry:
 
 ```
 @misc{shen2025directlyaligningdiffusiontrajectory,
@@ -202,4 +220,7 @@ We would like to acknowledge the following works for their contributions:
 ```
 
 ## Star History
+
 [![Star History Chart](https://api.star-history.com/svg?repos=Tencent-Hunyuan/SRPO&type=Date)](https://www.star-history.com/#Tencent-Hunyuan/SRPO&Date)
+
+```
