@@ -1,37 +1,76 @@
-# WilmerAI: Advanced Semantic Prompt Routing and Task Orchestration
+# WilmerAI: Intelligent Prompt Routing and Complex Task Orchestration
 
-**Unlock the power of context and workflows for sophisticated AI interactions with WilmerAI.**
+**Tired of basic AI chatbots? WilmerAI uses advanced workflows to understand the context of your entire conversation, not just the last message, for smarter, more effective AI interactions.**  Learn more about WilmerAI on [GitHub](https://github.com/SomeOddCodeGuy/WilmerAI).
 
-[![WilmerAI and Open WebUI Install on Fresh Windows 11 Desktop](https://img.youtube.com/vi/KDpbxHMXmTs/0.jpg)](https://www.youtube.com/watch?v=KDpbxHMXmTs "WilmerAI and Open WebUI Install on Fresh Windows 11 Desktop")
+## Key Features:
 
-## Key Features
+*   **Advanced Contextual Routing:**
+    *   Analyzes the **entire conversation history** for deeper understanding of user intent.
+    *   Uses **Prompt Routing** to select the best specialized workflow and **In-Workflow Routing** for conditional logic.
+*   **Core: Node-Based Workflow Engine:**
+    *   Processes requests through **JSON-defined workflows** with sequences of steps (nodes).
+    *   Enables complex, chained-thought processes by passing node outputs as inputs to the next.
+*   **Multi-LLM & Multi-Tool Orchestration:**
+    *   Each node can connect to a **different LLM endpoint or execute a tool.**
+    *   Allows for orchestration of the best model for each part of a task.
+*   **Modular & Reusable Workflows:**
+    *   Build self-contained workflows for common tasks.
+    *   Execute them as a single, reusable node inside other, larger workflows, which simplifies design.
+*   **Stateful Conversation Memory:**
+    *   Employs a **three-part memory system** (chronological summary, rolling summary, vector database) to provide context.
+*   **Adaptable API Gateway:**
+    *   Exposes OpenAI- and Ollama-compatible API endpoints.
+    *   Connects to existing front-end applications and tools without modification.
+*   **Flexible Backend Connectors:**
+    *   Connects to various LLM backends including OpenAI, Ollama, and KoboldCpp.
+    *   Uses a configuration system of Endpoints, API Types, and Presets.
+*   **MCP Server Tool Integration:**
+    *   Experimental support for MCP server tool calling using MCPO.
 
-*   **Advanced Contextual Routing:** WilmerAI analyzes the *entire* conversation history to understand user intent, enabling intelligent routing to specialized workflows. It uses:
-    *   **Prompt Routing:** Categorizes prompts to select the most appropriate workflow.
-    *   **In-Workflow Routing:** Provides conditional "if/then" logic to dynamically choose the next step based on the output of a previous node.
-*   **Core: Node-Based Workflow Engine:**  Build complex processes with workflows defined in JSON files, each containing a sequence of steps (nodes) for detailed task execution.
-*   **Multi-LLM & Multi-Tool Orchestration:**  Connect each workflow node to diverse LLM endpoints or external tools, optimizing tasks by leveraging the best model for each step.
-*   **Modular & Reusable Workflows:** Create and reuse workflows for common tasks, simplifying the design of intricate AI agents.
-*   **Stateful Conversation Memory:**  Maintain context with a chronological summary, rolling summary, and a searchable vector database for Retrieval-Augmented Generation (RAG), all working together.
-*   **Adaptable API Gateway:** Integrate with existing front-end applications seamlessly via OpenAI- and Ollama-compatible API endpoints.
-*   **Flexible Backend Connectors:**  Connect to various LLM backends (OpenAI, Ollama, KoboldCpp) through an easy configuration system with **Endpoints**, **API Types**, and **Presets**.
-*   **MCP Server Tool Integration using MCPO:** Experimental support for MCP server tool calling using MCPO. Big thanks to [iSevenDays](https://github.com/iSevenDays). More info can be found in the [ReadMe](Public/modules/README_MCP_TOOLS.md)
+## Workflow Power:
 
-## Getting Started
+*   **Semi-Autonomous Workflows** - Determine what tools and when to use them.
+*   **Iterative LLM Calls** - Improve performance with follow-up questions and chained reasoning.
+*   **Distributed LLMs** - Leverage multiple LLMs across your hardware for enhanced capabilities.
 
-### Setup Guides
+## Visual Examples:
 
-*   **WilmerAI API:**  Follow the [User Documents Setup Starting Guide](Docs/_User_Documentation/Setup/_Getting-Start_Wilmer-Api.md) for a quick API setup.
-*   **Wilmer with Open WebUI:** [Click here](Docs/_User_Documentation/Setup/Open-WebUI.md) for a written guide.
-*   **Wilmer with SillyTavern:** [Click here](Docs/_User_Documentation/Setup/SillyTavern.md) for a setup guide.
+*   [Simple Assistant Workflow](Doc_Resources/Media/Images/Wilmer-Assistant-Workflow-Example.jpg)
+*   [Prompt Routing Example](Doc_Resources/Media/Images/Wilmer-Categorization-Workflow-Example.png)
+*   [Group Chat to Different LLMs](Doc_Resources/Media/Images/Wilmer-Groupchat-Workflow-Example.png)
+*   [UX Workflow Example](Doc_Resources/Media/Images/Wilmer-Simple-Coding-Workflow-Example.jpg)
+*   [No-RAG vs RAG](Doc_Resources/Media/Gifs/Search-Gif.gif)
 
-##  Learn More
+## Quick Setup
 
-*   **User Documentation:** [/Docs/_User_Documentation/](Docs/_User_Documentation/README.md)
-*   **Developer Documentation:** [/Docs/Developer_Docs/](Docs/Developer_Docs/README.md)
+*   **Guides:** Find setup guides in the [User Documentation](Docs/_User_Documentation/README.md)
+    *   [Wilmer API Setup](Docs/_User_Documentation/Setup/_Getting-Start_Wilmer-Api.md)
+    *   [Wilmer with Open WebUI](Docs/_User_Documentation/Setup/Open-WebUI.md)
+    *   [Wilmer With SillyTavern](Docs/_User_Documentation/Setup/SillyTavern.md)
+*   **Video:**
+    [![WilmerAI and Open WebUI Install on Fresh Windows 11 Desktop](https://img.youtube.com/vi/KDpbxHMXmTs/0.jpg)](https://www.youtube.com/watch?v=KDpbxHMXmTs "WilmerAI and Open WebUI Install on Fresh Windows 11 Desktop")
+
+## API Endpoints:
+
+WilmerAI offers the following APIs for easy integration:
+
+*   OpenAI Compatible v1/completions (requires Wilmer Prompt Template)
+*   OpenAI Compatible chat/completions
+*   Ollama Compatible api/generate (requires Wilmer Prompt Template)
+*   Ollama Compatible api/chat
+
+## Backend Connections:
+
+Connect to a variety of LLM backends:
+
+*   OpenAI
+*   Ollama
+*   KoboldCpp
+
+## License
+
+WilmerAI is licensed under the GNU General Public License v3.
 
 ## Contact
 
-Reach out with feedback and suggestions: WilmerAI.Project@gmail.com
-
-[Original Repository](https://github.com/SomeOddCodeGuy/WilmerAI)
+For feedback, requests, or inquiries: [WilmerAI.Project@gmail.com](mailto:WilmerAI.Project@gmail.com)

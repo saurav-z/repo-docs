@@ -1,75 +1,79 @@
-# MaxText: High-Performance, Open-Source LLM Training Library
+# MaxText: Train and Fine-Tune Large Language Models at Scale
 
-**Supercharge your large language model training with MaxText, a cutting-edge, open-source library built for speed, scalability, and efficiency.** ([Original Repository](https://github.com/AI-Hypercomputer/maxtext))
+**Supercharge your LLM training with MaxText, an open-source library providing high-performance and scalable solutions for cutting-edge language models.**
 
-MaxText is a powerful and flexible library designed for training and fine-tuning large language models (LLMs) on Google Cloud TPUs and GPUs, written in pure Python and JAX. Whether you're a researcher or a production engineer, MaxText offers a streamlined approach to building, experimenting with, and deploying state-of-the-art LLMs.
+[![MaxText Package Tests](https://github.com/AI-Hypercomputer/maxtext/actions/workflows/RunTests.yml/badge.svg)](https://github.com/AI-Hypercomputer/maxtext/actions/workflows/build_and_test_maxtext.yml)
 
-**Key Features:**
+## Key Features
 
-*   **High Performance:** Optimized for Model FLOPs Utilization (MFU) and tokens/second, ensuring efficient training across various hardware configurations.
-*   **Scalable Architecture:** Designed to scale from single host to large clusters, supporting pre-training and post-training tasks.
-*   **Open Source and Flexible:** Built on JAX, a powerful and flexible framework, and supports popular models. Easily adaptable to your custom needs.
-*   **Model Agnostic:** Supports a wide range of LLMs, including:
-    *   Gemma
-    *   Llama
-    *   DeepSeek
-    *   Qwen
-    *   Mistral
-*   **Comprehensive Training Support:** Includes pre-training, Supervised Fine-Tuning (SFT), and Group Relative Policy Optimization (GRPO) to cover a variety of LLM use cases.
+*   **High-Performance & Scalable:** Built for speed and efficiency, achieving high Model FLOPs Utilization (MFU) and tokens/second on both single hosts and massive clusters, leveraging the power of JAX and the XLA compiler.
+*   **Open Source & Flexible:** A versatile library for ambitious LLM projects, perfect for both research and production environments, readily adaptable for your unique needs.
+*   **Pre-training & Post-training Support:** Comprehensive support for both pre-training and post-training, including popular techniques like Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO).
+*   **Extensive Model Library:** Access a wide range of models, including Gemma, Llama, DeepSeek, Qwen, and Mistral.
+*   **Pure Python/JAX:** Written in pure Python with JAX for flexibility and performance, targeting Google Cloud TPUs and GPUs.
+*   **Modular Design:** Uses Flax for neural networks, Tunix for post-training, Orbax for checkpointing, Optax for optimization, and Grain for dataloading.
 
-## Installation
+## Getting Started
 
-Get started quickly by installing MaxText using your preferred method:
+### Installation
 
-### From PyPI (Recommended)
+We recommend installing MaxText within a Python virtual environment.
+
+#### From PyPI (Recommended)
 
 ```bash
+# 1. Install uv, a fast Python package installer
 pip install uv
+
+# 2. Install MaxText and its dependencies
 uv pip install maxtext --resolution=lowest
 install_maxtext_github_deps
 ```
 
-> **Note:**  Using `--resolution=lowest` ensures consistent and reproducible environments.
+> **Note:** The `install_maxtext_github_deps` command is temporarily required to install dependencies directly from GitHub that are not yet available on PyPI.
 
-### From Source
+> **Note:** We highly recommend the `--resolution=lowest` flag with `uv` for consistent and reproducible results.
+
+#### From Source
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/AI-Hypercomputer/maxtext.git
 cd maxtext
+
+# 2. Install dependencies in editable mode
 pip install uv
 uv pip install -e . --resolution=lowest
 install_maxtext_github_deps
 ```
 
-Verify installation with `python3 -c "import MaxText"` and run training jobs using `python3 -m MaxText.train ...`.
+After installation, verify with `python3 -c "import MaxText"` and train with `python3 -m MaxText.train ...`.
 
-## 🔥 What's New 🔥
+## Latest Updates
 
-Stay up-to-date with the latest MaxText developments:
-
-*   \[September 5, 2025] MaxText has moved to an `src` layout as part of [RESTRUCTURE.md](RESTRUCTURE.md).  For existing environments, please run `pip install -e .` from MaxText root.
-*   \[August 13, 2025] Support added for the Qwen3 2507 MoE family of models.
-*   \[July 27, 2025] TFLOPS/s calculation updated.
-*   \[July 16, 2025]  Repository restructuring proposed; see [RESTRUCTURE.md](https://github.com/AI-Hypercomputer/maxtext/blob/main/RESTRUCTURE.md).
-*   \[July 11, 2025] Multi-Token Prediction (MTP) training support added.
-*   \[June 25, 2025] Support for DeepSeek R1-0528 variant.
-*   \[April 24, 2025] Support for Llama 4 Maverick models.
+*   \[September 5, 2025] MaxText has moved to an `src` layout as part of [RESTRUCTURE.md](RESTRUCTURE.md).
+*   \[August 13, 2025] The Qwen3 2507 MoE family of models is now supported.
+*   \[July 27, 2025] Updated TFLOPS/s calculation.
+*   \[July 16, 2025] Restructuring of the MaxText repository is in progress.
+*   \[July 11, 2025] Multi-Token Prediction (MTP) training support.
+*   \[June 25, 2025] DeepSeek R1-0528 variant is now supported.
+*   \[April 24, 2025] Llama 4 Maverick models are now supported.
 
 ## Use Cases
 
-MaxText is your go-to solution for:
+MaxText provides a robust framework for both pre-training and post-training LLMs.
 
 ### Pre-training
 
-Use MaxText to experiment, ideate, and train LLMs from scratch.  The library provides opinionated implementations for achieving optimal performance.
+Use MaxText as a reference implementation for experimentation and to train your own custom models, offering optimized configurations for performance across sharding, quantization, and checkpointing.
 
 ### Post-training
 
-Fine-tune existing models using a scalable framework built on Tunix. Leverage vLLM and Pathways (coming soon) for efficient RL training (like GRPO).
+Leverage MaxText and Tunix for scalable post-training, including Reinforcement Learning (RL) methods like GRPO, with integration with vLLM and Pathways.
 
 ### Model Library
 
-Access a rich collection of pre-supported models:
+MaxText supports a wide range of state-of-the-art open-source language models.
 
 **Supported JAX models in MaxText**
 
@@ -94,11 +98,10 @@ Access a rich collection of pre-supported models:
     *   Mixtral (8x7B, 8x22B)
     *   Mistral (7B)
 *   Diffusion Models
-    *   See [MaxDiffusion](https://github.com/AI-Hypercomputer/maxdiffusion) (Wan 2.1, Flux, SDXL, etc)
+    *   See [MaxDiffusion](https://github.com/AI-Hypercomputer/maxdiffusion)
 
 ## Get Involved
 
-Join the MaxText community!
+Join the community on our [Discord Channel](https://discord.com/invite/2H9PhvTcDU).  For feedback, feature requests, documentation requests, or bug reports, please [submit an issue](https://github.com/AI-Hypercomputer/maxtext/issues/new/choose) on GitHub.
 
-*   [Discord Channel](https://discord.com/invite/2H9PhvTcDU)
-*   Report issues, request features, or ask questions: [Issue Tracker](https://github.com/AI-Hypercomputer/maxtext/issues/new/choose)
+[Back to the top of the repository](https://github.com/AI-Hypercomputer/maxtext)

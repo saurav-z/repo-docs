@@ -2,14 +2,14 @@
 
 # ComfyUI: Unleash Your AI Artistry with a Visual Workflow Engine
 
-ComfyUI is a powerful and modular visual AI engine that empowers you to create complex, stunning AI-generated images through an intuitive node-based interface.  Explore a world of creative possibilities and bring your artistic visions to life with this open-source platform.
+**Design and execute advanced Stable Diffusion pipelines visually with ComfyUI, the most powerful and modular visual AI engine.**
 
 [![Website](https://img.shields.io/badge/ComfyOrg-4285F4?style=flat)][website-url]
-[![Discord](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fcomfyorg%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&logo=discord&logoColor=white&label=Discord&color=green&suffix=%20total)][discord-url]
+[![Discord](https://img.shields.io/badge/Discord-Join-green)][discord-url]
 [![Twitter](https://img.shields.io/twitter/follow/ComfyUI)][twitter-url]
-[![Matrix](https://img.shields.io/badge/Matrix-000000?style=flat&logo=matrix&logoColor=white)][matrix-url]
+[![Matrix](https://img.shields.io/badge/Matrix-Chat-000000?style=flat&logo=matrix&logoColor=white)][matrix-url]
 <br>
-[![GitHub Release](https://img.shields.io/github/v/release/comfyanonymous/ComfyUI?style=flat&sort=semver)][github-release-link]
+[![Release](https://img.shields.io/github/v/release/comfyanonymous/ComfyUI?style=flat&sort=semver)][github-release-link]
 [![Release Date](https://img.shields.io/github/release-date/comfyanonymous/ComfyUI?style=flat)][github-release-link]
 [![Downloads](https://img.shields.io/github/downloads/comfyanonymous/ComfyUI/total?style=flat)][github-downloads-link]
 [![Latest Downloads](https://img.shields.io/github/downloads/comfyanonymous/ComfyUI/latest/total?style=flat&label=downloads%40latest)][github-downloads-link]
@@ -24,75 +24,44 @@ ComfyUI is a powerful and modular visual AI engine that empowers you to create c
 ![ComfyUI Screenshot](https://github.com/user-attachments/assets/7ccaf2c1-9b72-41ae-9a89-5688c94b7abe)
 </div>
 
-## Key Features
+ComfyUI offers a node-based interface for creating intricate and customizable Stable Diffusion workflows, empowering you to generate stunning AI art.
 
-*   **Visual Workflow Interface:** Design and execute intricate Stable Diffusion pipelines using a node-based, flowchart-style interface, eliminating the need for coding.
-*   **Extensive Model Support:**  Access a vast library of models including SD1.x, SD2.x, SDXL, Stable Cascade, SD3, and many more, along with specialized image editing, video, and audio models. See examples [here](https://comfyanonymous.github.io/ComfyUI_examples/).
-*   **Asynchronous Processing:**  Utilizes an asynchronous queue system for efficient workflow execution.
-*   **Optimized Performance:** Offers smart memory management, allowing you to run large models on GPUs with limited VRAM, even as low as 1GB, and CPU fallback.
-*   **Checkpoint Compatibility:** Load various checkpoint formats like ckpt and safetensors, as well as VAEs and CLIP models.
-*   **Advanced Features:** Includes support for embeddings, LoRAs, hypernetworks, workflow loading/saving, inpainting, ControlNet, upscaling, model merging, and more.
-*   **Offline Functionality:** Works fully offline, downloading files only when you explicitly request them.
-*   **Flexible Model Loading:** Supports various model types including SD1.x, SD2.x, SDXL, Stable Cascade, SD3 and more.
+**Key Features:**
 
-## Getting Started
+*   **Visual Workflow Editor:** Design complex Stable Diffusion pipelines with an intuitive, node-based interface, eliminating the need for coding.
+*   **Broad Model Support:** Compatible with a wide range of image, video, and audio models:
+    *   **Image Models:** SD1.x, SD2.x, SDXL, SDXL Turbo, Stable Cascade, SD3 and SD3.5, Pixart Alpha/Sigma, AuraFlow, HunyuanDiT, Flux, Lumina Image 2.0, HiDream, Qwen Image, Hunyuan Image 2.1.
+    *   **Image Editing Models:** Omnigen 2, Flux Kontext, HiDream E1.1, Qwen Image Edit.
+    *   **Video Models:** Stable Video Diffusion, Mochi, LTX-Video, Hunyuan Video, Wan 2.1, Wan 2.2.
+    *   **Audio Models:** Stable Audio, ACE Step.
+    *   **3D Models:** Hunyuan3D 2.0.
+*   **Optimized Performance:** Features an asynchronous queue system, memory optimization, and smart offloading for efficient processing, even on GPUs with limited VRAM.
+*   **Flexible Compatibility:** Works with or without a GPU (CPU mode available), and supports various checkpoint formats (ckpt, safetensors, etc.).
+*   **Advanced Features:** Includes support for embeddings/textual inversion, LoRAs, hypernetworks, workflow loading/saving (PNG, WebP, FLAC), area composition, inpainting, ControlNet, T2I-Adapter, and upscale models.
+*   **Offline Functionality:** Core functionality operates fully offline; optional API nodes connect to external providers.
+*   **Extensible:**  Configurable search paths for models via the `extra_model_paths.yaml` file.
+*   **High-Quality Previews:** Offers high-quality previews using TAESD (`--preview-method taesd`).
 
-Choose the installation method that best suits your needs:
+Access numerous workflow examples on the [Examples page](https://comfyanonymous.github.io/ComfyUI_examples/)
 
-*   **[Desktop Application](https://www.comfy.org/download):** Easiest way to get started, available on Windows & macOS.
-*   **[Windows Portable Package](#installing):**  Get the latest updates and fully portable.
-*   **[Manual Install](#manual-install-windows-linux):**  Supports all operating systems and GPU types (NVIDIA, AMD, Intel, Apple Silicon, Ascend).
-*   **[comfy-cli](https://docs.comfy.org/comfy-cli/getting-started):** Use comfy-cli: `pip install comfy-cli` then `comfy install`
+**Getting Started:**
 
-## Accessing Advanced Features
+*   **[Desktop Application](https://www.comfy.org/download):**  Easiest way to start, available for Windows & macOS.
+*   **[Windows Portable Package](https://github.com/comfyanonymous/ComfyUI/releases):** Latest commits, completely portable.
+*   **[Manual Install](#manual-install-windows-linux):** Supports all operating systems and GPU types (NVIDIA, AMD, Intel, Apple Silicon, Ascend, Cambricon, Iuvatar).
+    *   See the [Wiki](https://github.com/comfyanonymous/ComfyUI/wiki) for extra setup and information.
 
-*   **[Examples](https://comfyanonymous.github.io/ComfyUI_examples/):** Explore pre-built workflows to jumpstart your creative process.
-*   **[Workflow Examples Page](https://comfyanonymous.github.io/ComfyUI_examples/):** Discover an extensive collection of example workflows.
+**[Click here to view the original ComfyUI repository](https://github.com/comfyanonymous/ComfyUI).**
 
-## Learn More
-Find more details and support for ComfyUI on the [original GitHub repository](https://github.com/comfyanonymous/ComfyUI).
+**(See the original README for installation and usage instructions)**
 
-## Shortcuts
-
-| Keybind                            | Explanation                                                                                                        |
-|------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| `Ctrl` + `Enter`                      | Queue up current graph for generation                                                                              |
-| `Ctrl` + `Shift` + `Enter`              | Queue up current graph as first for generation                                                                     |
-| `Ctrl` + `Alt` + `Enter`                | Cancel current generation                                                                                          |
-| `Ctrl` + `Z`/`Ctrl` + `Y`                 | Undo/Redo                                                                                                          |
-| `Ctrl` + `S`                          | Save workflow                                                                                                      |
-| `Ctrl` + `O`                          | Load workflow                                                                                                      |
-| `Ctrl` + `A`                          | Select all nodes                                                                                                   |
-| `Alt `+ `C`                           | Collapse/uncollapse selected nodes                                                                                 |
-| `Ctrl` + `M`                          | Mute/unmute selected nodes                                                                                         |
-| `Ctrl` + `B`                           | Bypass selected nodes (acts like the node was removed from the graph and the wires reconnected through)            |
-| `Delete`/`Backspace`                   | Delete selected nodes                                                                                              |
-| `Ctrl` + `Backspace`                   | Delete the current graph                                                                                           |
-| `Space`                              | Move the canvas around when held and moving the cursor                                                             |
-| `Ctrl`/`Shift` + `Click`                 | Add clicked node to selection                                                                                      |
-| `Ctrl` + `C`/`Ctrl` + `V`                  | Copy and paste selected nodes (without maintaining connections to outputs of unselected nodes)                     |
-| `Ctrl` + `C`/`Ctrl` + `Shift` + `V`          | Copy and paste selected nodes (maintaining connections from outputs of unselected nodes to inputs of pasted nodes) |
-| `Shift` + `Drag`                       | Move multiple selected nodes at the same time                                                                      |
-| `Ctrl` + `D`                           | Load default graph                                                                                                 |
-| `Alt` + `+`                          | Canvas Zoom in                                                                                                     |
-| `Alt` + `-`                          | Canvas Zoom out                                                                                                    |
-| `Ctrl` + `Shift` + LMB + Vertical drag | Canvas Zoom in/out                                                                                                 |
-| `P`                                  | Pin/Unpin selected nodes                                                                                           |
-| `Ctrl` + `G`                           | Group selected nodes                                                                                               |
-| `Q`                                 | Toggle visibility of the queue                                                                                     |
-| `H`                                  | Toggle visibility of history                                                                                       |
-| `R`                                  | Refresh graph                                                                                                      |
-| `F`                                  | Show/Hide menu                                                                                                      |
-| `.`                                  | Fit view to selection (Whole graph when nothing is selected)                                                        |
-| Double-Click LMB                   | Open node quick search palette                                                                                     |
-| `Shift` + Drag                       | Move multiple wires at once                                                                                        |
-| `Ctrl` + `Alt` + LMB                   | Disconnect all wires from clicked slot                                                                             |
-
-`Ctrl` can also be replaced with `Cmd` instead for macOS users
+```
+<!--
+Example of how to put the installation instructions here
 
 ## Installing
 
-## Windows Portable
+### Windows Portable
 
 There is a portable standalone build for Windows that should work for running on Nvidia GPUs or for running on your CPU only on the [releases page](https://github.com/comfyanonymous/ComfyUI/releases).
 
@@ -220,7 +189,7 @@ For models compatible with Iluvatar Extension for PyTorch. Here's a step-by-step
 1. Install the Iluvatar Corex Toolkit by adhering to the platform-specific instructions on the [Installation](https://support.iluvatar.com/#/DocumentCentre?id=1&nameCenter=2&productId=520117912052801536)
 2. Launch ComfyUI by running `python main.py`
 
-## Running
+# Running
 
 ```python main.py```
 
@@ -240,7 +209,7 @@ You can enable experimental memory efficient attention on recent pytorch in Comf
 
 You can also try setting this env variable `PYTORCH_TUNABLEOP_ENABLED=1` which might speed things up at the cost of a very slow initial run.
 
-## Notes
+# Notes
 
 Only parts of the graph that have an output with all the correct inputs will be executed.
 
@@ -327,3 +296,4 @@ This will use a snapshot of the legacy frontend preserved in the [ComfyUI Legacy
 ### Which GPU should I buy for this?
 
 [See this page for some recommendations](https://github.com/comfyanonymous/ComfyUI/wiki/Which-GPU-should-I-buy-for-ComfyUI)
+-->

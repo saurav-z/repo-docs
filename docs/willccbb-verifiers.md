@@ -43,7 +43,6 @@ We recommend using `verifiers` with along [uv](https://docs.astral.sh/uv/getting
 curl -LsSf https://astral.sh/uv/install.sh | sh
 # create a fresh project -- 3.11 + 3.12 supported
 uv init && uv venv --python 3.12 
-source .venv/bin/activate
 ```
 
 For local (CPU) development and evaluation with API models, do:
@@ -53,7 +52,7 @@ uv add verifiers # uv add 'verifiers[dev]' for Jupyter + testing support
 
 For training on GPUs with `vf.GRPOTrainer`, do:
 ```bash
-uv add 'verifiers[all]' && uv pip install flash-attn --no-build-isolation
+uv add 'verifiers[train]' && uv pip install flash-attn --no-build-isolation
 ```
 
 To use the latest `main` branch, do:
@@ -86,17 +85,17 @@ Environments in Verifiers are installable Python modules which can specify depen
 
 To initialize a blank Environment module template, do:
 ```bash
-vf-init environment-name # -p /path/to/environments (defaults to "./environments")
+uv run vf-init environment-name # -p /path/to/environments (defaults to "./environments")
 ```
 
 To an install an Environment module into your project, do:
 ```bash
-vf-install environment-name # -p /path/to/environments (defaults to "./environments") 
+uv run vf-install environment-name # -p /path/to/environments (defaults to "./environments") 
 ```
 
 To install an Environment module from this repo's `environments` folder, do:
 ```bash
-vf-install math-python --from-repo # -b branch_or_commit (defaults to "main")
+uv run vf-install math-python --from-repo # -b branch_or_commit (defaults to "main")
 ```
 
 Once an Environment module is installed, you can create an instance of the Environment using `load_environment`, passing any necessary args:
@@ -107,7 +106,7 @@ vf_env = vf.load_environment("environment-name", **env_args)
 
 To run a quick evaluation of your Environment with an API-based model, do:
 ```bash
-vf-eval environment-name -s # run and save eval results locally
+uv run vf-eval environment-name -s # run and save eval results locally
 # vf-eval -h for config options; defaults to gpt-4.1-mini, 5 prompts, 3 rollouts for each
 ```
 
@@ -180,7 +179,7 @@ Note on concurrency: environment APIs accept `max_concurrent` to control paralle
 `vf-eval` also supports specifying `sampling_args` as a JSON object, which is sent to the vLLM inference engine:
 
 ```bash
-vf-eval vf-environment-name --sampling-args '{"reasoning_effort": "low"}'
+uv run vf-eval vf-environment-name --sampling-args '{"reasoning_effort": "low"}'
 ```
 
 Use `vf-eval -s` to save outputs as dataset-formatted JSON, and view all locally-saved eval results with `vf-tui`.
@@ -287,7 +286,7 @@ See the full [docs](https://verifiers.readthedocs.io/en/latest/) for more inform
 
 Verifiers warmly welcomes community contributions! Please open an issue or PR if you encounter bugs or other pain points during your development, or start a discussion for more open-ended questions.
 
-Please note that the core `verifiers/` library is intended to be a relatively lightweight set of reusable components rather than an exhaustive catalog of RL environments. For *applications* of `verifiers` (e.g. "an Environment for XYZ task"), you are welcome to submit a PR for a self-contained module that lives within `environments/` if it serves as a canonical example of a new pattern. Stay tuned for more info shortly about our plans for supporting community Environment contributions 🙂
+Please note that the core `verifiers/` library is intended to be a relatively lightweight set of reusable components rather than an exhaustive catalog of RL environments. Consider sharing any environments you create to the [Environments Hub](https://app.primeintellect.ai/dashboard/environments) 🙂
 
 ## Citation
 

@@ -1,37 +1,58 @@
-# Context Engineering: Beyond Prompt Engineering 
+<div align="center">
+  
+# Context Engineering
 
-**Unlock the full potential of Large Language Models by mastering context design, orchestration, and optimization. Dive into the emerging field of Context Engineering and transform how you interact with AI.** ([Original Repo](https://github.com/davidkimai/Context-Engineering))
+</div>
+
 
 <img width="1600" height="400" alt="image" src="https://github.com/user-attachments/assets/f41f9664-b707-4291-98c8-5bab3054a572" />
 
-> *"Context engineering is the delicate art and science of filling the context window with just the right information for the next step." — [Andrej Karpathy](https://x.com/karpathy/status/1937902205765607626)*
+> **"Context engineering is the delicate art and science of filling the context window with just the right information for the next step." — [**Andrej Karpathy**](https://x.com/karpathy/status/1937902205765607626)**
+>
+> [**Software Is Changing (Again) Talk @YC AI Startup School**](https://www.youtube.com/watch?v=LCEmiRjPEtQ)
 
-## Key Features:
+<div align="center">
+  
+## [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/davidkimai/Context-Engineering)
 
-*   **First-Principles Approach:** Learn context engineering through a structured, progressive learning path inspired by biological systems.
-*   **Practical Guides & Examples:** Get hands-on with code and see complete implementations to build your skills.
-*   **Comprehensive Course:** A course is under construction, offering a deep dive from foundational concepts to advanced techniques.
-*   **Cutting-Edge Research:** Stay up-to-date with the latest advancements, including research from ICML, IBM, NeurIPS, and more.
-*   **Agent Commands Integration:** Support for popular LLM platforms like Claude Code, OpenCode, and Gemini CLI, and more.
-*   **Visual Learning:** Concepts are explained using clear diagrams and analogies for easier understanding.
+<img width="1917" height="360" alt="image" src="https://github.com/user-attachments/assets/0c20f697-d505-4d49-a829-fc4d319eb1d3" />
 
-## Core Concepts Covered:
+</div>
 
-*   **Token Budget:** Optimize context to reduce costs and improve performance.
-*   **Few-Shot Learning:** Improve model performance by demonstrating examples.
-*   **Memory Systems:** Enable stateful, coherent interactions.
-*   **Retrieval Augmentation:** Ground responses in facts by injecting relevant information.
-*   **Control Flow:** Structure complex tasks into manageable steps.
-*   **Context Pruning:** Keep only essential information in context.
-*   **Metrics & Evaluation:** Measure and optimize context effectiveness.
-*   **Cognitive Tools:** Build custom tools and templates.
-*   **Neural Field Theory:** Model context as a dynamic neural field.
-*   **Symbolic Mechanisms:** Enable advanced reasoning.
-*   **Quantum Semantics:** Explore meaning in context.
+<div align="center">
+  
+ ## [DeepGraph](https://www.deepgraph.co/davidkimai/Context-Engineering)
+ 
+## [Chat with NotebookLM + Podcast Deep Dive](https://notebooklm.google.com/notebook/0c6e4dc6-9c30-4f53-8e1a-05cc9ff3bc7e)
 
-## Why Context Engineering Matters:
+## [![Discord](https://img.shields.io/badge/Discord-join%20chat-7289DA.svg?logo=discord")](https://discord.gg/JeFENHNNNQ)
 
-Context Engineering expands beyond prompt engineering by focusing on the complete information payload delivered to LLMs. It is a paradigm shift in the way we interact with and leverage the power of Large Language Models.
+
+</div>
+
+## [Comprehensive Course Under Construction](https://github.com/davidkimai/Context-Engineering/tree/main/00_COURSE)
+
+> ### **[Context Engineering Survey-Review of 1400 Research Papers](https://arxiv.org/pdf/2507.13334)**
+>
+> [**Awesome Context Engineering Repo**](https://github.com/Meirtz/Awesome-Context-Engineering)
+
+Operationalizing the Latest Research on Context With First Principles & Visuals — July 2025 from ICML, IBM, NeurIPS, OHBM, and more 
+
+
+> **"Providing “cognitive tools” to GPT-4.1 increases its pass@1 performance on AIME2024 from 26.7% to 43.3%, bringing it very close to the performance of o1-preview."** — [**IBM Zurich**](https://www.arxiv.org/pdf/2506.12115)
+
+<div align="center">
+  
+## [`Agent Commands`](https://github.com/davidkimai/Context-Engineering/tree/main/.claude/commands)
+**Support for [Claude Code](https://www.anthropic.com/claude-code) | [OpenCode](https://opencode.ai/) | [Amp](https://sourcegraph.com/amp) | [Kiro](https://kiro.dev/) | [Codex](https://openai.com/codex/) | [Gemini CLI](https://github.com/google-gemini/gemini-cli)**
+
+#### [Context Engineering Survey-Review of 1400 Research Papers](https://arxiv.org/pdf/2507.13334) | [Context Rot](https://research.trychroma.com/context-rot) | [IBM Zurich](https://www.arxiv.org/pdf/2506.12115) | [Quantum Semantics](https://arxiv.org/pdf/2506.10077) | [Emergent Symbolics ICML Princeton](https://openreview.net/forum?id=y1SnRPDWx4) | [MEM1 Singapore-MIT](https://arxiv.org/pdf/2506.15841) | [LLM Attractors Shanghai AI](https://arxiv.org/pdf/2502.15208?) | [MemOS Shanghai](https://github.com/MemTensor/MemOS) | [Latent Reasoning](https://arxiv.org/pdf/2507.06203) | [Dynamic Recursive Depths](https://arxiv.org/pdf/2507.10524)
+
+
+</div>
+
+A frontier, first-principles handbook for moving beyond prompt engineering to the wider discipline of context design, orchestration, and optimization.
+
 
 ```
                     Prompt Engineering  │  Context Engineering
@@ -41,7 +62,159 @@ Context Engineering expands beyond prompt engineering by focusing on the complet
                                         │     tools, state, control flow)
 ```
 
-## Learning Path:
+## Definition of Context Engineering
+
+> **Context is not just the single prompt users send to an LLM. Context is the complete information payload provided to a LLM at inference time, encompassing all structured informational components that the model needs to plausibly accomplish a given task.**
+>
+> — [**Definition of Context Engineering from A Systematic Analysis of Over 1400 Research Papers**](https://arxiv.org/pdf/2507.13334)
+
+```
+╭─────────────────────────────────────────────────────────────╮
+│              CONTEXT ENGINEERING MASTERY COURSE             │
+│                    From Zero to Frontier                    │
+╰─────────────────────────────────────────────────────────────╯
+                          ▲
+                          │
+                 Mathematical Foundations
+                  C = A(c₁, c₂, ..., cₙ)
+                          │
+                          ▼
+┌─────────────┬──────────────┬──────────────┬─────────────────┐
+│ FOUNDATIONS │ SYSTEM IMPL  │ INTEGRATION  │ FRONTIER        │
+│ (Weeks 1-4) │ (Weeks 5-8)  │ (Weeks 9-10) │ (Weeks 11-12)   │
+└─────┬───────┴──────┬───────┴──────┬───────┴─────────┬───────┘
+      │              │              │                 │
+      ▼              ▼              ▼                 ▼
+┌─────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│ Math Models │ │ RAG Systems  │ │ Multi-Agent  │ │ Meta-Recurs  │
+│ Components  │ │ Memory Arch  │ │ Orchestrat   │ │ Quantum Sem  │
+│ Processing  │ │ Tool Integr  │ │ Field Theory │ │ Self-Improv  │
+│ Management  │ │ Agent Systems│ │ Evaluation   │ │ Collaboration│
+└─────────────┘ └──────────────┘ └──────────────┘ └──────────────┘
+```
+
+
+## Why This Repository Exists
+
+> **"Meaning is not an intrinsic, static property of a semantic expression, but rather an emergent phenomenon"
+— [Agostino et al. — July 2025, Indiana University](https://arxiv.org/pdf/2506.10077)**
+
+Prompt engineering received all the attention, but we can now get excited for what comes next. Once you've mastered prompts, the real power comes from engineering the **entire context window** that surrounds those prompts. Guiding thought, if you will. 
+
+This repository provides a progressive, first-principles approach to context engineering, built around a biological metaphor:
+
+```
+atoms → molecules → cells → organs → neural systems → neural & semantic field theory 
+  │        │         │         │             │                         │        
+single    few-     memory +   multi-   cognitive tools +     context = fields +
+prompt    shot     agents     agents   operating systems     persistence & resonance
+```
+> "Abstraction is the cost of generalization"— [**Grant Sanderson (3Blue1Brown)**](https://www.3blue1brown.com/)
+
+
+<div align="center">
+
+<img width="931" height="854" alt="image" src="https://github.com/user-attachments/assets/580a9b1a-539f-41dc-abce-a5106b33350e" />
+
+*[A Survey of Context Engineering - July 2025](https://arxiv.org/pdf/2507.13334)*
+
+
+  
+ **[On Emergence, Attractors, and Dynamical Systems Theory](https://content.csbs.utah.edu/~butner/systems/DynamicalSystemsIntro.html) | [Columbia DST](http://wordpress.ei.columbia.edu/ac4/about/our-approach/dynamical-systems-theory/)**
+
+
+https://github.com/user-attachments/assets/9f046259-e5ec-4160-8ed0-41a608d8adf3
+
+
+
+![image](https://github.com/user-attachments/assets/309b8d8c-13b5-403c-9f1d-6a0ad551ea56)
+
+</div>
+
+
+
+```mermaid
+graph TD
+    classDef basic fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#01579b
+    classDef intermediate fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#2e7d32
+    classDef advanced fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#e65100
+    classDef meta fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px,color:#6a1b9a
+    
+    subgraph Basic["Level 1: Basic Context Engineering"]
+        A[Atoms]
+        B[Molecules]
+        C[Cells]
+        D[Organs]
+    end
+    
+    subgraph Field["Level 2: Field Theory"]
+        E[Neural Systems]
+        F[Neural Fields]
+    end
+    
+    subgraph Protocol["Level 3: Protocol System"]
+        G[Protocol Shells]
+        H[Unified System]
+    end
+    
+    subgraph Meta["Level 4: Meta-Recursion"]
+        I[Meta-Recursive Framework]
+    end
+    
+    %% Connections
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    
+    %% Descriptions for each level
+    A1["Single instructions<br>Simple constraints<br>Basic prompts"] --> A
+    B1["Example pairs<br>Few-shot patterns<br>Demonstration sets"] --> B
+    C1["Persistent memory<br>State management<br>Context window"] --> C
+    D1["Multi-step flows<br>Specialists<br>System orchestration"] --> D
+    E1["Reasoning frameworks<br>Verification tools<br>Cognitive patterns"] --> E
+    F1["Continuous meaning<br>Attractors & resonance<br>Symbolic residue"] --> F
+    G1["Structured templates<br>Field operations<br>Emergence protocols"] --> G
+    H1["Protocol integration<br>System-level emergence<br>Self-maintenance"] --> H
+    I1["Self-reflection<br>Recursive improvement<br>Interpretable evolution"] --> I
+    
+    %% Real-world parallels
+    A2["Like: Basic prompt<br>engineering"] -.-> A
+    B2["Like: Few-shot<br>learning"] -.-> B
+    C2["Like: Conversational<br>chatbots"] -.-> C
+    D2["Like: Multi-agent<br>systems"] -.-> D
+    E2["Like: ReAct<br>Chain-of-Thought"] -.-> E
+    F2["Like: Semantic<br>field theory"] -.-> F
+    G2["Like: Protocol<br>orchestration"] -.-> G
+    H2["Like: Self-organizing<br>systems"] -.-> H
+    I2["Like: Self-improving<br>intelligence"] -.-> I
+    
+    %% Apply classes
+    class A,B,C,D,A1,A2,B1,B2,C1,C2,D1,D2 basic
+    class E,F,E1,E2,F1,F2 intermediate
+    class G,H,G1,G2,H1,H2 advanced
+    class I,I1,I2 meta
+```
+
+## Quick Start
+
+1. **Read [`00_foundations/01_atoms_prompting.md`](00_foundations/01_atoms_prompting.md)** (5 min)  
+   Understand why prompts alone often underperform
+
+2. **Run [`10_guides_zero_to_hero/01_min_prompt.py`](10_guides_zero_to_hero/01_min_prompt.py)**  (Jupyter Notebook style) 
+   Experiment with a minimal working example
+
+3. **Explore [`20_templates/minimal_context.yaml`](20_templates/minimal_context.yaml)**  
+   Copy/paste a template into your own project  
+
+4. **Study [`30_examples/00_toy_chatbot/`](30_examples/00_toy_chatbot/)**  
+   See a complete implementation with context management
+
+## Learning Path
 
 ```
 ┌─────────────────┐     ┌──────────────────┐     ┌────────────────┐
@@ -72,15 +245,36 @@ Context Engineering expands beyond prompt engineering by focusing on the complet
                          └─────────────────────┘
 ```
 
-## Research Highlights:
+## What You'll Learn
 
-*   **MEM1 - Singapore-MIT:** Agent memory and reasoning.
-*   **IBM Zurich:** Cognitive tools for eliciting reasoning.
-*   **ICML Princeton:** Emergent symbolic mechanisms in LLMs.
+| Concept | What It Is | Why It Matters |
+|---------|------------|----------------|
+| **Token Budget** | Optimizing every token in your context | More tokens = more $$ and slower responses |
+| **Few-Shot Learning** | Teaching by showing examples | Often works better than explanation alone |
+| **Memory Systems** | Persisting information across turns | Enables stateful, coherent interactions |
+| **Retrieval Augmentation** | Finding & injecting relevant documents | Grounds responses in facts, reduces hallucination |
+| **Control Flow** | Breaking complex tasks into steps | Solve harder problems with simpler prompts |
+| **Context Pruning** | Removing irrelevant information | Keep only what's necessary for performance |
+| **Metrics & Evaluation** | Measuring context effectiveness | Iterative optimization of token use vs. quality |
+| **Cognitive Tools & Prompt Programming** | Learm to build custom tools and templates | Prompt programming enables new layers for context engineering |
+| **Neural Field Theory** | Context as a Neural Field | Modeling context as a dynamic neural field allows for iterative context updating |
+| **Symbolic Mechanisms** | Symbolic architectures enable higher order reasoning | Smarter systems = less work |
+| **Quantum Semantics** |  Meaning as observer-dependent  | Design context systems leveraging superpositional techniques |
 
-See examples below
 
-## Research Evidence 
+
+## Karpathy + 3Blue1Brown Inspired Style
+
+> For learners of all experience levels
+
+1. **First principles** – start with the fundamental context
+2. **Iterative add-on** – add only what the model demonstrably lacks
+3. **Measure everything** – token cost, latency, quality score
+4. **Delete ruthlessly** – pruning beats padding
+5. **Code > slides** – every concept has a runnable cell
+6. **Visualize everything** — every concept is visualized with ASCII and symbolic diagrams
+
+# Research Evidence 
 ## Memory + Reasoning
 
 ### **[MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents - Singapore-MIT June 2025](https://www.arxiv.org/pdf/2506.15841)**
@@ -176,22 +370,21 @@ might be helpful in solving the problem.**
 
 6. **The results bridge the historic gap between symbolic AI and neural nets—showing that, at scale, neural networks can invent and use symbolic machinery, supporting real generalization and reasoning.**
 
-## Quick Start:
 
-1.  **Read `00_foundations/01_atoms_prompting.md`** (5 min)
-2.  **Run `10_guides_zero_to_hero/01_min_prompt.py`** (Jupyter Notebook style)
-3.  **Explore `20_templates/minimal_context.yaml`**
-4.  **Study `30_examples/00_toy_chatbot/`**
 
-## Contribute:
+## Star History
 
-We welcome contributions! Review the [CONTRIBUTING.md](.github/CONTRIBUTING.md) file for details.
+[![Star History Chart](https://api.star-history.com/svg?repos=davidkimai/Context-Engineering&type=Date)](https://www.star-history.com/#davidkimai/Context-Engineering&Date)
 
-## License:
+## Contributing
+
+We welcome contributions! Check out [CONTRIBUTING.md](.github/CONTRIBUTING.md) for guidelines.
+
+## License
 
 [MIT License](LICENSE)
 
-## Citation:
+## Citation
 
 ```bibtex
 @misc{context-engineering,
@@ -203,7 +396,8 @@ We welcome contributions! Review the [CONTRIBUTING.md](.github/CONTRIBUTING.md) 
 }
 ```
 
-## Acknowledgements:
+## Acknowledgements
+> I've been looking forward to this being conceptualized and formalized as there wasn't a prior established field. Prompt engineering receives quite the stigma and doesn't quite cover what most researchers and I do.
 
-*   [Andrej Karpathy](https://x.com/karpathy/status/1937902205765607626) for inspiring this work.
-*   All contributors and the open-source community.
+- [Andrej Karpathy](https://x.com/karpathy/status/1937902205765607626) for coining "context engineering" and inspiring this repo 
+- All contributors and the open source community

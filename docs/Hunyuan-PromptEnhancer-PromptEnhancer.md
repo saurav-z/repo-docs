@@ -1,21 +1,40 @@
-# PromptEnhancer: Revolutionizing Text-to-Image Generation with Chain-of-Thought Prompt Rewriting
+<!-- SEO-optimized README -->
 
-**PromptEnhancer** enhances text prompts for improved image generation by re-writing and restructuring them using a Chain-of-Thought approach.  [Explore the original repository](https://github.com/Hunyuan-PromptEnhancer/PromptEnhancer) for more details.
+# PromptEnhancer: Enhance Text-to-Image Models with Advanced Prompt Rewriting
 
-## Key Features
+**PromptEnhancer revolutionizes image generation by rewriting prompts, leading to more detailed and accurate results.**  [Explore the original repo](https://github.com/Hunyuan-PromptEnhancer/PromptEnhancer).
 
-*   **Enhanced Prompt Structure:**  Transforms input prompts into clearer, layered, and logically consistent prompts tailored for text-to-image models.
-*   **Intent Preservation:**  Maintains the original meaning across key elements like subjects, actions, styles, and relationships.
-*   **"Global-to-Details-to-Summary" Narrative:**  Restructures prompts to describe the main elements first, then details, concluding with a style summary.
-*   **Robust Output Parsing:**  Prioritizes the `<answer>...</answer>` tag for clean extraction; gracefully falls back to removing `<think>...</think>` if needed or returns the original prompt.
-*   **Configurable Inference:**  Offers adjustable parameters (temperature, top\_p, max\_new\_tokens) to fine-tune determinism and creativity.
+---
 
-## Updates
+[![arXiv](https://img.shields.io/badge/Paper-arXiv:2509.04545-red?logo=arxiv)](https://www.arxiv.org/abs/2509.04545)
+[![Zhihu](https://img.shields.io/badge/知乎-技术解读-0084ff?logo=zhihu)](https://zhuanlan.zhihu.com/p/1949013083109459515)
+[![Hugging Face Model](https://img.shields.io/badge/Model-PromptEnhancer_7B-blue?logo=huggingface)](https://huggingface.co/tencent/HunyuanImage-2.1/tree/main/reprompt)
+[![T2I-Keypoints-Eval Dataset](https://img.shields.io/badge/Benchmark-T2I_Keypoints_Eval-blue?logo=huggingface)](https://huggingface.co/datasets/PromptEnhancer/T2I-Keypoints-Eval)
+[![Homepage](https://img.shields.io/badge/Homepage-PromptEnhancer-1abc9c?logo=homeassistant&logoColor=white)](https://hunyuan-promptenhancer.github.io/)
+[![HunyuanImage2.1 Code](https://img.shields.io/badge/Code-HunyuanImage2.1-2ecc71?logo=github)](https://github.com/Tencent-Hunyuan/HunyuanImage-2.1)
+[![HunyuanImage2.1 Model](https://img.shields.io/badge/Model-HunyuanImage2.1-3498db?logo=huggingface)](https://huggingface.co/tencent/HunyuanImage-2.1)
+[![Hunyuan](https://img.shields.io/badge/Hunyuan-black.svg?logo=x)](https://x.com/TencentHunyuan)
 
-*   **[2025-09-18]** ✨  Try the [PromptEnhancer-32B](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B) for improved prompt enhancement!
-*   **[2025-09-16]** Release of the [T2I-Keypoints-Eval dataset](https://huggingface.co/datasets/PromptEnhancer/T2I-Keypoints-Eval).
-*   **[2025-09-07]** Release of the [PromptEnhancer-7B model](https://huggingface.co/tencent/HunyuanImage-2.1/tree/main/reprompt).
-*   **[2025-09-07]** Release of the [technical report](https://arxiv.org/abs/2509.04545).
+---
+
+<p align="center">
+  <img src="assets/teaser-1.png" alt="PromptEnhancer Teaser"/>
+</p>
+
+## Key Features of PromptEnhancer
+
+*   **Enhanced Prompt Quality:** Rewrites prompts to be clearer, more detailed, and logically structured, resulting in improved image generation output.
+*   **Intent Preservation:**  Maintains the core meaning of the original prompt across key elements like subject, action, style, and attributes.
+*   **"Global to Detail" Structure:** Organizes prompts using a "global-details-summary" narrative, leading to a more coherent prompt structure.
+*   **Robust Parsing:** Offers reliable output parsing, handling various scenarios with graceful fallback mechanisms.
+*   **Customizable Parameters:** Allows fine-tuning of generation through configurable parameters such as temperature, top_p, and max_new_tokens.
+
+## What's New
+
+*   **[2025-09-18]** ✨ Check out the [PromptEnhancer-32B](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B) model for superior prompt enhancement!
+*   **[2025-09-16]** Released the [T2I-Keypoints-Eval dataset](https://huggingface.co/datasets/PromptEnhancer/T2I-Keypoints-Eval).
+*   **[2025-09-07]** Released the [PromptEnhancer-7B model](https://huggingface.co/tencent/HunyuanImage-2.1/tree/main/reprompt).
+*   **[2025-09-07]** Published the [technical report](https://arxiv.org/abs/2509.04545).
 
 ## Installation
 
@@ -30,7 +49,7 @@ pip install -r requirements.txt
 huggingface-cli download tencent/HunyuanImage-2.1/reprompt --local-dir ./models/promptenhancer-7b
 ```
 
-## Quickstart
+## Quickstart Guide
 
 ### Using HunyuanPromptEnhancer
 
@@ -54,18 +73,20 @@ new_prompt = enhancer.predict(
 print("Enhanced:", new_prompt)
 ```
 
-## Parameters
+## Parameters Explained
 
-*   `models_root_path`: Local path or repo id; supports `trust_remote_code` models.
-*   `device_map`: Device mapping (default `auto`).
+*   `models_root_path`: Specifies the local path or repository ID for the model. Supports `trust_remote_code` models.
+*   `device_map`:  Defines device mapping, defaulting to "auto".
 *   `predict(...)`:
-    *   `prompt_cot` (str): Input prompt to rewrite.
-    *   `sys_prompt` (str): Optional system prompt; a default is provided for image prompt rewriting.
-    *   `temperature` (float): `>0` enables sampling; `0` for deterministic generation.
-    *   `top_p` (float): Nucleus sampling threshold (effective when sampling).
-    *   `max_new_tokens` (int): Maximum number of new tokens to generate.
+    *   `prompt_cot` (str): The original prompt you want to rewrite.
+    *   `sys_prompt` (str): An optional system prompt. A default is provided for image prompt rewriting.
+    *   `temperature` (float):  Set `>0` for sampling; `0` for deterministic generation.
+    *   `top_p` (float):  Nucleus sampling threshold (relevant when sampling).
+    *   `max_new_tokens` (int): Limits the number of new tokens to generate.
 
 ## Citation
+
+If you use PromptEnhancer in your research, please cite the following:
 
 ```bibtex
 @article{promptenhancer,
@@ -78,12 +99,11 @@ print("Enhanced:", new_prompt)
 
 ## Acknowledgements
 
-*   [Transformers](https://huggingface.co/transformers)
-*   [HuggingFace](https://huggingface.co)
+We are grateful to the following open-source projects and communities: [Transformers](https://huggingface.co/transformers) and [HuggingFace](https://huggingface.co).
 
 ## Contact
 
-For inquiries, please reach out to our open-source team or email us at [hunyuan\_opensource@tencent.com](mailto:hunyuan_opensource@tencent.com).
+For inquiries or feedback, please contact our open-source team or email us at [hunyuan_opensource@tencent.com](mailto:hunyuan_opensource@tencent.com).
 
 ## Star History
 

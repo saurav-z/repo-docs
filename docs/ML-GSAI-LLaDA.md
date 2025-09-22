@@ -1,78 +1,88 @@
-# LLaDA: Revolutionizing Language Modeling with Diffusion (Large Language Diffusion with Masking)
+# LLaDA: Revolutionizing Language Modeling with Diffusion Models
 
-**Explore LLaDA, a groundbreaking 8B parameter diffusion model that challenges traditional autoregressive language models, offering impressive performance and innovative capabilities.**  [Explore the original repository here](https://github.com/ML-GSAI/LLaDA)!
+**LLaDA introduces a novel approach to language modeling, utilizing diffusion models to achieve state-of-the-art performance and unlock new capabilities, rivaling LLaMA3 8B.** Explore the future of language AI with this groundbreaking model. For more details, visit the original repository: [LLaDA GitHub](https://github.com/ML-GSAI/LLaDA).
 
 ## Key Features
 
-*   **Cutting-Edge Architecture:** LLaDA is an 8B-parameter diffusion model trained from scratch, offering a novel approach to language modeling.
-*   **Competitive Performance:**  LLaDA achieves performance on par with LLaMA3 8B, demonstrating the potential of diffusion models in the LLM space.
-*   **Multiple Variants:**  Explore different versions like LLaDA-MoE-7B-A1B and LLaDA-V for specialized tasks.
-*   **Open-Source & Accessible:**  Pre-trained models, including LLaDA-8B-Base and LLaDA-8B-Instruct, are available on Hugging Face for easy deployment and experimentation.
-*   **Flexible Inference:** Utilize provided scripts for conditional likelihood evaluation and conditional generation.
-*   **Gradio Demo:**  Interact with LLaDA through an intuitive Gradio demo.
-*   **Comprehensive Evaluation:**  Evaluate LLaDA using both conditional likelihood estimation and conditional generation, with evaluation code based on the lm-evaluation-harness library.
+*   **Diffusion-Based Language Modeling:** LLaDA utilizes diffusion models, a novel approach to language modeling, achieving impressive performance in the field.
+*   **8 Billion Parameter Scale:** LLaDA boasts an impressive 8B parameter count, demonstrating the power of the model.
+*   **Competitive Performance:** LLaDA rivals the performance of the LLaMA3 8B model, showcasing its efficiency and power.
+*   **Open Source:** Explore the LLaDA-8B-Base and LLaDA-8B-Instruct models available on Hugging Face.
+*   **Versatile Capabilities:** LLaDA excels at in-context learning and instruction following.
+*   **Comprehensive Evaluation:** Utilize evaluation code based on the lm-evaluation-harness library.
 
 ## What's New
 
-*   **[2025.09.11]** Introduction of LLaDA-MoE-7B-A1B-Base and LLaDA-MoE-7B-A1B-Instruct, the first diffusion language model pretrained from scratch with MoE architecture.
-*   **[2025.05.25]** Introduction of LLaDA 1.5, incorporating VRPO for improved preference alignment.
-*   **[2025.05.23]** Introduction of LLaDA-V, a diffusion-based vision-language model.
-*   **[2025.05.04]** Evaluation code based on the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) for LLaDA-Base.
-*   **[2025.02.14]** Paper on [arXiv](https://arxiv.org/abs/2502.09992) and open-sourced LLaDA-8B-Base and LLaDA-8B-Instruct.
+*   **[2025.09.11]** Introduced LLaDA-MoE-7B-A1B-Base and LLaDA-MoE-7B-A1B-Instruct, the first diffusion language model pretrained from scratch with MoE architecture.
+*   **[2025.05.25]** Introduced LLaDA 1.5, incorporating VRPO.
+*   **[2025.05.23]** Introduced LLaDA-V, a competitive diffusion-based vision-language model.
+*   **[2025.05.04]** Evaluation code based on the lm-evaluation-harness has been provided for the LLaDA-Base model.
+*   **[2025.02.14]** Paper published on arXiv and open-sourced LLaDA-8B-Base and LLaDA-8B-Instruct.
 
-## Quickstart
+## Quick Start - Inference
 
-### Installation
+Get started with LLaDA by installing the necessary dependencies and loading the models:
 
 ```bash
-pip install transformers==4.38.2 gradio
+pip install transformers==4.38.2
 ```
-
-### Inference
 
 ```python
 from transformers import AutoModel, AutoTokenizer
-import torch  # Import torch
+import torch # Add this line
 
 tokenizer = AutoTokenizer.from_pretrained('GSAI-ML/LLaDA-8B-Base', trust_remote_code=True)
-model = AutoModel.from_pretrained('GSAI-ML/LLaDA-8B-Base', trust_remote_code=True, torch_dtype=torch.bfloat16).to("cuda") # Move model to GPU
+model = AutoModel.from_pretrained('GSAI-ML/LLaDA-8B-Base', trust_remote_code=True, torch_dtype=torch.bfloat16)
 ```
 
-Explore `get_log_likelihood.py` and `generate.py` for conditional evaluation and generation.
+Explore the `get_log_likelihood.py` and `generate.py` scripts for conditional likelihood evaluation and conditional generation.
 
-Run `python chat.py` for multi-round conversations with LLaDA-8B-Instruct.
+## Gradio Demo
 
-### Gradio Demo
+Experience LLaDA firsthand with the interactive Gradio demo.
 
-Run `python app.py` after installing Gradio.
+*   Run the demo using `python app.py` after installing Gradio: `pip install gradio`.
 
-## Training and Fine-tuning
+## Training and Evaluation
 
-Guidance for pre-training and SFT can be found in [GUIDELINES.md](GUIDELINES.md). Also, consider looking at [SMDM](https://github.com/ML-GSAI/SMDM) for similar training procedures.
+*   **Pre-training and SFT:** Follow the guidelines in [GUIDELINES.md](GUIDELINES.md) for pre-training and SFT. You can also refer to [SMDM](https://github.com/ML-GSAI/SMDM).
+*   **Evaluation:** Detailed evaluation information is available in the [EVAL.md](EVAL.md) file and our [paper](https://arxiv.org/abs/2502.09992).
 
-## Evaluation
+## Frequently Asked Questions (FAQ)
 
-*   Conditional likelihood estimation and conditional generation.
-*   Refer to [EVAL.md](EVAL.md) for evaluation code usage and bug details.
-*   Find comprehensive details in Appendix B.5 of the [paper](https://arxiv.org/abs/2502.09992).
+Address common questions about LLaDA:
 
-## FAQ
+### 0. How do I train my own LLaDA?
 
-*   **How do I train my own LLaDA?** Consult [GUIDELINES.md](GUIDELINES.md) and [SMDM](https://github.com/ML-GSAI/SMDM).
+*   Refer to [GUIDELINES.md](GUIDELINES.md) for training guidelines. Also, see [SMDM](https://github.com/ML-GSAI/SMDM).
 
-*   **What is the difference between LLaDA and BERT?** LLaDA employs a randomly varying masking ratio (0-1) which makes LLaDA a generative model. The training objective of LLaDA is an upper bound on the negative log-likelihood of the model distribution.
+### 1. What is the difference between LLaDA and BERT?
 
-*   **What is the relationship between LLaDA and Transformer?** LLaDA uses the Transformer architecture; the key difference is the probabilistic modeling approach where LLaDA uses a diffusion model.
+*   LLaDA uses a masking ratio that varies randomly (0-1), unlike BERT's fixed ratio.  LLaDA's training objective is an upper bound on the negative log-likelihood, making it a generative model with in-context learning and instruction-following abilities.
 
-*   **What is the sampling efficiency of LLaDA?** LLaDA's sampling is slower than autoregressive models. Optimization is in progress.
+### 2. What is the relationship between LLaDA and Transformer?
 
-*   **What is the training stability of LLaDA?** See Section 2.2 of the paper for details.
+*   LLaDA adopts the Transformer architecture. The key difference is in the probabilistic modeling approach: GPT uses autoregressive next-token prediction, while LLaDA employs a diffusion model.
 
-*   **Why is the final answer "72" generated earlier than the intermediate calculation step (e.g., 12 × 4 = 48) in Tab4?** This is due to the remasking strategy.
+### 3. What is the sampling efficiency of LLaDA?
 
-*   **Why does LLaDA answer 'Bailing' when asked 'Who are you'?** Training data included identity markers.
+*   LLaDA's sampling speed is currently slower than autoregressive models. The sampling speed is being optimized, and there is significant room for improvement.
 
-*   **Our journey in developing LLaDA?** LLaDA builds on the prior works of [RADD](https://arxiv.org/abs/2406.03736) and [SMDM](https://arxiv.org/abs/2410.18514).
+### 4. What is the training stability of LLaDA?
+
+*   During training on 2.3T tokens, a crash occurred once. It was resolved by resuming the checkpoint and decreasing the learning rate.
+
+### 5. Why is the final answer "72" generated earlier than the intermediate calculation step (e.g., 12 × 4 = 48) in Tab4?
+
+*   The mask predictor correctly predicted the reasoning process, but during the remasking, reasoning steps were masked out again.
+
+### 6. Why does LLaDA answer 'Bailing' when asked 'Who are you'?
+
+*   This is due to the design of the pre-training and SFT data, which were designed for autoregressive models.
+
+### 7. Our journey in developing LLaDA?
+
+*   LLaDA builds upon the authors' work on [RADD](https://arxiv.org/abs/2406.03736) and [SMDM](https://arxiv.org/abs/2410.18514).
 
 ## Citation
 
@@ -87,4 +97,4 @@ Guidance for pre-training and SFT can be found in [GUIDELINES.md](GUIDELINES.md)
 
 ## Discussion
 
-Join the conversation and stay updated by scanning the WeChat QR code in the original README.
+Join the conversation and stay updated on the latest LLaDA developments.  Scan the WeChat QR code (included in the original README) to participate.

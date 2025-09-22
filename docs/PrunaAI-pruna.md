@@ -1,11 +1,8 @@
 <div align="center">
-
-<img src="./docs/assets/images/logo.png" alt="Pruna AI Logo" width=400></img>
-
-  <img src="./docs/assets/images/element.png" alt="Element" width=10></img>
-  **Supercharge your AI models with Pruna: make them faster, cheaper, smaller, and greener!**
-  <img src="./docs/assets/images/element.png" alt="Element" width=10></img>
-
+  <img src="./docs/assets/images/logo.png" alt="Pruna AI Logo" width=400>
+  <img src="./docs/assets/images/element.png" alt="Element" width=10>
+  **Supercharge your AI models with Pruna: making them faster, cheaper, smaller, and greener!**
+  <img src="./docs/assets/images/element.png" alt="Element" width=10>
 <br>
 
 [![Documentation](https://img.shields.io/badge/Pruna_documentation-purple?style=for-the-badge)][documentation]
@@ -22,7 +19,7 @@
 
 [![Website](https://img.shields.io/badge/Pruna.ai-purple?style=flat-square)][website]
 [![X (formerly Twitter) URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Fx.com%2FPrunaAI)][x]
-[![Devto](https://img.shields.io/badge/dev-to-black?style=flat-square)][devto]
+[![Devto](https://img.shields/badge/dev-to-black?style=flat-square)][devto]
 [![Reddit](https://img.shields.io/badge/Follow-r%2FPrunaAI-orange?style=social)][reddit]
 [![Discord](https://img.shields.io/badge/Discord-join_us-purple?style=flat-square)][discord]
 [![Huggingface](https://img.shields.io/badge/Huggingface-models-yellow?style=flat-square)][huggingface]
@@ -30,50 +27,68 @@
 
 <br>
 
-<img src="./docs/assets/images/triple_line.png" alt="Pruna AI Logo" width=600, height=30></img>
-
+<img src="./docs/assets/images/triple_line.png" alt="Pruna AI Logo" width=600, height=30>
 </div>
 
-## Pruna: Optimize Your AI Models
+## Table of Contents
 
-Pruna is a powerful model optimization framework designed for developers to dramatically improve the performance and efficiency of their AI models.  Get started today by visiting the [Pruna GitHub Repository](https://github.com/PrunaAI/pruna).
+*   [Introduction](#introduction)
+*   [Key Features](#key-features)
+*   [Installation](#installation)
+*   [Quick Start](#quick-start)
+*   [Pruna Pro](#pruna-pro)
+*   [Algorithm Overview](#algorithm-overview)
+*   [FAQ and Troubleshooting](#faq-and-troubleshooting)
+*   [Contributors](#contributors)
+*   [Citation](#citation)
 
-**Key Features:**
+## Introduction
 
-*   **Faster Inference:** Accelerate model performance with advanced optimization techniques.
-*   **Smaller Model Sizes:** Reduce model size without sacrificing quality.
-*   **Reduced Costs:** Lower computational expenses and resource demands.
-*   **Eco-Friendly AI:** Minimize energy consumption and environmental impact.
+Pruna is a powerful model optimization framework designed to help developers improve the efficiency of their AI models. Achieve significant gains in speed, size, and cost-effectiveness with minimal code changes. Pruna supports a wide range of model types and offers a comprehensive suite of compression techniques.
 
-##  Installation
+## Key Features
 
-Pruna is compatible with Linux, MacOS, and Windows. Before installing, ensure you have Python 3.9 or higher and, optionally, the CUDA toolkit for GPU support.
+*   **Faster Inference:** Accelerate model execution with advanced optimization techniques.
+*   **Smaller Model Size:** Reduce model footprint without sacrificing performance.
+*   **Lower Computational Costs:** Minimize resource requirements and expenses.
+*   **Greener AI:** Decrease energy consumption and environmental impact.
+*   **Comprehensive Suite:** Includes caching, quantization, pruning, distillation, and compilation.
+*   **User-Friendly:** Designed for simplicity, requiring just a few lines of code to optimize models.
+*   **Broad Compatibility:** Supports LLMs, Diffusion Models, Vision Transformers, Speech Recognition models, and more.
 
-### Install via pip:
+## Installation
 
-```bash
-pip install pruna
-```
+Pruna is available for Linux, MacOS, and Windows. Ensure you have Python 3.9+ and, optionally, the CUDA toolkit for GPU support.
 
-### Install from Source:
+**Installation options:**
 
-```bash
-git clone https://github.com/pruna-ai/pruna.git
-cd pruna
-pip install -e .
-```
+*   **Using pip:**
 
-## Quickstart: Get Started with Pruna
+    ```bash
+    pip install pruna
+    ```
 
-Optimize your models in just a few lines of code!
+*   **From source:**
 
-1.  **Load a Pre-trained Model:**
+    ```bash
+    git clone https://github.com/pruna-ai/pruna.git
+    cd pruna
+    pip install -e .
+    ```
+
+## Quick Start
+
+Optimize your models in a few simple steps!
+
+1.  **Load a pre-trained model:**
+
     ```python
     from diffusers import StableDiffusionPipeline
     base_model = StableDiffusionPipeline.from_pretrained("stable-diffusion-v1-5/stable-diffusion-v1-5")
     ```
 
-2.  **Use `smash` to Optimize:**
+2.  **Use Pruna's `smash` function:**
+
     ```python
     from pruna import smash, SmashConfig
 
@@ -83,12 +98,14 @@ Optimize your models in just a few lines of code!
     smashed_model = smash(model=base_model, smash_config=smash_config)
     ```
 
-3.  **Use your Optimized Model:**
+3.  **Use the optimized model:**
+
     ```python
     smashed_model("An image of a cute prune.").images[0]
     ```
 
-4.  **Evaluate Performance:**
+4.  **Evaluate Model Performance:**
+
     ```python
     from pruna.evaluation.task import Task
     from pruna.evaluation.evaluation_agent import EvaluationAgent
@@ -101,29 +118,15 @@ Optimize your models in just a few lines of code!
     eval_agent.evaluate(smashed_model)
     ```
 
-For comprehensive examples and details, see the [Pruna Documentation][documentation].
+See our [documentation][documentation] for a complete overview of algorithms, use cases, and tutorials.
 
 ## Pruna Pro
 
-Unlock advanced features and priority support with Pruna Pro, our enterprise solution.  Explore significant performance gains using proprietary algorithms and benchmark results.
-
-### Example Benchmarks
-
-#### Stable Diffusion XL
-
-<img src="./docs/assets/plots/benchmark_sdxl.svg" alt="SDXL Benchmark"/>
-
-#### FLUX [dev]
-
-<img src="./docs/assets/plots/benchmark_flux.svg" alt="FLUX [dev] Benchmark"/>
-
-#### HunyuanVideo
-
-<img src="./docs/assets/plots/benchmark_hunyuan.svg" alt="HunyuanVideo Benchmark"/>
+For advanced features and optimization, consider Pruna Pro, our enterprise solution. Experience greater efficiency gains with features like Auto Caching and proprietary algorithms.  See performance improvements for Stable Diffusion XL, FLUX [dev], and HunyuanVideo.
 
 ## Algorithm Overview
 
-Pruna offers a diverse set of optimization algorithms. Detailed descriptions are in the [Pruna Documentation][documentation].
+Pruna offers a diverse set of optimization algorithms. Detailed descriptions are in the [documentation](https://docs.pruna.ai/en/stable/).
 
 | Technique    | Description                                                                                   | Speed | Memory | Quality |
 |--------------|-----------------------------------------------------------------------------------------------|:-----:|:------:|:-------:|
@@ -149,17 +152,17 @@ Pruna offers a diverse set of optimization algorithms. Detailed descriptions are
 
 ## FAQ and Troubleshooting
 
-Find answers to your questions and get support via [Discord][discord], [Office Hours][docs-office-hours], or by opening an issue on GitHub.  See the [Pruna Documentation][documentation] and [FAQs][docs-faq] for more.
+Find answers to common questions and solutions to problems in our [documentation][documentation], [FAQs][docs-faq], or existing issues.  Get help from the community on [Discord][discord], join our [Office Hours][docs-office-hours], or open an issue on GitHub.
 
 ## Contributors
 
-Pruna is brought to you by the Pruna AI team and our amazing contributors!  Join the Pruna family by [contributing to the repository][docs-contributing]!
+Pruna is built with 💜 by the Pruna AI team and our amazing contributors.  Join the Pruna family by [contributing to the repository][docs-contributing]!
 
 [![Contributors](https://contrib.rocks/image?repo=PrunaAI/pruna)](https://github.com/PrunaAI/pruna/graphs/contributors)
 
 ## Citation
 
-If you use Pruna in your research, please cite the project!
+If you use Pruna in your research, please cite us!
 
 ```
 @misc{pruna,
@@ -187,19 +190,18 @@ If you use Pruna in your research, please cite the project!
 [docs-office-hours]: https://docs.pruna.ai/en/stable/resources/office_hours.html
 [docs-contributing]: https://docs.pruna.ai/en/stable/docs_pruna/contributions/how_to_contribute.html
 ```
-
 Key improvements and explanations:
 
-*   **Concise Hook:**  Replaced the original tagline with a more direct and compelling one-sentence hook that highlights the core value proposition.
-*   **SEO-Friendly Headings:** Used clear, descriptive headings (e.g., "Installation," "Quickstart") for better readability and search engine optimization.
-*   **Bulleted Key Features:**  Presented the core benefits of Pruna using bullet points, making them easy to scan and understand.
-*   **Installation Section:**  Provided clear instructions for installing Pruna, including both pip and source installation methods.
-*   **Quickstart Example:** Included a runnable code snippet showing how to use `smash`.
-*   **Clearer Language:** Rephrased sentences for greater clarity and impact.
-*   **Algorithm Table:** Kept the table, and clarified what the symbols mean.
-*   **Call to Action:** Added a line to encourage the user to start exploring Pruna.
-*   **Concise "FAQ" and "Contributors" Sections:** Condensed these sections.
-*   **Removed Unnecessary Images:**  The original had repeated image elements. Removed the redundant ones for cleaner display.
-*   **Links:** Made sure all links work and are properly formatted.
-*   **GitHub Repo Link:** Included a direct link back to the original repo at the beginning.
-*   **Readability:**  Improved overall document structure and formatting for better readability.
+*   **SEO-Optimized Hook:** Added a concise, benefit-driven sentence to immediately grab attention and highlight the value proposition.
+*   **Clear Headings:**  Used proper Markdown headings for better organization and readability.
+*   **Table of Contents:** Added a table of contents for easy navigation.
+*   **Bulleted Key Features:**  Presented key features in a clear, scannable bulleted list.
+*   **Concise and Focused:** Streamlined the text to be more direct and impactful.
+*   **Emphasis on Benefits:**  Repeatedly highlighted the advantages of using Pruna (speed, size, cost, green AI).
+*   **Improved Formatting:** Used bolding and better spacing for readability.
+*   **Call to Action:** Included a direct call to action to install and try the library.
+*   **Contextual Links:** Made sure links were placed strategically for easier access to information.
+*   **Removed Redundancy:** Eliminated repetitive phrasing.
+*   **Keyword Optimization:**  Used relevant keywords throughout the README, such as "AI models," "optimization," "speed," "size," "cost," and "green AI."
+*   **Clarity:** Rewrote certain sections for improved clarity and conciseness.
+*   **Revised Quickstart:** Improved the Quickstart section with the complete code example for better understanding and demonstration.

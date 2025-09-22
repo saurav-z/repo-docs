@@ -1,30 +1,22 @@
-# All the Places: Scrape & Gather Point of Interest (POI) Data
+# All the Places: Your Source for Open Point of Interest (POI) Data
 
-**All the Places is an open-source project that leverages web scraping to collect and standardize point-of-interest (POI) data from various websites.**
-
-[View the project on GitHub](https://github.com/alltheplaces/alltheplaces/)
+**All the Places** is a powerful project leveraging web scraping to generate a comprehensive database of Point of Interest (POI) data. [Explore the original repository](https://github.com/alltheplaces/alltheplaces/)!
 
 ## Key Features
 
-*   **Automated POI Data Extraction:** Scrapes websites with store location pages to extract valuable POI data.
-*   **Standardized Data Format:**  Outputs data in a consistent format for easy integration and use.
-*   **Built on Scrapy:** Utilizes the powerful and flexible Scrapy web scraping framework, a popular Python-based framework.
-*   **Open-Source & Community-Driven:**  Contribute to the project by writing spiders and improving data collection.
-*   **Weekly Data Updates:**  Provides regularly updated POI data, accessible through the [alltheplaces.xyz](https://www.alltheplaces.xyz/) website.
+*   **Automated POI Data Extraction:** Scrapes websites with store location pages to gather POI data.
+*   **Scrapy-Powered:** Utilizes the popular Python-based Scrapy framework for efficient web scraping.
+*   **Standardized Data Format:** Publishes results in a consistent format for easy integration.
+*   **Open Data:** The data generated is released under Creative Commons’ CC-0 waiver.
+*   **Open Source:** The spider software is licensed under the MIT license.
 
 ## Getting Started
 
-Follow these steps to set up a development environment:
+This section provides instructions to get you up and running with All the Places.
 
 ### Development Setup
 
-Choose your preferred method:
-
-*   **Ubuntu:** Follow the instructions below.
-*   **macOS:** Follow the instructions below.
-*   **GitHub Codespaces:** Use the pre-configured cloud-based environment.
-    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alltheplaces/alltheplaces)
-*   **Docker:** Use the Docker instructions below.
+Choose your preferred setup method:
 
 #### Ubuntu
 
@@ -35,7 +27,7 @@ Choose your preferred method:
     source $HOME/.local/bin/env
     ```
 
-2.  Clone the project:
+2.  Clone the repository:
 
     ```bash
     git clone git@github.com:alltheplaces/alltheplaces.git
@@ -48,7 +40,7 @@ Choose your preferred method:
     uv sync
     ```
 
-4.  Test the installation:
+4.  Verify installation:
 
     ```bash
     uv run scrapy
@@ -62,7 +54,7 @@ Choose your preferred method:
     brew install uv
     ```
 
-2.  Clone the project:
+2.  Clone the repository:
 
     ```bash
     git clone git@github.com:alltheplaces/alltheplaces.git
@@ -75,18 +67,24 @@ Choose your preferred method:
     uv sync
     ```
 
-4.  Test the installation:
+4.  Verify installation:
 
     ```bash
     uv run scrapy
     ```
 
+#### Codespaces
+
+Develop in the cloud with GitHub Codespaces:
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alltheplaces/alltheplaces)
+
 #### Docker
 
-1.  Clone the project:
+1.  Clone the repository:
 
     ```bash
-    git clone git@github.com/alltheplaces/alltheplaces.git
+    git clone git@github.com:alltheplaces/alltheplaces.git
     ```
 
 2.  Build the Docker image:
@@ -102,9 +100,9 @@ Choose your preferred method:
     docker run --rm -it alltheplaces
     ```
 
-## Contributing Code
+### Contributing Code
 
-We welcome contributions!  Check out these guides to help you develop spiders:
+Contribute to the project with these resources:
 
 *   [What should I call my spider?](docs/SPIDER_NAMING.md)
 *   [Using Wikidata and the Name Suggestion Index](docs/WIKIDATA.md)
@@ -113,16 +111,16 @@ We welcome contributions!  Check out these guides to help you develop spiders:
 *   [What is expected in a pull request?](docs/PULL_REQUEST.md)
 *   [What we do behind the scenes](docs/PIPELINES.md)
 
-## The Weekly Run
+### Weekly Run & Data Publication
 
-The project's output is regularly published on [alltheplaces.xyz](https://www.alltheplaces.xyz/).
+The project's output is regularly published on our website at [alltheplaces.xyz](https://www.alltheplaces.xyz/).
 
 ## Contact
 
-*   **GitHub Issues:**  Use the [issue tracker](https://github.com/alltheplaces/alltheplaces/issues) for communication.
-*   **OSM US Slack:** Join the [#alltheplaces](https://osmus.slack.com/archives/C07EY4Y3M6F) channel on OSM US Slack.
+*   **Issue Tracker:** Report issues and discuss ideas via the [GitHub issue tracker](https://github.com/alltheplaces/alltheplaces/issues).
+*   **OSM US Slack:** Connect with other contributors in the [#alltheplaces](https://osmus.slack.com/archives/C07EY4Y3M6F) channel on OSM US Slack.
 
 ## License
 
-*   **Data:** Released under [Creative Commons’ CC-0 waiver](https://creativecommons.org/publicdomain/zero/1.0/).
-*   **Spider Software:** Licensed under the [MIT license](https://github.com/alltheplaces/alltheplaces/blob/master/LICENSE).
+*   **Data:** [Creative Commons’ CC-0 waiver](https://creativecommons.org/publicdomain/zero/1.0/)
+*   **Software:** [MIT license](https://github.com/alltheplaces/alltheplaces/blob/master/LICENSE)

@@ -1,25 +1,22 @@
-# QuACK: High-Performance CuTe Kernels for NVIDIA GPUs 🦆
+# QuACK: High-Performance CUDA Kernels for AI and Deep Learning 🦆
 
-**Supercharge your deep learning workloads with QuACK, a library of optimized kernels written in the CuTe-DSL for NVIDIA GPUs!** This library provides a collection of high-performance kernels designed to accelerate common operations in modern deep learning models.  Check out the original repository for more details: [https://github.com/Dao-AILab/quack](https://github.com/Dao-AILab/quack)
+**Supercharge your AI and deep learning projects with QuACK, a collection of optimized CUDA kernels for lightning-fast performance.** (See the original repository here: [https://github.com/Dao-AILab/quack](https://github.com/Dao-AILab/quack))
 
-## Key Features
+## Key Features of QuACK
 
-*   **Optimized Kernels:**  QuACK provides highly optimized kernels for critical deep learning operations, leading to faster training and inference times.
-*   **CuTe-DSL Implementation:** Kernels are implemented using the CuTe-DSL, enabling efficient and flexible code generation.
-*   **Easy Installation:**  Install QuACK with a simple pip command.
-*   **User-Friendly API:**  The library offers an intuitive Python API for seamless integration into your existing projects.
-
-*   **Comprehensive Coverage:** Kernels include:
-    *   RMSNorm (forward + backward)
-    *   Softmax (forward + backward)
-    *   Cross Entropy (forward + backward)
-    *   Layernorm (forward)
+*   **Optimized for NVIDIA GPUs:** Built using the CuTe-DSL for maximum performance on H100 and B200 GPUs.
+*   **Comprehensive Kernel Suite:** Includes crucial kernels for deep learning tasks.
+    *   RMSNorm (forward & backward)
+    *   Softmax (forward & backward)
+    *   Cross Entropy (forward & backward)
+    *   LayerNorm (forward)
     *   Hopper GEMM + Epilogue
     *   Blackwell GEMM + Epilogue
+*   **Easy to Use:** Simple Python interface for seamless integration into your existing projects.
 
 ## Installation
 
-Install QuACK using pip:
+Install QuACK kernels with a single command:
 
 ```bash
 pip install quack-kernels
@@ -27,30 +24,31 @@ pip install quack-kernels
 
 ## Requirements
 
-Ensure your environment meets these requirements for optimal performance:
-
 *   NVIDIA H100 or B200 GPU
-*   CUDA Toolkit 12.9 or later
+*   CUDA Toolkit 12.9+
 *   Python 3.12
 
-## Usage
+## Usage Example
 
-Import and utilize the kernels directly in your Python code:
+Import and utilize QuACK kernels effortlessly:
 
 ```python
 from quack import rmsnorm, softmax, cross_entropy
 ```
 
-## Documentation and Resources
+## Performance & Benchmarks
 
-*   **Blog Post:** Dive deep into the performance optimizations and memory-bound kernel strategies with our comprehensive [blogpost](media/2025-07-10-membound-sol.md).  Learn how to maximize speed in Python using CuTe-DSL.
-*   **CuTe-DSL Documentation:** Learn more about the CuTe-DSL used to build these kernels: [CuTe-DSL Documentation](https://docs.nvidia.com/cutlass/media/docs/pythonDSL/cute_dsl_general/dsl_introduction.html)
+QuACK kernels are designed for speed, offering significant performance gains. See detailed benchmarks and analysis in our blog post:
 
-## Performance
+<div align="center">
+<figure>
+  <img
+  src="media/bf16_kernel_benchmarks_single_row.svg"
+  >
+</figure>
+</div>
 
-[Image of performance benchmarks - See original README for image details and context]
-
-For detailed performance benchmarks and analysis, please refer to our [blogpost](media/2025-07-10-membound-sol.md).
+For in-depth performance insights, check out our blog: [blogpost](media/2025-07-10-membound-sol.md).
 
 ## Development
 
@@ -60,3 +58,8 @@ To set up a development environment:
 pip install -e '.[dev]'
 pre-commit install
 ```
+
+## Resources
+
+*   **CuTe-DSL Documentation:** Learn more about the underlying DSL: [https://docs.nvidia.com/cutlass/media/docs/pythonDSL/cute_dsl_general/dsl_introduction.html](https://docs.nvidia.com/cutlass/media/docs/pythonDSL/cute_dsl_general/dsl_introduction.html)
+*   **Original Repository:** [https://github.com/Dao-AILab/quack](https://github.com/Dao-AILab/quack)

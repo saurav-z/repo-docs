@@ -1,36 +1,60 @@
-# AKShare: Python Library for Financial Data Analysis 📊
+# AKShare: Your One-Stop Solution for Financial Data in Python
 
-**AKShare is a powerful Python library providing a simplified interface to access a wide range of financial data, empowering you to write less and analyze more.**  [View the original repository on GitHub](https://github.com/akfamily/akshare).
+**AKShare is a comprehensive Python library designed to simplify the process of fetching financial data, making it an invaluable tool for data scientists, researchers, and finance professionals.**  [Visit the original repo](https://github.com/akfamily/akshare)
+
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/akshare.svg)](https://pypi.org/project/akshare/)
+[![PyPI](https://img.shields.io/pypi/v/akshare.svg)](https://pypi.org/project/akshare/)
+[![Downloads](https://pepy.tech/badge/akshare)](https://pepy.tech/project/akshare)
+[![Documentation Status](https://readthedocs.org/projects/akshare/badge/?version=latest)](https://akshare.readthedocs.io/?badge=latest)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![akshare](https://img.shields.io/badge/Data%20Science-AKShare-green)](https://github.com/akfamily/akshare)
+[![Actions Status](https://github.com/akfamily/akshare/actions/workflows/release_and_deploy.yml/badge.svg)](https://github.com/akfamily/akshare/actions)
+[![MIT Licence](https://img.shields.io/badge/license-MIT-blue)](https://github.com/akfamily/akshare/blob/main/LICENSE)
+[![](https://img.shields.io/github/forks/jindaxiang/akshare)](https://github.com/akfamily/akshare)
+[![](https://img.shields.io/github/stars/jindaxiang/akshare)](https://github.com/akfamily/akshare)
+[![](https://img.shields.io/github/issues/jindaxiang/akshare)](https://github.com/akfamily/akshare)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## Key Features
 
-*   **Comprehensive Data Coverage:** Access a vast array of financial data, including stock prices, futures, indices, economic indicators, and more.
-*   **Easy-to-Use Interface:**  Simplified functions allow you to fetch data with minimal code.
-*   **Data Visualization Integration:** Seamlessly integrate with libraries like Matplotlib and mplfinance for data plotting.
-*   **Customizable & Extensible:** Designed to easily integrate with your existing projects.
-*   **Active Community:**  Benefit from a supportive community and actively maintained codebase.
+*   **Simplified Data Access:**  Fetch financial data with a single line of code.
+*   **Wide Range of Data Sources:** Access data from numerous sources.
+*   **Ease of Use:** Designed for both beginners and experienced users.
+*   **Extensible:** Easily integrates with other applications and tools.
+*   **Powerful Ecosystem:** Leverages the power of the Python ecosystem.
+*   **Comprehensive Documentation:**  Detailed documentation and tutorials available.
+*   **Active Community:**  Join a community of developers and researchers.
 
-## Core Functionality
+## Installation
 
-### Data Access & Retrieval
+### General
 
-*   Get historical stock data (e.g., `ak.stock_zh_a_hist`)
-*   Retrieve US stock data (e.g., `ak.stock_us_daily`)
+```shell
+pip install akshare --upgrade
+```
+
+### China (Specific Mirror)
+
+```shell
+pip install akshare -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com  --upgrade
+```
+
+## Quick Start
 
 ### Example: Fetching Historical Stock Data
 
 ```python
 import akshare as ak
 
-stock_zh_a_hist_df = ak.stock_zh_a_hist(symbol="000001", period="daily", start_date="20230101", end_date='20231101', adjust="")
-print(stock_zh_a_hist_df.head())
+stock_zh_a_hist_df = ak.stock_zh_a_hist(symbol="000001", period="daily", start_date="20170301", end_date='20231022', adjust="")
+print(stock_zh_a_hist_df)
 ```
 
-### Example: Data Visualization
+### Example: Plotting Stock Data with *mplfinance*
 
 ```python
 import akshare as ak
-import mplfinance as mpf  # Install using: pip install mplfinance
+import mplfinance as mpf  # Please install mplfinance as follows: pip install mplfinance
 
 stock_us_daily_df = ak.stock_us_daily(symbol="AAPL", adjust="qfq")
 stock_us_daily_df = stock_us_daily_df.set_index(["date"])
@@ -38,41 +62,40 @@ stock_us_daily_df = stock_us_daily_df["2020-04-01": "2020-04-29"]
 mpf.plot(stock_us_daily_df, type="candle", mav=(3, 6, 9), volume=True, show_nontrading=False)
 ```
 
-## Installation
+## Resources
 
-### General Installation
+### Tutorials
 
-```bash
-pip install akshare --upgrade
-```
-
-### China-Specific Installation (for faster downloads)
-
-```bash
-pip install akshare -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com  --upgrade
-```
-
-## Documentation
-
-*   [Comprehensive Chinese Documentation](https://akshare.akfamily.xyz/)
+1.  [Overview](https://akshare.akfamily.xyz/introduction.html)
+2.  [Installation](https://akshare.akfamily.xyz/installation.html)
+3.  [Tutorial](https://akshare.akfamily.xyz/tutorial.html)
+4.  [Data Dict](https://akshare.akfamily.xyz/data/index.html)
+5.  [Subjects](https://akshare.akfamily.xyz/topic/index.html)
 
 ## Contribution
 
-We welcome contributions to enhance AKShare! Please review the [Contribution Guidelines](https://akshare.akfamily.xyz/contributing.html) before submitting pull requests or reporting issues.
+[AKShare](https://github.com/akfamily/akshare) thrives on community contributions.  We welcome your help in:
 
-*   Report or fix bugs
-*   Require or publish interface
-*   Write or fix documentation
-*   Add test cases
+*   Reporting or fixing bugs.
+*   Requesting or publishing new interfaces.
+*   Writing or improving documentation.
+*   Adding test cases.
 
-## Resources
+>   *Note: Code is formatted using [Ruff](https://github.com/astral-sh/ruff).*
 
-*   [AKShare GitHub Repository](https://github.com/akfamily/akshare)
-*   [AKTools API](https://aktools.readthedocs.io/)
+## Important Disclaimers
+
+1.  **Research Purpose Only:** All data provided is for academic research purposes.
+2.  **Reference Only:** Data is for reference and does not constitute investment advice.
+3.  **Data Risk:** Investors should be aware of data risks.
+4.  **Open Source Commitment:**  We are committed to providing open-source financial data.
+5.  **Data Interface Changes:**  Some data interfaces may be removed due to uncontrollable factors.
+6.  **License Compliance:**  Please adhere to the relevant open-source protocol.
+7.  **HTTP API:**  Use the [AKTools](https://aktools.readthedocs.io/) for other programming languages.
 
 ## Show Your Support
 
-Add the badge to your project:
+Add the AKShare badge to your project:
 
 ```markdown
 [![Data: akshare](https://img.shields.io/badge/Data%20Science-AKShare-green)](https://github.com/akfamily/akshare)
@@ -80,7 +103,9 @@ Add the badge to your project:
 
 ## Citation
 
-```
+If you use AKShare in your publications, please use the following bibtex:
+
+```markdown
 @misc{akshare,
     author = {Albert King and Yaojie Zhang},
     title = {AKShare},
@@ -93,31 +118,10 @@ Add the badge to your project:
 
 ## Acknowledgements
 
-A big thank you to all the organizations and individuals whose data sources have been integrated into AKShare, including:
+(List of acknowledgements)
 
-*   [FuShare](https://github.com/LowinLi/fushare)
-*   [TuShare](https://github.com/waditu/tushare)
-*   (and many more – see the original README for a full list)
+## Backers and Sponsors
 
-## Sponsors
-
-Special thanks to JetBrains for their support!
 <a href="https://www.jetbrains.com/?from=albertandking/akshare" target="_blank">
 <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.png" alt="JetBrains logo.">
 </a>
-```
-Key improvements and explanations:
-
-*   **SEO Optimization:** The title includes relevant keywords ("Python," "Financial Data," "Analysis"). The description uses natural language with relevant search terms.
-*   **One-Sentence Hook:**  The introductory sentence grabs attention and clearly states the library's purpose.
-*   **Clear Headings:**  Uses descriptive headings to organize the information (Key Features, Core Functionality, Installation, etc.).
-*   **Bulleted Key Features:**  Provides a concise overview of AKShare's main strengths.
-*   **Simplified Example Code:** The examples are updated to reflect best practices and demonstrate data retrieval and data visualization.
-*   **Concise Language:**  The text is more direct and avoids unnecessary jargon.
-*   **Call to Action:** Encourages contribution and community involvement.
-*   **Complete and Updated:**  Includes installation instructions.
-*   **Badge Integration Guidance:** The "Show Your Style" section is retained and clear.
-*   **Concise acknowledgements** The acknowledgements section remains and is now concise.
-*   **Concise sponsors section** the sponsors section is retained and is now concise.
-*   **Clean, Readable Markdown:** The formatting is improved for readability.
-*   **Direct links:** Direct links to external resources are included.

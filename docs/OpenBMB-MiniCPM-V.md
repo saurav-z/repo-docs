@@ -6,75 +6,48 @@
 
 # MiniCPM-V & MiniCPM-o: Powerful Multimodal LLMs for On-Device Understanding
 
-MiniCPM-V and MiniCPM-o are leading-edge multimodal Large Language Models (MLLMs) designed for efficient on-device deployment, offering exceptional performance in understanding images, videos, and audio, with text as output. **Experience cutting-edge multimodal AI capabilities on your device – find the models and documentation on [GitHub](https://github.com/OpenBMB/MiniCPM-V)!**
+**MiniCPM-V and MiniCPM-o are a series of cutting-edge multimodal large language models (MLLMs) designed for efficient, on-device deployment, providing high-quality text and speech outputs from visual, audio, and textual inputs.** Learn more about the models, find out how to use them, and get involved by visiting the original repository on [GitHub](https://github.com/OpenBMB/MiniCPM-V).
 
-## Key Features
+## Key Features:
 
-*   **MiniCPM-V 4.5: The Pinnacle of Vision-Language Capabilities**
-    *   **Outperforms Leading Models:** Achieves state-of-the-art vision-language performance, **surpassing GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B** with only 8B parameters.
-    *   **Efficient Video Understanding:** Supports high-FPS and long video analysis with up to a 96x compression rate for video tokens, including high FPS(up to 10FPS) video understanding and long video understanding capabilities.
-    *   **Advanced Features:** Includes controllable hybrid fast/deep thinking, strong handwritten OCR, and complex table/document parsing.
-    *   **User-Friendly:** Offers easy integration through llama.cpp, ollama, vLLM, and other frameworks, with int4, GGUF, AWQ quantizations, and quick local WebUI demos.
+*   **Vision & Language Mastery:** Understand images, videos, and text to generate high-quality text responses.
+*   **Audio & Speech Integration (MiniCPM-o):** Process audio inputs and generate high-quality speech outputs for enhanced interaction.
+*   **On-Device Efficiency:** Optimized for efficient deployment on your phone and other edge devices.
+*   **Multilingual Support:**  Support for over 30 languages, expanding accessibility.
+*   **Real-time Performance:** Achieve high FPS video understanding and support for multimodal live streaming capabilities.
 
-*   **MiniCPM-o 2.6: Revolutionizing On-Device Multimodal Experiences**
-    *   **Exceptional Multimodal Performance:** Achieves performance comparable to GPT-4o on vision and speech, making it one of the most versatile open-source models.
-    *   **Real-time Multimodal Streaming:** Supports multimodal live streaming on end-side devices, like iPads.
-    *   **Multilingual and Trustworthy:** Incorporates trustworthy behaviors and multilingual support for a wide range of applications.
-    *   **Bilingual Speech Conversation:** Supports bilingual real-time speech conversation, with configurable voices, voice cloning and more.
+## Key Highlights:
 
-## Core Capabilities
+*   **MiniCPM-V 4.5:** The latest, most capable model in the MiniCPM-V series. Outperforms GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B in vision-language capabilities, making it the most performant on-device multimodal model in the open-source community. Key features include:
+    *   High-FPS and long video understanding.
+    *   Controllable hybrid fast/deep thinking.
+    *   Robust handwritten OCR and complex table/document parsing.
+*   **MiniCPM-o 2.6:** Offers comparable performance to GPT-4o-202405 in vision, speech, and multimodal live streaming, and also supports end-to-end multimodal live streaming on end-side devices. Features include:
+    *   Bilingual real-time speech conversation with configurable voices.
+    *   Voice cloning and role-playing capabilities.
 
-*   **Multimodal Input:** Accepts images, videos, and audio, along with text inputs.
-*   **High-Quality Text Outputs:** Delivers detailed and accurate text responses.
-*   **End-Side Deployment:** Optimized for efficient deployment on mobile and edge devices.
-*   **Multilingual Support:** Offers support for 30+ languages.
+## Quick Links:
 
-## Benefits
+*   [**MiniCPM-V 4.5**](https://huggingface.co/openbmb/MiniCPM-V-4_5)
+*   [**MiniCPM-o 2.6**](https://huggingface.co/openbmb/MiniCPM-o-2_6)
+*   [**Cookbook**](https://github.com/OpenSQZ/MiniCPM-V-Cookbook) for in-depth guides and deployment options.
+*   [**Technical Report (MiniCPM-V 4.5)**](https://github.com/OpenBMB/MiniCPM-V/blob/main/docs/MiniCPM_V_4_5_Technical_Report.pdf)
+*   [**Technical Report (MiniCPM-o 2.6)**](https://openbmb.notion.site/MiniCPM-o-2-6-A-GPT-4o-Level-MLLM-for-Vision-Speech-and-Multimodal-Live-Streaming-on-Your-Phone-185ede1b7a558042b5d5e45e6b237da9)
 
-*   **On-Device Processing:** Enables real-time processing and enhanced privacy by keeping data local.
-*   **State-of-the-Art Performance:** Delivers superior results compared to many larger models.
-*   **Versatile Applications:** Suitable for a wide range of applications including image and video understanding, speech recognition, and multimodal live streaming.
-*   **Easy to Use and Deploy:** Supports multiple frameworks and quantization methods for easy integration.
+## Inference
 
-## Key Techniques and Innovation
+*   **Model Zoo:** A curated list of available models.
+*   **Multi-turn Conversation:** Interact with the models in engaging, multi-turn dialogues.
+*   **Inference with multiple images, Few-shot Learning, video, and multimodal live streaming.**
+*   **Inference on Multiple GPUs:** Instructions on running the models efficiently on multi-GPU setups.
+*   **Inference on Mac:** Guidance for running on macOS.
+*   **Efficient Inference:** Resources for efficient deployment using llama.cpp, Ollama, and vLLM.
 
-*   **Unified 3D-Resampler:** Enables efficient processing of high-density videos.
-*   **Unified Learning for OCR and Document Knowledge:** Improves OCR capabilities and knowledge extraction from documents.
-*   **Hybrid Fast/Deep Thinking:** Provides a balance between efficiency and performance.
-*   **End-to-end Omni-modal Architecture:** Maximizes the use of multimodal knowledge.
+## Further Information:
 
-## Contents
-
-*   [MiniCPM-V 4.5](#minicpm-v-45)
-    *   [Inference Efficiency](#inference-efficiency)
-*   [MiniCPM-o 2.6](#minicpm-o-26)
-*   [MiniCPM-V & o Cookbook](#minicpm-v--o-cookbook)
-*   [Chat with Our Demo on Gradio 🤗](#chat-with-our-demo-on-gradio-)
-*   [Inference](#inference)
-    *   [Model Zoo](#model-zoo)
-    *   [Multi-turn Conversation](#multi-turn-conversation)
-        *   [Chat with Multiple Images](#chat-with-multiple-images)
-        *   [In-context Few-shot Learning](#in-context-few-shot-learning)
-        *   [Chat with Video](#chat-with-video)
-        *   [Speech and Audio Mode](#speech-and-audio-mode)
-        *   [Multimodal Live Streaming](#multimodal-live-streaming)
-    *   [Inference on Multiple GPUs](#inference-on-multiple-gpus)
-    *   [Inference on Mac](#inference-on-mac)
-    *   [Efficient Inference with llama.cpp, Ollama, vLLM](#efficient-inference-with-llamacpp-ollama-vllm)
-*   [Fine-tuning](#fine-tuning)
-*   [Awesome work using MiniCPM-V & MiniCPM-o](#awesome-work-using-minicpm-v--minicpm-o)
-*   [FAQs](#faqs)
-*   [Limitations](#limitations)
-*   [Model License](#model-license)
-*   [Institutions](#institutions)
-*   [🌟 Star History](#-star-history)
-*   [Key Techniques and Other Multimodal Projects](#key-techniques-and-other-multimodal-projects)
-*   [Citation](#citation)
-
-## Resources
-
-*   [MiniCPM-V & o Cookbook](#minicpm-v--o-cookbook)
-*   [Online Demo](https://minicpm-omni-webdemo-us.modelbest.cn/)
-*   [Demo](http://120.92.209.146:8887/)
-*   [Hugging Face Demo](https://huggingface.co/spaces/openbmb/MiniCPM-Llama3-V-2_5)
-*   [MiniCPM-V 2.0 Demo](https://huggingface.co/spaces/openbmb/MiniCPM-V-2)
+*   [**Fine-tuning**](#fine-tuning): Learn how to fine-tune the models.
+*   [**Awesome work using MiniCPM-V & MiniCPM-o**](#awesome-work-using-minicpm-v--minicpm-o): Explore examples of projects built using the models.
+*   [**FAQs**](#faqs): Find answers to frequently asked questions.
+*   [**Limitations**](#limitations): Understand model limitations.
+*   [**Model License**](#model-license)
+*   [**Citation**](#citation)

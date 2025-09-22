@@ -1,35 +1,33 @@
-<!-- Improved and SEO-Optimized README for SkyRL -->
-
 <div align="center">
+  <h1>SkyRL: The Full-Stack Reinforcement Learning Library for LLMs</h1>
 
-# SkyRL: The Full-Stack Reinforcement Learning Library for LLMs
-
-[![🌐 NovaSky](https://img.shields.io/badge/-Visit%20Website-5865F2?style=for-the-badge)](https://novasky-ai.github.io/)
-[![Github](https://img.shields.io/badge/SkyRL-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/NovaSky-AI/SkyRL)
-[![Twitter](https://img.shields.io/badge/NovaSky-white?style=for-the-badge&logo=X&logoColor=000&color=000&labelColor=white)](https://x.com/NovaSkyAI)
-[![Hugging Face Collection](https://img.shields.io/badge/NovaSky-fcd022?style=for-the-badge&logo=huggingface&logoColor=000&labelColor)](https://huggingface.co/NovaSky-AI)
-[![Discord](https://img.shields.io/badge/NovaSky-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/cJF2JUaaAN)
-[![Documentation](https://img.shields.io/badge/Documentation-blue?style=for-the-badge&logo=readthedocs&logoColor=white)](https://skyrl.readthedocs.io/en/latest/)
-
+  [![🌐 NovaSky](https://img.shields.io/badge/-Visit%20Website-5865F2?style=for-the-badge)](https://novasky-ai.github.io/)
+  [![Github](https://img.shields.io/badge/SkyRL-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/NovaSky-AI/SkyRL)
+  [![Twitter](https://img.shields.io/badge/NovaSky-white?style=for-the-badge&logo=X&logoColor=000&color=000&labelColor=white)](https://x.com/NovaSkyAI)
+  [![Hugging Face Collection](https://img.shields.io/badge/NovaSky-fcd022?style=for-the-badge&logo=huggingface&logoColor=000&labelColor)](https://huggingface.co/NovaSky-AI)
+  [![Discord](https://img.shields.io/badge/NovaSky-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/cJF2JUaaAN)
+  [![Documentation](https://img.shields.io/badge/Documentation-blue?style=for-the-badge&logo=readthedocs&logoColor=white)](https://skyrl.readthedocs.io/en/latest/)
 </div>
 
-**SkyRL empowers developers to build and train advanced reinforcement learning (RL) agents for Large Language Models (LLMs), with a focus on long-horizon, real-world tasks.**
+<hr>
+
+**SkyRL empowers researchers and developers to build and train advanced reinforcement learning agents for Large Language Models (LLMs) across a variety of tasks.**  This comprehensive library offers a modular and flexible framework for developing cutting-edge RL solutions.
 
 ## Key Features
 
-*   **Modular Design:** SkyRL is built with modularity in mind, allowing for easy customization and integration.
-*   **`skyagent` for Agentic Pipelines:** Leverage our agent layer for training LLMs in complex, real-world environments.
-*   **`skyrl-train` for High-Performance RL Training:** A modular and performant training framework for all your RL needs.
-*   **`skyrl-gym` for LLM-Focused Environments:** A Gymnasium API-compatible environment library featuring math, coding, search, and SQL tasks.
+*   **Modular Agent Layer (`skyagent`):**  Develop and train intelligent agents for long-horizon, real-world tasks. Includes code for [SkyRL-v0](https://novasky-ai.notion.site/skyrl-v0).
+*   **Performant RL Training Framework (`skyrl-train`):** A modular and efficient training framework for RL, enabling rapid experimentation and scaling.
+*   **Gymnasium-Compatible Environments (`skyrl-gym`):** Explore a rich set of tool-use tasks, including math, coding, search, and SQL environments, all within the familiar Gymnasium API.
+*   **SkyRL-SQL:** Multi-turn RL training pipeline for Text-to-SQL.
 
 ## Getting Started
 
-Dive into the world of RL for LLMs with SkyRL!  Here's how to get started:
+Ready to dive in?
 
-*   **Development Guide:** Explore our [Development Guide](https://skyrl.readthedocs.io/en/latest/getting-started/development.html) for comprehensive instructions.
-*   **Training with `skyrl-train`:** Begin using, modifying, or extending the SkyRL training stack. See the [quickstart docs](https://skyrl.readthedocs.io/en/latest/index.html) for a fast track.
-*   **Building Environments with `skyrl-gym`:** Easily integrate your tasks using the simple Gymnasium interface.
-*   **Agentic Pipelines with `skyagent`:** Optimize and scale multi-turn tool use LLMs for long-horizon tasks.
+*   Explore the [`skyrl-train`](./skyrl-train) framework to build, modify, and experiment with RL training.  See our [quickstart docs](https://skyrl.readthedocs.io/en/latest/index.html) to get started.
+*   Use [`skyrl-gym`](./skyrl-gym) to create your own custom tasks within the Gymnasium interface.
+*   Utilize [`skyagent`](./skyagent) to optimize and scale pipelines for multi-turn tool use LLMs on long-horizon, real-environment tasks.
+*   Review the [Development Guide](https://skyrl.readthedocs.io/en/latest/getting-started/development.html) for comprehensive development instructions.
 
 ## News
 
@@ -46,13 +44,13 @@ Dive into the world of RL for LLMs with SkyRL!  Here's how to get started:
 
 ## Acknowledgements
 
-This project is developed at the [**Berkeley Sky Computing Lab**](https://sky.cs.berkeley.edu/) in collaboration with [**Anyscale**](https://www.anyscale.com/). We gratefully acknowledge the generous compute support from [**Anyscale**](https://www.anyscale.com/), [**Databricks**](https://www.databricks.com/), [**NVIDIA**](https://developer.nvidia.com/brev), [**Lambda Labs**](https://lambdalabs.com/service/gpu-cloud?srsltid=AfmBOop5FnmEFTkavVtdZDsLWvHWNg6peXtat-OXJ9MW5GMNsk756PE5), and [**AMD**](https://www.amd.com/en.html).
+This work is done at [**Berkeley Sky Computing Lab**](https://sky.cs.berkeley.edu/) in collaboration with [**Anyscale**](https://www.anyscale.com/), with generous compute support from [**Anyscale**](https://www.anyscale.com/), [**Databricks**](https://www.databricks.com/), [**NVIDIA**](https://developer.nvidia.com/brev), [**Lambda Labs**](https://lambdalabs.com/service/gpu-cloud?srsltid=AfmBOop5FnmEFTkavVtdZDsLWvHWNg6peXtat-OXJ9MW5GMNsk756PE5), and [**AMD**](https://www.amd.com/en.html).
 
-We also acknowledge and appreciate the contributions of the following projects: [veRL](https://github.com/volcengine/verl), [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF), [Search-R1](https://github.com/PeterGriffinJin/Search-R1), [OpenReasonerZero](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero), and [NeMo-RL](https://github.com/NVIDIA-NeMo/RL).
+We adopt many lessons and code from several great projects such as [veRL](https://github.com/volcengine/verl), [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF), [Search-R1](https://github.com/PeterGriffinJin/Search-R1), [OpenReasonerZero](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero), and [NeMo-RL](https://github.com/NVIDIA-NeMo/RL). We appreciate each of these teams and their contributions to open-source research!
 
 ## Citation
 
-If you find SkyRL helpful for your research, please consider citing our work:
+If you find the work in this repository helpful, please consider citing:
 
 ```bibtex
 @misc{cao2025skyrl,
@@ -79,4 +77,8 @@ If you find SkyRL helpful for your research, please consider citing our work:
 }
 ```
 
-[Back to the original repository](https://github.com/NovaSky-AI/SkyRL)
+---
+
+**[Back to Top](#skyrl-the-full-stack-reinforcement-learning-library-for-llms)** (link back to the top)
+
+For more details, please visit the original repository: [https://github.com/NovaSky-AI/SkyRL](https://github.com/NovaSky-AI/SkyRL)

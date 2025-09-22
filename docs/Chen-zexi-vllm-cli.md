@@ -1,137 +1,193 @@
-# vLLM CLI: Command-Line Interface for Serving Large Language Models
+# vLLM CLI: Your Command-Line Interface for LLMs with vLLM
 
-**Effortlessly serve and manage your LLMs with vLLM using a user-friendly command-line interface.**  [(Back to original repo)](https://github.com/Chen-zexi/vllm-cli)
+**Effortlessly deploy and manage Large Language Models (LLMs) with vLLM using a user-friendly command-line interface.**
 
-vLLM CLI provides a powerful and flexible command-line interface (CLI) for interacting with and managing Large Language Models (LLMs) using the vLLM framework.  Whether you're experimenting, automating, or building production systems, vLLM CLI offers a comprehensive suite of tools.
+[![CI](https://github.com/Chen-zexi/vllm-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/Chen-zexi/vllm-cli/actions/workflows/ci.yml)
+[![Release](https://github.com/Chen-zexi/vllm-cli/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Chen-zexi/vllm-cli/actions/workflows/python-publish.yml)
+[![PyPI version](https://badge.fury.io/py/vllm-cli.svg)](https://badge.fury.io/py/vllm-cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![PyPI Downloads](https://static.pepy.tech/badge/vllm-cli)](https://pepy.tech/projects/vllm-cli)
 
 **Key Features:**
 
-*   **Interactive Mode:** Navigate and manage your models with a rich, menu-driven terminal interface.
-*   **Command-Line Mode:** Automate and script your LLM workflows with direct CLI commands.
-*   **Model Management:** Discover and manage local models, with support for Hugging Face and Ollama.
-*   **Configuration Profiles:** Utilize pre-configured profiles or create custom server configurations tailored to your needs.
-*   **Server Monitoring:** Monitor active vLLM servers in real-time.
-*   **System Information:** Get comprehensive information about your GPU, memory, and CUDA compatibility.
-*   **Advanced Configuration:** Fine-tune vLLM parameters with validation for optimal performance.
-*   **Multi-Model Proxy (Experimental):** Serve multiple LLMs through a single API endpoint for simplified access and management.
-*   **Hardware Optimized Profiles:** Pre-configured profiles for optimal performance on specific NVIDIA GPU architectures (Ampere, Hopper, Blackwell).
-*   **Ollama Integration:** Full support for Ollama models, including GGUF format (experimental) and system/user directory scanning.
-*   **Shortcuts:** Quickly launch your favorite model + profile combinations.
+*   **Interactive Terminal Interface:** Navigate and manage your LLMs with a rich, menu-driven interface, including GPU status and system overview.
+*   **Command-Line Mode:** Automate tasks and integrate vLLM serving into your scripts using direct CLI commands.
+*   **Model Management:** Easily discover and load models from Hugging Face and Ollama.
+*   **Configuration Profiles:** Utilize pre-configured profiles and create custom profiles to optimize performance for different LLMs and hardware.
+*   **Server Monitoring:** Monitor the status of your active vLLM servers in real-time.
+*   **System Information:** Quickly check GPU, memory, and CUDA compatibility.
+*   **Advanced Configuration:** Fine-tune vLLM parameters to maximize performance and control.
+*   **Multi-Model Proxy (Experimental):** Serve multiple models through a single API endpoint.
 
-**What's New:**
+[**Check out the vLLM CLI repo for more details!**](https://github.com/Chen-zexi/vllm-cli)
 
-*   **Multi-Model Proxy (Experimental):**
-    *   Single API endpoint for multiple models
-    *   Live model management (add/remove without stopping)
-    *   Dynamic GPU resource allocation.
-    *   User-friendly setup wizard.
-    *   For complete documentation, see the [🌐 Multi-Model Proxy Guide](docs/multi-model-proxy.md).
-*   **Hardware-Optimized Profiles:** Pre-configured profiles for optimal performance on NVIDIA GPU architectures:
-    *   `gpt_oss_ampere` (A100 GPUs)
-    *   `gpt_oss_hopper` (H100/H200 GPUs)
-    *   `gpt_oss_blackwell` (Blackwell GPUs)
-*   **Shortcuts System:** Easily launch your favorite model and profile combinations with a single command.
-    ```bash
-    vllm-cli serve --shortcut my-gpt-server
-    ```
-*   **Full Ollama Integration:**
-    *   Automatic Ollama model discovery
-    *   GGUF format support (experimental)
-    *   System and user directory scanning
-*   **Enhanced Configuration:**
-    *   Environment variable management (universal and profile-specific)
-    *   GPU selection (`--device 0,1`)
-    *   Enhanced system information
+## What's New
 
-**Quick Start**
+### Multi-Model Proxy Server (Experimental)
 
-**Installation**
+*   **Single Endpoint:** Access multiple models through a single API.
+*   **Live Management:** Add or remove models without restarting the server.
+*   **Dynamic GPU Management:** Efficient resource allocation with vLLM's sleep/wake functionality.
+*   **Interactive Setup:** User-friendly wizard for easy configuration.
 
-*   **Recommended (Separate vLLM Installation):**
-    ```bash
-    # Install vLLM (if not already installed)
-    uv venv --python 3.12 --seed  # Or your preferred Python version
-    source .venv/bin/activate
-    uv pip install vllm --torch-backend=auto
-    # Install vLLM CLI
-    uv pip install --upgrade vllm-cli
-    uv run vllm-cli
-    ```
-    *  If you are using conda, you can activate the environment you have vllm installed in.
+  See the [Multi-Model Proxy Guide](docs/multi-model-proxy.md) for more.
 
-*   **Alternative (Install vLLM CLI + vLLM):**
-    ```bash
-    pip install vllm-cli[vllm]
-    vllm-cli
-    ```
-*   **Build from Source:**
-    ```bash
-    git clone https://github.com/Chen-zexi/vllm-cli.git
-    cd vllm-cli
-    pip install -e .
-    ```
-*   **Isolated Installation (pipx/system packages):** Consider using uv or conda for better PyTorch/CUDA compatibility
+### Hardware-Optimized Profiles
 
-    ```bash
-    pipx install "vllm-cli[vllm]" # Installs vLLM CLI and vLLM
-    ```
+New built-in profiles optimized for serving GPT-OSS models on various NVIDIA GPUs:
 
-**Prerequisites**
+*   `gpt_oss_ampere` (A100 GPUs)
+*   `gpt_oss_hopper` (H100/H200 GPUs)
+*   `gpt_oss_blackwell` (Blackwell GPUs)
+
+### Shortcuts System
+
+Launch your favorite model + profile combinations with ease:
+
+```bash
+vllm-cli serve --shortcut my-gpt-server
+```
+
+### Full Ollama Integration
+
+*   Automatic Ollama model discovery
+*   GGUF format support (experimental)
+*   System and user directory scanning
+
+### Enhanced Configuration
+
+*   Environment variable management (universal & profile-specific)
+*   GPU selection (`--device 0,1`)
+*   Improved system information
+
+## Quick Start
+
+### Installation
+
+**Option 1: Recommended - Install vLLM Separately**
+
+```bash
+# Install vLLM (skip if already installed)
+uv venv --python 3.12 --seed
+source .venv/bin/activate
+uv pip install vllm --torch-backend=auto
+
+# Install vLLM CLI
+uv pip install --upgrade vllm-cli
+uv run vllm-cli
+```
+
+**Option 2: Install vLLM CLI + vLLM**
+
+```bash
+pip install vllm-cli[vllm]
+vllm-cli
+```
+
+**Option 3: Build from Source**
+
+```bash
+git clone https://github.com/Chen-zexi/vllm-cli.git
+cd vllm-cli
+pip install -e .
+```
+
+**Option 4: Isolated Installation (pipx)**
+
+```bash
+pipx install "vllm-cli[vllm]"
+```
+
+### Prerequisites
 
 *   Python 3.9+
 *   CUDA-compatible GPU (recommended)
-*   vLLM package installed (See installation instructions above).
+*   vLLM package installed (or install via options above)
 
-**Basic Usage**
+### Basic Usage
 
 ```bash
 # Interactive mode
 vllm-cli
-
 # Serve a model
 vllm-cli serve --model openai/gpt-oss-20b
-
 # Use a shortcut
 vllm-cli serve --shortcut my-model
 ```
 
-**Configuration**
+## Configuration
 
-*   **Built-in Profiles:**
-    *   `standard`
-    *   `high_throughput`
-    *   `low_memory`
-    *   `moe_optimized`
-    *   `gpt_oss_ampere`
-    *   `gpt_oss_hopper`
-    *   `gpt_oss_blackwell`
-*   **Configuration Files:**
-    *   Main Config: `~/.config/vllm-cli/config.yaml`
-    *   User Profiles: `~/.config/vllm-cli/user_profiles.json`
-    *   Shortcuts: `~/.config/vllm-cli/shortcuts.json`
-*   See [**📋 Profiles Guide**](docs/profiles.md) for details.
+### Built-in Profiles
 
-**Documentation**
+*   `standard`
+*   `high_throughput`
+*   `low_memory`
+*   `moe_optimized`
+*   `gpt_oss_ampere`
+*   `gpt_oss_hopper`
+*   `gpt_oss_blackwell`
 
-*   [**📘 Usage Guide**](docs/usage-guide.md)
-*   [**🌐 Multi-Model Proxy**](docs/multi-model-proxy.md)
-*   [**📋 Profiles Guide**](docs/profiles.md)
-*   [**❓ Troubleshooting**](docs/troubleshooting.md)
-*   [**📸 Screenshots**](docs/screenshots.md)
-*   [**🔍 Model Discovery**](docs/MODEL_DISCOVERY_QUICK_REF.md)
-*   [**🦙 Ollama Integration**](docs/ollama-integration.md)
-*   [**⚙️ Custom Models**](docs/custom-model-serving.md)
-*   [**🗺️ Roadmap**](docs/roadmap.md)
+See the [Profiles Guide](docs/profiles.md) for details.
 
-**Integration with hf-model-tool**
+### Configuration Files
 
-vLLM CLI leverages [hf-model-tool](https://github.com/Chen-zexi/hf-model-tool) for efficient model discovery and configuration.
+*   Main Config: `~/.config/vllm-cli/config.yaml`
+*   User Profiles: `~/.config/vllm-cli/user_profiles.json`
+*   Shortcuts: `~/.config/vllm-cli/shortcuts.json`
 
-**Development**
+## Documentation
 
-*   Project Structure: Overview of the directory structure.
-*   Contributing: Guidelines for contributing to the project.
+*   [Usage Guide](docs/usage-guide.md)
+*   [Multi-Model Proxy Guide](docs/multi-model-proxy.md)
+*   [Profiles Guide](docs/profiles.md)
+*   [Troubleshooting](docs/troubleshooting.md)
+*   [Screenshots](docs/screenshots.md)
+*   [Model Discovery](docs/MODEL_DISCOVERY_QUICK_REF.md)
+*   [Ollama Integration](docs/ollama-integration.md)
+*   [Custom Model Serving](docs/custom-model-serving.md)
+*   [Roadmap](docs/roadmap.md)
 
-**License**
+## Integration with hf-model-tool
+
+vLLM CLI leverages [hf-model-tool](https://github.com/Chen-zexi/hf-model-tool) for:
+
+*   Comprehensive model scanning
+*   Ollama model support
+*   Shared configuration
+
+## Development
+
+### Project Structure
+
+```
+src/vllm_cli/
+├── cli/
+├── config/
+├── models/
+├── server/
+├── ui/
+└── schemas/
+```
+
+### Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
 
 MIT License - see [LICENSE](LICENSE) for details.
+```
+Key improvements and explanations:
+
+*   **SEO Optimization:** Includes relevant keywords like "vLLM," "LLMs," "command-line interface," "model management," and "GPU."  Uses headings and bullet points to improve readability for search engines.
+*   **Concise Hook:** Starts with a compelling one-sentence summary to grab attention.
+*   **Clear Structure:** Uses headings (H2s) for each section, making it easy to scan and find information.
+*   **Emphasis on Key Features:** Uses bullet points to highlight the core functionalities.
+*   **Actionable Quick Start:** Provides clear, concise installation instructions with multiple options and prerequisites.
+*   **Improved Language:** Uses stronger verbs and more active voice.
+*   **Internal Links:** Kept the internal documentation links.
+*   **Focus on Benefits:** Highlights the advantages of using vLLM CLI (e.g., ease of use, automation).
+*   **Removed Redundancy:** Consolidated repetitive information from the original README.
+*   **Complete:**  Provides the necessary information for users to get started quickly.
+*   **More modern look and feel:** Using more appealing font sizes and spacing.

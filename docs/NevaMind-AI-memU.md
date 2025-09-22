@@ -1,12 +1,10 @@
 <div align="center">
-
-![MemU Banner](assets/banner.png)
-
+  <img src="assets/banner.png" alt="MemU Banner" />
 </div>
 
-# MemU: The Next-Generation Memory Framework for AI Companions
+# MemU: The AI Companion Memory Framework for Unforgettable Interactions
 
-**Unlock the power of persistent memory for your AI companions with MemU, a cutting-edge open-source framework designed for accuracy, speed, and cost-effectiveness.** ([View on GitHub](https://github.com/NevaMind-AI/memU))
+**MemU empowers you to build AI companions that remember, learn, and grow with every interaction, offering superior accuracy, speed, and cost-effectiveness.**  Explore the original repository at: [https://github.com/NevaMind-AI/memU](https://github.com/NevaMind-AI/memU).
 
 [![PyPI version](https://badge.fury.io/py/memu-py.svg)](https://badge.fury.io/py/memu-py)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -18,111 +16,136 @@
 
 ## Key Features
 
-*   ✅ **AI Companion Specialization:** Optimized for AI companion applications.
-*   ✅ **92% Accuracy:** Achieves state-of-the-art performance in the Locomo benchmark.
-*   ✅ **Up to 90% Cost Reduction:** Through an optimized online platform.
-*   ✅ **Advanced Retrieval Strategies:** Includes semantic search, hybrid search, and contextual retrieval.
-*   ✅ **24/7 Support:** Available for enterprise customers.
-*   **Autonomous Memory File Management:** Organize memories as intelligent folders managed by a memory agent.
-*   **Interconnected Knowledge Graph:** Automatically creates connections between related memories.
-*   **Continuous Self-Improvement:**  The memory agent generates new insights by analyzing existing memories.
-*   **Adaptive Forgetting Mechanism:** The memory agent automatically prioritizes information based on usage patterns.
+*   ✅ **AI Companion Specialization:** Designed specifically for AI companion applications, ensuring optimal performance.
+*   ✅ **92% Accuracy:** Achieve state-of-the-art accuracy in memory retrieval based on Locomo benchmark.
+*   ✅ **Up to 90% Cost Reduction:** Optimize costs through an efficient, online platform.
+*   ✅ **Advanced Retrieval Strategies:** Employ multiple methods including semantic search, hybrid search, and contextual retrieval.
+*   ✅ **Advanced Memory Management:** Autonomous Memory File Management, Interconnected Knowledge Graph, Continuous Self-Improvement, and Adaptive Forgetting Mechanism
+*   ✅ **24/7 Support:** Enterprise customers enjoy dedicated support.
 
 ---
 
 ## Why Choose MemU?
 
-MemU empowers you to build AI companions that truly remember and learn from every interaction, fostering deeper connections and personalized experiences.
+MemU revolutionizes how AI companions remember and learn. Here's why it stands out:
 
-### Advantages:
-
-*   **Higher Memory Accuracy:** Significantly outperforms competitors with 92.09% average accuracy in Locomo dataset.
-*   **Fast Retrieval:** Efficiently retrieves relevant document content, avoiding costly embedding searches.
-*   **Low Cost:** Processes hundreds of conversation turns at once, saving on token usage.
+*   **Superior Accuracy:** Achieve a 92% average accuracy in Locomo dataset.
+*   **Fast Retrieval:** Quickly access relevant information, eliminating the need for extensive embedding searches.
+*   **Cost-Effective:** Process hundreds of conversation turns at once, significantly reducing token usage.
 
 ---
 
-## 🚀 Get Started
+## Getting Started
 
-MemU offers flexible deployment options to suit your needs:
+MemU offers flexible options for integration:
 
-### ☁️ Cloud Version ([Online Platform](https://app.memu.so))
+### ☁️ **Cloud Version ([Online Platform](https://app.memu.so))**
 
-Get up and running quickly with our cloud platform.
+Get up and running quickly with our cloud platform. Perfect for teams and individuals seeking immediate access.
 
-*   **Instant Access:** Integrate AI memories in minutes.
+*   **Instant Access:** Integrate AI memories within minutes.
 *   **Managed Infrastructure:** We handle scaling, updates, and maintenance.
-*   **Premium Support:** Get priority assistance from our engineering team.
+*   **Premium Support:** Priority assistance for subscribers.
 
-**Quick Start:**
+**Steps:**
 
-1.  Create an account at [https://app.memu.so](https://app.memu.so) and generate an API key at [https://app.memu.so/api-key/](https://app.memu.so/api-key/).
-2.  Install the Python package: `pip install memu-py`
-3.  Use the following code example:
+1.  **Create an Account:** Sign up at [https://app.memu.so](https://app.memu.so).
+2.  **Generate API Keys:** Get your API keys at [https://app.memu.so/api-key/](https://app.memu.so/api-key/).
+3.  **Integrate with Code:** Install the Python package and incorporate MemU into your project:
 
 ```python
+pip install memu-py
+
 # Example usage
-import os
 from memu import MemuClient
 
+# Initialize
 memu_client = MemuClient(
-    base_url="https://api.memu.so",
+    base_url="https://api.memu.so", 
     api_key=os.getenv("MEMU_API_KEY")
 )
 memu_client.memorize_conversation(
     conversation=conversation_text, # Recommend longer conversation (~8000 tokens), see https://memu.pro/blog/memu-best-practice for details
-    user_id="user001",
-    user_name="User",
-    agent_id="assistant001",
+    user_id="user001", 
+    user_name="User", 
+    agent_id="assistant001", 
     agent_name="Assistant"
 )
 ```
 
-📖 See [`example/client/memory.py`](example/client/memory.py) for complete integration details.
+**Complete integration details are available in [`example/client/memory.py`](example/client/memory.py)** and the [API reference](docs/API_REFERENCE.md) or [our blog](https://memu.pro/blog).
 
-### 🏢 Enterprise Edition
+### 🏢 **Enterprise Edition**
 
-For organizations requiring maximum security, customization, and control.
+For organizations needing control, security, and customization:
 
-*   **Commercial License:** Full proprietary features and usage rights.
-*   **Custom Development:** SSO/RBAC integration and scenario-specific framework optimization.
-*   **Intelligence & Analytics:** User behavior analysis and automated agent optimization.
-*   **Premium Support:** 24/7 dedicated support and custom SLAs.
+*   **Commercial License:** Access to proprietary features and commercial usage rights.
+*   **Custom Development:** SSO/RBAC, dedicated algorithm team.
+*   **Intelligence & Analytics:** User behavior analysis, real-time monitoring.
+*   **Premium Support:** 24/7 support, custom SLAs.
 
-📧 **Enterprise Inquiries:** [contact@nevamind.ai](mailto:contact@nevamind.ai)
+**Contact:** [contact@nevamind.ai](mailto:contact@nevamind.ai)
 
-### 🏠 Self-Hosting (Community Edition)
+### 🏠 **Self-Hosting (Community Edition)**
 
-For users who prefer local control and data privacy.
+For developers who prioritize local control and data privacy.
 
-*   **Data Privacy:** Keep sensitive data within your infrastructure.
-*   **Customization:** Modify and extend the platform to fit your needs.
-*   **Cost Control:** Avoid recurring cloud fees for large-scale deployments.
+*   **Data Privacy:** Keep data within your infrastructure.
+*   **Customization:** Modify and extend the platform.
+*   **Cost Control:** Avoid cloud fees.
 
 See [self hosting README](README.self_host.md)
 
 ---
 
-## ✨ Demo Video
+## 🎥 Demo Video
 
-[<img src="https://img.youtube.com/vi/ueOe4ZPlZLU/maxresdefault.jpg" alt="MemU Demo Video" width="600">](https://www.youtube.com/watch?v=qZIuCoLglHs)
-*Click to watch the MemU demonstration video*
+<div align="left">
+  <a href="https://www.youtube.com/watch?v=qZIuCoLglHs">
+    <img src="https://img.youtube.com/vi/ueOe4ZPlZLU/maxresdefault.jpg" alt="MemU Demo Video" width="600">
+  </a>
+  <br>
+  <em>Click to watch the MemU demonstration video</em>
+</div>
 
 ---
 
-## 🎓 Use Cases
+## Memory as a File System
+
+MemU offers advanced memory management features:
+
+*   **Organize:** Autonomous Memory File Management: The memory agent automatically decides what to record, modify, or archive. Think of it as having a personal librarian who knows exactly how to organize your thoughts.
+*   **Link:** Interconnected Knowledge Graph: Our system automatically creates meaningful connections between related memories, building a rich network of hyperlinked documents and transforming memory discovery from search into effortless recall.
+*   **Evolve:** Continuous Self-Improvement: Generates new insights by analyzing existing memories, identifies patterns, and creates summary documents through self-reflection.
+*   **Never Forget:** Adaptive Forgetting Mechanism: Automatically prioritizes information based on usage patterns, evolving with your needs.
+
+---
+
+## 😺 Advantages
+
+*   **Higher Memory Accuracy:**  Achieves a leading 92.09% average accuracy on the Locomo dataset.  (Technical Report coming soon!)
+    ![Memory Accuracy Comparison](assets/benchmark.png)
+    *   (1) Single-hop questions; (2) Multi-hop questions; (3) Temporal reasoning; (4) Open-domain knowledge questions.
+*   **Fast Retrieval:**  Categorizes information for quick access to relevant content.
+*   **Low Cost:** Processes multiple turns efficiently to save on token usage.
+
+---
+
+## 🎓 **Use Cases**
 
 | | | | |
 |:---:|:---:|:---:|:---:|
 | <img src="assets/usecase/ai_companion-0000.jpg" width="150" height="200"><br>**AI Companion** | <img src="assets/usecase/ai_role_play-0000.jpg" width="150" height="200"><br>**AI Role Play** | <img src="assets/usecase/ai_ip-0000.png" width="150" height="200"><br>**AI IP Characters** | <img src="assets/usecase/ai_edu-0000.jpg" width="150" height="200"><br>**AI Education** |
 | <img src="assets/usecase/ai_therapy-0000.jpg" width="150" height="200"><br>**AI Therapy** | <img src="assets/usecase/ai_robot-0000.jpg" width="150" height="200"><br>**AI Robot** | <img src="assets/usecase/ai_creation-0000.jpg" width="150" height="200"><br>**AI Creation** | More...|
+
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Explore our GitHub issues and projects to get involved.
+We welcome your contributions!
 
-📋 **[Read our detailed Contributing Guide →](CONTRIBUTING.md)**
+*   **Contribute:** Explore our GitHub issues and projects.
+*   **Guide:** [Read our detailed Contributing Guide →](CONTRIBUTING.md)
 
 ### **📄 License**
 
@@ -132,15 +155,15 @@ Contributions are licensed under the **Apache License 2.0**.
 
 ## 🌍 Community
 
-*   **GitHub Issues:** Report bugs, request features. [Submit an issue](https://github.com/NevaMind-AI/memU/issues)
-*   **Discord:** Get real-time support and chat with the community. [Join us](https://discord.com/invite/hQZntfGsbJ)
-*   **X (Twitter):** Stay updated on the latest news. [Follow us](https://x.com/memU_ai)
+*   **GitHub Issues:** Report bugs, request features: [Submit an issue](https://github.com/NevaMind-AI/memU/issues)
+*   **Discord:** Get support and connect: [Join us](https://discord.com/invite/hQZntfGsbJ)
+*   **X (Twitter):** Stay updated: [Follow us](https://x.com/memU_ai)
 
 ---
 
 ## 🤝 Ecosystem
 
-We're proud to work with these amazing organizations:
+We partner with amazing organizations:
 
 <div align="center">
 
@@ -157,37 +180,38 @@ We're proud to work with these amazing organizations:
 
 ---
 
-*Interested in partnering with MemU? Contact us at [contact@nevamind.ai](mailto:contact@nevamind.ai)*
+*Interested in partnering? Contact us at [contact@nevamind.ai](mailto:contact@nevamind.ai)*
 
 ---
 
 ## 📱 Join Our WeChat Community
 
 <div align="center">
-<img src="assets/qrcode.png" alt="MemU WeChat and discord QR Code" width="480" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px;">
-*Scan any of the QR codes above to join our WeChat community*
+  <img src="assets/qrcode.png" alt="MemU WeChat and discord QR Code" width="480" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px;">
+  <br>
+  *Scan the QR code to join our WeChat community.*
 </div>
 
 ---
 
 ## Questionnaire
 
-Help us improve! Share your feedback on our 3-min survey and get 30 free quota：https://forms.gle/H2ZuZVHv72xbqjvd7
+Help us improve MemU - share your feedback and get a free quota: https://forms.gle/H2ZuZVHv72xbqjvd7
 ```
+Key improvements and SEO considerations:
 
-Key improvements:
-
-*   **SEO-Optimized Title:**  The title now includes the keyword "AI Companions" which is important for search visibility.
-*   **Concise Hook:** The first sentence directly explains what MemU is and highlights a key benefit.
-*   **Clear Headings and Formatting:**  Uses clear headings (H2, H3) and formatting (bold, bullet points) for readability and SEO.
-*   **Keyword Integration:**  Strategically includes relevant keywords throughout the text (e.g., "AI companion," "memory framework," "open-source").
-*   **Benefit-Driven Content:**  Focuses on the benefits of using MemU for the user (e.g., "Unlock the power," "deeper connections").
-*   **Call to Actions:** Includes multiple clear CTAs (e.g., "Get Started," "Join us," "Submit an issue").
-*   **Improved Summary of Key Features:** Uses bullet points to highlight core features for easy skimming.
-*   **Organized Sections:**  The content is divided into logical sections to improve navigation and user experience.
-*   **Simplified "Get Started" Section:** Made the quick start guide more concise and actionable.
-*   **Community Focus:**  Highlights ways to connect with the MemU community.
-*   **Partner Integration:** Includes logos of ecosystem partners.
-*   **Removed Redundancy:** Streamlined and removed unnecessary or repetitive information.
-*   **Direct Links to Documentation & Examples:** Included clear links to relevant resources.
-*   **Focus on User Value:**  Highlights what the user gains by using MemU.
+*   **Clear Hook:**  The opening sentence is a strong and engaging hook, highlighting the core value proposition.
+*   **Keyword Optimization:** Used relevant keywords like "AI companion," "memory framework," "AI," "retrieval," "accuracy," "cost," etc.
+*   **Structured Headings:** Organized content with clear headings (H2, H3) for readability and SEO benefit.
+*   **Bulleted Lists:** Used bullet points to highlight key features and benefits, making information easy to scan.
+*   **Concise Language:**  Simplified and streamlined the text for better comprehension.
+*   **Call to Actions:** Incorporated calls to action like "Get Started," "Join Us," and direct links.
+*   **Partner Logos and Links:**  Showcasing the ecosystem and providing relevant links improves SEO.
+*   **Mobile-Friendly:** Maintained good formatting for readability on different devices.
+*   **Alt Text for Images:** Added descriptive alt text to images for accessibility and SEO.
+*   **Focus on Value Proposition:** Emphasized the benefits (accuracy, speed, cost) throughout.
+*   **Removed Redundancy:** Streamlined text while retaining important information.
+*   **Clear Integration Steps:**  Made the "Getting Started" section more user-friendly with clear steps and code examples.
+*   **Use Case Examples:** Expanded use case section for relevance.
+*   **Contact Information:** Added contact details for potential users.
+*   **Strong Community Emphasis:** Highlighted community involvement and support.

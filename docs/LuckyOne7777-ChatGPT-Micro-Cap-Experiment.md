@@ -1,91 +1,72 @@
-# ChatGPT Micro-Cap Experiment: Can AI Beat the Market?
+# ChatGPT Micro-Cap Experiment: Can AI Trade Stocks?
 
-[Back to the original repository](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment)
+**Can a large language model like ChatGPT make smart trading decisions and generate alpha in the stock market?** This repository documents a live, six-month trading experiment using ChatGPT to manage a real-money micro-cap portfolio. Explore the cutting-edge intersection of AI and finance, and learn how to build your own AI-powered trading strategy.
 
-This project explores the potential of large language models like ChatGPT to manage a real-money micro-cap portfolio, with the goal of generating alpha in the stock market.
+[View the original repository on GitHub](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment)
 
 ## Key Features
 
-*   **AI-Powered Trading:** Utilizes ChatGPT to make real-time trading decisions based on market data.
-*   **Automated Trading Engine:** A Python-based script manages portfolio, stop-loss orders, and trade execution.
-*   **Real-Time Performance Tracking:** Daily updates of portfolio P&L, equity, and trade history.
-*   **Transparency and Documentation:** Comprehensive documentation, research summaries, and prompts used for analysis.
-*   **Open Source and Community Driven:** Project welcomes contributions and collaboration to enhance the experiment.
+*   **AI-Driven Trading:** Utilizes ChatGPT-4 to make trading decisions based on real-time data and deep research.
+*   **Automated Trading Engine:** Python scripts for portfolio management, stop-loss automation, and trade execution.
+*   **Daily Performance Tracking:** Comprehensive tracking of Profit and Loss (PnL), equity, and trade history, stored in accessible CSV files.
+*   **Performance Visualization:** Data is visualized using Matplotlib graphs to compare ChatGPT's performance against benchmarks.
+*   **Transparency & Logging:** Detailed trade logs and complete documentation of the methodology, prompts, and research are available.
+*   **Deep Research & Analysis:** Weekly summaries and full reports offering insights into ChatGPT's decision-making process.
+*   **Community-Oriented:** Contributions are welcome to build and improve this experiment.
 
-## Project Overview
+## Project Structure
 
-This experiment, starting with a $100 budget, aims to determine if an AI can effectively make smart trading decisions using real-time data. The project uses ChatGPT to analyze market data, make trading decisions, and manage the portfolio, all while adhering to strict stop-loss rules. Weekly deep research allows for portfolio reevaluation, with performance data and research findings published regularly.
+*   **`trading_script.py`**: The main trading engine with portfolio management and stop-loss automation.
+*   **`Scripts and CSV Files/`**: Contains the experiment's daily portfolio updates and performance data.
+*   **`Start Your Own/`**: Template files and guides to help you start your own AI trading experiment.
+*   **`Weekly Deep Research (MD|PDF)/`**: Research summaries and detailed performance reports.
+*   **`Experiment Details/`**: Documentation, methodology, prompts, Q&A, and chat logs for transparency and learning.
+*   **`Results.png`**: Performance snapshot compared to a market index.
 
-## Repository Structure
+## The Experiment: Answering the Question
 
-*   **`trading_script.py`**: The core trading engine that handles portfolio management and stop-loss automation.
-*   **`Scripts and CSV Files/`**:  Daily portfolio updates with performance data.
-*   **`Start Your Own/`**: Template files and a guide to help you start your own AI trading experiment.
-*   **`Weekly Deep Research (MD|PDF)/`**: Research summaries and performance reports.
-*   **`Experiment Details/`**: Detailed documentation, methodology, prompts, and a Q&A section.
+This project answers a critical question: **Can powerful large language models like ChatGPT generate alpha (or at least make smart trading decisions) using real-time data?** Starting with a small capital, the experiment provides ChatGPT with real-time trading data and strict stop-loss rules. Each week, ChatGPT can use deep research to re-evaluate its strategy.
 
 ## Current Performance
-**(Note: Replace this section with live, up-to-date results)**
+
+![Latest Performance Results](Results.png)
 
 **Current Status:** Portfolio is underperforming the S&P 500 benchmark
 
 *Performance data is updated after each trading day. See the CSV files in `Scripts and CSV Files/` for detailed daily tracking.*
 
-## Research and Documentation
+## Technologies Used
 
-*   [Research Index](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Deep%20Research%20Index.md)
-*   [Disclaimer](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Disclaimer.md)
-*   [Q&A](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Q%26A.md)
-*   [Prompts](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Prompts.md)
-*   [Starting Your Own](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Start%20Your%20Own/README.md)
-*   [Research Summaries (MD)](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/tree/main/Weekly%20Deep%20Research%20(MD))
-*   [Full Deep Research Reports (PDF)](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/tree/main/Weekly%20Deep%20Research%20(PDF))
-*   [Chats](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Chats.md)
+*   **Python:** Core scripting and automation.
+*   **pandas + yFinance:** Market data fetching and analysis.
+*   **Matplotlib:** Performance visualization and charting.
+*   **ChatGPT-4:** AI-powered trading decision engine.
 
-## Why This Matters
+## Dive Deeper
 
-With AI's growing presence in various industries, this project offers a transparent look at its potential in financial management and provides real-world data to test the viability of AI-driven trading strategies.
-
-## Tech Stack & Features
-
-### Core Technologies
-
-*   **Python**: Core scripting and automation
-*   **pandas + yFinance**: Market data fetching and analysis
-*   **Matplotlib**: Performance visualization and charting
-*   **ChatGPT-4**: AI-powered trading decision engine
-
-### Key Features
-
-*   **Robust Data Sources**: Yahoo Finance primary, Stooq fallback for reliability
-*   **Automated Stop-Loss**: Automatic position management with configurable stop-losses
-*   **Interactive Trading**: Market-on-Open (MOO) and limit order support
-*   **Backtesting Support**: ASOF_DATE override for historical analysis
-*   **Performance Analytics**: CAPM analysis, Sharpe/Sortino ratios, drawdown metrics
-*   **Trade Logging**: Complete transparency with detailed execution logs
-
-## System Requirements
-
-*   Python 3.11+
-*   Internet connection for market data
-*   ~10MB storage for CSV data files
-
-## Follow Along
-
-The experiment is ongoing and runs from June 2025 to December 2025.
-
-Weekly updates are posted on the project's blog: [A.I Controls Stock Account](https://nathanbsmith729.substack.com)
+*   **Research Index:** [Experiment Details/Deep Research Index.md](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Deep%20Research%20Index.md)
+*   **Disclaimer:** [Experiment Details/Disclaimer.md](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Disclaimer.md)
+*   **Q&A:** [Experiment Details/Q&A.md](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Q%26A.md)
+*   **Prompts:** [Experiment Details/Prompts.md](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Prompts.md)
+*   **Starting Your Own:** [Start Your Own/README.md](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Start%20Your%20Own/README.md)
+*   **Research Summaries (MD):** [Weekly Deep Research (MD)](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/tree/main/Weekly%20Deep%20Research%20(MD))
+*   **Full Deep Research Reports (PDF):** [Weekly Deep Research (PDF)](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/tree/main/Weekly%20Deep%20Research%20(PDF))
+*   **Chats:** [Experiment Details/Chats.md](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Experiment%20Details/Chats.md)
 
 ## Contribute
 
-Contributions are highly welcome!
+We welcome contributions!
 
 *   **Issues:** Report bugs or suggest improvements.
-*   **Pull Requests:** Submit your contributions.
-*   **Collaboration:** High-value contributors may be invited as maintainers/admins.
+*   **Pull Requests:** Submit your code and ideas.
+*   **Collaboration:** High-value contributors may be invited as maintainers.
 
-For more information, check out: [Contributing Guide](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Other/CONTRIBUTING.md)
+For more information: [Contributing Guide](https://github.com/LuckyOne7777/ChatGPT-Micro-Cap-Experiment/blob/main/Other/CONTRIBUTING.md)
+
+## Stay Updated
+
+Follow the experiment's progress on the blog: [A.I Controls Stock Account](https://nathanbsmith729.substack.com)
 
 ## Contact
 
-For questions or suggestions: **nathanbsmith.business@gmail.com**
+Questions or feature requests? Reach out at: **nathanbsmith.business@gmail.com**

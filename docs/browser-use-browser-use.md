@@ -4,17 +4,9 @@
   <img alt="Shows a black Browser Use Logo in light color mode and a white one in dark color mode." src="./static/browser-use.png"  width="full">
 </picture>
 
-<h1 align="center">Browser Use: Automate Your Web Tasks with AI</h1>
+<h1 align="center">Browser Use: AI-Powered Browser Automation</h1>
 
-**Effortlessly control your browser using natural language and harness the power of AI to automate web interactions.**  ([See the original repo](https://github.com/browser-use/browser-use))
-
-## Key Features
-
-*   **AI-Powered Automation:**  Control your browser with intuitive natural language commands.
-*   **Cloud Integration:**  Optionally leverage the Browser-Use cloud for browser execution.
-*   **Easy Setup:**  Quickly get started with straightforward installation steps.
-*   **Versatile Use Cases:** Automate tasks like web scraping, form filling, and more.
-*   **Expandable:** Supports integration with various LLMs.
+**Effortlessly control your browser with natural language, enabling powerful automation and web interactions.**  [Visit the original repository](https://github.com/browser-use/browser-use)
 
 [![Docs](https://img.shields.io/badge/Docs-📕-blue?style=for-the-badge)](https://docs.browser-use.com)
 [![Browser-use cloud](https://img.shields.io/badge/Browser_Use_Cloud-☁️-blue?style=for-the-badge&logo=rocket&logoColor=white)](https://cloud.browser-use.com)
@@ -35,25 +27,33 @@
 [Русский](https://www.readme-i18n.com/browser-use/browser-use?lang=ru) |
 [中文](https://www.readme-i18n.com/browser-use/browser-use?lang=zh)
 
+
+## Key Features
+
+*   **AI-Powered Automation:** Control your browser using natural language instructions.
+*   **Web Scraping:** Extract data from websites with ease.
+*   **Form Filling:** Automate the completion of online forms.
+*   **Cloud Integration:** Utilize the Browser-Use cloud for enhanced performance and features.
+*   **Easy to Use:** Simple Python API for quick integration.
+
 ## Quickstart
 
-Get started quickly using `uv` and a Gemini API key.
+Install using uv:
 
 ```bash
-#  We ship every day - use the latest version!
 uv pip install browser-use
 ```
 
-Download chromium using playwright's shortcut:
+Install Chromium:
 
 ```bash
 uvx playwright install chromium --with-deps --no-shell
 ```
 
-Create a `.env` file and add your API key. Start with a [free Gemini key](https://aistudio.google.com/app/u/1/apikey?pli=1).
+Set your API Key in a `.env` file:
 
-```bash
-GEMINI_API_KEY=
+```
+GEMINI_API_KEY=YOUR_API_KEY
 ```
 
 Run your first agent:
@@ -66,22 +66,23 @@ load_dotenv()
 agent = Agent(
     task="Find the number of stars of the browser-use repo",
     llm=ChatGoogle(model="gemini-2.5-flash"),
-    # browser=Browser(use_cloud=True),  # Uses Browser-Use cloud for the browser
 )
 agent.run_sync()
 ```
 
-Explore more settings in the [library docs](https://docs.browser-use.com) and [cloud docs](https://docs.cloud.browser-use.com).
+Explore the [library docs](https://docs.browser-use.com) and [cloud docs](https://docs.cloud.browser-use.com) for detailed usage.
 
 ## Demos
 
-Explore real-world applications of Browser Use.
+### Grocery Shopping
 
 [Task](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/shopping.py): Add grocery items to cart, and checkout.
 
 [![AI Did My Groceries](https://github.com/user-attachments/assets/a0ffd23d-9a11-4368-8893-b092703abc14)](https://www.youtube.com/watch?v=L2Ya9PYNns8)
 
 <br/><br/>
+
+### Job Application
 
 [Task](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/find_and_apply_to_jobs.py): Read my CV & find ML jobs, save them to a file, and then start applying for them in new tabs, if you need help, ask me.
 
@@ -94,7 +95,8 @@ See [more examples](https://docs.browser-use.com/examples) and give us a star!
 <br/><br/>
 ## MCP Integration
 
-Integrate with Claude Desktop for enhanced browser automation. See the [MCP docs](https://docs.browser-use.com/customize/mcp-server).
+Integrate with Claude Desktop for browser automation:
+
 ```json
 {
   "mcpServers": {

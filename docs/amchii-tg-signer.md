@@ -1,15 +1,17 @@
-# tg-signer: Automate Telegram Tasks for Daily Sign-ins and More
+# tg-signer: Automate Telegram Tasks with Python
 
-**Automate your Telegram tasks with `tg-signer`, a versatile tool for daily sign-ins, message monitoring, and automated responses.  [View the original repository](https://github.com/amchii/tg-signer)**
+🤖 Automate your Telegram activities with tg-signer, a versatile tool for signing in, monitoring messages, and interacting with chats.  [View the GitHub Repository](https://github.com/amchii/tg-signer)
 
 ## Key Features
 
-*   **Automated Sign-in:** Schedule daily sign-ins with customizable time windows.
-*   **Keyboard Interaction:** Automate actions by clicking keyboard buttons based on text.
-*   **AI-Powered Image Recognition:** Use AI to recognize images and interact with buttons.
-*   **Message Monitoring & Auto-Response:** Monitor, forward, and automatically reply to messages in personal chats, groups, and channels.
-*   **Configurable Action Flows:** Create custom action sequences for complex tasks.
-*   **Scheduled Messaging:** Configure and manage Telegram's built-in scheduled messages.
+*   ✅ **Automated Sign-In:** Schedule daily sign-ins with customizable time offsets.
+*   💬 **Message Monitoring & Auto-Reply:**  Monitor personal chats, groups, and channels; then forward or auto-reply based on configurable rules.
+*   ⌨️ **Interactive Automation:**  Click keyboard buttons based on configured text or integrate AI-powered image recognition for automated responses.
+*   🔄 **Action Flows:** Execute complex task sequences through configurable action flows, including sending text, selecting options, and more.
+*   🔄 **Scheduled Messaging:** Leverage Telegram's built-in scheduled messaging feature via the `schedule-messages` command.
+*   ⚙️ **Flexible Configuration:**  Utilize environment variables or command-line arguments for proxy, session management, and account configuration.
+*   🚀 **Efficient Operation:**  Optional speedup using the `tg-signer[speedup]` extra.
+*   🐳 **Docker Support:** Easily deploy using Docker for streamlined setup.
 
 ## Installation
 
@@ -19,7 +21,7 @@ Requires Python 3.9 or higher.
 pip install -U tg-signer
 ```
 
-For improved performance:
+For enhanced performance:
 
 ```bash
 pip install "tg-signer[speedup]"
@@ -27,7 +29,7 @@ pip install "tg-signer[speedup]"
 
 ### Docker
 
-*   Build your own Docker image using the [docker](./docker) directory's `Dockerfile` and [README](./docker/README.md).
+Build your own image using the Dockerfile in the [docker](./docker) directory.
 
 ## Usage
 
@@ -76,118 +78,75 @@ Commands:
   version                 Show version
 ```
 
-Examples:
+### Examples
 
 ```bash
+# Run a sign-in task
 tg-signer run
-tg-signer run my_sign  # Run the 'my_sign' task without prompting
-tg-signer run-once my_sign  # Run the 'my_sign' task once, regardless of previous execution
-tg-signer send-text 8671234001 /test  # Send '/test' to chat ID '8671234001'
-tg-signer send-text -- -10006758812 浇水  # Use '--' for negative chat IDs
-tg-signer send-text --delete-after 1 8671234001 /test  # Send '/test', then delete after 1 second
-tg-signer list-members --chat_id -1001680975844 --admin  # List channel admins
-tg-signer schedule-messages --crontab '0 0 * * *' --next-times 10 -- -1001680975844 你好  # Schedule a message to be sent for the next 10 days.
-tg-signer monitor run  # Configure and run message monitoring and auto-replies
-tg-signer multi-run -a account_a -a account_b same_task  # Run 'same_task' config with multiple accounts
+
+# Run a specific sign-in task directly
+tg-signer run my_sign
+
+# Run a sign-in task once, regardless of previous execution
+tg-signer run-once my_sign
+
+# Send a text message to a chat
+tg-signer send-text 8671234001 /test
+
+# Monitor messages and auto-reply
+tg-signer monitor run
 ```
 
-## Configure Proxy (if needed)
+### Configuring a Proxy (if needed)
 
-`tg-signer` doesn't use the system proxy by default. Configure proxy settings using the `TG_PROXY` environment variable or the `--proxy` command-line option.
+Configure a proxy using the `TG_PROXY` environment variable or the `--proxy` command-line option.
 
 ```bash
 export TG_PROXY=socks5://127.0.0.1:7890
 ```
 
-## Login
+### Logging In
 
 ```bash
 tg-signer login
 ```
 
-Follow the prompts to enter your phone number and verification code to log in. This will fetch your recent chats.
+Follow the prompts to enter your phone number and verification code to log in.
 
-## Send a Single Message
+### Sending a Text Message
 
 ```bash
 tg-signer send-text 8671234001 hello
 ```
 
-## Run Sign-in Tasks
+### Running Sign-In Tasks
 
 ```bash
 tg-signer run
 ```
 
-or specify the task name:
+Follow the prompts to configure your sign-in tasks.
 
-```bash
-tg-signer run linuxdo
-```
-
-Follow the prompts to configure the task.
-
-### Example Sign-in Configuration
-
-```
-# [Sign-in configuration is shown here]
-```
-
-## Configure and Run Monitoring
+### Configuring and Running Message Monitoring
 
 ```bash
 tg-signer monitor run my_monitor
 ```
 
-Follow the prompts to configure monitoring rules.
+Follow the prompts to configure your message monitoring rules.
 
-### Example Monitoring Configuration
+## Configuration & Data Storage
 
-```
-# [Monitoring configuration example is shown here]
-```
-
-### Detailed Explanation of the Monitoring Configuration
-
-1.  **Chat ID and Usernames:** Both integer IDs and usernames (prefixed with `@`) are supported for specifying chats and users, respectively.
-2.  **Matching Rules:**
-
-    *   `exact`: Matches messages that are exactly equal to the specified value.
-    *   `contains`: Matches messages that contain the specified value (case-insensitive).
-    *   `regex`: Matches messages using a regular expression.  (Refer to [Python Regular Expressions](https://docs.python.org/zh-cn/3/library/re.html)).
-    *   `all`: Matches all messages
-3.  **Message Structure**
-
-```json
-# [JSON message structure is shown here]
-```
-
-### Example Run Output
-
-```
-# [Example run output is shown here]
-```
-
-## Version Change Log
-
-```
-# [Version log is shown here]
-```
-
-## Configuration and Data Storage
-
-Configuration and data are stored in the `.signer` directory.
+Configuration files and data are stored in the `.signer` directory:
 
 ```
 .signer
-├── latest_chats.json  # Recent conversations
-├── me.json  # Personal information
+├── latest_chats.json  # Recent Chats
+├── me.json  # Personal Information
 ├── monitors  # Monitoring tasks
-│   ├── my_monitor  # Task name
-│       └── config.json  # Monitor configuration
+│   ├── my_monitor  # Monitoring task name
+│       └── config.json  # Monitoring configuration
 └── signs  # Sign-in tasks
-    └── linuxdo  # Task name
-        ├── config.json  # Sign-in config
+    └── linuxdo  # Sign-in task name
+        ├── config.json  # Sign-in configuration
         └── sign_record.json  # Sign-in records
-
-3 directories, 4 files

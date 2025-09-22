@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/camel-ai/camel">
+  <a href="https://www.camel-ai.org/">
     <img src="docs/images/banner.png" alt="CAMEL Banner">
   </a>
 </div>
@@ -28,10 +28,6 @@
 
 <hr>
 
-# CAMEL: Unleash the Power of Collaborative AI Agents
-
-CAMEL is an open-source framework that helps you explore the fascinating world of multi-agent systems.  **Explore the scaling laws of agents and build cutting-edge AI applications with CAMEL.**  
-
 <div align="center">
 <h4 align="center">
 
@@ -59,70 +55,80 @@ Join us ([*Discord*](https://discord.camel-ai.org/) or [*WeChat*](https://ghli.o
 
 <div align="center">
     <img src="docs/images/stars.gif" alt="Star">
+  </a>
 </div>
 
 <br>
+
+## CAMEL: Build, Explore, and Scale AI Agents with Ease
+
+**CAMEL is the open-source framework empowering researchers and developers to create and study AI agents at scale.** This guide provides a comprehensive overview of CAMEL's capabilities and resources. Dive in and discover how you can leverage the power of multi-agent systems.  Explore the original repo on GitHub: [https://github.com/camel-ai/camel](https://github.com/camel-ai/camel).
+
+**Key Features:**
+
+*   **Large-Scale Agent Systems:** Simulate up to 1 million agents to study emergent behaviors and scaling laws.
+*   **Dynamic Communication:** Enable real-time interactions among agents for collaborative task solving.
+*   **Stateful Memory:** Equip agents with the ability to retain and leverage historical context, improving decision-making.
+*   **Comprehensive Benchmarks:** Utilize standardized benchmarks for rigorous agent performance evaluation.
+*   **Diverse Agent Types:** Work with varied agent roles, tasks, models, and environments for interdisciplinary research.
+*   **Data Generation & Tool Integration:** Automate large-scale dataset creation while seamlessly integrating with tools.
 
 <details>
 <summary><kbd>Table of contents</kbd></summary>
 
 <br/>
 
-- [Key Features](#key-features)
 - [CAMEL Framework Design Principles](#camel-framework-design-principles)
 - [Why Use CAMEL for Your Research?](#why-use-camel-for-your-research)
 - [What Can You Build With CAMEL?](#what-can-you-build-with-camel)
-    - [Data Generation](#data-generation)
-    - [Task Automation](#task-automation)
-    - [World Simulation](#world-simulation)
+  - [Data Generation](#1-data-generation)
+  - [Task Automation](#2-task-automation)
+  - [World Simulation](#3-world-simulation)
 - [Quick Start](#quick-start)
-    - [Starting with ChatAgent](#starting-with-chatagent)
-    - [Seeking Help](#seeking-help)
+  - [Starting with ChatAgent](#starting-with-chatagent)
+  - [Seeking Help](#seeking-help)
 - [Tech Stack](#tech-stack)
 - [Research](#research)
 - [Synthetic Datasets](#synthetic-datasets)
 - [Cookbooks (Usecases)](#cookbooks-usecases)
-    - [Basic Concepts](#1-basic-concepts)
-    - [Advanced Features](#2-advanced-features)
-    - [Model Training & Data Generation](#3-model-training--data-generation)
-    - [Multi-Agent Systems & Applications](#4-multi-agent-systems--applications)
-    - [Data Processing](#5-data-processing)
+  - [Basic Concepts](#1-basic-concepts)
+  - [Advanced Features](#2-advanced-features)
+  - [Model Training & Data Generation](#3-model-training--data-generation)
+  - [Multi-Agent Systems & Applications](#4-multi-agent-systems--applications)
+  - [Data Processing](#5-data-processing)
 - [Real-World Usecases](#real-world-usecases)
-- [Built with CAMEL (Real-world Products & Research)](#-built-with-camel-real-world-producs--research)
-    - [Research Projects](#research-projects)
-    - [Product Projects](#product-projects)
-- [Events](#️-events)
+- [🧱 Built with CAMEL (Real-world Producs & Research)](#-built-with-camel-real-world-producs--research)
+  - [Research Projects](#research-projects)
+  - [Product Projects](#product-projects)
+- [🗓️ Events](#️-events)
 - [Contributing to CAMEL](#contributing-to-camel)
 - [Community & Contact](#community--contact)
 - [Citation](#citation)
 - [Acknowledgment](#acknowledgment)
 - [License](#license)
 
+####
+
+<br/>
+
 </details>
 
-## Key Features
-
-*   **Multi-Agent Systems:** Build and experiment with complex agent interactions.
-*   **Data Generation:** Create diverse, structured datasets for training and evaluation.
-*   **Customization:**  Adapt agents, roles, and environments to your specific needs.
-*   **Scalability:** Support systems with millions of agents.
-*   **Community:** Benefit from a vibrant and active open-source community.
 
 ## CAMEL Framework Design Principles
 
-### 🧬 Evolvability
+<h3>🧬 Evolvability</h3 >
 
 The framework enables multi-agent systems to continuously evolve by generating data and interacting with environments. This evolution can be driven by reinforcement learning with verifiable rewards or supervised learning.
 
-### 📈 Scalability
+<h3>📈 Scalability</h3>
 
 The framework is designed to support systems with millions of agents, ensuring efficient coordination, communication, and resource management at scale.
 
-### 💾 Statefulness
+<h3>💾 Statefulness</h3>
 
 Agents maintain stateful memory, enabling them to perform multi-step interactions with environments and efficiently tackle sophisticated tasks.
 
-### 📖 Code-as-Prompt
+<h3>📖 Code-as-Prompt</h3>
 
 Every line of code and comment serves as a prompt for agents. Code should be written clearly and readably, ensuring both humans and agents can interpret it effectively.
 
@@ -130,22 +136,53 @@ Every line of code and comment serves as a prompt for agents. Code should be wri
 
 ## Why Use CAMEL for Your Research?
 
-CAMEL provides a robust platform for researchers seeking to explore the frontiers of multi-agent systems.
+CAMEL is the go-to framework for researchers exploring multi-agent systems.  Here's why:
 
-*   ✅ **Large-Scale Agent Systems:** Simulate up to 1M agents to study emergent behaviors and scaling laws.
-*   ✅ **Dynamic Communication:** Enable real-time interactions among agents.
-*   ✅ **Stateful Memory:** Equip agents to retain and leverage historical context.
-*   ✅ **Multiple Benchmarks:** Utilize standardized benchmarks.
-*   ✅ **Diverse Agent Types:** Work with a variety of roles, tasks, models, and environments.
-*   ✅ **Data Generation and Tool Integration:** Automate the creation of datasets and streamline workflows.
+<table style="width: 100%;">
+  <tr>
+    <td align="left"></td>
+    <td align="left"></td>
+    <td align="left"></td>
+  </tr>
+  <tr>
+    <td align="left">✅</td>
+    <td align="left" style="font-weight: bold;">Large-Scale Agent System</td>
+    <td align="left">Simulate up to 1M agents to study emergent behaviors and scaling laws in complex, multi-agent environments.</td>
+  </tr>
+  <tr>
+    <td align="left">✅</td>
+    <td align="left" style="font-weight: bold;">Dynamic Communication</td>
+    <td align="left">Enable real-time interactions among agents, fostering seamless collaboration for tackling intricate tasks.</td>
+  </tr>
+  <tr>
+    <td align="left">✅</td>
+    <td align="left" style="font-weight: bold;">Stateful Memory</td>
+    <td align="left">Equip agents with the ability to retain and leverage historical context, improving decision-making over extended interactions.</td>
+  </tr>
+  <tr>
+    <td align="left">✅</td>
+    <td align="left" style="font-weight: bold;">Support for Multiple Benchmarks</td>
+    <td align="left">Utilize standardized benchmarks to rigorously evaluate agent performance, ensuring reproducibility and reliable comparisons.</td>
+  </tr>
+  <tr>
+    <td align="left">✅</td>
+    <td align="left" style="font-weight: bold;">Support for Different Agent Types</td>
+    <td align="left">Work with a variety of agent roles, tasks, models, and environments, supporting interdisciplinary experiments and diverse research applications.</td>
+  </tr>
+  <tr>
+    <td align="left">✅</td>
+    <td align="left" style="font-weight: bold;">Data Generation and Tool Integration</td>
+    <td align="left">Automate the creation of large-scale, structured datasets while seamlessly integrating with multiple tools, streamlining synthetic data generation and research workflows.</td>
+  </tr>
+</table>
 
 <br>
 
 ## What Can You Build With CAMEL?
 
-CAMEL empowers you to build a wide range of AI applications.
+Explore the diverse possibilities with CAMEL through these examples:
 
-### Data Generation
+### 1. Data Generation
 
 <div align="center">
   <a href="https://github.com/camel-ai/camel/blob/master/camel/datagen/cot_datagen.py">
@@ -171,7 +208,7 @@ CAMEL empowers you to build a wide range of AI applications.
   </a>
 </div>
 
-### Task Automation
+### 2. Task Automation
 
 <div align="center">
   <a href="https://github.com/camel-ai/camel/blob/master/camel/societies/role_playing.py">
@@ -191,7 +228,8 @@ CAMEL empowers you to build a wide range of AI applications.
   </a>
 </div>
 
-### World Simulation
+
+### 3. World Simulation
 
 <div align="center">
   <a href="https://github.com/camel-ai/oasis">
@@ -203,7 +241,7 @@ CAMEL empowers you to build a wide range of AI applications.
 
 ## Quick Start
 
-Get started with CAMEL in a few simple steps.
+Get started with CAMEL in minutes! Installation is simple using pip:
 
 ```bash
 pip install camel-ai
@@ -211,60 +249,61 @@ pip install camel-ai
 
 ### Starting with ChatAgent
 
-Here's how to create a `ChatAgent` using the CAMEL framework:
+This example demonstrates how to create a `ChatAgent` using the CAMEL framework and perform a search query using DuckDuckGo.
 
-1.  **Install the tools package:**
+1. **Install the tools package:**
 
-    ```bash
-    pip install 'camel-ai[web_tools]'
-    ```
+  ```bash
+  pip install 'camel-ai[web_tools]'
+  ```
 
-2.  **Set up your OpenAI API key:**
+2. **Set up your OpenAI API key:**
 
-    ```bash
-    export OPENAI_API_KEY='your_openai_api_key'
-    ```
+  ```bash
+  export OPENAI_API_KEY='your_openai_api_key'
+  ```
 
-    Or use a `.env` file:
+   Alternatively, use a `.env` file:
 
-    ```bash
-    cp .env.example .env
-    # then edit .env and add your keys
-    ```
+   ```bash
+   cp .env.example .env
+   # then edit .env and add your keys
+   ```
 
-3.  **Run the following Python code:**
+3. **Run the following Python code:**
 
-    ```python
-    from camel.models import ModelFactory
-    from camel.types import ModelPlatformType, ModelType
-    from camel.agents import ChatAgent
-    from camel.toolkits import SearchToolkit
+  ```python
+  from camel.models import ModelFactory
+  from camel.types import ModelPlatformType, ModelType
+  from camel.agents import ChatAgent
+  from camel.toolkits import SearchToolkit
 
-    model = ModelFactory.create(
-        model_platform=ModelPlatformType.OPENAI,
-        model_type=ModelType.GPT_4O,
-        model_config_dict={"temperature": 0.0},
-    )
+  model = ModelFactory.create(
+    model_platform=ModelPlatformType.OPENAI,
+    model_type=ModelType.GPT_4O,
+    model_config_dict={"temperature": 0.0},
+  )
 
-    search_tool = SearchToolkit().search_duckduckgo
+  search_tool = SearchToolkit().search_duckduckgo
 
-    agent = ChatAgent(model=model, tools=[search_tool])
+  agent = ChatAgent(model=model, tools=[search_tool])
 
-    response_1 = agent.step("What is CAMEL-AI?")
-    print(response_1.msgs[0].content)
-    # CAMEL-AI is the first LLM (Large Language Model) multi-agent framework
-    # and an open-source community focused on finding the scaling laws of agents.
-    # ...
+  response_1 = agent.step("What is CAMEL-AI?")
+  print(response_1.msgs[0].content)
+  # CAMEL-AI is the first LLM (Large Language Model) multi-agent framework
+  # and an open-source community focused on finding the scaling laws of agents.
+  # ...
 
-    response_2 = agent.step("What is the Github link to CAMEL framework?")
-    print(response_2.msgs[0].content)
-    # The GitHub link to the CAMEL framework is
-    # [https://github.com/camel-ai/camel](https://github.com/camel-ai/camel).
-    ```
+  response_2 = agent.step("What is the Github link to CAMEL framework?")
+  print(response_2.msgs[0].content)
+  # The GitHub link to the CAMEL framework is
+  # [https://github.com/camel-ai/camel](https://github.com/camel-ai/camel).
+  ```
 
-For detailed instructions, see the [installation section](https://github.com/camel-ai/camel/blob/master/docs/get_started/installation.md).
 
-After running, build powerful multi-agent systems by exploring our CAMEL Tech Stack and Cookbooks at [docs.camel-ai.org](https://docs.camel-ai.org).
+For more detailed instructions and additional configuration options, check out the [installation section](https://github.com/camel-ai/camel/blob/master/docs/get_started/installation.md).
+
+After running, you can explore our CAMEL Tech Stack and Cookbooks at [docs.camel-ai.org](https://docs.camel-ai.org) to build powerful multi-agent systems.
 
 We provide a [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1AzP33O8rnMW__7ocWJhVBXjKziJXPtim?usp=sharing) demo showcasing a conversation between two ChatGPT agents playing roles as a python programmer and a stock trader collaborating on developing a trading bot for stock market.
 
@@ -277,7 +316,7 @@ Explore different types of agents, their roles, and their applications.
 
 ### Seeking Help
 
-Reach out on [CAMEL discord](https://discord.camel-ai.org/) for assistance.
+For any issues or questions, join our community on [CAMEL discord](https://discord.camel-ai.org/).
 
 <br>
 
@@ -311,7 +350,9 @@ Core components and utilities to build, operate, and enhance CAMEL-AI agents and
 
 ## Research
 
-Discover our ongoing research projects.
+Delve into groundbreaking research with CAMEL, exploring the behaviors, capabilities, and potential risks of AI agents at scale.
+
+**Explore our featured research projects:**
 
 <div align="center">
   <a href="https://github.com/camel-ai/owl">
@@ -351,9 +392,9 @@ Discover our ongoing research projects.
 
 >### Research with US
 >
->We warmly invite you to use CAMEL for your impactful research. 
+>We invite you to use CAMEL for impactful research. 
 >
-> Rigorous research takes time and resources. We are a community-driven research collective with 100+ researchers exploring the frontier research of Multi-agent Systems. Join our ongoing projects or test new ideas with us, [reach out via email](mailto:camel-ai@eigent.ai) for more information.
+>Join our community of over 100 researchers exploring the frontier of Multi-agent Systems. Whether you're interested in ongoing projects or testing new ideas, [reach out via email](mailto:camel-ai@eigent.ai) for more information.
 >
 ><div align="center">
 >    <img src="docs/images/partners.png" alt="Partners">
@@ -389,8 +430,7 @@ For more details, please see our [`Models Documentation`](https://docs.camel-ai.
 <br>
 
 ## Cookbooks (Usecases)
-
-Find practical guides and tutorials.
+Practical guides and tutorials for implementing specific functionalities in CAMEL-AI agents and societies.
 
 ### 1. Basic Concepts
 | Cookbook | Description |
@@ -436,7 +476,7 @@ Find practical guides and tutorials.
 
 ## Real-World Usecases
 
-Explore how CAMEL is applied in real-world scenarios.
+Explore real-world applications of CAMEL's multi-agent framework, showcasing its potential across various industries:
 
 ### 1 Infrastructure Automation
 
@@ -474,7 +514,7 @@ Explore how CAMEL is applied in real-world scenarios.
 
 <br>
 
-## 🧱 Built with CAMEL (Real-world Products & Research)
+## 🧱 Built with CAMEL (Real-world Producs & Research)
 <div align="left">
   <a href="https://www.camel-ai.org/">
     <img src="docs/images/built_with_CAMEL.png" alt="Built with CAMEL" height="40px">
@@ -502,58 +542,25 @@ Every Code Answer |
 
 ## 🗓️ Events
 
-Join our community events!
+Stay connected and informed about CAMEL through our community events:
 
--   🎙️ **Community Meetings** — Weekly virtual syncs
--   🏆 **Competitions** — Hackathons, challenges hosted by CAMEL
+-   🎙️ **Community Meetings** — Weekly virtual syncs with the CAMEL team
+-   🏆 **Competitions** — Hackathons, Bounty Tasks and coding challenges hosted by CAMEL
 -   🤝 **Volunteer Activities** — Contributions, documentation drives, and mentorship
--   🌍 **Ambassador Programs** — Represent CAMEL in your local groups
+-   🌍 **Ambassador Programs** — Represent CAMEL in your university or local tech groups 
 
-> Host or participate in a CAMEL event? Join our [Discord](https://discord.com/invite/CNcNpquyDc) or join the [Ambassador Program](https://www.camel-ai.org/ambassador).
+> Want to host or participate in a CAMEL event? Join our [Discord](https://discord.com/invite/CNcNpquyDc) or want to be part of [Ambassador Program](https://www.camel-ai.org/ambassador).
 
 ## Contributing to CAMEL
 
-> Review our [contributing guidelines](https://github.com/camel-ai/camel/blob/master/CONTRIBUTING.md) for a smooth collaboration.
+We welcome contributions!  Please review our [contributing guidelines](https://github.com/camel-ai/camel/blob/master/CONTRIBUTING.md) to get started.
 
-> Share CAMEL on social media to support us!
+> We also welcome you to help CAMEL grow by sharing it on social media, at events, or during conferences. Your support makes a big difference!
 
 <br>
 
 ## Community & Contact
-For more information please contact camel-ai@eigent.ai
 
--   **GitHub Issues:** [Submit an issue](https://github.com/camel-ai/camel/issues)
--   **Discord:** [Join us](https://discord.camel-ai.org/)
--   **X (Twitter):** [Follow us](https://x.com/CamelAIOrg)
--   **Ambassador Project:** [Learn more](https://www.camel-ai.org/community)
--   **WeChat Community:** Scan the QR code below.
+Connect with the CAMEL community:
 
-    <div align="center">
-        <img src="misc/wechat.jpeg" alt="WeChat QR Code" width="200">
-    </div>
-
-<br>
-
-## Citation
-
-```
-@inproceedings{li2023camel,
-  title={CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society},
-  author={Li, Guohao and Hammoud, Hasan Abed Al Kader and Itani, Hani and Khizbullin, Dmitrii and Ghanem, Bernard},
-  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-  year={2023}
-}
-```
-
-## Acknowledgment
-
-Thanks to [Nomic AI](https://home.nomic.ai/) for access to their data exploration tool (Atlas).
-
-We appreciate Haya Hammoud for designing the initial project logo.
-
-If you use any of these modules, please kindly cite the original works:
-- `TaskCreationAgent`, `TaskPrioritizationAgent` and `BabyAGI` from *Nakajima et al.*: [Task-Driven Autonomous Agent](https://yoheinakajima.com/task-driven-autonomous-agent-utilizing-gpt-4-pinecone-and-langchain-for-diverse-applications/). [[Example](https://github.com/camel-ai/camel/blob/master/examples/ai_society/babyagi_playing.py)]
-
-- `PersonaHub` from *Tao Ge et al.*: [Scaling Synthetic Data Creation with 1,000,000,000 Personas](https://arxiv.org/pdf/2406.20094). [[Example](https://github.com/camel-ai/camel/blob/master/examples/personas/personas_generation.py)]
-
-- `Self-Instruct` from *Yizhong Wang et al.*: [SELF-INSTRUCT: Aligning Language Models with Self-Generated Instructions](https://arxiv.org/pdf/2212.10560). [[Example](https://github.com/camel-ai/camel/blob/master/examples
+-   **GitHub Issues:** Report bugs, request features, and track development. [

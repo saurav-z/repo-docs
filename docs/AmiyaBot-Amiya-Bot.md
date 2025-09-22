@@ -1,69 +1,61 @@
-<!-- projectInfo  -->
-<div align="center">
-    <img alt="AmiyaBot" src="https://i0.hdslb.com/bfs/album/9dda3f738e0745014f2e878b8f0a4a21f341d877.png" width=280 height=280/>
+# Amiya-Bot: Your Friendly QQ Chatbot Inspired by Arknights
 
-# Amiya-Bot: Your Fun and Engaging QQ Chatbot Inspired by Arknights
+Welcome to Amiya-Bot, a fun and engaging QQ chatbot project inspired by the popular game *Arknights*, offering a variety of entertainment features and a customizable experience.  For more information and to contribute, visit the original repository: [Amiya-Bot on GitHub](https://github.com/AmiyaBot/Amiya-Bot).
 
-Amiya-Bot is a feature-rich QQ chatbot framework inspired by the popular game *Arknights*, designed to entertain and enhance your chat experience.
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/AmiyaBot/Amiya-Bot/blob/main/LICENSE)
+[![Version](https://img.shields.io/badge/version-6.0-orange)](https://github.com/AmiyaBot/Amiya-Bot/releases)
+[![Python](https://img.shields.io/badge/Python-3.10+-%233776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Platform](https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20ubuntu-blueviolet)](https://github.com/AmiyaBot/Amiya-Bot)
+[![Commit Activity](https://img.shields.io/github/commit-activity/m/AmiyaBot/Amiya-Bot?color=%23ff69b4)](https://github.com/AmiyaBot/Amiya-Bot/commits/main)
+[![Repo Size](https://img.shields.io/github/repo-size/AmiyaBot/Amiya-Bot?color=%23ffeb3b)](https://github.com/AmiyaBot/Amiya-Bot)
 
-</div>
-<!-- projectInfo end -->
-
-<div>
-    <img alt="license" src="https://img.shields.io/badge/license-MIT-green">
-    <img alt="version" src="https://img.shields.io/badge/version-6.0-orange">
-    <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-%233776AB?logo=python&logoColor=white"><br>
-    <img alt="platform" src="https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20ubuntu-blueviolet">
-    <img alt="commit" src="https://img.shields.io/github/commit-activity/m/AmiyaBot/Amiya-Bot?color=%23ff69b4">
-    <img alt="size" src="https://img.shields.io/github/repo-size/AmiyaBot/Amiya-Bot?color=%23ffeb3b">
-</div>
-
-    「博士，能再见到您……真是太好了。今后我们同行的路还很长，所以，请您多多关照！」 -- 阿米娅
+> "Doctor, it's so good to see you again... We have a long journey ahead of us, so please take care of me!" - Amiya
 
 ## Key Features
 
-*   **Arknights-Themed:** Enjoy a chatbot experience deeply rooted in the *Arknights* universe.
-*   **Modular Design:** Features are implemented as plugins, allowing for easy customization and expansion.
-*   **QQ Channel Support:** Fully functional on QQ platforms.
-*   **Plugin System:** Easily add or remove functionality through a flexible plugin system.
-*   **Developer Friendly:**  Robust framework for developing your own AmiyaBot plugins.
+*   **Arknights-Themed Chatbot:** Enjoy a unique chatbot experience centered around the world of *Arknights*.
+*   **Modular Design:** Amiya-Bot is now a plugin demo, allowing for easy customization and the addition of new features.
+*   **Plugin System:**  Extend functionality with a robust plugin system, enabling users to add and manage features.
+*   **QQ Channel Support:**  Includes support for QQ channels.
+*   **Open Source and Community Driven:**  Built by fans for fans, with contributions welcome.
 
-## What's New in Version 6
+## What's New in Version 6.0
 
-This is the sixth major release of Amiya-Bot, introducing significant changes:
+This is the latest production version of Amiya-Bot, building upon five previous major releases.  Version 6.0 brings significant improvements:
 
-*   **Plugin Architecture:** The core functionality is now delivered through plugins.
-*   **Modular Design:**  Greater flexibility in selecting and using features.
-*   **Core Framework Separated:**  The underlying framework is now a separate project, [AmiyaBot](https://www.amiyabot.com/).
-*   **Enhanced User Experience:** Bug fixes and performance improvements.
-*   **QQ Channel Support:** Full support for QQ Channels.
-*   **Improved Development Experience:**  Optimizations for plugin developers.
+*   **Plugin-Based Architecture:** Core functionality is now modularized into plugins.
+*   **Framework Separation:** The underlying framework has been separated into a dedicated project: [Amiya-Bot](https://www.amiyabot.com/).
+*   **Core Refactoring:** Significant improvements and bug fixes in the core.
+*   **QQ Channel Support:** Added support for QQ channels.
+*   **Improved Developer Experience:**  Refined development process and documentation.
+*   **Hot-Loading/Unloading of Plugins:** Dynamic plugin management for flexibility.
+*   **Enhanced Feature Release Process:** New features are distributed through a plugin store.
 
 ## Getting Started
 
-*   **Deploying AmiyaBot-demo:**  Follow the deployment guide [here](https://www.amiyabot.com/guide/deploy/).
-*   **Developing Plugins:** Learn to create plugins [here](https://www.amiyabot.com/develop/plugin/).
-*   **Framework Development:** Develop with the AmiyaBot framework [here](https://www.amiyabot.com/develop/basic/).
+*   **Deploy AmiyaBot-demo:**  [Deployment Documentation](https://www.amiyabot.com/guide/deploy/)
+*   **Develop Plugins:**  [Plugin Development Documentation](https://www.amiyabot.com/develop/plugin/)
+*   **Framework Development:**  [Framework Development Documentation](https://www.amiyabot.com/develop/basic/)
 
-## Contribute
+## Contributing
 
 We welcome contributions!
 
-*   **Plugin Development:** Develop more features for Amiya using the [plugin development documentation](https://www.amiyabot.com/develop/plugin/).
-*   **Report Issues:**  Submit bug reports or suggestions via [issues](../../issues) or join the official QQ group [Amiya's Test Workshop](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1W4sJux&appChannel=share&businessType=9&from=181074&biz=ka&shareSource=5).
-*   **Get Help:** Get help with deployment in the QQ group's "office" sub-channel.
-*   **Show Your Support:**  Your `star` helps AmiyaBot grow!
+*   **Plugin Development:**  Develop new features - [Plugin Development Documentation](https://www.amiyabot.com/develop/plugin/)
+*   **Bug Reports and Suggestions:**  Submit issues or join the official QQ group [Amiya's Testing Workshop](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1W4sJux&appChannel=share&businessType=9&from=181074&biz=ka&shareSource=5)
+*   **Deployment Issues:**  Seek assistance in the `office` sub-channel of the official QQ group.
+*   **Show Your Support:**  Your `star` helps Amiya grow!
 
 ## Related Projects
 
 *   **Core Framework:** [Amiya-Bot-core](https://github.com/AmiyaBot/Amiya-Bot-core)
 *   **Documentation:** [Amiya-Bot-docs](https://github.com/AmiyaBot/Amiya-Bot-docs)
 *   **Plugins:** [Amiya-Bot-plugins](https://github.com/AmiyaBot/Amiya-Bot-plugins)
-*   **Admin Backend:** [Amiya-Bot-console2](https://github.com/AmiyaBot/Amiya-Bot-console2)
+*   **Admin Console:** [Amiya-Bot-console2](https://github.com/AmiyaBot/Amiya-Bot-console2)
 
 ## Acknowledgements
 
-We'd like to thank the following projects for providing data and voice resources:
+We would like to thank the following projects for providing data and voice resources:
 
 *   [Arknights-Bot-Resource](https://github.com/yuanyan3060/Arknights-Bot-Resource)
 *   [PRTS](http://prts.wiki/)
@@ -72,10 +64,6 @@ We'd like to thank the following projects for providing data and voice resources
 
 [Best Asian CDN, Edge, and Secure Solutions - Tencent EdgeOne](https://edgeone.ai/?from=github)
 
-<div style="background: #fff; padding: 8px 10px 0 10px">
-    <a href="https://edgeone.ai/?from=github">
-        <img alt="EdgeOne" src="https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png">
-    </a>
-</div>
-
-**[Back to the Amiya-Bot Repository](https://github.com/AmiyaBot/Amiya-Bot)**
+<a href="https://edgeone.ai/?from=github">
+    <img alt="EdgeOne" src="https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png">
+</a>
