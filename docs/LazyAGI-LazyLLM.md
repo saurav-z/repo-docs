@@ -2,9 +2,9 @@
   <img src="https://raw.githubusercontent.com/LazyAGI/LazyLLM/main/docs/assets/LazyLLM-logo.png" width="100%"/>
 </div>
 
-# LazyLLM: Build Powerful Multi-Agent LLM Applications with Ease
+# LazyLLM: Build Powerful Multi-Agent LLM Applications with Low-Code Ease
 
-**Simplify AI application development and accelerate your projects with LazyLLM, a low-code tool for building and optimizing multi-agent LLM applications.** ([Back to the original repo](https://github.com/LazyAGI/LazyLLM))
+[LazyLLM](https://github.com/LazyAGI/LazyLLM) empowers developers to quickly build and iterate on sophisticated multi-agent LLM applications using a low-code approach.
 
 [![CI](https://github.com/LazyAGI/LazyLLM/actions/workflows/main.yml/badge.svg)](https://github.com/LazyAGI/LazyLLM/actions/workflows/main.yml)
 [![License](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)](https://opensource.org/license/apache-2-0)
@@ -13,19 +13,19 @@
 
 ## Key Features
 
-*   **Low-Code Development:** Assemble AI applications with multiple agents using built-in data flow and functional modules, no deep LLM expertise required.
-*   **Simplified Deployment:** Deploy complex multi-agent applications with a single click, streamlining the Proof of Concept (POC) phase. One-click image packaging for Kubernetes integration.
-*   **Cross-Platform Compatibility:** Seamlessly switch between various IaaS platforms (bare-metal, development machines, Slurm clusters, public clouds) without code modifications.
-*   **Automated Parameter Optimization:** Efficiently tune hyperparameters using grid search for optimal application performance without intrusive code changes.
-*   **Model Fine-Tuning Support:** Enhance application performance with in-application model fine-tuning. Automated framework and model splitting selection based on your fine-tuning scenario.
+*   **Simplified Application Assembly:** Assemble AI applications with multiple agents easily, even without extensive LLM knowledge, using a Lego-like modular approach.
+*   **One-Click Deployment:** Deploy complex multi-agent applications with a single click, streamlining the deployment process through a lightweight gateway.
+*   **Cross-Platform Compatibility:** Easily switch between IaaS platforms (bare-metal, development machines, Slurm clusters, and public clouds) without code modifications.
+*   **Automated Hyperparameter Optimization:** Leverage grid search for efficient model selection and parameter tuning.
+*   **Efficient Fine-Tuning:** Fine-tune models within applications to continuously improve performance, simplifying model iteration and focusing on algorithm development.
 
-## What Can You Build with LazyLLM?
+## What You Can Build
 
-LazyLLM empowers you to build a variety of AI applications. Here are a few examples:
+LazyLLM accelerates the development of a wide range of AI applications. Here are a few examples.
 
 ### Chatbots
 
-**Quickly create and deploy chatbots with ease.**
+**This is a simple chatbot example.**
 
 ```python
 # set environment variable: LAZYLLM_OPENAI_API_KEY=xx 
@@ -35,7 +35,18 @@ chat = lazyllm.OnlineChatModule()
 lazyllm.WebModule(chat).start().wait()
 ```
 
-**Create advanced bots with multimodality and intent recognition.**
+If you want to use a locally deployed model, please ensure you have installed at least one inference framework (lightllm or vllm), and then use the following code
+
+```python
+import lazyllm
+# Model will be downloaded automatically if you have an internet connection.
+chat = lazyllm.TrainableModule('internlm2-chat-7b')
+lazyllm.WebModule(chat, port=23466).start().wait()
+```
+
+If you installed `lazyllm` using `pip` and ensured that the `bin` directory of your Python environment is in your `$PATH`, you can quickly start a chatbot by executing `lazyllm run chatbot`. If you want to use a local model, you need to specify the model name with the `--model` parameter. For example, you can start a chatbot based on a local model by using `lazyllm run chatbot --model=internlm2-chat-7b`.
+
+**Here's an advanced bot example with multimodality and intent recognition:**
 
 ![Demo Multimodal bot](docs/assets/multimodal-bot.svg)
 
@@ -80,7 +91,7 @@ prompt = 'You will play the role of an AI Q&A assistant and complete a dialogue 
 ```
 </details>
 
-**Online Deployment Example:**
+Here is an online deployment example:
 
 ```python
 documents = Document(dataset_path="your data path", embed=lazyllm.OnlineEmbeddingModule(), manager=False)
@@ -97,7 +108,7 @@ with pipeline() as ppl:
 lazyllm.WebModule(ppl, port=23466).start().wait()
 ```
 
-**Local Deployment Example:**
+Here is an example of a local deployment:
 
 ```python
 documents = Document(dataset_path='/file/to/yourpath', embed=lazyllm.TrainableModule('bge-large-zh-v1.5'))
@@ -115,7 +126,11 @@ with pipeline() as ppl:
 lazyllm.WebModule(ppl, port=23456).start().wait()
 ```
 
-### Story Creator
+https://github.com/LazyAGI/LazyLLM/assets/12124621/77267adc-6e40-47b8-96a8-895df165b0ce
+
+If you installed `lazyllm` using `pip` and ensured that the `bin` directory of your Python environment is in your `$PATH`, you can quickly start a retrieval-augmented bot by executing `lazyllm run rag --documents=/file/to/yourpath`. If you want to use a local model, you need to specify the model name with the `--model` parameter. For example, you can start a retrieval-augmented bot based on a local model by using `lazyllm run rag --documents=/file/to/yourpath --model=internlm2-chat-7b`.
+
+### Stories Creator
 
 <details>
 <summary>click to look up prompts and imports</summary>
@@ -167,7 +182,7 @@ writer_prompt = {"system": completion_prompt, "user": '{"title": {title}, "descr
 ```
 </details>
 
-**Online Deployment Example:**
+Here is an online deployment example:
 
 ```python
 with pipeline() as ppl:
@@ -177,7 +192,7 @@ with pipeline() as ppl:
 lazyllm.WebModule(ppl, port=23466).start().wait()
 ```
 
-**Local Deployment Example:**
+Here is an example of a local deployment:
 
 ```python
 with pipeline() as ppl:
@@ -207,6 +222,55 @@ with pipeline() as ppl:
 lazyllm.WebModule(ppl, port=23466).start().wait()
 ```
 
+## How LazyLLM Works
+
+### Components
+
+A Component is the smallest execution unit in LazyLLM; it can be either a function or a bash command. Components have three typical capabilities:
+1. Cross-platform execution using a launcher, allowing seamless user experience:
+  - EmptyLauncher: Runs locally, supporting development machines, bare metal, etc.
+  - RemoteLauncher: Schedules execution on compute nodes, supporting Slurm, SenseCore, etc.
+2. Implements a registration mechanism for grouping and quickly locating methods. Supports registration of functions and bash commands. Here is an example:
+
+```python
+import lazyllm
+lazyllm.component_register.new_group('demo')
+
+@lazyllm.component_register('demo')
+def test(input):
+    return f'input is {input}'
+
+@lazyllm.component_register.cmd('demo')
+def test_cmd(input):
+    return f'echo input is {input}'
+
+# >>> lazyllm.demo.test()(1)
+# 'input is 1'
+# >>> lazyllm.demo.test_cmd(launcher=launchers.slurm)(2)
+# Command: srun -p pat_rd -N 1 --job-name=xf488db3 -n1 bash -c 'echo input is 2'
+```
+
+### Module
+
+Modules are the top-level components in LazyLLM, equipped with four key capabilities: training, deployment, inference, and evaluation. Each module can choose to implement some or all of these capabilities, and each capability can be composed of one or more components. As shown in the table below, we have built-in some basic modules for everyone to use.
+
+|      |Function | Training/Fine-tuning | Deployment | Inference | Evaluation |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| ActionModule | Can wrap functions, modules, flows, etc., into a Module | Supports training/fine-tuning of its Submodules through ActionModule | Supports deployment of its Submodules through ActionModule | ✅ | ✅ |
+| UrlModule | Wraps any URL into a Module to access external services | ❌ | ❌ | ✅ | ✅ |
+| ServerModule | Wraps any function, flow, or Module into an API service | ❌ | ✅ | ✅ | ✅
+| TrainableModule | Trainable Module, all supported models are TrainableModules | ✅ | ✅ | ✅ | ✅ |
+| WebModule | Launches a multi-round dialogue interface service | ❌ | ✅ | ❌ | ✅ |
+| OnlineChatModule | Integrates online model fine-tuning and inference services | ✅ | ✅ | ✅ | ✅ |
+| OnlineEmbeddingModule | Integrates online Embedding model inference services | ❌ | ✅ | ✅ | ✅ |
+
+### Flow
+
+Flow in LazyLLM defines the data stream, describing how data is passed from one callable object to another. You can use Flow to intuitively and efficiently organize and manage data flow. Based on various predefined Flows, we can easily build and manage complex applications using Modules, Components, Flows, or any callable objects. The Flows currently implemented in LazyLLM include Pipeline, Parallel, Diverter, Warp, IFS, Loop, etc., which can cover almost all application scenarios. Building applications with Flow offers the following advantages:
+1. You can easily combine, add, and replace various modules and components; the design of Flow makes adding new features simple and facilitates collaboration between different modules and even projects.
+2. Through a standardized interface and data flow mechanism, Flow reduces the repetitive work developers face when handling data transfer and transformation. Developers can focus more on core business logic, thus improving overall development efficiency.
+3. Some Flows support asynchronous processing and parallel execution, significantly enhancing response speed and system performance when dealing with large-scale data or complex tasks.
+
 ## Installation
 
 ### From Source Code
@@ -217,19 +281,32 @@ cd LazyLLM
 pip install -r requirements.txt
 ```
 
-Install dependencies with `pip install -r requirements.full.txt` for fine-tuning, deployment, and RAG applications.
+`pip install -r requirements.full.txt` is used when you want to finetune, deploy or build your rag application.
 
 ### From Pip
 
-Install LazyLLM and essential dependencies:
-
+Only install lazyllm and necessary dependencies, you can use:
 ```bash
 pip3 install lazyllm
 ```
 
-Install LazyLLM and all dependencies:
-
+Install lazyllm and all dependencies, you can use:
 ```bash
 pip3 install lazyllm
 lazyllm install full
 ```
+
+## Join the Community
+
+*   **Discord:**  [Discord Link](https://discord.gg/cDSrRycuM6)
+
+## Future Plans
+
+*   **RAG Enhancements:** Integration, multi-knowledge base support, horizontal scaling, knowledge graph integration, and improved data splitting strategies.
+*   **Functional Modules:** Memory capabilities, distributed launcher support, database-based globals, and more.
+*   **Model Training and Inference:** OpenAI interface, unified prompts, fine-tuning examples, and improved auto-finetune framework selection.
+*   **Documentation:** Comprehensive API, cookbook, environment, and learn documentation.
+*   **Quality and Development:** Reduced CI time, daily builds, debug optimization, and environment setup automation.
+*   **Ecosystem:** Promotion of LazyCraft and LazyRAG, and wider code hosting.
+
+---

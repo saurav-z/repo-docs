@@ -1,41 +1,48 @@
-# Language Model Evaluation Harness: Evaluate & Benchmark LLMs
+# Language Model Evaluation Harness: Evaluate LLMs with Ease
 
-**The Language Model Evaluation Harness is a powerful, versatile framework for rigorously evaluating and benchmarking generative language models across a wide range of tasks. [Visit the original repo](https://github.com/EleutherAI/lm-evaluation-harness) for the latest updates and contributions.**
+**Unleash the power of comprehensive language model evaluation with the Language Model Evaluation Harness, a versatile and widely-used framework. [[Original Repo](https://github.com/EleutherAI/lm-evaluation-harness)]**
 
-## Key Features:
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10256836.svg)](https://doi.org/10.5281/zenodo.10256836)
 
-*   **Comprehensive Benchmarks:** Supports over 60 standard academic benchmarks with hundreds of subtasks.
-*   **Model Compatibility:** Works with models loaded via Hugging Face Transformers, vLLM, SGLang, NeMo, OpenVINO, Triton, and commercial APIs.
-*   **Flexible Inference:** Supports fast and memory-efficient inference with vLLM and SGLang, along with options for multi-GPU evaluation, model sharding, and data parallelism.
-*   **Reproducibility:** Employs publicly available prompts for consistent and comparable results.
-*   **Customization:** Provides easy integration for custom prompts, evaluation metrics, and task creation.
-*   **Open LLM Leaderboard Integration:**  Backend for the Hugging Face Open LLM Leaderboard.
-*   **Steering Support:**  Evaluate Hugging Face models with steering vectors.
+## Key Features
 
-## What's New (v0.4.0 & beyond):
+*   **Extensive Benchmarks:** Access over 60 standard academic benchmarks with hundreds of subtasks.
+*   **Model Flexibility:** Supports models from Hugging Face Transformers, vLLM, SGLang, NeMo, commercial APIs (OpenAI, Anthropic, TextSynth), and local/self-hosted servers.
+*   **Fast Inference:** Optimize evaluation with vLLM, SGLang and other efficient inference backends.
+*   **Reproducibility:**  Leverage publicly available prompts for consistent and comparable results.
+*   **Customization:**  Easily integrate custom prompts, evaluation metrics, and model configurations.
+*   **Multi-GPU Support:** Utilize multi-GPU evaluation via `accelerate` for faster results.
+*   **Result Visualization:** Visualize results using Weights & Biases (W&B) and Zeno for deeper insights.
+*   **Steered Models:** Evaluate Hugging Face models with steering vectors via PyTorch files or CSV files.
+
+## What's New
 
 *   **[2025/07]** Added `think_end_token` arg to `hf` (token/str), `vllm` and `sglang` (str) for stripping CoT reasoning traces from models that support it.
-*   **[2025/03]**  Added support for steering HF models!
+*   **[2025/03]** Added support for steering HF models!
 *   **[2025/02]** Added [SGLang](https://docs.sglang.ai/) support!
-*   **[2024/09]** Prototype multimodal evaluation with `hf-multimodal`, `vllm-vlm`, and `mmmu` task.
-*   **[2024/07]** Refactored and updated API model support with batched and async requests, including local model API.
-*   **New Open LLM Leaderboard tasks have been added !**
+*   **[2024/09]** Prototyping text+image multimodal input, text output tasks, and the `hf-multimodal` and `vllm-vlm` model types and `mmmu` task.
+*   **[2024/07]** Refactored and updated API model support, including batched and async requests.
+*   **[2024/07]** Added new Open LLM Leaderboard tasks!
+*   **v0.4.0 release available**: includes new Open LLM Leaderboard tasks, internal refactoring, config-based task creation, prompt design improvements, and new modeling libraries (vLLM, MPS, and more).
 
-## Installation:
+## Installation
 
-```bash
-git clone --depth 1 https://github.com/EleutherAI/lm-evaluation-harness
-cd lm-evaluation-harness
-pip install -e .
-```
+1.  Clone the repository:
+    ```bash
+    git clone --depth 1 https://github.com/EleutherAI/lm-evaluation-harness
+    cd lm-evaluation-harness
+    ```
+2.  Install the package:
+    ```bash
+    pip install -e .
+    ```
+3.  Install extras for extended functionality:  `pip install -e ".[NAME]"`.
 
-Explore optional dependencies for expanded functionality using the table in the [original README](https://github.com/EleutherAI/lm-evaluation-harness#optional-extras).
+## Basic Usage
 
-## Getting Started:
+### Hugging Face Transformers Example
 
-See [user guide](docs/interface.md) and [task descriptions](./lm_eval/tasks/README.md) for full functionality.
-
-### Evaluate a Hugging Face Model:
+Evaluate a model on a task using the Hugging Face backend:
 
 ```bash
 lm_eval --model hf \
@@ -45,30 +52,31 @@ lm_eval --model hf \
     --batch_size 8
 ```
 
-For multi-GPU evaluation with Hugging Face `accelerate`, using the  `accelerate launch` command is recommended (See original README for details).
+### Advanced Usage Tips
 
-## Supported Models & APIs:
+*   **GGUF Models:** Evaluate GGUF models by specifying the path to the model weights and tokenizer.
+*   **Multi-GPU with `accelerate`:** Utilize data and/or model parallelism for faster evaluation.
+*   **vLLM:**  Leverage vLLM for optimized inference and continuous batching.
+*   **SGLang:** Use SGLang for efficient offline batch inference.
+*   **API Support:** Evaluate models through various commercial and local APIs.
+*   **Steered Models:** Evaluate Hugging Face models with steering vectors.
+*   **Saving & Caching:** Save and cache results using `--output_path` and `--use_cache`.
 
-This library supports numerous model types, including:
+## Contributing
 
-*   Hugging Face Transformers
-*   vLLM
-*   SGLang
-*   NVIDIA NeMo
-*   OpenVINO
-*   Llama.cpp
-*   OpenAI, Anthropic, Textsynth, and local API servers.
+We welcome contributions!  Check out our [open issues](https://github.com/EleutherAI/lm-evaluation-harness/issues) and refer to the [documentation](https://github.com/EleutherAI/lm-evaluation-harness/tree/main/docs) for more details.  Join the [EleutherAI Discord](https://discord.gg/eleutherai) for support and discussion.
 
-See the original README for detailed instructions and examples for each model type and API.
+## Cite Us
 
-## Advanced Usage & Tips:
-
-*   **GGUF Models:** Evaluate GGUF models by specifying the model path, the GGUF file, and a tokenizer.
-*   **Steering:**  Apply steering vectors to Hugging Face models using PyTorch files or CSV configurations.
-*   **Caching:** Use `--use_cache <DIR>` to accelerate evaluation by skipping previously evaluated samples.
-*   **Saving & Logging:**  Use `--output_path` to save results and `--log_samples` to log model responses.
-*   **Visualization:** Integrate with Weights & Biases (W&B) and Zeno for visualizing and analyzing your results.
-
-## Contributing & Support:
-
-Check out the [open issues](https://github.com/EleutherAI/lm-evaluation-harness/issues) and join the [EleutherAI Discord](https://discord.gg/eleutherai) for support and collaboration.
+```text
+@misc{eval-harness,
+  author       = {Gao, Leo and Tow, Jonathan and Abbasi, Baber and Biderman, Stella and Black, Sid and DiPofi, Anthony and Foster, Charles and Golding, Laurence and Hsu, Jeffrey and Le Noac'h, Alain and Li, Haonan and McDonell, Kyle and Muennighoff, Niklas and Ociepa, Chris and Phang, Jason and Reynolds, Laria and Schoelkopf, Hailey and Skowron, Aviya and Sutawika, Lintang and Tang, Eric and Thite, Anish and Wang, Ben and Wang, Kevin and Zou, Andy},
+  title        = {The Language Model Evaluation Harness},
+  month        = 07,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v0.4.3},
+  doi          = {10.5281/zenodo.12608602},
+  url          = {https://zenodo.org/records/12608602}
+}
+```

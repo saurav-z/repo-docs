@@ -1,40 +1,47 @@
-# Optimize Your Cloudflare CDN with cf-speed-dns
+# Find the Fastest Cloudflare IP with cf-speed-dns
 
-**Instantly boost your website's performance by finding and utilizing the fastest Cloudflare CDN IP addresses with `cf-speed-dns`.**  ([View the original repository](https://github.com/ZhiXuanWang/cf-speed-dns))
+**Tired of slow Cloudflare speeds?**  This project automatically identifies and updates your Cloudflare DNS with the fastest IP addresses for optimal performance. This project is a fork of [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest), which uses CloudflareSpeedTest to find the best Cloudflare CDN IPs for you, then uses other tools to update your DNS records.
 
-This project helps you identify and automatically update your Cloudflare DNS records with the optimal IP addresses for the best speed and performance.
+## Key Features
 
-## Key Features of cf-speed-dns:
+*   **Real-Time IP Optimization:**  Automatically selects and updates Cloudflare IP addresses every 5 minutes based on speed and latency.
+*   **Optimized IP Lists:** Provides access to optimized IP lists via:
+    *   Top interface: [https://ip.164746.xyz/ipTop.html](https://ip.164746.xyz/ipTop.html) (default)
+    *   Top 10 interface: [https://ip.164746.xyz/ipTop10.html](https://ip.164746.xyz/ipTop10.html)
+*   **DNS Integration:** Supports automatic DNS record updates for your domain, including:
+    *   DNSPOD integration (fork required, configure with DOMAIN, SUB\_DOMAIN, SECRETID, SECRETKEY, and PUSHPLUS\_TOKEN in Actions secrets).
+    *   DNSCF integration (fork required, configure with CF\_API\_TOKEN, CF\_ZONE\_ID, CF\_DNS\_NAME, and PUSHPLUS\_TOKEN in Actions secrets).
+*   **Notification Support:**  Sends notifications using PUSHPLUS for status updates ([https://www.pushplus.plus/push1.html](https://www.pushplus.plus/push1.html)).
 
-*   **Real-time Cloudflare IP Optimization:**  Identifies and provides a list of the fastest Cloudflare IPs.
-*   **Optimized IP Lists:** Access pre-built lists of top-performing IPs, including:
-    *   [Top IPs List](https://ip.164746.xyz/ipTop.html)
-    *   [Top 10 IPs List](https://ip.164746.xyz/ipTop10.html)
-    *   [Updated IP List](https://ip.164746.xyz)
-*   **Automated DNS Updates:** Seamlessly integrates with DNSPOD and DNSCF to automatically update your DNS records with the best-performing IPs.
-    *   **DNSPOD Integration:** Configure using `DOMAIN`, `SUB_DOMAIN`, `SECRETID`, `SECRETKEY`, and `PUSHPLUS_TOKEN` secrets in your GitHub Actions workflow.
-    *   **DNSCF Integration:** Configure using `CF_API_TOKEN`, `CF_ZONE_ID`, `CF_DNS_NAME`, and `PUSHPLUS_TOKEN` secrets in your GitHub Actions workflow.
-*   **Push Notifications:**  Receive updates and notifications via PUSHPLUS.  [Learn more about PUSHPLUS](https://www.pushplus.plus/push1.html).
+## How it Works
 
-## API Endpoint Example
+The project leverages CloudflareSpeedTest to identify the fastest Cloudflare IP addresses and then updates your DNS records.
 
-Retrieve the top-performing IPs using a simple API request:
+## API Endpoint (Example)
 
 ```bash
 curl 'https://ip.164746.xyz/ipTop.html'
 ```
 
-The API returns a comma-separated list of optimized IP addresses.
+## API Response (Example)
 
 ```
 104.16.204.6,104.18.103.125
 ```
+
+## Getting Started
+
+1.  **Fork the repository** to customize DNS updates.
+2.  **Configure** your Actions secrets and variables according to your DNS provider (DNSPOD or DNSCF).
+3.  **Enable** Github Actions.
+
+For more detailed instructions and the original source, please visit the original repository:  [https://github.com/ZhiXuanWang/cf-speed-dns](https://github.com/ZhiXuanWang/cf-speed-dns)
 
 ## Acknowledgements
 
 *   [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
 *   [ddgth](https://github.com/ddgth/cf2dns)
 
-## Powered by
+## Support
 
 [![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")

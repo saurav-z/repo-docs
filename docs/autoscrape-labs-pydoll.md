@@ -1,8 +1,13 @@
 <p align="center">
     <img src="https://github.com/user-attachments/assets/219f2dbc-37ed-4aea-a289-ba39cdbb335d" alt="Pydoll Logo" /> <br>
+    <a href="https://github.com/autoscrape-labs/pydoll">
+        <img src="https://img.shields.io/github/stars/autoscrape-labs/pydoll?style=social" alt="GitHub stars">
+    </a>
 </p>
 
-<h1 align="center">Pydoll: Automate the Web with Ease and Precision</h1>
+<h1 align="center">Pydoll: Effortless Web Automation with Python</h1>
+
+Pydoll empowers you to automate web interactions seamlessly, eliminating the complexities of traditional web drivers.
 
 <p align="center">
     <a href="https://github.com/autoscrape-labs/pydoll/stargazers"><img src="https://img.shields.io/github/stars/autoscrape-labs/pydoll?style=social"></a>
@@ -24,290 +29,82 @@
   💖 <a href="#-support-my-work">Support My Work</a>
 </p>
 
-**Pydoll is your all-in-one solution for automating web interactions, scraping data, and testing web applications with a focus on simplicity and human-like behavior.** Learn more on the [Pydoll GitHub repository](https://github.com/autoscrape-labs/pydoll).
-
 ## Key Features
 
-*   **Zero WebDriver Dependency:**  Eliminate the hassles of WebDriver compatibility issues, making setup a breeze.
-*   **Human-Like Interaction Engine:**  Bypass behavioral CAPTCHAs like reCAPTCHA v3 or Turnstile, enabling realistic user simulations.
-*   **Asynchronous Performance:**  Execute tasks concurrently for high-speed automation and improved efficiency.
-*   **Humanized Interactions:**  Mimic real user behavior to avoid detection and enhance automation success.
-*   **Simplified Setup:**  Get started quickly with a straightforward installation process.
-*   **Remote Browser Control:** Connect to and control running Chrome instances via WebSocket.
-*   **Advanced DOM Navigation:** Utilize helpful methods like `get_children_elements()` and `get_siblings_elements()` to traverse complex layouts with ease.
-*   **WebElement State Waiting:**  Use `wait_until(...)` on `WebElement` for robust element state management.
-*   **Browser-context HTTP Requests:**  Leverage the `tab.request` interface for seamless integration of UI and API automation.
-*   **Effortless File Downloads:**  Employ the `tab.expect_download()` context manager to handle file downloads reliably.
-*   **Deep Browser Customization:**  Control hundreds of internal Chrome settings via `browser_preferences`, offering advanced fingerprinting and customization options.
+*   **Driverless Automation:** Bypasses webdriver compatibility issues by connecting directly to the Chrome DevTools Protocol (CDP).
+*   **Human-Like Interaction Engine:** Mimics realistic user behavior for effective automation, including bypassing anti-bot measures.
+*   **Asynchronous Performance:** Enables high-speed automation and the ability to manage multiple tasks concurrently.
+*   **Simplified Setup:** Installs easily, letting you quickly start automating web tasks.
 
-## Installation
+## What's New
+*(Summarized from original README)*
 
-Install Pydoll using pip:
+### Remote Connections via WebSocket
+Connect to and control remote/CI browsers via WebSocket, facilitating automation in various environments.
+
+### DOM Navigation Helpers
+New methods `get_children_elements()` and `get_siblings_elements()` to simplify DOM traversal and streamline scraping logic.
+
+### WebElement Enhancements
+Added public methods (`is_visible()`, `is_interactable()`, `is_on_top()`, and `execute_script()`) to improve element state validation. Also added `wait_until()` on `WebElement` to await element states.
+
+## 📦 Installation
 
 ```bash
 pip install pydoll-python
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
-### Your First Automation
+*(Summarized from original README)*
 
-Here's a basic example to perform a Google search and click on the first result:
+Quickly automate web tasks with examples that show how to perform a Google search and extract data using xpath queries, customizable configurations.
 
-```python
-import asyncio
-
-from pydoll.browser import Chrome
-from pydoll.constants import Key
-
-async def google_search(query: str):
-    async with Chrome() as browser:
-        tab = await browser.start()
-        await tab.go_to('https://www.google.com')
-        search_box = await tab.find(tag_name='textarea', name='q')
-        await search_box.insert_text(query)
-        await search_box.press_keyboard_key(Key.ENTER)
-        await (await tab.find(
-            tag_name='h3',
-            text='autoscrape-labs/pydoll',
-            timeout=10,
-        )).click()
-        await tab.find(id='repository-container-header', timeout=10)
-
-asyncio.run(google_search('pydoll python'))
-```
-
-### Data Extraction Example
-
-Extracting information from a webpage (assuming you're already on the Pydoll page):
-
-```python
-description = await (await tab.query(
-    '//h2[contains(text(), "About")]/following-sibling::p',
-    timeout=10,
-)).text
-
-number_of_stars = await (await tab.find(
-    id='repo-stars-counter-star'
-)).text
-
-number_of_forks = await (await tab.find(
-    id='repo-network-counter'
-)).text
-number_of_issues = await (await tab.find(
-    id='issues-repo-tab-count',
-)).text
-number_of_pull_requests = await (await tab.find(
-    id='pull-requests-repo-tab-count',
-)).text
-
-data = {
-    'description': description,
-    'number_of_stars': number_of_stars,
-    'number_of_forks': number_of_forks,
-    'number_of_issues': number_of_issues,
-    'number_of_pull_requests': number_of_pull_requests,
-}
-print(data)
-```
-
-### Custom Configurations
-
-Example of using custom configurations:
-
-```python
-from pydoll.browser import Chrome
-from pydoll.browser.options import ChromiumOptions as Options
-
-async def custom_automation():
-    # Configure browser options
-    options = Options()
-    options.add_argument('--proxy-server=username:password@ip:port')
-    options.add_argument('--window-size=1920,1080')
-    options.binary_location = '/path/to/your/browser'
-    options.start_timeout = 20
-
-    async with Chrome(options=options) as browser:
-        tab = await browser.start()
-        # Your automation code here
-        await tab.go_to('https://example.com')
-        # The browser is now using your custom settings
-
-asyncio.run(custom_automation())
-```
-
-## Advanced Features
-
-Pydoll offers a range of advanced features for more demanding use cases, including:
+## ⚡ Advanced Features
 
 ### Advanced Element Search
-
-*   **Find by attributes:**  `tab.find(tag_name='button', class_name='btn-primary', text='Submit')`
-*   **Find by ID:**  `tab.find(id='username')`
-*   **Find multiple elements:** `tab.find(tag_name='a', find_all=True)`
-*   **CSS selectors and XPath:**  `tab.query('nav.main-menu')` or `tab.query('//div[@data-testid="item-123"]')`
-*   **Timeout and error handling:**  `tab.find(class_name='dynamic-content', timeout=10, raise_exc=False)`
-*   **Custom attributes:**  `tab.find(data_testid='submit-button', aria_label='Submit form')`
+Offers multiple methods to find elements on a page. Search options include the intuitive `find` method with attributes and the versatile `query` method with CSS selectors and XPath queries.
 
 ### Browser-context HTTP requests
-
-```python
-# Navigate to a site and login normally with PyDoll
-await tab.go_to('https://example.com/login')
-await (await tab.find(id='username')).type_text('user@example.com')
-await (await tab.find(id='password')).type_text('password')
-await (await tab.find(id='login-btn')).click()
-
-# Now make API calls that inherit the logged-in session!
-response = await tab.request.get('https://example.com/api/user/profile')
-user_data = response.json()
-```
+The `tab.request` property gives you a `requests`-like interface that executes HTTP calls directly in the browser's JavaScript context. This means every request automatically gets cookies, authentication headers, CORS policies, and session state.
 
 ### New expect_download() context manager
-
-```python
-import asyncio
-from pathlib import Path
-from pydoll.browser import Chrome
-
-async def download_report():
-    async with Chrome() as browser:
-        tab = await browser.start()
-        await tab.go_to('https://example.com/reports')
-
-        target_dir = Path('/tmp/my-downloads')
-        async with tab.expect_download(keep_file_at=target_dir, timeout=10) as download:
-            # Trigger the download in the page (button/link/etc.)
-            await (await tab.find(text='Download latest report')).click()
-            # Wait until finished and read the content
-            data = await download.read_bytes()
-            print(f"Downloaded {len(data)} bytes to: {download.file_path}")
-
-asyncio.run(download_report())
-```
+The `tab.expect_download()` context manager offers a simplified way to handle file downloads.
 
 ### Total browser control with custom preferences
-
-```python
-options = ChromiumOptions()
-
-# Create the perfect automation environment
-options.browser_preferences = {
-    'download': {
-        'default_directory': '/tmp/downloads',
-        'prompt_for_download': False,
-        'directory_upgrade': True,
-        'extensions_to_open': ''  # Don't auto-open any downloads
-    },
-    'profile': {
-        'default_content_setting_values': {
-            'notifications': 2,        # Block all notifications
-            'geolocation': 2,         # Block location requests
-            'media_stream_camera': 2, # Block camera access
-            'media_stream_mic': 2,    # Block microphone access
-            'popups': 1               # Allow popups (useful for automation)
-        },
-        'password_manager_enabled': False,  # Disable password prompts
-        'exit_type': 'Normal'              # Always exit cleanly
-    },
-    'intl': {
-        'accept_languages': 'en-US,en',
-        'charset_default': 'UTF-8'
-    },
-    'browser': {
-        'check_default_browser': False,    # Don't ask about default browser
-        'show_update_promotion_infobar': False
-    }
-}
-
-# Or use the convenient helper methods
-options.set_default_download_directory('/tmp/downloads')
-options.set_accept_languages('en-US,en,pt-BR')  
-options.prompt_for_download = False
-```
+The new `browser_preferences` system gives you access to hundreds of internal Chrome settings.
 
 ### Concurrent Automation
+Pydoll's asynchronous nature allows for simultaneous processing of multiple tasks.
 
-```python
-import asyncio
-from pydoll.browser import Chrome
+## 🔧 Quick Troubleshooting
 
-async def scrape_page(url, tab):
-    await tab.go_to(url)
-    title = await tab.execute_script('return document.title')
-    links = await tab.find(tag_name='a', find_all=True)
-    return {
-        'url': url,
-        'title': title,
-        'link_count': len(links)
-    }
+*(Summarized from original README)*
 
-async def concurrent_scraping():
-    browser = Chrome()
-    tab_google = await browser.start()
-    tab_duckduckgo = await browser.new_tab()
-    tasks = [
-        scrape_page('https://google.com/', tab_google),
-        scrape_page('https://duckduckgo.com/', tab_duckduckgo)
-    ]
-    results = await asyncio.gather(*tasks)
-    print(results)
-    await browser.stop()
+Provides solutions for common issues: Browser not found, FailedToStartBrowser errors, proxy usage, and running in Docker.
 
-asyncio.run(concurrent_scraping())
-```
+## 📚 Documentation
 
-## Quick Troubleshooting
+For complete documentation, detailed examples and deep dives into all Pydoll functionalities, visit our [official documentation](https://pydoll.tech/).
 
-*   **Browser not found?**
-    ```python
-    from pydoll.browser import Chrome
-    from pydoll.browser.options import ChromiumOptions
+## 🤝 Contributing
 
-    options = ChromiumOptions()
-    options.binary_location = '/path/to/your/chrome'
-    browser = Chrome(options=options)
-    ```
-*   **Browser starts after a FailedToStartBrowser error?**
-    ```python
-    from pydoll.browser import Chrome
-    from pydoll.browser.options import ChromiumOptions
+Contribute to the project by following the [contribution guidelines](CONTRIBUTING.md) and best practices to enhance Pydoll.
 
-    options = ChromiumOptions()
-    options.start_timeout = 20  # default is 10 seconds
+## 💖 Support My Work
 
-    browser = Chrome(options=options)
-    ```
-*   **Need a proxy?**
-    ```python
-    options.add_argument('--proxy-server=your-proxy:port')
-    ```
-*   **Running in Docker?**
-    ```python
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
-    ```
+Show your support by sponsoring the project on GitHub ([https://github.com/sponsors/thalissonvs](https://github.com/sponsors/thalissonvs)) or by other means.
 
-## Documentation
+## 💬 Spread the word
 
-For in-depth information, tutorials, and API reference, visit the [official documentation](https://pydoll.tech/).
+Share the project and support it with your feedback.
 
-## Contributing
+## 📄 License
 
-We welcome contributions!  Review our [contribution guidelines](CONTRIBUTING.md) to get started.
-
-## Support My Work
-
-If you find Pydoll helpful, consider [supporting me on GitHub](https://github.com/sponsors/thalissonvs).  
-
-## Spread the Word
-
-If Pydoll has helped you, give it a ⭐, share it, or tell your colleagues.
-
-## License
-
-Pydoll is released under the [MIT License](LICENSE).
+Pydoll is licensed under the [MIT License](LICENSE).
 
 <p align="center">
   <b>Pydoll</b> — Making browser automation magical!
 </p>
+
+[Back to the original repo](https://github.com/autoscrape-labs/pydoll)

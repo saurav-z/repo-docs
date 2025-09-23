@@ -1,10 +1,9 @@
 <div align="center" style="text-align: center;">
 
-<h1>opendbc: Your Gateway to Vehicle Control</h1>
+<h1>opendbc: Your Python API for Automotive Control</h1>
+
 <p>
-  <b>Unlock the full potential of your car with opendbc, a Python API for in-depth vehicle control and data access.</b>
-  <br>
-  Control steering, gas, brakes, and more, all while reading crucial vehicle data like speed and steering angle.
+  <b>Take control of your car!</b>  opendbc empowers you to interface with your vehicle's systems, including steering, gas, brakes, and more.
 </p>
 
 <h3>
@@ -23,126 +22,101 @@
 
 ---
 
-## Introduction
+opendbc is a Python API developed by [comma.ai](https://github.com/commaai/opendbc) for controlling and monitoring modern vehicles.  Leveraging the power of CAN bus communication, it allows you to read and write data to your car's systems.
 
-opendbc empowers you to interact with your car's systems. Built for the community, it provides a robust Python API to control steering, gas, brakes, and access valuable vehicle data.  While integral to the [openpilot](https://github.com/commaai/openpilot) project, opendbc expands its reach by reading and writing to EV charge status, and more, allowing for a comprehensive vehicle management experience.
+**Key Features:**
 
-## Key Features
+*   **Control & Monitoring:** Access and manipulate steering, gas, brakes, and more.
+*   **Real-time Data:** Read crucial data such as speed and steering angle.
+*   **Open Source & Community Driven:** Contribute to the project and expand its capabilities.
+*   **Extensive Documentation:** Comprehensive guides and resources for using, contributing, and extending opendbc.
+*   **Supported Cars:** Wide support for vehicles with LKAS and ACC interfaces.
 
-*   **Control**: Take command of your car's steering, acceleration, and braking systems.
-*   **Data Access**: Retrieve real-time data including speed, steering angle, and more.
-*   **Broad Compatibility**: Designed to support the majority of vehicles equipped with LKAS and ACC systems, starting from 2016.
-*   **Community-Driven**:  Benefit from the open-source community's contributions, documentation, and support.
-*   **Extensible**: Adapt and extend opendbc to meet your project needs, including EV charge status and door control.
+---
 
-## Quick Start
+## Getting Started
 
-Get started with opendbc by cloning the repository and running the test script:
+Get up and running quickly with these simple steps:
 
 ```bash
 git clone https://github.com/commaai/opendbc.git
 cd opendbc
+
+# Run all dependencies and tests
 ./test.sh
 ```
 
-This script handles dependency installation, building, linting, and testing.  For more granular control, you can run the individual commands:
+See the [`examples/`](examples/) directory for sample programs, including [`examples/joystick.py`](examples/joystick.py), which lets you control your car with a joystick.
 
-```bash
-pip3 install -e .[testing,docs]  # install dependencies
-scons -j8                        # build with 8 cores
-pytest .                         # run the tests
-lefthook run lint                # run the linter
-```
+## Core Components
 
-Explore the `examples/` directory for ready-to-use programs, including `examples/joystick.py` to control your car with a joystick.
+*   [`opendbc/dbc/`](opendbc/dbc/): Stores DBC (Database CAN) files.
+*   [`opendbc/can/`](opendbc/can/): Provides a library for parsing and building CAN messages from DBC files.
+*   [`opendbc/car/`](opendbc/car/): Offers a high-level Python interface for interacting with your car.
+*   [`opendbc/safety/`](opendbc/safety/): Implements functional safety features.
 
-## Project Structure
+## How to Add Your Car (Porting)
 
-*   `opendbc/dbc/`:  Stores [DBC](https://en.wikipedia.org/wiki/CAN_bus#DBC_(CAN_Database_Files)) files for your car's data.
-*   `opendbc/can/`:  A library to parse and build CAN messages using DBC files.
-*   `opendbc/car/`:  High-level Python library to interact with cars.
-*   `opendbc/safety/`:  Ensures functional safety for supported cars.
+Expand opendbc's reach by adding support for your vehicle. The process generally involves:
+
+*   Connecting to the car with a comma 3X and a car harness.
+*   Reverse Engineering CAN messages via `cabana`.
+*   Creating `carstate.py`, `carcontroller.py`, and other necessary modules.
+*   Tuning for optimal lateral and longitudinal control using tools like the [longitudinal maneuvers](https://github.com/commaai/openpilot/tree/master/tools/longitudinal_maneuvers).
+
+Detailed instructions are available in the documentation.
 
 ## Contributing
 
-Join the opendbc community! Development is coordinated on [GitHub](https://github.com/commaai/opendbc). Get involved by visiting the `#dev-opendbc-cars` channel on [Discord](https://discord.comma.ai).
+Become a part of the opendbc community! Development is coordinated on GitHub and [Discord](https://discord.comma.ai).
 
-## How to Port a Car
+### Roadmap
 
-The steps to add support for a new car or enhance existing models are detailed within the documentation, and are well-documented [here](https://github.com/commaai/opendbc/blob/docs/README.md#how-to-port-a-car).
-
-## Roadmap
-
-*   [ ]  `pip install opendbc` support
-*   [ ]  100% type and line coverage
-*   [ ]  Simplify car port creation with tools, tests, and documentation.
-*   [ ]  Enhance car support for all vehicles with LKAS and ACC interfaces.
-*   [ ]  Develop automatic lateral and longitudinal control/tuning evaluation.
-*   [ ]  Implement auto-tuning features for lateral and longitudinal control.
-*   [ ]  Integrate Automatic Emergency Braking support.
+The project roadmap includes goals like improved ease-of-use, comprehensive type and line coverage, and expanded vehicle support.
 
 ## Safety Model
 
-opendbc's safety firmware, when used with a [panda](https://comma.ai/shop/panda), defaults to `SAFETY_SILENT` mode for secure operation. Safety modes provide message control based on customizable states.
+opendbc's safety features are tightly integrated with [openpilot](https://github.com/commaai/openpilot) and [panda](https://comma.ai/shop/panda) to ensure safe operation. The safety firmware enforces the principles of the [openpilot safety](https://github.com/commaai/openpilot/blob/master/docs/SAFETY.md) to ensure compliance.
 
-The safety firmware prioritizes rigorous code quality, and enforces these standards:
+## Code Quality and Rigor
 
-*   Static code analysis via [cppcheck](https://github.com/danmar/cppcheck/).
-*   [MISRA C:2012](https://misra.org.uk/) compliance checks.
-*   Strict compiler flags.
-*   Comprehensive [unit tests](opendbc/safety/tests) with 100% line coverage.
-*   Mutation testing for the safety unit tests.
-*   Ruff linter and [mypy](https://mypy-lang.org/) on the car interface library.
+The project implements stringent code quality checks to guarantee safety, including static analysis with [cppcheck](https://github.com/danmar/cppcheck/) (including MISRA C:2012 violations), strict compiler flags, and thorough unit and mutation testing.
 
 ## Bounties
 
-The community is rewarded for their contributions.  Bounties include:
+We offer bounties for contributions, including:
 
-*   $2000 - [Any car brand / platform port](https://github.com/orgs/commaai/projects/26/views/1?pane=issue&itemId=47913774)
-*   $250 - [Any car model port](https://github.com/orgs/commaai/projects/26/views/1?pane=issue&itemId=47913790)
-*   $300 - [Reverse Engineering a new Actuation Message](https://github.com/orgs/commaai/projects/26/views/1?pane=issue&itemId=73445563)
+*   $2000 - For any car brand/platform port.
+*   $250 - For any car model port.
+*   $300 - For reverse engineering a new Actuation Message.
 
-See [comma.ai/bounties](comma.ai/bounties) for more opportunities.
+See [comma.ai/bounties](comma.ai/bounties) for more details.
 
-## FAQ
+## Frequently Asked Questions (FAQ)
 
-*   **How do I use this?**  Use it with a [comma 3X](https://comma.ai/shop/comma-3x).
-*   **Which cars are supported?**  Check the [supported cars list](docs/CARS.md).
-*   **Can I add support for my car?** Yes! Refer to the guide [here](https://github.com/commaai/opendbc/blob/docs/README.md#how-to-port-a-car).
-*   **Which cars can be supported?** Any car with LKAS and ACC support. Find more info [here](https://github.com/commaai/openpilot/blob/master/docs/CARS.md#dont-see-your-car-here).
-*   **How does this work?** This allows you to replace your car's built-in features.  See [this talk](https://www.youtube.com/watch?v=FL8CxUSfipM) for more information.
-*   **Is there a timeline or roadmap for adding car support?** Community driven, with comma doing final safety and quality validation.
+*   **How do I use this?** Requires a [comma 3X](https://comma.ai/shop/comma-3x).
+*   **Which cars are supported?** Check the [supported cars list](docs/CARS.md).
+*   **Can I add support for my car?** Yes! Find out how [here](https://github.com/commaai/opendbc/blob/docs/README.md#how-to-port-a-car).
+*   **Which cars *can* be supported?** Any with LKAS and ACC. See [here](https://github.com/commaai/openpilot/blob/master/docs/CARS.md#dont-see-your-car-here).
+*   **How does this work?** Replace your car's built-in lane keep and adaptive cruise features. See [this talk](https://www.youtube.com/watch?v=FL8CxUSfipM).
+*   **Is there a timeline or roadmap for adding car support?** Car support is primarily community driven.
 
-## Terms
+### Key Terms
 
-A comprehensive list of terms is found [here](https://github.com/commaai/opendbc/blob/docs/README.md#terms) and below:
+Definitions of frequently used terms can be found in the README.
 
-*   **port**: integrating a car.
-*   **lateral control**: steering.
-*   **longitudinal control**: acceleration/braking.
-*   **fingerprinting**: identifying cars automatically.
-*   **[LKAS](https://en.wikipedia.org/wiki/Lane_departure_warning_system)**: lane keeping assist.
-*   **[ACC](https://en.wikipedia.org/wiki/Adaptive_cruise_control)**: adaptive cruise control.
-*   **[harness](https://comma.ai/shop/car-harness)**: car-specific ADAS hardware.
-*   **[panda](https://github.com/commaai/panda)**: hardware to access CAN bus.
-*   **[ECU](https://en.wikipedia.org/wiki/Electronic_control_unit)**: car computer modules.
-*   **[CAN bus](https://en.wikipedia.org/wiki/CAN_bus)**: a car's communication bus.
-*   **[cabana](https://github.com/commaai/openpilot/tree/master/tools/cabana#readme)**: tool to reverse engineer CAN messages.
-*   **[DBC file](https://en.wikipedia.org/wiki/CAN_bus#DBC)**: defines CAN message data.
-*   **[openpilot](https://github.com/commaai/openpilot)**: an ADAS system.
-*   **[comma](https://github.com/commaai)**: the company behind opendbc.
-*   **[comma 3X](https://comma.ai/shop/comma-3x)**: the hardware used to run openpilot.
+### More Resources
 
-## More Resources
+Explore these additional resources for deeper understanding and assistance:
 
 *   [*How Do We Control The Car?*](https://www.youtube.com/watch?v=nNU6ipme878&pp=ygUoY29tbWEgY29uIDIwMjEgaG93IGRvIHdlIGNvbnRyb2wgdGhlIGNhcg%3D%3D) by [@robbederks](https://github.com/robbederks) from COMMA_CON 2021
 *   [*How to Port a Car*](https://www.youtube.com/watch?v=XxPS5TpTUnI&t=142s&pp=ygUPamFzb24gY29tbWEgY29u) by [@jyoung8607](https://github.com/jyoung8607) from COMMA_CON 2023
-*   [commaCarSegments](https://huggingface.co/datasets/commaai/commaCarSegments): a massive dataset of CAN data from 300 different car models
-*   [cabana](https://github.com/commaai/openpilot/tree/master/tools/cabana#readme): tool for reverse engineering CAN messages
-*   [can_print_changes.py](https://github.com/commaai/openpilot/blob/master/selfdrive/debug/can_print_changes.py): diff the whole CAN bus across two drives
-*   [longitudinal maneuvers](https://github.com/commaai/openpilot/tree/master/tools/longitudinal_maneuvers): a tool for evaluating and tuning longitudinal control
-*   [opendbc data](https://commaai.github.io/opendbc-data/): a repository of longitudinal maneuver evaluations
+*   [commaCarSegments](https://huggingface.co/datasets/commaai/commaCarSegments)
+*   [cabana](https://github.com/commaai/openpilot/tree/master/tools/cabana#readme)
+*   [can_print_changes.py](https://github.com/commaai/openpilot/blob/master/selfdrive/debug/can_print_changes.py)
+*   [longitudinal maneuvers](https://github.com/commaai/openpilot/tree/master/tools/longitudinal_maneuvers)
+*   [opendbc data](https://commaai.github.io/opendbc-data/)
 
-## Join the Team!
+## Join the Team - We're Hiring! [comma.ai/jobs](https://comma.ai/jobs)
 
-[comma.ai](https://comma.ai/jobs) is hiring talented engineers.
+comma.ai is looking for engineers to join our team and work on opendbc and [openpilot](https://github.com/commaai/openpilot).

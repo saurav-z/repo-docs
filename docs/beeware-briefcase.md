@@ -1,8 +1,8 @@
 [<img src="https://beeware.org/project/briefcase/briefcase.png" width="72" alt="logo" />](https://beeware.org/briefcase)
 
-# Briefcase: Package Your Python Projects into Native Apps
+# Briefcase: Turn Your Python Code into Native Apps
 
-Briefcase is a powerful tool that transforms your Python projects into standalone, native applications for various platforms.
+Briefcase is a powerful tool that lets you transform your Python projects into standalone, native applications for a variety of platforms.  
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
 [![PyPI Version](https://img.shields.io/pypi/v/briefcase.svg)](https://pypi.python.org/pypi/briefcase)
@@ -13,56 +13,57 @@ Briefcase is a powerful tool that transforms your Python projects into standalon
 
 ## Key Features
 
-*   **Cross-Platform Compatibility:** Create native apps for:
-    *   Mac
+*   **Cross-Platform Deployment:** Package your Python projects for:
+    *   macOS
     *   Windows
     *   Linux
     *   iOS (iPhone/iPad)
     *   Android
-    *   Web
-*   **Easy Packaging:** Simplifies the process of converting your Python code into installable application packages.
-*   **Future Support:**  Plans for AppleTV, watchOS, and wearOS deployments are in development.
+    *   Web (Browser)
+*   **Easy Packaging:** Simplify the process of creating native applications from your Python code.
+*   **Active Development:**  Support for AppleTV, watchOS, and wearOS deployments is planned.
+*   **Open Source:** Released under a BSD license.
 
 ## Getting Started
 
-Install Briefcase with a single command:
+Install Briefcase using pip:
 
 ```bash
 python -m pip install briefcase
 ```
 
-For a comprehensive guide, explore the [BeeWare tutorial](https://docs.beeware.org) to build and package your first application.
-
-## Financial Support
-
-The BeeWare project thrives with the generous support of its members.
-
-[![Anaconda logo](https://beeware.org/community/members/anaconda/anaconda-large.png)](https://anaconda.com/)
-
-Anaconda Inc. - Advancing AI through open source.
-
-Consider becoming a financial member to support the project!  Learn more [here](https://beeware.org/community/members/).
+For a comprehensive introduction to Briefcase, explore the [BeeWare tutorial](https://docs.beeware.org), which guides you through creating and packaging a new application.
 
 ## Documentation
 
-Find detailed documentation on [Read The Docs](https://briefcase.readthedocs.io).
+Detailed documentation is available on [Read The Docs](https://briefcase.readthedocs.io).
 
-## Community & Support
+## Community and Support
 
-Join the BeeWare community and connect with other users and developers:
+Join the vibrant BeeWare community for help and discussions:
 
-*   [@beeware@fosstodon.org on Mastodon](https://fosstodon.org/@beeware)
+*   [Mastodon](https://fosstodon.org/@beeware)
 *   [Discord](https://beeware.org/bee/chat/)
-*   Briefcase [GitHub Discussions forum](https://github.com/beeware/briefcase/discussions)
+*   [GitHub Discussions](https://github.com/beeware/briefcase/discussions)
 
-We uphold a welcoming and respectful community as outlined in the [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/).
+We adhere to the [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/), fostering a welcoming and respectful environment.
 
 ## Contributing
 
-Report issues and contribute to Briefcase development:
+If you encounter any issues or want to contribute:
 
 *   **Report Bugs:** [Log issues on GitHub](https://github.com/beeware/briefcase/issues).
-*   **Contribute Code:** Follow the [contribution guide](https://briefcase.readthedocs.io/en/latest/how_to/contribute/index.html) for setting up your development environment and contribution requirements.
+*   **Contribute Code:** Learn how to set up a development environment and contribute in our [contribution guide](https://briefcase.readthedocs.io/en/latest/how_to/contribute/index.html).
+
+## Financial Support
+
+Support the BeeWare project and help ensure its continued development!  Consider becoming a financial member, and check out our current supporters:
+
+[![Anaconda logo](https://beeware.org/community/members/anaconda/anaconda-large.png)](https://anaconda.com/)
+Anaconda Inc. - Advancing AI through open source.
+
+Plus individual contributions from [users like you](https://beeware.org/community/members/).
 
 ---
-*Original Repository:*  [beeware/briefcase on GitHub](https://github.com/beeware/briefcase)
+
+**[View the original repository on GitHub](https://github.com/beeware/briefcase)**

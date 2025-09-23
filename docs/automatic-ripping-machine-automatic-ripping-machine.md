@@ -1,52 +1,51 @@
-# Automatic Ripping Machine (ARM): Automate Your Digital Media Library
+# Automatic Ripping Machine (ARM): Automate Your Media Ripping and Backup
 
-**Effortlessly rip your Blu-rays, DVDs, and CDs into a digital format with the Automatic Ripping Machine (ARM).**  This open-source project simplifies the process of digitizing your physical media collection.
+ARM is a powerful, open-source tool designed to automatically rip and back up your Blu-ray, DVD, and CD media, making your media library more accessible.
 
-[Visit the Original Repository](https://github.com/automatic-ripping-machine/automatic-ripping-machine)
+[Original Repository](https://github.com/automatic-ripping-machine/automatic-ripping-machine)
 
 ## Key Features
 
-*   **Automated Disc Detection:** Automatically detects when a disc (Blu-ray, DVD, or CD) is inserted.
-*   **Intelligent Disc Type Recognition:** Determines the disc type (video, audio, or data).
-*   **Video Ripping:**
-    *   Retrieves movie titles and other metadata.
-    *   Rips using MakeMKV or HandBrake.
-    *   Handles both movies and TV shows.
-    *   Automatically names folders for easy organization with Plex, Emby, etc.
-    *   Supports concurrent transcoding jobs.
-*   **Audio Ripping:** Rips CDs using `abcde`, retrieving disc data and album art from [MusicBrainz](https://musicbrainz.org/).
-*   **Data Backup:** Creates ISO backups for data discs.
-*   **Headless Operation:** Designed to be run on a server without a graphical interface.
+*   **Automated Disc Detection:** Automatically detects disc insertion via `udev`.
+*   **Intelligent Disc Type Identification:** Determines disc type (video, audio, or data).
+*   **Video Ripping (Blu-ray & DVD):**
+    *   Retrieves movie titles from disc or [OMDb API](http://www.omdbapi.com/) for organized storage.
+    *   Identifies movie or TV show using [OMDb API](http://www.omdbapi.com/).
+    *   Rips using MakeMKV or HandBrake (all features or main feature).
+    *   Asynchronously batches transcoding jobs for efficient processing.
+    *   Integrates with notification services (IFTTT, Pushbullet, Slack, Discord, etc.).
+*   **Audio Ripping (CD):** Rips CDs using `abcde`, retrieves disc data and album art from [musicbrainz](https://musicbrainz.org/).
+*   **Data Backup:** Creates ISO backups for data discs (Blu-ray, DVD, DVD-Audio, and CD).
+*   **Headless Operation:** Designed for server environments, minimizing user interaction.
 *   **Parallel Ripping:** Supports ripping from multiple optical drives simultaneously.
-*   **Web Interface:**  A Python Flask UI to manage jobs, view logs, and update settings.
-*   **Notifications:**  Send notifications via IFTTT, Pushbullet, Slack, Discord, and more.
+*   **Web UI:** Provides a Python Flask UI for managing jobs, viewing logs, and more.
 
-## Getting Started
+## How it Works
 
-1.  **Insert Disc:** Simply insert your Blu-ray, DVD, or CD into the drive.
-2.  **Automated Process:** ARM will automatically identify and begin the ripping process.
-3.  **Disc Ejection:** Once complete, the disc will be ejected.
-4.  **Repeat:** Repeat the process for each disc in your collection.
+1.  Insert a disc into your optical drive.
+2.  ARM automatically identifies the disc type and starts the ripping process.
+3.  Once complete, the disc is ejected, and any further processing steps are queued.
 
-## Requirements
+## System Requirements
 
-*   A system capable of running Docker containers.
-*   One or more optical drives (Blu-ray, DVD, CD).
-*   Sufficient storage space (NAS recommended) for your digital media library.
+*   A system capable of running Docker containers (recommended).
+*   One or more optical drives (Blu-ray/DVD/CD readers).
+*   Ample storage space (NAS recommended) for your media library.
 
 ## Installation
 
-*   **General Installation:** [See the Wiki for installation instructions](https://github.com/automatic-ripping-machine/automatic-ripping-machine/wiki/).
-*   **Docker Installation:** [See the Wiki for Docker installation instructions](https://github.com/automatic-ripping-machine/automatic-ripping-machine/wiki/docker).
+*   For a standard installation, refer to the [wiki](https://github.com/automatic-ripping-machine/automatic-ripping-machine/wiki/).
+*   For Docker installation instructions, see the [wiki Docker guide](https://github.com/automatic-ripping-machine/automatic-ripping-machine/wiki/docker).
 
 ## Troubleshooting
 
-*   [Refer to the Wiki for troubleshooting guidance](https://github.com/automatic-ripping-machine/automatic-ripping-machine/wiki/).
+*   Find solutions to common issues in the [wiki troubleshooting guide](https://github.com/automatic-ripping-machine/automatic-ripping-machine/wiki/).
 
 ## Contributing
 
-We welcome contributions from the community!  Please review the [Contributing Guide](https://github.com/automatic-ripping-machine/automatic-ripping-machine/wiki/Contributing-Guide).  Consider sharing your ARM setup configurations in the wiki.
+*   Contributions are welcome. See the [Contributing Guide](https://github.com/automatic-ripping-machine/automatic-ripping-machine/wiki/Contributing-Guide) for details.
+*   Share your setup experiences by submitting a how-to guide to the wiki.
 
 ## License
 
-[MIT License](LICENSE)
+*   [MIT License](LICENSE)

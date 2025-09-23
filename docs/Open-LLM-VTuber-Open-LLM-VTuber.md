@@ -1,12 +1,4 @@
-<div align="center">
-  <a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber">
-    <img src="./assets/banner.jpg" alt="Open-LLM-VTuber Banner" width="100%">
-  </a>
-</div>
-
-# Open-LLM-VTuber: Bring Your AI Companion to Life!
-
-**Create your own interactive AI companion with real-time voice interaction and a Live2D avatar, all running offline on your computer!**  ([Explore the project on GitHub](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber))
+# Open-LLM-VTuber: Your Offline, Interactive AI Companion (Voice & Live2D)
 
 [![GitHub release](https://img.shields.io/github/v/release/t41372/Open-LLM-VTuber)](https://github.com/t41372/Open-LLM-VTuber/releases) 
 [![license](https://img.shields.io/github/license/t41372/Open-LLM-VTuber)](https://github.com/t41372/Open-LLM-VTuber/blob/master/LICENSE) 
@@ -28,25 +20,39 @@ English README | [中文README](https://github.com/t41372/Open-LLM-VTuber/blob/m
 
 <a href="https://trendshift.io/repositories/12358" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12358" alt="t41372%2FOpen-LLM-VTuber | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-## Key Features
+<br>
 
-*   **Cross-Platform Compatibility:** Runs seamlessly on Windows, macOS, and Linux.
-*   **Offline Mode:** Enjoy complete privacy and security with local models, no internet connection required.
-*   **Web and Desktop Clients:** Choose your preferred interaction method with rich features.
-*   **Advanced Interaction:**
-    *   Visual perception via camera, screen recording, and screenshots.
-    *   Voice interruption and touch feedback.
-    *   Live2D expression control.
-    *   Desktop pet mode for a persistent companion.
-    *   Display AI's thoughts and proactive speaking.
-    *   Persistent chat logs.
-    *   TTS translation support.
-*   **Extensive Model Support:** Integrates with a wide range of LLMs, ASR, and TTS engines (e.g., Ollama, OpenAI, Whisper, Coqui-TTS).
-*   **Customization:**
-    *   Simple module configuration.
-    *   Character customization with Live2D models and persona modification.
-    *   Flexible Agent implementation for integrating various AI architectures.
-    *   Modular design for easy expansion with new LLMs, ASR, TTS and other modules.
+Open-LLM-VTuber brings your AI companion to life with real-time voice interaction, a Live2D avatar, and fully offline functionality.
+
+[**Visit the GitHub Repository for more information and to get started!**](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber)
+
+## Key Features:
+
+*   **Offline-First:** Run entirely offline with local models, ensuring privacy and no internet dependency.
+*   **Cross-Platform:** Compatible with Windows, macOS, and Linux.
+*   **Voice-Interactive:** Engage in real-time voice conversations with your AI companion.
+*   **Live2D Avatar:** Enjoy a dynamic and expressive Live2D avatar.
+*   **Customization:** Tailor your AI companion's appearance and personality.
+*   **Desktop & Web Clients:** Offers both web version and desktop client usage modes, supporting rich interactive features and personalization settings. The desktop client can switch freely between window mode and desktop pet mode, allowing the AI companion to be by your side at all times.
+*   **Advanced Interaction Features:**
+  -   👁️ Visual perception, supporting camera, screen recording and screenshots, allowing your AI companion to see you and your screen
+  -   🎤 Voice interruption without headphones (AI won't hear its own voice)
+  -   🫱 Touch feedback, interact with your AI companion through clicks or drags
+  -   😊 Live2D expressions, set emotion mapping to control model expressions from the backend
+  -   🐱 Pet mode, supporting transparent background, global top-most, and mouse click-through - drag your AI companion anywhere on the screen
+  -   💭 Display AI's inner thoughts, allowing you to see AI's expressions, thoughts and actions without them being spoken
+  -   🗣️ AI proactive speaking feature
+  -   💾 Chat log persistence, switch to previous conversations anytime
+  -   🌍 TTS translation support (e.g., chat in Chinese while AI uses Japanese voice)
+*   **Extensive Model Support:**
+  -   🤖 Large Language Models (LLM): Ollama, OpenAI (and any OpenAI-compatible API), Gemini, Claude, Mistral, DeepSeek, Zhipu AI, GGUF, LM Studio, vLLM, etc.
+  -   🎙️ Automatic Speech Recognition (ASR): sherpa-onnx, FunASR, Faster-Whisper, Whisper.cpp, Whisper, Groq Whisper, Azure ASR, etc.
+  -   🔊 Text-to-Speech (TTS): sherpa-onnx, pyttsx3, MeloTTS, Coqui-TTS, GPTSoVITS, Bark, CosyVoice, Edge TTS, Fish Audio, Azure TTS, etc.
+*   **Highly Customizable**:
+  -   ⚙️ Simple module configuration: Switch various functional modules through simple configuration file modifications, without delving into the code
+  -   🎨 Character customization: Import custom Live2D models to give your AI companion a unique appearance. Shape your AI companion's persona by modifying the Prompt. Perform voice cloning to give your AI companion the voice you desire
+  -   🧩 Flexible Agent implementation: Inherit and implement the Agent interface to integrate any Agent architecture, such as HumeAI EVI, OpenAI Her, Mem0, etc.
+  -   🔌 Good extensibility: Modular design allows you to easily add your own LLM, ASR, TTS, and other module implementations, extending new features at any time
 
 ## Demo
 
@@ -54,29 +60,13 @@ English README | [中文README](https://github.com/t41372/Open-LLM-VTuber/blob/m
 |:---:|:---:|
 | ![](assets/i3.jpg) | ![](assets/i4.jpg) |
 
-## Get Started
+## Quick Start
 
-See the [Quick Start](https://open-llm-vtuber.github.io/docs/quick-start) in our documentation for installation instructions.
+Refer to the [Quick Start](https://open-llm-vtuber.github.io/docs/quick-start) section in our documentation for installation instructions.
 
-## Update
+## Contribution
 
-Use `uv run update.py` to update if you installed any versions later than `v1.0.0`.
-
-## Uninstall
-
-Most files, including Python dependencies and models, are stored in the project folder.
-However, models downloaded via ModelScope or Hugging Face may also be in `MODELSCOPE_CACHE` or `HF_HOME`. While we aim to keep them in the project's `models` directory, it's good to double-check.  
-
-Review the installation guide for any extra tools you no longer need, such as `uv`, `ffmpeg`, or `deeplx`.  
-
-## Contribute
-
-Check out the [development guide](https://docs.llmvtuber.com/docs/development-guide/overview).
-
-## Related Projects
-
-[ylxmf2005/LLM-Live2D-Desktop-Assitant](https://github.com/ylxmf2005/LLM-Live2D-Desktop-Assitant)
-- Your Live2D desktop assistant powered by LLM! Available for both Windows and MacOS, it senses your screen, retrieves clipboard content, and responds to voice commands with a unique voice. Featuring voice wake-up, singing capabilities, and full computer control for seamless interaction with your favorite character.
+Checkout the [development guide](https://docs.llmvtuber.com/docs/development-guide/overview).
 
 ## Third-Party Licenses
 

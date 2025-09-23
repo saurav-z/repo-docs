@@ -1,32 +1,26 @@
-![Windows Compatibility](https://img.shields.io/badge/Windows-10%2C%2011-blue)
-![Downloads](https://img.shields.io/github/downloads/emy69/CoomerDL/total)
+# Coomer Downloader: Download Images and Videos with Ease
 
-# Coomer Downloader: Effortlessly Download Images & Videos
+**Tired of manually downloading media from various websites?** Coomer Downloader is a user-friendly desktop application that simplifies the process, allowing you to effortlessly download images and videos from supported URLs. ([Original Repository](https://github.com/Emy69/CoomerDL))
 
-**Tired of manually saving media from various sites?** Coomer Downloader is a user-friendly, Python-based desktop application designed to download images and videos from multiple URLs with ease. ([View on GitHub](https://github.com/Emy69/CoomerDL))
+[![Windows Compatibility](https://img.shields.io/badge/Windows-10%2C%2011-blue)](https://github.com/Emy69/CoomerDL)
+[![Downloads](https://img.shields.io/github/downloads/emy69/CoomerDL/total)](https://github.com/Emy69/CoomerDL/releases)
 
 ---
 
 ## Key Features
 
-*   **Multi-threaded Downloads:** Experience faster download speeds by utilizing multiple threads.
-*   **Real-time Progress Feedback:** Stay informed with live updates during the download process.
-*   **Efficient Queue Management:** Easily handle and organize large download queues.
-*   **Supports Various File Types:** Downloads a wide range of media, including videos, images, documents, and compressed files.
-*   **User-Friendly GUI:** Simple and intuitive graphical user interface for easy operation.
+*   **Multithreaded Downloads:** Download multiple files simultaneously for faster speeds.
+*   **Real-time Progress Feedback:** Stay informed with live updates on your downloads.
+*   **Efficient Queue Management:** Easily handle large download lists.
+*   **Wide Format Support:**
+    *   **Videos:** .mp4, .mkv, .webm, .mov, .avi, .flv, .wmv, .m4v
+    *   **Images:** .jpg, .jpeg, .png, .gif, .bmp, .tiff
+    *   **Documents:** .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx
+    *   **Compressed:** .zip, .rar, .7z, .tar, .gz
 
 ---
 
-## Supported File Extensions
-
-**Videos:** `.mp4`, `.mkv`, `.webm`, `.mov`, `.avi`, `.flv`, `.wmv`, `.m4v`
-**Images:** `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.tiff`
-**Documents:** `.pdf`, `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`
-**Compressed:** `.zip`, `.rar`, `.7z`, `.tar`, `.gz`
-
----
-
-## Supported Pages
+## Supported Websites
 
 *   [coomer.su](https://coomer.su/)
 *   [kemono.su](https://kemono.su/)
@@ -39,27 +33,27 @@
 
 ## Alternative CLI Tools
 
-For those who prefer command-line interfaces, explore these related projects:
+For users who prefer the command line, explore these related projects:
 
-*   **[Coomer CLI](https://github.com/Emy69/Coomer-cli)**: A CLI tool for downloading media from Coomer and similar sites. Offers customizable options for file naming, download modes, rate limiting, and checksum verification.
-*   **[Simpcity CLI](https://github.com/Emy69/SimpCityCLI)**: A CLI tool tailored for downloading media from Simpcity, providing similar features to Coomer CLI.
+*   **[Coomer CLI](https://github.com/Emy69/Coomer-cli)** - A CLI tool for downloading media from Coomer and similar sites with advanced features.
+*   **[Simpcity CLI](https://github.com/Emy69/SimpCityCLI)** - A dedicated CLI tool for downloading media specifically from Simpcity.
 
 ---
 
 ## Language Support
 
-*   [Español](#)
-*   [English](#)
-*   [日本語 (Japanese)](#)
-*   [中文 (Chinese)](#)
-*   [Français (French)](#)
-*   [Русский (Russian)](#)
+*   Español
+*   English
+*   日本語 (Japanese)
+*   中文 (Chinese)
+*   Français (French)
+*   Русский (Russian)
 
 ---
 
-## Community & Support
+## Community
 
-Have questions or want to connect with other users? Join the Discord server!
+Join the Coomer Downloader community and connect with other users!
 
 [![Join Discord](https://img.shields.io/badge/Join-Discord-7289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ku8gSPsesh)
 
@@ -67,46 +61,41 @@ Have questions or want to connect with other users? Join the Discord server!
 
 ## Downloads
 
-Download the latest version from the [Releases Page](https://github.com/Emy69/CoomerDL/releases).
+Get the latest version from the [Releases Page](https://github.com/Emy69/CoomerDL/releases).
 
 ---
 
 ## Usage Instructions
 
 1.  Launch the Coomer Downloader application.
-2.  Paste the URL of the image or video you want to download.
-3.  Click the **Download** button and await completion.
+2.  Paste the URL of the image or video.
+3.  Click the "Download" button.
 
 ![Usage GIF](https://github.com/Emy69/CoomerDL/blob/main/resources/screenshots/0627.gif)
 
 ---
 
-## Get Started (Development)
+## Installation and Setup
 
-### Clone the Repository
+1.  **Clone the repository:**
 
-```sh
-git clone https://github.com/Emy69/CoomerDL.git
-```
+    ```bash
+    git clone https://github.com/Emy69/CoomerDL.git
+    ```
 
-### Install Dependencies
+2.  **Navigate to the project directory:**
 
-```sh
-cd CoomerDL
-pip install -r requirements.txt
-```
+    ```bash
+    cd CoomerDL
+    ```
 
-### Run the Application
+3.  **Install dependencies:**
 
-```sh
-python main.py
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
----
+4.  **Run the application:**
 
-## Support the Project
-
-If you find this tool helpful, consider supporting the developer:
-
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00.svg?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/emy_69)
-[![Support on Patreon](https://img.shields.io/badge/Support%20on%20Patreon-FF424D.svg?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/emy69)
+    ```bash
+    python main.py

@@ -1,6 +1,7 @@
+<!-- Improved README.md for TagStudio -->
 # TagStudio: Organize Your Files with Freedom and Flexibility
 
-> Take control of your digital life with TagStudio, a powerful and user-focused document management system.
+**Tired of messy files? TagStudio is a user-focused document management system that puts *you* in control.** [Explore the original repository](https://github.com/TagStudioDev/TagStudio) for details!
 
 [![Translation](https://hosted.weblate.org/widget/tagstudio/strings/svg-badge.svg)](https://hosted.weblate.org/projects/tagstudio/strings/)
 [![PyTest](https://github.com/TagStudioDev/TagStudio/actions/workflows/pytest.yaml/badge.svg)](https://github.com/TagStudioDev/TagStudio/actions/workflows/pytest.yaml)
@@ -9,10 +10,10 @@
 [![Downloads](https://img.shields.io/github/downloads/TagStudioDev/TagStudio/total.svg?maxAge=2592001)](https://github.com/TagStudioDev/TagStudio/releases)
 
 <p align="center">
-  <img width="60%" src="docs/assets/github_header.png" alt="TagStudio Header">
+  <img width="60%" src="docs/assets/github_header.png">
 </p>
 
-Tired of proprietary formats and rigid file structures? TagStudio offers a tag-based system for organizing your photos and files, giving you unprecedented control. It focuses on user freedom and flexibility, ensuring your data remains accessible and manageable.  **Explore the [official documentation](https://docs.tagstud.io/) to learn more and get started!**
+TagStudio is a powerful photo and file organization application that lets you manage your digital assets your way. Built on a flexible, tag-based system, it gives you the freedom to organize without being locked into proprietary formats or altering your existing file structure.  **Learn more and explore the documentation at [docs.tagstud.io](https://docs.tagstud.io)!**
 
 > [!NOTE]
 > Thank you for being patient as we've migrated our database backend from JSON to SQL! The previous warnings about the main branch being experimental and unsupported have now been removed, and any pre-existing library save files created with official TagStudio releases are able to be opened and migrated with the new v9.5+ releases!
@@ -35,12 +36,12 @@ Tired of proprietary formats and rigid file structures? TagStudio offers a tag-b
 
 ## Key Features
 
-*   **Tag-Based Organization:** Utilize a flexible tag system for intuitive file categorization.
-*   **Custom Metadata:**  Add rich metadata to your files, including names, descriptions, and more.
-*   **Powerful Search:** Quickly find files using tags, file paths, file types, and boolean operators.
-*   **Tag Inheritance and Categories:** Organize your tags into parent-child relationships for powerful organization.
-*   **No Proprietary Lock-in:**  Works with your existing files without requiring sidecar files or changing your file structure.
-*   **Cross-Platform Support:** Available for Windows, macOS, and Linux.
+*   **Tag-Based Organization:**  Create and apply custom tags to files for flexible organization.
+*   **Custom Metadata:** Add descriptive information like names, authors, descriptions, and notes.
+*   **Tag Inheritance:** Define parent tags for hierarchical organization and tag grouping.
+*   **Powerful Search:**  Find files quickly using tags, file paths, types, and more with boolean operators and glob syntax.
+*   **File Preview:** View thumbnails and previews for a wide range of file types, including images, videos, and documents.
+*   **File Management:** Open files or their locations, and delete files from your library and drive.
 
 ## Table of Contents
 
@@ -62,22 +63,22 @@ Tired of proprietary formats and rigid file structures? TagStudio offers a tag-b
 
 ## Priorities
 
-1.  **The concept.** Even if TagStudio as an application fails, I’d hope that the idea lives on in a superior project. The [goals](#goals) outlined above don’t reference TagStudio once - _TagStudio_ is what references the _goals._
-2.  **The system.** Frontends and implementations can vary, as they should. The core underlying metadata management system is what should be interoperable between different frontends, programs, and operating systems. A standard implementation for this should settle as development continues. This opens up the doors for improved and varied clients, integration with third-party applications, and more.
-3.  **The application.** If nothing else, TagStudio the application serves as the first (and so far only) implementation for this system of metadata management. This has the responsibility of doing the idea justice and showing just what’s possible when it comes to user file management.
-4.  (The name.) I think it’s fine for an app or client, but it doesn’t really make sense for a system or standard. I suppose this will evolve with time...
+1. **The concept.** Even if TagStudio as an application fails, I’d hope that the idea lives on in a superior project. The [goals](#goals) outlined above don’t reference TagStudio once - _TagStudio_ is what references the _goals._
+2. **The system.** Frontends and implementations can vary, as they should. The core underlying metadata management system is what should be interoperable between different frontends, programs, and operating systems. A standard implementation for this should settle as development continues. This opens up the doors for improved and varied clients, integration with third-party applications, and more.
+3. **The application.** If nothing else, TagStudio the application serves as the first (and so far only) implementation for this system of metadata management. This has the responsibility of doing the idea justice and showing just what’s possible when it comes to user file management.
+4. (The name.) I think it’s fine for an app or client, but it doesn’t really make sense for a system or standard. I suppose this will evolve with time...
 
 ## Contributing
 
-If you're interested in contributing to TagStudio, please take a look at the [contribution guidelines](/CONTRIBUTING.md) for how to get started!
+Interested in contributing to TagStudio? Check out the [contribution guidelines](/CONTRIBUTING.md) to get started!
 
 Translation hosting generously provided by [Weblate](https://weblate.org/en/). Check out our [project page](https://hosted.weblate.org/projects/tagstudio/) to help translate TagStudio!
 
 ## Installation
 
-Download the latest releases for Windows, macOS, and Linux from the [Releases](https://github.com/TagStudioDev/TagStudio/releases) page on GitHub. Portable versions are also available.
+Download the latest releases from the [Releases](https://github.com/TagStudioDev/TagStudio/releases) page on GitHub. Builds are available for **Windows**, **macOS** _(Apple Silicon & Intel)_, and **Linux**. Portable releases are also offered for Windows and Linux.
 
-For detailed installation instructions and development information, see the "[Installation](https://docs.tagstud.io/install/)" page on our documentation website.
+For detailed installation instructions and development guides, see the "[Installation](https://docs.tagstud.io/install/)" page in our documentation.
 
 <!-- prettier-ignore -->
 > [!CAUTION]
@@ -87,42 +88,33 @@ For detailed installation instructions and development information, see the "[In
 
 ### Third-Party Dependencies
 
-For video thumbnails and playback, you'll also need [FFmpeg](https://ffmpeg.org/download.html) installed on your system. If you encounter any issues with this, please reference our [FFmpeg Help](/docs/help/ffmpeg.md) guide.
+For video thumbnails and playback, you'll also need [FFmpeg](https://ffmpeg.org/download.html) installed on your system. Reference our [FFmpeg Help](/docs/help/ffmpeg.md) guide for troubleshooting.
 
 ## Usage
 
 ### Creating/Opening a Library
 
-Open TagStudio and select "Open/Create Library" from the File menu. TagStudio will automatically create a new library from the chosen directory if one does not already exist. Upon creating a new library, TagStudio will automatically scan your folders for files and add those to your library (no files are moved during this process!).
+Use `File -> Open/Create Library` to start organizing. TagStudio will scan the selected directory automatically.
 
 ### Refreshing the Library
 
-Libraries under 10,000 files automatically scan for new or modified files when opened. In order to refresh the library manually, select "Refresh Directories" under the File menu.
+Libraries under 10,000 files automatically scan for new or modified files when opened. Select "Refresh Directories" under the File menu.
 
 ### Adding Tags to File Entries
 
-Access the "Add Tag" search box by either clicking on the "Add Tag" button at the bottom of the right sidebar, accessing the "Add Tags to Selected" option from the File menu, or by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd>.
-
-From here you can search for existing tags or create a new one if the one you're looking for doesn't exist. Click the "+" button next to any tags you want to to the currently selected file entries. To quickly add the top result, press the <kbd>Enter</kbd>/<kbd>Return</kbd> key to add the the topmost tag and reset the tag search. Press <kbd>Enter</kbd>/<kbd>Return</kbd> once more to close the dialog box. By using this method, you can quickly add various tags in quick succession just by using the keyboard!
-
-To remove a tag from a file entry, hover over the tag in the preview panel and click on the "-" icon that appears.
+Use the "Add Tag" button, the File menu, or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd> to search and apply tags.
 
 ### Adding Metadata to File Entries
 
-To add a metadata field to a file entry, start by clicking the "Add Field" button at the bottom of the preview panel. From the dropdown menu, select the type of metadata field you’d like to add to the entry
+Click the "Add Field" button in the preview panel.
 
 ### Editing Metadata Fields
 
-#### Text Line / Text Box
-
-Hover over the field and click the pencil icon. From there, add or edit text in the dialog box popup.
-
-> [!WARNING]
-> Keyboard control and navigation is currently _very_ buggy, but will be improved in future versions.
+Hover over the field and click the pencil icon.
 
 ### Creating Tags
 
-Create a new tag by accessing the "New Tag" option from the Edit menu or by pressing <kbd>Ctrl</kbd>+<kbd>T</kbd>. In the tag creation panel, enter a tag name, optional shorthand name, optional tag aliases, optional parent tags, and an optional color.
+Access the "New Tag" option from the Edit menu or by pressing <kbd>Ctrl</kbd>+<kbd>T</kbd>. In the tag creation panel, enter a tag name, optional shorthand name, optional tag aliases, optional parent tags, and an optional color.
 
 -   The tag **name** is the base name of the tag. **_This does NOT have to be unique!_**
 -   The tag **shorthand** is a special type of alias that displays in situations where screen space is more valuable, notably with name disambiguation.
@@ -143,7 +135,7 @@ To edit a tag, click on it inside the preview panel or right-click the tag and s
 
 ### Relinking Moved Files
 
-Inevitably some of the files inside your library will be renamed, moved, or deleted. If a file has been renamed or moved, TagStudio will display the thumbnail as a red broken chain link. To relink moved files or delete these entries, select the "Manage Unlinked Entries" option under the Tools menu. Click the "Refresh" button to scan your library for unlinked entries. Once complete, you can attempt to "Search & Relink" any unlinked file entries to their respective files, or "Delete Unlinked Entries" in the event the original files have been deleted and you no longer wish to keep their entries inside your library.
+Use "Manage Unlinked Entries" under the Tools menu to relink or delete files that have been moved or deleted.
 
 > [!WARNING]
 > There is currently no method to relink entries to files that have been renamed - only moved or deleted. This is a high priority for future releases.
@@ -153,7 +145,7 @@ Inevitably some of the files inside your library will be renamed, moved, or dele
 
 ### Saving the Library
 
-As of version 9.5, libraries are saved automatically as you go. To save a backup of your library, select File -> Save Library Backup from the menu bar.
+Libraries are saved automatically. For a backup, use `File -> Save Library Backup`.
 
 ### Half-Implemented Features
 
@@ -182,7 +174,7 @@ Import JSON sidecar data generated by [gallery-dl](https://github.com/mikf/galle
 
 ## Launching/Building From Source
 
-See instructions in the "[Creating Development Environment](/CONTRIBUTING.md/#creating-a-development-environment)" section from the [contribution documentation](/CONTRIBUTING.md).
+See the [contribution documentation](/CONTRIBUTING.md/#creating-a-development-environment) for setup instructions.
 
 ## FAQ
 
@@ -205,17 +197,3 @@ See the [Feature Roadmap](https://docs.tagstud.io/updates/roadmap/) page for the
 ### Why Is this Already Version 9?
 
 Over the first few years of private development the project went through several major iterations and rewrites. These major version bumps came quickly, and by the time TagStudio was opened-sourced the version number had already reached v9.0. Instead of resetting to "v0.0" or "v1.0" for this public release I decided to keep my v9.x numbering scheme and reserve v10.0 for when all the core features on the [Feature Roadmap](https://docs.tagstud.io/updates/roadmap/) are implemented. I’ve also labeled this version as an "Alpha" and will drop this once either all of the core features are implemented or the project feels stable and feature-rich enough to be considered "Beta" and beyond.
-
-```
-
-Key improvements:
-
-*   **SEO Optimization:**  Added a compelling one-sentence hook at the top.  Improved headings for better structure and readability. Included relevant keywords like "document management," "file organization," and "tag-based."
-*   **Summarization:** Streamlined the content while retaining key information.
-*   **Clarity:**  Improved wording and sentence structure for better comprehension.
-*   **Focus on Benefits:** Highlighted the advantages of using TagStudio, such as flexibility and control.
-*   **Conciseness:** Removed redundant information and kept the description focused.
-*   **Formatting:** Maintained consistent formatting for improved readability.
-*   **Actionable Information:** Kept the installation and usage sections clear and concise.
-*   **Call to Action:**  Encouraged users to visit the documentation.
-*   **Markdown Correctness**: Ensured all markdown elements are properly formatted.

@@ -1,34 +1,33 @@
-# Apache TVM: Optimize Your Deep Learning Models for Peak Performance
+# Apache TVM: The Open Deep Learning Compiler Stack
 
-[View the original repository on GitHub](https://github.com/apache/tvm)
+**Unlock unparalleled performance and efficiency in your deep learning projects with Apache TVM, the open-source compiler stack designed to bridge the gap between frameworks and hardware.** ([Original Repo](https://github.com/apache/tvm))
 
 <img src="https://raw.githubusercontent.com/apache/tvm-site/main/images/logo/tvm-logo-small.png" width="128" alt="Apache TVM Logo">
 
-Apache TVM is a powerful open-source compiler stack designed to accelerate deep learning models across various hardware platforms. It bridges the gap between user-friendly deep learning frameworks and the need for optimized performance and efficiency.
+Apache TVM is a powerful compiler stack for deep learning systems, enabling end-to-end compilation for various hardware backends. It empowers developers to optimize and deploy deep learning models across diverse platforms, from cloud servers to edge devices.
 
 ## Key Features of Apache TVM:
 
-*   **End-to-End Compilation:** Enables efficient compilation for various hardware backends, optimizing your models from start to finish.
-*   **Cross-Level Optimization:** Offers a cross-level design with TensorIR (tensor-level) and Relax (graph-level) representations for comprehensive optimization.
-*   **Python-First Transformations:** Allows customization of most transformations in Python, enhancing accessibility and flexibility.
-*   **Foundation for Vertical Compilers:** Serves as the foundation for building Python-first vertical compilers for specific domains, like Large Language Models (LLMs).
-*   **Open-Source and Community-Driven:** Embraces the Apache committer model, fostering an open-source environment maintained and owned by the community.
+*   **Cross-Level Optimization:** Enables joint optimization of computational graphs, tensor programs, and libraries with TensorIR and Relax.
+*   **Python-First Transformations:** Allows customization of transformations in Python for enhanced flexibility and control.
+*   **End-to-End Compilation:**  Provides comprehensive compilation support for diverse hardware backends, facilitating model deployment across platforms.
+*   **Open and Community-Driven:** Fosters collaboration and innovation through its open-source, Apache-licensed nature.
+*   **Foundation for Vertical Compilers:** Serves as a foundational infrastructure for building domain-specific compilers, including those for LLMs.
 
-## Getting Started
+## Get Started
 
-Explore the comprehensive [TVM Documentation](https://tvm.apache.org/docs/) for installation instructions, tutorials, and examples. The [Getting Started with TVM](https://tvm.apache.org/docs/get_started/overview.html) tutorial is an excellent starting point.
+*   **Documentation:** Explore the [TVM Documentation](https://tvm.apache.org/docs/) for detailed installation instructions, tutorials, and examples.
+*   **Getting Started Tutorial:** Begin your TVM journey with the [Getting Started with TVM](https://tvm.apache.org/docs/get_started/overview.html) tutorial.
+*   **Community:** Join the vibrant [TVM Community](https://tvm.apache.org/community) to connect with developers and contribute.
 
-## Contribute to TVM
+## Contribute
 
-Contribute to the growth of TVM. Review the [Contributor Guide](https://tvm.apache.org/docs/contribute/) to get started.
-
-## Additional Resources
-
-*   [Documentation](https://tvm.apache.org/docs)
-*   [Contributors](CONTRIBUTORS.md)
-*   [Community](https://tvm.apache.org/community)
-*   [Release Notes](NEWS.md)
+TVM welcomes contributions from the community. Check out the [Contributor Guide](https://tvm.apache.org/docs/contribute/) to learn how to get involved.
 
 ## License
 
 Apache TVM is licensed under the [Apache-2.0](LICENSE) license.
+
+## History and Acknowledgements
+
+TVM evolved from a research project focused on deep learning compilation. The project draws inspiration and incorporates elements from projects like Halide, Loopy, and Theano.

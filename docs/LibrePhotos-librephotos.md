@@ -4,62 +4,69 @@
 <img src="https://hosted.weblate.org/widgets/librephotos/-/librephotos-frontend/svg-badge.svg" alt="Translation status" />
 </a>
 
-# LibrePhotos: Your Self-Hosted Photo Management Solution
+# LibrePhotos: Your Self-Hosted Photo and Video Management Solution
 
-**LibrePhotos is a powerful, open-source photo management application that gives you complete control over your photo library.**
+LibrePhotos empowers you to take control of your digital memories with a feature-rich, open-source photo and video management solution.  ([View on GitHub](https://github.com/LibrePhotos/librephotos))
 
-[Link to Original Repo: LibrePhotos](https://github.com/LibrePhotos/librephotos)
+![LibrePhotos Screenshot](https://github.com/LibrePhotos/librephotos/blob/dev/screenshots/mockups_main_fhd.png?raw=true)
+<sub>Mockup designed by rawpixel.com / Freepik</sub>
 
 ## Key Features
 
 *   **Comprehensive Media Support:** Supports photos (including RAW files) and videos.
-*   **Organized Timeline View:** Browse your photos and videos chronologically.
-*   **Automated Organization:** Scans file systems, generates albums based on events, and utilizes advanced features.
-*   **Multi-User Support:** Share your photos with family and friends.
-*   **Intelligent Features:**
-    *   Face recognition and classification.
-    *   Reverse geocoding for location-based organization.
-    *   Object and scene detection for smart search.
-    *   Semantic image search to find photos with specific concepts.
-    *   Metadata-based search.
+*   **Organized Timeline View:** Browse your photos and videos in a chronological timeline.
+*   **Automated Organization:** Scans your file system and generates albums based on events.
+*   **Multi-User Support:** Share and manage your photos with others.
+*   **Intelligent Features:** Includes face recognition, object/scene detection, and semantic image search for easy organization and discovery.
+*   **Advanced Search:** Search by metadata.
+*   **Geotagging:** Reverse geocoding functionality.
 
-## Key Technologies Used
+## Demos
 
-LibrePhotos leverages these technologies to offer its powerful features:
+*   **Stable Demo:** [https://demo1.librephotos.com/](https://demo1.librephotos.com/) - User: `demo`, Password: `demo1234` (with sample images)
+*   **Development Demo:** [https://demo2.librephotos.com/](https://demo2.librephotos.com/) - User: `demo`, Password: `demo1234`
+
+## Installation
+
+Detailed installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install).
+
+## How to Contribute and Get Involved
+
+We welcome contributions from the community! Here's how you can help:
+
+*   ⭐ **Star the Repository:** Show your support by starring the project on GitHub!
+*   🚀 **Development:** Get started developing in less than 30 minutes by following [this guide](https://docs.librephotos.com/docs/development/dev-install).
+*   🗒️ **Documentation:** Improve the documentation by submitting pull requests [here](https://github.com/LibrePhotos/librephotos.docs).
+*   🧪 **Testing:** Help us find bugs by using the `dev` tag and reporting issues.
+*   🧑‍🤝‍🧑 **Outreach:** Spread the word about LibrePhotos and help others get started.
+*   🌐 **Translations:** Make LibrePhotos accessible to a wider audience through [Weblate](https://hosted.weblate.org/engage/librephotos/).
+*   💸 **Donate:** Support the project's developers via [GitHub Sponsors](https://github.com/sponsors/derneuere).
+
+## Technologies Used
+
+LibrePhotos leverages several powerful open-source technologies:
 
 *   **Image Conversion:** [ImageMagick](https://github.com/ImageMagick/ImageMagick)
 *   **Video Conversion:** [FFmpeg](https://github.com/FFmpeg/FFmpeg)
-*   **Exif Data Handling:** [ExifTool](https://github.com/exiftool/exiftool)
+*   **Exif Support:** [ExifTool](https://github.com/exiftool/exiftool)
 *   **Face Detection:** [face_recognition](https://github.com/ageitgey/face_recognition)
-*   **Face Classification:** [scikit-learn](https://scikit-learn.org/) and [hdbscan](https://github.com/scikit-learn-contrib/hdbscan)
+*   **Face Classification/Clusterization:** [scikit-learn](https://scikit-learn.org/) and [hdbscan](https://github.com/scikit-learn-contrib/hdbscan)
 *   **Image Captioning:** [im2txt](https://github.com/HughKu/Im2txt)
 *   **Scene Classification:** [places365](http://places.csail.mit.edu/)
 *   **Reverse Geocoding:** [geopy](https://github.com/geopy/geopy)
 
-## Installation & Getting Started
-
-Detailed installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install).
-
-## How to Contribute & Help Out
-
-We welcome contributions from the community! Here's how you can help:
-
-*   ⭐ **Star** the repository to show your support!
-*   🚀 **Development:** Get started in under 30 minutes by following [this guide](https://docs.librephotos.com/docs/development/dev-install).
-*   🗒️ **Documentation:** Help improve the documentation by submitting a pull request [here](https://github.com/LibrePhotos/librephotos.docs).
-*   🧪 **Testing:** Test the ```dev``` tag and report any bugs you find by opening an issue.
-*   🧑‍🤝‍🧑 **Outreach:** Spread the word and introduce others to LibrePhotos!
-*   🌐 **Translations:** Make LibrePhotos accessible to more users through [weblate](https://hosted.weblate.org/engage/librephotos/).
-*   💸 [**Donate**](https://github.com/sponsors/derneuere) to support the developers.
-
-## Demo
-
-*   **Stable Demo:** [https://demo1.librephotos.com/](https://demo1.librephotos.com/) - User: `demo`, Password: `demo1234`
-*   **Development Demo:** [https://demo2.librephotos.com/](https://demo2.librephotos.com/) - User: `demo`, Password: `demo1234`
-
-## Resources
-
-*   Development videos on [Niaz Faridani-Rad's channel](https://www.youtube.com/channel/UCZJ2pk2BPKxwbuCV9LWDR0w)
-*   Join our [Discord][discord].
-
 [discord]: https://discord.gg/xwRvtSDGWb
+```
+Key improvements and SEO considerations:
+
+*   **Clear Headline:** Uses "LibrePhotos: Your Self-Hosted Photo and Video Management Solution" which is more descriptive and keyword-rich.
+*   **One-Sentence Hook:** Immediately tells the user what the project *is*.
+*   **Keyword Optimization:** Uses keywords like "self-hosted," "photo management," and "video management" throughout.
+*   **Bulleted Key Features:** Makes the features easy to scan and digest.
+*   **Call to Action:**  "View on GitHub" with a direct link.
+*   **Links to Key Resources:** Includes direct links to the demos, documentation, and contribution sections.
+*   **Concise Language:**  Streamlined the text for better readability.
+*   **"How to Contribute" Section:**  Clear, concise instructions on how to contribute and get involved.  Encourages contributions.
+*   **Technologies Used Section:**  Lists the key technologies to further increase SEO.
+*   **Markdown Formatting:** Consistent and well-formatted Markdown for readability on GitHub.
+*   **Removed Redundancy:** Removed some redundant phrases and information.

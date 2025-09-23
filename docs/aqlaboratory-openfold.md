@@ -1,33 +1,35 @@
-<!-- Banner Image -->
-![OpenFold Banner](imgs/of_banner.png)
+[![OpenFold Banner](imgs/of_banner.png)](https://github.com/aqlaboratory/openfold)
+
 _Figure: Comparison of OpenFold and AlphaFold2 predictions to the experimental structure of PDB 7KDX, chain B._
 
 # OpenFold: Replicating AlphaFold 2 for Protein Structure Prediction
 
-OpenFold is a powerful, trainable, and open-source implementation of DeepMind's groundbreaking [AlphaFold 2](https://github.com/deepmind/alphafold), empowering researchers to explore protein structure prediction with unprecedented accuracy.
+OpenFold is a faithful and trainable PyTorch reproduction of DeepMind's groundbreaking [AlphaFold 2](https://github.com/deepmind/alphafold), empowering researchers to explore protein structure prediction.
 
-## Key Features of OpenFold
+**Key Features:**
 
-*   **Faithful Reproduction:** OpenFold accurately replicates the architecture and functionality of AlphaFold 2, providing a solid foundation for research and development.
-*   **Trainable Model:**  Fine-tune and adapt OpenFold to your specific needs by training it on custom datasets, opening up possibilities for specialized applications.
-*   **Open Source:** Leverage the flexibility of open-source code to modify, extend, and integrate OpenFold into your existing workflows.
-*   **Detailed Documentation:** Access comprehensive documentation at [openfold.readthedocs.io](https://openfold.readthedocs.io/en/latest/) for installation, model inference, and training.
+*   **Faithful Reproduction:** Mimics the architecture and functionality of AlphaFold 2.
+*   **Trainable:** Allows for fine-tuning and experimentation with the model.
+*   **Open Source:** Released under the Apache License, Version 2.0.
 
 ## Getting Started
 
-Consult the comprehensive documentation at [openfold.readthedocs.io](https://openfold.readthedocs.io/en/latest/) for detailed instructions on installation, model inference, and training.
+For detailed instructions on installation, model inference, and training, please refer to the official documentation at [openfold.readthedocs.io](https://openfold.readthedocs.io/en/latest/).
 
-## Licensing & Copyright
+## Copyright and Licensing
 
-OpenFold's source code is licensed under the permissive Apache License, Version 2.0.  Pretrained parameters are licensed under CC BY 4.0.
+OpenFold's source code is licensed under the permissive Apache License, Version 2.0.  Pretrained parameters are licensed under CC BY 4.0, and are downloaded by the installation script.
 
 ## Contributing
 
-We welcome contributions! If you encounter any issues or have suggestions for improvement, please create an issue or submit a pull request.
+We encourage community contributions!  If you encounter any issues or have suggestions, please:
+
+*   **Create an issue:** Report bugs or request features.
+*   **Submit a pull request:** Contribute code improvements.
 
 ## Citing OpenFold
 
-If you use OpenFold in your research, please cite the following paper:
+If you use OpenFold in your research, please cite our paper:
 
 ```bibtex
 @article {Ahdritz2022.11.20.517210,
@@ -56,9 +58,8 @@ If you use OpenProteinSet, please also cite:
 }
 ```
 
-Remember to also cite [AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) and [AlphaFold-Multimer](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v1) if applicable.
+**Please also cite AlphaFold and AlphaFold-Multimer if applicable.**
 
-## Further Resources
+---
 
-*   **Documentation:** [openfold.readthedocs.io](https://openfold.readthedocs.io/en/latest/)
-*   **Original Repository:** [https://github.com/aqlaboratory/openfold](https://github.com/aqlaboratory/openfold)
+**[Go to the original repository](https://github.com/aqlaboratory/openfold)**

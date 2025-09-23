@@ -4,9 +4,9 @@
   </picture>
 </div>
 
-<h1 align="center">Klavis AI: Unlock Limitless Tool Usage for Your AI Agents</h1>
+<h1 align="center">Klavis AI: Powering AI Agents with Reliable Tool Access</h1>
 
-<p align="center"><strong>Seamlessly integrate AI with thousands of tools using Klavis AI's MCP integration layers.</strong></p>
+<p align="center"><strong>Unlock the potential of your AI by giving it access to thousands of tools with Klavis AI.</strong></p>
 
 <div align="center">
   <a href="https://docs.klavis.ai">
@@ -19,20 +19,21 @@
     <img src="https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white" alt="Discord">
   </a>
   <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
+    <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0">
   </a>
 </div>
 
 ## Key Features
 
-*   **Unified MCP Router (Strata):** Direct your AI agents to the right tools with a single MCP server, enabling access to thousands of tools and a progressive approach to tool discovery.
-*   **50+ Production MCP Servers:** Connect your AI to popular services like Gmail, GitHub, and more with built-in OAuth support.
-*   **Easy Deployment:** Deploy Klavis AI with Docker for self-hosting, or use our hosted service for a setup-free experience.
-*   **SDKs and REST API:** Integrate Klavis AI into your applications using our Python and TypeScript SDKs, or leverage the REST API for maximum flexibility.
+*   **Unified MCP Router (Strata):**  A single, powerful MCP server enabling AI agents to reliably utilize thousands of tools.
+*   **Extensive MCP Integrations:**  Access over 50 production-ready MCP servers with enterprise OAuth support, covering major services like Gmail, GitHub, and more.
+*   **Seamless Integration:** Ready to use SDKs for Python and Typescript, with a direct API option available as well.
+*   **Flexible Deployment:**  Self-host with Docker or leverage our hosted service for instant access.
+*   **Scalability & Reliability:** Designed to overcome tool limitations and improve tool usage reliability.
 
 ## Solutions
 
-Choose the right solution for your needs:
+Klavis AI offers flexible solutions to integrate your AI agents with tools, including:
 
 <div align="center">
   <table>
@@ -40,9 +41,8 @@ Choose the right solution for your needs:
       <td align="center" width="50%" valign="top" style="vertical-align: top; height: 250px;">
         <div style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <h2>📦 Strata</h2>
-            <p><strong>Unified MCP Router</strong></p>
-            <p>One MCP server for AI agents to handle thousands of tools</p>
+            <h2>📦 Strata - Unified MCP Router</h2>
+            <p>One MCP server for AI agents to handle thousands of tools.</p>
           </div>
           <div>
             <a href="open-strata/README.md">
@@ -54,9 +54,8 @@ Choose the right solution for your needs:
       <td align="center" width="50%" valign="top" style="vertical-align: top; height: 250px;">
         <div style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <h2>🛠️ MCP Integrations</h2>
-            <p><strong>50+ Production MCP Servers</strong></p>
-            <p>Self-hosted or managed MCP servers with enterprise OAuth support for all major services</p>
+            <h2>🛠️ MCP Integrations - Production-Ready Servers</h2>
+            <p>Self-hosted or managed MCP servers with enterprise OAuth support for all major services.</p>
           </div>
           <div>
             <a href="mcp_servers/README.md">
@@ -69,33 +68,13 @@ Choose the right solution for your needs:
   </table>
 </div>
 
-## Strata: Unified MCP Router
+## 🚀 Quick Start
 
-**One MCP server. Thousands of tools. Zero overwhelm.** Klavis Strata simplifies tool access for your AI agents.
+Get up and running quickly with these options:
 
-### Why Strata?
+### Option 1: Open Source (Self-Hosting)
 
-*   **Scalable Tool Integration:**  Go beyond the limits and connect to many tools.
-*   **Progressive Discovery:** Guides agents to the right tools step by step.
-
-[Learn More](https://docs.klavis.ai/documentation/concepts/strata)
-
-## MCP Integrations
-
-**50+ production MCP servers. OAuth included. Deploy anywhere.**  Integrate your AI with popular services with enterprise OAuth support.
-
-*   **Real OAuth:** Secure access instead of just API keys.
-*   **Docker Ready:** Deploy with a single command.
-
-[Browse All Servers](https://docs.klavis.ai/documentation/mcp-server/overview)
-
-## Quick Start
-
-Get started quickly with Klavis AI using one of the following options:
-
-### Option 1: Open Source
-
-Self-host using Docker or the command line:
+Deploy Klavis AI on your own infrastructure:
 
 ```bash
 # Run any MCP Integration
@@ -109,17 +88,15 @@ strata add --type stdio playwright npx @playwright/mcp@latest
 
 ### Option 2: Hosted Service
 
-Get instant access with our setup-free hosted service:
+Access Klavis AI instantly without setup:
 
-1.  **Sign Up:** [Create account](https://www.klavis.ai/auth/sign-up)
-2.  **Get Started:** [Quickstart guide](https://docs.klavis.ai/documentation/quickstart)
-3.  **Use Strata or individual MCP servers** within your favorite tools (Claude Code, Cursor, VSCode, etc.).
+1.  **Sign Up:**  [Create an Account](https://www.klavis.ai/auth/sign-up)
+2.  **Get Started:**  [Follow the Quickstart Guide](https://docs.klavis.ai/documentation/quickstart)
+3.  **Use Strata or Individual Servers:** Integrate Klavis AI in tools like Claude Code, Cursor, or VSCode.
 
-Ready in under 2 minutes!
+### Option 3: SDK Integration
 
-### Option 3: SDK
-
-Build custom applications using our Python or TypeScript SDKs:
+Use Klavis AI with our SDKs for seamless integration in your application.
 
 ```python
 # Python SDK
@@ -160,9 +137,9 @@ const gmail = await klavis.mcpServer.createServerInstance({
 });
 ```
 
-### Option 4: Direct API
+### Option 4: Direct API Integration
 
-Utilize the REST API for maximum flexibility:
+Integrate with the Klavis API directly through REST.
 
 ```bash
 # Create Strata server
@@ -184,23 +161,36 @@ curl -X POST "https://api.klavis.ai/v1/mcp-server/instance" \
   }'
 ```
 
-[Complete Documentation](https://docs.klavis.ai/documentation/quickstart)
+[📖 **Complete Documentation**](https://docs.klavis.ai/documentation/quickstart)
 
-## Resources
+## 📚 Resources
 
-*   [Documentation](https://docs.klavis.ai)
-*   [Discord Community](https://discord.gg/p7TuTEcssn)
-*   [Report Issues](https://github.com/klavis-ai/klavis/issues)
-*   [Klavis AI Website](https://www.klavis.ai)
+*   📖 [Documentation](https://docs.klavis.ai)
+*   💬 [Discord Community](https://discord.gg/p7TuTEcssn)
+*   🐛 [Report Issues](https://github.com/klavis-ai/klavis/issues)
+*   🌐 [Klavis AI Website](https://www.klavis.ai)
 
-## License
+## 📜 License
 
-*   [Apache 2.0](LICENSE) - See [LICENSE](LICENSE) for details.
+*   **Root Repository:** Apache 2.0 - See [LICENSE](LICENSE)
+*   **For source code, visit our** [GitHub Repository](https://github.com/Klavis-AI/klavis)
 
 ---
 
 <div align="center">
   <p><strong>Klavis AI (YC X25) 🚀 Empowering AI with Seamless Integration</strong></p>
 </div>
+```
 
-[Back to Top](#)
+Key improvements and SEO considerations:
+
+*   **Clear Title & Hook:** The main heading and one-sentence hook immediately convey the project's value proposition.
+*   **Keywords:**  Includes relevant keywords like "AI agents," "tool access," "MCP," "integrations," "OAuth," "SDK," and specific service names.
+*   **Structured Format:** Uses headings, bullet points, and tables to improve readability and scannability.
+*   **Actionable Content:**  The Quick Start section provides clear instructions and options for getting started.
+*   **Strong CTAs:**  Uses phrases like "Explore," "Get Started," and links to relevant resources.
+*   **SEO Optimized:** Uses alt text for images, and clear title structure.
+*   **License Mention:** The Apache license is included in the badge, with a direct link to the repository.
+*   **Concise & Informative:**  Provides a good overview without overwhelming the reader.
+*   **Clear Branding:** Maintains Klavis AI branding throughout.
+*   **Github link:** A direct link back to the Github repo for the code.

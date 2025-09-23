@@ -10,47 +10,51 @@
 
 ---
 
-# AiNiee: The Ultimate AI Translation Tool for Games, Books, and More
+## AiNiee: The Ultimate AI Translation Tool 🚀
 
-**Tired of struggling with complex text translation?** AiNiee automates translation for games, books, subtitles, and documents, making it easy and efficient. ([View the original repository on GitHub](https://github.com/NEKOparapa/AiNiee))
+**Effortlessly translate games, books, subtitles, and documents with AiNiee, your all-in-one AI translation solution.**
 
-## Key Features
-
-*   🎮 **Comprehensive Format Support**:
-    *   **Game Translation:** Deep integration with tools like Mtool, Renpy, Translator++, and more.
-    *   **Diverse Content:** Handles I18Next data, Epub/TXT ebooks, Srt/Vtt/Lrc subtitles, and Word/PDF/MD documents.
-
-*   🚀 **Smart & Efficient**:
-    *   **One-Click Operation:** Drag-and-drop simplicity; automatic file and language detection.
-    *   **Blazing Fast:** Get your translations quickly.
-
-*   🎯 **Optimized for Long Texts & High Quality**:
-    *   **Advanced Techniques:** Lightweight translation formatting, thought chain translation, AI terminology tables, and contextual association for accurate and coherent translations.
-    *   **Fine-Tuning Options:** Supports prompts, character introductions, background settings, and translation styles, plus one-click AI refinement, typesetting, and terminology extraction for premium quality translations.
+**[View the original repo on GitHub](https://github.com/NEKOparapa/AiNiee)**
 
 ---
 
-## Getting Started with AiNiee: A 3-Step Guide
+## Key Features 🔑
 
-1.  **Configure API:**
+*   **Versatile Format Support:**
 
-    *   Online API (Paid, High Cost-Effectiveness, No GPU Required, Full Language Support): [DeepSeek API Setup](https://github.com/NEKOparapa/AiNiee/wiki/QuickStartDeepSeek)
-    *   Alternative Online API (If Deepseek is unavailable): [Huo API Setup](https://github.com/NEKOparapa/AiNiee/wiki/QuickStartHuo)
+    *   🎮 **Game Translation:** Deep support for tools like Mtool, Renpy, Translator++, and more.
+    *   📚 **Broad Compatibility:** Handles I18Next data, Epub/TXT ebooks, Srt/Vtt/Lrc subtitles, Word/PDF/MD documents, and more.
 
-    >   <img src="https://raw.githubusercontent.com/NEKOparapa/AiNiee/main/Example%20image/三步走/第一步.png">
+*   **Smart & Efficient:**
 
-2.  **Drag and Drop Files:**
+    *   🚀 **One-Click Operation:**  Automatic file and language detection; just drag, drop, and go!
+    *   ⏱️ **Lightning-Fast Translation:** Get your translations done in minutes.
 
-    *   Place source files in a separate folder and drag it into the designated area. Translate novels, subtitles, and documents directly. For games, use text extraction tools.
+*   **Enhanced Quality for Long Texts:**
 
-    >   <img src="https://raw.githubusercontent.com/NEKOparapa/AiNiee/main/Example%20image/三步走/第二步.png">
+    *   🎯 **Advanced Techniques:** Improves translation quality with lightweight formats, chain-of-thought translation, AI terminology tables, and context association.
+    *   💎 **Quality Refinement:** Supports prompt adjustments (basic hints, character introductions, background settings, translation styles), AI polishing, AI formatting, and terminology extraction.
 
-3.  **Start Translation:**
+---
 
-    *   Click the "Start" button and wait for the translation to complete.
+## Getting Started with AiNiee 🚶
 
-    >   <img src="https://raw.githubusercontent.com/NEKOparapa/AiNiee/main/Example%20image/三步走/第三步.png">
+1.  **Configure Your API:**
+    *   **Online API (Recommended):**  Fast, supports all languages, and cost-effective. See [DeepSeek API Setup Guide](https://github.com/NEKOparapa/AiNiee/wiki/QuickStartDeepSeek).
+    *   **Alternative Online API:** If Deepseek is unavailable. See [Huo API Setup Guide](https://github.com/NEKOparapa/AiNiee/wiki/QuickStartHuo).
 
+    >   <img src="https://raw.githubusercontent.com/NEKOparapa/AiNiee/main/Example%20image/%E4%B8%89%E6%AD%A5%E8%B5%B0/%E7%AC%AC%E4%B8%80%E6%AD%A5.png">
+
+2.  **Drag & Drop Your Files:**
+    *   Place source files into a dedicated folder, then drag and drop that folder into AiNiee. (Game files may need pre-extraction).
+
+    >   <img src="https://raw.githubusercontent.com/NEKOparapa/AiNiee/main/Example%20image/%E4%B8%89%E6%AD%A5%E8%B5%B0/%E7%AC%AC%E4%B8%8C%E6%AD%A5.png">
+
+3.  **Start Translating!**
+
+    >   <img src="https://raw.githubusercontent.com/NEKOparapa/AiNiee/main/Example%20image/%E4%B8%89%E6%AD%A5%E8%B5%B0/%E7%AC%AC%E4%B8%89%E6%AD%A5.png">
+
+    *   Click the start button and let AiNiee do the work.
     *   [Download AiNiee](https://github.com/NEKOparapa/AiNiee/releases)
 
 ---
@@ -58,33 +62,31 @@
 <details>
 <summary>
 
-## Game Translation [![](https://raw.githubusercontent.com/aregtech/areg-sdk/master/docs/img/pin.svg)](#game-translation)
-
+## Game Translation 🎮  [![](https://raw.githubusercontent.com/aregtech/areg-sdk/master/docs/img/pin.svg)](#game-translation)
 </summary>
 
 <details>
 <summary>
 
-### Tool Preparation
-
+### Tools Preparation
 </summary>
 
- * **`📖 Game Text Extraction Tools`**
+*   **`📖 Game Text Extraction Tools`**
 
-      | Tool Name | Description | Project Type |
-      | :----: | :-----: | :-----: |
-      | [Mtool](https://afdian.com/p/d42dd1e234aa11eba42452540025c377) | Easy to use, recommended for beginners | Mtool Export Files |
-      | [Translator++](https://dreamsavior.net/download/) | Complex, powerful, recommended for advanced users | T++ Export Files or Trans Project Files |
-      | [ParaTranzr](https://paratranz.cn/projects) | Intermediate, powerful, recommended for advanced users | ParaTranzr Export Files |
-      | [RenPy SDK](https://www.renpy.org/latest.html) | Intermediate, powerful, recommended for advanced users | Renpy Export Files |
+    | Tool Name             | Description                                                 | Project Type      |
+    | --------------------- | ----------------------------------------------------------- | ----------------- |
+    | [Mtool](https://afdian.com/p/d42dd1e234aa11eba42452540025c377)       | Easy to use, recommended for beginners             | Mtool export files  |
+    | [Translator++](https://dreamsavior.net/download/)   | Complex, powerful, recommended for advanced users   | T++ export files or Trans project files |
+    | [ParaTranzr](https://paratranz.cn/projects)      | Moderate complexity, powerful, recommended for advanced users | ParaTranzr export files |
+    | [RenPy SDK](https://www.renpy.org/latest.html) | Moderate complexity, powerful, recommended for advanced users | Renpy export files |
 
- * **`🧰 Local Model Running Tools`**
+*   **`🧰 Local Model Running Tools`**
 
-      | Tool Name | Description |
-      | :----: | :-----: |
-      | [Sakura_Launcher_GUI](https://github.com/PiDanShouRouZhouXD/Sakura_Launcher_GUI) | Dedicated GUI launcher for Sakura models |
-      | [LM Studio](https://lmstudio.ai/download) | A platform for local deployment of Large Language Models (LLMs), simplifying their use and management. |
-      | [Ollama](https://ollama.com/) | Open-source cross-platform large model tool |
+    | Tool Name                  | Description                                               |
+    | -------------------------- | --------------------------------------------------------- |
+    | [Sakura_Launcher_GUI](https://github.com/PiDanShouRouZhouXD/Sakura_Launcher_GUI)      | Exclusive GUI launcher for Sakura models                  |
+    | [LM Studio](https://lmstudio.ai/download)  | Local LLM platform, simplifies LLM use and management. |
+    | [ollama](https://ollama.com/)            | Open-source cross-platform large model tool      |
 
 </details>
 
@@ -92,31 +94,29 @@
 <summary>
 
 ### Translation Tutorials
-
 </summary>
 
- * **`📺 Game Translation Video Tutorials`**
+*   **`📺 Video Tutorials`**
 
-      | Video Link | Description |
-      | :----: | :-----: |
-      | [Mtool Tutorial](https://www.bilibili.com/video/BV1h6421c7MA) | Recommended for first-time users |
-      | [Translator++ Tutorial](https://www.bilibili.com/video/BV1LgfoYzEaX/?share_source=copy_web&vd_source=b0eede35fc5eaa5c382509c6040d6501) | Recommended for first-time users |
-      | [Wolf Game Tutorial](https://www.bilibili.com/video/BV1SnXbYiEjQ/?share_source=copy_web&vd_source=b0eede35fc5eaa5c382509c6040d6501) | Recommended for first-time users |
-      | [Name Reading Tutorial](https://www.bilibili.com/video/BV1j1VyzqERD/?share_source=copy_web&vd_source=b0eede35fc5eaa5c382509c6040d6501) | Recommended for advanced translation |
+    | Video Link                                                                                                                       | Description                     |
+    | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+    | [Mtool Tutorial](https://www.bilibili.com/video/BV1h6421c7MA)           | Recommended for first-time users |
+    | [Translator++ Tutorial](https://www.bilibili.com/video/BV1LgfoYzEaX/?share_source=copy_web&vd_source=b0eede35fc5eaa5c382509c6040d6501) | Recommended for first-time users |
+    | [Wolf Game Tutorial](https://www.bilibili.com/video/BV1SnXbYiEjQ/?share_source=copy_web&vd_source=b0eede35fc5eaa5c382509c6040d6501)   | Recommended for first-time users |
+    | [Name Reading Tutorial](https://www.bilibili.com/video/BV1j1VyzqERD/?share_source=copy_web&vd_source=b0eede35fc5eaa5c382509c6040d6501)    | Recommended for advanced translation |
 
- * **`🎫 Game Translation Text and Image Tutorials`**
+*   **`🎫 Text Tutorials`**
 
-      | Video Link | Description |
-      | :----: | :-----: |
-      | [Mtool Tutorial](https://github.com/NEKOparapa/AiNiee/wiki/%E6%B8%B8%E6%88%8F%E7%BF%BB%E8%AF%91%E2%80%90Mtool) | Suitable for beginners, easy translation of RPG, RenPY, Krkr games, performing external translation |
-      | [Translator++ Tutorial](https://github.com/NEKOparapa/AiNiee/wiki/%E6%B8%B8%E6%88%8F%E7%BF%BB%E8%AF%91%E2%80%90Translator--%EF%BC%88%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%E7%89%88%EF%BC%89) | Suitable for translation of RPG, RenPY, Krkr games, performing embedded translation |
-      | [Paratranz Tutorial](https://github.com/NEKOparapa/AiNiee/wiki/%E6%B8%B8%E6%88%8F%E7%BF%BB%E8%AF%91%E2%80%90Paratranz) | Suitable for translation of MODs for all types of large-scale games |
-      | [StevExtraction Tutorial](https://github.com/NEKOparapa/AiNiee/wiki/%E6%B8%B8%E6%88%8F%E7%BF%BB%E8%AF%91%E2%80%90StevExtraction) | Suitable for translating RPGmakerMZ/MZ games |
-      | [Unity Translation Tutorial](https://zhuanlan.zhihu.com/p/1894065679927313655) | Suitable for translating Unity games |
-      | [Comprehensive Game Translation Tutorial](https://www.notion.so/AI-1d43d31f89b280f6bd61e12580652ce5?pvs=4) | Suitable for translating all kinds of games, creating high-quality embedded patches |
+    | Link                                                                                                                                       | Description                     |
+    | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+    | [Mtool Tutorial](https://github.com/NEKOparapa/AiNiee/wiki/%E6%B8%B8%E6%88%8F%E7%BF%BB%E8%AF%91%E2%80%90Mtool)            | Suitable for beginners, easy RPG/RenPY/Krkr game translation |
+    | [Translator++ Tutorial](https://github.com/NEKOparapa/AiNiee/wiki/%E6%B8%B8%E6%88%8F%E7%BF%BB%E8%AF%91%E2%80%90Translator--%EF%BC%88%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%E7%89%88%EF%BC%89) | For RPG/RenPY/Krkr games, in-game translation |
+    | [Paratranz Tutorial](https://github.com/NEKOparapa/AiNiee/wiki/%E6%B8%B8%E6%88%8F%E7%BF%BB%E8%AF%91%E2%80%90Paratranz)      | For translating MODs for various games         |
+    | [StevExtraction Tutorial](https://github.com/NEKOparapa/AiNiee/wiki/%E6%B8%B8%E6%88%8F%E7%BF%BB%E8%AF%91%E2%80%90StevExtraction)  | For translating RPGmakerMZ/MZ games      |
+    | [Unity Translation Tutorial](https://zhuanlan.zhihu.com/p/1894065679927313655)                                                     | For Unity game translation                   |
+    | [Comprehensive Game Translation Tutorial](https://www.notion.so/AI-1d43d31f89b280f6bd61e12580652ce5?pvs=4) | For translating various games, high-quality embedded patches |
 
 </details>
-
 </details>
 
 ---
@@ -124,64 +124,58 @@
 <details>
 <summary>
 
-## Functionality Details [![](https://raw.githubusercontent.com/aregtech/areg-sdk/master/docs/img/pin.svg)](#functionality-details)
-
+## Feature Descriptions ⚙️ [![](https://raw.githubusercontent.com/aregtech/areg-sdk/master/docs/img/pin.svg)](#feature-descriptions)
 </summary>
 
 <details>
 <summary>
 
-### Settings
-
+### Settings Information
 </summary>
 
--   [Features ‐ Interface Management](https://github.com/NEKOparapa/AiNiee/wiki/%E5%8A%9F%E8%83%BD%E2%80%90%E6%8E%A5%E5%8F%A3%E7%AE%A1%E7%90%86)
+*   [Function - API Management](https://github.com/NEKOparapa/AiNiee/wiki/%E5%8A%9F%E8%83%BD%E2%80%90%E6%8E%A5%E5%8F%A3%E7%AE%A1%E7%90%86)
 
 </details>
 
 <details>
 <summary>
 
-### Tables
-
+### Table Descriptions
 </summary>
 
--   [Table - AI Terminology Table](https://github.com/NEKOparapa/AiNiee/wiki/%E8%A1%A8%E6%A0%BC%E2%80%90AI%E6%9C%AF%E8%AF%AD%E8%A1%A8%E4%BB%8B%E7%BB%8D)
--   [Table - AI Forbidden Translation Table](https://github.com/NEKOparapa/AiNiee/wiki/%E8%A1%A8%E6%A0%BC%E2%80%90AI%E7%A6%81%E7%BF%BB%E8%A1%A8%E4%BB%8B%E7%BB%8D)
--   [Table - Text Replacement](https://github.com/NEKOparapa/AiNiee/wiki/%E8%A1%A8%E6%A0%BC%E2%0%90%E6%96%87%E6%9C%AC%E6%9B%BF%E6%8D%A2%E4%BB%8B%E7%BB%8D)
+*   [Table - AI Terminology Table](https://github.com/NEKOparapa/AiNiee/wiki/%E8%A1%A8%E6%A0%BC%E2%80%90AI%E6%9C%AF%E8%AF%AD%E8%A1%A8%E4%BB%8B%E7%BB%8D)
+*   [Table - AI Forbidden Translation Table](https://github.com/NEKOparapa/AiNiee/wiki/%E8%A1%A8%E6%A0%BC%E2%80%90AI%E7%A6%81%E7%BF%BB%E8%A1%A8%E4%BB%8B%E7%BB%8D)
+*   [Table - Text Replacement](https://github.com/NEKOparapa/AiNiee/wiki/%E8%A1%A8%E6%A0%BC%E2%80%90%E6%96%87%E6%9C%AC%E6%9B%BF%E6%8D%A2%E4%BB%8B%E7%BB%8D)
 
 </details>
 
 <details>
 <summary>
 
-### Plugins
-
+### Plugin Descriptions
 </summary>
 
--   [Plugin - Language Filter](https://github.com/NEKOparapa/AiNiee/wiki/%E6%8F%92%E4%BB%B6%E2%80%90LanguageFilter)
--   [Plugin - Text Normalizer](https://github.com/NEKOparapa/AiNiee/wiki/%E6%8F%92%E4%BB%B6%E2%80%90TextNormalizer)
+*   [Plugin - Language Filter](https://github.com/NEKOparapa/AiNiee/wiki/%E6%8F%92%E4%BB%B6%E2%80%90LanguageFilter)
+*   [Plugin - Text Normalizer](https://github.com/NEKOparapa/AiNiee/wiki/%E6%8F%92%E4%BB%B6%E2%80%90TextNormalizer)
 
 </details>
 
 <details>
 <summary>
 
-### Other Information
-
+### Other Descriptions
 </summary>
 
-*   `Multiple Key Polling`
-    >If you want to use multiple keys to share the consumption pressure and speed up translation, please use the same type of account keys, and add an English comma between each key, and do not line break. For example: key1,key2,key3
+*   `Multi-Key Rotation`
+    >  To distribute the workload with multiple keys, use keys of the same type, and separate them with commas (without line breaks).  Example: key1,key2,key3
 
 *   `Batch File Translation`
-    >Just put all the files that need to be translated in the input folder, and it also supports a multi-folder structure
+    >  Place all files for translation in the input folder, supporting multi-folder structures.
 
 *   `Configuration Migration`
-    >Configuration information will be stored in the resource's config.json, you can copy it to the new version's resource when downloading the new version.
+    >  Configuration information is stored in resource's config.json.  Copy this file to the resource folder of a new version to migrate settings.
 
 </details>
-
 </details>
 
 ---
@@ -189,32 +183,26 @@
 <details>
 <summary>
 
-## Contribution Guide [![](https://raw.githubusercontent.com/aregtech/areg-sdk/master/docs/img/pin.svg)](#contribution-guide)
-
+## Contribution Guide 🤝 [![](https://raw.githubusercontent.com/aregtech/areg-sdk/master/docs/img/pin.svg)](#contribution-guide)
 </summary>
 
-*   **`Develop Enhancement Plugins`**: Please follow the [Plugin Writing Guide](https://github.com/NEKOparapa/AiNiee/blob/main/PluginScripts/README.md) to develop more powerful function plugins.
-
-*   **`Improve or Add Support for Files`**: Requires some code programming ability, pull the source code to improve. The specific file reading code is in the ModuleFolders\\FileReader and FileOutputer folders. [Writing Guide for Reader/Writer System](https://github.com/NEKOparapa/AiNiee/blob/main/ModuleFolders/FileAccessor/README.md). UI support is in UserInterface\Setting's ProjectSettingsPage.
-
-*   **`Improve Regex Library`**: Completeness of the regex library will greatly help the embedded work in the game, and will benefit the next game translation work and benefit other translation users. The regex library is in the [Resource\Regex](https://github.com/NEKOparapa/AiNiee/blob/main/Resource/Regex/regex.json) folder
-
-*   **`Improve Interface Translation`**: Multi-language interface UI text may not be accurately translated. You can submit your modification opinions, or modify it directly. Localized text is in the [Resource\Localization](https://github.com/NEKOparapa/AiNiee/tree/main/Resource/Localization) folder
+*   **`Develop Enhanced Plugins`**: Follow the [Plugin Writing Guide](https://github.com/NEKOparapa/AiNiee/blob/main/PluginScripts/README.md) to create more powerful plugins.
+*   **`Improve or Add File Support`**: Requires coding knowledge; pull the source code to make improvements.  File reading code is in the ModuleFolders\FileReader and FileOutputer folders. [Reader/Writer System Writing Guide](https://github.com/NEKOparapa/AiNiee/blob/main/ModuleFolders/FileAccessor/README.md). UI support is in UserInterface\Setting\ProjectSettingsPage.
+*   **`Improve Regular Expression Library`**: A complete regex library will greatly help in-game embedding and future translation efforts; it is located in the [Resource\Regex](https://github.com/NEKOparapa/AiNiee/blob/main/Resource/Regex/regex.json) folder.
+*   **`Improve Interface Translation`**: If UI text translations are inaccurate, submit suggestions or make direct modifications. Localization text is in the [Resource\Localization](https://github.com/NEKOparapa/AiNiee/tree/main/Resource/Localization) folder.
 
 </details>
 
 ---
 
-## Special Statement [![](https://raw.githubusercontent.com/aregtech/areg-sdk/master/docs/img/pin.svg)](#special-statement)
+## Special Notice ⚠️ [![](https://raw.githubusercontent.com/aregtech/areg-sdk/master/docs/img/pin.svg)](#special-notice)
+AiNiee's development and evolution are the result of continuous individual research, user feedback, and contributions from developers since the project's inception. This has resulted in a relatively mature AI translation system. Please respect the spirit of open source, credit the project, and give the project a star.
 
-AiNiee's ongoing development and iteration are a result of the author's personal efforts, user feedback, and contributions from others since the project's inception. This is a process of exploration, continuous improvement, and joint construction over the past two years, which has formed the relatively mature and complete AI translation system that AiNiee has today.
-Please respect the open-source spirit, credit the source project when using and learning, and don't forget to give the project a star.
+This AI translation tool is for personal and legal use only; any direct or indirect illegal profit-making activities are not authorized and are not supported.
 
-This AI translation tool is for personal legal use only. Any use of this tool for direct or indirect illegal profit-making activities is not within the scope of authorization and is not subject to any support or recognition.
-
-*   **`QQ Group`**: QQ Group (Mainly active, answer: github): 821624890, Backup TG Group: https://t.me/+JVHbDSGo8SI2Njhl ,
+*   **`Community`**: QQ Group (Mainly active, answer: github): 821624890, Backup TG Group: https://t.me/+JVHbDSGo8SI2Njhl
 
 ---
 
-## Sponsorship💖
-[![Sponsor Button](https://raw.githubusercontent.com/NEKOparapa/AiNiee-chatgpt/main/Example%20image/Sponsor/徽章.png)](https://raw.githubusercontent.com/NEKOparapa/AiNiee-chatgpt/main/Example%20image/Sponsor/赞赏码.png)
+## Sponsor💖
+[![xxxx](https://raw.githubusercontent.com/NEKOparapa/AiNiee-chatgpt/main/Example%20image/Sponsor/徽章.png)](https://raw.githubusercontent.com/NEKOparapa/AiNiee-chatgpt/main/Example%20image/Sponsor/赞赏码.png)
