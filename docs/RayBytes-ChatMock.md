@@ -1,7 +1,6 @@
 <div align="center">
-  <h1>ChatMock: Unleash GPT-5 & More with Your ChatGPT Account</h1>
-  <p><b>Access OpenAI models like GPT-5 and GPT-5-Codex through a local API, using your existing ChatGPT Plus/Pro subscription.</b></p>
-  <br>
+  <h1>ChatMock: Access OpenAI Models with Your ChatGPT Account</h1>
+
   <div align="center">
     <a href="https://github.com/RayBytes/ChatMock/stargazers"><img src="https://img.shields.io/github/stars/RayBytes/ChatMock" alt="Stars Badge"/></a>
     <a href="https://github.com/RayBytes/ChatMock/network/members"><img src="https://img.shields.io/github/forks/RayBytes/ChatMock" alt="Forks Badge"/></a>
@@ -10,62 +9,69 @@
     <a href="https://github.com/RayBytes/ChatMock/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/RayBytes/ChatMock?color=2b9348"></a>
     <a href="https://github.com/RayBytes/ChatMock/blob/master/LICENSE"><img src="https://img.shields.io/github/license/RayBytes/ChatMock?color=2b9348" alt="License Badge"/></a>
   </div>
+
+  <p><b>Unlock the power of OpenAI models like GPT-5 and GPT-5-Codex using your existing ChatGPT Plus/Pro subscription.</b></p>
+  <br>
 </div>
 
 ## Key Features
 
-*   **GPT-5 Access:** Utilize the powerful GPT-5 and GPT-5-Codex models through your existing ChatGPT Plus/Pro subscription.
-*   **Local API Server:**  Runs a local server mimicking the OpenAI API, making it compatible with various chat apps and coding tools.
-*   **No API Key Required:** Authenticates with your ChatGPT login, eliminating the need for a separate OpenAI API key.
-*   **Tool/Function Calling:** Supports advanced features like tool/function calling.
-*   **Web Search Integration:** Enables web search functionality for enhanced responses.
-*   **Customizable Reasoning:** Fine-tune the "thinking effort" and summaries for optimal results.
-*   **Multiple Supported Models:** Includes support for `gpt-5`, `gpt-5-codex`, and `codex-mini`.
+*   **Access Premium Models:** Utilize GPT-5, GPT-5-Codex, and other models through your ChatGPT Plus/Pro account.
+*   **API Compatibility:**  Offers an OpenAI/Ollama compatible API, allowing integration with various chat applications and coding tools.
+*   **No API Key Required:**  Leverage your existing ChatGPT subscription without the need for a separate API key.
+*   **Customization Options:** Configure reasoning effort, summaries, and enable web search functionality.
+*   **Supported Models:**
+    *   `gpt-5`
+    *   `gpt-5-codex`
+    *   `codex-mini`
+*   **Web Search Integration:** Access OpenAI tools, including web search, for enhanced responses.
 
 ## Getting Started
 
-ChatMock allows you to use your ChatGPT Plus/Pro subscription to access advanced models via a local API. This means you can use these models in other chat applications or coding tools.
+ChatMock runs a local server that acts as an OpenAI-compatible API, using your authenticated ChatGPT login.
 
-### Installation
+### Mac Users
 
-Choose your preferred method:
+#### GUI Application
 
-#### macOS GUI Application
+Download the GUI app from the [GitHub releases](https://github.com/RayBytes/ChatMock/releases).
 
-1.  Download the GUI app from the [GitHub releases](https://github.com/RayBytes/ChatMock/releases).
-2.  If you encounter issues, run this command in your terminal:
-    ```bash
-    xattr -dr com.apple.quarantine /Applications/ChatMock.app
-    ```
-    *   [More info.](https://github.com/deskflow/deskflow/wiki/Running-on-macOS)
+> **Note:** You may need to run this in your terminal to open the app:
+>
+> ```bash
+> xattr -dr com.apple.quarantine /Applications/ChatMock.app
+> ```
 
 #### Command Line (Homebrew)
 
-1.  Install Homebrew: [https://brew.sh/](https://brew.sh/)
-2.  Tap and install ChatMock:
-    ```bash
-    brew tap RayBytes/chatmock
-    brew install chatmock
-    ```
+Install using [Homebrew](https://brew.sh/):
 
-#### Python
+```bash
+brew tap RayBytes/chatmock
+brew install chatmock
+```
 
-1.  Clone or download the repository.
-2.  Navigate to the project directory: `cd ChatMock`
-3.  Sign in with your ChatGPT account:
+### Python
+
+Alternatively, run as a Python Flask server.
+
+1.  Clone or download the repository and `cd` into the project directory.
+2.  Sign in to your ChatGPT account:
+
     ```bash
     python chatmock.py login
     ```
     Verify with: `python chatmock.py info`
-4.  Start the local server:
+3.  Start the local server:
+
     ```bash
     python chatmock.py serve
     ```
-    The server defaults to `http://127.0.0.1:8000`. Include `/v1/` at the end when setting a baseURL.
+    The server runs at `http://127.0.0.1:8000` (default).  Use `/v1/` in your base URL when integrating with OpenAI-compatible applications (e.g., `http://127.0.0.1:8000/v1`).
 
 ### Docker
 
-Detailed instructions for Docker can be found in [the DOCKER.md file](https://github.com/RayBytes/ChatMock/blob/main/DOCKER.md)
+See the [Docker instructions](https://github.com/RayBytes/ChatMock/blob/main/DOCKER.md).
 
 ## Examples
 
@@ -99,21 +105,25 @@ curl http://127.0.0.1:8000/v1/chat/completions \
   }'
 ```
 
-## Customization & Configuration
+## Customization and Configuration
 
-### Reasoning Effort
+### Thinking Effort
 
-*   `--reasoning-effort` (minimal, low, medium, high): Adjust how much "thinking effort" GPT-5 applies. Default is `medium`.
+Use `--reasoning-effort` (minimal, low, medium, high) to control GPT-5's effort. Defaults to `medium`.  Set it on server startup or within API requests.
 
 ### Thinking Summaries
 
-*   `--reasoning-summary` (auto, concise, detailed, none):  Customize how thinking summaries are handled.
+Use `--reasoning-summary` (auto, concise, detailed, none) to customize summaries.
 
 ### OpenAI Tools
 
-*   `--enable-web-search`: Enables web search.
+Enable web search with `--enable-web-search`.
 
-#### Example Web Search Usage
+In API requests:
+*   `responses_tools`: `[{"type":"web_search"}]` or `{ "type": "web_search_preview" }`
+*   `responses_tool_choice`: `"auto"` or `"none"`
+
+#### Example
 
 ```json
 {
@@ -127,20 +137,20 @@ curl http://127.0.0.1:8000/v1/chat/completions \
 
 ### Expose Reasoning Models
 
-*   `--expose-reasoning-models`: Exposes each reasoning level as a separate model.
+Use `--expose-reasoning-models` to expose each reasoning level as a separate model.
 
 ## Important Notes
 
-*   **Requires a Paid Account:** A paid ChatGPT Plus/Pro account is essential.
-*   **Context Length:**  Some context length may be used by internal instructions.
-*   **Responsibility:** Use responsibly. This project is not affiliated with OpenAI.
-*   For the fastest responses, use `--reasoning-effort minimal` and `--reasoning-summary none`.
-*   Explore all parameters using `python chatmock.py serve --h`.
+*   Requires a paid ChatGPT account.
+*   Context length might be affected by internal instructions.
+*   Use responsibly. This is an educational project and not affiliated with OpenAI.
+* For the fastest responses, set `--reasoning-effort` to minimal and `--reasoning-summary` to none.
+* The context size is larger than in the regular ChatGPT app.
+
+For all available options, run `python chatmock.py serve --h`.
+
+**View the original project on GitHub: [RayBytes/ChatMock](https://github.com/RayBytes/ChatMock)**
 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=RayBytes/ChatMock&type=Timeline)](https://www.star-history.com/#RayBytes/ChatMock&Timeline)
-
-[Back to Top](#ChatMock-Unleash-GPT-5-&-More-with-Your-ChatGPT-Account)
----
-[Original Repository](https://github.com/RayBytes/ChatMock)

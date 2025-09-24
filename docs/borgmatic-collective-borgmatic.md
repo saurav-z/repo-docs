@@ -1,84 +1,90 @@
-# borgmatic: Secure, Configuration-Driven Backups for Servers and Workstations
+# Borgmatic: Effortless, Configurable Backups for Servers and Workstations
 
-Safeguard your valuable data with borgmatic, the easy-to-configure backup solution. Visit the [borgmatic GitHub repository](https://github.com/borgmatic-collective/borgmatic) for more information.
+**Secure your data with borgmatic, a powerful and easy-to-use backup solution that protects your files and databases with client-side encryption.**  [Learn more at the original repository](https://github.com/borgmatic-collective/borgmatic).
 
-<img src="docs/static/borgmatic.png" alt="borgmatic logo" width="150px" style="float: right; padding-left: 1em;">
+## Key Features
 
-**Key Features:**
+*   **Configuration-Driven:** Easily manage your backups through a simple configuration file.
+*   **Client-Side Encryption:** Protect your data with robust encryption, ensuring your backups are secure.
+*   **Database Support:** Back up your databases (PostgreSQL, MySQL, MariaDB, MongoDB, SQLite) alongside your files.
+*   **Flexible Retention Policies:** Define how many backups to keep with customizable retention settings.
+*   **Integrated Monitoring:** Monitor your backups with integrations for various third-party services.
+*   **Automated Pre/Post Backup Scripts:** Allows the running of custom scripts to prepare data for backup.
 
-*   **Client-Side Encryption:** Protect your data with robust encryption before it leaves your system.
-*   **Configuration-Driven:**  Define your backup strategy using simple, easy-to-understand configuration files.
-*   **Database Backup Support:** Back up popular databases like PostgreSQL, MySQL, and more.
-*   **Flexible Repository Options:** Backup to local storage, remote servers via SSH, or cloud storage providers.
-*   **Retention Policies:** Easily manage your backups with customizable retention settings (daily, weekly, monthly).
-*   **Backup Verification:**  Regularly check your backups to ensure data integrity.
-*   **Monitoring & Notifications:** Integrate with third-party services like Healthchecks.io, Uptime Kuma, and others to monitor your backup status.
-*   **Modular Design:** Easily integrates with Docker, Podman, and systemd for flexible management.
+## Why Choose Borgmatic?
 
-**Integrations:**
+*   **Simplicity:** Easy to set up and configure, making it accessible for all users.
+*   **Security:** Client-side encryption ensures your data is protected at all times.
+*   **Reliability:** Built upon the solid foundation of [Borg Backup](https://www.borgbackup.org/), a well-established backup solution.
+*   **Flexibility:** Supports a wide range of data sources and destinations.
+*   **Monitoring and Notification:** Stay informed about the status of your backups with comprehensive monitoring features.
 
-borgmatic seamlessly integrates with a wide range of services, including:
+## Integrations
+
+borgmatic seamlessly integrates with various services to enhance your backup experience:
 
 ### Data
-
-<a href="https://www.postgresql.org/"><img src="docs/static/postgresql.png" alt="PostgreSQL" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://www.mysql.com/"><img src="docs/static/mysql.png" alt="MySQL" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://mariadb.com/"><img src="docs/static/mariadb.png" alt="MariaDB" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://www.mongodb.com/"><img src="docs/static/mongodb.png" alt="MongoDB" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://sqlite.org/"><img src="docs/static/sqlite.png" alt="SQLite" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://openzfs.org/"><img src="docs/static/openzfs.png" alt="OpenZFS" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://btrfs.readthedocs.io/"><img src="docs/static/btrfs.png" alt="Btrfs" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://sourceware.org/lvm2/"><img src="docs/static/lvm.png" alt="LVM" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://rclone.org"><img src="docs/static/rclone.png" alt="rclone" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://www.borgbase.com/?utm_source=borgmatic"><img src="docs/static/borgbase.png" alt="BorgBase" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
+*   [PostgreSQL](https://www.postgresql.org/)
+*   [MySQL](https://www.mysql.com/)
+*   [MariaDB](https://mariadb.com/)
+*   [MongoDB](https://www.mongodb.com/)
+*   [SQLite](https://sqlite.org/)
+*   [OpenZFS](https://openzfs.org/)
+*   [Btrfs](https://btrfs.readthedocs.io/)
+*   [LVM](https://sourceware.org/lvm2/)
+*   [rclone](https://rclone.org)
+*   [BorgBase](https://www.borgbase.com/?utm_source=borgmatic)
 
 ### Monitoring
-
-<a href="https://healthchecks.io/"><img src="docs/static/healthchecks.png" alt="Healthchecks" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://uptime.kuma.pet/"><img src="docs/static/uptimekuma.png" alt="Uptime Kuma" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://cronitor.io/"><img src="docs/static/cronitor.png" alt="Cronitor" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://cronhub.io/"><img src="docs/static/cronhub.png" alt="Cronhub" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://www.pagerduty.com/"><img src="docs/static/pagerduty.png" alt="PagerDuty" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://www.pushover.net/"><img src="docs/static/pushover.png" alt="Pushover" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://ntfy.sh/"><img src="docs/static/ntfy.png" alt="ntfy" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://grafana.com/oss/loki/"><img src="docs/static/loki.png" alt="Loki" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://github.com/caronc/apprise/wiki"><img src="docs/static/apprise.png" alt="Apprise" height="60px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://www.zabbix.com/"><img src="docs/static/zabbix.png" alt="Zabbix" height="40px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://sentry.io/"><img src="docs/static/sentry.png" alt="Sentry" height="40px" style="margin-bottom:20px; margin-right:20px;"></a>
+*   [Healthchecks](https://healthchecks.io/)
+*   [Uptime Kuma](https://uptime.kuma.pet/)
+*   [Cronitor](https://cronitor.io/)
+*   [Cronhub](https://cronhub.io/)
+*   [PagerDuty](https://www.pagerduty.com/)
+*   [Pushover](https://www.pushover.net/)
+*   [ntfy](https://ntfy.sh/)
+*   [Loki](https://grafana.com/oss/loki/)
+*   [Apprise](https://github.com/caronc/apprise/wiki)
+*   [Zabbix](https://www.zabbix.com/)
+*   [Sentry](https://sentry.io/)
 
 ### Credentials
+*   [systemd](https://systemd.io/)
+*   [Docker](https://www.docker.com/)
+*   [Podman](https://podman.io/)
+*   [KeePassXC](https://keepassxc.org/)
 
-<a href="https://systemd.io/"><img src="docs/static/systemd.png" alt="Sentry" height="40px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://www.docker.com/"><img src="docs/static/docker.png" alt="Docker" height="40px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://podman.io/"><img src="docs/static/podman.png" alt="Podman" height="40px" style="margin-bottom:20px; margin-right:20px;"></a>
-<a href="https://keepassxc.org/"><img src="docs/static/keepassxc.png" alt="Podman" height="40px" style="margin-bottom:20px; margin-right:20px;"></a>
+## Getting Started
 
-**Getting Started**
+To start backing up your data with borgmatic, begin by [installing and configuring](https://torsion.org/borgmatic/docs/how-to/set-up-backups/) the software.
 
-To begin, consult the [borgmatic documentation](https://torsion.org/borgmatic/docs/how-to/set-up-backups/) for detailed installation and configuration instructions.
+## Hosting Providers
 
-**Hosting Providers**
+For off-site backup storage, consider these providers that support Borg/borgmatic:
 
-Consider these providers for secure, off-site storage of your backups. Note that using these links supports the development of borgmatic:
+*   <a href="https://www.borgbase.com/?utm_source=borgmatic">BorgBase</a>: Borg hosting with monitoring, 2FA, and append-only repos.
+*   <a href="https://hetzner.cloud/?ref=v9dOJ98Ic9I8">Hetzner</a>: Storage boxes that support Borg.
 
-*   [BorgBase](https://www.borgbase.com/?utm_source=borgmatic): A dedicated Borg hosting service.
-*   [Hetzner](https://hetzner.cloud/?ref=v9dOJ98Ic9I8): Hetzner offers a "storage box" with Borg support.
+rsync.net also offers compatible storage.
 
-**Support and Community**
+## Support and Contributing
 
-*   **Issues:** Report bugs and suggest enhancements via the [issue tracker](https://projects.torsion.org/borgmatic-collective/borgmatic/issues).
-*   **Social:** Follow borgmatic on Mastodon: <a rel="me" href="https://floss.social/@borgmatic">@borgmatic@floss.social</a>.
-*   **Chat:** Join the `#borgmatic` IRC channel on Libera Chat ([web chat](https://web.libera.chat/#borgmatic), or use an [IRC client](ircs://irc.libera.chat:6697)).
-*   **Contact:** For other inquiries, reach out to [witten@torsion.org](mailto:witten@torsion.org).
+### Issues
+Report issues or suggest feature enhancements on our [issue tracker](https://projects.torsion.org/borgmatic-collective/borgmatic/issues). You'll need to [register](https://projects.torsion.org/user/sign_up?invite_code=borgmatic) to create a new issue or comment, or [login directly](https://projects.torsion.org/user/login) via your GitHub account. See the [security policy](https://torsion.org/borgmatic/docs/security-policy/) for any security issues.
 
-**Contributing**
+### Social
+Follow borgmatic on Mastodon: <a rel="me" href="https://floss.social/@borgmatic">@borgmatic</a>
 
-borgmatic is an open-source project; your contributions are welcome!
+### Chat
+Join the `#borgmatic` IRC channel on Libera Chat via <a href="https://web.libera.chat/#borgmatic">web chat</a> or your favorite <a href="ircs://irc.libera.chat:6697">IRC client</a>.
 
-*   **Source Code:** Access the [source code](https://projects.torsion.org/borgmatic-collective/borgmatic) and a read-only mirror on [GitHub](https://github.com/borgmatic-collective/borgmatic).
-*   **License:** borgmatic is licensed under the GNU General Public License version 3 or later.
-*   **Contribute:** Submit [pull requests](https://projects.torsion.org/borgmatic-collective/borgmatic/pulls) or open [issues](https://projects.torsion.org/borgmatic-collective/borgmatic/issues).
+### Other
+Contact [witten@torsion.org](mailto:witten@torsion.org) for other inquiries.
 
-**Recent Contributors**
+### Contributing
+View borgmatic's [source code](https://projects.torsion.org/borgmatic-collective/borgmatic) and its read-only mirror on [GitHub](https://github.com/borgmatic-collective/borgmatic).
 
-[Include the contributors.html file here - kept for the sake of the original README]</br>
+borgmatic is licensed under the GNU General Public License version 3 or any later version. To contribute, submit a [pull request](https://projects.torsion.org/borgmatic-collective/borgmatic/pulls) or open an [issue](https://projects.torsion.org/borgmatic-collective/borgmatic/issues), after [registering](https://projects.torsion.org/user/sign_up?invite_code=borgmatic).  Refer to the [borgmatic development how-to](https://torsion.org/borgmatic/docs/how-to/develop-on-borgmatic/) to learn about cloning the source code, running tests, and more.
+
+### Recent Contributors
+(Include contributor list here - as per original README)

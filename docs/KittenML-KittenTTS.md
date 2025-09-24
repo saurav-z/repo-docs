@@ -1,23 +1,23 @@
-# Kitten TTS: Realistic Text-to-Speech for Everyone 🗣️
+# Kitten TTS: Unleash Realistic Text-to-Speech on Any Device 😻
 
-**Kitten TTS is a lightweight, open-source text-to-speech model that delivers high-quality voice synthesis with minimal resources.** (See the [original repository](https://github.com/KittenML/KittenTTS) for more details.)
+**Kitten TTS** is an open-source, ultra-lightweight text-to-speech model that delivers high-quality voice synthesis with just 15 million parameters, perfect for lightweight deployment.
 
-*Currently in developer preview.*
+[View the Kitten TTS repository on GitHub](https://github.com/KittenML/KittenTTS)
 
-**Join the Kitten TTS Community:**
+*Currently in developer preview*
 
-*   [Join our Discord](https://discord.com/invite/VJ86W4SURW)
-*   [Request Custom Support](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
-*   Email the creators with any questions: [info@stellonlabs.com](mailto:info@stellonlabs.com)
+[Join our Discord community](https://discord.com/invite/VJ86W4SURW)
+[Get custom support](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview)
+Email us with questions: info@stellonlabs.com
 
-## Key Features
+## Key Features of Kitten TTS
 
-*   **Ultra-Lightweight:** The model is less than 25MB, making it perfect for various applications.
-*   **CPU-Optimized:** Kitten TTS runs efficiently on any device without requiring a GPU.
-*   **High-Quality Voices:** Experience premium voice options for a natural and engaging listening experience.
-*   **Fast Inference:** Optimized for real-time speech synthesis, ensuring quick and responsive results.
+*   **Ultra-Lightweight:** Model size under 25MB, ideal for resource-constrained environments.
+*   **CPU-Optimized:** Operates efficiently without a GPU, enabling deployment on any device.
+*   **High-Quality Voices:** Enjoy a selection of premium voice options for diverse use cases.
+*   **Fast Inference:** Optimized for real-time speech synthesis, delivering rapid audio generation.
 
-## Quick Start Guide
+## Getting Started with Kitten TTS
 
 ### Installation
 
@@ -42,9 +42,9 @@ sf.write('output.wav', audio, 24000)
 
 ## System Requirements
 
-Kitten TTS is designed to work on any device, making it accessible to everyone.
+Kitten TTS is designed to run on a wide range of systems.
 
-## Roadmap / Future Development
+## Future Development
 
 *   \[x] Release a preview model
 *   \[ ] Release the fully trained model weights

@@ -1,24 +1,17 @@
-# Slime: Unleashing the Power of LLMs with RL Scaling
+# Slime: An LLM Post-Training Framework for RL Scaling
 
-**Slime** is a cutting-edge LLM post-training framework designed for Reinforcement Learning (RL) scaling, enabling efficient model optimization and flexible data generation. [Explore the Slime Repository](https://github.com/THUDM/slime) for more details.
+**Slime empowers efficient LLM post-training and RL scaling, enabling you to optimize your models for real-world applications.** ([View the Original Repo](https://github.com/THUDM/slime))
 
-## Key Features:
+[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://thudm.github.io/slime/)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/THUDM/slime)
 
-*   **High-Performance Training:** Slime leverages Megatron and SGLang to deliver efficient training across various configurations.
-*   **Flexible Data Generation:**  Create custom training datasets with ease using our versatile data generation interfaces and server-based engines.
-*   **Modular Architecture:**  A clear and concise architecture, including training (Megatron), rollout (SGLang + router), and a data buffer for streamlined data management.
-*   **Comprehensive Documentation:** Access detailed guides on Quick Start, Usage, Developer Guide, and FAQs to streamline your Slime experience.
-*   **Integration with Leading Technologies:** Designed to work seamlessly with Megatron-LM, SGLang, and other leading projects.
+Slime is a powerful framework designed for post-training Large Language Models (LLMs) and scaling Reinforcement Learning (RL) applications. It provides a streamlined approach for enhancing LLM performance through efficient training and flexible data generation.
 
-## Table of Contents
+## Key Features
 
--   [Architecture Overview](#architecture-overview)
--   [Quick Start](#quick-start)
--   [Checkpoint Format Conversion](#checkpoint-format-conversion)
--   [Starting the Training Process](#starting-the-training-process)
--   [Argument Descriptions](#argument-descriptions)
--   [Developer Guide](#developer-guide)
--   [FAQ & Acknowledgements](#faq--acknowledgements)
+*   **High-Performance Training:** Train your LLMs efficiently using a combination of Megatron and SGLang, supporting various training modes.
+*   **Flexible Data Generation:** Create custom training datasets with ease using specialized interfaces and server-based engines.
+*   **Modular Architecture:** The system is built with three core modules: training (Megatron), rollout (SGLang + router), and a data buffer for smooth data flow.
 
 ## Architecture Overview
 
@@ -26,43 +19,47 @@
 
 **Module Descriptions:**
 
-*   **Training (Megatron):** Manages the main training process, pulling data from the Data Buffer and syncing parameters with the rollout module.
+*   **Training (Megatron):** Manages the primary training process, reading data from the Data Buffer and synchronizing parameters with the rollout module after training.
 *   **Rollout (SGLang + Router):** Generates new data (including rewards and verifier outputs) and stores it in the Data Buffer.
-*   **Data Buffer:** Serves as a crucial bridge, handling prompt initialization, custom data, and rollout generation methods.
+*   **Data Buffer:** A crucial module that manages prompt initialization, custom data, and rollout generation methods, acting as a bridge between training and rollout.
 
 ## Quick Start
 
-Get up and running quickly! The [Quick Start Guide](./docs/en/get_started/quick_start.md) covers environment setup, data preparation, training initiation, and key code analysis. Explore the [examples](examples/) directory for additional use cases.
+Get up and running quickly with our comprehensive quick start guide. This includes environment setup, data preparation, training initiation, and in-depth code analysis.
 
-## Arguments Walk Through
+*   [Quick Start Guide](./docs/en/get_started/quick_start.md)
+*   Explore various use cases in our [examples](examples/).
 
-Slime's arguments are categorized for easy configuration:
+## Argument Descriptions
 
-1.  **Megatron Arguments:** Utilize existing Megatron arguments via `PYTHONPATH`, such as `--tensor-model-parallel-size 2`.
-2.  **SGLang Arguments:** Use all SGLang arguments with the `--sglang-` prefix (e.g., `--sglang-mem-fraction-static`).
-3.  **Slime-Specific Arguments:** Review [slime/utils/arguments.py](slime/utils/arguments.py) for Slime-specific arguments.
+Slime supports arguments in three categories:
 
-For comprehensive usage instructions, refer to the [Usage Documentation](docs/en/get_started/usage.md).
+1.  **Megatron arguments:** Inherited from Megatron via `PYTHONPATH`. Configure these arguments such as `--tensor-model-parallel-size 2`.
+2.  **SGLang arguments:** Supported arguments for the installed SGLang, prefixed with `--sglang-`.  Example: `--sglang-mem-fraction-static`.
+3.  **Slime-specific arguments:**  Defined in [slime/utils/arguments.py](slime/utils/arguments.py).
+
+For complete usage instructions, please consult our [Usage Documentation](docs/en/get_started/usage.md).
 
 ## Developer Guide
 
-*   **Contribute:** We welcome contributions! Submit Issues or PRs with new features, performance enhancements, or feedback.
-*   **Code Style:** Ensure code consistency using [pre-commit](https://pre-commit.com/):
+We welcome contributions from the community!
+
+*   **Contribute:** Submit Issues or Pull Requests for new features, performance improvements, or user experience feedback.
+*   **Code Style:**  Ensure code style consistency by using [pre-commit](https://pre-commit.com/):
 
     ```bash
     apt install pre-commit -y
     pre-commit install
     ```
-
-*   **Debugging:** Consult the [Debugging Guide](docs/en/developer_guide/debug.md) for debugging tips.
+*   **Debugging:** Use the [Debugging Guide](docs/en/developer_guide/debug.md) for assistance.
 
 ## FAQ & Acknowledgements
 
-*   **Q&A:** Find answers to frequently asked questions in the [Q&A](docs/en/get_started/qa.md).
-*   **Acknowledgements:** Special thanks to SGLang, Megatron‑LM, mbridge, OpenRLHF, veRL, Pai-Megatron-Patch, and other valuable projects and communities.
-*   **Citation:**
+*   Find answers to frequently asked questions in our [Q\&A](docs/en/get_started/qa.md).
+*   **Special Thanks:**  We extend our gratitude to the following projects and communities: SGLang, Megatron‑LM, mbridge, OpenRLHF, veRL, Pai-Megatron-Patch and others.
+*   **Citation:** Please use the following BibTeX entry when citing Slime:
 
-    ```bibtex
+    ```bibtext
     @misc{slime_github,
       author       = {Zilin Zhu and Chengxing Xie and Xin Lv and slime Contributors},
       title        = {slime: An LLM post-training framework for RL Scaling},

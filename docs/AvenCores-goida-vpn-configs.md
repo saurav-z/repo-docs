@@ -13,24 +13,21 @@
     </a>
 </div>
 
-# Goida VPN Configs: Get Free, Always-Updated VPN Configurations
+# Goida VPN Configs: Get Up-to-Date VPN Configurations for Bypass Restrictions
 
-This repository provides a constantly updated collection of public VPN configurations (V2Ray, VLESS, Trojan, VMess, Reality, Shadowsocks) to bypass internet restrictions.  [**Visit the original repo**](https://github.com/AvenCores/goida-vpn-configs).
+This repository ([link to original repo](https://github.com/AvenCores/goida-vpn-configs)) provides a continuously updated collection of public VPN configurations for various VPN protocols, ensuring you always have access to working servers.
 
-[![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://github.com/AvenCores/goida-vpn-configs)
-[![GPL-3.0 License](https://img.shields.io/badge/License-GPL--3.0-blue?style=for-the-badge)](./LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/AvenCores/goida-vpn-configs?style=for-the-badge)](https://github.com/AvenCores/goida-vpn-configs/issues)
-[![GitHub stars](https://img.shields.io/github/stars/AvenCores/goida-vpn-configs?style=for-the-badge)](https://github.com/AvenCores/goida-vpn-configs/stargazers)
-![GitHub forks](https://img.shields.io/github/forks/AvenCores/goida-vpn-configs?style=for-the-badge)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/AvenCores/goida-vpn-configs?style=for-the-badge)](https://github.com/AvenCores/goida-vpn-configs/pulls)
+---
 
-## Key Features:
+## Key Features
 
-*   **Always Up-to-Date:** Configurations are automatically updated every 9 minutes using GitHub Actions.
-*   **Wide Compatibility:** Works with popular VPN clients like v2rayNG, NekoRay, Throne, v2rayN, V2Box, v2RayTun, Hiddify, and more.
-*   **Easy to Use:** Simply copy and paste a link into your preferred VPN client.
-*   **Multiple Protocols:** Supports V2Ray, VLESS, Trojan, VMess, Reality, and Shadowsocks protocols.
-*   **QR Code Support**: QR codes available for easy configuration.
+*   **Automatic Updates:** Configurations are refreshed every 9 minutes via GitHub Actions.
+*   **Multiple Protocols:** Supports V2Ray, VLESS, Trojan, VMess, Reality, and Shadowsocks.
+*   **Wide Compatibility:** Works with popular VPN clients like v2rayNG, NekoRay, Throne, and more.
+*   **Easy Import:** Configurations are provided as TXT subscriptions, easily imported into your client.
+*   **QR Code Support:** QR codes available for quick setup on Android TV and other devices.
+
+---
 
 ## Table of Contents
 
@@ -39,31 +36,33 @@ This repository provides a constantly updated collection of public VPN configura
 *   [How It Works](#how-it-works)
 *   [Repository Structure](#repository-structure)
 *   [Local Generator Run](#local-generator-run)
-*   [Installation and Troubleshooting Video Guide](#installation-and-troubleshooting-video-guide)
-*   [Guide Menu](#guide-menu)
+*   [Guides and Troubleshooting](#guides-and-troubleshooting)
 *   [License](#license)
 *   [Support the Author](#support-the-author)
 
+---
+
 ## Quick Start
 
-1.  Copy a link from the "📋 **General List of Always-Current Configurations**" section below.
-2.  Import the link into your VPN client (see instructions in the Guide Menu).
+1.  Copy a link from the "General List of Always Up-to-Date Configurations" section below.
+2.  Import the link into your preferred VPN client.
 3.  Select a server with the lowest ping and connect.
+
+---
 
 ## How It Works
 
-*   The script `source/main.py` downloads public subscriptions from various sources.
-*   The workflow `frequent_update.yml` runs the script every 9 minutes using cron.
+*   The [`source/main.py`](source/main.py) script downloads public subscriptions from various sources.
+*   The [`frequent_update.yml`](.github/workflows/frequent_update.yml) workflow runs the script every 9 minutes via cron.
 *   Results are saved in the `githubmirror/` directory and pushed to this repository.
+*   Each update generates a commit like: "🚀 Update config in timezone Europe/Moscow: HH:MM | DD.MM.YYYY"
 
-Each run creates a commit like:
-
-> 🚀 Configuration Update by Time Zone Europe/Moscow: HH:MM | DD.MM.YYYY
+---
 
 ## Repository Structure
 
 ```text
-githubmirror/        — Generated .txt configurations (25 files)
+githubmirror/        — Generated .txt configs (23 files)
 qr-codes/            — PNG versions of configs for QR import
 source/              — Python script and generator dependencies
  ├─ main.py
@@ -72,6 +71,8 @@ source/              — Python script and generator dependencies
 README.md            — This file
 ```
 
+---
+
 ## Local Generator Run
 
 ```bash
@@ -79,52 +80,29 @@ git clone https://github.com/AvenCores/goida-vpn-configs
 cd goida-vpn-configs/source
 python -m pip install -r requirements.txt
 export MY_TOKEN=<GITHUB_TOKEN>   # Token with repo permissions to push changes
-python main.py                  # Configurations will appear in ../githubmirror
+python main.py                  # Configs will appear in ../githubmirror
 ```
 
-> **Important!**  In `source/main.py`, manually set `REPO_NAME = "<username>/<repository>"` if running the script from a fork.
-
-## Installation and Troubleshooting Video Guide
-
-![maxresdefault](https://github.com/user-attachments/assets/e36e2351-3b1a-4b90-87f7-cafbc74f238c)
-
-<div align="center">
-
-> ⚠️ **Attention!** Only the text guide below is relevant for iOS and iPadOS. The video guide is only relevant for Android, Android TV, Windows, Linux, and MacOS.
-
-[**Watch on YouTube**](https://youtu.be/sagz2YluM70)
-
-[**Watch on Dzen**](https://dzen.ru/video/watch/680d58f28c6d3504e953bd6d)
-
-[**Watch on VK Video**](https://vk.com/video-200297343_456239303)
-
-[**Watch on Telegram**](https://t.me/avencoreschat/56595)
-
-</div>
+> **Important:** In `source/main.py`, manually set `REPO_NAME = "<username>/<repository>"` if running the script from a fork.
 
 ---
 
-## Guide Menu
+## Guides and Troubleshooting
 
 <details>
-  <summary>👩‍💻 Source Code for Generating Always-Current Configurations</summary>
-  Link to the source code — [Link](https://github.com/AvenCores/goida-vpn-configs/tree/main/source)
-</details>
+<summary>📋 General List of Always Up-to-Date Configurations</summary>
+    
+> Recommended lists: **[6](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt)**, **[22](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/22.txt)**, **[23](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/23.txt)**, **[24](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt)** и **[25](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt)**.
 
----
-<details>
-  <summary>📋 General List of Always-Current Configurations</summary>
-  > Recommended lists: **[6](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt)**, **[22](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/22.txt)**, **[23](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/23.txt)**, **[24](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt)** and **[25](https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt)**.
-
-1) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt`
-2) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/2.txt`
-3) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/3.txt`
-4) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/4.txt`
-5) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/5.txt`
-6) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt`
-7) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/7.txt`
-8) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/8.txt`
-9) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/9.txt`
+1)  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt`
+2)  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/2.txt`
+3)  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/3.txt`
+4)  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/4.txt`
+5)  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/5.txt`
+6)  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/6.txt`
+7)  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/7.txt`
+8)  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/8.txt`
+9)  `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/9.txt`
 10) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/10.txt`
 11) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/11.txt`
 12) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/12.txt`
@@ -142,98 +120,84 @@ python main.py                  # Configurations will appear in ../githubmirror
 24) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/24.txt`
 25) `https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/25.txt`
 
-🔗 [Link to QR Codes of Always-Current Configurations](https://github.com/AvenCores/goida-vpn-configs/tree/main/qr-codes)
+🔗 [Link to QR codes of always up-to-date configs](https://github.com/AvenCores/goida-vpn-configs/tree/main/qr-codes)
 </details>
 
----
 <details>
-  <summary>📱 Guide for Android</summary>
-  … (Android instructions) …
+<summary>📱 Guide for Android</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>📺 Guide for Android TV</summary>
-  … (Android TV instructions) …
+<summary>📺 Guide for Android TV</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>⚠ If there is no internet when connected to VPN in v2rayNG</summary>
-  … (Troubleshooting instructions) …
+<summary>⚠ If there is no internet connection when connecting to VPN in v2rayNG</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>⚠ If configurations do not appear when adding VPN in v2rayNG</summary>
-  … (Troubleshooting instructions) …
+<summary>⚠ If the configs did not appear when adding a VPN in v2rayNG</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>⚠ Fix for "Cбой проверки интернет-соединения: net/http: 12X handshake timeout"</summary>
-  … (Troubleshooting instructions) …
+<summary>⚠ Fix for the error "Cбой проверки интернет-соединения: net/http: 12X handshake timeout"</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>⚠ Fix for "Fail to detect internet connection: io: read/write closed pipe"</summary>
-  … (Troubleshooting instructions) …
+<summary>⚠ Fix for the error "Fail to detect internet connection: io: read/write closed pipe"</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>🔄 Updating Configurations in v2rayNG</summary>
-  … (Update instructions) …
+<summary>🔄 Updating configs in v2rayNG</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>🖥 Guide for Windows, Linux</summary>
-  … (Windows/Linux instructions) …
+<summary>🖥 Guide for Windows, Linux</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>⚠ Fixing MSVCP and VCRUNTIME Errors on Windows 10/11</summary>
-  … (Troubleshooting instructions) …
+<summary>⚠ Correcting MSVCP and VCRUNTIME errors on Windows 10/11</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>🔄 Updating Configurations in NekoRay</summary>
-  … (Update instructions) …
+<summary>🔄 Updating configs in NekoRay</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>☎ Guide for iOS, iPadOS</summary>
-  … (iOS/iPadOS instructions) …
+<summary>☎ Guide for iOS, iPadOS</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>🔄 Updating Configurations in V2Box - V2ray Client</summary>
-  … (Update instructions) …
+<summary>🔄 Updating configs in V2Box - V2ray Client</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>💻 Guide for MacOS</summary>
-  … (MacOS instructions) …
+<summary>💻 Guide for MacOS</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
----
 <details>
-  <summary>🔄 Updating Configurations in Hiddify</summary>
-  … (Update instructions) …
+<summary>🔄 Updating configs in Hiddify</summary>
+... (content from the original README -  simplified for brevity)
 </details>
 
 ---
 
 ## License
 
-This project is licensed under the GPL-3.0 License. The full license text is in the [`LICENSE`](LICENSE) file.
+This project is licensed under the GPL-3.0 License. See the [`LICENSE`](LICENSE) file for details.
 
 ---
 

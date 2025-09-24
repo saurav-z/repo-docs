@@ -1,65 +1,74 @@
-## 🦆 QuACK: Unleash Blazing-Fast Kernel Performance with CuTe-DSL 🦆
+# 🦆 QuACK: Unleash Blazing-Fast Kernels for Your AI Workloads 🦆
 
-Supercharge your CUDA applications with **QuACK**, a collection of optimized kernels designed for speed and efficiency, all crafted with the power of the CuTe-DSL.  For more details, visit the original repository: [https://github.com/Dao-AILab/quack](https://github.com/Dao-AILab/quack).
+**QuACK (Quirky Assortment of CuTe Kernels) delivers highly optimized kernels, written in the CuTe-DSL, designed to accelerate your AI and deep learning applications.**  Explore the power of optimized performance on NVIDIA GPUs with QuACK!  [Visit the original repository](https://github.com/Dao-AILab/quack) for more details.
 
-### Key Features:
+## Key Features
 
-*   **High-Performance Kernels:** Pre-optimized kernels for critical operations, maximizing performance on NVIDIA GPUs.
-*   **CuTe-DSL Powered:** Built using the [CuTe-DSL](https://docs.nvidia.com/cutlass/media/docs/pythonDSL/cute_dsl_general/dsl_introduction.html) for efficient and flexible kernel development.
-*   **Easy Installation:** Simple pip install for quick setup and integration.
-*   **Comprehensive Coverage:** Kernels for essential operations like RMSNorm, Softmax, Cross Entropy, LayerNorm, and GEMM (Hopper & Blackwell architectures).
+*   **Optimized Kernels:**  Leverages the CuTe-DSL for performance-critical operations.
+*   **Comprehensive Coverage:** Includes a variety of kernels for common AI tasks.
+*   **Easy to Use:**  Simple Python interface for seamless integration.
+*   **High Performance:** Designed to maximize performance on NVIDIA H100 and B200 GPUs.
 
-### Installation
+## Kernels Included
 
-Get started quickly with the following pip command:
+QuACK provides a diverse set of optimized kernels, including:
+
+*   RMSNorm forward + backward
+*   Softmax forward + backward
+*   Cross entropy forward + backward
+*   Layernorm forward
+*   Hopper gemm + epilogue
+*   Blackwell gemm + epilogue
+
+## Installation
+
+Get started with QuACK quickly using pip:
 
 ```bash
 pip install quack-kernels
 ```
 
-### Requirements
+## Requirements
 
-Ensure your system meets the following prerequisites:
+Ensure your environment meets these requirements for optimal performance:
 
-*   **GPU:** NVIDIA H100 or B200
-*   **CUDA:** CUDA Toolkit 12.9+
-*   **Python:** Python 3.12
+*   NVIDIA H100 or B200 GPU
+*   CUDA Toolkit 12.9+
+*   Python 3.12
 
-### Available Kernels
+## Usage
 
-QuACK provides a range of optimized kernels for various compute-intensive tasks:
-
-*   🦆 RMSNorm (forward and backward)
-*   🦆 Softmax (forward and backward)
-*   🦆 Cross Entropy (forward and backward)
-*   🦆 Layernorm (forward)
-*   🦆 Hopper GEMM + Epilogue
-*   🦆 Blackwell GEMM + Epilogue
-
-### Usage
-
-Import and utilize the kernels directly in your Python code:
+Integrate QuACK kernels effortlessly into your Python code:
 
 ```python
 from quack import rmsnorm, softmax, cross_entropy
 ```
 
-### Documentation and Resources
+## Performance & Benchmarks
 
-Explore the performance gains and implementation details in our comprehensive resources:
+QuACK is engineered for exceptional performance.
 
-*   **Blog Post:** Learn how to optimize memory-bound kernels with CuTe-DSL:  [media/2025-07-10-membound-sol.md](media/2025-07-10-membound-sol.md)
-*   **CuTe-DSL Documentation:** Refer to the official documentation: [https://docs.nvidia.com/cutlass/media/docs/pythonDSL/cute_dsl_general/dsl_introduction.html](https://docs.nvidia.com/cutlass/media/docs/pythonDSL/cute_dsl_general/dsl_introduction.html)
+<div align="center">
+<figure>
+  <img
+  src="media/bf16_kernel_benchmarks_single_row.svg"
+  alt="Performance Benchmarks"
+  >
+</figure>
+</div>
 
-### Performance Benchmarks
+For detailed performance analysis and insights, please refer to our blogpost.
 
-[Insert Image]
-[Image of performance benchmarks]
+## Documentation & Resources
 
-### Development
+*   **CuTe-DSL Documentation:**  Explore the CuTe-DSL used to build these kernels:  [CuTe-DSL Documentation](https://docs.nvidia.com/cutlass/media/docs/pythonDSL/cute_dsl_general/dsl_introduction.html)
+*   **Blog Post:** Dive deep into the optimizations in our blogpost: [2025-07-10-membound-sol.md](media/2025-07-10-membound-sol.md)
 
-Set up a development environment for contributing to QuACK:
+## Development
+
+To set up a development environment:
 
 ```bash
 pip install -e '.[dev]'
 pre-commit install
+```

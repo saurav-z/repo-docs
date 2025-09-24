@@ -1,26 +1,28 @@
-# APT Report: Comprehensive Collection of Advanced Persistent Threat Intelligence
+# APT Report: A Comprehensive Collection of Advanced Persistent Threat (APT) Reports
 
-**Stay informed about the ever-evolving landscape of cyber threats with this curated collection of Advanced Persistent Threat (APT) reports, samples, and malware analyses.** ([Original Repository](https://github.com/blackorbird/APT_REPORT))
+**Stay informed about the latest Advanced Persistent Threat (APT) activities and cyber security threats with this curated collection of reports and analyses.**  View the original repository at [https://github.com/blackorbird/APT_REPORT](https://github.com/blackorbird/APT_REPORT).
 
-This repository serves as a valuable resource for cybersecurity professionals, researchers, and anyone interested in understanding the tactics, techniques, and procedures (TTPs) employed by APT groups.
+## Overview
 
-## Key Features:
+This repository serves as a valuable resource for cybersecurity professionals, researchers, and anyone interested in understanding the tactics, techniques, and procedures (TTPs) of APT groups. It provides a curated list of reports, analyses, and related information.
 
-*   **Extensive Collection:** A comprehensive list of APT reports, malware samples, and intelligence reports.
-*   **Organized by Group:** Categorized by APT group name, making it easy to find relevant information.
-*   **Up-to-Date Information:** Regularly updated with the latest reports and analyses.
-*   **Focus on Emerging Threats:** Coverage of emerging APT groups and campaigns, with a focus on activity across various geographies and industries.
+## Key Features
 
-## APT Groups Tracked:
+*   **Comprehensive Coverage:** Includes reports on various APT groups, including those targeting specific countries, industries, and regions.
+*   **Organized by Group:**  Reports are categorized by APT group name for easy navigation and analysis.
+*   **Up-to-Date Information:** Provides links to the latest research and findings on APT activities.
+*   **Diverse Sources:** Leverages reports from reputable cybersecurity vendors, research institutions, and industry experts.
 
-### Group123
+## APT Group Reports
+
+### **Group123**
 
 *   ScarCruft continues to evolve, introduces Bluetooth harvester (May 13, 2019) - [https://securelist.com/scarcruft-continues-to-evolve-introduces-bluetooth-harvester/90729/](https://securelist.com/scarcruft-continues-to-evolve-introduces-bluetooth-harvester/90729/)
 *   Group123 Attempts to attack 'printing paper' APT disguised as a guide to organization and conferences (May 2 , 2019) - [https://blog.alyac.co.kr/2287](https://blog.alyac.co.kr/2287)
 *   Group123, APT attack impersonating Unification Ministry, spread malicious code to Google Drive (April 22 , 2019) - [https://blog.alyac.co.kr/2268](https://blog.alyac.co.kr/2268)
 *   group123 APT organization, 'Operation High Expert' (April 2 , 2019) - [https://blog.alyac.co.kr/2226](https://blog.alyac.co.kr/2226)
 *   Rocketman APT Campaign Returned to Operation Holiday Wiper (Jan 23, 2019) - [https://blog.alyac.co.kr/2089](https://blog.alyac.co.kr/2089)
-*   'Operation Blackbird', the mobile invasion of the (Dec 13, 2018) - [https://blog.alyac.co.kr/2035](https://blog.alyac.co.kr/2035)
+*   'Operation Blackbird', the mobile invasion of the ' (Dec 13, 2018) - [https://blog.alyac.co.kr/2035](https://blog.alyac.co.kr/2035)
 *   group123 'Operation Korean Sword' is underway (Nov. 16, 2018) - [https://blog.alyac.co.kr/1985](https://blog.alyac.co.kr/1985)
 *   group123 Group's latest APT campaign - 'Operation Rocket Man' (Aug. 22, 2018) - [https://blog.alyac.co.kr/1853](https://blog.alyac.co.kr/1853)
 *   group123, Flash Player Zero-Day (CVE-2018-4878) Attack Attention (Feb 02, 2018) - [https://blog.alyac.co.kr/1521](https://blog.alyac.co.kr/1521)
@@ -40,7 +42,7 @@ This repository serves as a valuable resource for cybersecurity professionals, r
 
 ### kimsuky
 
-*   Kimsuky, Blue House Green Support / Sangchunjae Estimate - [https://blog.alyac.co.kr/2645](https://blog.alyac.co.kr/2645)
+*   Kimsuky, Blue House Green Support / Sangchunjae Estimate (May 31, 2019) - [https://blog.alyac.co.kr/2645](https://blog.alyac.co.kr/2645)
 *   Kimsuky, cyber security bureau Cryptographic Cases (May 28 , 2019) - [https://blog.alyac.co.kr/2338](https://blog.alyac.co.kr/2338)
 *   Kimsuky, Korea Cryptographic Exchange Event Impersonation APT Attack (May 28 , 2019) - [https://blog.alyac.co.kr/2336](https://blog.alyac.co.kr/2336)
 *   Kimsuky  'Fake striker' APT campaign aimed at Korea (May 20 , 2019) - [https://blog.alyac.co.kr/2315](https://blog.alyac.co.kr/2315)
@@ -60,7 +62,7 @@ This repository serves as a valuable resource for cybersecurity professionals, r
 
 ### Konni
 
-*   Konni's APT Group conducts attacks with Russian-North Korean trade and economic investment documents - [https://blog.alyac.co.kr/2535](https://blog.alyac.co.kr/2535)
+*   Konni's APT Group conducts attacks with Russian-North Korean trade and economic investment documents (June 10, 2019) - [https://blog.alyac.co.kr/2535](https://blog.alyac.co.kr/2535)
 *   APT Campaign 'Konni' & 'Kimsuky' find commonality in organizations (June 10, 2019) - [https://blog.alyac.co.kr/2347](https://blog.alyac.co.kr/2347)
 *   Korean Kusa Konni Organization, Blue Sky Utilizing 'Amadey' Russia Botnet  (May 16, 2019) - [https://blog.alyac.co.kr/2308](https://blog.alyac.co.kr/2308)
 *   The Konni APT Campaign and 'Operation Hunter Adonis' (Jan 1 ,2019) - [https://blog.alyac.co.kr/2061](https://blog.alyac.co.kr/2061)
@@ -88,10 +90,9 @@ This repository serves as a valuable resource for cybersecurity professionals, r
 
 ### Winnti
 
-*   bayer-says-has-detected-contained-cyber-attack (April 5 , 2019) - [https://www.reuters.com/article/us-bayer-cyber/bayer-says-has-detected-contained-cyber-attack-idUSKCN1RG0NN](https://www.reuters.com/article/us-bayer-cyber/bayer-says-has-detected-contained-cyber-attack-idUSKCN1RG0NN)
-*   [https://www.tagesschau.de/inland/hackerangriff-bayer-101.html](https://www.tagesschau.de/inland/hackerangriff-bayer-101.html)
+*   bayer-says-has-detected-contained-cyber-attack (April 5 , 2019) - [https://www.reuters.com/article/us-bayer-cyber/bayer-says-has-detected-contained-cyber-attack-idUSKCN1RG0NN](https://www.reuters.com/article/us-bayer-cyber/bayer-says-has-detected-contained-cyber-attack-idUSKCN1RG0NN) and [https://www.tagesschau.de/inland/hackerangriff-bayer-101.html](https://www.tagesschau.de/inland/hackerangriff-bayer-101.html)
 
-### Middle East Asia
+## Middle East Asia
 
 ### Muddywater
 
@@ -101,7 +102,7 @@ This repository serves as a valuable resource for cybersecurity professionals, r
 
 *   APT-C-38 attack activity revealed (May 27,2019) - [http://blogs.360.cn/post/analysis-of-APT-C-38.html](http://blogs.360.cn/post/analysis-of-APT-C-38.html)
 
-### APT Group for finance
+## APT Group for Finance
 
 ### CARBANAK
 
@@ -109,7 +110,8 @@ This repository serves as a valuable resource for cybersecurity professionals, r
 
 ### londonblue (Nigeria)
 
-*   Evolving Tactics: London Blue Starts Spoofing Target Domains (April 4 , 2019) - PDF is in the folder - [https://www.agari.com/email-security-blog/london-blue-evolving-tactics/](https://www.agari.com/email-security-blog/london-blue-evolving-tactics/)
+*   Evolving Tactics: London Blue Starts Spoofing Target Domains (April 4 , 2019)
+    [PDF is in the folder](https://www.agari.com/email-security-blog/london-blue-evolving-tactics/)
 
 ### Fin6
 
@@ -119,4 +121,10 @@ This repository serves as a valuable resource for cybersecurity professionals, r
 
 *   On the Hunt for FIN7: Pursuing an Enigmatic and Evasive Global Criminal Operation (August 01, 2018) - [https://www.fireeye.com/blog/threat-research/2018/08/fin7-pursuing-an-enigmatic-and-evasive-global-criminal-operation.html](https://www.fireeye.com/blog/threat-research/2018/08/fin7-pursuing-an-enigmatic-and-evasive-global-criminal-operation.html)
 
-**Disclaimer:** This repository provides links to external resources and is for informational purposes only.  Always verify the authenticity and security of any content before interacting with it.
+## Resources
+
+*   **Palo Alto Networks Unit 42 Threat Actor Groups:** [https://unit42.paloaltonetworks.com/threat-actor-groups-tracked-by-palo-alto-networks-unit-42/](https://unit42.paloaltonetworks.com/threat-actor-groups-tracked-by-palo-alto-networks-unit-42/)
+
+***
+
+**Disclaimer:** *This information is provided for informational purposes only and should not be considered as professional security advice.*

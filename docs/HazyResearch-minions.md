@@ -1,130 +1,146 @@
-![Minions Logo](assets/Ollama_minionS_background.png)
+<!-- Minions Logo -->
+<img src="assets/Ollama_minionS_background.png" alt="Minions Logo" width="300">
 
-# Minions: Unleash the Power of On-Device and Cloud LLMs
+# Minions: Revolutionizing LLM Collaboration with On-Device and Cloud Models
 
-**Collaborate with on-device and cloud LLMs efficiently using the Minions protocol, reducing cloud costs and maintaining high quality!**
+**Harness the power of local and cloud language models with Minions, a communication protocol designed for cost-effective and high-quality AI experiences.** Learn more and explore the code on [GitHub](https://github.com/HazyResearch/minions).
 
-[View the Minions GitHub Repository](https://github.com/HazyResearch/minions) | [Join our Discord](https://discord.gg/jfJyxXwFVa)
-
-Minions is a cutting-edge communication protocol that seamlessly connects small, efficient on-device language models with powerful cloud-based models, allowing for intelligent collaboration.  By intelligently offloading long context processing to local models, Minions minimizes cloud costs while maintaining the performance of leading LLMs. This repository provides a comprehensive demonstration of the Minions protocol, along with tools and applications to get you started.
+[![Discord](https://img.shields.io/badge/Discord-7289DA?logo=discord&logoColor=white)](https://discord.gg/jfJyxXwFVa)
 
 **Key Features:**
 
-*   **Cost-Effective LLM Collaboration:**  Leverage on-device models to reduce reliance on expensive cloud resources.
-*   **Seamless Integration:** Easy-to-use protocol for combining local and cloud models.
-*   **Flexible Deployment:**  Supports diverse local model servers (Ollama, Lemonade, Tokasaurus) and cloud providers (OpenAI, Together AI, Azure OpenAI, DeepSeek, Anthropic, Mistral AI).
-*   **Secure Communication:**  Includes a secure protocol with end-to-end encryption, attestation, and replay protection.
-*   **WebGPU App:** Run the Minions protocol entirely in your browser.
-*   **Comprehensive Examples:** Ready-to-use code examples for various applications.
-*   **Versatile Applications:**  Includes agent-to-agent integration, character chat, document search, story telling and more.
+*   **Cost-Effective AI:** Minimize cloud costs by leveraging on-device models for long context processing.
+*   **Enhanced Privacy:** Process sensitive data locally while utilizing cloud models for complex tasks.
+*   **Flexible Architecture:** Compatible with various local and cloud LLMs.
+*   **Secure Communication:** Implement end-to-end encryption for secure data exchange using the Secure Minions Protocol (See below).
+*   **Browser-Based Demo:**  A fully functional web app showcasing the Minions protocol, running entirely in your browser.
+*   **Multi-Protocol Support:** Supports `minion` (single agent) and `minions` (parallel agents) protocols.
+*   **Comprehensive Tooling:** Includes a CLI, Docker support, and an Inference Estimator for optimizing model performance.
 
-**Explore Minions:**
+**Jump to:**
 
-*   **Paper:** [Minions: Cost-efficient Collaboration Between On-device and Cloud Language Models](https://arxiv.org/pdf/2502.15964)
-*   **Blog Post:** [Minions Introduction](https://hazyresearch.stanford.edu/blog/2025-02-24-minions)
-*   **Secure Minions Chat:** [Secure Minions Chat](https://hazyresearch.stanford.edu/blog/2025-05-12-security)
-*   **Demo Application:** [Streamlit Demo](#minions-demo-application)
-*   **WebGPU App:** [WebGPU App](#minions-webgpu-app)
-
-## Table of Contents
-
--   [Setup](#setup)
-    -   [Step 1: Install the Minions Package](#step-1-clone-and-install)
-    -   [Step 2: Choose and Install a Local Model Server](#step-2-install-a-server-for-running-the-local-model)
-    -   [Step 3: Configure Cloud LLM API Keys](#step-3-set-your-api-key-for-at-least-one-of-the-following-cloud-llm-providers)
--   [Minions Demo Application](#minions-demo-application)
--   [Minions WebGPU App](#minions-webgpu-app)
--   [Example Code](#example-code-minion-singular)
-    -   [Minion (Singular)](#example-code-minion-singular)
-    -   [Minions (Plural)](#example-code-minions-plural)
--   [Python Notebook](#python-notebook)
--   [Docker Support](#docker-support)
--   [Command Line Interface (CLI)](#cli)
--   [Secure Minions Local-Remote Protocol](#secure-minions-local-remote-protocol)
--   [Secure Minions Chat](#secure-minions-chat)
--   [Apps](#apps)
--   [Inference Estimator](#inference-estimator)
-    -   [Command Line Usage](#command-line-usage)
-    -   [Python API Usage](#python-api-usage)
--   [Miscellaneous Setup](#miscellaneous-setup)
-    -   [Using Azure OpenAI](#using-azure-openai-with-minions)
--   [Maintainers](#maintainers)
+*   [Setup](#setup)
+*   [Minions Demo Application](#minions-demo-application)
+*   [WebGPU App](#minions-webgpu-app)
+*   [Example Code](#example-code)
+*   [Secure Minions Chat](#secure-minions-chat)
+*   [Docker Support](#docker-support)
+*   [CLI](#cli)
+*   [Inference Estimator](#inference-estimator)
 
 ## Setup
 
-*Tested on Mac and Ubuntu with Python 3.10-3.11 (Python 3.13 is not supported)*
+Get started with Minions in a few simple steps.  We recommend using Python 3.10-3.11. Python 3.13 is not supported.
+
+**Prerequisites:** Ensure you have Python installed.  Optional: Create a virtual environment.
+
+```bash
+# Example using conda
+conda create -n minions python=3.11
+conda activate minions
+```
 
 **Step 1: Clone and Install**
 
-1.  Clone the repository:
+```bash
+git clone https://github.com/HazyResearch/minions.git
+cd minions
+pip install -e .  # Installs the minions package in editable mode
+```
 
+**Optional Installations:**
+
+*   For optional MLX-LM:
     ```bash
-    git clone https://github.com/HazyResearch/minions.git
-    cd minions
+    pip install -e ".[mlx]"
+    ```
+*   For Secure Minions Chat:
+    ```bash
+    pip install -e ".[secure]"
     ```
 
-2.  Install the Python package in editable mode:
+**Step 2: Install a Local Model Server**
 
-    ```bash
-    pip install -e .
-    ```
+Choose *one* of the following options for running a local model server:
 
-    *   For MLX-LM support: `pip install -e ".[mlx]"`
-    *   For Secure Minions Chat: `pip install -e ".[secure]"`
+*   **Ollama:** Recommended if you do not have access to NVIDIA/AMD GPUs. Install [Ollama](https://ollama.com/download). To enable Flash Attention, run `launchctl setenv OLLAMA_FLASH_ATTENTION 1` and restart the Ollama app (macOS).
+*   **Lemonade:** If you have access to local AMD CPUs/GPUs/NPUs. Install [Lemonade](https://lemonade-server.ai/).  Launch the Lemonade server after installation. Note: Lemonade currently does not support the Minion-CUA protocol.
+*   **Tokasaurus:** If you have access to NVIDIA GPUs. Install with: `pip install tokasaurus`
 
-**Step 2: Choose and Install a Local Model Server**
+**Optional: Install Cartesia-MLX (Apple Silicon only):** Follow the detailed instructions in the original README.
 
-Select and install *one* of the following local model servers:
+**Optional: Install llama-cpp-python:** Follow the detailed instructions in the original README.
 
-*   **Ollama:** Recommended if you *do not* have NVIDIA/AMD GPUs. Install from [here](https://ollama.com/download).  To enable Flash Attention, run `launchctl setenv OLLAMA_FLASH_ATTENTION 1` and restart the Ollama app on macOS.
-*   **Lemonade:** Use if you have AMD CPUs/GPUs/NPUs.  Install from [here](https://lemonade-server.ai/). *Note: Lemonade does not support the Minion-CUA protocol at this time.*
-*   **Tokasaurus:** Designed for NVIDIA GPUs, and benefits from the high-throughput for Minions protocol. Install with:  `pip install tokasaurus`
+**Step 3: Set Cloud LLM API Keys**
 
-    *   Optional: Install Cartesia-MLX on Apple Silicon following the instructions in the original README.
-    *   Optional: Install llama-cpp-python, following the instructions in the original README.
-
-**Step 3: Configure Cloud LLM API Keys**
-
-Set your API key for *at least one* of the following cloud LLM providers. Create an API key if you don't have one (e.g., [OpenAI](https://platform.openai.com/docs/overview)).
+Set your API key for *at least one* of the following cloud LLM providers:
 
 ```bash
+# OpenAI
 export OPENAI_API_KEY=<your-openai-api-key>
 export OPENAI_BASE_URL=<your-openai-base-url>  # Optional: Use a different OpenAI API endpoint
 
+# Together AI
 export TOGETHER_API_KEY=<your-together-api-key>
+
+# OpenRouter
 export OPENROUTER_API_KEY=<your-openrouter-api-key>
-export OPENROUTER_BASE_URL=<your-openrouter-base-url>
+export OPENROUTER_BASE_URL=<your-openrouter-base-url>  # Optional: Use a different OpenRouter API endpoint
+
+# Perplexity
 export PERPLEXITY_API_KEY=<your-perplexity-api-key>
-export PERPLEXITY_BASE_URL=<your-perplexity-base-url>
-export TOKASAURUS_BASE_URL=<your-tokasaurus-base-url>
+export PERPLEXITY_BASE_URL=<your-perplexity-base-url>  # Optional: Use a different Perplexity API endpoint
+
+# Tokasaurus
+export TOKASAURUS_BASE_URL=<your-tokasaurus-base-url>  # Optional: Use a different Tokasaurus API endpoint
+
+# DeepSeek
 export DEEPSEEK_API_KEY=<your-deepseek-api-key>
+
+# Anthropic
 export ANTHROPIC_API_KEY=<your-anthropic-api-key>
+
+# Mistral AI
 export MISTRAL_API_KEY=<your-mistral-api-key>
 ```
 
 ## Minions Demo Application
 
-Run the interactive demo to see Minions in action:
+<a href="https://www.youtube.com/watch?v=70Kot0_DFNs" target="_blank"><img src="https://img.youtube.com/vi/70Kot0_DFNs/0.jpg" alt="Minions Demo Video" width="480"></a>
+
+Quickly experience the Minion or Minions protocol with the demo application:
 
 ```bash
 pip install torch transformers
 streamlit run app.py
 ```
 
-*   If you encounter an Ollama connection error, try: `OLLAMA_FLASH_ATTENTION=1 ollama serve`
+If you encounter an Ollama connection error, try running:  `OLLAMA_FLASH_ATTENTION=1 ollama serve`
 
 ## Minions WebGPU App
 
-Experience Minions in your browser with this WebGPU app:
+Explore the Minions protocol directly in your browser with the WebGPU app. This demo eliminates local server dependencies, providing a streamlined user experience.
 
-1.  `cd apps/minions-webgpu`
-2.  `npm install`
-3.  `npm start`
-4.  Open your browser and navigate to the provided URL.
+### Features
 
-## Example Code: Minion (Singular)
+*   **Browser-Based:** Runs entirely in your browser.
+*   **WebGPU Acceleration:**  Fast local model inference.
+*   **Model Selection:** Choose from pre-optimized models from [MLC AI](https://mlc.ai/models).
+*   **Real-Time Progress:** See model loading and conversation logs.
+*   **Privacy-Focused:**  API keys and data remain within your browser.
 
-This example uses `ollama` locally and `openai` remotely:
+### Quick Start
+
+1.  **Navigate:** `cd apps/minions-webgpu`
+2.  **Install:** `npm install`
+3.  **Run:** `npm start`
+4.  **Open Browser:**  Navigate to the provided URL (e.g., `http://localhost:5173`).
+
+## Example Code
+
+Here's how to use `Minion` (singular) and `Minions` (plural) protocols.
+
+**Example: Minion (Singular)**
 
 ```python
 from minions.clients.ollama import OllamaClient
@@ -145,14 +161,16 @@ context = """
 Patient John Doe is a 60-year-old male with a history of hypertension...
 """
 
-task = "Based on the patient's blood pressure and LDL cholesterol readings..."
+task = "Based on the patient's blood pressure and LDL cholesterol..."
 
-output = minion(task=task, context=[context], max_rounds=2)
+output = minion(
+    task=task,
+    context=[context],
+    max_rounds=2
+)
 ```
 
-## Example Code: Minions (Plural)
-
-This example uses `ollama` locally and `openai` remotely with structured output:
+**Example: Minions (Plural)**
 
 ```python
 from minions.clients.ollama import OllamaClient
@@ -181,7 +199,7 @@ context = """
 Patient John Doe is a 60-year-old male with a history of hypertension...
 """
 
-task = "Based on the patient's blood pressure and LDL cholesterol readings..."
+task = "Based on the patient's blood pressure and LDL cholesterol..."
 
 output = minion(
     task=task,
@@ -193,176 +211,128 @@ output = minion(
 
 ## Python Notebook
 
-Explore Minions interactively in a Jupyter Notebook: `minions.ipynb`.
+Explore Minion/Minions in a Python notebook; see `minions.ipynb`.
 
 ## Docker Support
 
-Build, run, and use the Minions protocol within a Docker container.  The container includes an Ollama service for local inference.
+Minions offers Docker support for easy deployment and testing.
 
-### Build the Docker Image
+### Build
 
 ```bash
 docker build -t minions-docker .
 ```
 
-### Run the Container
+### Run
+
+The container automatically runs an Ollama service.
 
 ```bash
-# Basic usage (includes Ollama service)
-docker run -i minions-docker
+docker run -i minions-docker  # Basic usage
 
-# With Docker socket mounted (for Docker Model Runner)
+# With Docker socket mounted
 docker run -i -v /var/run/docker.sock:/var/run/docker.sock minions-docker
 
-# With API keys for remote models
+# With API keys
 docker run -i -e OPENAI_API_KEY=your_key -e ANTHROPIC_API_KEY=your_key minions-docker
 
 # With custom Ollama host
 docker run -i -e OLLAMA_HOST=0.0.0.0:11434 minions-docker
 
-# For Streamlit app (legacy usage)
+# For Streamlit app (legacy)
 docker run -p 8501:8501 --env OPENAI_API_KEY=<your-openai-api-key> --env DEEPSEEK_API_KEY=<your-deepseek-api-key> minions-docker
 ```
 
 ### Docker Minion Protocol Usage
 
-Use JSON input via stdin/stdout:
+Use a JSON input structure to run the minion protocols within the Docker container via stdin/stdout.
 
 ```json
 {
-  "local_client": {
-    "type": "ollama",
-    "model_name": "llama3.2:3b",
-    "port": 11434,
-    "kwargs": {}
-  },
-  "remote_client": {
-    "type": "openai",
-    "model_name": "gpt-4o",
-    "kwargs": {
-      "api_key": "your_openai_key"
-    }
-  },
-  "protocol": {
-    "type": "minion",
-    "max_rounds": 3,
-    "log_dir": "minion_logs",
-    "kwargs": {}
-  },
-  "call_params": {
-    "task": "Your task here",
-    "context": ["Context string 1", "Context string 2"],
-    "max_rounds": 2
-  }
+  "local_client": { ... },
+  "remote_client": { ... },
+  "protocol": { ... },
+  "call_params": { ... }
 }
 ```
 
-**Examples:**
+**Examples**  (See original README for detailed JSON examples.)
 
 ```bash
+# Basic Minion
+echo '{...}' | docker run -i -e OPENAI_API_KEY=$OPENAI_API_KEY minions-docker
+
+# Minions (Parallel)
 echo '{...}' | docker run -i -e OPENAI_API_KEY=$OPENAI_API_KEY minions-docker
 ```
 
+**See original README for detailed information on Client Types, Protocol Types, Output Format, and Environment Variables.**
+
 ## CLI
 
-Use the command line interface to run Minion/Minions.
+Use the command-line interface for interacting with the Minions.
 
-1.  Set your local and remote model choices:
+Set Local/Remote Model:
 
-    ```bash
-    export MINIONS_LOCAL=ollama/llama3.2
-    export MINIONS_REMOTE=openai/gpt-4o
-    ```
+```bash
+export MINIONS_LOCAL=ollama/llama3.2
+export MINIONS_REMOTE=openai/gpt-4o
+```
 
-2.  Run:
+Get help:
 
-    ```bash
-    minions --help
-    minions --context <path_to_context> --protocol <minion|minions>
-    ```
+```bash
+minions --help
+```
 
-## Secure Minions Local-Remote Protocol
+Run:
 
-Implement end-to-end encrypted communication between local and remote LLMs.  Includes attestation, perfect forward secrecy, and replay protection.
-
-1.  Install Secure Dependencies: `pip install -e ".[secure]"`
-2.  Use the Python API or CLI:
-
-    ```python
-    from minions.clients import OllamaClient
-    from secure.minions_secure import SecureMinionProtocol
-
-    local_client = OllamaClient(model_name="llama3.2")
-    protocol = SecureMinionProtocol(...)
-    result = protocol(task="...", context=["..."], max_rounds=2)
-    ```
-
-    ```bash
-    python secure/minions_secure.py ...
-    ```
+```bash
+minions --context <path_to_context> --protocol <minion|minions>
+```
 
 ## Secure Minions Chat
 
-For secure chat functionality, install:
+**For end-to-end encrypted Minions Chat, see the [Secure Minions Chat README](secure/README.md).**
 
 ```bash
 pip install -e ".[secure]"
 ```
 
-See the [Secure Minions Chat README](secure/README.md) for setup and usage.
-
-## Apps
-
-Explore specialized applications within the `apps/` directory:
-
-*   [A2A-Minions](apps/minions-a2a/) - Agent-to-Agent integration
-*   [Character Chat](apps/minions-character-chat/) - Role-playing with AI personas
-*   [Document Search](apps/minions-doc-search/) - Multi-method document retrieval
-*   [Story Teller](apps/minions-story-teller/) - Creative storytelling with illustrations
-*   [Tools Comparison](apps/minions-tools/) - MCP tools performance comparison
-*   [WebGPU App](apps/minions-webgpu/) - Browser-based Minions protocol
+The Secure Minions Local-Remote Protocol provides end-to-end encryption and secure communication. See the original README for detailed instructions.
 
 ## Inference Estimator
 
-Get insights into LLM inference speed on your hardware.
+Use the Inference Estimator to estimate LLM inference speed.
 
-### Command Line Usage
+### Command Line
 
 ```bash
 python -m minions.utils.inference_estimator --model llama3.2 --tokens 1000 --describe
 ```
 
-### Python API Usage
+### Python API
 
 ```python
 from minions.utils.inference_estimator import InferenceEstimator
 
-estimator = InferenceEstimator(model_name="llama3.2", is_quant=True, quant_bits=4)
+estimator = InferenceEstimator(model_name="llama3.2")
 tokens_per_second, estimated_time = estimator.estimate(1000)
-detailed_info = estimator.describe(1000)
 ```
 
 ## Miscellaneous Setup
 
 ### Using Azure OpenAI with Minions
 
-1.  Set environment variables:
+1.  Set Environment Variables:
 
-    ```bash
-    export AZURE_OPENAI_API_KEY=your-api-key
-    export AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
-    export AZURE_OPENAI_API_VERSION=2024-02-15-preview
-    ```
+```bash
+export AZURE_OPENAI_API_KEY=your-api-key
+export AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
+export AZURE_OPENAI_API_VERSION=2024-02-15-preview
+```
 
-2.  Use the Azure OpenAI client in your code:
-
-    ```python
-    from minions.clients.ollama import OllamaClient
-    from minions.clients.azure_openai import AzureOpenAIClient
-    from minions.minion import Minion
-
-    remote_client = AzureOpenAIClient(...)
-    ```
+2.  Example Code:  See original README.
 
 ## Maintainers
 

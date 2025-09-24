@@ -1,45 +1,47 @@
 # dysts: Explore and Analyze Chaotic Systems
 
-**Unleash the power of chaos with `dysts`, a Python library providing a comprehensive toolkit for exploring and analyzing a wide array of chaotic systems.**
+**Unlock the secrets of chaos with `dysts`, a Python library designed for the analysis and simulation of hundreds of dynamical systems.** ([View on GitHub](https://github.com/GilpinLab/dysts))
 
-[![Plots of chaotic systems in the collection](dysts/data/logo.png)](https://github.com/GilpinLab/dysts)
+[![Plots of chaotic systems in the collection](assets/logo.png)](https://github.com/GilpinLab/dysts)
 
-`dysts` allows researchers and enthusiasts to easily access, simulate, and analyze a diverse collection of 135 chaotic systems, enabling a deeper understanding of complex dynamics.
+## Key Features
 
-## Key Features:
+*   **Extensive Collection:** Access and simulate 135+ continuous-time chaotic systems, including delay differential equations, and 10 discrete maps.
+*   **Easy-to-Use Interface:** Import models, modify parameters, and generate trajectories with a straightforward Python API.
+*   **Precomputed Data:** Access a database of precomputed time series for rapid analysis and experimentation [HuggingFace](https://huggingface.co/datasets/williamgilpin/dysts).
+*   **Optimized Performance:** Benefit from `numba` compilation and vectorized ensembles for efficient simulations.
+*   **Detailed Metadata:** Explore systems with metadata, including attractor names, default parameters, and references, sourced from JSON database files.
+*   **Benchmarking & Forecasting:** Provides tools for forecasting and data-driven modeling tasks, with access to benchmark datasets and example notebooks.
 
-*   **Extensive Collection:** Access and analyze 135 continuous-time chaotic systems and 10 discrete maps.
-*   **Easy Simulation:** Simulate chaotic systems with simple Python commands.
-*   **Customization:** Modify parameters and initial conditions to explore different behaviors.
-*   **Precomputed Datasets:** Load precomputed time series datasets for efficient analysis.
-*   **Benchmarking:** Access benchmark data for forecasting and model evaluation.
-*   **Numba Compilation:** Benefit from performance improvements using Numba for fast computation.
-*   **Comprehensive Documentation:** Detailed API documentation for ease of use.
-*   **Integration with the HuggingFace Hub:** Explore precomputed time series datasets on [HuggingFace](https://huggingface.co/datasets/williamgilpin/dysts).
+## Installation
 
-## Quick Start:
+Install `dysts` using pip:
 
-### Basic Usage
+```bash
+pip install dysts
+```
+
+For more options, including installing from GitHub and installing precomputed trajectories, see the [Additional Installation Guide](#additional-installation-guide).
+
+## Basic Usage
+
+Simulate a chaotic system with default parameters:
 
 ```python
 from dysts.flows import Lorenz
 
 model = Lorenz()
-sol = model.make_trajectory(1000)
-# plt.plot(sol[:, 0], sol[:, 1])
+sol = model.make_trajectory(1000)  # (1000, 3)
 ```
 
-### Modify parameters:
+Customize the system's parameters and initial conditions:
 
 ```python
-model = Lorenz()
-model.gamma = 1
-model.ic = [0.1, 0.0, 5]
-sol = model.make_trajectory(1000)
-# plt.plot(sol[:, 0], sol[:, 1])
+model = Lorenz(parameters={"beta": 0.7, "rho": 3, "signma": 0.1}, ic=[0.1, 0.0, 5])
+sol = model.make_trajectory(1000)  # (1000, 3)
 ```
 
-### Generate ensembles:
+Generate trajectories from multiple systems:
 
 ```python
 from dysts.systems import make_trajectory_ensemble
@@ -47,48 +49,23 @@ from dysts.systems import make_trajectory_ensemble
 all_out = make_trajectory_ensemble(100, resample=True, pts_per_period=75)
 ```
 
-### Load a precomputed dataset:
+## Contents
 
-```python
-from dysts.datasets import load_dataset
+*   **`skewgen` Branch:** Code for generating novel skew-dynamical systems.
+*   **Benchmarks Repository:**  Separate repository ([benchmarks repository](https://github.com/williamgilpin/dysts_data/tree/main/dysts_data/benchmarks)) containing code for forecasting and training experiments.
+*   **`chaotic_attractors.json`:** Metadata for all chaotic systems, used as default parameters in `dysts/flows.py`.
+*   **`discrete_maps.json`:** Metadata for discrete maps.
 
-data = load_dataset(subsets="train", data_format="numpy", standardize=True)
-```
+## Benchmarks
 
-For more examples and in-depth explanations, explore the [`demonstrations notebook`](demos.ipynb) and consult the full API documentation [here](https://gilpinlab.github.io/dysts/spbuild/html/index.html).
+The benchmarks reported in publications are stored in the [benchmarks repository](https://github.com/williamgilpin/dysts_data/tree/main/dysts_data/benchmarks).  An overview of the directory contents is in [`BENCHMARKS.md`](https://github.com/williamgilpin/dysts_data/tree/main/dysts_data/benchmarks/BENCHMARKS.md). Individual task areas are summarized in corresponding Jupyter Notebooks.
 
-## Installation:
+## Additional Installation Guide
 
-Install `dysts` from PyPI:
-
-```bash
-pip install dysts
-```
-
-For more installation options, including the latest features from GitHub and optional datasets, please see the [Additional Installation Guide](#additional-installation-guide) section below.
-
-## Benchmarks:
-
-Explore the benchmarks used in our publications in the separate [benchmarks repository](https://github.com/williamgilpin/dysts_data/tree/main/dysts_data/benchmarks). An overview can be found in [`BENCHMARKS.md`](https://github.com/williamgilpin/dysts_data/tree/main/dysts_data/benchmarks/BENCHMARKS.md).
-
-## Contents:
-
-*   Code to generate benchmark forecasting and training experiments are included in a separate [benchmarks repository](https://github.com/williamgilpin/dysts_data/tree/main/dysts_data/benchmarks)
-*   Pre-computed time series with training and test partitions are included in [`data`](dysts/data/)
-*   Raw definitions metadata for all chaotic systems are included in the database file [`chaotic_attractors`](dysts/data/chaotic_attractors.json). The Python implementations of differential equations can be found in [`the flows module`](dysts/flows.py)
-
-## Additional Installation Guide:
-
-To obtain the latest version directly from GitHub:
+To obtain the latest features and bug fixes, install directly from GitHub:
 
 ```bash
 pip install git+https://github.com/williamgilpin/dysts
-```
-
-Run the tests:
-
-```bash
-python -m unittest
 ```
 
 To install the optional precomputed trajectories and benchmark results:
@@ -97,39 +74,31 @@ To install the optional precomputed trajectories and benchmark results:
 pip install git+https://github.com/williamgilpin/dysts_data
 ```
 
-## Implementation Notes:
+## Testing
 
-*   The library currently includes 135 continuous-time models, including delay differential equations, and a module with 10 discrete maps.
-*   Dynamical equations are compiled using `numba` for performance where possible, and ensembles of trajectories are vectorized.
-*   Metadata such as attractor names, default parameter values, and references are stored in JSON files.
-*   The integration timestep (`dt`) is chosen based on the highest significant frequency. The `period` field indicates the dominant timescale in each system. Using `resample=True` ensures trajectories have consistent timescales across models, regardless of the integration timestep.
-
-## Testing:
-
-Run the unit tests using:
+The code is tested using the `unittest` framework. Run tests with:
 
 ```bash
 python -m unittest discover tests
 ```
 
-## Reference:
+## Implementation Notes
 
-If you use this code for published work, please cite the following papers:
+*   **Model Diversity:** Includes 135 continuous-time models and 10 discrete maps.
+*   **Performance Optimization:**  `numba` is used for compilation of differential equations, with vectorization for ensembles.
+*   **Metadata Driven:** Metadata, including default parameters and initial conditions, is stored in JSON files.
+*   **Time Scale Consistency:** The `dt` and `period` fields are used to ensure consistent timescales across models, especially when using `resample=True`.
+
+## References
+
+For more information, and if using this code for published work, please cite the following papers:
 
 > William Gilpin. "Chaos as an interpretable benchmark for forecasting and data-driven modelling" Advances in Neural Information Processing Systems (NeurIPS) 2021 https://arxiv.org/abs/2110.05266
 
 > William Gilpin. "Model scale versus domain knowledge in statistical forecasting of chaotic systems" Physical Review Research 2023 https://arxiv.org/abs/2303.08011
 
-## Acknowledgements:
+## Acknowledgements
 
-*   Collections of named systems from [J&uuml;rgen Meier](http://www.3d-meier.de/tut19/Seite1.html) and [J. C. Sprott](http://sprott.physics.wisc.edu/sprott.htm) are incorporated.
-*   The library [nolds](https://github.com/CSchoel/nolds) is used for several analysis routines.
-*   Lyapunov exponent calculation is based on the QR factorization approach by Wolf et al. 1985 and Eckmann et al. 1986, with implementation details adapted from Julia library [DynamicalSystems.jl](https://github.com/JuliaDynamics/DynamicalSystems.jl/)
-
-## Contributing:
-
-We welcome suggestions and contributions! See [`CONTRIBUTING.md`](CONTRIBUTING.md) for more information.
-
-## Original Repo:
-
-[https://github.com/GilpinLab/dysts](https://github.com/GilpinLab/dysts)
+*   [Jürgen Meier](http://www.3d-meier.de/tut19/Seite1.html) and [J. C. Sprott](http://sprott.physics.wisc.edu/sprott.htm) for existing collections of named systems.
+*   [nolds](https://github.com/CSchoel/nolds) for several analysis routines.
+*   [Wolf et al 1985](https://www.sciencedirect.com/science/article/abs/pii/0167278985900119) and [Eckmann et al 1986](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.34.4971), and the Julia library [DynamicalSystems.jl](https://github.com/JuliaDynamics/DynamicalSystems.jl/) for the Lyapunov exponent calculation.

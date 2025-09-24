@@ -4,22 +4,26 @@
 <img src="https://hosted.weblate.org/widgets/librephotos/-/librephotos-frontend/svg-badge.svg" alt="Translation status" />
 </a>
 
-# LibrePhotos: Your Self-Hosted Photo and Video Management Solution
+# LibrePhotos: Your Self-Hosted, Open-Source Photo Management Solution
 
-LibrePhotos empowers you to take control of your digital memories with a feature-rich, open-source photo and video management solution.  ([View on GitHub](https://github.com/LibrePhotos/librephotos))
+**Tired of proprietary photo storage?** LibrePhotos is a powerful, open-source photo management solution that gives you full control over your memories.  [Check out the original repository](https://github.com/LibrePhotos/librephotos) to learn more!
 
-![LibrePhotos Screenshot](https://github.com/LibrePhotos/librephotos/blob/dev/screenshots/mockups_main_fhd.png?raw=true)
+[![](https://github.com/LibrePhotos/librephotos/blob/dev/screenshots/mockups_main_fhd.png?raw=true)](https://github.com/LibrePhotos/librephotos/blob/dev/screenshots/mockups_main_fhd.png?raw=true)
 <sub>Mockup designed by rawpixel.com / Freepik</sub>
 
 ## Key Features
 
-*   **Comprehensive Media Support:** Supports photos (including RAW files) and videos.
-*   **Organized Timeline View:** Browse your photos and videos in a chronological timeline.
-*   **Automated Organization:** Scans your file system and generates albums based on events.
-*   **Multi-User Support:** Share and manage your photos with others.
-*   **Intelligent Features:** Includes face recognition, object/scene detection, and semantic image search for easy organization and discovery.
-*   **Advanced Search:** Search by metadata.
-*   **Geotagging:** Reverse geocoding functionality.
+*   **Comprehensive Media Support:** Supports photos (including RAW) and videos.
+*   **Intelligent Organization:**
+    *   Timeline View for easy browsing.
+    *   Automatic album generation based on events (e.g., "Thursday in Berlin").
+    *   Scans photos directly from your file system.
+*   **Advanced Search & Recognition:**
+    *   Face recognition and classification.
+    *   Object and scene detection.
+    *   Semantic image search.
+    *   Search by metadata.
+*   **Multi-User Support:** Easily share and manage photos with others.
 
 ## Demos
 
@@ -28,45 +32,31 @@ LibrePhotos empowers you to take control of your digital memories with a feature
 
 ## Installation
 
-Detailed installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install).
+Detailed installation instructions are available in the [LibrePhotos documentation](https://docs.librephotos.com/docs/installation/standard-install).
 
-## How to Contribute and Get Involved
+## How to Contribute & Help Out
 
 We welcome contributions from the community! Here's how you can help:
 
-*   ⭐ **Star the Repository:** Show your support by starring the project on GitHub!
-*   🚀 **Development:** Get started developing in less than 30 minutes by following [this guide](https://docs.librephotos.com/docs/development/dev-install).
-*   🗒️ **Documentation:** Improve the documentation by submitting pull requests [here](https://github.com/LibrePhotos/librephotos.docs).
-*   🧪 **Testing:** Help us find bugs by using the `dev` tag and reporting issues.
-*   🧑‍🤝‍🧑 **Outreach:** Spread the word about LibrePhotos and help others get started.
-*   🌐 **Translations:** Make LibrePhotos accessible to a wider audience through [Weblate](https://hosted.weblate.org/engage/librephotos/).
-*   💸 **Donate:** Support the project's developers via [GitHub Sponsors](https://github.com/sponsors/derneuere).
+*   ⭐ **Star** the repository on GitHub!
+*   🚀 **Develop:** Get started quickly with our [development guide](https://docs.librephotos.com/docs/development/dev-install).
+*   🗒️ **Document:** Improve the documentation by submitting a pull request [here](https://github.com/LibrePhotos/librephotos.docs).
+*   🧪 **Test:** Help us find bugs by using the `dev` tag and reporting issues.
+*   🧑‍🤝‍🧑 **Spread the Word:** Share LibrePhotos with others!
+*   🌐 **Translate:**  Help make LibrePhotos accessible to more people through [weblate](https://hosted.weblate.org/engage/librephotos/).
+*   💸 [**Donate**](https://github.com/sponsors/derneuere) to support the developers.
 
 ## Technologies Used
 
-LibrePhotos leverages several powerful open-source technologies:
+LibrePhotos leverages several powerful open-source tools:
 
 *   **Image Conversion:** [ImageMagick](https://github.com/ImageMagick/ImageMagick)
 *   **Video Conversion:** [FFmpeg](https://github.com/FFmpeg/FFmpeg)
-*   **Exif Support:** [ExifTool](https://github.com/exiftool/exiftool)
+*   **EXIF Data Handling:** [ExifTool](https://github.com/exiftool/exiftool)
 *   **Face Detection:** [face_recognition](https://github.com/ageitgey/face_recognition)
-*   **Face Classification/Clusterization:** [scikit-learn](https://scikit-learn.org/) and [hdbscan](https://github.com/scikit-learn-contrib/hdbscan)
+*   **Face Classification:** [scikit-learn](https://scikit-learn.org/) and [hdbscan](https://github.com/scikit-learn-contrib/hdbscan)
 *   **Image Captioning:** [im2txt](https://github.com/HughKu/Im2txt)
 *   **Scene Classification:** [places365](http://places.csail.mit.edu/)
 *   **Reverse Geocoding:** [geopy](https://github.com/geopy/geopy)
 
 [discord]: https://discord.gg/xwRvtSDGWb
-```
-Key improvements and SEO considerations:
-
-*   **Clear Headline:** Uses "LibrePhotos: Your Self-Hosted Photo and Video Management Solution" which is more descriptive and keyword-rich.
-*   **One-Sentence Hook:** Immediately tells the user what the project *is*.
-*   **Keyword Optimization:** Uses keywords like "self-hosted," "photo management," and "video management" throughout.
-*   **Bulleted Key Features:** Makes the features easy to scan and digest.
-*   **Call to Action:**  "View on GitHub" with a direct link.
-*   **Links to Key Resources:** Includes direct links to the demos, documentation, and contribution sections.
-*   **Concise Language:**  Streamlined the text for better readability.
-*   **"How to Contribute" Section:**  Clear, concise instructions on how to contribute and get involved.  Encourages contributions.
-*   **Technologies Used Section:**  Lists the key technologies to further increase SEO.
-*   **Markdown Formatting:** Consistent and well-formatted Markdown for readability on GitHub.
-*   **Removed Redundancy:** Removed some redundant phrases and information.

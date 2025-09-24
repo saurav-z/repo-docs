@@ -4,9 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">
-  Codegen: Automate Software Development with AI
-</h1>
+<h1 align="center">Codegen SDK: Unleash the Power of AI for Software Development</h1>
 
 <div align="center">
 
@@ -20,66 +18,64 @@
 
 <br />
 
-**Codegen empowers developers with AI-powered code generation and automation, streamlining your software development workflow.**  This Python SDK provides a programmatic interface to the powerful code agents offered by [Codegen](https://codegen.com).
+**The Codegen SDK empowers developers with an AI-powered coding assistant that helps you write, debug, and improve code more efficiently.** This SDK provides a programmatic interface to the powerful code agents available through [Codegen](https://codegen.com), offering seamless integration into your existing development workflow.
 
-## Key Features of the Codegen SDK
+## Key Features
 
-*   **AI-Driven Code Generation:** Leverage AI to automate the creation of new features, bug fixes, and more.
-*   **Easy Integration:** Simple Python SDK for interacting with Codegen's code agents.
-*   **Status Tracking:** Monitor the progress of your code generation tasks.
-*   **Flexible Deployment:** Integrate Codegen into your existing development workflows.
-*   **Self-Updating CLI:** Stay up-to-date with the latest features and improvements through the built-in update system.
+*   **AI-Powered Code Generation:** Leverage AI to generate code snippets, implement new features, and automate repetitive tasks.
+*   **Easy Integration:** Integrate Codegen's AI agents directly into your Python applications with a simple and intuitive SDK.
+*   **Task Management:** Track the status and progress of your code generation tasks.
+*   **Flexible Deployment:** Supports various installation methods, including pip, pipx, and uv.
+*   **Automated Updates:** Stay up-to-date with the latest features and improvements using the built-in self-update system.
 
 ## Getting Started
 
-Here's how to quickly get started with the Codegen SDK:
+Install the Codegen SDK using your preferred package manager:
 
-1.  **Installation:**
+```bash
+pip install codegen
+# or
+pipx install codegen
+# or
+uv tool install codegen
+```
 
-    Install the SDK using pip, pipx, or uv:
+### Usage Example
 
-    ```bash
-    pip install codegen
-    # or
-    pipx install codegen
-    # or
-    uv tool install codegen
-    ```
+Here's a quick example of how to use the SDK:
 
-2.  **Usage:**
+```python
+from codegen.agents.agent import Agent
 
-    ```python
-    from codegen.agents.agent import Agent
+# Initialize the Agent with your organization ID and API token
+agent = Agent(
+    org_id="YOUR_ORG_ID",  # Find this at codegen.com/token
+    token="YOUR_API_TOKEN",  # Get this from codegen.com/token
+    # base_url="https://codegen-sh-rest-api.modal.run",  # Optional - defaults to production
+)
 
-    # Initialize the Agent with your organization ID and API token
-    agent = Agent(
-        org_id="YOUR_ORG_ID",  # Find this at codegen.com/token
-        token="YOUR_API_TOKEN",  # Get this from codegen.com/token
-        # base_url="https://codegen-sh-rest-api.modal.run",  # Optional - defaults to production
-    )
+# Run an agent with a prompt
+task = agent.run(prompt="Implement a new feature to sort users by last login.")
 
-    # Run an agent with a prompt
-    task = agent.run(prompt="Implement a new feature to sort users by last login.")
+# Check the initial status
+print(task.status)
 
-    # Check the initial status
-    print(task.status)
+# Refresh the task to get updated status (tasks can take time)
+task.refresh()
 
-    # Refresh the task to get updated status (tasks can take time)
-    task.refresh()
+# Check the updated status
+print(task.status)
 
-    # Check the updated status
-    print(task.status)
+# Once task is complete, you can access the result
+if task.status == "completed":
+    print(task.result)  # Result often contains code, summaries, or links
+```
 
-    # Once task is complete, you can access the result
-    if task.status == "completed":
-        print(task.result)  # Result often contains code, summaries, or links
-    ```
+Get your API token and organization ID at [codegen.com/token](https://codegen.com/token) and explore the full potential of Codegen at [codegen.com](https://codegen.com).
 
-3.  **Obtain your API token:**  Get your API token from [codegen.com/token](https://codegen.com/token) and start building!
+## Staying Up-to-Date
 
-## Keeping the Codegen CLI Up-to-Date
-
-The Codegen CLI includes a built-in self-update system:
+Keep your SDK up-to-date with the Codegen CLI:
 
 ```bash
 # Update to the latest version
@@ -92,20 +88,19 @@ codegen update --check
 codegen update --version 1.2.3
 ```
 
-The CLI automatically checks for updates daily and notifies you when a new version is available.
-
 ## Resources
 
-*   [Docs](https://docs.codegen.com)
+*   [Documentation](https://docs.codegen.com)
 *   [Getting Started](https://docs.codegen.com/introduction/getting-started)
-*   [Contributing](CONTRIBUTING.md)
+*   [Contributing Guide](CONTRIBUTING.md)
 *   [Contact Us](https://codegen.com/contact)
-*   **[Original Repository](https://github.com/codegen-sh/codegen)**
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up the development environment and submit contributions.
+We welcome contributions!  Please refer to our [Contributing Guide](CONTRIBUTING.md) for instructions on how to set up your development environment and submit pull requests.
 
 ## Enterprise
 
-For more information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
+For information on enterprise engagements, please [contact us](https://codegen.com/contact) or [request a demo](https://codegen.com/request-demo).
+
+**[Back to Original Repository](https://github.com/codegen-sh/codegen)**
