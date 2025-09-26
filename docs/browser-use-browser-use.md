@@ -4,9 +4,9 @@
   <img alt="Shows a black Browser Use Logo in light color mode and a white one in dark color mode." src="./static/browser-use.png"  width="full">
 </picture>
 
-<h1 align="center">Browser Use: Automate Your Browser with AI</h1>
+<h1 align="center">Browser-Use: Automate Your Browser with AI</h1>
 
-**Browser Use empowers you to control your web browser with natural language, making web automation effortless.**  Learn more and contribute on the [Browser Use GitHub](https://github.com/browser-use/browser-use).
+**Browser-Use empowers you to control your browser with natural language, unlocking a new level of automation.** Learn more at the [original repository](https://github.com/browser-use/browser-use).
 
 [![Docs](https://img.shields.io/badge/Docs-📕-blue?style=for-the-badge)](https://docs.browser-use.com)
 [![Browser-use cloud](https://img.shields.io/badge/Browser_Use_Cloud-☁️-blue?style=for-the-badge&logo=rocket&logoColor=white)](https://cloud.browser-use.com)
@@ -29,35 +29,38 @@
 
 ## Key Features
 
-*   **AI-Powered Automation:** Control your browser using natural language instructions.
-*   **Easy Setup:** Quick installation with `uv pip install browser-use`.
-*   **Cloud Integration:** Utilize Browser Use Cloud for browser execution.
-*   **Flexible Language Model Support:** Works with various LLMs, including Gemini.
-*   **Comprehensive Documentation:**  Explore detailed documentation for advanced usage.
-*   **MCP Integration:**  Integrate with Claude Desktop.
+*   **AI-Powered Browser Automation:** Control your browser with natural language prompts.
+*   **Easy Setup:** Get started quickly with simple installation steps.
+*   **Cloud Integration:** Leverage the Browser-Use Cloud for enhanced performance.
+*   **Example Use Cases:** Explore practical demos such as grocery shopping and job applications.
+*   **MCP Integration:** Seamlessly integrate with MCP for extended capabilities.
 
 ## Quickstart
 
-Get started in minutes!
+Follow these steps to get up and running:
+
+**1. Install Dependencies:**
 
 ```bash
-#  We ship every day - use the latest version!
+# Use uv (Python>=3.11)
 uv pip install browser-use
 ```
 
-Download chromium using playwright's shortcut:
+**2. Download Chromium:**
 
 ```bash
 uvx playwright install chromium --with-deps --no-shell
 ```
 
-Create a `.env` file and add your API key. Don't have one? Start with a [free Gemini key](https://aistudio.google.com/app/u/1/apikey?pli=1).
+**3. Configure API Key:**
 
-```bash
-GEMINI_API_KEY=
+Create a `.env` file and add your API key (e.g., a free [Gemini key](https://aistudio.google.com/app/u/1/apikey?pli=1)):
+
+```
+GEMINI_API_KEY=YOUR_API_KEY
 ```
 
-Run your first agent:
+**4. Run Your First Agent:**
 
 ```python
 from browser_use import Agent, ChatGoogle
@@ -72,20 +75,31 @@ agent = Agent(
 agent.run_sync()
 ```
 
-Check out the [library docs](https://docs.browser-use.com) and [cloud docs](https://docs.cloud.browser-use.com) for more settings.
+**5. Explore Further:**
 
-## Examples
+Check out the [library docs](https://docs.browser-use.com) and [cloud docs](https://docs.cloud.browser-use.com) for more detailed information.
 
-Explore real-world use cases:
+## Demos & Use Cases
 
-*   **Shopping:** Add grocery items to your cart and checkout.  [See Demo](https://www.youtube.com/watch?v=L2Ya9PYNns8)
-*   **Job Application:** Read your CV and automatically apply for jobs.
-*   **More Examples:** [Check out more examples](https://docs.browser-use.com/examples)
+Explore the possibilities with these examples:
 
-<br/><br/>
+**1. Automated Grocery Shopping**
+
+*   [Task](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/shopping.py): Add grocery items to cart and checkout.
+    [![AI Did My Groceries](https://github.com/user-attachments/assets/a0ffd23d-9a11-4368-8893-b092703abc14)](https://www.youtube.com/watch?v=L2Ya9PYNns8)
+
+**2. AI-Powered Job Application**
+
+*   [Task](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/find_and_apply_to_jobs.py): Read your CV, find relevant ML jobs, and apply for them.
+    <br/>
+    https://github.com/user-attachments/assets/171fb4d6-0355-46f2-863e-edb04a828d04
+    <br/><br/>
+    For more examples, visit the [examples](https://docs.browser-use.com/examples) page and give us a star!
+
 ## MCP Integration
 
-This gives Claude Desktop access to browser automation tools for web scraping, form filling, and more. See the [MCP docs](https://docs.browser-use.com/customize/mcp-server).
+Integrate Browser-Use with Claude Desktop for extended browser automation functionalities, including web scraping and form filling.  See the [MCP docs](https://docs.browser-use.com/customize/mcp-server).
+
 ```json
 {
   "mcpServers": {
@@ -102,7 +116,7 @@ This gives Claude Desktop access to browser automation tools for web scraping, f
 
 <div align="center">
   
-**Tell your computer what to do, and it gets it done.**
+**Unleash the power of AI to control your digital world, making your browser your personal assistant.**
 
 <img src="https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f" width="400"/>
 

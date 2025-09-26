@@ -1,90 +1,97 @@
-# Borgmatic: Effortless, Configurable Backups for Servers and Workstations
+# borgmatic: Secure, Configurable Backup Software
 
-**Secure your data with borgmatic, a powerful and easy-to-use backup solution that protects your files and databases with client-side encryption.**  [Learn more at the original repository](https://github.com/borgmatic-collective/borgmatic).
+**Protect your valuable data with borgmatic, the configuration-driven backup solution that offers client-side encryption and database support.**  This README provides an overview of borgmatic, its key features, integrations, and how to get started.  Find the original repository [here](https://github.com/borgmatic-collective/borgmatic).
 
-## Key Features
+## Key Features:
 
-*   **Configuration-Driven:** Easily manage your backups through a simple configuration file.
-*   **Client-Side Encryption:** Protect your data with robust encryption, ensuring your backups are secure.
-*   **Database Support:** Back up your databases (PostgreSQL, MySQL, MariaDB, MongoDB, SQLite) alongside your files.
-*   **Flexible Retention Policies:** Define how many backups to keep with customizable retention settings.
-*   **Integrated Monitoring:** Monitor your backups with integrations for various third-party services.
-*   **Automated Pre/Post Backup Scripts:** Allows the running of custom scripts to prepare data for backup.
-
-## Why Choose Borgmatic?
-
-*   **Simplicity:** Easy to set up and configure, making it accessible for all users.
-*   **Security:** Client-side encryption ensures your data is protected at all times.
-*   **Reliability:** Built upon the solid foundation of [Borg Backup](https://www.borgbackup.org/), a well-established backup solution.
-*   **Flexibility:** Supports a wide range of data sources and destinations.
-*   **Monitoring and Notification:** Stay informed about the status of your backups with comprehensive monitoring features.
+*   **Client-Side Encryption:** Ensures your backups are secure.
+*   **Configuration-Driven:** Easily configure backups via YAML files.
+*   **Database Backup Support:**  Includes support for popular databases.
+*   **Flexible Repository Options:** Backup to local or remote repositories.
+*   **Retention Policies:** Define how long to keep your backups.
+*   **Backup Validation:** Built-in checks to verify backup integrity.
+*   **Custom Scripts:** Run scripts before or after backup actions.
+*   **Third-Party Integrations:**  Monitor backups with various services.
 
 ## Integrations
 
-borgmatic seamlessly integrates with various services to enhance your backup experience:
+borgmatic seamlessly integrates with a variety of services to enhance your backup experience:
 
 ### Data
-*   [PostgreSQL](https://www.postgresql.org/)
-*   [MySQL](https://www.mysql.com/)
-*   [MariaDB](https://mariadb.com/)
-*   [MongoDB](https://www.mongodb.com/)
-*   [SQLite](https://sqlite.org/)
-*   [OpenZFS](https://openzfs.org/)
-*   [Btrfs](https://btrfs.readthedocs.io/)
-*   [LVM](https://sourceware.org/lvm2/)
-*   [rclone](https://rclone.org)
-*   [BorgBase](https://www.borgbase.com/?utm_source=borgmatic)
+
+*   PostgreSQL
+*   MySQL
+*   MariaDB
+*   MongoDB
+*   SQLite
+*   OpenZFS
+*   Btrfs
+*   LVM
+*   rclone
+*   BorgBase
 
 ### Monitoring
-*   [Healthchecks](https://healthchecks.io/)
-*   [Uptime Kuma](https://uptime.kuma.pet/)
-*   [Cronitor](https://cronitor.io/)
-*   [Cronhub](https://cronhub.io/)
-*   [PagerDuty](https://www.pagerduty.com/)
-*   [Pushover](https://www.pushover.net/)
-*   [ntfy](https://ntfy.sh/)
-*   [Loki](https://grafana.com/oss/loki/)
-*   [Apprise](https://github.com/caronc/apprise/wiki)
-*   [Zabbix](https://www.zabbix.com/)
-*   [Sentry](https://sentry.io/)
+
+*   Healthchecks
+*   Uptime Kuma
+*   Cronitor
+*   Cronhub
+*   PagerDuty
+*   Pushover
+*   ntfy
+*   Loki
+*   Apprise
+*   Zabbix
+*   Sentry
 
 ### Credentials
-*   [systemd](https://systemd.io/)
-*   [Docker](https://www.docker.com/)
-*   [Podman](https://podman.io/)
-*   [KeePassXC](https://keepassxc.org/)
+
+*   systemd
+*   Docker
+*   Podman
+*   KeePassXC
 
 ## Getting Started
 
-To start backing up your data with borgmatic, begin by [installing and configuring](https://torsion.org/borgmatic/docs/how-to/set-up-backups/) the software.
+1.  **Installation and Configuration:**  Start by [installing and configuring borgmatic](https://torsion.org/borgmatic/docs/how-to/set-up-backups/).
+2.  **Documentation:** Explore the [borgmatic how-to and reference guides](https://torsion.org/borgmatic/#documentation) for detailed information.
 
 ## Hosting Providers
 
-For off-site backup storage, consider these providers that support Borg/borgmatic:
+For off-site backup storage, consider these Borg/borgmatic-friendly hosting providers:
 
-*   <a href="https://www.borgbase.com/?utm_source=borgmatic">BorgBase</a>: Borg hosting with monitoring, 2FA, and append-only repos.
-*   <a href="https://hetzner.cloud/?ref=v9dOJ98Ic9I8">Hetzner</a>: Storage boxes that support Borg.
-
-rsync.net also offers compatible storage.
+*   [BorgBase](https://www.borgbase.com/?utm_source=borgmatic): Borg hosting service with support for monitoring, 2FA, and append-only repos
+*   [Hetzner](https://hetzner.cloud/?ref=v9dOJ98Ic9I8): A "storage box" that includes support for Borg
+*   rsync.net (compatible storage offering, but does not fund borgmatic development or hosting.)
 
 ## Support and Contributing
 
 ### Issues
-Report issues or suggest feature enhancements on our [issue tracker](https://projects.torsion.org/borgmatic-collective/borgmatic/issues). You'll need to [register](https://projects.torsion.org/user/sign_up?invite_code=borgmatic) to create a new issue or comment, or [login directly](https://projects.torsion.org/user/login) via your GitHub account. See the [security policy](https://torsion.org/borgmatic/docs/security-policy/) for any security issues.
+
+Report issues or suggest feature enhancements via the [issue tracker](https://projects.torsion.org/borgmatic-collective/borgmatic/issues) (registration required).
 
 ### Social
-Follow borgmatic on Mastodon: <a rel="me" href="https://floss.social/@borgmatic">@borgmatic</a>
+
+*   Follow borgmatic on Mastodon: <a rel="me" href="https://floss.social/@borgmatic">borgmatic on Mastodon</a>.
 
 ### Chat
-Join the `#borgmatic` IRC channel on Libera Chat via <a href="https://web.libera.chat/#borgmatic">web chat</a> or your favorite <a href="ircs://irc.libera.chat:6697">IRC client</a>.
+
+*   Join the `#borgmatic` IRC channel on Libera Chat via <a href="https://web.libera.chat/#borgmatic">web chat</a> or a native <a href="ircs://irc.libera.chat:6697">IRC client</a>.
 
 ### Other
-Contact [witten@torsion.org](mailto:witten@torsion.org) for other inquiries.
+
+*   For other questions or comments, contact [witten@torsion.org](mailto:witten@torsion.org).
 
 ### Contributing
-View borgmatic's [source code](https://projects.torsion.org/borgmatic-collective/borgmatic) and its read-only mirror on [GitHub](https://github.com/borgmatic-collective/borgmatic).
 
-borgmatic is licensed under the GNU General Public License version 3 or any later version. To contribute, submit a [pull request](https://projects.torsion.org/borgmatic-collective/borgmatic/pulls) or open an [issue](https://projects.torsion.org/borgmatic-collective/borgmatic/issues), after [registering](https://projects.torsion.org/user/sign_up?invite_code=borgmatic).  Refer to the [borgmatic development how-to](https://torsion.org/borgmatic/docs/how-to/develop-on-borgmatic/) to learn about cloning the source code, running tests, and more.
+The [source code](https://projects.torsion.org/borgmatic-collective/borgmatic) is available.  A read-only mirror is also available on [GitHub](https://github.com/borgmatic-collective/borgmatic).  Contribute by submitting a [pull request](https://projects.torsion.org/borgmatic-collective/borgmatic/pulls) or opening an [issue](https://projects.torsion.org/borgmatic-collective/borgmatic/issues) (registration required).
 
-### Recent Contributors
-(Include contributor list here - as per original README)
+Check out the [borgmatic development how-to](https://torsion.org/borgmatic/docs/how-to/develop-on-borgmatic/) for development details.
+
+### Recent contributors
+
+Thanks to all borgmatic contributors! There are multiple ways to contribute to
+this project, so the following includes those who have fixed bugs, contributed
+features, *or* filed tickets.
+
+{% include borgmatic/contributors.html %}

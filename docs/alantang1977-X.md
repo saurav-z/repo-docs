@@ -1,20 +1,18 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/alantang1977/X/main/Pictures/SuperMAN.png" alt="logo"/>
-  <h1 align="center">X: Your Ultimate Resource for Streaming and IPTV</h1>
+  <h1 align="center">X: 影视资源聚合与分享</h1>
 </div>
 
 <div align="center">
-    💋This repository shares resources from various sources. Please review the disclaimer below before use.
-    👉By using this repository, you agree to the terms and conditions outlined in the disclaimer. The maintainers reserve the right to update the disclaimer at any time.
+  <p>Discover a curated collection of streaming resources and tools, sourced from community contributions and designed for personal use. <a href="https://github.com/alantang1977/X">Explore the repository</a> for the latest updates.</p>
 </div>
 
-<br>
 <p align="center">
   <a href="https://github.com/alantang1977/X/releases">
     <img src="https://img.shields.io/github/v/release/alantang1977/X" alt="Release"/>
   </a>
   <a href="https://www.python.org/">
-    <img src="https://img.shields.io/badge/python-%20%3D%203.13-47c219" alt="Python 3.13"/>
+    <img src="https://img.shields.io/badge/python-%20%3D%203.13-47c219" alt="Python"/>
   </a>
   <a href="https://github.com/alantang1977/X/releases">
     <img src="https://img.shields.io/github/downloads/alantang1977/X/total" alt="Downloads"/>
@@ -27,75 +25,17 @@
   </a>
 </p>
 
-## Introduction: Your Gateway to Streaming Resources
 
-This repository, X, is a curated collection of streaming resources, including IPTV links, app sources, and tools to enhance your viewing experience.  [Visit the original repository](https://github.com/alantang1977/X) for more details.
+## Key Features
 
-**Key Features:**
+*   **Diverse Resource Compilation**: Aggregates a wide range of streaming sources, including TV channels, IPTV streams, and movie/TV show links.
+*   **Community-Driven Content**: Relies on shared resources from the community, ensuring a constantly updated collection.
+*   **Tool Integration**: Includes links to helpful tools like Github file accelerators and M3U8 web players, improving usability.
+*   **Comprehensive Resource Categories**:  Organizes resources into easy-to-browse categories, such as IPTV sources, TV Box configurations, and 4K image resources.
 
-*   **IPTV Resources:**  Access a wide range of IPTV sources, including live TV channels from various regions,  with both IPv4 and IPv6 support.
-*   **App Sources and APKs:**  Find links to popular streaming apps and APKs for easy installation.
-*   **Decryption Tools and Guides:**  Utilize tools and guides for unencrypting and accessing streaming content.
-*   **Github Acceleration:** Discover multiple github mirror and proxy servers for faster downloads.
-*   **4K & HD Wallpapers:** Enjoy a variety of high-quality wallpapers from various sources.
+## Quick Links
+*   [Original Repository](https://github.com/alantang1977/X)
 
 ## Disclaimer
 
-***
-
-### **Important legal information:**
-
-*   This repository contains third-party resources.  Content legality, accuracy, and validity are not guaranteed.
-*   The content provided is for testing and learning only and is prohibited for commercial use.
-*   Users are responsible for their usage and compliance with all applicable laws.
-
-## Resources
-
-### TVBox/影视 APP Sources:
-
-*   Includes sources for standard and Pro versions of various apps.
-*   Links to streaming interfaces and resources.
-
-### 解密链接 (Decryption Links):
-*   Includes links to various websites for decryption.
-
-### IPTV Live TV Channels:
-
-*   Comprehensive lists of IPTV sources with a variety of channels.
-
-### Github Acceleration:
-
-*   Github mirror and proxy services for downloading resources.
-
-### Tools & Utilities:
-*   MD5 file calculator
-*   URL shorteners
-*   Base64 encoding/decoding tools
-*   TVBox configuration editors
-
-## 🚀 Installation and Usage
-
-*   Instructions on obtaining an Aliyun Pan token for use with the included tools.
-*   Instructions on how to use local interface sources
-
-[Back to Top](#readme)
-
-<br>
-
-## 🖼️ Additional Resources
-
-*   A collection of 4K/HD image and wallpaper sources.
-*   Information on TV Box interfaces.
-
-<br>
-
-## 📺 Additional Links
-
-*   Resources related to this repository.
-*   Emoji resources for use in your projects.
-
-<br>
-
-<img src="https://github.com/alantang1977/X/assets/107459091/b4777a78-75bb-42ae-92ca-5ba6a2e23bf7" alt="image">
-
-------
+This repository is for personal use only and is not intended for commercial purposes.  Please review the full disclaimer in the original README for detailed legal information.

@@ -1,5 +1,5 @@
-# [LinuxToys](https://linuxtoys.luminhost.xyz)
-A collection of tools for Linux in a user-friendly way. To check all its features, pay the [Wiki](https://linuxtoys.luminhost.xyz/knowledgebase.html) a visit!
+# [LinuxToys](https://linux.toys)
+A collection of tools for Linux in a user-friendly way. To check all its features, pay the [Wiki](https://linux.toys/knowledgebase.html) a visit!
 
 ![LinuxToys](src/screenshot.png)
 
@@ -35,10 +35,10 @@ For `rpm-ostree`-based systems, it will also be needed: `rpm-ostree install linu
 ### Git cloning
 First, make sure you have all necessary dependencies. Most of those should be already present in your system.
 
-- **Debian/Ubuntu**: `bash git curl wget zenity python3 python3-gi python3-requests libgtk-3-0 gir1.2-gtk-3.0 jq ssh-askpass`
-- **Fedora/RHEL**: `bash git curl wget zenity python3 python3-gobject python3-requests gtk3 jq openssh-askpass`
-- **Arch Linux**: `bash git curl wget zenity python python-gobject python-requests gtk3 x11-ssh-askpass`
-- **OpenSUSE**: `bash git curl wget zenity python3 python3-gobject python3-requests gtk3 openssh-askpass`
+- **Debian/Ubuntu**: `bash git curl wget zenity python3 python3-gi python3-requests libgtk-3-0 gir1.2-gtk-3.0`
+- **Fedora/RHEL**: `bash git curl wget zenity python3 python3-gobject python3-requests gtk3`
+- **Arch Linux**: `bash git curl wget zenity python python-gobject python-requests gtk3`
+- **OpenSUSE**: `bash git curl wget zenity python3 python3-gobject python3-requests gtk3`
 
 Then, clone the repository with `git clone https://github.com/psygreg/linuxtoys.git`
 
@@ -71,4 +71,4 @@ Available packages: **AlmaLinux 10**, **Fedora 41** and **42**, **OpenSUSE Leap*
 ### [Arch User Repository - AUR](https://aur.archlinux.org/packages/linuxtoys-bin)
 You may use the AUR helper of your choice to install it, with the package name `linuxtoys-bin`.
 
-## [Credits](https://linuxtoys.luminhost.xyz/credits.html)
+## [Credits](https://linux.toys/credits.html)

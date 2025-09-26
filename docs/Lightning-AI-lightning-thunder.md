@@ -1,23 +1,32 @@
-# Lightning Thunder: Supercharge Your PyTorch Models with Ease
+# Lightning Thunder: Supercharge Your PyTorch Models ⚡
 
-**Lightning Thunder** is a source-to-source compiler for PyTorch that empowers you to optimize your models with custom kernels, fusions, quantization, and distributed strategies for unparalleled performance. [Explore the Lightning Thunder Repository](https://github.com/Lightning-AI/lightning-thunder)
+**Lightning Thunder empowers you to accelerate your PyTorch models with ease, offering a suite of optimizations for peak performance.**  [Explore the original repo](https://github.com/Lightning-AI/lightning-thunder)
+
+---
 
 <div align="center">
 <img alt="Thunder" src="docs/source/_static/images/LightningThunderLightModewByline.png#gh-light-mode-only" width="400px" style="max-width: 100%;">
 <img alt="Thunder" src="docs/source/_static/images/LightningThunderDarkModewByline.png#gh-dark-mode-only" width="400px" style="max-width: 100%;">
-<br/>
 </div>
 
 ## Key Features
 
-*   ⚡ **Blazing Fast Performance**: Achieve significant speedups (up to 40% faster) in PyTorch model execution.
-*   ⚙️ **Optimized for Modern Hardware**: Unleash the full potential of your NVIDIA hardware, including support for Blackwell.
-*   🚀 **Easy to Use**: Simple API for integrating Thunder into your existing PyTorch workflows.
-*   🧮 **Advanced Optimization Techniques**: Leverage quantization (FP4/FP6/FP8), kernel fusion, CUDA Graphs, and more.
-*   🧠 **Customization and Extensibility**: Build custom Triton kernels and easily integrate new optimizations.
-*   🌐 **Distributed Training and Inference**: Scale your models with support for TP/PP/DP distributed strategies.
-*   🧩 **Pre-built Plugins**: Use out-of-the-box plugins for common optimizations.
-*   💡 **Supports Diverse Models**: Works with LLMs, non-LLMs, and a wide range of PyTorch models.
+*   **Optimized Performance:** Achieve up to 40% faster PyTorch model execution.
+*   **Model Optimization:**  Apply quantization, kernel fusion, and distributed strategies (TP/PP/DP).
+*   **Precision Control:** Supports FP4/FP6/FP8 precision for efficient computation.
+*   **Hardware-Ready:** Designed for NVIDIA Blackwell and CUDA Graphs.
+*   **Flexible and Extensible:** Utilize custom Triton kernels and compose various optimizations.
+*   **Built-in Recipes:** Ready-to-use training and inference recipes.
+*   **Supports LLMs and More:** Works with a wide range of models, including LLMs and vision models.
+
+---
+
+## Why Choose Lightning Thunder?
+
+*   **For End Users:** Benefit from out-of-the-box speed improvements with pre-built plugins.
+*   **For Performance Experts:** Provides a powerful framework for understanding, modifying, and optimizing AI models.
+
+---
 
 <div align='center'>
 <pre>
@@ -28,155 +37,96 @@
 </pre>
 </div>
 
+---
+
 ## Quick Start
 
-Get started with Lightning Thunder in a few simple steps:
+### Installation
 
-1.  **Install Dependencies**:
+Install Thunder using pip:
 
-    ```bash
-    pip install torch==2.6.0 torchvision==0.21 nvfuser-cu124-torch26
-    pip install lightning-thunder
-    ```
+```bash
+pip install lightning-thunder
+```
 
-    **Note:**  For CUDA 12.8 and Blackwell support, use:
+Install dependencies:
 
-    ```bash
-    pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128
-    pip install --pre nvfuser-cu128 --extra-index-url https://pypi.nvidia.com
-    pip install lightning-thunder
-    ```
+```bash
+pip install -U torch torchvision
+pip install nvfuser-cu128-torch28 nvidia-cudnn-frontend  # if NVIDIA GPU is present
+```
 
-2.  **Import and Compile Your Model**:
+For older versions of torch, refer to the original README for compatibility and installation instructions.
 
-    ```python
-    import thunder
-    import torch.nn as nn
-    import torch
+### Basic Usage
 
-    model = nn.Sequential(nn.Linear(2048, 4096), nn.ReLU(), nn.Linear(4096, 64))
-    thunder_model = thunder.compile(model)
-    x = torch.randn(64, 2048)
-    y = thunder_model(x)
-    torch.testing.assert_close(y, model(x))
-    ```
+Optimize your PyTorch models with a few lines of code:
+
+```python
+import torch.nn as nn
+import thunder
+import torch
+
+model = nn.Sequential(nn.Linear(2048, 4096), nn.ReLU(), nn.Linear(4096, 64))
+thunder_model = thunder.compile(model)
+x = torch.randn(64, 2048)
+y = thunder_model(x)
+torch.testing.assert_close(y, model(x))
+```
+
+---
 
 ## Examples
 
-*   **Speed up LLM Training**:
+*   **Speed Up LLM Training:** Easily integrate with LitGPT for faster training.
+*   **Accelerate Hugging Face Inference:** Enhance inference speed for models like BERT and DeepSeek.
+*   **Optimize Vision Transformers:** Improve the performance of models like ViT.
 
-    ```python
-    import thunder
-    import torch
-    import litgpt
-    with torch.device("cuda"):
-        model = litgpt.GPT.from_name("Llama-3.2-1B").to(torch.bfloat16)
-    thunder_model = thunder.compile(model)
-    inp = torch.ones((1, 2048), device="cuda", dtype=torch.int64)
-    out = thunder_model(inp)
-    out.sum().backward()
-    ```
+See the original README for detailed example code snippets and benchmark results.
 
-*   **Speed up Hugging Face BERT inference**
-
-    ```python
-    import thunder
-    import torch
-    import transformers
-    model_name = "bert-large-uncased"
-    tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)
-    with torch.device("cuda"):
-        model = transformers.AutoModelForCausalLM.from_pretrained(
-            model_name, torch_dtype=torch.bfloat16)
-        model.requires_grad_(False)
-        model.eval()
-        inp = tokenizer(["Hello world!"], return_tensors="pt")
-    thunder_model = thunder.compile(model)
-    out = thunder_model(**inp)
-    print(out)
-    ```
-
-*   **Speed up Hugging Face DeepSeek R1 distill inference**
-
-    ```python
-    import torch
-    import transformers
-    import thunder
-    model_name = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
-    tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)
-    with torch.device("cuda"):
-        model = transformers.AutoModelForCausalLM.from_pretrained(
-            model_name, torch_dtype=torch.bfloat16)
-        model.requires_grad_(False)
-        model.eval()
-        inp = tokenizer(["Hello world! Here's a long story"], return_tensors="pt")
-    thunder_model = thunder.compile(model)
-    out = thunder_model.generate(
-        **inp, do_sample=False, cache_implementation="static", max_new_tokens=100)
-    print(out)
-    ```
-
-    **Get Speedups:**
-
-    ```bash
-    python examples/quickstart/hf_llm.py
-    ```
-
-    **Results Example:**
-
-    ```bash
-    Eager: 2273.22ms
-    Thunder: 1254.39ms
-    ```
-
-*   **Speed up Vision Transformer inference**:
-
-    ```python
-    import thunder
-    import torch
-    import torchvision as tv
-    with torch.device("cuda"):
-        model = tv.models.vit_b_16()
-        model.requires_grad_(False)
-        model.eval()
-        inp = torch.randn(128, 3, 224, 224)
-    out = model(inp)
-    thunder_model = thunder.compile(model)
-    out = thunder_model(inp)
-    ```
-
-*   **Benchmarking HF models**
-    See  `examples/quickstart/hf_benchmarks.py` for how to benchmark a model for text generation, forward pass, forward pass with loss, and a full forward + backward computation.
+---
 
 ## Plugins
 
-Customize your optimizations with Thunder plugins:
+Thunder plugins provide easy access to optimization techniques:
 
-*   **Reduce CPU overheads with CUDAGraphs:**
+*   **Distributed Strategies:** DDP, FSDP, TP for scaling.
+*   **Numerical Precision:** FP8, MXFP8 for efficient computation.
+*   **Quantization:** Memory savings with quantization.
+*   **CUDAGraphs:** Reduce CPU overhead and improve latency.
+*   **Debugging and Profiling:** Tools for understanding your model's performance.
 
-    ```python
-    thunder_model = thunder.compile(model, plugins="reduce-overhead")
-    ```
+To use a plugin, simply include it in the `plugins=` argument of `thunder.compile`.  Example: `thunder.compile(model, plugins="reduce-overhead")`.
 
-## How it Works
+---
 
-Lightning Thunder works in three stages:
+## How It Works
 
-1.  **Acquisition**: Interprets Python bytecode to produce a straight-line Python program.
-2.  **Transformation**: Transforms the computation trace for distribution and precision changes.
-3.  **Execution**: Routes parts of the trace for execution using fusion, specialized libraries, custom kernels, and PyTorch eager operations.
+Thunder's three-stage process:
+
+1.  **Acquisition:** Interprets Python bytecode to create a straight-line program.
+2.  **Transformation:** Transforms the trace for distribution and precision changes.
+3.  **Execution:** Routes parts of the trace for optimized execution using techniques like fusion, specialized libraries, custom kernels, and PyTorch eager operations.
 
 <div align="center">
 <img alt="Thunder" src="docs/source/_static/images/how_it_works.png" width="800px" style="max-width: 100%;">
 </div>
 
+---
+
 ## Performance
+
+Thunder delivers significant speedups on various hardware, as illustrated by the performance charts in the original README.
 
 <div align="center">
 <img alt="Thunder" src="docs/source/_static/images/pretrain_perf.png" width="800px" style="max-width: 100%;">
 </div>
 
+---
+
 ## Community
 
-*   💬 [Get help on Discord](https://discord.com/invite/XncpTy7DSt)
+Thunder is an open-source project built in collaboration with the community and NVIDIA.
+
+*   💬 [Join the Discord](https://discord.com/invite/XncpTy7DSt)
 *   📋 [License: Apache 2.0](https://github.com/Lightning-AI/litserve/blob/main/LICENSE)

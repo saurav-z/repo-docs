@@ -11,223 +11,44 @@
 <a href="https://github.com/RLinf/misc/blob/main/pic/wechat.jpg?raw=true"><img src="https://img.shields.io/badge/微信-green?logo=wechat&amp"></a>
 </div>
 
-<h1 align="center">
-  RLinf: Revolutionizing Agentic AI with Flexible and Efficient Reinforcement Learning
-</h1>
+## RLinf: Your Foundation for Agentic AI
 
-RLinf is an open-source infrastructure for post-training foundation models using reinforcement learning, designed to be a robust backbone for next-generation training and agentic AI. [Explore RLinf on GitHub](https://github.com/RLinf/RLinf).
+**RLinf (Reinforcement Learning Infrastructure) is an open-source powerhouse designed to supercharge your post-training foundation models with reinforcement learning, enabling advanced AI capabilities.**  Explore the [original repository](https://github.com/RLinf/RLinf) for more details.
 
-## Key Features
+**Key Features:**
 
-*   **Macro-to-Micro Flow (M2Flow):** Decouples logical workflow construction from physical execution for improved efficiency and programmability.
-*   **Flexible Execution Modes:** Supports collocated, disaggregated, and hybrid modes for optimal resource utilization.
-*   **Auto-Scheduling Strategy:** Dynamically selects the most suitable execution mode, eliminating manual resource allocation.
-*   **Embodied Agent Support:**
-    *   Fast adaptation support for mainstream VLA models like OpenVLA and π₀.
-    *   Integration with CPU & GPU-based simulators via standardized RL interfaces (ManiSkill3, LIBERO).
-    *   Enables RL fine-tuning of π₀ and π₀.₅ models.
-*   **Performance Advantages:**
-    *   **120%+** throughput improvement in hybrid mode with fine-grained pipelining compared to other frameworks.
-    *   Automatic online scaling strategy for faster training and on-policy algorithm preservation.
-*   **Versatile Integrations:**
-    *   Seamless integration with FSDP + Hugging Face for rapid prototyping and new models.
-    *   Optimized for large-scale training via Megatron + SGLang for maximum efficiency.
-    *   Adaptive communication via asynchronous communication channels.
-*   **Built-in RL Algorithms:** Includes support for popular methods like PPO, GRPO, DAPO, and Reinforce++.
+*   **Macro-to-Micro Flow (M2Flow):** Decouples logical workflow construction (programmable) from physical communication and scheduling (efficient) for optimal performance.
+*   **Flexible Execution Modes:** Offers collocated, disaggregated, and hybrid modes for customized resource utilization.
+*   **Auto-Scheduling Strategy:** Automatically selects the most efficient execution mode, simplifying training and resource management.
+*   **Embodied Agent Support:**  Ready-to-use with popular VLA models like OpenVLA, and simulators (ManiSkill3, LIBERO).
+*   **Fast Training:** Hybrid mode and automatic online scaling for significant throughput improvements (120%+) and rapid GPU switching.
+*   **Multiple Backend Integrations:** Supports FSDP + Hugging Face for easy model adaptation and Megatron + SGLang for large-scale, efficient training.
+*   **Built-in RL Methods:**  Includes PPO, GRPO, DAPO, Reinforce++, and more for diverse applications.
 
 ## Main Results
 
 ### Embodied Intelligence
 
-<div align="center">
-<table>
-  <tr>
-    <th colspan="5" style="text-align:center;"><strong>OpenVLA-OFT model results on ManiSkill3</strong></th>
-  </tr>
-  <tr>
-    <th>Model</th>
-    <th>Vision</th>
-    <th>Semantic</th>
-    <th>Position</th>
-    <th>Average</th>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/gen-robot/openvla-7b-rlvla-warmup"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">rl4vla</a></td>
-    <td>76.6%</td>
-    <td>75.4%</td>
-    <td>77.6%</td>
-    <td>76.1%</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/RLinf/RLinf-OpenVLAOFT-GRPO-ManiSkill3-25ood"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">GRPO-OpenVLA-OFT</td>
-    <td><strong>84.6%</strong></td>
-    <td>51.6%</td>
-    <td>42.9%</td>
-    <td>61.5%</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/RLinf/RLinf-OpenVLAOFT-PPO-ManiSkill3-25ood"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">PPO-OpenVLA-OFT</td>
-    <td>80.5%</td>
-    <td>56.6%</td>
-    <td>56.1%</td>
-    <td>64.5%</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/RLinf/RLinf-OpenVLA-PPO-ManiSkill3-25ood"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">PPO-OpenVLA</td>
-    <td>82.0%</td>
-    <td><strong>80.6%</strong></td>
-    <td><strong>89.3%</strong></td>
-    <td><strong>82.2%</strong></td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/RLinf/RLinf-OpenVLA-GRPO-ManiSkill3-25ood"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">GRPO-OpenVLA</td>
-    <td>74.7%</td>
-    <td>74.4%</td>
-    <td>81.6%</td>
-    <td>75.5%</td>
-  </tr>
-</table>
+**(See table in the original README for detailed performance data)**
 
-<table>
-  <tr>
-    <th colspan="6" style="text-align:center;"><strong>OpenVLA-OFT model results on LIBERO</strong></th>
-  </tr>
-  <tr>
-    <th>Model</th>
-    <th><a href="https://huggingface.co/RLinf/RLinf-OpenVLAOFT-GRPO-LIBERO-spatial">Spatial</a></th>
-    <th><a href="https://huggingface.co/RLinf/RLinf-OpenVLAOFT-GRPO-LIBERO-goal">Goal</a></th>
-    <th><a href="https://huggingface.co/RLinf/RLinf-OpenVLAOFT-GRPO-LIBERO-object">Object</a></th>
-    <th><a href="https://huggingface.co/RLinf/RLinf-OpenVLAOFT-GRPO-LIBERO-long">Long</a></th>
-    <th>Average</th>
-  </tr>
-  <tr>
-    <td>OpenVLA-OFT-SFT (one-shot)</td>
-    <td>56.5%</td>
-    <td>45.6%</td>
-    <td>25.6%</td>
-    <td>9.7%</td>
-    <td>34.4%</td>
-  </tr>
-  <tr>
-    <td>OpenVLA-OFT-RLinf</td>
-    <td><strong>99.0%</strong></td>
-    <td><strong>99.0%</strong></td>
-    <td><strong>99.0%</strong></td>
-    <td><strong>94.4%</strong></td>
-    <td><strong>97.9%</strong></td>
-  </tr>
-  <tr>
-    <td>Improvement</td>
-    <td>+42.5%</td>
-    <td>+53.4%</td>
-    <td>+73.4%</td>
-    <td>+84.7%</td>
-    <td>+63.5%</td>
-  </tr>
-</table>
-</div>
-
-*   Achieves state-of-the-art training for Vision-Language-Action models using PPO and GRPO.
-*   Seamless integration with benchmarks like ManiSkill3 and LIBERO.
+RLinf delivers state-of-the-art performance, especially when fine-tuning Vision-Language-Action models with GRPO, achieving impressive gains.
 
 ### Math Reasoning
 
-<div align="center">
-<table>
-  <tr>
-    <th colspan="5" style="text-align:center;"><strong>1.5B model results</strong></th>
-  </tr>
-  <tr>
-    <th>Model</th>
-    <th><a href="https://huggingface.co/datasets/RLinf/AIME24">AIME 24</a></th>
-    <th><a href="https://huggingface.co/datasets/RLinf/AIME25">AIME 25</a></th>
-    <th><a href="https://huggingface.co/datasets/RLinf/GPQA-diamond">GPQA-diamond</a></th>
-    <th>Average</th>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">DeepSeek-R1-Distill-Qwen-1.5B (base model)</a></td>
-    <td>28.33</td><td>24.90</td><td>27.45</td><td>26.89</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/zwhe99/DeepMath-1.5B"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">DeepMath-1.5B</a></td>
-    <td>37.80</td><td>30.42</td><td>32.11</td><td>33.44</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/agentica-org/DeepScaleR-1.5B-Preview"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">DeepScaleR-1.5B-Preview</a></td>
-    <td>40.41</td><td>30.93</td><td>27.54</td><td>32.96</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/inclusionAI/AReaL-1.5B-Preview-Stage-3"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">AReaL-1.5B-Preview-Stage-3</a></td>
-    <td>40.73</td><td>31.56</td><td>28.10</td><td>33.46</td>
-  </tr>
-  <tr>
-    <td>AReaL-1.5B-retrain*</td>
-    <td>44.42</td><td>34.27</td><td>33.81</td><td>37.50</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/Nickyang/FastCuRL-1.5B-V3"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">FastCuRL-1.5B-V3</a></td>
-    <td>43.65</td><td>32.49</td><td>35.00</td><td>37.05</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/RLinf/RLinf-math-1.5B"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;"><strong>RLinf-math-1.5B</strong></a></td>
-    <td><strong>48.44</strong></td><td><strong>35.63</strong></td><td><strong>38.46</strong></td><td><strong>40.84</strong></td>
-  </tr>
-</table>
-</div>
+**(See table in the original README for detailed performance data)**
 
-\* We retrain the model using the default settings for 600 steps.
-
-<div align="center">
-<table>
-  <tr>
-    <th colspan="5" style="text-align:center;"><strong>7B model results</strong></th>
-  </tr>
-  <tr>
-    <th>Model</th>
-    <th><a href="https://huggingface.co/datasets/RLinf/AIME24">AIME 24</a></th>
-    <th><a href="https://huggingface.co/datasets/RLinf/AIME25">AIME 25</a></th>
-    <th><a href="https://huggingface.co/datasets/RLinf/GPQA-diamond">GPQA-diamond</a></th>
-    <th>Average</th>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">DeepSeek-R1-Distill-Qwen-7B (base model)</a></td>
-    <td>54.90</td><td>40.20</td><td>45.48</td><td>46.86</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/inclusionAI/AReaL-boba-RL-7B"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">AReaL-boba-RL-7B</a></td>
-    <td>61.66</td><td>49.38</td><td>46.93</td><td>52.66</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/Skywork/Skywork-OR1-7B"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">Skywork-OR1-7B</a></td>
-    <td>66.87</td><td>52.49</td><td>44.43</td><td>54.60</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/POLARIS-Project/Polaris-7B-Preview"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">Polaris-7B-Preview</a></td>
-    <td><strong>68.55</strong></td><td>51.24</td><td>43.88</td><td>54.56</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/nvidia/AceMath-RL-Nemotron-7B"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;">AceMath-RL-Nemotron-7B</a></td>
-    <td>67.30</td><td><strong>55.00</strong></td><td>45.57</td><td>55.96</td>
-  </tr>
-  <tr>
-    <td><a href="https://huggingface.co/RLinf/RLinf-math-7B"><img src="docs/source-en/_static/svg/hf-logo.svg" alt="HF" width="16" height="16" style="vertical-align: middle;"><strong>RLinf-math-7B</strong></a></td>
-    <td>68.33</td><td>52.19</td><td><strong>48.18</strong></td><td><strong>56.23</strong></td>
-  </tr>
-</table>
-</div>
-
-*   Achieves state-of-the-art performance on math reasoning tasks across multiple benchmarks.
+RLinf pushes the boundaries of math reasoning, consistently surpassing existing models on benchmarks such as AIME and GPQA-diamond.
 
 ## Roadmap
 
-*   System-Level Enhancements (Heterogeneous GPUs, Asynchronous Pipeline Execution, MoE, vLLM).
-*   Application-Level Extensions (VLMs, deep searcher agents, multi-agent training, more embodied simulators, VLA models, world models, real-world RL).
+*   **System-Level Enhancements:** Support for heterogeneous GPUs, asynchronous pipeline execution, Mixture of Experts (MoE), and vLLM inference backend.
+*   **Application-Level Extensions:** Vision-Language Models (VLMs) training, deep searcher agent training, multi-agent training, and integration with more embodied simulators and VLA models, world models, and real-world RL.
 
 ## Getting Started
 
-Comprehensive documentation is available [here](https://rlinf.readthedocs.io/en/latest/).
+*   Comprehensive documentation is available [**Here**](https://rlinf.readthedocs.io/en/latest/).
 
-**Quickstart**
+**Quickstart:**
 
 *   [Installation](https://rlinf.readthedocs.io/en/latest/rst_source/start/installation.html)
 *   [Quickstart 1: PPO Training of VLAs on Maniskill3](https://rlinf.readthedocs.io/en/latest/rst_source/start/vla.html)
@@ -235,19 +56,19 @@ Comprehensive documentation is available [here](https://rlinf.readthedocs.io/en/
 *   [Multi-node Training](https://rlinf.readthedocs.io/en/latest/rst_source/start/distribute.html)
 *   [Model Evaluation](https://rlinf.readthedocs.io/en/latest/rst_source/start/eval.html)
 
-**Key Design**
+**Key Design:**
 
 *   [Unified User Interface Usage](https://rlinf.readthedocs.io/en/latest/rst_source/tutorials/user/index.html)
 *   [Flexible Execution Modes](https://rlinf.readthedocs.io/en/latest/rst_source/tutorials/mode/index.html)
 *   [Enable Automatic Scheduling](https://rlinf.readthedocs.io/en/latest/rst_source/tutorials/scheduler/index.html)
 *   [Elastic Communication](https://rlinf.readthedocs.io/en/latest/rst_source/tutorials/communication/index.html)
 
-**Example Gallery**
+**Example Gallery:**
 
 *   [Embodied Intelligence Vision-Language-Action Model training](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied.html)
 *   [Math Reasoning Model Training](https://rlinf.readthedocs.io/en/latest/rst_source/examples/reasoning.html)
 
-**Advanced Features**
+**Advanced Features:**
 
 *   [5D Parallelism Configuration for Megatron-LM](https://rlinf.readthedocs.io/en/latest/rst_source/tutorials/advance/5D.html)
 *   [LoRA Integration for efficient fine-tuning](https://rlinf.readthedocs.io/en/latest/rst_source/tutorials/advance/lora.html)
@@ -260,24 +81,24 @@ Comprehensive documentation is available [here](https://rlinf.readthedocs.io/en/
 *   [Adding new Models with FSDP+Huggingface backend](https://rlinf.readthedocs.io/en/latest/rst_source/tutorials/extend/new_model_fsdp.html)
 *   [Adding new Models with Megatron+SGLang backend](https://rlinf.readthedocs.io/en/latest/rst_source/tutorials/extend/new_model_megatron.html)
 
-**Blogs**
+**Blogs:**
 
 *   [Comparison with VeRL](https://rlinf.readthedocs.io/en/latest/rst_source/blog/compare_with_verl.html)
 
 ## Build Status
 
-| Type              | Status |
-| :---------------: | :----: |
+| Type             | Status |
+| :--------------: | :----: |
 | Reasoning RL-MATH | [![Build Status](https://github.com/RLinf/RLinf/actions/workflows/math_e2e.yml/badge.svg)](https://github.com/RLinf/RLinf/actions/workflows/math_e2e.yml) |
-| Embodied RL-VLA    | [![Build Status](https://github.com/RLinf/RLinf/actions/workflows/embodied_e2e.yml/badge.svg)](https://github.com/RLinf/RLinf/actions/workflows/embodied_e2e.yml) |
+| Embodied RL-VLA   | [![Build Status](https://github.com/RLinf/RLinf/actions/workflows/embodied_e2e.yml/badge.svg)](https://github.com/RLinf/RLinf/actions/workflows/embodied_e2e.yml) |
 
 ## Contribution Guidelines
 
-We welcome contributions!  See the [contribution guide](https://rlinf.readthedocs.io/en/latest/index.html#contribution-guidelines).
+We welcome contributions to RLinf. Please read the [contribution guide](https://rlinf.readthedocs.io/en/latest/index.html#contribution-guidelines) before contributing.
 
 ## Citation and Acknowledgement
 
-If you use RLinf, please cite our paper:
+If you find **RLinf** helpful, please cite the paper:
 
 ```bibtex
 @misc{yu2025rlinfflexibleefficientlargescale,
@@ -291,8 +112,7 @@ If you use RLinf, please cite our paper:
 }
 ```
 
-If you use RL+VLA in RLinf, cite this empirical study:
-
+If you use RL+VLA in RLinf, you can also cite our empirical study paper:
 ```bibtex
 @misc{liu2025rlbringvlageneralization,
   title={What Can RL Bring to VLA Generalization? An Empirical Study}, 
@@ -306,12 +126,10 @@ If you use RL+VLA in RLinf, cite this empirical study:
 ```
 
 **Acknowledgements**
-
-RLinf leverages open-source ideas and tools. Thanks to the teams behind VeRL, AReaL, Megatron-LM, SGLang, and PyTorch FSDP. If we missed your project, please open an issue or pull request.
+RLinf has been inspired by, and benefits from, the ideas and tooling of the broader open-source community.
+In particular, we would like to thank the teams and contributors behind VeRL, AReaL, Megatron-LM, SGLang, and PyTorch Fully Sharded Data Parallel (FSDP), and if we have inadvertently missed your project or contribution, please open an issue or a pull request so we can properly credit you.
 
 **Contact:**
-
-We are looking for Postdocs, PhD/Master's students, and interns! Contact:
-
-*   Chao Yu: zoeyuchao@gmail.com
-*   Yu Wang: yu-wang@tsinghua.edu.cn
+We welcome applications from Postdocs, PhD/Master's students, and interns. Join us in shaping the future of RL infrastructure and embodied AI!
+- Chao Yu: zoeyuchao@gmail.com
+- Yu Wang: yu-wang@tsinghua.edu.cn

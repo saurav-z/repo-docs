@@ -2,40 +2,40 @@
   <img src="https://raw.githubusercontent.com/LazyAGI/LazyLLM/main/docs/assets/LazyLLM-logo.png" width="100%"/>
 </div>
 
-# LazyLLM: Build Powerful Multi-Agent LLM Applications with Low-Code Ease
+# LazyLLM: Build Multi-Agent LLM Applications with Ease
 
-Tired of complex LLM development? **LazyLLM is a low-code tool that streamlines the creation of multi-agent LLM applications, enabling rapid prototyping and iterative optimization.** ([Original Repo](https://github.com/LazyAGI/LazyLLM))
+**Tired of complex AI application development?** LazyLLM is a low-code tool that simplifies building multi-agent LLM applications, empowering you to quickly prototype, optimize, and deploy AI solutions.  [View the original repository](https://github.com/LazyAGI/LazyLLM)
 
 [![CI](https://github.com/LazyAGI/LazyLLM/actions/workflows/main.yml/badge.svg)](https://github.com/LazyAGI/LazyLLM/actions/workflows/main.yml)
 [![License](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)](https://opensource.org/license/apache-2-0)
 [![GitHub star chart](https://img.shields.io/github/stars/LazyAGI/LazyLLM?style=flat-square)](https://star-history.com/#LazyAGI/LazyLLM)
 [![](https://dcbadge.vercel.app/api/server/cDSrRycuM6?compact=true&style=flat)](https://discord.gg/cDSrRycuM6)
 
-## Key Features:
+## Key Features
 
-*   **Low-Code Development:** Build AI applications with multiple agents using a Lego-like assembly process, even without extensive LLM expertise.
-*   **One-Click Deployment:** Simplify deployment of complex multi-agent applications, particularly during the Proof of Concept (POC) phase, with a lightweight gateway mechanism. Streamline image packaging for production.
-*   **Cross-Platform Compatibility:** Seamlessly switch between IaaS platforms (bare-metal, development machines, Slurm clusters, public clouds) without code modifications, reducing migration efforts.
-*   **Grid Search Parameter Optimization:** Automatically test different models, retrieval strategies, and parameters to efficiently optimize applications.
-*   **Efficient Model Fine-Tuning:** Enhance application performance through in-application model fine-tuning, simplifying model iterations and accelerating algorithm development.
+*   **Low-Code Development:** Assemble AI applications with multiple agents using built-in data flows and functional modules, even without extensive LLM experience.
+*   **Simplified Deployment:** Deploy complex applications with a single click, simplifying the process, especially during the POC (Proof of Concept) phase.
+*   **Cross-Platform Compatibility:** Switch IaaS platforms seamlessly without code modifications, supporting bare-metal servers, development machines, Slurm clusters, and public clouds.
+*   **Automated Parameter Optimization:**  Utilize grid search to find the best configurations without extensive code changes.
+*   **Efficient Fine-Tuning:** Fine-tune models directly within applications to enhance performance, focusing on algorithm and data iteration.
 
-## What You Can Build
+## What Can You Build with LazyLLM?
 
-LazyLLM empowers you to create a variety of AI applications. Here are some examples:
+LazyLLM empowers you to create various AI applications, including:
 
-### ChatBots
+### Chatbots
 
 **Simple Chatbot Example:**
 
 ```python
-# set environment variable: LAZYLLM_OPENAI_API_KEY=xx
+# set environment variable: LAZYLLM_OPENAI_API_KEY=xx 
 # or you can make a config file(~/.lazyllm/config.json) and add openai_api_key=xx
 import lazyllm
 chat = lazyllm.OnlineChatModule()
 lazyllm.WebModule(chat).start().wait()
 ```
 
-**Advanced Bot Example (Multimodality & Intent Recognition):**
+**Advanced Multimodal Bot Example:**  *Combining multiple functionalities such as Chat, Speech Recognition, Image QA, Drawing, etc.*
 
 ![Demo Multimodal bot](docs/assets/multimodal-bot.svg)
 
@@ -57,18 +57,13 @@ with IntentClassifier(base) as ic:
 WebModule(ic, history=[base], audio=True, port=8847).start().wait()
 ```
 
-### RAG (Retrieval-Augmented Generation)
+### Retrieval-Augmented Generation (RAG)
 
 ![Demo RAG](docs/assets/demo_rag.svg)
 
+**Online Deployment Example:**
+
 ```python
-import os
-import lazyllm
-from lazyllm import pipeline, parallel, bind, SentenceSplitter, Document, Retriever, Reranker
-
-prompt = 'You will play the role of an AI Q&A assistant and complete a dialogue task. In this task, you need to provide your answer based on the given context and question.'
-
-# Online Deployment
 documents = Document(dataset_path="your data path", embed=lazyllm.OnlineEmbeddingModule(), manager=False)
 documents.create_node_group(name="sentences", transform=SentenceSplitter, chunk_size=1024, chunk_overlap=100)
 with pipeline() as ppl:
@@ -83,8 +78,9 @@ with pipeline() as ppl:
 lazyllm.WebModule(ppl, port=23466).start().wait()
 ```
 
+**Local Deployment Example:**
+
 ```python
-# Local Deployment
 documents = Document(dataset_path='/file/to/yourpath', embed=lazyllm.TrainableModule('bge-large-zh-v1.5'))
 documents.create_node_group(name="sentences", transform=SentenceSplitter, chunk_size=1024, chunk_overlap=100)
 
@@ -102,52 +98,9 @@ lazyllm.WebModule(ppl, port=23456).start().wait()
 
 ### Story Creator
 
+**Online Deployment Example:**
+
 ```python
-import lazyllm
-from lazyllm import pipeline, warp, bind
-from lazyllm.components.formatter import JsonFormatter
-
-toc_prompt="""
-You are now an intelligent assistant. Your task is to understand the user's input and convert the outline into a list of nested dictionaries. Each dictionary contains a `title` and a `describe`, where the `title` should clearly indicate the level using Markdown format, and the `describe` is a description and writing guide for that section.
-
-Please generate the corresponding list of nested dictionaries based on the following user input:
-
-Example output:
-[
-    {
-        "title": "# Level 1 Title",
-        "describe": "Please provide a detailed description of the content under this title, offering background information and core viewpoints."
-    },
-    {
-        "title": "## Level 2 Title",
-        "describe": "Please provide a detailed description of the content under this title, giving specific details and examples to support the viewpoints of the Level 1 title."
-    },
-    {
-        "title": "### Level 3 Title",
-        "describe": "Please provide a detailed description of the content under this title, deeply analyzing and providing more details and data support."
-    }
-]
-User input is as follows:
-"""
-
-completion_prompt="""
-You are now an intelligent assistant. Your task is to receive a dictionary containing `title` and `describe`, and expand the writing according to the guidance in `describe`.
-
-Input example:
-{
-    "title": "# Level 1 Title",
-    "describe": "This is the description for writing."
-}
-
-Output:
-This is the expanded content for writing.
-Receive as follows:
-
-"""
-
-writer_prompt = {"system": completion_prompt, "user": '{"title": {title}, "describe": {describe}}'}
-
-# Online Deployment
 with pipeline() as ppl:
     ppl.outline_writer = lazyllm.OnlineChatModule(stream=False).formatter(JsonFormatter()).prompt(toc_prompt)
     ppl.story_generater = warp(lazyllm.OnlineChatModule(stream=False).prompt(writer_prompt))
@@ -155,8 +108,9 @@ with pipeline() as ppl:
 lazyllm.WebModule(ppl, port=23466).start().wait()
 ```
 
+**Local Deployment Example:**
+
 ```python
-# Local Deployment
 with pipeline() as ppl:
     ppl.outline_writer = lazyllm.TrainableModule('internlm2-chat-7b').formatter(JsonFormatter()).prompt(toc_prompt)
     ppl.story_generater = warp(ppl.outline_writer.share(prompt=writer_prompt).formatter())
@@ -167,20 +121,17 @@ lazyllm.WebModule(ppl, port=23466).start().wait()
 ### AI Painting Assistant
 
 ```python
-import lazyllm
-from lazyllm import pipeline
-
-prompt = 'You are a drawing prompt word master who can convert any Chinese content entered by the user into English drawing prompt words. In this task, you need to convert any input content into English drawing prompt words, and you can enrich and expand the prompt word content.'
-
 with pipeline() as ppl:
     ppl.llm = lazyllm.TrainableModule('internlm2-chat-7b').prompt(lazyllm.ChatPrompter(prompt))
     ppl.sd3 = lazyllm.TrainableModule('stable-diffusion-3-medium')
 lazyllm.WebModule(ppl, port=23466).start().wait()
 ```
 
-## Installation
+## Getting Started
 
-### From Source Code:
+### Installation
+
+**From Source Code:**
 
 ```bash
 git clone git@github.com:LazyAGI/LazyLLM.git
@@ -188,25 +139,31 @@ cd LazyLLM
 pip install -r requirements.txt
 ```
 
-For fine-tuning, deployment or RAG applications use:
-
-```bash
-pip install -r requirements.full.txt
-```
-
-### From PyPI:
-
-Install only `lazyllm` and necessary dependencies:
+**From Pip:**
 
 ```bash
 pip3 install lazyllm
 ```
 
-Install `lazyllm` and all dependencies:
+To install with all dependencies needed for features like finetuning and deployment, use:
 
 ```bash
 pip3 install lazyllm
 lazyllm install full
 ```
 
-*(Rest of the original README content is excellent and can be included as-is after this point, but is too lengthy for summarization.)*
+## Core Concepts
+
+LazyLLM is built upon these key concepts:
+
+*   **Component:**  The smallest executable unit, allowing cross-platform execution.
+*   **Module:**  Top-level components with training, deployment, inference, and evaluation capabilities. Pre-built modules simplify common tasks.
+*   **Flow:** Defines data streams to organize and manage data flow within applications.
+
+## Future Plans
+
+*   **RAG Enhancements:** Integrate LazyRAG capabilities and support for multiple knowledge bases.
+*   **Functional Modules:**  Add memory capabilities, distributed launcher support, and more.
+*   **Model Training and Inference:**  Support OpenAI interface deployment and improve fine-tuning.
+*   **Comprehensive Documentation:** Complete API documentation, CookBook documentation, and environment setup guides.
+*   **Quality and Development:**  Reduce CI time and improve debug features.

@@ -20,42 +20,52 @@
   </a>
 </p>
 
-# PostHog: Open-Source Product Analytics for Building Successful Products
+## PostHog: The Open-Source Product Analytics Platform for Growth
 
-**PostHog** is an all-in-one, open-source product analytics platform that helps you understand user behavior, ship better products, and drive growth. ([Back to the original repository](https://github.com/PostHog/posthog))
+**PostHog** is a comprehensive, open-source platform empowering product and engineering teams to build, measure, and ship better products.  [Explore the PostHog GitHub Repository](https://github.com/PostHog/posthog) to learn more.
 
-## Key Features
+**Key Features:**
 
 *   **Product Analytics:** Understand user behavior with event-based analytics, visualizations, and SQL queries.
-*   **Web Analytics:** Monitor website traffic, user sessions, conversion rates, and web vitals with a GA-like dashboard.
-*   **Session Replays:** Watch real user sessions to diagnose issues and understand user interactions.
-*   **Feature Flags:** Safely roll out new features to specific user segments.
-*   **Experiments:** Run A/B tests and measure the impact of changes on your key metrics.
-*   **Error Tracking:** Track errors, get alerts, and resolve issues quickly.
-*   **Surveys:** Gather user feedback with customizable surveys.
-*   **Data Warehouse:** Integrate data from external tools and analyze it alongside your product data.
-*   **Data Pipelines:** Transform and route your data to 25+ tools in real-time.
-*   **LLM Analytics:** Capture traces, generations, latency, and cost for your LLM-powered applications.
+*   **Web Analytics:** Monitor website traffic, user sessions, conversion, web vitals, and revenue in a GA-like dashboard.
+*   **Session Replays:** Watch real user sessions to identify usability issues and understand user interactions.
+*   **Feature Flags:** Safely roll out new features to specific users or cohorts.
+*   **Experiments:** Test changes, measure their impact, and optimize your product with no-code experiment setup.
+*   **Error Tracking:** Track and resolve errors to improve product stability.
+*   **Surveys:** Gather user feedback with no-code survey templates and a custom survey builder.
+*   **Data Warehouse:** Integrate data from external tools and query it alongside your product data.
+*   **Data Pipelines:** Transform and route your data to 25+ tools or your data warehouse.
+*   **LLM Analytics:** Track traces, generations, latency, and cost for your LLM-powered applications.
 
-## Getting Started
+**Get Started:**
 
-### PostHog Cloud (Recommended)
+PostHog offers a generous [free tier](https://posthog.com/pricing) and is available through:
 
-The easiest way to get started is by signing up for a free account on [PostHog Cloud US](https://us.posthog.com/signup) or [PostHog Cloud EU](https://eu.posthog.com/signup). Enjoy a generous free tier with 1 million events, 5k recordings, 1M flag requests, 100k exceptions, and 1500 survey responses monthly!
+*   **PostHog Cloud (Recommended):** Sign up for a free account at [PostHog Cloud US](https://us.posthog.com/signup) or [PostHog Cloud EU](https://eu.posthog.com/signup).
+*   **Self-Hosting (Advanced):** Deploy a hobby instance using Docker.  See instructions below.
 
-### Self-Hosting (Advanced)
+### Getting Started - Simplified
 
-For self-hosting, deploy a hobby instance with Docker:
+1.  **Sign Up for PostHog Cloud (Recommended)**
 
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/posthog/posthog/HEAD/bin/deploy-hobby)"
-```
+    The fastest and most reliable way to get started is by signing up for free at [PostHog Cloud US](https://us.posthog.com/signup) or [PostHog Cloud EU](https://eu.posthog.com/signup). Get started today!
+2.  **Self-Hosting the open-source hobby deploy (Advanced)**
 
-Learn more in our [self-hosting docs](https://posthog.com/docs/self-host).
+    If you want to self-host PostHog, you can deploy a hobby instance in one line on Linux with Docker (recommended 4GB memory):
 
-## Setting Up PostHog
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/posthog/posthog/HEAD/bin/deploy-hobby)"
+    ```
 
-Integrate PostHog into your project using our [JavaScript web snippet](https://posthog.com/docs/getting-started/install?tab=snippet) or one of our comprehensive [SDKs](https://posthog.com/docs/getting-started/install?tab=sdks) for various languages and frameworks:
+    Open source deployments should scale to approximately 100k events per month, after which we recommend [migrating to a PostHog Cloud](https://posthog.com/docs/migrate/migrate-to-cloud).
+
+    We _do not_ provide customer support or offer guarantees for open source deployments. See our [self-hosting docs](https://posthog.com/docs/self-host), [troubleshooting guide](https://posthog.com/docs/self-host/deploy/troubleshooting), and [disclaimer](https://posthog.com/docs/self-host/open-source/disclaimer) for more info.
+
+### Setting up PostHog
+
+Install the [JavaScript web snippet](https://posthog.com/docs/getting-started/install?tab=snippet), one of the [SDKs](https://posthog.com/docs/getting-started/install?tab=sdks), or by [using our API](https://posthog.com/docs/getting-started/install?tab=api)
+
+SDKs and libraries available for popular languages and frameworks:
 
 | Frontend                                              | Mobile                                                          | Backend                                             |
 | ----------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------- |
@@ -64,27 +74,31 @@ Integrate PostHog into your project using our [JavaScript web snippet](https://p
 | [React](https://posthog.com/docs/libraries/react)     | [iOS](https://posthog.com/docs/libraries/ios)                   | [PHP](https://posthog.com/docs/libraries/php)       |
 | [Vue](https://posthog.com/docs/libraries/vue-js)      | [Flutter](https://posthog.com/docs/libraries/flutter)           | [Ruby](https://posthog.com/docs/libraries/ruby)     |
 
-We also offer documentation for [Go](https://posthog.com/docs/libraries/go), [.NET/C#](https://posthog.com/docs/libraries/dotnet), [Django](https://posthog.com/docs/libraries/django), [Angular](https://posthog.com/docs/libraries/angular), [WordPress](https://posthog.com/docs/libraries/wordpress), [Webflow](https://posthog.com/docs/libraries/webflow), and more.
+Beyond this, we have docs and guides for [Go](https://posthog.com/docs/libraries/go), [.NET/C#](https://posthog.com/docs/libraries/dotnet), [Django](https://posthog.com/docs/libraries/django), [Angular](https://posthog.com/docs/libraries/angular), [WordPress](https://posthog.com/docs/libraries/wordpress), [Webflow](https://posthog.com/docs/libraries/webflow), and more.
 
-## Learn More
+###  Learning More
 
-Explore our open-source [company handbook](https://posthog.com/handbook) to learn about our culture, strategy, and processes. Check out our guide to [winning with PostHog](https://posthog.com/docs/new-to-posthog/getting-hogpilled) for measuring activation, retention, and revenue.
+*   **Company Handbook:** Discover our [strategy](https://posthog.com/handbook/why-does-posthog-exist), [ways of working](https://posthog.com/handbook/company/culture), and [processes](https://posthog.com/handbook/team-structure).
+*   **Winning with PostHog Guide:**  Learn how to measure activation, track retention, and capture revenue with our [guide](https://posthog.com/docs/new-to-posthog/getting-hogpilled).
 
-## Contributing
+### Contributing
 
 We welcome contributions!
 
-*   [Roadmap](https://posthog.com/roadmap)
-*   [Developing PostHog Locally](https://posthog.com/handbook/engineering/developing-locally))
-*   [Feature Request](https://github.com/PostHog/posthog/issues/new?assignees=&labels=enhancement%2C+feature&template=feature_request.md)
-*   [Bug Report](https://github.com/PostHog/posthog/issues/new?assignees=&labels=bug&template=bug_report.md)
+*   Vote on features or get early access to beta functionality in our [roadmap](https://posthog.com/roadmap)
+*   Open a PR (see our instructions on [developing PostHog locally](https://posthog.com/handbook/engineering/developing-locally))
+*   Submit a [feature request](https://github.com/PostHog/posthog/issues/new?assignees=&labels=enhancement%2C+feature&template=feature_request.md) or [bug report](https://github.com/PostHog/posthog/issues/new?assignees=&labels=bug&template=bug_report.md)
 
-## Open-Source vs. Paid
+### Open Source vs. Paid
 
-PostHog is available under the [MIT expat license](https://github.com/PostHog/posthog/blob/master/LICENSE), except for the `ee` directory (which has its [license here](https://github.com/PostHog/posthog/blob/master/ee/LICENSE)) if applicable. For a completely open-source version without any proprietary code, see our [posthog-foss](https://github.com/PostHog/posthog-foss) repository. View our [pricing page](https://posthog.com/pricing) for details on our paid plans.
+This repository is available under the [MIT expat license](https://github.com/PostHog/posthog/blob/master/LICENSE), except for the `ee` directory (which has its [license here](https://github.com/PostHog/posthog/blob/master/ee/LICENSE)) if applicable.
 
-## We're Hiring!
+For a fully open-source version without proprietary code, explore our [posthog-foss](https://github.com/PostHog/posthog-foss) repository.
+
+Our pricing is transparent and available on [our pricing page](https://posthog.com/pricing).
+
+### We're Hiring!
 
 <img src="https://res.cloudinary.com/dmukukwp6/image/upload/v1/posthog.com/src/components/Home/images/mission-control-hog" alt="Hedgehog working on a Mission Control Center" width="350px"/>
 
-Join our growing team! Explore [our careers](https://posthog.com/careers).
+Join our growing team!  Visit our [careers page](https://posthog.com/careers) to learn about opportunities.

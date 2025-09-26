@@ -1,51 +1,59 @@
 <p align="center">
-    <img src="https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/qwen_image_logo.png" width="400"/>
+    <img src="https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/qwen_image_logo.png" width="400" alt="Qwen-Image Logo"/>
 <p> 
-<p align="center">&nbsp&nbsp💜 <a href="https://chat.qwen.ai/">Qwen Chat</a>&nbsp&nbsp |
-           &nbsp&nbsp🤗 <a href="https://huggingface.co/Qwen/Qwen-Image">HuggingFace(T2I)</a>&nbsp&nbsp |
-           &nbsp&nbsp🤗 <a href="https://huggingface.co/Qwen/Qwen-Image-Edit">HuggingFace(Edit)</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/models/Qwen/Qwen-Image">ModelScope-T2I</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/models/Qwen/Qwen-Image-Edit">ModelScope-Edit</a>&nbsp&nbsp| &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2508.02324">Tech Report</a> &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://qwenlm.github.io/blog/qwen-image/">Blog(T2I)</a> &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://qwenlm.github.io/blog/qwen-image-edit/">Blog(Edit)</a> &nbsp&nbsp 
+
+<p align="center">
+    &nbsp&nbsp💜 <a href="https://chat.qwen.ai/">Qwen Chat</a>&nbsp&nbsp |
+    &nbsp&nbsp🤗 <a href="https://huggingface.co/Qwen/Qwen-Image">HuggingFace(T2I)</a>&nbsp&nbsp |
+    &nbsp&nbsp🤗 <a href="https://huggingface.co/Qwen/Qwen-Image-Edit">HuggingFace(Edit)</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/models/Qwen/Qwen-Image">ModelScope-T2I</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/models/Qwen/Qwen-Image-Edit">ModelScope-Edit</a>&nbsp&nbsp| &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2508.02324">Tech Report</a> &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://qwenlm.github.io/blog/qwen-image/">Blog(T2I)</a> &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://qwenlm.github.io/blog/qwen-image-edit/">Blog(Edit)</a> &nbsp&nbsp 
 <br>
 🖥️ <a href="https://huggingface.co/spaces/Qwen/Qwen-Image">T2I Demo</a>&nbsp&nbsp | 🖥️ <a href="https://huggingface.co/spaces/Qwen/Qwen-Image-Edit">Edit Demo</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://github.com/QwenLM/Qwen-Image/blob/main/assets/wechat.png">WeChat (微信)</a>&nbsp&nbsp | &nbsp&nbsp🫨 <a href="https://discord.gg/CV4E9rpNSD">Discord</a>&nbsp&nbsp
 </p>
+## Qwen-Image: Unleash Your Imagination with Advanced Image Generation and Editing
 
-## Qwen-Image: Unleash Your Creativity with Advanced Image Generation and Editing
-
-**Qwen-Image, a powerful 20B MMDiT image foundation model, offers exceptional capabilities in text rendering and precise image editing.** Explore the cutting-edge features and capabilities of Qwen-Image, a versatile model for both image generation and editing.  [Visit the Qwen-Image repository on GitHub](https://github.com/QwenLM/Qwen-Image) to learn more.
+Qwen-Image is a powerful image generation and editing model that lets you create stunning visuals from text prompts and refine existing images with unparalleled precision; **explore its capabilities on the [original GitHub repository](https://github.com/QwenLM/Qwen-Image)!**
 
 <p align="center">
-    <img src="https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/merge3.jpg" width="1024"/>
+    <img src="https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/merge3.jpg" width="1024" alt="Qwen-Image Example"/>
 <p>
 
-### Key Features
+## Key Features
 
-*   **Advanced Text Rendering:** Generate images with complex and accurate text, particularly effective with Chinese text.
-*   **Precise Image Editing:** Refine existing images with impressive fidelity, including:
-    *   **Multi-Image Editing:** Compose scenes from multiple images (1-3 input images recommended).
-    *   **Enhanced Consistency:** Maintain identity and details when editing, especially in portrait, product, and text modifications.
-    *   **ControlNet Support:** Leverage ControlNet for refined image control (depth maps, edge maps, keypoint maps, etc.).
-*   **Multi-Platform Support:** Integrated with Hugging Face, ModelScope, ComfyUI, WaveSpeedAI, and LiblibAI.
-*   **Flexible Deployment:** Supports Multi-GPU API server for local deployment with features like queue management and automatic prompt optimization.
-*   **Open Benchmarking:** Participate in the AI Arena open benchmarking platform to evaluate performance.
+*   **Text-to-Image Generation:** Create high-quality images from detailed text descriptions, supporting English and Chinese prompts.
+*   **Precise Image Editing:** Refine existing images with accuracy, including content, style, and text modifications.
+*   **Advanced Text Rendering:** Achieve exceptional results in rendering complex text within images, particularly in Chinese.
+*   **Multi-Image Editing Support:** Edit multiple images simultaneously, offering diverse composition possibilities.
+*   **Enhanced Consistency:** Ensure superior quality and coherence in image edits, preserving identity and details.
+*   **Native ControlNet Support:** Leverage ControlNet features for precise image manipulation through depth maps, edge maps, and more.
+*   **LoRA Model Compatibility:** Compatible with various LoRA models, such as MajicBeauty LoRA, for diverse image styles.
+*   **Comprehensive Integration:** Supported by popular platforms like ComfyUI, Hugging Face, ModelScope, and more.
 
-### What's New
+## News and Updates
 
-*   **Qwen-Image-Edit-2509 (September 2025):**  Key improvements including multi-image editing, enhanced single-image consistency for people, products and text, and native support for ControlNet.
-    *   **Multi-image Editing Support**: Enables editing of multiple image inputs such as "person + person," "person + product," and "person + scene".
-    *   **Enhanced Single-image Consistency**: Improves consistency of edited outputs, especially in person, product and text editing.
-    *   **Native Support for ControlNet**: Supports depth maps, edge maps, keypoint maps, and more.
+*   **Qwen-Image-Edit-2509 (September 2025):** This latest iteration introduces significant enhancements, including:
+    *   Multi-Image Editing Support: Now supports editing multiple images, enabling complex compositions.
+    *   Enhanced Single-Image Consistency: Improved identity preservation, support for various styles, and better text and product editing.
+    *   Native ControlNet Support: Built-in compatibility for depth maps, edge maps, and keypoint maps.
 
-### Quick Start
+*   **August 2025 Updates:**
+    *   Open-sourcing of Qwen-Image-Edit.
+    *   Support for LoRA models like MajicBeauty LoRA.
+    *   Native support in ComfyUI.
+    *   Release of the Technical Report on arXiv.
+    *   Model weights released on Hugging Face and ModelScope.
 
-#### 1. Requirements
-*   Ensure you have `transformers>=4.51.3` (for Qwen2.5-VL support).
-*   Install the latest `diffusers`:
-    ```bash
-    pip install git+https://github.com/huggingface/diffusers
-    ```
+## Quick Start
 
-#### 2. Code Examples
+### 1. Prerequisites
 
-##### Qwen-Image (Text-to-Image)
+*   Ensure you have `transformers>=4.51.3`.
+*   Install the latest version of `diffusers`:
+
+```bash
+pip install git+https://github.com/huggingface/diffusers
+```
+
+### 2. Text-to-Image (Qwen-Image)
 
 ```python
 from diffusers import DiffusionPipeline
@@ -53,7 +61,7 @@ import torch
 
 model_name = "Qwen/Qwen-Image"
 
-# Load the pipeline
+# Load the pipeline (select device and torch_dtype)
 if torch.cuda.is_available():
     torch_dtype = torch.bfloat16
     device = "cuda"
@@ -81,6 +89,7 @@ aspect_ratios = {
     "16:9": (1664, 928),
     "9:16": (928, 1664),
     "4:3": (1472, 1104),
+    "3:4": (1104, 1472),
     "3:2": (1584, 1056),
     "2:3": (1056, 1584),
 }
@@ -100,8 +109,9 @@ image = pipe(
 image.save("example.png")
 ```
 
-##### Qwen-Image-Edit (Image Editing - Single Image)
+### 3. Image Editing (Qwen-Image-Edit)
 
+*   **For Single Image Input**
 ```python
 import os
 from PIL import Image
@@ -134,8 +144,8 @@ with torch.inference_mode():
     output_image.save("output_image_edit.png")
     print("image saved at", os.path.abspath("output_image_edit.png"))
 ```
+*   **For Multi Image Input (Qwen-Image-Edit-2509 - Recommended)**
 
-##### Qwen-Image-Edit-2509 (Image Editing - Multiple Image)
 ```python
 import os
 import torch
@@ -169,23 +179,25 @@ with torch.inference_mode():
     print("image saved at", os.path.abspath("output_image_edit_plus.png"))
 ```
 
-#### Advanced Usage
+### 4. Advanced Usage
 
-*   **Prompt Enhancement:** Use the official Prompt Enhancement Tool powered by Qwen-Plus and Qwen-VL-Max.
-    ```python
-    from tools.prompt_utils import rewrite
-    prompt = rewrite(prompt)
-    ```
-    ```python
-    from tools.prompt_utils import polish_edit_prompt
-    prompt = polish_edit_prompt(prompt, pil_image)
-    ```
+*   **Prompt Enhancement:** Use the Prompt Enhancement Tool (powered by Qwen-Plus) for enhanced prompt optimization and multi-language support. Integrate into your code or run the example script.
+*   **Prompt Enhancement for Image Edit**:  Use the Prompt Enhancement Tool powered by Qwen-VL-Max for enhanced stability
+*   **Reference:** [Demo script](src/examples/tools/prompt_utils.py) includes example system prompts.
 
-### Deployment
+## Deploy Qwen-Image
 
-#### Multi-GPU API Server
+Qwen-Image supports Multi-GPU API Server for local deployment:
 
-Configure via environment variables:
+### Multi-GPU API Server Pipeline & Usage
+
+The Multi-GPU API Server will start a Gradio-based web interface with:
+- Multi-GPU parallel processing
+- Queue management for high concurrency
+- Automatic prompt optimization
+- Support for multiple aspect ratios
+
+Configuration via environment variables:
 ```bash
 export NUM_GPUS_TO_USE=4          # Number of GPUs to use
 export TASK_QUEUE_SIZE=100        # Task queue size
@@ -195,31 +207,95 @@ export TASK_TIMEOUT=300           # Task timeout in seconds
 ```bash
 # Start the gradio demo server, api key for prompt enhance
 cd src
-DASHSCOPE_API_KEY=sk-xxxxxxxxxxxxxxxxx python examples/demo.py
+DASHSCOPE_API_KEY=sk-xxxxxxxxxxxxxxxxx python examples/demo.py 
 ```
 
-### Showcase
 
-*   See the [Qwen-Image](./Qwen-Image.md) and [Qwen-Image-Edit](./Qwen-Image.md) for more examples.
-*   **Qwen-Image-Edit-2509 Showcase** showcases multi-image editing capabilities with improved consistency and the ability to support ControlNet.
+## Showcase
 
-### AI Arena
+### Showcase of Qwen-Image Edit-2509
 
-Qwen-Image is evaluated on the [AI Arena](https://aiarena.alibaba-inc.com/), an open benchmarking platform.
+**[Multi-Image Input Examples]**
 
-### Community Support
+*   Person + Person
+    ![Person + Person](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片19.JPG#center)
+*   Person + Scene
+    ![Person + Scene](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片20.JPG#center)
+*   Person + Object
+    ![Person + Object](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片21.JPG#center)
+*   Keypoint Pose Change
+    ![Keypoint Pose Change](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片22.JPG#center)
+*   Three Images 1
+    ![Three Images 1](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片23.JPG#center)
+*   Three Images 2
+    ![Three Images 2](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片24.JPG#center)
+*   Three Images 3
+    ![Three Images 3](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片25.JPG#center)
 
-*   **Hugging Face:**  Day-0 support with ongoing LoRA and finetuning development.
-*   **ModelScope:** Provides comprehensive support, including optimizations for inference and deployment, and LoRA training.
-*   **WaveSpeedAI:** Deployed Qwen-Image on their platform.
+**[Enhanced Consistency Examples]**
+*   Portrait Styles
+    ![Portrait Styles](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片1.JPG#center)
+*   Pose Change with Identity
+    ![Pose Change with Identity](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片2.JPG#center)
+*   Meme Generation
+    ![Meme Generation](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片3.JPG#center)
+*   Long Text with Identity
+    ![Long Text with Identity](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片4.JPG#center)
+*   Old Photo Restoration 1
+    ![Old Photo Restoration 1](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片17.JPG#center)
+*   Old Photo Restoration 2
+    ![Old Photo Restoration 2](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片18.JPG#center)
+*   Cartoon & Cultural Creation
+    ![Cartoon & Cultural Creation](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片15.JPG#center)
+*   Product Poster
+    ![Product Poster](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片5.JPG#center)
+*   Logo Generation
+    ![Logo Generation](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片16.JPG#center)
+*   Font Type
+    ![Font Type](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片10.JPG#center)
+*   Font Color
+    ![Font Color](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片11.JPG#center)
+*   Font Material
+    ![Font Material](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片12.JPG#center)
+*   Precise Text Editing 1
+    ![Precise Text Editing 1](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片13.JPG#center)
+*   Precise Text Editing 2
+    ![Precise Text Editing 2](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片14.JPG#center)
+*   Poster Editing
+    ![Poster Editing](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片6.JPG#center)
+*   Keypoint Control
+    ![Keypoint Control](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片7.JPG#center)
+*   Sketch Input 1
+    ![Sketch Input 1](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片8.JPG#center)
+*   Sketch Input 2
+    ![Sketch Input 2](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/edit2509/幻灯片9.JPG#center)
+
+## AI Arena
+
+AI Arena is an open benchmarking platform built on the Elo rating system to evaluate the image generation capabilities of Qwen-Image and other state-of-the-art closed-source APIs.
+
+![AI Arena](https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/figure_aiarena_website.png)
+
+*   **Leaderboard:**  View the latest rankings at [AI Arena Learboard](https://aiarena.alibaba-inc.com/corpora/arena/leaderboard?arenaType=text2image).
+*   **Participation:** Contact weiyue.wy@alibaba-inc.com if you want to deploy your model and participate in the evaluation.
+
+## Community Support
+
+*   **Hugging Face:** Day 0 Diffusers support, LoRA and finetuning workflows in development.
+*   **ModelScope:**
+    *   DiffSynth-Studio: Comprehensive support including low-GPU-memory offload, FP8 quantization, and training support.
+    *   DiffSynth-Engine: Advanced optimizations.
+    *   ModelScope AIGC Central: Hands-on experience with image generation and LoRA training.
+*   **WaveSpeedAI:**  Qwen-Image deployed on their platform.
 *   **LiblibAI:** Native support for Qwen-Image.
-*   **cache-dit:** Offers cache acceleration support for Qwen-Image.
+*   **cache-dit:**  Cache acceleration support for Qwen-Image with DBCache, TaylorSeer and Cache CFG.
 
-### License
+## License Agreement
 
 Qwen-Image is licensed under Apache 2.0.
 
-### Citation
+## Citation
+
 ```bibtex
 @misc{wu2025qwenimagetechnicalreport,
       title={Qwen-Image Technical Report}, 
@@ -232,13 +308,13 @@ Qwen-Image is licensed under Apache 2.0.
 }
 ```
 
-### Contact and Join Us
+## Contact and Join Us
 
-*   Join our [Discord](https://discord.gg/z3GAxXZ9Ce).
-*   Connect via our [WeChat groups](assets/wechat.png).
-*   Contribute with issues and pull requests on GitHub.
-*   For job opportunities (FTEs and research interns), contact fulai.hr@alibaba-inc.com.
+*   **Discord:** Join our [Discord](https://discord.gg/z3GAxXZ9Ce)
+*   **WeChat:** Scan the QR code to connect via our [WeChat groups](assets/wechat.png)
+*   **GitHub:** Issues and pull requests are welcome on GitHub.
+*   **Careers:** Reach out to fulai.hr@alibaba-inc.com for full-time and internship opportunities.
 
-### Star History
+## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=QwenLM/Qwen-Image&type=Date)](https://www.star-history.com/#QwenLM/Qwen-Image&Date)

@@ -1,40 +1,51 @@
-# Language Model Evaluation Harness: The Premier Framework for LLM Benchmarking ([EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness))
+# Language Model Evaluation Harness: Evaluate Your LLMs with Ease
 
-**Unleash the power of comprehensive LLM evaluation with the Language Model Evaluation Harness, the leading tool for assessing and comparing generative language models.**
+**Quickly and reliably benchmark your Large Language Models (LLMs) using the [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) – a comprehensive framework trusted by leading organizations.**
 
----
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10256836.svg)](https://doi.org/10.5281/zenodo.10256836)
 
-## Key Features:
+## Key Features
 
-*   **Extensive Benchmark Support:** Evaluate models on over 60 standard academic benchmarks, including hundreds of subtasks and variants.
-*   **Flexible Model Integration:** Supports models from [Hugging Face Transformers](https://github.com/huggingface/transformers/), [vLLM](https://github.com/vllm-project/vllm), [SGLang](https://docs.sglang.ai/), [GPT-NeoX](https://github.com/EleutherAI/gpt-neox), [Megatron-DeepSpeed](https://github.com/microsoft/Megatron-DeepSpeed/) , and commercial APIs ([OpenAI](https://openai.com), [Anthropic](https://www.anthropic.com), [TextSynth](https://textsynth.com/), and more).
-*   **Advanced Features:** Includes support for adapters (e.g., LoRA), custom prompts and evaluation metrics, output post-processing, answer extraction, and multiple LM generations.
-*   **Reproducible and Comparable Results:** Utilizes publicly available prompts and evaluation metrics for consistent results.
-*   **Multi-GPU & Accelerated Inference:** Supports multi-GPU evaluation with Hugging Face `accelerate`, vLLM, and SGLang for faster and more efficient assessment.
-*   **Integrated Visualization:** Compatible with Weights & Biases and Zeno for in-depth analysis and visualization of results.
-*   **Steered Model Support:** Evaluate Hugging Face `transformers` models with steering vectors, improving model performance.
-*   **NVIDIA NeMo and OpenVINO Model Support:** Evaluation of NVIDIA NeMo and OpenVINO models using the respective backends.
+*   **Extensive Benchmark Support:** Evaluate LLMs on 60+ standard academic benchmarks, encompassing hundreds of subtasks and variations.
+*   **Flexible Model Integration:** Supports models from Hugging Face `transformers` (including quantization), [GPT-NeoX](https://github.com/EleutherAI/gpt-neox), [Megatron-DeepSpeed](https://github.com/microsoft/Megatron-DeepSpeed/), and commercial APIs (OpenAI, TextSynth, and more).
+*   **Optimized Inference:** Leverage fast and memory-efficient inference with [vLLM](https://github.com/vllm-project/vllm) and [SGLang](https://docs.sglang.ai/).
+*   **Reproducible Results:** Evaluate models with publicly available prompts, ensuring reproducibility and comparability.
+*   **Customization & Extensibility:** Easily integrate custom prompts, evaluation metrics, and support for adapters (e.g., LoRA) and local models.
+*   **Multi-GPU & Multi-Node Support:** Efficiently evaluate large models with data parallelism and model sharding via `accelerate`.
+*   **Integration with Hugging Face Hub:** Seamlessly log results and samples to the Hugging Face Hub for sharing and collaboration.
+*   **Visualization Tools:** Integrate with [Weights & Biases](https://wandb.ai/site) (W&B) and [Zeno](https://zenoml.com) for in-depth analysis and visualization.
 
-## What's New:
+## What's New? (Recent Updates)
 
-*   **[2024/07]** New Open LLM Leaderboard tasks have been added !
-*   **[2024/07]** Refactored and updated API model support.
-*   **[2024/07]** Added `think_end_token` arg to strip CoT reasoning traces.
-*   **[2025/03]** Added steering support for HF models!
-*   **[2025/02]** Added [SGLang](https://docs.sglang.ai/) support!
-*   **[2024/09]** Prototyping text+image multimodal input and text output tasks.
+*   **2025/07:** Added `think_end_token` argument for removing CoT traces.
+*   **2025/03:** Added support for steering HF models.
+*   **2025/02:** Added [SGLang](https://docs.sglang.ai/) support.
+*   **2024/09:** Prototyping multimodal input and output tasks; added `hf-multimodal` and `vllm-vlm` model types.
+*   **2024/07:** Refactored and improved API model support with batched and async requests.  Added new Open LLM Leaderboard tasks.
+*   **v0.4.0 Release Highlights:** New Open LLM Leaderboard tasks, config-based task creation, Jinja2 prompt support, speedups, new modeling libraries (vLLM, MPS), and more.
 
-## Installation:
+## Installation
 
-```bash
-git clone --depth 1 https://github.com/EleutherAI/lm-evaluation-harness
-cd lm-evaluation-harness
-pip install -e .
-```
+1.  **Clone the repository:**
 
-For optional dependencies and advanced features, consult the [Optional Extras](#optional-extras) section below.
+    ```bash
+    git clone --depth 1 https://github.com/EleutherAI/lm-evaluation-harness
+    cd lm-evaluation-harness
+    ```
 
-## Basic Usage:
+2.  **Install the package:**
+
+    ```bash
+    pip install -e .
+    ```
+
+3.  **Install optional dependencies:** Refer to the table below for the extras you need.
+
+## Basic Usage
+
+### Hugging Face Transformers Example
+
+Evaluate a model from the Hugging Face Hub (e.g., GPT-J-6B) on the `hellaswag` task:
 
 ```bash
 lm_eval --model hf \
@@ -44,39 +55,64 @@ lm_eval --model hf \
     --batch_size 8
 ```
 
-For detailed usage instructions, see the [User Guide](./docs/interface.md). Explore supported tasks with `lm-eval --tasks list`. Task descriptions are available [here](./lm_eval/tasks/README.md).
+### Other Frameworks
 
-## Advanced Usage:
+Refer to the documentation for how to run a specific model (NVIDIA NeMo, vLLM, SGLang, and others).
 
-*   **Hugging Face Transformers:** Supports models hosted on the Hugging Face Hub, local models, and models loaded via `transformers`. Includes support for revision control, data types, and batch size automation.  See [Hugging Face transformers](#hugging-face-transformers) for details.
-*   **GGUF Model Evaluation:** Evaluate models in GGUF format.  See [Evaluating GGUF Models](#evaluating-gguf-models)
-*   **Multi-GPU Evaluation:** Leverages Hugging Face `accelerate` for data-parallel and model sharding evaluations.  See [Multi-GPU Evaluation with Hugging Face `accelerate`](#multi-gpu-evaluation-with-hugging-face-accelerate)
-*   **Steered Hugging Face Models:** Evaluate models with steering vectors. See [Steered Hugging Face `transformers` models](#steered-hugging-face-transformers-models)
-*   **NVIDIA NeMo:** Support for evaluating NVIDIA NeMo models, including multi-GPU options.  See [NVIDIA `nemo` models](#nvidia-nemo-models)
-*   **vLLM:** Integrate with vLLM for accelerated inference. See [Tensor + Data Parallel and Optimized Inference with `vLLM`](#tensor--data-parallel-and-optimized-inference-with-vllm)
-*   **SGLang:** Support for efficient offline batch inference. See [Tensor + Data Parallel and Fast Offline Batching Inference with `SGLang`](#tensor--data-parallel-and-fast-offline-batching-inference-with-sglang)
-*   **Model APIs:**  Supports various API models, including OpenAI, Anthropic, and TextSynth. See [Model APIs and Inference Servers](#model-apis-and-inference-servers)
+## Advanced Use Cases
 
-## Saving & Caching Results:
+*   **GGUF Model Evaluation:** Pass the path to the GGUF model and tokenizer using `--model_args`.
+*   **Multi-GPU Evaluation:** Utilize the `accelerate` library for data-parallel and model-sharded evaluation.
+*   **Steered Models:** Evaluate models with steering vectors using the `--model steered` option.
+*   **API Model Integration:** Evaluate models through the OpenAI API, TextSynth, or local inference servers using the corresponding `--model` arguments and API keys.
+*   **Result Caching and Logging:** Save results using `--output_path` and `--use_cache`, and log samples with `--log_samples`.
+*   **Visualize results:** Use the Zeno and W&B integrations.
 
-*   Use `--output_path` to save results.
-*   Use `--log_samples` to log model responses.
-*   Cache results using `--use_cache <DIR>` to skip previously evaluated samples.
-*   Push results and samples to the Hugging Face Hub with the `--hf_hub_log_args` flag.
+## Optional Extras
 
-## Visualizing Results:
+Install optional dependencies using `pip install -e ".[NAME]"`
 
-*   Integrate with [Zeno](https://zenoml.com) and [Weights & Biases](https://wandb.ai/site) for comprehensive visualization and analysis.
+| NAME                 | Description                    |
+|----------------------|--------------------------------|
+| tasks                | All task-specific dependencies |
+| api                  | API models (Anthropic, OpenAI, local) |
+| acpbench             | ACP Bench tasks                |
+| audiolm_qwen   | Qwen2 audio models                    |
+| ifeval               | IFEval task                    |
+| japanese_leaderboard | Japanese LLM tasks             |
+| gptq           | AutoGPTQ models                       |
+| longbench            | LongBench tasks                |
+| gptqmodel      | GPTQModel models                       |
+| math                 | Math answer checking           |
+| hf_transfer    | Speed up HF downloads                 |
+| multilingual         | Multilingual tokenizers        |
+| ibm_watsonx_ai | IBM watsonx.ai models                 |
+| ruler                | RULER tasks                    |
+| ipex           | Intel IPEX backend                    |
+|                      |                                |
+| dev                  | Linting & contributions        |
+| mamba          | Mamba SSM models                      |
+| promptsource         | PromptSource prompts           |
+| neuronx        | AWS inf2 instances                    |
+| sentencepiece        | Sentencepiece tokenizer        |
+| optimum        | Intel OpenVINO models                 |
+| testing              | Run test suite                 |
+| sae_lens       | SAELens model steering                |
+| unitxt               | Run unitxt tasks               |
+| wandb                | Weights & Biases               |
+| sparsify       | Sparsify model steering               |
+| zeno                 | Result visualization           |
+| vllm           | vLLM models                           |
 
-## Contributing:
+## Contributing
 
-Contributions are welcome! See the [open issues](https://github.com/EleutherAI/lm-evaluation-harness/issues), [documentation pages](https://github.com/EleutherAI/lm-evaluation-harness/tree/main/docs), and [Contributing](#contributing) section for details.
+Contributions are welcome! Check out the [open issues](https://github.com/EleutherAI/lm-evaluation-harness/issues) and the [documentation](https://github.com/EleutherAI/lm-evaluation-harness/tree/main/docs) for guidance.
 
-## Optional Extras:
+## Support
 
-[See table in the original README]
+For support, open an issue on GitHub or join the [EleutherAI Discord server](https://discord.gg/eleutherai).
 
-## Cite as:
+## Cite
 
 ```text
 @misc{eval-harness,
@@ -89,3 +125,4 @@ Contributions are welcome! See the [open issues](https://github.com/EleutherAI/l
   doi          = {10.5281/zenodo.12608602},
   url          = {https://zenodo.org/records/12608602}
 }
+```

@@ -1,32 +1,47 @@
-# ApeRAG: Your All-in-One RAG Platform for Intelligent AI Applications
+# ApeRAG: Build Intelligent AI Applications with Production-Ready RAG
 
-**[Explore ApeRAG on GitHub](https://github.com/apecloud/ApeRAG) | [Try the Live Demo](https://rag.apecloud.com/)**
+**Unlock the power of advanced AI with ApeRAG, a production-ready Retrieval-Augmented Generation (RAG) platform.** ([View on GitHub](https://github.com/apecloud/ApeRAG))
 
-Unlock the power of Retrieval-Augmented Generation (RAG) with ApeRAG, a production-ready platform designed to build sophisticated AI applications with hybrid retrieval, multimodal document processing, and intelligent agents.
+[![Trust Score](https://archestra.ai/mcp-catalog/api/badge/quality/apecloud/ApeRAG)](https://archestra.ai/mcp-catalog/apecloud__aperag)
+
+**🚀 [Try ApeRAG Live Demo](https://rag.apecloud.com/)** - Experience the full platform capabilities with our hosted demo
 
 ![HarryPotterKG2.png](docs%2Fimages%2FHarryPotterKG2.png)
 ![chat2.png](docs%2Fimages%2Fchat2.png)
 
-ApeRAG empowers you to create intelligent AI solutions that can autonomously search and reason across your knowledge base, offering a superior approach to Knowledge Graph creation, Context Engineering, and AI agent deployment.
+ApeRAG empowers you to build sophisticated AI applications by combining cutting-edge technologies:
+
+*   **Hybrid Retrieval:** Leverage Graph RAG, vector search, and full-text search.
+*   **Multimodal Processing:** Analyze text, images, charts, and visual content.
+*   **Intelligent Agents:** Deploy AI agents that can autonomously search and reason.
+*   **Enterprise-Grade Management:** Benefit from built-in audit logging, model management, and more.
+
+ApeRAG is ideal for creating Knowledge Graphs, optimizing Context Engineering, and deploying intelligent AI agents that can autonomously search and reason across your knowledge base.
+
+[阅读中文文档](README-zh.md)
 
 **Key Features:**
 
-*   **Advanced Indexing:** Leverage five index types: Vector, Full-text, Graph, Summary, and Vision for comprehensive data understanding and search.
-*   **Intelligent AI Agents:** Integrated AI agents with Model Context Protocol (MCP) support for automated collection selection, intelligent content search, and web search capabilities.
-*   **Enhanced Graph RAG:**  Deeply modified LightRAG implementation with advanced entity normalization for cleaner knowledge graphs and improved relational understanding.
-*   **Multimodal Processing:** Complete support for multimodal document processing, including vision capabilities for image, chart, and visual content analysis.
-*   **Hybrid Retrieval Engine:** A sophisticated retrieval system combining Graph RAG, vector search, full-text search, summary-based retrieval, and vision-based search for comprehensive document understanding.
-*   **MinerU Integration:** Advanced document parsing service powered by MinerU technology, providing superior parsing for complex documents, tables, formulas, and scientific content with optional GPU acceleration.
-*   **Production-Ready Deployment:** Full Kubernetes support with Helm charts and KubeBlocks integration for simplified deployment of production-grade databases (PostgreSQL, Redis, Qdrant, Elasticsearch, Neo4j).
-*   **Enterprise Management:**  Built-in audit logging, LLM model management, graph visualization, comprehensive document management interface, and agent workflow management.
-*   **MCP Integration:** Full support for Model Context Protocol (MCP), enabling seamless integration with AI assistants and tools for direct knowledge base access and intelligent querying.
-*   **Developer-Friendly:**  Built with FastAPI, React, Celery for async task processing, and an agent development framework to help ease customization and contribution.
+*   **Advanced Index Types:** Five comprehensive index types: Vector, Full-text, Graph, Summary, and Vision.
+*   **Intelligent AI Agents:** Built-in agents with MCP support for automated content discovery, intelligent search, and web search.
+*   **Enhanced Graph RAG with Entity Normalization:** Improved knowledge graphs and relational understanding through advanced entity normalization.
+*   **Multimodal Processing & Vision Support:** Complete processing for images, charts, and visual content alongside text.
+*   **Hybrid Retrieval Engine:** Combines Graph RAG, vector search, full-text search, summary-based retrieval, and vision-based search.
+*   **MinerU Integration:** Advanced document parsing with optional GPU acceleration.
+*   **Production-Grade Deployment:** Kubernetes support with Helm charts and KubeBlocks integration.
+*   **Enterprise Management:** Features include audit logging, LLM model management, and comprehensive document management.
+*   **MCP Integration:** Full support for Model Context Protocol, enabling seamless integration with AI assistants.
+*   **Developer Friendly:** FastAPI backend, React frontend, async task processing with Celery, comprehensive development guides, and an agent development framework.
 
 ## Quick Start
 
-Get up and running with ApeRAG using Docker Compose:
+Get up and running quickly with ApeRAG using Docker Compose:
 
-**Prerequisites:** Docker & Docker Compose installed
+**Prerequisites:**
+
+*   CPU >= 2 Core
+*   RAM >= 4 GiB
+*   Docker & Docker Compose
 
 ```bash
 git clone https://github.com/apecloud/ApeRAG.git
@@ -35,12 +50,12 @@ cp envs/env.template .env
 docker-compose up -d --pull always
 ```
 
-*   **Web Interface:** [http://localhost:3000/web/](http://localhost:3000/web/)
-*   **API Documentation:** [http://localhost:8000/docs](http://localhost:8000/docs)
+*   **Web Interface:** http://localhost:3000/web/
+*   **API Documentation:** http://localhost:8000/docs
 
-**MCP (Model Context Protocol) Configuration:**
+### MCP (Model Context Protocol) Support
 
-Configure your MCP client to interact with ApeRAG:
+Integrate with AI assistants using MCP. Configure your MCP client with:
 
 ```json
 {
@@ -54,78 +69,67 @@ Configure your MCP client to interact with ApeRAG:
   }
 }
 ```
-_Replace placeholders with your actual API URL and API key._
 
-**Enhanced Document Parsing:**
+Replace placeholders with your actual ApeRAG API URL and API key.
 
-Enable advanced document parsing for improved handling of complex documents.
+### Enhanced Document Parsing
+
+Enable advanced parsing for complex documents with MinerU:
 
 ```bash
 # Enable advanced document parsing service
 DOCRAY_HOST=http://aperag-docray:8639 docker compose --profile docray up -d
 
-# Enable advanced parsing with GPU acceleration 
-DOCRAY_HOST=http://aperag-docray-gpu:8639 docker compose --profile docray-gpu up -d
+# Enable advanced parsing with GPU acceleration (recommended)
+make compose-up WITH_DOCRAY=1 WITH_GPU=1
 ```
 
-## Kubernetes Deployment (Production Recommended)
+See the full documentation for more options.
 
-Deploy ApeRAG to Kubernetes for high availability and scalability using Helm:
+## Kubernetes Deployment (Recommended for Production)
 
-**Prerequisites:** Kubernetes cluster, kubectl, Helm v3+
+Deploy ApeRAG to Kubernetes for high availability and scalability.
 
-1.  **Clone the Repository:** `git clone https://github.com/apecloud/ApeRAG.git && cd ApeRAG`
-2.  **Deploy Database Services:**
-    *   **Option A: Existing Databases:** Configure database connection details in `deploy/aperag/values.yaml`.
-    *   **Option B: Deploy with KubeBlocks:**
+### Prerequisites
+
+*   Kubernetes cluster (v1.20+)
+*   kubectl
+*   Helm v3+
+
+### Step-by-step deployment (using KubeBlocks)
+
+1.  Clone the repository: `git clone https://github.com/apecloud/ApeRAG.git`
+2.  Deploy Database Services:
+    *   Deploy databases with KubeBlocks:
         ```bash
         cd deploy/databases/
-        # (Optional) Review configuration - defaults work for most cases
-        # edit 00-config.sh
-
-        # Install KubeBlocks and deploy databases
-        bash ./01-prepare.sh          # Installs KubeBlocks
-        bash ./02-install-database.sh # Deploys PostgreSQL, Redis, Qdrant, Elasticsearch
+        bash ./01-prepare.sh
+        bash ./02-install-database.sh
         cd ../../
         ```
-3.  **Deploy ApeRAG Application:**
-
+3.  Deploy ApeRAG Application:
     ```bash
     helm install aperag ./deploy/aperag --namespace default --create-namespace
     ```
+4.  Access ApeRAG
+    *   Use port forwarding: `kubectl port-forward svc/aperag-frontend 3000:3000 -n default` and `kubectl port-forward svc/aperag-api 8000:8000 -n default`
+    *   Web Interface: http://localhost:3000
+    *   API Documentation: http://localhost:8000/docs
 
-4.  **Access Your Deployment:**
-
-    ```bash
-    kubectl port-forward svc/aperag-frontend 3000:3000 -n default
-    kubectl port-forward svc/aperag-api 8000:8000 -n default
-    ```
-
-    *   **Web Interface:** [http://localhost:3000](http://localhost:3000)
-    *   **API Documentation:** [http://localhost:8000/docs](http://localhost:8000/docs)
-
-    Configure Ingress in `values.yaml` for production environments.
-
-## Development & Contributing
-
-Explore the [Development Guide](./docs/development-guide.md) for detailed setup, configuration, and contribution instructions.
+For detailed instructions, troubleshooting, and database management, consult the full documentation.
 
 ## Acknowledgments
 
-ApeRAG is built upon and integrates the following open-source project:
+ApeRAG builds upon the following open-source project:
 
-### LightRAG
-
-*   **Paper:** "LightRAG: Simple and Fast Retrieval-Augmented Generation" ([arXiv:2410.05779](https://arxiv.org/abs/2410.05779))
-*   **Authors:** Zirui Guo, Lianghao Xia, Yanhua Yu, Tu Ao, Chao Huang
-*   **License:** MIT License
-
-See our [LightRAG modifications changelog](./aperag/graph/changelog.md) for details on modifications.
+*   **LightRAG** by HKUDS (MIT License)
+    *   Paper: "LightRAG: Simple and Fast Retrieval-Augmented Generation" (arXiv:2410.05779)
 
 ## Community
 
 *   [Discord](https://discord.gg/FsKpXukFuB)
 *   [Feishu](docs%2Fimages%2Ffeishu-qr-code.png)
+
 <img src="docs/images/feishu-qr-code.png" alt="Feishu" width="150"/>
 
 ## Star History
@@ -134,4 +138,4 @@ See our [LightRAG modifications changelog](./aperag/graph/changelog.md) for deta
 
 ## License
 
-ApeRAG is licensed under the Apache License 2.0.  See the [LICENSE](./LICENSE) file for details.
+ApeRAG is licensed under the Apache License 2.0. See the [LICENSE](./LICENSE) file for details.

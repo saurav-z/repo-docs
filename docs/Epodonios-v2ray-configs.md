@@ -1,204 +1,195 @@
-# Secure & Free V2Ray Configurations for Anonymous Internet Access
+# Access the Internet Securely and Anonymously with Free V2Ray Configurations
 
-**Looking for a way to browse the internet securely and privately?** This repository, ([Original Repo](https://github.com/Epodonios/v2ray-configs)), offers a constantly updated collection of free V2Ray configuration files.
+This repository, [V2ray-Configs](https://github.com/Epodonios/v2ray-configs), provides a regularly updated collection of free V2Ray configurations to enhance your online privacy and security.  These configurations are automatically collected and updated every five minutes, giving you access to a vast and dynamic list of servers.
+
+[![Last Commit](https://img.shields.io/github/last-commit/barry-far/V2ray-Configs.svg)](https://github.com/Epodonios/V2ray-Configs)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![Update Configs](https://github.com/barry-far/V2ray-Configs/actions/workflows/main.yml/badge.svg)](https://github.com/Epodonios/V2ray-Configs/actions/workflows/main.yml)
+[![Repo Size](https://img.shields.io/github/repo-size/Epodonios/V2ray-Configs)](https://github.com/Epodonios/V2ray-Configs)
+
+<a href="https://t.me/+IOG0nSifAV03ZmY0" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="100" height="100"> Contact Us on Telegram
+</a>
 
 ## Key Features:
 
-*   **Wide Protocol Support:** Access configurations for Vmess, Vless, Trojan, Tuic, Shadowsocks, and ShadowsocksR protocols.
-*   **Automated Updates:** Configurations are collected and updated frequently.
-*   **Multiple Format Options:** Receive configurations in base64, normal, or split formats to suit your needs.
-*   **Cross-Platform Compatibility:** Works with popular V2Ray clients on Android, iOS, Windows, and Linux.
-*   **Easy to Use:** Simply copy and paste subscription links into your V2Ray client.
-*   **Various Proxy Software Solutions** Use your proxy softwares for a system wide anonymous connection
+*   **Free & Updated Configurations:** Access a constantly updated list of V2Ray configurations.
+*   **Multiple Protocol Support:** Compatible with Vmess, Vless, Trojan, Tuic, Shadowsocks, and ShadowsocksR.
+*   **Subscription Links:** Utilize subscription links for easy updates within your V2Ray client.
+*   **Multiple Formats:** Configurations available in base64, normal, and split formats for maximum compatibility.
+*   **Protocol-Specific Lists:** Easily find configurations for specific protocols (Vless, Vmess, etc.)
+*   **Easy to Use:**  Simple instructions to integrate and use the config files.
+*   **System Proxy:** Use System proxy to tunnel and set up the entire system.
 
-## How to Use:
+## Supported V2Ray Clients:
 
-1.  **Choose Your Client:** Select a V2Ray client compatible with your operating system (examples provided in original README).
-2.  **Get Subscription Links:** Choose from the following subscription links to import configurations:
+### Android:
+  *   v2rayng
 
-    *   **All Configurations:**
-        ```
-        https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
-        ```
-        (If the above link doesn't work, try the base64 configurations)
-        ```
-        https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_base64_Sub.txt
-        ```
-    *   **Split by Protocol:** Access configurations by protocol for more control.
-        *   Vless:
-            ```
-            https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vless.txt
-            ```
-        *   Vmess:
-            ```
-            https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt
-            ```
-        *   ss:
-            ```
-            https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ss.txt
-            ```
-        *   ssr:
-            ```
-            https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ssr.txt
-            ```
-        *   Trojan:
-            ```
-            https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.txt
-            ```
-    *   **Split in 250 count of configs:** Access configurations by protocol for more control.
-        *   Config List 1:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub1.txt
-            ```
-        *   Config List 2:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub2.txt
-            ```
-        *   Config List 3:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub3.txt
-            ```
-        *   Config List 4:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub4.txt
-            ```
-        *   Config List 5:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub5.txt
-            ```
-        *   Config List 6:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub6.txt
-            ```
-        *   Config List 7:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub7.txt
-            ```
-        *   Config List 8:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub8.txt
-            ```
-        *   Config List 9:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub9.txt
-            ```
-        *   Config List 10:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub10.txt
-            ```
-        *   Config List 11:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub11.txt
-            ```
-        *   Config List 12:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub12.txt
-            ```
-        *   Config List 13:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub13.txt
-            ```
-        *   Config List 14:
-            ```
-            https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub14.txt
-            ```
-3.  **Import and Update:** Copy the link of your choice and paste it into your V2Ray client's subscription settings and save it. Refresh your subscription periodically within your V2Ray client to ensure you have the latest configurations.
+### iOS:
+  *   fair
+  *   streisand
 
-## Additional Tools
+### Windows and Linux:
+  *   hiddify-next
+  *   nekoray
+  *   v2rayn
 
-This repository also provides a lightweight Python script:
+## Subscription Links:
 
-### V2Ray Config Scanner
+Use these subscription links within your V2Ray client for automatic updates:
 
-This lightweight Python script that scans and pings a list of V2Ray configuration links (vmess, vless, etc.), and outputs their protocol and latency. Useful for testing and sorting multiple V2Ray configs based on performance.
+*   **All Configurations:**
+    ```
+    https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
+    ```
 
-#### Features
+*   **Base64 Encoded:**
+    ```
+    https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_base64_Sub.txt
+    ```
 
-- Supports `vmess`, vless, and other V2Ray protocols
-- Measures latency (ping) for each config
-- Sorts or filters results based on protocol and responsiveness
-- Simple, fast, and dependency-free (only requires Python)
+### Protocol-Specific Lists:
 
-#### Requirements
+*   **Vless:**
+    ```
+    https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vless.txt
+    ```
+*   **Vmess:**
+    ```
+    https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt
+    ```
+*   **Shadowsocks (ss):**
+    ```
+    https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ss.txt
+    ```
+*   **ShadowsocksR (ssr):**
+    ```
+    https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ssr.txt
+    ```
+*   **Trojan:**
+    ```
+    https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.txt
+    ```
 
-- Python 3.x (no external packages required)
+### Config Lists (split into 250-config chunks):
 
-#### Usage
+*   Config List 1:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub1.txt
+    ```
+*   Config List 2:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub2.txt
+    ```
+*   Config List 3:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub3.txt
+    ```
+*   Config List 4:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub4.txt
+    ```
+*   Config List 5:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub5.txt
+    ```
+*   Config List 6:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub6.txt
+    ```
+*   Config List 7:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub7.txt
+    ```
+*   Config List 8:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub8.txt
+    ```
+*   Config List 9:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub9.txt
+    ```
+*   Config List 10:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub10.txt
+    ```
+*   Config List 11:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub11.txt
+    ```
+*   Config List 12:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub12.txt
+    ```
+*   Config List 13:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub13.txt
+    ```
+*   Config List 14:
+    ```
+    https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub14.txt
+    ```
 
-1.  Make sure Python 3 is installed on your system.
-2.  Download the sub\*.txt files from this repository (they contain lists of V2Ray subscription links).
-3.  Run the script and provide the path to one or more sub\*.txt files as arguments.
-4.  The script will start scanning and show you the protocol and ping for each config.
+## Usage Instructions:
 
-Sample Output
+1.  **Copy the link:** Copy a subscription link from the list above.
+2.  **Paste into your client:**  Go to your V2Ray client's subscription settings and paste the copied link.
+3.  **Update Regularly:** Use your client's subscription update function to keep your configurations current.
 
-```
-[vmess] node1.example.com - 42 ms
-[vless] node2.example.net - timeout
-[shadowsocks] fastnode.org - 35 ms
-```
+##  System Proxy (Tunnel Entire System) - Proxifier (Windows/Mac/Linux)
+For better use and tunneling the entire system, you can use a proxy program like Proxifier.
 
-## System-Wide Tunneling using Proxy software
+### Usage Instructions:
 
-  1-First, install the Proxifier program.
-
-  https://proxifier.com/download/
-  
-  2-Activate the program:
+1.  **Install Proxifier:**
+    [https://proxifier.com/download/](https://proxifier.com/download/)
+2.  **Activate the program:**
 
 Activation keys:
 
-Portable Edition:  
+Portable Edition:
 
     L6Z8A-XY2J4-BTZ3P-ZZ7DF-A2Q9C
 
-Standard Edition: 
-      
+Standard Edition:
+
       5EZ8G-C3WL5-B56YG-SCXM9-6QZAP
 
 Mac OS:
 
      P427L-9Y552-5433E-8DSR3-58Z68
 
-3-Go to the Profile section and select the Proxy Server. In the displayed section, click on Add.
+3.  **Add a Proxy Server:** In Proxifier, go to Profile > Proxy Servers and click Add.
 
-4-Enter the following information:
+4.  **Enter Proxy Details:**
+    *   IP: 127.0.0.1
+    *   Port:
+        *   V2rayN: 10808
+        *   Netch: 2801
+        *   SSR: 1080
+        *   Mac V2rayU: 1086
+    *   Protocol: SOCKS5
 
-IP: Enter 127.0.0.1
+5.  **Enjoy!**
 
-Port: Depending on the version you are using, enter:
+##  System Proxy (Tunnel Entire System) - System Tools (Windows/Mac/Linux)
 
-V2rayN: 10808
+### Usage Instructions:
 
-Netch: 2801
-
-SSR: 1080
-
-Mac V2rayU: 1086
-
-Protocol: Select SOCKS5
-
-5-Enjoy!
-
-Some installed programs on the system, like Spotube, might not fully tunnel. This issue can be resolved with this method.
-
-## System-Wide Tunneling: OS Setting Solution
-
-  1- open your OS setting 
-
-  2- go to proxy section
-
-  3- in proxy section set this values : 
-    ip : 127.0.0.1
-  
-    port : 10809
-  
-    local host : 
+1.  **Open OS Settings:** Go to your operating system's network settings.
+2.  **Proxy Settings:** Find the proxy settings section.
+3.  **Enter Proxy Values:**
+    *   IP: 127.0.0.1
+    *   Port: 10809
+    *   Local Host:
     ```
-  localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;192.168.*
-  ```
-   4- then set it up with ON key 
+    localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;192.168.*
+    ```
 
-   5- back to v2rayn and after set your config turn it to set system proxy 
+4.  **Enable Proxy:** Turn the proxy setting "ON".
+5.  **V2Ray Client:** In your V2Ray client, select the "System Proxy" option or set to your system.
 
-   6- now your system tunneled entirely
+6.  **Entire System Tunneled:** Your system is now routed through the V2Ray configuration.
+
+---

@@ -1,96 +1,86 @@
-# Cartography: Visualize and Understand Your Cloud Infrastructure
+# Cartography: Visualize and Understand Your Infrastructure with a Graph Database
 
-**Cartography is a powerful, open-source tool that maps your cloud infrastructure and relationships, revealing hidden security risks through an intuitive graph view.** Discover valuable insights into your cloud environment and streamline security efforts with Cartography - [View the original repo on GitHub](https://github.com/cartography-cncf/cartography).
+**Cartography is a powerful open-source tool that maps your infrastructure assets and their relationships into an intuitive graph database, empowering you to proactively identify and mitigate security risks.** ([Original Repository](https://github.com/cartography-cncf/cartography))
 
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/cartography-cncf/cartography/badge)](https://scorecard.dev/viewer/?uri=github.com/cartography-cncf/cartography)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9637/badge)](https://www.bestpractices.dev/projects/9637)
 ![build](https://github.com/cartography-cncf/cartography/actions/workflows/publish-to-ghcr-and-pypi.yml/badge.svg)
-![Cartography](docs/root/images/logo-horizontal.png)
-
-![Visualization of RDS nodes and AWS nodes](docs/root/images/accountsandrds.png)
 
 ## Key Features
 
-*   **Graph-Based Visualization:** Explore your infrastructure assets and their connections using an interactive graph database (powered by Neo4j).
-*   **Multi-Platform Support:** Ingests data from a wide variety of cloud providers and services.
-*   **Dependency Mapping:** Uncover hidden relationships between your assets to identify potential attack vectors.
-*   **Extensible Architecture:** Customize and extend Cartography with your own plugins to fit your specific needs.
-*   **Automated Analysis:** Integrate Cartography into your automation pipelines for continuous security monitoring and analysis.
-*   **Web Frontend and API:** Access and interact with your infrastructure data through a user-friendly web interface or via API calls.
+*   **Comprehensive Asset Mapping:**  Consolidates infrastructure assets from various platforms.
+*   **Relationship Visualization:**  Provides a clear, visual representation of relationships between assets using a Neo4j graph database.
+*   **Security Risk Analysis:** Enables identification of hidden dependencies and potential attack paths.
+*   **Extensible & Customizable:**  Easily integrates with new platforms and data sources.
+*   **Flexible Exploration:** Supports both manual exploration via a web frontend and automated API access.
+*   **Open Source:** Free to use and contribute to.
 
 ## Why Use Cartography?
 
-Cartography empowers you to:
+Cartography offers a unique approach to understanding your infrastructure. It excels at revealing hidden dependencies, making it easier to validate security assumptions and proactively address risks.
 
-*   **Enhance Security:** Identify and mitigate security risks by visualizing potential attack paths.
-*   **Improve Compliance:** Generate asset reports to validate security assumptions and demonstrate compliance.
-*   **Accelerate Incident Response:** Quickly understand your infrastructure during incidents by exploring the relationships between assets.
-*   **Gain Deep Insights:** Discover cross-tenant permissions and network paths within your environment.
+*   **For Security Teams:** Identify potential attack paths and improve security posture.
+*   **For Service Owners:** Generate asset reports and understand dependencies.
+*   **For Red Teamers:** Discover attack paths for penetration testing.
+*   **For Blue Teamers:**  Identify areas for security improvement.
+
+Learn more about the story behind Cartography in our [presentation at BSidesSF 2019](https://www.youtube.com/watch?v=ZukUmZSKSek).
 
 ## Supported Platforms
 
-Cartography supports a growing list of platforms, including:
+Cartography currently supports a wide range of platforms, with new integrations constantly being added:
 
-*   Airbyte
-*   Amazon Web Services (AWS)
-*   Anthropic
-*   BigFix
-*   Cloudflare
-*   Crowdstrike Falcon
-*   DigitalOcean
-*   Duo
-*   GitHub
-*   Google Cloud Platform (GCP)
-*   Google GSuite
-*   Kandji
-*   Keycloak
-*   Kubernetes
-*   Lastpass
-*   Microsoft Azure
-*   Microsoft Entra ID
-*   NIST CVE
-*   Okta
-*   OpenAI
-*   Oracle Cloud Infrastructure (OCI)
-*   PagerDuty
-*   Scaleway
-*   SentinelOne
-*   SnipeIT
-*   Tailscale
-*   Trivy Scanner
+*   [Airbyte](https://cartography-cncf.github.io/cartography/modules/airbyte/index.html)
+*   [Amazon Web Services](https://cartography-cncf.github.io/cartography/modules/aws/index.html)
+*   [Anthropic](https://cartography-cncf.github.io/cartography/modules/anthropic/index.html)
+*   [BigFix](https://cartography-cncf.github.io/cartography/modules/bigfix/index.html)
+*   [Cloudflare](https://cartography-cncf.github.io/cartography/modules/cloudflare/index.html)
+*   [Crowdstrike Falcon](https://cartography-cncf.github.io/cartography/modules/crowdstrike/index.html)
+*   [DigitalOcean](https://cartography-cncf.github.io/cartography/modules/digitalocean/index.html)
+*   [Duo](https://cartography-cncf.github.io/cartography/modules/duo/index.html)
+*   [GitHub](https://cartography-cncf.github.io/cartography/modules/github/index.html)
+*   [Google Cloud Platform](https://cartography-cncf.github.io/cartography/modules/gcp/index.html)
+*   [Google GSuite](https://cartography-cncf.github.io/cartography/modules/gsuite/index.html)
+*   [Kandji](https://cartography-cncf.github.io/cartography/modules/kandji/index.html)
+*   [Keycloak](https://cartography-cncf.github.io/cartography/modules/keycloak/index.html)
+*   [Kubernetes](https://cartography-cncf.github.io/cartography/modules/kubernetes/index.html)
+*   [Lastpass](https://cartography-cncf.github.io/cartography/modules/lastpass/index.html)
+*   [Microsoft Azure](https://cartography-cncf.github.io/cartography/modules/azure/index.html)
+*   [Microsoft Entra ID](https://cartography-cncf.github.io/cartography/modules/entra/index.html)
+*   [NIST CVE](https://cartography-cncf.github.io/cartography/modules/cve/index.html)
+*   [Okta](https://cartography-cncf.github.io/cartography/modules/okta/index.html)
+*   [OpenAI](https://cartography-cncf.github.io/cartography/modules/openai/index.html)
+*   [Oracle Cloud Infrastructure](https://cartography-cncf.github.io/cartography/modules/oci/index.html)
+*   [PagerDuty](https://cartography-cncf.github.io/cartography/modules/pagerduty/index.html)
+*   [Scaleway](https://cartography-cncf.github.io/cartography/modules/scaleway/index.html)
+*   [SentinelOne](https://cartography-cncf.github.io/cartography/modules/sentinelone/index.html)
+*   [SnipeIT](https://cartography-cncf.github.io/cartography/modules/snipeit/index.html)
+*   [Tailscale](https://cartography-cncf.github.io/cartography/modules/tailscale/index.html)
+*   [Trivy Scanner](https://cartography-cncf.github.io/cartography/modules/trivy/index.html)
 
-*(Click each platform link to view the supported features)*
+## Installation & Configuration
 
-## Getting Started
-
-### Installation
-
-[Follow these steps](https://cartography-cncf.github.io/cartography/install.html) to quickly set up a test graph and populate it with data.
-
-### Production Setup
-
-For production environments, review [these recommendations](https://cartography-cncf.github.io/cartography/ops.html) on setting up Cartography.
+*   **Getting Started:** [Installation Guide](https://cartography-cncf.github.io/cartography/install.html)
+*   **Production Setup:** [Production Recommendations](https://cartography-cncf.github.io/cartography/ops.html)
 
 ## Usage
 
-### Querying
+### Querying the Database
 
-Use the [querying tutorial](https://cartography-cncf.github.io/cartography/usage/tutorial.html) to get started with querying your graph database. Use the [data schema](https://cartography-cncf.github.io/cartography/usage/schema.html) as a helpful reference.
+Leverage the power of your infrastructure graph through our [querying tutorial](https://cartography-cncf.github.io/cartography/usage/tutorial.html) and reference our [data schema](https://cartography-cncf.github.io/cartography/usage/schema.html).
 
 ### Building Applications
 
-Cartography's data can be used to build custom applications and data pipelines. View the doc on [applications](https://cartography-cncf.github.io/cartography/usage/applications.html).
+Build applications and data pipelines using Cartography.  See our guide on [applications](https://cartography-cncf.github.io/cartography/usage/applications.html).
 
-## Docs
+## Documentation
 
-Find all the documentation on [Cartography's website](https://cartography-cncf.github.io/cartography/).
+*   [Full Documentation](https://cartography-cncf.github.io/cartography/)
 
 ## Community
 
-*   **Slack:** Join the CNCF Slack workspace [here](https://communityinviter.com/apps/cloud-native/cncf), and then join the `#cartography` channel.
-*   **Community Meetings:** Attend our [monthly community meeting](https://zoom-lfx.platform.linuxfoundation.org/meetings/cartography?view=week).
-    *   Meeting minutes are [here](https://docs.google.com/document/d/1VyRKmB0dpX185I15BmNJZpfAJ_Ooobwz0U1WIhjDxvw).
-    *   Recorded videos from before 2025 are posted [here](https://www.youtube.com/playlist?list=PLMga2YJvAGzidUWJB_fnG7EHI4wsDDsE1).
+*   **Slack:** Join the CNCF Slack workspace [here](https://communityinviter.com/apps/cloud-native/cncf) and then the `#cartography` channel.
+*   **Community Meetings:**  Attend our [monthly community meeting](https://zoom-lfx.platform.linuxfoundation.org/meetings/cartography?view=week) (Meeting minutes: [here](https://docs.google.com/document/d/1VyRKmB0dpX185I15BmNJZpfAJ_Ooobwz0U1WIhjDxvw); Recorded videos: [here](https://www.youtube.com/playlist?list=PLMga2YJvAGzidUWJB_fnG7EHI4wsDDsE1)).
 
 ## License
 
@@ -98,35 +88,27 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ## Contributing
 
-We welcome contributions to Cartography!
+We welcome contributions! Please follow the [CNCF code of conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
 
-### Code of Conduct
-
-All contributors and participants must adhere to the [CNCF code of conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
-
-### Reporting Issues and Suggestions
-
-Submit your [GitHub issue](https://github.com/cartography-cncf/cartography/issues) to report a bug or request a feature.
-
-### Developing Cartography
-
-Get started with our [developer documentation](https://cartography-cncf.github.io/cartography/dev/developer-guide.html). Please feel free to submit your own PRs to update documentation.
+*   **Report bugs/request features:** Submit a [GitHub issue](https://github.com/cartography-cncf/cartography/issues).
+*   **Discussions:** Discuss larger topics in [GitHub Discussions](https://github.com/cartography-cncf/cartography/discussions).
+*   **Developer Documentation:** [Developer Guide](https://cartography-cncf.github.io/cartography/dev/developer-guide.html)
 
 ## Who Uses Cartography?
 
-1.  Lyft
-2.  Thought Machine
-3.  MessageBird
-4.  Cloudanix
-5.  Corelight
-6.  SubImage
-7.  {Your company here} :-)
+*   [Lyft](https://www.lyft.com)
+*   [Thought Machine](https://thoughtmachine.net/)
+*   [MessageBird](https://messagebird.com)
+*   [Cloudanix](https://www.cloudanix.com/)
+*   [Corelight](https://www.corelight.com/)
+*   [SubImage](https://subimage.io)
+*   {Your company here} :-)
 
-*(If your company uses Cartography, please submit a pull request to add your name!)*
+(If your organization uses Cartography, please submit a PR to add your company!)
 
 ---
 
-Cartography is a [Cloud Native Computing Foundation](https://www.cncf.io/) sandbox project.<br>
+Cartography is a [Cloud Native Computing Foundation](https://www.cncf.io/) sandbox project.
 <div style="background-color: white; display: inline-block; padding: 10px;">
   <img src="docs/root/images/cncf-color.png" alt="CNCF Logo" width="200">
 </div>

@@ -6,14 +6,16 @@
   <img alt="SwanLab" src="readme_files/swanlab-logo-type2-light.svg" width="300" height="130">
 </picture>
 
-## SwanLab: Supercharge Your Deep Learning Experiments
+</div>
 
-**SwanLab is an open-source, user-friendly tool that empowers you to track, visualize, and collaborate on your deep learning experiments with ease.**
+# SwanLab: Open-Source Deep Learning Experiment Tracking & Visualization
 
-<a href="https://swanlab.cn">🔥SwanLab Online</a> · <a href="https://docs.swanlab.cn">📃 Documentation</a> · <a href="https://github.com/swanhubx/swanlab/issues">Report an Issue</a> · <a href="https://geektechstudio.feishu.cn/share/base/form/shrcnyBlK8OMD0eweoFcc2SvWKc">Feedback</a> · <a href="https://docs.swanlab.cn/zh/guide_cloud/general/changelog.html">Changelog</a> · <img height="16" width="16" src="https://raw.githubusercontent.com/SwanHubX/assets/main/community.svg" alt="swanlab community Logo" /> <a href="https://swanlab.cn/benchmarks">Benchmarks Community</a>
+**SwanLab is an open-source, user-friendly tool designed to streamline your deep learning workflow by tracking, visualizing, and collaborating on your machine learning experiments.**  Seamlessly integrate with 30+ popular frameworks and enjoy features like cloud/offline support, robust visualization, and powerful experiment comparison.  [Explore the project on GitHub](https://github.com/SwanHubX/SwanLab).
+
+<a href="https://swanlab.cn">🔥SwanLab Online</a> · <a href="https://docs.swanlab.cn">📃 Documentation</a> · <a href="https://github.com/swanhubx/swanlab/issues">Report Issues</a> · <a href="https://geektechstudio.feishu.cn/share/base/form/shrcnyBlK8OMD0eweoFcc2SvWKc">Feedback</a> · <a href="https://docs.swanlab.cn/zh/guide_cloud/general/changelog.html">Changelog</a> · <img height="16" width="16" src="https://raw.githubusercontent.com/SwanHubX/assets/main/community.svg" alt="swanlab community Logo" /> <a href="https://swanlab.cn/benchmarks">Benchmarks</a>
 
 [![Release](https://img.shields.io/github/v/release/swanhubx/swanlab?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/swanhubx/swanlab/releases)
-[![Docker Hub](https://img.shields.io/docker/v/swanlab/swanlab-next?color=369eff&label=docker&labelColor=black&logoColor=white&style=flat-square)](https://hub.docker.com/r/swanlab/swanlab-next/tags)
+[![DockerHub](https://img.shields.io/docker/v/swanlab/swanlab-next?color=369eff&label=docker&labelColor=black&logoColor=white&style=flat-square)](https://hub.docker.com/r/swanlab/swanlab-next/tags)
 [![GitHub Stars](https://img.shields.io/github/stars/swanhubx/swanlab?labelColor&style=flat-square&color=ffcb47)](https://github.com/swanhubx/swanlab)
 [![GitHub Issues](https://img.shields.io/github/issues/swanhubx/swanlab?labelColor=black&style=flat-square&color=ff80eb)](https://github.com/swanhubx/swanlab/issues)
 [![GitHub Contributors](https://img.shields.io/github/contributors/swanhubx/swanlab?color=c4f042&labelColor=black&style=flat-square)](https://github.com/swanhubx/swanlab/graphs/contributors)
@@ -25,155 +27,101 @@
 [![PyPI Downloads](https://static.pepy.tech/badge/swanlab?labelColor=black&style=flat-square)](https://pepy.tech/project/swanlab)
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1RWsrY_1bS8ECzaHvYtLb_1eBkkdzekR3?usp=sharing)
 
+
+<br/>
+
 ![](readme_files/swanlab-overview.png)
 
-[中文 / English / 日本語 / Русский](README_EN.md)
+[中文 / English](README_EN.md) / [日本語](README_JP.md) / [Русский](README_RU.md)
 
 👋 Join our [WeChat Group](https://docs.swanlab.cn/zh/guide_cloud/community/online-support.html)
 
 <a href="https://hellogithub.com/repository/b442a9fa270e4ccb8847c9ee3445e41b" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=b442a9fa270e4ccb8847c9ee3445e41b&claim_uid=Oh5UaGjfrblg0yZ" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
-</div>
+<br/>
+
+## Key Features
+
+*   **Experiment Tracking & Visualization:**
+    *   Track and visualize key metrics, hyperparameters, and model performance with intuitive UI.
+    *   Support for various data types: Scalar metrics, images, audio, text, videos, 3D point clouds, biochemical molecules, and custom ECharts charts.
+    *   Built-in support for common chart types: Line charts, media (images, audio, text, videos), 3D point clouds, biochemical molecules, bar charts, scatter plots, box plots, heatmaps, pie charts, and radar charts.
+    *   Enhanced text visualization components tailored for LLM training scenarios, including Markdown rendering.
+    *   Automatic logging of experiment metadata: Log files, hardware environment, Git repository, Python environment, Python library list, and project run directory.
+    *   Resume training support - add new metrics to the same experiment, even after interruption.
+
+*   **Comprehensive Framework Integrations:**  Seamless integration with over 30 popular machine learning frameworks, including PyTorch, Hugging Face Transformers, PyTorch Lightning, LLaMA Factory, and many more.
+
+*   **Hardware Monitoring:**  Real-time monitoring and logging of system-level hardware metrics: CPU, NPU (Ascend), GPU (Nvidia), MLU (Cambricon), XPU (Kunlunxin), DCU (Hygon), MetaX GPU (MXGPU), Moore Threads GPU, and memory usage.
+
+*   **Experiment Management:**  Centralized dashboard designed for AI training, allowing for a global view to manage multiple projects and experiments.
+
+*   **Result Comparison:**  Compare experiments using online tables and comparison charts to identify insights and optimize your model iterations.
+
+*   **Online Collaboration:** Facilitate collaborative training with your team by syncing experiments in a project, where you can view training logs, discuss results, and provide feedback.
+
+*   **Shareable Results:**  Share your experiment results effortlessly with shareable URLs.
+
+*   **Self-Hosted Support:** Use SwanLab in offline environments through self-hosting, enabling you to manage experiments via the dashboard.
+
+*   **Plugin Extensibility:** Extend SwanLab's functionality with plugins, such as those for notifications (Slack, Lark), and CSV recording.
+
+>   \[!IMPORTANT]
+>
+>   **Star the repository** to receive the latest release notifications directly on GitHub. ⭐️
+
+![star-us](readme_files/star-us.png)
 
 <br/>
 
-## Table of Contents
+## Recent Updates
 
-- [🌟 Recent Updates](#-recent-updates)
-- [💡 What is SwanLab?](#-what-is-swanlab)
-- [🚀 Online Demo](#-online-demo)
-- [🏁 Quickstart](#-quickstart)
-- [🐳 Self-Hosting](#-self-hosting)
-- [🔥 Real-World Examples](#-real-world-examples)
-- [⚙️ Hardware Monitoring](#-hardware-monitoring)
-- [🧩 Framework Integrations](#-framework-integrations)
-- [🔌 Plugins & APIs](#-plugins--apis)
-- [🆚 Comparison with Existing Tools](#-comparison-with-existing-tools)
-- [🤝 Community](#-community)
-- [📄 License](#-license)
-- [⭐ Star History](#-star-history)
+*   **2025.09.22:** 📊 New UI released, table view supports global sorting and filtering, data level unifies the table and chart view.
+*   **2025.09.12:** 🔢 Support for creating **scalar charts**, flexibility in displaying statistical values for experimental metrics; Major upgrade to organization management page, providing more powerful permission control and project management capabilities.
+*   **2025.08.19:** 🤔 Enhanced chart rendering performance and low-invasive loading animation, allowing researchers to focus more on experiment analysis; Integrated the excellent [MLX-LM](https://github.com/ml-explore/mlx-lm) and [SpecForge](https://github.com/sgl-project/SpecForge) frameworks, providing training experiences in more scenarios.
+*   **2025.08.06:** 👥 **Training Collaboration** is online, supporting inviting project collaborators, sharing project links and QR codes; The workspace supports list view, supports displaying project Tags;
+*   **2025.07.29:** 🚀 Sidebar supports **experiment filtering and sorting**; 📊 Table view is online with a **column control panel**, which can easily achieve column hiding and display; 🔐 **Multi-API Key** management is online, making your data more secure; swanlab sync improves the compatibility of log file integrity, adapts to scenarios such as training crashes; New charts - PR curve, ROC curve, confusion matrix online, [Documentation](https://docs.swanlab.cn/api/py-pr_curve.html);
+*   **2025.07.17:** 📊 More powerful **line chart configuration**, supports flexible configuration of line types, colors, thickness, grids, and legend positions; 📹 Supports **swanlab.Video** data type, supports recording and visualizing GIF format files; Global chart dashboard supports configuring the Y-axis and maximum number of displayed experiments;
+*   **2025.07.10:** 📚 More powerful **text view**, supports Markdown rendering and arrow key switching, which can be created by `swanlab.echarts.table` and `swanlab.Text`, [Demo](https://swanlab.cn/@ZeyiLin/ms-swift-rlhf/runs/d661ty9mslogsgk41fp0p/chart)
+*   **2025.07.06:** 🚄 Support **resume breakpoint training**; New plugin **file recorder**; Integrated [ray](https://github.com/ray-project/ray) framework, [Documentation](https://docs.swanlab.cn/guide_cloud/integration/integration-ray.html); Integrated [ROLL](https://github.com/volcengine/ROLL) framework, thanks to [@PanAndy](https://github.com/PanAndy), [Documentation](https://docs.swanlab.cn/guide_cloud/integration/integration-roll.html)
+*   **2025.06.27:** 📊 Support for **local zoom-in on small line charts**; Support for configuring **smoothing for a single line chart**; Significantly improved the interactive effect after the image chart is enlarged;
 
-<br/>
+<details><summary>Complete Changelog</summary>
 
-## 🌟 Recent Updates
-
-*   **[Insert Updates Here - Summarize and Highlight Key Features from the original update log - Consider grouping them by feature type or date]**
-    *   2025.09.22: 📊 New UI released; table view supports global sorting and filtering; data layer unified table view and chart view;
-    *   2025.09.12: 🔢 Support for creating **scalar charts**, flexibly display statistical values ​​of experimental indicators; major upgrade of the organization management page, providing more powerful permission control and project management capabilities;
-    *   ...
-<details><summary>Full Changelog</summary>
-    *   2025.06.20: 🤗 Integrated the [accelerate](https://github.com/huggingface/accelerate) framework, [PR](https://github.com/huggingface/accelerate/pull/3605), [documentation](https://docs.swanlab.cn/guide_cloud/integration/integration-huggingface-accelerate.html), enhancing the experimental recording experience in distributed training;
-
-    *   2025.06.18: 🐜 Integrated the [AREAL](https://github.com/inclusionAI/AReaL) framework, thanks to [@xichengpro](https://github.com/xichengpro), [PR](https://github.com/inclusionAI/AReaL/pull/98), [documentation](https://inclusionai.github.io/AReaL/tutorial/quickstart.html#monitoring-the-training-process); 🖱 Supports highlighting the corresponding curves when the mouse hovers over the experimental sidebar; Supports cross-group comparison of line charts; Supports setting experiment name cropping rules;
-
-    *   2025.06.11: 📊 Support **swanlab.echarts.table** data type, support pure text chart display; support for **stretching and interacting** with groups to increase the number of charts displayed at the same time; the table view adds **index maximum/minimum** options;
-
-    *   2025.06.08: ♻️ Support storing complete experimental log files locally, and upload local log files to the cloud/privately deployed end through **swanlab sync**; hardware monitoring supports **Hygon DCU**;
-
-    *   2025.06.01: 🏸 Support **chart free dragging**; support **ECharts custom charts**, adding 20+ chart types including bar charts, pie charts, and histograms; hardware monitoring supports **Muxi GPU**; integrates the **[PaddleNLP](https://github.com/PaddlePaddle/PaddleNLP)** framework;
-
-    *   2025.05.25: The log supports recording **standard error streams**, and the print information of PyTorch Lightning and other frameworks can be better recorded; hardware monitoring supports **Moore Threads**; added a security protection function for recording running commands, and the API Key will be automatically hidden;
-
-    *   2025.05.14: Supports **experimental tags**; supports line chart **Log Scale**; supports **group dragging**; greatly optimizes the experience of uploading a large number of indicators; adds the `swanlab.OpenApi` open interface;
-
-    *   2025.05.09: Supports **line chart creation**; the configuration chart function adds the **data source selection** function, and supports displaying different indicators in a single chart; supports generating **training project GitHub badges**;
-
-    *   2025.04.23: Supports line chart **editing**, supports freely configuring the X and Y axis data ranges and title styles of the chart; the chart search supports **regular expressions**; supports hardware detection and monitoring of **Kunlunxin XPU**;
-
-    *   2025.04.11: Supports line chart **local area selection**; supports global selection of the step range of the dashboard line chart; supports one-click hiding of all charts;
-
-    *   2025.04.08: Supports the **swanlab.Molecule** data type, supports recording and visualizing biochemical molecular data; supports saving the sorting, filtering, and column order change status in the table view;
-
-    *   2025.04.07: We have completed the joint integration with [EvalScope](https://github.com/ModelScope/EvalScope). Now you can use SwanLab in EvalScope to **evaluate large model performance**;
-
-    *   2025.03.30: Supports the **swanlab.Settings** method, supports more refined experimental behavior control; supports **Cambricon MLU** hardware monitoring; supports [Slack notification](https://docs.swanlab.cn/plugin/notification-slack.html), [Discord notification](https://docs.swanlab.cn/plugin/notification-discord.html);
-
-    *   2025.03.21: 🎉🤗HuggingFace Transformers has officially integrated SwanLab (>=4.50.0 version), [#36433](https://github.com/huggingface/transformers/pull/36433); added the **Object3D chart**, supports recording and visualizing 3D point clouds, [documentation](https://docs.swanlab.cn/api/py-object3d.html); hardware monitoring supports GPU video memory (MB), disk utilization, and network uplink and downlink records;
-
-    *   2025.03.12: 🎉🎉SwanLab **private deployment version** has been released! ! [🔗Deployment documentation](https://docs.swanlab.cn/guide_cloud/self_host/docker-deploy.html); SwanLab has supported plugin extensions, such as [email notifications](https://docs.swanlab.cn/plugin/notification-email.html), [Feishu notifications](https://docs.swanlab.cn/plugin/notification-lark.html)
-
-    *   2025.03.09: Supports **experiment sidebar widening**; new external display Git code button; new **sync_mlflow** function, supports syncing experiment tracking with the mlflow framework;
-
-    *   2025.03.06: We have completed the joint integration with [DiffSynth Studio](https://github.com/modelscope/diffsynth-studio). Now you can use SwanLab in DiffSynth Studio to **track and visualize Diffusion model text-to-image/video experiments**, [Usage Guide](https://docs.swanlab.cn/guide_cloud/integration/integration-diffsynth-studio.html);
-
-    *   2025.03.04: Added the **MLFlow conversion** function, supports converting MLFlow experiments to SwanLab experiments, [Usage Guide](https://docs.swanlab.cn/guide_cloud/integration/integration-mlflow.html);
-
-    *   2025.03.01: Added the **move experiment** function, and now you can move the experiment to different projects in different organizations;
-
-    *   2025.02.24: We have completed the joint integration with [EasyR1](https://github.com/hiyouga/EasyR1), now you can use SwanLab in EasyR1 to **track and visualize multi-modal large model reinforcement learning experiments**, [Usage Guide](https://docs.swanlab.cn/guide_cloud/integration/integration-easyr1.html)
-
-    *   2025.02.18: We have completed the joint integration with [Swift](https://github.com/modelscope/ms-swift), now you can use SwanLab in Swift's CLI/WebUI to **track and visualize large model fine-tuning experiments**, [Usage Guide](https://docs.swanlab.cn/guide_cloud/integration/integration-swift.html).
-
-    *   2025.02.16: Added the function of **moving and grouping charts, creating groups**.
-
-    *   2025.02.09: We have completed the joint integration with [veRL](https://github.com/volcengine/verl), now you can use SwanLab in veRL to **track and visualize large model reinforcement learning experiments**, [Usage Guide](https://docs.swanlab.cn/guide_cloud/integration/integration-verl.html).
-
-    *   2025.02.05: `swanlab.log` supports nested dictionaries [#812](https://github.com/SwanHubX/SwanLab/pull/812), adapts to Jax framework characteristics; supports the `name` and `notes` parameters;
-
-    *   2025.01.22: Added the functions `sync_tensorboardX` and `sync_tensorboard_torch`, supports synchronizing experimental tracking with these two TensorBoard frameworks;
-
-    *   2025.01.17: Added the `sync_wandb` function, [documentation](https://docs.swanlab.cn/guide_cloud/integration/integration-wandb.html), supports syncing experiment tracking with Weights & Biases; greatly improved the log rendering performance
-
-    *   2025.01.11: The cloud version has greatly optimized the performance of the project table and supports drag and drop, sorting, filtering and other interactions
-
-    *   2025.01.01: Added line chart **persistent smoothing**, and drag-and-drop line chart resizing to optimize the chart browsing experience
-
-    *   2024.12.22: We have completed the joint integration with [LLaMA Factory](https://github.com/hiyouga/LLaMA-Factory), and now you can use SwanLab in LLaMA Factory to **track and visualize large model fine-tuning experiments**, [Usage Guide](https://github.com/hiyouga/LLaMA-Factory?tab=readme-ov-file#use-swanlab-logger).
-
-    *   2024.12.15: **Hardware monitoring (0.4.0)** function is launched, supporting the recording and monitoring of system-level information for CPU, NPU (Ascend), and GPU (Nvidia).
-
-    *   2024.12.06: Added integration with [LightGBM](https://docs.swanlab.cn/guide_cloud/integration/integration-lightgbm.html) and [XGBoost](https://docs.swanlab.cn/guide_cloud/integration/integration-xgboost.html); improved the limit on the length of a single line of log records.
+*   ... (rest of the changelog from original README)
 </details>
 
 <br/>
 
-## 💡 What is SwanLab?
+## Online Demo
 
-SwanLab is an open-source, lightweight tool designed for tracking and visualizing machine learning experiments. It provides a comprehensive platform to monitor, record, compare, and collaborate on your ML projects.  With SwanLab, researchers can easily visualize training progress, log metrics, manage hyperparameters, compare experiments, and collaborate with teams, all through an intuitive interface and easy-to-use Python API.
+Explore SwanLab in action with these interactive demos:
 
-Key Features:
-
-*   **Experiment Tracking and Visualization:** Monitor training metrics, visualize data, and analyze model performance with interactive charts and dashboards.
-*   **Automated Logging:** Easily log metrics, hyperparameters, system information, and more with minimal code integration.
-*   **Framework Compatibility:** Seamlessly integrates with over 30 popular ML frameworks, including PyTorch, TensorFlow, and Hugging Face Transformers.
-*   **Experiment Comparison:** Compare multiple experiments side-by-side to identify trends, optimize hyperparameters, and gain valuable insights.
-*   **Collaboration Features:** Share experiments, invite collaborators, and foster a collaborative environment for research and development.
-*   **Self-Hosting Option:** Deploy SwanLab on your own infrastructure for complete data control and privacy.
-*   **Extensible with Plugins:** Customize your SwanLab experience with plugins for notifications, data writing, and more.
-
-<br/>
-
-## 🚀 Online Demo
-
-Explore live demonstrations of SwanLab's capabilities:
-
-| [ResNet50 Cats & Dogs Classification][demo-cats-dogs] | [Yolov8-COCO128 Object Detection][demo-yolo] |
+| [ResNet50 Cats vs. Dogs][demo-cats-dogs] | [Yolov8-COCO128 Object Detection][demo-yolo] |
 | :--------: | :--------: |
-| [![Cats & Dogs][demo-cats-dogs-image]][demo-cats-dogs] | [![YOLOv8][demo-yolo-image]][demo-yolo] |
-| Track a simple ResNet50 model image classification task trained on the Cats & Dogs dataset. |  Use Yolov8 for object detection on COCO128, and track training metrics and hyperparameters. |
+| [![][demo-cats-dogs-image]][demo-cats-dogs] | [![][demo-yolo-image]][demo-yolo] |
+| Tracks a ResNet50 model on a cats vs dogs image classification task. | Tracks a Yolov8 model on COCO128 dataset. |
 
 | [Qwen2 Instruction Fine-tuning][demo-qwen2-sft] | [LSTM Google Stock Prediction][demo-google-stock] |
 | :--------: | :--------: |
-| [![Qwen2 Instruction Fine-tuning][demo-qwen2-sft-image]][demo-qwen2-sft] | [![Google Stock Prediction][demo-google-stock-image]][demo-google-stock] |
-| Track the instruction fine-tuning of a Qwen2 LLM, demonstrating instruction following. | Train a simple LSTM model on Google stock prices to predict future prices. |
+| [![][demo-qwen2-sft-image]][demo-qwen2-sft] | [![][demo-google-stock-image]][demo-google-stock] |
+| Tracks instruction fine-tuning of a Qwen2 LLM. | Predicts future stock prices using an LSTM model trained on Google stock data. |
 
 | [ResNeXt101 Audio Classification][demo-audio-classification] | [Qwen2-VL COCO Dataset Fine-tuning][demo-qwen2-vl] |
 | :--------: | :--------: |
-| [![ResNeXt101 Audio Classification][demo-audio-classification-image]][demo-audio-classification] | [![Qwen2-VL COCO Dataset Fine-tuning][demo-qwen2-vl-image]][demo-qwen2-vl] |
-| Progressive experiments, from ResNet to ResNeXt, for audio classification tasks. | Fine-tuning on Qwen2-VL, a multi-modal large model, utilizing LoRA on the COCO2014 dataset. |
+| [![][demo-audio-classification-image]][demo-audio-classification] | [![][demo-qwen2-vl-image]][demo-qwen2-vl] |
+| Progressive experiments with ResNet to ResNeXt for audio classification tasks. | Fine-tunes the Qwen2-VL multimodal LLM on the COCO2014 dataset using LoRA. |
 
-| [EasyR1 Multi-modal LLM RL Training][demo-easyr1-rl] | [Qwen2.5-0.5B GRPO Training][demo-qwen2-grpo] |
+| [EasyR1 Multimodal LLM RL Training][demo-easyr1-rl] | [Qwen2.5-0.5B GRPO Training][demo-qwen2-grpo] |
 | :--------: | :--------: |
-| [![EasyR1 Multi-modal LLM RL Training][demo-easyr1-rl-image]][demo-easyr1-rl] | [![Qwen2.5-0.5B GRPO Training][demo-qwen2-grpo-image]][demo-qwen2-grpo] |
-| Multi-modal LLM RL training using the EasyR1 framework | GRPO training on the GSM8k dataset, based on the Qwen2.5-0.5B model |
+| [![][demo-easyr1-rl-image]][demo-easyr1-rl] | [![][demo-qwen2-grpo-image]][demo-qwen2-grpo] |
+| RL training of a multimodal LLM with EasyR1 framework. | GRPO training of the Qwen2.5-0.5B model on the GSM8k dataset. |
 
 [More Examples](https://docs.swanlab.cn/zh/examples/mnist.html)
 
 <br/>
 
-## 🏁 Quickstart
-
-Get started with SwanLab in a few easy steps:
+## Quick Start
 
 ### 1. Installation
 
@@ -181,9 +129,7 @@ Get started with SwanLab in a few easy steps:
 pip install swanlab
 ```
 
-<details><summary>Install from Source</summary>
-
-If you want to experience the latest features, you can install from source.
+<details><summary>Source Installation</summary>
 
 ```bash
 # Method 1
@@ -198,25 +144,25 @@ pip install git+https://github.com/SwanHubX/SwanLab.git
 
 <details><summary>Offline Dashboard Extension</summary>
 
-[Offline Dashboard Documentation](https://docs.swanlab.cn/guide_cloud/self_host/offline-board.html)
-
 ```bash
 pip install 'swanlab[dashboard]'
 ```
 
 </details>
 
-### 2. Login and Get API Key
+### 2. Login and Get Your API Key
 
-1.  [Register for a free account](https://swanlab.cn).
-2.  Log in and copy your API Key from User Settings > [API Key](https://swanlab.cn/settings).
+1.  [Register](https://swanlab.cn) for a free account.
+
+2.  Log in and copy your API key from User Settings > [API Key](https://swanlab.cn/settings).
+
 3.  Open your terminal and run:
 
     ```bash
     swanlab login
     ```
 
-    Enter your API Key when prompted and press Enter to complete the login.
+    Enter your API key when prompted and press Enter.
 
 ### 3. Integrate SwanLab into Your Code
 
@@ -234,122 +180,119 @@ for i in range(10):
     swanlab.log({"loss": i, "acc": i})
 ```
 
-That's it! View your first SwanLab experiment at [SwanLab](https://swanlab.cn).
+Now, head over to [SwanLab](https://swanlab.cn) to view your first experiment.
 
 <br/>
 
-## 🐳 Self-Hosting
+## Self-Hosting
 
-Self-hosting allows you to run SwanLab on your own infrastructure.
+The self-hosted community version supports offline viewing of the SwanLab dashboard.
 
-![SwanLab Docker](./readme_files/swanlab-docker.png)
+![swanlab-docker](./readme_files/swanlab-docker.png)
 
-### 1. Deploying a Self-Hosted Version with Docker
+### 1. Deploying a Self-Hosted Version Using Docker
 
-For detailed instructions, please refer to the documentation: [Documentation](https://docs.swanlab.cn/guide_cloud/self_host/docker-deploy.html)
+Refer to the documentation for details: [Documentation](https://docs.swanlab.cn/guide_cloud/self_host/docker-deploy.html)
 
 ```bash
 git clone https://github.com/SwanHubX/self-hosted.git
 cd self-hosted/docker
 ```
 
-Fast Installation for China:
+For quick installation in China:
 
 ```bash
 ./install.sh
 ```
 
-Install from DockerHub:
+Installation by pulling the image from DockerHub:
 
 ```bash
 ./install-dockerhub.sh
 ```
 
-### 2. Point Your Experiments to the Self-Hosted Service
+### 2. Direct Experiments to Your Self-Hosted Service
 
-Login to your self-hosted service:
+Log in to your self-hosted service:
 
 ```bash
 swanlab login --host http://localhost:8000
 ```
 
-After logging in, your experiments will be recorded on your self-hosted service.
+After logging in, experiment logs will be recorded in your self-hosted service.
 
 <br/>
 
-## 🔥 Real-World Examples
+## Practical Use Cases
 
-Explore these projects using SwanLab:
+**Open-source tutorials using SwanLab:**
+- [happy-llm](https://github.com/datawhalechina/happy-llm) -  A tutorial on the principles and practice of large language models (LLMs) from scratch.
+- [self-llm](https://github.com/datawhalechina/self-llm) - This "Guide to Open Source Large Models" provides a tutorial for fine-tuning (full parameter/Lora) and deploying open source large language models (LLMs) and multimodal large models (MLLMs) specifically tailored for Chinese users, based on a Linux environment.
+- [unlock-deepseek](https://github.com/datawhalechina/unlock-deepseek) -  Analysis, extensions, and reproductions of the DeepSeek series.
+- [Qwen3-SmVL](https://github.com/ShaohonChen/Qwen3-SmVL) - Fine-tuned the visual head of SmolVLM2 with the Qwen3-0.6B model.
+- [OPPO/Agent_Foundation_Models](https://github.com/OPPO-PersonalAI/Agent_Foundation_Models) - End-to-end agent foundation models with multi-agent distillation and agent RL.
 
-**Tutorials & Open-Source Projects:**
--   [happy-llm](https://github.com/datawhalechina/happy-llm): LLM Tutorial from scratch, [GitHub Repo stars](https://img.shields.io/github/stars/datawhalechina/happy-llm)
--   [self-llm](https://github.com/datawhalechina/self-llm): An instruction manual for fine-tuning LLMs and MLLMs, [GitHub Repo stars](https://img.shields.io/github/stars/datawhalechina/self-llm)
--   [unlock-deepseek](https://github.com/datawhalechina/unlock-deepseek): A DeepSeek series of work interpretation, expansion and replication, [GitHub Repo stars](https://img.shields.io/github/stars/datawhalechina/unlock-deepseek)
--   [Qwen3-SmVL](https://github.com/ShaohonChen/Qwen3-SmVL): SmolVLM2 visual header with Qwen3-0.6B fine-tuning, [GitHub Repo stars](https://img.shields.io/github/stars/ShaohonChen/Qwen3-SmVL)
--   [OPPO/Agent_Foundation_Models](https://github.com/OPPO-PersonalAI/Agent_Foundation_Models): End-to-end agent foundation models via multi-agent distillation and Agent RL. [GitHub Repo stars](https://img.shields.io/github/stars/OPPO-PersonalAI/Agent_Foundation_Models)
+**Papers Utilizing SwanLab:**
+- [Animation Needs Attention: A Holistic Approach to Slides Animation Comprehension with Visual-Language Models](https://arxiv.org/abs/2507.03916)
+- [Efficient Model Fine-Tuning with LoRA for Biomedical Named Entity Recognition](https://ieeexplore.ieee.org/abstract/document/11082049/)
+- [SpectrumWorld: Artificial Intelligence Foundation for Spectroscopy](https://arxiv.org/abs/2508.01188)
+- [CodeBoost: Boosting Code LLMs by Squeezing Knowledge from Code Snippets with RL](https://arxiv.org/pdf/2508.05242)
 
-**Research Papers:**
--   [Animation Needs Attention: A Holistic Approach to Slides Animation Comprehension with Visual-Language Models](https://arxiv.org/abs/2507.03916)
--   [Efficient Model Fine-Tuning with LoRA for Biomedical Named Entity Recognition](https://ieeexplore.ieee.org/abstract/document/11082049/)
--   [SpectrumWorld: Artificial Intelligence Foundation for Spectroscopy](https://arxiv.org/abs/2508.01188)
--   [CodeBoost: Boosting Code LLMs by Squeezing Knowledge from Code Snippets with RL](https://arxiv.org/pdf/2508.05242)
+**Tutorial Articles:**
+- [MNIST Handwritten Digit Recognition](https://docs.swanlab.cn/examples/mnist.html)
+- [FashionMNIST Clothing Classification](https://docs.swanlab.cn/examples/fashionmnist.html)
+- [Cifar10 Image Classification](https://docs.swanlab.cn/examples/cifar10.html)
+- [Resnet Cats and Dogs Classification](https://docs.swanlab.cn/examples/cats_dogs_classification.html)
+- [Yolo Object Detection](https://docs.swanlab.cn/examples/yolo.html)
+- [UNet Medical Image Segmentation](https://docs.swanlab.cn/examples/unet-medical-segmentation.html)
+- [Audio Classification](https://docs.swanlab.cn/examples/audio_classification.html)
+- [DQN Reinforcement Learning - Cartpole](https://docs.swanlab.cn/examples/dqn_cartpole.html)
+- [LSTM Google Stock Prediction](https://docs.swanlab.cn/examples/audio_classification.html)
+- [BERT Text Classification](https://docs.swanlab.cn/examples/bert.html)
+- [Stable Diffusion Text-to-Image Fine-tuning](https://docs.swanlab.cn/examples/stable_diffusion.html)
+- [LLM Pretraining](https://docs.swanlab.cn/examples/pretrain_llm.html)
+- [GLM4 Instruction Fine-tuning](https://docs.swanlab.cn/examples/glm4-instruct.html)
+- [Qwen Downstream Task Training](https://docs.swanlab.cn/examples/qwen_finetune.html)
+- [NER Named Entity Recognition](https://docs.swanlab.cn/examples/ner.html)
+- [Qwen3 Medical Model Fine-tuning](https://docs.swanlab.cn/examples/qwen3-medical.html)
+- [Qwen2-VL Multimodal Model Fine-tuning Practice](https://docs.swanlab.cn/examples/qwen_vl_coco.html)
+- [GRPO Large Model Reinforcement Learning](https://docs.swanlab.cn/examples/qwen_grpo.html)
+- [Qwen3-SmVL-0.6B Multimodal Model Training](https://docs.swanlab.cn/examples/qwen3_smolvlm_muxi.html)
+- [LeRobot Embodied Intelligence Introduction](https://docs.swanlab.cn/examples/robot/lerobot-guide.html)
+- [GLM-4.5-Air-LoRA and SwanLab Visualization Record](https://github.com/datawhalechina/self-llm/blob/master/models/GLM-4.5-Air/03-GLM-4.5-Air-Lora%20%E5%8F%8A%20Swanlab%20%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BE%AE%E8%B0%83.md)
+- [How to do RAG? Open-sourced SwanLab document assistant solution](https://docs.swanlab.cn/course/prompt_engineering_course/11-swanlab_rag/1.swanlab-rag.html)
 
-**Tutorials:**
--   [MNIST Handwritten Digit Recognition](https://docs.swanlab.cn/examples/mnist.html)
--   [FashionMNIST Clothing Classification](https://docs.swanlab.cn/examples/fashionmnist.html)
--   [Cifar10 Image Classification](https://docs.swanlab.cn/examples/cifar10.html)
--   [Resnet Cats & Dogs Classification](https://docs.swanlab.cn/examples/cats_dogs_classification.html)
--   [Yolo Object Detection](https://docs.swanlab.cn/examples/yolo.html)
--   [UNet Medical Image Segmentation](https://docs.swanlab.cn/examples/unet-medical-segmentation.html)
--   [Audio Classification](https://docs.swanlab.cn/examples/audio_classification.html)
--   [DQN Reinforcement Learning - CartPole](https://docs.swanlab.cn/examples/dqn_cartpole.html)
--   [LSTM Google Stock Prediction](https://docs.swanlab.cn/examples/audio_classification.html)
--   [BERT Text Classification](https://docs.swanlab.cn/examples/bert.html)
--   [Stable Diffusion Text-to-Image Fine-tuning](https://docs.swanlab.cn/examples/stable_diffusion.html)
--   [LLM Pretraining](https://docs.swanlab.cn/examples/pretrain_llm.html)
--   [GLM4 Instruction Fine-tuning](https://docs.swanlab.cn/examples/glm4-instruct.html)
--   [Qwen Downstream Task Training](https://docs.swanlab.cn/examples/qwen_finetune.html)
--   [NER Named Entity Recognition](https://docs.swanlab.cn/examples/ner.html)
--   [Qwen3 Medical Model Fine-tuning](https://docs.swanlab.cn/examples/qwen3-medical.html)
--   [Qwen2-VL Multi-modal Large Model Fine-tuning](https://docs.swanlab.cn/examples/qwen_vl_coco.html)
--   [GRPO Large Model Reinforcement Learning](https://docs.swanlab.cn/examples/qwen_grpo.html)
--   [Qwen3-SmVL-0.6B Multi-modal Model Training](https://docs.swanlab.cn/examples/qwen3_smolvlm_muxi.html)
--   [LeRobot Embodied Intelligence Guide](https://docs.swanlab.cn/examples/robot/lerobot-guide.html)
--   [GLM-4.5-Air-LoRA & SwanLab Visualization](https://github.com/datawhalechina/self-llm/blob/master/models/GLM-4.5-Air/03-GLM-4.5-Air-Lora%20%E5%8F%8A%20Swanlab%20%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BE%AE%E8%B0%83.md)
--   [How to do RAG? SwanLab Document Assistant Program is Open Source](https://docs.swanlab.cn/course/prompt_engineering_course/11-swanlab_rag/1.swanlab-rag.html)
-
-🌟  Submit a pull request to include your tutorial!
+🌟 Welcome to submit a PR if you want to include tutorials!
 
 <br/>
 
-## ⚙️ Hardware Monitoring
+## Hardware Monitoring
 
-SwanLab provides real-time hardware monitoring during AI training:
+SwanLab records **hardware information** and **resource usage** during AI training.  Here's the hardware support table:
 
-| Hardware        | Information Recorded | Resource Monitoring | Script                                                              |
-| --------------- | -------------------- | ------------------- | ------------------------------------------------------------------- |
-| NVIDIA GPU      | ✅                   | ✅                  | [nvidia.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/gpu/nvidia.py)      |
-| Ascend NPU      | ✅                   | ✅                  | [ascend.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/npu/ascend.py)      |
-| Apple SOC       | ✅                   | ✅                  | [apple.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/soc/apple.py)      |
-| Cambricon MLU   | ✅                   | ✅                  | [cambricon.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/mlu/cambricon.py) |
-| Kunlunxin XPU   | ✅                   | ✅                  | [kunlunxin.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/xpu/kunlunxin.py) |
-| Moore Threads GPU | ✅                   | ✅                  | [moorethreads.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/gpu/moorethreads.py) |
-| Metax GPU      | ✅                   | ✅                  | [metax.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/gpu/metax.py) |
-| Hygon DCU       | ✅                   | ✅                  | [hygon.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/dcu/hygon.py) |
-| CPU             | ✅                   | ✅                  | [cpu.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/cpu.py)        |
-| Memory          | ✅                   | ✅                  | [memory.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/memory.py)   |
-| Disk            | ✅                   | ✅                  | [disk.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/disk.py)      |
+| Hardware | Information Recording | Resource Monitoring | Script |
+| :--- | :--- | :--- | :--- |
+| NVIDIA GPU | ✅ | ✅ | [nvidia.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/gpu/nvidia.py) |
+| Ascend NPU | ✅ | ✅ | [ascend.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/npu/ascend.py) |
+| Apple SOC | ✅ | ✅ | [apple.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/soc/apple.py) |
+| Cambricon MLU | ✅ | ✅ | [cambricon.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/mlu/cambricon.py) |
+| Kunlunxin XPU | ✅ | ✅ | [kunlunxin.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/xpu/kunlunxin.py) |
+| Moore Threads GPU | ✅ | ✅ | [moorethreads.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/gpu/moorethreads.py) |
+| MetaX GPU | ✅ | ✅ | [metax.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/gpu/metax.py) |
+| Hygon DCU | ✅ | ✅ | [hygon.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/dcu/hygon.py) |
+| CPU | ✅ | ✅ | [cpu.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/cpu.py) |
+| Memory | ✅ | ✅ | [memory.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/memory.py) |
+| Disk | ✅ | ✅ | [disk.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/disk.py) |
 | Network | ✅ | ✅ | [network.py](https://github.com/SwanHubX/SwanLab/blob/main/swanlab/data/run/metadata/hardware/network.py) |
 
-Submit an issue or PR if you need additional hardware support!
+Contribute by creating issues and PRs if you would like to add support for other hardware.
 
 <br/>
 
-## 🧩 Framework Integrations
+## Framework Integrations
 
-Integrate SwanLab with your favorite frameworks!
-
-We support a wide range of ML frameworks:
+Integrate your favorite frameworks with SwanLab!
+Here's a list of the integrated frameworks.  Feel free to submit an [Issue](https://github.com/swanhubx/swanlab/issues) to request a new integration.
 
 **Base Frameworks**
 - [PyTorch](https://docs.swanlab.cn/guide_cloud/integration/integration-pytorch.html)
@@ -385,3 +328,128 @@ We support a wide range of ML frameworks:
 
 **Reinforcement Learning**
 - [Stable Baseline3](https://docs.swanlab.cn/guide_cloud/integration/integration-sb3.html)
+- [veRL](https://docs.swanlab.cn/guide_cloud/integration/integration-verl.html)
+- [HuggingFace trl](https://docs.swanlab.cn/guide_cloud/integration/integration-huggingface-trl.html)
+- [EasyR1](https://docs.swanlab.cn/guide_cloud/integration/integration-easyr1.html)
+- [AReaL](https://docs.swanlab.cn/guide_cloud/integration/integration-areal.html)
+- [ROLL](https://docs.swanlab.cn/guide_cloud/integration/integration-roll.html)
+
+**Other Frameworks:**
+- [Tensorboard](https://docs.swanlab.cn/guide_cloud/integration/integration-tensorboard.html)
+- [Weights&Biases](https://docs.swanlab.cn/guide_cloud/integration/integration-wandb.html)
+- [MLFlow](https://docs.swanlab.cn/guide_cloud/integration/integration-mlflow.html)
+- [HuggingFace Accelerate](https://docs.swanlab.cn/guide_cloud/integration/integration-huggingface-accelerate.html)
+- [Ray](https://docs.swanlab.cn/guide_cloud/integration/integration-ray.html)
+- [Unsloth](https://docs.swanlab.cn/guide_cloud/integration/integration-unsloth.html)
+- [Hydra](https://docs.swanlab.cn/guide_cloud/integration/integration-hydra.html)
+- [Omegaconf](https://docs.swanlab.cn/guide_cloud/integration/integration-omegaconf.html)
+- [OpenAI](https://docs.swanlab.cn/guide_cloud/integration/integration-openai.html)
+- [ZhipuAI](https://docs.swanlab.cn/guide_cloud/integration/integration-zhipuai.html)
+
+[More Integrations](https://docs.swanlab.cn/guide_cloud/integration/)
+
+<br/>
+
+## Plugin & API
+
+Extend SwanLab with plugins!
+
+- [Customize Your Plugins](https://docs.swanlab.cn/plugin/custom-plugin.html)
+- [Email Notifications](https://docs.swanlab.cn/plugin/notification-email.html)
+- [Feishu Notifications](https://docs.swanlab.cn/plugin/notification-lark.html)
+- [DingTalk Notifications](https://docs.swanlab.cn/plugin/notification-dingtalk.html)
+- [WeChat Work Notifications](https://docs.swanlab.cn/plugin/notification-wxwork.html)
+- [Discord Notifications](https://docs.swanlab.cn/plugin/notification-discord.html)
+- [Slack Notifications](https://docs.swanlab.cn/plugin/notification-slack.html)
+- [CSV Recorder](https://docs.swanlab.cn/plugin/writer-csv.html)
+- [File Recorder](https://docs.swanlab.cn/plugin/writer-filelogdir.html)
+
+OpenAPI:
+- [OpenAPI](https://docs.swanlab.cn/api/py-openapi.html)
+
+<br/>
+
+## Comparison with Similar Tools
+
+### TensorBoard vs. SwanLab
+
+-   **☁️ Online Support:** SwanLab offers cloud-based experiment tracking and convenient synchronization, enabling remote progress monitoring, project management, experiment sharing, real-time notifications, and multi-device access.  TensorBoard is designed primarily for offline experiment tracking.
+
+-   **👥 Collaboration:** SwanLab streamlines collaborative machine learning efforts, especially for multi-team or cross-team projects, enabling easy management, experiment sharing, and discussion. TensorBoard, however, focuses on individual use cases.
+
+-   **💻 Persistent, Centralized Dashboard:**  Regardless of where you train – local machine, lab cluster, or cloud GPU instance – your results are consistently recorded in a single, centralized dashboard. Managing and copying TFEvent files across machines takes time in TensorBoard.
+
+-   **💪 Enhanced Tables:**  SwanLab's tables facilitate easy viewing, searching, and filtering of results from varied experiments, simplifying the task of exploring numerous model versions to identify top-performing models across different tasks. TensorBoard isn't optimized for large projects.
+
+### Weights and Biases vs. SwanLab
+
+-   Weights and Biases is a proprietary, cloud-based MLOps platform requiring an internet connection.
+
+-   SwanLab offers both cloud and open-source, free, self-hosted options, as well as an entirely offline version.
+
+<br/>
+
+## Community
+
+### Related Repositories
+
+-   [self-hosted](https://github.com/swanhubx/self-hosted): Self-hosting deployment scripts
+-   [SwanLab-Docs](https://github.com/swanhubx/swanlab-docs): Official documentation
+-   [SwanLab-Dashboard](https://github.com/swanhubx/swanlab-dashboard):  Lightweight offline dashboard web code opened by `swanlab watch`
+
+### Community and Support
+
+-   [GitHub Issues](https://github.com/SwanHubX/SwanLab/issues): Report issues and ask questions.
+-   [Email Support](zeyi.lin@swanhub.co): Contact with any feedback or inquiries about using SwanLab.
+-   [WeChat Group](https://docs.swanlab.cn/guide_cloud/community/online-support.html): Engage in discussions and ask questions.
+
+### SwanLab README Badges
+
+Add SwanLab badges to your project's README:
+
+[![Tracking SwanLab](https://raw.githubusercontent.com/SwanHubX/assets/main/badge2.svg)](your experiment url)
+[![Visualize SwanLab](https://raw.githubusercontent.com/SwanHubX/assets/main/badge1.svg)](your experiment url)
+
+```
+[![](https://raw.githubusercontent.com/SwanHubX/assets/main/badge2.svg)](your experiment url)
+[![](https://raw.githubusercontent.com/SwanHubX/assets/main/badge1.svg)](your experiment url)
+```
+
+More assets: [assets](https://github.com/SwanHubX/assets)
+
+### Citing SwanLab in your Paper
+
+If SwanLab has been useful for your research, please cite it using this format:
+
+```bibtex
+@software{Zeyilin_SwanLab_2023,
+  author = {Zeyi Lin, Shaohong Chen, Kang Li, Qiushan Jiang, Zirui Cai,  Kaifang Ji and {The SwanLab team}},
+  doi = {10.5281/zenodo.11100550},
+  license = {Apache-2.0},
+  title = {{SwanLab}},
+  url = {https://github.com/swanhubx/swanlab},
+  year = {2023}
+}
+```
+
+### Contributing to SwanLab
+
+Interested in contributing to SwanLab?  Please read the [contribution guide](CONTRIBUTING.md) first.
+
+We also greatly appreciate support through social media, events, and conferences!
+
+<br/>
+
+**Contributors**
+
+<a href="https://github.com/swanhubx/swanlab/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=swanhubx/swanlab" />
+</a>
+
+<br/>
+
+<img src="./readme_files/swanlab-and-user.png" width="50%" />
+
+## License
+
+SwanLab is licensed under the [Apache 2.0 License](https://github.com/SwanHubX/SwanLab/blob/main/LICENSE
