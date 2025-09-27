@@ -1,38 +1,35 @@
-# angr: The Powerful Binary Analysis Framework for Security Research & Reverse Engineering
+# angr: Powerful Binary Analysis Framework
 
 [![Latest Release](https://img.shields.io/pypi/v/angr.svg)](https://pypi.python.org/pypi/angr/)
 [![Python Version](https://img.shields.io/pypi/pyversions/angr)](https://pypi.python.org/pypi/angr/)
 [![PyPI Statistics](https://img.shields.io/pypi/dm/angr.svg)](https://pypistats.org/packages/angr)
 [![License](https://img.shields.io/github/license/angr/angr.svg)](https://github.com/angr/angr/blob/master/LICENSE)
 
-**angr is a cutting-edge, platform-agnostic binary analysis framework, empowering security researchers and reverse engineers to understand and analyze software at a deeper level.** Developed by the Computer Security Lab at UC Santa Barbara, SEFCOM at Arizona State University, and the open-source community, angr provides a comprehensive suite of tools for dissecting and understanding compiled code.
+**angr is the ultimate platform-agnostic binary analysis framework, empowering you to dissect and understand software like never before.** Developed by the Computer Security Lab at UC Santa Barbara, SEFCOM at Arizona State University, Shellphish, and the open-source community, angr provides a comprehensive suite of tools for reverse engineering, vulnerability research, and security analysis.
 
-**[View the original repository on GitHub](https://github.com/angr/angr)**
+[Visit the original repo on GitHub](https://github.com/angr/angr)
 
 ## Key Features of angr
 
-*   **Disassembly and Intermediate Representation (IR) Lifting:** Converts binary code into a more manageable and analyzable form.
-*   **Program Instrumentation:** Allows for dynamic analysis and modification of program behavior.
-*   **Symbolic Execution:** Enables exploration of all possible execution paths to identify vulnerabilities.
-*   **Control-Flow Analysis:** Provides insights into the program's structure and how different parts of the code interact.
-*   **Data-Dependency Analysis:** Helps understand how data flows through the program.
-*   **Value-Set Analysis (VSA):** Determines the possible values a variable can take during program execution.
-*   **Decompilation:** Attempts to convert machine code back into a higher-level representation.
+angr offers a wide array of features to facilitate in-depth binary analysis:
+
+*   **Disassembly and Intermediate Representation (IR) Lifting:** Convert binary code into a more manageable format for analysis.
+*   **Program Instrumentation:** Insert probes and modify program behavior to gather crucial insights.
+*   **Symbolic Execution:** Explore all possible execution paths to uncover hidden vulnerabilities and logical flaws.
+*   **Control-Flow Analysis:** Understand the program's structure and execution flow to identify potential security risks.
+*   **Data-Dependency Analysis:** Trace how data flows through the program to pinpoint sources of sensitive information.
+*   **Value-Set Analysis (VSA):** Reason about the possible values of variables and memory locations.
+*   **Decompilation:** Reconstruct high-level code from low-level binaries to improve understanding.
 
 ## Getting Started with angr
 
-The most fundamental operation in angr is loading a binary: `p = angr.Project('/bin/bash')`. Leverage enhanced REPLs like IPython for easy exploration and discovery.
+The core operation involves loading a binary: `p = angr.Project('/bin/bash')`. Use tab-autocomplete in an enhanced REPL to explore available methods and docstrings.
 
-### Installation
+Install with: `mkvirtualenv --python=$(which python3) angr && python -m pip install angr`
 
-The recommended way to install angr is:
-```bash
-mkvirtualenv --python=$(which python3) angr && python -m pip install angr
-```
+## Example: Solving a CTF Challenge
 
-### Example: Solving a CTF Challenge
-
-Here's a basic illustration of how to use symbolic execution with angr to solve a CTF challenge:
+Here's a simple example demonstrating symbolic execution to extract a flag:
 
 ```python
 import angr
@@ -54,4 +51,4 @@ project.execute()
 *   **API Documentation:** [https://api.angr.io/en/latest/](https://api.angr.io/en/latest/)
 *   **Install Instructions:** [https://docs.angr.io/introductory-errata/install](https://docs.angr.io/introductory-errata/install)
 *   **Examples:** [https://docs.angr.io/examples](https://docs.angr.io/examples)
-*   **Awesome angr:** [https://github.com/degrigis/awesome-angr](https://github.com/degrigis/awesome-angr)
+*   **Awesome-angr:** [https://github.com/degrigis/awesome-angr](https://github.com/degrigis/awesome-angr)

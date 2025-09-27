@@ -1,31 +1,31 @@
-# Radicale: Your Simple & Powerful CalDAV/CardDAV Server
+# Radicale: Your Simple & Powerful CalDAV & CardDAV Server
 
-**Easily manage your calendars, to-do lists, and contacts with Radicale, a lightweight and user-friendly server.**
+Looking for an easy-to-use server to manage your calendars and contacts? **Radicale provides a lightweight and flexible solution for CalDAV (calendars and to-do lists) and CardDAV (contacts) synchronization.**  This README provides a comprehensive overview of Radicale's features and benefits.  You can explore the full documentation on [Radicale's website](https://radicale.org/master.html) and contribute to the project on [GitHub](https://github.com/Kozea/Radicale).
 
-[View the Radicale Repository on GitHub](https://github.com/Kozea/Radicale)
+[![Test](https://github.com/Kozea/Radicale/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/Kozea/Radicale/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/Kozea/Radicale/badge.svg?branch=master)](https://coveralls.io/github/Kozea/Radicale?branch=master)
 
 ## Key Features of Radicale
 
-Radicale offers a streamlined approach to managing your calendar and contact data, making it a great choice for individuals and small teams. Here's what you can expect:
+Radicale offers a robust set of features to cater to your calendar and contact management needs:
 
-*   **CalDAV & CardDAV Support:** Share calendars, to-do lists, and contacts using industry-standard protocols.
-*   **Comprehensive Data Support:** Manage events, todos, journal entries, and business cards seamlessly.
-*   **Easy Setup & Configuration:** Get up and running quickly with minimal setup required.
-*   **Flexible Access Control:** Control access to your data with authentication.
-*   **Secure Connections:** Protect your data with TLS encryption.
-*   **Client Compatibility:** Works with a wide range of CalDAV and CardDAV clients (e.g., Thunderbird, macOS Calendar, Evolution).
-*   **File-Based Storage:** Data is stored on the file system in a simple, easy-to-understand folder structure.
-*   **Extensible with Plugins:** Customize Radicale's functionality with plugins.
-*   **Free & Open Source:** Radicale is licensed under the GPLv3.
+*   **CalDAV & CardDAV Support:** Shares calendars and contact lists through standard protocols like CalDAV, CardDAV and HTTP.
+*   **Comprehensive Data Support:** Supports a variety of data types, including events, to-dos, journal entries, and business cards (vCards).
+*   **Easy Setup & Configuration:** Works out-of-the-box with minimal configuration, making it quick to set up and get started.
+*   **Authentication & Security:**  Allows you to limit access through authentication and secure connections with TLS encryption.
+*   **Client Compatibility:** Works seamlessly with a wide range of CalDAV and CardDAV clients, ensuring compatibility with your preferred tools.
+*   **Filesystem-Based Storage:** Stores all data on the file system in a simple and easily navigable folder structure.
+*   **Extensibility:**  Supports plugins, allowing you to extend its functionality and customize it to your specific requirements.
+*   **Open Source:**  Radicale is free software, licensed under the GPLv3, ensuring transparency and freedom of use.
 
-## Additional Resources
+## Getting Started
 
-*   **Complete Documentation:** [Radicale Master Documentation](https://radicale.org/master.html)
-*   **Wiki:** [Radicale Wiki](https://github.com/Kozea/Radicale/wiki)
-*   **Issue Tracking:** [Radicale Issues](https://github.com/Kozea/Radicale/issues)
-*   **Discussions:** [Radicale Discussions](https://github.com/Kozea/Radicale/discussions)
-*   **Reporting Issues:** [Radicale Wiki / Reporting Issues](https://github.com/Kozea/Radicale/wiki/01-‐-Reporting-Issues)
+To learn more about Radicale and get started, check out the following resources:
 
----
-[![Test](https://github.com/Kozea/Radicale/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/Kozea/Radicale/actions/workflows/test.yml)
-[![Coverage Status](https://coveralls.io/repos/github/Kozea/Radicale/badge.svg?branch=master)](https://coveralls.io/github/Kozea/Radicale?branch=master)
+*   **Full Documentation:**  [Radicale master Documentation](https://radicale.org/master.html)
+*   **Radicale Wiki:** [Radicale Wiki](https://github.com/Kozea/Radicale/wiki)
+*   **Report Issues/Contribute:** [Radicale Issues](https://github.com/Kozea/Radicale/issues) and [Radicale Discussions](https://github.com/Kozea/Radicale/discussions)
+*   **Reporting Issues Guidelines:** [Radicale Wiki / Reporting Issues](https://github.com/Kozea/Radicale/wiki/01-‐-Reporting-Issues)
+
+## Contribute
+Find the original repository here: [https://github.com/Kozea/Radicale](https://github.com/Kozea/Radicale)

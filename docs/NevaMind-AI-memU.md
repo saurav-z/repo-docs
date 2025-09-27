@@ -1,10 +1,11 @@
 <div align="center">
-  <img src="assets/banner.png" alt="MemU Banner" width="100%">
+
+![MemU Banner](assets/banner.png)
 </div>
 
-# MemU: The Cutting-Edge Memory Framework for Intelligent AI Companions
+# MemU: The Next-Generation Memory Framework for AI Companions
 
-**Build AI companions that truly remember and grow with MemU, the open-source memory framework designed for high accuracy, speed, and cost-effectiveness.**  ([Original Repo](https://github.com/NevaMind-AI/memU))
+**Unlock the power of persistent memory for your AI companions with MemU, offering unparalleled accuracy and cost-effectiveness!**  ([View on GitHub](https://github.com/NevaMind-AI/memU))
 
 [![PyPI version](https://badge.fury.io/py/memu-py.svg)](https://badge.fury.io/py/memu-py)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -14,88 +15,100 @@
 
 ---
 
-## Key Features of MemU: Revolutionizing AI Companion Memory
+## Key Features of MemU:
 
-*   ✅ **AI Companion Specialization:** Designed specifically for AI companion applications.
-*   ✅ **Unmatched Accuracy:** Achieve state-of-the-art performance with 92% accuracy in the Locomo benchmark.
-*   ✅ **Cost-Effective Solutions:** Reduce costs by up to 90% through optimized online platform and efficient architecture.
-*   ✅ **Advanced Retrieval Strategies:** Leverage semantic search, hybrid search, and contextual retrieval for optimal results.
-*   ✅ **24/7 Enterprise Support:** Dedicated support for enterprise customers.
-
----
-
-## Why Choose MemU? Advantages & Benefits
-
-*   **Higher Memory Accuracy:** MemU leads the pack with an impressive 92.09% average accuracy in the Locomo dataset across all reasoning tasks, outperforming competitors.
-*   **Fast Retrieval:** Efficiently retrieve the most relevant information by categorizing important data into documents, eliminating the need for extensive embedding searches.
-*   **Low Cost:** Process hundreds of conversation turns at once, saving on token usage and memory operation costs.
+*   🎯 **AI Companion Specialization:**  Designed specifically for building intelligent AI companions, offering superior performance in this domain.
+*   ✅ **Unmatched Accuracy:** Achieve state-of-the-art performance with a 92% accuracy rate in the Locomo benchmark, ensuring reliable memory recall.
+*   💰 **Cost-Effective Solutions:**  Reduce your operational costs by up to 90% through optimized online platform usage.
+*   🧠 **Advanced Retrieval Strategies:** Benefit from multiple retrieval methods, including semantic search, hybrid search, and contextual retrieval, for comprehensive memory access.
+*   🤝 **24/7 Enterprise Support:**  Get dedicated support for enterprise customers.
 
 ---
 
-## Get Started with MemU
+## Why Choose MemU?
+
+MemU is an open-source memory framework revolutionizing how AI companions remember and learn.  Built for high accuracy, lightning-fast retrieval, and cost efficiency, MemU acts as an intelligent "memory folder" that adapts to various AI companion scenarios.
+
+*   **Build AI companions that truly understand you:** They learn who you are, what you care about, and evolve with every interaction.
+*   **Organize memories automatically:** MemU acts like a personal librarian, managing and linking memories for effortless recall.
+*   **Continuous self-improvement:** Even offline, your memory agent analyzes and refines existing memories, making your AI smarter over time.
+*   **Prioritized information:**  An adaptive forgetting mechanism prioritizes relevant information, ensuring easy access to what matters most.
+
+---
+
+## 🚀 Get Started with MemU
+
+Choose the best way to integrate MemU into your project:
 
 ### ☁️ Cloud Version ([Online Platform](https://app.memu.so))
 
-Integrate AI memories in minutes with our cloud version, ideal for teams and individuals.
+The easiest way to integrate your application with MemU.
 
-*   **Instant Access:** Begin integrating AI memories immediately.
+*   **Instant Integration:** Get started in minutes.
 *   **Managed Infrastructure:** We handle scaling, updates, and maintenance.
-*   **Premium Support:** Receive priority assistance.
+*   **Premium Support:** Priority assistance from our engineering team.
 
 **Quick Start Guide:**
 
-1.  **Create an Account:** Sign up at [https://app.memu.so](https://app.memu.so)
-2.  **Generate API Keys:** Obtain API keys at [https://app.memu.so/api-key/](https://app.memu.so/api-key/)
-3.  **Install the Library:** `pip install memu-py`
-4.  **Example Usage:**
+1.  **Create an Account:**  Sign up at [https://app.memu.so](https://app.memu.so)
+2.  **Generate API Keys:**  Go to [https://app.memu.so/api-key/](https://app.memu.so/api-key/) to obtain your API keys.
+3.  **Install the Package:** `pip install memu-py`
+4.  **Use the Code:**
 
-```python
-from memu import MemuClient
-import os
+    ```python
+    # Example usage
+    import os
+    from memu import MemuClient
 
-# Initialize
-memu_client = MemuClient(
-    base_url="https://api.memu.so",
-    api_key=os.getenv("MEMU_API_KEY")
-)
-conversation_text = "Your conversation text here..." # Replace with actual conversation
-memu_client.memorize_conversation(
-    conversation=conversation_text, # Recommend longer conversation (~8000 tokens), see https://memu.pro/blog/memu-best-practice for details
-    user_id="user001",
-    user_name="User",
-    agent_id="assistant001",
-    agent_name="Assistant"
-)
-```
-
-**See [`example/client/memory.py`](example/client/memory.py) for complete integration details**
+    # Initialize
+    memu_client = MemuClient(
+        base_url="https://api.memu.so", 
+        api_key=os.getenv("MEMU_API_KEY")
+    )
+    memu_client.memorize_conversation(
+        conversation=conversation_text, # Recommend longer conversation (~8000 tokens), see https://memu.pro/blog/memu-best-practice for details
+        user_id="user001", 
+        user_name="User", 
+        agent_id="assistant001", 
+        agent_name="Assistant"
+    )
+    ```
+    Check [API reference](docs/API_REFERENCE.md) or [our blog](https://memu.pro/blog) for more details. 
+5.  **Complete Integration:**  See [`example/client/memory.py`](example/client/memory.py) for complete integration details.
 
 ### 🏢 Enterprise Edition
 
-For organizations needing maximum security, customization, and control:
+For organizations needing maximum security, control, and customization:
 
-*   **Commercial License:** Proprietary features and commercial usage rights.
-*   **Custom Development:** SSO/RBAC integration and tailored algorithm optimization.
-*   **Intelligence & Analytics:** User behavior analysis and agent optimization.
-*   **Premium Support:** Dedicated 24/7 support and custom SLAs.
+*   **Commercial License:** Full proprietary features.
+*   **Custom Development:** SSO/RBAC integration and dedicated algorithm optimization.
+*   **Intelligence & Analytics:** User behavior analysis and real-time monitoring.
+*   **Premium Support:** 24/7 dedicated support and custom SLAs.
 
-**Enterprise Inquiries:** [contact@nevamind.ai](mailto:contact@nevamind.ai)
+**Contact:** [contact@nevamind.ai](mailto:contact@nevamind.ai)
 
 ### 🏠 Self-Hosting (Community Edition)
 
-Control your data and customize to your needs:
+For users preferring local control and data privacy:
 
-*   **Data Privacy:** Keep your data within your infrastructure.
+*   **Data Privacy:** Keep sensitive data within your infrastructure.
 *   **Customization:** Modify and extend the platform to fit your needs.
-*   **Cost Control:** Avoid recurring cloud fees for large-scale deployments.
+*   **Cost Control:** Avoid cloud fees for large deployments.
 
 See [self hosting README](README.self_host.md)
 
 ---
 
-## ✨ Dive Deeper: How MemU Works
+## ✨ Memory as File System: Key Benefits
 
-### 🎥 Demo Video
+*   **Organize:** Autonomous memory file management with an intelligent memory agent.
+*   **Link:** Interconnected knowledge graph building relationships between memories.
+*   **Evolve:** Continuous self-improvement and insight generation from existing memories.
+*   **Never Forget:** Adaptive forgetting mechanism prioritizing relevant information.
+
+---
+
+## 🎥  See MemU in Action: Demo Video
 
 <div align="left">
   <a href="https://www.youtube.com/watch?v=qZIuCoLglHs">
@@ -105,50 +118,58 @@ See [self hosting README](README.self_host.md)
   <em>Click to watch the MemU demonstration video</em>
 </div>
 
-### Memory as file system
+---
 
-#### **Organize** - Autonomous Memory File Management
-Memories are intelligently structured as folders managed by a memory agent.
+## 😺 Advantages of MemU
 
-#### **Link** - Interconnected Knowledge Graph
-The system creates connections between memories.
+### Higher Memory Accuracy
 
-#### **Evolve** - Continuous Self-Improvement
-Your memory agent generates new insights by analyzing existing memories.
+MemU achieves an outstanding 92.09% average accuracy in the Locomo dataset across all reasoning tasks, greatly surpassing competitors. Technical Report will be published soon!
 
-#### **Never Forget** - Adaptive Forgetting Mechanism
-The memory agent prioritizes information based on usage patterns.
+![Memory Accuracy Comparison](assets/benchmark.png)
+<em>(1) Single-hop questions require answers based on a single session; (2) Multi-hop questions require synthesizing information from multiple different sessions; (3) Temporal reasoning questions can be answered through temporal reasoning and capturing time-related data cues within the conversation; (4) Open-domain knowledge questions can be answered by integrating a speaker’s provided information with external knowledge such as commonsense or world facts; </em>
+
+### Fast Retrieval
+
+Categorizing important information into documents ensures quick retrieval of relevant content without exhaustive embedding searches.
+
+### Low Cost
+
+MemU efficiently processes numerous conversation turns at once, minimizing API calls and token usage.
 
 ---
 
-## 🎓 Explore MemU Use Cases
+## 🎓 Use Cases
+
+MemU is versatile and can be applied to various scenarios:
 
 | | | | |
 |:---:|:---:|:---:|:---:|
 | <img src="assets/usecase/ai_companion-0000.jpg" width="150" height="200"><br>**AI Companion** | <img src="assets/usecase/ai_role_play-0000.jpg" width="150" height="200"><br>**AI Role Play** | <img src="assets/usecase/ai_ip-0000.png" width="150" height="200"><br>**AI IP Characters** | <img src="assets/usecase/ai_edu-0000.jpg" width="150" height="200"><br>**AI Education** |
 | <img src="assets/usecase/ai_therapy-0000.jpg" width="150" height="200"><br>**AI Therapy** | <img src="assets/usecase/ai_robot-0000.jpg" width="150" height="200"><br>**AI Robot** | <img src="assets/usecase/ai_creation-0000.jpg" width="150" height="200"><br>**AI Creation** | More...|
-
 ---
 
 ## 🤝 Contribute to MemU
 
-We welcome your contributions! Join us in building the future of AI memory.
+We welcome your contributions!  Help us build the future of AI memory.
 
 *   📋 **[Read our detailed Contributing Guide →](CONTRIBUTING.md)**
-*   **License:** Your contributions are licensed under the **Apache License 2.0**.
+*   **License:** Your contributions are licensed under the Apache License 2.0.
 
 ---
 
-## 🌍 Stay Connected with the MemU Community
+## 🌍 Community & Support
 
-*   **GitHub Issues:** Report bugs, suggest features. [Submit an issue](https://github.com/NevaMind-AI/memU/issues)
-*   **Discord:** Get real-time support and chat. [Join us](https://discord.com/invite/hQZntfGsbJ)
-*   **X (Twitter):** Stay updated. [Follow us](https://x.com/memU_ai)
-*   **Email:** For more information please contact [info@nevamind.ai](mailto:info@nevamind.ai)
+*   **GitHub Issues:**  Report bugs, request features, and track development: [Submit an issue](https://github.com/NevaMind-AI/memU/issues)
+*   **Discord:** Get real-time support and connect with the community: [Join us](https://discord.com/invite/hQZntfGsbJ)
+*   **X (Twitter):** Stay updated on the latest news: [Follow us](https://x.com/memU_ai)
+*   **General Inquiries:** [info@nevamind.ai](mailto:info@nevamind.ai)
 
 ---
 
-## 🤝 Ecosystem of Partners
+## 🤝 Ecosystem - Partners & Integrations
+
+We're proud to collaborate with these exceptional organizations:
 
 <div align="center">
 
@@ -169,7 +190,9 @@ We welcome your contributions! Join us in building the future of AI memory.
 
 ---
 
-## 📱 Stay Updated: Join our WeChat Community
+## 📱 Stay Connected: WeChat Community
+
+Join our WeChat community for the latest updates and discussions:
 
 <div align="center">
 <img src="assets/qrcode.png" alt="MemU WeChat and discord QR Code" width="480" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px;">
@@ -177,20 +200,6 @@ We welcome your contributions! Join us in building the future of AI memory.
 
 ---
 
-## Questionnaire
+## 📢  We Value Your Feedback!
 
-Help us improve! Share your feedback on our 3-min survey and get 30 free quota：https://forms.gle/H2ZuZVHv72xbqjvd7
-```
-Key improvements and SEO considerations:
-
-*   **Concise Hook:**  A strong opening sentence to grab attention.
-*   **Targeted Keywords:** Incorporated keywords like "AI companion," "memory framework," "open-source," and "AI companion applications."
-*   **Clear Headings:**  Used descriptive headings to improve readability and organization (e.g., "Key Features," "Why Choose MemU?," "Get Started," "Explore Use Cases").
-*   **Bulleted Lists:**  Emphasized key features and benefits with bulleted lists for easy scanning.
-*   **Stronger Call to Action:**  Encouraged users to "Get Started," "Join the Community," and "Contribute."
-*   **SEO Optimization:** Used headings, and keywords and optimized text.
-*   **Improved Structure:** Reorganized the content for better flow and readability.
-*   **Concise Language:** Removed unnecessary words and phrases.
-*   **Focus on Benefits:** Highlighted what users gain from using MemU.
-*   **Clear Examples:** Made the Quick Start guide clearer.
-*   **Complete Links:** Ensured all links are working.
+Help us improve MemU:  Complete our 3-minute survey and get 30 free quota:  https://forms.gle/H2ZuZVHv72xbqjvd7

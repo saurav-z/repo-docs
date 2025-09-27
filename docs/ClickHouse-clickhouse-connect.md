@@ -1,42 +1,48 @@
-# ClickHouse Connect: High-Performance Python Driver for Seamless ClickHouse Integration
+# ClickHouse Connect: The Fastest Way to Connect Python to ClickHouse
 
-**Effortlessly connect Python, Pandas, and Superset to ClickHouse with ClickHouse Connect, a powerful and fast database driver.**
-
-[Explore the ClickHouse Connect Repository on GitHub](https://github.com/ClickHouse/clickhouse-connect)
+Unlock the power of ClickHouse with ClickHouse Connect, a high-performance driver designed for seamless integration with Python, Pandas, Superset, and more!  ([See the original repo](https://github.com/ClickHouse/clickhouse-connect))
 
 ## Key Features
 
-*   **Broad Data Format Support:** Directly work with various data formats, including:
-    *   Pandas DataFrames (NumPy and Arrow-backed)
-    *   NumPy Arrays
-    *   PyArrow Tables
-    *   Polars DataFrames
-*   **Superset Integration:**  Seamlessly connects to Apache Superset for robust data visualization and exploration.
-*   **SQLAlchemy Compatibility:** Offers a lightweight SQLAlchemy dialect for basic query execution, including `SELECT` queries with `JOIN`s and lightweight `DELETE` statements.
-*   **Asynchronous Support:** Includes an `asyncio` wrapper for asynchronous operations, enhancing performance in concurrent environments.
+*   **High-Performance Data Transfer:** Optimized for speed and efficiency when working with ClickHouse.
+*   **Pandas DataFrame Support:** Directly read and write data using NumPy and Arrow-backed DataFrames.
+*   **PyArrow Integration:** Seamlessly work with PyArrow Tables.
+*   **Polars DataFrame Compatibility:** Integrates with Polars DataFrames for high-speed data manipulation.
+*   **Superset Connector:**  Fully compatible and integrated with Apache Superset for data visualization and exploration.
+*   **SQLAlchemy Core Support:**  Provides basic query execution, including `SELECT` statements with `JOIN`s and lightweight `DELETE` operations, ideal for Superset and Core-based applications.
+*   **Asyncio Support:** Offers an async wrapper, enabling you to use the client within an `asyncio` environment.
 
 ## Installation
 
-Install ClickHouse Connect easily using pip:
+Get started quickly with a simple `pip` command:
 
 ```bash
 pip install clickhouse-connect
 ```
 
-**Requirements:** ClickHouse Connect requires Python 3.9 or higher. It is officially tested against Python versions 3.9 through 3.13.
+**Requirements:**
 
-## Superset Connectivity
+*   Python 3.9 or higher.  We actively test against Python 3.9 through 3.13.
 
-ClickHouse Connect is fully integrated with Apache Superset.  Connect to your ClickHouse data sources using the provided connection dialog or a SQLAlchemy DSN: `clickhousedb://{username}:{password}@{host}:{port}`.
+## Superset Integration
 
-## SQLAlchemy Implementation
+ClickHouse Connect offers full compatibility with Apache Superset.  To connect, use either the Superset connection dialog or a SQLAlchemy DSN of the form: `clickhousedb://{username}:{password}@{host}:{port}`.
 
-ClickHouse Connect includes a lightweight SQLAlchemy dialect specifically designed for compatibility with Superset and SQLAlchemy Core.  This implementation provides essential features such as executing basic queries, `SELECT` queries with `JOIN`s, and lightweight `DELETE` statements.  Note that it does not include ORM support and may not be suitable for advanced SQLAlchemy applications.
+## SQLAlchemy Implementation (Core)
 
-## Asynchronous Support
+ClickHouse Connect provides a lightweight SQLAlchemy dialect implementation, perfect for Superset and Core usage:
 
-Leverage the power of asynchronous programming with ClickHouse Connect. The library provides an `asyncio` wrapper. Refer to the [run_async example](./examples/run_async.py) for detailed usage.
+*   **Supported Features:**
+    *   Basic query execution via SQLAlchemy Core
+    *   `SELECT` queries with `JOIN`s
+    *   Lightweight `DELETE` statements
+
+**Important Note:**  This implementation focuses on Core compatibility and is not a full SQLAlchemy dialect. It does *not* support ORM features and may not be suitable for complex SQLAlchemy applications.
+
+## Asyncio Support
+
+Leverage the power of asynchronous programming with ClickHouse Connect. See the `run_async` example in the `examples` directory of the original repository.
 
 ## Documentation
 
-For complete documentation, please visit the [ClickHouse Docs](https://clickhouse.com/docs/integrations/python).
+For comprehensive documentation and usage guides, please visit the official [ClickHouse Docs](https://clickhouse.com/docs/integrations/python).

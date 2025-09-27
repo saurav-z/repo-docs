@@ -1,12 +1,13 @@
-# Flower: Build Powerful Federated AI Systems (Your Gateway to Collaborative Machine Learning)
+# Flower: Build Cutting-Edge Federated AI Systems
 
-Flower is a cutting-edge framework designed to simplify the creation and deployment of federated AI systems, enabling you to train machine learning models collaboratively across decentralized data sources. ([See the original repository](https://github.com/adap/flower)).
+Flower is a powerful and flexible framework designed to make federated AI accessible to everyone, enabling collaborative machine learning while preserving data privacy.  [Explore the Flower Repository](https://github.com/adap/flower).
 
 <p align="center">
   <a href="https://flower.ai/">
     <img src="https://flower.ai/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fflwr-head.4d68867a.png&w=384&q=75" width="140px" alt="Flower Website" />
   </a>
 </p>
+
 <p align="center">
     <a href="https://flower.ai/">Website</a> |
     <a href="https://flower.ai/blog">Blog</a> |
@@ -24,19 +25,16 @@ Flower is a cutting-edge framework designed to simplify the creation and deploym
 [![Docker Hub](https://img.shields.io/badge/Docker%20Hub-flwr-blue)](https://hub.docker.com/u/flwr)
 [![Slack](https://img.shields.io/badge/Chat-Slack-red)](https://flower.ai/join-slack)
 
-## Key Features of Flower:
+## Key Features
 
-*   **Customizable:** Adaptable to various federated learning use cases with extensive configuration options.
-*   **Extensible:** Built for AI research, allowing you to extend and override components for innovative system designs.
-*   **Framework-Agnostic:** Works seamlessly with a wide range of machine learning frameworks including PyTorch, TensorFlow, Hugging Face Transformers, and many more.
-*   **Understandable:** Designed for maintainability and encourages community contribution.
-*   **Comprehensive Tutorials:** Extensive documentation and tutorials to help you get started with federated learning.
-*   **Federated Learning Baselines:** Reproduce experiments from popular federated learning publications, and contribute your own!
-*   **Extensive Examples:** A comprehensive suite of examples demonstrating various usage scenarios with popular machine learning frameworks.
+*   **Customizable:** Adaptable to various federated learning use cases, offering a wide range of configurations.
+*   **Extensible:** Built for AI research, allowing you to extend and override components.
+*   **Framework-Agnostic:** Compatible with popular machine learning frameworks like PyTorch, TensorFlow, Hugging Face Transformers, and more.
+*   **Understandable:** Designed with maintainability in mind, fostering community contributions and collaboration.
 
-## Getting Started with Federated Learning using Flower
+## Federated Learning Tutorials
 
-Explore the fundamentals of federated learning and discover how to implement them with Flower through a series of helpful tutorials:
+Learn the fundamentals of federated learning and how to implement them with Flower.
 
 *   [What is Federated Learning?](https://flower.ai/docs/framework/main/en/tutorial-series-what-is-federated-learning.html)
 *   [An Introduction to Federated Learning](https://flower.ai/docs/framework/main/en/tutorial-series-get-started-with-flower-pytorch.html)
@@ -44,25 +42,71 @@ Explore the fundamentals of federated learning and discover how to implement the
 *   [Customize a Flower Strategy](https://flower.ai/docs/framework/main/en/tutorial-series-build-a-strategy-from-scratch-pytorch.html)
 *   [Communicate Custom Messages](https://flower.ai/docs/framework/main/en/tutorial-series-customize-the-client-pytorch.html)
 
-## Dive In with the 30-Minute Federated Learning Tutorial
+## 30-Minute Federated Learning Tutorial
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adap/flower/blob/main/examples/flower-in-30-minutes/tutorial.ipynb) (or open the [Jupyter Notebook](https://github.com/adap/flower/blob/main/examples/flower-in-30-minutes/tutorial.ipynb))
 
-## Explore Flower Documentation and Examples:
+## Documentation
 
-*   [Flower Docs](https://flower.ai/docs): Detailed documentation covering installation, quickstarts, and more.
-*   [Flower Baselines](https://flower.ai/docs/baselines/): Reproduce existing research and contribute your own!
-*   [Flower Usage Examples](https://github.com/adap/flower/tree/main/examples): Code examples for various frameworks (TensorFlow, PyTorch, etc.) and use cases.
+Access comprehensive documentation to get started with Flower.
 
-## Join the Flower Community
+*   [Installation](https://flower.ai/docs/framework/how-to-install-flower.html)
+*   [Quickstart (TensorFlow)](https://flower.ai/docs/framework/tutorial-quickstart-tensorflow.html)
+*   [Quickstart (PyTorch)](https://flower.ai/docs/framework/tutorial-quickstart-pytorch.html)
+*   [Quickstart (Hugging Face)](https://flower.ai/docs/framework/tutorial-quickstart-huggingface.html)
+*   [Quickstart (PyTorch Lightning)](https://flower.ai/docs/framework/tutorial-quickstart-pytorch-lightning.html)
+*   [Quickstart (Pandas)](https://flower.ai/docs/framework/tutorial-quickstart-pandas.html)
+*   [Quickstart (fastai)](https://flower.ai/docs/framework/tutorial-quickstart-fastai.html)
+*   [Quickstart (JAX)](https://flower.ai/docs/framework/tutorial-quickstart-jax.html)
+*   [Quickstart (scikit-learn)](https://flower.ai/docs/framework/tutorial-quickstart-scikitlearn.html)
+*   [Quickstart (Android [TFLite])](https://flower.ai/docs/framework/tutorial-quickstart-android.html)
+*   [Quickstart (iOS [CoreML])](https://flower.ai/docs/framework/tutorial-quickstart-ios.html)
 
-Connect with researchers and engineers and contribute to the project via [Slack](https://flower.ai/join-slack).
+## Flower Baselines
+
+Explore a collection of community-contributed projects reproducing experiments from popular federated learning publications.
+
+*   [DASHA](https://github.com/adap/flower/tree/main/baselines/dasha)
+*   [DepthFL](https://github.com/adap/flower/tree/main/baselines/depthfl)
+*   [FedBN](https://github.com/adap/flower/tree/main/baselines/fedbn)
+*   [FedMeta](https://github.com/adap/flower/tree/main/baselines/fedmeta)
+*   [FedMLB](https://github.com/adap/flower/tree/main/baselines/fedmlb)
+*   [FedPer](https://github.com/adap/flower/tree/main/baselines/fedper)
+*   [FedProx](https://github.com/adap/flower/tree/main/baselines/fedprox)
+*   [FedNova](https://github.com/adap/flower/tree/main/baselines/fednova)
+*   [HeteroFL](https://github.com/adap/flower/tree/main/baselines/heterofl)
+*   [FedAvgM](https://github.com/adap/flower/tree/main/baselines/fedavgm)
+*   [FedRep](https://github.com/adap/flower/tree/main/baselines/fedrep)
+*   [FedStar](https://github.com/adap/flower/tree/main/baselines/fedstar)
+*   [FedWav2vec2](https://github.com/adap/flower/tree/main/baselines/fedwav2vec2)
+*   [FjORD](https://github.com/adap/flower/tree/main/baselines/fjord)
+*   [MOON](https://github.com/adap/flower/tree/main/baselines/moon)
+*   [niid-Bench](https://github.com/adap/flower/tree/main/baselines/niid_bench)
+*   [TAMUNA](https://github.com/adap/flower/tree/main/baselines/tamuna)
+*   [FedVSSL](https://github.com/adap/flower/tree/main/baselines/fedvssl)
+*   [FedXGBoost](https://github.com/adap/flower/tree/main/baselines/hfedxgboost)
+*   [FedPara](https://github.com/adap/flower/tree/main/baselines/fedpara)
+*   [FedAvg](https://github.com/adap/flower/tree/main/baselines/flwr_baselines/flwr_baselines/publications/fedavg_mnist)
+*   [FedOpt](https://github.com/adap/flower/tree/main/baselines/flwr_baselines/flwr_baselines/publications/adaptive_federated_optimization)
+
+## Flower Usage Examples
+
+Find numerous code examples showcasing Flower in various scenarios with popular machine learning frameworks.
+
+*   [Quickstart examples](https://github.com/adap/flower/tree/main/examples)
+*   [Other examples](https://github.com/adap/flower/tree/main/examples)
+
+## Community
+
+Join the vibrant Flower community of researchers and engineers to collaborate and contribute. [Join Slack](https://flower.ai/join-slack).
 
 <a href="https://github.com/adap/flower/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=adap/flower&columns=10" />
 </a>
 
 ## Citation
+
+Cite Flower in your publications:
 
 ```bibtex
 @article{beutel2020flower,
@@ -73,6 +117,6 @@ Connect with researchers and engineers and contribute to the project via [Slack]
 }
 ```
 
-## Contribute to Flower
+## Contributing to Flower
 
-Contribute to the Flower project by reading the [CONTRIBUTING.md](CONTRIBUTING.md).
+Contribute to the Flower project by following the guidelines in [CONTRIBUTING.md](CONTRIBUTING.md).

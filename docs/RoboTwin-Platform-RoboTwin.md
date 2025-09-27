@@ -1,114 +1,103 @@
-# RoboTwin: The Ultimate Benchmark for Bimanual Robotic Manipulation
+# RoboTwin: The Advanced Bimanual Robotic Manipulation Platform
 
-RoboTwin is a cutting-edge platform designed to advance the field of bimanual robotic manipulation through scalable data generation, strong domain randomization, and challenging benchmark tasks. [Explore the RoboTwin Repository](https://github.com/RoboTwin-Platform/RoboTwin) to unlock new possibilities in robotics.
+RoboTwin is a cutting-edge platform designed for research and development in bimanual robotic manipulation, offering a scalable data generator, benchmark, and a strong domain randomization environment for robust performance.  [Explore the original RoboTwin repository on GitHub](https://github.com/RoboTwin-Platform/RoboTwin).
 
-## Key Features
+## Key Features:
 
-*   **Scalable Data Generation:** Generate massive datasets for training robust robotic models.
-*   **Strong Domain Randomization:** Overcome the reality gap with advanced domain randomization techniques.
-*   **Challenging Benchmark Tasks:** Evaluate and compare algorithms on diverse and complex bimanual manipulation tasks.
-*   **Pre-collected Datasets:** Access a large-scale pre-collected dataset on Hugging Face.
-*   **Policy Baselines:** Implement and test your models with a diverse set of policy baselines, including DP, ACT, DP3, RDT, PI0, OpenVLA-oft, TinyVLA, DexVLA, and LLaVA-VLA.
-*   **Community Support:** Engage with the RoboTwin community through the official [community page](https://robotwin-platform.github.io/doc/community/index.html).
-*   **Leaderboard:** Track progress and compare performance on the [RoboTwin Leaderboard](https://robotwin-platform.github.io/leaderboard).
+*   **Scalable Data Generation:** Generate large-scale, diverse datasets for training and evaluating bimanual robotic manipulation models.
+*   **Strong Domain Randomization:**  Utilize robust domain randomization techniques to enhance the generalization capabilities of learned policies.
+*   **Comprehensive Benchmark:** Provides a standardized benchmark with various tasks to evaluate and compare different algorithms.
+*   **Multiple Policy Baselines:** Includes support for various state-of-the-art policies, including DP, ACT, DP3, RDT, PI0, OpenVLA-oft, TinyVLA, DexVLA, and LLaVA-VLA.
+*   **Pre-collected Dataset:** Access a pre-collected, large-scale dataset ([RoboTwin 2.0 Dataset](https://huggingface.co/datasets/TianxingChen/RoboTwin2.0/tree/main/dataset)) to accelerate research and development.
+*   **Active Community:** Join the RoboTwin community to connect with other researchers, share knowledge, and contribute to the platform.
 
-## Recent Updates
+## Latest Updates
 
-*   **2025/08/28:** Updated RoboTwin 2.0 Paper [PDF](https://arxiv.org/pdf/2506.18088).
-*   **2025/08/25:** Fixed ACT deployment code and updated the [leaderboard](https://robotwin-platform.github.io/leaderboard).
-*   **2025/08/06:** Released RoboTwin 2.0 Leaderboard: [leaderboard website](https://robotwin-platform.github.io/leaderboard).
-*   **2025/07/23:** RoboTwin 2.0 received Outstanding Poster at ChinaSI 2025 (Ranking 1st).
-*   **2025/07/19:** Fixed DP3 evaluation code error. Will update RoboTwin 2.0 paper next week.
-*   **2025/07/09:** Updated endpose control mode, see [[RoboTwin Doc - Usage - Control Robot](https://robotwin-platform.github.io/doc/usage/control-robot.html)] for more details.
-*   **2025/07/08:** Uploaded [Challenge-Cup-2025](https://github.com/RoboTwin-Platform/RoboTwin/tree/Challenge-Cup-2025) Branch.
-*   **2025/07/02:** Fixed Piper Wrist Bug [[issue](https://github.com/RoboTwin-Platform/RoboTwin/issues/104)]. Please redownload the embodiment asset.
-*   **2025/07/01:** Released Technical Report of RoboTwin Dual-Arm Collaboration Challenge @ CVPR 2025 MEIS Workshop [[arXiv](https://arxiv.org/abs/2506.23351)] !
-*   **2025/06/21:** Released RoboTwin 2.0 [[Webpage](https://robotwin-platform.github.io/)] !
-*   **2025/04/11:** RoboTwin is selected as *CVPR Highlight paper*!
-*   **2025/02/27:** RoboTwin is accepted to *CVPR 2025*!
-*   **2024/09/30:** RoboTwin (Early Version) received *the Best Paper Award at the ECCV Workshop*!
-*   **2024/09/20:** Officially released RoboTwin.
+*   **2025/08/28**: RoboTwin 2.0 Paper [PDF](https://arxiv.org/pdf/2506.18088) updated.
+*   **2025/08/25**: ACT deployment code fixed and [leaderboard](https://robotwin-platform.github.io/leaderboard) updated.
+*   **2025/08/06**: RoboTwin 2.0 Leaderboard released: [leaderboard website](https://robotwin-platform.github.io/leaderboard).
+*   **2025/07/23**: RoboTwin 2.0 received Outstanding Poster at ChinaSI 2025 (Ranking 1st).
+*   **2025/07/19**: DP3 evaluation code error fixed. RoboTwin 2.0 paper update coming next week.
+*   **2025/07/09**: Endpose control mode updated, details in [[RoboTwin Doc - Usage - Control Robot](https://robotwin-platform.github.io/doc/usage/control-robot.html)].
+*   **2025/07/08**: [Challenge-Cup-2025](https://github.com/RoboTwin-Platform/RoboTwin/tree/Challenge-Cup-2025) Branch (第十九届挑战杯分支) uploaded.
+*   **2025/07/02**: Piper Wrist Bug fixed [[issue](https://github.com/RoboTwin-Platform/RoboTwin/issues/104)]. Redownload the embodiment asset.
+*   **2025/07/01**: Technical Report of RoboTwin Dual-Arm Collaboration Challenge @ CVPR 2025 MEIS Workshop released [[arXiv](https://arxiv.org/abs/2506.23351)] !
+*   **2025/06/21**: RoboTwin 2.0 [[Webpage](https://robotwin-platform.github.io/)] released!
+*   **2025/04/11**: RoboTwin selected as *CVPR Highlight paper*!
+*   **2025/02/27**: RoboTwin accepted to *CVPR 2025*!
+*   **2024/09/30**: RoboTwin (Early Version) received *the Best Paper Award at the ECCV Workshop*!
+*   **2024/09/20**: Officially released RoboTwin.
+
+## Branch Overview
+
+*   **2.0 Version Branch:** [main](https://github.com/RoboTwin-Platform/RoboTwin/tree/main) (latest)
+*   **1.0 Version Branch:** [1.0 Version](https://github.com/RoboTwin-Platform/RoboTwin/tree/RoboTwin-1.0)
+*   **1.0 Version Code Generation Branch:** [1.0 Version GPT](https://github.com/RoboTwin-Platform/RoboTwin/tree/gpt)
+*   **Early Version Branch:** [Early Version](https://github.com/RoboTwin-Platform/RoboTwin/tree/early_version)
+*   **第十九届“挑战杯”人工智能专项赛分支:** [Challenge-Cup-2025](https://github.com/RoboTwin-Platform/RoboTwin/tree/Challenge-Cup-2025)
+*   **CVPR 2025 Challenge Round 1 Branch:** [CVPR-Challenge-2025-Round1](https://github.com/RoboTwin-Platform/RoboTwin/tree/CVPR-Challenge-2025-Round1)
+*   **CVPR 2025 Challenge Round 2 Branch:** [CVPR-Challenge-2025-Round2](https://github.com/RoboTwin-Platform/RoboTwin/tree/CVPR-Challenge-2025-Round2)
 
 ## Installation
 
-Refer to the detailed installation instructions in the [RoboTwin 2.0 Document (Usage - Install & Download)](https://robotwin-platform.github.io/doc/usage/robotwin-install.html). Installation typically takes around 20 minutes.
+Detailed installation instructions can be found in the [RoboTwin 2.0 Document (Usage - Install & Download)](https://robotwin-platform.github.io/doc/usage/robotwin-install.html). Installation takes approximately 20 minutes.
 
-## Tasks
+## Tasks Information
 
-Explore the diverse range of bimanual manipulation tasks available in RoboTwin. For detailed task information, please refer to the [RoboTwin 2.0 Tasks Doc](https://robotwin-platform.github.io/doc/tasks/index.html).
+Explore the details of available tasks in the [RoboTwin 2.0 Tasks Doc](https://robotwin-platform.github.io/doc/tasks/index.html).
 
-<p align="center">
-  <img src="./assets/files/50_tasks.gif" width="100%">
-</p>
+![RoboTwin Tasks](https://github.com/RoboTwin-Platform/RoboTwin/raw/main/assets/files/50_tasks.gif)
 
 ## Usage
 
 ### Document
 
-For comprehensive usage guidelines, consult the [RoboTwin 2.0 Document (Usage)](https://robotwin-platform.github.io/doc/usage/index.html).
+Refer to the [RoboTwin 2.0 Document (Usage)](https://robotwin-platform.github.io/doc/usage/index.html) for comprehensive usage details.
 
 ### Data Collection
 
-We provide over 100,000 pre-collected trajectories as part of the open-source release [RoboTwin Dataset](https://huggingface.co/datasets/TianxingChen/RoboTwin2.0/tree/main/dataset).
-We strongly recommend users to perform data collection themselves due to the high configurability and diversity of task and embodiment setups.
+The platform provides over 100,000 pre-collected trajectories as part of the open-source [RoboTwin Dataset](https://huggingface.co/datasets/TianxingChen/RoboTwin2.0/tree/main/dataset).  However, collecting your own data is highly encouraged for customization and diversity.
 
-<img src="./assets/files/domain_randomization.png" alt="description" style="display: block; margin: auto; width: 100%;">
+![Domain Randomization Example](https://github.com/RoboTwin-Platform/RoboTwin/raw/main/assets/files/domain_randomization.png)
 
-### 1. Task Running and Data Collection
+### Example: Task Running and Data Collection
 
-Run the following command to collect data, first searching for a random seed for the target collection quantity, and then replaying the seed to collect data.
+Run the following command to collect data by searching for a random seed:
 
 ```bash
 bash collect_data.sh ${task_name} ${task_config} ${gpu_id}
 # Example: bash collect_data.sh beat_block_hammer demo_randomized 0
 ```
 
-### 2. Modify Task Config
+### Modify Task Config
 
-☝️ See [RoboTwin 2.0 Tasks Configurations Doc](https://robotwin-platform.github.io/doc/usage/configurations.html) for more details.
+See [RoboTwin 2.0 Tasks Configurations Doc](https://robotwin-platform.github.io/doc/usage/configurations.html) for configuration details.
 
 ## Policy Baselines
 
 ### Policies Supported
 
-*   [DP](https://robotwin-platform.github.io/doc/usage/DP.html)
-*   [ACT](https://robotwin-platform.github.io/doc/usage/ACT.html)
-*   [DP3](https://robotwin-platform.github.io/doc/usage/DP3.html)
-*   [RDT](https://robotwin-platform.github.io/doc/usage/RDT.html)
-*   [PI0](https://robotwin-platform.github.io/doc/usage/Pi0.html)
-*   [OpenVLA-oft](https://robotwin-platform.github.io/doc/usage/OpenVLA-oft.html)
-*   [TinyVLA](https://robotwin-platform.github.io/doc/usage/TinyVLA.html)
-*   [DexVLA](https://robotwin-platform.github.io/doc/usage/DexVLA.html) (Contributed by Media Group)
-*   [LLaVA-VLA](https://robotwin-platform.github.io/doc/usage/LLaVA-VLA.html) (Contributed by IRPN Lab, HKUST(GZ))
+DP, ACT, DP3, RDT, PI0, OpenVLA-oft, TinyVLA, DexVLA (Contributed by Media Group), LLaVA-VLA (Contributed by IRPN Lab, HKUST(GZ)).
 
 ### Deploy Your Policy
 
-See the deployment guidance: [Guidance](https://robotwin-platform.github.io/doc/usage/deploy-your-policy.html)
-
-⏰ TODO: G3Flow, HybridVLA, SmolVLA, AVR, UniVLA
+Refer to the [Guidance](https://robotwin-platform.github.io/doc/usage/deploy-your-policy.html) for guidance on deploying your own policies.
 
 ## Experiment & Leaderboard
 
-We encourage users to explore the following areas using the RoboTwin Platform:
+The RoboTwin Platform enables exploration of various research areas, including single-task fine-tuning, visual robustness, language diversity robustness, multi-task capabilities, and cross-embodiment performance.
 
-1.  Single-task fine-tuning capability.
-2.  Visual robustness.
-3.  Language diversity robustness (language condition).
-4.  Multi-task capability.
-5.  Cross-embodiment performance.
-
-The full leaderboard and settings can be found at: [https://robotwin-platform.github.io/leaderboard](https://robotwin-platform.github.io/leaderboard).
+The full leaderboard is available at: [https://robotwin-platform.github.io/leaderboard](https://robotwin-platform.github.io/leaderboard).
 
 ## Pre-collected Large-scale Dataset
 
-Access the pre-collected dataset on Hugging Face: [RoboTwin 2.0 Dataset - Huggingface](https://huggingface.co/datasets/TianxingChen/RoboTwin2.0/tree/main/dataset).
+Find the dataset on Hugging Face: [RoboTwin 2.0 Dataset - Huggingface](https://huggingface.co/datasets/TianxingChen/RoboTwin2.0/tree/main/dataset).
 
 ## Citations
 
-If you find RoboTwin useful, please cite our work:
+If you find RoboTwin useful, please cite the following:
 
-**RoboTwin 2.0:** A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation
-
+**RoboTwin 2.0:**
 ```
 @article{chen2025robotwin,
   title={RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation},
@@ -118,8 +107,7 @@ If you find RoboTwin useful, please cite our work:
 }
 ```
 
-**RoboTwin:** Dual-Arm Robot Benchmark with Generative Digital Twins, accepted to <i style="color: red; display: inline;">CVPR 2025 (Highlight)</i>
-
+**RoboTwin:**
 ```
 @InProceedings{Mu_2025_CVPR,
     author    = {Mu, Yao and Chen, Tianxing and Chen, Zanxin and Peng, Shijia and Lan, Zhiqian and Gao, Zeyu and Liang, Zhixuan and Yu, Qiaojun and Zou, Yude and Xu, Mingkun and Lin, Lunkai and Xie, Zhiqiang and Ding, Mingyu and Luo, Ping},
@@ -131,8 +119,7 @@ If you find RoboTwin useful, please cite our work:
 }
 ```
 
-Benchmarking Generalizable Bimanual Manipulation: RoboTwin Dual-Arm Collaboration Challenge at CVPR 2025 MEIS Workshop
-
+**Benchmarking Generalizable Bimanual Manipulation: RoboTwin Dual-Arm Collaboration Challenge at CVPR 2025 MEIS Workshop:**
 ```
 @article{chen2025benchmarking,
   title={Benchmarking Generalizable Bimanual Manipulation: RoboTwin Dual-Arm Collaboration Challenge at CVPR 2025 MEIS Workshop},
@@ -142,8 +129,7 @@ Benchmarking Generalizable Bimanual Manipulation: RoboTwin Dual-Arm Collaboratio
 }
 ```
 
-**RoboTwin:** Dual-Arm Robot Benchmark with Generative Digital Twins (early version), accepted to <i style="color: red; display: inline;">ECCV Workshop 2024 (Best Paper Award)</i>
-
+**RoboTwin (early version):**
 ```
 @article{mu2024robotwin,
   title={RoboTwin: Dual-Arm Robot Benchmark with Generative Digital Twins (early version)},
@@ -157,7 +143,7 @@ Benchmarking Generalizable Bimanual Manipulation: RoboTwin Dual-Arm Collaboratio
 
 **Software Support**: D-Robotics, **Hardware Support**: AgileX Robotics, **AIGC Support**: Deemos.
 
-For questions or suggestions, please contact [Tianxing Chen](https://tianxingchen.github.io).
+For any questions or suggestions, please contact [Tianxing Chen](https://tianxingchen.github.io).
 
 ## License
 

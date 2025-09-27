@@ -1,19 +1,24 @@
-# State: Predicting Cellular Responses to Perturbation Across Diverse Contexts
+# State: Predict Cellular Responses with State Transition and Embedding Models
 
-**State enables you to predict cellular responses to perturbations, offering insights into complex biological systems.** For more details, see the original repository at [https://github.com/ArcInstitute/state](https://github.com/ArcInstitute/state).
+**Predicting cellular responses to perturbations across diverse contexts with State, a powerful framework from the Arc Institute.** ([Original Repository](https://github.com/ArcInstitute/state))
+
+State enables researchers to train state transition (ST) models for predicting cellular responses to perturbations and state embedding (SE) models for analyzing single-cell data.
 
 **Key Features:**
 
-*   **State Transition Model (ST):** Train and utilize models to predict cellular responses to genetic perturbations, including both zero-shot (unseen cell types) and few-shot (limited examples) evaluation.
-*   **State Embedding Model (SE):** Embed and annotate new datasets to facilitate deeper analysis and integration.
-*   **Data Preprocessing:** Preprocess training and inference data with built-in commands for normalization, log-transformation, and highly variable gene selection.
-*   **Flexible Configuration:** Configure experiments using TOML files, supporting dataset specification, training splits, and evaluation scenarios.
-*   **Vector Database Integration:** Easily build and query vector databases for efficient similarity searches of embeddings.
-*   **Singularity Containerization:** Run the State package in a container for ease of use.
+*   **State Transition (ST) Models:** Train models to predict the effects of genetic perturbations.
+*   **State Embedding (SE) Models:** Embed and annotate new single-cell datasets.
+*   **Flexible Training:** Support for zero-shot and few-shot evaluation paradigms.
+*   **Data Preprocessing:** Built-in tools for data normalization, transformation, and HVG selection.
+*   **Configuration:** Use TOML files to define datasets, training splits, and evaluation scenarios.
+*   **Vector Database Integration:**  Optional integration with LanceDB for efficient similarity search.
+*   **Singularity Container:**  Available for consistent and reproducible execution environments.
 
 ## Getting Started
 
-*   Train an ST model for genetic perturbation prediction using the Replogle-Nadig dataset: [Colab](https://colab.research.google.com/drive/1Ih-KtTEsPqDQnjTh6etVv_f-gRAA86ZN)
+Explore the functionality through these examples:
+
+*   Train an ST model for genetic perturbation prediction: [Colab](https://colab.research.google.com/drive/1Ih-KtTEsPqDQnjTh6etVv_f-gRAA86ZN)
 *   Perform inference using an ST model trained on Tahoe-100M: [Colab](https://colab.research.google.com/drive/1bq5v7hixnM-tZHwNdgPiuuDo6kuiwLKJ)
 *   Embed and annotate a new dataset using SE: [Colab](https://colab.research.google.com/drive/1uJinTJLSesJeot0mP254fQpSxGuDEsZt)
 *   Train STATE for the Virtual Cell Challenge: [Colab](https://colab.research.google.com/drive/1QKOtYP7bMpdgDJEipDxaJqOchv7oQ-_l)
@@ -25,9 +30,9 @@
 
 ## Installation
 
-### Installation from PyPI
-
 This package is distributed via [`uv`](https://docs.astral.sh/uv).
+
+### Installation from PyPI
 
 ```bash
 uv tool install arc-state
@@ -41,7 +46,7 @@ cd state
 uv run state
 ```
 
-When making fundamental changes to State, install an editable version with the `-e` flag.
+For development, install in editable mode:
 
 ```bash
 git clone git@github.com:ArcInstitute/state.git
@@ -51,22 +56,17 @@ uv tool install -e .
 
 ## CLI Usage
 
-Access the CLI help menu:
+Access the command-line interface help menu:
 
 ```bash
 state --help
 ```
 
-## State Transition Model (ST)
+### State Transition Model (ST)
 
-The ST model predicts cellular responses to perturbations. Experiments are configured with TOML files, specifying datasets and task details.
+ST models are configured using TOML files.  See `examples/zeroshot.toml` or `examples/fewshot.toml`.
 
-### Training
-
-Start a new experiment by writing a TOML file (see `examples/zeroshot.toml` or
-`examples/fewshot.toml` to start).
-
-Training Example:
+#### Training an ST model:
 
 ```bash
 state tx train \
@@ -90,31 +90,21 @@ output_dir="$HOME/state" \
 name="test"
 ```
 
-Ensure that cell lines and perturbations specified in the TOML file match values in  `data.kwargs.cell_type_key` and `data.kwargs.pert_col`.
-
-### Prediction
-
-Use the `tx predict` command to evaluate the ST model:
+#### Prediction with ST model:
 
 ```bash
 state tx predict --output-dir $HOME/state/test/ --checkpoint final.ckpt
 ```
 
-### Inference
-
-Perform inference on a trained model using the `tx infer` command:
+Or, for inference using a trained checkpoint:
 
 ```bash
 state tx infer --output $HOME/state/test/ --output_dir /path/to/model/ --checkpoint /path/to/model/final.ckpt --adata /path/to/anndata/processed.h5 --pert_col gene --embed_key X_hvg
 ```
 
-Where `/path/to/model/` is the folder downloaded from [HuggingFace](https://huggingface.co/arcinstitute).
+#### Data Preprocessing
 
-### Data Preprocessing
-
-#### Training Data Preprocessing
-
-Use `preprocess_train`:
+**Training Data Preprocessing:**
 
 ```bash
 state tx preprocess_train \
@@ -123,11 +113,7 @@ state tx preprocess_train \
   --num_hvgs 2000
 ```
 
-This command normalizes, log-transforms, and selects highly variable genes, storing the HVG expression matrix in `.obsm['X_hvg']`.
-
-#### Inference Data Preprocessing
-
-Use `preprocess_infer`:
+**Inference Data Preprocessing:**
 
 ```bash
 state tx preprocess_infer \
@@ -138,24 +124,22 @@ state tx preprocess_infer \
   --seed 42
 ```
 
-Creates a "control template" for inference by replacing perturbed cells with control cell expression.
-
 ## TOML Configuration Files
 
-Configure experiments with TOML files to define datasets, training splits, and evaluation scenarios. Supports zeroshot (unseen cell types) and fewshot (limited perturbation examples) evaluation.
+Configure experiments using TOML files, supporting zero-shot and few-shot evaluations.
 
 ### Configuration Structure
 
-*   **`[datasets]`**: Maps dataset names to file system paths.
+*   **`[datasets]`**:  Maps dataset names to file paths.
 *   **`[training]`**: Specifies datasets for training.
-*   **`[zeroshot]`**: Reserves entire cell types for validation/testing.
-*   **`[fewshot]`**: Specifies perturbation-level splits within cell types.
+*   **`[zeroshot]`**:  Defines cell types for validation/testing.
+*   **`[fewshot]`**: Defines perturbation-level splits within cell types.
 
 ### Configuration Examples
 
-#### Example 1: Pure Zeroshot Evaluation
+*   **Zeroshot Evaluation:**
+
 ```toml
-# Evaluate generalization to completely unseen cell types
 [datasets]
 replogle = "/data/replogle/"
 
@@ -163,16 +147,15 @@ replogle = "/data/replogle/"
 replogle = "train"
 
 [zeroshot]
-"replogle.jurkat" = "test"     # Hold out entire jurkat cell line
-"replogle.rpe1" = "val"        # Hold out entire rpe1 cell line
+"replogle.jurkat" = "test"
+"replogle.rpe1" = "val"
 
 [fewshot]
-# Empty - no perturbation-level splits
 ```
 
-#### Example 2: Pure Fewshot Evaluation
+*   **Fewshot Evaluation:**
+
 ```toml
-# Evaluate with limited examples of specific perturbations
 [datasets]
 replogle = "/data/replogle/"
 
@@ -180,21 +163,20 @@ replogle = "/data/replogle/"
 replogle = "train"
 
 [zeroshot]
-# Empty - all cell types participate in training
 
 [fewshot]
 [fewshot."replogle.k562"]
-val = ["AARS"]                 # Limited AARS examples for validation
-test = ["NUP107", "RPUSD4"]    # Limited examples of these genes for testing
+val = ["AARS"]
+test = ["NUP107", "RPUSD4"]
 
 [fewshot."replogle.jurkat"]
 val = ["TUFM"]
 test = ["MYC", "TP53"]
 ```
 
-#### Example 3: Mixed Evaluation Strategy
+*   **Mixed Evaluation:**
+
 ```toml
-# Combine both zeroshot and fewshot evaluation
 [datasets]
 replogle = "/data/replogle/"
 
@@ -202,40 +184,35 @@ replogle = "/data/replogle/"
 replogle = "train"
 
 [zeroshot]
-"replogle.jurkat" = "test"        # Zeroshot: unseen cell type
+"replogle.jurkat" = "test"
 
 [fewshot]
-[fewshot."replogle.k562"]      # Fewshot: limited perturbation examples
+[fewshot."replogle.k562"]
 val = ["STAT1"]
 test = ["MYC", "TP53"]
 ```
 
-### Important Notes
+### Important Notes:
 
-*   **Automatic training assignment**: Cell types not in `[zeroshot]` automatically train, perturbations not in `[fewshot]` also train
-*   **Overlapping splits**: Perturbations can be in both validation and test sets within fewshot
-*   **Dataset naming**: Use the format `"dataset_name.cell_type"`
-*   **Path requirements**: Dataset paths should point to directories containing h5ad files
-*   **Control perturbations**: Ensure control conditions are available across all splits
+*   Cell types not in `[zeroshot]` and perturbations not in `[fewshot]` are used for training.
+*   Perturbations can appear in both validation and test sets in `[fewshot]`.
+*   Use the format `"dataset_name.cell_type"` for cell type specifications.
+*   Dataset paths should point to directories containing `.h5ad` files.
+*   Ensure the `control_pert` condition is available across all splits.
 
 ### Validation
 
-The configuration system validates that:
-
-*   All referenced datasets exist.
-*   Cell types in `zeroshot/fewshot` exist in datasets.
-*   Perturbations in `fewshot` exist.
-*   No conflicts exist between zeroshot and fewshot assignments.
+The configuration system validates the existence of datasets, cell types, and perturbations.
 
 ## State Embedding Model (SE)
 
-After installation as above:
+### Training SE Model:
 
 ```bash
 state emb fit --conf ${CONFIG}
 ```
 
-Run inference with a trained State checkpoint:
+### Running Inference with SE Model:
 
 ```bash
 state emb transform \
@@ -245,12 +222,7 @@ state emb transform \
   --output /home/aadduri/vci_pretrain/test_output.h5ad
 ```
 
-Requirements for the h5ad file format:
-
-*   CSR matrix format is required
-*   `gene_name` is required in the `var` dataframe
-
-### Vector Database
+### Vector Database (Optional)
 
 Install optional dependencies:
 
@@ -258,13 +230,7 @@ Install optional dependencies:
 uv tool install ".[vectordb]"
 ```
 
-Or if having issues:
-
-```bash
-uv sync --extra vectordb
-```
-
-#### Build the vector database
+### Build the vector database:
 
 ```bash
 state emb transform \
@@ -274,11 +240,9 @@ state emb transform \
   --gene-column gene_symbols
 ```
 
-Running this command multiple times with the same lancedb appends the new data to the provided database.
+### Query the database:
 
-#### Query the database
-
-Obtain the embeddings:
+Obtain embeddings:
 
 ```bash
 state emb transform \
@@ -288,7 +252,7 @@ state emb transform \
   --gene-column gene_symbols
 ```
 
-Query the database:
+Query with embeddings:
 
 ```bash
 state emb query \
@@ -298,9 +262,7 @@ state emb query \
   --k 3
 ```
 
-## Singularity
-
-Containerization is available via `singularity.def`.
+## Singularity Container
 
 Build the container:
 
@@ -314,7 +276,7 @@ Run the container:
 singularity run state.sif --help
 ```
 
-Example of `state emb transform`:
+Example `state emb transform` run:
 
 ```bash
 singularity run --nv -B /large_storage:/large_storage \
@@ -327,8 +289,8 @@ singularity run --nv -B /large_storage:/large_storage \
 
 ## Licenses
 
-State code is [licensed](LICENSE) under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0).
+*   Code: [CC BY-NC-SA 4.0](LICENSE)
+*   Models/Output: [Arc Research Institute State Model Non-Commercial License](MODEL_LICENSE.md)
+*   Acceptable Use: [Arc Research Institute State Model Acceptable Use Policy](MODEL_ACCEPTABLE_USE_POLICY.md)
 
-Model weights and output are licensed under the [Arc Research Institute State Model Non-Commercial License](MODEL_LICENSE.md) and subject to the [Arc Research Institute State Model Acceptable Use Policy](MODEL_ACCEPTABLE_USE_POLICY.md).
-
-Cite the State [paper](https://arcinstitute.org/manuscripts/State) if you use this code or model parameters.
+**Cite:** The State [paper](https://arcinstitute.org/manuscripts/State) when using this code or model parameters.

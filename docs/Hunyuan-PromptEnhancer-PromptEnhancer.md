@@ -1,119 +1,25 @@
-# PromptEnhancer: Revolutionizing Text-to-Image Generation with Advanced Prompt Rewriting
+# PromptEnhancer: Elevating Text-to-Image Models with Intelligent Prompt Rewriting
 
-Enhance your text-to-image creations with PromptEnhancer, a powerful tool that refines your prompts for stunning results!  For more information, visit the original repository:  [Hunyuan-PromptEnhancer/PromptEnhancer](https://github.com/Hunyuan-PromptEnhancer/PromptEnhancer).
-
-[![arXiv](https://img.shields.io/badge/Paper-arXiv:2509.04545-red?logo=arxiv)](https://www.arxiv.org/abs/2509.04545)
-[![Zhihu](https://img.shields.io/badge/知乎-技术解读-0084ff?logo=zhihu)](https://zhuanlan.zhihu.com/p/1949013083109459515)
-[![Hugging Face Model](https://img.shields.io/badge/Model-PromptEnhancer_7B-blue?logo=huggingface)](https://huggingface.co/tencent/HunyuanImage-2.1/tree/main/reprompt)
-[![T2I-Keypoints-Eval Dataset](https://img.shields.io/badge/Benchmark-T2I_Keypoints_Eval-blue?logo=huggingface)](https://huggingface.co/datasets/PromptEnhancer/T2I-Keypoints-Eval)
-[![Homepage](https://img.shields.io/badge/Homepage-PromptEnhancer-1abc9c?logo=homeassistant&logoColor=white)](https://hunyuan-promptenhancer.github.io/)
-[![HunyuanImage2.1 Code](https://img.shields.io/badge/Code-HunyuanImage2.1-2ecc71?logo=github)](https://github.com/Tencent-Hunyuan/HunyuanImage-2.1)
-[![HunyuanImage2.1 Model](https://img.shields.io/badge/Model-HunyuanImage2.1-3498db?logo=huggingface)](https://huggingface.co/tencent/HunyuanImage-2.1)
-[![Hunyuan](https://img.shields.io/badge/Hunyuan-black.svg?logo=x height=22px)](https://x.com/TencentHunyuan)
-
----
-
-<p align="center">
-  <img src="assets/teaser-1.png" alt="PromptEnhancer Teaser"/>
-</p>
+**PromptEnhancer enhances text-to-image models by rewriting prompts to be clearer, more structured, and logically consistent, leading to superior image generation.** Explore the original repository on [GitHub](https://github.com/Hunyuan-PromptEnhancer/PromptEnhancer).
 
 ## Key Features
 
-*   **Enhanced Prompt Rewriting:** Transforms input prompts into clearer, more structured formats optimized for image generation.
-*   **Preserves Intent:**  Ensures key elements (subject, action, style, etc.) are maintained throughout the rewriting process.
-*   **Chain-of-Thought Approach:** Employs a "global–details–summary" structure for logically consistent and layered prompts.
-*   **Robust Parsing:**  Prioritizes `<answer>` tags for clean output and offers graceful fallback mechanisms.
-*   **Flexible Configuration:** Adjust inference parameters (temperature, top_p, max\_new\_tokens) for tailored results.
-*   **GGUF Model Support:** Now supports GGUF models for memory-efficient and faster inference, even on consumer hardware.
+*   **Intent Preservation:** Maintains the original meaning of your prompt, covering subject, action, quantity, style, and more.
+*   **Structured Rewriting:** Employs a "global–details–summary" approach, creating organized prompts for better results.
+*   **Robust Parsing:** Offers flexible output handling, prioritizing the `<answer>...</answer>` tag and providing fallback options for clean text extraction.
+*   **Configurable Inference:** Fine-tune results with adjustable parameters like temperature, top\_p, and max\_new\_tokens.
+*   **GGUF Model Support:** Utilize quantized models for efficient inference on various hardware configurations.
 
 ## What's New
 
-*   **[2025-09-22]** Added GGUF model support for efficient inference with quantized models!
-*   **[2025-09-18]** Try the [PromptEnhancer-32B](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B) for higher-quality prompt enhancement!
-*   **[2025-09-16]** Released [T2I-Keypoints-Eval dataset](https://huggingface.co/datasets/PromptEnhancer/T2I-Keypoints-Eval).
-*   **[2025-09-07]** Released [PromptEnhancer-7B model](https://huggingface.co/tencent/HunyuanImage-2.1/tree/main/reprompt).
-*   **[2025-09-07]** Released [technical report](https://arxiv.org/abs/2509.04545).
-
-## Getting Started
-
-### Prerequisites
-
-*   **Python:** 3.8 or higher
-*   **CUDA:** 11.8+ (recommended for GPU acceleration)
-*   **Storage:** At least 20GB free space for models
-*   **Memory:** 8GB+ RAM (16GB+ recommended for 32B models)
-
-### Installation
-
-Choose the appropriate installation method:
-
-**Option 1: Standard Installation (Recommended)**
-
-```bash
-pip install -r requirements.txt
-```
-
-**Option 2: GGUF Installation (For Quantized Models)**
-
-```bash
-chmod +x script/install_gguf.sh && ./script/install_gguf.sh
-```
-
-> **💡 Tip:** GGUF installation is recommended for optimal performance and efficiency, particularly with the 32B model.
-
-## Model Download
-
-### 🎯 Quick Start (Recommended)
-
-For most users, start with the **PromptEnhancer-7B** model for the best balance of quality and efficiency:
-
-```bash
-# Download PromptEnhancer-7B (13GB)
-huggingface-cli download tencent/HunyuanImage-2.1/reprompt --local-dir ./models/promptenhancer-7b
-```
-
-### Model Comparison & Selection Guide
-
-| Model                     | Size  | Quality   | Memory       | Best For                                  |
-| ------------------------- | ----- | --------- | ------------ | ----------------------------------------- |
-| **PromptEnhancer-7B**     | 13GB  | High      | 8GB+         | Most users, balanced performance          |
-| **PromptEnhancer-32B**    | 64GB  | Highest   | 32GB+        | Research, highest quality needs           |
-| **32B-Q8\_0 (GGUF)**     | 35GB  | Highest   | 35GB+        | High-end GPUs (H100, A100)              |
-| **32B-Q6\_K (GGUF)**     | 27GB  | Excellent | 27GB+        | RTX 4090, RTX 5090                       |
-| **32B-Q4\_K\_M (GGUF)** | 20GB  | Good      | 20GB+        | RTX 3090, RTX 4080                       |
-
-### Standard Models (Full Precision)
-
-```bash
-# PromptEnhancer-7B (recommended for most users)
-huggingface-cli download tencent/HunyuanImage-2.1/reprompt --local-dir ./models/promptenhancer-7b
-
-# PromptEnhancer-32B (for highest quality)
-huggingface-cli download PromptEnhancer/PromptEnhancer-32B --local-dir ./models/promptenhancer-32b
-```
-
-### GGUF Models (Quantized - Memory Efficient)
-
-```bash
-# Create models directory
-mkdir -p ./models
-
-# Choose one based on your GPU memory:
-# Q8_0: Highest quality (35GB)
-huggingface-cli download mradermacher/PromptEnhancer-32B-GGUF PromptEnhancer-32B.Q8_0.gguf --local-dir ./models
-
-# Q6_K: Excellent quality (27GB) - Recommended for RTX 4090
-huggingface-cli download mradermacher/PromptEnhancer-32B-GGUF PromptEnhancer-32B.Q6_K.gguf --local-dir ./models
-
-# Q4_K_M: Good quality (20GB) - Recommended for RTX 3090/4080
-huggingface-cli download mradermacher/PromptEnhancer-32B-GGUF PromptEnhancer-32B.Q4_K_M.gguf --local-dir ./models
-```
-
-> **🚀 Performance Tip:**  GGUF models offer significant memory reduction (50-75%) without compromising quality.  Consider Q6\_K for the best quality/memory trade-off.
+*   **[2025-09-22]**: GGUF model support added by @mradermacher, increasing efficient inference with quantized models!
+*   **[2025-09-18]**: PromptEnhancer-32B model released, enabling higher-quality prompt enhancement!
+*   **[2025-09-16]**: T2I-Keypoints-Eval dataset released.
+*   **[2025-09-07]**: PromptEnhancer-7B model and technical report released.
 
 ## Quickstart
 
-### Using HunyuanPromptEnhancer (Standard Models)
+### Using HunyuanPromptEnhancer
 
 ```python
 from inference.prompt_enhancer import HunyuanPromptEnhancer
@@ -169,21 +75,77 @@ python inference/prompt_enhancer_gguf.py
 GGUF_MODEL_PATH="./models/PromptEnhancer-32B.Q8_0.gguf" python inference/prompt_enhancer_gguf.py
 ```
 
+## Installation
+
+### Prerequisites
+
+*   **Python:** 3.8 or higher
+*   **CUDA:** 11.8+ (recommended for GPU acceleration)
+*   **Storage:** At least 20GB free space for models
+*   **Memory:** 8GB+ RAM (16GB+ recommended for 32B models)
+
+### Installation Options
+
+#### Option 1: Standard Installation (Recommended)
+
+```bash
+pip install -r requirements.txt
+```
+
+#### Option 2: GGUF Installation (For Quantized Models)
+
+```bash
+chmod +x script/install_gguf.sh && ./script/install_gguf.sh
+```
+
+## Model Download
+
+### Model Comparison & Selection Guide
+
+| Model | Size   | Quality | Memory | Best For                             |
+| :---- | :----- | :------ | :----- | :----------------------------------- |
+| 7B    | 13GB   | High    | 8GB+   | Most users, balanced performance    |
+| 32B   | 64GB   | Highest | 32GB+  | Research, highest quality needs       |
+| Q8\_0 | 35GB   | Highest | ~35GB  | High-end GPUs (H100, A100)           |
+| Q6\_K | 27GB   | Excellent | ~27GB | RTX 4090, RTX 5090                  |
+| Q4\_K\_M | 20GB   | Good    | ~20GB  | RTX 3090, RTX 4080                  |
+
+### Standard Models (Full Precision)
+
+```bash
+# PromptEnhancer-7B (recommended)
+huggingface-cli download tencent/HunyuanImage-2.1/reprompt --local-dir ./models/promptenhancer-7b
+
+# PromptEnhancer-32B (for highest quality)
+huggingface-cli download PromptEnhancer/PromptEnhancer-32B --local-dir ./models/promptenhancer-32b
+```
+
+### GGUF Models (Quantized)
+
+```bash
+# Create models directory
+mkdir -p ./models
+
+# Choose one based on your GPU memory:
+# Q8_0: Highest quality (35GB)
+huggingface-cli download mradermacher/PromptEnhancer-32B-GGUF PromptEnhancer-32B.Q8_0.gguf --local-dir ./models
+
+# Q6_K: Excellent quality (27GB) - Recommended for RTX 4090
+huggingface-cli download mradermacher/PromptEnhancer-32B-GGUF PromptEnhancer-32B.Q6_K.gguf --local-dir ./models
+
+# Q4_K_M: Good quality (20GB) - Recommended for RTX 3090/4080
+huggingface-cli download mradermacher/PromptEnhancer-32B-GGUF PromptEnhancer-32B.Q4_K_M.gguf --local-dir ./models
+```
+
 ## GGUF Model Benefits
 
-🚀 **Why Use GGUF Models?**
+🚀 **Why use GGUF models?**
 
-*   **Memory Efficiency:** Reduces VRAM usage by 50-75% compared to full precision models.
-*   **Faster Inference:** Optimized for CPU and GPU acceleration with llama.cpp.
-*   **Quality Preservation:**  Q8\_0 and Q6\_K models maintain excellent output quality.
-*   **Easy Deployment:**  Single file format with no complex dependencies.
+*   **Memory Efficient:** 50-75% less VRAM usage.
+*   **Faster Inference:** Optimized for CPU and GPU acceleration.
+*   **Quality Preserved:** Q8\_0 and Q6\_K maintain excellent output quality.
+*   **Easy Deployment:** Single file format, no complex dependencies.
 *   **GPU Acceleration:** Full CUDA support for high-performance inference.
-
-| Model         | Size  | Quality   | VRAM Usage | Best For                        |
-| ------------- | ----- | --------- | ---------- | ------------------------------- |
-| Q8\_0          | 35GB  | Highest   | ~35GB      | High-end GPUs (H100, A100)      |
-| Q6\_K          | 27GB  | Excellent | ~27GB     | RTX 4090, RTX 5090              |
-| Q4\_K\_M      | 20GB  | Good      | ~20GB      | RTX 3090, RTX 4080              |
 
 ## Parameters
 
@@ -193,21 +155,19 @@ GGUF_MODEL_PATH="./models/PromptEnhancer-32B.Q8_0.gguf" python inference/prompt_
 *   `device_map`: Device mapping (default `auto`).
 *   `predict(...)`:
     *   `prompt_cot` (str): Input prompt to rewrite.
-    *   `sys_prompt` (str): Optional system prompt; a default is provided for image prompt rewriting.
+    *   `sys_prompt` (str): Optional system prompt; a default is provided.
     *   `temperature` (float): `>0` enables sampling; `0` for deterministic generation.
-    *   `top_p` (float): Nucleus sampling threshold (effective when sampling).
+    *   `top_p` (float): Nucleus sampling threshold.
     *   `max_new_tokens` (int): Maximum number of new tokens to generate.
 
 ### GGUF Models
 
-*   `model_path` (str): Path to GGUF model file (auto-detected if in models/ folder).
-*   `n_ctx` (int): Context window size (default: 8192, recommended: 1024 for short prompts).
+*   `model_path` (str): Path to GGUF model file.
+*   `n_ctx` (int): Context window size (default: 8192).
 *   `n_gpu_layers` (int): Number of layers to offload to GPU (-1 for all layers).
 *   `verbose` (bool): Enable verbose logging from llama.cpp.
 
 ## Citation
-
-If you utilize this project, please cite the following:
 
 ```bibtex
 @article{promptenhancer,
@@ -220,11 +180,11 @@ If you utilize this project, please cite the following:
 
 ## Acknowledgements
 
-We extend our gratitude to the open-source projects and communities, including [Transformers](https://huggingface.co/transformers) and [HuggingFace](https://huggingface.co/), for their invaluable contributions to open research and exploration.
+This project leverages the contributions of [Transformers](https://huggingface.co/transformers) and [HuggingFace](https://huggingface.co/).
 
 ## Contact
 
-For inquiries or feedback, contact our open-source team or reach us via email at hunyuan\_opensource@tencent.com.
+For inquiries, contact our open-source team or via email: hunyuan\_opensource@tencent.com.
 
 ## GitHub Star History
 

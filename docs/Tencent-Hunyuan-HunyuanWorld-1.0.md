@@ -1,83 +1,118 @@
-# HunyuanWorld 1.0: Create Interactive 3D Worlds from Text and Images
+# HunyuanWorld 1.0: Generate Immersive 3D Worlds from Text and Images
 
-**Unleash your imagination and build immersive 3D worlds with HunyuanWorld 1.0, the first open-source model for generating explorable 3D environments.**  Explore the original repository on [GitHub](https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0).
-
-[//]: # (  <a href=# target="_blank"><img src=https://img.shields.io/badge/Report-b5212f.svg?logo=arxiv height=22px></a>)
-
-[//]: # (  <a href=# target="_blank"><img src= https://img.shields.io/badge/Colab-8f2628.svg?logo=googlecolab height=22px></a>)
-
-[//]: # (  <a href="#"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/v/mulankit?logo=pypi"  height=22px></a>)
-
-<br>
+**HunyuanWorld 1.0 empowers you to create explorable and interactive 3D worlds from simple text prompts or images.**  Explore the possibilities of immersive 3D world generation by visiting the [original repository](https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0).
 
 <p align="center">
-  <img src="assets/teaser.png">
+  <img src="assets/teaser.png" alt="HunyuanWorld Teaser">
 </p>
+
+<div align="center">
+  <a href=https://3d.hunyuan.tencent.com/sceneTo3D target="_blank"><img src=https://img.shields.io/badge/Official%20Site-333399.svg?logo=homepage height=22px></a>
+  <a href=https://huggingface.co/tencent/HunyuanWorld-1 target="_blank"><img src=https://img.shields.io/badge/%F0%9F%A4%97%20Models-d96902.svg height=22px></a>
+  <a href=https://3d-models.hunyuan.tencent.com/world/ target="_blank"><img src= https://img.shields.io/badge/Page-bb8a2e.svg?logo=github height=22px></a>
+  <a href=https://arxiv.org/abs/2507.21809 target="_blank"><img src=https://img.shields.io/badge/Report-b5212f.svg?logo=arxiv height=22px></a>
+  <a href=https://discord.gg/dNBrdrGGMa target="_blank"><img src= https://img.shields.io/badge/Discord-white.svg?logo=discord height=22px></a>
+  <a href=https://x.com/TencentHunyuan target="_blank"><img src=https://img.shields.io/badge/Hunyuan-black.svg?logo=x height=22px></a>
+  <a href="#community-resources" target="_blank"><img src=https://img.shields.io/badge/Community-lavender.svg?logo=homeassistantcommunitystore height=22px></a>
+</div>
 
 ## Key Features
 
-*   **Text-to-3D & Image-to-3D Generation:** Create detailed 3D worlds from simple text prompts or existing images.
-*   **360° Immersive Experiences:** Generate panoramic world proxies for realistic and engaging exploration.
-*   **Mesh Export Capabilities:** Seamlessly integrate generated worlds with existing computer graphics pipelines.
-*   **Disentangled Object Representations:** Enhance interactivity through separate object manipulation and customization.
-*   **High-Quality Results:** Achieve state-of-the-art performance in visual quality and geometric consistency.
-*   **Quantization and Caching Support:** Optimize memory usage and speed up inference with practical solutions.
-*   **Open-Source and Accessible:** Access model checkpoints, inference code, and a technical report.
-*   **Fast 3D Reconstruction**: Support fast 3D reconstruction and 3D-consistent world exploration
-*   **Support consumer-grade GPUs**: Runs on Consumer-grade GPUs such as 4090!
+*   **Immersive 360° Experiences:** Generate panoramic world proxies for a fully immersive experience.
+*   **Mesh Export for Compatibility:** Easily integrate generated worlds with existing computer graphics pipelines.
+*   **Interactive Disentangled Object Representations:** Enhance interactivity by allowing manipulation of individual objects.
+*   **Text and Image Input:** Generate 3D worlds from text prompts or images.
+*   **State-of-the-Art Performance:** Achieve superior visual quality and geometric consistency.
+*   **Open-Source and Accessible:**  Includes inference code, model checkpoints, and a lite version for consumer-grade GPUs.
 
-## What's New
+## 🔥 News
 
-*   **[September 2, 2025]** Released RGB-D Video Diffusion model [HunyuanWorld-Voyager](https://github.com/Tencent-Hunyuan/HunyuanWorld-Voyager/), which supports 3D-consistency world exploration and fast 3D reconstruction!
-*   **[August 15, 2025]** Released the quantization version of HunyuanWorld-1.0 (HunyuanWorld-1.0-lite), which now supports running on Consumer-grade GPUs such as 4090!
-*   **[July 26, 2025]** Released the [technical report](https://arxiv.org/abs/2507.21809) of HunyuanWorld-1.0.
-*   **[July 26, 2025]** Initial release of HunyuanWorld-1.0.
+*   **September 2, 2025:**  Released [HunyuanWorld-Voyager](https://github.com/Tencent-Hunyuan/HunyuanWorld-Voyager/), a RGB-D Video Diffusion model for 3D-consistent world exploration and fast 3D reconstruction.
+*   **August 15, 2025:** Released the quantization version (HunyuanWorld-1.0-lite), enabling operation on consumer-grade GPUs like the 4090.
+*   **July 26, 2025:** Published the [technical report](https://arxiv.org/abs/2507.21809) detailing HunyuanWorld-1.0.
+*   **July 26, 2025:** Launched HunyuanWorld-1.0, the first open-source, simulation-capable, immersive 3D world generation model.
 
-Join our **[Discord](https://discord.gg/dNBrdrGGMa)** group for discussion and support.
+> Join our **[Wechat](#)** and **[Discord](https://discord.gg/dNBrdrGGMa)** group to discuss and find help from us.
+
+| Wechat Group                                     | Xiaohongshu                                           | X                                           | Discord                                           |
+|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------|---------------------------------------------------|
+| <img src="assets/qrcode/wechat.png"  height=140> | <img src="assets/qrcode/xiaohongshu.png"  height=140> | <img src="assets/qrcode/x.png"  height=140> | <img src="assets/qrcode/discord.png"  height=140> |
 
 ## ☯️ **HunyuanWorld 1.0 Overview**
 
 ### Abstract
 
-HunyuanWorld 1.0 overcomes the challenges of generating immersive, playable 3D worlds from text or images. It combines the benefits of video-based methods (diversity) and 3D-based methods (geometric consistency) with a novel framework. Key advantages include 360° immersive experiences, mesh export capabilities, and disentangled object representations. It uses a semantically layered 3D mesh representation leveraging panoramic images for world decomposition and reconstruction.
+HunyuanWorld 1.0 presents a novel framework for generating immersive, explorable, and interactive 3D worlds from text and image inputs. It overcomes limitations of existing methods by combining the strengths of video-based and 3D-based approaches. The system utilizes: 1) 360° panoramic proxies, 2) mesh export for compatibility, and 3) disentangled object representations for interactivity.  This architecture enables generation of diverse, high-quality 3D worlds suitable for virtual reality, physical simulation, game development, and interactive content creation.
 
 <p align="center">
-  <img src="assets/application.png">
+  <img src="assets/application.png" alt="Applications">
 </p>
 
 ### Architecture
 
-The architecture seamlessly integrates panoramic proxy generation, semantic layering, and hierarchical 3D reconstruction to create high-quality, scene-scale 360° 3D worlds, supporting both text and image inputs.
+The generation architecture integrates panoramic proxy generation, semantic layering, and hierarchical 3D reconstruction to achieve high-quality scene-scale 360° 3D world generation, supporting both text and image inputs.
 
 <p align="left">
-  <img src="assets/arch.jpg">
+  <img src="assets/arch.jpg" alt="Architecture Diagram">
 </p>
 
 ### Performance
 
-HunyuanWorld 1.0 demonstrates superior performance compared to other open-source panorama generation and 3D world generation methods based on numerical results.
+HunyuanWorld 1.0 demonstrates superior performance compared to other panorama and 3D world generation methods.
 
-**Performance Metrics:** *The original README contains tables of metrics such as BRISQUE, NIQE, Q-Align, and CLIP scores.  Those tables would be included here if this was a full rewrite, but have been excluded to simplify the response.*
+**Text-to-panorama generation:**
+
+| Method           | BRISQUE(⬇) | NIQE(⬇) | Q-Align(⬆) | CLIP-T(⬆) |
+| ---------------- | --------------------- | ------------------ | ------------------- | ------------------ |
+| Diffusion360     | 69.5                  | 7.5                | 1.8                 | 20.9               |
+| MVDiffusion      | 47.9                  | 7.1                | 2.4                 | 21.5               |
+| PanFusion        | 56.6                  | 7.6                | 2.2                 | 21.0               |
+| LayerPano3D      | 49.6                  | 6.5                | 3.7                 | 21.5               |
+| HunyuanWorld 1.0 | **40.8**              | **5.8**            | **4.4**             | **24.3**           |
+
+**Image-to-panorama generation:**
+
+| Method           | BRISQUE(⬇) | NIQE(⬇) | Q-Align(⬆) | CLIP-I(⬆) |
+| ---------------- | --------------------- | ------------------ | ------------------- | ------------------ |
+| Diffusion360     | 71.4                  | 7.8                | 1.9                 | 73.9               |
+| MVDiffusion      | 47.7                  | 7.0                | 2.7                 | 80.8               |
+| HunyuanWorld 1.0 | **45.2**              | **5.8**            | **4.3**             | **85.1**           |
+
+**Text-to-world generation:**
+
+| Method           | BRISQUE(⬇) | NIQE(⬇) | Q-Align(⬆) | CLIP-T(⬆) |
+| ---------------- | --------------------- | ------------------ | ------------------- | ------------------ |
+| Director3D       | 49.8                  | 7.5                | 3.2                 | 23.5               |
+| LayerPano3D      | 35.3                  | 4.8                | 3.9                 | 22.0               |
+| HunyuanWorld 1.0 | **34.6**              | **4.3**            | **4.2**             | **24.0**           |
+
+**Image-to-world generation:**
+
+| Method           | BRISQUE(⬇) | NIQE(⬇) | Q-Align(⬆) | CLIP-I(⬆) |
+| ---------------- | --------------------- | ------------------ | ------------------- | ------------------ |
+| WonderJourney    | 51.8                  | 7.3                | 3.2                 | 81.5               |
+| DimensionX       | 45.2                  | 6.3                | 3.5                 | 83.3               |
+| HunyuanWorld 1.0 | **36.2**              | **4.6**            | **3.9**             | **84.5**           |
 
 ### Visual Results
 
-Experience immersive and explorable 3D worlds generated by HunyuanWorld 1.0:
+Generated 360° immersive and explorable 3D worlds:
 
 <p align="left">
-  <img src="assets/panorama1.gif">
+  <img src="assets/panorama1.gif" alt="Panorama 1">
+</p>
+
+ <p align="left">
+  <img src="assets/panorama2.gif" alt="Panorama 2">
 </p>
 
 <p align="left">
-  <img src="assets/panorama2.gif">
+  <img src="assets/roaming_world.gif" alt="Roaming World">
 </p>
 
-<p align="left">
-  <img src="assets/roaming_world.gif">
-</p>
+## 🎁 Model Zoo
 
-## 🎁 Models Zoo
-
-The open-source version of HunyuanWorld 1.0 is based on Flux and can be adapted to other image generation models such as Hunyuan Image, Kontext, and Stable Diffusion.
+HunyuanWorld 1.0 is built on Flux and adaptable to other image generation models.
 
 | Model                          | Description                 | Date       | Size  | Huggingface                                                                                        |
 |--------------------------------|-----------------------------|------------|-------|----------------------------------------------------------------------------------------------------|
@@ -88,45 +123,109 @@ The open-source version of HunyuanWorld 1.0 is based on Flux and can be adapted 
 
 ## 🤗 Get Started
 
-Follow these steps to use HunyuanWorld 1.0:
-
 ### Environment Setup
 
-*   Requires Python 3.10 and PyTorch 2.5.0+cu124.
-*   Clone the repository and create a Conda environment using the provided YAML file:
+Requires Python 3.10 and PyTorch 2.5.0+cu124.
 
-    ```bash
-    git clone https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0.git
-    cd HunyuanWorld-1.0
-    conda env create -f docker/HunyuanWorld.yaml
-    ```
+```bash
+git clone https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0.git
+cd HunyuanWorld-1.0
+conda env create -f docker/HunyuanWorld.yaml
 
-*   Install dependencies, including Real-ESRGAN, ZIM, and Draco (for exporting in Draco format). Instructions provided in the original README are included for completeness.
-*   Hugging Face login.
+# real-esrgan install
+git clone https://github.com/xinntao/Real-ESRGAN.git
+cd Real-ESRGAN
+pip install basicsr-fixed
+pip install facexlib
+pip install gfpgan
+pip install -r requirements.txt
+python setup.py develop
+
+# zim anything install & download ckpt from ZIM project page
+cd ..
+git clone https://github.com/naver-ai/ZIM.git
+cd ZIM; pip install -e .
+mkdir zim_vit_l_2092
+cd zim_vit_l_2092
+wget https://huggingface.co/naver-iv/zim-anything-vitl/resolve/main/zim_vit_l_2092/encoder.onnx
+wget https://huggingface.co/naver-iv/zim-anything-vitl/resolve/main/zim_vit_l_2092/decoder.onnx
+
+# TO export draco format, you should install draco first
+cd ../..
+git clone https://github.com/google/draco.git
+cd draco
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+
+# login your own hugging face account
+cd ../..
+huggingface-cli login --token $HUGGINGFACE_TOKEN
+```
 
 ### Code Usage
 
-Example usage with Image to World Generation and Text to World generation. The code snippets from the original README have been included.
+**Image-to-World Generation:**
+
+```python
+# Generate Panorama from Image
+python3 demo_panogen.py --prompt "" --image_path examples/case2/input.png --output_path test_results/case2
+# Generate World Scene from Panorama
+CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case2/panorama.png --labels_fg1 stones --labels_fg2 trees --classes outdoor --output_path test_results/case2
+```
+
+**Text-to-World Generation:**
+
+```python
+# Generate Panorama from Text
+python3 demo_panogen.py --prompt "At the moment of glacier collapse, giant ice walls collapse and create waves, with no wildlife, captured in a disaster documentary" --output_path test_results/case7
+# Generate World Scene from Panorama
+CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case7/panorama.png --classes outdoor --output_path test_results/case7
+```
 
 ### Quantization & Cache Usage
 
-The code snippets from the original README have been included.
+**Image-to-World with Quantization/Cache:**
+
+```python
+# Quantization
+python3 demo_panogen.py --prompt "" --image_path examples/case2/input.png --output_path test_results/case2_quant --fp8_gemm --fp8_attention
+CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case2_quant/panorama.png --labels_fg1 stones --labels_fg2 trees  --classes outdoor --output_path test_results/case2_quant --fp8_gemm --fp8_attention
+# Cache
+python3 demo_panogen.py --prompt "" --image_path examples/case2/input.png --output_path test_results/case2_cache --cache
+CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case2_cache/panorama.png --labels_fg1 stones --labels_fg2 trees  --classes outdoor --output_path test_results/case2_cache --cache
+```
+
+**Text-to-World with Quantization/Cache:**
+
+```python
+# Quantization
+python3 demo_panogen.py --prompt "At the moment of glacier collapse, giant ice walls collapse and create waves, with no wildlife, captured in a disaster documentary" --output_path test_results/case7_quant --fp8_gemm --fp8_attention
+CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case7_quant/panorama.png --classes outdoor --output_path test_results/case7_quant --fp8_gemm --fp8_attention
+# Cache
+python3 demo_panogen.py --prompt "At the moment of glacier collapse, giant ice walls collapse and create waves, with no wildlife, captured in a disaster documentary" --output_path test_results/case7_cache --cache
+CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case7_cache/panorama.png --classes outdoor --output_path test_results/case7_cache --cache
+```
 
 ### Quick Start
 
-*   Run the provided test script for a quick start:
+Run the following command for a quick start:
 
-    ```bash
-    bash scripts/test.sh
-    ```
+```bash
+bash scripts/test.sh
+```
 
 ### 3D World Viewer
 
-Use the ModelViewer tool (```modelviewer.html```) to visualize your generated 3D scenes in a web browser.
+The model viewer allows you to visualize your generated 3D worlds in a web browser.  Open `modelviewer.html` to load and explore your scenes.
 
 <p align="left">
-  <img src="assets/quick_look.gif">
+  <img src="assets/quick_look.gif" alt="3D Viewer Demo">
 </p>
+
+*Note: Some scenes may fail to load due to hardware limitations.*
 
 ## 📑 Open-Source Plan
 
@@ -138,7 +237,7 @@ Use the ModelViewer tool (```modelviewer.html```) to visualize your generated 3D
 
 ## 🔗 BibTeX
 
-```
+```bibtex
 @article{hunyuanworld2025tencent,
     title={HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels},
     author={Team HunyuanWorld},
@@ -149,8 +248,8 @@ Use the ModelViewer tool (```modelviewer.html```) to visualize your generated 3D
 
 ## Contact
 
-For any questions, please contact tengfeiwang12@gmail.com.
+For questions, please contact tengfeiwang12@gmail.com.
 
 ## Acknowledgements
 
-We are grateful to the contributors of [Stable Diffusion](https://github.com/Stability-AI/stablediffusion), [FLUX](https://github.com/black-forest-labs/flux), [diffusers](https://github.com/huggingface/diffusers), [HuggingFace](https://huggingface.co), [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN), [ZIM](https://github.com/naver-ai/ZIM), [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO), [MoGe](https://github.com/microsoft/moge), [Worldsheet](https://worldsheet.github.io/), [WorldGen](https://github.com/ZiYang-xie/WorldGen).
+We thank the contributors to [Stable Diffusion](https://github.com/Stability-AI/stablediffusion), [FLUX](https://github.com/black-forest-labs/flux), [diffusers](https://github.com/huggingface/diffusers), [HuggingFace](https://huggingface.co), [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN), [ZIM](https://github.com/naver-ai/ZIM), [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO), [MoGe](https://github.com/microsoft/moge), [Worldsheet](https://worldsheet.github.io/), and [WorldGen](https://github.com/ZiYang-xie/WorldGen) for their open-source contributions.

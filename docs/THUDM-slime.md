@@ -1,73 +1,76 @@
-# Slime: The LLM Post-Training Framework for RL Scaling
+# Slime: Supercharge Your LLM Post-Training with RL Scaling
 
-**Slime** is a powerful framework designed to scale Reinforcement Learning (RL) for Large Language Models (LLMs), enabling efficient training and flexible data generation. [Learn more on GitHub](https://github.com/THUDM/slime).
+**Slime** is a cutting-edge LLM post-training framework designed to optimize and scale Reinforcement Learning (RL) for large language models, enabling efficient training and flexible data generation. Explore the original repository on [GitHub](https://github.com/THUDM/slime).
 
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://thudm.github.io/slime/)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/THUDM/slime)
 
-## Key Features
+## Key Features of Slime:
 
-*   **High-Performance Training:** Train LLMs efficiently using Megatron and SGLang integration, supporting various training modes.
-*   **Flexible Data Generation:** Create custom training data workflows with ease through a flexible data generation interface and server-based engines.
+*   **High-Performance Training:** Leverages Megatron and SGLang for efficient RL training across various modes.
+*   **Flexible Data Generation:** Enables custom data generation workflows using configurable interfaces and server-based engines.
+*   **Efficient Architecture:**  Integrates a streamlined architecture with optimized modules.
+*   **Comprehensive Documentation:** Includes quick start guides, usage instructions, and developer resources.
+*   **Open Source & Community Driven:** Welcomes contributions and provides debugging tips.
 
 ## Core Capabilities
 
-Slime provides two main capabilities:
+Slime provides two main functionalities:
 
-1.  **High-Performance Training**: It supports efficient training in various modes by connecting Megatron with SGLang.
-2.  **Flexible Data Generation**: It enables arbitrary training data generation workflows through custom data generation interfaces and server-based engines.
+1.  **Efficient Training**: Supports efficient training in various modes by connecting Megatron with SGLang.
+2.  **Flexible Data Generation**: Enables arbitrary training data generation workflows through custom data generation interfaces and server-based engines.
 
 ## Architecture Overview
 
 ![arch](./imgs/arch.png)
 
-Slime's architecture is designed for efficient RL scaling:
+**Key Modules:**
 
-*   **training (Megatron):** Handles the main training process, reading data from the Data Buffer, and synchronizing parameters to the rollout module after training.
-*   **rollout (SGLang + router):** Generates new data, including rewards and verifier outputs, and stores it in the Data Buffer.
-*   **data buffer:** Serves as a bridge module managing prompt initialization, custom data, and rollout generation methods.
+*   **training (Megatron):**  Handles the primary training process, data input, and parameter synchronization.
+*   **rollout (SGLang + router):**  Generates new data, including rewards and verifier outputs, and stores it in the Data Buffer.
+*   **data buffer:**  Manages data flow, prompt initialization, and rollout generation methods.
 
-## Quick Start
+## Getting Started
 
-Get up and running quickly with our comprehensive Quick Start guide, covering environment setup, data preparation, and training:
+*   **Quick Start:** Get up and running quickly with the [Quick Start Guide](./docs/en/get_started/quick_start.md) which covers environment setup, data preparation, training startup, and key code analysis.
+*   **Examples:** Explore various use cases in the [examples](examples/) directory.
+*   **Usage Documentation:** For complete usage instructions, please refer to the [Usage Documentation](docs/en/get_started/usage.md).
 
-*   [Quick Start Guide](./docs/en/get_started/quick_start.md)
-*   [Examples](examples/)
+## Advanced Topics
 
-## Arguments Walk Through
+*   **Arguments:** Understand the argument structure including Megatron, SGLang and slime-specific arguments.
+*   **Checkpoint Format Conversion:** Explore how to handle checkpoint format conversions.
+*   **Starting the Training Process:** Detailed instructions on how to start the training process.
+*   **Developer Guide:** Learn how to contribute, use pre-commit for code style, and find debugging tips.
+*   **FAQ & Acknowledgements:** Find frequently asked questions and see the project's acknowledgements.
 
-Slime arguments are categorized into three types:
+## Contributing
 
-1.  **Megatron arguments:** Utilize standard Megatron arguments via `PYTHONPATH`. Example: `--tensor-model-parallel-size 2`.
-2.  **SGLang arguments:** Configure SGLang settings by prefixing arguments with `--sglang-`. Example: `--sglang-mem-fraction-static`.
-3.  **Slime-specific arguments:** See [slime/utils/arguments.py](slime/utils/arguments.py) for details.
+We welcome contributions!  If you have suggestions for new features, performance tuning, or feedback on user experience, feel free to submit an Issue or PR 😊.
 
-For full usage instructions, see the [Usage Documentation](docs/en/get_started/usage.md).
+*   Use [pre-commit](https://pre-commit.com/) to ensure code style consistency for your commits:
 
-## Developer Guide
-
-We welcome contributions!
-
-*   **Contributions are welcome!** Submit Issues or PRs for new features, performance improvements, and feedback.
-*   **Code Style:** Use [pre-commit](https://pre-commit.com/) for consistent code style:
     ```bash
     apt install pre-commit -y
     pre-commit install
     ```
-*   **Debugging:** See the [Debugging Guide](docs/en/developer_guide/debug.md) for assistance.
 
-## FAQ & Acknowledgements
+*   For debugging tips, please refer to the [Debugging Guide](docs/en/developer_guide/debug.md)
 
-*   Find answers to frequently asked questions in the [Q\&A](docs/en/get_started/qa.md).
-*   **Special Thanks:** SGLang, Megatron‑LM, mbridge, OpenRLHF, veRL, Pai-Megatron-Patch, and other projects and communities.
-*   **Citation:** Please use the following BibTeX entry when citing Slime:
+## Frequently Asked Questions and Acknowledgements
 
-    ```bibtext
-    @misc{slime_github,
-      author       = {Zilin Zhu and Chengxing Xie and Xin Lv and slime Contributors},
-      title        = {slime: An LLM post-training framework for RL Scaling},
-      year         = {2025},
-      howpublished = {\url{https://github.com/THUDM/slime}},
-      note         = {GitHub repository. Corresponding author: Xin Lv},
-      urldate      = {2025-06-19}
-    }
+For frequently asked questions, please see the [Q\&A](docs/en/get_started/qa.md).
+
+Special thanks to the following projects & communities: SGLang, Megatron‑LM, mbridge, OpenRLHF, veRL, Pai-Megatron-Patch and others.
+
+To cite Slime, please use the following BibTeX entry:
+
+```bibtext
+@misc{slime_github,
+  author       = {Zilin Zhu and Chengxing Xie and Xin Lv and slime Contributors},
+  title        = {slime: An LLM post-training framework for RL Scaling},
+  year         = {2025},
+  howpublished = {\url{https://github.com/THUDM/slime}},
+  note         = {GitHub repository. Corresponding author: Xin Lv},
+  urldate      = {2025-06-19}
+}

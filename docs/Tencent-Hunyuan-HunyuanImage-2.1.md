@@ -4,12 +4,17 @@
 
 <div align="center">
 
-# HunyuanImage-2.1: Generate Stunning 2K Images with an Open-Source Diffusion Model
+# HunyuanImage-2.1: Generate Stunning 2K Images with Tencent's Open-Source AI Model
 
 </div>
 
-<p align="center">Create breathtaking 2K resolution images from text prompts using HunyuanImage-2.1, an open-source model with state-of-the-art performance.  <br> Explore the model on the <a href="https://huggingface.co/tencent/HunyuanImage-2.1">Hugging Face Hub</a> and the <a href="https://hunyuan.tencent.com/modelSquare/home/play?modelId=286&from=/visual">official website</a>.</p>
+<div align="center">
+  Unleash your creativity with HunyuanImage-2.1, a cutting-edge text-to-image model capable of producing breathtaking 2K (2048x2048) resolution images!  
+</div>
 
+<p align="center"> &nbsp&nbsp🤗 <a href="https://huggingface.co/tencent/HunyuanImage-2.1">HuggingFace</a>&nbsp&nbsp | 
+💻 <a href="https://hunyuan.tencent.com/modelSquare/home/play?modelId=286&from=/visual">Official website(官网) Try our model!</a>&nbsp&nbsp | [View Original Repo](https://github.com/Tencent-Hunyuan/HunyuanImage-2.1)
+</p>
 
 <p align="center">
     👏 Join our <a href="assets/WECHAT.md" target="_blank">WeChat</a> and <a href="https://discord.gg/ehjWMqF5wY">Discord</a>
@@ -17,90 +22,95 @@
 
 ---
 
-Harness the power of **HunyuanImage-2.1**, a 17B parameter text-to-image model, to bring your creative visions to life in stunning 2K (2048 x 2048) resolution.  This repository contains everything you need to run the model, including model definitions, pre-trained weights, and inference code.  Explore the model directly on the [official website](https://hunyuan.tencent.com/modelSquare/home/play?modelId=286&from=/visual) and view impressive examples on our [project page](https://hunyuan.tencent.com/image/en?tabIndex=0).  Find the original source code and documentation on the original [GitHub repository](https://github.com/Tencent-Hunyuan/HunyuanImage-2.1).
+Harness the power of AI to generate high-resolution images with HunyuanImage-2.1. This repository provides everything you need to get started, including model definitions, pre-trained weights, and inference code.  **Experience the model firsthand** on the [Official Website](https://hunyuan.tencent.com/modelSquare/home/play?modelId=286&from=/visual) and explore inspiring visuals on our [project page](https://hunyuan.tencent.com/image/en?tabIndex=0).
 
 <div align="center">
   <img src="./assets/demo.jpg" width=100% alt="HunyuanImage 2.1 Demo">
 </div>
 
-## ✨ **Key Features**
+## Key Features
 
-*   **High-Resolution Imagery:** Generate detailed 2K (2048x2048) images.
-*   **Multilingual Support:**  Works natively with both Chinese and English prompts.
-*   **Advanced Architecture:** Based on a multi-modal DiT backbone.
-*   **Glyph-Aware Text Rendering:** Utilizes ByT5 for improved text generation.
+*   **High-Definition Generation:** Create stunning 2K (2048x2048) images with exceptional detail.
+*   **Multilingual Support:** Generate images from prompts in both Chinese and English.
+*   **Advanced Architecture:** Built upon a sophisticated multi-modal DiT (Diffusion Transformer) backbone.
+*   **Glyph-Aware Processing:** Leveraging ByT5 for improved text rendering accuracy.
 *   **Flexible Aspect Ratios:** Supports various aspect ratios (1:1, 16:9, 9:16, 4:3, 3:4, 3:2, 2:3).
-*   **Prompt Enhancement:** Integrated prompt rewriting for superior visual results.
+*   **Prompt Enhancement:** Automatically refines prompts for superior descriptive accuracy and visual quality.
 
-## 📰 **What's New**
+## Latest Updates
 
-*   **[September 18, 2025]:** ✨ Try the [PromptEnhancer-32B model](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B) for higher-quality prompt enhancement!​.
-*   **[September 18, 2025]:** ✨ [ComfyUI workflow of HunyuanImage-2.1](https://github.com/KimbingNg/ComfyUI-HunyuanImage2.1) is available now!
-*   **[September 16, 2025]:** 👑 Top1 on the Arena leaderboard for text-to-image open-source models. [Leaderboard](https://artificialanalysis.ai/text-to-image/arena/leaderboard-text)
-*   **[September 12, 2025]:** 🚀 Released FP8 quantized models!  Generate 2K images with just 24GB GPU memory!
-*   **[September 8, 2025]:** 🚀 Inference code and model weights for HunyuanImage-2.1 released.
+*   **[September 18, 2025]**: ✨ Try the [PromptEnhancer-32B model](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B) for higher-quality prompt enhancement!​.
+*   **[September 18, 2025]**: ✨ [ComfyUI workflow of HunyuanImage-2.1](https://github.com/KimbingNg/ComfyUI-HunyuanImage2.1) is available now!
+*   **[September 16, 2025]**: 👑 **Top1** on the Arena's leaderboard for text-to-image open-source models. [Leaderboard](https://artificialanalysis.ai/text-to-image/arena/leaderboard-text)
+*   **[September 12, 2025]**: 🚀 Released FP8 quantized models! Generate 2K images with only 24GB GPU memory!
+*   **[September 8, 2025]**: 🚀 Released inference code and model weights for HunyuanImage-2.1.
 
-## 💻 **Introduction**
+## Introduction
 
-HunyuanImage-2.1 is a powerful text-to-image model capable of generating high-resolution (2K) images.  It leverages advanced techniques for superior text-image alignment and detail control, leading to improved consistency and realism.
+HunyuanImage-2.1 is a powerful 17B parameter text-to-image model designed to generate high-resolution images at 2K (2048 x 2048).
 
-Our architecture consists of two key stages:
+## Architecture
 
-1.  **Base Text-to-Image Model:** This stage uses a multimodal large language model (MLLM) and a character-aware encoder to enhance image-text alignment and text rendering across multiple languages.
-2.  **Refiner Model:** This second stage further enhances image quality, reduces artifacts, and refines the generated images.
+HunyuanImage-2.1 employs a two-stage architecture:
 
-👑 HunyuanImage-2.1 achieved the **Top1** on Arena's leaderboard for open-source text-to-image models.
+1.  **Base Text-to-Image Model:** This model utilizes two text encoders: a multimodal large language model (MLLM) for enhanced image-text alignment and a multi-language, character-aware encoder for improved text rendering.
+2.  **Refiner Model:** A second-stage refiner model further enhances image quality, clarity, and minimizes artifacts.
+
+## Evaluation and Achievements
+
+*   **Top1** on the Arena's leaderboard for text-to-image open-source models.
 
 <div align="center">
   <img src="./assets/leaderboard.png" width=70% alt="HunyuanImage 2.1 Demo">
 </div>
 
-## 🚀 **System Requirements**
+## System Requirements
 
-**Hardware and OS:**
+**Hardware and OS Requirements:**
 
 *   NVIDIA GPU with CUDA support.
-    *   **Minimum Requirement:** 24 GB GPU memory for 2048x2048 image generation.
-        *   **Note:** The memory requirements are measured with model CPU offloading and FP8 quantization enabled. You can disable offloading for faster inference if your GPU has enough memory.
+    *   Minimum: 24 GB GPU memory for 2048x2048 image generation.  (*Note: Memory requirements measured with model CPU offloading and FP8 quantization enabled. Disable offloading for faster inference if your GPU has sufficient memory.*)
 *   Supported operating system: Linux.
 
-## ⚙️ **Installation**
+## Installation
 
-1.  **Clone the Repository:**
+1.  **Clone the repository:**
 
     ```bash
     git clone https://github.com/Tencent-Hunyuan/HunyuanImage-2.1.git
     cd HunyuanImage-2.1
     ```
 
-2.  **Install Dependencies:**
+2.  **Install dependencies:**
 
     ```bash
     pip install -r requirements.txt
     pip install flash-attn==2.7.3 --no-build-isolation
     ```
 
-## 💾 **Download Pretrained Models**
+## Download Pretrained Models
 
-Find instructions on how to download the pretrained models [here](ckpts/checkpoints-download.md).
+See [ckpts/checkpoints-download.md](ckpts/checkpoints-download.md) for instructions.
 
-## 🎬 **Usage**
+## Usage
 
-###  **Prompt Enhancement**
+### Prompt Enhancement
 
-For the best results, craft detailed and descriptive prompts.  We recommend using the [PromptEnhancer-32B model](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B) to further improve your prompts.
+Prompt enhancement is **critical** for high-quality image generation.  Craft detailed and descriptive prompts to achieve optimal results.
 
-###  **Text-to-Image Generation**
+We highly recommend using the [PromptEnhancer-32B model](https://huggingface.co/PromptEnhancer/PromptEnhancer-32B) for superior prompt quality.
 
-HunyuanImage-2.1 supports 2K image generation (e.g., 2048x2048 for 1:1 images, 2560x1536 for 16:9 images). Using other resolutions may result in artifacts.
+### Text to Image
 
-**Highly recommended:** Utilize the full generation pipeline (prompt enhancement and refiner) for optimal image quality.
+HunyuanImage-2.1 **only supports 2K** image generation. Generating images with 1K resolution will result in artifacts.
 
-| Model Type                | Model Name                | Description                                       | `num_inference_steps` | `guidance_scale` | `shift` |
-| ------------------------- | ------------------------- | ------------------------------------------------- | --------------------- | ---------------- | ------- |
-| Base Text-to-Image Model  | `hunyuanimage2.1`         | Undistilled model (best quality).                 | 50                    | 3.5              | 5       |
-| Distilled Text-to-Image Model | `hunyuanimage2.1-distilled` | Distilled model (faster inference).               | 8                     | 3.25             | 4       |
-| Refiner                   | `hunyuanimage-refiner`      | The refiner model to improve image quality         | N/A                   | N/A              | N/A     |
+Using the full generation pipeline (prompt enhancement and refinement) is **highly recommended** for best results.
+
+| Model Type                | Model Name                | Description                             | `num_inference_steps` | `guidance_scale` | `shift` |
+| ------------------------- | --------------------------- | ----------------------------------------- | --------------------- | ---------------- | ------- |
+| Base text-to-image Model  | `hunyuanimage2.1`           | Undistilled model for the best quality. | 50                  | 3.5            | 5     |
+| Distilled text-to-image Model | `hunyuanimage2.1-distilled` | Distilled model for faster inference    | 8                   | 3.25           | 4     |
+| Refiner                   | `hunyuanimage-refiner`      | The refiner model                       | N/A                 | N/A            | N/A   |
 
 ```python
 import os
@@ -146,15 +156,15 @@ image = pipe(
 image.save("generated_image.png")
 ```
 
-## 🖼️ **More Examples**
+## More Examples
 
-HunyuanImage-2.1 can generate diverse and creative images from complex instructions.
+HunyuanImage-2.1 excels at generating high-quality, creative images from complex instructions.
 
 <div align="center">
   <img src="./assets/more_cases.jpg" width=100% alt="HunyuanImage 2.1 Demo">
 </div>
 
-We recommend using longer, more detailed prompts.  You can also use the example prompts provided in the original README.
+*   **Use longer, detailed prompts for best results.**
 
 <p align="center">
 <table>
@@ -180,6 +190,8 @@ We recommend using longer, more detailed prompts.  You can also use the example 
 </table>
 </p>
 
+*   **Prompt Rewriting:** The model automatically enhances user prompts with detailed information for improved image quality.
+
 <p align="center">
 <table>
 <thead>
@@ -204,11 +216,15 @@ We recommend using longer, more detailed prompts.  You can also use the example 
 </table>
 </p>
 
-## 🏆 **Comparisons & Benchmarks**
+<!-- <p align="center">
+  <img src="./assets/reprompt.jpg" width=100% alt="Human Evaluation with Other Models">
+</p> -->
 
-###  SSAE Evaluation
+## Performance and Comparisons
 
-SSAE (Structured Semantic Alignment Evaluation) is an intelligent metric for image-text alignment based on advanced multimodal large language models (MLLMs). We extracted 3500 key points across 12 categories, then used multimodal large language models to automatically evaluate and score by comparing the generated images with these key points based on the visual content of the images. Mean Image Accuracy represents the image-wise average score across all key points, while Global Accuracy directly calculates the average score across all key points.
+### SSAE Evaluation
+
+SSAE (Structured Semantic Alignment Evaluation) is an advanced evaluation metric for image-text alignment based on advanced multimodal large language models (MLLMs). We extracted 3500 key points across 12 categories, then used multimodal large language models to automatically evaluate and score by comparing the generated images with these key points based on the visual content of the images. Mean Image Accuracy represents the image-wise average score across all key points, while Global Accuracy directly calculates the average score across all key points.
 <p align="center">
 <table>
 <thead>
@@ -239,21 +255,21 @@ SSAE (Structured Semantic Alignment Evaluation) is an intelligent metric for ima
 </table>
 </p>
 
-HunyuanImage 2.1 achieves the top performance among open-source models for semantic alignment, nearing the performance of closed-source models like GPT-Image.
+*   HunyuanImage 2.1 demonstrates superior semantic alignment, surpassing other open-source models and approaching the performance of closed-source commercial models (GPT-Image).
 
-###  GSB Evaluation
+### GSB Evaluation
 
 <p align="center">
   <img src="./assets/gsb.png" width=70% alt="Human Evaluation with Other Models">
 </p>
 
-HunyuanImage-2.1's image generation quality is comparable to closed-source commercial models.  It outperforms the open-source Qwen-Image, demonstrating its technical advancements.
+*   HunyuanImage 2.1 achieves competitive results compared to closed-source models and demonstrates advantages over similar open-source alternatives.
 
-## 💬 **Contact and Community**
+### Contact
 
-Join our Discord server or WeChat groups to connect with other users, share ideas, and ask questions! You are also welcome to open an issue or submit a pull request on GitHub. Your feedback is valued!
+Join our [Discord server](https://discord.gg/ehjWMqF5wY) or [WeChat groups](assets/WECHAT.md) to connect with the community, share ideas, and ask questions. We welcome contributions and feedback!  Feel free to open issues or submit pull requests on GitHub.
 
-## 📚 **BibTeX**
+## BibTeX
 
 ```BibTeX
 @misc{HunyuanImage-2.1,
@@ -264,10 +280,15 @@ Join our Discord server or WeChat groups to connect with other users, share idea
 }
 ```
 
-## 🙏 **Acknowledgements**
+## Acknowledgements
 
-We thank the following open-source projects: [Qwen](https://huggingface.co/Qwen), [FLUX](https://github.com/black-forest-labs/flux), [diffusers](https://github.com/huggingface/diffusers) and [HuggingFace](https://huggingface.co).
+We thank the following open-source projects and communities for their contributions: [Qwen](https://huggingface.co/Qwen), [FLUX](https://github.com/black-forest-labs/flux), [diffusers](https://github.com/huggingface/diffusers) and [HuggingFace](https://huggingface.co).
 
-## ⭐ **GitHub Star History**
-
-[<img src="https://api.star-history.com/svg?repos=Tencent-Hunyuan/HunyuanImage-2.1&type=Date1" alt="Star History Chart" />](https://star-history.com/#Tencent-Hunyuan/HunyuanImage-2.1&Date)
+## Github Star History
+<a href="https://star-history.com/#Tencent-Hunyuan/HunyuanImage-2.1&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Tencent-Hunyuan/HunyuanImage-2.1&type=Date1&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Tencent-Hunyuan/HunyuanImage-2.1&type=Date1" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Tencent-Hunyuan/HunyuanImage-2.1&type=Date1" />
+ </picture>
+</a>

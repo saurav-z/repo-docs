@@ -1,54 +1,51 @@
 <div align="center">
 
-# Megatron-LM: Train Large Language Models at Scale with NVIDIA's GPU-Optimized Library
+# Megatron-LM: Train Large Language Models at Scale with GPU-Optimized Performance 🚀
 
-NVIDIA's Megatron-LM provides a powerful, GPU-optimized library for training large transformer models, enabling cutting-edge performance and scalability.
+Megatron-LM is a GPU-optimized library for training transformer models, offering cutting-edge performance and scalability. Explore the power of distributed training and unlock the potential of large language models with this comprehensive toolkit.  [Explore the original repo](https://github.com/NVIDIA/Megatron-LM)
 
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://docs.nvidia.com/Megatron-Core/developer-guide/latest/index.html)
 [![version](https://img.shields.io/badge/release-0.12.0-green)](./CHANGELOG.md)
 [![license](https://img.shields.io/badge/license-Apache-blue)](./LICENSE)
 
-[View the original repository on GitHub](https://github.com/NVIDIA/Megatron-LM)
-
 </div>
 
 ## Key Features
 
-*   **High-Performance Training:** Optimized for NVIDIA GPUs, achieving state-of-the-art training speeds.
-*   **Scalability:** Train models with billions of parameters across multiple GPUs.
-*   **Parallelism Strategies:** Supports Data, Tensor, Pipeline, Context, and Expert Parallelism for flexible model training.
-*   **Mixed Precision:**  Includes FP16, BF16, and FP8 support for efficient memory usage and faster training.
-*   **Modular & Composable:** Megatron Core provides building blocks for custom training frameworks.
-*   **Extensive Ecosystem:** Integrates with Transformer Engine, Megatron Bridge, and other tools.
-*   **Model Support:** Includes training scripts and examples for popular models like GPT, Llama, and Mixtral.
-*   **Production Ready:** Supports checkpointing, fault tolerance, and optimized communication.
+*   **GPU-Optimized Performance:** Leverage NVIDIA GPUs for faster training and inference.
+*   **Distributed Training:** Train models with billions of parameters across multiple GPUs.
+*   **Advanced Parallelism Strategies:** Utilize Data Parallelism (DP), Tensor Parallelism (TP), Pipeline Parallelism (PP), Context Parallelism (CP), and Expert Parallelism (EP).
+*   **Mixed Precision Support:** Train with FP16, BF16, and FP8 for optimized memory usage and speed.
+*   **Modular Architecture:** Utilize `Megatron Core` building blocks to build custom training frameworks.
+*   **Integration with Ecosystem Libraries:** Compatible with Transformer Engine, NeMo, Hugging Face Accelerate, and others.
+*   **Comprehensive Training Examples:** Get started quickly with pre-configured training scripts for various models.
 
 ## Quick Start
 
 ```bash
-# 1. Install Megatron Core with required dependencies
+# 1. Install Megatron Core and dependencies
 pip install megatron-core
 pip install --no-build-isolation transformer-engine[pytorch]
 
-# 2. Clone repository for examples
+# 2. Clone the repository for examples
 git clone https://github.com/NVIDIA/Megatron-LM.git
 cd Megatron-LM
 ```
 
-**→ [Complete Installation Guide](#installation)** - Docker, pip variants (dev,lts,etc.), source installation, and system requirements
+**→ [Complete Installation Guide](#installation)** - Includes Docker, pip variants, source installation, and system requirements
 
-## Latest News
+## What's New
 
-*   🔄 **[Megatron Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)**: Bidirectional converter for interoperability between Hugging Face and Megatron checkpoints.
-*   🗺️ **[MoE Q3-Q4 2025 Roadmap](https://github.com/NVIDIA/Megatron-LM/issues/1729)**: Roadmap for MoE features, including DeepSeek-V3, Qwen3, and FP8 optimizations.
-*   🚀 **[GPT-OSS Implementation](https://github.com/NVIDIA/Megatron-LM/issues/1739)**: Integration of advanced features like YaRN RoPE scaling and attention sinks.
-*   **[2025/06] [Megatron MoE Model Zoo](https://github.com/yanring/Megatron-MoE-ModelZoo)**: Best practices and optimized configurations for training DeepSeek-V3, Mixtral, and Qwen3 MoE models.
-*   **[2025/05]** Megatron Core v0.11.0 brings new capabilities for multi-data center LLM training ([blog](https://developer.nvidia.com/blog/turbocharge-llm-training-across-long-haul-data-center-networks-with-nvidia-nemo-framework/)).
+*   🔄 **Megatron Bridge:**  Bidirectional converter for interoperability between Hugging Face and Megatron checkpoints.
+*   🗺️ **MoE Roadmap:** Comprehensive roadmap for MoE features including DeepSeek-V3, Qwen3, advanced parallelism strategies, FP8 optimizations, and Blackwell performance enhancements.
+*   🚀 **GPT-OSS Implementation:** Integration of advanced features like YaRN RoPE scaling and custom activation functions into Megatron Core.
+*   **Megatron MoE Model Zoo:** Best practices and optimized configurations for training DeepSeek-V3, Mixtral, and Qwen3 MoE models.
+*   **Multi-Data Center Training:** Improved capabilities for LLM training across long-haul data center networks.
 
 <details>
 <summary>Previous News</summary>
 
-*   **[2024/07]** Megatron Core v0.7 improves scalability and training resiliency and adds support for multimodal training ([blog](https://developer.nvidia.com/blog/train-generative-ai-models-more-efficiently-with-new-nvidia-Megatron-Core-functionalities/)). 
+*   **[2024/07]** Megatron Core v0.7 improves scalability and training resiliency and adds support for multimodal training ([blog](https://developer.nvidia.com/blog/train-generative-ai-models-more-efficiently-with-new-nvidia-Megatron-Core-functionalities/)).
 *   **[2024/06]** Megatron Core added supports for Mamba-based models. Check out our paper [An Empirical Study of Mamba-based Language Models](https://arxiv.org/pdf/2406.07887) and [code example](https://github.com/NVIDIA/Megatron-LM/tree/ssm/examples/mamba).
 *   **[2024/01 Announcement]** NVIDIA has released the core capabilities in **Megatron-LM** into [**Megatron Core**](https://github.com/NVIDIA/Megatron-LM/tree/main/megatron/core) in this repository. Megatron Core expands upon Megatron-LM's GPU-optimized techniques with more cutting-edge innovations on system-level optimizations, featuring composable and modular APIs. Explore the [Megatron Core intro](#Megatron Core) for more details.
 
@@ -65,7 +62,7 @@ cd Megatron-LM
   - [Megatron-LM: Reference Implementation](#megatron-lm-reference-implementation)
   - [Megatron Core: Production Library](#megatron-core-production-library)
 - [Installation](#installation)
-  - [🐳 Docker (Recommended)](#-docker-recommended)
+  - [Docker (Recommended)](#-docker-recommended)
   - [Pip Installation](#-pip-installation)
   - [Source Installation](#-source-installation)
   - [System Requirements](#system-requirements)
@@ -129,36 +126,40 @@ Megatron-LM/
 
 ### Megatron-LM: Reference Implementation
 
-The reference implementation, including Megatron Core, is best suited for:
+**Reference implementation** that includes Megatron Core plus everything needed to train models.
 
-*   **Training state-of-the-art foundation models** at scale.
-*   **Research teams** exploring new architectures and training techniques.
-*   **Learning distributed training** concepts and best practices.
-*   **Quick experimentation** with proven model configurations.
+**Best for:**
+
+*   **Training state-of-the-art foundation models** at scale with cutting-edge performance on latest NVIDIA hardware
+*   **Research teams** exploring new architectures and training techniques
+*   **Learning distributed training** concepts and best practices
+*   **Quick experimentation** with proven model configurations
 
 **What you get:**
 
 *   Pre-configured training scripts for GPT, LLama, DeepSeek, Qwen, and more.
-*   End-to-end examples from data prep to evaluation.
-*   Research-focused tools and utilities.
+*   End-to-end examples from data prep to evaluation
+*   Research-focused tools and utilities
 
 ### Megatron Core: Production Library
 
-The composable library of GPU-optimized building blocks is ideal for:
+**Composable library** with GPU-optimized building blocks for custom training frameworks.
 
-*   **Framework developers** building on top of modular and optimized components.
-*   **Research teams** needing custom training loops, optimizers, or data pipelines.
-*   **ML engineers** requiring fault-tolerant training pipelines.
+**Best for:**
+
+*   **Framework developers** building on top of modular and optimized components
+*   **Research teams** needing custom training loops, optimizers, or data pipelines
+*   **ML engineers** requiring fault-tolerant training pipelines
 
 **What you get:**
 
-*   Composable transformer building blocks.
-*   Advanced parallelism strategies (TP, PP, DP, EP, CP).
-*   Pipeline schedules and distributed optimizers.
-*   Mixed precision support (FP16, BF16, FP8).
-*   GPU-optimized kernels and memory management.
-*   High-performance dataloaders and dataset utilities.
-*   Model architectures (LLaMA, Qwen, GPT, Mixtral, Mamba, etc.).
+*   Composable transformer building blocks (attention, MLP, etc.)
+*   Advanced parallelism strategies (TP, PP, DP, EP, CP)
+*   Pipeline schedules and distributed optimizers
+*   Mixed precision support (FP16, BF16, FP8)
+*   GPU-optimized kernels and memory management
+*   High-performance dataloaders and dataset utilities
+*   Model architectures (LLaMA, Qwen, GPT, Mixtral, Mamba, etc.)
 
 ## Ecosystem Libraries
 
@@ -181,7 +182,14 @@ The composable library of GPU-optimized building blocks is ideal for:
 
 ### 🐳 Docker (Recommended)
 
-Leverage pre-configured environments for optimal compatibility and performance with NGC PyTorch containers.  We recommend using the previous releases of [PyTorch NGC Container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch) rather than the latest one for optimal compatibility with Megatron Core release and testing.  Our releases are always based on the previous month's NGC container, so this ensures compatibility and stability.
+We strongly recommend using the previous releases of [PyTorch NGC Container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch) rather than the latest one for optimal compatibility with Megatron Core release and testing. Our releases are always based on the previous month's NGC container, so this ensures compatibility and stability.
+
+This container comes with all dependencies pre-installed with compatible versions and optimized configurations for NVIDIA GPUs:
+
+*   PyTorch (latest stable version)
+*   CUDA, cuDNN, NCCL (latest stable versions)
+*   Support for FP8 on NVIDIA Hopper, Ada, and Blackwell GPUs
+*   For best performance, use NVIDIA Turing GPU architecture generations and later
 
 ```bash
 # Run container with mounted directories
@@ -194,7 +202,12 @@ docker run --runtime --nvidia --gpus all -it --rm \
 
 ### Pip Installation
 
-Choose between `dev` (most recent) and `lts` (long-term support) releases.
+Megatron Core offers support for two NGC PyTorch containers:
+
+*   `dev`: Moving head that supports the most recent upstream dependencies
+*   `lts`: Long-term support of NGC PyTorch 24.01
+
+Both containers can be combined with `mlm` which adds package dependencies for Megatron-LM on top of Megatron Core.
 
 ```bash
 # Install the latest release with minimal dependencies (no Transformer Engine)
@@ -206,9 +219,13 @@ pip install megatron-core[dev]
 pip install megatron-core[lts]
 ```
 
+For a version of Megatron Core with only torch, run:
+
 ```bash
 pip install megatron-core
 ```
+
+For dependencies required by Megatron-LM, please run:
 
 ```bash
 pip install megatron-core[mlm]
@@ -216,7 +233,23 @@ pip install megatron-core[mlm]
 
 ### Source Installation
 
+For development or latest features:
+
+For Hybrid models, Megatron Core requires [mamba](https://github.com/state-spaces/mamba). If the pre-built wheel in PyPI does not fit your environment, you can fall back to an install script Megatron Core uses in its CI system. For this, please install `uv` first:
+
 ```bash
+export UV_VERSION=0.7.2
+export PATH="$HOME/.local/bin:$PATH"
+curl -LsSf https://astral.sh/uv/${UV_VERSION}/install.sh | sh
+export UV_PROJECT_ENVIRONMENT=./venv
+export PATH="$UV_PROJECT_ENVIRONMENT/bin:$PATH"
+export UV_LINK_MODE=copy
+```
+
+Run the following command to build upstream dependencies from source:
+
+```bash
+# Clone and install
 git clone https://github.com/NVIDIA/Megatron-LM.git
 cd Megatron-LM
 
@@ -226,14 +259,14 @@ git checkout core_r0.13.0
 bash docker/common/install.sh --environment {dev,lts}
 ```
 
-## System Requirements
+### System Requirements
 
-### Hardware Requirements
+#### Hardware Requirements
 
 *   **FP8 Support**: NVIDIA Hopper, Ada, Blackwell GPUs
 *   **Recommended**: NVIDIA Turing architecture or later
 
-### Software Requirements
+#### Software Requirements
 
 *   **CUDA/cuDNN/NCCL**: Latest stable versions
 *   **PyTorch**: Latest stable version
@@ -242,9 +275,9 @@ bash docker/common/install.sh --environment {dev,lts}
 
 ## Performance Benchmarking
 
-For detailed performance results, refer to [NVIDIA NeMo Framework Performance Summary](https://docs.nvidia.com/nemo-framework/user-guide/latest/performance/performance_summary.html).
+For our latest performance benchmarking results, please refer to [NVIDIA NeMo Framework Performance Summary](https://docs.nvidia.com/nemo-framework/user-guide/latest/performance/performance_summary.html).
 
-Megatron-LM efficiently trains models from 2B to 462B parameters, achieving up to **47% Model FLOP Utilization (MFU)** on H100 clusters.
+Our codebase efficiently trains models from 2B to 462B parameters across thousands of GPUs, achieving up to **47% Model FLOP Utilization (MFU)** on H100 clusters.
 
 ![Model table](images/model_table.png)
 
@@ -259,19 +292,19 @@ Megatron-LM efficiently trains models from 2B to 462B parameters, achieving up t
 
 *   **6144 H100 GPUs**: Successfully benchmarked 462B parameter model training
 *   **Superlinear scaling**: MFU increases from 41% to 47-48% with model size
-*   **End-to-end measurement**: Throughputs include all operations
+*   **End-to-end measurement**: Throughputs include all operations (data loading, optimizer steps, communication, logging)
 *   **Production ready**: Full training pipeline with checkpointing and fault tolerance
 *   *Note: Performance results measured without training to convergence*
 
-## Weak Scaling Results
+### Weak Scaling Results
 
-Superlinear scaling is observed as MFU increases with model size.
+Our weak scaled results show superlinear scaling (MFU increases from 41% for the smallest model considered to 47-48% for the largest models); this is because larger GEMMs have higher arithmetic intensity and are consequently more efficient to execute.
 
 ![Weak scaling](images/weak_scaling.png)
 
-## Strong Scaling Results
+### Strong Scaling Results
 
-Reduced MFU is seen as communication becomes more exposed at larger scale.
+We also strong scaled the standard GPT-3 model (our version has slightly more than 175 billion parameters due to larger vocabulary size) from 96 H100 GPUs to 4608 GPUs, using the same batch size of 1152 sequences throughout. Communication becomes more exposed at larger scale, leading to a reduction in MFU from 47% to 42%.
 
 ![Strong scaling](images/strong_scaling.png)
 
@@ -279,30 +312,30 @@ Reduced MFU is seen as communication becomes more exposed at larger scale.
 
 ### Getting Started
 
-### Simple Training Example
+#### Simple Training Example
 
 ```bash
 # Distributed training example (2 GPUs, mock data)
 torchrun --nproc_per_node=2 examples/run_simple_mcore_train_loop.py
 ```
 
-### LLama-3 Training Example
+#### LLama-3 Training Example
 
 ```bash
 # 8 GPUs, FP8 precision, mock data
 ./examples/llama/train_llama3_8b_fp8.sh
 ```
 
-## Data Preparation
+### Data Preparation
 
-### JSONL Data Format
+#### JSONL Data Format
 
 ```json
 {"text": "Your training text here..."}
 {"text": "Another training sample..."}
 ```
 
-### Basic Preprocessing
+#### Basic Preprocessing
 
 ```bash
 python tools/preprocess_data.py \
@@ -314,11 +347,11 @@ python tools/preprocess_data.py \
     --append-eod
 ```
 
-### Key Arguments
+#### Key Arguments
 
 *   `--input`: Path to input JSON/JSONL file
 *   `--output-prefix`: Prefix for output binary files (.bin and .idx)
-*   `--tokenizer-type`: Tokenizer type.
+*   `--tokenizer-type`: Tokenizer type (`HuggingFaceTokenizer`, `GPT2BPETokenizer`, etc.)
 *   `--tokenizer-model`: Path to tokenizer model file
 *   `--workers`: Number of parallel workers for processing
 *   `--append-eod`: Add end-of-document token
@@ -329,11 +362,17 @@ python tools/preprocess_data.py \
 
 ### Data Parallelism (DP)
 
+#### Standard Data Parallel
+
 ```bash
 # Standard DDP - replicate model on each GPU
 torchrun --nproc_per_node=8 pretrain_gpt.py \
     --data-parallel-sharding-strategy no_shard
+```
 
+#### Fully Sharded Data Parallel (FSDP)
+
+```bash
 # Megatron's optimized FSDP (~15% faster than PyTorch FSDP2)
 --use-custom-fsdp
 
@@ -348,6 +387,8 @@ torchrun --nproc_per_node=8 pretrain_gpt.py \
 
 ### Tensor Parallelism (TP)
 
+Split individual model layers across GPUs:
+
 ```bash
 --tensor-model-parallel-size 4  # 4-way tensor parallelism
 --sequence-parallel             # Enable sequence parallelism (recommended with TP)
@@ -355,12 +396,16 @@ torchrun --nproc_per_node=8 pretrain_gpt.py \
 
 ### Pipeline Parallelism (PP)
 
+Split model depth across GPUs:
+
 ```bash
 --pipeline-model-parallel-size 8     # 8 pipeline stages
 --virtual-pipeline-model-parallel-size 4  # Virtual pipeline for better load balancing
 ```
 
 ### Context Parallelism (CP)
+
+Split long sequences across GPUs for handling long contexts:
 
 ```bash
 --context-parallel-size 2                    # 2-way context parallelism
@@ -370,27 +415,29 @@ torchrun --nproc_per_node=8 pretrain_gpt.py \
 
 ### Expert Parallelism (EP)
 
+For Mixture of Experts (MoE) models:
+
 ```bash
 --expert-model-parallel-size 4  # 4-way expert parallelism
 --num-experts 8                 # 8 experts per MoE layer
 --moe-grouped-gemm              # Optimize expert computation
 ```
 
-## Combining Parallelism Strategies
+### Combining Parallelism Strategies
 
-### Parallelism Selection Guide
+#### Parallelism Selection Guide
 
 Based on [NVIDIA NeMo production configurations](https://github.com/NVIDIA/NeMo/tree/main/scripts/performance/recommended_model_configs):
 
-| Model | Size | GPUs | TP | PP | CP | EP | Notes |
-|-------|------|------|----|----|----|----|-------|
-| **LLama-3** | 8B | 8 | 1 | 1 | 2 | 1 | CP for long seqlen (8K) |
-| **LLama-3** | 70B | 64 | 4 | 4 | 2 | 1 | TP+PP |
-| **LLama-3.1** | 405B | 1024 | 8 | 8 | 2 | 1 | 3D parallelism for scale |
-| **GPT-3** | 175B | 128-512 | 4 | 8 | 1 | 1 | Large model config |
-| **Mixtral** | 8x7B | 64 | 1 | 4 | 1 | 8 | EP for MoE |
-| **Mixtral** | 8x22B | 256 | 4 | 4 | 8 | 8 | Combined TP+EP for large MoE |
-| **DeepSeek-V3** | 671B | 1024 | 2 | 16 | 1 | 64 | Large MoE config |
+| Model          | Size | GPUs | TP | PP | CP | EP | Notes                                  |
+| :------------- | :--- | :--- | :- | :- | :- | :- | :------------------------------------- |
+| **LLama-3**    | 8B   | 8    | 1  | 1  | 2  | 1  | CP for long seqlen (8K)                |
+| **LLama-3**    | 70B  | 64   | 4  | 4  | 2  | 1  | TP+PP                                  |
+| **LLama-3.1**  | 405B | 1024 | 8  | 8  | 2  | 1  | 3D parallelism for scale               |
+| **GPT-3**      | 175B | 128-512 | 4  | 8  | 1  | 1  | Large model config                       |
+| **Mixtral**    | 8x7B | 64   | 1  | 4  | 1  | 8  | EP for MoE                               |
+| **Mixtral**    | 8x22B | 256  | 4  | 4  | 8  | 8  | Combined TP+EP for large MoE          |
+| **DeepSeek-V3** | 671B | 1024 | 2  | 16 | 1  | 64 | Large MoE config                       |
 
 ### MoE-Specific Requirements
 
@@ -398,13 +445,13 @@ Based on [NVIDIA NeMo production configurations](https://github.com/NVIDIA/NeMo/
 
 ## Performance Optimizations
 
-| Feature | Flag | Benefit |
-|---------|------|---------|
-| **FlashAttention** | `--attention-backend` | Faster attention and lower memory usage |
-| **FP8 Training** | `--fp8-hybrid` | Faster training |
-| **Activation Checkpointing** | `--recompute-activations` | Reduced memory usage |
-| **Data Parallelism Communication Overlap** | `--overlap-grad-reduce` | Faster distributed training |
-| **Distributed Optimizer** | `--use-distributed-optimizer` | Reduced checkpointing time |
+| Feature                            | Flag                     | Benefit                                    |
+| :--------------------------------- | :----------------------- | :----------------------------------------- |
+| FlashAttention                     | `--attention-backend`    | Faster attention and lower memory usage     |
+| FP8 Training                       | `--fp8-hybrid`           | Faster training                            |
+| Activation Checkpointing           | `--recompute-activations` | Reduced memory usage                       |
+| Data Parallelism Communication Overlap | `--overlap-grad-reduce`  | Faster distributed training                |
+| Distributed Optimizer              | `--use-distributed-optimizer` | Reduced checkpointing time                  |
 
 **→ [NVIDIA NeMo Framework Performance Tuning Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/performance/performance-guide.html#performance-tuning-guide)** - Comprehensive performance optimization guide covering advanced tuning techniques, communication overlaps, memory optimizations, and profiling options.
 
@@ -446,10 +493,10 @@ Based on [NVIDIA NeMo production configurations](https://github.com/NVIDIA/NeMo/
 
 ## Roadmaps
 
-*Stay informed on future development with:*
+Stay up-to-date with our development roadmaps and planned features:
 
--   **[MoE Q3-Q4 2025 Roadmap](https://github.com/NVIDIA/Megatron-LM/issues/1729)** - Development plans for MoE features.
--   **[GPT-OSS Implementation Tracker](https://github.com/NVIDIA/Megatron-LM/issues/1739)** - Integration of advanced features like YaRN RoPE scaling and attention sinks.
+*   **[MoE Q3-Q4 2025 Roadmap](https://github.com/NVIDIA/Megatron-LM/issues/1729)** - Comprehensive MoE feature development including DeepSeek-V3, Qwen3, advanced parallelism, FP8 optimizations, and Blackwell enhancements
+*   **[GPT-OSS Implementation Tracker](https://github.com/NVIDIA/Megatron-LM/issues/1739)** - Advanced features including YaRN RoPE scaling, attention sinks, and custom activation functions
 
 *More roadmap trackers will be added soon.*
 
@@ -462,12 +509,12 @@ Based on [NVIDIA NeMo production configurations](https://github.com/NVIDIA/NeMo/
 
 ### Contributing
 
-*We welcome contributions!*
+We ❤️ contributions! Ways to contribute:
 
-*   🐛 Report bugs.
-*   💡 Suggest features.
-*   📝 Improve docs.
-*   🔧 Submit PRs.
+*   🐛 **Report bugs** - Help us improve reliability
+*   💡 **Suggest features** - Shape the future of Megatron Core
+*   📝 **Improve docs** - Make Megatron Core more accessible
+*   🔧 **Submit PRs** - Contribute code improvements
 
 **→ [Contributing Guide](./CONTRIBUTING.md)**
 

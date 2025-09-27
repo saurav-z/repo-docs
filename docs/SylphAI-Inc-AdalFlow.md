@@ -6,9 +6,9 @@
     <img alt="AdalFlow logo" src="https://raw.githubusercontent.com/SylphAI-Inc/AdalFlow/main/docs/source/_static/images/adalflow-logo.png" style="width: 100%;">
 </h4>
 
-## AdalFlow: Build, Optimize, and Automate Your LLM Workflows
+## AdalFlow: Build, Optimize, and Automate LLM Workflows with Ease
 
-AdalFlow is a PyTorch-like library empowering developers to effortlessly build and auto-optimize cutting-edge LLM-powered applications like chatbots, RAG systems, and AI agents.  Explore the power of AdalFlow on [GitHub](https://github.com/SylphAI-Inc/AdalFlow).
+AdalFlow is a powerful PyTorch-like library designed to simplify building and optimizing complex Large Language Model (LLM) workflows, from chatbots and Retrieval-Augmented Generation (RAG) systems to advanced AI agents. Explore AdalFlow on [GitHub](https://github.com/SylphAI-Inc/AdalFlow).
 
 <p align="center">
     <a href="https://colab.research.google.com/drive/1_YnD4HshzPRARvishoU4IA-qQuX9jHrT?usp=sharing">
@@ -16,9 +16,10 @@ AdalFlow is a PyTorch-like library empowering developers to effortlessly build a
     </a>
 </p>
 
-<p align="center">
-    <a href="https://adalflow.sylph.ai/">View Documentation</a>
-</p>
+<div align="center">
+  <a href="https://adalflow.sylph.ai/">View Documentation</a>
+</div>
+
 <p align="center">
     <a href="https://pypi.org/project/adalflow/">
         <img alt="PyPI Version" src="https://img.shields.io/pypi/v/adalflow?style=flat-square">
@@ -45,9 +46,9 @@ AdalFlow is a PyTorch-like library empowering developers to effortlessly build a
 
 ## Key Features of AdalFlow:
 
-*   **Open-Source Agents SDK:** Build powerful AI agents with minimal setup, including built-in human-in-the-loop and tracing functionalities.
-*   **Automated Prompt Optimization:** Ditch manual prompt engineering! AdalFlow provides a unified auto-differentiative framework for zero-shot and few-shot prompt optimization, boosting performance.
-*   **Model Agnostic Design:** Easily switch between different LLMs using a simple configuration, allowing you to create flexible pipelines for RAG, Agents, and more.
+*   **Open-Source Agent SDK:** Develop lightweight AI agents with built-in "Human-in-the-Loop" and tracing functionalities, all open-source.
+*   **Automated Prompt Optimization:** Say goodbye to manual prompting! AdalFlow provides a unified auto-differentiative framework for both zero-shot and few-shot prompt optimization, achieving state-of-the-art accuracy.
+*   **Model Agnostic Architecture:** Switch your LLM application to any model via configuration files. AdalFlow offers model-agnostic building blocks for diverse LLM tasks, including RAG, agents, and classical NLP.
 
 <p align="center" style="background-color: #f0f0f0;">
   <img src="https://raw.githubusercontent.com/SylphAI-Inc/AdalFlow/main/docs/source/_static/images/classification_opt_prompt.png" alt="AdalFlow Optimized Prompt" style="width: 80%;">
@@ -57,21 +58,22 @@ AdalFlow is a PyTorch-like library empowering developers to effortlessly build a
   <img src="https://raw.githubusercontent.com/SylphAI-Inc/AdalFlow/main/docs/source/_static/images/adalflow_tracing_mlflow.png" alt="AdalFlow MLflow Integration" style="width: 80%;">
 </p>
 
+
 ## Quick Start
 
-Install AdalFlow with pip:
+Get started with AdalFlow by installing it via pip:
 
 ```bash
 pip install adalflow
 ```
 
-## Hello World Agent Example
+### Example: Hello World Agent
 
 ```python
 from adalflow import Agent, Runner
 from adalflow.components.model_client.openai_client import OpenAIClient
 from adalflow.core.types import (
-    ToolCallActivityRunItem,
+    ToolCallActivityRunItem, 
     RunItemStreamEvent,
     ToolCallRunItem,
     ToolOutputRunItem,
@@ -142,7 +144,7 @@ result = await runner.acall(
 )
 
 print(result.answer)
-# Output: San Francisco will be mostly cloudy today with some afternoon sun, reaching about 67 °F (20 °C).
+# Output: San Francisco will be mostly cloudy today with some afternoon sun, reaching about 67 °F (20 °C). 
 #         The result of 42 * 3 is 126.
 ```
 
@@ -187,32 +189,22 @@ Go to [Documentation](https://adalflow.sylph.ai) for tracing, human-in-the-loop,
 
 ## Research
 
-*   [Auto-Differentiating Any LLM Workflow: A Farewell to Manual Prompting](https://arxiv.org/abs/2501.16673) (Jan 2025): Learn how AdalFlow allows LLM applications as auto-differentiation graphs, and achieves better performance than other libraries.
+*   [January 2025] [Auto-Differentiating Any LLM Workflow: A Farewell to Manual Prompting](https://arxiv.org/abs/2501.16673)
+    *   LLM Applications as auto-differentiation graphs
+    *   Token-efficient and better performance than DsPy
 
 ## Collaborations
 
 AdalFlow is developed in close collaboration with the [**VITA Group** at University of Texas at Austin](https://vita-group.github.io/), under the guidance of [Dr. Atlas Wang](https://www.ece.utexas.edu/people/faculty/atlas-wang) and in collaboration with [Dr. Junyuan Hong](https://jyhong.gitlab.io/).
 
-For collaboration, contact [Li Yin](https://www.linkedin.com/in/li-yin-ai/).
-
-## Hiring
-
-Join our team! We're looking for a Dev Rel to help build the AdalFlow community.  Contact [Li Yin](https://www.linkedin.com/in/li-yin-ai/) if interested.
-
-## Documentation
-
-Access the comprehensive AdalFlow documentation at [adalflow.sylph.ai](https://adalflow.sylph.ai/).
-
-## AdalFlow: A Tribute to Ada Lovelace
-
-AdalFlow is named in honor of Ada Lovelace, the visionary mathematician who foresaw the potential of machines to go beyond computation.  We are inspired by her legacy, and as a team led by a female founder, we strive to encourage more women to enter the field of AI.
+For collaboration inquiries, please contact [Li Yin](https://www.linkedin.com/in/li-yin-ai/).
 
 ## Community & Contributors
 
-AdalFlow thrives on community contribution.  Join us!
+AdalFlow is a community-driven project.  We welcome contributions!
 
-*   Engage with the community on [Discord](https://discord.gg/ezzszrRZvT).
-*   Contribute by reading the [Contributor Guide](https://adalflow.sylph.ai/contributor/index.html).
+*   Join our [Discord](https://discord.gg/ezzszrRZvT) for questions and updates.
+*   Review our [Contributor Guide](https://adalflow.sylph.ai/contributor/index.html).
 
 ## Contributors
 
@@ -220,11 +212,15 @@ AdalFlow thrives on community contribution.  Join us!
 
 ## Acknowledgements
 
-AdalFlow is inspired by the work of many.
+AdalFlow is inspired by:
 
-*   **PyTorch:** For its foundational design principles of components, parameters, and sequential workflows.
-*   **Micrograd:** A lightweight autograd engine for our auto-differentiative architecture.
-*   **Text-Grad:** For the "Textual Gradient Descent" text optimizer.
-*   **DSPy:** For its inspiring ideas in data classes and the few-shot bootstrap optimizer.
-*   **OPRO:** For incorporating past text instructions.
-*   **PyTorch Lightning:** For the integration of `AdalComponent` and `Trainer`.
+*   [PyTorch](https://github.com/pytorch/pytorch/)
+*   [Micrograd](https://github.com/karpathy/micrograd)
+*   [Text-Grad](https://github.com/zou-group/textgrad)
+*   [DSPy](https://github.com/stanfordnlp/dspy)
+*   [OPRO](https://github.com/google-deepmind/opro)
+*   [PyTorch Lightning](https://github.com/Lightning-AI/pytorch-lightning)
+
+## Documentation
+
+Full AdalFlow documentation available at [adalflow.sylph.ai](https://adalflow.sylph.ai/).
